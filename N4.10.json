@@ -216,7 +216,8 @@
           "en": "What time does the movie start?",
           "terms": [
             "v_eiga",
-            "v_hajimaru"
+            "v_hajimaru",
+            "k_hajimeru"
           ]
         },
         {
@@ -224,7 +225,8 @@
           "jp": "午後の 二時に 始まります。",
           "en": "It starts at 2 PM.",
           "terms": [
-            "v_hajimaru"
+            "v_hajimaru",
+            "k_hajimeru"
           ]
         }
       ]
@@ -277,7 +279,8 @@
           "jp": "しごとは 何時に 終わりますか。",
           "en": "What time does work end?",
           "terms": [
-            "v_owaru"
+            "v_owaru",
+            "k_owaru"
           ]
         },
         {
@@ -286,6 +289,7 @@
           "en": "It ends at 6. After that, I will go to the movie theater.",
           "terms": [
             "v_owaru",
+            "k_owaru",
             "v_eigakan"
           ]
         },
@@ -294,7 +298,8 @@
           "jp": "はやい ですね。しごとは 何時に 始まりますか。",
           "en": "That's early. What time does work start?",
           "terms": [
-            "v_hajimaru"
+            "v_hajimaru",
+            "k_hajimeru"
           ]
         },
         {
@@ -302,7 +307,8 @@
           "jp": "朝の 七時に 始まります。",
           "en": "It starts at 7 in the morning.",
           "terms": [
-            "v_hajimaru"
+            "v_hajimaru",
+            "k_hajimeru"
           ]
         }
       ]
@@ -379,7 +385,9 @@
           "terms": [
             "v_eiga",
             "v_hajimaru",
-            "v_owaru"
+            "k_hajimeru",
+            "v_owaru",
+            "k_owaru"
           ]
         },
         {
@@ -409,7 +417,8 @@
           "q": "映画は 何時に 始まりましたか。",
           "a": "二時に 始まりました。",
           "terms": [
-            "v_hajimaru"
+            "v_hajimaru",
+            "k_hajimeru"
           ]
         },
         {
@@ -498,15 +507,44 @@
     },
     {
       "type": "drills",
-      "title": "Drill 1: Particles & Vocabulary",
-      "instructions": "Select the correct word to fill in the blank.",
+      "title": "Drill 1: Particles & Grammar",
+      "instructions": "Select the correct option to complete the sentence.",
       "items": [
         {
           "kind": "mcq",
-          "q": "学校は 八時に ______。",
+          "q": "映画は 三時 ______ 終わります。",
+          "choices": [
+            "に",
+            "を",
+            "が",
+            "で"
+          ],
+          "answer": "に",
+          "terms": [
+            "v_owaru"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "毎日、英語 ______ 学びます。",
+          "choices": [
+            "を",
+            "に",
+            "へ",
+            "と"
+          ],
+          "answer": "を",
+          "terms": [
+            "v_eigo",
+            "v_manabu"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "クラスは 九時に ______。",
           "choices": [
             "始まります",
-            "終わります",
+            "始めます",
             "行きます",
             "飲みます"
           ],
@@ -517,128 +555,79 @@
         },
         {
           "kind": "mcq",
-          "q": "私は ______ が 話せません。",
+          "q": "きのう、英国 ______ 行きました。",
           "choices": [
-            "英語",
-            "英国",
-            "映画",
-            "画家"
+            "へ",
+            "を",
+            "が",
+            "と"
           ],
-          "answer": "英語",
+          "answer": "へ",
           "terms": [
-            "v_eigo"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "きのう、新しい ことばを ______。",
-          "choices": [
-            "学びました",
-            "食べました",
-            "住みました",
-            "行きました"
-          ],
-          "answer": "学びました",
-          "terms": [
-            "v_manabu"
+            "v_eikoku"
           ]
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Drill 2: Kanji Identification",
-      "instructions": "Identify the correct Kanji for the meaning provided.",
+      "title": "Drill 2: Vocabulary & Context",
+      "instructions": "Select the correct word for the context.",
       "items": [
         {
           "kind": "mcq",
-          "q": "Which Kanji means 'End'?",
+          "q": "母は 絵 (pictures) が 好きです。______ です。",
           "choices": [
-            "終",
-            "始",
-            "映",
-            "画"
+            "画家",
+            "映画",
+            "英国",
+            "家族"
           ],
-          "answer": "終",
+          "answer": "画家",
           "terms": [
-            "k_owaru"
+            "v_gaka"
           ]
         },
         {
           "kind": "mcq",
-          "q": "Which Kanji means 'Movie' (first character)?",
+          "q": "町で 新しい ______ を 見ました。",
           "choices": [
-            "映",
-            "英",
-            "画",
-            "館"
+            "映画",
+            "英語",
+            "英国",
+            "元気"
           ],
-          "answer": "映",
+          "answer": "映画",
           "terms": [
             "v_eiga"
           ]
         },
         {
           "kind": "mcq",
-          "q": "Select the correct Kanji for: 'Movie Theater'",
+          "q": "______ で 映画を 見ます。",
           "choices": [
             "映画館",
-            "英国館",
             "図書館",
-            "美術館"
+            "外国",
+            "学校"
           ],
           "answer": "映画館",
           "terms": [
             "v_eigakan"
           ]
-        }
-      ]
-    },
-    {
-      "type": "drills",
-      "title": "Drill 3: Reading Match",
-      "instructions": "Match the Kanji word to its correct reading.",
-      "items": [
+        },
         {
           "kind": "mcq",
-          "q": "What is the reading for 英国?",
+          "q": "私は ______ に 行きたいです。",
           "choices": [
-            "えいこく",
-            "えいご",
-            "えいが",
-            "がいこく"
+            "英国",
+            "英語",
+            "画家",
+            "映画"
           ],
-          "answer": "えいこく",
+          "answer": "英国",
           "terms": [
             "v_eikoku"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "What is the reading for 終わる?",
-          "choices": [
-            "おわる",
-            "はじまる",
-            "かわる",
-            "まわる"
-          ],
-          "answer": "おわる",
-          "terms": [
-            "v_owaru"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "What is the reading for 画家?",
-          "choices": [
-            "がか",
-            "かく",
-            "えいが",
-            "がいか"
-          ],
-          "answer": "がか",
-          "terms": [
-            "v_gaka"
           ]
         }
       ]
