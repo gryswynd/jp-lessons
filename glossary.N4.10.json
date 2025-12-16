@@ -1,637 +1,149 @@
 [
   {
-  "id": "N4.10",
-  "title": "Phase 4 Lesson 10: Movies & Beginnings",
-  "meta": {
-    "phase": 4,
-    "lesson": 10,
-    "focus": "Talking about movies, schedules (start/end), and English.",
-    "kanji": [
-      "始",
-      "終",
-      "映",
-      "画",
-      "館",
-      "英"
-    ]
+    "id": "k_hajimeru",
+    "lesson": "N4.10",
+    "type": "kanji",
+    "surface": "始",
+    "on": "し",
+    "kun": "はじ(める)",
+    "reading": "はじ(める)",
+    "meaning": "begin / start",
+    "notes": ""
   },
-  "newKanji": [
-    {
-      "kanji": "始",
-      "on": "し",
-      "kun": "はじ(める)",
-      "meaning": "begin / start",
-      "termId": "k_hajimeru"
-    },
-    {
-      "kanji": "終",
-      "on": "しゅう",
-      "kun": "お(わる)",
-      "meaning": "end / finish",
-      "termId": "k_owaru"
-    },
-    {
-      "kanji": "映",
-      "on": "えい",
-      "kun": "うつ(る)",
-      "meaning": "reflect / projection",
-      "termId": "k_ei"
-    },
-    {
-      "kanji": "画",
-      "on": "が / かく",
-      "kun": "(なし)",
-      "meaning": "picture / stroke",
-      "termId": "k_ga"
-    },
-    {
-      "kanji": "館",
-      "on": "かん",
-      "kun": "(なし)",
-      "meaning": "building / hall",
-      "termId": "k_kan"
-    },
-    {
-      "kanji": "英",
-      "on": "えい",
-      "kun": "(なし)",
-      "meaning": "England / excellent",
-      "termId": "k_ei_english"
-    }
-  ],
-  "sections": [
-    {
-      "type": "warmup",
-      "title": "Warm-Up Review（ウォームアップ）",
-      "instructions": "Ask your partner these questions (using previously learned words):",
-      "items": [
-        {
-          "jp": "きのうの 晩、何を しましたか。",
-          "en": "What did you do last night?",
-          "terms": []
-        },
-        {
-          "jp": "あなたの 町は どんな 所 ですか。",
-          "en": "What kind of place is your town?",
-          "terms": [
-            "k_machi",
-            "k_tokoro"
-          ]
-        },
-        {
-          "jp": "去年の 冬、どこへ 行きましたか。",
-          "en": "Where did you go last winter?",
-          "terms": [
-            "v_kyonen",
-            "v_fuyu"
-          ]
-        },
-        {
-          "jp": "毎日、何時に しごとを しますか。",
-          "en": "What time do you work every day?",
-          "terms": []
-        }
-      ]
-    },
-    {
-      "type": "kanjiGrid",
-      "title": "New Kanji（新しい 漢字）",
-      "items": [
-        {
-          "kanji": "始",
-          "on": "し",
-          "kun": "はじ(める)",
-          "meaning": "begin / start",
-          "terms": [
-            "k_hajimeru",
-            "v_hajimeru"
-          ]
-        },
-        {
-          "kanji": "終",
-          "on": "しゅう",
-          "kun": "お(わる)",
-          "meaning": "end / finish",
-          "terms": [
-            "k_owaru",
-            "v_owaru"
-          ]
-        },
-        {
-          "kanji": "映",
-          "on": "えい",
-          "kun": "うつ(る)",
-          "meaning": "reflect / projection",
-          "terms": [
-            "k_ei",
-            "v_eiga"
-          ]
-        },
-        {
-          "kanji": "画",
-          "on": "が / かく",
-          "kun": "(なし)",
-          "meaning": "picture / stroke",
-          "terms": [
-            "k_ga",
-            "v_eiga"
-          ]
-        },
-        {
-          "kanji": "館",
-          "on": "かん",
-          "kun": "(なし)",
-          "meaning": "building / hall",
-          "terms": [
-            "k_kan",
-            "v_eigakan"
-          ]
-        },
-        {
-          "kanji": "英",
-          "on": "えい",
-          "kun": "(なし)",
-          "meaning": "England / excellent",
-          "terms": [
-            "k_ei_english",
-            "v_eigo"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "vocabList",
-      "title": "Vocabulary & Compounds（ことば）",
-      "groups": [
-        {
-          "label": "Movies & Arts",
-          "items": [
-            "v_eiga",
-            "v_eigakan",
-            "v_gaka"
-          ]
-        },
-        {
-          "label": "Time & Action",
-          "items": [
-            "v_hajimeru",
-            "v_hajimaru",
-            "v_owaru",
-            "v_manabu"
-          ]
-        },
-        {
-          "label": "Language & World",
-          "items": [
-            "v_eigo",
-            "v_eikoku"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 1（会話）: At the Cinema",
-      "context": "Deciding to watch a movie.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "映画を 見ましょう。",
-          "en": "Let's watch a movie.",
-          "terms": [
-            "v_eiga"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "いいですね。町の 映画館へ 行きましょう。",
-          "en": "Good idea. Let's go to the movie theater in town.",
-          "terms": [
-            "v_eigakan",
-            "k_machi"
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "映画は 何時に 始まりますか。",
-          "en": "What time does the movie start?",
-          "terms": [
-            "v_eiga",
-            "v_hajimaru",
-            "k_hajimeru"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "午後の 二時に 始まります。",
-          "en": "It starts at 2 PM.",
-          "terms": [
-            "v_hajimaru",
-            "k_hajimeru"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 2（会話）: Language Study",
-      "context": "Talking about studying English.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "山本（やまもと）さんは 英語を 学びますか。",
-          "en": "Mr. Yamamoto, do you learn English?",
-          "terms": [
-            "v_eigo",
-            "v_manabu"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "はい。毎日 学んで います。",
-          "en": "Yes. I am learning every day.",
-          "terms": [
-            "v_manabu"
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "英語は むずかしい ですか。",
-          "en": "Is English difficult?",
-          "terms": [
-            "v_eigo"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "いいえ、おもしろい です。",
-          "en": "No, it is interesting.",
-          "terms": []
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 3（会話）: Work Schedule",
-      "context": "Discussing work hours.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "しごとは 何時に 終わりますか。",
-          "en": "What time does work end?",
-          "terms": [
-            "v_owaru",
-            "k_owaru"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "六時に 終わります。それから 映画館へ 行きます。",
-          "en": "It ends at 6. After that, I will go to the movie theater.",
-          "terms": [
-            "v_owaru",
-            "k_owaru",
-            "v_eigakan"
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "はやい ですね。しごとは 何時に 始まりますか。",
-          "en": "That's early. What time does work start?",
-          "terms": [
-            "v_hajimaru",
-            "k_hajimeru"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "朝の 七時に 始まります。",
-          "en": "It starts at 7 in the morning.",
-          "terms": [
-            "v_hajimaru",
-            "k_hajimeru"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 4（会話）: Past Travel",
-      "context": "Talking about a trip to the UK (reinforcing previous lessons).",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "去年の 冬、英国へ 行きました。",
-          "en": "Last winter, I went to the UK.",
-          "terms": [
-            "v_kyonen",
-            "v_fuyu",
-            "v_eikoku"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "寒かった ですか。",
-          "en": "Was it cold?",
-          "terms": [
-            "k_samu"
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "はい、寒かったです。でも、きれいな 所 でした。",
-          "en": "Yes, it was cold. But it was a beautiful place.",
-          "terms": [
-            "k_tokoro"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "英語を たくさん 話しましたか。",
-          "en": "Did you speak a lot of English?",
-          "terms": [
-            "v_eigo"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "reading",
-      "title": "Reading Practice 1: Movie Day",
-      "passage": [
-        {
-          "jp": "私は 映画が 大好きです。",
-          "en": "I love movies.",
-          "terms": [
-            "v_eiga"
-          ]
-        },
-        {
-          "jp": "毎週 土曜日に 友だちと 映画館へ 行きます。",
-          "en": "Every Saturday I go to the movie theater with a friend.",
-          "terms": [
-            "v_eigakan"
-          ]
-        },
-        {
-          "jp": "先週は 古い 映画を 見ました。",
-          "en": "Last week we watched an old movie.",
-          "terms": [
-            "v_eiga"
-          ]
-        },
-        {
-          "jp": "映画は 二時に 始まって、四時に 終わりました。",
-          "en": "The movie started at 2 and ended at 4.",
-          "terms": [
-            "v_eiga",
-            "v_hajimaru",
-            "k_hajimeru",
-            "v_owaru",
-            "k_owaru"
-          ]
-        },
-        {
-          "jp": "とても おもしろい 映画でした。",
-          "en": "It was a very interesting movie.",
-          "terms": [
-            "v_eiga"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "q": "私は 何が 好きですか。",
-          "a": "映画が 好きです。",
-          "terms": [
-            "v_eiga"
-          ]
-        },
-        {
-          "q": "毎週 どこへ 行きますか。",
-          "a": "映画館へ 行きます。",
-          "terms": [
-            "v_eigakan"
-          ]
-        },
-        {
-          "q": "映画は 何時に 始まりましたか。",
-          "a": "二時に 始まりました。",
-          "terms": [
-            "v_hajimaru",
-            "k_hajimeru"
-          ]
-        },
-        {
-          "q": "映画は おもしろかったですか。",
-          "a": "はい、とても おもしろかったです。",
-          "terms": []
-        }
-      ]
-    },
-    {
-      "type": "reading",
-      "title": "Reading Practice 2: The Painter",
-      "passage": [
-        {
-          "jp": "父は 画家 です。画を かくのが 好きです。",
-          "en": "My father is a painter. He likes to draw pictures.",
-          "terms": [
-            "v_gaka",
-            "k_ga"
-          ]
-        },
-        {
-          "jp": "わかい 時、英国に 住んでいました。",
-          "en": "When he was young, he lived in the UK.",
-          "terms": [
-            "v_eikoku",
-            "k_sumu"
-          ]
-        },
-        {
-          "jp": "そこで 英語を 学びました。",
-          "en": "He learned English there.",
-          "terms": [
-            "v_eigo",
-            "v_manabu"
-          ]
-        },
-        {
-          "jp": "父は 英国の 古い 町が 大好きです。",
-          "en": "Father loves the old towns of the UK.",
-          "terms": [
-            "v_eikoku",
-            "k_machi"
-          ]
-        },
-        {
-          "jp": "今も 英語の 本を よく 読みます。",
-          "en": "Even now, he often reads English books.",
-          "terms": [
-            "v_eigo"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "q": "父の 仕事は 何ですか。",
-          "a": "画家 です。",
-          "terms": [
-            "v_gaka"
-          ]
-        },
-        {
-          "q": "父は 昔 どこに 住んでいましたか。",
-          "a": "英国に 住んでいました。",
-          "terms": [
-            "v_eikoku",
-            "k_sumu"
-          ]
-        },
-        {
-          "q": "父は そこで 何を しましたか。",
-          "a": "英語を 学びました。",
-          "terms": [
-            "v_eigo",
-            "v_manabu"
-          ]
-        },
-        {
-          "q": "今、父は 何を 読みますか。",
-          "a": "英語の 本を 読みます。",
-          "terms": [
-            "v_eigo"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "drills",
-      "title": "Drill 1: Particles & Grammar",
-      "instructions": "Select the correct option to complete the sentence.",
-      "items": [
-        {
-          "kind": "mcq",
-          "q": "映画は 三時 ______ 終わります。",
-          "choices": [
-            "に",
-            "を",
-            "が",
-            "で"
-          ],
-          "answer": "に",
-          "terms": [
-            "v_owaru"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "毎日、英語 ______ 学びます。",
-          "choices": [
-            "を",
-            "に",
-            "へ",
-            "と"
-          ],
-          "answer": "を",
-          "terms": [
-            "v_eigo",
-            "v_manabu"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "クラスは 九時に ______。",
-          "choices": [
-            "始まります",
-            "始めます",
-            "行きます",
-            "飲みます"
-          ],
-          "answer": "始まります",
-          "terms": [
-            "v_hajimaru"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "きのう、英国 ______ 行きました。",
-          "choices": [
-            "へ",
-            "を",
-            "が",
-            "と"
-          ],
-          "answer": "へ",
-          "terms": [
-            "v_eikoku"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "drills",
-      "title": "Drill 2: Vocabulary & Context",
-      "instructions": "Select the correct word for the context.",
-      "items": [
-        {
-          "kind": "mcq",
-          "q": "母は 絵 (pictures) が 好きです。______ です。",
-          "choices": [
-            "画家",
-            "映画",
-            "英国",
-            "家族"
-          ],
-          "answer": "画家",
-          "terms": [
-            "v_gaka"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "町で 新しい ______ を 見ました。",
-          "choices": [
-            "映画",
-            "英語",
-            "英国",
-            "元気"
-          ],
-          "answer": "映画",
-          "terms": [
-            "v_eiga"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "______ で 映画を 見ます。",
-          "choices": [
-            "映画館",
-            "図書館",
-            "外国",
-            "学校"
-          ],
-          "answer": "映画館",
-          "terms": [
-            "v_eigakan"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "私は ______ に 行きたいです。",
-          "choices": [
-            "英国",
-            "英語",
-            "画家",
-            "映画"
-          ],
-          "answer": "英国",
-          "terms": [
-            "v_eikoku"
-          ]
-        }
-      ]
-    }
-  ]
-}
+  {
+    "id": "k_owaru",
+    "lesson": "N4.10",
+    "type": "kanji",
+    "surface": "終",
+    "on": "しゅう",
+    "kun": "お(わる)",
+    "reading": "お(わる)",
+    "meaning": "end / finish",
+    "notes": ""
+  },
+  {
+    "id": "k_ei",
+    "lesson": "N4.10",
+    "type": "kanji",
+    "surface": "映",
+    "on": "えい",
+    "kun": "うつ(る)",
+    "reading": "うつ(る)",
+    "meaning": "reflect / projection",
+    "notes": ""
+  },
+  {
+    "id": "k_ga",
+    "lesson": "N4.10",
+    "type": "kanji",
+    "surface": "画",
+    "on": "が / かく",
+    "kun": "(なし)",
+    "reading": "が / かく",
+    "meaning": "picture / stroke",
+    "notes": ""
+  },
+  {
+    "id": "k_kan",
+    "lesson": "N4.10",
+    "type": "kanji",
+    "surface": "館",
+    "on": "かん",
+    "kun": "(なし)",
+    "reading": "かん",
+    "meaning": "building / hall",
+    "notes": ""
+  },
+  {
+    "id": "k_ei_english",
+    "lesson": "N4.10",
+    "type": "kanji",
+    "surface": "英",
+    "on": "えい",
+    "kun": "(なし)",
+    "reading": "えい",
+    "meaning": "England / excellent",
+    "notes": ""
+  },
+  {
+    "id": "v_eiga",
+    "surface": "映画",
+    "meaning": "movie",
+    "type": "vocab",
+    "notes": "",
+    "lesson_ids": "N4.10",
+    "reading": "えいが"
+  },
+  {
+    "id": "v_eigakan",
+    "surface": "映画館",
+    "meaning": "movie theater",
+    "type": "vocab",
+    "notes": "",
+    "lesson_ids": "N4.10",
+    "reading": "えいがかん"
+  },
+  {
+    "id": "v_gaka",
+    "surface": "画家",
+    "meaning": "painter / artist",
+    "type": "vocab",
+    "notes": "",
+    "lesson_ids": "N4.10",
+    "reading": "がか"
+  },
+  {
+    "id": "v_hajimeru",
+    "surface": "始める",
+    "meaning": "to start (something)",
+    "type": "vocab",
+    "notes": "Transitive verb. (e.g., 会議を始める)",
+    "lesson_ids": "N4.10",
+    "reading": "はじめる"
+  },
+  {
+    "id": "v_hajimaru",
+    "surface": "始まる",
+    "meaning": "to begin / to start",
+    "type": "vocab",
+    "notes": "Intransitive verb. (e.g., 映画が始まる)",
+    "lesson_ids": "N4.10",
+    "reading": "はじまる"
+  },
+  {
+    "id": "v_owaru",
+    "surface": "終わる",
+    "meaning": "to end / to finish",
+    "type": "vocab",
+    "notes": "Intransitive verb.",
+    "lesson_ids": "N4.10",
+    "reading": "おわる"
+  },
+  {
+    "id": "v_eigo",
+    "surface": "英語",
+    "meaning": "English language",
+    "type": "vocab",
+    "notes": "",
+    "lesson_ids": "N4.10",
+    "reading": "えいご"
+  },
+  {
+    "id": "v_manabu",
+    "surface": "学ぶ",
+    "meaning": "to learn / to study (in depth)",
+    "type": "vocab",
+    "notes": "Reading 'manabu' for 学. More formal than 勉強する.",
+    "lesson_ids": "N4.10",
+    "reading": "まなぶ"
+  },
+  {
+    "id": "v_eikoku",
+    "surface": "英国",
+    "meaning": "United Kingdom / Great Britain",
+    "type": "vocab",
+    "notes": "Formal term for UK.",
+    "lesson_ids": "N4.10",
+    "reading": "えいこく"
+  }
+]
