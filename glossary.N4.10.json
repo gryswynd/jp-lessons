@@ -66,6 +66,17 @@
     "notes": ""
   },
   {
+    "id": "k_manabu",
+    "lesson": "N4.10",
+    "type": "kanji",
+    "surface": "学",
+    "on": "がく",
+    "kun": "まな(ぶ)",
+    "reading": "まな(ぶ)",
+    "meaning": "study / learn",
+    "notes": "Previously learned in N5.7"
+  },
+  {
     "id": "v_eiga",
     "surface": "映画",
     "meaning": "movie",
@@ -97,7 +108,7 @@
     "surface": "始める",
     "meaning": "to start (something)",
     "type": "vocab",
-    "notes": "Transitive verb. (e.g., 会議を始める)",
+    "notes": "Transitive verb.",
     "lesson_ids": "N4.10",
     "reading": "はじめる"
   },
@@ -106,9 +117,27 @@
     "surface": "始まる",
     "meaning": "to begin / to start",
     "type": "vocab",
-    "notes": "Intransitive verb. (e.g., 映画が始まる)",
+    "notes": "Intransitive verb.",
     "lesson_ids": "N4.10",
     "reading": "はじまる"
+  },
+  {
+    "id": "v_hajimaru_masu",
+    "surface": "始まります",
+    "meaning": "starts (polite)",
+    "type": "vocab",
+    "notes": "Polite form of 始まる.",
+    "lesson_ids": "N4.10",
+    "reading": "はじまります"
+  },
+  {
+    "id": "v_hajimatte",
+    "surface": "始まって",
+    "meaning": "start and... (te-form)",
+    "type": "vocab",
+    "notes": "Te-form of 始まる.",
+    "lesson_ids": "N4.10",
+    "reading": "はじまって"
   },
   {
     "id": "v_owaru",
@@ -118,6 +147,24 @@
     "notes": "Intransitive verb.",
     "lesson_ids": "N4.10",
     "reading": "おわる"
+  },
+  {
+    "id": "v_owaru_masu",
+    "surface": "終わります",
+    "meaning": "ends (polite)",
+    "type": "vocab",
+    "notes": "Polite form of 終わる.",
+    "lesson_ids": "N4.10",
+    "reading": "おわります"
+  },
+  {
+    "id": "v_owarimashita",
+    "surface": "終わりました",
+    "meaning": "ended (polite past)",
+    "type": "vocab",
+    "notes": "Past polite form of 終わる.",
+    "lesson_ids": "N4.10",
+    "reading": "おわりました"
   },
   {
     "id": "v_eigo",
@@ -133,9 +180,36 @@
     "surface": "学ぶ",
     "meaning": "to learn / to study (in depth)",
     "type": "vocab",
-    "notes": "Reading 'manabu' for 学. More formal than 勉強する.",
+    "notes": "Reading 'manabu'. More formal than 勉強する.",
     "lesson_ids": "N4.10",
     "reading": "まなぶ"
+  },
+  {
+    "id": "v_manabu_masu",
+    "surface": "学びます",
+    "meaning": "learn (polite)",
+    "type": "vocab",
+    "notes": "Polite form of 学ぶ.",
+    "lesson_ids": "N4.10",
+    "reading": "まなびます"
+  },
+  {
+    "id": "v_manabu_masu_past",
+    "surface": "学びました",
+    "meaning": "learned (polite past)",
+    "type": "vocab",
+    "notes": "Past polite form of 学ぶ.",
+    "lesson_ids": "N4.10",
+    "reading": "まなびました"
+  },
+  {
+    "id": "v_manande",
+    "surface": "学んで",
+    "meaning": "learning (te-form)",
+    "type": "vocab",
+    "notes": "Te-form of 学ぶ.",
+    "lesson_ids": "N4.10",
+    "reading": "まなんで"
   },
   {
     "id": "v_eikoku",
