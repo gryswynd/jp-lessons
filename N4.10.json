@@ -216,7 +216,7 @@
           "en": "What time does the movie start?",
           "terms": [
             "v_eiga",
-            "v_hajimaru",
+            "v_hajimaru_masu",
             "k_hajimeru"
           ]
         },
@@ -225,7 +225,7 @@
           "jp": "午後の 二時に 始まります。",
           "en": "It starts at 2 PM.",
           "terms": [
-            "v_hajimaru",
+            "v_hajimaru_masu",
             "k_hajimeru"
           ]
         }
@@ -242,7 +242,8 @@
           "en": "Mr. Yamamoto, do you learn English?",
           "terms": [
             "v_eigo",
-            "v_manabu"
+            "v_manabu_masu",
+            "k_manabu"
           ]
         },
         {
@@ -250,7 +251,8 @@
           "jp": "はい。毎日 学んで います。",
           "en": "Yes. I am learning every day.",
           "terms": [
-            "v_manabu"
+            "v_manande",
+            "k_manabu"
           ]
         },
         {
@@ -279,7 +281,7 @@
           "jp": "しごとは 何時に 終わりますか。",
           "en": "What time does work end?",
           "terms": [
-            "v_owaru",
+            "v_owaru_masu",
             "k_owaru"
           ]
         },
@@ -288,7 +290,7 @@
           "jp": "六時に 終わります。それから 映画館へ 行きます。",
           "en": "It ends at 6. After that, I will go to the movie theater.",
           "terms": [
-            "v_owaru",
+            "v_owaru_masu",
             "k_owaru",
             "v_eigakan"
           ]
@@ -298,7 +300,7 @@
           "jp": "はやい ですね。しごとは 何時に 始まりますか。",
           "en": "That's early. What time does work start?",
           "terms": [
-            "v_hajimaru",
+            "v_hajimaru_masu",
             "k_hajimeru"
           ]
         },
@@ -307,7 +309,7 @@
           "jp": "朝の 七時に 始まります。",
           "en": "It starts at 7 in the morning.",
           "terms": [
-            "v_hajimaru",
+            "v_hajimaru_masu",
             "k_hajimeru"
           ]
         }
@@ -384,9 +386,9 @@
           "en": "The movie started at 2 and ended at 4.",
           "terms": [
             "v_eiga",
-            "v_hajimaru",
+            "v_hajimatte",
             "k_hajimeru",
-            "v_owaru",
+            "v_owarimashita",
             "k_owaru"
           ]
         },
@@ -453,7 +455,8 @@
           "en": "He learned English there.",
           "terms": [
             "v_eigo",
-            "v_manabu"
+            "v_manabu_masu_past",
+            "k_manabu"
           ]
         },
         {
@@ -493,7 +496,8 @@
           "a": "英語を 学びました。",
           "terms": [
             "v_eigo",
-            "v_manabu"
+            "v_manabu_masu_past",
+            "k_manabu"
           ]
         },
         {
@@ -521,7 +525,7 @@
           ],
           "answer": "に",
           "terms": [
-            "v_owaru"
+            "v_owaru_masu"
           ]
         },
         {
@@ -536,7 +540,7 @@
           "answer": "を",
           "terms": [
             "v_eigo",
-            "v_manabu"
+            "v_manabu_masu"
           ]
         },
         {
@@ -550,7 +554,7 @@
           ],
           "answer": "始まります",
           "terms": [
-            "v_hajimaru"
+            "v_hajimaru_masu"
           ]
         },
         {
