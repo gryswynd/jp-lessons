@@ -72,8 +72,8 @@
           ]
         },
         {
-          "jp": "毎日、何時に しごと（学校）が 終わりますか。",
-          "en": "What time does work (school) end every day?",
+          "jp": "毎日、何時に しごと が 終わりますか。",
+          "en": "What time does work end every day?",
           "terms": [
             "v_owaru"
           ]
@@ -205,7 +205,7 @@
       "lines": [
         {
           "spk": "A",
-          "jp": "来週、日本の 京都（Kyoto）へ 旅行に 行きます。",
+          "jp": "来週、日本の 京都 へ 旅行に 行きます。",
           "en": "Next week, I am going on a trip to Kyoto, Japan.",
           "terms": [
             "v_ryoko"
@@ -375,10 +375,10 @@
           ]
         },
         {
-          "jp": "そこで 色々な 花や 鳥を 写します（コピーします）。",
-          "en": "There, I copy (capture) various flowers and birds.",
+          "jp": "そこで 色々な 花や 鳥の 写真を とります。",
+          "en": "There, I take photos of various flowers and birds.",
           "terms": [
-            "v_utsushimasu",
+            "v_shashin",
             "k_iroiro"
           ]
         },
@@ -409,9 +409,9 @@
         },
         {
           "q": "山で 何を しますか。",
-          "a": "花や 鳥を 写します。",
+          "a": "花や 鳥の 写真を とります。",
           "terms": [
-            "v_utsushimasu"
+            "v_shashin"
           ]
         },
         {
@@ -575,16 +575,16 @@
       "items": [
         {
           "kind": "mcq",
-          "q": "父は ______ です。よく 旅を します。",
+          "q": "友だちの ノートを ______。",
           "choices": [
-            "旅人",
-            "旅先",
-            "旅館",
-            "旅道"
+            "写しました",
+            "写りました",
+            "写きました",
+            "写ぎました"
           ],
-          "answer": "旅人",
+          "answer": "写しました",
           "terms": [
-            "v_tabibito"
+            "v_utsushimasu"
           ]
         },
         {
