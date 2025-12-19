@@ -1,0 +1,623 @@
+{
+  "id": "N4.12",
+  "title": "Phase 4 Lesson 12: Body & Existence",
+  "meta": {
+    "phase": 4,
+    "lesson": 12,
+    "focus": "Body parts, describing physical traits, and the concept of existence/fame.",
+    "kanji": [
+      "首",
+      "顔",
+      "体",
+      "頭",
+      "心",
+      "有"
+    ]
+  },
+  "newKanji": [
+    {
+      "kanji": "首",
+      "on": "しゅ",
+      "kun": "くび",
+      "meaning": "neck",
+      "termId": "k_kubi"
+    },
+    {
+      "kanji": "顔",
+      "on": "がん",
+      "kun": "かお",
+      "meaning": "face",
+      "termId": "k_kao"
+    },
+    {
+      "kanji": "体",
+      "on": "たい",
+      "kun": "からだ",
+      "meaning": "body",
+      "termId": "k_karada"
+    },
+    {
+      "kanji": "頭",
+      "on": "とう / ず",
+      "kun": "あたま",
+      "meaning": "head",
+      "termId": "k_atama"
+    },
+    {
+      "kanji": "心",
+      "on": "しん",
+      "kun": "こころ",
+      "meaning": "heart / mind",
+      "termId": "k_kokoro"
+    },
+    {
+      "kanji": "有",
+      "on": "ゆう",
+      "kun": "あ(る)",
+      "meaning": "exist / possess",
+      "termId": "k_yuu"
+    }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "Warm-Up Review（ウォームアップ）",
+      "instructions": "Ask your partner these questions (using previously learned words):",
+      "items": [
+        {
+          "jp": "今日は 天気が いいですか。",
+          "en": "Is the weather good today?",
+          "terms": [
+            "k_tenki"
+          ]
+        },
+        {
+          "jp": "よく 映画を 見ますか。",
+          "en": "Do you watch movies often?",
+          "terms": [
+            "v_eiga",
+            "v_miru"
+          ]
+        },
+        {
+          "jp": "目が いいですか。",
+          "en": "Is your eyesight good?",
+          "terms": [
+            "k_me"
+          ]
+        },
+        {
+          "jp": "足が 長いですか。",
+          "en": "Are your legs long?",
+          "terms": [
+            "k_ashi",
+            "k_nagai"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "New Kanji（新しい 漢字）",
+      "items": [
+        {
+          "kanji": "首",
+          "on": "しゅ",
+          "kun": "くび",
+          "meaning": "neck",
+          "terms": [
+            "k_kubi",
+            "v_tekubi"
+          ]
+        },
+        {
+          "kanji": "顔",
+          "on": "がん",
+          "kun": "かお",
+          "meaning": "face",
+          "terms": [
+            "k_kao",
+            "v_kaoiro"
+          ]
+        },
+        {
+          "kanji": "体",
+          "on": "たい",
+          "kun": "からだ",
+          "meaning": "body",
+          "terms": [
+            "k_karada"
+          ]
+        },
+        {
+          "kanji": "頭",
+          "on": "とう",
+          "kun": "あたま",
+          "meaning": "head",
+          "terms": [
+            "k_atama",
+            "v_atamagaii"
+          ]
+        },
+        {
+          "kanji": "心",
+          "on": "しん",
+          "kun": "こころ",
+          "meaning": "heart",
+          "terms": [
+            "k_kokoro",
+            "v_chuushin"
+          ]
+        },
+        {
+          "kanji": "有",
+          "on": "ゆう",
+          "kun": "あ(る)",
+          "meaning": "exist",
+          "terms": [
+            "v_yuumei",
+            "v_yuumeijin"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "Vocabulary & Compounds（ことば）",
+      "groups": [
+        {
+          "label": "Body Parts",
+          "items": [
+            "k_karada",
+            "k_atama",
+            "k_kao",
+            "k_kubi",
+            "v_tekubi"
+          ]
+        },
+        {
+          "label": "Traits & Existence",
+          "items": [
+            "k_kokoro",
+            "v_kaoiro",
+            "v_yuumei",
+            "v_yuumeijin",
+            "v_chuushin"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 1（会話）: Describing Someone",
+      "context": "Talking about a person walking by.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "あの 人は せが 高いですね。",
+          "en": "That person is tall, isn't he?",
+          "terms": [
+            "k_takai"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "そうですね。体も 大きいです。",
+          "en": "That's right. His body is big too.",
+          "terms": [
+            "k_karada",
+            "k_ookii"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "顔も かっこいいですね。",
+          "en": "His face is cool too.",
+          "terms": [
+            "k_kao"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。モデルかもしれません。",
+          "en": "Yes. He might be a model.",
+          "terms": []
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 2（会話）: Smart Students",
+      "context": "Discussing classmates.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "山中さんは 頭が いいですね。",
+          "en": "Yamanaka-san is smart, isn't he?",
+          "terms": [
+            "k_atama",
+            "v_atamagaii"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。かんじを たくさん しっています。",
+          "en": "Yes. He knows many Kanji.",
+          "terms": []
+        },
+        {
+          "spk": "A",
+          "jp": "すごいですね。私は 日本語が 下手です。",
+          "en": "That's amazing. I am unskilled at Japanese.",
+          "terms": [
+            "k_nihongo",
+            "k_heta"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "毎日 べんきょうして ください。",
+          "en": "Please study every day.",
+          "terms": [
+            "k_mainichi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 3（会話）: Famous People",
+      "context": "Looking at a magazine.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "この 人は 有名な 人 ですか。",
+          "en": "Is this person a famous person?",
+          "terms": [
+            "v_yuumei",
+            "v_yuumeijin"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい、有名な 作家です。",
+          "en": "Yes, a famous writer.",
+          "terms": [
+            "v_yuumei",
+            "v_sakka"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "どんな 本を 書きますか。",
+          "en": "What kind of books does he write?",
+          "terms": [
+            "k_hon",
+            "k_kaku"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "心の 本を 書きます。おもしろいですよ。",
+          "en": "He writes books about the heart/mind. It's interesting.",
+          "terms": [
+            "k_kokoro",
+            "k_hon"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 4（会話）: Health Check",
+      "context": "Feeling unwell.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "顔色が わるいですね。どうしましたか。",
+          "en": "Your complexion is bad. What happened?",
+          "terms": [
+            "v_kaoiro"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "少し 頭が いたい です。",
+          "en": "My head hurts a little.",
+          "terms": [
+            "k_atama",
+            "k_sukoshi"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "ねつが ありますか。",
+          "en": "Do you have a fever?",
+          "terms": []
+        },
+        {
+          "spk": "B",
+          "jp": "多分。今日は 家で 休みます。",
+          "en": "Probably. I will rest at home today.",
+          "terms": [
+            "k_yasumu",
+            "k_ie"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 1: My Robot",
+      "passage": [
+        {
+          "jp": "これは 私の ロボットです。",
+          "en": "This is my robot.",
+          "terms": []
+        },
+        {
+          "jp": "名前は ロボ です。頭が とても 大きいです。",
+          "en": "His name is Robo. His head is very big.",
+          "terms": [
+            "k_namae",
+            "k_atama",
+            "k_ookii"
+          ]
+        },
+        {
+          "jp": "体は ぎん色ですが、顔は 白いです。",
+          "en": "His body is silver, but his face is white.",
+          "terms": [
+            "k_karada",
+            "k_kao",
+            "k_shiroi"
+          ]
+        },
+        {
+          "jp": "ロボは 心が ありますから、私の 友だちです。",
+          "en": "Robo has a heart, so he is my friend.",
+          "terms": [
+            "k_kokoro",
+            "k_tomodachi"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "ロボの 頭は 小さいですか。",
+          "a": "いいえ、大きいです。",
+          "terms": [
+            "k_atama",
+            "k_ookii"
+          ]
+        },
+        {
+          "q": "ロボの 顔は 何色ですか。",
+          "a": "白いです。",
+          "terms": [
+            "k_kao",
+            "k_shiroi"
+          ]
+        },
+        {
+          "q": "ロボは 心が ありますか。",
+          "a": "はい、あります。",
+          "terms": [
+            "k_kokoro"
+          ]
+        },
+        {
+          "q": "ロボは 私の 何ですか。",
+          "a": "友だちです。",
+          "terms": [
+            "k_tomodachi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: The Movie Star",
+      "passage": [
+        {
+          "jp": "たなかさんは 有名な 人です。",
+          "en": "Tanaka-san is a famous person.",
+          "terms": [
+            "v_yuumei"
+          ]
+        },
+        {
+          "jp": "映画の 中に います。",
+          "en": "He is in movies.",
+          "terms": [
+            "v_eiga",
+            "k_naka"
+          ]
+        },
+        {
+          "jp": "たなかさんは 顔が きれいです。",
+          "en": "Tanaka-san's face is beautiful.",
+          "terms": [
+            "k_kao"
+          ]
+        },
+        {
+          "jp": "そして、足が 長いです。",
+          "en": "And, his legs are long.",
+          "terms": [
+            "k_ashi",
+            "k_nagai"
+          ]
+        },
+        {
+          "jp": "町で たなかさんを 見ました。首に 赤い スカーフが ありました。",
+          "en": "I saw Tanaka-san in town. There was a red scarf on his neck.",
+          "terms": [
+            "k_machi",
+            "k_kubi",
+            "k_akai"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "たなかさんは どんな 人ですか。",
+          "a": "有名な 人です。",
+          "terms": [
+            "v_yuumei"
+          ]
+        },
+        {
+          "q": "たなかさんの 足は どうですか。",
+          "a": "長いです。",
+          "terms": [
+            "k_ashi",
+            "k_nagai"
+          ]
+        },
+        {
+          "q": "どこで たなかさんを 見ましたか。",
+          "a": "町で 見ました。",
+          "terms": [
+            "k_machi",
+            "k_miru"
+          ]
+        },
+        {
+          "q": "首に 何が ありましたか。",
+          "a": "赤い スカーフが ありました。",
+          "terms": [
+            "k_kubi",
+            "k_akai"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Vocabulary",
+      "instructions": "Select the correct Kanji for the meaning.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "My [head] hurts.",
+          "choices": [
+            "頭",
+            "顔",
+            "首",
+            "心"
+          ],
+          "answer": "頭",
+          "terms": [
+            "k_atama"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "He has a big [body].",
+          "choices": [
+            "体",
+            "休",
+            "本",
+            "人"
+          ],
+          "answer": "体",
+          "terms": [
+            "k_karada"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "A [famous] person.",
+          "choices": [
+            "有名",
+            "名前",
+            "夕方",
+            "大名"
+          ],
+          "answer": "有名",
+          "terms": [
+            "v_yuumei"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "Wash your [face].",
+          "choices": [
+            "顔",
+            "頭",
+            "目",
+            "自"
+          ],
+          "answer": "顔",
+          "terms": [
+            "k_kao"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Grammar & Context",
+      "instructions": "Fill in the blank.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "あの 人は ______ が いいです。（Smart）",
+          "choices": [
+            "頭",
+            "顔",
+            "心",
+            "体"
+          ],
+          "answer": "頭",
+          "terms": [
+            "v_atamagaii"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "______ の 色が わるいです。",
+          "choices": [
+            "顔",
+            "頭",
+            "心",
+            "有名"
+          ],
+          "answer": "顔",
+          "terms": [
+            "v_kaoiro"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "首 ______ いたい です。",
+          "choices": [
+            "が",
+            "を",
+            "で",
+            "に"
+          ],
+          "answer": "が",
+          "terms": [
+            "k_kubi"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "きれいな ______ が あります。",
+          "choices": [
+            "心",
+            "芯",
+            "必",
+            "忘"
+          ],
+          "answer": "心",
+          "terms": [
+            "k_kokoro"
+          ]
+        }
+      ]
+    }
+  ]
+}
