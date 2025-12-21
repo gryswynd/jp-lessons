@@ -6986,13 +6986,13 @@
   },
   {
     "id": "v_atamagaii__te",
-    "surface": "頭がよくて",
+    "surface": "頭がいくて",
     "meaning": "being smart / intelligent",
     "type": "vocab",
     "gtype": "adjective",
     "notes": "Conjugation: て-form of 頭がいい.",
     "lesson_ids": "N4.12",
-    "reading": "あたまがよくて"
+    "reading": "あたまがいくて"
   },
   {
     "id": "v_yuumei__past_negative",
@@ -7477,7 +7477,7 @@
   {
     "id": "v_genki__past_negative",
     "surface": "元気じゃなかった",
-    "meaning": "was not healthy",
+    "meaning": "healthy / energetic",
     "type": "vocab",
     "gtype": "na-adjective",
     "notes": "Conjugation: なかった-form of 元気.",
@@ -7487,7 +7487,7 @@
   {
     "id": "v_genki__te",
     "surface": "元気で",
-    "meaning": "being healthy",
+    "meaning": "healthy / energetic",
     "type": "vocab",
     "gtype": "na-adjective",
     "notes": "Conjugation: て-form of 元気.",
@@ -7613,5 +7613,281 @@
     "notes": "",
     "lesson_ids": "N4.11",
     "reading": "じぶん"
+  },
+  {
+    "id": "v_tabemono",
+    "surface": "食べ物",
+    "meaning": "food",
+    "type": "vocab",
+    "gtype": "noun",
+    "notes": "Retroactive addition.",
+    "lesson_ids": "N4.5",
+    "reading": "たべもの"
+  },
+  {
+    "id": "v_nomimono",
+    "surface": "飲み物",
+    "meaning": "drink / beverage",
+    "type": "vocab",
+    "gtype": "noun",
+    "notes": "Retroactive addition.",
+    "lesson_ids": "N4.5",
+    "reading": "のみもの"
+  },
+  {
+    "id": "v_nanji",
+    "surface": "何時",
+    "meaning": "what time",
+    "type": "vocab",
+    "gtype": "noun",
+    "notes": "Retroactive addition.",
+    "lesson_ids": "N5.2",
+    "reading": "なんじ"
+  },
+  {
+    "id": "v_kashu",
+    "surface": "歌手",
+    "meaning": "singer",
+    "type": "vocab",
+    "gtype": "noun",
+    "notes": "",
+    "lesson_ids": "N4.13",
+    "reading": "かしゅ"
+  },
+  {
+    "id": "k_oto",
+    "lesson": "N4.13",
+    "type": "kanji",
+    "surface": "音",
+    "on": "おん / いん",
+    "kun": "おと / ね",
+    "reading": "おと",
+    "meaning": "sound",
+    "notes": ""
+  },
+  {
+    "id": "k_gaku",
+    "lesson": "N4.13",
+    "type": "kanji",
+    "surface": "楽",
+    "on": "がく / らく",
+    "kun": "たの(しい)",
+    "reading": "たの(しい)",
+    "meaning": "comfort / music / fun",
+    "notes": ""
+  },
+  {
+    "id": "k_uta",
+    "lesson": "N4.13",
+    "type": "kanji",
+    "surface": "歌",
+    "on": "か",
+    "kun": "うた / うた(う)",
+    "reading": "うた",
+    "meaning": "song / sing",
+    "notes": ""
+  },
+  {
+    "id": "k_koe",
+    "lesson": "N4.13",
+    "type": "kanji",
+    "surface": "声",
+    "on": "せい / しょう",
+    "kun": "こえ",
+    "reading": "こえ",
+    "meaning": "voice",
+    "notes": ""
+  },
+  {
+    "id": "k_tei",
+    "lesson": "N4.13",
+    "type": "kanji",
+    "surface": "低",
+    "on": "てい",
+    "kun": "ひく(い)",
+    "reading": "ひく(い)",
+    "meaning": "low",
+    "notes": ""
+  },
+  {
+    "id": "k_kei",
+    "lesson": "N4.13",
+    "type": "kanji",
+    "surface": "軽",
+    "on": "けい",
+    "kun": "かる(い)",
+    "reading": "かる(い)",
+    "meaning": "light (weight)",
+    "notes": ""
+  },
+  {
+    "id": "v_oto",
+    "surface": "音",
+    "meaning": "sound",
+    "type": "vocab",
+    "gtype": "noun",
+    "notes": "",
+    "lesson_ids": "N4.13",
+    "reading": "おと"
+  },
+  {
+    "id": "v_ongaku",
+    "surface": "音楽",
+    "meaning": "music",
+    "type": "vocab",
+    "gtype": "noun",
+    "notes": "",
+    "lesson_ids": "N4.13",
+    "reading": "おんがく"
+  },
+  {
+    "id": "v_tanoshii",
+    "surface": "楽しい",
+    "meaning": "fun / enjoyable",
+    "type": "vocab",
+    "gtype": "adjective",
+    "notes": "",
+    "lesson_ids": "N4.13",
+    "reading": "たのしい"
+  },
+  {
+    "id": "v_uta",
+    "surface": "歌",
+    "meaning": "song",
+    "type": "vocab",
+    "gtype": "noun",
+    "notes": "",
+    "lesson_ids": "N4.13",
+    "reading": "うた"
+  },
+  {
+    "id": "v_utau",
+    "surface": "歌う",
+    "meaning": "to sing",
+    "type": "vocab",
+    "gtype": "verb",
+    "notes": "",
+    "lesson_ids": "N4.13",
+    "reading": "うたう"
+  },
+  {
+    "id": "v_kashu",
+    "surface": "歌手",
+    "meaning": "singer",
+    "type": "vocab",
+    "gtype": "noun",
+    "notes": "",
+    "lesson_ids": "N4.13",
+    "reading": "かしゅ"
+  },
+  {
+    "id": "v_koe",
+    "surface": "声",
+    "meaning": "voice",
+    "type": "vocab",
+    "gtype": "noun",
+    "notes": "",
+    "lesson_ids": "N4.13",
+    "reading": "こえ"
+  },
+  {
+    "id": "v_kogoe",
+    "surface": "小声",
+    "meaning": "low voice / whisper",
+    "type": "vocab",
+    "gtype": "noun",
+    "notes": "",
+    "lesson_ids": "N4.13",
+    "reading": "こごえ"
+  },
+  {
+    "id": "v_hanashigoe",
+    "surface": "話し声",
+    "meaning": "speaking voice",
+    "type": "vocab",
+    "gtype": "noun",
+    "notes": "",
+    "lesson_ids": "N4.13",
+    "reading": "はなしごえ"
+  },
+  {
+    "id": "v_seigaku",
+    "surface": "声楽",
+    "meaning": "vocal music",
+    "type": "vocab",
+    "gtype": "noun",
+    "notes": "",
+    "lesson_ids": "N4.13",
+    "reading": "せいがく"
+  },
+  {
+    "id": "v_hikui",
+    "surface": "低い",
+    "meaning": "low (height/rank/voice)",
+    "type": "vocab",
+    "gtype": "adjective",
+    "notes": "",
+    "lesson_ids": "N4.13",
+    "reading": "ひくい"
+  },
+  {
+    "id": "v_teion",
+    "surface": "低音",
+    "meaning": "low tone / bass",
+    "type": "vocab",
+    "gtype": "noun",
+    "notes": "",
+    "lesson_ids": "N4.13",
+    "reading": "ていおん"
+  },
+  {
+    "id": "v_karui",
+    "surface": "軽い",
+    "meaning": "light (weight/mood)",
+    "type": "vocab",
+    "gtype": "adjective",
+    "notes": "",
+    "lesson_ids": "N4.13",
+    "reading": "かるい"
+  },
+  {
+    "id": "v_keiongaku",
+    "surface": "軽音楽",
+    "meaning": "light music / pop music",
+    "type": "vocab",
+    "gtype": "noun",
+    "notes": "",
+    "lesson_ids": "N4.13",
+    "reading": "けいおんがく"
+  },
+  {
+    "id": "v_tegaru",
+    "surface": "手軽",
+    "meaning": "easy / simple / informal",
+    "type": "vocab",
+    "gtype": "na-adjective",
+    "notes": "Na-adjective (手軽な).",
+    "lesson_ids": "N4.13",
+    "reading": "てがる"
+  },
+  {
+    "id": "v_kigaru",
+    "surface": "気軽",
+    "meaning": "carefree / lighthearted",
+    "type": "vocab",
+    "gtype": "na-adjective",
+    "notes": "Na-adjective (気軽な).",
+    "lesson_ids": "N4.13",
+    "reading": "きがる"
+  },
+  {
+    "id": "v_karukuchi",
+    "surface": "軽口",
+    "meaning": "witty remark / talkative",
+    "type": "vocab",
+    "gtype": "noun",
+    "notes": "",
+    "lesson_ids": "N4.13",
+    "reading": "かるくち"
   }
 ]
