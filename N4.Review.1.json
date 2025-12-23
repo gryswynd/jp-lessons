@@ -1,42 +1,42 @@
 {
-  "id": "N4.14",
+  "id": "N4.Review",
   "title": "Phase 4 Comprehensive Assessment",
   "meta": {
     "phase": 4,
     "type": "assessment",
-    "focus": "Final N4 check: Kanji, Vocabulary, Grammar, and Reading.",
-    "timeLimit": 30
+    "focus": "Final N4 check: Kanji, Vocabulary, Particles, and Reading.",
+    "timeLimit": 35
   },
   "sections": [
     {
       "type": "drills",
       "title": "Part 1: Kanji Readings",
-      "instructions": "Select the correct reading for the underlined word.",
+      "instructions": "Select the correct reading for the [bracketed] word.",
       "items": [
         {
           "kind": "mcq",
-          "q": "[弟]と 公園で 遊びました。",
+          "q": "[弟]と こうえんで あそびました。",
           "choices": ["あに", "おとうと", "いもうと", "おとこ"],
           "answer": "おとうと",
-          "explanation": "弟 (younger brother) is read as <b>otouto</b>. 兄 (ani) is older brother."
+          "explanation": "弟 (younger brother) is read as <b>otouto</b>."
         },
         {
           "kind": "mcq",
           "q": "晩ご飯は [牛肉]でした。",
           "choices": ["ぎゅうにく", "とりにく", "ぎゅうにゅう", "うまにく"],
           "answer": "ぎゅうにく",
-          "explanation": "牛肉 (beef) is read as <b>gyuuniku</b>. 牛 (gyuu) + 肉 (niku)."
+          "explanation": "牛肉 (beef) is read as <b>gyuuniku</b>."
         },
         {
           "kind": "mcq",
-          "q": "[黒い] 服を 着ます。",
+          "q": "[黒い] ふくを 着ます。",
           "choices": ["あおい", "しろい", "くろい", "あかい"],
           "answer": "くろい",
           "explanation": "黒い (black) is read as <b>kuroi</b>."
         },
         {
           "kind": "mcq",
-          "q": "彼は [歌]が 上手です。",
+          "q": "あの 人は [歌]が 上手です。",
           "choices": ["おと", "こえ", "うた", "え"],
           "answer": "うた",
           "explanation": "歌 (song) is read as <b>uta</b>."
@@ -50,7 +50,7 @@
         },
         {
           "kind": "mcq",
-          "q": "京都に [旅館]が あります。",
+          "q": "きょうとに [旅館]が あります。",
           "choices": ["りょこう", "りょかん", "かいかん", "としょかん"],
           "answer": "りょかん",
           "explanation": "旅館 (Japanese inn) is read as <b>ryokan</b>."
@@ -67,7 +67,7 @@
           "q": "毎日、６時に ______。",
           "choices": ["起きます", "借ります", "働きます", "使います"],
           "answer": "起きます",
-          "explanation": "起きます (okimasu) means to wake up, which fits the 6:00 AM context."
+          "explanation": "起きます (okimasu) means to wake up."
         },
         {
           "kind": "mcq",
@@ -85,10 +85,10 @@
         },
         {
           "kind": "mcq",
-          "q": "友だちに 手紙を ______。",
+          "q": "友だちに てがみを ______。",
           "choices": ["送りました", "着ました", "住みました", "別れました"],
           "answer": "送りました",
-          "explanation": "送りました (okurimashita) means 'sent', which is used with letters."
+          "explanation": "送りました (okurimashita) means 'sent'."
         },
         {
           "kind": "mcq",
@@ -102,7 +102,7 @@
           "q": "映画館で 映画が ______。",
           "choices": ["始まります", "始めます", "終わります", "住みます"],
           "answer": "始まります",
-          "explanation": "始まります (hajimarimasu) is the intransitive verb 'begins', used with 'Movie ga...'."
+          "explanation": "始まります (hajimarimasu) is the intransitive verb 'begins'."
         }
       ]
     },
@@ -144,58 +144,144 @@
       ]
     },
     {
+      "type": "drills",
+      "title": "Part 4: Particles & Grammar Check",
+      "instructions": "Choose the correct particle or form.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "バス ______ 乗ります。",
+          "choices": ["に", "を", "で", "へ"],
+          "answer": "に",
+          "explanation": "We use 'ni' with 'norimasu' (to ride/get on)."
+        },
+        {
+          "kind": "mcq",
+          "q": "どこ ______ 行きませんでした。",
+          "choices": ["へも", "へ", "に", "を"],
+          "answer": "へも",
+          "explanation": "When saying 'didn't go anywhere', we use 'Question Word + mo + Negative'."
+        },
+        {
+          "kind": "mcq",
+          "q": "日本語 ______ 話せますか。",
+          "choices": ["が", "を", "に", "は"],
+          "answer": "が",
+          "explanation": "With potential verbs (hanasemasu), we often use 'ga' instead of 'o'."
+        },
+        {
+          "kind": "mcq",
+          "q": "あの 店は ゆうめい ______、おいしいです。",
+          "choices": ["で", "が", "くて", "に"],
+          "answer": "で",
+          "explanation": "'Yuumei' is a Na-adjective. To connect it (and), we use 'de'."
+        },
+        {
+          "kind": "mcq",
+          "q": "ここで しゃしんを ______ ください。",
+          "choices": ["とらないで", "とらなくて", "とらない", "とりません"],
+          "answer": "とらないで",
+          "explanation": "'Please do not...' is 'Nai-form + de kudasai'."
+        }
+      ]
+    },
+    {
       "type": "reading",
-      "title": "Part 4: Reading Comprehension",
+      "title": "Part 5: Reading - The Concert",
       "passage": [
         {
-          "jp": "先週の 土曜日、私は 兄と 東京へ 行きました。",
-          "en": "Last Saturday, I went to Tokyo with my older brother."
+          "jp": "先週の 土よう日、私は 兄と とうきょうへ 行きました。"
         },
         {
-          "jp": "私たちは 音楽が 大好きですから、コンサートに 行きました。",
-          "en": "Because we love music, we went to a concert."
+          "jp": "私たちは 音楽が 大好きですから、コンサートに 行きました。"
         },
         {
-          "jp": "歌手は 男の人でした。声が 低くて、かっこよかったです。",
-          "en": "The singer was a man. His voice was low and cool."
+          "jp": "歌手は 男の人でした。声が 低くて、かっこよかったです。"
         },
         {
-          "jp": "コンサートの あとで、近くの 店で 晩ご飯を 食べました。",
-          "en": "After the concert, we ate dinner at a nearby shop."
+          "jp": "コンサートの あとで、近くの 店で 晩ご飯を 食べました。"
         },
         {
-          "jp": "私は カレーを 食べましたが、兄は 肉を 食べました。",
-          "en": "I ate curry, but my brother ate meat."
+          "jp": "私は カレーを 食べましたが、兄は 肉を 食べました。"
         },
         {
-          "jp": "とても 楽しい 一日でした。",
-          "en": "It was a very fun day."
+          "jp": "とても 楽しい 一日でした。"
         }
       ],
       "questions": [
         {
-          "q": "誰と 東京へ 行きましたか。",
-          "a": "兄 (Older brother)",
-          "choices": ["姉 (Older sister)", "弟 (Younger brother)", "兄 (Older brother)", "妹 (Younger sister)"],
+          "q": "誰と とうきょうへ 行きましたか。",
+          "a": "兄",
+          "choices": ["姉", "弟", "兄", "妹"],
           "explanation": "The text says '兄と' (with older brother)."
         },
         {
           "q": "歌手の 声は どうでしたか。",
-          "a": "低かったです (It was low)",
-          "choices": ["高かったです (High)", "低かったです (Low)", "大きかったです (Loud)", "小さかったです (Quiet)"],
+          "a": "低かったです",
+          "choices": ["高かったです", "低かったです", "大きかったです", "小さかったです"],
           "explanation": "The text says '声が 低くて' (voice was low)."
         },
         {
           "q": "兄は 何を 食べましたか。",
-          "a": "肉 (Meat)",
-          "choices": ["カレー (Curry)", "肉 (Meat)", "魚 (Fish)", "パン (Bread)"],
-          "explanation": "The text says '兄は 肉を 食べました' (Brother ate meat)."
+          "a": "肉",
+          "choices": ["カレー", "肉", "魚", "パン"],
+          "explanation": "The text says '兄は 肉を 食べました'."
         },
         {
           "q": "どんな 一日 でしたか。",
-          "a": "楽しい 一日 (A fun day)",
-          "choices": ["いそがしい 一日 (Busy)", "楽しい 一日 (Fun)", "寒い 一日 (Cold)", "長い 一日 (Long)"],
+          "a": "楽しい 一日",
+          "choices": ["いそがしい 一日", "楽しい 一日", "寒い 一日", "長い 一日"],
           "explanation": "The final sentence is 'とても 楽しい 一日でした'."
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Part 6: Reading - Family Dinner",
+      "passage": [
+        {
+          "jp": "私の 家族は 父と 母と 兄と 私です。"
+        },
+        {
+          "jp": "父は 料理が 上手です。"
+        },
+        {
+          "jp": "きのう、父は おいしい カレーを 作りました。"
+        },
+        {
+          "jp": "兄は 「からい！」と 言いましたが、たくさん 食べました。"
+        },
+        {
+          "jp": "母は 「とても おいしいね」と 言いました。"
+        },
+        {
+          "jp": "晩ご飯は とても 楽しかったです。"
+        }
+      ],
+      "questions": [
+        {
+          "q": "家族は 何人ですか。",
+          "a": "四人",
+          "choices": ["三人", "四人", "五人", "六人"],
+          "explanation": "Father, Mother, Brother, Me = 4 people."
+        },
+        {
+          "q": "誰が 料理を 作りましたか。",
+          "a": "父",
+          "choices": ["母", "父", "兄", "私"],
+          "explanation": "The text says '父は... 作りました'."
+        },
+        {
+          "q": "カレーは どうでしたか。",
+          "a": "からくて、おいしかった",
+          "choices": ["あまくて、おいしかった", "からくて、おいしかった", "まずかった", "高かった"],
+          "explanation": "Brother said it was spicy (karai), and Dad made delicious (oishii) curry."
+        },
+        {
+          "q": "兄は カレーを 食べましたか。",
+          "a": "はい、たくさん 食べました",
+          "choices": ["はい、少し 食べました", "いいえ、食べませんでした", "はい、たくさん 食べました", "わかりません"],
+          "explanation": "The text says 'たくさん 食べました' (ate a lot)."
         }
       ]
     }
