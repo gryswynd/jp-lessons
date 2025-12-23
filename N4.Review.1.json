@@ -1,0 +1,203 @@
+{
+  "id": "N4.14",
+  "title": "Phase 4 Comprehensive Assessment",
+  "meta": {
+    "phase": 4,
+    "type": "assessment",
+    "focus": "Final N4 check: Kanji, Vocabulary, Grammar, and Reading.",
+    "timeLimit": 30
+  },
+  "sections": [
+    {
+      "type": "drills",
+      "title": "Part 1: Kanji Readings",
+      "instructions": "Select the correct reading for the underlined word.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "[弟]と 公園で 遊びました。",
+          "choices": ["あに", "おとうと", "いもうと", "おとこ"],
+          "answer": "おとうと",
+          "explanation": "弟 (younger brother) is read as <b>otouto</b>. 兄 (ani) is older brother."
+        },
+        {
+          "kind": "mcq",
+          "q": "晩ご飯は [牛肉]でした。",
+          "choices": ["ぎゅうにく", "とりにく", "ぎゅうにゅう", "うまにく"],
+          "answer": "ぎゅうにく",
+          "explanation": "牛肉 (beef) is read as <b>gyuuniku</b>. 牛 (gyuu) + 肉 (niku)."
+        },
+        {
+          "kind": "mcq",
+          "q": "[黒い] 服を 着ます。",
+          "choices": ["あおい", "しろい", "くろい", "あかい"],
+          "answer": "くろい",
+          "explanation": "黒い (black) is read as <b>kuroi</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "彼は [歌]が 上手です。",
+          "choices": ["おと", "こえ", "うた", "え"],
+          "answer": "うた",
+          "explanation": "歌 (song) is read as <b>uta</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "野菜を [切って] ください。",
+          "choices": ["きって", "とって", "まって", "かって"],
+          "answer": "きって",
+          "explanation": "切って (cut - te form) is read as <b>kitte</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "京都に [旅館]が あります。",
+          "choices": ["りょこう", "りょかん", "かいかん", "としょかん"],
+          "answer": "りょかん",
+          "explanation": "旅館 (Japanese inn) is read as <b>ryokan</b>."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 2: Vocabulary & Context",
+      "instructions": "Select the best word to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "毎日、６時に ______。",
+          "choices": ["起きます", "借ります", "働きます", "使います"],
+          "answer": "起きます",
+          "explanation": "起きます (okimasu) means to wake up, which fits the 6:00 AM context."
+        },
+        {
+          "kind": "mcq",
+          "q": "父は ______ が 長いです。",
+          "choices": ["頭", "足", "北", "方"],
+          "answer": "足",
+          "explanation": "足 (ashi) means legs. 'Long legs' is a common physical description."
+        },
+        {
+          "kind": "mcq",
+          "q": "スーパーは 家から ______ ですから、歩いて 行けません。",
+          "choices": ["近い", "遠い", "明るい", "暗い"],
+          "answer": "遠い",
+          "explanation": "If you cannot walk there, it must be 遠い (tooi - far)."
+        },
+        {
+          "kind": "mcq",
+          "q": "友だちに 手紙を ______。",
+          "choices": ["送りました", "着ました", "住みました", "別れました"],
+          "answer": "送りました",
+          "explanation": "送りました (okurimashita) means 'sent', which is used with letters."
+        },
+        {
+          "kind": "mcq",
+          "q": "あの 人は 有名な ______ です。",
+          "choices": ["歌手", "歌", "音楽", "音"],
+          "answer": "歌手",
+          "explanation": "歌手 (kashu) means singer, which fits 'famous person'."
+        },
+        {
+          "kind": "mcq",
+          "q": "映画館で 映画が ______。",
+          "choices": ["始まります", "始めます", "終わります", "住みます"],
+          "answer": "始まります",
+          "explanation": "始まります (hajimarimasu) is the intransitive verb 'begins', used with 'Movie ga...'."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 3: Grammar Scramble",
+      "instructions": "Construct the sentence by clicking the words in the correct order.",
+      "items": [
+        {
+          "kind": "scramble",
+          "q": "I can write Kanji.",
+          "segments": ["私", "は", "漢字", "を", "書けます"],
+          "explanation": "Potential form: 漢字を書けます (Can write Kanji)."
+        },
+        {
+          "kind": "scramble",
+          "q": "I eat breakfast, then go to the company.",
+          "segments": ["朝ご飯", "を", "食べて", "会社", "へ", "行きます"],
+          "explanation": "Te-form (食べて) connects sequential actions."
+        },
+        {
+          "kind": "scramble",
+          "q": "I had a fight with my younger sister.",
+          "segments": ["妹", "と", "ケンカ", "を", "しました"],
+          "explanation": "Particle と (to) indicates 'with' whom you did the action."
+        },
+        {
+          "kind": "scramble",
+          "q": "This bag is cheap, but cute.",
+          "segments": ["この", "カバン", "は", "安い", "が", "かわいい", "です"],
+          "explanation": "Particle が (ga) acts as 'but' to connect contradictory adjectives."
+        },
+        {
+          "kind": "scramble",
+          "q": "Please speak in a smaller voice.",
+          "segments": ["もっと", "小さい", "声", "で", "話して", "ください"],
+          "explanation": "Particle で (de) indicates the means/manner (with a small voice)."
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Part 4: Reading Comprehension",
+      "passage": [
+        {
+          "jp": "先週の 土曜日、私は 兄と 東京へ 行きました。",
+          "en": "Last Saturday, I went to Tokyo with my older brother."
+        },
+        {
+          "jp": "私たちは 音楽が 大好きですから、コンサートに 行きました。",
+          "en": "Because we love music, we went to a concert."
+        },
+        {
+          "jp": "歌手は 男の人でした。声が 低くて、かっこよかったです。",
+          "en": "The singer was a man. His voice was low and cool."
+        },
+        {
+          "jp": "コンサートの あとで、近くの 店で 晩ご飯を 食べました。",
+          "en": "After the concert, we ate dinner at a nearby shop."
+        },
+        {
+          "jp": "私は カレーを 食べましたが、兄は 肉を 食べました。",
+          "en": "I ate curry, but my brother ate meat."
+        },
+        {
+          "jp": "とても 楽しい 一日でした。",
+          "en": "It was a very fun day."
+        }
+      ],
+      "questions": [
+        {
+          "q": "誰と 東京へ 行きましたか。",
+          "a": "兄 (Older brother)",
+          "choices": ["姉 (Older sister)", "弟 (Younger brother)", "兄 (Older brother)", "妹 (Younger sister)"],
+          "explanation": "The text says '兄と' (with older brother)."
+        },
+        {
+          "q": "歌手の 声は どうでしたか。",
+          "a": "低かったです (It was low)",
+          "choices": ["高かったです (High)", "低かったです (Low)", "大きかったです (Loud)", "小さかったです (Quiet)"],
+          "explanation": "The text says '声が 低くて' (voice was low)."
+        },
+        {
+          "q": "兄は 何を 食べましたか。",
+          "a": "肉 (Meat)",
+          "choices": ["カレー (Curry)", "肉 (Meat)", "魚 (Fish)", "パン (Bread)"],
+          "explanation": "The text says '兄は 肉を 食べました' (Brother ate meat)."
+        },
+        {
+          "q": "どんな 一日 でしたか。",
+          "a": "楽しい 一日 (A fun day)",
+          "choices": ["いそがしい 一日 (Busy)", "楽しい 一日 (Fun)", "寒い 一日 (Cold)", "長い 一日 (Long)"],
+          "explanation": "The final sentence is 'とても 楽しい 一日でした'."
+        }
+      ]
+    }
+  ]
+}
