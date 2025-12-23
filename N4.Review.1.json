@@ -1,5 +1,5 @@
 {
-  "id": "N4.Review",
+  "id": "N4.Review.1",
   "title": "Phase 4 Comprehensive Assessment",
   "meta": {
     "phase": 4,
@@ -54,6 +54,13 @@
           "choices": ["りょこう", "りょかん", "かいかん", "としょかん"],
           "answer": "りょかん",
           "explanation": "旅館 (Japanese inn) is read as <b>ryokan</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "[写真]を 見ました。",
+          "choices": ["しんしゃ", "しゃしん", "さしん", "しょうしん"],
+          "answer": "しゃしん",
+          "explanation": "写真 (photo) is read as <b>shashin</b>."
         }
       ]
     },
@@ -99,10 +106,10 @@
         },
         {
           "kind": "mcq",
-          "q": "映画館で 映画が ______。",
-          "choices": ["始まります", "始めます", "終わります", "住みます"],
-          "answer": "始まります",
-          "explanation": "始まります (hajimarimasu) is the intransitive verb 'begins'."
+          "q": "ここで ______ を とらないで ください。",
+          "choices": ["写真", "音楽", "手紙", "牛"],
+          "answer": "写真",
+          "explanation": "You take (toru) a <b>photo</b> (shashin)."
         }
       ]
     },
@@ -114,8 +121,8 @@
         {
           "kind": "scramble",
           "q": "I can write Kanji.",
-          "segments": ["私", "は", "漢字", "を", "書けます"],
-          "explanation": "Potential form: 漢字を書けます (Can write Kanji)."
+          "segments": ["私", "は", "かんじ", "を", "書けます"],
+          "explanation": "Potential form: かんじを書けます (Can write Kanji)."
         },
         {
           "kind": "scramble",
@@ -178,10 +185,10 @@
         },
         {
           "kind": "mcq",
-          "q": "ここで しゃしんを ______ ください。",
-          "choices": ["とらないで", "とらなくて", "とらない", "とりません"],
-          "answer": "とらないで",
-          "explanation": "'Please do not...' is 'Nai-form + de kudasai'."
+          "q": "映画が ______。",
+          "choices": ["始まります", "始めます", "終わります", "住みます"],
+          "answer": "始まります",
+          "explanation": "始まります (begins) is intransitive."
         }
       ]
     },
