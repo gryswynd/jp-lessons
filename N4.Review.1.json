@@ -81,7 +81,7 @@
           "q": "父は ______ が 長いです。",
           "choices": ["頭", "足", "北", "方"],
           "answer": "足",
-          "explanation": "足 (ashi) means legs. 'Long legs' is a common physical description."
+          "explanation": "足 (ashi) means legs."
         },
         {
           "kind": "mcq",
@@ -102,7 +102,7 @@
           "q": "あの 人は 有名な ______ です。",
           "choices": ["歌手", "歌", "音楽", "音"],
           "answer": "歌手",
-          "explanation": "歌手 (kashu) means singer, which fits 'famous person'."
+          "explanation": "歌手 (kashu) means singer."
         },
         {
           "kind": "mcq",
@@ -138,14 +138,14 @@
         },
         {
           "kind": "scramble",
-          "q": "This bag is cheap, but cute.",
-          "segments": ["この", "カバン", "は", "安い", "が", "かわいい", "です"],
-          "explanation": "Particle が (ga) acts as 'but' to connect contradictory adjectives."
+          "q": "This bag is expensive, but light.",
+          "segments": ["この", "カバン", "は", "高い", "が", "軽い", "です"],
+          "explanation": "Takai (expensive) but Karui (light). Adjectives connected with 'ga'."
         },
         {
           "kind": "scramble",
-          "q": "Please speak in a smaller voice.",
-          "segments": ["もっと", "小さい", "声", "で", "話して", "ください"],
+          "q": "Spoke with a small voice.",
+          "segments": ["小さい", "声", "で", "話しました"],
           "explanation": "Particle で (de) indicates the means/manner (with a small voice)."
         }
       ]
@@ -157,7 +157,7 @@
       "items": [
         {
           "kind": "mcq",
-          "q": "バス ______ 乗ります。",
+          "q": "電車 ______ 乗ります。",
           "choices": ["に", "を", "で", "へ"],
           "answer": "に",
           "explanation": "We use 'ni' with 'norimasu' (to ride/get on)."
@@ -178,7 +178,7 @@
         },
         {
           "kind": "mcq",
-          "q": "あの 店は ゆうめい ______、おいしいです。",
+          "q": "あの 店は ゆうめい ______、大きいです。",
           "choices": ["で", "が", "くて", "に"],
           "answer": "で",
           "explanation": "'Yuumei' is a Na-adjective. To connect it (and), we use 'de'."
@@ -186,9 +186,9 @@
         {
           "kind": "mcq",
           "q": "映画が ______。",
-          "choices": ["始まります", "始めます", "終わります", "住みます"],
+          "choices": ["始まります", "始めます", "泳ぎます", "住みます"],
           "answer": "始まります",
-          "explanation": "始まります (begins) is intransitive."
+          "explanation": "始まります (hajimarimasu/starts) is the correct intransitive verb for a movie."
         }
       ]
     },
@@ -203,7 +203,7 @@
           "jp": "私たちは 音楽が 大好きですから、コンサートに 行きました。"
         },
         {
-          "jp": "歌手は 男の人でした。声が 低くて、かっこよかったです。"
+          "jp": "歌手は 男の人でした。声が 低くて、大きかったです。"
         },
         {
           "jp": "コンサートの あとで、近くの 店で 晩ご飯を 食べました。"
@@ -225,7 +225,7 @@
         {
           "q": "歌手の 声は どうでしたか。",
           "a": "低かったです",
-          "choices": ["高かったです", "低かったです", "大きかったです", "小さかったです"],
+          "choices": ["高かったです", "低かったです", "小さかったです", "わるかったです"],
           "explanation": "The text says '声が 低くて' (voice was low)."
         },
         {
@@ -253,13 +253,13 @@
           "jp": "父は 料理が 上手です。"
         },
         {
-          "jp": "きのう、父は おいしい カレーを 作りました。"
+          "jp": "日曜日、父は 牛肉と 野菜の 料理を 作りました。"
         },
         {
-          "jp": "兄は 「からい！」と 言いましたが、たくさん 食べました。"
+          "jp": "兄は 「好きです！」と 言いました。"
         },
         {
-          "jp": "母は 「とても おいしいね」と 言いました。"
+          "jp": "兄は たくさん 食べました。"
         },
         {
           "jp": "晩ご飯は とても 楽しかったです。"
@@ -273,19 +273,19 @@
           "explanation": "Father, Mother, Brother, Me = 4 people."
         },
         {
-          "q": "誰が 料理を 作りましたか。",
+          "q": "だれが 料理を 作りましたか。",
           "a": "父",
           "choices": ["母", "父", "兄", "私"],
           "explanation": "The text says '父は... 作りました'."
         },
         {
-          "q": "カレーは どうでしたか。",
-          "a": "からくて、おいしかった",
-          "choices": ["あまくて、おいしかった", "からくて、おいしかった", "まずかった", "高かった"],
-          "explanation": "Brother said it was spicy (karai), and Dad made delicious (oishii) curry."
+          "q": "兄は 何と 言いましたか。",
+          "a": "好きです",
+          "choices": ["好きです", "きらいです", "まずいです", "安いです"],
+          "explanation": "Brother said 'Suki desu!' (I like it)."
         },
         {
-          "q": "兄は カレーを 食べましたか。",
+          "q": "兄は 料理を 食べましたか。",
           "a": "はい、たくさん 食べました",
           "choices": ["はい、少し 食べました", "いいえ、食べませんでした", "はい、たくさん 食べました", "わかりません"],
           "explanation": "The text says 'たくさん 食べました' (ate a lot)."
