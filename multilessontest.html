@@ -121,6 +121,107 @@
     return `https://raw.githubusercontent.com/${REPO_CONFIG.owner}/${REPO_CONFIG.repo}/${REPO_CONFIG.branch}/${REPO_CONFIG.path ? REPO_CONFIG.path + '/' : ''}${filename}`;
   }
 
+  const CONJUGATION_LABELS = {
+    masu: "ます-form",
+    mashou: "ましょう-form",
+    te: "て-form",
+    ta: "た-form",
+    nai: "ない-form",
+    past_negative: "なかった-form",
+    tai: "たい-form",
+    potential: "potential"
+  };
+
+  const CONJUGATION_MEANINGS = {
+    masu: "{verb} (polite)",
+    mashou: "Let's {verb}",
+    te: "{verb}ing",
+    ta: "{verb}ed",
+    nai: "do not {verb}",
+    past_negative: "did not {verb}",
+    tai: "want to {verb}",
+    potential: "can {verb}"
+  };
+
+  const U_STEM_MAP = {
+    "う": { a: "わ", i: "い", e: "え" },
+    "く": { a: "か", i: "き", e: "け" },
+    "ぐ": { a: "が", i: "ぎ", e: "げ" },
+    "す": { a: "さ", i: "し", e: "せ" },
+    "つ": { a: "た", i: "ち", e: "て" },
+    "ぬ": { a: "な", i: "に", e: "ね" },
+    "ぶ": { a: "ば", i: "び", e: "べ" },
+    "む": { a: "ま", i: "み", e: "め" },
+    "る": { a: "ら", i: "り", e: "れ" }
+  };
+
+  const U_TE_TA_MAP = {
+    "う": { te: "って", ta: "った" },
+    "つ": { te: "って", ta: "った" },
+    "る": { te: "って", ta: "った" },
+    "む": { te: "んで", ta: "んだ" },
+    "ぶ": { te: "んで", ta: "んだ" },
+    "ぬ": { te: "んで", ta: "んだ" },
+    "く": { te: "いて", ta: "いた" },
+    "ぐ": { te: "いで", ta: "いだ" },
+    "す": { te: "して", ta: "した" }
+  };
+
+  function stripToInfinitive(meaning) {
+    if (!meaning) return "";
+    return meaning.startsWith("to ") ? meaning.slice(3) : meaning;
+  }
+
+  function buildConjugationMeaning(term, conjugationKey) {
+    const template = CONJUGATION_MEANINGS[conjugationKey];
+    if (!template) return term.meaning || "";
+    const baseVerb = stripToInfinitive(term.meaning || "");
+    return template.replace("{verb}", baseVerb);
+  }
+
+  function buildVerbConjugations(term) {
+    if (!term || term.gtype !== "verb") return null;
+    const verbClass = term.verb_class || "u";
+    const surface = term.surface || "";
+    const lastKana = surface.slice(-1);
+    const base = surface.slice(0, -1);
+    let conjugations = {};
+
+    if (verbClass === "ru") {
+      conjugations = {
+        masu: `${base}ます`,
+        mashou: `${base}ましょう`,
+        te: `${base}て`,
+        ta: `${base}た`,
+        nai: `${base}ない`,
+        past_negative: `${base}なかった`,
+        tai: `${base}たい`,
+        potential: `${base}られる`
+      };
+    } else if (verbClass === "u") {
+      const stem = U_STEM_MAP[lastKana];
+      const teTa = U_TE_TA_MAP[lastKana];
+      if (stem && teTa) {
+        conjugations = {
+          masu: `${base}${stem.i}ます`,
+          mashou: `${base}${stem.i}ましょう`,
+          te: `${base}${teTa.te}`,
+          ta: `${base}${teTa.ta}`,
+          nai: `${base}${stem.a}ない`,
+          past_negative: `${base}${stem.a}なかった`,
+          tai: `${base}${stem.i}たい`,
+          potential: `${base}${stem.e}る`
+        };
+      }
+    }
+
+    if (term.custom_conjugations) {
+      conjugations = { ...conjugations, ...term.custom_conjugations };
+    }
+
+    return conjugations;
+  }
+
   // --- Master Glossary (cached) ---
   const MASTER_GLOSSARY_FILE = "glossary.master.json";
   let masterGlossaryPromise = null;
@@ -146,9 +247,25 @@
     if (!text) return "";
     let html = esc(text);
     if (!termIds || termIds.length === 0) return html;
-    const terms = termIds.map(id => termMapData[id]).filter(Boolean).sort((a,b) => b.surface.length - a.surface.length);
+    const terms = termIds.map(id => termMapData[id]).filter(Boolean);
+    const replacements = [];
     terms.forEach(t => {
-      html = html.split(t.surface).join(`<span class="jp-term" onclick="window.JP_OPEN_TERM('${t.id}')">${t.surface}</span>`);
+      replacements.push({ surface: t.surface, termId: t.id, conjugationKey: null });
+      if (t.gtype === "verb" && t.verb_class) {
+        const conjugations = buildVerbConjugations(t);
+        if (conjugations) {
+          Object.entries(conjugations).forEach(([key, form]) => {
+            if (form && form !== t.surface) {
+              replacements.push({ surface: form, termId: t.id, conjugationKey: key });
+            }
+          });
+        }
+      }
+    });
+    replacements.sort((a, b) => b.surface.length - a.surface.length);
+    replacements.forEach(rep => {
+      const conjArgs = rep.conjugationKey ? `,'${rep.conjugationKey}','${rep.surface}'` : "";
+      html = html.split(rep.surface).join(`<span class="jp-term" onclick="window.JP_OPEN_TERM('${rep.termId}'${conjArgs})">${rep.surface}</span>`);
     });
     return html;
   }
@@ -169,12 +286,16 @@
     modalOverlay.onclick = (e) => { if(e.target === modalOverlay) close(); };
     modalOverlay.querySelector('.jp-close-btn').onclick = close;
   }
-  window.JP_OPEN_TERM = function(id) {
+  window.JP_OPEN_TERM = function(id, conjugationKey, surfaceOverride) {
     const t = termMapData[id];
     if (!t) return;
-    document.getElementById('jp-m-title').innerText = t.surface;
-    document.getElementById('jp-m-meta').innerText = t.reading + (t.meaning ? ` • ${t.meaning}` : "");
-    document.getElementById('jp-m-notes').innerText = t.notes || "";
+    const conjugations = buildVerbConjugations(t);
+    const displaySurface = surfaceOverride || t.surface;
+    const displayMeaning = conjugationKey ? buildConjugationMeaning(t, conjugationKey) : t.meaning;
+    const notePrefix = conjugationKey && CONJUGATION_LABELS[conjugationKey] ? `Conjugation: ${CONJUGATION_LABELS[conjugationKey]}. ` : "";
+    document.getElementById('jp-m-title').innerText = displaySurface;
+    document.getElementById('jp-m-meta').innerText = t.reading + (displayMeaning ? ` • ${displayMeaning}` : "");
+    document.getElementById('jp-m-notes').innerText = `${notePrefix}${t.notes || ""}`.trim();
     modalOverlay.style.display = 'flex';
   };
 

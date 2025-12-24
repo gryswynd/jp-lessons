@@ -2122,7 +2122,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.1",
-    "reading": "うまれる"
+    "reading": "うまれる",
+    "verb_class": "ru"
   },
   {
     "id": "v_sensei",
@@ -2292,7 +2293,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.2",
-    "reading": "わかる"
+    "reading": "わかる",
+    "verb_class": "u"
   },
   {
     "id": "v_mainichi",
@@ -2722,7 +2724,18 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.4",
-    "reading": "いく"
+    "reading": "いく",
+    "verb_class": "irregular",
+    "custom_conjugations": {
+      "masu": "行きます",
+      "mashou": "行きましょう",
+      "te": "行って",
+      "ta": "行った",
+      "nai": "行かない",
+      "past_negative": "行かなかった",
+      "tai": "行きたい",
+      "potential": "行ける"
+    }
   },
   {
     "id": "v_kuru",
@@ -2732,7 +2745,18 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.4",
-    "reading": "くる"
+    "reading": "くる",
+    "verb_class": "irregular",
+    "custom_conjugations": {
+      "masu": "来ます",
+      "mashou": "来ましょう",
+      "te": "来て",
+      "ta": "来た",
+      "nai": "来ない",
+      "past_negative": "来なかった",
+      "tai": "来たい",
+      "potential": "来られる"
+    }
   },
   {
     "id": "v_raishuu",
@@ -2772,7 +2796,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.1",
-    "reading": "かえる"
+    "reading": "かえる",
+    "verb_class": "u"
   },
   {
     "id": "v_ekichou",
@@ -2992,7 +3017,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.6",
-    "reading": "やすむ"
+    "reading": "やすむ",
+    "verb_class": "u"
   },
   {
     "id": "v_kyuujitsu",
@@ -3052,7 +3078,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.7",
-    "reading": "いう"
+    "reading": "いう",
+    "verb_class": "u"
   },
   {
     "id": "v_yomu",
@@ -3062,7 +3089,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.7",
-    "reading": "よむ"
+    "reading": "よむ",
+    "verb_class": "u"
   },
   {
     "id": "v_kaku",
@@ -3072,7 +3100,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.7",
-    "reading": "かく"
+    "reading": "かく",
+    "verb_class": "u"
   },
   {
     "id": "v_hanasu",
@@ -3082,7 +3111,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.7",
-    "reading": "はなす"
+    "reading": "はなす",
+    "verb_class": "u"
   },
   {
     "id": "v_nannin",
@@ -3242,7 +3272,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.9",
-    "reading": "たべる"
+    "reading": "たべる",
+    "verb_class": "ru"
   },
   {
     "id": "v_nomu",
@@ -3252,7 +3283,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.9",
-    "reading": "のむ"
+    "reading": "のむ",
+    "verb_class": "u"
   },
   {
     "id": "v_furui",
@@ -3292,7 +3324,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.10",
-    "reading": "かう"
+    "reading": "かう",
+    "verb_class": "u"
   },
   {
     "id": "v_nagai",
@@ -3352,7 +3385,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.11",
-    "reading": "でる"
+    "reading": "でる",
+    "verb_class": "ru"
   },
   {
     "id": "v_dasu",
@@ -3362,7 +3396,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.11",
-    "reading": "だす"
+    "reading": "だす",
+    "verb_class": "u"
   },
   {
     "id": "v_deguchi",
@@ -3382,7 +3417,8 @@
     "gtype": "verb",
     "notes": "⚠️ Listed as 入る(いる) in the source; conjugations omitted to avoid incorrect kanji forms.",
     "lesson_ids": "N5.11",
-    "reading": "いる"
+    "reading": "いる",
+    "verb_class": "ru"
   },
   {
     "id": "v_hairu",
@@ -3392,7 +3428,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.11",
-    "reading": "はいる"
+    "reading": "はいる",
+    "verb_class": "u"
   },
   {
     "id": "v_ireru",
@@ -3402,7 +3439,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.11",
-    "reading": "いれる"
+    "reading": "いれる",
+    "verb_class": "ru"
   },
   {
     "id": "v_iriguchi",
@@ -3422,7 +3460,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.11",
-    "reading": "あう"
+    "reading": "あう",
+    "verb_class": "u"
   },
   {
     "id": "v_kaisha",
@@ -3472,7 +3511,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.12",
-    "reading": "みる"
+    "reading": "みる",
+    "verb_class": "ru"
   },
   {
     "id": "v_miseru",
@@ -3482,7 +3522,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.12",
-    "reading": "みせる"
+    "reading": "みせる",
+    "verb_class": "ru"
   },
   {
     "id": "v_mieru",
@@ -3492,7 +3533,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.12",
-    "reading": "みえる"
+    "reading": "みえる",
+    "verb_class": "ru"
   },
   {
     "id": "v_kiku",
@@ -3502,7 +3544,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.12",
-    "reading": "きく"
+    "reading": "きく",
+    "verb_class": "u"
   },
   {
     "id": "v_tatsu",
@@ -3512,7 +3555,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N5.12",
-    "reading": "たつ"
+    "reading": "たつ",
+    "verb_class": "u"
   },
   {
     "id": "v_tsukuru",
@@ -3522,7 +3566,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.1",
-    "reading": "つくる"
+    "reading": "つくる",
+    "verb_class": "u"
   },
   {
     "id": "v_tsukau",
@@ -3532,7 +3577,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.1",
-    "reading": "つかう"
+    "reading": "つかう",
+    "verb_class": "u"
   },
   {
     "id": "v_kariru",
@@ -3542,7 +3588,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.1",
-    "reading": "かりる"
+    "reading": "かりる",
+    "verb_class": "ru"
   },
   {
     "id": "v_shakkin",
@@ -3562,7 +3609,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.1",
-    "reading": "はたらく"
+    "reading": "はたらく",
+    "verb_class": "u"
   },
   {
     "id": "v_okuru",
@@ -3572,7 +3620,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.1",
-    "reading": "おくる"
+    "reading": "おくる",
+    "verb_class": "u"
   },
   {
     "id": "v_okiru",
@@ -3582,7 +3631,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.1",
-    "reading": "おきる"
+    "reading": "おきる",
+    "verb_class": "ru"
   },
   {
     "id": "v_kiru",
@@ -3592,7 +3642,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.1",
-    "reading": "きる"
+    "reading": "きる",
+    "verb_class": "ru"
   },
   {
     "id": "v_tsuku",
@@ -3602,7 +3653,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.1",
-    "reading": "つく"
+    "reading": "つく",
+    "verb_class": "u"
   },
   {
     "id": "v_kiru_2",
@@ -3612,7 +3664,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.1",
-    "reading": "きる"
+    "reading": "きる",
+    "verb_class": "u"
   },
   {
     "id": "v_kitte",
@@ -3632,7 +3685,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.2",
-    "reading": "のる"
+    "reading": "のる",
+    "verb_class": "u"
   },
   {
     "id": "v_aruku",
@@ -3642,7 +3696,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.2",
-    "reading": "あるく"
+    "reading": "あるく",
+    "verb_class": "u"
   },
   {
     "id": "v_chikai",
@@ -3952,7 +4007,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.9",
-    "reading": "すむ"
+    "reading": "すむ",
+    "verb_class": "u"
   },
   {
     "id": "v_juusho",
@@ -3992,7 +4048,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.9",
-    "reading": "わかれる"
+    "reading": "わかれる",
+    "verb_class": "ru"
   },
   {
     "id": "v_betsuni",
@@ -4022,7 +4079,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.10",
-    "reading": "はじめる"
+    "reading": "はじめる",
+    "verb_class": "ru"
   },
   {
     "id": "v_hajimaru",
@@ -4032,7 +4090,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.10",
-    "reading": "はじまる"
+    "reading": "はじまる",
+    "verb_class": "u"
   },
   {
     "id": "v_owaru",
@@ -4042,7 +4101,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.10",
-    "reading": "おわる"
+    "reading": "おわる",
+    "verb_class": "u"
   },
   {
     "id": "v_eiga",
@@ -4102,7 +4162,18 @@
     "gtype": "verb",
     "notes": "From Verb Conjugation sheet.",
     "lesson_ids": "",
-    "reading": "する"
+    "reading": "する",
+    "verb_class": "irregular",
+    "custom_conjugations": {
+      "masu": "します",
+      "mashou": "しましょう",
+      "te": "して",
+      "ta": "した",
+      "nai": "しない",
+      "past_negative": "しなかった",
+      "tai": "したい",
+      "potential": "できる"
+    }
   },
   {
     "id": "v_dekiru",
@@ -4112,7 +4183,8 @@
     "gtype": "verb",
     "notes": "From Verb Conjugation sheet.",
     "lesson_ids": "",
-    "reading": "できる"
+    "reading": "できる",
+    "verb_class": "ru"
   },
   {
     "id": "v_umareru__polite",
@@ -7522,7 +7594,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.11",
-    "reading": "うつす"
+    "reading": "うつす",
+    "verb_class": "u"
   },
   {
     "id": "v_shashin",
@@ -7768,7 +7841,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.13",
-    "reading": "うたう"
+    "reading": "うたう",
+    "verb_class": "u"
   },
   {
     "id": "v_kashu",
@@ -7994,7 +8068,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.14",
-    "reading": "つかえる"
+    "reading": "つかえる",
+    "verb_class": "ru"
   },
   {
     "id": "v_hayai",
@@ -8034,7 +8109,8 @@
     "gtype": "verb",
     "notes": "",
     "lesson_ids": "N4.14",
-    "reading": "いそぐ"
+    "reading": "いそぐ",
+    "verb_class": "u"
   },
   {
     "id": "v_kyuukou",
