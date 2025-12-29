@@ -1,0 +1,666 @@
+{
+  "id": "N4.15",
+  "title": "Phase 4 Lesson 15: Health & Life",
+  "meta": {
+    "phase": 4,
+    "lesson": 15,
+    "focus": "Medical terms, hospitals, professions, and concepts of life and death.",
+    "kanji": [
+      "薬",
+      "病",
+      "院",
+      "医",
+      "者",
+      "死"
+    ]
+  },
+  "newKanji": [
+    {
+      "kanji": "薬",
+      "on": "やく",
+      "kun": "くすり",
+      "meaning": "medicine / drug",
+      "termId": "k_kusuri"
+    },
+    {
+      "kanji": "病",
+      "on": "びょう",
+      "kun": "や(む)",
+      "meaning": "ill / sick",
+      "termId": "k_byou"
+    },
+    {
+      "kanji": "院",
+      "on": "いん",
+      "kun": "(なし)",
+      "meaning": "institution / temple",
+      "termId": "k_in_2"
+    },
+    {
+      "kanji": "医",
+      "on": "い",
+      "kun": "(なし)",
+      "meaning": "doctor / medicine",
+      "termId": "k_i_4"
+    },
+    {
+      "kanji": "者",
+      "on": "しゃ",
+      "kun": "もの",
+      "meaning": "someone / person",
+      "termId": "k_sha"
+    },
+    {
+      "kanji": "死",
+      "on": "し",
+      "kun": "し(ぬ)",
+      "meaning": "death / to die",
+      "termId": "k_shi_2"
+    }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "Warm-Up Review（ウォームアップ）",
+      "instructions": "Ask your partner these questions using previously learned words:",
+      "items": [
+        {
+          "jp": "頭が いたい ですか。",
+          "en": "Does your head hurt?",
+          "terms": [
+            "k_atama",
+            "v_itai"
+          ]
+        },
+        {
+          "jp": "毎日 お茶を 飲みますか。",
+          "en": "Do you drink tea every day?",
+          "terms": [
+            "v_mainichi",
+            "v_ocha",
+            "v_nomu"
+          ]
+        },
+        {
+          "jp": "あの 人は 有名ですか。",
+          "en": "Is that person famous?",
+          "terms": [
+            "v_yuumei",
+            "k_hito"
+          ]
+        },
+        {
+          "jp": "体は 元気ですか。",
+          "en": "Is your body healthy/energetic?",
+          "terms": [
+            "k_karada",
+            "v_genki"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "New Kanji（新しい 漢字）",
+      "items": [
+        {
+          "kanji": "薬",
+          "on": "やく",
+          "kun": "くすり",
+          "meaning": "medicine",
+          "terms": [
+            "k_kusuri",
+            "v_kusuri",
+            "v_megusuri"
+          ]
+        },
+        {
+          "kanji": "病",
+          "on": "びょう",
+          "kun": "や",
+          "meaning": "sick",
+          "terms": [
+            "k_byou",
+            "v_byouki",
+            "v_byouin"
+          ]
+        },
+        {
+          "kanji": "院",
+          "on": "いん",
+          "kun": "(なし)",
+          "meaning": "institution",
+          "terms": [
+            "k_in_2",
+            "v_byouin",
+            "v_daigakuin"
+          ]
+        },
+        {
+          "kanji": "医",
+          "on": "い",
+          "kun": "(なし)",
+          "meaning": "doctor",
+          "terms": [
+            "k_i_4",
+            "v_isha",
+            "v_igaku"
+          ]
+        },
+        {
+          "kanji": "者",
+          "on": "しゃ",
+          "kun": "もの",
+          "meaning": "person",
+          "terms": [
+            "k_sha",
+            "v_isha",
+            "v_mono"
+          ]
+        },
+        {
+          "kanji": "死",
+          "on": "し",
+          "kun": "し",
+          "meaning": "death",
+          "terms": [
+            "k_shi_2",
+            "v_shinu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "Vocabulary & Compounds（ことば）",
+      "groups": [
+        {
+          "label": "Medical",
+          "items": [
+            "v_byouin",
+            "v_byouki",
+            "v_isha",
+            "v_kusuri",
+            "v_megusuri",
+            "v_nomigusuri",
+            "v_nyuuin"
+          ]
+        },
+        {
+          "label": "Academic & Life",
+          "items": [
+            "v_gakuin",
+            "v_daigakuin",
+            "v_igaku",
+            "v_mono",
+            "v_shinu",
+            "v_byoushi",
+            "v_shigo",
+            "v_shinin"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 1（会話）: At the Hospital",
+      "context": "Talking to a doctor.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "今日は どうしましたか。",
+          "en": "What is wrong today? (Lit: How did you do?)",
+          "terms": [
+            "v_kyou"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "先生、頭が いたい です。少し 気分も わるいです。",
+          "en": "Doctor, my head hurts. I also feel a little unwell.",
+          "terms": [
+            "v_sensei",
+            "k_atama",
+            "v_itai",
+            "v_kibun"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "病気ですね。この 薬を 飲んで ください。",
+          "en": "It is an illness. Please drink this medicine.",
+          "terms": [
+            "v_byouki",
+            "v_kusuri",
+            "v_nomu"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "分かりました。ありがとうございます。",
+          "en": "I understand. Thank you.",
+          "terms": [
+            "v_wakaru"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 2（会話）: Career Path",
+      "context": "Discussing future studies.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "大学院で 何を 学びますか。",
+          "en": "What do you study at graduate school?",
+          "terms": [
+            "v_daigakuin",
+            "v_manabimasu"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "医学を 学びます。医者に なりたいですから。",
+          "en": "I study medical science. Because I want to become a doctor.",
+          "terms": [
+            "v_igaku",
+            "v_manabimasu",
+            "v_isha"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "いいですね。父も 医者でした。",
+          "en": "That is good. My father was a doctor too.",
+          "terms": [
+            "k_chichi",
+            "v_isha"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "大きい 病院で 働きましたか。",
+          "en": "Did he work at a big hospital?",
+          "terms": [
+            "v_ookii",
+            "v_byouin",
+            "v_hataraku"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 3（会話）: Bad Eyesight",
+      "context": "Buying medicine.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "すみません。目薬は ありますか。",
+          "en": "Excuse me. Do you have eye medicine (drops)?",
+          "terms": [
+            "v_megusuri"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい、あります。目が いたいですか。",
+          "en": "Yes, we do. Do your eyes hurt?",
+          "terms": [
+            "k_me",
+            "v_itai"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "いいえ、いたくありません。でも、赤いです。",
+          "en": "No, they do not hurt. But, they are red.",
+          "terms": [
+            "k_akai"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "そうですか。これを 使って ください。",
+          "en": "Is that so. Please use this.",
+          "terms": [
+            "v_tsukau"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 4（会話）: Sad News",
+      "context": "Discussing a pet.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "金魚は 元気ですか。",
+          "en": "Is your goldfish healthy?",
+          "terms": [
+            "v_kingyo",
+            "v_genki"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "いいえ、きのう 死にました。",
+          "en": "No, it died yesterday.",
+          "terms": [
+            "v_shinu"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "えっ、病気でしたか。",
+          "en": "Eh? Was it sick?",
+          "terms": [
+            "v_byouki"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。病死です。",
+          "en": "Yes. It was death from illness.",
+          "terms": [
+            "v_byoushi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 1: A Long Life",
+      "passage": [
+        {
+          "jp": "有名な 学者が いました。",
+          "en": "There was a famous scholar.",
+          "terms": [
+            "v_yuumei"
+          ]
+        },
+        {
+          "jp": "この 人は たくさんの 本を 書きました。",
+          "en": "This person wrote many books.",
+          "terms": [
+            "k_hon",
+            "v_kaku"
+          ]
+        },
+        {
+          "jp": "先月、病院で 死にました。",
+          "en": "Last month, he died at the hospital.",
+          "terms": [
+            "v_sengetsu",
+            "v_byouin",
+            "v_shinu"
+          ]
+        },
+        {
+          "jp": "病死ではありません。古くて 長い 人生でした。",
+          "en": "It was not death from illness. It was an old and long life.",
+          "terms": [
+            "v_byoushi",
+            "v_furui",
+            "v_nagai",
+            "v_jinsei"
+          ]
+        },
+        {
+          "jp": "死者ですが、本は ずっと あります。",
+          "en": "He is a deceased person, but his books will exist forever.",
+          "terms": [
+            "v_shisha",
+            "k_hon"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "学者は 何を しましたか。",
+          "a": "本を 書きました。",
+          "terms": [
+            "k_hon",
+            "v_kaku"
+          ]
+        },
+        {
+          "q": "どこで 死にましたか。",
+          "a": "病院で 死にました。",
+          "terms": [
+            "v_byouin",
+            "v_shinu"
+          ]
+        },
+        {
+          "q": "病気でしたか。",
+          "a": "いいえ、病死ではありません。",
+          "terms": [
+            "v_byouki",
+            "v_byoushi"
+          ]
+        },
+        {
+          "q": "どんな 人生 でしたか。",
+          "a": "古くて 長い 人生でした。",
+          "terms": [
+            "v_furui",
+            "v_nagai",
+            "v_jinsei"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: My Family's Job",
+      "passage": [
+        {
+          "jp": "私の 兄は 医者です。",
+          "en": "My older brother is a doctor.",
+          "terms": [
+            "k_ani",
+            "v_isha"
+          ]
+        },
+        {
+          "jp": "東京の 病院で 働いています。",
+          "en": "He is working at a hospital in Tokyo.",
+          "terms": [
+            "v_byouin",
+            "v_hataraku"
+          ]
+        },
+        {
+          "jp": "毎日、たくさんの 病気の 人に 会います。",
+          "en": "Every day, he meets many sick people.",
+          "terms": [
+            "v_mainichi",
+            "v_byouki",
+            "k_hito",
+            "v_au"
+          ]
+        },
+        {
+          "jp": "兄は 「仕事は 楽しい」と 言いました。",
+          "en": "My brother said \"Work is fun.\"",
+          "terms": [
+            "k_ani",
+            "v_shigoto",
+            "v_tanoshii",
+            "v_iu"
+          ]
+        },
+        {
+          "jp": "私も 医者に なりたいです。",
+          "en": "I want to become a doctor too.",
+          "terms": [
+            "v_isha"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "兄の 仕事は 何ですか。",
+          "a": "医者です。",
+          "terms": [
+            "k_ani",
+            "v_shigoto",
+            "v_isha"
+          ]
+        },
+        {
+          "q": "どこで 働いていますか。",
+          "a": "東京の 病院です。",
+          "terms": [
+            "v_byouin"
+          ]
+        },
+        {
+          "q": "兄は 誰に 会いますか。",
+          "a": "病気の 人に 会います。",
+          "terms": [
+            "v_byouki",
+            "k_hito",
+            "v_au"
+          ]
+        },
+        {
+          "q": "私は 何に なりたいですか。",
+          "a": "医者に なりたいです。",
+          "terms": [
+            "v_isha"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Vocabulary",
+      "instructions": "Select the correct Kanji for the meaning.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "Go to the [hospital].",
+          "choices": [
+            "病院",
+            "病員",
+            "病館",
+            "病家"
+          ],
+          "answer": "病院",
+          "terms": [
+            "v_byouin"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "Drink [medicine].",
+          "choices": [
+            "薬",
+            "楽",
+            "草",
+            "茶"
+          ],
+          "answer": "薬",
+          "terms": [
+            "v_kusuri"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "A [doctor].",
+          "choices": [
+            "医者",
+            "学者",
+            "読者",
+            "会者"
+          ],
+          "answer": "医者",
+          "terms": [
+            "v_isha"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "To [die].",
+          "choices": [
+            "死ぬ",
+            "病ぬ",
+            "去ぬ",
+            "古ぬ"
+          ],
+          "answer": "死ぬ",
+          "terms": [
+            "v_shinu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Grammar & Context",
+      "instructions": "Fill in the blank.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "______ ですから、学校を 休みます。",
+          "choices": [
+            "病気",
+            "病院",
+            "病死",
+            "医学"
+          ],
+          "answer": "病気",
+          "terms": [
+            "v_byouki"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "大学を 出て、______ に 行きます。",
+          "choices": [
+            "大学院",
+            "大病院",
+            "大学者",
+            "大学生"
+          ],
+          "answer": "大学院",
+          "terms": [
+            "v_daigakuin"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "この 言葉は ______ です。今は 使いません。",
+          "choices": [
+            "死語",
+            "死者",
+            "死人",
+            "死目"
+          ],
+          "answer": "死語",
+          "terms": [
+            "v_shigo"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "あの ______ は 誰ですか。",
+          "choices": [
+            "医者",
+            "医院",
+            "医学",
+            "医語"
+          ],
+          "answer": "医者",
+          "terms": [
+            "v_isha"
+          ]
+        }
+      ]
+    }
+  ]
+}
