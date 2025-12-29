@@ -15,38 +15,67 @@
   "sections": [
     {
       "type": "conversation",
-      "title": "Part 1: Conversation Practice",
-      "context": "Reviewing natural conversations using recent vocabulary.",
-      "lines": [
+      "title": "Part 1: Conversation Check",
+      "instructions": "Read the conversation and select the best summary.",
+      "items": [
         {
-          "spk": "A",
-          "jp": "顔色が 悪いですね。どうしましたか。",
-          "en": "You look pale (bad face color). What happened?",
-          "terms": ["v_kaoiro", "v_warui"]
+          "title": "Conversation 1",
+          "context": "A and B are talking about health.",
+          "lines": [
+            { "spk": "A", "jp": "顔色が 悪いですね。どうしましたか。" },
+            { "spk": "B", "jp": "頭が 痛いです。少し 気分も 悪いです。" },
+            { "spk": "A", "jp": "仕事は 休みましょう。病院へ 行った ほうが いいですよ。" },
+            { "spk": "B", "jp": "はい。駅員に 電車の 時間を 聞きます。" },
+            { "spk": "A", "jp": "お大事に。" }
+          ],
+          "question": "What is the situation?",
+          "choices": [
+            "B is sick and A suggests going to the hospital.",
+            "A is sick and B suggests going home.",
+            "They are working late at the station.",
+            "B is asking A for money."
+          ],
+          "answer": "B is sick and A suggests going to the hospital.",
+          "explanation": "B says their head hurts (頭が痛い) and A suggests the hospital (病院)."
         },
         {
-          "spk": "B",
-          "jp": "頭が 痛いです。少し 気分も 悪いです。",
-          "en": "My head hurts. I also feel a bit unwell.",
-          "terms": ["k_atama", "v_itai", "v_kibun", "v_warui"]
+          "title": "Conversation 2",
+          "context": "Two friends discussing music.",
+          "lines": [
+            { "spk": "A", "jp": "あの 歌手は 声が 低いですが、かっこいいですね。" },
+            { "spk": "B", "jp": "はい、有名ですよ。私は よく 彼の 音楽を 聞きます。" },
+            { "spk": "A", "jp": "次の 日曜日、コンサートに 行きたいですか。" },
+            { "spk": "B", "jp": "行きたいです！ 楽しみです。" }
+          ],
+          "question": "What do they decide to do?",
+          "choices": [
+            "They critique a singer with a bad voice.",
+            "They decide to go to a concert on Sunday.",
+            "They are singing songs at a karaoke bar.",
+            "They are buying music CDs."
+          ],
+          "answer": "They decide to go to a concert on Sunday.",
+          "explanation": "A asks to go to a concert (コンサート) on Sunday (日曜日), and B agrees."
         },
         {
-          "spk": "A",
-          "jp": "仕事は 休みましょう。病院へ 行った ほうが いいですよ。",
-          "en": "Let's take a break from work. You should go to the hospital.",
-          "terms": ["v_shigoto", "v_yasumu", "v_byouin", "v_iku"]
-        },
-        {
-          "spk": "B",
-          "jp": "はい。駅員に 電車の 時間を 聞きます。",
-          "en": "Yes. I will ask the station attendant for the train time.",
-          "terms": ["v_ekiin", "v_densha", "v_jikan", "v_kiku"]
-        },
-        {
-          "spk": "A",
-          "jp": "気をつけて ください。お大事に。",
-          "en": "Please be careful. Get well soon.",
-          "terms": ["v_daiji"]
+          "title": "Conversation 3",
+          "context": "Rushing in the morning.",
+          "lines": [
+            { "spk": "A", "jp": "急いで！ 急行が 来ますよ。" },
+            { "spk": "B", "jp": "待って、カバンが ありません。" },
+            { "spk": "A", "jp": "えっ、車の中 ですか。" },
+            { "spk": "B", "jp": "あ、はい。取りに 行きます。" },
+            { "spk": "A", "jp": "仕事に 遅れますよ..." }
+          ],
+          "question": "Why is A worried?",
+          "choices": [
+            "They are early for work and relaxing.",
+            "A forgot their bag in the car.",
+            "B lost their bag and they might be late for work.",
+            "The train is moving too slowly."
+          ],
+          "answer": "B lost their bag and they might be late for work.",
+          "explanation": "B doesn't have their bag (カバンがありません) and A says they will be late (遅れます)."
         }
       ]
     },
