@@ -14,102 +14,8 @@
   },
   "sections": [
     {
-      "type": "drills",
-      "title": "Part 1: Kanji Readings",
-      "instructions": "Select the correct reading for the [bracketed] word.",
-      "items": [
-        {
-          "kind": "mcq",
-          "q": "彼は [有名]な 歌手です。",
-          "choices": ["ゆうな", "ゆめい", "ゆうめい", "あな"],
-          "answer": "ゆうめい",
-          "explanation": "有名 (famous) is read as <b>yuumei</b>.",
-          "terms": ["v_yuumei", "v_kashu"]
-        },
-        {
-          "kind": "mcq",
-          "q": "[病院]へ 行きました。",
-          "choices": ["びよういん", "びょういん", "びよいん", "びょうき"],
-          "answer": "びょういん",
-          "explanation": "病院 (hospital) is read as <b>byouin</b>.",
-          "terms": ["v_byouin", "v_iku"]
-        },
-        {
-          "kind": "mcq",
-          "q": "[薬]を 飲みました。",
-          "choices": ["めぐすり", "がく", "くすり", "たの"],
-          "answer": "くすり",
-          "explanation": "薬 (medicine) is read as <b>kusuri</b>.",
-          "terms": ["v_kusuri", "v_nomu"]
-        },
-        {
-          "kind": "mcq",
-          "q": "日曜日は [仕事]が ありません。",
-          "choices": ["のこと", "しごと", "しじ", "じごと"],
-          "answer": "しごと",
-          "explanation": "仕事 (job/work) is read as <b>shigoto</b>.",
-          "terms": ["v_shigoto"]
-        },
-        {
-          "kind": "mcq",
-          "q": "[頭]が いいですね。",
-          "choices": ["かお", "あたま", "からだ", "くび"],
-          "answer": "あたま",
-          "explanation": "頭 (head) is read as <b>atama</b>.",
-          "terms": ["v_atamagaii"]
-        },
-        {
-          "kind": "mcq",
-          "q": "あの 先生は [早口]です。",
-          "choices": ["はやぐち", "そうこう", "はやくち", "さくち"],
-          "answer": "はやくち",
-          "explanation": "早口 (fast speaking) is read as <b>hayakuchi</b>.",
-          "terms": ["v_hayakuchi"]
-        }
-      ]
-    },
-    {
-      "type": "drills",
-      "title": "Part 2: Context & Vocabulary",
-      "instructions": "Select the best word to complete the sentence.",
-      "items": [
-        {
-          "kind": "mcq",
-          "q": "駅で ______ に 道を 聞きました。",
-          "choices": ["医者", "駅員", "歌手", "店員"],
-          "answer": "駅員",
-          "explanation": "At a station (駅), you ask a Station Attendant (駅員).",
-          "terms": ["v_ekiin", "k_michi", "v_kiku"]
-        },
-        {
-          "kind": "mcq",
-          "q": "あの 人は ______ が 低いです。",
-          "choices": ["音", "楽", "歌", "声"],
-          "answer": "声",
-          "explanation": "A person has a low voice (声).",
-          "terms": ["v_koe", "v_hikui"]
-        },
-        {
-          "kind": "mcq",
-          "q": "時間が ありません。______。",
-          "choices": ["働きましょう", "歌いましょう", "急ぎましょう", "死にましょう"],
-          "answer": "急ぎましょう",
-          "explanation": "If you have no time, you should hurry (急ぐ).",
-          "terms": ["v_jikan", "v_isogu"]
-        },
-        {
-          "kind": "mcq",
-          "q": "______ ですから、学校を 休みます。",
-          "choices": [ "元気", "有名", "病気", "手軽" ],
-          "answer": "病気",
-          "explanation": "You rest from school because you are sick (病気).",
-          "terms": ["v_byouki", "k_gakkou", "v_yasumu"]
-        }
-      ]
-    },
-    {
       "type": "conversation",
-      "title": "Part 3: Conversation Practice",
+      "title": "Part 1: Conversation Practice",
       "context": "Reviewing natural conversations using recent vocabulary.",
       "lines": [
         {
@@ -146,54 +52,44 @@
     },
     {
       "type": "drills",
-      "title": "Part 4: Grammar Drill",
-      "instructions": "Choose the correct particle or form to complete the sentence.",
+      "title": "Part 2: Grammar Scramble",
+      "instructions": "Construct the sentence by clicking the words in the correct order.",
       "items": [
         {
-          "kind": "mcq",
-          "q": "将来、医者 ______ なりたいです。",
-          "choices": ["が", "に", "を", "で"],
-          "answer": "に",
-          "explanation": "We use 'ni' with narimasu/naritai (to become).",
-          "terms": ["v_shourai", "v_isha", "v_naritai"]
+          "kind": "scramble",
+          "q": "My head hurts, so I will take medicine.",
+          "segments": ["頭", "が", "痛い", "ですから", "薬", "を", "飲みます"],
+          "explanation": "Reason (pain) + desukara + Action (take medicine)."
         },
         {
-          "kind": "mcq",
-          "q": "父は 「仕事は 楽しい」______ 言いました。",
-          "choices": ["と", "を", "が", "に"],
-          "answer": "と",
-          "explanation": "Particle 'to' marks the quotation (what was said).",
-          "terms": ["k_chichi", "v_shigoto", "v_tanoshii", "v_iu"]
+          "kind": "scramble",
+          "q": "I want to become a doctor in the future.",
+          "segments": ["将来", "医者", "に", "なりたい", "です"],
+          "explanation": "Target (Doctor) + ni + naritai (want to become)."
         },
         {
-          "kind": "mcq",
-          "q": "頭 ______ 痛いです。",
-          "choices": ["を", "に", "で", "が"],
-          "answer": "が",
-          "explanation": "With body parts and sensations (itai), we typically use 'ga'.",
-          "terms": ["k_atama", "v_itai"]
+          "kind": "scramble",
+          "q": "Please hurry to the station.",
+          "segments": ["駅", "へ", "急いで", "ください"],
+          "explanation": "Destination (Station) + he + Te-form of Isogu (Hurry) + kudasai."
         },
         {
-          "kind": "mcq",
-          "q": "急行 ______ 行きましょう。",
-          "choices": ["で", "を", "に", "が"],
-          "answer": "で",
-          "explanation": "Particle 'de' indicates the means of transport (by express train).",
-          "terms": ["v_kyuukou", "v_iku"]
+          "kind": "scramble",
+          "q": "Work is busy, but fun.",
+          "segments": ["仕事", "は", "いそがしい", "ですが", "楽しい", "です"],
+          "explanation": "Contrastive 'ga' (but) connects Busy and Fun."
         },
         {
-          "kind": "mcq",
-          "q": "薬を ______ ください。",
-          "choices": ["飲む", "飲んで", "飲み", "飲んだ"],
-          "answer": "飲んで",
-          "explanation": "Request form uses the Te-form (Nonde) + kudasai.",
-          "terms": ["v_kusuri", "v_nomu"]
+          "kind": "scramble",
+          "q": "He spoke with a low voice.",
+          "segments": ["彼は", "低い", "声", "で", "話しました"],
+          "explanation": "Means/State (Low Voice) + de + Action (Spoke)."
         }
       ]
     },
     {
       "type": "reading",
-      "title": "Part 5: Reading - The Doctor's Day",
+      "title": "Part 3: Reading - The Doctor's Day",
       "passage": [
         {
           "jp": "田中さんは 医者です。",
@@ -250,7 +146,7 @@
     },
     {
       "type": "reading",
-      "title": "Part 6: Reading - My Friend's Illness",
+      "title": "Part 4: Reading - My Friend's Illness",
       "passage": [
         {
           "jp": "先週、友だちの 山田さんに 会いました。",
@@ -302,6 +198,147 @@
           "a": "元気です。",
           "choices": ["病気です", "死にました", "元気です", "有名です"],
           "terms": ["v_genki"]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 5: Kanji Readings",
+      "instructions": "Select the correct reading for the [bracketed] word.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "彼は [有名]な 歌手です。",
+          "choices": ["ゆうな", "ゆめい", "ゆうめい", "あな"],
+          "answer": "ゆうめい",
+          "explanation": "有名 (famous) is read as <b>yuumei</b>.",
+          "terms": ["v_yuumei", "v_kashu"]
+        },
+        {
+          "kind": "mcq",
+          "q": "[病院]へ 行きました。",
+          "choices": ["びよういん", "びょういん", "びよいん", "びょうき"],
+          "answer": "びょういん",
+          "explanation": "病院 (hospital) is read as <b>byouin</b>.",
+          "terms": ["v_byouin", "v_iku"]
+        },
+        {
+          "kind": "mcq",
+          "q": "[薬]を 飲みました。",
+          "choices": ["めぐすり", "がく", "くすり", "たの"],
+          "answer": "くすり",
+          "explanation": "薬 (medicine) is read as <b>kusuri</b>.",
+          "terms": ["v_kusuri", "v_nomu"]
+        },
+        {
+          "kind": "mcq",
+          "q": "日曜日は [仕事]が ありません。",
+          "choices": ["のこと", "しごと", "しじ", "じごと"],
+          "answer": "しごと",
+          "explanation": "仕事 (job/work) is read as <b>shigoto</b>.",
+          "terms": ["v_shigoto"]
+        },
+        {
+          "kind": "mcq",
+          "q": "[頭]が いいですね。",
+          "choices": ["かお", "あたま", "からだ", "くび"],
+          "answer": "あたま",
+          "explanation": "頭 (head) is read as <b>atama</b>.",
+          "terms": ["v_atamagaii"]
+        },
+        {
+          "kind": "mcq",
+          "q": "あの 先生は [早口]です。",
+          "choices": ["はやぐち", "そうこう", "はやくち", "さくち"],
+          "answer": "はやくち",
+          "explanation": "早口 (fast speaking) is read as <b>hayakuchi</b>.",
+          "terms": ["v_hayakuchi"]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 6: Context & Vocabulary",
+      "instructions": "Select the best word to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "駅で ______ に 道を 聞きました。",
+          "choices": ["医者", "駅員", "歌手", "店員"],
+          "answer": "駅員",
+          "explanation": "At a station (駅), you ask a Station Attendant (駅員).",
+          "terms": ["v_ekiin", "k_michi", "v_kiku"]
+        },
+        {
+          "kind": "mcq",
+          "q": "あの 人は ______ が 低いです。",
+          "choices": ["音", "楽", "歌", "声"],
+          "answer": "声",
+          "explanation": "A person has a low voice (声).",
+          "terms": ["v_koe", "v_hikui"]
+        },
+        {
+          "kind": "mcq",
+          "q": "時間が ありません。______。",
+          "choices": ["働きましょう", "歌いましょう", "急ぎましょう", "死にましょう"],
+          "answer": "急ぎましょう",
+          "explanation": "If you have no time, you should hurry (急ぐ).",
+          "terms": ["v_jikan", "v_isogu"]
+        },
+        {
+          "kind": "mcq",
+          "q": "______ ですから、学校を 休みます。",
+          "choices": [ "元気", "有名", "病気", "手軽" ],
+          "answer": "病気",
+          "explanation": "You rest from school because you are sick (病気).",
+          "terms": ["v_byouki", "k_gakkou", "v_yasumu"]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 7: Grammar Check",
+      "instructions": "Choose the correct particle or form to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "将来、医者 ______ なりたいです。",
+          "choices": ["が", "に", "を", "で"],
+          "answer": "に",
+          "explanation": "We use 'ni' with narimasu/naritai (to become).",
+          "terms": ["v_shourai", "v_isha", "v_naritai"]
+        },
+        {
+          "kind": "mcq",
+          "q": "父は 「仕事は 楽しい」______ 言いました。",
+          "choices": ["と", "を", "が", "に"],
+          "answer": "と",
+          "explanation": "Particle 'to' marks the quotation (what was said).",
+          "terms": ["k_chichi", "v_shigoto", "v_tanoshii", "v_iu"]
+        },
+        {
+          "kind": "mcq",
+          "q": "頭 ______ 痛いです。",
+          "choices": ["を", "に", "で", "が"],
+          "answer": "が",
+          "explanation": "With body parts and sensations (itai), we typically use 'ga'.",
+          "terms": ["k_atama", "v_itai"]
+        },
+        {
+          "kind": "mcq",
+          "q": "急行 ______ 行きましょう。",
+          "choices": ["で", "を", "に", "が"],
+          "answer": "で",
+          "explanation": "Particle 'de' indicates the means of transport (by express train).",
+          "terms": ["v_kyuukou", "v_iku"]
+        },
+        {
+          "kind": "mcq",
+          "q": "薬を ______ ください。",
+          "choices": ["飲む", "飲んで", "飲み", "飲んだ"],
+          "answer": "飲んで",
+          "explanation": "Request form uses the Te-form (Nonde) + kudasai.",
+          "terms": ["v_kusuri", "v_nomu"]
         }
       ]
     }
