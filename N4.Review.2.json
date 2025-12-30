@@ -22,8 +22,8 @@
           "title": "Conversation 1",
           "context": "A and B are talking about health.",
           "lines": [
-            { "spk": "A", "jp": "顔色が 悪いですね。どうしましたか。" },
-            { "spk": "B", "jp": "頭が 痛いです。少し 気分も 悪いです。" },
+            { "spk": "A", "jp": "顔色が わるいですね。どうしましたか。" },
+            { "spk": "B", "jp": "頭が いたいです。少し 気分も わるいです。" },
             { "spk": "A", "jp": "仕事は 休みましょう。病院へ 行った ほうが いいですよ。" },
             { "spk": "B", "jp": "はい。駅員に 電車の 時間を 聞きます。" },
             { "spk": "A", "jp": "お大事に。" }
@@ -36,15 +36,15 @@
             "B is asking A for money."
           ],
           "answer": "B is sick and A suggests going to the hospital.",
-          "explanation": "B says their head hurts (頭が痛い) and A suggests the hospital (病院)."
+          "explanation": "B says their head hurts (頭がいたい) and A suggests the hospital (病院)."
         },
         {
           "title": "Conversation 2",
           "context": "Two friends discussing music.",
           "lines": [
-            { "spk": "A", "jp": "あの 歌手は 声が 低いですが、かっこいいですね。" },
-            { "spk": "B", "jp": "はい、有名ですよ。私は よく 彼の 音楽を 聞きます。" },
-            { "spk": "A", "jp": "次の 日曜日、コンサートに 行きたいですか。" },
+            { "spk": "A", "jp": "あの 歌手は 声が 低いですが、いいですね。" },
+            { "spk": "B", "jp": "はい、有名ですよ。私は よく あの 人の 音楽を 聞きます。" },
+            { "spk": "A", "jp": "来週の 日曜日、コンサートに 行きたいですか。" },
             { "spk": "B", "jp": "行きたいです！ 楽しみです。" }
           ],
           "question": "What do they decide to do?",
@@ -61,21 +61,21 @@
           "title": "Conversation 3",
           "context": "Rushing in the morning.",
           "lines": [
-            { "spk": "A", "jp": "急いで！ 急行が 来ますよ。" },
-            { "spk": "B", "jp": "待って、カバンが ありません。" },
-            { "spk": "A", "jp": "えっ、車の中 ですか。" },
-            { "spk": "B", "jp": "あ、はい。取りに 行きます。" },
-            { "spk": "A", "jp": "仕事に 遅れますよ..." }
+            { "spk": "A", "jp": "急いで ください！ 急行が 来ますよ。" },
+            { "spk": "B", "jp": "すみません。お金が ありません。" },
+            { "spk": "A", "jp": "えっ、家に ありますか。" },
+            { "spk": "B", "jp": "はい。家に 帰ります。" },
+            { "spk": "A", "jp": "時間が ありませんよ..." }
           ],
           "question": "Why is A worried?",
           "choices": [
             "They are early for work and relaxing.",
-            "A forgot their bag in the car.",
-            "B lost their bag and they might be late for work.",
+            "B forgot their money and must return home.",
+            "A lost their bag in the car.",
             "The train is moving too slowly."
           ],
-          "answer": "B lost their bag and they might be late for work.",
-          "explanation": "B doesn't have their bag (カバンがありません) and A says they will be late (遅れます)."
+          "answer": "B forgot their money and must return home.",
+          "explanation": "B has no money (お金がありません) and must return home (帰ります), so there is no time (時間がありません)."
         }
       ]
     },
@@ -87,13 +87,13 @@
         {
           "kind": "scramble",
           "q": "My head hurts, so I will take medicine.",
-          "segments": ["頭", "が", "痛い", "ですから", "薬", "を", "飲みます"],
+          "segments": ["頭", "が", "いたい", "ですから", "薬", "を", "飲みます"],
           "explanation": "Reason (pain) + desukara + Action (take medicine)."
         },
         {
           "kind": "scramble",
-          "q": "I want to become a doctor in the future.",
-          "segments": ["将来", "医者", "に", "なりたい", "です"],
+          "q": "I want to become a doctor.",
+          "segments": ["私", "は", "医者", "に", "なりたい", "です"],
           "explanation": "Target (Doctor) + ni + naritai (want to become)."
         },
         {
@@ -110,8 +110,8 @@
         },
         {
           "kind": "scramble",
-          "q": "He spoke with a low voice.",
-          "segments": ["彼は", "低い", "声", "で", "話しました"],
+          "q": "That person spoke with a low voice.",
+          "segments": ["あの", "人は", "低い", "声", "で", "話しました"],
           "explanation": "Means/State (Low Voice) + de + Action (Spoke)."
         }
       ]
@@ -183,14 +183,14 @@
           "terms": ["v_senshuu", "v_tomodachi", "v_au"]
         },
         {
-          "jp": "山田さんは 顔色が 悪かったです。",
+          "jp": "山田さんは 顔色が わるかったです。",
           "en": "Yamada-san's complexion was bad.",
           "terms": ["v_kaoiro"]
         },
         {
-          "jp": "「頭と 体が 痛いです」と 言いました。",
+          "jp": "「頭と 体が いたいです」と 言いました。",
           "en": "He said 'My head and body hurt'.",
-          "terms": ["k_atama", "k_karada", "v_itai", "v_iu"]
+          "terms": ["k_atama", "k_karada", "v_iu"]
         },
         {
           "jp": "私は 「病院へ 行って、薬を 飲んで ください」と 言いました。",
@@ -206,12 +206,12 @@
       "questions": [
         {
           "q": "山田さんは どうでしたか。",
-          "a": "顔色が 悪かったです。",
-          "choices": ["顔色が よかったです", "足が 長かったです", "顔色が 悪かったです", "歌が 上手でした"],
+          "a": "顔色が わるかったです。",
+          "choices": ["顔色が よかったです", "足が 長かったです", "顔色が わるかったです", "歌が 上手でした"],
           "terms": ["v_kaoiro"]
         },
         {
-          "q": "どこが 痛かったですか。",
+          "q": "どこが いたかったですか。",
           "a": "頭と 体",
           "choices": ["手と 足", "目と 耳", "首と 顔", "頭と 体"],
           "terms": ["k_atama", "k_karada"]
@@ -331,11 +331,11 @@
       "items": [
         {
           "kind": "mcq",
-          "q": "将来、医者 ______ なりたいです。",
+          "q": "医者 ______ なりたいです。",
           "choices": ["が", "に", "を", "で"],
           "answer": "に",
           "explanation": "We use 'ni' with narimasu/naritai (to become).",
-          "terms": ["v_shourai", "v_isha", "v_naritai"]
+          "terms": ["v_isha", "v_naritai"]
         },
         {
           "kind": "mcq",
@@ -347,11 +347,11 @@
         },
         {
           "kind": "mcq",
-          "q": "頭 ______ 痛いです。",
+          "q": "頭 ______ いたいです。",
           "choices": ["を", "に", "で", "が"],
           "answer": "が",
           "explanation": "With body parts and sensations (itai), we typically use 'ga'.",
-          "terms": ["k_atama", "v_itai"]
+          "terms": ["k_atama"]
         },
         {
           "kind": "mcq",
