@@ -368,7 +368,7 @@
           "jp": "はい。病死です。",
           "en": "Yes. It was death from illness.",
           "terms": [
-            { "id": "v_byoushi", "form": "polite_adj" }
+            "v_byoushi"
           ]
         }
       ]
@@ -381,14 +381,14 @@
           "jp": "有名な 学者が いました。",
           "en": "There was a famous scholar.",
           "terms": [
-            "v_yuumei",
+            "v_yuumei","v_gakusha",
             { "id": "v_iru", "form": "polite_mashita" }
           ]
         },
         {
           "jp": "この 人は たくさんの 本を 書きました。",
           "en": "This person wrote many books.",
-          "terms": [
+          "terms": ["k_hito",
             "k_hon",
             { "id": "v_kaku", "form": "polite_mashita" }
           ]
@@ -416,7 +416,7 @@
           "jp": "死者ですが、本は ずっと あります。",
           "en": "He is a deceased person, but his books will exist forever.",
           "terms": [
-            { "id": "v_shisha", "form": "polite_adj" },
+            "v_shisha",
             "k_hon",
             { "id": "v_aru", "form": "polite_masu" }
           ]
@@ -426,7 +426,7 @@
         {
           "q": "学者は 何を しましたか。",
           "a": "本を 書きました。",
-          "terms": [
+          "terms": ["v_gakusha",
             "k_hon",
             { "id": "v_kaku", "form": "polite_mashita" }
           ]
@@ -467,7 +467,7 @@
           "en": "My older brother is a doctor.",
           "terms": [
             "k_ani",
-            { "id": "v_isha", "form": "polite_adj" }
+            "v_isha"
           ]
         },
         {
@@ -526,7 +526,7 @@
         {
           "q": "兄は 誰に 会いますか。",
           "a": "病気の 人に 会います。",
-          "terms": [
+          "terms": ["k_ani",
             "v_byouki",
             "k_hito",
             { "id": "v_au", "form": "polite_masu" }
