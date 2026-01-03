@@ -1,0 +1,40 @@
+<!-- DIAGNOSTIC SCRIPT - Paste this first to see what's on the page -->
+<script>
+// Wait a bit to make sure page is fully loaded
+setTimeout(function() {
+  console.log("=== DIAGNOSTIC REPORT ===");
+
+  // Check for the root element
+  const root = document.getElementById("jp-lesson-root");
+  console.log("1. Looking for element with id='jp-lesson-root':", root);
+
+  // Check all divs on the page
+  const allDivs = document.querySelectorAll('div');
+  console.log("2. Total divs on page:", allDivs.length);
+
+  // Check divs with IDs
+  const divsWithIds = Array.from(allDivs).filter(d => d.id);
+  console.log("3. Divs with IDs:", divsWithIds.map(d => d.id));
+
+  // Check for similar IDs
+  const similarDivs = Array.from(allDivs).filter(d =>
+    d.id && d.id.toLowerCase().includes('lesson')
+  );
+  console.log("4. Divs with 'lesson' in ID:", similarDivs.map(d => d.id));
+
+  // Check body content for our div
+  const bodyText = document.body.innerHTML;
+  const hasOurDiv = bodyText.includes('jp-lesson-root');
+  console.log("5. Page HTML contains 'jp-lesson-root':", hasOurDiv);
+
+  if (!root) {
+    console.error("❌ PROBLEM: div#jp-lesson-root not found!");
+    console.log("📋 SOLUTION: Add this HTML element to your Webflow page:");
+    console.log('<div id="jp-lesson-root"></div>');
+  } else {
+    console.log("✅ SUCCESS: div#jp-lesson-root found!");
+  }
+
+  console.log("=== END DIAGNOSTIC ===");
+}, 1000);
+</script>
