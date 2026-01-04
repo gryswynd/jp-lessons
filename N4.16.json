@@ -91,11 +91,10 @@
           ]
         },
         {
-          "jp": "休みの 日に 何を しますか。",
-          "en": "What do you do on your days off?",
+          "jp": "休日に 何を しますか。",
+          "en": "What do you do on your holiday?",
           "terms": [
-            "v_yasumi",
-            "v_hi",
+            "v_kyuujitsu","k_nani",
             { "id": "v_suru", "form": "polite_masu" }
           ]
         }
@@ -249,7 +248,7 @@
           "spk": "B",
           "jp": "気をつけて くださいね。",
           "en": "Please be careful.",
-          "terms": [
+          "terms": ["k_u6c17",
             { "id": "v_kiotsukeru", "form": "te_form" }
           ]
         }
@@ -294,7 +293,7 @@
           "en": "I love them. I also like exercise.",
           "terms": [
             "v_undou",
-            "v_suki"
+            "v_daisuki"
           ]
         }
       ]
@@ -318,7 +317,7 @@
           "jp": "はい。中には 何が ありますか。",
           "en": "Okay. What is inside?",
           "terms": [
-            "v_naka",
+            "k_naka","k_nani",
             { "id": "v_aru", "form": "polite_masu" }
           ]
         },
@@ -337,7 +336,7 @@
           "jp": "高そうですね。",
           "en": "It looks expensive.",
           "terms": [
-            "v_takai"
+            { "id": "v_takai", "form": "appearance_sou" }
           ]
         }
       ]
@@ -353,7 +352,7 @@
           "en": "Last winter, I went to Japan.",
           "terms": [
             "v_kyonen",
-            "v_fuyu",
+            "k_fuyu",
             "v_nihon",
             { "id": "v_iku", "form": "polite_mashita" }
           ]
@@ -371,7 +370,7 @@
           "jp": "楽しかったです。自動の ドアが たくさん ありました。",
           "en": "It was fun. There were many automatic doors.",
           "terms": [
-            "v_tanoshii",
+            { "id": "v_tanoshii", "form": "plain_past" },
             "v_jidou",
             "v_doa",
             { "id": "v_aru", "form": "polite_mashita" }
@@ -398,17 +397,17 @@
           "terms": [
             "v_kyou",
             "v_un_ga_ii",
-            "v_hi"
+            "k_hi"
           ]
         },
         {
           "jp": "朝、銀行へ 行く とき、お金を ひろいました。",
           "en": "In the morning, when I went to the bank, I found money.",
           "terms": [
-            "v_asa",
+            "k_asa",
             "v_ginkou",
             "v_iku",
-            "v_okane",
+            "k_kane",
             { "id": "v_hirou", "form": "polite_mashita" }
           ]
         },

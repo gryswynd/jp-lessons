@@ -124,5 +124,27 @@
       "i_adj": { "type": "suffix", "remove": "い", "add": "く" },
       "na_adj": { "type": "suffix", "add": "に" }
     }
+  },
+  "desire_tai": {
+    "label": "Desire (Tai)",
+    "description": "Expresses desire to do the action (I want to...).",
+    "rules": {
+      "godan": { "type": "godan_change", "map": "u_to_i", "add": "たいです" },
+      "ichidan": { "type": "suffix", "remove": "る", "add": "たいです" },
+      "irr_suru": { "type": "replace", "surface": "したいです", "reading": "したいです" },
+      "irr_kuru": { "type": "replace", "surface": "来たいです", "reading": "きたいです" }
+    }
+  },
+  "appearance_sou": {
+    "label": "Appearance (Sou)",
+    "description": "Expresses that something looks like or appears to be certain way.",
+    "rules": {
+      "godan": { "type": "godan_change", "map": "u_to_i", "add": "そうです" },
+      "ichidan": { "type": "suffix", "remove": "る", "add": "そうです" },
+      "irr_suru": { "type": "replace", "surface": "しそうです", "reading": "しそうです" },
+      "irr_kuru": { "type": "replace", "surface": "来そうです", "reading": "きそうです" },
+      "i_adj": { "type": "suffix", "remove": "い", "add": "そうです" },
+      "na_adj": { "type": "suffix", "add": "そうです" }
+    }
   }
 }
