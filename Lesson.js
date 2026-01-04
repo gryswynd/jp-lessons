@@ -13,16 +13,12 @@ window.LessonModule = {
     let CONJUGATION_RULES = null;
 
     // --- Setup UI Container (Mobile Look) ---
-    // Clear the host container
     container.innerHTML = '';
-
-    // Create the App Wrapper
     const root = document.createElement('div');
     root.id = 'jp-lesson-app-root';
     container.appendChild(root);
 
     // --- Styles ---
-    // Inject fonts if missing
     if (!document.getElementById('jp-fonts')) {
         const link = document.createElement('link');
         link.id = 'jp-fonts';
@@ -35,7 +31,7 @@ window.LessonModule = {
         const style = document.createElement("style");
         style.id = 'jp-lesson-style';
         style.textContent = `
-          /* Mobile App Container (Matches Practice.js) */
+          /* Mobile App Container */
           #jp-lesson-app-root {
             --primary: #4e54c8; --primary-dark: #3f44a5;
             --bg-grad: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
@@ -123,6 +119,7 @@ window.LessonModule = {
           .jp-intro-title { font-size: 2rem; color: var(--primary); margin-bottom: 20px; line-height: 1.2; }
           .jp-intro-focus { font-size: 1rem; color: #747d8c; margin-bottom: 40px; background: #f8f9fa; padding: 12px 20px; border-radius: 50px; display: inline-block; }
           .jp-intro-kanji-row { font-size: 2.5rem; font-weight: 900; color: #2f3542; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+          .jp-intro-dot { color: var(--primary); opacity: 0.4; }
 
           /* CONVERSATION */
           .jp-speaker-bubble {
@@ -293,7 +290,33 @@ window.LessonModule = {
     function renderIntro(data) {
         const div = el("div", "jp-intro-card");
         div.appendChild(el("div", "jp-intro-title", data.title));
-        if (data.meta && data.meta.focus) div.appendChild(el("div", "jp-intro-focus", `<strong>Focus:</strong> ${data.meta.focus}`));
+
+        if (data.meta && data.meta.focus) {
+            div.appendChild(el("div", "jp-intro-focus", `<strong>Focus:</strong> ${data.meta.focus}`));
+        }
+
+        // UPDATED: Kanji Row Support
+        if (data.meta && data.meta.kanji) {
+            const row = el("div", "jp-intro-kanji-row");
+            data.meta.kanji.forEach((char, idx) => {
+                let termId = null;
+                // Try to find term ID for clickable kanji
+                for (const [key, val] of Object.entries(termMapData)) {
+                    if (val.surface === char && val.type === 'kanji') { termId = key; break; }
+                }
+
+                if (termId) {
+                    const span = el("span", "jp-term", char);
+                    span.onclick = () => window.JP_OPEN_TERM(termId);
+                    row.appendChild(span);
+                } else {
+                    row.appendChild(el("span", "", char));
+                }
+
+                if (idx < data.meta.kanji.length - 1) row.appendChild(el("span", "jp-intro-dot", "•"));
+            });
+            div.appendChild(row);
+        }
         return div;
     }
 
@@ -309,6 +332,17 @@ window.LessonModule = {
           const row = el("div", "jp-row");
           row.innerHTML = `<div class="jp-speaker-bubble" translate="no">${line.spk}</div><div style="flex:1"><div class="jp-jp">${processText(line.jp, line.terms)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(line.en)}</div></div>`;
           div.appendChild(row);
+        });
+        return div;
+    }
+
+    // UPDATED: Warmup now handles 'items' correctly (fixing blank screen)
+    function renderWarmup(sec) {
+        const div = el("div", ""); div.appendChild(createToggle());
+        (sec.items || []).forEach((item, idx) => {
+            const row = el("div", "jp-row");
+            row.innerHTML = `<div class="jp-speaker-bubble" translate="no">${idx+1}</div><div style="flex:1"><div class="jp-jp">${processText(item.jp, item.terms)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(item.en)}</div></div>`;
+            div.appendChild(row);
         });
         return div;
     }
@@ -375,12 +409,25 @@ window.LessonModule = {
          return div;
     }
 
-    function renderWarmup(sec) { return renderConversation(sec); }
+    // UPDATED: Reading now includes questions (fixed missing Qs)
     function renderReading(sec) {
         const div = el("div", ""); div.appendChild(createToggle());
         const pCard = el("div", "jp-card");
-        (sec.passage || []).forEach(p => { pCard.appendChild(el("div", "", `<div class="jp-jp" style="margin-bottom:8px;">${processText(p.jp, p.terms)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(p.en)}</div>`)); });
+        (sec.passage || []).forEach(p => {
+            pCard.appendChild(el("div", "", `<div class="jp-jp" style="margin-bottom:8px;">${processText(p.jp, p.terms)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(p.en)}</div>`));
+        });
         div.appendChild(pCard);
+
+        if (sec.questions) {
+          const qCard = el("div", "jp-card");
+          qCard.innerHTML = `<div style="font-weight:700; color:#888; margin-bottom:15px;">COMPREHENSION CHECK</div>`;
+          sec.questions.forEach((q, i) => {
+             const row = el("div", "jp-row");
+             row.innerHTML = `<div class="jp-speaker-bubble" translate="no">Q${i+1}</div><div style="flex:1"><div class="jp-jp" style="font-weight:700;">${processText(q.q, q.terms)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">Ans: ${esc(q.a)}</div></div>`;
+             qCard.appendChild(row);
+          });
+          div.appendChild(qCard);
+        }
         return div;
     }
 
