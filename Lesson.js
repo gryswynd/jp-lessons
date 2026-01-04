@@ -9,7 +9,7 @@ window.LessonModule = {
     let totalSteps = 0;
     let lessonData = null;
     let termMapData = {};
-    let showEN = false;
+    let showEN = false; // Default OFF
     let CONJUGATION_RULES = null;
 
     // --- Setup UI Container (Mobile Look) ---
@@ -31,16 +31,12 @@ window.LessonModule = {
         const style = document.createElement("style");
         style.id = 'jp-lesson-style';
         style.textContent = `
-          /* Mobile App Container */
           #jp-lesson-app-root {
             --primary: #4e54c8; --primary-dark: #3f44a5;
             --bg-grad: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
             --text-main: #2f3542; --text-sub: #747d8c;
-
             font-family: 'Poppins', 'Noto Sans JP', sans-serif;
-            background: var(--bg-grad);
-            color: var(--text-main);
-
+            background: var(--bg-grad); color: var(--text-main);
             display: flex; flex-direction: column;
             width: 100%; max-width: 600px; margin: 0 auto;
             height: 800px; border-radius: 20px;
@@ -49,7 +45,7 @@ window.LessonModule = {
           }
           #jp-lesson-app-root * { box-sizing: border-box; }
 
-          /* Header */
+          /* Header & Footer */
           .jp-header {
             background: rgba(78, 84, 200, 0.95); padding: 1.2rem;
             color: white; border-bottom: none;
@@ -58,24 +54,13 @@ window.LessonModule = {
             z-index: 10;
           }
           .jp-title { font-weight: 900; font-size: 1.1rem; color: white; }
-
-          /* Progress Bar */
           .jp-progress-container { height: 6px; width: 100%; background: rgba(0,0,0,0.1); }
           .jp-progress-bar { height: 100%; background: #2ed573; width: 0%; transition: width 0.3s ease; }
-
-          /* Body */
-          .jp-body {
-            padding: 1.5rem; flex: 1; overflow-y: auto;
-            background: transparent;
-            display: flex; flex-direction: column;
-          }
-
-          /* Footer */
+          .jp-body { padding: 1.5rem; flex: 1; overflow-y: auto; background: transparent; display: flex; flex-direction: column; }
           .jp-footer {
             padding: 15px 20px; background: white; border-top: 1px solid rgba(0,0,0,0.05);
             display: flex; gap: 10px; justify-content: space-between;
-            box-shadow: 0 -5px 15px rgba(0,0,0,0.03);
-            z-index: 10;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.03); z-index: 10;
           }
 
           /* Buttons */
@@ -88,18 +73,11 @@ window.LessonModule = {
           .jp-nav-btn.next { background: var(--primary); color: #fff; box-shadow: 0 4px 10px rgba(78,84,200,0.3); }
           .jp-nav-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 
-          .jp-exit-btn {
-            background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4);
-            color: white; padding: 5px 12px; border-radius: 8px; cursor: pointer;
-            font-weight: bold; font-size: 0.8rem;
-          }
-          .jp-back-btn {
-            background: transparent; color: rgba(255,255,255,0.8); border: none;
-            cursor: pointer; font-weight: bold; font-size: 0.9rem; margin-right: 10px;
-          }
+          .jp-exit-btn { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); color: white; padding: 5px 12px; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 0.8rem; }
+          .jp-back-btn { background: transparent; color: rgba(255,255,255,0.8); border: none; cursor: pointer; font-weight: bold; font-size: 0.9rem; margin-right: 10px; }
           .jp-back-btn:hover { color: white; }
 
-          /* MENU STYLES */
+          /* Menu & Cards */
           .jp-menu-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
           .jp-menu-item {
               background: #fff; padding: 20px; border-radius: 16px; cursor: pointer;
@@ -111,35 +89,23 @@ window.LessonModule = {
           .jp-menu-id { font-weight: 900; color: var(--primary); font-size: 1.1rem; }
           .jp-menu-name { font-size: 0.85rem; color: #a4b0be; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
 
-          /* CARDS */
           .jp-card { background: #fff; border-radius: 16px; padding: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 20px; border: 1px solid rgba(0,0,0,0.02); }
-
-          /* INTRO */
           .jp-intro-card { text-align: center; padding: 40px 20px; justify-content: center; height: 100%; display: flex; flex-direction: column; }
           .jp-intro-title { font-size: 2rem; color: var(--primary); margin-bottom: 20px; line-height: 1.2; }
           .jp-intro-focus { font-size: 1rem; color: #747d8c; margin-bottom: 40px; background: #f8f9fa; padding: 12px 20px; border-radius: 50px; display: inline-block; }
           .jp-intro-kanji-row { font-size: 2.5rem; font-weight: 900; color: #2f3542; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
           .jp-intro-dot { color: var(--primary); opacity: 0.4; }
 
-          /* CONVERSATION */
-          .jp-speaker-bubble {
-            background: #f1f2f6; color: var(--primary-dark); font-weight: 900;
-            width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
-            border-radius: 12px; flex-shrink: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-          }
+          /* Content Styles */
+          .jp-speaker-bubble { background: #f1f2f6; color: var(--primary-dark); font-weight: 900; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 12px; flex-shrink: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
           .jp-row { display: flex; gap: 12px; margin-bottom: 20px; align-items: flex-start; }
           .jp-jp { font-size: 1.15rem; line-height: 1.6; font-family: 'Noto Sans JP', sans-serif; color: #2f3542; }
           .jp-en { font-size: 0.9rem; color: #747d8c; margin-top: 6px; display: none; padding-left: 2px; }
           .jp-term { color: var(--primary); font-weight: 700; cursor: pointer; border-bottom: 2px solid rgba(78,84,200,0.1); transition: 0.2s; }
           .jp-term:hover { background: rgba(78,84,200,0.05); border-bottom-color: var(--primary); }
 
-          .jp-toggle-en {
-            font-size: 0.75rem; font-weight: 700; color: #747d8c; background: #fff;
-            border: 2px solid #f1f2f6; padding: 8px 16px; border-radius: 20px;
-            cursor: pointer; margin-bottom: 20px; width: 100%;
-          }
+          .jp-toggle-en { font-size: 0.75rem; font-weight: 700; color: #747d8c; background: #fff; border: 2px solid #f1f2f6; padding: 8px 16px; border-radius: 20px; cursor: pointer; margin-bottom: 20px; width: 100%; }
 
-          /* KANJI FLIP */
           .jp-kanji-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
           .jp-flip-container { perspective: 1000px; cursor: pointer; height: 180px; }
           .jp-flip-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s; transform-style: preserve-3d; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
@@ -150,7 +116,6 @@ window.LessonModule = {
           .jp-k-char { font-size: 3rem; font-weight: 900; color: #2f3542; line-height: 1; }
           .jp-k-meaning { font-size: 0.9rem; font-weight: 800; color: var(--primary); margin-top: 5px;}
 
-          /* DRILLS */
           .jp-mcq-opt { display: block; width: 100%; text-align: left; padding: 15px; margin-bottom: 10px; background: #fff; border: 2px solid #eee; border-radius: 12px; cursor: pointer; font-weight: 600; font-size: 1rem; color: #2f3542; transition: 0.2s; }
           .jp-mcq-opt:hover { border-color: var(--primary); background: #f8f9fa; }
           .jp-mcq-opt.correct { background: #d4edda; border-color: #c3e6cb; color: #155724; }
@@ -160,6 +125,9 @@ window.LessonModule = {
           .jp-modal-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index: 999999; display: none; align-items: center; justify-content: center; }
           .jp-modal { background: #fff; width: 85%; max-width: 400px; border-radius: 20px; padding: 30px; box-shadow: 0 25px 50px rgba(0,0,0,0.25); position: relative; text-align: center; }
           .jp-close-btn { position: absolute; top: 15px; right: 15px; background: #f1f2f6; border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-weight: bold; }
+          .jp-flag-btn { margin-top: 15px; background: #fdfbfb; border: 2px solid #f39c12; color: #f39c12; padding: 8px 16px; border-radius: 20px; font-weight: 700; cursor: pointer; font-size: 0.9rem; transition: 0.1s; }
+          .jp-flag-btn:hover { background: #f39c12; color: white; }
+          .jp-flag-btn.flagged { background: #f39c12; color: white; opacity: 0.6; cursor: default; }
         `;
         document.head.appendChild(style);
     }
@@ -270,19 +238,43 @@ window.LessonModule = {
             <button class="jp-close-btn">✕</button>
             <h2 id="jp-m-title" style="margin:0 0 5px 0; color:#4e54c8; font-size:2rem;"></h2>
             <div id="jp-m-meta" style="color:#747d8c; font-weight:700; margin-bottom:15px;"></div>
-            <div id="jp-m-notes" style="line-height:1.5;"></div>
+            <div id="jp-m-notes" style="line-height:1.5; margin-bottom:15px;"></div>
+            <button id="jp-m-flag" class="jp-flag-btn">🚩 Flag for Practice</button>
           </div>`;
         document.body.appendChild(modalOverlay);
         const close = () => modalOverlay.style.display = 'none';
         modalOverlay.onclick = (e) => { if(e.target === modalOverlay) close(); };
         modalOverlay.querySelector('.jp-close-btn').onclick = close;
     }
+
+    // UPDATED: Modal now handles "Flagging"
     window.JP_OPEN_TERM = function(id) {
         const t = termMapData[id];
         if (!t) return;
         document.getElementById('jp-m-title').innerHTML = t.surface;
         document.getElementById('jp-m-meta').innerText = t.reading + (t.meaning ? ` • ${t.meaning.replace(/<[^>]*>/g, '')}` : "");
         document.getElementById('jp-m-notes').innerText = t.notes || "";
+
+        const flagBtn = document.getElementById('jp-m-flag');
+        flagBtn.innerText = "🚩 Flag for Practice";
+        flagBtn.className = "jp-flag-btn";
+        flagBtn.onclick = function() {
+            // Logic to add to Practice App flags
+            const flags = JSON.parse(localStorage.getItem('k-flags') || '{}');
+            const active = JSON.parse(localStorage.getItem('k-active-flags') || '{}');
+            const key = t.surface; // Use surface as the key, matching Practice.js logic
+
+            flags[key] = (flags[key] || 0) + 1;
+            active[key] = true;
+
+            localStorage.setItem('k-flags', JSON.stringify(flags));
+            localStorage.setItem('k-active-flags', JSON.stringify(active));
+
+            // Visual feedback
+            this.innerText = "✅ Flagged!";
+            this.className = "jp-flag-btn flagged";
+        };
+
         modalOverlay.style.display = 'flex';
     };
 
@@ -290,29 +282,14 @@ window.LessonModule = {
     function renderIntro(data) {
         const div = el("div", "jp-intro-card");
         div.appendChild(el("div", "jp-intro-title", data.title));
-
-        if (data.meta && data.meta.focus) {
-            div.appendChild(el("div", "jp-intro-focus", `<strong>Focus:</strong> ${data.meta.focus}`));
-        }
-
-        // UPDATED: Kanji Row Support
+        if (data.meta && data.meta.focus) div.appendChild(el("div", "jp-intro-focus", `<strong>Focus:</strong> ${data.meta.focus}`));
         if (data.meta && data.meta.kanji) {
             const row = el("div", "jp-intro-kanji-row");
             data.meta.kanji.forEach((char, idx) => {
                 let termId = null;
-                // Try to find term ID for clickable kanji
-                for (const [key, val] of Object.entries(termMapData)) {
-                    if (val.surface === char && val.type === 'kanji') { termId = key; break; }
-                }
-
-                if (termId) {
-                    const span = el("span", "jp-term", char);
-                    span.onclick = () => window.JP_OPEN_TERM(termId);
-                    row.appendChild(span);
-                } else {
-                    row.appendChild(el("span", "", char));
-                }
-
+                for (const [key, val] of Object.entries(termMapData)) { if (val.surface === char && val.type === 'kanji') { termId = key; break; } }
+                if (termId) { const span = el("span", "jp-term", char); span.onclick = () => window.JP_OPEN_TERM(termId); row.appendChild(span); }
+                else { row.appendChild(el("span", "", char)); }
                 if (idx < data.meta.kanji.length - 1) row.appendChild(el("span", "jp-intro-dot", "•"));
             });
             div.appendChild(row);
@@ -321,6 +298,7 @@ window.LessonModule = {
     }
 
     function createToggle() {
+        // UPDATED: Toggle button text reflects state
         const btn = el("button", "jp-toggle-en", showEN ? "Hide English Translation" : "Show English Translation");
         btn.onclick = function() { showEN = !showEN; renderCurrentStep(); };
         return btn;
@@ -336,7 +314,6 @@ window.LessonModule = {
         return div;
     }
 
-    // UPDATED: Warmup now handles 'items' correctly (fixing blank screen)
     function renderWarmup(sec) {
         const div = el("div", ""); div.appendChild(createToggle());
         (sec.items || []).forEach((item, idx) => {
@@ -389,14 +366,19 @@ window.LessonModule = {
              card.innerHTML = `<div class="jp-jp" style="margin-bottom:15px; font-weight:bold;">${processText(item.q, item.terms)}</div>`;
              const optsDiv = el("div");
              let solved = false;
-             item.choices.forEach(choice => {
+
+             // UPDATED: Randomize choices
+             // Clone array and sort randomly
+             const choices = [...item.choices].sort(() => Math.random() - 0.5);
+
+             choices.forEach(choice => {
                const btn = el("button", "jp-mcq-opt", choice);
                btn.onclick = () => {
                  if(solved) return; solved = true;
                  if(choice === item.answer) btn.classList.add("correct");
                  else {
                      btn.classList.add("wrong");
-                     // Auto highlight correct
+                     // Auto highlight correct answer
                      Array.from(optsDiv.children).forEach(c => { if(c.innerText === item.answer) c.classList.add("correct"); });
                  }
                };
@@ -409,7 +391,6 @@ window.LessonModule = {
          return div;
     }
 
-    // UPDATED: Reading now includes questions (fixed missing Qs)
     function renderReading(sec) {
         const div = el("div", ""); div.appendChild(createToggle());
         const pCard = el("div", "jp-card");
@@ -435,7 +416,6 @@ window.LessonModule = {
     async function fetchLessonList() {
         const apiUrl = `https://api.github.com/repos/${REPO_CONFIG.owner}/${REPO_CONFIG.repo}/contents/${REPO_CONFIG.path}`;
         root.innerHTML = `<div class="jp-header"><div class="jp-title">Library</div><button class="jp-exit-btn">Exit</button></div><div class="jp-body" style="text-align:center; justify-content:center; color:#888;">Connecting to GitHub...</div>`;
-
         root.querySelector('.jp-exit-btn').onclick = exitCallback;
 
         try {
@@ -444,12 +424,12 @@ window.LessonModule = {
           const files = await res.json();
           let lessonFiles = files.filter(f => f.name.match(/^N\d+\.\d+\.json$/)).map(f => f.name);
 
-          // NATURAL SORT: N4.7 < N4.8 < N4.10
           lessonFiles.sort((a, b) => {
               const partsA = a.replace('N','').replace('.json','').split('.').map(Number);
               const partsB = b.replace('N','').replace('.json','').split('.').map(Number);
-              if (partsA[0] !== partsB[0]) return partsA[0] - partsB[0];
-              return partsA[1] - partsB[1];
+              // REVERSED SORT: Newest (Highest Number) First
+              if (partsA[0] !== partsB[0]) return partsB[0] - partsA[0];
+              return partsB[1] - partsA[1];
           });
 
           renderMenu(lessonFiles);
@@ -488,9 +468,20 @@ window.LessonModule = {
           lessonData.sections.unshift({ type: 'intro', title: lessonData.title });
           currentStep = 0; totalSteps = lessonData.sections.length; showEN = false;
 
-          root.querySelector('.jp-nav-btn.prev').onclick = () => { if (currentStep > 0) { currentStep--; renderCurrentStep(); } };
+          // NAVIGATION EVENTS
+          root.querySelector('.jp-nav-btn.prev').onclick = () => {
+              if (currentStep > 0) {
+                  currentStep--;
+                  showEN = false; // Reset English to OFF
+                  renderCurrentStep();
+              }
+          };
           root.querySelector('.jp-nav-btn.next').onclick = () => {
-             if (currentStep < totalSteps) { currentStep++; renderCurrentStep(); }
+             if (currentStep < totalSteps) {
+                 currentStep++;
+                 showEN = false; // Reset English to OFF
+                 renderCurrentStep();
+             }
              else { fetchLessonList(); }
           };
           renderCurrentStep();
