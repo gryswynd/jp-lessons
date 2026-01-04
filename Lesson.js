@@ -125,9 +125,7 @@ window.LessonModule = {
           .jp-modal-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index: 999999; display: none; align-items: center; justify-content: center; }
           .jp-modal { background: #fff; width: 85%; max-width: 400px; border-radius: 20px; padding: 30px; box-shadow: 0 25px 50px rgba(0,0,0,0.25); position: relative; text-align: center; }
           .jp-close-btn { position: absolute; top: 15px; right: 15px; background: #f1f2f6; border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-weight: bold; }
-          .jp-flag-btn { margin-top: 15px; background: #fdfbfb; border: 2px solid #f39c12; color: #f39c12; padding: 8px 16px; border-radius: 20px; font-weight: 700; cursor: pointer; font-size: 0.9rem; transition: 0.1s; }
-          .jp-flag-btn:hover { background: #f39c12; color: white; }
-          .jp-flag-btn.flagged { background: #f39c12; color: white; opacity: 0.6; cursor: default; }
+          .jp-auto-flag-msg { margin-top: 15px; background: #d4edda; color: #155724; padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; display: inline-block; }
         `;
         document.head.appendChild(style);
     }
@@ -239,7 +237,7 @@ window.LessonModule = {
             <h2 id="jp-m-title" style="margin:0 0 5px 0; color:#4e54c8; font-size:2rem;"></h2>
             <div id="jp-m-meta" style="color:#747d8c; font-weight:700; margin-bottom:15px;"></div>
             <div id="jp-m-notes" style="line-height:1.5; margin-bottom:15px;"></div>
-            <button id="jp-m-flag" class="jp-flag-btn">🚩 Flag for Practice</button>
+            <div class="jp-auto-flag-msg">✅ Added to Practice Queue</div>
           </div>`;
         document.body.appendChild(modalOverlay);
         const close = () => modalOverlay.style.display = 'none';
@@ -247,34 +245,29 @@ window.LessonModule = {
         modalOverlay.querySelector('.jp-close-btn').onclick = close;
     }
 
-    // UPDATED: Modal now handles "Flagging"
+    // UPDATED: AUTO-FLAGGING LOGIC
     window.JP_OPEN_TERM = function(id) {
         const t = termMapData[id];
         if (!t) return;
+
+        // 1. Render Modal Info
         document.getElementById('jp-m-title').innerHTML = t.surface;
         document.getElementById('jp-m-meta').innerText = t.reading + (t.meaning ? ` • ${t.meaning.replace(/<[^>]*>/g, '')}` : "");
         document.getElementById('jp-m-notes').innerText = t.notes || "";
 
-        const flagBtn = document.getElementById('jp-m-flag');
-        flagBtn.innerText = "🚩 Flag for Practice";
-        flagBtn.className = "jp-flag-btn";
-        flagBtn.onclick = function() {
-            // Logic to add to Practice App flags
-            const flags = JSON.parse(localStorage.getItem('k-flags') || '{}');
-            const active = JSON.parse(localStorage.getItem('k-active-flags') || '{}');
-            const key = t.surface; // Use surface as the key, matching Practice.js logic
+        // 2. Automatically Add to Active Flags (Silent or with Visual Feedback)
+        const flags = JSON.parse(localStorage.getItem('k-flags') || '{}');
+        const active = JSON.parse(localStorage.getItem('k-active-flags') || '{}');
+        const key = t.surface;
 
-            flags[key] = (flags[key] || 0) + 1;
-            active[key] = true;
+        // Update counters
+        flags[key] = (flags[key] || 0) + 1;
+        active[key] = true;
 
-            localStorage.setItem('k-flags', JSON.stringify(flags));
-            localStorage.setItem('k-active-flags', JSON.stringify(active));
+        localStorage.setItem('k-flags', JSON.stringify(flags));
+        localStorage.setItem('k-active-flags', JSON.stringify(active));
 
-            // Visual feedback
-            this.innerText = "✅ Flagged!";
-            this.className = "jp-flag-btn flagged";
-        };
-
+        // 3. Show Modal
         modalOverlay.style.display = 'flex';
     };
 
@@ -298,7 +291,7 @@ window.LessonModule = {
     }
 
     function createToggle() {
-        // UPDATED: Toggle button text reflects state
+        // Toggle button text reflects state
         const btn = el("button", "jp-toggle-en", showEN ? "Hide English Translation" : "Show English Translation");
         btn.onclick = function() { showEN = !showEN; renderCurrentStep(); };
         return btn;
@@ -367,8 +360,7 @@ window.LessonModule = {
              const optsDiv = el("div");
              let solved = false;
 
-             // UPDATED: Randomize choices
-             // Clone array and sort randomly
+             // Randomize choices
              const choices = [...item.choices].sort(() => Math.random() - 0.5);
 
              choices.forEach(choice => {
