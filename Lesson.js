@@ -1,4 +1,3 @@
-<script>
 window.LessonModule = {
   start: function (container, sharedConfig, exitCallback) {
 
@@ -408,4 +407,3 @@ window.LessonModule = {
     fetchLessonList();
   }
 };
-</script>

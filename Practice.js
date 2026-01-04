@@ -1,4 +1,3 @@
-<script>
 window.PracticeModule = {
   start: function(container, sharedConfig, exitCallback) {
 
@@ -454,4 +453,3 @@ window.PracticeModule = {
 
   }
 };
-</script>
