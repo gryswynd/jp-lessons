@@ -196,6 +196,14 @@ window.LessonModule = {
               newSurface = newSurface.slice(0, -1) + map[lastChar] + rule.add;
               newReading = newReading.slice(0, -1) + (GODAN_MAPS[rule.map][newReading.slice(-1)] || newReading.slice(-1)) + rule.add;
             }
+        } else if (rule.type === 'godan_euphonic') {
+            const lastChar = newSurface.slice(-1);
+            const lastReadingChar = newReading.slice(-1);
+            const map = GODAN_MAPS[rule.map];
+            if (map && map[lastChar]) {
+              newSurface = newSurface.slice(0, -1) + map[lastChar];
+              newReading = newReading.slice(0, -1) + (map[lastReadingChar] || map[lastChar]);
+            }
         }
         return { ...term, id: `${term.id}_${ruleKey}`, surface: newSurface, reading: newReading, meaning: term.meaning + ` (${formDef.label})`, original_id: term.id };
     }
