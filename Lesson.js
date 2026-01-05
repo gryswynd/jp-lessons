@@ -391,6 +391,27 @@ window.LessonModule = {
                      btn.classList.add("wrong");
                      // Auto highlight correct answer
                      Array.from(optsDiv.children).forEach(c => { if(c.innerText === item.answer) c.classList.add("correct"); });
+
+                     // Auto-flag terms for review when answer is wrong
+                     if(item.terms && item.terms.length > 0) {
+                       const flags = JSON.parse(localStorage.getItem('k-flags') || '{}');
+                       const activeFlags = JSON.parse(localStorage.getItem('k-active-flags') || '{}');
+
+                       item.terms.forEach(termId => {
+                         const term = termMapData[termId];
+                         if(term) {
+                           // Get root term for conjugated forms
+                           const rootTerm = term.original_id ? termMapData[term.original_id] : term;
+                           const key = rootTerm ? rootTerm.surface : term.surface;
+
+                           flags[key] = (flags[key] || 0) + 1;
+                           activeFlags[key] = true;
+                         }
+                       });
+
+                       localStorage.setItem('k-flags', JSON.stringify(flags));
+                       localStorage.setItem('k-active-flags', JSON.stringify(activeFlags));
+                     }
                  }
                };
                optsDiv.appendChild(btn);
