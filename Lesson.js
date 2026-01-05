@@ -269,7 +269,8 @@ window.LessonModule = {
             // 2. Add to Active Flags
             const flags = JSON.parse(localStorage.getItem('k-flags') || '{}');
             const active = JSON.parse(localStorage.getItem('k-active-flags') || '{}');
-            const key = t.surface;
+            const rootTerm = t.original_id ? termMapData[t.original_id] : t;
+            const key = rootTerm ? rootTerm.surface : t.surface;
 
             flags[key] = (flags[key] || 0) + 1;
             active[key] = true;
