@@ -146,5 +146,15 @@
       "i_adj": { "type": "suffix", "remove": "い", "add": "そうです" },
       "na_adj": { "type": "suffix", "add": "そうです" }
     }
+  },
+  "polite_volitional_mashou": {
+    "label": "Let's (Mashou)",
+    "description": "Polite volitional form expressing a suggestion or invitation.",
+    "rules": {
+      "godan": { "type": "godan_change", "map": "u_to_i", "add": "ましょう" },
+      "ichidan": { "type": "suffix", "remove": "る", "add": "ましょう" },
+      "irr_suru": { "type": "replace", "surface": "しましょう", "reading": "しましょう" },
+      "irr_kuru": { "type": "replace", "surface": "来ましょう", "reading": "きましょう" }
+    }
   }
 }

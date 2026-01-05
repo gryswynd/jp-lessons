@@ -125,7 +125,7 @@ window.LessonModule = {
           .jp-modal-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index: 999999; display: none; align-items: center; justify-content: center; }
           .jp-modal { background: #fff; width: 85%; max-width: 400px; border-radius: 20px; padding: 30px; box-shadow: 0 25px 50px rgba(0,0,0,0.25); position: relative; text-align: center; }
           .jp-close-btn { position: absolute; top: 15px; right: 15px; background: #f1f2f6; border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-weight: bold; }
-          .jp-auto-flag-msg { margin-top: 15px; background: #d4edda; color: #155724; padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; display: inline-block; }
+          .jp-auto-flag-msg { margin-top: 15px; background: #d4edda; color: #155724; padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; display: none; }
         `;
         document.head.appendChild(style);
     }
@@ -222,7 +222,7 @@ window.LessonModule = {
           let matchedForm = null;
           if (html.includes(t.surface)) matchedForm = t.surface;
           else if (t.reading && html.includes(t.reading)) matchedForm = t.reading;
-          if (matchedForm) html = html.split(matchedForm).join(`<span class="jp-term" onclick="window.JP_OPEN_TERM('${t.id}')">${matchedForm}</span>`);
+          if (matchedForm) html = html.split(matchedForm).join(`<span class="jp-term" onclick="window.JP_OPEN_TERM('${t.id}', true)">${matchedForm}</span>`);
         });
         return html;
     }
@@ -245,8 +245,8 @@ window.LessonModule = {
         modalOverlay.querySelector('.jp-close-btn').onclick = close;
     }
 
-    // UPDATED: AUTO-FLAGGING LOGIC
-    window.JP_OPEN_TERM = function(id) {
+    // UPDATED: CONDITIONAL FLAGGING (enableFlag = true/false)
+    window.JP_OPEN_TERM = function(id, enableFlag = true) {
         const t = termMapData[id];
         if (!t) return;
 
@@ -255,17 +255,26 @@ window.LessonModule = {
         document.getElementById('jp-m-meta').innerText = t.reading + (t.meaning ? ` • ${t.meaning.replace(/<[^>]*>/g, '')}` : "");
         document.getElementById('jp-m-notes').innerText = t.notes || "";
 
-        // 2. Automatically Add to Active Flags (Silent or with Visual Feedback)
-        const flags = JSON.parse(localStorage.getItem('k-flags') || '{}');
-        const active = JSON.parse(localStorage.getItem('k-active-flags') || '{}');
-        const key = t.surface;
+        const msgBox = document.querySelector('.jp-auto-flag-msg');
 
-        // Update counters
-        flags[key] = (flags[key] || 0) + 1;
-        active[key] = true;
+        if (enableFlag) {
+            // 2. Add to Active Flags
+            const flags = JSON.parse(localStorage.getItem('k-flags') || '{}');
+            const active = JSON.parse(localStorage.getItem('k-active-flags') || '{}');
+            const key = t.surface;
 
-        localStorage.setItem('k-flags', JSON.stringify(flags));
-        localStorage.setItem('k-active-flags', JSON.stringify(active));
+            flags[key] = (flags[key] || 0) + 1;
+            active[key] = true;
+
+            localStorage.setItem('k-flags', JSON.stringify(flags));
+            localStorage.setItem('k-active-flags', JSON.stringify(active));
+
+            // Show Feedback
+            if(msgBox) msgBox.style.display = 'inline-block';
+        } else {
+            // Hide Feedback for non-flagging interactions
+            if(msgBox) msgBox.style.display = 'none';
+        }
 
         // 3. Show Modal
         modalOverlay.style.display = 'flex';
@@ -281,7 +290,8 @@ window.LessonModule = {
             data.meta.kanji.forEach((char, idx) => {
                 let termId = null;
                 for (const [key, val] of Object.entries(termMapData)) { if (val.surface === char && val.type === 'kanji') { termId = key; break; } }
-                if (termId) { const span = el("span", "jp-term", char); span.onclick = () => window.JP_OPEN_TERM(termId); row.appendChild(span); }
+                // DISABLED FLAGGING FOR INTRO
+                if (termId) { const span = el("span", "jp-term", char); span.onclick = () => window.JP_OPEN_TERM(termId, false); row.appendChild(span); }
                 else { row.appendChild(el("span", "", char)); }
                 if (idx < data.meta.kanji.length - 1) row.appendChild(el("span", "jp-intro-dot", "•"));
             });
@@ -291,7 +301,6 @@ window.LessonModule = {
     }
 
     function createToggle() {
-        // Toggle button text reflects state
         const btn = el("button", "jp-toggle-en", showEN ? "Hide English Translation" : "Show English Translation");
         btn.onclick = function() { showEN = !showEN; renderCurrentStep(); };
         return btn;
@@ -341,7 +350,8 @@ window.LessonModule = {
                  let t = (typeof ref === 'string') ? termMapData[ref] : null;
                  if(t) {
                      const chip = el("div","",t.surface); chip.style.cssText="background:#f1f2f6; padding:8px 15px; border-radius:20px; font-weight:bold; cursor:pointer; color:#4e54c8;";
-                     chip.onclick = ()=>window.JP_OPEN_TERM(t.id);
+                     // DISABLED FLAGGING FOR VOCAB LIST
+                     chip.onclick = ()=>window.JP_OPEN_TERM(t.id, false);
                      chips.appendChild(chip);
                  }
             });
