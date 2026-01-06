@@ -156,13 +156,5 @@
       "irr_suru": { "type": "replace", "surface": "しましょう", "reading": "しましょう" },
       "irr_kuru": { "type": "replace", "surface": "来ましょう", "reading": "きましょう" }
     }
-  },
-  "adverbial": {
-    "label": "Adverbial Form (Ku/Ni)",
-    "description": "Changes the adjective into an adverb.",
-    "rules": {
-      "i_adj": { "type": "suffix", "remove": "い", "add": "く" },
-      "na_adj": { "type": "suffix", "add": "に" }
-    }
   }
 }
