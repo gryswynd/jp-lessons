@@ -401,96 +401,7 @@
     },
     {
       "type": "reading",
-      "title": "Reading Practice 1: My Hometown",
-      "passage": [
-        {
-          "jp": "私の 家は 京都に あります。",
-          "en": "My house is in Kyoto.",
-          "terms": [
-            "k_watashi",
-            "k_ie",
-            "v_kyouto"
-          ]
-        },
-        {
-          "jp": "京都は 古い 都です。",
-          "en": "Kyoto is an old capital.",
-          "terms": [
-            "v_kyouto",
-            "v_furui",
-            "v_miyako"
-          ]
-        },
-        {
-          "jp": "家の 近くに 海は ありませんが、きれいな 山と 田が あります。",
-          "en": "There is no sea near my house, but there are beautiful mountains and rice fields.",
-          "terms": [
-            "k_ie",
-            { "id": "v_chikai", "form": "adverbial" },
-            "v_umi",
-            "v_kirei",
-            "k_yama",
-            "v_ta"
-          ]
-        },
-        {
-          "jp": "私は よく 自転車で 山へ 行きます。",
-          "en": "I often go to the mountains by bicycle.",
-          "terms": [
-            "k_watashi",
-            "v_yoku",
-            "v_jitensha",
-            "k_yama",
-            { "id": "v_iku", "form": "polite_masu" }
-          ]
-        },
-        {
-          "jp": "山の上から 見る まちは きれいです。",
-          "en": "The town seen from the top of the mountain is beautiful.",
-          "terms": [
-            "k_yama",
-            "k_ue",
-            "v_miru",
-            "k_machi",
-            "v_kirei"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "q": "私の 家は どこに ありますか。",
-          "a": "京都に あります。",
-          "terms": [
-            "v_kyouto"
-          ]
-        },
-        {
-          "q": "家の 近くに 何が ありますか。",
-          "a": "山と 田が あります。",
-          "terms": [
-            "k_yama",
-            "v_ta"
-          ]
-        },
-        {
-          "q": "海が ありますか。",
-          "a": "いいえ、ありません。",
-          "terms": [
-            "v_umi"
-          ]
-        },
-        {
-          "q": "何で 山へ 行きますか。",
-          "a": "自転車で 行きます。",
-          "terms": [
-            "v_jitensha"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "reading",
-      "title": "Reading Practice 2: A Trip to Tokyo",
+      "title": "Reading Practice 1: A Trip to Tokyo",
       "passage": [
         {
           "jp": "先月、北海道から 東京へ 行きました。",
@@ -574,6 +485,95 @@
           "a": "海外へ 行きたいです。",
           "terms": [
             "v_kaigai"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: My Hometown",
+      "passage": [
+        {
+          "jp": "私の 家は 京都に あります。",
+          "en": "My house is in Kyoto.",
+          "terms": [
+            "k_watashi",
+            "k_ie",
+            "v_kyouto"
+          ]
+        },
+        {
+          "jp": "京都は 古い 都です。",
+          "en": "Kyoto is an old capital.",
+          "terms": [
+            "v_kyouto",
+            "v_furui",
+            "v_miyako"
+          ]
+        },
+        {
+          "jp": "家の 近くに 海は ありませんが、きれいな 山と 田が あります。",
+          "en": "There is no sea near my house, but there are beautiful mountains and rice fields.",
+          "terms": [
+            "k_ie",
+            { "id": "v_chikai", "form": "adverbial" },
+            "v_umi",
+            "v_kirei",
+            "k_yama",
+            "v_ta"
+          ]
+        },
+        {
+          "jp": "私は よく 自転車で 山へ 行きます。",
+          "en": "I often go to the mountains by bicycle.",
+          "terms": [
+            "k_watashi",
+            "v_yoku",
+            "v_jitensha",
+            "k_yama",
+            { "id": "v_iku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "山の上から 見る まちは きれいです。",
+          "en": "The town seen from the top of the mountain is beautiful.",
+          "terms": [
+            "k_yama",
+            "k_ue",
+            "v_miru",
+            "k_machi",
+            "v_kirei"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "私の 家は どこに ありますか。",
+          "a": "京都に あります。",
+          "terms": [
+            "v_kyouto"
+          ]
+        },
+        {
+          "q": "家の 近くに 何が ありますか。",
+          "a": "山と 田が あります。",
+          "terms": [
+            "k_yama",
+            "v_ta"
+          ]
+        },
+        {
+          "q": "海が ありますか。",
+          "a": "いいえ、ありません。",
+          "terms": [
+            "v_umi"
+          ]
+        },
+        {
+          "q": "何で 山へ 行きますか。",
+          "a": "自転車で 行きます。",
+          "terms": [
+            "v_jitensha"
           ]
         }
       ]
