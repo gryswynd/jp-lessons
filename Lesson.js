@@ -370,6 +370,31 @@ window.LessonModule = {
         return div;
     }
 
+    // Helper function to resolve root term from potentially conjugated term IDs
+    function getRootTerm(termId) {
+      // Try direct lookup first (handles both base terms and already-generated conjugations)
+      let term = termMapData[termId];
+      if (term) {
+        // If it has an original_id, get the root term
+        return term.original_id ? termMapData[term.original_id] : term;
+      }
+
+      // Term not found - likely a conjugated form that hasn't been generated yet
+      // Try progressively removing suffix parts to find the base term
+      const parts = termId.split('_');
+      while (parts.length > 1) {
+        parts.pop(); // Remove last segment
+        const candidateId = parts.join('_');
+        term = termMapData[candidateId];
+        if (term) {
+          // Found the base term
+          return term.original_id ? termMapData[term.original_id] : term;
+        }
+      }
+
+      return null; // No root term found
+    }
+
     function renderDrills(sec) {
          const div = el("div", "");
          (sec.items || []).forEach(item => {
@@ -391,6 +416,24 @@ window.LessonModule = {
                      btn.classList.add("wrong");
                      // Auto highlight correct answer
                      Array.from(optsDiv.children).forEach(c => { if(c.innerText === item.answer) c.classList.add("correct"); });
+
+                     // Auto-flag terms for review when answer is wrong
+                     if(item.terms && item.terms.length > 0) {
+                       const flags = JSON.parse(localStorage.getItem('k-flags') || '{}');
+                       const activeFlags = JSON.parse(localStorage.getItem('k-active-flags') || '{}');
+
+                       item.terms.forEach(termId => {
+                         const rootTerm = getRootTerm(termId);
+                         if(rootTerm) {
+                           const key = rootTerm.surface;
+                           flags[key] = (flags[key] || 0) + 1;
+                           activeFlags[key] = true;
+                         }
+                       });
+
+                       localStorage.setItem('k-flags', JSON.stringify(flags));
+                       localStorage.setItem('k-active-flags', JSON.stringify(activeFlags));
+                     }
                  }
                };
                optsDiv.appendChild(btn);
