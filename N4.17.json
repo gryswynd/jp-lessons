@@ -94,7 +94,7 @@
           "en": "Was it hot last summer?",
           "terms": [
             "v_kyonen",
-            "v_natsu",
+            "k_natsu",
             { "id": "v_atsui", "form": "polite_past_adj" }
           ]
         }
@@ -239,7 +239,7 @@
           "en": "That's nice. Won't you go to Tokyo?",
           "terms": [
             "v_toukyou",
-            { "id": "v_iku", "form": "polite_masu_neg" }
+            { "id": "v_iku", "form": "polite_negative" }
           ]
         },
         {
@@ -249,8 +249,9 @@
           "terms": [
             "v_konkai",
             "v_kyouto",
+            "v_furui",
             "v_otera",
-            { "id": "v_miru", "form": "polite_tai" }
+            { "id": "v_miru", "form": "desire_tai" }
           ]
         },
         {
@@ -321,7 +322,7 @@
           "en": "Have you ever been overseas?",
           "terms": [
             "v_kaigai",
-            { "id": "v_iku", "form": "ta_form" }
+            { "id": "v_iku", "form": "plain_past" }
           ]
         },
         {
@@ -406,6 +407,7 @@
           "jp": "私の 家は 京都に あります。",
           "en": "My house is in Kyoto.",
           "terms": [
+            "k_watashi",
             "k_ie",
             "v_kyouto"
           ]
@@ -424,7 +426,7 @@
           "en": "There is no sea near my house, but there are beautiful mountains and rice fields.",
           "terms": [
             "k_ie",
-            "v_chikaku",
+            { "id": "v_chikai", "form": "adverbial" },
             "v_umi",
             "v_kirei",
             "k_yama",
@@ -435,10 +437,11 @@
           "jp": "私は よく 自転車で 山へ 行きます。",
           "en": "I often go to the mountains by bicycle.",
           "terms": [
+            "k_watashi",
             "v_yoku",
             "v_jitensha",
             "k_yama",
-            "v_iku"
+            { "id": "v_iku", "form": "polite_masu" },
           ]
         },
         {
@@ -515,6 +518,7 @@
           "jp": "私は 電車に 何回も 乗りました。",
           "en": "I rode the train many times.",
           "terms": [
+            "k_watashi",
             "v_densha",
             "v_nankai",
             { "id": "v_noru", "form": "polite_mashita" }
@@ -535,7 +539,7 @@
           "terms": [
             "v_rainen",
             "v_kaigai",
-            { "id": "v_iku", "form": "polite_tai" }
+            { "id": "v_iku", "form": "desire_tai" }
           ]
         }
       ],
