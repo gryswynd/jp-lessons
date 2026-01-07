@@ -1,0 +1,679 @@
+{
+  "id": "N4.18",
+  "title": "Phase 4 Lesson 18: Strength & Nature",
+  "meta": {
+    "phase": 4,
+    "lesson": 18,
+    "focus": "Describing strength, nature, and study habits.",
+    "kanji": [
+      "弱",
+      "強",
+      "勉",
+      "風",
+      "光",
+      "力"
+    ]
+  },
+  "newKanji": [
+    {
+      "kanji": "弱",
+      "on": "じゃく",
+      "kun": "よわ(い)",
+      "meaning": "Weak",
+      "termId": "k_yowa"
+    },
+    {
+      "kanji": "強",
+      "on": "きょう",
+      "kun": "つよ(い)",
+      "meaning": "Strong",
+      "termId": "k_tsuyo"
+    },
+    {
+      "kanji": "勉",
+      "on": "べん",
+      "kun": "(なし)",
+      "meaning": "Exertion / Endeavor",
+      "termId": "k_ben"
+    },
+    {
+      "kanji": "風",
+      "on": "ふう",
+      "kun": "かぜ",
+      "meaning": "Wind",
+      "termId": "k_kaze"
+    },
+    {
+      "kanji": "光",
+      "on": "こう",
+      "kun": "ひかり",
+      "meaning": "Light",
+      "termId": "k_hikari"
+    },
+    {
+      "kanji": "力",
+      "on": "りょく",
+      "kun": "ちから",
+      "meaning": "Power / Strength",
+      "termId": "k_chikara"
+    }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "Warm-Up Review（ウォームアップ）",
+      "instructions": "Ask your partner these questions using previously learned words:",
+      "items": [
+        {
+          "jp": "今日の 天気は どうですか。",
+          "en": "How is today's weather?",
+          "terms": [
+            "v_kyou",
+            "v_tenki"
+          ]
+        },
+        {
+          "jp": "学校は 楽しいですか。",
+          "en": "Is school fun?",
+          "terms": [
+            "v_gakkou",
+            "v_tanoshii"
+          ]
+        },
+        {
+          "jp": "暗い 道は こわいですか。",
+          "en": "Are dark streets scary? (Use 'Do you dislike' if scary is unknown)",
+          "terms": [
+            "v_kurai",
+            "k_michi"
+          ]
+        },
+        {
+          "jp": "毎日、何を 作りますか。",
+          "en": "What do you make every day?",
+          "terms": [
+            "v_mainichi",
+            "k_nani",
+            { "id": "v_tsukuru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "New Kanji（新しい 漢字）",
+      "items": [
+        {
+          "kanji": "弱",
+          "on": "じゃく",
+          "kun": "よわ",
+          "meaning": "Weak",
+          "terms": [
+            "k_yowa",
+            "v_yowai",
+            "v_yowaki"
+          ]
+        },
+        {
+          "kanji": "強",
+          "on": "きょう",
+          "kun": "つよ",
+          "meaning": "Strong",
+          "terms": [
+            "k_tsuyo",
+            "v_tsuyoi",
+            "v_tsuyoki",
+            "v_benkyou"
+          ]
+        },
+        {
+          "kanji": "勉",
+          "on": "べん",
+          "kun": "(なし)",
+          "meaning": "Endeavor",
+          "terms": [
+            "k_ben",
+            "v_benkyou"
+          ]
+        },
+        {
+          "kanji": "風",
+          "on": "ふう",
+          "kun": "かぜ",
+          "meaning": "Wind",
+          "terms": [
+            "k_kaze",
+            "v_kaze",
+            "v_kyoufuu"
+          ]
+        },
+        {
+          "kanji": "光",
+          "on": "こう",
+          "kun": "ひかり",
+          "meaning": "Light",
+          "terms": [
+            "k_hikari",
+            "v_hikari",
+            "v_nikkou",
+            "v_gekkou",
+            "v_denkou"
+          ]
+        },
+        {
+          "kanji": "力",
+          "on": "りょく",
+          "kun": "ちから",
+          "meaning": "Power",
+          "terms": [
+            "k_chikara",
+            "v_chikara",
+            "v_denryoku",
+            "v_yuuryokusha"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "Vocabulary & Compounds（ことば）",
+      "groups": [
+        {
+          "label": "Strength & Study",
+          "items": [
+            "v_yowai",
+            "v_tsuyoi",
+            "v_benkyou",
+            "v_chikara",
+            "v_yuuryokusha"
+          ]
+        },
+        {
+          "label": "Nature & Light",
+          "items": [
+            "v_kaze",
+            "v_hikari",
+            "v_nikkou",
+            "v_gekkou",
+            "v_kyoufuu"
+          ]
+        },
+        {
+          "label": "Electric & Personality",
+          "items": [
+            "v_denkou",
+            "v_denryoku",
+            "v_yowaki",
+            "v_tsuyoki"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 1（会話）: The Windy Day",
+      "context": "Talking about the weather.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "今日は 風が 強いですね。",
+          "en": "The wind is strong today, isn't it?",
+          "terms": [
+            "v_kyou",
+            "v_kaze",
+            "v_tsuyoi"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。強風ですから、電車が 来ません。",
+          "en": "Yes. Because of the strong wind, the train is not coming.",
+          "terms": [
+            "v_kyoufuu",
+            "v_densha",
+            { "id": "v_kuru", "form": "polite_masen" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "えっ、そうですか。何で 帰りますか。",
+          "en": "Eh, is that so? How (by what) will you go home?",
+          "terms": [
+            "k_nani",
+            { "id": "v_kaeru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "車で 帰ります。",
+          "en": "I will go home by car.",
+          "terms": [
+            "k_kuruma",
+            { "id": "v_kaeru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 2（会話）: Studying",
+      "context": "Discussing study habits.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "毎日 日本語を 勉強しますか。",
+          "en": "Do you study Japanese every day?",
+          "terms": [
+            "v_mainichi",
+            "v_nihongo",
+            { "id": "v_benkyou", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。でも、日本語は むずかしいですね。",
+          "en": "Yes. But Japanese is difficult.",
+          "terms": [
+            "v_nihongo",
+            "v_muzukashii"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "そうですね。私は 少し 弱気です。",
+          "en": "That's right. I am a little faint-hearted (discouraged).",
+          "terms": [
+            "v_sukoshi",
+            "v_yowaki"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "元気を 出してください。私と 勉強しましょう。",
+          "en": "Please cheer up. Let's study with me.",
+          "terms": [
+            "v_genki",
+            { "id": "v_dasu", "form": "te_form" },
+            { "id": "v_benkyou", "form": "volitional_polite" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 3（会話）: Moonlight",
+      "context": "Looking at the night sky.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "見てください。月光が きれいですね。",
+          "en": "Please look. The moonlight is beautiful.",
+          "terms": [
+            { "id": "v_miru", "form": "te_form" },
+            "v_gekkou",
+            "v_kirei"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。明るいですね。",
+          "en": "Yes. It is bright.",
+          "terms": [
+            "v_akarui"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "電光より 月光の ほうが 好きです。",
+          "en": "I like moonlight more than electric light.",
+          "terms": [
+            "v_denkou",
+            "v_gekkou",
+            "v_suki"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "私もです。電光は 強いですが、月光は きれいです。",
+          "en": "Me too. Electric light is strong, but moonlight is beautiful.",
+          "terms": [
+            "k_watashi",
+            "v_tsuyoi",
+            "v_kirei"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 4（会話）: The Influential Person",
+      "context": "Gossiping about a local figure.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "あの 人の 名前は 何ですか。",
+          "en": "What is that person's name?",
+          "terms": [
+            "k_hito",
+            "v_namae",
+            "k_nani"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "田中さんです。この 町の 有力者ですよ。",
+          "en": "That is Mr. Tanaka. He is an influential person in this town.",
+          "terms": [
+            "v_tanaka",
+            "k_machi",
+            "v_yuuryokusha"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "強気な 人ですか。",
+          "en": "Is he a strong-minded person?",
+          "terms": [
+            "v_tsuyoki",
+            "k_hito"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。そして、力も あります。",
+          "en": "Yes. And he has power/strength.",
+          "terms": [
+            "v_chikara",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 1: My Weekend",
+      "passage": [
+        {
+          "jp": "日曜日に、私は 近くの 山へ 行きました。",
+          "en": "On Sunday, I went to a nearby mountain.",
+          "terms": [
+            "v_nichiyoubi",
+            "v_chikai",
+            "k_yama",
+            { "id": "v_iku", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "天気が よかったですから、日光が 明るかったです。",
+          "en": "Because the weather was good, the sunlight was bright.",
+          "terms": [
+            "v_tenki",
+            "v_nikkou",
+            { "id": "v_akarui", "form": "polite_past_adj" }
+          ]
+        },
+        {
+          "jp": "でも、山の上は 風が 強かったです。",
+          "en": "But, on top of the mountain, the wind was strong.",
+          "terms": [
+            "k_yama",
+            "k_ue",
+            "v_kaze",
+            { "id": "v_tsuyoi", "form": "polite_past_adj" }
+          ]
+        },
+        {
+          "jp": "私は 足が 弱いですから、長い 時間 休みました。",
+          "en": "Because my legs are weak, I rested for a long time.",
+          "terms": [
+            "k_ashi",
+            "v_yowai",
+            "v_nagai",
+            "v_jikan",
+            { "id": "v_yasumu", "form": "polite_mashita" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "日曜日の 天気は どうでしたか。",
+          "a": "よかったです。",
+          "terms": [
+            "v_tenki"
+          ]
+        },
+        {
+          "q": "山の上は どうでしたか。",
+          "a": "風が 強かったです。",
+          "terms": [
+            "k_ue",
+            "v_kaze",
+            "v_tsuyoi"
+          ]
+        },
+        {
+          "q": "日光は 暗かったですか。",
+          "a": "いいえ、明るかったです。",
+          "terms": [
+            "v_nikkou",
+            "v_kurai",
+            "v_akarui"
+          ]
+        },
+        {
+          "q": "私は 足が 強いですか。",
+          "a": "いいえ、弱いです。",
+          "terms": [
+            "k_ashi",
+            "v_tsuyoi",
+            "v_yowai"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: Electricity",
+      "passage": [
+        {
+          "jp": "私たちに 電力は 大切です。",
+          "en": "Electric power is important for us.",
+          "terms": [
+            "k_watashi",
+            "v_denryoku",
+            "v_taisetsu"
+          ]
+        },
+        {
+          "jp": "電力が ありませんから、電光も ありません。",
+          "en": "If there is no electric power, there is no electric light.",
+          "terms": [
+            "v_denryoku",
+            "v_denkou"
+          ]
+        },
+        {
+          "jp": "晩、家の中が 暗いです。",
+          "en": "In the evening, inside the house is dark.",
+          "terms": [
+            "k_u6669",
+            "k_ie",
+            "k_naka",
+            "v_kurai"
+          ]
+        },
+        {
+          "jp": "でも、本を 読みたいですから、月光で 勉強します。",
+          "en": "But, because I want to read a book, I study by moonlight.",
+          "terms": [
+            "k_hon",
+            { "id": "v_yomu", "form": "desire_tai" },
+            "v_gekkou",
+            { "id": "v_benkyou", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "何が 大切ですか。",
+          "a": "電力が 大切です。",
+          "terms": [
+            "v_denryoku",
+            "v_taisetsu"
+          ]
+        },
+        {
+          "q": "電光が ありますか。",
+          "a": "いいえ、ありません。",
+          "terms": [
+            "v_denkou"
+          ]
+        },
+        {
+          "q": "どうして 家の中が 暗いですか。",
+          "a": "電力が ありませんから。",
+          "terms": [
+            "k_ie",
+            "k_naka",
+            "v_denryoku",
+            "v_kurai"
+          ]
+        },
+        {
+          "q": "何で 勉強しますか。",
+          "a": "月光で 勉強します。",
+          "terms": [
+            "v_gekkou",
+            "v_benkyou"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Vocabulary",
+      "instructions": "Select the correct meaning for the Kanji compound.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "勉強 [benkyou]",
+          "choices": [
+            "Study",
+            "Strong",
+            "Wind",
+            "Light"
+          ],
+          "answer": "Study",
+          "terms": [
+            "v_benkyou"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "風 [kaze]",
+          "choices": [
+            "Wind",
+            "Rain",
+            "Fire",
+            "Earth"
+          ],
+          "answer": "Wind",
+          "terms": [
+            "v_kaze"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "弱気 [yowaki]",
+          "choices": [
+            "Timid/Faint-hearted",
+            "Strong-minded",
+            "Healthy",
+            "Sick"
+          ],
+          "answer": "Timid/Faint-hearted",
+          "terms": [
+            "v_yowaki"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "日光 [nikkou]",
+          "choices": [
+            "Sunlight",
+            "Moonlight",
+            "Starlight",
+            "Electric light"
+          ],
+          "answer": "Sunlight",
+          "terms": [
+            "v_nikkou"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Grammar & Context",
+      "instructions": "Fill in the blank.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "あの 人は 力が ______ です。",
+          "choices": [
+            "強い",
+            "強気",
+            "勉強",
+            "風"
+          ],
+          "answer": "強い",
+          "terms": [
+            "v_tsuyoi"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "明日は ______ します。",
+          "choices": [
+            "勉強",
+            "有力者",
+            "風",
+            "光"
+          ],
+          "answer": "勉強",
+          "terms": [
+            "v_benkyou"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "______ が きれいです。",
+          "choices": [
+            "月光",
+            "月力",
+            "月風",
+            "月強"
+          ],
+          "answer": "月光",
+          "terms": [
+            "v_gekkou"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "あの 人は ______ です。",
+          "choices": [
+            "有力者",
+            "有光者",
+            "有風者",
+            "有弱者"
+          ],
+          "answer": "有力者",
+          "terms": [
+            "v_yuuryokusha"
+          ]
+        }
+      ]
+    }
+  ]
+}
