@@ -231,7 +231,7 @@
           "terms": [
             "v_kyoufuu",
             "v_densha",
-            { "id": "v_kuru", "form": "polite_masen" }
+            { "id": "v_kuru", "form": "polite_negative" }
           ]
         },
         {
@@ -283,7 +283,8 @@
           "jp": "そうですね。私は 少し 弱気です。",
           "en": "That's right. I am a little faint-hearted (discouraged).",
           "terms": [
-            "v_sukoshi",
+            "k_watashi,
+            ""v_sukoshi",
             "v_yowaki"
           ]
         },
@@ -294,6 +295,7 @@
           "terms": [
             "v_genki",
             { "id": "v_dasu", "form": "te_form" },
+            "k_watashi",
             { "id": "v_benkyou", "form": "volitional_polite" }
           ]
         }
@@ -338,7 +340,9 @@
           "en": "Me too. Electric light is strong, but moonlight is beautiful.",
           "terms": [
             "k_watashi",
+            "v_denkou",
             "v_tsuyoi",
+            "v_gekkou",
             "v_kirei"
           ]
         }
@@ -398,7 +402,8 @@
           "en": "On Sunday, I went to a nearby mountain.",
           "terms": [
             "v_nichiyoubi",
-            "v_chikai",
+            "k_watashi",
+            { "id": "v_chikai", "form": "adverbial" },
             "k_yama",
             { "id": "v_iku", "form": "polite_mashita" }
           ]
@@ -408,6 +413,7 @@
           "en": "Because the weather was good, the sunlight was bright.",
           "terms": [
             "v_tenki",
+            { "id": "v_yoku", "form": "plain_past" },
             "v_nikkou",
             { "id": "v_akarui", "form": "polite_past_adj" }
           ]
@@ -426,6 +432,7 @@
           "jp": "私は 足が 弱いですから、長い 時間 休みました。",
           "en": "Because my legs are weak, I rested for a long time.",
           "terms": [
+            "k_watashi",
             "k_ashi",
             "v_yowai",
             "v_nagai",
@@ -565,7 +572,6 @@
           ],
           "answer": "Study",
           "terms": [
-            "v_benkyou"
           ]
         },
         {
@@ -579,7 +585,6 @@
           ],
           "answer": "Wind",
           "terms": [
-            "v_kaze"
           ]
         },
         {
@@ -593,7 +598,6 @@
           ],
           "answer": "Timid/Faint-hearted",
           "terms": [
-            "v_yowaki"
           ]
         },
         {
@@ -607,7 +611,6 @@
           ],
           "answer": "Sunlight",
           "terms": [
-            "v_nikkou"
           ]
         }
       ]
