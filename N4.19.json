@@ -70,7 +70,7 @@
           "terms": [
             "v_yoku",
             "k_hon",
-            "v_yomu"
+            { "id": "v_yomu", "form": "polite_masu" }
           ]
         },
         {
@@ -94,7 +94,7 @@
           "jp": "旅行の 写真が ありますか。",
           "en": "Do you have travel photos?",
           "terms": [
-            "v_ryoko",
+            "v_ryokou",
             "v_shashin",
             "v_aru"
           ]
@@ -338,7 +338,7 @@
         },
         {
           "spk": "B",
-          "jp": "地下に 住んで いる 人の 話です。",
+          "jp": "地下に 住んで いる 人の 物語です。",
           "en": "It is a story about people living underground.",
           "terms": [
             "v_chika",
@@ -360,7 +360,7 @@
           "jp": "駅まで どうやって 行きますか。",
           "en": "How will we go to the station?",
           "terms": [
-            "k_eki",
+            "k_u99c5",
             { "id": "v_iku", "form": "polite_masu" }
           ]
         },
@@ -413,7 +413,7 @@
           "en": "The library is near the station.",
           "terms": [
             "v_toshokan",
-            "k_eki",
+            "k_u99c5",
             { "id": "v_chikai", "form": "adverbial" }
           ]
         },
