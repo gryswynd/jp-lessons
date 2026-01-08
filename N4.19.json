@@ -62,36 +62,41 @@
     {
       "type": "warmup",
       "title": "Warm-Up Review（ウォームアップ）",
-      "instructions": "Ask your partner these questions:",
+      "instructions": "Ask your partner these questions using words you already know:",
       "items": [
         {
-          "jp": "よく 図書館へ 行きますか。",
-          "en": "Do you go to the library often?",
+          "jp": "よく 本を 読みますか。",
+          "en": "Do you read books often?",
           "terms": [
-            "v_yoku"
+            "v_yoku",
+            "k_hon",
+            "v_yomu"
           ]
         },
         {
-          "jp": "むずかしい 問題が 好きですか。",
-          "en": "Do you like difficult problems?",
+          "jp": "日本語の 勉強は むずかしいですか。",
+          "en": "Is Japanese study difficult?",
           "terms": [
+            "v_nihongo",
+            "v_benkyou",
             "v_muzukashii"
           ]
         },
         {
-          "jp": "あなたの 町の 地図が ありますか。",
-          "en": "Do you have a map of your town?",
+          "jp": "あなたの 町は どんな 所ですか。",
+          "en": "What kind of place is your town?",
           "terms": [
-            "k_machi"
+            "k_machi",
+            "k_tokoro"
           ]
         },
         {
-          "jp": "どんな 本を 読みますか。",
-          "en": "What kind of books do you read?",
+          "jp": "旅行の 写真が ありますか。",
+          "en": "Do you have travel photos?",
           "terms": [
-            "v_donna",
-            "k_hon",
-            "v_yomu"
+            "v_ryoko",
+            "v_shashin",
+            "v_aru"
           ]
         }
       ]
@@ -215,8 +220,7 @@
           "jp": "すみません。図書館は どこですか。",
           "en": "Excuse me. Where is the library?",
           "terms": [
-            "v_toshokan",
-            "k_doko"
+            "v_toshokan"
           ]
         },
         {
@@ -234,7 +238,8 @@
           "en": "No, I don't. How do you read this place name?",
           "terms": [
             "v_chimei",
-            "v_yomu"
+            "k_nani",
+            { "id": "v_yomu", "form": "polite_masu" }
           ]
         },
         {
@@ -242,6 +247,7 @@
           "jp": "「ほんまち」です。私が 道を 説明します。",
           "en": "It is 'Honmachi'. I will explain the way.",
           "terms": [
+            "k_watashi",
             "k_michi",
             { "id": "v_setsumei", "form": "polite_masu" }
           ]
@@ -264,12 +270,13 @@
         },
         {
           "spk": "B",
-          "jp": "はい。先生に 質問すれば、わかりますよ。",
+          "jp": "はい。先生に 質問すれば、分かりますよ。",
           "en": "Yes. If you ask the teacher, you will understand.",
           "terms": [
             "v_sensei",
-            { "id": "v_shitsumon", "form": "conditional_ba" },
-            "v_wakaru"
+            "v_shitsumon",
+            { "id": "v_suru", "form": "conditional_ba" },
+            {"id":"v_wakaru", "form": "polite_masu"}
           ]
         },
         {
@@ -286,7 +293,9 @@
           "jp": "じゃあ、私が 説明しましょう。",
           "en": "Well then, let me explain.",
           "terms": [
-            { "id": "v_setsumei", "form": "polite_volitional_mashou" }
+            "k_watashi",
+            "v_setsumei",
+            { "id": "v_suru", "form": "polite_volitional_mashou" }
           ]
         }
       ]
@@ -301,27 +310,30 @@
           "jp": "何を 読んで いますか。",
           "en": "What are you reading?",
           "terms": [
-            { "id": "v_yomu", "form": "te_form" }
+            "k_nani",
+            { "id": "v_yomu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
           ]
         },
         {
           "spk": "B",
-          "jp": "古い 小説です。少し 地味ですが、いい 話です。",
+          "jp": "古い 小説です。少し 地味ですが、いい 物語です。",
           "en": "It is an old novel. It's a little plain, but a good story.",
           "terms": [
-            "k_furui",
+            "v_furui",
             "v_shousetsu",
+            "v_sukoshi",
             "v_jimi",
-            "v_hanashi"
+            "v_monogatari"
           ]
         },
         {
           "spk": "A",
-          "jp": "どんな 話ですか。",
+          "jp": "どんな 物語ですか。",
           "en": "What kind of story is it?",
           "terms": [
             "v_donna",
-            "v_hanashi"
+            "v_monogatari"
           ]
         },
         {
@@ -331,7 +343,9 @@
           "terms": [
             "v_chika",
             { "id": "v_sumu", "form": "te_form" },
-            "k_hito"
+            "v_iru",
+            "k_hito",
+            "v_monogatari"
           ]
         }
       ]
@@ -346,7 +360,8 @@
           "jp": "駅まで どうやって 行きますか。",
           "en": "How will we go to the station?",
           "terms": [
-            "v_eki"
+            "k_eki"
+            { "id": "v_iku", "form": "polite_masu" },
           ]
         },
         {
@@ -371,9 +386,10 @@
         },
         {
           "spk": "B",
-          "jp": "わかりました。地上で 行きましょう。",
+          "jp": "分かりました。地上で 行きましょう。",
           "en": "Understood. Let's go above ground.",
           "terms": [
+            { "id": "v_wakaru", "form": "polite_mashita" },
             "v_chijou",
             { "id": "v_iku", "form": "polite_volitional_mashou" }
           ]
@@ -397,8 +413,8 @@
           "en": "The library is near the station.",
           "terms": [
             "v_toshokan",
-            "v_eki",
-            "v_chikai"
+            "k_eki",
+            { "id": "v_chikai", "form": "adverbial" },
           ]
         },
         {
@@ -407,7 +423,8 @@
           "terms": [
             "v_chika",
             { "id": "v_iku", "form": "conditional_ba" },
-            "v_ame"
+            "k_ame",
+            "k_hi"
           ]
         },
         {
