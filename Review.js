@@ -542,7 +542,7 @@
           sec.questions.forEach(q => {
             this.state.questions.push({
               type: 'reading_mcq', q: q.q, choices: q.choices,
-              answer: q.a.split(' ')[0], fullAnswer: q.a,
+              answer: q.a.replace(/。$/, '').trim(), fullAnswer: q.a,
               explanation: q.explanation, passage: sec.passage, section: sec.title, isScorable: true,
               terms: q.terms // Pass terms for context
             });
