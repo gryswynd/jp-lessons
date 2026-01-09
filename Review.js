@@ -502,7 +502,7 @@
         });
 
         // Clean markers
-        return html.replace(//g, "").replace(//g, "");
+        return html;
     },
 
     // --- QUIZ LOGIC ---
