@@ -10,7 +10,12 @@
 
       // Override config if provided
       if (config) {
-        this.config = { ...this.config, ...config };
+        // Merge config, but preserve default path if incoming path is empty
+        const { path, ...restConfig } = config;
+        this.config = { ...this.config, ...restConfig };
+        if (path) {
+          this.config.path = path;
+        }
       }
 
       // Build the UI
