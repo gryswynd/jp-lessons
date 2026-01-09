@@ -1,0 +1,552 @@
+{
+  "id": "N4.Review.3",
+  "title": "Phase 4 Review: Movement, Nature & Geography",
+  "meta": {
+    "phase": 4,
+    "type": "assessment",
+    "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 16-19.",
+    "kanji": [
+      "動", "犬", "銀", "去", "走", "運",
+      "京", "都", "転", "回", "田", "海",
+      "弱", "強", "勉", "風", "光", "力",
+      "地", "図", "質", "問", "題", "説"
+    ]
+  },
+  "sections": [
+    {
+      "type": "conversation",
+      "title": "Part 1: Conversation Check",
+      "instructions": "Read the conversation and select the best summary.",
+      "items": [
+        {
+          "title": "Conversation 1",
+          "context": "Asking for directions.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "すみません。この 地図で、銀行は どこですか。",
+              "terms": [
+                "v_chizu",
+                "v_ginkou"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "銀行は 地下に ありますよ。",
+              "terms": [
+                "v_ginkou",
+                "v_chika",
+                { "id": "v_aru", "form": "polite_masu" }
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "えっ、地下ですか。暗いですか。",
+              "terms": [
+                "v_chika",
+                "v_kurai"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "いいえ、電光が たくさん ありますから、明るいです。",
+              "terms": [
+                "v_denkou",
+                "v_takusan",
+                { "id": "v_aru", "form": "polite_masu" },
+                "v_akarui"
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "わかりました。説明 ありがとう ございます。",
+              "terms": [
+                { "id": "v_wakaru", "form": "polite_mashita" },
+                "v_setsumei"
+              ]
+            }
+          ],
+          "question": "Where is the bank?",
+          "choices": [
+            "It is on top of the mountain.",
+            "It is underground.",
+            "It is near the sea.",
+            "It is inside the library."
+          ],
+          "answer": "It is underground.",
+          "explanation": "B says the bank is underground (地下)."
+        },
+        {
+          "title": "Conversation 2",
+          "context": "Discussing hobbies.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "田中さんは 力が 強いですね。",
+              "terms": [
+                "v_tanaka",
+                "v_chikara",
+                "v_tsuyoi"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "はい。毎日 運動して いますから。",
+              "terms": [
+                "v_mainichi",
+                { "id": "v_undou", "form": "te_form" },
+                { "id": "v_iru", "form": "polite_masu" }
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "どんな 運動ですか。",
+              "terms": [
+                "v_donna",
+                "v_undou"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "海へ 行ったり、山を 走ったり します。",
+              "terms": [
+                "v_umi",
+                { "id": "v_iku", "form": "tari_form" },
+                "k_yama",
+                { "id": "v_hashiru", "form": "tari_form" },
+                { "id": "v_suru", "form": "polite_masu" }
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "すごいですね。私は 弱いですから、できません。",
+              "terms": [
+                "v_sugoi",
+                "k_watashi",
+                "v_yowai",
+                { "id": "v_dekiru", "form": "polite_negative" }
+              ]
+            }
+          ],
+          "question": "Why is Tanaka strong?",
+          "choices": [
+            "Because he studies every day.",
+            "Because he eats a lot.",
+            "Because he exercises every day.",
+            "Because he buys heavy bags."
+          ],
+          "answer": "Because he exercises every day.",
+          "explanation": "B says they exercise every day (毎日運動しています)."
+        },
+        {
+          "title": "Conversation 3",
+          "context": "Planning a trip.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "来週、京都へ 行きます。車で 行けば、早いですよ。",
+              "terms": [
+                "v_raishuu",
+                "v_kyouto",
+                { "id": "v_iku", "form": "polite_masu" },
+                "k_kuruma",
+                { "id": "v_iku", "form": "conditional_ba" },
+                "v_hayai"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "でも、京都は 人が 多いですから、運転が むずかしいです。",
+              "terms": [
+                "v_kyouto",
+                "k_hito",
+                "v_ooi",
+                "v_unten",
+                "v_muzukashii"
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "そうですか。じゃあ、電車で 行きます。",
+              "terms": [
+                "v_densha",
+                { "id": "v_iku", "form": "polite_masu" }
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "はい。電車のほうが いいです。",
+              "terms": [
+                "v_densha",
+                "v_ii"
+              ]
+            }
+          ],
+          "question": "How will A go to Kyoto in the end?",
+          "choices": [
+            "By car.",
+            "By train.",
+            "By bicycle.",
+            "By running."
+          ],
+          "answer": "By train.",
+          "explanation": "A decides to go by train (電車で 行きます) after B warns about driving."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 2: Grammar Scramble",
+      "instructions": "Construct the sentence by clicking the words in the correct order.",
+      "items": [
+        {
+          "kind": "scramble",
+          "q": "If you ask a question, you will understand.",
+          "segments": ["質問", "すれば", "分かります"],
+          "explanation": "Conditional form: Action (Question) + sureba (if do) + Result (Understand)."
+        },
+        {
+          "kind": "scramble",
+          "q": "Please explain this problem.",
+          "segments": ["この", "問題", "を", "説明", "して", "ください"],
+          "explanation": "Object (Problem) + wo + Te-form of Setsumei (Explain) + kudasai."
+        },
+        {
+          "kind": "scramble",
+          "q": "I like dogs more than cats.",
+          "segments": ["猫", "より", "犬", "のほうが", "好き", "です"],
+          "explanation": "Comparison: B (Cat) + yori + A (Dog) + nohouga + Like."
+        },
+        {
+          "kind": "scramble",
+          "q": "The wind is strong and scary.",
+          "segments": ["風", "が", "強くて", "こわい", "です"],
+          "explanation": "Connecting adjectives: Tsuyoi becomes Tsuyokute."
+        },
+        {
+          "kind": "scramble",
+          "q": "I bought a silver watch.",
+          "segments": ["銀色", "の", "とけい", "を", "買いました"],
+          "explanation": "Noun modifier: Giniro (Silver color) + no + Tokei (Watch)."
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Part 3: Reading - A Day in Tokyo",
+      "passage": [
+        {
+          "jp": "先月、私は 京都から 東京へ 行きました。",
+          "en": "Last month, I went from Kyoto to Tokyo.",
+          "terms": [
+            "v_sengetsu",
+            "k_watashi",
+            "v_kyouto",
+            "v_toukyou",
+            { "id": "v_iku", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "東京は 人が 多かったです。",
+          "en": "There were many people in Tokyo.",
+          "terms": [
+            "v_toukyou",
+            "k_hito",
+            { "id": "v_ooi", "form": "plain_past" }
+          ]
+        },
+        {
+          "jp": "私は 自転車を 借りて、町を 走りました。",
+          "en": "I rented a bicycle and ran (rode) through the town.",
+          "terms": [
+            "k_watashi",
+            "v_jitensha",
+            { "id": "v_kariru", "form": "te_form" },
+            "k_machi",
+            { "id": "v_hashiru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "強い 風が ありましたが、楽しかったです。",
+          "en": "There was a strong wind, but it was fun.",
+          "terms": [
+            "v_tsuyoi",
+            "v_kaze",
+            { "id": "v_aru", "form": "polite_mashita" },
+            { "id": "v_tanoshii", "form": "plain_past" }
+          ]
+        },
+        {
+          "jp": "夜は 有名な レストランで 食べました。",
+          "en": "At night, I ate at a famous restaurant.",
+          "terms": [
+            "k_yoru",
+            "v_yuumei",
+            { "id": "v_taberu", "form": "polite_mashita" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "どこへ 行きましたか。",
+          "a": "東京へ 行きました。",
+          "choices": ["京都へ 行きました", "東京へ 行きました", "北海道へ 行きました", "海外へ 行きました"],
+          "terms": [
+            "v_toukyou",
+            { "id": "v_iku", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "q": "町で 何を しましたか。",
+          "a": "自転車で 走りました。",
+          "choices": ["車を 買いました", "自転車で 走りました", "犬と 遊びました", "銀行へ 行きました"],
+          "terms": [
+            "k_machi",
+            "v_jitensha",
+            { "id": "v_hashiru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "q": "天気は どうでしたか。",
+          "a": "風が 強かったです。",
+          "choices": ["雨でした", "雪でした", "風が 強かったです", "雷でした"],
+          "terms": [
+            "v_tenki",
+            "v_kaze",
+            { "id": "v_tsuyoi", "form": "polite_past_adj" }
+          ]
+        },
+        {
+          "q": "夜、何を しましたか。",
+          "a": "レストランで 食べました。",
+          "choices": ["図書館で 読みました", "家で 寝ました", "レストランで 食べました", "友達に 会いました"],
+          "terms": [
+            "k_yoru",
+            { "id": "v_taberu", "form": "polite_mashita" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Part 4: Reading - Library Study",
+      "passage": [
+        {
+          "jp": "学生たちは 図書館で 勉強します。",
+          "en": "The students study at the library.",
+          "terms": [
+            "v_gakusei",
+            "v_toshokan",
+            { "id": "v_benkyou", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "図書館には おもしろい 小説や 地図が あります。",
+          "en": "There are interesting novels and maps in the library.",
+          "terms": [
+            "v_toshokan",
+            "v_omoshiroi",
+            "v_shousetsu",
+            "v_chizu",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "学生は 先生に 質問します。",
+          "en": "The student asks the teacher a question.",
+          "terms": [
+            "v_gakusei",
+            "v_sensei",
+            { "id": "v_shitsumon", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "「先生、この 学説を 説明して ください。」",
+          "en": "'Teacher, please explain this theory.'",
+          "terms": [
+            "v_sensei",
+            "v_gakusetsu",
+            { "id": "v_setsumei", "form": "te_form" }
+          ]
+        },
+        {
+          "jp": "先生は 「いいですよ。少し むずかしい 問題ですね」と 言います。",
+          "en": "The teacher says, 'Sure. It is a slightly difficult problem.'",
+          "terms": [
+            "v_sensei",
+            "v_sukoshi",
+            "v_muzukashii",
+            "v_mondai",
+            { "id": "v_iu", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "学生は どこで 勉強しますか。",
+          "a": "図書館",
+          "choices": ["銀行", "図書館", "海", "山"],
+          "terms": [
+            "v_gakusei",
+            "v_toshokan",
+            { "id": "v_benkyou", "form": "polite_masu" }
+          ]
+        },
+        {
+          "q": "図書館に 何が ありますか。",
+          "a": "小説と 地図",
+          "choices": ["犬と 猫", "車と 自転車", "小説と 地図", "薬と 病院"],
+          "terms": [
+            "v_toshokan",
+            "v_shousetsu",
+            "v_chizu"
+          ]
+        },
+        {
+          "q": "学生は 何を しますか。",
+          "a": "先生に 質問します。",
+          "choices": ["先生に 質問します", "先生に お金を かします", "先生と 走ります", "先生と 歌います"],
+          "terms": [
+            "v_sensei",
+            { "id": "v_shitsumon", "form": "polite_masu" }
+          ]
+        },
+        {
+          "q": "問題は かんたんですか。",
+          "a": "いいえ、少し むずかしいです。",
+          "choices": ["はい、かんたんです", "いいえ、少し むずかしいです", "とても おもしろいです", "とても つまらないです"],
+          "terms": [
+            "v_mondai",
+            "v_muzukashii"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 5: Kanji Readings",
+      "instructions": "Select the correct reading for the [bracketed] word.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "[動物]が 好きです。",
+          "choices": ["どうぶつ", "こうぶつ", "うごもの", "だいぶつ"],
+          "answer": "どうぶつ",
+          "explanation": "動物 (Animal) is read as <b>doubutsu</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "[銀行]へ 行きます。",
+          "choices": ["ぎんこう", "きんこう", "ぎんぎょう", "よこう"],
+          "answer": "ぎんこう",
+          "explanation": "銀行 (Bank) is read as <b>ginkou</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "車を [運転]します。",
+          "choices": ["じてん", "うんてん", "うんど", "れんてん"],
+          "answer": "うんてん",
+          "explanation": "運転 (Driving) is read as <b>unten</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "毎日 [勉強]します。",
+          "choices": ["きんきょう", "つよきょう", "べんきょう", "めんきょう"],
+          "answer": "べんきょう",
+          "explanation": "勉強 (Study) is read as <b>benkyou</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "[地図]を 見ます。",
+          "choices": ["ちず", "じず", "ちと", "ちえ"],
+          "answer": "ちず",
+          "explanation": "地図 (Map) is read as <b>chizu</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "[京都]は 古い 都です。",
+          "choices": ["とうきょう", "きょうと", "みやこ", "けいと"],
+          "answer": "きょうと",
+          "explanation": "京都 (Kyoto) is read as <b>kyouto</b>."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 6: Context & Vocabulary",
+      "instructions": "Select the best word to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "この 荷物を ______ ください。",
+          "choices": ["運んで", "転んで", "遊んで", "込んで"],
+          "answer": "運んで",
+          "explanation": "To carry/transport baggage (荷物) is Hakobu (運ぶ)."
+        },
+        {
+          "kind": "mcq",
+          "q": "今日は ______ が 強いです。",
+          "choices": ["風", "犬", "田", "銀"],
+          "answer": "風",
+          "explanation": "The wind (風) is strong (強い)."
+        },
+        {
+          "kind": "mcq",
+          "q": "______ に 住んで います。",
+          "choices": ["東京", "東強", "東教", "東今日"],
+          "answer": "東京",
+          "explanation": "Tokyo is written as 東京 (East Capital)."
+        },
+        {
+          "kind": "mcq",
+          "q": "分からない ことは 先生に ______ します。",
+          "choices": ["質問", "自問", "問題", "学説"],
+          "answer": "質問",
+          "explanation": "You ask a question (質問) to the teacher."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 7: Grammar Check",
+      "instructions": "Choose the correct particle or form to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "海 ______ 山の ほうが 好きです。",
+          "choices": ["より", "から", "と", "が"],
+          "answer": "より",
+          "explanation": "Comparison pattern: A yori B no hou ga suki (I like B more than A)."
+        },
+        {
+          "kind": "mcq",
+          "q": "自転車 ______ 行きましょう。",
+          "choices": ["で", "を", "に", "が"],
+          "answer": "で",
+          "explanation": "Particle 'de' indicates means of transport (by bicycle)."
+        },
+        {
+          "kind": "mcq",
+          "q": "薬を ______、元気になります。",
+          "choices": ["飲めば", "飲むなら", "飲んで", "飲みます"],
+          "answer": "飲めば",
+          "explanation": "Conditional Ba form: If you drink (nomeba)..."
+        },
+        {
+          "kind": "mcq",
+          "q": "道を ______ ください。",
+          "choices": ["教えて", "教え", "教える", "教えます"],
+          "answer": "教えて",
+          "explanation": "Request form uses Te-form + kudasai."
+        },
+        {
+          "kind": "mcq",
+          "q": "去年、海外 ______ 行きました。",
+          "choices": ["へ", "を", "で", "が"],
+          "answer": "へ",
+          "explanation": "Particle 'he' (pronounced e) indicates direction/destination."
+        }
+      ]
+    }
+  ]
+}
