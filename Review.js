@@ -1,5 +1,62 @@
 (function() {
-  window.JP_Test = {
+  window.ReviewModule = {
+    container: null,
+    onExit: null,
+
+    // --- PUBLIC START METHOD ---
+    start: function(container, config, onExit) {
+      this.container = container;
+      this.onExit = onExit;
+
+      // Override config if provided
+      if (config) {
+        this.config = { ...this.config, ...config };
+      }
+
+      // Build the UI
+      this.buildUI();
+
+      // Initialize (load data)
+      this.init();
+    },
+
+    buildUI: function() {
+      this.container.innerHTML = `
+        <div id="jp-test-wrapper">
+            <div id="jp-test-embed">
+              <div class="jp-header">
+                <div class="jp-title" id="jp-header-title">Loading...</div>
+                <div class="jp-badge">Score: <span id="jp-score">0</span></div>
+              </div>
+
+              <div class="jp-progress-track">
+                <div class="jp-progress-fill" id="jp-progress"></div>
+              </div>
+
+              <div id="jp-stage">
+                <div class="jp-intro">
+                  <div class="jp-emoji">🇯🇵</div>
+                  <h2 id="jp-intro-title" style="margin: 0 0 10px 0; color: #2d3436;">Loading Lesson...</h2>
+                  <p id="jp-intro-desc" style="color:#666; margin-bottom: 25px; line-height: 1.6;">
+                    Please wait while we fetch the lesson content.
+                  </p>
+                  <button id="jp-start-btn" class="jp-btn jp-btn-main" style="opacity:0.5; pointer-events:none;">Start</button>
+                </div>
+              </div>
+            </div>
+            <div class="jp-exit-link" id="jp-exit-review">Exit Review</div>
+        </div>
+      `;
+
+      // Attach exit handler
+      document.getElementById('jp-exit-review').onclick = () => {
+        if (this.onExit) this.onExit();
+      };
+
+      // Attach start button handler (will be enabled after data loads)
+      document.getElementById('jp-start-btn').onclick = () => this.startQuiz();
+    },
+
     // REPO CONFIG
     config: {
       owner: "gryswynd",
@@ -451,17 +508,24 @@
     // --- QUIZ LOGIC ---
 
     processData: function(data) {
+      console.log('[Review.js] Processing data...');
       if(data.title) {
-        this.el('jp-header-title').innerText = data.title;
-        this.el('jp-intro-title').innerText = data.title;
+        const headerTitle = this.el('jp-header-title');
+        const introTitle = this.el('jp-intro-title');
+        if (headerTitle) headerTitle.innerText = data.title;
+        if (introTitle) introTitle.innerText = data.title;
       }
       if(data.meta && data.meta.focus) {
-        this.el('jp-intro-desc').innerText = data.meta.focus;
+        const introDesc = this.el('jp-intro-desc');
+        if (introDesc) introDesc.innerText = data.meta.focus;
       }
       const btn = this.el('jp-start-btn');
-      btn.style.opacity = "1";
-      btn.style.pointerEvents = "all";
-      btn.innerText = "Start Review";
+      if (btn) {
+        btn.style.opacity = "1";
+        btn.style.pointerEvents = "all";
+        btn.innerText = "Start Review";
+        console.log('[Review.js] Start button enabled');
+      }
 
       this.state.questions = [];
       data.sections.forEach(sec => {
@@ -498,7 +562,7 @@
       });
     },
 
-    start: function() {
+    startQuiz: function() {
       if(this.state.questions.length === 0) return;
       this.state.idx = 0;
       this.state.score = 0;
@@ -549,7 +613,7 @@
                 <div id="jp-fb-head" style="font-weight:900;margin-bottom:5px;"></div>
                 <div style="font-size:0.95rem;color:#555;">${q.explanation || ''}</div>
               </div>`;
-      html += `<button id="jp-next" class="jp-btn jp-btn-main" style="display:none;" onclick="JP_Test.next()">Next ➜</button>`;
+      html += `<button id="jp-next" class="jp-btn jp-btn-main" style="display:none;" onclick="ReviewModule.next()">Next ➜</button>`;
       html += `</div>`;
 
       stage.innerHTML = html;
@@ -696,7 +760,7 @@
           <div style="font-size:4rem; font-weight:900; color:var(--jp-primary);">${pct}%</div>
           <div style="font-size:1.2rem; color:#666; margin-bottom:20px;">${msg}</div>
           <p>You scored ${this.state.score} / ${scorableCount}</p>
-          <button class="jp-btn jp-btn-main" onclick="JP_Test.start()">Try Again</button>
+          <button class="jp-btn jp-btn-main" onclick="ReviewModule.startQuiz()">Try Again</button>
         </div>
       `;
     },
@@ -705,6 +769,4 @@
       this.el('jp-score').innerText = this.state.score;
     }
   };
-  // Load Data
-  JP_Test.init();
 })();
