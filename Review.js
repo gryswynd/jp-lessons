@@ -25,7 +25,13 @@
 
     // --- INITIALIZATION ---
     init: async function() {
+      console.log('[Review.js] Initializing...');
       try {
+        console.log('[Review.js] Fetching resources...');
+        console.log('[Review.js] Quiz URL:', this.getUrl());
+        console.log('[Review.js] Glossary URL:', this.getUrl('glossary.master.json'));
+        console.log('[Review.js] Conjugations URL:', this.getUrl('conjugation_rules.json'));
+
         // 1. Fetch Quiz Data + Glossary + Conjugations in parallel
         const [quizRes, glossRes, conjRes] = await Promise.all([
             fetch(this.getUrl()),
@@ -33,11 +39,23 @@
             fetch(this.getUrl('conjugation_rules.json'))
         ]);
 
-        if (!quizRes.ok || !glossRes.ok) throw new Error("Connection failed");
+        console.log('[Review.js] Fetch responses:', {
+          quiz: quizRes.ok,
+          glossary: glossRes.ok,
+          conjugations: conjRes.ok
+        });
 
+        if (!quizRes.ok || !glossRes.ok || !conjRes.ok) {
+          throw new Error(`Failed to fetch resources: Quiz(${quizRes.status}) Glossary(${glossRes.status}) Conjugations(${conjRes.status})`);
+        }
+
+        console.log('[Review.js] Parsing JSON...');
         const quizData = await quizRes.json();
         const glossData = await glossRes.json();
         this.state.conjugations = await conjRes.json();
+
+        console.log('[Review.js] Quiz title:', quizData.title);
+        console.log('[Review.js] Glossary entries:', glossData.length);
 
         // 2. Map Glossary
         this.state.termMap = {};
@@ -48,11 +66,19 @@
         this.injectModal();
 
         // 4. Process Quiz
+        console.log('[Review.js] Processing quiz data...');
         this.processData(quizData);
+        console.log('[Review.js] Initialization complete!');
 
       } catch (e) {
-        console.error(e);
-        this.el('jp-stage').innerHTML = `<div style="text-align:center;color:#d63031;padding:20px;">Unable to load test resources.<br><small>${e.message}</small></div>`;
+        console.error('[Review.js] Error during initialization:', e);
+        const stage = this.el('jp-stage');
+        if (stage) {
+          stage.innerHTML = `<div style="text-align:center;color:#d63031;padding:20px;">Unable to load test resources.<br><small>${e.message}</small><br><br><button class="jp-btn" onclick="location.reload()" style="background:#4e54c8;color:white;padding:12px 24px;border:none;border-radius:8px;cursor:pointer;">Reload Page</button></div>`;
+        } else {
+          console.error('[Review.js] Cannot display error: jp-stage element not found!');
+          alert('Error loading review: ' + e.message);
+        }
       }
     },
 
@@ -61,6 +87,179 @@
         const style = document.createElement('style');
         style.id = 'jp-review-styles';
         style.innerHTML = `
+            /* CSS Variables */
+            :root {
+                --jp-primary: #4e54c8;
+                --jp-success: #00b894;
+                --jp-error: #d63031;
+            }
+
+            /* Main Container */
+            #jp-test-wrapper {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            }
+            #jp-test-embed {
+                background: white;
+                border-radius: 16px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+                overflow: hidden;
+            }
+
+            /* Header */
+            .jp-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 25px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+            }
+            .jp-title { font-size: 1.1rem; font-weight: 900; }
+            .jp-badge {
+                background: rgba(255,255,255,0.2);
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-weight: 700;
+                font-size: 0.95rem;
+            }
+
+            /* Progress Bar */
+            .jp-progress-track {
+                height: 6px;
+                background: #e8e8e8;
+                position: relative;
+            }
+            .jp-progress-fill {
+                height: 100%;
+                background: linear-gradient(90deg, #00b894, #00cec9);
+                width: 0%;
+                transition: width 0.3s ease;
+            }
+
+            /* Stage */
+            #jp-stage { padding: 30px 25px; min-height: 300px; }
+
+            /* Intro Screen */
+            .jp-intro { text-align: center; padding: 20px 0; }
+            .jp-emoji { font-size: 4rem; margin-bottom: 20px; }
+
+            /* Buttons */
+            .jp-btn {
+                background: #f1f2f6;
+                border: none;
+                padding: 15px 30px;
+                border-radius: 12px;
+                font-weight: 700;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: all 0.2s;
+                font-family: inherit;
+                margin: 5px;
+            }
+            .jp-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+            .jp-btn:active { transform: scale(0.98); }
+            .jp-btn-main {
+                background: var(--jp-primary);
+                color: white;
+                padding: 18px 40px;
+                font-size: 1.1rem;
+            }
+            .jp-btn.correct { background: var(--jp-success) !important; color: white; }
+            .jp-btn.wrong { background: var(--jp-error) !important; color: white; }
+
+            /* Question Styles */
+            .jp-q-label {
+                font-size: 0.85rem;
+                color: #999;
+                font-weight: 700;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+            .jp-q-text {
+                font-size: 1.2rem;
+                font-weight: 700;
+                margin: 25px 0;
+                color: #2d3436;
+                line-height: 1.6;
+            }
+            .jp-highlight {
+                background: rgba(78,84,200,0.1);
+                padding: 2px 6px;
+                border-radius: 4px;
+                color: var(--jp-primary);
+            }
+
+            /* Passage / Conversation */
+            .jp-passage {
+                background: #f8f9fa;
+                padding: 20px;
+                border-radius: 12px;
+                margin: 20px 0;
+                line-height: 1.8;
+            }
+            .jp-convo-line {
+                margin: 15px 0;
+                padding: 12px;
+                background: white;
+                border-radius: 8px;
+            }
+            .jp-convo-spk {
+                font-weight: 900;
+                color: var(--jp-primary);
+                margin-bottom: 5px;
+                font-size: 0.9rem;
+            }
+            .jp-convo-text { font-size: 1.1rem; }
+
+            /* Feedback */
+            .jp-feedback {
+                display: none;
+                margin-top: 20px;
+                padding: 20px;
+                border-radius: 12px;
+                animation: jpFadeIn 0.3s;
+            }
+            .jp-feedback.correct { background: rgba(0,184,148,0.1); border: 2px solid var(--jp-success); }
+            .jp-feedback.wrong { background: rgba(214,48,49,0.1); border: 2px solid var(--jp-error); }
+
+            /* Scramble */
+            .jp-scramble-box {
+                min-height: 60px;
+                padding: 15px;
+                border: 2px dashed #ddd;
+                border-radius: 12px;
+                margin-bottom: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5px;
+                align-items: center;
+            }
+            .jp-scramble-box.correct { border-color: var(--jp-success); background: rgba(0,184,148,0.05); }
+            .jp-scramble-box.wrong { border-color: var(--jp-error); background: rgba(214,48,49,0.05); }
+            .jp-chip {
+                background: white;
+                padding: 10px 16px;
+                border-radius: 8px;
+                border: 2px solid #e8e8e8;
+                cursor: pointer;
+                transition: all 0.2s;
+                font-weight: 600;
+            }
+            .jp-chip:hover { border-color: var(--jp-primary); transform: translateY(-2px); }
+            .jp-chip.used { opacity: 0.3; pointer-events: none; }
+
+            /* Interaction Area */
+            #jp-interaction {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin: 20px 0;
+            }
+
             /* Term Styling */
             .jp-term { color: #4e54c8; font-weight: 700; cursor: pointer; border-bottom: 2px solid rgba(78,84,200,0.1); transition: 0.2s; }
             .jp-term:hover { background: rgba(78,84,200,0.05); border-bottom-color: #4e54c8; }
@@ -70,6 +269,24 @@
             .jp-modal { background: #fff; width: 85%; max-width: 400px; border-radius: 20px; padding: 30px; box-shadow: 0 25px 50px rgba(0,0,0,0.25); position: relative; text-align: center; font-family: 'Poppins', sans-serif; }
             .jp-close-btn { position: absolute; top: 15px; right: 15px; background: #f1f2f6; border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-weight: bold; }
             .jp-auto-flag-msg { margin-top: 15px; background: #d4edda; color: #155724; padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; display: inline-block; }
+
+            /* Animations */
+            @keyframes jpFadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            /* Exit Link */
+            .jp-exit-link {
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+                color: #b2bec3;
+                text-decoration: none;
+                font-weight: 700;
+                cursor: pointer;
+            }
+            .jp-exit-link:hover { color: var(--jp-primary); }
         `;
         document.head.appendChild(style);
     },
