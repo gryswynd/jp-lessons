@@ -26,6 +26,11 @@
     // --- INITIALIZATION ---
     init: async function() {
       console.log('[Review.js] Initializing...');
+      console.log('[Review.js] Current DOM state:');
+      console.log('  - jp-stage exists:', !!document.getElementById('jp-stage'));
+      console.log('  - jp-header-title exists:', !!document.getElementById('jp-header-title'));
+      console.log('  - jp-start-btn exists:', !!document.getElementById('jp-start-btn'));
+
       try {
         console.log('[Review.js] Fetching resources...');
         console.log('[Review.js] Quiz URL:', this.getUrl());
@@ -62,7 +67,9 @@
         glossData.forEach(i => { this.state.termMap[i.id] = i; });
 
         // 3. Inject Styles & Modal
+        console.log('[Review.js] Injecting styles...');
         this.injectStyles();
+        console.log('[Review.js] Injecting modal...');
         this.injectModal();
 
         // 4. Process Quiz
@@ -72,6 +79,7 @@
 
       } catch (e) {
         console.error('[Review.js] Error during initialization:', e);
+        console.error('[Review.js] Error stack:', e.stack);
         const stage = this.el('jp-stage');
         if (stage) {
           stage.innerHTML = `<div style="text-align:center;color:#d63031;padding:20px;">Unable to load test resources.<br><small>${e.message}</small><br><br><button class="jp-btn" onclick="location.reload()" style="background:#4e54c8;color:white;padding:12px 24px;border:none;border-radius:8px;cursor:pointer;">Reload Page</button></div>`;
