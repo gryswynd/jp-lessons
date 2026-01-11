@@ -217,14 +217,14 @@
     <header>
       <div>
         <h1>JP Lesson Adventure (Proof of Concept)</h1>
-        <small>Move with arrow keys/WASD. Walk up to family members and press Space/Enter to chat.</small>
+        <small>Move with arrow keys/WASD. Walk up to family members and press Space/Enter to chat. Press C/T to toggle collision/trigger debug views.</small>
       </div>
       <button class="cta-btn" id="reset-btn">Reset Scene</button>
     </header>
     <div class="layout">
       <div class="stage">
         <div class="prompt">Walk into someone then press Space/Enter to talk</div>
-        <canvas id="world" width="800" height="520"></canvas>
+        <canvas id="world" width="1280" height="896"></canvas>
         <div class="dialogue-shell">
           <div class="dialogue" id="dialogue">
             <div class="bg" id="dialogue-bg"></div>
@@ -306,15 +306,70 @@
       school: { color: '#35468c', background: 'var(--school)', name: 'School Gate' }
     };
 
+    // Zone map (20x14 tiles) - defines the visual/semantic area
     const map = [
-      ['park','park','park','park','park','park','park','park','school','school','school','school'],
-      ['park','park','park','park','park','park','park','park','school','school','school','school'],
-      ['park','park','park','park','park','park','park','park','school','school','school','school'],
-      ['indoor','indoor','indoor','indoor','indoor','indoor','park','park','school','school','school','school'],
-      ['indoor','indoor','indoor','indoor','indoor','indoor','park','park','school','school','school','school'],
-      ['indoor','indoor','indoor','indoor','indoor','indoor','park','park','park','park','park','park'],
-      ['indoor','indoor','indoor','indoor','indoor','indoor','park','park','park','park','park','park'],
-      ['indoor','indoor','indoor','indoor','indoor','indoor','park','park','park','park','park','park']
+      ['indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor'],
+      ['indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor'],
+      ['indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor'],
+      ['indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor'],
+      ['indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor'],
+      ['indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor'],
+      ['indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor'],
+      ['indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor'],
+      ['indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor'],
+      ['indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor'],
+      ['indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor'],
+      ['indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor','indoor'],
+      ['park','park','park','park','park','park','park','park','park','park','park','park','park','park','park','park','park','park','park','park'],
+      ['park','park','park','park','park','park','park','park','park','park','park','park','park','park','park','park','park','park','park','park']
+    ];
+
+    // Collision map (20x14 tiles) - 1 = solid/wall, 0 = walkable
+    // Based on the house bitmap layout
+    const collisionMap = [
+      // Row 0 - Top of house (walls and bedroom furniture)
+      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+      // Row 1 - Bedroom area with bed and desk
+      [1,0,0,1,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,1],
+      // Row 2 - Bedroom and bathroom
+      [1,0,0,1,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,1],
+      // Row 3 - Hallway and kitchen
+      [1,1,1,1,0,0,1,1,1,0,0,1,1,0,0,1,1,0,0,1],
+      // Row 4 - Hallway continues
+      [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1],
+      // Row 5 - Bottom of hallway
+      [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1],
+      // Row 6 - Living room and dining area
+      [1,1,1,1,1,0,0,1,1,1,1,1,1,0,0,1,1,1,1,1],
+      // Row 7 - Living room furniture
+      [1,0,0,0,1,0,0,1,0,0,0,1,1,0,0,0,1,0,0,1],
+      // Row 8 - Tatami room
+      [1,0,0,0,1,1,1,1,0,0,0,1,1,0,0,0,1,0,0,1],
+      // Row 9 - Tatami room continues
+      [1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,1],
+      // Row 10 - Bottom rooms
+      [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+      // Row 11 - Bottom wall
+      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1],
+      // Row 12 - Outdoor area
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      // Row 13 - Outdoor area
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    ];
+
+    // Trigger zones - areas that trigger events when entered
+    const triggers = [
+      // Doorways
+      { x: 7, y: 3, w: 1, h: 1, type: 'doorway', name: 'Hallway to Bedroom', message: 'You entered the hallway.' },
+      { x: 9, y: 6, w: 2, h: 1, type: 'doorway', name: 'Hallway to Living Room', message: 'You entered the living room.' },
+      { x: 13, y: 11, w: 2, h: 1, type: 'doorway', name: 'Exit to Outside', message: 'You stepped outside.' },
+
+      // Interactive furniture
+      { x: 2, y: 1, w: 1, h: 1, type: 'furniture', name: 'Bed', message: 'A comfortable bed. Time for a rest?' },
+      { x: 15, y: 2, w: 2, h: 1, type: 'furniture', name: 'Kitchen Counter', message: 'The kitchen. Something smells good!' },
+      { x: 9, y: 3, w: 1, h: 1, type: 'furniture', name: 'Bathroom', message: 'The bathroom is here.' },
+      { x: 2, y: 8, w: 2, h: 1, type: 'furniture', name: 'TV', message: 'A large TV. Want to watch something?' },
+      { x: 8, y: 9, w: 2, h: 1, type: 'furniture', name: 'Tatami Room', message: 'A traditional Japanese room with tatami mats.' }
     ];
 
     const sprites = {
@@ -335,7 +390,7 @@
       school: 'me-convo.png'
     };
 
-    const mapTexture = loadOptionalImage('map.png');
+    const mapTexture = loadOptionalImage('house_map.png');
     const portraitImages = {};
     const backdropImages = {
       indoor: loadOptionalImage(dialogueBackdrops.indoor),
@@ -375,7 +430,7 @@
       {
         id: 'player',
         name: 'You',
-        x: 2 * TILE,
+        x: 5 * TILE,
         y: 4 * TILE,
         speed: 3,
         sprite: sprites.player,
@@ -384,8 +439,8 @@
       {
         id: 'mom',
         name: 'Mom',
-        x: 5 * TILE,
-        y: 3 * TILE,
+        x: 15 * TILE,
+        y: 4 * TILE,
         sprite: sprites.mom,
         facing: 'left',
         talkScript: [
@@ -398,7 +453,7 @@
         id: 'dad',
         name: 'Dad',
         x: 8 * TILE,
-        y: 1 * TILE,
+        y: 12 * TILE,
         sprite: sprites.dad,
         facing: 'right',
         talkScript: [
@@ -413,6 +468,11 @@
     const inputs = { up:false, down:false, left:false, right:false };
     let talkingTo = null;
     let talkIndex = 0;
+    let lastTriggeredZone = null;
+    let triggerMessage = null;
+    let triggerMessageTimer = 0;
+    let showCollisionDebug = false;
+    let showTriggersDebug = false;
 
     function keyChange(e, isDown) {
       if (['ArrowUp','w','W'].includes(e.key)) inputs.up = isDown;
@@ -428,6 +488,14 @@
         }
         e.preventDefault();
       }
+
+      // Debug toggles
+      if (isDown && e.key === 'c') {
+        showCollisionDebug = !showCollisionDebug;
+      }
+      if (isDown && e.key === 't') {
+        showTriggersDebug = !showTriggersDebug;
+      }
     }
 
     window.addEventListener('keydown', e => keyChange(e, true));
@@ -435,12 +503,64 @@
 
     document.getElementById('reset-btn').onclick = resetScene;
 
+    // Collision detection helper
+    function isColliding(x, y) {
+      // Convert pixel coordinates to tile coordinates
+      const tileX = Math.floor(x / TILE);
+      const tileY = Math.floor(y / TILE);
+
+      // Check boundaries
+      if (tileX < 0 || tileX >= MAP_W || tileY < 0 || tileY >= MAP_H) return true;
+
+      // Check collision map
+      const row = collisionMap[tileY];
+      if (!row) return true;
+      return row[tileX] === 1;
+    }
+
+    // Check if moving from current position to new position would collide
+    function wouldCollide(x, y) {
+      // Check all four corners of the player's bounding box
+      const padding = 8; // Small padding from tile edges
+      const size = TILE - padding * 2;
+
+      return isColliding(x + padding, y + padding) ||
+             isColliding(x + size, y + padding) ||
+             isColliding(x + padding, y + size) ||
+             isColliding(x + size, y + size);
+    }
+
+    // Trigger detection
+    function checkTriggers() {
+      const tileX = Math.floor(player.x / TILE);
+      const tileY = Math.floor(player.y / TILE);
+
+      for (const trigger of triggers) {
+        // Check if player is in trigger zone
+        if (tileX >= trigger.x && tileX < trigger.x + trigger.w &&
+            tileY >= trigger.y && tileY < trigger.y + trigger.h) {
+
+          // Only trigger once per zone entry
+          const triggerKey = `${trigger.name}-${trigger.x}-${trigger.y}`;
+          if (lastTriggeredZone !== triggerKey) {
+            lastTriggeredZone = triggerKey;
+            triggerMessage = trigger.message;
+            triggerMessageTimer = 120; // Show for 2 seconds at 60fps
+          }
+          return;
+        }
+      }
+
+      // Reset if not in any trigger zone
+      lastTriggeredZone = null;
+    }
+
     function resetScene() {
-      player.x = 2 * TILE; player.y = 4 * TILE;
-      actors.find(a => a.id === 'mom').x = 5 * TILE;
-      actors.find(a => a.id === 'mom').y = 3 * TILE;
+      player.x = 5 * TILE; player.y = 4 * TILE;
+      actors.find(a => a.id === 'mom').x = 15 * TILE;
+      actors.find(a => a.id === 'mom').y = 4 * TILE;
       actors.find(a => a.id === 'dad').x = 8 * TILE;
-      actors.find(a => a.id === 'dad').y = 1 * TILE;
+      actors.find(a => a.id === 'dad').y = 12 * TILE;
       closeDialogue();
     }
 
@@ -538,7 +658,18 @@
     }
 
     function update(dt) {
-      if (!talkingTo) movePlayer(dt);
+      if (!talkingTo) {
+        movePlayer(dt);
+        checkTriggers();
+      }
+
+      // Update trigger message timer
+      if (triggerMessageTimer > 0) {
+        triggerMessageTimer--;
+        if (triggerMessageTimer === 0) {
+          triggerMessage = null;
+        }
+      }
     }
 
     function movePlayer(dt) {
@@ -549,8 +680,18 @@
       if (inputs.left) vx -= speed;
       if (inputs.right) vx += speed;
 
-      player.x = clamp(player.x + vx, 0, canvas.width - TILE);
-      player.y = clamp(player.y + vy, 0, canvas.height - TILE);
+      // Try moving with collision detection
+      const newX = player.x + vx;
+      const newY = player.y + vy;
+
+      // Check collision for new position
+      if (!wouldCollide(newX, player.y)) {
+        player.x = clamp(newX, 0, canvas.width - TILE);
+      }
+
+      if (!wouldCollide(player.x, newY)) {
+        player.y = clamp(newY, 0, canvas.height - TILE);
+      }
     }
 
     function clamp(v, min, max) { return Math.max(min, Math.min(max, v)); }
@@ -558,7 +699,10 @@
     function draw() {
       ctx.clearRect(0,0,canvas.width, canvas.height);
       drawMap();
+      drawCollisionOverlay();
+      drawTriggers();
       drawActors();
+      drawTriggerMessage();
       updateHud();
       requestAnimationFrame(draw);
     }
@@ -577,6 +721,80 @@
           ctx.fillRect(x*TILE+6, y*TILE+6, TILE-12, TILE-12);
         }
       }
+    }
+
+    // Draw collision overlay (for debugging - shows walls in red)
+    // Toggle with 'C' key
+    function drawCollisionOverlay() {
+      if (!showCollisionDebug) return;
+
+      for (let y = 0; y < MAP_H; y++) {
+        for (let x = 0; x < MAP_W; x++) {
+          if (collisionMap[y][x] === 1) {
+            ctx.fillStyle = 'rgba(255, 0, 0, 0.3)';
+            ctx.fillRect(x * TILE, y * TILE, TILE, TILE);
+          }
+        }
+      }
+
+      // Show debug indicator
+      ctx.fillStyle = 'rgba(255, 0, 0, 0.8)';
+      ctx.font = 'bold 12px Poppins';
+      ctx.fillText('Collision Debug: ON (Press C to toggle)', 10, 20);
+    }
+
+    // Draw trigger zones (for debugging - shows triggers in green/blue)
+    // Toggle with 'T' key
+    function drawTriggers() {
+      if (!showTriggersDebug) return;
+
+      triggers.forEach(trigger => {
+        ctx.strokeStyle = trigger.type === 'doorway' ? 'rgba(0, 255, 0, 0.6)' : 'rgba(0, 150, 255, 0.6)';
+        ctx.lineWidth = 3;
+        ctx.strokeRect(trigger.x * TILE, trigger.y * TILE, trigger.w * TILE, trigger.h * TILE);
+
+        ctx.fillStyle = trigger.type === 'doorway' ? 'rgba(0, 255, 0, 0.15)' : 'rgba(0, 150, 255, 0.15)';
+        ctx.fillRect(trigger.x * TILE, trigger.y * TILE, trigger.w * TILE, trigger.h * TILE);
+
+        // Draw label
+        ctx.fillStyle = 'white';
+        ctx.font = 'bold 10px Poppins';
+        ctx.textAlign = 'center';
+        ctx.fillText(trigger.name, (trigger.x + trigger.w/2) * TILE, (trigger.y + trigger.h/2) * TILE);
+      });
+
+      // Show debug indicator
+      ctx.fillStyle = 'rgba(0, 255, 0, 0.8)';
+      ctx.font = 'bold 12px Poppins';
+      ctx.textAlign = 'left';
+      ctx.fillText('Triggers Debug: ON (Press T to toggle)', 10, showCollisionDebug ? 35 : 20);
+    }
+
+    // Draw trigger message when player enters a trigger zone
+    function drawTriggerMessage() {
+      if (!triggerMessage || triggerMessageTimer <= 0) return;
+
+      const x = canvas.width / 2;
+      const y = 60;
+
+      // Fade effect
+      const alpha = Math.min(1, triggerMessageTimer / 30);
+
+      // Background
+      ctx.fillStyle = `rgba(15, 23, 42, ${alpha * 0.9})`;
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+      ctx.shadowBlur = 15;
+      ctx.beginPath();
+      ctx.roundRect(x - 200, y - 25, 400, 50, 12);
+      ctx.fill();
+      ctx.shadowBlur = 0;
+
+      // Text
+      ctx.fillStyle = `rgba(226, 232, 240, ${alpha})`;
+      ctx.font = 'bold 16px Poppins';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(triggerMessage, x, y);
     }
 
     function drawActors() {
