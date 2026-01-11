@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House Map Collision Demo - Webflow</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #1a1a2e;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .game-container {
+      max-width: 1280px;
+      width: 100%;
+      background: #16213e;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    .header {
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .canvas-wrapper {
+      position: relative;
+      background: #0f172a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    canvas {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+
+    .controls {
+      background: #0f172a;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .control-item {
+      background: rgba(255,255,255,0.05);
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .control-item strong {
+      color: #8f94fb;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .debug-badge {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      background: rgba(0,0,0,0.8);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: bold;
+      display: none;
+    }
+
+    .debug-badge.active {
+      display: block;
+    }
+
+    .debug-badge.collision {
+      color: #ff4444;
+    }
+
+    .debug-badge.triggers {
+      color: #44ff44;
+      top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <div class="header">
+      <h1>🏠 House Map Collision & Trigger Demo</h1>
+      <p>Move with WASD or Arrow Keys • Press C to toggle collision view • Press T to toggle trigger zones</p>
+    </div>
+
+    <div class="canvas-wrapper">
+      <canvas id="gameCanvas" width="1280" height="896"></canvas>
+      <div class="debug-badge collision" id="collisionBadge">Collision Debug: ON</div>
+      <div class="debug-badge triggers" id="triggersBadge">Triggers Debug: ON</div>
+    </div>
+
+    <div class="controls">
+      <div class="control-item">
+        <strong>Movement</strong>
+        Use WASD or Arrow Keys to move around
+      </div>
+      <div class="control-item">
+        <strong>Collision</strong>
+        Press C to see walls (red overlay)
+      </div>
+      <div class="control-item">
+        <strong>Triggers</strong>
+        Press T to see interactive zones (green/blue)
+      </div>
+      <div class="control-item">
+        <strong>Status</strong>
+        <span id="playerPos">Position: Loading...</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Configuration
+    const TILE = 64;
+    const CANVAS_WIDTH = 1280;
+    const CANVAS_HEIGHT = 896;
+    const MAP_W = 20;
+    const MAP_H = 14;
+
+    // Get canvas and context
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    const playerPosEl = document.getElementById('playerPos');
+    const collisionBadge = document.getElementById('collisionBadge');
+    const triggersBadge = document.getElementById('triggersBadge');
+
+    // Load house map image from GitHub
+    const houseImage = new Image();
+    houseImage.crossOrigin = 'anonymous';
+    houseImage.src = 'https://raw.githubusercontent.com/gryswynd/jp-lessons/main/house_map.png';
+    let imageLoaded = false;
+
+    houseImage.onload = () => {
+      imageLoaded = true;
+      console.log('House map loaded successfully!');
+    };
+
+    houseImage.onerror = () => {
+      console.error('Failed to load house map. Using fallback rendering.');
+    };
+
+    // Collision map (20x14 tiles) - 1 = solid/wall, 0 = walkable
+    const collisionMap = [
+      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+      [1,0,0,1,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,1],
+      [1,0,0,1,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,1],
+      [1,1,1,1,0,0,1,1,1,0,0,1,1,0,0,1,1,0,0,1],
+      [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1],
+      [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1],
+      [1,1,1,1,1,0,0,1,1,1,1,1,1,0,0,1,1,1,1,1],
+      [1,0,0,0,1,0,0,1,0,0,0,1,1,0,0,0,1,0,0,1],
+      [1,0,0,0,1,1,1,1,0,0,0,1,1,0,0,0,1,0,0,1],
+      [1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,1],
+      [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1],
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    ];
+
+    // Trigger zones
+    const triggers = [
+      // Doorways
+      { x: 7, y: 3, w: 1, h: 1, type: 'doorway', name: 'Hallway to Bedroom', message: 'Hallway to Bedroom' },
+      { x: 9, y: 6, w: 2, h: 1, type: 'doorway', name: 'Hallway to Living Room', message: 'Living Room' },
+      { x: 13, y: 11, w: 2, h: 1, type: 'doorway', name: 'Exit to Outside', message: 'Outside Area' },
+      // Interactive furniture
+      { x: 2, y: 1, w: 1, h: 1, type: 'furniture', name: 'Bed', message: 'Bedroom' },
+      { x: 15, y: 2, w: 2, h: 1, type: 'furniture', name: 'Kitchen Counter', message: 'Kitchen' },
+      { x: 9, y: 3, w: 1, h: 1, type: 'furniture', name: 'Bathroom', message: 'Bathroom' },
+      { x: 2, y: 8, w: 2, h: 1, type: 'furniture', name: 'TV', message: 'Living Room (TV)' },
+      { x: 8, y: 9, w: 2, h: 1, type: 'furniture', name: 'Tatami Room', message: 'Tatami Room' }
+    ];
+
+    // Player state
+    const player = {
+      x: 5 * TILE,
+      y: 4 * TILE,
+      speed: 4,
+      size: TILE - 16
+    };
+
+    // Input state
+    const keys = { up: false, down: false, left: false, right: false };
+
+    // Debug state
+    let showCollisionDebug = false;
+    let showTriggersDebug = false;
+
+    // Trigger state
+    let lastTriggeredZone = null;
+    let triggerMessage = null;
+    let triggerMessageTimer = 0;
+
+    // Collision detection
+    function isColliding(x, y) {
+      const tileX = Math.floor(x / TILE);
+      const tileY = Math.floor(y / TILE);
+
+      if (tileX < 0 || tileX >= MAP_W || tileY < 0 || tileY >= MAP_H) return true;
+
+      const row = collisionMap[tileY];
+      if (!row) return true;
+      return row[tileX] === 1;
+    }
+
+    function wouldCollide(x, y) {
+      const padding = 8;
+      const size = TILE - padding * 2;
+
+      return isColliding(x + padding, y + padding) ||
+             isColliding(x + size, y + padding) ||
+             isColliding(x + padding, y + size) ||
+             isColliding(x + size, y + size);
+    }
+
+    // Trigger detection
+    function checkTriggers() {
+      const tileX = Math.floor(player.x / TILE);
+      const tileY = Math.floor(player.y / TILE);
+
+      for (const trigger of triggers) {
+        if (tileX >= trigger.x && tileX < trigger.x + trigger.w &&
+            tileY >= trigger.y && tileY < trigger.y + trigger.h) {
+
+          const triggerKey = `${trigger.name}-${trigger.x}-${trigger.y}`;
+          if (lastTriggeredZone !== triggerKey) {
+            lastTriggeredZone = triggerKey;
+            triggerMessage = trigger.message;
+            triggerMessageTimer = 90; // Show for 1.5 seconds
+          }
+          return;
+        }
+      }
+
+      lastTriggeredZone = null;
+    }
+
+    // Input handling
+    window.addEventListener('keydown', (e) => {
+      if (['ArrowUp','w','W'].includes(e.key)) keys.up = true;
+      if (['ArrowDown','s','S'].includes(e.key)) keys.down = true;
+      if (['ArrowLeft','a','A'].includes(e.key)) keys.left = true;
+      if (['ArrowRight','d','D'].includes(e.key)) keys.right = true;
+
+      if (e.key === 'c') {
+        showCollisionDebug = !showCollisionDebug;
+        collisionBadge.classList.toggle('active', showCollisionDebug);
+      }
+      if (e.key === 't') {
+        showTriggersDebug = !showTriggersDebug;
+        triggersBadge.classList.toggle('active', showTriggersDebug);
+      }
+    });
+
+    window.addEventListener('keyup', (e) => {
+      if (['ArrowUp','w','W'].includes(e.key)) keys.up = false;
+      if (['ArrowDown','s','S'].includes(e.key)) keys.down = false;
+      if (['ArrowLeft','a','A'].includes(e.key)) keys.left = false;
+      if (['ArrowRight','d','D'].includes(e.key)) keys.right = false;
+    });
+
+    // Update player position
+    function update() {
+      let vx = 0, vy = 0;
+      if (keys.up) vy -= player.speed;
+      if (keys.down) vy += player.speed;
+      if (keys.left) vx -= player.speed;
+      if (keys.right) vx += player.speed;
+
+      const newX = player.x + vx;
+      const newY = player.y + vy;
+
+      if (!wouldCollide(newX, player.y)) {
+        player.x = Math.max(0, Math.min(newX, CANVAS_WIDTH - TILE));
+      }
+
+      if (!wouldCollide(player.x, newY)) {
+        player.y = Math.max(0, Math.min(newY, CANVAS_HEIGHT - TILE));
+      }
+
+      checkTriggers();
+
+      if (triggerMessageTimer > 0) {
+        triggerMessageTimer--;
+        if (triggerMessageTimer === 0) {
+          triggerMessage = null;
+        }
+      }
+
+      // Update position display
+      const tileX = Math.floor(player.x / TILE);
+      const tileY = Math.floor(player.y / TILE);
+      playerPosEl.textContent = `Position: (${tileX}, ${tileY})`;
+    }
+
+    // Draw functions
+    function drawBackground() {
+      if (imageLoaded) {
+        ctx.drawImage(houseImage, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+      } else {
+        // Fallback: draw a simple grid
+        ctx.fillStyle = '#2a2a3e';
+        ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
+        ctx.strokeStyle = '#3a3a4e';
+        ctx.lineWidth = 1;
+        for (let y = 0; y < MAP_H; y++) {
+          for (let x = 0; x < MAP_W; x++) {
+            ctx.strokeRect(x * TILE, y * TILE, TILE, TILE);
+          }
+        }
+      }
+    }
+
+    function drawCollisionOverlay() {
+      if (!showCollisionDebug) return;
+
+      for (let y = 0; y < MAP_H; y++) {
+        for (let x = 0; x < MAP_W; x++) {
+          if (collisionMap[y][x] === 1) {
+            ctx.fillStyle = 'rgba(255, 0, 0, 0.4)';
+            ctx.fillRect(x * TILE, y * TILE, TILE, TILE);
+          }
+        }
+      }
+    }
+
+    function drawTriggers() {
+      if (!showTriggersDebug) return;
+
+      triggers.forEach(trigger => {
+        ctx.strokeStyle = trigger.type === 'doorway' ? 'rgba(0, 255, 0, 0.8)' : 'rgba(0, 150, 255, 0.8)';
+        ctx.lineWidth = 3;
+        ctx.strokeRect(trigger.x * TILE, trigger.y * TILE, trigger.w * TILE, trigger.h * TILE);
+
+        ctx.fillStyle = trigger.type === 'doorway' ? 'rgba(0, 255, 0, 0.2)' : 'rgba(0, 150, 255, 0.2)';
+        ctx.fillRect(trigger.x * TILE, trigger.y * TILE, trigger.w * TILE, trigger.h * TILE);
+
+        ctx.fillStyle = 'white';
+        ctx.font = 'bold 12px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(trigger.name, (trigger.x + trigger.w/2) * TILE, (trigger.y + trigger.h/2) * TILE);
+      });
+    }
+
+    function drawPlayer() {
+      ctx.fillStyle = '#4e54c8';
+      ctx.strokeStyle = '#8f94fb';
+      ctx.lineWidth = 3;
+
+      const x = player.x + TILE/2;
+      const y = player.y + TILE/2;
+      const radius = 20;
+
+      ctx.beginPath();
+      ctx.arc(x, y, radius, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+
+      // Direction indicator
+      let dirX = 0, dirY = 0;
+      if (keys.up) dirY = -1;
+      if (keys.down) dirY = 1;
+      if (keys.left) dirX = -1;
+      if (keys.right) dirX = 1;
+
+      if (dirX !== 0 || dirY !== 0) {
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+        ctx.arc(x + dirX * 10, y + dirY * 10, 4, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function drawTriggerMessage() {
+      if (!triggerMessage || triggerMessageTimer <= 0) return;
+
+      const x = CANVAS_WIDTH / 2;
+      const y = 60;
+      const alpha = Math.min(1, triggerMessageTimer / 30);
+
+      ctx.fillStyle = `rgba(15, 23, 42, ${alpha * 0.95})`;
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+      ctx.shadowBlur = 20;
+      ctx.beginPath();
+      ctx.roundRect(x - 250, y - 30, 500, 60, 12);
+      ctx.fill();
+      ctx.shadowBlur = 0;
+
+      ctx.fillStyle = `rgba(143, 148, 251, ${alpha})`;
+      ctx.font = 'bold 20px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(triggerMessage, x, y);
+    }
+
+    // Main render loop
+    function render() {
+      ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
+      drawBackground();
+      drawCollisionOverlay();
+      drawTriggers();
+      drawPlayer();
+      drawTriggerMessage();
+
+      update();
+      requestAnimationFrame(render);
+    }
+
+    // Start the game
+    render();
+  </script>
+</body>
+</html>
