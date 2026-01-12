@@ -202,10 +202,10 @@
           "jp": "はい。駅の 近くに 新しい 店が あります。",
           "en": "Yes. There is a new shop near the station.",
           "terms": [
-            "k_eki",
+            "k_u99c5",
             { "id": "v_chikai", "form": "adverbial" },
             "v_atarashii",
-            "v_mise",
+            "k_mise",
             { "id": "v_aru", "form": "polite_masu" }
           ]
         },
@@ -248,7 +248,7 @@
           "jp": "あの 店の 服は 高くないですよ。",
           "en": "That shop's clothes are not expensive.",
           "terms": [
-            "v_mise",
+            "k_mise",
             "k_fuku",
             { "id": "v_takai", "form": "plain_negative" }
           ]
@@ -285,7 +285,7 @@
           "terms": [
             "v_yozora",
             "v_kirei",
-            "v_tsuki",
+            "k_tsuki",
             "v_akarui"
           ]
         },
@@ -385,7 +385,7 @@
           "jp": "父は 飲み屋で 飲むのが 好きです。",
           "en": "My father likes drinking at a bar.",
           "terms": [
-            "v_chichi",
+            "k_chichi",
             "v_nomiya",
             "v_nomu",
             "v_suki"
@@ -395,7 +395,7 @@
           "jp": "妹は 洋服が 大好きで、よく デパートで 買います。",
           "en": "My younger sister loves Western clothes and often buys them at the department store.",
           "terms": [
-            "v_imouto",
+            "k_imouto",
             "v_youfuku",
             "v_daisuki",
             "v_yoku",
@@ -408,6 +408,8 @@
           "q": "私は 何が 好きですか。",
           "a": "洋食が 好きです。",
           "terms": [
+            "k_watashi",
+            "k_nani",
             "v_youshoku",
             "v_suki"
           ]
@@ -416,6 +418,7 @@
           "q": "父は どこで 飲みますか。",
           "a": "飲み屋で 飲みます。",
           "terms": [
+            "v-k_chichi",
             "v_nomiya",
             { "id": "v_nomu", "form": "polite_masu" }
           ]
@@ -424,6 +427,8 @@
           "q": "妹は 何が 大好きですか。",
           "a": "洋服が 大好きです。",
           "terms": [
+            "k_imouto",
+            "k_nani",
             "v_youfuku",
             "v_daisuki"
           ]
@@ -457,7 +462,7 @@
           "jp": "月が 明るいです。",
           "en": "The moon is bright.",
           "terms": [
-            "v_tsuki",
+            "k_tsuki",
             "v_akarui"
           ]
         },
@@ -476,7 +481,7 @@
           "en": "I enjoy the mountain night there.",
           "terms": [
             "k_yama",
-            "v_yoru",
+            "k_yoru",
           { "id": "v_tanoshimu", "form": "polite_masu" }
           ]
         }
