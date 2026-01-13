@@ -1,0 +1,625 @@
+{
+  "id": "N4.21",
+  "title": "Phase 4 Lesson 21: Commerce & Possessions",
+  "meta": {
+    "phase": 4,
+    "lesson": 21,
+    "focus": "Selling, buying, item qualities, holding/carrying, and lending.",
+    "kanji": [
+      "売",
+      "品",
+      "持",
+      "貸"
+    ]
+  },
+  "newKanji": [
+    {
+      "kanji": "売",
+      "on": "ばい",
+      "kun": "う(る)",
+      "meaning": "Sell",
+      "termId": "k_bai"
+    },
+    {
+      "kanji": "品",
+      "on": "ひん",
+      "kun": "しな",
+      "meaning": "Item / Goods / Dignity",
+      "termId": "k_hin"
+    },
+    {
+      "kanji": "持",
+      "on": "じ",
+      "kun": "も(つ)",
+      "meaning": "Hold / Have",
+      "termId": "k_ji"
+    },
+    {
+      "kanji": "貸",
+      "on": "たい",
+      "kun": "か(す)",
+      "meaning": "Lend",
+      "termId": "k_tai"
+    }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "Warm-Up Review（ウォームアップ）",
+      "instructions": "Ask your partner these questions using words you already know:",
+      "items": [
+        {
+          "jp": "買い物が 好きですか。",
+          "en": "Do you like shopping?",
+          "terms": [
+            "v_kaimono",
+            "v_suki"
+          ]
+        },
+        {
+          "jp": "きのう、何を 買いましたか。",
+          "en": "What did you buy yesterday?",
+          "terms": [
+            "v_kinou",
+            "k_nani",
+            { "id": "v_kau", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "お金が ありますか。",
+          "en": "Do you have money?",
+          "terms": [
+            "k_kane",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "あの 店は 有名ですか。",
+          "en": "Is that shop famous?",
+          "terms": [
+            "k_mise",
+            "v_yuumei"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "New Kanji（新しい 漢字）",
+      "items": [
+        {
+          "kanji": "売",
+          "on": "ばい",
+          "kun": "う(る)",
+          "meaning": "Sell",
+          "terms": [
+            "k_bai",
+            "v_uru",
+            "v_uridusu",
+            "v_urimono"
+          ]
+        },
+        {
+          "kanji": "品",
+          "on": "ひん",
+          "kun": "しな",
+          "meaning": "Goods / Quality",
+          "terms": [
+            "k_hin",
+            "v_shinamono",
+            "v_jouhin",
+            "v_tejina",
+            "v_hinmei"
+          ]
+        },
+        {
+          "kanji": "持",
+          "on": "じ",
+          "kun": "も(つ)",
+          "meaning": "Hold / Have",
+          "terms": [
+            "k_ji",
+            "v_motsu",
+            "v_kimochi",
+            "v_mochikaeru",
+            "v_mochidasu"
+          ]
+        },
+        {
+          "kanji": "貸",
+          "on": "たい",
+          "kun": "か(す)",
+          "meaning": "Lend",
+          "terms": [
+            "k_tai",
+            "v_kasu",
+            "v_kashidashi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "Vocabulary & Compounds（ことば）",
+      "groups": [
+        {
+          "label": "Sales & Trade",
+          "items": [
+            "v_uru",
+            "v_uridusu",
+            "v_urimono",
+            "v_kasu"
+          ]
+        },
+        {
+          "label": "Goods & Quality",
+          "items": [
+            "v_shinamono",
+            "v_hinmei",
+            "v_jouhin",
+            "v_tejina"
+          ]
+        },
+        {
+          "label": "Actions & Feelings",
+          "items": [
+            "v_motsu",
+            "v_kimochi",
+            "v_mochidasu",
+            "v_mochikaeru",
+            "v_mochiaji"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 1（会話）: At the Market",
+      "context": "Looking at items for sale.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "これは 売り物ですか。",
+          "en": "Is this for sale?",
+          "terms": [
+            "v_urimono"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。今日 売り出しました。",
+          "en": "Yes. We put it on sale today.",
+          "terms": [
+            "v_kyou",
+            { "id": "v_uridusu", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "いい 品物ですね。品名は 何ですか。",
+          "en": "It's a good item. What is the product name?",
+          "terms": [
+            "v_shinamono",
+            "v_hinmei",
+            "k_nani"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "「青い鳥」です。とても 上品ですよ。",
+          "en": "It is 'Blue Bird'. It is very elegant.",
+          "terms": [
+            "v_aoi",
+            "k_tori",
+            "v_jouhin"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 2（会話）: Magic Trick",
+      "context": "Watching a performance.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "あの 男の人の 手品は おもしろいですね。",
+          "en": "That man's magic trick is interesting, isn't it?",
+          "terms": [
+            "k_otoko",
+            "k_hito",
+            "v_tejina",
+            "v_omoshiroi"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。楽しい 気持ちに なります。",
+          "en": "Yes. It makes me feel happy (It becomes a fun feeling).",
+          "terms": [
+            "v_tanoshii",
+            "v_kimochi",
+            "v_naru"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "あの 人が 何を 持って いるか、見えますか。",
+          "en": "Can you see what that person is holding?",
+          "terms": [
+            "k_hito",
+            "k_nani",
+            { "id": "v_motsu", "form": "te_form" },
+            "v_iru",
+            { "id": "v_mieru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "いいえ、見えません。",
+          "en": "No, I can't see.",
+          "terms": [
+            { "id": "v_mieru", "form": "polite_negative" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 3（会話）: Takeout",
+      "context": "At a food stall.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "この 料理を 持ち帰りたいです。",
+          "en": "I want to take this food home.",
+          "terms": [
+            "v_ryouri",
+            { "id": "v_mochikaeru", "form": "desire_tai" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。お金を 先に 出して ください。",
+          "en": "Yes. Please take out the money first.",
+          "terms": [
+            "k_kane",
+            "k_saki",
+            { "id": "v_dasu", "form": "te_form" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "はい。この 店の 持ち味は 何ですか。",
+          "en": "Okay. What is the characteristic flavor of this shop?",
+          "terms": [
+            "k_mise",
+            "v_mochiaji",
+            "k_nani"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "「洋風」の 味です。",
+          "en": "It is a 'Western' flavor.",
+          "terms": [
+            "v_youfuu",
+            "k_aji"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 4（会話）: Lending a Pen",
+      "context": "In class.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "すみません。ペンを 貸して ください。",
+          "en": "Excuse me. Please lend me a pen.",
+          "terms": [
+            "v_pen",
+            { "id": "v_kasu", "form": "te_form" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい、どうぞ。二本 持って いますから。",
+          "en": "Yes, here you go. Because I have two.",
+          "terms": [
+            "k_futa",
+            "k_moto",
+            { "id": "v_motsu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "ありがとうございます。外へ 持ち出しても いいですか。",
+          "en": "Thank you. Is it okay if I take it outside?",
+          "terms": [
+            "k_soto",
+            { "id": "v_mochidasu", "form": "te_form" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "いいえ、学校で 使って ください。",
+          "en": "No, please use it at school.",
+          "terms": [
+            "v_gakkou",
+            { "id": "v_tsukau", "form": "te_form" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 1: The Antique Shop",
+      "passage": [
+        {
+          "jp": "私の 父は 古い 品物を 売って います。",
+          "en": "My father sells old goods.",
+          "terms": [
+            "k_watashi",
+            "k_chichi",
+            "v_furui",
+            "v_shinamono",
+            { "id": "v_uru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "店には 上品な 洋服や 外国の 本が あります。",
+          "en": "In the shop, there are elegant western clothes and foreign books.",
+          "terms": [
+            "k_mise",
+            "v_jouhin",
+            "v_youfuku",
+            "v_gaikoku",
+            "k_hon",
+            "v_aru"
+          ]
+        },
+        {
+          "jp": "父は 「これは 売り物ではない」と 言います。",
+          "en": "Father says 'This is not for sale'.",
+          "terms": [
+            "k_chichi",
+            "v_urimono",
+            { "id": "v_iu", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "でも、時々 人に 貸します。",
+          "en": "But, sometimes he lends them to people.",
+          "terms": [
+            "v_tokidoki",
+            "k_hito",
+            { "id": "v_kasu", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "父は 何を 売っていますか。",
+          "a": "古い 品物を 売っています。",
+          "terms": [
+            "v_furui",
+            "v_shinamono",
+            "v_uru"
+          ]
+        },
+        {
+          "q": "どんな 洋服が ありますか。",
+          "a": "上品な 洋服が あります。",
+          "terms": [
+            "v_donna",
+            "v_youfuku",
+            "v_jouhin"
+          ]
+        },
+        {
+          "q": "父は 本を 売りますか。",
+          "a": "いいえ、売りません。貸します。",
+          "terms": [
+            "k_hon",
+            { "id": "v_uru", "form": "polite_negative" },
+            "v_kasu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: A Fun Day",
+      "passage": [
+        {
+          "jp": "日曜日に 手品を 見ました。",
+          "en": "I saw a magic trick on Sunday.",
+          "terms": [
+            "v_nichiyoubi",
+            "v_tejina",
+            { "id": "v_miru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "とても おもしろくて、いい 気持ちでした。",
+          "en": "It was very interesting, and a good feeling.",
+          "terms": [
+            { "id": "v_omoshiroi", "form": "te_form" },
+            "v_kimochi"
+          ]
+        },
+        {
+          "jp": "帰りに ケーキを 持ち帰りました。",
+          "en": "On the way home, I took home a cake.",
+          "terms": [
+            "k_kae",
+            "v_keeki",
+            { "id": "v_mochikaeru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "家族と 食べました。",
+          "en": "I ate it with my family.",
+          "terms": [
+            "v_kazoku",
+            { "id": "v_taberu", "form": "polite_mashita" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "日曜日に 何を 見ましたか。",
+          "a": "手品を 見ました。",
+          "terms": [
+            "v_nichiyoubi",
+            "v_tejina",
+            "v_miru"
+          ]
+        },
+        {
+          "q": "どんな 気持ちでしたか。",
+          "a": "いい 気持ちでした。",
+          "terms": [
+            "v_donna",
+            "v_kimochi"
+          ]
+        },
+        {
+          "q": "何を 持ち帰りましたか。",
+          "a": "ケーキを 持ち帰りました。",
+          "terms": [
+            "v_keeki",
+            "v_mochikaeru"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Vocabulary",
+      "instructions": "Select the correct meaning for the word.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "品物 [shinamono]",
+          "choices": [
+            "Goods",
+            "Person",
+            "Money",
+            "Store"
+          ],
+          "answer": "Goods",
+          "terms": [
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "売り出す [uridusu]",
+          "choices": [
+            "To put on sale",
+            "To buy",
+            "To hold",
+            "To lend"
+          ],
+          "answer": "To put on sale",
+          "terms": [
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "上品 [jouhin]",
+          "choices": [
+            "Elegant",
+            "Cheap",
+            "Dirty",
+            "Heavy"
+          ],
+          "answer": "Elegant",
+          "terms": [
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "持ち帰る [mochikaeru]",
+          "choices": [
+            "To take home",
+            "To lend",
+            "To enter",
+            "To sell"
+          ],
+          "answer": "To take home",
+          "terms": [
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Grammar & Context",
+      "instructions": "Fill in the blank.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "お金を ______ ません。",
+          "choices": [
+            "持って い",
+            "借りて い",
+            "売り出し",
+            "品名"
+          ],
+          "answer": "持って い",
+          "terms": [
+            "v_motsu",
+            "v_iru"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "本を 友だちに ______ 。",
+          "choices": [
+            "貸しました",
+            "手品",
+            "持ち味",
+            "気持ち"
+          ],
+          "answer": "貸しました",
+          "terms": [
+            "v_kasu"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "これは いい ______ ですね。",
+          "choices": [
+            "気持ち",
+            "持ち出し",
+            "売り出す",
+            "貸す"
+          ],
+          "answer": "気持ち",
+          "terms": [
+            "v_kimochi"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "あの ______ は 何という 名前ですか。",
+          "choices": [
+            "品物",
+            "上品",
+            "手品",
+            "売る"
+          ],
+          "answer": "品物",
+          "terms": [
+            "v_shinamono"
+          ]
+        }
+      ]
+    }
+  ]
+}
