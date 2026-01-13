@@ -512,15 +512,17 @@ window.PracticeModule = {
             navContainer.innerHTML = ''; // Clear existing
 
             if(curMode === 'flag-review') {
-                // REVIEW MODE: 2 Rows (Actions + Nav)
+                // REVIEW MODE: Keep/Clear on left, Prev/Next on right (stacked, thumb-sized squares)
                 navContainer.innerHTML = `
-                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px;">
-                        <button class="k-btn k-btn-sec" style="color:#f39c12; border-color:#f39c12; font-weight:900;" onclick="KanjiApp.flag(this)">Keep Flag (+1)</button>
-                        <button class="k-btn k-btn-sec" style="color:#2ed573; border-color:#2ed573; font-weight:900;" onclick="KanjiApp.clearFlag(this)">Clear Flag</button>
-                    </div>
-                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
-                        <button class="k-btn k-btn-sec" onclick="KanjiApp.move(-1)">Prev</button>
-                        <button class="k-btn k-btn-sec" onclick="KanjiApp.move(1)">Next</button>
+                    <div style="display: flex; gap: 10px;">
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 10px;">
+                            <button class="k-btn k-btn-sec" style="color:#f39c12; border-color:#f39c12; font-weight:900; min-height: 70px; padding: 10px;" onclick="KanjiApp.flag(this)">Keep Flag (+1)</button>
+                            <button class="k-btn k-btn-sec" style="color:#2ed573; border-color:#2ed573; font-weight:900; min-height: 70px; padding: 10px;" onclick="KanjiApp.clearFlag(this)">Clear Flag</button>
+                        </div>
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 10px;">
+                            <button class="k-btn k-btn-sec" style="min-height: 70px; padding: 10px;" onclick="KanjiApp.move(-1)">Prev</button>
+                            <button class="k-btn k-btn-sec" style="min-height: 70px; padding: 10px;" onclick="KanjiApp.move(1)">Next</button>
+                        </div>
                     </div>
                 `;
             } else {
