@@ -95,7 +95,7 @@
           "terms": [
             "k_bai",
             "v_uru",
-            "v_uridusu",
+            "v_uridasu",
             "v_urimono"
           ]
         },
@@ -146,7 +146,7 @@
           "label": "Sales & Trade",
           "items": [
             "v_uru",
-            "v_uridusu",
+            "v_uridasu",
             "v_urimono",
             "v_kasu"
           ]
@@ -191,7 +191,7 @@
           "en": "Yes. We put it on sale today.",
           "terms": [
             "v_kyou",
-            { "id": "v_uridusu", "form": "polite_mashita" }
+            { "id": "v_uridasu", "form": "polite_mashita" }
           ]
         },
         {
@@ -378,8 +378,8 @@
             "v_jouhin",
             "v_youfuku",
             "v_gaikoku",
-            "k_hon",
-            "v_aru"
+            "k_moto",
+            { "id": "v_aru", "form": "polite_masu" }
           ]
         },
         {
@@ -408,7 +408,7 @@
           "terms": [
             "v_furui",
             "v_shinamono",
-            "v_uru"
+            { "id": "v_uru", "form": "te_form" }
           ]
         },
         {
@@ -518,7 +518,7 @@
         },
         {
           "kind": "mcq",
-          "q": "売り出す [uridusu]",
+          "q": "売り出す [uridasu]",
           "choices": [
             "To put on sale",
             "To buy",
