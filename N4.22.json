@@ -1,0 +1,605 @@
+{
+  "id": "N4.22",
+  "title": "Phase 4 Lesson 22: Writing & Ideas",
+  "meta": {
+    "phase": 4,
+    "lesson": 22,
+    "focus": "Writing systems, paper, meaning, and opinions.",
+    "kanji": [
+      "漢",
+      "字",
+      "紙",
+      "意"
+    ]
+  },
+  "newKanji": [
+    {
+      "kanji": "漢",
+      "on": "かん",
+      "kun": "",
+      "meaning": "China / Sino-",
+      "termId": "k_kan"
+    },
+    {
+      "kanji": "字",
+      "on": "じ",
+      "kun": "あざ",
+      "meaning": "Character / Letter",
+      "termId": "k_ji_3"
+    },
+    {
+      "kanji": "紙",
+      "on": "し",
+      "kun": "かみ",
+      "meaning": "Paper",
+      "termId": "k_kami"
+    },
+    {
+      "kanji": "意",
+      "on": "い",
+      "kun": "",
+      "meaning": "Idea / Mind / Heart",
+      "termId": "k_i_5"
+    }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "Warm-Up Review（ウォームアップ）",
+      "instructions": "Ask your partner these questions using words you already know:",
+      "items": [
+        {
+          "jp": "毎日 日本語を 勉強しますか。",
+          "en": "Do you study Japanese every day?",
+          "terms": [
+            "v_mainichi",
+            "v_nihongo",
+            { "id": "v_benkyou", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "本を 読みますか。",
+          "en": "Do you read books?",
+          "terms": [
+            "k_hon",
+            { "id": "v_yomu", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "物語を 書きますか。",
+          "en": "Do you write stories?",
+          "terms": [
+            "v_monogatari",
+            { "id": "v_kaku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "先生に 質問が ありますか。",
+          "en": "Do you have a question for the teacher?",
+          "terms": [
+            "v_sensei",
+            "v_shitsumon",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "New Kanji（新しい 漢字）",
+      "items": [
+        {
+          "kanji": "漢",
+          "on": "かん",
+          "kun": "",
+          "meaning": "China",
+          "terms": [
+            "k_kan",
+            "v_kanji"
+          ]
+        },
+        {
+          "kanji": "字",
+          "on": "じ",
+          "kun": "あざ",
+          "meaning": "Character",
+          "terms": [
+            "k_ji_3",
+            "v_kanji",
+            "v_romaji",
+            "v_akaji",
+            "v_myouji"
+          ]
+        },
+        {
+          "kanji": "紙",
+          "on": "し",
+          "kun": "かみ",
+          "meaning": "Paper",
+          "terms": [
+            "k_kami",
+            "v_kami",
+            "v_tegami"
+          ]
+        },
+        {
+          "kanji": "意",
+          "on": "い",
+          "kun": "",
+          "meaning": "Idea/Mind",
+          "terms": [
+            "k_i_5",
+            "v_imi",
+            "v_iken",
+            "v_igai"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "Vocabulary & Compounds（ことば）",
+      "groups": [
+        {
+          "label": "Writing",
+          "items": [
+            "v_kanji",
+            "v_romaji",
+            "v_myouji",
+            "v_akaji"
+          ]
+        },
+        {
+          "label": "Communication",
+          "items": [
+            "v_tegami",
+            "v_kami"
+          ]
+        },
+        {
+          "label": "Thoughts",
+          "items": [
+            "v_imi",
+            "v_iken",
+            "v_igai"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 1（会話）: Writing a Letter",
+      "context": "Writing to a friend.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "何を して いますか。",
+          "en": "What are you doing?",
+          "terms": [
+            "k_nani",
+            { "id": "v_suru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "手紙を 書いて います。",
+          "en": "I am writing a letter.",
+          "terms": [
+            "v_tegami",
+            { "id": "v_kaku", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "日本語で 書きますか。",
+          "en": "Will you write in Japanese?",
+          "terms": [
+            "v_nihongo",
+            { "id": "v_kaku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "いいえ、まだ 漢字が 下手ですから、ローマ字で 書きます。",
+          "en": "No, because I am still bad at Kanji, I will write in Romaji.",
+          "terms": [
+            "v_kanji",
+            "v_heta",
+            "v_romaji",
+            { "id": "v_kaku", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 2（会話）: Meaning",
+      "context": "Studying.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "この 漢字の 意味は 何ですか。",
+          "en": "What is the meaning of this Kanji?",
+          "terms": [
+            "v_kanji",
+            "v_imi",
+            "k_nani"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "それは 「車」です。「Car」という 意味ですよ。",
+          "en": "That is 'Kuruma'. It means 'Car'.",
+          "terms": [
+            "k_kuruma",
+            "v_imi"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "なるほど。ありがとう ございます。",
+          "en": "I see. Thank you.",
+          "terms": [
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 3（会話）: Opinion",
+      "context": "Discussing a plan.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "田中さんの 意見を 聞きましたか。",
+          "en": "Did you hear Tanaka's opinion?",
+          "terms": [
+            "v_tanaka",
+            "v_iken",
+            { "id": "v_kiku", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。「この 仕事は おもしろくない」と 言いました。",
+          "en": "Yes. He said 'This work is not interesting'.",
+          "terms": [
+            "v_shigoto",
+            { "id": "v_omoshiroi", "form": "plain_negative" },
+            { "id": "v_iu", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "それは 意外ですね。田中さんは いつも 元気ですが。",
+          "en": "That is unexpected. Tanaka is always energetic though.",
+          "terms": [
+            "v_igai",
+            "v_tanaka",
+            "v_genki"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 4（会話）: Red Ink",
+      "context": "At the shop.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "今月の お金は 少ないですね。",
+          "en": "This month's money is scarce.",
+          "terms": [
+            "v_kongetsu",
+            "k_kane",
+            "v_sukunai"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。赤字です。",
+          "en": "Yes. It is a deficit (red ink).",
+          "terms": [
+            "v_akaji"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "紙と ペンを たくさん 買いましたから。",
+          "en": "Because we bought a lot of paper and pens.",
+          "terms": [
+            "v_kami",
+            "v_pen",
+            "v_takusan",
+            { "id": "v_kau", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "もっと 品物を 売って ください。",
+          "en": "Please sell more goods.",
+          "terms": [
+            "v_shinamono",
+            { "id": "v_uru", "form": "te_form" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 1: Kanji Study",
+      "passage": [
+        {
+          "jp": "私の 名前は スミスです。イギリス人です。",
+          "en": "My name is Smith. I am British.",
+          "terms": [
+            "k_watashi",
+            "v_namae"
+          ]
+        },
+        {
+          "jp": "日本の 名字は 漢字で 書きます。",
+          "en": "Japanese surnames are written in Kanji.",
+          "terms": [
+            "v_nihon",
+            "v_myouji",
+            "v_kanji",
+            { "id": "v_kaku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "でも、私の 名前は カタカナで 書きます。",
+          "en": "But, my name is written in Katakana.",
+          "terms": [
+            "k_watashi",
+            "v_namae",
+            { "id": "v_kaku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "漢字は むずかしいですが、おもしろいです。",
+          "en": "Kanji is difficult, but interesting.",
+          "terms": [
+            "v_kanji",
+            "v_muzukashii",
+            "v_omoshiroi"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "日本の 名字は 何で 書きますか。",
+          "a": "漢字で 書きます。",
+          "terms": [
+            "v_nihon",
+            "v_myouji",
+            "k_nani",
+            "v_kaku",
+            "v_kanji"
+          ]
+        },
+        {
+          "q": "スミスさんの 名前は 何で 書きますか。",
+          "a": "カタカナで 書きます。",
+          "terms": [
+            "v_namae",
+            "v_kaku"
+          ]
+        },
+        {
+          "q": "漢字は かんたんですか。",
+          "a": "いいえ、むずかしいです。",
+          "terms": [
+            "v_kanji",
+            "v_muzukashii"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: A Letter",
+      "passage": [
+        {
+          "jp": "今日、父から 手紙が 来ました。",
+          "en": "Today, a letter came from my father.",
+          "terms": [
+            "v_kyou",
+            "k_chichi",
+            "v_tegami",
+            { "id": "v_kuru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "きれいな 紙に 書いて ありました。",
+          "en": "It was written on beautiful paper.",
+          "terms": [
+            "v_kirei",
+            "v_kami",
+            { "id": "v_kaku", "form": "te_form" },
+            { "id": "v_aru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "「元気ですか。ごはんを 食べて いますか」",
+          "en": "'Are you well? Are you eating meals?'",
+          "terms": [
+            "v_genki",
+            "v_gohan",
+            { "id": "v_taberu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "父の 手紙は 長くないですが、うれしいです。",
+          "en": "Father's letter is not long, but I am happy.",
+          "terms": [
+            "k_chichi",
+            "v_tegami",
+            { "id": "v_nagai", "form": "plain_negative" },
+            "v_ureshii"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "だれから 手紙が 来ましたか。",
+          "a": "父から 来ました。",
+          "terms": [
+            "v_tegami",
+            "v_kuru",
+            "k_chichi"
+          ]
+        },
+        {
+          "q": "手紙は どんな 紙に 書いて ありましたか。",
+          "a": "きれいな 紙に 書いて ありました。",
+          "terms": [
+            "v_tegami",
+            "v_donna",
+            "v_kami",
+            "v_kaku"
+          ]
+        },
+        {
+          "q": "手紙は 長いですか。",
+          "a": "いいえ、長くないです。",
+          "terms": [
+            "v_tegami",
+            { "id": "v_nagai", "form": "plain_negative" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Vocabulary",
+      "instructions": "Select the correct meaning.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "意味 [imi]",
+          "choices": [
+            "Meaning",
+            "Opinion",
+            "Letter",
+            "Paper"
+          ],
+          "answer": "Meaning",
+          "terms": [
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "手紙 [tegami]",
+          "choices": [
+            "Letter",
+            "Hand",
+            "Paper",
+            "Postage"
+          ],
+          "answer": "Letter",
+          "terms": [
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "意外 [igai]",
+          "choices": [
+            "Unexpected",
+            "Famous",
+            "Short",
+            "Heavy"
+          ],
+          "answer": "Unexpected",
+          "terms": [
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "漢字 [kanji]",
+          "choices": [
+            "Kanji",
+            "Romaji",
+            "Hiragana",
+            "Katakana"
+          ],
+          "answer": "Kanji",
+          "terms": [
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Fill in the Blank",
+      "instructions": "Select the word that fits.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "______ で 名前を 書きます。",
+          "choices": [
+            "ローマ字",
+            "意味",
+            "意見",
+            "意外"
+          ],
+          "answer": "ローマ字",
+          "terms": [
+            "v_romaji",
+            "v_namae",
+            "v_kaku"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "この 言葉の ______ が 分かりません。",
+          "choices": [
+            "意味",
+            "赤字",
+            "紙",
+            "品物"
+          ],
+          "answer": "意味",
+          "terms": [
+            "v_imi",
+            "v_wakaru"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "あなたの ______ を 聞いて ください。",
+          "choices": [
+            "意見",
+            "名字",
+            "手紙",
+            "漢字"
+          ],
+          "answer": "意見",
+          "terms": [
+            "v_iken",
+            "v_kiku"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "お金が ありません。______ です。",
+          "choices": [
+            "赤字",
+            "名字",
+            "黒い",
+            "手紙"
+          ],
+          "answer": "赤字",
+          "terms": [
+            "v_akaji",
+            "k_kane"
+          ]
+        }
+      ]
+    }
+  ]
+}
