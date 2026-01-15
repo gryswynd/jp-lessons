@@ -1,0 +1,605 @@
+{
+  "id": "N4.23",
+  "title": "Phase 4 Lesson 23: Physical Attributes & Progress",
+  "meta": {
+    "phase": 4,
+    "lesson": 23,
+    "focus": "Describing size, weight, length, and movement forward.",
+    "kanji": [
+      "太",
+      "短",
+      "重",
+      "進"
+    ]
+  },
+  "newKanji": [
+    {
+      "kanji": "太",
+      "on": "たい / た",
+      "kun": "ふと",
+      "meaning": "Fat / Thick",
+      "termId": "k_futo"
+    },
+    {
+      "kanji": "短",
+      "on": "たん",
+      "kun": "みじか",
+      "meaning": "Short (length)",
+      "termId": "k_mijika"
+    },
+    {
+      "kanji": "重",
+      "on": "じゅう / ちょう",
+      "kun": "おも / かさ",
+      "meaning": "Heavy / Pile up",
+      "termId": "k_omo"
+    },
+    {
+      "kanji": "進",
+      "on": "しん",
+      "kun": "すす",
+      "meaning": "Advance / Proceed",
+      "termId": "k_susu"
+    }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "Warm-Up Review（ウォームアップ）",
+      "instructions": "Ask your partner these questions using words you already know:",
+      "items": [
+        {
+          "jp": "昨日、何を 食べましたか。",
+          "en": "What did you eat yesterday?",
+          "terms": [
+            "v_kinou",
+            "k_nani",
+            { "id": "v_taberu", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "本は 多いですか。",
+          "en": "Are there many books?",
+          "terms": [
+            "k_hon",
+            "v_ooi"
+          ]
+        },
+        {
+          "jp": "漢字を 書くのが 好きですか。",
+          "en": "Do you like writing Kanji?",
+          "terms": [
+            "v_kanji",
+            "v_kaku",
+            "v_suki"
+          ]
+        },
+        {
+          "jp": "毎日 運動しますか。",
+          "en": "Do you exercise every day?",
+          "terms": [
+            "v_mainichi",
+            { "id": "v_undou", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "New Kanji（新しい 漢字）",
+      "items": [
+        {
+          "kanji": "太",
+          "on": "たい",
+          "kun": "ふと",
+          "meaning": "Thick/Fat",
+          "terms": [
+            "k_futo",
+            "v_futoi",
+            "v_futoru",
+            "v_futoji"
+          ]
+        },
+        {
+          "kanji": "短",
+          "on": "たん",
+          "kun": "みじか",
+          "meaning": "Short",
+          "terms": [
+            "k_mijika",
+            "v_mijikai",
+            "v_tanki"
+          ]
+        },
+        {
+          "kanji": "重",
+          "on": "じゅう",
+          "kun": "おも / かさ",
+          "meaning": "Heavy",
+          "terms": [
+            "k_omo",
+            "v_omoi",
+            "v_taijuu",
+            "v_juudai"
+          ]
+        },
+        {
+          "kanji": "進",
+          "on": "しん",
+          "kun": "すす",
+          "meaning": "Advance",
+          "terms": [
+            "k_susu",
+            "v_susumu",
+            "v_shinpo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "Vocabulary & Compounds（ことば）",
+      "groups": [
+        {
+          "label": "Attributes",
+          "items": [
+            "v_futoi",
+            "v_futoru",
+            "v_mijikai",
+            "v_omoi",
+            "v_omosa",
+            "v_taijuu"
+          ]
+        },
+        {
+          "label": "Character/State",
+          "items": [
+            "v_tanki",
+            "v_juudai",
+            "v_futoji",
+            "v_sakibuto"
+          ]
+        },
+        {
+          "label": "Action/Movement",
+          "items": [
+            "v_susumu",
+            "v_shinpo",
+            "v_kasaneru"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 1（会話）: Weight",
+      "context": "Discussing health.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "冬に 少し 太りました。",
+          "en": "I gained a little weight in winter.",
+          "terms": [
+            "k_fuyu",
+            "v_sukoshi",
+            { "id": "v_futoru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "そうですか。体重は 重いですか。",
+          "en": "Is that so? Is your body weight heavy?",
+          "terms": [
+            "v_taijuu",
+            "v_omoi"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "はい。体が 重いですから、運動します。",
+          "en": "Yes. Because my body is heavy, I will exercise.",
+          "terms": [
+            "v_karada",
+            "v_omoi",
+            { "id": "v_undou", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 2（会話）: Time",
+      "context": "In a hurry.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "時間は ありますか。",
+          "en": "Is there time?",
+          "terms": [
+            "v_jikan",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "いいえ、時間は 短いです。",
+          "en": "No, time is short.",
+          "terms": [
+            "v_jikan",
+            "v_mijikai"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "じゃあ、急ぎましょう。",
+          "en": "Then, let's hurry.",
+          "terms": [
+            { "id": "v_isogu", "form": "polite_volitional" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 3（会話）: Moving Forward",
+      "context": "Walking on a bad road.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "道が 悪いですから、気をつけて 進んで ください。",
+          "en": "Because the road is bad, please advance carefully.",
+          "terms": [
+            "k_michi",
+            "v_warui",
+            { "id": "v_kiotsukeru", "form": "te_form" },
+            { "id": "v_susumu", "form": "te_form" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。体が 重いですが、がんばります。",
+          "en": "Yes. My body is heavy, but I will do my best.",
+          "terms": [
+            "v_karada",
+            "v_omoi",
+            { "id": "v_ganbaru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "少し 進歩しましたね。山の上は 近いです。",
+          "en": "We made a little progress. The top of the mountain is near.",
+          "terms": [
+            "v_sukoshi",
+            { "id": "v_shinpo", "form": "polite_mashita" },
+            "k_yama",
+            "k_ue",
+            "v_chikai"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 4（会話）: Font Styles",
+      "context": "Writing a document.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "この 漢字は 太字で 書いて ください。",
+          "en": "Please write this Kanji in bold characters.",
+          "terms": [
+            "v_kanji",
+            "v_futoji",
+            { "id": "v_kaku", "form": "te_form" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "分かりました。ここは 重大な 意味が ありますね。",
+          "en": "Understood. This part has a serious meaning.",
+          "terms": [
+            { "id": "v_wakaru", "form": "polite_mashita" },
+            "v_juudai",
+            "v_imi",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "はい。大切な 所です。",
+          "en": "Yes. It is an important place.",
+          "terms": [
+            "v_taisetsu",
+            "k_tokoro"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 1: My Older Brother",
+      "passage": [
+        {
+          "jp": "私の 兄は 体が 大きくて、足が 太いです。",
+          "en": "My older brother has a big body and his legs are thick (sturdy).",
+          "terms": [
+            "k_watashi",
+            "k_ani",
+            "v_karada",
+            { "id": "v_ookii", "form": "te_form_i_adj" },
+            "k_ashi",
+            "v_futoi"
+          ]
+        },
+        {
+          "jp": "毎日 重い 物を 運びます。",
+          "en": "Every day he carries heavy things.",
+          "terms": [
+            "v_mainichi",
+            "v_omoi",
+            "k_mono",
+            { "id": "v_hakobu", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "兄は 短気ではありません。とても 親切です。",
+          "en": "My brother is not short-tempered. He is very kind.",
+          "terms": [
+            "k_ani",
+            "v_tanki",
+            "v_shinsetsu"
+          ]
+        },
+        {
+          "jp": "仕事で いつも 先へ 進んで います。",
+          "en": "He is always advancing ahead in his work.",
+          "terms": [
+            "v_shigoto",
+            "v_itsumo",
+            "k_saki",
+            { "id": "v_susumu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "兄の 足は どうですか。",
+          "a": "太いです。",
+          "terms": [
+            "k_ani",
+            "k_ashi",
+            "v_futoi"
+          ]
+        },
+        {
+          "q": "兄は 短気ですか。",
+          "a": "いいえ、短気ではありません。",
+          "terms": [
+            "k_ani",
+            "v_tanki"
+          ]
+        },
+        {
+          "q": "兄は 毎日 何を しますか。",
+          "a": "重い 物を 運びます。",
+          "terms": [
+            "v_mainichi",
+            "v_omoi",
+            "k_mono",
+            "v_hakobu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: The Package",
+      "passage": [
+        {
+          "jp": "今日、父から 重い 本が 来ました。",
+          "en": "Today, heavy books came from my father.",
+          "terms": [
+            "v_kyou",
+            "k_chichi",
+            "v_omoi",
+            "k_hon",
+            { "id": "v_kuru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "中には 本が 重ねて ありました。",
+          "en": "Inside, books were stacked up.",
+          "terms": [
+            "k_naka",
+            "k_hon",
+            { "id": "v_kasaneru", "form": "te_form" },
+            { "id": "v_aru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "手紙も ありました。「勉強は 進んで いますか」",
+          "en": "There was also a letter. 'Is your study progressing?'",
+          "terms": [
+            "v_tegami",
+            "v_benkyou",
+            { "id": "v_susumu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "手紙は 短いですが、うれしかったです。",
+          "en": "The letter was short, but I was happy.",
+          "terms": [
+            "v_tegami",
+            "v_mijikai",
+            { "id": "v_ureshii", "form": "polite_past_adj" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "父から 何が 来ましたか。",
+          "a": "重い 本が 来ました。",
+          "terms": [
+            "k_chichi",
+            "v_omoi",
+            "k_hon",
+            "v_kuru"
+          ]
+        },
+        {
+          "q": "本は どうなって いましたか。",
+          "a": "重ねて ありました。",
+          "terms": [
+            "k_hon",
+            "v_kasaneru"
+          ]
+        },
+        {
+          "q": "手紙は 長かったですか。",
+          "a": "いいえ、短かったです。",
+          "terms": [
+            "v_tegami",
+            "v_nagai",
+            "v_mijikai"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Vocabulary",
+      "instructions": "Select the correct reading or meaning.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "重い",
+          "choices": [
+            "omoi",
+            "futoi",
+            "warui",
+            "kurai"
+          ],
+          "answer": "omoi",
+          "terms": [
+            "v_omoi"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "短い",
+          "choices": [
+            "takai",
+            "mijikai",
+            "nagai",
+            "hikui"
+          ],
+          "answer": "mijikai",
+          "terms": [
+            "v_mijikai"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "進歩 [shinpo]",
+          "choices": [
+            "Progress",
+            "Walking",
+            "Running",
+            "Stopping"
+          ],
+          "answer": "Progress",
+          "terms": [
+            "v_shinpo"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "体重 [taijuu]",
+          "choices": [
+            "Body weight",
+            "Heavy body",
+            "Physical strength",
+            "Gymnastics"
+          ],
+          "answer": "Body weight",
+          "terms": [
+            "v_taijuu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Fill in the Blank",
+      "instructions": "Select the word that fits.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "この 線は ______ 書いて ください。",
+          "choices": [
+            "太く",
+            "短気",
+            "重く",
+            "進んで"
+          ],
+          "answer": "太く",
+          "terms": [
+            "k_sen",
+            { "id": "v_futoi", "form": "ku_form" },
+            "v_kaku"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "彼は ______ ですから、すぐ 怒ります。",
+          "choices": [
+            "短気",
+            "元気",
+            "病気",
+            "一本気"
+          ],
+          "answer": "短気",
+          "terms": [
+            "v_tanki",
+            "v_sugu",
+            "v_okoru"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "これは ______ 問題です。",
+          "choices": [
+            "重大な",
+            "太い",
+            "短い",
+            "重い"
+          ],
+          "answer": "重大な",
+          "terms": [
+            "v_juudai",
+            "v_mondai"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "本を たくさん ______ 。",
+          "choices": [
+            "重ねました",
+            "太りました",
+            "進みました",
+            "重かったです"
+          ],
+          "answer": "重ねました",
+          "terms": [
+            "k_hon",
+            "v_takusan",
+            { "id": "v_kasaneru", "form": "polite_mashita" }
+          ]
+        }
+      ]
+    }
+  ]
+}
