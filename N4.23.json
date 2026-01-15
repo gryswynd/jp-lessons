@@ -49,7 +49,7 @@
       "instructions": "Ask your partner these questions using words you already know:",
       "items": [
         {
-          "jp": "昨日、何を 食べましたか。",
+          "jp": "きのう、何を 食べましたか。",
           "en": "What did you eat yesterday?",
           "terms": [
             "v_kinou",
@@ -61,7 +61,7 @@
           "jp": "本は 多いですか。",
           "en": "Are there many books?",
           "terms": [
-            "k_hon",
+            "k_moto",
             "v_ooi"
           ]
         },
@@ -190,7 +190,7 @@
           "jp": "そうですか。体が 重いですか。",
           "en": "Is that so? Is your body heavy?",
           "terms": [
-            "v_karada",
+            "k_karada",
             "v_omoi"
           ]
         },
@@ -209,7 +209,7 @@
           "en": "Let's exercise every day.",
           "terms": [
             "v_mainichi",
-            { "id": "v_undou", "form": "polite_volitional" }
+            { "id": "v_undou", "form": "polite_volitional_mashou" }
           ]
         }
       ]
@@ -235,7 +235,7 @@
           "terms": [
             "v_jikan",
             "v_mijikai",
-            { "id": "v_isogu", "form": "polite_volitional" }
+            { "id": "v_isogu", "form": "polite_volitional_mashou" }
           ]
         },
         {
@@ -244,7 +244,7 @@
           "en": "I will work fast.",
           "terms": [
             "k_watashi",
-            { "id": "v_hayai", "form": "ku_form" },
+            { "id": "v_hayai", "form": "adverbial" },
             { "id": "v_hataraku", "form": "polite_masu" }
           ]
         },
@@ -348,7 +348,7 @@
           "jp": "では、本の 上に 重ねます。",
           "en": "Then, I will stack it on top of the book.",
           "terms": [
-            "k_hon",
+            "k_moto",
             "k_ue",
             { "id": "v_kasaneru", "form": "polite_masu" }
           ]
@@ -366,7 +366,7 @@
             "k_watashi",
             "k_ani",
             "v_karada",
-            { "id": "v_ookii", "form": "te_form_i_adj" },
+            { "id": "v_ookii", "form": "te_form" },
             "k_ashi",
             "v_futoi"
           ]
@@ -443,7 +443,7 @@
             "v_kyou",
             "k_chichi",
             "v_omoi",
-            "k_hon",
+            "k_moto",
             { "id": "v_kuru", "form": "polite_mashita" }
           ]
         },
