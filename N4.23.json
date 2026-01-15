@@ -177,64 +177,83 @@
       "lines": [
         {
           "spk": "A",
-          "jp": "冬に 少し 太りました。",
-          "en": "I gained a little weight in winter.",
+          "jp": "去年、少し 太りました。",
+          "en": "Last year, I gained a little weight.",
           "terms": [
-            "k_fuyu",
+            "v_kyonen",
             "v_sukoshi",
             { "id": "v_futoru", "form": "polite_mashita" }
           ]
         },
         {
           "spk": "B",
-          "jp": "そうですか。体重は 重いですか。",
-          "en": "Is that so? Is your body weight heavy?",
+          "jp": "そうですか。体が 重いですか。",
+          "en": "Is that so? Is your body heavy?",
+          "terms": [
+            "v_karada",
+            "v_omoi"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "はい。体重が 重いです。",
+          "en": "Yes. My body weight is heavy.",
           "terms": [
             "v_taijuu",
             "v_omoi"
           ]
         },
         {
-          "spk": "A",
-          "jp": "はい。体が 重いですから、運動します。",
-          "en": "Yes. Because my body is heavy, I will exercise.",
+          "spk": "B",
+          "jp": "毎日、運動しましょう。",
+          "en": "Let's exercise every day.",
           "terms": [
-            "v_karada",
-            "v_omoi",
-            { "id": "v_undou", "form": "polite_masu" }
+            "v_mainichi",
+            { "id": "v_undou", "form": "polite_volitional" }
           ]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 2（会話）: Time",
-      "context": "In a hurry.",
+      "title": "Conversation Practice 2（会話）: Short Temper",
+      "context": "Talking about work.",
       "lines": [
         {
           "spk": "A",
-          "jp": "時間は ありますか。",
-          "en": "Is there time?",
+          "jp": "社長は 短気ですね。",
+          "en": "The president is short-tempered, isn't he?",
           "terms": [
-            "v_jikan",
-            { "id": "v_aru", "form": "polite_masu" }
+            "v_shachou",
+            "v_tanki"
           ]
         },
         {
           "spk": "B",
-          "jp": "いいえ、時間は 短いです。",
-          "en": "No, time is short.",
+          "jp": "はい。時間が 短いですから、急ぎましょう。",
+          "en": "Yes. Because time is short, let's hurry.",
           "terms": [
             "v_jikan",
-            "v_mijikai"
+            "v_mijikai",
+            { "id": "v_isogu", "form": "polite_volitional" }
           ]
         },
         {
           "spk": "A",
-          "jp": "じゃあ、急ぎましょう。",
-          "en": "Then, let's hurry.",
+          "jp": "私は 早く 働きます。",
+          "en": "I will work fast.",
           "terms": [
-            { "id": "v_isogu", "form": "polite_volitional" }
+            "k_watashi",
+            { "id": "v_hayai", "form": "ku_form" },
+            { "id": "v_hataraku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "それは いいですね。",
+          "en": "That is good.",
+          "terms": [
+            "v_ii"
           ]
         }
       ]
@@ -242,36 +261,44 @@
     {
       "type": "conversation",
       "title": "Conversation Practice 3（会話）: Moving Forward",
-      "context": "Walking on a bad road.",
+      "context": "Walking on a dark road.",
       "lines": [
         {
           "spk": "A",
-          "jp": "道が 悪いですから、気をつけて 進んで ください。",
-          "en": "Because the road is bad, please advance carefully.",
+          "jp": "道が 暗いですから、前を よく 見て ください。",
+          "en": "Because the road is dark, please look well at the front.",
           "terms": [
             "k_michi",
-            "v_warui",
-            { "id": "v_kiotsukeru", "form": "te_form" },
-            { "id": "v_susumu", "form": "te_form" }
+            "v_kurai",
+            "k_mae",
+            "v_yoku",
+            { "id": "v_miru", "form": "te_form" }
           ]
         },
         {
           "spk": "B",
-          "jp": "はい。体が 重いですが、がんばります。",
-          "en": "Yes. My body is heavy, but I will do my best.",
+          "jp": "はい。少しずつ 進みます。",
+          "en": "Yes. I will advance little by little.",
           "terms": [
-            "v_karada",
-            "v_omoi",
-            { "id": "v_ganbaru", "form": "polite_masu" }
+            "v_sukoshi",
+            { "id": "v_susumu", "form": "polite_masu" }
           ]
         },
         {
           "spk": "A",
-          "jp": "少し 進歩しましたね。山の上は 近いです。",
-          "en": "We made a little progress. The top of the mountain is near.",
+          "jp": "足が 重いですか。",
+          "en": "Are your legs heavy?",
           "terms": [
-            "v_sukoshi",
-            { "id": "v_shinpo", "form": "polite_mashita" },
+            "k_ashi",
+            "v_omoi"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "いいえ、重くないです。山の上は 近いです。",
+          "en": "No, they are not heavy. The top of the mountain is near.",
+          "terms": [
+            { "id": "v_omoi", "form": "plain_negative" },
             "k_yama",
             "k_ue",
             "v_chikai"
@@ -281,23 +308,23 @@
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 4（会話）: Font Styles",
-      "context": "Writing a document.",
+      "title": "Conversation Practice 4（会話）: Writing & Paper",
+      "context": "Preparing a document.",
       "lines": [
         {
           "spk": "A",
-          "jp": "この 漢字は 太字で 書いて ください。",
-          "en": "Please write this Kanji in bold characters.",
+          "jp": "名前は 太字で 書いて ください。",
+          "en": "Please write the name in bold characters.",
           "terms": [
-            "v_kanji",
+            "v_namae",
             "v_futoji",
             { "id": "v_kaku", "form": "te_form" }
           ]
         },
         {
           "spk": "B",
-          "jp": "分かりました。ここは 重大な 意味が ありますね。",
-          "en": "Understood. This part has a serious meaning.",
+          "jp": "分かりました。重大な 意味が ありますか。",
+          "en": "Understood. Is there a serious meaning?",
           "terms": [
             { "id": "v_wakaru", "form": "polite_mashita" },
             "v_juudai",
@@ -307,11 +334,23 @@
         },
         {
           "spk": "A",
-          "jp": "はい。大切な 所です。",
-          "en": "Yes. It is an important place.",
+          "jp": "はい。大切な 手紙ですから、この 紙に 書きます。",
+          "en": "Yes. Because it is an important letter, I write on this paper.",
           "terms": [
             "v_taisetsu",
-            "k_tokoro"
+            "v_tegami",
+            "v_kami",
+            { "id": "v_kaku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "では、本の 上に 重ねます。",
+          "en": "Then, I will stack it on top of the book.",
+          "terms": [
+            "k_hon",
+            "k_ue",
+            { "id": "v_kasaneru", "form": "polite_masu" }
           ]
         }
       ]
@@ -395,7 +434,7 @@
     },
     {
       "type": "reading",
-      "title": "Reading Practice 2: The Package",
+      "title": "Reading Practice 2: The Letter",
       "passage": [
         {
           "jp": "今日、父から 重い 本が 来ました。",
@@ -409,32 +448,33 @@
           ]
         },
         {
-          "jp": "中には 本が 重ねて ありました。",
-          "en": "Inside, books were stacked up.",
+          "jp": "中に 手紙が 重ねて ありました。",
+          "en": "Inside, a letter was stacked (placed).",
           "terms": [
             "k_naka",
-            "k_hon",
+            "v_tegami",
             { "id": "v_kasaneru", "form": "te_form" },
             { "id": "v_aru", "form": "polite_mashita" }
           ]
         },
         {
-          "jp": "手紙も ありました。「勉強は 進んで いますか」",
-          "en": "There was also a letter. 'Is your study progressing?'",
+          "jp": "「勉強は 進んで いますか。時間は 大切ですよ」",
+          "en": "'Is your study progressing? Time is important.'",
           "terms": [
-            "v_tegami",
             "v_benkyou",
             { "id": "v_susumu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            { "id": "v_iru", "form": "polite_masu" },
+            "v_jikan",
+            "v_taisetsu"
           ]
         },
         {
-          "jp": "手紙は 短いですが、うれしかったです。",
-          "en": "The letter was short, but I was happy.",
+          "jp": "手紙は 短いですが、楽しかったです。",
+          "en": "The letter was short, but it was fun (enjoyable).",
           "terms": [
             "v_tegami",
             "v_mijikai",
-            { "id": "v_ureshii", "form": "polite_past_adj" }
+            { "id": "v_tanoshii", "form": "plain_past" }
           ]
         }
       ],
@@ -450,11 +490,13 @@
           ]
         },
         {
-          "q": "本は どうなって いましたか。",
-          "a": "重ねて ありました。",
+          "q": "手紙には 何と 書いて ありましたか。",
+          "a": "時間は 大切ですよ。",
           "terms": [
-            "k_hon",
-            "v_kasaneru"
+            "v_tegami",
+            "v_kaku",
+            "v_jikan",
+            "v_taisetsu"
           ]
         },
         {
@@ -527,6 +569,20 @@
           "answer": "Body weight",
           "terms": [
             "v_taijuu"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "先太 [sakibuto]",
+          "choices": [
+            "Thick at the tip",
+            "Thin at the tip",
+            "Red tip",
+            "Broken tip"
+          ],
+          "answer": "Thick at the tip",
+          "terms": [
+            "v_sakibuto"
           ]
         }
       ]
