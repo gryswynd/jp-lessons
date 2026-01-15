@@ -1,0 +1,536 @@
+{
+  "id": "N4.Review.4",
+  "title": "Phase 4 Review: Lifestyle, Trade & Attributes",
+  "meta": {
+    "phase": 4,
+    "type": "assessment",
+    "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 20-23.",
+    "kanji": [
+      "夜", "洋", "服", "屋",
+      "売", "品", "持", "貸",
+      "漢", "字", "紙", "意",
+      "太", "短", "重", "進"
+    ]
+  },
+  "sections": [
+    {
+      "type": "conversation",
+      "title": "Part 1: Conversation Check",
+      "instructions": "Read the conversation and select the best summary.",
+      "items": [
+        {
+          "title": "Conversation 1",
+          "context": "At a clothing store.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "すみません。この 洋服は 売り物ですか。",
+              "terms": [
+                "v_youfuku",
+                "v_urimono"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "はい。とても 上品な 服ですよ。",
+              "terms": [
+                "v_jouhin",
+                "k_fuku"
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "着てみたいですが、お金を 持っていません。",
+              "terms": [
+                { "id": "v_kiru", "form": "te_form" },
+                { "id": "v_miru", "form": "desire_tai" },
+                "k_kane",
+                { "id": "v_motsu", "form": "te_form" },
+                { "id": "v_iru", "form": "polite_negative" }
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "そうですか。では、また 今度 来て ください。",
+              "terms": [
+                "v_kondo",
+                { "id": "v_kuru", "form": "te_form" }
+              ]
+            }
+          ],
+          "question": "Why didn't A buy the clothes?",
+          "choices": [
+            "Because the clothes were not for sale.",
+            "Because A didn't have money.",
+            "Because the clothes were heavy.",
+            "Because the shop was closed."
+          ],
+          "answer": "Because A didn't have money.",
+          "explanation": "A says 'I do not have money' (お金を持っていません)."
+        },
+        {
+          "title": "Conversation 2",
+          "context": "Talking about a letter.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "これは 何ですか。",
+              "terms": [
+                "k_nani"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "父からの 手紙です。漢字が 多いですから、意味が 分かりません。",
+              "terms": [
+                "k_chichi",
+                "v_tegami",
+                "v_kanji",
+                "v_ooi",
+                "v_imi",
+                { "id": "v_wakaru", "form": "polite_negative" }
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "読みましょうか。貸して ください。",
+              "terms": [
+                { "id": "v_yomu", "form": "polite_volitional_mashou" },
+                { "id": "v_kasu", "form": "te_form" }
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "ありがとう ございます。短い 手紙ですが、お願いします。",
+              "terms": [
+                "v_mijikai",
+                "v_tegami",
+                "v_negai"
+              ]
+            }
+          ],
+          "question": "Why can't B read the letter?",
+          "choices": [
+            "Because it is written in English.",
+            "Because there are many Kanji.",
+            "Because the paper is dirty.",
+            "Because it is too dark."
+          ],
+          "answer": "Because there are many Kanji.",
+          "explanation": "B says 'Because there are many Kanji' (漢字が多いですから)."
+        },
+        {
+          "title": "Conversation 3",
+          "context": "Moving furniture.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "この 机は 重いですね。",
+              "terms": [
+                "v_tsukue",
+                "v_omoi"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "はい。中身を 先に 出しましょう。",
+              "terms": [
+                "v_nakami",
+                "k_saki",
+                { "id": "v_dasu", "form": "polite_volitional_mashou" }
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "そうですね。少しずつ 前へ 進みましょう。",
+              "terms": [
+                "v_sukoshi",
+                "k_mae",
+                { "id": "v_susumu", "form": "polite_volitional_mashou" }
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "私の 部屋は 屋上に 近いですから、がんばりましょう。",
+              "terms": [
+                "k_watashi",
+                "v_heya",
+                "v_okujou",
+                "v_chikai"
+              ]
+            }
+          ],
+          "question": "What will they do first?",
+          "choices": [
+            "Go to the rooftop.",
+            "Take out the contents.",
+            "Buy a new desk.",
+            "Sleep."
+          ],
+          "answer": "Take out the contents.",
+          "explanation": "B suggests taking out the contents first (中身を先に出しましょう)."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 2: Grammar Scramble",
+      "instructions": "Construct the sentence by clicking the words in the correct order.",
+      "items": [
+        {
+          "kind": "scramble",
+          "q": "Please lend me a pen.",
+          "segments": ["ペン", "を", "貸して", "ください"],
+          "explanation": "Object (Pen) + wo + Te-form of Kasu (Lend) + kudasai."
+        },
+        {
+          "kind": "scramble",
+          "q": "The night sky is beautiful.",
+          "segments": ["夜空", "は", "きれい", "です"],
+          "explanation": "Topic (Night sky) + wa + Na-adjective (Beautiful) + desu."
+        },
+        {
+          "kind": "scramble",
+          "q": "I want to eat Western food.",
+          "segments": ["洋食", "が", "食べたい", "です"],
+          "explanation": "Object (Western food) + ga + Tai-form (Want to eat) + desu."
+        },
+        {
+          "kind": "scramble",
+          "q": "This bag is heavy.",
+          "segments": ["この", "かばん", "は", "重い", "です"],
+          "explanation": "Subject (Bag) + wa + I-adjective (Heavy) + desu."
+        },
+        {
+          "kind": "scramble",
+          "q": "Please write in Kanji.",
+          "segments": ["漢字", "で", "書いて", "ください"],
+          "explanation": "Means (Kanji) + de + Te-form of Kaku (Write) + kudasai."
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Part 3: Reading - The Antique Shop",
+      "passage": [
+        {
+          "jp": "私の 町に 小さな 店が あります。",
+          "en": "There is a small shop in my town.",
+          "terms": [
+            "k_watashi",
+            "k_machi",
+            "v_chiisai",
+            "k_mise",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "夜に なると、店は 明るく なります。",
+          "en": "When it becomes night, the shop becomes bright.",
+          "terms": [
+            "k_yoru",
+            "v_naru",
+            "k_mise",
+            { "id": "v_akarui", "form": "adverbial" },
+            { "id": "v_naru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "店では 古い 洋服や 品物を 売って います。",
+          "en": "At the shop, they are selling old Western clothes and goods.",
+          "terms": [
+            "k_mise",
+            "v_furui",
+            "v_youfuku",
+            "v_shinamono",
+            { "id": "v_uru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "店の 人は 「見るのは 自由ですが、お金は 貸しませんよ」と 言いました。",
+          "en": "The shop person said 'Looking is free, but I won't lend money'.",
+          "terms": [
+            "k_mise",
+            "k_hito",
+            "v_miru",
+            "v_jiyuu",
+            "k_kane",
+            { "id": "v_kasu", "form": "polite_negative" },
+            { "id": "v_iu", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "私は きれいな 紙を 買いました。",
+          "en": "I bought beautiful paper.",
+          "terms": [
+            "k_watashi",
+            "v_kirei",
+            "v_kami",
+            { "id": "v_kau", "form": "polite_mashita" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "店は いつ 明るく なりますか。",
+          "a": "夜に なると",
+          "choices": ["朝に なると", "夜に なると", "雨が 降ると", "日曜日に"],
+          "terms": [
+            "k_mise",
+            "v_akarui",
+            "v_naru",
+            "k_yoru"
+          ]
+        },
+        {
+          "q": "店で 何を 売って いますか。",
+          "a": "洋服や 品物",
+          "choices": ["魚と 肉", "洋服や 品物", "車と 自転車", "薬と 水"],
+          "terms": [
+            "k_mise",
+            "v_uru",
+            "v_youfuku",
+            "v_shinamono"
+          ]
+        },
+        {
+          "q": "店の 人は お金を 貸しますか。",
+          "a": "いいえ、貸しません",
+          "choices": ["はい、貸します", "いいえ、貸しません", "時々 貸します", "少し 貸します"],
+          "terms": [
+            "k_mise",
+            "k_hito",
+            "k_kane",
+            "v_kasu"
+          ]
+        },
+        {
+          "q": "私は 何を 買いましたか。",
+          "a": "きれいな 紙",
+          "choices": ["洋服", "品物", "きれいな 紙", "古い 本"],
+          "terms": [
+            "k_watashi",
+            "k_nani",
+            "v_kau",
+            "v_kirei",
+            "v_kami"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Part 4: Reading - Kanji Class",
+      "passage": [
+        {
+          "jp": "今日、学校で 漢字の 意味を 習いました。",
+          "en": "Today, I learned the meaning of Kanji at school.",
+          "terms": [
+            "v_kyou",
+            "v_gakkou",
+            "v_kanji",
+            "v_imi",
+            { "id": "v_narau", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "「太い」と 「短い」は 反対の 意味ではありません。",
+          "en": "'Thick' and 'Short' do not have opposite meanings.",
+          "terms": [
+            "v_futoi",
+            "v_mijikai",
+            "v_hantai",
+            "v_imi"
+          ]
+        },
+        {
+          "jp": "先生は 黒板に 大きな 字を 書きました。",
+          "en": "The teacher wrote big characters on the blackboard.",
+          "terms": [
+            "v_sensei",
+            "v_kokuban",
+            "v_ookii",
+            "k_ji_3",
+            { "id": "v_kaku", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "勉強が 進んで、うれしいです。",
+          "en": "Study is progressing, and I am happy.",
+          "terms": [
+            "v_benkyou",
+            { "id": "v_susumu", "form": "te_form" },
+            "v_ureshii"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "今日、何を 習いましたか。",
+          "a": "漢字の 意味",
+          "choices": ["ローマ字の 書き方", "漢字の 意味", "英語の 話", "手品の 方法"],
+          "terms": [
+            "v_kyou",
+            "v_narau",
+            "v_kanji",
+            "v_imi"
+          ]
+        },
+        {
+          "q": "先生は 何を しましたか。",
+          "a": "字を 書きました",
+          "choices": ["絵を 書きました", "字を 書きました", "本を 読みました", "歌を 歌いました"],
+          "terms": [
+            "v_sensei",
+            "k_ji_3",
+            "v_kaku"
+          ]
+        },
+        {
+          "q": "私は どうですか。",
+          "a": "うれしいです",
+          "choices": ["悲しいです", "うれしいです", "短気です", "太っています"],
+          "terms": [
+            "k_watashi",
+            "v_dou",
+            "v_ureshii"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 5: Kanji Readings",
+      "instructions": "Select the correct reading for the [bracketed] word.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "[今夜]は 月が きれいです。",
+          "choices": ["こんや", "いまよ", "こんよ", "きょうや"],
+          "answer": "こんや",
+          "explanation": "今夜 (Tonight) is read as <b>konya</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "きれいな [洋服]ですね。",
+          "choices": ["ようふく", "ようぎゅう", "ひろふく", "かみふく"],
+          "answer": "ようふく",
+          "explanation": "洋服 (Western clothes) is read as <b>youfuku</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "[屋上]へ 行きましょう。",
+          "choices": ["おくじょう", "やうえ", "おくうえ", "やじょう"],
+          "answer": "おくじょう",
+          "explanation": "屋上 (Rooftop) is read as <b>okujou</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "この [品物]は いくらですか。",
+          "choices": ["しなもの", "ひんぶつ", "しなぶつ", "ひんもの"],
+          "answer": "しなもの",
+          "explanation": "品物 (Goods) is read as <b>shinamono</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "[漢字]を 書きます。",
+          "choices": ["かんじ", "かんじ", "こうじ", "くにじ"],
+          "answer": "かんじ",
+          "explanation": "漢字 (Kanji) is read as <b>kanji</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "[意味]が 分かりますか。",
+          "choices": ["いみ", "いあじ", "おみ", "ごみ"],
+          "answer": "いみ",
+          "explanation": "意味 (Meaning) is read as <b>imi</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "足が [太い]です。",
+          "choices": ["ふとい", "おおきい", "おもい", "まるい"],
+          "answer": "ふとい",
+          "explanation": "太い (Thick/Fat) is read as <b>futoi</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "荷物が [重い]です。",
+          "choices": ["おもい", "かたい", "くらい", "とおい"],
+          "answer": "おもい",
+          "explanation": "重い (Heavy) is read as <b>omoi</b>."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 6: Context & Vocabulary",
+      "instructions": "Select the best word to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "店で 本を ______ 。",
+          "choices": ["売ります", "持ちます", "進みます", "短いです"],
+          "answer": "売ります",
+          "explanation": "You sell (売ります) books at a store."
+        },
+        {
+          "kind": "mcq",
+          "q": "ペンを 友達に ______ 。",
+          "choices": ["貸しました", "太りました", "着ました", "飲みました"],
+          "answer": "貸しました",
+          "explanation": "You lend (貸しました) a pen to a friend."
+        },
+        {
+          "kind": "mcq",
+          "q": "______ で 名前を 書きます。",
+          "choices": ["紙", "屋", "服", "夜"],
+          "answer": "紙",
+          "explanation": "You write names on paper (紙)."
+        },
+        {
+          "kind": "mcq",
+          "q": "仕事が 早く ______ 。",
+          "choices": ["進みました", "太りました", "重かったです", "品物でした"],
+          "answer": "進みました",
+          "explanation": "Work progressed/advanced (進みました) quickly."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 7: Grammar Check",
+      "instructions": "Choose the correct particle or form to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "洋食 ______ 食べたいです。",
+          "choices": ["が", "に", "で", "へ"],
+          "answer": "が",
+          "explanation": "Desire form (tai) usually takes 'ga' for the object."
+        },
+        {
+          "kind": "mcq",
+          "q": "お金を ______ ください。",
+          "choices": ["貸して", "貸す", "貸し", "貸せ"],
+          "answer": "貸して",
+          "explanation": "Request form uses Te-form + kudasai."
+        },
+        {
+          "kind": "mcq",
+          "q": "この 本は ______ ありません。",
+          "choices": ["重く", "重い", "重くて", "重さ"],
+          "answer": "重く",
+          "explanation": "Negative of i-adjective (omoi) is omoku arimasen."
+        },
+        {
+          "kind": "mcq",
+          "q": "私は ______ 洋服を 買いました。",
+          "choices": ["白い", "白", "白の", "白く"],
+          "answer": "白い",
+          "explanation": "I-adjective (shiroi) directly modifies noun (youfuku)."
+        }
+      ]
+    }
+  ]
+}
