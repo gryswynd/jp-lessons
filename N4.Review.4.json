@@ -51,9 +51,8 @@
             },
             {
               "spk": "B",
-              "jp": "そうですか。では、また 今度 来て ください。",
+              "jp": "そうですか。では、また 来て ください。",
               "terms": [
-                "v_kondo",
                 { "id": "v_kuru", "form": "te_form" }
               ]
             }
@@ -101,7 +100,7 @@
             },
             {
               "spk": "B",
-              "jp": "ありがとう ございます。短い 手紙ですが、お願いします。",
+              "jp": "ありがとう ございます。短い 手紙ですが、おねがいします。",
               "terms": [
                 "v_mijikai",
                 "v_tegami",
@@ -121,21 +120,21 @@
         },
         {
           "title": "Conversation 3",
-          "context": "Moving furniture.",
+          "context": "Moving an item.",
           "lines": [
             {
               "spk": "A",
-              "jp": "この 机は 重いですね。",
+              "jp": "これは 重いですね。",
               "terms": [
-                "v_tsukue",
                 "v_omoi"
               ]
             },
             {
               "spk": "B",
-              "jp": "はい。中身を 先に 出しましょう。",
+              "jp": "はい。中の 物を 先に 出しましょう。",
               "terms": [
-                "v_nakami",
+                "k_naka",
+                "k_mono",
                 "k_saki",
                 { "id": "v_dasu", "form": "polite_volitional_mashou" }
               ]
@@ -151,10 +150,8 @@
             },
             {
               "spk": "B",
-              "jp": "私の 部屋は 屋上に 近いですから、がんばりましょう。",
+              "jp": "屋上は 近いですから、がんばりましょう。",
               "terms": [
-                "k_watashi",
-                "v_heya",
                 "v_okujou",
                 "v_chikai"
               ]
@@ -163,12 +160,12 @@
           "question": "What will they do first?",
           "choices": [
             "Go to the rooftop.",
-            "Take out the contents.",
+            "Take out the things inside.",
             "Buy a new desk.",
             "Sleep."
           ],
-          "answer": "Take out the contents.",
-          "explanation": "B suggests taking out the contents first (中身を先に出しましょう)."
+          "answer": "Take out the things inside.",
+          "explanation": "B suggests taking out the things inside first (中の物を先に出しましょう)."
         }
       ]
     },
@@ -248,13 +245,13 @@
           ]
         },
         {
-          "jp": "店の 人は 「見るのは 自由ですが、お金は 貸しませんよ」と 言いました。",
-          "en": "The shop person said 'Looking is free, but I won't lend money'.",
+          "jp": "店の 人は 「見るのは いいですが、お金は 貸しませんよ」と 言いました。",
+          "en": "The shop person said 'Looking is fine, but I won't lend money'.",
           "terms": [
             "k_mise",
             "k_hito",
             "v_miru",
-            "v_jiyuu",
+            "v_ii",
             "k_kane",
             { "id": "v_kasu", "form": "polite_negative" },
             { "id": "v_iu", "form": "polite_mashita" }
@@ -324,32 +321,32 @@
       "title": "Part 4: Reading - Kanji Class",
       "passage": [
         {
-          "jp": "今日、学校で 漢字の 意味を 習いました。",
-          "en": "Today, I learned the meaning of Kanji at school.",
+          "jp": "今日、学校で 漢字の 意味を 勉強しました。",
+          "en": "Today, I studied the meaning of Kanji at school.",
           "terms": [
             "v_kyou",
             "v_gakkou",
             "v_kanji",
             "v_imi",
-            { "id": "v_narau", "form": "polite_mashita" }
+            { "id": "v_benkyou", "form": "polite_mashita" }
           ]
         },
         {
-          "jp": "「太い」と 「短い」は 反対の 意味ではありません。",
-          "en": "'Thick' and 'Short' do not have opposite meanings.",
+          "jp": "「太い」と 「短い」は 同じ 意味ではありません。",
+          "en": "'Thick' and 'Short' do not have the same meaning.",
           "terms": [
             "v_futoi",
             "v_mijikai",
-            "v_hantai",
+            "v_onaji",
             "v_imi"
           ]
         },
         {
-          "jp": "先生は 黒板に 大きな 字を 書きました。",
-          "en": "The teacher wrote big characters on the blackboard.",
+          "jp": "先生は 紙に 大きな 字を 書きました。",
+          "en": "The teacher wrote big characters on paper.",
           "terms": [
             "v_sensei",
-            "v_kokuban",
+            "v_kami",
             "v_ookii",
             "k_ji_3",
             { "id": "v_kaku", "form": "polite_mashita" }
@@ -367,12 +364,12 @@
       ],
       "questions": [
         {
-          "q": "今日、何を 習いましたか。",
+          "q": "今日、何を 勉強しましたか。",
           "a": "漢字の 意味",
           "choices": ["ローマ字の 書き方", "漢字の 意味", "英語の 話", "手品の 方法"],
           "terms": [
             "v_kyou",
-            "v_narau",
+            "v_benkyou",
             "v_kanji",
             "v_imi"
           ]
@@ -455,7 +452,7 @@
         },
         {
           "kind": "mcq",
-          "q": "荷物が [重い]です。",
+          "q": "体が [重い]です。",
           "choices": ["おもい", "かたい", "くらい", "とおい"],
           "answer": "おもい",
           "explanation": "重い (Heavy) is read as <b>omoi</b>."
@@ -476,7 +473,7 @@
         },
         {
           "kind": "mcq",
-          "q": "ペンを 友達に ______ 。",
+          "q": "ペンを 友だちに ______ 。",
           "choices": ["貸しました", "太りました", "着ました", "飲みました"],
           "answer": "貸しました",
           "explanation": "You lend (貸しました) a pen to a friend."
@@ -529,6 +526,13 @@
           "choices": ["白い", "白", "白の", "白く"],
           "answer": "白い",
           "explanation": "I-adjective (shiroi) directly modifies noun (youfuku)."
+        },
+        {
+          "kind": "mcq",
+          "q": "この 品物を ______ ください。",
+          "choices": ["運んで", "転んで", "遊んで", "込んで"],
+          "answer": "運んで",
+          "explanation": "To carry/transport an item (品物) is Hakobu (運ぶ)."
         }
       ]
     }
