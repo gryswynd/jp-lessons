@@ -634,7 +634,10 @@
       const box = this.el('jp-interaction');
       const correctVal = q.answer.includes('(') ? q.answer.split('(')[0].trim() : q.answer;
 
-      q.choices.forEach(c => {
+      // Randomize choices
+      const choices = [...q.choices].sort(() => Math.random() - 0.5);
+
+      choices.forEach(c => {
         const btn = document.createElement('button');
         btn.className = 'jp-btn';
         btn.innerText = c;
