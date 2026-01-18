@@ -4,6 +4,15 @@ window.PracticeModule = {
 
     window.KanjiApp = {};
 
+    // TTS Helper
+    KanjiApp.speak = function(text) {
+        if (!window.speechSynthesis) return;
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(text);
+        u.lang = 'ja-JP';
+        window.speechSynthesis.speak(u);
+    };
+
     // Inject Fonts
     if (!document.getElementById('kanji-fonts')) {
         const link = document.createElement('link');
@@ -492,6 +501,7 @@ window.PracticeModule = {
         });
     }
 
+    // UPDATED kRenderFC with SPEAKER BUTTON
     function kRenderFC() {
         const d = curSet[curIdx];
         setTxt('k-fc-progress', `Card ${curIdx+1} / ${curSet.length}`);
@@ -506,13 +516,11 @@ window.PracticeModule = {
             else stamp.classList.add('k-hidden');
         }
 
-        // --- NEW DYNAMIC BUTTON LOGIC ---
         const navContainer = document.getElementById('k-fc-nav-container');
         if (navContainer) {
             navContainer.innerHTML = ''; // Clear existing
 
             if(curMode === 'flag-review') {
-                // REVIEW MODE: Keep/Clear on left, Prev/Next on right (stacked, thumb-sized squares)
                 navContainer.innerHTML = `
                     <div style="display: flex; gap: 10px;">
                         <div style="flex: 1; display: flex; flex-direction: column; gap: 10px;">
@@ -526,7 +534,6 @@ window.PracticeModule = {
                     </div>
                 `;
             } else {
-                // STANDARD MODE: 1 Row (Prev | Flag | Next)
                 navContainer.innerHTML = `
                     <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;">
                         <button class="k-btn k-btn-sec" onclick="KanjiApp.move(-1)">Prev</button>
@@ -542,11 +549,15 @@ window.PracticeModule = {
         let renderType = curType;
         if(curType === 'mixed' && d._type) renderType = d._type;
 
+        // SPEECH TEXT DETERMINATION
+        const speakText = d.reading || d.kanji || d.word || d.surface;
+        const speakBtnHtml = `<span onclick="event.stopPropagation(); KanjiApp.speak('${speakText}')" style="cursor:pointer; font-size:0.6em; margin-left:10px; opacity:0.7;">🔊</span>`;
+
         if(renderType==='kanji') {
             setTxt('k-fc-lbl', d.lesson);
             if(curMode === 'flag-review') setTxt('k-fc-lbl', `🚩 Flags: ${flagCounts[d.kanji]||0}`);
 
-            setTxt('k-fc-main', d.kanji);
+            document.getElementById('k-fc-main').innerHTML = d.kanji + speakBtnHtml;
             setTxt('k-fc-sub', "");
 
             let h = `<div style="text-align:center; font-weight:700; font-size:2rem; margin-bottom:15px; color:var(--primary); line-height:1.2;">${d.meaning}</div>`;
@@ -565,7 +576,7 @@ window.PracticeModule = {
             setTxt('k-fc-lbl', "Vocabulary");
             if(curMode === 'flag-review') setTxt('k-fc-lbl', `🚩 Flags: ${flagCounts[d.word]||0}`);
 
-            setTxt('k-fc-main', d.word);
+            document.getElementById('k-fc-main').innerHTML = d.word + speakBtnHtml;
             setTxt('k-fc-sub', "");
 
             let h = `<div style="text-align:center; font-weight:700; font-size:2rem; margin-bottom:10px; color:var(--primary); line-height:1.2;">${d.meaning}</div>`;
@@ -580,7 +591,8 @@ window.PracticeModule = {
             setTxt('k-fc-lbl', 'Verb');
             if(curMode === 'flag-review') setTxt('k-fc-lbl', `🚩 Flags: ${flagCounts[d.kanji||d.dict]||0}`);
 
-            setTxt('k-fc-main', d.kanji==='-'?d.dict:d.kanji);
+            const vText = d.kanji==='-'?d.dict:d.kanji;
+            document.getElementById('k-fc-main').innerHTML = vText + speakBtnHtml;
             setTxt('k-fc-sub', "");
 
             let h = `<div style="text-align:center; font-weight:700; font-size:2rem; margin-bottom:15px; color:var(--primary);">${d.meaning}</div>`;
