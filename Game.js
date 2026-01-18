@@ -189,7 +189,7 @@ window.GameModule = (function() {
       player: {
         x: 200,
         y: 200,
-        width: 96,
+        width: 72,
         height: 96,
         speed: 2,
         direction: 'down',
