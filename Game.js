@@ -189,8 +189,8 @@ window.GameModule = (function() {
       player: {
         x: 200,
         y: 200,
-        width: 72,
-        height: 96,
+        width: 90,
+        height: 129,
         speed: 2,
         direction: 'down',
         frame: 0,
@@ -651,7 +651,7 @@ window.GameModule = (function() {
           game.player.frameTimer++;
           if (game.player.frameTimer >= game.player.frameDelay) {
             game.player.frameTimer = 0;
-            game.player.frame = (game.player.frame + 1) % 4;
+            game.player.frame = (game.player.frame + 1) % 6;
           }
         } else {
           game.player.frame = 0;
@@ -687,7 +687,7 @@ window.GameModule = (function() {
 
         // Draw player
         if (game.images.playerSheet) {
-          const spriteWidth = 306;
+          const spriteWidth = 204;
           const spriteHeight = 293;
           let row = 0;
 
