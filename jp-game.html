@@ -1,0 +1,622 @@
+<div id="jp-game-root">Loading game...</div>
+<script>
+(function() {
+  // --- CONFIGURATION ---
+  const REPO_CONFIG = {
+    owner: "gryswynd",
+    repo: "jp-lessons",
+    branch: "main",
+    path: ""
+  };
+
+  const rootId = "jp-game-root";
+  const root = document.getElementById(rootId);
+  if (!root) return;
+
+  function getCdnUrl(filename) {
+    return `https://raw.githubusercontent.com/${REPO_CONFIG.owner}/${REPO_CONFIG.repo}/${REPO_CONFIG.branch}/${REPO_CONFIG.path ? REPO_CONFIG.path + '/' : ''}${filename}`;
+  }
+
+  // --- Styles ---
+  const style = document.createElement("style");
+  style.textContent = `
+    #${rootId} {
+      font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+      background: #1a1a2e;
+      border-radius: 12px;
+      overflow: hidden;
+      max-width: 900px;
+      margin: 0 auto;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      position: relative;
+    }
+    #${rootId} canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+    }
+    #${rootId} .game-ui {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      text-align: center;
+      max-width: 80%;
+      display: none;
+    }
+    #${rootId} .conversation-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      display: none;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+    }
+    #${rootId} .convo-container {
+      display: flex;
+      gap: 20px;
+      align-items: flex-end;
+      background: rgba(0,0,0,0.3);
+      padding: 20px;
+      border-radius: 12px;
+    }
+    #${rootId} .speech-bubble {
+      flex: 1;
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    #${rootId} .speech-bubble .text {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #2f3542;
+    }
+    #${rootId} .speech-bubble .continue {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #888;
+      text-align: right;
+    }
+    #${rootId} .character-portrait {
+      width: 200px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+  `;
+  document.head.appendChild(style);
+
+  // --- Game Setup ---
+  root.innerHTML = `
+    <canvas id="game-canvas" width="800" height="600"></canvas>
+    <div class="game-ui" id="game-ui"></div>
+    <div class="conversation-overlay" id="conversation-overlay">
+      <div class="convo-container">
+        <div class="speech-bubble">
+          <div class="text" id="convo-text"></div>
+          <div class="continue">Press SPACE to continue</div>
+        </div>
+        <img class="character-portrait" id="convo-portrait" src="" alt="">
+      </div>
+    </div>
+  `;
+
+  const canvas = document.getElementById('game-canvas');
+  const ctx = canvas.getContext('2d');
+  const gameUI = document.getElementById('game-ui');
+  const convoOverlay = document.getElementById('conversation-overlay');
+  const convoText = document.getElementById('convo-text');
+  const convoPortrait = document.getElementById('convo-portrait');
+
+  // --- Game State ---
+  const game = {
+    images: {},
+    player: {
+      x: 200,
+      y: 200,
+      width: 32,
+      height: 48,
+      speed: 2,
+      direction: 'down',
+      frame: 0,
+      frameTimer: 0,
+      frameDelay: 8,
+      moving: false
+    },
+    camera: { x: 0, y: 0 },
+    keys: {},
+    mapData: null,
+    collisionData: null,
+    interactiveObjects: [],
+    npcs: [],
+    doors: {},
+    inConversation: false,
+    currentConversation: null,
+    conversationIndex: 0
+  };
+
+  // Interactive object definitions (left to right, top to bottom)
+  const INTERACTIVE_OBJECTS = [
+    { name: 'Bed', message: 'A comfortable bed. Maybe I should get some rest later.' },
+    { name: 'Computer', message: 'My computer. I should study Japanese on it!' },
+    { name: 'Toilet', message: 'The toilet. It\'s clean.' },
+    { name: 'Fridge', message: 'The fridge is well stocked. Mom went shopping yesterday.' },
+    { name: 'Bedroom Door', isDoor: true },
+    { name: 'TV', message: 'The TV is off. Maybe I can watch some anime later.' },
+    { name: 'Bathroom Door', isDoor: true },
+    { name: 'Kitchen Door', isDoor: true },
+    { name: 'Kotatsu', message: 'The kotatsu is warm and inviting. Perfect for winter!' },
+    { name: 'Front Door', isDoor: true }
+  ];
+
+  // NPC conversations
+  const CONVERSATIONS = {
+    mom: [
+      { speaker: 'mom', text: 'おはよう！朝ごはんは食べた？\n(Good morning! Did you eat breakfast?)' },
+      { speaker: 'me', text: 'おはよう、お母さん。まだだよ。\n(Good morning, Mom. Not yet.)' },
+      { speaker: 'mom', text: '冷蔵庫に卵があるから、食べてね。\n(There are eggs in the fridge, so please eat.)' },
+      { speaker: 'me', text: 'ありがとう！\n(Thank you!)' }
+    ],
+    dad: [
+      { speaker: 'dad', text: 'よう、元気か？\n(Hey, how are you?)' },
+      { speaker: 'me', text: 'うん、元気だよ。お父さんは？\n(Yeah, I\'m good. How about you, Dad?)' },
+      { speaker: 'dad', text: 'まあまあだな。今日は何するんだ？\n(Not bad. What are you doing today?)' },
+      { speaker: 'me', text: '日本語を勉強するつもり。\n(I\'m planning to study Japanese.)' },
+      { speaker: 'dad', text: 'いいね！頑張れよ。\n(Nice! Do your best.)' }
+    ]
+  };
+
+  // --- Image Loading ---
+  const imagesToLoad = {
+    map: 'house_map.png',
+    collision: 'house_collision.png',
+    playerSheet: 'me_walk_cycle_sheet_transparent.png',
+    momSprite: 'momsprite.png',
+    dadSprite: 'dadsprite.png',
+    convoBackground: 'house_convo.png',
+    momConvo: 'mom-convo.png',
+    dadConvo: 'dad-convo.png',
+    meConvo: 'me-convo.png'
+  };
+
+  let loadedImages = 0;
+  const totalImages = Object.keys(imagesToLoad).length;
+
+  function loadImages() {
+    Object.entries(imagesToLoad).forEach(([key, filename]) => {
+      const img = new Image();
+      img.crossOrigin = "anonymous";
+      img.onload = () => {
+        loadedImages++;
+        if (loadedImages === totalImages) {
+          initGame();
+        }
+      };
+      img.onerror = () => {
+        console.error(`Failed to load: ${filename}`);
+        loadedImages++;
+        if (loadedImages === totalImages) {
+          initGame();
+        }
+      };
+      img.src = getCdnUrl(filename);
+      game.images[key] = img;
+    });
+  }
+
+  // --- Collision Detection ---
+  function getPixelColor(imageData, x, y) {
+    const idx = (Math.floor(y) * imageData.width + Math.floor(x)) * 4;
+    return {
+      r: imageData.data[idx],
+      g: imageData.data[idx + 1],
+      b: imageData.data[idx + 2],
+      a: imageData.data[idx + 3]
+    };
+  }
+
+  function isCollision(x, y) {
+    if (!game.collisionData) return false;
+    if (x < 0 || y < 0 || x >= game.collisionData.width || y >= game.collisionData.height) return true;
+    const color = getPixelColor(game.collisionData, x, y);
+    // Red channel = collision
+    return color.r > 200 && color.g < 50 && color.b < 50;
+  }
+
+  function getInteractiveObject(x, y) {
+    if (!game.collisionData) return null;
+    if (x < 0 || y < 0 || x >= game.collisionData.width || y >= game.collisionData.height) return null;
+    const color = getPixelColor(game.collisionData, x, y);
+    // Blue channel = interactive object
+    if (color.b > 200 && color.r < 50 && color.g < 50) {
+      // Find which interactive object this is
+      for (let obj of game.interactiveObjects) {
+        const dx = x - obj.x;
+        const dy = y - obj.y;
+        if (dx >= 0 && dx < obj.width && dy >= 0 && dy < obj.height) {
+          return obj;
+        }
+      }
+    }
+    return null;
+  }
+
+  // --- Game Initialization ---
+  function initGame() {
+    // Extract collision data from collision image
+    const tempCanvas = document.createElement('canvas');
+    tempCanvas.width = game.images.collision.width;
+    tempCanvas.height = game.images.collision.height;
+    const tempCtx = tempCanvas.getContext('2d');
+    tempCtx.drawImage(game.images.collision, 0, 0);
+    game.collisionData = tempCtx.getImageData(0, 0, tempCanvas.width, tempCanvas.height);
+
+    // Scan for interactive objects (blue pixels)
+    const found = [];
+    for (let y = 0; y < game.collisionData.height; y++) {
+      for (let x = 0; x < game.collisionData.width; x++) {
+        const color = getPixelColor(game.collisionData, x, y);
+        if (color.b > 200 && color.r < 50 && color.g < 50) {
+          // Check if this is part of an existing object
+          let isNew = true;
+          for (let obj of found) {
+            if (x >= obj.minX && x <= obj.maxX && y >= obj.minY && y <= obj.maxY) {
+              isNew = false;
+              break;
+            }
+          }
+          if (isNew) {
+            // Find bounds of this blue area
+            const bounds = { minX: x, maxX: x, minY: y, maxY: y };
+            // Expand bounds
+            for (let sy = y; sy < Math.min(y + 100, game.collisionData.height); sy++) {
+              for (let sx = x; sx < Math.min(x + 100, game.collisionData.width); sx++) {
+                const c = getPixelColor(game.collisionData, sx, sy);
+                if (c.b > 200 && c.r < 50 && c.g < 50) {
+                  bounds.maxX = Math.max(bounds.maxX, sx);
+                  bounds.maxY = Math.max(bounds.maxY, sy);
+                }
+              }
+            }
+            found.push(bounds);
+          }
+        }
+      }
+    }
+
+    // Sort found objects by position (left to right, top to bottom)
+    found.sort((a, b) => {
+      const aY = (a.minY + a.maxY) / 2;
+      const bY = (b.minY + b.maxY) / 2;
+      if (Math.abs(aY - bY) > 50) return aY - bY;
+      return (a.minX + a.maxX) / 2 - (b.minX + b.maxX) / 2;
+    });
+
+    // Assign object definitions
+    game.interactiveObjects = found.map((bounds, i) => {
+      const def = INTERACTIVE_OBJECTS[i] || { name: `Object ${i}`, message: 'An object.' };
+      return {
+        x: bounds.minX,
+        y: bounds.minY,
+        width: bounds.maxX - bounds.minX,
+        height: bounds.maxY - bounds.minY,
+        centerX: (bounds.minX + bounds.maxX) / 2,
+        centerY: (bounds.minY + bounds.maxY) / 2,
+        ...def
+      };
+    });
+
+    // Initialize doors as closed
+    game.interactiveObjects.forEach(obj => {
+      if (obj.isDoor) {
+        game.doors[obj.name] = { open: false };
+      }
+    });
+
+    // Place NPCs
+    game.npcs = [
+      {
+        name: 'mom',
+        x: 600,
+        y: 150,
+        width: 40,
+        height: 60,
+        sprite: game.images.momSprite,
+        conversation: 'mom'
+      },
+      {
+        name: 'dad',
+        x: 520,
+        y: 420,
+        width: 40,
+        height: 60,
+        sprite: game.images.dadSprite,
+        conversation: 'dad'
+      }
+    ];
+
+    // Set player start position (by the bed)
+    if (game.interactiveObjects.length > 0) {
+      const bed = game.interactiveObjects[0];
+      game.player.x = bed.centerX;
+      game.player.y = bed.centerY + 50;
+    }
+
+    gameLoop();
+  }
+
+  // --- Input Handling ---
+  window.addEventListener('keydown', (e) => {
+    game.keys[e.key] = true;
+
+    if (e.key === ' ' || e.key === 'Enter') {
+      e.preventDefault();
+      if (game.inConversation) {
+        advanceConversation();
+      } else {
+        handleInteraction();
+      }
+    }
+  });
+
+  window.addEventListener('keyup', (e) => {
+    game.keys[e.key] = false;
+  });
+
+  // --- Interaction System ---
+  function handleInteraction() {
+    const interactDistance = 30;
+
+    // Check for NPCs
+    for (let npc of game.npcs) {
+      const dx = game.player.x - npc.x;
+      const dy = game.player.y - npc.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < interactDistance + 20) {
+        startConversation(npc.conversation);
+        return;
+      }
+    }
+
+    // Check for interactive objects
+    let checkX = game.player.x;
+    let checkY = game.player.y;
+
+    // Adjust check position based on direction
+    if (game.player.direction === 'up') checkY -= interactDistance;
+    if (game.player.direction === 'down') checkY += interactDistance;
+    if (game.player.direction === 'left') checkX -= interactDistance;
+    if (game.player.direction === 'right') checkX += interactDistance;
+
+    for (let obj of game.interactiveObjects) {
+      const dx = checkX - obj.centerX;
+      const dy = checkY - obj.centerY;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < interactDistance) {
+        if (obj.isDoor) {
+          toggleDoor(obj);
+        } else if (obj.message) {
+          showMessage(obj.message);
+        }
+        return;
+      }
+    }
+  }
+
+  function toggleDoor(doorObj) {
+    if (game.doors[doorObj.name]) {
+      game.doors[doorObj.name].open = !game.doors[doorObj.name].open;
+      const status = game.doors[doorObj.name].open ? 'opened' : 'closed';
+      showMessage(`${doorObj.name} ${status}.`);
+    }
+  }
+
+  function showMessage(message) {
+    gameUI.textContent = message;
+    gameUI.style.display = 'block';
+    setTimeout(() => {
+      gameUI.style.display = 'none';
+    }, 2000);
+  }
+
+  // --- Conversation System ---
+  function startConversation(conversationId) {
+    game.inConversation = true;
+    game.currentConversation = CONVERSATIONS[conversationId];
+    game.conversationIndex = 0;
+
+    convoOverlay.style.backgroundImage = `url(${getCdnUrl('house_convo.png')})`;
+    convoOverlay.style.display = 'flex';
+
+    displayConversationLine();
+  }
+
+  function displayConversationLine() {
+    if (!game.currentConversation || game.conversationIndex >= game.currentConversation.length) {
+      endConversation();
+      return;
+    }
+
+    const line = game.currentConversation[game.conversationIndex];
+    convoText.textContent = line.text;
+
+    let portraitSrc = '';
+    if (line.speaker === 'mom') portraitSrc = getCdnUrl('mom-convo.png');
+    else if (line.speaker === 'dad') portraitSrc = getCdnUrl('dad-convo.png');
+    else if (line.speaker === 'me') portraitSrc = getCdnUrl('me-convo.png');
+
+    convoPortrait.src = portraitSrc;
+  }
+
+  function advanceConversation() {
+    game.conversationIndex++;
+    displayConversationLine();
+  }
+
+  function endConversation() {
+    game.inConversation = false;
+    game.currentConversation = null;
+    game.conversationIndex = 0;
+    convoOverlay.style.display = 'none';
+  }
+
+  // --- Player Movement ---
+  function updatePlayer() {
+    if (game.inConversation) return;
+
+    game.player.moving = false;
+    let newX = game.player.x;
+    let newY = game.player.y;
+
+    if (game.keys['ArrowUp'] || game.keys['w']) {
+      newY -= game.player.speed;
+      game.player.direction = 'up';
+      game.player.moving = true;
+    }
+    if (game.keys['ArrowDown'] || game.keys['s']) {
+      newY += game.player.speed;
+      game.player.direction = 'down';
+      game.player.moving = true;
+    }
+    if (game.keys['ArrowLeft'] || game.keys['a']) {
+      newX -= game.player.speed;
+      game.player.direction = 'left';
+      game.player.moving = true;
+    }
+    if (game.keys['ArrowRight'] || game.keys['d']) {
+      newX += game.player.speed;
+      game.player.direction = 'right';
+      game.player.moving = true;
+    }
+
+    // Check collision with doors
+    let canMove = true;
+    for (let obj of game.interactiveObjects) {
+      if (obj.isDoor && !game.doors[obj.name].open) {
+        // Check if player would collide with closed door
+        if (newX >= obj.x - game.player.width/2 && newX <= obj.x + obj.width + game.player.width/2 &&
+            newY >= obj.y - game.player.height/2 && newY <= obj.y + obj.height + game.player.height/2) {
+          canMove = false;
+          break;
+        }
+      }
+    }
+
+    // Check collision with walls
+    if (canMove) {
+      const points = [
+        { x: newX - 12, y: newY },
+        { x: newX + 12, y: newY },
+        { x: newX, y: newY - 20 },
+        { x: newX, y: newY + 10 }
+      ];
+
+      for (let point of points) {
+        if (isCollision(point.x, point.y)) {
+          canMove = false;
+          break;
+        }
+      }
+    }
+
+    if (canMove) {
+      game.player.x = newX;
+      game.player.y = newY;
+    }
+
+    // Update animation
+    if (game.player.moving) {
+      game.player.frameTimer++;
+      if (game.player.frameTimer >= game.player.frameDelay) {
+        game.player.frameTimer = 0;
+        game.player.frame = (game.player.frame + 1) % 4;
+      }
+    } else {
+      game.player.frame = 0;
+      game.player.frameTimer = 0;
+    }
+
+    // Update camera
+    game.camera.x = game.player.x - canvas.width / 2;
+    game.camera.y = game.player.y - canvas.height / 2;
+  }
+
+  // --- Rendering ---
+  function render() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw map
+    if (game.images.map) {
+      ctx.drawImage(game.images.map, -game.camera.x, -game.camera.y);
+    }
+
+    // Draw NPCs
+    for (let npc of game.npcs) {
+      if (npc.sprite) {
+        ctx.drawImage(
+          npc.sprite,
+          npc.x - game.camera.x - npc.width/2,
+          npc.y - game.camera.y - npc.height,
+          npc.width,
+          npc.height
+        );
+      }
+    }
+
+    // Draw player
+    if (game.images.playerSheet) {
+      const spriteWidth = 64;
+      const spriteHeight = 64;
+      let row = 0;
+
+      if (game.player.direction === 'down') row = 0;
+      else if (game.player.direction === 'left') row = 1;
+      else if (game.player.direction === 'right') row = 2;
+      else if (game.player.direction === 'up') row = 3;
+
+      ctx.drawImage(
+        game.images.playerSheet,
+        game.player.frame * spriteWidth,
+        row * spriteHeight,
+        spriteWidth,
+        spriteHeight,
+        game.player.x - game.camera.x - game.player.width/2,
+        game.player.y - game.camera.y - game.player.height,
+        game.player.width,
+        game.player.height
+      );
+    }
+  }
+
+  // --- Game Loop ---
+  function gameLoop() {
+    updatePlayer();
+    render();
+    requestAnimationFrame(gameLoop);
+  }
+
+  // --- Start ---
+  loadImages();
+})();
+</script>
