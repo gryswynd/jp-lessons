@@ -145,6 +145,16 @@ window.LessonModule = {
         return `https://raw.githubusercontent.com/${REPO_CONFIG.owner}/${REPO_CONFIG.repo}/${REPO_CONFIG.branch}/${REPO_CONFIG.path ? REPO_CONFIG.path + '/' : ''}${filename}`;
     }
 
+    // TTS Helper
+    function speak(text) {
+        if (!window.speechSynthesis) return;
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(text);
+        u.lang = 'ja-JP';
+        u.rate = 1.0;
+        window.speechSynthesis.speak(u);
+    }
+
     // --- Conjugation Logic ---
     const GODAN_MAPS = {
         u_to_i: { 'う': 'い', 'く': 'き', 'ぐ': 'ぎ', 'す': 'し', 'つ': 'ち', 'ぬ': 'に', 'ぶ': 'び', 'む': 'み', 'る': 'り' },
@@ -253,15 +263,30 @@ window.LessonModule = {
         modalOverlay.querySelector('.jp-close-btn').onclick = close;
     }
 
-    // UPDATED: CONDITIONAL FLAGGING (enableFlag = true/false)
+    // UPDATED: CONDITIONAL FLAGGING & TTS
     window.JP_OPEN_TERM = function(id, enableFlag = true) {
         const t = termMapData[id];
         if (!t) return;
 
-        // 1. Render Modal Info
-        document.getElementById('jp-m-title').innerHTML = t.surface;
+        // 1. Render Modal Info with Speaker
+        const textToSpeak = t.reading || t.surface;
+        
+        const titleHtml = `
+            <div style="display:flex; align-items:center; justify-content:center; gap:10px;">
+                <span>${t.surface}</span>
+                <button id="jp-m-speak-btn" style="background:none; border:none; cursor:pointer; font-size:1.5rem; opacity:0.8;">🔊</button>
+            </div>
+        `;
+
+        document.getElementById('jp-m-title').innerHTML = titleHtml;
         document.getElementById('jp-m-meta').innerText = t.reading + (t.meaning ? ` • ${t.meaning.replace(/<[^>]*>/g, '')}` : "");
         document.getElementById('jp-m-notes').innerText = t.notes || "";
+
+        // Attach Click Event for Speaker
+        document.getElementById('jp-m-speak-btn').onclick = function(e) {
+            e.stopPropagation();
+            speak(textToSpeak);
+        };
 
         const msgBox = document.querySelector('.jp-auto-flag-msg');
 
