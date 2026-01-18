@@ -189,8 +189,8 @@ window.GameModule = (function() {
       player: {
         x: 200,
         y: 200,
-        width: 48,
-        height: 64,
+        width: 72,
+        height: 96,
         speed: 2,
         direction: 'down',
         frame: 0,
@@ -429,11 +429,11 @@ window.GameModule = (function() {
       game.npcs.forEach(npc => {
         if (npc.sprite && npc.sprite.complete) {
           const aspectRatio = npc.sprite.width / npc.sprite.height;
-          npc.height = 60;
+          npc.height = 90;
           npc.width = npc.height * aspectRatio;
         } else {
-          npc.width = 40;
-          npc.height = 60;
+          npc.width = 60;
+          npc.height = 90;
         }
       });
 
