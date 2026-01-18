@@ -687,8 +687,8 @@ window.GameModule = (function() {
 
         // Draw player
         if (game.images.playerSheet) {
-          const spriteWidth = 64;
-          const spriteHeight = 64;
+          const spriteWidth = 306;
+          const spriteHeight = 293;
           let row = 0;
 
           if (game.player.direction === 'down') row = 0;
