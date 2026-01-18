@@ -189,8 +189,8 @@ window.GameModule = (function() {
       player: {
         x: 200,
         y: 200,
-        width: 32,
-        height: 48,
+        width: 48,
+        height: 64,
         speed: 2,
         direction: 'down',
         frame: 0,
@@ -407,27 +407,35 @@ window.GameModule = (function() {
         }
       });
 
-      // Place NPCs
+      // Place NPCs (calculate proper dimensions when images load)
       game.npcs = [
         {
           name: 'mom',
-          x: 600,
-          y: 150,
-          width: 40,
-          height: 60,
+          x: 550,
+          y: 200,
           sprite: game.images.momSprite,
           conversation: 'mom'
         },
         {
           name: 'dad',
-          x: 520,
-          y: 420,
-          width: 40,
-          height: 60,
+          x: 450,
+          y: 450,
           sprite: game.images.dadSprite,
           conversation: 'dad'
         }
       ];
+
+      // Set NPC dimensions based on sprite aspect ratio
+      game.npcs.forEach(npc => {
+        if (npc.sprite && npc.sprite.complete) {
+          const aspectRatio = npc.sprite.width / npc.sprite.height;
+          npc.height = 60;
+          npc.width = npc.height * aspectRatio;
+        } else {
+          npc.width = 40;
+          npc.height = 60;
+        }
+      });
 
       // Set player start position (by the bed)
       if (game.interactiveObjects.length > 0) {
@@ -467,8 +475,8 @@ window.GameModule = (function() {
       };
 
       // --- Interaction System ---
-      function handleInteraction() {
-        const interactDistance = 30;
+      function getNearbyInteractable() {
+        const interactDistance = 50;
 
         // Check for NPCs
         for (let npc of game.npcs) {
@@ -477,12 +485,11 @@ window.GameModule = (function() {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < interactDistance + 20) {
-            startConversation(npc.conversation);
-            return;
+            return { type: 'npc', target: npc };
           }
         }
 
-        // Check for interactive objects
+        // Check for interactive objects in direction player is facing
         let checkX = game.player.x;
         let checkY = game.player.y;
 
@@ -497,12 +504,24 @@ window.GameModule = (function() {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < interactDistance) {
-            if (obj.isDoor) {
-              toggleDoor(obj);
-            } else if (obj.message) {
-              showMessage(obj.message);
-            }
-            return;
+            return { type: 'object', target: obj };
+          }
+        }
+
+        return null;
+      }
+
+      function handleInteraction() {
+        const nearby = getNearbyInteractable();
+        if (!nearby) return;
+
+        if (nearby.type === 'npc') {
+          startConversation(nearby.target.conversation);
+        } else if (nearby.type === 'object') {
+          if (nearby.target.isDoor) {
+            toggleDoor(nearby.target);
+          } else if (nearby.target.message) {
+            showMessage(nearby.target.message);
           }
         }
       }
@@ -688,6 +707,28 @@ window.GameModule = (function() {
             game.player.width,
             game.player.height
           );
+        }
+
+        // Draw interaction indicator
+        if (!game.inConversation) {
+          const nearby = getNearbyInteractable();
+          if (nearby) {
+            const targetX = nearby.type === 'npc' ? nearby.target.x : nearby.target.centerX;
+            const targetY = nearby.type === 'npc' ? nearby.target.y - nearby.target.height - 10 : nearby.target.centerY - 30;
+
+            const screenX = targetX - game.camera.x;
+            const screenY = targetY - game.camera.y;
+
+            // Draw prompt
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+            ctx.fillRect(screenX - 50, screenY - 20, 100, 25);
+
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 14px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('Press SPACE', screenX, screenY - 7.5);
+          }
         }
       }
 
