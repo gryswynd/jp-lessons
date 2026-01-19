@@ -418,8 +418,8 @@ window.GameModule = (function() {
         },
         {
           name: 'dad',
-          x: 600,
-          y: 680,
+          x: 610,
+          y: 690,
           sprite: game.images.dadSprite,
           conversation: 'dad'
         }
@@ -429,11 +429,11 @@ window.GameModule = (function() {
       game.npcs.forEach(npc => {
         if (npc.sprite && npc.sprite.complete) {
           const aspectRatio = npc.sprite.width / npc.sprite.height;
-          npc.height = 90;
+          npc.height = 108;
           npc.width = npc.height * aspectRatio;
         } else {
-          npc.width = 60;
-          npc.height = 90;
+          npc.width = 72;
+          npc.height = 108;
         }
       });
 
