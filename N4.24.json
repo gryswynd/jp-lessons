@@ -1,0 +1,642 @@
+{
+  "id": "N4.24",
+  "title": "Phase 4 Lesson 24: Education & Experience",
+  "meta": {
+    "phase": 4,
+    "lesson": 24,
+    "focus": "School related terms, testing, and trying things out.",
+    "kanji": [
+      "教",
+      "室",
+      "試",
+      "験"
+    ]
+  },
+  "newKanji": [
+    {
+      "kanji": "教",
+      "on": "きょう",
+      "kun": "おし",
+      "meaning": "Teach / Faith",
+      "termId": "k_kyou"
+    },
+    {
+      "kanji": "室",
+      "on": "しつ",
+      "kun": "むろ",
+      "meaning": "Room",
+      "termId": "k_shitsu"
+    },
+    {
+      "kanji": "試",
+      "on": "し",
+      "kun": "こころ / ため",
+      "meaning": "Test / Try",
+      "termId": "k_shi_3"
+    },
+    {
+      "kanji": "験",
+      "on": "けん",
+      "kun": "",
+      "meaning": "Verification / Effect",
+      "termId": "k_ken"
+    }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "Warm-Up Review（ウォームアップ）",
+      "instructions": "Ask your partner these questions using words you already know:",
+      "items": [
+        {
+          "jp": "きのうは 勉強しましたか。",
+          "en": "Did you study yesterday?",
+          "terms": [
+            "v_kinou",
+            { "id": "v_benkyou", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "学校は 広いですか。",
+          "en": "Is the school spacious?",
+          "terms": [
+            "v_gakkou",
+            "v_hiroi"
+          ]
+        },
+        {
+          "jp": "手紙を 書くのが 好きですか。",
+          "en": "Do you like writing letters?",
+          "terms": [
+            "v_tegami",
+            "v_kaku",
+            "v_suki"
+          ]
+        },
+        {
+          "jp": "楽しい 音楽を 聞きましたか。",
+          "en": "Did you listen to fun music?",
+          "terms": [
+            "v_tanoshii",
+            "v_ongaku",
+            { "id": "v_kiku", "form": "polite_mashita" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "New Kanji（新しい 漢字）",
+      "items": [
+        {
+          "kanji": "教",
+          "on": "きょう",
+          "kun": "おし",
+          "meaning": "Teach",
+          "terms": [
+            "k_kyou",
+            "v_oshieru",
+            "v_kyoushitsu"
+          ]
+        },
+        {
+          "kanji": "室",
+          "on": "しつ",
+          "kun": "むろ",
+          "meaning": "Room",
+          "terms": [
+            "k_shitsu",
+            "v_kyoushitsu",
+            "v_chikaishitsu"
+          ]
+        },
+        {
+          "kanji": "試",
+          "on": "し",
+          "kun": "こころ",
+          "meaning": "Test/Try",
+          "terms": [
+            "k_shi_3",
+            "v_shiken",
+            "v_shishoku"
+          ]
+        },
+        {
+          "kanji": "験",
+          "on": "けん",
+          "kun": "",
+          "meaning": "Verification",
+          "terms": [
+            "k_ken",
+            "v_shiken",
+            "v_taiken"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "Vocabulary & Compounds（ことば）",
+      "groups": [
+        {
+          "label": "Education",
+          "items": [
+            "v_oshieru",
+            "v_kyoushitsu",
+            "v_shiken"
+          ]
+        },
+        {
+          "label": "Experience & Action",
+          "items": [
+            "v_shishoku",
+            "v_taiken"
+          ]
+        },
+        {
+          "label": "Places",
+          "items": [
+            "v_chikaishitsu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 1（会話）: The Classroom",
+      "context": "At school.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "教室は どこですか。",
+          "en": "Where is the classroom?",
+          "terms": [
+            "v_kyoushitsu",
+            "v_doko"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "学校の 中に あります。今日は 試験ですね。",
+          "en": "It is inside the school. Today is an exam, isn't it?",
+          "terms": [
+            "v_gakkou",
+            "k_naka",
+            { "id": "v_aru", "form": "polite_masu" },
+            "v_kyou",
+            "v_shiken"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "はい。きのう たくさん 勉強しました。",
+          "en": "Yes. I studied a lot yesterday.",
+          "terms": [
+            "v_kinou",
+            "v_takusan",
+            { "id": "v_benkyou", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "がんばりましょう。",
+          "en": "Let's do our best.",
+          "terms": [
+            { "id": "v_ganbaru", "form": "polite_volitional_mashou" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 2（会話）: Teaching",
+      "context": "Asking for instruction.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "私に 日本語を 教えて ください。",
+          "en": "Please teach me Japanese.",
+          "terms": [
+            "k_watashi",
+            "v_nihongo",
+            { "id": "v_oshieru", "form": "te_form" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "いいですよ。漢字は むずかしいですか。",
+          "en": "Sure. Is Kanji difficult?",
+          "terms": [
+            "v_ii",
+            "v_kanji",
+            "v_muzukashii"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "はい、少し。でも、おもしろいです。",
+          "en": "Yes, a little. But it is interesting.",
+          "terms": [
+            "v_sukoshi",
+            "v_omoshiroi"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "じゃあ、この 本で 勉強しましょう。",
+          "en": "Then, let's study with this book.",
+          "terms": [
+            "k_hon",
+            { "id": "v_benkyou", "form": "polite_volitional_mashou" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 3（会話）: Tasting",
+      "context": "At a food shop.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "ここで 試食が できますよ。",
+          "en": "You can do a food tasting here.",
+          "terms": [
+            "k_koko",
+            "v_shishoku",
+            { "id": "v_dekiru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "これは 何の 肉ですか。",
+          "en": "What meat is this?",
+          "terms": [
+            "k_nani",
+            "v_niku"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "鳥肉です。おいしいですよ。",
+          "en": "It is chicken. It is delicious.",
+          "terms": [
+            "v_toriniku",
+            "v_oishii"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "いい 体験ですね。",
+          "en": "That is a good experience.",
+          "terms": [
+            "v_ii",
+            "v_taiken"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 4（会話）: A Trip",
+      "context": "Talking about a trip.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "きのう、山へ 行きました。",
+          "en": "Yesterday, I went to the mountain.",
+          "terms": [
+            "v_kinou",
+            "k_yama",
+            { "id": "v_iku", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "寒かったですか。",
+          "en": "Was it cold?",
+          "terms": [
+            { "id": "v_samui", "form": "polite_past_adj" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "はい。でも、いい 体験でした。",
+          "en": "Yes. But it was a good experience.",
+          "terms": [
+            "v_ii",
+            "v_taiken"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "私も 行きたいです。",
+          "en": "I want to go too.",
+          "terms": [
+            "k_watashi",
+            { "id": "v_iku", "form": "desire_tai" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 1: English Study",
+      "passage": [
+        {
+          "jp": "先週、新しい 教室で 英語を 勉強しました。",
+          "en": "Last week, I studied English in a new classroom.",
+          "terms": [
+            "v_senshuu",
+            "v_atarashii",
+            "v_kyoushitsu",
+            "v_eigo",
+            { "id": "v_benkyou", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "先生は 親切で、おもしろかったです。",
+          "en": "The teacher was kind and interesting.",
+          "terms": [
+            "v_sensei",
+            { "id": "v_shinsetsu", "form": "te_form" },
+            { "id": "v_omoshiroi", "form": "polite_past_adj" }
+          ]
+        },
+        {
+          "jp": "英語の 後で、少し 試食を しました。",
+          "en": "After English, we did a little food tasting.",
+          "terms": [
+            "v_eigo",
+            "k_ushiro",
+            "v_sukoshi",
+            "v_shishoku",
+            { "id": "v_suru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "楽しい 体験でした。",
+          "en": "It was a fun experience.",
+          "terms": [
+            "v_tanoshii",
+            "v_taiken"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "どこで 英語を 勉強しましたか。",
+          "a": "新しい 教室で 勉強しました。",
+          "terms": [
+            "v_doko",
+            "v_eigo",
+            "v_benkyou",
+            "v_atarashii",
+            "v_kyoushitsu"
+          ]
+        },
+        {
+          "q": "先生は どうでしたか。",
+          "a": "親切で、おもしろかったです。",
+          "terms": [
+            "v_sensei",
+            "v_shinsetsu",
+            "v_omoshiroi"
+          ]
+        },
+        {
+          "q": "英語の 後で 何を しましたか。",
+          "a": "試食を しました。",
+          "terms": [
+            "v_eigo",
+            "k_ushiro",
+            "k_nani",
+            "v_suru",
+            "v_shishoku"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: The Exam",
+      "passage": [
+        {
+          "jp": "あしたは 大切な 試験が あります。",
+          "en": "Tomorrow there is an important exam.",
+          "terms": [
+            "v_ashita",
+            "v_taisetsu",
+            "v_shiken",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "今夜は 地下室で 勉強します。",
+          "en": "Tonight I will study in the basement.",
+          "terms": [
+            "v_konya",
+            "v_chikaishitsu",
+            { "id": "v_benkyou", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "大切ですから、がんばります。",
+          "en": "Because it is important, I will do my best.",
+          "terms": [
+            "v_taisetsu",
+            { "id": "v_ganbaru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "試験は 午前 九時に 始まります。",
+          "en": "The exam begins at 9:00 AM.",
+          "terms": [
+            "v_shiken",
+            "v_gozen",
+            "v_kuji",
+            { "id": "v_hajimaru", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "あしたは 何が ありますか。",
+          "a": "大切な 試験が あります。",
+          "terms": [
+            "v_ashita",
+            "k_nani",
+            "v_aru",
+            "v_taisetsu",
+            "v_shiken"
+          ]
+        },
+        {
+          "q": "どこで 勉強しますか。",
+          "a": "地下室で 勉強します。",
+          "terms": [
+            "v_doko",
+            "v_benkyou",
+            "v_chikaishitsu"
+          ]
+        },
+        {
+          "q": "試験は 何時に 始まりますか。",
+          "a": "午前 九時に 始まります。",
+          "terms": [
+            "v_shiken",
+            "v_nanji",
+            "v_hajimaru",
+            "v_gozen",
+            "v_kuji"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Vocabulary",
+      "instructions": "Select the correct reading or meaning.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "教室",
+          "choices": [
+            "kyoushitsu",
+            "kyouiku",
+            "kyoukai",
+            "kyoushi"
+          ],
+          "answer": "kyoushitsu",
+          "terms": [
+            "v_kyoushitsu"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "教える",
+          "choices": [
+            "kangaeru",
+            "oshieru",
+            "oboeru",
+            "kazoeru"
+          ],
+          "answer": "oshieru",
+          "terms": [
+            "v_oshieru"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "試験",
+          "choices": [
+            "jiken",
+            "shiken",
+            "taiken",
+            "bouken"
+          ],
+          "answer": "shiken",
+          "terms": [
+            "v_shiken"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "試食",
+          "choices": [
+            "Food sampling",
+            "Cooking",
+            "Buying food",
+            "Selling food"
+          ],
+          "answer": "Food sampling",
+          "terms": [
+            "v_shishoku"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "体験",
+          "choices": [
+            "Exercise",
+            "Experience",
+            "Experiment",
+            "Explanation"
+          ],
+          "answer": "Experience",
+          "terms": [
+            "v_taiken"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Fill in the Blank",
+      "instructions": "Select the word that fits.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "先生は 日本語を ______ 。",
+          "choices": [
+            "教えました",
+            "教わりました",
+            "教室しました",
+            "試験しました"
+          ],
+          "answer": "教えました",
+          "terms": [
+            "v_sensei",
+            "v_nihongo",
+            { "id": "v_oshieru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "あしたの ______ のために 勉強します。",
+          "choices": [
+            "試験",
+            "教え",
+            "地下室",
+            "試食"
+          ],
+          "answer": "試験",
+          "terms": [
+            "v_ashita",
+            "v_benkyou"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "デパートで ケーキの ______ を しました。",
+          "choices": [
+            "試食",
+            "教え",
+            "試験",
+            "教室"
+          ],
+          "answer": "試食",
+          "terms": [
+            "v_keeki",
+            "v_suru"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "それは 良い ______ でしたね。",
+          "choices": [
+            "体験",
+            "体調",
+            "体育",
+            "体重"
+          ],
+          "answer": "体験",
+          "terms": [
+            "v_yoi",
+            "v_taiken"
+          ]
+        }
+      ]
+    }
+  ]
+}
