@@ -96,6 +96,7 @@
           "terms": [
             "k_kyou_2",
             "v_oshieru",
+            "v_oshie",
             "v_kyoushitsu"
           ]
         },
@@ -142,6 +143,7 @@
           "label": "Education",
           "items": [
             "v_oshieru",
+            "v_oshie",
             "v_kyoushitsu",
             "v_shiken"
           ]
@@ -246,7 +248,7 @@
           "jp": "じゃあ、この 本で 勉強しましょう。",
           "en": "Then, let's study with this book.",
           "terms": [
-            "k_hon",
+            "k_moto",
             { "id": "v_benkyou", "form": "polite_volitional_mashou" }
           ]
         }
@@ -273,7 +275,7 @@
           "en": "What meat is this?",
           "terms": [
             "k_nani",
-            "v_niku"
+            "k_niku"
           ]
         },
         {
@@ -593,7 +595,7 @@
         },
         {
           "kind": "mcq",
-          "q": "あしたの ______ のために 勉強します。",
+          "q": "明日の ______ のために 勉強します。",
           "choices": [
             "試験",
             "教え",
