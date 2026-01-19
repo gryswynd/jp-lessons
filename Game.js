@@ -411,15 +411,15 @@ window.GameModule = (function() {
       game.npcs = [
         {
           name: 'mom',
-          x: 770,
+          x: 970,
           y: 330,
           sprite: game.images.momSprite,
           conversation: 'mom'
         },
         {
           name: 'dad',
-          x: 550,
-          y: 530,
+          x: 600,
+          y: 680,
           sprite: game.images.dadSprite,
           conversation: 'dad'
         }
