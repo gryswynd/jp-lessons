@@ -95,47 +95,81 @@ window.GameModule = (function() {
           background-size: cover;
           background-position: center;
           display: none;
-          flex-direction: column;
-          justify-content: flex-end;
-          padding: 20px;
+          flex-direction: row;
+          align-items: stretch;
+          padding: 0;
         }
         .jp-convo-container {
           display: flex;
-          gap: 20px;
+          flex-direction: row;
+          width: 100%;
+          height: 100%;
           align-items: flex-end;
-          background: rgba(0,0,0,0.3);
-          padding: 20px;
-          border-radius: 12px;
+          justify-content: space-between;
+          padding: 30px;
+          gap: 30px;
         }
         .jp-speech-bubble {
           flex: 1;
+          max-width: 55%;
           background: white;
-          border-radius: 20px;
-          padding: 20px;
+          border: 4px solid #2f3542;
+          border-radius: 30px;
+          padding: 30px 35px;
           position: relative;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-          min-height: 100px;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.4), inset 0 2px 0 rgba(255,255,255,0.8);
+          min-height: 180px;
           display: flex;
           flex-direction: column;
           justify-content: center;
+          margin-bottom: 40px;
+          align-self: flex-end;
+        }
+        .jp-speech-bubble::after {
+          content: '';
+          position: absolute;
+          bottom: -30px;
+          right: 80px;
+          width: 0;
+          height: 0;
+          border-left: 40px solid transparent;
+          border-right: 20px solid transparent;
+          border-top: 35px solid #2f3542;
+        }
+        .jp-speech-bubble::before {
+          content: '';
+          position: absolute;
+          bottom: -22px;
+          right: 85px;
+          width: 0;
+          height: 0;
+          border-left: 35px solid transparent;
+          border-right: 15px solid transparent;
+          border-top: 28px solid white;
+          z-index: 1;
         }
         .jp-speech-bubble .text {
-          font-size: 16px;
-          line-height: 1.6;
+          font-size: 18px;
+          line-height: 1.7;
           color: #2f3542;
           white-space: pre-line;
+          font-weight: 500;
         }
         .jp-speech-bubble .continue {
-          margin-top: 10px;
-          font-size: 12px;
-          color: #888;
+          margin-top: 15px;
+          font-size: 13px;
+          color: #666;
           text-align: right;
+          font-style: italic;
         }
         .jp-character-portrait {
-          width: 200px;
-          height: auto;
-          border-radius: 12px;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+          width: auto;
+          height: 90%;
+          max-height: 540px;
+          object-fit: contain;
+          object-position: bottom right;
+          align-self: flex-end;
+          filter: drop-shadow(0 10px 25px rgba(0,0,0,0.5));
         }
         .jp-game-loading {
           text-align: center;
