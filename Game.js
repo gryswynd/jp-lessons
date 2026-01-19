@@ -104,9 +104,10 @@ window.GameModule = (function() {
           flex-direction: row;
           width: 100%;
           height: 100%;
-          align-items: flex-end;
+          align-items: flex-start;
           justify-content: space-between;
           padding: 30px;
+          padding-top: calc(33.33vh);
           gap: 30px;
         }
         .jp-speech-bubble {
@@ -122,8 +123,8 @@ window.GameModule = (function() {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          margin-bottom: 40px;
-          align-self: flex-end;
+          margin-bottom: 0;
+          align-self: flex-start;
         }
         .jp-speech-bubble::after {
           content: '';
