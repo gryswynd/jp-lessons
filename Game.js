@@ -419,7 +419,7 @@ window.GameModule = (function() {
         {
           name: 'dad',
           x: 600,
-          y: 545,
+          y: 680,
           sprite: game.images.dadSprite,
           conversation: 'dad'
         }
