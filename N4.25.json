@@ -1,0 +1,644 @@
+{
+  "id": "N4.25",
+  "title": "Phase 4 Lesson 25: Research & Literature",
+  "meta": {
+    "phase": 4,
+    "lesson": 25,
+    "focus": "Academic research, literature, ordering, and paying attention.",
+    "kanji": [
+      "文",
+      "注",
+      "研",
+      "究"
+    ]
+  },
+  "newKanji": [
+    {
+      "kanji": "文",
+      "on": "ぶん / もん",
+      "kun": "ふみ",
+      "meaning": "Sentence / Literature / Style",
+      "termId": "k_bun"
+    },
+    {
+      "kanji": "注",
+      "on": "ちゅう",
+      "kun": "そそ",
+      "meaning": "Pour / Note",
+      "termId": "k_chuu"
+    },
+    {
+      "kanji": "研",
+      "on": "けん",
+      "kun": "と",
+      "meaning": "Polish / Study",
+      "termId": "k_ken_2"
+    },
+    {
+      "kanji": "究",
+      "on": "きゅう",
+      "kun": "きわ",
+      "meaning": "Research / Master",
+      "termId": "k_kyuu"
+    }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "Warm-Up Review（ウォームアップ）",
+      "instructions": "Ask your partner these questions using words you already know:",
+      "items": [
+        {
+          "jp": "図書館で 勉強しますか。",
+          "en": "Do you study at the library?",
+          "terms": [
+            "v_toshokan",
+            { "id": "v_benkyou", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "英語を 教えますか。",
+          "en": "Do you teach English?",
+          "terms": [
+            "v_eigo",
+            { "id": "v_oshieru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "質問が ありますか。",
+          "en": "Do you have a question?",
+          "terms": [
+            "v_shitsumon",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "手紙を 書きましたか。",
+          "en": "Did you write a letter?",
+          "terms": [
+            "v_tegami",
+            { "id": "v_kaku", "form": "polite_mashita" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "New Kanji（新しい 漢字）",
+      "items": [
+        {
+          "kanji": "文",
+          "on": "ぶん / もん",
+          "kun": "ふみ",
+          "meaning": "Sentence/Lit",
+          "terms": [
+            "k_bun",
+            "v_bungaku",
+            "v_sakubun"
+          ]
+        },
+        {
+          "kanji": "注",
+          "on": "ちゅう",
+          "kun": "そそ",
+          "meaning": "Pour/Note",
+          "terms": [
+            "k_chuu",
+            "v_chuui",
+            "v_sosogu"
+          ]
+        },
+        {
+          "kanji": "研",
+          "on": "けん",
+          "kun": "と",
+          "meaning": "Polish/Study",
+          "terms": [
+            "k_ken_2",
+            "v_kenkyuu"
+          ]
+        },
+        {
+          "kanji": "究",
+          "on": "きゅう",
+          "kun": "きわ",
+          "meaning": "Research",
+          "terms": [
+            "k_kyuu",
+            "v_kenkyuu",
+            "v_kyuumei"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "Vocabulary & Compounds（ことば）",
+      "groups": [
+        {
+          "label": "Research & Literature",
+          "items": [
+            "v_kenkyuu",
+            "v_kenkyuusha",
+            "v_bungaku",
+            "v_bungakusha",
+            "v_gakkyuu",
+            "v_kyuumei"
+          ]
+        },
+        {
+          "label": "Writing & Documents",
+          "items": [
+            "v_bunsho",
+            "v_sakubun",
+            "v_eibun"
+          ]
+        },
+        {
+          "label": "Action & Attention",
+          "items": [
+            "v_chuumon",
+            "v_sosogu",
+            "v_chuui",
+            "v_chuushin"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 1（会話）: The Researcher",
+      "context": "Talking about professions.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "お仕事は 何ですか。",
+          "en": "What is your job?",
+          "terms": [
+            "v_shigoto",
+            "k_nani"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "私は 文学の 研究者です。",
+          "en": "I am a literature researcher.",
+          "terms": [
+            "k_watashi",
+            "v_bungaku",
+            "v_kenkyuusha"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "すごいですね。何を 研究して いますか。",
+          "en": "That's amazing. What are you researching?",
+          "terms": [
+            "k_nani",
+            { "id": "v_kenkyuu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "日本の 古い 文書を 研究して います。",
+          "en": "I am researching old Japanese documents.",
+          "terms": [
+            "v_nihon",
+            "v_furui",
+            "v_bunsho",
+            { "id": "v_kenkyuu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 2（会話）: At the Restaurant",
+      "context": "Ordering food.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "注文を おねがいします。",
+          "en": "May I order please?",
+          "terms": [
+            "v_chuumon",
+            "v_negai"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。何を 食べますか。",
+          "en": "Yes. What will you eat?",
+          "terms": [
+            "k_nani",
+            { "id": "v_taberu", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "洋食を ください。それから、お茶を 注いで ください。",
+          "en": "Western food, please. Also, please pour some tea.",
+          "terms": [
+            "v_youshoku",
+            "v_ocha",
+            { "id": "v_sosogu", "form": "te_form" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい、急ぎます。",
+          "en": "Yes, I will hurry.",
+          "terms": [
+            { "id": "v_isogu", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 3（会話）: Careful",
+      "context": "Giving a warning.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "暗い 道を 歩くのは むずかしいですよ。",
+          "en": "Walking on dark roads is difficult.",
+          "terms": [
+            "v_kurai",
+            "v_michi",
+            "v_aruku",
+            "v_muzukashii"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "そうですか。何に 注意しますか。",
+          "en": "Is that so? What should I be careful of?",
+          "terms": [
+            "k_nani",
+            { "id": "v_chuui", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "車に 注意して ください。",
+          "en": "Please be careful of cars.",
+          "terms": [
+            "v_kuruma",
+            { "id": "v_chuui", "form": "te_form" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "分かりました。",
+          "en": "I understand.",
+          "terms": [
+            { "id": "v_wakaru", "form": "polite_mashita" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 4（会話）: The Problem",
+      "context": "Discussing an issue.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "新しい 問題が あります。",
+          "en": "There is a new problem.",
+          "terms": [
+            "v_atarashii",
+            "v_mondai",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "問題の 究明が 大切ですね。",
+          "en": "Investigation of the problem is important.",
+          "terms": [
+            "v_mondai",
+            "v_kyuumei",
+            "v_taisetsu"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "はい。先生に 注進しましょう。",
+          "en": "Yes. Let's report to the teacher.",
+          "terms": [
+            "v_sensei",
+            { "id": "v_chuushin", "form": "polite_volitional_mashou" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "そうしましょう。",
+          "en": "Let's do that.",
+          "terms": [
+            { "id": "v_suru", "form": "polite_volitional_mashou" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 1: My Older Brother",
+      "passage": [
+        {
+          "jp": "私の 兄は 大学の 研究者です。",
+          "en": "My older brother is a university researcher.",
+          "terms": [
+            "k_watashi",
+            "k_ani",
+            "v_daigaku",
+            "v_kenkyuusha"
+          ]
+        },
+        {
+          "jp": "毎日 英語の 文書を 読みます。",
+          "en": "He reads English documents every day.",
+          "terms": [
+            "v_mainichi",
+            "v_eigo",
+            "v_bunsho",
+            { "id": "v_yomu", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "英文の 作文も 上手です。",
+          "en": "He is also good at English composition.",
+          "terms": [
+            "v_eibun",
+            "v_sakubun",
+            "v_jouzu"
+          ]
+        },
+        {
+          "jp": "有名な 学究に なりたいそうです。",
+          "en": "It seems he wants to become a famous scholar.",
+          "terms": [
+            "v_yuumei",
+            "v_gakkyuu",
+            { "id": "v_naru", "form": "desire_tai" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "兄の 仕事は 何ですか。",
+          "a": "大学の 研究者です。",
+          "terms": [
+            "k_ani",
+            "v_shigoto",
+            "v_daigaku",
+            "v_kenkyuusha"
+          ]
+        },
+        {
+          "q": "兄は 毎日 何を 読みますか。",
+          "a": "英語の 文書を 読みます。",
+          "terms": [
+            "k_ani",
+            "v_mainichi",
+            "v_eigo",
+            "v_bunsho",
+            "v_yomu"
+          ]
+        },
+        {
+          "q": "兄は 何に なりたいですか。",
+          "a": "有名な 学究に なりたいです。",
+          "terms": [
+            "k_ani",
+            "v_yuumei",
+            "v_gakkyuu",
+            "v_naru"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: A Letter",
+      "passage": [
+        {
+          "jp": "先週、友だちに 手紙を 書きました。",
+          "en": "Last week, I wrote a letter to a friend.",
+          "terms": [
+            "v_senshuu",
+            "v_tomodachi",
+            "v_tegami",
+            { "id": "v_kaku", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "少し 長い 文書でした。",
+          "en": "It was a slightly long document.",
+          "terms": [
+            "v_sukoshi",
+            "v_nagai",
+            "v_bunsho"
+          ]
+        },
+        {
+          "jp": "漢字の 意味に 注意しました。",
+          "en": "I paid attention to the meaning of the Kanji.",
+          "terms": [
+            "v_kanji",
+            "v_imi",
+            { "id": "v_chuui", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "文学が 好きな 友だちですから。",
+          "en": "Because it is a friend who likes literature.",
+          "terms": [
+            "v_bungaku",
+            "v_suki",
+            "v_tomodachi"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "何を 書きましたか。",
+          "a": "手紙を 書きました。",
+          "terms": [
+            "k_nani",
+            "v_kaku",
+            "v_tegami"
+          ]
+        },
+        {
+          "q": "何に 注意しましたか。",
+          "a": "漢字の 意味に 注意しました。",
+          "terms": [
+            "k_nani",
+            "v_chuui",
+            "v_kanji",
+            "v_imi"
+          ]
+        },
+        {
+          "q": "友だちは 何が 好きですか。",
+          "a": "文学が 好きです。",
+          "terms": [
+            "v_tomodachi",
+            "v_suki",
+            "v_bungaku"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Vocabulary",
+      "instructions": "Select the correct reading or meaning.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "注文",
+          "choices": [
+            "chuumon",
+            "sakubun",
+            "bunsho",
+            "chuu"
+          ],
+          "answer": "chuumon",
+          "terms": [
+            "v_chuumon"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "研究",
+          "choices": [
+            "kenkyuu",
+            "jikken",
+            "taiken",
+            "shiken"
+          ],
+          "answer": "kenkyuu",
+          "terms": [
+            "v_kenkyuu"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "文学",
+          "choices": [
+            "bungaku",
+            "mongaku",
+            "mojikaku",
+            "bunka"
+          ],
+          "answer": "bungaku",
+          "terms": [
+            "v_bungaku"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "注ぐ",
+          "choices": [
+            "to pour",
+            "to drink",
+            "to eat",
+            "to buy"
+          ],
+          "answer": "to pour",
+          "terms": [
+            "v_sosogu"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "注意",
+          "choices": [
+            "caution",
+            "meaning",
+            "opinion",
+            "order"
+          ],
+          "answer": "caution",
+          "terms": [
+            "v_chuui"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Fill in the Blank",
+      "instructions": "Select the word that fits.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "お茶を ______ ください。",
+          "choices": [
+            "注いで",
+            "泳いで",
+            "急いで",
+            "騒いで"
+          ],
+          "answer": "注いで",
+          "terms": [
+            "v_ocha",
+            { "id": "v_sosogu", "form": "te_form" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "大学で 文学を ______ います。",
+          "choices": [
+            "研究して",
+            "注文して",
+            "注意して",
+            "運転して"
+          ],
+          "answer": "研究して",
+          "terms": [
+            "v_daigaku",
+            "v_bungaku",
+            { "id": "v_kenkyuu", "form": "te_form" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "これは 大切な ______ です。",
+          "choices": [
+            "文書",
+            "文化",
+            "文字",
+            "文体"
+          ],
+          "answer": "文書",
+          "terms": [
+            "v_taisetsu",
+            "v_bunsho"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "車の ______ に 注意して ください。",
+          "choices": [
+            "運転",
+            "運動",
+            "運送",
+            "運命"
+          ],
+          "answer": "運転",
+          "terms": [
+            "k_kuruma",
+            "v_unten",
+            "v_chuui"
+          ]
+        }
+      ]
+    }
+  ]
+}
