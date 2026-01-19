@@ -189,6 +189,90 @@ window.GameModule = (function() {
         @keyframes spin {
           to { transform: rotate(360deg); }
         }
+        .jp-touch-controls {
+          position: absolute;
+          bottom: 20px;
+          left: 0;
+          right: 0;
+          display: none;
+          justify-content: space-between;
+          padding: 0 20px;
+          pointer-events: none;
+        }
+        @media (pointer: coarse) {
+          .jp-touch-controls {
+            display: flex;
+          }
+        }
+        .jp-dpad {
+          position: relative;
+          width: 140px;
+          height: 140px;
+          pointer-events: auto;
+        }
+        .jp-dpad-btn {
+          position: absolute;
+          width: 45px;
+          height: 45px;
+          background: rgba(255, 255, 255, 0.3);
+          border: 2px solid rgba(255, 255, 255, 0.5);
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 20px;
+          font-weight: bold;
+          user-select: none;
+          touch-action: none;
+          cursor: pointer;
+        }
+        .jp-dpad-btn:active {
+          background: rgba(255, 255, 255, 0.5);
+          transform: scale(0.95);
+        }
+        .jp-dpad-up {
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .jp-dpad-down {
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .jp-dpad-left {
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .jp-dpad-right {
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .jp-interact-btn {
+          width: 80px;
+          height: 80px;
+          background: rgba(76, 209, 55, 0.8);
+          border: 3px solid rgba(255, 255, 255, 0.8);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 14px;
+          font-weight: bold;
+          user-select: none;
+          touch-action: none;
+          cursor: pointer;
+          pointer-events: auto;
+          align-self: flex-end;
+        }
+        .jp-interact-btn:active {
+          background: rgba(76, 209, 55, 1);
+          transform: scale(0.95);
+        }
       `;
       document.head.appendChild(style);
     }
@@ -361,9 +445,20 @@ window.GameModule = (function() {
           <div class="jp-convo-container">
             <div class="jp-speech-bubble">
               <div class="text" id="convo-text"></div>
-              <div class="continue">Press SPACE to continue</div>
+              <div class="continue">Tap to continue</div>
             </div>
             <img class="jp-character-portrait" id="convo-portrait" src="" alt="">
+          </div>
+        </div>
+        <div class="jp-touch-controls">
+          <div class="jp-dpad">
+            <div class="jp-dpad-btn jp-dpad-up" data-direction="up">▲</div>
+            <div class="jp-dpad-btn jp-dpad-down" data-direction="down">▼</div>
+            <div class="jp-dpad-btn jp-dpad-left" data-direction="left">◀</div>
+            <div class="jp-dpad-btn jp-dpad-right" data-direction="right">▶</div>
+          </div>
+          <div class="jp-interact-btn">
+            <span>TALK</span>
           </div>
         </div>
       `;
@@ -498,6 +593,116 @@ window.GameModule = (function() {
 
       window.addEventListener('keydown', handleKeyDown);
       window.addEventListener('keyup', handleKeyUp);
+
+      // --- Touch Controls ---
+      const dpadButtons = document.querySelectorAll('.jp-dpad-btn');
+      const interactBtn = document.querySelector('.jp-interact-btn');
+
+      // Handle D-pad touches
+      dpadButtons.forEach(btn => {
+        const direction = btn.getAttribute('data-direction');
+
+        // Map directions to key codes
+        const directionKeys = {
+          'up': 'ArrowUp',
+          'down': 'ArrowDown',
+          'left': 'ArrowLeft',
+          'right': 'ArrowRight'
+        };
+
+        const handleTouchStart = (e) => {
+          e.preventDefault();
+          game.keys[directionKeys[direction]] = true;
+        };
+
+        const handleTouchEnd = (e) => {
+          e.preventDefault();
+          game.keys[directionKeys[direction]] = false;
+        };
+
+        btn.addEventListener('touchstart', handleTouchStart, { passive: false });
+        btn.addEventListener('touchend', handleTouchEnd, { passive: false });
+        btn.addEventListener('touchcancel', handleTouchEnd, { passive: false });
+      });
+
+      // Handle interact button
+      const handleInteractTouch = (e) => {
+        e.preventDefault();
+        if (game.inConversation) {
+          advanceConversation();
+        } else {
+          handleInteraction();
+        }
+      };
+
+      interactBtn.addEventListener('touchstart', handleInteractTouch, { passive: false });
+
+      // Handle taps on conversation overlay to advance
+      convoOverlay.addEventListener('touchstart', (e) => {
+        if (game.inConversation && e.target === convoOverlay) {
+          e.preventDefault();
+          advanceConversation();
+        }
+      }, { passive: false });
+
+      // Handle taps directly on canvas (for NPCs and objects)
+      canvas.addEventListener('touchstart', (e) => {
+        if (game.inConversation) return;
+
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+        const touch = e.touches[0];
+        const canvasX = (touch.clientX - rect.left) * scaleX;
+        const canvasY = (touch.clientY - rect.top) * scaleY;
+
+        // Convert to world coordinates
+        const worldX = canvasX + game.camera.x;
+        const worldY = canvasY + game.camera.y;
+
+        // Check if tapped on an NPC
+        for (let npc of game.npcs) {
+          const npcLeft = npc.x - npc.width / 2;
+          const npcRight = npc.x + npc.width / 2;
+          const npcTop = npc.y - npc.height;
+          const npcBottom = npc.y;
+
+          if (worldX >= npcLeft && worldX <= npcRight &&
+              worldY >= npcTop && worldY <= npcBottom) {
+            // Check if player is close enough
+            const dx = game.player.x - npc.x;
+            const dy = game.player.y - npc.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < 100) {
+              startConversation(npc.conversation);
+              e.preventDefault();
+              return;
+            }
+          }
+        }
+
+        // Check if tapped on an interactive object
+        for (let obj of game.interactiveObjects) {
+          if (worldX >= obj.x && worldX <= obj.x + obj.width &&
+              worldY >= obj.y && worldY <= obj.y + obj.height) {
+            // Check if player is close enough
+            const dx = game.player.x - obj.centerX;
+            const dy = game.player.y - obj.centerY;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < 100) {
+              if (obj.isDoor) {
+                toggleDoor(obj);
+              } else if (obj.message) {
+                showMessage(obj.message);
+              }
+              e.preventDefault();
+              return;
+            }
+          }
+        }
+      }, { passive: false });
 
       // Store cleanup function
       game.cleanup = () => {
@@ -761,7 +966,7 @@ window.GameModule = (function() {
             ctx.font = 'bold 14px Arial';
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
-            ctx.fillText('Press SPACE', screenX, screenY - 7.5);
+            ctx.fillText('INTERACT', screenX, screenY - 7.5);
           }
         }
       }
