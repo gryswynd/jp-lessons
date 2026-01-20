@@ -95,6 +95,11 @@ window.JPApp = {
             <div class="jp-menu-title">🎮 House Adventure</div>
             <div class="jp-menu-desc">Interactive Japanese game</div>
         </div>
+
+        <div class="jp-menu-btn" onclick="JPApp.launch('story')">
+            <div class="jp-menu-title">📖 Stories</div>
+            <div class="jp-menu-desc">Read Japanese stories with furigana</div>
+        </div>
       </div>
     `;
 
@@ -133,6 +138,13 @@ window.JPApp = {
          if (!success) return;
       }
       if (window.GameModule) window.GameModule.start(this.container, this.config, onExit);
+    }
+    else if (mode === 'story') {
+      if (!window.StoryModule) {
+         const success = await this.loadModule('Story.js');
+         if (!success) return;
+      }
+      if (window.StoryModule) window.StoryModule.start(this.container, this.config, onExit);
     }
   }
 };
