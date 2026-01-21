@@ -285,7 +285,7 @@
         },
         {
           "spk": "B",
-          "jp": "ありがとう ございます。見方を 正すのは 面白いですよ。",
+          "jp": "ありがとう ございます。見方を 正すのは おもしろいですよ。",
           "en": "Thank you. Correcting one's viewpoint is interesting.",
           "terms": [
             "v_mikata",
@@ -455,7 +455,7 @@
           "en": "I want to live happily every day.",
           "terms": [
             "v_mainichi",
-            "v_tanoshii",
+            { "id": "v_tanoshii", "form": "adverbial" },
             { "id": "v_ikiru", "form": "desire_tai" }
           ]
         }
