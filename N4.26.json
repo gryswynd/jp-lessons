@@ -66,7 +66,7 @@
           ]
         },
         {
-          "jp": "日本語は 難しいですか。",
+          "jp": "日本語は むずかしいですか。",
           "en": "Is Japanese difficult?",
           "terms": [
             "v_nihongo",
@@ -282,6 +282,16 @@
             "v_kangaekata",
             "v_tanoshii"
           ]
+        },
+        {
+          "spk": "B",
+          "jp": "ありがとう ございます。見方を 正すのは 面白いですよ。",
+          "en": "Thank you. Correcting one's viewpoint is interesting.",
+          "terms": [
+            "v_mikata",
+            "v_tadasu",
+            "v_omoshiroi"
+          ]
         }
       ]
     },
@@ -292,10 +302,10 @@
       "lines": [
         {
           "spk": "A",
-          "jp": "あの 方の 名前は 何ですか。",
+          "jp": "あの 人の 名前は 何ですか。",
           "en": "What is that person's name?",
           "terms": [
-            "v_kata",
+            "k_hito",
             "v_namae",
             "k_nani"
           ]
@@ -320,6 +330,15 @@
             "k_hito",
             { "id": "v_iru", "form": "polite_masu" },
             { "id": "v_chuui", "form": "te_form" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。少し 話しましょう。",
+          "en": "Yes. Let's talk a little.",
+          "terms": [
+            "v_sukoshi",
+            { "id": "v_hanasu", "form": "polite_volitional_mashou" }
           ]
         }
       ]
@@ -354,6 +373,16 @@
             "v_seidou",
             "v_aruku",
             "v_taisetsu"
+          ]
+        },
+        {
+          "jp": "私も いい 学生に なります。",
+          "en": "I will also become a good student.",
+          "terms": [
+            "k_watashi",
+            "v_ii",
+            "v_gakusei",
+            { "id": "v_naru", "form": "polite_masu" }
           ]
         }
       ],
@@ -420,6 +449,15 @@
             "v_shigoto",
             { "id": "v_kangaeru", "form": "polite_masu" }
           ]
+        },
+        {
+          "jp": "毎日 楽しく 生きたいです。",
+          "en": "I want to live happily every day.",
+          "terms": [
+            "v_mainichi",
+            "v_tanoshii",
+            { "id": "v_ikiru", "form": "desire_tai" }
+          ]
         }
       ],
       "questions": [
@@ -468,7 +506,6 @@
           ],
           "answer": "tadashii",
           "terms": [
-            "v_tadashii"
           ]
         },
         {
@@ -482,7 +519,6 @@
           ],
           "answer": "shougatsu",
           "terms": [
-            "v_shougatsu"
           ]
         },
         {
@@ -496,7 +532,6 @@
           ],
           "answer": "kangaeru",
           "terms": [
-            "v_kangaeru"
           ]
         },
         {
@@ -510,7 +545,6 @@
           ],
           "answer": "akushitsu",
           "terms": [
-            "v_akushitsu"
           ]
         },
         {
@@ -524,7 +558,6 @@
           ],
           "answer": "mikata",
           "terms": [
-            "v_mikata"
           ]
         }
       ]
