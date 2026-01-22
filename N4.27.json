@@ -1,0 +1,657 @@
+{
+  "id": "N4.27",
+  "title": "Phase 4 Lesson 27: Waiting & Fitting",
+  "meta": {
+    "phase": 4,
+    "lesson": 27,
+    "focus": "Waiting, matching/fitting, evening time, and frequency/degrees.",
+    "kanji": [
+      "待",
+      "合",
+      "夕",
+      "度"
+    ]
+  },
+  "newKanji": [
+    {
+      "kanji": "待",
+      "on": "たい",
+      "kun": "ま",
+      "meaning": "Wait",
+      "termId": "k_machi"
+    },
+    {
+      "kanji": "合",
+      "on": "ごう / がっ / か",
+      "kun": "あ",
+      "meaning": "Fit / Join / Suit",
+      "termId": "k_au"
+    },
+    {
+      "kanji": "夕",
+      "on": "せき",
+      "kun": "ゆう",
+      "meaning": "Evening",
+      "termId": "k_yuu"
+    },
+    {
+      "kanji": "度",
+      "on": "ど / たく",
+      "kun": "たび",
+      "meaning": "Degree / Time / Occurrence",
+      "termId": "k_do"
+    }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "Warm-Up Review（ウォームアップ）",
+      "instructions": "Ask your partner these questions using words you already know:",
+      "items": [
+        {
+          "jp": "正しい 書き方が 分かりますか。",
+          "en": "Do you understand the correct way of writing?",
+          "terms": [
+            "v_tadashii",
+            "v_kata",
+            { "id": "v_wakaru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "悪い 天気の 時、何を しますか。",
+          "en": "What do you do when the weather is bad?",
+          "terms": [
+            "v_warui",
+            "v_tenki",
+            "k_toki",
+            "k_nani"
+          ]
+        },
+        {
+          "jp": "よく 考える 人は 好きですか。",
+          "en": "Do you like people who think often/deeply?",
+          "terms": [
+            "v_yoku",
+            "v_kangaeru",
+            "k_hito",
+            "v_suki"
+          ]
+        },
+        {
+          "jp": "あなたの 考えを 教えて ください。",
+          "en": "Please tell me your thoughts.",
+          "terms": [
+            "v_kangae",
+            { "id": "v_oshieru", "form": "te_form" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "New Kanji（新しい 漢字）",
+      "items": [
+        {
+          "kanji": "待",
+          "on": "たい",
+          "kun": "ま",
+          "meaning": "Wait",
+          "terms": [
+            "k_machi",
+            "v_matsu",
+            "v_machiawase",
+            "v_kokoromachi"
+          ]
+        },
+        {
+          "kanji": "合",
+          "on": "ごう",
+          "kun": "あ",
+          "meaning": "Fit/Join",
+          "terms": [
+            "k_au",
+            "v_au",
+            "v_shiai",
+            "v_kaigou"
+          ]
+        },
+        {
+          "kanji": "夕",
+          "on": "せき",
+          "kun": "ゆう",
+          "meaning": "Evening",
+          "terms": [
+            "k_yuu",
+            "v_yuugata",
+            "v_yuuhan",
+            "v_tanabata"
+          ]
+        },
+        {
+          "kanji": "度",
+          "on": "ど",
+          "kun": "たび",
+          "meaning": "Degree/Time",
+          "terms": [
+            "k_do",
+            "v_nando",
+            "v_kondo",
+            "v_ichidoni"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "Vocabulary & Compounds（ことば）",
+      "groups": [
+        {
+          "label": "Waiting & Meeting",
+          "items": [
+            "v_matsu",
+            "v_machiawase",
+            "v_au",
+            "v_shiai",
+            "v_kaigou"
+          ]
+        },
+        {
+          "label": "Evening & Events",
+          "items": [
+            "v_yuube",
+            "v_yuugata",
+            "v_yuuhan",
+            "v_tanabata"
+          ]
+        },
+        {
+          "label": "Degree & Frequency",
+          "items": [
+            "v_nando",
+            "v_kondo",
+            "v_ichidoni",
+            "v_kyoudo",
+            "v_gouri"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 1（会話）: The Meeting Place",
+      "context": "Arranging to meet.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "待ち合わせは どこに しましょうか。",
+          "en": "Where shall we make the meeting place?",
+          "terms": [
+            "v_machiawase",
+            "v_doko",
+            { "id": "v_suru", "form": "polite_volitional_mashou" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "駅の 待ち合い室で 待ちます。",
+          "en": "I will wait in the station waiting room.",
+          "terms": [
+            "k_eki",
+            "v_machiaishitsu",
+            { "id": "v_matsu", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "何時に 会いますか。",
+          "en": "What time will we meet?",
+          "terms": [
+            "v_nanji",
+            { "id": "v_au_meet", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "夕方の 六時は どうですか。",
+          "en": "How is 6 o'clock in the evening?",
+          "terms": [
+            "v_yuugata",
+            "k_mu",
+            "k_toki",
+            "v_dou"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 2（会話）: The Match",
+      "context": "Talking about sports.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "今度の 試合は 友だちと ですか。",
+          "en": "Is the next match with a friend?",
+          "terms": [
+            "v_kondo",
+            "v_shiai",
+            "v_tomodachi"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "強い 人とです。試合は 難しいです。",
+          "en": "It is with a strong person. The match is difficult.",
+          "terms": [
+            "v_tsuyoi",
+            "k_hito",
+            "v_shiai",
+            "v_muzukashii"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "何度も 運動 しましたか。",
+          "en": "Did you exercise many times?",
+          "terms": [
+            "v_nando",
+            "v_undou",
+            { "id": "v_suru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。心待ちに して います。",
+          "en": "Yes. I am looking forward to it.",
+          "terms": [
+            "v_kokoromachi",
+            { "id": "v_suru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 3（会話）: Evening Meal",
+      "context": "Discussing dinner.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "今日の 夕飯は 何ですか。",
+          "en": "What is today's dinner?",
+          "terms": [
+            "v_kyou",
+            "v_yuuhan",
+            "k_nani"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "洋食です。あなたの 口に 合うと いいですが。",
+          "en": "It is Western food. I hope it fits your taste (mouth).",
+          "terms": [
+            "v_youshoku",
+            "k_kuchi",
+            "v_au",
+            "v_ii"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "楽しみに 待っています。",
+          "en": "I am waiting eagerly (with pleasure).",
+          "terms": [
+            "v_tanoshimi",
+            { "id": "v_matsu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 4（会話）: Tanabata",
+      "context": "Talking about a festival.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "七夕の 話を 聞きましたか。",
+          "en": "Did you hear the Tanabata story?",
+          "terms": [
+            "v_tanabata",
+            "k_hana_2",
+            { "id": "v_kiku", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。一年に 一度 会う 話ですね。",
+          "en": "Yes. It is the story of meeting once a year, isn't it?",
+          "terms": [
+            "v_ichinen",
+            "v_ichido",
+            "v_au_meet",
+            "k_hana_2"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "そうです。きれいな 夜空が 見たいですね。",
+          "en": "That's right. I want to see the beautiful night sky.",
+          "terms": [
+            "v_kirei",
+            "v_yozora",
+            { "id": "v_miru", "form": "desire_tai" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "夕べは 雨でしたが、明日は 晴れるでしょう。",
+          "en": "Last night was rain, but tomorrow will probably be sunny.",
+          "terms": [
+            "v_yuube",
+            "v_ame",
+            "v_ashita",
+            "v_hareru"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 1: The New Class",
+      "passage": [
+        {
+          "jp": "今度、新しい クラスの 会合が あります。",
+          "en": "Next time, there is a meeting for the new class.",
+          "terms": [
+            "v_kondo",
+            "v_atarashii",
+            "v_kaigou",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "先生の 話を 聞いて、考えを 合わせます。",
+          "en": "We will listen to the teacher's talk and combine our thoughts.",
+          "terms": [
+            "v_sensei",
+            "k_hana_2",
+            { "id": "v_kiku", "form": "te_form" },
+            "v_kangae",
+            { "id": "v_awaseru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "合理の 仕方（やりかた）を 作りたいです。",
+          "en": "I want to make a rational way of doing.",
+          "terms": [
+            "v_gouri",
+            "k_shi",
+            "v_kata",
+            { "id": "v_tsukuru", "form": "desire_tai" }
+          ]
+        },
+        {
+          "jp": "一度に 多くの ことを するのは むずかしいです。",
+          "en": "Doing many things at once is difficult.",
+          "terms": [
+            "v_ichidoni",
+            "v_ooku",
+            "v_koto",
+            "v_suru",
+            "v_muzukashii"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "何の 会合が ありますか。",
+          "a": "新しい クラスの 会合。",
+          "terms": [
+            "k_nani",
+            "v_kaigou",
+            "v_atarashii"
+          ]
+        },
+        {
+          "q": "何を 合わせますか。",
+          "a": "考えを 合わせます。",
+          "terms": [
+            "v_kangae",
+            "v_awaseru"
+          ]
+        },
+        {
+          "q": "どんな ことを 作りたいですか。",
+          "a": "合理の 仕方。",
+          "terms": [
+            "v_gouri",
+            "v_kata"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: Evening Walk",
+      "passage": [
+        {
+          "jp": "夕方、犬と 外に 出かけました。",
+          "en": "In the evening, I went outside with my dog.",
+          "terms": [
+            "v_yuugata",
+            "v_inu",
+            "k_soto",
+            { "id": "v_dekakeru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "外の 空気が 体に 合って いました。",
+          "en": "The outside air suited my body.",
+          "terms": [
+            "k_soto",
+            "v_kuuki",
+            "v_karada",
+            { "id": "v_au", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "強度の 高い 運動は しませんが、歩くのは 好きです。",
+          "en": "I do not do high-intensity exercise, but I like walking.",
+          "terms": [
+            "v_kyoudo",
+            "v_takai",
+            "v_undou",
+            { "id": "v_suru", "form": "polite_negative" },
+            "v_aruku",
+            "v_suki"
+          ]
+        },
+        {
+          "jp": "夕飯までには 帰ります。",
+          "en": "I will return by dinner.",
+          "terms": [
+            "v_yuuhan",
+            { "id": "v_kaeru", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "いつ 外に 出かけましたか。",
+          "a": "夕方。",
+          "terms": [
+            "v_yuugata",
+            "k_soto"
+          ]
+        },
+        {
+          "q": "どんな 運動は しませんか。",
+          "a": "強度の 高い 運動。",
+          "terms": [
+            "v_kyoudo",
+            "v_takai",
+            "v_undou"
+          ]
+        },
+        {
+          "q": "いつまでに 帰りますか。",
+          "a": "夕飯までには。",
+          "terms": [
+            "v_yuuhan",
+            "v_kaeru"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Vocabulary",
+      "instructions": "Select the correct reading or meaning.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "待つ",
+          "choices": [
+            "motsu",
+            "matsu",
+            "tatsu",
+            "utsu"
+          ],
+          "answer": "matsu",
+          "terms": [
+            "v_matsu"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "試合",
+          "choices": [
+            "shiai",
+            "shigou",
+            "kiai",
+            "jiai"
+          ],
+          "answer": "shiai",
+          "terms": [
+            "v_shiai"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "夕方",
+          "choices": [
+            "yuugata",
+            "yuuhou",
+            "sekigata",
+            "sekihou"
+          ],
+          "answer": "yuugata",
+          "terms": [
+            "v_yuugata"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "今度",
+          "choices": [
+            "kondo",
+            "imado",
+            "konthaku",
+            "kontabi"
+          ],
+          "answer": "kondo",
+          "terms": [
+            "v_kondo"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "七夕",
+          "choices": [
+            "tanabata",
+            "shichiseki",
+            "nanayu",
+            "shichiyu"
+          ],
+          "answer": "tanabata",
+          "terms": [
+            "v_tanabata"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Fill in the Blank",
+      "instructions": "Select the word that fits.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "駅で 友だちと ______ します。",
+          "choices": [
+            "待ち合わせ",
+            "夕方",
+            "強度",
+            "一度"
+          ],
+          "answer": "待ち合わせ",
+          "terms": [
+            "k_eki",
+            "v_tomodachi",
+            "v_machiawase"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "この 靴は 足に ______。",
+          "choices": [
+            "合います",
+            "待ちます",
+            "夕べます",
+            "度ります"
+          ],
+          "answer": "合います",
+          "terms": [
+            "k_ashi",
+            { "id": "v_au", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "______ ご飯を 食べましょう。",
+          "choices": [
+            "夕",
+            "度",
+            "待",
+            "合"
+          ],
+          "answer": "夕",
+          "terms": [
+            "v_yuuhan"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "______ 、映画を 見に行きましょう。",
+          "choices": [
+            "今度",
+            "強度",
+            "何度",
+            "夕度"
+          ],
+          "answer": "今度",
+          "terms": [
+            "v_kondo",
+            "v_eiga",
+            "v_miru",
+            "v_iku"
+          ]
+        }
+      ]
+    }
+  ]
+}
