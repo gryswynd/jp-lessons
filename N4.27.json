@@ -53,6 +53,7 @@
           "en": "Do you understand the correct way of writing?",
           "terms": [
             "v_tadashii",
+            "k_ka",
             "v_kata",
             { "id": "v_wakaru", "form": "polite_masu" }
           ]
@@ -150,6 +151,7 @@
           "items": [
             "v_matsu",
             "v_machiawase",
+            "v_machiaishitsu",
             "v_au_2",
             "v_shiai",
             "v_kaigou"
@@ -196,7 +198,7 @@
           "jp": "駅の 待ち合い室で 待ちます。",
           "en": "I will wait in the station waiting room.",
           "terms": [
-            "k_eki",
+            "k_u99c5",
             "v_machiaishitsu",
             { "id": "v_matsu", "form": "polite_masu" }
           ]
@@ -207,7 +209,7 @@
           "en": "What time will we meet?",
           "terms": [
             "v_nanji",
-            { "id": "v_au_meet", "form": "polite_masu" }
+            { "id": "v_au", "form": "polite_masu" }
           ]
         },
         {
@@ -240,7 +242,7 @@
         },
         {
           "spk": "B",
-          "jp": "強い 人とです。試合は 難しいです。",
+          "jp": "強い 人とです。試合は むずかしいです。",
           "en": "It is with a strong person. The match is difficult.",
           "terms": [
             "v_tsuyoi",
@@ -316,23 +318,23 @@
       "lines": [
         {
           "spk": "A",
-          "jp": "七夕の 話を 聞きましたか。",
+          "jp": "七夕の 物語を 聞きましたか。",
           "en": "Did you hear the Tanabata story?",
           "terms": [
             "v_tanabata",
-            "k_hana_2",
+            "v_monogatari",
             { "id": "v_kiku", "form": "polite_mashita" }
           ]
         },
         {
           "spk": "B",
-          "jp": "はい。一年に 一度 会う 話ですね。",
+          "jp": "はい。一年に 一度 会うの物語ですね。",
           "en": "Yes. It is the story of meeting once a year, isn't it?",
           "terms": [
-            "v_ichinen",
+            "k_toshi",
             "v_ichido",
             "v_au",
-            "k_hana_2"
+            "v_monogatari"
           ]
         },
         {
@@ -347,13 +349,14 @@
         },
         {
           "spk": "B",
-          "jp": "夕べは 雨でしたが、明日は 晴れるでしょう。",
-          "en": "Last night was rain, but tomorrow will probably be sunny.",
+          "jp": "夕べは 雨でしたが、明日は 月を見えるでしょう。",
+          "en": "Last night was rain, but tomorrow we can probably see the moon.",
           "terms": [
             "v_yuube",
-            "v_ame",
+            "k_ame",
             "v_ashita",
-            "v_hareru"
+            "k_tsuki",
+            "v_mieru"
           ]
         }
       ]
@@ -373,18 +376,18 @@
           ]
         },
         {
-          "jp": "先生の 話を 聞いて、考えを 合わせます。",
-          "en": "We will listen to the teacher's talk and combine our thoughts.",
+          "jp": "先生の 話を 聞いて、考えを 合います。",
+          "en": "We will listen to the teacher's talk and match their ideas.",
           "terms": [
             "v_sensei",
             "k_hana_2",
             { "id": "v_kiku", "form": "te_form" },
             "v_kangae",
-            { "id": "v_awaseru", "form": "polite_masu" }
+            { "id": "v_au_2", "form": "polite_masu" }
           ]
         },
         {
-          "jp": "合理の 仕方（やりかた）を 作りたいです。",
+          "jp": "合理の 仕方 を 作りたいです。",
           "en": "I want to make a rational way of doing.",
           "terms": [
             "v_gouri",
@@ -438,13 +441,13 @@
       "title": "Reading Practice 2: Evening Walk",
       "passage": [
         {
-          "jp": "夕方、犬と 外に 出かけました。",
-          "en": "In the evening, I went outside with my dog.",
+          "jp": "夕方、犬と 外に 歩きました。",
+          "en": "In the evening, I walked outside with my dog.",
           "terms": [
             "v_yuugata",
             "v_inu",
             "k_soto",
-            { "id": "v_dekakeru", "form": "polite_mashita" }
+            { "id": "v_aruku", "form": "polite_mashita" }
           ]
         },
         {
@@ -454,7 +457,7 @@
             "k_soto",
             "v_kuuki",
             "v_karada",
-            { "id": "v_au", "form": "te_form" },
+            { "id": "v_au_2", "form": "te_form" },
             { "id": "v_iru", "form": "polite_mashita" }
           ]
         },
