@@ -1,0 +1,524 @@
+{
+  "id": "N4.Review.5",
+  "title": "Phase 4 Review: Education, Research & Methods",
+  "meta": {
+    "phase": 4,
+    "type": "assessment",
+    "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 24-27.",
+    "kanji": [
+      "教", "室", "試", "験",
+      "文", "注", "研", "究",
+      "正", "考", "方", "悪",
+      "待", "合", "夕", "度"
+    ]
+  },
+  "sections": [
+    {
+      "type": "conversation",
+      "title": "Part 1: Conversation Check",
+      "instructions": "Read the conversation and select the best summary.",
+      "items": [
+        {
+          "title": "Conversation 1",
+          "context": "Talking about an upcoming event.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "明日は 大切な 試験ですね。",
+              "terms": [
+                "v_ashita",
+                "v_taisetsu",
+                "v_shiken"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "はい。夕べは おそくまで 勉強しました。",
+              "terms": [
+                "v_yuube",
+                { "id": "v_benkyou", "form": "polite_mashita" }
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "教室は どこですか。",
+              "terms": [
+                "v_kyoushitsu",
+                "v_doko"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "地下室です。少し 暗いですが、がんばります。",
+              "terms": [
+                "v_chikaishitsu",
+                "v_sukoshi",
+                "v_kurai",
+                { "id": "v_ganbaru", "form": "polite_masu" }
+              ]
+            }
+          ],
+          "question": "Where is the exam taking place?",
+          "choices": [
+            "In the library.",
+            "In the basement.",
+            "In the cafeteria.",
+            "Outside."
+          ],
+          "answer": "In the basement.",
+          "explanation": "B says 'It is the basement' (地下室です)."
+        },
+        {
+          "title": "Conversation 2",
+          "context": "Discussing research.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "何を 研究して いますか。",
+              "terms": [
+                "k_nani",
+                { "id": "v_kenkyuu", "form": "te_form" },
+                { "id": "v_iru", "form": "polite_masu" }
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "古い 文学について 考えて います。",
+              "terms": [
+                "v_furui",
+                "v_bungaku",
+                { "id": "v_kangaeru", "form": "te_form" },
+                { "id": "v_iru", "form": "polite_masu" }
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "むずかしいですか。",
+              "terms": [
+                "v_muzukashii"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "はい。でも、先生が 書き方を 教えて くれました。",
+              "terms": [
+                "v_sensei",
+                "v_kangaekata",
+                { "id": "v_oshieru", "form": "te_form" },
+                "v_kuru"
+              ]
+            }
+          ],
+          "question": "What did the teacher do?",
+          "choices": [
+            "Taught how to write.",
+            "Did the research.",
+            "Bought a book.",
+            "Went home."
+          ],
+          "answer": "Taught how to write.",
+          "explanation": "B says 'The teacher taught me how to write' (先生が書き方を教えてくれました)."
+        },
+        {
+          "title": "Conversation 3",
+          "context": "Making plans.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "今度の 休みに 試合を 見に行きませんか。",
+              "terms": [
+                "v_kondo",
+                "v_yasumu",
+                "v_shiai",
+                "v_miru",
+                "v_iku"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "いいですね。待ち合わせは 夕方でも いいですか。",
+              "terms": [
+                "v_ii",
+                "v_machiawase",
+                "v_yuugata",
+                "v_ii"
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "はい。天気が 悪いと いけませんが、待ちますよ。",
+              "terms": [
+                "v_tenki",
+                "v_warui",
+                "v_iku",
+                { "id": "v_matsu", "form": "polite_masu" }
+              ]
+            }
+          ],
+          "question": "When does B want to meet?",
+          "choices": [
+            "In the morning.",
+            "At noon.",
+            "In the evening.",
+            "Next year."
+          ],
+          "answer": "In the evening.",
+          "explanation": "B asks 'Is evening okay for the meeting?' (待ち合わせは夕方でもいいですか)."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 2: Grammar Scramble",
+      "instructions": "Construct the sentence by clicking the words in the correct order.",
+      "items": [
+        {
+          "kind": "scramble",
+          "q": "Please teach me how to read this.",
+          "segments": ["この", "読み方", "を", "教えて", "ください"],
+          "explanation": "Object (Reading way) + wo + Te-form of Oshieru (Teach) + kudasai."
+        },
+        {
+          "kind": "scramble",
+          "q": "I want to become a researcher.",
+          "segments": ["私は", "研究者", "に", "なりたい", "です"],
+          "explanation": "Target (Researcher) + ni + Tai-form of Naru (Become) + desu."
+        },
+        {
+          "kind": "scramble",
+          "q": "The weather was bad yesterday.",
+          "segments": ["きのう", "は", "天気", "が", "悪かった", "です"],
+          "explanation": "Past tense of i-adjective Warui is Warukatta."
+        },
+        {
+          "kind": "scramble",
+          "q": "Let's meet at the station.",
+          "segments": ["駅", "で", "待ち合わせ", "を", "しましょう"],
+          "explanation": "Location (Station) + de + Action (Meeting) + wo + Volitional form."
+        },
+        {
+          "kind": "scramble",
+          "q": "Please be careful of cars.",
+          "segments": ["車", "に", "注意", "して", "ください"],
+          "explanation": "Target (Car) + ni + Chuui (Caution) + shite (Suru te-form) + kudasai."
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Part 3: Reading - The Restaurant",
+      "passage": [
+        {
+          "jp": "私の 家族は 毎週 洋食の 店へ 行きます。",
+          "en": "My family goes to a Western food shop every week.",
+          "terms": [
+            "k_watashi",
+            "v_kazoku",
+            "v_maishuu",
+            "v_youshoku",
+            "k_mise",
+            { "id": "v_iku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "父は いつも お茶を 注文します。",
+          "en": "Father always orders tea.",
+          "terms": [
+            "k_chichi",
+            "v_ocha",
+            { "id": "v_chuumon", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "私は 試食が 好きですから、新しい 料理を 食べます。",
+          "en": "Because I like food sampling, I eat new cuisine.",
+          "terms": [
+            "k_watashi",
+            "v_shishoku",
+            "v_suki",
+            "v_atarashii",
+            "v_ryouri",
+            { "id": "v_taberu", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "この 店の 料理は 私の 口に 合います。",
+          "en": "This shop's cuisine suits my taste.",
+          "terms": [
+            "k_mise",
+            "v_ryouri",
+            "k_watashi",
+            "k_kuchi",
+            { "id": "v_au_2", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "家族は 毎週 何を 食べますか。",
+          "a": "洋食",
+          "choices": ["和食", "洋食", "中華", "朝ご飯"],
+          "terms": [
+            "v_kazoku",
+            "v_maishuu",
+            "v_youshoku",
+            "v_taberu"
+          ]
+        },
+        {
+          "q": "父は 何を 注文しますか。",
+          "a": "お茶",
+          "choices": ["お酒", "水", "お茶", "肉"],
+          "terms": [
+            "k_chichi",
+            "v_chuumon",
+            "v_ocha"
+          ]
+        },
+        {
+          "q": "私は 何が 好きですか。",
+          "a": "試食",
+          "choices": ["試食", "試験", "試合", "仕事"],
+          "terms": [
+            "k_watashi",
+            "v_suki",
+            "v_shishoku"
+          ]
+        },
+        {
+          "q": "料理は 私に どうですか。",
+          "a": "口に 合います",
+          "choices": ["口に 合います", "悪いです", "古いです", "少ないです"],
+          "terms": [
+            "v_ryouri",
+            "k_watashi",
+            "v_dou",
+            "k_kuchi",
+            "v_au_2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Part 4: Reading - New Year's Resolution",
+      "passage": [
+        {
+          "jp": "もうすぐ 正月です。",
+          "en": "It is almost New Year.",
+          "terms": [
+            "v_shougatsu"
+          ]
+        },
+        {
+          "jp": "来年は 日本の 文学を 研究したいです。",
+          "en": "Next year I want to research Japanese literature.",
+          "terms": [
+            "v_rainen",
+            "v_nihon",
+            "v_bungaku",
+            { "id": "v_kenkyuu", "form": "desire_tai" }
+          ]
+        },
+        {
+          "jp": "正しい 日本語の 使い方も 勉強します。",
+          "en": "I will also study correct Japanese usage.",
+          "terms": [
+            "v_tadashii",
+            "v_nihongo",
+            "v_tsukau",
+            "v_kata",
+            { "id": "v_benkyou", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "一度に たくさんは 出来ませんが、毎日 少しずつ がんばります。",
+          "en": "I cannot do a lot at once, but I will do my best little by little every day.",
+          "terms": [
+            "v_ichidoni",
+            "v_takusan",
+            { "id": "v_dekiru", "form": "polite_negative" },
+            "v_mainichi",
+            "v_sukoshi",
+            { "id": "v_ganbaru", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "来年 何を したいですか。",
+          "a": "文学を 研究したい",
+          "choices": ["文学を 研究したい", "車を 運転したい", "家を 建てたい", "店を 売りたい"],
+          "terms": [
+            "v_rainen",
+            "k_nani",
+            "v_bungaku",
+            "v_kenkyuu"
+          ]
+        },
+        {
+          "q": "何を 勉強しますか。",
+          "a": "正しい 日本語の 使い方",
+          "choices": ["英語の 使い方", "悪い 言葉", "正しい 日本語の 使い方", "古い 地図"],
+          "terms": [
+            "v_benkyou",
+            "v_tadashii",
+            "v_nihongo",
+            "v_tsukau",
+            "v_kata"
+          ]
+        },
+        {
+          "q": "どうやって がんばりますか。",
+          "a": "毎日 少しずつ",
+          "choices": ["一度に たくさん", "毎日 少しずつ", "時々", "来週から"],
+          "terms": [
+            "v_ganbaru",
+            "v_mainichi",
+            "v_sukoshi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 5: Kanji Readings",
+      "instructions": "Select the correct reading for the [bracketed] word.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "[教室]で 待ちます。",
+          "choices": ["きょうしつ", "きょうじつ", "こうしつ", "おしえしつ"],
+          "answer": "きょうしつ",
+          "explanation": "教室 (Classroom) is read as <b>kyoushitsu</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "[試験]は いつですか。",
+          "choices": ["しけん", "じけん", "こころみ", "ためし"],
+          "answer": "しけん",
+          "explanation": "試験 (Exam) is read as <b>shiken</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "[文学]が 好きです。",
+          "choices": ["ぶんがく", "もんがく", "ふみがく", "ぶんこう"],
+          "answer": "ぶんがく",
+          "explanation": "文学 (Literature) is read as <b>bungaku</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "[正しい] 答え。",
+          "choices": ["ただしい", "まさしい", "せいしい", "しょうしい"],
+          "answer": "ただしい",
+          "explanation": "正しい (Correct) is read as <b>tadashii</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "[夕方]に 会いましょう。",
+          "choices": ["ゆうがた", "せきがた", "ゆうほう", "よるがた"],
+          "answer": "ゆうがた",
+          "explanation": "夕方 (Evening) is read as <b>yuugata</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "[今度]は 勝ちます。",
+          "choices": ["こんど", "いまど", "こんたび", "きんてん"],
+          "answer": "こんど",
+          "explanation": "今度 (Next time/This time) is read as <b>kondo</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "[注文]を してください。",
+          "choices": ["ちゅうもん", "ちゅうぶん", "そそぎもん", "じゅうぶん"],
+          "answer": "ちゅうもん",
+          "explanation": "注文 (Order) is read as <b>chuumon</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "[悪質]な 店。",
+          "choices": ["あくしつ", "わるしつ", "あくち", "おしつ"],
+          "answer": "あくしつ",
+          "explanation": "悪質 (Malicious/Bad quality) is read as <b>akushitsu</b>."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 6: Context & Vocabulary",
+      "instructions": "Select the best word to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "コップに 水を ______ ください。",
+          "choices": ["注いで", "泳いで", "急いで", "研いで"],
+          "answer": "注いで",
+          "explanation": "Pour (注ぐ) water into a cup."
+        },
+        {
+          "kind": "mcq",
+          "q": "駅で 友だちと ______ しました。",
+          "choices": ["待ち合わせ", "研究", "体験", "注文"],
+          "answer": "待ち合わせ",
+          "explanation": "You do a rendezvous/meeting (待ち合わせ) at the station."
+        },
+        {
+          "kind": "mcq",
+          "q": "漢字の ______ を 考えます。",
+          "choices": ["書き方", "書き者", "書き教", "書き研"],
+          "answer": "書き方",
+          "explanation": "Think about the way of writing (書き方)."
+        },
+        {
+          "kind": "mcq",
+          "q": "あの 映画は ______ ですね。",
+          "choices": ["悪い", "正しい", "待つ", "合う"],
+          "answer": "悪い",
+          "explanation": "That movie is bad (悪い)."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 7: Grammar Check",
+      "instructions": "Choose the correct particle or form to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "車 ______ 注意して ください。",
+          "choices": ["に", "を", "が", "で"],
+          "answer": "に",
+          "explanation": "Chuui suru (to be careful of) takes the particle 'ni'."
+        },
+        {
+          "kind": "mcq",
+          "q": "日本語を ______ たいです。",
+          "choices": ["教え", "教えて", "教える", "教えり"],
+          "answer": "教え",
+          "explanation": "Tai-form (want to) attaches to the stem (Oshie)."
+        },
+        {
+          "kind": "mcq",
+          "q": "この 靴は 足に ______。",
+          "choices": ["合います", "会います", "愛ます", "有ります"],
+          "answer": "合います",
+          "explanation": "To fit/match (Au) uses the kanji 合."
+        },
+        {
+          "kind": "mcq",
+          "q": "先生は 学生に ______ 。",
+          "choices": ["教えました", "教わりました", "教室しました", "教科しました"],
+          "answer": "教えました",
+          "explanation": "The teacher taught (Oshiemashita) the students."
+        },
+        {
+          "kind": "mcq",
+          "q": "一度に ______ のは むずかしいです。",
+          "choices": ["覚える", "覚え", "覚えます", "覚えて"],
+          "answer": "覚える",
+          "explanation": "Nominalizer 'no' requires the plain/dictionary form (Oboeru)."
+        }
+      ]
+    }
+  ]
+}
