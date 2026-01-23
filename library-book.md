@@ -5,21 +5,21 @@
 
 ### Story Text (Japanese)
 
-ある日、田中さんは図書館へ行きました。彼は文学が好きでした。
+ある日、田中さんは図書館へ行きました。田中さんは文学が好きでした。
 
 図書館で、田中さんは古い本を見つけました。その本の名前は「心の教え」でした。
 
-本を開いて読みました。とてもおもしろかったです。毎日、学校の後で図書館へ行って、その本を読みました。
+本を読みました。とてもおもしろかったです。毎日、学校の後で図書館へ行って、その本を読みました。
 
 ある時、先生が教室で言いました。「来週、試験があります。注意してください。」
 
 田中さんは頭がいい学生でしたが、試験はむずかしそうでした。でも、図書館の本で勉強しました。
 
-試験の日が来ました。田中さんは試験を書きました。一番むずかしい質問がありました。でも、図書館の本で読んだことを思い出しました。
+試験の日が来ました。田中さんは試験を書きました。一ばんむずかしい質問がありました。でも、図書館の本で読んだことについて考えました。
 
-答えを書くことができました！
+試験を書くことができました！
 
-次の日、先生が言いました。「田中さん、よくできました！百点です！」
+今度の日、先生が言いました。「田中さん、よくできました！百パーセントです！」
 
 田中さんはうれしかったです。図書館へ行って、その本に「ありがとう」と言いました。
 
@@ -37,15 +37,15 @@ One day, Tanaka-san went to the library. He liked literature.
 
 At the library, Tanaka-san found an old book. The book's name was "Teachings of the Heart."
 
-He opened the book and read it. It was very interesting. Every day, after school, he went to the library and read that book.
+He read the book. It was very interesting. Every day, after school, he went to the library and read that book.
 
 One time, the teacher said in the classroom, "Next week, there will be an exam. Please be careful."
 
 Tanaka-san was a smart student, but the exam looked difficult. However, he studied with the library book.
 
-The day of the exam came. Tanaka-san took the exam. There was one very difficult question. But he remembered what he had read in the library book.
+The day of the exam came. Tanaka-san took the exam. There was one very difficult question. But he thought about what he had read in the library book.
 
-He was able to write the answer!
+He was able to write the exam!
 
 The next day, the teacher said, "Tanaka-san, well done! One hundred points!"
 
@@ -86,7 +86,6 @@ He thought that reading books is important. Even now, every day, he reads books 
 - 来る (くる) - to come
 - 書く (かく) - to write
 - 質問 (しつもん) - question
-- 次 (つぎ) - next
 - 大切 (たいせつ) - important
 - 今 (いま) - now
 
