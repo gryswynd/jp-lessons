@@ -509,7 +509,12 @@ window.StoryModule = (function() {
 
   function loadStoryList() {
     storyList = [
-      { filename: 'library-book.md', title: '図書館の本', subtitle: 'The Library Book' }
+      {
+        mdFile: 'library-book.md',
+        jsonFile: 'library-book.json',
+        title: '図書館の本',
+        subtitle: 'The Library Book'
+      }
     ];
 
     if (storyList.length > 0) {
@@ -538,18 +543,27 @@ window.StoryModule = (function() {
     updateNavButtons();
 
     try {
-      const url = getCdnUrl(storyInfo.filename);
-      const response = await fetch(url + '?t=' + Date.now());
+      // Load both markdown and companion JSON
+      const [mdResponse, jsonResponse] = await Promise.all([
+        fetch(getCdnUrl(storyInfo.mdFile) + '?t=' + Date.now()),
+        fetch(getCdnUrl(storyInfo.jsonFile) + '?t=' + Date.now())
+      ]);
 
-      if (!response.ok) {
-        throw new Error(`Failed to load story: ${response.status} ${response.statusText}`);
+      if (!mdResponse.ok) {
+        throw new Error(`Failed to load story markdown: ${mdResponse.status}`);
+      }
+      if (!jsonResponse.ok) {
+        throw new Error(`Failed to load story data: ${jsonResponse.status}`);
       }
 
-      const markdown = await response.text();
+      const markdown = await mdResponse.text();
+      const storyData = await jsonResponse.json();
+
+      // Parse markdown to HTML
       let html = marked.parse(markdown);
 
-      // Process HTML to make Japanese terms clickable with conjugation support
-      html = processStoryHTML(html);
+      // Process HTML with term mappings from JSON
+      html = processStoryHTML(html, storyData.terms);
 
       const loading = storyContainer.querySelector('.jp-story-loading');
       if (loading) {
@@ -572,7 +586,9 @@ window.StoryModule = (function() {
     }
   }
 
-  function processStoryHTML(html) {
+  function processStoryHTML(html, termMappings) {
+    // termMappings = { "行きました": { id: "v.iku", form: "polite_past" }, ... }
+
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = html;
 
@@ -587,6 +603,7 @@ window.StoryModule = (function() {
     let node;
 
     while (node = walker.nextNode()) {
+      // Skip if already inside a term span or code block
       if (node.parentElement.classList.contains('jp-term') ||
           node.parentElement.tagName === 'CODE' ||
           node.parentElement.tagName === 'PRE') {
@@ -596,23 +613,28 @@ window.StoryModule = (function() {
       const text = node.textContent;
       if (!text.trim()) continue;
 
-      const matches = findTermsInText(text);
+      // Find term matches using explicit mappings
+      const matches = findTermsInText(text, termMappings);
       if (matches.length > 0) {
         nodesToReplace.push({ node, matches });
       }
     }
 
+    // Replace text nodes with clickable terms
     nodesToReplace.forEach(({ node, matches }) => {
       const span = document.createElement('span');
       let lastIndex = 0;
       let html = '';
 
       matches.forEach(match => {
+        // Add text before match
         html += escapeHtml(node.textContent.substring(lastIndex, match.index));
+        // Add clickable term
         html += `<span class="jp-term" onclick="window.JP_OPEN_TERM('${match.termId}', true)">${escapeHtml(match.text)}</span>`;
         lastIndex = match.index + match.text.length;
       });
 
+      // Add remaining text
       html += escapeHtml(node.textContent.substring(lastIndex));
 
       span.innerHTML = html;
@@ -622,48 +644,21 @@ window.StoryModule = (function() {
     return tempDiv.innerHTML;
   }
 
-  function findTermsInText(text) {
+  function findTermsInText(text, termMappings) {
     const matches = [];
     const processedPositions = new Set();
 
-    // Build list of all possible forms (base + conjugations)
-    const allForms = [];
+    // Get all surface forms from termMappings, sorted by length (longest first)
+    const surfaceForms = Object.keys(termMappings).sort((a, b) => b.length - a.length);
 
-    Object.values(termMapData).forEach(term => {
-      if (!term.surface) return;
+    surfaceForms.forEach(surface => {
+      const termDef = termMappings[surface]; // { id: "v.iku", form: "polite_past" }
 
-      // Add base form
-      allForms.push({
-        surface: term.surface,
-        termId: term.id,
-        length: term.surface.length
-      });
-
-      // Add conjugated forms if this is a verb or adjective
-      if (CONJUGATION_RULES && (term.type === 'verb' || term.gtype)) {
-        Object.keys(CONJUGATION_RULES).forEach(ruleKey => {
-          const conjugated = conjugate(term, ruleKey);
-          if (conjugated && conjugated.surface !== term.surface) {
-            allForms.push({
-              surface: conjugated.surface,
-              termId: term.id,
-              length: conjugated.surface.length
-            });
-          }
-        });
-      }
-    });
-
-    // Sort by length (longest first)
-    allForms.sort((a, b) => b.length - a.length);
-
-    // Find matches
-    allForms.forEach(form => {
-      let index = text.indexOf(form.surface);
+      let index = text.indexOf(surface);
       while (index !== -1) {
         // Check if this position overlaps with existing match
         let overlaps = false;
-        for (let i = index; i < index + form.length; i++) {
+        for (let i = index; i < index + surface.length; i++) {
           if (processedPositions.has(i)) {
             overlaps = true;
             break;
@@ -673,17 +668,17 @@ window.StoryModule = (function() {
         if (!overlaps) {
           matches.push({
             index,
-            text: form.surface,
-            termId: form.termId
+            text: surface,
+            termId: termDef.id
           });
 
           // Mark positions as processed
-          for (let i = index; i < index + form.length; i++) {
+          for (let i = index; i < index + surface.length; i++) {
             processedPositions.add(i);
           }
         }
 
-        index = text.indexOf(form.surface, index + 1);
+        index = text.indexOf(surface, index + 1);
       }
     });
 
