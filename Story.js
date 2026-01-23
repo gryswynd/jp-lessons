@@ -8,7 +8,7 @@ window.StoryModule = (function() {
   let storyList = [];
   let currentIndex = 0;
   let termMapData = {};
-  let showFurigana = false; // Initially OFF
+  let CONJUGATION_RULES = null;
 
   function getCdnUrl(filename) {
     return `https://raw.githubusercontent.com/${config.owner}/${config.repo}/${config.branch}/${config.path ? config.path + '/' : ''}${filename}`;
@@ -54,17 +54,12 @@ window.StoryModule = (function() {
           font-weight: 700;
           font-size: 1.1rem;
         }
-        .jp-story-controls {
-          display: flex;
-          gap: 10px;
-          flex-wrap: wrap;
-        }
         .jp-story-nav {
           display: flex;
           gap: 10px;
           align-items: center;
         }
-        .jp-story-nav-btn, .jp-story-back-btn, .jp-story-toggle-btn {
+        .jp-story-nav-btn, .jp-story-back-btn {
           background: rgba(255,255,255,0.1);
           color: white;
           border: none;
@@ -75,15 +70,12 @@ window.StoryModule = (function() {
           transition: background 0.2s;
           font-size: 14px;
         }
-        .jp-story-nav-btn:hover, .jp-story-back-btn:hover, .jp-story-toggle-btn:hover {
+        .jp-story-nav-btn:hover, .jp-story-back-btn:hover {
           background: rgba(255,255,255,0.2);
         }
         .jp-story-nav-btn:disabled {
           opacity: 0.3;
           cursor: not-allowed;
-        }
-        .jp-story-toggle-btn.active {
-          background: rgba(255,255,255,0.3);
         }
         .jp-story-content {
           background: white;
@@ -127,18 +119,7 @@ window.StoryModule = (function() {
           line-height: 2;
           margin-bottom: 1rem;
           color: #333;
-        }
-        .jp-story-content ruby {
-          font-size: 1.2rem;
           font-family: 'Noto Sans JP', sans-serif;
-        }
-        .jp-story-content rt {
-          font-size: 0.6em;
-          color: #666;
-          display: none; /* Initially hidden */
-        }
-        .jp-story-content.show-furigana rt {
-          display: inline; /* Show when toggle is on */
         }
         .jp-story-content ul, .jp-story-content ol {
           line-height: 1.8;
@@ -227,9 +208,6 @@ window.StoryModule = (function() {
             flex-direction: column;
             align-items: stretch;
           }
-          .jp-story-controls {
-            justify-content: center;
-          }
           .jp-story-nav {
             justify-content: center;
           }
@@ -243,13 +221,10 @@ window.StoryModule = (function() {
       <div class="jp-story-container">
         <div class="jp-story-header">
           <div class="jp-story-title">📖 Stories</div>
-          <div class="jp-story-controls">
-            <button class="jp-story-toggle-btn" id="jp-story-furigana-toggle">ふりがな OFF</button>
-            <div class="jp-story-nav">
-              <button class="jp-story-nav-btn" id="jp-story-prev">← Previous</button>
-              <button class="jp-story-nav-btn" id="jp-story-next">Next →</button>
-              <button class="jp-story-back-btn" id="jp-story-exit">← Back to Menu</button>
-            </div>
+          <div class="jp-story-nav">
+            <button class="jp-story-nav-btn" id="jp-story-prev">← Previous</button>
+            <button class="jp-story-nav-btn" id="jp-story-next">Next →</button>
+            <button class="jp-story-back-btn" id="jp-story-exit">← Back to Menu</button>
           </div>
         </div>
         <div class="jp-story-loading">
@@ -277,15 +252,10 @@ window.StoryModule = (function() {
       }
     });
 
-    document.getElementById('jp-story-furigana-toggle').addEventListener('click', () => {
-      showFurigana = !showFurigana;
-      updateFuriganaToggle();
-    });
-
-    // Load marked.js and glossary from CDN
+    // Load resources
     Promise.all([
       loadMarkedJS(),
-      loadGlossary()
+      loadResources()
     ]).then(() => {
       loadStoryList();
     }).catch(err => {
@@ -295,7 +265,6 @@ window.StoryModule = (function() {
 
   function loadMarkedJS() {
     return new Promise((resolve, reject) => {
-      // Check if marked is already loaded
       if (window.marked) {
         resolve();
         return;
@@ -305,7 +274,6 @@ window.StoryModule = (function() {
       script.src = 'https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js';
       script.onload = () => {
         if (window.marked) {
-          // Configure marked for better compatibility
           marked.setOptions({
             gfm: true,
             breaks: true
@@ -320,12 +288,21 @@ window.StoryModule = (function() {
     });
   }
 
-  async function loadGlossary() {
+  // Conjugation maps (same as Lesson.js)
+  const GODAN_MAPS = {
+    u_to_i: { 'う': 'い', 'く': 'き', 'ぐ': 'ぎ', 'す': 'し', 'つ': 'ち', 'ぬ': 'に', 'ぶ': 'び', 'む': 'み', 'る': 'り' },
+    u_to_a: { 'う': 'わ', 'く': 'か', 'ぐ': 'が', 'す': 'さ', 'つ': 'た', 'ぬ': 'な', 'ぶ': 'ば', 'む': 'ま', 'る': 'ら' },
+    u_to_e: { 'う': 'え', 'く': 'け', 'ぐ': 'げ', 'す': 'せ', 'つ': 'て', 'ぬ': 'ね', 'ぶ': 'べ', 'む': 'め', 'る': 'れ' },
+    ta_form: { 'う': 'った', 'つ': 'った', 'る': 'った', 'む': 'んだ', 'ぶ': 'んだ', 'ぬ': 'んだ', 'く': 'いた', 'ぐ': 'いだ', 'す': 'した' },
+    te_form: { 'う': 'って', 'つ': 'って', 'る': 'って', 'む': 'んで', 'ぶ': 'んで', 'ぬ': 'んで', 'く': 'いて', 'ぐ': 'いで', 'す': 'して' }
+  };
+
+  async function loadResources() {
     try {
-      const url = getCdnUrl('glossary.master.json');
-      const response = await fetch(url + '?t=' + Date.now());
-      if (!response.ok) throw new Error('Failed to load glossary');
-      const glossary = await response.json();
+      const [glossary, conjugationRules] = await Promise.all([
+        fetch(getCdnUrl('glossary.master.json')).then(r => r.json()),
+        fetch(getCdnUrl('conjugation_rules.json')).then(r => r.json())
+      ]);
 
       // Build term map
       termMapData = {};
@@ -333,19 +310,66 @@ window.StoryModule = (function() {
         termMapData[term.id] = term;
       });
 
-      // Setup term modal if not already setup
+      CONJUGATION_RULES = conjugationRules;
+
+      // Setup term modal
       setupTermModal();
     } catch (err) {
-      console.warn('Could not load glossary:', err);
-      // Continue without glossary
+      console.warn('Could not load glossary/conjugation:', err);
     }
   }
 
+  function conjugate(term, ruleKey) {
+    if (!term || !CONJUGATION_RULES) return term;
+    const formDef = CONJUGATION_RULES[ruleKey];
+    if (!formDef) return term;
+
+    let vClass = term.verb_class || term.gtype;
+    if (vClass === 'u') vClass = 'godan';
+    if (vClass === 'ru') vClass = 'ichidan';
+    if (vClass === 'verb') vClass = 'godan';
+    if (!vClass) vClass = 'godan';
+
+    const rule = formDef.rules[vClass];
+    if (!rule) return term;
+
+    let newSurface = term.surface;
+    let newReading = term.reading || "";
+
+    if (rule.type === 'replace') {
+      newSurface = rule.surface;
+      newReading = rule.reading;
+    } else if (rule.type === 'suffix') {
+      if (rule.remove && newSurface.endsWith(rule.remove)) {
+        newSurface = newSurface.slice(0, -rule.remove.length) + rule.add;
+        newReading = newReading.slice(0, -rule.remove.length) + rule.add;
+      } else {
+        newSurface += rule.add;
+        newReading += rule.add;
+      }
+    } else if (rule.type === 'stem_map') {
+      const mapKey = rule.map;
+      const map = GODAN_MAPS[mapKey];
+      if (map) {
+        const lastChar = newSurface.slice(-1);
+        if (map[lastChar]) {
+          newSurface = newSurface.slice(0, -1) + map[lastChar] + (rule.add || '');
+          newReading = newReading.slice(0, -1) + map[lastChar] + (rule.add || '');
+        }
+      }
+    }
+
+    return {
+      ...term,
+      surface: newSurface,
+      reading: newReading,
+      _original: term.surface
+    };
+  }
+
   function setupTermModal() {
-    // Check if modal already exists
     if (window.JP_OPEN_TERM) return;
 
-    // Create modal overlay
     let modalOverlay = document.querySelector('.jp-modal-overlay');
     if (!modalOverlay) {
       modalOverlay = document.createElement('div');
@@ -358,7 +382,6 @@ window.StoryModule = (function() {
       `;
       document.body.appendChild(modalOverlay);
 
-      // Add modal styles if not present
       if (!document.getElementById('jp-modal-style')) {
         const style = document.createElement('style');
         style.id = 'jp-modal-style';
@@ -423,7 +446,6 @@ window.StoryModule = (function() {
       });
     }
 
-    // Setup global term opening function
     window.JP_OPEN_TERM = function(id, enableFlag = true) {
       const t = termMapData[id];
       if (!t) return;
@@ -452,13 +474,11 @@ window.StoryModule = (function() {
 
       modalOverlay.style.display = 'flex';
 
-      // Speaker button
       const speakerBtn = document.getElementById('jp-m-speak-btn');
       if (speakerBtn) {
         speakerBtn.onclick = () => speak(textToSpeak);
       }
 
-      // Auto-flag
       if (enableFlag) {
         const flags = JSON.parse(localStorage.getItem('k-flags') || '{}');
         if (!flags[id]) {
@@ -488,7 +508,6 @@ window.StoryModule = (function() {
   }
 
   function loadStoryList() {
-    // Define available stories
     storyList = [
       { filename: 'library-book.md', title: '図書館の本', subtitle: 'The Library Book' }
     ];
@@ -503,7 +522,6 @@ window.StoryModule = (function() {
   async function loadStory(storyInfo) {
     const storyContainer = container.querySelector('.jp-story-container');
 
-    // Show loading state
     const contentArea = storyContainer.querySelector('.jp-story-loading') ||
                         storyContainer.querySelector('.jp-story-content') ||
                         storyContainer.querySelector('.jp-story-error');
@@ -530,13 +548,13 @@ window.StoryModule = (function() {
       const markdown = await response.text();
       let html = marked.parse(markdown);
 
-      // Process HTML to make Japanese terms clickable
+      // Process HTML to make Japanese terms clickable with conjugation support
       html = processStoryHTML(html);
 
       const loading = storyContainer.querySelector('.jp-story-loading');
       if (loading) {
         loading.outerHTML = `
-          <div class="jp-story-content ${showFurigana ? 'show-furigana' : ''}">
+          <div class="jp-story-content">
             ${html}
           </div>
         `;
@@ -555,11 +573,9 @@ window.StoryModule = (function() {
   }
 
   function processStoryHTML(html) {
-    // Create a temporary div to parse HTML
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = html;
 
-    // Find all text nodes and make Japanese terms clickable
     const walker = document.createTreeWalker(
       tempDiv,
       NodeFilter.SHOW_TEXT,
@@ -571,9 +587,7 @@ window.StoryModule = (function() {
     let node;
 
     while (node = walker.nextNode()) {
-      // Skip if parent is already a term span or is inside a ruby tag
       if (node.parentElement.classList.contains('jp-term') ||
-          node.parentElement.tagName === 'RT' ||
           node.parentElement.tagName === 'CODE' ||
           node.parentElement.tagName === 'PRE') {
         continue;
@@ -582,28 +596,23 @@ window.StoryModule = (function() {
       const text = node.textContent;
       if (!text.trim()) continue;
 
-      // Try to find terms in this text
       const matches = findTermsInText(text);
       if (matches.length > 0) {
         nodesToReplace.push({ node, matches });
       }
     }
 
-    // Replace nodes with clickable terms
     nodesToReplace.forEach(({ node, matches }) => {
       const span = document.createElement('span');
       let lastIndex = 0;
       let html = '';
 
       matches.forEach(match => {
-        // Add text before match
         html += escapeHtml(node.textContent.substring(lastIndex, match.index));
-        // Add clickable term
         html += `<span class="jp-term" onclick="window.JP_OPEN_TERM('${match.termId}', true)">${escapeHtml(match.text)}</span>`;
         lastIndex = match.index + match.text.length;
       });
 
-      // Add remaining text
       html += escapeHtml(node.textContent.substring(lastIndex));
 
       span.innerHTML = html;
@@ -615,36 +624,69 @@ window.StoryModule = (function() {
 
   function findTermsInText(text) {
     const matches = [];
+    const processedPositions = new Set();
 
-    // Sort terms by surface length (longest first) to match longer terms first
-    const sortedTerms = Object.values(termMapData).sort((a, b) =>
-      (b.surface || '').length - (a.surface || '').length
-    );
+    // Build list of all possible forms (base + conjugations)
+    const allForms = [];
 
-    sortedTerms.forEach(term => {
+    Object.values(termMapData).forEach(term => {
       if (!term.surface) return;
 
-      let index = text.indexOf(term.surface);
+      // Add base form
+      allForms.push({
+        surface: term.surface,
+        termId: term.id,
+        length: term.surface.length
+      });
+
+      // Add conjugated forms if this is a verb or adjective
+      if (CONJUGATION_RULES && (term.type === 'verb' || term.gtype)) {
+        Object.keys(CONJUGATION_RULES).forEach(ruleKey => {
+          const conjugated = conjugate(term, ruleKey);
+          if (conjugated && conjugated.surface !== term.surface) {
+            allForms.push({
+              surface: conjugated.surface,
+              termId: term.id,
+              length: conjugated.surface.length
+            });
+          }
+        });
+      }
+    });
+
+    // Sort by length (longest first)
+    allForms.sort((a, b) => b.length - a.length);
+
+    // Find matches
+    allForms.forEach(form => {
+      let index = text.indexOf(form.surface);
       while (index !== -1) {
-        // Check if this position is already matched
-        const overlaps = matches.some(m =>
-          (index >= m.index && index < m.index + m.text.length) ||
-          (index + term.surface.length > m.index && index + term.surface.length <= m.index + m.text.length)
-        );
+        // Check if this position overlaps with existing match
+        let overlaps = false;
+        for (let i = index; i < index + form.length; i++) {
+          if (processedPositions.has(i)) {
+            overlaps = true;
+            break;
+          }
+        }
 
         if (!overlaps) {
           matches.push({
             index,
-            text: term.surface,
-            termId: term.id
+            text: form.surface,
+            termId: form.termId
           });
+
+          // Mark positions as processed
+          for (let i = index; i < index + form.length; i++) {
+            processedPositions.add(i);
+          }
         }
 
-        index = text.indexOf(term.surface, index + 1);
+        index = text.indexOf(form.surface, index + 1);
       }
     });
 
-    // Sort matches by index
     return matches.sort((a, b) => a.index - b.index);
   }
 
@@ -652,24 +694,6 @@ window.StoryModule = (function() {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
-  }
-
-  function updateFuriganaToggle() {
-    const toggleBtn = document.getElementById('jp-story-furigana-toggle');
-    const contentDiv = container.querySelector('.jp-story-content');
-
-    if (toggleBtn) {
-      toggleBtn.textContent = showFurigana ? 'ふりがな ON' : 'ふりがな OFF';
-      toggleBtn.classList.toggle('active', showFurigana);
-    }
-
-    if (contentDiv) {
-      if (showFurigana) {
-        contentDiv.classList.add('show-furigana');
-      } else {
-        contentDiv.classList.remove('show-furigana');
-      }
-    }
   }
 
   function updateNavButtons() {
