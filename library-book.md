@@ -3,27 +3,27 @@
 
 ---
 
-### Story Text (Japanese with Furigana)
+### Story Text (Japanese)
 
-ある<ruby>日<rt>ひ</rt></ruby>、<ruby>田中<rt>たなか</rt></ruby>さんは<ruby>図書館<rt>としょかん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きました。<ruby>彼<rt>かれ</rt></ruby>は<ruby>文学<rt>ぶんがく</rt></ruby>が<ruby>好<rt>す</rt></ruby>きでした。
+ある日、田中さんは図書館へ行きました。彼は文学が好きでした。
 
-<ruby>図書館<rt>としょかん</rt></ruby>で、<ruby>田中<rt>たなか</rt></ruby>さんは<ruby>古<rt>ふる</rt></ruby>い<ruby>本<rt>ほん</rt></ruby>を<ruby>見<rt>み</rt></ruby>つけました。その<ruby>本<rt>ほん</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>は「<ruby>心<rt>こころ</rt></ruby>の<ruby>教<rt>おし</rt></ruby>え」でした。
+図書館で、田中さんは古い本を見つけました。その本の名前は「心の教え」でした。
 
-<ruby>本<rt>ほん</rt></ruby>を<ruby>開<rt>ひら</rt></ruby>いて<ruby>読<rt>よ</rt></ruby>みました。とてもおもしろかったです。<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>の<ruby>後<rt>あと</rt></ruby>で<ruby>図書館<rt>としょかん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>って、その<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みました。
+本を開いて読みました。とてもおもしろかったです。毎日、学校の後で図書館へ行って、その本を読みました。
 
-ある<ruby>時<rt>とき</rt></ruby>、<ruby>先生<rt>せんせい</rt></ruby>が<ruby>教室<rt>きょうしつ</rt></ruby>で<ruby>言<rt>い</rt></ruby>いました。「<ruby>来週<rt>らいしゅう</rt></ruby>、<ruby>試験<rt>しけん</rt></ruby>があります。<ruby>注意<rt>ちゅうい</rt></ruby>してください。」
+ある時、先生が教室で言いました。「来週、試験があります。注意してください。」
 
-<ruby>田中<rt>たなか</rt></ruby>さんは<ruby>頭<rt>あたま</rt></ruby>がいい<ruby>学生<rt>がくせい</rt></ruby>でしたが、<ruby>試験<rt>しけん</rt></ruby>はむずかしそうでした。でも、<ruby>図書館<rt>としょかん</rt></ruby>の<ruby>本<rt>ほん</rt></ruby>で<ruby>勉強<rt>べんきょう</rt></ruby>しました。
+田中さんは頭がいい学生でしたが、試験はむずかしそうでした。でも、図書館の本で勉強しました。
 
-<ruby>試験<rt>しけん</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>が<ruby>来<rt>き</rt></ruby>ました。<ruby>田中<rt>たなか</rt></ruby>さんは<ruby>試験<rt>しけん</rt></ruby>を<ruby>書<rt>か</rt></ruby>きました。<ruby>一番<rt>いちばん</rt></ruby>むずかしい<ruby>質問<rt>しつもん</rt></ruby>がありました。でも、<ruby>図書館<rt>としょかん</rt></ruby>の<ruby>本<rt>ほん</rt></ruby>で<ruby>読<rt>よ</rt></ruby>んだことを<ruby>思<rt>おも</rt></ruby>い<ruby>出<rt>だ</rt></ruby>しました。
+試験の日が来ました。田中さんは試験を書きました。一番むずかしい質問がありました。でも、図書館の本で読んだことを思い出しました。
 
-<ruby>答<rt>こた</rt></ruby>えを<ruby>書<rt>か</rt></ruby>くことができました！
+答えを書くことができました！
 
-<ruby>次<rt>つぎ</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>、<ruby>先生<rt>せんせい</rt></ruby>が<ruby>言<rt>い</rt></ruby>いました。「<ruby>田中<rt>たなか</rt></ruby>さん、よくできました！<ruby>百点<rt>ひゃくてん</rt></ruby>です！」
+次の日、先生が言いました。「田中さん、よくできました！百点です！」
 
-<ruby>田中<rt>たなか</rt></ruby>さんはうれしかったです。<ruby>図書館<rt>としょかん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>って、その<ruby>本<rt>ほん</rt></ruby>に「ありがとう」と<ruby>言<rt>い</rt></ruby>いました。
+田中さんはうれしかったです。図書館へ行って、その本に「ありがとう」と言いました。
 
-<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>むことは<ruby>大切<rt>たいせつ</rt></ruby>だと<ruby>思<rt>おも</rt></ruby>いました。<ruby>今<rt>いま</rt></ruby>も<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んでいます。
+本を読むことは大切だと思いました。今も毎日、図書館で本を読んでいます。
 
 **おわり**
 
