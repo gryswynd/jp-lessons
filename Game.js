@@ -486,16 +486,16 @@ window.GameModule = (function() {
       // Numbers in the collision map: 1-Bed, 2-Laptop, 3-Toilet, 4-Fridge, 5-Bed_Door,
       // 6-TV, 7-Bath_Door, 8-Kitchen_Door, 9-Kotatsu, 10-Front_Door
       const OBJECT_POSITIONS = [
-        { x: 109, y: 88, width: 81, height: 127 },   // 1 - Bed
-        { x: 215, y: 68, width: 115, height: 62 },   // 2 - Laptop
-        { x: 545, y: 55, width: 55, height: 63 },    // 3 - Toilet
-        { x: 680, y: 55, width: 135, height: 95 },   // 4 - Fridge
-        { x: 175, y: 310, width: 60, height: 60 },   // 5 - Bed_Door
-        { x: 280, y: 310, width: 115, height: 60 },  // 6 - TV
-        { x: 530, y: 310, width: 75, height: 85 },   // 7 - Bath_Door
-        { x: 720, y: 310, width: 95, height: 85 },   // 8 - Kitchen_Door
-        { x: 260, y: 455, width: 140, height: 85 },  // 9 - Kotatsu
-        { x: 690, y: 660, width: 125, height: 55 }   // 10 - Front_Door
+        { x: 194, y: 189, width: 114, height: 146 },  // 1 - Bed
+        { x: 315, y: 158, width: 121, height: 86 },   // 2 - Laptop
+        { x: 714, y: 134, width: 34, height: 110 },   // 3 - Toilet
+        { x: 849, y: 135, width: 71, height: 116 },   // 4 - Fridge
+        { x: 311, y: 440, width: 90, height: 122 },   // 5 - Bed_Door
+        { x: 420, y: 485, width: 122, height: 69 },   // 6 - TV
+        { x: 707, y: 437, width: 95, height: 125 },   // 7 - Bath_Door
+        { x: 938, y: 440, width: 98, height: 128 },   // 8 - Kitchen_Door
+        { x: 398, y: 626, width: 173, height: 77 },   // 9 - Kotatsu
+        { x: 911, y: 789, width: 158, height: 58 }    // 10 - Front_Door
       ];
 
       game.interactiveObjects = OBJECT_POSITIONS.map((pos, i) => {
