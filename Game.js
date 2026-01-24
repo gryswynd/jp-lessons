@@ -329,18 +329,19 @@ window.GameModule = (function() {
       conversationIndex: 0
     };
 
-    // Interactive object definitions (left to right, top to bottom)
+    // Interactive object definitions matching numbered objects in house_collision_alt.png
+    // 1-Bed, 2-Laptop, 3-Toilet, 4-Fridge, 5-Bed_Door, 6-TV, 7-Bath_Door, 8-Kitchen_Door, 9-Kotatsu, 10-Front_Door
     const INTERACTIVE_OBJECTS = [
       { name: 'Bed', message: 'A comfortable bed. Maybe I should get some rest later.' },
-      { name: 'Computer', message: 'My computer. I should study Japanese on it!' },
+      { name: 'Laptop', message: 'My laptop. I should study Japanese on it!' },
       { name: 'Toilet', message: 'The toilet. It\'s clean.' },
       { name: 'Fridge', message: 'The fridge is well stocked. Mom went shopping yesterday.' },
-      { name: 'Bedroom Door', isDoor: true },
+      { name: 'Bed_Door', isDoor: true },
       { name: 'TV', message: 'The TV is off. Maybe I can watch some anime later.' },
-      { name: 'Bathroom Door', isDoor: true },
-      { name: 'Kitchen Door', isDoor: true },
+      { name: 'Bath_Door', isDoor: true },
+      { name: 'Kitchen_Door', isDoor: true },
       { name: 'Kotatsu', message: 'The kotatsu is warm and inviting. Perfect for winter!' },
-      { name: 'Front Door', isDoor: true }
+      { name: 'Front_Door', isDoor: true }
     ];
 
     // NPC conversations
@@ -363,7 +364,7 @@ window.GameModule = (function() {
     // --- Image Loading ---
     const imagesToLoad = {
       map: 'house_map.png',
-      collision: 'house_collision.png',
+      collision: 'house_collision_alt.png',
       playerSheet: 'me_walk_cycle_sheet_transparent.png',
       momSprite: 'momsprite.png',
       dadSprite: 'dadsprite.png',
@@ -481,52 +482,31 @@ window.GameModule = (function() {
       tempCtx.drawImage(game.images.collision, 0, 0);
       game.collisionData = tempCtx.getImageData(0, 0, tempCanvas.width, tempCanvas.height);
 
-      // Scan for interactive objects (blue pixels)
-      const found = [];
-      for (let y = 0; y < game.collisionData.height; y++) {
-        for (let x = 0; x < game.collisionData.width; x++) {
-          const color = getPixelColor(game.collisionData, x, y);
-          if (color.b > 200 && color.r < 50 && color.g < 50) {
-            let isNew = true;
-            for (let obj of found) {
-              if (x >= obj.minX && x <= obj.maxX && y >= obj.minY && y <= obj.maxY) {
-                isNew = false;
-                break;
-              }
-            }
-            if (isNew) {
-              const bounds = { minX: x, maxX: x, minY: y, maxY: y };
-              for (let sy = y; sy < Math.min(y + 100, game.collisionData.height); sy++) {
-                for (let sx = x; sx < Math.min(x + 100, game.collisionData.width); sx++) {
-                  const c = getPixelColor(game.collisionData, sx, sy);
-                  if (c.b > 200 && c.r < 50 && c.g < 50) {
-                    bounds.maxX = Math.max(bounds.maxX, sx);
-                    bounds.maxY = Math.max(bounds.maxY, sy);
-                  }
-                }
-              }
-              found.push(bounds);
-            }
-          }
-        }
-      }
+      // Define interactive objects with explicit positions based on house_collision_alt.png
+      // Numbers in the collision map: 1-Bed, 2-Laptop, 3-Toilet, 4-Fridge, 5-Bed_Door,
+      // 6-TV, 7-Bath_Door, 8-Kitchen_Door, 9-Kotatsu, 10-Front_Door
+      const OBJECT_POSITIONS = [
+        { x: 109, y: 88, width: 81, height: 127 },   // 1 - Bed
+        { x: 215, y: 68, width: 115, height: 62 },   // 2 - Laptop
+        { x: 545, y: 55, width: 55, height: 63 },    // 3 - Toilet
+        { x: 680, y: 55, width: 135, height: 95 },   // 4 - Fridge
+        { x: 175, y: 310, width: 60, height: 60 },   // 5 - Bed_Door
+        { x: 280, y: 310, width: 115, height: 60 },  // 6 - TV
+        { x: 530, y: 310, width: 75, height: 85 },   // 7 - Bath_Door
+        { x: 720, y: 310, width: 95, height: 85 },   // 8 - Kitchen_Door
+        { x: 260, y: 455, width: 140, height: 85 },  // 9 - Kotatsu
+        { x: 690, y: 660, width: 125, height: 55 }   // 10 - Front_Door
+      ];
 
-      found.sort((a, b) => {
-        const aY = (a.minY + a.maxY) / 2;
-        const bY = (b.minY + b.maxY) / 2;
-        if (Math.abs(aY - bY) > 50) return aY - bY;
-        return (a.minX + a.maxX) / 2 - (b.minX + b.maxX) / 2;
-      });
-
-      game.interactiveObjects = found.map((bounds, i) => {
+      game.interactiveObjects = OBJECT_POSITIONS.map((pos, i) => {
         const def = INTERACTIVE_OBJECTS[i] || { name: `Object ${i}`, message: 'An object.' };
         return {
-          x: bounds.minX,
-          y: bounds.minY,
-          width: bounds.maxX - bounds.minX,
-          height: bounds.maxY - bounds.minY,
-          centerX: (bounds.minX + bounds.maxX) / 2,
-          centerY: (bounds.minY + bounds.maxY) / 2,
+          x: pos.x,
+          y: pos.y,
+          width: pos.width,
+          height: pos.height,
+          centerX: pos.x + pos.width / 2,
+          centerY: pos.y + pos.height / 2,
           ...def
         };
       });
