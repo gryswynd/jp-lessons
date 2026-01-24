@@ -719,8 +719,12 @@ window.GameModule = (function() {
         if (game.player.direction === 'right') checkX += interactDistance;
 
         for (let obj of game.interactiveObjects) {
-          const dx = checkX - obj.centerX;
-          const dy = checkY - obj.centerY;
+          // Calculate distance to nearest edge of object (not center)
+          // This allows interaction with tall/wide objects like doors
+          const nearestX = Math.max(obj.x, Math.min(checkX, obj.x + obj.width));
+          const nearestY = Math.max(obj.y, Math.min(checkY, obj.y + obj.height));
+          const dx = checkX - nearestX;
+          const dy = checkY - nearestY;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < interactDistance) {
