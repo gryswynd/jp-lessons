@@ -49,11 +49,11 @@
       "instructions": "Ask your partner these questions using words you already know:",
       "items": [
         {
-          "jp": "日本の お寺は 好きですか。",
-          "en": "Do you like Japanese temples?",
+          "jp": "日本の 料理は 好きですか。",
+          "en": "Do you like Japanese cuisine?",
           "terms": [
             "v_nihon",
-            "v_otera",
+            "v_ryouri",
             "v_suki"
           ]
         },
@@ -320,7 +320,7 @@
       "lines": [
         {
           "spk": "A",
-          "jp": "この 本は 難しいですか。",
+          "jp": "この 本は むずかしいですか。",
           "en": "Is this book difficult?",
           "terms": [
             "k_moto",
@@ -329,7 +329,7 @@
         },
         {
           "spk": "B",
-          "jp": "英語の 入門です。難しくないです。",
+          "jp": "英語の 入門です。むずかしくないです。",
           "en": "It is an introduction to English. It is not difficult.",
           "terms": [
             "v_eigo",
@@ -535,7 +535,6 @@
           ],
           "answer": "ike",
           "terms": [
-            "v_ike"
           ]
         },
         {
@@ -549,7 +548,6 @@
           ],
           "answer": "hayashi",
           "terms": [
-            "v_hayashi"
           ]
         },
         {
@@ -563,7 +561,6 @@
           ],
           "answer": "mon",
           "terms": [
-            "v_mon"
           ]
         },
         {
@@ -577,7 +574,6 @@
           ],
           "answer": "mura",
           "terms": [
-            "v_mura"
           ]
         },
         {
@@ -591,7 +587,6 @@
           ],
           "answer": "denchi",
           "terms": [
-            "v_denchi"
           ]
         }
       ]
