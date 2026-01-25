@@ -257,7 +257,7 @@
         },
         {
           "spk": "B",
-          "jp": "いいえ、高く ないです。",
+          "jp": "いいえ、高くないです。",
           "en": "No, it is not expensive.",
           "terms": [
             { "id": "v_takai", "form": "polite_negative" }
@@ -342,7 +342,7 @@
           "jp": "私は 英語の 門外漢です。",
           "en": "I am a layman regarding English.",
           "terms": [
-            "v_watashi",
+            "k_watashi",
             "v_eigo",
             "v_mongaikan"
           ]
@@ -384,7 +384,7 @@
           "en": "There is a mountain forest near the village.",
           "terms": [
             "v_mura",
-            "v_chikai",
+            { "id": "v_chikai", "form": "adverbial" },
             "v_sanrin",
             { "id": "v_aru", "form": "polite_masu" }
           ]
@@ -410,7 +410,8 @@
           "terms": [
             "v_kobayashi",
             "v_doko",
-            "v_sumu",
+            { "id": "v_sumu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" },
             "v_chiisai",
             "v_mura"
           ]
@@ -420,7 +421,7 @@
           "a": "山林。",
           "terms": [
             "v_mura",
-            "v_chikai",
+            { "id": "v_chikai", "form": "adverbial" },
             "k_nani",
             "v_sanrin"
           ]
@@ -430,7 +431,7 @@
           "a": "林の中。",
           "terms": [
             "v_doko",
-            "v_aruku",
+            { "id": "v_aruku", "form": "polite_masu"},
             "v_hayashi",
             "k_naka"
           ]
@@ -457,7 +458,7 @@
           "jp": "多くの 学生が 門に 入ります。",
           "en": "Many students enter the gate.",
           "terms": [
-            "v_ooku",
+            { "id": "v_ooi", "form": "adverbial" },
             "v_gakusei",
             "v_mon",
             { "id": "v_hairu", "form": "polite_masu" }
@@ -512,7 +513,8 @@
           "terms": [
             "k_mise",
             "k_nani",
-            "v_uru",
+            { "id": "v_uru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" },
             "v_denchi",
             "k_moto"
           ]
