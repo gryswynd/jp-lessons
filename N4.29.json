@@ -1,0 +1,627 @@
+{
+  "id": "N4.29",
+  "title": "Phase 4 Lesson 29: Measurement & Knowledge",
+  "meta": {
+    "phase": 4,
+    "lesson": 29,
+    "focus": "Measuring, knowing, and amounts.",
+    "kanji": [
+      "台",
+      "知",
+      "計",
+      "以"
+    ]
+  },
+  "newKanji": [
+    {
+      "kanji": "台",
+      "on": "だい / たい",
+      "kun": "",
+      "meaning": "Stand / Counter for machines",
+      "termId": "k_dai"
+    },
+    {
+      "kanji": "知",
+      "on": "ち",
+      "kun": "し(る)",
+      "meaning": "Know / Wisdom",
+      "termId": "k_chi"
+    },
+    {
+      "kanji": "計",
+      "on": "けい",
+      "kun": "はか(る)",
+      "meaning": "Measure / Plan",
+      "termId": "k_kei"
+    },
+    {
+      "kanji": "以",
+      "on": "い",
+      "kun": "",
+      "meaning": "By means of / Compared with",
+      "termId": "k_i_6"
+    }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "Warm-Up Review（ウォームアップ）",
+      "instructions": "Ask your partner these questions using words you already know:",
+      "items": [
+        {
+          "jp": "今、何時ですか。",
+          "en": "What time is it now?",
+          "terms": [
+            "k_ima",
+            "v_nanji"
+          ]
+        },
+        {
+          "jp": "大きい 犬が 好きですか。",
+          "en": "Do you like big dogs?",
+          "terms": [
+            "v_ookii",
+            "v_inu",
+            "v_suki"
+          ]
+        },
+        {
+          "jp": "新しい 車を 買いましたか。",
+          "en": "Did you buy a new car?",
+          "terms": [
+            "v_atarashii",
+            "k_kuruma",
+            { "id": "v_kau", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "あなたの 家は 明るいですか。",
+          "en": "Is your house bright?",
+          "terms": [
+            "k_ie",
+            "v_akarui"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "New Kanji（新しい 漢字）",
+      "items": [
+        {
+          "kanji": "台",
+          "on": "だい / たい",
+          "kun": "",
+          "meaning": "Stand / Machine Counter",
+          "terms": [
+            "v_taifuu",
+            "v_daidokoro",
+            "v_ichidai",
+            "v_takadai"
+          ]
+        },
+        {
+          "kanji": "知",
+          "on": "ち",
+          "kun": "し",
+          "meaning": "Know",
+          "terms": [
+            "v_shiru",
+            "v_shiraseru",
+            "v_hitomishiri"
+          ]
+        },
+        {
+          "kanji": "計",
+          "on": "けい",
+          "kun": "はか",
+          "meaning": "Measure / Plan",
+          "terms": [
+            "v_keikaku",
+            "v_tokei",
+            "v_hakaru",
+            "v_hakarishirenai"
+          ]
+        },
+        {
+          "kanji": "以",
+          "on": "い",
+          "kun": "",
+          "meaning": "Compared with",
+          "terms": [
+            "v_ijou",
+            "v_ika",
+            "v_igai"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "Vocabulary & Compounds（ことば）",
+      "groups": [
+        {
+          "label": "Machines & Places",
+          "items": [
+            "v_taifuu",
+            "v_daidokoro",
+            "v_takadai",
+            "v_ichidai",
+            "v_tokei"
+          ]
+        },
+        {
+          "label": "Actions & Plans",
+          "items": [
+            "v_shiru",
+            "v_shiraseru",
+            "v_hakaru",
+            "v_keikaku",
+            "v_hakarishirenai"
+          ]
+        },
+        {
+          "label": "Amounts & Concepts",
+          "items": [
+            "v_ijou",
+            "v_ika",
+            "v_igai",
+            "v_hitomishiri"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 1（会話）: The Typhoon",
+      "context": "Preparing for a storm.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "台風が 来ますね。",
+          "en": "A typhoon is coming, isn't it?",
+          "terms": [
+            "v_taifuu",
+            { "id": "v_kuru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。計画が ありますか。",
+          "en": "Yes. Do you have a plan?",
+          "terms": [
+            "v_keikaku",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "家から 出ません。私の 家は 高台に あります。",
+          "en": "I will not leave the house. My house is on high ground.",
+          "terms": [
+            "k_ie",
+            { "id": "v_deru", "form": "polite_negative" },
+            "v_takadai"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "それは いいですね。",
+          "en": "That is good.",
+          "terms": [
+            "v_ii"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 2（会話）: The Clock",
+      "context": "Looking for a lost item.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "この 時計は 先生のですか。",
+          "en": "Is this clock the teacher's?",
+          "terms": [
+            "v_tokei",
+            "v_sensei"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "いいえ、私のです。台所に ありましたか。",
+          "en": "No, it is mine. Was it in the kitchen?",
+          "terms": [
+            "k_watashi",
+            "v_daidokoro",
+            { "id": "v_aru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "はい。でも、時間が 分かりません。",
+          "en": "Yes. But I do not know the time.",
+          "terms": [
+            "v_jikan",
+            { "id": "v_wakaru", "form": "polite_negative" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "古い 時計ですから。",
+          "en": "Because it is an old clock.",
+          "terms": [
+            "v_furui",
+            "v_tokei"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 3（会話）: How Many?",
+      "context": "Discussing student numbers.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "学生は 何人 いますか。",
+          "en": "How many students are there?",
+          "terms": [
+            "v_gakusei",
+            "v_nannin",
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "十人 以上 います。",
+          "en": "There are more than ten.",
+          "terms": [
+            "v_juunin",
+            "v_ijou",
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "先生は？",
+          "en": "And teachers?",
+          "terms": [
+            "v_sensei"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "五人 以下です。",
+          "en": "Less than five.",
+          "terms": [
+            "v_gonin",
+            "v_ika"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 4（会話）: Shyness",
+      "context": "Talking about a famous person.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "あの 人を 知って いますか。",
+          "en": "Do you know that person?",
+          "terms": [
+            "k_hito",
+            { "id": "v_shiru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "いいえ。私は 人見知りですから、話しません。",
+          "en": "No. Because I am shy, I do not speak.",
+          "terms": [
+            "v_hitomishiri",
+            { "id": "v_hanasu", "form": "polite_negative" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "有名な 画家ですよ。",
+          "en": "He is a famous painter.",
+          "terms": [
+            "v_yuumei",
+            "v_gaka"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 1: The Typhoon",
+      "passage": [
+        {
+          "jp": "強い 台風が 来ます。",
+          "en": "A strong typhoon is coming.",
+          "terms": [
+            "v_tsuyoi",
+            "v_taifuu",
+            { "id": "v_kuru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "ラジオが 強い 風を 知らせました。",
+          "en": "The radio notified us of the strong wind.",
+          "terms": [
+            "v_tsuyoi",
+            "k_kaze",
+            { "id": "v_shiraseru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "外に 出るのは 悪いです。",
+          "en": "It is bad to go outside.",
+          "terms": [
+            "k_soto",
+            "v_deru",
+            "v_warui"
+          ]
+        },
+        {
+          "jp": "私の 家は 高台に ありますから、家で 本を 読みます。",
+          "en": "My house is on high ground, so I will read a book at home.",
+          "terms": [
+            "k_ie",
+            "v_takadai",
+            "k_moto",
+            { "id": "v_yomu", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "何が 来ますか。",
+          "a": "強い 台風。",
+          "terms": [
+            "k_nani",
+            "v_kuru",
+            "v_tsuyoi",
+            "v_taifuu"
+          ]
+        },
+        {
+          "q": "ラジオは 何を 知らせましたか。",
+          "a": "強い 風。",
+          "terms": [
+            "k_nani",
+            "v_tsuyoi",
+            "k_kaze",
+            "v_shiraseru"
+          ]
+        },
+        {
+          "q": "どこに いますか。",
+          "a": "高台の 家。",
+          "terms": [
+            "v_doko",
+            "v_takadai",
+            "k_ie"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: Shopping",
+      "passage": [
+        {
+          "jp": "店へ 時計を 買いに 行きました。",
+          "en": "I went to the shop to buy a clock.",
+          "terms": [
+            "k_mise",
+            "v_tokei",
+            "v_kau",
+            { "id": "v_iku", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "いい 時計が 一台 ありました。",
+          "en": "There was one good clock.",
+          "terms": [
+            "v_ii",
+            "v_tokei",
+            "v_ichidai",
+            { "id": "v_aru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "一万円 以下ですが、少し 小さいです。",
+          "en": "It is less than 10,000 yen, but a little small.",
+          "terms": [
+            "v_ichiman",
+            "k_en",
+            "v_ika",
+            "v_sukoshi",
+            "v_chiisai"
+          ]
+        },
+        {
+          "jp": "それ 以外は 高いです。",
+          "en": "Other than that, they are expensive.",
+          "terms": [
+            "v_igai",
+            "v_takai"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "何を 買いに 行きましたか。",
+          "a": "時計。",
+          "terms": [
+            "k_nani",
+            "v_kau",
+            "v_tokei"
+          ]
+        },
+        {
+          "q": "その 時計は 高いですか。",
+          "a": "いいえ、一万円 以下です。",
+          "terms": [
+            "v_takai",
+            "v_ichiman",
+            "k_en",
+            "v_ika"
+          ]
+        },
+        {
+          "q": "ほかの 時計は どうですか。",
+          "a": "高いです。",
+          "terms": [
+            "v_tokei",
+            "v_dou",
+            "v_takai"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Vocabulary",
+      "instructions": "Select the correct reading or meaning.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "台風",
+          "choices": [
+            "taifuu",
+            "daikaze",
+            "okaze",
+            "taikun"
+          ],
+          "answer": "taifuu",
+          "terms": [ "v_taifuu" ]
+        },
+        {
+          "kind": "mcq",
+          "q": "時計",
+          "choices": [
+            "tokei",
+            "jikei",
+            "tokihakaru",
+            "jihyou"
+          ],
+          "answer": "tokei",
+          "terms": [ "v_tokei" ]
+        },
+        {
+          "kind": "mcq",
+          "q": "計画",
+          "choices": [
+            "keikaku",
+            "hakakaku",
+            "keiga",
+            "kega"
+          ],
+          "answer": "keikaku",
+          "terms": [ "v_keikaku" ]
+        },
+        {
+          "kind": "mcq",
+          "q": "知る",
+          "choices": [
+            "shiru",
+            "chiru",
+            "toru",
+            "kuru"
+          ],
+          "answer": "shiru",
+          "terms": [ "v_shiru" ]
+        },
+        {
+          "kind": "mcq",
+          "q": "以下",
+          "choices": [
+            "ika",
+            "ijou",
+            "igai",
+            "izen"
+          ],
+          "answer": "ika",
+          "terms": [ "v_ika" ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Fill in the Blank",
+      "instructions": "Select the word that fits.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "______ で 料理を 作ります。",
+          "choices": [
+            "台所",
+            "高台",
+            "時計",
+            "計画"
+          ],
+          "answer": "台所",
+          "terms": [
+            "v_daidokoro",
+            "v_ryouri",
+            "v_tsukuru"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "あの 人は ______ ですから、あまり 話しません。",
+          "choices": [
+            "人見知り",
+            "有名人",
+            "外国人",
+            "村人"
+          ],
+          "answer": "人見知り",
+          "terms": [
+            "k_hito",
+            "v_hitomishiri",
+            "v_hanasu"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "車が ______ あります。",
+          "choices": [
+            "一台",
+            "一回",
+            "一本",
+            "一万"
+          ],
+          "answer": "一台",
+          "terms": [
+            "k_kuruma",
+            "v_ichidai",
+            "v_aru"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "時間を ______ ください。",
+          "choices": [
+            "知らせて",
+            "知って",
+            "計って",
+            "教えて"
+          ],
+          "answer": "計って",
+          "terms": [
+            "v_jikan",
+            { "id": "v_hakaru", "form": "te_form" }
+          ]
+        }
+      ]
+    }
+  ]
+}
