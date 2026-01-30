@@ -67,7 +67,7 @@
       owner: "gryswynd",
       repo: "jp-lessons",
       branch: "main",
-      path: "N4.Review.5.json" // Default, can be overridden
+      path: "N4.Review.6.json" // Default, can be overridden
     },
     state: {
       questions: [],
