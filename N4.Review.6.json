@@ -1,0 +1,545 @@
+{
+  "id": "N4.Review.6",
+  "title": "Phase 4 Review: Nature, Places & Measurement",
+  "meta": {
+    "phase": 4,
+    "type": "assessment",
+    "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 28-29.",
+    "kanji": [
+      "池",
+      "林",
+      "門",
+      "村",
+      "台",
+      "知",
+      "計",
+      "以"
+    ]
+  },
+  "sections": [
+    {
+      "type": "conversation",
+      "title": "Part 1: Conversation Check",
+      "instructions": "Read the conversation and select the best summary.",
+      "items": [
+        {
+          "title": "Conversation 1",
+          "context": "Discussing the weather.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "強い 台風が 来ますね。計画は ありますか。",
+              "terms": [
+                "v_tsuyoi",
+                "v_taifuu",
+                { "id": "v_kuru", "form": "polite_masu" },
+                "v_keikaku",
+                { "id": "v_aru", "form": "polite_masu" }
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "はい。台所に 水と 電池が あります。",
+              "terms": [
+                "v_daidokoro",
+                "k_mizu",
+                "v_denchi",
+                { "id": "v_aru", "form": "polite_masu" }
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "外に 出ないで ください。",
+              "terms": [
+                "k_soto",
+                { "id": "v_deru", "form": "polite_negative_te" }
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "分かりました。家で 本を 読みます。",
+              "terms": [
+                { "id": "v_wakaru", "form": "polite_mashita" },
+                "k_ie",
+                "k_moto",
+                { "id": "v_yomu", "form": "polite_masu" }
+              ]
+            }
+          ],
+          "question": "Where are the batteries?",
+          "choices": [
+            "In the garden.",
+            "In the kitchen.",
+            "At the shop.",
+            "In the car."
+          ],
+          "answer": "In the kitchen.",
+          "explanation": "B says they are in the kitchen (台所に...あります)."
+        },
+        {
+          "title": "Conversation 2",
+          "context": "Asking about a location.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "小林さんの 村を 知って いますか。",
+              "terms": [
+                "v_kobayashi",
+                "v_mura",
+                { "id": "v_shiru", "form": "te_form" },
+                { "id": "v_iru", "form": "polite_masu" }
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "はい。いい 所ですよ。",
+              "terms": [
+                "v_ii",
+                "k_tokoro"
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "村に 何が ありますか。",
+              "terms": [
+                "v_mura",
+                "k_nani",
+                { "id": "v_aru", "form": "polite_masu" }
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "林と 大きい 池が あります。",
+              "terms": [
+                "v_hayashi",
+                "v_ookii",
+                "v_ike",
+                { "id": "v_aru", "form": "polite_masu" }
+              ]
+            }
+          ],
+          "question": "What is in Mr. Kobayashi's village?",
+          "choices": [
+            "A mountain and a river.",
+            "A school and a library.",
+            "A grove and a big pond.",
+            "A factory and a station."
+          ],
+          "answer": "A grove and a big pond.",
+          "explanation": "B mentions a grove (林) and a big pond (大きい池)."
+        },
+        {
+          "title": "Conversation 3",
+          "context": "Shopping for a watch.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "この 時計は 一万円 以上ですか。",
+              "terms": [
+                "v_tokei",
+                "v_ichiman",
+                "k_en",
+                "v_ijou"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "いいえ、五千円 以下です。古い 時計ですから。",
+              "terms": [
+                "v_gosen",
+                "k_en",
+                "v_ika",
+                "v_furui",
+                "v_tokei"
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "デザインは いいですね。",
+              "terms": [
+                "v_ii"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "はい。でも、時間は 正しくないです。",
+              "terms": [
+                "v_jikan",
+                { "id": "v_tadashii", "form": "polite_negative" }
+              ]
+            }
+          ],
+          "question": "How much is the clock?",
+          "choices": [
+            "More than 10,000 yen.",
+            "Exactly 10,000 yen.",
+            "Less than 5,000 yen.",
+            "More than 5,000 yen."
+          ],
+          "answer": "Less than 5,000 yen.",
+          "explanation": "B says '5,000 yen or less' (五千円以下です)."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 2: Grammar Scramble",
+      "instructions": "Construct the sentence by clicking the words in the correct order.",
+      "items": [
+        {
+          "kind": "scramble",
+          "q": "Let's meet at the main gate.",
+          "segments": [
+            "正門",
+            "で",
+            "待ち合わせ",
+            "を",
+            "しましょう"
+          ],
+          "explanation": "Location (Seimon) + de + Meeting (Machiawase) + wo + Shimashou."
+        },
+        {
+          "kind": "scramble",
+          "q": "There are more than ten students.",
+          "segments": [
+            "学生",
+            "は",
+            "十人",
+            "以上",
+            "います"
+          ],
+          "explanation": "Student (Gakusei) + wa + Ten people (Juunin) + More than (Ijou) + Imasu."
+        },
+        {
+          "kind": "scramble",
+          "q": "Please let me know the plan.",
+          "segments": [
+            "計画",
+            "を",
+            "知らせて",
+            "ください"
+          ],
+          "explanation": "Plan (Keikaku) + wo + Shiraseru (Te-form) + Kudasai."
+        },
+        {
+          "kind": "scramble",
+          "q": "I bought batteries at the shop.",
+          "segments": [
+            "店",
+            "で",
+            "電池",
+            "を",
+            "買いました"
+          ],
+          "explanation": "Shop (Mise) + de + Battery (Denchi) + wo + Kaimashita."
+        },
+        {
+          "kind": "scramble",
+          "q": "I do not know that person's name.",
+          "segments": [
+            "あの",
+            "人",
+            "の",
+            "名前を",
+            "知りません"
+          ],
+          "explanation": "That person (Ano hito) + no + Name (Namae) + wo + Shirimasen."
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Part 3: Reading - My Village",
+      "passage": [
+        {
+          "jp": "私の 村は 山村です。",
+          "en": "My village is a mountain village.",
+          "terms": [
+            "k_watashi",
+            "v_mura",
+            "v_sanson"
+          ]
+        },
+        {
+          "jp": "村人は 少ないですが、みんな 親切です。",
+          "en": "There are few villagers, but everyone is kind.",
+          "terms": [
+            "v_murabito",
+            "v_sukunai",
+            "v_shinsetsu"
+          ]
+        },
+        {
+          "jp": "林の 中に 古い 門が あります。",
+          "en": "There is an old gate inside the grove.",
+          "terms": [
+            "v_hayashi",
+            "k_naka",
+            "v_furui",
+            "v_mon",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "私は 毎日 そこで 時間を 計ります。",
+          "en": "Every day I measure the time there.",
+          "terms": [
+            "k_watashi",
+            "v_mainichi",
+            "v_jikan",
+            { "id": "v_hakaru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "一時間 以上 歩きます。",
+          "en": "I walk for more than one hour.",
+          "terms": [
+            "v_ichijikan",
+            "v_ijou",
+            { "id": "v_aruku", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "どんな 村ですか。",
+          "a": "山村",
+          "choices": [
+            "山村",
+            "漁村",
+            "町",
+            "外国"
+          ],
+          "terms": [
+            "v_dou",
+            "v_mura",
+            "v_sanson"
+          ]
+        },
+        {
+          "q": "林の 中に 何が ありますか。",
+          "a": "古い 門",
+          "choices": [
+            "新しい 家",
+            "古い 門",
+            "学校",
+            "店"
+          ],
+          "terms": [
+            "v_hayashi",
+            "k_naka",
+            "k_nani",
+            "v_furui",
+            "v_mon"
+          ]
+        },
+        {
+          "q": "毎日 何を しますか。",
+          "a": "一時間 以上 歩く",
+          "choices": [
+            "一時間 以上 歩く",
+            "一時間 以下 寝る",
+            "本を 読む",
+            "時計を 買う"
+          ],
+          "terms": [
+            "v_mainichi",
+            "k_nani",
+            "v_ichijikan",
+            "v_ijou",
+            "v_aruku"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 4: Kanji Readings",
+      "instructions": "Select the correct reading for the [bracketed] word.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "[台風]が 来ます。",
+          "choices": [
+            "たいふう",
+            "だいかぜ",
+            "おおかぜ",
+            "たいふ"
+          ],
+          "answer": "たいふう",
+          "explanation": "台風 (Typhoon) is read as <b>taifuu</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "[計画]を 立てます。",
+          "choices": [
+            "けいかく",
+            "けいが",
+            "はかりかく",
+            "けいか"
+          ],
+          "answer": "けいかく",
+          "explanation": "計画 (Plan) is read as <b>keikaku</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "名前を [知って]いますか。",
+          "choices": [
+            "しって",
+            "ちって",
+            "とって",
+            "きって"
+          ],
+          "answer": "しって",
+          "explanation": "知って (Knowing - te form) is read as <b>shitte</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "学校の [正門]。",
+          "choices": [
+            "せいもん",
+            "しょうもん",
+            "ただもん",
+            "まさかど"
+          ],
+          "answer": "せいもん",
+          "explanation": "正門 (Main gate) is read as <b>seimon</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "[林]が あります。",
+          "choices": [
+            "はやし",
+            "りん",
+            "もり",
+            "き"
+          ],
+          "answer": "はやし",
+          "explanation": "林 (Grove) is read as <b>hayashi</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "一万円 [以下]。",
+          "choices": [
+            "いか",
+            "いげ",
+            "いした",
+            "いもと"
+          ],
+          "answer": "いか",
+          "explanation": "以下 (Less than/Below) is read as <b>ika</b>."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 5: Context & Vocabulary",
+      "instructions": "Select the best word to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "料理は ______ で 作ります。",
+          "choices": [
+            "台所",
+            "池",
+            "林",
+            "門"
+          ],
+          "answer": "台所",
+          "explanation": "You cook in the kitchen (台所)."
+        },
+        {
+          "kind": "mcq",
+          "q": "ラジオの ______ が 古いです。",
+          "choices": [
+            "電池",
+            "村人",
+            "計画",
+            "風"
+          ],
+          "answer": "電池",
+          "explanation": "The radio's battery (電池) is old."
+        },
+        {
+          "kind": "mcq",
+          "q": "時間を ______ ください。",
+          "choices": [
+            "計って",
+            "行って",
+            "走って",
+            "帰って"
+          ],
+          "answer": "計って",
+          "explanation": "Please measure (計って) the time."
+        },
+        {
+          "kind": "mcq",
+          "q": "田中さんは ______ ですから、あまり 話しません。",
+          "choices": [
+            "人見知り",
+            "有名",
+            "元気",
+            "親切"
+          ],
+          "answer": "人見知り",
+          "explanation": "Tanaka-san is shy (人見知り), so he doesn't talk much."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 6: Grammar Check",
+      "instructions": "Choose the correct particle or form to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "十人 ______ います。",
+          "choices": [
+            "以上",
+            "以",
+            "以中",
+            "以高"
+          ],
+          "answer": "以上",
+          "explanation": "Ijou (以上) means 'more than' or 'or more'."
+        },
+        {
+          "kind": "mcq",
+          "q": "それ ______ は いりません。",
+          "choices": [
+            "以外",
+            "以内",
+            "以別",
+            "以他"
+          ],
+          "answer": "以外",
+          "explanation": "Igai (以外) means 'other than' or 'except'."
+        },
+        {
+          "kind": "mcq",
+          "q": "ニュースを ______ ください。",
+          "choices": [
+            "知らせて",
+            "知って",
+            "知らって",
+            "知れて"
+          ],
+          "answer": "知らせて",
+          "explanation": "Shiraseru (to notify) te-form is Shirasete."
+        },
+        {
+          "kind": "mcq",
+          "q": "車が 一 ______ あります。",
+          "choices": [
+            "台",
+            "枚",
+            "本",
+            "匹"
+          ],
+          "answer": "台",
+          "explanation": "Dai (台) is the counter for machines/cars."
+        }
+      ]
+    }
+  ]
+}
