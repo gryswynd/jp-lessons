@@ -49,7 +49,7 @@
       "instructions": "Ask your partner these questions using words you already know:",
       "items": [
         {
-          "jp": "昨日、何を しましたか。",
+          "jp": "きのう、何を しましたか。",
           "en": "What did you do yesterday?",
           "terms": [
             "v_kinou",
@@ -70,7 +70,7 @@
           "en": "Do you know the teacher's name?",
           "terms": [
             "v_sensei",
-            "k_namae",
+            "v_namae",
             { "id": "v_shiru", "form": "te_form" },
             { "id": "v_iru", "form": "polite_masu" }
           ]
@@ -81,7 +81,7 @@
           "terms": [
             "v_mainichi",
             "v_nanji",
-            "v_hataraku"
+            { "id": "v_hataraku", "form": "polite_masu" }
           ]
         }
       ]
@@ -188,7 +188,7 @@
           "en": "Do you recall that person's name?",
           "terms": [
             "k_hito",
-            "k_namae",
+            "v_namae",
             { "id": "v_omoidasu", "form": "polite_masu" }
           ]
         },
