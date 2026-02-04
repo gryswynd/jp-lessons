@@ -61,7 +61,7 @@
           "jp": "山へ 行きたいですか。",
           "en": "Do you want to go to the mountain?",
           "terms": [
-            "v_yama",
+            "k_yama",
             { "id": "v_iku", "form": "desire_tai" }
           ]
         },
@@ -69,7 +69,7 @@
           "jp": "店で 何を 買いますか。",
           "en": "What will you buy at the shop?",
           "terms": [
-            "v_mise",
+            "k_mise",
             "k_nani",
             { "id": "v_kau", "form": "polite_masu" }
           ]
@@ -236,7 +236,7 @@
           "en": "There is a forest on that mountain.",
           "terms": [
             "k_ano",
-            "v_yama",
+            "k_yama",
             "v_mori",
             { "id": "v_aru", "form": "polite_masu" }
           ]
@@ -294,7 +294,7 @@
             "v_ii",
             "v_shokudou",
             "v_daikin",
-            "v_yasui"
+            "v_yasu"
           ]
         },
         {
@@ -303,7 +303,7 @@
           "en": "What time do they open the shop?",
           "terms": [
             "v_nanji",
-            "v_mise",
+            "k_mise",
             { "id": "v_akeru", "form": "polite_masu" }
           ]
         },
@@ -328,7 +328,7 @@
           "jp": "店の 入り口を 開けて ください。",
           "en": "Please open the shop entrance.",
           "terms": [
-            "v_mise",
+            "k_mise",
             "v_iriguchi",
             { "id": "v_akeru", "form": "te_form" },
             "v_kudasai"
@@ -336,11 +336,10 @@
         },
         {
           "spk": "B",
-          "jp": "開きません。重いです。",
-          "en": "It won't open (intransitive). It is heavy.",
+          "jp": "すみません、開きません。",
+          "en": "Sorry, it won't open.",
           "terms": [
-            { "id": "v_aku_2", "form": "polite_negative" },
-            "v_omoi"
+            { "id": "v_aku_2", "form": "polite_negative" }
           ]
         },
         {
@@ -394,11 +393,12 @@
           ]
         },
         {
-          "jp": "私は 昔の 力を 思いました。",
+          "jp": "私は 古いの時代の 力を 思いました。",
           "en": "I thought of the power of old times.",
           "terms": [
             "k_watashi",
-            "v_mukashi",
+            "v_furu",
+            "v_jidai",
             "v_chikara",
             { "id": "v_omou", "form": "polite_mashita" }
           ]
@@ -524,7 +524,7 @@
             "jishiro"
           ],
           "answer": "jidai",
-          "terms": [ "v_jidai" ]
+          "terms": [  ]
         },
         {
           "kind": "mcq",
@@ -536,7 +536,7 @@
             "shinhayashi"
           ],
           "answer": "shinrin",
-          "terms": [ "v_shinrin" ]
+          "terms": [  ]
         },
         {
           "kind": "mcq",
@@ -548,7 +548,7 @@
             "tabedou"
           ],
           "answer": "shokudou",
-          "terms": [ "v_shokudou" ]
+          "terms": [  ]
         },
         {
           "kind": "mcq",
@@ -560,7 +560,7 @@
             "sakeru"
           ],
           "answer": "akeru",
-          "terms": [ "v_akeru" ]
+          "terms": [  ]
         },
         {
           "kind": "mcq",
@@ -572,7 +572,7 @@
             "owaru"
           ],
           "answer": "kawaru",
-          "terms": [ "v_kawaru" ]
+          "terms": [  ]
         }
       ]
     },
