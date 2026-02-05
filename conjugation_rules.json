@@ -117,6 +117,16 @@
       "irr_kuru": { "type": "replace", "surface": "来られる", "reading": "こられる" }
     }
   },
+  "potential_negative": {
+    "label": "Potential Negative",
+    "description": "Polite form expressing inability (cannot do).",
+    "rules": {
+      "godan": { "type": "godan_change", "map": "u_to_e", "add": "ません" },
+      "ichidan": { "type": "suffix", "remove": "る", "add": "られません" },
+      "irr_suru": { "type": "replace", "surface": "できません", "reading": "できません" },
+      "irr_kuru": { "type": "replace", "surface": "来られません", "reading": "こられません" }
+    }
+  },
   "adverbial": {
     "label": "Adverbial Form (Ku/Ni)",
     "description": "Changes the adjective into an adverb.",
