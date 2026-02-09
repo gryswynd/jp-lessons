@@ -1,0 +1,679 @@
+{
+  "id": "N4.32",
+  "title": "Phase 4 Lesson 32: Use, Learn, & The City",
+  "meta": {
+    "phase": 4,
+    "lesson": 32,
+    "focus": "Pulling things, usage and tasks, learning skills, and city life.",
+    "kanji": [
+      "引",
+      "用",
+      "習",
+      "市"
+    ]
+  },
+  "newKanji": [
+    {
+      "kanji": "引",
+      "on": "いん",
+      "kun": "ひ(く)",
+      "meaning": "Pull",
+      "termId": "k_hiku"
+    },
+    {
+      "kanji": "用",
+      "on": "よう",
+      "kun": "もち(いる)",
+      "meaning": "Use / Service",
+      "termId": "k_you"
+    },
+    {
+      "kanji": "習",
+      "on": "しゅう",
+      "kun": "なら(う)",
+      "meaning": "Learn",
+      "termId": "k_narau"
+    },
+    {
+      "kanji": "市",
+      "on": "し",
+      "kun": "いち",
+      "meaning": "City / Market",
+      "termId": "k_shi"
+    }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "Warm-Up Review（ウォームアップ）",
+      "instructions": "Ask your partner these questions using words you already know:",
+      "items": [
+        {
+          "jp": "どんな 町が 好きですか。",
+          "en": "What kind of town do you like?",
+          "terms": [
+            "v_donna",
+            "k_machi",
+            "v_suki"
+          ]
+        },
+        {
+          "jp": "毎日、勉強しますか。",
+          "en": "Do you study every day?",
+          "terms": [
+            "v_mainichi",
+            { "id": "v_benkyou", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "日本語を 使いますか。",
+          "en": "Do you use Japanese?",
+          "terms": [
+            "v_nihongo",
+            { "id": "v_tsukau", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "ドアを 開けて ください。",
+          "en": "Please open the door.",
+          "terms": [
+            "v_doa",
+            { "id": "v_akeru", "form": "te_form" },
+            "v_kudasai"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "New Kanji（新しい 漢字）",
+      "items": [
+        {
+          "kanji": "引",
+          "on": "いん",
+          "kun": "ひ",
+          "meaning": "Pull",
+          "terms": [
+            "k_hiku",
+            "v_hiku",
+            "v_hikidasu",
+            "v_hikidashi",
+            "v_inyou",
+            "v_tebikisyo"
+          ]
+        },
+        {
+          "kanji": "用",
+          "on": "よう",
+          "kun": "もち",
+          "meaning": "Use / Task",
+          "terms": [
+            "k_you",
+            "v_youji",
+            "v_youshi",
+            "v_youchi",
+            "v_shiyou",
+            "v_kiyou"
+          ]
+        },
+        {
+          "kanji": "習",
+          "on": "しゅう",
+          "kun": "なら",
+          "meaning": "Learn",
+          "terms": [
+            "k_narau",
+            "v_narau",
+            "v_kyoushuu",
+            "v_minarau",
+            "v_gakushuu",
+            "v_shuuji"
+          ]
+        },
+        {
+          "kanji": "市",
+          "on": "し",
+          "kun": "いち",
+          "meaning": "City / Market",
+          "terms": [
+            "k_shi",
+            "v_shi",
+            "v_ichi",
+            "v_toshi",
+            "v_shichou",
+            "v_asaichi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "Vocabulary & Compounds（ことば）",
+      "groups": [
+        {
+          "label": "Pulling & Quoting",
+          "items": [
+            "v_hiku",
+            "v_hikidasu",
+            "v_hikidashi",
+            "v_inyou",
+            "v_tebikisyo"
+          ]
+        },
+        {
+          "label": "Usage & Tasks",
+          "items": [
+            "v_you",
+            "v_youji",
+            "v_youshi",
+            "v_youchi",
+            "v_shiyou",
+            "v_kiyou",
+            "v_kyuuyou"
+          ]
+        },
+        {
+          "label": "Learning",
+          "items": [
+            "v_narau",
+            "v_kyoushuu",
+            "v_minarau",
+            "v_gakushuu",
+            "v_shuuji"
+          ]
+        },
+        {
+          "label": "City & Market",
+          "items": [
+            "v_shi",
+            "v_ichi",
+            "v_toshi",
+            "v_shichou",
+            "v_asaichi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 1（会話）: The Manual",
+      "context": "Looking for instructions.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "この 物の 手引書は どこですか。",
+          "en": "Where is the manual for this thing?",
+          "terms": [
+            "k_kono",
+            "k_mono",
+            "v_tebikisyo",
+            "v_doko"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "この 引き出しに あります。",
+          "en": "It is in this drawer.",
+          "terms": [
+            "k_kono",
+            "v_hikidashi",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "使い方を 知りたいです。",
+          "en": "I want to know the usage (how to use).",
+          "terms": [
+            "v_tsukaikata",
+            { "id": "v_shiru", "form": "desire_tai" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "ここで お金を 引き出して ください。",
+          "en": "Please withdraw money here.",
+          "terms": [
+            "k_koko",
+            "k_kane",
+            { "id": "v_hikidasu", "form": "te_form" },
+            "v_kudasai"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 2（会話）: Urgent Business",
+      "context": "Calling a friend.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "もしもし、今 急用が あります。",
+          "en": "Hello, I have urgent business now.",
+          "terms": [
+            "v_moshimoshi",
+            "k_ima",
+            "v_kyuuyou",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "どう しましたか。仕事ですか。",
+          "en": "What happened? Is it work?",
+          "terms": [
+            "v_dou",
+            { "id": "v_suru", "form": "polite_mashita" },
+            "v_shigoto"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "はい。新しい 人を 起用します。",
+          "en": "Yes. We are appointing a new person.",
+          "terms": [
+            "v_atarashii",
+            "k_hito",
+            { "id": "v_kiyou", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "用紙は ありますか。",
+          "en": "Do you have the forms?",
+          "terms": [
+            "v_youshi",
+            "v_aru"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 3（会話）: Learning Calligraphy",
+      "context": "Talking about hobbies.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "何を 習って いますか。",
+          "en": "What are you learning?",
+          "terms": [
+            "k_nani",
+            { "id": "v_narau", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "習字を 習って います。楽しいですよ。",
+          "en": "I am learning calligraphy. It is fun.",
+          "terms": [
+            "v_shuuji",
+            { "id": "v_narau", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" },
+            "v_tanoshii"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "先生は いいですか。",
+          "en": "Is the teacher good?",
+          "terms": [
+            "v_sensei",
+            "v_ii"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。先生を 見習って 書きます。",
+          "en": "Yes. I observe/emulate the teacher and write.",
+          "terms": [
+            "v_hai",
+            "v_sensei",
+            { "id": "v_minarau", "form": "te_form" },
+            { "id": "v_kaku", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 4（会話）: The Mayor",
+      "context": "News about the city.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "この 都市の 市長を 知って いますか。",
+          "en": "Do you know the mayor of this city?",
+          "terms": [
+            "v_toshi",
+            "v_shichou",
+            { "id": "v_shiru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。朝市で 会いました。",
+          "en": "Yes. I met him at the morning market.",
+          "terms": [
+            "v_hai",
+            "v_asaichi",
+            { "id": "v_au", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "何を しましたか。",
+          "en": "What did he do?",
+          "terms": [
+            "k_nani",
+            { "id": "v_suru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "新しい 用地を 見ました。",
+          "en": "He looked at the new site.",
+          "terms": [
+            "v_atarashii",
+            "v_youchi",
+            { "id": "v_miru", "form": "polite_mashita" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 1: Usage of Words",
+      "passage": [
+        {
+          "jp": "日本語の 学習を します。",
+          "en": "I study Japanese.",
+          "terms": [
+            "v_nihongo",
+            "v_gakushuu",
+            { "id": "v_suru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "時々、古い 本から 文を 引用します。",
+          "en": "Sometimes, I quote sentences from old books.",
+          "terms": [
+            "v_tokidoki",
+            "v_furui",
+            "k_moto",
+            "k_bun",
+            { "id": "v_inyou", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "漢字の 使用は 難しいです。",
+          "en": "The usage of Kanji is difficult.",
+          "terms": [
+            "v_kanji",
+            "v_shiyou",
+            "v_muzukashii"
+          ]
+        },
+        {
+          "jp": "先生に 習って、勉強します。",
+          "en": "I learn from the teacher and study.",
+          "terms": [
+            "v_sensei",
+            { "id": "v_narau", "form": "te_form" },
+            { "id": "v_benkyou", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "何を 引用しますか。",
+          "a": "文。",
+          "terms": [
+            "k_nani",
+            "v_inyou",
+            "k_bun"
+          ]
+        },
+        {
+          "q": "何が 難しいですか。",
+          "a": "漢字の 使用。",
+          "terms": [
+            "k_nani",
+            "v_muzukashii",
+            "v_kanji",
+            "v_shiyou"
+          ]
+        },
+        {
+          "q": "だれに 習いますか。",
+          "a": "先生。",
+          "terms": [
+            "v_dare",
+            "v_narau",
+            "v_sensei"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: The New City",
+      "passage": [
+        {
+          "jp": "私は 新しい 市に 住んで います。",
+          "en": "I live in a new city.",
+          "terms": [
+            "k_watashi",
+            "v_atarashii",
+            "v_shi",
+            { "id": "v_sumu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "ここは 大きい 都市です。",
+          "en": "This place is a big metropolis.",
+          "terms": [
+            "k_koko",
+            "v_ookii",
+            "v_toshi"
+          ]
+        },
+        {
+          "jp": "日曜日、人々は 朝市へ 行きます。",
+          "en": "On Sundays, people go to the morning market.",
+          "terms": [
+            "v_nichiyoubi",
+            "v_hitobito",
+            "v_asaichi",
+            { "id": "v_iku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "安くて いい 品物が あります。",
+          "en": "There are cheap and good goods.",
+          "terms": [
+            { "id": "v_yasu", "form": "te_form" },
+            "v_ii",
+            "v_shinamono",
+            "v_aru"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "どんな 市ですか。",
+          "a": "大きい 都市。",
+          "terms": [
+            "v_donna",
+            "v_shi",
+            "v_ookii",
+            "v_toshi"
+          ]
+        },
+        {
+          "q": "人々は どこへ 行きますか。",
+          "a": "朝市。",
+          "terms": [
+            "v_hitobito",
+            "v_doko",
+            "v_iku",
+            "v_asaichi"
+          ]
+        },
+        {
+          "q": "品物は どうですか。",
+          "a": "安くて いいです。",
+          "terms": [
+            "v_shinamono",
+            "v_dou",
+            "v_yasu",
+            "v_ii"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Vocabulary",
+      "instructions": "Select the correct reading or meaning.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "引く",
+          "choices": [
+            "hiku",
+            "uku",
+            "yomu",
+            "komu"
+          ],
+          "answer": "hiku",
+          "terms": [ "v_hiku" ]
+        },
+        {
+          "kind": "mcq",
+          "q": "使用",
+          "choices": [
+            "shiyou",
+            "sayou",
+            "shinyou",
+            "shiyuu"
+          ],
+          "answer": "shiyou",
+          "terms": [ "v_shiyou" ]
+        },
+        {
+          "kind": "mcq",
+          "q": "習う",
+          "choices": [
+            "narau",
+            "hirau",
+            "warau",
+            "shimau"
+          ],
+          "answer": "narau",
+          "terms": [ "v_narau" ]
+        },
+        {
+          "kind": "mcq",
+          "q": "市長",
+          "choices": [
+            "shichou",
+            "shijou",
+            "ichichou",
+            "toshichou"
+          ],
+          "answer": "shichou",
+          "terms": [ "v_shichou" ]
+        },
+        {
+          "kind": "mcq",
+          "q": "引き出し",
+          "choices": [
+            "hikidashi",
+            "hikideshi",
+            "inshutsu",
+            "yobidashi"
+          ],
+          "answer": "hikidashi",
+          "terms": [ "v_hikidashi" ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Fill in the Blank",
+      "instructions": "Select the word that fits.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "この ______ に 名前を 書いて ください。",
+          "choices": [
+            "用紙",
+            "引き出し",
+            "市長",
+            "朝市"
+          ],
+          "answer": "用紙",
+          "terms": [
+            "v_youshi",
+            "v_namae",
+            "v_kaku"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "父は 車の ______ を 習います。",
+          "choices": [
+            "教習",
+            "引用",
+            "急用",
+            "使用"
+          ],
+          "answer": "教習",
+          "terms": [
+            "v_chichi",
+            "k_kuruma",
+            "v_kyoushuu",
+            "v_narau"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "ドアを ______ ください。",
+          "choices": [
+            "引いて",
+            "習って",
+            "会って",
+            "集めて"
+          ],
+          "answer": "引いて",
+          "terms": [
+            "v_doa",
+            { "id": "v_hiku", "form": "te_form" },
+            "v_kudasai"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "大きな ______ に 行きたいです。",
+          "choices": [
+            "都市",
+            "習字",
+            "用紙",
+            "手引書"
+          ],
+          "answer": "都市",
+          "terms": [
+            "v_ookii",
+            "v_toshi",
+            "v_iku"
+          ]
+        }
+      ]
+    }
+  ]
+}
