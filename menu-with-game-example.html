@@ -96,6 +96,11 @@ window.JPApp = {
             <div class="jp-menu-desc">Interactive Japanese game</div>
         </div>
 
+        <div class="jp-menu-btn" onclick="JPApp.launch('compose')">
+            <div class="jp-menu-title">✏️ Compose</div>
+            <div class="jp-menu-desc">Write Japanese with guided prompts</div>
+        </div>
+
         <div class="jp-menu-btn" onclick="JPApp.launch('story')">
             <div class="jp-menu-title">📖 Stories</div>
             <div class="jp-menu-desc">Read Japanese stories with furigana</div>
@@ -138,6 +143,13 @@ window.JPApp = {
          if (!success) return;
       }
       if (window.GameModule) window.GameModule.start(this.container, this.config, onExit);
+    }
+    else if (mode === 'compose') {
+      if (!window.ComposeModule) {
+         const success = await this.loadModule('Compose.js');
+         if (!success) return;
+      }
+      if (window.ComposeModule) window.ComposeModule.start(this.container, this.config, onExit);
     }
     else if (mode === 'story') {
       if (!window.StoryModule) {
