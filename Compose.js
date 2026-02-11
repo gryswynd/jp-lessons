@@ -157,6 +157,26 @@ window.ComposeModule = {
 
             /* ACTION BAR */
             .c-action-bar { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; justify-content: center; }
+
+            /* SCORE BUTTON */
+            .c-btn-score { background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); box-shadow: 0 4px 6px rgba(243, 156, 18, 0.25); }
+
+            /* SCORE OVERLAY */
+            .c-score-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 40; display: flex; align-items: center; justify-content: center; animation: c-fade-in 0.2s ease; }
+            @keyframes c-fade-in { from { opacity: 0; } to { opacity: 1; } }
+            .c-score-card { background: white; border-radius: 20px; padding: 1.8rem 1.5rem; width: 90%; max-width: 400px; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.2); animation: c-score-pop 0.35s ease; }
+            @keyframes c-score-pop { 0% { transform: scale(0.85); opacity: 0; } 60% { transform: scale(1.03); } 100% { transform: scale(1); opacity: 1; } }
+            .c-score-total { font-size: 3rem; font-weight: 900; color: var(--c-primary-dark); margin: 8px 0; }
+            .c-score-label { font-size: 0.85rem; color: var(--c-text-sub); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+            .c-score-grade { font-size: 1.4rem; font-weight: 800; margin: 4px 0 12px 0; }
+            .c-score-breakdown { text-align: left; margin: 12px 0; }
+            .c-score-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; border-bottom: 1px solid #f1f2f6; }
+            .c-score-row:last-child { border-bottom: none; }
+            .c-score-row-label { font-size: 0.85rem; font-weight: 600; color: var(--c-text-main); }
+            .c-score-row-detail { font-size: 0.75rem; color: var(--c-text-sub); }
+            .c-score-row-pts { font-size: 0.95rem; font-weight: 800; color: var(--c-primary); }
+            .c-score-bar { height: 6px; background: #e0e0e0; border-radius: 3px; margin-top: 4px; overflow: hidden; }
+            .c-score-bar-fill { height: 100%; border-radius: 3px; transition: width 0.4s ease; }
         `;
         document.head.appendChild(style);
     }
@@ -193,7 +213,9 @@ window.ComposeModule = {
         'N4.28': { title: 'Places & Parts', kanji: '池 林 門 村', focus: 'Ponds, groves, gates, and villages' },
         'N4.29': { title: 'Measurement & Knowledge', kanji: '台 知 計 以', focus: 'Measuring, knowing, and amounts' },
         'N4.30': { title: 'Thoughts & Answers', kanji: '思 特 集 答', focus: 'Thinking, special occasions, gathering' },
-        'N4.31': { title: 'Times & Openings', kanji: '代 森 堂 開', focus: 'Eras, forests, halls, and opening things' }
+        'N4.31': { title: 'Times & Openings', kanji: '代 森 堂 開', focus: 'Eras, forests, halls, and opening things' },
+        'N4.32': { title: 'Use, Learn, & The City', kanji: '引 用 習 市', focus: 'Pulling, usage, learning skills, and city life' },
+        'N4.33': { title: 'Places, Factories, & Buildings', kanji: '場 工 広 建', focus: 'Places, construction, width, and buildings' }
     };
 
     const PROMPTS = [
@@ -331,6 +353,50 @@ window.ComposeModule = {
                 { surface: '時代', reading: 'じだい', meaning: 'era', count: 1, matches: ['時代', 'じだい'] },
                 { surface: '知る', reading: 'しる', meaning: 'to know', count: 1, matches: ['知', 'しって', 'しり'] }
             ]
+        },
+        {
+            id: 'city-calligraphy', title: 'City Studies', titleJp: '都市の学習', emoji: '🏙️',
+            lessons: ['N4.32'],
+            scenario: 'You moved to a new city and started learning calligraphy. Write about pulling supplies from a drawer, your errands around town, and what you are studying at the morning market.',
+            hint: '例: 新しい都市に来ました。引き出しから...',
+            targets: [
+                { surface: '引き出し', reading: 'ひきだし', meaning: 'drawer', count: 1, matches: ['引き出し', 'ひきだし'] },
+                { surface: '用事', reading: 'ようじ', meaning: 'errand', count: 1, matches: ['用事', 'ようじ'] },
+                { surface: '習字', reading: 'しゅうじ', meaning: 'calligraphy', count: 1, matches: ['習字', 'しゅうじ'] },
+                { surface: '都市', reading: 'とし', meaning: 'city', count: 1, matches: ['都市', 'とし'] },
+                { surface: '学習', reading: 'がくしゅう', meaning: 'study', count: 1, matches: ['学習', 'がくしゅう'] },
+                { surface: '朝市', reading: 'あさいち', meaning: 'morning market', count: 1, matches: ['朝市', 'あさいち'] }
+            ]
+        },
+        {
+            id: 'building-the-square', title: 'Building the Square', titleJp: '広場を建てる', emoji: '🏗️',
+            lessons: ['N4.33'],
+            scenario: 'A carpenter is building a new structure in the wide town square. Describe the construction site near the factory, the workers, and what the finished building will look like.',
+            hint: '例: 広場に新しい建物を建てます。工場の近くで...',
+            targets: [
+                { surface: '場所', reading: 'ばしょ', meaning: 'place', count: 1, matches: ['場所', 'ばしょ'] },
+                { surface: '工場', reading: 'こうじょう', meaning: 'factory', count: 1, matches: ['工場', 'こうじょう'] },
+                { surface: '広場', reading: 'ひろば', meaning: 'square/plaza', count: 1, matches: ['広場', 'ひろば'] },
+                { surface: '建物', reading: 'たてもの', meaning: 'building', count: 1, matches: ['建物', 'たてもの'] },
+                { surface: '大工', reading: 'だいく', meaning: 'carpenter', count: 1, matches: ['大工', 'だいく'] },
+                { surface: '建てる', reading: 'たてる', meaning: 'to build', count: 1, matches: ['建て', 'たて'] }
+            ]
+        },
+        {
+            id: 'new-city-project', title: 'The New City Project', titleJp: '新しい都市の計画', emoji: '🌆',
+            lessons: ['N4.32', 'N4.33'],
+            scenario: 'A new city development is underway! Wide squares, tall buildings, and a factory are being built on a large site. Write about visiting the construction, what you learned from the workers, and how the city will use the new spaces.',
+            hint: '例: 広い用地に新しい都市を建てます。工場で学習して...',
+            targets: [
+                { surface: '都市', reading: 'とし', meaning: 'city', count: 1, matches: ['都市', 'とし'] },
+                { surface: '工場', reading: 'こうじょう', meaning: 'factory', count: 1, matches: ['工場', 'こうじょう'] },
+                { surface: '建てる', reading: 'たてる', meaning: 'to build', count: 1, matches: ['建て', 'たて'] },
+                { surface: '広い', reading: 'ひろい', meaning: 'wide', count: 1, matches: ['広い', 'ひろい', '広く', '広か'] },
+                { surface: '学習', reading: 'がくしゅう', meaning: 'study', count: 1, matches: ['学習', 'がくしゅう'] },
+                { surface: '用地', reading: 'ようち', meaning: 'site/land', count: 1, matches: ['用地', 'ようち'] },
+                { surface: '場所', reading: 'ばしょ', meaning: 'place', count: 1, matches: ['場所', 'ばしょ'] },
+                { surface: '引く', reading: 'ひく', meaning: 'to pull/draw', count: 1, matches: ['引', 'ひい', 'ひき'] }
+            ]
         }
     ];
 
@@ -352,6 +418,14 @@ window.ComposeModule = {
             { surface: '書きます', meaning: 'write' },
             { surface: 'あります', meaning: 'exist (things)' },
             { surface: 'います', meaning: 'exist (people)' },
+            { surface: '引きます', meaning: 'pull' },
+            { surface: '使います', meaning: 'use' },
+            { surface: '習います', meaning: 'learn' },
+            { surface: '住みます', meaning: 'live (in)' },
+            { surface: '建てます', meaning: 'build' },
+            { surface: '広めます', meaning: 'spread/widen' },
+            { surface: '作ります', meaning: 'make' },
+            { surface: '働きます', meaning: 'work' },
         ]},
         { cat: 'Describe', words: [
             { surface: '大きい', meaning: 'big' },
@@ -384,7 +458,7 @@ window.ComposeModule = {
     ];
 
     // --- STATE ---
-    const selectedLessons = new Set(['N4.28', 'N4.29', 'N4.30', 'N4.31']);
+    const selectedLessons = new Set(['N4.28', 'N4.29', 'N4.30', 'N4.31', 'N4.32', 'N4.33']);
     let currentPrompt = null;
     let lessonVocab = []; // vocab items from glossary for selected lessons
     let allVocab = [];    // all vocab from glossary
@@ -591,6 +665,7 @@ window.ComposeModule = {
             <div style="display:flex;justify-content:space-between;align-items:center;">
                 <div class="c-char-count" id="c-char-count">${draft.length} characters</div>
                 <div class="c-action-bar">
+                    <button class="c-btn c-btn-sm c-btn-score" onclick="ComposeApp.showScore()" title="Score your composition">📊 Score</button>
                     <button class="c-btn c-btn-sm c-btn-sec" onclick="ComposeApp.speakComposition()" title="Listen to your composition">🔊 Listen</button>
                     <button class="c-btn c-btn-sm c-btn-sec" onclick="ComposeApp.clearDraft()" title="Clear composition">🗑️ Clear</button>
                 </div>
@@ -739,6 +814,129 @@ window.ComposeModule = {
         input.value = '';
         localStorage.removeItem('compose-draft-' + currentPrompt.id);
         input.dispatchEvent(new Event('input'));
+    };
+
+    // --- SCORING ---
+    ComposeApp.showScore = function() {
+        if (!currentPrompt) return;
+        const input = document.getElementById('c-compose-input');
+        if (!input || !input.value.trim()) return;
+        const text = input.value;
+
+        // 1. Vocab Score (0-40): unique lesson vocab words found in composition
+        const promptLessonVocab = allVocab.filter(v => {
+            const lessons = (v.lesson_ids || v.lesson || '').split(',').map(s => s.trim());
+            return lessons.some(l => currentPrompt.lessons.includes(l));
+        });
+        const vocabSeen = new Set();
+        const uniqueLessonVocab = promptLessonVocab.filter(v => {
+            if (v.id && v.id.includes('__')) return false;
+            if (vocabSeen.has(v.surface)) return false;
+            vocabSeen.add(v.surface);
+            return true;
+        });
+        let vocabUsed = 0;
+        const vocabMatches = [];
+        uniqueLessonVocab.forEach(v => {
+            if (text.includes(v.surface)) {
+                vocabUsed++;
+                vocabMatches.push(v.surface);
+            }
+        });
+        const vocabTotal = uniqueLessonVocab.length;
+        const vocabRatio = vocabTotal > 0 ? vocabUsed / Math.min(vocabTotal, 15) : 0;
+        const vocabScore = Math.min(40, Math.round(vocabRatio * 40));
+
+        // 2. Length Score (0-30): based on character count
+        const charCount = text.length;
+        let lengthScore = 0;
+        if (charCount >= 200) lengthScore = 30;
+        else if (charCount >= 150) lengthScore = 25;
+        else if (charCount >= 100) lengthScore = 20;
+        else if (charCount >= 60) lengthScore = 15;
+        else if (charCount >= 30) lengthScore = 10;
+        else if (charCount >= 10) lengthScore = 5;
+
+        // 3. Conjugation Tense Consistency (0-30)
+        // Count polite (ます/ました/ません/ませんでした) vs plain (る/た/ない) verb endings
+        const politePatterns = ['ます', 'ました', 'ません', 'ませんでした', 'ましょう', 'ですか', 'でした'];
+        const plainPatterns = ['だった', 'ない', 'なかった'];
+        let politeCount = 0;
+        let plainCount = 0;
+        politePatterns.forEach(p => {
+            let idx = 0;
+            while ((idx = text.indexOf(p, idx)) !== -1) { politeCount++; idx += p.length; }
+        });
+        plainPatterns.forEach(p => {
+            let idx = 0;
+            while ((idx = text.indexOf(p, idx)) !== -1) { plainCount++; idx += p.length; }
+        });
+        const totalVerbs = politeCount + plainCount;
+        let tenseScore = 0;
+        let tenseLabel = '';
+        if (totalVerbs === 0) {
+            tenseScore = 15;
+            tenseLabel = 'No verb forms detected';
+        } else {
+            const dominant = Math.max(politeCount, plainCount);
+            const consistency = dominant / totalVerbs;
+            tenseScore = Math.round(consistency * 30);
+            if (politeCount >= plainCount) {
+                tenseLabel = `Polite form: ${politeCount}/${totalVerbs} endings`;
+            } else {
+                tenseLabel = `Plain form: ${plainCount}/${totalVerbs} endings`;
+            }
+        }
+
+        // Total
+        const total = vocabScore + lengthScore + tenseScore;
+        let grade = '';
+        let gradeColor = '';
+        if (total >= 90) { grade = 'S  Excellent!'; gradeColor = '#f39c12'; }
+        else if (total >= 75) { grade = 'A  Great Work!'; gradeColor = '#2ed573'; }
+        else if (total >= 60) { grade = 'B  Good Job!'; gradeColor = '#00897B'; }
+        else if (total >= 40) { grade = 'C  Keep Going!'; gradeColor = '#3498db'; }
+        else { grade = 'D  Keep Practicing!'; gradeColor = '#78909C'; }
+
+        // Build overlay
+        const overlay = document.createElement('div');
+        overlay.className = 'c-score-overlay';
+        overlay.onclick = function(e) { if (e.target === overlay) overlay.remove(); };
+        overlay.innerHTML = `
+            <div class="c-score-card">
+                <div class="c-score-label">YOUR SCORE</div>
+                <div class="c-score-total">${total}<span style="font-size:1rem;color:#a4b0be">/100</span></div>
+                <div class="c-score-grade" style="color:${gradeColor}">${grade}</div>
+                <div class="c-score-breakdown">
+                    <div class="c-score-row">
+                        <div>
+                            <div class="c-score-row-label">Vocabulary Used</div>
+                            <div class="c-score-row-detail">${vocabUsed} of ${vocabTotal} lesson words${vocabMatches.length > 0 ? ' (' + vocabMatches.slice(0, 5).join(', ') + (vocabMatches.length > 5 ? '...' : '') + ')' : ''}</div>
+                            <div class="c-score-bar"><div class="c-score-bar-fill" style="width:${Math.round(vocabScore/40*100)}%;background:var(--c-primary)"></div></div>
+                        </div>
+                        <div class="c-score-row-pts">${vocabScore}/40</div>
+                    </div>
+                    <div class="c-score-row">
+                        <div>
+                            <div class="c-score-row-label">Composition Length</div>
+                            <div class="c-score-row-detail">${charCount} characters</div>
+                            <div class="c-score-bar"><div class="c-score-bar-fill" style="width:${Math.round(lengthScore/30*100)}%;background:var(--c-success)"></div></div>
+                        </div>
+                        <div class="c-score-row-pts">${lengthScore}/30</div>
+                    </div>
+                    <div class="c-score-row">
+                        <div>
+                            <div class="c-score-row-label">Tense Consistency</div>
+                            <div class="c-score-row-detail">${tenseLabel}</div>
+                            <div class="c-score-bar"><div class="c-score-bar-fill" style="width:${Math.round(tenseScore/30*100)}%;background:var(--c-gold)"></div></div>
+                        </div>
+                        <div class="c-score-row-pts">${tenseScore}/30</div>
+                    </div>
+                </div>
+                <button class="c-btn" onclick="this.closest('.c-score-overlay').remove()" style="margin-top:8px;">Close</button>
+            </div>
+        `;
+        document.getElementById('compose-app-root').appendChild(overlay);
     };
 
     // --- INIT & DATA FETCH ---
