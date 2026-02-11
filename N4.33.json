@@ -1,0 +1,680 @@
+{
+  "id": "N4.33",
+  "title": "Phase 4 Lesson 33: Places, Factories, & Buildings",
+  "meta": {
+    "phase": 4,
+    "lesson": 33,
+    "focus": "Places, construction, width, and buildings.",
+    "kanji": [
+      "場",
+      "工",
+      "広",
+      "建"
+    ]
+  },
+  "newKanji": [
+    {
+      "kanji": "場",
+      "on": "じょう",
+      "kun": "ば",
+      "meaning": "Place",
+      "termId": "k_ba"
+    },
+    {
+      "kanji": "工",
+      "on": "こう / く",
+      "kun": "(なし)",
+      "meaning": "Craft / Construction",
+      "termId": "k_kou"
+    },
+    {
+      "kanji": "広",
+      "on": "こう",
+      "kun": "ひろ(い)",
+      "meaning": "Wide",
+      "termId": "k_hiroi"
+    },
+    {
+      "kanji": "建",
+      "on": "けん",
+      "kun": "た(てる)",
+      "meaning": "Build",
+      "termId": "k_tateru"
+    }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "Warm-Up Review（ウォームアップ）",
+      "instructions": "Ask your partner these questions using words you already know:",
+      "items": [
+        {
+          "jp": "どんな 所に 住みたいですか。",
+          "en": "What kind of place do you want to live in?",
+          "terms": [
+            "v_donna",
+            "k_tokoro",
+            { "id": "v_sumu", "form": "desire_tai" }
+          ]
+        },
+        {
+          "jp": "何か 作ることが 好きですか。",
+          "en": "Do you like making something?",
+          "terms": [
+            "k_nani",
+            "v_tsukuru",
+            "v_suki"
+          ]
+        },
+        {
+          "jp": "大きい 家が ほしいですか。",
+          "en": "Do you want a big house?",
+          "terms": [
+            "v_ookii",
+            "k_ie",
+            "v_hoshii"
+          ]
+        },
+        {
+          "jp": "町の 中心に 何が ありますか。",
+          "en": "What is in the center of the town?",
+          "terms": [
+            "k_machi",
+            "v_chuushin",
+            "k_nani",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "New Kanji（新しい 漢字）",
+      "items": [
+        {
+          "kanji": "場",
+          "on": "じょう",
+          "kun": "ば",
+          "meaning": "Place",
+          "terms": [
+            "k_ba",
+            "v_basho",
+            "v_ba",
+            "v_hiroba",
+            "v_baai",
+            "v_kaijou",
+            "v_nyuujou"
+          ]
+        },
+        {
+          "kanji": "工",
+          "on": "こう",
+          "kun": "(なし)",
+          "meaning": "Craft / Construction",
+          "terms": [
+            "k_kou",
+            "v_koujou",
+            "v_kouin",
+            "v_daiku",
+            "v_mokkou",
+            "v_kougaku",
+            "v_jinkou"
+          ]
+        },
+        {
+          "kanji": "広",
+          "on": "こう",
+          "kun": "ひろ",
+          "meaning": "Wide",
+          "terms": [
+            "k_hiroi",
+            "v_hiroi",
+            "v_hiroba",
+            "v_hiromeru",
+            "v_koudai",
+            "v_hirosa"
+          ]
+        },
+        {
+          "kanji": "建",
+          "on": "けん",
+          "kun": "た",
+          "meaning": "Build",
+          "terms": [
+            "k_tateru",
+            "v_tatemono",
+            "v_tateru",
+            "v_tatsu",
+            "v_kenkoku"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "Vocabulary & Compounds（ことば）",
+      "groups": [
+        {
+          "label": "Place & Location",
+          "items": [
+            "v_basho",
+            "v_ba",
+            "v_hiroba",
+            "v_baai",
+            "v_kaijou",
+            "v_nyuujou"
+          ]
+        },
+        {
+          "label": "Construction & Work",
+          "items": [
+            "v_koujou",
+            "v_kouin",
+            "v_daiku",
+            "v_mokkou",
+            "v_kousaku"
+          ]
+        },
+        {
+          "label": "Building & Action",
+          "items": [
+            "v_tatemono",
+            "v_tateru",
+            "v_tatsu"
+          ]
+        },
+        {
+          "label": "Wide & Abstract",
+          "items": [
+            "v_hiroi",
+            "v_hiromeru",
+            "v_koudai",
+            "v_kougaku",
+            "v_jinkou"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 1（会話）: The Factory",
+      "context": "Visiting a workplace.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "ここは 大きい 工場ですね。",
+          "en": "This is a big factory, isn't it?",
+          "terms": [
+            "k_koko",
+            "v_ookii",
+            "v_koujou"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい、多くの 工員が 働いて います。",
+          "en": "Yes, many workers are working.",
+          "terms": [
+            "v_hai",
+            "v_ooku",
+            "v_kouin",
+            { "id": "v_hataraku", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "何を 作って いますか。",
+          "en": "What are they making?",
+          "terms": [
+            "k_nani",
+            { "id": "v_tsukuru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "人工の ダイヤモンドです。",
+          "en": "Artificial diamonds.",
+          "terms": [
+            "v_jinkou"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 2（会話）: The Square",
+      "context": "Deciding on a meeting spot.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "どこで 会いましょうか。",
+          "en": "Where shall we meet?",
+          "terms": [
+            "v_doko",
+            { "id": "v_au", "form": "polite_volitional_mashou" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "駅の 広場で 会いましょう。",
+          "en": "Let's meet at the station square.",
+          "terms": [
+            "k_eki",
+            "v_hiroba",
+            { "id": "v_au", "form": "polite_volitional_mashou" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "その 場所は 広いですか。",
+          "en": "Is that place spacious?",
+          "terms": [
+            "k_sono",
+            "v_basho",
+            "v_hiroi"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい、とても 広いです。",
+          "en": "Yes, it is very spacious.",
+          "terms": [
+            "v_hai",
+            "v_totemo",
+            "v_hiroi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 3（会話）: New Home",
+      "context": "Talking about construction.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "新しい 家を 建てて いますか。",
+          "en": "Are you building a new house?",
+          "terms": [
+            "v_atarashii",
+            "k_ie",
+            { "id": "v_tateru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。大工は 上手です。",
+          "en": "Yes. The carpenter is skilled.",
+          "terms": [
+            "v_hai",
+            "v_daiku",
+            "v_jouzu"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "どんな 建物ですか。",
+          "en": "What kind of building is it?",
+          "terms": [
+            "v_donna",
+            "v_tatemono"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "自分で 木工を します。",
+          "en": "I am doing the woodwork myself.",
+          "terms": [
+            "v_jibun",
+            "v_mokkou",
+            { "id": "v_suru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 4（会話）: Engineering",
+      "context": "Discussing studies.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "何を 勉強して いますか。",
+          "en": "What are you studying?",
+          "terms": [
+            "k_nani",
+            { "id": "v_benkyou", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "大学で 工学を 習って います。",
+          "en": "I am learning engineering at the university.",
+          "terms": [
+            "v_daigaku",
+            "v_kougaku",
+            { "id": "v_narau", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "大学は 広大ですか。",
+          "en": "Is the university vast?",
+          "terms": [
+            "v_daigaku",
+            "v_koudai"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい、あの 場所は 広いです。",
+          "en": "Yes, that place is wide.",
+          "terms": [
+            "v_hai",
+            "k_ano",
+            "v_basho",
+            "v_hiroi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 1: The Town's Factory",
+      "passage": [
+        {
+          "jp": "私の 町に 大きい 工場が あります。",
+          "en": "There is a big factory in my town.",
+          "terms": [
+            "k_watashi",
+            "k_machi",
+            "v_ookii",
+            "v_koujou",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "工員は 毎日 車を 作ります。",
+          "en": "The workers make cars every day.",
+          "terms": [
+            "v_kouin",
+            "v_mainichi",
+            "k_kuruma",
+            { "id": "v_tsukuru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "工学は 大切です。",
+          "en": "Engineering is important.",
+          "terms": [
+            "v_kougaku",
+            "v_taisetsu"
+          ]
+        },
+        {
+          "jp": "工場は 広い 場所に 建っています。",
+          "en": "The factory stands in a wide place.",
+          "terms": [
+            "v_koujou",
+            "v_hiroi",
+            "v_basho",
+            { "id": "v_tatsu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "町に 何が ありますか。",
+          "a": "工場。",
+          "terms": [
+            "k_machi",
+            "k_nani",
+            "v_koujou"
+          ]
+        },
+        {
+          "q": "工員は 何を 作りますか。",
+          "a": "車。",
+          "terms": [
+            "v_kouin",
+            "k_nani",
+            "v_tsukuru",
+            "k_kuruma"
+          ]
+        },
+        {
+          "q": "工場は どこに ありますか。",
+          "a": "広い 場所。",
+          "terms": [
+            "v_koujou",
+            "v_doko",
+            "v_hiroi",
+            "v_basho"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: The Square",
+      "passage": [
+        {
+          "jp": "日曜日、私は 広場へ 行きます。",
+          "en": "On Sundays, I go to the square.",
+          "terms": [
+            "v_nichiyoubi",
+            "k_watashi",
+            "v_hiroba",
+            { "id": "v_iku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "古い 建物が あります。",
+          "en": "There is an old building.",
+          "terms": [
+            "v_furui",
+            "v_tatemono",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "人々は この 場所に 集まります。",
+          "en": "People gather in this place.",
+          "terms": [
+            "v_hitobito",
+            "k_kono",
+            "v_basho",
+            { "id": "v_atsumaru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "雨の 場合は、建物に 入ります。",
+          "en": "In case of rain, I enter the building.",
+          "terms": [
+            "k_ame",
+            "v_baai",
+            "v_tatemono",
+            { "id": "v_hairu", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "日曜日に どこへ 行きますか。",
+          "a": "広場。",
+          "terms": [
+            "v_nichiyoubi",
+            "v_doko",
+            "v_hiroba"
+          ]
+        },
+        {
+          "q": "人々は どこに 集まりますか。",
+          "a": "この 場所。",
+          "terms": [
+            "v_hitobito",
+            "v_doko",
+            "v_atsumaru",
+            "v_basho"
+          ]
+        },
+        {
+          "q": "雨の 場合、どう しますか。",
+          "a": "建物に 入ります。",
+          "terms": [
+            "k_ame",
+            "v_baai",
+            "v_dou",
+            "v_tatemono",
+            "v_hairu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Vocabulary",
+      "instructions": "Select the correct reading or meaning.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "工場",
+          "choices": [
+            "koujou",
+            "koba",
+            "kouba",
+            "kujou"
+          ],
+          "answer": "koujou",
+          "terms": [ "v_koujou" ]
+        },
+        {
+          "kind": "mcq",
+          "q": "場所",
+          "choices": [
+            "basho",
+            "bajou",
+            "jouusho",
+            "baso"
+          ],
+          "answer": "basho",
+          "terms": [ "v_basho" ]
+        },
+        {
+          "kind": "mcq",
+          "q": "広い",
+          "choices": [
+            "hiroi",
+            "takai",
+            "hikui",
+            "emai"
+          ],
+          "answer": "hiroi",
+          "terms": [ "v_hiroi" ]
+        },
+        {
+          "kind": "mcq",
+          "q": "建物",
+          "choices": [
+            "tatemono",
+            "kenbutsu",
+            "tatemon",
+            "kenmotsu"
+          ],
+          "answer": "tatemono",
+          "terms": [ "v_tatemono" ]
+        },
+        {
+          "kind": "mcq",
+          "q": "工学",
+          "choices": [
+            "kougaku",
+            "kugaku",
+            "kousaku",
+            "koubun"
+          ],
+          "answer": "kougaku",
+          "terms": [ "v_kougaku" ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Fill in the Blank",
+      "instructions": "Select the word that fits.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "駅の 前に ______ が あります。",
+          "choices": [
+            "広場",
+            "工学",
+            "場合",
+            "工員"
+          ],
+          "answer": "広場",
+          "terms": [
+            "k_eki",
+            "k_mae",
+            "v_hiroba",
+            "v_aru"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "新しい 家を ______。",
+          "choices": [
+            "建てます",
+            "広めます",
+            "習います",
+            "引きます"
+          ],
+          "answer": "建てます",
+          "terms": [
+            "v_atarashii",
+            "k_ie",
+            { "id": "v_tateru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "この ______ は きれいです。",
+          "choices": [
+            "場所",
+            "工員",
+            "大工",
+            "人工"
+          ],
+          "answer": "場所",
+          "terms": [
+            "k_kono",
+            "v_basho",
+            "v_kirei"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "雨の ______ は 行きません。",
+          "choices": [
+            "場合",
+            "工場",
+            "広場",
+            "建物"
+          ],
+          "answer": "場合",
+          "terms": [
+            "k_ame",
+            "v_baai",
+            "v_iku"
+          ]
+        }
+      ]
+    }
+  ]
+}
