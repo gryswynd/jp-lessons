@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "levels": ["N5", "N4"],
+  "globalFiles": {
+    "conjugationRules": "conjugation_rules.json",
+    "glossaryMaster": "glossary.master.json"
+  },
+  "shared": {
+    "helperVocab": "shared/helper-vocab.json",
+    "particles": "shared/particles.json",
+    "playerSprite": "shared/sprites/me_sheet.png"
+  },
+  "data": {
+    "N5": {
+      "glossary": "data/N5/glossary.N5.json",
+      "lessons": [],
+      "reviews": [],
+      "compose": "data/N5/compose/compose.N5.json",
+      "stories": [],
+      "game": []
+    },
+    "N4": {
+      "glossary": "data/N4/glossary.N4.json",
+      "glossaryPerLesson": [
+        { "id": "glossary.N4.7",  "file": "glossary.N4.7.json" },
+        { "id": "glossary.N4.8",  "file": "glossary.N4.8.json" },
+        { "id": "glossary.N4.9",  "file": "glossary.N4.9.json" },
+        { "id": "glossary.N4.10", "file": "glossary.N4.10.json" },
+        { "id": "glossary.N4.11", "file": "glossary.N4.11.json" },
+        { "id": "glossary.N4.12", "file": "glossary.N4.12.json" }
+      ],
+      "lessons": [
+        { "id": "N4.7",  "title": "Family Members and Relationships",        "file": "N4.7.json" },
+        { "id": "N4.8",  "title": "Seasons & Weather",                       "file": "N4.8.json" },
+        { "id": "N4.9",  "title": "Living & Places",                         "file": "N4.9.json" },
+        { "id": "N4.10", "title": "Movies & Beginnings",                     "file": "N4.10.json" },
+        { "id": "N4.11", "title": "Travel & The World",                      "file": "N4.11.json" },
+        { "id": "N4.12", "title": "Body & Existence",                        "file": "N4.12.json" },
+        { "id": "N4.13", "title": "Music, Sound & Characteristics",          "file": "N4.13.json" },
+        { "id": "N4.14", "title": "Work & Rhythms",                          "file": "N4.14.json" },
+        { "id": "N4.15", "title": "Health & Life",                           "file": "N4.15.json" },
+        { "id": "N4.16", "title": "Movement & Action",                       "file": "N4.16.json" },
+        { "id": "N4.17", "title": "Travel & Transport",                      "file": "N4.17.json" },
+        { "id": "N4.18", "title": "Strength & Nature",                       "file": "N4.18.json" },
+        { "id": "N4.19", "title": "Geography & Explanations",                "file": "N4.19.json" },
+        { "id": "N4.20", "title": "Night & Lifestyle",                       "file": "N4.20.json" },
+        { "id": "N4.21", "title": "Commerce & Possessions",                  "file": "N4.21.json" },
+        { "id": "N4.22", "title": "Writing & Ideas",                         "file": "N4.22.json" },
+        { "id": "N4.23", "title": "Physical Attributes & Progress",          "file": "N4.23.json" },
+        { "id": "N4.24", "title": "Education & Experience",                  "file": "N4.24.json" },
+        { "id": "N4.25", "title": "Research & Literature",                   "file": "N4.25.json" },
+        { "id": "N4.26", "title": "Truth & Thoughts",                        "file": "N4.26.json" },
+        { "id": "N4.27", "title": "Waiting & Fitting",                       "file": "N4.27.json" },
+        { "id": "N4.28", "title": "Places & Parts",                          "file": "N4.28.json" },
+        { "id": "N4.29", "title": "Measurement & Knowledge",                 "file": "N4.29.json" },
+        { "id": "N4.30", "title": "Thoughts & Special Answers",              "file": "N4.30.json" },
+        { "id": "N4.31", "title": "Times & Openings",                        "file": "N4.31.json" },
+        { "id": "N4.32", "title": "Use, Learn, & The City",                  "file": "N4.32.json" },
+        { "id": "N4.33", "title": "Places, Factories, & Buildings",          "file": "N4.33.json" },
+        { "id": "N4.34", "title": "Districts, Departure, & Commuting",       "file": "N4.34.json" }
+      ],
+      "reviews": [
+        { "id": "N4.Review.1",      "title": "Comprehensive Assessment",          "file": "N4.Review.1.json" },
+        { "id": "N4.Review.2",      "title": "Body, Life & Work",                 "file": "N4.Review.2.json" },
+        { "id": "N4.Review.3",      "title": "Movement, Nature & Geography",      "file": "N4.Review.3.json" },
+        { "id": "N4.Review.4",      "title": "Lifestyle, Trade & Attributes",     "file": "N4.Review.4.json" },
+        { "id": "N4.Review.5",      "title": "Education, Research & Methods",     "file": "N4.Review.5.json" },
+        { "id": "N4.Review.6",      "title": "Nature, Places & Measurement",      "file": "N4.Review.6.json" },
+        { "id": "N4.Review.7",      "title": "Thoughts, Times & Openings",        "file": "N4.Review.7.json" },
+        { "id": "N4.Review.8",      "title": "Cities, Work & Construction",       "file": "N4.Review.8.json" },
+        { "id": "N4.Review.Master", "title": "N4 Complete Phase 4 Review",        "file": "N4 Half Review.json" }
+      ],
+      "compose": "data/N4/compose/compose.N4.json",
+      "stories": [
+        { "id": "library-book", "title": "The Library Book", "titleJp": "図書館の本", "dir": "library-book" }
+      ],
+      "game": []
+    }
+  }
+}
