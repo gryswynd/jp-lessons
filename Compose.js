@@ -207,7 +207,7 @@ window.ComposeModule = {
 
     // --- DATA ---
     const REPO_CONFIG = sharedConfig;
-    const MASTER_URL = `https://raw.githubusercontent.com/${REPO_CONFIG.owner}/${REPO_CONFIG.repo}/${REPO_CONFIG.branch}/glossary.master.json`;
+    const BASE_URL = `https://raw.githubusercontent.com/${REPO_CONFIG.owner}/${REPO_CONFIG.repo}/${REPO_CONFIG.branch}`;
 
     const LESSON_META = {
         'N4.28': { title: 'Places & Parts', kanji: '池 林 門 村', focus: 'Ponds, groves, gates, and villages' },
@@ -218,244 +218,9 @@ window.ComposeModule = {
         'N4.33': { title: 'Places, Factories, & Buildings', kanji: '場 工 広 建', focus: 'Places, construction, width, and buildings' }
     };
 
-    const PROMPTS = [
-        {
-            id: 'village-gate', title: 'The Village Gate', titleJp: '村の門', emoji: '🏘️',
-            lessons: ['N4.28'],
-            scenario: 'Describe arriving at a small village. You walk through a gate and discover a beautiful pond near a grove of trees.',
-            hint: '小さい村に来ました。大きい門が...',
-            targets: [
-                { surface: '村', reading: 'むら', meaning: 'village', count: 1, matches: ['村', 'むら'] },
-                { surface: '門', reading: 'もん', meaning: 'gate', count: 1, matches: ['門', 'もん'] },
-                { surface: '池', reading: 'いけ', meaning: 'pond', count: 1, matches: ['池', 'いけ'] },
-                { surface: '林', reading: 'はやし', meaning: 'grove', count: 1, matches: ['林', 'はやし'] }
-            ]
-        },
-        {
-            id: 'battery-hunt', title: 'Buying Batteries', titleJp: '電池を買う', emoji: '🔋',
-            lessons: ['N4.28'],
-            scenario: 'You need batteries for your flashlight. Ask a villager near the school gate where you can buy them.',
-            hint: '電池がほしいです。校門の近くで...',
-            targets: [
-                { surface: '電池', reading: 'でんち', meaning: 'battery', count: 1, matches: ['電池', 'でんち'] },
-                { surface: '校門', reading: 'こうもん', meaning: 'school gate', count: 1, matches: ['校門', 'こうもん'] },
-                { surface: '村人', reading: 'むらびと', meaning: 'villager', count: 1, matches: ['村人', 'むらびと'] }
-            ]
-        },
-        {
-            id: 'typhoon-plan', title: 'Typhoon Preparation', titleJp: '台風の計画', emoji: '🌀',
-            lessons: ['N4.29'],
-            scenario: 'A typhoon is approaching! Write about your preparation plan. Check the time and make sure the kitchen is ready.',
-            hint: '台風が来ます。計画を...',
-            targets: [
-                { surface: '台風', reading: 'たいふう', meaning: 'typhoon', count: 1, matches: ['台風', 'たいふう'] },
-                { surface: '計画', reading: 'けいかく', meaning: 'plan', count: 1, matches: ['計画', 'けいかく'] },
-                { surface: '時計', reading: 'とけい', meaning: 'clock', count: 1, matches: ['時計', 'とけい'] },
-                { surface: '台所', reading: 'だいどころ', meaning: 'kitchen', count: 1, matches: ['台所', 'だいどころ'] }
-            ]
-        },
-        {
-            id: 'did-you-know', title: 'What Do You Know?', titleJp: '知っていますか', emoji: '🤔',
-            lessons: ['N4.29'],
-            scenario: 'Tell a friend about something interesting you recently learned. Was it more or less surprising than you expected?',
-            hint: '知っていますか。...',
-            targets: [
-                { surface: '知る', reading: 'しる', meaning: 'to know', count: 1, matches: ['知', 'しって', 'しり', 'しる'] },
-                { surface: '以上', reading: 'いじょう', meaning: 'more than', count: 1, matches: ['以上', 'いじょう'] },
-                { surface: '以下', reading: 'いか', meaning: 'less than', count: 1, matches: ['以下', 'いか'] }
-            ]
-        },
-        {
-            id: 'special-gathering', title: 'A Special Gathering', titleJp: '特別な集まり', emoji: '🎉',
-            lessons: ['N4.30'],
-            scenario: 'Write about a special day when friends gathered together. Someone asked a difficult question. What do you think the answer was?',
-            hint: '特別な日でした。友だちが集まりました...',
-            targets: [
-                { surface: '特別', reading: 'とくべつ', meaning: 'special', count: 1, matches: ['特別', 'とくべつ'] },
-                { surface: '集まる', reading: 'あつまる', meaning: 'to gather', count: 1, matches: ['集ま', 'あつま'] },
-                { surface: '答え', reading: 'こたえ', meaning: 'answer', count: 1, matches: ['答', 'こたえ'] },
-                { surface: '思う', reading: 'おもう', meaning: 'to think', count: 1, matches: ['思', 'おもう', 'おもい', 'おもって'] }
-            ]
-        },
-        {
-            id: 'my-collection', title: 'My Collection', titleJp: 'わたしの集め物', emoji: '📦',
-            lessons: ['N4.30'],
-            scenario: 'Write about something you like to collect. What do you especially treasure? What memories come to mind when you look at your collection?',
-            hint: 'わたしのしゅみは集めることです...',
-            targets: [
-                { surface: '集める', reading: 'あつめる', meaning: 'to collect', count: 1, matches: ['集め', 'あつめ'] },
-                { surface: '特に', reading: 'とくに', meaning: 'especially', count: 1, matches: ['特に', 'とくに'] },
-                { surface: '思い出す', reading: 'おもいだす', meaning: 'to recall', count: 1, matches: ['思い出', 'おもいだ'] }
-            ]
-        },
-        {
-            id: 'forest-cafeteria', title: 'Forest Cafeteria', titleJp: '森の食堂', emoji: '🌲',
-            lessons: ['N4.31'],
-            scenario: 'A new cafeteria opened near the forest! Describe visiting it for the first time. Does it feel like stepping into a different era?',
-            hint: '森の近くに新しい食堂が...',
-            targets: [
-                { surface: '森', reading: 'もり', meaning: 'forest', count: 1, matches: ['森', 'もり'] },
-                { surface: '食堂', reading: 'しょくどう', meaning: 'cafeteria', count: 1, matches: ['食堂', 'しょくどう'] },
-                { surface: '開店', reading: 'かいてん', meaning: 'shop opening', count: 1, matches: ['開店', 'かいてん'] },
-                { surface: '時代', reading: 'じだい', meaning: 'era', count: 1, matches: ['時代', 'じだい'] }
-            ]
-        },
-        {
-            id: 'grand-hall', title: 'The Grand Hall', titleJp: '堂々とした会堂', emoji: '🏛️',
-            lessons: ['N4.31'],
-            scenario: 'Describe visiting a grand assembly hall in the forest. An important event is about to start. Write about what you see and feel.',
-            hint: '森の中に堂々とした会堂が...',
-            targets: [
-                { surface: '堂々', reading: 'どうどう', meaning: 'magnificent', count: 1, matches: ['堂々', 'どうどう'] },
-                { surface: '会堂', reading: 'かいどう', meaning: 'assembly hall', count: 1, matches: ['会堂', 'かいどう'] },
-                { surface: '開始', reading: 'かいし', meaning: 'start', count: 1, matches: ['開始', 'かいし'] },
-                { surface: '森', reading: 'もり', meaning: 'forest', count: 1, matches: ['森', 'もり'] }
-            ]
-        },
-        {
-            id: 'village-festival', title: 'Village Festival', titleJp: '村のお祭り', emoji: '🎊',
-            lessons: ['N4.28', 'N4.30'],
-            scenario: 'A special festival is held in the village! People gather at the gate. Write about the celebration and what you think about it.',
-            hint: '村で特別なお祭りがありました...',
-            targets: [
-                { surface: '村', reading: 'むら', meaning: 'village', count: 1, matches: ['村', 'むら'] },
-                { surface: '門', reading: 'もん', meaning: 'gate', count: 1, matches: ['門', 'もん'] },
-                { surface: '特別', reading: 'とくべつ', meaning: 'special', count: 1, matches: ['特別', 'とくべつ'] },
-                { surface: '集まる', reading: 'あつまる', meaning: 'to gather', count: 1, matches: ['集ま', 'あつま'] },
-                { surface: '思う', reading: 'おもう', meaning: 'to think', count: 1, matches: ['思', 'おもう', 'おもい'] }
-            ]
-        },
-        {
-            id: 'forest-adventure', title: 'Forest Adventure', titleJp: '森の冒険', emoji: '🗺️',
-            lessons: ['N4.28', 'N4.31'],
-            scenario: 'Walk through a grove into a deep forest. You find a pond and then discover a hidden cafeteria. Open the door and describe what is inside.',
-            hint: '林を通って森に入りました...',
-            targets: [
-                { surface: '林', reading: 'はやし', meaning: 'grove', count: 1, matches: ['林', 'はやし'] },
-                { surface: '森', reading: 'もり', meaning: 'forest', count: 1, matches: ['森', 'もり'] },
-                { surface: '池', reading: 'いけ', meaning: 'pond', count: 1, matches: ['池', 'いけ'] },
-                { surface: '食堂', reading: 'しょくどう', meaning: 'cafeteria', count: 1, matches: ['食堂', 'しょくどう'] },
-                { surface: '開ける', reading: 'あける', meaning: 'to open', count: 1, matches: ['開け', 'あけ'] }
-            ]
-        },
-        {
-            id: 'the-big-day', title: 'The Big Day', titleJp: 'すごい一日', emoji: '🌟',
-            lessons: ['N4.28', 'N4.29', 'N4.30', 'N4.31'],
-            scenario: 'After a typhoon, villagers gather at the cafeteria for a special meeting. Write about what happened, what you think about these changing times, and what you learned.',
-            hint: '台風のあとで、村人が食堂に集まりました...',
-            targets: [
-                { surface: '村', reading: 'むら', meaning: 'village', count: 1, matches: ['村', 'むら'] },
-                { surface: '台風', reading: 'たいふう', meaning: 'typhoon', count: 1, matches: ['台風', 'たいふう'] },
-                { surface: '特別', reading: 'とくべつ', meaning: 'special', count: 1, matches: ['特別', 'とくべつ'] },
-                { surface: '集まる', reading: 'あつまる', meaning: 'to gather', count: 1, matches: ['集ま', 'あつま'] },
-                { surface: '食堂', reading: 'しょくどう', meaning: 'cafeteria', count: 1, matches: ['食堂', 'しょくどう'] },
-                { surface: '思う', reading: 'おもう', meaning: 'to think', count: 1, matches: ['思', 'おもう', 'おもい'] },
-                { surface: '時代', reading: 'じだい', meaning: 'era', count: 1, matches: ['時代', 'じだい'] },
-                { surface: '知る', reading: 'しる', meaning: 'to know', count: 1, matches: ['知', 'しって', 'しり'] }
-            ]
-        },
-        {
-            id: 'city-calligraphy', title: 'City Studies', titleJp: '都市の学習', emoji: '🏙️',
-            lessons: ['N4.32'],
-            scenario: 'You moved to a new city and started learning calligraphy. Write about pulling supplies from a drawer, your errands around town, and what you are studying at the morning market.',
-            hint: '例: 新しい都市に来ました。引き出しから...',
-            targets: [
-                { surface: '引き出し', reading: 'ひきだし', meaning: 'drawer', count: 1, matches: ['引き出し', 'ひきだし'] },
-                { surface: '用事', reading: 'ようじ', meaning: 'errand', count: 1, matches: ['用事', 'ようじ'] },
-                { surface: '習字', reading: 'しゅうじ', meaning: 'calligraphy', count: 1, matches: ['習字', 'しゅうじ'] },
-                { surface: '都市', reading: 'とし', meaning: 'city', count: 1, matches: ['都市', 'とし'] },
-                { surface: '学習', reading: 'がくしゅう', meaning: 'study', count: 1, matches: ['学習', 'がくしゅう'] },
-                { surface: '朝市', reading: 'あさいち', meaning: 'morning market', count: 1, matches: ['朝市', 'あさいち'] }
-            ]
-        },
-        {
-            id: 'building-the-square', title: 'Building the Square', titleJp: '広場を建てる', emoji: '🏗️',
-            lessons: ['N4.33'],
-            scenario: 'A carpenter is building a new structure in the wide town square. Describe the construction site near the factory, the workers, and what the finished building will look like.',
-            hint: '例: 広場に新しい建物を建てます。工場の近くで...',
-            targets: [
-                { surface: '場所', reading: 'ばしょ', meaning: 'place', count: 1, matches: ['場所', 'ばしょ'] },
-                { surface: '工場', reading: 'こうじょう', meaning: 'factory', count: 1, matches: ['工場', 'こうじょう'] },
-                { surface: '広場', reading: 'ひろば', meaning: 'square/plaza', count: 1, matches: ['広場', 'ひろば'] },
-                { surface: '建物', reading: 'たてもの', meaning: 'building', count: 1, matches: ['建物', 'たてもの'] },
-                { surface: '大工', reading: 'だいく', meaning: 'carpenter', count: 1, matches: ['大工', 'だいく'] },
-                { surface: '建てる', reading: 'たてる', meaning: 'to build', count: 1, matches: ['建て', 'たて'] }
-            ]
-        },
-        {
-            id: 'new-city-project', title: 'The New City Project', titleJp: '新しい都市の計画', emoji: '🌆',
-            lessons: ['N4.32', 'N4.33'],
-            scenario: 'A new city development is underway! Wide squares, tall buildings, and a factory are being built on a large site. Write about visiting the construction, what you learned from the workers, and how the city will use the new spaces.',
-            hint: '例: 広い用地に新しい都市を建てます。工場で学習して...',
-            targets: [
-                { surface: '都市', reading: 'とし', meaning: 'city', count: 1, matches: ['都市', 'とし'] },
-                { surface: '工場', reading: 'こうじょう', meaning: 'factory', count: 1, matches: ['工場', 'こうじょう'] },
-                { surface: '建てる', reading: 'たてる', meaning: 'to build', count: 1, matches: ['建て', 'たて'] },
-                { surface: '広い', reading: 'ひろい', meaning: 'wide', count: 1, matches: ['広い', 'ひろい', '広く', '広か'] },
-                { surface: '学習', reading: 'がくしゅう', meaning: 'study', count: 1, matches: ['学習', 'がくしゅう'] },
-                { surface: '用地', reading: 'ようち', meaning: 'site/land', count: 1, matches: ['用地', 'ようち'] },
-                { surface: '場所', reading: 'ばしょ', meaning: 'place', count: 1, matches: ['場所', 'ばしょ'] },
-                { surface: '引く', reading: 'ひく', meaning: 'to pull/draw', count: 1, matches: ['引', 'ひい', 'ひき'] }
-            ]
-        }
-    ];
-
-    const HELPER_VOCAB = [
-        { cat: 'People', words: [
-            { surface: 'わたし', meaning: 'I/me' },
-            { surface: '友だち', meaning: 'friend' },
-            { surface: '先生', meaning: 'teacher' },
-            { surface: '人', meaning: 'person' },
-        ]},
-        { cat: 'Actions', words: [
-            { surface: 'します', meaning: 'do' },
-            { surface: '行きます', meaning: 'go' },
-            { surface: '来ます', meaning: 'come' },
-            { surface: '見ます', meaning: 'see' },
-            { surface: '食べます', meaning: 'eat' },
-            { surface: '買います', meaning: 'buy' },
-            { surface: '読みます', meaning: 'read' },
-            { surface: '書きます', meaning: 'write' },
-            { surface: 'あります', meaning: 'exist (things)' },
-            { surface: 'います', meaning: 'exist (people)' },
-            { surface: '引きます', meaning: 'pull' },
-            { surface: '使います', meaning: 'use' },
-            { surface: '習います', meaning: 'learn' },
-            { surface: '住みます', meaning: 'live (in)' },
-            { surface: '建てます', meaning: 'build' },
-            { surface: '広めます', meaning: 'spread/widen' },
-            { surface: '作ります', meaning: 'make' },
-            { surface: '働きます', meaning: 'work' },
-        ]},
-        { cat: 'Describe', words: [
-            { surface: '大きい', meaning: 'big' },
-            { surface: '小さい', meaning: 'small' },
-            { surface: 'きれいな', meaning: 'pretty' },
-            { surface: '好きな', meaning: 'liked' },
-            { surface: 'いい', meaning: 'good' },
-            { surface: '新しい', meaning: 'new' },
-            { surface: '古い', meaning: 'old' },
-            { surface: 'たくさん', meaning: 'many/much' },
-            { surface: 'とても', meaning: 'very' },
-        ]},
-        { cat: 'Connect', words: [
-            { surface: 'そして', meaning: 'and then' },
-            { surface: 'でも', meaning: 'but' },
-            { surface: 'それから', meaning: 'after that' },
-            { surface: 'だから', meaning: 'therefore' },
-            { surface: 'まだ', meaning: 'still/not yet' },
-        ]},
-        { cat: 'Other', words: [
-            { surface: 'です', meaning: 'is/am' },
-            { surface: 'でした', meaning: 'was' },
-            { surface: 'ました', meaning: 'did (polite past)' },
-            { surface: '今日', meaning: 'today' },
-            { surface: '明日', meaning: 'tomorrow' },
-            { surface: '昨日', meaning: 'yesterday' },
-            { surface: 'ここ', meaning: 'here' },
-            { surface: 'そこ', meaning: 'there' },
-        ]},
-    ];
+    let PROMPTS = [];
+    let HELPER_VOCAB = [];
+    let PARTICLES = [];
 
     // --- STATE ---
     const selectedLessons = new Set(['N4.28', 'N4.29', 'N4.30', 'N4.31', 'N4.32', 'N4.33']);
@@ -636,8 +401,7 @@ window.ComposeModule = {
         });
 
         // Particle reference
-        const particles = ['は (topic)', 'が (subject)', 'を (object)', 'に (to/at)', 'で (at/by)', 'の (of)', 'も (also)', 'と (and/with)', 'から (from)', 'まで (until)', 'へ (toward)', 'か (question)', 'よ (emphasis)', 'ね (right?)'];
-        const particleHtml = particles.map(p => `<span>${escHtml(p)}</span>`).join(' ');
+        const particleHtml = PARTICLES.map(p => `<span>${escHtml(p.particle + ' (' + p.role + ')')}</span>`).join(' ');
 
         // Load draft if exists
         const draft = localStorage.getItem('compose-draft-' + prompt.id) || '';
@@ -943,9 +707,25 @@ window.ComposeModule = {
     (async function() {
         try {
             await new Promise(r => setTimeout(r, 50));
-            const raw = await fetch(MASTER_URL + '?t=' + Date.now()).then(r => r.json());
+            const cacheBust = '?t=' + Date.now();
 
-            allVocab = raw.filter(i => i.type === 'vocab');
+            // Load manifest to discover file paths
+            const manifest = await fetch(BASE_URL + '/manifest.json' + cacheBust).then(r => r.json());
+            const n4 = manifest.data.N4;
+
+            // Fetch glossary, compose prompts, helper vocab, and particles in parallel
+            const [glossary, composeData, helperData, particleData] = await Promise.all([
+                fetch(BASE_URL + '/' + n4.glossary + cacheBust).then(r => r.json()),
+                fetch(BASE_URL + '/' + n4.compose + cacheBust).then(r => r.json()),
+                fetch(BASE_URL + '/' + manifest.shared.helperVocab + cacheBust).then(r => r.json()),
+                fetch(BASE_URL + '/' + manifest.shared.particles + cacheBust).then(r => r.json())
+            ]);
+
+            PROMPTS = composeData.prompts;
+            HELPER_VOCAB = helperData;
+            PARTICLES = particleData;
+
+            allVocab = glossary.filter(i => i.type === 'vocab');
             lessonVocab = allVocab.filter(v => {
                 const lessons = (v.lesson_ids || v.lesson || '').split(',').map(s => s.trim());
                 return lessons.some(l => Object.keys(LESSON_META).includes(l));
