@@ -5,23 +5,21 @@ window.GameModule = (function() {
   let config = null;
   let onExit = null;
 
-  let BASE_URL = '';
   let dayDir = '';
   let dayData = null;
 
   function getDayAssetUrl(filename) {
-    return `${BASE_URL}/${dayDir}/${filename}`;
+    return window.getAssetUrl(config, dayDir + '/' + filename);
   }
 
-  function getSharedAssetUrl(filename) {
-    return `${BASE_URL}/${filename}`;
+  function getSharedAssetUrl(filepath) {
+    return window.getAssetUrl(config, filepath);
   }
 
   function start(containerElement, repoConfig, exitCallback) {
     container = containerElement;
     config = repoConfig;
     onExit = exitCallback;
-    BASE_URL = `https://raw.githubusercontent.com/${config.owner}/${config.repo}/${config.branch}`;
 
     initializeGame();
   }
@@ -927,18 +925,20 @@ window.GameModule = (function() {
     const cacheBust = '?t=' + Date.now();
     let playerSpritePath = 'shared/sprites/me_sheet.png';
 
-    fetch(BASE_URL + '/manifest.json' + cacheBust)
-      .then(r => r.json())
+    window.getManifest(config)
       .then(manifest => {
         // Use first game day from N5 (day-01-home)
         const gameEntry = manifest.data.N5.game[0];
         dayDir = gameEntry.dir;
         playerSpritePath = manifest.shared.playerSprite;
-        return fetch(BASE_URL + '/' + dayDir + '/day.json' + cacheBust).then(r => r.json());
+        const dayUrl = getSharedAssetUrl(dayDir + '/day.json') + cacheBust;
+        console.log('[Game] Day data URL:', dayUrl);
+        return fetch(dayUrl).then(r => r.json());
       })
       .then(data => {
         dayData = data;
         dayData._playerSprite = playerSpritePath;
+        console.log('[Game] Player sprite URL:', getSharedAssetUrl(playerSpritePath));
         loadImages();
       })
       .catch(err => {

@@ -10,8 +10,8 @@ window.StoryModule = (function() {
   let termMapData = {};
   let CONJUGATION_RULES = null;
 
-  function getCdnUrl(filename) {
-    return `https://raw.githubusercontent.com/${config.owner}/${config.repo}/${config.branch}/${config.path ? config.path + '/' : ''}${filename}`;
+  function getCdnUrl(filepath) {
+    return window.getAssetUrl(config, filepath);
   }
 
   function start(containerElement, repoConfig, exitCallback) {
@@ -299,9 +299,14 @@ window.StoryModule = (function() {
 
   async function loadResources() {
     try {
+      const manifest = await window.getManifest(config);
+      const glossaryUrl = getCdnUrl(manifest.globalFiles.glossaryMaster);
+      const conjUrl = getCdnUrl(manifest.globalFiles.conjugationRules);
+      console.log('[Story] Glossary URL:', glossaryUrl);
+      console.log('[Story] Conjugation URL:', conjUrl);
       const [glossary, conjugationRules] = await Promise.all([
-        fetch(getCdnUrl('glossary.master.json')).then(r => r.json()),
-        fetch(getCdnUrl('conjugation_rules.json')).then(r => r.json())
+        fetch(glossaryUrl).then(r => r.json()),
+        fetch(conjUrl).then(r => r.json())
       ]);
 
       // Build term map
@@ -507,20 +512,34 @@ window.StoryModule = (function() {
     window.speechSynthesis.speak(u);
   }
 
-  function loadStoryList() {
-    storyList = [
-      {
-        mdFile: 'library-book.md',
-        jsonFile: 'library-book.json',
-        title: '図書館の本',
-        subtitle: 'The Library Book'
-      }
-    ];
+  async function loadStoryList() {
+    try {
+      const manifest = await window.getManifest(config);
 
-    if (storyList.length > 0) {
-      loadStory(storyList[0]);
-    } else {
-      showError('No stories available');
+      storyList = [];
+      const levels = manifest.levels || [];
+      levels.forEach(level => {
+        const levelData = manifest.data && manifest.data[level];
+        if (!levelData || !levelData.stories) return;
+        levelData.stories.forEach(story => {
+          storyList.push({
+            dir: story.dir,
+            mdFile: story.dir + '/story.md',
+            jsonFile: story.dir + '/terms.json',
+            title: story.titleJp || story.title,
+            subtitle: story.title
+          });
+        });
+      });
+
+      console.log('[Story] Found', storyList.length, 'stories from manifest');
+      if (storyList.length > 0) {
+        loadStory(storyList[0]);
+      } else {
+        showError('No stories available');
+      }
+    } catch (err) {
+      showError('Failed to load story list: ' + err.message);
     }
   }
 
@@ -544,9 +563,13 @@ window.StoryModule = (function() {
 
     try {
       // Load both markdown and companion JSON
+      const mdUrl = getCdnUrl(storyInfo.mdFile);
+      const jsonUrl = getCdnUrl(storyInfo.jsonFile);
+      console.log('[Story] Markdown URL:', mdUrl);
+      console.log('[Story] Terms URL:', jsonUrl);
       const [mdResponse, jsonResponse] = await Promise.all([
-        fetch(getCdnUrl(storyInfo.mdFile) + '?t=' + Date.now()),
-        fetch(getCdnUrl(storyInfo.jsonFile) + '?t=' + Date.now())
+        fetch(mdUrl + '?t=' + Date.now()),
+        fetch(jsonUrl + '?t=' + Date.now())
       ]);
 
       if (!mdResponse.ok) {

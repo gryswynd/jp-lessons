@@ -25,10 +25,8 @@
       this.fetchReviewList();
     },
 
-    // --- REVIEW LIST (like Lesson.js pattern) ---
+    // --- REVIEW LIST (reads from manifest.json) ---
     fetchReviewList: async function() {
-      const apiUrl = `https://api.github.com/repos/${this.config.owner}/${this.config.repo}/contents/`;
-
       this.container.innerHTML = `
         <div id="jp-test-wrapper">
           <div id="jp-test-embed">
@@ -37,7 +35,7 @@
               <div class="jp-badge jp-exit-link-header" id="jp-exit-list">Exit</div>
             </div>
             <div id="jp-stage" style="padding: 20px;">
-              <div style="text-align:center; color:#888; padding:40px;">Connecting to GitHub...</div>
+              <div style="text-align:center; color:#888; padding:40px;">Loading reviews...</div>
             </div>
           </div>
         </div>
@@ -48,21 +46,31 @@
       };
 
       try {
-        const res = await fetch(apiUrl);
-        if (!res.ok) throw new Error("Failed to fetch repo");
-        const files = await res.json();
-        let reviewFiles = files.filter(f => f.name.match(/^N\d+\.Review\.\d+\.json$/)).map(f => f.name);
+        const manifest = await window.getManifest(this.config);
+        const reviews = [];
+        (manifest.levels || []).forEach(level => {
+          const levelData = manifest.data && manifest.data[level];
+          if (!levelData || !levelData.reviews) return;
+          levelData.reviews.forEach(review => {
+            reviews.push({ id: review.id, title: review.title, file: review.file });
+          });
+        });
 
-        reviewFiles.sort((a, b) => {
-          const partsA = a.replace('.json', '').match(/N(\d+)\.Review\.(\d+)/);
-          const partsB = b.replace('.json', '').match(/N(\d+)\.Review\.(\d+)/);
+        // Sort newest first; non-numeric IDs (e.g. Master) go to end
+        reviews.sort((a, b) => {
+          const partsA = a.id.match(/N(\d+)\.Review\.(\d+)/);
+          const partsB = b.id.match(/N(\d+)\.Review\.(\d+)/);
+          if (!partsA && !partsB) return 0;
+          if (!partsA) return 1;
+          if (!partsB) return -1;
           const levelA = parseInt(partsA[1]), numA = parseInt(partsA[2]);
           const levelB = parseInt(partsB[1]), numB = parseInt(partsB[2]);
           if (levelA !== levelB) return levelB - levelA;
           return numB - numA;
         });
 
-        this.renderReviewMenu(reviewFiles);
+        console.log('[Review] Found', reviews.length, 'reviews from manifest');
+        this.renderReviewMenu(reviews);
       } catch (err) {
         document.getElementById('jp-stage').innerHTML = `
           <div style="text-align:center; color:#d63031; padding:20px;">
@@ -75,22 +83,21 @@
       }
     },
 
-    renderReviewMenu: function(files) {
+    renderReviewMenu: function(reviews) {
       const scores = JSON.parse(localStorage.getItem('k-review-scores') || '{}');
       const stage = document.getElementById('jp-stage');
 
       let html = '<div class="jp-review-menu-grid">';
-      files.forEach(fileName => {
-        const name = fileName.replace('.json', '');
-        const topScore = scores[name];
+      reviews.forEach(review => {
+        const topScore = scores[review.id];
         const scoreDisplay = topScore !== undefined
           ? `<div class="jp-review-score">Best: ${topScore}%</div>`
           : `<div class="jp-review-score jp-no-score">Not attempted</div>`;
 
         html += `
-          <div class="jp-review-menu-item" data-file="${fileName}">
+          <div class="jp-review-menu-item" data-file="${review.file}" data-id="${review.id}">
             <div>
-              <div class="jp-review-menu-id">${name}</div>
+              <div class="jp-review-menu-id">${review.id}</div>
             </div>
             <div style="text-align:right;">
               ${scoreDisplay}
@@ -104,12 +111,13 @@
       stage.innerHTML = html;
 
       stage.querySelectorAll('.jp-review-menu-item').forEach(item => {
-        item.onclick = () => this.loadReview(item.dataset.file);
+        item.onclick = () => this.loadReview(item.dataset.file, item.dataset.id);
       });
     },
 
-    loadReview: function(fileName) {
-      this.config.path = fileName;
+    loadReview: function(filePath, reviewId) {
+      this.config.path = filePath;
+      this.config._reviewId = reviewId;
       this.buildUI();
       this.init();
     },
@@ -174,34 +182,36 @@
 
     // Helpers
     el: (id) => document.getElementById(id),
-    getUrl: function(filename) {
-       // If filename is provided, fetch that relative to root, otherwise fetch the config path
-       if(filename) return `https://raw.githubusercontent.com/${this.config.owner}/${this.config.repo}/${this.config.branch}/${filename}`;
-       return `https://raw.githubusercontent.com/${this.config.owner}/${this.config.repo}/${this.config.branch}/${this.config.path}`;
+    getUrl: function(filepath) {
+       return window.getAssetUrl(this.config, filepath || this.config.path);
     },
 
     // --- INITIALIZATION ---
     init: async function() {
-      console.log('[Review.js] Initializing...');
-      console.log('[Review.js] Current DOM state:');
+      console.log('[Review] Initializing...');
+      console.log('[Review] Current DOM state:');
       console.log('  - jp-stage exists:', !!document.getElementById('jp-stage'));
       console.log('  - jp-header-title exists:', !!document.getElementById('jp-header-title'));
       console.log('  - jp-start-btn exists:', !!document.getElementById('jp-start-btn'));
 
       try {
-        console.log('[Review.js] Fetching resources...');
-        console.log('[Review.js] Quiz URL:', this.getUrl());
-        console.log('[Review.js] Glossary URL:', this.getUrl('glossary.master.json'));
-        console.log('[Review.js] Conjugations URL:', this.getUrl('conjugation_rules.json'));
+        const manifest = await window.getManifest(this.config);
+        const quizUrl = this.getUrl();
+        const glossaryUrl = this.getUrl(manifest.globalFiles.glossaryMaster);
+        const conjUrl = this.getUrl(manifest.globalFiles.conjugationRules);
+
+        console.log('[Review] Quiz URL:', quizUrl);
+        console.log('[Review] Glossary URL:', glossaryUrl);
+        console.log('[Review] Conjugation URL:', conjUrl);
 
         // 1. Fetch Quiz Data + Glossary + Conjugations in parallel
         const [quizRes, glossRes, conjRes] = await Promise.all([
-            fetch(this.getUrl()),
-            fetch(this.getUrl('glossary.master.json')),
-            fetch(this.getUrl('conjugation_rules.json'))
+            fetch(quizUrl),
+            fetch(glossaryUrl),
+            fetch(conjUrl)
         ]);
 
-        console.log('[Review.js] Fetch responses:', {
+        console.log('[Review] Fetch responses:', {
           quiz: quizRes.ok,
           glossary: glossRes.ok,
           conjugations: conjRes.ok
@@ -211,37 +221,37 @@
           throw new Error(`Failed to fetch resources: Quiz(${quizRes.status}) Glossary(${glossRes.status}) Conjugations(${conjRes.status})`);
         }
 
-        console.log('[Review.js] Parsing JSON...');
+        console.log('[Review] Parsing JSON...');
         const quizData = await quizRes.json();
         const glossData = await glossRes.json();
         this.state.conjugations = await conjRes.json();
 
-        console.log('[Review.js] Quiz title:', quizData.title);
-        console.log('[Review.js] Glossary entries:', glossData.length);
+        console.log('[Review] Quiz title:', quizData.title);
+        console.log('[Review] Glossary entries:', glossData.length);
 
         // 2. Map Glossary
         this.state.termMap = {};
         glossData.forEach(i => { this.state.termMap[i.id] = i; });
 
         // 3. Inject Styles & Modal
-        console.log('[Review.js] Injecting styles...');
+        console.log('[Review] Injecting styles...');
         this.injectStyles();
-        console.log('[Review.js] Injecting modal...');
+        console.log('[Review] Injecting modal...');
         this.injectModal();
 
         // 4. Process Quiz
-        console.log('[Review.js] Processing quiz data...');
+        console.log('[Review] Processing quiz data...');
         this.processData(quizData);
-        console.log('[Review.js] Initialization complete!');
+        console.log('[Review] Initialization complete!');
 
       } catch (e) {
-        console.error('[Review.js] Error during initialization:', e);
-        console.error('[Review.js] Error stack:', e.stack);
+        console.error('[Review] Error during initialization:', e);
+        console.error('[Review] Error stack:', e.stack);
         const stage = this.el('jp-stage');
         if (stage) {
           stage.innerHTML = `<div style="text-align:center;color:#d63031;padding:20px;">Unable to load test resources.<br><small>${e.message}</small><br><br><button class="jp-btn" onclick="location.reload()" style="background:#4e54c8;color:white;padding:12px 24px;border:none;border-radius:8px;cursor:pointer;">Reload Page</button></div>`;
         } else {
-          console.error('[Review.js] Cannot display error: jp-stage element not found!');
+          console.error('[Review] Cannot display error: jp-stage element not found!');
           alert('Error loading review: ' + e.message);
         }
       }
@@ -635,7 +645,7 @@
     // --- QUIZ LOGIC ---
 
     processData: function(data) {
-      console.log('[Review.js] Processing data...');
+      console.log('[Review] Processing data...');
       if(data.title) {
         const headerTitle = this.el('jp-header-title');
         const introTitle = this.el('jp-intro-title');
@@ -651,7 +661,7 @@
         btn.style.opacity = "1";
         btn.style.pointerEvents = "all";
         btn.innerText = "Start Review";
-        console.log('[Review.js] Start button enabled');
+        console.log('[Review] Start button enabled');
       }
 
       this.state.questions = [];
@@ -886,7 +896,7 @@
       let msg = pct > 80 ? "Excellent Work! 🏆" : "Keep Practicing! 💪";
 
       // Save top score to localStorage
-      const reviewName = this.config.path.replace('.json', '');
+      const reviewName = this.config._reviewId || this.config.path.replace(/.*\//, '').replace('.json', '');
       const scores = JSON.parse(localStorage.getItem('k-review-scores') || '{}');
       const prevBest = scores[reviewName];
       const isNewBest = prevBest === undefined || pct > prevBest;
