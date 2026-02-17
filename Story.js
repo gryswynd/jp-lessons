@@ -10,8 +10,8 @@ window.StoryModule = (function() {
   let termMapData = {};
   let CONJUGATION_RULES = null;
 
-  function getCdnUrl(filename) {
-    return `https://raw.githubusercontent.com/${config.owner}/${config.repo}/${config.branch}/${config.path ? config.path + '/' : ''}${filename}`;
+  function getCdnUrl(filepath) {
+    return window.getAssetUrl(config, filepath);
   }
 
   function start(containerElement, repoConfig, exitCallback) {
@@ -299,9 +299,14 @@ window.StoryModule = (function() {
 
   async function loadResources() {
     try {
+      const manifest = await window.getManifest(config);
+      const glossaryUrl = getCdnUrl(manifest.globalFiles.glossaryMaster);
+      const conjUrl = getCdnUrl(manifest.globalFiles.conjugationRules);
+      console.log('[Story] Glossary URL:', glossaryUrl);
+      console.log('[Story] Conjugation URL:', conjUrl);
       const [glossary, conjugationRules] = await Promise.all([
-        fetch(getCdnUrl('glossary.master.json')).then(r => r.json()),
-        fetch(getCdnUrl('conjugation_rules.json')).then(r => r.json())
+        fetch(glossaryUrl).then(r => r.json()),
+        fetch(conjUrl).then(r => r.json())
       ]);
 
       // Build term map
@@ -509,10 +514,7 @@ window.StoryModule = (function() {
 
   async function loadStoryList() {
     try {
-      const manifestUrl = getCdnUrl('manifest.json') + '?t=' + Date.now();
-      const response = await fetch(manifestUrl);
-      if (!response.ok) throw new Error('Failed to load manifest.json');
-      const manifest = await response.json();
+      const manifest = await window.getManifest(config);
 
       storyList = [];
       const levels = manifest.levels || [];
@@ -530,6 +532,7 @@ window.StoryModule = (function() {
         });
       });
 
+      console.log('[Story] Found', storyList.length, 'stories from manifest');
       if (storyList.length > 0) {
         loadStory(storyList[0]);
       } else {
@@ -560,9 +563,13 @@ window.StoryModule = (function() {
 
     try {
       // Load both markdown and companion JSON
+      const mdUrl = getCdnUrl(storyInfo.mdFile);
+      const jsonUrl = getCdnUrl(storyInfo.jsonFile);
+      console.log('[Story] Markdown URL:', mdUrl);
+      console.log('[Story] Terms URL:', jsonUrl);
       const [mdResponse, jsonResponse] = await Promise.all([
-        fetch(getCdnUrl(storyInfo.mdFile) + '?t=' + Date.now()),
-        fetch(getCdnUrl(storyInfo.jsonFile) + '?t=' + Date.now())
+        fetch(mdUrl + '?t=' + Date.now()),
+        fetch(jsonUrl + '?t=' + Date.now())
       ]);
 
       if (!mdResponse.ok) {

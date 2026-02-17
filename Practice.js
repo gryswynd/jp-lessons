@@ -260,7 +260,7 @@ window.PracticeModule = {
 
     // --- 2. LOGIC ---
     const REPO_CONFIG = sharedConfig;
-    const MASTER_URL = `https://raw.githubusercontent.com/${REPO_CONFIG.owner}/${REPO_CONFIG.repo}/${REPO_CONFIG.branch}/glossary.master.json`;
+    let MASTER_URL = '';
 
     const DB = { kanji: [], verb: [], lessons: [], vocabMap: new Map() };
     const activeLessons = new Set();
@@ -694,6 +694,9 @@ window.PracticeModule = {
     (async function() {
         try {
             await new Promise(r => setTimeout(r, 50));
+            const manifest = await window.getManifest(REPO_CONFIG);
+            MASTER_URL = window.getAssetUrl(REPO_CONFIG, manifest.globalFiles.glossaryMaster);
+            console.log('[Practice] Glossary URL:', MASTER_URL);
             const raw = await fetch(MASTER_URL + "?t=" + Date.now()).then(r => r.json());
 
             const allVocab = raw.filter(i => i.type === 'vocab');

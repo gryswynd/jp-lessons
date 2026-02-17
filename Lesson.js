@@ -141,8 +141,8 @@ window.LessonModule = {
         return e;
     }
     function esc(s) { return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
-    function getCdnUrl(filename) {
-        return `https://raw.githubusercontent.com/${REPO_CONFIG.owner}/${REPO_CONFIG.repo}/${REPO_CONFIG.branch}/${REPO_CONFIG.path ? REPO_CONFIG.path + '/' : ''}${filename}`;
+    function getCdnUrl(filepath) {
+        return window.getAssetUrl(REPO_CONFIG, filepath);
     }
 
     // TTS Helper with Mobile & Error Handling
@@ -209,9 +209,14 @@ window.LessonModule = {
     };
 
     async function loadResources() {
+        const manifest = await window.getManifest(REPO_CONFIG);
+        const glossaryUrl = getCdnUrl(manifest.globalFiles.glossaryMaster);
+        const conjUrl = getCdnUrl(manifest.globalFiles.conjugationRules);
+        console.log('[Lesson] Glossary URL:', glossaryUrl);
+        console.log('[Lesson] Conjugation URL:', conjUrl);
         const [gloss, conj] = await Promise.all([
-             fetch(getCdnUrl("glossary.master.json")).then(r => r.json()),
-             fetch(getCdnUrl("conjugation_rules.json")).then(r => r.json())
+             fetch(glossaryUrl).then(r => r.json()),
+             fetch(conjUrl).then(r => r.json())
         ]);
         const map = {}; gloss.forEach(i => { map[i.id] = i; });
         return { map, conj };
@@ -537,51 +542,57 @@ window.LessonModule = {
 
     // --- Logic ---
     async function fetchLessonList() {
-        const apiUrl = `https://api.github.com/repos/${REPO_CONFIG.owner}/${REPO_CONFIG.repo}/contents/${REPO_CONFIG.path}`;
-        root.innerHTML = `<div class="jp-header"><div class="jp-title">Library</div><button class="jp-exit-btn">Exit</button></div><div class="jp-body" style="text-align:center; justify-content:center; color:#888;">Connecting to GitHub...</div>`;
+        root.innerHTML = `<div class="jp-header"><div class="jp-title">Library</div><button class="jp-exit-btn">Exit</button></div><div class="jp-body" style="text-align:center; justify-content:center; color:#888;">Loading lessons...</div>`;
         root.querySelector('.jp-exit-btn').onclick = exitCallback;
 
         try {
-          const res = await fetch(apiUrl);
-          if (!res.ok) throw new Error("Failed to fetch repo");
-          const files = await res.json();
-          let lessonFiles = files.filter(f => f.name.match(/^N\d+\.\d+\.json$/)).map(f => f.name);
+          const manifest = await window.getManifest(REPO_CONFIG);
+          const lessons = [];
+          (manifest.levels || []).forEach(level => {
+            const levelData = manifest.data && manifest.data[level];
+            if (!levelData || !levelData.lessons) return;
+            levelData.lessons.forEach(lesson => {
+              lessons.push({ id: lesson.id, title: lesson.title, file: lesson.file });
+            });
+          });
 
-          lessonFiles.sort((a, b) => {
-              const partsA = a.replace('N','').replace('.json','').split('.').map(Number);
-              const partsB = b.replace('N','').replace('.json','').split('.').map(Number);
-              // REVERSED SORT: Newest (Highest Number) First
+          // REVERSED SORT: Newest (Highest Number) First
+          lessons.sort((a, b) => {
+              const partsA = a.id.replace('N','').split('.').map(Number);
+              const partsB = b.id.replace('N','').split('.').map(Number);
               if (partsA[0] !== partsB[0]) return partsB[0] - partsA[0];
               return partsB[1] - partsA[1];
           });
 
-          renderMenu(lessonFiles);
+          console.log('[Lesson] Found', lessons.length, 'lessons from manifest');
+          renderMenu(lessons);
         } catch (err) {
           root.innerHTML = `<div class="jp-body" style="color:#ff4757; text-align:center; padding:20px; justify-content:center;"><h3>Error</h3><p>${err.message}</p><button class="jp-nav-btn next" onclick="exitCallback()">Back to Main Menu</button></div>`;
         }
     }
 
-    function renderMenu(files) {
+    function renderMenu(lessons) {
         root.innerHTML = `<div class="jp-header"><div class="jp-title">Select Lesson</div><button class="jp-exit-btn">Exit</button></div><div class="jp-body"><div class="jp-menu-grid" id="jp-menu-container"></div></div>`;
         root.querySelector('.jp-exit-btn').onclick = exitCallback;
-        const container = document.getElementById('jp-menu-container');
-        files.forEach(fileName => {
+        const menuEl = document.getElementById('jp-menu-container');
+        lessons.forEach(lesson => {
           const btn = el("div", "jp-menu-item");
-          const name = fileName.replace('.json','');
-          btn.innerHTML = `<div class="jp-menu-id">${name}</div><div class="jp-menu-name">Start</div>`;
-          btn.onclick = () => loadLesson(fileName);
-          container.appendChild(btn);
+          btn.innerHTML = `<div class="jp-menu-id">${lesson.id}</div><div class="jp-menu-name">${lesson.title || 'Start'}</div>`;
+          btn.onclick = () => loadLesson(lesson.file);
+          menuEl.appendChild(btn);
         });
     }
 
-    async function loadLesson(fileName) {
+    async function loadLesson(filePath) {
         root.innerHTML = `<div class="jp-header"><button class="jp-back-btn">← List</button><div class="jp-title">Loading...</div><button class="jp-exit-btn">Exit</button></div><div class="jp-progress-container"><div class="jp-progress-bar"></div></div><div class="jp-body"></div><div class="jp-footer"><button class="jp-nav-btn prev">Prev</button><button class="jp-nav-btn next">Next</button></div>`;
         root.querySelector('.jp-back-btn').onclick = () => fetchLessonList();
         root.querySelector('.jp-exit-btn').onclick = exitCallback;
 
         try {
+          const lessonUrl = getCdnUrl(filePath);
+          console.log('[Lesson] Loading lesson:', lessonUrl);
           const [lRes, resources] = await Promise.all([
-             fetch(getCdnUrl(fileName)),
+             fetch(lessonUrl),
              loadResources()
           ]);
           lessonData = await lRes.json();

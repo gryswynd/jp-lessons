@@ -207,7 +207,6 @@ window.ComposeModule = {
 
     // --- DATA ---
     const REPO_CONFIG = sharedConfig;
-    const BASE_URL = `https://raw.githubusercontent.com/${REPO_CONFIG.owner}/${REPO_CONFIG.repo}/${REPO_CONFIG.branch}`;
 
     const LESSON_META = {
         'N4.28': { title: 'Places & Parts', kanji: '池 林 門 村', focus: 'Ponds, groves, gates, and villages' },
@@ -710,15 +709,24 @@ window.ComposeModule = {
             const cacheBust = '?t=' + Date.now();
 
             // Load manifest to discover file paths
-            const manifest = await fetch(BASE_URL + '/manifest.json' + cacheBust).then(r => r.json());
+            const manifest = await window.getManifest(REPO_CONFIG);
             const n4 = manifest.data.N4;
+
+            const glossaryUrl = window.getAssetUrl(REPO_CONFIG, n4.glossary);
+            const composeUrl = window.getAssetUrl(REPO_CONFIG, n4.compose);
+            const helperUrl = window.getAssetUrl(REPO_CONFIG, manifest.shared.helperVocab);
+            const particleUrl = window.getAssetUrl(REPO_CONFIG, manifest.shared.particles);
+            console.log('[Compose] Glossary URL:', glossaryUrl);
+            console.log('[Compose] Compose data URL:', composeUrl);
+            console.log('[Compose] Helper vocab URL:', helperUrl);
+            console.log('[Compose] Particles URL:', particleUrl);
 
             // Fetch glossary, compose prompts, helper vocab, and particles in parallel
             const [glossary, composeData, helperData, particleData] = await Promise.all([
-                fetch(BASE_URL + '/' + n4.glossary + cacheBust).then(r => r.json()),
-                fetch(BASE_URL + '/' + n4.compose + cacheBust).then(r => r.json()),
-                fetch(BASE_URL + '/' + manifest.shared.helperVocab + cacheBust).then(r => r.json()),
-                fetch(BASE_URL + '/' + manifest.shared.particles + cacheBust).then(r => r.json())
+                fetch(glossaryUrl + cacheBust).then(r => r.json()),
+                fetch(composeUrl + cacheBust).then(r => r.json()),
+                fetch(helperUrl + cacheBust).then(r => r.json()),
+                fetch(particleUrl + cacheBust).then(r => r.json())
             ]);
 
             PROMPTS = composeData.prompts;
