@@ -507,20 +507,36 @@ window.StoryModule = (function() {
     window.speechSynthesis.speak(u);
   }
 
-  function loadStoryList() {
-    storyList = [
-      {
-        mdFile: 'library-book.md',
-        jsonFile: 'library-book.json',
-        title: '図書館の本',
-        subtitle: 'The Library Book'
-      }
-    ];
+  async function loadStoryList() {
+    try {
+      const manifestUrl = getCdnUrl('manifest.json') + '?t=' + Date.now();
+      const response = await fetch(manifestUrl);
+      if (!response.ok) throw new Error('Failed to load manifest.json');
+      const manifest = await response.json();
 
-    if (storyList.length > 0) {
-      loadStory(storyList[0]);
-    } else {
-      showError('No stories available');
+      storyList = [];
+      const levels = manifest.levels || [];
+      levels.forEach(level => {
+        const levelData = manifest.data && manifest.data[level];
+        if (!levelData || !levelData.stories) return;
+        levelData.stories.forEach(story => {
+          storyList.push({
+            dir: story.dir,
+            mdFile: story.dir + '/story.md',
+            jsonFile: story.dir + '/terms.json',
+            title: story.titleJp || story.title,
+            subtitle: story.title
+          });
+        });
+      });
+
+      if (storyList.length > 0) {
+        loadStory(storyList[0]);
+      } else {
+        showError('No stories available');
+      }
+    } catch (err) {
+      showError('Failed to load story list: ' + err.message);
     }
   }
 
