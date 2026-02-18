@@ -4,60 +4,6 @@ window.PracticeModule = {
 
     window.KanjiApp = {};
 
-    // TTS Helper with Mobile & Error Handling
-    KanjiApp.speak = function(text) {
-        if (!window.speechSynthesis) {
-            console.warn('Speech synthesis not supported');
-            return;
-        }
-
-        try {
-            // Cancel any ongoing speech
-            window.speechSynthesis.cancel();
-
-            // Small delay to prevent race condition on mobile browsers
-            setTimeout(() => {
-                const utterance = new SpeechSynthesisUtterance(text);
-                utterance.lang = 'ja-JP';
-                utterance.rate = 0.9; // Slightly slower for better clarity
-                utterance.volume = 1.0;
-
-                // Error handling with retry logic
-                utterance.onerror = (event) => {
-                    console.error('Speech synthesis error:', event.error);
-                    // Try to recover from 'not-allowed' or 'interrupted' errors
-                    if ((event.error === 'not-allowed' || event.error === 'interrupted') && !utterance._retried) {
-                        utterance._retried = true;
-                        setTimeout(() => {
-                            window.speechSynthesis.cancel();
-                            window.speechSynthesis.speak(utterance);
-                        }, 100);
-                    }
-                };
-
-                // iOS Safari fix: Resume if paused
-                utterance.onstart = () => {
-                    if (window.speechSynthesis.paused) {
-                        window.speechSynthesis.resume();
-                    }
-                };
-
-                // Timeout protection (10 seconds)
-                const timeoutId = setTimeout(() => {
-                    window.speechSynthesis.cancel();
-                }, 10000);
-
-                utterance.onend = () => {
-                    clearTimeout(timeoutId);
-                };
-
-                window.speechSynthesis.speak(utterance);
-            }, 50); // 50ms delay prevents race conditions on Android Chrome
-        } catch (error) {
-            console.error('TTS Error:', error);
-        }
-    };
-
     // Inject Fonts
     if (!document.getElementById('kanji-fonts')) {
         const link = document.createElement('link');
@@ -267,20 +213,14 @@ window.PracticeModule = {
     let curSet=[], curIdx=0, curStreak=0, curBest=0, curMode='', curAns='', curType='', curSubMode='normal', curQItem=null, curCategory='';
     let quizPhase = 1;
 
-    let flagCounts = JSON.parse(localStorage.getItem('k-flags')) || {};
-    let activeFlags = JSON.parse(localStorage.getItem('k-active-flags'));
-
-    if (!activeFlags) {
-        activeFlags = {};
-        Object.keys(flagCounts).forEach(k => { if(flagCounts[k]>0) activeFlags[k] = true; });
-        localStorage.setItem('k-active-flags', JSON.stringify(activeFlags));
-    }
+    let flagCounts = window.JPShared.progress.getAllFlags();
+    let activeFlags = window.JPShared.progress.getAllActiveFlags();
 
     const bestScores = {
-        meaning: parseInt(localStorage.getItem('k-best-meaning') || '0'),
-        reading: parseInt(localStorage.getItem('k-best-reading') || '0'),
-        vocab: parseInt(localStorage.getItem('k-best-vocab') || '0'),
-        verb: parseInt(localStorage.getItem('k-best-verb') || '0')
+        meaning: window.JPShared.progress.getBestScore('meaning'),
+        reading: window.JPShared.progress.getBestScore('reading'),
+        vocab: window.JPShared.progress.getBestScore('vocab'),
+        verb: window.JPShared.progress.getBestScore('verb')
     };
 
     // --- 3. HELPER FUNCTIONS ---
@@ -393,9 +333,7 @@ window.PracticeModule = {
 
         flagCounts[kKey] = (flagCounts[kKey] || 0) + 1;
         activeFlags[kKey] = true;
-
-        localStorage.setItem('k-flags', JSON.stringify(flagCounts));
-        localStorage.setItem('k-active-flags', JSON.stringify(activeFlags));
+        window.JPShared.progress.flagTerm(kKey);
 
         curSet.push({ ...currentItem, isRequeued: true });
 
@@ -412,7 +350,7 @@ window.PracticeModule = {
         const kKey = currentItem.kanji || currentItem.word || currentItem.dict;
 
         delete activeFlags[kKey];
-        localStorage.setItem('k-active-flags', JSON.stringify(activeFlags));
+        window.JPShared.progress.clearFlag(kKey);
 
         btn.innerText = "Cleared! ✨";
 
@@ -515,7 +453,7 @@ window.PracticeModule = {
                 }, 800);
                 return;
             }
-            if(curStreak > curBest) { curBest = curStreak; if(curCategory) { bestScores[curCategory] = curBest; localStorage.setItem('k-best-' + curCategory, curBest); } }
+            if(curStreak > curBest) { curBest = curStreak; if(curCategory) { bestScores[curCategory] = curBest; window.JPShared.progress.setBestScore(curCategory, curBest); } }
             if(msg) { msg.innerText=`Correct! Streak: ${curStreak} 🔥`; msg.style.color="#155724"; msg.style.background="#d4edda"; }
         } else {
             btn.classList.add('wrong'); curStreak = 0;
@@ -609,7 +547,7 @@ window.PracticeModule = {
             if (speakBtn) {
                 speakBtn.onclick = function(e) {
                     e.stopPropagation();
-                    KanjiApp.speak(speakText);
+                    window.JPShared.tts.speak(speakText);
                 };
             }
             setTxt('k-fc-sub', "");
@@ -636,7 +574,7 @@ window.PracticeModule = {
             if (speakBtn) {
                 speakBtn.onclick = function(e) {
                     e.stopPropagation();
-                    KanjiApp.speak(speakText);
+                    window.JPShared.tts.speak(speakText);
                 };
             }
             setTxt('k-fc-sub', "");
@@ -660,7 +598,7 @@ window.PracticeModule = {
             if (speakBtn) {
                 speakBtn.onclick = function(e) {
                     e.stopPropagation();
-                    KanjiApp.speak(speakText);
+                    window.JPShared.tts.speak(speakText);
                 };
             }
             setTxt('k-fc-sub', "");
@@ -697,7 +635,8 @@ window.PracticeModule = {
             const manifest = await window.getManifest(REPO_CONFIG);
             MASTER_URL = window.getAssetUrl(REPO_CONFIG, manifest.globalFiles.glossaryMaster);
             console.log('[Practice] Glossary URL:', MASTER_URL);
-            const raw = await fetch(MASTER_URL + "?t=" + Date.now()).then(r => r.json());
+            const rawData = await fetch(MASTER_URL + "?t=" + Date.now()).then(r => r.json());
+            const raw = rawData.entries;
 
             const allVocab = raw.filter(i => i.type === 'vocab');
             allVocab.forEach(v => {

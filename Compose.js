@@ -4,27 +4,6 @@ window.ComposeModule = {
     // --- NAMESPACE ---
     window.ComposeApp = {};
 
-    // TTS Helper
-    ComposeApp.speak = function(text) {
-        if (!window.speechSynthesis) return;
-        try {
-            window.speechSynthesis.cancel();
-            setTimeout(() => {
-                const u = new SpeechSynthesisUtterance(text);
-                u.lang = 'ja-JP'; u.rate = 0.85; u.volume = 1.0;
-                u.onerror = (e) => {
-                    if ((e.error === 'not-allowed' || e.error === 'interrupted') && !u._retried) {
-                        u._retried = true;
-                        setTimeout(() => { window.speechSynthesis.cancel(); window.speechSynthesis.speak(u); }, 100);
-                    }
-                };
-                const tid = setTimeout(() => window.speechSynthesis.cancel(), 10000);
-                u.onend = () => clearTimeout(tid);
-                window.speechSynthesis.speak(u);
-            }, 50);
-        } catch(err) { console.error('TTS Error:', err); }
-    };
-
     // --- FONTS ---
     if (!document.getElementById('compose-fonts')) {
         const link = document.createElement('link');
@@ -282,7 +261,7 @@ window.ComposeModule = {
             promptHtml = '<div style="padding:20px;text-align:center;color:#a4b0be;font-weight:600;">Select at least one lesson to see prompts.</div>';
         } else {
             available.forEach(p => {
-                const saved = localStorage.getItem('compose-draft-' + p.id);
+                const saved = window.JPShared.progress.getDraft(p.id);
                 const savedBadge = saved ? '<span class="c-prompt-saved">draft saved</span>' : '';
                 const lessonTags = p.lessons.map(l => `<span class="c-prompt-tag c-prompt-tag-lesson">${l}</span>`).join('');
                 promptHtml += `<div class="c-prompt-card" onclick="ComposeApp.startCompose('${p.id}')">
@@ -326,7 +305,7 @@ window.ComposeModule = {
 
         let html = '';
         available.forEach(p => {
-            const saved = localStorage.getItem('compose-draft-' + p.id);
+            const saved = window.JPShared.progress.getDraft(p.id);
             const savedBadge = saved ? '<span class="c-prompt-saved">draft saved</span>' : '';
             const lessonTags = p.lessons.map(l => `<span class="c-prompt-tag c-prompt-tag-lesson">${l}</span>`).join('');
             html += `<div class="c-prompt-card" onclick="ComposeApp.startCompose('${p.id}')">
@@ -440,7 +419,7 @@ window.ComposeModule = {
         const particleHtml = PARTICLES.map(p => `<span>${escHtml(p.particle + ' (' + p.role + ')')}</span>`).join(' ');
 
         // Load draft if exists
-        const draft = localStorage.getItem('compose-draft-' + prompt.id) || '';
+        const draft = window.JPShared.progress.getDraft(prompt.id);
 
         compEl.innerHTML = `
             <div class="c-prompt-banner">
@@ -519,7 +498,7 @@ window.ComposeModule = {
         if (input) {
             input.addEventListener('input', function() {
                 ComposeApp.updateTracking();
-                localStorage.setItem('compose-draft-' + currentPrompt.id, input.value);
+                window.JPShared.progress.saveDraft(currentPrompt.id, input.value);
                 const cc = document.getElementById('c-char-count');
                 if (cc) cc.textContent = input.value.length + ' characters';
             });
@@ -603,7 +582,7 @@ window.ComposeModule = {
     ComposeApp.speakComposition = function() {
         const input = document.getElementById('c-compose-input');
         if (!input || !input.value.trim()) return;
-        ComposeApp.speak(input.value.trim());
+        window.JPShared.tts.speak(input.value.trim());
     };
 
     ComposeApp.clearDraft = function() {
@@ -612,7 +591,7 @@ window.ComposeModule = {
         if (!input) return;
         if (!confirm('Clear your composition? This cannot be undone.')) return;
         input.value = '';
-        localStorage.removeItem('compose-draft-' + currentPrompt.id);
+        window.JPShared.progress.clearDraft(currentPrompt.id);
         input.dispatchEvent(new Event('input'));
     };
 
@@ -767,8 +746,8 @@ window.ComposeModule = {
             ]);
 
             PROMPTS = composeData.prompts;
-            HELPER_VOCAB = helperData;
-            PARTICLES = particleData;
+            HELPER_VOCAB = helperData.categories;
+            PARTICLES = particleData.particles;
 
             allVocab = glossary.filter(i => i.type === 'vocab');
             vocabById = new Map();

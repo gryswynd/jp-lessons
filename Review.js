@@ -84,12 +84,11 @@
     },
 
     renderReviewMenu: function(reviews) {
-      const scores = JSON.parse(localStorage.getItem('k-review-scores') || '{}');
       const stage = document.getElementById('jp-stage');
 
       let html = '<div class="jp-review-menu-grid">';
       reviews.forEach(review => {
-        const topScore = scores[review.id];
+        const topScore = window.JPShared.progress.getReviewScore(review.id);
         const scoreDisplay = topScore !== undefined
           ? `<div class="jp-review-score">Best: ${topScore}%</div>`
           : `<div class="jp-review-score jp-no-score">Not attempted</div>`;
@@ -227,17 +226,30 @@
         this.state.conjugations = await conjRes.json();
 
         console.log('[Review] Quiz title:', quizData.title);
-        console.log('[Review] Glossary entries:', glossData.length);
+        console.log('[Review] Glossary entries:', glossData.entries.length);
 
         // 2. Map Glossary
         this.state.termMap = {};
-        glossData.forEach(i => { this.state.termMap[i.id] = i; });
+        glossData.entries.forEach(i => { this.state.termMap[i.id] = i; });
 
         // 3. Inject Styles & Modal
         console.log('[Review] Injecting styles...');
         this.injectStyles();
         console.log('[Review] Injecting modal...');
-        this.injectModal();
+        window.JPShared.termModal.setTermMap(this.state.termMap);
+        window.JPShared.termModal.inject();
+        // Wire JP_OPEN_TERM to Review's flagTerm so quiz auto-flagging and
+        // modal flagging use the same method (getRootTerm-aware, returns bool).
+        const self = this;
+        window.JP_OPEN_TERM = function(id, enableFlag) {
+            window.JPShared.termModal.open(id, {
+                enableFlag: enableFlag !== false,
+                onFlag: function(termId, msgBox) {
+                    self.flagTerm(termId);
+                    if (msgBox) msgBox.style.display = 'inline-block';
+                }
+            });
+        };
 
         // 4. Process Quiz
         console.log('[Review] Processing quiz data...');
@@ -439,12 +451,6 @@
             .jp-term { color: #4e54c8; font-weight: 700; cursor: pointer; border-bottom: 2px solid rgba(78,84,200,0.1); transition: 0.2s; }
             .jp-term:hover { background: rgba(78,84,200,0.05); border-bottom-color: #4e54c8; }
 
-            /* Modal Styling */
-            .jp-modal-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index: 999999; display: none; align-items: center; justify-content: center; }
-            .jp-modal { background: #fff; width: 85%; max-width: 400px; border-radius: 20px; padding: 30px; box-shadow: 0 25px 50px rgba(0,0,0,0.25); position: relative; text-align: center; font-family: 'Poppins', sans-serif; }
-            .jp-close-btn { position: absolute; top: 15px; right: 15px; background: #f1f2f6; border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-weight: bold; }
-            .jp-auto-flag-msg { margin-top: 15px; background: #d4edda; color: #155724; padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; display: inline-block; }
-
             /* Animations */
             @keyframes jpFadeIn {
                 from { opacity: 0; transform: translateY(10px); }
@@ -493,153 +499,13 @@
         document.head.appendChild(style);
     },
 
-    injectModal: function() {
-        if(document.querySelector('.jp-modal-overlay')) return;
-        const div = document.createElement('div');
-        div.className = 'jp-modal-overlay';
-        div.innerHTML = `
-          <div class="jp-modal">
-            <button class="jp-close-btn" onclick="document.querySelector('.jp-modal-overlay').style.display='none'">✕</button>
-            <h2 id="jp-m-title" style="margin:0 0 5px 0; color:#4e54c8; font-size:2rem;"></h2>
-            <div id="jp-m-meta" style="color:#747d8c; font-weight:700; margin-bottom:15px;"></div>
-            <div id="jp-m-notes" style="line-height:1.5; margin-bottom:15px; font-size:0.95rem; color:#2d3436;"></div>
-            <div class="jp-auto-flag-msg">✅ Added to Practice Queue</div>
-          </div>
-        `;
-        document.body.appendChild(div);
-        div.onclick = (e) => { if(e.target === div) div.style.display = 'none'; };
-
-        // Expose global opener
-        window.JP_OPEN_TERM = (id, enableFlag = true) => this.openTerm(id, enableFlag);
-    },
-
     // --- TERM & FLAGGING LOGIC ---
 
-    getRootTerm: function(termId) {
-        let term = this.state.termMap[termId];
-        if (term) return term.original_id ? this.state.termMap[term.original_id] : term;
-
-        // Try stripping suffixes for conjugated terms not in map
-        const parts = termId.split('_');
-        while (parts.length > 1) {
-            parts.pop();
-            const candidateId = parts.join('_');
-            term = this.state.termMap[candidateId];
-            if (term) return term.original_id ? this.state.termMap[term.original_id] : term;
-        }
-        return null;
-    },
-
     flagTerm: function(termId) {
-        const rootTerm = this.getRootTerm(termId);
+        const rootTerm = window.JPShared.textProcessor.getRootTerm(termId, this.state.termMap);
         if (!rootTerm) return false;
-
-        const flags = JSON.parse(localStorage.getItem('k-flags') || '{}');
-        const active = JSON.parse(localStorage.getItem('k-active-flags') || '{}');
-        const key = rootTerm.surface; // Flag by Kanji/Surface
-
-        flags[key] = (flags[key] || 0) + 1;
-        active[key] = true;
-
-        localStorage.setItem('k-flags', JSON.stringify(flags));
-        localStorage.setItem('k-active-flags', JSON.stringify(active));
+        window.JPShared.progress.flagTerm(rootTerm.surface);
         return true;
-    },
-
-    openTerm: function(id, enableFlag) {
-        const t = this.state.termMap[id];
-        if (!t) return;
-
-        // Populate Modal
-        document.getElementById('jp-m-title').innerHTML = t.surface;
-        document.getElementById('jp-m-meta').innerText = t.reading + (t.meaning ? ` • ${t.meaning.replace(/<[^>]*>/g, '')}` : "");
-        document.getElementById('jp-m-notes').innerText = t.notes || "";
-
-        // Handle Flagging
-        const msgBox = document.querySelector('.jp-auto-flag-msg');
-        if (enableFlag) {
-            this.flagTerm(id);
-            if(msgBox) msgBox.style.display = 'inline-block';
-        } else {
-            if(msgBox) msgBox.style.display = 'none';
-        }
-
-        document.querySelector('.jp-modal-overlay').style.display = 'flex';
-    },
-
-    // --- TEXT PROCESSING (Conjugation & Wrapping) ---
-
-    conjugate: function(term, ruleKey) {
-        if (!term || !this.state.conjugations) return term;
-        const formDef = this.state.conjugations[ruleKey];
-        if (!formDef) return term;
-
-        let vClass = term.verb_class || term.gtype || 'godan';
-        if (vClass === 'u') vClass = 'godan';
-        if (vClass === 'ru') vClass = 'ichidan';
-        if (vClass === 'verb') vClass = 'godan';
-
-        const rule = formDef.rules[vClass];
-        if (!rule) return term;
-
-        // Logic simplified for display (mirroring Lesson.js)
-        const GODAN_MAPS = {
-            u_to_i: { 'う': 'い', 'く': 'き', 'ぐ': 'ぎ', 'す': 'し', 'つ': 'ち', 'ぬ': 'に', 'ぶ': 'び', 'む': 'み', 'る': 'り' },
-            ta_form: { 'う': 'った', 'つ': 'った', 'る': 'った', 'む': 'んだ', 'ぶ': 'んだ', 'ぬ': 'んだ', 'く': 'いた', 'ぐ': 'いだ', 'す': 'した' },
-            te_form: { 'う': 'って', 'つ': 'って', 'る': 'って', 'む': 'んで', 'ぶ': 'んで', 'ぬ': 'んで', 'く': 'いて', 'ぐ': 'いで', 'す': 'して' }
-        };
-
-        let newSurface = term.surface;
-        if (rule.type === 'replace') {
-            newSurface = rule.surface;
-        } else if (rule.type === 'suffix') {
-            if (rule.remove && newSurface.endsWith(rule.remove)) {
-               newSurface = newSurface.slice(0, -rule.remove.length) + rule.add;
-            } else {
-               newSurface += rule.add;
-            }
-        } else if (rule.type === 'godan_change') {
-            const lastChar = newSurface.slice(-1);
-            const map = GODAN_MAPS[rule.map];
-            if (map && map[lastChar]) newSurface = newSurface.slice(0, -1) + map[lastChar] + rule.add;
-        } else if (rule.type === 'godan_euphonic') {
-            const lastChar = newSurface.slice(-1);
-            const map = GODAN_MAPS[rule.map];
-            if (map && map[lastChar]) newSurface = newSurface.slice(0, -1) + map[lastChar];
-        }
-
-        // Return a transient term object
-        return { ...term, id: `${term.id}_${ruleKey}`, surface: newSurface, original_id: term.id };
-    },
-
-    processText: function(text, termRefs) {
-        if (!text) return "";
-        let html = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        if (!termRefs || termRefs.length === 0) return html;
-
-        // 1. Resolve Terms (Conjugate if needed)
-        const terms = termRefs.map(ref => {
-          if (typeof ref === 'string') return this.state.termMap[ref];
-          else if (typeof ref === 'object' && ref.id && ref.form) {
-            const rootTerm = this.state.termMap[ref.id];
-            if (!rootTerm) return null;
-            const conjugated = this.conjugate(rootTerm, ref.form);
-            if (conjugated) this.state.termMap[conjugated.id] = conjugated; // Cache it
-            return conjugated;
-          }
-          return null;
-        }).filter(Boolean).sort((a,b) => b.surface.length - a.surface.length);
-
-        // 2. Wrap in Spans
-        terms.forEach(t => {
-          let matchedForm = t.surface;
-          // Simple replaceall avoiding nested tags
-          const regex = new RegExp(matchedForm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), "g");
-          html = html.replace(regex, `<span class="jp-term" onclick="window.JP_OPEN_TERM('${t.id}', true)">${matchedForm}</span>`);
-        });
-
-        // Clean markers
-        return html;
     },
 
     // --- QUIZ LOGIC ---
@@ -726,7 +592,7 @@
           html += `
             <div class="jp-convo-line">
               <div class="jp-convo-spk">${line.spk}</div>
-              <div class="jp-convo-text">${this.processText(line.jp, line.terms)}</div>
+              <div class="jp-convo-text">${window.JPShared.textProcessor.processText(line.jp, line.terms, this.state.termMap, this.state.conjugations)}</div>
               </div>
           `;
         });
@@ -736,13 +602,13 @@
       else if (q.type === 'reading_mcq') {
         html += `<div class="jp-passage">`;
         q.passage.forEach(p => {
-            html += `<div style="margin-bottom:12px; font-size:1.1rem; line-height:1.6;">${this.processText(p.jp, p.terms)}</div>`;
+            html += `<div style="margin-bottom:12px; font-size:1.1rem; line-height:1.6;">${window.JPShared.textProcessor.processText(p.jp, p.terms, this.state.termMap, this.state.conjugations)}</div>`;
         });
         html += `</div>`;
       }
 
       // Question Text (Processed for highlighting)
-      const qText = this.processText(q.q, q.terms).replace(/\[(.*?)\]/g, '<span class="jp-highlight">$1</span>');
+      const qText = window.JPShared.textProcessor.processText(q.q, q.terms, this.state.termMap, this.state.conjugations).replace(/\[(.*?)\]/g, '<span class="jp-highlight">$1</span>');
       html += `<div class="jp-q-text">${qText}</div>`;
 
       html += `<div id="jp-interaction"></div>`;
@@ -897,12 +763,10 @@
 
       // Save top score to localStorage
       const reviewName = this.config._reviewId || this.config.path.replace(/.*\//, '').replace('.json', '');
-      const scores = JSON.parse(localStorage.getItem('k-review-scores') || '{}');
-      const prevBest = scores[reviewName];
+      const prevBest = window.JPShared.progress.getReviewScore(reviewName);
       const isNewBest = prevBest === undefined || pct > prevBest;
       if (isNewBest) {
-        scores[reviewName] = pct;
-        localStorage.setItem('k-review-scores', JSON.stringify(scores));
+        window.JPShared.progress.setReviewScore(reviewName, pct);
       }
 
       let bestHtml = '';

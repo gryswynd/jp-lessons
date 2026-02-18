@@ -1,158 +1,161 @@
-[
-  {
-    "id": "k_sumu",
-    "lesson": "N4.9",
-    "type": "kanji",
-    "surface": "住",
-    "on": "じゅう",
-    "kun": "す(む)",
-    "reading": "す(む)",
-    "meaning": "to live / dwell",
-    "notes": ""
-  },
-  {
-    "id": "k_tokoro",
-    "lesson": "N4.9",
-    "type": "kanji",
-    "surface": "所",
-    "on": "しょ",
-    "kun": "ところ",
-    "reading": "ところ",
-    "meaning": "place",
-    "notes": ""
-  },
-  {
-    "id": "k_machi",
-    "lesson": "N4.9",
-    "type": "kanji",
-    "surface": "町",
-    "on": "ちょう",
-    "kun": "まち",
-    "reading": "まち",
-    "meaning": "town",
-    "notes": ""
-  },
-  {
-    "id": "k_moto",
-    "lesson": "N4.9",
-    "type": "kanji",
-    "surface": "元",
-    "on": "げん / がん",
-    "kun": "もと",
-    "reading": "もと",
-    "meaning": "origin / foundation",
-    "notes": ""
-  },
-  {
-    "id": "k_saru",
-    "lesson": "N4.9",
-    "type": "kanji",
-    "surface": "去",
-    "on": "きょ / こ",
-    "kun": "さ(る)",
-    "reading": "さ(る)",
-    "meaning": "past / to leave",
-    "notes": ""
-  },
-  {
-    "id": "k_betsu",
-    "lesson": "N4.9",
-    "type": "kanji",
-    "surface": "別",
-    "on": "べつ",
-    "kun": "わか(れる)",
-    "reading": "わか(れる)",
-    "meaning": "separate / another",
-    "notes": ""
-  },
-  {
-    "id": "v_sumu",
-    "surface": "住む",
-    "meaning": "to live / reside",
-    "type": "vocab",
-    "notes": "Use particle 「に」 (e.g., 東京に 住んでいます).",
-    "lesson_ids": "N4.9",
-    "reading": "すむ"
-  },
-  {
-    "id": "v_juusho",
-    "surface": "住所",
-    "meaning": "address",
-    "type": "vocab",
-    "notes": "",
-    "lesson_ids": "N4.9",
-    "reading": "じゅうしょ"
-  },
-  {
-    "id": "v_tokoro",
-    "surface": "所",
-    "meaning": "place",
-    "type": "vocab",
-    "notes": "",
-    "lesson_ids": "N4.9",
-    "reading": "ところ"
-  },
-  {
-    "id": "v_kinjo",
-    "surface": "近所",
-    "meaning": "neighborhood",
-    "type": "vocab",
-    "notes": "Lit: Near place.",
-    "lesson_ids": "N4.9",
-    "reading": "きんじょ"
-  },
-  {
-    "id": "v_machi",
-    "surface": "町",
-    "meaning": "town",
-    "type": "vocab",
-    "notes": "",
-    "lesson_ids": "N4.9",
-    "reading": "まち"
-  },
-  {
-    "id": "v_genki",
-    "surface": "元気",
-    "meaning": "healthy / energetic / fine",
-    "type": "vocab",
-    "notes": "Na-adjective (元気な).",
-    "lesson_ids": "N4.9",
-    "reading": "げんき"
-  },
-  {
-    "id": "v_kyonen",
-    "surface": "去年",
-    "meaning": "last year",
-    "type": "vocab",
-    "notes": "",
-    "lesson_ids": "N4.9",
-    "reading": "きょねん"
-  },
-  {
-    "id": "v_wakareru",
-    "surface": "別れる",
-    "meaning": "to separate / to break up",
-    "type": "vocab",
-    "notes": "",
-    "lesson_ids": "N4.9",
-    "reading": "わかれる"
-  },
-  {
-    "id": "v_betsuni",
-    "surface": "別に",
-    "meaning": "not particularly",
-    "type": "vocab",
-    "notes": "Often used with negative verbs.",
-    "lesson_ids": "N4.9",
-    "reading": "べつに"
-  },
-  {
-    "id": "v_betsuno",
-    "surface": "別の",
-    "meaning": "another / different",
-    "type": "vocab",
-    "notes": "",
-    "lesson_ids": "N4.9",
-    "reading": "べつの"
-  }
-]
+{
+  "contentVersion": "1.0.0",
+  "entries": [
+    {
+      "id": "k_sumu",
+      "lesson": "N4.9",
+      "type": "kanji",
+      "surface": "住",
+      "on": "じゅう",
+      "kun": "す(む)",
+      "reading": "す(む)",
+      "meaning": "to live / dwell",
+      "notes": ""
+    },
+    {
+      "id": "k_tokoro",
+      "lesson": "N4.9",
+      "type": "kanji",
+      "surface": "所",
+      "on": "しょ",
+      "kun": "ところ",
+      "reading": "ところ",
+      "meaning": "place",
+      "notes": ""
+    },
+    {
+      "id": "k_machi",
+      "lesson": "N4.9",
+      "type": "kanji",
+      "surface": "町",
+      "on": "ちょう",
+      "kun": "まち",
+      "reading": "まち",
+      "meaning": "town",
+      "notes": ""
+    },
+    {
+      "id": "k_moto",
+      "lesson": "N4.9",
+      "type": "kanji",
+      "surface": "元",
+      "on": "げん / がん",
+      "kun": "もと",
+      "reading": "もと",
+      "meaning": "origin / foundation",
+      "notes": ""
+    },
+    {
+      "id": "k_saru",
+      "lesson": "N4.9",
+      "type": "kanji",
+      "surface": "去",
+      "on": "きょ / こ",
+      "kun": "さ(る)",
+      "reading": "さ(る)",
+      "meaning": "past / to leave",
+      "notes": ""
+    },
+    {
+      "id": "k_betsu",
+      "lesson": "N4.9",
+      "type": "kanji",
+      "surface": "別",
+      "on": "べつ",
+      "kun": "わか(れる)",
+      "reading": "わか(れる)",
+      "meaning": "separate / another",
+      "notes": ""
+    },
+    {
+      "id": "v_sumu",
+      "surface": "住む",
+      "meaning": "to live / reside",
+      "type": "vocab",
+      "notes": "Use particle 「に」 (e.g., 東京に 住んでいます).",
+      "lesson_ids": "N4.9",
+      "reading": "すむ"
+    },
+    {
+      "id": "v_juusho",
+      "surface": "住所",
+      "meaning": "address",
+      "type": "vocab",
+      "notes": "",
+      "lesson_ids": "N4.9",
+      "reading": "じゅうしょ"
+    },
+    {
+      "id": "v_tokoro",
+      "surface": "所",
+      "meaning": "place",
+      "type": "vocab",
+      "notes": "",
+      "lesson_ids": "N4.9",
+      "reading": "ところ"
+    },
+    {
+      "id": "v_kinjo",
+      "surface": "近所",
+      "meaning": "neighborhood",
+      "type": "vocab",
+      "notes": "Lit: Near place.",
+      "lesson_ids": "N4.9",
+      "reading": "きんじょ"
+    },
+    {
+      "id": "v_machi",
+      "surface": "町",
+      "meaning": "town",
+      "type": "vocab",
+      "notes": "",
+      "lesson_ids": "N4.9",
+      "reading": "まち"
+    },
+    {
+      "id": "v_genki",
+      "surface": "元気",
+      "meaning": "healthy / energetic / fine",
+      "type": "vocab",
+      "notes": "Na-adjective (元気な).",
+      "lesson_ids": "N4.9",
+      "reading": "げんき"
+    },
+    {
+      "id": "v_kyonen",
+      "surface": "去年",
+      "meaning": "last year",
+      "type": "vocab",
+      "notes": "",
+      "lesson_ids": "N4.9",
+      "reading": "きょねん"
+    },
+    {
+      "id": "v_wakareru",
+      "surface": "別れる",
+      "meaning": "to separate / to break up",
+      "type": "vocab",
+      "notes": "",
+      "lesson_ids": "N4.9",
+      "reading": "わかれる"
+    },
+    {
+      "id": "v_betsuni",
+      "surface": "別に",
+      "meaning": "not particularly",
+      "type": "vocab",
+      "notes": "Often used with negative verbs.",
+      "lesson_ids": "N4.9",
+      "reading": "べつに"
+    },
+    {
+      "id": "v_betsuno",
+      "surface": "別の",
+      "meaning": "another / different",
+      "type": "vocab",
+      "notes": "",
+      "lesson_ids": "N4.9",
+      "reading": "べつの"
+    }
+  ]
+}

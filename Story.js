@@ -376,15 +376,6 @@ window.StoryModule = (function() {
     });
   }
 
-  // Conjugation maps (same as Lesson.js)
-  const GODAN_MAPS = {
-    u_to_i: { 'う': 'い', 'く': 'き', 'ぐ': 'ぎ', 'す': 'し', 'つ': 'ち', 'ぬ': 'に', 'ぶ': 'び', 'む': 'み', 'る': 'り' },
-    u_to_a: { 'う': 'わ', 'く': 'か', 'ぐ': 'が', 'す': 'さ', 'つ': 'た', 'ぬ': 'な', 'ぶ': 'ば', 'む': 'ま', 'る': 'ら' },
-    u_to_e: { 'う': 'え', 'く': 'け', 'ぐ': 'げ', 'す': 'せ', 'つ': 'て', 'ぬ': 'ね', 'ぶ': 'べ', 'む': 'め', 'る': 'れ' },
-    ta_form: { 'う': 'った', 'つ': 'った', 'る': 'った', 'む': 'んだ', 'ぶ': 'んだ', 'ぬ': 'んだ', 'く': 'いた', 'ぐ': 'いだ', 'す': 'した' },
-    te_form: { 'う': 'って', 'つ': 'って', 'る': 'って', 'む': 'んで', 'ぶ': 'んで', 'ぬ': 'んで', 'く': 'いて', 'ぐ': 'いで', 'す': 'して' }
-  };
-
   async function loadResources() {
     try {
       const manifest = await window.getManifest(config);
@@ -411,7 +402,27 @@ window.StoryModule = (function() {
       CONJUGATION_RULES = conjugationRules;
 
       // Setup term modal
-      setupTermModal();
+      window.JPShared.termModal.setTermMap(termMapData);
+      window.JPShared.termModal.inject();
+      // Story.js flags by term ID (boolean, flag-once) rather than the
+      // default count-based surface flagging used by Lesson/Review.
+      // The message auto-hides after 2s and is suppressed if already flagged.
+      window.JP_OPEN_TERM = function(id, enableFlag) {
+        window.JPShared.termModal.open(id, {
+          enableFlag: !!enableFlag,
+          onFlag: function(termId, msgBox) {
+            if (!window.JPShared.progress.getFlagCount(termId)) {
+              window.JPShared.progress.flagTerm(termId);
+              if (msgBox) {
+                msgBox.style.display = 'block';
+                setTimeout(function() { msgBox.style.display = 'none'; }, 2000);
+              }
+            } else if (msgBox) {
+              msgBox.style.display = 'none'; // already flagged — suppress
+            }
+          }
+        });
+      };
     } catch (err) {
       console.warn('Could not load glossary/conjugation:', err);
     }
