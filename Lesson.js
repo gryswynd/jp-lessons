@@ -121,11 +121,6 @@ window.LessonModule = {
           .jp-mcq-opt.correct { background: #d4edda; border-color: #c3e6cb; color: #155724; }
           .jp-mcq-opt.wrong { background: #f8d7da; border-color: #f5c6cb; color: #721c24; }
 
-          /* MODAL */
-          .jp-modal-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index: 999999; display: none; align-items: center; justify-content: center; }
-          .jp-modal { background: #fff; width: 85%; max-width: 400px; border-radius: 20px; padding: 30px; box-shadow: 0 25px 50px rgba(0,0,0,0.25); position: relative; text-align: center; }
-          .jp-close-btn { position: absolute; top: 15px; right: 15px; background: #f1f2f6; border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-weight: bold; }
-          .jp-auto-flag-msg { margin-top: 15px; background: #d4edda; color: #155724; padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; display: none; }
         `;
         document.head.appendChild(style);
     }
@@ -161,73 +156,7 @@ window.LessonModule = {
     }
 
     // --- Modal ---
-    let modalOverlay = document.querySelector('.jp-modal-overlay');
-    if (!modalOverlay) {
-        modalOverlay = el("div", "jp-modal-overlay");
-        modalOverlay.innerHTML = `
-          <div class="jp-modal">
-            <button class="jp-close-btn">✕</button>
-            <h2 id="jp-m-title" style="margin:0 0 5px 0; color:#4e54c8; font-size:2rem;"></h2>
-            <div id="jp-m-meta" style="color:#747d8c; font-weight:700; margin-bottom:15px;"></div>
-            <div id="jp-m-notes" style="line-height:1.5; margin-bottom:15px;"></div>
-            <div class="jp-auto-flag-msg">✅ Added to Practice Queue</div>
-          </div>`;
-        document.body.appendChild(modalOverlay);
-        const close = () => modalOverlay.style.display = 'none';
-        modalOverlay.onclick = (e) => { if(e.target === modalOverlay) close(); };
-        modalOverlay.querySelector('.jp-close-btn').onclick = close;
-    }
-
-    // UPDATED: CONDITIONAL FLAGGING & TTS
-    window.JP_OPEN_TERM = function(id, enableFlag = true) {
-        const t = termMapData[id];
-        if (!t) return;
-
-        // 1. Render Modal Info with Speaker
-        const textToSpeak = t.reading || t.surface;
-        
-        const titleHtml = `
-            <div style="display:flex; align-items:center; justify-content:center; gap:10px;">
-                <span>${t.surface}</span>
-                <button id="jp-m-speak-btn" style="background:none; border:none; cursor:pointer; font-size:1.5rem; opacity:0.8;">🔊</button>
-            </div>
-        `;
-
-        document.getElementById('jp-m-title').innerHTML = titleHtml;
-        document.getElementById('jp-m-meta').innerText = t.reading + (t.meaning ? ` • ${t.meaning.replace(/<[^>]*>/g, '')}` : "");
-        document.getElementById('jp-m-notes').innerText = t.notes || "";
-
-        // Attach Click Event for Speaker
-        document.getElementById('jp-m-speak-btn').onclick = function(e) {
-            e.stopPropagation();
-            window.JPShared.tts.speak(textToSpeak);
-        };
-
-        const msgBox = document.querySelector('.jp-auto-flag-msg');
-
-        if (enableFlag) {
-            // 2. Add to Active Flags
-            const flags = JSON.parse(localStorage.getItem('k-flags') || '{}');
-            const active = JSON.parse(localStorage.getItem('k-active-flags') || '{}');
-            const rootTerm = t.original_id ? termMapData[t.original_id] : t;
-            const key = rootTerm ? rootTerm.surface : t.surface;
-
-            flags[key] = (flags[key] || 0) + 1;
-            active[key] = true;
-
-            localStorage.setItem('k-flags', JSON.stringify(flags));
-            localStorage.setItem('k-active-flags', JSON.stringify(active));
-
-            // Show Feedback
-            if(msgBox) msgBox.style.display = 'inline-block';
-        } else {
-            // Hide Feedback for non-flagging interactions
-            if(msgBox) msgBox.style.display = 'none';
-        }
-
-        // 3. Show Modal
-        modalOverlay.style.display = 'flex';
-    };
+    window.JPShared.termModal.inject();
 
     // --- Renderers ---
     function renderIntro(data) {
@@ -439,6 +368,7 @@ window.LessonModule = {
           lessonData = await lRes.json();
           termMapData = resources.map;
           CONJUGATION_RULES = resources.conj;
+          window.JPShared.termModal.setTermMap(termMapData);
 
           lessonData.sections.unshift({ type: 'intro', title: lessonData.title });
           currentStep = 0; totalSteps = lessonData.sections.length; showEN = false;

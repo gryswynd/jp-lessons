@@ -309,141 +309,35 @@ window.StoryModule = (function() {
       CONJUGATION_RULES = conjugationRules;
 
       // Setup term modal
-      setupTermModal();
+      window.JPShared.termModal.setTermMap(termMapData);
+      window.JPShared.termModal.inject();
+      // Story.js flags by term ID (boolean, flag-once) rather than the
+      // default count-based surface flagging used by Lesson/Review.
+      // The message auto-hides after 2s and is suppressed if already flagged.
+      window.JP_OPEN_TERM = function(id, enableFlag) {
+        window.JPShared.termModal.open(id, {
+          enableFlag: !!enableFlag,
+          onFlag: function(termId, msgBox) {
+            var flags = JSON.parse(localStorage.getItem('k-flags') || '{}');
+            if (!flags[termId]) {
+              flags[termId] = true;
+              localStorage.setItem('k-flags', JSON.stringify(flags));
+              var activeFlags = JSON.parse(localStorage.getItem('k-active-flags') || '{}');
+              activeFlags[termId] = true;
+              localStorage.setItem('k-active-flags', JSON.stringify(activeFlags));
+              if (msgBox) {
+                msgBox.style.display = 'block';
+                setTimeout(function() { msgBox.style.display = 'none'; }, 2000);
+              }
+            } else if (msgBox) {
+              msgBox.style.display = 'none'; // already flagged — suppress
+            }
+          }
+        });
+      };
     } catch (err) {
       console.warn('Could not load glossary/conjugation:', err);
     }
-  }
-
-  function setupTermModal() {
-    if (window.JP_OPEN_TERM) return;
-
-    let modalOverlay = document.querySelector('.jp-modal-overlay');
-    if (!modalOverlay) {
-      modalOverlay = document.createElement('div');
-      modalOverlay.className = 'jp-modal-overlay';
-      modalOverlay.innerHTML = `
-        <div class="jp-modal">
-          <button class="jp-close-btn">✕</button>
-          <div id="jp-modal-content"></div>
-        </div>
-      `;
-      document.body.appendChild(modalOverlay);
-
-      if (!document.getElementById('jp-modal-style')) {
-        const style = document.createElement('style');
-        style.id = 'jp-modal-style';
-        style.textContent = `
-          .jp-modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(0,0,0,0.4);
-            backdrop-filter: blur(4px);
-            z-index: 999999;
-            display: none;
-            align-items: center;
-            justify-content: center;
-          }
-          .jp-modal {
-            background: #fff;
-            width: 85%;
-            max-width: 400px;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
-            position: relative;
-            text-align: center;
-          }
-          .jp-close-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: #f1f2f6;
-            border: none;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-weight: bold;
-          }
-          .jp-auto-flag-msg {
-            margin-top: 15px;
-            background: #d4edda;
-            color: #155724;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 0.85rem;
-            display: none;
-          }
-        `;
-        document.head.appendChild(style);
-      }
-
-      modalOverlay.addEventListener('click', (e) => {
-        if (e.target === modalOverlay) {
-          modalOverlay.style.display = 'none';
-        }
-      });
-
-      modalOverlay.querySelector('.jp-close-btn').addEventListener('click', () => {
-        modalOverlay.style.display = 'none';
-      });
-    }
-
-    window.JP_OPEN_TERM = function(id, enableFlag = true) {
-      const t = termMapData[id];
-      if (!t) return;
-
-      const textToSpeak = t.reading || t.surface;
-
-      const titleHtml = `
-        <div style="display:flex; align-items:center; justify-content:center; gap:10px;">
-          <span>${t.surface}</span>
-          <button id="jp-m-speak-btn" style="background:none; border:none; cursor:pointer; font-size:1.5rem; opacity:0.8;">🔊</button>
-        </div>
-      `;
-
-      const meaningHtml = `<div style="color:#667eea; font-size:0.9rem; margin-bottom:10px;">${t.reading || ''}</div>
-        <div style="color:#333; font-weight:600; font-size:1.1rem;">${t.meaning || ''}</div>`;
-
-      const notesHtml = t.notes ? `<div style="margin-top:15px; background:#f8f9fa; padding:12px; border-radius:10px; font-size:0.85rem; color:#555; text-align:left;">${t.notes}</div>` : '';
-
-      const modalContent = document.getElementById('jp-modal-content');
-      modalContent.innerHTML = `
-        ${titleHtml}
-        ${meaningHtml}
-        ${notesHtml}
-        <div class="jp-auto-flag-msg" id="jp-flag-msg">✓ Added to Review</div>
-      `;
-
-      modalOverlay.style.display = 'flex';
-
-      const speakerBtn = document.getElementById('jp-m-speak-btn');
-      if (speakerBtn) {
-        speakerBtn.onclick = () => window.JPShared.tts.speak(textToSpeak);
-      }
-
-      if (enableFlag) {
-        const flags = JSON.parse(localStorage.getItem('k-flags') || '{}');
-        if (!flags[id]) {
-          flags[id] = true;
-          localStorage.setItem('k-flags', JSON.stringify(flags));
-          const activeFlags = JSON.parse(localStorage.getItem('k-active-flags') || '{}');
-          activeFlags[id] = true;
-          localStorage.setItem('k-active-flags', JSON.stringify(activeFlags));
-
-          const flagMsg = document.getElementById('jp-flag-msg');
-          if (flagMsg) {
-            flagMsg.style.display = 'block';
-            setTimeout(() => { flagMsg.style.display = 'none'; }, 2000);
-          }
-        }
-      }
-    };
   }
 
   async function loadStoryList() {
