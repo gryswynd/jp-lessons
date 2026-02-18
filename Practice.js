@@ -213,20 +213,14 @@ window.PracticeModule = {
     let curSet=[], curIdx=0, curStreak=0, curBest=0, curMode='', curAns='', curType='', curSubMode='normal', curQItem=null, curCategory='';
     let quizPhase = 1;
 
-    let flagCounts = JSON.parse(localStorage.getItem('k-flags')) || {};
-    let activeFlags = JSON.parse(localStorage.getItem('k-active-flags'));
-
-    if (!activeFlags) {
-        activeFlags = {};
-        Object.keys(flagCounts).forEach(k => { if(flagCounts[k]>0) activeFlags[k] = true; });
-        localStorage.setItem('k-active-flags', JSON.stringify(activeFlags));
-    }
+    let flagCounts = window.JPShared.progress.getAllFlags();
+    let activeFlags = window.JPShared.progress.getAllActiveFlags();
 
     const bestScores = {
-        meaning: parseInt(localStorage.getItem('k-best-meaning') || '0'),
-        reading: parseInt(localStorage.getItem('k-best-reading') || '0'),
-        vocab: parseInt(localStorage.getItem('k-best-vocab') || '0'),
-        verb: parseInt(localStorage.getItem('k-best-verb') || '0')
+        meaning: window.JPShared.progress.getBestScore('meaning'),
+        reading: window.JPShared.progress.getBestScore('reading'),
+        vocab: window.JPShared.progress.getBestScore('vocab'),
+        verb: window.JPShared.progress.getBestScore('verb')
     };
 
     // --- 3. HELPER FUNCTIONS ---
@@ -339,9 +333,7 @@ window.PracticeModule = {
 
         flagCounts[kKey] = (flagCounts[kKey] || 0) + 1;
         activeFlags[kKey] = true;
-
-        localStorage.setItem('k-flags', JSON.stringify(flagCounts));
-        localStorage.setItem('k-active-flags', JSON.stringify(activeFlags));
+        window.JPShared.progress.flagTerm(kKey);
 
         curSet.push({ ...currentItem, isRequeued: true });
 
@@ -358,7 +350,7 @@ window.PracticeModule = {
         const kKey = currentItem.kanji || currentItem.word || currentItem.dict;
 
         delete activeFlags[kKey];
-        localStorage.setItem('k-active-flags', JSON.stringify(activeFlags));
+        window.JPShared.progress.clearFlag(kKey);
 
         btn.innerText = "Cleared! ✨";
 
@@ -461,7 +453,7 @@ window.PracticeModule = {
                 }, 800);
                 return;
             }
-            if(curStreak > curBest) { curBest = curStreak; if(curCategory) { bestScores[curCategory] = curBest; localStorage.setItem('k-best-' + curCategory, curBest); } }
+            if(curStreak > curBest) { curBest = curStreak; if(curCategory) { bestScores[curCategory] = curBest; window.JPShared.progress.setBestScore(curCategory, curBest); } }
             if(msg) { msg.innerText=`Correct! Streak: ${curStreak} 🔥`; msg.style.color="#155724"; msg.style.background="#d4edda"; }
         } else {
             btn.classList.add('wrong'); curStreak = 0;

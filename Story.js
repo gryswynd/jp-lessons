@@ -318,13 +318,8 @@ window.StoryModule = (function() {
         window.JPShared.termModal.open(id, {
           enableFlag: !!enableFlag,
           onFlag: function(termId, msgBox) {
-            var flags = JSON.parse(localStorage.getItem('k-flags') || '{}');
-            if (!flags[termId]) {
-              flags[termId] = true;
-              localStorage.setItem('k-flags', JSON.stringify(flags));
-              var activeFlags = JSON.parse(localStorage.getItem('k-active-flags') || '{}');
-              activeFlags[termId] = true;
-              localStorage.setItem('k-active-flags', JSON.stringify(activeFlags));
+            if (!window.JPShared.progress.getFlagCount(termId)) {
+              window.JPShared.progress.flagTerm(termId);
               if (msgBox) {
                 msgBox.style.display = 'block';
                 setTimeout(function() { msgBox.style.display = 'none'; }, 2000);

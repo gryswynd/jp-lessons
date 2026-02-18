@@ -263,20 +263,12 @@ window.LessonModule = {
 
                      // Auto-flag terms for review when answer is wrong
                      if(item.terms && item.terms.length > 0) {
-                       const flags = JSON.parse(localStorage.getItem('k-flags') || '{}');
-                       const activeFlags = JSON.parse(localStorage.getItem('k-active-flags') || '{}');
-
                        item.terms.forEach(termId => {
                          const rootTerm = window.JPShared.textProcessor.getRootTerm(termId, termMapData);
                          if(rootTerm) {
-                           const key = rootTerm.surface;
-                           flags[key] = (flags[key] || 0) + 1;
-                           activeFlags[key] = true;
+                           window.JPShared.progress.flagTerm(rootTerm.surface);
                          }
                        });
-
-                       localStorage.setItem('k-flags', JSON.stringify(flags));
-                       localStorage.setItem('k-active-flags', JSON.stringify(activeFlags));
                      }
                  }
                };

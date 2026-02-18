@@ -173,12 +173,7 @@
           // Default: count-based flagging keyed by root term's surface
           var rootTerm = window.JPShared.textProcessor.getRootTerm(termId, _termMap);
           var key = rootTerm ? rootTerm.surface : t.surface;
-          var flags  = JSON.parse(localStorage.getItem('k-flags')       || '{}');
-          var active = JSON.parse(localStorage.getItem('k-active-flags') || '{}');
-          flags[key]  = (flags[key] || 0) + 1;
-          active[key] = true;
-          localStorage.setItem('k-flags',       JSON.stringify(flags));
-          localStorage.setItem('k-active-flags', JSON.stringify(active));
+          window.JPShared.progress.flagTerm(key);
           if (msgBox) msgBox.style.display = 'inline-block';
         }
       } else {

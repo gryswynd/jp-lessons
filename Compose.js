@@ -257,7 +257,7 @@ window.ComposeModule = {
             promptHtml = '<div style="padding:20px;text-align:center;color:#a4b0be;font-weight:600;">Select at least one lesson to see prompts.</div>';
         } else {
             available.forEach(p => {
-                const saved = localStorage.getItem('compose-draft-' + p.id);
+                const saved = window.JPShared.progress.getDraft(p.id);
                 const savedBadge = saved ? '<span class="c-prompt-saved">draft saved</span>' : '';
                 const lessonTags = p.lessons.map(l => `<span class="c-prompt-tag c-prompt-tag-lesson">${l}</span>`).join('');
                 promptHtml += `<div class="c-prompt-card" onclick="ComposeApp.startCompose('${p.id}')">
@@ -301,7 +301,7 @@ window.ComposeModule = {
 
         let html = '';
         available.forEach(p => {
-            const saved = localStorage.getItem('compose-draft-' + p.id);
+            const saved = window.JPShared.progress.getDraft(p.id);
             const savedBadge = saved ? '<span class="c-prompt-saved">draft saved</span>' : '';
             const lessonTags = p.lessons.map(l => `<span class="c-prompt-tag c-prompt-tag-lesson">${l}</span>`).join('');
             html += `<div class="c-prompt-card" onclick="ComposeApp.startCompose('${p.id}')">
@@ -382,7 +382,7 @@ window.ComposeModule = {
         const particleHtml = PARTICLES.map(p => `<span>${escHtml(p.particle + ' (' + p.role + ')')}</span>`).join(' ');
 
         // Load draft if exists
-        const draft = localStorage.getItem('compose-draft-' + prompt.id) || '';
+        const draft = window.JPShared.progress.getDraft(prompt.id);
 
         compEl.innerHTML = `
             <div class="c-prompt-banner">
@@ -461,7 +461,7 @@ window.ComposeModule = {
         if (input) {
             input.addEventListener('input', function() {
                 ComposeApp.updateTracking();
-                localStorage.setItem('compose-draft-' + currentPrompt.id, input.value);
+                window.JPShared.progress.saveDraft(currentPrompt.id, input.value);
                 const cc = document.getElementById('c-char-count');
                 if (cc) cc.textContent = input.value.length + ' characters';
             });
@@ -554,7 +554,7 @@ window.ComposeModule = {
         if (!input) return;
         if (!confirm('Clear your composition? This cannot be undone.')) return;
         input.value = '';
-        localStorage.removeItem('compose-draft-' + currentPrompt.id);
+        window.JPShared.progress.clearDraft(currentPrompt.id);
         input.dispatchEvent(new Event('input'));
     };
 

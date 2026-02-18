@@ -84,12 +84,11 @@
     },
 
     renderReviewMenu: function(reviews) {
-      const scores = JSON.parse(localStorage.getItem('k-review-scores') || '{}');
       const stage = document.getElementById('jp-stage');
 
       let html = '<div class="jp-review-menu-grid">';
       reviews.forEach(review => {
-        const topScore = scores[review.id];
+        const topScore = window.JPShared.progress.getReviewScore(review.id);
         const scoreDisplay = topScore !== undefined
           ? `<div class="jp-review-score">Best: ${topScore}%</div>`
           : `<div class="jp-review-score jp-no-score">Not attempted</div>`;
@@ -505,16 +504,7 @@
     flagTerm: function(termId) {
         const rootTerm = window.JPShared.textProcessor.getRootTerm(termId, this.state.termMap);
         if (!rootTerm) return false;
-
-        const flags = JSON.parse(localStorage.getItem('k-flags') || '{}');
-        const active = JSON.parse(localStorage.getItem('k-active-flags') || '{}');
-        const key = rootTerm.surface; // Flag by Kanji/Surface
-
-        flags[key] = (flags[key] || 0) + 1;
-        active[key] = true;
-
-        localStorage.setItem('k-flags', JSON.stringify(flags));
-        localStorage.setItem('k-active-flags', JSON.stringify(active));
+        window.JPShared.progress.flagTerm(rootTerm.surface);
         return true;
     },
 
@@ -773,12 +763,10 @@
 
       // Save top score to localStorage
       const reviewName = this.config._reviewId || this.config.path.replace(/.*\//, '').replace('.json', '');
-      const scores = JSON.parse(localStorage.getItem('k-review-scores') || '{}');
-      const prevBest = scores[reviewName];
+      const prevBest = window.JPShared.progress.getReviewScore(reviewName);
       const isNewBest = prevBest === undefined || pct > prevBest;
       if (isNewBest) {
-        scores[reviewName] = pct;
-        localStorage.setItem('k-review-scores', JSON.stringify(scores));
+        window.JPShared.progress.setReviewScore(reviewName, pct);
       }
 
       let bestHtml = '';
