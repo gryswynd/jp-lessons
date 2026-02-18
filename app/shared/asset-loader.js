@@ -1,19 +1,34 @@
 /**
  * app/shared/asset-loader.js
- * Shared data-fetching utilities: cache-busted JSON loads, parallel fetches,
- * and image preloading. Wraps the URL builder from shared/asset-url.js.
+ * Canonical home for URL building, manifest loading, JSON fetching, and
+ * image preloading.  Self-contained — no dependency on shared/asset-url.js.
  *
- * Modules that currently duplicate this logic:
- *   - Lesson.js   — parallel fetch(glossaryUrl) + fetch(conjUrl) (lines ~218-219)
- *   - Practice.js — fetch(MASTER_URL + '?t=' + Date.now()) (line ~700)
- *   - Review.js   — parallel fetch for quiz + glossary + conjugations (lines ~209-211)
- *   - Story.js    — parallel fetch(mdUrl + '?t=') + fetch(jsonUrl + '?t=') (lines ~571-572)
- *   - Compose.js  — Promise.all of four fetch calls (lines ~726-729)
- *   - Game.js     — fetch(dayUrl).then(r => r.json()) + image preloading (lines ~936, ~341-347)
+ * Absorbs the implementations previously in shared/asset-url.js and fills
+ * the TODO stubs from the original scaffold.
  *
- * Depends on: shared/asset-url.js (window.getAssetUrl must be loaded first)
+ * API (window.JPShared.assets.*):
+ *   getUrl(config, relativePath)   — build a GitHub raw URL
+ *   getManifest(config)            — fetch + cache manifest.json
+ *   clearManifestCache()           — reset the cache (for testing)
+ *   fetchJSON(url)                 — cache-busted single JSON fetch
+ *   fetchAll(urls)                 — parallel JSON fetches
+ *   preloadImages(urls)            — parallel image preloads (never rejects)
+ *   load(config, filepath)         — getUrl + fetchJSON convenience wrapper
  *
- * Load this file before any feature module scripts (after asset-url.js).
+ * Backward-compatible global aliases (set at the bottom of this file):
+ *   window.getAssetUrl  → JPShared.assets.getUrl
+ *   window.getManifest  → JPShared.assets.getManifest
+ *
+ * Modules that currently duplicate fetch logic and will migrate here:
+ *   - Lesson.js   — parallel fetch(glossaryUrl) + fetch(conjUrl)
+ *   - Practice.js — fetch(MASTER_URL + '?t=' + Date.now())
+ *   - Review.js   — parallel fetch for quiz + glossary + conjugations
+ *   - Story.js    — parallel fetch(mdUrl + '?t=') + fetch(jsonUrl + '?t=')
+ *   - Compose.js  — Promise.all of four fetch calls
+ *   - Game.js     — fetch(dayUrl).then(r => r.json()) + image preloading
+ *
+ * Load this file before any feature module scripts
+ * (after tts.js, text-processor.js, progress.js).
  */
 
 (function () {
@@ -21,59 +36,165 @@
 
   window.JPShared = window.JPShared || {};
 
-  window.JPShared.assetLoader = {
+  // One promise covers both the in-flight request and the settled (cached)
+  // result.  A resolved Promise returned by .then() is microtask-synchronous
+  // for subsequent callers, so no separate _manifestCache variable is needed.
+  var _manifestPromise = null;
+
+  window.JPShared.assets = {
+
+    // -------------------------------------------------------------------------
+    // URL building
+    // -------------------------------------------------------------------------
+
+    /**
+     * Build a full URL for a repo-hosted file.
+     * All modules call this instead of constructing GitHub raw URLs directly.
+     * To switch from GitHub raw to a CDN, change this single method.
+     *
+     * @param {Object} config          - { owner, repo, branch }
+     * @param {string} [relativePath]  - path relative to repo root
+     *                                   (e.g. "data/N4/lessons/N4.7.json")
+     * @returns {string} full URL
+     */
+    getUrl: function (config, relativePath) {
+      // >>> To switch from GitHub raw to a CDN, change this single line <<<
+      var base = 'https://raw.githubusercontent.com/' +
+                 config.owner + '/' + config.repo + '/' + config.branch;
+      return relativePath ? base + '/' + relativePath : base;
+    },
+
+    // -------------------------------------------------------------------------
+    // Manifest
+    // -------------------------------------------------------------------------
+
+    /**
+     * Fetch manifest.json and cache the promise for the session.
+     * Multiple simultaneous callers share a single request.
+     * On network failure the cache is cleared so the next call can retry.
+     *
+     * @param {Object} config - { owner, repo, branch }
+     * @returns {Promise<Object>} parsed manifest
+     */
+    getManifest: function (config) {
+      if (_manifestPromise) return _manifestPromise;
+
+      var self = this;
+      var url = self.getUrl(config, 'manifest.json') + '?t=' + Date.now();
+      console.log('[asset-loader] Fetching manifest:', url);
+
+      _manifestPromise = fetch(url)
+        .then(function (r) {
+          if (!r.ok) throw new Error('Failed to load manifest.json: ' + r.status);
+          return r.json();
+        })
+        .then(function (data) {
+          console.log('[asset-loader] Manifest loaded — levels:', data.levels);
+          return data;
+        })
+        .catch(function (err) {
+          _manifestPromise = null; // allow retry after transient failure
+          throw err;
+        });
+
+      return _manifestPromise;
+    },
+
+    /**
+     * Reset the manifest cache.
+     * Useful in tests or when you need to force a fresh fetch mid-session.
+     */
+    clearManifestCache: function () {
+      _manifestPromise = null;
+    },
+
+    // -------------------------------------------------------------------------
+    // JSON fetching
+    // -------------------------------------------------------------------------
 
     /**
      * Fetch a single JSON file with a cache-busting timestamp query param.
+     *
      * @param {string} url - full URL to the JSON resource
      * @returns {Promise<Object>} parsed JSON
-     * TODO: implement
-     *   - Append '?t=' + Date.now() to url
-     *   - fetch, check response.ok, return response.json()
-     *   - On failure throw an Error with url + status code
      */
     fetchJSON: function (url) {
-      // TODO: return fetch(url + '?t=' + Date.now())
-      //   .then(function(r) { if (!r.ok) throw new Error('...'); return r.json(); })
+      return fetch(url + '?t=' + Date.now())
+        .then(function (r) {
+          if (!r.ok) throw new Error('Failed to load ' + url + ': ' + r.status);
+          return r.json();
+        });
     },
 
     /**
-     * Fetch multiple JSON files in parallel.
+     * Fetch multiple JSON files in parallel, preserving order.
+     *
      * @param {string[]} urls - array of full URLs
-     * @returns {Promise<Object[]>} array of parsed JSON objects, same order as urls
-     * TODO: implement — return Promise.all(urls.map(this.fetchJSON))
+     * @returns {Promise<Object[]>} parsed JSON objects in the same order as urls
      */
     fetchAll: function (urls) {
-      // TODO: return Promise.all(urls.map(function(url) { return JPShared.assetLoader.fetchJSON(url); }))
+      var self = this;
+      return Promise.all(urls.map(function (url) {
+        return self.fetchJSON(url);
+      }));
     },
 
+    // -------------------------------------------------------------------------
+    // Image preloading
+    // -------------------------------------------------------------------------
+
     /**
-     * Preload an array of image URLs, resolving when all have loaded (or failed).
-     * Used by Game.js to load map, collision, and sprite images before render.
+     * Preload an array of image URLs.
+     * Always resolves (never rejects) — failed images resolve with an Image
+     * element whose src is set but whose naturalWidth is 0, so callers can
+     * detect failures if needed without a rejected promise crashing the chain.
+     *
      * @param {string[]} urls - image URLs to preload
      * @returns {Promise<HTMLImageElement[]>} loaded Image elements
-     * TODO: implement
-     *   - For each url create new Image(), set src, resolve on onload, resolve (not reject) on onerror
-     *   - Return Promise.all of all image promises so callers always get a result
      */
     preloadImages: function (urls) {
-      // TODO: map urls to promises that resolve to Image elements
-      // TODO: return Promise.all(imagePromises)
+      return Promise.all(urls.map(function (url) {
+        return new Promise(function (resolve) {
+          var img = new Image();
+          img.onload  = function () { resolve(img); };
+          img.onerror = function () { resolve(img); }; // resolve even on failure
+          img.src = url;
+        });
+      }));
     },
 
+    // -------------------------------------------------------------------------
+    // Convenience wrapper
+    // -------------------------------------------------------------------------
+
     /**
-     * Build a repo asset URL using the global getAssetUrl helper (from asset-url.js)
-     * and immediately fetch it as JSON.
+     * Build a repo asset URL and immediately fetch it as JSON.
+     * Equivalent to: fetchJSON(getUrl(config, filepath))
+     *
      * @param {Object} config   - { owner, repo, branch }
      * @param {string} filepath - path relative to repo root
-     * @returns {Promise<Object>}
-     * TODO: implement — convenience wrapper combining getAssetUrl + fetchJSON
+     * @returns {Promise<Object>} parsed JSON
      */
     load: function (config, filepath) {
-      // TODO: var url = window.getAssetUrl(config, filepath);
-      // TODO: return this.fetchJSON(url);
+      return this.fetchJSON(this.getUrl(config, filepath));
     }
 
+  };
+
+  // -------------------------------------------------------------------------
+  // Backward-compatible global aliases
+  //
+  // All existing call sites (Lesson.js, Practice.js, Review.js, Story.js,
+  // Compose.js, Game.js) continue to work without modification.
+  // Future phases can migrate call sites to window.JPShared.assets.* directly.
+  // -------------------------------------------------------------------------
+
+  window.getAssetUrl = function (config, filepath) {
+    return window.JPShared.assets.getUrl(config, filepath);
+  };
+
+  window.getManifest = function (config) {
+    return window.JPShared.assets.getManifest(config);
   };
 
 })();
