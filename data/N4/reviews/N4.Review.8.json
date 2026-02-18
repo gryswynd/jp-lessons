@@ -1,0 +1,549 @@
+{
+  "id": "N4.Review.8",
+  "title": "Phase 4 Review: Cities, Work & Construction",
+  "meta": {
+    "phase": 4,
+    "type": "assessment",
+    "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 32-33.",
+    "kanji": [
+      "引",
+      "用",
+      "習",
+      "市",
+      "場",
+      "工",
+      "広",
+      "建"
+    ]
+  },
+  "sections": [
+    {
+      "type": "conversation",
+      "title": "Part 1: Conversation Check",
+      "instructions": "Read the conversation and select the best summary.",
+      "items": [
+        {
+          "title": "Conversation 1",
+          "context": "At the city office.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "すみません、この 用紙を 使用しても いいですか。",
+              "terms": [
+                "v_sumimasen",
+                "k_kono",
+                "v_youshi",
+                { "id": "v_shiyou", "form": "te_form" },
+                "v_ii"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "はい。そこに 名前を 書いて ください。",
+              "terms": [
+                "v_hai",
+                "k_soko",
+                "v_namae",
+                { "id": "v_kaku", "form": "te_form" },
+                "v_kudasai"
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "市長は いますか。",
+              "terms": [
+                "v_shichou",
+                { "id": "v_iru", "form": "polite_masu" }
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "いいえ、今は 工場へ 行って います。",
+              "terms": [
+                "k_ima",
+                "v_koujou",
+                { "id": "v_iku", "form": "te_form" },
+                { "id": "v_iru", "form": "polite_masu" }
+              ]
+            }
+          ],
+          "question": "Where is the mayor?",
+          "choices": [
+            "At the city office.",
+            "At the factory.",
+            "At the station.",
+            "At home."
+          ],
+          "answer": "At the factory.",
+          "explanation": "B states the mayor is going to the factory (koujou)."
+        },
+        {
+          "title": "Conversation 2",
+          "context": "Talking about family work.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "お父さんの 仕事は 何ですか。",
+              "terms": [
+                "v_chichi",
+                "v_shigoto",
+                "k_nani"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "大工です。家を 建てる 仕事です。",
+              "terms": [
+                "v_daiku",
+                "k_ie",
+                "v_tateru",
+                "v_shigoto"
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "どこで 働いて いますか。",
+              "terms": [
+                "v_doko",
+                { "id": "v_hataraku", "form": "te_form" },
+                { "id": "v_iru", "form": "polite_masu" }
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "新しい 広場の 近くです。",
+              "terms": [
+                "v_atarashii",
+                "v_hiroba",
+                "v_chika"
+              ]
+            }
+          ],
+          "question": "What is the father's job?",
+          "choices": [
+            "Factory worker.",
+            "Mayor.",
+            "Carpenter.",
+            "Teacher."
+          ],
+          "answer": "Carpenter.",
+          "explanation": "B says their father is a carpenter (daiku)."
+        },
+        {
+          "title": "Conversation 3",
+          "context": "Discussing hobbies.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "しゅうまつ、何を しますか。",
+              "terms": [
+                "v_shuumatsu",
+                "k_nani",
+                { "id": "v_suru", "form": "polite_masu" }
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "日本語の 習字を 習います。",
+              "terms": [
+                "v_nihongo",
+                "v_shuuji",
+                { "id": "v_narau", "form": "polite_masu" }
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "むずかしいですか。",
+              "terms": [
+                "v_muzukashii"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "はい。でも、先生を 見習って がんばります。",
+              "terms": [
+                "v_hai",
+                "v_demo",
+                "v_sensei",
+                { "id": "v_minarau", "form": "te_form" },
+                { "id": "v_ganbaru", "form": "polite_masu" }
+              ]
+            }
+          ],
+          "question": "What is B learning?",
+          "choices": [
+            "Engineering.",
+            "Calligraphy.",
+            "Cooking.",
+            "English."
+          ],
+          "answer": "Calligraphy.",
+          "explanation": "B mentions learning calligraphy (shuuji)."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 2: Grammar Scramble",
+      "instructions": "Construct the sentence by clicking the words in the correct order.",
+      "items": [
+        {
+          "kind": "scramble",
+          "q": "I pulled out the drawer.",
+          "segments": [
+            "引き出し",
+            "を",
+            "引きました"
+          ],
+          "explanation": "Drawer (Hikidashi) + wo + Pulled (Hikimashita)."
+        },
+        {
+          "kind": "scramble",
+          "q": "I have urgent business in the city.",
+          "segments": [
+            "市",
+            "に",
+            "急用",
+            "が",
+            "あります"
+          ],
+          "explanation": "City (Shi) + ni + Urgent Business (Kyuuyou) + ga + Exists (Arimasu)."
+        },
+        {
+          "kind": "scramble",
+          "q": "I learn engineering at university.",
+          "segments": [
+            "大学",
+            "で",
+            "工学",
+            "を",
+            "習います"
+          ],
+          "explanation": "University (Daigaku) + de + Engineering (Kougaku) + wo + Learn (Naraimasu)."
+        },
+        {
+          "kind": "scramble",
+          "q": "The factory is in a wide place.",
+          "segments": [
+            "工場",
+            "は",
+            "広い",
+            "場所",
+            "に",
+            "あります"
+          ],
+          "explanation": "Factory (Koujou) + wa + Wide (Hiroi) + Place (Basho) + ni + Exists (Arimasu)."
+        },
+        {
+          "kind": "scramble",
+          "q": "A new building stands.",
+          "segments": [
+            "新しい",
+            "建物",
+            "が",
+            "建って",
+            "います"
+          ],
+          "explanation": "New (Atarashii) + Building (Tatemono) + ga + Standing (Tatte imasu)."
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Part 3: Reading - The New City",
+      "passage": [
+        {
+          "jp": "私の 市に 新しい 工場が 建ちました。",
+          "en": "A new factory was built in my city.",
+          "terms": [
+            "k_watashi",
+            "v_shi",
+            "v_atarashii",
+            "v_koujou",
+            { "id": "v_tatsu", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "工場の 名前は「みらい」です。",
+          "en": "The factory's name is 'Mirai'.",
+          "terms": [
+            "v_koujou",
+            "v_namae",
+            "v_mirai"
+          ]
+        },
+        {
+          "jp": "工員は 毎日、広い 広場に 集まります。",
+          "en": "Workers gather in the wide square every day.",
+          "terms": [
+            "v_kouin",
+            "v_mainichi",
+            "v_hiroi",
+            "v_hiroba",
+            { "id": "v_atsumaru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "そこで 運動を します。",
+          "en": "They exercise there.",
+          "terms": [
+            "k_soko",
+            "v_undou",
+            { "id": "v_suru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "工場の 近くに 朝市も あります。",
+          "en": "There is also a morning market near the factory.",
+          "terms": [
+            "v_koujou",
+            "v_chika",
+            "v_asaichi",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "何が 建ちましたか。",
+          "a": "新しい 工場",
+          "choices": [
+            "新しい 家",
+            "新しい 工場",
+            "広い 学校",
+            "古い 建物"
+          ],
+          "terms": [
+            "k_nani",
+            "v_tatsu",
+            "v_atarashii",
+            "v_koujou"
+          ]
+        },
+        {
+          "q": "工員は どこに 集まりますか。",
+          "a": "広い 広場",
+          "choices": [
+            "狭い 部屋",
+            "広い 広場",
+            "駅の 前",
+            "山"
+          ],
+          "terms": [
+            "v_kouin",
+            "v_doko",
+            "v_atsumaru",
+            "v_hiroi",
+            "v_hiroba"
+          ]
+        },
+        {
+          "q": "工場の 近くに 何が ありますか。",
+          "a": "朝市",
+          "choices": [
+            "大学",
+            "朝市",
+            "動物",
+            "病院"
+          ],
+          "terms": [
+            "v_koujou",
+            "v_chika",
+            "k_nani",
+            "v_aru",
+            "v_asaichi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 4: Kanji Readings",
+      "instructions": "Select the correct reading for the [bracketed] word.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "[市長]に 会います。",
+          "choices": [
+            "しちょう",
+            "いちちょう",
+            "とちょう",
+            "しなが"
+          ],
+          "answer": "しちょう",
+          "explanation": "市長 (Mayor) is read as <b>shichou</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "文を [引用]する。",
+          "choices": [
+            "いんよう",
+            "ひきよう",
+            "いんもち",
+            "ひきもち"
+          ],
+          "answer": "いんよう",
+          "explanation": "引用 (Citation) is read as <b>inyou</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "大きい [建物]。",
+          "choices": [
+            "たてもの",
+            "けんぶつ",
+            "けんもの",
+            "たてぶつ"
+          ],
+          "answer": "たてもの",
+          "explanation": "建物 (Building) is read as <b>tatemono</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "町の [工場]。",
+          "choices": [
+            "こうじょう",
+            "こうば",
+            "くじょう",
+            "こうま"
+          ],
+          "answer": "こうじょう",
+          "explanation": "工場 (Factory) is read as <b>koujou</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "[広大]な 土地。",
+          "choices": [
+            "こうだい",
+            "ひろだい",
+            "こうおお",
+            "ひろおお"
+          ],
+          "answer": "こうだい",
+          "explanation": "広大 (Vast) is read as <b>koudai</b>."
+        },
+        {
+          "kind": "mcq",
+          "q": "先生を [見習う]。",
+          "choices": [
+            "みならう",
+            "みしゅう",
+            "けんならう",
+            "けんしゅう"
+          ],
+          "answer": "みならう",
+          "explanation": "見習う (To emulate) is read as <b>minarau</b>."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 5: Context & Vocabulary",
+      "instructions": "Select the best word to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "今日は ______ が ありますから、早く 行きます。",
+          "choices": [
+            "用事",
+            "用紙",
+            "引用",
+            "使用"
+          ],
+          "answer": "用事",
+          "explanation": "Since I have business/errands (用事), I am going early."
+        },
+        {
+          "kind": "mcq",
+          "q": "ペンは 机の ______ の 中です。",
+          "choices": [
+            "引き出し",
+            "建物",
+            "朝市",
+            "大工"
+          ],
+          "answer": "引き出し",
+          "explanation": "The pen is inside the desk drawer (引き出し)."
+        },
+        {
+          "kind": "mcq",
+          "q": "あの ______ は 家を 作ります。",
+          "choices": [
+            "大工",
+            "市長",
+            "工学",
+            "人工"
+          ],
+          "answer": "大工",
+          "explanation": "That carpenter (大工) makes houses."
+        },
+        {
+          "kind": "mcq",
+          "q": "この カメラの ______ は 難しいです。",
+          "choices": [
+            "使用",
+            "引用",
+            "場所",
+            "広場"
+          ],
+          "answer": "使用",
+          "explanation": "The usage (使用) of this camera is difficult."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 6: Grammar Check",
+      "instructions": "Choose the correct particle or form to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "ドアを ______ ください。",
+          "choices": [
+            "引いて",
+            "引きて",
+            "引きて",
+            "引って"
+          ],
+          "answer": "引いて",
+          "explanation": "The te-form of Hiku (to pull) is Hiite (引いて)."
+        },
+        {
+          "kind": "mcq",
+          "q": "広場 ______ 人が 集まります。",
+          "choices": [
+            "に",
+            "を",
+            "が",
+            "と"
+          ],
+          "answer": "に",
+          "explanation": "Use 'ni' to indicate the location where people gather (destination)."
+        },
+        {
+          "kind": "mcq",
+          "q": "新しい 家を ______。",
+          "choices": [
+            "建てます",
+            "建ちます",
+            "建っています",
+            "建って"
+          ],
+          "answer": "建てます",
+          "explanation": "To build (transitive) a house is Tatemasu (建てます)."
+        },
+        {
+          "kind": "mcq",
+          "q": "大学で 工学 ______ 習います。",
+          "choices": [
+            "を",
+            "に",
+            "で",
+            "へ"
+          ],
+          "answer": "を",
+          "explanation": "Use 'wo' to mark the object being learned (engineering)."
+        }
+      ]
+    }
+  ]
+}

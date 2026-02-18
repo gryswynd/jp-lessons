@@ -18,10 +18,107 @@
         }
       }
 
-      // Build the UI
-      this.buildUI();
+      // Inject styles early so menu renders correctly
+      this.injectStyles();
 
-      // Initialize (load data)
+      // Show review selection list (like Lesson.js)
+      this.fetchReviewList();
+    },
+
+    // --- REVIEW LIST (reads from manifest.json) ---
+    fetchReviewList: async function() {
+      this.container.innerHTML = `
+        <div id="jp-test-wrapper">
+          <div id="jp-test-embed">
+            <div class="jp-header">
+              <div class="jp-title">Select Review</div>
+              <div class="jp-badge jp-exit-link-header" id="jp-exit-list">Exit</div>
+            </div>
+            <div id="jp-stage" style="padding: 20px;">
+              <div style="text-align:center; color:#888; padding:40px;">Loading reviews...</div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('jp-exit-list').onclick = () => {
+        if (this.onExit) this.onExit();
+      };
+
+      try {
+        const manifest = await window.getManifest(this.config);
+        const reviews = [];
+        (manifest.levels || []).forEach(level => {
+          const levelData = manifest.data && manifest.data[level];
+          if (!levelData || !levelData.reviews) return;
+          levelData.reviews.forEach(review => {
+            reviews.push({ id: review.id, title: review.title, file: review.file });
+          });
+        });
+
+        // Sort newest first; non-numeric IDs (e.g. Master) go to end
+        reviews.sort((a, b) => {
+          const partsA = a.id.match(/N(\d+)\.Review\.(\d+)/);
+          const partsB = b.id.match(/N(\d+)\.Review\.(\d+)/);
+          if (!partsA && !partsB) return 0;
+          if (!partsA) return 1;
+          if (!partsB) return -1;
+          const levelA = parseInt(partsA[1]), numA = parseInt(partsA[2]);
+          const levelB = parseInt(partsB[1]), numB = parseInt(partsB[2]);
+          if (levelA !== levelB) return levelB - levelA;
+          return numB - numA;
+        });
+
+        console.log('[Review] Found', reviews.length, 'reviews from manifest');
+        this.renderReviewMenu(reviews);
+      } catch (err) {
+        document.getElementById('jp-stage').innerHTML = `
+          <div style="text-align:center; color:#d63031; padding:20px;">
+            <h3>Error</h3><p>${err.message}</p>
+            <button class="jp-btn jp-btn-main" id="jp-err-back">Back to Menu</button>
+          </div>`;
+        document.getElementById('jp-err-back').onclick = () => {
+          if (this.onExit) this.onExit();
+        };
+      }
+    },
+
+    renderReviewMenu: function(reviews) {
+      const scores = JSON.parse(localStorage.getItem('k-review-scores') || '{}');
+      const stage = document.getElementById('jp-stage');
+
+      let html = '<div class="jp-review-menu-grid">';
+      reviews.forEach(review => {
+        const topScore = scores[review.id];
+        const scoreDisplay = topScore !== undefined
+          ? `<div class="jp-review-score">Best: ${topScore}%</div>`
+          : `<div class="jp-review-score jp-no-score">Not attempted</div>`;
+
+        html += `
+          <div class="jp-review-menu-item" data-file="${review.file}" data-id="${review.id}">
+            <div>
+              <div class="jp-review-menu-id">${review.id}</div>
+            </div>
+            <div style="text-align:right;">
+              ${scoreDisplay}
+              <div class="jp-review-menu-arrow">Start →</div>
+            </div>
+          </div>
+        `;
+      });
+      html += '</div>';
+
+      stage.innerHTML = html;
+
+      stage.querySelectorAll('.jp-review-menu-item').forEach(item => {
+        item.onclick = () => this.loadReview(item.dataset.file, item.dataset.id);
+      });
+    },
+
+    loadReview: function(filePath, reviewId) {
+      this.config.path = filePath;
+      this.config._reviewId = reviewId;
+      this.buildUI();
       this.init();
     },
 
@@ -30,7 +127,10 @@
         <div id="jp-test-wrapper">
             <div id="jp-test-embed">
               <div class="jp-header">
-                <div class="jp-title" id="jp-header-title">Loading...</div>
+                <div style="display:flex; align-items:center;">
+                  <button class="jp-review-back-btn" id="jp-back-to-list">← List</button>
+                  <div class="jp-title" id="jp-header-title">Loading...</div>
+                </div>
                 <div class="jp-badge">Score: <span id="jp-score">0</span></div>
               </div>
 
@@ -58,6 +158,9 @@
         if (this.onExit) this.onExit();
       };
 
+      // Attach back-to-list handler
+      document.getElementById('jp-back-to-list').onclick = () => this.fetchReviewList();
+
       // Attach start button handler (will be enabled after data loads)
       document.getElementById('jp-start-btn').onclick = () => this.startQuiz();
     },
@@ -67,7 +170,7 @@
       owner: "gryswynd",
       repo: "jp-lessons",
       branch: "main",
-      path: "N4.Review.4.json" // Default, can be overridden
+      path: "N4.Review.6.json" // Default, can be overridden
     },
     state: {
       questions: [],
@@ -79,34 +182,36 @@
 
     // Helpers
     el: (id) => document.getElementById(id),
-    getUrl: function(filename) {
-       // If filename is provided, fetch that relative to root, otherwise fetch the config path
-       if(filename) return `https://raw.githubusercontent.com/${this.config.owner}/${this.config.repo}/${this.config.branch}/${filename}`;
-       return `https://raw.githubusercontent.com/${this.config.owner}/${this.config.repo}/${this.config.branch}/${this.config.path}`;
+    getUrl: function(filepath) {
+       return window.getAssetUrl(this.config, filepath || this.config.path);
     },
 
     // --- INITIALIZATION ---
     init: async function() {
-      console.log('[Review.js] Initializing...');
-      console.log('[Review.js] Current DOM state:');
+      console.log('[Review] Initializing...');
+      console.log('[Review] Current DOM state:');
       console.log('  - jp-stage exists:', !!document.getElementById('jp-stage'));
       console.log('  - jp-header-title exists:', !!document.getElementById('jp-header-title'));
       console.log('  - jp-start-btn exists:', !!document.getElementById('jp-start-btn'));
 
       try {
-        console.log('[Review.js] Fetching resources...');
-        console.log('[Review.js] Quiz URL:', this.getUrl());
-        console.log('[Review.js] Glossary URL:', this.getUrl('glossary.master.json'));
-        console.log('[Review.js] Conjugations URL:', this.getUrl('conjugation_rules.json'));
+        const manifest = await window.getManifest(this.config);
+        const quizUrl = this.getUrl();
+        const glossaryUrl = this.getUrl(manifest.globalFiles.glossaryMaster);
+        const conjUrl = this.getUrl(manifest.globalFiles.conjugationRules);
+
+        console.log('[Review] Quiz URL:', quizUrl);
+        console.log('[Review] Glossary URL:', glossaryUrl);
+        console.log('[Review] Conjugation URL:', conjUrl);
 
         // 1. Fetch Quiz Data + Glossary + Conjugations in parallel
         const [quizRes, glossRes, conjRes] = await Promise.all([
-            fetch(this.getUrl()),
-            fetch(this.getUrl('glossary.master.json')),
-            fetch(this.getUrl('conjugation_rules.json'))
+            fetch(quizUrl),
+            fetch(glossaryUrl),
+            fetch(conjUrl)
         ]);
 
-        console.log('[Review.js] Fetch responses:', {
+        console.log('[Review] Fetch responses:', {
           quiz: quizRes.ok,
           glossary: glossRes.ok,
           conjugations: conjRes.ok
@@ -116,37 +221,37 @@
           throw new Error(`Failed to fetch resources: Quiz(${quizRes.status}) Glossary(${glossRes.status}) Conjugations(${conjRes.status})`);
         }
 
-        console.log('[Review.js] Parsing JSON...');
+        console.log('[Review] Parsing JSON...');
         const quizData = await quizRes.json();
         const glossData = await glossRes.json();
         this.state.conjugations = await conjRes.json();
 
-        console.log('[Review.js] Quiz title:', quizData.title);
-        console.log('[Review.js] Glossary entries:', glossData.length);
+        console.log('[Review] Quiz title:', quizData.title);
+        console.log('[Review] Glossary entries:', glossData.length);
 
         // 2. Map Glossary
         this.state.termMap = {};
         glossData.forEach(i => { this.state.termMap[i.id] = i; });
 
         // 3. Inject Styles & Modal
-        console.log('[Review.js] Injecting styles...');
+        console.log('[Review] Injecting styles...');
         this.injectStyles();
-        console.log('[Review.js] Injecting modal...');
+        console.log('[Review] Injecting modal...');
         this.injectModal();
 
         // 4. Process Quiz
-        console.log('[Review.js] Processing quiz data...');
+        console.log('[Review] Processing quiz data...');
         this.processData(quizData);
-        console.log('[Review.js] Initialization complete!');
+        console.log('[Review] Initialization complete!');
 
       } catch (e) {
-        console.error('[Review.js] Error during initialization:', e);
-        console.error('[Review.js] Error stack:', e.stack);
+        console.error('[Review] Error during initialization:', e);
+        console.error('[Review] Error stack:', e.stack);
         const stage = this.el('jp-stage');
         if (stage) {
           stage.innerHTML = `<div style="text-align:center;color:#d63031;padding:20px;">Unable to load test resources.<br><small>${e.message}</small><br><br><button class="jp-btn" onclick="location.reload()" style="background:#4e54c8;color:white;padding:12px 24px;border:none;border-radius:8px;cursor:pointer;">Reload Page</button></div>`;
         } else {
-          console.error('[Review.js] Cannot display error: jp-stage element not found!');
+          console.error('[Review] Cannot display error: jp-stage element not found!');
           alert('Error loading review: ' + e.message);
         }
       }
@@ -357,6 +462,33 @@
                 cursor: pointer;
             }
             .jp-exit-link:hover { color: var(--jp-primary); }
+
+            /* Exit in header (for list screen) */
+            .jp-exit-link-header { cursor: pointer; }
+            .jp-exit-link-header:hover { background: rgba(255,255,255,0.35); }
+
+            /* Back Button in Quiz Header */
+            .jp-review-back-btn {
+                background: transparent; color: rgba(255,255,255,0.8);
+                border: none; cursor: pointer; font-weight: bold;
+                font-size: 0.9rem; margin-right: 10px; padding: 4px 8px;
+                border-radius: 6px;
+            }
+            .jp-review-back-btn:hover { color: white; background: rgba(255,255,255,0.1); }
+
+            /* Review Menu Grid */
+            .jp-review-menu-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+            .jp-review-menu-item {
+                background: #fff; padding: 20px; border-radius: 16px; cursor: pointer;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s;
+                border: 1px solid rgba(0,0,0,0.02); text-align: left;
+                display: flex; justify-content: space-between; align-items: center;
+            }
+            .jp-review-menu-item:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(78,84,200,0.15); border-color: var(--jp-primary); }
+            .jp-review-menu-id { font-weight: 900; color: var(--jp-primary); font-size: 1.1rem; }
+            .jp-review-score { font-size: 0.85rem; color: var(--jp-success); font-weight: 700; }
+            .jp-review-score.jp-no-score { color: #b2bec3; }
+            .jp-review-menu-arrow { font-size: 0.8rem; color: #a4b0be; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
         `;
         document.head.appendChild(style);
     },
@@ -513,7 +645,7 @@
     // --- QUIZ LOGIC ---
 
     processData: function(data) {
-      console.log('[Review.js] Processing data...');
+      console.log('[Review] Processing data...');
       if(data.title) {
         const headerTitle = this.el('jp-header-title');
         const introTitle = this.el('jp-intro-title');
@@ -529,7 +661,7 @@
         btn.style.opacity = "1";
         btn.style.pointerEvents = "all";
         btn.innerText = "Start Review";
-        console.log('[Review.js] Start button enabled');
+        console.log('[Review] Start button enabled');
       }
 
       this.state.questions = [];
@@ -763,12 +895,34 @@
       const pct = scorableCount > 0 ? Math.round((this.state.score / scorableCount) * 100) : 100;
       let msg = pct > 80 ? "Excellent Work! 🏆" : "Keep Practicing! 💪";
 
+      // Save top score to localStorage
+      const reviewName = this.config._reviewId || this.config.path.replace(/.*\//, '').replace('.json', '');
+      const scores = JSON.parse(localStorage.getItem('k-review-scores') || '{}');
+      const prevBest = scores[reviewName];
+      const isNewBest = prevBest === undefined || pct > prevBest;
+      if (isNewBest) {
+        scores[reviewName] = pct;
+        localStorage.setItem('k-review-scores', JSON.stringify(scores));
+      }
+
+      let bestHtml = '';
+      if (isNewBest && prevBest !== undefined) {
+        bestHtml = `<div style="color:var(--jp-success); font-weight:700; margin:10px 0;">New Personal Best! (Previous: ${prevBest}%)</div>`;
+      } else if (isNewBest) {
+        bestHtml = `<div style="color:var(--jp-success); font-weight:700; margin:10px 0;">Score Recorded!</div>`;
+      } else {
+        bestHtml = `<div style="color:#888; margin:10px 0;">Personal Best: ${prevBest}%</div>`;
+      }
+
       this.el('jp-stage').innerHTML = `
         <div style="text-align:center; padding:40px 0; animation: jpFadeIn 0.5s;">
           <div style="font-size:4rem; font-weight:900; color:var(--jp-primary);">${pct}%</div>
-          <div style="font-size:1.2rem; color:#666; margin-bottom:20px;">${msg}</div>
+          <div style="font-size:1.2rem; color:#666; margin-bottom:5px;">${msg}</div>
+          ${bestHtml}
           <p>You scored ${this.state.score} / ${scorableCount}</p>
           <button class="jp-btn jp-btn-main" onclick="ReviewModule.startQuiz()">Try Again</button>
+          <br>
+          <button class="jp-btn" onclick="ReviewModule.fetchReviewList()" style="margin-top:10px;">Back to Reviews</button>
         </div>
       `;
     },

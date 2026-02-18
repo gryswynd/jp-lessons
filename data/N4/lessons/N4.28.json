@@ -1,0 +1,666 @@
+{
+  "id": "N4.28",
+  "title": "Phase 4 Lesson 28: Places & Parts",
+  "meta": {
+    "phase": 4,
+    "lesson": 28,
+    "focus": "Ponds, groves, gates, and villages.",
+    "kanji": [
+      "池",
+      "林",
+      "門",
+      "村"
+    ]
+  },
+  "newKanji": [
+    {
+      "kanji": "池",
+      "on": "ち",
+      "kun": "いけ",
+      "meaning": "Pond",
+      "termId": "k_ike"
+    },
+    {
+      "kanji": "林",
+      "on": "りん",
+      "kun": "はやし",
+      "meaning": "Grove / Forest",
+      "termId": "k_hayashi"
+    },
+    {
+      "kanji": "門",
+      "on": "もん",
+      "kun": "かど",
+      "meaning": "Gate",
+      "termId": "k_mon"
+    },
+    {
+      "kanji": "村",
+      "on": "そん",
+      "kun": "むら",
+      "meaning": "Village",
+      "termId": "k_mura"
+    }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "Warm-Up Review（ウォームアップ）",
+      "instructions": "Ask your partner these questions using words you already know:",
+      "items": [
+        {
+          "jp": "日本の 料理は 好きですか。",
+          "en": "Do you like Japanese cuisine?",
+          "terms": [
+            "v_nihon",
+            "v_ryouri",
+            "v_suki"
+          ]
+        },
+        {
+          "jp": "今度の 休みは 何を しますか。",
+          "en": "What will you do this coming holiday?",
+          "terms": [
+            "v_kondo",
+            "k_yasu",
+            "k_nani",
+            { "id": "v_suru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "あなたの 町は どんな 所ですか。",
+          "en": "What kind of place is your town?",
+          "terms": [
+            "k_machi",
+            "v_dou",
+            "k_tokoro"
+          ]
+        },
+        {
+          "jp": "友だちに 手紙を 書きましたか。",
+          "en": "Did you write a letter to your friend?",
+          "terms": [
+            "v_tomodachi",
+            "v_tegami",
+            { "id": "v_kaku", "form": "polite_mashita" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "New Kanji（新しい 漢字）",
+      "items": [
+        {
+          "kanji": "池",
+          "on": "ち",
+          "kun": "いけ",
+          "meaning": "Pond",
+          "terms": [
+            "k_ike",
+            "v_ike",
+            "v_denchi"
+          ]
+        },
+        {
+          "kanji": "林",
+          "on": "りん",
+          "kun": "はやし",
+          "meaning": "Grove",
+          "terms": [
+            "k_hayashi",
+            "v_hayashi",
+            "v_kobayashi",
+            "v_sanrin"
+          ]
+        },
+        {
+          "kanji": "門",
+          "on": "もん",
+          "kun": "かど",
+          "meaning": "Gate",
+          "terms": [
+            "k_mon",
+            "v_mon",
+            "v_seimon",
+            "v_nyuumon",
+            "v_mongaikan"
+          ]
+        },
+        {
+          "kanji": "村",
+          "on": "そん",
+          "kun": "むら",
+          "meaning": "Village",
+          "terms": [
+            "k_mura",
+            "v_mura",
+            "v_murabito",
+            "v_sanson",
+            "v_sonchou"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "Vocabulary & Compounds（ことば）",
+      "groups": [
+        {
+          "label": "Nature & Places",
+          "items": [
+            "v_ike",
+            "v_hayashi",
+            "v_sanrin",
+            "v_mura",
+            "v_sanson"
+          ]
+        },
+        {
+          "label": "Gates & Entry",
+          "items": [
+            "v_mon",
+            "v_seimon",
+            "v_koumon",
+            "v_nyuumon",
+            "v_monka"
+          ]
+        },
+        {
+          "label": "People & Objects",
+          "items": [
+            "v_murabito",
+            "v_sonchou",
+            "v_kobayashi",
+            "v_denchi",
+            "v_mongaikan"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 1（会話）: At the Gate",
+      "context": "Arranging a meeting spot.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "小林さん、待ち合わせは どこに しましょうか。",
+          "en": "Mr. Kobayashi, where shall we meet?",
+          "terms": [
+            "v_kobayashi",
+            "v_machiawase",
+            "v_doko",
+            { "id": "v_suru", "form": "polite_volitional_mashou" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "学校の 正門で 会いましょう。",
+          "en": "Let's meet at the school's main gate.",
+          "terms": [
+            "v_gakkou",
+            "v_seimon",
+            { "id": "v_au", "form": "polite_volitional_mashou" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "はい。何時ですか。",
+          "en": "Okay. What time?",
+          "terms": [
+            "v_nanji"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "夕方の 五時です。",
+          "en": "It is 5 o'clock in the evening.",
+          "terms": [
+            "v_yuugata",
+            "k_itsu",
+            "k_toki"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 2（会話）: The Battery",
+      "context": "Needing a battery.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "電池が ありますか。",
+          "en": "Do you have a battery?",
+          "terms": [
+            "v_denchi",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "いいえ。店で 買います。",
+          "en": "No. I will buy one at the shop.",
+          "terms": [
+            "k_mise",
+            { "id": "v_kau", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "高いですか。",
+          "en": "Is it expensive?",
+          "terms": [
+            { "id": "v_takai", "form": "polite_adj" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "いいえ、高くないです。",
+          "en": "No, it is not expensive.",
+          "terms": [
+            { "id": "v_takai", "form": "polite_negative" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 3（会話）: The Village",
+      "context": "Talking about where the teacher lives.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "先生は どこに 住んで いますか。",
+          "en": "Where does the teacher live?",
+          "terms": [
+            "v_sensei",
+            "v_doko",
+            { "id": "v_sumu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "山村に 住んで います。",
+          "en": "He lives in a mountain village.",
+          "terms": [
+            "v_sanson",
+            { "id": "v_sumu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "池が ありますか。",
+          "en": "Is there a pond?",
+          "terms": [
+            "v_ike",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。大きい 池と 林が あります。",
+          "en": "Yes. There is a big pond and a grove.",
+          "terms": [
+            "v_ookii",
+            "v_ike",
+            "v_hayashi",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 4（会話）: Introduction",
+      "context": "Discussing a book.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "この 本は むずかしいですか。",
+          "en": "Is this book difficult?",
+          "terms": [
+            "k_moto",
+            { "id": "v_muzukashii", "form": "polite_adj" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "英語の 入門です。むずかしくないです。",
+          "en": "It is an introduction to English. It is not difficult.",
+          "terms": [
+            "v_eigo",
+            "v_nyuumon",
+            { "id": "v_muzukashii", "form": "polite_negative" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "私は 英語の 門外漢です。",
+          "en": "I am a layman regarding English.",
+          "terms": [
+            "k_watashi",
+            "v_eigo",
+            "v_mongaikan"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "読んで ください。",
+          "en": "Please read it.",
+          "terms": [
+            { "id": "v_yomu", "form": "te_form" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 1: Mr. Kobayashi's Village",
+      "passage": [
+        {
+          "jp": "小林さんは 村人です。",
+          "en": "Mr. Kobayashi is a villager.",
+          "terms": [
+            "v_kobayashi",
+            "v_murabito"
+          ]
+        },
+        {
+          "jp": "小さい 村に 住んで います。",
+          "en": "He lives in a small village.",
+          "terms": [
+            "v_chiisai",
+            "v_mura",
+            { "id": "v_sumu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "村の 近くに 山林が あります。",
+          "en": "There is a mountain forest near the village.",
+          "terms": [
+            "v_mura",
+            { "id": "v_chikai", "form": "adverbial" },
+            "v_sanrin",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "小林さんは よく 林の中を 歩きます。池も あります。",
+          "en": "Mr. Kobayashi often walks in the grove. There is also a pond.",
+          "terms": [
+            "v_kobayashi",
+            "v_yoku",
+            "v_hayashi",
+            "k_naka",
+            { "id": "v_aruku", "form": "polite_masu" },
+            "v_ike",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "小林さんは どこに 住んで いますか。",
+          "a": "小さい 村。",
+          "terms": [
+            "v_kobayashi",
+            "v_doko",
+            { "id": "v_sumu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" },
+            "v_chiisai",
+            "v_mura"
+          ]
+        },
+        {
+          "q": "村の 近くに 何が ありますか。",
+          "a": "山林。",
+          "terms": [
+            "v_mura",
+            { "id": "v_chikai", "form": "adverbial" },
+            "k_nani",
+            "v_sanrin"
+          ]
+        },
+        {
+          "q": "どこを 歩きますか。",
+          "a": "林の中。",
+          "terms": [
+            "v_doko",
+            { "id": "v_aruku", "form": "polite_masu"},
+            "v_hayashi",
+            "k_naka"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: The Old Gate",
+      "passage": [
+        {
+          "jp": "大きい 門が あります。古い 学校の 正門です。",
+          "en": "There is a big gate. It is the main gate of an old school.",
+          "terms": [
+            "v_ookii",
+            "v_mon",
+            { "id": "v_aru", "form": "polite_masu" },
+            "v_furui",
+            "v_gakkou",
+            "v_seimon"
+          ]
+        },
+        {
+          "jp": "多くの 学生が 門に 入ります。",
+          "en": "Many students enter the gate.",
+          "terms": [
+            { "id": "v_ooi", "form": "adverbial" },
+            "v_gakusei",
+            "v_mon",
+            { "id": "v_hairu", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "門の 前に 店が あります。",
+          "en": "There is a shop in front of the gate.",
+          "terms": [
+            "v_mon",
+            "k_mae",
+            "k_mise",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "電池や 本を 売って います。",
+          "en": "They sell batteries and books.",
+          "terms": [
+            "v_denchi",
+            "k_moto",
+            { "id": "v_uru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "これは 何の 門ですか。",
+          "a": "学校の 正門。",
+          "terms": [
+            "k_nani",
+            "v_mon",
+            "v_gakkou",
+            "v_seimon"
+          ]
+        },
+        {
+          "q": "だれが 門に 入りますか。",
+          "a": "多くの 学生。",
+          "terms": [
+            "v_dare",
+            "v_mon",
+            "v_hairu",
+            "v_ooku",
+            "v_gakusei"
+          ]
+        },
+        {
+          "q": "店で 何を 売って いますか。",
+          "a": "電池や 本。",
+          "terms": [
+            "k_mise",
+            "k_nani",
+            { "id": "v_uru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" },
+            "v_denchi",
+            "k_moto"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Vocabulary",
+      "instructions": "Select the correct reading or meaning.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "池",
+          "choices": [
+            "ike",
+            "chi",
+            "umi",
+            "kawa"
+          ],
+          "answer": "ike",
+          "terms": [
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "林",
+          "choices": [
+            "mori",
+            "hayashi",
+            "yama",
+            "ki"
+          ],
+          "answer": "hayashi",
+          "terms": [
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "門",
+          "choices": [
+            "mon",
+            "kado",
+            "to",
+            "mado"
+          ],
+          "answer": "mon",
+          "terms": [
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "村",
+          "choices": [
+            "mura",
+            "son",
+            "machi",
+            "toshi"
+          ],
+          "answer": "mura",
+          "terms": [
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "電池",
+          "choices": [
+            "denchi",
+            "denike",
+            "kichi",
+            "kiike"
+          ],
+          "answer": "denchi",
+          "terms": [
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Fill in the Blank",
+      "instructions": "Select the word that fits.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "ラジオの ______ が ありません。",
+          "choices": [
+            "電池",
+            "林",
+            "池",
+            "村"
+          ],
+          "answer": "電池",
+          "terms": [
+            "v_denchi"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "学校の ______ で 会いましょう。",
+          "choices": [
+            "正門",
+            "入門",
+            "門下",
+            "門外漢"
+          ],
+          "answer": "正門",
+          "terms": [
+            "v_gakkou",
+            "v_seimon"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "あの ______ には 多くの 人が 住んでいます。",
+          "choices": [
+            "村",
+            "門",
+            "林",
+            "池"
+          ],
+          "answer": "村",
+          "terms": [
+            "v_mura",
+            "v_ooku",
+            "k_hito",
+            "v_sumu"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "これは 英語の ______ の本です。",
+          "choices": [
+            "入門",
+            "正門",
+            "校門",
+            "山村"
+          ],
+          "answer": "入門",
+          "terms": [
+            "v_eigo",
+            "v_nyuumon",
+            "k_moto"
+          ]
+        }
+      ]
+    }
+  ]
+}

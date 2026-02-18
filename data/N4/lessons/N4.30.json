@@ -1,0 +1,657 @@
+{
+  "id": "N4.30",
+  "title": "Phase 4 Lesson 30: Thoughts & Special Answers",
+  "meta": {
+    "phase": 4,
+    "lesson": 30,
+    "focus": "Thinking, special occasions, gathering, and answering.",
+    "kanji": [
+      "思",
+      "特",
+      "集",
+      "答"
+    ]
+  },
+  "newKanji": [
+    {
+      "kanji": "思",
+      "on": "し",
+      "kun": "おも(う)",
+      "meaning": "Think",
+      "termId": "k_omou"
+    },
+    {
+      "kanji": "特",
+      "on": "とく",
+      "kun": "",
+      "meaning": "Special",
+      "termId": "k_toku"
+    },
+    {
+      "kanji": "集",
+      "on": "しゅう",
+      "kun": "あつ(める)",
+      "meaning": "Gather",
+      "termId": "k_atsumeru"
+    },
+    {
+      "kanji": "答",
+      "on": "とう",
+      "kun": "こた(える)",
+      "meaning": "Answer",
+      "termId": "k_kotaeru"
+    }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "Warm-Up Review（ウォームアップ）",
+      "instructions": "Ask your partner these questions using words you already know:",
+      "items": [
+        {
+          "jp": "きのう、何を しましたか。",
+          "en": "What did you do yesterday?",
+          "terms": [
+            "v_kinou",
+            "k_nani",
+            { "id": "v_suru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "日本語は おもしろいですか。",
+          "en": "Is Japanese interesting?",
+          "terms": [
+            "v_nihongo",
+            "v_omoshiroi"
+          ]
+        },
+        {
+          "jp": "先生の 名前を 知って いますか。",
+          "en": "Do you know the teacher's name?",
+          "terms": [
+            "v_sensei",
+            "v_namae",
+            { "id": "v_shiru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "毎日、何時まで 働きますか。",
+          "en": "Until what time do you work every day?",
+          "terms": [
+            "v_mainichi",
+            "v_nanji",
+            { "id": "v_hataraku", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "New Kanji（新しい 漢字）",
+      "items": [
+        {
+          "kanji": "思",
+          "on": "し",
+          "kun": "おも",
+          "meaning": "Think",
+          "terms": [
+            "k_omou",
+            "v_omou",
+            "v_omoi",
+            "v_omoidasu",
+            "v_omoiagaru"
+          ]
+        },
+        {
+          "kanji": "特",
+          "on": "とく",
+          "kun": "",
+          "meaning": "Special",
+          "terms": [
+            "k_toku",
+            "v_tokubetsu",
+            "v_tokuni",
+            "v_tokkyuu",
+            "v_tokushuu"
+          ]
+        },
+        {
+          "kanji": "集",
+          "on": "しゅう",
+          "kun": "あつ",
+          "meaning": "Gather",
+          "terms": [
+            "k_atsumeru",
+            "v_atsumeru",
+            "v_shuuchuu",
+            "v_shuu"
+          ]
+        },
+        {
+          "kanji": "答",
+          "on": "とう",
+          "kun": "こた",
+          "meaning": "Answer",
+          "terms": [
+            "k_kotaeru",
+            "v_kotae",
+            "v_mondou",
+            "v_kuchigotae"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "Vocabulary & Compounds（ことば）",
+      "groups": [
+        {
+          "label": "Thinking & Feeling",
+          "items": [
+            "v_omou",
+            "v_omoi",
+            "v_omoidasu",
+            "v_omoiagaru"
+          ]
+        },
+        {
+          "label": "Special Things",
+          "items": [
+            "v_tokubetsu",
+            "v_tokuni",
+            "v_tokkyuu",
+            "v_tokushuu"
+          ]
+        },
+        {
+          "label": "Gathering & Answering",
+          "items": [
+            "v_atsumeru",
+            "v_shuuchuu",
+            "v_shuu",
+            "v_kotae",
+            "v_mondou",
+            "v_kuchigotae"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 1（会話）: Remembering",
+      "context": "Trying to recall a memory.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "あの 人の 名前を 思い出しますか。",
+          "en": "Do you recall that person's name?",
+          "terms": [
+            "k_hito",
+            "v_namae",
+            { "id": "v_omoidasu", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "いいえ、思い出せません。だれだと 思いますか。",
+          "en": "No, I cannot recall. Who do you think it is?",
+          "terms": [
+            { "id": "v_omoidasu", "form": "polite_potential_negative" },
+            "v_dare",
+            { "id": "v_omou", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "特別な 先生だと 思います。",
+          "en": "I think it is a special teacher.",
+          "terms": [
+            "v_tokubetsu",
+            "v_sensei",
+            { "id": "v_omou", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "あ、分かりました！",
+          "en": "Ah, I understand now!",
+          "terms": [
+            { "id": "v_wakaru", "form": "polite_mashita" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 2（会話）: The Express Train",
+      "context": "Planning a trip.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "特急で 行きますか。",
+          "en": "Will you go by express train?",
+          "terms": [
+            "v_tokkyuu",
+            { "id": "v_iku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。特に 時間が ありませんから。",
+          "en": "Yes. Because especially I have no time.",
+          "terms": [
+            "v_tokuni",
+            "v_jikan",
+            { "id": "v_aru", "form": "polite_negative" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "駅に 人が 集まって いますね。",
+          "en": "People are gathering at the station, aren't they?",
+          "terms": [
+            "v_eki",
+            "k_hito",
+            { "id": "v_atsumaru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "何か 特別な 電車が 来ますよ。",
+          "en": "Some special train is coming.",
+          "terms": [
+            "k_nani",
+            "v_tokubetsu",
+            "v_densha",
+            { "id": "v_kuru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 3（会話）: Hobbies",
+      "context": "Talking about collecting.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "何を 集めて いますか。",
+          "en": "What are you collecting?",
+          "terms": [
+            "k_nani",
+            { "id": "v_atsumeru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "古い 時計を 集めて います。",
+          "en": "I am collecting old clocks.",
+          "terms": [
+            "v_furui",
+            "v_tokei",
+            { "id": "v_atsumeru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "すごいですね。たくさん ありますか。",
+          "en": "That's amazing. Do you have many?",
+          "terms": [
+            "v_sugoi",
+            "v_takusan",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。私の 「時計特集」です。",
+          "en": "Yes. It is my 'Clock Special Collection'.",
+          "terms": [
+            "v_tokei",
+            "v_tokushuu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 4（会話）: The Answer",
+      "context": "In the classroom.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "この 問題の 答えは 何ですか。",
+          "en": "What is the answer to this problem?",
+          "terms": [
+            "v_mondai",
+            "v_kotae",
+            "k_nani"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "分かりません。先生と 問答 しましょう。",
+          "en": "I do not know. Let's have a dialogue (Q&A) with the teacher.",
+          "terms": [
+            { "id": "v_wakaru", "form": "polite_negative" },
+            "v_sensei",
+            "v_mondou",
+            { "id": "v_suru", "form": "polite_volitional_mashou" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "口答えは だめですよ。",
+          "en": "Backtalk is no good.",
+          "terms": [
+            "v_kuchigotae",
+            "v_dame"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい、集中して 聞きます。",
+          "en": "Yes, I will concentrate and listen.",
+          "terms": [
+            "v_hai",
+            { "id": "v_shuuchuu", "form": "te_form" },
+            { "id": "v_kiku", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 1: A Special Day",
+      "passage": [
+        {
+          "jp": "今日は 特別な 日だと 思います。",
+          "en": "I think today is a special day.",
+          "terms": [
+            "v_kyou",
+            "v_tokubetsu",
+            "k_nichi",
+            { "id": "v_omou", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "父が 特急で 帰って 来ます。",
+          "en": "My father is coming back by express train.",
+          "terms": [
+            "v_chichi",
+            "v_tokkyuu",
+            { "id": "v_kaeru", "form": "te_form" },
+            { "id": "v_kuru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "私は 駅へ 行きました。",
+          "en": "I went to the station.",
+          "terms": [
+            "k_watashi",
+            "v_eki",
+            { "id": "v_iku", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "人が たくさん 集まって いました。",
+          "en": "Many people were gathered.",
+          "terms": [
+            "k_hito",
+            "v_takusan",
+            { "id": "v_atsumaru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_mashita" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "今日は どんな 日ですか。",
+          "a": "特別な 日。",
+          "terms": [
+            "v_kyou",
+            "v_donna",
+            "k_nichi",
+            "v_tokubetsu"
+          ]
+        },
+        {
+          "q": "父は 何で 帰りますか。",
+          "a": "特急。",
+          "terms": [
+            "v_chichi",
+            "k_nani",
+            "v_kaeru",
+            "v_tokkyuu"
+          ]
+        },
+        {
+          "q": "駅に 何が ありましたか。",
+          "a": "人が たくさん 集まって いました。",
+          "terms": [
+            "v_eki",
+            "k_nani",
+            "v_aru",
+            "k_hito",
+            "v_atsumaru"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: The Difficult Question",
+      "passage": [
+        {
+          "jp": "先生が 学生に 答えを 聞きました。",
+          "en": "The teacher asked the student for the answer.",
+          "terms": [
+            "v_sensei",
+            "v_gakusei",
+            "v_kotae",
+            { "id": "v_kiku", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "学生は 集中して 考えました。",
+          "en": "The student concentrated and thought.",
+          "terms": [
+            "v_gakusei",
+            { "id": "v_shuuchuu", "form": "te_form" },
+            { "id": "v_kangaeru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "でも、答えを 思い出しませんでした。",
+          "en": "But, he did not recall the answer.",
+          "terms": [
+            "v_kotae",
+            { "id": "v_omoidasu", "form": "polite_negative_mashita" }
+          ]
+        },
+        {
+          "jp": "「分かりません」と 言いました。口答えは しません。",
+          "en": "He said 'I don't know'. He does not talk back.",
+          "terms": [
+            { "id": "v_wakaru", "form": "polite_negative" },
+            { "id": "v_iu", "form": "polite_mashita" },
+            "v_kuchigotae",
+            { "id": "v_suru", "form": "polite_negative" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "学生は 何を しましたか。",
+          "a": "集中して 考えました。",
+          "terms": [
+            "v_gakusei",
+            "k_nani",
+            "v_shuuchuu",
+            "v_kangaeru"
+          ]
+        },
+        {
+          "q": "答えが 分かりましたか。",
+          "a": "いいえ、思い出しませんでした。",
+          "terms": [
+            "v_kotae",
+            "v_wakaru",
+            "v_omoidasu"
+          ]
+        },
+        {
+          "q": "口答えを しましたか。",
+          "a": "いいえ、しません。",
+          "terms": [
+            "v_kuchigotae",
+            "v_suru"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Vocabulary",
+      "instructions": "Select the correct reading or meaning.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "思う",
+          "choices": [
+            "omou",
+            "kau",
+            "au",
+            "iu"
+          ],
+          "answer": "omou",
+          "terms": [ "v_omou" ]
+        },
+        {
+          "kind": "mcq",
+          "q": "特別",
+          "choices": [
+            "tokubetsu",
+            "tokuni",
+            "tokkyuu",
+            "tokushuu"
+          ],
+          "answer": "tokubetsu",
+          "terms": [ "v_tokubetsu" ]
+        },
+        {
+          "kind": "mcq",
+          "q": "答え",
+          "choices": [
+            "kotae",
+            "kanga",
+            "omoi",
+            "mondou"
+          ],
+          "answer": "kotae",
+          "terms": [ "v_kotae" ]
+        },
+        {
+          "kind": "mcq",
+          "q": "集める",
+          "choices": [
+            "atsumeru",
+            "osameru",
+            "kimeru",
+            "shimeru"
+          ],
+          "answer": "atsumeru",
+          "terms": [ "v_atsumeru" ]
+        },
+        {
+          "kind": "mcq",
+          "q": "思い出す",
+          "choices": [
+            "omoidasu",
+            "omoiagaru",
+            "kangaedasu",
+            "dashiau"
+          ],
+          "answer": "omoidasu",
+          "terms": [ "v_omoidasu" ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Fill in the Blank",
+      "instructions": "Select the word that fits.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "テストの ______ を 書いて ください。",
+          "choices": [
+            "答え",
+            "思い",
+            "特別",
+            "集中"
+          ],
+          "answer": "答え",
+          "terms": [
+            "v_tesuto",
+            "v_kotae",
+            "v_kaku"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "今日は ______ 暑いです。",
+          "choices": [
+            "特に",
+            "特急",
+            "特集",
+            "問答"
+          ],
+          "answer": "特に",
+          "terms": [
+            "v_kyou",
+            "v_tokuni",
+            "v_atsui"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "切手を ______ います。",
+          "choices": [
+            "集めて",
+            "答えて",
+            "思って",
+            "知って"
+          ],
+          "answer": "集めて",
+          "terms": [
+            "v_kitte",
+            { "id": "v_atsumeru", "form": "te_form" },
+            "v_iru"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "彼は ______ 人だと 思います。",
+          "choices": [
+            "思い上がる",
+            "思い出す",
+            "思う",
+            "集まる"
+          ],
+          "answer": "思い上がる",
+          "terms": [
+            "k_kare",
+            "v_omoiagaru",
+            "k_hito",
+            "v_omou"
+          ]
+        }
+      ]
+    }
+  ]
+}

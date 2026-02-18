@@ -4,13 +4,58 @@ window.PracticeModule = {
 
     window.KanjiApp = {};
 
-    // TTS Helper
+    // TTS Helper with Mobile & Error Handling
     KanjiApp.speak = function(text) {
-        if (!window.speechSynthesis) return;
-        window.speechSynthesis.cancel();
-        const u = new SpeechSynthesisUtterance(text);
-        u.lang = 'ja-JP';
-        window.speechSynthesis.speak(u);
+        if (!window.speechSynthesis) {
+            console.warn('Speech synthesis not supported');
+            return;
+        }
+
+        try {
+            // Cancel any ongoing speech
+            window.speechSynthesis.cancel();
+
+            // Small delay to prevent race condition on mobile browsers
+            setTimeout(() => {
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'ja-JP';
+                utterance.rate = 0.9; // Slightly slower for better clarity
+                utterance.volume = 1.0;
+
+                // Error handling with retry logic
+                utterance.onerror = (event) => {
+                    console.error('Speech synthesis error:', event.error);
+                    // Try to recover from 'not-allowed' or 'interrupted' errors
+                    if ((event.error === 'not-allowed' || event.error === 'interrupted') && !utterance._retried) {
+                        utterance._retried = true;
+                        setTimeout(() => {
+                            window.speechSynthesis.cancel();
+                            window.speechSynthesis.speak(utterance);
+                        }, 100);
+                    }
+                };
+
+                // iOS Safari fix: Resume if paused
+                utterance.onstart = () => {
+                    if (window.speechSynthesis.paused) {
+                        window.speechSynthesis.resume();
+                    }
+                };
+
+                // Timeout protection (10 seconds)
+                const timeoutId = setTimeout(() => {
+                    window.speechSynthesis.cancel();
+                }, 10000);
+
+                utterance.onend = () => {
+                    clearTimeout(timeoutId);
+                };
+
+                window.speechSynthesis.speak(utterance);
+            }, 50); // 50ms delay prevents race conditions on Android Chrome
+        } catch (error) {
+            console.error('TTS Error:', error);
+        }
     };
 
     // Inject Fonts
@@ -215,7 +260,7 @@ window.PracticeModule = {
 
     // --- 2. LOGIC ---
     const REPO_CONFIG = sharedConfig;
-    const MASTER_URL = `https://raw.githubusercontent.com/${REPO_CONFIG.owner}/${REPO_CONFIG.repo}/${REPO_CONFIG.branch}/glossary.master.json`;
+    let MASTER_URL = '';
 
     const DB = { kanji: [], verb: [], lessons: [], vocabMap: new Map() };
     const activeLessons = new Set();
@@ -549,15 +594,24 @@ window.PracticeModule = {
         let renderType = curType;
         if(curType === 'mixed' && d._type) renderType = d._type;
 
-        // SPEECH TEXT DETERMINATION
+        // SPEECH TEXT DETERMINATION - Using data attribute to prevent injection
         const speakText = d.reading || d.kanji || d.word || d.surface;
-        const speakBtnHtml = `<span onclick="event.stopPropagation(); KanjiApp.speak('${speakText}')" style="cursor:pointer; font-size:0.6em; margin-left:10px; opacity:0.7;">🔊</span>`;
+        const escapedText = speakText.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        const speakBtnHtml = `<span class="jp-speak-btn" data-speak-text="${escapedText}" style="cursor:pointer; font-size:0.6em; margin-left:10px; opacity:0.7;">🔊</span>`;
 
         if(renderType==='kanji') {
             setTxt('k-fc-lbl', d.lesson);
             if(curMode === 'flag-review') setTxt('k-fc-lbl', `🚩 Flags: ${flagCounts[d.kanji]||0}`);
 
             document.getElementById('k-fc-main').innerHTML = d.kanji + speakBtnHtml;
+            // Attach click handler to speaker button
+            const speakBtn = document.querySelector('#k-fc-main .jp-speak-btn');
+            if (speakBtn) {
+                speakBtn.onclick = function(e) {
+                    e.stopPropagation();
+                    KanjiApp.speak(speakText);
+                };
+            }
             setTxt('k-fc-sub', "");
 
             let h = `<div style="text-align:center; font-weight:700; font-size:2rem; margin-bottom:15px; color:var(--primary); line-height:1.2;">${d.meaning}</div>`;
@@ -577,6 +631,14 @@ window.PracticeModule = {
             if(curMode === 'flag-review') setTxt('k-fc-lbl', `🚩 Flags: ${flagCounts[d.word]||0}`);
 
             document.getElementById('k-fc-main').innerHTML = d.word + speakBtnHtml;
+            // Attach click handler to speaker button
+            const speakBtn = document.querySelector('#k-fc-main .jp-speak-btn');
+            if (speakBtn) {
+                speakBtn.onclick = function(e) {
+                    e.stopPropagation();
+                    KanjiApp.speak(speakText);
+                };
+            }
             setTxt('k-fc-sub', "");
 
             let h = `<div style="text-align:center; font-weight:700; font-size:2rem; margin-bottom:10px; color:var(--primary); line-height:1.2;">${d.meaning}</div>`;
@@ -593,6 +655,14 @@ window.PracticeModule = {
 
             const vText = d.kanji==='-'?d.dict:d.kanji;
             document.getElementById('k-fc-main').innerHTML = vText + speakBtnHtml;
+            // Attach click handler to speaker button
+            const speakBtn = document.querySelector('#k-fc-main .jp-speak-btn');
+            if (speakBtn) {
+                speakBtn.onclick = function(e) {
+                    e.stopPropagation();
+                    KanjiApp.speak(speakText);
+                };
+            }
             setTxt('k-fc-sub', "");
 
             let h = `<div style="text-align:center; font-weight:700; font-size:2rem; margin-bottom:15px; color:var(--primary);">${d.meaning}</div>`;
@@ -624,6 +694,9 @@ window.PracticeModule = {
     (async function() {
         try {
             await new Promise(r => setTimeout(r, 50));
+            const manifest = await window.getManifest(REPO_CONFIG);
+            MASTER_URL = window.getAssetUrl(REPO_CONFIG, manifest.globalFiles.glossaryMaster);
+            console.log('[Practice] Glossary URL:', MASTER_URL);
             const raw = await fetch(MASTER_URL + "?t=" + Date.now()).then(r => r.json());
 
             const allVocab = raw.filter(i => i.type === 'vocab');

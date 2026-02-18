@@ -5,8 +5,15 @@ window.GameModule = (function() {
   let config = null;
   let onExit = null;
 
-  function getCdnUrl(filename) {
-    return `https://raw.githubusercontent.com/${config.owner}/${config.repo}/${config.branch}/${config.path ? config.path + '/' : ''}${filename}`;
+  let dayDir = '';
+  let dayData = null;
+
+  function getDayAssetUrl(filename) {
+    return window.getAssetUrl(config, dayDir + '/' + filename);
+  }
+
+  function getSharedAssetUrl(filepath) {
+    return window.getAssetUrl(config, filepath);
   }
 
   function start(containerElement, repoConfig, exitCallback) {
@@ -329,55 +336,33 @@ window.GameModule = (function() {
       conversationIndex: 0
     };
 
-    // Interactive object definitions (left to right, top to bottom)
-    const INTERACTIVE_OBJECTS = [
-      { name: 'Bed', message: 'A comfortable bed. Maybe I should get some rest later.' },
-      { name: 'Computer', message: 'My computer. I should study Japanese on it!' },
-      { name: 'Toilet', message: 'The toilet. It\'s clean.' },
-      { name: 'Fridge', message: 'The fridge is well stocked. Mom went shopping yesterday.' },
-      { name: 'Bedroom Door', isDoor: true },
-      { name: 'TV', message: 'The TV is off. Maybe I can watch some anime later.' },
-      { name: 'Bathroom Door', isDoor: true },
-      { name: 'Kitchen Door', isDoor: true },
-      { name: 'Kotatsu', message: 'The kotatsu is warm and inviting. Perfect for winter!' },
-      { name: 'Front Door', isDoor: true }
-    ];
-
-    // NPC conversations
-    const CONVERSATIONS = {
-      mom: [
-        { speaker: 'mom', text: 'おはよう！朝ごはんは食べた？\n(Good morning! Did you eat breakfast?)' },
-        { speaker: 'me', text: 'おはよう、お母さん。まだだよ。\n(Good morning, Mom. Not yet.)' },
-        { speaker: 'mom', text: '冷蔵庫に卵があるから、食べてね。\n(There are eggs in the fridge, so please eat.)' },
-        { speaker: 'me', text: 'ありがとう！\n(Thank you!)' }
-      ],
-      dad: [
-        { speaker: 'dad', text: 'よう、元気か？\n(Hey, how are you?)' },
-        { speaker: 'me', text: 'うん、元気だよ。お父さんは？\n(Yeah, I\'m good. How about you, Dad?)' },
-        { speaker: 'dad', text: 'まあまあだな。今日は何するんだ？\n(Not bad. What are you doing today?)' },
-        { speaker: 'me', text: '日本語を勉強するつもり。\n(I\'m planning to study Japanese.)' },
-        { speaker: 'dad', text: 'いいね！頑張れよ。\n(Nice! Do your best.)' }
-      ]
-    };
-
     // --- Image Loading ---
-    const imagesToLoad = {
-      map: 'house_map.png',
-      collision: 'house_collision.png',
-      playerSheet: 'me_walk_cycle_sheet_transparent.png',
-      momSprite: 'momsprite.png',
-      dadSprite: 'dadsprite.png',
-      convoBackground: 'house_convo.png',
-      momConvo: 'mom-convo.png',
-      dadConvo: 'dad-convo.png',
-      meConvo: 'me-convo.png'
-    };
-
-    let loadedImages = 0;
-    const totalImages = Object.keys(imagesToLoad).length;
-
     function loadImages() {
-      Object.entries(imagesToLoad).forEach(([key, filename]) => {
+      const assets = dayData.assets;
+
+      // Build image list from day.json: day-level assets + NPC sprites + shared player sprite
+      const imagesToLoad = {
+        map:            getDayAssetUrl(assets.map),
+        collision:      getDayAssetUrl(assets.collision),
+        convoBackground: getDayAssetUrl(assets.convoBackground),
+        playerSheet:    getSharedAssetUrl(dayData._playerSprite)
+      };
+
+      // Add per-NPC sprites and conversation portraits
+      dayData.npcs.forEach(npc => {
+        imagesToLoad['sprite_' + npc.name] = getDayAssetUrl(npc.sprite);
+        imagesToLoad['convo_' + npc.name] = getDayAssetUrl(npc.convoPortrait);
+      });
+
+      // Add player conversation portrait
+      if (dayData.meConvoPortrait) {
+        imagesToLoad['meConvo'] = getDayAssetUrl(dayData.meConvoPortrait);
+      }
+
+      let loadedImages = 0;
+      const totalImages = Object.keys(imagesToLoad).length;
+
+      Object.entries(imagesToLoad).forEach(([key, url]) => {
         const img = new Image();
         img.crossOrigin = "anonymous";
         img.onload = () => {
@@ -387,13 +372,13 @@ window.GameModule = (function() {
           }
         };
         img.onerror = () => {
-          console.error(`Failed to load: ${filename}`);
+          console.error(`Failed to load: ${url}`);
           loadedImages++;
           if (loadedImages === totalImages) {
             initGame();
           }
         };
-        img.src = getCdnUrl(filename);
+        img.src = url;
         game.images[key] = img;
       });
     }
@@ -481,55 +466,12 @@ window.GameModule = (function() {
       tempCtx.drawImage(game.images.collision, 0, 0);
       game.collisionData = tempCtx.getImageData(0, 0, tempCanvas.width, tempCanvas.height);
 
-      // Scan for interactive objects (blue pixels)
-      const found = [];
-      for (let y = 0; y < game.collisionData.height; y++) {
-        for (let x = 0; x < game.collisionData.width; x++) {
-          const color = getPixelColor(game.collisionData, x, y);
-          if (color.b > 200 && color.r < 50 && color.g < 50) {
-            let isNew = true;
-            for (let obj of found) {
-              if (x >= obj.minX && x <= obj.maxX && y >= obj.minY && y <= obj.maxY) {
-                isNew = false;
-                break;
-              }
-            }
-            if (isNew) {
-              const bounds = { minX: x, maxX: x, minY: y, maxY: y };
-              for (let sy = y; sy < Math.min(y + 100, game.collisionData.height); sy++) {
-                for (let sx = x; sx < Math.min(x + 100, game.collisionData.width); sx++) {
-                  const c = getPixelColor(game.collisionData, sx, sy);
-                  if (c.b > 200 && c.r < 50 && c.g < 50) {
-                    bounds.maxX = Math.max(bounds.maxX, sx);
-                    bounds.maxY = Math.max(bounds.maxY, sy);
-                  }
-                }
-              }
-              found.push(bounds);
-            }
-          }
-        }
-      }
-
-      found.sort((a, b) => {
-        const aY = (a.minY + a.maxY) / 2;
-        const bY = (b.minY + b.maxY) / 2;
-        if (Math.abs(aY - bY) > 50) return aY - bY;
-        return (a.minX + a.maxX) / 2 - (b.minX + b.maxX) / 2;
-      });
-
-      game.interactiveObjects = found.map((bounds, i) => {
-        const def = INTERACTIVE_OBJECTS[i] || { name: `Object ${i}`, message: 'An object.' };
-        return {
-          x: bounds.minX,
-          y: bounds.minY,
-          width: bounds.maxX - bounds.minX,
-          height: bounds.maxY - bounds.minY,
-          centerX: (bounds.minX + bounds.maxX) / 2,
-          centerY: (bounds.minY + bounds.maxY) / 2,
-          ...def
-        };
-      });
+      // Build interactive objects from day.json
+      game.interactiveObjects = dayData.objects.map(obj => ({
+        ...obj,
+        centerX: obj.x + obj.width / 2,
+        centerY: obj.y + obj.height / 2
+      }));
 
       game.interactiveObjects.forEach(obj => {
         if (obj.isDoor) {
@@ -537,42 +479,30 @@ window.GameModule = (function() {
         }
       });
 
-      // Place NPCs (calculate proper dimensions when images load)
-      game.npcs = [
-        {
-          name: 'mom',
-          x: 970,
-          y: 330,
-          sprite: game.images.momSprite,
-          conversation: 'mom'
-        },
-        {
-          name: 'dad',
-          x: 610,
-          y: 690,
-          sprite: game.images.dadSprite,
-          conversation: 'dad'
+      // Build NPCs from day.json
+      game.npcs = dayData.npcs.map(npc => {
+        const spriteImg = game.images['sprite_' + npc.name];
+        let width = 72, height = 108;
+        if (spriteImg && spriteImg.complete) {
+          const aspectRatio = spriteImg.width / spriteImg.height;
+          height = 108;
+          width = height * aspectRatio;
         }
-      ];
-
-      // Set NPC dimensions based on sprite aspect ratio
-      game.npcs.forEach(npc => {
-        if (npc.sprite && npc.sprite.complete) {
-          const aspectRatio = npc.sprite.width / npc.sprite.height;
-          npc.height = 108;
-          npc.width = npc.height * aspectRatio;
-        } else {
-          npc.width = 72;
-          npc.height = 108;
-        }
+        return {
+          name: npc.name,
+          x: npc.x,
+          y: npc.y,
+          sprite: spriteImg,
+          conversation: npc.conversation,
+          convoPortrait: game.images['convo_' + npc.name],
+          width: width,
+          height: height
+        };
       });
 
-      // Set player start position (by the bed)
-      if (game.interactiveObjects.length > 0) {
-        const bed = game.interactiveObjects[0];
-        game.player.x = bed.centerX;
-        game.player.y = bed.centerY + 50;
-      }
+      // Set player start position from day.json
+      game.player.x = dayData.playerStart.x;
+      game.player.y = dayData.playerStart.y;
 
       // --- Input Handling ---
       function handleKeyDown(e) {
@@ -739,8 +669,12 @@ window.GameModule = (function() {
         if (game.player.direction === 'right') checkX += interactDistance;
 
         for (let obj of game.interactiveObjects) {
-          const dx = checkX - obj.centerX;
-          const dy = checkY - obj.centerY;
+          // Calculate distance to nearest edge of object (not center)
+          // This allows interaction with tall/wide objects like doors
+          const nearestX = Math.max(obj.x, Math.min(checkX, obj.x + obj.width));
+          const nearestY = Math.max(obj.y, Math.min(checkY, obj.y + obj.height));
+          const dx = checkX - nearestX;
+          const dy = checkY - nearestY;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < interactDistance) {
@@ -783,12 +717,21 @@ window.GameModule = (function() {
       }
 
       // --- Conversation System ---
-      function startConversation(conversationId) {
+      // Build portrait lookup from NPC data
+      const portraitMap = {};
+      game.npcs.forEach(npc => {
+        portraitMap[npc.name] = npc.convoPortrait;
+      });
+      if (game.images.meConvo) {
+        portraitMap['me'] = game.images.meConvo;
+      }
+
+      function startConversation(conversationData) {
         game.inConversation = true;
-        game.currentConversation = CONVERSATIONS[conversationId];
+        game.currentConversation = conversationData;
         game.conversationIndex = 0;
 
-        convoOverlay.style.backgroundImage = `url(${getCdnUrl('house_convo.png')})`;
+        convoOverlay.style.backgroundImage = `url(${getDayAssetUrl(dayData.assets.convoBackground)})`;
         convoOverlay.style.display = 'flex';
 
         displayConversationLine();
@@ -803,12 +746,8 @@ window.GameModule = (function() {
         const line = game.currentConversation[game.conversationIndex];
         convoText.textContent = line.text;
 
-        let portraitSrc = '';
-        if (line.speaker === 'mom') portraitSrc = getCdnUrl('mom-convo.png');
-        else if (line.speaker === 'dad') portraitSrc = getCdnUrl('dad-convo.png');
-        else if (line.speaker === 'me') portraitSrc = getCdnUrl('me-convo.png');
-
-        convoPortrait.src = portraitSrc;
+        const portrait = portraitMap[line.speaker];
+        convoPortrait.src = portrait ? portrait.src : '';
       }
 
       function advanceConversation() {
@@ -982,7 +921,31 @@ window.GameModule = (function() {
       gameLoop();
     }
 
-    loadImages();
+    // Fetch manifest → day.json → then load images
+    const cacheBust = '?t=' + Date.now();
+    let playerSpritePath = 'shared/sprites/me_sheet.png';
+
+    window.getManifest(config)
+      .then(manifest => {
+        // Use first game day from N5 (day-01-home)
+        const gameEntry = manifest.data.N5.game[0];
+        dayDir = gameEntry.dir;
+        playerSpritePath = manifest.shared.playerSprite;
+        const dayUrl = getSharedAssetUrl(dayDir + '/day.json') + cacheBust;
+        console.log('[Game] Day data URL:', dayUrl);
+        return fetch(dayUrl).then(r => r.json());
+      })
+      .then(data => {
+        dayData = data;
+        dayData._playerSprite = playerSpritePath;
+        console.log('[Game] Player sprite URL:', getSharedAssetUrl(playerSpritePath));
+        loadImages();
+      })
+      .catch(err => {
+        console.error('Failed to load game data:', err);
+        const loading = gameContainer.querySelector('.jp-game-loading');
+        if (loading) loading.innerHTML = `<div style="color:#ff4757">Error loading game: ${err.message}</div>`;
+      });
   }
 
   return {
