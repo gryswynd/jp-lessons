@@ -142,6 +142,7 @@ window.ComposeModule = {
             .c-chip:hover { background: var(--c-primary-light); border-color: var(--c-primary); }
             .c-chip:active { transform: scale(0.95); }
             .c-chip-jp { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 0.9rem; }
+            .c-chip-reading { color: #78909C; font-size: 0.75rem; font-family: 'Noto Sans JP', sans-serif; }
             .c-chip-en { color: var(--c-text-sub); font-size: 0.75rem; }
             .c-chip-cat { background: var(--c-primary-light); color: var(--c-primary-dark); font-weight: 800; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; }
 
@@ -214,7 +215,8 @@ window.ComposeModule = {
         'N4.30': { title: 'Thoughts & Answers', kanji: '思 特 集 答', focus: 'Thinking, special occasions, gathering' },
         'N4.31': { title: 'Times & Openings', kanji: '代 森 堂 開', focus: 'Eras, forests, halls, and opening things' },
         'N4.32': { title: 'Use, Learn, & The City', kanji: '引 用 習 市', focus: 'Pulling, usage, learning skills, and city life' },
-        'N4.33': { title: 'Places, Factories, & Buildings', kanji: '場 工 広 建', focus: 'Places, construction, width, and buildings' }
+        'N4.33': { title: 'Places, Factories, & Buildings', kanji: '場 工 広 建', focus: 'Places, construction, width, and buildings' },
+        'N4.34': { title: 'Districts, Departure, & Commuting', kanji: '区 発 県 通', focus: 'Administrative divisions, departures, and commuting' }
     };
 
     let PROMPTS = [];
@@ -222,7 +224,7 @@ window.ComposeModule = {
     let PARTICLES = [];
 
     // --- STATE ---
-    const selectedLessons = new Set(['N4.28', 'N4.29', 'N4.30', 'N4.31', 'N4.32', 'N4.33']);
+    const selectedLessons = new Set(['N4.28', 'N4.29', 'N4.30', 'N4.31', 'N4.32', 'N4.33', 'N4.34']);
     let currentPrompt = null;
     let lessonVocab = []; // vocab items from glossary for selected lessons
     let allVocab = [];    // all vocab from glossary
@@ -380,8 +382,10 @@ window.ComposeModule = {
         let vocabChipHtml = '';
         filteredVocab.forEach(v => {
             const meaning = (v.meaning || '').substring(0, 25);
+            const readingHtml = v.reading ? `<span class="c-chip-reading">${escHtml(v.reading)}</span>` : '';
             vocabChipHtml += `<div class="c-chip" onclick="ComposeApp.insertWord('${escHtml(v.surface)}')" title="${escHtml(v.meaning)}">
                 <span class="c-chip-jp">${escHtml(v.surface)}</span>
+                ${readingHtml}
                 <span class="c-chip-en">${escHtml(meaning)}</span>
             </div>`;
         });
@@ -391,8 +395,10 @@ window.ComposeModule = {
         HELPER_VOCAB.forEach(cat => {
             helperHtml += `<div style="margin-bottom:8px;"><span class="c-chip-cat">${escHtml(cat.cat)}</span></div><div class="c-chip-wrap" style="margin-bottom:10px;">`;
             cat.words.forEach(w => {
+                const readingHtml = w.reading ? `<span class="c-chip-reading">${escHtml(w.reading)}</span>` : '';
                 helperHtml += `<div class="c-chip" onclick="ComposeApp.insertWord('${escHtml(w.surface)}')" title="${escHtml(w.meaning)}">
                     <span class="c-chip-jp">${escHtml(w.surface)}</span>
+                    ${readingHtml}
                     <span class="c-chip-en">${escHtml(w.meaning)}</span>
                 </div>`;
             });
