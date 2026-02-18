@@ -77,7 +77,9 @@
         { "id": "N4.Review.Master", "title": "N4 Complete Phase 4 Review",        "file": "data/N4/reviews/N4 Half Review.json" }
       ],
       "compose": "data/N4/compose/compose.N4.json",
-      "stories": [],
+      "stories": [
+        { "id": "new-city", "title": "In the New City", "titleJp": "新しい都市で", "dir": "data/N4/stories/new-city" }
+      ],
       "game": []
     }
   }

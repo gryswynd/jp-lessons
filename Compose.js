@@ -121,6 +121,7 @@ window.ComposeModule = {
             .c-chip:hover { background: var(--c-primary-light); border-color: var(--c-primary); }
             .c-chip:active { transform: scale(0.95); }
             .c-chip-jp { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 0.9rem; }
+            .c-chip-reading { color: #78909C; font-size: 0.75rem; font-family: 'Noto Sans JP', sans-serif; }
             .c-chip-en { color: var(--c-text-sub); font-size: 0.75rem; }
             .c-chip-cat { background: var(--c-primary-light); color: var(--c-primary-dark); font-weight: 800; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; }
 
@@ -193,7 +194,8 @@ window.ComposeModule = {
         'N4.30': { title: 'Thoughts & Answers', kanji: '思 特 集 答', focus: 'Thinking, special occasions, gathering' },
         'N4.31': { title: 'Times & Openings', kanji: '代 森 堂 開', focus: 'Eras, forests, halls, and opening things' },
         'N4.32': { title: 'Use, Learn, & The City', kanji: '引 用 習 市', focus: 'Pulling, usage, learning skills, and city life' },
-        'N4.33': { title: 'Places, Factories, & Buildings', kanji: '場 工 広 建', focus: 'Places, construction, width, and buildings' }
+        'N4.33': { title: 'Places, Factories, & Buildings', kanji: '場 工 広 建', focus: 'Places, construction, width, and buildings' },
+        'N4.34': { title: 'Districts, Departure, & Commuting', kanji: '区 発 県 通', focus: 'Administrative divisions, departures, and commuting' }
     };
 
     let PROMPTS = [];
@@ -201,10 +203,12 @@ window.ComposeModule = {
     let PARTICLES = [];
 
     // --- STATE ---
-    const selectedLessons = new Set(['N4.28', 'N4.29', 'N4.30', 'N4.31', 'N4.32', 'N4.33']);
+    const selectedLessons = new Set(['N4.28', 'N4.29', 'N4.30', 'N4.31', 'N4.32', 'N4.33', 'N4.34']);
     let currentPrompt = null;
+    let currentResolvedTargets = []; // targets resolved from glossary for the active prompt
     let lessonVocab = []; // vocab items from glossary for selected lessons
     let allVocab = [];    // all vocab from glossary
+    let vocabById = new Map(); // all glossary entries keyed by id
 
     // --- HELPER FUNCTIONS ---
     function countOccurrences(text, matches) {
@@ -343,9 +347,21 @@ window.ComposeModule = {
             return true;
         });
 
+        // Resolve targets from glossary (fall back to inline fields for old format)
+        currentResolvedTargets = (prompt.targets || []).map(t => {
+            const entry = t.id ? vocabById.get(t.id) : null;
+            return {
+                surface: (entry && entry.surface) || t.surface || '',
+                reading: (entry && entry.reading) || t.reading || '',
+                meaning: (entry && entry.meaning) || t.meaning || '',
+                count: t.count || 1,
+                matches: t.matches || (entry ? [entry.surface, entry.reading].filter(Boolean) : [t.surface || ''])
+            };
+        });
+
         // Build target tracking HTML
         let targetHtml = '';
-        prompt.targets.forEach((t, i) => {
+        currentResolvedTargets.forEach((t, i) => {
             targetHtml += `<div class="c-target-item" id="c-tgt-${i}">
                 <div class="c-target-check" id="c-tgt-chk-${i}"></div>
                 <span class="c-target-surface" onclick="ComposeApp.insertWord('${escHtml(t.surface)}')" title="Click to insert">${escHtml(t.surface)}</span>
@@ -359,19 +375,40 @@ window.ComposeModule = {
         let vocabChipHtml = '';
         filteredVocab.forEach(v => {
             const meaning = (v.meaning || '').substring(0, 25);
+            const readingHtml = v.reading ? `<span class="c-chip-reading">${escHtml(v.reading)}</span>` : '';
             vocabChipHtml += `<div class="c-chip" onclick="ComposeApp.insertWord('${escHtml(v.surface)}')" title="${escHtml(v.meaning)}">
                 <span class="c-chip-jp">${escHtml(v.surface)}</span>
+                ${readingHtml}
                 <span class="c-chip-en">${escHtml(meaning)}</span>
             </div>`;
         });
 
-        // Build helper vocab chips by category
+        // Build per-prompt helper chips (Actions & Descriptors from glossary)
         let helperHtml = '';
+        if (prompt.helpers && prompt.helpers.length > 0) {
+            const helperEntries = prompt.helpers.map(id => vocabById.get(id)).filter(Boolean);
+            if (helperEntries.length > 0) {
+                helperHtml += '<div style="margin-bottom:8px;"><span class="c-chip-cat">Actions & Descriptors</span></div><div class="c-chip-wrap" style="margin-bottom:10px;">';
+                helperEntries.forEach(e => {
+                    const readingHtml = e.reading ? `<span class="c-chip-reading">${escHtml(e.reading)}</span>` : '';
+                    helperHtml += `<div class="c-chip" onclick="ComposeApp.insertWord('${escHtml(e.surface)}')" title="${escHtml(e.meaning)}">
+                        <span class="c-chip-jp">${escHtml(e.surface)}</span>
+                        ${readingHtml}
+                        <span class="c-chip-en">${escHtml(e.meaning)}</span>
+                    </div>`;
+                });
+                helperHtml += '</div>';
+            }
+        }
+
+        // Build static helper vocab chips by category
         HELPER_VOCAB.forEach(cat => {
             helperHtml += `<div style="margin-bottom:8px;"><span class="c-chip-cat">${escHtml(cat.cat)}</span></div><div class="c-chip-wrap" style="margin-bottom:10px;">`;
             cat.words.forEach(w => {
+                const readingHtml = w.reading ? `<span class="c-chip-reading">${escHtml(w.reading)}</span>` : '';
                 helperHtml += `<div class="c-chip" onclick="ComposeApp.insertWord('${escHtml(w.surface)}')" title="${escHtml(w.meaning)}">
                     <span class="c-chip-jp">${escHtml(w.surface)}</span>
+                    ${readingHtml}
                     <span class="c-chip-en">${escHtml(w.meaning)}</span>
                 </div>`;
             });
@@ -398,7 +435,7 @@ window.ComposeModule = {
                     <div class="c-progress-bar-inner" id="c-progress-fill" style="width:0%"></div>
                 </div>
                 <div class="c-progress-text">
-                    <span id="c-progress-lbl">0 / ${prompt.targets.length} target words used</span>
+                    <span id="c-progress-lbl">0 / ${currentResolvedTargets.length} target words used</span>
                     <span id="c-progress-pct">0%</span>
                 </div>
             </div>
@@ -501,9 +538,9 @@ window.ComposeModule = {
         const text = input.value;
 
         let totalMet = 0;
-        const totalTargets = currentPrompt.targets.length;
+        const totalTargets = currentResolvedTargets.length;
 
-        currentPrompt.targets.forEach((t, i) => {
+        currentResolvedTargets.forEach((t, i) => {
             const count = countOccurrences(text, t.matches);
             const met = count >= t.count;
             if (met) totalMet++;
@@ -712,7 +749,9 @@ window.ComposeModule = {
             HELPER_VOCAB = helperData.categories;
             PARTICLES = particleData.particles;
 
-            allVocab = glossary.entries.filter(i => i.type === 'vocab');
+            allVocab = glossary.filter(i => i.type === 'vocab');
+            vocabById = new Map();
+            glossary.forEach(e => vocabById.set(e.id, e));
             lessonVocab = allVocab.filter(v => {
                 const lessons = (v.lesson_ids || v.lesson || '').split(',').map(s => s.trim());
                 return lessons.some(l => Object.keys(LESSON_META).includes(l));
