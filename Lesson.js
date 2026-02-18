@@ -146,15 +146,6 @@ window.LessonModule = {
     }
 
 
-    // --- Conjugation Logic ---
-    const GODAN_MAPS = {
-        u_to_i: { 'う': 'い', 'く': 'き', 'ぐ': 'ぎ', 'す': 'し', 'つ': 'ち', 'ぬ': 'に', 'ぶ': 'び', 'む': 'み', 'る': 'り' },
-        u_to_a: { 'う': 'わ', 'く': 'か', 'ぐ': 'が', 'す': 'さ', 'つ': 'た', 'ぬ': 'な', 'ぶ': 'ば', 'む': 'ま', 'る': 'ら' },
-        u_to_e: { 'う': 'え', 'く': 'け', 'ぐ': 'げ', 'す': 'せ', 'つ': 'て', 'ぬ': 'ね', 'ぶ': 'べ', 'む': 'め', 'る': 'れ' },
-        ta_form: { 'う': 'った', 'つ': 'った', 'る': 'った', 'む': 'んだ', 'ぶ': 'んだ', 'ぬ': 'んだ', 'く': 'いた', 'ぐ': 'いだ', 'す': 'した' },
-        te_form: { 'う': 'って', 'つ': 'って', 'る': 'って', 'む': 'んで', 'ぶ': 'んで', 'ぬ': 'んで', 'く': 'いて', 'ぐ': 'いで', 'す': 'して' }
-    };
-
     async function loadResources() {
         const manifest = await window.getManifest(REPO_CONFIG);
         const glossaryUrl = getCdnUrl(manifest.globalFiles.glossaryMaster);
@@ -167,78 +158,6 @@ window.LessonModule = {
         ]);
         const map = {}; gloss.forEach(i => { map[i.id] = i; });
         return { map, conj };
-    }
-
-    function conjugate(term, ruleKey) {
-        if (!term || !CONJUGATION_RULES) return term;
-        const formDef = CONJUGATION_RULES[ruleKey];
-        if (!formDef) return term;
-
-        let vClass = term.verb_class || term.gtype;
-        if (vClass === 'u') vClass = 'godan';
-        if (vClass === 'ru') vClass = 'ichidan';
-        if (vClass === 'verb') vClass = 'godan';
-        if (!vClass) vClass = 'godan';
-
-        const rule = formDef.rules[vClass];
-        if (!rule) return term;
-
-        let newSurface = term.surface;
-        let newReading = term.reading || "";
-
-        if (rule.type === 'replace') {
-            newSurface = rule.surface; newReading = rule.reading;
-        } else if (rule.type === 'suffix') {
-            if (rule.remove && newSurface.endsWith(rule.remove)) {
-               newSurface = newSurface.slice(0, -rule.remove.length) + rule.add;
-               newReading = newReading.slice(0, -rule.remove.length) + rule.add;
-            } else {
-               newSurface += rule.add; newReading += rule.add;
-            }
-        } else if (rule.type === 'godan_change') {
-            const lastChar = newSurface.slice(-1);
-            const map = GODAN_MAPS[rule.map];
-            if (map && map[lastChar]) {
-              newSurface = newSurface.slice(0, -1) + map[lastChar] + rule.add;
-              newReading = newReading.slice(0, -1) + (GODAN_MAPS[rule.map][newReading.slice(-1)] || newReading.slice(-1)) + rule.add;
-            }
-        } else if (rule.type === 'godan_euphonic') {
-            const lastChar = newSurface.slice(-1);
-            const lastReadingChar = newReading.slice(-1);
-            const map = GODAN_MAPS[rule.map];
-            if (map && map[lastChar]) {
-              newSurface = newSurface.slice(0, -1) + map[lastChar];
-              newReading = newReading.slice(0, -1) + (map[lastReadingChar] || map[lastChar]);
-            }
-        }
-        return { ...term, id: `${term.id}_${ruleKey}`, surface: newSurface, reading: newReading, meaning: term.meaning + ` (${formDef.label})`, original_id: term.id };
-    }
-
-    // --- Text Processing ---
-    function processText(text, termRefs) {
-        if (!text) return "";
-        let html = esc(text);
-        if (!termRefs || termRefs.length === 0) return html;
-
-        const terms = termRefs.map(ref => {
-          if (typeof ref === 'string') return termMapData[ref];
-          else if (typeof ref === 'object' && ref.id && ref.form) {
-            const rootTerm = termMapData[ref.id];
-            if (!rootTerm) return null;
-            const conjugated = conjugate(rootTerm, ref.form);
-            if (conjugated) termMapData[conjugated.id] = conjugated;
-            return conjugated;
-          }
-          return null;
-        }).filter(Boolean).sort((a,b) => b.surface.length - a.surface.length);
-
-        terms.forEach(t => {
-          let matchedForm = null;
-          if (html.includes(t.surface)) matchedForm = t.surface;
-          else if (t.reading && html.includes(t.reading)) matchedForm = t.reading;
-          if (matchedForm) html = html.split(matchedForm).join(`<span class="jp-term" onclick="window.JP_OPEN_TERM('${t.id}', true)">${matchedForm}</span>`);
-        });
-        return html;
     }
 
     // --- Modal ---
@@ -340,7 +259,7 @@ window.LessonModule = {
         const div = el("div", ""); div.appendChild(createToggle());
         (sec.lines || []).forEach(line => {
           const row = el("div", "jp-row");
-          row.innerHTML = `<div class="jp-speaker-bubble" translate="no">${line.spk}</div><div style="flex:1"><div class="jp-jp">${processText(line.jp, line.terms)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(line.en)}</div></div>`;
+          row.innerHTML = `<div class="jp-speaker-bubble" translate="no">${line.spk}</div><div style="flex:1"><div class="jp-jp">${window.JPShared.textProcessor.processText(line.jp, line.terms, termMapData, CONJUGATION_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(line.en)}</div></div>`;
           div.appendChild(row);
         });
         return div;
@@ -350,7 +269,7 @@ window.LessonModule = {
         const div = el("div", ""); div.appendChild(createToggle());
         (sec.items || []).forEach((item, idx) => {
             const row = el("div", "jp-row");
-            row.innerHTML = `<div class="jp-speaker-bubble" translate="no">${idx+1}</div><div style="flex:1"><div class="jp-jp">${processText(item.jp, item.terms)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(item.en)}</div></div>`;
+            row.innerHTML = `<div class="jp-speaker-bubble" translate="no">${idx+1}</div><div style="flex:1"><div class="jp-jp">${window.JPShared.textProcessor.processText(item.jp, item.terms, termMapData, CONJUGATION_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(item.en)}</div></div>`;
             div.appendChild(row);
         });
         return div;
@@ -391,37 +310,12 @@ window.LessonModule = {
         return div;
     }
 
-    // Helper function to resolve root term from potentially conjugated term IDs
-    function getRootTerm(termId) {
-      // Try direct lookup first (handles both base terms and already-generated conjugations)
-      let term = termMapData[termId];
-      if (term) {
-        // If it has an original_id, get the root term
-        return term.original_id ? termMapData[term.original_id] : term;
-      }
-
-      // Term not found - likely a conjugated form that hasn't been generated yet
-      // Try progressively removing suffix parts to find the base term
-      const parts = termId.split('_');
-      while (parts.length > 1) {
-        parts.pop(); // Remove last segment
-        const candidateId = parts.join('_');
-        term = termMapData[candidateId];
-        if (term) {
-          // Found the base term
-          return term.original_id ? termMapData[term.original_id] : term;
-        }
-      }
-
-      return null; // No root term found
-    }
-
     function renderDrills(sec) {
          const div = el("div", "");
          (sec.items || []).forEach(item => {
            if (item.kind === 'mcq') {
              const card = el("div", "jp-card");
-             card.innerHTML = `<div class="jp-jp" style="margin-bottom:15px; font-weight:bold;">${processText(item.q, item.terms)}</div>`;
+             card.innerHTML = `<div class="jp-jp" style="margin-bottom:15px; font-weight:bold;">${window.JPShared.textProcessor.processText(item.q, item.terms, termMapData, CONJUGATION_RULES)}</div>`;
              const optsDiv = el("div");
              let solved = false;
 
@@ -444,7 +338,7 @@ window.LessonModule = {
                        const activeFlags = JSON.parse(localStorage.getItem('k-active-flags') || '{}');
 
                        item.terms.forEach(termId => {
-                         const rootTerm = getRootTerm(termId);
+                         const rootTerm = window.JPShared.textProcessor.getRootTerm(termId, termMapData);
                          if(rootTerm) {
                            const key = rootTerm.surface;
                            flags[key] = (flags[key] || 0) + 1;
@@ -470,7 +364,7 @@ window.LessonModule = {
         const div = el("div", ""); div.appendChild(createToggle());
         const pCard = el("div", "jp-card");
         (sec.passage || []).forEach(p => {
-            pCard.appendChild(el("div", "", `<div class="jp-jp" style="margin-bottom:8px;">${processText(p.jp, p.terms)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(p.en)}</div>`));
+            pCard.appendChild(el("div", "", `<div class="jp-jp" style="margin-bottom:8px;">${window.JPShared.textProcessor.processText(p.jp, p.terms, termMapData, CONJUGATION_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(p.en)}</div>`));
         });
         div.appendChild(pCard);
 
@@ -479,7 +373,7 @@ window.LessonModule = {
           qCard.innerHTML = `<div style="font-weight:700; color:#888; margin-bottom:15px;">COMPREHENSION CHECK</div>`;
           sec.questions.forEach((q, i) => {
              const row = el("div", "jp-row");
-             row.innerHTML = `<div class="jp-speaker-bubble" translate="no">Q${i+1}</div><div style="flex:1"><div class="jp-jp" style="font-weight:700;">${processText(q.q, q.terms)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">Ans: ${esc(q.a)}</div></div>`;
+             row.innerHTML = `<div class="jp-speaker-bubble" translate="no">Q${i+1}</div><div style="flex:1"><div class="jp-jp" style="font-weight:700;">${window.JPShared.textProcessor.processText(q.q, q.terms, termMapData, CONJUGATION_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">Ans: ${esc(q.a)}</div></div>`;
              qCard.appendChild(row);
           });
           div.appendChild(qCard);

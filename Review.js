@@ -515,23 +515,8 @@
 
     // --- TERM & FLAGGING LOGIC ---
 
-    getRootTerm: function(termId) {
-        let term = this.state.termMap[termId];
-        if (term) return term.original_id ? this.state.termMap[term.original_id] : term;
-
-        // Try stripping suffixes for conjugated terms not in map
-        const parts = termId.split('_');
-        while (parts.length > 1) {
-            parts.pop();
-            const candidateId = parts.join('_');
-            term = this.state.termMap[candidateId];
-            if (term) return term.original_id ? this.state.termMap[term.original_id] : term;
-        }
-        return null;
-    },
-
     flagTerm: function(termId) {
-        const rootTerm = this.getRootTerm(termId);
+        const rootTerm = window.JPShared.textProcessor.getRootTerm(termId, this.state.termMap);
         if (!rootTerm) return false;
 
         const flags = JSON.parse(localStorage.getItem('k-flags') || '{}');
@@ -565,81 +550,6 @@
         }
 
         document.querySelector('.jp-modal-overlay').style.display = 'flex';
-    },
-
-    // --- TEXT PROCESSING (Conjugation & Wrapping) ---
-
-    conjugate: function(term, ruleKey) {
-        if (!term || !this.state.conjugations) return term;
-        const formDef = this.state.conjugations[ruleKey];
-        if (!formDef) return term;
-
-        let vClass = term.verb_class || term.gtype || 'godan';
-        if (vClass === 'u') vClass = 'godan';
-        if (vClass === 'ru') vClass = 'ichidan';
-        if (vClass === 'verb') vClass = 'godan';
-
-        const rule = formDef.rules[vClass];
-        if (!rule) return term;
-
-        // Logic simplified for display (mirroring Lesson.js)
-        const GODAN_MAPS = {
-            u_to_i: { 'う': 'い', 'く': 'き', 'ぐ': 'ぎ', 'す': 'し', 'つ': 'ち', 'ぬ': 'に', 'ぶ': 'び', 'む': 'み', 'る': 'り' },
-            ta_form: { 'う': 'った', 'つ': 'った', 'る': 'った', 'む': 'んだ', 'ぶ': 'んだ', 'ぬ': 'んだ', 'く': 'いた', 'ぐ': 'いだ', 'す': 'した' },
-            te_form: { 'う': 'って', 'つ': 'って', 'る': 'って', 'む': 'んで', 'ぶ': 'んで', 'ぬ': 'んで', 'く': 'いて', 'ぐ': 'いで', 'す': 'して' }
-        };
-
-        let newSurface = term.surface;
-        if (rule.type === 'replace') {
-            newSurface = rule.surface;
-        } else if (rule.type === 'suffix') {
-            if (rule.remove && newSurface.endsWith(rule.remove)) {
-               newSurface = newSurface.slice(0, -rule.remove.length) + rule.add;
-            } else {
-               newSurface += rule.add;
-            }
-        } else if (rule.type === 'godan_change') {
-            const lastChar = newSurface.slice(-1);
-            const map = GODAN_MAPS[rule.map];
-            if (map && map[lastChar]) newSurface = newSurface.slice(0, -1) + map[lastChar] + rule.add;
-        } else if (rule.type === 'godan_euphonic') {
-            const lastChar = newSurface.slice(-1);
-            const map = GODAN_MAPS[rule.map];
-            if (map && map[lastChar]) newSurface = newSurface.slice(0, -1) + map[lastChar];
-        }
-
-        // Return a transient term object
-        return { ...term, id: `${term.id}_${ruleKey}`, surface: newSurface, original_id: term.id };
-    },
-
-    processText: function(text, termRefs) {
-        if (!text) return "";
-        let html = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        if (!termRefs || termRefs.length === 0) return html;
-
-        // 1. Resolve Terms (Conjugate if needed)
-        const terms = termRefs.map(ref => {
-          if (typeof ref === 'string') return this.state.termMap[ref];
-          else if (typeof ref === 'object' && ref.id && ref.form) {
-            const rootTerm = this.state.termMap[ref.id];
-            if (!rootTerm) return null;
-            const conjugated = this.conjugate(rootTerm, ref.form);
-            if (conjugated) this.state.termMap[conjugated.id] = conjugated; // Cache it
-            return conjugated;
-          }
-          return null;
-        }).filter(Boolean).sort((a,b) => b.surface.length - a.surface.length);
-
-        // 2. Wrap in Spans
-        terms.forEach(t => {
-          let matchedForm = t.surface;
-          // Simple replaceall avoiding nested tags
-          const regex = new RegExp(matchedForm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), "g");
-          html = html.replace(regex, `<span class="jp-term" onclick="window.JP_OPEN_TERM('${t.id}', true)">${matchedForm}</span>`);
-        });
-
-        // Clean markers
-        return html;
     },
 
     // --- QUIZ LOGIC ---
@@ -726,7 +636,7 @@
           html += `
             <div class="jp-convo-line">
               <div class="jp-convo-spk">${line.spk}</div>
-              <div class="jp-convo-text">${this.processText(line.jp, line.terms)}</div>
+              <div class="jp-convo-text">${window.JPShared.textProcessor.processText(line.jp, line.terms, this.state.termMap, this.state.conjugations)}</div>
               </div>
           `;
         });
@@ -736,13 +646,13 @@
       else if (q.type === 'reading_mcq') {
         html += `<div class="jp-passage">`;
         q.passage.forEach(p => {
-            html += `<div style="margin-bottom:12px; font-size:1.1rem; line-height:1.6;">${this.processText(p.jp, p.terms)}</div>`;
+            html += `<div style="margin-bottom:12px; font-size:1.1rem; line-height:1.6;">${window.JPShared.textProcessor.processText(p.jp, p.terms, this.state.termMap, this.state.conjugations)}</div>`;
         });
         html += `</div>`;
       }
 
       // Question Text (Processed for highlighting)
-      const qText = this.processText(q.q, q.terms).replace(/\[(.*?)\]/g, '<span class="jp-highlight">$1</span>');
+      const qText = window.JPShared.textProcessor.processText(q.q, q.terms, this.state.termMap, this.state.conjugations).replace(/\[(.*?)\]/g, '<span class="jp-highlight">$1</span>');
       html += `<div class="jp-q-text">${qText}</div>`;
 
       html += `<div id="jp-interaction"></div>`;

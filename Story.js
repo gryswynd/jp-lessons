@@ -288,15 +288,6 @@ window.StoryModule = (function() {
     });
   }
 
-  // Conjugation maps (same as Lesson.js)
-  const GODAN_MAPS = {
-    u_to_i: { 'う': 'い', 'く': 'き', 'ぐ': 'ぎ', 'す': 'し', 'つ': 'ち', 'ぬ': 'に', 'ぶ': 'び', 'む': 'み', 'る': 'り' },
-    u_to_a: { 'う': 'わ', 'く': 'か', 'ぐ': 'が', 'す': 'さ', 'つ': 'た', 'ぬ': 'な', 'ぶ': 'ば', 'む': 'ま', 'る': 'ら' },
-    u_to_e: { 'う': 'え', 'く': 'け', 'ぐ': 'げ', 'す': 'せ', 'つ': 'て', 'ぬ': 'ね', 'ぶ': 'べ', 'む': 'め', 'る': 'れ' },
-    ta_form: { 'う': 'った', 'つ': 'った', 'る': 'った', 'む': 'んだ', 'ぶ': 'んだ', 'ぬ': 'んだ', 'く': 'いた', 'ぐ': 'いだ', 'す': 'した' },
-    te_form: { 'う': 'って', 'つ': 'って', 'る': 'って', 'む': 'んで', 'ぶ': 'んで', 'ぬ': 'んで', 'く': 'いて', 'ぐ': 'いで', 'す': 'して' }
-  };
-
   async function loadResources() {
     try {
       const manifest = await window.getManifest(config);
@@ -322,54 +313,6 @@ window.StoryModule = (function() {
     } catch (err) {
       console.warn('Could not load glossary/conjugation:', err);
     }
-  }
-
-  function conjugate(term, ruleKey) {
-    if (!term || !CONJUGATION_RULES) return term;
-    const formDef = CONJUGATION_RULES[ruleKey];
-    if (!formDef) return term;
-
-    let vClass = term.verb_class || term.gtype;
-    if (vClass === 'u') vClass = 'godan';
-    if (vClass === 'ru') vClass = 'ichidan';
-    if (vClass === 'verb') vClass = 'godan';
-    if (!vClass) vClass = 'godan';
-
-    const rule = formDef.rules[vClass];
-    if (!rule) return term;
-
-    let newSurface = term.surface;
-    let newReading = term.reading || "";
-
-    if (rule.type === 'replace') {
-      newSurface = rule.surface;
-      newReading = rule.reading;
-    } else if (rule.type === 'suffix') {
-      if (rule.remove && newSurface.endsWith(rule.remove)) {
-        newSurface = newSurface.slice(0, -rule.remove.length) + rule.add;
-        newReading = newReading.slice(0, -rule.remove.length) + rule.add;
-      } else {
-        newSurface += rule.add;
-        newReading += rule.add;
-      }
-    } else if (rule.type === 'stem_map') {
-      const mapKey = rule.map;
-      const map = GODAN_MAPS[mapKey];
-      if (map) {
-        const lastChar = newSurface.slice(-1);
-        if (map[lastChar]) {
-          newSurface = newSurface.slice(0, -1) + map[lastChar] + (rule.add || '');
-          newReading = newReading.slice(0, -1) + map[lastChar] + (rule.add || '');
-        }
-      }
-    }
-
-    return {
-      ...term,
-      surface: newSurface,
-      reading: newReading,
-      _original: term.surface
-    };
   }
 
   function setupTermModal() {
