@@ -544,20 +544,28 @@ window.StoryModule = (function() {
       });
     }
 
-    window.JP_OPEN_TERM = function(id, enableFlag = true) {
+    window.JP_OPEN_TERM = function(id, form, enableFlag = true) {
       const t = termMapData[id];
       if (!t) return;
 
-      const textToSpeak = t.reading || t.surface;
+      // Apply conjugation when a form is specified (e.g. "polite_past", "te_form")
+      const displayTerm = (form && CONJUGATION_RULES) ? conjugate(t, form) : t;
+      const textToSpeak = displayTerm.reading || displayTerm.surface;
 
       const titleHtml = `
         <div style="display:flex; align-items:center; justify-content:center; gap:10px;">
-          <span>${t.surface}</span>
+          <span>${displayTerm.surface}</span>
           <button id="jp-m-speak-btn" style="background:none; border:none; cursor:pointer; font-size:1.5rem; opacity:0.8;">🔊</button>
         </div>
       `;
 
-      const meaningHtml = `<div style="color:#667eea; font-size:0.9rem; margin-bottom:10px;">${t.reading || ''}</div>
+      // Show base form hint when displaying a conjugated form
+      const baseFormHint = (form && displayTerm._original)
+        ? `<div style="color:#aaa; font-size:0.8rem; margin-bottom:8px;">${displayTerm._original}</div>`
+        : '';
+
+      const meaningHtml = `<div style="color:#667eea; font-size:0.9rem; margin-bottom:4px;">${displayTerm.reading || ''}</div>
+        ${baseFormHint}
         <div style="color:#333; font-weight:600; font-size:1.1rem;">${t.meaning || ''}</div>`;
 
       const notesHtml = t.notes ? `<div style="margin-top:15px; background:#f8f9fa; padding:12px; border-radius:10px; font-size:0.85rem; color:#555; text-align:left;">${t.notes}</div>` : '';
@@ -810,7 +818,7 @@ window.StoryModule = (function() {
         // Add text before match
         html += escapeHtml(node.textContent.substring(lastIndex, match.index));
         // Add clickable term
-        html += `<span class="jp-term" onclick="window.JP_OPEN_TERM('${match.termId}', true)">${escapeHtml(match.text)}</span>`;
+        html += `<span class="jp-term" onclick="window.JP_OPEN_TERM('${match.termId}', ${JSON.stringify(match.form)}, true)">${escapeHtml(match.text)}</span>`;
         lastIndex = match.index + match.text.length;
       });
 
@@ -849,7 +857,8 @@ window.StoryModule = (function() {
           matches.push({
             index,
             text: surface,
-            termId: termDef.id
+            termId: termDef.id,
+            form: termDef.form || null
           });
 
           // Mark positions as processed
