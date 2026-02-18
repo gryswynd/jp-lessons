@@ -4,60 +4,6 @@ window.PracticeModule = {
 
     window.KanjiApp = {};
 
-    // TTS Helper with Mobile & Error Handling
-    KanjiApp.speak = function(text) {
-        if (!window.speechSynthesis) {
-            console.warn('Speech synthesis not supported');
-            return;
-        }
-
-        try {
-            // Cancel any ongoing speech
-            window.speechSynthesis.cancel();
-
-            // Small delay to prevent race condition on mobile browsers
-            setTimeout(() => {
-                const utterance = new SpeechSynthesisUtterance(text);
-                utterance.lang = 'ja-JP';
-                utterance.rate = 0.9; // Slightly slower for better clarity
-                utterance.volume = 1.0;
-
-                // Error handling with retry logic
-                utterance.onerror = (event) => {
-                    console.error('Speech synthesis error:', event.error);
-                    // Try to recover from 'not-allowed' or 'interrupted' errors
-                    if ((event.error === 'not-allowed' || event.error === 'interrupted') && !utterance._retried) {
-                        utterance._retried = true;
-                        setTimeout(() => {
-                            window.speechSynthesis.cancel();
-                            window.speechSynthesis.speak(utterance);
-                        }, 100);
-                    }
-                };
-
-                // iOS Safari fix: Resume if paused
-                utterance.onstart = () => {
-                    if (window.speechSynthesis.paused) {
-                        window.speechSynthesis.resume();
-                    }
-                };
-
-                // Timeout protection (10 seconds)
-                const timeoutId = setTimeout(() => {
-                    window.speechSynthesis.cancel();
-                }, 10000);
-
-                utterance.onend = () => {
-                    clearTimeout(timeoutId);
-                };
-
-                window.speechSynthesis.speak(utterance);
-            }, 50); // 50ms delay prevents race conditions on Android Chrome
-        } catch (error) {
-            console.error('TTS Error:', error);
-        }
-    };
-
     // Inject Fonts
     if (!document.getElementById('kanji-fonts')) {
         const link = document.createElement('link');
@@ -609,7 +555,7 @@ window.PracticeModule = {
             if (speakBtn) {
                 speakBtn.onclick = function(e) {
                     e.stopPropagation();
-                    KanjiApp.speak(speakText);
+                    window.JPShared.tts.speak(speakText);
                 };
             }
             setTxt('k-fc-sub', "");
@@ -636,7 +582,7 @@ window.PracticeModule = {
             if (speakBtn) {
                 speakBtn.onclick = function(e) {
                     e.stopPropagation();
-                    KanjiApp.speak(speakText);
+                    window.JPShared.tts.speak(speakText);
                 };
             }
             setTxt('k-fc-sub', "");
@@ -660,7 +606,7 @@ window.PracticeModule = {
             if (speakBtn) {
                 speakBtn.onclick = function(e) {
                     e.stopPropagation();
-                    KanjiApp.speak(speakText);
+                    window.JPShared.tts.speak(speakText);
                 };
             }
             setTxt('k-fc-sub', "");

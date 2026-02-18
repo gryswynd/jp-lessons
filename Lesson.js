@@ -145,59 +145,6 @@ window.LessonModule = {
         return window.getAssetUrl(REPO_CONFIG, filepath);
     }
 
-    // TTS Helper with Mobile & Error Handling
-    function speak(text) {
-        if (!window.speechSynthesis) {
-            console.warn('Speech synthesis not supported');
-            return;
-        }
-
-        try {
-            // Cancel any ongoing speech
-            window.speechSynthesis.cancel();
-
-            // Small delay to prevent race condition on mobile browsers
-            setTimeout(() => {
-                const utterance = new SpeechSynthesisUtterance(text);
-                utterance.lang = 'ja-JP';
-                utterance.rate = 0.9; // Slightly slower for better clarity
-                utterance.volume = 1.0;
-
-                // Error handling with retry logic
-                utterance.onerror = (event) => {
-                    console.error('Speech synthesis error:', event.error);
-                    // Try to recover from 'not-allowed' or 'interrupted' errors
-                    if ((event.error === 'not-allowed' || event.error === 'interrupted') && !utterance._retried) {
-                        utterance._retried = true;
-                        setTimeout(() => {
-                            window.speechSynthesis.cancel();
-                            window.speechSynthesis.speak(utterance);
-                        }, 100);
-                    }
-                };
-
-                // iOS Safari fix: Resume if paused
-                utterance.onstart = () => {
-                    if (window.speechSynthesis.paused) {
-                        window.speechSynthesis.resume();
-                    }
-                };
-
-                // Timeout protection (10 seconds)
-                const timeoutId = setTimeout(() => {
-                    window.speechSynthesis.cancel();
-                }, 10000);
-
-                utterance.onend = () => {
-                    clearTimeout(timeoutId);
-                };
-
-                window.speechSynthesis.speak(utterance);
-            }, 50); // 50ms delay prevents race conditions on Android Chrome
-        } catch (error) {
-            console.error('TTS Error:', error);
-        }
-    }
 
     // --- Conjugation Logic ---
     const GODAN_MAPS = {
@@ -334,7 +281,7 @@ window.LessonModule = {
         // Attach Click Event for Speaker
         document.getElementById('jp-m-speak-btn').onclick = function(e) {
             e.stopPropagation();
-            speak(textToSpeak);
+            window.JPShared.tts.speak(textToSpeak);
         };
 
         const msgBox = document.querySelector('.jp-auto-flag-msg');

@@ -4,27 +4,6 @@ window.ComposeModule = {
     // --- NAMESPACE ---
     window.ComposeApp = {};
 
-    // TTS Helper
-    ComposeApp.speak = function(text) {
-        if (!window.speechSynthesis) return;
-        try {
-            window.speechSynthesis.cancel();
-            setTimeout(() => {
-                const u = new SpeechSynthesisUtterance(text);
-                u.lang = 'ja-JP'; u.rate = 0.85; u.volume = 1.0;
-                u.onerror = (e) => {
-                    if ((e.error === 'not-allowed' || e.error === 'interrupted') && !u._retried) {
-                        u._retried = true;
-                        setTimeout(() => { window.speechSynthesis.cancel(); window.speechSynthesis.speak(u); }, 100);
-                    }
-                };
-                const tid = setTimeout(() => window.speechSynthesis.cancel(), 10000);
-                u.onend = () => clearTimeout(tid);
-                window.speechSynthesis.speak(u);
-            }, 50);
-        } catch(err) { console.error('TTS Error:', err); }
-    };
-
     // --- FONTS ---
     if (!document.getElementById('compose-fonts')) {
         const link = document.createElement('link');
@@ -566,7 +545,7 @@ window.ComposeModule = {
     ComposeApp.speakComposition = function() {
         const input = document.getElementById('c-compose-input');
         if (!input || !input.value.trim()) return;
-        ComposeApp.speak(input.value.trim());
+        window.JPShared.tts.speak(input.value.trim());
     };
 
     ComposeApp.clearDraft = function() {
