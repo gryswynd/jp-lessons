@@ -151,7 +151,7 @@ window.LessonModule = {
              fetch(glossaryUrl).then(r => r.json()),
              fetch(conjUrl).then(r => r.json())
         ]);
-        const map = {}; gloss.forEach(i => { map[i.id] = i; });
+        const map = {}; gloss.entries.forEach(i => { map[i.id] = i; });
         return { map, conj };
     }
 

@@ -709,10 +709,10 @@ window.ComposeModule = {
             ]);
 
             PROMPTS = composeData.prompts;
-            HELPER_VOCAB = helperData;
-            PARTICLES = particleData;
+            HELPER_VOCAB = helperData.categories;
+            PARTICLES = particleData.particles;
 
-            allVocab = glossary.filter(i => i.type === 'vocab');
+            allVocab = glossary.entries.filter(i => i.type === 'vocab');
             lessonVocab = allVocab.filter(v => {
                 const lessons = (v.lesson_ids || v.lesson || '').split(',').map(s => s.trim());
                 return lessons.some(l => Object.keys(LESSON_META).includes(l));

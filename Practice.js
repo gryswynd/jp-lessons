@@ -635,7 +635,8 @@ window.PracticeModule = {
             const manifest = await window.getManifest(REPO_CONFIG);
             MASTER_URL = window.getAssetUrl(REPO_CONFIG, manifest.globalFiles.glossaryMaster);
             console.log('[Practice] Glossary URL:', MASTER_URL);
-            const raw = await fetch(MASTER_URL + "?t=" + Date.now()).then(r => r.json());
+            const rawData = await fetch(MASTER_URL + "?t=" + Date.now()).then(r => r.json());
+            const raw = rawData.entries;
 
             const allVocab = raw.filter(i => i.type === 'vocab');
             allVocab.forEach(v => {

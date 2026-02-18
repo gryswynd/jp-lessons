@@ -302,7 +302,7 @@ window.StoryModule = (function() {
 
       // Build term map
       termMapData = {};
-      glossary.forEach(term => {
+      glossary.entries.forEach(term => {
         termMapData[term.id] = term;
       });
 

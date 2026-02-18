@@ -226,11 +226,11 @@
         this.state.conjugations = await conjRes.json();
 
         console.log('[Review] Quiz title:', quizData.title);
-        console.log('[Review] Glossary entries:', glossData.length);
+        console.log('[Review] Glossary entries:', glossData.entries.length);
 
         // 2. Map Glossary
         this.state.termMap = {};
-        glossData.forEach(i => { this.state.termMap[i.id] = i; });
+        glossData.entries.forEach(i => { this.state.termMap[i.id] = i; });
 
         // 3. Inject Styles & Modal
         console.log('[Review] Injecting styles...');

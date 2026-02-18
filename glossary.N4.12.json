@@ -1,167 +1,170 @@
-[
-  {
-    "id": "k_kubi",
-    "lesson": "N4.12",
-    "type": "kanji",
-    "surface": "首",
-    "on": "しゅ",
-    "kun": "くび",
-    "reading": "くび",
-    "meaning": "neck",
-    "notes": ""
-  },
-  {
-    "id": "k_kao",
-    "lesson": "N4.12",
-    "type": "kanji",
-    "surface": "顔",
-    "on": "がん",
-    "kun": "かお",
-    "reading": "かお",
-    "meaning": "face",
-    "notes": ""
-  },
-  {
-    "id": "k_karada",
-    "lesson": "N4.12",
-    "type": "kanji",
-    "surface": "体",
-    "on": "たい",
-    "kun": "からだ",
-    "reading": "からだ",
-    "meaning": "body",
-    "notes": ""
-  },
-  {
-    "id": "k_atama",
-    "lesson": "N4.12",
-    "type": "kanji",
-    "surface": "頭",
-    "on": "とう / ず",
-    "kun": "あたま",
-    "reading": "あたま",
-    "meaning": "head",
-    "notes": ""
-  },
-  {
-    "id": "k_kokoro",
-    "lesson": "N4.12",
-    "type": "kanji",
-    "surface": "心",
-    "on": "しん",
-    "kun": "こころ",
-    "reading": "こころ",
-    "meaning": "heart / mind",
-    "notes": ""
-  },
-  {
-    "id": "k_yuu",
-    "lesson": "N4.12",
-    "type": "kanji",
-    "surface": "有",
-    "on": "ゆう",
-    "kun": "あ(る)",
-    "reading": "あ(る)",
-    "meaning": "exist / possess",
-    "notes": ""
-  },
-  {
-    "id": "v_kubi",
-    "surface": "首",
-    "meaning": "neck",
-    "type": "vocab",
-    "notes": "",
-    "lesson_ids": "N4.12",
-    "reading": "くび"
-  },
-  {
-    "id": "v_tekubi",
-    "surface": "手首",
-    "meaning": "wrist",
-    "type": "vocab",
-    "notes": "Lit. 'hand neck'.",
-    "lesson_ids": "N4.12",
-    "reading": "てくび"
-  },
-  {
-    "id": "v_kao",
-    "surface": "顔",
-    "meaning": "face",
-    "type": "vocab",
-    "notes": "",
-    "lesson_ids": "N4.12",
-    "reading": "かお"
-  },
-  {
-    "id": "v_kaoiro",
-    "surface": "顔色",
-    "meaning": "complexion / face color",
-    "type": "vocab",
-    "notes": "",
-    "lesson_ids": "N4.12",
-    "reading": "かおいろ"
-  },
-  {
-    "id": "v_karada",
-    "surface": "体",
-    "meaning": "body",
-    "type": "vocab",
-    "notes": "",
-    "lesson_ids": "N4.12",
-    "reading": "からだ"
-  },
-  {
-    "id": "v_atama",
-    "surface": "頭",
-    "meaning": "head",
-    "type": "vocab",
-    "notes": "",
-    "lesson_ids": "N4.12",
-    "reading": "あたま"
-  },
-  {
-    "id": "v_atamagaii",
-    "surface": "頭がいい",
-    "meaning": "smart / intelligent",
-    "type": "vocab",
-    "notes": "Phrase using i-adjective.",
-    "lesson_ids": "N4.12",
-    "reading": "あたまがいい"
-  },
-  {
-    "id": "v_kokoro",
-    "surface": "心",
-    "meaning": "heart / mind / spirit",
-    "type": "vocab",
-    "notes": "",
-    "lesson_ids": "N4.12",
-    "reading": "こころ"
-  },
-  {
-    "id": "v_chuushin",
-    "surface": "中心",
-    "meaning": "center / core / heart (of a matter)",
-    "type": "vocab",
-    "notes": "",
-    "lesson_ids": "N4.12",
-    "reading": "ちゅうしん"
-  },
-  {
-    "id": "v_yuumei",
-    "surface": "有名",
-    "meaning": "famous",
-    "type": "vocab",
-    "notes": "Na-adjective (有名な).",
-    "lesson_ids": "N4.12",
-    "reading": "ゆうめい"
-  },
-  {
-    "id": "v_yuumeijin",
-    "surface": "有名人",
-    "meaning": "famous person / celebrity",
-    "type": "vocab",
-    "notes": "",
-    "lesson_ids": "N4.12",
-    "reading": "ゆうめいじん"
-  }
-]
+{
+  "contentVersion": "1.0.0",
+  "entries": [
+    {
+      "id": "k_kubi",
+      "lesson": "N4.12",
+      "type": "kanji",
+      "surface": "首",
+      "on": "しゅ",
+      "kun": "くび",
+      "reading": "くび",
+      "meaning": "neck",
+      "notes": ""
+    },
+    {
+      "id": "k_kao",
+      "lesson": "N4.12",
+      "type": "kanji",
+      "surface": "顔",
+      "on": "がん",
+      "kun": "かお",
+      "reading": "かお",
+      "meaning": "face",
+      "notes": ""
+    },
+    {
+      "id": "k_karada",
+      "lesson": "N4.12",
+      "type": "kanji",
+      "surface": "体",
+      "on": "たい",
+      "kun": "からだ",
+      "reading": "からだ",
+      "meaning": "body",
+      "notes": ""
+    },
+    {
+      "id": "k_atama",
+      "lesson": "N4.12",
+      "type": "kanji",
+      "surface": "頭",
+      "on": "とう / ず",
+      "kun": "あたま",
+      "reading": "あたま",
+      "meaning": "head",
+      "notes": ""
+    },
+    {
+      "id": "k_kokoro",
+      "lesson": "N4.12",
+      "type": "kanji",
+      "surface": "心",
+      "on": "しん",
+      "kun": "こころ",
+      "reading": "こころ",
+      "meaning": "heart / mind",
+      "notes": ""
+    },
+    {
+      "id": "k_yuu",
+      "lesson": "N4.12",
+      "type": "kanji",
+      "surface": "有",
+      "on": "ゆう",
+      "kun": "あ(る)",
+      "reading": "あ(る)",
+      "meaning": "exist / possess",
+      "notes": ""
+    },
+    {
+      "id": "v_kubi",
+      "surface": "首",
+      "meaning": "neck",
+      "type": "vocab",
+      "notes": "",
+      "lesson_ids": "N4.12",
+      "reading": "くび"
+    },
+    {
+      "id": "v_tekubi",
+      "surface": "手首",
+      "meaning": "wrist",
+      "type": "vocab",
+      "notes": "Lit. 'hand neck'.",
+      "lesson_ids": "N4.12",
+      "reading": "てくび"
+    },
+    {
+      "id": "v_kao",
+      "surface": "顔",
+      "meaning": "face",
+      "type": "vocab",
+      "notes": "",
+      "lesson_ids": "N4.12",
+      "reading": "かお"
+    },
+    {
+      "id": "v_kaoiro",
+      "surface": "顔色",
+      "meaning": "complexion / face color",
+      "type": "vocab",
+      "notes": "",
+      "lesson_ids": "N4.12",
+      "reading": "かおいろ"
+    },
+    {
+      "id": "v_karada",
+      "surface": "体",
+      "meaning": "body",
+      "type": "vocab",
+      "notes": "",
+      "lesson_ids": "N4.12",
+      "reading": "からだ"
+    },
+    {
+      "id": "v_atama",
+      "surface": "頭",
+      "meaning": "head",
+      "type": "vocab",
+      "notes": "",
+      "lesson_ids": "N4.12",
+      "reading": "あたま"
+    },
+    {
+      "id": "v_atamagaii",
+      "surface": "頭がいい",
+      "meaning": "smart / intelligent",
+      "type": "vocab",
+      "notes": "Phrase using i-adjective.",
+      "lesson_ids": "N4.12",
+      "reading": "あたまがいい"
+    },
+    {
+      "id": "v_kokoro",
+      "surface": "心",
+      "meaning": "heart / mind / spirit",
+      "type": "vocab",
+      "notes": "",
+      "lesson_ids": "N4.12",
+      "reading": "こころ"
+    },
+    {
+      "id": "v_chuushin",
+      "surface": "中心",
+      "meaning": "center / core / heart (of a matter)",
+      "type": "vocab",
+      "notes": "",
+      "lesson_ids": "N4.12",
+      "reading": "ちゅうしん"
+    },
+    {
+      "id": "v_yuumei",
+      "surface": "有名",
+      "meaning": "famous",
+      "type": "vocab",
+      "notes": "Na-adjective (有名な).",
+      "lesson_ids": "N4.12",
+      "reading": "ゆうめい"
+    },
+    {
+      "id": "v_yuumeijin",
+      "surface": "有名人",
+      "meaning": "famous person / celebrity",
+      "type": "vocab",
+      "notes": "",
+      "lesson_ids": "N4.12",
+      "reading": "ゆうめいじん"
+    }
+  ]
+}
