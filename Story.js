@@ -193,6 +193,81 @@ window.StoryModule = (function() {
           border-radius: 8px;
           text-align: center;
         }
+        .jp-story-selector {
+          background: white;
+          padding: 30px;
+          margin: 20px;
+          border-radius: 8px;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .jp-story-selector h2 {
+          color: #667eea;
+          font-size: 1.3rem;
+          font-weight: 700;
+          margin: 0 0 5px 0;
+        }
+        .jp-story-selector > p {
+          color: #888;
+          font-size: 0.9rem;
+          margin: 0 0 20px 0;
+        }
+        .jp-story-selector-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+          gap: 16px;
+        }
+        .jp-story-card {
+          background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+          border-radius: 12px;
+          padding: 24px 16px;
+          cursor: pointer;
+          transition: transform 0.2s, box-shadow 0.2s;
+          border: 2px solid transparent;
+          text-align: center;
+        }
+        .jp-story-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+          border-color: #667eea;
+        }
+        .jp-story-level-badge {
+          display: inline-block;
+          background: #667eea;
+          color: white;
+          font-size: 0.7rem;
+          font-weight: 700;
+          padding: 3px 10px;
+          border-radius: 10px;
+          margin-bottom: 12px;
+          letter-spacing: 0.05em;
+        }
+        .jp-story-card-jp {
+          font-size: 1.3rem;
+          font-weight: 700;
+          color: #333;
+          margin-bottom: 6px;
+          font-family: 'Noto Sans JP', sans-serif;
+        }
+        .jp-story-card-en {
+          font-size: 0.85rem;
+          color: #666;
+          margin-bottom: 16px;
+        }
+        .jp-story-card-read-btn {
+          background: #667eea;
+          color: white;
+          border: none;
+          padding: 8px 20px;
+          border-radius: 20px;
+          font-weight: 600;
+          font-size: 0.85rem;
+          cursor: pointer;
+          pointer-events: none;
+          transition: background 0.2s;
+        }
+        .jp-story-card:hover .jp-story-card-read-btn {
+          background: #5a6fd6;
+        }
         @media (max-width: 600px) {
           .jp-story-content {
             padding: 20px;
@@ -211,6 +286,13 @@ window.StoryModule = (function() {
           .jp-story-nav {
             justify-content: center;
           }
+          .jp-story-selector {
+            padding: 20px;
+            margin: 10px;
+          }
+          .jp-story-selector-grid {
+            grid-template-columns: 1fr;
+          }
         }
       `;
       document.head.appendChild(style);
@@ -222,8 +304,9 @@ window.StoryModule = (function() {
         <div class="jp-story-header">
           <div class="jp-story-title">📖 Stories</div>
           <div class="jp-story-nav">
-            <button class="jp-story-nav-btn" id="jp-story-prev">← Previous</button>
-            <button class="jp-story-nav-btn" id="jp-story-next">Next →</button>
+            <button class="jp-story-nav-btn" id="jp-story-list" style="display:none;">☰ All Stories</button>
+            <button class="jp-story-nav-btn" id="jp-story-prev" style="display:none;">← Previous</button>
+            <button class="jp-story-nav-btn" id="jp-story-next" style="display:none;">Next →</button>
             <button class="jp-story-back-btn" id="jp-story-exit">← Back to Menu</button>
           </div>
         </div>
@@ -250,6 +333,10 @@ window.StoryModule = (function() {
         currentIndex++;
         loadStory(storyList[currentIndex]);
       }
+    });
+
+    document.getElementById('jp-story-list').addEventListener('click', () => {
+      showStorySelector();
     });
 
     // Load resources
@@ -527,14 +614,15 @@ window.StoryModule = (function() {
             mdFile: story.dir + '/story.md',
             jsonFile: story.dir + '/terms.json',
             title: story.titleJp || story.title,
-            subtitle: story.title
+            subtitle: story.title,
+            level: level
           });
         });
       });
 
       console.log('[Story] Found', storyList.length, 'stories from manifest');
       if (storyList.length > 0) {
-        loadStory(storyList[0]);
+        showStorySelector();
       } else {
         showError('No stories available');
       }
@@ -543,11 +631,62 @@ window.StoryModule = (function() {
     }
   }
 
+  function showStorySelector() {
+    const storyContainer = container.querySelector('.jp-story-container');
+    const contentArea = storyContainer.querySelector('.jp-story-loading') ||
+                        storyContainer.querySelector('.jp-story-content') ||
+                        storyContainer.querySelector('.jp-story-selector') ||
+                        storyContainer.querySelector('.jp-story-error');
+
+    const titleEl = storyContainer.querySelector('.jp-story-title');
+    if (titleEl) titleEl.textContent = '📖 Stories';
+
+    const listBtn = document.getElementById('jp-story-list');
+    const prevBtn = document.getElementById('jp-story-prev');
+    const nextBtn = document.getElementById('jp-story-next');
+    if (listBtn) listBtn.style.display = 'none';
+    if (prevBtn) prevBtn.style.display = 'none';
+    if (nextBtn) nextBtn.style.display = 'none';
+
+    const storyCount = storyList.length;
+    const countLabel = storyCount === 1 ? '1 story available' : `${storyCount} stories available`;
+
+    const cardsHtml = storyList.map((story, index) => `
+      <div class="jp-story-card" data-story-index="${index}">
+        <div class="jp-story-level-badge">${story.level}</div>
+        <div class="jp-story-card-jp">${story.title}</div>
+        <div class="jp-story-card-en">${story.subtitle}</div>
+        <button class="jp-story-card-read-btn">Read →</button>
+      </div>
+    `).join('');
+
+    if (contentArea) {
+      contentArea.outerHTML = `
+        <div class="jp-story-selector">
+          <h2>Choose a Story</h2>
+          <p>${countLabel}</p>
+          <div class="jp-story-selector-grid">
+            ${cardsHtml}
+          </div>
+        </div>
+      `;
+    }
+
+    storyContainer.querySelectorAll('.jp-story-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const index = parseInt(card.dataset.storyIndex, 10);
+        currentIndex = index;
+        loadStory(storyList[index]);
+      });
+    });
+  }
+
   async function loadStory(storyInfo) {
     const storyContainer = container.querySelector('.jp-story-container');
 
     const contentArea = storyContainer.querySelector('.jp-story-loading') ||
                         storyContainer.querySelector('.jp-story-content') ||
+                        storyContainer.querySelector('.jp-story-selector') ||
                         storyContainer.querySelector('.jp-story-error');
 
     if (contentArea) {
@@ -558,6 +697,17 @@ window.StoryModule = (function() {
         </div>
       `;
     }
+
+    // Update header title and reveal nav buttons (may be hidden when coming from selector)
+    const titleEl = storyContainer.querySelector('.jp-story-title');
+    if (titleEl) titleEl.textContent = storyInfo.title;
+
+    const listBtn = document.getElementById('jp-story-list');
+    const prevBtn = document.getElementById('jp-story-prev');
+    const nextBtn = document.getElementById('jp-story-next');
+    if (listBtn) listBtn.style.display = '';
+    if (prevBtn) prevBtn.style.display = '';
+    if (nextBtn) nextBtn.style.display = '';
 
     updateNavButtons();
 
@@ -730,6 +880,7 @@ window.StoryModule = (function() {
     const storyContainer = container.querySelector('.jp-story-container');
     const contentArea = storyContainer.querySelector('.jp-story-loading') ||
                         storyContainer.querySelector('.jp-story-content') ||
+                        storyContainer.querySelector('.jp-story-selector') ||
                         storyContainer.querySelector('.jp-story-error');
 
     if (contentArea) {
