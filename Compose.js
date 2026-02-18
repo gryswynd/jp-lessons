@@ -226,8 +226,10 @@ window.ComposeModule = {
     // --- STATE ---
     const selectedLessons = new Set(['N4.28', 'N4.29', 'N4.30', 'N4.31', 'N4.32', 'N4.33', 'N4.34']);
     let currentPrompt = null;
+    let currentResolvedTargets = []; // targets resolved from glossary for the active prompt
     let lessonVocab = []; // vocab items from glossary for selected lessons
     let allVocab = [];    // all vocab from glossary
+    let vocabById = new Map(); // all glossary entries keyed by id
 
     // --- HELPER FUNCTIONS ---
     function countOccurrences(text, matches) {
@@ -366,9 +368,21 @@ window.ComposeModule = {
             return true;
         });
 
+        // Resolve targets from glossary (fall back to inline fields for old format)
+        currentResolvedTargets = (prompt.targets || []).map(t => {
+            const entry = t.id ? vocabById.get(t.id) : null;
+            return {
+                surface: (entry && entry.surface) || t.surface || '',
+                reading: (entry && entry.reading) || t.reading || '',
+                meaning: (entry && entry.meaning) || t.meaning || '',
+                count: t.count || 1,
+                matches: t.matches || (entry ? [entry.surface, entry.reading].filter(Boolean) : [t.surface || ''])
+            };
+        });
+
         // Build target tracking HTML
         let targetHtml = '';
-        prompt.targets.forEach((t, i) => {
+        currentResolvedTargets.forEach((t, i) => {
             targetHtml += `<div class="c-target-item" id="c-tgt-${i}">
                 <div class="c-target-check" id="c-tgt-chk-${i}"></div>
                 <span class="c-target-surface" onclick="ComposeApp.insertWord('${escHtml(t.surface)}')" title="Click to insert">${escHtml(t.surface)}</span>
@@ -390,8 +404,25 @@ window.ComposeModule = {
             </div>`;
         });
 
-        // Build helper vocab chips by category
+        // Build per-prompt helper chips (Actions & Descriptors from glossary)
         let helperHtml = '';
+        if (prompt.helpers && prompt.helpers.length > 0) {
+            const helperEntries = prompt.helpers.map(id => vocabById.get(id)).filter(Boolean);
+            if (helperEntries.length > 0) {
+                helperHtml += '<div style="margin-bottom:8px;"><span class="c-chip-cat">Actions & Descriptors</span></div><div class="c-chip-wrap" style="margin-bottom:10px;">';
+                helperEntries.forEach(e => {
+                    const readingHtml = e.reading ? `<span class="c-chip-reading">${escHtml(e.reading)}</span>` : '';
+                    helperHtml += `<div class="c-chip" onclick="ComposeApp.insertWord('${escHtml(e.surface)}')" title="${escHtml(e.meaning)}">
+                        <span class="c-chip-jp">${escHtml(e.surface)}</span>
+                        ${readingHtml}
+                        <span class="c-chip-en">${escHtml(e.meaning)}</span>
+                    </div>`;
+                });
+                helperHtml += '</div>';
+            }
+        }
+
+        // Build static helper vocab chips by category
         HELPER_VOCAB.forEach(cat => {
             helperHtml += `<div style="margin-bottom:8px;"><span class="c-chip-cat">${escHtml(cat.cat)}</span></div><div class="c-chip-wrap" style="margin-bottom:10px;">`;
             cat.words.forEach(w => {
@@ -425,7 +456,7 @@ window.ComposeModule = {
                     <div class="c-progress-bar-inner" id="c-progress-fill" style="width:0%"></div>
                 </div>
                 <div class="c-progress-text">
-                    <span id="c-progress-lbl">0 / ${prompt.targets.length} target words used</span>
+                    <span id="c-progress-lbl">0 / ${currentResolvedTargets.length} target words used</span>
                     <span id="c-progress-pct">0%</span>
                 </div>
             </div>
@@ -528,9 +559,9 @@ window.ComposeModule = {
         const text = input.value;
 
         let totalMet = 0;
-        const totalTargets = currentPrompt.targets.length;
+        const totalTargets = currentResolvedTargets.length;
 
-        currentPrompt.targets.forEach((t, i) => {
+        currentResolvedTargets.forEach((t, i) => {
             const count = countOccurrences(text, t.matches);
             const met = count >= t.count;
             if (met) totalMet++;
@@ -740,6 +771,8 @@ window.ComposeModule = {
             PARTICLES = particleData;
 
             allVocab = glossary.filter(i => i.type === 'vocab');
+            vocabById = new Map();
+            glossary.forEach(e => vocabById.set(e.id, e));
             lessonVocab = allVocab.filter(v => {
                 const lessons = (v.lesson_ids || v.lesson || '').split(',').map(s => s.trim());
                 return lessons.some(l => Object.keys(LESSON_META).includes(l));

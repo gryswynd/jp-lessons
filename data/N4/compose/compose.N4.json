@@ -10,11 +10,12 @@
       "scenario": "Describe arriving at a small village. You walk through a gate and discover a beautiful pond near a grove of trees.",
       "hint": "小さい村に来ました。大きい門が...",
       "targets": [
-        { "surface": "村", "reading": "むら", "meaning": "village", "count": 1, "matches": ["村", "むら"] },
-        { "surface": "門", "reading": "もん", "meaning": "gate", "count": 1, "matches": ["門", "もん"] },
-        { "surface": "池", "reading": "いけ", "meaning": "pond", "count": 1, "matches": ["池", "いけ"] },
-        { "surface": "林", "reading": "はやし", "meaning": "grove", "count": 1, "matches": ["林", "はやし"] }
-      ]
+        { "id": "v_mura", "count": 1 },
+        { "id": "v_mon", "count": 1 },
+        { "id": "v_ike", "count": 1 },
+        { "id": "v_hayashi", "count": 1 }
+      ],
+      "helpers": ["v_murabito", "v_koumon", "v_denchi"]
     },
     {
       "id": "battery-hunt",
@@ -25,10 +26,11 @@
       "scenario": "You need batteries for your flashlight. Ask a villager near the school gate where you can buy them.",
       "hint": "電池がほしいです。校門の近くで...",
       "targets": [
-        { "surface": "電池", "reading": "でんち", "meaning": "battery", "count": 1, "matches": ["電池", "でんち"] },
-        { "surface": "校門", "reading": "こうもん", "meaning": "school gate", "count": 1, "matches": ["校門", "こうもん"] },
-        { "surface": "村人", "reading": "むらびと", "meaning": "villager", "count": 1, "matches": ["村人", "むらびと"] }
-      ]
+        { "id": "v_denchi", "count": 1 },
+        { "id": "v_koumon", "count": 1 },
+        { "id": "v_murabito", "count": 1 }
+      ],
+      "helpers": ["v_mura", "v_mon", "v_ike"]
     },
     {
       "id": "typhoon-plan",
@@ -39,11 +41,12 @@
       "scenario": "A typhoon is approaching! Write about your preparation plan. Check the time and make sure the kitchen is ready.",
       "hint": "台風が来ます。計画を...",
       "targets": [
-        { "surface": "台風", "reading": "たいふう", "meaning": "typhoon", "count": 1, "matches": ["台風", "たいふう"] },
-        { "surface": "計画", "reading": "けいかく", "meaning": "plan", "count": 1, "matches": ["計画", "けいかく"] },
-        { "surface": "時計", "reading": "とけい", "meaning": "clock", "count": 1, "matches": ["時計", "とけい"] },
-        { "surface": "台所", "reading": "だいどころ", "meaning": "kitchen", "count": 1, "matches": ["台所", "だいどころ"] }
-      ]
+        { "id": "v_taifuu", "count": 1 },
+        { "id": "v_keikaku", "count": 1 },
+        { "id": "v_tokei", "count": 1 },
+        { "id": "v_daidokoro", "count": 1 }
+      ],
+      "helpers": ["v_hakaru", "v_shiru", "v_shiraseru"]
     },
     {
       "id": "did-you-know",
@@ -54,10 +57,11 @@
       "scenario": "Tell a friend about something interesting you recently learned. Was it more or less surprising than you expected?",
       "hint": "知っていますか。...",
       "targets": [
-        { "surface": "知る", "reading": "しる", "meaning": "to know", "count": 1, "matches": ["知", "しって", "しり", "しる"] },
-        { "surface": "以上", "reading": "いじょう", "meaning": "more than", "count": 1, "matches": ["以上", "いじょう"] },
-        { "surface": "以下", "reading": "いか", "meaning": "less than", "count": 1, "matches": ["以下", "いか"] }
-      ]
+        { "id": "v_shiru", "count": 1, "matches": ["知", "しって", "しり", "しる"] },
+        { "id": "v_ijou", "count": 1 },
+        { "id": "v_ika", "count": 1 }
+      ],
+      "helpers": ["v_hakaru", "v_shiraseru", "v_hakarishirenai"]
     },
     {
       "id": "special-gathering",
@@ -68,11 +72,12 @@
       "scenario": "Write about a special day when friends gathered together. Someone asked a difficult question. What do you think the answer was?",
       "hint": "特別な日でした。友だちが集まりました...",
       "targets": [
-        { "surface": "特別", "reading": "とくべつ", "meaning": "special", "count": 1, "matches": ["特別", "とくべつ"] },
-        { "surface": "集まる", "reading": "あつまる", "meaning": "to gather", "count": 1, "matches": ["集ま", "あつま"] },
-        { "surface": "答え", "reading": "こたえ", "meaning": "answer", "count": 1, "matches": ["答", "こたえ"] },
-        { "surface": "思う", "reading": "おもう", "meaning": "to think", "count": 1, "matches": ["思", "おもう", "おもい", "おもって"] }
-      ]
+        { "id": "v_tokubetsu", "count": 1 },
+        { "id": "v_atsumaru", "count": 1, "matches": ["集ま", "あつま"] },
+        { "id": "v_kotae", "count": 1, "matches": ["答", "こたえ"] },
+        { "id": "v_omou", "count": 1, "matches": ["思", "おもう", "おもい", "おもって"] }
+      ],
+      "helpers": ["v_atsumeru", "v_omoidasu", "v_tokuni"]
     },
     {
       "id": "my-collection",
@@ -83,10 +88,11 @@
       "scenario": "Write about something you like to collect. What do you especially treasure? What memories come to mind when you look at your collection?",
       "hint": "わたしのしゅみは集めることです...",
       "targets": [
-        { "surface": "集める", "reading": "あつめる", "meaning": "to collect", "count": 1, "matches": ["集め", "あつめ"] },
-        { "surface": "特に", "reading": "とくに", "meaning": "especially", "count": 1, "matches": ["特に", "とくに"] },
-        { "surface": "思い出す", "reading": "おもいだす", "meaning": "to recall", "count": 1, "matches": ["思い出", "おもいだ"] }
-      ]
+        { "id": "v_atsumeru", "count": 1, "matches": ["集め", "あつめ"] },
+        { "id": "v_tokuni", "count": 1 },
+        { "id": "v_omoidasu", "count": 1, "matches": ["思い出", "おもいだ"] }
+      ],
+      "helpers": ["v_omou", "v_atsumaru", "v_tokubetsu", "v_omoiagaru"]
     },
     {
       "id": "forest-cafeteria",
@@ -97,11 +103,12 @@
       "scenario": "A new cafeteria opened near the forest! Describe visiting it for the first time. Does it feel like stepping into a different era?",
       "hint": "森の近くに新しい食堂が...",
       "targets": [
-        { "surface": "森", "reading": "もり", "meaning": "forest", "count": 1, "matches": ["森", "もり"] },
-        { "surface": "食堂", "reading": "しょくどう", "meaning": "cafeteria", "count": 1, "matches": ["食堂", "しょくどう"] },
-        { "surface": "開店", "reading": "かいてん", "meaning": "shop opening", "count": 1, "matches": ["開店", "かいてん"] },
-        { "surface": "時代", "reading": "じだい", "meaning": "era", "count": 1, "matches": ["時代", "じだい"] }
-      ]
+        { "id": "v_mori", "count": 1 },
+        { "id": "v_shokudou", "count": 1 },
+        { "id": "v_kaiten", "count": 1 },
+        { "id": "v_jidai", "count": 1 }
+      ],
+      "helpers": ["v_akeru", "v_hiraku", "v_kawaru", "v_doudou"]
     },
     {
       "id": "grand-hall",
@@ -112,11 +119,12 @@
       "scenario": "Describe visiting a grand assembly hall in the forest. An important event is about to start. Write about what you see and feel.",
       "hint": "森の中に堂々とした会堂が...",
       "targets": [
-        { "surface": "堂々", "reading": "どうどう", "meaning": "magnificent", "count": 1, "matches": ["堂々", "どうどう"] },
-        { "surface": "会堂", "reading": "かいどう", "meaning": "assembly hall", "count": 1, "matches": ["会堂", "かいどう"] },
-        { "surface": "開始", "reading": "かいし", "meaning": "start", "count": 1, "matches": ["開始", "かいし"] },
-        { "surface": "森", "reading": "もり", "meaning": "forest", "count": 1, "matches": ["森", "もり"] }
-      ]
+        { "id": "v_doudou", "count": 1 },
+        { "id": "v_kaidou", "count": 1 },
+        { "id": "v_kaishi", "count": 1 },
+        { "id": "v_mori", "count": 1 }
+      ],
+      "helpers": ["v_akeru", "v_hiraku", "v_kawaru"]
     },
     {
       "id": "village-festival",
@@ -127,12 +135,13 @@
       "scenario": "A special festival is held in the village! People gather at the gate. Write about the celebration and what you think about it.",
       "hint": "村で特別なお祭りがありました...",
       "targets": [
-        { "surface": "村", "reading": "むら", "meaning": "village", "count": 1, "matches": ["村", "むら"] },
-        { "surface": "門", "reading": "もん", "meaning": "gate", "count": 1, "matches": ["門", "もん"] },
-        { "surface": "特別", "reading": "とくべつ", "meaning": "special", "count": 1, "matches": ["特別", "とくべつ"] },
-        { "surface": "集まる", "reading": "あつまる", "meaning": "to gather", "count": 1, "matches": ["集ま", "あつま"] },
-        { "surface": "思う", "reading": "おもう", "meaning": "to think", "count": 1, "matches": ["思", "おもう", "おもい"] }
-      ]
+        { "id": "v_mura", "count": 1 },
+        { "id": "v_mon", "count": 1 },
+        { "id": "v_tokubetsu", "count": 1 },
+        { "id": "v_atsumaru", "count": 1, "matches": ["集ま", "あつま"] },
+        { "id": "v_omou", "count": 1, "matches": ["思", "おもう", "おもい"] }
+      ],
+      "helpers": ["v_murabito", "v_ike", "v_atsumeru", "v_omoidasu"]
     },
     {
       "id": "forest-adventure",
@@ -143,12 +152,13 @@
       "scenario": "Walk through a grove into a deep forest. You find a pond and then discover a hidden cafeteria. Open the door and describe what is inside.",
       "hint": "林を通って森に入りました...",
       "targets": [
-        { "surface": "林", "reading": "はやし", "meaning": "grove", "count": 1, "matches": ["林", "はやし"] },
-        { "surface": "森", "reading": "もり", "meaning": "forest", "count": 1, "matches": ["森", "もり"] },
-        { "surface": "池", "reading": "いけ", "meaning": "pond", "count": 1, "matches": ["池", "いけ"] },
-        { "surface": "食堂", "reading": "しょくどう", "meaning": "cafeteria", "count": 1, "matches": ["食堂", "しょくどう"] },
-        { "surface": "開ける", "reading": "あける", "meaning": "to open", "count": 1, "matches": ["開け", "あけ"] }
-      ]
+        { "id": "v_hayashi", "count": 1 },
+        { "id": "v_mori", "count": 1 },
+        { "id": "v_ike", "count": 1 },
+        { "id": "v_shokudou", "count": 1 },
+        { "id": "v_akeru", "count": 1, "matches": ["開け", "あけ"] }
+      ],
+      "helpers": ["v_hiraku", "v_kawaru", "v_mon", "v_murabito"]
     },
     {
       "id": "the-big-day",
@@ -159,15 +169,16 @@
       "scenario": "After a typhoon, villagers gather at the cafeteria for a special meeting. Write about what happened, what you think about these changing times, and what you learned.",
       "hint": "台風のあとで、村人が食堂に集まりました...",
       "targets": [
-        { "surface": "村", "reading": "むら", "meaning": "village", "count": 1, "matches": ["村", "むら"] },
-        { "surface": "台風", "reading": "たいふう", "meaning": "typhoon", "count": 1, "matches": ["台風", "たいふう"] },
-        { "surface": "特別", "reading": "とくべつ", "meaning": "special", "count": 1, "matches": ["特別", "とくべつ"] },
-        { "surface": "集まる", "reading": "あつまる", "meaning": "to gather", "count": 1, "matches": ["集ま", "あつま"] },
-        { "surface": "食堂", "reading": "しょくどう", "meaning": "cafeteria", "count": 1, "matches": ["食堂", "しょくどう"] },
-        { "surface": "思う", "reading": "おもう", "meaning": "to think", "count": 1, "matches": ["思", "おもう", "おもい"] },
-        { "surface": "時代", "reading": "じだい", "meaning": "era", "count": 1, "matches": ["時代", "じだい"] },
-        { "surface": "知る", "reading": "しる", "meaning": "to know", "count": 1, "matches": ["知", "しって", "しり"] }
-      ]
+        { "id": "v_mura", "count": 1 },
+        { "id": "v_taifuu", "count": 1 },
+        { "id": "v_tokubetsu", "count": 1 },
+        { "id": "v_atsumaru", "count": 1, "matches": ["集ま", "あつま"] },
+        { "id": "v_shokudou", "count": 1 },
+        { "id": "v_omou", "count": 1, "matches": ["思", "おもう", "おもい"] },
+        { "id": "v_jidai", "count": 1 },
+        { "id": "v_shiru", "count": 1, "matches": ["知", "しって", "しり"] }
+      ],
+      "helpers": ["v_atsumeru", "v_omoidasu", "v_hakaru", "v_akeru", "v_kawaru"]
     },
     {
       "id": "city-calligraphy",
@@ -178,13 +189,14 @@
       "scenario": "You moved to a new city and started learning calligraphy. Write about pulling supplies from a drawer, your errands around town, and what you are studying at the morning market.",
       "hint": "例: 新しい都市に来ました。引き出しから...",
       "targets": [
-        { "surface": "引き出し", "reading": "ひきだし", "meaning": "drawer", "count": 1, "matches": ["引き出し", "ひきだし"] },
-        { "surface": "用事", "reading": "ようじ", "meaning": "errand", "count": 1, "matches": ["用事", "ようじ"] },
-        { "surface": "習字", "reading": "しゅうじ", "meaning": "calligraphy", "count": 1, "matches": ["習字", "しゅうじ"] },
-        { "surface": "都市", "reading": "とし", "meaning": "city", "count": 1, "matches": ["都市", "とし"] },
-        { "surface": "学習", "reading": "がくしゅう", "meaning": "study", "count": 1, "matches": ["学習", "がくしゅう"] },
-        { "surface": "朝市", "reading": "あさいち", "meaning": "morning market", "count": 1, "matches": ["朝市", "あさいち"] }
-      ]
+        { "id": "v_hikidashi", "count": 1 },
+        { "id": "v_youji", "count": 1 },
+        { "id": "v_shuuji", "count": 1 },
+        { "id": "v_toshi", "count": 1 },
+        { "id": "v_gakushuu", "count": 1 },
+        { "id": "v_asaichi", "count": 1 }
+      ],
+      "helpers": ["v_hiku", "v_hikidasu", "v_narau", "v_minarau"]
     },
     {
       "id": "building-the-square",
@@ -195,13 +207,14 @@
       "scenario": "A carpenter is building a new structure in the wide town square. Describe the construction site near the factory, the workers, and what the finished building will look like.",
       "hint": "例: 広場に新しい建物を建てます。工場の近くで...",
       "targets": [
-        { "surface": "場所", "reading": "ばしょ", "meaning": "place", "count": 1, "matches": ["場所", "ばしょ"] },
-        { "surface": "工場", "reading": "こうじょう", "meaning": "factory", "count": 1, "matches": ["工場", "こうじょう"] },
-        { "surface": "広場", "reading": "ひろば", "meaning": "square/plaza", "count": 1, "matches": ["広場", "ひろば"] },
-        { "surface": "建物", "reading": "たてもの", "meaning": "building", "count": 1, "matches": ["建物", "たてもの"] },
-        { "surface": "大工", "reading": "だいく", "meaning": "carpenter", "count": 1, "matches": ["大工", "だいく"] },
-        { "surface": "建てる", "reading": "たてる", "meaning": "to build", "count": 1, "matches": ["建て", "たて"] }
-      ]
+        { "id": "v_basho", "count": 1 },
+        { "id": "v_koujou", "count": 1 },
+        { "id": "v_hiroba", "count": 1 },
+        { "id": "v_tatemono", "count": 1 },
+        { "id": "v_daiku", "count": 1 },
+        { "id": "v_tateru", "count": 1, "matches": ["建て", "たて"] }
+      ],
+      "helpers": ["v_tatsu", "v_hiromeru", "v_hiroi", "v_koudai"]
     },
     {
       "id": "new-city-project",
@@ -212,15 +225,16 @@
       "scenario": "A new city development is underway! Wide squares, tall buildings, and a factory are being built on a large site. Write about visiting the construction, what you learned from the workers, and how the city will use the new spaces.",
       "hint": "例: 広い用地に新しい都市を建てます。工場で学習して...",
       "targets": [
-        { "surface": "都市", "reading": "とし", "meaning": "city", "count": 1, "matches": ["都市", "とし"] },
-        { "surface": "工場", "reading": "こうじょう", "meaning": "factory", "count": 1, "matches": ["工場", "こうじょう"] },
-        { "surface": "建てる", "reading": "たてる", "meaning": "to build", "count": 1, "matches": ["建て", "たて"] },
-        { "surface": "広い", "reading": "ひろい", "meaning": "wide", "count": 1, "matches": ["広い", "ひろい", "広く", "広か"] },
-        { "surface": "学習", "reading": "がくしゅう", "meaning": "study", "count": 1, "matches": ["学習", "がくしゅう"] },
-        { "surface": "用地", "reading": "ようち", "meaning": "site/land", "count": 1, "matches": ["用地", "ようち"] },
-        { "surface": "場所", "reading": "ばしょ", "meaning": "place", "count": 1, "matches": ["場所", "ばしょ"] },
-        { "surface": "引く", "reading": "ひく", "meaning": "to pull/draw", "count": 1, "matches": ["引", "ひい", "ひき"] }
-      ]
+        { "id": "v_toshi", "count": 1 },
+        { "id": "v_koujou", "count": 1 },
+        { "id": "v_tateru", "count": 1, "matches": ["建て", "たて"] },
+        { "id": "v_hiroi", "count": 1, "matches": ["広い", "ひろい", "広く", "広か"] },
+        { "id": "v_gakushuu", "count": 1 },
+        { "id": "v_youchi", "count": 1 },
+        { "id": "v_basho", "count": 1 },
+        { "id": "v_hiku", "count": 1, "matches": ["引", "ひい", "ひき"] }
+      ],
+      "helpers": ["v_hikidasu", "v_narau", "v_minarau", "v_tatsu", "v_hiromeru", "v_koudai"]
     },
     {
       "id": "first-train",
@@ -231,13 +245,14 @@
       "scenario": "You are catching the first train of the day to travel outside your prefecture. Write about the early departure, the districts you pass through, and something surprising you discover along the way.",
       "hint": "例: 朝早く出発します。始発の電車で県外へ...",
       "targets": [
-        { "surface": "出発", "reading": "しゅっぱつ", "meaning": "departure", "count": 1, "matches": ["出発", "しゅっぱつ"] },
-        { "surface": "始発", "reading": "しはつ", "meaning": "first train", "count": 1, "matches": ["始発", "しはつ"] },
-        { "surface": "県外", "reading": "けんがい", "meaning": "outside the prefecture", "count": 1, "matches": ["県外", "けんがい"] },
-        { "surface": "地区", "reading": "ちく", "meaning": "district", "count": 1, "matches": ["地区", "ちく"] },
-        { "surface": "通る", "reading": "とおる", "meaning": "to pass through", "count": 1, "matches": ["通る", "とおり", "通って", "とおって"] },
-        { "surface": "発見", "reading": "はっけん", "meaning": "discovery", "count": 1, "matches": ["発見", "はっけん"] }
-      ]
+        { "id": "v_shuppatsu", "count": 1 },
+        { "id": "v_shihatsu", "count": 1 },
+        { "id": "v_kengai", "count": 1 },
+        { "id": "v_chiku", "count": 1 },
+        { "id": "v_tooru", "count": 1, "matches": ["通る", "とおり", "通って", "とおって"] },
+        { "id": "v_hakken", "count": 1 }
+      ],
+      "helpers": ["v_kayou", "v_tsuugaku", "v_kubetsu", "v_hatsugen"]
     },
     {
       "id": "factory-district",
@@ -248,15 +263,16 @@
       "scenario": "You commute through a wide factory district in a neighboring prefecture. Describe the buildings, the square, how workers pass along the main street each day, and something unexpected you discover there.",
       "hint": "例: 県外の工場の地区に通っています。広い大通りを通ると...",
       "targets": [
-        { "surface": "工場", "reading": "こうじょう", "meaning": "factory", "count": 1, "matches": ["工場", "こうじょう"] },
-        { "surface": "地区", "reading": "ちく", "meaning": "district", "count": 1, "matches": ["地区", "ちく"] },
-        { "surface": "広場", "reading": "ひろば", "meaning": "square/plaza", "count": 1, "matches": ["広場", "ひろば"] },
-        { "surface": "建物", "reading": "たてもの", "meaning": "building", "count": 1, "matches": ["建物", "たてもの"] },
-        { "surface": "大通り", "reading": "おおどおり", "meaning": "main street", "count": 1, "matches": ["大通り", "おおどおり"] },
-        { "surface": "通う", "reading": "かよう", "meaning": "to commute", "count": 1, "matches": ["通う", "かよう", "通い", "かよい", "通って", "かよって"] },
-        { "surface": "県外", "reading": "けんがい", "meaning": "outside the prefecture", "count": 1, "matches": ["県外", "けんがい"] },
-        { "surface": "発見", "reading": "はっけん", "meaning": "discovery", "count": 1, "matches": ["発見", "はっけん"] }
-      ]
+        { "id": "v_koujou", "count": 1 },
+        { "id": "v_chiku", "count": 1 },
+        { "id": "v_hiroba", "count": 1 },
+        { "id": "v_tatemono", "count": 1 },
+        { "id": "v_oodoori", "count": 1 },
+        { "id": "v_kayou", "count": 1, "matches": ["通う", "かよう", "通い", "かよい", "通って", "かよって"] },
+        { "id": "v_kengai", "count": 1 },
+        { "id": "v_hakken", "count": 1 }
+      ],
+      "helpers": ["v_tooru", "v_tateru", "v_hiroi", "v_tsuugaku"]
     }
   ]
 }
