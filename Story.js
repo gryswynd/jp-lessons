@@ -8,6 +8,7 @@ window.StoryModule = (function() {
   let storyList = [];
   let currentIndex = 0;
   let termMapData = {};
+  let autoSurfaceMap = {}; // glossary surface → { id } for automatic matching
   let CONJUGATION_RULES = null;
 
   function getCdnUrl(filepath) {
@@ -396,10 +397,15 @@ window.StoryModule = (function() {
         fetch(conjUrl).then(r => r.json())
       ]);
 
-      // Build term map
+      // Build term map (id → term, for modal lookups)
       termMapData = {};
+      autoSurfaceMap = {};
       glossary.forEach(term => {
         termMapData[term.id] = term;
+        // Auto-surface map: surface form → id (for automatic highlighting)
+        if (term.surface) {
+          autoSurfaceMap[term.surface] = { id: term.id, form: null };
+        }
       });
 
       CONJUGATION_RULES = conjugationRules;
@@ -761,6 +767,8 @@ window.StoryModule = (function() {
 
   function processStoryHTML(html, termMappings) {
     // termMappings = { "行きました": { id: "v.iku", form: "polite_past" }, ... }
+    // Merge once: auto-map from glossary surfaces + explicit overrides (terms.json wins)
+    const mergedMappings = Object.assign({}, autoSurfaceMap, termMappings);
 
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = html;
@@ -786,8 +794,7 @@ window.StoryModule = (function() {
       const text = node.textContent;
       if (!text.trim()) continue;
 
-      // Find term matches using explicit mappings
-      const matches = findTermsInText(text, termMappings);
+      const matches = findTermsInText(text, mergedMappings);
       if (matches.length > 0) {
         nodesToReplace.push({ node, matches });
       }
