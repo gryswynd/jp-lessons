@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.30",
   "title": "Phase 4 Lesson 30: Thoughts & Special Answers",
   "meta": {
@@ -54,7 +55,10 @@
           "terms": [
             "v_kinou",
             "k_nani",
-            { "id": "v_suru", "form": "polite_mashita" }
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -71,8 +75,14 @@
           "terms": [
             "v_sensei",
             "v_namae",
-            { "id": "v_shiru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_shiru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -81,7 +91,10 @@
           "terms": [
             "v_mainichi",
             "v_nanji",
-            { "id": "v_hataraku", "form": "polite_masu" }
+            {
+              "id": "v_hataraku",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -189,7 +202,10 @@
           "terms": [
             "k_hito",
             "v_namae",
-            { "id": "v_omoidasu", "form": "polite_masu" }
+            {
+              "id": "v_omoidasu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -197,9 +213,15 @@
           "jp": "いいえ、思い出せません。だれだと 思いますか。",
           "en": "No, I cannot recall. Who do you think it is?",
           "terms": [
-            { "id": "v_omoidasu", "form": "polite_potential_negative" },
+            {
+              "id": "v_omoidasu",
+              "form": "polite_potential_negative"
+            },
             "v_dare",
-            { "id": "v_omou", "form": "polite_masu" }
+            {
+              "id": "v_omou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -209,7 +231,10 @@
           "terms": [
             "v_tokubetsu",
             "v_sensei",
-            { "id": "v_omou", "form": "polite_masu" }
+            {
+              "id": "v_omou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -217,7 +242,10 @@
           "jp": "あ、分かりました！",
           "en": "Ah, I understand now!",
           "terms": [
-            { "id": "v_wakaru", "form": "polite_mashita" }
+            {
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -233,7 +261,10 @@
           "en": "Will you go by express train?",
           "terms": [
             "v_tokkyuu",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -243,7 +274,10 @@
           "terms": [
             "v_tokuni",
             "v_jikan",
-            { "id": "v_aru", "form": "polite_negative" }
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -253,8 +287,14 @@
           "terms": [
             "v_eki",
             "k_hito",
-            { "id": "v_atsumaru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_atsumaru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -265,7 +305,10 @@
             "k_nani",
             "v_tokubetsu",
             "v_densha",
-            { "id": "v_kuru", "form": "polite_masu" }
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -281,8 +324,14 @@
           "en": "What are you collecting?",
           "terms": [
             "k_nani",
-            { "id": "v_atsumeru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_atsumeru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -292,8 +341,14 @@
           "terms": [
             "v_furui",
             "v_tokei",
-            { "id": "v_atsumeru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_atsumeru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -303,7 +358,10 @@
           "terms": [
             "v_sugoi",
             "v_takusan",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -337,10 +395,16 @@
           "jp": "分かりません。先生と 問答 しましょう。",
           "en": "I do not know. Let's have a dialogue (Q&A) with the teacher.",
           "terms": [
-            { "id": "v_wakaru", "form": "polite_negative" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_negative"
+            },
             "v_sensei",
             "v_mondou",
-            { "id": "v_suru", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_suru",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -358,8 +422,14 @@
           "en": "Yes, I will concentrate and listen.",
           "terms": [
             "v_hai",
-            { "id": "v_shuuchuu", "form": "te_form" },
-            { "id": "v_kiku", "form": "polite_masu" }
+            {
+              "id": "v_shuuchuu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kiku",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -375,7 +445,10 @@
             "v_kyou",
             "v_tokubetsu",
             "k_nichi",
-            { "id": "v_omou", "form": "polite_masu" }
+            {
+              "id": "v_omou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -384,8 +457,14 @@
           "terms": [
             "v_chichi",
             "v_tokkyuu",
-            { "id": "v_kaeru", "form": "te_form" },
-            { "id": "v_kuru", "form": "polite_masu" }
+            {
+              "id": "v_kaeru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -394,7 +473,10 @@
           "terms": [
             "k_watashi",
             "v_eki",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -403,8 +485,14 @@
           "terms": [
             "k_hito",
             "v_takusan",
-            { "id": "v_atsumaru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_mashita" }
+            {
+              "id": "v_atsumaru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_mashita"
+            }
           ]
         }
       ],
@@ -453,7 +541,10 @@
             "v_sensei",
             "v_gakusei",
             "v_kotae",
-            { "id": "v_kiku", "form": "polite_mashita" }
+            {
+              "id": "v_kiku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -461,8 +552,14 @@
           "en": "The student concentrated and thought.",
           "terms": [
             "v_gakusei",
-            { "id": "v_shuuchuu", "form": "te_form" },
-            { "id": "v_kangaeru", "form": "polite_mashita" }
+            {
+              "id": "v_shuuchuu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kangaeru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -470,17 +567,29 @@
           "en": "But, he did not recall the answer.",
           "terms": [
             "v_kotae",
-            { "id": "v_omoidasu", "form": "polite_negative_mashita" }
+            {
+              "id": "v_omoidasu",
+              "form": "polite_negative_mashita"
+            }
           ]
         },
         {
           "jp": "「分かりません」と 言いました。口答えは しません。",
           "en": "He said 'I don't know'. He does not talk back.",
           "terms": [
-            { "id": "v_wakaru", "form": "polite_negative" },
-            { "id": "v_iu", "form": "polite_mashita" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_negative"
+            },
+            {
+              "id": "v_iu",
+              "form": "polite_mashita"
+            },
             "v_kuchigotae",
-            { "id": "v_suru", "form": "polite_negative" }
+            {
+              "id": "v_suru",
+              "form": "polite_negative"
+            }
           ]
         }
       ],
@@ -529,7 +638,9 @@
             "iu"
           ],
           "answer": "omou",
-          "terms": [ "v_omou" ]
+          "terms": [
+            "v_omou"
+          ]
         },
         {
           "kind": "mcq",
@@ -541,7 +652,9 @@
             "tokushuu"
           ],
           "answer": "tokubetsu",
-          "terms": [ "v_tokubetsu" ]
+          "terms": [
+            "v_tokubetsu"
+          ]
         },
         {
           "kind": "mcq",
@@ -553,7 +666,9 @@
             "mondou"
           ],
           "answer": "kotae",
-          "terms": [ "v_kotae" ]
+          "terms": [
+            "v_kotae"
+          ]
         },
         {
           "kind": "mcq",
@@ -565,7 +680,9 @@
             "shimeru"
           ],
           "answer": "atsumeru",
-          "terms": [ "v_atsumeru" ]
+          "terms": [
+            "v_atsumeru"
+          ]
         },
         {
           "kind": "mcq",
@@ -577,7 +694,9 @@
             "dashiau"
           ],
           "answer": "omoidasu",
-          "terms": [ "v_omoidasu" ]
+          "terms": [
+            "v_omoidasu"
+          ]
         }
       ]
     },
@@ -630,7 +749,10 @@
           "answer": "集めて",
           "terms": [
             "v_kitte",
-            { "id": "v_atsumeru", "form": "te_form" },
+            {
+              "id": "v_atsumeru",
+              "form": "te_form"
+            },
             "v_iru"
           ]
         },

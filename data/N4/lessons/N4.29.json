@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.29",
   "title": "Phase 4 Lesson 29: Measurement & Knowledge",
   "meta": {
@@ -71,7 +72,10 @@
           "terms": [
             "v_atarashii",
             "k_kuruma",
-            { "id": "v_kau", "form": "polite_mashita" }
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -186,7 +190,10 @@
           "en": "A typhoon is coming, isn't it?",
           "terms": [
             "v_taifuu",
-            { "id": "v_kuru", "form": "polite_masu" }
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -195,7 +202,10 @@
           "en": "Yes. Do you have a plan?",
           "terms": [
             "v_keikaku",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -204,7 +214,10 @@
           "en": "I will not leave the house. My house is on high ground.",
           "terms": [
             "k_ie",
-            { "id": "v_deru", "form": "polite_negative" },
+            {
+              "id": "v_deru",
+              "form": "polite_negative"
+            },
             "v_takadai"
           ]
         },
@@ -239,7 +252,10 @@
           "terms": [
             "k_watashi",
             "v_daidokoro",
-            { "id": "v_aru", "form": "polite_mashita" }
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -248,7 +264,10 @@
           "en": "Yes. But I do not know the time.",
           "terms": [
             "v_jikan",
-            { "id": "v_wakaru", "form": "polite_negative" }
+            {
+              "id": "v_wakaru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -274,7 +293,10 @@
           "terms": [
             "v_gakusei",
             "v_nannin",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -284,7 +306,10 @@
           "terms": [
             "v_juunin",
             "v_ijou",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -317,8 +342,14 @@
           "en": "Do you know that person?",
           "terms": [
             "k_hito",
-            { "id": "v_shiru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_shiru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -327,7 +358,10 @@
           "en": "No. Because I am shy, I do not speak.",
           "terms": [
             "v_hitomishiri",
-            { "id": "v_hanasu", "form": "polite_negative" }
+            {
+              "id": "v_hanasu",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -351,7 +385,10 @@
           "terms": [
             "v_tsuyoi",
             "v_taifuu",
-            { "id": "v_kuru", "form": "polite_masu" }
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -360,7 +397,10 @@
           "terms": [
             "v_tsuyoi",
             "k_kaze",
-            { "id": "v_shiraseru", "form": "polite_mashita" }
+            {
+              "id": "v_shiraseru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -379,7 +419,10 @@
             "k_ie",
             "v_takadai",
             "k_moto",
-            { "id": "v_yomu", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -426,7 +469,10 @@
             "k_mise",
             "v_tokei",
             "v_kau",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -436,7 +482,10 @@
             "v_ii",
             "v_tokei",
             "v_ichidai",
-            { "id": "v_aru", "form": "polite_mashita" }
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -505,7 +554,9 @@
             "taikun"
           ],
           "answer": "taifuu",
-          "terms": [ "v_taifuu" ]
+          "terms": [
+            "v_taifuu"
+          ]
         },
         {
           "kind": "mcq",
@@ -517,7 +568,9 @@
             "jihyou"
           ],
           "answer": "tokei",
-          "terms": [ "v_tokei" ]
+          "terms": [
+            "v_tokei"
+          ]
         },
         {
           "kind": "mcq",
@@ -529,7 +582,9 @@
             "kega"
           ],
           "answer": "keikaku",
-          "terms": [ "v_keikaku" ]
+          "terms": [
+            "v_keikaku"
+          ]
         },
         {
           "kind": "mcq",
@@ -541,7 +596,9 @@
             "kuru"
           ],
           "answer": "shiru",
-          "terms": [ "v_shiru" ]
+          "terms": [
+            "v_shiru"
+          ]
         },
         {
           "kind": "mcq",
@@ -553,7 +610,9 @@
             "izen"
           ],
           "answer": "ika",
-          "terms": [ "v_ika" ]
+          "terms": [
+            "v_ika"
+          ]
         }
       ]
     },
@@ -622,7 +681,10 @@
           "answer": "計って",
           "terms": [
             "v_jikan",
-            { "id": "v_hakaru", "form": "te_form" }
+            {
+              "id": "v_hakaru",
+              "form": "te_form"
+            }
           ]
         }
       ]

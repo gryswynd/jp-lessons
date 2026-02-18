@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.17",
   "title": "Phase 4 Lesson 17: Travel & Transport",
   "meta": {
@@ -69,7 +70,10 @@
           "en": "Did you go anywhere yesterday?",
           "terms": [
             "v_kinou",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -77,7 +81,10 @@
           "en": "Do you exercise every day?",
           "terms": [
             "v_mainichi",
-            { "id": "v_undou", "form": "polite_masu" }
+            {
+              "id": "v_undou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -95,7 +102,10 @@
           "terms": [
             "v_kyonen",
             "k_natsu",
-            { "id": "v_atsui", "form": "polite_past_adj" }
+            {
+              "id": "v_atsui",
+              "form": "polite_past_adj"
+            }
           ]
         }
       ]
@@ -230,7 +240,10 @@
           "terms": [
             "v_raishuu",
             "v_kyouto",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -239,7 +252,10 @@
           "en": "That's nice. Won't you go to Tokyo?",
           "terms": [
             "v_toukyou",
-            { "id": "v_iku", "form": "polite_negative" }
+            {
+              "id": "v_iku",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -251,7 +267,10 @@
             "v_kyouto",
             "v_furui",
             "v_otera",
-            { "id": "v_miru", "form": "desire_tai" }
+            {
+              "id": "v_miru",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -259,7 +278,10 @@
           "jp": "そうですか。楽しんでください。",
           "en": "I see. Please enjoy it.",
           "terms": [
-            { "id": "v_tanoshimu", "form": "te_form" }
+            {
+              "id": "v_tanoshimu",
+              "form": "te_form"
+            }
           ]
         }
       ]
@@ -277,7 +299,10 @@
             "v_tanaka",
             "k_kuruma",
             "v_unten",
-            { "id": "v_dekiru", "form": "polite_masu" }
+            {
+              "id": "v_dekiru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -287,7 +312,10 @@
           "terms": [
             "v_itsumo",
             "v_jitensha",
-            { "id": "v_noru", "form": "polite_masu" }
+            {
+              "id": "v_noru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -306,7 +334,10 @@
           "terms": [
             "v_senshuu",
             "k_ame",
-            { "id": "v_korobu", "form": "polite_mashita" }
+            {
+              "id": "v_korobu",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -322,7 +353,10 @@
           "en": "Have you ever been overseas?",
           "terms": [
             "v_kaigai",
-            { "id": "v_iku", "form": "plain_past" }
+            {
+              "id": "v_iku",
+              "form": "plain_past"
+            }
           ]
         },
         {
@@ -331,7 +365,10 @@
           "en": "Yes. I have twice.",
           "terms": [
             "v_nikai",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -339,7 +376,10 @@
           "jp": "どこへ 行きましたか。",
           "en": "Where did you go?",
           "terms": [
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -348,7 +388,10 @@
           "en": "Hawaii. The sea was very beautiful.",
           "terms": [
             "v_umi",
-            { "id": "v_kirei", "form": "polite_past_adj" }
+            {
+              "id": "v_kirei",
+              "form": "polite_past_adj"
+            }
           ]
         }
       ]
@@ -374,7 +417,10 @@
           "terms": [
             "v_hiroi",
             "v_ta",
-            { "id": "v_aru", "form": "polite_mashita" }
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -383,7 +429,10 @@
           "en": "What did you do?",
           "terms": [
             "k_nani",
-            { "id": "v_suru", "form": "polite_mashita" }
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -392,9 +441,15 @@
           "en": "We rented a car and drove around with friends.",
           "terms": [
             "k_kuruma",
-            { "id": "v_kariru", "form": "te_form" },
+            {
+              "id": "v_kariru",
+              "form": "te_form"
+            },
             "v_tomodachi",
-            { "id": "v_norimawasu", "form": "polite_mashita" }
+            {
+              "id": "v_norimawasu",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -410,7 +465,10 @@
             "v_sengetsu",
             "v_hokkaidou",
             "v_toukyou",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -432,7 +490,10 @@
             "k_watashi",
             "v_densha",
             "v_nankai",
-            { "id": "v_noru", "form": "polite_mashita" }
+            {
+              "id": "v_noru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -441,7 +502,10 @@
           "terms": [
             "v_toukyou",
             "v_ryouri",
-            { "id": "v_oishii", "form": "polite_past_adj" }
+            {
+              "id": "v_oishii",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
@@ -450,7 +514,10 @@
           "terms": [
             "v_rainen",
             "v_kaigai",
-            { "id": "v_iku", "form": "desire_tai" }
+            {
+              "id": "v_iku",
+              "form": "desire_tai"
+            }
           ]
         }
       ],
@@ -516,7 +583,10 @@
           "en": "There is no sea near my house, but there are beautiful mountains and rice fields.",
           "terms": [
             "k_ie",
-            { "id": "v_chikai", "form": "adverbial" },
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            },
             "v_umi",
             "v_kirei",
             "k_yama",
@@ -531,7 +601,10 @@
             "v_yoku",
             "v_jitensha",
             "k_yama",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {

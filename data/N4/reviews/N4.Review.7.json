@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.Review.7",
   "title": "Phase 4 Review: Thoughts, Times & Openings",
   "meta": {
@@ -33,14 +34,20 @@
                 "k_kono",
                 "v_mondai",
                 "v_kotae",
-                { "id": "v_wakaru", "form": "polite_masu" }
+                {
+                  "id": "v_wakaru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
               "spk": "B",
               "jp": "いいえ、思い出せません。難しいです。",
               "terms": [
-                { "id": "v_omoidasu", "form": "potential_negative" },
+                {
+                  "id": "v_omoidasu",
+                  "form": "potential_negative"
+                },
                 "v_muzukashii"
               ]
             },
@@ -49,7 +56,10 @@
               "jp": "先生に 聞きましょうか。",
               "terms": [
                 "v_sensei",
-                { "id": "v_kiku", "form": "polite_volitional_mashou" }
+                {
+                  "id": "v_kiku",
+                  "form": "polite_volitional_mashou"
+                }
               ]
             },
             {
@@ -57,7 +67,10 @@
               "jp": "はい。それが いいと 思います。",
               "terms": [
                 "v_ii",
-                { "id": "v_omou", "form": "polite_masu" }
+                {
+                  "id": "v_omou",
+                  "form": "polite_masu"
+                }
               ]
             }
           ],
@@ -82,7 +95,10 @@
                 "v_kondo",
                 "v_shuukai",
                 "v_doko",
-                { "id": "v_hiraku", "form": "polite_masu" }
+                {
+                  "id": "v_hiraku",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -92,7 +108,10 @@
                 "v_mori",
                 "k_naka",
                 "v_kaidou",
-                { "id": "v_atsumaru", "form": "polite_volitional_mashou" }
+                {
+                  "id": "v_atsumaru",
+                  "form": "polite_volitional_mashou"
+                }
               ]
             },
             {
@@ -101,7 +120,10 @@
               "terms": [
                 "v_nanji",
                 "v_kaidou",
-                { "id": "v_akeru", "form": "polite_masu" }
+                {
+                  "id": "v_akeru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -109,7 +131,10 @@
               "jp": "十時に 開けます。",
               "terms": [
                 "v_juuji",
-                { "id": "v_akeru", "form": "polite_masu" }
+                {
+                  "id": "v_akeru",
+                  "form": "polite_masu"
+                }
               ]
             }
           ],
@@ -133,7 +158,10 @@
               "terms": [
                 "k_kono",
                 "k_machi",
-                { "id": "v_kawaru", "form": "polite_mashita" }
+                {
+                  "id": "v_kawaru",
+                  "form": "polite_mashita"
+                }
               ]
             },
             {
@@ -144,7 +172,10 @@
                 "v_atarashii",
                 "v_shokudou",
                 "v_takusan",
-                { "id": "v_dekiru", "form": "polite_mashita" }
+                {
+                  "id": "v_dekiru",
+                  "form": "polite_mashita"
+                }
               ]
             },
             {
@@ -253,7 +284,10 @@
             "k_naka",
             "v_tokubetsu",
             "k_mise",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -263,7 +297,10 @@
             "k_mise",
             "v_gogo",
             "v_ichiji",
-            { "id": "v_aku_2", "form": "polite_masu" }
+            {
+              "id": "v_aku_2",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -273,7 +310,10 @@
             "v_iroiro",
             "v_sedai",
             "k_hito",
-            { "id": "v_atsumaru", "form": "polite_masu" }
+            {
+              "id": "v_atsumaru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -282,7 +322,10 @@
           "terms": [
             "k_mise",
             "v_daisuki",
-            { "id": "v_omou", "form": "polite_masu" }
+            {
+              "id": "v_omou",
+              "form": "polite_masu"
+            }
           ]
         },
         {

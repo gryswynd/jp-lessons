@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.15",
   "title": "Phase 4 Lesson 15: Health & Life",
   "meta": {
@@ -69,7 +70,10 @@
           "en": "Does your head hurt?",
           "terms": [
             "k_atama",
-            { "id": "v_itai", "form": "polite_adj" }
+            {
+              "id": "v_itai",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -78,14 +82,20 @@
           "terms": [
             "v_mainichi",
             "v_ocha",
-            { "id": "v_nomu", "form": "polite_masu" }
+            {
+              "id": "v_nomu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "jp": "あの 人は 有名ですか。",
           "en": "Is that person famous?",
           "terms": [
-            { "id": "v_yuumei", "form": "polite_adj" },
+            {
+              "id": "v_yuumei",
+              "form": "polite_adj"
+            },
             "k_hito"
           ]
         },
@@ -94,7 +104,10 @@
           "en": "Is your body healthy/energetic?",
           "terms": [
             "k_karada",
-            { "id": "v_genki", "form": "polite_adj" }
+            {
+              "id": "v_genki",
+              "form": "polite_adj"
+            }
           ]
         }
       ]
@@ -212,7 +225,10 @@
           "en": "What is wrong today? (Lit: How did you do?)",
           "terms": [
             "v_kyou",
-            { "id": "v_suru", "form": "polite_mashita" }
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -222,9 +238,15 @@
           "terms": [
             "v_sensei",
             "k_atama",
-            { "id": "v_itai", "form": "polite_adj" },
+            {
+              "id": "v_itai",
+              "form": "polite_adj"
+            },
             "v_kibun",
-            { "id": "v_warui", "form": "polite_adj" }
+            {
+              "id": "v_warui",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -232,9 +254,15 @@
           "jp": "病気ですね。この 薬を 飲んで ください。",
           "en": "It is an illness. Please drink this medicine.",
           "terms": [
-            { "id": "v_byouki", "form": "polite_adj" },
+            {
+              "id": "v_byouki",
+              "form": "polite_adj"
+            },
             "v_kusuri",
-            { "id": "v_nomu", "form": "te_form" }
+            {
+              "id": "v_nomu",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -242,7 +270,10 @@
           "jp": "分かりました。ありがとうございます。",
           "en": "I understand. Thank you.",
           "terms": [
-            { "id": "v_wakaru", "form": "polite_mashita" }
+            {
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -258,7 +289,10 @@
           "en": "What do you study at graduate school?",
           "terms": [
             "v_daigakuin",
-            { "id": "v_manabu", "form": "polite_masu" }
+            {
+              "id": "v_manabu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -267,7 +301,10 @@
           "en": "I study medical science. Because I want to become a doctor.",
           "terms": [
             "v_igaku",
-            { "id": "v_manabu", "form": "polite_masu" },
+            {
+              "id": "v_manabu",
+              "form": "polite_masu"
+            },
             "v_isha"
           ]
         },
@@ -276,7 +313,8 @@
           "jp": "いいですね。父も 医者でした。",
           "en": "That is good. My father was a doctor too.",
           "terms": [
-            "k_chichi","v_isha"
+            "k_chichi",
+            "v_isha"
           ]
         },
         {
@@ -286,7 +324,10 @@
           "terms": [
             "v_ookii",
             "v_byouin",
-            { "id": "v_hataraku", "form": "polite_mashita" }
+            {
+              "id": "v_hataraku",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -302,7 +343,10 @@
           "en": "Excuse me. Do you have eye medicine (drops)?",
           "terms": [
             "v_megusuri",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -311,8 +355,14 @@
           "en": "Yes, we do. Do your eyes hurt?",
           "terms": [
             "k_me",
-            { "id": "v_aru", "form": "polite_masu" },
-            { "id": "v_itai", "form": "polite_adj" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            {
+              "id": "v_itai",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -320,7 +370,10 @@
           "jp": "いいえ、いたくありません。でも、赤いです。",
           "en": "No, they do not hurt. But, they are red.",
           "terms": [
-            { "id": "v_akai", "form": "polite_adj" }
+            {
+              "id": "v_akai",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -328,7 +381,10 @@
           "jp": "そうですか。これを 使って ください。",
           "en": "Is that so. Please use this.",
           "terms": [
-            { "id": "v_tsukau", "form": "te_form" }
+            {
+              "id": "v_tsukau",
+              "form": "te_form"
+            }
           ]
         }
       ]
@@ -344,7 +400,10 @@
           "en": "Is your goldfish healthy?",
           "terms": [
             "v_kingyo",
-            { "id": "v_genki", "form": "polite_adj" }
+            {
+              "id": "v_genki",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -352,7 +411,10 @@
           "jp": "いいえ、きのう 死にました。",
           "en": "No, it died yesterday.",
           "terms": [
-            { "id": "v_shinu", "form": "polite_mashita" }
+            {
+              "id": "v_shinu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -360,7 +422,10 @@
           "jp": "えっ、病気でしたか。",
           "en": "Eh? Was it sick?",
           "terms": [
-            { "id": "v_byouki", "form": "polite_past_adj" }
+            {
+              "id": "v_byouki",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
@@ -381,16 +446,24 @@
           "jp": "有名な 学者が いました。",
           "en": "There was a famous scholar.",
           "terms": [
-            "v_yuumei","v_gakusha",
-            { "id": "v_iru", "form": "polite_mashita" }
+            "v_yuumei",
+            "v_gakusha",
+            {
+              "id": "v_iru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "jp": "この 人は たくさんの 本を 書きました。",
           "en": "This person wrote many books.",
-          "terms": ["k_hito",
+          "terms": [
+            "k_hito",
             "k_hon",
-            { "id": "v_kaku", "form": "polite_mashita" }
+            {
+              "id": "v_kaku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -399,7 +472,10 @@
           "terms": [
             "v_sengetsu",
             "v_byouin",
-            { "id": "v_shinu", "form": "polite_mashita" }
+            {
+              "id": "v_shinu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -407,7 +483,10 @@
           "en": "It was not death from illness. It was an old and long life.",
           "terms": [
             "v_byoushi",
-            { "id": "v_furui", "form": "te_form" },
+            {
+              "id": "v_furui",
+              "form": "te_form"
+            },
             "v_nagai",
             "v_jinsei"
           ]
@@ -418,7 +497,10 @@
           "terms": [
             "v_shisha",
             "k_hon",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -426,9 +508,13 @@
         {
           "q": "学者は 何を しましたか。",
           "a": "本を 書きました。",
-          "terms": ["v_gakusha",
+          "terms": [
+            "v_gakusha",
             "k_hon",
-            { "id": "v_kaku", "form": "polite_mashita" }
+            {
+              "id": "v_kaku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -436,7 +522,10 @@
           "a": "病院で 死にました。",
           "terms": [
             "v_byouin",
-            { "id": "v_shinu", "form": "polite_mashita" }
+            {
+              "id": "v_shinu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -451,7 +540,10 @@
           "q": "どんな 人生 でしたか。",
           "a": "古くて 長い 人生でした。",
           "terms": [
-            { "id": "v_furui", "form": "te_form" },
+            {
+              "id": "v_furui",
+              "form": "te_form"
+            },
             "v_nagai",
             "v_jinsei"
           ]
@@ -475,7 +567,10 @@
           "en": "He is working at a hospital in Tokyo.",
           "terms": [
             "v_byouin",
-            { "id": "v_hataraku", "form": "te_form" }
+            {
+              "id": "v_hataraku",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -485,7 +580,10 @@
             "v_mainichi",
             "v_byouki",
             "k_hito",
-            { "id": "v_au", "form": "polite_masu" }
+            {
+              "id": "v_au",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -495,7 +593,10 @@
             "k_ani",
             "v_shigoto",
             "v_tanoshii",
-            { "id": "v_iu", "form": "polite_mashita" }
+            {
+              "id": "v_iu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -513,7 +614,10 @@
           "terms": [
             "k_ani",
             "v_shigoto",
-            { "id": "v_isha", "form": "polite_adj" }
+            {
+              "id": "v_isha",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -526,10 +630,14 @@
         {
           "q": "兄は 誰に 会いますか。",
           "a": "病気の 人に 会います。",
-          "terms": ["k_ani",
+          "terms": [
+            "k_ani",
             "v_byouki",
             "k_hito",
-            { "id": "v_au", "form": "polite_masu" }
+            {
+              "id": "v_au",
+              "form": "polite_masu"
+            }
           ]
         },
         {

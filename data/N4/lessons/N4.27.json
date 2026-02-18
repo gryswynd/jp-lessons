@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.27",
   "title": "Phase 4 Lesson 27: Waiting & Fitting",
   "meta": {
@@ -55,7 +56,10 @@
             "v_tadashii",
             "k_ka",
             "v_kata",
-            { "id": "v_wakaru", "form": "polite_masu" }
+            {
+              "id": "v_wakaru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -83,7 +87,10 @@
           "en": "Please tell me your thoughts.",
           "terms": [
             "v_kangae",
-            { "id": "v_oshieru", "form": "te_form" }
+            {
+              "id": "v_oshieru",
+              "form": "te_form"
+            }
           ]
         }
       ]
@@ -190,7 +197,10 @@
           "terms": [
             "v_machiawase",
             "v_doko",
-            { "id": "v_suru", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_suru",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -200,7 +210,10 @@
           "terms": [
             "k_u99c5",
             "v_machiaishitsu",
-            { "id": "v_matsu", "form": "polite_masu" }
+            {
+              "id": "v_matsu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -209,7 +222,10 @@
           "en": "What time will we meet?",
           "terms": [
             "v_nanji",
-            { "id": "v_au", "form": "polite_masu" }
+            {
+              "id": "v_au",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -258,7 +274,10 @@
           "terms": [
             "v_nando",
             "v_undou",
-            { "id": "v_suru", "form": "polite_mashita" }
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -267,8 +286,14 @@
           "en": "Yes. I am looking forward to it.",
           "terms": [
             "v_kokoromachi",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -305,8 +330,14 @@
           "en": "I am waiting eagerly (with pleasure).",
           "terms": [
             "v_tanoshimi",
-            { "id": "v_matsu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_matsu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -323,7 +354,10 @@
           "terms": [
             "v_tanabata",
             "v_monogatari",
-            { "id": "v_kiku", "form": "polite_mashita" }
+            {
+              "id": "v_kiku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -344,7 +378,10 @@
           "terms": [
             "v_kirei",
             "v_yozora",
-            { "id": "v_miru", "form": "desire_tai" }
+            {
+              "id": "v_miru",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -372,7 +409,10 @@
             "v_kondo",
             "v_atarashii",
             "v_kaigou",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -381,9 +421,15 @@
           "terms": [
             "v_sensei",
             "k_hana_2",
-            { "id": "v_kiku", "form": "te_form" },
+            {
+              "id": "v_kiku",
+              "form": "te_form"
+            },
             "v_kangae",
-            { "id": "v_au_2", "form": "polite_masu" }
+            {
+              "id": "v_au_2",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -393,7 +439,10 @@
             "v_gouri",
             "k_shi",
             "v_kata",
-            { "id": "v_tsukuru", "form": "desire_tai" }
+            {
+              "id": "v_tsukuru",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -447,7 +496,10 @@
             "v_yuugata",
             "v_inu",
             "k_soto",
-            { "id": "v_aruku", "form": "polite_mashita" }
+            {
+              "id": "v_aruku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -457,8 +509,14 @@
             "k_soto",
             "v_kuuki",
             "v_karada",
-            { "id": "v_au_2", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_mashita" }
+            {
+              "id": "v_au_2",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -468,7 +526,10 @@
             "v_kyoudo",
             "v_takai",
             "v_undou",
-            { "id": "v_suru", "form": "polite_negative" },
+            {
+              "id": "v_suru",
+              "form": "polite_negative"
+            },
             "v_aruku",
             "v_suki"
           ]
@@ -478,7 +539,10 @@
           "en": "I will return by dinner.",
           "terms": [
             "v_yuuhan",
-            { "id": "v_kaeru", "form": "polite_masu" }
+            {
+              "id": "v_kaeru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -620,7 +684,10 @@
           "answer": "合います",
           "terms": [
             "k_ashi",
-            { "id": "v_au", "form": "polite_masu" }
+            {
+              "id": "v_au",
+              "form": "polite_masu"
+            }
           ]
         },
         {

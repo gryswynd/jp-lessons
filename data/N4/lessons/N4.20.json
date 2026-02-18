@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.20",
   "title": "Phase 4 Lesson 20: Night & Lifestyle",
   "meta": {
@@ -54,7 +55,10 @@
           "terms": [
             "v_maiban",
             "k_nani",
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -72,7 +76,10 @@
           "terms": [
             "v_yoku",
             "v_kaimono",
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -183,7 +190,10 @@
           "terms": [
             "v_konya",
             "k_nani",
-            { "id": "v_taberu", "form": "desire_tai" }
+            {
+              "id": "v_taberu",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -192,9 +202,15 @@
           "en": "I want to eat Western food. Is there a good restaurant?",
           "terms": [
             "v_youshoku",
-            { "id": "v_taberu", "form": "desire_tai" },
+            {
+              "id": "v_taberu",
+              "form": "desire_tai"
+            },
             "v_ryouriya",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -203,10 +219,16 @@
           "en": "Yes. There is a new shop near the station.",
           "terms": [
             "k_u99c5",
-            { "id": "v_chikai", "form": "adverbial" },
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            },
             "v_atarashii",
             "k_mise",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -214,7 +236,10 @@
           "jp": "じゃあ、そこへ 行きましょう。",
           "en": "Well then, let's go there.",
           "terms": [
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -250,7 +275,10 @@
           "terms": [
             "k_mise",
             "k_fuku",
-            { "id": "v_takai", "form": "plain_negative" }
+            {
+              "id": "v_takai",
+              "form": "plain_negative"
+            }
           ]
         },
         {
@@ -259,7 +287,10 @@
           "en": "Is that so? Let's go see.",
           "terms": [
             "k_mi_2",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -295,7 +326,10 @@
           "en": "Won't you drink something over there?",
           "terms": [
             "k_nani",
-            { "id": "v_nomu", "form": "polite_negative" }
+            {
+              "id": "v_nomu",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -305,7 +339,10 @@
           "terms": [
             "v_youfuu",
             "v_nomiya",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -322,7 +359,10 @@
           "terms": [
             "v_seiyou",
             "v_ryokou",
-            { "id": "v_suru", "form": "desire_tai" }
+            {
+              "id": "v_suru",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -341,7 +381,10 @@
           "terms": [
             "v_seiyou",
             "v_kaiyou",
-            { "id": "v_miru", "form": "desire_tai" }
+            {
+              "id": "v_miru",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -353,7 +396,10 @@
             "k_yama",
             "v_koya",
             "v_kyuujitsu",
-            { "id": "v_tanoshimu", "form": "polite_masu" }
+            {
+              "id": "v_tanoshimu",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -378,7 +424,10 @@
             "v_tokidoki",
             "v_kazoku",
             "v_ryouriya",
-            { "id": "v_taberu", "form": "polite_masu" }
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -399,7 +448,10 @@
             "v_youfuku",
             "v_daisuki",
             "v_yoku",
-            { "id": "v_kau", "form": "polite_masu" }
+            {
+              "id": "v_kau",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -420,7 +472,10 @@
           "terms": [
             "v-k_chichi",
             "v_nomiya",
-            { "id": "v_nomu", "form": "polite_masu" }
+            {
+              "id": "v_nomu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -452,10 +507,16 @@
           "en": "If you go to the rooftop, you can see the beautiful night sky.",
           "terms": [
             "v_okujou",
-            { "id": "v_iku", "form": "conditional_ba" },
+            {
+              "id": "v_iku",
+              "form": "conditional_ba"
+            },
             "v_kirei",
             "v_yozora",
-            { "id": "v_mieru", "form": "polite_masu" }
+            {
+              "id": "v_mieru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -473,7 +534,10 @@
             "k_yama",
             "v_chiisai",
             "v_koya",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -482,7 +546,10 @@
           "terms": [
             "k_yama",
             "k_yoru",
-          { "id": "v_tanoshimu", "form": "polite_masu" }
+            {
+              "id": "v_tanoshimu",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -493,7 +560,10 @@
           "terms": [
             "v_okujou",
             "v_yozora",
-            { "id": "v_mieru", "form": "polite_masu" }
+            {
+              "id": "v_mieru",
+              "form": "polite_masu"
+            }
           ]
         },
         {

@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.32",
   "title": "Phase 4 Lesson 32: Use, Learn, & The City",
   "meta": {
@@ -62,7 +63,10 @@
           "en": "Do you study every day?",
           "terms": [
             "v_mainichi",
-            { "id": "v_benkyou", "form": "polite_masu" }
+            {
+              "id": "v_benkyou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -70,7 +74,10 @@
           "en": "Do you use Japanese?",
           "terms": [
             "v_nihongo",
-            { "id": "v_tsukau", "form": "polite_masu" }
+            {
+              "id": "v_tsukau",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -78,7 +85,10 @@
           "en": "Please open the door.",
           "terms": [
             "v_doa",
-            { "id": "v_akeru", "form": "te_form" },
+            {
+              "id": "v_akeru",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         }
@@ -217,7 +227,10 @@
           "terms": [
             "k_kono",
             "v_hikidashi",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -226,7 +239,10 @@
           "en": "I want to know the usage (how to use).",
           "terms": [
             "v_tsukaikata",
-            { "id": "v_shiru", "form": "desire_tai" }
+            {
+              "id": "v_shiru",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -236,7 +252,10 @@
           "terms": [
             "k_koko",
             "k_kane",
-            { "id": "v_hikidasu", "form": "te_form" },
+            {
+              "id": "v_hikidasu",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         }
@@ -255,7 +274,10 @@
             "v_moshimoshi",
             "k_ima",
             "v_kyuuyou",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -264,7 +286,10 @@
           "en": "What happened? Is it work?",
           "terms": [
             "v_dou",
-            { "id": "v_suru", "form": "polite_mashita" },
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            },
             "v_shigoto"
           ]
         },
@@ -275,7 +300,10 @@
           "terms": [
             "v_atarashii",
             "k_hito",
-            { "id": "v_kiyou", "form": "polite_masu" }
+            {
+              "id": "v_kiyou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -300,8 +328,14 @@
           "en": "What are you learning?",
           "terms": [
             "k_nani",
-            { "id": "v_narau", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_narau",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -310,8 +344,14 @@
           "en": "I am learning calligraphy. It is fun.",
           "terms": [
             "v_shuuji",
-            { "id": "v_narau", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_narau",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "v_tanoshii"
           ]
         },
@@ -331,8 +371,14 @@
           "terms": [
             "v_hai",
             "v_sensei",
-            { "id": "v_minarau", "form": "te_form" },
-            { "id": "v_kaku", "form": "polite_masu" }
+            {
+              "id": "v_minarau",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kaku",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -349,8 +395,14 @@
           "terms": [
             "v_toshi",
             "v_shichou",
-            { "id": "v_shiru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_shiru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -360,7 +412,10 @@
           "terms": [
             "v_hai",
             "v_asaichi",
-            { "id": "v_au", "form": "polite_mashita" }
+            {
+              "id": "v_au",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -369,7 +424,10 @@
           "en": "What did he do?",
           "terms": [
             "k_nani",
-            { "id": "v_suru", "form": "polite_mashita" }
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -379,7 +437,10 @@
           "terms": [
             "v_atarashii",
             "v_youchi",
-            { "id": "v_miru", "form": "polite_mashita" }
+            {
+              "id": "v_miru",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -394,7 +455,10 @@
           "terms": [
             "v_nihongo",
             "v_gakushuu",
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -405,7 +469,10 @@
             "v_furui",
             "k_moto",
             "k_bun",
-            { "id": "v_inyou", "form": "polite_masu" }
+            {
+              "id": "v_inyou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -422,8 +489,14 @@
           "en": "I learn from the teacher and study.",
           "terms": [
             "v_sensei",
-            { "id": "v_narau", "form": "te_form" },
-            { "id": "v_benkyou", "form": "polite_masu" }
+            {
+              "id": "v_narau",
+              "form": "te_form"
+            },
+            {
+              "id": "v_benkyou",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -469,8 +542,14 @@
             "k_watashi",
             "v_atarashii",
             "v_shi",
-            { "id": "v_sumu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -489,14 +568,20 @@
             "v_nichiyoubi",
             "v_hitobito",
             "v_asaichi",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "jp": "安くて いい 品物が あります。",
           "en": "There are cheap and good goods.",
           "terms": [
-            { "id": "v_yasu", "form": "te_form" },
+            {
+              "id": "v_yasu",
+              "form": "te_form"
+            },
             "v_ii",
             "v_shinamono",
             "v_aru"
@@ -551,7 +636,9 @@
             "komu"
           ],
           "answer": "hiku",
-          "terms": [ "v_hiku" ]
+          "terms": [
+            "v_hiku"
+          ]
         },
         {
           "kind": "mcq",
@@ -563,7 +650,9 @@
             "shiyuu"
           ],
           "answer": "shiyou",
-          "terms": [ "v_shiyou" ]
+          "terms": [
+            "v_shiyou"
+          ]
         },
         {
           "kind": "mcq",
@@ -575,7 +664,9 @@
             "shimau"
           ],
           "answer": "narau",
-          "terms": [ "v_narau" ]
+          "terms": [
+            "v_narau"
+          ]
         },
         {
           "kind": "mcq",
@@ -587,7 +678,9 @@
             "toshichou"
           ],
           "answer": "shichou",
-          "terms": [ "v_shichou" ]
+          "terms": [
+            "v_shichou"
+          ]
         },
         {
           "kind": "mcq",
@@ -599,7 +692,9 @@
             "yobidashi"
           ],
           "answer": "hikidashi",
-          "terms": [ "v_hikidashi" ]
+          "terms": [
+            "v_hikidashi"
+          ]
         }
       ]
     },
@@ -653,7 +748,10 @@
           "answer": "引いて",
           "terms": [
             "v_doa",
-            { "id": "v_hiku", "form": "te_form" },
+            {
+              "id": "v_hiku",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },

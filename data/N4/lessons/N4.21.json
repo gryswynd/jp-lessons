@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.21",
   "title": "Phase 4 Lesson 21: Commerce & Possessions",
   "meta": {
@@ -62,7 +63,10 @@
           "terms": [
             "v_kinou",
             "k_nani",
-            { "id": "v_kau", "form": "polite_mashita" }
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -70,7 +74,10 @@
           "en": "Do you have money?",
           "terms": [
             "k_kane",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -191,7 +198,10 @@
           "en": "Yes. We put it on sale today.",
           "terms": [
             "v_kyou",
-            { "id": "v_uridasu", "form": "polite_mashita" }
+            {
+              "id": "v_uridasu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -249,9 +259,15 @@
           "terms": [
             "k_hito",
             "k_nani",
-            { "id": "v_motsu", "form": "te_form" },
+            {
+              "id": "v_motsu",
+              "form": "te_form"
+            },
             "v_iru",
-            { "id": "v_mieru", "form": "polite_masu" }
+            {
+              "id": "v_mieru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -259,7 +275,10 @@
           "jp": "いいえ、見えません。",
           "en": "No, I can't see.",
           "terms": [
-            { "id": "v_mieru", "form": "polite_negative" }
+            {
+              "id": "v_mieru",
+              "form": "polite_negative"
+            }
           ]
         }
       ]
@@ -275,7 +294,10 @@
           "en": "I want to take this food home.",
           "terms": [
             "v_ryouri",
-            { "id": "v_mochikaeru", "form": "desire_tai" }
+            {
+              "id": "v_mochikaeru",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -285,7 +307,10 @@
           "terms": [
             "k_kane",
             "k_saki",
-            { "id": "v_dasu", "form": "te_form" }
+            {
+              "id": "v_dasu",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -320,7 +345,10 @@
           "en": "Excuse me. Please lend me a pen.",
           "terms": [
             "v_pen",
-            { "id": "v_kasu", "form": "te_form" }
+            {
+              "id": "v_kasu",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -330,8 +358,14 @@
           "terms": [
             "k_futa",
             "k_moto",
-            { "id": "v_motsu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_motsu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -340,7 +374,10 @@
           "en": "Thank you. Is it okay if I take it outside?",
           "terms": [
             "k_soto",
-            { "id": "v_mochidasu", "form": "te_form" }
+            {
+              "id": "v_mochidasu",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -349,7 +386,10 @@
           "en": "No, please use it at school.",
           "terms": [
             "v_gakkou",
-            { "id": "v_tsukau", "form": "te_form" }
+            {
+              "id": "v_tsukau",
+              "form": "te_form"
+            }
           ]
         }
       ]
@@ -366,8 +406,14 @@
             "k_chichi",
             "v_furui",
             "v_shinamono",
-            { "id": "v_uru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_uru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -379,7 +425,10 @@
             "v_youfuku",
             "v_gaikoku",
             "k_moto",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -388,7 +437,10 @@
           "terms": [
             "k_chichi",
             "v_urimono",
-            { "id": "v_iu", "form": "polite_masu" }
+            {
+              "id": "v_iu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -397,7 +449,10 @@
           "terms": [
             "v_tokidoki",
             "k_hito",
-            { "id": "v_kasu", "form": "polite_masu" }
+            {
+              "id": "v_kasu",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -408,7 +463,10 @@
           "terms": [
             "v_furui",
             "v_shinamono",
-            { "id": "v_uru", "form": "te_form" }
+            {
+              "id": "v_uru",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -425,7 +483,10 @@
           "a": "いいえ、売りません。貸します。",
           "terms": [
             "k_hon",
-            { "id": "v_uru", "form": "polite_negative" },
+            {
+              "id": "v_uru",
+              "form": "polite_negative"
+            },
             "v_kasu"
           ]
         }
@@ -441,14 +502,20 @@
           "terms": [
             "v_nichiyoubi",
             "v_tejina",
-            { "id": "v_miru", "form": "polite_mashita" }
+            {
+              "id": "v_miru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "jp": "とても おもしろくて、いい 気持ちでした。",
           "en": "It was very interesting, and a good feeling.",
           "terms": [
-            { "id": "v_omoshiroi", "form": "te_form" },
+            {
+              "id": "v_omoshiroi",
+              "form": "te_form"
+            },
             "v_kimochi"
           ]
         },
@@ -458,7 +525,10 @@
           "terms": [
             "k_kae",
             "v_keeki",
-            { "id": "v_mochikaeru", "form": "polite_mashita" }
+            {
+              "id": "v_mochikaeru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -466,7 +536,10 @@
           "en": "I ate it with my family.",
           "terms": [
             "v_kazoku",
-            { "id": "v_taberu", "form": "polite_mashita" }
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         }
       ],
@@ -513,8 +586,7 @@
             "Store"
           ],
           "answer": "Goods",
-          "terms": [
-          ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -526,8 +598,7 @@
             "To lend"
           ],
           "answer": "To put on sale",
-          "terms": [
-          ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -539,8 +610,7 @@
             "Heavy"
           ],
           "answer": "Elegant",
-          "terms": [
-          ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -552,8 +622,7 @@
             "To sell"
           ],
           "answer": "To take home",
-          "terms": [
-          ]
+          "terms": []
         }
       ]
     },

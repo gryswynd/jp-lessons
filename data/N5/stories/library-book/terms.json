@@ -1,50 +1,180 @@
 {
+  "contentVersion": "1.0.0",
   "storyFile": "story.md",
   "title": "図書館の本",
   "englishTitle": "The Library Book",
   "terms": {
-    "日": { "id": "k_hi", "form": null },
-    "田中": { "id": "v_tanaka", "form": null },
-    "図書館": { "id": "v_toshokan", "form": null },
-    "行きました": { "id": "v_iku", "form": "polite_past" },
-    "文学": { "id": "v_bungaku", "form": null },
-    "好きでした": { "id": "v_suki", "form": "past" },
-    "古い": { "id": "v_furui", "form": null },
-    "本": { "id": "k_hon", "form": null },
-    "見つけました": { "id": "v_mitsukeru", "form": "polite_past" },
-    "名前": { "id": "v_namae", "form": null },
-    "心": { "id": "k_kokoro", "form": null },
-    "教え": { "id": "v_oshie", "form": null },
-    "開いて": { "id": "v_hiraku", "form": "te_form" },
-    "読みました": { "id": "v_yomu", "form": "polite_past" },
-    "毎日": { "id": "v_mainichi", "form": null },
-    "学校": { "id": "v_gakkou", "form": null },
-    "後": { "id": "v_ato", "form": null },
-    "行って": { "id": "v_iku", "form": "te_form" },
-    "時": { "id": "k_toki", "form": null },
-    "先生": { "id": "v_sensei", "form": null },
-    "教室": { "id": "v_kyoushitsu", "form": null },
-    "言いました": { "id": "v_iu", "form": "polite_past" },
-    "来週": { "id": "v_raishuu", "form": null },
-    "試験": { "id": "v_shiken", "form": null },
-    "注意": { "id": "v_chuui", "form": null },
-    "頭がいい": { "id": "v_atamagaii", "form": null },
-    "学生": { "id": "v_gakusei", "form": null },
-    "勉強しました": { "id": "v_benkyou", "form": null },
-    "来ました": { "id": "v_kuru", "form": "polite_past" },
-    "書きました": { "id": "v_kaku", "form": "polite_past" },
-    "一番": { "id": "v_ichiban", "form": null },
-    "質問": { "id": "v_shitsumon", "form": null },
-    "答え": { "id": "v_kotae", "form": null },
-    "書く": { "id": "v_kaku", "form": null },
-    "できました": { "id": "v_dekiru", "form": "polite_past" },
-    "次": { "id": "v_tsugi", "form": null },
-    "百点": { "id": "v_hyakuten", "form": null },
-    "読む": { "id": "v_yomu", "form": null },
-    "大切": { "id": "v_taisetsu", "form": null },
-    "思いました": { "id": "v_omou", "form": "polite_past" },
-    "今": { "id": "k_ima", "form": null },
-    "読んで": { "id": "v_yomu", "form": "te_form" },
-    "読んでいます": { "id": "v_yomu", "form": "te_iru" }
+    "日": {
+      "id": "k_hi",
+      "form": null
+    },
+    "田中": {
+      "id": "v_tanaka",
+      "form": null
+    },
+    "図書館": {
+      "id": "v_toshokan",
+      "form": null
+    },
+    "行きました": {
+      "id": "v_iku",
+      "form": "polite_past"
+    },
+    "文学": {
+      "id": "v_bungaku",
+      "form": null
+    },
+    "好きでした": {
+      "id": "v_suki",
+      "form": "past"
+    },
+    "古い": {
+      "id": "v_furui",
+      "form": null
+    },
+    "本": {
+      "id": "k_hon",
+      "form": null
+    },
+    "見つけました": {
+      "id": "v_mitsukeru",
+      "form": "polite_past"
+    },
+    "名前": {
+      "id": "v_namae",
+      "form": null
+    },
+    "心": {
+      "id": "k_kokoro",
+      "form": null
+    },
+    "教え": {
+      "id": "v_oshie",
+      "form": null
+    },
+    "開いて": {
+      "id": "v_hiraku",
+      "form": "te_form"
+    },
+    "読みました": {
+      "id": "v_yomu",
+      "form": "polite_past"
+    },
+    "毎日": {
+      "id": "v_mainichi",
+      "form": null
+    },
+    "学校": {
+      "id": "v_gakkou",
+      "form": null
+    },
+    "後": {
+      "id": "v_ato",
+      "form": null
+    },
+    "行って": {
+      "id": "v_iku",
+      "form": "te_form"
+    },
+    "時": {
+      "id": "k_toki",
+      "form": null
+    },
+    "先生": {
+      "id": "v_sensei",
+      "form": null
+    },
+    "教室": {
+      "id": "v_kyoushitsu",
+      "form": null
+    },
+    "言いました": {
+      "id": "v_iu",
+      "form": "polite_past"
+    },
+    "来週": {
+      "id": "v_raishuu",
+      "form": null
+    },
+    "試験": {
+      "id": "v_shiken",
+      "form": null
+    },
+    "注意": {
+      "id": "v_chuui",
+      "form": null
+    },
+    "頭がいい": {
+      "id": "v_atamagaii",
+      "form": null
+    },
+    "学生": {
+      "id": "v_gakusei",
+      "form": null
+    },
+    "勉強しました": {
+      "id": "v_benkyou",
+      "form": null
+    },
+    "来ました": {
+      "id": "v_kuru",
+      "form": "polite_past"
+    },
+    "書きました": {
+      "id": "v_kaku",
+      "form": "polite_past"
+    },
+    "一番": {
+      "id": "v_ichiban",
+      "form": null
+    },
+    "質問": {
+      "id": "v_shitsumon",
+      "form": null
+    },
+    "答え": {
+      "id": "v_kotae",
+      "form": null
+    },
+    "書く": {
+      "id": "v_kaku",
+      "form": null
+    },
+    "できました": {
+      "id": "v_dekiru",
+      "form": "polite_past"
+    },
+    "次": {
+      "id": "v_tsugi",
+      "form": null
+    },
+    "百点": {
+      "id": "v_hyakuten",
+      "form": null
+    },
+    "読む": {
+      "id": "v_yomu",
+      "form": null
+    },
+    "大切": {
+      "id": "v_taisetsu",
+      "form": null
+    },
+    "思いました": {
+      "id": "v_omou",
+      "form": "polite_past"
+    },
+    "今": {
+      "id": "k_ima",
+      "form": null
+    },
+    "読んで": {
+      "id": "v_yomu",
+      "form": "te_form"
+    },
+    "読んでいます": {
+      "id": "v_yomu",
+      "form": "te_iru"
+    }
   }
 }

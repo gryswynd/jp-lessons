@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.23",
   "title": "Phase 4 Lesson 23: Physical Attributes & Progress",
   "meta": {
@@ -54,7 +55,10 @@
           "terms": [
             "v_kinou",
             "k_nani",
-            { "id": "v_taberu", "form": "polite_mashita" }
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -79,7 +83,10 @@
           "en": "Do you exercise every day?",
           "terms": [
             "v_mainichi",
-            { "id": "v_undou", "form": "polite_masu" }
+            {
+              "id": "v_undou",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -182,7 +189,10 @@
           "terms": [
             "v_kyonen",
             "v_sukoshi",
-            { "id": "v_futoru", "form": "polite_mashita" }
+            {
+              "id": "v_futoru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -209,7 +219,10 @@
           "en": "Let's exercise every day.",
           "terms": [
             "v_mainichi",
-            { "id": "v_undou", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_undou",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -235,7 +248,10 @@
           "terms": [
             "v_jikan",
             "v_mijikai",
-            { "id": "v_isogu", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_isogu",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -244,8 +260,14 @@
           "en": "I will work fast.",
           "terms": [
             "k_watashi",
-            { "id": "v_hayai", "form": "adverbial" },
-            { "id": "v_hataraku", "form": "polite_masu" }
+            {
+              "id": "v_hayai",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_hataraku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -272,7 +294,10 @@
             "v_kurai",
             "k_mae",
             "v_yoku",
-            { "id": "v_miru", "form": "te_form" }
+            {
+              "id": "v_miru",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -281,7 +306,10 @@
           "en": "Yes. I will advance little by little.",
           "terms": [
             "v_sukoshi",
-            { "id": "v_susumu", "form": "polite_masu" }
+            {
+              "id": "v_susumu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -298,7 +326,10 @@
           "jp": "いいえ、重くないです。山の上は 近いです。",
           "en": "No, they are not heavy. The top of the mountain is near.",
           "terms": [
-            { "id": "v_omoi", "form": "plain_negative" },
+            {
+              "id": "v_omoi",
+              "form": "plain_negative"
+            },
             "k_yama",
             "k_ue",
             "v_chikai"
@@ -318,7 +349,10 @@
           "terms": [
             "v_namae",
             "v_futoji",
-            { "id": "v_kaku", "form": "te_form" }
+            {
+              "id": "v_kaku",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -326,10 +360,16 @@
           "jp": "分かりました。重大な 意味が ありますか。",
           "en": "Understood. Is there a serious meaning?",
           "terms": [
-            { "id": "v_wakaru", "form": "polite_mashita" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            },
             "v_juudai",
             "v_imi",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -340,7 +380,10 @@
             "v_taisetsu",
             "v_tegami",
             "v_kami",
-            { "id": "v_kaku", "form": "polite_masu" }
+            {
+              "id": "v_kaku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -350,7 +393,10 @@
           "terms": [
             "k_moto",
             "k_ue",
-            { "id": "v_kasaneru", "form": "polite_masu" }
+            {
+              "id": "v_kasaneru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -366,7 +412,10 @@
             "k_watashi",
             "k_ani",
             "v_karada",
-            { "id": "v_ookii", "form": "te_form" },
+            {
+              "id": "v_ookii",
+              "form": "te_form"
+            },
             "k_ashi",
             "v_futoi"
           ]
@@ -378,7 +427,10 @@
             "v_mainichi",
             "v_omoi",
             "k_mono",
-            { "id": "v_hakobu", "form": "polite_masu" }
+            {
+              "id": "v_hakobu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -397,8 +449,14 @@
             "v_shigoto",
             "v_itsumo",
             "k_saki",
-            { "id": "v_susumu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_susumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -444,7 +502,10 @@
             "k_chichi",
             "v_omoi",
             "k_moto",
-            { "id": "v_kuru", "form": "polite_mashita" }
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -453,8 +514,14 @@
           "terms": [
             "k_naka",
             "v_tegami",
-            { "id": "v_kasaneru", "form": "te_form" },
-            { "id": "v_aru", "form": "polite_mashita" }
+            {
+              "id": "v_kasaneru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -462,8 +529,14 @@
           "en": "'Is your study progressing? Time is important.'",
           "terms": [
             "v_benkyou",
-            { "id": "v_susumu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_susumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "v_jikan",
             "v_taisetsu"
           ]
@@ -474,7 +547,10 @@
           "terms": [
             "v_tegami",
             "v_mijikai",
-            { "id": "v_tanoshii", "form": "plain_past" }
+            {
+              "id": "v_tanoshii",
+              "form": "plain_past"
+            }
           ]
         }
       ],
@@ -604,7 +680,10 @@
           "answer": "太く",
           "terms": [
             "k_sen",
-            { "id": "v_futoi", "form": "ku_form" },
+            {
+              "id": "v_futoi",
+              "form": "ku_form"
+            },
             "v_kaku"
           ]
         },
@@ -652,7 +731,10 @@
           "terms": [
             "k_hon",
             "v_takusan",
-            { "id": "v_kasaneru", "form": "polite_mashita" }
+            {
+              "id": "v_kasaneru",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
