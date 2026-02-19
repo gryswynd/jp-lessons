@@ -435,6 +435,7 @@ window.GameModule = (function() {
       interactiveObjects: [],
       npcs: [],
       doors: {},
+      inspected: new Set(),
       inConversation: false,
       currentConversation: null,
       conversationIndex: 0
@@ -715,6 +716,7 @@ window.GameModule = (function() {
             const distance = Math.sqrt(dx * dx + dy * dy);
 
             if (distance < 100) {
+              game.inspected.add(npc.name);
               startConversation(npc.conversation);
               e.preventDefault();
               return;
@@ -732,6 +734,7 @@ window.GameModule = (function() {
             const distance = Math.sqrt(dx * dx + dy * dy);
 
             if (distance < 100) {
+              game.inspected.add(obj.name);
               if (obj.isDoor) {
                 toggleDoor(obj);
               } else if (obj.message) {
@@ -797,6 +800,8 @@ window.GameModule = (function() {
       function handleInteraction() {
         const nearby = getNearbyInteractable();
         if (!nearby) return;
+
+        game.inspected.add(nearby.target.name);
 
         if (nearby.type === 'npc') {
           startConversation(nearby.target.conversation);
@@ -1012,9 +1017,14 @@ window.GameModule = (function() {
             ctx.fillRect(screenX - 50, screenY - 20, 100, 25);
 
             const isDoor = nearby.type === 'object' && nearby.target.isDoor;
-            const promptLabel = isDoor
-              ? (game.doors[nearby.target.name].open ? 'door open' : 'door closed')
-              : '？？？';
+            let promptLabel;
+            if (isDoor) {
+              promptLabel = game.doors[nearby.target.name].open ? '開いている' : '閉まっている';
+            } else if (game.inspected.has(nearby.target.name)) {
+              promptLabel = nearby.target.nameJp || nearby.target.name;
+            } else {
+              promptLabel = '？？？';
+            }
 
             ctx.fillStyle = 'white';
             ctx.font = 'bold 14px Arial';
