@@ -1011,11 +1011,16 @@ window.GameModule = (function() {
             ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
             ctx.fillRect(screenX - 50, screenY - 20, 100, 25);
 
+            const isDoor = nearby.type === 'object' && nearby.target.isDoor;
+            const promptLabel = isDoor
+              ? (game.doors[nearby.target.name].open ? 'door open' : 'door closed')
+              : '？？？';
+
             ctx.fillStyle = 'white';
             ctx.font = 'bold 14px Arial';
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
-            ctx.fillText('？？？', screenX, screenY - 7.5);
+            ctx.fillText(promptLabel, screenX, screenY - 7.5);
           }
         }
       }
