@@ -3,8 +3,7 @@
   "version": 1,
   "levels": ["N5", "N4"],
   "globalFiles": {
-    "conjugationRules": "conjugation_rules.json",
-    "glossaryMaster": "glossary.master.json"
+    "conjugationRules": "conjugation_rules.json"
   },
   "shared": {
     "assetUrl": "shared/asset-url.js",
@@ -27,14 +26,6 @@
     },
     "N4": {
       "glossary": "data/N4/glossary.N4.json",
-      "glossaryPerLesson": [
-        { "id": "glossary.N4.7",  "file": "glossary.N4.7.json" },
-        { "id": "glossary.N4.8",  "file": "glossary.N4.8.json" },
-        { "id": "glossary.N4.9",  "file": "glossary.N4.9.json" },
-        { "id": "glossary.N4.10", "file": "glossary.N4.10.json" },
-        { "id": "glossary.N4.11", "file": "glossary.N4.11.json" },
-        { "id": "glossary.N4.12", "file": "glossary.N4.12.json" }
-      ],
       "lessons": [
         { "id": "N4.7",  "title": "Family Members and Relationships",        "file": "data/N4/lessons/N4.7.json" },
         { "id": "N4.8",  "title": "Seasons & Weather",                       "file": "data/N4/lessons/N4.8.json" },
