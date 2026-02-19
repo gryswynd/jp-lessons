@@ -111,10 +111,9 @@ window.GameModule = (function() {
           flex-direction: row;
           width: 100%;
           height: 100%;
-          align-items: flex-start;
+          align-items: center;
           justify-content: space-between;
           padding: 30px;
-          padding-top: calc(33.33vh);
           gap: 30px;
         }
         .jp-speech-bubble {
@@ -131,7 +130,7 @@ window.GameModule = (function() {
           flex-direction: column;
           justify-content: center;
           margin-bottom: 0;
-          align-self: flex-start;
+          align-self: center;
         }
         .jp-speech-bubble::after {
           content: '';
@@ -172,11 +171,11 @@ window.GameModule = (function() {
         }
         .jp-character-portrait {
           width: auto;
-          height: 90%;
-          max-height: 540px;
+          height: 100%;
+          max-height: none;
           object-fit: contain;
           object-position: bottom right;
-          align-self: flex-end;
+          align-self: stretch;
           filter: drop-shadow(0 10px 25px rgba(0,0,0,0.5));
         }
         .jp-game-loading {
@@ -267,13 +266,14 @@ window.GameModule = (function() {
             font-size: 12px;
           }
           .jp-convo-container {
-            padding: 8px 15px;
-            padding-top: 8px;
-            gap: 10px;
+            padding: 12px 20px;
+            gap: 16px;
+            align-items: center;
           }
           .jp-speech-bubble {
             min-height: 60px;
             padding: 10px 14px;
+            align-self: center;
           }
           .jp-speech-bubble .text {
             font-size: 13px;
@@ -284,8 +284,9 @@ window.GameModule = (function() {
             margin-top: 6px;
           }
           .jp-character-portrait {
-            height: auto;
-            max-height: 140px;
+            height: 100%;
+            max-height: none;
+            align-self: stretch;
           }
           .jp-speech-bubble::after {
             bottom: -16px;
