@@ -698,7 +698,7 @@
 
       let order = [];
       const full = q.segments.join('');
-      const chips = [...q.segments].sort(() => Math.random() - 0.5);
+      const chips = [...q.segments, ...(q.distractors || [])].sort(() => Math.random() - 0.5);
 
       chips.forEach(word => {
         const chip = document.createElement('div');
