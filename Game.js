@@ -832,7 +832,7 @@ window.GameModule = (function() {
         portraitMap[npc.name] = npc.convoPortrait;
       });
       if (game.images.meConvo) {
-        portraitMap['me'] = game.images.meConvo;
+        portraitMap['りきぞう'] = game.images.meConvo;
       }
 
       function startConversation(conversationData) {

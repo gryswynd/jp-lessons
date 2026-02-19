@@ -10,7 +10,7 @@
     "collision": "collision.png",
     "convoBackground": "convo-bg.png"
   },
-  "playerStart": { "x": 200, "y": 200 },
+  "playerStart": { "x": 325, "y": 260 },
   "objects": [
     { "name": "Bed",          "x": 194, "y": 189, "width": 114, "height": 146, "isDoor": false, "message": "A comfortable bed. Maybe I should get some rest later." },
     { "name": "Laptop",       "x": 315, "y": 158, "width": 121, "height":  86, "isDoor": false, "message": "My laptop. I should study Japanese on it!" },
@@ -31,10 +31,10 @@
       "sprite": "sprites/mom.png",
       "convoPortrait": "sprites/mom-convo.png",
       "conversation": [
-        { "speaker": "mom", "text": "おはよう！朝ごはんは食べた？\n(Good morning! Did you eat breakfast?)" },
-        { "speaker": "me",  "text": "おはよう、お母さん。まだだよ。\n(Good morning, Mom. Not yet.)" },
-        { "speaker": "mom", "text": "冷蔵庫に卵があるから、食べてね。\n(There are eggs in the fridge, so please eat.)" },
-        { "speaker": "me",  "text": "ありがとう！\n(Thank you!)" }
+        { "speaker": "mom",     "text": "おはよう！朝ごはんは食べた？\n(Good morning! Did you eat breakfast?)" },
+        { "speaker": "りきぞう", "text": "おはよう、お母さん。まだだよ。\n(Good morning, Mom. Not yet.)" },
+        { "speaker": "mom",     "text": "冷蔵庫に卵があるから、食べてね。\n(There are eggs in the fridge, so please eat.)" },
+        { "speaker": "りきぞう", "text": "ありがとう！\n(Thank you!)" }
       ]
     },
     {
@@ -44,11 +44,11 @@
       "sprite": "sprites/dad.png",
       "convoPortrait": "sprites/dad-convo.png",
       "conversation": [
-        { "speaker": "dad", "text": "よう、元気か？\n(Hey, how are you?)" },
-        { "speaker": "me",  "text": "うん、元気だよ。お父さんは？\n(Yeah, I'm good. How about you, Dad?)" },
-        { "speaker": "dad", "text": "まあまあだな。今日は何するんだ？\n(Not bad. What are you doing today?)" },
-        { "speaker": "me",  "text": "日本語を勉強するつもり。\n(I'm planning to study Japanese.)" },
-        { "speaker": "dad", "text": "いいね！頑張れよ。\n(Nice! Do your best.)" }
+        { "speaker": "dad",     "text": "よう、元気か？\n(Hey, how are you?)" },
+        { "speaker": "りきぞう", "text": "うん、元気だよ。お父さんは？\n(Yeah, I'm good. How about you, Dad?)" },
+        { "speaker": "dad",     "text": "まあまあだな。今日は何するんだ？\n(Not bad. What are you doing today?)" },
+        { "speaker": "りきぞう", "text": "日本語を勉強するつもり。\n(I'm planning to study Japanese.)" },
+        { "speaker": "dad",     "text": "いいね！頑張れよ。\n(Nice! Do your best.)" }
       ]
     }
   ],
