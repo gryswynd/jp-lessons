@@ -91,7 +91,19 @@ window.GameModule = (function() {
           text-align: center;
           max-width: 80%;
           display: none;
-          pointer-events: none;
+          pointer-events: auto;
+          z-index: 10;
+        }
+        .jp-term {
+          color: #4e54c8;
+          font-weight: 700;
+          cursor: pointer;
+          border-bottom: 2px solid rgba(78,84,200,0.2);
+          transition: background 0.15s, border-color 0.15s;
+        }
+        .jp-term:hover {
+          background: rgba(78,84,200,0.08);
+          border-bottom-color: #4e54c8;
         }
         .jp-conversation-overlay {
           position: absolute;
@@ -412,6 +424,30 @@ window.GameModule = (function() {
 
   function loadGame() {
     const gameContainer = container.querySelector('.jp-game-container');
+
+    // --- Term / Glossary State ---
+    let termMap = {};
+    let conjugationRules = null;
+    let _surfaceIndex = null;
+
+    function getSurfaceIndex() {
+      if (!_surfaceIndex) {
+        _surfaceIndex = {};
+        Object.values(termMap).forEach(t => {
+          if (t.surface) _surfaceIndex[t.surface] = t.id;
+          if (t.reading) _surfaceIndex[t.reading] = t.id;
+        });
+      }
+      return _surfaceIndex;
+    }
+
+    function processGameText(text) {
+      if (!window.JPShared || !window.JPShared.textProcessor || !conjugationRules) return text;
+      const index = getSurfaceIndex();
+      const termRefs = Object.keys(index).filter(s => text.includes(s)).map(s => index[s]);
+      if (!termRefs.length) return text;
+      return window.JPShared.textProcessor.processText(text, termRefs, termMap, conjugationRules);
+    }
 
     // --- Game State ---
     const game = {
@@ -823,7 +859,7 @@ window.GameModule = (function() {
       }
 
       function showMessage(message) {
-        gameUI.textContent = message;
+        gameUI.innerHTML = processGameText(message);
         gameUI.style.display = 'block';
         setTimeout(() => {
           gameUI.style.display = 'none';
@@ -858,7 +894,7 @@ window.GameModule = (function() {
         }
 
         const line = game.currentConversation[game.conversationIndex];
-        convoText.textContent = line.text;
+        convoText.innerHTML = processGameText(line.text);
 
         const portrait = portraitMap[line.speaker];
         convoPortrait.src = portrait ? portrait.src : '';
@@ -1054,7 +1090,7 @@ window.GameModule = (function() {
       }
     }
 
-    // Fetch manifest → day.json → then load images
+    // Fetch manifest → day.json + glossary + conj rules → then load images
     const cacheBust = '?t=' + Date.now();
     let playerSpritePath = 'shared/sprites/me_sheet.png';
 
@@ -1065,13 +1101,25 @@ window.GameModule = (function() {
         dayDir = gameEntry.dir;
         playerSpritePath = manifest.shared.playerSprite;
         const dayUrl = getSharedAssetUrl(dayDir + '/day.json') + cacheBust;
-        console.log('[Game] Day data URL:', dayUrl);
-        return fetch(dayUrl).then(r => r.json());
+        const conjUrl = getSharedAssetUrl(manifest.globalFiles.conjugationRules) + cacheBust;
+        const glossUrls = manifest.levels.map(lvl => getSharedAssetUrl(manifest.data[lvl].glossary) + cacheBust);
+        return Promise.all([
+          fetch(dayUrl).then(r => r.json()),
+          fetch(conjUrl).then(r => r.json()),
+          ...glossUrls.map(url => fetch(url).then(r => r.json()))
+        ]).then(([day, conj, ...glossParts]) => {
+          glossParts.forEach(g => g.entries.forEach(e => { termMap[e.id] = e; }));
+          conjugationRules = conj;
+          return day;
+        });
       })
       .then(data => {
         dayData = data;
         dayData._playerSprite = playerSpritePath;
-        console.log('[Game] Player sprite URL:', getSharedAssetUrl(playerSpritePath));
+        if (window.JPShared && window.JPShared.termModal) {
+          window.JPShared.termModal.inject();
+          window.JPShared.termModal.setTermMap(termMap);
+        }
         loadImages();
       })
       .catch(err => {
