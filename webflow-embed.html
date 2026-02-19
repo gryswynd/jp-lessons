@@ -1,0 +1,172 @@
+<!-- ============================================================
+  JP Lessons — Webflow Custom Code Embed
+  Paste this into Webflow > Page Settings > Custom Code > Before </body>
+  (or into a Custom Code embed element on the page).
+
+  Load order enforced by this loader:
+    1. app/shared/asset-loader.js   — URL builder, manifest, fetchJSON
+    2. app/shared/tts.js            — Text-to-speech
+    3. app/shared/progress.js       — localStorage: flags, scores, drafts
+    4. app/shared/text-processor.js — Conjugation engine, processText
+    5. app/shared/term-modal.js     — Shared term modal overlay
+    6. Feature module (on demand)   — Lesson / Practice / Review / Compose / Story
+  ============================================================ -->
+
+<div id="app-main-container"></div>
+<script>
+window.JPApp = {
+  // --- CONFIGURATION ---
+  config: {
+    owner: "gryswynd",
+    repo: "jp-lessons",
+    branch: "main",
+    path: ""
+  },
+
+  // --- STATE ---
+  state: {
+    flags: JSON.parse(localStorage.getItem('k-flags') || '{}')
+  },
+
+  // --- HELPER: Fetch and inject a JS module from GitHub raw ---
+  loadModule: async function(fileName) {
+    var url = 'https://raw.githubusercontent.com/' +
+              this.config.owner + '/' + this.config.repo + '/' +
+              this.config.branch + '/' + fileName;
+    var cacheBuster = url + '?t=' + Date.now();
+    try {
+      var res = await fetch(cacheBuster);
+      if (!res.ok) throw new Error('Failed to load ' + fileName);
+      var code = await res.text();
+      var script = document.createElement('script');
+      script.textContent = code;
+      document.body.appendChild(script);
+      console.log('[JPApp] Loaded:', fileName);
+      return true;
+    } catch (err) {
+      console.error('[JPApp] Error loading ' + fileName + ':', err);
+      this.container.innerHTML =
+        '<div style="color:red;text-align:center;padding:20px;">' +
+        'Error loading ' + fileName + ':<br>' + err.message +
+        '</div>' +
+        '<button onclick="JPApp.renderMenu()" ' +
+        'style="margin:20px auto;display:block;">Back</button>';
+      return false;
+    }
+  },
+
+  // --- INIT ---
+  init: function() {
+    this.container = document.getElementById('app-main-container');
+    if (!this.container) return console.error('Container #app-main-container not found');
+    this.renderMenu();
+  },
+
+  // --- RENDER MENU ---
+  renderMenu: function() {
+    this.container.innerHTML = '';
+    var style = '<style>' +
+      '.jp-main-menu{width:100%;max-width:600px;margin:0 auto;' +
+      'font-family:"Poppins",sans-serif;text-align:center;display:grid;gap:15px;padding:20px;}' +
+      '.jp-menu-btn{background:white;padding:25px;border-radius:16px;' +
+      'box-shadow:0 4px 15px rgba(0,0,0,0.05);cursor:pointer;transition:transform 0.2s;' +
+      'border:1px solid rgba(0,0,0,0.05);display:flex;flex-direction:column;align-items:center;}' +
+      '.jp-menu-btn:active{transform:scale(0.98);}' +
+      '.jp-menu-title{font-size:1.2rem;font-weight:900;color:#4e54c8;margin-bottom:5px;}' +
+      '.jp-menu-desc{color:#747d8c;font-size:0.9rem;}' +
+      '</style>';
+    var html = style +
+      '<div class="jp-main-menu">' +
+        '<h1 style="color:#2f3542;font-weight:900;">\uD83C\uDDEF\uD83C\uDDF5 Japanese Master</h1>' +
+        '<div class="jp-menu-btn" onclick="JPApp.launch(\'lesson\')">' +
+          '<div class="jp-menu-title">\uD83D\uDCDA Lessons</div>' +
+          '<div class="jp-menu-desc">Structured paths &amp; reading</div>' +
+        '</div>' +
+        '<div class="jp-menu-btn" onclick="JPApp.launch(\'practice\')">' +
+          '<div class="jp-menu-title">\u2694\uFE0F Practice</div>' +
+          '<div class="jp-menu-desc">Flashcards &amp; Quizzes</div>' +
+        '</div>' +
+        '<div class="jp-menu-btn" onclick="JPApp.launch(\'review\')">' +
+          '<div class="jp-menu-title">\uD83D\uDCDD Review Test</div>' +
+          '<div class="jp-menu-desc">Assessment &amp; Drills</div>' +
+        '</div>' +
+        '<div class="jp-menu-btn" onclick="JPApp.launch(\'compose\')">' +
+          '<div class="jp-menu-title">\u270F\uFE0F Compose</div>' +
+          '<div class="jp-menu-desc">Write Japanese with guided prompts</div>' +
+        '</div>' +
+        '<div class="jp-menu-btn" onclick="JPApp.launch(\'story\')">' +
+          '<div class="jp-menu-title">\uD83D\uDCD6 Stories</div>' +
+          '<div class="jp-menu-desc">Read Japanese stories with furigana</div>' +
+        '</div>' +
+      '</div>';
+    this.container.innerHTML = html;
+  },
+
+  // --- LAUNCHER ---
+  // Shared modules are loaded once per session (idempotent guard on JPShared.assets).
+  // Feature modules are loaded once per session (idempotent guard on their window global).
+  launch: async function(mode) {
+    this.container.innerHTML =
+      '<div style="padding:40px;text-align:center;color:#888;">' +
+      'Fetching latest code from GitHub...</div>';
+
+    // ── Step 1: Load shared modules (first launch only, in required order) ──
+    // Guard: asset-loader.js sets window.JPShared.assets when it runs.
+    if (!window.JPShared || !window.JPShared.assets) {
+      var sharedModules = [
+        'app/shared/asset-loader.js',   // 1. URL builder, manifest, fetchJSON
+        'app/shared/tts.js',            // 2. speak() / cancel()
+        'app/shared/progress.js',       // 3. flags, scores, drafts via localStorage
+        'app/shared/text-processor.js', // 4. conjugate(), processText(), getRootTerm()
+        'app/shared/term-modal.js'      // 5. term overlay (depends on 2, 3, 4)
+      ];
+      for (var i = 0; i < sharedModules.length; i++) {
+        var ok = await this.loadModule(sharedModules[i]);
+        if (!ok) return; // loadModule already showed an error in the container
+      }
+    }
+
+    // ── Step 2: Load and start the requested feature module ──
+    var onExit = (function(self) { return function() { self.renderMenu(); }; })(this);
+
+    if (mode === 'lesson') {
+      if (!window.LessonModule) {
+        var ok = await this.loadModule('Lesson.js');
+        if (!ok) return;
+      }
+      if (window.LessonModule) window.LessonModule.start(this.container, this.config, onExit);
+
+    } else if (mode === 'practice') {
+      if (!window.PracticeModule) {
+        var ok = await this.loadModule('Practice.js');
+        if (!ok) return;
+      }
+      if (window.PracticeModule) window.PracticeModule.start(this.container, this.config, onExit);
+
+    } else if (mode === 'review') {
+      if (!window.ReviewModule) {
+        var ok = await this.loadModule('Review.js');
+        if (!ok) return;
+      }
+      if (window.ReviewModule) window.ReviewModule.start(this.container, this.config, onExit);
+
+    } else if (mode === 'compose') {
+      if (!window.ComposeModule) {
+        var ok = await this.loadModule('Compose.js');
+        if (!ok) return;
+      }
+      if (window.ComposeModule) window.ComposeModule.start(this.container, this.config, onExit);
+
+    } else if (mode === 'story') {
+      if (!window.StoryModule) {
+        var ok = await this.loadModule('Story.js');
+        if (!ok) return;
+      }
+      if (window.StoryModule) window.StoryModule.start(this.container, this.config, onExit);
+    }
+  }
+};
+
+// Start App
+document.addEventListener('DOMContentLoaded', function() { window.JPApp.init(); });
+</script>
