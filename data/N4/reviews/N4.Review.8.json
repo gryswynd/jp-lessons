@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.Review.8",
   "title": "Phase 4 Review: Cities, Work & Construction",
   "meta": {
@@ -33,7 +34,10 @@
                 "v_sumimasen",
                 "k_kono",
                 "v_youshi",
-                { "id": "v_shiyou", "form": "te_form" },
+                {
+                  "id": "v_shiyou",
+                  "form": "te_form"
+                },
                 "v_ii"
               ]
             },
@@ -44,7 +48,10 @@
                 "v_hai",
                 "k_soko",
                 "v_namae",
-                { "id": "v_kaku", "form": "te_form" },
+                {
+                  "id": "v_kaku",
+                  "form": "te_form"
+                },
                 "v_kudasai"
               ]
             },
@@ -53,7 +60,10 @@
               "jp": "市長は いますか。",
               "terms": [
                 "v_shichou",
-                { "id": "v_iru", "form": "polite_masu" }
+                {
+                  "id": "v_iru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -62,8 +72,14 @@
               "terms": [
                 "k_ima",
                 "v_koujou",
-                { "id": "v_iku", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_masu" }
+                {
+                  "id": "v_iku",
+                  "form": "te_form"
+                },
+                {
+                  "id": "v_iru",
+                  "form": "polite_masu"
+                }
               ]
             }
           ],
@@ -105,8 +121,14 @@
               "jp": "どこで 働いて いますか。",
               "terms": [
                 "v_doko",
-                { "id": "v_hataraku", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_masu" }
+                {
+                  "id": "v_hataraku",
+                  "form": "te_form"
+                },
+                {
+                  "id": "v_iru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -139,7 +161,10 @@
               "terms": [
                 "v_shuumatsu",
                 "k_nani",
-                { "id": "v_suru", "form": "polite_masu" }
+                {
+                  "id": "v_suru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -148,7 +173,10 @@
               "terms": [
                 "v_nihongo",
                 "v_shuuji",
-                { "id": "v_narau", "form": "polite_masu" }
+                {
+                  "id": "v_narau",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -165,8 +193,14 @@
                 "v_hai",
                 "v_demo",
                 "v_sensei",
-                { "id": "v_minarau", "form": "te_form" },
-                { "id": "v_ganbaru", "form": "polite_masu" }
+                {
+                  "id": "v_minarau",
+                  "form": "te_form"
+                },
+                {
+                  "id": "v_ganbaru",
+                  "form": "polite_masu"
+                }
               ]
             }
           ],
@@ -260,7 +294,10 @@
             "v_shi",
             "v_atarashii",
             "v_koujou",
-            { "id": "v_tatsu", "form": "polite_mashita" }
+            {
+              "id": "v_tatsu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -280,7 +317,10 @@
             "v_mainichi",
             "v_hiroi",
             "v_hiroba",
-            { "id": "v_atsumaru", "form": "polite_masu" }
+            {
+              "id": "v_atsumaru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -289,7 +329,10 @@
           "terms": [
             "k_soko",
             "v_undou",
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -299,7 +342,10 @@
             "v_koujou",
             "v_chika",
             "v_asaichi",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],

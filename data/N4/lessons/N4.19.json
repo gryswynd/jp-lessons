@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.19",
   "title": "Phase 4 Lesson 19: Geography & Explanations",
   "meta": {
@@ -70,7 +71,10 @@
           "terms": [
             "v_yoku",
             "k_hon",
-            { "id": "v_yomu", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -239,7 +243,10 @@
           "terms": [
             "v_chimei",
             "k_nani",
-            { "id": "v_yomu", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -249,7 +256,10 @@
           "terms": [
             "k_watashi",
             "k_michi",
-            { "id": "v_setsumei", "form": "polite_masu" }
+            {
+              "id": "v_setsumei",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -275,8 +285,14 @@
           "terms": [
             "v_sensei",
             "v_shitsumon",
-            { "id": "v_suru", "form": "conditional_ba" },
-            {"id":"v_wakaru", "form": "polite_masu"}
+            {
+              "id": "v_suru",
+              "form": "conditional_ba"
+            },
+            {
+              "id": "v_wakaru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -285,7 +301,10 @@
           "en": "That's right. But the teacher looks busy.",
           "terms": [
             "v_sensei",
-            { "id": "v_isogashii", "form": "appearance_sou" }
+            {
+              "id": "v_isogashii",
+              "form": "appearance_sou"
+            }
           ]
         },
         {
@@ -295,7 +314,10 @@
           "terms": [
             "k_watashi",
             "v_setsumei",
-            { "id": "v_suru", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_suru",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -311,8 +333,14 @@
           "en": "What are you reading?",
           "terms": [
             "k_nani",
-            { "id": "v_yomu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -342,7 +370,10 @@
           "en": "It is a story about people living underground.",
           "terms": [
             "v_chika",
-            { "id": "v_sumu", "form": "te_form" },
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
             "v_iru",
             "k_hito",
             "v_monogatari"
@@ -361,7 +392,10 @@
           "en": "How will we go to the station?",
           "terms": [
             "k_u99c5",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -370,7 +404,10 @@
           "en": "Let's walk underground. Because it is fast.",
           "terms": [
             "v_chika",
-            { "id": "v_aruku", "form": "polite_volitional_mashou" },
+            {
+              "id": "v_aruku",
+              "form": "polite_volitional_mashou"
+            },
             "v_hayai"
           ]
         },
@@ -380,7 +417,10 @@
           "en": "Eh, I want to walk above ground. Because the weather is good.",
           "terms": [
             "v_chijou",
-            { "id": "v_aruku", "form": "desire_tai" },
+            {
+              "id": "v_aruku",
+              "form": "desire_tai"
+            },
             "v_tenki"
           ]
         },
@@ -389,9 +429,15 @@
           "jp": "分かりました。地上で 行きましょう。",
           "en": "Understood. Let's go above ground.",
           "terms": [
-            { "id": "v_wakaru", "form": "polite_mashita" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            },
             "v_chijou",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -414,7 +460,10 @@
           "terms": [
             "v_toshokan",
             "k_u99c5",
-            { "id": "v_chikai", "form": "adverbial" }
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            }
           ]
         },
         {
@@ -422,7 +471,10 @@
           "en": "If you go underground, you won't get wet even on rainy days.",
           "terms": [
             "v_chika",
-            { "id": "v_iku", "form": "conditional_ba" },
+            {
+              "id": "v_iku",
+              "form": "conditional_ba"
+            },
             "k_ame",
             "k_hi"
           ]
@@ -570,8 +622,7 @@
             "Novel"
           ],
           "answer": "Map",
-          "terms": [
-          ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -583,8 +634,7 @@
             "Theory"
           ],
           "answer": "Question",
-          "terms": [
-          ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -596,8 +646,7 @@
             "Library"
           ],
           "answer": "Novel",
-          "terms": [
-          ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -609,8 +658,7 @@
             "Expensive"
           ],
           "answer": "Plain/Somber",
-          "terms": [
-          ]
+          "terms": []
         }
       ]
     },
@@ -658,7 +706,10 @@
           ],
           "answer": "行けば",
           "terms": [
-            { "id": "v_iku", "form": "conditional_ba" }
+            {
+              "id": "v_iku",
+              "form": "conditional_ba"
+            }
           ]
         },
         {

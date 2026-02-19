@@ -749,9 +749,9 @@ window.ComposeModule = {
             HELPER_VOCAB = helperData.categories;
             PARTICLES = particleData.particles;
 
-            allVocab = glossary.filter(i => i.type === 'vocab');
+            allVocab = glossary.entries.filter(i => i.type === 'vocab');
             vocabById = new Map();
-            glossary.forEach(e => vocabById.set(e.id, e));
+            glossary.entries.forEach(e => vocabById.set(e.id, e));
             lessonVocab = allVocab.filter(v => {
                 const lessons = (v.lesson_ids || v.lesson || '').split(',').map(s => s.trim());
                 return lessons.some(l => Object.keys(LESSON_META).includes(l));

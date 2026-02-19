@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.16",
   "title": "Phase 4 Lesson 16: Movement & Action",
   "meta": {
@@ -70,7 +71,10 @@
           "terms": [
             "v_kinou",
             "v_byouin",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -79,7 +83,10 @@
           "terms": [
             "v_mainichi",
             "v_kusuri",
-            { "id": "v_nomu", "form": "polite_masu" }
+            {
+              "id": "v_nomu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -87,15 +94,22 @@
           "en": "Was the doctor kind?",
           "terms": [
             "v_isha",
-            { "id": "v_shinsetsu", "form": "polite_past_adj" }
+            {
+              "id": "v_shinsetsu",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
           "jp": "休日に 何を しますか。",
           "en": "What do you do on your holiday?",
           "terms": [
-            "v_kyuujitsu","k_nani",
-            { "id": "v_suru", "form": "polite_masu" }
+            "v_kyuujitsu",
+            "k_nani",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -222,7 +236,10 @@
           "en": "I am going to the bank now.",
           "terms": [
             "v_ginkou",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -231,7 +248,10 @@
           "en": "Is the bank far?",
           "terms": [
             "v_ginkou",
-            { "id": "v_tooi", "form": "polite_adj" }
+            {
+              "id": "v_tooi",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -241,15 +261,22 @@
           "terms": [
             "v_chikai",
             "v_jikan",
-            { "id": "v_hashiru", "form": "polite_masu" }
+            {
+              "id": "v_hashiru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "spk": "B",
           "jp": "気をつけて くださいね。",
           "en": "Please be careful.",
-          "terms": ["k_u6c17",
-            { "id": "v_kiotsukeru", "form": "te_form" }
+          "terms": [
+            "k_u6c17",
+            {
+              "id": "v_kiotsukeru",
+              "form": "te_form"
+            }
           ]
         }
       ]
@@ -265,7 +292,10 @@
           "en": "Mr. Tanaka, do you exercise every day?",
           "terms": [
             "v_mainichi",
-            { "id": "v_undou", "form": "polite_masu" }
+            {
+              "id": "v_undou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -275,7 +305,10 @@
           "terms": [
             "v_inu",
             "v_kouen",
-            { "id": "v_hashiru", "form": "polite_masu" }
+            {
+              "id": "v_hashiru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -310,7 +343,10 @@
           "en": "This box is heavy. Please carry it.",
           "terms": [
             "v_omoi",
-            { "id": "v_hakobu", "form": "te_form" }
+            {
+              "id": "v_hakobu",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -318,8 +354,12 @@
           "jp": "はい。中には 何が ありますか。",
           "en": "Okay. What is inside?",
           "terms": [
-            "k_naka","k_nani",
-            { "id": "v_aru", "form": "polite_masu" }
+            "k_naka",
+            "k_nani",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -329,7 +369,10 @@
           "terms": [
             "v_giniro",
             "v_tokei",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -337,7 +380,10 @@
           "jp": "高そうですね。",
           "en": "It looks expensive.",
           "terms": [
-            { "id": "v_takai", "form": "appearance_sou" }
+            {
+              "id": "v_takai",
+              "form": "appearance_sou"
+            }
           ]
         }
       ]
@@ -355,7 +401,10 @@
             "v_kyonen",
             "k_fuyu",
             "v_nihon",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -371,9 +420,15 @@
           "jp": "楽しかったです。自動の ドアが たくさん ありました。",
           "en": "It was fun. There were many automatic doors.",
           "terms": [
-            { "id": "v_tanoshii", "form": "plain_past" },
+            {
+              "id": "v_tanoshii",
+              "form": "plain_past"
+            },
             "v_jidou",
-            { "id": "v_aru", "form": "polite_mashita" }
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -408,7 +463,10 @@
             "v_ginkou",
             "v_iku",
             "k_kane",
-            { "id": "v_hirou", "form": "polite_mashita" }
+            {
+              "id": "v_hirou",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -427,7 +485,10 @@
             "v_kaerimichi",
             "v_kawaii",
             "v_inu",
-            { "id": "v_au", "form": "polite_mashita" }
+            {
+              "id": "v_au",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -454,7 +515,10 @@
           "a": "銀行へ 行きました。",
           "terms": [
             "v_ginkou",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -463,7 +527,10 @@
           "terms": [
             "v_kawaii",
             "v_yaken",
-            { "id": "v_au", "form": "polite_mashita" }
+            {
+              "id": "v_au",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -478,7 +545,10 @@
           "terms": [
             "v_sofu",
             "v_kyonen",
-            { "id": "v_shikyo", "form": "polite_mashita" }
+            {
+              "id": "v_shikyo",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -496,7 +566,10 @@
           "terms": [
             "v_mainichi",
             "v_kouen",
-            { "id": "v_undou", "form": "polite_mashita" }
+            {
+              "id": "v_undou",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -506,7 +579,10 @@
             "v_giniro",
             "v_kamera",
             "v_shashin",
-            { "id": "v_toru", "form": "polite_mashita" }
+            {
+              "id": "v_toru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -525,7 +601,10 @@
           "a": "去年 死去しました。",
           "terms": [
             "v_kyonen",
-            { "id": "v_shikyo", "form": "polite_mashita" }
+            {
+              "id": "v_shikyo",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -541,7 +620,10 @@
           "a": "こうえんで 運動しました。",
           "terms": [
             "v_kouen",
-            { "id": "v_undou", "form": "polite_mashita" }
+            {
+              "id": "v_undou",
+              "form": "polite_mashita"
+            }
           ]
         },
         {

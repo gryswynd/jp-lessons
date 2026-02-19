@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.Review.2",
   "title": "Phase 4 Review: Body, Life & Work",
   "meta": {
@@ -6,10 +7,30 @@
     "type": "assessment",
     "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 12-15.",
     "kanji": [
-      "頭", "顔", "体", "首", "心", "有",
-      "音", "楽", "歌", "声", "低", "軽",
-      "仕", "事", "曜", "早", "急", "員",
-      "薬", "病", "院", "医", "者", "死"
+      "頭",
+      "顔",
+      "体",
+      "首",
+      "心",
+      "有",
+      "音",
+      "楽",
+      "歌",
+      "声",
+      "低",
+      "軽",
+      "仕",
+      "事",
+      "曜",
+      "早",
+      "急",
+      "員",
+      "薬",
+      "病",
+      "院",
+      "医",
+      "者",
+      "死"
     ]
   },
   "sections": [
@@ -22,11 +43,26 @@
           "title": "Conversation 1",
           "context": "A and B are talking about health.",
           "lines": [
-            { "spk": "A", "jp": "顔色が わるいですね。どうしましたか。" },
-            { "spk": "B", "jp": "頭が いたいです。少し 気分も わるいです。" },
-            { "spk": "A", "jp": "仕事は 休みましょう。病院へ 行った ほうが いいですよ。" },
-            { "spk": "B", "jp": "はい。駅員に 電車の 時間を 聞きます。" },
-            { "spk": "A", "jp": "お大事に。" }
+            {
+              "spk": "A",
+              "jp": "顔色が わるいですね。どうしましたか。"
+            },
+            {
+              "spk": "B",
+              "jp": "頭が いたいです。少し 気分も わるいです。"
+            },
+            {
+              "spk": "A",
+              "jp": "仕事は 休みましょう。病院へ 行った ほうが いいですよ。"
+            },
+            {
+              "spk": "B",
+              "jp": "はい。駅員に 電車の 時間を 聞きます。"
+            },
+            {
+              "spk": "A",
+              "jp": "お大事に。"
+            }
           ],
           "question": "What is the situation?",
           "choices": [
@@ -42,10 +78,22 @@
           "title": "Conversation 2",
           "context": "Two friends discussing music.",
           "lines": [
-            { "spk": "A", "jp": "あの 歌手は 声が 低いですが、いいですね。" },
-            { "spk": "B", "jp": "はい、有名ですよ。私は よく あの 人の 音楽を 聞きます。" },
-            { "spk": "A", "jp": "来週の 日曜日、コンサートに 行きたいですか。" },
-            { "spk": "B", "jp": "行きたいです！ 楽しみです。" }
+            {
+              "spk": "A",
+              "jp": "あの 歌手は 声が 低いですが、いいですね。"
+            },
+            {
+              "spk": "B",
+              "jp": "はい、有名ですよ。私は よく あの 人の 音楽を 聞きます。"
+            },
+            {
+              "spk": "A",
+              "jp": "来週の 日曜日、コンサートに 行きたいですか。"
+            },
+            {
+              "spk": "B",
+              "jp": "行きたいです！ 楽しみです。"
+            }
           ],
           "question": "What do they decide to do?",
           "choices": [
@@ -61,11 +109,26 @@
           "title": "Conversation 3",
           "context": "Rushing in the morning.",
           "lines": [
-            { "spk": "A", "jp": "急いで ください！ 急行が 来ますよ。" },
-            { "spk": "B", "jp": "すみません。お金が ありません。" },
-            { "spk": "A", "jp": "えっ、家に ありますか。" },
-            { "spk": "B", "jp": "はい。家に 帰ります。" },
-            { "spk": "A", "jp": "時間が ありませんよ..." }
+            {
+              "spk": "A",
+              "jp": "急いで ください！ 急行が 来ますよ。"
+            },
+            {
+              "spk": "B",
+              "jp": "すみません。お金が ありません。"
+            },
+            {
+              "spk": "A",
+              "jp": "えっ、家に ありますか。"
+            },
+            {
+              "spk": "B",
+              "jp": "はい。家に 帰ります。"
+            },
+            {
+              "spk": "A",
+              "jp": "時間が ありませんよ..."
+            }
           ],
           "question": "Why is A worried?",
           "choices": [
@@ -87,31 +150,65 @@
         {
           "kind": "scramble",
           "q": "My head hurts, so I will take medicine.",
-          "segments": ["頭", "が", "いたい", "ですから", "薬", "を", "飲みます"],
+          "segments": [
+            "頭",
+            "が",
+            "いたい",
+            "ですから",
+            "薬",
+            "を",
+            "飲みます"
+          ],
           "explanation": "Reason (pain) + desukara + Action (take medicine)."
         },
         {
           "kind": "scramble",
           "q": "I want to become a doctor.",
-          "segments": ["私", "は", "医者", "に", "なりたい", "です"],
+          "segments": [
+            "私",
+            "は",
+            "医者",
+            "に",
+            "なりたい",
+            "です"
+          ],
           "explanation": "Target (Doctor) + ni + naritai (want to become)."
         },
         {
           "kind": "scramble",
           "q": "Please hurry to the station.",
-          "segments": ["駅", "へ", "急いで", "ください"],
+          "segments": [
+            "駅",
+            "へ",
+            "急いで",
+            "ください"
+          ],
           "explanation": "Destination (Station) + he + Te-form of Isogu (Hurry) + kudasai."
         },
         {
           "kind": "scramble",
           "q": "Work is busy, but fun.",
-          "segments": ["仕事", "は", "いそがしい", "ですが", "楽しい", "です"],
+          "segments": [
+            "仕事",
+            "は",
+            "いそがしい",
+            "ですが",
+            "楽しい",
+            "です"
+          ],
           "explanation": "Contrastive 'ga' (but) connects Busy and Fun."
         },
         {
           "kind": "scramble",
           "q": "That person spoke with a low voice.",
-          "segments": ["あの", "人は", "低い", "声", "で", "話しました"],
+          "segments": [
+            "あの",
+            "人は",
+            "低い",
+            "声",
+            "で",
+            "話しました"
+          ],
           "explanation": "Means/State (Low Voice) + de + Action (Spoke)."
         }
       ]
@@ -123,53 +220,106 @@
         {
           "jp": "田中さんは 医者です。",
           "en": "Tanaka-san is a doctor.",
-          "terms": ["v_isha"]
+          "terms": [
+            "v_isha"
+          ]
         },
         {
           "jp": "毎日、朝 早く 起きます。",
           "en": "Every day, he wakes up early in the morning.",
-          "terms": ["v_mainichi", "k_asa", "v_hayai", "v_okiru"]
+          "terms": [
+            "v_mainichi",
+            "k_asa",
+            "v_hayai",
+            "v_okiru"
+          ]
         },
         {
           "jp": "急行の 電車に 乗って、病院へ 行きます。",
           "en": "He rides the express train and goes to the hospital.",
-          "terms": ["v_kyuukou", "v_densha", "v_noru", "v_byouin", "v_iku"]
+          "terms": [
+            "v_kyuukou",
+            "v_densha",
+            "v_noru",
+            "v_byouin",
+            "v_iku"
+          ]
         },
         {
           "jp": "仕事は いそがしいですが、楽しいです。",
           "en": "The work is busy, but fun.",
-          "terms": ["v_shigoto", "v_tanoshii"]
+          "terms": [
+            "v_shigoto",
+            "v_tanoshii"
+          ]
         },
         {
           "jp": "田中さんは 音楽が 好きですから、日曜日は 歌を 歌います。",
           "en": "Tanaka-san likes music, so on Sundays he sings songs.",
-          "terms": ["v_ongaku", "v_suki", "v_nichiyoubi", "v_uta", "v_utau"]
+          "terms": [
+            "v_ongaku",
+            "v_suki",
+            "v_nichiyoubi",
+            "v_uta",
+            "v_utau"
+          ]
         }
       ],
       "questions": [
         {
           "q": "田中さんの 仕事は 何ですか。",
           "a": "医者です。",
-          "choices": ["駅員", "医者", "歌手", "店員"],
-          "terms": ["v_isha"]
+          "choices": [
+            "駅員",
+            "医者",
+            "歌手",
+            "店員"
+          ],
+          "terms": [
+            "v_isha"
+          ]
         },
         {
           "q": "朝、どうですか。",
           "a": "早く 起きます。",
-          "choices": ["おそく 起きます", "早く 起きます", "寝ません", "急ぎません"],
-          "terms": ["v_hayai", "v_okiru"]
+          "choices": [
+            "おそく 起きます",
+            "早く 起きます",
+            "寝ません",
+            "急ぎません"
+          ],
+          "terms": [
+            "v_hayai",
+            "v_okiru"
+          ]
         },
         {
           "q": "何で 病院へ 行きますか。",
           "a": "急行の 電車",
-          "choices": ["車", "急行の 電車", "歩いて", "バス"],
-          "terms": ["v_kyuukou", "v_densha"]
+          "choices": [
+            "車",
+            "急行の 電車",
+            "歩いて",
+            "バス"
+          ],
+          "terms": [
+            "v_kyuukou",
+            "v_densha"
+          ]
         },
         {
           "q": "日曜日に 何を しますか。",
           "a": "歌を 歌います。",
-          "choices": ["仕事を します", "休みます", "薬を 作ります", "歌を 歌います"],
-          "terms": ["v_uta", "v_utau"]
+          "choices": [
+            "仕事を します",
+            "休みます",
+            "薬を 作ります",
+            "歌を 歌います"
+          ],
+          "terms": [
+            "v_uta",
+            "v_utau"
+          ]
         }
       ]
     },
@@ -180,53 +330,101 @@
         {
           "jp": "先週、友だちの 山田さんに 会いました。",
           "en": "Last week, I met my friend Yamada-san.",
-          "terms": ["v_senshuu", "v_tomodachi", "v_au"]
+          "terms": [
+            "v_senshuu",
+            "v_tomodachi",
+            "v_au"
+          ]
         },
         {
           "jp": "山田さんは 顔色が わるかったです。",
           "en": "Yamada-san's complexion was bad.",
-          "terms": ["v_kaoiro"]
+          "terms": [
+            "v_kaoiro"
+          ]
         },
         {
           "jp": "「頭と 体が いたいです」と 言いました。",
           "en": "He said 'My head and body hurt'.",
-          "terms": ["k_atama", "k_karada", "v_iu"]
+          "terms": [
+            "k_atama",
+            "k_karada",
+            "v_iu"
+          ]
         },
         {
           "jp": "私は 「病院へ 行って、薬を 飲んで ください」と 言いました。",
           "en": "I said 'Please go to the hospital and take medicine'.",
-          "terms": ["v_byouin", "v_iku", "v_kusuri", "v_nomu"]
+          "terms": [
+            "v_byouin",
+            "v_iku",
+            "v_kusuri",
+            "v_nomu"
+          ]
         },
         {
           "jp": "山田さんは 今日は 元気です。",
           "en": "Yamada-san is healthy today.",
-          "terms": ["v_kyou", "v_genki"]
+          "terms": [
+            "v_kyou",
+            "v_genki"
+          ]
         }
       ],
       "questions": [
         {
           "q": "山田さんは どうでしたか。",
           "a": "顔色が わるかったです。",
-          "choices": ["顔色が よかったです", "足が 長かったです", "顔色が わるかったです", "歌が 上手でした"],
-          "terms": ["v_kaoiro"]
+          "choices": [
+            "顔色が よかったです",
+            "足が 長かったです",
+            "顔色が わるかったです",
+            "歌が 上手でした"
+          ],
+          "terms": [
+            "v_kaoiro"
+          ]
         },
         {
           "q": "どこが いたかったですか。",
           "a": "頭と 体",
-          "choices": ["手と 足", "目と 耳", "首と 顔", "頭と 体"],
-          "terms": ["k_atama", "k_karada"]
+          "choices": [
+            "手と 足",
+            "目と 耳",
+            "首と 顔",
+            "頭と 体"
+          ],
+          "terms": [
+            "k_atama",
+            "k_karada"
+          ]
         },
         {
           "q": "私は 何と 言いましたか。",
           "a": "病院へ 行って ください。",
-          "choices": ["走って ください", "病院へ 行って ください", "歌って ください", "仕事を して ください"],
-          "terms": ["v_byouin", "v_iku"]
+          "choices": [
+            "走って ください",
+            "病院へ 行って ください",
+            "歌って ください",
+            "仕事を して ください"
+          ],
+          "terms": [
+            "v_byouin",
+            "v_iku"
+          ]
         },
         {
           "q": "山田さんは 今 どうですか。",
           "a": "元気です。",
-          "choices": ["病気です", "死にました", "元気です", "有名です"],
-          "terms": ["v_genki"]
+          "choices": [
+            "病気です",
+            "死にました",
+            "元気です",
+            "有名です"
+          ],
+          "terms": [
+            "v_genki"
+          ]
         }
       ]
     },
@@ -238,50 +436,95 @@
         {
           "kind": "mcq",
           "q": "彼は [有名]な 歌手です。",
-          "choices": ["ゆうな", "ゆめい", "ゆうめい", "あな"],
+          "choices": [
+            "ゆうな",
+            "ゆめい",
+            "ゆうめい",
+            "あな"
+          ],
           "answer": "ゆうめい",
           "explanation": "有名 (famous) is read as <b>yuumei</b>.",
-          "terms": ["v_yuumei", "v_kashu"]
+          "terms": [
+            "v_yuumei",
+            "v_kashu"
+          ]
         },
         {
           "kind": "mcq",
           "q": "[病院]へ 行きました。",
-          "choices": ["びよういん", "びょういん", "びよいん", "びょうき"],
+          "choices": [
+            "びよういん",
+            "びょういん",
+            "びよいん",
+            "びょうき"
+          ],
           "answer": "びょういん",
           "explanation": "病院 (hospital) is read as <b>byouin</b>.",
-          "terms": ["v_byouin", "v_iku"]
+          "terms": [
+            "v_byouin",
+            "v_iku"
+          ]
         },
         {
           "kind": "mcq",
           "q": "[薬]を 飲みました。",
-          "choices": ["めぐすり", "がく", "くすり", "たの"],
+          "choices": [
+            "めぐすり",
+            "がく",
+            "くすり",
+            "たの"
+          ],
           "answer": "くすり",
           "explanation": "薬 (medicine) is read as <b>kusuri</b>.",
-          "terms": ["v_kusuri", "v_nomu"]
+          "terms": [
+            "v_kusuri",
+            "v_nomu"
+          ]
         },
         {
           "kind": "mcq",
           "q": "日曜日は [仕事]が ありません。",
-          "choices": ["のこと", "しごと", "しじ", "じごと"],
+          "choices": [
+            "のこと",
+            "しごと",
+            "しじ",
+            "じごと"
+          ],
           "answer": "しごと",
           "explanation": "仕事 (job/work) is read as <b>shigoto</b>.",
-          "terms": ["v_shigoto"]
+          "terms": [
+            "v_shigoto"
+          ]
         },
         {
           "kind": "mcq",
           "q": "[頭]が いいですね。",
-          "choices": ["かお", "あたま", "からだ", "くび"],
+          "choices": [
+            "かお",
+            "あたま",
+            "からだ",
+            "くび"
+          ],
           "answer": "あたま",
           "explanation": "頭 (head) is read as <b>atama</b>.",
-          "terms": ["v_atamagaii"]
+          "terms": [
+            "v_atamagaii"
+          ]
         },
         {
           "kind": "mcq",
           "q": "あの 先生は [早口]です。",
-          "choices": ["はやぐち", "そうこう", "はやくち", "さくち"],
+          "choices": [
+            "はやぐち",
+            "そうこう",
+            "はやくち",
+            "さくち"
+          ],
           "answer": "はやくち",
           "explanation": "早口 (fast speaking) is read as <b>hayakuchi</b>.",
-          "terms": ["v_hayakuchi"]
+          "terms": [
+            "v_hayakuchi"
+          ]
         }
       ]
     },
@@ -293,34 +536,68 @@
         {
           "kind": "mcq",
           "q": "駅で ______ に 道を 聞きました。",
-          "choices": ["医者", "駅員", "歌手", "店員"],
+          "choices": [
+            "医者",
+            "駅員",
+            "歌手",
+            "店員"
+          ],
           "answer": "駅員",
           "explanation": "At a station (駅), you ask a Station Attendant (駅員).",
-          "terms": ["v_ekiin", "k_michi", "v_kiku"]
+          "terms": [
+            "v_ekiin",
+            "k_michi",
+            "v_kiku"
+          ]
         },
         {
           "kind": "mcq",
           "q": "あの 人は ______ が 低いです。",
-          "choices": ["音", "楽", "歌", "声"],
+          "choices": [
+            "音",
+            "楽",
+            "歌",
+            "声"
+          ],
           "answer": "声",
           "explanation": "A person has a low voice (声).",
-          "terms": ["v_koe", "v_hikui"]
+          "terms": [
+            "v_koe",
+            "v_hikui"
+          ]
         },
         {
           "kind": "mcq",
           "q": "時間が ありません。______。",
-          "choices": ["働きましょう", "歌いましょう", "急ぎましょう", "死にましょう"],
+          "choices": [
+            "働きましょう",
+            "歌いましょう",
+            "急ぎましょう",
+            "死にましょう"
+          ],
           "answer": "急ぎましょう",
           "explanation": "If you have no time, you should hurry (急ぐ).",
-          "terms": ["v_jikan", "v_isogu"]
+          "terms": [
+            "v_jikan",
+            "v_isogu"
+          ]
         },
         {
           "kind": "mcq",
           "q": "______ ですから、学校を 休みます。",
-          "choices": [ "元気", "有名", "病気", "手軽" ],
+          "choices": [
+            "元気",
+            "有名",
+            "病気",
+            "手軽"
+          ],
           "answer": "病気",
           "explanation": "You rest from school because you are sick (病気).",
-          "terms": ["v_byouki", "k_gakkou", "v_yasumu"]
+          "terms": [
+            "v_byouki",
+            "k_gakkou",
+            "v_yasumu"
+          ]
         }
       ]
     },
@@ -332,42 +609,83 @@
         {
           "kind": "mcq",
           "q": "医者 ______ なりたいです。",
-          "choices": ["が", "に", "を", "で"],
+          "choices": [
+            "が",
+            "に",
+            "を",
+            "で"
+          ],
           "answer": "に",
           "explanation": "We use 'ni' with narimasu/naritai (to become).",
-          "terms": ["v_isha", "v_naritai"]
+          "terms": [
+            "v_isha",
+            "v_naritai"
+          ]
         },
         {
           "kind": "mcq",
           "q": "父は 「仕事は 楽しい」______ 言いました。",
-          "choices": ["と", "を", "が", "に"],
+          "choices": [
+            "と",
+            "を",
+            "が",
+            "に"
+          ],
           "answer": "と",
           "explanation": "Particle 'to' marks the quotation (what was said).",
-          "terms": ["k_chichi", "v_shigoto", "v_tanoshii", "v_iu"]
+          "terms": [
+            "k_chichi",
+            "v_shigoto",
+            "v_tanoshii",
+            "v_iu"
+          ]
         },
         {
           "kind": "mcq",
           "q": "頭 ______ いたいです。",
-          "choices": ["を", "に", "で", "が"],
+          "choices": [
+            "を",
+            "に",
+            "で",
+            "が"
+          ],
           "answer": "が",
           "explanation": "With body parts and sensations (itai), we typically use 'ga'.",
-          "terms": ["k_atama"]
+          "terms": [
+            "k_atama"
+          ]
         },
         {
           "kind": "mcq",
           "q": "急行 ______ 行きましょう。",
-          "choices": ["で", "を", "に", "が"],
+          "choices": [
+            "で",
+            "を",
+            "に",
+            "が"
+          ],
           "answer": "で",
           "explanation": "Particle 'de' indicates the means of transport (by express train).",
-          "terms": ["v_kyuukou", "v_iku"]
+          "terms": [
+            "v_kyuukou",
+            "v_iku"
+          ]
         },
         {
           "kind": "mcq",
           "q": "薬を ______ ください。",
-          "choices": ["飲む", "飲んで", "飲み", "飲んだ"],
+          "choices": [
+            "飲む",
+            "飲んで",
+            "飲み",
+            "飲んだ"
+          ],
           "answer": "飲んで",
           "explanation": "Request form uses the Te-form (Nonde) + kudasai.",
-          "terms": ["v_kusuri", "v_nomu"]
+          "terms": [
+            "v_kusuri",
+            "v_nomu"
+          ]
         }
       ]
     }

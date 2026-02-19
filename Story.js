@@ -391,7 +391,7 @@ window.StoryModule = (function() {
       // Build term map (id → term, for modal lookups)
       termMapData = {};
       autoSurfaceMap = {};
-      glossary.forEach(term => {
+      glossary.entries.forEach(term => {
         termMapData[term.id] = term;
         // Auto-surface map: surface form → id (for automatic highlighting)
         if (term.surface) {

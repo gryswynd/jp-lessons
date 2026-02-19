@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.31",
   "title": "Phase 4 Lesson 31: Times & Openings",
   "meta": {
@@ -54,7 +55,10 @@
           "terms": [
             "v_kinou",
             "k_moto",
-            { "id": "v_yomu", "form": "polite_mashita" }
+            {
+              "id": "v_yomu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -62,7 +66,10 @@
           "en": "Do you want to go to the mountain?",
           "terms": [
             "k_yama",
-            { "id": "v_iku", "form": "desire_tai" }
+            {
+              "id": "v_iku",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -71,7 +78,10 @@
           "terms": [
             "k_mise",
             "k_nani",
-            { "id": "v_kau", "form": "polite_masu" }
+            {
+              "id": "v_kau",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -200,7 +210,10 @@
             "v_hai",
             "v_iroiro",
             "k_mono",
-            { "id": "v_kawaru", "form": "polite_mashita" }
+            {
+              "id": "v_kawaru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -211,7 +224,10 @@
             "k_watashi",
             "v_sedai",
             "v_onaji",
-            { "id": "v_aru", "form": "polite_negative" }
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -238,7 +254,10 @@
             "k_ano",
             "k_yama",
             "v_mori",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -256,7 +275,10 @@
           "en": "Yes. Let's go inside.",
           "terms": [
             "k_naka",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -266,7 +288,10 @@
           "terms": [
             "k_tori",
             "v_takusan",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -283,7 +308,10 @@
           "terms": [
             "v_hirugohan",
             "v_shokudou",
-            { "id": "v_taberu", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_taberu",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -304,7 +332,10 @@
           "terms": [
             "v_nanji",
             "k_mise",
-            { "id": "v_akeru", "form": "polite_masu" }
+            {
+              "id": "v_akeru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -313,7 +344,10 @@
           "en": "They open it at 12 o'clock.",
           "terms": [
             "v_juuniji",
-            { "id": "v_akeru", "form": "polite_masu" }
+            {
+              "id": "v_akeru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -330,7 +364,10 @@
           "terms": [
             "k_mise",
             "v_iriguchi",
-            { "id": "v_akeru", "form": "te_form" },
+            {
+              "id": "v_akeru",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
@@ -339,7 +376,10 @@
           "jp": "すみません、開きません。",
           "en": "Sorry, it won't open.",
           "terms": [
-            { "id": "v_aku_2", "form": "polite_negative" }
+            {
+              "id": "v_aku_2",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -348,7 +388,10 @@
           "en": "I will open it.",
           "terms": [
             "k_watashi",
-            { "id": "v_akeru", "form": "polite_masu" }
+            {
+              "id": "v_akeru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -356,7 +399,10 @@
           "jp": "お願いします。",
           "en": "Please (do so).",
           "terms": [
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -371,7 +417,10 @@
           "terms": [
             "v_otera",
             "v_hondou",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -381,14 +430,20 @@
             "v_hondou",
             "v_mori",
             "k_naka",
-            { "id": "v_aru", "form": "polite_mashita" }
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "jp": "とても 大きくて、堂々として いました。",
           "en": "It was very big and magnificent.",
           "terms": [
-            { "id": "v_ookii", "form": "te_form" },
+            {
+              "id": "v_ookii",
+              "form": "te_form"
+            },
             "v_doudou"
           ]
         },
@@ -400,7 +455,10 @@
             "v_furu",
             "v_jidai",
             "v_chikara",
-            { "id": "v_omou", "form": "polite_mashita" }
+            {
+              "id": "v_omou",
+              "form": "polite_mashita"
+            }
           ]
         }
       ],
@@ -446,7 +504,10 @@
           "terms": [
             "v_kaidou",
             "v_kaigou",
-            { "id": "v_hiraku", "form": "polite_masu" }
+            {
+              "id": "v_hiraku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -456,7 +517,10 @@
             "v_atarashii",
             "v_sedai",
             "v_hitobito",
-            { "id": "v_atsumaru", "form": "polite_masu" }
+            {
+              "id": "v_atsumaru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -473,7 +537,10 @@
           "en": "There is no fee.",
           "terms": [
             "v_daikin",
-            { "id": "v_aru", "form": "polite_negative" }
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            }
           ]
         }
       ],
@@ -524,7 +591,7 @@
             "jishiro"
           ],
           "answer": "jidai",
-          "terms": [  ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -536,7 +603,7 @@
             "shinhayashi"
           ],
           "answer": "shinrin",
-          "terms": [  ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -548,7 +615,7 @@
             "tabedou"
           ],
           "answer": "shokudou",
-          "terms": [  ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -560,7 +627,7 @@
             "sakeru"
           ],
           "answer": "akeru",
-          "terms": [  ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -572,7 +639,7 @@
             "owaru"
           ],
           "answer": "kawaru",
-          "terms": [  ]
+          "terms": []
         }
       ]
     },
@@ -593,7 +660,10 @@
           "answer": "開けて",
           "terms": [
             "v_iriguchi",
-            { "id": "v_akeru", "form": "te_form" },
+            {
+              "id": "v_akeru",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },

@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.Review.6",
   "title": "Phase 4 Review: Nature, Places & Measurement",
   "meta": {
@@ -32,9 +33,15 @@
               "terms": [
                 "v_tsuyoi",
                 "v_taifuu",
-                { "id": "v_kuru", "form": "polite_masu" },
+                {
+                  "id": "v_kuru",
+                  "form": "polite_masu"
+                },
                 "v_keikaku",
-                { "id": "v_aru", "form": "polite_masu" }
+                {
+                  "id": "v_aru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -44,7 +51,10 @@
                 "v_daidokoro",
                 "k_mizu",
                 "v_denchi",
-                { "id": "v_aru", "form": "polite_masu" }
+                {
+                  "id": "v_aru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -52,17 +62,26 @@
               "jp": "外に 出ないで ください。",
               "terms": [
                 "k_soto",
-                { "id": "v_deru", "form": "polite_negative_te" }
+                {
+                  "id": "v_deru",
+                  "form": "polite_negative_te"
+                }
               ]
             },
             {
               "spk": "B",
               "jp": "分かりました。家で 本を 読みます。",
               "terms": [
-                { "id": "v_wakaru", "form": "polite_mashita" },
+                {
+                  "id": "v_wakaru",
+                  "form": "polite_mashita"
+                },
                 "k_ie",
                 "k_moto",
-                { "id": "v_yomu", "form": "polite_masu" }
+                {
+                  "id": "v_yomu",
+                  "form": "polite_masu"
+                }
               ]
             }
           ],
@@ -86,8 +105,14 @@
               "terms": [
                 "v_kobayashi",
                 "v_mura",
-                { "id": "v_shiru", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_masu" }
+                {
+                  "id": "v_shiru",
+                  "form": "te_form"
+                },
+                {
+                  "id": "v_iru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -104,7 +129,10 @@
               "terms": [
                 "v_mura",
                 "k_nani",
-                { "id": "v_aru", "form": "polite_masu" }
+                {
+                  "id": "v_aru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -114,7 +142,10 @@
                 "v_hayashi",
                 "v_ookii",
                 "v_ike",
-                { "id": "v_aru", "form": "polite_masu" }
+                {
+                  "id": "v_aru",
+                  "form": "polite_masu"
+                }
               ]
             }
           ],
@@ -165,7 +196,10 @@
               "jp": "はい。でも、時間は 正しくないです。",
               "terms": [
                 "v_jikan",
-                { "id": "v_tadashii", "form": "polite_negative" }
+                {
+                  "id": "v_tadashii",
+                  "form": "polite_negative"
+                }
               ]
             }
           ],
@@ -277,7 +311,10 @@
             "k_naka",
             "v_furui",
             "v_mon",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -287,7 +324,10 @@
             "k_watashi",
             "v_mainichi",
             "v_jikan",
-            { "id": "v_hakaru", "form": "polite_masu" }
+            {
+              "id": "v_hakaru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -296,7 +336,10 @@
           "terms": [
             "v_ichijikan",
             "v_ijou",
-            { "id": "v_aruku", "form": "polite_masu" }
+            {
+              "id": "v_aruku",
+              "form": "polite_masu"
+            }
           ]
         }
       ],

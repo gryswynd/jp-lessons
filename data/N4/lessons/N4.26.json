@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.26",
   "title": "Phase 4 Lesson 26: Truth & Thoughts",
   "meta": {
@@ -62,7 +63,10 @@
           "terms": [
             "v_kanji",
             "v_imi",
-            { "id": "v_wakaru", "form": "polite_masu" }
+            {
+              "id": "v_wakaru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -78,7 +82,10 @@
           "en": "What shall we do?",
           "terms": [
             "k_nani",
-            { "id": "v_suru", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_suru",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -186,7 +193,10 @@
           "en": "No, it is bad. Please correct this part.",
           "terms": [
             "v_warui",
-            { "id": "v_tadasu", "form": "te_form" }
+            {
+              "id": "v_tadasu",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -194,9 +204,15 @@
           "jp": "分かりました。よく 考えます。",
           "en": "I understand. I will think carefully.",
           "terms": [
-            { "id": "v_wakaru", "form": "polite_mashita" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            },
             "v_yoku",
-            { "id": "v_kangaeru", "form": "polite_masu" }
+            {
+              "id": "v_kangaeru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -232,7 +248,10 @@
           "terms": [
             "k_watashi",
             "k_nani",
-            { "id": "v_tsukuru", "form": "polite_masu" }
+            {
+              "id": "v_tsukuru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -240,8 +259,14 @@
           "jp": "まだ 考えて いません。",
           "en": "I haven't thought about it yet.",
           "terms": [
-            { "id": "v_kangaeru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_negative" }
+            {
+              "id": "v_kangaeru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_negative"
+            }
           ]
         }
       ]
@@ -259,7 +284,10 @@
             "v_kanji",
             "k_ka",
             "v_kata",
-            { "id": "v_oshieru", "form": "te_form" }
+            {
+              "id": "v_oshieru",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -270,7 +298,10 @@
             "v_ii",
             "k_ka",
             "v_kata",
-            { "id": "v_kangaeru", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_kangaeru",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -316,7 +347,10 @@
           "en": "I don't know their true identity, but they are not a bad person.",
           "terms": [
             "v_shoutai",
-            { "id": "v_wakaru", "form": "polite_negative" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_negative"
+            },
             "v_warui",
             "k_hito"
           ]
@@ -328,8 +362,14 @@
           "terms": [
             "v_akushitsu",
             "k_hito",
-            { "id": "v_iru", "form": "polite_masu" },
-            { "id": "v_chuui", "form": "te_form" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            {
+              "id": "v_chuui",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -338,7 +378,10 @@
           "en": "Yes. Let's talk a little.",
           "terms": [
             "v_sukoshi",
-            { "id": "v_hanasu", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_hanasu",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -354,8 +397,14 @@
             "v_sensei",
             "v_tadashii",
             "v_kangaekata",
-            { "id": "v_motsu", "form": "polite_volitional_mashou" },
-            { "id": "v_iu", "form": "polite_mashita" }
+            {
+              "id": "v_motsu",
+              "form": "polite_volitional_mashou"
+            },
+            {
+              "id": "v_iu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -363,7 +412,10 @@
           "en": "You must not do bad things.",
           "terms": [
             "v_warui",
-            { "id": "v_suru", "form": "te_form" }
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -382,7 +434,10 @@
             "k_watashi",
             "v_ii",
             "v_gakusei",
-            { "id": "v_naru", "form": "polite_masu" }
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -424,7 +479,10 @@
           "terms": [
             "v_ichigatsu",
             "v_shougatsu",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -447,7 +505,10 @@
             "k_shi",
             "v_kata",
             "v_shigoto",
-            { "id": "v_kangaeru", "form": "polite_masu" }
+            {
+              "id": "v_kangaeru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -455,8 +516,14 @@
           "en": "I want to live happily every day.",
           "terms": [
             "v_mainichi",
-            { "id": "v_tanoshii", "form": "adverbial" },
-            { "id": "v_ikiru", "form": "desire_tai" }
+            {
+              "id": "v_tanoshii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_ikiru",
+              "form": "desire_tai"
+            }
           ]
         }
       ],
@@ -505,8 +572,7 @@
             "yowai"
           ],
           "answer": "tadashii",
-          "terms": [
-          ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -518,8 +584,7 @@
             "kongetsu"
           ],
           "answer": "shougatsu",
-          "terms": [
-          ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -531,8 +596,7 @@
             "tataeru"
           ],
           "answer": "kangaeru",
-          "terms": [
-          ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -544,8 +608,7 @@
             "warumono"
           ],
           "answer": "akushitsu",
-          "terms": [
-          ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -557,8 +620,7 @@
             "kenkata"
           ],
           "answer": "mikata",
-          "terms": [
-          ]
+          "terms": []
         }
       ]
     },
@@ -625,7 +687,10 @@
           "answer": "正して",
           "terms": [
             "k_bun",
-            { "id": "v_tadasu", "form": "te_form" }
+            {
+              "id": "v_tadasu",
+              "form": "te_form"
+            }
           ]
         }
       ]

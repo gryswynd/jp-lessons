@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.Review.3",
   "title": "Phase 4 Review: Movement, Nature & Geography",
   "meta": {
@@ -6,10 +7,30 @@
     "type": "assessment",
     "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 16-19.",
     "kanji": [
-      "動", "犬", "銀", "去", "走", "運",
-      "京", "都", "転", "回", "田", "海",
-      "弱", "強", "勉", "風", "光", "力",
-      "地", "図", "質", "問", "題", "説"
+      "動",
+      "犬",
+      "銀",
+      "去",
+      "走",
+      "運",
+      "京",
+      "都",
+      "転",
+      "回",
+      "田",
+      "海",
+      "弱",
+      "強",
+      "勉",
+      "風",
+      "光",
+      "力",
+      "地",
+      "図",
+      "質",
+      "問",
+      "題",
+      "説"
     ]
   },
   "sections": [
@@ -36,7 +57,10 @@
               "terms": [
                 "v_ginkou",
                 "v_chika",
-                { "id": "v_aru", "form": "polite_masu" }
+                {
+                  "id": "v_aru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -53,7 +77,10 @@
               "terms": [
                 "v_denkou",
                 "v_takusan",
-                { "id": "v_aru", "form": "polite_masu" },
+                {
+                  "id": "v_aru",
+                  "form": "polite_masu"
+                },
                 "v_akarui"
               ]
             },
@@ -61,7 +88,10 @@
               "spk": "A",
               "jp": "わかりました。説明 ありがとう ございます。",
               "terms": [
-                { "id": "v_wakaru", "form": "polite_mashita" },
+                {
+                  "id": "v_wakaru",
+                  "form": "polite_mashita"
+                },
                 "v_setsumei"
               ]
             }
@@ -94,8 +124,14 @@
               "jp": "はい。毎日 運動して いますから。",
               "terms": [
                 "v_mainichi",
-                { "id": "v_undou", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_masu" }
+                {
+                  "id": "v_undou",
+                  "form": "te_form"
+                },
+                {
+                  "id": "v_iru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -111,10 +147,19 @@
               "jp": "海へ 行ったり、山を 走ったり します。",
               "terms": [
                 "v_umi",
-                { "id": "v_iku", "form": "tari_form" },
+                {
+                  "id": "v_iku",
+                  "form": "tari_form"
+                },
                 "k_yama",
-                { "id": "v_hashiru", "form": "tari_form" },
-                { "id": "v_suru", "form": "polite_masu" }
+                {
+                  "id": "v_hashiru",
+                  "form": "tari_form"
+                },
+                {
+                  "id": "v_suru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -124,7 +169,10 @@
                 "v_sugoi",
                 "k_watashi",
                 "v_yowai",
-                { "id": "v_dekiru", "form": "polite_negative" }
+                {
+                  "id": "v_dekiru",
+                  "form": "polite_negative"
+                }
               ]
             }
           ],
@@ -148,9 +196,15 @@
               "terms": [
                 "v_raishuu",
                 "v_kyouto",
-                { "id": "v_iku", "form": "polite_masu" },
+                {
+                  "id": "v_iku",
+                  "form": "polite_masu"
+                },
                 "k_kuruma",
-                { "id": "v_iku", "form": "conditional_ba" },
+                {
+                  "id": "v_iku",
+                  "form": "conditional_ba"
+                },
                 "v_hayai"
               ]
             },
@@ -170,7 +224,10 @@
               "jp": "そうですか。じゃあ、電車で 行きます。",
               "terms": [
                 "v_densha",
-                { "id": "v_iku", "form": "polite_masu" }
+                {
+                  "id": "v_iku",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -202,31 +259,61 @@
         {
           "kind": "scramble",
           "q": "If you ask a question, you will understand.",
-          "segments": ["質問", "すれば", "分かります"],
+          "segments": [
+            "質問",
+            "すれば",
+            "分かります"
+          ],
           "explanation": "Conditional form: Action (Question) + sureba (if do) + Result (Understand)."
         },
         {
           "kind": "scramble",
           "q": "Please explain this problem.",
-          "segments": ["この", "問題", "を", "説明", "して", "ください"],
+          "segments": [
+            "この",
+            "問題",
+            "を",
+            "説明",
+            "して",
+            "ください"
+          ],
           "explanation": "Object (Problem) + wo + Te-form of Setsumei (Explain) + kudasai."
         },
         {
           "kind": "scramble",
           "q": "I like dogs more than cats.",
-          "segments": ["猫", "より", "犬", "のほうが", "好き", "です"],
+          "segments": [
+            "猫",
+            "より",
+            "犬",
+            "のほうが",
+            "好き",
+            "です"
+          ],
           "explanation": "Comparison: B (Cat) + yori + A (Dog) + nohouga + Like."
         },
         {
           "kind": "scramble",
           "q": "The wind is strong and scary.",
-          "segments": ["風", "が", "強くて", "こわい", "です"],
+          "segments": [
+            "風",
+            "が",
+            "強くて",
+            "こわい",
+            "です"
+          ],
           "explanation": "Connecting adjectives: Tsuyoi becomes Tsuyokute."
         },
         {
           "kind": "scramble",
           "q": "I bought a silver watch.",
-          "segments": ["銀色", "の", "とけい", "を", "買いました"],
+          "segments": [
+            "銀色",
+            "の",
+            "とけい",
+            "を",
+            "買いました"
+          ],
           "explanation": "Noun modifier: Giniro (Silver color) + no + Tokei (Watch)."
         }
       ]
@@ -243,7 +330,10 @@
             "k_watashi",
             "v_kyouto",
             "v_toukyou",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -252,7 +342,10 @@
           "terms": [
             "v_toukyou",
             "k_hito",
-            { "id": "v_ooi", "form": "plain_past" }
+            {
+              "id": "v_ooi",
+              "form": "plain_past"
+            }
           ]
         },
         {
@@ -261,9 +354,15 @@
           "terms": [
             "k_watashi",
             "v_jitensha",
-            { "id": "v_kariru", "form": "te_form" },
+            {
+              "id": "v_kariru",
+              "form": "te_form"
+            },
             "k_machi",
-            { "id": "v_hashiru", "form": "polite_mashita" }
+            {
+              "id": "v_hashiru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -272,8 +371,14 @@
           "terms": [
             "v_tsuyoi",
             "v_kaze",
-            { "id": "v_aru", "form": "polite_mashita" },
-            { "id": "v_tanoshii", "form": "plain_past" }
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            },
+            {
+              "id": "v_tanoshii",
+              "form": "plain_past"
+            }
           ]
         },
         {
@@ -282,7 +387,10 @@
           "terms": [
             "k_yoru",
             "v_yuumei",
-            { "id": "v_taberu", "form": "polite_mashita" }
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         }
       ],
@@ -290,39 +398,71 @@
         {
           "q": "どこへ 行きましたか。",
           "a": "東京へ 行きました",
-          "choices": ["京都へ 行きました", "東京へ 行きました", "北海道へ 行きました", "海外へ 行きました"],
+          "choices": [
+            "京都へ 行きました",
+            "東京へ 行きました",
+            "北海道へ 行きました",
+            "海外へ 行きました"
+          ],
           "terms": [
             "v_toukyou",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "町で 何を しましたか。",
           "a": "自転車で 走りました",
-          "choices": ["車を 買いました", "自転車で 走りました", "犬と 遊びました", "銀行へ 行きました"],
+          "choices": [
+            "車を 買いました",
+            "自転車で 走りました",
+            "犬と 遊びました",
+            "銀行へ 行きました"
+          ],
           "terms": [
             "k_machi",
             "v_jitensha",
-            { "id": "v_hashiru", "form": "polite_mashita" }
+            {
+              "id": "v_hashiru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "天気は どうでしたか。",
           "a": "風が 強かったです",
-          "choices": ["雨でした", "雪でした", "風が 強かったです", "雷でした"],
+          "choices": [
+            "雨でした",
+            "雪でした",
+            "風が 強かったです",
+            "雷でした"
+          ],
           "terms": [
             "v_tenki",
             "v_kaze",
-            { "id": "v_tsuyoi", "form": "polite_past_adj" }
+            {
+              "id": "v_tsuyoi",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
           "q": "夜、何を しましたか。",
           "a": "レストランで 食べました",
-          "choices": ["図書館で 読みました", "家で 寝ました", "レストランで 食べました", "友達に 会いました"],
+          "choices": [
+            "図書館で 読みました",
+            "家で 寝ました",
+            "レストランで 食べました",
+            "友達に 会いました"
+          ],
           "terms": [
             "k_yoru",
-            { "id": "v_taberu", "form": "polite_mashita" }
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -337,7 +477,10 @@
           "terms": [
             "v_gakusei",
             "v_toshokan",
-            { "id": "v_benkyou", "form": "polite_masu" }
+            {
+              "id": "v_benkyou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -348,7 +491,10 @@
             "v_omoshiroi",
             "v_shousetsu",
             "v_chizu",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -357,7 +503,10 @@
           "terms": [
             "v_gakusei",
             "v_sensei",
-            { "id": "v_shitsumon", "form": "polite_masu" }
+            {
+              "id": "v_shitsumon",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -366,7 +515,10 @@
           "terms": [
             "v_sensei",
             "v_gakusetsu",
-            { "id": "v_setsumei", "form": "te_form" }
+            {
+              "id": "v_setsumei",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -377,7 +529,10 @@
             "v_sukoshi",
             "v_muzukashii",
             "v_mondai",
-            { "id": "v_iu", "form": "polite_masu" }
+            {
+              "id": "v_iu",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -385,17 +540,30 @@
         {
           "q": "学生は どこで 勉強しますか。",
           "a": "図書館",
-          "choices": ["銀行", "図書館", "海", "山"],
+          "choices": [
+            "銀行",
+            "図書館",
+            "海",
+            "山"
+          ],
           "terms": [
             "v_gakusei",
             "v_toshokan",
-            { "id": "v_benkyou", "form": "polite_masu" }
+            {
+              "id": "v_benkyou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "図書館に 何が ありますか。",
           "a": "小説と 地図",
-          "choices": ["犬と 猫", "車と 自転車", "小説と 地図", "薬と 病院"],
+          "choices": [
+            "犬と 猫",
+            "車と 自転車",
+            "小説と 地図",
+            "薬と 病院"
+          ],
           "terms": [
             "v_toshokan",
             "v_shousetsu",
@@ -405,16 +573,29 @@
         {
           "q": "学生は 何を しますか。",
           "a": "先生に 質問します",
-          "choices": ["先生に 質問します", "先生に お金を かします", "先生と 走ります", "先生と 歌います"],
+          "choices": [
+            "先生に 質問します",
+            "先生に お金を かします",
+            "先生と 走ります",
+            "先生と 歌います"
+          ],
           "terms": [
             "v_sensei",
-            { "id": "v_shitsumon", "form": "polite_masu" }
+            {
+              "id": "v_shitsumon",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "問題は かんたんですか。",
           "a": "いいえ、少し むずかしいです",
-          "choices": ["はい、かんたんです", "いいえ、少し むずかしいです", "とても おもしろいです", "とても つまらないです"],
+          "choices": [
+            "はい、かんたんです",
+            "いいえ、少し むずかしいです",
+            "とても おもしろいです",
+            "とても つまらないです"
+          ],
           "terms": [
             "v_mondai",
             "v_muzukashii"
@@ -430,42 +611,72 @@
         {
           "kind": "mcq",
           "q": "[動物]が 好きです。",
-          "choices": ["どうぶつ", "こうぶつ", "うごもの", "だいぶつ"],
+          "choices": [
+            "どうぶつ",
+            "こうぶつ",
+            "うごもの",
+            "だいぶつ"
+          ],
           "answer": "どうぶつ",
           "explanation": "動物 (Animal) is read as <b>doubutsu</b>."
         },
         {
           "kind": "mcq",
           "q": "[銀行]へ 行きます。",
-          "choices": ["ぎんこう", "きんこう", "ぎんぎょう", "よこう"],
+          "choices": [
+            "ぎんこう",
+            "きんこう",
+            "ぎんぎょう",
+            "よこう"
+          ],
           "answer": "ぎんこう",
           "explanation": "銀行 (Bank) is read as <b>ginkou</b>."
         },
         {
           "kind": "mcq",
           "q": "車を [運転]します。",
-          "choices": ["じてん", "うんてん", "うんど", "れんてん"],
+          "choices": [
+            "じてん",
+            "うんてん",
+            "うんど",
+            "れんてん"
+          ],
           "answer": "うんてん",
           "explanation": "運転 (Driving) is read as <b>unten</b>."
         },
         {
           "kind": "mcq",
           "q": "毎日 [勉強]します。",
-          "choices": ["きんきょう", "つよきょう", "べんきょう", "めんきょう"],
+          "choices": [
+            "きんきょう",
+            "つよきょう",
+            "べんきょう",
+            "めんきょう"
+          ],
           "answer": "べんきょう",
           "explanation": "勉強 (Study) is read as <b>benkyou</b>."
         },
         {
           "kind": "mcq",
           "q": "[地図]を 見ます。",
-          "choices": ["ちず", "じず", "ちと", "ちえ"],
+          "choices": [
+            "ちず",
+            "じず",
+            "ちと",
+            "ちえ"
+          ],
           "answer": "ちず",
           "explanation": "地図 (Map) is read as <b>chizu</b>."
         },
         {
           "kind": "mcq",
           "q": "[京都]は 古い 都です。",
-          "choices": ["とうきょう", "きょうと", "みやこ", "けいと"],
+          "choices": [
+            "とうきょう",
+            "きょうと",
+            "みやこ",
+            "けいと"
+          ],
           "answer": "きょうと",
           "explanation": "京都 (Kyoto) is read as <b>kyouto</b>."
         }
@@ -479,28 +690,48 @@
         {
           "kind": "mcq",
           "q": "この 荷物を ______ ください。",
-          "choices": ["運んで", "転んで", "遊んで", "込んで"],
+          "choices": [
+            "運んで",
+            "転んで",
+            "遊んで",
+            "込んで"
+          ],
           "answer": "運んで",
           "explanation": "To carry/transport baggage (荷物) is Hakobu (運ぶ)."
         },
         {
           "kind": "mcq",
           "q": "今日は ______ が 強いです。",
-          "choices": ["風", "犬", "田", "銀"],
+          "choices": [
+            "風",
+            "犬",
+            "田",
+            "銀"
+          ],
           "answer": "風",
           "explanation": "The wind (風) is strong (強い)."
         },
         {
           "kind": "mcq",
           "q": "______ に 住んで います。",
-          "choices": ["東京", "東強", "東教", "東今日"],
+          "choices": [
+            "東京",
+            "東強",
+            "東教",
+            "東今日"
+          ],
           "answer": "東京",
           "explanation": "Tokyo is written as 東京 (East Capital)."
         },
         {
           "kind": "mcq",
           "q": "分からない ことは 先生に ______ します。",
-          "choices": ["質問", "自問", "問題", "学説"],
+          "choices": [
+            "質問",
+            "自問",
+            "問題",
+            "学説"
+          ],
           "answer": "質問",
           "explanation": "You ask a question (質問) to the teacher."
         }
@@ -514,35 +745,60 @@
         {
           "kind": "mcq",
           "q": "海 ______ 山の ほうが 好きです。",
-          "choices": ["より", "から", "と", "が"],
+          "choices": [
+            "より",
+            "から",
+            "と",
+            "が"
+          ],
           "answer": "より",
           "explanation": "Comparison pattern: A yori B no hou ga suki (I like B more than A)."
         },
         {
           "kind": "mcq",
           "q": "自転車 ______ 行きましょう。",
-          "choices": ["で", "を", "に", "が"],
+          "choices": [
+            "で",
+            "を",
+            "に",
+            "が"
+          ],
           "answer": "で",
           "explanation": "Particle 'de' indicates means of transport (by bicycle)."
         },
         {
           "kind": "mcq",
           "q": "薬を ______、元気になります。",
-          "choices": ["飲めば", "飲むなら", "飲んで", "飲みます"],
+          "choices": [
+            "飲めば",
+            "飲むなら",
+            "飲んで",
+            "飲みます"
+          ],
           "answer": "飲めば",
           "explanation": "Conditional Ba form: If you drink (nomeba)..."
         },
         {
           "kind": "mcq",
           "q": "道を ______ ください。",
-          "choices": ["教えて", "教え", "教える", "教えます"],
+          "choices": [
+            "教えて",
+            "教え",
+            "教える",
+            "教えます"
+          ],
           "answer": "教えて",
           "explanation": "Request form uses Te-form + kudasai."
         },
         {
           "kind": "mcq",
           "q": "去年、海外 ______ 行きました。",
-          "choices": ["へ", "を", "で", "が"],
+          "choices": [
+            "へ",
+            "を",
+            "で",
+            "が"
+          ],
           "answer": "へ",
           "explanation": "Particle 'he' (pronounced e) indicates direction/destination."
         }

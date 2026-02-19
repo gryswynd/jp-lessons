@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.28",
   "title": "Phase 4 Lesson 28: Places & Parts",
   "meta": {
@@ -64,7 +65,10 @@
             "v_kondo",
             "k_yasu",
             "k_nani",
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -82,7 +86,10 @@
           "terms": [
             "v_tomodachi",
             "v_tegami",
-            { "id": "v_kaku", "form": "polite_mashita" }
+            {
+              "id": "v_kaku",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -191,7 +198,10 @@
             "v_kobayashi",
             "v_machiawase",
             "v_doko",
-            { "id": "v_suru", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_suru",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -201,7 +211,10 @@
           "terms": [
             "v_gakkou",
             "v_seimon",
-            { "id": "v_au", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_au",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -235,7 +248,10 @@
           "en": "Do you have a battery?",
           "terms": [
             "v_denchi",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -244,7 +260,10 @@
           "en": "No. I will buy one at the shop.",
           "terms": [
             "k_mise",
-            { "id": "v_kau", "form": "polite_masu" }
+            {
+              "id": "v_kau",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -252,7 +271,10 @@
           "jp": "高いですか。",
           "en": "Is it expensive?",
           "terms": [
-            { "id": "v_takai", "form": "polite_adj" }
+            {
+              "id": "v_takai",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -260,7 +282,10 @@
           "jp": "いいえ、高くないです。",
           "en": "No, it is not expensive.",
           "terms": [
-            { "id": "v_takai", "form": "polite_negative" }
+            {
+              "id": "v_takai",
+              "form": "polite_negative"
+            }
           ]
         }
       ]
@@ -277,8 +302,14 @@
           "terms": [
             "v_sensei",
             "v_doko",
-            { "id": "v_sumu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -287,8 +318,14 @@
           "en": "He lives in a mountain village.",
           "terms": [
             "v_sanson",
-            { "id": "v_sumu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -297,7 +334,10 @@
           "en": "Is there a pond?",
           "terms": [
             "v_ike",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -308,7 +348,10 @@
             "v_ookii",
             "v_ike",
             "v_hayashi",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -324,7 +367,10 @@
           "en": "Is this book difficult?",
           "terms": [
             "k_moto",
-            { "id": "v_muzukashii", "form": "polite_adj" }
+            {
+              "id": "v_muzukashii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -334,7 +380,10 @@
           "terms": [
             "v_eigo",
             "v_nyuumon",
-            { "id": "v_muzukashii", "form": "polite_negative" }
+            {
+              "id": "v_muzukashii",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -352,7 +401,10 @@
           "jp": "読んで ください。",
           "en": "Please read it.",
           "terms": [
-            { "id": "v_yomu", "form": "te_form" }
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            }
           ]
         }
       ]
@@ -375,8 +427,14 @@
           "terms": [
             "v_chiisai",
             "v_mura",
-            { "id": "v_sumu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -384,9 +442,15 @@
           "en": "There is a mountain forest near the village.",
           "terms": [
             "v_mura",
-            { "id": "v_chikai", "form": "adverbial" },
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            },
             "v_sanrin",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -397,9 +461,15 @@
             "v_yoku",
             "v_hayashi",
             "k_naka",
-            { "id": "v_aruku", "form": "polite_masu" },
+            {
+              "id": "v_aruku",
+              "form": "polite_masu"
+            },
             "v_ike",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -410,8 +480,14 @@
           "terms": [
             "v_kobayashi",
             "v_doko",
-            { "id": "v_sumu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "v_chiisai",
             "v_mura"
           ]
@@ -421,7 +497,10 @@
           "a": "山林。",
           "terms": [
             "v_mura",
-            { "id": "v_chikai", "form": "adverbial" },
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            },
             "k_nani",
             "v_sanrin"
           ]
@@ -431,7 +510,10 @@
           "a": "林の中。",
           "terms": [
             "v_doko",
-            { "id": "v_aruku", "form": "polite_masu"},
+            {
+              "id": "v_aruku",
+              "form": "polite_masu"
+            },
             "v_hayashi",
             "k_naka"
           ]
@@ -448,7 +530,10 @@
           "terms": [
             "v_ookii",
             "v_mon",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "v_furui",
             "v_gakkou",
             "v_seimon"
@@ -458,10 +543,16 @@
           "jp": "多くの 学生が 門に 入ります。",
           "en": "Many students enter the gate.",
           "terms": [
-            { "id": "v_ooi", "form": "adverbial" },
+            {
+              "id": "v_ooi",
+              "form": "adverbial"
+            },
             "v_gakusei",
             "v_mon",
-            { "id": "v_hairu", "form": "polite_masu" }
+            {
+              "id": "v_hairu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -471,7 +562,10 @@
             "v_mon",
             "k_mae",
             "k_mise",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -480,8 +574,14 @@
           "terms": [
             "v_denchi",
             "k_moto",
-            { "id": "v_uru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_uru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -513,8 +613,14 @@
           "terms": [
             "k_mise",
             "k_nani",
-            { "id": "v_uru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_uru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "v_denchi",
             "k_moto"
           ]
@@ -536,8 +642,7 @@
             "kawa"
           ],
           "answer": "ike",
-          "terms": [
-          ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -549,8 +654,7 @@
             "ki"
           ],
           "answer": "hayashi",
-          "terms": [
-          ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -562,8 +666,7 @@
             "mado"
           ],
           "answer": "mon",
-          "terms": [
-          ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -575,8 +678,7 @@
             "toshi"
           ],
           "answer": "mura",
-          "terms": [
-          ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -588,8 +690,7 @@
             "kiike"
           ],
           "answer": "denchi",
-          "terms": [
-          ]
+          "terms": []
         }
       ]
     },

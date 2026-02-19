@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.24",
   "title": "Phase 4 Lesson 24: Education & Experience",
   "meta": {
@@ -53,7 +54,10 @@
           "en": "Did you study yesterday?",
           "terms": [
             "v_kinou",
-            { "id": "v_benkyou", "form": "polite_mashita" }
+            {
+              "id": "v_benkyou",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -79,7 +83,10 @@
           "terms": [
             "v_tanoshii",
             "v_ongaku",
-            { "id": "v_kiku", "form": "polite_mashita" }
+            {
+              "id": "v_kiku",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -184,7 +191,10 @@
           "terms": [
             "v_gakkou",
             "k_naka",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "v_kyou",
             "v_shiken"
           ]
@@ -196,7 +206,10 @@
           "terms": [
             "v_kinou",
             "v_takusan",
-            { "id": "v_benkyou", "form": "polite_mashita" }
+            {
+              "id": "v_benkyou",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -204,7 +217,10 @@
           "jp": "がんばりましょう。",
           "en": "Let's do our best.",
           "terms": [
-            { "id": "v_ganbaru", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_ganbaru",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -221,7 +237,10 @@
           "terms": [
             "k_watashi",
             "v_nihongo",
-            { "id": "v_oshieru", "form": "te_form" }
+            {
+              "id": "v_oshieru",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -249,7 +268,10 @@
           "en": "Then, let's study with this book.",
           "terms": [
             "k_moto",
-            { "id": "v_benkyou", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_benkyou",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -266,7 +288,10 @@
           "terms": [
             "k_koko",
             "v_shishoku",
-            { "id": "v_dekiru", "form": "polite_masu" }
+            {
+              "id": "v_dekiru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -310,7 +335,10 @@
           "terms": [
             "v_kinou",
             "k_yama",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -318,7 +346,10 @@
           "jp": "寒かったですか。",
           "en": "Was it cold?",
           "terms": [
-            { "id": "v_samui", "form": "polite_past_adj" }
+            {
+              "id": "v_samui",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
@@ -336,7 +367,10 @@
           "en": "I want to go too.",
           "terms": [
             "k_watashi",
-            { "id": "v_iku", "form": "desire_tai" }
+            {
+              "id": "v_iku",
+              "form": "desire_tai"
+            }
           ]
         }
       ]
@@ -353,7 +387,10 @@
             "v_atarashii",
             "v_kyoushitsu",
             "v_eigo",
-            { "id": "v_benkyou", "form": "polite_mashita" }
+            {
+              "id": "v_benkyou",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -361,8 +398,14 @@
           "en": "The teacher was kind and interesting.",
           "terms": [
             "v_sensei",
-            { "id": "v_shinsetsu", "form": "te_form" },
-            { "id": "v_omoshiroi", "form": "polite_past_adj" }
+            {
+              "id": "v_shinsetsu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_omoshiroi",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
@@ -373,7 +416,10 @@
             "k_ushiro",
             "v_sukoshi",
             "v_shishoku",
-            { "id": "v_suru", "form": "polite_mashita" }
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -430,7 +476,10 @@
             "v_ashita",
             "v_taisetsu",
             "v_shiken",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -439,7 +488,10 @@
           "terms": [
             "v_konya",
             "v_chikaishitsu",
-            { "id": "v_benkyou", "form": "polite_masu" }
+            {
+              "id": "v_benkyou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -447,7 +499,10 @@
           "en": "Because it is important, I will do my best.",
           "terms": [
             "v_taisetsu",
-            { "id": "v_ganbaru", "form": "polite_masu" }
+            {
+              "id": "v_ganbaru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -457,7 +512,10 @@
             "v_shiken",
             "v_gozen",
             "v_kuji",
-            { "id": "v_hajimaru", "form": "polite_masu" }
+            {
+              "id": "v_hajimaru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -590,7 +648,10 @@
           "terms": [
             "v_sensei",
             "v_nihongo",
-            { "id": "v_oshieru", "form": "polite_mashita" }
+            {
+              "id": "v_oshieru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {

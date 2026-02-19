@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.25",
   "title": "Phase 4 Lesson 25: Research & Literature",
   "meta": {
@@ -53,7 +54,10 @@
           "en": "Do you study at the library?",
           "terms": [
             "v_toshokan",
-            { "id": "v_benkyou", "form": "polite_masu" }
+            {
+              "id": "v_benkyou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -61,7 +65,10 @@
           "en": "Do you teach English?",
           "terms": [
             "v_eigo",
-            { "id": "v_oshieru", "form": "polite_masu" }
+            {
+              "id": "v_oshieru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -69,7 +76,10 @@
           "en": "Do you have a question?",
           "terms": [
             "v_shitsumon",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -77,7 +87,10 @@
           "en": "Did you write a letter?",
           "terms": [
             "v_tegami",
-            { "id": "v_kaku", "form": "polite_mashita" }
+            {
+              "id": "v_kaku",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -195,8 +208,14 @@
           "en": "That's amazing. What are you researching?",
           "terms": [
             "k_nani",
-            { "id": "v_kenkyuu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_kenkyuu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -207,8 +226,14 @@
             "v_nihon",
             "v_furui",
             "v_bunsho",
-            { "id": "v_kenkyuu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_kenkyuu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -233,7 +258,10 @@
           "en": "Yes. What will you eat?",
           "terms": [
             "k_nani",
-            { "id": "v_taberu", "form": "polite_masu" }
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -243,7 +271,10 @@
           "terms": [
             "v_youshoku",
             "v_ocha",
-            { "id": "v_sosogu", "form": "te_form" }
+            {
+              "id": "v_sosogu",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -251,7 +282,10 @@
           "jp": "はい、急ぎます。",
           "en": "Yes, I will hurry.",
           "terms": [
-            { "id": "v_isogu", "form": "polite_masu" }
+            {
+              "id": "v_isogu",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -278,7 +312,10 @@
           "en": "Is that so? What should I be careful of?",
           "terms": [
             "k_nani",
-            { "id": "v_chuui", "form": "polite_masu" }
+            {
+              "id": "v_chuui",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -287,7 +324,10 @@
           "en": "Please be careful of cars.",
           "terms": [
             "v_kuruma",
-            { "id": "v_chuui", "form": "te_form" }
+            {
+              "id": "v_chuui",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -295,7 +335,10 @@
           "jp": "分かりました。",
           "en": "I understand.",
           "terms": [
-            { "id": "v_wakaru", "form": "polite_mashita" }
+            {
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -312,7 +355,10 @@
           "terms": [
             "v_atarashii",
             "v_mondai",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -331,7 +377,10 @@
           "en": "Yes. Let's report to the teacher.",
           "terms": [
             "v_sensei",
-            { "id": "v_chuushin", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_chuushin",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -339,7 +388,10 @@
           "jp": "そうしましょう。",
           "en": "Let's do that.",
           "terms": [
-            { "id": "v_suru", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_suru",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -365,7 +417,10 @@
             "v_mainichi",
             "v_eigo",
             "v_bunsho",
-            { "id": "v_yomu", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -383,7 +438,10 @@
           "terms": [
             "v_yuumei",
             "v_gakkyuu",
-            { "id": "v_naru", "form": "desire_tai" }
+            {
+              "id": "v_naru",
+              "form": "desire_tai"
+            }
           ]
         }
       ],
@@ -432,7 +490,10 @@
             "v_senshuu",
             "v_tomodachi",
             "v_tegami",
-            { "id": "v_kaku", "form": "polite_mashita" }
+            {
+              "id": "v_kaku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -450,7 +511,10 @@
           "terms": [
             "v_kanji",
             "v_imi",
-            { "id": "v_chuui", "form": "polite_mashita" }
+            {
+              "id": "v_chuui",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -588,7 +652,10 @@
           "answer": "注いで",
           "terms": [
             "v_ocha",
-            { "id": "v_sosogu", "form": "te_form" }
+            {
+              "id": "v_sosogu",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -604,7 +671,10 @@
           "terms": [
             "v_daigaku",
             "v_bungaku",
-            { "id": "v_kenkyuu", "form": "te_form" }
+            {
+              "id": "v_kenkyuu",
+              "form": "te_form"
+            }
           ]
         },
         {

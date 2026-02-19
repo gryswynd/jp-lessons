@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.18",
   "title": "Phase 4 Lesson 18: Strength & Nature",
   "meta": {
@@ -94,7 +95,10 @@
           "terms": [
             "v_mainichi",
             "k_nani",
-            { "id": "v_tsukuru", "form": "polite_masu" }
+            {
+              "id": "v_tsukuru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -231,7 +235,10 @@
           "terms": [
             "v_kyoufuu",
             "v_densha",
-            { "id": "v_kuru", "form": "polite_negative" }
+            {
+              "id": "v_kuru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -240,7 +247,10 @@
           "en": "Eh, is that so? How (by what) will you go home?",
           "terms": [
             "k_nani",
-            { "id": "v_kaeru", "form": "polite_masu" }
+            {
+              "id": "v_kaeru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -249,7 +259,10 @@
           "en": "I will go home by car.",
           "terms": [
             "k_kuruma",
-            { "id": "v_kaeru", "form": "polite_masu" }
+            {
+              "id": "v_kaeru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -266,7 +279,10 @@
           "terms": [
             "v_mainichi",
             "v_nihongo",
-            { "id": "v_benkyou", "form": "polite_masu" }
+            {
+              "id": "v_benkyou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -294,9 +310,15 @@
           "en": "Please cheer up. Let's study with me.",
           "terms": [
             "v_genki",
-            { "id": "v_dasu", "form": "te_form" },
+            {
+              "id": "v_dasu",
+              "form": "te_form"
+            },
             "k_watashi",
-            { "id": "v_benkyou", "form": "volitional_polite" }
+            {
+              "id": "v_benkyou",
+              "form": "volitional_polite"
+            }
           ]
         }
       ]
@@ -311,7 +333,10 @@
           "jp": "見てください。月光が きれいですね。",
           "en": "Please look. The moonlight is beautiful.",
           "terms": [
-            { "id": "v_miru", "form": "te_form" },
+            {
+              "id": "v_miru",
+              "form": "te_form"
+            },
             "v_gekkou",
             "v_kirei"
           ]
@@ -388,7 +413,10 @@
           "en": "Yes. And he has power/strength.",
           "terms": [
             "v_chikara",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -403,9 +431,15 @@
           "terms": [
             "v_nichiyoubi",
             "k_watashi",
-            { "id": "v_chikai", "form": "adverbial" },
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            },
             "k_yama",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -413,9 +447,15 @@
           "en": "Because the weather was good, the sunlight was bright.",
           "terms": [
             "v_tenki",
-            { "id": "v_yoku", "form": "plain_past" },
+            {
+              "id": "v_yoku",
+              "form": "plain_past"
+            },
             "v_nikkou",
-            { "id": "v_akarui", "form": "polite_past_adj" }
+            {
+              "id": "v_akarui",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
@@ -425,7 +465,10 @@
             "k_yama",
             "k_ue",
             "v_kaze",
-            { "id": "v_tsuyoi", "form": "polite_past_adj" }
+            {
+              "id": "v_tsuyoi",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
@@ -437,7 +480,10 @@
             "v_yowai",
             "v_nagai",
             "v_jikan",
-            { "id": "v_yasumu", "form": "polite_mashita" }
+            {
+              "id": "v_yasumu",
+              "form": "polite_mashita"
+            }
           ]
         }
       ],
@@ -514,9 +560,15 @@
           "en": "But, because I want to read a book, I study by moonlight.",
           "terms": [
             "k_hon",
-            { "id": "v_yomu", "form": "desire_tai" },
+            {
+              "id": "v_yomu",
+              "form": "desire_tai"
+            },
             "v_gekkou",
-            { "id": "v_benkyou", "form": "polite_masu" }
+            {
+              "id": "v_benkyou",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -571,8 +623,7 @@
             "Light"
           ],
           "answer": "Study",
-          "terms": [
-          ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -584,8 +635,7 @@
             "Earth"
           ],
           "answer": "Wind",
-          "terms": [
-          ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -597,8 +647,7 @@
             "Sick"
           ],
           "answer": "Timid/Faint-hearted",
-          "terms": [
-          ]
+          "terms": []
         },
         {
           "kind": "mcq",
@@ -610,8 +659,7 @@
             "Electric light"
           ],
           "answer": "Sunlight",
-          "terms": [
-          ]
+          "terms": []
         }
       ]
     },

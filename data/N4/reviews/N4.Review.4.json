@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.Review.4",
   "title": "Phase 4 Review: Lifestyle, Trade & Attributes",
   "meta": {
@@ -6,10 +7,22 @@
     "type": "assessment",
     "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 20-23.",
     "kanji": [
-      "夜", "洋", "服", "屋",
-      "売", "品", "持", "貸",
-      "漢", "字", "紙", "意",
-      "太", "短", "重", "進"
+      "夜",
+      "洋",
+      "服",
+      "屋",
+      "売",
+      "品",
+      "持",
+      "貸",
+      "漢",
+      "字",
+      "紙",
+      "意",
+      "太",
+      "短",
+      "重",
+      "進"
     ]
   },
   "sections": [
@@ -42,18 +55,33 @@
               "spk": "A",
               "jp": "着てみたいですが、お金を 持っていません。",
               "terms": [
-                { "id": "v_kiru", "form": "te_form" },
-                { "id": "v_miru", "form": "desire_tai" },
+                {
+                  "id": "v_kiru",
+                  "form": "te_form"
+                },
+                {
+                  "id": "v_miru",
+                  "form": "desire_tai"
+                },
                 "k_kane",
-                { "id": "v_motsu", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_negative" }
+                {
+                  "id": "v_motsu",
+                  "form": "te_form"
+                },
+                {
+                  "id": "v_iru",
+                  "form": "polite_negative"
+                }
               ]
             },
             {
               "spk": "B",
               "jp": "そうですか。では、また 来て ください。",
               "terms": [
-                { "id": "v_kuru", "form": "te_form" }
+                {
+                  "id": "v_kuru",
+                  "form": "te_form"
+                }
               ]
             }
           ],
@@ -87,15 +115,24 @@
                 "v_kanji",
                 "v_ooi",
                 "v_imi",
-                { "id": "v_wakaru", "form": "polite_negative" }
+                {
+                  "id": "v_wakaru",
+                  "form": "polite_negative"
+                }
               ]
             },
             {
               "spk": "A",
               "jp": "読みましょうか。貸して ください。",
               "terms": [
-                { "id": "v_yomu", "form": "polite_volitional_mashou" },
-                { "id": "v_kasu", "form": "te_form" }
+                {
+                  "id": "v_yomu",
+                  "form": "polite_volitional_mashou"
+                },
+                {
+                  "id": "v_kasu",
+                  "form": "te_form"
+                }
               ]
             },
             {
@@ -136,7 +173,10 @@
                 "k_naka",
                 "k_mono",
                 "k_saki",
-                { "id": "v_dasu", "form": "polite_volitional_mashou" }
+                {
+                  "id": "v_dasu",
+                  "form": "polite_volitional_mashou"
+                }
               ]
             },
             {
@@ -145,7 +185,10 @@
               "terms": [
                 "v_sukoshi",
                 "k_mae",
-                { "id": "v_susumu", "form": "polite_volitional_mashou" }
+                {
+                  "id": "v_susumu",
+                  "form": "polite_volitional_mashou"
+                }
               ]
             },
             {
@@ -177,31 +220,57 @@
         {
           "kind": "scramble",
           "q": "Please lend me a pen.",
-          "segments": ["ペン", "を", "貸して", "ください"],
+          "segments": [
+            "ペン",
+            "を",
+            "貸して",
+            "ください"
+          ],
           "explanation": "Object (Pen) + wo + Te-form of Kasu (Lend) + kudasai."
         },
         {
           "kind": "scramble",
           "q": "The night sky is beautiful.",
-          "segments": ["夜空", "は", "きれい", "です"],
+          "segments": [
+            "夜空",
+            "は",
+            "きれい",
+            "です"
+          ],
           "explanation": "Topic (Night sky) + wa + Na-adjective (Beautiful) + desu."
         },
         {
           "kind": "scramble",
           "q": "I want to eat Western food.",
-          "segments": ["洋食", "が", "食べたい", "です"],
+          "segments": [
+            "洋食",
+            "が",
+            "食べたい",
+            "です"
+          ],
           "explanation": "Object (Western food) + ga + Tai-form (Want to eat) + desu."
         },
         {
           "kind": "scramble",
           "q": "This bag is heavy.",
-          "segments": ["この", "かばん", "は", "重い", "です"],
+          "segments": [
+            "この",
+            "かばん",
+            "は",
+            "重い",
+            "です"
+          ],
           "explanation": "Subject (Bag) + wa + I-adjective (Heavy) + desu."
         },
         {
           "kind": "scramble",
           "q": "Please write in Kanji.",
-          "segments": ["漢字", "で", "書いて", "ください"],
+          "segments": [
+            "漢字",
+            "で",
+            "書いて",
+            "ください"
+          ],
           "explanation": "Means (Kanji) + de + Te-form of Kaku (Write) + kudasai."
         }
       ]
@@ -218,7 +287,10 @@
             "k_machi",
             "v_chiisai",
             "k_mise",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -228,8 +300,14 @@
             "k_yoru",
             "v_naru",
             "k_mise",
-            { "id": "v_akarui", "form": "adverbial" },
-            { "id": "v_naru", "form": "polite_masu" }
+            {
+              "id": "v_akarui",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -240,8 +318,14 @@
             "v_furui",
             "v_youfuku",
             "v_shinamono",
-            { "id": "v_uru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_uru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -253,8 +337,14 @@
             "v_miru",
             "v_ii",
             "k_kane",
-            { "id": "v_kasu", "form": "polite_negative" },
-            { "id": "v_iu", "form": "polite_mashita" }
+            {
+              "id": "v_kasu",
+              "form": "polite_negative"
+            },
+            {
+              "id": "v_iu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -264,7 +354,10 @@
             "k_watashi",
             "v_kirei",
             "v_kami",
-            { "id": "v_kau", "form": "polite_mashita" }
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            }
           ]
         }
       ],
@@ -272,7 +365,12 @@
         {
           "q": "店は いつ 明るく なりますか。",
           "a": "夜に なると",
-          "choices": ["朝に なると", "夜に なると", "雨が 降ると", "日曜日に"],
+          "choices": [
+            "朝に なると",
+            "夜に なると",
+            "雨が 降ると",
+            "日曜日に"
+          ],
           "terms": [
             "k_mise",
             "v_akarui",
@@ -283,7 +381,12 @@
         {
           "q": "店で 何を 売って いますか。",
           "a": "洋服や 品物",
-          "choices": ["魚と 肉", "洋服や 品物", "車と 自転車", "薬と 水"],
+          "choices": [
+            "魚と 肉",
+            "洋服や 品物",
+            "車と 自転車",
+            "薬と 水"
+          ],
           "terms": [
             "k_mise",
             "v_uru",
@@ -294,7 +397,12 @@
         {
           "q": "店の 人は お金を 貸しますか。",
           "a": "いいえ、貸しません",
-          "choices": ["はい、貸します", "いいえ、貸しません", "時々 貸します", "少し 貸します"],
+          "choices": [
+            "はい、貸します",
+            "いいえ、貸しません",
+            "時々 貸します",
+            "少し 貸します"
+          ],
           "terms": [
             "k_mise",
             "k_hito",
@@ -305,7 +413,12 @@
         {
           "q": "私は 何を 買いましたか。",
           "a": "きれいな 紙",
-          "choices": ["洋服", "品物", "きれいな 紙", "古い 本"],
+          "choices": [
+            "洋服",
+            "品物",
+            "きれいな 紙",
+            "古い 本"
+          ],
           "terms": [
             "k_watashi",
             "k_nani",
@@ -328,7 +441,10 @@
             "v_gakkou",
             "v_kanji",
             "v_imi",
-            { "id": "v_benkyou", "form": "polite_mashita" }
+            {
+              "id": "v_benkyou",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -349,7 +465,10 @@
             "v_kami",
             "v_ookii",
             "k_ji_3",
-            { "id": "v_kaku", "form": "polite_mashita" }
+            {
+              "id": "v_kaku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -357,7 +476,10 @@
           "en": "Study is progressing, and I am happy.",
           "terms": [
             "v_benkyou",
-            { "id": "v_susumu", "form": "te_form" },
+            {
+              "id": "v_susumu",
+              "form": "te_form"
+            },
             "v_ureshii"
           ]
         }
@@ -366,7 +488,12 @@
         {
           "q": "今日、何を 勉強しましたか。",
           "a": "漢字の 意味",
-          "choices": ["ローマ字の 書き方", "漢字の 意味", "英語の 話", "手品の 方法"],
+          "choices": [
+            "ローマ字の 書き方",
+            "漢字の 意味",
+            "英語の 話",
+            "手品の 方法"
+          ],
           "terms": [
             "v_kyou",
             "v_benkyou",
@@ -377,7 +504,12 @@
         {
           "q": "先生は 何を しましたか。",
           "a": "字を 書きました",
-          "choices": ["絵を 書きました", "字を 書きました", "本を 読みました", "歌を 歌いました"],
+          "choices": [
+            "絵を 書きました",
+            "字を 書きました",
+            "本を 読みました",
+            "歌を 歌いました"
+          ],
           "terms": [
             "v_sensei",
             "k_ji_3",
@@ -387,7 +519,12 @@
         {
           "q": "私は どうですか。",
           "a": "うれしいです",
-          "choices": ["悲しいです", "うれしいです", "短気です", "太っています"],
+          "choices": [
+            "悲しいです",
+            "うれしいです",
+            "短気です",
+            "太っています"
+          ],
           "terms": [
             "k_watashi",
             "v_dou",
@@ -404,56 +541,96 @@
         {
           "kind": "mcq",
           "q": "[今夜]は 月が きれいです。",
-          "choices": ["こんや", "いまよ", "こんよ", "きょうや"],
+          "choices": [
+            "こんや",
+            "いまよ",
+            "こんよ",
+            "きょうや"
+          ],
           "answer": "こんや",
           "explanation": "今夜 (Tonight) is read as <b>konya</b>."
         },
         {
           "kind": "mcq",
           "q": "きれいな [洋服]ですね。",
-          "choices": ["ようふく", "ようぎゅう", "ひろふく", "かみふく"],
+          "choices": [
+            "ようふく",
+            "ようぎゅう",
+            "ひろふく",
+            "かみふく"
+          ],
           "answer": "ようふく",
           "explanation": "洋服 (Western clothes) is read as <b>youfuku</b>."
         },
         {
           "kind": "mcq",
           "q": "[屋上]へ 行きましょう。",
-          "choices": ["おくじょう", "やうえ", "おくうえ", "やじょう"],
+          "choices": [
+            "おくじょう",
+            "やうえ",
+            "おくうえ",
+            "やじょう"
+          ],
           "answer": "おくじょう",
           "explanation": "屋上 (Rooftop) is read as <b>okujou</b>."
         },
         {
           "kind": "mcq",
           "q": "この [品物]は いくらですか。",
-          "choices": ["しなもの", "ひんぶつ", "しなぶつ", "ひんもの"],
+          "choices": [
+            "しなもの",
+            "ひんぶつ",
+            "しなぶつ",
+            "ひんもの"
+          ],
           "answer": "しなもの",
           "explanation": "品物 (Goods) is read as <b>shinamono</b>."
         },
         {
           "kind": "mcq",
           "q": "[漢字]を 書きます。",
-          "choices": ["かんじ", "かんじ", "こうじ", "くにじ"],
+          "choices": [
+            "かんじ",
+            "かんじ",
+            "こうじ",
+            "くにじ"
+          ],
           "answer": "かんじ",
           "explanation": "漢字 (Kanji) is read as <b>kanji</b>."
         },
         {
           "kind": "mcq",
           "q": "[意味]が 分かりますか。",
-          "choices": ["いみ", "いあじ", "おみ", "ごみ"],
+          "choices": [
+            "いみ",
+            "いあじ",
+            "おみ",
+            "ごみ"
+          ],
           "answer": "いみ",
           "explanation": "意味 (Meaning) is read as <b>imi</b>."
         },
         {
           "kind": "mcq",
           "q": "足が [太い]です。",
-          "choices": ["ふとい", "おおきい", "おもい", "まるい"],
+          "choices": [
+            "ふとい",
+            "おおきい",
+            "おもい",
+            "まるい"
+          ],
           "answer": "ふとい",
           "explanation": "太い (Thick/Fat) is read as <b>futoi</b>."
         },
         {
           "kind": "mcq",
           "q": "体が [重い]です。",
-          "choices": ["おもい", "かたい", "くらい", "とおい"],
+          "choices": [
+            "おもい",
+            "かたい",
+            "くらい",
+            "とおい"
+          ],
           "answer": "おもい",
           "explanation": "重い (Heavy) is read as <b>omoi</b>."
         }
@@ -467,28 +644,48 @@
         {
           "kind": "mcq",
           "q": "店で 本を ______ 。",
-          "choices": ["売ります", "持ちます", "進みます", "短いです"],
+          "choices": [
+            "売ります",
+            "持ちます",
+            "進みます",
+            "短いです"
+          ],
           "answer": "売ります",
           "explanation": "You sell (売ります) books at a store."
         },
         {
           "kind": "mcq",
           "q": "ペンを 友だちに ______ 。",
-          "choices": ["貸しました", "太りました", "着ました", "飲みました"],
+          "choices": [
+            "貸しました",
+            "太りました",
+            "着ました",
+            "飲みました"
+          ],
           "answer": "貸しました",
           "explanation": "You lend (貸しました) a pen to a friend."
         },
         {
           "kind": "mcq",
           "q": "______ で 名前を 書きます。",
-          "choices": ["紙", "屋", "服", "夜"],
+          "choices": [
+            "紙",
+            "屋",
+            "服",
+            "夜"
+          ],
           "answer": "紙",
           "explanation": "You write names on paper (紙)."
         },
         {
           "kind": "mcq",
           "q": "仕事が 早く ______ 。",
-          "choices": ["進みました", "太りました", "重かったです", "品物でした"],
+          "choices": [
+            "進みました",
+            "太りました",
+            "重かったです",
+            "品物でした"
+          ],
           "answer": "進みました",
           "explanation": "Work progressed/advanced (進みました) quickly."
         }
@@ -502,35 +699,60 @@
         {
           "kind": "mcq",
           "q": "洋食 ______ 食べたいです。",
-          "choices": ["が", "に", "で", "へ"],
+          "choices": [
+            "が",
+            "に",
+            "で",
+            "へ"
+          ],
           "answer": "が",
           "explanation": "Desire form (tai) usually takes 'ga' for the object."
         },
         {
           "kind": "mcq",
           "q": "お金を ______ ください。",
-          "choices": ["貸して", "貸す", "貸し", "貸せ"],
+          "choices": [
+            "貸して",
+            "貸す",
+            "貸し",
+            "貸せ"
+          ],
           "answer": "貸して",
           "explanation": "Request form uses Te-form + kudasai."
         },
         {
           "kind": "mcq",
           "q": "この 本は ______ ありません。",
-          "choices": ["重く", "重い", "重くて", "重さ"],
+          "choices": [
+            "重く",
+            "重い",
+            "重くて",
+            "重さ"
+          ],
           "answer": "重く",
           "explanation": "Negative of i-adjective (omoi) is omoku arimasen."
         },
         {
           "kind": "mcq",
           "q": "私は ______ 洋服を 買いました。",
-          "choices": ["白い", "白", "白の", "白く"],
+          "choices": [
+            "白い",
+            "白",
+            "白の",
+            "白く"
+          ],
           "answer": "白い",
           "explanation": "I-adjective (shiroi) directly modifies noun (youfuku)."
         },
         {
           "kind": "mcq",
           "q": "この 品物を ______ ください。",
-          "choices": ["運んで", "転んで", "遊んで", "込んで"],
+          "choices": [
+            "運んで",
+            "転んで",
+            "遊んで",
+            "込んで"
+          ],
           "answer": "運んで",
           "explanation": "To carry/transport an item (品物) is Hakobu (運ぶ)."
         }

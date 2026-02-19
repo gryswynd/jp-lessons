@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.34",
   "title": "Phase 4 Lesson 34: Districts, Departure, & Commuting",
   "meta": {
@@ -64,7 +65,10 @@
           "terms": [
             "v_mainichi",
             "v_gakkou",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -82,7 +86,10 @@
           "terms": [
             "k_asa",
             "v_nanji",
-            { "id": "v_okiru", "form": "polite_masu" }
+            {
+              "id": "v_okiru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -208,8 +215,14 @@
           "terms": [
             "v_mainichi",
             "v_kaisha",
-            { "id": "v_kayou", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_kayou",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -219,8 +232,14 @@
           "terms": [
             "v_hai",
             "v_kengai",
-            { "id": "v_kayou", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_kayou",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -230,7 +249,10 @@
           "terms": [
             "v_tooi",
             "k_nani",
-            { "id": "v_kuru", "form": "polite_masu" }
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -240,7 +262,10 @@
           "terms": [
             "v_shihatsu",
             "v_densha",
-            { "id": "v_kuru", "form": "polite_masu" }
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -277,7 +302,10 @@
           "terms": [
             "v_mada",
             "v_jikan",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -289,7 +317,10 @@
             "k_kono",
             "v_chiku",
             "v_kaimono",
-            { "id": "v_suru", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_suru",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -305,8 +336,14 @@
           "en": "Where do you live?",
           "terms": [
             "v_doko",
-            { "id": "v_sumu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -316,8 +353,14 @@
           "terms": [
             "k_kita",
             "v_ku",
-            { "id": "v_sumu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -328,7 +371,10 @@
             "k_watashi",
             "v_onaji",
             "v_tokubetsuku",
-            { "id": "v_sumu", "form": "desire_tai" }
+            {
+              "id": "v_sumu",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -338,8 +384,14 @@
           "terms": [
             "v_ii",
             "v_oodoori",
-            { "id": "v_tooru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_tooru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -355,7 +407,10 @@
           "en": "What was there?",
           "terms": [
             "k_nani",
-            { "id": "v_aru", "form": "polite_mashita" }
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -365,7 +420,10 @@
           "terms": [
             "v_furui",
             "k_kane",
-            { "id": "v_hakken", "form": "polite_mashita" }
+            {
+              "id": "v_hakken",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -383,9 +441,15 @@
           "jp": "分かりません。お金を 区別できません。",
           "en": "I don't know. I cannot distinguish the money.",
           "terms": [
-            { "id": "v_wakaru", "form": "polite_negative" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_negative"
+            },
             "k_kane",
-            { "id": "v_kubetsu", "form": "potential_negative" }
+            {
+              "id": "v_kubetsu",
+              "form": "potential_negative"
+            }
           ]
         }
       ]
@@ -401,7 +465,10 @@
             "v_raishuu",
             "k_watashi",
             "v_akitaken",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -410,7 +477,10 @@
           "terms": [
             "k_asa",
             "v_hayaku",
-            { "id": "v_shuppatsu", "form": "polite_masu" }
+            {
+              "id": "v_shuppatsu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -420,7 +490,10 @@
             "v_shihatsu",
             "v_densha",
             "k_hito",
-            { "id": "v_sukunai", "form": "polite_adj" }
+            {
+              "id": "v_sukunai",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -430,7 +503,10 @@
             "v_akita",
             "v_atarashii",
             "v_basho",
-            { "id": "v_hakken", "form": "desire_tai" }
+            {
+              "id": "v_hakken",
+              "form": "desire_tai"
+            }
           ]
         }
       ],
@@ -479,8 +555,14 @@
             "k_watashi",
             "v_ani",
             "v_aomoriken",
-            { "id": "v_sumu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -490,7 +572,10 @@
             "v_mainichi",
             "v_basu",
             "v_daigaku",
-            { "id": "v_tsuugaku", "form": "polite_masu" }
+            {
+              "id": "v_tsuugaku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -500,7 +585,10 @@
             "v_basu",
             "v_hiroi",
             "v_oodoori",
-            { "id": "v_tooru", "form": "polite_masu" }
+            {
+              "id": "v_tooru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -561,7 +649,9 @@
             "kuwaka"
           ],
           "answer": "kubetsu",
-          "terms": [ "v_kubetsu" ]
+          "terms": [
+            "v_kubetsu"
+          ]
         },
         {
           "kind": "mcq",
@@ -573,7 +663,9 @@
             "hatsuken"
           ],
           "answer": "hakken",
-          "terms": [ "v_hakken" ]
+          "terms": [
+            "v_hakken"
+          ]
         },
         {
           "kind": "mcq",
@@ -585,7 +677,9 @@
             "tsuuu"
           ],
           "answer": "kayou",
-          "terms": [ "v_kayou" ]
+          "terms": [
+            "v_kayou"
+          ]
         },
         {
           "kind": "mcq",
@@ -597,7 +691,9 @@
             "kenhoka"
           ],
           "answer": "kengai",
-          "terms": [ "v_kengai" ]
+          "terms": [
+            "v_kengai"
+          ]
         },
         {
           "kind": "mcq",
@@ -609,7 +705,9 @@
             "shikou"
           ],
           "answer": "shihatsu",
-          "terms": [ "v_shihatsu" ]
+          "terms": [
+            "v_shihatsu"
+          ]
         }
       ]
     },
@@ -630,7 +728,10 @@
           "answer": "通います",
           "terms": [
             "v_gakkou",
-            { "id": "v_kayou", "form": "polite_masu" }
+            {
+              "id": "v_kayou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -678,7 +779,10 @@
           "terms": [
             "v_hiroi",
             "k_michi",
-            { "id": "v_tooru", "form": "polite_masu" }
+            {
+              "id": "v_tooru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]

@@ -1,4 +1,5 @@
 {
+  "contentVersion": "1.0.0",
   "id": "N4.Review.1",
   "title": "Phase 4 Comprehensive Assessment",
   "meta": {
@@ -16,49 +17,84 @@
         {
           "kind": "mcq",
           "q": "[弟]と こうえんで あそびました。",
-          "choices": ["あに", "おとうと", "いもうと", "おとこ"],
+          "choices": [
+            "あに",
+            "おとうと",
+            "いもうと",
+            "おとこ"
+          ],
           "answer": "おとうと",
           "explanation": "弟 (younger brother) is read as <b>otouto</b>."
         },
         {
           "kind": "mcq",
           "q": "晩ご飯は [牛肉]でした。",
-          "choices": ["ぎゅうにく", "とりにく", "ぎゅうにゅう", "うまにく"],
+          "choices": [
+            "ぎゅうにく",
+            "とりにく",
+            "ぎゅうにゅう",
+            "うまにく"
+          ],
           "answer": "ぎゅうにく",
           "explanation": "牛肉 (beef) is read as <b>gyuuniku</b>."
         },
         {
           "kind": "mcq",
           "q": "[黒い] ふくを 着ます。",
-          "choices": ["あおい", "しろい", "くろい", "あかい"],
+          "choices": [
+            "あおい",
+            "しろい",
+            "くろい",
+            "あかい"
+          ],
           "answer": "くろい",
           "explanation": "黒い (black) is read as <b>kuroi</b>."
         },
         {
           "kind": "mcq",
           "q": "あの 人は [歌]が 上手です。",
-          "choices": ["おと", "こえ", "うた", "え"],
+          "choices": [
+            "おと",
+            "こえ",
+            "うた",
+            "え"
+          ],
           "answer": "うた",
           "explanation": "歌 (song) is read as <b>uta</b>."
         },
         {
           "kind": "mcq",
           "q": "野菜を [切って] ください。",
-          "choices": ["きって", "とって", "まって", "かって"],
+          "choices": [
+            "きって",
+            "とって",
+            "まって",
+            "かって"
+          ],
           "answer": "きって",
           "explanation": "切って (cut - te form) is read as <b>kitte</b>."
         },
         {
           "kind": "mcq",
           "q": "きょうとに [旅館]が あります。",
-          "choices": ["りょこう", "りょかん", "かいかん", "としょかん"],
+          "choices": [
+            "りょこう",
+            "りょかん",
+            "かいかん",
+            "としょかん"
+          ],
           "answer": "りょかん",
           "explanation": "旅館 (Japanese inn) is read as <b>ryokan</b>."
         },
         {
           "kind": "mcq",
           "q": "[写真]を 見ました。",
-          "choices": ["しんしゃ", "しゃしん", "さしん", "しょうしん"],
+          "choices": [
+            "しんしゃ",
+            "しゃしん",
+            "さしん",
+            "しょうしん"
+          ],
           "answer": "しゃしん",
           "explanation": "写真 (photo) is read as <b>shashin</b>."
         }
@@ -72,42 +108,72 @@
         {
           "kind": "mcq",
           "q": "毎日、６時に ______。",
-          "choices": ["起きます", "借ります", "働きます", "使います"],
+          "choices": [
+            "起きます",
+            "借ります",
+            "働きます",
+            "使います"
+          ],
           "answer": "起きます",
           "explanation": "起きます (okimasu) means to wake up."
         },
         {
           "kind": "mcq",
           "q": "父は ______ が 長いです。",
-          "choices": ["頭", "足", "北", "方"],
+          "choices": [
+            "頭",
+            "足",
+            "北",
+            "方"
+          ],
           "answer": "足",
           "explanation": "足 (ashi) means legs."
         },
         {
           "kind": "mcq",
           "q": "スーパーは 家から ______ ですから、歩いて 行けません。",
-          "choices": ["近い", "遠い", "明るい", "暗い"],
+          "choices": [
+            "近い",
+            "遠い",
+            "明るい",
+            "暗い"
+          ],
           "answer": "遠い",
           "explanation": "If you cannot walk there, it must be 遠い (tooi - far)."
         },
         {
           "kind": "mcq",
           "q": "友だちに てがみを ______。",
-          "choices": ["送りました", "着ました", "住みました", "別れました"],
+          "choices": [
+            "送りました",
+            "着ました",
+            "住みました",
+            "別れました"
+          ],
           "answer": "送りました",
           "explanation": "送りました (okurimashita) means 'sent'."
         },
         {
           "kind": "mcq",
           "q": "あの 人は 有名な ______ です。",
-          "choices": ["歌手", "歌", "音楽", "音"],
+          "choices": [
+            "歌手",
+            "歌",
+            "音楽",
+            "音"
+          ],
           "answer": "歌手",
           "explanation": "歌手 (kashu) means singer."
         },
         {
           "kind": "mcq",
           "q": "ここで ______ を とらないで ください。",
-          "choices": ["写真", "音楽", "手紙", "牛"],
+          "choices": [
+            "写真",
+            "音楽",
+            "手紙",
+            "牛"
+          ],
           "answer": "写真",
           "explanation": "You take (toru) a <b>photo</b> (shashin)."
         }
@@ -121,31 +187,63 @@
         {
           "kind": "scramble",
           "q": "I can write Kanji.",
-          "segments": ["私", "は", "かんじ", "を", "書けます"],
+          "segments": [
+            "私",
+            "は",
+            "かんじ",
+            "を",
+            "書けます"
+          ],
           "explanation": "Potential form: かんじを書けます (Can write Kanji)."
         },
         {
           "kind": "scramble",
           "q": "I eat breakfast, then go to the company.",
-          "segments": ["朝ご飯", "を", "食べて", "会社", "へ", "行きます"],
+          "segments": [
+            "朝ご飯",
+            "を",
+            "食べて",
+            "会社",
+            "へ",
+            "行きます"
+          ],
           "explanation": "Te-form (食べて) connects sequential actions."
         },
         {
           "kind": "scramble",
           "q": "I had a fight with my younger sister.",
-          "segments": ["妹", "と", "ケンカ", "を", "しました"],
+          "segments": [
+            "妹",
+            "と",
+            "ケンカ",
+            "を",
+            "しました"
+          ],
           "explanation": "Particle と (to) indicates 'with' whom you did the action."
         },
         {
           "kind": "scramble",
           "q": "This bag is expensive, but light.",
-          "segments": ["この", "カバン", "は", "高い", "が", "軽い", "です"],
+          "segments": [
+            "この",
+            "カバン",
+            "は",
+            "高い",
+            "が",
+            "軽い",
+            "です"
+          ],
           "explanation": "Takai (expensive) but Karui (light). Adjectives connected with 'ga'."
         },
         {
           "kind": "scramble",
           "q": "Spoke with a small voice.",
-          "segments": ["小さい", "声", "で", "話しました"],
+          "segments": [
+            "小さい",
+            "声",
+            "で",
+            "話しました"
+          ],
           "explanation": "Particle で (de) indicates the means/manner (with a small voice)."
         }
       ]
@@ -158,35 +256,60 @@
         {
           "kind": "mcq",
           "q": "電車 ______ 乗ります。",
-          "choices": ["に", "を", "で", "へ"],
+          "choices": [
+            "に",
+            "を",
+            "で",
+            "へ"
+          ],
           "answer": "に",
           "explanation": "We use 'ni' with 'norimasu' (to ride/get on)."
         },
         {
           "kind": "mcq",
           "q": "どこ ______ 行きませんでした。",
-          "choices": ["へも", "へ", "に", "を"],
+          "choices": [
+            "へも",
+            "へ",
+            "に",
+            "を"
+          ],
           "answer": "へも",
           "explanation": "When saying 'didn't go anywhere', we use 'Question Word + mo + Negative'."
         },
         {
           "kind": "mcq",
           "q": "日本語 ______ 話せますか。",
-          "choices": ["が", "を", "に", "は"],
+          "choices": [
+            "が",
+            "を",
+            "に",
+            "は"
+          ],
           "answer": "が",
           "explanation": "With potential verbs (hanasemasu), we often use 'ga' instead of 'o'."
         },
         {
           "kind": "mcq",
           "q": "あの 店は ゆうめい ______、大きいです。",
-          "choices": ["で", "が", "くて", "に"],
+          "choices": [
+            "で",
+            "が",
+            "くて",
+            "に"
+          ],
           "answer": "で",
           "explanation": "'Yuumei' is a Na-adjective. To connect it (and), we use 'de'."
         },
         {
           "kind": "mcq",
           "q": "映画が ______。",
-          "choices": ["始まります", "始めます", "泳ぎます", "住みます"],
+          "choices": [
+            "始まります",
+            "始めます",
+            "泳ぎます",
+            "住みます"
+          ],
           "answer": "始まります",
           "explanation": "始まります (hajimarimasu/starts) is the correct intransitive verb for a movie."
         }
@@ -219,25 +342,45 @@
         {
           "q": "誰と とうきょうへ 行きましたか。",
           "a": "兄",
-          "choices": ["姉", "弟", "兄", "妹"],
+          "choices": [
+            "姉",
+            "弟",
+            "兄",
+            "妹"
+          ],
           "explanation": "The text says '兄と' (with older brother)."
         },
         {
           "q": "歌手の 声は どうでしたか。",
           "a": "低かったです",
-          "choices": ["高かったです", "低かったです", "小さかったです", "わるかったです"],
+          "choices": [
+            "高かったです",
+            "低かったです",
+            "小さかったです",
+            "わるかったです"
+          ],
           "explanation": "The text says '声が 低くて' (voice was low)."
         },
         {
           "q": "兄は 何を 食べましたか。",
           "a": "肉",
-          "choices": ["カレー", "肉", "魚", "パン"],
+          "choices": [
+            "カレー",
+            "肉",
+            "魚",
+            "パン"
+          ],
           "explanation": "The text says '兄は 肉を 食べました'."
         },
         {
           "q": "どんな 一日 でしたか。",
           "a": "楽しい 一日",
-          "choices": ["いそがしい 一日", "楽しい 一日", "寒い 一日", "長い 一日"],
+          "choices": [
+            "いそがしい 一日",
+            "楽しい 一日",
+            "寒い 一日",
+            "長い 一日"
+          ],
           "explanation": "The final sentence is 'とても 楽しい 一日でした'."
         }
       ]
@@ -269,25 +412,45 @@
         {
           "q": "家族は 何人ですか。",
           "a": "四人",
-          "choices": ["三人", "四人", "五人", "六人"],
+          "choices": [
+            "三人",
+            "四人",
+            "五人",
+            "六人"
+          ],
           "explanation": "Father, Mother, Brother, Me = 4 people."
         },
         {
           "q": "だれが 料理を 作りましたか。",
           "a": "父",
-          "choices": ["母", "父", "兄", "私"],
+          "choices": [
+            "母",
+            "父",
+            "兄",
+            "私"
+          ],
           "explanation": "The text says '父は... 作りました'."
         },
         {
           "q": "兄は 何と 言いましたか。",
           "a": "好きです",
-          "choices": ["好きです", "きらいです", "まずいです", "安いです"],
+          "choices": [
+            "好きです",
+            "きらいです",
+            "まずいです",
+            "安いです"
+          ],
           "explanation": "Brother said 'Suki desu!' (I like it)."
         },
         {
           "q": "兄は 料理を 食べましたか。",
           "a": "はい、たくさん 食べました",
-          "choices": ["はい、少し 食べました", "いいえ、食べませんでした", "はい、たくさん 食べました", "わかりません"],
+          "choices": [
+            "はい、少し 食べました",
+            "いいえ、食べませんでした",
+            "はい、たくさん 食べました",
+            "わかりません"
+          ],
           "explanation": "The text says 'たくさん 食べました' (ate a lot)."
         }
       ]
