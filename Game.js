@@ -197,6 +197,109 @@ window.GameModule = (function() {
         @keyframes spin {
           to { transform: rotate(360deg); }
         }
+        .jp-rotate-overlay {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #1a1a2e;
+          z-index: 1000;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          text-align: center;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+        @media (pointer: coarse) and (orientation: portrait) {
+          .jp-rotate-overlay {
+            display: flex;
+          }
+        }
+        .jp-rotate-icon {
+          font-size: 60px;
+          display: inline-block;
+          animation: tilt-phone 2s ease-in-out infinite;
+          margin-bottom: 16px;
+        }
+        @keyframes tilt-phone {
+          0%, 30% { transform: rotate(0deg); }
+          60%, 100% { transform: rotate(90deg); }
+        }
+        .jp-rotate-message {
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: 8px;
+        }
+        .jp-rotate-sub {
+          font-size: 13px;
+          opacity: 0.65;
+        }
+        @media (pointer: coarse) and (orientation: landscape) {
+          .jp-game-canvas-wrapper {
+            overflow: hidden;
+          }
+          .jp-game-canvas {
+            height: calc(100vh - 56px);
+            width: auto;
+            max-width: 100%;
+            margin: 0 auto;
+          }
+          .jp-touch-controls {
+            bottom: 8px;
+            padding: 0 12px;
+          }
+          .jp-dpad {
+            width: 110px;
+            height: 110px;
+          }
+          .jp-dpad-btn {
+            width: 36px;
+            height: 36px;
+            font-size: 16px;
+          }
+          .jp-interact-btn {
+            width: 60px;
+            height: 60px;
+            font-size: 12px;
+          }
+          .jp-convo-container {
+            padding: 8px 15px;
+            padding-top: 8px;
+            gap: 10px;
+          }
+          .jp-speech-bubble {
+            min-height: 60px;
+            padding: 10px 14px;
+          }
+          .jp-speech-bubble .text {
+            font-size: 13px;
+            line-height: 1.4;
+          }
+          .jp-speech-bubble .continue {
+            font-size: 10px;
+            margin-top: 6px;
+          }
+          .jp-character-portrait {
+            height: auto;
+            max-height: 140px;
+          }
+          .jp-speech-bubble::after {
+            bottom: -16px;
+            border-top-width: 18px;
+            border-left-width: 28px;
+            border-right-width: 14px;
+          }
+          .jp-speech-bubble::before {
+            bottom: -10px;
+            border-top-width: 14px;
+            border-left-width: 24px;
+            border-right-width: 10px;
+          }
+        }
         .jp-touch-controls {
           position: absolute;
           bottom: 20px;
@@ -446,6 +549,11 @@ window.GameModule = (function() {
           <div class="jp-interact-btn">
             <span>TALK</span>
           </div>
+        </div>
+        <div class="jp-rotate-overlay">
+          <div class="jp-rotate-icon">📱</div>
+          <div class="jp-rotate-message">Rotate your device</div>
+          <div class="jp-rotate-sub">This game is designed for landscape mode</div>
         </div>
       `;
 
@@ -919,6 +1027,15 @@ window.GameModule = (function() {
       }
 
       gameLoop();
+
+      // Attempt to lock orientation to landscape on mobile devices
+      if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
+        if (screen.orientation && typeof screen.orientation.lock === 'function') {
+          screen.orientation.lock('landscape').catch(() => {
+            // Lock unavailable in this context — rotate overlay handles it
+          });
+        }
+      }
     }
 
     // Fetch manifest → day.json → then load images
