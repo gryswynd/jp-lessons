@@ -632,7 +632,8 @@ window.StoryModule = (function() {
         // Add text before match
         html += escapeHtml(node.textContent.substring(lastIndex, match.index));
         // Add clickable term
-        html += `<span class="jp-term" onclick="window.JP_OPEN_TERM('${match.termId}', ${JSON.stringify(match.form)}, true)">${escapeHtml(match.text)}</span>`;
+        const formStr = match.form ? `'${match.form}'` : 'null';
+        html += `<span class="jp-term" onclick="window.JP_OPEN_TERM('${match.termId}', ${formStr}, true)">${escapeHtml(match.text)}</span>`;
         lastIndex = match.index + match.text.length;
       });
 
