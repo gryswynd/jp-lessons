@@ -196,35 +196,36 @@
       try {
         const manifest = await window.getManifest(this.config);
         const quizUrl = this.getUrl();
-        const glossaryUrl = this.getUrl(manifest.globalFiles.glossaryMaster);
         const conjUrl = this.getUrl(manifest.globalFiles.conjugationRules);
+        const glossaryUrls = manifest.levels.map(lvl => this.getUrl(manifest.data[lvl].glossary));
 
         console.log('[Review] Quiz URL:', quizUrl);
-        console.log('[Review] Glossary URL:', glossaryUrl);
         console.log('[Review] Conjugation URL:', conjUrl);
 
         // 1. Fetch Quiz Data + Glossary + Conjugations in parallel
-        const [quizRes, glossRes, conjRes] = await Promise.all([
+        const [quizRes, conjRes, ...glossResponses] = await Promise.all([
             fetch(quizUrl),
-            fetch(glossaryUrl),
-            fetch(conjUrl)
+            fetch(conjUrl),
+            ...glossaryUrls.map(u => fetch(u))
         ]);
 
+        const glossOk = glossResponses.every(r => r.ok);
         console.log('[Review] Fetch responses:', {
           quiz: quizRes.ok,
-          glossary: glossRes.ok,
+          glossary: glossOk,
           conjugations: conjRes.ok
         });
 
-        if (!quizRes.ok || !glossRes.ok || !conjRes.ok) {
-          throw new Error(`Failed to fetch resources: Quiz(${quizRes.status}) Glossary(${glossRes.status}) Conjugations(${conjRes.status})`);
+        if (!quizRes.ok || !glossOk || !conjRes.ok) {
+          throw new Error(`Failed to fetch resources: Quiz(${quizRes.status}) Glossary(${glossResponses.map(r => r.status)}) Conjugations(${conjRes.status})`);
         }
 
         console.log('[Review] Parsing JSON...');
         const quizData = await quizRes.json();
-        const glossData = await glossRes.json();
+        const glossParts = await Promise.all(glossResponses.map(r => r.json()));
         this.state.conjugations = await conjRes.json();
 
+        const glossData = { entries: glossParts.flatMap(g => g.entries) };
         console.log('[Review] Quiz title:', quizData.title);
         console.log('[Review] Glossary entries:', glossData.entries.length);
 

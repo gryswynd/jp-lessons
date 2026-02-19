@@ -379,19 +379,18 @@ window.StoryModule = (function() {
   async function loadResources() {
     try {
       const manifest = await window.getManifest(config);
-      const glossaryUrl = getCdnUrl(manifest.globalFiles.glossaryMaster);
       const conjUrl = getCdnUrl(manifest.globalFiles.conjugationRules);
-      console.log('[Story] Glossary URL:', glossaryUrl);
       console.log('[Story] Conjugation URL:', conjUrl);
-      const [glossary, conjugationRules] = await Promise.all([
-        fetch(glossaryUrl).then(r => r.json()),
-        fetch(conjUrl).then(r => r.json())
+      const [conjugationRules, ...glossParts] = await Promise.all([
+        fetch(conjUrl).then(r => r.json()),
+        ...manifest.levels.map(lvl => fetch(getCdnUrl(manifest.data[lvl].glossary)).then(r => r.json()))
       ]);
+      const allEntries = glossParts.flatMap(g => g.entries);
 
       // Build term map (id → term, for modal lookups)
       termMapData = {};
       autoSurfaceMap = {};
-      glossary.entries.forEach(term => {
+      allEntries.forEach(term => {
         termMapData[term.id] = term;
         // Auto-surface map: surface form → id (for automatic highlighting)
         if (term.surface) {

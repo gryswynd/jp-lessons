@@ -143,15 +143,14 @@ window.LessonModule = {
 
     async function loadResources() {
         const manifest = await window.getManifest(REPO_CONFIG);
-        const glossaryUrl = getCdnUrl(manifest.globalFiles.glossaryMaster);
         const conjUrl = getCdnUrl(manifest.globalFiles.conjugationRules);
-        console.log('[Lesson] Glossary URL:', glossaryUrl);
         console.log('[Lesson] Conjugation URL:', conjUrl);
-        const [gloss, conj] = await Promise.all([
-             fetch(glossaryUrl).then(r => r.json()),
-             fetch(conjUrl).then(r => r.json())
+        const [conj, ...glossParts] = await Promise.all([
+             fetch(conjUrl).then(r => r.json()),
+             ...manifest.levels.map(lvl => fetch(getCdnUrl(manifest.data[lvl].glossary)).then(r => r.json()))
         ]);
-        const map = {}; gloss.entries.forEach(i => { map[i.id] = i; });
+        const map = {};
+        glossParts.forEach(g => g.entries.forEach(i => { map[i.id] = i; }));
         return { map, conj };
     }
 
