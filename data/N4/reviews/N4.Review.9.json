@@ -194,6 +194,12 @@
             "に",
             "通います"
           ],
+          "distractors": [
+            "を",
+            "で",
+            "地区",
+            "発見します"
+          ],
           "explanation": "Every day (Mainichi) + Outside prefecture (Kengai) + kara + Factory (Koujou) + ni + Commute (Kayoimasu)."
         },
         {
@@ -207,7 +213,13 @@
             "が",
             "建ちました"
           ],
-          "explanation": "District (Chiku) + ni + New (Atarashii) + Building (Tatemono) + ga + Was built (Tachimashita)."
+          "distractors": [
+            "を",
+            "で",
+            "工場",
+            "建てました"
+          ],
+          "explanation": "District (Chiku) + ni + New (Atarashii) + Building (Tatemono) + ga + Was built (Tachimashita). Note: 建てました (transitive) is wrong here — 建ちました (intransitive) is correct."
         },
         {
           "kind": "scramble",
@@ -222,7 +234,13 @@
             "を",
             "通ります"
           ],
-          "explanation": "First train (Shihatsu no Densha) + wa + Wide (Hiroi) + Main street (Oodoori) + wo + Passes through (Toorimasu)."
+          "distractors": [
+            "に",
+            "が",
+            "市",
+            "通学"
+          ],
+          "explanation": "First train (Shihatsu no Densha) + wa + Wide (Hiroi) + Main street (Oodoori) + wo + Passes through (Toorimasu). Use を for the path, not に."
         },
         {
           "kind": "scramble",
@@ -235,7 +253,13 @@
             "に",
             "集まります"
           ],
-          "explanation": "Workers (Kouin) + wa + Wide (Hiroi) + Square (Hiroba) + ni + Gather (Atsumarimasu)."
+          "distractors": [
+            "を",
+            "が",
+            "工場",
+            "通います"
+          ],
+          "explanation": "Workers (Kouin) + wa + Wide (Hiroi) + Square (Hiroba) + ni + Gather (Atsumarimasu). 広場 (square) not 工場 (factory); に not を for location of gathering."
         },
         {
           "kind": "scramble",
@@ -248,7 +272,13 @@
             "を",
             "発見したいです"
           ],
-          "explanation": "Akita + de + New (Atarashii) + Place (Basho) + wo + Want to discover (Hakken shitai desu)."
+          "distractors": [
+            "に",
+            "が",
+            "建物",
+            "通いたいです"
+          ],
+          "explanation": "Akita + de + New (Atarashii) + Place (Basho) + wo + Want to discover (Hakken shitai desu). Use で for the location of activity, not に; 場所 (place) not 建物 (building)."
         }
       ]
     },
