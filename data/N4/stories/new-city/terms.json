@@ -28,6 +28,10 @@
       "id": "v_jidai",
       "form": null
     },
+    "始まった": {
+      "id": "v_hajimaru",
+      "form": "plain_past"
+    },
     "思いました": {
       "id": "v_omou",
       "form": "polite_past"
@@ -51,6 +55,10 @@
     "始発": {
       "id": "v_shihatsu",
       "form": null
+    },
+    "乗って": {
+      "id": "v_noru",
+      "form": "te_form"
     },
     "木工": {
       "id": "v_mokkou",
@@ -82,6 +90,10 @@
     },
     "世代": {
       "id": "v_sedai",
+      "form": null
+    },
+    "特別に": {
+      "id": "v_tokubetsu",
       "form": null
     },
     "特別区": {
@@ -120,9 +132,17 @@
       "id": "v_shokudou",
       "form": null
     },
+    "話しました": {
+      "id": "v_hanasu",
+      "form": "polite_past"
+    },
     "急用": {
       "id": "v_kyuuyou",
       "form": null
+    },
+    "早く": {
+      "id": "v_hayai",
+      "form": "adverb"
     },
     "門": {
       "id": "v_mon",
@@ -131,6 +151,10 @@
     "発見しました": {
       "id": "v_hakken",
       "form": "polite_past"
+    },
+    "近く": {
+      "id": "v_chikai",
+      "form": "adverb"
     },
     "森": {
       "id": "v_mori",
@@ -156,6 +180,10 @@
       "id": "v_keikaku",
       "form": null
     },
+    "考えました": {
+      "id": "v_kangaeru",
+      "form": "polite_past"
+    },
     "市長": {
       "id": "v_shichou",
       "form": null
@@ -168,8 +196,8 @@
       "id": "v_asaichi",
       "form": null
     },
-    "言いました": {
-      "id": "v_iu",
+    "会いました": {
+      "id": "v_au",
       "form": "polite_past"
     },
     "地区": {
@@ -180,6 +208,10 @@
       "id": "v_kotae",
       "form": null
     },
+    "言いました": {
+      "id": "v_iu",
+      "form": "polite_past"
+    },
     "知って": {
       "id": "v_shiru",
       "form": "te_form"
@@ -187,6 +219,18 @@
     "特に": {
       "id": "v_tokuni",
       "form": null
+    },
+    "楽しかった": {
+      "id": "v_tanoshii",
+      "form": "plain_past"
+    },
+    "物": {
+      "id": "k_mono",
+      "form": null
+    },
+    "働いていました": {
+      "id": "v_hataraku",
+      "form": "te_iru_past"
     },
     "通っています": {
       "id": "v_kayou",
