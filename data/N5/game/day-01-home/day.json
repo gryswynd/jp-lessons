@@ -10,45 +10,47 @@
     "collision": "collision.png",
     "convoBackground": "convo-bg.png"
   },
-  "playerStart": { "x": 200, "y": 200 },
+  "playerStart": { "x": 325, "y": 260 },
   "objects": [
-    { "name": "Bed",          "x": 194, "y": 189, "width": 114, "height": 146, "isDoor": false, "message": "A comfortable bed. Maybe I should get some rest later." },
-    { "name": "Laptop",       "x": 315, "y": 158, "width": 121, "height":  86, "isDoor": false, "message": "My laptop. I should study Japanese on it!" },
-    { "name": "Toilet",       "x": 714, "y": 134, "width":  34, "height": 110, "isDoor": false, "message": "The toilet. It's clean." },
-    { "name": "Fridge",       "x": 849, "y": 135, "width":  71, "height": 116, "isDoor": false, "message": "The fridge is well stocked. Mom went shopping yesterday." },
-    { "name": "Bed_Door",     "x": 311, "y": 440, "width":  90, "height": 122, "isDoor": true },
-    { "name": "TV",           "x": 420, "y": 485, "width": 122, "height":  69, "isDoor": false, "message": "The TV is off. Maybe I can watch some anime later." },
-    { "name": "Bath_Door",    "x": 707, "y": 437, "width":  95, "height": 125, "isDoor": true },
-    { "name": "Kitchen_Door", "x": 938, "y": 440, "width":  98, "height": 128, "isDoor": true },
-    { "name": "Kotatsu",      "x": 398, "y": 626, "width": 173, "height":  77, "isDoor": false, "message": "The kotatsu is warm and inviting. Perfect for winter!" },
-    { "name": "Front_Door",   "x": 911, "y": 789, "width": 158, "height":  58, "isDoor": true }
+    { "name": "Bed",          "nameJp": "ベッド",   "x": 194, "y": 189, "width": 114, "height": 146, "isDoor": false, "message": "A comfortable bed. Maybe I should get some rest later." },
+    { "name": "Laptop",       "nameJp": "パソコン", "x": 315, "y": 158, "width": 121, "height":  86, "isDoor": false, "message": "My laptop. I should study Japanese on it!" },
+    { "name": "Toilet",       "nameJp": "トイレ",   "x": 714, "y": 134, "width":  34, "height": 110, "isDoor": false, "message": "The toilet. It's clean." },
+    { "name": "Fridge",       "nameJp": "冷蔵庫",   "x": 849, "y": 135, "width":  71, "height": 116, "isDoor": false, "message": "The fridge is well stocked. Mom went shopping yesterday." },
+    { "name": "Bed_Door",     "nameJp": "ドア",     "x": 311, "y": 440, "width":  90, "height": 122, "isDoor": true },
+    { "name": "TV",           "nameJp": "テレビ",   "x": 420, "y": 485, "width": 122, "height":  69, "isDoor": false, "message": "The TV is off. Maybe I can watch some anime later." },
+    { "name": "Bath_Door",    "nameJp": "ドア",     "x": 707, "y": 437, "width":  95, "height": 125, "isDoor": true },
+    { "name": "Kitchen_Door", "nameJp": "ドア",     "x": 938, "y": 440, "width":  98, "height": 128, "isDoor": true },
+    { "name": "Kotatsu",      "nameJp": "こたつ",   "x": 398, "y": 626, "width": 173, "height":  77, "isDoor": false, "message": "The kotatsu is warm and inviting. Perfect for winter!" },
+    { "name": "Front_Door",   "nameJp": "玄関",     "x": 911, "y": 789, "width": 158, "height":  58, "isDoor": true }
   ],
   "npcs": [
     {
       "name": "mom",
+      "nameJp": "お母さん",
       "x": 970,
       "y": 330,
       "sprite": "sprites/mom.png",
       "convoPortrait": "sprites/mom-convo.png",
       "conversation": [
-        { "speaker": "mom", "text": "おはよう！朝ごはんは食べた？\n(Good morning! Did you eat breakfast?)" },
-        { "speaker": "me",  "text": "おはよう、お母さん。まだだよ。\n(Good morning, Mom. Not yet.)" },
-        { "speaker": "mom", "text": "冷蔵庫に卵があるから、食べてね。\n(There are eggs in the fridge, so please eat.)" },
-        { "speaker": "me",  "text": "ありがとう！\n(Thank you!)" }
+        { "speaker": "mom",     "text": "おはよう！朝ごはんは食べた？\n(Good morning! Did you eat breakfast?)" },
+        { "speaker": "りきぞう", "text": "おはよう、お母さん。まだだよ。\n(Good morning, Mom. Not yet.)" },
+        { "speaker": "mom",     "text": "冷蔵庫に卵があるから、食べてね。\n(There are eggs in the fridge, so please eat.)" },
+        { "speaker": "りきぞう", "text": "ありがとう！\n(Thank you!)" }
       ]
     },
     {
       "name": "dad",
+      "nameJp": "お父さん",
       "x": 610,
       "y": 690,
       "sprite": "sprites/dad.png",
       "convoPortrait": "sprites/dad-convo.png",
       "conversation": [
-        { "speaker": "dad", "text": "よう、元気か？\n(Hey, how are you?)" },
-        { "speaker": "me",  "text": "うん、元気だよ。お父さんは？\n(Yeah, I'm good. How about you, Dad?)" },
-        { "speaker": "dad", "text": "まあまあだな。今日は何するんだ？\n(Not bad. What are you doing today?)" },
-        { "speaker": "me",  "text": "日本語を勉強するつもり。\n(I'm planning to study Japanese.)" },
-        { "speaker": "dad", "text": "いいね！頑張れよ。\n(Nice! Do your best.)" }
+        { "speaker": "dad",     "text": "よう、元気か？\n(Hey, how are you?)" },
+        { "speaker": "りきぞう", "text": "うん、元気だよ。お父さんは？\n(Yeah, I'm good. How about you, Dad?)" },
+        { "speaker": "dad",     "text": "まあまあだな。今日は何するんだ？\n(Not bad. What are you doing today?)" },
+        { "speaker": "りきぞう", "text": "日本語を勉強するつもり。\n(I'm planning to study Japanese.)" },
+        { "speaker": "dad",     "text": "いいね！頑張れよ。\n(Nice! Do your best.)" }
       ]
     }
   ],
