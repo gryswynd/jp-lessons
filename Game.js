@@ -80,9 +80,9 @@ window.GameModule = (function() {
         }
         .jp-game-ui {
           position: absolute;
-          bottom: 20px;
+          top: 50%;
           left: 50%;
-          transform: translateX(-50%);
+          transform: translate(-50%, -50%);
           background: rgba(0,0,0,0.7);
           color: white;
           padding: 10px 20px;
@@ -1015,7 +1015,7 @@ window.GameModule = (function() {
             ctx.font = 'bold 14px Arial';
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
-            ctx.fillText('INTERACT', screenX, screenY - 7.5);
+            ctx.fillText('？？？', screenX, screenY - 7.5);
           }
         }
       }
