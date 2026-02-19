@@ -114,27 +114,31 @@
     },
 
     // -------------------------------------------------------------------------
-    // processText(text, termRefs, termMap, conjugationRules)
+    // processText(text, termRefs, termMap, conjugationRules, counterRules)
     //
     // HTML-escapes text, then wraps each recognised term in a clickable span
     // that fires window.JP_OPEN_TERM(id, true).
     //
     // termRefs entries can be:
-    //   string          — direct term ID looked up in termMap
-    //   {id, form}      — term ID + conjugation form; conjugated result is
-    //                     cached back into termMap so openTerm() can find it
+    //   string            — direct term ID looked up in termMap
+    //   {id, form}        — term ID + conjugation form; conjugated result is
+    //                       cached back into termMap so openTerm() can find it
+    //   {counter, n}      — counter engine call; synthetic term is generated
+    //                       via JPShared.counterEngine and cached in termMap
+    //                       e.g. { "counter": "ji", "n": 8 } → 八時/はちじ
     //
     // Terms are matched longest-surface-first to prevent partial overlaps.
     // Falls back to t.reading when t.surface isn't found in the escaped HTML.
     //
     // @param {string}   text              - raw Japanese text
-    // @param {Array}    termRefs          - array of string IDs or {id, form} objects
-    // @param {Object}   termMap           - mutable { id → term } lookup; conjugated
+    // @param {Array}    termRefs          - array of string IDs or {id,form}/{counter,n} objects
+    // @param {Object}   termMap           - mutable { id → term } lookup; generated
     //                                       terms are written back here
     // @param {Object}   conjugationRules  - parsed conjugation_rules.json
+    // @param {Object}   counterRules      - parsed counter_rules.json (optional)
     // @returns {string} HTML string safe for innerHTML
     // -------------------------------------------------------------------------
-    processText: function (text, termRefs, termMap, conjugationRules) {
+    processText: function (text, termRefs, termMap, conjugationRules, counterRules) {
       if (!text) return '';
       var html = String(text).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
       if (!termRefs || termRefs.length === 0) return html;
@@ -150,6 +154,14 @@
           var conjugated = self.conjugate(rootTerm, ref.form, conjugationRules);
           if (conjugated) termMap[conjugated.id] = conjugated; // cache for openTerm()
           return conjugated;
+        }
+        if (typeof ref === 'object' && ref.counter !== undefined) {
+          if (!counterRules || !window.JPShared.counterEngine) return null;
+          var counterTerm = window.JPShared.counterEngine.buildCounterTerm(
+            ref.counter, ref.n, counterRules
+          );
+          if (counterTerm) termMap[counterTerm.id] = counterTerm; // cache for openTerm()
+          return counterTerm;
         }
         return null;
       }).filter(Boolean).sort(function (a, b) {

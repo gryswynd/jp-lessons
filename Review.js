@@ -176,7 +176,8 @@
       idx: 0,
       score: 0,
       termMap: {},
-      conjugations: null
+      conjugations: null,
+      counterRules: null
     },
 
     // Helpers
@@ -196,16 +197,19 @@
       try {
         const manifest = await window.getManifest(this.config);
         const quizUrl = this.getUrl();
-        const conjUrl = this.getUrl(manifest.globalFiles.conjugationRules);
+        const conjUrl    = this.getUrl(manifest.globalFiles.conjugationRules);
+        const counterUrl = this.getUrl(manifest.globalFiles.counterRules);
         const glossaryUrls = manifest.levels.map(lvl => this.getUrl(manifest.data[lvl].glossary));
 
         console.log('[Review] Quiz URL:', quizUrl);
         console.log('[Review] Conjugation URL:', conjUrl);
+        console.log('[Review] Counter URL:', counterUrl);
 
-        // 1. Fetch Quiz Data + Glossary + Conjugations in parallel
-        const [quizRes, conjRes, ...glossResponses] = await Promise.all([
+        // 1. Fetch Quiz Data + Glossary + Conjugations + Counter Rules in parallel
+        const [quizRes, conjRes, counterRes, ...glossResponses] = await Promise.all([
             fetch(quizUrl),
             fetch(conjUrl),
+            fetch(counterUrl),
             ...glossaryUrls.map(u => fetch(u))
         ]);
 
@@ -213,17 +217,19 @@
         console.log('[Review] Fetch responses:', {
           quiz: quizRes.ok,
           glossary: glossOk,
-          conjugations: conjRes.ok
+          conjugations: conjRes.ok,
+          counters: counterRes.ok
         });
 
-        if (!quizRes.ok || !glossOk || !conjRes.ok) {
-          throw new Error(`Failed to fetch resources: Quiz(${quizRes.status}) Glossary(${glossResponses.map(r => r.status)}) Conjugations(${conjRes.status})`);
+        if (!quizRes.ok || !glossOk || !conjRes.ok || !counterRes.ok) {
+          throw new Error(`Failed to fetch resources: Quiz(${quizRes.status}) Glossary(${glossResponses.map(r => r.status)}) Conjugations(${conjRes.status}) Counters(${counterRes.status})`);
         }
 
         console.log('[Review] Parsing JSON...');
         const quizData = await quizRes.json();
         const glossParts = await Promise.all(glossResponses.map(r => r.json()));
         this.state.conjugations = await conjRes.json();
+        this.state.counterRules = await counterRes.json();
 
         const glossData = { entries: glossParts.flatMap(g => g.entries) };
         console.log('[Review] Quiz title:', quizData.title);
@@ -593,7 +599,7 @@
           html += `
             <div class="jp-convo-line">
               <div class="jp-convo-spk">${line.spk}</div>
-              <div class="jp-convo-text">${window.JPShared.textProcessor.processText(line.jp, line.terms, this.state.termMap, this.state.conjugations)}</div>
+              <div class="jp-convo-text">${window.JPShared.textProcessor.processText(line.jp, line.terms, this.state.termMap, this.state.conjugations, this.state.counterRules)}</div>
               </div>
           `;
         });
@@ -603,13 +609,13 @@
       else if (q.type === 'reading_mcq') {
         html += `<div class="jp-passage">`;
         q.passage.forEach(p => {
-            html += `<div style="margin-bottom:12px; font-size:1.1rem; line-height:1.6;">${window.JPShared.textProcessor.processText(p.jp, p.terms, this.state.termMap, this.state.conjugations)}</div>`;
+            html += `<div style="margin-bottom:12px; font-size:1.1rem; line-height:1.6;">${window.JPShared.textProcessor.processText(p.jp, p.terms, this.state.termMap, this.state.conjugations, this.state.counterRules)}</div>`;
         });
         html += `</div>`;
       }
 
       // Question Text (Processed for highlighting)
-      const qText = window.JPShared.textProcessor.processText(q.q, q.terms, this.state.termMap, this.state.conjugations).replace(/\[(.*?)\]/g, '<span class="jp-highlight">$1</span>');
+      const qText = window.JPShared.textProcessor.processText(q.q, q.terms, this.state.termMap, this.state.conjugations, this.state.counterRules).replace(/\[(.*?)\]/g, '<span class="jp-highlight">$1</span>');
       html += `<div class="jp-q-text">${qText}</div>`;
 
       html += `<div id="jp-interaction"></div>`;
