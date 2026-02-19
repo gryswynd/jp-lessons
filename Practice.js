@@ -206,7 +206,6 @@ window.PracticeModule = {
 
     // --- 2. LOGIC ---
     const REPO_CONFIG = sharedConfig;
-    let MASTER_URL = '';
 
     const DB = { kanji: [], verb: [], lessons: [], vocabMap: new Map() };
     const activeLessons = new Set();
@@ -633,10 +632,10 @@ window.PracticeModule = {
         try {
             await new Promise(r => setTimeout(r, 50));
             const manifest = await window.getManifest(REPO_CONFIG);
-            MASTER_URL = window.getAssetUrl(REPO_CONFIG, manifest.globalFiles.glossaryMaster);
-            console.log('[Practice] Glossary URL:', MASTER_URL);
-            const rawData = await fetch(MASTER_URL + "?t=" + Date.now()).then(r => r.json());
-            const raw = rawData.entries;
+            const glossParts = await Promise.all(
+                manifest.levels.map(lvl => fetch(window.getAssetUrl(REPO_CONFIG, manifest.data[lvl].glossary) + "?t=" + Date.now()).then(r => r.json()))
+            );
+            const raw = glossParts.flatMap(g => g.entries);
 
             const allVocab = raw.filter(i => i.type === 'vocab');
             allVocab.forEach(v => {

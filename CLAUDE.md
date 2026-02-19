@@ -42,7 +42,6 @@ Covers JLPT levels N5 through N1. Currently closing out N4.
 ```
 
 ## Key Files
-- `glossary.master.json` — current monolithic glossary (to be split by level)
 - `conjugation_rules.json` — verb conjugation rules (stays global)
 - `Compose.js` — has LESSON_META, PROMPTS (14), HELPER_VOCAB embedded → extract to JSON
 - `Game.js` — has INTERACTIVE_OBJECTS, CONVERSATIONS, OBJECT_POSITIONS, image refs embedded → extract to day.json

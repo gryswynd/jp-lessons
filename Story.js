@@ -379,19 +379,18 @@ window.StoryModule = (function() {
   async function loadResources() {
     try {
       const manifest = await window.getManifest(config);
-      const glossaryUrl = getCdnUrl(manifest.globalFiles.glossaryMaster);
       const conjUrl = getCdnUrl(manifest.globalFiles.conjugationRules);
-      console.log('[Story] Glossary URL:', glossaryUrl);
       console.log('[Story] Conjugation URL:', conjUrl);
-      const [glossary, conjugationRules] = await Promise.all([
-        fetch(glossaryUrl).then(r => r.json()),
-        fetch(conjUrl).then(r => r.json())
+      const [conjugationRules, ...glossParts] = await Promise.all([
+        fetch(conjUrl).then(r => r.json()),
+        ...manifest.levels.map(lvl => fetch(getCdnUrl(manifest.data[lvl].glossary)).then(r => r.json()))
       ]);
+      const allEntries = glossParts.flatMap(g => g.entries);
 
       // Build term map (id → term, for modal lookups)
       termMapData = {};
       autoSurfaceMap = {};
-      glossary.entries.forEach(term => {
+      allEntries.forEach(term => {
         termMapData[term.id] = term;
         // Auto-surface map: surface form → id (for automatic highlighting)
         if (term.surface) {
@@ -426,202 +425,6 @@ window.StoryModule = (function() {
     } catch (err) {
       console.warn('Could not load glossary/conjugation:', err);
     }
-  }
-
-  function conjugate(term, ruleKey) {
-    if (!term || !CONJUGATION_RULES) return term;
-    const formDef = CONJUGATION_RULES[ruleKey];
-    if (!formDef) return term;
-
-    let vClass = term.verb_class || term.gtype;
-    if (vClass === 'u') vClass = 'godan';
-    if (vClass === 'ru') vClass = 'ichidan';
-    if (vClass === 'verb') vClass = 'godan';
-    if (!vClass) vClass = 'godan';
-
-    const rule = formDef.rules[vClass];
-    if (!rule) return term;
-
-    let newSurface = term.surface;
-    let newReading = term.reading || "";
-
-    if (rule.type === 'replace') {
-      newSurface = rule.surface;
-      newReading = rule.reading;
-    } else if (rule.type === 'suffix') {
-      if (rule.remove && newSurface.endsWith(rule.remove)) {
-        newSurface = newSurface.slice(0, -rule.remove.length) + rule.add;
-        newReading = newReading.slice(0, -rule.remove.length) + rule.add;
-      } else {
-        newSurface += rule.add;
-        newReading += rule.add;
-      }
-    } else if (rule.type === 'stem_map') {
-      const mapKey = rule.map;
-      const map = GODAN_MAPS[mapKey];
-      if (map) {
-        const lastChar = newSurface.slice(-1);
-        if (map[lastChar]) {
-          newSurface = newSurface.slice(0, -1) + map[lastChar] + (rule.add || '');
-          newReading = newReading.slice(0, -1) + map[lastChar] + (rule.add || '');
-        }
-      }
-    }
-
-    return {
-      ...term,
-      surface: newSurface,
-      reading: newReading,
-      _original: term.surface
-    };
-  }
-
-  function setupTermModal() {
-    if (window.JP_OPEN_TERM) return;
-
-    let modalOverlay = document.querySelector('.jp-modal-overlay');
-    if (!modalOverlay) {
-      modalOverlay = document.createElement('div');
-      modalOverlay.className = 'jp-modal-overlay';
-      modalOverlay.innerHTML = `
-        <div class="jp-modal">
-          <button class="jp-close-btn">✕</button>
-          <div id="jp-modal-content"></div>
-        </div>
-      `;
-      document.body.appendChild(modalOverlay);
-
-      if (!document.getElementById('jp-modal-style')) {
-        const style = document.createElement('style');
-        style.id = 'jp-modal-style';
-        style.textContent = `
-          .jp-modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(0,0,0,0.4);
-            backdrop-filter: blur(4px);
-            z-index: 999999;
-            display: none;
-            align-items: center;
-            justify-content: center;
-          }
-          .jp-modal {
-            background: #fff;
-            width: 85%;
-            max-width: 400px;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
-            position: relative;
-            text-align: center;
-          }
-          .jp-close-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: #f1f2f6;
-            border: none;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-weight: bold;
-          }
-          .jp-auto-flag-msg {
-            margin-top: 15px;
-            background: #d4edda;
-            color: #155724;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 0.85rem;
-            display: none;
-          }
-        `;
-        document.head.appendChild(style);
-      }
-
-      modalOverlay.addEventListener('click', (e) => {
-        if (e.target === modalOverlay) {
-          modalOverlay.style.display = 'none';
-        }
-      });
-
-      modalOverlay.querySelector('.jp-close-btn').addEventListener('click', () => {
-        modalOverlay.style.display = 'none';
-      });
-    }
-
-    window.JP_OPEN_TERM = function(id, form, enableFlag = true) {
-      const t = termMapData[id];
-      if (!t) return;
-
-      // Apply conjugation when a form is specified (e.g. "polite_past", "te_form")
-      const displayTerm = (form && CONJUGATION_RULES) ? conjugate(t, form) : t;
-      const textToSpeak = displayTerm.reading || displayTerm.surface;
-
-      const titleHtml = `
-        <div style="display:flex; align-items:center; justify-content:center; gap:10px;">
-          <span>${displayTerm.surface}</span>
-          <button id="jp-m-speak-btn" style="background:none; border:none; cursor:pointer; font-size:1.5rem; opacity:0.8;">🔊</button>
-        </div>
-      `;
-
-      // Show base form hint when displaying a conjugated form
-      const baseFormHint = (form && displayTerm._original)
-        ? `<div style="color:#aaa; font-size:0.8rem; margin-bottom:8px;">${displayTerm._original}</div>`
-        : '';
-
-      const meaningHtml = `<div style="color:#667eea; font-size:0.9rem; margin-bottom:4px;">${displayTerm.reading || ''}</div>
-        ${baseFormHint}
-        <div style="color:#333; font-weight:600; font-size:1.1rem;">${t.meaning || ''}</div>`;
-
-      const notesHtml = t.notes ? `<div style="margin-top:15px; background:#f8f9fa; padding:12px; border-radius:10px; font-size:0.85rem; color:#555; text-align:left;">${t.notes}</div>` : '';
-
-      const modalContent = document.getElementById('jp-modal-content');
-      modalContent.innerHTML = `
-        ${titleHtml}
-        ${meaningHtml}
-        ${notesHtml}
-        <div class="jp-auto-flag-msg" id="jp-flag-msg">✓ Added to Review</div>
-      `;
-
-      modalOverlay.style.display = 'flex';
-
-      const speakerBtn = document.getElementById('jp-m-speak-btn');
-      if (speakerBtn) {
-        speakerBtn.onclick = () => speak(textToSpeak);
-      }
-
-      if (enableFlag) {
-        const flags = JSON.parse(localStorage.getItem('k-flags') || '{}');
-        if (!flags[id]) {
-          flags[id] = true;
-          localStorage.setItem('k-flags', JSON.stringify(flags));
-          const activeFlags = JSON.parse(localStorage.getItem('k-active-flags') || '{}');
-          activeFlags[id] = true;
-          localStorage.setItem('k-active-flags', JSON.stringify(activeFlags));
-
-          const flagMsg = document.getElementById('jp-flag-msg');
-          if (flagMsg) {
-            flagMsg.style.display = 'block';
-            setTimeout(() => { flagMsg.style.display = 'none'; }, 2000);
-          }
-        }
-      }
-    };
-  }
-
-  function speak(text) {
-    if (!window.speechSynthesis) return;
-    window.speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'ja-JP';
-    u.rate = 1.0;
-    window.speechSynthesis.speak(u);
   }
 
   async function loadStoryList() {
