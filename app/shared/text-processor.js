@@ -1,6 +1,7 @@
 /**
  * app/shared/text-processor.js
- * Shared conjugation engine and text annotation for Japanese lesson content.
+ * Shared conjugation engine, counter engine, and text annotation for Japanese
+ * lesson content.
  *
  * Replaces duplicated implementations in:
  *   - Lesson.js  — GODAN_MAPS, conjugate(), processText(), getRootTerm()
@@ -29,6 +30,94 @@
     ta_form: { 'う': 'った', 'つ': 'った', 'る': 'った', 'む': 'んだ', 'ぶ': 'んだ', 'ぬ': 'んだ', 'く': 'いた', 'ぐ': 'いだ', 'す': 'した' },
     te_form: { 'う': 'って', 'つ': 'って', 'る': 'って', 'む': 'んで', 'ぶ': 'んで', 'ぬ': 'んで', 'く': 'いて', 'ぐ': 'いで', 'す': 'して' }
   };
+
+  // ---------------------------------------------------------------------------
+  // Counter engine — builds surface+reading for number+counter pairs.
+  // Rules are loaded from counter_rules.json and passed in as counterRules.
+  //
+  // buildCounterTerm("ji", 8, rules)   → { id, surface:"八時", reading:"はちじ", meaning:"8 o'clock" }
+  // buildCounterTerm("fun", 30, rules) → { id, surface:"三十分", reading:"さんじゅうふん", … }
+  //
+  // overrideKey: digit/place key of the final number component, used to look up
+  // per-counter prefix_overrides and counter_overrides:
+  //   "1"–"9"  → units digit               (e.g. n=8 → "8", n=16 → "6")
+  //   "10"     → standalone 十 (count===1)  (e.g. n=10, n=110)
+  //   null     → round tens / euphonic      (no counter override applies)
+  // ---------------------------------------------------------------------------
+  var COUNTER_PLACE_ORDER = [10000, 1000, 100, 10];
+
+  function counterBuildNumber(n, rules) {
+    if (!n || n < 1 || n !== Math.floor(n)) return null;
+    var surface = '', reading = '', overrideKey = null, remaining = n;
+    for (var pi = 0; pi < COUNTER_PLACE_ORDER.length; pi++) {
+      var place = COUNTER_PLACE_ORDER[pi];
+      if (remaining < place) continue;
+      var count = Math.floor(remaining / place);
+      remaining -= count * place;
+      var isLast = (remaining === 0);
+      var placeData = rules.places[String(place)];
+      var eKey = String(count);
+      if (placeData.euphonics && placeData.euphonics[eKey]) {
+        // Euphonic combo (e.g. 6+百 → ろっぴゃく) — prefix hardening baked in
+        surface += (count > 1 ? rules.digits[eKey].surface : '') + placeData.surface;
+        reading += placeData.euphonics[eKey];
+      } else {
+        if (count > 1) { surface += rules.digits[eKey].surface; reading += rules.digits[eKey].reading; }
+        surface += placeData.surface;
+        reading += placeData.reading;
+        if (isLast && count === 1) overrideKey = String(place); // e.g. "10"
+      }
+    }
+    if (remaining > 0) {
+      var dKey = String(remaining);
+      surface += rules.digits[dKey].surface;
+      reading += rules.digits[dKey].reading;
+      overrideKey = dKey; // e.g. "8"
+    }
+    return { surface: surface, reading: reading, overrideKey: overrideKey };
+  }
+
+  function counterBaseReading(key, rules) {
+    if (!key) return null;
+    if (rules.places[key]) return rules.places[key].reading;
+    if (rules.digits[key]) return rules.digits[key].reading;
+    return null;
+  }
+
+  function buildCounterTerm(counterKey, n, rules) {
+    if (!rules || !rules.counters) return null;
+    var counter = rules.counters[counterKey];
+    if (!counter) return null;
+    var nInt = parseInt(n, 10);
+    if (!nInt || nInt < 1) return null;
+    // Whole-word special cases (e.g. 一人=ひとり, 二人=ふたり)
+    if (counter.special && counter.special[String(nInt)]) {
+      var sp = counter.special[String(nInt)];
+      return { id: 'count_' + nInt + '_' + counterKey, surface: sp.surface, reading: sp.reading, meaning: nInt + ' ' + counter.meaning };
+    }
+    var num = counterBuildNumber(nInt, rules);
+    if (!num) return null;
+    var oKey = num.overrideKey;
+    var numReading = num.reading;
+    // prefix_override: replace the final component's reading
+    // e.g. overrideKey="4", ji → replace "よん" with "よ" → "よじ"
+    if (oKey && counter.prefix_overrides && counter.prefix_overrides[oKey]) {
+      var origBase = counterBaseReading(oKey, rules);
+      if (origBase && numReading.slice(-origBase.length) === origBase)
+        numReading = numReading.slice(0, -origBase.length) + counter.prefix_overrides[oKey];
+    }
+    // counter_override: swap the counter suffix reading
+    // e.g. overrideKey="6", fun → "ふん" → "ぷん"
+    var counterReading = (oKey && counter.counter_overrides && counter.counter_overrides[oKey])
+      ? counter.counter_overrides[oKey] : counter.reading;
+    return { id: 'count_' + nInt + '_' + counterKey, surface: num.surface + counter.surface, reading: numReading + counterReading, meaning: nInt + ' ' + counter.meaning };
+  }
+
+  // Expose so future modules (Lesson.js, Game.js, …) can call without a
+  // separate script load.
+  window.JPShared.counterEngine = { buildCounterTerm: buildCounterTerm };
+
+  // ---------------------------------------------------------------------------
 
   window.JPShared.textProcessor = {
 
@@ -123,8 +212,7 @@
     //   string            — direct term ID looked up in termMap
     //   {id, form}        — term ID + conjugation form; conjugated result is
     //                       cached back into termMap so openTerm() can find it
-    //   {counter, n}      — counter engine call; synthetic term is generated
-    //                       via JPShared.counterEngine and cached in termMap
+    //   {counter, n}      — generates a synthetic term via the counter engine
     //                       e.g. { "counter": "ji", "n": 8 } → 八時/はちじ
     //
     // Terms are matched longest-surface-first to prevent partial overlaps.
@@ -156,10 +244,8 @@
           return conjugated;
         }
         if (typeof ref === 'object' && ref.counter !== undefined) {
-          if (!counterRules || !window.JPShared.counterEngine) return null;
-          var counterTerm = window.JPShared.counterEngine.buildCounterTerm(
-            ref.counter, ref.n, counterRules
-          );
+          if (!counterRules) return null;
+          var counterTerm = buildCounterTerm(ref.counter, ref.n, counterRules);
           if (counterTerm) termMap[counterTerm.id] = counterTerm; // cache for openTerm()
           return counterTerm;
         }
