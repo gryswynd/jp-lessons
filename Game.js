@@ -549,7 +549,7 @@ window.GameModule = (function() {
             <div class="jp-dpad-btn jp-dpad-right" data-direction="right">▶</div>
           </div>
           <div class="jp-interact-btn">
-            <span>TALK</span>
+            <span>▶</span>
           </div>
         </div>
         <div class="jp-rotate-overlay">
