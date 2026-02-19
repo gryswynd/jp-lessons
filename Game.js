@@ -435,18 +435,39 @@ window.GameModule = (function() {
         _surfaceIndex = {};
         Object.values(termMap).forEach(t => {
           if (t.surface) _surfaceIndex[t.surface] = t.id;
-          if (t.reading) _surfaceIndex[t.reading] = t.id;
+          // Do NOT index readings — short hiragana readings match particles everywhere
         });
       }
       return _surfaceIndex;
     }
 
     function processGameText(text) {
-      if (!window.JPShared || !window.JPShared.textProcessor || !conjugationRules) return text;
+      if (!window.JPShared || !window.JPShared.textProcessor) return text;
       const index = getSurfaceIndex();
-      const termRefs = Object.keys(index).filter(s => text.includes(s)).map(s => index[s]);
-      if (!termRefs.length) return text;
-      return window.JPShared.textProcessor.processText(text, termRefs, termMap, conjugationRules);
+
+      // Collect unique term IDs whose surface appears in text
+      const seen = new Set();
+      const termIds = [];
+      Object.keys(index).forEach(surface => {
+        if (text.includes(surface)) {
+          const id = index[surface];
+          if (!seen.has(id)) { seen.add(id); termIds.push(id); }
+        }
+      });
+      if (!termIds.length) return text;
+
+      // Drop shorter terms whose surface is entirely inside a longer matched surface
+      // (prevents nesting spans when e.g. both 今 and 今日 are matched)
+      const matchedSurfaces = termIds.map(id => termMap[id] && termMap[id].surface).filter(Boolean);
+      const filtered = termIds.filter(id => {
+        const s = termMap[id] && termMap[id].surface;
+        return s && !matchedSurfaces.some(other => other !== s && other.includes(s));
+      });
+      if (!filtered.length) return text;
+
+      return window.JPShared.textProcessor.processText(
+        text, filtered, termMap, conjugationRules || {}
+      );
     }
 
     // --- Game State ---
