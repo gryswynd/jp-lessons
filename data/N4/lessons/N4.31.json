@@ -343,7 +343,7 @@
           "jp": "十二時に 開けます。",
           "en": "They open it at 12 o'clock.",
           "terms": [
-            "v_juuniji",
+            { "counter": "ji", "n": 12 },
             {
               "id": "v_akeru",
               "form": "polite_masu"
@@ -529,7 +529,7 @@
           "terms": [
             "v_kaishi",
             "v_gogo",
-            "v_ichiji"
+            { "counter": "ji", "n": 1 }
           ]
         },
         {

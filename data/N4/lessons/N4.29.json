@@ -304,7 +304,7 @@
           "jp": "十人 以上 います。",
           "en": "There are more than ten.",
           "terms": [
-            "v_juunin",
+            { "counter": "nin", "n": 10 },
             "v_ijou",
             {
               "id": "v_iru",
@@ -325,7 +325,7 @@
           "jp": "五人 以下です。",
           "en": "Less than five.",
           "terms": [
-            "v_gonin",
+            { "counter": "nin", "n": 5 },
             "v_ika"
           ]
         }

@@ -11,6 +11,7 @@ window.LessonModule = {
     let termMapData = {};
     let showEN = false; // Default OFF
     let CONJUGATION_RULES = null;
+    let COUNTER_RULES = null;
 
     // --- Setup UI Container (Mobile Look) ---
     container.innerHTML = '';
@@ -143,15 +144,18 @@ window.LessonModule = {
 
     async function loadResources() {
         const manifest = await window.getManifest(REPO_CONFIG);
-        const conjUrl = getCdnUrl(manifest.globalFiles.conjugationRules);
+        const conjUrl    = getCdnUrl(manifest.globalFiles.conjugationRules);
+        const counterUrl = getCdnUrl(manifest.globalFiles.counterRules);
         console.log('[Lesson] Conjugation URL:', conjUrl);
-        const [conj, ...glossParts] = await Promise.all([
+        console.log('[Lesson] Counter URL:', counterUrl);
+        const [conj, counter, ...glossParts] = await Promise.all([
              fetch(conjUrl).then(r => r.json()),
+             fetch(counterUrl).then(r => r.json()),
              ...manifest.levels.map(lvl => fetch(getCdnUrl(manifest.data[lvl].glossary)).then(r => r.json()))
         ]);
         const map = {};
         glossParts.forEach(g => g.entries.forEach(i => { map[i.id] = i; }));
-        return { map, conj };
+        return { map, conj, counter };
     }
 
     // --- Modal ---
@@ -187,7 +191,7 @@ window.LessonModule = {
         const div = el("div", ""); div.appendChild(createToggle());
         (sec.lines || []).forEach(line => {
           const row = el("div", "jp-row");
-          row.innerHTML = `<div class="jp-speaker-bubble" translate="no">${line.spk}</div><div style="flex:1"><div class="jp-jp">${window.JPShared.textProcessor.processText(line.jp, line.terms, termMapData, CONJUGATION_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(line.en)}</div></div>`;
+          row.innerHTML = `<div class="jp-speaker-bubble" translate="no">${line.spk}</div><div style="flex:1"><div class="jp-jp">${window.JPShared.textProcessor.processText(line.jp, line.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(line.en)}</div></div>`;
           div.appendChild(row);
         });
         return div;
@@ -197,7 +201,7 @@ window.LessonModule = {
         const div = el("div", ""); div.appendChild(createToggle());
         (sec.items || []).forEach((item, idx) => {
             const row = el("div", "jp-row");
-            row.innerHTML = `<div class="jp-speaker-bubble" translate="no">${idx+1}</div><div style="flex:1"><div class="jp-jp">${window.JPShared.textProcessor.processText(item.jp, item.terms, termMapData, CONJUGATION_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(item.en)}</div></div>`;
+            row.innerHTML = `<div class="jp-speaker-bubble" translate="no">${idx+1}</div><div style="flex:1"><div class="jp-jp">${window.JPShared.textProcessor.processText(item.jp, item.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(item.en)}</div></div>`;
             div.appendChild(row);
         });
         return div;
@@ -243,7 +247,7 @@ window.LessonModule = {
          (sec.items || []).forEach(item => {
            if (item.kind === 'mcq') {
              const card = el("div", "jp-card");
-             card.innerHTML = `<div class="jp-jp" style="margin-bottom:15px; font-weight:bold;">${window.JPShared.textProcessor.processText(item.q, item.terms, termMapData, CONJUGATION_RULES)}</div>`;
+             card.innerHTML = `<div class="jp-jp" style="margin-bottom:15px; font-weight:bold;">${window.JPShared.textProcessor.processText(item.q, item.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div>`;
              const optsDiv = el("div");
              let solved = false;
 
@@ -284,7 +288,7 @@ window.LessonModule = {
         const div = el("div", ""); div.appendChild(createToggle());
         const pCard = el("div", "jp-card");
         (sec.passage || []).forEach(p => {
-            pCard.appendChild(el("div", "", `<div class="jp-jp" style="margin-bottom:8px;">${window.JPShared.textProcessor.processText(p.jp, p.terms, termMapData, CONJUGATION_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(p.en)}</div>`));
+            pCard.appendChild(el("div", "", `<div class="jp-jp" style="margin-bottom:8px;">${window.JPShared.textProcessor.processText(p.jp, p.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(p.en)}</div>`));
         });
         div.appendChild(pCard);
 
@@ -293,7 +297,7 @@ window.LessonModule = {
           qCard.innerHTML = `<div style="font-weight:700; color:#888; margin-bottom:15px;">COMPREHENSION CHECK</div>`;
           sec.questions.forEach((q, i) => {
              const row = el("div", "jp-row");
-             row.innerHTML = `<div class="jp-speaker-bubble" translate="no">Q${i+1}</div><div style="flex:1"><div class="jp-jp" style="font-weight:700;">${window.JPShared.textProcessor.processText(q.q, q.terms, termMapData, CONJUGATION_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">Ans: ${esc(q.a)}</div></div>`;
+             row.innerHTML = `<div class="jp-speaker-bubble" translate="no">Q${i+1}</div><div style="flex:1"><div class="jp-jp" style="font-weight:700;">${window.JPShared.textProcessor.processText(q.q, q.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">Ans: ${esc(q.a)}</div></div>`;
              qCard.appendChild(row);
           });
           div.appendChild(qCard);
@@ -359,6 +363,7 @@ window.LessonModule = {
           lessonData = await lRes.json();
           termMapData = resources.map;
           CONJUGATION_RULES = resources.conj;
+          COUNTER_RULES     = resources.counter;
           window.JPShared.termModal.setTermMap(termMapData);
 
           lessonData.sections.unshift({ type: 'intro', title: lessonData.title });

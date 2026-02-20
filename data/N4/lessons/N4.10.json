@@ -217,6 +217,7 @@
           "en": "What time does the movie start?",
           "terms": [
             "v_eiga",
+            "v_nanji",
             "v_hajimaru_masu",
             "k_hajimeru"
           ]
@@ -226,6 +227,8 @@
           "jp": "午後の 二時に 始まります。",
           "en": "It starts at 2 PM.",
           "terms": [
+            "v_gogo",
+            { "counter": "ji", "n": 2 },
             "v_hajimaru_masu",
             "k_hajimeru"
           ]
@@ -282,6 +285,7 @@
           "jp": "しごとは 何時に 終わりますか。",
           "en": "What time does work end?",
           "terms": [
+            "v_nanji",
             "v_owaru_masu",
             "k_owaru"
           ]
@@ -291,6 +295,7 @@
           "jp": "六時に 終わります。それから 映画館へ 行きます。",
           "en": "It ends at 6. After that, I will go to the movie theater.",
           "terms": [
+            { "counter": "ji", "n": 6 },
             "v_owaru_masu",
             "k_owaru",
             "v_eigakan"
@@ -301,6 +306,7 @@
           "jp": "はやい ですね。しごとは 何時に 始まりますか。",
           "en": "That's early. What time does work start?",
           "terms": [
+            "v_nanji",
             "v_hajimaru_masu",
             "k_hajimeru"
           ]
@@ -310,6 +316,7 @@
           "jp": "朝の 七時に 始まります。",
           "en": "It starts at 7 in the morning.",
           "terms": [
+            { "counter": "ji", "n": 7 },
             "v_hajimaru_masu",
             "k_hajimeru"
           ]
@@ -387,6 +394,8 @@
           "en": "The movie started at 2 and ended at 4.",
           "terms": [
             "v_eiga",
+            { "counter": "ji", "n": 2 },
+            { "counter": "ji", "n": 4 },
             "v_hajimatte",
             "k_hajimeru",
             "v_owarimashita",
