@@ -3,49 +3,19 @@
   "level": "N5",
   "prompts": [
     {
-      "id": "meet-and-greet",
-      "title": "Meet and Greet",
-      "titleJp": "じこしょうかい",
-      "emoji": "👋",
-      "lessons": ["N5.1"],
-      "scenario": "You are meeting a new classmate for the first time. Introduce yourself — say your name and tell them about one of your family members.",
-      "hint": "はじめまして。わたしの名前は…",
-      "targets": [
-        { "id": "v_namae", "count": 1 },
-        { "id": "k_hito", "count": 1 },
-        { "id": "v_tomodachi", "count": 1 }
-      ],
-      "helpers": ["k_haha", "k_chichi", "v_sensei"]
-    },
-    {
       "id": "my-family",
       "title": "My Family",
       "titleJp": "わたしの かぞく",
       "emoji": "👨‍👩‍👧‍👦",
       "lessons": ["N5.1"],
-      "scenario": "Describe your family. Tell how many people there are, and mention your father and mother. What do they do?",
-      "hint": "わたしの かぞくは…人です。父は…",
+      "scenario": "Describe your family. Say how many people there are, and tell us about your father and mother. What do they do?",
+      "hint": "わたしの かぞくは… 父は… 母は…",
       "targets": [
         { "id": "k_chichi", "count": 1 },
         { "id": "k_haha", "count": 1 },
         { "id": "v_fubo", "count": 1 }
       ],
-      "helpers": ["v_sensei", "k_ko", "v_namae"]
-    },
-    {
-      "id": "new-friend",
-      "title": "A New Friend",
-      "titleJp": "あたらしい 友だち",
-      "emoji": "🤝",
-      "lessons": ["N5.1"],
-      "scenario": "Write about a friend you made recently. What is their name? What kind of person are they? Are they a man or woman? When did you become friends?",
-      "hint": "先月、あたらしい友だちが…",
-      "targets": [
-        { "id": "v_tomodachi", "count": 1 },
-        { "id": "v_namae", "count": 1 },
-        { "id": "v_sengetsu", "count": 1 }
-      ],
-      "helpers": ["k_otoko", "k_onna", "k_hito", "v_senshuu"]
+      "helpers": ["v_sensei", "k_ko", "v_namae", "v_tomodachi"]
     }
   ]
 }

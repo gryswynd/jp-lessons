@@ -9,85 +9,35 @@
     "estimated_minutes": 40
   },
   "newKanji": [
-    {
-      "kanji": "人",
-      "kun": "ひと",
-      "on": "じん / にん",
-      "meaning": "Person"
-    },
-    {
-      "kanji": "男",
-      "kun": "おとこ",
-      "on": "だん",
-      "meaning": "Man"
-    },
-    {
-      "kanji": "女",
-      "kun": "おんな",
-      "on": "じょ",
-      "meaning": "Woman"
-    },
-    {
-      "kanji": "子",
-      "kun": "こ",
-      "on": "し",
-      "meaning": "Child"
-    },
-    {
-      "kanji": "友",
-      "kun": "とも",
-      "on": "ゆう",
-      "meaning": "Friend"
-    },
-    {
-      "kanji": "母",
-      "kun": "はは",
-      "on": "ぼ",
-      "meaning": "Mother"
-    },
-    {
-      "kanji": "父",
-      "kun": "ちち",
-      "on": "ふ",
-      "meaning": "Father"
-    },
-    {
-      "kanji": "名",
-      "kun": "な",
-      "on": "めい",
-      "meaning": "Name"
-    },
-    {
-      "kanji": "生",
-      "kun": "う / こ / なま",
-      "on": "せい",
-      "meaning": "Life / Birth"
-    },
-    {
-      "kanji": "先",
-      "kun": "さき",
-      "on": "せん",
-      "meaning": "Ahead / Previous"
-    }
+    { "kanji": "人", "kun": "ひと", "on": "じん / にん", "meaning": "Person" },
+    { "kanji": "男", "kun": "おとこ", "on": "だん", "meaning": "Man" },
+    { "kanji": "女", "kun": "おんな", "on": "じょ", "meaning": "Woman" },
+    { "kanji": "子", "kun": "こ", "on": "し", "meaning": "Child" },
+    { "kanji": "友", "kun": "とも", "on": "ゆう", "meaning": "Friend" },
+    { "kanji": "母", "kun": "はは", "on": "ぼ", "meaning": "Mother" },
+    { "kanji": "父", "kun": "ちち", "on": "ふ", "meaning": "Father" },
+    { "kanji": "名", "kun": "な", "on": "めい", "meaning": "Name" },
+    { "kanji": "生", "kun": "う / なま", "on": "せい", "meaning": "Life / Birth" },
+    { "kanji": "先", "kun": "さき", "on": "せん", "meaning": "Ahead / Previous" }
   ],
   "sections": [
     {
       "type": "warmup",
       "title": "ウォームアップ",
-      "instructions": "Try answering these questions in Japanese. Use hiragana for any words you don't know yet.",
+      "instructions": "Try answering these questions in Japanese.",
       "items": [
         {
-          "jp": "あなたの 名前は なんですか。",
+          "jp": "あなたの 名まえは なんですか。",
           "en": "What is your name?",
           "terms": ["v_namae"]
         },
         {
           "jp": "あなたの かぞくは なん人ですか。",
           "en": "How many people are in your family?",
-          "terms": ["k_hito"]
+          "terms": ["v_kazoku", "k_hito"]
         },
         {
-          "jp": "先生の 名前は なんですか。",
+          "jp": "先生の 名まえは なんですか。",
           "en": "What is your teacher's name?",
           "terms": ["v_sensei", "v_namae"]
         }
@@ -97,76 +47,16 @@
       "type": "kanjiGrid",
       "title": "あたらしい かんじ（New Kanji）",
       "items": [
-        {
-          "kanji": "人",
-          "on": "じん / にん",
-          "kun": "ひと",
-          "meaning": "person",
-          "terms": ["k_hito"]
-        },
-        {
-          "kanji": "男",
-          "on": "だん",
-          "kun": "おとこ",
-          "meaning": "man",
-          "terms": ["k_otoko"]
-        },
-        {
-          "kanji": "女",
-          "on": "じょ",
-          "kun": "おんな",
-          "meaning": "woman",
-          "terms": ["k_onna"]
-        },
-        {
-          "kanji": "子",
-          "on": "し",
-          "kun": "こ",
-          "meaning": "child",
-          "terms": ["k_ko"]
-        },
-        {
-          "kanji": "友",
-          "on": "ゆう",
-          "kun": "とも",
-          "meaning": "friend",
-          "terms": ["k_tomo"]
-        },
-        {
-          "kanji": "母",
-          "on": "ぼ",
-          "kun": "はは",
-          "meaning": "mother",
-          "terms": ["k_haha"]
-        },
-        {
-          "kanji": "父",
-          "on": "ふ",
-          "kun": "ちち",
-          "meaning": "father",
-          "terms": ["k_chichi"]
-        },
-        {
-          "kanji": "名",
-          "on": "めい",
-          "kun": "な",
-          "meaning": "name",
-          "terms": ["k_na"]
-        },
-        {
-          "kanji": "生",
-          "on": "せい",
-          "kun": "う / こ / なま",
-          "meaning": "life; birth",
-          "terms": ["k_u"]
-        },
-        {
-          "kanji": "先",
-          "on": "せん",
-          "kun": "さき",
-          "meaning": "ahead; previous",
-          "terms": ["k_saki"]
-        }
+        { "kanji": "人", "on": "じん / にん", "kun": "ひと", "meaning": "person", "terms": ["k_hito"] },
+        { "kanji": "男", "on": "だん", "kun": "おとこ", "meaning": "man", "terms": ["k_otoko"] },
+        { "kanji": "女", "on": "じょ", "kun": "おんな", "meaning": "woman", "terms": ["k_onna"] },
+        { "kanji": "子", "on": "し", "kun": "こ", "meaning": "child", "terms": ["k_ko"] },
+        { "kanji": "友", "on": "ゆう", "kun": "とも", "meaning": "friend", "terms": ["k_tomo"] },
+        { "kanji": "母", "on": "ぼ", "kun": "はは", "meaning": "mother", "terms": ["k_haha"] },
+        { "kanji": "父", "on": "ふ", "kun": "ちち", "meaning": "father", "terms": ["k_chichi"] },
+        { "kanji": "名", "on": "めい", "kun": "な", "meaning": "name", "terms": ["k_na"] },
+        { "kanji": "生", "on": "せい", "kun": "う / なま", "meaning": "life; birth", "terms": ["k_u"] },
+        { "kanji": "先", "on": "せん", "kun": "さき", "meaning": "ahead; previous", "terms": ["k_saki"] }
       ]
     },
     {
@@ -175,54 +65,23 @@
       "groups": [
         {
           "label": "People",
-          "items": [
-            "k_hito",
-            "v_hitobito",
-            "v_ninki",
-            "v_jinsei"
-          ]
+          "items": ["k_hito", "v_hitobito", "v_ninki", "v_jinsei"]
         },
         {
           "label": "Men & Women",
-          "items": [
-            "k_otoko",
-            "k_onna",
-            "v_danshi",
-            "v_joshi"
-          ]
+          "items": ["k_otoko", "k_onna", "v_danshi", "v_joshi"]
         },
         {
           "label": "Family",
-          "items": [
-            "k_haha",
-            "k_chichi",
-            "v_fubo",
-            "k_ko"
-          ]
+          "items": ["k_haha", "k_chichi", "v_fubo", "k_ko"]
         },
         {
-          "label": "Friends & School",
-          "items": [
-            "k_tomo",
-            "v_tomodachi",
-            "v_sensei"
-          ]
+          "label": "Friends & Teachers",
+          "items": ["k_tomo", "v_tomodachi", "v_sensei"]
         },
         {
           "label": "Names & Life",
-          "items": [
-            "v_namae",
-            "v_umareru",
-            "v_ikiru",
-            "v_jinsei"
-          ]
-        },
-        {
-          "label": "Time Words with 先",
-          "items": [
-            "v_senshuu",
-            "v_sengetsu"
-          ]
+          "items": ["v_namae", "v_umareru", "v_ikiru"]
         }
       ]
     },
@@ -233,14 +92,14 @@
       "lines": [
         {
           "spk": "A",
-          "jp": "はじめまして。わたしの 名前は たなかです。",
+          "jp": "はじめまして。わたしの 名まえは たなかです。",
           "en": "Nice to meet you. My name is Tanaka.",
           "terms": ["v_namae"]
         },
         {
           "spk": "B",
           "jp": "はじめまして。やまかわです。よろしく おねがいします。",
-          "en": "Nice to meet you. I'm Yamakawa. Nice to meet you.",
+          "en": "Nice to meet you. I'm Yamakawa. Pleased to meet you.",
           "terms": []
         },
         {
@@ -253,13 +112,13 @@
           "spk": "B",
           "jp": "いいえ、先生では ありません。がくせいです。",
           "en": "No, I'm not a teacher. I'm a student.",
-          "terms": ["v_sensei"]
+          "terms": ["v_sensei", "v_gakusei"]
         },
         {
           "spk": "A",
           "jp": "そうですか。わたしも がくせいです。",
           "en": "I see. I'm also a student.",
-          "terms": []
+          "terms": ["v_gakusei"]
         }
       ]
     },
@@ -272,13 +131,13 @@
           "spk": "A",
           "jp": "かぞくは なん人ですか。",
           "en": "How many people are in your family?",
-          "terms": ["k_hito"]
+          "terms": ["v_kazoku", "k_hito"]
         },
         {
           "spk": "B",
-          "jp": "四人です。父と 母と あねと わたしです。",
+          "jp": "よにんです。父と 母と あねと わたしです。",
           "en": "Four. My father, mother, older sister, and me.",
-          "terms": ["k_chichi", "k_haha"]
+          "terms": [{ "counter": "nin", "n": 4 }, "k_chichi", "k_haha"]
         },
         {
           "spk": "A",
@@ -302,7 +161,7 @@
           "spk": "B",
           "jp": "母も 先生です。父母は おなじ がっこうで はたらいて います。",
           "en": "My mother is also a teacher. My parents work at the same school.",
-          "terms": ["k_haha", "v_sensei", "v_fubo"]
+          "terms": ["k_haha", "v_sensei", "v_fubo", "v_gakkou"]
         }
       ]
     },
@@ -319,7 +178,7 @@
         },
         {
           "spk": "B",
-          "jp": "やさしい 人です。名前は すずきさんです。",
+          "jp": "やさしい 人です。名まえは すずきさんです。",
           "en": "A kind person. Their name is Suzuki-san.",
           "terms": ["k_hito", "v_namae"]
         },
@@ -331,28 +190,28 @@
         },
         {
           "spk": "B",
-          "jp": "女の人です。先月、友だちに なりました。",
-          "en": "A woman. We became friends last month.",
-          "terms": ["k_onna", "k_hito", "v_sengetsu", "v_tomodachi"]
+          "jp": "女の人です。とても いい 友だちです。",
+          "en": "A woman. She is a really good friend.",
+          "terms": ["k_onna", "k_hito", "v_tomodachi"]
         },
         {
           "spk": "A",
           "jp": "いいですね。わたしも あいたいです。",
           "en": "That's nice. I'd like to meet her too.",
-          "terms": []
+          "terms": ["v_au"]
         }
       ]
     },
     {
       "type": "conversation",
       "title": "かいわ 4: 先生と がくせい（Teacher and Student）",
-      "context": "A teacher greeting students.",
+      "context": "A teacher greeting students on a new student's first day.",
       "lines": [
         {
           "spk": "先生",
-          "jp": "みなさん、おはようございます。",
-          "en": "Good morning, everyone.",
-          "terms": []
+          "jp": "みなさん、おはようございます。きょうは あたらしい 人が います。",
+          "en": "Good morning, everyone. Today there is a new person.",
+          "terms": ["v_sensei", "v_kyou", "k_hito", "v_atarashii"]
         },
         {
           "spk": "がくせい",
@@ -362,14 +221,14 @@
         },
         {
           "spk": "先生",
-          "jp": "きょうは あたらしい 人が います。名前を いって ください。",
-          "en": "Today there is a new person. Please say your name.",
-          "terms": ["k_hito", "v_namae"]
+          "jp": "名まえを いって ください。",
+          "en": "Please say your name.",
+          "terms": ["v_namae", "v_iu"]
         },
         {
           "spk": "あたらしい がくせい",
           "jp": "はじめまして。田中です。にほんで 生まれました。よろしく おねがいします。",
-          "en": "Nice to meet you. I'm Tanaka. I was born in Japan. Nice to meet you.",
+          "en": "Nice to meet you. I'm Tanaka. I was born in Japan. Pleased to meet you.",
           "terms": ["v_umareru"]
         },
         {
@@ -385,14 +244,14 @@
       "title": "よむ れんしゅう 1: わたしの かぞく（My Family）",
       "passage": [
         {
-          "jp": "わたしの 名前は たなかゆきです。",
+          "jp": "わたしの 名まえは たなかゆきです。",
           "en": "My name is Tanaka Yuki.",
           "terms": ["v_namae"]
         },
         {
-          "jp": "わたしの かぞくは 五人です。父と 母と あにと いもうとと わたしです。",
-          "en": "There are five people in my family. My father, mother, older brother, younger sister, and me.",
-          "terms": ["k_chichi", "k_haha"]
+          "jp": "わたしの かぞくは ごにんです。父と 母と あにと いもうとと わたしです。",
+          "en": "There are five people in my family: my father, mother, older brother, younger sister, and me.",
+          "terms": ["v_kazoku", { "counter": "nin", "n": 5 }, "k_chichi", "k_haha"]
         },
         {
           "jp": "父は 先生です。母も はたらいて います。",
@@ -402,24 +261,24 @@
         {
           "jp": "あには 男子こうこうの がくせいです。いもうとは ちいさい 女の子です。",
           "en": "My older brother is a student at a boys' high school. My younger sister is a small girl.",
-          "terms": ["v_danshi", "k_onna", "k_ko"]
+          "terms": ["v_danshi", "v_gakusei", "v_chiisai", "k_onna", "k_ko"]
         },
         {
-          "jp": "わたしは 友だちが たくさん います。いちばん いい 友だちの 名前は すずきさんです。",
+          "jp": "わたしは 友だちが たくさん います。いちばん いい 友だちの 名まえは すずきさんです。",
           "en": "I have many friends. My best friend's name is Suzuki-san.",
           "terms": ["v_tomodachi", "v_namae"]
         },
         {
-          "jp": "すずきさんは やさしい 人です。先週、いっしょに えいがを みました。",
-          "en": "Suzuki-san is a kind person. Last week, we watched a movie together.",
-          "terms": ["k_hito", "v_senshuu"]
+          "jp": "すずきさんは やさしい 人です。いっしょに べんきょうします。",
+          "en": "Suzuki-san is a kind person. We study together.",
+          "terms": ["k_hito"]
         }
       ],
       "questions": [
         {
           "q": "ゆきさんの かぞくは なん人ですか。",
-          "a": "五人です。",
-          "terms": ["k_hito"]
+          "a": "ごにんです。",
+          "terms": ["v_kazoku", "k_hito", { "counter": "nin", "n": 5 }]
         },
         {
           "q": "おとうさんは なにを して いますか。",
@@ -427,14 +286,14 @@
           "terms": ["v_sensei"]
         },
         {
+          "q": "いもうとさんは どんな 子ですか。",
+          "a": "ちいさい 女の子です。",
+          "terms": ["v_chiisai", "k_onna", "k_ko"]
+        },
+        {
           "q": "いちばん いい 友だちは だれですか。",
           "a": "すずきさんです。",
           "terms": ["v_tomodachi"]
-        },
-        {
-          "q": "先週、ゆきさんは なにを しましたか。",
-          "a": "友だちと いっしょに えいがを みました。",
-          "terms": ["v_senshuu", "v_tomodachi"]
         }
       ]
     },
@@ -445,10 +304,10 @@
         {
           "jp": "きょう、あたらしい 先生が きました。",
           "en": "Today, a new teacher came.",
-          "terms": ["v_sensei"]
+          "terms": ["v_kyou", "v_atarashii", "v_sensei", "v_kuru"]
         },
         {
-          "jp": "先生の 名前は やまもとさんです。女の人です。",
+          "jp": "先生の 名まえは やまもとさんです。女の人です。",
           "en": "The teacher's name is Yamamoto-san. She is a woman.",
           "terms": ["v_sensei", "v_namae", "k_onna", "k_hito"]
         },
@@ -458,19 +317,19 @@
           "terms": ["v_sensei", "v_umareru"]
         },
         {
-          "jp": "先生は 子どもが すきです。「みなさんの 名前を おぼえます」と いいました。",
+          "jp": "先生は 子どもが すきです。「みなさんの 名まえを おぼえます」と いいました。",
           "en": "The teacher likes children. She said, \"I will remember everyone's names.\"",
-          "terms": ["v_sensei", "k_ko", "v_namae"]
+          "terms": ["v_sensei", "k_ko", "v_namae", "v_iu"]
         },
         {
           "jp": "がくせいの 人々は うれしかったです。いい 先生だと おもいました。",
           "en": "The students were happy. They thought she was a good teacher.",
-          "terms": ["v_hitobito", "v_sensei"]
+          "terms": ["v_gakusei", "v_hitobito", "v_sensei"]
         }
       ],
       "questions": [
         {
-          "q": "あたらしい 先生の 名前は なんですか。",
+          "q": "あたらしい 先生の 名まえは なんですか。",
           "a": "やまもとさんです。",
           "terms": ["v_sensei", "v_namae"]
         },
@@ -482,12 +341,12 @@
         {
           "q": "先生は どこで 生まれましたか。",
           "a": "とうきょうで 生まれました。",
-          "terms": ["v_umareru"]
+          "terms": ["v_sensei", "v_umareru"]
         },
         {
           "q": "がくせいは どう おもいましたか。",
           "a": "いい 先生だと おもいました。",
-          "terms": ["v_sensei"]
+          "terms": ["v_gakusei", "v_sensei"]
         }
       ]
     },
@@ -519,8 +378,8 @@
         },
         {
           "kind": "mcq",
-          "q": "[名前] の よみかたは？",
-          "choices": ["めいまえ", "なまえ", "なまえ", "みょうじ"],
+          "q": "[名まえ] の よみかたは？",
+          "choices": ["なまえ", "めいまえ", "みょうじ", "なまい"],
           "answer": "なまえ",
           "terms": ["v_namae"]
         },
@@ -534,7 +393,7 @@
         {
           "kind": "mcq",
           "q": "[生まれる] の よみかたは？",
-          "choices": ["うまれる", "いきる", "せいまれる", "はえる"],
+          "choices": ["うまれる", "いきる", "なまれる", "せいまれる"],
           "answer": "うまれる",
           "terms": ["v_umareru"]
         }
@@ -548,8 +407,8 @@
         {
           "kind": "mcq",
           "q": "わたしの _______ は たなかです。",
-          "choices": ["名前", "人生", "先生"],
-          "answer": "名前",
+          "choices": ["名まえ", "人生", "先生"],
+          "answer": "名まえ",
           "terms": ["v_namae"]
         },
         {
@@ -571,32 +430,32 @@
           "q": "父と 母は わたしの _______ です。",
           "choices": ["父母", "友だち", "先生"],
           "answer": "父母",
-          "terms": ["v_fubo"]
+          "terms": ["k_chichi", "k_haha", "v_fubo"]
         },
         {
           "kind": "mcq",
           "q": "あの 男の _______ は がくせいです。",
           "choices": ["子", "人", "先"],
           "answer": "子",
-          "terms": ["k_otoko", "k_ko"]
+          "terms": ["k_otoko", "k_ko", "v_gakusei"]
         },
         {
           "kind": "mcq",
           "q": "やまもとさんは にほんごの _______ です。",
-          "choices": ["先生", "友だち", "名前"],
+          "choices": ["先生", "友だち", "名まえ"],
           "answer": "先生",
-          "terms": ["v_sensei"]
+          "terms": ["v_nihongo", "v_sensei"]
         }
       ]
     },
     {
       "type": "drills",
       "title": "ドリル 3: ぶんを つくる（Sentence Building）",
-      "instructions": "Choose the best particle or word to complete the sentence.",
+      "instructions": "Choose the best particle to complete the sentence.",
       "items": [
         {
           "kind": "mcq",
-          "q": "先生 _______ 名前は なんですか。",
+          "q": "先生 _______ 名まえは なんですか。",
           "choices": ["の", "は", "を"],
           "answer": "の",
           "terms": ["v_sensei", "v_namae"]
@@ -610,7 +469,7 @@
         },
         {
           "kind": "mcq",
-          "q": "友だち _______ いっしょに あそびます。",
+          "q": "友だち _______ いっしょに べんきょうします。",
           "choices": ["と", "は", "を"],
           "answer": "と",
           "terms": ["v_tomodachi"]
@@ -624,14 +483,14 @@
         },
         {
           "kind": "mcq",
-          "q": "_______ 、友だちに あいました。",
-          "choices": ["先週", "先月", "先生"],
-          "answer": "先週",
-          "terms": ["v_senshuu", "v_tomodachi"]
+          "q": "あたらしい 先生が がっこう _______ きました。",
+          "choices": ["に", "で", "を"],
+          "answer": "に",
+          "terms": ["v_atarashii", "v_sensei", "v_gakkou", "v_kuru"]
         },
         {
           "kind": "mcq",
-          "q": "わたし _______ 名前は たなかです。",
+          "q": "わたし _______ 名まえは たなかです。",
           "choices": ["の", "は", "が"],
           "answer": "の",
           "terms": ["v_namae"]
