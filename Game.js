@@ -428,6 +428,7 @@ window.GameModule = (function() {
     // --- Term / Glossary State ---
     let termMap = {};
     let conjugationRules = null;
+    let counterRules = null;
     let _surfaceIndex = null;
 
     function getSurfaceIndex() {
@@ -466,7 +467,7 @@ window.GameModule = (function() {
       if (!filtered.length) return text;
 
       return window.JPShared.textProcessor.processText(
-        text, filtered, termMap, conjugationRules || {}
+        text, filtered, termMap, conjugationRules || {}, counterRules
       );
     }
 
@@ -1122,15 +1123,18 @@ window.GameModule = (function() {
         dayDir = gameEntry.dir;
         playerSpritePath = manifest.shared.playerSprite;
         const dayUrl = getSharedAssetUrl(dayDir + '/day.json') + cacheBust;
-        const conjUrl = getSharedAssetUrl(manifest.globalFiles.conjugationRules) + cacheBust;
+        const conjUrl    = getSharedAssetUrl(manifest.globalFiles.conjugationRules) + cacheBust;
+        const counterUrl = getSharedAssetUrl(manifest.globalFiles.counterRules) + cacheBust;
         const glossUrls = manifest.levels.map(lvl => getSharedAssetUrl(manifest.data[lvl].glossary) + cacheBust);
         return Promise.all([
           fetch(dayUrl).then(r => r.json()),
           fetch(conjUrl).then(r => r.json()),
+          fetch(counterUrl).then(r => r.json()),
           ...glossUrls.map(url => fetch(url).then(r => r.json()))
-        ]).then(([day, conj, ...glossParts]) => {
+        ]).then(([day, conj, counter, ...glossParts]) => {
           glossParts.forEach(g => g.entries.forEach(e => { termMap[e.id] = e; }));
           conjugationRules = conj;
+          counterRules = counter;
           return day;
         });
       })
