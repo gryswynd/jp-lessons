@@ -15,11 +15,14 @@
   "data": {
     "N5": {
       "glossary": "data/N5/glossary.N5.json",
-      "lessons": [],
+      "lessons": [
+        { "id": "N5.1", "title": "People & Family", "file": "data/N5/lessons/N5.1.json" }
+      ],
       "reviews": [],
       "compose": "data/N5/compose/compose.N5.json",
       "stories": [
-        { "id": "library-book", "title": "The Library Book", "titleJp": "図書館の本", "dir": "data/N5/stories/library-book" }
+        { "id": "library-book", "title": "The Library Book", "titleJp": "図書館の本", "dir": "data/N5/stories/library-book" },
+        { "id": "my-family", "title": "My Family", "titleJp": "わたしの かぞく", "dir": "data/N5/stories/my-family" }
       ],
       "game": [
         { "id": "day-01-home", "title": "House Adventure", "titleJp": "いえ", "dir": "data/N5/game/day-01-home" }
