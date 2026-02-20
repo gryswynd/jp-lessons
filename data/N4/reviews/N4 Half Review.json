@@ -334,7 +334,8 @@
               "terms": [
                 "k_chichi",
                 "k_haha",
-                "k_ani"
+                "k_ani",
+                { "counter": "nin", "n": 4 }
               ]
             },
             {
@@ -471,6 +472,7 @@
               "en": "What time does the movie start?",
               "terms": [
                 "v_eiga",
+                "v_nanji",
                 "v_hajimaru"
               ]
             },
@@ -479,6 +481,9 @@
               "jp": "午後 二時に 始まって、四時に 終わります。",
               "en": "Starts at 2 PM, ends at 4 PM.",
               "terms": [
+                "v_gogo",
+                { "counter": "ji", "n": 2 },
+                { "counter": "ji", "n": 4 },
                 "v_owaru"
               ]
             },
