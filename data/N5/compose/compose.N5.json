@@ -1,0 +1,21 @@
+{
+  "contentVersion": "1.0.0",
+  "level": "N5",
+  "prompts": [
+    {
+      "id": "my-family",
+      "title": "My Family",
+      "titleJp": "わたしの かぞく",
+      "emoji": "👨‍👩‍👧‍👦",
+      "lessons": ["N5.1"],
+      "scenario": "Describe your family. Say how many people there are, and tell us about your father and mother. What do they do?",
+      "hint": "わたしの かぞくは… 父は… 母は…",
+      "targets": [
+        { "id": "k_chichi", "count": 1 },
+        { "id": "k_haha", "count": 1 },
+        { "id": "v_fubo", "count": 1 }
+      ],
+      "helpers": ["v_sensei", "k_ko", "v_namae", "v_tomodachi"]
+    }
+  ]
+}
