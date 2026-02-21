@@ -29,17 +29,17 @@
         {
           "jp": "あなたの 名まえは なんですか。",
           "en": "What is your name?",
-          "terms": ["v_namae"]
+          "terms": ["v_namae", "k_nani"]
         },
         {
           "jp": "あなたの かぞくは なん人ですか。",
           "en": "How many people are in your family?",
-          "terms": ["v_kazoku", "k_hito"]
+          "terms": ["v_kazoku", "k_nani", "k_hito"]
         },
         {
           "jp": "先生の 名まえは なんですか。",
           "en": "What is your teacher's name?",
-          "terms": ["v_sensei", "v_namae"]
+          "terms": ["v_sensei", "v_namae", "k_nani"]
         }
       ]
     },
@@ -94,31 +94,31 @@
           "spk": "A",
           "jp": "はじめまして。わたしの 名まえは たなかです。",
           "en": "Nice to meet you. My name is Tanaka.",
-          "terms": ["v_namae"]
+          "terms": ["p_hajimemashite", "v_namae"]
         },
         {
           "spk": "B",
           "jp": "はじめまして。やまかわです。よろしく おねがいします。",
           "en": "Nice to meet you. I'm Yamakawa. Pleased to meet you.",
-          "terms": []
+          "terms": ["p_hajimemashite", "p_yoroshiku"]
         },
         {
           "spk": "A",
           "jp": "やまかわさんは 先生ですか。",
           "en": "Are you a teacher, Yamakawa-san?",
-          "terms": ["v_sensei"]
+          "terms": ["v_san", "v_sensei"]
         },
         {
           "spk": "B",
           "jp": "いいえ、先生では ありません。がくせいです。",
           "en": "No, I'm not a teacher. I'm a student.",
-          "terms": ["v_sensei", "v_gakusei"]
+          "terms": ["v_iie", "v_sensei", "g_dewaarimasen", "v_gakusei"]
         },
         {
           "spk": "A",
           "jp": "そうですか。わたしも がくせいです。",
           "en": "I see. I'm also a student.",
-          "terms": ["v_gakusei"]
+          "terms": ["p_soudesuka", "v_gakusei"]
         }
       ]
     },
@@ -131,19 +131,19 @@
           "spk": "A",
           "jp": "かぞくは なん人ですか。",
           "en": "How many people are in your family?",
-          "terms": ["v_kazoku", "k_hito"]
+          "terms": ["v_kazoku", "k_nani", "k_hito"]
         },
         {
           "spk": "B",
           "jp": "よにんです。父と 母と あねと わたしです。",
           "en": "Four. My father, mother, older sister, and me.",
-          "terms": [{ "counter": "nin", "n": 4 }, "k_chichi", "k_haha"]
+          "terms": [{ "counter": "nin", "n": 4 }, "k_chichi", "k_haha", "k_ane"]
         },
         {
           "spk": "A",
           "jp": "おとうさんは なにを しますか。",
           "en": "What does your father do?",
-          "terms": []
+          "terms": ["v_otousan", "k_nani", { "id": "v_suru", "form": "polite_masu" }]
         },
         {
           "spk": "B",
@@ -155,13 +155,13 @@
           "spk": "A",
           "jp": "おかあさんは？",
           "en": "And your mother?",
-          "terms": []
+          "terms": ["v_okaasan"]
         },
         {
           "spk": "B",
           "jp": "母も 先生です。父母は おなじ がっこうで はたらいて います。",
           "en": "My mother is also a teacher. My parents work at the same school.",
-          "terms": ["k_haha", "v_sensei", "v_fubo", "v_gakkou"]
+          "terms": ["k_haha", "v_sensei", "v_fubo", "v_onaji", "v_gakkou", { "id": "v_hataraku", "form": "te_form" }, { "id": "v_iru", "form": "polite_masu" }]
         }
       ]
     },
@@ -174,13 +174,13 @@
           "spk": "A",
           "jp": "友だちは どんな 人ですか。",
           "en": "What kind of person is your friend?",
-          "terms": ["v_tomodachi", "k_hito"]
+          "terms": ["v_tomodachi", "v_donna", "k_hito"]
         },
         {
           "spk": "B",
           "jp": "やさしい 人です。名まえは すずきさんです。",
           "en": "A kind person. Their name is Suzuki-san.",
-          "terms": ["k_hito", "v_namae"]
+          "terms": ["v_yasashii", "k_hito", "v_namae", "v_san"]
         },
         {
           "spk": "A",
@@ -192,7 +192,7 @@
           "spk": "B",
           "jp": "女の人です。とても いい 友だちです。",
           "en": "A woman. She is a really good friend.",
-          "terms": ["k_onna", "k_hito", "v_tomodachi"]
+          "terms": ["k_onna", "k_hito", "v_totemo", "v_tomodachi"]
         },
         {
           "spk": "A",
@@ -211,31 +211,31 @@
           "spk": "先生",
           "jp": "みなさん、おはようございます。きょうは あたらしい 人が います。",
           "en": "Good morning, everyone. Today there is a new person.",
-          "terms": ["v_sensei", "v_kyou", "k_hito", "v_atarashii"]
+          "terms": ["v_minasan", "p_ohayou", "v_kyou", "v_atarashii", "k_hito", { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "spk": "がくせい",
           "jp": "先生、おはようございます。",
           "en": "Good morning, teacher.",
-          "terms": ["v_sensei"]
+          "terms": ["v_sensei", "p_ohayou"]
         },
         {
           "spk": "先生",
           "jp": "名まえを いって ください。",
           "en": "Please say your name.",
-          "terms": ["v_namae", "v_iu"]
+          "terms": ["v_namae", { "id": "v_iu", "form": "te_form" }]
         },
         {
           "spk": "あたらしい がくせい",
           "jp": "はじめまして。田中です。にほんで 生まれました。よろしく おねがいします。",
           "en": "Nice to meet you. I'm Tanaka. I was born in Japan. Pleased to meet you.",
-          "terms": ["v_umareru"]
+          "terms": ["p_hajimemashite", "v_nihon", { "id": "v_umareru", "form": "polite_past" }, "p_yoroshiku"]
         },
         {
           "spk": "先生",
           "jp": "田中さん、ようこそ。友だちを たくさん つくって くださいね。",
           "en": "Tanaka-san, welcome. Please make lots of friends.",
-          "terms": ["v_tomodachi"]
+          "terms": ["v_san", "p_youkoso", "v_tomodachi", "v_takusan", { "id": "v_tsukuru", "form": "te_form" }]
         }
       ]
     },
@@ -251,49 +251,49 @@
         {
           "jp": "わたしの かぞくは ごにんです。父と 母と あにと いもうとと わたしです。",
           "en": "There are five people in my family: my father, mother, older brother, younger sister, and me.",
-          "terms": ["v_kazoku", { "counter": "nin", "n": 5 }, "k_chichi", "k_haha"]
+          "terms": ["v_kazoku", { "counter": "nin", "n": 5 }, "k_chichi", "k_haha", "k_ani", "k_imouto"]
         },
         {
           "jp": "父は 先生です。母も はたらいて います。",
           "en": "My father is a teacher. My mother also works.",
-          "terms": ["k_chichi", "v_sensei", "k_haha"]
+          "terms": ["k_chichi", "v_sensei", "k_haha", { "id": "v_hataraku", "form": "te_form" }, { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "jp": "あには 男子こうこうの がくせいです。いもうとは ちいさい 女の子です。",
           "en": "My older brother is a student at a boys' high school. My younger sister is a small girl.",
-          "terms": ["v_danshi", "v_gakusei", "v_chiisai", "k_onna", "k_ko"]
+          "terms": ["k_ani", "v_danshi", "v_koukou", "v_gakusei", "k_imouto", "v_chiisai", "k_onna", "k_ko"]
         },
         {
           "jp": "わたしは 友だちが たくさん います。いちばん いい 友だちの 名まえは すずきさんです。",
           "en": "I have many friends. My best friend's name is Suzuki-san.",
-          "terms": ["v_tomodachi", "v_namae"]
+          "terms": ["v_tomodachi", "v_takusan", { "id": "v_iru", "form": "polite_masu" }, "v_ichiban", "v_namae", "v_san"]
         },
         {
           "jp": "すずきさんは やさしい 人です。いっしょに べんきょうします。",
           "en": "Suzuki-san is a kind person. We study together.",
-          "terms": ["k_hito"]
+          "terms": ["v_san", "v_yasashii", "k_hito", "v_issho", "v_benkyou", { "id": "v_suru", "form": "polite_masu" }]
         }
       ],
       "questions": [
         {
           "q": "ゆきさんの かぞくは なん人ですか。",
           "a": "ごにんです。",
-          "terms": ["v_kazoku", "k_hito", { "counter": "nin", "n": 5 }]
+          "terms": ["v_kazoku", "k_nani", "k_hito", { "counter": "nin", "n": 5 }]
         },
         {
           "q": "おとうさんは なにを して いますか。",
           "a": "先生です。",
-          "terms": ["v_sensei"]
+          "terms": ["v_otousan", "k_nani", "v_sensei"]
         },
         {
           "q": "いもうとさんは どんな 子ですか。",
           "a": "ちいさい 女の子です。",
-          "terms": ["v_chiisai", "k_onna", "k_ko"]
+          "terms": ["k_imouto", "v_donna", "k_ko", "v_chiisai", "k_onna"]
         },
         {
           "q": "いちばん いい 友だちは だれですか。",
           "a": "すずきさんです。",
-          "terms": ["v_tomodachi"]
+          "terms": ["v_ichiban", "v_tomodachi", "v_dare", "v_san"]
         }
       ]
     },
@@ -304,49 +304,49 @@
         {
           "jp": "きょう、あたらしい 先生が きました。",
           "en": "Today, a new teacher came.",
-          "terms": ["v_kyou", "v_atarashii", "v_sensei", "v_kuru"]
+          "terms": ["v_kyou", "v_atarashii", "v_sensei", { "id": "v_kuru", "form": "polite_past" }]
         },
         {
           "jp": "先生の 名まえは やまもとさんです。女の人です。",
           "en": "The teacher's name is Yamamoto-san. She is a woman.",
-          "terms": ["v_sensei", "v_namae", "k_onna", "k_hito"]
+          "terms": ["v_sensei", "v_namae", "v_san", "k_onna", "k_hito"]
         },
         {
           "jp": "やまもと先生は とうきょうで 生まれました。",
           "en": "Yamamoto-sensei was born in Tokyo.",
-          "terms": ["v_sensei", "v_umareru"]
+          "terms": ["v_sensei", "v_toukyou", { "id": "v_umareru", "form": "polite_past" }]
         },
         {
-          "jp": "先生は 子どもが すきです。「みなさんの 名まえを おぼえます」と いいました。",
-          "en": "The teacher likes children. She said, \"I will remember everyone's names.\"",
-          "terms": ["v_sensei", "k_ko", "v_namae", "v_iu"]
+          "jp": "先生は 子どもが すきです。「みなさんの 名まえを かんがえて おぼえます」と いいました。",
+          "en": "The teacher likes children. She said, \"I will think about and remember everyone's names.\"",
+          "terms": ["v_sensei", "k_ko", "v_suki", "v_minasan", "v_namae", { "id": "v_kangaeru", "form": "te_form" }, { "id": "v_iu", "form": "polite_past" }]
         },
         {
           "jp": "がくせいの 人々は うれしかったです。いい 先生だと おもいました。",
           "en": "The students were happy. They thought she was a good teacher.",
-          "terms": ["v_gakusei", "v_hitobito", "v_sensei"]
+          "terms": ["v_gakusei", "v_hitobito", { "id": "v_ureshii", "form": "past" }, "v_sensei", { "id": "v_omou", "form": "polite_past" }]
         }
       ],
       "questions": [
         {
           "q": "あたらしい 先生の 名まえは なんですか。",
           "a": "やまもとさんです。",
-          "terms": ["v_sensei", "v_namae"]
+          "terms": ["v_atarashii", "v_sensei", "v_namae", "k_nani", "v_san"]
         },
         {
           "q": "先生は 男の人ですか、女の人ですか。",
           "a": "女の人です。",
-          "terms": ["k_otoko", "k_hito", "k_onna"]
+          "terms": ["v_sensei", "k_otoko", "k_hito", "k_onna"]
         },
         {
           "q": "先生は どこで 生まれましたか。",
           "a": "とうきょうで 生まれました。",
-          "terms": ["v_sensei", "v_umareru"]
+          "terms": ["v_sensei", "v_doko", { "id": "v_umareru", "form": "polite_past" }, "v_toukyou"]
         },
         {
           "q": "がくせいは どう おもいましたか。",
           "a": "いい 先生だと おもいました。",
-          "terms": ["v_gakusei", "v_sensei"]
+          "terms": ["v_gakusei", "v_dou", { "id": "v_omou", "form": "polite_past" }, "v_sensei"]
         }
       ]
     },
@@ -416,14 +416,14 @@
           "q": "_______ は やさしい 人です。",
           "choices": ["友だち", "男子", "父母"],
           "answer": "友だち",
-          "terms": ["v_tomodachi", "k_hito"]
+          "terms": ["v_tomodachi", "v_yasashii", "k_hito"]
         },
         {
           "kind": "mcq",
           "q": "わたしは にほんで _______。",
           "choices": ["生まれました", "生きました", "先生です"],
           "answer": "生まれました",
-          "terms": ["v_umareru"]
+          "terms": ["v_nihon", { "id": "v_umareru", "form": "polite_past" }]
         },
         {
           "kind": "mcq",
@@ -437,14 +437,14 @@
           "q": "あの 男の _______ は がくせいです。",
           "choices": ["子", "人", "先"],
           "answer": "子",
-          "terms": ["k_otoko", "k_ko", "v_gakusei"]
+          "terms": ["v_ano", "k_otoko", "k_ko", "v_gakusei"]
         },
         {
           "kind": "mcq",
           "q": "やまもとさんは にほんごの _______ です。",
           "choices": ["先生", "友だち", "名まえ"],
           "answer": "先生",
-          "terms": ["v_nihongo", "v_sensei"]
+          "terms": ["v_san", "v_nihongo", "v_sensei"]
         }
       ]
     },
@@ -458,35 +458,35 @@
           "q": "先生 _______ 名まえは なんですか。",
           "choices": ["の", "は", "を"],
           "answer": "の",
-          "terms": ["v_sensei", "v_namae"]
+          "terms": ["v_sensei", "v_namae", "k_nani"]
         },
         {
           "kind": "mcq",
           "q": "あの 人 _______ 女の人です。",
           "choices": ["は", "を", "に"],
           "answer": "は",
-          "terms": ["k_hito", "k_onna"]
+          "terms": ["v_ano", "k_hito", "k_onna"]
         },
         {
           "kind": "mcq",
           "q": "友だち _______ いっしょに べんきょうします。",
           "choices": ["と", "は", "を"],
           "answer": "と",
-          "terms": ["v_tomodachi"]
+          "terms": ["v_tomodachi", "v_issho", "v_benkyou", { "id": "v_suru", "form": "polite_masu" }]
         },
         {
           "kind": "mcq",
           "q": "母は とうきょう _______ 生まれました。",
           "choices": ["で", "に", "を"],
           "answer": "で",
-          "terms": ["k_haha", "v_umareru"]
+          "terms": ["k_haha", "v_toukyou", { "id": "v_umareru", "form": "polite_past" }]
         },
         {
           "kind": "mcq",
           "q": "あたらしい 先生が がっこう _______ きました。",
           "choices": ["に", "で", "を"],
           "answer": "に",
-          "terms": ["v_atarashii", "v_sensei", "v_gakkou", "v_kuru"]
+          "terms": ["v_atarashii", "v_sensei", "v_gakkou", { "id": "v_kuru", "form": "polite_past" }]
         },
         {
           "kind": "mcq",
