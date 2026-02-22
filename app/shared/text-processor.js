@@ -260,6 +260,10 @@
           matchedForm = t.surface;
         } else if (t.reading && html.indexOf(t.reading) !== -1) {
           matchedForm = t.reading; // fallback: match hiragana reading
+        } else if (t.matches) {
+          for (var i = 0; i < t.matches.length; i++) { // fallback: match alternate forms (e.g. mixed kanji/kana before full kanji is taught)
+            if (html.indexOf(t.matches[i]) !== -1) { matchedForm = t.matches[i]; break; }
+          }
         }
         if (matchedForm) {
           var span = '<span class="jp-term" onclick="window.JP_OPEN_TERM(\'' + t.id + '\', true)">' + matchedForm + '</span>';
