@@ -12,6 +12,9 @@ window.LessonModule = {
     let showEN = false; // Default OFF
     let CONJUGATION_RULES = null;
     let COUNTER_RULES = null;
+    let allLevelsData = null;     // [{ level, levelNum, lessons[] }]
+    let currentLevelId = null;    // e.g. "N4"
+    let currentLevelLessons = null; // lessons[] for selected level
 
     // --- Setup UI Container (Mobile Look) ---
     container.innerHTML = '';
@@ -89,6 +92,15 @@ window.LessonModule = {
           .jp-menu-item:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(78,84,200,0.15); border-color: var(--primary); }
           .jp-menu-id { font-weight: 900; color: var(--primary); font-size: 1.1rem; }
           .jp-menu-name { font-size: 0.85rem; color: #a4b0be; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+          .jp-level-card {
+            background: #fff; padding: 28px 24px; border-radius: 20px; cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid rgba(0,0,0,0.02); text-align: left;
+          }
+          .jp-level-card:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(78,84,200,0.15); border-color: var(--primary); }
+          .jp-level-name { font-weight: 900; font-size: 1.4rem; color: var(--primary); margin-bottom: 6px; }
+          .jp-level-count { font-size: 0.85rem; color: #a4b0be; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
 
           .jp-card { background: #fff; border-radius: 16px; padding: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 20px; border: 1px solid rgba(0,0,0,0.02); }
           .jp-intro-card { text-align: center; padding: 40px 20px; justify-content: center; height: 100%; display: flex; flex-direction: column; }
@@ -307,37 +319,53 @@ window.LessonModule = {
 
     // --- Logic ---
     async function fetchLessonList() {
-        root.innerHTML = `<div class="jp-header"><div class="jp-title">Library</div><button class="jp-exit-btn">Exit</button></div><div class="jp-body" style="text-align:center; justify-content:center; color:#888;">Loading lessons...</div>`;
+        root.innerHTML = `<div class="jp-header"><div class="jp-title">Library</div><button class="jp-exit-btn">Exit</button></div><div class="jp-body" style="text-align:center; justify-content:center; color:#888;">Loading...</div>`;
         root.querySelector('.jp-exit-btn').onclick = exitCallback;
 
         try {
           const manifest = await window.getManifest(REPO_CONFIG);
-          const lessons = [];
+          const levelsData = [];
           (manifest.levels || []).forEach(level => {
             const levelData = manifest.data && manifest.data[level];
             if (!levelData || !levelData.lessons) return;
-            levelData.lessons.forEach(lesson => {
-              lessons.push({ id: lesson.id, title: lesson.title, file: lesson.file });
-            });
-          });
-
-          // REVERSED SORT: Newest (Highest Number) First
-          lessons.sort((a, b) => {
+            const lessons = levelData.lessons.map(l => ({ id: l.id, title: l.title, file: l.file }));
+            // Sort lessons within level: highest lesson number first
+            lessons.sort((a, b) => {
               const partsA = a.id.replace('N','').split('.').map(Number);
               const partsB = b.id.replace('N','').split('.').map(Number);
-              if (partsA[0] !== partsB[0]) return partsB[0] - partsA[0];
               return partsB[1] - partsA[1];
+            });
+            levelsData.push({ level, levelNum: parseInt(level.replace('N','')), lessons });
           });
+          // Sort levels: N4 first (lower JLPT number = more advanced = top of list)
+          levelsData.sort((a, b) => a.levelNum - b.levelNum);
 
-          console.log('[Lesson] Found', lessons.length, 'lessons from manifest');
-          renderMenu(lessons);
+          console.log('[Lesson] Found levels:', levelsData.map(l => l.level));
+          allLevelsData = levelsData;
+          renderLevelPicker();
         } catch (err) {
           root.innerHTML = `<div class="jp-body" style="color:#ff4757; text-align:center; padding:20px; justify-content:center;"><h3>Error</h3><p>${err.message}</p><button class="jp-nav-btn next" onclick="exitCallback()">Back to Main Menu</button></div>`;
         }
     }
 
-    function renderMenu(lessons) {
-        root.innerHTML = `<div class="jp-header"><div class="jp-title">Select Lesson</div><button class="jp-exit-btn">Exit</button></div><div class="jp-body"><div class="jp-menu-grid" id="jp-menu-container"></div></div>`;
+    function renderLevelPicker() {
+        root.innerHTML = `<div class="jp-header"><div class="jp-title">Library</div><button class="jp-exit-btn">Exit</button></div><div class="jp-body"><div class="jp-menu-grid" id="jp-level-container"></div></div>`;
+        root.querySelector('.jp-exit-btn').onclick = exitCallback;
+        const container = document.getElementById('jp-level-container');
+        allLevelsData.forEach(({ level, levelNum, lessons }) => {
+          const card = el('div', 'jp-level-card');
+          card.innerHTML = `<div class="jp-level-name">Nihongo Level ${levelNum}</div><div class="jp-level-count">${lessons.length} lesson${lessons.length !== 1 ? 's' : ''}</div>`;
+          card.onclick = () => renderMenu(level, lessons);
+          container.appendChild(card);
+        });
+    }
+
+    function renderMenu(level, lessons) {
+        currentLevelId = level;
+        currentLevelLessons = lessons;
+        const levelNum = level.replace('N', '');
+        root.innerHTML = `<div class="jp-header"><button class="jp-back-btn">← Levels</button><div class="jp-title">Nihongo Level ${levelNum}</div><button class="jp-exit-btn">Exit</button></div><div class="jp-body"><div class="jp-menu-grid" id="jp-menu-container"></div></div>`;
+        root.querySelector('.jp-back-btn').onclick = () => renderLevelPicker();
         root.querySelector('.jp-exit-btn').onclick = exitCallback;
         const menuEl = document.getElementById('jp-menu-container');
         lessons.forEach(lesson => {
@@ -350,7 +378,7 @@ window.LessonModule = {
 
     async function loadLesson(filePath) {
         root.innerHTML = `<div class="jp-header"><button class="jp-back-btn">← List</button><div class="jp-title">Loading...</div><button class="jp-exit-btn">Exit</button></div><div class="jp-progress-container"><div class="jp-progress-bar"></div></div><div class="jp-body"></div><div class="jp-footer"><button class="jp-nav-btn prev">Prev</button><button class="jp-nav-btn next">Next</button></div>`;
-        root.querySelector('.jp-back-btn').onclick = () => fetchLessonList();
+        root.querySelector('.jp-back-btn').onclick = () => renderMenu(currentLevelId, currentLevelLessons);
         root.querySelector('.jp-exit-btn').onclick = exitCallback;
 
         try {
@@ -383,7 +411,7 @@ window.LessonModule = {
                  showEN = false; // Reset English to OFF
                  renderCurrentStep();
              }
-             else { fetchLessonList(); }
+             else { renderMenu(currentLevelId, currentLevelLessons); }
           };
           renderCurrentStep();
         } catch (err) {
