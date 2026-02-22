@@ -70,7 +70,10 @@
           "en": "Is there a factory near your home?",
           "terms": [
             "k_ie",
-            "v_kinjo",
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            },
             "v_koujou",
             {
               "id": "v_aru",
@@ -469,7 +472,10 @@
           "terms": [
             "k_watashi",
             "k_ie",
-            "v_kinjo",
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            },
             "v_chiisai",
             "k_mise",
             {
@@ -594,7 +600,7 @@
             },
             {
               "id": "v_iru",
-              "form": "past"
+              "form": "plain_past"
             },
             "k_ie",
             {
@@ -622,11 +628,10 @@
           ]
         },
         {
-          "jp": "洗濯は 休止せずに、毎週 します。",
-          "en": "Laundry I do every week without pausing.",
+          "jp": "洗濯は 毎週 します。",
+          "en": "I do laundry every week.",
           "terms": [
             "v_sentaku",
-            "v_kyuushi",
             "v_maishuu",
             {
               "id": "v_suru",
@@ -658,12 +663,13 @@
           ]
         },
         {
-          "q": "洗濯は 毎週 しますか。",
-          "a": "はい、毎週 します。",
+          "q": "いつ 洗濯を しますか。",
+          "a": "毎週 します。",
           "terms": [
+            "v_itsu",
             "v_sentaku",
-            "v_maishuu",
-            "v_suru"
+            "v_suru",
+            "v_maishuu"
           ]
         }
       ]
