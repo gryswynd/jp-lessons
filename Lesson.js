@@ -96,7 +96,7 @@ window.LessonModule = {
           .jp-level-card {
             background: #fff; padding: 28px 24px; border-radius: 20px; cursor: pointer;
             box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s;
-            border: 1px solid rgba(0,0,0,0.02); text-align: left;
+            border: 1px solid rgba(0,0,0,0.02); text-align: center;
           }
           .jp-level-card:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(78,84,200,0.15); border-color: var(--primary); }
           .jp-level-name { font-weight: 900; font-size: 1.4rem; color: var(--primary); margin-bottom: 6px; }
@@ -354,7 +354,7 @@ window.LessonModule = {
         const container = document.getElementById('jp-level-container');
         allLevelsData.forEach(({ level, levelNum, lessons }) => {
           const card = el('div', 'jp-level-card');
-          card.innerHTML = `<div class="jp-level-name">Nihongo Level ${levelNum}</div><div class="jp-level-count">${lessons.length} lesson${lessons.length !== 1 ? 's' : ''}</div>`;
+          card.innerHTML = `<div class="jp-level-name">JLPT Level N${levelNum}</div><div class="jp-level-count">${lessons.length} lesson${lessons.length !== 1 ? 's' : ''}</div>`;
           card.onclick = () => renderMenu(level, lessons);
           container.appendChild(card);
         });
@@ -364,7 +364,7 @@ window.LessonModule = {
         currentLevelId = level;
         currentLevelLessons = lessons;
         const levelNum = level.replace('N', '');
-        root.innerHTML = `<div class="jp-header"><button class="jp-back-btn">← Levels</button><div class="jp-title">Nihongo Level ${levelNum}</div><button class="jp-exit-btn">Exit</button></div><div class="jp-body"><div class="jp-menu-grid" id="jp-menu-container"></div></div>`;
+        root.innerHTML = `<div class="jp-header"><button class="jp-back-btn">← Levels</button><div class="jp-title">JLPT Level N${levelNum}</div><button class="jp-exit-btn">Exit</button></div><div class="jp-body"><div class="jp-menu-grid" id="jp-menu-container"></div></div>`;
         root.querySelector('.jp-back-btn').onclick = () => renderLevelPicker();
         root.querySelector('.jp-exit-btn').onclick = exitCallback;
         const menuEl = document.getElementById('jp-menu-container');
