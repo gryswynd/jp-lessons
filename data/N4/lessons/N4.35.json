@@ -139,8 +139,7 @@
             "v_tomeru",
             "v_tomaru",
             "v_kyuushi",
-            "v_chuushi",
-            "v_kinshi"
+            "v_chuushi"
           ]
         },
         {
@@ -189,8 +188,7 @@
             "v_tomeru",
             "v_tomaru",
             "v_kyuushi",
-            "v_chuushi",
-            "v_kinshi"
+            "v_chuushi"
           ]
         },
         {
@@ -537,7 +535,7 @@
           "terms": [
             "v_shujin",
             "k_nani",
-            "v_uru",
+            { "id": "v_uru", "form": "te_form" },
             "v_yasai"
           ]
         },
@@ -547,7 +545,7 @@
           "terms": [
             "v_dare",
             "k_mise",
-            "v_kuru",
+            { "id": "v_kuru", "form": "polite_masu" },
             "v_kinjo",
             "v_kokumin"
           ]
@@ -561,8 +559,8 @@
             "v_shujin",
             "k_nani",
             "v_tearai",
-            "v_suru",
-            "v_kaeru"
+            { "id": "v_suru", "form": "te_form" },
+            { "id": "v_kaeru", "form": "polite_masu" }
           ]
         }
       ]
@@ -639,6 +637,7 @@
             "v_naze",
             "v_shiai",
             "v_chuushi",
+            { "id": "v_naru", "form": "polite_mashita" },
             "k_ame"
           ]
         },
@@ -648,9 +647,9 @@
           "terms": [
             "k_ie",
             "k_nani",
-            "v_suru",
+            { "id": "v_suru", "form": "polite_mashita" },
             "k_kuruma",
-            "v_arau"
+            { "id": "v_arau", "form": "polite_mashita" }
           ]
         },
         {
@@ -661,7 +660,7 @@
             "k_ushiro",
             "k_nani",
             "v_tearai",
-            "v_suru"
+            { "id": "v_suru", "form": "polite_mashita" }
           ]
         }
       ]
@@ -680,10 +679,7 @@
             "nushijin",
             "shujou"
           ],
-          "answer": "shujin",
-          "terms": [
-            "v_shujin"
-          ]
+          "answer": "shujin"
         },
         {
           "kind": "mcq",
@@ -694,10 +690,7 @@
             "nakadomari",
             "chuuri"
           ],
-          "answer": "chuushi",
-          "terms": [
-            "v_chuushi"
-          ]
+          "answer": "chuushi"
         },
         {
           "kind": "mcq",
@@ -708,10 +701,7 @@
             "minzou",
             "minrui"
           ],
-          "answer": "minzoku",
-          "terms": [
-            "v_minzoku"
-          ]
+          "answer": "minzoku"
         },
         {
           "kind": "mcq",
@@ -722,10 +712,7 @@
             "fuku",
             "sou"
           ],
-          "answer": "arau",
-          "terms": [
-            "v_arau"
-          ]
+          "answer": "arau"
         },
         {
           "kind": "mcq",
@@ -736,10 +723,7 @@
             "todomu",
             "yameru"
           ],
-          "answer": "tomaru",
-          "terms": [
-            "v_tomaru"
-          ]
+          "answer": "tomaru"
         }
       ]
     },
@@ -754,7 +738,7 @@
           "choices": [
             "中止に なりました",
             "休止して います",
-            "禁止です",
+            "止まりました",
             "止めました"
           ],
           "answer": "中止に なりました",
@@ -806,7 +790,7 @@
           "choices": [
             "洗います",
             "止めます",
-            "禁止します",
+            "止まります",
             "休止します"
           ],
           "answer": "洗います",
