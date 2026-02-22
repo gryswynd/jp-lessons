@@ -298,15 +298,15 @@
       "titleJp": "民の地区",
       "emoji": "🏡",
       "lessons": ["N4.35"],
-      "scenario": "Describe a quiet residential neighbourhood where people of different backgrounds live side by side. Write about the private houses, the diverse community, and one rule or prohibition that keeps the area peaceful.",
+      "scenario": "Write a postcard from a peaceful district full of private houses. Describe what makes the community special — the diverse ethnic groups, the citizens you have met, and the sense of belonging among the people.",
       "hint": "例: この地区には民家が多いです。いろいろな民族の...",
       "targets": [
         { "id": "v_minka", "count": 1 },
         { "id": "v_minzoku", "count": 1 },
         { "id": "v_kokumin", "count": 1 },
-        { "id": "v_kinshi", "count": 1 }
+        { "id": "v_tami", "count": 1 }
       ],
-      "helpers": ["v_tami", "v_omoni", "v_chuushi", "v_kyuushi"]
+      "helpers": ["v_omoni", "v_chuushi", "v_kyuushi", "v_shujin"]
     },
     {
       "id": "cancelled-commute",
