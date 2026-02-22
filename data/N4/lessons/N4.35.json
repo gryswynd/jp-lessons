@@ -165,8 +165,7 @@
             "k_arau",
             "v_arau",
             "v_tearai",
-            "v_sensha",
-            "v_sentaku"
+            "v_sensha"
           ]
         }
       ]
@@ -208,8 +207,7 @@
           "items": [
             "v_arau",
             "v_tearai",
-            "v_sensha",
-            "v_sentaku"
+            "v_sensha"
           ]
         }
       ]
@@ -217,36 +215,34 @@
     {
       "type": "conversation",
       "title": "Conversation Practice 1（会話）: The Shop Owner",
-      "context": "Asking about who runs a local shop.",
+      "context": "A customer steps into a local shop.",
       "lines": [
         {
           "spk": "A",
-          "jp": "この 店の 主人は どちらですか。",
-          "en": "Where is the owner of this shop?",
+          "jp": "この 店の 主人は だれですか。",
+          "en": "Who is the owner of this shop?",
           "terms": [
             "k_mise",
-            "v_shujin"
+            "v_shujin",
+            "v_dare"
           ]
         },
         {
           "spk": "B",
-          "jp": "主人は 今 外に います。",
-          "en": "The owner is outside right now.",
+          "jp": "はい、私が 主人です。",
+          "en": "Yes, I am the owner.",
           "terms": [
-            "v_shujin",
-            "k_ima",
-            "k_soto",
-            {
-              "id": "v_iru",
-              "form": "polite_masu"
-            }
+            "v_hai",
+            "k_watashi",
+            "v_shujin"
           ]
         },
         {
           "spk": "A",
-          "jp": "そうですか。主に 何を 売って いますか。",
-          "en": "I see. What do you mainly sell?",
+          "jp": "この 店は 主に 何を 売って いますか。",
+          "en": "What does this shop mainly sell?",
           "terms": [
+            "k_mise",
             "v_omoni",
             "k_nani",
             {
@@ -261,12 +257,11 @@
         },
         {
           "spk": "B",
-          "jp": "主に 野菜と 食べ物を 売って います。",
-          "en": "We mainly sell vegetables and food.",
+          "jp": "主に 野菜を 売って います。",
+          "en": "We mainly sell vegetables.",
           "terms": [
             "v_omoni",
             "v_yasai",
-            "v_tabemono",
             {
               "id": "v_uru",
               "form": "te_form"
@@ -375,19 +370,19 @@
         },
         {
           "spk": "A",
-          "jp": "民家は 古いですか、新しいですか。",
-          "en": "Are the private houses old, or new?",
+          "jp": "いい 地区ですね。",
+          "en": "What a nice district.",
           "terms": [
-            "v_minka",
-            "v_furui",
-            "v_atarashii"
+            "v_ii",
+            "v_chiku"
           ]
         },
         {
           "spk": "B",
-          "jp": "古い 民家も 新しい 建物も あります。",
-          "en": "There are both old private houses and new buildings.",
+          "jp": "はい。古い 民家も 新しい 建物も あります。",
+          "en": "Yes. There are both old private houses and new buildings.",
           "terms": [
+            "v_hai",
             "v_furui",
             "v_minka",
             "v_atarashii",
@@ -440,6 +435,7 @@
           "jp": "先に 手洗いを したいです。",
           "en": "I want to wash my hands first.",
           "terms": [
+            "k_saki",
             "v_tearai",
             {
               "id": "v_suru",
@@ -516,19 +512,19 @@
           ]
         },
         {
-          "jp": "夜、主人は 店を 閉めて 手洗いを します。",
-          "en": "In the evening, the owner closes the shop and washes their hands.",
+          "jp": "仕事の 後、主人は 手洗いを して から 帰ります。",
+          "en": "After work, the owner washes their hands and then goes home.",
           "terms": [
-            "k_yoru",
+            "v_shigoto",
+            "k_ushiro",
             "v_shujin",
-            "k_mise",
-            {
-              "id": "v_shimeru",
-              "form": "te_form"
-            },
             "v_tearai",
             {
               "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kaeru",
               "form": "polite_masu"
             }
           ]
@@ -557,16 +553,16 @@
           ]
         },
         {
-          "q": "夜、主人は 何を しますか。",
-          "a": "店を 閉めて 手洗いを する。",
+          "q": "仕事の 後、主人は 何を しますか。",
+          "a": "手洗いを して から 帰ります。",
           "terms": [
-            "k_yoru",
+            "v_shigoto",
+            "k_ushiro",
             "v_shujin",
             "k_nani",
-            "k_mise",
-            "v_shimeru",
             "v_tearai",
-            "v_suru"
+            "v_suru",
+            "v_kaeru"
           ]
         }
       ]
@@ -610,32 +606,27 @@
           ]
         },
         {
-          "jp": "家で 洗濯を して、その 後 洗車も しました。",
-          "en": "I did laundry at home, and washed the car afterwards too.",
+          "jp": "家で 車を 洗いました。",
+          "en": "I washed the car at home.",
           "terms": [
             "k_ie",
-            "v_sentaku",
+            "k_kuruma",
             {
-              "id": "v_suru",
-              "form": "te_form"
-            },
-            "v_sonogo",
-            "v_sensha",
-            {
-              "id": "v_suru",
+              "id": "v_arau",
               "form": "polite_mashita"
             }
           ]
         },
         {
-          "jp": "洗濯は 毎週 します。",
-          "en": "I do laundry every week.",
+          "jp": "洗車の 後で、手洗いも しました。",
+          "en": "After washing the car, I washed my hands too.",
           "terms": [
-            "v_sentaku",
-            "v_maishuu",
+            "v_sensha",
+            "k_ushiro",
+            "v_tearai",
             {
               "id": "v_suru",
-              "form": "polite_masu"
+              "form": "polite_mashita"
             }
           ]
         }
@@ -653,23 +644,24 @@
         },
         {
           "q": "家で 何を しましたか。",
-          "a": "洗濯と 洗車。",
+          "a": "車を 洗いました。",
           "terms": [
             "k_ie",
             "k_nani",
             "v_suru",
-            "v_sentaku",
-            "v_sensha"
+            "k_kuruma",
+            "v_arau"
           ]
         },
         {
-          "q": "いつ 洗濯を しますか。",
-          "a": "毎週 します。",
+          "q": "洗車の 後で 何を しましたか。",
+          "a": "手洗いを しました。",
           "terms": [
-            "v_itsu",
-            "v_sentaku",
-            "v_suru",
-            "v_maishuu"
+            "v_sensha",
+            "k_ushiro",
+            "k_nani",
+            "v_tearai",
+            "v_suru"
           ]
         }
       ]
