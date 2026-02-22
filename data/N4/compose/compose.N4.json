@@ -274,6 +274,57 @@
         { "id": "v_hakken", "count": 1 }
       ],
       "helpers": ["v_tooru", "v_tateru", "v_hiroi", "v_tsuugaku"]
+    },
+    {
+      "id": "shop-owner-day",
+      "title": "The Shop Owner's Day",
+      "titleJp": "主人の一日",
+      "emoji": "🥬",
+      "lessons": ["N4.35"],
+      "scenario": "You run a small vegetable stand. Write about your day — what you mainly sell, having to stop when it rains, and washing up before heading home.",
+      "hint": "例: 私は小さい店の主人です。主に野菜を...",
+      "targets": [
+        { "id": "v_shujin", "count": 1 },
+        { "id": "v_omoni", "count": 1 },
+        { "id": "v_tomaru", "count": 1, "matches": ["止まり", "とまり", "止まる", "とまる", "止まって", "とまって"] },
+        { "id": "v_arau", "count": 1, "matches": ["洗い", "あらい", "洗う", "あらう", "洗って", "あらって"] },
+        { "id": "v_tearai", "count": 1 }
+      ],
+      "helpers": ["v_nushi", "v_tomeru", "v_chuushi", "v_sensha"]
+    },
+    {
+      "id": "peoples-district",
+      "title": "The People's District",
+      "titleJp": "民の地区",
+      "emoji": "🏡",
+      "lessons": ["N4.35"],
+      "scenario": "Describe a quiet residential neighbourhood where people of different backgrounds live side by side. Write about the private houses, the diverse community, and one rule or prohibition that keeps the area peaceful.",
+      "hint": "例: この地区には民家が多いです。いろいろな民族の...",
+      "targets": [
+        { "id": "v_minka", "count": 1 },
+        { "id": "v_minzoku", "count": 1 },
+        { "id": "v_kokumin", "count": 1 },
+        { "id": "v_kinshi", "count": 1 }
+      ],
+      "helpers": ["v_tami", "v_omoni", "v_chuushi", "v_kyuushi"]
+    },
+    {
+      "id": "cancelled-commute",
+      "title": "The Cancelled Commute",
+      "titleJp": "中止になった通勤",
+      "emoji": "🌧️",
+      "lessons": ["N4.34", "N4.35"],
+      "scenario": "You were commuting through a quiet district of private houses when a public event was suddenly cancelled due to rain. Write about passing through the neighbourhood, the bus stopping, and what you ended up doing instead.",
+      "hint": "例: 雨で行事が中止になりました。バスも止まって...",
+      "targets": [
+        { "id": "v_kayou", "count": 1, "matches": ["通う", "かよう", "通い", "かよい", "通って", "かよって"] },
+        { "id": "v_chiku", "count": 1 },
+        { "id": "v_minka", "count": 1 },
+        { "id": "v_chuushi", "count": 1 },
+        { "id": "v_tomaru", "count": 1, "matches": ["止まり", "とまり", "止まる", "とまる", "止まって", "とまって"] },
+        { "id": "v_arau", "count": 1, "matches": ["洗い", "あらい", "洗う", "あらう", "洗って", "あらって"] }
+      ],
+      "helpers": ["v_tooru", "v_kokumin", "v_tomeru", "v_kyuushi", "v_sensha"]
     }
   ]
 }
