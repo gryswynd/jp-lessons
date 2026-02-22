@@ -63,6 +63,18 @@ window.ComposeModule = {
             .c-lesson-name { font-weight: 700; font-size: 0.95rem; color: var(--c-text-main); }
             .c-lesson-kanji { font-size: 0.85rem; color: var(--c-text-sub); margin-top: 2px; }
 
+            /* LEVEL GROUPS */
+            .c-lvl-group { background: white; border-radius: 12px; overflow: hidden; margin-bottom: 8px; border: 1px solid #e0e0e0; }
+            .c-lvl-header { padding: 12px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; user-select: none; background: #fafafa; }
+            .c-lvl-header:hover { background: #f1f2f6; }
+            .c-lvl-header.open { background: #f0faf9; border-bottom: 1px solid #e0f2f1; }
+            .c-lvl-header.open .c-lvl-arrow { transform: rotate(180deg); }
+            .c-lvl-title { font-weight: 800; font-size: 1rem; color: var(--c-primary-dark); flex: 1; }
+            .c-lvl-sub { font-size: 0.78rem; color: #a4b0be; font-weight: 600; }
+            .c-lvl-arrow { font-size: 0.72rem; color: #a4b0be; transition: transform 0.25s; }
+            .c-lvl-list { display: none; }
+            .c-lvl-list.open { display: block; }
+
             /* PROMPT CARDS */
             .c-prompt-card { background: white; border-radius: 14px; padding: 1.2rem; margin-bottom: 12px; border: 2px solid #e0f2f1; text-align: left; cursor: pointer; transition: all 0.2s; }
             .c-prompt-card:hover { border-color: var(--c-primary); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 137, 123, 0.1); }
@@ -188,26 +200,17 @@ window.ComposeModule = {
     // --- DATA ---
     const REPO_CONFIG = sharedConfig;
 
-    const LESSON_META = {
-        'N4.28': { title: 'Places & Parts', kanji: '池 林 門 村', focus: 'Ponds, groves, gates, and villages' },
-        'N4.29': { title: 'Measurement & Knowledge', kanji: '台 知 計 以', focus: 'Measuring, knowing, and amounts' },
-        'N4.30': { title: 'Thoughts & Answers', kanji: '思 特 集 答', focus: 'Thinking, special occasions, gathering' },
-        'N4.31': { title: 'Times & Openings', kanji: '代 森 堂 開', focus: 'Eras, forests, halls, and opening things' },
-        'N4.32': { title: 'Use, Learn, & The City', kanji: '引 用 習 市', focus: 'Pulling, usage, learning skills, and city life' },
-        'N4.33': { title: 'Places, Factories, & Buildings', kanji: '場 工 広 建', focus: 'Places, construction, width, and buildings' },
-        'N4.34': { title: 'Districts, Departure, & Commuting', kanji: '区 発 県 通', focus: 'Administrative divisions, departures, and commuting' }
-    };
-
     let PROMPTS = [];
     let HELPER_VOCAB = [];
     let PARTICLES = [];
+    let LEVELS = []; // [{ id: 'N5', lessonIds: [...] }, { id: 'N4', lessonIds: [...] }]
+    let lessonMeta = new Map(); // lesson id -> { title }
 
     // --- STATE ---
-    const selectedLessons = new Set(['N4.28', 'N4.29', 'N4.30', 'N4.31', 'N4.32', 'N4.33', 'N4.34']);
+    const selectedLessons = new Set(); // nothing pre-selected; user chooses
     let currentPrompt = null;
     let currentResolvedTargets = []; // targets resolved from glossary for the active prompt
-    let lessonVocab = []; // vocab items from glossary for selected lessons
-    let allVocab = [];    // all vocab from glossary
+    let allVocab = [];    // all vocab from all loaded glossaries
     let vocabById = new Map(); // all glossary entries keyed by id
 
     // --- HELPER FUNCTIONS ---
@@ -238,27 +241,47 @@ window.ComposeModule = {
         if (!menuEl) return;
         menuEl.classList.remove('c-hidden');
 
-        // Build lesson checkboxes
-        let lessonHtml = '';
-        Object.keys(LESSON_META).forEach(id => {
-            const m = LESSON_META[id];
-            const checked = selectedLessons.has(id) ? 'checked' : '';
-            lessonHtml += `<div class="c-lesson-row" onclick="this.querySelector('input').click()">
-                <input type="checkbox" class="c-lesson-chk" value="${id}" ${checked}
-                    onclick="event.stopPropagation(); ComposeApp.toggleLesson('${id}', this)">
-                <div class="c-lesson-info">
-                    <div class="c-lesson-name">${id}: ${escHtml(m.title)}</div>
-                    <div class="c-lesson-kanji">${escHtml(m.kanji)} &mdash; ${escHtml(m.focus)}</div>
-                </div>
-            </div>`;
+        // Build collapsible level group accordions
+        let levelsHtml = '';
+        LEVELS.forEach(lvl => {
+            const allSel = lvl.lessonIds.length > 0 && lvl.lessonIds.every(id => selectedLessons.has(id));
+            const anySel = lvl.lessonIds.some(id => selectedLessons.has(id));
+
+            const lessonsHtml = lvl.lessonIds.map(id => {
+                const meta = lessonMeta.get(id);
+                const checked = selectedLessons.has(id) ? 'checked' : '';
+                return `<div class="c-lesson-row" onclick="this.querySelector('input').click()">
+                    <input type="checkbox" class="c-lesson-chk" value="${id}" ${checked}
+                        onclick="event.stopPropagation(); ComposeApp.toggleLesson('${id}', this)">
+                    <div class="c-lesson-info">
+                        <div class="c-lesson-name">${id}: ${escHtml(meta ? meta.title : id)}</div>
+                    </div>
+                </div>`;
+            }).join('');
+
+            levelsHtml += `
+                <div class="c-lvl-group">
+                    <div class="c-lvl-header" data-level="${lvl.id}" onclick="ComposeApp.toggleLevelGroup(this)">
+                        <input type="checkbox" class="c-lesson-chk" ${allSel ? 'checked' : ''}
+                            onclick="event.stopPropagation(); ComposeApp.toggleAllInLevel('${lvl.id}', this)">
+                        <div class="c-lvl-title">${lvl.id} Compositions</div>
+                        <div class="c-lvl-sub">${lvl.lessonIds.length} lesson${lvl.lessonIds.length !== 1 ? 's' : ''}${anySel && !allSel ? ' · some selected' : ''}</div>
+                        <div class="c-lvl-arrow">▼</div>
+                    </div>
+                    <div class="c-lvl-list">
+                        ${lessonsHtml}
+                    </div>
+                </div>`;
         });
 
         // Filter prompts by selected lessons
         const available = PROMPTS.filter(p => p.lessons.every(l => selectedLessons.has(l)));
 
         let promptHtml = '';
-        if (available.length === 0) {
-            promptHtml = '<div style="padding:20px;text-align:center;color:#a4b0be;font-weight:600;">Select at least one lesson to see prompts.</div>';
+        if (selectedLessons.size === 0) {
+            promptHtml = '<div style="padding:20px;text-align:center;color:#a4b0be;font-weight:600;">Expand a level above and select lessons to see prompts.</div>';
+        } else if (available.length === 0) {
+            promptHtml = '<div style="padding:20px;text-align:center;color:#a4b0be;font-weight:600;">No prompts available for the selected lessons.</div>';
         } else {
             available.forEach(p => {
                 const saved = window.JPShared.progress.getDraft(p.id);
@@ -279,17 +302,51 @@ window.ComposeModule = {
         menuEl.innerHTML = `
             <div class="c-card" style="padding:1.2rem;">
                 <div class="c-lbl" style="color:var(--c-primary);margin-top:0;">SELECT LESSONS</div>
-                ${lessonHtml}
+                ${levelsHtml}
             </div>
             <div class="c-lbl" style="color:var(--c-primary);">CHOOSE A PROMPT</div>
             <div id="c-prompt-list">${promptHtml}</div>
         `;
     };
 
+    ComposeApp.toggleLevelGroup = function(hdr) {
+        hdr.classList.toggle('open');
+        const list = hdr.nextElementSibling;
+        if (list) list.classList.toggle('open');
+    };
+
+    ComposeApp.toggleAllInLevel = function(levelId, chk) {
+        const lvl = LEVELS.find(l => l.id === levelId);
+        if (!lvl) return;
+        if (chk.checked) lvl.lessonIds.forEach(id => selectedLessons.add(id));
+        else lvl.lessonIds.forEach(id => selectedLessons.delete(id));
+        // Update individual lesson checkboxes within this group without a full rebuild
+        const group = chk.closest('.c-lvl-group');
+        if (group) {
+            group.querySelectorAll('.c-lvl-list .c-lesson-chk').forEach(cb => { cb.checked = chk.checked; });
+            const sub = group.querySelector('.c-lvl-sub');
+            if (sub) sub.textContent = lvl.lessonIds.length + ' lesson' + (lvl.lessonIds.length !== 1 ? 's' : '');
+        }
+        ComposeApp.refreshPrompts();
+    };
+
     ComposeApp.toggleLesson = function(id, chk) {
         if (chk.checked) selectedLessons.add(id);
         else selectedLessons.delete(id);
-        // Refresh prompt list only (keep checkboxes as-is)
+        // Update the parent level group's header checkbox and sub-label
+        const row = chk.closest('.c-lvl-group');
+        if (row) {
+            const lvlId = row.querySelector('.c-lvl-header').dataset.level;
+            const lvl = LEVELS.find(l => l.id === lvlId);
+            if (lvl) {
+                const allSel = lvl.lessonIds.every(lid => selectedLessons.has(lid));
+                const anySel = lvl.lessonIds.some(lid => selectedLessons.has(lid));
+                const groupChk = row.querySelector('.c-lvl-header .c-lesson-chk');
+                if (groupChk) groupChk.checked = allSel;
+                const sub = row.querySelector('.c-lvl-sub');
+                if (sub) sub.textContent = lvl.lessonIds.length + ' lesson' + (lvl.lessonIds.length !== 1 ? 's' : '') + (anySel && !allSel ? ' · some selected' : '');
+            }
+        }
         ComposeApp.refreshPrompts();
     };
 
@@ -298,8 +355,12 @@ window.ComposeModule = {
         const listEl = document.getElementById('c-prompt-list');
         if (!listEl) return;
 
+        if (selectedLessons.size === 0) {
+            listEl.innerHTML = '<div style="padding:20px;text-align:center;color:#a4b0be;font-weight:600;">Expand a level above and select lessons to see prompts.</div>';
+            return;
+        }
         if (available.length === 0) {
-            listEl.innerHTML = '<div style="padding:20px;text-align:center;color:#a4b0be;font-weight:600;">Select at least one lesson to see prompts.</div>';
+            listEl.innerHTML = '<div style="padding:20px;text-align:center;color:#a4b0be;font-weight:600;">No prompts available for the selected lessons.</div>';
             return;
         }
 
@@ -726,36 +787,42 @@ window.ComposeModule = {
 
             // Load manifest to discover file paths
             const manifest = await window.getManifest(REPO_CONFIG);
+            const n5 = manifest.data.N5;
             const n4 = manifest.data.N4;
 
-            const glossaryUrl = window.getAssetUrl(REPO_CONFIG, n4.glossary);
-            const composeUrl = window.getAssetUrl(REPO_CONFIG, n4.compose);
-            const helperUrl = window.getAssetUrl(REPO_CONFIG, manifest.shared.helperVocab);
-            const particleUrl = window.getAssetUrl(REPO_CONFIG, manifest.shared.particles);
-            console.log('[Compose] Glossary URL:', glossaryUrl);
-            console.log('[Compose] Compose data URL:', composeUrl);
-            console.log('[Compose] Helper vocab URL:', helperUrl);
-            console.log('[Compose] Particles URL:', particleUrl);
-
-            // Fetch glossary, compose prompts, helper vocab, and particles in parallel
-            const [glossary, composeData, helperData, particleData] = await Promise.all([
-                fetch(glossaryUrl + cacheBust).then(r => r.json()),
-                fetch(composeUrl + cacheBust).then(r => r.json()),
-                fetch(helperUrl + cacheBust).then(r => r.json()),
-                fetch(particleUrl + cacheBust).then(r => r.json())
+            // Fetch both levels' glossaries, compose files, helper vocab, and particles in parallel
+            const [n5Glossary, n4Glossary, n5Compose, n4Compose, helperData, particleData] = await Promise.all([
+                fetch(window.getAssetUrl(REPO_CONFIG, n5.glossary) + cacheBust).then(r => r.json()),
+                fetch(window.getAssetUrl(REPO_CONFIG, n4.glossary) + cacheBust).then(r => r.json()),
+                fetch(window.getAssetUrl(REPO_CONFIG, n5.compose) + cacheBust).then(r => r.json()),
+                fetch(window.getAssetUrl(REPO_CONFIG, n4.compose) + cacheBust).then(r => r.json()),
+                fetch(window.getAssetUrl(REPO_CONFIG, manifest.shared.helperVocab) + cacheBust).then(r => r.json()),
+                fetch(window.getAssetUrl(REPO_CONFIG, manifest.shared.particles) + cacheBust).then(r => r.json())
             ]);
 
-            PROMPTS = composeData.prompts;
             HELPER_VOCAB = helperData.categories;
             PARTICLES = particleData.particles;
 
-            allVocab = glossary.entries.filter(i => i.type === 'vocab');
+            // Combine vocab from both glossaries
+            allVocab = [
+                ...n5Glossary.entries.filter(i => i.type === 'vocab'),
+                ...n4Glossary.entries.filter(i => i.type === 'vocab')
+            ];
             vocabById = new Map();
-            glossary.entries.forEach(e => vocabById.set(e.id, e));
-            lessonVocab = allVocab.filter(v => {
-                const lessons = (v.lesson_ids || v.lesson || '').split(',').map(s => s.trim());
-                return lessons.some(l => Object.keys(LESSON_META).includes(l));
-            });
+            [...n5Glossary.entries, ...n4Glossary.entries].forEach(e => vocabById.set(e.id, e));
+
+            // Build lesson metadata from manifest (id -> title)
+            lessonMeta = new Map();
+            [...n5.lessons, ...n4.lessons].forEach(l => lessonMeta.set(l.id, { title: l.title }));
+
+            // Combine prompts; derive which lesson IDs actually have prompts per level
+            PROMPTS = [...n5Compose.prompts, ...n4Compose.prompts];
+            const n5LessonIds = [...new Set(n5Compose.prompts.flatMap(p => p.lessons))].sort();
+            const n4LessonIds = [...new Set(n4Compose.prompts.flatMap(p => p.lessons))].sort();
+            LEVELS = [
+                { id: 'N5', lessonIds: n5LessonIds },
+                { id: 'N4', lessonIds: n4LessonIds }
+            ];
 
             const loader = document.getElementById('c-loader');
             if (loader) loader.classList.add('c-hidden');
