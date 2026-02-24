@@ -88,11 +88,13 @@
         { "id": "N4.Review.7",      "title": "Thoughts, Times & Openings",        "file": "data/N4/reviews/N4.Review.7.json" },
         { "id": "N4.Review.8",      "title": "Cities, Work & Construction",       "file": "data/N4/reviews/N4.Review.8.json" },
         { "id": "N4.Review.9",      "title": "Districts, Departure & City Life",  "file": "data/N4/reviews/N4.Review.9.json" },
+        { "id": "N4.Review.10",     "title": "Owners, Business & Production",      "file": "data/N4/reviews/N4.Review.10.json" },
         { "id": "N4.Review.Master", "title": "N4 Complete Phase 4 Review",        "file": "data/N4/reviews/N4 Half Review.json" }
       ],
       "compose": "data/N4/compose/compose.N4.json",
       "stories": [
-        { "id": "new-city", "title": "In the New City", "titleJp": "新しい都市で", "dir": "data/N4/stories/new-city" }
+        { "id": "new-city",       "title": "In the New City",    "titleJp": "新しい都市で",  "dir": "data/N4/stories/new-city" },
+        { "id": "factory-owner",  "title": "The Factory Owner",  "titleJp": "工場の主人",    "dir": "data/N4/stories/factory-owner" }
       ],
       "game": []
     }
