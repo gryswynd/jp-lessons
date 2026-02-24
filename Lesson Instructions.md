@@ -1,8 +1,8 @@
-##Kanji Prerequisites
-Before using any kanji in a lesson, confirm it has been introduced in this lesson or an earlier one.
-Source of truth: manifest.json — every lesson entry has a kanji array listing the characters introduced in that lesson, including lessons whose .json files have not been built yet. Do not rely on grepping newKanji across lesson files, as early lessons may not have files yet.
-To check: Read manifest.json, collect the kanji arrays for all lessons with a lesson number ≤ the current lesson, and flatten into a taught-kanji set. Any kanji not in that set has not been taught.
-Never assume a kanji is taught just because a compound word is natural Japanese.
+## Kanji Prerequisites
+- Before using any kanji in a lesson, confirm it has been introduced in this lesson or an earlier one.
+- Source of truth: manifest.json — every lesson entry has a kanji array listing the characters introduced in that lesson, including lessons whose .json files have not been built yet. Do not rely on grepping newKanji across lesson files, as early lessons may not have files yet.
+- To check: Read manifest.json, collect the kanji arrays for all lessons with a lesson number ≤ the current lesson, and flatten into a taught-kanji set. Any kanji not in that set has not been taught.
+- Never assume a kanji is taught just because a compound word is natural Japanese.
 
 ## Terms Arrays — Verb and Adjective Forms
 In every `terms` array (passage sentences, conversation lines,
