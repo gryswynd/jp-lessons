@@ -663,7 +663,20 @@ window.ComposeModule = {
         if (!input || !input.value.trim()) return;
         const text = input.value;
 
-        // 1. Vocab Score (0-40): unique lesson vocab words found in composition
+        // 1. Vocab Score (0-40):
+        //    50% (0-20 pts) from target words meeting their required count
+        //    50% (0-20 pts) from additional lesson vocab, capped at the target count
+
+        // a) Target words
+        const totalTargets = currentResolvedTargets.length;
+        let targetsMet = 0;
+        const targetSurfaces = new Set();
+        currentResolvedTargets.forEach(t => {
+            if (countOccurrences(text, t.matches) >= t.count) targetsMet++;
+            if (t.surface) targetSurfaces.add(t.surface);
+        });
+
+        // b) Additional lesson vocab (not one of the targets)
         const promptLessonVocab = allVocab.filter(v => {
             const lessons = (v.lesson_ids || v.lesson || '').split(',').map(s => s.trim());
             return lessons.some(l => currentPrompt.lessons.includes(l));
@@ -675,30 +688,39 @@ window.ComposeModule = {
             vocabSeen.add(v.surface);
             return true;
         });
-        let vocabUsed = 0;
-        const vocabMatches = [];
+        let additionalVocabUsed = 0;
+        const additionalMatches = [];
         uniqueLessonVocab.forEach(v => {
-            if (text.includes(v.surface)) {
-                vocabUsed++;
-                vocabMatches.push(v.surface);
+            if (!targetSurfaces.has(v.surface) && text.includes(v.surface)) {
+                additionalVocabUsed++;
+                additionalMatches.push(v.surface);
             }
         });
-        const vocabTotal = uniqueLessonVocab.length;
-        const vocabRatio = vocabTotal > 0 ? vocabUsed / Math.min(vocabTotal, 15) : 0;
-        const vocabScore = Math.min(40, Math.round(vocabRatio * 40));
 
-        // 2. Length Score (0-30): based on character count
+        // c) Score
+        let vocabScore = 0;
+        if (totalTargets > 0) {
+            const targetScore = Math.round((targetsMet / totalTargets) * 20);
+            const additionalScore = Math.round((Math.min(additionalVocabUsed, totalTargets) / totalTargets) * 20);
+            vocabScore = targetScore + additionalScore;
+        } else {
+            // Fallback if no targets defined: use all lesson vocab
+            const vocabTotal = uniqueLessonVocab.length;
+            const vocabRatio = vocabTotal > 0 ? additionalVocabUsed / Math.min(vocabTotal, 15) : 0;
+            vocabScore = Math.min(40, Math.round(vocabRatio * 40));
+        }
+
+        // 2. Length Score (0-30): 1 point per 5 characters, max 30 (at 150 chars)
         const charCount = text.length;
-        let lengthScore = 0;
-        if (charCount >= 200) lengthScore = 30;
-        else if (charCount >= 150) lengthScore = 25;
-        else if (charCount >= 100) lengthScore = 20;
-        else if (charCount >= 60) lengthScore = 15;
-        else if (charCount >= 30) lengthScore = 10;
-        else if (charCount >= 10) lengthScore = 5;
+        const lengthScore = Math.min(30, Math.floor(charCount / 5));
 
-        // 3. Conjugation Tense Consistency (0-30)
-        // Count polite (ます/ました/ません/ませんでした) vs plain (る/た/ない) verb endings
+        // 3. Grammar Score (0-30) — Phase 1: pattern-based
+        //    a) Tense consistency     (0-15 pts)
+        //    b) Core particle use     (0-10 pts) — presence of は/が/を/に
+        //    c) Sentence completion   (0-5 pts)  — ends with a sentence-final form
+        //    Phase 2 (future): replace with AI-assisted scoring for true correctness
+
+        // a) Tense consistency (0-15)
         const politePatterns = ['ます', 'ました', 'ません', 'ませんでした', 'ましょう', 'ですか', 'でした'];
         const plainPatterns = ['だった', 'ない', 'なかった'];
         let politeCount = 0;
@@ -712,24 +734,41 @@ window.ComposeModule = {
             while ((idx = text.indexOf(p, idx)) !== -1) { plainCount++; idx += p.length; }
         });
         const totalVerbs = politeCount + plainCount;
-        let tenseScore = 0;
-        let tenseLabel = '';
+        let tenseComponent = 0;
+        let tenseDetail = '';
         if (totalVerbs === 0) {
-            tenseScore = 15;
-            tenseLabel = 'No verb forms detected';
+            tenseComponent = 8; // neutral — no verb forms to evaluate
+            tenseDetail = 'No verb forms detected';
         } else {
             const dominant = Math.max(politeCount, plainCount);
-            const consistency = dominant / totalVerbs;
-            tenseScore = Math.round(consistency * 30);
-            if (politeCount >= plainCount) {
-                tenseLabel = `Polite form: ${politeCount}/${totalVerbs} endings`;
-            } else {
-                tenseLabel = `Plain form: ${plainCount}/${totalVerbs} endings`;
-            }
+            tenseComponent = Math.round((dominant / totalVerbs) * 15);
+            tenseDetail = politeCount >= plainCount
+                ? `Polite: ${politeCount}/${totalVerbs}`
+                : `Plain: ${plainCount}/${totalVerbs}`;
         }
 
+        // b) Core particle use (0-10) — を is exclusively a particle; は/が/に used as proxy
+        const coreParticles = ['は', 'が', 'を', 'に'];
+        const particlesFound = coreParticles.filter(p => text.includes(p));
+        const particleScore = Math.round((particlesFound.length / coreParticles.length) * 10);
+
+        // c) Sentence completion (0-5) — text ends with a valid sentence-final form
+        const trimmedText = text.trim();
+        const sentenceFinals = ['ます', 'ました', 'ません', 'ませんでした', 'ましょう', 'です', 'でした', 'だ', 'ね', 'よ', 'か'];
+        const sentenceComplete = sentenceFinals.some(p =>
+            trimmedText.endsWith(p) ||
+            trimmedText.endsWith(p + '。') ||
+            trimmedText.endsWith(p + '！') ||
+            trimmedText.endsWith(p + '？')
+        );
+        const completionScore = sentenceComplete ? 5 : 0;
+
+        const grammarScore = tenseComponent + particleScore + completionScore;
+        let grammarLabel = tenseDetail + ` · ${particlesFound.length}/4 particles`;
+        if (completionScore > 0) grammarLabel += ' · Complete';
+
         // Total
-        const total = vocabScore + lengthScore + tenseScore;
+        const total = vocabScore + lengthScore + grammarScore;
         let grade = '';
         let gradeColor = '';
         if (total >= 90) { grade = 'S  Excellent!'; gradeColor = '#f39c12'; }
@@ -751,7 +790,7 @@ window.ComposeModule = {
                     <div class="c-score-row">
                         <div>
                             <div class="c-score-row-label">Vocabulary Used</div>
-                            <div class="c-score-row-detail">${vocabUsed} of ${vocabTotal} lesson words${vocabMatches.length > 0 ? ' (' + vocabMatches.slice(0, 5).join(', ') + (vocabMatches.length > 5 ? '...' : '') + ')' : ''}</div>
+                            <div class="c-score-row-detail">${targetsMet}/${totalTargets} targets · ${additionalVocabUsed} additional${additionalMatches.length > 0 ? ' (' + additionalMatches.slice(0, 3).join(', ') + (additionalMatches.length > 3 ? '...' : '') + ')' : ''}</div>
                             <div class="c-score-bar"><div class="c-score-bar-fill" style="width:${Math.round(vocabScore/40*100)}%;background:var(--c-primary)"></div></div>
                         </div>
                         <div class="c-score-row-pts">${vocabScore}/40</div>
@@ -759,18 +798,18 @@ window.ComposeModule = {
                     <div class="c-score-row">
                         <div>
                             <div class="c-score-row-label">Composition Length</div>
-                            <div class="c-score-row-detail">${charCount} characters</div>
+                            <div class="c-score-row-detail">${charCount} characters (1pt per 5)</div>
                             <div class="c-score-bar"><div class="c-score-bar-fill" style="width:${Math.round(lengthScore/30*100)}%;background:var(--c-success)"></div></div>
                         </div>
                         <div class="c-score-row-pts">${lengthScore}/30</div>
                     </div>
                     <div class="c-score-row">
                         <div>
-                            <div class="c-score-row-label">Tense Consistency</div>
-                            <div class="c-score-row-detail">${tenseLabel}</div>
-                            <div class="c-score-bar"><div class="c-score-bar-fill" style="width:${Math.round(tenseScore/30*100)}%;background:var(--c-gold)"></div></div>
+                            <div class="c-score-row-label">Grammar</div>
+                            <div class="c-score-row-detail">${grammarLabel}</div>
+                            <div class="c-score-bar"><div class="c-score-bar-fill" style="width:${Math.round(grammarScore/30*100)}%;background:var(--c-gold)"></div></div>
                         </div>
-                        <div class="c-score-row-pts">${tenseScore}/30</div>
+                        <div class="c-score-row-pts">${grammarScore}/30</div>
                     </div>
                 </div>
                 <button class="c-btn" onclick="this.closest('.c-score-overlay').remove()" style="margin-top:8px;">Close</button>
