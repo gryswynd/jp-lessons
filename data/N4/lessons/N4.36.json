@@ -1,0 +1,771 @@
+{
+  "contentVersion": "1.0.0",
+  "id": "N4.36",
+  "title": "Phase 4 Lesson 36: Negatives, Convenience, Business & Production",
+  "meta": {
+    "phase": 4,
+    "lesson": 36,
+    "focus": "The negative prefix 不-, convenience and service, business operations and industry, production and birth.",
+    "kanji": [
+      "不",
+      "便",
+      "業",
+      "産"
+    ]
+  },
+  "newKanji": [
+    {
+      "kanji": "不",
+      "on": "ふ / ぶ",
+      "kun": "(なし)",
+      "meaning": "Not / Un- (Negative Prefix)",
+      "termId": "k_fu"
+    },
+    {
+      "kanji": "便",
+      "on": "べん / びん",
+      "kun": "たより",
+      "meaning": "Convenience / Service / Mail",
+      "termId": "k_bin"
+    },
+    {
+      "kanji": "業",
+      "on": "ぎょう / ごう",
+      "kun": "なりわい",
+      "meaning": "Business / Industry / Trade",
+      "termId": "k_gyou"
+    },
+    {
+      "kanji": "産",
+      "on": "さん",
+      "kun": "うむ",
+      "meaning": "Produce / Birth",
+      "termId": "k_san"
+    }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "Warm-Up Review（ウォームアップ）",
+      "instructions": "Ask your partner these questions using words you already know:",
+      "items": [
+        {
+          "jp": "日本の 食べ物は 好きですか。",
+          "en": "Do you like Japanese food?",
+          "terms": [
+            "v_nihon",
+            "v_tabemono",
+            "v_suki"
+          ]
+        },
+        {
+          "jp": "あなたの 地区に 工場が ありますか。",
+          "en": "Is there a factory in your district?",
+          "terms": [
+            "k_anata",
+            "v_chiku",
+            "v_koujou",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "どんな 仕事を して いますか。",
+          "en": "What kind of work do you do?",
+          "terms": [
+            "v_donna",
+            "v_shigoto",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "工場で 働いた ことが ありますか。",
+          "en": "Have you ever worked at a factory?",
+          "terms": [
+            "v_koujou",
+            {
+              "id": "v_hataraku",
+              "form": "plain_past"
+            },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "New Kanji（新しい 漢字）",
+      "items": [
+        {
+          "kanji": "不",
+          "on": "ふ / ぶ",
+          "kun": "(なし)",
+          "meaning": "Not / Un- (Negative Prefix)",
+          "terms": [
+            "k_fu",
+            "v_mazui",
+            "v_fuben",
+            "v_fusei",
+            "v_fuun"
+          ]
+        },
+        {
+          "kanji": "便",
+          "on": "べん / びん",
+          "kun": "たより",
+          "meaning": "Convenience / Service / Mail",
+          "terms": [
+            "k_bin",
+            "v_bin",
+            "v_fuben"
+          ]
+        },
+        {
+          "kanji": "業",
+          "on": "ぎょう / ごう",
+          "kun": "なりわい",
+          "meaning": "Business / Industry / Trade",
+          "terms": [
+            "k_gyou",
+            "v_gyou",
+            "v_gyousha",
+            "v_kougyou",
+            "v_sangyou"
+          ]
+        },
+        {
+          "kanji": "産",
+          "on": "さん",
+          "kun": "うむ",
+          "meaning": "Produce / Birth",
+          "terms": [
+            "k_san",
+            "v_umu",
+            "v_sangyou",
+            "v_sanbutsu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "Vocabulary & Compounds（ことば）",
+      "groups": [
+        {
+          "label": "Negative Prefix 不ー",
+          "items": [
+            "v_mazui",
+            "v_fuben",
+            "v_fusei",
+            "v_fuun"
+          ]
+        },
+        {
+          "label": "Business & Industry",
+          "items": [
+            "v_gyou",
+            "v_gyousha",
+            "v_kougyou",
+            "v_sangyou"
+          ]
+        },
+        {
+          "label": "Production & Service",
+          "items": [
+            "v_umu",
+            "v_sanbutsu",
+            "v_bin"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 1（会話）: The New Restaurant",
+      "context": "Two friends try a new restaurant and are disappointed.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "この 食べ物は 不味いですね。",
+          "en": "This food tastes bad, doesn't it.",
+          "terms": [
+            "v_tabemono",
+            {
+              "id": "v_mazui",
+              "form": "plain_present"
+            }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "そうですね。この 場所も 不便です。",
+          "en": "Yes. This location is also inconvenient.",
+          "terms": [
+            "v_basho",
+            "v_fuben"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "バスの 便も 少ないですね。",
+          "en": "The bus service is also limited, isn't it.",
+          "terms": [
+            "v_basu",
+            "v_bin",
+            {
+              "id": "v_sukunai",
+              "form": "plain_present"
+            }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "別の 店が いいですね。",
+          "en": "A different shop would be better.",
+          "terms": [
+            "v_betsu",
+            "k_mise",
+            "v_ii"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 2（会話）: The Contractor",
+      "context": "A homeowner looks for a contractor to help with building work.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "建物の 仕事を する 業者を 知って いますか。",
+          "en": "Do you know a contractor who does building work?",
+          "terms": [
+            "v_tatemono",
+            "v_shigoto",
+            "v_gyousha",
+            {
+              "id": "v_shiru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。近所に いい 業者が います。",
+          "en": "Yes. There is a good contractor in the neighborhood.",
+          "terms": [
+            "v_hai",
+            "v_kinjo",
+            "v_ii",
+            "v_gyousha",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "その 業者の 業は 何ですか。",
+          "en": "What is that contractor's trade?",
+          "terms": [
+            "v_gyousha",
+            "v_gyou",
+            "k_nani"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "主に 建物を 建てる 業です。",
+          "en": "It is mainly the business of building buildings.",
+          "terms": [
+            "v_omoni",
+            "v_tatemono",
+            {
+              "id": "v_tateru",
+              "form": "plain_present"
+            },
+            "v_gyou"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 3（会話）: Regional Industry",
+      "context": "Two people discuss the industries in their area.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "この 地区の 産業は 何ですか。",
+          "en": "What is the industry in this district?",
+          "terms": [
+            "v_chiku",
+            "v_sangyou",
+            "k_nani"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "工業が 有名です。車を 作る 工場が 多いです。",
+          "en": "Manufacturing is famous. There are many factories that make cars.",
+          "terms": [
+            "v_kougyou",
+            "v_yuumei",
+            "k_kuruma",
+            {
+              "id": "v_tsukuru",
+              "form": "plain_present"
+            },
+            "v_koujou",
+            {
+              "id": "v_ooi",
+              "form": "plain_present"
+            }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "この 地区の 産物は 何ですか。",
+          "en": "What are the products of this district?",
+          "terms": [
+            "v_chiku",
+            "v_sanbutsu",
+            "k_nani"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "主に 車と 電気の 物です。",
+          "en": "Mainly cars and electronic goods.",
+          "terms": [
+            "v_omoni",
+            "k_kuruma",
+            "v_denki",
+            "k_mono"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 4（会話）: A Business Problem",
+      "context": "Two colleagues discuss a contractor who caused problems.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "あの 業者は 不運でした。",
+          "en": "That contractor had bad luck.",
+          "terms": [
+            "v_gyousha",
+            "v_fuun"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "不正な 仕事も しました。",
+          "en": "They also did dishonest work.",
+          "terms": [
+            "v_fusei",
+            "v_shigoto",
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "それで 仕事が 少なく なりましたか。",
+          "en": "As a result, did the work decrease?",
+          "terms": [
+            "v_shigoto",
+            {
+              "id": "v_sukunai",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。今は 別の 業者を 使って います。",
+          "en": "Yes. Now we are using a different contractor.",
+          "terms": [
+            "v_hai",
+            "k_ima",
+            "v_betsu",
+            "v_gyousha",
+            {
+              "id": "v_tsukau",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 1: Manufacturing in the Region",
+      "passage": [
+        {
+          "jp": "日本には 大きい 工業の 地区が あります。",
+          "en": "In Japan there are large manufacturing districts.",
+          "terms": [
+            "v_nihon",
+            {
+              "id": "v_ookii",
+              "form": "plain_present"
+            },
+            "v_kougyou",
+            "v_chiku",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "その 地区の 工場では 車や 電気の 産物を 作って います。",
+          "en": "At the factories in that district, they produce automobiles and electronics.",
+          "terms": [
+            "v_chiku",
+            "v_koujou",
+            "k_kuruma",
+            "v_denki",
+            "v_sanbutsu",
+            {
+              "id": "v_tsukuru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "業者は 毎日 働いて います。",
+          "en": "The contractors work every day.",
+          "terms": [
+            "v_gyousha",
+            "v_mainichi",
+            {
+              "id": "v_hataraku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "この 地区の 産業は 日本で 有名です。",
+          "en": "This district's industry is famous in Japan.",
+          "terms": [
+            "v_chiku",
+            "v_sangyou",
+            "v_nihon",
+            "v_yuumei"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "その 地区では 何を 作って いますか。",
+          "a": "車や 電気の 産物。",
+          "terms": [
+            "v_chiku",
+            "k_nani",
+            { "id": "v_tsukuru", "form": "te_form" },
+            "k_kuruma",
+            "v_denki",
+            "v_sanbutsu"
+          ]
+        },
+        {
+          "q": "業者は 毎日 何を して いますか。",
+          "a": "働いて います。",
+          "terms": [
+            "v_gyousha",
+            "v_mainichi",
+            "k_nani",
+            { "id": "v_hataraku", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "q": "この 地区の 産業は どうですか。",
+          "a": "日本で 有名です。",
+          "terms": [
+            "v_chiku",
+            "v_sangyou",
+            "v_nihon",
+            "v_yuumei"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: A Contractor's Troubles",
+      "passage": [
+        {
+          "jp": "ある 業者に 不運な ことが ありました。",
+          "en": "An unfortunate thing happened to a certain contractor.",
+          "terms": [
+            "v_gyousha",
+            "v_fuun",
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "jp": "その 業者は 不正な 仕事も しました。",
+          "en": "That contractor also did dishonest work.",
+          "terms": [
+            "v_gyousha",
+            "v_fusei",
+            "v_shigoto",
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "jp": "それで その 業者の 仕事が 少なく なりました。",
+          "en": "As a result, that contractor's work decreased.",
+          "terms": [
+            "v_gyousha",
+            "v_shigoto",
+            {
+              "id": "v_sukunai",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "jp": "今は 別の 業者が この 地区で 働いて います。",
+          "en": "Now a different contractor is working in this district.",
+          "terms": [
+            "k_ima",
+            "v_betsu",
+            "v_gyousha",
+            "v_chiku",
+            {
+              "id": "v_hataraku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "その 業者は 何を しましたか。",
+          "a": "不正な 仕事を しました。",
+          "terms": [
+            "v_gyousha",
+            "k_nani",
+            "v_fusei",
+            "v_shigoto",
+            { "id": "v_suru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "q": "仕事は どう なりましたか。",
+          "a": "少なく なりました。",
+          "terms": [
+            "v_shigoto",
+            { "id": "v_sukunai", "form": "adverbial" },
+            { "id": "v_naru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "q": "今は だれが 働いて いますか。",
+          "a": "別の 業者。",
+          "terms": [
+            "k_ima",
+            "v_dare",
+            { "id": "v_hataraku", "form": "te_form" },
+            "v_betsu",
+            "v_gyousha"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Vocabulary",
+      "instructions": "Select the correct reading or meaning.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "不味い",
+          "choices": [
+            "mazui",
+            "fumai",
+            "fuaji",
+            "mazashii"
+          ],
+          "answer": "mazui"
+        },
+        {
+          "kind": "mcq",
+          "q": "業者",
+          "choices": [
+            "gyousha",
+            "gousha",
+            "shousha",
+            "kyousha"
+          ],
+          "answer": "gyousha"
+        },
+        {
+          "kind": "mcq",
+          "q": "産業",
+          "choices": [
+            "sangyou",
+            "sankou",
+            "sanou",
+            "sankou"
+          ],
+          "answer": "sangyou"
+        },
+        {
+          "kind": "mcq",
+          "q": "工業",
+          "choices": [
+            "kougyou",
+            "koudou",
+            "kougi",
+            "kouchi"
+          ],
+          "answer": "kougyou"
+        },
+        {
+          "kind": "mcq",
+          "q": "不運",
+          "choices": [
+            "fuun",
+            "burin",
+            "fuurin",
+            "furin"
+          ],
+          "answer": "fuun"
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Fill in the Blank",
+      "instructions": "Select the word that fits.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "この 食べ物は ______ですね。",
+          "choices": [
+            "不味い",
+            "不便",
+            "不正",
+            "不運"
+          ],
+          "answer": "不味い",
+          "terms": [
+            "v_tabemono",
+            "v_mazui"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "バスの ______ が 少ないです。",
+          "choices": [
+            "便",
+            "業",
+            "産物",
+            "産業"
+          ],
+          "answer": "便",
+          "terms": [
+            "v_basu",
+            "v_bin",
+            {
+              "id": "v_sukunai",
+              "form": "plain_present"
+            }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "建物の 仕事を する ______ を 知って いますか。",
+          "choices": [
+            "業者",
+            "産物",
+            "産業",
+            "工業"
+          ],
+          "answer": "業者",
+          "terms": [
+            "v_tatemono",
+            "v_shigoto",
+            "v_gyousha",
+            {
+              "id": "v_shiru",
+              "form": "te_form"
+            }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "この 地区の ______ は 有名です。",
+          "choices": [
+            "産業",
+            "産物",
+            "業",
+            "業者"
+          ],
+          "answer": "産業",
+          "terms": [
+            "v_chiku",
+            "v_sangyou",
+            "v_yuumei"
+          ]
+        }
+      ]
+    }
+  ]
+}

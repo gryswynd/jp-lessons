@@ -75,7 +75,8 @@
         { "id": "N4.32", "title": "Use, Learn, & The City",                  "file": "data/N4/lessons/N4.32.json", "kanji": ["引","用","習","市"] },
         { "id": "N4.33", "title": "Places, Factories, & Buildings",          "file": "data/N4/lessons/N4.33.json", "kanji": ["場","工","広","建"] },
         { "id": "N4.34", "title": "Districts, Departure, & Commuting",       "file": "data/N4/lessons/N4.34.json", "kanji": ["区","発","県","通"] },
-        { "id": "N4.35", "title": "Owners, Stops, People, & Washing",        "file": "data/N4/lessons/N4.35.json", "kanji": ["主","止","民","洗"] }
+        { "id": "N4.35", "title": "Owners, Stops, People, & Washing",        "file": "data/N4/lessons/N4.35.json", "kanji": ["主","止","民","洗"] },
+        { "id": "N4.36", "title": "Negatives, Convenience, Business & Production", "file": "data/N4/lessons/N4.36.json", "kanji": ["不","便","業","産"] }
       ],
       "reviews": [
         { "id": "N4.Review.1",      "title": "Comprehensive Assessment",          "file": "data/N4/reviews/N4.Review.1.json" },
@@ -87,11 +88,13 @@
         { "id": "N4.Review.7",      "title": "Thoughts, Times & Openings",        "file": "data/N4/reviews/N4.Review.7.json" },
         { "id": "N4.Review.8",      "title": "Cities, Work & Construction",       "file": "data/N4/reviews/N4.Review.8.json" },
         { "id": "N4.Review.9",      "title": "Districts, Departure & City Life",  "file": "data/N4/reviews/N4.Review.9.json" },
+        { "id": "N4.Review.10",     "title": "Owners, Business & Production",      "file": "data/N4/reviews/N4.Review.10.json" },
         { "id": "N4.Review.Master", "title": "N4 Complete Phase 4 Review",        "file": "data/N4/reviews/N4 Half Review.json" }
       ],
       "compose": "data/N4/compose/compose.N4.json",
       "stories": [
-        { "id": "new-city", "title": "In the New City", "titleJp": "新しい都市で", "dir": "data/N4/stories/new-city" }
+        { "id": "new-city",       "title": "In the New City",    "titleJp": "新しい都市で",  "dir": "data/N4/stories/new-city" },
+        { "id": "factory-owner",  "title": "The Factory Owner",  "titleJp": "工場の主人",    "dir": "data/N4/stories/factory-owner" }
       ],
       "game": []
     }

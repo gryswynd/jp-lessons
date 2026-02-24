@@ -1,0 +1,364 @@
+{
+  "contentVersion": "1.0.0",
+  "id": "N4.Review.10",
+  "title": "Phase 4 Review: Owners, Business & Production",
+  "meta": {
+    "phase": 4,
+    "type": "assessment",
+    "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 35–36.",
+    "kanji": ["主", "止", "民", "洗", "不", "便", "業", "産"]
+  },
+  "sections": [
+    {
+      "type": "conversation",
+      "title": "Part 1: Conversation Check",
+      "instructions": "Read each conversation and select the best answer.",
+      "items": [
+        {
+          "title": "Conversation 1",
+          "context": "A homeowner calls a contractor about a water leak.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "すみません。家の 水が 止まりません。業者に 来て もらえますか。",
+              "terms": [
+                "v_sumimasen",
+                "k_ie",
+                "k_mizu",
+                { "id": "v_tomaru", "form": "polite_negative" },
+                "v_gyousha",
+                { "id": "v_kuru", "form": "te_form" },
+                "v_morau"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "はい。この 地区の 住民の 方ですか。",
+              "terms": [
+                "v_hai",
+                "v_chiku",
+                "v_kokumin",
+                "k_kata"
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "はい。主人も こまって います。早く 止めて ください。",
+              "terms": [
+                "v_hai",
+                "v_shujin",
+                { "id": "v_komaru", "form": "te_form" },
+                { "id": "v_iru", "form": "polite_masu" },
+                { "id": "v_tomeru", "form": "te_form" },
+                "v_kudasai"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "分かりました。すぐ 行きます。水を 止める ことが できます。",
+              "terms": [
+                "v_wakarimashita",
+                "v_sugu",
+                { "id": "v_iku", "form": "polite_masu" },
+                "k_mizu",
+                { "id": "v_tomeru", "form": "plain_present" },
+                "v_dekiru"
+              ]
+            }
+          ],
+          "question": "What problem did the homeowner have, and what did the contractor promise?",
+          "choices": [
+            "The bus service was cancelled; the contractor would fix the road.",
+            "The water would not stop; the contractor said they could stop it.",
+            "The contractor did dishonest work; the owner called the police.",
+            "The car wash was broken; the contractor said they would repair it."
+          ],
+          "answer": "The water would not stop; the contractor said they could stop it.",
+          "explanation": "A says 家の水が止まりません (the water won't stop) and B replies 水を止めることができます (we can stop the water)."
+        },
+        {
+          "title": "Conversation 2",
+          "context": "Two people talk about a bus service and their bad luck.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "このバスの便は 不便ですね。一時間に 一本だけです。",
+              "terms": [
+                "v_basu",
+                "v_bin",
+                "v_fuben",
+                { "counter": "ji", "n": 1 },
+                "v_ippon"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "ほんとうに 不運ですね。雨で 中止に なった 日も ありました。",
+              "terms": [
+                "v_hontou",
+                "v_fuun",
+                "k_ame",
+                "v_chuushi",
+                { "id": "v_naru", "form": "plain_past" },
+                "k_hi"
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "主に 朝と 夕方だけ 動いて います。",
+              "terms": [
+                "v_omoni",
+                "v_asa",
+                "v_yuugata",
+                { "id": "v_ugoku", "form": "te_form" },
+                { "id": "v_iru", "form": "polite_masu" }
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "不便な 地区ですね。業者に たのんで、もっと 便を ふやして もらいたいです。",
+              "terms": [
+                "v_fuben",
+                "v_chiku",
+                "v_gyousha",
+                { "id": "v_tanomu", "form": "te_form" },
+                "v_bin",
+                { "id": "v_fuyasu", "form": "te_form" },
+                "v_morau"
+              ]
+            }
+          ],
+          "question": "What was inconvenient about the bus service?",
+          "choices": [
+            "The bus only runs once an hour and was cancelled on rainy days.",
+            "The bus driver was a dishonest contractor.",
+            "The bus stop was inside a private house.",
+            "The bus mainly carried industrial products."
+          ],
+          "answer": "The bus only runs once an hour and was cancelled on rainy days.",
+          "explanation": "A says 一時間に一本だけ (only one bus per hour) and B mentions 雨で中止になった日もありました (there were also days it was cancelled due to rain)."
+        }
+      ]
+    },
+    {
+      "type": "vocab",
+      "title": "Part 2: Vocabulary",
+      "instructions": "Select the correct reading or meaning for each word.",
+      "items": [
+        {
+          "q": "不味い",
+          "choices": [
+            "bad-tasting / unpleasant",
+            "inconvenient",
+            "dishonest",
+            "bad luck"
+          ],
+          "answer": "bad-tasting / unpleasant",
+          "explanation": "不味い (まずい / mazui) means bad-tasting or unpleasant. The 不 prefix negates 味 (flavor).",
+          "terms": ["v_mazui"]
+        },
+        {
+          "q": "業者",
+          "choices": [
+            "ぎょうしゃ — contractor / business operator",
+            "さんしゃ — producer",
+            "こうしゃ — factory worker",
+            "ぎょうじん — business person"
+          ],
+          "answer": "ぎょうしゃ — contractor / business operator",
+          "explanation": "業者 is read ぎょうしゃ (gyousha) and means contractor or business operator. 業 (N4.36) + 者 (N4.15).",
+          "terms": ["v_gyousha"]
+        },
+        {
+          "q": "産業",
+          "choices": [
+            "さんぎょう — industry",
+            "さんぶつ — product",
+            "こうぎょう — manufacturing",
+            "さんか — production output"
+          ],
+          "answer": "さんぎょう — industry",
+          "explanation": "産業 is read さんぎょう (sangyou) and means industry. 産 (produce/birth, N4.36) + 業 (business, N4.36).",
+          "terms": ["v_sangyou"]
+        },
+        {
+          "q": "手洗い",
+          "choices": [
+            "てあらい — handwashing / restroom",
+            "てあらう — to wash by hand",
+            "しゅせん — hand washing ritual",
+            "てせん — hand line"
+          ],
+          "answer": "てあらい — handwashing / restroom",
+          "explanation": "手洗い is read てあらい (tearai) and means handwashing or restroom. 手 (hand, N5) + 洗 (wash, N4.35).",
+          "terms": ["v_tearai"]
+        },
+        {
+          "q": "主に",
+          "choices": [
+            "おもに — mainly / primarily",
+            "しゅに — chiefly (formal)",
+            "ぬしに — as master",
+            "もっぱら — exclusively"
+          ],
+          "answer": "おもに — mainly / primarily",
+          "explanation": "主に is read おもに (omoni) and means mainly or primarily. The kun reading おも of 主 is used adverbially.",
+          "terms": ["v_omoni"]
+        }
+      ]
+    },
+    {
+      "type": "kanji",
+      "title": "Part 3: Kanji Readings",
+      "instructions": "Select the correct reading for the [bracketed] kanji or word.",
+      "items": [
+        {
+          "q": "この 場所は [不]便です。",
+          "choices": [
+            "ふ",
+            "ぶ",
+            "ぷ",
+            "ふつ"
+          ],
+          "answer": "ふ",
+          "explanation": "不 is read ふ (fu) in the word 不便 (fuben, inconvenient). It is a negative prefix with on-reading ふ or ぶ.",
+          "terms": ["v_fuben"]
+        },
+        {
+          "q": "[業]者に たのみました。",
+          "choices": [
+            "ぎょう",
+            "ごう",
+            "なりわい",
+            "こう"
+          ],
+          "answer": "ぎょう",
+          "explanation": "業 is read ぎょう (gyou) in 業者 (gyousha, contractor). The on-reading ぎょう is used in most compound words.",
+          "terms": ["v_gyousha"]
+        },
+        {
+          "q": "この 地区の [産]業は 有名です。",
+          "choices": [
+            "さん",
+            "うむ",
+            "しょう",
+            "せい"
+          ],
+          "answer": "さん",
+          "explanation": "産 is read さん (san) in 産業 (sangyou, industry). The on-reading さん is used in compounds like 産業 and 産物.",
+          "terms": ["v_sangyou"]
+        },
+        {
+          "q": "車を [洗]います。",
+          "choices": [
+            "あらい",
+            "せんじ",
+            "あらう",
+            "きよめ"
+          ],
+          "answer": "あらい",
+          "explanation": "洗 in 洗います is the masu-stem あらい of あらう (arau, to wash). The kun-reading is あらう.",
+          "terms": ["v_arau"]
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "title": "Part 4: Fill in the Blank",
+      "instructions": "Choose the word that best completes each sentence.",
+      "items": [
+        {
+          "q": "雨で 電車が ______ に なりました。",
+          "choices": [
+            "中止",
+            "主語",
+            "産物",
+            "不運"
+          ],
+          "answer": "中止",
+          "explanation": "中止 (chuushi, cancellation) fits: the train service was cancelled due to rain. 中止になる means 'to be called off'.",
+          "terms": ["v_chuushi"]
+        },
+        {
+          "q": "この 国の ______ は 国の ほうりつを まもります。",
+          "choices": [
+            "国民",
+            "業者",
+            "主人",
+            "民家"
+          ],
+          "answer": "国民",
+          "explanation": "国民 (kokumin, citizens/nationals) fits: the citizens of this country follow the nation's laws. 国民 = 国 (country, N5) + 民 (people, N4.35).",
+          "terms": ["v_kokumin"]
+        },
+        {
+          "q": "週まつに ______ を して、きれいに なりました。",
+          "choices": [
+            "洗車",
+            "中止",
+            "不正",
+            "産業"
+          ],
+          "answer": "洗車",
+          "explanation": "洗車 (sensha, car wash) fits: we did a car wash on the weekend and it became clean. 洗車 = 洗 (wash, N4.35) + 車 (car, N5).",
+          "terms": ["v_sensha"]
+        },
+        {
+          "q": "この 地区の ______ は 車と 電気の 物です。",
+          "choices": [
+            "産物",
+            "手洗い",
+            "主語",
+            "民家"
+          ],
+          "answer": "産物",
+          "explanation": "産物 (sanbutsu, products/output) fits: the products of this district are cars and electronics. 産物 = 産 (produce, N4.36) + 物 (thing, N4.5).",
+          "terms": ["v_sanbutsu"]
+        }
+      ]
+    },
+    {
+      "type": "translation",
+      "title": "Part 5: Translation",
+      "instructions": "Choose the correct English translation for each Japanese sentence.",
+      "items": [
+        {
+          "q": "主人は 主に 洗車を して から、仕事に 行きます。",
+          "choices": [
+            "The owner mainly washes the car before going to work.",
+            "The master mainly stops the car before going to the factory.",
+            "The husband mainly does laundry, then commutes to the industry.",
+            "The owner mainly uses the restroom before stopping work."
+          ],
+          "answer": "The owner mainly washes the car before going to work.",
+          "explanation": "主人 (shujin) = owner/husband; 主に (omoni) = mainly; 洗車 (sensha) = car wash; てから = before/after doing; 仕事に行く = go to work.",
+          "terms": ["v_shujin", "v_omoni", "v_sensha", "v_shigoto"]
+        },
+        {
+          "q": "不便な 地区の 業者は 不運でした。",
+          "choices": [
+            "The contractor in the inconvenient district had bad luck.",
+            "The inconvenient citizen was an unlucky business operator.",
+            "The dishonest contractor in the district was unfortunate.",
+            "The inconvenient industry produced bad products."
+          ],
+          "answer": "The contractor in the inconvenient district had bad luck.",
+          "explanation": "不便な (fuben na) = inconvenient; 地区 (chiku) = district; 業者 (gyousha) = contractor; 不運 (fuun) = bad luck.",
+          "terms": ["v_fuben", "v_chiku", "v_gyousha", "v_fuun"]
+        },
+        {
+          "q": "国民が 産業を 止める ことは できません。",
+          "choices": [
+            "Citizens cannot stop industry.",
+            "The people cannot produce citizens.",
+            "Citizens will not wash industrial products.",
+            "The contractor cannot stop the citizens' business."
+          ],
+          "answer": "Citizens cannot stop industry.",
+          "explanation": "国民 (kokumin) = citizens; 産業 (sangyou) = industry; 止める (tomeru) = to stop (transitive); ことはできません = cannot do.",
+          "terms": ["v_kokumin", "v_sangyou", "v_tomeru"]
+        }
+      ]
+    }
+  ]
+}
