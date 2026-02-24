@@ -325,6 +325,40 @@
         { "id": "v_arau", "count": 1, "matches": ["洗い", "あらい", "洗う", "あらう", "洗って", "あらって"] }
       ],
       "helpers": ["v_tooru", "v_kokumin", "v_tomeru", "v_kyuushi", "v_sensha"]
+    },
+    {
+      "id": "neighbourhood-carwash",
+      "title": "Neighbourhood Car Wash",
+      "titleJp": "町内洗車イベント",
+      "emoji": "🚗",
+      "lessons": ["N4.35"],
+      "scenario": "Local residents are organising a charity car wash in the car park. Write about helping out — who stopped traffic to keep things safe, what you washed, and the no-parking rule that was put up for the day.",
+      "hint": "例: 住民みんなで洗車イベントをしました。まず車を止めて...",
+      "targets": [
+        { "id": "v_juumin", "count": 1 },
+        { "id": "v_tomeru", "count": 1, "matches": ["止め", "とめ", "止める", "とめる", "止めて", "とめて"] },
+        { "id": "v_sensha", "count": 1 },
+        { "id": "v_arau", "count": 1, "matches": ["洗い", "あらい", "洗う", "あらう", "洗って", "あらって"] },
+        { "id": "v_kinshi", "count": 1 }
+      ],
+      "helpers": ["v_nushi", "v_omoni", "v_tearai", "v_chuushi"]
+    },
+    {
+      "id": "unlucky-contractor",
+      "title": "The Unlucky Contractor",
+      "titleJp": "不運な業者",
+      "emoji": "🔧",
+      "lessons": ["N4.36"],
+      "scenario": "A contractor working on a local industry project is having a terrible week. Write about the inconvenient transport service that delayed their materials, their bad luck, and how they feel about the work itself.",
+      "hint": "例: 業者はとても不運でした。バスの便が悪くて...",
+      "targets": [
+        { "id": "v_gyousha", "count": 1 },
+        { "id": "v_fuun", "count": 1 },
+        { "id": "v_fuben", "count": 1, "matches": ["不便", "ふべん"] },
+        { "id": "v_bin", "count": 1 },
+        { "id": "v_sangyou", "count": 1 }
+      ],
+      "helpers": ["v_gyou", "v_kougyou", "v_sanbutsu", "v_fusei"]
     }
   ]
 }
