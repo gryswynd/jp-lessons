@@ -499,6 +499,32 @@ window.GameModule = (function() {
       conversationIndex: 0
     };
 
+    // --- Chroma Key: strips magenta (#FF00FF) background, returns new transparent Image ---
+    function chromaKey(sourceImg) {
+      const offscreen = document.createElement('canvas');
+      offscreen.width = sourceImg.width;
+      offscreen.height = sourceImg.height;
+      const offCtx = offscreen.getContext('2d');
+      offCtx.drawImage(sourceImg, 0, 0);
+
+      const imageData = offCtx.getImageData(0, 0, offscreen.width, offscreen.height);
+      const data = imageData.data;
+
+      for (let i = 0; i < data.length; i += 4) {
+        const r = data[i], g = data[i + 1], b = data[i + 2];
+        // Tolerance of 30 to catch near-magenta anti-aliasing fringe pixels
+        if (r > 200 && g < 80 && b > 200) {
+          data[i + 3] = 0; // Set alpha to transparent
+        }
+      }
+
+      offCtx.putImageData(imageData, 0, 0);
+
+      const newImg = new Image();
+      newImg.src = offscreen.toDataURL();
+      return newImg;
+    }
+
     // --- Image Loading ---
     function loadImages() {
       const assets = dayData.assets;
@@ -531,14 +557,32 @@ window.GameModule = (function() {
         img.onload = () => {
           loadedImages++;
           if (loadedImages === totalImages) {
-            initGame();
+            // Strip magenta background from player sprite sheet before starting game
+            if (game.images.playerSheet) {
+              const stripped = chromaKey(game.images.playerSheet);
+              stripped.onload = () => {
+                game.images.playerSheet = stripped;
+                initGame();
+              };
+            } else {
+              initGame();
+            }
           }
         };
         img.onerror = () => {
           console.error(`Failed to load: ${url}`);
           loadedImages++;
           if (loadedImages === totalImages) {
-            initGame();
+            // Still attempt chroma key even on partial load
+            if (game.images.playerSheet) {
+              const stripped = chromaKey(game.images.playerSheet);
+              stripped.onload = () => {
+                game.images.playerSheet = stripped;
+                initGame();
+              };
+            } else {
+              initGame();
+            }
           }
         };
         img.src = url;
