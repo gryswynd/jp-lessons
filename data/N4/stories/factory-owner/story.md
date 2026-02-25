@@ -13,11 +13,11 @@
 
 たかしさんは近所の人たちに話しました。その中に、工業のきかいをよく知っている田中さんという人がいました。田中さんはたかしさんの工場に来て、問題を説明しました。「このきかいは自分でなおせます」と言いました。
 
-田中さんと近所の人たちがいっしょにきかいをなおしました。仕事の後は洗濯もしなければなりませんでした。たかしさんは手洗いで手を洗いながら、みんなにお礼を言いました。工場の食堂でみんなと食事をして、今後の計画を話しました。
+田中さんと近所の人たちがいっしょにきかいをなおしました。たかしさんは手洗いで手を洗いながら、みんなにお礼を言いました。工場の食堂でみんなと食事をして、今後の計画を話しました。
 
 工場が動き始めてから、たかしさんは洗車のサービスも工場の近くで始めました。これも地区の産業の産物でした。国民の生活をささえる工業を主に考えて、たかしさんは中止していた注文もまた始めました。
 
-それから、たかしさんは不正な業者のことを市長に知らせました。市長は「不正は禁止です。地区の工業のために、不正を止めることが大切です」と言いました。たかしさんは近所の人たちの力でできたことを、とてもうれしく思いました。
+それから、たかしさんは不正な業者のことを市長に知らせました。市長は「地区の工業のために、不正を止めることが大切です」と言いました。たかしさんは近所の人たちの力でできたことを、とてもうれしく思いました。
 
 今も、たかしさんは毎朝工場に通っています。近所の人たちは今でも工場の食堂でよく話しています。不運なことから、たかしさんは人々の力は大切だと知りました。
 
@@ -37,11 +37,11 @@ A new contractor came. However, that contractor was dishonest. The price was mor
 
 Takashi talked to the people in the neighborhood. Among them was a person named Tanaka who knew a lot about industrial machinery. Tanaka came to Takashi's factory and explained the problem. "I can fix this machine myself," he said.
 
-Tanaka and the neighborhood people fixed the machinery together. After work, there was laundry to do as well. While washing his hands at the washroom, Takashi thanked everyone. They ate together in the factory cafeteria and talked about plans going forward.
+Tanaka and the neighborhood people fixed the machinery together. While washing his hands at the washroom, Takashi thanked everyone. They ate together in the factory cafeteria and talked about plans going forward.
 
 After the factory started running again, Takashi also started a car wash service near the factory. This, too, was a product of the district's industry. Thinking mainly about manufacturing that supports citizens' lives, Takashi also restarted orders that he had cancelled.
 
-After that, Takashi informed the mayor about the dishonest contractor. The mayor said, "Dishonesty is prohibited. It is important to stop dishonesty in order to protect the district's manufacturing industry." Takashi was very glad about what he was able to accomplish through the strength of the neighborhood people.
+After that, Takashi informed the mayor about the dishonest contractor. The mayor said, "It is important to stop dishonesty in order to protect the district's manufacturing industry." Takashi was very glad about what he was able to accomplish through the strength of the neighborhood people.
 
 Even now, Takashi commutes to the factory every morning. The neighborhood people still often talk in the factory cafeteria. From this unfortunate event, Takashi learned that people's strength is important.
 
@@ -57,13 +57,11 @@ Even now, Takashi commutes to the factory every morning. The neighborhood people
 - 止まる (とまる) - to stop (intransitive)
 - 止める (とめる) - to stop (transitive)
 - 休止 (きゅうし) - pause / suspension
-- 禁止 (きんし) - prohibition
 - 中止 (ちゅうし) - cancellation
 - 国民 (こくみん) - citizens
 - 洗う (あらう) - to wash
 - 手洗い (てあらい) - washroom
 - 洗車 (せんしゃ) - car wash
-- 洗濯 (せんたく) - laundry
 
 **N4.36 – Industry, Production & Problems**
 - 不味い (まずい) - bad / unpleasant
@@ -118,5 +116,4 @@ Even now, Takashi commutes to the factory every morning. The neighborhood people
 - Te-iru form (通っています、話しています、知っている)
 - Te-iru past (中止していた)
 - ～ながら (洗いながら)
-- ～なければなりませんでした (had to do)
 - ために (purpose)
