@@ -406,12 +406,36 @@ window.StoryModule = (function() {
       // Story.js flags by term ID (boolean, flag-once) rather than the
       // default count-based surface flagging used by Lesson/Review.
       // The message auto-hides after 2s and is suppressed if already flagged.
-      window.JP_OPEN_TERM = function(id, enableFlag) {
-        window.JPShared.termModal.open(id, {
+      window.JP_OPEN_TERM = function(id, form, enableFlag) {
+        // Support legacy 2-arg calls: JP_OPEN_TERM(id, enableFlag)
+        if (typeof form === 'boolean') {
+          enableFlag = form;
+          form = null;
+        }
+
+        var termId = id;
+
+        // If a conjugation form is specified, generate and cache the conjugated term
+        if (form && CONJUGATION_RULES) {
+          var conjugatedId = id + '_' + form;
+          if (!termMapData[conjugatedId]) {
+            var rootTerm = termMapData[id];
+            if (rootTerm) {
+              var conjugated = window.JPShared.textProcessor.conjugate(rootTerm, form, CONJUGATION_RULES);
+              if (conjugated) {
+                termMapData[conjugated.id] = conjugated;
+              }
+            }
+          }
+          termId = conjugatedId;
+        }
+
+        window.JPShared.termModal.open(termId, {
           enableFlag: !!enableFlag,
-          onFlag: function(termId, msgBox) {
-            if (!window.JPShared.progress.getFlagCount(termId)) {
-              window.JPShared.progress.flagTerm(termId);
+          onFlag: function(flaggedId, msgBox) {
+            // Always flag the root term ID, not the conjugated form
+            if (!window.JPShared.progress.getFlagCount(id)) {
+              window.JPShared.progress.flagTerm(id);
               if (msgBox) {
                 msgBox.style.display = 'block';
                 setTimeout(function() { msgBox.style.display = 'none'; }, 2000);
