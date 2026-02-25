@@ -86,6 +86,21 @@ window.PracticeModule = {
             .k-chk { width: 18px; height: 18px; margin-right: 12px; accent-color: var(--primary); }
             .k-lesson-row { display: flex; padding: 10px 15px; border-bottom: 1px solid #f1f2f6; font-size: 0.9rem; }
 
+            /* STREAK CELEBRATION - HANABI */
+            .k-hanabi-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 100; overflow: hidden; }
+            .k-hanabi-particle { position: absolute; border-radius: 50%; }
+            .k-hanabi-msg { position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%) scale(0); text-align: center; font-family: 'Noto Sans JP', sans-serif; animation: k-hanabi-pop 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; white-space: nowrap; }
+            .k-hanabi-jp { font-size: 3rem; font-weight: 900; text-shadow: 0 2px 10px rgba(0,0,0,0.15); }
+            .k-hanabi-en { font-size: 1rem; color: #747d8c; font-weight: 600; margin-top: 5px; }
+            @keyframes k-hanabi-pop {
+                0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+                20% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
+                40% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+                80% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+                100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0; }
+            }
+            #k-view-quiz .k-card { transition: box-shadow 0.5s ease, border-color 0.5s ease; }
+
             .k-flag-stamp { position: absolute; top: 15px; right: 15px; color: #ff4757; border: 3px solid #ff4757; padding: 5px 12px; border-radius: 8px; font-weight: 900; text-transform: uppercase; transform: rotate(15deg); font-size: 1rem; letter-spacing: 0.1em; opacity: 0.8; z-index: 5; }
         `;
         document.head.appendChild(style);
@@ -228,6 +243,107 @@ window.PracticeModule = {
         if(el) el.innerText = txt;
     }
 
+    // --- STREAK CELEBRATION (HANABI) ---
+    const STREAK_TIERS = [
+        { at: 5,  msg: 'いいね！',     sub: 'Nice!',       colors: ['#FFD700','#FFA500','#FFE066'], particles: 15 },
+        { at: 10, msg: 'すごい！',     sub: 'Amazing!',     colors: ['#FF6B35','#FF4500','#FF8C00'], particles: 24 },
+        { at: 15, msg: 'さすが！',     sub: 'Impressive!',  colors: ['#FF1493','#FF69B4','#FF85C8'], particles: 35 },
+        { at: 20, msg: 'すばらしい！', sub: 'Wonderful!',   colors: ['#00E5FF','#00BCD4','#4DD0E1'], particles: 45 },
+        { at: 25, msg: '天才！',       sub: 'Genius!',      colors: ['#8B5CF6','#A78BFA','#7C3AED'], particles: 55 },
+        { at: 30, msg: '神！',         sub: 'Godlike!',     colors: ['#FF1493','#FFD700','#00E5FF','#8B5CF6','#2ED573','#FF6B35'], particles: 70 }
+    ];
+
+    const STREAK_GLOW = [
+        { min: 1,  color: 'rgba(255,215,0,0.15)',  spread: 8 },
+        { min: 5,  color: 'rgba(255,215,0,0.3)',   spread: 15 },
+        { min: 10, color: 'rgba(255,107,53,0.35)',  spread: 20 },
+        { min: 15, color: 'rgba(255,20,147,0.35)',  spread: 25 },
+        { min: 20, color: 'rgba(0,229,255,0.4)',    spread: 30 },
+        { min: 25, color: 'rgba(139,92,246,0.45)',  spread: 35 },
+        { min: 30, color: 'rgba(255,20,147,0.5)',   spread: 40 }
+    ];
+
+    function updateStreakVisuals(streak) {
+        var card = document.querySelector('#k-view-quiz .k-card');
+        if (card) {
+            if (streak === 0) {
+                card.style.boxShadow = '';
+                card.style.borderColor = '';
+            } else {
+                var glow = STREAK_GLOW[0];
+                for (var i = STREAK_GLOW.length - 1; i >= 0; i--) {
+                    if (streak >= STREAK_GLOW[i].min) { glow = STREAK_GLOW[i]; break; }
+                }
+                card.style.boxShadow = '0 0 ' + glow.spread + 'px ' + glow.color + ', 0 10px 25px rgba(0,0,0,0.05)';
+                card.style.borderColor = glow.color;
+            }
+        }
+        if (streak >= 5 && streak % 5 === 0) launchHanabi(streak);
+    }
+
+    function launchHanabi(streak) {
+        var tier = STREAK_TIERS[0];
+        for (var i = STREAK_TIERS.length - 1; i >= 0; i--) {
+            if (streak >= STREAK_TIERS[i].at) { tier = STREAK_TIERS[i]; break; }
+        }
+
+        var quizView = document.getElementById('k-view-quiz');
+        if (!quizView) return;
+        quizView.style.position = 'relative';
+
+        var container = document.createElement('div');
+        container.className = 'k-hanabi-container';
+        quizView.appendChild(container);
+
+        var rect = quizView.getBoundingClientRect();
+        var burstPoints = streak >= 25 ? [
+            { x: rect.width * 0.3, y: rect.height * 0.25 },
+            { x: rect.width * 0.7, y: rect.height * 0.3 },
+            { x: rect.width * 0.5, y: rect.height * 0.15 }
+        ] : streak >= 15 ? [
+            { x: rect.width * 0.35, y: rect.height * 0.25 },
+            { x: rect.width * 0.65, y: rect.height * 0.25 }
+        ] : [
+            { x: rect.width / 2, y: rect.height * 0.25 }
+        ];
+
+        let perBurst = Math.ceil(tier.particles / burstPoints.length);
+        burstPoints.forEach(function(bp, bIdx) {
+            for (let i = 0; i < perBurst; i++) {
+                let p = document.createElement('div');
+                p.className = 'k-hanabi-particle';
+                let angle = (Math.PI * 2 * i / perBurst) + (Math.random() * 0.4 - 0.2);
+                let dist = 50 + Math.random() * 100;
+                let color = tier.colors[Math.floor(Math.random() * tier.colors.length)];
+                let size = 3 + Math.random() * 5;
+                let delay = bIdx * 150 + Math.random() * 100;
+                let dx = Math.cos(angle) * dist;
+                let dy = Math.sin(angle) * dist + 40;
+
+                p.style.cssText = 'left:' + bp.x + 'px;top:' + bp.y + 'px;width:' + size + 'px;height:' + size + 'px;background:' + color + ';box-shadow:0 0 ' + size + 'px ' + color + ';transition:transform 0.9s cubic-bezier(0.25,0.46,0.45,0.94),opacity 0.9s ease-out;transition-delay:' + delay + 'ms;';
+                container.appendChild(p);
+
+                requestAnimationFrame(function() { requestAnimationFrame(function() {
+                    p.style.transform = 'translate(' + dx + 'px,' + dy + 'px)';
+                    p.style.opacity = '0';
+                }); });
+            }
+        });
+
+        var msgEl = document.createElement('div');
+        msgEl.className = 'k-hanabi-msg';
+        msgEl.innerHTML = '<div class="k-hanabi-jp" style="color:' + tier.colors[0] + '">' + tier.msg + '</div><div class="k-hanabi-en">' + tier.sub + '</div>';
+        container.appendChild(msgEl);
+
+        setTimeout(function() { container.remove(); }, 2500);
+    }
+
+    function resetStreakVisuals() {
+        var card = document.querySelector('#k-view-quiz .k-card');
+        if (card) { card.style.boxShadow = ''; card.style.borderColor = ''; }
+        document.querySelectorAll('.k-hanabi-container').forEach(function(c) { c.remove(); });
+    }
+
     // --- 4. EXPOSED FUNCTIONS ---
     KanjiApp.showMenu = function() {
         kUpdateStats();
@@ -240,7 +356,7 @@ window.PracticeModule = {
     };
 
     KanjiApp.start = function(type, mode, subMode='normal') {
-        curType = type; curMode = mode; curSubMode = subMode; curIdx = 0; curStreak = 0; quizPhase = 1;
+        curType = type; curMode = mode; curSubMode = subMode; curIdx = 0; curStreak = 0; quizPhase = 1; resetStreakVisuals();
         setTxt('k-streak', 0);
 
         if (mode === 'quiz-meaning') curCategory = 'meaning';
@@ -430,7 +546,7 @@ window.PracticeModule = {
 
         const msg = document.getElementById('k-q-msg');
         if(sel===curAns) {
-            btn.classList.add('correct'); curStreak++;
+            btn.classList.add('correct'); curStreak++; updateStreakVisuals(curStreak);
             const readEl = document.getElementById('k-q-read-reveal');
             if(readEl) {
                 if(curMode === 'quiz-meaning') { readEl.innerText = [curQItem.on, curQItem.kun].filter(x => x).join(' / '); readEl.classList.remove('k-hidden'); }
@@ -455,7 +571,7 @@ window.PracticeModule = {
             if(curStreak > curBest) { curBest = curStreak; if(curCategory) { bestScores[curCategory] = curBest; window.JPShared.progress.setBestScore(curCategory, curBest); } }
             if(msg) { msg.innerText=`Correct! Streak: ${curStreak} 🔥`; msg.style.color="#155724"; msg.style.background="#d4edda"; }
         } else {
-            btn.classList.add('wrong'); curStreak = 0;
+            btn.classList.add('wrong'); curStreak = 0; resetStreakVisuals();
             if(msg) { msg.innerText=`Wrong! It was: ${curAns}`; msg.style.color="#721c24"; msg.style.background="#f8d7da"; }
             document.querySelectorAll('.k-opt').forEach(b=>{if(b.innerText===curAns)b.classList.add('correct')});
         }
