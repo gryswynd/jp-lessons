@@ -427,7 +427,8 @@ window.StoryModule = (function() {
               }
             }
           }
-          termId = conjugatedId;
+          // Fall back to root ID if conjugation failed (e.g. noun_suru verbs)
+          termId = termMapData[conjugatedId] ? conjugatedId : id;
         }
 
         window.JPShared.termModal.open(termId, {
