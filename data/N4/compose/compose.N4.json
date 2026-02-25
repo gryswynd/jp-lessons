@@ -332,16 +332,15 @@
       "titleJp": "町内洗車イベント",
       "emoji": "🚗",
       "lessons": ["N4.35"],
-      "scenario": "Local residents are organising a charity car wash in the car park. Write about helping out — who stopped traffic to keep things safe, what you washed, and the no-parking rule that was put up for the day.",
-      "hint": "例: 住民みんなで洗車イベントをしました。まず車を止めて...",
+      "scenario": "You help organise a charity car wash in the local car park. Write about who stopped traffic to keep things safe, what you washed, and how the event was nearly called off because of rain.",
+      "hint": "例: 近所で洗車イベントをしました。まず車を止めて...",
       "targets": [
-        { "id": "v_juumin", "count": 1 },
         { "id": "v_tomeru", "count": 1, "matches": ["止め", "とめ", "止める", "とめる", "止めて", "とめて"] },
         { "id": "v_sensha", "count": 1 },
         { "id": "v_arau", "count": 1, "matches": ["洗い", "あらい", "洗う", "あらう", "洗って", "あらって"] },
-        { "id": "v_kinshi", "count": 1 }
+        { "id": "v_chuushi", "count": 1 }
       ],
-      "helpers": ["v_nushi", "v_omoni", "v_tearai", "v_chuushi"]
+      "helpers": ["v_nushi", "v_omoni", "v_tearai", "v_kyuushi"]
     },
     {
       "id": "unlucky-contractor",
