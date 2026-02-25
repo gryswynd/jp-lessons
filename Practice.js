@@ -100,6 +100,7 @@ window.PracticeModule = {
                 100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0; }
             }
             #k-view-quiz .k-card { transition: box-shadow 0.5s ease, border-color 0.5s ease; }
+            #k-fc-card-obj { transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1), box-shadow 0.5s ease; }
 
             .k-flag-stamp { position: absolute; top: 15px; right: 15px; color: #ff4757; border: 3px solid #ff4757; padding: 5px 12px; border-radius: 8px; font-weight: 900; text-transform: uppercase; transform: rotate(15deg); font-size: 1rem; letter-spacing: 0.1em; opacity: 0.8; z-index: 5; }
         `;
@@ -175,6 +176,8 @@ window.PracticeModule = {
             <div id="k-view-flash" class="k-hidden" style="width:100%">
                 <div style="display:flex; justify-content:space-between; width:100%; margin-bottom:10px; color:#a4b0be; font-weight:800; font-size:0.9rem;">
                      <span id="k-fc-progress">Card 1 / 100</span>
+                     <span>🏆 <span id="k-fc-best">0</span></span>
+                     <span style="color:#ffa502">🔥 <span id="k-fc-streak">0</span></span>
                 </div>
                 <div class="k-scene" onclick="KanjiApp.flipCard()">
                     <div class="k-card-obj" id="k-fc-card-obj">
@@ -226,6 +229,7 @@ window.PracticeModule = {
     const activeLessons = new Set();
     let curSet=[], curIdx=0, curStreak=0, curBest=0, curMode='', curAns='', curType='', curSubMode='normal', curQItem=null, curCategory='';
     let quizPhase = 1;
+    let skipNextStreak = false;
 
     let flagCounts = window.JPShared.progress.getAllFlags();
     let activeFlags = window.JPShared.progress.getAllActiveFlags();
@@ -234,7 +238,8 @@ window.PracticeModule = {
         meaning: window.JPShared.progress.getBestScore('meaning'),
         reading: window.JPShared.progress.getBestScore('reading'),
         vocab: window.JPShared.progress.getBestScore('vocab'),
-        verb: window.JPShared.progress.getBestScore('verb')
+        verb: window.JPShared.progress.getBestScore('verb'),
+        flash: window.JPShared.progress.getBestScore('flash')
     };
 
     // --- 3. HELPER FUNCTIONS ---
@@ -264,7 +269,8 @@ window.PracticeModule = {
     ];
 
     function updateStreakVisuals(streak) {
-        var card = document.querySelector('#k-view-quiz .k-card');
+        var isFlash = (curMode === 'flash');
+        var card = isFlash ? document.getElementById('k-fc-card-obj') : document.querySelector('#k-view-quiz .k-card');
         if (card) {
             if (streak === 0) {
                 card.style.boxShadow = '';
@@ -274,10 +280,13 @@ window.PracticeModule = {
                 for (var i = STREAK_GLOW.length - 1; i >= 0; i--) {
                     if (streak >= STREAK_GLOW[i].min) { glow = STREAK_GLOW[i]; break; }
                 }
-                card.style.boxShadow = '0 0 ' + glow.spread + 'px ' + glow.color + ', 0 10px 25px rgba(0,0,0,0.05)';
+                var baseShadow = isFlash ? '0 15px 35px rgba(0,0,0,0.1)' : '0 10px 25px rgba(0,0,0,0.05)';
+                card.style.boxShadow = '0 0 ' + glow.spread + 'px ' + glow.color + ', ' + baseShadow;
                 card.style.borderColor = glow.color;
             }
         }
+        setTxt('k-fc-streak', streak);
+        setTxt('k-fc-best', curBest);
         if (streak >= 5 && streak % 5 === 0) launchHanabi(streak);
     }
 
@@ -287,15 +296,15 @@ window.PracticeModule = {
             if (streak >= STREAK_TIERS[i].at) { tier = STREAK_TIERS[i]; break; }
         }
 
-        var quizView = document.getElementById('k-view-quiz');
-        if (!quizView) return;
-        quizView.style.position = 'relative';
+        var targetView = document.getElementById(curMode === 'flash' ? 'k-view-flash' : 'k-view-quiz');
+        if (!targetView) return;
+        targetView.style.position = 'relative';
 
         var container = document.createElement('div');
         container.className = 'k-hanabi-container';
-        quizView.appendChild(container);
+        targetView.appendChild(container);
 
-        var rect = quizView.getBoundingClientRect();
+        var rect = targetView.getBoundingClientRect();
         var burstPoints = streak >= 25 ? [
             { x: rect.width * 0.3, y: rect.height * 0.25 },
             { x: rect.width * 0.7, y: rect.height * 0.3 },
@@ -339,9 +348,12 @@ window.PracticeModule = {
     }
 
     function resetStreakVisuals() {
-        var card = document.querySelector('#k-view-quiz .k-card');
-        if (card) { card.style.boxShadow = ''; card.style.borderColor = ''; }
+        var quizCard = document.querySelector('#k-view-quiz .k-card');
+        if (quizCard) { quizCard.style.boxShadow = ''; quizCard.style.borderColor = ''; }
+        var flashCard = document.getElementById('k-fc-card-obj');
+        if (flashCard) { flashCard.style.boxShadow = ''; flashCard.style.borderColor = ''; }
         document.querySelectorAll('.k-hanabi-container').forEach(function(c) { c.remove(); });
+        setTxt('k-fc-streak', 0);
     }
 
     // --- 4. EXPOSED FUNCTIONS ---
@@ -356,17 +368,19 @@ window.PracticeModule = {
     };
 
     KanjiApp.start = function(type, mode, subMode='normal') {
-        curType = type; curMode = mode; curSubMode = subMode; curIdx = 0; curStreak = 0; quizPhase = 1; resetStreakVisuals();
-        setTxt('k-streak', 0);
+        curType = type; curMode = mode; curSubMode = subMode; curIdx = 0; curStreak = 0; quizPhase = 1; skipNextStreak = false; resetStreakVisuals();
+        setTxt('k-streak', 0); setTxt('k-fc-streak', 0);
 
         if (mode === 'quiz-meaning') curCategory = 'meaning';
         else if (mode === 'quiz-reading') curCategory = 'reading';
         else if (mode === 'quiz-vocab') curCategory = 'vocab';
         else if (mode === 'quiz-conj') curCategory = 'verb';
+        else if (mode === 'flash') curCategory = 'flash';
         else curCategory = '';
 
         curBest = bestScores[curCategory] || 0;
         setTxt('k-best', curBest);
+        setTxt('k-fc-best', curBest);
 
         if(type==='kanji') curSet = DB.kanji.filter(k => activeLessons.has(k.lesson));
         else if(type==='verb') curSet = [...DB.verb];
@@ -429,6 +443,21 @@ window.PracticeModule = {
         const c = document.getElementById('k-fc-card-obj');
         const wasFlipped = c && c.classList.contains('is-flipped');
 
+        if (curMode === 'flash' && n === 1) {
+            if (skipNextStreak) {
+                skipNextStreak = false;
+            } else {
+                curStreak++;
+                if (curStreak > curBest) {
+                    curBest = curStreak;
+                    bestScores.flash = curBest;
+                    window.JPShared.progress.setBestScore('flash', curBest);
+                    setTxt('k-fc-best', curBest);
+                }
+                updateStreakVisuals(curStreak);
+            }
+        }
+
         if (wasFlipped) {
             c.classList.remove('is-flipped');
             // Wait for flip to reach 90deg (hide back) before changing text
@@ -445,6 +474,8 @@ window.PracticeModule = {
     KanjiApp.flag = function(btn) {
         const currentItem = curSet[curIdx];
         const kKey = currentItem.kanji || currentItem.word || currentItem.dict;
+
+        if (curMode === 'flash') { curStreak = 0; skipNextStreak = true; resetStreakVisuals(); }
 
         flagCounts[kKey] = (flagCounts[kKey] || 0) + 1;
         activeFlags[kKey] = true;
