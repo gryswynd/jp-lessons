@@ -1224,7 +1224,9 @@
       "notes": "",
       "lesson_ids": "N5.1",
       "reading": "なまえ",
-      "matches": ["名まえ"]
+      "matches": [
+        "名まえ"
+      ]
     },
     {
       "id": "v_umareru",
@@ -1276,7 +1278,9 @@
       "notes": "",
       "lesson_ids": "N5.2",
       "reading": "にちようび",
-      "matches": ["日ようび"]
+      "matches": [
+        "日ようび"
+      ]
     },
     {
       "id": "v_nihon",
@@ -1317,7 +1321,9 @@
       "notes": "",
       "lesson_ids": "N5.2",
       "reading": "げつようび",
-      "matches": ["月ようび"]
+      "matches": [
+        "月ようび"
+      ]
     },
     {
       "id": "v_kayoubi",
@@ -1328,7 +1334,9 @@
       "notes": "",
       "lesson_ids": "N5.2",
       "reading": "かようび",
-      "matches": ["火ようび"]
+      "matches": [
+        "火ようび"
+      ]
     },
     {
       "id": "v_kazan",
@@ -1349,7 +1357,9 @@
       "notes": "",
       "lesson_ids": "N5.2",
       "reading": "すいようび",
-      "matches": ["水ようび"]
+      "matches": [
+        "水ようび"
+      ]
     },
     {
       "id": "v_mokuyoubi",
@@ -1360,7 +1370,9 @@
       "notes": "",
       "lesson_ids": "N5.2",
       "reading": "もくようび",
-      "matches": ["木ようび"]
+      "matches": [
+        "木ようび"
+      ]
     },
     {
       "id": "v_kinyoubi",
@@ -1371,7 +1383,9 @@
       "notes": "",
       "lesson_ids": "N5.2",
       "reading": "きんようび",
-      "matches": ["金ようび"]
+      "matches": [
+        "金ようび"
+      ]
     },
     {
       "id": "v_kingyo",
@@ -1392,7 +1406,9 @@
       "notes": "",
       "lesson_ids": "N5.2",
       "reading": "どようび",
-      "matches": ["土ようび"]
+      "matches": [
+        "土ようび"
+      ]
     },
     {
       "id": "v_jikan",
@@ -2803,23 +2819,29 @@
     },
     {
       "id": "v_otousan",
-      "surface": "おとうさん",
+      "surface": "お父さん",
       "reading": "おとうさん",
       "meaning": "father (polite / someone else's)",
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N5.1",
-      "notes": "Polite form of 父（ちち）."
+      "notes": "Polite form of 父（ちち）. Uses 父 (N5.1 kanji).",
+      "matches": [
+        "おとうさん"
+      ]
     },
     {
       "id": "v_okaasan",
-      "surface": "おかあさん",
+      "surface": "お母さん",
       "reading": "おかあさん",
       "meaning": "mother (polite / someone else's)",
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N5.1",
-      "notes": "Polite form of 母（はは）."
+      "notes": "Polite form of 母（はは）. Uses 母 (N5.1 kanji).",
+      "matches": [
+        "おかあさん"
+      ]
     },
     {
       "id": "v_yasashii",
@@ -2972,6 +2994,16 @@
       "gtype": "noun",
       "lesson_ids": "N5.10",
       "notes": ""
+    },
+    {
+      "id": "v_anata",
+      "surface": "あなた",
+      "reading": "あなた",
+      "meaning": "you",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.1",
+      "notes": "Second-person pronoun. Avoid using with superiors; address by name instead."
     }
   ]
 }
