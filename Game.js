@@ -1167,16 +1167,21 @@ window.GameModule = (function() {
         dayDir = gameEntry.dir;
         playerSpritePath = manifest.shared.playerSprite;
         const dayUrl = getSharedAssetUrl(dayDir + '/day.json') + cacheBust;
-        const conjUrl    = getSharedAssetUrl(manifest.globalFiles.conjugationRules) + cacheBust;
-        const counterUrl = getSharedAssetUrl(manifest.globalFiles.counterRules) + cacheBust;
+        const conjUrl     = getSharedAssetUrl(manifest.globalFiles.conjugationRules) + cacheBust;
+        const counterUrl  = getSharedAssetUrl(manifest.globalFiles.counterRules) + cacheBust;
+        const particleUrl = getSharedAssetUrl(manifest.shared.particles) + cacheBust;
         const glossUrls = manifest.levels.map(lvl => getSharedAssetUrl(manifest.data[lvl].glossary) + cacheBust);
         return Promise.all([
           fetch(dayUrl).then(r => r.json()),
           fetch(conjUrl).then(r => r.json()),
           fetch(counterUrl).then(r => r.json()),
+          fetch(particleUrl).then(r => r.json()),
           ...glossUrls.map(url => fetch(url).then(r => r.json()))
-        ]).then(([day, conj, counter, ...glossParts]) => {
+        ]).then(([day, conj, counter, particleData, ...glossParts]) => {
           glossParts.forEach(g => g.entries.forEach(e => { termMap[e.id] = e; }));
+          (particleData.particles || []).forEach(p => {
+            termMap[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle' };
+          });
           conjugationRules = conj;
           counterRules = counter;
           return day;

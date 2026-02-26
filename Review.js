@@ -197,8 +197,9 @@
       try {
         const manifest = await window.getManifest(this.config);
         const quizUrl = this.getUrl();
-        const conjUrl    = this.getUrl(manifest.globalFiles.conjugationRules);
-        const counterUrl = this.getUrl(manifest.globalFiles.counterRules);
+        const conjUrl     = this.getUrl(manifest.globalFiles.conjugationRules);
+        const counterUrl  = this.getUrl(manifest.globalFiles.counterRules);
+        const particleUrl = this.getUrl(manifest.shared.particles);
         const glossaryUrls = manifest.levels.map(lvl => this.getUrl(manifest.data[lvl].glossary));
 
         console.log('[Review] Quiz URL:', quizUrl);
@@ -206,10 +207,11 @@
         console.log('[Review] Counter URL:', counterUrl);
 
         // 1. Fetch Quiz Data + Glossary + Conjugations + Counter Rules in parallel
-        const [quizRes, conjRes, counterRes, ...glossResponses] = await Promise.all([
+        const [quizRes, conjRes, counterRes, particleRes, ...glossResponses] = await Promise.all([
             fetch(quizUrl),
             fetch(conjUrl),
             fetch(counterUrl),
+            fetch(particleUrl),
             ...glossaryUrls.map(u => fetch(u))
         ]);
 
@@ -218,11 +220,12 @@
           quiz: quizRes.ok,
           glossary: glossOk,
           conjugations: conjRes.ok,
-          counters: counterRes.ok
+          counters: counterRes.ok,
+          particles: particleRes.ok
         });
 
-        if (!quizRes.ok || !glossOk || !conjRes.ok || !counterRes.ok) {
-          throw new Error(`Failed to fetch resources: Quiz(${quizRes.status}) Glossary(${glossResponses.map(r => r.status)}) Conjugations(${conjRes.status}) Counters(${counterRes.status})`);
+        if (!quizRes.ok || !glossOk || !conjRes.ok || !counterRes.ok || !particleRes.ok) {
+          throw new Error(`Failed to fetch resources: Quiz(${quizRes.status}) Glossary(${glossResponses.map(r => r.status)}) Conjugations(${conjRes.status}) Counters(${counterRes.status}) Particles(${particleRes.status})`);
         }
 
         console.log('[Review] Parsing JSON...');
@@ -230,14 +233,18 @@
         const glossParts = await Promise.all(glossResponses.map(r => r.json()));
         this.state.conjugations = await conjRes.json();
         this.state.counterRules = await counterRes.json();
+        const particleData = await particleRes.json();
 
         const glossData = { entries: glossParts.flatMap(g => g.entries) };
         console.log('[Review] Quiz title:', quizData.title);
         console.log('[Review] Glossary entries:', glossData.entries.length);
 
-        // 2. Map Glossary
+        // 2. Map Glossary + Particles
         this.state.termMap = {};
         glossData.entries.forEach(i => { this.state.termMap[i.id] = i; });
+        (particleData.particles || []).forEach(p => {
+            this.state.termMap[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle' };
+        });
 
         // 3. Inject Styles & Modal
         console.log('[Review] Injecting styles...');

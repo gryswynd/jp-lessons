@@ -156,17 +156,22 @@ window.LessonModule = {
 
     async function loadResources() {
         const manifest = await window.getManifest(REPO_CONFIG);
-        const conjUrl    = getCdnUrl(manifest.globalFiles.conjugationRules);
-        const counterUrl = getCdnUrl(manifest.globalFiles.counterRules);
+        const conjUrl     = getCdnUrl(manifest.globalFiles.conjugationRules);
+        const counterUrl  = getCdnUrl(manifest.globalFiles.counterRules);
+        const particleUrl = getCdnUrl(manifest.shared.particles);
         console.log('[Lesson] Conjugation URL:', conjUrl);
         console.log('[Lesson] Counter URL:', counterUrl);
-        const [conj, counter, ...glossParts] = await Promise.all([
+        const [conj, counter, particleData, ...glossParts] = await Promise.all([
              fetch(conjUrl).then(r => r.json()),
              fetch(counterUrl).then(r => r.json()),
+             fetch(particleUrl).then(r => r.json()),
              ...manifest.levels.map(lvl => fetch(getCdnUrl(manifest.data[lvl].glossary)).then(r => r.json()))
         ]);
         const map = {};
         glossParts.forEach(g => g.entries.forEach(i => { map[i.id] = i; }));
+        (particleData.particles || []).forEach(p => {
+            map[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle' };
+        });
         return { map, conj, counter };
     }
 
