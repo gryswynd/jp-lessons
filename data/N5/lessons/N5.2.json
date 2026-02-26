@@ -1,0 +1,436 @@
+{
+  "contentVersion": "1.0.0",
+  "id": "N5.2",
+  "title": "Days of the Week",
+  "meta": {
+    "level": "N5",
+    "lesson_number": 2,
+    "focus": "Days of the Week and Daily Time Expressions",
+    "estimated_minutes": 40
+  },
+  "newKanji": [
+    { "kanji": "日", "kun": "ひ", "on": "にち/じつ/に", "meaning": "Day / Sun", "termId": "k_hi" },
+    { "kanji": "月", "kun": "つき", "on": "げつ/がつ", "meaning": "Month / Moon", "termId": "k_tsuki" },
+    { "kanji": "火", "kun": "ひ", "on": "か", "meaning": "Fire", "termId": "k_hi_2" },
+    { "kanji": "水", "kun": "みず", "on": "すい", "meaning": "Water", "termId": "k_mizu" },
+    { "kanji": "木", "kun": "き", "on": "もく", "meaning": "Tree / Wood", "termId": "k_ki" },
+    { "kanji": "金", "kun": "かね", "on": "きん", "meaning": "Gold / Money", "termId": "k_kane" },
+    { "kanji": "土", "kun": "つち", "on": "ど", "meaning": "Earth / Soil", "termId": "k_tsuchi" },
+    { "kanji": "毎", "kun": "", "on": "まい", "meaning": "Every", "termId": "k_u6bce" },
+    { "kanji": "今", "kun": "いま", "on": "きょ/こ/こん", "meaning": "Now", "termId": "k_ima" },
+    { "kanji": "何", "kun": "なに/なん", "on": "か", "meaning": "What", "termId": "k_nani" }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "ウォームアップ",
+      "instructions": "Try answering these questions in Japanese.",
+      "items": [
+        {
+          "jp": "きょうは なんようびですか。",
+          "en": "What day is today?",
+          "terms": ["v_kyou", "p_wa", "v_nani", "g_desu", "p_ka"]
+        },
+        {
+          "jp": "まいにち なにを しますか。",
+          "en": "What do you do every day?",
+          "terms": ["v_mainichi", "v_nani", "p_wo", { "id": "v_suru", "form": "polite_masu" }, "p_ka"]
+        },
+        {
+          "jp": "げつようびは いいですか。",
+          "en": "Is Monday a good day?",
+          "terms": ["v_getsuyoubi", "p_wa", { "id": "v_ii", "form": "polite_adj" }, "p_ka"]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "あたらしい かんじ（New Kanji）",
+      "items": [
+        { "kanji": "日", "on": "にち/じつ/に", "kun": "ひ", "meaning": "day; sun", "terms": ["k_hi"] },
+        { "kanji": "月", "on": "げつ/がつ", "kun": "つき", "meaning": "month; moon", "terms": ["k_tsuki"] },
+        { "kanji": "火", "on": "か", "kun": "ひ", "meaning": "fire", "terms": ["k_hi_2"] },
+        { "kanji": "水", "on": "すい", "kun": "みず", "meaning": "water", "terms": ["k_mizu"] },
+        { "kanji": "木", "on": "もく", "kun": "き", "meaning": "tree; wood", "terms": ["k_ki"] },
+        { "kanji": "金", "on": "きん", "kun": "かね", "meaning": "gold; money", "terms": ["k_kane"] },
+        { "kanji": "土", "on": "ど", "kun": "つち", "meaning": "earth; soil", "terms": ["k_tsuchi"] },
+        { "kanji": "毎", "on": "まい", "kun": "", "meaning": "every", "terms": ["k_u6bce"] },
+        { "kanji": "今", "on": "きょ/こ/こん", "kun": "いま", "meaning": "now", "terms": ["k_ima"] },
+        { "kanji": "何", "on": "か", "kun": "なに/なん", "meaning": "what", "terms": ["k_nani"] }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "ことば（Vocabulary & Compounds）",
+      "groups": [
+        {
+          "label": "New Kanji",
+          "items": ["k_hi", "k_tsuki", "k_hi_2", "k_mizu", "k_ki", "k_kane", "k_tsuchi", "k_u6bce", "k_ima", "k_nani"]
+        },
+        {
+          "label": "Days of the Week",
+          "items": ["v_nichiyoubi", "v_getsuyoubi", "v_kayoubi", "v_suiyoubi", "v_mokuyoubi", "v_kinyoubi", "v_doyoubi"]
+        },
+        {
+          "label": "Every Day / Morning / Evening / Month",
+          "items": ["v_mainichi", "v_maiasa", "v_maiban", "v_maigetsu"]
+        },
+        {
+          "label": "Today / This Morning / Tonight / This Month / Last Month",
+          "items": ["v_kyou", "v_kesa", "v_konban", "v_kongetsu", "v_sengetsu"]
+        },
+        {
+          "label": "How Many People",
+          "items": ["v_nannin"]
+        },
+        {
+          "label": "Particles (New)",
+          "items": ["p_kara", "p_made"]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "かいわ 1: 今日は 何よう日？（What Day Is Today?）",
+      "context": "Rikizo and Yamakawa talk about the week's schedule in the school hallway.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "きょうは 何よう日ですか。",
+          "en": "What day is today?",
+          "terms": ["v_kyou", "p_wa", "v_nani", "g_desu", "p_ka"]
+        },
+        {
+          "spk": "B",
+          "jp": "今日は 木よう日です。",
+          "en": "Today is Thursday.",
+          "terms": ["v_kyou", "p_wa", "v_mokuyoubi", "g_desu"]
+        },
+        {
+          "spk": "A",
+          "jp": "やまもと先生は 何よう日に いますか。",
+          "en": "On which days is Yamamoto-sensei here?",
+          "terms": ["v_sensei", "p_wa", "v_nani", "p_ni", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
+        },
+        {
+          "spk": "B",
+          "jp": "月よう日と 水よう日と 金よう日に います。",
+          "en": "She is here on Monday, Wednesday, and Friday.",
+          "terms": ["v_getsuyoubi", "p_to", "v_suiyoubi", "v_kinyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "spk": "A",
+          "jp": "毎日では ありませんね。",
+          "en": "Not every day, right?",
+          "terms": ["v_mainichi", "p_dewa", { "id": "v_aru", "form": "polite_negative" }, "p_ne"]
+        },
+        {
+          "spk": "B",
+          "jp": "火よう日と 木よう日と 土よう日と 日よう日は いません。",
+          "en": "She is not here on Tuesday, Thursday, Saturday, or Sunday.",
+          "terms": ["v_kayoubi", "p_to", "v_mokuyoubi", "v_doyoubi", "v_nichiyoubi", "p_wa", { "id": "v_iru", "form": "polite_negative" }]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "かいわ 2: 父と 母のこと（About Father and Mother）",
+      "context": "Suzuki-san asks Rikizo about his parents' weekly schedule.",
+      "lines": [
+        {
+          "spk": "B",
+          "jp": "りきぞさん、お父さんは 何よう日に いますか。",
+          "en": "Rikizo-san, on which days is your father home?",
+          "terms": ["v_san", "v_otousan", "p_wa", "v_nani", "p_ni", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
+        },
+        {
+          "spk": "A",
+          "jp": "父は 月よう日から 金よう日まで います。",
+          "en": "My father is here from Monday to Friday.",
+          "terms": ["v_chichi", "p_wa", "v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "spk": "B",
+          "jp": "土よう日と 日よう日は いませんか。",
+          "en": "Is he not here on Saturday and Sunday?",
+          "terms": ["v_doyoubi", "p_to", "v_nichiyoubi", "p_wa", { "id": "v_iru", "form": "polite_negative" }, "p_ka"]
+        },
+        {
+          "spk": "A",
+          "jp": "そうです。お母さんも 月よう日から 金よう日まで います。",
+          "en": "That's right. My mother is also here from Monday to Friday.",
+          "terms": ["v_okaasan", "p_mo", "v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "spk": "B",
+          "jp": "毎日 いっしょに いますね。",
+          "en": "They are together every day, aren't they?",
+          "terms": ["v_mainichi", "v_issho", { "id": "v_iru", "form": "polite_masu" }, "p_ne"]
+        },
+        {
+          "spk": "A",
+          "jp": "そうです。とても いいですね。",
+          "en": "That's right. It's really nice, isn't it?",
+          "terms": ["v_totemo", { "id": "v_ii", "form": "polite_adj" }, "p_ne"]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "よむ れんしゅう 1: やまもと先生の スケジュール（Yamamoto-sensei's Schedule）",
+      "passage": [
+        {
+          "jp": "今日は 木よう日です。",
+          "en": "Today is Thursday.",
+          "terms": ["v_kyou", "p_wa", "v_mokuyoubi", "g_desu"]
+        },
+        {
+          "jp": "やまもと先生は 月よう日と 水よう日と 金よう日に います。",
+          "en": "Yamamoto-sensei is here on Monday, Wednesday, and Friday.",
+          "terms": ["v_sensei", "p_wa", "v_getsuyoubi", "p_to", "v_suiyoubi", "v_kinyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "jp": "火よう日と 木よう日と 土よう日と 日よう日は いません。",
+          "en": "She is not here on Tuesday, Thursday, Saturday, or Sunday.",
+          "terms": ["v_kayoubi", "p_to", "v_mokuyoubi", "v_doyoubi", "v_nichiyoubi", "p_wa", { "id": "v_iru", "form": "polite_negative" }]
+        },
+        {
+          "jp": "先生は とても やさしいです。毎日 うれしいです。",
+          "en": "The teacher is very kind. Every day I am happy.",
+          "terms": ["v_sensei", "p_wa", "v_totemo", { "id": "v_yasashii", "form": "polite_adj" }, "v_mainichi", { "id": "v_ureshii", "form": "polite_adj" }]
+        },
+        {
+          "jp": "先月も 月よう日から 金よう日まで 先生が いました。",
+          "en": "Last month too, the teacher was here from Monday to Friday.",
+          "terms": ["v_sengetsu", "p_mo", "v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", "v_sensei", "p_ga", { "id": "v_iru", "form": "polite_mashita" }]
+        },
+        {
+          "jp": "今月も 毎日 います。",
+          "en": "This month too, she is here every day.",
+          "terms": ["v_kongetsu", "p_mo", "v_mainichi", { "id": "v_iru", "form": "polite_masu" }]
+        }
+      ],
+      "questions": [
+        {
+          "q": "やまもと先生は 何よう日に いますか。",
+          "a": "月よう日と 水よう日と 金よう日に います。",
+          "terms": ["v_sensei", "p_wa", "v_nani", "p_ni", { "id": "v_iru", "form": "polite_masu" }, "p_ka", "v_getsuyoubi", "p_to", "v_suiyoubi", "v_kinyoubi"]
+        },
+        {
+          "q": "今日は 何よう日ですか。",
+          "a": "木よう日です。",
+          "terms": ["v_kyou", "p_wa", "v_nani", "g_desu", "p_ka", "v_mokuyoubi"]
+        },
+        {
+          "q": "先生は どうですか。",
+          "a": "とても やさしいです。",
+          "terms": ["v_sensei", "p_wa", "v_dou", "g_desu", "p_ka", "v_totemo", { "id": "v_yasashii", "form": "polite_adj" }]
+        },
+        {
+          "q": "先月も 先生が いましたか。",
+          "a": "先月も 月よう日から 金よう日まで いました。",
+          "terms": ["v_sengetsu", "p_mo", "v_sensei", "p_ga", { "id": "v_iru", "form": "polite_mashita" }, "p_ka", "v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made"]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "よむ れんしゅう 2: りきぞの 毎日（Rikizo's Every Day）",
+      "passage": [
+        {
+          "jp": "わたしは りきぞです。毎日 うれしいです。",
+          "en": "I am Rikizo. Every day I am happy.",
+          "terms": ["v_watashi", "g_desu", "v_mainichi", { "id": "v_ureshii", "form": "polite_adj" }]
+        },
+        {
+          "jp": "まいあさ、父が います。",
+          "en": "Every morning, my father is here.",
+          "terms": ["v_maiasa", "v_chichi", "p_ga", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "jp": "まいばん、母も います。",
+          "en": "Every evening, my mother is also here.",
+          "terms": ["v_maiban", "v_haha", "p_mo", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "jp": "けさ、友だちが います。",
+          "en": "This morning, my friends are here.",
+          "terms": ["v_kesa", "v_tomodachi", "p_ga", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "jp": "こんばん、先生が います。",
+          "en": "Tonight, the teacher is here.",
+          "terms": ["v_konban", "v_sensei", "p_ga", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "jp": "先月も 今月も 毎日 うれしいです。",
+          "en": "Both last month and this month, every day I am happy.",
+          "terms": ["v_sengetsu", "p_mo", "v_kongetsu", "v_mainichi", { "id": "v_ureshii", "form": "polite_adj" }]
+        }
+      ],
+      "questions": [
+        {
+          "q": "まいあさ だれが いますか。",
+          "a": "父が います。",
+          "terms": ["v_maiasa", "v_dare", "p_ga", { "id": "v_iru", "form": "polite_masu" }, "p_ka", "v_chichi"]
+        },
+        {
+          "q": "まいばん だれが いますか。",
+          "a": "母が います。",
+          "terms": ["v_maiban", "v_dare", "p_ga", { "id": "v_iru", "form": "polite_masu" }, "p_ka", "v_haha"]
+        },
+        {
+          "q": "けさ だれが いますか。",
+          "a": "友だちが います。",
+          "terms": ["v_kesa", "v_dare", "p_ga", { "id": "v_iru", "form": "polite_masu" }, "p_ka", "v_tomodachi"]
+        },
+        {
+          "q": "りきぞは 毎日 どうですか。",
+          "a": "うれしいです。",
+          "terms": ["v_mainichi", "v_dou", "g_desu", "p_ka", { "id": "v_ureshii", "form": "polite_adj" }]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "ドリル 1: かんじの よみかた（Kanji Readings）",
+      "instructions": "Choose the correct reading.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "[日] の よみかたは？",
+          "choices": ["ひ", "つき", "か", "みず"],
+          "answer": "ひ"
+        },
+        {
+          "kind": "mcq",
+          "q": "[月] の よみかたは？",
+          "choices": ["つき", "ひ", "き", "かね"],
+          "answer": "つき"
+        },
+        {
+          "kind": "mcq",
+          "q": "[土] の よみかたは？",
+          "choices": ["つち", "き", "かね", "みず"],
+          "answer": "つち"
+        },
+        {
+          "kind": "mcq",
+          "q": "[毎日] の よみかたは？",
+          "choices": ["まいにち", "まいあさ", "まいばん", "まいげつ"],
+          "answer": "まいにち"
+        },
+        {
+          "kind": "mcq",
+          "q": "[今月] の よみかたは？",
+          "choices": ["こんげつ", "こんにち", "こんばん", "けさ"],
+          "answer": "こんげつ"
+        },
+        {
+          "kind": "mcq",
+          "q": "[先月] の よみかたは？",
+          "choices": ["せんげつ", "せんしゅう", "こんげつ", "まいげつ"],
+          "answer": "せんげつ"
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "ドリル 2: ことばを えらぶ（Vocabulary）",
+      "instructions": "Choose the correct word to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "きょうは _______ です。",
+          "choices": ["木よう日", "毎日", "こんばん", "まいあさ"],
+          "answer": "木よう日",
+          "terms": ["v_kyou", "p_wa", "v_mokuyoubi", "g_desu"]
+        },
+        {
+          "kind": "mcq",
+          "q": "_______ 、やまもと先生が います。",
+          "choices": ["まいあさ", "まいばん", "こんばん", "今月"],
+          "answer": "まいあさ",
+          "terms": ["v_maiasa", "v_sensei", "p_ga", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "kind": "mcq",
+          "q": "_______ は 金よう日です。",
+          "choices": ["今日", "まいあさ", "こんばん", "今月"],
+          "answer": "今日",
+          "terms": ["v_kyou", "p_wa", "v_kinyoubi", "g_desu"]
+        },
+        {
+          "kind": "mcq",
+          "q": "先生は 月よう日から _______ まで います。",
+          "choices": ["金よう日", "日よう日", "土よう日", "火よう日"],
+          "answer": "金よう日",
+          "terms": ["v_sensei", "p_wa", "v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "kind": "mcq",
+          "q": "_______ も 先生が いました。",
+          "choices": ["先月", "今月", "毎日", "こんばん"],
+          "answer": "先月",
+          "terms": ["v_sengetsu", "p_mo", "v_sensei", "p_ga", { "id": "v_iru", "form": "polite_mashita" }]
+        },
+        {
+          "kind": "mcq",
+          "q": "_______ 、友だちが います。",
+          "choices": ["こんばん", "毎日", "まいあさ", "今月"],
+          "answer": "こんばん",
+          "terms": ["v_konban", "v_tomodachi", "p_ga", { "id": "v_iru", "form": "polite_masu" }]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "ドリル 3: ぶんを つくる（Sentence Building）",
+      "instructions": "Choose the best particle to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "先生 _______ 月よう日から 金よう日まで います。",
+          "choices": ["は", "を", "に", "が"],
+          "answer": "は",
+          "terms": ["v_sensei", "p_wa", "v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "kind": "mcq",
+          "q": "月よう日 _______ 金よう日まで 先生が います。",
+          "choices": ["から", "まで", "に", "と"],
+          "answer": "から",
+          "terms": ["v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", "v_sensei", "p_ga", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "kind": "mcq",
+          "q": "友だち _______ います。",
+          "choices": ["が", "は", "を", "に"],
+          "answer": "が",
+          "terms": ["v_tomodachi", "p_ga", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "kind": "mcq",
+          "q": "先生は 月よう日 _______ います。",
+          "choices": ["に", "は", "を", "から"],
+          "answer": "に",
+          "terms": ["v_sensei", "p_wa", "v_getsuyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "kind": "mcq",
+          "q": "父 _______ 母は 毎日 います。",
+          "choices": ["と", "は", "に", "を"],
+          "answer": "と",
+          "terms": ["v_chichi", "p_to", "v_haha", "p_wa", "v_mainichi", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "kind": "mcq",
+          "q": "先月 _______ 今月まで 先生が います。",
+          "choices": ["から", "まで", "に", "を"],
+          "answer": "から",
+          "terms": ["v_sengetsu", "p_kara", "v_kongetsu", "p_made", "v_sensei", "p_ga", { "id": "v_iru", "form": "polite_masu" }]
+        }
+      ]
+    }
+  ]
+}
