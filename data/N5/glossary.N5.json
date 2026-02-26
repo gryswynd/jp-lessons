@@ -2775,6 +2775,7 @@
       "type": "phrase",
       "gtype": "set-phrase",
       "lesson_ids": "N5.1",
+      "matches": ["よろしく おねがいします"],
       "notes": "Polite greeting used after self-introduction."
     },
     {
@@ -2983,7 +2984,8 @@
       "type": "grammar",
       "gtype": "grammar",
       "lesson_ids": "N5.1",
-      "notes": "Polite negative of です."
+      "matches": ["では ありません"],
+      "notes": "Polite negative of です. Formed from the contrast particle では + the polite negative ありません."
     },
     {
       "id": "v_koukou",
@@ -2996,6 +2998,16 @@
       "notes": ""
     },
     {
+      "id": "v_watashi",
+      "surface": "わたし",
+      "reading": "わたし",
+      "meaning": "I / me",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.1",
+      "notes": "First-person singular pronoun. Neutral politeness level suitable for most situations."
+    },
+    {
       "id": "v_anata",
       "surface": "あなた",
       "reading": "あなた",
@@ -3004,6 +3016,16 @@
       "gtype": "pronoun",
       "lesson_ids": "N5.1",
       "notes": "Second-person pronoun. Avoid using with superiors; address by name instead."
+    },
+    {
+      "id": "g_desu",
+      "surface": "です",
+      "reading": "です",
+      "meaning": "is / am / are (polite copula)",
+      "type": "grammar",
+      "gtype": "grammar",
+      "lesson_ids": "N5.1",
+      "notes": "Polite copula. Attaches to nouns and な-adjectives to form polite statements. E.g. がくせいです (I am a student). Question form: ですか."
     },
     {
       "id": "v_nani",
