@@ -7,15 +7,15 @@
 
 たかしさんはある工業地区の工場の主人でした。工場では主にいろいろな産物を作っていました。この地区の産業はたかしさんの父が始めたもので、たかしさんは毎朝早く工場に通いました。
 
-ある秋の朝、不運なことがありました。工場のきかいが止まって、仕事が休止になりました。たかしさんは建物の中を見ましたが、どこが悪いのか分かりませんでした。きかいをなおせる業者に来てほしいと思いましたが、地区のバスの便が少なくて、不便でした。
+ある秋の朝、不運なことがありました。工場の仕事が止まって、休止になりました。たかしさんは建物の中を見ましたが、どこが悪いのか分かりませんでした。業者に来てほしいと思いましたが、地区のバスの便が少なくて、不便でした。
 
-新しい業者が来ました。しかし、その業者は不正でした。代金が正しい代金の三ばい以上も高かったのです。たかしさんは「これは不味い」と思いました。
+新しい業者が来ました。しかし、その業者は不正でした。代金が正しい代金以上に高かったのです。たかしさんは「これは不味い」と思いました。
 
-たかしさんは近所の人たちに話しました。その中に、工業のきかいをよく知っている田中さんという人がいました。田中さんはたかしさんの工場に来て、問題を説明しました。「このきかいは自分でなおせます」と言いました。
+たかしさんは近所の人たちに話しました。その中に、工場の仕事をよく知っている田中さんという人がいました。田中さんはたかしさんの工場に来て、問題を説明しました。「自分たちでまた仕事を始めましょう」と言いました。
 
-田中さんと近所の人たちがいっしょにきかいをなおしました。たかしさんは手洗いで手を洗いながら、みんなにお礼を言いました。工場の食堂でみんなと食事をして、今後の計画を話しました。
+田中さんと近所の人たちがいっしょに問題を考えて、工場の仕事をまた始めました。たかしさんは手洗いで手を洗いながら、みんなに「ありがとうございます」と言いました。工場の食堂でみんなと食事をして、これからの計画を話しました。
 
-工場が動き始めてから、たかしさんは洗車のサービスも工場の近くで始めました。これも地区の産業の産物でした。国民の生活をささえる工業を主に考えて、たかしさんは中止していた注文もまた始めました。
+工場が動き始めてから、たかしさんは洗車のサービスも工場の近くで始めました。これも地区の産業の産物でした。国民のための工業を主に考えて、たかしさんは中止していた注文もまた始めました。
 
 それから、たかしさんは不正な業者のことを市長に知らせました。市長は「地区の工業のために、不正を止めることが大切です」と言いました。たかしさんは近所の人たちの力でできたことを、とてもうれしく思いました。
 
@@ -31,17 +31,17 @@
 
 Takashi was the owner of a factory in an industrial district. At the factory, they mainly made various products. The industry of this district was something Takashi's father had started, and Takashi commuted to the factory early every morning.
 
-One autumn morning, something unlucky happened. The factory machinery stopped and work came to a halt. Takashi looked inside the building, but couldn't figure out what was wrong. He wanted a contractor who could fix the machines to come, but the bus service in the district was infrequent, making it inconvenient.
+One autumn morning, something unlucky happened. The factory's work stopped and came to a halt. Takashi looked inside the building, but couldn't figure out what was wrong. He wanted a contractor to come, but the bus service in the district was scarce, making it inconvenient.
 
-A new contractor came. However, that contractor was dishonest. The price was more than three times the proper price. Takashi thought, "This is bad."
+A new contractor came. However, that contractor was dishonest. The price was higher than the correct price. Takashi thought, "This is bad."
 
-Takashi talked to the people in the neighborhood. Among them was a person named Tanaka who knew a lot about industrial machinery. Tanaka came to Takashi's factory and explained the problem. "I can fix this machine myself," he said.
+Takashi talked to the people in the neighborhood. Among them was a person named Tanaka who knew a lot about factory work. Tanaka came to Takashi's factory and explained the problem. "Let's start work again ourselves," he said.
 
-Tanaka and the neighborhood people fixed the machinery together. While washing his hands at the washroom, Takashi thanked everyone. They ate together in the factory cafeteria and talked about plans going forward.
+Tanaka and the neighborhood people thought about the problem together and started the factory work again. While washing his hands at the washroom, Takashi said "Thank you" to everyone. They ate together in the factory cafeteria and talked about plans going forward.
 
-After the factory started running again, Takashi also started a car wash service near the factory. This, too, was a product of the district's industry. Thinking mainly about manufacturing that supports citizens' lives, Takashi also restarted orders that he had cancelled.
+After the factory started running again, Takashi also started a car wash service near the factory. This, too, was a product of the district's industry. Thinking mainly about manufacturing for the citizens, Takashi also restarted orders that he had cancelled.
 
-After that, Takashi informed the mayor about the dishonest contractor. The mayor said, "It is important to stop dishonesty in order to protect the district's manufacturing industry." Takashi was very glad about what he was able to accomplish through the strength of the neighborhood people.
+After that, Takashi informed the mayor about the dishonest contractor. The mayor said, "It is important to stop dishonesty for the district's manufacturing industry." Takashi was very glad about what he was able to accomplish through the strength of the neighborhood people.
 
 Even now, Takashi commutes to the factory every morning. The neighborhood people still often talk in the factory cafeteria. From this unfortunate event, Takashi learned that people's strength is important.
 
@@ -87,14 +87,14 @@ Even now, Takashi commutes to the factory every morning. The neighborhood people
 - 説明 (せつめい) - to explain (N4.19)
 - 問題 (もんだい) - problem (N4.19)
 - 代金 (だいきん) - price / cost (N4.31)
-- 正しい (ただしい) - correct (N4.24)
-- 悪い (わるい) - bad (N4.24)
+- 正しい (ただしい) - correct (N4.26)
+- 悪い (わるい) - bad (N4.26)
 - 市長 (しちょう) - mayor (N4.32)
 - 以上 (いじょう) - more than (N4.29)
 - 知らせる (しらせる) - to inform (N4.29)
 - 知る (しる) - to know (N4.29)
-- 考える (かんがえる) - to think (N4.24)
-- 近所 (きんじょ) - neighborhood (N4.1)
+- 考える (かんがえる) - to think (N4.26)
+- 近所 (きんじょ) - neighborhood (N4.2)
 - 注文 (ちゅうもん) - order (N4.25)
 - 力 (ちから) - strength (N4.18)
 - 田中 (たなか) - Tanaka (N4.17)
@@ -117,3 +117,4 @@ Even now, Takashi commutes to the factory every morning. The neighborhood people
 - Te-iru past (中止していた)
 - ～ながら (洗いながら)
 - ために (purpose)
+- Volitional ～ましょう (始めましょう)
