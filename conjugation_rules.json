@@ -4,188 +4,533 @@
     "label": "Polite (Masu-Form)",
     "description": "Standard polite present/future affirmative.",
     "rules": {
-      "godan": { "type": "godan_change", "map": "u_to_i", "add": "ます" },
-      "ichidan": { "type": "suffix", "remove": "る", "add": "ます" },
-      "irr_suru": { "type": "replace", "surface": "します", "reading": "します" },
-      "irr_kuru": { "type": "replace", "surface": "来ます", "reading": "きます" }
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "ます"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "ます"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "します",
+        "reading": "します"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来ます",
+        "reading": "きます"
+      }
     }
   },
   "polite_mashita": {
     "label": "Polite Past (Mashita-Form)",
     "description": "Standard polite past affirmative.",
     "rules": {
-      "godan": { "type": "godan_change", "map": "u_to_i", "add": "ました" },
-      "ichidan": { "type": "suffix", "remove": "る", "add": "ました" },
-      "irr_suru": { "type": "replace", "surface": "しました", "reading": "しました" },
-      "irr_kuru": { "type": "replace", "surface": "来ました", "reading": "きました" }
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "ました"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "ました"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しました",
+        "reading": "しました"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来ました",
+        "reading": "きました"
+      }
     }
   },
   "polite_negative": {
     "label": "Polite Negative (Masen / Desu)",
     "description": "Standard polite negative.",
     "rules": {
-      "godan": { "type": "godan_change", "map": "u_to_i", "add": "ません" },
-      "ichidan": { "type": "suffix", "remove": "る", "add": "ません" },
-      "irr_suru": { "type": "replace", "surface": "しません", "reading": "しません" },
-      "irr_kuru": { "type": "replace", "surface": "来ません", "reading": "きません" },
-      "i_adj": { "type": "suffix", "remove": "い", "add": "くないです" },
-      "na_adj": { "type": "suffix", "add": "じゃありません" }
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "ません"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "ません"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しません",
+        "reading": "しません"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来ません",
+        "reading": "きません"
+      },
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "くないです"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "じゃありません"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よくないです",
+        "reading": "よくないです"
+      }
     }
   },
   "polite_past_negative": {
     "label": "Polite Past Negative",
     "description": "Standard polite past negative.",
     "rules": {
-      "godan": { "type": "godan_change", "map": "u_to_i", "add": "ませんでした" },
-      "ichidan": { "type": "suffix", "remove": "る", "add": "ませんでした" },
-      "irr_suru": { "type": "replace", "surface": "しませんでした", "reading": "しませんでした" },
-      "irr_kuru": { "type": "replace", "surface": "来ませんでした", "reading": "きませんでした" },
-      "i_adj": { "type": "suffix", "remove": "い", "add": "くなかったです" },
-      "na_adj": { "type": "suffix", "add": "じゃありませんでした" }
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "ませんでした"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "ませんでした"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しませんでした",
+        "reading": "しませんでした"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来ませんでした",
+        "reading": "きませんでした"
+      },
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "くなかったです"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "じゃありませんでした"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よくなかったです",
+        "reading": "よくなかったです"
+      }
     }
   },
   "polite_adj": {
     "label": "Polite Adjective (Desu)",
     "description": "Polite affirmative for adjectives.",
     "rules": {
-      "i_adj": { "type": "suffix", "add": "です" },
-      "na_adj": { "type": "suffix", "add": "です" }
+      "i_adj": {
+        "type": "suffix",
+        "add": "です"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "です"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "いいです",
+        "reading": "いいです"
+      }
     }
   },
   "polite_past_adj": {
     "label": "Polite Past Adjective",
     "description": "Polite past affirmative for adjectives.",
     "rules": {
-      "i_adj": { "type": "suffix", "remove": "い", "add": "かったです" },
-      "na_adj": { "type": "suffix", "add": "でした" }
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "かったです"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "でした"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よかったです",
+        "reading": "よかったです"
+      }
     }
   },
   "plain_past": {
     "label": "Past (Ta/Datta)",
     "description": "Plain past affirmative.",
     "rules": {
-      "godan": { "type": "godan_euphonic", "map": "ta_form" },
-      "ichidan": { "type": "suffix", "remove": "る", "add": "た" },
-      "irr_suru": { "type": "replace", "surface": "した", "reading": "した" },
-      "irr_kuru": { "type": "replace", "surface": "来た", "reading": "きた" },
-      "i_adj": { "type": "suffix", "remove": "い", "add": "かった" },
-      "na_adj": { "type": "suffix", "add": "だった" }
+      "godan": {
+        "type": "godan_euphonic",
+        "map": "ta_form"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "た"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "した",
+        "reading": "した"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来た",
+        "reading": "きた"
+      },
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "かった"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "だった"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よかった",
+        "reading": "よかった"
+      }
     }
   },
   "plain_negative": {
     "label": "Negative (Nai)",
     "description": "Plain present negative.",
     "rules": {
-      "godan": { "type": "godan_change", "map": "u_to_a", "add": "ない" },
-      "ichidan": { "type": "suffix", "remove": "る", "add": "ない" },
-      "irr_suru": { "type": "replace", "surface": "しない", "reading": "しない" },
-      "irr_kuru": { "type": "replace", "surface": "こない", "reading": "こない" },
-      "i_adj": { "type": "suffix", "remove": "い", "add": "くない" },
-      "na_adj": { "type": "suffix", "add": "じゃない" }
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "ない"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "ない"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しない",
+        "reading": "しない"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "こない",
+        "reading": "こない"
+      },
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "くない"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "じゃない"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よくない",
+        "reading": "よくない"
+      }
     }
   },
   "plain_past_negative": {
     "label": "Past Negative (Nakatta)",
     "description": "Plain past negative.",
     "rules": {
-      "godan": { "type": "godan_change", "map": "u_to_a", "add": "なかった" },
-      "ichidan": { "type": "suffix", "remove": "る", "add": "なかった" },
-      "irr_suru": { "type": "replace", "surface": "しなかった", "reading": "しなかった" },
-      "irr_kuru": { "type": "replace", "surface": "こなかった", "reading": "こなかった" },
-      "i_adj": { "type": "suffix", "remove": "い", "add": "くなかった" },
-      "na_adj": { "type": "suffix", "add": "じゃなかった" }
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "なかった"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "なかった"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しなかった",
+        "reading": "しなかった"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "こなかった",
+        "reading": "こなかった"
+      },
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "くなかった"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "じゃなかった"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よくなかった",
+        "reading": "よくなかった"
+      }
     }
   },
   "te_form": {
     "label": "Te-Form",
     "description": "Connective form used for 'and', requests, etc.",
     "rules": {
-      "godan": { "type": "godan_euphonic", "map": "te_form" },
-      "ichidan": { "type": "suffix", "remove": "る", "add": "て" },
-      "irr_suru": { "type": "replace", "surface": "して", "reading": "して" },
-      "irr_kuru": { "type": "replace", "surface": "来て", "reading": "きて" },
-      "i_adj": { "type": "suffix", "remove": "い", "add": "くて" },
-      "na_adj": { "type": "suffix", "add": "で" }
+      "godan": {
+        "type": "godan_euphonic",
+        "map": "te_form"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "て"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "して",
+        "reading": "して"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来て",
+        "reading": "きて"
+      },
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "くて"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "で"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よくて",
+        "reading": "よくて"
+      }
     }
   },
   "potential": {
     "label": "Potential Form",
     "description": "Expresses ability (can do).",
     "rules": {
-      "godan": { "type": "godan_change", "map": "u_to_e", "add": "る" },
-      "ichidan": { "type": "suffix", "remove": "る", "add": "られる" },
-      "irr_suru": { "type": "replace", "surface": "できる", "reading": "できる" },
-      "irr_kuru": { "type": "replace", "surface": "来られる", "reading": "こられる" }
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_e",
+        "add": "る"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "られる"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "できる",
+        "reading": "できる"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来られる",
+        "reading": "こられる"
+      }
     }
   },
   "potential_negative": {
     "label": "Potential Negative",
     "description": "Polite form expressing inability (cannot do).",
     "rules": {
-      "godan": { "type": "godan_change", "map": "u_to_e", "add": "ません" },
-      "ichidan": { "type": "suffix", "remove": "る", "add": "られません" },
-      "irr_suru": { "type": "replace", "surface": "できません", "reading": "できません" },
-      "irr_kuru": { "type": "replace", "surface": "来られません", "reading": "こられません" }
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_e",
+        "add": "ません"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "られません"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "できません",
+        "reading": "できません"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来られません",
+        "reading": "こられません"
+      }
     }
   },
   "adverbial": {
     "label": "Adverbial Form (Ku/Ni)",
     "description": "Changes the adjective into an adverb.",
     "rules": {
-      "i_adj": { "type": "suffix", "remove": "い", "add": "く" },
-      "na_adj": { "type": "suffix", "add": "に" }
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "く"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "に"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よく",
+        "reading": "よく"
+      }
     }
   },
   "desire_tai": {
     "label": "Desire (Tai)",
     "description": "Expresses desire to do the action (I want to...).",
     "rules": {
-      "godan": { "type": "godan_change", "map": "u_to_i", "add": "たいです" },
-      "ichidan": { "type": "suffix", "remove": "る", "add": "たいです" },
-      "irr_suru": { "type": "replace", "surface": "したいです", "reading": "したいです" },
-      "irr_kuru": { "type": "replace", "surface": "来たいです", "reading": "きたいです" }
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "たいです"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "たいです"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "したいです",
+        "reading": "したいです"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来たいです",
+        "reading": "きたいです"
+      }
     }
   },
   "appearance_sou": {
     "label": "Appearance (Sou)",
     "description": "Expresses that something looks like or appears to be certain way.",
     "rules": {
-      "godan": { "type": "godan_change", "map": "u_to_i", "add": "そうです" },
-      "ichidan": { "type": "suffix", "remove": "る", "add": "そうです" },
-      "irr_suru": { "type": "replace", "surface": "しそうです", "reading": "しそうです" },
-      "irr_kuru": { "type": "replace", "surface": "来そうです", "reading": "きそうです" },
-      "i_adj": { "type": "suffix", "remove": "い", "add": "そうです" },
-      "na_adj": { "type": "suffix", "add": "そうです" }
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "そうです"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "そうです"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しそうです",
+        "reading": "しそうです"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来そうです",
+        "reading": "きそうです"
+      },
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "そうです"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "そうです"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よさそうです",
+        "reading": "よさそうです"
+      }
     }
   },
   "polite_volitional_mashou": {
     "label": "Let's (Mashou)",
     "description": "Polite volitional form expressing a suggestion or invitation.",
     "rules": {
-      "godan": { "type": "godan_change", "map": "u_to_i", "add": "ましょう" },
-      "ichidan": { "type": "suffix", "remove": "る", "add": "ましょう" },
-      "irr_suru": { "type": "replace", "surface": "しましょう", "reading": "しましょう" },
-      "irr_kuru": { "type": "replace", "surface": "来ましょう", "reading": "きましょう" }
-    }
-  },
-  "adverbial": {
-    "label": "Adverbial Form (Ku/Ni)",
-    "description": "Changes the adjective into an adverb.",
-    "rules": {
-      "i_adj": { "type": "suffix", "remove": "い", "add": "く" },
-      "na_adj": { "type": "suffix", "add": "に" }
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "ましょう"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "ましょう"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しましょう",
+        "reading": "しましょう"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来ましょう",
+        "reading": "きましょう"
+      }
     }
   },
   "conditional_ba": {
     "label": "Conditional (Ba)",
     "description": "Expresses a condition (if/provided that).",
     "rules": {
-      "godan": { "type": "godan_change", "map": "u_to_e", "add": "ば" },
-      "ichidan": { "type": "suffix", "remove": "る", "add": "れば" },
-      "irr_suru": { "type": "replace", "surface": "すれば", "reading": "すれば" },
-      "irr_kuru": { "type": "replace", "surface": "来れば", "reading": "くれば" },
-      "i_adj": { "type": "suffix", "remove": "い", "add": "ければ" },
-      "na_adj": { "type": "suffix", "add": "なら" }
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_e",
+        "add": "ば"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "れば"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "すれば",
+        "reading": "すれば"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来れば",
+        "reading": "くれば"
+      },
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "ければ"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "なら"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よければ",
+        "reading": "よければ"
+      }
     }
   }
 }
