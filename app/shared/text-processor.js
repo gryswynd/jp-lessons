@@ -251,7 +251,18 @@
         }
         return null;
       }).filter(Boolean).sort(function (a, b) {
-        return b.surface.length - a.surface.length; // longest first → no partial matches
+        if (b.surface.length !== a.surface.length) {
+          return b.surface.length - a.surface.length; // longest first → no partial matches
+        }
+        // Same length: kana-only terms (particles/function words) before kanji-containing
+        // terms. This matters for single-char matching: the regex (?![\\u3040-\\u30FF])
+        // blocks a kanji from matching when immediately followed by unhighlighted hiragana.
+        // Wrapping particles first turns "父と" into "父<span>と</span>", so the kanji
+        // is then followed by '<' not hiragana and the lookahead passes.
+        var aIsKana = !/[\u4E00-\u9FFF\uF900-\uFAFF]/.test(a.surface);
+        var bIsKana = !/[\u4E00-\u9FFF\uF900-\uFAFF]/.test(b.surface);
+        if (aIsKana !== bIsKana) return aIsKana ? -1 : 1;
+        return 0;
       });
 
       terms.forEach(function (t) {
