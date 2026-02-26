@@ -1285,7 +1285,7 @@
       "type": "vocab",
       "gtype": "noun",
       "notes": "",
-      "lesson_ids": "N5.2",
+      "lesson_ids": "N5.1",
       "reading": "にほん"
     },
     {
@@ -1492,7 +1492,7 @@
       "type": "vocab",
       "gtype": "noun",
       "notes": "",
-      "lesson_ids": "N5.2",
+      "lesson_ids": "N5.1",
       "reading": "きょう"
     },
     {
@@ -1863,7 +1863,7 @@
       "type": "vocab",
       "gtype": "verb",
       "notes": "",
-      "lesson_ids": "N5.4",
+      "lesson_ids": "N5.1",
       "reading": "くる",
       "verb_class": "irr_kuru"
     },
@@ -1914,7 +1914,7 @@
       "type": "vocab",
       "gtype": "noun",
       "notes": "",
-      "lesson_ids": "N5.4",
+      "lesson_ids": "N5.1",
       "reading": "かぞく"
     },
     {
@@ -2147,7 +2147,7 @@
       "type": "vocab",
       "gtype": "noun",
       "notes": "",
-      "lesson_ids": "N5.7",
+      "lesson_ids": "N5.1",
       "reading": "がっこう"
     },
     {
@@ -2157,7 +2157,7 @@
       "type": "vocab",
       "gtype": "noun",
       "notes": "",
-      "lesson_ids": "N5.7",
+      "lesson_ids": "N5.1",
       "reading": "がくせい"
     },
     {
@@ -2184,11 +2184,11 @@
     {
       "id": "v_iu",
       "surface": "言う",
-      "meaning": "to speak",
+      "meaning": "to say / to speak",
       "type": "vocab",
       "gtype": "verb",
       "notes": "",
-      "lesson_ids": "N5.7",
+      "lesson_ids": "N5.1",
       "reading": "いう",
       "verb_class": "godan"
     },
@@ -2366,7 +2366,7 @@
       "type": "vocab",
       "gtype": "adjective",
       "notes": "",
-      "lesson_ids": "N5.9",
+      "lesson_ids": "N5.1",
       "reading": "ちいさい",
       "verb_class": "i_adj"
     },
@@ -2420,7 +2420,7 @@
       "type": "vocab",
       "gtype": "adjective",
       "notes": "",
-      "lesson_ids": "N5.10",
+      "lesson_ids": "N5.1",
       "reading": "あたらしい",
       "verb_class": "i_adj"
     },
@@ -2579,7 +2579,7 @@
       "type": "vocab",
       "gtype": "verb",
       "notes": "",
-      "lesson_ids": "N5.11",
+      "lesson_ids": "N5.1",
       "reading": "あう",
       "verb_class": "godan"
     },
@@ -2681,11 +2681,11 @@
     {
       "id": "v_suru",
       "surface": "する",
-      "meaning": "to Do",
+      "meaning": "to do",
       "type": "vocab",
       "gtype": "verb",
-      "notes": "From Verb Conjugation sheet.",
-      "lesson_ids": "",
+      "notes": "Fundamental irregular verb used throughout all levels.",
+      "lesson_ids": "N5.1",
       "reading": "する",
       "verb_class": "irr_suru"
     },
@@ -2728,7 +2728,7 @@
       "type": "vocab",
       "gtype": "verb",
       "verb_class": "ichidan",
-      "lesson_ids": "N5.4"
+      "lesson_ids": "N5.1"
     },
     {
       "id": "v_ikiru",
@@ -2803,23 +2803,25 @@
     },
     {
       "id": "v_otousan",
-      "surface": "おとうさん",
+      "surface": "お父さん",
       "reading": "おとうさん",
       "meaning": "father (polite / someone else's)",
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N5.1",
-      "notes": "Polite form of 父（ちち）."
+      "notes": "Polite form of 父（ちち）. Uses 父 (N5.1 kanji).",
+      "matches": ["おとうさん"]
     },
     {
       "id": "v_okaasan",
-      "surface": "おかあさん",
+      "surface": "お母さん",
       "reading": "おかあさん",
       "meaning": "mother (polite / someone else's)",
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N5.1",
-      "notes": "Polite form of 母（はは）."
+      "notes": "Polite form of 母（はは）. Uses 母 (N5.1 kanji).",
+      "matches": ["おかあさん"]
     },
     {
       "id": "v_yasashii",
@@ -2970,8 +2972,186 @@
       "meaning": "high school",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N5.10",
+      "lesson_ids": "N5.1",
       "notes": ""
+    },
+    {
+      "id": "v_watashi",
+      "surface": "わたし",
+      "reading": "わたし",
+      "meaning": "I / me",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.1",
+      "notes": "First-person pronoun. Polite and neutral in register."
+    },
+    {
+      "id": "v_anata",
+      "surface": "あなた",
+      "reading": "あなた",
+      "meaning": "you",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.1",
+      "notes": "Second-person pronoun. Avoid using with superiors; address by name instead."
+    },
+    {
+      "id": "v_toukyou",
+      "surface": "とうきょう",
+      "reading": "とうきょう",
+      "meaning": "Tokyo",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.1",
+      "notes": "Japan's capital city. Written in kana at N5.1 level; kanji 東京 introduced later."
+    },
+    {
+      "id": "v_hataraku",
+      "surface": "はたらく",
+      "reading": "はたらく",
+      "meaning": "to work",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N5.1",
+      "notes": "Written in kana at N5 level; kanji 働く is introduced at N4.1."
+    },
+    {
+      "id": "v_onaji",
+      "surface": "おなじ",
+      "reading": "おなじ",
+      "meaning": "same",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "verb_class": "na_adj",
+      "lesson_ids": "N5.1",
+      "notes": "Also written 同じ; kanji 同 introduced at N4.6."
+    },
+    {
+      "id": "v_tsukuru",
+      "surface": "つくる",
+      "reading": "つくる",
+      "meaning": "to make / to create",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N5.1",
+      "notes": "Written in kana at N5 level; kanji 作る introduced at N4.1."
+    },
+    {
+      "id": "v_benkyou",
+      "surface": "べんきょう",
+      "reading": "べんきょう",
+      "meaning": "study",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.1",
+      "notes": "Used as べんきょうする (to study). Written in kana at N5 level; kanji 勉強 introduced at N4.18."
+    },
+    {
+      "id": "v_suki",
+      "surface": "すき",
+      "reading": "すき",
+      "meaning": "like / fond of",
+      "type": "vocab",
+      "gtype": "adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N5.1",
+      "notes": "Na-adjective expressing liking something. Written in kana at N5 level; kanji 好き introduced at N4.4."
+    },
+    {
+      "id": "v_kangaeru",
+      "surface": "かんがえる",
+      "reading": "かんがえる",
+      "meaning": "to think / to consider",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N5.1",
+      "notes": "Written in kana at N5 level; kanji 考える introduced at N4.26."
+    },
+    {
+      "id": "v_omou",
+      "surface": "おもう",
+      "reading": "おもう",
+      "meaning": "to think / to feel",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N5.1",
+      "notes": "Written in kana at N5 level; kanji 思う introduced at N4.30."
+    },
+    {
+      "id": "v_oboeru",
+      "surface": "おぼえる",
+      "reading": "おぼえる",
+      "meaning": "to remember / to memorise",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N5.1",
+      "notes": "Written in kana at N5 level; kanji 覚える is beyond N5 scope."
+    },
+    {
+      "id": "v_ane",
+      "surface": "あね",
+      "reading": "あね",
+      "meaning": "older sister (my own)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.1",
+      "notes": "Humble/plain form used when referring to your own older sister. Written in kana at N5 level; kanji 姉 introduced at N4.7."
+    },
+    {
+      "id": "v_ani",
+      "surface": "あに",
+      "reading": "あに",
+      "meaning": "older brother (my own)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.1",
+      "notes": "Humble/plain form used when referring to your own older brother. Written in kana at N5 level; kanji 兄 introduced at N4.7."
+    },
+    {
+      "id": "v_imouto",
+      "surface": "いもうと",
+      "reading": "いもうと",
+      "meaning": "younger sister",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.1",
+      "notes": "Written in kana at N5 level; kanji 妹 introduced at N4.7."
+    },
+    {
+      "id": "g_desu",
+      "surface": "です",
+      "reading": "です",
+      "meaning": "is / am / are (polite copula)",
+      "type": "grammar",
+      "gtype": "grammar",
+      "lesson_ids": "N5.1",
+      "notes": "Polite copula used to link a subject and predicate. Negative form: ではありません (g_dewaarimasen)."
+    },
+    {
+      "id": "v_ii",
+      "surface": "いい",
+      "reading": "いい",
+      "meaning": "good",
+      "type": "vocab",
+      "gtype": "adjective",
+      "verb_class": "i_adj",
+      "lesson_ids": "N5.1",
+      "notes": "Irregular i-adjective. The stem changes in conjugation: よかった (past), よくない (negative). Also pronounced よい in formal contexts."
+    },
+    {
+      "id": "v_nani",
+      "surface": "なに",
+      "reading": "なに/なん",
+      "meaning": "what",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.1",
+      "notes": "Question word. Pronounced なに before particles (なにを), and なん before counters and です (なんですか、なん人). See also k_nani for the kanji 何 (introduced at N5.7)."
     }
   ]
 }
