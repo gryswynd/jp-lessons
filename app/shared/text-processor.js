@@ -267,7 +267,17 @@
         }
         if (matchedForm) {
           var span = '<span class="jp-term" onclick="window.JP_OPEN_TERM(\'' + t.id + '\', true)">' + matchedForm + '</span>';
-          html = html.split(matchedForm).join(span);
+          if (matchedForm.length === 1) {
+            // Single-character terms (particles, etc.): avoid matching characters
+            // that are word-internal, e.g. か inside やまかわ vs か at the end of ですか.
+            // Only replace when NOT immediately followed by another hiragana or
+            // katakana character (U+3040–U+30FF), which would indicate the character
+            // is part of a longer kana word rather than a standalone particle.
+            var esc = matchedForm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            html = html.replace(new RegExp(esc + '(?![\\u3040-\\u30FF])', 'g'), span);
+          } else {
+            html = html.split(matchedForm).join(span);
+          }
         }
       });
 
