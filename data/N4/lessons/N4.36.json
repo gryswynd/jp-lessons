@@ -630,139 +630,203 @@
     },
     {
       "type": "drills",
-      "title": "Drill 1: Vocabulary",
-      "instructions": "Select the correct reading or meaning.",
+      "title": "ドリル 1: かんじの よみかた（Kanji Readings）",
+      "instructions": "Choose the correct reading.",
       "items": [
         {
           "kind": "mcq",
-          "q": "不味い",
-          "choices": [
-            "mazui",
-            "fumai",
-            "fuaji",
-            "mazashii"
-          ],
-          "answer": "mazui"
+          "q": "[不味い] の よみかたは？",
+          "choices": ["まずい", "ふまい", "ふあじ", "まざしい"],
+          "answer": "まずい"
         },
         {
           "kind": "mcq",
-          "q": "業者",
-          "choices": [
-            "gyousha",
-            "gousha",
-            "shousha",
-            "kyousha"
-          ],
-          "answer": "gyousha"
+          "q": "[業者] の よみかたは？",
+          "choices": ["ぎょうしゃ", "ごうしゃ", "しょうしゃ", "きょうしゃ"],
+          "answer": "ぎょうしゃ"
         },
         {
           "kind": "mcq",
-          "q": "産業",
-          "choices": [
-            "sangyou",
-            "sankou",
-            "sanou",
-            "sankou"
-          ],
-          "answer": "sangyou"
+          "q": "[産業] の よみかたは？",
+          "choices": ["さんぎょう", "さんこう", "さのう", "さんごう"],
+          "answer": "さんぎょう"
         },
         {
           "kind": "mcq",
-          "q": "工業",
-          "choices": [
-            "kougyou",
-            "koudou",
-            "kougi",
-            "kouchi"
-          ],
-          "answer": "kougyou"
+          "q": "[工業] の よみかたは？",
+          "choices": ["こうぎょう", "こうどう", "こうぎ", "こうち"],
+          "answer": "こうぎょう"
         },
         {
           "kind": "mcq",
-          "q": "不運",
-          "choices": [
-            "fuun",
-            "burin",
-            "fuurin",
-            "furin"
-          ],
-          "answer": "fuun"
+          "q": "[不運] の よみかたは？",
+          "choices": ["ふうん", "ぶりん", "ふうりん", "ふりん"],
+          "answer": "ふうん"
+        },
+        {
+          "kind": "mcq",
+          "q": "[不便] の よみかたは？",
+          "choices": ["ふべん", "ふびん", "ぶべん", "ふたより"],
+          "answer": "ふべん"
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Drill 2: Fill in the Blank",
-      "instructions": "Select the word that fits.",
+      "title": "ドリル 2: ことばを えらぶ（Vocabulary）",
+      "instructions": "Choose the correct word to complete the sentence.",
       "items": [
         {
           "kind": "mcq",
-          "q": "この 食べ物は ______ですね。",
-          "choices": [
-            "不味い",
-            "不便",
-            "不正",
-            "不運"
-          ],
+          "q": "この 食べ物は ______ ですね。",
+          "choices": ["不味い", "不便", "不正", "不運"],
           "answer": "不味い",
           "terms": [
             "v_tabemono",
-            "v_mazui"
+            { "id": "v_mazui", "form": "polite_adj" }
           ]
         },
         {
           "kind": "mcq",
           "q": "バスの ______ が 少ないです。",
-          "choices": [
-            "便",
-            "業",
-            "産物",
-            "産業"
-          ],
+          "choices": ["便", "業", "産物", "産業"],
           "answer": "便",
           "terms": [
             "v_basu",
             "v_bin",
-            {
-              "id": "v_sukunai",
-              "form": "plain_present"
-            }
+            { "id": "v_sukunai", "form": "polite_adj" }
           ]
         },
         {
           "kind": "mcq",
           "q": "建物の 仕事を する ______ を 知って いますか。",
-          "choices": [
-            "業者",
-            "産物",
-            "産業",
-            "工業"
-          ],
+          "choices": ["業者", "産物", "産業", "工業"],
           "answer": "業者",
           "terms": [
             "v_tatemono",
             "v_shigoto",
             "v_gyousha",
-            {
-              "id": "v_shiru",
-              "form": "te_form"
-            }
+            { "id": "v_shiru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
           ]
         },
         {
           "kind": "mcq",
           "q": "この 地区の ______ は 有名です。",
-          "choices": [
-            "産業",
-            "産物",
-            "業",
-            "業者"
-          ],
+          "choices": ["産業", "産物", "業", "業者"],
           "answer": "産業",
           "terms": [
             "v_chiku",
             "v_sangyou",
-            "v_yuumei"
+            { "id": "v_yuumei", "form": "polite_adj" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "車や 電気の ______ を 作って います。",
+          "choices": ["産物", "産業", "工業", "業者"],
+          "answer": "産物",
+          "terms": [
+            "k_kuruma",
+            "v_denki",
+            "v_sanbutsu",
+            { "id": "v_tsukuru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "あの 業者は ______ な 仕事を しました。",
+          "choices": ["不正", "不便", "不運", "不味い"],
+          "answer": "不正",
+          "terms": [
+            "v_gyousha",
+            "v_fusei",
+            "v_shigoto",
+            { "id": "v_suru", "form": "polite_mashita" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "ドリル 3: ぶんを つくる（Sentence Building）",
+      "instructions": "Choose the best particle to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "この 食べ物 ______ 不味いですね。",
+          "choices": ["は", "を", "が", "に"],
+          "answer": "は",
+          "terms": [
+            "v_tabemono",
+            "p_wa",
+            { "id": "v_mazui", "form": "polite_adj" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "バス ______ 便が 少ないです。",
+          "choices": ["の", "は", "を", "で"],
+          "answer": "の",
+          "terms": [
+            "v_basu",
+            "p_no",
+            "v_bin",
+            { "id": "v_sukunai", "form": "polite_adj" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "建物 ______ 仕事を する 業者を 知って いますか。",
+          "choices": ["の", "を", "は", "に"],
+          "answer": "の",
+          "terms": [
+            "v_tatemono",
+            "p_no",
+            "v_shigoto",
+            "v_gyousha",
+            { "id": "v_shiru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "この 地区 ______ 産業は 有名です。",
+          "choices": ["の", "は", "を", "に"],
+          "answer": "の",
+          "terms": [
+            "v_chiku",
+            "p_no",
+            "v_sangyou",
+            { "id": "v_yuumei", "form": "polite_adj" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "工場 ______ 車を 作って います。",
+          "choices": ["で", "に", "を", "は"],
+          "answer": "で",
+          "terms": [
+            "v_koujou",
+            "p_de",
+            "k_kuruma",
+            { "id": "v_tsukuru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "今は 別の 業者 ______ 使って います。",
+          "choices": ["を", "が", "に", "で"],
+          "answer": "を",
+          "terms": [
+            "k_ima",
+            "v_betsu",
+            "v_gyousha",
+            "p_wo",
+            { "id": "v_tsukau", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
           ]
         }
       ]

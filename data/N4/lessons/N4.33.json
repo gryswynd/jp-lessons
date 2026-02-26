@@ -609,152 +609,195 @@
     },
     {
       "type": "drills",
-      "title": "Drill 1: Vocabulary",
-      "instructions": "Select the correct reading or meaning.",
+      "title": "ドリル 1: かんじの よみかた（Kanji Readings）",
+      "instructions": "Choose the correct reading.",
       "items": [
         {
           "kind": "mcq",
-          "q": "工場",
-          "choices": [
-            "koujou",
-            "koba",
-            "kouba",
-            "kujou"
-          ],
-          "answer": "koujou",
+          "q": "[工場] の よみかたは？",
+          "choices": ["こうじょう", "こうば", "くじょう", "こうしょう"],
+          "answer": "こうじょう"
+        },
+        {
+          "kind": "mcq",
+          "q": "[場所] の よみかたは？",
+          "choices": ["ばしょ", "じょうしょ", "ばそ", "じょうそ"],
+          "answer": "ばしょ"
+        },
+        {
+          "kind": "mcq",
+          "q": "[広い] の よみかたは？",
+          "choices": ["ひろい", "こうい", "ひらい", "えらい"],
+          "answer": "ひろい"
+        },
+        {
+          "kind": "mcq",
+          "q": "[建物] の よみかたは？",
+          "choices": ["たてもの", "けんぶつ", "たてもん", "けんもつ"],
+          "answer": "たてもの"
+        },
+        {
+          "kind": "mcq",
+          "q": "[広場] の よみかたは？",
+          "choices": ["ひろば", "こうば", "ひろじょう", "こうじょう"],
+          "answer": "ひろば"
+        },
+        {
+          "kind": "mcq",
+          "q": "[工学] の よみかたは？",
+          "choices": ["こうがく", "くがく", "こうさく", "こうぶん"],
+          "answer": "こうがく"
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "ドリル 2: ことばを えらぶ（Vocabulary）",
+      "instructions": "Choose the correct word to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "駅の 前に ______ が あります。",
+          "choices": ["広場", "工学", "場合", "工員"],
+          "answer": "広場",
           "terms": [
-            "v_koujou"
+            "k_eki",
+            "k_mae",
+            "v_hiroba",
+            { "id": "v_aru", "form": "polite_masu" }
           ]
         },
         {
           "kind": "mcq",
-          "q": "場所",
-          "choices": [
-            "basho",
-            "bajou",
-            "jouusho",
-            "baso"
-          ],
-          "answer": "basho",
+          "q": "新しい 家を ______。",
+          "choices": ["建てます", "広めます", "習います", "引きます"],
+          "answer": "建てます",
           "terms": [
-            "v_basho"
+            "v_atarashii",
+            "k_ie",
+            { "id": "v_tateru", "form": "polite_masu" }
           ]
         },
         {
           "kind": "mcq",
-          "q": "広い",
-          "choices": [
-            "hiroi",
-            "takai",
-            "hikui",
-            "emai"
-          ],
-          "answer": "hiroi",
+          "q": "この ______ は きれいです。",
+          "choices": ["場所", "工員", "大工", "人工"],
+          "answer": "場所",
           "terms": [
-            "v_hiroi"
+            "v_basho",
+            { "id": "v_kirei", "form": "polite_adj" }
           ]
         },
         {
           "kind": "mcq",
-          "q": "建物",
-          "choices": [
-            "tatemono",
-            "kenbutsu",
-            "tatemon",
-            "kenmotsu"
-          ],
-          "answer": "tatemono",
+          "q": "雨の ______ は 行きません。",
+          "choices": ["場合", "工場", "広場", "建物"],
+          "answer": "場合",
           "terms": [
-            "v_tatemono"
+            "k_ame",
+            "v_baai",
+            { "id": "v_iku", "form": "polite_negative" }
           ]
         },
         {
           "kind": "mcq",
-          "q": "工学",
-          "choices": [
-            "kougaku",
-            "kugaku",
-            "kousaku",
-            "koubun"
-          ],
-          "answer": "kougaku",
+          "q": "大きい ______ で 車を 作ります。",
+          "choices": ["工場", "工学", "広場", "場合"],
+          "answer": "工場",
           "terms": [
-            "v_kougaku"
+            "v_ookii",
+            "v_koujou",
+            "k_kuruma",
+            { "id": "v_tsukuru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "あの ______ は 古いです。",
+          "choices": ["建物", "広場", "場所", "大工"],
+          "answer": "建物",
+          "terms": [
+            "v_ano",
+            "v_tatemono",
+            { "id": "v_furui", "form": "polite_adj" }
           ]
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Drill 2: Fill in the Blank",
-      "instructions": "Select the word that fits.",
+      "title": "ドリル 3: ぶんを つくる（Sentence Building）",
+      "instructions": "Choose the best particle to complete the sentence.",
       "items": [
         {
           "kind": "mcq",
-          "q": "駅の 前に ______ が あります。",
-          "choices": [
-            "広場",
-            "工学",
-            "場合",
-            "工員"
-          ],
-          "answer": "広場",
+          "q": "工場 ______ 車を 作ります。",
+          "choices": ["で", "に", "を", "は"],
+          "answer": "で",
           "terms": [
-            "k_eki",
-            "k_mae",
-            "v_hiroba",
-            "v_aru"
+            "v_koujou",
+            "p_de",
+            "k_kuruma",
+            { "id": "v_tsukuru", "form": "polite_masu" }
           ]
         },
         {
           "kind": "mcq",
-          "q": "新しい 家を ______。",
-          "choices": [
-            "建てます",
-            "広めます",
-            "習います",
-            "引きます"
-          ],
-          "answer": "建てます",
+          "q": "広場 ______ 友だちに 会いましょう。",
+          "choices": ["で", "の", "が", "を"],
+          "answer": "で",
+          "terms": [
+            "v_hiroba",
+            "p_de",
+            "v_tomodachi",
+            { "id": "v_au", "form": "polite_volitional_mashou" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "新しい 家 ______ 建てます。",
+          "choices": ["を", "が", "に", "で"],
+          "answer": "を",
           "terms": [
             "v_atarashii",
             "k_ie",
-            {
-              "id": "v_tateru",
-              "form": "polite_masu"
-            }
+            "p_wo",
+            { "id": "v_tateru", "form": "polite_masu" }
           ]
         },
         {
           "kind": "mcq",
-          "q": "この ______ は きれいです。",
-          "choices": [
-            "場所",
-            "工員",
-            "大工",
-            "人工"
-          ],
-          "answer": "場所",
+          "q": "工学 ______ 勉強して います。",
+          "choices": ["を", "が", "で", "に"],
+          "answer": "を",
           "terms": [
-            "k_kono",
+            "v_kougaku",
+            "p_wo",
+            { "id": "v_benkyou", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "この 場所 ______ 広いです。",
+          "choices": ["は", "を", "で", "に"],
+          "answer": "は",
+          "terms": [
             "v_basho",
-            "v_kirei"
+            "p_wa",
+            { "id": "v_hiroi", "form": "polite_adj" }
           ]
         },
         {
           "kind": "mcq",
-          "q": "雨の ______ は 行きません。",
-          "choices": [
-            "場合",
-            "工場",
-            "広場",
-            "建物"
-          ],
-          "answer": "場合",
+          "q": "建物 ______ 中に 入ります。",
+          "choices": ["の", "を", "に", "で"],
+          "answer": "の",
           "terms": [
-            "k_ame",
-            "v_baai",
-            "v_iku"
+            "v_tatemono",
+            "p_no",
+            "k_naka",
+            { "id": "v_hairu", "form": "polite_masu" }
           ]
         }
       ]
