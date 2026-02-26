@@ -1,4 +1,53 @@
 (function() {
+  const SCORE_RANKS = [
+      { min: 0,   msg: '頑張れ！',     sub: 'Keep Going!',    colors: ['#a4b0be','#747d8c','#57606f'],                              particles: 8  },
+      { min: 50,  msg: 'いいね！',     sub: 'Nice!',          colors: ['#FFD700','#FFA500','#FFE066'],                              particles: 15 },
+      { min: 60,  msg: 'すごい！',     sub: 'Amazing!',       colors: ['#FF6B35','#FF4500','#FF8C00'],                              particles: 24 },
+      { min: 70,  msg: 'さすが！',     sub: 'Impressive!',    colors: ['#FF1493','#FF69B4','#FF85C8'],                              particles: 35 },
+      { min: 80,  msg: 'すばらしい！', sub: 'Wonderful!',     colors: ['#00E5FF','#00BCD4','#4DD0E1'],                              particles: 45 },
+      { min: 90,  msg: '天才！',       sub: 'Genius!',        colors: ['#8B5CF6','#A78BFA','#7C3AED'],                              particles: 55 },
+      { min: 100, msg: '神！',         sub: 'Godlike!',       colors: ['#FF1493','#FFD700','#00E5FF','#8B5CF6','#2ED573','#FF6B35'], particles: 70 },
+  ];
+
+  function launchHanabi(rank, targetEl) {
+      targetEl.style.position = 'relative';
+      const container = document.createElement('div');
+      container.className = 'jp-hanabi-container';
+      targetEl.appendChild(container);
+      const w = targetEl.offsetWidth || 300;
+      const h = targetEl.offsetHeight || 200;
+      const burstPoints = rank.particles >= 55 ? [
+          { x: w * 0.3, y: h * 0.25 }, { x: w * 0.7, y: h * 0.3 }, { x: w * 0.5, y: h * 0.15 }
+      ] : rank.particles >= 35 ? [
+          { x: w * 0.35, y: h * 0.25 }, { x: w * 0.65, y: h * 0.25 }
+      ] : [{ x: w / 2, y: h * 0.25 }];
+      const perBurst = Math.ceil(rank.particles / burstPoints.length);
+      burstPoints.forEach((bp, bIdx) => {
+          for (let i = 0; i < perBurst; i++) {
+              const p = document.createElement('div');
+              p.className = 'jp-hanabi-particle';
+              const angle = (Math.PI * 2 * i / perBurst) + (Math.random() * 0.4 - 0.2);
+              const dist = 50 + Math.random() * 100;
+              const color = rank.colors[Math.floor(Math.random() * rank.colors.length)];
+              const size = 3 + Math.random() * 5;
+              const delay = bIdx * 150 + Math.random() * 100;
+              const dx = Math.cos(angle) * dist;
+              const dy = Math.sin(angle) * dist + 40;
+              p.style.cssText = 'left:' + bp.x + 'px;top:' + bp.y + 'px;width:' + size + 'px;height:' + size + 'px;background:' + color + ';box-shadow:0 0 ' + size + 'px ' + color + ';transition:transform 0.9s cubic-bezier(0.25,0.46,0.45,0.94),opacity 0.9s ease-out;transition-delay:' + delay + 'ms;';
+              container.appendChild(p);
+              requestAnimationFrame(() => requestAnimationFrame(() => {
+                  p.style.transform = 'translate(' + dx + 'px,' + dy + 'px)';
+                  p.style.opacity = '0';
+              }));
+          }
+      });
+      const msgEl = document.createElement('div');
+      msgEl.className = 'jp-hanabi-msg';
+      msgEl.innerHTML = '<div class="jp-hanabi-jp" style="color:' + rank.colors[0] + '">' + rank.msg + '</div><div class="jp-hanabi-en">' + rank.sub + '</div>';
+      container.appendChild(msgEl);
+      setTimeout(() => container.remove(), 3000);
+  }
+
   window.ReviewModule = {
     container: null,
     onExit: null,
@@ -175,6 +224,7 @@
       questions: [],
       idx: 0,
       score: 0,
+      maxScore: 0,
       termMap: {},
       conjugations: null,
       counterRules: null
@@ -433,7 +483,7 @@
                 padding: 15px;
                 border: 2px dashed #ddd;
                 border-radius: 12px;
-                margin-bottom: 20px;
+                margin-bottom: 12px;
                 display: flex;
                 flex-wrap: wrap;
                 gap: 5px;
@@ -441,6 +491,7 @@
             }
             .jp-scramble-box.correct { border-color: var(--jp-success); background: rgba(0,184,148,0.05); }
             .jp-scramble-box.wrong { border-color: var(--jp-error); background: rgba(214,48,49,0.05); }
+            .jp-chip-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
             .jp-chip {
                 background: white;
                 padding: 10px 16px;
@@ -452,6 +503,32 @@
             }
             .jp-chip:hover { border-color: var(--jp-primary); transform: translateY(-2px); }
             .jp-chip.used { opacity: 0.3; pointer-events: none; }
+            .jp-scramble-placeholder { color: #aaa; font-style: italic; }
+            .jp-scramble-submit { margin-top: 12px; }
+            .jp-scramble-submit:disabled { opacity: 0.35; pointer-events: none; }
+            .jp-clear-btn {
+                display: none;
+                margin-top: 8px;
+                background: transparent;
+                border: 1px dashed #ccc;
+                color: #999;
+                font-size: 0.8rem;
+                padding: 6px 14px;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+            .jp-clear-btn:hover { border-color: #aaa; color: #666; }
+            .jp-pts-badge {
+                display: inline-block;
+                font-size: 0.85rem;
+                font-weight: 700;
+                margin-left: 10px;
+                padding: 2px 8px;
+                border-radius: 6px;
+                background: rgba(0,184,148,0.12);
+                color: var(--jp-success);
+            }
 
             /* Interaction Area */
             #jp-interaction {
@@ -469,6 +546,20 @@
             @keyframes jpFadeIn {
                 from { opacity: 0; transform: translateY(10px); }
                 to { opacity: 1; transform: translateY(0); }
+            }
+
+            /* RANK CELEBRATION - HANABI */
+            .jp-hanabi-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 100; overflow: hidden; }
+            .jp-hanabi-particle { position: absolute; border-radius: 50%; }
+            .jp-hanabi-msg { position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%) scale(0); text-align: center; font-family: 'Noto Sans JP', sans-serif; animation: jp-hanabi-pop 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; white-space: nowrap; }
+            .jp-hanabi-jp { font-size: 3rem; font-weight: 900; text-shadow: 0 2px 10px rgba(0,0,0,0.15); }
+            .jp-hanabi-en { font-size: 1rem; color: #747d8c; font-weight: 600; margin-top: 5px; }
+            @keyframes jp-hanabi-pop {
+                0%   { transform: translate(-50%, -50%) scale(0);   opacity: 0; }
+                20%  { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
+                40%  { transform: translate(-50%, -50%) scale(1);   opacity: 1; }
+                80%  { transform: translate(-50%, -50%) scale(1);   opacity: 1; }
+                100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0; }
             }
 
             /* Exit Link */
@@ -583,6 +674,7 @@
       if(this.state.questions.length === 0) return;
       this.state.idx = 0;
       this.state.score = 0;
+      this.state.maxScore = this.state.questions.reduce((sum, q) => sum + (q.type === 'scramble' ? 2 : 1), 0);
       this.updateUI();
       this.renderQ();
     },
@@ -699,57 +791,228 @@
     },
 
     renderScramble: function(q) {
-      // (Scramble Logic - Keeping strict logic, flagging hard to determine here so omitted for simplicity)
       const box = this.el('jp-interaction');
-      const ansBox = document.createElement('div');
-      ansBox.className = 'jp-scramble-box';
-      ansBox.innerText = "Tap words below...";
-      ansBox.style.color = "#aaa";
-
-      const pool = document.createElement('div');
-      pool.style.display = 'flex'; pool.style.gap = '8px'; pool.style.flexWrap = 'wrap';
+      const segments = q.segments;
+      const distractorWords = q.distractors || [];
+      const full = segments.join('');
 
       let order = [];
-      const full = q.segments.join('');
-      const chips = [...q.segments, ...(q.distractors || [])].sort(() => Math.random() - 0.5);
+      let attempts = 0;
+      let cleared = false;
+      // Map inChip el → pool chip el so we can re-enable chips when clearing the answer box
+      const inChipToPoolChip = new Map();
 
-      chips.forEach(word => {
+      // --- Answer box ---
+      const ansBox = document.createElement('div');
+      ansBox.className = 'jp-scramble-box';
+
+      const setPlaceholder = () => {
+        ansBox.innerHTML = '';
+        const ph = document.createElement('span');
+        ph.className = 'jp-scramble-placeholder';
+        ph.innerText = 'Tap words below…';
+        ansBox.appendChild(ph);
+      };
+      setPlaceholder();
+
+      // --- Chip pool ---
+      const pool = document.createElement('div');
+      pool.className = 'jp-chip-pool';
+
+      const allChipMeta = []; // { chip, isDistractor }
+
+      const shuffled = [...segments, ...distractorWords].sort(() => Math.random() - 0.5);
+      shuffled.forEach(word => {
+        const isDistractor = distractorWords.includes(word);
         const chip = document.createElement('div');
         chip.className = 'jp-chip';
         chip.innerText = word;
+        allChipMeta.push({ chip, isDistractor });
+
         chip.onclick = () => {
-          if(chip.classList.contains('used')) return;
-          if(order.length === 0) { ansBox.innerText = ""; ansBox.style.color = "inherit"; }
+          if (chip.classList.contains('used')) return;
+          const ph = ansBox.querySelector('.jp-scramble-placeholder');
+          if (ph) ph.remove();
 
           const inChip = document.createElement('div');
-          inChip.className = 'jp-chip'; inChip.innerText = word;
-          inChip.style.border = "none"; inChip.style.background="transparent"; inChip.style.padding="0";
+          inChip.className = 'jp-chip jp-in-chip';
+          inChip.innerText = word;
+          inChip.style.cssText = 'border:none; background:transparent; padding:0;';
+          inChipToPoolChip.set(inChip, chip);
+
           inChip.onclick = () => {
-             inChip.remove(); chip.classList.remove('used');
-             order.splice(order.indexOf(word), 1);
-             if(order.length===0) { ansBox.innerText="Tap words below..."; ansBox.style.color="#aaa"; }
-             ansBox.classList.remove('wrong');
+            inChip.remove();
+            chip.classList.remove('used');
+            const i = order.lastIndexOf(word);
+            if (i !== -1) order.splice(i, 1);
+            if (order.length === 0) setPlaceholder();
+            ansBox.classList.remove('wrong');
+            updateSubmitState();
           };
 
           ansBox.appendChild(inChip);
           order.push(word);
           chip.classList.add('used');
-
-          if(order.join('') === full) {
-            ansBox.classList.add('correct');
-            ansBox.classList.remove('wrong');
-            Array.from(pool.children).forEach(c => c.style.pointerEvents = 'none');
-            Array.from(ansBox.children).forEach(c => c.style.pointerEvents = 'none');
-            this.showFeedback(true);
-          } else if (order.length === q.segments.length) {
-            ansBox.classList.add('wrong');
-          }
+          updateSubmitState();
         };
+
         pool.appendChild(chip);
       });
 
+      // --- Helpers ---
+      const updateSubmitState = () => {
+        const ready = order.length === segments.length;
+        submitBtn.disabled = !ready;
+        submitBtn.style.opacity = ready ? '1' : '0.35';
+      };
+
+      const clearAnswerBox = () => {
+        ansBox.querySelectorAll('.jp-in-chip').forEach(ic => {
+          const poolChip = inChipToPoolChip.get(ic);
+          if (poolChip) poolChip.classList.remove('used');
+        });
+        order = [];
+        setPlaceholder();
+        ansBox.classList.remove('wrong', 'correct');
+        updateSubmitState();
+      };
+
+      // --- Submit button ---
+      const submitBtn = document.createElement('button');
+      submitBtn.className = 'jp-btn jp-btn-main jp-scramble-submit';
+      submitBtn.innerText = 'Check ✓';
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.35';
+
+      submitBtn.onclick = () => {
+        if (order.length !== segments.length) return;
+        const isCorrect = order.join('') === full;
+        attempts++;
+
+        if (isCorrect) {
+          const pts = cleared ? 0 : attempts === 1 ? 2 : attempts === 2 ? 1 : 0;
+          ansBox.classList.add('correct');
+          ansBox.classList.remove('wrong');
+          // Lock all interaction
+          allChipMeta.forEach(({ chip }) => chip.style.pointerEvents = 'none');
+          ansBox.querySelectorAll('.jp-in-chip').forEach(c => c.style.pointerEvents = 'none');
+          submitBtn.style.display = 'none';
+          clearBtn.style.display = 'none';
+          this.showScrambleFeedback(true, pts, null, q.explanation);
+        } else {
+          ansBox.classList.add('wrong');
+          const errMsg = this.buildScrambleFeedback(order, segments, distractorWords);
+          this.showScrambleFeedback(false, 0, errMsg, null);
+          // Show the clear button after the first failed attempt (only if there are distractors)
+          if (distractorWords.length > 0) clearBtn.style.display = 'block';
+        }
+      };
+
+      // --- Clear distractors button ---
+      const clearBtn = document.createElement('button');
+      clearBtn.className = 'jp-clear-btn';
+      clearBtn.innerHTML = '🧹 Remove extra words';
+
+      clearBtn.onclick = () => {
+        cleared = true;
+        clearBtn.style.display = 'none';
+        clearAnswerBox();
+        // Remove distractor chips from the pool entirely
+        allChipMeta.forEach(({ chip, isDistractor }) => {
+          if (isDistractor) chip.remove();
+        });
+        // Hide feedback and let them try clean
+        const fb = this.el('jp-fb');
+        fb.style.display = 'none';
+        fb.className = 'jp-feedback';
+        // Show a small notice below the pool
+        const notice = document.createElement('div');
+        notice.style.cssText = 'font-size:0.78rem; color:#aaa; margin-top:6px; font-style:italic;';
+        notice.innerText = 'Extra words removed — max score for this question is now 0 pts.';
+        clearBtn.after(notice);
+      };
+
       box.appendChild(ansBox);
       box.appendChild(pool);
+      box.appendChild(submitBtn);
+      box.appendChild(clearBtn);
+    },
+
+    // --- SCRAMBLE HELPERS ---
+
+    buildScrambleFeedback: function(order, segments, distractors) {
+      const distractorSet = new Set(distractors);
+
+      // Check if a distractor ended up in the answer
+      for (let i = 0; i < order.length; i++) {
+        if (distractorSet.has(order[i])) {
+          return `"${order[i]}" is an extra word that doesn't belong in this sentence — remove it and try again.`;
+        }
+      }
+
+      // Find the first position that differs
+      for (let i = 0; i < Math.min(order.length, segments.length); i++) {
+        if (order[i] !== segments[i]) {
+          const got = order[i];
+          const expected = segments[i];
+          const particles = new Set(['は','が','を','に','で','の','も','と','から','まで','へ','か','ね','よ']);
+
+          if (particles.has(got) || particles.has(expected)) {
+            const tip = this.getParticleTip(expected);
+            return `Position ${i + 1}: You used "${got}" but this slot needs "${expected}". ${tip}`;
+          }
+
+          // Both are non-particles: positional swap
+          return `Position ${i + 1}: "${got}" goes elsewhere — "${expected}" belongs here.`;
+        }
+      }
+
+      return 'The words are in the wrong order — check how the sentence is structured.';
+    },
+
+    getParticleTip: function(particle) {
+      const tips = {
+        'を': '"を" marks the direct object — the thing being acted on.',
+        'に': '"に" marks direction, destination, or result (e.g. ～になる = "to become X").',
+        'が': '"が" marks the grammatical subject, often for emphasis or new information.',
+        'は': '"は" marks the topic of the sentence.',
+        'で': '"で" marks the location of an action or the means/method used.',
+        'の': '"の" links two nouns — possession or description.',
+        'から': '"から" means "from" (a starting point) or "because".',
+        'と': '"と" means "and" when listing nouns, or "with" when doing something together.',
+        'も': '"も" means "also" / "too" — it replaces は or が.',
+        'まで': '"まで" means "until" (time) or "as far as" (place).',
+        'へ': '"へ" marks movement toward a place (direction).',
+      };
+      return tips[particle] || '';
+    },
+
+    showScrambleFeedback: function(isCorrect, pts, errorMsg, explanation) {
+      this.state.score += pts;
+      this.updateUI();
+
+      const fb = this.el('jp-fb');
+      const hd = this.el('jp-fb-head');
+      // The second child of jp-fb is the pre-rendered explanation div
+      const exDiv = fb.children[1];
+
+      fb.style.display = 'block';
+
+      if (isCorrect) {
+        fb.className = 'jp-feedback correct';
+        const star = pts === 2 ? '⭐⭐' : pts === 1 ? '⭐' : '';
+        const ptLabel = pts === 1 ? 'point' : 'points';
+        hd.innerHTML = `Correct! 🎉 <span class="jp-pts-badge">${star} +${pts} ${ptLabel}</span>`;
+        hd.style.color = 'var(--jp-success)';
+        if (exDiv) exDiv.innerText = explanation || '';
+        this.el('jp-next').style.display = 'flex';
+      } else {
+        fb.className = 'jp-feedback wrong';
+        hd.innerText = 'Not quite — try again!';
+        hd.style.color = 'var(--jp-error)';
+        if (exDiv) exDiv.innerHTML = `<strong>${errorMsg || ''}</strong>`;
+        // Do NOT show the Next button — student must keep trying
+      }
     },
 
     showFeedback: function(isCorrect) {
@@ -771,9 +1034,9 @@
 
     renderEnd: function() {
       this.el('jp-progress').style.width = "100%";
-      const scorableCount = this.state.questions.filter(q => q.isScorable).length;
-      const pct = scorableCount > 0 ? Math.round((this.state.score / scorableCount) * 100) : 100;
-      let msg = pct > 80 ? "Excellent Work! 🏆" : "Keep Practicing! 💪";
+      const maxScore = this.state.maxScore || this.state.questions.filter(q => q.isScorable).length;
+      const pct = maxScore > 0 ? Math.round((this.state.score / maxScore) * 100) : 100;
+      const rank = [...SCORE_RANKS].reverse().find(r => pct >= r.min) || SCORE_RANKS[0];
 
       // Save top score to localStorage
       const reviewName = this.config._reviewId || this.config.path.replace(/.*\//, '').replace('.json', '');
@@ -792,17 +1055,21 @@
         bestHtml = `<div style="color:#888; margin:10px 0;">Personal Best: ${prevBest}%</div>`;
       }
 
-      this.el('jp-stage').innerHTML = `
-        <div style="text-align:center; padding:40px 0; animation: jpFadeIn 0.5s;">
+      const stage = this.el('jp-stage');
+      stage.innerHTML = `
+        <div style="text-align:center; padding:30px 0 20px; animation: jpFadeIn 0.5s; position:relative;">
+          <div style="font-size:0.8rem; font-weight:700; color:#aaa; text-transform:uppercase; letter-spacing:1px; margin-bottom:10px;">Your Rank</div>
+          <div style="font-size:3rem; font-weight:900; color:${rank.colors[0]}; line-height:1.1;">${rank.msg}</div>
+          <div style="font-size:1rem; color:#747d8c; font-weight:600; margin:6px 0 14px;">${rank.sub}</div>
           <div style="font-size:4rem; font-weight:900; color:var(--jp-primary);">${pct}%</div>
-          <div style="font-size:1.2rem; color:#666; margin-bottom:5px;">${msg}</div>
           ${bestHtml}
-          <p>You scored ${this.state.score} / ${scorableCount}</p>
+          <p>You scored ${this.state.score} / ${maxScore} points</p>
           <button class="jp-btn jp-btn-main" onclick="ReviewModule.startQuiz()">Try Again</button>
           <br>
           <button class="jp-btn" onclick="ReviewModule.fetchReviewList()" style="margin-top:10px;">Back to Reviews</button>
         </div>
       `;
+      launchHanabi(rank, stage);
     },
 
     updateUI: function() {
