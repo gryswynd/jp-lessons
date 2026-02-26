@@ -117,7 +117,9 @@ CB CHECKLIST
 [ ] Every kanji used is in the taught-kanji set
 [ ] Every content word in every jp/passage field has a corresponding terms entry
 [ ] Verbs/adjectives use { "id": "...", "form": "..." } objects, never bare strings
-[ ] No invented IDs — every ID was verified against the glossary
+[ ] No invented IDs — every ID was verified against the glossary or particles.json
+[ ] Conversation/reading terms use v_* vocab entries, NOT k_* kanji entries
+[ ] VocabList covers every glossary+particles.json entry with lesson_ids = this lesson
 [ ] Counter references use { "counter": "...", "n": N } format
 [ ] Drill 1 (vocab MCQ) has NO terms array on items
 [ ] Drill 2+ fill-in-the-blank / particle / conjugation items DO have terms arrays
@@ -261,6 +263,8 @@ Never silently forward content without the accompanying documents. If an agent d
 \*`terms` is **omitted** on Drill 1 (vocabulary MCQ where the tested word is self-evident). All other drill types **must** include `terms`.
 
 **Section order convention:** warmup → kanjiGrid → vocabList → conversation(s) → reading(s) → drills
+
+**VocabList completeness.** The vocabList must cover **every** glossary entry (across `glossary.N5.json`, `glossary.N4.json`, and `shared/particles.json`) whose `lesson_ids` equals the current lesson. This includes nouns, verbs, adjectives, adverbs, pronouns, particles, set phrases, and grammar items — not just the main content words. Agent 1 must enumerate the full target ID list from the glossary files as part of the Content Brief so Agent 2 can verify completeness in the CB Checklist. Agent 3 must confirm every such entry is present in a vocabList group.
 
 **Drill types:** `mcq` only in current system. Choices array must have exactly 4 options. The `answer` string must exactly match one of the `choices` strings.
 
@@ -433,6 +437,7 @@ Each lesson entry in `manifest.json` has a `kanji` array listing characters intr
 - Any kanji character that appears in a `jp` field and is **not** in the taught-kanji set is a **hard blocker**. Agent 2 must not use it. Agent 3 must reject any draft containing it.
 - Exception: pure hiragana/katakana renderings of any word are always permitted.
 - Compounds: a compound word is only permitted if **every** kanji in the compound has been taught. Example: 学校 requires both 学 (N5.7) and 校 (N5.7) to be in the taught set.
+- **Watch for false-safe compounds.** A compound can look safe because one of its kanji is new to this lesson, while the other kanji is actually from a later lesson. Example: 先 is taught in N5.1, but 先週 cannot be used until N5.6 when 週 is taught. Check every character of every compound individually — never assume the compound is safe because the "focus" kanji is available.
 
 ---
 
@@ -503,9 +508,12 @@ All of the following should be TRUE for a CR pass:
 | `manifest.json` | Level/lesson index, kanji arrays per lesson, file paths |
 | `data/N5/glossary.N5.json` | All N5 kanji and vocab entries with IDs |
 | `data/N4/glossary.N4.json` | All N4 kanji and vocab entries with IDs |
+| `shared/particles.json` | Particle and set-phrase entries (`p_*` IDs) |
 | `conjugation_rules.json` | Valid conjugation form strings |
 | `counter_rules.json` | Valid counter keys and their rules |
 | `Lesson Instructions.md` | Authoritative term tagging and drill authoring rules |
+
+**Important — particles live in `shared/particles.json`, not the glossary.** Particle entries use the field `particle` for their surface form (not `surface`). Compound particles like `では` also live here as their own entries. When verifying a `p_*` ID, search `shared/particles.json` — not the N5/N4 glossary files. New particles or compound particles must be added to `particles.json`, not to any glossary file.
 
 ### Entry type quick reference
 
@@ -581,6 +589,8 @@ These are the most frequent errors. All agents should be alert to them.
 4. **Fabricated IDs** — writing `"v_toshokan"` without verifying it exists in the glossary.
 5. **Wrong form label** — using `"past"` when the correct string is `"plain_past"` or `"polite_mashita"`.
 6. **Drill 1 with terms array** — the first vocabulary drill must not have `terms`.
+7. **Using a kanji entry (`k_*`) in conversation or reading `terms`** — `k_*` entries only power the kanjiGrid display and will not produce clickable spans in conversations or readings. Any word that needs to be tappable in a conversation or reading line must have a corresponding `type: "vocab"` entry (`v_*`). Family terms are the most common case: 父, 母, 兄, 姉, etc. each need both a kanji entry for the grid and a vocab entry for content tagging.
+8. **Incomplete vocabList** — omitting particles, set phrases, or grammar items introduced in this lesson. The vocabList must cover every glossary entry marked `lesson_ids = this lesson`, not just the headline nouns and verbs.
 
 ### Agent 3 failures (caught by Agent 4)
 
