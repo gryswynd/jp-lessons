@@ -10,6 +10,9 @@ window.LessonModule = {
     let lessonData = null;
     let termMapData = {};
     let showEN = false; // Default OFF
+    let drillCorrect = 0;
+    let drillTotal = 0;
+    const drillAnswered = new Set();
     let CONJUGATION_RULES = null;
     let COUNTER_RULES = null;
     let allLevelsData = null;     // [{ level, levelNum, lessons[] }]
@@ -134,6 +137,20 @@ window.LessonModule = {
           .jp-mcq-opt.correct { background: #d4edda; border-color: #c3e6cb; color: #155724; }
           .jp-mcq-opt.wrong { background: #f8d7da; border-color: #f5c6cb; color: #721c24; }
 
+          /* RANK CELEBRATION - HANABI */
+          .jp-hanabi-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 100; overflow: hidden; }
+          .jp-hanabi-particle { position: absolute; border-radius: 50%; }
+          .jp-hanabi-msg { position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%) scale(0); text-align: center; font-family: 'Noto Sans JP', sans-serif; animation: jp-hanabi-pop 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; white-space: nowrap; }
+          .jp-hanabi-jp { font-size: 3rem; font-weight: 900; text-shadow: 0 2px 10px rgba(0,0,0,0.15); }
+          .jp-hanabi-en { font-size: 1rem; color: #747d8c; font-weight: 600; margin-top: 5px; }
+          @keyframes jp-hanabi-pop {
+              0%   { transform: translate(-50%, -50%) scale(0);   opacity: 0; }
+              20%  { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
+              40%  { transform: translate(-50%, -50%) scale(1);   opacity: 1; }
+              80%  { transform: translate(-50%, -50%) scale(1);   opacity: 1; }
+              100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0; }
+          }
+
         `;
         document.head.appendChild(style);
     }
@@ -173,6 +190,56 @@ window.LessonModule = {
             map[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle' };
         });
         return { map, conj, counter };
+    }
+
+    // --- RANK CELEBRATION ---
+    const SCORE_RANKS = [
+        { min: 0,   msg: '頑張れ！',     sub: 'Keep Going!',    colors: ['#a4b0be','#747d8c','#57606f'],                              particles: 8  },
+        { min: 50,  msg: 'いいね！',     sub: 'Nice!',          colors: ['#FFD700','#FFA500','#FFE066'],                              particles: 15 },
+        { min: 60,  msg: 'すごい！',     sub: 'Amazing!',       colors: ['#FF6B35','#FF4500','#FF8C00'],                              particles: 24 },
+        { min: 70,  msg: 'さすが！',     sub: 'Impressive!',    colors: ['#FF1493','#FF69B4','#FF85C8'],                              particles: 35 },
+        { min: 80,  msg: 'すばらしい！', sub: 'Wonderful!',     colors: ['#00E5FF','#00BCD4','#4DD0E1'],                              particles: 45 },
+        { min: 90,  msg: '天才！',       sub: 'Genius!',        colors: ['#8B5CF6','#A78BFA','#7C3AED'],                              particles: 55 },
+        { min: 100, msg: '神！',         sub: 'Godlike!',       colors: ['#FF1493','#FFD700','#00E5FF','#8B5CF6','#2ED573','#FF6B35'], particles: 70 },
+    ];
+
+    function launchHanabi(rank, targetEl) {
+        targetEl.style.position = 'relative';
+        const container = document.createElement('div');
+        container.className = 'jp-hanabi-container';
+        targetEl.appendChild(container);
+        const w = targetEl.offsetWidth || 300;
+        const h = targetEl.offsetHeight || 200;
+        const burstPoints = rank.particles >= 55 ? [
+            { x: w * 0.3, y: h * 0.25 }, { x: w * 0.7, y: h * 0.3 }, { x: w * 0.5, y: h * 0.15 }
+        ] : rank.particles >= 35 ? [
+            { x: w * 0.35, y: h * 0.25 }, { x: w * 0.65, y: h * 0.25 }
+        ] : [{ x: w / 2, y: h * 0.25 }];
+        const perBurst = Math.ceil(rank.particles / burstPoints.length);
+        burstPoints.forEach((bp, bIdx) => {
+            for (let i = 0; i < perBurst; i++) {
+                const p = document.createElement('div');
+                p.className = 'jp-hanabi-particle';
+                const angle = (Math.PI * 2 * i / perBurst) + (Math.random() * 0.4 - 0.2);
+                const dist = 50 + Math.random() * 100;
+                const color = rank.colors[Math.floor(Math.random() * rank.colors.length)];
+                const size = 3 + Math.random() * 5;
+                const delay = bIdx * 150 + Math.random() * 100;
+                const dx = Math.cos(angle) * dist;
+                const dy = Math.sin(angle) * dist + 40;
+                p.style.cssText = 'left:' + bp.x + 'px;top:' + bp.y + 'px;width:' + size + 'px;height:' + size + 'px;background:' + color + ';box-shadow:0 0 ' + size + 'px ' + color + ';transition:transform 0.9s cubic-bezier(0.25,0.46,0.45,0.94),opacity 0.9s ease-out;transition-delay:' + delay + 'ms;';
+                container.appendChild(p);
+                requestAnimationFrame(() => requestAnimationFrame(() => {
+                    p.style.transform = 'translate(' + dx + 'px,' + dy + 'px)';
+                    p.style.opacity = '0';
+                }));
+            }
+        });
+        const msgEl = document.createElement('div');
+        msgEl.className = 'jp-hanabi-msg';
+        msgEl.innerHTML = '<div class="jp-hanabi-jp" style="color:' + rank.colors[0] + '">' + rank.msg + '</div><div class="jp-hanabi-en">' + rank.sub + '</div>';
+        container.appendChild(msgEl);
+        setTimeout(() => container.remove(), 3000);
     }
 
     // --- Modal ---
@@ -261,12 +328,13 @@ window.LessonModule = {
 
     function renderDrills(sec) {
          const div = el("div", "");
-         (sec.items || []).forEach(item => {
+         (sec.items || []).forEach((item, itemIdx) => {
            if (item.kind === 'mcq') {
              const card = el("div", "jp-card");
              card.innerHTML = `<div class="jp-jp" style="margin-bottom:15px; font-weight:bold;">${window.JPShared.textProcessor.processText(item.q, item.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div>`;
              const optsDiv = el("div");
              let solved = false;
+             const itemKey = 'drill__' + itemIdx + '__' + item.q;
 
              // Randomize choices
              const choices = [...item.choices].sort(() => Math.random() - 0.5);
@@ -275,9 +343,12 @@ window.LessonModule = {
                const btn = el("button", "jp-mcq-opt", choice);
                btn.onclick = () => {
                  if(solved) return; solved = true;
-                 if(choice === item.answer) btn.classList.add("correct");
-                 else {
+                 if(choice === item.answer) {
+                   btn.classList.add("correct");
+                   if (!drillAnswered.has(itemKey)) { drillAnswered.add(itemKey); drillCorrect++; }
+                 } else {
                      btn.classList.add("wrong");
+                     if (!drillAnswered.has(itemKey)) drillAnswered.add(itemKey);
                      // Auto highlight correct answer
                      Array.from(optsDiv.children).forEach(c => { if(c.innerText === item.answer) c.classList.add("correct"); });
 
@@ -394,6 +465,12 @@ window.LessonModule = {
              loadResources()
           ]);
           lessonData = await lRes.json();
+          drillCorrect = 0; drillTotal = 0; drillAnswered.clear();
+          lessonData.sections.forEach(sec => {
+              if (sec.type === 'drills') {
+                  (sec.items || []).forEach(item => { if (item.kind === 'mcq') drillTotal++; });
+              }
+          });
           termMapData = resources.map;
           CONJUGATION_RULES = resources.conj;
           COUNTER_RULES     = resources.counter;
@@ -437,8 +514,24 @@ window.LessonModule = {
 
         if (currentStep >= lessonData.sections.length) {
             title.innerText = "Summary";
-            body.innerHTML = `<div class="jp-card" style="text-align:center;"><h2>🎉 Lesson Complete!</h2></div>`;
+            const pct = drillTotal > 0 ? Math.round(drillCorrect / drillTotal * 100) : 100;
+            const rank = [...SCORE_RANKS].reverse().find(r => pct >= r.min) || SCORE_RANKS[0];
+            body.innerHTML = `
+                <div class="jp-card" style="text-align:center; position:relative; padding:30px 20px;">
+                    <h2 style="margin-bottom:15px;">🎉 Lesson Complete!</h2>
+                    ${drillTotal > 0 ? `
+                    <div style="font-size:0.8rem; font-weight:700; color:#aaa; text-transform:uppercase; letter-spacing:1px; margin-bottom:10px;">Drill Score</div>
+                    <div style="font-size:3rem; font-weight:900; color:${rank.colors[0]}; line-height:1.1;">${rank.msg}</div>
+                    <div style="font-size:1rem; color:#747d8c; font-weight:600; margin:6px 0 14px;">${rank.sub}</div>
+                    <div style="font-size:2.2rem; font-weight:900; color:var(--primary);">${pct}%</div>
+                    <div style="font-size:0.9rem; color:#888; margin-top:4px;">${drillCorrect} / ${drillTotal} correct</div>
+                    ` : ''}
+                </div>`;
             nextBtn.innerText = "Finish";
+            if (drillTotal > 0) {
+                const card = body.querySelector('.jp-card');
+                launchHanabi(rank, card);
+            }
             return;
         }
 

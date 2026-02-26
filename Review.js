@@ -1,4 +1,53 @@
 (function() {
+  const SCORE_RANKS = [
+      { min: 0,   msg: '頑張れ！',     sub: 'Keep Going!',    colors: ['#a4b0be','#747d8c','#57606f'],                              particles: 8  },
+      { min: 50,  msg: 'いいね！',     sub: 'Nice!',          colors: ['#FFD700','#FFA500','#FFE066'],                              particles: 15 },
+      { min: 60,  msg: 'すごい！',     sub: 'Amazing!',       colors: ['#FF6B35','#FF4500','#FF8C00'],                              particles: 24 },
+      { min: 70,  msg: 'さすが！',     sub: 'Impressive!',    colors: ['#FF1493','#FF69B4','#FF85C8'],                              particles: 35 },
+      { min: 80,  msg: 'すばらしい！', sub: 'Wonderful!',     colors: ['#00E5FF','#00BCD4','#4DD0E1'],                              particles: 45 },
+      { min: 90,  msg: '天才！',       sub: 'Genius!',        colors: ['#8B5CF6','#A78BFA','#7C3AED'],                              particles: 55 },
+      { min: 100, msg: '神！',         sub: 'Godlike!',       colors: ['#FF1493','#FFD700','#00E5FF','#8B5CF6','#2ED573','#FF6B35'], particles: 70 },
+  ];
+
+  function launchHanabi(rank, targetEl) {
+      targetEl.style.position = 'relative';
+      const container = document.createElement('div');
+      container.className = 'jp-hanabi-container';
+      targetEl.appendChild(container);
+      const w = targetEl.offsetWidth || 300;
+      const h = targetEl.offsetHeight || 200;
+      const burstPoints = rank.particles >= 55 ? [
+          { x: w * 0.3, y: h * 0.25 }, { x: w * 0.7, y: h * 0.3 }, { x: w * 0.5, y: h * 0.15 }
+      ] : rank.particles >= 35 ? [
+          { x: w * 0.35, y: h * 0.25 }, { x: w * 0.65, y: h * 0.25 }
+      ] : [{ x: w / 2, y: h * 0.25 }];
+      const perBurst = Math.ceil(rank.particles / burstPoints.length);
+      burstPoints.forEach((bp, bIdx) => {
+          for (let i = 0; i < perBurst; i++) {
+              const p = document.createElement('div');
+              p.className = 'jp-hanabi-particle';
+              const angle = (Math.PI * 2 * i / perBurst) + (Math.random() * 0.4 - 0.2);
+              const dist = 50 + Math.random() * 100;
+              const color = rank.colors[Math.floor(Math.random() * rank.colors.length)];
+              const size = 3 + Math.random() * 5;
+              const delay = bIdx * 150 + Math.random() * 100;
+              const dx = Math.cos(angle) * dist;
+              const dy = Math.sin(angle) * dist + 40;
+              p.style.cssText = 'left:' + bp.x + 'px;top:' + bp.y + 'px;width:' + size + 'px;height:' + size + 'px;background:' + color + ';box-shadow:0 0 ' + size + 'px ' + color + ';transition:transform 0.9s cubic-bezier(0.25,0.46,0.45,0.94),opacity 0.9s ease-out;transition-delay:' + delay + 'ms;';
+              container.appendChild(p);
+              requestAnimationFrame(() => requestAnimationFrame(() => {
+                  p.style.transform = 'translate(' + dx + 'px,' + dy + 'px)';
+                  p.style.opacity = '0';
+              }));
+          }
+      });
+      const msgEl = document.createElement('div');
+      msgEl.className = 'jp-hanabi-msg';
+      msgEl.innerHTML = '<div class="jp-hanabi-jp" style="color:' + rank.colors[0] + '">' + rank.msg + '</div><div class="jp-hanabi-en">' + rank.sub + '</div>';
+      container.appendChild(msgEl);
+      setTimeout(() => container.remove(), 3000);
+  }
+
   window.ReviewModule = {
     container: null,
     onExit: null,
@@ -499,6 +548,20 @@
                 to { opacity: 1; transform: translateY(0); }
             }
 
+            /* RANK CELEBRATION - HANABI */
+            .jp-hanabi-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 100; overflow: hidden; }
+            .jp-hanabi-particle { position: absolute; border-radius: 50%; }
+            .jp-hanabi-msg { position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%) scale(0); text-align: center; font-family: 'Noto Sans JP', sans-serif; animation: jp-hanabi-pop 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; white-space: nowrap; }
+            .jp-hanabi-jp { font-size: 3rem; font-weight: 900; text-shadow: 0 2px 10px rgba(0,0,0,0.15); }
+            .jp-hanabi-en { font-size: 1rem; color: #747d8c; font-weight: 600; margin-top: 5px; }
+            @keyframes jp-hanabi-pop {
+                0%   { transform: translate(-50%, -50%) scale(0);   opacity: 0; }
+                20%  { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
+                40%  { transform: translate(-50%, -50%) scale(1);   opacity: 1; }
+                80%  { transform: translate(-50%, -50%) scale(1);   opacity: 1; }
+                100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0; }
+            }
+
             /* Exit Link */
             .jp-exit-link {
                 display: block;
@@ -973,7 +1036,7 @@
       this.el('jp-progress').style.width = "100%";
       const maxScore = this.state.maxScore || this.state.questions.filter(q => q.isScorable).length;
       const pct = maxScore > 0 ? Math.round((this.state.score / maxScore) * 100) : 100;
-      let msg = pct > 80 ? "Excellent Work! 🏆" : "Keep Practicing! 💪";
+      const rank = [...SCORE_RANKS].reverse().find(r => pct >= r.min) || SCORE_RANKS[0];
 
       // Save top score to localStorage
       const reviewName = this.config._reviewId || this.config.path.replace(/.*\//, '').replace('.json', '');
@@ -992,10 +1055,13 @@
         bestHtml = `<div style="color:#888; margin:10px 0;">Personal Best: ${prevBest}%</div>`;
       }
 
-      this.el('jp-stage').innerHTML = `
-        <div style="text-align:center; padding:40px 0; animation: jpFadeIn 0.5s;">
+      const stage = this.el('jp-stage');
+      stage.innerHTML = `
+        <div style="text-align:center; padding:30px 0 20px; animation: jpFadeIn 0.5s; position:relative;">
+          <div style="font-size:0.8rem; font-weight:700; color:#aaa; text-transform:uppercase; letter-spacing:1px; margin-bottom:10px;">Your Rank</div>
+          <div style="font-size:3rem; font-weight:900; color:${rank.colors[0]}; line-height:1.1;">${rank.msg}</div>
+          <div style="font-size:1rem; color:#747d8c; font-weight:600; margin:6px 0 14px;">${rank.sub}</div>
           <div style="font-size:4rem; font-weight:900; color:var(--jp-primary);">${pct}%</div>
-          <div style="font-size:1.2rem; color:#666; margin-bottom:5px;">${msg}</div>
           ${bestHtml}
           <p>You scored ${this.state.score} / ${maxScore} points</p>
           <button class="jp-btn jp-btn-main" onclick="ReviewModule.startQuiz()">Try Again</button>
@@ -1003,6 +1069,7 @@
           <button class="jp-btn" onclick="ReviewModule.fetchReviewList()" style="margin-top:10px;">Back to Reviews</button>
         </div>
       `;
+      launchHanabi(rank, stage);
     },
 
     updateUI: function() {
