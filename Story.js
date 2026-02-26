@@ -379,10 +379,12 @@ window.StoryModule = (function() {
   async function loadResources() {
     try {
       const manifest = await window.getManifest(config);
-      const conjUrl = getCdnUrl(manifest.globalFiles.conjugationRules);
+      const conjUrl     = getCdnUrl(manifest.globalFiles.conjugationRules);
+      const particleUrl = getCdnUrl(manifest.shared.particles);
       console.log('[Story] Conjugation URL:', conjUrl);
-      const [conjugationRules, ...glossParts] = await Promise.all([
+      const [conjugationRules, particleData, ...glossParts] = await Promise.all([
         fetch(conjUrl).then(r => r.json()),
+        fetch(particleUrl).then(r => r.json()),
         ...manifest.levels.map(lvl => fetch(getCdnUrl(manifest.data[lvl].glossary)).then(r => r.json()))
       ]);
       const allEntries = glossParts.flatMap(g => g.entries);
@@ -396,6 +398,9 @@ window.StoryModule = (function() {
         if (term.surface) {
           autoSurfaceMap[term.surface] = { id: term.id, form: null };
         }
+      });
+      (particleData.particles || []).forEach(p => {
+        termMapData[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle' };
       });
 
       CONJUGATION_RULES = conjugationRules;
