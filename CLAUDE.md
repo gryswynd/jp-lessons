@@ -68,7 +68,7 @@ User Request
 **Responsibilities:**
 - Read the user's request and identify: content type, target lesson(s), level (N5/N4), and any special focus.
 - Read `manifest.json` to understand what already exists and where new content fits.
-- Read the relevant glossary file(s): `data/N5/glossary.N5.json` and/or `data/N4/glossary.N4.json`.
+- **Do not read the glossary in full.** The glossary files are large and will exceed output token limits. Instead use targeted Grep queries: search by `lesson_ids` to enumerate vocab for the target lesson, and search by `"id": "v_foo"` to verify individual IDs. See [Glossary Access Pattern](#glossary-access-pattern) below.
 - Build a **Content Brief** (see format below) and pass it to Agent 2.
 - If Agent 4 returns a rewrite note, analyse the feedback, update the brief, and re-dispatch to Agent 2. Log what changed.
 - Final: write the approved file to the correct path and update `manifest.json` if required.
@@ -99,7 +99,7 @@ Rewrite notes: [empty on first pass; filled by Agent 4 feedback]
 **Trigger:** Receives a Content Brief from Agent 1.
 
 **Responsibilities:**
-- Read the relevant glossary file(s) in full before writing a single line of content.
+- **Do not read the glossary in full.** Use targeted Grep queries only (see [Glossary Access Pattern](#glossary-access-pattern)). Reading the full file will exceed the 32k output token limit.
 - Read any existing lesson or review JSON files listed in `Dependencies`.
 - Write all JSON/MD content strictly according to the schemas defined in [Content Types & Their Rules](#content-types--their-rules).
 - Every Japanese surface form that is used in `jp` fields, passages, or conversation lines **must** either be tagged in the `terms` array of that item, or be fully hiragana/katakana with no kanji content (pure kana items for basic particles/common function words may be untagged when they are not in the glossary).
@@ -513,6 +513,24 @@ All of the following should be TRUE for a CR pass:
 ---
 
 ## File & Structure Reference
+
+### Glossary Access Pattern
+
+**Never read the glossary in full.** The files are thousands of lines and will exceed the 32k token output limit in a single response. Use these targeted queries instead:
+
+| Goal | Grep pattern | File |
+|---|---|---|
+| List all vocab introduced in a lesson | `"lesson_ids": "N5.3"` | `glossary.N5.json` |
+| Verify a specific vocab ID exists | `"id": "v_foo"` | `glossary.N5.json` |
+| Verify a particle ID exists | `"id": "p_foo"` | `shared/particles.json` |
+| Find all entries for a kanji lesson | `"lesson": "N5.3"` | `glossary.N5.json` |
+| Check surface / reading / gtype of an entry | `"id": "v_foo"` with context lines | `glossary.N5.json` |
+
+When Agent 1 needs to enumerate the full vocab list for a lesson's Content Brief, run one Grep for `"lesson_ids": "N5.X"` and one for `"lesson": "N5.X"` (kanji entries). That is sufficient — do not read the file beyond those results.
+
+When Agent 3 needs to verify IDs in bulk, run a single Grep per unknown ID rather than reading surrounding sections.
+
+---
 
 ### Key files to read before building any content
 
