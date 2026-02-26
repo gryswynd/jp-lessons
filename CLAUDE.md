@@ -72,6 +72,7 @@ User Request
 - Build a **Content Brief** (see format below) and pass it to Agent 2.
 - If Agent 4 returns a rewrite note, analyse the feedback, update the brief, and re-dispatch to Agent 2. Log what changed.
 - Final: write the approved file to the correct path and update `manifest.json` if required.
+- **Scope review gate.** Before dispatching to Agent 2, audit the proposed vocabulary list for cohesion. Ask: do these items naturally belong together in one lesson? If a cluster of time-expression words (e.g. 今朝/今晩/先月) or compound vocab is only partially introduced, either include the full cluster or defer all of it to a later lesson. Never split a natural vocabulary group across lessons unless there is a clear pedagogical reason. Note any deferred items in the Content Brief's Rewrite Notes field.
 
 **Content Brief format (internal working document):**
 
@@ -125,6 +126,10 @@ CB CHECKLIST
 [ ] Drill 2+ fill-in-the-blank / particle / conjugation items DO have terms arrays
 [ ] Answer fields in reading questions match the passage text exactly
 [ ] JSON is valid (no trailing commas, all brackets closed)
+[ ] Warmup items use ONLY vocab from lessons prior to this one (lesson_ids < current lesson)
+[ ] Lesson has the minimum required number of conversations (≥ 4 for N5, ≥ 3 for N4)
+[ ] meta.kanji array is present and matches the kanji list in manifest.json
+[ ] Every kanji introduced this lesson that functions as a standalone noun has a v_* vocab entry, not only a k_* kanji entry
 ```
 
 ---
@@ -263,6 +268,14 @@ Never silently forward content without the accompanying documents. If an agent d
 \*`terms` is **omitted** on Drill 1 (vocabulary MCQ where the tested word is self-evident). All other drill types **must** include `terms`.
 
 **Section order convention:** warmup → kanjiGrid → vocabList → conversation(s) → reading(s) → drills
+
+**Warmup rule.** Warmup items must use **only** vocabulary and kanji from lessons already completed (lesson_ids strictly less than the current lesson). The purpose of the warmup is to activate prior knowledge, not preview new content. Any item that requires the student to read a new kanji or use a new vocabulary word from the current lesson is invalid.
+
+**Conversation count.** N5 lessons must contain **at least 4 conversations**. N4 lessons must contain at least 3. Fewer conversations is a CB failure regardless of how rich the reading sections are.
+
+**Standalone kanji nouns.** When a lesson introduces kanji that are commonly used as standalone nouns (e.g. 水 = water, 木 = tree, 火 = fire, 月 = moon, 日 = sun, 土 = soil, 金 = gold), a dedicated `v_*` vocab entry (type: vocab, gtype: noun) must exist for that standalone use in addition to the `k_*` kanji entry. The `k_*` entry only powers the kanjiGrid display; the `v_*` entry is required for the word to be tappable in conversations and readings.
+
+**meta.kanji required.** The `meta` object must include a `"kanji"` array listing the characters introduced in this lesson, matching the kanji array in `manifest.json` for the same lesson ID.
 
 **VocabList completeness.** The vocabList must cover **every** glossary entry (across `glossary.N5.json`, `glossary.N4.json`, and `shared/particles.json`) whose `lesson_ids` equals the current lesson. This includes nouns, verbs, adjectives, adverbs, pronouns, particles, set phrases, and grammar items — not just the main content words. Agent 1 must enumerate the full target ID list from the glossary files as part of the Content Brief so Agent 2 can verify completeness in the CB Checklist. Agent 3 must confirm every such entry is present in a vocabList group.
 
@@ -591,6 +604,10 @@ These are the most frequent errors. All agents should be alert to them.
 6. **Drill 1 with terms array** — the first vocabulary drill must not have `terms`.
 7. **Using a kanji entry (`k_*`) in conversation or reading `terms`** — `k_*` entries only power the kanjiGrid display and will not produce clickable spans in conversations or readings. Any word that needs to be tappable in a conversation or reading line must have a corresponding `type: "vocab"` entry (`v_*`). Family terms are the most common case: 父, 母, 兄, 姉, etc. each need both a kanji entry for the grid and a vocab entry for content tagging.
 8. **Incomplete vocabList** — omitting particles, set phrases, or grammar items introduced in this lesson. The vocabList must cover every glossary entry marked `lesson_ids = this lesson`, not just the headline nouns and verbs.
+9. **Warmup items using new-lesson vocabulary or kanji** — warmup must reinforce prior lessons only. Any item whose `jp` field contains a new-lesson kanji, or whose `terms` reference a new-lesson vocab ID, is invalid and must be rewritten using N5.1 (or earlier) material.
+10. **Too few conversations** — N5 lessons require at least 4 conversations, N4 at least 3. Fewer than the minimum is a hard fail that Agent 3 must catch.
+11. **Missing standalone noun v_* entry for a newly taught kanji** — if a kanji is to be used as a standalone noun in lesson content (e.g. 水 for water, 木 for tree), verify that a `type: "vocab"` entry with a matching `lesson_ids` exists before using it in a `jp` field. If it does not exist, create it and add it to the vocabList before building the content.
+12. **Missing meta.kanji array** — the lesson `meta` object must include `"kanji": [...]` listing the characters introduced in this lesson.
 
 ### Agent 3 failures (caught by Agent 4)
 
