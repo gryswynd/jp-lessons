@@ -185,78 +185,83 @@
           "segments": [
             "この",
             "地区の",
-            "産業は",
+            "産業",
+            "は",
             "主に",
-            "産物を",
+            "産物",
+            "を",
             "作ります"
           ],
           "distractors": [
-            "に",
             "が",
-            "工場",
-            "止めます"
+            "業者",
+            "作りません"
           ],
-          "explanation": "This (この) + district's (地区の) + industry (産業) + wa + mainly (主に) + products (産物) + wo + produces (作ります). Use を for the object of 作る, not に."
+          "explanation": "この + 地区の + 産業 + は (topic) + 主に + 産物 + を (object) + 作ります. Use は to mark the topic (industry), を to mark the object of 作る (goods). が marks a grammatical subject, not a topic."
         },
         {
           "kind": "scramble",
           "q": "Citizens wash their cars every day.",
           "segments": [
-            "国民は",
+            "国民",
+            "は",
             "毎日",
-            "車を",
+            "車",
+            "を",
             "洗います"
           ],
           "distractors": [
             "に",
             "洗車",
-            "止めます",
-            "が"
+            "洗いません"
           ],
-          "explanation": "Citizens (国民) + wa + every day (毎日) + car (車) + wo + wash (洗います). Use を for the object of 洗う, not に."
+          "explanation": "国民 + は (topic) + 毎日 + 車 + を (object) + 洗います. Use を to mark 車 as the thing being washed. に marks a destination or result, not a direct object."
         },
         {
           "kind": "scramble",
           "q": "The contractor said the bus service is inconvenient.",
           "segments": [
-            "業者は",
+            "業者",
+            "は",
             "バスの",
-            "便が",
+            "便",
+            "が",
             "不便だと",
             "言いました"
           ],
           "distractors": [
             "を",
             "産業",
-            "通います",
-            "国民"
+            "言います"
           ],
-          "explanation": "Contractor (業者) + wa + bus (バス) + no + service (便) + ga + inconvenient (不便だ) + to + said (言いました). 便が marks the subject of the embedded clause."
+          "explanation": "業者 + は (topic) + バスの + 便 + が (subject of embedded clause) + 不便だと + 言いました (past tense). Inside a quoted clause ～と言う, が marks the grammatical subject. を marks a direct object, which doesn't apply here."
         },
         {
           "kind": "scramble",
           "q": "The contractor stopped the car wash water and went home.",
           "segments": [
-            "業者は",
+            "業者",
+            "は",
             "洗車の",
-            "水を",
+            "水",
+            "を",
             "止めて",
             "帰りました"
           ],
           "distractors": [
             "に",
-            "が",
             "産業",
-            "洗います"
+            "止まって"
           ],
-          "explanation": "Contractor (業者) + wa + car wash (洗車) + no + water (水) + wo + stopped (止めて, transitive) + went home (帰りました). 止めて not 止まって — transitive here because the contractor actively stops the water."
+          "explanation": "業者 + は (topic) + 洗車の + 水 + を (object) + 止めて (transitive te-form) + 帰りました. 止める is transitive — someone stops something. 止まる/止まって is intransitive — something stops by itself. The contractor actively stops the water, so 止めて is correct."
         },
         {
           "kind": "scramble",
           "q": "The bus service was cancelled because it was inconvenient.",
           "segments": [
             "バスの",
-            "便が",
+            "便",
+            "が",
             "不便で",
             "中止に",
             "なりました"
@@ -264,10 +269,9 @@
           "distractors": [
             "を",
             "国民",
-            "洗います",
-            "産業"
+            "なります"
           ],
-          "explanation": "Bus (バス) + no + service (便) + ga + inconvenient (不便で, te-form of na-adj) + cancelled (中止に) + became (なりました). 不便で connects the reason to the result."
+          "explanation": "バスの + 便 + が (subject) + 不便で (conjunctive na-adj form) + 中止に + なりました (past tense). が marks 便 as the subject of the change. 不便で connects the cause to the result. なりました is past — the cancellation already happened."
         }
       ]
     },

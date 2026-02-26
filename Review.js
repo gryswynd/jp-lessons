@@ -530,6 +530,14 @@
                 color: var(--jp-success);
             }
 
+            /* In-answer-box chips */
+            .jp-in-chip { padding: 8px 14px; }
+
+            /* Scramble color feedback */
+            .jp-chip-correct   { background: rgba(46,213,115,0.12) !important; border-color: #2ed573 !important; color: #1a8a45 !important; }
+            .jp-chip-misplaced { background: rgba(255,165,2,0.12)  !important; border-color: #ffa502 !important; color: #7d5200 !important; }
+            .jp-chip-wrong     { background: rgba(255,71,87,0.12)  !important; border-color: #ff4757 !important; color: #c0392b !important; }
+
             /* Interaction Area */
             #jp-interaction {
                 display: flex;
@@ -837,7 +845,6 @@
           const inChip = document.createElement('div');
           inChip.className = 'jp-chip jp-in-chip';
           inChip.innerText = word;
-          inChip.style.cssText = 'border:none; background:transparent; padding:0;';
           inChipToPoolChip.set(inChip, chip);
 
           inChip.onclick = () => {
@@ -846,13 +853,16 @@
             const i = order.lastIndexOf(word);
             if (i !== -1) order.splice(i, 1);
             if (order.length === 0) setPlaceholder();
-            ansBox.classList.remove('wrong');
+            ansBox.classList.remove('wrong', 'correct');
+            clearColors();
             updateSubmitState();
           };
 
           ansBox.appendChild(inChip);
           order.push(word);
           chip.classList.add('used');
+          clearColors();
+          ansBox.classList.remove('wrong', 'correct');
           updateSubmitState();
         };
 
@@ -875,6 +885,38 @@
         setPlaceholder();
         ansBox.classList.remove('wrong', 'correct');
         updateSubmitState();
+      };
+
+      // --- Color helpers ---
+      const clearColors = () => {
+        ansBox.querySelectorAll('.jp-in-chip').forEach(c =>
+          c.classList.remove('jp-chip-correct', 'jp-chip-misplaced', 'jp-chip-wrong')
+        );
+      };
+
+      const applyColors = () => {
+        const inChips = Array.from(ansBox.querySelectorAll('.jp-in-chip'));
+        const usedSeg = new Array(segments.length).fill(false);
+        const result = new Array(order.length).fill('wrong');
+        // First pass: exact position matches → green
+        for (let i = 0; i < order.length; i++) {
+          if (i < segments.length && order[i] === segments[i]) {
+            result[i] = 'correct'; usedSeg[i] = true;
+          }
+        }
+        // Second pass: right word, wrong spot → yellow
+        for (let i = 0; i < order.length; i++) {
+          if (result[i] !== 'wrong') continue;
+          for (let j = 0; j < segments.length; j++) {
+            if (!usedSeg[j] && order[i] === segments[j]) {
+              result[i] = 'misplaced'; usedSeg[j] = true; break;
+            }
+          }
+        }
+        inChips.forEach((chip, i) => {
+          chip.classList.remove('jp-chip-correct', 'jp-chip-misplaced', 'jp-chip-wrong');
+          chip.classList.add('jp-chip-' + result[i]);
+        });
       };
 
       // --- Submit button ---
@@ -901,9 +943,7 @@
           this.showScrambleFeedback(true, pts, null, q.explanation);
         } else {
           ansBox.classList.add('wrong');
-          const errMsg = this.buildScrambleFeedback(order, segments, distractorWords);
-          this.showScrambleFeedback(false, 0, errMsg, null);
-          // Show the clear button after the first failed attempt (only if there are distractors)
+          applyColors();
           if (distractorWords.length > 0) clearBtn.style.display = 'block';
         }
       };
@@ -936,55 +976,6 @@
       box.appendChild(pool);
       box.appendChild(submitBtn);
       box.appendChild(clearBtn);
-    },
-
-    // --- SCRAMBLE HELPERS ---
-
-    buildScrambleFeedback: function(order, segments, distractors) {
-      const distractorSet = new Set(distractors);
-
-      // Check if a distractor ended up in the answer
-      for (let i = 0; i < order.length; i++) {
-        if (distractorSet.has(order[i])) {
-          return `"${order[i]}" is an extra word that doesn't belong in this sentence — remove it and try again.`;
-        }
-      }
-
-      // Find the first position that differs
-      for (let i = 0; i < Math.min(order.length, segments.length); i++) {
-        if (order[i] !== segments[i]) {
-          const got = order[i];
-          const expected = segments[i];
-          const particles = new Set(['は','が','を','に','で','の','も','と','から','まで','へ','か','ね','よ']);
-
-          if (particles.has(got) || particles.has(expected)) {
-            const tip = this.getParticleTip(expected);
-            return `Position ${i + 1}: You used "${got}" but this slot needs "${expected}". ${tip}`;
-          }
-
-          // Both are non-particles: positional swap
-          return `Position ${i + 1}: "${got}" goes elsewhere — "${expected}" belongs here.`;
-        }
-      }
-
-      return 'The words are in the wrong order — check how the sentence is structured.';
-    },
-
-    getParticleTip: function(particle) {
-      const tips = {
-        'を': '"を" marks the direct object — the thing being acted on.',
-        'に': '"に" marks direction, destination, or result (e.g. ～になる = "to become X").',
-        'が': '"が" marks the grammatical subject, often for emphasis or new information.',
-        'は': '"は" marks the topic of the sentence.',
-        'で': '"で" marks the location of an action or the means/method used.',
-        'の': '"の" links two nouns — possession or description.',
-        'から': '"から" means "from" (a starting point) or "because".',
-        'と': '"と" means "and" when listing nouns, or "with" when doing something together.',
-        'も': '"も" means "also" / "too" — it replaces は or が.',
-        'まで': '"まで" means "until" (time) or "as far as" (place).',
-        'へ': '"へ" marks movement toward a place (direction).',
-      };
-      return tips[particle] || '';
     },
 
     showScrambleFeedback: function(isCorrect, pts, errorMsg, explanation) {
