@@ -27,9 +27,9 @@
       "instructions": "Try answering these questions in Japanese.",
       "items": [
         {
-          "jp": "きょうは なんようびですか。",
+          "jp": "きょうは 何よう日ですか。",
           "en": "What day is today?",
-          "terms": ["v_kyou", "p_wa", "v_nani", "g_desu", "p_ka"]
+          "terms": ["v_kyou", "p_wa", "v_nanyoubi", "g_desu", "p_ka"]
         },
         {
           "jp": "まいにち なにを しますか。",
@@ -69,7 +69,7 @@
         },
         {
           "label": "Days of the Week",
-          "items": ["v_nichiyoubi", "v_getsuyoubi", "v_kayoubi", "v_suiyoubi", "v_mokuyoubi", "v_kinyoubi", "v_doyoubi"]
+          "items": ["v_nichiyoubi", "v_getsuyoubi", "v_kayoubi", "v_suiyoubi", "v_mokuyoubi", "v_kinyoubi", "v_doyoubi", "v_nanyoubi"]
         },
         {
           "label": "Every Day / Morning / Evening / Month",
@@ -98,7 +98,7 @@
           "spk": "A",
           "jp": "きょうは 何よう日ですか。",
           "en": "What day is today?",
-          "terms": ["v_kyou", "p_wa", "v_nani", "g_desu", "p_ka"]
+          "terms": ["v_kyou", "p_wa", "v_nanyoubi", "g_desu", "p_ka"]
         },
         {
           "spk": "B",
@@ -110,25 +110,13 @@
           "spk": "A",
           "jp": "やまもと先生は 何よう日に いますか。",
           "en": "On which days is Yamamoto-sensei here?",
-          "terms": ["v_sensei", "p_wa", "v_nani", "p_ni", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
+          "terms": ["v_sensei", "p_wa", "v_nanyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
         },
         {
           "spk": "B",
           "jp": "月よう日と 水よう日と 金よう日に います。",
           "en": "She is here on Monday, Wednesday, and Friday.",
           "terms": ["v_getsuyoubi", "p_to", "v_suiyoubi", "v_kinyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }]
-        },
-        {
-          "spk": "A",
-          "jp": "毎日では ありませんね。",
-          "en": "Not every day, right?",
-          "terms": ["v_mainichi", "p_dewa", { "id": "v_aru", "form": "polite_negative" }, "p_ne"]
-        },
-        {
-          "spk": "B",
-          "jp": "火よう日と 木よう日と 土よう日と 日よう日は いません。",
-          "en": "She is not here on Tuesday, Thursday, Saturday, or Sunday.",
-          "terms": ["v_kayoubi", "p_to", "v_mokuyoubi", "v_doyoubi", "v_nichiyoubi", "p_wa", { "id": "v_iru", "form": "polite_negative" }]
         }
       ]
     },
@@ -141,7 +129,7 @@
           "spk": "B",
           "jp": "りきぞさん、お父さんは 何よう日に いますか。",
           "en": "Rikizo-san, on which days is your father home?",
-          "terms": ["v_san", "v_otousan", "p_wa", "v_nani", "p_ni", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
+          "terms": ["v_san", "v_otousan", "p_wa", "v_nanyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
         },
         {
           "spk": "A",
@@ -214,12 +202,12 @@
         {
           "q": "やまもと先生は 何よう日に いますか。",
           "a": "月よう日と 水よう日と 金よう日に います。",
-          "terms": ["v_sensei", "p_wa", "v_nani", "p_ni", { "id": "v_iru", "form": "polite_masu" }, "p_ka", "v_getsuyoubi", "p_to", "v_suiyoubi", "v_kinyoubi"]
+          "terms": ["v_sensei", "p_wa", "v_nanyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }, "p_ka", "v_getsuyoubi", "p_to", "v_suiyoubi", "v_kinyoubi"]
         },
         {
           "q": "今日は 何よう日ですか。",
           "a": "木よう日です。",
-          "terms": ["v_kyou", "p_wa", "v_nani", "g_desu", "p_ka", "v_mokuyoubi"]
+          "terms": ["v_kyou", "p_wa", "v_nanyoubi", "g_desu", "p_ka", "v_mokuyoubi"]
         },
         {
           "q": "先生は どうですか。",
