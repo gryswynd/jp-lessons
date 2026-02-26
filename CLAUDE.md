@@ -68,10 +68,13 @@ User Request
 **Responsibilities:**
 - Read the user's request and identify: content type, target lesson(s), level (N5/N4), and any special focus.
 - Read `manifest.json` to understand what already exists and where new content fits.
-- Read the relevant glossary file(s): `data/N5/glossary.N5.json` and/or `data/N4/glossary.N4.json`.
+- **Do not read the glossary in full.** The glossary files are large and will exceed output token limits. Instead use targeted Grep queries: search by `lesson_ids` to enumerate vocab for the target lesson, and search by `"id": "v_foo"` to verify individual IDs. See [Glossary Access Pattern](#glossary-access-pattern) below.
 - Build a **Content Brief** (see format below) and pass it to Agent 2.
 - If Agent 4 returns a rewrite note, analyse the feedback, update the brief, and re-dispatch to Agent 2. Log what changed.
 - Final: write the approved file to the correct path and update `manifest.json` if required.
+- **Reference template rule.** Before building the Content Brief, identify the highest-numbered existing lesson file of the same content type and level (e.g. for a new N5 lesson, find the highest N5.X.json that exists). Use that file as the structural template — its section counts, conversation count, vocabulary density, and tone represent the current standard. Include it in the Dependencies field of the Content Brief. Earlier lessons may use outdated structures; always defer to the latest. If the curriculum spans multiple levels (e.g. N5 and N4 both exist), the highest-numbered lesson across the highest level is the most authoritative template.
+- **Compound discovery.** When scoping vocabulary for a new lesson, search the glossary for compounds that can be formed from the taught-kanji set. For each newly introduced kanji character, Grep for that character in the glossary's `"surface"` fields to discover existing compound words whose constituent kanji are all now taught. Flag any such compounds to the user as candidates for inclusion. This step ensures the lesson maximises use of newly-unlocked vocabulary.
+- **Scope review gate.** Before dispatching to Agent 2, audit the proposed vocabulary list for cohesion. Ask: do these items naturally belong together in one lesson? If a cluster of time-expression words (e.g. 今朝/今晩/先月) or compound vocab is only partially introduced, either include the full cluster or defer all of it to a later lesson. Never split a natural vocabulary group across lessons unless there is a clear pedagogical reason. Note any deferred items in the Content Brief's Rewrite Notes field.
 
 **Content Brief format (internal working document):**
 
@@ -88,6 +91,7 @@ Focus/theme:   [e.g. "Directions and position words used in daily navigation"]
 Required vocab IDs: [explicit IDs that MUST appear, e.g. compose targets]
 Sections to build:  [e.g. warmup, kanjiGrid, vocabList, conversation×2, reading×2, drills×3]
 Dependencies:  [list any existing lesson files to read for context]
+Reference template: [path to highest-numbered existing file of same type/level — this is the structural standard]
 Rewrite notes: [empty on first pass; filled by Agent 4 feedback]
 ```
 
@@ -98,7 +102,7 @@ Rewrite notes: [empty on first pass; filled by Agent 4 feedback]
 **Trigger:** Receives a Content Brief from Agent 1.
 
 **Responsibilities:**
-- Read the relevant glossary file(s) in full before writing a single line of content.
+- **Do not read the glossary in full.** Use targeted Grep queries only (see [Glossary Access Pattern](#glossary-access-pattern)). Reading the full file will exceed the 32k output token limit.
 - Read any existing lesson or review JSON files listed in `Dependencies`.
 - Write all JSON/MD content strictly according to the schemas defined in [Content Types & Their Rules](#content-types--their-rules).
 - Every Japanese surface form that is used in `jp` fields, passages, or conversation lines **must** either be tagged in the `terms` array of that item, or be fully hiragana/katakana with no kanji content (pure kana items for basic particles/common function words may be untagged when they are not in the glossary).
@@ -113,7 +117,7 @@ Rewrite notes: [empty on first pass; filled by Agent 4 feedback]
 ```
 CB CHECKLIST
 ════════════
-[ ] Read glossary in full before writing
+[ ] Verified all needed vocab IDs via targeted Grep queries (not full glossary read)
 [ ] Every kanji used is in the taught-kanji set
 [ ] Every content word in every jp/passage field has a corresponding terms entry
 [ ] Verbs/adjectives use { "id": "...", "form": "..." } objects, never bare strings
@@ -125,6 +129,10 @@ CB CHECKLIST
 [ ] Drill 2+ fill-in-the-blank / particle / conjugation items DO have terms arrays
 [ ] Answer fields in reading questions match the passage text exactly
 [ ] JSON is valid (no trailing commas, all brackets closed)
+[ ] Warmup items use ONLY vocab from lessons prior to this one (lesson_ids < current lesson)
+[ ] Lesson matches the reference template's conversation count (see Reference Template Rule)
+[ ] meta.kanji array is present and matches the kanji list in manifest.json
+[ ] Every kanji introduced this lesson that functions as a standalone noun has a v_* vocab entry, not only a k_* kanji entry
 ```
 
 ---
@@ -176,7 +184,7 @@ Status: FAIL — return to Agent 2
 **Trigger:** Receives QA-approved draft from Agent 3.
 
 **Responsibilities:**
-- Read at minimum 2 existing files of the same content type for the same level to calibrate tone, complexity, and vocabulary density.
+- **Use the latest content as the reference standard.** Read the highest-numbered existing lesson file of the same content type and level — this represents the current structural standard. Optionally read one additional earlier file for comparison. When conventions differ between older and newer files, the newest file always takes precedence.
 - Assess: **Natural language quality** — do conversations sound like real Japanese, not textbook recitations? Are the situations culturally plausible?
 - Assess: **Skill progression** — does difficulty increase appropriately from the previous lesson? Are new grammar points used naturally rather than force-fed?
 - Assess: **Vocabulary density** — are too few or too many new vocab items packed into a single section?
@@ -263,6 +271,14 @@ Never silently forward content without the accompanying documents. If an agent d
 \*`terms` is **omitted** on Drill 1 (vocabulary MCQ where the tested word is self-evident). All other drill types **must** include `terms`.
 
 **Section order convention:** warmup → kanjiGrid → vocabList → conversation(s) → reading(s) → drills
+
+**Warmup rule.** Warmup items must use **only** vocabulary and kanji from lessons already completed (lesson_ids strictly less than the current lesson). The purpose of the warmup is to activate prior knowledge, not preview new content. Any item that requires the student to read a new kanji or use a new vocabulary word from the current lesson is invalid.
+
+**Conversation count.** Match the conversation count of the reference template lesson (the highest-numbered existing lesson of the same level and type). If no template exists yet, default to at least 4 conversations. Fewer conversations than the template is a CB failure regardless of how rich the reading sections are.
+
+**Standalone kanji nouns.** When a lesson introduces kanji that are commonly used as standalone nouns (e.g. 水 = water, 木 = tree, 火 = fire, 月 = moon, 日 = sun, 土 = soil, 金 = gold), a dedicated `v_*` vocab entry (type: vocab, gtype: noun) must exist for that standalone use in addition to the `k_*` kanji entry. The `k_*` entry only powers the kanjiGrid display; the `v_*` entry is required for the word to be tappable in conversations and readings.
+
+**meta.kanji required.** The `meta` object must include a `"kanji"` array listing the characters introduced in this lesson, matching the kanji array in `manifest.json` for the same lesson ID.
 
 **VocabList completeness.** The vocabList must cover **every** glossary entry (across `glossary.N5.json`, `glossary.N4.json`, and `shared/particles.json`) whose `lesson_ids` equals the current lesson. This includes nouns, verbs, adjectives, adverbs, pronouns, particles, set phrases, and grammar items — not just the main content words. Agent 1 must enumerate the full target ID list from the glossary files as part of the Content Brief so Agent 2 can verify completeness in the CB Checklist. Agent 3 must confirm every such entry is present in a vocabList group.
 
@@ -501,6 +517,27 @@ All of the following should be TRUE for a CR pass:
 
 ## File & Structure Reference
 
+### Glossary Access Pattern
+
+**Never read the glossary in full.** The files are thousands of lines and will exceed the 32k token output limit in a single response. Use these targeted queries instead:
+
+| Goal | Grep pattern | File |
+|---|---|---|
+| List all vocab introduced in a lesson | `"lesson_ids": "N5.3"` | `glossary.N5.json` |
+| Verify a specific vocab ID exists | `"id": "v_foo"` | `glossary.N5.json` |
+| Verify a particle ID exists | `"id": "p_foo"` | `shared/particles.json` |
+| Find all entries for a kanji lesson | `"lesson": "N5.3"` | `glossary.N5.json` |
+| Check surface / reading / gtype of an entry | `"id": "v_foo"` with context lines | `glossary.N5.json` |
+| Discover compounds for a kanji character | `"surface":` containing the character (e.g. `"surface": ".*水.*"`) | `glossary.N5.json` |
+
+When Agent 1 needs to enumerate the full vocab list for a lesson's Content Brief, run one Grep for `"lesson_ids": "N5.X"` and one for `"lesson": "N5.X"` (kanji entries). That is sufficient — do not read the file beyond those results.
+
+When Agent 3 needs to verify IDs in bulk, run a single Grep per unknown ID rather than reading surrounding sections.
+
+**Compound discovery (Agent 1 scoping phase).** When a new lesson introduces kanji, Agent 1 should search the glossary for each new character to discover compound words that become available once that kanji is taught (i.e. all constituent kanji are now in the taught set). Grep for the character within `"surface"` fields. This broader search is permitted and encouraged — it does not violate the "do not read in full" rule because it is still a targeted query. Flag discovered compounds to the user as candidates for inclusion in the lesson or for addition to the glossary if they don't exist yet.
+
+---
+
 ### Key files to read before building any content
 
 | File | Purpose |
@@ -591,6 +628,10 @@ These are the most frequent errors. All agents should be alert to them.
 6. **Drill 1 with terms array** — the first vocabulary drill must not have `terms`.
 7. **Using a kanji entry (`k_*`) in conversation or reading `terms`** — `k_*` entries only power the kanjiGrid display and will not produce clickable spans in conversations or readings. Any word that needs to be tappable in a conversation or reading line must have a corresponding `type: "vocab"` entry (`v_*`). Family terms are the most common case: 父, 母, 兄, 姉, etc. each need both a kanji entry for the grid and a vocab entry for content tagging.
 8. **Incomplete vocabList** — omitting particles, set phrases, or grammar items introduced in this lesson. The vocabList must cover every glossary entry marked `lesson_ids = this lesson`, not just the headline nouns and verbs.
+9. **Warmup items using new-lesson vocabulary or kanji** — warmup must reinforce prior lessons only. Any item whose `jp` field contains a new-lesson kanji, or whose `terms` reference a new-lesson vocab ID, is invalid and must be rewritten using N5.1 (or earlier) material.
+10. **Too few conversations** — conversation count must match the reference template lesson (highest-numbered existing lesson of same type/level). Fewer than the template is a hard fail that Agent 3 must catch.
+11. **Missing standalone noun v_* entry for a newly taught kanji** — if a kanji is to be used as a standalone noun in lesson content (e.g. 水 for water, 木 for tree), verify that a `type: "vocab"` entry with a matching `lesson_ids` exists before using it in a `jp` field. If it does not exist, create it and add it to the vocabList before building the content.
+12. **Missing meta.kanji array** — the lesson `meta` object must include `"kanji": [...]` listing the characters introduced in this lesson.
 
 ### Agent 3 failures (caught by Agent 4)
 
