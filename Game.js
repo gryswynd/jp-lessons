@@ -174,6 +174,14 @@ window.GameModule = (function() {
           white-space: pre-line;
           font-weight: 500;
         }
+        .jp-line-en {
+          display: block;
+          font-size: 13px;
+          color: #888;
+          margin-top: 6px;
+          font-style: italic;
+          font-weight: 400;
+        }
         .jp-speech-bubble .continue {
           margin-top: 15px;
           font-size: 13px;
@@ -925,11 +933,17 @@ window.GameModule = (function() {
       }
 
       function showMessage(message) {
-        gameUI.innerHTML = processGameText(message);
+        if (message && typeof message === 'object') {
+          const jpHtml = processGameText(message.jp || '');
+          const enHtml = message.en ? `<span class="jp-line-en">${message.en}</span>` : '';
+          gameUI.innerHTML = jpHtml + enHtml;
+        } else {
+          gameUI.innerHTML = processGameText(message);
+        }
         gameUI.style.display = 'block';
         setTimeout(() => {
           gameUI.style.display = 'none';
-        }, 2000);
+        }, 3000);
       }
 
       // --- Conversation System ---
@@ -960,7 +974,9 @@ window.GameModule = (function() {
         }
 
         const line = game.currentConversation[game.conversationIndex];
-        convoText.innerHTML = processGameText(line.text);
+        const jpHtml = processGameText(line.jp || line.text || '');
+        const enHtml = line.en ? `<span class="jp-line-en">${line.en}</span>` : '';
+        convoText.innerHTML = jpHtml + enHtml;
 
         const portrait = portraitMap[line.speaker];
         convoPortrait.src = portrait ? portrait.src : '';
