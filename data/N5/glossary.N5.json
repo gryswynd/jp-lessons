@@ -2775,8 +2775,20 @@
       "type": "phrase",
       "gtype": "set-phrase",
       "lesson_ids": "N5.1",
-      "matches": ["よろしく おねがいします"],
+      "matches": [
+        "よろしく おねがいします"
+      ],
       "notes": "Polite greeting used after self-introduction."
+    },
+    {
+      "id": "v_kudasai",
+      "surface": "ください",
+      "reading": "ください",
+      "meaning": "please (do)",
+      "type": "vocab",
+      "gtype": "expression",
+      "lesson_ids": "N5.1",
+      "notes": "Used after the te-form of a verb to make a polite request, e.g. 言ってください (please say)."
     },
     {
       "id": "p_ohayou",
@@ -2843,6 +2855,26 @@
       "matches": [
         "おかあさん"
       ]
+    },
+    {
+      "id": "v_chichi",
+      "surface": "父",
+      "reading": "ちち",
+      "meaning": "father (own, informal)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.1",
+      "notes": "Refers to the speaker's own father. Contrast with お父さん (polite/others' father)."
+    },
+    {
+      "id": "v_haha",
+      "surface": "母",
+      "reading": "はは",
+      "meaning": "mother (own, informal)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.1",
+      "notes": "Refers to the speaker's own mother. Contrast with お母さん (polite/others' mother)."
     },
     {
       "id": "v_yasashii",
@@ -2984,7 +3016,9 @@
       "type": "grammar",
       "gtype": "grammar",
       "lesson_ids": "N5.1",
-      "matches": ["では ありません"],
+      "matches": [
+        "では ありません"
+      ],
       "notes": "Polite negative of です. Formed from the contrast particle では + the polite negative ありません."
     },
     {
@@ -3035,7 +3069,9 @@
       "type": "vocab",
       "gtype": "pronoun",
       "lesson_ids": "N5.1",
-      "matches": ["なん"],
+      "matches": [
+        "なん"
+      ],
       "notes": "Interrogative pronoun meaning 'what'. Said 'なに' in isolation and before を/が (e.g. なにを); said 'なん' before です, counters, or の (e.g. なんですか、なん人)."
     }
   ]
