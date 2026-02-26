@@ -113,7 +113,7 @@
           "spk": "B",
           "jp": "いいえ、先生では ありません。がくせいです。",
           "en": "No, I'm not a teacher. I'm a student.",
-          "terms": ["v_iie", "v_sensei", "g_dewaarimasen", "v_gakusei", "g_desu"]
+          "terms": ["v_iie", "v_sensei", "p_dewa", { "id": "v_aru", "form": "polite_negative" }, "v_gakusei", "g_desu"]
         },
         {
           "spk": "A",
