@@ -234,6 +234,29 @@
           ]
         }
       ],
+      "grammar": [
+        {
+          "id": "G1",
+          "title": "です / だ — The Copula",
+          "file": "data/N5/grammar/G1.json",
+          "unlocksAfter": "N5.1",
+          "icon": "📐"
+        },
+        {
+          "id": "G2",
+          "title": "Core Particles I: は, が, の, か, も",
+          "file": "data/N5/grammar/G2.json",
+          "unlocksAfter": "N5.1",
+          "icon": "📌"
+        },
+        {
+          "id": "G3",
+          "title": "Core Particles II: を, に, で",
+          "file": "data/N5/grammar/G3.json",
+          "unlocksAfter": "N5.1",
+          "icon": "📌"
+        }
+      ],
       "reviews": [],
       "compose": "data/N5/compose/compose.N5.json",
       "stories": [
