@@ -916,6 +916,12 @@
         inChips.forEach((chip, i) => {
           chip.classList.remove('jp-chip-correct', 'jp-chip-misplaced', 'jp-chip-wrong');
           chip.classList.add('jp-chip-' + result[i]);
+          // Mirror the color to the pool chip so it persists between attempts
+          const poolChip = inChipToPoolChip.get(chip);
+          if (poolChip) {
+            poolChip.classList.remove('jp-chip-correct', 'jp-chip-misplaced', 'jp-chip-wrong');
+            poolChip.classList.add('jp-chip-' + result[i]);
+          }
         });
       };
 
