@@ -1,0 +1,496 @@
+{
+  "contentVersion": "1.0.0",
+  "id": "G3",
+  "type": "grammar",
+  "title": "Core Particles II: を, に, で",
+  "meta": {
+    "level": "N5",
+    "unlocksAfter": "N5.1",
+    "focus": "Object marking (を), destination/time/existence (に), and location/means (で)",
+    "estimatedMinutes": 25,
+    "particles": ["を", "に", "で"],
+    "grammarForms": [],
+    "icon": "📌"
+  },
+  "sections": [
+    {
+      "type": "grammarIntro",
+      "title": "The Action Particles",
+      "icon": "📌",
+      "summary": "を, に, and で connect nouns to verbs — they tell you what's being acted on, where something is going, and where/how an action happens.",
+      "whyItMatters": "These three particles are essential for building action sentences. Without them, you can only make 'X is Y' statements. With them, you can describe movement, existence, location, tools, and direct objects.",
+      "youWillLearn": [
+        "を — marking the direct object (what receives the action)",
+        "に — the 'aiming' particle: destination, time, recipient, existence",
+        "で — the 'enabling' particle: location of action, means/tools",
+        "に vs で — the most important distinction in this lesson"
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_wo_object",
+      "pattern": [
+        { "label": "OBJECT", "color": "object", "text": "X" },
+        { "label": "PARTICLE", "color": "particle", "text": "を" },
+        { "label": "VERB", "color": "verb", "text": "..." }
+      ],
+      "meaning": "Do [verb] to/with X",
+      "explanation": "を marks the direct object — the thing that the action is done to or with. It appears before transitive verbs (verbs that take an object, like 'eat', 'read', 'study', 'call').",
+      "notes": [
+        "を is written with the hiragana を (wo) but pronounced simply 'o'.",
+        "を only appears with transitive verbs — verbs that can take a direct object.",
+        "Special use: を can also mark movement through a space: こうえんをあるく (walk through the park)."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "わたし", "role": "topic", "gloss": "I" },
+            { "text": "は", "role": "particle" },
+            { "text": "先生", "role": "object", "gloss": "teacher" },
+            { "text": "を", "role": "particle" },
+            { "text": "よびます", "role": "verb", "gloss": "call" }
+          ],
+          "en": "I call the teacher.",
+          "breakdown": "Object: teacher → Action: call"
+        },
+        {
+          "parts": [
+            { "text": "友だち", "role": "topic", "gloss": "friend" },
+            { "text": "は", "role": "particle" },
+            { "text": "ほん", "role": "object", "gloss": "book" },
+            { "text": "を", "role": "particle" },
+            { "text": "よみます", "role": "verb", "gloss": "read" }
+          ],
+          "en": "My friend reads a book.",
+          "breakdown": "Object: book → Action: read"
+        },
+        {
+          "parts": [
+            { "text": "わたし", "role": "topic", "gloss": "I" },
+            { "text": "は", "role": "particle" },
+            { "text": "にほんご", "role": "object", "gloss": "Japanese" },
+            { "text": "を", "role": "particle" },
+            { "text": "べんきょうします", "role": "verb", "gloss": "study" }
+          ],
+          "en": "I study Japanese.",
+          "breakdown": "Object: Japanese → Action: study"
+        }
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_ni_aiming",
+      "pattern": [
+        { "label": "DESTINATION / TIME / RECIPIENT", "color": "destination", "text": "X" },
+        { "label": "PARTICLE", "color": "particle", "text": "に" },
+        { "label": "VERB", "color": "verb", "text": "..." }
+      ],
+      "meaning": "toward X / at X / to X (the 'aiming' particle)",
+      "explanation": "に is the 'aiming' particle — it marks a specific target or point. This target can be a place you're moving toward, a specific time, the recipient of something, or the location where something exists.",
+      "notes": [
+        "に marks DESTINATIONS with motion verbs: がっこうに いきます (go to school).",
+        "に marks SPECIFIC TIMES: さんじに あいます (meet at 3 o'clock).",
+        "に marks the LOCATION OF EXISTENCE with いる/ある: へやに います (is in the room).",
+        "Relative time words (今日, 明日, 毎日) do NOT take に — use them without a particle."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "わたし", "role": "topic", "gloss": "I" },
+            { "text": "は", "role": "particle" },
+            { "text": "がっこう", "role": "destination", "gloss": "school" },
+            { "text": "に", "role": "particle" },
+            { "text": "いきます", "role": "verb", "gloss": "go" }
+          ],
+          "en": "I go to school.",
+          "breakdown": "Destination: school → Action: go"
+        },
+        {
+          "parts": [
+            { "text": "友だち", "role": "subject", "gloss": "friend" },
+            { "text": "が", "role": "particle" },
+            { "text": "へや", "role": "destination", "gloss": "room" },
+            { "text": "に", "role": "particle" },
+            { "text": "います", "role": "verb", "gloss": "is (animate)" }
+          ],
+          "en": "My friend is in the room.",
+          "breakdown": "Location of existence: room → Who exists: friend"
+        },
+        {
+          "parts": [
+            { "text": "さんじ", "role": "time", "gloss": "3 o'clock" },
+            { "text": "に", "role": "particle" },
+            { "text": "あいましょう", "role": "verb", "gloss": "let's meet" }
+          ],
+          "en": "Let's meet at 3 o'clock.",
+          "breakdown": "Specific time: 3 o'clock → Action: meet"
+        }
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_de_enabling",
+      "pattern": [
+        { "label": "LOCATION / MEANS", "color": "location", "text": "X" },
+        { "label": "PARTICLE", "color": "particle", "text": "で" },
+        { "label": "VERB", "color": "verb", "text": "..." }
+      ],
+      "meaning": "do [verb] at X / do [verb] by means of X",
+      "explanation": "で is the 'enabling' particle — it marks the environment or tool that makes the action possible. This can be the location where an action takes place, the means or method used, or the material something is made from.",
+      "notes": [
+        "で marks WHERE AN ACTION HAPPENS: としょかんで べんきょうします (study at the library).",
+        "で marks HOW (the means): バスで いきます (go by bus).",
+        "で marks MATERIAL: き で つくります (make from wood).",
+        "で marks REASON in some expressions: びょうきで やすみます (rest because of illness)."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "わたし", "role": "topic", "gloss": "I" },
+            { "text": "は", "role": "particle" },
+            { "text": "としょかん", "role": "location", "gloss": "library" },
+            { "text": "で", "role": "particle" },
+            { "text": "よみます", "role": "verb", "gloss": "read" }
+          ],
+          "en": "I read at the library.",
+          "breakdown": "Location of action: library → Action: read"
+        },
+        {
+          "parts": [
+            { "text": "にほんご", "role": "location", "gloss": "Japanese" },
+            { "text": "で", "role": "particle" },
+            { "text": "はなしましょう", "role": "verb", "gloss": "let's talk" }
+          ],
+          "en": "Let's talk in Japanese.",
+          "breakdown": "Means: Japanese (language) → Action: talk"
+        },
+        {
+          "parts": [
+            { "text": "でんしゃ", "role": "location", "gloss": "train" },
+            { "text": "で", "role": "particle" },
+            { "text": "がっこう", "role": "destination", "gloss": "school" },
+            { "text": "に", "role": "particle" },
+            { "text": "いきます", "role": "verb", "gloss": "go" }
+          ],
+          "en": "I go to school by train.",
+          "breakdown": "Means: train → Destination: school → Action: go"
+        }
+      ]
+    },
+    {
+      "type": "grammarComparison",
+      "title": "に vs で — The Key Distinction",
+      "items": [
+        {
+          "label": "に — Location of Existence",
+          "color": "destination",
+          "points": [
+            "Use に with いる (animate existence) and ある (inanimate existence)",
+            "X に います = something/someone IS at X",
+            "に marks WHERE something EXISTS, not where it ACTS"
+          ],
+          "example": {
+            "parts": [
+              { "text": "へや", "role": "destination" },
+              { "text": "に", "role": "particle" },
+              { "text": "友だち", "role": "subject" },
+              { "text": "が", "role": "particle" },
+              { "text": "います", "role": "verb" }
+            ],
+            "en": "My friend is in the room. (existence)"
+          }
+        },
+        {
+          "label": "で — Location of Action",
+          "color": "location",
+          "points": [
+            "Use で with action verbs (study, eat, play, work...)",
+            "X で [action] = do [action] at/in X",
+            "で marks WHERE an action TAKES PLACE"
+          ],
+          "example": {
+            "parts": [
+              { "text": "へや", "role": "location" },
+              { "text": "で", "role": "particle" },
+              { "text": "べんきょうします", "role": "verb" }
+            ],
+            "en": "I study in the room. (action)"
+          }
+        }
+      ],
+      "tip": "Is something EXISTING somewhere? → に. Is something HAPPENING somewhere? → で."
+    },
+    {
+      "type": "annotatedExample",
+      "title": "に in its Many Roles",
+      "examples": [
+        {
+          "context": "Destination of movement",
+          "parts": [
+            { "text": "がっこう", "role": "destination", "gloss": "school" },
+            { "text": "に", "role": "particle" },
+            { "text": "いきます", "role": "verb", "gloss": "go" }
+          ],
+          "en": "Go to school.",
+          "note": "に follows the destination when moving toward a place."
+        },
+        {
+          "context": "Location of existence (animate)",
+          "parts": [
+            { "text": "そこ", "role": "destination", "gloss": "there" },
+            { "text": "に", "role": "particle" },
+            { "text": "友だち", "role": "subject", "gloss": "friend" },
+            { "text": "が", "role": "particle" },
+            { "text": "います", "role": "verb", "gloss": "is (animate)" }
+          ],
+          "en": "My friend is there.",
+          "note": "Use に + います for where a person or animal EXISTS."
+        },
+        {
+          "context": "Specific time",
+          "parts": [
+            { "text": "あした", "role": "time", "gloss": "tomorrow" },
+            { "text": "に", "role": "particle" },
+            { "text": "きます", "role": "verb", "gloss": "come" }
+          ],
+          "en": "I will come on (specific day) tomorrow.",
+          "note": "に follows specific time points (but NOT relative words like 今日, 毎日)."
+        },
+        {
+          "context": "Recipient of giving/sending",
+          "parts": [
+            { "text": "先生", "role": "destination", "gloss": "teacher" },
+            { "text": "に", "role": "particle" },
+            { "text": "おしえます", "role": "verb", "gloss": "teach" }
+          ],
+          "en": "I teach the teacher. / I tell the teacher.",
+          "note": "に marks the recipient — the person to whom the action is directed."
+        }
+      ]
+    },
+    {
+      "type": "annotatedExample",
+      "title": "で in its Many Roles",
+      "examples": [
+        {
+          "context": "Location of action",
+          "parts": [
+            { "text": "がっこう", "role": "location", "gloss": "school" },
+            { "text": "で", "role": "particle" },
+            { "text": "べんきょうします", "role": "verb", "gloss": "study" }
+          ],
+          "en": "I study at school.",
+          "note": "で follows the place where an action happens."
+        },
+        {
+          "context": "Means / method",
+          "parts": [
+            { "text": "にほんご", "role": "location", "gloss": "Japanese" },
+            { "text": "で", "role": "particle" },
+            { "text": "かきます", "role": "verb", "gloss": "write" }
+          ],
+          "en": "I write in Japanese.",
+          "note": "で marks the language, tool, or method used to do something."
+        },
+        {
+          "context": "Means of transport",
+          "parts": [
+            { "text": "でんしゃ", "role": "location", "gloss": "train" },
+            { "text": "で", "role": "particle" },
+            { "text": "いきます", "role": "verb", "gloss": "go" }
+          ],
+          "en": "I go by train.",
+          "note": "で after a vehicle = the means of getting somewhere."
+        },
+        {
+          "context": "Group context",
+          "parts": [
+            { "text": "ふたり", "role": "location", "gloss": "two people" },
+            { "text": "で", "role": "particle" },
+            { "text": "たべます", "role": "verb", "gloss": "eat" }
+          ],
+          "en": "We eat as a pair. / Two of us eat.",
+          "note": "で can mark the number of people involved: ふたりで = as a pair."
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "After School Plans",
+      "context": "Yuki and Kenji talk about what they'll do after school.",
+      "lines": [
+        {
+          "spk": "ゆき",
+          "jp": "けんじさん、今日は どこに いきますか。",
+          "en": "Kenji, where are you going today?",
+          "terms": ["v_san", "v_doko", "p_ni"]
+        },
+        {
+          "spk": "けん",
+          "jp": "としょかんに いきます。友だちを よびました。",
+          "en": "I'm going to the library. I called a friend.",
+          "terms": ["p_ni", "v_tomodachi", "p_wo"]
+        },
+        {
+          "spk": "ゆき",
+          "jp": "としょかんで なにを しますか。",
+          "en": "What will you do at the library?",
+          "terms": ["p_de", "v_nani", "p_wo"]
+        },
+        {
+          "spk": "けん",
+          "jp": "にほんごを べんきょうします。いっしょに いきますか。",
+          "en": "I'll study Japanese. Would you like to come together?",
+          "terms": ["p_wo", "v_issho"]
+        },
+        {
+          "spk": "ゆき",
+          "jp": "いいですね！でんしゃで いきましょう。",
+          "en": "Sounds great! Let's go by train.",
+          "terms": ["v_ii", "p_ne", "p_de"]
+        }
+      ]
+    },
+    {
+      "type": "fillSlot",
+      "title": "を, に, or で?",
+      "items": [
+        {
+          "before": "わたしは がっこう",
+          "slot": true,
+          "after": "いきます。",
+          "choices": ["に", "で", "を", "は"],
+          "answer": "に",
+          "explanation": "いきます is a motion verb — use に for the destination."
+        },
+        {
+          "before": "友だちは としょかん",
+          "slot": true,
+          "after": "べんきょうします。",
+          "choices": ["で", "に", "を", "が"],
+          "answer": "で",
+          "explanation": "べんきょうします is an action — use で for the location of the action."
+        },
+        {
+          "before": "先生",
+          "slot": true,
+          "after": "よびます。",
+          "choices": ["を", "に", "で", "は"],
+          "answer": "を",
+          "explanation": "よぶ (call) is a transitive verb — よぶ takes を to mark the person being called."
+        },
+        {
+          "before": "へやに 友だち",
+          "slot": true,
+          "after": "います。",
+          "choices": ["が", "は", "を", "で"],
+          "answer": "が",
+          "explanation": "います (exist, animate) needs が to mark the subject — 'friend is (in the room)'."
+        },
+        {
+          "before": "でんしゃ",
+          "slot": true,
+          "after": "がっこうに いきます。",
+          "choices": ["で", "に", "を", "も"],
+          "answer": "で",
+          "explanation": "でんしゃ is the means of transport — use で for 'by train'."
+        },
+        {
+          "before": "にほんご",
+          "slot": true,
+          "after": "はなしましょう。",
+          "choices": ["で", "に", "を", "が"],
+          "answer": "で",
+          "explanation": "で marks the means or language used: 'let's talk in Japanese'."
+        }
+      ]
+    },
+    {
+      "type": "patternMatch",
+      "title": "に or で — Spot the Correct Usage",
+      "pattern": "に = existence / destination / time. で = action location / means.",
+      "items": [
+        {
+          "sentence": "へやに います。",
+          "correct": true,
+          "explanation": "に + います = existence in a location. Correct!"
+        },
+        {
+          "sentence": "へやで います。",
+          "correct": false,
+          "explanation": "います marks existence — use に, not で. × へやで います → ○ へやに います"
+        },
+        {
+          "sentence": "としょかんで よみます。",
+          "correct": true,
+          "explanation": "よむ is an action verb — で correctly marks the location of the action."
+        },
+        {
+          "sentence": "がっこうに べんきょうします。",
+          "correct": false,
+          "explanation": "べんきょうする is an action — use で for the location. × がっこうに → ○ がっこうで"
+        },
+        {
+          "sentence": "でんしゃで いきます。",
+          "correct": true,
+          "explanation": "で marks the means of transport. Correct!"
+        },
+        {
+          "sentence": "がっこうに いきます。",
+          "correct": true,
+          "explanation": "いく is a motion verb — に correctly marks the destination."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Mixed Particle Practice",
+      "instructions": "Choose the correct particle for each sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "わたしは にほんご ______ べんきょうします。",
+          "choices": ["を", "に", "で", "は"],
+          "answer": "を",
+          "terms": ["v_watashi", "p_wa"],
+          "explanation": "べんきょうする takes を for the subject being studied: にほんごを (study Japanese)."
+        },
+        {
+          "kind": "mcq",
+          "q": "友だちは そこ ______ います。",
+          "choices": ["に", "で", "を", "が"],
+          "answer": "に",
+          "terms": ["v_tomodachi", "p_wa"],
+          "explanation": "います (exist, animate) takes に for the location of existence."
+        },
+        {
+          "kind": "mcq",
+          "q": "でんしゃ ______ いきましょう！",
+          "choices": ["で", "に", "を", "も"],
+          "answer": "で",
+          "explanation": "で marks the means of transport: 'let's go by train'."
+        },
+        {
+          "kind": "mcq",
+          "q": "Which sentence is correct?",
+          "choices": [
+            "がっこうに べんきょうします。",
+            "がっこうで べんきょうします。",
+            "がっこうを べんきょうします。",
+            "がっこうは べんきょうします。"
+          ],
+          "answer": "がっこうで べんきょうします。",
+          "explanation": "べんきょうする is an action → で for the location. に is for existence/destination."
+        },
+        {
+          "kind": "mcq",
+          "q": "先生 ______ よびました。(I called the teacher.)",
+          "choices": ["を", "に", "で", "が"],
+          "answer": "を",
+          "terms": ["v_sensei"],
+          "explanation": "よぶ (call) is transitive — を marks what is called."
+        }
+      ]
+    }
+  ]
+}
