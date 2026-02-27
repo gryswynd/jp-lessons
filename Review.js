@@ -5,8 +5,8 @@
       { min: 60,  msg: 'すごい！',     sub: 'Amazing!',       colors: ['#FF6B35','#FF4500','#FF8C00'],                              particles: 24 },
       { min: 70,  msg: 'さすが！',     sub: 'Impressive!',    colors: ['#FF1493','#FF69B4','#FF85C8'],                              particles: 35 },
       { min: 80,  msg: 'すばらしい！', sub: 'Wonderful!',     colors: ['#00E5FF','#00BCD4','#4DD0E1'],                              particles: 45 },
-      { min: 90,  msg: '天才！',       sub: 'Genius!',        colors: ['#8B5CF6','#A78BFA','#7C3AED'],                              particles: 55 },
-      { min: 100, msg: '神！',         sub: 'Godlike!',       colors: ['#FF1493','#FFD700','#00E5FF','#8B5CF6','#2ED573','#FF6B35'], particles: 70 },
+      { min: 100, msg: '天才！',       sub: 'Genius!',        colors: ['#8B5CF6','#A78BFA','#7C3AED'],                              particles: 55 },
+      { min: 101, msg: '神！',         sub: 'Godlike!',       colors: ['#FF1493','#FFD700','#00E5FF','#8B5CF6','#2ED573','#FF6B35'], particles: 70 },
   ];
 
   function launchHanabi(rank, targetEl) {
@@ -682,7 +682,7 @@
       if(this.state.questions.length === 0) return;
       this.state.idx = 0;
       this.state.score = 0;
-      this.state.maxScore = this.state.questions.reduce((sum, q) => sum + (q.type === 'scramble' ? 2 : 1), 0);
+      this.state.maxScore = this.state.questions.reduce((sum, q) => sum + 1, 0);
       this.updateUI();
       this.renderQ();
     },
