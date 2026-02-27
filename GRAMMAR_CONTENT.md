@@ -608,7 +608,7 @@ Agent 3 does **not** run term-ID verification on these sections. Instead, Agent 
 
 ---
 
-### G1 — です / だ — Forms of "To Be"
+### G1 — です / だ — The Copula ("To Be")
 
 | Field | Value |
 |---|---|
@@ -617,33 +617,49 @@ Agent 3 does **not** run term-ID verification on these sections. Instead, Agent 
 | **Unlocks after** | N5.1 |
 | **Icon** | 📐 |
 | **Estimated minutes** | 20 |
-| **Grammar forms** | `polite_adj` (for です forms) |
+| **Grammar forms** | `polite_adj`, `plain_past` |
 
 **What to teach:**
-- Basic sentence pattern: X は Y です
-- All forms of である/です/だ:
-  - Present formal: です
-  - Present informal: だ
-  - Past formal: でした
-  - Past informal: だった
-  - Negative formal: ではありません / じゃありません
-  - Negative informal: ではない / じゃない
-  - Past negative formal: ではありませんでした
-  - Past negative informal: ではなかった
-- Nominalization rules: だ → な before の; である before こと
-- When to use です vs だ (formal vs informal situations)
+- Basic sentence pattern: X は Y です (polite "to be")
+- Casual equivalent: X は Y だ
+- All forms of the copula in both registers:
+  - Present: です / だ
+  - Past: でした / だった
+  - Negative: ではありません (じゃありません) / ではない (じゃない)
+  - Past negative: ではありませんでした (じゃありませんでした) / ではなかった (じゃなかった)
+- Question formation: ～ですか？
+- When to use です vs だ (formal vs informal social contexts)
+- い-adjective interaction:
+  - Polite: やさしいです (い-adjective + です = correct polite form)
+  - Plain: やさしい (い-adjective stands alone — do NOT add だ)
+  - **⚠ ACCURACY NOTE:** です IS used after い-adjectives in polite speech. だ is NOT used after い-adjectives in plain speech. These are different rules — do not conflate them.
+- じゃ as a standard spoken contraction of では (not slang, not incorrect)
+
+**What NOT to teach in G1:**
+- ~~Nominalization rules (だ→な before の, である before こと)~~ → Deferred. Requires の particle (G2) and nominalizer concepts. Teach in G8+ or a dedicated lesson.
+- ~~なんです / のです explanatory form~~ → Deferred. Same prerequisite issue.
+- Verb conjugation of any kind — G1 is strictly about the copula with nouns and adjectives.
 
 **Recommended sections:**
-1. `grammarIntro`
-2. `grammarRule` — X は Y です pattern
-3. `grammarTable` — full です/だ conjugation chart (formal vs informal × present/past/negative)
-4. `grammarRule` — nominalization rules (だ→な, である before こと)
-5. `annotatedExample` — です/だ in various situations (introductions, descriptions, exclamations)
-6. `conversation` — a dialogue using both formal and informal forms
-7. `sentenceTransform` — convert formal → informal and vice versa
-8. `drills` — mixed MCQ
+1. `grammarIntro` — what です/だ do; why mastering both registers matters
+2. `grammarRule` — X は Y です (polite copula pattern with 3 examples)
+3. `grammarRule` — X は Y だ (casual copula — same examples restated casually, to show the direct correspondence)
+4. `grammarTable` — full conjugation chart: polite vs plain × present / past / negative / past-negative (8 forms total)
+5. `grammarComparison` — formal です vs casual だ (when to use each, with social context guidelines; use parallel example sentences)
+6. `annotatedExample` — です/だ across 5 real situations (introduction, question with か, past tense, denial, casual exclamation)
+7. `conversation` ×1–2 — natural dialogues; at least one should show both registers (e.g., formal introduction → casual aside between friends)
+8. `sentenceTransform` — convert between registers (polite ↔ plain) and between tenses (present ↔ past, positive ↔ negative), 5–6 items
+9. `drills` — mixed MCQ covering all forms, register choice, and the い-adjective rules, 5–6 items with explanations
 
-**Available vocabulary context:** All N5.1 vocabulary is available. This includes family terms (母, 父, 兄, etc.), basic nouns (先生, 学校, 名前), and common verbs. Build examples around self-introduction and family description — the context students are already familiar with from N5.1.
+**Available vocabulary context:** All N5.1 vocabulary. This includes:
+- Family terms: 母 (はは), 父 (ちち), 兄 (あに), 姉 (あね), etc.
+- People: 先生, 友だち, 人
+- Descriptors: やさしい, いい, うれしい 
+- Pronouns: わたし, あなた, あの人
+- Set phrases: はじめまして, よろしくおねがいします
+
+Build examples around self-introduction, family description, and asking about people — these are the contexts students know from N5.1.
+
 
 ---
 
@@ -924,6 +940,11 @@ Agent 3 does **not** run term-ID verification on these sections. Instead, Agent 
 - ましょう / ましょうか (let's / shall we):
   - ましょう: suggestion/invitation (行きましょう — let's go)
   - ましょうか: offer/question (持ちましょうか — shall I carry it?)
+- のです / なんです (explanatory emphasis):
+  - だ changes to な before の/ん: 先生なんです (It's that [he] is a teacher)
+  - Used to explain, justify, or gently emphasize
+  - Polite: ～なんです / ～のです
+  - Casual: ～なんだ / ～のだ (often shortened to ～んだ)
 
 **Recommended sections:**
 1. `grammarIntro`
