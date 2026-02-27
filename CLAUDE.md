@@ -75,6 +75,8 @@ User Request
 - **Reference template rule.** Before building the Content Brief, identify the highest-numbered existing lesson file of the same content type and level (e.g. for a new N5 lesson, find the highest N5.X.json that exists). Use that file as the structural template — its section counts, conversation count, vocabulary density, and tone represent the current standard. Include it in the Dependencies field of the Content Brief. Earlier lessons may use outdated structures; always defer to the latest. If the curriculum spans multiple levels (e.g. N5 and N4 both exist), the highest-numbered lesson across the highest level is the most authoritative template.
 - **Compound discovery.** When scoping vocabulary for a new lesson, search the glossary for compounds that can be formed from the taught-kanji set. For each newly introduced kanji character, Grep for that character in the glossary's `"surface"` fields to discover existing compound words whose constituent kanji are all now taught. Flag any such compounds to the user as candidates for inclusion. This step ensures the lesson maximises use of newly-unlocked vocabulary.
 - **Scope review gate.** Before dispatching to Agent 2, audit the proposed vocabulary list for cohesion. Ask: do these items naturally belong together in one lesson? If a cluster of time-expression words (e.g. 今朝/今晩/先月) or compound vocab is only partially introduced, either include the full cluster or defer all of it to a later lesson. Never split a natural vocabulary group across lessons unless there is a clear pedagogical reason. Note any deferred items in the Content Brief's Rewrite Notes field.
+- **Grammar scope lock.** For grammar lessons, the Content Brief's "Grammar points" list is a **locked scope**. Agent 2 may not add, remove, or substitute grammar points. If Agent 2 encounters a problem building content for a listed grammar point (e.g., the available vocabulary cannot support good examples), Agent 2 must flag this in the CB Checklist and return to Agent 1 for a scope adjustment — not silently swap in a different grammar point. Agent 1 documents any scope changes in the "Rewrite notes" field before redispatching.
+- **Grammar prerequisite validation.** Before finalizing the Content Brief, Agent 1 must verify that every grammar point listed can be taught given the `unlocksAfter` lesson. Ask: "Has the student been exposed to the concepts needed to understand this grammar point?" If not, defer the point to a later grammar lesson and note the deferral in the brief. Consult the prerequisite table in Agent 4's Grammar Scope Enforcement section.
 
 **Content Brief format (internal working document):**
 
@@ -176,6 +178,47 @@ Line/Section | Issue Type          | Detail
 Total issues: N
 Status: FAIL — return to Agent 2
 ```
+### Agent 3 — Grammar Accuracy Gate (grammar lessons only)
+
+When the draft has `"type": "grammar"`, Agent 3 must perform an additional **Grammar Accuracy Audit** before issuing a pass. This audit checks linguistic correctness — something the structural checks cannot catch.
+
+**Procedure:**
+
+1. For every `grammarRule` section, read the `explanation` and `notes` fields and verify each claim is linguistically accurate. Apply the **Grammar Known-Pitfalls Checklist** (see below). Any claim that contradicts standard Japanese grammar pedagogy is a **hard blocker** — same severity as an untaught kanji.
+
+2. For every `grammarTable` section, verify that every conjugated form in every cell is correct. Cross-reference against `conjugation_rules.json` where applicable. Pay special attention to irregular forms (する, くる, いい/よい).
+
+3. For every `grammarComparison` section, verify that both items' `points` accurately describe the grammar difference. The most common error is oversimplifying は vs が or に vs で to the point of being misleading.
+
+4. For every example sentence across all grammar-specific sections (`grammarRule`, `annotatedExample`, `grammarTable`, `grammarComparison`), verify the sentence is grammatically correct Japanese — not just structurally valid JSON.
+
+**Grammar Known-Pitfalls Checklist:**
+
+Agent 3 must specifically check for these known error patterns. If any are found, it is an automatic FAIL:
+
+| Pitfall ID | Wrong Claim | Correct Rule |
+|---|---|---|
+| GP-01 | "い-adjectives do not take です" or "do NOT add です after an い-adjective" | い-adjectives DO take です in polite speech. やさしいです is correct and standard. What is wrong is やさしいだ — い-adjectives do NOT take だ in plain speech. |
+| GP-02 | "は marks the subject" | は marks the TOPIC, not the subject. が marks the subject. These are different grammatical concepts. |
+| GP-03 | "が is for emphasis" (stated without nuance) | が marks the subject and introduces NEW information. "Emphasis" is a side effect, not the core function. The explanation must mention new-information marking. |
+| GP-04 | "に and へ are interchangeable" (stated without qualification) | に and へ overlap for destinations of motion verbs, but に has many other uses (time, existence location, indirect object) that へ cannot cover. へ emphasizes direction/orientation. |
+| GP-05 | Passive and potential are "the same form" (without specifying verb type) | They are identical ONLY for ichidan (RU) verbs. Godan (U) verbs have distinct passive (あ-column + れる) and potential (え-column + る) forms. |
+| GP-06 | "ない is a verb" or "ない is an auxiliary verb" | ない conjugates as an い-adjective (なかった, なくて, なければ). It is an auxiliary adjective. |
+| GP-07 | "でも means 'but'" (stated without distinguishing from けど/が) | でも is a sentence-STARTING conjunction ('but/however'). けど and が are clause-ENDING conjunctions that connect within a sentence. These are structurally different. |
+| GP-08 | Conditional forms presented as freely interchangeable | と (automatic/natural result), ば (general/hypothetical), たら (temporal/sequential), なら (contextual/hearsay) each have distinct usage constraints. Never present them as synonyms. |
+| GP-09 | "を marks the object" (without mentioning movement-through usage) | を also marks the space traversed with movement verbs: 公園を歩く (walk through the park). This is a distinct usage from direct object marking. For N5 grammar, mentioning both is required. |
+| GP-10 | Treating じゃ as "slang" or "incorrect" | じゃ is a standard spoken contraction of では. It is grammatically correct and appropriate in most non-formal-written contexts. |
+
+**Maintaining this checklist:** When a new grammar error is discovered during content review (by any agent or by the user), add it to this table with a new GP-XX ID. This is a living document.
+
+**QA Failure Report — grammar accuracy issues use this format:**
+
+```
+Line/Section | Issue Type            | Detail
+─────────────┼───────────────────────┼──────────────────────────────────────
+[rule sec 2] │ Grammar accuracy (GP-01) │ Note claims い-adj don't take です; must state they DO take です in polite, do NOT take だ in plain
+[table sec 3]│ Incorrect conjugation │ Cell shows いかった for past of いい; correct form is よかった
+```
 
 ---
 
@@ -216,6 +259,50 @@ Rewrite directive  | [plain English instruction to Agent 1 describing the requir
 
 Total issues: N
 Status: FAIL — return to Agent 1 for rewrite
+```
+### Agent 4 — Grammar Scope Enforcement (grammar lessons only)
+
+When the draft has `"type": "grammar"`, Agent 4 must perform a **Scope Alignment Check** in addition to its standard consistency review.
+
+**Procedure:**
+
+1. **Brief-to-content alignment.** For every `grammarRule` section in the draft, verify that the grammar point it teaches appears in the Content Brief's "Grammar points" field. If a `grammarRule` teaches something NOT listed in the brief, it is a **hard fail** with a rewrite directive. The Content Builder does not have authority to substitute grammar points — only the Project Manager can change scope.
+
+2. **Prerequisite concept check.** For each grammar point taught, assess whether students at the `unlocksAfter` level have been exposed to the prerequisite concepts. Apply this decision framework:
+
+   | Grammar concept | Prerequisite concepts needed |
+   |---|---|
+   | Casual copula だ | Understanding of です (polite copula) — OK after N5.1 |
+   | なんです / のです (explanatory) | Familiarity with の nominalizer, exposure to casual speech patterns — needs at minimum G1 (copula) + G2 (の particle) complete |
+   | て-form usages (ている, てください) | て-form construction — needs G7 or equivalent |
+   | Conditional forms (ば, たら, と, なら) | Plain form conjugation — needs G9 |
+   | Passive / causative | Plain negative formation (あ-column shift) — needs G9 |
+   | Potential form | Verb type identification — needs G5 |
+
+   If a grammar point is taught before its prerequisites are available, flag it as a scope violation.
+
+3. **Density check.** Count the `grammarRule` sections. Grammar lessons should have **2–5 grammarRule sections** depending on complexity. More than 5 indicates the lesson is trying to cover too much — recommend splitting. Fewer than 2 suggests the lesson may be too thin or that teaching content is hiding in non-rule sections where it's less effective.
+
+4. **Section substitution detection.** Compare the draft's section list against the GRAMMAR_CONTENT.md spec for this lesson ID. If a section listed in the spec was replaced with a different section type or a different grammar point, flag it explicitly. Example:
+
+   ```
+   SCOPE ALERT: Spec calls for grammarRule on "casual copula だ" (section 4 in spec).
+   Draft has grammarRule on "なんです nominalization" instead.
+   This is a substitution — the Content Builder replaced a scoped grammar point with an unscoped one.
+   → FAIL: Return to Agent 1 to restore original scope or formally revise the brief.
+   ```
+
+5. **Cross-lesson overlap check.** Read the two nearest grammar lessons (by ID number) if they exist. Verify that the current lesson does not substantially duplicate a grammar point already taught in an adjacent lesson. Minor overlap for reinforcement is acceptable; a full `grammarRule` section teaching the same pattern as an adjacent lesson is not.
+
+**CR Consistency Note — scope issues use this category:**
+
+```
+Category            | Detail
+────────────────────┼──────────────────────────────────────────────────────
+Scope violation     | grammarRule "rule_nominalization" teaches なんです; not in Content Brief; prerequisite G2 (の) not yet available
+Prerequisite gap    | Conditional ～たら requires plain form knowledge (G9); current lesson unlocks after N5.5
+Section substitution| Spec section 4 (casual だ) replaced by nominalization rule — unauthorized scope change
+Density             | 7 grammarRule sections; recommend splitting into two lessons
 ```
 
 ---
@@ -644,6 +731,19 @@ These are the most frequent errors. All agents should be alert to them.
 1. **Vague rewrite directives** — "make it more natural" without specific lines identified.
 2. **Rejecting content for subjective reasons** — if the only issue is style preference rather than a structural problem, prefer a pass with a note over a full rewrite.
 
+### Grammar-specific cross-agent failures
+
+These failures span multiple agents and are the most damaging because they may not be caught by any single agent's checks:
+
+1. **Factually incorrect grammar explanation (GP-XX)** — The explanation sounds authoritative but contradicts standard Japanese. Most dangerous because students will internalize the wrong rule. Agent 3's Grammar Accuracy Gate is the primary defense. Example: claiming い-adjectives don't take です.
+
+2. **Unauthorized grammar point substitution** — Agent 2 replaces a grammar point from the brief with a different one, usually because the replacement seems "more interesting" or "more useful." This breaks the pedagogical sequence. Agent 4's Scope Alignment Check is the primary defense. Example: replacing casual だ with なんです.
+
+3. **Prerequisite-violating scope in GRAMMAR_CONTENT.md itself** — The spec lists a grammar point that is too advanced for the lesson's `unlocksAfter` level. This is an upstream error that all agents will faithfully propagate. Agent 1's prerequisite validation catches this before content creation begins. Example: teaching なんです in G1 when の hasn't been introduced yet.
+
+4. **Oversimplified grammar comparison** — A `grammarComparison` section presents a nuanced distinction (like は vs が) with rules so simple they're misleading. The rules work for the examples shown but break in real usage. Agent 4's natural language check should catch this, but it requires the reviewer to mentally test the rules against cases NOT shown in the lesson.
+
+5. **Example sentences that are grammatically correct but pedagogically wrong** — The sentence uses the grammar pattern correctly but in a context where a native speaker would never use that pattern. Example: using が in a self-introduction (わたしが先生です) without the contrastive context that would make が natural there. Agent 4 is the defense.
 ---
 
 ## Quick Start Prompt for Claude Code
