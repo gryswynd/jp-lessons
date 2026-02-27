@@ -1,0 +1,369 @@
+{
+  "contentVersion": "1.0.0",
+  "id": "G1",
+  "type": "grammar",
+  "title": "です / だ — The Copula",
+  "meta": {
+    "level": "N5",
+    "unlocksAfter": "N5.1",
+    "focus": "Formal (です) and casual (だ) 'to be', all tenses and negatives",
+    "estimatedMinutes": 20,
+    "particles": [],
+    "grammarForms": ["polite_adj", "plain_past"],
+    "icon": "📐"
+  },
+  "sections": [
+    {
+      "type": "grammarIntro",
+      "title": "The Engine of Every Sentence",
+      "icon": "📐",
+      "summary": "です and だ both mean 'is / am / are' — です is formal, だ is casual.",
+      "whyItMatters": "Virtually every Japanese statement ends with a verb or a copula. Mastering です/だ unlocks the ability to introduce yourself, describe people, and navigate formal vs casual speech.",
+      "youWillLearn": [
+        "です — the formal copula (safe default for learners)",
+        "だ — the casual copula (friends and family)",
+        "Past form: でした / だった",
+        "Negative: ではありません / じゃない",
+        "Past negative: ではありませんでした / ではなかった"
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_desu_basic",
+      "pattern": [
+        { "label": "TOPIC", "color": "topic", "text": "X" },
+        { "label": "PARTICLE", "color": "particle", "text": "は" },
+        { "label": "NOUN / ADJ", "color": "predicate", "text": "Y" },
+        { "label": "COPULA", "color": "verb", "text": "です" }
+      ],
+      "meaning": "'X is Y.' (formal)",
+      "explanation": "Place は after the topic, put the noun or adjective (Y), and finish with です. This is the most common sentence pattern in Japanese and the safe choice in all social situations.",
+      "notes": [
+        "です is pronounced 'desu' but the final 'u' is nearly silent — say 'des'.",
+        "Any noun or な-adjective goes in the Y slot.",
+        "い-adjectives already contain the 'is' meaning — do NOT add です after an い-adjective root."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "わたし", "role": "topic", "gloss": "I" },
+            { "text": "は", "role": "particle" },
+            { "text": "がくせい", "role": "predicate", "gloss": "student" },
+            { "text": "です", "role": "verb" }
+          ],
+          "en": "I am a student.",
+          "breakdown": "Topic: I → Comment: am a student"
+        },
+        {
+          "parts": [
+            { "text": "先生", "role": "topic", "gloss": "teacher" },
+            { "text": "は", "role": "particle" },
+            { "text": "やさしい", "role": "predicate", "gloss": "kind" },
+            { "text": "です", "role": "verb" }
+          ],
+          "en": "The teacher is kind.",
+          "breakdown": "Topic: teacher → Comment: is kind"
+        },
+        {
+          "parts": [
+            { "text": "母", "role": "topic", "gloss": "mother" },
+            { "text": "は", "role": "particle" },
+            { "text": "にほんじん", "role": "predicate", "gloss": "Japanese" },
+            { "text": "です", "role": "verb" }
+          ],
+          "en": "My mother is Japanese."
+        }
+      ]
+    },
+    {
+      "type": "grammarTable",
+      "title": "All Forms of です / だ",
+      "description": "Both formal and casual share the same tense/polarity range. Learn the formal column first — it's your everyday speech.",
+      "tableType": "conjugation",
+      "headers": ["Form", "Formal (です)", "Casual (だ)"],
+      "rows": [
+        { "label": "Present / Future", "cells": ["です", "だ"], "meaning": "is / am / are" },
+        { "label": "Past", "cells": ["でした", "だった"], "meaning": "was / were" },
+        { "label": "Negative", "cells": ["ではありません / じゃありません", "ではない / じゃない"], "meaning": "is not / am not" },
+        { "label": "Past Negative", "cells": ["ではありませんでした", "ではなかった"], "meaning": "was not / were not" }
+      ],
+      "highlight": { "stem": "#00B894", "ending": "#D63031" },
+      "notes": [
+        "じゃ is a casual contraction of では — both are grammatically correct.",
+        "To make a formal question, add か at the end: 先生ですか？"
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_da_casual",
+      "pattern": [
+        { "label": "TOPIC", "color": "topic", "text": "X" },
+        { "label": "NOUN / ADJ", "color": "predicate", "text": "Y" },
+        { "label": "COPULA", "color": "verb", "text": "だ" }
+      ],
+      "meaning": "'X is Y.' (casual)",
+      "explanation": "Use だ instead of です when speaking with close friends and family. It's natural in everyday conversation but sounds abrupt or rude to strangers or superiors.",
+      "notes": [
+        "Never use だ in formal situations — stick to です until you know your relationship level.",
+        "い-adjectives do NOT take だ: × やさしいだ → ○ やさしい (correct as-is)."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "父", "role": "topic", "gloss": "father" },
+            { "text": "は", "role": "particle" },
+            { "text": "先生", "role": "predicate", "gloss": "teacher" },
+            { "text": "だ", "role": "verb" }
+          ],
+          "en": "My father is a teacher. (casual)"
+        },
+        {
+          "parts": [
+            { "text": "これ", "role": "topic", "gloss": "this" },
+            { "text": "は", "role": "particle" },
+            { "text": "わたしの", "role": "predicate", "gloss": "mine" },
+            { "text": "だ", "role": "verb" }
+          ],
+          "en": "This is mine. (casual)"
+        }
+      ]
+    },
+    {
+      "type": "grammarComparison",
+      "title": "Formal vs Casual — When to Use Each",
+      "items": [
+        {
+          "label": "Formal — です",
+          "color": "verb",
+          "points": [
+            "Use with teachers, strangers, colleagues, and in public",
+            "Safe default — you'll never offend anyone with です",
+            "Required in written Japanese, business, and school settings"
+          ],
+          "example": {
+            "parts": [
+              { "text": "わたし", "role": "topic" },
+              { "text": "は", "role": "particle" },
+              { "text": "たなか", "role": "predicate" },
+              { "text": "です", "role": "verb" }
+            ],
+            "en": "I am Tanaka. (formal introduction)"
+          }
+        },
+        {
+          "label": "Casual — だ",
+          "color": "predicate",
+          "points": [
+            "Use with close friends and family",
+            "Common in text messages and anime dialogue",
+            "Often dropped entirely in very casual speech"
+          ],
+          "example": {
+            "parts": [
+              { "text": "わたし", "role": "topic" },
+              { "text": "は", "role": "particle" },
+              { "text": "たなか", "role": "predicate" },
+              { "text": "だ", "role": "verb" }
+            ],
+            "en": "I'm Tanaka. (casual)"
+          }
+        }
+      ],
+      "tip": "When in doubt, use です — you'll always be understood and never risk being rude."
+    },
+    {
+      "type": "annotatedExample",
+      "title": "です / だ Across Situations",
+      "examples": [
+        {
+          "context": "Self-introduction (formal)",
+          "parts": [
+            { "text": "わたし", "role": "topic", "gloss": "I" },
+            { "text": "は", "role": "particle" },
+            { "text": "やまださん", "role": "predicate", "gloss": "Yamada" },
+            { "text": "です", "role": "verb" }
+          ],
+          "en": "I am Yamada.",
+          "note": "Use です when meeting someone for the first time."
+        },
+        {
+          "context": "Asking who someone is",
+          "parts": [
+            { "text": "あなた", "role": "topic", "gloss": "you" },
+            { "text": "は", "role": "particle" },
+            { "text": "だれ", "role": "predicate", "gloss": "who" },
+            { "text": "です", "role": "verb" },
+            { "text": "か", "role": "particle" }
+          ],
+          "en": "Who are you?",
+          "note": "Add か after です to turn any statement into a yes/no question."
+        },
+        {
+          "context": "Negative — describing family (formal)",
+          "parts": [
+            { "text": "母", "role": "topic", "gloss": "mother" },
+            { "text": "は", "role": "particle" },
+            { "text": "先生", "role": "predicate", "gloss": "teacher" },
+            { "text": "では", "role": "particle" },
+            { "text": "ありません", "role": "verb" }
+          ],
+          "en": "My mother is not a teacher.",
+          "note": "ではありません (formal neg.) or じゃありません (slightly softer)."
+        },
+        {
+          "context": "Past tense (formal)",
+          "parts": [
+            { "text": "父", "role": "topic", "gloss": "father" },
+            { "text": "は", "role": "particle" },
+            { "text": "先生", "role": "predicate", "gloss": "teacher" },
+            { "text": "でした", "role": "verb" }
+          ],
+          "en": "My father was a teacher."
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "First Day of Class",
+      "context": "Kenji meets Yuki on the first day. They speak formally at first.",
+      "lines": [
+        {
+          "spk": "けん",
+          "jp": "はじめまして。わたしは けんじです。",
+          "en": "Nice to meet you. I am Kenji.",
+          "terms": ["p_hajimemashite", "v_watashi", "p_wa"]
+        },
+        {
+          "spk": "ゆき",
+          "jp": "はじめまして。わたしは ゆきです。先生は だれですか。",
+          "en": "Nice to meet you. I'm Yuki. Who is the teacher?",
+          "terms": ["p_hajimemashite", "v_watashi", "p_wa", "v_sensei", "p_wa", "v_dare"]
+        },
+        {
+          "spk": "けん",
+          "jp": "やまもと先生です。とても やさしい 先生ですよ。",
+          "en": "It's Yamamoto-sensei. They're a very kind teacher.",
+          "terms": ["v_sensei", "v_totemo", "v_yasashii", "v_sensei", "p_yo"]
+        },
+        {
+          "spk": "ゆき",
+          "jp": "そうですか。いいですね！",
+          "en": "Is that so? That's great!",
+          "terms": ["p_soudesuka", "v_ii", "p_ne"]
+        }
+      ]
+    },
+    {
+      "type": "sentenceTransform",
+      "title": "Change the Form",
+      "instructions": "Transform each sentence to the target form shown.",
+      "items": [
+        {
+          "given": "わたしは がくせいです。",
+          "givenLabel": "Formal Present",
+          "targetLabel": "Formal Past",
+          "answer": "わたしは がくせいでした。",
+          "choices": [
+            "わたしは がくせいでした。",
+            "わたしは がくせいだった。",
+            "わたしは がくせいではありません。",
+            "わたしは がくせいですか。"
+          ]
+        },
+        {
+          "given": "父は 先生です。",
+          "givenLabel": "Formal Present",
+          "targetLabel": "Casual Present",
+          "answer": "父は 先生だ。",
+          "choices": [
+            "父は 先生だ。",
+            "父は 先生でした。",
+            "父は 先生だった。",
+            "父は 先生ですか。"
+          ]
+        },
+        {
+          "given": "母は 先生でした。",
+          "givenLabel": "Formal Past",
+          "targetLabel": "Formal Past Negative",
+          "answer": "母は 先生ではありませんでした。",
+          "choices": [
+            "母は 先生ではありませんでした。",
+            "母は 先生ではありません。",
+            "母は 先生ではなかった。",
+            "母は 先生でした。"
+          ]
+        },
+        {
+          "given": "先生は やさしいです。",
+          "givenLabel": "Formal Present",
+          "targetLabel": "Casual Present",
+          "answer": "先生は やさしい。",
+          "choices": [
+            "先生は やさしい。",
+            "先生は やさしいだ。",
+            "先生は やさしかった。",
+            "先生は やさしくない。"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Mixed Practice",
+      "instructions": "Test your understanding of です and だ.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "Which is the FORMAL negative form of です?",
+          "choices": ["ではありません", "じゃない", "だった", "でした"],
+          "answer": "ではありません",
+          "explanation": "ではありません is the formal negative. じゃない is the casual negative."
+        },
+        {
+          "kind": "mcq",
+          "q": "あなたは 先生 ______。(formal question)",
+          "choices": ["ですか", "だか", "でしたか", "ですね"],
+          "answer": "ですか",
+          "terms": ["v_anata", "p_wa", "v_sensei"],
+          "explanation": "Add か after です to make a polite yes/no question."
+        },
+        {
+          "kind": "mcq",
+          "q": "Which sentence uses the CORRECT casual past form?",
+          "choices": ["友だちだった", "友だちでした", "友だちではない", "友だちです"],
+          "answer": "友だちだった",
+          "terms": ["v_tomodachi"],
+          "explanation": "だった is the casual past form. でした is formal past."
+        },
+        {
+          "kind": "mcq",
+          "q": "You're texting your close friend. Which ending sounds most natural?",
+          "choices": ["だ", "です", "でした", "ではありません"],
+          "answer": "だ",
+          "explanation": "だ is the casual form — natural and appropriate with close friends."
+        },
+        {
+          "kind": "mcq",
+          "q": "父は 先生 ______。(formal past negative)",
+          "choices": ["ではありませんでした", "じゃなかった", "でした", "ではありません"],
+          "answer": "ではありませんでした",
+          "terms": ["v_chichi", "p_wa", "v_sensei"],
+          "explanation": "ではありませんでした = was not (formal past negative)."
+        },
+        {
+          "kind": "mcq",
+          "q": "Which statement about い-adjectives and だ is CORRECT?",
+          "choices": [
+            "い-adjectives do NOT take だ — they stand alone",
+            "All adjectives take だ in casual speech",
+            "Add だ after any adjective in casual speech",
+            "い-adjectives only take です, never だ"
+          ],
+          "answer": "い-adjectives do NOT take だ — they stand alone",
+          "explanation": "× やさしいだ is wrong. ○ やさしい (that's it — the い ending already implies 'is')."
+        }
+      ]
+    }
+  ]
+}

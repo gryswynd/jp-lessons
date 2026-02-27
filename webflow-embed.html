@@ -9,7 +9,7 @@
     3. app/shared/progress.js       — localStorage: flags, scores, drafts
     4. app/shared/text-processor.js — Conjugation engine, processText
     5. app/shared/term-modal.js     — Shared term modal overlay
-    6. Feature module (on demand)   — Lesson / Practice / Review / Compose / Story
+    6. Feature module (on demand)   — Lesson / Practice / Review / Compose / Story / Grammar
   ============================================================ -->
 
 <div id="app-main-container"></div>
@@ -98,6 +98,10 @@ window.JPApp = {
           '<div class="jp-menu-title">\uD83D\uDCD6 Stories</div>' +
           '<div class="jp-menu-desc">Read Japanese stories with furigana</div>' +
         '</div>' +
+        '<div class="jp-menu-btn" onclick="JPApp.launch(\'grammar\')" style="border-top:3px solid #F97316;">' +
+          '<div class="jp-menu-title" style="color:#F97316;">\uD83C\uDF3F Grammar Garden</div>' +
+          '<div class="jp-menu-desc">Particles, conjugation &amp; sentence patterns</div>' +
+        '</div>' +
       '</div>';
     this.container.innerHTML = html;
   },
@@ -163,6 +167,13 @@ window.JPApp = {
         if (!ok) return;
       }
       if (window.StoryModule) window.StoryModule.start(this.container, this.config, onExit);
+
+    } else if (mode === 'grammar') {
+      if (!window.GrammarModule) {
+        var ok = await this.loadModule('Grammar.js');
+        if (!ok) return;
+      }
+      if (window.GrammarModule) window.GrammarModule.start(this.container, this.config, onExit);
     }
   }
 };
