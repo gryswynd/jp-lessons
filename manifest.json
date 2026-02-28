@@ -244,16 +244,23 @@
         },
         {
           "id": "G2",
-          "title": "Core Particles I: は, が, の, か, も",
+          "title": "Core Particles I: は, が, の, か, を",
           "file": "data/N5/grammar/G2.json",
           "unlocksAfter": "N5.1",
           "icon": "📌"
         },
         {
           "id": "G3",
-          "title": "Core Particles II: を, に, で",
+          "title": "Core Particles II: も, と, や, から, まで",
           "file": "data/N5/grammar/G3.json",
-          "unlocksAfter": "N5.1",
+          "unlocksAfter": "N5.2",
+          "icon": "📌"
+        },
+        {
+          "id": "G4",
+          "title": "Core Particles III: に, で, へ",
+          "file": "data/N5/grammar/G4.json",
+          "unlocksAfter": "N5.5",
           "icon": "📌"
         }
       ],

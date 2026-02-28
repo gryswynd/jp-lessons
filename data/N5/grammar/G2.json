@@ -2,13 +2,13 @@
   "contentVersion": "1.0.0",
   "id": "G2",
   "type": "grammar",
-  "title": "Core Particles I: は, が, の, か, も",
+  "title": "Core Particles I: は, が, の, か, を",
   "meta": {
     "level": "N5",
     "unlocksAfter": "N5.1",
-    "focus": "Topic marking, subject marking, possession, questions, and inclusion",
+    "focus": "Topic marking, subject marking, possession, questions, and object marking",
     "estimatedMinutes": 25,
-    "particles": ["は", "が", "の", "か", "も"],
+    "particles": ["は", "が", "の", "か", "を"],
     "grammarForms": [],
     "icon": "📌"
   },
@@ -24,7 +24,7 @@
         "が — marking the subject (who does the action)",
         "の — connecting nouns and showing possession",
         "か — turning statements into questions, or meaning 'or'",
-        "も — adding 'also' or 'even'"
+        "を — marking the direct object (what receives the action)"
       ]
     },
     {
@@ -248,44 +248,58 @@
     },
     {
       "type": "grammarRule",
-      "id": "rule_mo_also",
+      "id": "rule_wo_object",
       "pattern": [
-        { "label": "NOUN", "color": "topic", "text": "X" },
-        { "label": "PARTICLE", "color": "particle", "text": "も" },
-        { "label": "PREDICATE", "color": "verb", "text": "..." }
+        { "label": "OBJECT", "color": "object", "text": "X" },
+        { "label": "PARTICLE", "color": "particle", "text": "を" },
+        { "label": "VERB", "color": "verb", "text": "..." }
       ],
-      "meaning": "'X also / X too / even X ...'",
-      "explanation": "も replaces は, が, or を to add the meaning 'also' or 'too'. It cannot be stacked on top of those particles — it replaces them. When used with negatives, も means 'either' or 'not even'.",
+      "meaning": "Do [verb] to/with X",
+      "explanation": "を marks the direct object — the thing that the action is done to or with. It appears before transitive verbs (verbs that take an object, like 'eat', 'read', 'study', 'call').",
       "notes": [
-        "も REPLACES は/が/を — do not write わたしはも or わたしがも.",
-        "Positive + も = 'also': わたしもがくせいです (I'm also a student).",
-        "Negative + も = 'either/not even': わたしもわかりません (I don't understand either)."
+        "を is written with the hiragana を (wo) but pronounced simply 'o'.",
+        "を only appears with transitive verbs — verbs that can take a direct object.",
+        "Special use: を can also mark movement through a space: こうえんをあるく (walk through the park)."
       ],
       "examples": [
         {
           "parts": [
             { "text": "わたし", "role": "topic", "gloss": "I" },
-            { "text": "も", "role": "particle" },
-            { "text": "がくせい", "role": "predicate", "gloss": "student" },
-            { "text": "です", "role": "verb" }
+            { "text": "は", "role": "particle" },
+            { "text": "先生", "role": "object", "gloss": "teacher" },
+            { "text": "を", "role": "particle" },
+            { "text": "よびます", "role": "verb", "gloss": "call" }
           ],
-          "en": "I am also a student.",
-          "breakdown": "も replaces は — 'I too, am a student'"
+          "en": "I call the teacher.",
+          "breakdown": "Object: teacher → Action: call"
         },
         {
           "parts": [
             { "text": "友だち", "role": "topic", "gloss": "friend" },
-            { "text": "も", "role": "particle" },
-            { "text": "やさしい", "role": "predicate", "gloss": "kind" },
-            { "text": "です", "role": "verb" }
+            { "text": "は", "role": "particle" },
+            { "text": "にほんご", "role": "object", "gloss": "Japanese" },
+            { "text": "を", "role": "particle" },
+            { "text": "べんきょうします", "role": "verb", "gloss": "study" }
           ],
-          "en": "My friend is also kind."
+          "en": "My friend studies Japanese.",
+          "breakdown": "Object: Japanese → Action: study"
+        },
+        {
+          "parts": [
+            { "text": "わたし", "role": "topic", "gloss": "I" },
+            { "text": "は", "role": "particle" },
+            { "text": "なまえ", "role": "object", "gloss": "name" },
+            { "text": "を", "role": "particle" },
+            { "text": "かきます", "role": "verb", "gloss": "write" }
+          ],
+          "en": "I write my name.",
+          "breakdown": "Object: name → Action: write"
         }
       ]
     },
     {
       "type": "annotatedExample",
-      "title": "All Five Particles in Natural Sentences",
+      "title": "All Five Particles in Action",
       "examples": [
         {
           "context": "は — Topic (contrast)",
@@ -336,22 +350,23 @@
           "note": "か at sentence end = question. No word order change."
         },
         {
-          "context": "も — Also/Too",
+          "context": "を — Direct Object",
           "parts": [
-            { "text": "父", "role": "topic", "gloss": "father" },
-            { "text": "も", "role": "particle" },
-            { "text": "先生", "role": "predicate", "gloss": "teacher" },
-            { "text": "です", "role": "verb" }
+            { "text": "わたし", "role": "topic", "gloss": "I" },
+            { "text": "は", "role": "particle" },
+            { "text": "にほんご", "role": "object", "gloss": "Japanese" },
+            { "text": "を", "role": "particle" },
+            { "text": "べんきょうします", "role": "verb", "gloss": "study" }
           ],
-          "en": "My father is also a teacher.",
-          "note": "も replaces は — 'father too is a teacher'."
+          "en": "I study Japanese.",
+          "note": "を marks にほんご as the thing being studied."
         }
       ]
     },
     {
       "type": "conversation",
       "title": "Getting to Know Each Other",
-      "context": "Yuki and Kenji chat after class, learning about each other's families.",
+      "context": "Yuki and Kenji chat after class, learning about each other's families and interests.",
       "lines": [
         {
           "spk": "ゆき",
@@ -361,21 +376,21 @@
         },
         {
           "spk": "けん",
-          "jp": "はい、母は 先生です。ゆきさんの お父さんも 先生ですか。",
-          "en": "Yes, my mother is a teacher. Is your father also a teacher, Yuki?",
-          "terms": ["v_haha", "p_wa", "v_sensei", "v_san", "p_no", "v_otousan", "p_mo", "v_sensei"]
+          "jp": "はい、母は 先生です。にほんごを おしえます。",
+          "en": "Yes, my mother is a teacher. She teaches Japanese.",
+          "terms": ["v_haha", "p_wa", "v_sensei", "p_wo"]
         },
         {
           "spk": "ゆき",
-          "jp": "いいえ、父は 先生では ありません。でも、とても やさしい 人です。",
-          "en": "No, my father is not a teacher. But he is a very kind person.",
-          "terms": ["v_chichi", "p_wa", "v_sensei", "p_dewa", "v_totemo", "v_yasashii", "k_hito"]
+          "jp": "そうですか。ゆきさんの お父さんは なにを しますか。",
+          "en": "Is that so? What does your father do?",
+          "terms": ["p_soudesuka", "v_san", "p_no", "v_otousan", "p_wa", "v_nani", "p_wo"]
         },
         {
           "spk": "けん",
-          "jp": "そうですか。わたしの 友だちの お母さんも やさしいです。",
-          "en": "Is that so? My friend's mother is also kind.",
-          "terms": ["p_soudesuka", "v_watashi", "p_no", "v_tomodachi", "p_no", "v_okaasan", "p_mo", "v_yasashii"]
+          "jp": "父は がくせいを おしえます。とても やさしい 人です。",
+          "en": "My father teaches students. He is a very kind person.",
+          "terms": ["v_chichi", "p_wa", "v_gakusei", "p_wo", "v_totemo", "v_yasashii", "k_hito"]
         }
       ]
     },
@@ -416,12 +431,12 @@
           "explanation": "か at the end of a statement turns it into a yes/no question."
         },
         {
-          "before": "友だち",
+          "before": "わたしは にほんご",
           "slot": true,
-          "after": "やさしいです。",
-          "choices": ["も", "は", "が", "の"],
-          "answer": "も",
-          "explanation": "も means 'also/too' — 'my friend is also kind.' It replaces は here."
+          "after": "べんきょうします。",
+          "choices": ["を", "は", "が", "の"],
+          "answer": "を",
+          "explanation": "を marks the direct object — にほんご is what is being studied."
         },
         {
           "before": "母",
@@ -448,11 +463,11 @@
         },
         {
           "kind": "mcq",
-          "q": "わたし ______ がくせいです。あなた ______ がくせいですか。",
-          "choices": ["は / も", "が / が", "の / は", "も / の"],
-          "answer": "は / も",
-          "terms": ["v_watashi", "v_anata"],
-          "explanation": "は marks 'I' as topic; も asks if 'you also' are a student."
+          "q": "わたしは にほんご ______ べんきょうします。",
+          "choices": ["を", "は", "が", "の"],
+          "answer": "を",
+          "terms": ["v_watashi", "p_wa"],
+          "explanation": "を marks the direct object — にほんご is the thing being studied."
         },
         {
           "kind": "mcq",
@@ -472,10 +487,11 @@
         },
         {
           "kind": "mcq",
-          "q": "も REPLACES which particles? (Select the complete correct answer)",
-          "choices": ["は, が, and を", "Only は", "Only が", "に and で"],
-          "answer": "は, が, and を",
-          "explanation": "も replaces は, が, or を — you never write わたしはも or わたしがも."
+          "q": "先生 ______ よびました。(I called the teacher.)",
+          "choices": ["を", "は", "が", "の"],
+          "answer": "を",
+          "terms": ["v_sensei"],
+          "explanation": "よぶ (call) is a transitive verb — を marks the person being called."
         }
       ]
     }
