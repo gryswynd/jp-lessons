@@ -528,7 +528,7 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 | `passive` | ～られる / ～れる (passive — being acted upon) |
 | `causative` | ～させる / ～せる (causative — making/letting someone do) |
 
-**Unlock schedule.** Each form unlocks after the grammar lesson that formally teaches it. The `unlocksAfter` field in `conjugation_rules.json` records this. Forms without `unlocksAfter` (the original 17 entries) were present from the start of the curriculum.
+**Unlock schedule.** Each form is available from the grammar lesson that formally teaches it. The `introducedIn` field in `conjugation_rules.json` records this, using grammar lesson IDs (e.g. `"G6"`) or content lesson IDs (e.g. `"N5.1"`). All 25 forms have this field. Similarly, particles in `shared/particles.json` carry an `introducedIn` field using lesson or grammar IDs.
 
 **Godan euphonic note.** `tari_form` and `conditional_tara` use `godan_euphonic` map types (`"map": "tari_form"` and `"map": "tara_form"`) that parallel `ta_form` but produce たり/だり and たら/だら endings respectively. The rendering engine will need these map types added alongside any future grammar module build. All ichidan, irregular, and adjective rules are fully defined in data and require no code changes.
 
