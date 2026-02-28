@@ -256,6 +256,17 @@
           "note": "Use だ with close friends or family. よ gently informs the listener of something they may not know."
         },
         {
+          "context": "Describing an object (polite)",
+          "parts": [
+            { "text": "テレビ", "role": "topic", "gloss": "TV" },
+            { "text": "は", "role": "particle" },
+            { "text": "いい", "role": "predicate", "gloss": "good" },
+            { "text": "です", "role": "verb" }
+          ],
+          "en": "The TV is good.",
+          "note": "です works the same way with loanwords. The pattern stays: Topic は Predicate です."
+        },
+        {
           "context": "Exclamation (casual — dropping the copula after い-adjective)",
           "parts": [
             { "text": "うれしい", "role": "modifier", "gloss": "happy" },
@@ -468,6 +479,18 @@
             "先生ではありませんでした。",
             "先生じゃない。",
             "先生ではなかった。"
+          ]
+        },
+        {
+          "given": "パソコンはいいです。",
+          "givenLabel": "Polite Present",
+          "targetLabel": "Plain Present",
+          "answer": "パソコンはいい。",
+          "choices": [
+            "パソコンはいい。",
+            "パソコンはいいだ。",
+            "パソコンはよかった。",
+            "パソコンはいいでした。"
           ]
         }
       ]
