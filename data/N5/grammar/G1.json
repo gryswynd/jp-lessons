@@ -273,24 +273,20 @@
       "lines": [
         {
           "spk": "ゆき",
-          "jp": "はじめまして。わたしはゆきです。よろしくおねがいします。",
+          "jp": "はじめまして。ゆきです。よろしくおねがいします。",
           "en": "Nice to meet you. I'm Yuki. Pleased to meet you.",
           "terms": [
             "p_hajimemashite",
-            "v_watashi",
-            "p_wa",
             "g_desu",
             "p_yoroshiku"
           ]
         },
         {
           "spk": "先生",
-          "jp": "ようこそ。わたしはやまもと先生です。",
+          "jp": "ようこそ。やまもと先生です。",
           "en": "Welcome. I'm Teacher Yamamoto.",
           "terms": [
             "p_youkoso",
-            "v_watashi",
-            "p_wa",
             "v_sensei",
             "g_desu"
           ]
@@ -342,6 +338,7 @@
           "terms": [
             "v_ano",
             "v_sensei",
+            "p_wa",
             "v_dare"
           ]
         },
@@ -351,7 +348,7 @@
           "en": "That's Teacher Yamamoto.",
           "terms": [
             "v_sensei",
-            "g_desu",
+            "g_da",
             "p_yo"
           ]
         },
@@ -364,23 +361,22 @@
             "p_no",
             "v_okaasan",
             "p_mo",
-            "v_sensei",
-            "g_desu"
+            "v_sensei"
           ]
         },
         {
           "spk": "ゆき",
-          "jp": "うん、先生だったよ。でも、お父さんは先生ではなかったよ。",
-          "en": "Yeah, she was a teacher. But her father was not a teacher.",
+          "jp": "うん、先生だったよ。お父さんは先生ではなかったよ。",
+          "en": "Yeah, she was a teacher. Her father was not a teacher.",
           "terms": [
             "v_sensei",
-            "g_desu",
             "p_yo",
             "v_otousan",
             "p_wa",
             "v_sensei",
             "p_dewa",
-            { "id": "v_aru", "form": "plain_past_negative" }
+            { "id": "v_aru", "form": "plain_past_negative" },
+            "p_yo"
           ]
         },
         {
@@ -506,7 +502,7 @@
           "q": "You are speaking casually with a close friend. Which copula do you use?",
           "choices": ["です", "でした", "だ", "ではありません"],
           "answer": "だ",
-          "terms": ["g_desu"],
+          "terms": ["g_da"],
           "explanation": "だ is the plain (informal) present copula. Use it in casual conversation with friends and family."
         },
         {
