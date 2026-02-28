@@ -498,7 +498,7 @@
     },
     {
       "id": "k_kita",
-      "lesson": "N5.7",
+      "lesson": "N5.15",
       "type": "kanji",
       "surface": "北",
       "on": "ほく",
@@ -509,7 +509,7 @@
     },
     {
       "id": "k_minami",
-      "lesson": "N5.7",
+      "lesson": "N5.15",
       "type": "kanji",
       "surface": "南",
       "on": "なん",
@@ -520,7 +520,7 @@
     },
     {
       "id": "k_higashi",
-      "lesson": "N5.7",
+      "lesson": "N5.15",
       "type": "kanji",
       "surface": "東",
       "on": "とう",
@@ -531,7 +531,7 @@
     },
     {
       "id": "k_nishi",
-      "lesson": "N5.7",
+      "lesson": "N5.15",
       "type": "kanji",
       "surface": "西",
       "on": "せい",
@@ -542,7 +542,7 @@
     },
     {
       "id": "k_migi",
-      "lesson": "N5.8",
+      "lesson": "N5.16",
       "type": "kanji",
       "surface": "右",
       "on": "ゆう",
@@ -553,7 +553,7 @@
     },
     {
       "id": "k_hidari",
-      "lesson": "N5.8",
+      "lesson": "N5.16",
       "type": "kanji",
       "surface": "左",
       "on": "さ",
@@ -586,7 +586,7 @@
     },
     {
       "id": "k_ue",
-      "lesson": "N5.8",
+      "lesson": "N5.16",
       "type": "kanji",
       "surface": "上",
       "on": "じょう",
@@ -597,7 +597,7 @@
     },
     {
       "id": "k_shita",
-      "lesson": "N5.8",
+      "lesson": "N5.16",
       "type": "kanji",
       "surface": "下",
       "on": "か/げ",
@@ -894,7 +894,7 @@
     },
     {
       "id": "k_oo_2",
-      "lesson": "N5.15",
+      "lesson": "N5.7",
       "type": "kanji",
       "surface": "大",
       "on": "だい/たい",
@@ -905,7 +905,7 @@
     },
     {
       "id": "k_chii",
-      "lesson": "N5.15",
+      "lesson": "N5.7",
       "type": "kanji",
       "surface": "小",
       "on": "しょう",
@@ -916,7 +916,7 @@
     },
     {
       "id": "k_ta",
-      "lesson": "N5.15",
+      "lesson": "N5.7",
       "type": "kanji",
       "surface": "食",
       "on": "しょく/じき",
@@ -927,7 +927,7 @@
     },
     {
       "id": "k_no",
-      "lesson": "N5.15",
+      "lesson": "N5.7",
       "type": "kanji",
       "surface": "飲",
       "on": "いん",
@@ -938,7 +938,7 @@
     },
     {
       "id": "k_furu",
-      "lesson": "N5.16",
+      "lesson": "N5.8",
       "type": "kanji",
       "surface": "古",
       "on": "こ",
@@ -949,7 +949,7 @@
     },
     {
       "id": "k_atara",
-      "lesson": "N5.16",
+      "lesson": "N5.8",
       "type": "kanji",
       "surface": "新",
       "on": "しん",
@@ -960,7 +960,7 @@
     },
     {
       "id": "k_ka_2",
-      "lesson": "N5.16",
+      "lesson": "N5.8",
       "type": "kanji",
       "surface": "買",
       "on": "ばい",
@@ -971,7 +971,7 @@
     },
     {
       "id": "k_naga",
-      "lesson": "N5.16",
+      "lesson": "N5.8",
       "type": "kanji",
       "surface": "長",
       "on": "ちょう",
@@ -982,7 +982,7 @@
     },
     {
       "id": "k_taka",
-      "lesson": "N5.16",
+      "lesson": "N5.8",
       "type": "kanji",
       "surface": "高",
       "on": "こう",
@@ -993,7 +993,7 @@
     },
     {
       "id": "v_yasu",
-      "lesson": "N5.16",
+      "lesson": "N5.8",
       "type": "kanji",
       "surface": "安",
       "on": "あん",
@@ -1426,7 +1426,10 @@
       "notes": "",
       "lesson_ids": "N5.2",
       "reading": "なんようび",
-      "matches": ["何よう日", "なんようび"]
+      "matches": [
+        "何よう日",
+        "なんようび"
+      ]
     },
     {
       "id": "v_hi",
@@ -1588,7 +1591,9 @@
       "notes": "",
       "lesson_ids": "N5.4",
       "reading": "まいあさ",
-      "matches": ["まいあさ"]
+      "matches": [
+        "まいあさ"
+      ]
     },
     {
       "id": "v_maiban",
@@ -1599,7 +1604,9 @@
       "notes": "",
       "lesson_ids": "N5.4",
       "reading": "まいばん",
-      "matches": ["まいばん"]
+      "matches": [
+        "まいばん"
+      ]
     },
     {
       "id": "v_kyou",
@@ -1650,7 +1657,9 @@
       "notes": "",
       "lesson_ids": "N5.4",
       "reading": "けさ",
-      "matches": ["けさ"]
+      "matches": [
+        "けさ"
+      ]
     },
     {
       "id": "v_konban",
@@ -1661,7 +1670,9 @@
       "notes": "",
       "lesson_ids": "N5.4",
       "reading": "こんばん",
-      "matches": ["こんばん"]
+      "matches": [
+        "こんばん"
+      ]
     },
     {
       "id": "v_hitori",
@@ -2022,7 +2033,7 @@
       "type": "vocab",
       "gtype": "noun",
       "notes": "",
-      "lesson_ids": "N5.16",
+      "lesson_ids": "N5.8",
       "reading": "えきちょう"
     },
     {
@@ -2042,7 +2053,7 @@
       "type": "vocab",
       "gtype": "noun",
       "notes": "",
-      "lesson_ids": "N5.7",
+      "lesson_ids": "N5.15",
       "reading": "ほくとう"
     },
     {
@@ -2052,7 +2063,7 @@
       "type": "vocab",
       "gtype": "noun",
       "notes": "",
-      "lesson_ids": "N5.7",
+      "lesson_ids": "N5.15",
       "reading": "ほくせい"
     },
     {
@@ -2062,7 +2073,7 @@
       "type": "vocab",
       "gtype": "noun",
       "notes": "",
-      "lesson_ids": "N5.7",
+      "lesson_ids": "N5.15",
       "reading": "なんとう"
     },
     {
@@ -2072,7 +2083,7 @@
       "type": "vocab",
       "gtype": "noun",
       "notes": "",
-      "lesson_ids": "N5.7",
+      "lesson_ids": "N5.15",
       "reading": "なんせい"
     },
     {
@@ -2154,7 +2165,7 @@
       "type": "vocab",
       "gtype": "noun",
       "notes": "",
-      "lesson_ids": "N5.15",
+      "lesson_ids": "N5.9",
       "reading": "がいしょく"
     },
     {
@@ -2296,7 +2307,7 @@
       "type": "vocab",
       "gtype": "noun",
       "notes": "",
-      "lesson_ids": "N5.16",
+      "lesson_ids": "N5.8",
       "reading": "こうちょう"
     },
     {
@@ -2443,7 +2454,7 @@
       "type": "vocab",
       "gtype": "adjective",
       "notes": "",
-      "lesson_ids": "N5.15",
+      "lesson_ids": "N5.7",
       "reading": "おおきい",
       "verb_class": "i_adj"
     },
@@ -2454,7 +2465,7 @@
       "type": "vocab",
       "gtype": "noun",
       "notes": "",
-      "lesson_ids": "N5.15",
+      "lesson_ids": "N5.12",
       "reading": "だいがく"
     },
     {
@@ -2464,7 +2475,7 @@
       "type": "vocab",
       "gtype": "noun",
       "notes": "",
-      "lesson_ids": "N5.15",
+      "lesson_ids": "N5.7",
       "reading": "たいせつ"
     },
     {
@@ -2474,7 +2485,7 @@
       "type": "vocab",
       "gtype": "noun",
       "notes": "",
-      "lesson_ids": "N5.15",
+      "lesson_ids": "N5.7",
       "reading": "だいすき"
     },
     {
@@ -2484,7 +2495,7 @@
       "type": "vocab",
       "gtype": "adjective",
       "notes": "",
-      "lesson_ids": "N5.15",
+      "lesson_ids": "N5.7",
       "reading": "ちいさい",
       "verb_class": "i_adj"
     },
@@ -2495,7 +2506,7 @@
       "type": "vocab",
       "gtype": "noun",
       "notes": "",
-      "lesson_ids": "N5.15",
+      "lesson_ids": "N5.12",
       "reading": "しょうがっこう"
     },
     {
@@ -2505,7 +2516,7 @@
       "type": "vocab",
       "gtype": "verb",
       "notes": "",
-      "lesson_ids": "N5.15",
+      "lesson_ids": "N5.7",
       "reading": "たべる",
       "verb_class": "ichidan"
     },
@@ -2516,7 +2527,7 @@
       "type": "vocab",
       "gtype": "verb",
       "notes": "",
-      "lesson_ids": "N5.15",
+      "lesson_ids": "N5.7",
       "reading": "のむ",
       "verb_class": "godan"
     },
@@ -2527,7 +2538,7 @@
       "type": "vocab",
       "gtype": "adjective",
       "notes": "",
-      "lesson_ids": "N5.16",
+      "lesson_ids": "N5.8",
       "reading": "ふるい",
       "verb_class": "i_adj"
     },
@@ -2538,7 +2549,7 @@
       "type": "vocab",
       "gtype": "adjective",
       "notes": "",
-      "lesson_ids": "N5.16",
+      "lesson_ids": "N5.8",
       "reading": "あたらしい",
       "verb_class": "i_adj"
     },
@@ -2559,7 +2570,7 @@
       "type": "vocab",
       "gtype": "verb",
       "notes": "",
-      "lesson_ids": "N5.16",
+      "lesson_ids": "N5.8",
       "reading": "かう",
       "verb_class": "godan"
     },
@@ -2570,7 +2581,7 @@
       "type": "vocab",
       "gtype": "adjective",
       "notes": "",
-      "lesson_ids": "N5.16",
+      "lesson_ids": "N5.8",
       "reading": "ながい",
       "verb_class": "i_adj"
     },
@@ -2581,7 +2592,7 @@
       "type": "vocab",
       "gtype": "adjective",
       "notes": "",
-      "lesson_ids": "N5.16",
+      "lesson_ids": "N5.8",
       "reading": "たかい",
       "verb_class": "i_adj"
     },
@@ -3138,7 +3149,7 @@
       "meaning": "high school",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N5.16",
+      "lesson_ids": "N5.8",
       "notes": ""
     },
     {
