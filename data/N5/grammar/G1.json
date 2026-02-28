@@ -9,7 +9,7 @@
     "focus": "Forming 'to be' sentences in all tenses and registers",
     "estimatedMinutes": 20,
     "particles": [],
-    "grammarForms": ["polite_adj"],
+    "grammarForms": ["polite_adj", "plain_past"],
     "icon": "📐"
   },
   "sections": [
@@ -78,6 +78,58 @@
       ]
     },
     {
+      "type": "grammarRule",
+      "id": "rule_da_casual",
+      "pattern": [
+        { "label": "TOPIC", "color": "topic", "text": "X" },
+        { "label": "PARTICLE", "color": "particle", "text": "は" },
+        { "label": "PREDICATE", "color": "predicate", "text": "Y" },
+        { "label": "COPULA", "color": "verb", "text": "だ" }
+      ],
+      "meaning": "'X is Y' (plain / casual)",
+      "explanation": "だ is the plain (informal) equivalent of です. Use it in casual speech with close friends or family. Do NOT use だ after い-adjectives — in plain speech, い-adjectives stand alone without any copula. Only nouns and な-adjectives take だ.",
+      "notes": [
+        "だ follows nouns and な-adjectives directly: 先生だ (is a teacher).",
+        "い-adjectives do NOT take だ in plain speech. Say うれしい — not うれしいだ. The い ending already signals the plain form.",
+        "Using だ with a superior or in a formal setting sounds abrupt or rude — use です in those contexts.",
+        "よ and ね attach after だ in casual speech: 先生だよ (it's a teacher!), 先生だね (a teacher, right?)."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "わたし", "role": "topic", "gloss": "I" },
+            { "text": "は", "role": "particle" },
+            { "text": "先生", "role": "predicate", "gloss": "teacher" },
+            { "text": "だ", "role": "verb" }
+          ],
+          "en": "I'm a teacher. (casual)",
+          "breakdown": "Same meaning as わたしは先生です — plain register for casual situations"
+        },
+        {
+          "parts": [
+            { "text": "あの人", "role": "topic", "gloss": "that person" },
+            { "text": "は", "role": "particle" },
+            { "text": "友だち", "role": "predicate", "gloss": "friend" },
+            { "text": "だ", "role": "verb" },
+            { "text": "よ", "role": "particle" }
+          ],
+          "en": "That person is a friend, you know. (casual assertion)",
+          "breakdown": "だ + よ adds a gentle 'you know' feeling — common in casual speech"
+        },
+        {
+          "parts": [
+            { "text": "父", "role": "topic", "gloss": "my father" },
+            { "text": "は", "role": "particle" },
+            { "text": "先生", "role": "predicate", "gloss": "teacher" },
+            { "text": "では", "role": "particle" },
+            { "text": "ない", "role": "verb" }
+          ],
+          "en": "My father is not a teacher. (plain negative)",
+          "breakdown": "ではない is the plain negative — polite equivalent is ではありません"
+        }
+      ]
+    },
+    {
       "type": "grammarTable",
       "title": "All Forms of です / だ",
       "description": "The copula has polite (formal) and plain (informal) forms across four tenses and polarities. Use the same form throughout a conversation to maintain consistent register.",
@@ -111,39 +163,47 @@
       ]
     },
     {
-      "type": "grammarRule",
-      "id": "rule_nominalization",
-      "pattern": [
-        { "label": "NOUN", "color": "predicate", "text": "X" },
-        { "label": "COPULA", "color": "verb", "text": "な" },
-        { "label": "NOMINALIZER", "color": "connector", "text": "んです" }
-      ],
-      "meaning": "It's that X is… / X is… (explanatory)",
-      "explanation": "When the plain copula だ comes before the nominalizer の (often shortened to ん in speech), it changes to な. The resulting pattern — Xなんです — adds explanation or gentle emphasis, like saying 'You see, it's that…' in English.",
-      "notes": [
-        "Before こと (another nominalizer), use the formal plain copula である: 先生であること (being a teacher).",
-        "なんです is contracted from なのです and is extremely common in natural spoken Japanese."
-      ],
-      "examples": [
+      "type": "grammarComparison",
+      "title": "です vs だ — Register and Social Context",
+      "items": [
         {
-          "parts": [
-            { "text": "先生", "role": "predicate", "gloss": "teacher" },
-            { "text": "な", "role": "verb" },
-            { "text": "んです", "role": "connector", "gloss": "(explanatory marker)" }
+          "label": "です — Polite Register",
+          "color": "verb",
+          "points": [
+            "Use in formal situations, with people you have just met, or with superiors",
+            "Standard in school, work, and public settings",
+            "Always safe — never sounds rude"
           ],
-          "en": "You see, (he) is a teacher. / (He) IS a teacher.",
-          "breakdown": "だ changes to な before ん/の; adds explanation or emphasis to the statement"
+          "example": {
+            "parts": [
+              { "text": "わたし", "role": "topic", "gloss": "I" },
+              { "text": "は", "role": "particle" },
+              { "text": "先生", "role": "predicate", "gloss": "teacher" },
+              { "text": "です", "role": "verb" }
+            ],
+            "en": "I am a teacher. (polite)"
+          }
         },
         {
-          "parts": [
-            { "text": "先生", "role": "predicate", "gloss": "teacher" },
-            { "text": "である", "role": "verb" },
-            { "text": "こと", "role": "connector", "gloss": "the fact (of being)" }
+          "label": "だ — Plain Register",
+          "color": "predicate",
+          "points": [
+            "Use with close friends, family, or people clearly junior to you",
+            "Standard in casual conversation, diary writing, and texting",
+            "Using だ with a superior or stranger sounds abrupt or rude"
           ],
-          "en": "The fact of being a teacher.",
-          "breakdown": "である is the formal / literary plain copula; こと nominalizes the phrase"
+          "example": {
+            "parts": [
+              { "text": "わたし", "role": "topic", "gloss": "I" },
+              { "text": "は", "role": "particle" },
+              { "text": "先生", "role": "predicate", "gloss": "teacher" },
+              { "text": "だ", "role": "verb" }
+            ],
+            "en": "I'm a teacher. (casual)"
+          }
         }
-      ]
+      ],
+      "tip": "Meeting someone for the first time or in a formal setting? → です. Close friends or family? → だ."
     },
     {
       "type": "annotatedExample",
@@ -190,7 +250,7 @@
             { "text": "は", "role": "particle" },
             { "text": "先生", "role": "predicate", "gloss": "teacher" },
             { "text": "だ", "role": "verb" },
-            { "text": "よ", "role": "verb" }
+            { "text": "よ", "role": "particle" }
           ],
           "en": "That person is a teacher, you know.",
           "note": "Use だ with close friends or family. よ gently informs the listener of something they may not know."

@@ -247,14 +247,14 @@
           "note": "Use に + います for where a person or animal EXISTS."
         },
         {
-          "context": "Specific time",
+          "context": "Specific time (clock time)",
           "parts": [
-            { "text": "あした", "role": "time", "gloss": "tomorrow" },
+            { "text": "さんじ", "role": "time", "gloss": "3 o'clock" },
             { "text": "に", "role": "particle" },
             { "text": "きます", "role": "verb", "gloss": "come" }
           ],
-          "en": "I will come on (specific day) tomorrow.",
-          "note": "に follows specific time points (but NOT relative words like 今日, 毎日)."
+          "en": "I will come at 3 o'clock.",
+          "note": "に follows specific time points (clock times, dates). Relative words like あした, 今日, 毎日 do NOT take に — they stand alone without a particle."
         },
         {
           "context": "Recipient of giving/sending",

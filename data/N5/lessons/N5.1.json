@@ -114,7 +114,7 @@
         },
         {
           "label": "Particles",
-          "items": ["p_wa", "p_ga", "p_wo", "p_ni", "p_de", "p_no", "p_mo", "p_to", "p_ka", "p_ne", "p_dewa"]
+          "items": ["p_wa", "p_ga", "p_wo", "p_ni", "p_de", "p_no", "p_mo", "p_to", "p_ka", "p_yo", "p_ne", "p_dewa", "p_ja"]
         }
       ]
     },
@@ -232,6 +232,12 @@
           "jp": "いいですね。わたしも あいたいです。",
           "en": "That's nice. I'd like to meet her too.",
           "terms": ["v_ii", "g_desu", "p_ne", "v_watashi", "p_mo", { "id": "v_au", "form": "desire_tai" }]
+        },
+        {
+          "spk": "B",
+          "jp": "すずきさんは 先生じゃありません。でも、とても いい 人ですよ。",
+          "en": "Suzuki-san isn't a teacher. But she's a very good person, you know.",
+          "terms": ["v_san", "p_wa", "v_sensei", "p_ja", { "id": "v_aru", "form": "polite_negative" }, "v_totemo", "v_ii", "k_hito", "g_desu", "p_yo"]
         }
       ]
     },
