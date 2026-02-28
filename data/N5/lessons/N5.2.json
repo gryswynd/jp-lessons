@@ -86,7 +86,11 @@
         },
         {
           "label": "Particles (New)",
-          "items": ["p_kara", "p_made"]
+          "items": ["p_mo", "p_to", "p_ya", "p_kara", "p_made"]
+        },
+        {
+          "label": "Other",
+          "items": ["v_geemu"]
         }
       ]
     },
@@ -148,7 +152,7 @@
           "spk": "A",
           "jp": "そうです。お母さんも 月よう日から 金よう日まで います。",
           "en": "That's right. My mother is also here from Monday to Friday.",
-          "terms": ["v_okaasan", "p_mo", "v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", { "id": "v_iru", "form": "polite_masu" }]
+          "terms": ["p_soudesu", "v_okaasan", "p_mo", "v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "spk": "B",
@@ -160,7 +164,7 @@
           "spk": "A",
           "jp": "そうです。とても いいですね。",
           "en": "That's right. It's really nice, isn't it?",
-          "terms": ["v_totemo", { "id": "v_ii", "form": "polite_adj" }, "p_ne"]
+          "terms": ["p_soudesu", "v_totemo", { "id": "v_ii", "form": "polite_adj" }, "p_ne"]
         }
       ]
     },
@@ -191,7 +195,7 @@
           "spk": "A",
           "jp": "はい、毎月 金よう日に あります。",
           "en": "Yes, every month on Friday.",
-          "terms": ["v_maigetsu", "v_kinyoubi", "p_ni", { "id": "v_aru", "form": "polite_masu" }]
+          "terms": ["p_hai", "v_maigetsu", "v_kinyoubi", "p_ni", { "id": "v_aru", "form": "polite_masu" }]
         },
         {
           "spk": "B",
@@ -222,7 +226,7 @@
           "spk": "A",
           "jp": "そうです。火よう日の「火」は ひです。土よう日の「土」は つちです。",
           "en": "That's right. The 火 in Tuesday means fire. The 土 in Saturday means soil.",
-          "terms": ["v_kayoubi", "p_no", "v_hi_2", "p_wa", "g_desu", "v_doyoubi", "v_tsuchi"]
+          "terms": ["p_soudesu", "v_kayoubi", "p_no", "v_hi_2", "p_wa", "g_desu", "v_doyoubi", "v_tsuchi"]
         },
         {
           "spk": "B",
@@ -234,7 +238,7 @@
           "spk": "A",
           "jp": "そうです！毎日 いいですね。",
           "en": "That's right! Every day is great, isn't it?",
-          "terms": ["v_mainichi", { "id": "v_ii", "form": "polite_adj" }, "p_ne"]
+          "terms": ["p_soudesu", "v_mainichi", { "id": "v_ii", "form": "polite_adj" }, "p_ne"]
         }
       ]
     },
@@ -292,7 +296,7 @@
         {
           "q": "先生は 毎月 いますか。",
           "a": "はい、毎月 月よう日から 金よう日まで います。",
-          "terms": ["v_sensei", "p_wa", "v_maigetsu", { "id": "v_iru", "form": "polite_masu" }, "p_ka", "v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made"]
+          "terms": ["v_sensei", "p_wa", "v_maigetsu", { "id": "v_iru", "form": "polite_masu" }, "p_ka", "p_hai", "v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made"]
         }
       ]
     },
@@ -303,12 +307,12 @@
         {
           "jp": "りきぞは ゲームを します。",
           "en": "Rikizo plays a game.",
-          "terms": ["p_wa", "p_wo", { "id": "v_suru", "form": "polite_masu" }]
+          "terms": ["p_wa", "v_geemu", "p_wo", { "id": "v_suru", "form": "polite_masu" }]
         },
         {
           "jp": "ゲームに 水、木、火、土が あります。",
           "en": "In the game there are water, trees, fire, and soil.",
-          "terms": ["p_ni", "v_mizu", "v_ki", "v_hi_2", "v_tsuchi", "p_ga", { "id": "v_aru", "form": "polite_masu" }]
+          "terms": ["v_geemu", "p_ni", "v_mizu", "v_ki", "v_hi_2", "v_tsuchi", "p_ga", { "id": "v_aru", "form": "polite_masu" }]
         },
         {
           "jp": "金と 月と 日も あります。",
@@ -330,7 +334,7 @@
         {
           "q": "ゲームに 何が ありますか。",
           "a": "水、木、火、土、金、月、日が あります。",
-          "terms": ["p_ni", "v_nani", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "p_ka", "v_mizu", "v_ki", "v_hi_2", "v_tsuchi", "v_kane", "v_tsuki", "v_hi"]
+          "terms": ["v_geemu", "p_ni", "v_nani", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "p_ka", "v_mizu", "v_ki", "v_hi_2", "v_tsuchi", "v_kane", "v_tsuki", "v_hi"]
         },
         {
           "q": "毎日 何が ありますか。",
@@ -345,7 +349,7 @@
         {
           "q": "りきぞは どうですか。",
           "a": "うれしいです。",
-          "terms": ["v_dou", "g_desu", "p_ka", { "id": "v_ureshii", "form": "polite_adj" }]
+          "terms": ["p_wa", "v_dou", "g_desu", "p_ka", { "id": "v_ureshii", "form": "polite_adj" }]
         }
       ]
     },
@@ -449,42 +453,42 @@
         {
           "kind": "mcq",
           "q": "先生 _______ 月よう日から 金よう日まで います。",
-          "choices": ["は", "を", "に", "が"],
+          "choices": ["は", "を", "も", "が"],
           "answer": "は",
           "terms": ["v_sensei", "p_wa", "v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "kind": "mcq",
           "q": "月よう日 _______ 金よう日まで 先生が います。",
-          "choices": ["から", "まで", "に", "と"],
+          "choices": ["から", "まで", "も", "と"],
           "answer": "から",
           "terms": ["v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", "v_sensei", "p_ga", { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "kind": "mcq",
           "q": "友だち _______ います。",
-          "choices": ["が", "は", "を", "に"],
+          "choices": ["が", "は", "を", "も"],
           "answer": "が",
           "terms": ["v_tomodachi", "p_ga", { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "kind": "mcq",
-          "q": "先生は 月よう日 _______ います。",
-          "choices": ["に", "は", "を", "から"],
-          "answer": "に",
-          "terms": ["v_sensei", "p_wa", "v_getsuyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }]
+          "q": "今月 _______ お金が あります。",
+          "choices": ["も", "は", "と", "が"],
+          "answer": "も",
+          "terms": ["v_kongetsu", "p_mo", "v_okane", "p_ga", { "id": "v_aru", "form": "polite_masu" }]
         },
         {
           "kind": "mcq",
           "q": "父 _______ 母は 毎日 います。",
-          "choices": ["と", "は", "に", "を"],
+          "choices": ["と", "は", "も", "を"],
           "answer": "と",
           "terms": ["v_chichi", "p_to", "v_haha", "p_wa", "v_mainichi", { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "kind": "mcq",
           "q": "お金 _______ ありますか。",
-          "choices": ["が", "は", "を", "に"],
+          "choices": ["が", "は", "を", "も"],
           "answer": "が",
           "terms": ["v_okane", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "p_ka"]
         }
