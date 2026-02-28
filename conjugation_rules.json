@@ -3,7 +3,7 @@
   "polite_masu": {
     "label": "Polite (Masu-Form)",
     "description": "Standard polite present/future affirmative.",
-    "introducedIn": "G6",
+    "introducedIn": "N5.5",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -35,7 +35,7 @@
   "polite_mashita": {
     "label": "Polite Past (Mashita-Form)",
     "description": "Standard polite past affirmative.",
-    "introducedIn": "G6",
+    "introducedIn": "N5.5",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -67,7 +67,7 @@
   "polite_negative": {
     "label": "Polite Negative (Masen / Desu)",
     "description": "Standard polite negative.",
-    "introducedIn": "G6",
+    "introducedIn": "N5.5",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -113,7 +113,7 @@
   "polite_past_negative": {
     "label": "Polite Past Negative",
     "description": "Standard polite past negative.",
-    "introducedIn": "G6",
+    "introducedIn": "N5.5",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -159,7 +159,7 @@
   "polite_adj": {
     "label": "Polite Adjective (Desu)",
     "description": "Polite affirmative for adjectives.",
-    "introducedIn": "G1",
+    "introducedIn": "N5.1",
     "rules": {
       "i_adj": {
         "type": "suffix",
@@ -179,7 +179,7 @@
   "polite_past_adj": {
     "label": "Polite Past Adjective",
     "description": "Polite past affirmative for adjectives.",
-    "introducedIn": "G10",
+    "introducedIn": "N5.10",
     "rules": {
       "i_adj": {
         "type": "suffix",
@@ -200,7 +200,7 @@
   "plain_past": {
     "label": "Past (Ta/Datta)",
     "description": "Plain past affirmative.",
-    "introducedIn": "G7",
+    "introducedIn": "N5.5",
     "rules": {
       "godan": {
         "type": "godan_euphonic",
@@ -245,7 +245,7 @@
   "plain_negative": {
     "label": "Negative (Nai)",
     "description": "Plain present negative.",
-    "introducedIn": "G9",
+    "introducedIn": "N5.9",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -291,7 +291,7 @@
   "plain_past_negative": {
     "label": "Past Negative (Nakatta)",
     "description": "Plain past negative.",
-    "introducedIn": "G9",
+    "introducedIn": "N5.9",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -337,7 +337,7 @@
   "te_form": {
     "label": "Te-Form",
     "description": "Connective form used for 'and', requests, etc.",
-    "introducedIn": "G7",
+    "introducedIn": "N5.5",
     "rules": {
       "godan": {
         "type": "godan_euphonic",
@@ -382,7 +382,7 @@
   "potential": {
     "label": "Potential Form",
     "description": "Expresses ability (can do).",
-    "introducedIn": "G12",
+    "introducedIn": "N4.3",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -409,7 +409,7 @@
   "potential_negative": {
     "label": "Potential Negative",
     "description": "Polite form expressing inability (cannot do).",
-    "introducedIn": "G12",
+    "introducedIn": "N4.3",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -436,7 +436,7 @@
   "adverbial": {
     "label": "Adverbial Form (Ku/Ni)",
     "description": "Changes the adjective into an adverb.",
-    "introducedIn": "G10",
+    "introducedIn": "N5.10",
     "rules": {
       "i_adj": {
         "type": "suffix",
@@ -462,7 +462,7 @@
   "desire_tai": {
     "label": "Desire (Tai)",
     "description": "Expresses desire to do the action (I want to...).",
-    "introducedIn": "G8",
+    "introducedIn": "N5.8",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -489,7 +489,7 @@
   "appearance_sou": {
     "label": "Appearance (Sou)",
     "description": "Expresses that something looks like or appears to be certain way.",
-    "introducedIn": "G8",
+    "introducedIn": "N5.8",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -530,7 +530,7 @@
   "polite_volitional_mashou": {
     "label": "Let's (Mashou)",
     "description": "Polite volitional form expressing a suggestion or invitation.",
-    "introducedIn": "G8",
+    "introducedIn": "N5.8",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -557,7 +557,7 @@
   "conditional_ba": {
     "label": "Conditional (Ba)",
     "description": "Expresses a condition (if/provided that).",
-    "introducedIn": "G17",
+    "introducedIn": "N5.10",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -603,7 +603,7 @@
   "tari_form": {
     "label": "Tari Form",
     "description": "Lists representative actions (～たり～たりする = 'doing things like X and Y'). Formed identically to plain past with たり/だり instead of た/だ. The godan euphonic changes are the same as ta_form.",
-    "introducedIn": "G7",
+    "introducedIn": "N5.5",
     "rules": {
       "godan": {
         "type": "godan_euphonic",
@@ -629,7 +629,7 @@
   "polite_negative_te": {
     "label": "Negative Te-Form (Naide)",
     "description": "Negative connective form meaning 'without doing', also used in ～ないでください (please don't do). U-verbs shift to the あ-row; RU-verbs drop る; then ないで is added.",
-    "introducedIn": "G7",
+    "introducedIn": "N5.5",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -656,7 +656,7 @@
   "desire_tai_negative": {
     "label": "Negative Desire (Takunai)",
     "description": "Expresses not wanting to do something (I don't want to...). Uses the ます-stem + たくない. Conjugates like an i-adjective in further negative/past forms.",
-    "introducedIn": "G8",
+    "introducedIn": "N5.8",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -683,7 +683,7 @@
   "sugiru_form": {
     "label": "Excessive Degree (Sugiru)",
     "description": "Expresses 'too much' or 'excessively'. Verbs use the ます-stem + すぎる; i-adjectives drop い + すぎる; na-adjectives add すぎる directly.",
-    "introducedIn": "G10",
+    "introducedIn": "N5.10",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -724,7 +724,7 @@
   "nagara_form": {
     "label": "Simultaneous Actions (Nagara)",
     "description": "Expresses doing two actions simultaneously ('while doing'). Uses the ます-stem (い-row shift for U-verbs, drop る for RU-verbs) + ながら.",
-    "introducedIn": "G15",
+    "introducedIn": "N4.10",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -751,7 +751,7 @@
   "conditional_tara": {
     "label": "Conditional (Tara)",
     "description": "Expresses 'if' or 'when (a completed action occurs)'. Formed by taking the plain past (た/だ) and adding ら. The godan euphonic changes are the same as ta_form.",
-    "introducedIn": "G17",
+    "introducedIn": "N4.25",
     "rules": {
       "godan": {
         "type": "godan_euphonic",
@@ -796,7 +796,7 @@
   "passive": {
     "label": "Passive Form",
     "description": "Expresses that the subject is acted upon by an external agent (is done to). RU-verbs drop る and add られる; U-verbs shift to the あ-row and add れる.",
-    "introducedIn": "G18",
+    "introducedIn": "N4.31",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -823,7 +823,7 @@
   "causative": {
     "label": "Causative Form",
     "description": "Expresses making or letting someone do an action. RU-verbs drop る and add させる; U-verbs shift to the あ-row and add せる.",
-    "introducedIn": "G18",
+    "introducedIn": "N4.31",
     "rules": {
       "godan": {
         "type": "godan_change",
