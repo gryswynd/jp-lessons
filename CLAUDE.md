@@ -150,8 +150,8 @@ CB CHECKLIST
 
 **Responsibilities:**
 - Perform a systematic line-by-line audit. Do **not** skim.
-- For every `jp` or passage sentence: extract each kanji-containing word and verify it is tagged in `terms`.
-- For every `terms` entry: verify the ID exists in the glossary (cross-reference the glossary file).
+- For every `jp` or passage sentence: tokenize the **full surface string** — not just kanji-containing words. For every lexical token (noun, verb, adjective, adverb, particle, conjunction, copula, sentence-final particle), verify it is either (a) tagged in `terms` with a matching ID, or (b) a permissible untagged pure-kana function word that has **no glossary entry**. Kana-only connectors and particles (e.g. でも, だから, だって, よ, ね, か) must be verified against `shared/particles.json` for their `introducedIn` lesson — do **not** assume they are permissible just because they are written in kana.
+- For every `terms` entry: verify the ID exists in the glossary (cross-reference the glossary file). Then verify the **surface form** of that glossary entry matches (or inflects from) the actual token in the `jp` field. A surface mismatch — e.g. tagging `だ` with `g_desu` whose glossary surface is `です` — is a **hard fail** even if the ID exists.
 - For every verb/adjective term entry: verify the `form` string is a valid key in `conjugation_rules.json`.
 - Verify all kanji in `jp` fields appear in the taught-kanji set (from `manifest.json`).
 - Verify the JSON schema matches the content type schema exactly (no extra/missing required fields).
@@ -710,8 +710,10 @@ Grammar patterns (particles, sentence-final forms, conjunctions like ～て) are
 All of the following must be TRUE for a QA pass:
 
 - [ ] Every kanji in every `jp`/passage field is in the taught-kanji set
-- [ ] Every content word in every `jp`/passage field is tagged in the `terms` array of that item
+- [ ] Every lexical token in every `jp`/passage field is tagged in the `terms` array — this includes kana-only words (copulas, conjunctions, sentence-final particles, adverbs); not just kanji-containing words
+- [ ] Every kana-only word in a `jp` field that is NOT tagged in `terms` has been verified to have no glossary entry (i.e. it is truly an untaggable function word, not a tagged-but-out-of-scope one)
 - [ ] Every term ID in every `terms` array exists in the glossary
+- [ ] Every term ID's `surface` field matches (or inflects from) the token it tags in the `jp` field — ID existence alone is not sufficient; a surface mismatch (e.g. tagging `だ` with `g_desu` whose surface is `です`) is a hard fail
 - [ ] Every verb/adjective `terms` entry uses `{ "id": "...", "form": "..." }` with a valid form string
 - [ ] Drill 1 MCQ items have no `terms` array; all other drills do
 - [ ] Answer fields exactly match one of the choices strings
@@ -862,12 +864,15 @@ These are the most frequent errors. All agents should be alert to them.
 15. **Missing instructions on review sections** — every review section must include an `instructions` field describing the task.
 16. **Flat conversation structure in reviews** — review conversations must use the `items[]` wrapper array with per-item `title`, `context`, `lines`, `question`, `choices`, `answer`, `explanation`. Do not use the flat lesson-style conversation structure.
 17. **Missing distractors on scramble items** — scramble items must include a `distractors` array with 3 plausible wrong segments (wrong particles, transitive/intransitive confusions, similar words from the same lesson range).
+18. **ID surface mismatch** — tagging a word with an ID whose glossary `surface` field does not match the token being tagged. Example: tagging `だ` or `だった` with `g_desu` (which has `surface: "です"`). The ID exists and the checklist item "ID exists in glossary" passes — but the tagged entity is semantically wrong. Always look up the `surface` value of each ID and confirm it matches the actual text in the sentence.
+19. **Out-of-scope word in `jp` text, absent from `terms`** — a word appears in the `jp` surface string but is never added to `terms` because it "looks like" a common particle or connector. If that word has a glossary entry with an `introducedIn` or `lesson_ids` value, it must be tagged, and its lesson must be in scope. Example: `でも` (`p_demo`, `introducedIn: "N4.14"`) used in a G1 conversation is an out-of-scope scope violation — but scope checks that only scan `terms` IDs will miss it entirely because it was never tagged at all. Scanning `jp` surface tokens, not just `terms` arrays, is required.
 
 ### Agent 3 failures (caught by Agent 4)
 
 1. **Approving unnatural dialogue** — grammatically correct but no real speaker would say it.
 2. **Approving overstuffed sections** — 30 vocabulary chips, 5 conversations, 4 readings in one lesson.
 3. **Missing a grammar level jump** — content using grammar structures 2–3 tiers above the lesson.
+4. **Kanji-only token scan** — checking that kanji-containing words are tagged but not scanning the full `jp` string token by token. Kana-only words (copulas like だ/だった, conjunctions, sentence-final particles, adverbs) can be out of scope, mis-tagged, or missing from `terms` entirely and will be invisible to a visual scan that only flags visually prominent kanji characters.
 
 ### Agent 4 failures (caught by Agent 1 in next pass)
 
