@@ -135,6 +135,11 @@ CB CHECKLIST
 [ ] Lesson matches the reference template's conversation count (see Reference Template Rule)
 [ ] meta.kanji array is present and matches the kanji list in manifest.json
 [ ] Every kanji introduced this lesson that functions as a standalone noun has a v_* vocab entry, not only a k_* kanji entry
+[ ] (Reviews) Scramble items have segments, distractors (3 items), and explanation
+[ ] (Reviews) Scramble sentences with floatable time expressions or adverbs include an alts array
+[ ] (Reviews) Every review section has an instructions field
+[ ] (Reviews) Conversation items include title, context, lines, question, choices, answer, explanation
+[ ] (Reviews) Every MCQ and scramble drill item has an explanation field
 ```
 
 ---
@@ -369,7 +374,7 @@ Never silently forward content without the accompanying documents. If an agent d
 
 **VocabList completeness.** The vocabList must cover **every** glossary entry (across `glossary.N5.json`, `glossary.N4.json`, and `shared/particles.json`) whose `lesson_ids` equals the current lesson. This includes nouns, verbs, adjectives, adverbs, pronouns, particles, set phrases, and grammar items — not just the main content words. Agent 1 must enumerate the full target ID list from the glossary files as part of the Content Brief so Agent 2 can verify completeness in the CB Checklist. Agent 3 must confirm every such entry is present in a vocabList group.
 
-**Drill types:** `mcq` only in current system. Choices array must have exactly 4 options. The `answer` string must exactly match one of the `choices` strings.
+**Drill types:** `mcq` and `scramble`. For MCQ: choices array must have exactly 4 options; the `answer` string must exactly match one of the `choices` strings. For scramble: see [Scramble Drill Items](#scramble-drill-items) in the Review section — scramble drills appear in reviews only, not in lessons.
 
 ---
 
@@ -382,20 +387,136 @@ Never silently forward content without the accompanying documents. If an agent d
   "contentVersion": "1.0.0",
   "id": "N4.Review.X",
   "title": "...",
-  "meta": { "focus": "..." },
+  "meta": {
+    "phase": 4,
+    "type": "assessment",
+    "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons X–Y.",
+    "kanji": ["漢", "字", "..."]
+  },
   "sections": [...]
 }
 ```
 
+**meta fields:**
+
+| Field | Required | Description |
+|---|---|---|
+| `phase` | Yes | Integer (currently always `4`). |
+| `type` | Yes | `"assessment"` for numbered reviews. |
+| `focus` | Yes | Human-readable description of the review scope. |
+| `kanji` | Yes | Array of all kanji characters covered by this review's lesson range. |
+
 **Review section types:**
 
-| Section type | Notes |
-|---|---|
-| `drills` | Same as lesson drills. All items must have `terms` except vocab-recognition MCQ (kind=`mcq` where the q is just the kanji and choices are meanings). |
-| `reading` | Same structure as lesson reading. `questions` must have `choices[]` and `explanation` in addition to `q`, `a`, `terms`. |
-| `conversation` | Lines + a single `question`/`choices`/`answer`/`explanation` appended to the conversation block. |
+| Section type | Required fields | Notes |
+|---|---|---|
+| `conversation` | `type`, `title`, `instructions`, `items[]` | Each item is an independent conversation with a comprehension question (see below). |
+| `drills` (scramble) | `type`, `title`, `instructions`, `items[]` | Sentence-ordering drills. See [Scramble Drill Items](#scramble-drill-items). |
+| `drills` (mcq) | `type`, `title`, `instructions`, `items[]` | Same as lesson drills. All items must have `terms` except vocab-recognition MCQ (kind=`mcq` where the q is just the kanji and choices are meanings). |
+| `reading` | `type`, `title`, `passage[]`, `questions[]` | Same structure as lesson reading. `questions` must have `choices[]` and `explanation` in addition to `q`, `a`, `terms`. |
+
+Every review section **must** include an `instructions` field describing the task for the student.
+
+**Review conversation item structure:**
+
+Unlike lesson conversations, review conversations wrap each conversation inside an `items[]` array. Each item is a self-contained conversation followed by a comprehension question:
+
+```json
+{
+  "title": "Conversation 1",
+  "context": "Description of the scenario",
+  "lines": [
+    { "spk": "A", "jp": "...", "terms": [...] },
+    { "spk": "B", "jp": "...", "terms": [...] }
+  ],
+  "question": "English comprehension question?",
+  "choices": ["...", "...", "...", "..."],
+  "answer": "...",
+  "explanation": "..."
+}
+```
+
+Note: review conversation lines do **not** include `en` translations — students must comprehend the Japanese using the tappable term chips only. The `title` field (e.g. "Conversation 1") is required on each item.
+
+**`explanation` field on all drill items.** Every MCQ and scramble item in reviews **must** include an `explanation` field. This is displayed to the student after they answer (whether correct or wrong) and should explain the grammar point, reading, or vocabulary being tested.
+
+**Standard review section pattern (reference template).** The latest reviews follow this 6-section structure:
+
+| Part | Section type | Content |
+|---|---|---|
+| Part 1 | `conversation` | 3 conversation items with comprehension questions |
+| Part 2 | `drills` (scramble) | 5 scramble items with distractors |
+| Part 3 | `reading` | 1 reading passage with 3 questions |
+| Part 4 | `drills` (mcq) | 6–8 Kanji Reading items |
+| Part 5 | `drills` (mcq) | 4 Context & Vocabulary items |
+| Part 6 | `drills` (mcq) | 4 Grammar Check items |
+
+When building a new review, use the highest-numbered existing review as the structural template (same as the reference template rule for lessons).
 
 Reviews cover multiple lessons. Vocabulary drawn from any lesson in the reviewed range is permitted.
+
+---
+
+### Scramble Drill Items
+
+Scramble drills present the student with word chips that must be tapped in the correct order to build a Japanese sentence. They appear as `kind: "scramble"` items inside a `drills` section.
+
+**Required fields:**
+
+```json
+{
+  "kind": "scramble",
+  "q": "English translation of the target sentence",
+  "segments": ["word1", "は", "word2", "を", "word3"],
+  "distractors": ["wrong1", "wrong2", "wrong3"],
+  "alts": [
+    ["word2", "word1", "は", "を", "word3"]
+  ],
+  "explanation": "Grammar explanation of why this order is correct"
+}
+```
+
+| Field | Required | Description |
+|---|---|---|
+| `kind` | Yes | Always `"scramble"`. |
+| `q` | Yes | English sentence the student must construct in Japanese. |
+| `segments` | Yes | Array of Japanese word/particle segments in the primary correct order. |
+| `distractors` | Yes | Array of plausible wrong segments mixed into the chip pool. Should include wrong particles, similar-sounding words, or transitive/intransitive confusions. |
+| `alts` | No | Array of arrays — each inner array is an alternative valid ordering of the same `segments`. See [Alternative Word Orders](#alternative-word-orders). |
+| `explanation` | Yes | Explains the grammar point, particle usage, or word choice. |
+
+Scramble items do **not** have a `terms` array, `choices`, or `answer` field. The correct answer is the `segments` array joined in order. Distractors must have exactly 3 items.
+
+**HTML in explanations.** Explanation fields on all drill items (MCQ and scramble) and reading/conversation questions may use `<b>` tags for emphasis — typically to highlight readings or key words. Example: `"洗車 (car wash) is read as <b>sensha</b>."`
+
+**Scoring.** Each question (MCQ, scramble, reading, conversation) is worth 1 point toward `maxScore`. Scramble items award a **bonus point** for a correct first attempt (2 points total), making it possible for the overall score to exceed 100%. This rewards students who can construct the sentence correctly without trial and error.
+
+#### Alternative Word Orders
+
+Japanese word order is flexible, especially for time expressions and adverbs. When a scramble sentence contains an element that can naturally occupy more than one position, add an `alts` array so both orderings are accepted as correct.
+
+**When to add alts:**
+
+- **Time expressions** (毎日, 今日, 昨日, 明日, 先週, 来週, 毎朝, 毎晩, いつも, etc.) can typically appear either sentence-initially or after the topic marker (は). If the primary `segments` place the time expression after は, add an alt with it sentence-initial, and vice versa.
+- **Frequency adverbs** (よく, 時々, たいてい, etc.) can sometimes float similarly.
+- Do **not** add alts for minor stylistic variations that aren't genuinely natural — each alt must be something a native speaker would actually say.
+
+**Example:**
+
+```json
+{
+  "segments": ["国民", "は", "毎日", "車", "を", "洗います"],
+  "alts": [
+    ["毎日", "国民", "は", "車", "を", "洗います"]
+  ]
+}
+```
+
+Both「国民は毎日車を洗います」and「毎日国民は車を洗います」are natural and correct.
+
+**Agent 2 responsibility:** When writing scramble items, check whether the sentence contains a floatable element. If so, include the `alts` array. Note this in the CB Checklist.
+
+**Agent 3 responsibility:** For every scramble item, verify that if a time expression or adverb is present, the author has considered whether an alt is needed. Flag missing alts as a QA issue.
 
 ---
 
@@ -485,6 +606,18 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 | `appearance_sou` | ～そうです |
 | `polite_volitional_mashou` | ～ましょう |
 | `conditional_ba` | ～ば / ～ければ |
+| `tari_form` | ～たり (listing representative actions: ～たり～たりする) |
+| `polite_negative_te` | ～ないで (negative te-form: "without doing"; ないでください = "please don't") |
+| `desire_tai_negative` | ～たくない / ～たくないです (don't want to) |
+| `sugiru_form` | ～すぎる (too much / excessively — verbs and adjectives) |
+| `nagara_form` | ～ながら (while doing — simultaneous actions) |
+| `conditional_tara` | ～たら / ～だったら (if / when — completed-action conditional) |
+| `passive` | ～られる / ～れる (passive — being acted upon) |
+| `causative` | ～させる / ～せる (causative — making/letting someone do) |
+
+**Unlock schedule.** Each form is available from the grammar lesson that formally teaches it. The `introducedIn` field in `conjugation_rules.json` records this, using grammar lesson IDs (e.g. `"G6"`) or content lesson IDs (e.g. `"N5.1"`). All 25 forms have this field. Similarly, particles in `shared/particles.json` carry an `introducedIn` field using lesson or grammar IDs.
+
+**Godan euphonic note.** `tari_form` and `conditional_tara` use `godan_euphonic` map types (`"map": "tari_form"` and `"map": "tara_form"`) that parallel `ta_form` but produce たり/だり and たら/だら endings respectively. The rendering engine will need these map types added alongside any future grammar module build. All ichidan, irregular, and adjective rules are fully defined in data and require no code changes.
 
 ### Counter references
 
@@ -585,6 +718,11 @@ All of the following must be TRUE for a QA pass:
 - [ ] The JSON validates (no syntax errors)
 - [ ] All required fields are present for the section type
 - [ ] No ID appears in terms that was not verified against the glossary file
+- [ ] (Reviews) Scramble `segments` use only taught kanji and approved vocabulary
+- [ ] (Reviews) Scramble `distractors` are plausible (wrong particles, transitive/intransitive confusions, similar words)
+- [ ] (Reviews) Scramble sentences with time expressions or adverbs have `alts` if the element can naturally float
+- [ ] (Reviews) Every drill item (MCQ and scramble) has an `explanation` field
+- [ ] (Reviews) Conversation items have `question`, `choices` (4 options), `answer`, and `explanation`
 
 ### Agent 4 (CR) — soft pass/fail (judgment-based)
 
@@ -719,6 +857,11 @@ These are the most frequent errors. All agents should be alert to them.
 10. **Too few conversations** — conversation count must match the reference template lesson (highest-numbered existing lesson of same type/level). Fewer than the template is a hard fail that Agent 3 must catch.
 11. **Missing standalone noun v_* entry for a newly taught kanji** — if a kanji is to be used as a standalone noun in lesson content (e.g. 水 for water, 木 for tree), verify that a `type: "vocab"` entry with a matching `lesson_ids` exists before using it in a `jp` field. If it does not exist, create it and add it to the vocabList before building the content.
 12. **Missing meta.kanji array** — the lesson `meta` object must include `"kanji": [...]` listing the characters introduced in this lesson.
+13. **Missing scramble alts for flexible word order** — when a scramble sentence contains a time expression (毎日, 今日, 昨日, etc.) or frequency adverb (いつも, よく, etc.) that can naturally appear sentence-initially or after the topic, an `alts` array must be provided. Omitting alts means a valid student answer is marked wrong.
+14. **Missing explanation on review drill items** — every MCQ and scramble item in reviews must include an `explanation` field. This is a hard requirement; omitting it means the student gets no feedback.
+15. **Missing instructions on review sections** — every review section must include an `instructions` field describing the task.
+16. **Flat conversation structure in reviews** — review conversations must use the `items[]` wrapper array with per-item `title`, `context`, `lines`, `question`, `choices`, `answer`, `explanation`. Do not use the flat lesson-style conversation structure.
+17. **Missing distractors on scramble items** — scramble items must include a `distractors` array with 3 plausible wrong segments (wrong particles, transitive/intransitive confusions, similar words from the same lesson range).
 
 ### Agent 3 failures (caught by Agent 4)
 

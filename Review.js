@@ -803,6 +803,7 @@
       const segments = q.segments;
       const distractorWords = q.distractors || [];
       const full = segments.join('');
+      const altFulls = (q.alts || []).map(a => a.join(''));
 
       let order = [];
       let attempts = 0;
@@ -934,7 +935,8 @@
 
       submitBtn.onclick = () => {
         if (order.length !== segments.length) return;
-        const isCorrect = order.join('') === full;
+        const userAnswer = order.join('');
+        const isCorrect = userAnswer === full || altFulls.includes(userAnswer);
         attempts++;
 
         if (isCorrect) {

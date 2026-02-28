@@ -211,12 +211,15 @@
             "を",
             "洗います"
           ],
+          "alts": [
+            ["毎日", "国民", "は", "車", "を", "洗います"]
+          ],
           "distractors": [
             "に",
             "洗車",
             "洗いません"
           ],
-          "explanation": "国民 + は (topic) + 毎日 + 車 + を (object) + 洗います. Use を to mark 車 as the thing being washed. に marks a destination or result, not a direct object."
+          "explanation": "国民 + は (topic) + 毎日 + 車 + を (object) + 洗います. Time words like 毎日 can also go at the start: 毎日 + 国民は + 車を + 洗います. Use を to mark 車 as the thing being washed. に marks a destination or result, not a direct object."
         },
         {
           "kind": "scramble",
