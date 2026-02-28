@@ -663,7 +663,7 @@ Build examples around self-introduction, family description, and asking about pe
 
 ---
 
-### G2 — Core Particles I: は, が, の, か, も
+### G2 — Core Particles I: は, が, の, か, を
 
 | Field | Value |
 |---|---|
@@ -672,7 +672,7 @@ Build examples around self-introduction, family description, and asking about pe
 | **Unlocks after** | N5.1 |
 | **Icon** | 📌 |
 | **Estimated minutes** | 25 |
-| **Particles** | `は`, `が`, `の`, `か`, `も` |
+| **Particles** | `は`, `が`, `の`, `か`, `を` |
 
 **What to teach:**
 - は as topic marker:
@@ -692,10 +692,11 @@ Build examples around self-introduction, family description, and asking about pe
 - か for questions:
   - Sentence-final question marker
   - "Or" grouping: A か B
-- も for "also/even":
-  - Replaces は, が, or を (not added alongside them)
-  - "Also" in positive: わたしも行きます
-  - "Even" with emphasis: 子どもでもわかる
+- を as object marker:
+  - Marks the direct object of a transitive verb
+  - Pronounced "o" (not "wo") in modern speech
+  - "Motion through" usage (公園を歩く — walk through the park)
+  - Note: at this stage students only have ある as a verb. Use hiragana verbs with glosses (e.g. よびます = call, よみます = read) to demonstrate を patterns. Formal verb instruction begins in G5.
 
 **Recommended sections:**
 1. `grammarIntro`
@@ -704,101 +705,111 @@ Build examples around self-introduction, family description, and asking about pe
 4. `grammarComparison` — は vs が (use same sentence, different particle)
 5. `grammarRule` — の possession/connection
 6. `grammarRule` — か questions and "or"
-7. `grammarRule` — も also/even (note: replaces, doesn't stack)
+7. `grammarRule` — を object marker
 8. `annotatedExample` — mixed particle usage in natural sentences
 9. `conversation` — dialogue demonstrating all five particles
-10. `fillSlot` — choose the right particle (は/が/の/か/も)
+10. `fillSlot` — choose the right particle (は/が/の/か/を)
 11. `drills` — mixed MCQ
 
-**Available vocabulary context:** Same as G1 — all N5.1 vocabulary.
+**Available vocabulary context:** Same as G1 — all N5.1 vocabulary. Verbs beyond ある may be used in hiragana with inline glosses to demonstrate を patterns.
 
 ---
 
-### G3 — Core Particles II: を, に, で
+### G3 — Core Particles II: も, と, や, から, まで
 
 | Field | Value |
 |---|---|
 | **ID** | `G3` |
 | **Level** | N5 |
-| **Unlocks after** | N5.1 |
+| **Unlocks after** | N5.2 |
 | **Icon** | 📌 |
 | **Estimated minutes** | 25 |
-| **Particles** | `を`, `に`, `で` |
+| **Particles** | `も`, `と`, `や`, `から`, `まで` |
 
 **What to teach:**
-- を as object marker:
-  - Marks the direct object of a transitive verb
-  - "Motion through" usage (公園を歩く — walk through the park)
-- に as "aiming" particle:
-  - Destination of movement (学校に行く)
-  - Indirect object / recipient (友だちに本をあげる)
-  - Specific time (三時に会う)
-  - Frequency (一週間に二回)
-  - Location of existence with いる/ある (部屋に猫がいる)
-  - Note: relative time words (今日, 明日, 昨日) do NOT take に
-- で as "enabling" particle:
-  - Location of action (学校で勉強する)
-  - Means/tool (バスで行く)
-  - Material (木で作る)
-  - Reason (病気で休む)
+- も for "also/even":
+  - Replaces は, が, or を (not added alongside them)
+  - "Also" in positive: わたしもがくせいです
+  - "Either" in negative: わたしもわかりません
+  - Note: も REPLACES は/が/を — do not write わたしはも or わたしがも
+- と for complete "and" / "with":
+  - Complete list: A と B (only A and B, nothing else)
+  - "Together with": 友だちと いっしょに
+  - Quoted speech: 「…」と言う (note: いう not yet formally taught, use hiragana with gloss)
+- や for incomplete "and":
+  - Incomplete list: A や B (A, B, and others)
+  - Often paired with など (etc.)
+- から / まで:
+  - から = starting point (time): 月曜日から; 今日から
+  - まで = ending point (time): 金曜日まで; 今月まで
+  - から…まで as a pair: 月曜日から金曜日まで (from Monday to Friday)
+  - までに = "by" (deadline): 金曜日までに
+  - Note: at this stage, place-based examples are limited. Focus on time expressions using days of the week and time words from N5.2. Place-based から/まで (東京から, 学校まで) can be reinforced after N5.5 when location vocabulary is available.
 
 **Recommended sections:**
 1. `grammarIntro`
-2. `grammarRule` — を object marker
-3. `grammarRule` — に aiming particle (cover all uses)
-4. `grammarRule` — で enabling particle (cover all uses)
-5. `grammarComparison` — に vs で (location of existence vs location of action)
-6. `annotatedExample` — に in its various roles
-7. `annotatedExample` — で in its various roles
-8. `conversation` — dialogue using all three particles naturally
-9. `fillSlot` — choose を/に/で
-10. `patternMatch` — identify correct に vs で usage
-11. `drills` — mixed MCQ
+2. `grammarRule` — も also/even (note: replaces, doesn't stack)
+3. `grammarRule` — と complete "and" / "with"
+4. `grammarRule` — や incomplete "and"
+5. `grammarComparison` — と vs や
+6. `grammarRule` — から and まで (from/until)
+7. `annotatedExample` — all particles in natural sentences using N5.1+N5.2 vocab
+8. `conversation` — dialogue using these particles with days/time context
+9. `fillSlot` — choose the right particle (も/と/や/から/まで)
+10. `drills` — mixed MCQ
 
-**Available vocabulary context:** All N5.1 vocabulary.
+**Available vocabulary context:** All vocabulary through N5.2. This adds days of the week (月曜日–日曜日), time expressions (毎日, 今日, 今月), elemental nouns (水, 木, 火, 金, 土), and number-based terms. Days of the week are ideal for から/まで examples. Listing particles (と/や) work well with family terms and days.
 
 ---
 
-### G4 — Core Particles III: と, や, へ, から, まで
+### G4 — Core Particles III: に, で, へ
 
 | Field | Value |
 |---|---|
 | **ID** | `G4` |
 | **Level** | N5 |
-| **Unlocks after** | N5.2 |
+| **Unlocks after** | N5.5 |
 | **Icon** | 📌 |
-| **Estimated minutes** | 20 |
-| **Particles** | `と`, `や`, `へ`, `から`, `まで` |
+| **Estimated minutes** | 25 |
+| **Particles** | `に`, `で`, `へ` |
 
 **What to teach:**
-- と for complete "and" / "with":
-  - Complete list: A と B (only A and B, nothing else)
-  - "Together with": 友だちと行く
-  - Quoted speech: 「…」と言う
-- や for incomplete "and":
-  - Incomplete list: A や B (A, B, and others)
-  - Often paired with など (etc.)
+- に as "aiming" particle:
+  - Destination of movement (学校に行く — now available with 行く from N5.5)
+  - Indirect object / recipient (友だちに本をあげる)
+  - Specific time (三時に会う — time vocabulary from N5.4)
+  - Frequency (一週間に二回)
+  - Location of existence with いる/ある (部屋に猫がいる — いる from N5.4)
+  - Note: relative time words (今日, 明日, 昨日) do NOT take に
+- で as "enabling" particle:
+  - Location of action (学校で勉強する — places from N5.5)
+  - Means/tool (バスで行く — 行く from N5.5)
+  - Material (木で作る)
+  - Reason (びょうきで やすみます)
 - へ as directional:
-  - Direction of movement (東京へ行く)
+  - Direction of movement (駅へ行く — 駅 from N5.5)
   - Interchangeable with に for destinations, but emphasizes the direction rather than arrival
-- から / まで:
-  - から = starting point (place, time, reason): 東京から来た; 九時から
-  - まで = ending point: 五時まで; 学校まで歩く
-  - までに = "by" (deadline): 金曜日までに出す
+  - Pronounced "e" (not "he") as a particle
+
+**Key distinction to teach:** に vs で for location. This is the most important comparison:
+- に marks WHERE something EXISTS (いる/ある): へやに います (is in the room)
+- で marks WHERE an action TAKES PLACE: へやで べんきょうします (study in the room)
+- Rule: "Is something EXISTING somewhere? → に. Is something HAPPENING somewhere? → で."
 
 **Recommended sections:**
 1. `grammarIntro`
-2. `grammarRule` — と complete "and" / "with" / quotation
-3. `grammarRule` — や incomplete "and"
-4. `grammarComparison` — と vs や
-5. `grammarRule` — へ direction
-6. `grammarRule` — から and まで (from/until)
-7. `annotatedExample` — から/まで in time and place contexts
-8. `conversation` — dialogue using these particles
-9. `fillSlot` — choose と/や/へ/から/まで
-10. `drills` — mixed MCQ
+2. `grammarRule` — に aiming particle (cover all uses)
+3. `grammarRule` — で enabling particle (cover all uses)
+4. `grammarComparison` — に vs で (location of existence vs location of action)
+5. `grammarRule` — へ direction (and comparison with に for destinations)
+6. `annotatedExample` — に in its various roles
+7. `annotatedExample` — で in its various roles
+8. `conversation` — dialogue using all three particles naturally with places and motion verbs
+9. `fillSlot` — choose に/で/へ
+10. `patternMatch` — identify correct に vs で usage
+11. `drills` — mixed MCQ
 
-**Available vocabulary context:** All vocabulary through N5.2. This adds numbers, time words (時, 分, 曜日), and period terms (朝, 昼, 夜) which are ideal for から/まで examples.
+**Available vocabulary context:** All vocabulary through N5.5. This now includes motion verbs (行く, 来る), places (店, 駅, 家), time expressions (時, 分, 週), and existence verbs (いる from N5.4, ある from N5.1). This rich vocabulary set enables natural, meaningful examples for all three particles — destinations with 行く/来る, existence locations with いる/ある, action locations with で, and time expressions with に.
 
 ---
 

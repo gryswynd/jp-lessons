@@ -2,493 +2,454 @@
   "contentVersion": "1.0.0",
   "id": "G3",
   "type": "grammar",
-  "title": "Core Particles II: を, に, で",
+  "title": "Core Particles II: も, と, や, から, まで",
   "meta": {
     "level": "N5",
-    "unlocksAfter": "N5.1",
-    "focus": "Object marking (を), destination/time/existence (に), and location/means (で)",
+    "unlocksAfter": "N5.2",
+    "focus": "Inclusion, listing, and time ranges",
     "estimatedMinutes": 25,
-    "particles": ["を", "に", "で"],
+    "particles": ["も", "と", "や", "から", "まで"],
     "grammarForms": [],
     "icon": "📌"
   },
   "sections": [
     {
       "type": "grammarIntro",
-      "title": "The Action Particles",
+      "title": "Expanding Your Sentences",
       "icon": "📌",
-      "summary": "を, に, and で connect nouns to verbs — they tell you what's being acted on, where something is going, and where/how an action happens.",
-      "whyItMatters": "These three particles are essential for building action sentences. Without them, you can only make 'X is Y' statements. With them, you can describe movement, existence, location, tools, and direct objects.",
+      "summary": "These five particles let you add items, list things, and talk about ranges of time.",
+      "whyItMatters": "With も, と, and や you can connect ideas and list items. With から and まで you can describe time ranges — essential for talking about schedules and routines.",
       "youWillLearn": [
-        "を — marking the direct object (what receives the action)",
-        "に — the 'aiming' particle: destination, time, recipient, existence",
-        "で — the 'enabling' particle: location of action, means/tools",
-        "に vs で — the most important distinction in this lesson"
+        "も — adding 'also' or 'too' (replaces は/が/を)",
+        "と — listing things completely, or doing something 'with' someone",
+        "や — listing things as examples (an incomplete list)",
+        "から — marking a starting point ('from')",
+        "まで — marking an ending point ('until')"
       ]
     },
     {
       "type": "grammarRule",
-      "id": "rule_wo_object",
+      "id": "rule_mo_also",
       "pattern": [
-        { "label": "OBJECT", "color": "object", "text": "X" },
-        { "label": "PARTICLE", "color": "particle", "text": "を" },
-        { "label": "VERB", "color": "verb", "text": "..." }
+        { "label": "NOUN", "color": "topic", "text": "X" },
+        { "label": "PARTICLE", "color": "particle", "text": "も" },
+        { "label": "PREDICATE", "color": "verb", "text": "..." }
       ],
-      "meaning": "Do [verb] to/with X",
-      "explanation": "を marks the direct object — the thing that the action is done to or with. It appears before transitive verbs (verbs that take an object, like 'eat', 'read', 'study', 'call').",
+      "meaning": "'X also / X too / even X ...'",
+      "explanation": "も replaces は, が, or を to add the meaning 'also' or 'too'. It cannot be stacked on top of those particles — it replaces them. When used with negatives, も means 'either' or 'not even'.",
       "notes": [
-        "を is written with the hiragana を (wo) but pronounced simply 'o'.",
-        "を only appears with transitive verbs — verbs that can take a direct object.",
-        "Special use: を can also mark movement through a space: こうえんをあるく (walk through the park)."
+        "も REPLACES は/が/を — do not write わたしはも or わたしがも.",
+        "Positive + も = 'also': わたしもがくせいです (I'm also a student).",
+        "Negative + も = 'either/not even': 父もわかりません (My father doesn't understand either)."
       ],
       "examples": [
         {
           "parts": [
             { "text": "わたし", "role": "topic", "gloss": "I" },
-            { "text": "は", "role": "particle" },
-            { "text": "先生", "role": "object", "gloss": "teacher" },
-            { "text": "を", "role": "particle" },
-            { "text": "よびます", "role": "verb", "gloss": "call" }
+            { "text": "も", "role": "particle" },
+            { "text": "がくせい", "role": "predicate", "gloss": "student" },
+            { "text": "です", "role": "verb" }
           ],
-          "en": "I call the teacher.",
-          "breakdown": "Object: teacher → Action: call"
+          "en": "I am also a student.",
+          "breakdown": "も replaces は — 'I too, am a student'"
         },
         {
           "parts": [
             { "text": "友だち", "role": "topic", "gloss": "friend" },
-            { "text": "は", "role": "particle" },
-            { "text": "ほん", "role": "object", "gloss": "book" },
-            { "text": "を", "role": "particle" },
-            { "text": "よみます", "role": "verb", "gloss": "read" }
+            { "text": "も", "role": "particle" },
+            { "text": "やさしい", "role": "predicate", "gloss": "kind" },
+            { "text": "です", "role": "verb" }
           ],
-          "en": "My friend reads a book.",
-          "breakdown": "Object: book → Action: read"
+          "en": "My friend is also kind."
         },
         {
           "parts": [
-            { "text": "わたし", "role": "topic", "gloss": "I" },
-            { "text": "は", "role": "particle" },
-            { "text": "にほんご", "role": "object", "gloss": "Japanese" },
-            { "text": "を", "role": "particle" },
-            { "text": "べんきょうします", "role": "verb", "gloss": "study" }
+            { "text": "土よう日", "role": "topic", "gloss": "Saturday" },
+            { "text": "も", "role": "particle" },
+            { "text": "いい", "role": "predicate", "gloss": "good" },
+            { "text": "です", "role": "verb" }
           ],
-          "en": "I study Japanese.",
-          "breakdown": "Object: Japanese → Action: study"
+          "en": "Saturday is also fine.",
+          "breakdown": "も replaces は — 'Saturday too, is fine'"
         }
       ]
     },
     {
       "type": "grammarRule",
-      "id": "rule_ni_aiming",
+      "id": "rule_to_and_with",
       "pattern": [
-        { "label": "DESTINATION / TIME / RECIPIENT", "color": "destination", "text": "X" },
-        { "label": "PARTICLE", "color": "particle", "text": "に" },
-        { "label": "VERB", "color": "verb", "text": "..." }
+        { "label": "NOUN A", "color": "topic", "text": "A" },
+        { "label": "PARTICLE", "color": "connector", "text": "と" },
+        { "label": "NOUN B", "color": "topic", "text": "B" }
       ],
-      "meaning": "toward X / at X / to X (the 'aiming' particle)",
-      "explanation": "に is the 'aiming' particle — it marks a specific target or point. This target can be a place you're moving toward, a specific time, the recipient of something, or the location where something exists.",
+      "meaning": "'A and B' (complete list) / 'together with'",
+      "explanation": "と connects nouns to mean 'and'. Unlike English, と lists things completely — A と B means 'A and B, and nothing else.' と can also mean 'together with' a person.",
       "notes": [
-        "に marks DESTINATIONS with motion verbs: がっこうに いきます (go to school).",
-        "に marks SPECIFIC TIMES: さんじに あいます (meet at 3 o'clock).",
-        "に marks the LOCATION OF EXISTENCE with いる/ある: へやに います (is in the room).",
-        "Relative time words (今日, 明日, 毎日) do NOT take に — use them without a particle."
+        "Complete listing: 母と父 means 'mother AND father' — just those two, no one else.",
+        "Together with: 友だちと いっしょに means 'together with a friend'.",
+        "You can chain: A と B と C (A and B and C)."
       ],
       "examples": [
         {
           "parts": [
-            { "text": "わたし", "role": "topic", "gloss": "I" },
+            { "text": "母", "role": "topic", "gloss": "mother" },
+            { "text": "と", "role": "connector" },
+            { "text": "父", "role": "topic", "gloss": "father" },
             { "text": "は", "role": "particle" },
-            { "text": "がっこう", "role": "destination", "gloss": "school" },
-            { "text": "に", "role": "particle" },
-            { "text": "いきます", "role": "verb", "gloss": "go" }
+            { "text": "先生", "role": "predicate", "gloss": "teacher" },
+            { "text": "です", "role": "verb" }
           ],
-          "en": "I go to school.",
-          "breakdown": "Destination: school → Action: go"
+          "en": "My mother and father are teachers.",
+          "breakdown": "と links two nouns completely: mother and father (just them)"
         },
         {
           "parts": [
-            { "text": "友だち", "role": "subject", "gloss": "friend" },
-            { "text": "が", "role": "particle" },
-            { "text": "へや", "role": "destination", "gloss": "room" },
-            { "text": "に", "role": "particle" },
-            { "text": "います", "role": "verb", "gloss": "is (animate)" }
+            { "text": "月よう日", "role": "topic", "gloss": "Monday" },
+            { "text": "と", "role": "connector" },
+            { "text": "水よう日", "role": "topic", "gloss": "Wednesday" },
+            { "text": "と", "role": "connector" },
+            { "text": "金よう日", "role": "topic", "gloss": "Friday" }
           ],
-          "en": "My friend is in the room.",
-          "breakdown": "Location of existence: room → Who exists: friend"
+          "en": "Monday, Wednesday, and Friday.",
+          "breakdown": "と chains nouns in a complete list"
         },
         {
           "parts": [
-            { "text": "さんじ", "role": "time", "gloss": "3 o'clock" },
-            { "text": "に", "role": "particle" },
-            { "text": "あいましょう", "role": "verb", "gloss": "let's meet" }
+            { "text": "友だち", "role": "topic", "gloss": "friend" },
+            { "text": "と", "role": "connector" },
+            { "text": "いっしょに", "role": "modifier", "gloss": "together" }
           ],
-          "en": "Let's meet at 3 o'clock.",
-          "breakdown": "Specific time: 3 o'clock → Action: meet"
+          "en": "Together with a friend.",
+          "breakdown": "と + いっしょに = 'together with'"
         }
       ]
     },
     {
       "type": "grammarRule",
-      "id": "rule_de_enabling",
+      "id": "rule_ya_and_examples",
       "pattern": [
-        { "label": "LOCATION / MEANS", "color": "location", "text": "X" },
-        { "label": "PARTICLE", "color": "particle", "text": "で" },
-        { "label": "VERB", "color": "verb", "text": "..." }
+        { "label": "NOUN A", "color": "topic", "text": "A" },
+        { "label": "PARTICLE", "color": "connector", "text": "や" },
+        { "label": "NOUN B", "color": "topic", "text": "B" }
       ],
-      "meaning": "do [verb] at X / do [verb] by means of X",
-      "explanation": "で is the 'enabling' particle — it marks the environment or tool that makes the action possible. This can be the location where an action takes place, the means or method used, or the material something is made from.",
+      "meaning": "'A, B, etc.' (incomplete list — and others)",
+      "explanation": "や connects nouns like と, but implies there are more items not mentioned. A や B means 'things like A and B (and others).' It gives examples from a larger set.",
       "notes": [
-        "で marks WHERE AN ACTION HAPPENS: としょかんで べんきょうします (study at the library).",
-        "で marks HOW (the means): バスで いきます (go by bus).",
-        "で marks MATERIAL: き で つくります (make from wood).",
-        "で marks REASON in some expressions: びょうきで やすみます (rest because of illness)."
+        "Incomplete list: 先生や友だち means 'people like my teacher, my friends, (and others)'.",
+        "Often appears with など (etc.): Aや Bなど.",
+        "Use や when you're giving a representative sample, not an exhaustive list."
       ],
       "examples": [
         {
           "parts": [
-            { "text": "わたし", "role": "topic", "gloss": "I" },
-            { "text": "は", "role": "particle" },
-            { "text": "としょかん", "role": "location", "gloss": "library" },
-            { "text": "で", "role": "particle" },
-            { "text": "よみます", "role": "verb", "gloss": "read" }
+            { "text": "先生", "role": "topic", "gloss": "teacher" },
+            { "text": "や", "role": "connector" },
+            { "text": "友だち", "role": "topic", "gloss": "friend" }
           ],
-          "en": "I read at the library.",
-          "breakdown": "Location of action: library → Action: read"
+          "en": "Teachers, friends, (and others).",
+          "breakdown": "や implies more people exist beyond those named"
         },
         {
           "parts": [
-            { "text": "にほんご", "role": "location", "gloss": "Japanese" },
-            { "text": "で", "role": "particle" },
-            { "text": "はなしましょう", "role": "verb", "gloss": "let's talk" }
+            { "text": "月よう日", "role": "topic", "gloss": "Monday" },
+            { "text": "や", "role": "connector" },
+            { "text": "木よう日", "role": "topic", "gloss": "Thursday" }
           ],
-          "en": "Let's talk in Japanese.",
-          "breakdown": "Means: Japanese (language) → Action: talk"
-        },
-        {
-          "parts": [
-            { "text": "でんしゃ", "role": "location", "gloss": "train" },
-            { "text": "で", "role": "particle" },
-            { "text": "がっこう", "role": "destination", "gloss": "school" },
-            { "text": "に", "role": "particle" },
-            { "text": "いきます", "role": "verb", "gloss": "go" }
-          ],
-          "en": "I go to school by train.",
-          "breakdown": "Means: train → Destination: school → Action: go"
+          "en": "Days like Monday, Thursday, (and others).",
+          "breakdown": "や gives examples — other days are implied"
         }
       ]
     },
     {
       "type": "grammarComparison",
-      "title": "に vs で — The Key Distinction",
+      "title": "と vs や — Complete List vs Examples",
       "items": [
         {
-          "label": "に — Location of Existence",
-          "color": "destination",
+          "label": "と — Complete List",
+          "color": "connector",
           "points": [
-            "Use に with いる (animate existence) and ある (inanimate existence)",
-            "X に います = something/someone IS at X",
-            "に marks WHERE something EXISTS, not where it ACTS"
+            "Lists ALL items — nothing else is implied",
+            "A と B = exactly A and B",
+            "Also means 'together with' a person"
           ],
           "example": {
             "parts": [
-              { "text": "へや", "role": "destination" },
-              { "text": "に", "role": "particle" },
-              { "text": "友だち", "role": "subject" },
-              { "text": "が", "role": "particle" },
-              { "text": "います", "role": "verb" }
+              { "text": "母", "role": "topic" },
+              { "text": "と", "role": "connector" },
+              { "text": "父", "role": "topic" }
             ],
-            "en": "My friend is in the room. (existence)"
+            "en": "Mother and father. (just those two)"
           }
         },
         {
-          "label": "で — Location of Action",
-          "color": "location",
+          "label": "や — Sample List",
+          "color": "connector",
           "points": [
-            "Use で with action verbs (study, eat, play, work...)",
-            "X で [action] = do [action] at/in X",
-            "で marks WHERE an action TAKES PLACE"
+            "Lists EXAMPLES — implies other items exist",
+            "A や B = things like A and B (and more)",
+            "Cannot mean 'together with'"
           ],
           "example": {
             "parts": [
-              { "text": "へや", "role": "location" },
-              { "text": "で", "role": "particle" },
-              { "text": "べんきょうします", "role": "verb" }
+              { "text": "母", "role": "topic" },
+              { "text": "や", "role": "connector" },
+              { "text": "父", "role": "topic" }
             ],
-            "en": "I study in the room. (action)"
+            "en": "People like my mother, father, (and others)."
           }
         }
       ],
-      "tip": "Is something EXISTING somewhere? → に. Is something HAPPENING somewhere? → で."
+      "tip": "Naming everything? → と. Giving examples from a bigger group? → や."
     },
     {
-      "type": "annotatedExample",
-      "title": "に in its Many Roles",
+      "type": "grammarRule",
+      "id": "rule_kara_made",
+      "pattern": [
+        { "label": "START", "color": "time", "text": "A" },
+        { "label": "PARTICLE", "color": "particle", "text": "から" },
+        { "label": "END", "color": "time", "text": "B" },
+        { "label": "PARTICLE", "color": "particle", "text": "まで" }
+      ],
+      "meaning": "'from A to/until B'",
+      "explanation": "から marks a starting point ('from') and まで marks an ending point ('until' or 'as far as'). They are often used together to describe a range, especially for time. Each can also be used alone.",
+      "notes": [
+        "から alone: 月よう日から (from Monday).",
+        "まで alone: 金よう日まで (until Friday).",
+        "Together: 月よう日から金よう日まで (from Monday to Friday).",
+        "までに means 'by' (a deadline): 金よう日までに = by Friday."
+      ],
       "examples": [
         {
-          "context": "Destination of movement",
           "parts": [
-            { "text": "がっこう", "role": "destination", "gloss": "school" },
-            { "text": "に", "role": "particle" },
-            { "text": "いきます", "role": "verb", "gloss": "go" }
+            { "text": "月よう日", "role": "time", "gloss": "Monday" },
+            { "text": "から", "role": "particle" },
+            { "text": "金よう日", "role": "time", "gloss": "Friday" },
+            { "text": "まで", "role": "particle" }
           ],
-          "en": "Go to school.",
-          "note": "に follows the destination when moving toward a place."
+          "en": "From Monday to Friday.",
+          "breakdown": "から = starting point, まで = ending point"
         },
         {
-          "context": "Location of existence (animate)",
           "parts": [
-            { "text": "そこ", "role": "destination", "gloss": "there" },
-            { "text": "に", "role": "particle" },
-            { "text": "友だち", "role": "subject", "gloss": "friend" },
-            { "text": "が", "role": "particle" },
-            { "text": "います", "role": "verb", "gloss": "is (animate)" }
+            { "text": "今日", "role": "time", "gloss": "today" },
+            { "text": "から", "role": "particle" },
+            { "text": "毎日", "role": "time", "gloss": "every day" }
           ],
-          "en": "My friend is there.",
-          "note": "Use に + います for where a person or animal EXISTS."
+          "en": "From today, every day.",
+          "breakdown": "から marks the starting point of a routine"
         },
         {
-          "context": "Specific time (clock time)",
           "parts": [
-            { "text": "さんじ", "role": "time", "gloss": "3 o'clock" },
-            { "text": "に", "role": "particle" },
-            { "text": "きます", "role": "verb", "gloss": "come" }
+            { "text": "今月", "role": "time", "gloss": "this month" },
+            { "text": "まで", "role": "particle" }
           ],
-          "en": "I will come at 3 o'clock.",
-          "note": "に follows specific time points (clock times, dates). Relative words like あした, 今日, 毎日 do NOT take に — they stand alone without a particle."
-        },
-        {
-          "context": "Recipient of giving/sending",
-          "parts": [
-            { "text": "先生", "role": "destination", "gloss": "teacher" },
-            { "text": "に", "role": "particle" },
-            { "text": "おしえます", "role": "verb", "gloss": "teach" }
-          ],
-          "en": "I teach the teacher. / I tell the teacher.",
-          "note": "に marks the recipient — the person to whom the action is directed."
+          "en": "Until this month.",
+          "breakdown": "まで alone marks the end point"
         }
       ]
     },
     {
       "type": "annotatedExample",
-      "title": "で in its Many Roles",
+      "title": "All Five Particles in Natural Sentences",
       "examples": [
         {
-          "context": "Location of action",
+          "context": "も — Also (replacing は)",
           "parts": [
-            { "text": "がっこう", "role": "location", "gloss": "school" },
-            { "text": "で", "role": "particle" },
-            { "text": "べんきょうします", "role": "verb", "gloss": "study" }
+            { "text": "父", "role": "topic", "gloss": "father" },
+            { "text": "も", "role": "particle" },
+            { "text": "先生", "role": "predicate", "gloss": "teacher" },
+            { "text": "です", "role": "verb" }
           ],
-          "en": "I study at school.",
-          "note": "で follows the place where an action happens."
+          "en": "My father is also a teacher.",
+          "note": "も replaces は — 'father too is a teacher'."
         },
         {
-          "context": "Means / method",
+          "context": "と — Complete list",
           "parts": [
-            { "text": "にほんご", "role": "location", "gloss": "Japanese" },
-            { "text": "で", "role": "particle" },
-            { "text": "かきます", "role": "verb", "gloss": "write" }
+            { "text": "月よう日", "role": "topic", "gloss": "Monday" },
+            { "text": "と", "role": "connector" },
+            { "text": "金よう日", "role": "topic", "gloss": "Friday" },
+            { "text": "は", "role": "particle" },
+            { "text": "いい", "role": "predicate", "gloss": "good" },
+            { "text": "です", "role": "verb" }
           ],
-          "en": "I write in Japanese.",
-          "note": "で marks the language, tool, or method used to do something."
+          "en": "Monday and Friday are good.",
+          "note": "と connects exactly two items — only those days."
         },
         {
-          "context": "Means of transport",
+          "context": "や — Incomplete list",
           "parts": [
-            { "text": "でんしゃ", "role": "location", "gloss": "train" },
-            { "text": "で", "role": "particle" },
-            { "text": "いきます", "role": "verb", "gloss": "go" }
+            { "text": "先生", "role": "topic", "gloss": "teacher" },
+            { "text": "や", "role": "connector" },
+            { "text": "がくせい", "role": "topic", "gloss": "student" },
+            { "text": "が", "role": "particle" },
+            { "text": "います", "role": "verb", "gloss": "exist" }
           ],
-          "en": "I go by train.",
-          "note": "で after a vehicle = the means of getting somewhere."
+          "en": "There are teachers, students, (and others).",
+          "note": "や gives a sample — more people are implied."
         },
         {
-          "context": "Group context",
+          "context": "から — Starting point",
           "parts": [
-            { "text": "ふたり", "role": "location", "gloss": "two people" },
-            { "text": "で", "role": "particle" },
-            { "text": "たべます", "role": "verb", "gloss": "eat" }
+            { "text": "月よう日", "role": "time", "gloss": "Monday" },
+            { "text": "から", "role": "particle" },
+            { "text": "です", "role": "verb" }
           ],
-          "en": "We eat as a pair. / Two of us eat.",
-          "note": "で can mark the number of people involved: ふたりで = as a pair."
+          "en": "It's from Monday.",
+          "note": "から marks where something begins."
+        },
+        {
+          "context": "まで — Ending point",
+          "parts": [
+            { "text": "金よう日", "role": "time", "gloss": "Friday" },
+            { "text": "まで", "role": "particle" },
+            { "text": "です", "role": "verb" }
+          ],
+          "en": "It's until Friday.",
+          "note": "まで marks where something ends."
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "After School Plans",
-      "context": "Yuki and Kenji talk about what they'll do after school.",
+      "title": "Planning the Week",
+      "context": "Rikizo and Yamakawa discuss when their teacher is available during the week.",
       "lines": [
         {
-          "spk": "ゆき",
-          "jp": "けんじさん、今日は どこに いきますか。",
-          "en": "Kenji, where are you going today?",
-          "terms": ["v_san", "v_doko", "p_ni"]
+          "spk": "A",
+          "jp": "やまもと先生は 何よう日と 何よう日に いますか。",
+          "en": "Which days is Yamamoto-sensei here?",
+          "terms": ["v_sensei", "p_wa", "v_nanyoubi", "p_to", "v_nanyoubi"]
         },
         {
-          "spk": "けん",
-          "jp": "としょかんに いきます。友だちを よびました。",
-          "en": "I'm going to the library. I called a friend.",
-          "terms": ["p_ni", "v_tomodachi", "p_wo"]
+          "spk": "B",
+          "jp": "月よう日と 水よう日と 金よう日です。",
+          "en": "Monday, Wednesday, and Friday.",
+          "terms": ["v_getsuyoubi", "p_to", "v_suiyoubi", "p_to", "v_kinyoubi", "g_desu"]
         },
         {
-          "spk": "ゆき",
-          "jp": "としょかんで なにを しますか。",
-          "en": "What will you do at the library?",
-          "terms": ["p_de", "v_nani", "p_wo"]
+          "spk": "A",
+          "jp": "土よう日も いますか。",
+          "en": "Is the teacher also here on Saturday?",
+          "terms": ["v_doyoubi", "p_mo"]
         },
         {
-          "spk": "けん",
-          "jp": "にほんごを べんきょうします。いっしょに いきますか。",
-          "en": "I'll study Japanese. Would you like to come together?",
-          "terms": ["p_wo", "v_issho"]
+          "spk": "B",
+          "jp": "いいえ。月よう日から 金よう日まで です。",
+          "en": "No. It's from Monday to Friday.",
+          "terms": ["v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", "g_desu"]
         },
         {
-          "spk": "ゆき",
-          "jp": "いいですね！でんしゃで いきましょう。",
-          "en": "Sounds great! Let's go by train.",
-          "terms": ["v_ii", "p_ne", "p_de"]
+          "spk": "A",
+          "jp": "そうですか。わたしの 母も 先生です。毎日 います。",
+          "en": "I see. My mother is also a teacher. She is here every day.",
+          "terms": ["p_soudesuka", "v_watashi", "p_no", "v_haha", "p_mo", "v_sensei", "g_desu", "v_mainichi"]
+        },
+        {
+          "spk": "B",
+          "jp": "毎日ですか！先生や お母さんは たいへんですね。",
+          "en": "Every day! Teachers, mothers, and the like sure have it tough.",
+          "terms": ["v_mainichi", "g_desu", "p_ka", "v_sensei", "p_ya", "v_okaasan", "p_wa", "p_ne"]
         }
       ]
     },
     {
       "type": "fillSlot",
-      "title": "を, に, or で?",
+      "title": "Choose the Right Particle",
       "items": [
         {
-          "before": "わたしは がっこう",
+          "before": "わたし",
           "slot": true,
-          "after": "いきます。",
-          "choices": ["に", "で", "を", "は"],
-          "answer": "に",
-          "explanation": "いきます is a motion verb — use に for the destination."
+          "after": "がくせいです。",
+          "choices": ["も", "と", "や", "から"],
+          "answer": "も",
+          "explanation": "も replaces は to mean 'also' — 'I am also a student.'"
         },
         {
-          "before": "友だちは としょかん",
+          "before": "母",
           "slot": true,
-          "after": "べんきょうします。",
-          "choices": ["で", "に", "を", "が"],
-          "answer": "で",
-          "explanation": "べんきょうします is an action — use で for the location of the action."
+          "after": "父は 先生です。",
+          "choices": ["と", "や", "も", "まで"],
+          "answer": "と",
+          "explanation": "と connects nouns as a complete list — 'mother and father (are teachers).'"
         },
         {
           "before": "先生",
           "slot": true,
-          "after": "よびます。",
-          "choices": ["を", "に", "で", "は"],
-          "answer": "を",
-          "explanation": "よぶ (call) is a transitive verb — よぶ takes を to mark the person being called."
+          "after": "友だちが います。",
+          "choices": ["や", "と", "も", "から"],
+          "answer": "や",
+          "explanation": "や lists examples — 'teachers, friends, (and others) are here.'"
         },
         {
-          "before": "へやに 友だち",
+          "before": "月よう日",
           "slot": true,
-          "after": "います。",
-          "choices": ["が", "は", "を", "で"],
-          "answer": "が",
-          "explanation": "います (exist, animate) needs が to mark the subject — 'friend is (in the room)'."
+          "after": "金よう日まで です。",
+          "choices": ["から", "まで", "と", "や"],
+          "answer": "から",
+          "explanation": "から marks the starting point — 'from Monday to Friday.'"
         },
         {
-          "before": "でんしゃ",
+          "before": "今月",
           "slot": true,
-          "after": "がっこうに いきます。",
-          "choices": ["で", "に", "を", "も"],
-          "answer": "で",
-          "explanation": "でんしゃ is the means of transport — use で for 'by train'."
+          "after": "です。",
+          "choices": ["まで", "から", "も", "と"],
+          "answer": "まで",
+          "explanation": "まで marks the ending point — 'until this month.'"
         },
         {
-          "before": "にほんご",
+          "before": "土よう日",
           "slot": true,
-          "after": "はなしましょう。",
-          "choices": ["で", "に", "を", "が"],
-          "answer": "で",
-          "explanation": "で marks the means or language used: 'let's talk in Japanese'."
-        }
-      ]
-    },
-    {
-      "type": "patternMatch",
-      "title": "に or で — Spot the Correct Usage",
-      "pattern": "に = existence / destination / time. で = action location / means.",
-      "items": [
-        {
-          "sentence": "へやに います。",
-          "correct": true,
-          "explanation": "に + います = existence in a location. Correct!"
-        },
-        {
-          "sentence": "へやで います。",
-          "correct": false,
-          "explanation": "います marks existence — use に, not で. × へやで います → ○ へやに います"
-        },
-        {
-          "sentence": "としょかんで よみます。",
-          "correct": true,
-          "explanation": "よむ is an action verb — で correctly marks the location of the action."
-        },
-        {
-          "sentence": "がっこうに べんきょうします。",
-          "correct": false,
-          "explanation": "べんきょうする is an action — use で for the location. × がっこうに → ○ がっこうで"
-        },
-        {
-          "sentence": "でんしゃで いきます。",
-          "correct": true,
-          "explanation": "で marks the means of transport. Correct!"
-        },
-        {
-          "sentence": "がっこうに いきます。",
-          "correct": true,
-          "explanation": "いく is a motion verb — に correctly marks the destination."
+          "after": "いいですか。",
+          "choices": ["も", "と", "や", "まで"],
+          "answer": "も",
+          "explanation": "も replaces は to ask 'is Saturday also OK?' — 'also' applies to Saturday."
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Mixed Particle Practice",
-      "instructions": "Choose the correct particle for each sentence.",
+      "title": "Particle Challenge",
+      "instructions": "Choose the correct particle or answer for each question.",
       "items": [
         {
           "kind": "mcq",
-          "q": "わたしは にほんご ______ べんきょうします。",
-          "choices": ["を", "に", "で", "は"],
-          "answer": "を",
-          "terms": ["v_watashi", "p_wa"],
-          "explanation": "べんきょうする takes を for the subject being studied: にほんごを (study Japanese)."
+          "q": "母 ______ 父は やさしいです。(Mother and father are kind.)",
+          "choices": ["と", "や", "も", "から"],
+          "answer": "と",
+          "terms": ["v_haha", "v_chichi", "v_yasashii"],
+          "explanation": "と lists items completely — exactly mother and father, no one else implied."
         },
         {
           "kind": "mcq",
-          "q": "友だちは そこ ______ います。",
-          "choices": ["に", "で", "を", "が"],
-          "answer": "に",
-          "terms": ["v_tomodachi", "p_wa"],
-          "explanation": "います (exist, animate) takes に for the location of existence."
+          "q": "月よう日 ______ 金よう日まで です。",
+          "choices": ["から", "まで", "と", "も"],
+          "answer": "から",
+          "terms": ["v_getsuyoubi", "v_kinyoubi"],
+          "explanation": "から marks the starting point — 'from Monday to Friday.'"
         },
         {
           "kind": "mcq",
-          "q": "でんしゃ ______ いきましょう！",
-          "choices": ["で", "に", "を", "も"],
-          "answer": "で",
-          "explanation": "で marks the means of transport: 'let's go by train'."
+          "q": "Which sentence means 'My friend is also kind'?",
+          "choices": ["友だちも やさしいです。", "友だちはも やさしいです。", "友だちと やさしいです。", "友だちや やさしいです。"],
+          "answer": "友だちも やさしいです。",
+          "terms": ["v_tomodachi", "v_yasashii"],
+          "explanation": "も REPLACES は — you write 友だちも, never 友だちはも."
         },
         {
           "kind": "mcq",
-          "q": "Which sentence is correct?",
-          "choices": [
-            "がっこうに べんきょうします。",
-            "がっこうで べんきょうします。",
-            "がっこうを べんきょうします。",
-            "がっこうは べんきょうします。"
-          ],
-          "answer": "がっこうで べんきょうします。",
-          "explanation": "べんきょうする is an action → で for the location. に is for existence/destination."
+          "q": "Which particle gives an INCOMPLETE list (implies more items)?",
+          "choices": ["や", "と", "も", "まで"],
+          "answer": "や",
+          "explanation": "や lists examples and implies others exist. と lists everything completely."
         },
         {
           "kind": "mcq",
-          "q": "先生 ______ よびました。(I called the teacher.)",
-          "choices": ["を", "に", "で", "が"],
-          "answer": "を",
-          "terms": ["v_sensei"],
-          "explanation": "よぶ (call) is transitive — を marks what is called."
+          "q": "先生 ______ がくせいが たくさん います。(There are many people like teachers, students, etc.)",
+          "choices": ["や", "と", "も", "から"],
+          "answer": "や",
+          "terms": ["v_sensei", "v_gakusei", "v_takusan"],
+          "explanation": "や gives a sample list — teachers and students are examples, and others are implied."
         }
       ]
     }
