@@ -1512,6 +1512,16 @@
       "reading": "おかね"
     },
     {
+      "id": "v_geemu",
+      "surface": "ゲーム",
+      "meaning": "game",
+      "type": "vocab",
+      "gtype": "noun",
+      "notes": "",
+      "lesson_ids": "N5.2",
+      "reading": "ゲーム"
+    },
+    {
       "id": "v_jikan",
       "surface": "時間",
       "meaning": "time",
@@ -2893,6 +2903,26 @@
       "notes": ""
     },
     {
+      "id": "p_soudesu",
+      "surface": "そうです",
+      "reading": "そうです",
+      "meaning": "that's right / that's correct",
+      "type": "phrase",
+      "gtype": "set-phrase",
+      "lesson_ids": "N5.1",
+      "notes": ""
+    },
+    {
+      "id": "p_hai",
+      "surface": "はい",
+      "reading": "はい",
+      "meaning": "yes",
+      "type": "phrase",
+      "gtype": "set-phrase",
+      "lesson_ids": "N5.1",
+      "notes": ""
+    },
+    {
       "id": "v_iie",
       "surface": "いいえ",
       "reading": "いいえ",
@@ -3149,7 +3179,8 @@
       "gtype": "pronoun",
       "lesson_ids": "N5.1",
       "matches": [
-        "なん"
+        "なん",
+        "何"
       ],
       "notes": "Interrogative pronoun meaning 'what'. Said 'なに' in isolation and before を/が (e.g. なにを); said 'なん' before です, counters, or の (e.g. なんですか、なん人)."
     }
