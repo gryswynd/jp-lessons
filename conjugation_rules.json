@@ -541,6 +541,7 @@
   "conditional_ba": {
     "label": "Conditional (Ba)",
     "description": "Expresses a condition (if/provided that).",
+    "unlocksAfter": "G17",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -580,6 +581,253 @@
         "type": "replace",
         "surface": "あれば",
         "reading": "あれば"
+      }
+    }
+  },
+  "tari_form": {
+    "label": "Tari Form",
+    "description": "Lists representative actions (～たり～たりする = 'doing things like X and Y'). Formed identically to plain past with たり/だり instead of た/だ. The godan euphonic changes are the same as ta_form.",
+    "unlocksAfter": "G7",
+    "rules": {
+      "godan": {
+        "type": "godan_euphonic",
+        "map": "tari_form"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "たり"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "したり",
+        "reading": "したり"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来たり",
+        "reading": "きたり"
+      }
+    }
+  },
+  "polite_negative_te": {
+    "label": "Negative Te-Form (Naide)",
+    "description": "Negative connective form meaning 'without doing', also used in ～ないでください (please don't do). U-verbs shift to the あ-row; RU-verbs drop る; then ないで is added.",
+    "unlocksAfter": "G7",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "ないで"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "ないで"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しないで",
+        "reading": "しないで"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "こないで",
+        "reading": "こないで"
+      }
+    }
+  },
+  "desire_tai_negative": {
+    "label": "Negative Desire (Takunai)",
+    "description": "Expresses not wanting to do something (I don't want to...). Uses the ます-stem + たくない. Conjugates like an i-adjective in further negative/past forms.",
+    "unlocksAfter": "G8",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "たくない"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "たくない"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "したくない",
+        "reading": "したくない"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "きたくない",
+        "reading": "きたくない"
+      }
+    }
+  },
+  "sugiru_form": {
+    "label": "Excessive Degree (Sugiru)",
+    "description": "Expresses 'too much' or 'excessively'. Verbs use the ます-stem + すぎる; i-adjectives drop い + すぎる; na-adjectives add すぎる directly.",
+    "unlocksAfter": "G10",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "すぎる"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "すぎる"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しすぎる",
+        "reading": "しすぎる"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "きすぎる",
+        "reading": "きすぎる"
+      },
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "すぎる"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "すぎる"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よすぎる",
+        "reading": "よすぎる"
+      }
+    }
+  },
+  "nagara_form": {
+    "label": "Simultaneous Actions (Nagara)",
+    "description": "Expresses doing two actions simultaneously ('while doing'). Uses the ます-stem (い-row shift for U-verbs, drop る for RU-verbs) + ながら.",
+    "unlocksAfter": "G15",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "ながら"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "ながら"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しながら",
+        "reading": "しながら"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "きながら",
+        "reading": "きながら"
+      }
+    }
+  },
+  "conditional_tara": {
+    "label": "Conditional (Tara)",
+    "description": "Expresses 'if' or 'when (a completed action occurs)'. Formed by taking the plain past (た/だ) and adding ら. The godan euphonic changes are the same as ta_form.",
+    "unlocksAfter": "G17",
+    "rules": {
+      "godan": {
+        "type": "godan_euphonic",
+        "map": "tara_form"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "たら"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "したら",
+        "reading": "したら"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来たら",
+        "reading": "きたら"
+      },
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "かったら"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "だったら"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よかったら",
+        "reading": "よかったら"
+      },
+      "irr_aru": {
+        "type": "replace",
+        "surface": "あったら",
+        "reading": "あったら"
+      }
+    }
+  },
+  "passive": {
+    "label": "Passive Form",
+    "description": "Expresses that the subject is acted upon by an external agent (is done to). RU-verbs drop る and add られる; U-verbs shift to the あ-row and add れる.",
+    "unlocksAfter": "G18",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "れる"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "られる"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "される",
+        "reading": "される"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来られる",
+        "reading": "こられる"
+      }
+    }
+  },
+  "causative": {
+    "label": "Causative Form",
+    "description": "Expresses making or letting someone do an action. RU-verbs drop る and add させる; U-verbs shift to the あ-row and add せる.",
+    "unlocksAfter": "G18",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "せる"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "させる"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "させる",
+        "reading": "させる"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来させる",
+        "reading": "こさせる"
       }
     }
   }

@@ -519,10 +519,18 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 | `appearance_sou` | ～そうです |
 | `polite_volitional_mashou` | ～ましょう |
 | `conditional_ba` | ～ば / ～ければ |
-| `tari_form` | ～たり (listing actions: ～たり～たりする) |
-| `polite_negative_te` | ～ないで (negative te-form: "without doing") |
+| `tari_form` | ～たり (listing representative actions: ～たり～たりする) |
+| `polite_negative_te` | ～ないで (negative te-form: "without doing"; ないでください = "please don't") |
+| `desire_tai_negative` | ～たくない / ～たくないです (don't want to) |
+| `sugiru_form` | ～すぎる (too much / excessively — verbs and adjectives) |
+| `nagara_form` | ～ながら (while doing — simultaneous actions) |
+| `conditional_tara` | ～たら / ～だったら (if / when — completed-action conditional) |
+| `passive` | ～られる / ～れる (passive — being acted upon) |
+| `causative` | ～させる / ～せる (causative — making/letting someone do) |
 
-Note: `tari_form` and `polite_negative_te` appear in existing review content but are not yet defined in `conjugation_rules.json`. They are valid for use in reviews. If the UI's auto-conjugation is needed for these forms, they must be added to `conjugation_rules.json` first.
+**Unlock schedule.** Each form unlocks after the grammar lesson that formally teaches it. The `unlocksAfter` field in `conjugation_rules.json` records this. Forms without `unlocksAfter` (the original 17 entries) were present from the start of the curriculum.
+
+**Godan euphonic note.** `tari_form` and `conditional_tara` use `godan_euphonic` map types (`"map": "tari_form"` and `"map": "tara_form"`) that parallel `ta_form` but produce たり/だり and たら/だら endings respectively. The rendering engine will need these map types added alongside any future grammar module build. All ichidan, irregular, and adjective rules are fully defined in data and require no code changes.
 
 ### Counter references
 

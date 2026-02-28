@@ -105,6 +105,126 @@
       "reading": "では",
       "role": "negative copula marker (formal)",
       "explanation": "Compound particle で+は used before ありません/ありませんでした to form the formal negative copula (ではありません = 'is not'). The casual equivalent is じゃ (じゃありません)."
+    },
+    {
+      "id": "p_ja",
+      "particle": "じゃ",
+      "reading": "じゃ",
+      "role": "negative copula marker (casual)",
+      "explanation": "Casual contraction of では. Used before ありません/ない to form casual negative copula (じゃありません / じゃない = 'is not'). Common in conversation; avoid in formal writing.",
+      "unlocksAfter": "G1"
+    },
+    {
+      "id": "p_ya",
+      "particle": "や",
+      "reading": "や",
+      "role": "and (partial list)",
+      "explanation": "Connector particle listing nouns as an incomplete sample (A や B = 'things like A and B'). Implies there are other items not mentioned. Contrast with と which lists exhaustively.",
+      "unlocksAfter": "G4"
+    },
+    {
+      "id": "p_made_ni",
+      "particle": "までに",
+      "reading": "までに",
+      "role": "by (deadline)",
+      "explanation": "Compound particle まで+に indicating a deadline: 'by the time of' or 'no later than'. Distinct from まで alone (which means 'until'). Example: 金曜日までに提出する = submit by Friday.",
+      "unlocksAfter": "G4"
+    },
+    {
+      "id": "p_node",
+      "particle": "ので",
+      "reading": "ので",
+      "role": "because / since (soft)",
+      "explanation": "Causal conjunction meaning 'because' or 'since'. More formal and objective than から. Implies the cause is a natural or shared-understanding reason. Followed by plain form before ので; polite form is also accepted.",
+      "unlocksAfter": "G15"
+    },
+    {
+      "id": "p_nagara",
+      "particle": "ながら",
+      "reading": "ながら",
+      "role": "while doing (simultaneous)",
+      "explanation": "Conjunctive suffix expressing two actions happening simultaneously by the same subject ('while doing X, also do Y'). Attaches to the ます-stem of a verb. Example: 音楽を聞きながら勉強する = study while listening to music.",
+      "unlocksAfter": "G15"
+    },
+    {
+      "id": "p_yori",
+      "particle": "より",
+      "reading": "より",
+      "role": "than (comparison)",
+      "explanation": "Comparison particle marking the lesser element in a comparison (A より B のほうが = 'B is more ... than A'). Also used idiomatically in set phrases (より = 'from', formal letter opener).",
+      "unlocksAfter": "G13"
+    },
+    {
+      "id": "p_hodo",
+      "particle": "ほど",
+      "reading": "ほど",
+      "role": "to the extent of / as ... as",
+      "explanation": "Degree particle with two main uses: (1) negative comparison — A は B ほど～ない (A is not as ... as B); (2) extent/degree — ～ほど (to such a degree that). Not interchangeable with より.",
+      "unlocksAfter": "G13"
+    },
+    {
+      "id": "p_kurai",
+      "particle": "くらい",
+      "reading": "くらい",
+      "role": "approximately / about",
+      "explanation": "Approximation particle meaning 'about' or 'roughly'. Interchangeable with ぐらい (softer variant). Used after amounts, times, or quantities. Example: 三時間くらい = about three hours.",
+      "unlocksAfter": "G13"
+    },
+    {
+      "id": "p_dake",
+      "particle": "だけ",
+      "reading": "だけ",
+      "role": "only / just",
+      "explanation": "Limiting particle meaning 'only' or 'just'. Can follow nouns, verbs (dictionary form), or adjectives. Affirms a limit without negative connotation. できるだけ = as much as possible.",
+      "unlocksAfter": "G14"
+    },
+    {
+      "id": "p_shika",
+      "particle": "しか",
+      "reading": "しか",
+      "role": "nothing but / only (with negative)",
+      "explanation": "Exclusive limiting particle that ALWAYS pairs with a negative verb form. Means 'nothing but' or 'only' with a sense of insufficiency or limitation. 水しか飲まない = drink nothing but water (implies not enough variety).",
+      "unlocksAfter": "G14"
+    },
+    {
+      "id": "p_bakari",
+      "particle": "ばかり",
+      "reading": "ばかり",
+      "role": "nothing but / just did",
+      "explanation": "Particle with two main uses: (1) after a noun/verb, means 'nothing but' or 'only' (often with a critical nuance — 肉ばかり食べる = eat nothing but meat); (2) after plain past verb, means 'just did' (食べたばかり = just ate).",
+      "unlocksAfter": "G14"
+    },
+    {
+      "id": "p_demo",
+      "particle": "でも",
+      "reading": "でも",
+      "role": "even / any~ (particle)",
+      "explanation": "Inclusive particle meaning 'even' or used in open-ended compounds: 何でも (anything), いつでも (anytime), 誰でも (anyone). After a noun: 子どもでもわかる = even a child understands. Distinct from sentence-initial でも (= 'but').",
+      "unlocksAfter": "G14"
+    },
+    {
+      "id": "p_noni",
+      "particle": "のに",
+      "reading": "のに",
+      "role": "even though / despite",
+      "explanation": "Concessive conjunction expressing surprise or frustration that the expected result did not occur ('even though / despite the fact that'). 勉強したのに落ちた = Even though I studied, I failed. Carries emotional nuance; prefer のに over けれど when the speaker is disappointed.",
+      "unlocksAfter": "G20"
+    },
+    {
+      "id": "p_kadouka",
+      "particle": "かどうか",
+      "reading": "かどうか",
+      "role": "whether or not",
+      "explanation": "Compound particle embedding an indirect yes/no question into a sentence ('whether or not'). 行くかどうかわからない = I don't know whether I'll go or not. Follows plain form; the かどうか clause acts as a noun phrase.",
+      "unlocksAfter": "G20"
+    },
+    {
+      "id": "p_ni_tsuite",
+      "particle": "について",
+      "reading": "について",
+      "role": "about / regarding",
+      "explanation": "Compound postposition に+ついて meaning 'about', 'regarding', or 'concerning'. Follows a noun. 日本語について話す = talk about the Japanese language. More formal than the English 'about'; common in academic and written contexts.",
+      "unlocksAfter": "G20"
     }
   ]
 }
