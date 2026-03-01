@@ -1,0 +1,386 @@
+{
+  "contentVersion": "1.0.0",
+  "id": "N5.Review.1",
+  "title": "People, Family & Days of the Week",
+  "meta": {
+    "phase": 5,
+    "type": "assessment",
+    "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons N5.1–N5.2.",
+    "kanji": ["人","男","女","子","友","母","父","名","生","先","日","月","火","水","木","金","土","毎","今","何"]
+  },
+  "sections": [
+    {
+      "type": "conversation",
+      "title": "Part 1: Conversation Check",
+      "instructions": "Read each conversation and select the best answer to the comprehension question.",
+      "items": [
+        {
+          "title": "Conversation 1",
+          "context": "Rikizo meets a new classmate, Takashi, for the first time in the school hallway.",
+          "lines": [
+            {
+              "spk": "りきぞ",
+              "jp": "はじめまして。わたしは りきぞです。",
+              "terms": ["p_hajimemashite", "v_watashi", "p_wa", "g_desu"]
+            },
+            {
+              "spk": "たかし",
+              "jp": "はじめまして。たかしです。よろしくおねがいします。",
+              "terms": ["p_hajimemashite", "g_desu", "p_yoroshiku"]
+            },
+            {
+              "spk": "りきぞ",
+              "jp": "やまもと先生は やさしいですよ。",
+              "terms": ["v_sensei", "p_wa", { "id": "v_yasashii", "form": "polite_adj" }, "p_yo"]
+            },
+            {
+              "spk": "たかし",
+              "jp": "そうですか。友だちも いますか。",
+              "terms": ["p_soudesuka", "v_tomodachi", "p_mo", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
+            },
+            {
+              "spk": "りきぞ",
+              "jp": "はい。やまかわと すずきさんが います。",
+              "terms": ["p_hai", "p_to", "v_san", "p_ga", { "id": "v_iru", "form": "polite_masu" }]
+            }
+          ],
+          "question": "What does Rikizo say about Yamamoto-sensei?",
+          "choices": [
+            "Yamamoto-sensei is very kind.",
+            "Yamamoto-sensei is at school every day.",
+            "Yamamoto-sensei is Rikizo's mother.",
+            "Yamamoto-sensei is not here today."
+          ],
+          "answer": "Yamamoto-sensei is very kind.",
+          "explanation": "りきぞ says やまもと先生は やさしいですよ — Yamamoto-sensei is kind, you know. よ at the end adds friendly, informative emphasis."
+        },
+        {
+          "title": "Conversation 2",
+          "context": "Suzuki-san and Yamakawa are talking about which days Yamamoto-sensei is at school.",
+          "lines": [
+            {
+              "spk": "すずき",
+              "jp": "やまもと先生は 何よう日から いますか。",
+              "terms": ["v_sensei", "p_wa", "v_nanyoubi", "p_kara", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
+            },
+            {
+              "spk": "やまかわ",
+              "jp": "月よう日から 金よう日まで です。",
+              "terms": ["v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", "g_desu"]
+            },
+            {
+              "spk": "すずき",
+              "jp": "水よう日も いますか。",
+              "terms": ["v_suiyoubi", "p_mo", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
+            },
+            {
+              "spk": "やまかわ",
+              "jp": "はい、水よう日も います。",
+              "terms": ["p_hai", "v_suiyoubi", "p_mo", { "id": "v_iru", "form": "polite_masu" }]
+            }
+          ],
+          "question": "Which days is Yamamoto-sensei at school?",
+          "choices": [
+            "Monday through Friday.",
+            "Monday, Wednesday, and Friday only.",
+            "Every day of the week.",
+            "Tuesday and Thursday only."
+          ],
+          "answer": "Monday through Friday.",
+          "explanation": "やまかわ says 月よう日から 金よう日まで です — from Monday (月よう日) to Friday (金よう日). The follow-up confirms 水よう日 (Wednesday) is included, making it all five weekdays."
+        },
+        {
+          "title": "Conversation 3",
+          "context": "Yamakawa and Rikizo are studying nature vocabulary together, looking at a picture book.",
+          "lines": [
+            {
+              "spk": "やまかわ",
+              "jp": "水と 木が ありますね。",
+              "terms": ["v_mizu", "p_to", "v_ki", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "p_ne"]
+            },
+            {
+              "spk": "りきぞ",
+              "jp": "はい。火も あります。",
+              "terms": ["p_hai", "v_hi_2", "p_mo", { "id": "v_aru", "form": "polite_masu" }]
+            },
+            {
+              "spk": "やまかわ",
+              "jp": "金と 土は ありますか。",
+              "terms": ["v_kane", "p_to", "v_tsuchi", "p_wa", { "id": "v_aru", "form": "polite_masu" }, "p_ka"]
+            },
+            {
+              "spk": "りきぞ",
+              "jp": "金は ありますが、土は ありません。",
+              "terms": ["v_kane", "p_wa", { "id": "v_aru", "form": "polite_masu" }, "p_ga", "v_tsuchi", "p_wa", { "id": "v_aru", "form": "polite_negative" }]
+            }
+          ],
+          "question": "Which element is NOT shown in the picture book?",
+          "choices": [
+            "Soil (土).",
+            "Water (水).",
+            "Fire (火).",
+            "Gold (金)."
+          ],
+          "answer": "Soil (土).",
+          "explanation": "りきぞ says 土は ありません — soil (土) is not there. Water (水), fire (火), and gold (金) are all confirmed to be present."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 2: Sentence Scramble",
+      "instructions": "Arrange the word chips into the correct Japanese sentence.",
+      "items": [
+        {
+          "kind": "scramble",
+          "q": "The teacher's name is Yamamoto.",
+          "segments": ["先生", "の", "なまえ", "は", "やまもとさん", "です"],
+          "distractors": ["が", "何", "じゃ"],
+          "explanation": "<b>の</b> connects two nouns showing possession (先生の なまえ = the teacher's name). <b>は</b> marks the topic. The sentence ends with <b>です</b>, the polite copula."
+        },
+        {
+          "kind": "scramble",
+          "q": "My mother is here every day.",
+          "segments": ["母", "は", "毎日", "います"],
+          "alts": [
+            ["毎日", "母", "は", "います"]
+          ],
+          "distractors": ["を", "いません", "が"],
+          "explanation": "<b>母は</b> sets the topic (my mother). <b>毎日</b> (every day) is a time expression that can naturally appear before or after the topic phrase — both orders are correct. <b>います</b> is used for animate beings such as people and animals."
+        },
+        {
+          "kind": "scramble",
+          "q": "What day of the week is it today?",
+          "segments": ["今日", "は", "何よう日", "ですか"],
+          "distractors": ["が", "毎日", "でした"],
+          "explanation": "<b>今日は</b> introduces the topic (today). <b>何よう日</b> means 'what day of the week.' The sentence ends with <b>ですか</b> to form a polite question. でした is past tense — wrong here."
+        },
+        {
+          "kind": "scramble",
+          "q": "My father is here from Monday to Friday.",
+          "segments": ["父", "は", "月よう日", "から", "金よう日", "まで", "います"],
+          "distractors": ["に", "を", "いません"],
+          "explanation": "<b>から</b> means 'from' and <b>まで</b> means 'until / to,' together marking a range. 月よう日から 金よう日まで = from Monday to Friday. <b>父は</b> is the topic. <b>います</b> is used for animate beings."
+        },
+        {
+          "kind": "scramble",
+          "q": "There is a woman.",
+          "segments": ["女", "の", "人", "が", "います"],
+          "distractors": ["は", "を", "ありません"],
+          "explanation": "<b>女の人</b> means 'a woman' (literally 'person of the female kind'). <b>が</b> marks the subject when introducing the existence of something. In existence sentences (あります / います), the thing that exists takes が. は would make it a contrastive topic rather than an existence statement."
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Part 3: Reading Comprehension",
+      "instructions": "Read the passage carefully, then select the best answer to each question.",
+      "passage": [
+        {
+          "jp": "わたしは りきぞです。わたしの 先生は やまもと先生です。",
+          "en": "I am Rikizo. My teacher is Yamamoto-sensei.",
+          "terms": ["v_watashi", "p_wa", "g_desu", "v_watashi", "p_no", "v_sensei", "p_wa", "v_sensei", "g_desu"]
+        },
+        {
+          "jp": "やまもと先生は 月よう日から 金よう日まで います。",
+          "en": "Yamamoto-sensei is here from Monday to Friday.",
+          "terms": ["v_sensei", "p_wa", "v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "jp": "毎日 やまかわと すずきさんと います。",
+          "en": "Every day I am with Yamakawa and Suzuki-san.",
+          "terms": ["v_mainichi", "p_to", "v_san", "p_to", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "jp": "今日は 木よう日です。母と 父も います。",
+          "en": "Today is Thursday. My mother and father are also here.",
+          "terms": ["v_kyou", "p_wa", "v_mokuyoubi", "g_desu", "v_haha", "p_to", "v_chichi", "p_mo", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "jp": "先生は とても やさしいです。",
+          "en": "The teacher is very kind.",
+          "terms": ["v_sensei", "p_wa", "v_totemo", { "id": "v_yasashii", "form": "polite_adj" }]
+        }
+      ],
+      "questions": [
+        {
+          "q": "Who is Rikizo's teacher?",
+          "a": "Yamamoto-sensei.",
+          "choices": [
+            "Yamamoto-sensei.",
+            "Yamakawa-sensei.",
+            "Suzuki-sensei.",
+            "Takashi-sensei."
+          ],
+          "terms": ["v_sensei", "p_no", "v_sensei"],
+          "explanation": "The passage states わたしの 先生は やまもと先生です — my teacher is Yamamoto-sensei."
+        },
+        {
+          "q": "Which days is Yamamoto-sensei at school?",
+          "a": "Monday to Friday.",
+          "choices": [
+            "Monday to Friday.",
+            "Monday, Wednesday, and Friday only.",
+            "Every day.",
+            "Tuesday and Thursday only."
+          ],
+          "terms": ["v_sensei", "v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made"],
+          "explanation": "The passage says 月よう日から 金よう日まで います — she is there from Monday (月よう日) to Friday (金よう日)."
+        },
+        {
+          "q": "What day is it today in the passage?",
+          "a": "Thursday.",
+          "choices": [
+            "Thursday.",
+            "Monday.",
+            "Friday.",
+            "Wednesday."
+          ],
+          "terms": ["v_kyou", "p_wa", "v_mokuyoubi", "g_desu"],
+          "explanation": "The passage states 今日は 木よう日です — today is Thursday (木よう日)."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 4: Kanji Readings",
+      "instructions": "Select the correct reading for the kanji word shown in brackets.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "【先生】",
+          "choices": ["せんせい", "さきせい", "まえせい", "せんしょう"],
+          "answer": "せんせい",
+          "explanation": "先生 is read <b>せんせい</b>. 先 (sen) and 生 (sei) both use on-yomi readings. Together they mean 'teacher.'"
+        },
+        {
+          "kind": "mcq",
+          "q": "【母】",
+          "choices": ["はは", "ちち", "あね", "いもうと"],
+          "answer": "はは",
+          "explanation": "母 is read <b>はは</b> (one's own mother, informal). Contrast with お母さん (おかあさん), the polite form used when referring to someone else's mother."
+        },
+        {
+          "kind": "mcq",
+          "q": "【父】",
+          "choices": ["ちち", "はは", "あに", "おとうと"],
+          "answer": "ちち",
+          "explanation": "父 is read <b>ちち</b> (one's own father, informal). Contrast with お父さん (おとうさん), the polite form used when referring to someone else's father."
+        },
+        {
+          "kind": "mcq",
+          "q": "【毎日】",
+          "choices": ["まいにち", "まいひ", "ごにち", "まいにっ"],
+          "answer": "まいにち",
+          "explanation": "毎日 is read <b>まいにち</b> (every day). 毎 (mai = every) + 日 (nichi = day). Note that 日 reads as <b>にち</b> in this compound, not ひ."
+        },
+        {
+          "kind": "mcq",
+          "q": "【今日】",
+          "choices": ["きょう", "こんにち", "こんじつ", "いまひ"],
+          "answer": "きょう",
+          "explanation": "今日 is read <b>きょう</b> (today). This is an irregular reading — 今 and 日 do not follow their standard on-yomi when combined in this word."
+        },
+        {
+          "kind": "mcq",
+          "q": "【金よう日】",
+          "choices": ["きんようび", "かねようび", "つちようび", "もくようび"],
+          "answer": "きんようび",
+          "explanation": "金よう日 is read <b>きんようび</b> (Friday). 金 uses its on-yomi きん. Be careful: もくようび is Thursday (木よう日) — a common mix-up."
+        },
+        {
+          "kind": "mcq",
+          "q": "【水】",
+          "choices": ["みず", "すい", "かわ", "うみ"],
+          "answer": "みず",
+          "explanation": "水 is read <b>みず</b> (water) as a standalone noun. Its on-yomi reading すい appears in compounds like 水よう日 (Wednesday)."
+        },
+        {
+          "kind": "mcq",
+          "q": "【今月】",
+          "choices": ["こんげつ", "きょうつき", "いまつき", "こんにち"],
+          "answer": "こんげつ",
+          "explanation": "今月 is read <b>こんげつ</b> (this month). 今 reads as こん (on-yomi) and 月 reads as げつ (on-yomi) in this compound."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 5: Context & Vocabulary",
+      "instructions": "Choose the word that best completes each sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "今日は ___ よう日ですか。",
+          "choices": ["何", "毎", "今", "先"],
+          "answer": "何",
+          "terms": ["v_kyou", "p_wa", "v_nanyoubi", "g_desu", "p_ka"],
+          "explanation": "<b>何よう日</b> means 'what day of the week.' 何 (なん) is the question word for 'what.' 毎 means 'every,' 今 means 'now/this,' and 先 means 'previous/ahead' — none form a natural day-of-week question."
+        },
+        {
+          "kind": "mcq",
+          "q": "先生は ___ やさしいです。",
+          "choices": ["とても", "毎日", "今日", "何"],
+          "answer": "とても",
+          "terms": ["v_sensei", "p_wa", "v_totemo", { "id": "v_yasashii", "form": "polite_adj" }],
+          "explanation": "<b>とても</b> means 'very' and is an adverb that modifies adjectives like やさしい (kind). 毎日 (every day) and 今日 (today) are time expressions that do not naturally modify an adjective in this position."
+        },
+        {
+          "kind": "mcq",
+          "q": "木と 火と 水 ___ あります。",
+          "choices": ["が", "は", "も", "の"],
+          "answer": "が",
+          "terms": ["v_ki", "p_to", "v_hi_2", "p_to", "v_mizu", "p_ga", { "id": "v_aru", "form": "polite_masu" }],
+          "explanation": "<b>が</b> marks the grammatical subject, especially when stating that something exists. In existence sentences (あります / います), the thing that exists is marked with が. は would mark the noun as a contrastive topic rather than the subject of existence."
+        },
+        {
+          "kind": "mcq",
+          "q": "母と 父 ___ います。",
+          "choices": ["も", "が", "の", "を"],
+          "answer": "も",
+          "terms": ["v_haha", "p_to", "v_chichi", "p_mo", { "id": "v_iru", "form": "polite_masu" }],
+          "explanation": "<b>も</b> means 'also / too,' indicating that mother and father are here in addition to others already mentioned. が marks a new subject; の shows possession; を marks a direct object — none convey the 'also' meaning here."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 6: Grammar Check",
+      "instructions": "Choose the particle that correctly completes each sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "やまもと先生 ___ やさしいです。",
+          "choices": ["は", "が", "の", "と"],
+          "answer": "は",
+          "terms": ["v_sensei", "p_wa", { "id": "v_yasashii", "form": "polite_adj" }],
+          "explanation": "<b>は</b> marks the topic. Yamamoto-sensei is a known entity being talked about, so は is natural. が would mark her as the subject introducing new or focused information — less natural when she is an established topic of conversation."
+        },
+        {
+          "kind": "mcq",
+          "q": "月よう日 ___ 金よう日まで います。",
+          "choices": ["から", "まで", "と", "が"],
+          "answer": "から",
+          "terms": ["v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", { "id": "v_iru", "form": "polite_masu" }],
+          "explanation": "<b>から</b> means 'from' and pairs with <b>まで</b> (until / to) to express a range. 月よう日から 金よう日まで = from Monday to Friday. と connects nouns with 'and'; が marks a grammatical subject."
+        },
+        {
+          "kind": "mcq",
+          "q": "父と 母 ___ います。",
+          "choices": ["も", "が", "の", "から"],
+          "answer": "も",
+          "terms": ["v_chichi", "p_to", "v_haha", "p_mo", { "id": "v_iru", "form": "polite_masu" }],
+          "explanation": "<b>も</b> means 'also / too,' indicating that father and mother are here in addition to others. が marks a subject introducing new information; の shows possession; から means 'from' — none convey the 'also' meaning here."
+        },
+        {
+          "kind": "mcq",
+          "q": "わたしは 先生 ___ ありません。",
+          "choices": ["では", "は", "が", "の"],
+          "answer": "では",
+          "terms": ["v_watashi", "p_wa", "v_sensei", "p_dewa", { "id": "v_aru", "form": "polite_negative" }],
+          "explanation": "<b>では ありません</b> is the polite negative copula meaning 'is not.' It attaches to a noun (先生) to say 'I am not a teacher.' じゃ ありません is the casual equivalent. は or が alone cannot form a negative copula."
+        }
+      ]
+    }
+  ]
+}
