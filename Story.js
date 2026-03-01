@@ -162,6 +162,7 @@ window.StoryModule = (function() {
           font-weight: 700;
           cursor: pointer;
           border-bottom: 2px solid rgba(102,126,234,0.2);
+          margin-right: 1px;
           transition: 0.2s;
         }
         .jp-term:hover {
