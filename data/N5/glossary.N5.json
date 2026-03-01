@@ -2628,17 +2628,6 @@
       "notes": "Godan-pattern in all polite forms (あります, ありません). Irregular in plain negative: ない (not あらない). Used in formal negative copula: ではありません."
     },
     {
-      "id": "v_iru",
-      "surface": "入る",
-      "meaning": "to enter",
-      "type": "vocab",
-      "gtype": "verb",
-      "notes": "",
-      "lesson_ids": "N5.17",
-      "reading": "いる",
-      "verb_class": "godan"
-    },
-    {
       "id": "v_hairu",
       "surface": "入る",
       "meaning": "to enter",
@@ -2809,16 +2798,6 @@
       "reading": "なんじ"
     },
     {
-      "id": "v_aru",
-      "surface": "ある",
-      "reading": "ある",
-      "meaning": "to exist (inanimate)",
-      "type": "vocab",
-      "gtype": "verb",
-      "verb_class": "godan",
-      "lesson_ids": "N5.4"
-    },
-    {
       "id": "v_iru",
       "surface": "いる",
       "reading": "いる",
@@ -2826,7 +2805,7 @@
       "type": "vocab",
       "gtype": "verb",
       "verb_class": "ichidan",
-      "lesson_ids": "N5.4"
+      "lesson_ids": "N5.1"
     },
     {
       "id": "v_ikiru",
@@ -3017,6 +2996,16 @@
       "gtype": "noun",
       "lesson_ids": "N5.1",
       "notes": "Refers to the speaker's own mother. Contrast with お母さん (polite/others' mother)."
+    },
+    {
+      "id": "v_hito",
+      "surface": "人",
+      "reading": "ひと",
+      "meaning": "person; people",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.1",
+      "notes": "Standalone noun use of the kanji 人. Contrast with 人々 (hitobito, people in general)."
     },
     {
       "id": "v_yasashii",
