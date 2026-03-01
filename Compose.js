@@ -73,6 +73,13 @@ window.ComposeModule = {
             .c-lvl-title-bar { font-weight: 800; font-size: 1rem; color: var(--c-primary-dark); margin-bottom: 8px; padding: 0 4px; }
             .c-menu-empty { padding: 20px; text-align: center; color: #a4b0be; font-weight: 600; font-size: 0.9rem; }
 
+            /* COMPOSE HEADER */
+            .c-compose-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; padding: 12px 16px; background: white; border-radius: 14px; border: 2px solid #e0f2f1; }
+            .c-compose-header-emoji { font-size: 2.2rem; flex-shrink: 0; }
+            .c-compose-header-info { flex: 1; min-width: 0; }
+            .c-compose-header-title { font-weight: 900; font-size: 1.15rem; color: var(--c-primary-dark); }
+            .c-compose-header-theme { font-size: 0.82rem; color: var(--c-text-sub); line-height: 1.4; margin-top: 2px; }
+
             /* PROMPT TIMELINE */
             .c-timeline { width: 100%; margin-bottom: 12px; }
             .c-timeline-step { display: flex; align-items: flex-start; gap: 12px; padding: 10px 12px; border-radius: 10px; margin-bottom: 4px; transition: all 0.3s; position: relative; }
@@ -155,6 +162,11 @@ window.ComposeModule = {
             .c-conj-label { font-weight: 700; color: var(--c-text-main); }
             .c-conj-desc { color: var(--c-text-sub); font-size: 0.78rem; }
 
+            /* NEXT PROMPT BUTTON */
+            .c-next-prompt-btn { background: linear-gradient(135deg, var(--c-success), #20bf6b); color: white; border: none; padding: 12px 20px; border-radius: 12px; font-size: 1rem; font-weight: 800; width: 100%; margin: 10px 0; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(46, 213, 115, 0.3); animation: c-celebrate 0.4s ease; }
+            .c-next-prompt-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(46, 213, 115, 0.4); }
+            .c-next-prompt-btn:active { transform: scale(0.98); }
+
             /* COMPLETE BANNER */
             .c-complete-banner { background: linear-gradient(135deg, #2ed573, #26de81); color: white; border-radius: 14px; padding: 1.2rem; text-align: center; margin-bottom: 12px; animation: c-celebrate 0.5s ease; }
             .c-complete-banner h3 { margin: 0 0 4px 0; font-size: 1.3rem; }
@@ -231,8 +243,9 @@ window.ComposeModule = {
 
     // --- STATE ---
     let currentCompose = null;   // the active compose file data
-    let activePromptIndex = 0;   // which prompt is currently active
+    let activePromptIndex = 0;   // which prompt is currently active (manually controlled)
     let allPromptsComplete = false;
+    let currentPromptTargetsMet = false; // whether the active prompt's targets are all met
 
     // --- HELPER FUNCTIONS ---
     function countOccurrences(text, matches) {
@@ -298,26 +311,32 @@ window.ComposeModule = {
         return [...(compose.prompts || []), ...(compose.challengePrompts || [])];
     }
 
-    // Compute vocab coverage: what % of lesson vocab the student used
+    // Check if a string contains at least one kanji character (CJK Unified Ideographs)
+    function containsKanji(str) {
+        return /[\u4e00-\u9faf\u3400-\u4dbf]/.test(str);
+    }
+
+    // Compute vocab coverage: what % of kanji-containing lesson vocab the student used
     function computeCoverage(compose, text) {
         const lessonId = compose.lesson;
         const lessonVocab = allVocab.filter(v => {
             const lessons = (v.lesson_ids || v.lesson || '').split(',').map(s => s.trim());
             return lessons.includes(lessonId);
         });
-        // Deduplicate by surface
+        // Only count vocab with kanji in the surface form, deduplicated
         const seen = new Set();
         const unique = lessonVocab.filter(v => {
             if (v.id && v.id.includes('__')) return false;
-            const s = v.surface || v.particle || '';
+            const s = v.surface || '';
             if (!s || seen.has(s)) return false;
+            if (!containsKanji(s)) return false;
             seen.add(s);
             return true;
         });
         let used = 0;
         const usedWords = [];
         unique.forEach(v => {
-            const surface = v.surface || v.particle || '';
+            const surface = v.surface || '';
             if (surface && text.includes(surface)) {
                 used++;
                 usedWords.push(surface);
@@ -354,15 +373,14 @@ window.ComposeModule = {
             html += `<div class="c-lvl-group"><div class="c-lvl-title-bar">${lvl} Compositions</div>`;
             files.forEach(cf => {
                 const totalPrompts = (cf.prompts || []).length + (cf.challengePrompts || []).length;
-                const draft = window.JPShared.progress.getDraft(cf.id);
+                const draftState = loadDraftState(cf);
                 const meta = lessonMeta.get(cf.lesson);
 
                 // Check completion status from draft
                 let statusTag = '';
-                if (draft) {
-                    const idx = computeActiveIndex(cf, draft);
+                if (draftState.text) {
                     const total = getAllPrompts(cf).length;
-                    if (idx >= total) {
+                    if (draftState.promptIndex >= total) {
                         statusTag = '<span class="c-menu-tag c-menu-tag-done">Complete</span>';
                     } else {
                         statusTag = '<span class="c-menu-tag c-menu-tag-draft">Draft saved</span>';
@@ -410,13 +428,15 @@ window.ComposeModule = {
         if (!compEl) return;
         compEl.classList.remove('c-hidden');
 
-        // Load draft
-        const draft = window.JPShared.progress.getDraft(compose.id) || '';
-
-        // Determine active prompt from draft content
-        activePromptIndex = computeActiveIndex(compose, draft);
+        // Load draft and saved prompt index
+        const draftState = loadDraftState(compose);
+        const draft = draftState.text;
+        activePromptIndex = draftState.promptIndex;
+        currentPromptTargetsMet = false;
         const allP = getAllPrompts(compose);
-        allPromptsComplete = activePromptIndex >= allP.length;
+        // Clamp to valid range
+        if (activePromptIndex >= allP.length) activePromptIndex = Math.max(0, allP.length - 1);
+        allPromptsComplete = false;
 
         ComposeApp.renderComposeView(draft);
     };
@@ -514,6 +534,14 @@ window.ComposeModule = {
 
         // Build complete view
         compEl.innerHTML = `
+            <div class="c-compose-header">
+                <span class="c-compose-header-emoji">${compose.emoji || ''}</span>
+                <div class="c-compose-header-info">
+                    <div class="c-compose-header-title">${escHtml(compose.title)}</div>
+                    <div class="c-compose-header-theme">${escHtml(compose.theme || '')}</div>
+                </div>
+            </div>
+
             <div class="c-timeline" id="c-timeline">${timelineHtml}</div>
 
             ${promptBannerHtml}
@@ -539,6 +567,8 @@ window.ComposeModule = {
                     <button class="c-btn c-btn-sm c-btn-sec" onclick="ComposeApp.clearDraft()" title="Clear composition">Clear</button>
                 </div>
             </div>
+
+            <button id="c-next-prompt-btn" class="c-next-prompt-btn c-hidden" onclick="ComposeApp.nextPrompt()">Next Prompt &#x2192;</button>
 
             ${targetHtml ? `
             <div class="c-section" style="margin-top:8px;">
@@ -594,7 +624,7 @@ window.ComposeModule = {
         if (input) {
             input.addEventListener('input', function() {
                 ComposeApp.updateTracking();
-                window.JPShared.progress.saveDraft(currentCompose.id, input.value);
+                saveDraftState();
                 const cc = document.getElementById('c-char-count');
                 if (cc) cc.textContent = input.value.length + ' characters';
             });
@@ -613,20 +643,26 @@ window.ComposeModule = {
         let html = '';
 
         allP.forEach((p, i) => {
-            const targets = resolveTargets(p.targets);
-            const allMet = targets.every(t => countOccurrences(text, t.matches) >= t.count);
             const isChallenge = i >= regularCount;
             const isActive = i === activePromptIndex;
-            const isDone = allMet;
-            const isLocked = i > activePromptIndex && !isDone;
+            const isPast = i < activePromptIndex; // already advanced past
+            const isLocked = i > activePromptIndex;
+
+            // For the active prompt, check targets against text
+            let isCurrentMet = false;
+            if (isActive) {
+                const targets = resolveTargets(p.targets);
+                isCurrentMet = targets.every(t => countOccurrences(text, t.matches) >= t.count);
+            }
 
             let cls = 'c-timeline-step';
-            if (isDone) cls += ' done';
+            if (isPast) cls += ' done';
+            else if (isActive && isCurrentMet) cls += ' active done';
             else if (isActive) cls += ' active';
             else if (isLocked) cls += ' locked';
             if (isChallenge) cls += ' challenge';
 
-            const badge = isDone ? '✓' : (i + 1);
+            const badge = isPast ? '✓' : (isActive && isCurrentMet ? '✓' : (i + 1));
             const promptText = (p.prompt || '').substring(0, 60) + ((p.prompt || '').length > 60 ? '...' : '');
             const challengeTag = isChallenge ? '<span class="c-timeline-challenge-tag">Challenge</span>' : '';
 
@@ -648,34 +684,18 @@ window.ComposeModule = {
         const compose = currentCompose;
         const allP = getAllPrompts(compose);
 
-        // Compute new active index
-        const newActiveIndex = computeActiveIndex(compose, text);
-        const prevIndex = activePromptIndex;
-        const wasComplete = allPromptsComplete;
-
-        activePromptIndex = newActiveIndex;
-        allPromptsComplete = newActiveIndex >= allP.length;
-
-        // If the active prompt changed, re-render the view (preserving text)
-        if (newActiveIndex !== prevIndex) {
-            ComposeApp.renderComposeView(text);
-            // Re-focus and restore cursor position
-            const newInput = document.getElementById('c-compose-input');
-            if (newInput) {
-                newInput.focus();
-                newInput.selectionStart = newInput.selectionEnd = text.length;
-            }
-            return;
-        }
+        allPromptsComplete = activePromptIndex >= allP.length;
 
         // Update current prompt's targets
         if (activePromptIndex < allP.length) {
             const activeP = allP[activePromptIndex];
             const resolvedTargets = resolveTargets(activeP.targets);
 
+            let allMet = true;
             resolvedTargets.forEach((t, i) => {
                 const count = countOccurrences(text, t.matches);
                 const met = count >= t.count;
+                if (!met) allMet = false;
                 const item = document.getElementById('c-tgt-' + i);
                 const chk = document.getElementById('c-tgt-chk-' + i);
                 const cnt = document.getElementById('c-tgt-cnt-' + i);
@@ -683,6 +703,22 @@ window.ComposeModule = {
                 if (chk) chk.textContent = met ? '✓' : '';
                 if (cnt) cnt.textContent = `${Math.min(count, t.count)}/${t.count}`;
             });
+
+            currentPromptTargetsMet = allMet;
+
+            // Show/hide Next Prompt button
+            const nextBtn = document.getElementById('c-next-prompt-btn');
+            if (nextBtn) {
+                if (allMet && activePromptIndex < allP.length - 1) {
+                    nextBtn.classList.remove('c-hidden');
+                } else if (allMet && activePromptIndex === allP.length - 1) {
+                    // Last prompt done — hide next button, completion will show
+                    nextBtn.classList.add('c-hidden');
+                    allPromptsComplete = true;
+                } else {
+                    nextBtn.classList.add('c-hidden');
+                }
+            }
         }
 
         // Update timeline
@@ -692,12 +728,17 @@ window.ComposeModule = {
         // Update overall progress bar
         let totalMet = 0;
         let totalTargets = 0;
-        allP.forEach(p => {
+        allP.forEach((p, i) => {
             const targets = resolveTargets(p.targets);
             totalTargets += targets.length;
-            targets.forEach(t => {
-                if (countOccurrences(text, t.matches) >= t.count) totalMet++;
-            });
+            if (i < activePromptIndex) {
+                // Already completed prompts — all targets count as met
+                totalMet += targets.length;
+            } else if (i === activePromptIndex) {
+                targets.forEach(t => {
+                    if (countOccurrences(text, t.matches) >= t.count) totalMet++;
+                });
+            }
         });
         const pct = totalTargets > 0 ? Math.round((totalMet / totalTargets) * 100) : 0;
         const fill = document.getElementById('c-progress-fill');
@@ -726,9 +767,9 @@ window.ComposeModule = {
                 const cov = computeCoverage(compose, text);
                 coverageBox.className = 'c-coverage';
                 coverageBox.innerHTML = `
-                    <div class="c-coverage-title">Vocabulary Coverage</div>
+                    <div class="c-coverage-title">Kanji Vocabulary Coverage</div>
                     <div class="c-coverage-pct">${cov.pct}%</div>
-                    <div class="c-coverage-label">${cov.used} of ${cov.total} lesson words used</div>
+                    <div class="c-coverage-label">${cov.used} of ${cov.total} kanji words used</div>
                     <div class="c-coverage-bar"><div class="c-coverage-fill" style="width:${cov.pct}%"></div></div>`;
             } else {
                 coverageBox.className = 'c-hidden';
@@ -736,6 +777,41 @@ window.ComposeModule = {
             }
         }
     };
+
+    ComposeApp.nextPrompt = function() {
+        if (!currentCompose) return;
+        const allP = getAllPrompts(currentCompose);
+        if (activePromptIndex >= allP.length - 1) return;
+        activePromptIndex++;
+        currentPromptTargetsMet = false;
+        // Save prompt index
+        saveDraftState();
+        const input = document.getElementById('c-compose-input');
+        const text = input ? input.value : '';
+        ComposeApp.renderComposeView(text);
+        // Re-focus textarea
+        const newInput = document.getElementById('c-compose-input');
+        if (newInput) {
+            newInput.focus();
+            newInput.selectionStart = newInput.selectionEnd = text.length;
+        }
+    };
+
+    function saveDraftState() {
+        if (!currentCompose) return;
+        const input = document.getElementById('c-compose-input');
+        if (!input) return;
+        // Save text and prompt index together
+        window.JPShared.progress.saveDraft(currentCompose.id, input.value);
+        window.JPShared.progress.saveDraft(currentCompose.id + '__promptIdx', String(activePromptIndex));
+    }
+
+    function loadDraftState(compose) {
+        const text = window.JPShared.progress.getDraft(compose.id) || '';
+        const savedIdx = window.JPShared.progress.getDraft(compose.id + '__promptIdx');
+        const idx = savedIdx !== null && savedIdx !== '' ? parseInt(savedIdx, 10) : 0;
+        return { text, promptIndex: isNaN(idx) ? 0 : idx };
+    }
 
     ComposeApp.toggleSection = function(hdr) {
         hdr.classList.toggle('open');
@@ -776,7 +852,9 @@ window.ComposeModule = {
         if (!confirm('Clear your composition? This cannot be undone.')) return;
         input.value = '';
         window.JPShared.progress.clearDraft(currentCompose.id);
+        window.JPShared.progress.clearDraft(currentCompose.id + '__promptIdx');
         activePromptIndex = 0;
+        currentPromptTargetsMet = false;
         allPromptsComplete = false;
         ComposeApp.renderComposeView('');
     };
@@ -881,7 +959,7 @@ window.ComposeModule = {
                     <div class="c-score-row">
                         <div>
                             <div class="c-score-row-label">Vocabulary</div>
-                            <div class="c-score-row-detail">${targetsMet}/${totalTargets} targets · ${cov.used}/${cov.total} lesson vocab (${cov.pct}%)</div>
+                            <div class="c-score-row-detail">${targetsMet}/${totalTargets} targets · ${cov.used}/${cov.total} kanji words (${cov.pct}%)</div>
                             <div class="c-score-bar"><div class="c-score-bar-fill" style="width:${Math.round(vocabScore/40*100)}%;background:var(--c-primary)"></div></div>
                         </div>
                         <div class="c-score-row-pts">${vocabScore}/40</div>
