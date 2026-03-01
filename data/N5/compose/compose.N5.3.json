@@ -11,15 +11,12 @@
     {
       "prompt": "Begin your composition. Write what month this is and what the date is today.",
       "targets": [
-        { "id": "v_sangatsu", "count": 1 },
+        { "counter": "gatsu", "n": 3, "count": 1 },
         { "id": "v_mikka", "count": 1 }
       ],
       "model": "今月は 三月です。今日は 三日です。",
       "vocabPool": [
         "v_kongetsu", "v_kyou", "v_mainichi", "v_maigetsu",
-        "v_ichigatsu", "v_nigatsu", "v_sangatsu", "v_shigatsu",
-        "v_gogatsu", "v_rokugatsu", "v_shichigatsu", "v_hachigatsu",
-        "v_kugatsu", "v_juugatsu",
         "v_ichinichitsuitachi", "v_futsuka", "v_mikka", "v_yokka",
         "v_itsuka", "v_muika", "v_nanoka", "v_youka", "v_kokonoka", "v_tooka",
         "v_watashi", "v_totemo", "v_ii", "v_ureshii", "g_desu"
@@ -28,13 +25,12 @@
     {
       "prompt": "Continue your composition. Write how many people are in your family or friend group. Name them if you can.",
       "targets": [
-        { "id": "v_futari", "count": 1 }
+        { "counter": "nin", "n": 2, "count": 1 }
       ],
       "model": "かぞくは 二人 です。父と わたしです。",
       "vocabPool": [
-        "v_hitori", "v_futari", "v_sannin", "v_yonin", "v_gonin",
-        "v_rokunin", "v_shichinin", "v_hachinin", "v_kunin", "v_juunin",
-        "v_nannin", "v_chichi", "v_haha", "v_otousan", "v_okaasan",
+        "v_nannin",
+        "v_chichi", "v_haha", "v_otousan", "v_okaasan",
         "v_tomodachi", "v_sensei", "v_watashi",
         "v_iru", "v_issho", "v_mainichi", "v_totemo", "v_ii", "g_desu"
       ]
@@ -42,14 +38,11 @@
     {
       "prompt": "Finish your composition. Write when your birthday is and whether you have money this month.",
       "targets": [
-        { "id": "v_gogatsu", "count": 1 },
+        { "counter": "gatsu", "n": 5, "count": 1 },
         { "id": "v_okane", "count": 1 }
       ],
       "model": "たんじょうびは 五月 五日です。今月は お金が あります。うれしいです。",
       "vocabPool": [
-        "v_ichigatsu", "v_nigatsu", "v_sangatsu", "v_shigatsu",
-        "v_gogatsu", "v_rokugatsu", "v_shichigatsu", "v_hachigatsu",
-        "v_kugatsu", "v_juugatsu",
         "v_ichinichitsuitachi", "v_futsuka", "v_mikka", "v_yokka",
         "v_itsuka", "v_muika", "v_nanoka", "v_youka", "v_kokonoka", "v_tooka",
         "v_okane", "v_kongetsu", "v_maigetsu", "v_kyou",

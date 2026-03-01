@@ -78,7 +78,18 @@
         },
         {
           "label": "Counting People",
-          "items": ["v_hitori","v_futari","v_sannin","v_yonin","v_gonin","v_rokunin","v_shichinin","v_hachinin","v_kunin","v_juunin"]
+          "items": [
+            { "counter": "nin", "n": 1 },
+            { "counter": "nin", "n": 2 },
+            { "counter": "nin", "n": 3 },
+            { "counter": "nin", "n": 4 },
+            { "counter": "nin", "n": 5 },
+            { "counter": "nin", "n": 6 },
+            { "counter": "nin", "n": 7 },
+            { "counter": "nin", "n": 8 },
+            { "counter": "nin", "n": 9 },
+            { "counter": "nin", "n": 10 }
+          ]
         },
         {
           "label": "Days of the Month",
@@ -86,7 +97,18 @@
         },
         {
           "label": "Month Names",
-          "items": ["v_ichigatsu","v_nigatsu","v_sangatsu","v_shigatsu","v_gogatsu","v_rokugatsu","v_shichigatsu","v_hachigatsu","v_kugatsu","v_juugatsu"]
+          "items": [
+            { "counter": "gatsu", "n": 1 },
+            { "counter": "gatsu", "n": 2 },
+            { "counter": "gatsu", "n": 3 },
+            { "counter": "gatsu", "n": 4 },
+            { "counter": "gatsu", "n": 5 },
+            { "counter": "gatsu", "n": 6 },
+            { "counter": "gatsu", "n": 7 },
+            { "counter": "gatsu", "n": 8 },
+            { "counter": "gatsu", "n": 9 },
+            { "counter": "gatsu", "n": 10 }
+          ]
         }
       ]
     },
@@ -105,7 +127,7 @@
           "spk": "B",
           "jp": "三人 います。",
           "en": "There are three.",
-          "terms": ["v_sannin", { "id": "v_iru", "form": "polite_masu" }]
+          "terms": [{ "counter": "nin", "n": 3 }, { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "spk": "A",
@@ -117,13 +139,13 @@
           "spk": "B",
           "jp": "一人 います。やまもと先生です。",
           "en": "There is one. It is Yamamoto-sensei.",
-          "terms": ["v_hitori", { "id": "v_iru", "form": "polite_masu" }, "v_sensei", "g_desu"]
+          "terms": [{ "counter": "nin", "n": 1 }, { "id": "v_iru", "form": "polite_masu" }, "v_sensei", "g_desu"]
         },
         {
           "spk": "A",
           "jp": "毎日 一人 いますか。",
           "en": "Is there one teacher every day?",
-          "terms": ["v_mainichi", "v_hitori", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
+          "terms": ["v_mainichi", { "counter": "nin", "n": 1 }, { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
         },
         {
           "spk": "B",
@@ -142,7 +164,7 @@
           "spk": "A",
           "jp": "りきぞさん、今月は 三月ですね。",
           "en": "Rikizo-san, this month is March, right?",
-          "terms": ["v_san", "v_kongetsu", "p_wa", "v_sangatsu", "g_desu", "p_ne"]
+          "terms": ["v_san", "v_kongetsu", "p_wa", { "counter": "gatsu", "n": 3 }, "g_desu", "p_ne"]
         },
         {
           "spk": "B",
@@ -160,13 +182,13 @@
           "spk": "B",
           "jp": "五人 います。",
           "en": "There are five.",
-          "terms": ["v_gonin", { "id": "v_iru", "form": "polite_masu" }]
+          "terms": [{ "counter": "nin", "n": 5 }, { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "spk": "A",
           "jp": "毎月 三日に 五人 います。",
           "en": "Every month on the third, five people come.",
-          "terms": ["v_maigetsu", "v_mikka", "p_ni", "v_gonin", { "id": "v_iru", "form": "polite_masu" }]
+          "terms": ["v_maigetsu", "v_mikka", "p_ni", { "counter": "nin", "n": 5 }, { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "spk": "B",
@@ -228,25 +250,25 @@
           "spk": "A",
           "jp": "やまかわさん、たんじょうびは 三月ですか。",
           "en": "Yamakawa-san, is your birthday in March?",
-          "terms": ["v_san", "p_wa", "v_sangatsu", "g_desu", "p_ka"]
+          "terms": ["v_san", "p_wa", { "counter": "gatsu", "n": 3 }, "g_desu", "p_ka"]
         },
         {
           "spk": "B",
           "jp": "そうです。三月 三日です。",
           "en": "That's right. It's March 3rd.",
-          "terms": ["p_soudesu", "v_sangatsu", "v_mikka", "g_desu"]
+          "terms": ["p_soudesu", { "counter": "gatsu", "n": 3 }, "v_mikka", "g_desu"]
         },
         {
           "spk": "A",
           "jp": "わたしは 五月 五日です。",
           "en": "Mine is May 5th.",
-          "terms": ["v_watashi", "p_wa", "v_gogatsu", "v_itsuka", "g_desu"]
+          "terms": ["v_watashi", "p_wa", { "counter": "gatsu", "n": 5 }, "v_itsuka", "g_desu"]
         },
         {
           "spk": "B",
           "jp": "五月は いいですね。お金が たくさん ありますか。",
           "en": "May is nice! Do you have lots of money?",
-          "terms": ["v_gogatsu", "p_wa", { "id": "v_ii", "form": "polite_adj" }, "p_ne", "v_okane", "p_ga", "v_takusan", { "id": "v_aru", "form": "polite_masu" }, "p_ka"]
+          "terms": [{ "counter": "gatsu", "n": 5 }, "p_wa", { "id": "v_ii", "form": "polite_adj" }, "p_ne", "v_okane", "p_ga", "v_takusan", { "id": "v_aru", "form": "polite_masu" }, "p_ka"]
         },
         {
           "spk": "A",
@@ -269,17 +291,17 @@
         {
           "jp": "今月は 六月です。",
           "en": "This month is June.",
-          "terms": ["v_kongetsu", "p_wa", "v_rokugatsu", "g_desu"]
+          "terms": ["v_kongetsu", "p_wa", { "counter": "gatsu", "n": 6 }, "g_desu"]
         },
         {
           "jp": "友だちは 三人 います。",
           "en": "There are three friends.",
-          "terms": ["v_tomodachi", "p_wa", "v_sannin", { "id": "v_iru", "form": "polite_masu" }]
+          "terms": ["v_tomodachi", "p_wa", { "counter": "nin", "n": 3 }, { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "jp": "六月 一日に 友だちと います。",
           "en": "On June 1st, he is together with friends.",
-          "terms": ["v_rokugatsu", "v_ichinichitsuitachi", "p_ni", "v_tomodachi", "p_to", { "id": "v_iru", "form": "polite_masu" }]
+          "terms": [{ "counter": "gatsu", "n": 6 }, "v_ichinichitsuitachi", "p_ni", "v_tomodachi", "p_to", { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "jp": "毎月 一日に 友だちが います。",
@@ -301,7 +323,7 @@
         {
           "q": "友だちは 何人 いますか。",
           "a": "三人 います。",
-          "terms": ["v_tomodachi", "p_wa", "v_nannin", { "id": "v_iru", "form": "polite_masu" }, "p_ka", "v_sannin"]
+          "terms": ["v_tomodachi", "p_wa", "v_nannin", { "id": "v_iru", "form": "polite_masu" }, "p_ka", { "counter": "nin", "n": 3 }]
         },
         {
           "q": "毎月 一日に 何が ありますか。",
@@ -327,27 +349,27 @@
         {
           "jp": "わたしのたんじょうびは 五月 五日です。",
           "en": "My birthday is May 5th.",
-          "terms": ["v_watashi", "p_no", "p_wa", "v_gogatsu", "v_itsuka", "g_desu"]
+          "terms": ["v_watashi", "p_no", "p_wa", { "counter": "gatsu", "n": 5 }, "v_itsuka", "g_desu"]
         },
         {
           "jp": "父のたんじょうびは 一月 一日です。",
           "en": "My father's birthday is January 1st.",
-          "terms": ["v_chichi", "p_no", "p_wa", "v_ichigatsu", "v_ichinichitsuitachi", "g_desu"]
+          "terms": ["v_chichi", "p_no", "p_wa", { "counter": "gatsu", "n": 1 }, "v_ichinichitsuitachi", "g_desu"]
         },
         {
           "jp": "母のたんじょうびは 三月 三日です。",
           "en": "My mother's birthday is March 3rd.",
-          "terms": ["v_haha", "p_no", "p_wa", "v_sangatsu", "v_mikka", "g_desu"]
+          "terms": ["v_haha", "p_no", "p_wa", { "counter": "gatsu", "n": 3 }, "v_mikka", "g_desu"]
         },
         {
           "jp": "友だちのたんじょうびは 八月 八日です。",
           "en": "My friend's birthday is August 8th.",
-          "terms": ["v_tomodachi", "p_no", "p_wa", "v_hachigatsu", "v_youka", "g_desu"]
+          "terms": ["v_tomodachi", "p_no", "p_wa", { "counter": "gatsu", "n": 8 }, "v_youka", "g_desu"]
         },
         {
           "jp": "先生のたんじょうびは 十月 十日です。",
           "en": "The teacher's birthday is October 10th.",
-          "terms": ["v_sensei", "p_no", "p_wa", "v_juugatsu", "v_tooka", "g_desu"]
+          "terms": ["v_sensei", "p_no", "p_wa", { "counter": "gatsu", "n": 10 }, "v_tooka", "g_desu"]
         },
         {
           "jp": "毎月、いい たんじょうびが あります。",
@@ -359,12 +381,12 @@
         {
           "q": "たんじょうびは 五月 五日ですか。",
           "a": "はい、五月 五日です。",
-          "terms": ["p_wa", "v_gogatsu", "v_itsuka", "g_desu", "p_ka", "p_hai"]
+          "terms": ["p_wa", { "counter": "gatsu", "n": 5 }, "v_itsuka", "g_desu", "p_ka", "p_hai"]
         },
         {
           "q": "友だちのたんじょうびは 八月 八日ですか。",
           "a": "そうです。八月 八日です。",
-          "terms": ["v_tomodachi", "p_no", "p_wa", "v_hachigatsu", "v_youka", "g_desu", "p_ka", "p_soudesu"]
+          "terms": ["v_tomodachi", "p_no", "p_wa", { "counter": "gatsu", "n": 8 }, "v_youka", "g_desu", "p_ka", "p_soudesu"]
         },
         {
           "q": "毎月、何が ありますか。",
@@ -374,7 +396,7 @@
         {
           "q": "先生のたんじょうびは 十月ですか。",
           "a": "はい、十月 十日です。",
-          "terms": ["v_sensei", "p_no", "p_wa", "v_juugatsu", "g_desu", "p_ka", "p_hai", "v_tooka"]
+          "terms": ["v_sensei", "p_no", "p_wa", { "counter": "gatsu", "n": 10 }, "g_desu", "p_ka", "p_hai", "v_tooka"]
         }
       ]
     },
@@ -431,14 +453,14 @@
           "q": "今月は _______ です。",
           "choices": ["三月", "三日", "三人", "三よう日"],
           "answer": "三月",
-          "terms": ["v_kongetsu", "p_wa", "v_sangatsu", "g_desu"]
+          "terms": ["v_kongetsu", "p_wa", { "counter": "gatsu", "n": 3 }, "g_desu"]
         },
         {
           "kind": "mcq",
           "q": "友だちは _______ います。",
           "choices": ["二人", "二日", "二月", "二よう日"],
           "answer": "二人",
-          "terms": ["v_tomodachi", "p_wa", "v_futari", { "id": "v_iru", "form": "polite_masu" }]
+          "terms": ["v_tomodachi", "p_wa", { "counter": "nin", "n": 2 }, { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "kind": "mcq",
@@ -480,14 +502,14 @@
           "q": "友だち _______ 三人 います。",
           "choices": ["は", "が", "を", "の"],
           "answer": "は",
-          "terms": ["v_tomodachi", "p_wa", "v_sannin", { "id": "v_iru", "form": "polite_masu" }]
+          "terms": ["v_tomodachi", "p_wa", { "counter": "nin", "n": 3 }, { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "kind": "mcq",
           "q": "今月 _______ 六月です。",
           "choices": ["は", "が", "を", "も"],
           "answer": "は",
-          "terms": ["v_kongetsu", "p_wa", "v_rokugatsu", "g_desu"]
+          "terms": ["v_kongetsu", "p_wa", { "counter": "gatsu", "n": 6 }, "g_desu"]
         },
         {
           "kind": "mcq",
@@ -501,7 +523,7 @@
           "q": "父 _______ 母のたんじょうびは 三月です。",
           "choices": ["と", "は", "も", "を"],
           "answer": "と",
-          "terms": ["v_chichi", "p_to", "v_haha", "p_no", "v_sangatsu", "g_desu"]
+          "terms": ["v_chichi", "p_to", "v_haha", "p_no", { "counter": "gatsu", "n": 3 }, "g_desu"]
         },
         {
           "kind": "mcq",
@@ -515,7 +537,7 @@
           "q": "三人 _______ 友だちが います。",
           "choices": ["の", "は", "を", "も"],
           "answer": "の",
-          "terms": ["v_sannin", "p_no", "v_tomodachi", "p_ga", { "id": "v_iru", "form": "polite_masu" }]
+          "terms": [{ "counter": "nin", "n": 3 }, "p_no", "v_tomodachi", "p_ga", { "id": "v_iru", "form": "polite_masu" }]
         }
       ]
     }
