@@ -153,6 +153,8 @@ CB CHECKLIST
 [ ] (Stories) g_desu (です) is tagged in terms.json when the story uses です
 [ ] (Stories) terms.json keys match exactly how each word appears in story.md (including kana-only spellings of words with untaught kanji)
 [ ] (Stories) No particle or copula occurrence is left untagged / unclickable
+[ ] (Stories) Every character name has been checked — no hiragana character in any name matches an in-scope particle key (は, の, も, と, で, が, を, か, よ, ね, etc.); use katakana or a particle-safe hiragana name if needed
+[ ] (Stories) Every kana-only vocabulary word has been checked for particle-character collisions; available kanji used to break matches where possible
 ```
 
 ---
@@ -638,6 +640,8 @@ Rules:
 - **Particle tagging rule for stories.** Every particle that has a `p_*` entry in `shared/particles.json` with `introducedIn` ≤ the story's lesson scope must be tagged. Use the particle character(s) as the key (e.g. `"は"`, `"の"`, `"も"`, `"と"`). The system will highlight every occurrence of that key in the story text.
 - **g_desu tagging.** Tag `です` with `{ "id": "g_desu", "form": null }`. Note: when an い-adjective predicative form (e.g. `"うれしいです"`) is already a separate key, the frontend's longest-match logic will take precedence for that occurrence; standalone `です` following a noun or な-adjective will be matched by the `"です"` key.
 - Pure hiragana function words that have **no** glossary or particles.json entry (e.g. sentence-internal conjunctions with no `p_*` ID) may be omitted.
+- **Character name rule.** Because particle keys are single hiragana characters that match everywhere in the story text, character names must not contain those characters. The dangerous characters are any that double as in-scope particle keys: `は`, `の`, `も`, `と`, `で`, `が`, `を`, `か`, `よ`, `ね`. When naming characters, choose katakana names (ミク, ケン, タロウ) or hiragana names whose every character is particle-safe (e.g. さくら, ゆき, たろう — note: たろう is safe because た, ろ, う are not particle keys). Before finalising a name, check each hiragana character against the in-scope particle list for the story's lesson range.
+- **Kana-word collision rule.** When a vocabulary word must be written in kana (because its kanji is not yet taught), check whether any of its characters collide with an in-scope particle key. If a collision exists, prefer using whatever kanji ARE available to break the match — e.g. `ともだち` (kana) contains `と` and `も`, but `友だち` (kanji + kana) is safe once `友` is taught. If no kanji are available and a collision is unavoidable, flag the issue in the CB Checklist and restructure the sentence to avoid placing the word where the false match causes visible errors.
 
 ---
 
@@ -947,6 +951,8 @@ These are the most frequent errors. All agents should be alert to them.
 24. **(Compose) Targets using non-kanji vocabulary** — compose scoring is kanji-based. Target IDs should reference vocabulary that contains kanji so the coverage indicator works correctly.
 25. **(Compose) VocabPool missing historical vocab** — each prompt's vocabPool should include relevant vocabulary from prior lessons, not just the current lesson's words. Students need connector words, common nouns, and adjectives from earlier lessons to write coherent text.
 26. **(Stories) Missing particle/copula tags in terms.json** — particles (は, の, も, と, etc.) and g_desu (です) must be tagged in story terms.json so they are tappable, exactly as in lessons. Omitting them means function words are dead text the student cannot tap to look up. Every particle with a `p_*` entry in `shared/particles.json` whose `introducedIn` is ≤ the story's lesson scope must be included. The `"です"` key covers standalone copula occurrences; い-adjective predicative forms (e.g. `"うれしいです"`) are covered by their own longer key.
+27. **(Stories) Particle character inside a character name** — single-character particle keys (は, の, も, と, etc.) match every occurrence of that character in the story text, including inside hiragana names. A name like `はなこ` will have its は highlighted as a topic-marker click target. Fix by: (a) using katakana for the name, (b) choosing a hiragana name whose characters are all particle-safe, or (c) renaming the character. Check every hiragana character of every name against the in-scope particle key list before finalising.
+28. **(Stories) Particle character inside a kana-only vocabulary word** — same substring-match problem as #27 but for vocabulary. `ともだち` contains `と` and `も`; when those particles are in scope the characters inside the word will be incorrectly highlighted. Fix by using available kanji (`友だち` once `友` is taught) to make the word opaque to single-char particle matching. If no kanji are available, restructure the sentence.
 
 ### Agent 3 failures (caught by Agent 4)
 
