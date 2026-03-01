@@ -9,9 +9,9 @@
 
 父のなまえはたろうです。父はとてもやさしい人です。
 
-母のなまえははなこです。母もやさしい人です。
+母のなまえはさくらです。母もやさしい人です。
 
-ともだちのなまえはケンです。ケンはとてもいい友だちです。
+友だちのなまえはケンです。ケンはとてもいい友だちです。
 
 今日は金よう日です。毎日、ケンといっしょにいます。うれしいです！
 
@@ -27,7 +27,7 @@ My name is Miku.
 
 My father's name is Taro. My father is a very kind person.
 
-My mother's name is Hanako. My mother is also a kind person.
+My mother's name is Sakura. My mother is also a kind person.
 
 My friend's name is Ken. Ken is a very good friend.
 

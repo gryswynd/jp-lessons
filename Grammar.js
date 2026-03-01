@@ -260,7 +260,7 @@ window.GrammarModule = {
         .gr-speaker-bubble { background: #FFF3E0; color: #F97316; font-weight: 900; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 12px; flex-shrink: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); font-family: 'Noto Sans JP', sans-serif; font-size: 0.75rem; }
         .gr-jp { font-size: 1.15rem; line-height: 1.6; font-family: 'Noto Sans JP', sans-serif; color: #2f3542; }
         .gr-en { font-size: 0.9rem; color: #747d8c; margin-top: 6px; }
-        .gr-term { color: #F97316; font-weight: 700; cursor: pointer; border-bottom: 2px solid rgba(249,115,22,0.2); transition: 0.2s; }
+        .gr-term { color: #F97316; font-weight: 700; cursor: pointer; margin-right: 1px; border-bottom: 2px solid rgba(249,115,22,0.2); transition: 0.2s; }
         .gr-term:hover { background: rgba(249,115,22,0.06); border-bottom-color: #F97316; }
 
         /* Summary / celebration */

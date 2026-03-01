@@ -547,7 +547,7 @@
             }
 
             /* Term Styling */
-            .jp-term { color: #4e54c8; font-weight: 700; cursor: pointer; border-bottom: 2px solid rgba(78,84,200,0.1); transition: 0.2s; }
+            .jp-term { color: #4e54c8; font-weight: 700; cursor: pointer; margin-right: 1px; border-bottom: 2px solid rgba(78,84,200,0.1); transition: 0.2s; }
             .jp-term:hover { background: rgba(78,84,200,0.05); border-bottom-color: #4e54c8; }
 
             /* Animations */

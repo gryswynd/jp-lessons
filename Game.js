@@ -99,6 +99,7 @@ window.GameModule = (function() {
           font-weight: 700;
           cursor: pointer;
           border-bottom: 2px solid rgba(78,84,200,0.2);
+          margin-right: 1px;
           transition: background 0.15s, border-color 0.15s;
         }
         .jp-term:hover {

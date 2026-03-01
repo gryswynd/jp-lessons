@@ -117,7 +117,7 @@ window.LessonModule = {
           .jp-row { display: flex; gap: 12px; margin-bottom: 20px; align-items: flex-start; }
           .jp-jp { font-size: 1.15rem; line-height: 1.6; font-family: 'Noto Sans JP', sans-serif; color: #2f3542; }
           .jp-en { font-size: 0.9rem; color: #747d8c; margin-top: 6px; display: none; padding-left: 2px; }
-          .jp-term { color: var(--primary); font-weight: 700; cursor: pointer; border-bottom: 2px solid rgba(78,84,200,0.1); transition: 0.2s; }
+          .jp-term { color: var(--primary); font-weight: 700; cursor: pointer; margin-right: 1px; border-bottom: 2px solid rgba(78,84,200,0.1); transition: 0.2s; }
           .jp-term:hover { background: rgba(78,84,200,0.05); border-bottom-color: var(--primary); }
 
           .jp-toggle-en { font-size: 0.75rem; font-weight: 700; color: #747d8c; background: #fff; border: 2px solid #f1f2f6; padding: 8px 16px; border-radius: 20px; cursor: pointer; margin-bottom: 20px; width: 100%; }
