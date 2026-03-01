@@ -83,7 +83,7 @@ User Request
 ```
 CONTENT BRIEF
 ═════════════
-Type:          [lesson | review | compose-prompt | story]
+Type:          [lesson | review | compose | story]
 Target ID:     [e.g. N5.2, N4.Review.11]
 Level:         [N5 | N4]
 Lesson scope:  [list of lesson IDs whose vocab is permitted]
@@ -140,6 +140,15 @@ CB CHECKLIST
 [ ] (Reviews) Every review section has an instructions field
 [ ] (Reviews) Conversation items include title, context, lines, question, choices, answer, explanation
 [ ] (Reviews) Every MCQ and scramble drill item has an explanation field
+[ ] (Compose) Every vocabPool ID exists in the glossary or particles.json
+[ ] (Compose) Targets use only kanji-containing vocabulary (coverage is kanji-based)
+[ ] (Compose) Model sentences use only taught kanji and approved vocabulary
+[ ] (Compose) Particles array only includes particles with introducedIn ≤ current lesson
+[ ] (Compose) Conjugation examples use vocabulary from the lesson
+[ ] (Compose) Conjugations stay in polite/formal register (no plain forms unless lesson teaches casual)
+[ ] (Compose) Conjugation irregular forms are correct (e.g. いい→よかったです, not いかったです)
+[ ] (Compose) Prompts build one cohesive composition, not disconnected topics
+[ ] (Compose) Prompt count matches level guidelines (2-3 early N5, scaling to 7-10 late N4)
 ```
 
 ---
@@ -520,31 +529,67 @@ Both「国民は毎日車を洗います」and「毎日国民は車を洗いま�
 
 ---
 
-### Compose Prompt JSON (`data/N5/compose/compose.N5.json`)
+### Compose JSON (`data/N5/compose/compose.N5.X.json`, `data/N4/compose/compose.N4.X.json`)
 
-Each entry in `prompts[]`:
+Each lesson has its own compose file. The file contains a sequence of English prompts that guide the student through building one cohesive composition.
+
+**Top-level required fields:**
 
 ```json
 {
-  "id": "kebab-case-unique-id",
+  "contentVersion": "1.0.0",
+  "id": "compose.N5.X",
+  "lesson": "N5.X",
+  "level": "N5",
   "title": "English Title",
-  "titleJp": "Japanese Title",
+  "titleJp": "Japanese Title (kana/taught kanji only)",
   "emoji": "...",
-  "lessons": ["N5.X"],
-  "scenario": "English description of the writing task",
-  "hint": "Japanese sentence starter or hint",
+  "theme": "English description of the composition topic",
+  "prompts": [...],
+  "challengePrompts": [],
+  "particles": [...],
+  "conjugations": [...]
+}
+```
+
+**Prompt structure (each entry in `prompts[]`):**
+
+```json
+{
+  "prompt": "English prompt guiding what to write next...",
   "targets": [
-    { "id": "GLOSSARY_ID", "count": N }
+    { "id": "GLOSSARY_ID", "count": 1 }
   ],
-  "helpers": ["GLOSSARY_ID", ...]
+  "model": "Model Japanese sentence (toggleable by student)",
+  "vocabPool": ["GLOSSARY_ID", ...]
+}
+```
+
+**challengePrompts:** Same structure as `prompts`. Used for N4+ to add optional harder prompts. Empty array `[]` for early N5 lessons.
+
+**particles:** Array of particle/grammar IDs gated to what the student has learned. Only include particles whose `introducedIn` lesson (from `shared/particles.json`) is ≤ the current lesson. Include `g_desu` for the copula. Example: `["p_wa", "p_ga", "p_wo", "p_no", "p_ka", "p_yo", "p_ne", "p_dewa", "p_ja", "g_desu"]`
+
+**conjugations:** Array of rich conjugation pattern objects showing practical patterns the student can use. Each object has:
+
+```json
+{
+  "pattern": "[noun] + です",
+  "meaning": "is / am / are (polite)",
+  "examples": ["せんせいです", "ともだちです"]
 }
 ```
 
 Rules:
-- `lessons` array: all lesson IDs whose vocabulary the student may use. Normally one or two consecutive lessons.
-- `targets`: vocabulary the student **must** use to complete the prompt. Each `id` must exist in the glossary. `count` is how many times the word must appear (usually 1–2).
-- `helpers`: optional additional glossary IDs that the UI will surface as clickable chips. These must also exist in the glossary.
-- The `hint` must be written using only taught kanji and taught vocabulary.
+- **One file per lesson.** Each compose file targets exactly one lesson. The `lesson` field identifies it.
+- **Progressive prompts.** Prompts build sequentially — the student writes one continuous composition, advancing through prompts one at a time via a "Next Prompt" button. Start with ~2 prompts for early N5, scaling to ~10 by late N4.
+- **Composition continuity.** All prompts in a file should build one coherent text, not disconnected sentences. Each prompt adds to what came before.
+- **Per-prompt vocab pools.** Each prompt has its own `vocabPool` — a curated subset of lesson vocabulary relevant to that prompt. Include historical vocab (from prior lessons) that fits the theme, not just new-lesson words.
+- **Targets.** Vocabulary the student **must** use to unlock the next prompt. Each `id` must exist in the glossary. `count` is how many times it must appear (usually 1). Target only kanji-containing vocabulary — coverage scoring is kanji-based.
+- **Model sentences.** Each prompt includes a `model` showing one valid composition. The UI lets students toggle this on/off. Models must use only taught kanji and approved vocabulary.
+- **Conjugation patterns.** Include the full polite paradigm relevant to the lesson's grammar level. Use examples drawn from the lesson's own vocabulary. Include irregular forms (e.g. いい→よかったです). Stay in formal/polite register — omit plain forms (だ, だった) unless the lesson specifically teaches casual speech.
+- **Particle gating.** Only include particles the student has been formally introduced to. Check `introducedIn` in `shared/particles.json`.
+- **Kanji rule.** All Japanese text in `model`, `titleJp`, and conjugation `examples` must use only taught kanji. Use hiragana for words whose kanji hasn't been introduced yet.
+- **Prompt count by level.** Early N5 (N5.1–N5.3): 2–3 prompts. Mid N5 (N5.4–N5.7): 3–5 prompts. Late N5 / early N4: 5–7 prompts. Late N4: 7–10 prompts.
 
 ---
 
@@ -725,6 +770,11 @@ All of the following must be TRUE for a QA pass:
 - [ ] (Reviews) Scramble sentences with time expressions or adverbs have `alts` if the element can naturally float
 - [ ] (Reviews) Every drill item (MCQ and scramble) has an `explanation` field
 - [ ] (Reviews) Conversation items have `question`, `choices` (4 options), `answer`, and `explanation`
+- [ ] (Compose) Every vocabPool and target ID exists in the glossary or particles.json
+- [ ] (Compose) Model sentences use only taught kanji
+- [ ] (Compose) Particles are gated — every particle ID has `introducedIn` ≤ current lesson
+- [ ] (Compose) Conjugation examples are linguistically correct (especially irregular forms)
+- [ ] (Compose) Conjugations use polite register only (unless lesson teaches casual speech)
 
 ### Agent 4 (CR) — soft pass/fail (judgment-based)
 
@@ -832,12 +882,12 @@ Adjective gtypes: `i_adj`, `na_adj`
 |---|---|
 | Lesson | `data/N5/lessons/N5.X.json` |
 | Review | `data/N4/reviews/N4.Review.X.json` |
-| N5 Compose | `data/N5/compose/compose.N5.json` (append to `prompts[]`) |
-| N4 Compose | `data/N4/compose/compose.N4.json` (append to `prompts[]`) |
+| N5 Compose | `data/N5/compose/compose.N5.X.json` (one file per lesson) |
+| N4 Compose | `data/N4/compose/compose.N4.X.json` (one file per lesson) |
 | Story markdown | `data/N5/stories/[slug]/story.md` |
 | Story terms | `data/N5/stories/[slug]/terms.json` |
 
-After writing new files, `manifest.json` must be updated. Lessons get an entry under `data.N5.lessons` or `data.N4.lessons`. Stories get an entry under `data.N5.stories` or `data.N4.stories`. Reviews get an entry under `data.N4.reviews`.
+After writing new files, `manifest.json` must be updated. Lessons get an entry under `data.N5.lessons` or `data.N4.lessons`. Stories get an entry under `data.N5.stories` or `data.N4.stories`. Reviews get an entry under `data.N4.reviews`. Compose files get an entry in the `compose` array: `{ "lesson": "N5.X", "file": "data/N5/compose/compose.N5.X.json" }`.
 
 ---
 
@@ -866,6 +916,12 @@ These are the most frequent errors. All agents should be alert to them.
 17. **Missing distractors on scramble items** — scramble items must include a `distractors` array with 3 plausible wrong segments (wrong particles, transitive/intransitive confusions, similar words from the same lesson range).
 18. **ID surface mismatch** — tagging a word with an ID whose glossary `surface` field does not match the token being tagged. Example: tagging `だ` or `だった` with `g_desu` (which has `surface: "です"`). The ID exists and the checklist item "ID exists in glossary" passes — but the tagged entity is semantically wrong. Always look up the `surface` value of each ID and confirm it matches the actual text in the sentence.
 19. **Out-of-scope word in `jp` text, absent from `terms`** — a word appears in the `jp` surface string but is never added to `terms` because it "looks like" a common particle or connector. If that word has a glossary entry with an `introducedIn` or `lesson_ids` value, it must be tagged, and its lesson must be in scope. Example: `でも` (`p_demo`, `introducedIn: "N4.14"`) used in a G1 conversation is an out-of-scope scope violation — but scope checks that only scan `terms` IDs will miss it entirely because it was never tagged at all. Scanning `jp` surface tokens, not just `terms` arrays, is required.
+20. **(Compose) Ungated particles** — including a particle in the `particles` array whose `introducedIn` is later than the compose file's lesson. Check every particle ID against `shared/particles.json`.
+21. **(Compose) Plain forms in conjugations** — including だ, だった, or other plain-form patterns when the lesson hasn't taught casual speech. Compositions should stay in polite/formal register by default.
+22. **(Compose) Incorrect irregular conjugation examples** — the most common error is showing いかったです instead of よかったです for the past of いい. All irregular forms (いい→よ stem) must be verified in every conjugation entry.
+23. **(Compose) Disconnected prompts** — prompts should build one continuous composition, not jump between unrelated topics. Each prompt should extend the narrative from the previous one.
+24. **(Compose) Targets using non-kanji vocabulary** — compose scoring is kanji-based. Target IDs should reference vocabulary that contains kanji so the coverage indicator works correctly.
+25. **(Compose) VocabPool missing historical vocab** — each prompt's vocabPool should include relevant vocabulary from prior lessons, not just the current lesson's words. Students need connector words, common nouns, and adjectives from earlier lessons to write coherent text.
 
 ### Agent 3 failures (caught by Agent 4)
 
