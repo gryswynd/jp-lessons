@@ -365,9 +365,9 @@
           "terms": ["v_sensei", "p_wa", "v_totemo", "v_yasashii", "k_hito", "g_desu"]
         },
         {
-          "jp": "先生の パソコンは いいです。テレビは あたらしいです。トイレが あります。",
-          "en": "The teacher's computer is good. The TV is new. There is a bathroom.",
-          "terms": ["v_sensei", "p_no", "v_pasokon", "p_wa", "v_ii", "g_desu", "v_terebi", "v_atarashii", "v_toire", "p_ga", { "id": "v_aru", "form": "polite_masu" }]
+          "jp": "先生の パソコンは いいです。テレビが あります。トイレが あります。",
+          "en": "The teacher's computer is good. There is a TV. There is a bathroom.",
+          "terms": ["v_sensei", "p_no", "v_pasokon", "p_wa", "v_ii", "g_desu", "v_terebi", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "v_toire"]
         },
         {
           "jp": "みなさんは うれしいです。",
