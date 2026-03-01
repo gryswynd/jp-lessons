@@ -32,7 +32,7 @@ window.StoryModule = (function() {
       style.textContent = `
         .jp-story-container {
           font-family: 'Poppins', 'Noto Sans JP', sans-serif;
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
           border-radius: 12px;
           overflow: hidden;
           max-width: 900px;
@@ -88,26 +88,26 @@ window.StoryModule = (function() {
           overflow-y: auto;
         }
         .jp-story-content h1 {
-          color: #667eea;
+          color: #D97706;
           font-size: 2rem;
           margin-top: 0;
           margin-bottom: 0.5rem;
           font-weight: 700;
         }
         .jp-story-content h2 {
-          color: #764ba2;
+          color: #B45309;
           font-size: 1.4rem;
           margin-top: 0;
           margin-bottom: 2rem;
           font-weight: 600;
         }
         .jp-story-content h3 {
-          color: #667eea;
+          color: #D97706;
           font-size: 1.2rem;
           margin-top: 2rem;
           margin-bottom: 1rem;
           font-weight: 600;
-          border-bottom: 2px solid #667eea;
+          border-bottom: 2px solid #D97706;
           padding-bottom: 0.5rem;
         }
         .jp-story-content hr {
@@ -132,11 +132,11 @@ window.StoryModule = (function() {
           color: #333;
         }
         .jp-story-content strong {
-          color: #667eea;
+          color: #D97706;
           font-weight: 700;
         }
         .jp-story-content em {
-          color: #764ba2;
+          color: #B45309;
           font-style: italic;
         }
         .jp-story-content code {
@@ -158,16 +158,16 @@ window.StoryModule = (function() {
           padding: 0;
         }
         .jp-term {
-          color: #667eea;
+          color: #D97706;
           font-weight: 700;
           cursor: pointer;
-          border-bottom: 2px solid rgba(102,126,234,0.2);
+          border-bottom: 2px solid rgba(217,119,6,0.2);
           margin-right: 1px;
           transition: 0.2s;
         }
         .jp-term:hover {
-          background: rgba(102,126,234,0.1);
-          border-bottom-color: #667eea;
+          background: rgba(217,119,6,0.1);
+          border-bottom-color: #D97706;
         }
         .jp-story-loading {
           text-align: center;
@@ -203,7 +203,7 @@ window.StoryModule = (function() {
           box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         .jp-story-selector h2 {
-          color: #667eea;
+          color: #D97706;
           font-size: 1.3rem;
           font-weight: 700;
           margin: 0 0 5px 0;
@@ -219,7 +219,7 @@ window.StoryModule = (function() {
           gap: 16px;
         }
         .jp-story-card {
-          background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+          background: linear-gradient(135deg, #FFFBEB 0%, #FDE68A 100%);
           border-radius: 12px;
           padding: 24px 16px;
           cursor: pointer;
@@ -230,11 +230,11 @@ window.StoryModule = (function() {
         .jp-story-card:hover {
           transform: translateY(-3px);
           box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-          border-color: #667eea;
+          border-color: #D97706;
         }
         .jp-story-level-badge {
           display: inline-block;
-          background: #667eea;
+          background: #D97706;
           color: white;
           font-size: 0.7rem;
           font-weight: 700;
@@ -256,7 +256,7 @@ window.StoryModule = (function() {
           margin-bottom: 16px;
         }
         .jp-story-card-read-btn {
-          background: #667eea;
+          background: #D97706;
           color: white;
           border: none;
           padding: 8px 20px;
@@ -268,7 +268,7 @@ window.StoryModule = (function() {
           transition: background 0.2s;
         }
         .jp-story-card:hover .jp-story-card-read-btn {
-          background: #5a6fd6;
+          background: #C27205;
         }
         @media (max-width: 600px) {
           .jp-story-content {
