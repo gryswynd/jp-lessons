@@ -553,6 +553,19 @@
           "answer": "先生ではなかった。",
           "terms": ["v_sensei", "g_desu"],
           "explanation": "ではなかった is the plain (informal) past negative copula. ではありませんでした is the polite equivalent. ではない is plain present negative."
+        },
+        {
+          "kind": "mcq",
+          "q": "Choose the correct polite negative: 'That is not a toilet.'",
+          "choices": [
+            "トイレではありません。",
+            "トイレじゃない。",
+            "トイレではなかった。",
+            "トイレだ。"
+          ],
+          "answer": "トイレではありません。",
+          "terms": ["v_toire", "p_dewa", { "id": "v_aru", "form": "polite_negative" }],
+          "explanation": "ではありません is the polite negative copula. じゃない is the plain negative — correct meaning but wrong register for polite speech."
         }
       ]
     }

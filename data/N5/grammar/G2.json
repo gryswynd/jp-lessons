@@ -511,6 +511,14 @@
           "answer": "を",
           "terms": ["v_sensei"],
           "explanation": "よぶ (call) is a transitive verb — を marks the person being called."
+        },
+        {
+          "kind": "mcq",
+          "q": "トイレ ______ あります。(There is a toilet.)",
+          "choices": ["が", "は", "を", "の"],
+          "answer": "が",
+          "terms": ["v_toire", { "id": "v_aru", "form": "polite_masu" }],
+          "explanation": "が marks the subject of existence verbs like ある (exist). トイレがあります = 'there is a toilet.'"
         }
       ]
     }
