@@ -60,34 +60,34 @@
           "lines": [
             {
               "spk": "すずき",
-              "jp": "やまもと先生は 何よう日から いますか。",
-              "terms": ["v_sensei", "p_wa", "v_nanyoubi", "p_kara", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
+              "jp": "やまもと先生は いますか。",
+              "terms": ["v_sensei", "p_wa", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
             },
             {
               "spk": "やまかわ",
-              "jp": "月よう日から 金よう日まで です。",
-              "terms": ["v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", "g_desu"]
+              "jp": "月よう日と 水よう日と 金よう日 います。",
+              "terms": ["v_getsuyoubi", "p_to", "v_suiyoubi", "p_to", "v_kinyoubi", { "id": "v_iru", "form": "polite_masu" }]
             },
             {
               "spk": "すずき",
-              "jp": "水よう日も いますか。",
-              "terms": ["v_suiyoubi", "p_mo", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
+              "jp": "火よう日は いませんか。",
+              "terms": ["v_kayoubi", "p_wa", { "id": "v_iru", "form": "polite_negative" }, "p_ka"]
             },
             {
               "spk": "やまかわ",
-              "jp": "はい、水よう日も います。",
-              "terms": ["p_hai", "v_suiyoubi", "p_mo", { "id": "v_iru", "form": "polite_masu" }]
+              "jp": "はい、火よう日は いません。",
+              "terms": ["p_hai", "v_kayoubi", "p_wa", { "id": "v_iru", "form": "polite_negative" }]
             }
           ],
           "question": "Which days is Yamamoto-sensei at school?",
           "choices": [
+            "Monday, Wednesday, and Friday.",
             "Monday through Friday.",
-            "Monday, Wednesday, and Friday only.",
             "Every day of the week.",
             "Tuesday and Thursday only."
           ],
-          "answer": "Monday through Friday.",
-          "explanation": "やまかわ says 月よう日から 金よう日まで です — from Monday (月よう日) to Friday (金よう日). The follow-up confirms 水よう日 (Wednesday) is included, making it all five weekdays."
+          "answer": "Monday, Wednesday, and Friday.",
+          "explanation": "やまかわ confirms 月よう日と 水よう日と 金よう日 います — she is there on Monday, Wednesday, and Friday. すずき's follow-up question about 火よう日 (Tuesday) confirms she is absent that day."
         },
         {
           "title": "Conversation 3",
@@ -182,9 +182,9 @@
           "terms": ["v_watashi", "p_wa", "g_desu", "v_watashi", "p_no", "v_sensei", "p_wa", "v_sensei", "g_desu"]
         },
         {
-          "jp": "やまもと先生は 月よう日から 金よう日まで います。",
-          "en": "Yamamoto-sensei is here from Monday to Friday.",
-          "terms": ["v_sensei", "p_wa", "v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", { "id": "v_iru", "form": "polite_masu" }]
+          "jp": "やまもと先生は 月よう日と 水よう日と 金よう日 います。",
+          "en": "Yamamoto-sensei is here on Monday, Wednesday, and Friday.",
+          "terms": ["v_sensei", "p_wa", "v_getsuyoubi", "p_to", "v_suiyoubi", "p_to", "v_kinyoubi", { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "jp": "毎日 やまかわと すずきさんと います。",
@@ -217,15 +217,15 @@
         },
         {
           "q": "Which days is Yamamoto-sensei at school?",
-          "a": "Monday to Friday.",
+          "a": "Monday, Wednesday, and Friday.",
           "choices": [
-            "Monday to Friday.",
-            "Monday, Wednesday, and Friday only.",
+            "Monday, Wednesday, and Friday.",
+            "Monday through Friday.",
             "Every day.",
             "Tuesday and Thursday only."
           ],
-          "terms": ["v_sensei", "v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made"],
-          "explanation": "The passage says 月よう日から 金よう日まで います — she is there from Monday (月よう日) to Friday (金よう日)."
+          "terms": ["v_sensei", "v_getsuyoubi", "p_to", "v_suiyoubi", "p_to", "v_kinyoubi"],
+          "explanation": "The passage says 月よう日と 水よう日と 金よう日 います — she is there on Monday, Wednesday, and Friday. This matches the three-day schedule established in N5.2."
         },
         {
           "q": "What day is it today in the passage?",
