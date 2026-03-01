@@ -34,19 +34,6 @@
         "v_mokuyoubi", "v_kayoubi", "v_suiyoubi", "v_mainichi", "v_issho",
         "v_totemo", "v_ii", "v_iru"
       ]
-    },
-    {
-      "prompt": "Finish your composition. Write about money and what exists in your life. Tell us what is here this month.",
-      "targets": [
-        { "id": "v_okane", "count": 1 },
-        { "id": "v_kongetsu", "count": 1 }
-      ],
-      "model": "今月 お金が あります。毎日 水も あります。とても いいです。",
-      "vocabPool": [
-        "v_okane", "v_kongetsu", "v_maigetsu", "v_mainichi", "v_mizu", "v_ki",
-        "v_tsuki", "v_hi", "v_kane", "v_tsuchi", "v_hi_2", "v_geemu",
-        "v_watashi", "v_totemo", "v_ii", "v_ureshii", "v_takusan", "v_aru"
-      ]
     }
   ],
   "challengePrompts": [],
