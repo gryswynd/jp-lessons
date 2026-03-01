@@ -149,6 +149,10 @@ CB CHECKLIST
 [ ] (Compose) Conjugation irregular forms are correct (e.g. いい→よかったです, not いかったです)
 [ ] (Compose) Prompts build one cohesive composition, not disconnected topics
 [ ] (Compose) Prompt count matches level guidelines (2-3 early N5, scaling to 7-10 late N4)
+[ ] (Stories) Every particle with a p_* entry in particles.json with introducedIn ≤ lesson scope is tagged in terms.json
+[ ] (Stories) g_desu (です) is tagged in terms.json when the story uses です
+[ ] (Stories) terms.json keys match exactly how each word appears in story.md (including kana-only spellings of words with untaught kanji)
+[ ] (Stories) No particle or copula occurrence is left untagged / unclickable
 ```
 
 ---
@@ -630,7 +634,10 @@ Rules:
 
 - Keys in `terms` must match exactly how the word appears in the markdown text (including conjugated forms like「行きました」).
 - `form` is `null` for dictionary/base forms; uses the same form strings as lesson content for conjugated forms.
-- Every meaningful vocabulary word in the story must have an entry. Particles, conjunctions, and pure hiragana function words may be omitted.
+- Every meaningful vocabulary word in the story must have an entry. This includes **particles and the copula** (です / g_desu) — they must be tagged so they are tappable, exactly as they are in lessons and reviews.
+- **Particle tagging rule for stories.** Every particle that has a `p_*` entry in `shared/particles.json` with `introducedIn` ≤ the story's lesson scope must be tagged. Use the particle character(s) as the key (e.g. `"は"`, `"の"`, `"も"`, `"と"`). The system will highlight every occurrence of that key in the story text.
+- **g_desu tagging.** Tag `です` with `{ "id": "g_desu", "form": null }`. Note: when an い-adjective predicative form (e.g. `"うれしいです"`) is already a separate key, the frontend's longest-match logic will take precedence for that occurrence; standalone `です` following a noun or な-adjective will be matched by the `"です"` key.
+- Pure hiragana function words that have **no** glossary or particles.json entry (e.g. sentence-internal conjunctions with no `p_*` ID) may be omitted.
 
 ---
 
@@ -789,6 +796,9 @@ All of the following must be TRUE for a QA pass:
 - [ ] (Compose) Particles are gated — every particle ID has `introducedIn` ≤ current lesson
 - [ ] (Compose) Conjugation examples are linguistically correct (especially irregular forms)
 - [ ] (Compose) Conjugations use polite register only (unless lesson teaches casual speech)
+- [ ] (Stories) Every in-scope particle (p_* with introducedIn ≤ lesson scope) has an entry in terms.json
+- [ ] (Stories) g_desu (です) has an entry in terms.json if the story uses です
+- [ ] (Stories) terms.json keys exactly match the substrings as they appear in story.md
 
 ### Agent 4 (CR) — soft pass/fail (judgment-based)
 
@@ -936,6 +946,7 @@ These are the most frequent errors. All agents should be alert to them.
 23. **(Compose) Disconnected prompts** — prompts should build one continuous composition, not jump between unrelated topics. Each prompt should extend the narrative from the previous one.
 24. **(Compose) Targets using non-kanji vocabulary** — compose scoring is kanji-based. Target IDs should reference vocabulary that contains kanji so the coverage indicator works correctly.
 25. **(Compose) VocabPool missing historical vocab** — each prompt's vocabPool should include relevant vocabulary from prior lessons, not just the current lesson's words. Students need connector words, common nouns, and adjectives from earlier lessons to write coherent text.
+26. **(Stories) Missing particle/copula tags in terms.json** — particles (は, の, も, と, etc.) and g_desu (です) must be tagged in story terms.json so they are tappable, exactly as in lessons. Omitting them means function words are dead text the student cannot tap to look up. Every particle with a `p_*` entry in `shared/particles.json` whose `introducedIn` is ≤ the story's lesson scope must be included. The `"です"` key covers standalone copula occurrences; い-adjective predicative forms (e.g. `"うれしいです"`) are covered by their own longer key.
 
 ### Agent 3 failures (caught by Agent 4)
 
