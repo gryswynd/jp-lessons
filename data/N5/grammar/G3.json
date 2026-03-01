@@ -2,13 +2,13 @@
   "contentVersion": "1.0.0",
   "id": "G3",
   "type": "grammar",
-  "title": "Core Particles II: も, と, や, から, まで",
+  "title": "Core Particles II: も, と, や, から, まで, に (time)",
   "meta": {
     "level": "N5",
     "unlocksAfter": "N5.2",
-    "focus": "Inclusion, listing, and time ranges",
-    "estimatedMinutes": 25,
-    "particles": ["も", "と", "や", "から", "まで"],
+    "focus": "Inclusion, listing, time ranges, and marking specific times with に",
+    "estimatedMinutes": 30,
+    "particles": ["も", "と", "や", "から", "まで", "に"],
     "grammarForms": [],
     "icon": "📌"
   },
@@ -17,14 +17,15 @@
       "type": "grammarIntro",
       "title": "Expanding Your Sentences",
       "icon": "📌",
-      "summary": "These five particles let you add items, list things, and talk about ranges of time.",
-      "whyItMatters": "With も, と, and や you can connect ideas and list items. With から and まで you can describe time ranges — essential for talking about schedules and routines.",
+      "summary": "These six particles let you add items, list things, talk about time ranges, and pin actions to specific days.",
+      "whyItMatters": "With も, と, and や you can connect ideas and list items. With から and まで you can describe time ranges. And with に you can say exactly which day or date something happens — essential for talking about weekly schedules and monthly routines.",
       "youWillLearn": [
         "も — adding 'also' or 'too' (replaces は/が/を)",
         "と — listing things completely, or doing something 'with' someone",
         "や — listing things as examples (an incomplete list)",
         "から — marking a starting point ('from')",
-        "まで — marking an ending point ('until')"
+        "まで — marking an ending point ('until')",
+        "に — marking a specific day or date ('on Monday', 'on the 1st')"
       ]
     },
     {
@@ -249,8 +250,55 @@
       ]
     },
     {
+      "type": "grammarRule",
+      "id": "rule_ni_time",
+      "pattern": [
+        { "label": "SPECIFIC TIME", "color": "time", "text": "月曜日" },
+        { "label": "PARTICLE", "color": "particle", "text": "に" },
+        { "label": "EVENT", "color": "verb", "text": "..." }
+      ],
+      "meaning": "'on [day]' / 'on the [date]' — pinning an event to a fixed point in time",
+      "explanation": "に marks a specific, fixed time — a particular day of the week, a specific date, or a set time. Think of it as a pin: it anchors what happens to an exact point on the calendar. Without に, the sentence just floats in time.",
+      "notes": [
+        "Specific time words TAKE に: 月曜日に (on Monday), 一日に (on the 1st).",
+        "Relative/floating time words do NOT take に: 毎日 ✗, 今日 ✗, 今月 ✗.",
+        "Quick test: Can you point to it on a calendar? → に. Is it a moving or relative concept? → no に.",
+        "Later you will use に with clock times (三時に = at 3 o'clock) and destinations — all the same 'pinpoint' idea."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "月よう日", "role": "time", "gloss": "Monday" },
+            { "text": "に", "role": "particle" },
+            { "text": "います", "role": "verb", "gloss": "is here" }
+          ],
+          "en": "She is here on Monday.",
+          "breakdown": "月よう日 = specific day → に ✓"
+        },
+        {
+          "parts": [
+            { "text": "毎日", "role": "time", "gloss": "every day" },
+            { "text": "います", "role": "verb", "gloss": "is here" }
+          ],
+          "en": "She is here every day. (no に)",
+          "breakdown": "毎日 = relative/floating → no に ✗"
+        },
+        {
+          "parts": [
+            { "text": "金よう日", "role": "time", "gloss": "Friday" },
+            { "text": "に", "role": "particle" },
+            { "text": "お金", "role": "subject", "gloss": "money" },
+            { "text": "が", "role": "particle" },
+            { "text": "あります", "role": "verb", "gloss": "there is" }
+          ],
+          "en": "On Friday, there is money.",
+          "breakdown": "金よう日 = specific day → に ✓"
+        }
+      ]
+    },
+    {
       "type": "annotatedExample",
-      "title": "All Five Particles in Natural Sentences",
+      "title": "All Six Particles in Natural Sentences",
       "examples": [
         {
           "context": "も — Also (replacing は)",
@@ -307,6 +355,16 @@
           ],
           "en": "It's until Friday.",
           "note": "まで marks where something ends."
+        },
+        {
+          "context": "に — Specific time (pinpoint)",
+          "parts": [
+            { "text": "土よう日", "role": "time", "gloss": "Saturday" },
+            { "text": "に", "role": "particle" },
+            { "text": "います", "role": "verb", "gloss": "is here" }
+          ],
+          "en": "She is here on Saturday.",
+          "note": "に pins an event to a specific day. 毎日 and 今日 would have no に."
         }
       ]
     },
@@ -317,33 +375,33 @@
       "lines": [
         {
           "spk": "A",
-          "jp": "やまもと先生は 何よう日と 何よう日に いますか。",
-          "en": "Which days is Yamamoto-sensei here?",
-          "terms": ["v_sensei", "p_wa", "v_nanyoubi", "p_to", "v_nanyoubi"]
+          "jp": "やまもと先生は 何よう日に いますか。",
+          "en": "On which day is Yamamoto-sensei here?",
+          "terms": ["v_sensei", "p_wa", "v_nanyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
         },
         {
           "spk": "B",
-          "jp": "月よう日と 水よう日と 金よう日です。",
-          "en": "Monday, Wednesday, and Friday.",
-          "terms": ["v_getsuyoubi", "p_to", "v_suiyoubi", "p_to", "v_kinyoubi", "g_desu"]
+          "jp": "月よう日と 水よう日と 金よう日に います。",
+          "en": "She is here on Monday, Wednesday, and Friday.",
+          "terms": ["v_getsuyoubi", "p_to", "v_suiyoubi", "p_to", "v_kinyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "spk": "A",
           "jp": "土よう日も いますか。",
-          "en": "Is the teacher also here on Saturday?",
-          "terms": ["v_doyoubi", "p_mo"]
+          "en": "Is she also here on Saturday?",
+          "terms": ["v_doyoubi", "p_mo", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
         },
         {
           "spk": "B",
-          "jp": "いいえ。月よう日から 金よう日まで です。",
-          "en": "No. It's from Monday to Friday.",
-          "terms": ["v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", "g_desu"]
+          "jp": "いいえ。月よう日から 金よう日まで です。毎日は いません。",
+          "en": "No. It's from Monday to Friday. She's not here every day.",
+          "terms": ["v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", "g_desu", "v_mainichi", "p_wa", { "id": "v_iru", "form": "polite_negative" }]
         },
         {
           "spk": "A",
           "jp": "そうですか。わたしの 母も 先生です。毎日 います。",
           "en": "I see. My mother is also a teacher. She is here every day.",
-          "terms": ["p_soudesuka", "v_watashi", "p_no", "v_haha", "p_mo", "v_sensei", "g_desu", "v_mainichi"]
+          "terms": ["p_soudesuka", "v_watashi", "p_no", "v_haha", "p_mo", "v_sensei", "g_desu", "v_mainichi", { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "spk": "B",
@@ -398,6 +456,14 @@
           "explanation": "まで marks the ending point — 'until this month.'"
         },
         {
+          "before": "金よう日",
+          "slot": true,
+          "after": "お金が あります。",
+          "choices": ["に", "は", "も", "と"],
+          "answer": "に",
+          "explanation": "に marks a specific day — 'On Friday, there is money.' 金よう日 is a fixed point on the calendar, so に is correct."
+        },
+        {
           "before": "土よう日",
           "slot": true,
           "after": "いいですか。",
@@ -450,6 +516,21 @@
           "answer": "や",
           "terms": ["v_sensei", "v_gakusei", "v_takusan"],
           "explanation": "や gives a sample list — teachers and students are examples, and others are implied."
+        },
+        {
+          "kind": "mcq",
+          "q": "Which time word TAKES に?",
+          "choices": ["月よう日", "毎日", "今日", "今月"],
+          "answer": "月よう日",
+          "explanation": "月よう日 is a specific, fixed point on the calendar → に ✓. 毎日, 今日, and 今月 are relative or floating time expressions → no に."
+        },
+        {
+          "kind": "mcq",
+          "q": "水よう日 ______ 先生が います。(On Wednesday, the teacher is here.)",
+          "choices": ["に", "は", "も", "から"],
+          "answer": "に",
+          "terms": ["v_suiyoubi", "v_sensei", { "id": "v_iru", "form": "polite_masu" }],
+          "explanation": "水よう日 is a specific day → に marks it as the time of the event. は would make it the topic, not a time marker."
         }
       ]
     }

@@ -715,7 +715,7 @@ Build examples around self-introduction, family description, and asking about pe
 
 ---
 
-### G3 — Core Particles II: も, と, や, から, まで
+### G3 — Core Particles II: も, と, や, から, まで, に (time)
 
 | Field | Value |
 |---|---|
@@ -723,8 +723,8 @@ Build examples around self-introduction, family description, and asking about pe
 | **Level** | N5 |
 | **Unlocks after** | N5.2 |
 | **Icon** | 📌 |
-| **Estimated minutes** | 25 |
-| **Particles** | `も`, `と`, `や`, `から`, `まで` |
+| **Estimated minutes** | 30 |
+| **Particles** | `も`, `と`, `や`, `から`, `まで`, `に` (time use only) |
 
 **What to teach:**
 - も for "also/even":
@@ -745,6 +745,13 @@ Build examples around self-introduction, family description, and asking about pe
   - から…まで as a pair: 月曜日から金曜日まで (from Monday to Friday)
   - までに = "by" (deadline): 金曜日までに
   - Note: at this stage, place-based examples are limited. Focus on time expressions using days of the week and time words from N5.2. Place-based から/まで (東京から, 学校まで) can be reinforced after N5.5 when location vocabulary is available.
+- に for specific time ("on/at a specific time"):
+  - Specific day: 月曜日に (on Monday), 金曜日に (on Friday)
+  - Specific date: 一日に (on the 1st), 三日に (on the 3rd)
+  - **Critical rule to teach:** Specific/fixed time words → に. Relative/floating time words → NO に.
+    - 月曜日に ✓ | 毎日 ✗ (no に) | 今日 ✗ (no に) | 今月 ✗ (no に)
+  - Scope at G3: days of the week and dates from N5.2/N5.3. Clock times (三時に) will be reinforced in N5.4. Destination use (学校に行く) is taught in G4 after N5.5.
+  - Rationale: N5.2 introduces days of the week; students naturally need に to say "on Monday" from the very first lesson it appears. Teaching に's time-connector role here prevents broken conversation patterns.
 
 **Recommended sections:**
 1. `grammarIntro`
@@ -753,16 +760,17 @@ Build examples around self-introduction, family description, and asking about pe
 4. `grammarRule` — や incomplete "and"
 5. `grammarComparison` — と vs や
 6. `grammarRule` — から and まで (from/until)
-7. `annotatedExample` — all particles in natural sentences using N5.1+N5.2 vocab
-8. `conversation` — dialogue using these particles with days/time context
-9. `fillSlot` — choose the right particle (も/と/や/から/まで)
-10. `drills` — mixed MCQ
+7. `grammarRule` — に for specific time (days/dates; critical: relative words don't take に)
+8. `annotatedExample` — all particles in natural sentences using N5.1+N5.2 vocab
+9. `conversation` — dialogue using these particles with days/time context (include に naturally)
+10. `fillSlot` — choose the right particle (も/と/や/から/まで/に)
+11. `drills` — mixed MCQ
 
-**Available vocabulary context:** All vocabulary through N5.2. This adds days of the week (月曜日–日曜日), time expressions (毎日, 今日, 今月), elemental nouns (水, 木, 火, 金, 土), and number-based terms. Days of the week are ideal for から/まで examples. Listing particles (と/や) work well with family terms and days.
+**Available vocabulary context:** All vocabulary through N5.2. This adds days of the week (月曜日–日曜日), time expressions (毎日, 今日, 今月), elemental nouns (水, 木, 火, 金, 土), and number-based terms. Days of the week are ideal for から/まで and に examples. Listing particles (と/や) work well with family terms and days.
 
 ---
 
-### G4 — Core Particles III: に, で, へ
+### G4 — Core Particles III: に (destination/existence), で, へ
 
 | Field | Value |
 |---|---|
@@ -771,16 +779,18 @@ Build examples around self-introduction, family description, and asking about pe
 | **Unlocks after** | N5.5 |
 | **Icon** | 📌 |
 | **Estimated minutes** | 25 |
-| **Particles** | `に`, `で`, `へ` |
+| **Particles** | `に` (destination/existence uses), `で`, `へ` |
+
+**Scope note:** に's time-connector role (specific days, dates, clock times) was introduced in G3. G4 extends に to its destination and existence-location roles, which require motion verbs (行く, 来る from N5.5) and existence verbs (いる from N5.4) not yet available at G3.
 
 **What to teach:**
-- に as "aiming" particle:
+- に as "destination / existence-location" particle (extending the G3 time use):
   - Destination of movement (学校に行く — now available with 行く from N5.5)
-  - Indirect object / recipient (友だちに本をあげる)
-  - Specific time (三時に会う — time vocabulary from N5.4)
-  - Frequency (一週間に二回)
   - Location of existence with いる/ある (部屋に猫がいる — いる from N5.4)
-  - Note: relative time words (今日, 明日, 昨日) do NOT take に
+  - Indirect object / recipient (友だちに本をあげる)
+  - Frequency (一週間に二回)
+  - Cross-reference G3: remind students that specific times (月曜日に, 三時に) were the first use they learned; this lesson adds the destination and location uses
+  - Note: relative time words (今日, 明日, 昨日) do NOT take に (also established in G3)
 - で as "enabling" particle:
   - Location of action (学校で勉強する — places from N5.5)
   - Means/tool (バスで行く — 行く from N5.5)
@@ -798,18 +808,18 @@ Build examples around self-introduction, family description, and asking about pe
 
 **Recommended sections:**
 1. `grammarIntro`
-2. `grammarRule` — に aiming particle (cover all uses)
+2. `grammarRule` — に destination and existence-location (review time use from G3; add new uses)
 3. `grammarRule` — で enabling particle (cover all uses)
 4. `grammarComparison` — に vs で (location of existence vs location of action)
 5. `grammarRule` — へ direction (and comparison with に for destinations)
-6. `annotatedExample` — に in its various roles
+6. `annotatedExample` — に in its destination/existence roles
 7. `annotatedExample` — で in its various roles
 8. `conversation` — dialogue using all three particles naturally with places and motion verbs
 9. `fillSlot` — choose に/で/へ
 10. `patternMatch` — identify correct に vs で usage
 11. `drills` — mixed MCQ
 
-**Available vocabulary context:** All vocabulary through N5.5. This now includes motion verbs (行く, 来る), places (店, 駅, 家), time expressions (時, 分, 週), and existence verbs (いる from N5.4, ある from N5.1). This rich vocabulary set enables natural, meaningful examples for all three particles — destinations with 行く/来る, existence locations with いる/ある, action locations with で, and time expressions with に.
+**Available vocabulary context:** All vocabulary through N5.5. This now includes motion verbs (行く, 来る), places (店, 駅, 家), time expressions (時, 分, 週), and existence verbs (いる from N5.4, ある from N5.1). This rich vocabulary set enables natural, meaningful examples for all three particles — destinations with 行く/来る, existence locations with いる/ある, action locations with で.
 
 ---
 
