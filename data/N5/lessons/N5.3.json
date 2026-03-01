@@ -17,7 +17,7 @@
     { "kanji": "五", "on": "ご", "kun": "いつ/いつつ", "meaning": "Five", "termId": "k_itsu" },
     { "kanji": "六", "on": "ろく", "kun": "む/むつ/むっつ", "meaning": "Six", "termId": "k_mu" },
     { "kanji": "七", "on": "しち", "kun": "なな/ななつ", "meaning": "Seven", "termId": "k_nana" },
-    { "kanji": "八", "on": "はち", "kun": "や/やつ/やっつ", "meaning": "Eight", "termId": "k_ya" },
+    { "kanji": "八", "on": "はち", "kun": "や/やつ/やっつ", "meaning": "Eight", "termId": "k_hachi" },
     { "kanji": "九", "on": "きゅう/く", "kun": "ここの/ここのつ", "meaning": "Nine", "termId": "k_kokono" },
     { "kanji": "十", "on": "じゅう/じっ", "kun": "とお", "meaning": "Ten", "termId": "k_too" },
     { "kanji": "百", "on": "ひゃく", "kun": "", "meaning": "Hundred", "termId": "k_u767e" },
@@ -59,7 +59,7 @@
         { "kanji": "五", "on": "ご", "kun": "いつ/いつつ", "meaning": "five", "terms": ["k_itsu"] },
         { "kanji": "六", "on": "ろく", "kun": "む/むつ/むっつ", "meaning": "six", "terms": ["k_mu"] },
         { "kanji": "七", "on": "しち", "kun": "なな/ななつ", "meaning": "seven", "terms": ["k_nana"] },
-        { "kanji": "八", "on": "はち", "kun": "や/やつ/やっつ", "meaning": "eight", "terms": ["k_ya"] },
+        { "kanji": "八", "on": "はち", "kun": "や/やつ/やっつ", "meaning": "eight", "terms": ["k_hachi"] },
         { "kanji": "九", "on": "きゅう/く", "kun": "ここの/ここのつ", "meaning": "nine", "terms": ["k_kokono"] },
         { "kanji": "十", "on": "じゅう/じっ", "kun": "とお", "meaning": "ten", "terms": ["k_too"] },
         { "kanji": "百", "on": "ひゃく", "kun": "", "meaning": "hundred", "terms": ["k_u767e"] },
@@ -74,22 +74,15 @@
       "groups": [
         {
           "label": "New Kanji",
-          "items": ["k_hito_2","k_futa","k_mi","k_yon","k_itsu","k_mu","k_nana","k_ya","k_kokono","k_too","k_u767e","k_chi","k_u4e07","k_u5186"]
+          "items": ["k_hito_2","k_futa","k_mi","k_yon","k_itsu","k_mu","k_nana","k_hachi","k_kokono","k_too","k_u767e","k_chi","k_u4e07","k_u5186"]
+        },
+        {
+          "label": "Celebrations",
+          "items": ["v_tanjoubi"]
         },
         {
           "label": "Counting People",
-          "items": [
-            { "counter": "nin", "n": 1 },
-            { "counter": "nin", "n": 2 },
-            { "counter": "nin", "n": 3 },
-            { "counter": "nin", "n": 4 },
-            { "counter": "nin", "n": 5 },
-            { "counter": "nin", "n": 6 },
-            { "counter": "nin", "n": 7 },
-            { "counter": "nin", "n": 8 },
-            { "counter": "nin", "n": 9 },
-            { "counter": "nin", "n": 10 }
-          ]
+          "items": ["v_hitori","v_futari","v_sannin","v_yonin","v_gonin","v_rokunin","v_shichinin","v_hachinin","v_kunin","v_juunin"]
         },
         {
           "label": "Days of the Month",
@@ -97,18 +90,7 @@
         },
         {
           "label": "Month Names",
-          "items": [
-            { "counter": "gatsu", "n": 1 },
-            { "counter": "gatsu", "n": 2 },
-            { "counter": "gatsu", "n": 3 },
-            { "counter": "gatsu", "n": 4 },
-            { "counter": "gatsu", "n": 5 },
-            { "counter": "gatsu", "n": 6 },
-            { "counter": "gatsu", "n": 7 },
-            { "counter": "gatsu", "n": 8 },
-            { "counter": "gatsu", "n": 9 },
-            { "counter": "gatsu", "n": 10 }
-          ]
+          "items": ["v_ichigatsu","v_nigatsu","v_sangatsu","v_shigatsu","v_gogatsu","v_rokugatsu","v_shichigatsu","v_hachigatsu","v_kugatsu","v_juugatsu"]
         }
       ]
     },
@@ -250,7 +232,7 @@
           "spk": "A",
           "jp": "やまかわさん、たんじょうびは 三月ですか。",
           "en": "Yamakawa-san, is your birthday in March?",
-          "terms": ["v_san", "p_wa", { "counter": "gatsu", "n": 3 }, "g_desu", "p_ka"]
+          "terms": ["v_san", "v_tanjoubi", "p_wa", { "counter": "gatsu", "n": 3 }, "g_desu", "p_ka"]
         },
         {
           "spk": "B",
@@ -344,59 +326,59 @@
     },
     {
       "type": "reading",
-      "title": "よむ れんしゅう 2: わたしのたんじょうび（My Birthday）",
+      "title": "よむ れんしゅう 2: たんじょうび（Birthdays）",
       "passage": [
         {
           "jp": "わたしのたんじょうびは 五月 五日です。",
           "en": "My birthday is May 5th.",
-          "terms": ["v_watashi", "p_no", "p_wa", { "counter": "gatsu", "n": 5 }, "v_itsuka", "g_desu"]
+          "terms": ["v_watashi", "p_no", "v_tanjoubi", "p_wa", { "counter": "gatsu", "n": 5 }, "v_itsuka", "g_desu"]
         },
         {
           "jp": "父のたんじょうびは 一月 一日です。",
           "en": "My father's birthday is January 1st.",
-          "terms": ["v_chichi", "p_no", "p_wa", { "counter": "gatsu", "n": 1 }, "v_ichinichitsuitachi", "g_desu"]
+          "terms": ["v_chichi", "p_no", "v_tanjoubi", "p_wa", { "counter": "gatsu", "n": 1 }, "v_ichinichitsuitachi", "g_desu"]
         },
         {
           "jp": "母のたんじょうびは 三月 三日です。",
           "en": "My mother's birthday is March 3rd.",
-          "terms": ["v_haha", "p_no", "p_wa", { "counter": "gatsu", "n": 3 }, "v_mikka", "g_desu"]
+          "terms": ["v_haha", "p_no", "v_tanjoubi", "p_wa", { "counter": "gatsu", "n": 3 }, "v_mikka", "g_desu"]
         },
         {
           "jp": "友だちのたんじょうびは 八月 八日です。",
           "en": "My friend's birthday is August 8th.",
-          "terms": ["v_tomodachi", "p_no", "p_wa", { "counter": "gatsu", "n": 8 }, "v_youka", "g_desu"]
+          "terms": ["v_tomodachi", "p_no", "v_tanjoubi", "p_wa", { "counter": "gatsu", "n": 8 }, "v_youka", "g_desu"]
         },
         {
           "jp": "先生のたんじょうびは 十月 十日です。",
           "en": "The teacher's birthday is October 10th.",
-          "terms": ["v_sensei", "p_no", "p_wa", { "counter": "gatsu", "n": 10 }, "v_tooka", "g_desu"]
+          "terms": ["v_sensei", "p_no", "v_tanjoubi", "p_wa", { "counter": "gatsu", "n": 10 }, "v_tooka", "g_desu"]
         },
         {
           "jp": "毎月、いい たんじょうびが あります。",
           "en": "Every month, there are good birthdays.",
-          "terms": ["v_maigetsu", "v_ii", "p_ga", { "id": "v_aru", "form": "polite_masu" }]
+          "terms": ["v_maigetsu", { "id": "v_ii", "form": "polite_adj" }, "v_tanjoubi", "p_ga", { "id": "v_aru", "form": "polite_masu" }]
         }
       ],
       "questions": [
         {
           "q": "たんじょうびは 五月 五日ですか。",
           "a": "はい、五月 五日です。",
-          "terms": ["p_wa", { "counter": "gatsu", "n": 5 }, "v_itsuka", "g_desu", "p_ka", "p_hai"]
+          "terms": ["v_tanjoubi", "p_wa", { "counter": "gatsu", "n": 5 }, "v_itsuka", "g_desu", "p_ka", "p_hai"]
         },
         {
           "q": "友だちのたんじょうびは 八月 八日ですか。",
           "a": "そうです。八月 八日です。",
-          "terms": ["v_tomodachi", "p_no", "p_wa", { "counter": "gatsu", "n": 8 }, "v_youka", "g_desu", "p_ka", "p_soudesu"]
+          "terms": ["v_tomodachi", "p_no", "v_tanjoubi", "p_wa", { "counter": "gatsu", "n": 8 }, "v_youka", "g_desu", "p_ka", "p_soudesu"]
         },
         {
           "q": "毎月、何が ありますか。",
           "a": "いい たんじょうびが あります。",
-          "terms": ["v_maigetsu", "v_nani", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "p_ka", "v_ii"]
+          "terms": ["v_maigetsu", "v_nani", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "p_ka", { "id": "v_ii", "form": "polite_adj" }, "v_tanjoubi"]
         },
         {
           "q": "先生のたんじょうびは 十月ですか。",
           "a": "はい、十月 十日です。",
-          "terms": ["v_sensei", "p_no", "p_wa", { "counter": "gatsu", "n": 10 }, "g_desu", "p_ka", "p_hai", "v_tooka"]
+          "terms": ["v_sensei", "p_no", "v_tanjoubi", "p_wa", { "counter": "gatsu", "n": 10 }, "g_desu", "p_ka", "p_hai", "v_tooka"]
         }
       ]
     },
@@ -523,7 +505,7 @@
           "q": "父 _______ 母のたんじょうびは 三月です。",
           "choices": ["と", "は", "も", "を"],
           "answer": "と",
-          "terms": ["v_chichi", "p_to", "v_haha", "p_no", { "counter": "gatsu", "n": 3 }, "g_desu"]
+          "terms": ["v_chichi", "p_to", "v_haha", "p_no", "v_tanjoubi", "p_wa", { "counter": "gatsu", "n": 3 }, "g_desu"]
         },
         {
           "kind": "mcq",
