@@ -3,7 +3,7 @@
   "id": "N5.Review.1",
   "title": "People, Family & Days of the Week",
   "meta": {
-    "phase": 5,
+    "phase": 4,
     "type": "assessment",
     "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 1–2.",
     "kanji": ["人","男","女","子","友","母","父","名","生","先","日","月","火","水","木","金","土","毎","今","何"]
@@ -16,7 +16,7 @@
       "items": [
         {
           "title": "Conversation 1",
-          "context": "Two students meet for the first time at school.",
+          "context": "Rikizo meets Yamakawa for the first time.",
           "lines": [
             {
               "spk": "A",
@@ -25,24 +25,24 @@
             },
             {
               "spk": "B",
-              "jp": "はじめまして。わたしは たなかです。よろしく おねがいします。",
+              "jp": "はじめまして。わたしは やまかわです。よろしく おねがいします。",
               "terms": ["p_hajimemashite", "v_watashi", "p_wa", "g_desu", "p_yoroshiku"]
             },
             {
               "spk": "A",
-              "jp": "たなかさんは 先生ですか。",
-              "terms": ["v_san", "p_wa", "v_sensei", "g_desu", "p_ka"]
+              "jp": "やまかわさんの お父さんは 先生ですか。",
+              "terms": ["v_san", "p_no", "v_otousan", "p_wa", "v_sensei", "g_desu", "p_ka"]
             },
             {
               "spk": "B",
-              "jp": "いいえ、先生じゃ ありません。がくせいです。",
-              "terms": ["v_iie", "v_sensei", "p_ja", { "id": "v_aru", "form": "polite_negative" }, "v_gakusei", "g_desu"]
+              "jp": "はい、父は 先生です。とても やさしい 先生です。",
+              "terms": ["p_hai", "v_chichi", "p_wa", "v_sensei", "g_desu", "v_totemo", { "id": "v_yasashii", "form": null }]
             }
           ],
-          "question": "What is Tanaka-san?",
-          "choices": ["A student", "A teacher", "A friend", "A parent"],
-          "answer": "A student",
-          "explanation": "B says 先生じゃありません (not a teacher) and がくせいです (is a student)."
+          "question": "What is Yamakawa's father?",
+          "choices": ["A teacher", "A friend", "A student", "A parent"],
+          "answer": "A teacher",
+          "explanation": "B says 父は先生です (my father is a teacher) and とてもやさしい先生です (a very kind teacher)."
         },
         {
           "title": "Conversation 2",
@@ -165,9 +165,9 @@
           "terms": ["v_watashi", "p_no", "v_namae", "p_wa", "g_desu"]
         },
         {
-          "jp": "かぞくは 父と 母と わたしです。さん人です。",
-          "en": "My family is my father, mother, and me. There are three of us.",
-          "terms": ["v_kazoku", "p_wa", "v_chichi", "p_to", "v_haha", "v_watashi", "g_desu", { "counter": "nin", "n": 3 }]
+          "jp": "父と 母と わたしは さん人です。",
+          "en": "My father, mother, and I are three people.",
+          "terms": ["v_chichi", "p_to", "v_haha", "p_wa", "v_watashi", "g_desu", { "counter": "nin", "n": 3 }]
         },
         {
           "jp": "父は 先生です。母も 先生です。",
@@ -187,11 +187,11 @@
       ],
       "questions": [
         {
-          "q": "りきぞの かぞくは なん人ですか。",
+          "q": "父と 母と りきぞは なん人ですか。",
           "a": "さん人",
           "choices": ["さん人", "ふたり", "よん人", "ひとり"],
-          "terms": ["p_no", "v_kazoku", "p_wa", "v_nani", "k_hito", "p_ka", { "counter": "nin", "n": 3 }],
-          "explanation": "The passage says かぞくは父と母とわたしです。さん人です — father, mother, and me, totalling three people."
+          "terms": ["v_chichi", "p_to", "v_haha", "p_wa", "v_nani", "v_hito", "p_ka"],
+          "explanation": "The passage says 父と母とわたしはさん人です — father, mother, and Rikizo, totalling three people."
         },
         {
           "q": "父と 母は なんですか。",
@@ -279,11 +279,11 @@
       "items": [
         {
           "kind": "mcq",
-          "q": "がくせいは _____ の 友だちです。",
-          "choices": ["わたし", "毎月", "今日", "お金"],
-          "answer": "わたし",
-          "terms": ["v_gakusei", "p_wa", "v_watashi", "p_no", "v_tomodachi", "g_desu"],
-          "explanation": "わたし (I/me) fits: 'The student is my friend.' わたしの = possessive 'my'."
+          "q": "先生の _____ は やまもとです。",
+          "choices": ["名まえ", "友だち", "父母", "毎日"],
+          "answer": "名まえ",
+          "terms": ["v_sensei", "p_no", "v_namae", "p_wa", "g_desu"],
+          "explanation": "名まえ (name) fits: 'The teacher's name is Yamamoto.' の connects a possessor to the thing possessed."
         },
         {
           "kind": "mcq",
