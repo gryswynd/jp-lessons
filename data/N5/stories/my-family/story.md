@@ -13,7 +13,7 @@
 
 友だちのなまえはケンです。ケンはとてもいい友だちです。
 
-今日は金よう日です。毎日、ケンといっしょにいます。うれしいです！
+今日は金よう日です。金よう日にケンといっしょにいます。毎日、うれしいです！
 
 **おわり**
 
@@ -31,7 +31,7 @@ My mother's name is Sakura. My mother is also a kind person.
 
 My friend's name is Ken. Ken is a very good friend.
 
-Today is Friday. Every day, I am together with Ken. I am happy!
+Today is Friday. On Fridays, I am together with Ken. Every day, I am happy!
 
 **The End**
 
@@ -59,6 +59,7 @@ Today is Friday. Every day, I am together with Ken. I am happy!
 - Copula (です) — noun and adjective predicates
 - Noun possession with の
 - も (also / too)
+- に — marking a specific day (金よう日に = on Friday)
 - います (polite present of いる — animate existence)
 - い-adjective in attributive position (やさしい人、いい友だち)
 - い-adjective in predicate position (うれしいです)
