@@ -265,7 +265,9 @@
         }
       ],
       "reviews": [],
-      "compose": "data/N5/compose/compose.N5.json",
+      "compose": [
+        { "lesson": "N5.1", "file": "data/N5/compose/compose.N5.1.json" }
+      ],
       "stories": [
         {
           "id": "library-book",
@@ -772,7 +774,7 @@
           "file": "data/N4/reviews/N4 Half Review.json"
         }
       ],
-      "compose": "data/N4/compose/compose.N4.json",
+      "compose": [],
       "stories": [
         {
           "id": "new-city",
