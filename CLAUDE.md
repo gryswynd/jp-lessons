@@ -470,6 +470,68 @@ Reviews cover multiple lessons. Vocabulary drawn from any lesson in the reviewed
 
 ---
 
+### Large Comprehensive Review (`data/N4/reviews/N4 Half Review.json`, etc.)
+
+Large half-level and full-level reviews are a distinct format from the standard numbered reviews above. They serve as **final closeout assessments** that systematically sweep every lesson in the covered range, one lesson at a time.
+
+**When to use this format:** When creating a review that spans 15 or more lessons and is intended as a terminal assessment for a major phase of the curriculum (e.g. "N4 Half Review" covering N4.1–N4.18, or an "N4 Full Review" covering all 36 N4 lessons).
+
+**Top-level required fields:**
+
+```json
+{
+  "contentVersion": "1.0.0",
+  "id": "N4.Review.Master",
+  "title": "N4 Complete Phase 4 Review",
+  "meta": {
+    "phase": 4,
+    "type": "comprehensive_review",
+    "focus": "Final check of all N4.1 - N4.18 Kanji, Vocabulary, and Grammar.",
+    "kanji": ["帰","作","使",  "...all kanji covered..."]
+  },
+  "sections": [...]
+}
+```
+
+Note: `type` is `"comprehensive_review"` (not `"assessment"`). The `meta.kanji` array must list every kanji character introduced across the entire scope.
+
+**Structure — lesson-by-lesson format:**
+
+| Part | Section type | Content |
+|---|---|---|
+| Conversation group 1 | `conversation` | 5 conversation items, one per lesson (lessons 1–5) |
+| Conversation group 2 | `conversation` | 5 conversation items, one per lesson (lessons 6–10) |
+| Conversation group 3 | `conversation` | 5 conversation items, one per lesson (lessons 11–15) |
+| Conversation group N | `conversation` | 3–5 items for remaining lessons |
+| Drill N+1 through Drill N+18 | `drills` | One drill section per lesson, each with 2 MCQ + 1 scramble |
+
+**Conversation grouping:** Group lessons in batches of 5. The final group may have fewer if the total lesson count is not a multiple of 5. Each conversation item must have:
+- `title`: "Lesson N4.X: [Theme]"
+- `context`: "Focus: [key vocabulary themes]"
+- `lines`: 4 lines (2 exchanges, A→B→A→B)
+- `question`, `choices` (4 options), `answer`, `explanation`
+
+Conversation lines in this format **do not include `en` translations** — the standard review rule applies.
+
+**Drill section per lesson:** Each lesson gets exactly one `drills` section titled "Drill N: [Theme] (N4.N)". The standard per-lesson drill contains:
+- 2 MCQ items (kanji reading drills — show the kanji in brackets, ask for the reading)
+- 1 scramble item (simple 3–5 segment sentence using that lesson's vocabulary)
+
+All drill items must have `explanation`. Scramble items must have `distractors` (exactly 3) and no `terms`, `answer`, or `choices`.
+
+**Kanji scope rule:** The comprehensive review covers all kanji from all lessons in scope. When verifying kanji, compute the full taught set = all N5 kanji + all N4 kanji up to the highest lesson in scope.
+
+**meta.kanji completeness:** The `meta.kanji` array must include every character from every lesson in the scope range. Deduplicate characters that appear in multiple lessons (e.g. 去 introduced in both N4.9 and N4.16 — list only once).
+
+**Building a new large review:** When the user asks to create or expand a half-level or full-level review:
+1. Agent 1 reads manifest.json to enumerate all lessons in scope and their kanji arrays.
+2. Agent 1 computes the union kanji set and identifies the theme/focus of each lesson.
+3. Agent 2 writes one conversation item per lesson and one drill section per lesson.
+4. Agent 3 performs the standard QA checks plus verifies every lesson is represented.
+5. Agent 4 checks naturalness and lesson variety — each conversation must represent its lesson's distinct theme.
+
+---
+
 ### Scramble Drill Items
 
 Scramble drills present the student with word chips that must be tapped in the correct order to build a Japanese sentence. They appear as `kind: "scramble"` items inside a `drills` section.
