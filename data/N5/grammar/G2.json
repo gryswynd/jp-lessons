@@ -208,6 +208,17 @@
             { "text": "です", "role": "verb" }
           ],
           "en": "My mother's friend is a teacher."
+        },
+        {
+          "parts": [
+            { "text": "わたし", "role": "topic", "gloss": "I" },
+            { "text": "の", "role": "particle" },
+            { "text": "パソコン", "role": "subject", "gloss": "computer" },
+            { "text": "は", "role": "particle" },
+            { "text": "いい", "role": "predicate", "gloss": "good" },
+            { "text": "です", "role": "verb" }
+          ],
+          "en": "My computer is good."
         }
       ]
     },
@@ -445,6 +456,14 @@
           "choices": ["は", "が", "の", "も"],
           "answer": "は",
           "explanation": "は marks the topic for a comment — 'as for Mom, she is not a teacher.'"
+        },
+        {
+          "before": "父",
+          "slot": true,
+          "after": "テレビは いいです。",
+          "choices": ["の", "は", "が", "を"],
+          "answer": "の",
+          "explanation": "の connects two nouns: 父のテレビ = father's TV."
         }
       ]
     },
@@ -492,6 +511,14 @@
           "answer": "を",
           "terms": ["v_sensei"],
           "explanation": "よぶ (call) is a transitive verb — を marks the person being called."
+        },
+        {
+          "kind": "mcq",
+          "q": "トイレ ______ あります。(There is a toilet.)",
+          "choices": ["が", "は", "を", "の"],
+          "answer": "が",
+          "terms": ["v_toire", { "id": "v_aru", "form": "polite_masu" }],
+          "explanation": "が marks the subject of existence verbs like ある (exist). トイレがあります = 'there is a toilet.'"
         }
       ]
     }

@@ -256,6 +256,17 @@
           "note": "Use だ with close friends or family. よ gently informs the listener of something they may not know."
         },
         {
+          "context": "Describing an object (polite)",
+          "parts": [
+            { "text": "テレビ", "role": "topic", "gloss": "TV" },
+            { "text": "は", "role": "particle" },
+            { "text": "いい", "role": "predicate", "gloss": "good" },
+            { "text": "です", "role": "verb" }
+          ],
+          "en": "The TV is good.",
+          "note": "です works the same way with loanwords. The pattern stays: Topic は Predicate です."
+        },
+        {
           "context": "Exclamation (casual — dropping the copula after い-adjective)",
           "parts": [
             { "text": "うれしい", "role": "modifier", "gloss": "happy" },
@@ -469,6 +480,18 @@
             "先生じゃない。",
             "先生ではなかった。"
           ]
+        },
+        {
+          "given": "パソコンはいいです。",
+          "givenLabel": "Polite Present",
+          "targetLabel": "Plain Present",
+          "answer": "パソコンはいい。",
+          "choices": [
+            "パソコンはいい。",
+            "パソコンはいいだ。",
+            "パソコンはよかった。",
+            "パソコンはいいでした。"
+          ]
         }
       ]
     },
@@ -530,6 +553,19 @@
           "answer": "先生ではなかった。",
           "terms": ["v_sensei", "g_desu"],
           "explanation": "ではなかった is the plain (informal) past negative copula. ではありませんでした is the polite equivalent. ではない is plain present negative."
+        },
+        {
+          "kind": "mcq",
+          "q": "Choose the correct polite negative: 'That is not a toilet.'",
+          "choices": [
+            "トイレではありません。",
+            "トイレじゃない。",
+            "トイレではなかった。",
+            "トイレだ。"
+          ],
+          "answer": "トイレではありません。",
+          "terms": ["v_toire", "p_dewa", { "id": "v_aru", "form": "polite_negative" }],
+          "explanation": "ではありません is the polite negative copula. じゃない is the plain negative — correct meaning but wrong register for polite speech."
         }
       ]
     }

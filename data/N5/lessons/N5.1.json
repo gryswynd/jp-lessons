@@ -74,7 +74,7 @@
         },
         {
           "label": "Family",
-          "items": ["k_haha", "k_chichi", "v_fubo", "k_ko", "v_otousan", "v_okaasan"]
+          "items": ["k_haha", "k_chichi", "v_chichi", "v_haha", "v_fubo", "k_ko", "v_otousan", "v_okaasan"]
         },
         {
           "label": "Friends & Teachers",
@@ -106,7 +106,11 @@
         },
         {
           "label": "Replies & Expressions",
-          "items": ["v_iie", "v_kudasai"]
+          "items": ["p_hai", "v_iie", "p_soudesu", "p_soudesuka", "v_kudasai"]
+        },
+        {
+          "label": "Loanwords",
+          "items": ["v_pasokon", "v_beddo", "v_terebi", "v_toire"]
         },
         {
           "label": "Grammar (Copula)",
@@ -114,7 +118,7 @@
         },
         {
           "label": "Particles",
-          "items": ["p_wa", "p_ga", "p_wo", "p_ni", "p_de", "p_no", "p_mo", "p_to", "p_ka", "p_yo", "p_ne", "p_dewa", "p_ja"]
+          "items": ["p_wa", "p_ga", "p_wo", "p_no", "p_ka", "p_yo", "p_ne", "p_dewa", "p_ja"]
         }
       ]
     },
@@ -361,6 +365,11 @@
           "terms": ["v_sensei", "p_wa", "v_totemo", "v_yasashii", "k_hito", "g_desu"]
         },
         {
+          "jp": "先生の パソコンは いいです。テレビが あります。トイレが あります。",
+          "en": "The teacher's computer is good. There is a TV. There is a bathroom.",
+          "terms": ["v_sensei", "p_no", "v_pasokon", "p_wa", "v_ii", "g_desu", "v_terebi", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "v_toire"]
+        },
+        {
           "jp": "みなさんは うれしいです。",
           "en": "Everyone is happy.",
           "terms": ["v_minasan", "p_wa", { "id": "v_ureshii", "form": "polite_adj" }]
@@ -496,37 +505,37 @@
         {
           "kind": "mcq",
           "q": "あの 人 _______ 女の人です。",
-          "choices": ["は", "を", "に"],
+          "choices": ["は", "を", "の", "が"],
           "answer": "は",
           "terms": ["v_ano", "k_hito", "p_wa", "k_onna", "g_desu"]
         },
         {
           "kind": "mcq",
-          "q": "母 _______ 父は 先生です。",
-          "choices": ["と", "は", "を"],
-          "answer": "と",
-          "terms": ["v_haha", "p_to", "v_chichi", "p_wa", "v_sensei", "g_desu"]
+          "q": "友だち _______ います。",
+          "choices": ["が", "は", "を", "の"],
+          "answer": "が",
+          "terms": ["v_tomodachi", "p_ga", { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "kind": "mcq",
-          "q": "やまもと先生は 日本 _______ 生まれました。",
-          "choices": ["で", "に", "を"],
-          "answer": "で",
-          "terms": ["v_sensei", "p_wa", "v_nihon", "p_de", { "id": "v_umareru", "form": "polite_mashita" }]
+          "q": "名まえ _______ いって ください。",
+          "choices": ["を", "は", "の", "が"],
+          "answer": "を",
+          "terms": ["v_namae", "p_wo", { "id": "v_iu", "form": "te_form" }, "v_kudasai"]
         },
         {
           "kind": "mcq",
-          "q": "やまもと先生は ここ _______ きました。",
-          "choices": ["に", "で", "を"],
-          "answer": "に",
-          "terms": ["v_sensei", "p_ga", "p_ni", { "id": "v_kuru", "form": "polite_mashita" }]
+          "q": "あの テレビ _______ いいです。",
+          "choices": ["は", "が", "を", "の"],
+          "answer": "は",
+          "terms": ["v_ano", "v_terebi", "p_wa", "v_ii", "g_desu"]
         },
         {
           "kind": "mcq",
-          "q": "わたし _______ 名まえは りきぞです。",
-          "choices": ["の", "は", "が"],
+          "q": "わたし _______ パソコンは いいです。",
+          "choices": ["の", "は", "が", "を"],
           "answer": "の",
-          "terms": ["v_watashi", "p_no", "v_namae", "p_wa", "g_desu"]
+          "terms": ["v_watashi", "p_no", "v_pasokon", "p_wa", "v_ii", "g_desu"]
         }
       ]
     }
