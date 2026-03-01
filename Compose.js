@@ -161,6 +161,13 @@ window.ComposeModule = {
             .c-conj-item:last-child { border-bottom: none; }
             .c-conj-label { font-weight: 700; color: var(--c-text-main); }
             .c-conj-desc { color: var(--c-text-sub); font-size: 0.78rem; }
+            .c-conj-entry { padding: 10px 12px; border-bottom: 1px solid #f1f2f6; }
+            .c-conj-entry:last-child { border-bottom: none; }
+            .c-conj-pattern { font-weight: 800; font-size: 0.9rem; color: var(--c-primary-dark); }
+            .c-conj-meaning { font-size: 0.78rem; color: var(--c-text-sub); margin-top: 2px; }
+            .c-conj-examples { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+            .c-conj-example { font-family: 'Noto Sans JP', sans-serif; font-size: 0.88rem; font-weight: 600; background: #f5f5f5; padding: 3px 10px; border-radius: 6px; color: var(--c-text-main); cursor: pointer; transition: background 0.15s; }
+            .c-conj-example:hover { background: var(--c-primary-light); }
 
             /* NEXT PROMPT BUTTON */
             .c-next-prompt-btn { background: linear-gradient(135deg, var(--c-success), #20bf6b); color: white; border: none; padding: 12px 20px; border-radius: 12px; font-size: 1rem; font-weight: 800; width: 100%; margin: 10px 0; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(46, 213, 115, 0.3); animation: c-celebrate 0.4s ease; }
@@ -516,16 +523,28 @@ window.ComposeModule = {
             </span>`;
         });
 
-        // Build conjugation reference (gated)
+        // Build conjugation reference (rich pattern display)
         let conjRefHtml = '';
-        (compose.conjugations || []).forEach(formKey => {
-            const rule = conjugationRules[formKey];
-            if (!rule) return;
-            conjRefHtml += `<div class="c-conj-item">
-                <div>
-                    <div class="c-conj-label">${escHtml(rule.label)}</div>
-                    <div class="c-conj-desc">${escHtml(rule.description)}</div>
-                </div>
+        (compose.conjugations || []).forEach(entry => {
+            // Support both old string keys (legacy) and new rich objects
+            if (typeof entry === 'string') {
+                const rule = conjugationRules[entry];
+                if (!rule) return;
+                conjRefHtml += `<div class="c-conj-item">
+                    <div>
+                        <div class="c-conj-label">${escHtml(rule.label)}</div>
+                        <div class="c-conj-desc">${escHtml(rule.description)}</div>
+                    </div>
+                </div>`;
+                return;
+            }
+            const examples = (entry.examples || []).map(ex =>
+                `<span class="c-conj-example" onclick="ComposeApp.insertWord('${escHtml(ex)}')">${escHtml(ex)}</span>`
+            ).join('');
+            conjRefHtml += `<div class="c-conj-entry">
+                <div class="c-conj-pattern">${escHtml(entry.pattern)}</div>
+                <div class="c-conj-meaning">${escHtml(entry.meaning)}</div>
+                <div class="c-conj-examples">${examples}</div>
             </div>`;
         });
 

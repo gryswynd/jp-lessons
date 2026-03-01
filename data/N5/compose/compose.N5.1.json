@@ -36,6 +36,57 @@
     }
   ],
   "challengePrompts": [],
-  "particles": ["p_wa", "p_ga", "p_wo", "p_no", "p_ka", "p_yo", "p_ne", "p_dewa", "p_ja", "g_desu", "g_da"],
-  "conjugations": ["polite_adj"]
+  "particles": ["p_wa", "p_ga", "p_wo", "p_no", "p_ka", "p_yo", "p_ne", "p_dewa", "p_ja", "g_desu"],
+  "conjugations": [
+    {
+      "pattern": "[noun] + です",
+      "meaning": "is / am / are (polite)",
+      "examples": ["せんせいです", "ともだちです"]
+    },
+    {
+      "pattern": "[noun] + でした",
+      "meaning": "was (polite)",
+      "examples": ["せんせいでした", "ともだちでした"]
+    },
+    {
+      "pattern": "[noun] + ではありません",
+      "meaning": "is not (polite formal)",
+      "examples": ["せんせいではありません"]
+    },
+    {
+      "pattern": "[noun] + じゃありません",
+      "meaning": "is not (polite casual)",
+      "examples": ["ともだちじゃありません"]
+    },
+    {
+      "pattern": "[noun] + ではありませんでした",
+      "meaning": "was not (polite formal)",
+      "examples": ["せんせいではありませんでした"]
+    },
+    {
+      "pattern": "[noun] + じゃありませんでした",
+      "meaning": "was not (polite casual)",
+      "examples": ["ともだちじゃありませんでした"]
+    },
+    {
+      "pattern": "[い-adj] + です",
+      "meaning": "is adj (polite)",
+      "examples": ["やさしいです", "うれしいです", "いいです"]
+    },
+    {
+      "pattern": "[い-adj]〜い → 〜かったです",
+      "meaning": "was adj (polite)",
+      "examples": ["やさしかったです", "うれしかったです", "よかったです"]
+    },
+    {
+      "pattern": "[い-adj]〜い → 〜くないです",
+      "meaning": "is not adj (polite)",
+      "examples": ["やさしくないです", "うれしくないです", "よくないです"]
+    },
+    {
+      "pattern": "[い-adj]〜い → 〜くなかったです",
+      "meaning": "was not adj (polite)",
+      "examples": ["やさしくなかったです", "うれしくなかったです", "よくなかったです"]
+    }
+  ]
 }
