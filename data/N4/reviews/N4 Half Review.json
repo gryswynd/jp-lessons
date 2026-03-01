@@ -41,15 +41,20 @@
               "spk": "A",
               "jp": "きのう、何を 作りましたか。",
               "terms": [
-                { "id": "v_tsukuru", "form": "polite_mashita" }
+                "v_nani",
+                "p_wo",
+                { "id": "v_tsukuru", "form": "polite_mashita" },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "ケーキを 作りました。それから、友だちに 写真を 送りました。",
               "terms": [
+                "p_wo",
                 { "id": "v_tsukuru", "form": "polite_mashita" },
                 "v_tomodachi",
+                "p_ni",
                 "v_shashin",
                 { "id": "v_okuru", "form": "polite_mashita" }
               ]
@@ -58,17 +63,24 @@
               "spk": "A",
               "jp": "いいですね。今日、仕事を しますか。",
               "terms": [
+                { "id": "v_ii", "form": "polite_adj" },
+                "p_ne",
                 "v_kyou",
                 "v_shigoto",
-                { "id": "v_suru", "form": "polite_masu" }
+                "p_wo",
+                { "id": "v_suru", "form": "polite_masu" },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "はい。パソコンを 使って、家で 働きます。",
               "terms": [
+                "p_hai",
+                "v_pasokon",
+                "p_wo",
                 { "id": "v_tsukau", "form": "te_form" },
-                "k_ie",
+                "p_de",
                 { "id": "v_hataraku", "form": "polite_masu" }
               ]
             }
@@ -86,16 +98,20 @@
               "spk": "A",
               "jp": "駅まで 歩きますか。",
               "terms": [
-                "k_u99c5",
-                { "id": "v_aruku", "form": "polite_masu" }
+                "p_made",
+                { "id": "v_aruku", "form": "polite_masu" },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "いいえ、駅は 遠いですから、バスに 乗ります。",
               "terms": [
-                "k_u99c5",
+                "v_iie",
+                "p_wa",
                 { "id": "v_tooi", "form": "polite_adj" },
+                "p_kara",
+                "p_ni",
                 { "id": "v_noru", "form": "polite_masu" }
               ]
             },
@@ -104,13 +120,18 @@
               "jp": "学校は 近くに ありますか。",
               "terms": [
                 "v_gakkou",
-                { "id": "v_chikai", "form": "adverbial" }
+                "p_wa",
+                { "id": "v_chikai", "form": "adverbial" },
+                "p_ni",
+                { "id": "v_aru", "form": "polite_masu" },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "はい、近いです。毎日 歩いて 行きます。",
               "terms": [
+                "p_hai",
                 { "id": "v_chikai", "form": "polite_adj" },
                 "v_mainichi",
                 { "id": "v_aruku", "form": "te_form" },
@@ -132,7 +153,11 @@
               "jp": "明日の 朝、何を しますか。",
               "terms": [
                 "v_ashita",
-                "k_asa"
+                "p_no",
+                "v_nani",
+                "p_wo",
+                { "id": "v_suru", "form": "polite_masu" },
+                "p_ka"
               ]
             },
             {
@@ -140,7 +165,9 @@
               "jp": "早起きして、朝ご飯を 食べます。",
               "terms": [
                 "v_hayaoki",
+                { "id": "v_suru", "form": "te_form" },
                 "v_asagohan",
+                "p_wo",
                 { "id": "v_taberu", "form": "polite_masu" }
               ]
             },
@@ -148,14 +175,19 @@
               "spk": "A",
               "jp": "あなたの うちは 明るいですね。",
               "terms": [
-                { "id": "v_akarui", "form": "polite_adj" }
+                "v_anata",
+                "p_no",
+                "p_wa",
+                { "id": "v_akarui", "form": "polite_adj" },
+                "p_ne"
               ]
             },
             {
               "spk": "B",
               "jp": "はい。でも、晩は 暗いです。",
               "terms": [
-                "k_u6669",
+                "p_hai",
+                "p_wa",
                 { "id": "v_kurai", "form": "polite_adj" }
               ]
             }
@@ -173,36 +205,43 @@
               "spk": "A",
               "jp": "どんな 色が 好きですか。",
               "terms": [
-                "k_iro",
-                "v_suki"
+                "v_donna",
+                "p_ga",
+                { "id": "v_suki", "form": "polite_adj" },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "青と 黒が 好きです。田中さんは？",
               "terms": [
-                "k_ao",
-                "k_kuro",
+                "p_to",
+                "p_ga",
+                { "id": "v_suki", "form": "polite_adj" },
                 "v_tanaka",
-                "v_suki"
+                "p_wa"
               ]
             },
             {
               "spk": "A",
               "jp": "私は 赤い 車が 好きです。",
               "terms": [
-                "k_watashi",
-                { "id": "v_akai", "form": "polite_adj" },
-                "k_kuruma",
-                "v_suki"
+                "v_watashi",
+                "p_wa",
+                "v_akai",
+                "p_ga",
+                { "id": "v_suki", "form": "polite_adj" }
               ]
             },
             {
               "spk": "B",
               "jp": "かっこいいですね。お茶を 飲みませんか。",
               "terms": [
+                "p_ne",
                 "v_ocha",
-                { "id": "v_nomu", "form": "polite_negative" }
+                "p_wo",
+                { "id": "v_nomu", "form": "polite_negative" },
+                "p_ka"
               ]
             }
           ],
@@ -220,7 +259,12 @@
               "jp": "今晩の 料理は 何ですか。",
               "terms": [
                 "v_konban",
-                "v_ryouri"
+                "p_no",
+                "v_ryouri",
+                "p_wa",
+                "v_nani",
+                "g_desu",
+                "p_ka"
               ]
             },
             {
@@ -228,21 +272,30 @@
               "jp": "牛肉と 野菜の カレーです。",
               "terms": [
                 "v_gyuuniku",
-                "v_yasai"
+                "p_to",
+                "v_yasai",
+                "p_no",
+                "g_desu"
               ]
             },
             {
               "spk": "A",
               "jp": "飲み物は ありますか。",
               "terms": [
-                "v_nomimono"
+                "v_nomimono",
+                "p_wa",
+                { "id": "v_aru", "form": "polite_masu" },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "はい。おいしい お茶が あります。",
               "terms": [
+                "p_hai",
+                "v_oishii",
                 "v_ocha",
+                "p_ga",
                 { "id": "v_aru", "form": "polite_masu" }
               ]
             }
@@ -268,26 +321,34 @@
               "jp": "昼ご飯は もう 食べましたか。",
               "terms": [
                 "v_hirugohan",
-                { "id": "v_taberu", "form": "polite_mashita" }
+                "p_wa",
+                { "id": "v_taberu", "form": "polite_mashita" },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "はい。鳥肉の 料理を 食べました。味も よかったです。",
               "terms": [
+                "p_hai",
                 "v_toriniku",
+                "p_no",
                 "v_ryouri",
+                "p_wo",
                 { "id": "v_taberu", "form": "polite_mashita" },
-                "k_aji"
+                "p_mo",
+                { "id": "v_ii", "form": "polite_past_adj" }
               ]
             },
             {
               "spk": "A",
               "jp": "私も 同じ 料理を 食べたいです。",
               "terms": [
-                "k_watashi",
+                "v_watashi",
+                "p_mo",
                 "v_onaji",
                 "v_ryouri",
+                "p_wo",
                 { "id": "v_taberu", "form": "desire_tai" }
               ]
             },
@@ -295,8 +356,13 @@
               "spk": "B",
               "jp": "店の中は 少し 暗いですが、おいしいですよ。",
               "terms": [
+                "p_no",
+                "p_wa",
                 "v_sukoshi",
-                { "id": "v_kurai", "form": "polite_adj" }
+                { "id": "v_kurai", "form": "polite_adj" },
+                "p_ga",
+                { "id": "v_oishii", "form": "polite_adj" },
+                "p_yo"
               ]
             }
           ],
@@ -314,7 +380,10 @@
               "jp": "ご家族は 何人ですか。",
               "terms": [
                 "v_kazoku",
-                { "counter": "nin", "n": 0 }
+                "p_wa",
+                { "counter": "nin", "n": 0 },
+                "g_desu",
+                "p_ka"
               ]
             },
             {
@@ -322,25 +391,33 @@
               "jp": "父と 母と 兄と 私の 四人です。",
               "terms": [
                 "v_chichi",
+                "p_to",
                 "v_haha",
-                "k_ani",
-                "k_watashi",
-                { "counter": "nin", "n": 4 }
+                "v_watashi",
+                "p_no",
+                { "counter": "nin", "n": 4 },
+                "g_desu"
               ]
             },
             {
               "spk": "A",
               "jp": "お兄さんは どんな 人ですか。",
               "terms": [
-                "k_ani"
+                "p_wa",
+                "v_donna",
+                "v_hito",
+                "g_desu",
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "とても 親切です。よく 話してくれました。",
               "terms": [
+                "v_totemo",
                 { "id": "v_shinsetsu", "form": "polite_adj" },
-                { "id": "v_hanasu", "form": "polite_mashita" }
+                "v_yoku",
+                { "id": "v_hanasu", "form": "te_form" }
               ]
             }
           ],
@@ -358,16 +435,20 @@
               "jp": "日本の 夏は 暑いですか。",
               "terms": [
                 "v_nihon",
-                "k_natsu",
-                { "id": "v_atsui", "form": "polite_adj" }
+                "p_no",
+                "p_wa",
+                { "id": "v_atsui", "form": "polite_adj" },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "はい、とても 暑いです。冬は 寒いです。",
               "terms": [
+                "p_hai",
+                "v_totemo",
                 { "id": "v_atsui", "form": "polite_adj" },
-                "k_fuyu",
+                "p_wa",
                 { "id": "v_samui", "form": "polite_adj" }
               ]
             },
@@ -375,17 +456,20 @@
               "spk": "A",
               "jp": "どの きせつが 好きですか。",
               "terms": [
-                "v_suki"
+                "p_ga",
+                { "id": "v_suki", "form": "polite_adj" },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "私は 春と 秋が 好きです。",
               "terms": [
-                "k_watashi",
-                "k_haru",
-                "k_aki",
-                "v_suki"
+                "v_watashi",
+                "p_wa",
+                "p_to",
+                "p_ga",
+                { "id": "v_suki", "form": "polite_adj" }
               ]
             }
           ],
@@ -402,7 +486,11 @@
               "spk": "A",
               "jp": "どこに 住んで いますか。",
               "terms": [
-                { "id": "v_sumu", "form": "te_form" }
+                "v_doko",
+                "p_ni",
+                { "id": "v_sumu", "form": "te_form" },
+                { "id": "v_iru", "form": "polite_masu" },
+                "p_ka"
               ]
             },
             {
@@ -410,9 +498,11 @@
               "jp": "東京の 近くの 町に 住んで います。",
               "terms": [
                 "v_toukyou",
+                "p_no",
                 { "id": "v_chikai", "form": "adverbial" },
-                "k_machi",
-                { "id": "v_sumu", "form": "te_form" }
+                "p_ni",
+                { "id": "v_sumu", "form": "te_form" },
+                { "id": "v_iru", "form": "polite_masu" }
               ]
             },
             {
@@ -420,14 +510,23 @@
               "jp": "住所を 書いて ください。",
               "terms": [
                 "v_juusho",
-                { "id": "v_kaku", "form": "te_form" }
+                "p_wo",
+                { "id": "v_kaku", "form": "te_form" },
+                "v_kudasai"
               ]
             },
             {
               "spk": "B",
               "jp": "はい。ここは 別の 所ですが、いいですか。",
               "terms": [
-                "v_betsu"
+                "p_hai",
+                "p_wa",
+                "v_betsu",
+                "p_no",
+                "g_desu",
+                "p_ga",
+                { "id": "v_ii", "form": "polite_adj" },
+                "p_ka"
               ]
             }
           ],
@@ -445,8 +544,11 @@
               "jp": "映画は 何時に 始まりますか。",
               "terms": [
                 "v_eiga",
+                "p_wa",
                 "v_nanji",
-                { "id": "v_hajimaru", "form": "polite_masu" }
+                "p_ni",
+                { "id": "v_hajimaru", "form": "polite_masu" },
+                "p_ka"
               ]
             },
             {
@@ -455,6 +557,7 @@
               "terms": [
                 "v_gogo",
                 { "counter": "ji", "n": 2 },
+                "p_ni",
                 { "id": "v_hajimaru", "form": "te_form" },
                 { "counter": "ji", "n": 4 },
                 { "id": "v_owaru", "form": "polite_masu" }
@@ -464,7 +567,11 @@
               "spk": "A",
               "jp": "映画館は どこですか。",
               "terms": [
-                "v_eigakan"
+                "v_eigakan",
+                "p_wa",
+                "v_doko",
+                "g_desu",
+                "p_ka"
               ]
             },
             {
@@ -472,7 +579,9 @@
               "jp": "英語の 学校の 前に あります。",
               "terms": [
                 "v_eigo",
+                "p_no",
                 "v_gakkou",
+                "p_ni",
                 { "id": "v_aru", "form": "polite_masu" }
               ]
             }
@@ -499,15 +608,21 @@
               "terms": [
                 "v_senshuu",
                 "v_ryokou",
-                { "id": "v_iku", "form": "polite_mashita" }
+                "p_ni",
+                { "id": "v_iku", "form": "polite_mashita" },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "はい。自分で 写真を たくさん 写しました。",
               "terms": [
+                "p_hai",
                 "v_jibun",
+                "p_de",
                 "v_shashin",
+                "p_wo",
+                "v_takusan",
                 { "id": "v_utsusu", "form": "polite_mashita" }
               ]
             },
@@ -516,17 +631,24 @@
               "jp": "世界の 旅は 楽しいですか。",
               "terms": [
                 "v_sekai",
+                "p_no",
                 "v_tabi",
-                "v_tanoshii"
+                "p_wa",
+                { "id": "v_tanoshii", "form": "polite_adj" },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "はい。真ん中の 写真を 見て ください。",
               "terms": [
+                "p_hai",
                 "v_mannaka",
+                "p_no",
                 "v_shashin",
-                { "id": "v_miru", "form": "te_form" }
+                "p_wo",
+                { "id": "v_miru", "form": "te_form" },
+                "v_kudasai"
               ]
             }
           ],
@@ -543,7 +665,13 @@
               "spk": "A",
               "jp": "顔色が よくないですね。どうしましたか。",
               "terms": [
-                "v_kaoiro"
+                "v_kaoiro",
+                "p_ga",
+                { "id": "v_ii", "form": "plain_negative" },
+                "g_desu",
+                "p_ne",
+                { "id": "v_suru", "form": "polite_mashita" },
+                "p_ka"
               ]
             },
             {
@@ -551,7 +679,10 @@
               "jp": "頭と 首が いたいです。",
               "terms": [
                 "v_atama",
-                "v_kubi"
+                "p_to",
+                "v_kubi",
+                "p_ga",
+                { "id": "v_itai", "form": "polite_adj" }
               ]
             },
             {
@@ -559,14 +690,19 @@
               "jp": "体を 休めた ほうが いいですよ。",
               "terms": [
                 "v_karada",
-                { "id": "v_yasumu", "form": "plain_past" }
+                "p_wo",
+                { "id": "v_yasumu", "form": "plain_past" },
+                { "id": "v_ii", "form": "polite_adj" },
+                "p_yo"
               ]
             },
             {
               "spk": "B",
               "jp": "はい。心も つかれています。",
               "terms": [
-                "v_kokoro"
+                "p_hai",
+                "v_kokoro",
+                "p_mo"
               ]
             }
           ],
@@ -584,34 +720,46 @@
               "jp": "楽しい 音楽ですね。",
               "terms": [
                 "v_tanoshii",
-                "v_ongaku"
+                "v_ongaku",
+                "g_desu",
+                "p_ne"
               ]
             },
             {
               "spk": "B",
               "jp": "はい。あの 歌手は 声が きれいです。",
               "terms": [
+                "p_hai",
                 "v_kashu",
+                "p_wa",
                 "v_koe",
-                "v_kirei"
+                "p_ga",
+                { "id": "v_kirei", "form": "polite_adj" }
               ]
             },
             {
               "spk": "A",
               "jp": "いっしょに 歌を 歌いませんか。",
               "terms": [
+                "v_issho",
                 "v_uta",
-                { "id": "v_utau", "form": "polite_negative" }
+                "p_wo",
+                { "id": "v_utau", "form": "polite_negative" },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "いいえ、私は 低い 音が 下手ですから。",
               "terms": [
-                "k_watashi",
-                { "id": "v_hikui", "form": "polite_adj" },
+                "v_iie",
+                "v_watashi",
+                "p_wa",
+                "v_hikui",
                 "v_oto",
-                "v_heta"
+                "p_ga",
+                { "id": "v_heta", "form": "polite_adj" },
+                "p_kara"
               ]
             }
           ],
@@ -629,15 +777,21 @@
               "jp": "今日の 仕事は いそがしいですか。",
               "terms": [
                 "v_kyou",
-                "v_shigoto"
+                "p_no",
+                "v_shigoto",
+                "p_wa",
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "はい。急いで 会社員に メールを 送ります。",
               "terms": [
+                "p_hai",
                 { "id": "v_isogu", "form": "te_form" },
                 "v_kaishain",
+                "p_ni",
+                "p_wo",
                 { "id": "v_okuru", "form": "polite_masu" }
               ]
             },
@@ -646,14 +800,22 @@
               "jp": "明日は 早起きしますか。",
               "terms": [
                 "v_ashita",
-                "v_hayaoki"
+                "p_wa",
+                "v_hayaoki",
+                { "id": "v_suru", "form": "polite_masu" },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "いいえ、火曜日は 休みですから、ゆっくりします。",
               "terms": [
-                "v_kayoubi"
+                "v_iie",
+                "v_kayoubi",
+                "p_wa",
+                "g_desu",
+                "p_kara",
+                { "id": "v_suru", "form": "polite_masu" }
               ]
             }
           ],
@@ -671,14 +833,18 @@
               "jp": "病院へ 行きましたか。",
               "terms": [
                 "v_byouin",
-                { "id": "v_iku", "form": "polite_mashita" }
+                "p_e",
+                { "id": "v_iku", "form": "polite_mashita" },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "はい。医者に 会いました。病気でした。",
               "terms": [
+                "p_hai",
                 "v_isha",
+                "p_ni",
                 { "id": "v_au", "form": "polite_mashita" },
                 "v_byouki"
               ]
@@ -688,13 +854,16 @@
               "jp": "薬を 飲みましたか。",
               "terms": [
                 "v_kusuri",
-                { "id": "v_nomu", "form": "polite_mashita" }
+                "p_wo",
+                { "id": "v_nomu", "form": "polite_mashita" },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "はい、飲みました。",
               "terms": [
+                "p_hai",
                 { "id": "v_nomu", "form": "polite_mashita" }
               ]
             }
@@ -720,6 +889,7 @@
               "jp": "銀行まで 走って 行きます。",
               "terms": [
                 "v_ginkou",
+                "p_made",
                 { "id": "v_hashiru", "form": "te_form" },
                 { "id": "v_iku", "form": "polite_masu" }
               ]
@@ -728,7 +898,8 @@
               "spk": "B",
               "jp": "どうして 走りますか。",
               "terms": [
-                { "id": "v_hashiru", "form": "polite_masu" }
+                { "id": "v_hashiru", "form": "polite_masu" },
+                "p_ka"
               ]
             },
             {
@@ -736,6 +907,8 @@
               "jp": "犬と いっしょに 運動します。",
               "terms": [
                 "v_inu",
+                "p_to",
+                "v_issho",
                 { "id": "v_undou", "form": "polite_masu" }
               ]
             },
@@ -744,8 +917,11 @@
               "jp": "動物が 好きですね。私も 犬が 好きです。",
               "terms": [
                 "v_doubutsu",
-                "v_suki",
-                "k_watashi",
+                "p_ga",
+                { "id": "v_suki", "form": "polite_adj" },
+                "p_ne",
+                "v_watashi",
+                "p_mo",
                 "v_inu"
               ]
             }
@@ -765,6 +941,7 @@
               "terms": [
                 "v_raishuu",
                 "v_kyouto",
+                "p_e",
                 { "id": "v_iku", "form": "polite_masu" }
               ]
             },
@@ -772,16 +949,24 @@
               "spk": "B",
               "jp": "何で 行きますか。電車ですか。",
               "terms": [
-                "v_densha"
+                "v_nani",
+                "p_de",
+                { "id": "v_iku", "form": "polite_masu" },
+                "p_ka",
+                "v_densha",
+                "g_desu"
               ]
             },
             {
               "spk": "A",
               "jp": "いいえ、自転車で 行きます。海も 見ます。",
               "terms": [
+                "v_iie",
                 "v_jitensha",
+                "p_de",
                 { "id": "v_iku", "form": "polite_masu" },
                 "v_umi",
+                "p_mo",
                 { "id": "v_miru", "form": "polite_masu" }
               ]
             },
@@ -789,7 +974,8 @@
               "spk": "B",
               "jp": "楽しんで ください。",
               "terms": [
-                { "id": "v_tanoshimu", "form": "te_form" }
+                { "id": "v_tanoshimu", "form": "te_form" },
+                "v_kudasai"
               ]
             }
           ],
@@ -807,16 +993,23 @@
               "jp": "今日は 風が 強いですね。",
               "terms": [
                 "v_kyou",
+                "p_wa",
                 "v_kaze",
-                { "id": "v_tsuyoi", "form": "polite_adj" }
+                "p_ga",
+                { "id": "v_tsuyoi", "form": "polite_adj" },
+                "p_ne"
               ]
             },
             {
               "spk": "B",
               "jp": "はい。でも、月光が きれいですから、外で 勉強します。",
               "terms": [
+                "p_hai",
                 "v_gekkou",
-                "v_kirei",
+                "p_ga",
+                { "id": "v_kirei", "form": "polite_adj" },
+                "p_kara",
+                "p_de",
                 { "id": "v_benkyou", "form": "polite_masu" }
               ]
             },
@@ -825,15 +1018,21 @@
               "jp": "かぜが 強いですが、大丈夫ですか。",
               "terms": [
                 "v_kaze",
-                { "id": "v_tsuyoi", "form": "polite_adj" }
+                "p_ga",
+                { "id": "v_tsuyoi", "form": "polite_adj" },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "はい、大丈夫です。月光が きれいですから。",
               "terms": [
+                "p_hai",
+                "g_desu",
                 "v_gekkou",
-                "v_kirei"
+                "p_ga",
+                { "id": "v_kirei", "form": "polite_adj" },
+                "p_kara"
               ]
             }
           ],
