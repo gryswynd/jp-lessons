@@ -19,7 +19,7 @@ window.PracticeModule = {
         style.id = 'jp-practice-style';
         style.textContent = `
             #kanji-app-root {
-                --primary: #4e54c8; --primary-dark: #3f44a5;
+                --primary: #DC2626; --primary-dark: #B91C1C;
                 --bg-grad: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
                 --text-main: #2f3542; --text-sub: #747d8c;
                 --success: #2ed573; --error: #ff4757;
@@ -35,17 +35,17 @@ window.PracticeModule = {
             #kanji-app-root * { box-sizing: border-box; }
 
             #kanji-app-root header {
-                background: rgba(78, 84, 200, 0.95); color: white; padding: 1.2rem;
+                background: rgba(220, 38, 38, 0.95); color: white; padding: 1.2rem;
                 text-align: center; font-weight: 900; letter-spacing: 0.05em; font-size: 1.2rem;
                 cursor: pointer; user-select: none; z-index: 10;
-                box-shadow: 0 4px 15px rgba(78, 84, 200, 0.3); backdrop-filter: blur(5px);
+                box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3); backdrop-filter: blur(5px);
                 display: flex; justify-content: space-between; align-items: center;
             }
             .k-exit-btn { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); color: white; padding: 5px 12px; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 0.8rem; }
 
             #k-app-container { flex: 1; overflow-y: auto; padding: 1.5rem; display: flex; flex-direction: column; align-items: center; width: 100%; position: relative; z-index: 1; }
             .k-card { background: white; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); padding: 2rem; width: 100%; text-align: center; margin-bottom: 1.5rem; border: 1px solid rgba(0,0,0,0.02); }
-            .k-btn { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; border: none; padding: 16px; border-radius: 12px; font-size: 1.1rem; font-weight: 700; width: 100%; margin: 8px 0; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(78, 84, 200, 0.2); }
+            .k-btn { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; border: none; padding: 16px; border-radius: 12px; font-size: 1.1rem; font-weight: 700; width: 100%; margin: 8px 0; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(220, 38, 38, 0.2); }
             .k-btn:active { transform: scale(0.98); }
             .k-btn-sec { background: white; color: var(--text-sub); border: 2px solid #dfe4ea; background: none; box-shadow: none; }
             .k-grid-btns { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin: 8px 0; }
@@ -117,7 +117,7 @@ window.PracticeModule = {
     appRoot.innerHTML = `
         <div id="k-loader" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.98); z-index: 50; display: flex; flex-direction: column; align-items: center; justify-content: center;">
             <div style="font-size: 3rem; margin-bottom: 15px;">🇯🇵</div>
-            <div style="font-weight:800; color:#4e54c8; font-size:1.2rem">Loading Library...</div>
+            <div style="font-weight:800; color:#DC2626; font-size:1.2rem">Loading Library...</div>
             <div id="k-error-box" class="k-hidden" style="color:#ff4757; margin-top:10px; padding:10px; max-width:80%; font-size:0.9rem"></div>
         </div>
 
