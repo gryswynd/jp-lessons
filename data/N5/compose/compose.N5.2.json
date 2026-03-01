@@ -1,0 +1,107 @@
+{
+  "contentVersion": "1.0.0",
+  "id": "compose.N5.2",
+  "lesson": "N5.2",
+  "level": "N5",
+  "title": "My Week",
+  "titleJp": "わたしの 毎日",
+  "emoji": "📅",
+  "theme": "Write about your week: what day it is, who is around during the week, and what exists in your life this month.",
+  "prompts": [
+    {
+      "prompt": "Start your composition. Write what day it is today and how you feel about it. You can also say what happens every day.",
+      "targets": [
+        { "id": "v_kyou", "count": 1 },
+        { "id": "v_mainichi", "count": 1 }
+      ],
+      "model": "今日は 月よう日です。毎日 いいですね。",
+      "vocabPool": [
+        "v_kyou", "v_mainichi", "v_nichiyoubi", "v_getsuyoubi", "v_kayoubi",
+        "v_suiyoubi", "v_mokuyoubi", "v_kinyoubi", "v_doyoubi", "v_nanyoubi",
+        "v_watashi", "v_totemo", "v_ii", "v_ureshii", "g_desu"
+      ]
+    },
+    {
+      "prompt": "Continue your composition. Write about your father or mother. Say which days of the week they are around — use から (from) and まで (until/to).",
+      "targets": [
+        { "id": "v_chichi", "count": 1 },
+        { "id": "v_haha", "count": 1 }
+      ],
+      "model": "父は 月よう日から 金よう日まで います。母も います。",
+      "vocabPool": [
+        "v_chichi", "v_haha", "v_otousan", "v_okaasan", "v_sensei", "v_tomodachi",
+        "v_watashi", "v_getsuyoubi", "v_kinyoubi", "v_doyoubi", "v_nichiyoubi",
+        "v_mokuyoubi", "v_kayoubi", "v_suiyoubi", "v_mainichi", "v_issho",
+        "v_totemo", "v_ii", "v_iru"
+      ]
+    }
+  ],
+  "challengePrompts": [],
+  "particles": [
+    "p_wa", "p_ga", "p_wo", "p_no", "p_ka", "p_yo", "p_ne",
+    "p_dewa", "p_ja", "g_desu",
+    "p_mo", "p_to", "p_kara", "p_made", "p_ya", "p_made_ni"
+  ],
+  "conjugations": [
+    {
+      "pattern": "[noun] + です",
+      "meaning": "is / am / are (polite)",
+      "examples": ["今日は 月よう日です", "毎日です"]
+    },
+    {
+      "pattern": "[noun] + でした",
+      "meaning": "was (polite)",
+      "examples": ["今日は 水よう日でした", "毎月でした"]
+    },
+    {
+      "pattern": "[noun] + ではありません",
+      "meaning": "is not (polite formal)",
+      "examples": ["今日は 月よう日ではありません"]
+    },
+    {
+      "pattern": "[noun] + じゃありません",
+      "meaning": "is not (polite casual)",
+      "examples": ["今日は 金よう日じゃありません"]
+    },
+    {
+      "pattern": "[い-adj] + です",
+      "meaning": "is adj (polite)",
+      "examples": ["いいです", "うれしいです", "やさしいです"]
+    },
+    {
+      "pattern": "[い-adj]〜い → 〜かったです",
+      "meaning": "was adj (polite)",
+      "examples": ["よかったです", "うれしかったです", "やさしかったです"]
+    },
+    {
+      "pattern": "[い-adj]〜い → 〜くないです",
+      "meaning": "is not adj (polite)",
+      "examples": ["よくないです", "うれしくないです"]
+    },
+    {
+      "pattern": "[い-adj]〜い → 〜くなかったです",
+      "meaning": "was not adj (polite)",
+      "examples": ["よくなかったです", "うれしくなかったです"]
+    },
+    {
+      "pattern": "[noun/thing] + が + あります",
+      "meaning": "there is / I have (inanimate things)",
+      "examples": ["お金が あります", "水が あります"]
+    },
+    {
+      "pattern": "[noun/thing] + が + ありません",
+      "meaning": "there is not / I don't have (inanimate things)",
+      "examples": ["お金が ありません", "水が ありません"]
+    },
+    {
+      "pattern": "[person/animal] + が + います",
+      "meaning": "there is / [person] is here (animate beings)",
+      "examples": ["父が います", "先生が います"]
+    },
+    {
+      "pattern": "[person/animal] + が + いません",
+      "meaning": "there is not / [person] is not here",
+      "examples": ["父が いません", "先生が いません"]
+    }
+  ]
+}

@@ -589,7 +589,21 @@ Rules:
 - **Conjugation patterns.** Include the full polite paradigm relevant to the lesson's grammar level. Use examples drawn from the lesson's own vocabulary. Include irregular forms (e.g. いい→よかったです). Stay in formal/polite register — omit plain forms (だ, だった) unless the lesson specifically teaches casual speech.
 - **Particle gating.** Only include particles the student has been formally introduced to. Check `introducedIn` in `shared/particles.json`.
 - **Kanji rule.** All Japanese text in `model`, `titleJp`, and conjugation `examples` must use only taught kanji. Use hiragana for words whose kanji hasn't been introduced yet.
-- **Prompt count by level.** Early N5 (N5.1–N5.3): 2–3 prompts. Mid N5 (N5.4–N5.7): 3–5 prompts. Late N5 / early N4: 5–7 prompts. Late N4: 7–10 prompts.
+- **Prompt count by level.** The composition system starts with exactly **2 prompts** at N5.1 and N5.2, then scales gradually to **10 prompts** by the final N4 lessons. Use this schedule as the target count when authoring a new compose file:
+
+  | Lesson range | Prompts |
+  |---|---|
+  | N5.1 – N5.2 | 2 |
+  | N5.3 – N5.5 | 3 |
+  | N5.6 – N5.9 | 4 |
+  | N5.10 – N5.13 | 5 |
+  | N5.14 – N5.18 | 6 |
+  | N4.1 – N4.9 | 7 |
+  | N4.10 – N4.18 | 8 |
+  | N4.19 – N4.27 | 9 |
+  | N4.28 – N4.36 | 10 |
+
+  **N5.1 and N5.2 must have exactly 2 prompts.** Do not add a third prompt to these lessons under any circumstances.
 
 ---
 
