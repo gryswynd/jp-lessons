@@ -1,0 +1,367 @@
+{
+  "contentVersion": "1.0.0",
+  "id": "N5.Review.1",
+  "title": "People, Family & Days of the Week",
+  "meta": {
+    "phase": 5,
+    "type": "assessment",
+    "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons N5.1–N5.2.",
+    "kanji": ["人","男","女","子","友","母","父","名","生","先","日","月","火","水","木","金","土","毎","今","何"]
+  },
+  "sections": [
+    {
+      "type": "conversation",
+      "title": "Part 1: Conversation Check",
+      "instructions": "Read each conversation and select the best answer.",
+      "items": [
+        {
+          "title": "Conversation 1",
+          "context": "Rikizo and Yamakawa meet in the school hallway and check the day's schedule.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "今日は 何よう日ですか。",
+              "terms": ["v_kyou", "p_wa", "v_nanyoubi", "g_desu", "p_ka"]
+            },
+            {
+              "spk": "B",
+              "jp": "今日は 火よう日です。",
+              "terms": ["v_kyou", "p_wa", "v_kayoubi", "g_desu"]
+            },
+            {
+              "spk": "A",
+              "jp": "やまもと先生は いますか。",
+              "terms": ["v_sensei", "p_wa", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
+            },
+            {
+              "spk": "B",
+              "jp": "いいえ、火よう日は いません。月よう日と 水よう日と 金よう日は います。",
+              "terms": ["v_iie", "v_kayoubi", "p_wa", { "id": "v_iru", "form": "polite_negative" }, "v_getsuyoubi", "p_to", "v_suiyoubi", "v_kinyoubi", { "id": "v_iru", "form": "polite_masu" }]
+            }
+          ],
+          "question": "Why isn't Yamamoto-sensei at school today?",
+          "choices": [
+            "Today is Tuesday, and she does not come on Tuesdays.",
+            "Today is Monday, and she only comes on Wednesdays.",
+            "Today is Friday, and she has already gone home.",
+            "She is never at school."
+          ],
+          "answer": "Today is Tuesday, and she does not come on Tuesdays.",
+          "explanation": "B says 今日は火よう日です (today is Tuesday) and 火よう日はいません (she is not here on Tuesdays). She comes on Mondays, Wednesdays, and Fridays."
+        },
+        {
+          "title": "Conversation 2",
+          "context": "Suzuki-san asks Yamakawa about their parents.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "やまかわさんの お父さんは どんな 人ですか。",
+              "terms": ["v_san", "p_no", "v_otousan", "p_wa", "v_donna", "v_hito", "g_desu", "p_ka"]
+            },
+            {
+              "spk": "B",
+              "jp": "とても やさしい 先生です。",
+              "terms": ["v_totemo", "v_yasashii", "v_sensei", "g_desu"]
+            },
+            {
+              "spk": "A",
+              "jp": "お母さんは？",
+              "terms": ["v_okaasan", "p_wa"]
+            },
+            {
+              "spk": "B",
+              "jp": "母も 先生です。父と 母は とても いい 人です。",
+              "terms": ["v_haha", "p_mo", "v_sensei", "g_desu", "v_chichi", "p_to", "v_totemo", "v_ii", "v_hito"]
+            }
+          ],
+          "question": "What do Yamakawa's father and mother have in common?",
+          "choices": [
+            "They are both teachers.",
+            "They are both students.",
+            "They are both kind friends.",
+            "They are not at home every day."
+          ],
+          "answer": "They are both teachers.",
+          "explanation": "B says とてもやさしい先生です about the father, then 母も先生です (mother is also a teacher). Both parents are teachers."
+        },
+        {
+          "title": "Conversation 3",
+          "context": "Rikizo and Yamakawa talk about having money this month.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "今月 お金が ありますか。",
+              "terms": ["v_kongetsu", "v_okane", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "p_ka"]
+            },
+            {
+              "spk": "B",
+              "jp": "今日は ありません。金よう日は あります。",
+              "terms": ["v_kyou", "p_wa", { "id": "v_aru", "form": "polite_negative" }, "v_kinyoubi", { "id": "v_aru", "form": "polite_masu" }]
+            },
+            {
+              "spk": "A",
+              "jp": "毎月 金よう日ですか。",
+              "terms": ["v_maigetsu", "v_kinyoubi", "g_desu", "p_ka"]
+            },
+            {
+              "spk": "B",
+              "jp": "はい。今月も 金よう日は あります。金よう日は いい 日ですね。",
+              "terms": ["p_hai", "v_kongetsu", "p_mo", "v_kinyoubi", "p_wa", { "id": "v_aru", "form": "polite_masu" }, "v_ii", "v_hi", "g_desu", "p_ne"]
+            }
+          ],
+          "question": "Does Yamakawa have money today?",
+          "choices": [
+            "No, but they will have money on Friday.",
+            "Yes, they have money every day.",
+            "No, and there is no money this month at all.",
+            "Yes, today is Friday."
+          ],
+          "answer": "No, but they will have money on Friday.",
+          "explanation": "B says 今日はありません (not today) but 金よう日はあります (there is some on Friday). They confirm this happens every month."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 2: Grammar Scramble",
+      "instructions": "Construct the sentence by clicking the words in the correct order.",
+      "items": [
+        {
+          "kind": "scramble",
+          "q": "Yamamoto-sensei is here from Monday to Friday.",
+          "segments": ["やまもと先生", "は", "月よう日", "から", "金よう日", "まで", "います"],
+          "distractors": ["を", "が", "来ます"],
+          "explanation": "月よう日 + から (starting point) + 金よう日 + まで (endpoint) + います. から marks where a range begins; まで marks where it ends. を marks direct objects of action verbs and cannot mark a time range."
+        },
+        {
+          "kind": "scramble",
+          "q": "My mother is also a teacher.",
+          "segments": ["母", "も", "先生", "です"],
+          "distractors": ["は", "を", "友だち"],
+          "explanation": "も replaces は to mean 'also' or 'too'. 母も先生です = my mother is also a teacher (same as the person just mentioned). は would simply mark 母 as the topic without the inclusive 'also' meaning."
+        },
+        {
+          "kind": "scramble",
+          "q": "What is your teacher's name?",
+          "segments": ["先生", "の", "名まえ", "は", "なん", "ですか"],
+          "distractors": ["を", "が", "友だち"],
+          "explanation": "の links two nouns possessively: 先生の名まえ = the teacher's name. は marks the topic (what we are asking about). が marks the grammatical subject; を marks direct objects — neither fits a possessive question."
+        },
+        {
+          "kind": "scramble",
+          "q": "Please say your name.",
+          "segments": ["名まえ", "を", "いって", "ください"],
+          "distractors": ["は", "が", "先生"],
+          "explanation": "を marks the direct object of いう (to say): 名まえをいってください = please say your name. は would mark 名まえ as a topic, not as the thing being said. が marks a subject, not an object."
+        },
+        {
+          "kind": "scramble",
+          "q": "On Saturdays and Sundays, my father is not here.",
+          "segments": ["土よう日", "と", "日よう日", "は", "父", "が", "いません"],
+          "distractors": ["を", "の", "います"],
+          "explanation": "と connects the two days exhaustively (Saturday AND Sunday). は marks those days as the topic. が marks 父 as the grammatical subject of the state described by いません. を marks direct objects; の marks possession — neither applies here."
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Part 3: Reading — Yamakawa's Weekly Journal",
+      "passage": [
+        {
+          "jp": "わたしは やまかわです。",
+          "en": "I am Yamakawa.",
+          "terms": ["v_watashi", "p_wa", "g_desu"]
+        },
+        {
+          "jp": "今日は 水よう日です。やまもと先生は います。",
+          "en": "Today is Wednesday. Yamamoto-sensei is here.",
+          "terms": ["v_kyou", "p_wa", "v_suiyoubi", "g_desu", "v_sensei", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "jp": "先生は 月よう日と 水よう日と 金よう日は います。",
+          "en": "The teacher is here on Mondays, Wednesdays, and Fridays.",
+          "terms": ["v_sensei", "p_wa", "v_getsuyoubi", "p_to", "v_suiyoubi", "v_kinyoubi", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "jp": "先生は とても やさしい 人です。",
+          "en": "The teacher is a very kind person.",
+          "terms": ["v_sensei", "p_wa", "v_totemo", "v_yasashii", "v_hito", "g_desu"]
+        },
+        {
+          "jp": "父と 母は 先生です。毎日 います。",
+          "en": "My father and mother are teachers. They are here every day.",
+          "terms": ["v_chichi", "p_to", "v_haha", "p_wa", "v_sensei", "g_desu", "v_mainichi", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "jp": "今月も 月よう日から 金よう日まで います。",
+          "en": "This month too, they are here from Monday to Friday.",
+          "terms": ["v_kongetsu", "p_mo", "v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", { "id": "v_iru", "form": "polite_masu" }]
+        }
+      ],
+      "questions": [
+        {
+          "q": "今日は 何よう日ですか。",
+          "a": "水よう日です。",
+          "choices": ["水よう日です。", "月よう日です。", "金よう日です。", "土よう日です。"],
+          "terms": ["v_kyou", "p_wa", "v_nanyoubi", "g_desu", "v_suiyoubi"],
+          "explanation": "Line 2 says 今日は水よう日です (today is Wednesday)."
+        },
+        {
+          "q": "先生は どんな 人ですか。",
+          "a": "やさしい 人です。",
+          "choices": ["やさしい 人です。", "うれしい 人です。", "いい 友だちです。", "男の 人です。"],
+          "terms": ["v_sensei", "p_wa", "v_donna", "v_hito", "g_desu", "v_yasashii", "v_ureshii", "v_tomodachi"],
+          "explanation": "Line 4 says 先生はとてもやさしい人です (the teacher is a very kind person)."
+        },
+        {
+          "q": "父と 母は 何ですか。",
+          "a": "先生です。",
+          "choices": ["先生です。", "友だちです。", "やさしい 人です。", "毎日 います。"],
+          "terms": ["v_chichi", "p_to", "v_haha", "p_wa", "v_nani", "g_desu", "v_sensei", "v_tomodachi", "v_yasashii"],
+          "explanation": "Line 5 says 父と母は先生です (father and mother are teachers)."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 4: Kanji Readings",
+      "instructions": "Select the correct reading for the [bracketed] word.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "[先生]の 名まえは なんですか。",
+          "choices": ["せんせい", "がくせい", "じんせい", "にんき"],
+          "answer": "せんせい",
+          "explanation": "先生 (teacher) is read as <b>sensei</b>. 先 (N5.1) + 生 (N5.1)."
+        },
+        {
+          "kind": "mcq",
+          "q": "[友だち]は とても やさしい 人です。",
+          "choices": ["ともだち", "こども", "ひとびと", "だんし"],
+          "answer": "ともだち",
+          "explanation": "友だち (friend) is read as <b>tomodachi</b>. 友 (N5.1) with okurigana だち."
+        },
+        {
+          "kind": "mcq",
+          "q": "わたしの [名まえ]は りきぞです。",
+          "choices": ["なまえ", "めいし", "みょうじ", "なまい"],
+          "answer": "なまえ",
+          "explanation": "名まえ (name) is read as <b>namae</b>. 名 (N5.1) with okurigana まえ."
+        },
+        {
+          "kind": "mcq",
+          "q": "[毎日] やまもと先生は います。",
+          "choices": ["まいにち", "まいあさ", "まいばん", "まいげつ"],
+          "answer": "まいにち",
+          "explanation": "毎日 (every day) is read as <b>mainichi</b>. 毎 (N5.2) + 日 (N5.2)."
+        },
+        {
+          "kind": "mcq",
+          "q": "[今月] お金が あります。",
+          "choices": ["こんげつ", "こんにち", "こんばん", "けさ"],
+          "answer": "こんげつ",
+          "explanation": "今月 (this month) is read as <b>kongetsu</b>. 今 (N5.2) + 月 (N5.2)."
+        },
+        {
+          "kind": "mcq",
+          "q": "[水よう日]は やまもと先生が います。",
+          "choices": ["すいようび", "みずようび", "もくようび", "どようび"],
+          "answer": "すいようび",
+          "explanation": "水よう日 (Wednesday) is read as <b>suiyōbi</b>. 水 uses its on-reading すい. The days of the week use on-readings of their kanji."
+        },
+        {
+          "kind": "mcq",
+          "q": "[金よう日]は いい 日ですね。",
+          "choices": ["きんようび", "かねようび", "つちようび", "ひようび"],
+          "answer": "きんようび",
+          "explanation": "金よう日 (Friday) is read as <b>kin'yōbi</b>. 金 uses its on-reading きん (gold/money/Friday)."
+        },
+        {
+          "kind": "mcq",
+          "q": "[父母]は 先生です。",
+          "choices": ["ふぼ", "ちちはは", "おやおや", "おや"],
+          "answer": "ふぼ",
+          "explanation": "父母 (parents) is read as <b>fubo</b> using the on-readings of both 父 (ふ) and 母 (ぼ). The informal reading ちちはは uses kun-readings."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 5: Context & Vocabulary",
+      "instructions": "Select the best word to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "はじめまして。わたしの ______ は りきぞです。",
+          "choices": ["名まえ", "友だち", "先生", "人生"],
+          "answer": "名まえ",
+          "explanation": "名まえ (namae, name) fits: 'Nice to meet you, my name is Rikizo.' You introduce yourself with your 名まえ (name). 人生 means 'life', not 'name'.",
+          "terms": ["p_hajimemashite", "v_watashi", "p_no", "p_wa", "g_desu", "v_namae"]
+        },
+        {
+          "kind": "mcq",
+          "q": "今日は 水よう日です。______ は います。",
+          "choices": ["やまもと先生", "お金", "ゲーム", "土よう日"],
+          "answer": "やまもと先生",
+          "explanation": "Yamamoto-sensei (やまもと先生) comes on Mondays, Wednesdays, and Fridays. Since today is Wednesday (水よう日), she is present.",
+          "terms": ["v_kyou", "p_wa", "v_suiyoubi", "g_desu", "v_sensei", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "kind": "mcq",
+          "q": "______ と 母は とても やさしい 人です。",
+          "choices": ["父", "友だち", "先生", "名まえ"],
+          "answer": "父",
+          "explanation": "父と母 (chichi to haha, father and mother) are described as very kind people. 父 (my father) pairs naturally with 母 (my mother) connected by と (and).",
+          "terms": ["v_chichi", "p_to", "v_haha", "p_wa", "v_totemo", "v_yasashii", "v_hito", "g_desu"]
+        },
+        {
+          "kind": "mcq",
+          "q": "毎月 金よう日は ______ が あります。",
+          "choices": ["お金", "友だち", "先生", "水よう日"],
+          "answer": "お金",
+          "explanation": "お金 (okane, money) fits: 'Every month on Fridays, there is money.' お金があります = there is money / I have money.",
+          "terms": ["v_maigetsu", "v_kinyoubi", "p_wa", "v_okane", "p_ga", { "id": "v_aru", "form": "polite_masu" }]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 6: Grammar Check",
+      "instructions": "Choose the correct particle to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "先生 ______ 名まえは なんですか。",
+          "choices": ["の", "は", "を", "が"],
+          "answer": "の",
+          "explanation": "の is the possessive particle: 先生の名まえ = the teacher's name. は marks a topic; を marks a direct object; が marks the grammatical subject. None of those fit a possessive construction.",
+          "terms": ["v_sensei", "p_no", "v_namae", "p_wa", "v_nani", "g_desu", "p_ka"]
+        },
+        {
+          "kind": "mcq",
+          "q": "友だち ______ います。",
+          "choices": ["が", "は", "を", "の"],
+          "answer": "が",
+          "explanation": "が marks the grammatical subject of いる: 友だちがいます = a friend is here / there is a friend. が introduces new information. は marks a known topic; を marks a direct object; の marks possession.",
+          "terms": ["v_tomodachi", "p_ga", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "kind": "mcq",
+          "q": "月よう日 ______ 金よう日まで います。",
+          "choices": ["から", "まで", "も", "と"],
+          "answer": "から",
+          "explanation": "から marks the starting point of a range: from Monday. まで (already given) marks the endpoint: until Friday. 月よう日から金よう日まで = from Monday to Friday.",
+          "terms": ["v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "kind": "mcq",
+          "q": "父 ______ 母は 毎日 います。",
+          "choices": ["と", "は", "も", "を"],
+          "answer": "と",
+          "explanation": "と connects nouns in a complete list: 父と母 = father AND mother (both of them, exhaustively). は would take only one as the topic; も means 'also'; を marks a direct object.",
+          "terms": ["v_chichi", "p_to", "v_haha", "p_wa", "v_mainichi", { "id": "v_iru", "form": "polite_masu" }]
+        }
+      ]
+    }
+  ]
+}
