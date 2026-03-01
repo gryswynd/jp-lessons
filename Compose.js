@@ -54,43 +54,51 @@ window.ComposeModule = {
             .c-hidden { display: none !important; }
             .c-lbl { font-size: 0.8rem; text-transform: uppercase; color: #a4b0be; font-weight: 700; letter-spacing: 0.1em; margin-top: 8px; margin-bottom: 8px; }
 
-            /* LESSON CHECKBOXES */
-            .c-lesson-row { display: flex; align-items: center; padding: 10px 12px; border-bottom: 1px solid #f1f2f6; text-align: left; cursor: pointer; transition: background 0.15s; }
-            .c-lesson-row:hover { background: #f8f9fa; }
-            .c-lesson-row:last-child { border-bottom: none; }
-            .c-lesson-chk { width: 18px; height: 18px; margin-right: 12px; accent-color: var(--c-primary); cursor: pointer; }
-            .c-lesson-info { flex: 1; }
-            .c-lesson-name { font-weight: 700; font-size: 0.95rem; color: var(--c-text-main); }
-            .c-lesson-kanji { font-size: 0.85rem; color: var(--c-text-sub); margin-top: 2px; }
+            /* MENU — LESSON CARDS */
+            .c-menu-card { background: white; border-radius: 14px; padding: 1.2rem; margin-bottom: 12px; border: 2px solid #e0f2f1; text-align: left; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 14px; }
+            .c-menu-card:hover { border-color: var(--c-primary); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 137, 123, 0.1); }
+            .c-menu-emoji { font-size: 2rem; flex-shrink: 0; }
+            .c-menu-info { flex: 1; min-width: 0; }
+            .c-menu-title { font-weight: 800; font-size: 1rem; color: var(--c-primary-dark); }
+            .c-menu-lesson { font-size: 0.78rem; font-weight: 700; color: var(--c-primary); background: var(--c-primary-light); padding: 2px 8px; border-radius: 6px; display: inline-block; margin-top: 4px; }
+            .c-menu-theme { font-size: 0.82rem; color: var(--c-text-sub); line-height: 1.4; margin-top: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+            .c-menu-meta { display: flex; gap: 8px; align-items: center; margin-top: 6px; flex-wrap: wrap; }
+            .c-menu-tag { font-size: 0.72rem; padding: 3px 8px; border-radius: 6px; font-weight: 700; }
+            .c-menu-tag-count { background: #fff3e0; color: #e65100; }
+            .c-menu-tag-done { background: #e8f5e9; color: #2e7d32; }
+            .c-menu-tag-draft { background: #e3f2fd; color: #1565c0; }
 
             /* LEVEL GROUPS */
-            .c-lvl-group { background: white; border-radius: 12px; overflow: hidden; margin-bottom: 8px; border: 1px solid #e0e0e0; }
-            .c-lvl-header { padding: 12px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; user-select: none; background: #fafafa; }
-            .c-lvl-header:hover { background: #f1f2f6; }
-            .c-lvl-header.open { background: #f0faf9; border-bottom: 1px solid #e0f2f1; }
-            .c-lvl-header.open .c-lvl-arrow { transform: rotate(180deg); }
-            .c-lvl-title { font-weight: 800; font-size: 1rem; color: var(--c-primary-dark); flex: 1; }
-            .c-lvl-sub { font-size: 0.78rem; color: #a4b0be; font-weight: 600; }
-            .c-lvl-arrow { font-size: 0.72rem; color: #a4b0be; transition: transform 0.25s; }
-            .c-lvl-list { display: none; }
-            .c-lvl-list.open { display: block; }
+            .c-lvl-group { margin-bottom: 16px; }
+            .c-lvl-title-bar { font-weight: 800; font-size: 1rem; color: var(--c-primary-dark); margin-bottom: 8px; padding: 0 4px; }
+            .c-menu-empty { padding: 20px; text-align: center; color: #a4b0be; font-weight: 600; font-size: 0.9rem; }
 
-            /* PROMPT CARDS */
-            .c-prompt-card { background: white; border-radius: 14px; padding: 1.2rem; margin-bottom: 12px; border: 2px solid #e0f2f1; text-align: left; cursor: pointer; transition: all 0.2s; }
-            .c-prompt-card:hover { border-color: var(--c-primary); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 137, 123, 0.1); }
-            .c-prompt-title { font-weight: 800; font-size: 1.05rem; color: var(--c-primary-dark); margin-bottom: 4px; }
-            .c-prompt-desc { font-size: 0.88rem; color: var(--c-text-sub); line-height: 1.4; }
-            .c-prompt-meta { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
-            .c-prompt-tag { font-size: 0.72rem; padding: 3px 8px; border-radius: 6px; font-weight: 700; }
-            .c-prompt-tag-lesson { background: #e0f2f1; color: #00695C; }
-            .c-prompt-tag-count { background: #fff3e0; color: #e65100; }
-            .c-prompt-saved { font-size: 0.75rem; color: var(--c-success); font-weight: 600; }
+            /* PROMPT TIMELINE */
+            .c-timeline { width: 100%; margin-bottom: 12px; }
+            .c-timeline-step { display: flex; align-items: flex-start; gap: 12px; padding: 10px 12px; border-radius: 10px; margin-bottom: 4px; transition: all 0.3s; position: relative; }
+            .c-timeline-step.active { background: var(--c-primary-light); border: 2px solid var(--c-primary); }
+            .c-timeline-step.done { opacity: 0.7; }
+            .c-timeline-step.locked { opacity: 0.4; }
+            .c-timeline-step.challenge { border-left: 4px solid var(--c-gold); }
+            .c-timeline-badge { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800; flex-shrink: 0; transition: all 0.3s; }
+            .c-timeline-step.done .c-timeline-badge { background: var(--c-success); color: white; }
+            .c-timeline-step.active .c-timeline-badge { background: var(--c-primary); color: white; }
+            .c-timeline-step.locked .c-timeline-badge { background: #e0e0e0; color: #bdbdbd; }
+            .c-timeline-prompt { font-size: 0.88rem; color: var(--c-text-main); font-weight: 600; line-height: 1.4; flex: 1; }
+            .c-timeline-step.done .c-timeline-prompt { text-decoration: line-through; color: var(--c-text-sub); }
+            .c-timeline-step.locked .c-timeline-prompt { color: #bdbdbd; }
+            .c-timeline-challenge-tag { font-size: 0.68rem; padding: 2px 6px; border-radius: 4px; background: #fff3e0; color: #e65100; font-weight: 800; margin-left: 4px; }
 
-            /* COMPOSE VIEW */
+            /* ACTIVE PROMPT BANNER */
             .c-prompt-banner { background: linear-gradient(135deg, #e0f2f1, #b2dfdb); border-radius: 14px; padding: 1rem 1.2rem; margin-bottom: 12px; text-align: left; border-left: 5px solid var(--c-primary); }
             .c-prompt-banner-title { font-weight: 800; font-size: 1rem; color: var(--c-primary-dark); margin-bottom: 4px; }
-            .c-prompt-banner-text { font-size: 0.88rem; color: #37474F; line-height: 1.5; }
-            .c-prompt-banner-hint { font-size: 0.92rem; color: var(--c-primary-dark); font-weight: 600; margin-top: 8px; font-family: 'Noto Sans JP', sans-serif; }
+            .c-prompt-banner-text { font-size: 0.92rem; color: #37474F; line-height: 1.5; font-weight: 600; }
+
+            /* MODEL SENTENCE */
+            .c-model-toggle { font-size: 0.8rem; color: var(--c-primary); cursor: pointer; font-weight: 700; margin-top: 8px; user-select: none; display: inline-block; }
+            .c-model-toggle:hover { text-decoration: underline; }
+            .c-model-sentence { font-family: 'Noto Sans JP', sans-serif; font-size: 0.95rem; color: #546E7A; background: rgba(255,255,255,0.6); padding: 8px 12px; border-radius: 8px; margin-top: 6px; line-height: 1.6; display: none; }
+            .c-model-sentence.visible { display: block; }
 
             /* PROGRESS BAR */
             .c-progress-wrap { width: 100%; margin-bottom: 12px; }
@@ -135,17 +143,31 @@ window.ComposeModule = {
             .c-chip-jp { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 0.9rem; }
             .c-chip-reading { color: #78909C; font-size: 0.75rem; font-family: 'Noto Sans JP', sans-serif; }
             .c-chip-en { color: var(--c-text-sub); font-size: 0.75rem; }
-            .c-chip-cat { background: var(--c-primary-light); color: var(--c-primary-dark); font-weight: 800; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; }
 
-            /* PARTICLE REFERENCE */
-            .c-particle-ref { font-size: 0.82rem; color: #78909C; line-height: 1.8; text-align: left; padding: 8px 0; }
-            .c-particle-ref span { font-family: 'Noto Sans JP', sans-serif; background: #f5f5f5; padding: 2px 6px; border-radius: 4px; margin: 2px; display: inline-block; font-weight: 600; font-size: 0.85rem; }
+            /* PARTICLE & CONJUGATION REFERENCE */
+            .c-ref-list { text-align: left; padding: 4px 0; }
+            .c-ref-item { display: inline-flex; align-items: center; gap: 4px; font-size: 0.82rem; background: #f5f5f5; padding: 4px 10px; border-radius: 6px; margin: 3px; font-weight: 600; cursor: pointer; transition: background 0.15s; }
+            .c-ref-item:hover { background: var(--c-primary-light); }
+            .c-ref-item .c-ref-jp { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 0.88rem; }
+            .c-ref-item .c-ref-role { color: #78909C; font-size: 0.75rem; }
+            .c-conj-item { display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; border-bottom: 1px solid #f1f2f6; font-size: 0.85rem; }
+            .c-conj-item:last-child { border-bottom: none; }
+            .c-conj-label { font-weight: 700; color: var(--c-text-main); }
+            .c-conj-desc { color: var(--c-text-sub); font-size: 0.78rem; }
 
             /* COMPLETE BANNER */
             .c-complete-banner { background: linear-gradient(135deg, #2ed573, #26de81); color: white; border-radius: 14px; padding: 1.2rem; text-align: center; margin-bottom: 12px; animation: c-celebrate 0.5s ease; }
             .c-complete-banner h3 { margin: 0 0 4px 0; font-size: 1.3rem; }
             .c-complete-banner p { margin: 0; font-size: 0.9rem; opacity: 0.9; }
             @keyframes c-celebrate { 0% { transform: scale(0.9); opacity: 0; } 50% { transform: scale(1.03); } 100% { transform: scale(1); opacity: 1; } }
+
+            /* COVERAGE INDICATOR */
+            .c-coverage { background: white; border-radius: 14px; padding: 1rem 1.2rem; margin-bottom: 12px; border: 2px solid #e0f2f1; text-align: center; }
+            .c-coverage-title { font-weight: 800; font-size: 0.9rem; color: var(--c-primary-dark); margin-bottom: 8px; }
+            .c-coverage-pct { font-size: 2.4rem; font-weight: 900; color: var(--c-primary); }
+            .c-coverage-label { font-size: 0.78rem; color: var(--c-text-sub); font-weight: 600; }
+            .c-coverage-bar { width: 100%; height: 8px; background: #e0e0e0; border-radius: 4px; overflow: hidden; margin-top: 8px; }
+            .c-coverage-fill { height: 100%; background: linear-gradient(90deg, var(--c-primary), var(--c-success)); border-radius: 4px; transition: width 0.6s ease; }
 
             /* ACTION BAR */
             .c-action-bar { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; justify-content: center; }
@@ -182,7 +204,7 @@ window.ComposeModule = {
     appRoot.innerHTML = `
         <div id="c-loader" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(255,255,255,0.98);z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;">
             <div style="font-size:3rem;margin-bottom:15px;">✏️</div>
-            <div style="font-weight:800;color:#00897B;font-size:1.2rem">Loading Vocabulary...</div>
+            <div style="font-weight:800;color:#00897B;font-size:1.2rem">Loading Compositions...</div>
             <div id="c-error-box" class="c-hidden" style="color:#ff4757;margin-top:10px;padding:10px;max-width:80%;font-size:0.9rem"></div>
         </div>
         <header>
@@ -200,18 +222,17 @@ window.ComposeModule = {
     // --- DATA ---
     const REPO_CONFIG = sharedConfig;
 
-    let PROMPTS = [];
-    let HELPER_VOCAB = [];
-    let PARTICLES = [];
-    let LEVELS = []; // [{ id: 'N5', lessonIds: [...] }, { id: 'N4', lessonIds: [...] }]
+    let COMPOSE_FILES = [];    // array of loaded compose file data
+    let vocabById = new Map(); // all glossary+grammar entries by id
+    let particlesById = new Map(); // all particles by id
+    let conjugationRules = {}; // all conjugation rules
     let lessonMeta = new Map(); // lesson id -> { title }
+    let allVocab = [];         // all vocab entries from glossaries
 
     // --- STATE ---
-    const selectedLessons = new Set(); // nothing pre-selected; user chooses
-    let currentPrompt = null;
-    let currentResolvedTargets = []; // targets resolved from glossary for the active prompt
-    let allVocab = [];    // all vocab from all loaded glossaries
-    let vocabById = new Map(); // all glossary entries keyed by id
+    let currentCompose = null;   // the active compose file data
+    let activePromptIndex = 0;   // which prompt is currently active
+    let allPromptsComplete = false;
 
     // --- HELPER FUNCTIONS ---
     function countOccurrences(text, matches) {
@@ -228,165 +249,160 @@ window.ComposeModule = {
 
     function escHtml(str) {
         const div = document.createElement('div');
-        div.textContent = str;
+        div.textContent = str || '';
         return div.innerHTML;
+    }
+
+    function resolveTargets(targets) {
+        return (targets || []).map(t => {
+            const entry = t.id ? vocabById.get(t.id) : null;
+            return {
+                id: t.id,
+                surface: (entry && (entry.surface || entry.particle)) || '',
+                reading: (entry && entry.reading) || '',
+                meaning: (entry && (entry.meaning || entry.role)) || '',
+                count: t.count || 1,
+                matches: t.matches || (entry ? [entry.surface || entry.particle, entry.reading].filter(Boolean) : [])
+            };
+        });
+    }
+
+    function resolveVocabPool(poolIds) {
+        return (poolIds || []).map(id => vocabById.get(id) || particlesById.get(id)).filter(Boolean).map(e => ({
+            id: e.id,
+            surface: e.surface || e.particle || '',
+            reading: e.reading || '',
+            meaning: e.meaning || e.role || ''
+        }));
+    }
+
+    // Determine which prompt index should be active based on current text
+    function computeActiveIndex(compose, text) {
+        const allPrompts = compose.prompts || [];
+        for (let i = 0; i < allPrompts.length; i++) {
+            const targets = resolveTargets(allPrompts[i].targets);
+            const allMet = targets.every(t => countOccurrences(text, t.matches) >= t.count);
+            if (!allMet) return i;
+        }
+        // All regular prompts complete — check challenge prompts
+        const challenges = compose.challengePrompts || [];
+        for (let i = 0; i < challenges.length; i++) {
+            const targets = resolveTargets(challenges[i].targets);
+            const allMet = targets.every(t => countOccurrences(text, t.matches) >= t.count);
+            if (!allMet) return allPrompts.length + i;
+        }
+        return allPrompts.length + challenges.length; // all done
+    }
+
+    function getAllPrompts(compose) {
+        return [...(compose.prompts || []), ...(compose.challengePrompts || [])];
+    }
+
+    // Compute vocab coverage: what % of lesson vocab the student used
+    function computeCoverage(compose, text) {
+        const lessonId = compose.lesson;
+        const lessonVocab = allVocab.filter(v => {
+            const lessons = (v.lesson_ids || v.lesson || '').split(',').map(s => s.trim());
+            return lessons.includes(lessonId);
+        });
+        // Deduplicate by surface
+        const seen = new Set();
+        const unique = lessonVocab.filter(v => {
+            if (v.id && v.id.includes('__')) return false;
+            const s = v.surface || v.particle || '';
+            if (!s || seen.has(s)) return false;
+            seen.add(s);
+            return true;
+        });
+        let used = 0;
+        const usedWords = [];
+        unique.forEach(v => {
+            const surface = v.surface || v.particle || '';
+            if (surface && text.includes(surface)) {
+                used++;
+                usedWords.push(surface);
+            }
+        });
+        return { total: unique.length, used, pct: unique.length > 0 ? Math.round((used / unique.length) * 100) : 0, usedWords };
     }
 
     // --- MENU VIEW ---
     ComposeApp.showMenu = function() {
-        currentPrompt = null;
+        currentCompose = null;
+        activePromptIndex = 0;
+        allPromptsComplete = false;
+
         const menuEl = document.getElementById('c-view-menu');
         const compEl = document.getElementById('c-view-compose');
         if (compEl) compEl.classList.add('c-hidden');
         if (!menuEl) return;
         menuEl.classList.remove('c-hidden');
 
-        // Build collapsible level group accordions
-        let levelsHtml = '';
-        LEVELS.forEach(lvl => {
-            const allSel = lvl.lessonIds.length > 0 && lvl.lessonIds.every(id => selectedLessons.has(id));
-            const anySel = lvl.lessonIds.some(id => selectedLessons.has(id));
-
-            const lessonsHtml = lvl.lessonIds.map(id => {
-                const meta = lessonMeta.get(id);
-                const checked = selectedLessons.has(id) ? 'checked' : '';
-                return `<div class="c-lesson-row" onclick="this.querySelector('input').click()">
-                    <input type="checkbox" class="c-lesson-chk" value="${id}" ${checked}
-                        onclick="event.stopPropagation(); ComposeApp.toggleLesson('${id}', this)">
-                    <div class="c-lesson-info">
-                        <div class="c-lesson-name">${id}: ${escHtml(meta ? meta.title : id)}</div>
-                    </div>
-                </div>`;
-            }).join('');
-
-            levelsHtml += `
-                <div class="c-lvl-group">
-                    <div class="c-lvl-header" data-level="${lvl.id}" onclick="ComposeApp.toggleLevelGroup(this)">
-                        <input type="checkbox" class="c-lesson-chk" ${allSel ? 'checked' : ''}
-                            onclick="event.stopPropagation(); ComposeApp.toggleAllInLevel('${lvl.id}', this)">
-                        <div class="c-lvl-title">${lvl.id} Compositions</div>
-                        <div class="c-lvl-sub">${lvl.lessonIds.length} lesson${lvl.lessonIds.length !== 1 ? 's' : ''}${anySel && !allSel ? ' · some selected' : ''}</div>
-                        <div class="c-lvl-arrow">▼</div>
-                    </div>
-                    <div class="c-lvl-list">
-                        ${lessonsHtml}
-                    </div>
-                </div>`;
+        // Group compose files by level
+        const byLevel = {};
+        COMPOSE_FILES.forEach(cf => {
+            const lvl = cf.level || 'Other';
+            if (!byLevel[lvl]) byLevel[lvl] = [];
+            byLevel[lvl].push(cf);
         });
 
-        // Filter prompts by selected lessons
-        const available = PROMPTS.filter(p => p.lessons.every(l => selectedLessons.has(l)));
+        let html = '';
+        ['N5', 'N4'].forEach(lvl => {
+            const files = byLevel[lvl];
+            if (!files || files.length === 0) return;
 
-        let promptHtml = '';
-        if (selectedLessons.size === 0) {
-            promptHtml = '<div style="padding:20px;text-align:center;color:#a4b0be;font-weight:600;">Expand a level above and select lessons to see prompts.</div>';
-        } else if (available.length === 0) {
-            promptHtml = '<div style="padding:20px;text-align:center;color:#a4b0be;font-weight:600;">No prompts available for the selected lessons.</div>';
-        } else {
-            available.forEach(p => {
-                const saved = window.JPShared.progress.getDraft(p.id);
-                const savedBadge = saved ? '<span class="c-prompt-saved">draft saved</span>' : '';
-                const lessonTags = p.lessons.map(l => `<span class="c-prompt-tag c-prompt-tag-lesson">${l}</span>`).join('');
-                promptHtml += `<div class="c-prompt-card" onclick="ComposeApp.startCompose('${p.id}')">
-                    <div class="c-prompt-title">${p.emoji} ${escHtml(p.title)} <span style="font-family:'Noto Sans JP';font-weight:500;font-size:0.9rem;color:#78909C">${escHtml(p.titleJp)}</span></div>
-                    <div class="c-prompt-desc">${escHtml(p.scenario)}</div>
-                    <div class="c-prompt-meta">
-                        ${lessonTags}
-                        <span class="c-prompt-tag c-prompt-tag-count">${p.targets.length} words</span>
-                        ${savedBadge}
-                    </div>
-                </div>`;
+            html += `<div class="c-lvl-group"><div class="c-lvl-title-bar">${lvl} Compositions</div>`;
+            files.forEach(cf => {
+                const totalPrompts = (cf.prompts || []).length + (cf.challengePrompts || []).length;
+                const draft = window.JPShared.progress.getDraft(cf.id);
+                const meta = lessonMeta.get(cf.lesson);
+
+                // Check completion status from draft
+                let statusTag = '';
+                if (draft) {
+                    const idx = computeActiveIndex(cf, draft);
+                    const total = getAllPrompts(cf).length;
+                    if (idx >= total) {
+                        statusTag = '<span class="c-menu-tag c-menu-tag-done">Complete</span>';
+                    } else {
+                        statusTag = '<span class="c-menu-tag c-menu-tag-draft">Draft saved</span>';
+                    }
+                }
+
+                html += `
+                    <div class="c-menu-card" onclick="ComposeApp.startCompose('${escHtml(cf.id)}')">
+                        <div class="c-menu-emoji">${cf.emoji || '✏️'}</div>
+                        <div class="c-menu-info">
+                            <div class="c-menu-title">${escHtml(cf.title)}</div>
+                            <span class="c-menu-lesson">${escHtml(cf.lesson)}</span>
+                            <div class="c-menu-theme">${escHtml(cf.theme || '')}</div>
+                            <div class="c-menu-meta">
+                                <span class="c-menu-tag c-menu-tag-count">${totalPrompts} prompt${totalPrompts !== 1 ? 's' : ''}</span>
+                                ${statusTag}
+                            </div>
+                        </div>
+                    </div>`;
             });
+            html += '</div>';
+        });
+
+        if (COMPOSE_FILES.length === 0) {
+            html = '<div class="c-menu-empty">No compositions available yet.</div>';
         }
 
         menuEl.innerHTML = `
-            <div class="c-card" style="padding:1.2rem;">
-                <div class="c-lbl" style="color:var(--c-primary);margin-top:0;">SELECT LESSONS</div>
-                ${levelsHtml}
+            <div class="c-card" style="padding:1rem;">
+                <div class="c-lbl" style="color:var(--c-primary);margin-top:0;">Choose a Composition</div>
+                ${html}
             </div>
-            <div class="c-lbl" style="color:var(--c-primary);">CHOOSE A PROMPT</div>
-            <div id="c-prompt-list">${promptHtml}</div>
         `;
     };
 
-    ComposeApp.toggleLevelGroup = function(hdr) {
-        hdr.classList.toggle('open');
-        const list = hdr.nextElementSibling;
-        if (list) list.classList.toggle('open');
-    };
-
-    ComposeApp.toggleAllInLevel = function(levelId, chk) {
-        const lvl = LEVELS.find(l => l.id === levelId);
-        if (!lvl) return;
-        if (chk.checked) lvl.lessonIds.forEach(id => selectedLessons.add(id));
-        else lvl.lessonIds.forEach(id => selectedLessons.delete(id));
-        // Update individual lesson checkboxes within this group without a full rebuild
-        const group = chk.closest('.c-lvl-group');
-        if (group) {
-            group.querySelectorAll('.c-lvl-list .c-lesson-chk').forEach(cb => { cb.checked = chk.checked; });
-            const sub = group.querySelector('.c-lvl-sub');
-            if (sub) sub.textContent = lvl.lessonIds.length + ' lesson' + (lvl.lessonIds.length !== 1 ? 's' : '');
-        }
-        ComposeApp.refreshPrompts();
-    };
-
-    ComposeApp.toggleLesson = function(id, chk) {
-        if (chk.checked) selectedLessons.add(id);
-        else selectedLessons.delete(id);
-        // Update the parent level group's header checkbox and sub-label
-        const row = chk.closest('.c-lvl-group');
-        if (row) {
-            const lvlId = row.querySelector('.c-lvl-header').dataset.level;
-            const lvl = LEVELS.find(l => l.id === lvlId);
-            if (lvl) {
-                const allSel = lvl.lessonIds.every(lid => selectedLessons.has(lid));
-                const anySel = lvl.lessonIds.some(lid => selectedLessons.has(lid));
-                const groupChk = row.querySelector('.c-lvl-header .c-lesson-chk');
-                if (groupChk) groupChk.checked = allSel;
-                const sub = row.querySelector('.c-lvl-sub');
-                if (sub) sub.textContent = lvl.lessonIds.length + ' lesson' + (lvl.lessonIds.length !== 1 ? 's' : '') + (anySel && !allSel ? ' · some selected' : '');
-            }
-        }
-        ComposeApp.refreshPrompts();
-    };
-
-    ComposeApp.refreshPrompts = function() {
-        const available = PROMPTS.filter(p => p.lessons.every(l => selectedLessons.has(l)));
-        const listEl = document.getElementById('c-prompt-list');
-        if (!listEl) return;
-
-        if (selectedLessons.size === 0) {
-            listEl.innerHTML = '<div style="padding:20px;text-align:center;color:#a4b0be;font-weight:600;">Expand a level above and select lessons to see prompts.</div>';
-            return;
-        }
-        if (available.length === 0) {
-            listEl.innerHTML = '<div style="padding:20px;text-align:center;color:#a4b0be;font-weight:600;">No prompts available for the selected lessons.</div>';
-            return;
-        }
-
-        let html = '';
-        available.forEach(p => {
-            const saved = window.JPShared.progress.getDraft(p.id);
-            const savedBadge = saved ? '<span class="c-prompt-saved">draft saved</span>' : '';
-            const lessonTags = p.lessons.map(l => `<span class="c-prompt-tag c-prompt-tag-lesson">${l}</span>`).join('');
-            html += `<div class="c-prompt-card" onclick="ComposeApp.startCompose('${p.id}')">
-                <div class="c-prompt-title">${p.emoji} ${escHtml(p.title)} <span style="font-family:'Noto Sans JP';font-weight:500;font-size:0.9rem;color:#78909C">${escHtml(p.titleJp)}</span></div>
-                <div class="c-prompt-desc">${escHtml(p.scenario)}</div>
-                <div class="c-prompt-meta">
-                    ${lessonTags}
-                    <span class="c-prompt-tag c-prompt-tag-count">${p.targets.length} words</span>
-                    ${savedBadge}
-                </div>
-            </div>`;
-        });
-        listEl.innerHTML = html;
-    };
-
     // --- COMPOSE VIEW ---
-    ComposeApp.startCompose = function(promptId) {
-        const prompt = PROMPTS.find(p => p.id === promptId);
-        if (!prompt) return;
-        currentPrompt = prompt;
+    ComposeApp.startCompose = function(composeId) {
+        const compose = COMPOSE_FILES.find(cf => cf.id === composeId);
+        if (!compose) return;
+        currentCompose = compose;
 
         const menuEl = document.getElementById('c-view-menu');
         const compEl = document.getElementById('c-view-compose');
@@ -394,100 +410,113 @@ window.ComposeModule = {
         if (!compEl) return;
         compEl.classList.remove('c-hidden');
 
-        // Build lesson vocab for display
-        const promptLessonVocab = allVocab.filter(v => {
-            const lessons = (v.lesson_ids || v.lesson || '').split(',').map(s => s.trim());
-            return lessons.some(l => prompt.lessons.includes(l));
-        });
-        // Remove duplicates and entries that are conjugated forms
-        const vocabSeen = new Set();
-        const filteredVocab = promptLessonVocab.filter(v => {
-            if (v.id && v.id.includes('__')) return false; // skip conjugated forms
-            if (vocabSeen.has(v.surface)) return false;
-            vocabSeen.add(v.surface);
-            return true;
-        });
+        // Load draft
+        const draft = window.JPShared.progress.getDraft(compose.id) || '';
 
-        // Resolve targets from glossary (fall back to inline fields for old format)
-        currentResolvedTargets = (prompt.targets || []).map(t => {
-            const entry = t.id ? vocabById.get(t.id) : null;
-            return {
-                surface: (entry && entry.surface) || t.surface || '',
-                reading: (entry && entry.reading) || t.reading || '',
-                meaning: (entry && entry.meaning) || t.meaning || '',
-                count: t.count || 1,
-                matches: t.matches || (entry ? [entry.surface, entry.reading].filter(Boolean) : [t.surface || ''])
-            };
-        });
+        // Determine active prompt from draft content
+        activePromptIndex = computeActiveIndex(compose, draft);
+        const allP = getAllPrompts(compose);
+        allPromptsComplete = activePromptIndex >= allP.length;
 
-        // Build target tracking HTML
+        ComposeApp.renderComposeView(draft);
+    };
+
+    ComposeApp.renderComposeView = function(draftText) {
+        const compose = currentCompose;
+        if (!compose) return;
+
+        const compEl = document.getElementById('c-view-compose');
+        if (!compEl) return;
+
+        const allP = getAllPrompts(compose);
+        const regularCount = (compose.prompts || []).length;
+        const totalPrompts = allP.length;
+
+        // Build timeline
+        const timelineHtml = ComposeApp.buildTimeline(draftText || '');
+
+        // Build active prompt banner and targets
+        let promptBannerHtml = '';
         let targetHtml = '';
-        currentResolvedTargets.forEach((t, i) => {
-            targetHtml += `<div class="c-target-item" id="c-tgt-${i}">
-                <div class="c-target-check" id="c-tgt-chk-${i}"></div>
-                <span class="c-target-surface" onclick="ComposeApp.insertWord('${escHtml(t.surface)}')" title="Click to insert">${escHtml(t.surface)}</span>
-                <span class="c-target-reading">${escHtml(t.reading)}</span>
-                <span class="c-target-meaning">${escHtml(t.meaning)}</span>
-                <span class="c-target-count" id="c-tgt-cnt-${i}">0/${t.count}</span>
-            </div>`;
-        });
+        if (activePromptIndex < totalPrompts) {
+            const activeP = allP[activePromptIndex];
+            const isChallenge = activePromptIndex >= regularCount;
+            const resolvedTargets = resolveTargets(activeP.targets);
 
-        // Build lesson vocab chips
-        let vocabChipHtml = '';
-        filteredVocab.forEach(v => {
-            const meaning = (v.meaning || '').substring(0, 25);
-            const readingHtml = v.reading ? `<span class="c-chip-reading">${escHtml(v.reading)}</span>` : '';
-            vocabChipHtml += `<div class="c-chip" onclick="ComposeApp.insertWord('${escHtml(v.surface)}')" title="${escHtml(v.meaning)}">
-                <span class="c-chip-jp">${escHtml(v.surface)}</span>
-                ${readingHtml}
-                <span class="c-chip-en">${escHtml(meaning)}</span>
-            </div>`;
-        });
+            promptBannerHtml = `
+                <div class="c-prompt-banner">
+                    <div class="c-prompt-banner-title">
+                        ${isChallenge ? '<span class="c-timeline-challenge-tag">Challenge</span> ' : ''}
+                        Prompt ${activePromptIndex + 1}
+                    </div>
+                    <div class="c-prompt-banner-text">${escHtml(activeP.prompt)}</div>
+                    ${activeP.model ? `
+                        <div class="c-model-toggle" onclick="ComposeApp.toggleModel()">Show example</div>
+                        <div class="c-model-sentence" id="c-model-sentence">${escHtml(activeP.model)}</div>
+                    ` : ''}
+                </div>`;
 
-        // Build per-prompt helper chips (Actions & Descriptors from glossary)
-        let helperHtml = '';
-        if (prompt.helpers && prompt.helpers.length > 0) {
-            const helperEntries = prompt.helpers.map(id => vocabById.get(id)).filter(Boolean);
-            if (helperEntries.length > 0) {
-                helperHtml += '<div style="margin-bottom:8px;"><span class="c-chip-cat">Actions & Descriptors</span></div><div class="c-chip-wrap" style="margin-bottom:10px;">';
-                helperEntries.forEach(e => {
-                    const readingHtml = e.reading ? `<span class="c-chip-reading">${escHtml(e.reading)}</span>` : '';
-                    helperHtml += `<div class="c-chip" onclick="ComposeApp.insertWord('${escHtml(e.surface)}')" title="${escHtml(e.meaning)}">
-                        <span class="c-chip-jp">${escHtml(e.surface)}</span>
-                        ${readingHtml}
-                        <span class="c-chip-en">${escHtml(e.meaning)}</span>
-                    </div>`;
-                });
-                helperHtml += '</div>';
-            }
-        }
-
-        // Build static helper vocab chips by category
-        HELPER_VOCAB.forEach(cat => {
-            helperHtml += `<div style="margin-bottom:8px;"><span class="c-chip-cat">${escHtml(cat.cat)}</span></div><div class="c-chip-wrap" style="margin-bottom:10px;">`;
-            cat.words.forEach(w => {
-                const readingHtml = w.reading ? `<span class="c-chip-reading">${escHtml(w.reading)}</span>` : '';
-                helperHtml += `<div class="c-chip" onclick="ComposeApp.insertWord('${escHtml(w.surface)}')" title="${escHtml(w.meaning)}">
-                    <span class="c-chip-jp">${escHtml(w.surface)}</span>
-                    ${readingHtml}
-                    <span class="c-chip-en">${escHtml(w.meaning)}</span>
+            resolvedTargets.forEach((t, i) => {
+                targetHtml += `<div class="c-target-item" id="c-tgt-${i}">
+                    <div class="c-target-check" id="c-tgt-chk-${i}"></div>
+                    <span class="c-target-surface" onclick="ComposeApp.insertWord('${escHtml(t.surface)}')" title="Click to insert">${escHtml(t.surface)}</span>
+                    <span class="c-target-reading">${escHtml(t.reading)}</span>
+                    <span class="c-target-meaning">${escHtml(t.meaning)}</span>
+                    <span class="c-target-count" id="c-tgt-cnt-${i}">0/${t.count}</span>
                 </div>`;
             });
-            helperHtml += '</div>';
+        }
+
+        // Build vocab pool for active prompt
+        let vocabPoolHtml = '';
+        if (activePromptIndex < totalPrompts) {
+            const activeP = allP[activePromptIndex];
+            const pool = resolveVocabPool(activeP.vocabPool);
+            pool.forEach(v => {
+                const readingHtml = v.reading ? `<span class="c-chip-reading">${escHtml(v.reading)}</span>` : '';
+                const meaning = (v.meaning || '').substring(0, 30);
+                vocabPoolHtml += `<div class="c-chip" onclick="ComposeApp.insertWord('${escHtml(v.surface)}')" title="${escHtml(v.meaning)}">
+                    <span class="c-chip-jp">${escHtml(v.surface)}</span>
+                    ${readingHtml}
+                    <span class="c-chip-en">${escHtml(meaning)}</span>
+                </div>`;
+            });
+        }
+
+        // Build particle reference (gated)
+        let particleRefHtml = '';
+        (compose.particles || []).forEach(pid => {
+            const p = particlesById.get(pid) || vocabById.get(pid);
+            if (!p) return;
+            const surface = p.particle || p.surface || '';
+            const role = p.role || p.meaning || '';
+            particleRefHtml += `<span class="c-ref-item" onclick="ComposeApp.insertWord('${escHtml(surface)}')">
+                <span class="c-ref-jp">${escHtml(surface)}</span>
+                <span class="c-ref-role">${escHtml(role)}</span>
+            </span>`;
         });
 
-        // Particle reference
-        const particleHtml = PARTICLES.map(p => `<span>${escHtml(p.particle + ' (' + p.role + ')')}</span>`).join(' ');
+        // Build conjugation reference (gated)
+        let conjRefHtml = '';
+        (compose.conjugations || []).forEach(formKey => {
+            const rule = conjugationRules[formKey];
+            if (!rule) return;
+            conjRefHtml += `<div class="c-conj-item">
+                <div>
+                    <div class="c-conj-label">${escHtml(rule.label)}</div>
+                    <div class="c-conj-desc">${escHtml(rule.description)}</div>
+                </div>
+            </div>`;
+        });
 
-        // Load draft if exists
-        const draft = window.JPShared.progress.getDraft(prompt.id);
+        // Progress info
+        const progressTotal = allP.reduce((sum, p) => sum + (p.targets || []).length, 0);
 
+        // Build complete view
         compEl.innerHTML = `
-            <div class="c-prompt-banner">
-                <div class="c-prompt-banner-title">${prompt.emoji} ${escHtml(prompt.title)}</div>
-                <div class="c-prompt-banner-text">${escHtml(prompt.scenario)}</div>
-                <div class="c-prompt-banner-hint">${escHtml(prompt.hint)}</div>
-            </div>
+            <div class="c-timeline" id="c-timeline">${timelineHtml}</div>
+
+            ${promptBannerHtml}
 
             <div id="c-complete-box" class="c-hidden"></div>
 
@@ -496,60 +525,66 @@ window.ComposeModule = {
                     <div class="c-progress-bar-inner" id="c-progress-fill" style="width:0%"></div>
                 </div>
                 <div class="c-progress-text">
-                    <span id="c-progress-lbl">0 / ${currentResolvedTargets.length} target words used</span>
+                    <span id="c-progress-lbl">0 / ${progressTotal} target words used</span>
                     <span id="c-progress-pct">0%</span>
                 </div>
             </div>
 
-            <textarea class="c-textarea" id="c-compose-input" placeholder="ここに日本語を書いてください... (Write Japanese here)">${escHtml(draft)}</textarea>
+            <textarea class="c-textarea" id="c-compose-input" placeholder="ここに日本語を書いてください... (Write Japanese here)">${escHtml(draftText || '')}</textarea>
             <div style="display:flex;justify-content:space-between;align-items:center;">
-                <div class="c-char-count" id="c-char-count">${draft.length} characters</div>
+                <div class="c-char-count" id="c-char-count">${(draftText || '').length} characters</div>
                 <div class="c-action-bar">
-                    <button class="c-btn c-btn-sm c-btn-score" onclick="ComposeApp.showScore()" title="Score your composition">📊 Score</button>
-                    <button class="c-btn c-btn-sm c-btn-sec" onclick="ComposeApp.speakComposition()" title="Listen to your composition">🔊 Listen</button>
-                    <button class="c-btn c-btn-sm c-btn-sec" onclick="ComposeApp.clearDraft()" title="Clear composition">🗑️ Clear</button>
+                    <button class="c-btn c-btn-sm c-btn-score" onclick="ComposeApp.showScore()" title="Score your composition">Score</button>
+                    <button class="c-btn c-btn-sm c-btn-sec" onclick="ComposeApp.speakComposition()" title="Listen to your composition">Listen</button>
+                    <button class="c-btn c-btn-sm c-btn-sec" onclick="ComposeApp.clearDraft()" title="Clear composition">Clear</button>
                 </div>
             </div>
 
+            ${targetHtml ? `
             <div class="c-section" style="margin-top:8px;">
                 <div class="c-section-hdr open" onclick="ComposeApp.toggleSection(this)">
-                    <span class="c-section-title">🎯 Target Words</span>
+                    <span class="c-section-title">Target Words</span>
                     <span class="c-section-arrow">▼</span>
                 </div>
                 <div class="c-section-body open">
                     <div class="c-target-list" id="c-target-list">${targetHtml}</div>
                 </div>
-            </div>
+            </div>` : ''}
 
+            ${vocabPoolHtml ? `
             <div class="c-section">
                 <div class="c-section-hdr" onclick="ComposeApp.toggleSection(this)">
-                    <span class="c-section-title">📖 Lesson Vocabulary (${filteredVocab.length} words)</span>
+                    <span class="c-section-title">Word Bank</span>
                     <span class="c-section-arrow">▼</span>
                 </div>
                 <div class="c-section-body">
-                    <div class="c-chip-wrap">${vocabChipHtml}</div>
+                    <div class="c-chip-wrap" id="c-vocab-pool">${vocabPoolHtml}</div>
                 </div>
-            </div>
+            </div>` : ''}
 
+            ${particleRefHtml ? `
             <div class="c-section">
                 <div class="c-section-hdr" onclick="ComposeApp.toggleSection(this)">
-                    <span class="c-section-title">🔧 Helper Words</span>
+                    <span class="c-section-title">Particles & Copula</span>
                     <span class="c-section-arrow">▼</span>
                 </div>
                 <div class="c-section-body">
-                    ${helperHtml}
+                    <div class="c-ref-list">${particleRefHtml}</div>
                 </div>
-            </div>
+            </div>` : ''}
 
+            ${conjRefHtml ? `
             <div class="c-section">
                 <div class="c-section-hdr" onclick="ComposeApp.toggleSection(this)">
-                    <span class="c-section-title">📌 Particle Reference</span>
+                    <span class="c-section-title">Conjugation Patterns</span>
                     <span class="c-section-arrow">▼</span>
                 </div>
                 <div class="c-section-body">
-                    <div class="c-particle-ref">${particleHtml}</div>
+                    ${conjRefHtml}
                 </div>
-            </div>
+            </div>` : ''}
+
+            <div id="c-coverage-box" class="c-hidden"></div>
 
             <button class="c-btn c-btn-sec" onclick="ComposeApp.showMenu()" style="margin-top:10px;border:none;color:#a4b0be;font-size:0.9rem">Back to Menu</button>
         `;
@@ -559,66 +594,111 @@ window.ComposeModule = {
         if (input) {
             input.addEventListener('input', function() {
                 ComposeApp.updateTracking();
-                window.JPShared.progress.saveDraft(currentPrompt.id, input.value);
+                window.JPShared.progress.saveDraft(currentCompose.id, input.value);
                 const cc = document.getElementById('c-char-count');
                 if (cc) cc.textContent = input.value.length + ' characters';
             });
             // Initial tracking if there's a draft
-            if (draft) {
+            if (draftText) {
                 setTimeout(() => ComposeApp.updateTracking(), 100);
             }
         }
     };
 
-    ComposeApp.toggleSection = function(hdr) {
-        hdr.classList.toggle('open');
-        const body = hdr.nextElementSibling;
-        if (body) body.classList.toggle('open');
-    };
+    ComposeApp.buildTimeline = function(text) {
+        const compose = currentCompose;
+        if (!compose) return '';
+        const allP = getAllPrompts(compose);
+        const regularCount = (compose.prompts || []).length;
+        let html = '';
 
-    ComposeApp.insertWord = function(word) {
-        const input = document.getElementById('c-compose-input');
-        if (!input) return;
+        allP.forEach((p, i) => {
+            const targets = resolveTargets(p.targets);
+            const allMet = targets.every(t => countOccurrences(text, t.matches) >= t.count);
+            const isChallenge = i >= regularCount;
+            const isActive = i === activePromptIndex;
+            const isDone = allMet;
+            const isLocked = i > activePromptIndex && !isDone;
 
-        const start = input.selectionStart;
-        const end = input.selectionEnd;
-        const text = input.value;
+            let cls = 'c-timeline-step';
+            if (isDone) cls += ' done';
+            else if (isActive) cls += ' active';
+            else if (isLocked) cls += ' locked';
+            if (isChallenge) cls += ' challenge';
 
-        input.value = text.substring(0, start) + word + text.substring(end);
-        input.selectionStart = input.selectionEnd = start + word.length;
-        input.focus();
+            const badge = isDone ? '✓' : (i + 1);
+            const promptText = (p.prompt || '').substring(0, 60) + ((p.prompt || '').length > 60 ? '...' : '');
+            const challengeTag = isChallenge ? '<span class="c-timeline-challenge-tag">Challenge</span>' : '';
 
-        // Trigger input event for tracking
-        input.dispatchEvent(new Event('input'));
+            html += `<div class="${cls}">
+                <div class="c-timeline-badge">${badge}</div>
+                <div class="c-timeline-prompt">${escHtml(promptText)} ${challengeTag}</div>
+            </div>`;
+        });
+
+        return html;
     };
 
     ComposeApp.updateTracking = function() {
-        if (!currentPrompt) return;
+        if (!currentCompose) return;
         const input = document.getElementById('c-compose-input');
         if (!input) return;
         const text = input.value;
 
-        let totalMet = 0;
-        const totalTargets = currentResolvedTargets.length;
+        const compose = currentCompose;
+        const allP = getAllPrompts(compose);
 
-        currentResolvedTargets.forEach((t, i) => {
-            const count = countOccurrences(text, t.matches);
-            const met = count >= t.count;
-            if (met) totalMet++;
+        // Compute new active index
+        const newActiveIndex = computeActiveIndex(compose, text);
+        const prevIndex = activePromptIndex;
+        const wasComplete = allPromptsComplete;
 
-            const item = document.getElementById('c-tgt-' + i);
-            const chk = document.getElementById('c-tgt-chk-' + i);
-            const cnt = document.getElementById('c-tgt-cnt-' + i);
+        activePromptIndex = newActiveIndex;
+        allPromptsComplete = newActiveIndex >= allP.length;
 
-            if (item) {
-                if (met) item.classList.add('done');
-                else item.classList.remove('done');
+        // If the active prompt changed, re-render the view (preserving text)
+        if (newActiveIndex !== prevIndex) {
+            ComposeApp.renderComposeView(text);
+            // Re-focus and restore cursor position
+            const newInput = document.getElementById('c-compose-input');
+            if (newInput) {
+                newInput.focus();
+                newInput.selectionStart = newInput.selectionEnd = text.length;
             }
-            if (chk) chk.textContent = met ? '✓' : '';
-            if (cnt) cnt.textContent = `${Math.min(count, t.count)}/${t.count}`;
-        });
+            return;
+        }
 
-        // Update progress bar
+        // Update current prompt's targets
+        if (activePromptIndex < allP.length) {
+            const activeP = allP[activePromptIndex];
+            const resolvedTargets = resolveTargets(activeP.targets);
+
+            resolvedTargets.forEach((t, i) => {
+                const count = countOccurrences(text, t.matches);
+                const met = count >= t.count;
+                const item = document.getElementById('c-tgt-' + i);
+                const chk = document.getElementById('c-tgt-chk-' + i);
+                const cnt = document.getElementById('c-tgt-cnt-' + i);
+                if (item) { if (met) item.classList.add('done'); else item.classList.remove('done'); }
+                if (chk) chk.textContent = met ? '✓' : '';
+                if (cnt) cnt.textContent = `${Math.min(count, t.count)}/${t.count}`;
+            });
+        }
+
+        // Update timeline
+        const timelineEl = document.getElementById('c-timeline');
+        if (timelineEl) timelineEl.innerHTML = ComposeApp.buildTimeline(text);
+
+        // Update overall progress bar
+        let totalMet = 0;
+        let totalTargets = 0;
+        allP.forEach(p => {
+            const targets = resolveTargets(p.targets);
+            totalTargets += targets.length;
+            targets.forEach(t => {
+                if (countOccurrences(text, t.matches) >= t.count) totalMet++;
+            });
+        });
         const pct = totalTargets > 0 ? Math.round((totalMet / totalTargets) * 100) : 0;
         const fill = document.getElementById('c-progress-fill');
         const lbl = document.getElementById('c-progress-lbl');
@@ -630,14 +710,57 @@ window.ComposeModule = {
         // Complete banner
         const box = document.getElementById('c-complete-box');
         if (box) {
-            if (totalMet === totalTargets && totalTargets > 0 && text.length > 0) {
+            if (allPromptsComplete && text.length > 0) {
                 box.className = 'c-complete-banner';
-                box.innerHTML = `<h3>All targets used!</h3><p>Great work! Keep writing to practice more, or try another prompt.</p>`;
+                box.innerHTML = '<h3>All prompts complete!</h3><p>Great work! Your composition covers all the guided prompts.</p>';
             } else {
                 box.className = 'c-hidden';
                 box.innerHTML = '';
             }
         }
+
+        // Vocab coverage (shown when all prompts are complete)
+        const coverageBox = document.getElementById('c-coverage-box');
+        if (coverageBox) {
+            if (allPromptsComplete && text.length > 0) {
+                const cov = computeCoverage(compose, text);
+                coverageBox.className = 'c-coverage';
+                coverageBox.innerHTML = `
+                    <div class="c-coverage-title">Vocabulary Coverage</div>
+                    <div class="c-coverage-pct">${cov.pct}%</div>
+                    <div class="c-coverage-label">${cov.used} of ${cov.total} lesson words used</div>
+                    <div class="c-coverage-bar"><div class="c-coverage-fill" style="width:${cov.pct}%"></div></div>`;
+            } else {
+                coverageBox.className = 'c-hidden';
+                coverageBox.innerHTML = '';
+            }
+        }
+    };
+
+    ComposeApp.toggleSection = function(hdr) {
+        hdr.classList.toggle('open');
+        const body = hdr.nextElementSibling;
+        if (body) body.classList.toggle('open');
+    };
+
+    ComposeApp.toggleModel = function() {
+        const el = document.getElementById('c-model-sentence');
+        const toggle = document.querySelector('.c-model-toggle');
+        if (!el || !toggle) return;
+        el.classList.toggle('visible');
+        toggle.textContent = el.classList.contains('visible') ? 'Hide example' : 'Show example';
+    };
+
+    ComposeApp.insertWord = function(word) {
+        const input = document.getElementById('c-compose-input');
+        if (!input) return;
+        const start = input.selectionStart;
+        const end = input.selectionEnd;
+        const text = input.value;
+        input.value = text.substring(0, start) + word + text.substring(end);
+        input.selectionStart = input.selectionEnd = start + word.length;
+        input.focus();
+        input.dispatchEvent(new Event('input'));
     };
 
     ComposeApp.speakComposition = function() {
@@ -647,80 +770,55 @@ window.ComposeModule = {
     };
 
     ComposeApp.clearDraft = function() {
-        if (!currentPrompt) return;
+        if (!currentCompose) return;
         const input = document.getElementById('c-compose-input');
         if (!input) return;
         if (!confirm('Clear your composition? This cannot be undone.')) return;
         input.value = '';
-        window.JPShared.progress.clearDraft(currentPrompt.id);
-        input.dispatchEvent(new Event('input'));
+        window.JPShared.progress.clearDraft(currentCompose.id);
+        activePromptIndex = 0;
+        allPromptsComplete = false;
+        ComposeApp.renderComposeView('');
     };
 
     // --- SCORING ---
     ComposeApp.showScore = function() {
-        if (!currentPrompt) return;
+        if (!currentCompose) return;
         const input = document.getElementById('c-compose-input');
         if (!input || !input.value.trim()) return;
         const text = input.value;
+        const compose = currentCompose;
+        const allP = getAllPrompts(compose);
 
-        // 1. Vocab Score (0-40):
-        //    50% (0-20 pts) from target words meeting their required count
-        //    50% (0-20 pts) from additional lesson vocab, capped at the target count
-
-        // a) Target words
-        const totalTargets = currentResolvedTargets.length;
+        // 1. Vocab Score (0-40)
+        let totalTargets = 0;
         let targetsMet = 0;
         const targetSurfaces = new Set();
-        currentResolvedTargets.forEach(t => {
-            if (countOccurrences(text, t.matches) >= t.count) targetsMet++;
-            if (t.surface) targetSurfaces.add(t.surface);
+        allP.forEach(p => {
+            const targets = resolveTargets(p.targets);
+            totalTargets += targets.length;
+            targets.forEach(t => {
+                if (countOccurrences(text, t.matches) >= t.count) targetsMet++;
+                if (t.surface) targetSurfaces.add(t.surface);
+            });
         });
 
-        // b) Additional lesson vocab (not one of the targets)
-        const promptLessonVocab = allVocab.filter(v => {
-            const lessons = (v.lesson_ids || v.lesson || '').split(',').map(s => s.trim());
-            return lessons.some(l => currentPrompt.lessons.includes(l));
-        });
-        const vocabSeen = new Set();
-        const uniqueLessonVocab = promptLessonVocab.filter(v => {
-            if (v.id && v.id.includes('__')) return false;
-            if (vocabSeen.has(v.surface)) return false;
-            vocabSeen.add(v.surface);
-            return true;
-        });
-        let additionalVocabUsed = 0;
-        const additionalMatches = [];
-        uniqueLessonVocab.forEach(v => {
-            if (!targetSurfaces.has(v.surface) && text.includes(v.surface)) {
-                additionalVocabUsed++;
-                additionalMatches.push(v.surface);
-            }
-        });
+        // Additional lesson vocab
+        const cov = computeCoverage(compose, text);
+        const additionalVocabUsed = Math.max(0, cov.used - targetSurfaces.size);
 
-        // c) Score
         let vocabScore = 0;
         if (totalTargets > 0) {
             const targetScore = Math.round((targetsMet / totalTargets) * 20);
             const additionalScore = Math.round((Math.min(additionalVocabUsed, totalTargets) / totalTargets) * 20);
             vocabScore = targetScore + additionalScore;
-        } else {
-            // Fallback if no targets defined: use all lesson vocab
-            const vocabTotal = uniqueLessonVocab.length;
-            const vocabRatio = vocabTotal > 0 ? additionalVocabUsed / Math.min(vocabTotal, 15) : 0;
-            vocabScore = Math.min(40, Math.round(vocabRatio * 40));
         }
 
-        // 2. Length Score (0-30): 1 point per 5 characters, max 30 (at 150 chars)
+        // 2. Length Score (0-30)
         const charCount = text.length;
         const lengthScore = Math.min(30, Math.floor(charCount / 5));
 
-        // 3. Grammar Score (0-30) — Phase 1: pattern-based
-        //    a) Tense consistency     (0-15 pts)
-        //    b) Core particle use     (0-10 pts) — presence of は/が/を/に
-        //    c) Sentence completion   (0-5 pts)  — ends with a sentence-final form
-        //    Phase 2 (future): replace with AI-assisted scoring for true correctness
-
-        // a) Tense consistency (0-15)
+        // 3. Grammar Score (0-30)
         const politePatterns = ['ます', 'ました', 'ません', 'ませんでした', 'ましょう', 'ですか', 'でした'];
         const plainPatterns = ['だった', 'ない', 'なかった'];
         let politeCount = 0;
@@ -737,7 +835,7 @@ window.ComposeModule = {
         let tenseComponent = 0;
         let tenseDetail = '';
         if (totalVerbs === 0) {
-            tenseComponent = 8; // neutral — no verb forms to evaluate
+            tenseComponent = 8;
             tenseDetail = 'No verb forms detected';
         } else {
             const dominant = Math.max(politeCount, plainCount);
@@ -747,19 +845,15 @@ window.ComposeModule = {
                 : `Plain: ${plainCount}/${totalVerbs}`;
         }
 
-        // b) Core particle use (0-10) — を is exclusively a particle; は/が/に used as proxy
         const coreParticles = ['は', 'が', 'を', 'に'];
         const particlesFound = coreParticles.filter(p => text.includes(p));
         const particleScore = Math.round((particlesFound.length / coreParticles.length) * 10);
 
-        // c) Sentence completion (0-5) — text ends with a valid sentence-final form
         const trimmedText = text.trim();
         const sentenceFinals = ['ます', 'ました', 'ません', 'ませんでした', 'ましょう', 'です', 'でした', 'だ', 'ね', 'よ', 'か'];
         const sentenceComplete = sentenceFinals.some(p =>
-            trimmedText.endsWith(p) ||
-            trimmedText.endsWith(p + '。') ||
-            trimmedText.endsWith(p + '！') ||
-            trimmedText.endsWith(p + '？')
+            trimmedText.endsWith(p) || trimmedText.endsWith(p + '。') ||
+            trimmedText.endsWith(p + '！') || trimmedText.endsWith(p + '？')
         );
         const completionScore = sentenceComplete ? 5 : 0;
 
@@ -767,17 +861,14 @@ window.ComposeModule = {
         let grammarLabel = tenseDetail + ` · ${particlesFound.length}/4 particles`;
         if (completionScore > 0) grammarLabel += ' · Complete';
 
-        // Total
         const total = vocabScore + lengthScore + grammarScore;
-        let grade = '';
-        let gradeColor = '';
+        let grade = ''; let gradeColor = '';
         if (total >= 90) { grade = 'S  Excellent!'; gradeColor = '#f39c12'; }
         else if (total >= 75) { grade = 'A  Great Work!'; gradeColor = '#2ed573'; }
         else if (total >= 60) { grade = 'B  Good Job!'; gradeColor = '#00897B'; }
         else if (total >= 40) { grade = 'C  Keep Going!'; gradeColor = '#3498db'; }
         else { grade = 'D  Keep Practicing!'; gradeColor = '#78909C'; }
 
-        // Build overlay
         const overlay = document.createElement('div');
         overlay.className = 'c-score-overlay';
         overlay.onclick = function(e) { if (e.target === overlay) overlay.remove(); };
@@ -789,15 +880,15 @@ window.ComposeModule = {
                 <div class="c-score-breakdown">
                     <div class="c-score-row">
                         <div>
-                            <div class="c-score-row-label">Vocabulary Used</div>
-                            <div class="c-score-row-detail">${targetsMet}/${totalTargets} targets · ${additionalVocabUsed} additional${additionalMatches.length > 0 ? ' (' + additionalMatches.slice(0, 3).join(', ') + (additionalMatches.length > 3 ? '...' : '') + ')' : ''}</div>
+                            <div class="c-score-row-label">Vocabulary</div>
+                            <div class="c-score-row-detail">${targetsMet}/${totalTargets} targets · ${cov.used}/${cov.total} lesson vocab (${cov.pct}%)</div>
                             <div class="c-score-bar"><div class="c-score-bar-fill" style="width:${Math.round(vocabScore/40*100)}%;background:var(--c-primary)"></div></div>
                         </div>
                         <div class="c-score-row-pts">${vocabScore}/40</div>
                     </div>
                     <div class="c-score-row">
                         <div>
-                            <div class="c-score-row-label">Composition Length</div>
+                            <div class="c-score-row-label">Length</div>
                             <div class="c-score-row-detail">${charCount} characters (1pt per 5)</div>
                             <div class="c-score-bar"><div class="c-score-bar-fill" style="width:${Math.round(lengthScore/30*100)}%;background:var(--c-success)"></div></div>
                         </div>
@@ -824,44 +915,54 @@ window.ComposeModule = {
             await new Promise(r => setTimeout(r, 50));
             const cacheBust = '?t=' + Date.now();
 
-            // Load manifest to discover file paths
+            // Load manifest
             const manifest = await window.getManifest(REPO_CONFIG);
             const n5 = manifest.data.N5;
             const n4 = manifest.data.N4;
 
-            // Fetch both levels' glossaries, compose files, helper vocab, and particles in parallel
-            const [n5Glossary, n4Glossary, n5Compose, n4Compose, helperData, particleData] = await Promise.all([
+            // Build lesson metadata
+            lessonMeta = new Map();
+            [...n5.lessons, ...n4.lessons].forEach(l => lessonMeta.set(l.id, { title: l.title }));
+
+            // Collect compose file paths from both levels
+            const composePaths = [];
+            [n5, n4].forEach(level => {
+                if (Array.isArray(level.compose)) {
+                    level.compose.forEach(entry => {
+                        composePaths.push(typeof entry === 'string' ? entry : entry.file);
+                    });
+                }
+            });
+
+            // Fetch glossaries, particles, conjugation rules, and all compose files in parallel
+            const [n5Glossary, n4Glossary, particleData, conjData, ...composeResults] = await Promise.all([
                 fetch(window.getAssetUrl(REPO_CONFIG, n5.glossary) + cacheBust).then(r => r.json()),
                 fetch(window.getAssetUrl(REPO_CONFIG, n4.glossary) + cacheBust).then(r => r.json()),
-                fetch(window.getAssetUrl(REPO_CONFIG, n5.compose) + cacheBust).then(r => r.json()),
-                fetch(window.getAssetUrl(REPO_CONFIG, n4.compose) + cacheBust).then(r => r.json()),
-                fetch(window.getAssetUrl(REPO_CONFIG, manifest.shared.helperVocab) + cacheBust).then(r => r.json()),
-                fetch(window.getAssetUrl(REPO_CONFIG, manifest.shared.particles) + cacheBust).then(r => r.json())
+                fetch(window.getAssetUrl(REPO_CONFIG, manifest.shared.particles) + cacheBust).then(r => r.json()),
+                fetch(window.getAssetUrl(REPO_CONFIG, manifest.globalFiles.conjugationRules) + cacheBust).then(r => r.json()),
+                ...composePaths.map(p => fetch(window.getAssetUrl(REPO_CONFIG, p) + cacheBust).then(r => r.json()))
             ]);
 
-            HELPER_VOCAB = helperData.categories;
-            PARTICLES = particleData.particles;
-
-            // Combine vocab from both glossaries
+            // Build vocab lookup
             allVocab = [
-                ...n5Glossary.entries.filter(i => i.type === 'vocab'),
-                ...n4Glossary.entries.filter(i => i.type === 'vocab')
+                ...n5Glossary.entries.filter(i => i.type === 'vocab' || i.type === 'grammar' || i.type === 'phrase'),
+                ...n4Glossary.entries.filter(i => i.type === 'vocab' || i.type === 'grammar' || i.type === 'phrase')
             ];
             vocabById = new Map();
             [...n5Glossary.entries, ...n4Glossary.entries].forEach(e => vocabById.set(e.id, e));
 
-            // Build lesson metadata from manifest (id -> title)
-            lessonMeta = new Map();
-            [...n5.lessons, ...n4.lessons].forEach(l => lessonMeta.set(l.id, { title: l.title }));
+            // Build particle lookup
+            particlesById = new Map();
+            (particleData.particles || []).forEach(p => particlesById.set(p.id, p));
 
-            // Combine prompts; derive which lesson IDs actually have prompts per level
-            PROMPTS = [...n5Compose.prompts, ...n4Compose.prompts];
-            const n5LessonIds = [...new Set(n5Compose.prompts.flatMap(p => p.lessons))].sort();
-            const n4LessonIds = [...new Set(n4Compose.prompts.flatMap(p => p.lessons))].sort();
-            LEVELS = [
-                { id: 'N5', lessonIds: n5LessonIds },
-                { id: 'N4', lessonIds: n4LessonIds }
-            ];
+            // Store conjugation rules (strip contentVersion key)
+            conjugationRules = {};
+            Object.keys(conjData).forEach(k => {
+                if (k !== 'contentVersion') conjugationRules[k] = conjData[k];
+            });
+
+            // Store compose files
+            COMPOSE_FILES = composeResults;
 
             const loader = document.getElementById('c-loader');
             if (loader) loader.classList.add('c-hidden');
