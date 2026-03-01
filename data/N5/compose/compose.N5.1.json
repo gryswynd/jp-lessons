@@ -1,0 +1,36 @@
+{
+  "contentVersion": "1.0.0",
+  "id": "compose.N5.1",
+  "lesson": "N5.1",
+  "title": "My Family",
+  "titleJp": "わたしの かぞく",
+  "emoji": "👨‍👩‍👧‍👦",
+  "scenario": "Introduce yourself and your family to a new classmate.",
+  "grammar": {
+    "particles": ["p_wa", "p_ga", "p_no", "p_ka", "p_wo", "p_yo", "p_ne", "p_dewa", "p_ja"],
+    "copula": ["g_desu", "g_da"],
+    "conjugations": ["polite_adj"]
+  },
+  "prompts": [
+    {
+      "id": "family-intro",
+      "prompt": "My family... My father... My mother...",
+      "targets": [
+        { "id": "v_chichi", "count": 1 },
+        { "id": "v_haha", "count": 1 }
+      ],
+      "helpers": ["v_watashi", "v_fubo", "v_sensei", "v_namae", "v_otousan", "v_okaasan", "v_danshi", "v_joshi", "v_ii", "v_totemo"],
+      "example": "父は先生です。"
+    },
+    {
+      "id": "about-friends",
+      "prompt": "My friend... A name... Kind... Happy...",
+      "targets": [
+        { "id": "v_tomodachi", "count": 1 },
+        { "id": "v_yasashii", "count": 1 }
+      ],
+      "helpers": ["v_namae", "v_san", "v_minasan", "v_ureshii", "v_issho", "v_totemo", "v_ichiban", "v_ii", "p_hajimemashite", "p_yoroshiku"],
+      "example": "友だちはとてもやさしいです。"
+    }
+  ]
+}

@@ -520,31 +520,85 @@ Both「国民は毎日車を洗います」and「毎日国民は車を洗いま�
 
 ---
 
-### Compose Prompt JSON (`data/N5/compose/compose.N5.json`)
+### Compose Prompt JSON — Guided Prompts (`data/N5/compose/compose.N5.X.json`)
+
+Each lesson has its own compose file containing multiple guided prompts that progressively scaffold the student through a cohesive composition exercise.
+
+**Top-level required fields:**
+
+```json
+{
+  "contentVersion": "1.0.0",
+  "id": "compose.N5.X",
+  "lesson": "N5.X",
+  "title": "English Title",
+  "titleJp": "Japanese Title",
+  "emoji": "...",
+  "scenario": "English description of the overall writing task",
+  "grammar": {
+    "particles": ["p_wa", "p_ga", "..."],
+    "copula": ["g_desu", "g_da"],
+    "conjugations": ["polite_adj", "..."]
+  },
+  "prompts": [...]
+}
+```
 
 Each entry in `prompts[]`:
 
 ```json
 {
   "id": "kebab-case-unique-id",
-  "title": "English Title",
-  "titleJp": "Japanese Title",
-  "emoji": "...",
-  "lessons": ["N5.X"],
-  "scenario": "English description of the writing task",
-  "hint": "Japanese sentence starter or hint",
+  "prompt": "English guided prompt (e.g., 'My family... My father... My mother...')",
   "targets": [
     { "id": "GLOSSARY_ID", "count": N }
   ],
-  "helpers": ["GLOSSARY_ID", ...]
+  "helpers": ["GLOSSARY_ID", ...],
+  "example": "Model Japanese sentence (optional, N5.1–N5.6 only)"
 }
 ```
 
-Rules:
-- `lessons` array: all lesson IDs whose vocabulary the student may use. Normally one or two consecutive lessons.
-- `targets`: vocabulary the student **must** use to complete the prompt. Each `id` must exist in the glossary. `count` is how many times the word must appear (usually 1–2).
-- `helpers`: optional additional glossary IDs that the UI will surface as clickable chips. These must also exist in the glossary.
-- The `hint` must be written using only taught kanji and taught vocabulary.
+**Top-level fields:**
+- `lesson`: the single lesson ID this compose file belongs to (one file per lesson).
+- `scenario`: English description of the overall composition theme.
+- `grammar.particles`: array of particle IDs from `shared/particles.json` where `introducedIn` ≤ the current lesson. Rendered as tappable helper chips.
+- `grammar.copula`: array of copula IDs from the glossary (e.g., `g_desu`, `g_da`) available at this lesson. Rendered alongside particles.
+- `grammar.conjugations`: array of conjugation form strings from `conjugation_rules.json` where `introducedIn` ≤ the current lesson. Rendered as a collapsible reference panel.
+
+**Prompt-level fields:**
+- `prompt`: English-only guided text using ellipsis to suggest sentence starters (e.g., `"My family... My father... My mother..."`). No Japanese in prompts.
+- `targets`: vocabulary the student **must** use to complete this specific prompt. Each `id` must exist in the glossary or `particles.json`. `count` is required appearances (usually 1).
+- `helpers`: curated pool of glossary/particle IDs for this prompt, drawn from the lesson's vocab and all prior-lesson vocab. These render as clickable chips. Each prompt's pool is tailored to its thematic focus.
+- `example`: optional model sentence showing one example of the expected structure. Only included for early lessons (N5.1–N5.6). The UI should make this toggleable so students can attempt without help first.
+- Accepted conjugated forms for targets are derived automatically from `conjugation_rules.json` — no explicit `matches` array is needed.
+
+**Progressive reveal:** Prompts are displayed one at a time. The student sees only prompt 1 initially; prompt 2 unlocks after prompt 1's targets are met; and so on. This creates momentum and prevents information overload.
+
+**Progressive prompt schedule:**
+
+| Lesson Range | Prompts per File |
+|---|---|
+| N5.1–N5.3 | 2 |
+| N5.4–N5.6 | 3 |
+| N5.7–N5.9 | 4 |
+| N5.10–N5.12 | 5 |
+| N5.13–N5.18 | 6 |
+| N4.1–N4.12 | 7 |
+| N4.13–N4.24 | 8 |
+| N4.25–N4.36 | 10 |
+
+Cap at 10 prompts. For N3+ levels, increase grammar sophistication per prompt rather than adding more prompts.
+
+**Manifest format:** The `compose` field in `manifest.json` is an array of objects:
+
+```json
+"compose": [
+  { "id": "compose.N5.1", "lesson": "N5.1", "file": "data/N5/compose/compose.N5.1.json" },
+  { "id": "compose.N5.2", "lesson": "N5.2", "file": "data/N5/compose/compose.N5.2.json" }
+]
+```
+
+**Legacy format (N4, pending migration):** The N4 compose field may still use the old single-file string format (`"compose": "data/N4/compose/compose.N4.json"`) until per-lesson files are created.
 
 ---
 
@@ -832,12 +886,12 @@ Adjective gtypes: `i_adj`, `na_adj`
 |---|---|
 | Lesson | `data/N5/lessons/N5.X.json` |
 | Review | `data/N4/reviews/N4.Review.X.json` |
-| N5 Compose | `data/N5/compose/compose.N5.json` (append to `prompts[]`) |
-| N4 Compose | `data/N4/compose/compose.N4.json` (append to `prompts[]`) |
+| N5 Compose | `data/N5/compose/compose.N5.X.json` (one file per lesson) |
+| N4 Compose | `data/N4/compose/compose.N4.X.json` (one file per lesson; legacy: `compose.N4.json`) |
 | Story markdown | `data/N5/stories/[slug]/story.md` |
 | Story terms | `data/N5/stories/[slug]/terms.json` |
 
-After writing new files, `manifest.json` must be updated. Lessons get an entry under `data.N5.lessons` or `data.N4.lessons`. Stories get an entry under `data.N5.stories` or `data.N4.stories`. Reviews get an entry under `data.N4.reviews`.
+After writing new files, `manifest.json` must be updated. Lessons get an entry under `data.N5.lessons` or `data.N4.lessons`. Stories get an entry under `data.N5.stories` or `data.N4.stories`. Reviews get an entry under `data.N4.reviews`. Compose files get an entry under `data.N5.compose` or `data.N4.compose` (array format: `{ "id": "compose.N5.X", "lesson": "N5.X", "file": "..." }`).
 
 ---
 

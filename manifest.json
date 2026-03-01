@@ -265,7 +265,13 @@
         }
       ],
       "reviews": [],
-      "compose": "data/N5/compose/compose.N5.json",
+      "compose": [
+        {
+          "id": "compose.N5.1",
+          "lesson": "N5.1",
+          "file": "data/N5/compose/compose.N5.1.json"
+        }
+      ],
       "stories": [
         {
           "id": "library-book",
