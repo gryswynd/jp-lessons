@@ -37,5 +37,31 @@
   ],
   "challengePrompts": [],
   "particles": ["p_wa", "p_ga", "p_wo", "p_no", "p_ka", "p_yo", "p_ne", "p_dewa", "p_ja", "g_desu", "g_da"],
-  "conjugations": ["polite_adj"]
+  "conjugations": [
+    {
+      "pattern": "[noun] + です",
+      "meaning": "is / am / are (polite)",
+      "examples": ["せんせいです", "ともだちです"]
+    },
+    {
+      "pattern": "[noun] + ではありません",
+      "meaning": "is not (polite formal)",
+      "examples": ["せんせいではありません"]
+    },
+    {
+      "pattern": "[noun] + じゃありません",
+      "meaning": "is not (polite casual)",
+      "examples": ["ともだちじゃありません"]
+    },
+    {
+      "pattern": "[noun] + だ",
+      "meaning": "is / am / are (plain)",
+      "examples": ["せんせいだ", "ともだちだ"]
+    },
+    {
+      "pattern": "[い-adj] + です",
+      "meaning": "is adj (polite)",
+      "examples": ["やさしいです", "うれしいです", "いいです"]
+    }
+  ]
 }
