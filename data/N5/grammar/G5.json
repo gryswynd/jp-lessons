@@ -1,0 +1,505 @@
+{
+  "contentVersion": "1.0.0",
+  "id": "G5",
+  "type": "grammar",
+  "title": "Verb Types — RU-Verbs vs U-Verbs vs Irregulars",
+  "meta": {
+    "level": "N5",
+    "unlocksAfter": "N5.5",
+    "focus": "Identifying ichidan (RU-verb), godan (U-verb), and irregular verb classes to predict conjugation",
+    "estimatedMinutes": 25,
+    "particles": [],
+    "grammarForms": ["polite_masu"],
+    "icon": "⚙️"
+  },
+  "sections": [
+    {
+      "type": "grammarIntro",
+      "title": "Verb Types — RU-Verbs vs U-Verbs vs Irregulars",
+      "icon": "⚙️",
+      "summary": "Every Japanese verb belongs to one of three classes: ichidan (RU-verbs), godan (U-verbs), or irregular. Knowing a verb's class tells you exactly how to conjugate it into any form — ます, ました, ません, て-form, and all future forms.",
+      "whyItMatters": "You have already practised conjugating 行く, いる, and 来る in G5. But the same logic applies to every verb you will ever learn. Once you know the class of a verb, its conjugation is completely predictable. Getting this wrong means making systematic mistakes across every sentence you produce.",
+      "youWillLearn": [
+        "Ichidan (RU-verbs): how to recognise them and form the stem by dropping る",
+        "Godan (U-verbs): how to recognise them and form the stem by shifting to the い-row",
+        "The る-trap: why some verbs ending in る are actually godan (the vowel test)",
+        "Irregular verbs: 来る and ある, which must be memorised"
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_ichidan",
+      "pattern": [
+        { "label": "VERB", "color": "verb", "text": "いる" },
+        { "label": "DROP", "color": "modifier", "text": "→ い" },
+        { "label": "ADD", "color": "predicate", "text": "+ ます" }
+      ],
+      "meaning": "Ichidan (RU-verbs): drop る, then add the ending",
+      "explanation": "Ichidan verbs always end in る in dictionary form, AND the vowel sound immediately before る is always in the い-row (i) or え-row (e). The conjugation rule is the simplest possible: remove る, then attach the ending directly. The stem never changes.",
+      "notes": [
+        "The dictionary form always ends in る, and the preceding vowel is い/え: い-ru, き-ru (wait), み-ru (see), お-ki-ru (wake up), た-べ-ru (eat).",
+        "To form the ます stem: drop the final る. That's it.",
+        "いる → い (stem) → います / いました / いません / いませんでした.",
+        "The stem い is very short — just one sound — but it always works the same way.",
+        "Caution: not every verb ending in る is ichidan! See the る-trap in the comparison section."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "いる", "role": "verb", "gloss": "dictionary form (to be/exist)" },
+            { "text": "→ い", "role": "modifier", "gloss": "drop る → stem" },
+            { "text": "→ います", "role": "predicate", "gloss": "add ます" }
+          ],
+          "en": "to be here → is here (polite present)",
+          "breakdown": "Ichidan: い (い-row before る) → drop る → い + ます = います"
+        },
+        {
+          "parts": [
+            { "text": "友だち", "role": "topic", "gloss": "friend" },
+            { "text": "が", "role": "particle" },
+            { "text": "い", "role": "verb", "gloss": "be-" },
+            { "text": "ます", "role": "predicate" }
+          ],
+          "en": "My friend is here.",
+          "breakdown": "いる (ichidan): stem = い → います"
+        }
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_godan",
+      "pattern": [
+        { "label": "VERB", "color": "verb", "text": "行く" },
+        { "label": "SHIFT", "color": "modifier", "text": "く → き" },
+        { "label": "ADD", "color": "predicate", "text": "+ ます" }
+      ],
+      "meaning": "Godan (U-verbs): shift the final syllable to the い-row, then add the ending",
+      "explanation": "Godan verbs end in any う-row syllable in dictionary form: く, ぐ, む, ぬ, ぶ, う, つ, す — or る when the vowel before it is NOT in the い/え-row. To form the polite stem, shift that final syllable one column to the left in the hiragana chart (to the い-row): く→き, ぐ→ぎ, む→み, ぬ→に, ぶ→び, う→い, つ→ち, す→し, る→り. Then add ます.",
+      "notes": [
+        "Full い-row shift map: く→き, ぐ→ぎ, む→み, ぬ→に, ぶ→び, う→い, つ→ち, す→し, る→り.",
+        "行く → 行き (く→き shift) → 行きます / 行きました / 行きません.",
+        "分かる → 分かり (る→り shift) → 分かります. Note: 分かる looks like ichidan but is godan! (See る-trap below.)",
+        "The stem changes every time you change the form — the final syllable always shifts.",
+        "All verbs NOT ending in る are definitely godan. Verbs ending in る may be either class."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "行く", "role": "verb", "gloss": "dictionary form (to go)" },
+            { "text": "→ 行き", "role": "modifier", "gloss": "く→き (い-row shift)" },
+            { "text": "→ 行きます", "role": "predicate", "gloss": "add ます" }
+          ],
+          "en": "to go → go (polite present)",
+          "breakdown": "Godan: く is in う-row → shift to き → 行き + ます = 行きます"
+        },
+        {
+          "parts": [
+            { "text": "毎日", "role": "modifier", "gloss": "every day" },
+            { "text": "駅", "role": "topic", "gloss": "station" },
+            { "text": "に", "role": "particle" },
+            { "text": "行き", "role": "verb", "gloss": "go-" },
+            { "text": "ます", "role": "predicate" }
+          ],
+          "en": "I go to the station every day.",
+          "breakdown": "行く (godan): く→き → 行きます"
+        },
+        {
+          "parts": [
+            { "text": "分かり", "role": "verb", "gloss": "understand-" },
+            { "text": "ます", "role": "predicate" }
+          ],
+          "en": "I understand. (polite present)",
+          "breakdown": "分かる (godan る-verb): る→り → 分かります. Looks like ichidan but is NOT."
+        }
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_irregular",
+      "pattern": [
+        { "label": "IRREGULAR", "color": "predicate", "text": "来る / ある" },
+        { "label": "RESULT", "color": "modifier", "text": "→ 来ます / あります" }
+      ],
+      "meaning": "Irregular verbs: memorise these — they follow neither ichidan nor godan patterns",
+      "explanation": "Two verbs are irregular in Japanese N5: 来る (to come) and ある (to exist — for inanimate things). Their polite forms do not follow the ichidan or godan rules and must be memorised individually.",
+      "notes": [
+        "来る (to come) is fully irregular. Its polite forms: 来ます (きます) / 来ました (きました) / 来ません (きません) / 来ませんでした (きませんでした). The kanji 来 stays but the reading changes completely to き.",
+        "ある (to exist, for things) is a special irregular. Its polite present is あります. Unlike regular godan verbs, its negative is ありません (not ありません — which looks the same but is formed as an irregular, not a godan shift). The past negative is ありませんでした.",
+        "These two verbs appear constantly in Japanese — you will use them every day.",
+        "There is no other way to learn them except memorisation.",
+        "Later you will meet する (to do) which is also irregular. It is introduced in a future lesson."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "来る", "role": "verb", "gloss": "dictionary (to come)" },
+            { "text": "→ 来ます", "role": "predicate", "gloss": "reading: きます (irregular)" }
+          ],
+          "en": "to come → comes (polite present) — reading changes to き",
+          "breakdown": "Irregular 来る: cannot be predicted from the kanji reading くる → becomes きます"
+        },
+        {
+          "parts": [
+            { "text": "コンビニ", "role": "topic", "gloss": "convenience store" },
+            { "text": "に", "role": "particle" },
+            { "text": "あり", "role": "verb", "gloss": "exist-" },
+            { "text": "ます", "role": "predicate" }
+          ],
+          "en": "There is a convenience store (over there).",
+          "breakdown": "ある (irregular): あります — inanimate existence"
+        },
+        {
+          "parts": [
+            { "text": "友だち", "role": "subject", "gloss": "friend" },
+            { "text": "が", "role": "particle" },
+            { "text": "来", "role": "verb", "gloss": "come" },
+            { "text": "ました", "role": "predicate" }
+          ],
+          "en": "My friend came.",
+          "breakdown": "Irregular 来る past: 来ました (reading: きました)"
+        }
+      ]
+    },
+    {
+      "type": "grammarTable",
+      "title": "Verb Type Comparison — Identifying and Conjugating",
+      "description": "Three verb types, one rule each. Use this table to identify any verb and predict its ます form.",
+      "tableType": "conjugation",
+      "headers": ["", "Ichidan (RU-verb)", "Godan (U-verb)", "Irregular"],
+      "rows": [
+        {
+          "label": "Dictionary form",
+          "cells": ["いる", "行く", "来る"],
+          "meaning": "The form found in the dictionary"
+        },
+        {
+          "label": "Identifies as",
+          "cells": ["Ends in る; vowel before る is い (い-row) → ichidan", "Ends in く (う-row syllable) → godan", "Must memorise — neither pattern applies"],
+          "meaning": "How to classify the verb"
+        },
+        {
+          "label": "Stem formation",
+          "cells": ["Drop る → い", "Shift く→き (い-row) → 行き", "Irregular: き (complete reading change)"],
+          "meaning": "How to form the polite stem"
+        },
+        {
+          "label": "ます form",
+          "cells": ["います", "行きます", "来ます (reading: きます)"],
+          "meaning": "Polite present / future"
+        }
+      ],
+      "notes": [
+        "The る-trap: 分かる ends in る, but the vowel before る is か (あ-row, not い/え-row) → godan, not ichidan. Its stem is 分かり (る→り shift).",
+        "When a verb ends in る and you are unsure of its class, check the vowel before る: い/え-row = ichidan; any other row = godan.",
+        "ある follows a pattern similar to godan but with an irregular negative (ありません). It is best memorised as a separate entry."
+      ]
+    },
+    {
+      "type": "grammarComparison",
+      "title": "The る-Trap: いる (Ichidan) vs 分かる (Godan)",
+      "items": [
+        {
+          "label": "いる — Ichidan (RU-verb)",
+          "color": "predicate",
+          "points": [
+            "Dictionary form: いる",
+            "Vowel before る: い — this is the い-row ✓",
+            "Classification: ichidan",
+            "Stem: drop る → い",
+            "Polite form: います (not いります)"
+          ],
+          "example": {
+            "parts": [
+              { "text": "いる", "role": "verb", "gloss": "い (い-row) + る" },
+              { "text": "→ い", "role": "modifier", "gloss": "drop る" },
+              { "text": "→ います", "role": "predicate", "gloss": "ichidan ✓" }
+            ],
+            "en": "to be here → is here (ichidan)"
+          }
+        },
+        {
+          "label": "分かる — Godan (U-verb, る-trap!)",
+          "color": "verb",
+          "points": [
+            "Dictionary form: 分かる",
+            "Vowel before る: か — this is the あ-row, NOT い/え-row",
+            "Classification: GODAN despite ending in る",
+            "Stem: shift る→り → 分かり",
+            "Polite form: 分かります (NOT 分かます — that would be wrong!)"
+          ],
+          "example": {
+            "parts": [
+              { "text": "分かる", "role": "verb", "gloss": "か (あ-row) + る" },
+              { "text": "→ 分かり", "role": "modifier", "gloss": "る→り (godan shift)" },
+              { "text": "→ 分かります", "role": "predicate", "gloss": "godan ✓" }
+            ],
+            "en": "to understand → understands (godan, not ichidan!)"
+          }
+        }
+      ],
+      "tip": "When you see a verb ending in る, immediately ask: 'What is the vowel before る?' If it is い or え → ichidan (drop る). If it is any other vowel (あ, う, お) → godan (shift る to り). This test catches the る-trap every time."
+    },
+    {
+      "type": "annotatedExample",
+      "title": "Identifying Verb Types in Natural Sentences",
+      "examples": [
+        {
+          "context": "Ichidan: いる (い before る)",
+          "parts": [
+            { "text": "友だち", "role": "subject", "gloss": "friend" },
+            { "text": "が", "role": "particle" },
+            { "text": "ここ", "role": "modifier", "gloss": "here" },
+            { "text": "に", "role": "particle" },
+            { "text": "い", "role": "verb", "gloss": "be-" },
+            { "text": "ます", "role": "predicate" }
+          ],
+          "en": "My friend is here.",
+          "note": "いる: い-row before る → ichidan → drop る → い + ます = います"
+        },
+        {
+          "context": "Godan: 行く (ends in く, not る — clearly godan)",
+          "parts": [
+            { "text": "今日", "role": "modifier", "gloss": "today" },
+            { "text": "駅", "role": "topic", "gloss": "station" },
+            { "text": "に", "role": "particle" },
+            { "text": "行き", "role": "verb", "gloss": "go-" },
+            { "text": "ます", "role": "predicate" }
+          ],
+          "en": "I go to the station today.",
+          "note": "行く: ends in く (う-row) → godan → く→き → 行きます"
+        },
+        {
+          "context": "Godan る-trap: 分かる (か before る = あ-row → godan!)",
+          "parts": [
+            { "text": "分かり", "role": "verb", "gloss": "understand-" },
+            { "text": "ます", "role": "predicate" }
+          ],
+          "en": "I understand.",
+          "note": "分かる ends in る but か is あ-row → godan → る→り → 分かります"
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "かいわ 1: どのどうしですか（Which Kind of Verb Is It?）",
+      "context": "The teacher is explaining verb types to Yamakawa and Rikizo during class.",
+      "lines": [
+        {
+          "spk": "先生",
+          "jp": "「行く」は どんな どうしですか。",
+          "en": "What kind of verb is 'iku' (go)?",
+          "terms": [
+            "v_iku",
+            "p_wa",
+            "v_donna",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "「行く」は ごだんどうしです。「く」で おわりますから。",
+          "en": "'Iku' is a godan verb. Because it ends in 'ku'.",
+          "terms": [
+            "v_iku",
+            "p_wa",
+            "g_desu",
+            "p_de",
+            "p_kara"
+          ]
+        },
+        {
+          "spk": "先生",
+          "jp": "そうです。分かりましたね。では「いる」は どうですか。",
+          "en": "That's right. You understood. Then what about 'iru' (be)?",
+          "terms": [
+            "g_desu",
+            { "id": "v_wakaru", "form": "polite_mashita" },
+            "p_ne",
+            "p_dewa",
+            "v_iru",
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "「いる」は いちだんどうしです。「い」は い-れつです。",
+          "en": "'Iru' is an ichidan verb. 'I' is in the i-column.",
+          "terms": [
+            "v_iru",
+            "p_wa",
+            "g_desu"
+          ]
+        },
+        {
+          "spk": "先生",
+          "jp": "はい、そうです。では「分かる」は いちだんですか、ごだんですか。",
+          "en": "Yes, that's right. Then is 'wakaru' (understand) ichidan or godan?",
+          "terms": [
+            "p_hai",
+            "g_desu",
+            "p_dewa",
+            "v_wakaru",
+            "p_wa",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "「分かる」は ごだんです！「か」は あ-れつですから。",
+          "en": "'Wakaru' is godan! Because 'ka' is in the a-column.",
+          "terms": [
+            "v_wakaru",
+            "p_wa",
+            "g_desu",
+            "p_kara"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "かいわ 2: どうしの かたちを たしかめましょう（Let's Confirm Verb Forms）",
+      "context": "Rikizo and Yamakawa quiz each other on verb conjugation after class.",
+      "lines": [
+        {
+          "spk": "やまかわ",
+          "jp": "りきぞさん、「来る」の ますかたちは 何ですか。",
+          "en": "Rikizo-san, what is the masu form of 'kuru' (come)?",
+          "terms": [
+            "v_san",
+            "v_kuru",
+            "p_no",
+            "p_wa",
+            "v_nani",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "「来ます」です。よみかたは「きます」です。",
+          "en": "It's 'kimasu'. The reading is 'kimasu'.",
+          "terms": [
+            { "id": "v_kuru", "form": "polite_masu" },
+            "g_desu",
+            "p_wa",
+            "g_desu"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "そうです！「来る」は ふきそくどうしですね。",
+          "en": "That's right! 'Kuru' is an irregular verb, isn't it.",
+          "terms": [
+            "g_desu",
+            "v_kuru",
+            "p_wa",
+            "g_desu",
+            "p_ne"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "はい。では「ある」は どうですか。",
+          "en": "Yes. Then what about 'aru' (exist)?",
+          "terms": [
+            "p_hai",
+            "p_dewa",
+            "v_aru",
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "「ある」は「あります」ですね。コンビニに あります。",
+          "en": "'Aru' becomes 'arimasu'. There is a convenience store.",
+          "terms": [
+            "v_aru",
+            "p_wa",
+            { "id": "v_aru", "form": "polite_masu" },
+            "g_desu",
+            "p_ne",
+            "v_konbini",
+            "p_ni",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "いいですね。毎日 分かります！",
+          "en": "That's great. I understand it every day!",
+          "terms": [
+            { "id": "v_ii", "form": "polite_adj" },
+            "p_ne",
+            "v_mainichi",
+            { "id": "v_wakaru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Verb Type Challenge",
+      "instructions": "Identify verb types and choose the correct polite form.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "「いる」(to be/exist) — which verb class is this?",
+          "choices": ["Ichidan (RU-verb)", "Godan (U-verb)", "Irregular", "It depends on context"],
+          "answer": "Ichidan (RU-verb)",
+          "explanation": "いる ends in る, and the vowel before る is い — the い-row. This confirms ichidan. Stem = い (drop る) → います / いました / いません."
+        },
+        {
+          "kind": "mcq",
+          "q": "「分かる」(to understand) — which verb class is this?",
+          "choices": ["Godan (U-verb)", "Ichidan (RU-verb)", "Irregular", "Cannot be determined"],
+          "answer": "Godan (U-verb)",
+          "explanation": "分かる ends in る, but the vowel before る is か — the あ-row. This is the る-trap! あ-row before る → godan. Stem = 分かり (る→り shift) → 分かります."
+        },
+        {
+          "kind": "mcq",
+          "q": "What is the correct polite present form of「行く」?",
+          "choices": ["行きます", "行ります", "行ます", "行くです"],
+          "answer": "行きます",
+          "terms": [{ "id": "v_iku", "form": "polite_masu" }],
+          "explanation": "行く is godan (ends in く). Godan stem rule: shift く to the い-row → き. Then add ます: 行き + ます = 行きます."
+        },
+        {
+          "kind": "mcq",
+          "q": "What is the correct polite present form of「来る」?",
+          "choices": ["来ます (reading: きます)", "来ります", "来くます", "くます"],
+          "answer": "来ます (reading: きます)",
+          "terms": [{ "id": "v_kuru", "form": "polite_masu" }],
+          "explanation": "来る is an irregular verb. Its polite forms cannot be predicted — the reading changes completely from くる to き. 来ます is read as きます. Memorise this form."
+        },
+        {
+          "kind": "mcq",
+          "q": "A new verb「起きる (おきる — to wake up)」ends in る. The vowel before る is き (き is in the い-row). What class is it?",
+          "choices": ["Ichidan (RU-verb)", "Godan (U-verb)", "Irregular", "It looks like godan because of き"],
+          "answer": "Ichidan (RU-verb)",
+          "explanation": "Apply the vowel test: the vowel before る is き — and き is in the い-row. い/え-row before る → ichidan. Stem = おき (drop る) → おきます."
+        },
+        {
+          "kind": "mcq",
+          "q": "Which statement about verb classes is TRUE?",
+          "choices": [
+            "All verbs ending in る are ichidan (RU-verbs)",
+            "Verbs ending in る are ichidan ONLY IF the vowel before る is in the い/え-row",
+            "Godan verbs always end in く",
+            "Irregular verbs follow the godan stem rule with a special reading"
+          ],
+          "answer": "Verbs ending in る are ichidan ONLY IF the vowel before る is in the い/え-row",
+          "explanation": "The る-trap: some verbs ending in る are actually godan. The vowel test: if the sound before る is in the い/え-row → ichidan. If it is any other row (あ, う, お) → godan. Example: 分かる (か = あ-row) is godan, NOT ichidan."
+        }
+      ]
+    }
+  ]
+}
