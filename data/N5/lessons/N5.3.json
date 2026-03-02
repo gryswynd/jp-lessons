@@ -687,6 +687,31 @@
             "g_desu",
             "p_ne"
           ]
+        },
+        {
+          "spk": "A",
+          "jp": "これは お金ですか。",
+          "en": "Is this money?",
+          "terms": [
+            "v_kore",
+            "p_wa",
+            "v_okane",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "そうです。それも あれも お金です。",
+          "en": "That's right. That and that over there are also money.",
+          "terms": [
+            "p_soudesu",
+            "v_sore",
+            "p_mo",
+            "v_are",
+            "v_okane",
+            "g_desu"
+          ]
         }
       ]
     },
@@ -1334,6 +1359,44 @@
               "form": "polite_masu"
             }
           ]
+        },
+        {
+          "kind": "mcq",
+          "q": "_______ は いくらですか。",
+          "choices": [
+            "これ",
+            "だれ",
+            "なに",
+            "どんな"
+          ],
+          "answer": "これ",
+          "terms": [
+            "v_kore",
+            "p_wa",
+            "v_ikura",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "_______ が いいですか。",
+          "choices": [
+            "どれ",
+            "だれ",
+            "なに",
+            "いくら"
+          ],
+          "answer": "どれ",
+          "terms": [
+            "v_dore",
+            "p_ga",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
+            "p_ka"
+          ]
         }
       ]
     },
@@ -1473,6 +1536,47 @@
               "id": "v_iru",
               "form": "polite_masu"
             }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "あれ _______ いいですか。",
+          "choices": [
+            "が",
+            "は",
+            "を",
+            "も"
+          ],
+          "answer": "が",
+          "terms": [
+            "v_are",
+            "p_ga",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "テレビ _______ いくつ ありますか。",
+          "choices": [
+            "は",
+            "が",
+            "を",
+            "に"
+          ],
+          "answer": "は",
+          "terms": [
+            "v_terebi",
+            "p_wa",
+            "v_ikutsu",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
           ]
         }
       ]
