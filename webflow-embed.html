@@ -74,6 +74,12 @@ window.JPApp = {
       '.jp-menu-btn:active{transform:scale(0.98);}' +
       '.jp-menu-title{font-size:1.2rem;font-weight:900;color:#4e54c8;margin-bottom:5px;}' +
       '.jp-menu-desc{color:#747d8c;font-size:0.9rem;}' +
+      '.jp-game-wrap{position:relative;}' +
+      '.jp-construction-sticker{position:absolute;top:14px;right:14px;' +
+      'background:linear-gradient(135deg,#FF9800,#F44336);color:white;' +
+      'font-size:0.65rem;font-weight:700;padding:4px 10px;border-radius:20px;' +
+      'transform:rotate(8deg);box-shadow:0 2px 8px rgba(0,0,0,0.25);' +
+      'letter-spacing:0.3px;white-space:nowrap;pointer-events:none;}' +
       '</style>';
     var html = style +
       '<div class="jp-main-menu">' +
@@ -101,6 +107,13 @@ window.JPApp = {
         '<div class="jp-menu-btn" onclick="JPApp.launch(\'review\')" style="border-top:3px solid #7C3AED;">' +
           '<div class="jp-menu-title" style="color:#7C3AED;">\uD83D\uDCDD Review</div>' +
           '<div class="jp-menu-desc">Assessment &amp; Drills</div>' +
+        '</div>' +
+        '<div class="jp-game-wrap">' +
+          '<div class="jp-menu-btn" onclick="JPApp.launch(\'game\')" style="border-top:3px solid #F48FB1;">' +
+            '<div class="jp-menu-title" style="color:#C2185B;">\uD83C\uDFAE Game World</div>' +
+            '<div class="jp-menu-desc">Explore interactive Japanese adventures</div>' +
+          '</div>' +
+          '<div class="jp-construction-sticker">\uD83D\uDEA7 Under Construction</div>' +
         '</div>' +
       '</div>';
     this.container.innerHTML = html;
@@ -174,6 +187,13 @@ window.JPApp = {
         if (!ok) return;
       }
       if (window.GrammarModule) window.GrammarModule.start(this.container, this.config, onExit);
+
+    } else if (mode === 'game') {
+      if (!window.GameModule) {
+        var ok = await this.loadModule('Game.js');
+        if (!ok) return;
+      }
+      if (window.GameModule) window.GameModule.start(this.container, this.config, onExit);
     }
   }
 };
