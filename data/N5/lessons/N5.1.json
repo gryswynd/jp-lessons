@@ -33,9 +33,9 @@
           "terms": ["v_anata", "p_no", "v_namae", "p_wa", "v_nani", "g_desu", "p_ka"]
         },
         {
-          "jp": "あなたの かぞくは なん人ですか。",
-          "en": "How many people are in your family?",
-          "terms": ["v_anata", "p_no", "v_kazoku", "p_wa", "v_nani", "k_hito", "g_desu", "p_ka"]
+          "jp": "あなたは どんな 人ですか。",
+          "en": "What kind of person are you?",
+          "terms": ["v_anata", "p_wa", "v_donna", "k_hito", "g_desu", "p_ka"]
         },
         {
           "jp": "先生の 名まえは なんですか。",
@@ -86,7 +86,7 @@
         },
         {
           "label": "Greetings",
-          "items": ["p_hajimemashite", "p_yoroshiku", "p_ohayou", "p_youkoso", "p_soudesuka"]
+          "items": ["p_hajimemashite", "p_yoroshiku", "p_ohayou", "p_ohayou_casual", "p_konnichiwa", "p_konbanwa", "p_oyasuminasai", "p_sumimasen", "p_youkoso", "p_soudesuka"]
         },
         {
           "label": "Pronouns & Honorifics",
@@ -113,8 +113,12 @@
           "items": ["v_pasokon", "v_beddo", "v_terebi", "v_toire"]
         },
         {
+          "label": "Core Verbs",
+          "items": ["v_suru", "v_iru", "v_aru"]
+        },
+        {
           "label": "Grammar (Copula)",
-          "items": ["g_desu", "g_da", "v_aru"]
+          "items": ["g_desu", "g_da"]
         },
         {
           "label": "Particles",
@@ -147,15 +151,15 @@
         },
         {
           "spk": "B",
-          "jp": "いいえ、先生では ありません。がくせいです。",
-          "en": "No, I'm not a teacher. I'm a student.",
-          "terms": ["v_iie", "v_sensei", "p_dewa", { "id": "v_aru", "form": "polite_negative" }, "v_gakusei", "g_desu"]
+          "jp": "いいえ、先生では ありません。",
+          "en": "No, I'm not a teacher.",
+          "terms": ["v_iie", "v_sensei", "p_dewa", { "id": "v_aru", "form": "polite_negative" }]
         },
         {
           "spk": "A",
-          "jp": "そうですか。わたしも がくせいです。",
-          "en": "I see. I'm also a student.",
-          "terms": ["p_soudesuka", "v_watashi", "p_mo", "v_gakusei", "g_desu"]
+          "jp": "そうですか。やまかわさんは とても やさしいですね。",
+          "en": "I see. Yamakawa-san, you seem very kind.",
+          "terms": ["p_soudesuka", "v_san", "p_wa", "v_totemo", { "id": "v_yasashii", "form": "polite_adj" }, "p_ne"]
         }
       ]
     },
@@ -233,9 +237,9 @@
         },
         {
           "spk": "A",
-          "jp": "いいですね。わたしも あいたいです。",
-          "en": "That's nice. I'd like to meet her too.",
-          "terms": ["v_ii", "g_desu", "p_ne", "v_watashi", "p_mo", { "id": "v_au", "form": "desire_tai" }]
+          "jp": "いいですね。やさしい 友だちですね。",
+          "en": "That's nice. She sounds like a kind friend.",
+          "terms": ["v_ii", "g_desu", "p_ne", "v_yasashii", "v_tomodachi"]
         },
         {
           "spk": "B",
@@ -252,9 +256,9 @@
       "lines": [
         {
           "spk": "A",
-          "jp": "みなさん、おはようございます。きょうは あたらしい 人が います。",
-          "en": "Good morning, everyone. Today there is a new person.",
-          "terms": ["v_minasan", "p_ohayou", "v_kyou", "p_wa", "v_atarashii", "k_hito", "p_ga", { "id": "v_iru", "form": "polite_masu" }]
+          "jp": "みなさん、おはようございます。",
+          "en": "Good morning, everyone.",
+          "terms": ["v_minasan", "p_ohayou"]
         },
         {
           "spk": "B",
@@ -264,21 +268,21 @@
         },
         {
           "spk": "A",
-          "jp": "名まえを いって ください。",
-          "en": "Please say your name.",
-          "terms": ["v_namae", "p_wo", { "id": "v_iu", "form": "te_form" }, "v_kudasai"]
+          "jp": "名まえは なんですか。",
+          "en": "What is your name?",
+          "terms": ["v_namae", "p_wa", "v_nani", "g_desu", "p_ka"]
         },
         {
           "spk": "C",
-          "jp": "はじめまして。わたしは りきぞです。にほんで 生まれました。よろしく おねがいします。",
-          "en": "Nice to meet you. I'm Rikizo. I was born in Japan. Pleased to meet you.",
-          "terms": ["p_hajimemashite", "v_watashi", "p_wa", "g_desu", "v_nihon", "p_de", { "id": "v_umareru", "form": "polite_mashita" }, "p_yoroshiku"]
+          "jp": "はじめまして。わたしは りきぞです。よろしく おねがいします。",
+          "en": "Nice to meet you. I'm Rikizo. Pleased to meet you.",
+          "terms": ["p_hajimemashite", "v_watashi", "p_wa", "g_desu", "p_yoroshiku"]
         },
         {
           "spk": "A",
-          "jp": "りきぞさん、ようこそ。友だちに たくさん 会って くださいね。",
-          "en": "Rikizo-san, welcome. Please meet lots of friends.",
-          "terms": ["v_san", "p_youkoso", "v_tomodachi", "p_ni", "v_takusan", { "id": "v_au", "form": "te_form" }, "v_kudasai", "p_ne"]
+          "jp": "りきぞさん、ようこそ。とても いい 名まえですね。",
+          "en": "Rikizo-san, welcome. That's a very nice name.",
+          "terms": ["v_san", "p_youkoso", "v_totemo", "v_ii", "v_namae", "g_desu", "p_ne"]
         }
       ]
     },
@@ -345,9 +349,9 @@
       "title": "よむ れんしゅう 2: やまもと先生（Yamamoto-sensei）",
       "passage": [
         {
-          "jp": "先生が きました。名まえは やまもとさんです。",
-          "en": "A teacher came. Her name is Yamamoto-san.",
-          "terms": ["v_sensei", "p_ga", { "id": "v_kuru", "form": "polite_mashita" }, "v_namae", "p_wa", "v_san", "g_desu"]
+          "jp": "先生が います。名まえは やまもとさんです。",
+          "en": "There is a teacher. Her name is Yamamoto-san.",
+          "terms": ["v_sensei", "p_ga", { "id": "v_iru", "form": "polite_masu" }, "v_namae", "p_wa", "v_san", "g_desu"]
         },
         {
           "jp": "やまもと先生は 女の人です。",
@@ -355,9 +359,9 @@
           "terms": ["v_sensei", "p_wa", "k_onna", "p_no", "k_hito", "g_desu"]
         },
         {
-          "jp": "やまもと先生は にほんで 生まれました。",
-          "en": "Yamamoto-sensei was born in Japan.",
-          "terms": ["v_sensei", "p_wa", "v_nihon", "p_de", { "id": "v_umareru", "form": "polite_mashita" }]
+          "jp": "やまもと先生は 生まれました。",
+          "en": "Yamamoto-sensei was born.",
+          "terms": ["v_sensei", "p_wa", { "id": "v_umareru", "form": "polite_mashita" }]
         },
         {
           "jp": "先生は とても やさしい 人です。",
@@ -476,17 +480,17 @@
         },
         {
           "kind": "mcq",
-          "q": "わたしの 男の _______ は がくせいです。",
+          "q": "わたしの 男の _______ は やさしいです。",
           "choices": ["子", "人", "先"],
           "answer": "子",
-          "terms": ["v_watashi", "p_no", "k_otoko", "p_wa", "v_gakusei", "g_desu", "k_ko"]
+          "terms": ["v_watashi", "p_no", "k_otoko", "p_wa", { "id": "v_yasashii", "form": "polite_adj" }, "k_ko"]
         },
         {
           "kind": "mcq",
-          "q": "やまもとさんは にほんごの _______ です。",
+          "q": "やまもとさんは とても やさしい _______ です。",
           "choices": ["先生", "友だち", "名まえ"],
           "answer": "先生",
-          "terms": ["v_san", "p_wa", "v_nihongo", "p_no", "g_desu", "v_sensei"]
+          "terms": ["v_san", "p_wa", "v_totemo", "v_yasashii", "g_desu", "v_sensei"]
         }
       ]
     },
