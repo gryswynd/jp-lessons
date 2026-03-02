@@ -94,7 +94,7 @@
         },
         {
           "label": "Question Words",
-          "items": ["v_nani", "v_doko", "v_dou", "v_donna", "v_ano"]
+          "items": ["v_nani", "v_dou", "v_donna"]
         },
         {
           "label": "Adjectives",
@@ -387,9 +387,9 @@
           "terms": ["v_sensei", "p_wa", "k_otoko", "p_no", "k_hito", "g_desu", "p_ka", "k_onna"]
         },
         {
-          "q": "先生は どこで 生まれましたか。",
-          "a": "日本で 生まれました。",
-          "terms": ["v_sensei", "p_wa", "v_doko", "p_de", { "id": "v_umareru", "form": "polite_mashita" }, "p_ka", "v_nihon"]
+          "q": "みなさんは うれしいですか。",
+          "a": "はい、うれしいです。",
+          "terms": ["v_minasan", "p_wa", { "id": "v_ureshii", "form": "polite_adj" }, "p_ka", "p_hai", "g_desu"]
         },
         {
           "q": "先生は どんな 人ですか。",
