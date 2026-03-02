@@ -75,6 +75,11 @@
       "examples": ["います", "いました", "いません", "いませんでした"]
     },
     {
+      "pattern": "[て-form] verb + て — connect sequential actions",
+      "meaning": "AてB = 'did A, then B' — tense set by final verb",
+      "examples": ["行って (godan く→って — EXCEPTION, not 行いて)", "来て (きて — irregular)", "分かって (godan る→って)", "いて (ichidan: drop る + て)"]
+    },
+    {
       "pattern": "[noun] + です",
       "meaning": "is / am / are (polite)",
       "examples": ["駅です", "スーパーです"]

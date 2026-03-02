@@ -2,50 +2,96 @@
   "contentVersion": "1.0.0",
   "id": "G5",
   "type": "grammar",
-  "title": "Polite Verb Forms — ます形",
+  "title": "Verb Types — RU-Verbs vs U-Verbs vs Irregulars",
   "meta": {
     "level": "N5",
     "unlocksAfter": "N5.5",
-    "focus": "Conjugating verbs in polite present, past, negative, and past negative forms",
+    "focus": "Identifying ichidan (RU-verb), godan (U-verb), and irregular verb classes to predict conjugation",
     "estimatedMinutes": 25,
-    "particles": ["p_ni", "p_de", "p_e"],
-    "grammarForms": ["polite_masu", "polite_mashita", "polite_negative", "polite_past_negative"],
-    "icon": "🔤"
+    "particles": [],
+    "grammarForms": ["polite_masu"],
+    "icon": "⚙️"
   },
   "sections": [
     {
       "type": "grammarIntro",
-      "title": "Talking About Actions Politely",
-      "icon": "🔤",
-      "summary": "Japanese verbs change their endings to show tense, politeness, and whether the action happened or not. The ます form is the standard polite ending — the form you use in most everyday conversations.",
-      "whyItMatters": "Up to now you have used です and adjective sentences. Once you can conjugate verbs, you can describe actions — going somewhere, coming to a place, doing things. This opens up the vast majority of everyday Japanese conversation.",
+      "title": "Verb Types — RU-Verbs vs U-Verbs vs Irregulars",
+      "icon": "⚙️",
+      "summary": "Every Japanese verb belongs to one of three classes: ichidan (RU-verbs), godan (U-verbs), or irregular. Knowing a verb's class tells you exactly how to conjugate it into any form — ます, ました, ません, て-form, and all future forms.",
+      "whyItMatters": "You have already practised conjugating 行く, いる, and 来る in G5. But the same logic applies to every verb you will ever learn. Once you know the class of a verb, its conjugation is completely predictable. Getting this wrong means making systematic mistakes across every sentence you produce.",
       "youWillLearn": [
-        "The polite present / future form: ～ます (I go / I will go)",
-        "The polite past form: ～ました (I went)",
-        "The polite negative form: ～ません (I don't go / I won't go)",
-        "The polite past negative form: ～ませんでした (I didn't go)",
-        "How godan (U-verbs) and ichidan (RU-verbs) form the ます stem differently",
-        "How the irregular verbs 来る and ある conjugate"
+        "Ichidan (RU-verbs): how to recognise them and form the stem by dropping る",
+        "Godan (U-verbs): how to recognise them and form the stem by shifting to the い-row",
+        "The る-trap: why some verbs ending in る are actually godan (the vowel test)",
+        "Irregular verbs: 来る and ある, which must be memorised"
       ]
     },
     {
       "type": "grammarRule",
-      "id": "rule_masu_present",
+      "id": "rule_ichidan",
       "pattern": [
-        { "label": "VERB STEM", "color": "verb", "text": "行き" },
-        { "label": "ENDING", "color": "predicate", "text": "ます" }
+        { "label": "VERB", "color": "verb", "text": "いる" },
+        { "label": "DROP", "color": "modifier", "text": "→ い" },
+        { "label": "ADD", "color": "predicate", "text": "+ ます" }
       ],
-      "meaning": "～ます — polite present / future affirmative",
-      "explanation": "ます attaches to the verb stem to create the polite present or future affirmative. For godan (U-type) verbs, shift the final syllable from the う-row to the い-row, then add ます. For ichidan (RU-type) verbs, drop the final る and add ます.",
+      "meaning": "Ichidan (RU-verbs): drop る, then add the ending",
+      "explanation": "Ichidan verbs always end in る in dictionary form, AND the vowel sound immediately before る is always in the い-row (i) or え-row (e). The conjugation rule is the simplest possible: remove る, then attach the ending directly. The stem never changes.",
       "notes": [
-        "ます is always polite — safe in any non-casual setting.",
-        "This form covers both present habitual actions (I go every day) and future intentions (I will go next week).",
-        "Godan verb rule: 行く → 行き + ます = 行きます (く→き shift).",
-        "Ichidan verb rule: いる → い + ます = います (drop る, add ます).",
-        "Irregular 来る → 来ます (reading: きます). The kanji stays but the reading changes completely.",
-        "Irregular ある → あります (special irregular form)."
+        "The dictionary form always ends in る, and the preceding vowel is い/え: い-ru, き-ru (wait), み-ru (see), お-ki-ru (wake up), た-べ-ru (eat).",
+        "To form the ます stem: drop the final る. That's it.",
+        "いる → い (stem) → います / いました / いません / いませんでした.",
+        "The stem い is very short — just one sound — but it always works the same way.",
+        "Caution: not every verb ending in る is ichidan! See the る-trap in the comparison section."
       ],
       "examples": [
+        {
+          "parts": [
+            { "text": "いる", "role": "verb", "gloss": "dictionary form (to be/exist)" },
+            { "text": "→ い", "role": "modifier", "gloss": "drop る → stem" },
+            { "text": "→ います", "role": "predicate", "gloss": "add ます" }
+          ],
+          "en": "to be here → is here (polite present)",
+          "breakdown": "Ichidan: い (い-row before る) → drop る → い + ます = います"
+        },
+        {
+          "parts": [
+            { "text": "友だち", "role": "topic", "gloss": "friend" },
+            { "text": "が", "role": "particle" },
+            { "text": "い", "role": "verb", "gloss": "be-" },
+            { "text": "ます", "role": "predicate" }
+          ],
+          "en": "My friend is here.",
+          "breakdown": "いる (ichidan): stem = い → います"
+        }
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_godan",
+      "pattern": [
+        { "label": "VERB", "color": "verb", "text": "行く" },
+        { "label": "SHIFT", "color": "modifier", "text": "く → き" },
+        { "label": "ADD", "color": "predicate", "text": "+ ます" }
+      ],
+      "meaning": "Godan (U-verbs): shift the final syllable to the い-row, then add the ending",
+      "explanation": "Godan verbs end in any う-row syllable in dictionary form: く, ぐ, む, ぬ, ぶ, う, つ, す — or る when the vowel before it is NOT in the い/え-row. To form the polite stem, shift that final syllable one column to the left in the hiragana chart (to the い-row): く→き, ぐ→ぎ, む→み, ぬ→に, ぶ→び, う→い, つ→ち, す→し, る→り. Then add ます.",
+      "notes": [
+        "Full い-row shift map: く→き, ぐ→ぎ, む→み, ぬ→に, ぶ→び, う→い, つ→ち, す→し, る→り.",
+        "行く → 行き (く→き shift) → 行きます / 行きました / 行きません.",
+        "分かる → 分かり (る→り shift) → 分かります. Note: 分かる looks like ichidan but is godan! (See る-trap below.)",
+        "The stem changes every time you change the form — the final syllable always shifts.",
+        "All verbs NOT ending in る are definitely godan. Verbs ending in る may be either class."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "行く", "role": "verb", "gloss": "dictionary form (to go)" },
+            { "text": "→ 行き", "role": "modifier", "gloss": "く→き (い-row shift)" },
+            { "text": "→ 行きます", "role": "predicate", "gloss": "add ます" }
+          ],
+          "en": "to go → go (polite present)",
+          "breakdown": "Godan: く is in う-row → shift to き → 行き + ます = 行きます"
+        },
         {
           "parts": [
             { "text": "毎日", "role": "modifier", "gloss": "every day" },
@@ -55,611 +101,403 @@
             { "text": "ます", "role": "predicate" }
           ],
           "en": "I go to the station every day.",
-          "breakdown": "Godan verb 行く: く→き + ます = 行きます"
+          "breakdown": "行く (godan): く→き → 行きます"
         },
         {
           "parts": [
-            { "text": "バス", "role": "topic", "gloss": "bus" },
-            { "text": "で", "role": "particle" },
-            { "text": "来", "role": "verb", "gloss": "come" },
+            { "text": "分かり", "role": "verb", "gloss": "understand-" },
             { "text": "ます", "role": "predicate" }
           ],
-          "en": "I come by bus.",
-          "breakdown": "Irregular 来る → 来ます (reading: きます)"
-        },
-        {
-          "parts": [
-            { "text": "友だち", "role": "topic", "gloss": "friend" },
-            { "text": "が", "role": "particle" },
-            { "text": "い", "role": "verb", "gloss": "be" },
-            { "text": "ます", "role": "predicate" }
-          ],
-          "en": "My friend is here.",
-          "breakdown": "Ichidan verb いる: drop る + ます = います"
+          "en": "I understand. (polite present)",
+          "breakdown": "分かる (godan る-verb): る→り → 分かります. Looks like ichidan but is NOT."
         }
       ]
     },
     {
       "type": "grammarRule",
-      "id": "rule_masu_past",
+      "id": "rule_irregular",
       "pattern": [
-        { "label": "VERB STEM", "color": "verb", "text": "行き" },
-        { "label": "ENDING", "color": "predicate", "text": "ました" }
+        { "label": "IRREGULAR", "color": "predicate", "text": "来る / ある" },
+        { "label": "RESULT", "color": "modifier", "text": "→ 来ます / あります" }
       ],
-      "meaning": "～ました — polite past affirmative",
-      "explanation": "Replace ます with ました to express a completed action in the polite past. The stem formation is identical to the ます form — only the ending changes.",
+      "meaning": "Irregular verbs: memorise these — they follow neither ichidan nor godan patterns",
+      "explanation": "Two verbs are irregular in Japanese N5: 来る (to come) and ある (to exist — for inanimate things). Their polite forms do not follow the ichidan or godan rules and must be memorised individually.",
       "notes": [
-        "ました is the polite past — use it for completed actions: I went, I came, I ate.",
-        "The stem does not change: 行きます → 行きました (just swap ます for ました).",
-        "Irregular 来る → 来ました (reading: きました).",
-        "Add か to ask a yes/no question: 行きましたか — Did you go?"
+        "来る (to come) is fully irregular. Its polite forms: 来ます (きます) / 来ました (きました) / 来ません (きません) / 来ませんでした (きませんでした). The kanji 来 stays but the reading changes completely to き.",
+        "ある (to exist, for things) is a special irregular. Its polite present is あります. Unlike regular godan verbs, its negative is ありません (not ありません — which looks the same but is formed as an irregular, not a godan shift). The past negative is ありませんでした.",
+        "These two verbs appear constantly in Japanese — you will use them every day.",
+        "There is no other way to learn them except memorisation.",
+        "Later you will meet する (to do) which is also irregular. It is introduced in a future lesson."
       ],
       "examples": [
         {
           "parts": [
-            { "text": "きのう", "role": "modifier", "gloss": "yesterday" },
-            { "text": "店", "role": "topic", "gloss": "store" },
-            { "text": "へ", "role": "particle" },
-            { "text": "行き", "role": "verb", "gloss": "go-" },
-            { "text": "ました", "role": "predicate" }
+            { "text": "来る", "role": "verb", "gloss": "dictionary (to come)" },
+            { "text": "→ 来ます", "role": "predicate", "gloss": "reading: きます (irregular)" }
           ],
-          "en": "I went to the store yesterday.",
-          "breakdown": "行きます → 行きました: swap ます for ました"
+          "en": "to come → comes (polite present) — reading changes to き",
+          "breakdown": "Irregular 来る: cannot be predicted from the kanji reading くる → becomes きます"
         },
         {
           "parts": [
-            { "text": "先週", "role": "modifier", "gloss": "last week" },
-            { "text": "バス", "role": "topic", "gloss": "bus" },
-            { "text": "で", "role": "particle" },
-            { "text": "来", "role": "verb", "gloss": "come" },
-            { "text": "ました", "role": "predicate" }
-          ],
-          "en": "Last week I came by bus.",
-          "breakdown": "来ます → 来ました (reading: きました)"
-        }
-      ]
-    },
-    {
-      "type": "grammarRule",
-      "id": "rule_masu_negative",
-      "pattern": [
-        { "label": "VERB STEM", "color": "verb", "text": "行き" },
-        { "label": "ENDING", "color": "predicate", "text": "ません" }
-      ],
-      "meaning": "～ません — polite present / future negative",
-      "explanation": "Replace ます with ません to express that the action does not happen or will not happen. The stem is the same as the ます form.",
-      "notes": [
-        "ません is the polite negative: I don't go / I won't go.",
-        "The stem does not change: 行きます → 行きません.",
-        "Irregular 来る → 来ません (reading: きません).",
-        "ません is polite and appropriate in most situations. (The casual negative ～ない is taught later.)"
-      ],
-      "examples": [
-        {
-          "parts": [
-            { "text": "今日", "role": "modifier", "gloss": "today" },
-            { "text": "駅", "role": "topic", "gloss": "station" },
+            { "text": "コンビニ", "role": "topic", "gloss": "convenience store" },
             { "text": "に", "role": "particle" },
-            { "text": "行き", "role": "verb", "gloss": "go-" },
-            { "text": "ません", "role": "predicate" }
+            { "text": "あり", "role": "verb", "gloss": "exist-" },
+            { "text": "ます", "role": "predicate" }
           ],
-          "en": "I am not going to the station today.",
-          "breakdown": "行きます → 行きません: swap ます for ません"
+          "en": "There is a convenience store (over there).",
+          "breakdown": "ある (irregular): あります — inanimate existence"
         },
         {
           "parts": [
-            { "text": "タクシー", "role": "topic", "gloss": "taxi" },
-            { "text": "で", "role": "particle" },
-            { "text": "来", "role": "verb", "gloss": "come" },
-            { "text": "ません", "role": "predicate" }
-          ],
-          "en": "I don't come by taxi.",
-          "breakdown": "来ます → 来ません (reading: きません)"
-        }
-      ]
-    },
-    {
-      "type": "grammarRule",
-      "id": "rule_masu_past_negative",
-      "pattern": [
-        { "label": "VERB STEM", "color": "verb", "text": "行き" },
-        { "label": "ENDING", "color": "predicate", "text": "ませんでした" }
-      ],
-      "meaning": "～ませんでした — polite past negative",
-      "explanation": "Add でした after ません to express that the action did not happen in the past. This is simply the past tense of the negative.",
-      "notes": [
-        "ませんでした = ません (negative) + でした (past copula).",
-        "Use it for actions that did NOT happen: I didn't go, I didn't come.",
-        "Irregular 来る → 来ませんでした (reading: きませんでした).",
-        "This is the longest standard verb ending — say it smoothly as one unit: ま-せ-ん-で-し-た."
-      ],
-      "examples": [
-        {
-          "parts": [
-            { "text": "先週", "role": "modifier", "gloss": "last week" },
-            { "text": "スーパー", "role": "topic", "gloss": "supermarket" },
-            { "text": "へ", "role": "particle" },
-            { "text": "行き", "role": "verb", "gloss": "go-" },
-            { "text": "ませんでした", "role": "predicate" }
-          ],
-          "en": "Last week I didn't go to the supermarket.",
-          "breakdown": "行きません + でした → 行きませんでした"
-        },
-        {
-          "parts": [
-            { "text": "友だち", "role": "topic", "gloss": "friend" },
+            { "text": "友だち", "role": "subject", "gloss": "friend" },
             { "text": "が", "role": "particle" },
-            { "text": "い", "role": "verb", "gloss": "be" },
-            { "text": "ませんでした", "role": "predicate" }
+            { "text": "来", "role": "verb", "gloss": "come" },
+            { "text": "ました", "role": "predicate" }
           ],
-          "en": "My friend was not here.",
-          "breakdown": "います → いません + でした → いませんでした"
+          "en": "My friend came.",
+          "breakdown": "Irregular 来る past: 来ました (reading: きました)"
         }
       ]
     },
     {
       "type": "grammarTable",
-      "title": "All Polite Verb Forms",
-      "description": "The four polite verb forms follow a single stem. Master the stem formation once and the endings are always the same. Note how the stem never changes — only the ending swaps.",
+      "title": "Verb Type Comparison — Identifying and Conjugating",
+      "description": "Three verb types, one rule each. Use this table to identify any verb and predict its ます form.",
       "tableType": "conjugation",
-      "headers": ["Form", "Godan: 行く (go)", "Ichidan: いる (be)", "Irregular: 来る (come)"],
+      "headers": ["", "Ichidan (RU-verb)", "Godan (U-verb)", "Irregular"],
       "rows": [
         {
-          "label": "Present / Future",
-          "cells": ["行きます", "います", "来ます (きます)"],
-          "meaning": "go / will go"
+          "label": "Dictionary form",
+          "cells": ["いる", "行く", "来る"],
+          "meaning": "The form found in the dictionary"
         },
         {
-          "label": "Past",
-          "cells": ["行きました", "いました", "来ました (きました)"],
-          "meaning": "went / was here"
+          "label": "Identifies as",
+          "cells": ["Ends in る; vowel before る is い (い-row) → ichidan", "Ends in く (う-row syllable) → godan", "Must memorise — neither pattern applies"],
+          "meaning": "How to classify the verb"
         },
         {
-          "label": "Negative",
-          "cells": ["行きません", "いません", "来ません (きません)"],
-          "meaning": "don't go / not here"
+          "label": "Stem formation",
+          "cells": ["Drop る → い", "Shift く→き (い-row) → 行き", "Irregular: き (complete reading change)"],
+          "meaning": "How to form the polite stem"
         },
         {
-          "label": "Past Negative",
-          "cells": ["行きませんでした", "いませんでした", "来ませんでした (きませんでした)"],
-          "meaning": "didn't go / wasn't here"
+          "label": "ます form",
+          "cells": ["います", "行きます", "来ます (reading: きます)"],
+          "meaning": "Polite present / future"
         }
       ],
       "notes": [
-        "The stem for godan verbs: shift the final syllable to the い-row (く→き, ぬ→に, う→い, etc.).",
-        "The stem for ichidan verbs: simply drop the final る.",
-        "来る is fully irregular — the kanji 来 stays but the reading switches to き in all polite forms.",
-        "The endings ます / ました / ません / ませんでした are identical for every verb. Only the stem differs."
+        "The る-trap: 分かる ends in る, but the vowel before る is か (あ-row, not い/え-row) → godan, not ichidan. Its stem is 分かり (る→り shift).",
+        "When a verb ends in る and you are unsure of its class, check the vowel before る: い/え-row = ichidan; any other row = godan.",
+        "ある follows a pattern similar to godan but with an irregular negative (ありません). It is best memorised as a separate entry."
       ]
     },
     {
       "type": "grammarComparison",
-      "title": "Godan Verbs vs Ichidan Verbs — Stem Formation",
+      "title": "The る-Trap: いる (Ichidan) vs 分かる (Godan)",
       "items": [
         {
-          "label": "Godan (U-verbs): shift to い-row",
-          "color": "verb",
+          "label": "いる — Ichidan (RU-verb)",
+          "color": "predicate",
           "points": [
-            "The dictionary form ends in any う-row sound: く, ぐ, ぬ, ぶ, む, う, つ, る, す",
-            "To form the stem, change that final syllable to the corresponding い-row sound: く→き, む→み, る→り, etc.",
-            "Then add ます / ました / ません / ませんでした",
-            "Example: 行く → 行き (stem) → 行きます"
+            "Dictionary form: いる",
+            "Vowel before る: い — this is the い-row ✓",
+            "Classification: ichidan",
+            "Stem: drop る → い",
+            "Polite form: います (not いります)"
           ],
           "example": {
             "parts": [
-              { "text": "行く", "role": "verb", "gloss": "dictionary form" },
-              { "text": "→", "role": "modifier" },
-              { "text": "行き", "role": "verb", "gloss": "stem (く→き)" },
-              { "text": "ます", "role": "predicate" }
+              { "text": "いる", "role": "verb", "gloss": "い (い-row) + る" },
+              { "text": "→ い", "role": "modifier", "gloss": "drop る" },
+              { "text": "→ います", "role": "predicate", "gloss": "ichidan ✓" }
             ],
-            "en": "go → goes / will go (polite)"
+            "en": "to be here → is here (ichidan)"
           }
         },
         {
-          "label": "Ichidan (RU-verbs): drop る",
-          "color": "predicate",
+          "label": "分かる — Godan (U-verb, る-trap!)",
+          "color": "verb",
           "points": [
-            "The dictionary form always ends in る, and the syllable before る is always in the い-row or え-row",
-            "To form the stem, simply remove the final る",
-            "Then add ます / ました / ません / ませんでした",
-            "Example: いる → い (stem) → います",
-            "Caution: some verbs ending in る are actually godan (e.g. 分かる → 分かり). Check the verb class."
+            "Dictionary form: 分かる",
+            "Vowel before る: か — this is the あ-row, NOT い/え-row",
+            "Classification: GODAN despite ending in る",
+            "Stem: shift る→り → 分かり",
+            "Polite form: 分かります (NOT 分かます — that would be wrong!)"
           ],
           "example": {
             "parts": [
-              { "text": "いる", "role": "verb", "gloss": "dictionary form" },
-              { "text": "→", "role": "modifier" },
-              { "text": "い", "role": "verb", "gloss": "stem (drop る)" },
-              { "text": "ます", "role": "predicate" }
+              { "text": "分かる", "role": "verb", "gloss": "か (あ-row) + る" },
+              { "text": "→ 分かり", "role": "modifier", "gloss": "る→り (godan shift)" },
+              { "text": "→ 分かります", "role": "predicate", "gloss": "godan ✓" }
             ],
-            "en": "be / exist → is here (polite)"
+            "en": "to understand → understands (godan, not ichidan!)"
           }
         }
       ],
-      "tip": "When you see a verb ending in る, ask: is the vowel before る in the い/え row? If yes, it is likely ichidan (drop る). If the vowel is in another row (e.g. 行く ends in く, not る), it is godan."
+      "tip": "When you see a verb ending in る, immediately ask: 'What is the vowel before る?' If it is い or え → ichidan (drop る). If it is any other vowel (あ, う, お) → godan (shift る to り). This test catches the る-trap every time."
     },
     {
       "type": "annotatedExample",
-      "title": "ます形 in Real Situations",
+      "title": "Identifying Verb Types in Natural Sentences",
       "examples": [
         {
-          "context": "Asking where someone is going (present / future)",
+          "context": "Ichidan: いる (い before る)",
           "parts": [
-            { "text": "今日", "role": "modifier", "gloss": "today" },
-            { "text": "どこ", "role": "topic", "gloss": "where" },
-            { "text": "に", "role": "particle" },
-            { "text": "行き", "role": "verb", "gloss": "go-" },
-            { "text": "ます", "role": "predicate" },
-            { "text": "か", "role": "particle" }
-          ],
-          "en": "Where are you going today?",
-          "note": "行きます + か = yes/no question. どこに = 'to where' — asking about the destination."
-        },
-        {
-          "context": "Reporting a completed action (past)",
-          "parts": [
-            { "text": "きのう", "role": "modifier", "gloss": "yesterday" },
-            { "text": "駅", "role": "topic", "gloss": "station" },
-            { "text": "へ", "role": "particle" },
-            { "text": "行き", "role": "verb", "gloss": "go-" },
-            { "text": "ました", "role": "predicate" }
-          ],
-          "en": "I went to the station yesterday.",
-          "note": "ました marks a completed, past action. へ emphasises direction ('toward the station')."
-        },
-        {
-          "context": "Saying something doesn't happen (negative)",
-          "parts": [
-            { "text": "タクシー", "role": "topic", "gloss": "taxi" },
-            { "text": "で", "role": "particle" },
-            { "text": "来", "role": "verb", "gloss": "come" },
-            { "text": "ません", "role": "predicate" }
-          ],
-          "en": "I don't come by taxi.",
-          "note": "ません is the polite negative. で marks the means of transport (by taxi)."
-        },
-        {
-          "context": "Saying something didn't happen (past negative)",
-          "parts": [
-            { "text": "先週", "role": "modifier", "gloss": "last week" },
-            { "text": "スーパー", "role": "topic", "gloss": "supermarket" },
-            { "text": "へ", "role": "particle" },
-            { "text": "来", "role": "verb", "gloss": "come" },
-            { "text": "ませんでした", "role": "predicate" }
-          ],
-          "en": "Last week I didn't come to the supermarket.",
-          "note": "ませんでした = negative past. It is simply ません + でした joined as one ending."
-        },
-        {
-          "context": "Describing existence (animate beings)",
-          "parts": [
-            { "text": "友だち", "role": "topic", "gloss": "friend" },
+            { "text": "友だち", "role": "subject", "gloss": "friend" },
             { "text": "が", "role": "particle" },
-            { "text": "い", "role": "verb", "gloss": "be" },
+            { "text": "ここ", "role": "modifier", "gloss": "here" },
+            { "text": "に", "role": "particle" },
+            { "text": "い", "role": "verb", "gloss": "be-" },
             { "text": "ます", "role": "predicate" }
           ],
           "en": "My friend is here.",
-          "note": "います uses the ichidan stem い + ます. います is for animate beings (people, animals). あります is for inanimate things."
+          "note": "いる: い-row before る → ichidan → drop る → い + ます = います"
+        },
+        {
+          "context": "Godan: 行く (ends in く, not る — clearly godan)",
+          "parts": [
+            { "text": "今日", "role": "modifier", "gloss": "today" },
+            { "text": "駅", "role": "topic", "gloss": "station" },
+            { "text": "に", "role": "particle" },
+            { "text": "行き", "role": "verb", "gloss": "go-" },
+            { "text": "ます", "role": "predicate" }
+          ],
+          "en": "I go to the station today.",
+          "note": "行く: ends in く (う-row) → godan → く→き → 行きます"
+        },
+        {
+          "context": "Godan る-trap: 分かる (か before る = あ-row → godan!)",
+          "parts": [
+            { "text": "分かり", "role": "verb", "gloss": "understand-" },
+            { "text": "ます", "role": "predicate" }
+          ],
+          "en": "I understand.",
+          "note": "分かる ends in る but か is あ-row → godan → る→り → 分かります"
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "かいわ 1: コンビニに 行きますか（Are You Going to the Convenience Store?）",
-      "context": "Yamakawa asks Rikizo whether he went to the convenience store today.",
+      "title": "かいわ 1: どのどうしですか（Which Kind of Verb Is It?）",
+      "context": "The teacher is explaining verb types to Yamakawa and Rikizo during class.",
+      "lines": [
+        {
+          "spk": "先生",
+          "jp": "「行く」は どんな どうしですか。",
+          "en": "What kind of verb is 'iku' (go)?",
+          "terms": [
+            "v_iku",
+            "p_wa",
+            "v_donna",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "「行く」は ごだんどうしです。「く」で おわりますから。",
+          "en": "'Iku' is a godan verb. Because it ends in 'ku'.",
+          "terms": [
+            "v_iku",
+            "p_wa",
+            "g_desu",
+            "p_de",
+            "p_kara"
+          ]
+        },
+        {
+          "spk": "先生",
+          "jp": "そうです。分かりましたね。では「いる」は どうですか。",
+          "en": "That's right. You understood. Then what about 'iru' (be)?",
+          "terms": [
+            "g_desu",
+            { "id": "v_wakaru", "form": "polite_mashita" },
+            "p_ne",
+            "p_dewa",
+            "v_iru",
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "「いる」は いちだんどうしです。「い」は い-れつです。",
+          "en": "'Iru' is an ichidan verb. 'I' is in the i-column.",
+          "terms": [
+            "v_iru",
+            "p_wa",
+            "g_desu"
+          ]
+        },
+        {
+          "spk": "先生",
+          "jp": "はい、そうです。では「分かる」は いちだんですか、ごだんですか。",
+          "en": "Yes, that's right. Then is 'wakaru' (understand) ichidan or godan?",
+          "terms": [
+            "p_hai",
+            "g_desu",
+            "p_dewa",
+            "v_wakaru",
+            "p_wa",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "「分かる」は ごだんです！「か」は あ-れつですから。",
+          "en": "'Wakaru' is godan! Because 'ka' is in the a-column.",
+          "terms": [
+            "v_wakaru",
+            "p_wa",
+            "g_desu",
+            "p_kara"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "かいわ 2: どうしの かたちを たしかめましょう（Let's Confirm Verb Forms）",
+      "context": "Rikizo and Yamakawa quiz each other on verb conjugation after class.",
       "lines": [
         {
           "spk": "やまかわ",
-          "jp": "りきぞさん、今日 コンビニに 行きましたか。",
-          "en": "Rikizo-san, did you go to the convenience store today?",
+          "jp": "りきぞさん、「来る」の ますかたちは 何ですか。",
+          "en": "Rikizo-san, what is the masu form of 'kuru' (come)?",
           "terms": [
             "v_san",
-            "v_kyou",
-            "v_konbini",
-            "p_ni",
-            { "id": "v_iku", "form": "polite_mashita" },
-            "p_ka"
-          ]
-        },
-        {
-          "spk": "りきぞ",
-          "jp": "いいえ、今日は 行きませんでした。",
-          "en": "No, I didn't go today.",
-          "terms": [
-            "v_iie",
-            "v_kyou",
+            "v_kuru",
+            "p_no",
             "p_wa",
-            { "id": "v_iku", "form": "polite_past_negative" }
-          ]
-        },
-        {
-          "spk": "やまかわ",
-          "jp": "そうですか。きのうは 行きましたか。",
-          "en": "Is that so. Did you go yesterday?",
-          "terms": [
-            "p_soudesuka",
-            "v_kinou",
-            "p_wa",
-            { "id": "v_iku", "form": "polite_mashita" },
+            "v_nani",
+            "g_desu",
             "p_ka"
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "はい、きのう 駅から コンビニへ 行きました。",
-          "en": "Yes, yesterday I went from the station to the convenience store.",
+          "jp": "「来ます」です。よみかたは「きます」です。",
+          "en": "It's 'kimasu'. The reading is 'kimasu'.",
           "terms": [
-            "p_hai",
-            "v_kinou",
-            "v_eki",
-            "p_kara",
-            "v_konbini",
-            "p_e",
-            { "id": "v_iku", "form": "polite_mashita" }
-          ]
-        },
-        {
-          "spk": "やまかわ",
-          "jp": "バスで 来ましたか、タクシーで 来ましたか。",
-          "en": "Did you come by bus, or did you come by taxi?",
-          "terms": [
-            "v_basu",
-            "p_de",
-            { "id": "v_kuru", "form": "polite_mashita" },
-            "p_ka",
-            "v_takushii",
-            "p_de",
-            { "id": "v_kuru", "form": "polite_mashita" },
-            "p_ka"
-          ]
-        },
-        {
-          "spk": "りきぞ",
-          "jp": "バスで 来ました。タクシーでは 来ません。",
-          "en": "I came by bus. I don't come by taxi.",
-          "terms": [
-            "v_basu",
-            "p_de",
-            { "id": "v_kuru", "form": "polite_mashita" },
-            "v_takushii",
-            "p_de",
-            "p_wa",
-            { "id": "v_kuru", "form": "polite_negative" }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "かいわ 2: 来週 どこに 行きますか（Where Are You Going Next Week?）",
-      "context": "Yamamoto-sensei asks students about their plans for next week.",
-      "lines": [
-        {
-          "spk": "先生",
-          "jp": "来週 どこに 行きますか。",
-          "en": "Where are you going next week?",
-          "terms": [
-            "v_raishuu",
-            "v_doko",
-            "p_ni",
-            { "id": "v_iku", "form": "polite_masu" },
-            "p_ka"
-          ]
-        },
-        {
-          "spk": "りきぞ",
-          "jp": "来週は 駅と 店へ 行きます。",
-          "en": "Next week I will go to the station and the store.",
-          "terms": [
-            "v_raishuu",
-            "p_wa",
-            "v_eki",
-            "p_to",
-            "v_mise",
-            "p_e",
-            { "id": "v_iku", "form": "polite_masu" }
-          ]
-        },
-        {
-          "spk": "先生",
-          "jp": "バスで 行きますか。",
-          "en": "Are you going by bus?",
-          "terms": [
-            "v_basu",
-            "p_de",
-            { "id": "v_iku", "form": "polite_masu" },
-            "p_ka"
-          ]
-        },
-        {
-          "spk": "りきぞ",
-          "jp": "はい、バスで 行きます。うちから 来ます。",
-          "en": "Yes, I will go by bus. I will come from home.",
-          "terms": [
-            "p_hai",
-            "v_basu",
-            "p_de",
-            { "id": "v_iku", "form": "polite_masu" },
-            "v_uchi",
-            "p_kara",
-            { "id": "v_kuru", "form": "polite_masu" }
-          ]
-        },
-        {
-          "spk": "先生",
-          "jp": "先週も 来ましたか。",
-          "en": "Did you also come last week?",
-          "terms": [
-            "v_senshuu",
-            "p_mo",
-            { "id": "v_kuru", "form": "polite_mashita" },
-            "p_ka"
-          ]
-        },
-        {
-          "spk": "りきぞ",
-          "jp": "はい、毎週 来ます。先週も 来ました。",
-          "en": "Yes, I come every week. I also came last week.",
-          "terms": [
-            "p_hai",
-            "v_maishuu",
             { "id": "v_kuru", "form": "polite_masu" },
-            "v_senshuu",
-            "p_mo",
-            { "id": "v_kuru", "form": "polite_mashita" }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "sentenceTransform",
-      "title": "Change the Form",
-      "instructions": "Each sentence is given in one form. Choose the correctly transformed version.",
-      "items": [
-        {
-          "given": "毎日 駅に 行きます。",
-          "givenLabel": "Present (positive)",
-          "targetLabel": "Past (positive)",
-          "answer": "毎日 駅に 行きました。",
-          "choices": [
-            "毎日 駅に 行きました。",
-            "毎日 駅に 行きません。",
-            "毎日 駅に 行きませんでした。",
-            "毎日 駅に 行くです。"
+            "g_desu",
+            "p_wa",
+            "g_desu"
           ]
         },
         {
-          "given": "バスで 来ます。",
-          "givenLabel": "Present (positive)",
-          "targetLabel": "Negative",
-          "answer": "バスで 来ません。",
-          "choices": [
-            "バスで 来ました。",
-            "バスで 来ません。",
-            "バスで 来ませんでした。",
-            "バスで 来ないです。"
+          "spk": "やまかわ",
+          "jp": "そうです！「来る」は ふきそくどうしですね。",
+          "en": "That's right! 'Kuru' is an irregular verb, isn't it.",
+          "terms": [
+            "g_desu",
+            "v_kuru",
+            "p_wa",
+            "g_desu",
+            "p_ne"
           ]
         },
         {
-          "given": "先週 店に 行きました。",
-          "givenLabel": "Past (positive)",
-          "targetLabel": "Past negative",
-          "answer": "先週 店に 行きませんでした。",
-          "choices": [
-            "先週 店に 行きます。",
-            "先週 店に 行きません。",
-            "先週 店に 行きませんでした。",
-            "先週 店に 行きました。"
+          "spk": "りきぞ",
+          "jp": "はい。では「ある」は どうですか。",
+          "en": "Yes. Then what about 'aru' (exist)?",
+          "terms": [
+            "p_hai",
+            "p_dewa",
+            "v_aru",
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka"
           ]
         },
         {
-          "given": "友だちが いません。",
-          "givenLabel": "Negative",
-          "targetLabel": "Positive (present)",
-          "answer": "友だちが います。",
-          "choices": [
-            "友だちが います。",
-            "友だちが いました。",
-            "友だちが いませんでした。",
-            "友だちが いる。"
+          "spk": "やまかわ",
+          "jp": "「ある」は「あります」ですね。コンビニに あります。",
+          "en": "'Aru' becomes 'arimasu'. There is a convenience store.",
+          "terms": [
+            "v_aru",
+            "p_wa",
+            { "id": "v_aru", "form": "polite_masu" },
+            "g_desu",
+            "p_ne",
+            "v_konbini",
+            "p_ni",
+            { "id": "v_aru", "form": "polite_masu" }
           ]
         },
         {
-          "given": "スーパーへ 行きません。",
-          "givenLabel": "Negative (present)",
-          "targetLabel": "Past negative",
-          "answer": "スーパーへ 行きませんでした。",
-          "choices": [
-            "スーパーへ 行きました。",
-            "スーパーへ 行きます。",
-            "スーパーへ 行きませんでした。",
-            "スーパーへ 行きません。"
-          ]
-        },
-        {
-          "given": "毎日 来ます。",
-          "givenLabel": "Present (positive)",
-          "targetLabel": "Past negative",
-          "answer": "毎日 来ませんでした。",
-          "choices": [
-            "毎日 来ました。",
-            "毎日 来ませんでした。",
-            "毎日 来ません。",
-            "毎日 来ないでした。"
+          "spk": "りきぞ",
+          "jp": "いいですね。毎日 分かります！",
+          "en": "That's great. I understand it every day!",
+          "terms": [
+            { "id": "v_ii", "form": "polite_adj" },
+            "p_ne",
+            "v_mainichi",
+            { "id": "v_wakaru", "form": "polite_masu" }
           ]
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Mixed Practice",
-      "instructions": "Choose the correct answer for each question.",
+      "title": "Verb Type Challenge",
+      "instructions": "Identify verb types and choose the correct polite form.",
       "items": [
         {
           "kind": "mcq",
-          "q": "行きました",
-          "choices": ["I go", "I went", "I don't go", "I didn't go"],
-          "answer": "I went",
-          "explanation": "行きました is the polite past affirmative of 行く. The ます ending swaps for ました to form the past."
+          "q": "「いる」(to be/exist) — which verb class is this?",
+          "choices": ["Ichidan (RU-verb)", "Godan (U-verb)", "Irregular", "It depends on context"],
+          "answer": "Ichidan (RU-verb)",
+          "explanation": "いる ends in る, and the vowel before る is い — the い-row. This confirms ichidan. Stem = い (drop る) → います / いました / いません."
         },
         {
           "kind": "mcq",
-          "q": "Which sentence means 'I didn't come by bus last week'?",
+          "q": "「分かる」(to understand) — which verb class is this?",
+          "choices": ["Godan (U-verb)", "Ichidan (RU-verb)", "Irregular", "Cannot be determined"],
+          "answer": "Godan (U-verb)",
+          "explanation": "分かる ends in る, but the vowel before る is か — the あ-row. This is the る-trap! あ-row before る → godan. Stem = 分かり (る→り shift) → 分かります."
+        },
+        {
+          "kind": "mcq",
+          "q": "What is the correct polite present form of「行く」?",
+          "choices": ["行きます", "行ります", "行ます", "行くです"],
+          "answer": "行きます",
+          "terms": [{ "id": "v_iku", "form": "polite_masu" }],
+          "explanation": "行く is godan (ends in く). Godan stem rule: shift く to the い-row → き. Then add ます: 行き + ます = 行きます."
+        },
+        {
+          "kind": "mcq",
+          "q": "What is the correct polite present form of「来る」?",
+          "choices": ["来ます (reading: きます)", "来ります", "来くます", "くます"],
+          "answer": "来ます (reading: きます)",
+          "terms": [{ "id": "v_kuru", "form": "polite_masu" }],
+          "explanation": "来る is an irregular verb. Its polite forms cannot be predicted — the reading changes completely from くる to き. 来ます is read as きます. Memorise this form."
+        },
+        {
+          "kind": "mcq",
+          "q": "A new verb「起きる (おきる — to wake up)」ends in る. The vowel before る is き (き is in the い-row). What class is it?",
+          "choices": ["Ichidan (RU-verb)", "Godan (U-verb)", "Irregular", "It looks like godan because of き"],
+          "answer": "Ichidan (RU-verb)",
+          "explanation": "Apply the vowel test: the vowel before る is き — and き is in the い-row. い/え-row before る → ichidan. Stem = おき (drop る) → おきます."
+        },
+        {
+          "kind": "mcq",
+          "q": "Which statement about verb classes is TRUE?",
           "choices": [
-            "先週 バスで 来ました。",
-            "先週 バスで 来ません。",
-            "先週 バスで 来ませんでした。",
-            "先週 バスで 来ます。"
+            "All verbs ending in る are ichidan (RU-verbs)",
+            "Verbs ending in る are ichidan ONLY IF the vowel before る is in the い/え-row",
+            "Godan verbs always end in く",
+            "Irregular verbs follow the godan stem rule with a special reading"
           ],
-          "answer": "先週 バスで 来ませんでした。",
-          "terms": ["v_senshuu", "v_basu", "p_de", { "id": "v_kuru", "form": "polite_past_negative" }],
-          "explanation": "来ませんでした is the polite past negative of 来る. 先週 (last week) confirms we need the past form, and the action didn't happen so we need the negative."
-        },
-        {
-          "kind": "mcq",
-          "q": "How do you form the ます stem of a godan (U-type) verb?",
-          "choices": [
-            "Drop the final る",
-            "Shift the final syllable from the う-row to the い-row",
-            "Add ます directly to the dictionary form",
-            "Replace the last syllable with い"
-          ],
-          "answer": "Shift the final syllable from the う-row to the い-row",
-          "explanation": "Godan verbs form their polite stem by shifting the final syllable: く→き, ぬ→に, む→み, う→い, etc. Then ます / ました / ません / ませんでした is added."
-        },
-        {
-          "kind": "mcq",
-          "q": "Which is the correct polite negative form of 来る?",
-          "choices": [
-            "来ません",
-            "来ないです",
-            "来りません",
-            "来るません"
-          ],
-          "answer": "来ません",
-          "terms": [{ "id": "v_kuru", "form": "polite_negative" }],
-          "explanation": "来る is an irregular verb. Its polite forms are: 来ます / 来ました / 来ません / 来ませんでした. Reading: きません. The kanji stays but the reading changes to き in all polite forms."
-        },
-        {
-          "kind": "mcq",
-          "q": "毎日 駅に 行き_______。 (I go to the station every day.)",
-          "choices": ["ます", "ました", "ません", "ませんでした"],
-          "answer": "ます",
-          "terms": ["v_mainichi", "v_eki", "p_ni", { "id": "v_iku", "form": "polite_masu" }],
-          "explanation": "ます is the polite present / future affirmative. The sentence describes a current habit (every day), so the present form ます is correct."
-        },
-        {
-          "kind": "mcq",
-          "q": "Which sentence correctly says 'I come from home by bus'?",
-          "choices": [
-            "うちを バスで 来ます。",
-            "うちから バスで 来ます。",
-            "うちに バスで 来ます。",
-            "うちで バスで 来ます。"
-          ],
-          "answer": "うちから バスで 来ます。",
-          "terms": ["v_uchi", "p_kara", "v_basu", "p_de", { "id": "v_kuru", "form": "polite_masu" }],
-          "explanation": "から marks the starting point (from home). で marks the means of transport (by bus). を would be wrong — it marks a direct object, not an origin."
+          "answer": "Verbs ending in る are ichidan ONLY IF the vowel before る is in the い/え-row",
+          "explanation": "The る-trap: some verbs ending in る are actually godan. The vowel test: if the sound before る is in the い/え-row → ichidan. If it is any other row (あ, う, お) → godan. Example: 分かる (か = あ-row) is godan, NOT ichidan."
         }
       ]
     }
