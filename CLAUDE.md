@@ -13,9 +13,10 @@ This file governs how Claude Code creates all lesson content for this repository
 5. [Term Tagging Reference](#term-tagging-reference)
 6. [Kanji Prerequisite Rules](#kanji-prerequisite-rules)
 7. [Approved Vocabulary Rules](#approved-vocabulary-rules)
-8. [Quality Gates (Pass/Fail Criteria)](#quality-gates-passfail-criteria)
-9. [File & Structure Reference](#file--structure-reference)
-10. [Common Failure Modes](#common-failure-modes)
+8. [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules)
+9. [Quality Gates (Pass/Fail Criteria)](#quality-gates-passfail-criteria)
+10. [File & Structure Reference](#file--structure-reference)
+11. [Common Failure Modes](#common-failure-modes)
 
 ---
 
@@ -110,6 +111,7 @@ Rewrite notes: [empty on first pass; filled by Agent 4 feedback]
 - Every Japanese surface form that is used in `jp` fields, passages, or conversation lines **must** either be tagged in the `terms` array of that item, or be fully hiragana/katakana with no kanji content (pure kana items for basic particles/common function words may be untagged when they are not in the glossary).
 - Do **not** invent vocabulary. Use only IDs that exist in the glossary.
 - Do **not** use kanji that have not been introduced by the current lesson or earlier. See [Kanji Prerequisite Rules](#kanji-prerequisite-rules).
+- Do **not** use conjugation forms whose `introducedIn` lesson (in `conjugation_rules.json`) is later than the current lesson. For example, `te_form` has `introducedIn: "N5.5"` — a lesson targeting N5.3 must not contain any て-form usage. If a sentence requires a form that is not yet available, restructure the sentence to use only available forms. See [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules).
 - When a verb or adjective appears in a conjugated form, tag it with the correct `form` string. See [Term Tagging Reference](#term-tagging-reference).
 - Output the draft as a single JSON (or MD + JSON pair for stories) in a clearly labelled code block.
 - Attach a **CB Checklist** at the end of the output (see below).
@@ -135,6 +137,8 @@ CB CHECKLIST
 [ ] Lesson matches the reference template's conversation count (see Reference Template Rule)
 [ ] meta.kanji array is present and matches the kanji list in manifest.json
 [ ] Every kanji introduced this lesson that functions as a standalone noun has a v_* vocab entry, not only a k_* kanji entry
+[ ] Every conjugation form used in jp/passage fields has introducedIn ≤ current lesson (checked against conjugation_rules.json)
+[ ] Every structural grammar pattern in jp/passage fields (e.g. ～ている, ～てください, ～たり～たりする) is available at the current lesson tier
 [ ] (Reviews) Scramble items have segments, distractors (3 items), and explanation
 [ ] (Reviews) Scramble sentences with floatable time expressions or adverbs include an alts array
 [ ] (Reviews) Every review section has an instructions field
@@ -247,7 +251,7 @@ Line/Section | Issue Type            | Detail
 **Responsibilities:**
 - **Use the latest content as the reference standard.** Read the highest-numbered existing lesson file of the same content type and level — this represents the current structural standard. Optionally read one additional earlier file for comparison. When conventions differ between older and newer files, the newest file always takes precedence.
 - Assess: **Natural language quality** — do conversations sound like real Japanese, not textbook recitations? Are the situations culturally plausible?
-- Assess: **Skill progression** — does difficulty increase appropriately from the previous lesson? Are new grammar points used naturally rather than force-fed?
+- Assess: **Skill progression** — does difficulty increase appropriately from the previous lesson? Are new grammar points used naturally rather than force-fed? Are conjugation forms and grammar patterns appropriate for the lesson tier? See [Agent 4 — Grammar Usage Validation](#agent-4--grammar-usage-validation-all-content-types).
 - Assess: **Vocabulary density** — are too few or too many new vocab items packed into a single section?
 - Assess: **Consistency** — character names, setting details, and vocabulary choices consistent with the rest of the series?
 - Assess: **Scenario variety** — does this prompt/story/review cover scenarios not already covered by recent content?
@@ -321,6 +325,67 @@ Scope violation     | grammarRule "rule_nominalization" teaches なんです; no
 Prerequisite gap    | Conditional ～たら requires plain form knowledge (G9); current lesson unlocks after N5.5
 Section substitution| Spec section 4 (casual だ) replaced by nominalization rule — unauthorized scope change
 Density             | 7 grammarRule sections; recommend splitting into two lessons
+```
+
+### Agent 4 — Grammar Usage Validation (all content types)
+
+For **every** draft — not just grammar lessons — Agent 4 must perform a **Grammar Usage Validation** to verify that the grammar patterns used in Japanese sentences are appropriate for the lesson's position in the curriculum. This check complements kanji and vocabulary prerequisite enforcement with an equivalent gate for grammar.
+
+**Why this matters:** Kanji and vocabulary have hard prerequisite checks (Agent 3 catches untaught kanji, fabricated IDs, out-of-scope vocab). But grammar patterns — conjugation forms, structural patterns like ～ている or ～てください, and particles — have historically relied on Agent 4's vague "skill progression" assessment. This section makes that check concrete and systematic.
+
+**Procedure:**
+
+1. **Conjugation form audit.** For every `terms` entry that uses a `form` field, look up that form in `conjugation_rules.json` and check its `introducedIn` value. If the form's `introducedIn` lesson is later than the current lesson, it is an out-of-scope grammar violation. Use this reference table for quick checks:
+
+   | Form | `introducedIn` | Available from |
+   |---|---|---|
+   | `polite_adj` | N5.1 | N5.1+ |
+   | `polite_masu`, `polite_mashita`, `polite_negative`, `polite_past_negative` | N5.5 | N5.5+ |
+   | `te_form`, `polite_negative_te` | N5.5 | N5.5+ |
+   | `plain_past` | N5.5 | N5.5+ |
+   | `desire_tai`, `desire_tai_negative`, `polite_volitional_mashou` | N5.8 | N5.8+ |
+   | `plain_negative`, `plain_past_negative` | N5.9 | N5.9+ |
+   | `polite_past_adj`, `adverbial`, `conditional_ba`, `sugiru_form` | N5.10 | N5.10+ |
+   | `appearance_sou` | N5.11 | N5.11+ |
+   | `potential`, `potential_negative` | N4.3 | N4.3+ |
+   | `tari_form`, `nagara_form` | N4.10 | N4.10+ |
+   | `conditional_tara` | N4.25 | N4.25+ |
+   | `passive`, `causative` | N4.31 | N4.31+ |
+
+2. **Structural grammar pattern scan.** Beyond tagged conjugation forms, scan the `jp` surface text for structural grammar patterns that imply knowledge of specific forms even when the individual verb tags might look in-scope. Common patterns to flag:
+
+   | Pattern in `jp` text | Requires | Example violation |
+   |---|---|---|
+   | ～ている / ～ています | `te_form` (N5.5+) | Using ～ています in N5.3 content |
+   | ～てください | `te_form` (N5.5+) | Using ～てください in N5.4 content |
+   | ～たり～たりする | `tari_form` (N4.10+) | Using ～たりします in N4.8 content |
+   | ～ながら | `nagara_form` (N4.10+) | Using ～ながら in N4.5 content |
+   | ～たら | `conditional_tara` (N4.25+) | Using ～たら in N4.20 content |
+   | ～ば / ～ければ | `conditional_ba` (N5.10+) | Using ～ば in N5.8 content |
+   | ～すぎる | `sugiru_form` (N5.10+) | Using ～すぎます in N5.7 content |
+   | ～られる (passive) | `passive` (N4.31+) | Using ～られます in N4.25 content |
+   | ～させる (causative) | `causative` (N4.31+) | Using ～させます in N4.25 content |
+   | ～たいです | `desire_tai` (N5.8+) | Using ～たいです in N5.6 content |
+   | ～ましょう | `polite_volitional_mashou` (N5.8+) | Using ～ましょう in N5.6 content |
+   | ～ない / ～なかった (plain neg) | `plain_negative` (N5.9+) | Using ～ない in N5.7 content |
+   | ～そうです (appearance) | `appearance_sou` (N5.11+) | Using ～そうです in N5.9 content |
+
+3. **Particle scope verification.** For all content types (not just compose), verify that particles used in `jp` text are within scope. Cross-reference each particle against `shared/particles.json`'s `introducedIn` field. This extends Agent 3's tagging check — Agent 3 verifies tagged particles have valid IDs; Agent 4 verifies that the grammar patterns those particles enable are age-appropriate for the lesson.
+
+4. **Severity classification.**
+   - **Hard fail:** A conjugation form with `introducedIn` later than the current lesson is used in a tagged `terms` entry. This is a concrete, verifiable violation equivalent to an untaught kanji.
+   - **Hard fail:** A structural grammar pattern (from the table above) appears in `jp` text before the form is available.
+   - **Soft fail (judgment):** A grammar pattern is technically available (the form's `introducedIn` ≤ current lesson) but has not been practiced or emphasized yet and appears complex for the lesson tier. Flag as a skill-progression concern, not a hard block.
+
+**CR Consistency Note — grammar usage issues use this category:**
+
+```
+Category            | Detail
+────────────────────┼──────────────────────────────────────────────────────
+Grammar usage       | Conv line 3 uses te_form (introducedIn: N5.5) but lesson is N5.3 — out of scope
+Grammar usage       | Reading passage contains ～たいです pattern (desire_tai, N5.8+) in N5.6 content
+Grammar usage       | jp text uses ～ている progressive but te_form not available until N5.5
+Particle scope      | Particle でも (p_demo, introducedIn: N4.14) used in N4.10 conversation — out of scope
 ```
 
 ---
@@ -827,7 +892,48 @@ For a lesson or compose prompt targeting lesson `N5.X`, only terms with `lesson`
 
 ### Grammar patterns
 
-Grammar patterns (particles, sentence-final forms, conjunctions like ～て) are governed by what has been taught, but they do not need to be explicitly listed in the glossary. Use good judgment: stick to the grammar complexity of the target lesson's tier.
+Grammar patterns (particles, sentence-final forms, conjunctions like ～て) are governed by what has been taught, but they do not need to be explicitly listed in the glossary. Each conjugation form has an `introducedIn` field in `conjugation_rules.json` and each particle has an `introducedIn` field in `shared/particles.json` — these are the source of truth for when a grammar pattern becomes available. A form or particle whose `introducedIn` is later than the current lesson is **not permitted**, even if the result would be natural Japanese. See [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules) for enforcement details.
+
+---
+
+## Grammar Usage Prerequisite Rules
+
+### Source of truth: `conjugation_rules.json` and `shared/particles.json`
+
+Each conjugation form in `conjugation_rules.json` has an `introducedIn` field specifying the lesson that formally teaches it. Each particle in `shared/particles.json` has an equivalent field. These are hard gates — not guidelines.
+
+### How to compute the available grammar set
+
+1. Read `conjugation_rules.json`.
+2. Collect all form entries whose `introducedIn` lesson is ≤ the current lesson.
+3. Read `shared/particles.json`.
+4. Collect all particle entries whose `introducedIn` lesson is ≤ the current lesson.
+5. The union of these two sets defines the grammar available for the content.
+
+### Enforcement
+
+- Any conjugation form whose `introducedIn` is later than the current lesson is a **hard blocker**. Agent 2 must not use it. Agent 3 must reject any draft containing it. Agent 4 must flag it as a grammar usage violation.
+- Structural grammar patterns (e.g. ～ている, ～てください, ～たり～たりする) inherit the prerequisite of their constituent forms. If `te_form` has `introducedIn: "N5.5"`, then ～ている is not available before N5.5.
+- Particles follow the same rule: a particle whose `introducedIn` is later than the current lesson must not appear in `jp` text.
+- Exception: dictionary/base forms of verbs and adjectives have no `introducedIn` gate — they are available whenever the vocabulary item itself is available.
+- When a sentence requires a grammar pattern that is not yet available, restructure the sentence to use only available forms. For example, in an N5.3 lesson, instead of 「行って食べました」(requires te_form, N5.5), write 「行きました。食べました。」(uses polite_mashita, N5.5 — or if that's also unavailable, use dictionary form or restructure further).
+
+### Quick reference: form availability by lesson
+
+| Lesson | Newly available forms |
+|---|---|
+| N5.1 | `polite_adj` |
+| N5.5 | `polite_masu`, `polite_mashita`, `polite_negative`, `polite_past_negative`, `te_form`, `polite_negative_te`, `plain_past` |
+| N5.8 | `desire_tai`, `desire_tai_negative`, `polite_volitional_mashou` |
+| N5.9 | `plain_negative`, `plain_past_negative` |
+| N5.10 | `polite_past_adj`, `adverbial`, `conditional_ba`, `sugiru_form` |
+| N5.11 | `appearance_sou` |
+| N4.3 | `potential`, `potential_negative` |
+| N4.10 | `tari_form`, `nagara_form` |
+| N4.25 | `conditional_tara` |
+| N4.31 | `passive`, `causative` |
+
+Before N5.5, only `polite_adj` and dictionary forms are available. This means N5.1–N5.4 content is limited to noun-です sentences, い-adjective+です sentences, and verbs in dictionary form. Plan sentences accordingly.
 
 ---
 
@@ -843,6 +949,8 @@ All of the following must be TRUE for a QA pass:
 - [ ] Every term ID in every `terms` array exists in the glossary
 - [ ] Every term ID's `surface` field matches (or inflects from) the token it tags in the `jp` field — ID existence alone is not sufficient; a surface mismatch (e.g. tagging `だ` with `g_desu` whose surface is `です`) is a hard fail
 - [ ] Every verb/adjective `terms` entry uses `{ "id": "...", "form": "..." }` with a valid form string
+- [ ] Every `form` value in `terms` has `introducedIn` ≤ current lesson in `conjugation_rules.json` (see [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules))
+- [ ] No structural grammar pattern (～ている, ～てください, ～たり～たりする, ～ましょう, etc.) appears in `jp` text before its constituent form is available
 - [ ] Drill 1 MCQ items have no `terms` array; all other drills do
 - [ ] Answer fields exactly match one of the choices strings
 - [ ] The JSON validates (no syntax errors)
@@ -868,7 +976,9 @@ All of the following should be TRUE for a CR pass:
 
 - [ ] Conversations sound natural and idiomatic, not like direct grammar exercises
 - [ ] The scenario is culturally plausible and engaging
-- [ ] Grammar complexity matches the target lesson tier
+- [ ] Grammar complexity matches the target lesson tier — every conjugation form and structural grammar pattern in `jp` text has `introducedIn` ≤ current lesson (hard fail if violated; see [Grammar Usage Validation](#agent-4--grammar-usage-validation-all-content-types))
+- [ ] No particle in `jp` text has `introducedIn` (in `shared/particles.json`) later than the current lesson
+- [ ] Grammar patterns that are technically available but have not been recently practiced are used sparingly and naturally (soft judgment)
 - [ ] Vocabulary density is appropriate (not overcrowded, not too sparse)
 - [ ] Scenarios are meaningfully different from the 2 most recent same-type files
 - [ ] Character names, places, and recurring details are consistent with the series
@@ -1009,12 +1119,14 @@ These are the most frequent errors. All agents should be alert to them.
 24. **(Compose) Targets using non-kanji vocabulary** — compose scoring is kanji-based. Target IDs should reference vocabulary that contains kanji so the coverage indicator works correctly.
 25. **(Compose) VocabPool missing historical vocab** — each prompt's vocabPool should include relevant vocabulary from prior lessons, not just the current lesson's words. Students need connector words, common nouns, and adjectives from earlier lessons to write coherent text.
 26. **(Stories) Missing particle/copula tags in terms.json** — particles (は, の, も, と, etc.) and g_desu (です) must be tagged in story terms.json so they are tappable, exactly as in lessons. Omitting them means function words are dead text the student cannot tap to look up. Every particle with a `p_*` entry in `shared/particles.json` whose `introducedIn` is ≤ the story's lesson scope must be included. The `"です"` key covers standalone copula occurrences; い-adjective predicative forms (e.g. `"うれしいです"`) are covered by their own longer key.
+27. **Out-of-scope conjugation form** — using a conjugation form (e.g. `te_form`, `desire_tai`, `conditional_ba`) before its `introducedIn` lesson. This is the grammar equivalent of using an untaught kanji. Example: writing ～ています in N5.3 content when `te_form` has `introducedIn: "N5.5"`. Check every `form` value in `terms` against `conjugation_rules.json`. See [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules).
+28. **Out-of-scope structural grammar pattern** — the `jp` surface text contains a grammar construction (～ている, ～てください, ～ましょう, ～たり～たりする, etc.) before the constituent form is available, even if the individual word tags don't explicitly use that form. The pattern in the surface text is the violation, not just the tags. Agent 2 must scan `jp` strings for these patterns, not rely only on `terms` form checking.
 
 ### Agent 3 failures (caught by Agent 4)
 
 1. **Approving unnatural dialogue** — grammatically correct but no real speaker would say it.
 2. **Approving overstuffed sections** — 30 vocabulary chips, 5 conversations, 4 readings in one lesson.
-3. **Missing a grammar level jump** — content using grammar structures 2–3 tiers above the lesson.
+3. **Missing a grammar level jump** — content using grammar structures 2–3 tiers above the lesson. Now that conjugation forms have concrete `introducedIn` fields, this should be caught by Agent 3's hard gate. But Agent 4 remains the backstop for structural patterns in `jp` text that Agent 3's form-tag check might miss (e.g. a ～ている pattern where the て and いる are tagged separately but neither tag explicitly carries a form that triggers the gate).
 4. **Kanji-only token scan** — checking that kanji-containing words are tagged but not scanning the full `jp` string token by token. Kana-only words (copulas like だ/だった, conjunctions, sentence-final particles, adverbs) can be out of scope, mis-tagged, or missing from `terms` entirely and will be invisible to a visual scan that only flags visually prominent kanji characters.
 
 ### Agent 4 failures (caught by Agent 1 in next pass)
@@ -1035,6 +1147,9 @@ These failures span multiple agents and are the most damaging because they may n
 4. **Oversimplified grammar comparison** — A `grammarComparison` section presents a nuanced distinction (like は vs が) with rules so simple they're misleading. The rules work for the examples shown but break in real usage. Agent 4's natural language check should catch this, but it requires the reviewer to mentally test the rules against cases NOT shown in the lesson.
 
 5. **Example sentences that are grammatically correct but pedagogically wrong** — The sentence uses the grammar pattern correctly but in a context where a native speaker would never use that pattern. Example: using が in a self-introduction (わたしが先生です) without the contrastive context that would make が natural there. Agent 4 is the defense.
+
+6. **Out-of-scope grammar usage passing all checks** — A conjugation form or structural pattern is used before its `introducedIn` lesson, but it slips through because: (a) Agent 2 doesn't check `introducedIn` on forms, (b) Agent 3 checks form strings for validity but not their `introducedIn` dates, and (c) Agent 4's "skill progression" check is too vague to catch it. This was the most common grammar-related failure before the Grammar Usage Validation was added. The defense is now distributed: Agent 2 checks `introducedIn` during authoring (CB Checklist), Agent 3 hard-gates every `form` against `conjugation_rules.json`, and Agent 4 performs a structural pattern scan of `jp` surface text. All three layers must be active.
+
 ---
 
 ## Quick Start Prompt for Claude Code
