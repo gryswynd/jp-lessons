@@ -20,8 +20,8 @@
           "lines": [
             {
               "spk": "A",
-              "jp": "はじめまして。わたしの 名まえは りきぞです。",
-              "terms": ["p_hajimemashite", "v_watashi", "p_no", "v_namae", "p_wa", "g_desu"]
+              "jp": "こんにちは。はじめまして。わたしの 名まえは りきぞです。",
+              "terms": ["p_konnichiwa", "p_hajimemashite", "v_watashi", "p_no", "v_namae", "p_wa", "g_desu"]
             },
             {
               "spk": "B",
@@ -50,13 +50,13 @@
           "lines": [
             {
               "spk": "A",
-              "jp": "やまもと先生は 何よう日に いますか。",
-              "terms": ["v_sensei", "p_wa", "v_nanyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
+              "jp": "おはよう！すみません、やまもと先生は いつ いますか。",
+              "terms": ["p_ohayou_casual", "p_sumimasen", "v_sensei", "p_wa", "v_itsu", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
             },
             {
               "spk": "B",
-              "jp": "月よう日と 水よう日と 金よう日に います。",
-              "terms": ["v_getsuyoubi", "p_to", "v_suiyoubi", "v_kinyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }]
+              "jp": "いつも 月よう日と 水よう日と 金よう日に います。",
+              "terms": ["v_itsumo", "v_getsuyoubi", "p_to", "v_suiyoubi", "v_kinyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }]
             },
             {
               "spk": "A",
@@ -81,17 +81,17 @@
         },
         {
           "title": "Conversation 3",
-          "context": "Yamakawa tells Rikizo about his father and monthly allowance.",
+          "context": "One evening, Yamakawa tells Rikizo about his father and monthly allowance.",
           "lines": [
             {
               "spk": "A",
-              "jp": "お父さんは 毎日 いますか。",
-              "terms": ["v_otousan", "p_wa", "v_mainichi", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
+              "jp": "こんばんは。お父さんは よく いますか。",
+              "terms": ["p_konbanwa", "v_otousan", "p_wa", "v_yoku", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
             },
             {
               "spk": "B",
-              "jp": "はい、父は 毎日 います。お金は 毎月 金よう日に あります。",
-              "terms": ["p_hai", "v_chichi", "p_wa", "v_mainichi", { "id": "v_iru", "form": "polite_masu" }, "v_okane", "v_maigetsu", "v_kinyoubi", "p_ni", { "id": "v_aru", "form": "polite_masu" }]
+              "jp": "こんばんは。はい、父は いつも います。お金は 毎月 金よう日に あります。",
+              "terms": ["p_konbanwa", "p_hai", "v_chichi", "p_wa", "v_itsumo", { "id": "v_iru", "form": "polite_masu" }, "v_okane", "v_maigetsu", "v_kinyoubi", "p_ni", { "id": "v_aru", "form": "polite_masu" }]
             },
             {
               "spk": "A",
@@ -100,8 +100,8 @@
             },
             {
               "spk": "B",
-              "jp": "そうです！うれしいです。",
-              "terms": ["p_soudesu", { "id": "v_ureshii", "form": "polite_adj" }]
+              "jp": "そうです！うれしいです。おやすみなさい！",
+              "terms": ["p_soudesu", { "id": "v_ureshii", "form": "polite_adj" }, "p_oyasuminasai"]
             }
           ],
           "question": "When does Yamakawa have money each month?",
@@ -151,6 +151,14 @@
           "segments": ["毎月", "金よう日", "に", "お金", "が", "あります"],
           "distractors": ["は", "毎日", "ありません"],
           "explanation": "毎月 + 金よう日 + に (time marker) + お金 + が (existence subject) + あります. が marks the subject of ある. は marks a topic (often contrasting). 毎日 (every day) is wrong here — the correct frequency is 毎月 (every month)."
+        },
+        {
+          "kind": "scramble",
+          "q": "What does Yamamoto-sensei do every day?",
+          "segments": ["やまもと先生", "は", "毎日", "なに", "を", "します", "か"],
+          "alts": [["毎日", "やまもと先生", "は", "なに", "を", "します", "か"]],
+          "distractors": ["が", "います", "ありますか"],
+          "explanation": "なに + を (direct object marker) + します (polite form of する, 'to do'). を marks what is being done with a transitive verb. Compare: します (do something) vs います (to exist/be present). 毎日 can appear sentence-initially or after the topic は."
         }
       ]
     },
@@ -175,14 +183,14 @@
           "terms": ["v_chichi", "p_wa", "v_sensei", "g_desu", "v_haha", "p_mo"]
         },
         {
-          "jp": "友だちは やまかわさんです。とても いい 友だちです。",
-          "en": "My friend is Yamakawa-san. They are a very good friend.",
-          "terms": ["v_tomodachi", "p_wa", "v_san", "g_desu", "v_totemo", "v_ii"]
+          "jp": "友だちは やまかわさんです。とても いい 友だちです。よく いっしょに います。",
+          "en": "My friend is Yamakawa-san. They are a very good friend. We are often together.",
+          "terms": ["v_tomodachi", "p_wa", "v_san", "g_desu", "v_totemo", "v_ii", "v_yoku", "v_issho", { "id": "v_iru", "form": "polite_masu" }]
         },
         {
-          "jp": "毎月 金よう日に お金が あります。りきぞは うれしいです。",
-          "en": "Every month on Friday, there is money. Rikizo is happy.",
-          "terms": ["v_maigetsu", "v_kinyoubi", "p_ni", "v_okane", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "p_wa", { "id": "v_ureshii", "form": "polite_adj" }]
+          "jp": "毎月 金よう日に お金が あります。いつも うれしいです。",
+          "en": "Every month on Friday, there is money. I am always happy.",
+          "terms": ["v_maigetsu", "v_kinyoubi", "p_ni", "v_okane", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "v_itsumo", { "id": "v_ureshii", "form": "polite_adj" }]
         }
       ],
       "questions": [
@@ -308,6 +316,22 @@
           "answer": "お金",
           "terms": ["v_maigetsu", "v_kinyoubi", "p_ni", "v_okane", "p_ga", { "id": "v_aru", "form": "polite_masu" }],
           "explanation": "お金 (money) fits: 'Every month on Friday, there is money.' あります is used for inanimate things that exist."
+        },
+        {
+          "kind": "mcq",
+          "q": "先生は _____ いますか。",
+          "choices": ["いつ", "なに", "だれ", "どこ"],
+          "answer": "いつ",
+          "terms": ["v_sensei", "p_wa", "v_itsu", { "id": "v_iru", "form": "polite_masu" }, "p_ka"],
+          "explanation": "いつ is the question word for 'when'. To ask when someone is present, use いつ + います. なに (what), だれ (who), and どこ (where) are other question words that don't fit this context."
+        },
+        {
+          "kind": "mcq",
+          "q": "りきぞは _____ 友だちと います。",
+          "choices": ["よく", "いつ", "なに", "だれ"],
+          "answer": "よく",
+          "terms": ["p_wa", "v_yoku", "v_tomodachi", "p_to", { "id": "v_iru", "form": "polite_masu" }],
+          "explanation": "よく means 'often'. The sentence means 'Rikizo is often with friends.' いつ is a question word (when?), not an adverb of frequency. いつも would mean 'always', which is stronger than よく."
         }
       ]
     },
@@ -347,6 +371,14 @@
           "answer": "を",
           "terms": ["v_namae", "p_wo", { "id": "v_iu", "form": "te_form" }, "v_kudasai"],
           "explanation": "を marks the direct object of transitive verbs. 名まえをいう = 'to say one's name'. いう (to say) is transitive and takes を for what is being said."
+        },
+        {
+          "kind": "mcq",
+          "q": "毎日 なに _____ しますか。",
+          "choices": ["を", "が", "は", "に"],
+          "answer": "を",
+          "terms": ["v_mainichi", "v_nani", "p_wo", { "id": "v_suru", "form": "polite_masu" }, "p_ka"],
+          "explanation": "を marks the direct object of transitive verbs. する (to do) is transitive — を marks what is being done: なにをしますか = 'What do you do?' が marks the subject of います/あります, not the object of する."
         }
       ]
     }
