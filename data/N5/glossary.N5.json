@@ -3126,7 +3126,7 @@
       "meaning": "where",
       "type": "vocab",
       "gtype": "pronoun",
-      "lesson_ids": "N5.1",
+      "lesson_ids": "N5.5",
       "notes": ""
     },
     {
@@ -3146,7 +3146,7 @@
       "meaning": "that (over there)",
       "type": "vocab",
       "gtype": "adnominal",
-      "lesson_ids": "N5.1",
+      "lesson_ids": "N5.4",
       "notes": ""
     },
     {
@@ -3240,7 +3240,7 @@
       "type": "vocab",
       "gtype": "pronoun",
       "notes": "",
-      "lesson_ids": "N5.3",
+      "lesson_ids": "N5.5",
       "reading": "ここ"
     },
     {
@@ -3350,7 +3350,7 @@
       "type": "vocab",
       "gtype": "adnominal",
       "notes": "",
-      "lesson_ids": "N5.8",
+      "lesson_ids": "N5.4",
       "reading": "どの"
     },
     {
@@ -3422,6 +3422,476 @@
       "notes": "",
       "lesson_ids": "N5.13",
       "reading": "ゆっくり"
+    },
+    {
+      "id": "p_ohayou_casual",
+      "surface": "おはよう",
+      "reading": "おはよう",
+      "meaning": "good morning (casual)",
+      "type": "phrase",
+      "gtype": "set-phrase",
+      "lesson_ids": "N5.1",
+      "notes": "Casual form of おはようございます. Used with friends, family, and close colleagues."
+    },
+    {
+      "id": "p_konnichiwa",
+      "surface": "こんにちは",
+      "reading": "こんにちは",
+      "meaning": "hello / good afternoon",
+      "type": "phrase",
+      "gtype": "set-phrase",
+      "lesson_ids": "N5.1",
+      "notes": "General daytime greeting. Note: written with は (wa), not わ."
+    },
+    {
+      "id": "p_konbanwa",
+      "surface": "こんばんは",
+      "reading": "こんばんは",
+      "meaning": "good evening",
+      "type": "phrase",
+      "gtype": "set-phrase",
+      "lesson_ids": "N5.1",
+      "notes": "Evening greeting. Note: written with は (wa), not わ."
+    },
+    {
+      "id": "p_oyasuminasai",
+      "surface": "おやすみなさい",
+      "reading": "おやすみなさい",
+      "meaning": "good night",
+      "type": "phrase",
+      "gtype": "set-phrase",
+      "lesson_ids": "N5.1",
+      "notes": "Said when parting in the evening or before going to sleep."
+    },
+    {
+      "id": "p_sumimasen",
+      "surface": "すみません",
+      "reading": "すみません",
+      "meaning": "excuse me / I'm sorry",
+      "type": "phrase",
+      "gtype": "set-phrase",
+      "lesson_ids": "N5.1",
+      "notes": "Used to get attention, apologize, or express gratitude. One of the most versatile polite expressions."
+    },
+    {
+      "id": "v_itsumo",
+      "surface": "いつも",
+      "reading": "いつも",
+      "meaning": "always / all the time",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N5.2",
+      "notes": ""
+    },
+    {
+      "id": "v_yoku",
+      "surface": "よく",
+      "reading": "よく",
+      "meaning": "often / well",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N5.2",
+      "notes": "Can mean 'often' (frequency) or 'well/skillfully' (manner)."
+    },
+    {
+      "id": "v_itsu",
+      "surface": "いつ",
+      "reading": "いつ",
+      "meaning": "when",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.2",
+      "notes": ""
+    },
+    {
+      "id": "v_kore",
+      "surface": "これ",
+      "reading": "これ",
+      "meaning": "this (thing)",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.3",
+      "notes": "Refers to something near the speaker."
+    },
+    {
+      "id": "v_sore",
+      "surface": "それ",
+      "reading": "それ",
+      "meaning": "that (thing)",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.3",
+      "notes": "Refers to something near the listener."
+    },
+    {
+      "id": "v_are",
+      "surface": "あれ",
+      "reading": "あれ",
+      "meaning": "that (thing over there)",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.3",
+      "notes": "Refers to something far from both speaker and listener."
+    },
+    {
+      "id": "v_dore",
+      "surface": "どれ",
+      "reading": "どれ",
+      "meaning": "which (one)",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.3",
+      "notes": "Question word for choosing among three or more items."
+    },
+    {
+      "id": "v_ikura",
+      "surface": "いくら",
+      "reading": "いくら",
+      "meaning": "how much (price)",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.3",
+      "notes": ""
+    },
+    {
+      "id": "v_ikutsu",
+      "surface": "いくつ",
+      "reading": "いくつ",
+      "meaning": "how many / how old",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.3",
+      "notes": "Used for counting or asking age (casual)."
+    },
+    {
+      "id": "v_kono",
+      "surface": "この",
+      "reading": "この",
+      "meaning": "this ~",
+      "type": "vocab",
+      "gtype": "adnominal",
+      "lesson_ids": "N5.4",
+      "notes": "Always followed by a noun. この本 = this book."
+    },
+    {
+      "id": "v_sono",
+      "surface": "その",
+      "reading": "その",
+      "meaning": "that ~",
+      "type": "vocab",
+      "gtype": "adnominal",
+      "lesson_ids": "N5.4",
+      "notes": "Always followed by a noun. その本 = that book (near listener)."
+    },
+    {
+      "id": "v_sumaho",
+      "surface": "スマホ",
+      "reading": "すまほ",
+      "meaning": "smartphone",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.4",
+      "notes": "Short for スマートフォン (smartphone). The abbreviated form is standard in daily use."
+    },
+    {
+      "id": "v_sugu",
+      "surface": "すぐ",
+      "reading": "すぐ",
+      "meaning": "immediately / right away / soon",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N5.4",
+      "notes": ""
+    },
+    {
+      "id": "v_chotto",
+      "surface": "ちょっと",
+      "reading": "ちょっと",
+      "meaning": "a little / a moment / somewhat",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N5.4",
+      "notes": "Versatile word: 'a little' (quantity), 'a moment' (time), or softener for requests/refusals."
+    },
+    {
+      "id": "v_soko",
+      "surface": "そこ",
+      "reading": "そこ",
+      "meaning": "there / that place",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.5",
+      "notes": "A place near the listener."
+    },
+    {
+      "id": "v_asoko",
+      "surface": "あそこ",
+      "reading": "あそこ",
+      "meaning": "over there / that place (far)",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.5",
+      "notes": "A place far from both speaker and listener."
+    },
+    {
+      "id": "v_konbini",
+      "surface": "コンビニ",
+      "reading": "こんびに",
+      "meaning": "convenience store",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.5",
+      "notes": "Short for コンビニエンスストア. The abbreviated form is universal in daily Japanese."
+    },
+    {
+      "id": "v_suupaa",
+      "surface": "スーパー",
+      "reading": "すーぱー",
+      "meaning": "supermarket",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.5",
+      "notes": "Short for スーパーマーケット."
+    },
+    {
+      "id": "v_takushii",
+      "surface": "タクシー",
+      "reading": "たくしー",
+      "meaning": "taxi",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.5",
+      "notes": ""
+    },
+    {
+      "id": "v_resutoran",
+      "surface": "レストラン",
+      "reading": "れすとらん",
+      "meaning": "restaurant",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.7",
+      "notes": ""
+    },
+    {
+      "id": "v_koohii",
+      "surface": "コーヒー",
+      "reading": "こーひー",
+      "meaning": "coffee",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.7",
+      "notes": ""
+    },
+    {
+      "id": "v_juusu",
+      "surface": "ジュース",
+      "reading": "じゅーす",
+      "meaning": "juice / soft drink",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.7",
+      "notes": "In Japanese, ジュース can refer to any non-alcoholic cold drink, not just fruit juice."
+    },
+    {
+      "id": "v_pan",
+      "surface": "パン",
+      "reading": "ぱん",
+      "meaning": "bread",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.7",
+      "notes": "From Portuguese 'pão'. Refers to bread in general."
+    },
+    {
+      "id": "v_sarada",
+      "surface": "サラダ",
+      "reading": "さらだ",
+      "meaning": "salad",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.7",
+      "notes": ""
+    },
+    {
+      "id": "p_itadakimasu",
+      "surface": "いただきます",
+      "reading": "いただきます",
+      "meaning": "bon appétit / I humbly receive",
+      "type": "phrase",
+      "gtype": "set-phrase",
+      "lesson_ids": "N5.7",
+      "notes": "Said before eating. Expresses gratitude for the meal."
+    },
+    {
+      "id": "p_gochisousama",
+      "surface": "ごちそうさまでした",
+      "reading": "ごちそうさまでした",
+      "meaning": "thank you for the meal",
+      "type": "phrase",
+      "gtype": "set-phrase",
+      "lesson_ids": "N5.7",
+      "notes": "Said after eating. Expresses gratitude to the cook and for the food."
+    },
+    {
+      "id": "v_mada",
+      "surface": "まだ",
+      "reading": "まだ",
+      "meaning": "still / not yet",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N5.8",
+      "notes": "With affirmative: 'still' (まだ食べています = still eating). With negative: 'not yet' (まだ食べていません = haven't eaten yet)."
+    },
+    {
+      "id": "v_amari",
+      "surface": "あまり",
+      "reading": "あまり",
+      "meaning": "not very / not much",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N5.8",
+      "notes": "Used with negative verbs/adjectives. あまり高くないです = not very expensive."
+    },
+    {
+      "id": "v_purezento",
+      "surface": "プレゼント",
+      "reading": "ぷれぜんと",
+      "meaning": "present / gift",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.8",
+      "notes": ""
+    },
+    {
+      "id": "v_depaato",
+      "surface": "デパート",
+      "reading": "でぱーと",
+      "meaning": "department store",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.8",
+      "notes": "Short for デパートメントストア."
+    },
+    {
+      "id": "v_kochira",
+      "surface": "こちら",
+      "reading": "こちら",
+      "meaning": "this way / this person (polite)",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.9",
+      "notes": "Polite form of ここ/これ. Also used to politely introduce people: こちらは田中さんです."
+    },
+    {
+      "id": "v_sochira",
+      "surface": "そちら",
+      "reading": "そちら",
+      "meaning": "that way / your direction (polite)",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.9",
+      "notes": "Polite form of そこ/それ."
+    },
+    {
+      "id": "v_achira",
+      "surface": "あちら",
+      "reading": "あちら",
+      "meaning": "that way over there (polite)",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.9",
+      "notes": "Polite form of あそこ/あれ."
+    },
+    {
+      "id": "v_dochira",
+      "surface": "どちら",
+      "reading": "どちら",
+      "meaning": "which way / which (polite)",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.9",
+      "notes": "Polite form of どこ/どれ. Often used in polite questions: どちらさまですか (who are you?)."
+    },
+    {
+      "id": "v_hoteru",
+      "surface": "ホテル",
+      "reading": "ほてる",
+      "meaning": "hotel",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.10",
+      "notes": ""
+    },
+    {
+      "id": "v_nooto",
+      "surface": "ノート",
+      "reading": "のーと",
+      "meaning": "notebook",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.12",
+      "notes": ""
+    },
+    {
+      "id": "v_pen",
+      "surface": "ペン",
+      "reading": "ぺん",
+      "meaning": "pen",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.12",
+      "notes": ""
+    },
+    {
+      "id": "v_tesuto",
+      "surface": "テスト",
+      "reading": "てすと",
+      "meaning": "test / exam",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.12",
+      "notes": ""
+    },
+    {
+      "id": "v_kurasu",
+      "surface": "クラス",
+      "reading": "くらす",
+      "meaning": "class",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.12",
+      "notes": ""
+    },
+    {
+      "id": "v_zenzen",
+      "surface": "ぜんぜん",
+      "reading": "ぜんぜん",
+      "meaning": "not at all / (not) in the least",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N5.14",
+      "notes": "Used with negative verbs/adjectives. ぜんぜんわかりません = I don't understand at all."
+    },
+    {
+      "id": "v_taitei",
+      "surface": "たいてい",
+      "reading": "たいてい",
+      "meaning": "usually / mostly",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N5.14",
+      "notes": ""
+    },
+    {
+      "id": "v_arubaito",
+      "surface": "アルバイト",
+      "reading": "あるばいと",
+      "meaning": "part-time job",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.17",
+      "notes": "From German 'Arbeit'. Often shortened to バイト in casual speech."
     }
   ]
 }
