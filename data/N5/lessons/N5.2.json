@@ -78,7 +78,7 @@
         },
         {
           "label": "Time Expressions",
-          "items": ["v_mainichi", "v_maigetsu", "v_kyou", "v_kongetsu"]
+          "items": ["v_mainichi", "v_maigetsu", "v_kyou", "v_kongetsu", "v_itsumo", "v_yoku", "v_itsu"]
         },
         {
           "label": "Money & People",
@@ -113,15 +113,15 @@
         },
         {
           "spk": "A",
-          "jp": "やまもと先生は 何よう日に いますか。",
-          "en": "On which days is Yamamoto-sensei here?",
-          "terms": ["v_sensei", "p_wa", "v_nanyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
+          "jp": "やまもと先生は いつ いますか。",
+          "en": "When is Yamamoto-sensei here?",
+          "terms": ["v_sensei", "p_wa", "v_itsu", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
         },
         {
           "spk": "B",
-          "jp": "月よう日と 水よう日と 金よう日に います。",
-          "en": "She is here on Monday, Wednesday, and Friday.",
-          "terms": ["v_getsuyoubi", "p_to", "v_suiyoubi", "v_kinyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }]
+          "jp": "いつも 月よう日と 水よう日と 金よう日に います。",
+          "en": "She is always here on Monday, Wednesday, and Friday.",
+          "terms": ["v_itsumo", "v_getsuyoubi", "p_to", "v_suiyoubi", "v_kinyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }]
         }
       ]
     },
@@ -175,9 +175,9 @@
       "lines": [
         {
           "spk": "B",
-          "jp": "りきぞさん、お金が ありますか。",
-          "en": "Rikizo-san, do you have money?",
-          "terms": ["v_san", "v_okane", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "p_ka"]
+          "jp": "りきぞさん、よく お金が ありますか。",
+          "en": "Rikizo-san, do you often have money?",
+          "terms": ["v_san", "v_yoku", "v_okane", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "p_ka"]
         },
         {
           "spk": "A",
