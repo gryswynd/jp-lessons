@@ -89,6 +89,7 @@
         {
           "id": "N5.5",
           "title": "Going & Places",
+          "file": "data/N5/lessons/N5.5.json",
           "kanji": [
             "行",
             "来",
@@ -264,6 +265,13 @@
           "file": "data/N5/grammar/G4.json",
           "unlocksAfter": "N5.5",
           "icon": "📌"
+        },
+        {
+          "id": "G5",
+          "title": "Polite Verb Forms — ます形",
+          "file": "data/N5/grammar/G5.json",
+          "unlocksAfter": "N5.5",
+          "icon": "🔤"
         }
       ],
       "reviews": [
@@ -282,7 +290,8 @@
         { "lesson": "N5.1", "file": "data/N5/compose/compose.N5.1.json" },
         { "lesson": "N5.2", "file": "data/N5/compose/compose.N5.2.json" },
         { "lesson": "N5.3", "file": "data/N5/compose/compose.N5.3.json" },
-        { "lesson": "N5.4", "file": "data/N5/compose/compose.N5.4.json" }
+        { "lesson": "N5.4", "file": "data/N5/compose/compose.N5.4.json" },
+        { "lesson": "N5.5", "file": "data/N5/compose/compose.N5.5.json" }
       ],
       "stories": [
         {
