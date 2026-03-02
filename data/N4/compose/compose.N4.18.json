@@ -1,0 +1,188 @@
+{
+  "contentVersion": "1.0.0",
+  "id": "compose.N4.18",
+  "lesson": "N4.18",
+  "level": "N4",
+  "title": "Studying by Moonlight",
+  "titleJp": "月光のよる",
+  "emoji": "🌙",
+  "theme": "Write about a stormy evening spent studying hard — describe the wind, the light you work by, and the moonlight that comes after the storm.",
+  "prompts": [
+    {
+      "prompt": "Start your composition. Write what you are studying tonight and how you feel about it.",
+      "targets": [
+        { "id": "v_benkyou", "count": 1 }
+      ],
+      "model": "今日のよるはにほんごを勉強します。勉強がとても好きです。",
+      "vocabPool": [
+        "v_benkyou", "v_nihongo", "v_tanoshii", "v_suki", "v_totemo",
+        "v_kyou", "v_jikan", "v_mainichi", "v_iru", "v_watashi",
+        "v_isogashii", "g_desu"
+      ]
+    },
+    {
+      "prompt": "Continue your composition. Write about the weather outside tonight — is the wind strong?",
+      "targets": [
+        { "id": "v_kaze", "count": 1 },
+        { "id": "v_tsuyoi", "count": 1 }
+      ],
+      "model": "外は強い風があります。少し寒いですが、まだ勉強します。",
+      "vocabPool": [
+        "v_kaze", "v_tsuyoi", "v_yowai", "v_tenki", "v_samui",
+        "v_soto", "v_aru", "v_mada", "v_benkyou", "v_sukoshi", "g_desu"
+      ]
+    },
+    {
+      "prompt": "The wind is now a full gale! Write about it — does it make you feel timid or unsure?",
+      "targets": [
+        { "id": "v_kyoufuu", "count": 1 },
+        { "id": "v_yowaki", "count": 1 }
+      ],
+      "model": "外は強風です。弱気ですが、まだ勉強できます。",
+      "vocabPool": [
+        "v_kyoufuu", "v_yowaki", "v_kaze", "v_tsuyoi", "v_kibun",
+        "v_soto", "v_mada", "v_dekiru", "v_benkyou", "v_totemo", "g_desu"
+      ]
+    },
+    {
+      "prompt": "Write about the inner strength you have to keep going. You may feel weak, but you are not giving up.",
+      "targets": [
+        { "id": "v_chikara", "count": 1 },
+        { "id": "v_yowai", "count": 1 }
+      ],
+      "model": "少し弱いですが、力があります。勉強する力は強いです。",
+      "vocabPool": [
+        "v_chikara", "v_yowai", "v_tsuyoi", "v_benkyou", "v_aru",
+        "v_sukoshi", "v_mada", "v_totemo", "v_tsukareru", "g_desu"
+      ]
+    },
+    {
+      "prompt": "Write about the light you are studying by — electric light keeps the room bright. Describe the electric power around you.",
+      "targets": [
+        { "id": "v_hikari", "count": 1 },
+        { "id": "v_denryoku", "count": 1 }
+      ],
+      "model": "電気の光で勉強しています。電力でへやが明るいです。",
+      "vocabPool": [
+        "v_hikari", "v_denryoku", "v_denki", "v_akarui", "v_kurai",
+        "v_benkyou", "v_iru", "v_tsukau", "v_chikara", "g_desu"
+      ]
+    },
+    {
+      "prompt": "Lightning flashes outside! Write about what you see during the storm — is the lightning bright or powerful?",
+      "targets": [
+        { "id": "v_denkou", "count": 1 }
+      ],
+      "model": "外に電光があります。電光の光はとても強いです。",
+      "vocabPool": [
+        "v_denkou", "v_hikari", "v_tsuyoi", "v_kaze", "v_soto",
+        "v_aru", "v_miru", "v_kyoufuu", "v_yuuryokusha", "g_desu"
+      ]
+    },
+    {
+      "prompt": "The storm calms and moonlight fills the room. Write about the beautiful moonlight.",
+      "targets": [
+        { "id": "v_gekkou", "count": 1 }
+      ],
+      "model": "今は風が弱いです。月光がきれいです。月光の光でへやが明るいです。",
+      "vocabPool": [
+        "v_gekkou", "v_hikari", "v_kaze", "v_yowai", "v_kirei",
+        "v_akarui", "v_kyou", "v_totemo", "v_ii", "g_desu"
+      ]
+    },
+    {
+      "prompt": "The next morning, sunlight fills the room. Write about the sunlight and how you feel — are you confident and strong-minded after a night of hard studying?",
+      "targets": [
+        { "id": "v_nikkou", "count": 1 },
+        { "id": "v_tsuyoki", "count": 1 }
+      ],
+      "model": "朝、日光がきれいです。強気な気分です。強い力で、まだ勉強したいです。",
+      "vocabPool": [
+        "v_nikkou", "v_tsuyoki", "v_asa", "v_kibun", "v_tsuyoi",
+        "v_chikara", "v_benkyou", "v_ureshii", "v_tanoshii", "v_ii", "g_desu"
+      ]
+    }
+  ],
+  "challengePrompts": [],
+  "particles": [
+    "p_wa", "p_ga", "p_wo", "p_no", "p_ni", "p_de", "p_mo", "p_to",
+    "p_kara", "p_made", "p_e", "p_ka", "p_yo", "p_ne",
+    "p_dewa", "p_ja", "p_ya", "p_made_ni",
+    "p_node", "p_nagara",
+    "p_yori", "p_hodo", "p_kurai",
+    "p_dake", "p_shika", "p_bakari", "p_demo",
+    "g_desu"
+  ],
+  "conjugations": [
+    {
+      "pattern": "[noun] + です",
+      "meaning": "is / am / are (polite)",
+      "examples": ["勉強は楽しいです", "光は強いです"]
+    },
+    {
+      "pattern": "[noun] + でした",
+      "meaning": "was (polite past)",
+      "examples": ["今日の風は強風でした", "電光はとてもきれいでした"]
+    },
+    {
+      "pattern": "[noun] + ではありません",
+      "meaning": "is not (polite formal)",
+      "examples": ["弱気ではありません", "強風ではありません"]
+    },
+    {
+      "pattern": "[い-adj] + です",
+      "meaning": "is [adj] (polite)",
+      "examples": ["強いです", "弱いです", "明るいです"]
+    },
+    {
+      "pattern": "[い-adj]〜い → 〜かったです",
+      "meaning": "was [adj] (polite past)",
+      "examples": ["強かったです", "弱かったです", "明るかったです"]
+    },
+    {
+      "pattern": "[い-adj]〜い → 〜くないです",
+      "meaning": "is not [adj] (polite negative)",
+      "examples": ["強くないです", "弱くないです"]
+    },
+    {
+      "pattern": "[な-adj] + です",
+      "meaning": "is [na-adj] (polite)",
+      "examples": ["強気です", "弱気です"]
+    },
+    {
+      "pattern": "[verb]〜ます",
+      "meaning": "verb present / future (polite)",
+      "examples": ["勉強します", "電気を使います"]
+    },
+    {
+      "pattern": "[verb]〜ました",
+      "meaning": "verb past (polite)",
+      "examples": ["勉強しました", "電気を使いました"]
+    },
+    {
+      "pattern": "[verb]〜ています",
+      "meaning": "is currently doing [verb] (progressive)",
+      "examples": ["勉強しています", "電気を使っています"]
+    },
+    {
+      "pattern": "[verb ます-stem]〜ながら",
+      "meaning": "while doing [verb] (simultaneous actions)",
+      "examples": ["音楽を聞きながら勉強します", "月光を見ながら勉強します"]
+    },
+    {
+      "pattern": "[verb]〜たり〜たりします",
+      "meaning": "doing things like [verb] and [verb] (representative listing)",
+      "examples": ["勉強したり、休んだりします", "光を見たり、風を聞いたりします"]
+    },
+    {
+      "pattern": "[verb]〜たいです",
+      "meaning": "want to [verb]",
+      "examples": ["もっと勉強したいです", "月光を見たいです"]
+    },
+    {
+      "pattern": "[verb]〜できます / 〜えます / 〜られます",
+      "meaning": "can [verb] (potential form)",
+      "examples": ["勉強できます", "電気を使えます"]
+    }
+  ]
+}
