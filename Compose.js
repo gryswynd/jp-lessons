@@ -68,9 +68,18 @@ window.ComposeModule = {
             .c-menu-tag-done { background: #e8f5e9; color: #2e7d32; }
             .c-menu-tag-draft { background: #e3f2fd; color: #1565c0; }
 
-            /* LEVEL GROUPS */
-            .c-lvl-group { margin-bottom: 16px; }
-            .c-lvl-title-bar { font-weight: 800; font-size: 1rem; color: var(--c-primary-dark); margin-bottom: 8px; padding: 0 4px; }
+            /* LEVEL PICKER */
+            .c-level-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px; }
+            .c-level-card {
+                background: white; padding: 28px 24px; border-radius: 20px; cursor: pointer;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s;
+                border: 2px solid #e0f2f1; text-align: center;
+            }
+            .c-level-card:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(0,137,123,0.15); border-color: var(--c-primary); }
+            .c-level-name { font-weight: 900; font-size: 1.4rem; color: var(--c-primary); margin-bottom: 6px; }
+            .c-level-count { font-size: 0.85rem; color: #a4b0be; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+            .c-level-back-btn { background: transparent; border: none; color: var(--c-primary); font-weight: 700; cursor: pointer; padding: 0 0 12px 0; font-size: 0.9rem; display: block; font-family: inherit; }
+            .c-level-back-btn:hover { text-decoration: underline; }
             .c-menu-empty { padding: 20px; text-align: center; color: #a4b0be; font-weight: 600; font-size: 0.9rem; }
 
             /* COMPOSE HEADER */
@@ -364,6 +373,11 @@ window.ComposeModule = {
         if (!menuEl) return;
         menuEl.classList.remove('c-hidden');
 
+        if (COMPOSE_FILES.length === 0) {
+            menuEl.innerHTML = `<div class="c-card" style="padding:1rem;"><div class="c-menu-empty">No compositions available yet.</div></div>`;
+            return;
+        }
+
         // Group compose files by level
         const byLevel = {};
         COMPOSE_FILES.forEach(cf => {
@@ -371,56 +385,84 @@ window.ComposeModule = {
             if (!byLevel[lvl]) byLevel[lvl] = [];
             byLevel[lvl].push(cf);
         });
+        ComposeApp._byLevel = byLevel;
+
+        const levels = ['N5', 'N4'].filter(l => byLevel[l] && byLevel[l].length);
 
         let html = '';
-        ['N5', 'N4'].forEach(lvl => {
-            const files = byLevel[lvl];
-            if (!files || files.length === 0) return;
-
-            html += `<div class="c-lvl-group"><div class="c-lvl-title-bar">${lvl} Compositions</div>`;
-            files.forEach(cf => {
-                const totalPrompts = (cf.prompts || []).length + (cf.challengePrompts || []).length;
-                const draftState = loadDraftState(cf);
-                const meta = lessonMeta.get(cf.lesson);
-
-                // Check completion status from draft
-                let statusTag = '';
-                if (draftState.text) {
-                    const total = getAllPrompts(cf).length;
-                    if (draftState.promptIndex >= total) {
-                        statusTag = '<span class="c-menu-tag c-menu-tag-done">Complete</span>';
-                    } else {
-                        statusTag = '<span class="c-menu-tag c-menu-tag-draft">Draft saved</span>';
-                    }
-                }
-
-                html += `
-                    <div class="c-menu-card" onclick="ComposeApp.startCompose('${escHtml(cf.id)}')">
-                        <div class="c-menu-emoji">${cf.emoji || '✏️'}</div>
-                        <div class="c-menu-info">
-                            <div class="c-menu-title">${escHtml(cf.title)}</div>
-                            <span class="c-menu-lesson">${escHtml(cf.lesson)}</span>
-                            <div class="c-menu-theme">${escHtml(cf.theme || '')}</div>
-                            <div class="c-menu-meta">
-                                <span class="c-menu-tag c-menu-tag-count">${totalPrompts} prompt${totalPrompts !== 1 ? 's' : ''}</span>
-                                ${statusTag}
-                            </div>
-                        </div>
-                    </div>`;
-            });
-            html += '</div>';
+        levels.forEach(level => {
+            const count = byLevel[level].length;
+            html += `
+                <div class="c-level-card" data-level="${level}">
+                    <div class="c-level-name">JLPT ${level}</div>
+                    <div class="c-level-count">${count} composition${count !== 1 ? 's' : ''}</div>
+                </div>
+            `;
         });
-
-        if (COMPOSE_FILES.length === 0) {
-            html = '<div class="c-menu-empty">No compositions available yet.</div>';
-        }
 
         menuEl.innerHTML = `
             <div class="c-card" style="padding:1rem;">
-                <div class="c-lbl" style="color:var(--c-primary);margin-top:0;">Choose a Composition</div>
+                <div class="c-lbl" style="color:var(--c-primary);margin-top:0;">Choose a Level</div>
+                <div class="c-level-grid">${html}</div>
+            </div>
+        `;
+
+        menuEl.querySelectorAll('.c-level-card').forEach(card => {
+            card.onclick = () => ComposeApp._showLevel(card.dataset.level);
+        });
+    };
+
+    // --- LEVEL VIEW ---
+    ComposeApp._showLevel = function(level) {
+        const byLevel = ComposeApp._byLevel || {};
+        const files = byLevel[level] || [];
+        const menuEl = document.getElementById('c-view-menu');
+        if (!menuEl) return;
+
+        const allLevels = ['N5', 'N4'].filter(l => byLevel[l] && byLevel[l].length);
+        let html = '';
+        if (allLevels.length > 1) {
+            html += `<button class="c-level-back-btn" id="c-back-to-levels">← Levels</button>`;
+        }
+
+        files.forEach(cf => {
+            const totalPrompts = (cf.prompts || []).length + (cf.challengePrompts || []).length;
+            const draftState = loadDraftState(cf);
+
+            let statusTag = '';
+            if (draftState.text) {
+                const total = getAllPrompts(cf).length;
+                if (draftState.promptIndex >= total) {
+                    statusTag = '<span class="c-menu-tag c-menu-tag-done">Complete</span>';
+                } else {
+                    statusTag = '<span class="c-menu-tag c-menu-tag-draft">Draft saved</span>';
+                }
+            }
+
+            html += `
+                <div class="c-menu-card" onclick="ComposeApp.startCompose('${escHtml(cf.id)}')">
+                    <div class="c-menu-emoji">${cf.emoji || '✏️'}</div>
+                    <div class="c-menu-info">
+                        <div class="c-menu-title">${escHtml(cf.title)}</div>
+                        <span class="c-menu-lesson">${escHtml(cf.lesson)}</span>
+                        <div class="c-menu-theme">${escHtml(cf.theme || '')}</div>
+                        <div class="c-menu-meta">
+                            <span class="c-menu-tag c-menu-tag-count">${totalPrompts} prompt${totalPrompts !== 1 ? 's' : ''}</span>
+                            ${statusTag}
+                        </div>
+                    </div>
+                </div>`;
+        });
+
+        menuEl.innerHTML = `
+            <div class="c-card" style="padding:1rem;">
+                <div class="c-lbl" style="color:var(--c-primary);margin-top:0;">JLPT ${level} Compositions</div>
                 ${html}
             </div>
         `;
+
+        const backBtn = document.getElementById('c-back-to-levels');
+        if (backBtn) backBtn.onclick = () => ComposeApp.showMenu();
     };
 
     // --- COMPOSE VIEW ---
