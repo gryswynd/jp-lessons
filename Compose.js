@@ -724,13 +724,19 @@ window.ComposeModule = {
             if (isChallenge) cls += ' challenge';
 
             const badge = isPast ? '✓' : (isActive && isCurrentMet ? '✓' : (i + 1));
-            const promptText = (p.prompt || '').substring(0, 60) + ((p.prompt || '').length > 60 ? '...' : '');
             const challengeTag = isChallenge ? '<span class="c-timeline-challenge-tag">Challenge</span>' : '';
 
-            html += `<div class="${cls}">
+            if (isLocked) {
+                html += `<div class="${cls}">
+                <div class="c-timeline-badge">${badge}</div>
+            </div>`;
+            } else {
+                const promptText = (p.prompt || '').substring(0, 60) + ((p.prompt || '').length > 60 ? '...' : '');
+                html += `<div class="${cls}">
                 <div class="c-timeline-badge">${badge}</div>
                 <div class="c-timeline-prompt">${escHtml(promptText)} ${challengeTag}</div>
             </div>`;
+            }
         });
 
         return html;
