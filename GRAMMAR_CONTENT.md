@@ -1,6 +1,6 @@
 # GRAMMAR_CONTENT.md — Grammar Lesson Content Creation Guide
 
-> **Purpose:** This document tells the CLAUDE.md multi-agent pipeline everything it needs to create grammar lesson JSON files (G1–G20). Feed this to Claude Code **after** the Grammar.js module has been built. The Project Manager agent (Agent 1) should read this document before scoping any grammar lesson.
+> **Purpose:** This document tells the CLAUDE.md multi-agent pipeline everything it needs to create grammar lesson JSON files (G1–G22). Feed this to Claude Code **after** the Grammar.js module has been built. The Project Manager agent (Agent 1) should read this document before scoping any grammar lesson.
 
 ---
 
@@ -13,7 +13,7 @@
 5. [Lesson Flow Convention](#lesson-flow-convention)
 6. [Term Tagging in Grammar Lessons](#term-tagging-in-grammar-lessons)
 7. [Full Lesson Map: N5 Grammar (G1–G11)](#full-lesson-map-n5-grammar-g1g11)
-8. [Full Lesson Map: N4 Grammar (G12–G20)](#full-lesson-map-n4-grammar-g12g20)
+8. [Full Lesson Map: N4 Grammar (G12–G22)](#full-lesson-map-n4-grammar-g12g22)
 9. [Content Brief Template for Grammar](#content-brief-template-for-grammar)
 10. [Quality Gates for Grammar Content](#quality-gates-for-grammar-content)
 11. [Common Failure Modes for Grammar Content](#common-failure-modes-for-grammar-content)
@@ -26,7 +26,7 @@ Grammar lessons use a different module (`Grammar.js`) with its own section types
 
 | Aspect | Kanji Lessons | Grammar Lessons |
 |---|---|---|
-| ID format | `N5.1`, `N4.7` | `G1`, `G2`, ... `G20` |
+| ID format | `N5.1`, `N4.7` | `G1`, `G2`, ... `G22` |
 | File path | `data/N5/lessons/N5.X.json` | `data/N5/grammar/G1.json` or `data/N4/grammar/G12.json` |
 | Type field | `"type"` not present (implied) | `"type": "grammar"` required |
 | Section types | warmup, kanjiGrid, vocabList, conversation, reading, drills | grammarIntro, grammarRule, grammarTable, grammarComparison, annotatedExample, conjugationDrill, patternMatch, sentenceTransform, fillSlot, conversation, drills |
@@ -83,7 +83,7 @@ If a concept genuinely requires a word not in the glossary, write the word in **
 | Field | Type | Required | Notes |
 |---|---|---|---|
 | `contentVersion` | string | ✅ | Always `"1.0.0"` |
-| `id` | string | ✅ | `G1` through `G20` |
+| `id` | string | ✅ | `G1` through `G22` |
 | `type` | string | ✅ | Always `"grammar"` |
 | `title` | string | ✅ | Display title |
 | `meta.level` | string | ✅ | `"N5"` or `"N4"` |
@@ -636,8 +636,8 @@ Agent 3 does **not** run term-ID verification on these sections. Instead, Agent 
 - じゃ as a standard spoken contraction of では (not slang, not incorrect)
 
 **What NOT to teach in G1:**
-- ~~Nominalization rules (だ→な before の, である before こと)~~ → Deferred. Requires の particle (G2) and nominalizer concepts. Teach in G8+ or a dedicated lesson.
-- ~~なんです / のです explanatory form~~ → Deferred. Same prerequisite issue.
+- ~~Nominalization rules (だ→な before の, である before こと)~~ → Deferred. Requires の particle (G2) and nominalizer concepts.
+- ~~なんです / のです explanatory form~~ → Deferred to G9 (Plain Forms & Basic Connectors), where plain form prerequisite is established.
 - Verb conjugation of any kind — G1 is strictly about the copula with nouns and adjectives.
 
 **Recommended sections:**
@@ -919,6 +919,12 @@ Build examples around self-introduction, family description, and asking about pe
   - する → して, くる → きて
 - た-form follows identical rules but with た/だ instead of て/で
 - Usage preview: てください (polite request), ないでください (negative request)
+- ～なさい (firm polite command):
+  - Verb ます-stem + なさい (食べなさい — "Eat." / "You should eat.")
+  - Softer than plain commands but more directive than てください
+  - Used by teachers, parents, and authority figures to give instructions
+  - Does NOT attach to the て-form — attaches to the ます-stem directly
+  - Negative: ～なさい has no standard negative; use ないでください for "don't"
 
 **Recommended sections:**
 1. `grammarIntro`
@@ -927,16 +933,17 @@ Build examples around self-introduction, family description, and asking about pe
 4. `grammarRule` — U-verb て-form (by ending group, with the chart as reference)
 5. `grammarRule` — 行く exception + irregular て-forms
 6. `grammarRule` — てください and ないでください
-7. `annotatedExample` — て-form in request contexts
-8. `conversation` — dialogue with てください requests
-9. `conjugationDrill` — dictionary form → て-form (heavy U-verb focus, include 行く)
-10. `drills` — mixed MCQ
+7. `grammarRule` — ～なさい (firm polite command using ます-stem)
+8. `annotatedExample` — て-form in request and command contexts
+9. `conversation` — dialogue with てください and なさい usage
+10. `conjugationDrill` — dictionary form → て-form (heavy U-verb focus, include 行く)
+11. `drills` — mixed MCQ
 
 **Available vocabulary context:** Through N5.5. Include all available verbs for maximum drill variety.
 
 ---
 
-### G8 — Progressive, Desire & Suggestions
+### G8 — Progressive, Desire, Suggestions & Conjecture
 
 | Field | Value |
 |---|---|
@@ -944,7 +951,7 @@ Build examples around self-introduction, family description, and asking about pe
 | **Level** | N5 |
 | **Unlocks after** | N5.8 |
 | **Icon** | 🎯 |
-| **Estimated minutes** | 20 |
+| **Estimated minutes** | 25 |
 | **Grammar forms** | `te_form`, `desire_tai`, `polite_volitional_mashou` |
 
 **What to teach:**
@@ -961,11 +968,13 @@ Build examples around self-introduction, family description, and asking about pe
 - ましょう / ましょうか (let's / shall we):
   - ましょう: suggestion/invitation (行きましょう — let's go)
   - ましょうか: offer/question (持ちましょうか — shall I carry it?)
-- のです / なんです (explanatory emphasis):
-  - だ changes to な before の/ん: 先生なんです (It's that [he] is a teacher)
-  - Used to explain, justify, or gently emphasize
-  - Polite: ～なんです / ～のです
-  - Casual: ～なんだ / ～のだ (often shortened to ～んだ)
+- でしょう / だろう (conjecture / probability):
+  - でしょう: polite conjecture — 明日は雨でしょう (It will probably rain tomorrow)
+  - だろう: plain conjecture — 明日は雨だろう (same meaning, more direct/casual)
+  - Used to express what the speaker guesses or assumes to be likely
+  - Rising intonation でしょう↑ turns it into a rhetorical question seeking agreement
+  - Note: だろう is more direct; でしょう is safer when uncertain
+  - **NOT to be confused with ましょう:** ましょう is a volitional (let's do); でしょう is a statement about probability
 
 **Recommended sections:**
 1. `grammarIntro`
@@ -973,16 +982,18 @@ Build examples around self-introduction, family description, and asking about pe
 3. `grammarRule` — ている resultant state
 4. `grammarRule` — たい desire
 5. `grammarRule` — ましょう suggestions
-6. `annotatedExample` — all three patterns in context
-7. `conversation` — planning dialogue using all three
-8. `sentenceTransform` — plain form → progressive / desire / suggestion
-9. `drills` — mixed MCQ
+6. `grammarRule` — でしょう/だろう conjecture (with distinction from ましょう)
+7. `grammarComparison` — でしょう vs だろう (register difference, same meaning)
+8. `annotatedExample` — all patterns in context
+9. `conversation` — planning dialogue incorporating guesses and suggestions
+10. `sentenceTransform` — plain form → progressive / desire / suggestion
+11. `drills` — mixed MCQ
 
 **Available vocabulary context:** Through N5.8. Richer verb vocabulary available by this point.
 
 ---
 
-### G9 — Plain / Informal Forms
+### G9 — Plain Forms & Basic Connectors
 
 | Field | Value |
 |---|---|
@@ -990,10 +1001,14 @@ Build examples around self-introduction, family description, and asking about pe
 | **Level** | N5 |
 | **Unlocks after** | N5.9 |
 | **Icon** | 👋 |
-| **Estimated minutes** | 25 |
+| **Estimated minutes** | 30 |
 | **Grammar forms** | `plain_past`, `plain_negative`, `plain_past_negative` |
 
+This is the pivotal lesson where students transition from polite-only speech to real conversational Japanese. By the end of G9 students can form compound sentences, express reason, concession, and give commands — all the tools needed to move beyond single-clause polite speech throughout N4.
+
 **What to teach:**
+
+*Plain form conjugation:*
 - Plain present: dictionary form (食べる, 話す, する, くる)
 - Plain past: た-form (食べた, 話した, した, きた) — references G7
 - Plain negative:
@@ -1004,16 +1019,57 @@ Build examples around self-introduction, family description, and asking about pe
 - Plain past negative: ない → なかった (食べなかった, 話さなかった)
 - When to use plain vs polite: with friends/family, in casual settings, in subordinate clauses
 
+*Clause connectors (using plain form):*
+- が — "but" (clause-linking, formal/polite): 行きたいですが、時間がありません
+  - Teaches the high-frequency connector that students encounter from day one of N4 content
+  - が as "but" attaches mid-sentence to clause-ending forms (polite or plain)
+  - Not the same as が subject marker (G2) — different grammar role entirely
+- けど / けれど — "but" (informal/casual equivalent): 行きたいけど、時間がない
+  - けど is casual spoken Japanese; けれど is slightly more formal but less stiff than が
+  - Both connect two clauses with a contrasting or softening relationship
+  - Common as sentence-enders for polite softening: ～んですけど... (trailing off)
+- から — "because" (reason clause + から): 暑いから、冷たい水を飲みます (Because it's hot, I'll drink cold water)
+  - Reason clause comes FIRST in Japanese (opposite of English word order)
+  - Plain form + から in casual speech; polite form + から in polite speech
+  - Note: から was taught in G3 as a starting-point particle ("from"). This is a different role — teach the distinction explicitly.
+- ので — "because" (softer, more objective): 暑いので、冷たい水を飲みます
+  - More formal and indirect than から; often preferred in writing and polite speech
+  - のに distinction preview: ので explains reason; のに (G17) expresses "even though"
+  - Uses plain form + ので (but na-adjective/noun + な + ので)
+
+*Plain commands:*
+- Plain imperative (strong/blunt):
+  - RU-verbs: drop る, add ろ (食べろ — "Eat!")
+  - U-verbs: shift to え-column (話せ — "Speak!", 書け — "Write!")
+  - する → しろ, くる → こい
+  - ⚠ Usually considered rude; used by anime characters, drill sergeants, very close friends jokingly
+- Informal negative command ～な (plain prohibition):
+  - Dictionary form + な: 食べるな — "Don't eat!" (strong/blunt prohibition)
+  - ⚠ Also rude/very direct; used in emergencies or emphatic prohibitions
+  - Contrast: ないでください (G7) is the polite version; ～な is the blunt plain version
+
+*Explanatory form のです / なんです:*
+- だ changes to な before の/ん: 先生なんです (It's that [he] is a teacher)
+- Used to explain, justify, or gently emphasize
+- Polite: ～なんです / ～のです
+- Casual: ～なんだ / ～のだ (often shortened to ～んだ)
+- Prerequisite: requires plain form knowledge (taught above) since plain form + の/ん is the construction
+
 **Recommended sections:**
 1. `grammarIntro`
 2. `grammarTable` — complete plain form chart (present/past/negative/past-negative × RU/U/する/くる)
 3. `grammarRule` — plain negative formation (with the あ-column shift)
 4. `grammarComparison` — polite vs plain side-by-side
-5. `grammarRule` — when to use plain forms (social register)
-6. `conversation` — same scenario in formal then informal versions
-7. `conjugationDrill` — dictionary form → plain negative
-8. `sentenceTransform` — polite → plain conversion
-9. `drills` — mixed MCQ
+5. `grammarRule` — が (but) and けど as clause connectors (explain distinction from が subject marker)
+6. `grammarRule` — から and ので (because) — reason clause pattern; distinguish から as "from" (G3) vs "because"
+7. `grammarComparison` — から vs ので (same meaning, different nuance and formality)
+8. `grammarRule` — plain commands (～ろ/～え) and plain prohibition (～な) — with strong warnings about register
+9. `grammarRule` — のです/なんです (explanatory) — requires plain form as prerequisite
+10. `conversation` — same scenario in formal then informal versions, incorporating が/けど/から naturally
+11. `conjugationDrill` — dictionary form → plain negative
+12. `sentenceTransform` — polite → plain conversion; combine two clauses with が/から
+13. `fillSlot` — choose が/けど/から/ので in context
+14. `drills` — mixed MCQ
 
 **Available vocabulary context:** Through N5.9.
 
@@ -1098,7 +1154,7 @@ Build examples around self-introduction, family description, and asking about pe
 
 ---
 
-## Full Lesson Map: N4 Grammar (G12–G20)
+## Full Lesson Map: N4 Grammar (G12–G22)
 
 > **Note:** The exact `unlocksAfter` lesson for N4 grammar should be determined when the N4 lessons are being built. The values below are approximate placements. The user will set final values.
 
@@ -1139,11 +1195,65 @@ Build examples around self-introduction, family description, and asking about pe
 
 ---
 
-### G13 — Comparison & Degree (より, ほう, ほど, くらい)
+### G13 — Give & Receive (あげる / もらう / くれる)
 
 | Field | Value |
 |---|---|
 | **ID** | `G13` |
+| **Level** | N4 |
+| **Unlocks after** | ~N4.5 (TBD) |
+| **Icon** | 🎁 |
+| **Estimated minutes** | 25 |
+| **Grammar forms** | `te_form` |
+
+**What to teach:**
+
+*The three core give/receive verbs:*
+- あげる — give (I/insider give to someone else or an outsider):
+  - わたしは友だちにプレゼントをあげます (I give a present to my friend)
+  - Direction: speaker/insider → recipient
+- くれる — give (someone gives TO me or my insider group):
+  - 友だちはわたしにプレゼントをくれます (My friend gives a present to me)
+  - Direction: giver → speaker/insider (the beneficiary perspective is "me")
+  - Key distinction: same physical transfer as あげる, but told from the receiving side's perspective
+- もらう — receive (I/insider receive from someone):
+  - わたしは友だちにプレゼントをもらいます (I receive a present from my friend)
+  - The giver is marked with に (or から for more distance)
+
+*Perspective is everything:* The same gift-giving event can be described with あげる (giver's view), くれる (receiver's view emphasizing the benefit to me), or もらう (receiver actively acquiring).
+
+*て-form + give/receive (doing something as a favor):*
+- て-form + あげる — do something for someone (you → them): 教えてあげる (I'll explain it for you)
+- て-form + くれる — someone does something for me (them → me): 教えてくれた (they explained it for me)
+- て-form + もらう — receive the benefit of someone doing something: 教えてもらった (I had them explain it to me / got them to explain)
+
+*Honorific/humble variants (introduce as reference — active use is N3+):*
+- さしあげる — humble あげる (I humbly give to a superior)
+- いただく — humble もらう (I humbly receive from a superior)
+- くださる → ください — honorific くれる (a superior gives to me); てください is the request form already taught in G7
+
+**Recommended sections:**
+1. `grammarIntro` — the Japanese "gift economy" of verbs; why directionality matters
+2. `grammarRule` — あげる (giving out from speaker/insider group)
+3. `grammarRule` — くれる (someone gives to me/insider — benefit perspective)
+4. `grammarComparison` — あげる vs くれる (same action, different perspective)
+5. `grammarRule` — もらう (I receive — active acquisition framing)
+6. `grammarTable` — full give/receive chart (plain + honorific/humble variants as reference)
+7. `grammarRule` — て-form + あげる/もらう/くれる (doing favors)
+8. `annotatedExample` — give/receive in daily scenarios (gifts, helping, favors)
+9. `conversation` — gift-giving scene, asking for help, expressing thanks
+10. `fillSlot` — choose あげる/くれる/もらう in context
+11. `drills` — mixed MCQ
+
+**Available vocabulary context:** Through ~N4.5. The verbs あげる, もらう, くれる may be written in hiragana if not yet in the glossary; add inline glosses. くださる is already known as ください from G7 — teach the connection explicitly.
+
+---
+
+### G14 — Comparison & Degree (より, ほう, ほど, くらい)
+
+| Field | Value |
+|---|---|
+| **ID** | `G14` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.5 (TBD) |
 | **Icon** | ⚖️ |
@@ -1170,13 +1280,13 @@ Build examples around self-introduction, family description, and asking about pe
 
 ---
 
-### G14 — Limiting Particles (だけ, しか, ばかり, でも)
+### G15 — Limiting Particles (だけ, しか, ばかり, でも)
 
 | Field | Value |
 |---|---|
-| **ID** | `G14` |
+| **ID** | `G15` |
 | **Level** | N4 |
-| **Unlocks after** | ~N4.14 (TBD) |
+| **Unlocks after** | ~N4.7 (TBD) |
 | **Icon** | 🔒 |
 | **Estimated minutes** | 20 |
 | **Particles** | `だけ`, `しか`, `ばかり`, `でも` |
@@ -1201,24 +1311,31 @@ Build examples around self-introduction, family description, and asking about pe
 
 ---
 
-### G15 — Connecting Actions (てから, まえに, ながら, ために, ので)
+### G16 — Connecting Actions (てから, まえに, ながら, ために, ～たり)
 
 | Field | Value |
 |---|---|
-| **ID** | `G15` |
+| **ID** | `G16` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.10 (TBD) |
 | **Icon** | ⛓️ |
 | **Estimated minutes** | 25 |
-| **Grammar forms** | `te_form` |
+| **Grammar forms** | `te_form`, `tari_form` |
 
 **What to teach:**
 - てから — after doing: 食べてから出かける (go out after eating)
 - あとで — after (more casual): 食べたあとで (after eating)
 - まえに — before doing: 食べるまえに (before eating) — note: verb stays in dictionary form
-- から / ので — because: 暑いから (because it's hot); 暑いので (because it's hot — more formal/soft)
 - ために — in order to: 勉強するために (in order to study)
 - ながら — while doing simultaneously: 音楽を聞きながら勉強する (study while listening to music)
+- ～たり～たりする — non-exhaustive action listing:
+  - た-form + り, repeated: 食べたり飲んだりする (do things like eat and drink)
+  - Implies the list is not exhaustive — "among other things"
+  - Ends with する (or します in polite form)
+  - Commonly used to describe a typical day or weekend activities
+  - Formation: same sound-change rules as た-form (G7); just add り instead of nothing
+
+**Note:** から and ので (because) were taught as basic connectors in G9. G16 focuses on sequential, simultaneous, purposive, and non-exhaustive action patterns. Do not re-teach から/ので here — reinforce them through example sentences where appropriate.
 
 **Recommended sections:**
 1. `grammarIntro`
@@ -1226,19 +1343,65 @@ Build examples around self-introduction, family description, and asking about pe
 3. `grammarRule` — まえに (×1)
 4. `grammarRule` — ために (×1)
 5. `grammarRule` — ながら (×1)
-6. `grammarComparison` — から vs ので
+6. `grammarRule` — ～たり～たりする (×1)
 7. `annotatedExample` — daily routine descriptions using time connectors
 8. `conversation` — planning a day / travel itinerary
-9. `sentenceTransform` — combine two sentences using てから/まえに/ながら
+9. `sentenceTransform` — combine two sentences using てから/まえに/ながら/たり
 10. `drills` — mixed MCQ
 
 ---
 
-### G16 — Permissions & Prohibitions (てもいい, てはいけない)
+### G17 — Contrast & Concession (のに, ても)
 
 | Field | Value |
 |---|---|
-| **ID** | `G16` |
+| **ID** | `G17` |
+| **Level** | N4 |
+| **Unlocks after** | ~N4.14 (TBD) |
+| **Icon** | 🌀 |
+| **Estimated minutes** | 20 |
+| **Grammar forms** | `te_form` |
+
+**What to teach:**
+
+- のに — "even though / despite" (expressing unexpectedness or complaint):
+  - Plain form + のに: 勉強したのに、わからない (Even though I studied, I don't understand)
+  - Expresses that the result is contrary to what the speaker expected or felt was fair
+  - Common in complaints, surprised observations, and expressing frustration
+  - Formation: same plain form rules as から/ので; copula da → na before のに (noun/na-adj + なのに)
+  - Key distinction: ので (G9) explains a reason for something; のに contrasts an expected vs actual outcome
+
+- ても — "even if / even though" (conditional concession):
+  - て-form + も: 食べても、まだお腹がすいている (Even if I eat, I'm still hungry)
+  - Expresses that the outcome holds regardless of the action
+  - たとえ～ても reinforces: たとえ難しくても (even if it's difficult)
+  - For nouns/na-adjectives: でも (雨でも行く — even if it rains, I'll go)
+  - Note: ても is the concessive "even if"; てもいい (G18) is a separate construction meaning "it's okay to" — teach the distinction explicitly to prevent confusion
+
+*Sentence-starting contrast adverbs (for reference):*
+- しかし — however (formal/written)
+- でも — but (informal, sentence-starting); same word, different position and function from ても
+- だけど — but (casual spoken)
+- ただし — however / provided that (formal qualification)
+
+**Recommended sections:**
+1. `grammarIntro`
+2. `grammarRule` — のに (even though — complaint/unexpectedness)
+3. `grammarRule` — ても (even if — concessive conditional)
+4. `grammarComparison` — のに vs ので (contrast vs reason — same-sounding, opposite meaning direction)
+5. `grammarComparison` — ても vs てもいい (concession vs permission — prevent conflation)
+6. `annotatedExample` — のに and ても in real complaint and hypothetical contexts
+7. `conversation` — dialogue with frustrated observations and hypotheticals
+8. `fillSlot` — choose のに/ても/ので in context
+9. `drills` — mixed MCQ
+
+---
+
+### G18 — Permissions & Prohibitions (てもいい, てはいけない)
+
+| Field | Value |
+|---|---|
+| **ID** | `G18` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.21 (TBD) |
 | **Icon** | 🚦 |
@@ -1261,11 +1424,11 @@ Build examples around self-introduction, family description, and asking about pe
 
 ---
 
-### G17 — Obligations & Conditionals (なければ, ば, たら, なら, と)
+### G19 — Obligations & Conditionals (なければ, ば, たら, なら, と)
 
 | Field | Value |
 |---|---|
-| **ID** | `G17` |
+| **ID** | `G19` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.25 (TBD) |
 | **Icon** | 🔀 |
@@ -1298,58 +1461,104 @@ Build examples around self-introduction, family description, and asking about pe
 
 ---
 
-### G18 — Passive & Causative Forms
+### G20 — Passive Form
 
 | Field | Value |
 |---|---|
-| **ID** | `G18` |
+| **ID** | `G20` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.31 (TBD) |
 | **Icon** | 🔄 |
-| **Estimated minutes** | 30 |
+| **Estimated minutes** | 25 |
+| **Grammar forms** | `passive` |
 
 **What to teach:**
 - Passive form construction:
   - RU-verbs: drop る, add られる (食べる → 食べられる)
   - U-verbs: shift to あ-column, add れる (話す → 話される, 読む → 読まれる)
   - する → される, くる → こられる
-  - Usage: 先生に褒められた (was praised by the teacher)
-  - "Suffering passive": 雨に降られた (got rained on — adversative)
-- Causative form construction:
-  - RU-verbs: drop る, add させる (食べる → 食べさせる)
-  - U-verbs: shift to あ-column, add せる (話す → 話させる)
-  - する → させる, くる → こさせる
-  - Usage: 母は子どもに野菜を食べさせる (mom makes the child eat vegetables)
-- Note: passive and potential forms look identical for RU-verbs (食べられる)
+- Usage patterns:
+  - Direct passive: 先生に褒められた (was praised by the teacher); agent marked with に
+  - "Suffering passive" (adversative): 雨に降られた (got rained on — nuance of inconvenience)
+  - Impersonal passive: この本は多くの人に読まれています (this book is read by many people)
+- Particle changes: the direct object of the active sentence (を) becomes the subject (が) in the passive
+- Register: passive is common in formal writing and polite indirect expressions
+- **Critical note:** Passive and potential look identical for RU-verbs (食べられる = can eat / is eaten). Context distinguishes them.
 
 **Recommended sections:**
 1. `grammarIntro`
 2. `grammarTable` — passive form chart (RU, U, する, くる)
-3. `grammarRule` — passive usage (direct, indirect, adversative)
-4. `grammarTable` — causative form chart
-5. `grammarRule` — causative usage (make/let someone do)
-6. `grammarComparison` — passive vs causative
-7. `conversation` — dialogue about workplace/family situations
-8. `conjugationDrill` — dictionary form → passive and causative
+3. `grammarRule` — direct passive (agent marked with に)
+4. `grammarRule` — suffering/adversative passive
+5. `grammarRule` — passive vs potential ambiguity for RU-verbs
+6. `annotatedExample` — passive in news-style and daily-life contexts
+7. `conversation` — dialogue about things that happened to people
+8. `conjugationDrill` — dictionary form → passive form
 9. `drills` — mixed MCQ
 
 ---
 
-### G19 — Advanced Verb Usages (てみる, ておく, てしまう, すぎる)
+### G21 — Causative Form
 
 | Field | Value |
 |---|---|
-| **ID** | `G19` |
+| **ID** | `G21` |
+| **Level** | N4 |
+| **Unlocks after** | ~N4.31 (TBD) |
+| **Icon** | 🎭 |
+| **Estimated minutes** | 25 |
+| **Grammar forms** | `causative` |
+
+**What to teach:**
+- Causative form construction:
+  - RU-verbs: drop る, add させる (食べる → 食べさせる)
+  - U-verbs: shift to あ-column, add せる (話す → 話させる, 書く → 書かせる)
+  - する → させる, くる → こさせる
+- "Make" vs "Let" distinction:
+  - 母は子どもに野菜を食べさせる (mom MAKES the child eat vegetables — no choice)
+  - 母は子どもに好きなものを食べさせる (mom LETS the child eat what they like — permission)
+  - Context determines which reading; "let" is usually clearer when the action is positive for the causee
+- Particle patterns:
+  - Intransitive verb: causee takes に (子どもに泣かせる — make the child cry)
+  - Transitive verb: causee takes に or を (子どもにを食べさせる — the を marks the food, に the causee)
+- Causative-passive (させられる): made to do (against one's will) — introduce as a preview
+
+**Recommended sections:**
+1. `grammarIntro`
+2. `grammarTable` — causative form chart (RU, U, する, くる)
+3. `grammarRule` — "make someone do" (obligatory causation)
+4. `grammarRule` — "let someone do" (permissive causation)
+5. `grammarComparison` — make vs let (same form, different interpretation)
+6. `grammarRule` — causative-passive (させられる — preview)
+7. `conversation` — dialogue about workplace/family/school authority situations
+8. `conjugationDrill` — dictionary form → causative form
+9. `drills` — mixed MCQ
+
+---
+
+### G22 — Advanced Verb Usages (てみる, ておく, てしまう, すぎる, とする)
+
+| Field | Value |
+|---|---|
+| **ID** | `G22` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.34 (TBD) |
 | **Icon** | 🧩 |
-| **Estimated minutes** | 25 |
+| **Estimated minutes** | 30 |
 
 **What to teach:**
 - てみる — try doing: 食べてみる (try eating it)
 - ておく — do in advance / leave as is: 買っておく (buy in advance); 窓を開けておく (leave the window open)
 - てしまう — do completely / do by accident (with regret): 食べてしまった (ate it all / accidentally ate it); casual: 食べちゃった
 - すぎる — too much: 食べすぎる (eat too much); 高すぎる (too expensive)
+- ～とする — "to attempt / try to do" (and observe the result) / "to assume / treat as":
+  - Dictionary form + とする: 食べようとする (try to eat / be about to eat)
+  - Often paired with ～としたとき (just as [one] was about to ~): 出かけようとしたとき、電話がなった
+  - "Let's assume" usage: 先生だとすると (assuming [they] are a teacher...)
+  - Contrast with てみる: てみる = actually try and see; とする = attempt/be on the verge of (often interrupted or theoretical)
+- Supplementary connectors (absorbed from dissolved G20):
+  - かどうか — whether or not: 行くかどうかわからない (I don't know whether to go or not); embeds a yes/no question in a sentence
+  - について — about / regarding: 日本語について話す (talk about Japanese); marks a topic of discussion
 
 **Recommended sections:**
 1. `grammarIntro`
@@ -1357,53 +1566,13 @@ Build examples around self-introduction, family description, and asking about pe
 3. `grammarRule` — ておく (×1)
 4. `grammarRule` — てしまう (×1, include casual ちゃう/じゃう)
 5. `grammarRule` — すぎる (×1, for both verbs and adjectives)
-6. `annotatedExample` — all four in daily contexts
-7. `conversation` — dialogue about cooking, travel prep, or mistakes
-8. `sentenceTransform` — add てみる/ておく/てしまう/すぎる to plain sentences
-9. `drills` — mixed MCQ
-
----
-
-### G20 — Conjunctions & Connectors (Capstone)
-
-| Field | Value |
-|---|---|
-| **ID** | `G20` |
-| **Level** | N4 |
-| **Unlocks after** | After N4.36 (N4 final) |
-| **Icon** | 🎓 |
-| **Estimated minutes** | 25 |
-
-**What to teach:**
-- Mid-sentence conjunctions (between clauses):
-  - が — but (formal): 行きたいですが、時間がありません
-  - けれど/けど — but (informal)
-  - のに — despite / even though: 勉強したのに、落ちた
-  - から — because (reason first)
-  - ので — because (softer, more objective)
-  - なら — if/in that case
-  - と — when/if (automatic consequence)
-- Sentence-starting conjunctive adverbs:
-  - そして — and then
-  - だから — therefore/so
-  - しかし — however (formal)
-  - でも — but (informal)
-  - だけど — but (casual)
-  - ただし — however/provided that
-- Special connectors:
-  - かどうか — whether or not: 行くかどうかわからない
-  - について — about/regarding: 日本語について話す
-
-**Recommended sections:**
-1. `grammarIntro`
-2. `grammarTable` — summary chart of all conjunctions (mid-sentence vs sentence-starting, with formality level)
-3. `grammarRule` — mid-sentence conjunctions (group by function: contrast, reason, condition)
-4. `grammarRule` — sentence-starting conjunctive adverbs
-5. `grammarRule` — かどうか and について
-6. `annotatedExample` — conjunctions in essay-style and conversational contexts
-7. `conversation` — extended dialogue using multiple connectors
-8. `fillSlot` — choose the right conjunction
-9. `drills` — mixed MCQ (N4 grammar capstone)
+6. `grammarRule` — ～とする (×1, attempt/volitional + assumption usage)
+7. `grammarComparison` — てみる vs とする (both involve "trying" but differ in meaning and usage)
+8. `grammarRule` — かどうか and について (supplementary connectors)
+9. `annotatedExample` — all patterns in daily contexts
+10. `conversation` — dialogue about cooking, travel prep, decisions, or mistakes
+11. `sentenceTransform` — add てみる/ておく/てしまう/すぎる/とする to plain sentences
+12. `drills` — mixed MCQ (N4 grammar capstone)
 
 ---
 
