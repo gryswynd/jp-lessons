@@ -101,14 +101,14 @@
           const levelData = manifest.data && manifest.data[level];
           if (!levelData || !levelData.reviews || !levelData.reviews.length) return;
           byLevel[level] = levelData.reviews.map(r => ({ id: r.id, title: r.title, file: r.file, level }));
-          // Sort numerically within each level; non-numeric IDs go to end
+          // Sort: non-numeric IDs (Half Review, Full Review) first, then numeric descending (10 → 1)
           byLevel[level].sort((a, b) => {
             const numA = a.id.match(/\.Review\.(\d+)/);
             const numB = b.id.match(/\.Review\.(\d+)/);
             if (!numA && !numB) return 0;
-            if (!numA) return 1;
-            if (!numB) return -1;
-            return parseInt(numA[1]) - parseInt(numB[1]);
+            if (!numA) return -1;
+            if (!numB) return 1;
+            return parseInt(numB[1]) - parseInt(numA[1]);
           });
         });
 
