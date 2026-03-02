@@ -218,6 +218,50 @@ window.StoryModule = (function() {
           grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
           gap: 16px;
         }
+        .jp-story-level-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+          gap: 16px;
+        }
+        .jp-story-level-card {
+          background: linear-gradient(135deg, #FFFBEB 0%, #FDE68A 100%);
+          border-radius: 12px;
+          padding: 28px 16px;
+          cursor: pointer;
+          transition: transform 0.2s, box-shadow 0.2s;
+          border: 2px solid transparent;
+          text-align: center;
+        }
+        .jp-story-level-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+          border-color: #D97706;
+        }
+        .jp-story-level-name {
+          font-size: 1.4rem;
+          font-weight: 900;
+          color: #D97706;
+          margin-bottom: 6px;
+        }
+        .jp-story-level-count {
+          font-size: 0.85rem;
+          color: #B45309;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+        .jp-story-level-back-btn {
+          background: transparent;
+          border: none;
+          color: #D97706;
+          font-weight: 700;
+          cursor: pointer;
+          padding: 0 0 12px 0;
+          font-size: 0.9rem;
+          display: block;
+          font-family: inherit;
+        }
+        .jp-story-level-back-btn:hover { text-decoration: underline; }
         .jp-story-card {
           background: linear-gradient(135deg, #FFFBEB 0%, #FDE68A 100%);
           border-radius: 12px;
@@ -507,15 +551,19 @@ window.StoryModule = (function() {
     if (prevBtn) prevBtn.style.display = 'none';
     if (nextBtn) nextBtn.style.display = 'none';
 
-    const storyCount = storyList.length;
-    const countLabel = storyCount === 1 ? '1 story available' : `${storyCount} stories available`;
+    // Group stories by JLPT level
+    const byLevel = {};
+    storyList.forEach(story => {
+      const lvl = story.level || 'Other';
+      if (!byLevel[lvl]) byLevel[lvl] = [];
+      byLevel[lvl].push(story);
+    });
+    const levels = ['N5', 'N4'].filter(l => byLevel[l] && byLevel[l].length);
 
-    const cardsHtml = storyList.map((story, index) => `
-      <div class="jp-story-card" data-story-index="${index}">
-        <div class="jp-story-level-badge">${story.level}</div>
-        <div class="jp-story-card-jp">${story.title}</div>
-        <div class="jp-story-card-en">${story.subtitle}</div>
-        <button class="jp-story-card-read-btn">Read →</button>
+    const levelCardsHtml = levels.map(level => `
+      <div class="jp-story-level-card" data-level="${level}">
+        <div class="jp-story-level-name">JLPT ${level}</div>
+        <div class="jp-story-level-count">${byLevel[level].length} stor${byLevel[level].length !== 1 ? 'ies' : 'y'}</div>
       </div>
     `).join('');
 
@@ -523,13 +571,55 @@ window.StoryModule = (function() {
       contentArea.outerHTML = `
         <div class="jp-story-selector">
           <h2>Choose a Story</h2>
-          <p>${countLabel}</p>
+          <p>Select your JLPT level</p>
+          <div class="jp-story-level-grid">
+            ${levelCardsHtml}
+          </div>
+        </div>
+      `;
+    }
+
+    storyContainer.querySelectorAll('.jp-story-level-card').forEach(card => {
+      card.addEventListener('click', () => {
+        showStoriesForLevel(card.dataset.level, byLevel[card.dataset.level]);
+      });
+    });
+  }
+
+  function showStoriesForLevel(level, stories) {
+    const storyContainer = container.querySelector('.jp-story-container');
+    const contentArea = storyContainer.querySelector('.jp-story-selector') ||
+                        storyContainer.querySelector('.jp-story-loading') ||
+                        storyContainer.querySelector('.jp-story-content') ||
+                        storyContainer.querySelector('.jp-story-error');
+
+    const cardsHtml = stories.map(story => {
+      const index = storyList.indexOf(story);
+      return `
+        <div class="jp-story-card" data-story-index="${index}">
+          <div class="jp-story-card-jp">${story.title}</div>
+          <div class="jp-story-card-en">${story.subtitle}</div>
+          <button class="jp-story-card-read-btn">Read →</button>
+        </div>
+      `;
+    }).join('');
+
+    if (contentArea) {
+      contentArea.outerHTML = `
+        <div class="jp-story-selector">
+          <button class="jp-story-level-back-btn" id="jp-story-back-to-levels">← Levels</button>
+          <h2>JLPT ${level} Stories</h2>
+          <p>${stories.length} stor${stories.length !== 1 ? 'ies' : 'y'} available</p>
           <div class="jp-story-selector-grid">
             ${cardsHtml}
           </div>
         </div>
       `;
     }
+
+    document.getElementById('jp-story-back-to-levels').addEventListener('click', () => {
+      showStorySelector();
+    });
 
     storyContainer.querySelectorAll('.jp-story-card').forEach(card => {
       card.addEventListener('click', () => {

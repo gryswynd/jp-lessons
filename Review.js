@@ -96,30 +96,25 @@
 
       try {
         const manifest = await window.getManifest(this.config);
-        const reviews = [];
+        const byLevel = {};
         (manifest.levels || []).forEach(level => {
           const levelData = manifest.data && manifest.data[level];
-          if (!levelData || !levelData.reviews) return;
-          levelData.reviews.forEach(review => {
-            reviews.push({ id: review.id, title: review.title, file: review.file });
+          if (!levelData || !levelData.reviews || !levelData.reviews.length) return;
+          byLevel[level] = levelData.reviews.map(r => ({ id: r.id, title: r.title, file: r.file, level }));
+          // Sort numerically within each level; non-numeric IDs go to end
+          byLevel[level].sort((a, b) => {
+            const numA = a.id.match(/\.Review\.(\d+)/);
+            const numB = b.id.match(/\.Review\.(\d+)/);
+            if (!numA && !numB) return 0;
+            if (!numA) return 1;
+            if (!numB) return -1;
+            return parseInt(numA[1]) - parseInt(numB[1]);
           });
         });
 
-        // Sort newest first; non-numeric IDs (e.g. Master) go to end
-        reviews.sort((a, b) => {
-          const partsA = a.id.match(/N(\d+)\.Review\.(\d+)/);
-          const partsB = b.id.match(/N(\d+)\.Review\.(\d+)/);
-          if (!partsA && !partsB) return 0;
-          if (!partsA) return 1;
-          if (!partsB) return -1;
-          const levelA = parseInt(partsA[1]), numA = parseInt(partsA[2]);
-          const levelB = parseInt(partsB[1]), numB = parseInt(partsB[2]);
-          if (levelA !== levelB) return levelB - levelA;
-          return numB - numA;
-        });
-
-        console.log('[Review] Found', reviews.length, 'reviews from manifest');
-        this.renderReviewMenu(reviews);
+        console.log('[Review] Levels with reviews:', Object.keys(byLevel));
+        this._reviewsByLevel = byLevel;
+        this.renderLevelPickerView(byLevel);
       } catch (err) {
         document.getElementById('jp-stage').innerHTML = `
           <div style="text-align:center; color:#d63031; padding:20px;">
@@ -132,10 +127,39 @@
       }
     },
 
-    renderReviewMenu: function(reviews) {
+    renderLevelPickerView: function(byLevel) {
+      const stage = document.getElementById('jp-stage');
+      const levels = ['N5', 'N4'].filter(l => byLevel[l] && byLevel[l].length);
+
+      if (levels.length === 0) {
+        stage.innerHTML = '<div style="text-align:center;color:#888;padding:40px;">No reviews available.</div>';
+        return;
+      }
+
+      let html = '<div class="jp-review-level-grid">';
+      levels.forEach(level => {
+        const count = byLevel[level].length;
+        html += `
+          <div class="jp-review-level-card" data-level="${level}">
+            <div class="jp-review-level-name">JLPT ${level}</div>
+            <div class="jp-review-level-count">${count} review${count !== 1 ? 's' : ''}</div>
+          </div>
+        `;
+      });
+      html += '</div>';
+      stage.innerHTML = html;
+
+      stage.querySelectorAll('.jp-review-level-card').forEach(card => {
+        card.onclick = () => this.renderReviewMenu(card.dataset.level, byLevel[card.dataset.level]);
+      });
+    },
+
+    renderReviewMenu: function(level, reviews) {
+      this._selectedLevel = level;
       const stage = document.getElementById('jp-stage');
 
-      let html = '<div class="jp-review-menu-grid">';
+      let html = `<button class="jp-review-level-back-btn" id="jp-back-to-levels">← Levels</button>`;
+      html += '<div class="jp-review-menu-grid">';
       reviews.forEach(review => {
         const topScore = window.JPShared.progress.getReviewScore(review.id);
         const scoreDisplay = topScore !== undefined
@@ -157,6 +181,8 @@
       html += '</div>';
 
       stage.innerHTML = html;
+
+      document.getElementById('jp-back-to-levels').onclick = () => this.renderLevelPickerView(this._reviewsByLevel);
 
       stage.querySelectorAll('.jp-review-menu-item').forEach(item => {
         item.onclick = () => this.loadReview(item.dataset.file, item.dataset.id);
@@ -206,7 +232,7 @@
         if (this.onExit) this.onExit();
       };
 
-      // Attach back-to-list handler
+      // Attach back-to-list handler — returns to level picker
       document.getElementById('jp-back-to-list').onclick = () => this.fetchReviewList();
 
       // Attach start button handler (will be enabled after data loads)
@@ -594,6 +620,19 @@
                 border-radius: 6px;
             }
             .jp-review-back-btn:hover { color: white; background: rgba(255,255,255,0.1); }
+
+            /* Level Picker */
+            .jp-review-level-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px; }
+            .jp-review-level-card {
+                background: #fff; padding: 28px 24px; border-radius: 20px; cursor: pointer;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s;
+                border: 1px solid rgba(0,0,0,0.02); text-align: center;
+            }
+            .jp-review-level-card:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(78,84,200,0.15); border-color: var(--jp-primary); }
+            .jp-review-level-name { font-weight: 900; font-size: 1.4rem; color: var(--jp-primary); margin-bottom: 6px; }
+            .jp-review-level-count { font-size: 0.85rem; color: #a4b0be; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+            .jp-review-level-back-btn { background: transparent; border: none; color: var(--jp-primary); font-weight: 700; cursor: pointer; padding: 0 0 12px 0; font-size: 0.9rem; display: block; font-family: inherit; }
+            .jp-review-level-back-btn:hover { text-decoration: underline; }
 
             /* Review Menu Grid */
             .jp-review-menu-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
