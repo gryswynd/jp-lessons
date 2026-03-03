@@ -424,12 +424,22 @@ For **every** draft, Agent 4 must perform a **Grammar Reinforcement Audit** to v
 5. **Warmup reinforcement check.** Verify that at least 1 warmup item exercises a recently-unlocked grammar pattern (from the most recent active-window milestone) using prior-lesson vocabulary. Warmups that only use noun-です patterns after N5.5 are a missed reinforcement opportunity.
 
 6. **Structural pattern presence.** For lessons after N5.5, verify the following structural patterns appear at least once (where the lesson is past their availability point):
-   - N5.6+: Is there a てください somewhere? Is there a ています somewhere?
-   - N5.9+: Is there a たいです somewhere? Is there a ましょう somewhere?
+
+   **Conjugation-based patterns:**
+   - N5.6+: Is there a てください somewhere? Is there a て-connector (AてB) somewhere?
+   - N5.9+: Is there a ています somewhere? Is there a たいです somewhere? Is there a ましょう somewhere?
    - N5.10+: Is there a ない/なかった somewhere?
    - N4.11+: Is there a たり pattern somewhere?
+   - N4.21+: Is there a てもいい or てはいけない somewhere?
 
-   These are not rigid per-lesson requirements but cumulative expectations. If 3 consecutive lessons all lack てください despite being past N5.5, that is a pattern worth flagging.
+   **Non-conjugation patterns (particle-based):**
+   - N4.6+: Is there a より comparison or いちばん superlative somewhere?
+   - N4.15+: Is there a だけ or しか somewhere?
+   - N4.11+: Is there a ので somewhere?
+
+   These are not rigid per-lesson requirements but cumulative expectations. If 3 consecutive lessons all lack てください despite being past N5.5, that is a pattern worth flagging. The same applies to non-conjugation patterns: if 3+ consecutive lessons after N4.5 never use comparison despite the theme supporting it (food, travel, preferences), that is a reinforcement gap.
+
+   **Note on G7/G8 boundary:** てください and て-connector are G7 patterns (reinforce from N5.6+). ています, たいです, and ましょう are G8 patterns (reinforce from N5.9+ only). Do not flag the absence of ています in N5.6–N5.8 content — ている is not formally taught until G8.
 
 **CR Consistency Note — reinforcement issues use this category:**
 
@@ -441,6 +451,7 @@ Grammar reinforcement | Verb form distribution: 89% ます/ました, only 11% o
 Grammar reinforcement | Sustained use: no polite_negative (ません) instance in entire lesson — add 1 natural negative context
 Grammar reinforcement | Warmup uses only noun-です patterns; should exercise te-form with prior vocab
 Grammar reinforcement | No ましょう in 3 consecutive lessons (N5.10-N5.12) despite availability since N5.8
+Grammar reinforcement | No より/comparison in N4.7-N4.9 despite G15 teaching comparison at N4.5 — themes support preferences
 Rewrite directive     | Add a てください request in conv 2 or 3; replace 1 ます sentence in reading with ています progressive
 ```
 
@@ -1023,18 +1034,24 @@ The prerequisite rules above define when a grammar form **may** be used (the cei
 
 Each milestone groups forms that unlock together. The **active reinforcement window** is the 2–3 lessons immediately after unlock, where minimum usage counts apply. After the window, forms enter **sustained use** where complete absence is flagged.
 
+**Important — grammar lessons vs content lessons.** Grammar lessons (G1–G23) teach concepts and unlock after specific content lessons. The reinforcement schedule must respect this: a form may be *mechanically available* (its `introducedIn` lesson has passed) before the grammar lesson that *formally teaches the concept* has unlocked. For example, `te_form` is available from N5.5, and G7 (て-form mechanics + てください preview) unlocks after N5.5, but G8 (ている progressive, たいです, ましょう) doesn't unlock until after N5.8. The schedule below groups milestones by the grammar lesson that teaches them, not just the conjugation form availability.
+
 | Milestone | Available from | Active window | Required patterns (per lesson, across convs + readings) | Sustained use (after window) |
 |---|---|---|---|---|
-| **Polite verbs** | N5.5 | N5.6–N5.7 | ≥3 `polite_masu`, ≥2 `polite_mashita`, ≥1 `polite_negative` or `polite_past_negative` | All four polite verb forms appear regularly; no lesson should use only ます/ました |
-| **Te/ta patterns** | N5.5 | N5.6–N5.7 | ≥1 `てください` request, ≥1 `ている/ています` progressive or state | Te-form patterns appear naturally where context calls for them |
-| **Desire + volitional** | N5.8 | N5.9–N5.10 | ≥1 `～たいです` desire expression, ≥1 `～ましょう` suggestion/invitation | Both appear where thematically appropriate (invitations, preferences, plans) |
-| **Plain negative** | N5.9 | N5.10–N5.11 | ≥1 `～ない` or `～なかった` in context (reading, drill, or natural dialogue) | Plain negatives appear in varied contexts; not limited to drills |
-| **Adj past + adverbial** | N5.10 | N5.11–N5.12 | ≥1 past-tense adjective (`polite_past_adj`), ≥1 adverbial form (`adverbial`) | Both used naturally in descriptions and narratives |
-| **Appearance** | N5.11 | N5.12–N5.13 | ≥1 `～そうです` appearance pattern | Appears where observations or impressions are natural |
-| **Potential** | N4.3 | N4.4–N4.6 | ≥1 potential form (affirmative or negative) | Ability/possibility expressions used where natural |
-| **Tari + nagara** | N4.10 | N4.11–N4.13 | ≥1 `～たり～たりする` listing, ≥1 `～ながら` simultaneous action | Both patterns appear where natural |
-| **Conditional tara** | N4.25 | N4.26–N4.28 | ≥1 `～たら` conditional in conversation or reading | Conditional appears where natural |
-| **Passive + causative** | N4.31 | N4.32–N4.34 | ≥1 passive, ≥1 causative across the lesson | Both voice patterns appear where natural |
+| **Polite verbs** (G6) | N5.5 | N5.6–N5.7 | ≥3 `polite_masu`, ≥2 `polite_mashita`, ≥1 `polite_negative` or `polite_past_negative` | All four polite verb forms appear regularly; no lesson should use only ます/ました |
+| **Te-form as connector + requests** (G7) | N5.5 | N5.6–N5.7 | ≥1 `てください` request, ≥1 te-form sequential connector (AてB) | てください appears naturally where context calls for requests; て as connector used in multi-action sentences |
+| **Progressive + desire + volitional** (G8) | N5.8 | N5.9–N5.10 | ≥1 `ている/ています` progressive or state, ≥1 `～たいです` desire expression, ≥1 `～ましょう` suggestion/invitation | All three patterns appear where thematically appropriate |
+| **Plain negative** (G9) | N5.9 | N5.10–N5.11 | ≥1 `～ない` or `～なかった` in context (reading, drill, or natural dialogue) | Plain negatives appear in varied contexts; not limited to drills |
+| **Adj past + adverbial** (G10) | N5.10 | N5.11–N5.12 | ≥1 past-tense adjective (`polite_past_adj`), ≥1 adverbial form (`adverbial`) | Both used naturally in descriptions and narratives |
+| **Appearance** (G11) | N5.11 | N5.12–N5.13 | ≥1 `～そうです` appearance pattern | Appears where observations or impressions are natural |
+| **Potential** (G12) | N4.3 | N4.4–N4.6 | ≥1 potential form (affirmative or negative) | Ability/possibility expressions used where natural |
+| **Comparison + degree** (G15) | N4.5 | N4.6–N4.8 | ≥1 `より` comparison, ≥1 `いちばん` superlative or `ほど` degree pattern | Comparison/degree expressions appear where natural (describing preferences, rankings, qualities) |
+| **Tari + nagara** (G17) | N4.10 | N4.11–N4.13 | ≥1 `～たり～たりする` listing, ≥1 `～ながら` simultaneous action | Both patterns appear where natural |
+| **Limiting particles** (G16) | N4.14 | N4.15–N4.17 | ≥1 `だけ` or `しか～ない` limiting expression | Limiting particles appear where context calls for restriction or exclusion |
+| **Permission + prohibition** (G19) | N4.20 | N4.21–N4.23 | ≥1 `てもいい` permission or ≥1 `てはいけない` prohibition | Both patterns appear where rules, permissions, or social norms are discussed |
+| **Conditional tara** (G20) | N4.25 | N4.26–N4.28 | ≥1 `～たら` conditional in conversation or reading | Conditional appears where natural |
+| **Passive + causative** (G21/G22) | N4.31 | N4.32–N4.34 | ≥1 passive, ≥1 causative across the lesson | Both voice patterns appear where natural |
+| **Auxiliary compounds** (G23) | N4.34 | N4.35–N4.36 | ≥1 `てみる` (try) or `ておく` (prepare) or `てしまう` (complete/regret) | Auxiliary verb compounds appear where experimentation, preparation, or completion is discussed |
 
 ### How to read the schedule
 
@@ -1047,26 +1064,46 @@ Each milestone groups forms that unlock together. The **active reinforcement win
 
 ### Structural pattern reinforcement
 
-Beyond individual conjugation forms, these **structural patterns** combine forms into practical constructions that students must encounter repeatedly:
+Beyond individual conjugation forms, these **structural patterns** combine forms into practical constructions that students must encounter repeatedly. The table is divided into conjugation-based patterns and non-conjugation patterns (particle-based and structural grammar).
 
-| Pattern | Available from | How to reinforce |
-|---|---|---|
-| `Verb-てください` (polite request) | N5.5 | Use in at least 1 conversation per lesson from N5.6+. Natural contexts: giving directions, asking for help, making requests. |
-| `Verb-ている/ています` (progressive/state) | N5.5 | Use in at least 1 conversation or reading per lesson from N5.6+. Natural contexts: describing what someone is doing now, describing states (住んでいます, 知っています). |
-| `Verb-ないでください` (negative request) | N5.5 | Use occasionally from N5.6+. Natural contexts: classroom rules, polite prohibitions. Less frequent than てください but should not be absent across 3+ consecutive lessons. |
-| `Verb-たいです` (desire) | N5.8 | Use in at least 1 conversation per lesson from N5.9+. Natural contexts: discussing plans, preferences, wishes. |
-| `Verb-ましょう` (let's/shall we) | N5.8 | Use in at least 1 conversation per lesson from N5.9+. Natural contexts: making plans together, suggestions, invitations. |
-| `Verb-たり Verb-たりする` (listing actions) | N4.10 | Use in at least 1 conversation or reading per lesson from N4.11+. Natural contexts: describing weekends, hobbies, routines. |
-| `Verb-ながら` (while doing) | N4.10 | Use occasionally from N4.11+. Natural contexts: multitasking descriptions, daily routines. |
-| `～たら` (if/when conditional) | N4.25 | Use in at least 1 context per lesson from N4.26+. Natural contexts: plans, hypotheticals, advice. |
+**Conjugation-based patterns:**
+
+| Pattern | Taught in | Reinforce from | How to reinforce |
+|---|---|---|---|
+| `Verb-てください` (polite request) | G7 | N5.6+ | Use in at least 1 conversation per lesson. Natural contexts: giving directions, asking for help, making requests. |
+| `Verb-て Verb` (sequential connector) | G7 | N5.6+ | Use in at least 1 multi-action sentence per lesson. Natural contexts: describing routines, narrating sequences. |
+| `Verb-ないでください` (negative request) | G7 | N5.6+ | Use occasionally. Natural contexts: classroom rules, polite prohibitions. Should not be absent across 3+ consecutive lessons. |
+| `Verb-ている/ています` (progressive/state) | G8 | N5.9+ | Use in at least 1 conversation or reading per lesson. Natural contexts: describing ongoing actions, states (住んでいます, 知っています). **Note:** te_form is mechanically available from N5.5, but ている as a *concept* is taught in G8 (unlocks after N5.8). Do not require ている in N5.6–N5.8 content. |
+| `Verb-たいです` (desire) | G8 | N5.9+ | Use in at least 1 conversation per lesson. Natural contexts: discussing plans, preferences, wishes. |
+| `Verb-ましょう` (let's/shall we) | G8 | N5.9+ | Use in at least 1 conversation per lesson. Natural contexts: making plans together, suggestions, invitations. |
+| `Verb-たり Verb-たりする` (listing actions) | G17 | N4.11+ | Use in at least 1 conversation or reading per lesson. Natural contexts: describing weekends, hobbies, routines. |
+| `Verb-ながら` (while doing) | G17 | N4.11+ | Use occasionally. Natural contexts: multitasking descriptions, daily routines. |
+| `～たら` (if/when conditional) | G20 | N4.26+ | Use in at least 1 context per lesson. Natural contexts: plans, hypotheticals, advice. |
+| `Verb-てもいい` (permission) | G19 | N4.21+ | Use occasionally. Natural contexts: asking permission, stating what's allowed. |
+| `Verb-てはいけない` (prohibition) | G19 | N4.21+ | Use occasionally. Natural contexts: rules, warnings, social norms. |
+| `Verb-てみる` (try doing) | G23 | N4.35+ | Use occasionally. Natural contexts: trying new foods, experiences, suggestions. |
+| `Verb-ておく` (prepare/do in advance) | G23 | N4.35+ | Use occasionally. Natural contexts: planning ahead, preparations. |
+| `Verb-てしまう` (completion/regret) | G23 | N4.35+ | Use occasionally. Natural contexts: accidents, finishing something, unintended results. |
+
+**Non-conjugation patterns (particle-based and structural grammar):**
+
+| Pattern | Taught in | Particles/tracking | Reinforce from | How to reinforce |
+|---|---|---|---|---|
+| `X の方が Y より ～` (comparison) | G15 | `p_yori` | N4.6+ | Use in at least 1 context per lesson. Natural contexts: comparing food, places, seasons, preferences. |
+| `X で いちばん ～` (superlative) | G15 | `v_ichiban` (vocab) | N4.6+ | Use occasionally alongside comparison. Natural contexts: "the most ～ in ～". |
+| `X は Y ほど ～ない` (negative degree) | G15 | `p_hodo` | N4.6+ | Use occasionally. Natural contexts: "X is not as ～ as Y". |
+| `～だけ` (only/just) | G16 | `p_dake` | N4.15+ | Use occasionally. Natural contexts: limitations, quantities. |
+| `～しか～ない` (nothing but) | G16 | `p_shika` | N4.15+ | Use occasionally. Natural contexts: scarcity, emphasis on limits. |
+| `～ので` (because — polite) | G17 | `p_node` | N4.11+ | Use occasionally as an alternative to から. Natural contexts: giving reasons in polite speech. |
 
 ### Reinforcement in warmups
 
 Warmup items are an ideal place to reinforce recently-unlocked grammar because they draw exclusively from prior-lesson vocabulary. Agent 1 should plan warmup items that exercise the most recently unlocked grammar milestone. For example:
 
-- N5.6–N5.7 warmups should include at least 1 item using て-form patterns (てください, ています) with N5.1–N5.5 vocabulary
-- N5.9–N5.10 warmups should include at least 1 item using ～たいです or ～ましょう with prior vocabulary
+- N5.6–N5.7 warmups should include at least 1 item using G7 patterns (てください requests, て-connector sequences) with N5.1–N5.5 vocabulary
+- N5.9–N5.10 warmups should include at least 1 item using G8 patterns (ています, ～たいです, or ～ましょう) with prior vocabulary
 - N5.10–N5.11 warmups should include at least 1 item using plain negative forms with prior vocabulary
+- N4.6–N4.8 warmups should include at least 1 item using comparison patterns (より, いちばん) with prior vocabulary
 
 This ensures students engage with new grammar patterns using familiar words, reducing cognitive load.
 
