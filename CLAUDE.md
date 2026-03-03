@@ -14,9 +14,10 @@ This file governs how Claude Code creates all lesson content for this repository
 6. [Kanji Prerequisite Rules](#kanji-prerequisite-rules)
 7. [Approved Vocabulary Rules](#approved-vocabulary-rules)
 8. [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules)
-9. [Quality Gates (Pass/Fail Criteria)](#quality-gates-passfail-criteria)
-10. [File & Structure Reference](#file--structure-reference)
-11. [Common Failure Modes](#common-failure-modes)
+9. [Grammar Reinforcement Requirements](#grammar-reinforcement-requirements)
+10. [Quality Gates (Pass/Fail Criteria)](#quality-gates-passfail-criteria)
+11. [File & Structure Reference](#file--structure-reference)
+12. [Common Failure Modes](#common-failure-modes)
 
 ---
 
@@ -78,6 +79,7 @@ User Request
 - **Scope review gate.** Before dispatching to Agent 2, audit the proposed vocabulary list for cohesion. Ask: do these items naturally belong together in one lesson? If a cluster of time-expression words (e.g. 今朝/今晩/先月) or compound vocab is only partially introduced, either include the full cluster or defer all of it to a later lesson. Never split a natural vocabulary group across lessons unless there is a clear pedagogical reason. Note any deferred items in the Content Brief's Rewrite Notes field.
 - **Grammar scope lock.** For grammar lessons, the Content Brief's "Grammar points" list is a **locked scope**. Agent 2 may not add, remove, or substitute grammar points. If Agent 2 encounters a problem building content for a listed grammar point (e.g., the available vocabulary cannot support good examples), Agent 2 must flag this in the CB Checklist and return to Agent 1 for a scope adjustment — not silently swap in a different grammar point. Agent 1 documents any scope changes in the "Rewrite notes" field before redispatching.
 - **Grammar prerequisite validation.** Before finalizing the Content Brief, Agent 1 must verify that every grammar point listed can be taught given the `unlocksAfter` lesson. Ask: "Has the student been exposed to the concepts needed to understand this grammar point?" If not, defer the point to a later grammar lesson and note the deferral in the brief. Consult the prerequisite table in Agent 4's Grammar Scope Enforcement section.
+- **Grammar reinforcement planning.** Before finalizing the Content Brief, Agent 1 must consult the [Grammar Reinforcement Requirements](#grammar-reinforcement-requirements) schedule and identify: (a) which grammar milestones are in their **active reinforcement window** for this lesson, and (b) which milestones are in **sustained use**. List the specific reinforcement targets in the Content Brief. Plan at least 1 warmup item that exercises the most recently unlocked grammar using prior-lesson vocabulary. If the lesson's theme naturally supports certain grammar patterns (e.g. a travel theme supports ～たいです for desires, ～てください for requests), note these opportunities in the brief.
 
 **Content Brief format (internal working document):**
 
@@ -95,6 +97,11 @@ Required vocab IDs: [explicit IDs that MUST appear, e.g. compose targets]
 Sections to build:  [e.g. warmup, kanjiGrid, vocabList, conversation×2, reading×2, drills×3]
 Dependencies:  [list any existing lesson files to read for context]
 Reference template: [path to highest-numbered existing file of same type/level — this is the structural standard]
+Grammar reinforcement:
+  Active window: [milestones in active window — e.g. "Te/ta patterns (N5.5): ≥1 てください, ≥1 ています"]
+  Sustained use: [milestones in sustained use — e.g. "Polite verbs (N5.5): all four forms should appear"]
+  Warmup plan:   [which grammar pattern(s) to exercise in warmup items]
+  Theme opportunities: [grammar patterns that fit the lesson theme naturally]
 Rewrite notes: [empty on first pass; filled by Agent 4 feedback]
 ```
 
@@ -113,6 +120,7 @@ Rewrite notes: [empty on first pass; filled by Agent 4 feedback]
 - Do **not** use kanji that have not been introduced by the current lesson or earlier. See [Kanji Prerequisite Rules](#kanji-prerequisite-rules).
 - Do **not** use conjugation forms whose `introducedIn` lesson (in `conjugation_rules.json`) is later than the current lesson. For example, `te_form` has `introducedIn: "N5.5"` — a lesson targeting N5.3 must not contain any て-form usage. If a sentence requires a form that is not yet available, restructure the sentence to use only available forms. See [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules).
 - When a verb or adjective appears in a conjugated form, tag it with the correct `form` string. See [Term Tagging Reference](#term-tagging-reference).
+- **Use recently unlocked grammar actively.** Consult the Content Brief's "Grammar reinforcement" targets. Meet the minimum usage counts for forms in their active reinforcement window. Vary verb forms across conversations — do not default every verb to ます/ました when negative, te-form, and other unlocked forms would be natural. If a minimum count cannot be met without forcing awkward sentences, flag this in the CB Checklist and explain why.
 - Output the draft as a single JSON (or MD + JSON pair for stories) in a clearly labelled code block.
 - Attach a **CB Checklist** at the end of the output (see below).
 
@@ -140,6 +148,11 @@ CB CHECKLIST
 [ ] Every kanji introduced this lesson that functions as a standalone noun has a v_* vocab entry, not only a k_* kanji entry
 [ ] Every conjugation form used in jp/passage fields has introducedIn ≤ current lesson (checked against conjugation_rules.json)
 [ ] Every structural grammar pattern in jp/passage fields (e.g. ～ている, ～てください, ～たり～たりする) is available at the current lesson tier
+[ ] Active-window grammar reinforcement minimums are met (see Grammar Reinforcement Requirements)
+[ ] Sustained-use grammar forms are not completely absent — at least 1 instance of each milestone's forms appears
+[ ] Verb forms are varied across conversations (not all ます/ました — negatives, te-form, etc. are used where natural)
+[ ] At least 1 warmup item exercises the most recently unlocked grammar pattern with prior-lesson vocabulary
+[ ] Structural patterns (てください, ています, たいです, ましょう, etc.) appear where the lesson theme naturally supports them
 [ ] (Reviews) Scramble items have segments, distractors (3 items), and explanation
 [ ] (Reviews) Scramble sentences with floatable time expressions or adverbs include an alts array
 [ ] (Reviews) Every review section has an instructions field
@@ -387,6 +400,59 @@ Grammar usage       | Conv line 3 uses te_form (introducedIn: N5.5) but lesson i
 Grammar usage       | Reading passage contains ～たいです pattern (desire_tai, N5.8+) in N5.6 content
 Grammar usage       | jp text uses ～ている progressive but te_form not available until N5.5
 Particle scope      | Particle でも (p_demo, introducedIn: N4.14) used in N4.10 conversation — out of scope
+```
+
+### Agent 4 — Grammar Reinforcement Audit (all content types)
+
+For **every** draft, Agent 4 must perform a **Grammar Reinforcement Audit** to verify that recently-taught grammar forms are being actively used. This is the complement to the Grammar Usage Validation — that check catches **over-reach** (using forms too early); this check catches **under-use** (not using forms that should be practiced).
+
+**Why this matters:** Without this check, content can pass all other QA gates while using only the most basic grammar (ます, ました, です) even when the student has learned te-form, desire expressions, volitional, negatives, and more. This creates a plateau where students learn rules in grammar lessons but never see them in practice.
+
+**Procedure:**
+
+1. **Identify the reinforcement context.** Read the Content Brief's "Grammar reinforcement" field. Identify which milestones are in the active window and which are in sustained use for this lesson.
+
+2. **Count active-window forms.** For each milestone in the active reinforcement window, count the occurrences of its required patterns across all conversation and reading sections (excluding drills). Compare against the minimum counts in the [Grammar Reinforcement Schedule](#grammar-milestones-and-reinforcement-schedule).
+
+   - **Hard fail:** An active-window minimum count is not met AND there are conversations/readings where the form could have been used naturally. Example: N5.7 lesson has 5 conversations and 2 readings, all verbs are in ます or ました, zero てください or ています — despite te-form being in the active window.
+   - **Soft fail:** The count falls short by 1, and the lesson's theme makes it genuinely difficult to use the form naturally. Flag with a specific suggestion for where the form could be inserted.
+
+3. **Check sustained-use forms.** For each milestone in sustained use, verify at least 1 instance of the milestone's forms appears somewhere in the lesson content (conversations + readings). Complete absence is a **soft fail** unless the lesson's theme genuinely has no natural context.
+
+4. **Verb form diversity check.** Count the distribution of verb forms across all conversation and reading sections. If >80% of tagged verb forms are `polite_masu` or `polite_mashita` (excluding the introduction lesson N5.5 itself), flag as a diversity concern. The lesson should use the full range of available forms — negatives, te-form, desire, volitional — not default to affirmative present/past.
+
+5. **Warmup reinforcement check.** Verify that at least 1 warmup item exercises a recently-unlocked grammar pattern (from the most recent active-window milestone) using prior-lesson vocabulary. Warmups that only use noun-です patterns after N5.5 are a missed reinforcement opportunity.
+
+6. **Structural pattern presence.** For lessons after N5.5, verify the following structural patterns appear at least once (where the lesson is past their availability point):
+
+   **Conjugation-based patterns:**
+   - N5.6+: Is there a てください somewhere? Is there a て-connector (AてB) somewhere?
+   - N5.9+: Is there a ています somewhere? Is there a たいです somewhere? Is there a ましょう somewhere?
+   - N5.10+: Is there a ない/なかった somewhere?
+   - N4.11+: Is there a たり pattern somewhere?
+   - N4.21+: Is there a てもいい or てはいけない somewhere?
+
+   **Non-conjugation patterns (particle-based):**
+   - N4.6+: Is there a より comparison or いちばん superlative somewhere?
+   - N4.15+: Is there a だけ or しか somewhere?
+   - N4.11+: Is there a ので somewhere?
+
+   These are not rigid per-lesson requirements but cumulative expectations. If 3 consecutive lessons all lack てください despite being past N5.5, that is a pattern worth flagging. The same applies to non-conjugation patterns: if 3+ consecutive lessons after N4.5 never use comparison despite the theme supporting it (food, travel, preferences), that is a reinforcement gap.
+
+   **Note on G7/G8 boundary:** てください and て-connector are G7 patterns (reinforce from N5.6+). ています, たいです, and ましょう are G8 patterns (reinforce from N5.9+ only). Do not flag the absence of ています in N5.6–N5.8 content — ている is not formally taught until G8.
+
+**CR Consistency Note — reinforcement issues use this category:**
+
+```
+Category              | Detail
+──────────────────────┼──────────────────────────────────────────────────────
+Grammar reinforcement | Te/ta patterns in active window (N5.6): 0 てください instances across 5 conversations — need ≥1
+Grammar reinforcement | Verb form distribution: 89% ます/ました, only 11% other forms — needs more variety
+Grammar reinforcement | Sustained use: no polite_negative (ません) instance in entire lesson — add 1 natural negative context
+Grammar reinforcement | Warmup uses only noun-です patterns; should exercise te-form with prior vocab
+Grammar reinforcement | No ましょう in 3 consecutive lessons (N5.10-N5.12) despite availability since N5.8
+Grammar reinforcement | No より/comparison in N4.7-N4.9 despite G15 teaching comparison at N4.5 — themes support preferences
+Rewrite directive     | Add a てください request in conv 2 or 3; replace 1 ます sentence in reading with ています progressive
 ```
 
 ---
@@ -956,6 +1022,102 @@ Before N5.5, only `polite_adj` and dictionary forms are available. This means N5
 
 ---
 
+## Grammar Reinforcement Requirements
+
+The prerequisite rules above define when a grammar form **may** be used (the ceiling). This section defines when a grammar form **should** be used (the floor). Without both rules, content can technically pass all QA gates while never actually practicing the grammar students have learned — defeating the purpose of teaching it.
+
+### The reinforcement principle
+
+> Once a grammar form is unlocked, subsequent content must **actively use** it. Students learn through repeated, natural exposure — not by seeing a form once in a grammar lesson and never encountering it again.
+
+### Grammar milestones and reinforcement schedule
+
+Each milestone groups forms that unlock together. The **active reinforcement window** is the 2–3 lessons immediately after unlock, where minimum usage counts apply. After the window, forms enter **sustained use** where complete absence is flagged.
+
+**Important — grammar lessons vs content lessons.** Grammar lessons (G1–G23) teach concepts and unlock after specific content lessons. The reinforcement schedule must respect this: a form may be *mechanically available* (its `introducedIn` lesson has passed) before the grammar lesson that *formally teaches the concept* has unlocked. For example, `te_form` is available from N5.5, and G7 (て-form mechanics + てください preview) unlocks after N5.5, but G8 (ている progressive, たいです, ましょう) doesn't unlock until after N5.8. The schedule below groups milestones by the grammar lesson that teaches them, not just the conjugation form availability.
+
+| Milestone | Available from | Active window | Required patterns (per lesson, across convs + readings) | Sustained use (after window) |
+|---|---|---|---|---|
+| **Polite verbs** (G6) | N5.5 | N5.6–N5.7 | ≥3 `polite_masu`, ≥2 `polite_mashita`, ≥1 `polite_negative` or `polite_past_negative` | All four polite verb forms appear regularly; no lesson should use only ます/ました |
+| **Te-form as connector + requests** (G7) | N5.5 | N5.6–N5.7 | ≥1 `てください` request, ≥1 te-form sequential connector (AてB) | てください appears naturally where context calls for requests; て as connector used in multi-action sentences |
+| **Progressive + desire + volitional** (G8) | N5.8 | N5.9–N5.10 | ≥1 `ている/ています` progressive or state, ≥1 `～たいです` desire expression, ≥1 `～ましょう` suggestion/invitation | All three patterns appear where thematically appropriate |
+| **Plain negative** (G9) | N5.9 | N5.10–N5.11 | ≥1 `～ない` or `～なかった` in context (reading, drill, or natural dialogue) | Plain negatives appear in varied contexts; not limited to drills |
+| **Adj past + adverbial** (G10) | N5.10 | N5.11–N5.12 | ≥1 past-tense adjective (`polite_past_adj`), ≥1 adverbial form (`adverbial`) | Both used naturally in descriptions and narratives |
+| **Appearance** (G11) | N5.11 | N5.12–N5.13 | ≥1 `～そうです` appearance pattern | Appears where observations or impressions are natural |
+| **Potential** (G12) | N4.3 | N4.4–N4.6 | ≥1 potential form (affirmative or negative) | Ability/possibility expressions used where natural |
+| **Comparison + degree** (G15) | N4.5 | N4.6–N4.8 | ≥1 `より` comparison, ≥1 `いちばん` superlative or `ほど` degree pattern | Comparison/degree expressions appear where natural (describing preferences, rankings, qualities) |
+| **Tari + nagara** (G17) | N4.10 | N4.11–N4.13 | ≥1 `～たり～たりする` listing, ≥1 `～ながら` simultaneous action | Both patterns appear where natural |
+| **Limiting particles** (G16) | N4.14 | N4.15–N4.17 | ≥1 `だけ` or `しか～ない` limiting expression | Limiting particles appear where context calls for restriction or exclusion |
+| **Permission + prohibition** (G19) | N4.20 | N4.21–N4.23 | ≥1 `てもいい` permission or ≥1 `てはいけない` prohibition | Both patterns appear where rules, permissions, or social norms are discussed |
+| **Conditional tara** (G20) | N4.25 | N4.26–N4.28 | ≥1 `～たら` conditional in conversation or reading | Conditional appears where natural |
+| **Passive + causative** (G21/G22) | N4.31 | N4.32–N4.34 | ≥1 passive, ≥1 causative across the lesson | Both voice patterns appear where natural |
+| **Auxiliary compounds** (G23) | N4.34 | N4.35–N4.36 | ≥1 `てみる` (try) or `ておく` (prepare) or `てしまう` (complete/regret) | Auxiliary verb compounds appear where experimentation, preparation, or completion is discussed |
+
+### How to read the schedule
+
+- **Active window counts are minimums**, not targets. Natural content will typically exceed them. The counts exist to prevent the common failure where all verbs default to ます/ました and recently taught forms never appear.
+- **Sustained use** means the form should appear at least once per lesson (across all conversations and readings combined) unless the lesson's theme genuinely has no natural context for it. Complete absence of a sustained-use form triggers an Agent 4 soft fail with an explanation of why the form was omitted.
+- **Counts apply to lesson content only** (conversations, readings, warmups). Drill items are excluded from the count because drills test specific knowledge rather than providing natural reinforcement exposure.
+- **Compose files** are exempt from minimum counts but should include recently-unlocked forms in their `conjugations` array and use them in model sentences.
+- **Stories** should use the full available grammar set naturally. Agent 4 flags stories that use only basic forms when richer grammar is available.
+- **Reviews** draw from their full lesson range, so reinforcement is inherent — but Agent 4 should verify that conversations in reviews exercise recently-taught forms, not just the earliest ones.
+
+### Structural pattern reinforcement
+
+Beyond individual conjugation forms, these **structural patterns** combine forms into practical constructions that students must encounter repeatedly. The table is divided into conjugation-based patterns and non-conjugation patterns (particle-based and structural grammar).
+
+**Conjugation-based patterns:**
+
+| Pattern | Taught in | Reinforce from | How to reinforce |
+|---|---|---|---|
+| `Verb-てください` (polite request) | G7 | N5.6+ | Use in at least 1 conversation per lesson. Natural contexts: giving directions, asking for help, making requests. |
+| `Verb-て Verb` (sequential connector) | G7 | N5.6+ | Use in at least 1 multi-action sentence per lesson. Natural contexts: describing routines, narrating sequences. |
+| `Verb-ないでください` (negative request) | G7 | N5.6+ | Use occasionally. Natural contexts: classroom rules, polite prohibitions. Should not be absent across 3+ consecutive lessons. |
+| `Verb-ている/ています` (progressive/state) | G8 | N5.9+ | Use in at least 1 conversation or reading per lesson. Natural contexts: describing ongoing actions, states (住んでいます, 知っています). **Note:** te_form is mechanically available from N5.5, but ている as a *concept* is taught in G8 (unlocks after N5.8). Do not require ている in N5.6–N5.8 content. |
+| `Verb-たいです` (desire) | G8 | N5.9+ | Use in at least 1 conversation per lesson. Natural contexts: discussing plans, preferences, wishes. |
+| `Verb-ましょう` (let's/shall we) | G8 | N5.9+ | Use in at least 1 conversation per lesson. Natural contexts: making plans together, suggestions, invitations. |
+| `Verb-たり Verb-たりする` (listing actions) | G17 | N4.11+ | Use in at least 1 conversation or reading per lesson. Natural contexts: describing weekends, hobbies, routines. |
+| `Verb-ながら` (while doing) | G17 | N4.11+ | Use occasionally. Natural contexts: multitasking descriptions, daily routines. |
+| `～たら` (if/when conditional) | G20 | N4.26+ | Use in at least 1 context per lesson. Natural contexts: plans, hypotheticals, advice. |
+| `Verb-てもいい` (permission) | G19 | N4.21+ | Use occasionally. Natural contexts: asking permission, stating what's allowed. |
+| `Verb-てはいけない` (prohibition) | G19 | N4.21+ | Use occasionally. Natural contexts: rules, warnings, social norms. |
+| `Verb-てみる` (try doing) | G23 | N4.35+ | Use occasionally. Natural contexts: trying new foods, experiences, suggestions. |
+| `Verb-ておく` (prepare/do in advance) | G23 | N4.35+ | Use occasionally. Natural contexts: planning ahead, preparations. |
+| `Verb-てしまう` (completion/regret) | G23 | N4.35+ | Use occasionally. Natural contexts: accidents, finishing something, unintended results. |
+
+**Non-conjugation patterns (particle-based and structural grammar):**
+
+| Pattern | Taught in | Particles/tracking | Reinforce from | How to reinforce |
+|---|---|---|---|---|
+| `X の方が Y より ～` (comparison) | G15 | `p_yori` | N4.6+ | Use in at least 1 context per lesson. Natural contexts: comparing food, places, seasons, preferences. |
+| `X で いちばん ～` (superlative) | G15 | `v_ichiban` (vocab) | N4.6+ | Use occasionally alongside comparison. Natural contexts: "the most ～ in ～". |
+| `X は Y ほど ～ない` (negative degree) | G15 | `p_hodo` | N4.6+ | Use occasionally. Natural contexts: "X is not as ～ as Y". |
+| `～だけ` (only/just) | G16 | `p_dake` | N4.15+ | Use occasionally. Natural contexts: limitations, quantities. |
+| `～しか～ない` (nothing but) | G16 | `p_shika` | N4.15+ | Use occasionally. Natural contexts: scarcity, emphasis on limits. |
+| `～ので` (because — polite) | G17 | `p_node` | N4.11+ | Use occasionally as an alternative to から. Natural contexts: giving reasons in polite speech. |
+
+### Reinforcement in warmups
+
+Warmup items are an ideal place to reinforce recently-unlocked grammar because they draw exclusively from prior-lesson vocabulary. Agent 1 should plan warmup items that exercise the most recently unlocked grammar milestone. For example:
+
+- N5.6–N5.7 warmups should include at least 1 item using G7 patterns (てください requests, て-connector sequences) with N5.1–N5.5 vocabulary
+- N5.9–N5.10 warmups should include at least 1 item using G8 patterns (ています, ～たいです, or ～ましょう) with prior vocabulary
+- N5.10–N5.11 warmups should include at least 1 item using plain negative forms with prior vocabulary
+- N4.6–N4.8 warmups should include at least 1 item using comparison patterns (より, いちばん) with prior vocabulary
+
+This ensures students engage with new grammar patterns using familiar words, reducing cognitive load.
+
+### Enforcement summary
+
+| Agent | Reinforcement responsibility |
+|---|---|
+| **Agent 1** | Includes "Grammar reinforcement targets" in the Content Brief. Identifies which milestone(s) are in the active window and which are in sustained use. Plans warmup items that exercise recently unlocked grammar. |
+| **Agent 2** | Writes content that meets the minimum counts in the active window. Checks usage in the CB Checklist. If a minimum cannot be met naturally, flags it for Agent 1 rather than forcing awkward sentences. |
+| **Agent 3** | Counts tagged forms and verifies active-window minimums are met. Reports under-counts in the QA Failure Report the same way as missing terms. |
+| **Agent 4** | Performs the Grammar Reinforcement Audit (see below). Flags sustained-use forms that are completely absent. Verifies structural patterns appear where context naturally supports them. |
+
+---
+
 ## Quality Gates (Pass/Fail Criteria)
 
 ### Agent 3 (QA) — hard pass/fail
@@ -970,6 +1132,7 @@ All of the following must be TRUE for a QA pass:
 - [ ] Every verb/adjective `terms` entry uses `{ "id": "...", "form": "..." }` with a valid form string
 - [ ] Every `form` value in `terms` has `introducedIn` ≤ current lesson in `conjugation_rules.json` (see [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules))
 - [ ] No structural grammar pattern (～ている, ～てください, ～たり～たりする, ～ましょう, etc.) appears in `jp` text before its constituent form is available
+- [ ] Active-window grammar reinforcement minimum counts are met (count tagged forms across conversations + readings; see [Grammar Reinforcement Requirements](#grammar-reinforcement-requirements))
 - [ ] Drill 1 MCQ items have no `terms` array; all other drills do
 - [ ] Answer fields exactly match one of the choices strings
 - [ ] The JSON validates (no syntax errors)
@@ -998,6 +1161,11 @@ All of the following should be TRUE for a CR pass:
 - [ ] Grammar complexity matches the target lesson tier — every conjugation form and structural grammar pattern in `jp` text has `introducedIn` ≤ current lesson (hard fail if violated; see [Grammar Usage Validation](#agent-4--grammar-usage-validation-all-content-types))
 - [ ] No particle in `jp` text has `introducedIn` (in `shared/particles.json`) later than the current lesson
 - [ ] Grammar patterns that are technically available but have not been recently practiced are used sparingly and naturally (soft judgment)
+- [ ] **Grammar reinforcement — active window:** All minimum counts from the Grammar Reinforcement Schedule are met for milestones in the active window (hard fail if not met and natural contexts exist)
+- [ ] **Grammar reinforcement — sustained use:** No sustained-use milestone's forms are completely absent from the lesson (soft fail with explanation if absent)
+- [ ] **Grammar reinforcement — verb diversity:** Verb form distribution is not >80% polite_masu/polite_mashita when other forms are available (soft fail)
+- [ ] **Grammar reinforcement — structural patterns:** Key structural patterns (てください, ています, たいです, ましょう, etc.) appear where available and contextually natural; flagged if absent across 3+ consecutive lessons
+- [ ] **Grammar reinforcement — warmup:** At least 1 warmup item exercises a recently-unlocked grammar pattern with prior-lesson vocabulary
 - [ ] Vocabulary density is appropriate (not overcrowded, not too sparse)
 - [ ] Scenarios are meaningfully different from the 2 most recent same-type files
 - [ ] Character names, places, and recurring details are consistent with the series
@@ -1142,6 +1310,9 @@ These are the most frequent errors. All agents should be alert to them.
 27. **Out-of-scope conjugation form** — using a conjugation form (e.g. `te_form`, `desire_tai`, `conditional_ba`) before its `introducedIn` lesson. This is the grammar equivalent of using an untaught kanji. Example: writing ～ています in N5.3 content when `te_form` has `introducedIn: "N5.5"`. Check every `form` value in `terms` against `conjugation_rules.json`. See [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules).
 28. **Out-of-scope structural grammar pattern** — the `jp` surface text contains a grammar construction (～ている, ～てください, ～ましょう, ～たり～たりする, etc.) before the constituent form is available, even if the individual word tags don't explicitly use that form. The pattern in the surface text is the violation, not just the tags. Agent 2 must scan `jp` strings for these patterns, not rely only on `terms` form checking.
 29. **何 tagged as k_nani or generic v_nani without pronunciation context** — 何 has two pronunciations: **なに** (`v_nani`) and **なん** (`v_nan`). Using `k_nani` (kanji entry) makes 何 non-tappable in conversations and readings. Using only `v_nani` for all contexts gives students the wrong reading when the pronunciation is actually なん. **Rules:** Use `v_nani` when 何 precedes を or が, or stands alone (e.g. 何を食べますか、何がいい). Use `v_nan` when 何 precedes です, の, counters, or words starting with d/n/t sounds (e.g. 何ですか、何の本、何人). Never use `k_nani` in conversation, reading, or drill `terms` — it is only for the kanjiGrid. Compound words like 何人, 何時, 何曜日 have their own dedicated entries (`v_nannin`, `v_nanji`, `v_nanyoubi`) and should use those instead.
+30. **Grammar under-reinforcement (ます/ました monotony)** — all verbs in conversations and readings default to `polite_masu` or `polite_mashita` when negative forms, te-form, desire, and volitional forms are all available. This is the grammar equivalent of writing with a limited vocabulary — technically correct but failing to exercise the student's growing skillset. Example: an N5.7 lesson has 5 conversations with 20 tagged verbs, but 18 are ます/ました, zero are てください or ています despite te-form being available since N5.5. Agent 2 must consult the Grammar Reinforcement Requirements and vary verb forms intentionally.
+31. **Missing structural patterns in active reinforcement window** — a lesson falls within a grammar milestone's active reinforcement window but none of the required structural patterns (てください, ています, たいです, ましょう, etc.) appear anywhere. This means the student has gone 2+ lessons since learning these patterns without encountering them in natural content. Agent 2 must include at least the minimum count of each pattern required by the reinforcement schedule.
+32. **Warmup grammar stagnation** — warmup items continue using only noun-です patterns (「先生です」「大きいです」) long after polite verb forms, te-form, and other grammar have been unlocked. Warmups after N5.5 should exercise recently-unlocked grammar with prior-lesson vocabulary. Example: an N5.8 warmup should include items like 「先生は毎日学校に行きます」(polite_masu) or 「ここに名前を書いてください」(te-form request), not just 「これは本です」.
 
 ### Agent 3 failures (caught by Agent 4)
 
@@ -1149,11 +1320,13 @@ These are the most frequent errors. All agents should be alert to them.
 2. **Approving overstuffed sections** — 30 vocabulary chips, 5 conversations, 4 readings in one lesson.
 3. **Missing a grammar level jump** — content using grammar structures 2–3 tiers above the lesson. Now that conjugation forms have concrete `introducedIn` fields, this should be caught by Agent 3's hard gate. But Agent 4 remains the backstop for structural patterns in `jp` text that Agent 3's form-tag check might miss (e.g. a ～ている pattern where the て and いる are tagged separately but neither tag explicitly carries a form that triggers the gate).
 4. **Kanji-only token scan** — checking that kanji-containing words are tagged but not scanning the full `jp` string token by token. Kana-only words (copulas like だ/だった, conjunctions, sentence-final particles, adverbs) can be out of scope, mis-tagged, or missing from `terms` entirely and will be invisible to a visual scan that only flags visually prominent kanji characters.
+5. **Passing under-reinforced content** — approving a draft that meets all structural requirements (correct tags, valid IDs, no out-of-scope forms) but fails to use recently-unlocked grammar. Agent 3 must count tagged forms against the reinforcement schedule minimums and reject drafts that don't meet active-window targets. This is the "floor" complement to the existing "ceiling" checks.
 
 ### Agent 4 failures (caught by Agent 1 in next pass)
 
 1. **Vague rewrite directives** — "make it more natural" without specific lines identified.
 2. **Rejecting content for subjective reasons** — if the only issue is style preference rather than a structural problem, prefer a pass with a note over a full rewrite.
+3. **Not catching grammar reinforcement gaps** — approving content where recently-taught grammar is absent. The Grammar Reinforcement Audit must be performed on every draft. Agent 4 cannot rely on "it sounds natural" as justification for content that avoids using available grammar — natural content that happens to only use ます/ました is still pedagogically deficient if the student knows te-form, negatives, desire, and volitional.
 
 ### Grammar-specific cross-agent failures
 
@@ -1170,6 +1343,8 @@ These failures span multiple agents and are the most damaging because they may n
 5. **Example sentences that are grammatically correct but pedagogically wrong** — The sentence uses the grammar pattern correctly but in a context where a native speaker would never use that pattern. Example: using が in a self-introduction (わたしが先生です) without the contrastive context that would make が natural there. Agent 4 is the defense.
 
 6. **Out-of-scope grammar usage passing all checks** — A conjugation form or structural pattern is used before its `introducedIn` lesson, but it slips through because: (a) Agent 2 doesn't check `introducedIn` on forms, (b) Agent 3 checks form strings for validity but not their `introducedIn` dates, and (c) Agent 4's "skill progression" check is too vague to catch it. This was the most common grammar-related failure before the Grammar Usage Validation was added. The defense is now distributed: Agent 2 checks `introducedIn` during authoring (CB Checklist), Agent 3 hard-gates every `form` against `conjugation_rules.json`, and Agent 4 performs a structural pattern scan of `jp` surface text. All three layers must be active.
+
+7. **Systematic grammar under-reinforcement across lessons** — The mirror image of failure #6. Grammar forms are correctly gated (never used too early) but also never used *enough* after they're taught. The student learns te-form in G7/N5.5, but N5.6, N5.7, and N5.8 content all default to ます/ました because Agent 2 wasn't prompted to use the new forms, Agent 3 only checked for out-of-scope violations (ceiling), and Agent 4's "skill progression" check was too vague to catch the absence. The defense is now distributed: Agent 1 includes reinforcement targets in the Content Brief, Agent 2 actively varies verb forms and meets minimum counts (CB Checklist), Agent 3 counts tagged forms against the active-window minimums (hard gate), and Agent 4 performs the Grammar Reinforcement Audit checking for under-use, verb form diversity, and structural pattern presence. All four layers must be active. The [Grammar Reinforcement Requirements](#grammar-reinforcement-requirements) section defines the concrete schedule.
 
 ---
 
