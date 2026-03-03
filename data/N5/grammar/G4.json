@@ -171,6 +171,57 @@
     },
     {
       "type": "grammarComparison",
+      "title": "に vs で — Existence & Arrival vs Action & Means",
+      "items": [
+        {
+          "label": "に — where something EXISTS or ARRIVES",
+          "color": "particle",
+          "points": [
+            "With existence verbs (います / あります): marks WHERE something IS",
+            "With motion verbs (行く / 来る): marks the DESTINATION — the endpoint of movement",
+            "に pins the sentence to a specific place-point — static presence or arrival",
+            "駅にいます → someone IS at the station (existence)",
+            "駅に行きます → going TO the station (arrival at endpoint)"
+          ],
+          "example": {
+            "parts": [
+              { "text": "友だち", "role": "subject", "gloss": "friend" },
+              { "text": "が", "role": "particle" },
+              { "text": "駅", "role": "topic", "gloss": "station" },
+              { "text": "に", "role": "particle" },
+              { "text": "い", "role": "verb", "gloss": "be" },
+              { "text": "ます", "role": "predicate" }
+            ],
+            "en": "My friend is at the station. (existence location)"
+          }
+        },
+        {
+          "label": "で — where an action HAPPENS or HOW it's done",
+          "color": "verb",
+          "points": [
+            "Action location: marks the place where an action actively takes place (NOT just where something is)",
+            "Means / method: marks the tool, vehicle, or method used for an action",
+            "で answers 'In what context or by what means is this action performed?'",
+            "バスで来ます → coming BY bus (means — the method of travel)",
+            "Key contrast: に = static presence or arrival; で = active event or method"
+          ],
+          "example": {
+            "parts": [
+              { "text": "バス", "role": "topic", "gloss": "bus" },
+              { "text": "で", "role": "particle" },
+              { "text": "駅", "role": "topic", "gloss": "station" },
+              { "text": "に", "role": "particle" },
+              { "text": "来", "role": "verb", "gloss": "come" },
+              { "text": "ました", "role": "predicate" }
+            ],
+            "en": "I came to the station by bus. (で = means; に = destination)"
+          }
+        }
+      ],
+      "tip": "Quick test: 'Am I saying where something IS, or where/how an action HAPPENS?' Existence or arrival → に. Action location or method → で. Both often appear together: バスで（by bus）駅に（to the station）来ます."
+    },
+    {
+      "type": "grammarComparison",
       "title": "に vs へ for Motion Verbs — Arrival vs Direction",
       "items": [
         {
