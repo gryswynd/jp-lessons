@@ -1,6 +1,6 @@
 # GRAMMAR_CONTENT.md — Grammar Lesson Content Creation Guide
 
-> **Purpose:** This document tells the CLAUDE.md multi-agent pipeline everything it needs to create grammar lesson JSON files (G1–G22). Feed this to Claude Code **after** the Grammar.js module has been built. The Project Manager agent (Agent 1) should read this document before scoping any grammar lesson.
+> **Purpose:** This document tells the CLAUDE.md multi-agent pipeline everything it needs to create grammar lesson JSON files (G1–G23). Feed this to Claude Code **after** the Grammar.js module has been built. The Project Manager agent (Agent 1) should read this document before scoping any grammar lesson.
 
 ---
 
@@ -13,7 +13,7 @@
 5. [Lesson Flow Convention](#lesson-flow-convention)
 6. [Term Tagging in Grammar Lessons](#term-tagging-in-grammar-lessons)
 7. [Full Lesson Map: N5 Grammar (G1–G11)](#full-lesson-map-n5-grammar-g1g11)
-8. [Full Lesson Map: N4 Grammar (G12–G22)](#full-lesson-map-n4-grammar-g12g22)
+8. [Full Lesson Map: N4 Grammar (G12–G23)](#full-lesson-map-n4-grammar-g12g23)
 9. [Content Brief Template for Grammar](#content-brief-template-for-grammar)
 10. [Quality Gates for Grammar Content](#quality-gates-for-grammar-content)
 11. [Common Failure Modes for Grammar Content](#common-failure-modes-for-grammar-content)
@@ -26,7 +26,7 @@ Grammar lessons use a different module (`Grammar.js`) with its own section types
 
 | Aspect | Kanji Lessons | Grammar Lessons |
 |---|---|---|
-| ID format | `N5.1`, `N4.7` | `G1`, `G2`, ... `G22` |
+| ID format | `N5.1`, `N4.7` | `G1`, `G2`, ... `G23` |
 | File path | `data/N5/lessons/N5.X.json` | `data/N5/grammar/G1.json` or `data/N4/grammar/G12.json` |
 | Type field | `"type"` not present (implied) | `"type": "grammar"` required |
 | Section types | warmup, kanjiGrid, vocabList, conversation, reading, drills | grammarIntro, grammarRule, grammarTable, grammarComparison, annotatedExample, conjugationDrill, patternMatch, sentenceTransform, fillSlot, conversation, drills |
@@ -83,7 +83,7 @@ If a concept genuinely requires a word not in the glossary, write the word in **
 | Field | Type | Required | Notes |
 |---|---|---|---|
 | `contentVersion` | string | ✅ | Always `"1.0.0"` |
-| `id` | string | ✅ | `G1` through `G22` |
+| `id` | string | ✅ | `G1` through `G23` |
 | `type` | string | ✅ | Always `"grammar"` |
 | `title` | string | ✅ | Display title |
 | `meta.level` | string | ✅ | `"N5"` or `"N4"` |
@@ -1034,7 +1034,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
   - Note: から was taught in G3 as a starting-point particle ("from"). This is a different role — teach the distinction explicitly.
 - ので — "because" (softer, more objective): 暑いので、冷たい水を飲みます
   - More formal and indirect than から; often preferred in writing and polite speech
-  - のに distinction preview: ので explains reason; のに (G17) expresses "even though"
+  - のに distinction preview: ので explains reason; のに (G18) expresses "even though"
   - Uses plain form + ので (but na-adjective/noun + な + ので)
 
 *Plain commands:*
@@ -1154,7 +1154,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-## Full Lesson Map: N4 Grammar (G12–G22)
+## Full Lesson Map: N4 Grammar (G12–G23)
 
 > **Note:** The exact `unlocksAfter` lesson for N4 grammar should be determined when the N4 lessons are being built. The values below are approximate placements. The user will set final values.
 
@@ -1195,11 +1195,73 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-### G13 — Give & Receive (あげる / もらう / くれる)
+### G13 — Transitive & Intransitive Verb Pairs (自動詞・他動詞)
 
 | Field | Value |
 |---|---|
 | **ID** | `G13` |
+| **Level** | N4 |
+| **Unlocks after** | N4.10 |
+| **Icon** | 🔀 |
+| **Estimated minutes** | 25 |
+
+**What to teach:**
+
+*The concept:*
+- Japanese verbs often come in pairs: a **transitive** (他動詞) verb that takes a direct object (someone does something to something), and an **intransitive** (自動詞) verb that describes something happening on its own (no agent required).
+- English often uses the same word for both ("I open the door" / "The door opens"), but Japanese uses two different verbs.
+
+*Core pattern recognition:*
+- Ichidan (RU-verb) transitive + Godan (U-verb) intransitive is the most common pairing:
+  - 開ける (あける, ichidan) = to open (something) ↔ 開く (あく, godan) = to open (by itself)
+  - 入れる (いれる, ichidan) = to put in ↔ 入る (はいる, godan) = to enter
+  - 始める (はじめる, ichidan) = to start (something) ↔ 始まる (はじまる, godan) = to begin
+  - 集める (あつめる, ichidan) = to collect ↔ 集まる (あつまる, godan) = to gather
+  - 止める (とめる, ichidan) = to stop (something) ↔ 止まる (とまる, godan) = to stop
+- The reverse pattern also exists (godan transitive + ichidan intransitive):
+  - 出す (だす, godan) = to take out ↔ 出る (でる, ichidan) = to exit
+
+*Morphological clues:*
+- ～える / ～ける endings → often transitive (開ける, 付ける, 始める)
+- ～ある / ～く endings → often intransitive (始まる, 集まる, 開く)
+- ～す endings → almost always transitive (出す, 消す, 直す)
+- ～れる endings → often intransitive (壊れる, 離れる, 倒れる)
+- These are tendencies, not absolute rules — but they help students guess correctly
+
+*Particle changes:*
+- Transitive verbs take を for the direct object: ドアを開ける (open the door)
+- Intransitive verbs take が for the subject that changes state: ドアが開く (the door opens)
+- This particle difference is a reliable cue: if you see を, the verb is likely transitive; if you see が with a non-human subject, likely intransitive
+
+*Common mistakes:*
+- Using the transitive form without an object: ×ドアが開ける (should be ドアが開く)
+- Using the intransitive form with を: ×ドアを開く (should be ドアを開ける, though 開く can be transitive in literary contexts)
+
+*Available pairs by this point in the curriculum:*
+- N5.17: 出る/出す, 入る/入れる (students have been using these since N5 — now they learn *why* the forms differ)
+- N4.10: 始まる/始める (the lesson this grammar module unlocks after)
+
+**Recommended sections:**
+1. `grammarIntro` — why Japanese needs two verbs where English uses one; the 自動詞/他動詞 concept
+2. `grammarRule` — transitive verbs (他動詞): agent + を + verb (someone does something to something)
+3. `grammarRule` — intransitive verbs (自動詞): subject + が + verb (something happens on its own)
+4. `grammarTable` — chart of known pairs (出る/出す, 入る/入れる, 始まる/始める) with particle patterns
+5. `grammarRule` — morphological clues (～える = transitive, ～ある = intransitive, ～す = transitive)
+6. `grammarComparison` — transitive vs intransitive with the same kanji (始める vs 始まる — "I start class" vs "Class starts")
+7. `annotatedExample` — pairs in natural daily-life sentences
+8. `conversation` — dialogue where both forms appear naturally (e.g. discussing opening/closing a shop, entering/putting things in a room)
+9. `fillSlot` — choose the correct verb from the pair given context (を/が cue + meaning)
+10. `drills` — mixed MCQ
+
+**Available vocabulary context:** Through N4.10. Three complete pairs are available (出る/出す, 入る/入れる, 始まる/始める). Later pairs (集まる/集める N4.30, 開く/開ける N4.31, 止まる/止める N4.35) are not yet in scope but can be referenced in the grammarRule morphological-clues section as "patterns you'll see later."
+
+---
+
+### G14 — Give & Receive (あげる / もらう / くれる)
+
+| Field | Value |
+|---|---|
+| **ID** | `G14` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.5 (TBD) |
 | **Icon** | 🎁 |
@@ -1249,11 +1311,11 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-### G14 — Comparison & Degree (より, ほう, ほど, くらい)
+### G15 — Comparison & Degree (より, ほう, ほど, くらい)
 
 | Field | Value |
 |---|---|
-| **ID** | `G14` |
+| **ID** | `G15` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.5 (TBD) |
 | **Icon** | ⚖️ |
@@ -1280,11 +1342,11 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-### G15 — Limiting Particles (だけ, しか, ばかり, でも)
+### G16 — Limiting Particles (だけ, しか, ばかり, でも)
 
 | Field | Value |
 |---|---|
-| **ID** | `G15` |
+| **ID** | `G16` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.7 (TBD) |
 | **Icon** | 🔒 |
@@ -1311,11 +1373,11 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-### G16 — Connecting Actions (てから, まえに, ながら, ために, ～たり)
+### G17 — Connecting Actions (てから, まえに, ながら, ために, ～たり)
 
 | Field | Value |
 |---|---|
-| **ID** | `G16` |
+| **ID** | `G17` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.10 (TBD) |
 | **Icon** | ⛓️ |
@@ -1335,7 +1397,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
   - Commonly used to describe a typical day or weekend activities
   - Formation: same sound-change rules as た-form (G7); just add り instead of nothing
 
-**Note:** から and ので (because) were taught as basic connectors in G9. G16 focuses on sequential, simultaneous, purposive, and non-exhaustive action patterns. Do not re-teach から/ので here — reinforce them through example sentences where appropriate.
+**Note:** から and ので (because) were taught as basic connectors in G9. G17 focuses on sequential, simultaneous, purposive, and non-exhaustive action patterns. Do not re-teach から/ので here — reinforce them through example sentences where appropriate.
 
 **Recommended sections:**
 1. `grammarIntro`
@@ -1351,11 +1413,11 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-### G17 — Contrast & Concession (のに, ても)
+### G18 — Contrast & Concession (のに, ても)
 
 | Field | Value |
 |---|---|
-| **ID** | `G17` |
+| **ID** | `G18` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.14 (TBD) |
 | **Icon** | 🌀 |
@@ -1376,7 +1438,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
   - Expresses that the outcome holds regardless of the action
   - たとえ～ても reinforces: たとえ難しくても (even if it's difficult)
   - For nouns/na-adjectives: でも (雨でも行く — even if it rains, I'll go)
-  - Note: ても is the concessive "even if"; てもいい (G18) is a separate construction meaning "it's okay to" — teach the distinction explicitly to prevent confusion
+  - Note: ても is the concessive "even if"; てもいい (G19) is a separate construction meaning "it's okay to" — teach the distinction explicitly to prevent confusion
 
 *Sentence-starting contrast adverbs (for reference):*
 - しかし — however (formal/written)
@@ -1397,11 +1459,11 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-### G18 — Permissions & Prohibitions (てもいい, てはいけない)
+### G19 — Permissions & Prohibitions (てもいい, てはいけない)
 
 | Field | Value |
 |---|---|
-| **ID** | `G18` |
+| **ID** | `G19` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.21 (TBD) |
 | **Icon** | 🚦 |
@@ -1424,11 +1486,11 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-### G19 — Obligations & Conditionals (なければ, ば, たら, なら, と)
+### G20 — Obligations & Conditionals (なければ, ば, たら, なら, と)
 
 | Field | Value |
 |---|---|
-| **ID** | `G19` |
+| **ID** | `G20` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.25 (TBD) |
 | **Icon** | 🔀 |
@@ -1461,11 +1523,11 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-### G20 — Passive Form
+### G21 — Passive Form
 
 | Field | Value |
 |---|---|
-| **ID** | `G20` |
+| **ID** | `G21` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.31 (TBD) |
 | **Icon** | 🔄 |
@@ -1498,11 +1560,11 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-### G21 — Causative Form
+### G22 — Causative Form
 
 | Field | Value |
 |---|---|
-| **ID** | `G21` |
+| **ID** | `G22` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.31 (TBD) |
 | **Icon** | 🎭 |
@@ -1536,11 +1598,11 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-### G22 — Advanced Verb Usages (てみる, ておく, てしまう, すぎる, とする)
+### G23 — Advanced Verb Usages (てみる, ておく, てしまう, すぎる, とする)
 
 | Field | Value |
 |---|---|
-| **ID** | `G22` |
+| **ID** | `G23` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.34 (TBD) |
 | **Icon** | 🧩 |
@@ -1556,7 +1618,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
   - Often paired with ～としたとき (just as [one] was about to ~): 出かけようとしたとき、電話がなった
   - "Let's assume" usage: 先生だとすると (assuming [they] are a teacher...)
   - Contrast with てみる: てみる = actually try and see; とする = attempt/be on the verge of (often interrupted or theoretical)
-- Supplementary connectors (absorbed from dissolved G20):
+- Supplementary connectors (absorbed from dissolved G21):
   - かどうか — whether or not: 行くかどうかわからない (I don't know whether to go or not); embeds a yes/no question in a sentence
   - について — about / regarding: 日本語について話す (talk about Japanese); marks a topic of discussion
 
