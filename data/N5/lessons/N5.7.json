@@ -80,14 +80,13 @@
           ]
         },
         {
-          "jp": "友だちと 店へ 行きますか。",
-          "en": "Are you going to the shop with a friend?",
+          "jp": "先週 車で 来ませんでしたか。",
+          "en": "Didn't you come by car last week?",
           "terms": [
-            "v_tomodachi",
-            "p_to",
-            "v_mise",
-            "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            "v_senshuu",
+            "v_kuruma",
+            "p_de",
+            { "id": "v_kuru", "form": "polite_past_negative" },
             "p_ka"
           ]
         }
@@ -385,8 +384,8 @@
         },
         {
           "spk": "先生",
-          "jp": "はい、レストランで 食べます。パンも 食べます。",
-          "en": "Yes, I eat at the restaurant. I eat bread too.",
+          "jp": "はい、レストランで 食べます。パンも 食べてください。",
+          "en": "Yes, I eat at the restaurant. Please eat the bread too.",
           "terms": [
             "p_hai",
             "v_resutoran",
@@ -394,14 +393,17 @@
             { "id": "v_taberu", "form": "polite_masu" },
             "v_pan",
             "p_mo",
-            { "id": "v_taberu", "form": "polite_masu" }
+            { "id": "v_taberu", "form": "te_form" },
+            "v_kudasai"
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "いいですね。",
-          "en": "That is nice.",
+          "jp": "はい、食べます。いいですね。",
+          "en": "Yes, I will eat it. That is nice.",
           "terms": [
+            "p_hai",
+            { "id": "v_taberu", "form": "polite_masu" },
             { "id": "v_ii", "form": "polite_adj" },
             "p_ne"
           ]

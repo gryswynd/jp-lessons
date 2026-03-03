@@ -55,8 +55,8 @@
             },
             {
               "spk": "B",
-              "jp": "山へ 行きます。車で 行きます。",
-              "terms": ["v_yama", "p_e", { "id": "v_iku", "form": "polite_masu" }, "v_kuruma", "p_de", { "id": "v_iku", "form": "polite_masu" }]
+              "jp": "山へ 行きます。バスでは 行きません。車で 行きます。",
+              "terms": ["v_yama", "p_e", { "id": "v_iku", "form": "polite_masu" }, "v_basu", "p_de", "p_wa", { "id": "v_iku", "form": "polite_negative" }, "v_kuruma", "p_de", { "id": "v_iku", "form": "polite_masu" }]
             },
             {
               "spk": "A",
@@ -65,14 +65,14 @@
             },
             {
               "spk": "B",
-              "jp": "はい、山に 川が あります。道も いいですよ。",
-              "terms": ["p_hai", "v_yama", "p_ni", "v_kawa", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "v_michi", "p_mo", { "id": "v_ii", "form": "polite_adj" }, "p_yo"]
+              "jp": "はい、山に 川が あります。道も いいですよ。いっしょに 来てください。",
+              "terms": ["p_hai", "v_yama", "p_ni", "v_kawa", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "v_michi", "p_mo", { "id": "v_ii", "form": "polite_adj" }, "p_yo", "v_issho", { "id": "v_kuru", "form": "te_form" }, "v_kudasai"]
             }
           ],
           "question": "How will Rikizo travel to the mountain next week?",
           "choices": ["By car", "By bus", "By taxi", "On foot"],
           "answer": "By car",
-          "explanation": "B says 車で行きます — 'I will go by car.' 車 (car, N5.6) + で (by means of) states the transport method."
+          "explanation": "B says バスでは行きません。車で行きます — 'I won't go by bus. I'll go by car.' The negative ません contrasts bus (rejected) with car (chosen). 車 (car, N5.6) + で (by means of) states the transport method."
         },
         {
           "title": "Conversation 3",
@@ -158,6 +158,13 @@
           "segments": ["うち", "から", "駅", "まで", "バス", "で", "行きます"],
           "distractors": ["に", "へ", "来ます"],
           "explanation": "うち + から (from home, starting point) + 駅 + まで (to the station, endpoint) + バス + で (by bus, means) + 行きます. The から...まで pattern marks the full span of the journey. で marks the means of transport."
+        },
+        {
+          "kind": "scramble",
+          "q": "Please come to the mountain by car.",
+          "segments": ["車", "で", "山", "へ", "来て", "ください"],
+          "distractors": ["行って", "に", "から"],
+          "explanation": "車 + で (by car, means) + 山 + へ (to the mountain, direction) + 来て (te-form of 来る) + ください (please). The て-form + ください pattern makes a polite request: 来てください = 'please come.' 行って (te-form of 行く, go) is a distractor — the sentence asks someone to 'come,' not 'go.'"
         }
       ]
     },
@@ -182,14 +189,9 @@
           "terms": ["v_yama", "p_no", "v_michi", "p_wa", "v_totemo", { "id": "v_ii", "form": "polite_adj" }]
         },
         {
-          "jp": "先週は 友だちと 山へ 行きました。",
-          "en": "Last week he went to the mountain with a friend.",
-          "terms": ["v_senshuu", "p_wa", "v_tomodachi", "p_to", "v_yama", "p_e", { "id": "v_iku", "form": "polite_mashita" }]
-        },
-        {
-          "jp": "火山にも 行きました。",
-          "en": "He also went to the volcano.",
-          "terms": ["v_kazan", "p_ni", "p_mo", { "id": "v_iku", "form": "polite_mashita" }]
+          "jp": "先週は 友だちと 山へ 行って、火山にも 行きました。",
+          "en": "Last week he went to the mountain with a friend and also went to the volcano.",
+          "terms": ["v_senshuu", "p_wa", "v_tomodachi", "p_to", "v_yama", "p_e", { "id": "v_iku", "form": "te_form" }, "v_kazan", "p_ni", "p_mo", { "id": "v_iku", "form": "polite_mashita" }]
         },
         {
           "jp": "来週も 山へ 行きます。",
@@ -217,7 +219,7 @@
           "a": "友だちと 行きました",
           "choices": ["友だちと 行きました", "先生と 行きました", "うちから 行きました", "バスで 行きました"],
           "terms": ["v_senshuu", "p_wa", "v_dare", "p_to", { "id": "v_iku", "form": "polite_mashita" }, "p_ka", "v_tomodachi"],
-          "explanation": "The passage says 先週は友だちと山へ行きました — 'Last week he went to the mountain with a friend.' と marks a companion: 友だちと = 'together with a friend.' The distractor バスで行きました answers how (by bus), not who with."
+          "explanation": "The passage says 先週は友だちと山へ行って、火山にも行きました — 'Last week he went to the mountain with a friend and also went to the volcano.' と marks a companion: 友だちと = 'together with a friend.' Notice 行って (te-form connector) links two actions: going to the mountain, then going to the volcano."
         }
       ]
     },
