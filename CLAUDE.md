@@ -812,6 +812,24 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 
 **Godan euphonic note.** `tari_form` and `conditional_tara` use `godan_euphonic` map types (`"map": "tari_form"` and `"map": "tara_form"`) that parallel `ta_form` but produce たり/だり and たら/だら endings respectively. The rendering engine will need these map types added alongside any future grammar module build. All ichidan, irregular, and adjective rules are fully defined in data and require no code changes.
 
+### 何 (nani/nan) pronunciation tagging
+
+何 has two distinct pronunciations that require different vocab IDs:
+
+| Context | Pronunciation | Tag | Examples |
+|---|---|---|---|
+| Before を or が | なに | `v_nani` | 何を食べますか、何がいい |
+| Standalone / isolation | なに | `v_nani` | 何？ |
+| Before です | なん | `v_nan` | 何ですか |
+| Before の | なん | `v_nan` | 何の本 |
+| Before counters | なん | `v_nan` | 何人、何時 (but use compound IDs: `v_nannin`, `v_nanji`) |
+| Before d/n/t sounds | なん | `v_nan` | 何で (by what means) |
+| 何か (something) | なに | `v_nani` + `p_ka` | 何か食べませんか |
+
+**Never use `k_nani`** in conversation, reading, or drill `terms` arrays. The `k_nani` entry is only for the kanjiGrid display. Using it makes 何 non-tappable.
+
+**Compound words** like 何人 (`v_nannin`), 何時 (`v_nanji`), 何曜日 (`v_nanyoubi`), 何回 (`v_nankai`), 何度 (`v_nando`) have their own dedicated IDs — use those instead of `v_nan` + a separate counter/noun tag.
+
 ### Counter references
 
 When a counter expression appears in a `terms` array:
@@ -1121,6 +1139,7 @@ These are the most frequent errors. All agents should be alert to them.
 26. **(Stories) Missing particle/copula tags in terms.json** — particles (は, の, も, と, etc.) and g_desu (です) must be tagged in story terms.json so they are tappable, exactly as in lessons. Omitting them means function words are dead text the student cannot tap to look up. Every particle with a `p_*` entry in `shared/particles.json` whose `introducedIn` is ≤ the story's lesson scope must be included. The `"です"` key covers standalone copula occurrences; い-adjective predicative forms (e.g. `"うれしいです"`) are covered by their own longer key.
 27. **Out-of-scope conjugation form** — using a conjugation form (e.g. `te_form`, `desire_tai`, `conditional_ba`) before its `introducedIn` lesson. This is the grammar equivalent of using an untaught kanji. Example: writing ～ています in N5.3 content when `te_form` has `introducedIn: "N5.5"`. Check every `form` value in `terms` against `conjugation_rules.json`. See [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules).
 28. **Out-of-scope structural grammar pattern** — the `jp` surface text contains a grammar construction (～ている, ～てください, ～ましょう, ～たり～たりする, etc.) before the constituent form is available, even if the individual word tags don't explicitly use that form. The pattern in the surface text is the violation, not just the tags. Agent 2 must scan `jp` strings for these patterns, not rely only on `terms` form checking.
+29. **何 tagged as k_nani or generic v_nani without pronunciation context** — 何 has two pronunciations: **なに** (`v_nani`) and **なん** (`v_nan`). Using `k_nani` (kanji entry) makes 何 non-tappable in conversations and readings. Using only `v_nani` for all contexts gives students the wrong reading when the pronunciation is actually なん. **Rules:** Use `v_nani` when 何 precedes を or が, or stands alone (e.g. 何を食べますか、何がいい). Use `v_nan` when 何 precedes です, の, counters, or words starting with d/n/t sounds (e.g. 何ですか、何の本、何人). Never use `k_nani` in conversation, reading, or drill `terms` — it is only for the kanjiGrid. Compound words like 何人, 何時, 何曜日 have their own dedicated entries (`v_nannin`, `v_nanji`, `v_nanyoubi`) and should use those instead.
 
 ### Agent 3 failures (caught by Agent 4)
 

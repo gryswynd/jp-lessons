@@ -65,7 +65,7 @@
           "jp": "何か 作ることが 好きですか。",
           "en": "Do you like making something?",
           "terms": [
-            "k_nani",
+            "v_nani",
             "v_tsukuru",
             "v_suki"
           ]
@@ -85,7 +85,7 @@
           "terms": [
             "k_machi",
             "v_chuushin",
-            "k_nani",
+            "v_nani",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -240,7 +240,7 @@
           "jp": "何を 作って いますか。",
           "en": "What are they making?",
           "terms": [
-            "k_nani",
+            "v_nani",
             {
               "id": "v_tsukuru",
               "form": "te_form"
@@ -379,7 +379,7 @@
           "jp": "何を 勉強して いますか。",
           "en": "What are you studying?",
           "terms": [
-            "k_nani",
+            "v_nani",
             {
               "id": "v_benkyou",
               "form": "te_form"
@@ -492,7 +492,7 @@
           "a": "工場。",
           "terms": [
             "k_machi",
-            "k_nani",
+            "v_nani",
             "v_koujou"
           ]
         },
@@ -501,7 +501,7 @@
           "a": "車。",
           "terms": [
             "v_kouin",
-            "k_nani",
+            "v_nani",
             "v_tsukuru",
             "k_kuruma"
           ]

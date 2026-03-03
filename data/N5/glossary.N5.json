@@ -3211,17 +3211,29 @@
     },
     {
       "id": "v_nani",
-      "surface": "なに",
+      "surface": "何",
       "reading": "なに",
       "meaning": "what",
       "type": "vocab",
       "gtype": "pronoun",
       "lesson_ids": "N5.1",
       "matches": [
-        "なん",
-        "何"
+        "なに"
       ],
-      "notes": "Interrogative pronoun meaning 'what'. Said 'なに' in isolation and before を/が (e.g. なにを); said 'なん' before です, counters, or の (e.g. なんですか、なん人)."
+      "notes": "Interrogative pronoun meaning 'what'. Pronounced 'なに' in isolation and before を/が (e.g. 何を食べますか). Use v_nani when 何 precedes を, が, or stands alone. Use v_nan when 何 precedes です, の, counters, or words starting with d/n/t sounds."
+    },
+    {
+      "id": "v_nan",
+      "surface": "何",
+      "reading": "なん",
+      "meaning": "what",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N5.1",
+      "matches": [
+        "なん"
+      ],
+      "notes": "Variant pronunciation of 何 used before です, の, counters, and words starting with d/n/t sounds (e.g. 何ですか、何の本、何人). Use v_nan in these contexts; use v_nani when 何 precedes を, が, or stands alone."
     },
     {
       "id": "v_sorekara",
