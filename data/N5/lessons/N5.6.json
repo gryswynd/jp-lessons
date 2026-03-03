@@ -82,14 +82,13 @@
           ]
         },
         {
-          "jp": "友だちの うちへ 行きますか。",
-          "en": "Are you going to your friend's house?",
+          "jp": "先週 駅へ 行きませんでしたか。",
+          "en": "Didn't you go to the station last week?",
           "terms": [
-            "v_tomodachi",
-            "p_no",
-            "v_uchi",
+            "v_senshuu",
+            "v_eki",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            { "id": "v_iku", "form": "polite_past_negative" },
             "p_ka"
           ]
         }
@@ -181,10 +180,10 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "車で 行きますか。",
-          "en": "Are you going by car?",
+          "jp": "バスで 行きますか。",
+          "en": "Are you going by bus?",
           "terms": [
-            "v_kuruma",
+            "v_basu",
             "p_de",
             { "id": "v_iku", "form": "polite_masu" },
             "p_ka"
@@ -192,10 +191,14 @@
         },
         {
           "spk": "やまかわ",
-          "jp": "はい、車で 行きます。山の 道は いいですよ。",
-          "en": "Yes, I am going by car. The mountain road is nice, you know.",
+          "jp": "いいえ、バスでは 行きません。車で 行きます。山の 道は いいですよ。",
+          "en": "No, I won't go by bus. I'll go by car. The mountain road is nice, you know.",
           "terms": [
-            "p_hai",
+            "v_iie",
+            "v_basu",
+            "p_de",
+            "p_wa",
+            { "id": "v_iku", "form": "polite_negative" },
             "v_kuruma",
             "p_de",
             { "id": "v_iku", "form": "polite_masu" },
@@ -385,8 +388,8 @@
         },
         {
           "spk": "やまかわ",
-          "jp": "はい、山に 火山が あります。道は いいですよ。",
-          "en": "Yes, there is a volcano at the mountain. The road is nice, you know.",
+          "jp": "はい、山に 火山が あります。道は いいですよ。いっしょに 来てください。",
+          "en": "Yes, there is a volcano at the mountain. The road is nice, you know. Please come together.",
           "terms": [
             "p_hai",
             "v_yama",
@@ -397,16 +400,19 @@
             "v_michi",
             "p_wa",
             { "id": "v_ii", "form": "polite_adj" },
-            "p_yo"
+            "p_yo",
+            "v_issho",
+            { "id": "v_kuru", "form": "te_form" },
+            "v_kudasai"
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "いいですね。川も ありますか。",
-          "en": "That is nice. Is there a river too?",
+          "jp": "はい、行きます。川も ありますか。",
+          "en": "Yes, I will go. Is there a river too?",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
-            "p_ne",
+            "p_hai",
+            { "id": "v_iku", "form": "polite_masu" },
             "v_kawa",
             "p_mo",
             { "id": "v_aru", "form": "polite_masu" },
@@ -491,17 +497,18 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "はい、駅から 山へ 車で 行きます。",
-          "en": "Yes, I will go by car from the station to the mountain.",
+          "jp": "はい、駅から 車で 山へ 行って来ます。",
+          "en": "Yes, I'll go from the station to the mountain by car and come back.",
           "terms": [
             "p_hai",
             "v_eki",
             "p_kara",
-            "v_yama",
-            "p_e",
             "v_kuruma",
             "p_de",
-            { "id": "v_iku", "form": "polite_masu" }
+            "v_yama",
+            "p_e",
+            { "id": "v_iku", "form": "te_form" },
+            { "id": "v_kuru", "form": "polite_masu" }
           ]
         }
       ]
@@ -521,6 +528,16 @@
             "v_yama",
             "p_e",
             { "id": "v_iku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "バスでは 行きません。",
+          "en": "He doesn't go by bus.",
+          "terms": [
+            "v_basu",
+            "p_de",
+            "p_wa",
+            { "id": "v_iku", "form": "polite_negative" }
           ]
         },
         {
