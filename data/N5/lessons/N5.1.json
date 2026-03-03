@@ -41,6 +41,11 @@
           "jp": "先生の 名まえは なんですか。",
           "en": "What is your teacher's name?",
           "terms": ["v_sensei", "p_no", "v_namae", "p_wa", "v_nani", "g_desu", "p_ka"]
+        },
+        {
+          "jp": "お母さんは やさしいですか。",
+          "en": "Is your mother kind?",
+          "terms": ["v_okaasan", "p_wa", { "id": "v_yasashii", "form": "polite_adj" }, "p_ka"]
         }
       ]
     },
