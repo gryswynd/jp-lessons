@@ -180,19 +180,19 @@
             "With existence verbs (います / あります): marks WHERE something IS",
             "With motion verbs (行く / 来る): marks the DESTINATION — the endpoint of movement",
             "に pins the sentence to a specific place-point — static presence or arrival",
-            "駅にいます → someone IS at the station (existence)",
+            "家にいます → someone IS at home (existence)",
             "駅に行きます → going TO the station (arrival at endpoint)"
           ],
           "example": {
             "parts": [
               { "text": "友だち", "role": "subject", "gloss": "friend" },
               { "text": "が", "role": "particle" },
-              { "text": "駅", "role": "topic", "gloss": "station" },
+              { "text": "家", "role": "topic", "gloss": "home" },
               { "text": "に", "role": "particle" },
               { "text": "い", "role": "verb", "gloss": "be" },
               { "text": "ます", "role": "predicate" }
             ],
-            "en": "My friend is at the station. (existence location)"
+            "en": "My friend is at home. (existence location)"
           }
         },
         {
@@ -202,19 +202,17 @@
             "Action location: marks the place where an action actively takes place (NOT just where something is)",
             "Means / method: marks the tool, vehicle, or method used for an action",
             "で answers 'In what context or by what means is this action performed?'",
-            "バスで来ます → coming BY bus (means — the method of travel)",
-            "Key contrast: に = static presence or arrival; で = active event or method"
+            "家で生まれました → was born AT home (action location — the birth happened there)",
+            "Key contrast: 家にいます (someone IS at home) vs 家で生まれました (something HAPPENED at home)"
           ],
           "example": {
             "parts": [
-              { "text": "バス", "role": "topic", "gloss": "bus" },
+              { "text": "家", "role": "topic", "gloss": "home" },
               { "text": "で", "role": "particle" },
-              { "text": "駅", "role": "topic", "gloss": "station" },
-              { "text": "に", "role": "particle" },
-              { "text": "来", "role": "verb", "gloss": "come" },
+              { "text": "生まれ", "role": "verb", "gloss": "was born" },
               { "text": "ました", "role": "predicate" }
             ],
-            "en": "I came to the station by bus. (で = means; に = destination)"
+            "en": "I was born at home. (action location — the event happened there)"
           }
         }
       ],
