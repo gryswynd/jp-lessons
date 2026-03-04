@@ -21,6 +21,7 @@
 9. [Quality Gate & Critic Rubric](#9-quality-gate--critic-rubric)
 10. [Batch Production Workflow](#10-batch-production-workflow)
 11. [File Organization](#11-file-organization)
+12. [Walk Cycle Sprite Sheet Generation](#12-walk-cycle-sprite-sheet-generation)
 
 ---
 
@@ -1874,7 +1875,10 @@ project/
 │   │
 │   ├── shared/                    # Assets used across all game days
 │   │   └── sprites/
-│   │       └── me_sheet.png       # Player sprite sheet (1224×1172, magenta BG)
+│   │       ├── me_sheet.png       # Player sprite sheet (1224×1172, 6×4 grid)
+│   │       ├── walk_cycle_spec.json  # Frame-by-frame walk cycle spec (Section 12)
+│   │       ├── stitch_spritesheet.py # Stitch/extract individual frames ↔ sheet
+│   │       └── frames/            # Individual frame PNGs (24 files)
 │   │
 │   ├── data/N5/game/              # Game days organized by JLPT level
 │   │   ├── day-01-home/           # Unlocked by lesson N5.1
@@ -1950,6 +1954,107 @@ project/
 ├── gemini-3-image-api-guide.md    # API reference
 └── RikizoArtPipeline.md           # THIS FILE
 ```
+
+---
+
+## 12. Walk Cycle Sprite Sheet Generation
+
+Generating a full walk cycle sprite sheet as a single image produces inconsistent results — the AI treats each cell as an independent variation rather than a sequential animation frame, causing direction drift, pose inconsistency, and broken walk cycles. The solution is **frame-by-frame generation with mechanical stitching**.
+
+### The Problem with Whole-Sheet Generation
+
+When an image model generates a 6×4 sprite sheet in one pass:
+- Each cell is treated as a "character portrait variant" rather than a specific animation keyframe
+- Facing direction drifts between cells within the same row
+- Limb positions don't follow a coherent walk cycle progression
+- Using a broken sheet as reference perpetuates the same issues
+
+### The Solution: Frame-by-Frame + Stitch
+
+Generate each of the 24 frames individually with precise pose instructions, then programmatically stitch them into the grid.
+
+**Key files:**
+- `shared/sprites/walk_cycle_spec.json` — Complete specification for all 24 frames including direction, phase, and per-frame prompt details
+- `shared/sprites/stitch_spritesheet.py` — Python script to assemble individual frames into `me_sheet.png` (also supports extracting frames from an existing sheet)
+- `shared/sprites/frames/` — Directory for individual frame PNGs
+
+### Sheet Layout
+
+| Row | Direction | What the Camera Sees |
+|-----|-----------|---------------------|
+| 0 | **Down** (toward camera) | Full face, chest, tie. Feet splay L/R on steps. |
+| 1 | **Left** | Right side of body (profile). Right arm/leg visible. |
+| 2 | **Right** | Left side of body (profile). Mirror of Left. |
+| 3 | **Up** (away from camera) | Back of head, back of blazer. NO face. |
+
+| Column | Phase | Key Pose Detail |
+|--------|-------|----------------|
+| 0 | **Idle** | Feet together, arms at sides, centered weight. |
+| 1 | **Step Right** | Right foot forward, left arm forward. Baseline height. |
+| 2 | **Pass Right** | Legs passing center. Body bobs UP 1-2px (highest point). |
+| 3 | **Step Left** | Left foot forward, right arm forward. Mirror of col 1. |
+| 4 | **Pass Left** | Mirror of col 2. Body UP 1-2px. |
+| 5 | **Step Right 2** | Same as col 1. Completes the cycle loop. |
+
+Each cell: **204 × 293 pixels**. Total sheet: **1224 × 1172 pixels**.
+
+### Generation Workflow
+
+**Step 1 — Canonical idle.** Generate `frame_down_0_idle.png` first. This is the master reference for proportions, palette, and style. Get this frame perfect before proceeding.
+
+**Step 2 — Down row (frames 0-5).** Generate frames 1-5 using the idle as reference. Each prompt specifies the exact limb positions for that walk phase. The face, body proportions, and palette must remain IDENTICAL — only the legs and arms change.
+
+**Step 3 — Left row (frames 6-11).** Rotate the viewpoint to profile. The canonical idle is still the character reference for proportions and palette.
+
+**Step 4 — Right row (frames 12-17).** **Mirror optimization:** Generate right-facing frames by horizontally flipping the left-facing frames. This guarantees perfect L/R consistency. Use `stitch_spritesheet.py stitch --mirror-lr` to do this automatically.
+
+**Step 5 — Up row (frames 18-23).** Back of head and body only. NO face. Same proportions and palette as all other frames.
+
+**Step 6 — Stitch.** Run the stitching script to assemble the final sheet:
+
+```bash
+# Standard (all 24 frames provided):
+python3 shared/sprites/stitch_spritesheet.py stitch --frames-dir shared/sprites/frames/
+
+# With L/R mirroring (only 18 frames needed — down, left, up):
+python3 shared/sprites/stitch_spritesheet.py stitch --frames-dir shared/sprites/frames/ --mirror-lr
+```
+
+### Prompt Structure for Each Frame
+
+Each frame's Gemini prompt should include:
+
+1. **Character identity block** (same for all 24 frames): "Chibi pixel art, 2-3 heads tall, black curly hair, glasses, white shirt, red tie, navy blazer, dark slacks, pocket dictionary. 16-32 color limited palette. Dark outline. Upper-left light source. 204×293 pixels on black background."
+
+2. **Direction block** (same for all frames in a row): "Facing TOWARD the viewer (front view)" / "Facing LEFT (profile, right side visible)" / etc.
+
+3. **Phase block** (unique per frame): "Walking — right foot forward, left arm swinging forward. Weight shifting forward. Body at baseline height." (from `walk_cycle_spec.json`'s `prompt_detail` field)
+
+4. **Consistency anchor**: Include the canonical idle frame as a reference image with the instruction: "Match this character's proportions, palette, and style EXACTLY. Only change the limb positions as specified."
+
+5. **Negative constraints**: "Do NOT change the character's facing direction. Do NOT add accessories or expression changes. Do NOT use anti-aliasing or gradients. This is pixel art — hard edges only."
+
+See `walk_cycle_spec.json` for the complete per-frame `prompt_detail` text.
+
+### Extracting Frames from an Existing Sheet
+
+To break down the current `me_sheet.png` into individual frames for reference or editing:
+
+```bash
+python3 shared/sprites/stitch_spritesheet.py extract --sheet shared/sprites/me_sheet.png --output-dir shared/sprites/frames/
+```
+
+### Common Walk Cycle Pitfalls
+
+| Pitfall | Prevention |
+|---------|-----------|
+| Direction drift between frames | Every prompt in a row must repeat the EXACT same direction language. Never say "facing forward" for one and "looking at camera" for another — use identical phrasing. |
+| Inconsistent proportions | Always include the canonical idle as a reference image. State "Match this character exactly." |
+| Missing vertical bob | Pass frames (cols 2, 4) must shift the whole character UP 1-2 pixels. This creates the natural walking bounce. Without it the walk looks like sliding. |
+| Arms not opposing legs | Opposite arm-leg convention: right foot forward = LEFT arm forward. State this explicitly in every step-phase prompt. |
+| Up row showing face | The "up" direction means AWAY from camera. The prompt must say "back of head, NO face visible" explicitly and repeatedly. AI models default to showing faces. |
+| Palette variation between frames | Include hex color values in the prompt if possible, or at minimum name the colors consistently ("dark navy blazer #2B3A67" not just "blue jacket"). |
+| Right row inconsistent with left | Use the `--mirror-lr` flag to auto-flip. Manual generation of both directions will always have subtle inconsistencies. |
 
 ---
 
