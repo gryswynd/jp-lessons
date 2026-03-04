@@ -20,7 +20,7 @@
     {
       "kanji": "後",
       "on": "ご/こう",
-      "kun": "うしろ",
+      "kun": "うしろ/あと",
       "meaning": "Behind / After",
       "termId": "k_ushiro"
     },
@@ -102,7 +102,7 @@
         {
           "kanji": "後",
           "on": "ご/こう",
-          "kun": "うしろ",
+          "kun": "うしろ/あと",
           "meaning": "behind / after",
           "terms": ["k_ushiro"]
         },
@@ -133,6 +133,10 @@
         {
           "label": "Position Words",
           "items": ["v_mae", "v_ushiro", "v_naka", "v_soto"]
+        },
+        {
+          "label": "後 (あと) — Temporal",
+          "items": ["v_ato"]
         },
         {
           "label": "Polite Direction Words",
@@ -486,9 +490,11 @@
         },
         {
           "spk": "やまかわ",
-          "jp": "中に 来てください。いっしょに 食べましょう。",
-          "en": "Please come inside. Let's eat together.",
+          "jp": "後で 中に 来てください。いっしょに 食べましょう。",
+          "en": "Please come inside later. Let's eat together.",
           "terms": [
+            "v_ato",
+            "p_de",
             "v_naka",
             "p_ni",
             { "id": "v_kuru", "form": "te_form" },
