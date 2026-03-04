@@ -147,6 +147,7 @@
         {
           "id": "N5.10",
           "title": "Weather & Energy",
+          "file": "data/N5/lessons/N5.10.json",
           "kanji": [
             "天",
             "電",
@@ -305,6 +306,14 @@
           "unlocksAfter": "N5.9",
           "icon": "👋",
           "estimatedMinutes": 30
+        },
+        {
+          "id": "G10",
+          "title": "i-Adjective Conjugation",
+          "file": "data/N5/grammar/G10.json",
+          "unlocksAfter": "N5.10",
+          "icon": "🎨",
+          "estimatedMinutes": 25
         }
       ],
       "reviews": [
@@ -338,7 +347,8 @@
         { "lesson": "N5.6", "file": "data/N5/compose/compose.N5.6.json" },
         { "lesson": "N5.7", "file": "data/N5/compose/compose.N5.7.json" },
         { "lesson": "N5.8", "file": "data/N5/compose/compose.N5.8.json" },
-        { "lesson": "N5.9", "file": "data/N5/compose/compose.N5.9.json" }
+        { "lesson": "N5.9", "file": "data/N5/compose/compose.N5.9.json" },
+        { "lesson": "N5.10", "file": "data/N5/compose/compose.N5.10.json" }
       ],
       "stories": [
         {
