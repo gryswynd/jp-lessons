@@ -123,6 +123,7 @@
         {
           "id": "N5.8",
           "title": "Shopping & Adjectives",
+          "file": "data/N5/lessons/N5.8.json",
           "kanji": [
             "古",
             "新",
@@ -288,6 +289,13 @@
           "file": "data/N5/grammar/G7.json",
           "unlocksAfter": "N5.5",
           "icon": "🔗"
+        },
+        {
+          "id": "G8",
+          "title": "ている・たいです・ましょう — Progressive, Desire & Invitation",
+          "file": "data/N5/grammar/G8.json",
+          "unlocksAfter": "N5.8",
+          "icon": "🎯"
         }
       ],
       "reviews": [
@@ -314,7 +322,8 @@
         { "lesson": "N5.4", "file": "data/N5/compose/compose.N5.4.json" },
         { "lesson": "N5.5", "file": "data/N5/compose/compose.N5.5.json" },
         { "lesson": "N5.6", "file": "data/N5/compose/compose.N5.6.json" },
-        { "lesson": "N5.7", "file": "data/N5/compose/compose.N5.7.json" }
+        { "lesson": "N5.7", "file": "data/N5/compose/compose.N5.7.json" },
+        { "lesson": "N5.8", "file": "data/N5/compose/compose.N5.8.json" }
       ],
       "stories": [
         {
