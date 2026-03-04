@@ -1,0 +1,256 @@
+{
+  "version": "1.0.0",
+  "generated": "2026-03-03",
+  "source_files_analyzed": [
+    "references/pixel_characters/me_sheet.png",
+    "references/pixel_characters/dad.png",
+    "references/pixel_characters/mom.png",
+    "references/pixel_maps/map.png",
+    "references/pixel_maps/convo-bg.png",
+    "references/pixel_maps/family.png",
+    "references/vector_portraits/dad-convo.png",
+    "references/vector_portraits/me-convo.png",
+    "references/vector_portraits/mom-convo.png"
+  ],
+
+  "mode_a_pixel": {
+    "description": "Chibi pixel art used for overworld sprites, sprite sheets, and top-down maps.",
+
+    "palette": {
+      "skin_base": "#E8B87C",
+      "skin_shadow": "#C89858",
+      "skin_mid": "#D4A46A",
+      "hair_darkest": "#1A1815",
+      "hair_dark": "#2A2420",
+      "hair_mid_brown": "#3D3530",
+      "hair_mom_dark": "#3D2B1F",
+      "hair_mom_mid": "#5A4030",
+      "eye_brown": "#6B4226",
+      "eye_white": "#E8E0D8",
+      "navy_dark": "#2B3A5C",
+      "navy_mid": "#3D4E70",
+      "navy_light": "#4A5E82",
+      "grey_hoodie_light": "#A0A0A0",
+      "grey_hoodie_mid": "#8A8A8A",
+      "grey_hoodie_shadow": "#6A6A6A",
+      "cream_light": "#E0D4B0",
+      "cream_mid": "#D4C8A0",
+      "cream_shadow": "#B8A880",
+      "brown_skirt": "#6B5040",
+      "outline_primary": "#1A1A1A",
+      "outline_black": "#000000",
+      "wood_floor_light": "#D89850",
+      "wood_floor_mid": "#C08040",
+      "wood_floor_dark": "#A06830",
+      "wall_light": "#E0D0B0",
+      "wall_mid": "#D4C4A0",
+      "map_void": "#000000",
+      "furniture_red": "#B03030",
+      "furniture_green": "#4A7A3A",
+      "plant_green_light": "#6A9A50",
+      "plant_green_dark": "#3A5A28",
+      "tatami_yellow": "#C8C060"
+    },
+
+    "line_weight_and_style": {
+      "outline_width_px": 1,
+      "outline_color_rule": "Near-black (#1A1A1A) or darker shade of fill color. Pure black (#000000) used only on hair/darkest areas. Never colored outlines.",
+      "anti_aliasing": false,
+      "sub_pixel_blending": false,
+      "pixel_perfect": true
+    },
+
+    "proportions": {
+      "head_to_body_ratio": "1:1.5 (approximately 2.5 heads tall)",
+      "style": "Chibi — oversized head, small body, stubby limbs",
+      "head_shape": "Rounded with flat top, hair adds significant volume",
+      "body_width": "Approximately 60-70% of head width",
+      "limb_length": "Very short, simplified"
+    },
+
+    "shading": {
+      "approach": "Flat fill with one shadow tone per material. No gradients. Minimal dithering.",
+      "light_source": "Upper-left (~10 o'clock)",
+      "shadow_placement": "Right side and bottom of forms, under chin, under hair bangs",
+      "highlight_placement": "Top-left of hair (white/light pixel clusters for sheen)"
+    },
+
+    "sprite_sheet_specs": {
+      "player_sheet_dimensions": "1224x1172 px",
+      "grid_layout": "4 columns x 6 rows (24 frames total)",
+      "cell_approximate_size": "306x195 px per cell (rendered at high res, actual sprite ~48x64 logical)",
+      "directions": "Down, Left, Right, Up (top to bottom row pairs)",
+      "frames_per_direction": "4 walk frames + 2 idle variants"
+    },
+
+    "npc_sprite_specs": {
+      "dimensions": "1536x1024 px (single large sprite on white background)",
+      "character_area": "Centered, approximately 40-50% of canvas width",
+      "background": "Pure white (#FFFFFF) for transparency extraction"
+    },
+
+    "map_specs": {
+      "dimensions": "1536x1024 px",
+      "view": "Top-down / overhead",
+      "tile_size_approx": "32x32 px logical",
+      "void_treatment": "Pure black (#000000) surrounds the playable area — represents the unmanifested world",
+      "detail_level": "High — individual furniture items, appliances, plants, decorative objects all clearly rendered",
+      "color_temperature": "Warm interior (amber/honey wood tones) contrasted against cold black void"
+    },
+
+    "text_rendering": {
+      "japanese_text_in_sprites": "None observed in current references"
+    }
+  },
+
+  "mode_b_illustration": {
+    "description": "MP100-inspired illustration style used for conversation portraits, CGs, and backgrounds. Characterized by intentionally simple character designs with thin, loose linework.",
+
+    "palette": {
+      "skin_base": "#F2D8B8",
+      "skin_shadow": "#E0C0A0",
+      "skin_deep_shadow": "#D4A880",
+      "skin_neck_shadow": "#C89878",
+      "hair_darkest": "#1A1510",
+      "hair_dark": "#2A2018",
+      "hair_mid": "#3D3028",
+      "hair_highlight": "#5A4838",
+      "eye_dark": "#1A1A1A",
+      "eye_iris_hint": "#3D3028",
+      "sclera_white": "#FFFFFF",
+      "outline_primary": "#1A1A1A",
+      "rikizo_blazer_dark": "#2B3A5C",
+      "rikizo_blazer_mid": "#344870",
+      "rikizo_blazer_button": "#C0A870",
+      "rikizo_shirt_white": "#F0F0F0",
+      "rikizo_shirt_shadow": "#E0E0E0",
+      "rikizo_tie_red": "#A03030",
+      "rikizo_tie_dark_red": "#8B2525",
+      "rikizo_tie_stripe_blue": "#3A4A6A",
+      "dad_hoodie_light": "#B0B0B0",
+      "dad_hoodie_mid": "#9A9A9A",
+      "dad_hoodie_shadow": "#808080",
+      "dad_hoodie_drawstring": "#D0D0D0",
+      "dad_tshirt_navy": "#2B3A5C",
+      "mom_cardigan_light": "#D8CCA8",
+      "mom_cardigan_mid": "#C4B890",
+      "mom_cardigan_shadow": "#A89870",
+      "mom_blouse_blue": "#A8B8D0",
+      "mom_blouse_shadow": "#90A0B8",
+      "mom_floral_white": "#F0EDE8",
+      "background_white": "#FFFFFF",
+      "background_warm_grey": "#F5F0E8"
+    },
+
+    "line_weight_and_style": {
+      "outline_width_px": "1.5-2.5 (variable — thinner on facial features, slightly thicker on body/clothing contours)",
+      "outline_color": "#1A1A1A (near-black, consistent across all characters)",
+      "quality": "Slightly loose and hand-drawn. Lines have subtle variation in weight — not perfectly uniform vector strokes. Occasional tapering at endpoints.",
+      "facial_lines": "Very minimal. Nose is a single short line or subtle shadow. Mouth is a small simple shape. Eyebrows are thin quick strokes.",
+      "clothing_lines": "Slightly heavier than facial lines. Wrinkle lines are sparse — only at major fold points (elbow crease, collar, shoulder seam).",
+      "hair_lines": "Dynamic, flowing strokes that taper. Individual strand groups visible. Slightly messy/natural."
+    },
+
+    "proportions": {
+      "head_to_body_ratio": "1:4 to 1:5 (semi-realistic, slightly stylized toward lanky)",
+      "build": "Slim, natural. Not muscular or exaggerated. Dad is slightly broader-shouldered than Rikizo.",
+      "head_shape": "Rounded with slight chin point. Rikizo and Dad have angular jawlines. Mom has softer/rounder face.",
+      "neck": "Visible, normal length. Shadow under chin is a consistent style marker.",
+      "shoulders": "Natural width, slightly simplified (no detailed musculature)",
+      "hands": "Simplified — visible when posed (Rikizo's hand in pocket) but not highly detailed"
+    },
+
+    "faces": {
+      "register_calm_nichijou": {
+        "eyes": "Small to medium size. Simple oval/almond shapes with dark pupil fill. Dad has the smallest/most dot-like eyes. Rikizo slightly larger. Mom has the most detailed eyes with subtle eyelashes.",
+        "nose": "Minimal — a short vertical line or soft shadow. Placed center-low on face. Very understated.",
+        "mouth": "Small. Neutral = small closed line. Smile = slight upward curve. Rikizo's open smile shows a hint of red/teeth. All very simple.",
+        "eyebrows": "Thin, expressive. Dark brown. Short curved strokes above eyes.",
+        "expression_range": "Calm, warm, approachable. Subtle emotions — gentle smiles, mild expressions."
+      },
+      "register_intense_kakusei": {
+        "note": "No intense-register references exist yet. When generating 覚醒 assets: eyes go large and detailed, mouths open wide, speed lines and dramatic shadows appear. See Art Direction Bible for MP100 dual-register rules."
+      }
+    },
+
+    "shading": {
+      "approach": "Predominantly flat color with one shadow tone per surface area. Minimal — only at neck/chin, major fabric folds, and hair underside.",
+      "light_source": "Upper-left (~10 o'clock), consistent with pixel mode",
+      "shadow_style": "Soft-edged but clearly defined zones, not gradients. The boundary between lit and shadow areas is slightly soft, not cel-shaded hard.",
+      "highlight_approach": "No explicit highlights on skin. Hair has very subtle lighter areas suggesting sheen. Clothing has no highlights.",
+      "shadow_color_rule": "Shadow tone is a warmer, darker version of the base color (not grey overlay). Neck shadows are distinctly warm brown."
+    },
+
+    "portrait_specs": {
+      "dimensions": "1024x1536 px (2:3 portrait orientation)",
+      "framing": "Bust-up — head to mid-torso/waist. Character centered horizontally, head in upper third.",
+      "background": "Pure white (#FFFFFF) or near-white. No background elements in calm-register portraits.",
+      "character_fill": "Character occupies approximately 60-70% of canvas width",
+      "crop_bottom": "Soft fade/vignette to white at bottom edge (most visible on mom-convo.png). No hard crop line."
+    },
+
+    "conversation_background_specs": {
+      "dimensions": "1536x1024 px (3:2 landscape)",
+      "style": "Semi-realistic painted illustration. MORE detailed than character portraits (MP100 hallmark — backgrounds richer than characters).",
+      "color_temperature": "Warm — amber lighting, honey wood tones, soft shadows",
+      "detail_level": "Individual objects clearly rendered (appliances, dishes, fruit bowl, notes on fridge). Lived-in, authentic Japanese home feel.",
+      "perspective": "One-point or two-point perspective, eye-level or slightly above"
+    },
+
+    "cg_scene_specs": {
+      "note": "family.png (684x945) shows a framed family photo — a CG/illustration piece showing all three family members together with Mt. Fuji and cherry blossoms background.",
+      "style": "Slightly more detailed than conversation portraits — more defined eyes, more expression detail. Characters match portrait designs but with added rendering.",
+      "use_case": "In-game collectible photos, event CGs, memory scenes"
+    },
+
+    "text_rendering": {
+      "japanese_text_in_portraits": "None observed in current references"
+    }
+  },
+
+  "character_identity_keys": {
+    "rikizo": {
+      "hair": "Dark brown (#2A2018), short and slightly messy/spiky, swept to sides. Not long, not buzzcut. Natural teenage boy hair.",
+      "eyes": "Dark brown/black, medium size, friendly expression",
+      "glasses": "Thick rectangular dark frames (#1A1A1A), noticeably substantial but not oversized. Clear lenses — eyes visible through them. Frames sit properly on nose with temples behind ears. Key character identifier alongside red tie.",
+      "face": "Young (high school age), slight angular jaw, clean-shaven, light skin, wears thick rectangular glasses",
+      "clothing_school": "Navy blazer (#2B3A5C), white dress shirt (open collar, no top button), red striped tie (#A03030 with #3A4A6A stripes), gold buttons",
+      "clothing_casual": "Not yet established in references",
+      "pixel_glasses": "2-3px dark rectangular frames visible on face in all directions (front, side, back). Consistent across all animation frames.",
+      "pixel_clothing": "Dark navy blazer, white shirt with dark tie visible at collar, dark slacks",
+      "identifying_marks": "Thick rectangular dark-framed glasses + red striped tie are the two strongest identifiers across both modes. Pocket dictionary (noted in character bible, not yet visible in current references)."
+    },
+    "dad": {
+      "hair": "Dark brown/near-black (#2A2018), messy and spiky, slightly longer than Rikizo. More wild/unkempt.",
+      "eyes": "Small, dark, dot-like. The most minimal eyes of the three characters. Relaxed/easygoing expression.",
+      "face": "Adult male, broader jaw than Rikizo, slight stubble shadow at neck, calm expression",
+      "clothing": "Grey hoodie (#9A9A9A, open/unzipped) over navy blue t-shirt (#2B3A5C). Casual, at-home look.",
+      "pixel_clothing": "Grey jacket/hoodie over blue top, dark navy pants",
+      "identifying_marks": "Grey hoodie is the strongest identifier. Hair is messier/wilder than Rikizo."
+    },
+    "mom": {
+      "hair": "Dark brown (#3D2B1F), shoulder-length bob/wavy, soft and feminine. Shorter than Rikizo or Dad's hair overall but more volume.",
+      "eyes": "Slightly more detailed than Dad/Rikizo — subtle eyelashes, warmer expression. Still simple in MP100 style but with a feminine touch.",
+      "face": "Adult woman, softer/rounder face shape than the males, gentle smile, warm expression",
+      "clothing": "Beige/cream knit cardigan (#D8CCA8) over light blue floral blouse (#A8B8D0 with small white flower pattern). Domestic, warm, motherly.",
+      "pixel_clothing": "Cream/beige top with light-colored blouse, brown skirt",
+      "identifying_marks": "Cream cardigan + blue floral blouse is the strongest identifier. Shoulder-length wavy hair distinguishes from male characters."
+    }
+  },
+
+  "cross_mode_consistency": {
+    "color_mapping": "Characters use the same color palette across pixel and vector modes. Dad's grey hoodie is grey in both. Rikizo's navy blazer is the same navy. Mom's cream cardigan matches.",
+    "hair_style_mapping": "Hair silhouettes match across modes. Dad = messy/spiky. Rikizo = shorter/neater spiky. Mom = shoulder bob.",
+    "proportion_shift": "Pixel mode uses ~2.5 head chibi proportions. Vector mode uses ~4-5 head semi-realistic proportions. The jump is expected and natural.",
+    "skin_tone_shift": "Pixel skin (#E8B87C) is slightly more saturated/warm than vector skin (#F2D8B8). This is intentional — pixel art reads better with higher saturation."
+  },
+
+  "global_rules": {
+    "light_source": "Upper-left, approximately 10 o'clock. Consistent across ALL assets, both modes.",
+    "no_watermarks": true,
+    "no_signatures": true,
+    "japanese_text_accuracy": "Any visible Japanese text must be verified for correctness before inclusion.",
+    "seasonal_default": "Spring (cherry blossoms, mild tones) based on family.png reference",
+    "void_representation": "Pure black (#000000). The void is the absence of manifested reality — no texture, no gradient, just black."
+  }
+}

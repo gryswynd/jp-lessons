@@ -584,7 +584,8 @@ After the Critic approves a final image, Claude Code performs these steps:
 1. **Run transparency extraction** if flagged in Asset Brief (should already be done by Visualizer, but verify the output is valid RGBA).
 2. **Resize/crop to exact spec** from Section 5 (e.g. sprite sheets must be exactly 1224×1172, portraits exactly 1024×1024).
 3. **Verify pixel dimensions** programmatically — do not trust Gemini's output dimensions.
-4. **Copy the final file** to its permanent location in `output/` following the file organization from Section 11:
+4. **Reference immutability rule.** The `references/` directory is the style source-of-truth. **Never overwrite or delete existing files in `references/`.** When a character design changes (e.g. adding glasses, updating clothing), the original reference stays as-is and the updated asset is written to `output/`. New hero assets may be *added* to `references/` as new files (Step 6) to expand the style corpus, but existing files are never replaced. If a design change is permanent, the old reference remains for historical style continuity and the new version becomes the active asset in `output/` and game directories.
+5. **Copy the final file** to its permanent location in `output/` following the file organization from Section 11:
    ```
    output/
    ├── shared/sprites/me_sheet.png         ← player sprite sheet
@@ -600,8 +601,8 @@ After the Critic approves a final image, Claude Code performs these steps:
    ├── enemies/, locations/, ui/, items/, effects/, tiles/
    └── ...
    ```
-5. **Update the reference catalog.** If this is a hero portrait or key design asset, copy it to `references/` in the appropriate subdirectory so future Retriever runs can use it.
-6. **Log the generation.** Append to `logs/generation_log.json`:
+6. **Update the reference catalog.** If this is a brand-new hero portrait or key design asset (not a modification of an existing one), copy it to `references/` in the appropriate subdirectory as a new file so future Retriever runs can use it.
+7. **Log the generation.** Append to `logs/generation_log.json`:
    ```json
    {
      "timestamp": "2026-03-02T14:30:00Z",
