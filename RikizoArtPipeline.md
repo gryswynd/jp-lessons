@@ -468,10 +468,12 @@ Candidates:    [generate 2–3 by making 2–3 separate API calls]
 
 **Responsibilities:**
 
-1. **Determine transparency workflow.** Check the Asset Brief's `Transparency` field:
-   - If `yes` + `dual-render`: Execute TWO generation passes (see Section 6). First pass with white background instruction appended. Second pass using multi-turn chat to swap background to black. Then run `extract_alpha()` to produce the final RGBA PNG.
+1. **Determine transparency workflow.** Check the Asset Brief's `Transparency` field and follow the Decision Matrix fallback chain (Section 6):
+   - If `yes` + `dual-render`: Execute TWO generation passes (see Section 6). First pass with white background instruction appended. Second pass using multi-turn chat to swap background to black. Then run `extract_alpha()` to produce the final RGBA PNG. **If the black-BG render fails** (corners not near 0,0,0), skip immediately to flood-fill.
+   - If `yes` + `flood-fill`: Execute ONE generation pass on white background, then run `flood_fill_alpha()` extraction. This is the proven fallback when dual-render fails.
    - If `yes` + `rembg`: Execute ONE generation pass, then run `remove_background_ai()` on the result.
    - If `no`: Execute ONE generation pass. The image is used as-is.
+   - **After ANY transparency method:** Run the Transparency Validation Protocol (Section 6) before passing to the Critic. If validation fails, try the next fallback method — do not pass a failed transparency result to the Critic.
 
 2. **Call the Gemini API.** Use the Python functions from Section 7:
    - For standard assets: `generate_asset()` with the styled prompt, reference images, and API config.
@@ -582,10 +584,12 @@ Candidates:    [generate 2–3 by making 2–3 separate API calls]
 After the Critic approves a final image, Claude Code performs these steps:
 
 1. **Run transparency extraction** if flagged in Asset Brief (should already be done by Visualizer, but verify the output is valid RGBA).
-2. **Resize/crop to exact spec** from Section 5 (e.g. sprite sheets must be exactly 1224×1172, portraits exactly 1024×1024).
-3. **Verify pixel dimensions** programmatically — do not trust Gemini's output dimensions.
-4. **Reference immutability rule.** The `references/` directory is the style source-of-truth. **Never overwrite or delete existing files in `references/`.** When a character design changes (e.g. adding glasses, updating clothing), the original reference stays as-is and the updated asset is written to `output/`. New hero assets may be *added* to `references/` as new files (Step 6) to expand the style corpus, but existing files are never replaced. If a design change is permanent, the old reference remains for historical style continuity and the new version becomes the active asset in `output/` and game directories.
-5. **Copy the final file** to its permanent location in `output/` following the file organization from Section 11:
+2. **Run the Transparency Validation Protocol** (Section 6). Composite on purple `(80, 60, 120)`, check corners, verify character whites preserved, verify interior gaps transparent, verify no white fringe. **Do not proceed until validation passes.** If it fails, return to step 1 with the next fallback method.
+3. **Resize/crop to exact spec** from Section 5 (e.g. sprite sheets must be exactly 1224×1172, portraits exactly 1024×1536).
+4. **Verify pixel dimensions** programmatically — do not trust Gemini's output dimensions.
+5. **Reference immutability rule.** The `references/` directory is the style source-of-truth. **Never overwrite or delete existing files in `references/`.** When a character design changes (e.g. adding glasses, updating clothing), the original reference stays as-is and the updated asset is written to `output/`. New hero assets may be *added* to `references/` as new files (Step 6) to expand the style corpus, but existing files are never replaced. If a design change is permanent, the old reference remains for historical style continuity and the new version becomes the active asset in `output/` and game directories.
+6. **Output separation rule.** Generated assets are written to `output/` subdirectories only. Game-referenced paths (`shared/sprites/`, `data/N5/game/`) are **deployment targets** — only copy assets there when explicitly deploying a finalized, validated asset. Do not write to these paths during generation or testing. This prevents half-finished or broken assets from appearing in the game.
+7. **Copy the final file** to its permanent location in `output/` following the file organization from Section 11:
    ```
    output/
    ├── shared/sprites/me_sheet.png         ← player sprite sheet
@@ -601,8 +605,8 @@ After the Critic approves a final image, Claude Code performs these steps:
    ├── enemies/, locations/, ui/, items/, effects/, tiles/
    └── ...
    ```
-6. **Update the reference catalog.** If this is a brand-new hero portrait or key design asset (not a modification of an existing one), copy it to `references/` in the appropriate subdirectory as a new file so future Retriever runs can use it.
-7. **Log the generation.** Append to `logs/generation_log.json`:
+8. **Update the reference catalog.** If this is a brand-new hero portrait or key design asset (not a modification of an existing one), copy it to `references/` in the appropriate subdirectory as a new file so future Retriever runs can use it.
+9. **Log the generation.** Append to `logs/generation_log.json`:
    ```json
    {
      "timestamp": "2026-03-02T14:30:00Z",
@@ -610,6 +614,7 @@ After the Critic approves a final image, Claude Code performs these steps:
      "character": "rikizo",
      "register": "calm",
      "model": "gemini-3-pro-image-preview",
+     "transparency_method": "flood_fill",
      "rounds": 2,
      "final_scores": {"faithfulness": 5, "style_consistency": 4, "readability": 5, "usefulness": 5, "originality": 5},
      "output_path": "output/characters/rikizo/portrait_calm_neutral.png",
@@ -617,7 +622,7 @@ After the Critic approves a final image, Claude Code performs these steps:
      "prompt_hash": "a3f8c2..."
    }
    ```
-7. **Clean up working files.** Delete `output/_wip/` candidates that were not selected (or keep them if the user wants to review alternatives).
+10. **Clean up working files.** Delete `output/_wip/` candidates that were not selected (or keep them if the user wants to review alternatives).
 
 ---
 
@@ -929,16 +934,220 @@ def remove_background_ai(input_path: str, output_path: str) -> Image.Image:
     return output_img
 ```
 
+### Fallback 2: Flood-Fill Alpha Extraction
+
+**When to use:** When dual-render fails (Gemini refuses to generate black backgrounds) AND rembg cannot be installed (dependency build failures). This is currently the **proven working method** for this project.
+
+**How it works:** Generate the sprite on a white background only. Then extract transparency by flood-filling from the image borders — only pixels connected to the edge through white are made transparent. Interior white regions (eye whites, shirt highlights) are preserved because they're enclosed by the character's outlines.
+
+**Three phases:**
+1. **Border flood fill** — BFS from all border pixels through connected white pixels (all channels > 245). These become transparent.
+2. **Interior gap detection** — Find remaining connected pure-white regions (all channels > 250). Components > 500 pixels = background gaps (arm-body pockets, leg gaps) → make transparent. Components < 500 pixels = character detail (eye whites ~200-300px, shirt highlights) → preserve.
+3. **Smart fringe removal** — For each boundary pixel (opaque pixel adjacent to transparent), compare its brightness to the average brightness of its opaque non-boundary neighbors. If > 25 units brighter → it's fringe (white halo), remove it. Run up to 3 passes until no more fringe is found.
+
+```python
+import numpy as np
+from PIL import Image
+from collections import deque
+
+def flood_fill_alpha(img_path: str, output_path: str,
+                     white_threshold: int = 245,
+                     interior_gap_min_size: int = 500,
+                     interior_gap_white_threshold: int = 250,
+                     fringe_brightness_diff: int = 25,
+                     fringe_max_passes: int = 3) -> Image.Image:
+    """
+    Remove white background via flood fill from image borders.
+    Preserves interior white regions (eyes, shirt) because they are
+    enclosed by character outlines and not connected to the border.
+
+    Parameters:
+        white_threshold: All channels must exceed this to be considered "white" for flood fill (245)
+        interior_gap_min_size: Connected white regions larger than this are background gaps (500)
+        interior_gap_white_threshold: Stricter white threshold for interior gap detection (250)
+        fringe_brightness_diff: How much brighter a boundary pixel must be vs its neighbors to be fringe (25)
+        fringe_max_passes: Maximum fringe erosion passes (3)
+    """
+    img = Image.open(img_path).convert("RGB")
+    arr = np.array(img).astype(np.float64)
+    arr_u8 = arr.astype(np.uint8)
+    h, w = arr.shape[:2]
+
+    is_white = np.all(arr_u8 > white_threshold, axis=2)
+    alpha = np.ones((h, w), dtype=np.uint8) * 255
+    visited = np.zeros((h, w), dtype=bool)
+
+    # --- Phase 1: Border flood fill ---
+    queue = deque()
+    for x in range(w):
+        for y in [0, h - 1]:
+            if is_white[y, x] and not visited[y, x]:
+                queue.append((y, x))
+                visited[y, x] = True
+    for y in range(h):
+        for x in [0, w - 1]:
+            if is_white[y, x] and not visited[y, x]:
+                queue.append((y, x))
+                visited[y, x] = True
+
+    while queue:
+        cy, cx = queue.popleft()
+        alpha[cy, cx] = 0
+        for dy, dx in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+            ny, nx = cy + dy, cx + dx
+            if 0 <= ny < h and 0 <= nx < w and not visited[ny][nx] and is_white[ny][nx]:
+                visited[ny][nx] = True
+                queue.append((ny, nx))
+
+    # --- Phase 2: Interior gap detection ---
+    is_very_white = np.all(arr_u8 > interior_gap_white_threshold, axis=2)
+    still_opaque_white = is_very_white & (alpha == 255) & ~visited
+
+    component_id = np.zeros((h, w), dtype=np.int32)
+    current_label = 0
+
+    for y in range(h):
+        for x in range(w):
+            if still_opaque_white[y, x] and component_id[y, x] == 0:
+                current_label += 1
+                pixels = []
+                cq = deque([(y, x)])
+                component_id[y, x] = current_label
+                while cq:
+                    cy, cx = cq.popleft()
+                    pixels.append((cy, cx))
+                    for dy, dx in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                        ny, nx = cy + dy, cx + dx
+                        if 0 <= ny < h and 0 <= nx < w and still_opaque_white[ny][nx] and component_id[ny][nx] == 0:
+                            component_id[ny][nx] = current_label
+                            cq.append((ny, nx))
+
+                if len(pixels) >= interior_gap_min_size:
+                    for py, px in pixels:
+                        alpha[py, px] = 0
+
+    # --- Phase 3: Smart fringe removal ---
+    brightness = np.mean(arr, axis=2)
+
+    for _ in range(fringe_max_passes):
+        boundary = np.zeros((h, w), dtype=bool)
+        boundary[1:, :] |= (alpha[1:, :] > 0) & (alpha[:-1, :] == 0)
+        boundary[:-1, :] |= (alpha[:-1, :] > 0) & (alpha[1:, :] == 0)
+        boundary[:, 1:] |= (alpha[:, 1:] > 0) & (alpha[:, :-1] == 0)
+        boundary[:, :-1] |= (alpha[:, :-1] > 0) & (alpha[:, 1:] == 0)
+
+        by, bx = np.where(boundary)
+        removed = 0
+        for i in range(len(by)):
+            y, x = by[i], bx[i]
+            pixel_bright = brightness[y, x]
+
+            neighbor_brights = []
+            for dy, dx in [(-1, 0), (1, 0), (0, -1), (0, 1), (-1, -1), (-1, 1), (1, -1), (1, 1)]:
+                ny, nx = y + dy, x + dx
+                if 0 <= ny < h and 0 <= nx < w and alpha[ny][nx] > 0 and not boundary[ny][nx]:
+                    neighbor_brights.append(brightness[ny][nx])
+
+            if len(neighbor_brights) == 0:
+                if pixel_bright > 180:
+                    alpha[y, x] = 0
+                    removed += 1
+            else:
+                if pixel_bright - np.mean(neighbor_brights) > fringe_brightness_diff:
+                    alpha[y, x] = 0
+                    removed += 1
+
+        if removed == 0:
+            break
+
+    # Build RGBA output
+    rgba = np.zeros((h, w, 4), dtype=np.uint8)
+    rgba[:, :, :3] = arr_u8
+    rgba[:, :, 3] = alpha
+    result = Image.fromarray(rgba, "RGBA")
+    result.save(output_path)
+    return result
+```
+
+**Limitations:**
+- Works best on clean white backgrounds with dark-outlined characters (which is our art style). May struggle with soft/gradient backgrounds or characters without clear outlines.
+- The interior gap size threshold (500px) is tuned for our portrait and sprite sizes. Significantly larger or smaller assets may need adjustment.
+- Cannot handle semi-transparent character elements (e.g. glass, smoke, ghosts). Those require dual-render.
+
+### Transparency Validation Protocol
+
+**Mandatory.** Every transparent asset must pass this validation before deployment. Do not skip this — the most common transparency failures (removed eyes, white fringe) are only visible when composited over a non-white background.
+
+```python
+def validate_transparency(rgba_path: str, test_output_path: str) -> dict:
+    """
+    Composite RGBA image over purple background and compute validation stats.
+    Returns a dict of checks. Human must visually inspect test_output_path.
+    """
+    img = Image.open(rgba_path)
+    arr = np.array(img)
+    alpha = arr[:, :, 3]
+    h, w = arr.shape[:2]
+    total = h * w
+
+    # Purple composite for visual inspection
+    bg = Image.new("RGBA", img.size, (80, 60, 120, 255))
+    bg.paste(img, (0, 0), img)
+    bg.save(test_output_path)
+
+    # Corner check
+    corners_transparent = all(
+        alpha[y, x] == 0
+        for y, x in [(0, 0), (0, w-1), (h-1, 0), (h-1, w-1)]
+    )
+
+    transparent_pct = np.sum(alpha == 0) / total * 100
+    opaque_pct = np.sum(alpha == 255) / total * 100
+
+    return {
+        "corners_transparent": corners_transparent,
+        "transparent_pct": round(transparent_pct, 1),
+        "opaque_pct": round(opaque_pct, 1),
+        "test_composite": test_output_path,
+    }
+```
+
+**Checklist (all must pass before deployment):**
+
+| Check | How to verify | Fail action |
+|---|---|---|
+| Corners transparent | `corners_transparent == True` | Background removal failed — rerun |
+| Character whites preserved | Visual: eye whites and shirt are opaque on purple composite | Interior gap threshold too low — raise it |
+| Interior gaps transparent | Visual: arm-body pockets show purple, not white | Interior gap threshold too high — lower it, or gap below size threshold |
+| No white fringe | Visual: no white halo around character edges on purple | Fringe removal insufficient — lower `fringe_brightness_diff` or add passes |
+| Transparent % reasonable | Portraits: 40-55%. Sprite sheets: 35-50% | If too low: background not removed. If too high: character parts removed |
+
+### Known Failures & Workarounds
+
+These issues were discovered during actual generation runs and should be checked for proactively:
+
+| Issue | Symptom | Workaround |
+|---|---|---|
+| Gemini black BG refusal | Multi-turn or direct prompt returns white/near-white BG (corner pixels ~RGB 253,252,251 instead of 0,0,0) | Skip dual-render entirely. Use flood-fill method. |
+| rembg llvmlite build failure | `TypeError: spawn() got unexpected keyword argument 'dry_run'` during pip install | Install via conda (`conda install llvmlite`), or skip to flood-fill. |
+| Simple threshold removes character whites | Eye whites, white shirt, highlights become transparent | **Never use simple per-pixel threshold.** Always use flood-fill (border-connected removal). |
+| Interior gaps missed by flood-fill | White area between bent arm and body (or between legs) stays opaque | Enable Phase 2 interior gap detection. Default threshold 500px catches arm gaps (~1000-5000px) while preserving eyes (~200-300px). |
+| Eye whites removed by gap detection | Small white eye regions (200-300px) caught by too-low size threshold | Set `interior_gap_min_size ≥ 500`. Eye whites are typically 100-300px; arm/leg gaps are typically 1000-5000px. |
+| White fringe/halo around edges | 1-2px white border visible when composited over colored background | Use neighbor-aware fringe removal (compare boundary pixel brightness to its interior neighbors), not flat brightness threshold. |
+| Fringe removal eats character edges | Light-colored character parts (skin, light clothing) eroded along with fringe | Lower `fringe_brightness_diff` makes this worse. If light character edges are being removed, raise the diff threshold or reduce passes. |
+
 ### Decision Matrix: Which Approach to Use
 
-| Scenario | Approach | Why |
-|---|---|---|
-| Character sprites (single characters on solid BG) | Dual-render multi-turn | Mathematically perfect, no fringe |
-| Sprite sheets (grids of multiple sprites) | Dual-render multi-turn | Each cell gets perfect alpha |
-| NPC sprites (single static images) | Dual-render multi-turn | Same as character sprites |
-| Item icons | rembg fallback | Small, many items per sheet — dual-render consistency harder to maintain |
-| Conversation portraits | Dual-render OR rembg | Depends on whether portraits need transparency (they may composite over backgrounds) |
-| Full scene CGs / backgrounds | No transparency needed | These ARE the background |
+| Asset Type | Primary | Fallback 1 | Fallback 2 | Notes |
+|---|---|---|---|---|
+| Character sprites | Dual-render multi-turn | Flood-fill | rembg | Dual-render is mathematically perfect when it works |
+| Sprite sheets | Dual-render multi-turn | Flood-fill | rembg | Each cell gets perfect alpha with dual-render |
+| NPC sprites | Dual-render multi-turn | Flood-fill | rembg | Same as character sprites |
+| Conversation portraits | Flood-fill | Dual-render | rembg | Flood-fill is the proven method for this project's style |
+| Item icons | rembg | Flood-fill | — | Small items, many per sheet — rembg handles variety better |
+| Full scene CGs / backgrounds | No transparency | — | — | These ARE the background |
+
+**Fallback escalation rule:** Try the primary method first. If it fails (black BG not generated, dependency errors, visual artifacts), move to Fallback 1 immediately — do not retry the primary method more than once. Log which method succeeded in `logs/generation_log.json` so future runs can skip known-broken methods.
 
 ### Important: Update Game.js
 
