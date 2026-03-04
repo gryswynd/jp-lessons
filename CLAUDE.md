@@ -273,6 +273,7 @@ Line/Section | Issue Type            | Detail
 **Responsibilities:**
 - **Use the latest content as the reference standard.** Read the highest-numbered existing lesson file of the same content type and level — this represents the current structural standard. Optionally read one additional earlier file for comparison. When conventions differ between older and newer files, the newest file always takes precedence.
 - Assess: **Natural language quality** — do conversations sound like real Japanese, not textbook recitations? Are the situations culturally plausible?
+- Assess: **Redundancy** — read each scene as a sequence, not sentence by sentence. Flag any cluster of 2+ consecutive sentences that convey essentially the same information through different grammar. This pattern is the primary symptom of forced vocabulary insertion: Agent 2 added sentences not because the story needed them, but to check off a required vocab ID. Each sentence must add new information or advance the scene — restating the same fact in different words is a hard fail regardless of whether each sentence is individually grammatical. Example: "やまかわさんもいます。こちらはやまかわさんです。名前はやまかわです。" — three consecutive sentences that all communicate "this person is Yamakawa." Any one of them is fine; all three together is a redundancy fail.
 - Assess: **Skill progression** — does difficulty increase appropriately from the previous lesson? Are new grammar points used naturally rather than force-fed? Are conjugation forms and grammar patterns appropriate for the lesson tier? See [Agent 4 — Grammar Usage Validation](#agent-4--grammar-usage-validation-all-content-types).
 - Assess: **Vocabulary density** — are too few or too many new vocab items packed into a single section?
 - Assess: **Consistency** — character names, setting details, and vocabulary choices consistent with the rest of the series?
@@ -1330,6 +1331,7 @@ All of the following must be TRUE for a QA pass:
 All of the following should be TRUE for a CR pass:
 
 - [ ] Conversations sound natural and idiomatic, not like direct grammar exercises
+- [ ] **Redundancy check:** No cluster of 2+ consecutive sentences conveys the same information — each sentence adds something new. Forced vocabulary insertion almost always produces redundant clusters (three ways of introducing a character, two ways of saying someone is tired). Read scenes as sequences, not isolated sentences.
 - [ ] The scenario is culturally plausible and engaging
 - [ ] Grammar complexity matches the target lesson tier — every conjugation form and structural grammar pattern in `jp` text has `introducedIn` ≤ current lesson (hard fail if violated; see [Grammar Usage Validation](#agent-4--grammar-usage-validation-all-content-types))
 - [ ] No particle in `jp` text has `introducedIn` (in `shared/particles.json`) later than the current lesson
@@ -1507,7 +1509,8 @@ These are the most frequent errors. All agents should be alert to them.
 
 1. **Vague rewrite directives** — "make it more natural" without specific lines identified.
 2. **Rejecting content for subjective reasons** — if the only issue is style preference rather than a structural problem, prefer a pass with a note over a full rewrite.
-3. **Not catching grammar reinforcement gaps** — approving content where recently-taught grammar is absent. The Grammar Reinforcement Audit must be performed on every draft. Agent 4 cannot rely on "it sounds natural" as justification for content that avoids using available grammar — natural content that happens to only use ます/ました is still pedagogically deficient if the student knows te-form, negatives, desire, and volitional.
+3. **Missing redundancy clusters** — assessing each sentence individually rather than reading scenes as sequences. A cluster of 2+ consecutive sentences that all convey the same fact (three ways of introducing a character, two ways of saying the location is large) is not caught by any per-sentence check. Agent 4 must scan for this pattern explicitly. The root cause is always forced vocabulary insertion by Agent 2, and the fix is a rewrite directive to Agent 1 to redesign the scene so the vocab word appears in a context that actually requires it.
+4. **Not catching grammar reinforcement gaps** — approving content where recently-taught grammar is absent. The Grammar Reinforcement Audit must be performed on every draft. Agent 4 cannot rely on "it sounds natural" as justification for content that avoids using available grammar — natural content that happens to only use ます/ました is still pedagogically deficient if the student knows te-form, negatives, desire, and volitional.
 
 ### Grammar-specific cross-agent failures
 

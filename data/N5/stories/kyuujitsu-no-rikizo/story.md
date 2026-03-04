@@ -5,7 +5,7 @@
 
 ### Story Text (Japanese)
 
-今日は休日です。わたしはりきぞです。天気はいいですよ。気分もいいです。
+今日は休日です。わたしの名前はりきぞです。天気はいいですよ。気分もいいです。
 
 電車で行きたいです。駅へ行きました。電車が来ない！どうして？
 
@@ -19,9 +19,7 @@
 
 駅の後ろにレストランがあります。レストランへ行って、食べました。いただきます。
 
-やまかわさんもいます。こちらはやまかわさんです。名前はやまかわです。
-
-「来てください！」やまかわさんが来ました。
+やまかわさんもいます。「こちらへ来てください！」やまかわさんが来ました。
 
 りきぞはカレーを食べました。やまかわさんはパンとサラダを食べています。コーヒーも飲みました。おいしかったです。ごちそうさまでした。
 
@@ -39,7 +37,7 @@
 
 **Rikizo's Holiday**
 
-Today is a holiday. I am Rikizo. The weather is nice, you know! My mood is good too.
+Today is a holiday. My name is Rikizo. The weather is nice, you know! My mood is good too.
 
 I want to go by train. I went to the station. The train won't come! Why?
 
@@ -53,9 +51,7 @@ I want to eat out! Because the weather is good, let's go to a restaurant.
 
 There is a restaurant behind the station. I went to the restaurant and ate. Bon appétit!
 
-Yamakawa is here too. This is Yamakawa. The name is Yamakawa.
-
-"Please come!" Yamakawa came.
+Yamakawa is here too. "Please come this way!" Yamakawa came.
 
 Rikizo ate curry. Yamakawa is eating bread and salad. I also drank coffee. It was delicious. Thank you for the meal!
 
