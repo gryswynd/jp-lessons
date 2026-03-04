@@ -173,6 +173,90 @@
       ]
     },
     {
+      "type": "grammarRule",
+      "id": "rule_deshou",
+      "pattern": [
+        { "label": "PLAIN FORM", "color": "modifier", "text": "高い / 行く / プレゼント" },
+        { "label": "+ でしょう", "color": "predicate", "text": "= 高いでしょう / 行くでしょう / プレゼントでしょう" }
+      ],
+      "meaning": "でしょう / だろう — 'probably' / 'I think...' (conjecture about something uncertain)",
+      "explanation": "でしょう is used when the speaker guesses or assumes something is likely but is not certain. It attaches to plain forms — the same base forms used in casual speech.\n\n- Noun: プレゼントでしょう = 'It's probably a gift'\n- い-adjective: 高いでしょう = 'It's probably expensive'\n- Verb (plain/dictionary form): 行くでしょう = 'They'll probably go'\n\nでしょう is **polite register** — safe to use in all situations.\nだろう is the **plain/casual** equivalent — same meaning, used in casual conversation or writing.\n\n⚠️ **Do NOT confuse でしょう with ましょう:**\n- ましょう = 'Let's do [action together]' (volitional — an invitation)\n- でしょう = 'It is probably...' (conjecture — a guess, not an invitation)",
+      "notes": [
+        "Attaches to plain forms: い-adjective as-is (高いでしょう), verb dictionary form (行くでしょう), noun directly (プレゼントでしょう).",
+        "For nouns and な-adjectives: do NOT insert だ before でしょう. ✗ プレゼントだでしょう → ✓ プレゼントでしょう.",
+        "Rising intonation でしょう↑: turns the conjecture into a tag question — 'It's probably expensive, right?'",
+        "だろう: plain/casual equivalent of でしょう. 行くだろう = 'probably going' (same meaning, more casual/direct).",
+        "Common pattern: 来週 行くでしょう (They will probably go next week)."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "プレゼント", "role": "topic", "gloss": "gift" },
+            { "text": "でしょう。", "role": "predicate", "gloss": "probably is" }
+          ],
+          "en": "It's probably a gift.",
+          "breakdown": "Noun + でしょう directly. No だ inserted between noun and でしょう."
+        },
+        {
+          "parts": [
+            { "text": "高い", "role": "modifier", "gloss": "expensive (plain form)" },
+            { "text": "でしょう。", "role": "predicate", "gloss": "probably" }
+          ],
+          "en": "It's probably expensive.",
+          "breakdown": "い-adjective plain form (= dictionary form) + でしょう. 高い stays unchanged."
+        },
+        {
+          "parts": [
+            { "text": "デパートへ", "role": "modifier", "gloss": "to dept. store" },
+            { "text": "行く", "role": "verb", "gloss": "go (plain/dictionary form)" },
+            { "text": "でしょう。", "role": "predicate", "gloss": "probably" }
+          ],
+          "en": "They will probably go to the department store.",
+          "breakdown": "Verb dictionary form + でしょう. 行く stays as dictionary form (not 行きます)."
+        }
+      ]
+    },
+    {
+      "type": "grammarComparison",
+      "title": "でしょう vs だろう — Same Meaning, Different Register",
+      "items": [
+        {
+          "label": "でしょう — Polite Conjecture",
+          "color": "predicate",
+          "points": [
+            "Polite register — appropriate in all social situations",
+            "Attaches to: plain verb (行くでしょう), い-adj (高いでしょう), noun (プレゼントでしょう)",
+            "Rising intonation でしょう↑ = tag question seeking agreement ('right? / isn't it?')",
+            "Use when guessing or expressing uncertainty in polite speech"
+          ],
+          "example": {
+            "parts": [
+              { "text": "高い", "role": "modifier", "gloss": "expensive" },
+              { "text": "でしょう。", "role": "predicate", "gloss": "probably" }
+            ],
+            "en": "It's probably expensive."
+          }
+        },
+        {
+          "label": "だろう — Plain/Casual Conjecture",
+          "color": "modifier",
+          "points": [
+            "Plain register — casual speech, internal thought, or written narration",
+            "Same meaning as でしょう, but more direct or informal",
+            "Same structure: plain form + だろう",
+            "Often used in narration or when thinking aloud"
+          ],
+          "example": {
+            "parts": [
+              { "text": "高い", "role": "modifier", "gloss": "expensive" },
+              { "text": "だろう。", "role": "predicate", "gloss": "probably (casual)" }
+            ],
+            "en": "Probably expensive. (casual)"
+          }
+        }
+      ]
+    },
+    {
       "type": "grammarTable",
       "title": "ている / たいです / ましょう — All Three Forms at a Glance",
       "description": "Using 行く (godan) and 食べる (ichidan) as examples. All three patterns use the same foundation: the て-form (for ている) or ます-stem (for たいです and ましょう).",
@@ -265,6 +349,16 @@
           ],
           "en": "I don't want to drink coffee.",
           "note": "飲む → 飲み (stem) + たくないです. たい conjugates like an い-adjective: たい→たくない."
+        },
+        {
+          "context": "Conjecture でしょう — guessing about something uncertain",
+          "parts": [
+            { "text": "プレゼントは", "role": "topic", "gloss": "gift (topic)" },
+            { "text": "高い", "role": "modifier", "gloss": "expensive (plain)" },
+            { "text": "でしょう。", "role": "predicate", "gloss": "probably" }
+          ],
+          "en": "The gift is probably expensive.",
+          "note": "い-adjective plain form + でしょう. Compare: 高いです (certainty) vs 高いでしょう (conjecture/guess)."
         }
       ]
     },
@@ -300,11 +394,10 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "高いですか。",
-          "en": "Is it expensive?",
+          "jp": "高いでしょう？",
+          "en": "It's probably expensive, right?",
           "terms": [
-            { "id": "v_takai", "form": "polite_adj" },
-            "p_ka"
+            "v_takai"
           ]
         },
         {
@@ -509,6 +602,36 @@
             { "id": "v_iku", "form": "polite_volitional_mashou" }
           ],
           "explanation": "ましょう makes a polite suggestion or invitation: 'Let's go together with a friend.' It proposes a shared action. Adding か (行きましょうか) makes it a softer question: 'Shall we go?'"
+        },
+        {
+          "kind": "mcq",
+          "q": "What does「プレゼントでしょう」mean?",
+          "choices": [
+            "It's probably a gift.",
+            "Let's buy a gift.",
+            "I want a gift.",
+            "Is it a gift?"
+          ],
+          "answer": "It's probably a gift.",
+          "terms": [
+            "v_purezento"
+          ],
+          "explanation": "でしょう attaches to a noun directly (no だ before it) to express polite conjecture: 'probably is'. プレゼント + でしょう = 'It's probably a gift.' Compare: プレゼントです (certain) vs プレゼントでしょう (guessing)."
+        },
+        {
+          "kind": "mcq",
+          "q": "Which sentence correctly uses でしょう to say 'They will probably go'?",
+          "choices": [
+            "行くでしょう。",
+            "行きましょう。",
+            "行きますでしょう。",
+            "行くだです。"
+          ],
+          "answer": "行くでしょう。",
+          "terms": [
+            "v_iku"
+          ],
+          "explanation": "でしょう attaches to the PLAIN (dictionary) form of the verb. 行く is the plain form of 行きます. 行く + でしょう = 行くでしょう. ✗ 行きますでしょう is wrong — never attach でしょう to the ます-form."
         }
       ]
     }
