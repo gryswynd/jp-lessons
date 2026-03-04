@@ -1,0 +1,135 @@
+{
+  "generated": "2026-03-04",
+  "source_images": {
+    "pixel_characters": [
+      "pixel_characters/dad.png",
+      "pixel_characters/mom.png",
+      "pixel_characters/me_sheet.png"
+    ],
+    "pixel_maps": [
+      "pixel_maps/map.png",
+      "pixel_maps/convo-bg.png",
+      "pixel_maps/family.png"
+    ],
+    "vector_portraits": [
+      "vector_portraits/dad-convo.png",
+      "vector_portraits/mom-convo.png",
+      "vector_portraits/me-convo.png"
+    ],
+    "vector_ui": []
+  },
+
+  "mode_a_pixel": {
+    "description": "Chibi pixel art for overworld sprites, battle sprites, and tilesets",
+    "palette": {
+      "skin_tones": ["#F0B880", "#F0A858", "#D89848"],
+      "hair_dark": ["#382820", "#402820", "#302018", "#181008"],
+      "clothing_navy": ["#283860", "#304068", "#283858"],
+      "clothing_grey": ["#B8B8B8", "#A8A8A8", "#484848"],
+      "clothing_brown": ["#885830", "#604020"],
+      "wood_warm": ["#C8A878", "#D0B080", "#985010", "#904810", "#A86028"],
+      "accent_red": ["#C03030", "#A02828"],
+      "highlight": ["#F8F0D0", "#E8E0C0"],
+      "shadow": ["#100808", "#181010", "#201818"]
+    },
+    "line_weight": {
+      "outline_px": 1,
+      "outline_color": "darker shade of fill (NOT pure black)",
+      "anti_aliasing": false
+    },
+    "proportions": {
+      "head_to_body_ratio": "1:2 to 1:2.5 (chibi)",
+      "sprite_cell_size_px": "204x293 (from me_sheet 1224x1172 / 6x4)",
+      "tile_size_px": "32x32 estimated from map"
+    },
+    "shading": {
+      "approach": "flat with single shadow tone",
+      "shadow_direction": "upper-left (10 o'clock)",
+      "dithering": "minimal — used sparingly on large fill areas",
+      "gradient": false
+    },
+    "reference_dimensions": {
+      "standalone_sprite": "1536x1024 (upscaled for display, actual pixel art is much smaller)",
+      "sprite_sheet": "1224x1172 (6 cols x 4 rows)",
+      "map": "1536x1024"
+    },
+    "notes": "Characters have large expressive eyes relative to face. Dark outlines use darkened fill color, not pure #000000. Limited 16-32 color palette per sprite. Warm color temperature throughout."
+  },
+
+  "mode_b_mp100": {
+    "description": "Mob Psycho 100 style illustration for conversation portraits, CGs, backgrounds, and UI",
+    "palette": {
+      "skin_tones": ["#F8D8B0", "#F0D0A8", "#E8C8A0", "#F8D0B0"],
+      "skin_shadow": ["#D8B090", "#C8A080"],
+      "hair_dark_brown": ["#382820", "#302018", "#181008", "#402818"],
+      "clothing_navy_uniform": ["#283858", "#303858", "#102038"],
+      "clothing_white_shirt": ["#E8F0F0", "#F0F0E8", "#E0E0D8"],
+      "clothing_grey_hoodie": ["#A8A8A8", "#A0A8A8", "#A0A0A8", "#687078"],
+      "clothing_beige_cardigan": ["#E8D8C0", "#E8D8B8", "#D8C8B0"],
+      "accent_red_tie": ["#C03838", "#A82828"],
+      "accent_blue_floral": ["#88B8D8", "#7098B8"],
+      "background_vignette": ["#B0C0C8", "#485068", "#687078"],
+      "highlight": ["#F8F8F0", "#F0F0F0"],
+      "shadow": ["#283040", "#1A1A1A"]
+    },
+    "line_weight": {
+      "width": "thin, approximately 1-2px at 1024px resolution",
+      "style": "slightly loose and hand-drawn, subtle weight variation",
+      "color": "#1A1A1A (near-black, not pure black)",
+      "anti_aliasing": true
+    },
+    "proportions": {
+      "head_to_body_ratio": "1:5 to 1:6 (lanky)",
+      "limbs": "thin with minimal joint definition",
+      "hands": "simplified, low detail",
+      "build": "slightly noodle-like, not muscular or idealized"
+    },
+    "faces": {
+      "calm_register": {
+        "eyes": "simple but slightly larger than MP100 dot-eyes — small irises with visible whites, friendly",
+        "nose": "minimal — small line or dot, sometimes just shadow",
+        "mouth": "small, simple curve for smile",
+        "detail_level": "low — features are clean and uncomplicated"
+      },
+      "intense_register": {
+        "eyes": "not yet established — no intense-register references exist",
+        "note": "will need to be established with first combat/emotional asset"
+      }
+    },
+    "shading": {
+      "approach": "subtle cel-shading with soft shadow edges",
+      "shadow_layers": 1,
+      "shadow_direction": "upper-left (10 o'clock), consistent across all portraits",
+      "highlight": "minimal — slight rim light on hair, occasional skin highlight",
+      "gradient": "used in backgrounds (vignette) but not on character fills"
+    },
+    "backgrounds": {
+      "portrait_bg": "gradient vignette — warm grey center fading to darker edges (dad, mom). OR clean white/transparent (Rikizo)",
+      "conversation_bg": "semi-realistic interior illustration — warm wood tones, domestic setting, higher detail than characters (MP100 hallmark)",
+      "color_temperature": "warm — browns, tans, soft oranges dominate interiors"
+    },
+    "reference_dimensions": {
+      "portrait": "1024x1536 (2:3 portrait orientation)",
+      "conversation_background": "1536x1024 (3:2 landscape)",
+      "family_photo": "684x945 (photo-style prop)"
+    },
+    "notes": "Current portraits are in 日常 (calm) register only. No 覚醒 (intense) register assets exist yet. Character designs are original — not copies of MP100 characters. Dad has spiky hair + grey hoodie, Mom has bob cut + cardigan, Rikizo has messy dark hair + navy school uniform with red striped tie. Backgrounds are noticeably more detailed and painterly than characters, consistent with the MP100 aesthetic principle."
+  },
+
+  "shared": {
+    "light_source": "upper-left, approximately 10 o'clock position",
+    "color_temperature": "warm overall — domestic slice-of-life feeling",
+    "character_identity_anchors": {
+      "rikizo": "messy dark brown hair, navy school uniform blazer, white dress shirt, red-and-navy striped tie, youthful friendly expression",
+      "mom": "chin-length dark brown bob, beige/cream cardigan over light blue floral blouse, gentle warm smile",
+      "dad": "spiky dark brown/black hair, grey zip-up hoodie over navy blue t-shirt, relaxed casual expression"
+    },
+    "established_art_modes": {
+      "mode_a_pixel": true,
+      "mode_b_calm": true,
+      "mode_b_intense": false
+    },
+    "watermarks": false,
+    "japanese_text_in_art": "must be verified for accuracy before inclusion"
+  }
+}
