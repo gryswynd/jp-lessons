@@ -2586,10 +2586,10 @@
       "type": "kanji",
       "surface": "後",
       "on": "ご/こう",
-      "kun": "うしろ",
-      "reading": "うしろ",
-      "meaning": "behind",
-      "notes": ""
+      "kun": "うしろ/あと",
+      "reading": "うしろ/あと",
+      "meaning": "behind; after",
+      "notes": "Two distinct kun readings: うしろ (spatial — written 後ろ with ろ appended) and あと (temporal — written 後 standalone). See v_ushiro and v_ato."
     },
     {
       "id": "v_ushiro",
@@ -2597,9 +2597,19 @@
       "meaning": "behind / back",
       "type": "vocab",
       "gtype": "noun",
-      "notes": "Position word indicating the area behind something. Kanji 後 is taught in N5.9; ろ is hiragana.",
+      "notes": "Spatial position word 'behind/in back of'. Always written with ろ (後ろ). Tag as v_ushiro when the token is 後ろ. Contrast with v_ato (後 standalone = temporal 'after/later').",
       "lesson_ids": "N5.9",
       "reading": "うしろ"
+    },
+    {
+      "id": "v_ato",
+      "surface": "後",
+      "meaning": "after / later",
+      "type": "vocab",
+      "gtype": "noun",
+      "notes": "Temporal word meaning 'after' or 'later'. Written as standalone 後 (no ろ). Tag as v_ato when the token is 後 alone. Contrast with v_ushiro (後ろ = spatial 'behind'). Common usage: 後で (after/later).",
+      "lesson_ids": "N5.9",
+      "reading": "あと"
     },
     {
       "id": "v_achira",

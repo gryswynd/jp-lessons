@@ -901,6 +901,26 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 
 **Compound words** like 何人 (`v_nannin`), 何時 (`v_nanji`), 何曜日 (`v_nanyoubi`), 何回 (`v_nankai`), 何度 (`v_nando`) have their own dedicated IDs — use those instead of `v_nan` + a separate counter/noun tag.
 
+### 後 (ushiro/ato) orthographic disambiguation
+
+後 has two **completely distinct words** (not pronunciation variants of the same word) that happen to share the same kanji:
+
+| Written form | Reading | Meaning | Tag | Notes |
+|---|---|---|---|---|
+| 後ろ (with ろ) | うしろ | behind / in back of | `v_ushiro` | Spatial position word — always written with ろ appended |
+| 後 (standalone) | あと | after / later | `v_ato` | Temporal word — standalone 後 with no kana suffix |
+
+**Unlike 何/なに/なん, the written form alone disambiguates — no phonological context rules needed:**
+
+- Token is `後ろ` → always `v_ushiro`
+- Token is `後` (standalone, not followed by ろ) → always `v_ato`
+
+**Never use `k_ushiro`** in conversation, reading, or drill `terms` arrays. It is only for the kanjiGrid display.
+
+**Common temporal usages** to watch for: 後で (later/afterwards — tag `v_ato` + `p_de`), ～の後で (after ~), 三時間後 (three hours later — compounds have their own IDs when introduced).
+
+**Compounds** that use the こう/ご on-reading (e.g. 午後, 後半) have their own dedicated vocab IDs and are not tagged as `v_ato`.
+
 ### Counter references
 
 When a counter expression appears in a `terms` array:
@@ -1404,6 +1424,7 @@ These are the most frequent errors. All agents should be alert to them.
 27. **Out-of-scope conjugation form** — using a conjugation form (e.g. `te_form`, `desire_tai`, `conditional_ba`) before its `introducedIn` lesson. This is the grammar equivalent of using an untaught kanji. Example: writing ～ています in N5.3 content when `te_form` has `introducedIn: "N5.5"`. Check every `form` value in `terms` against `conjugation_rules.json`. See [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules).
 28. **Out-of-scope structural grammar pattern** — the `jp` surface text contains a grammar construction (～ている, ～てください, ～ましょう, ～たり～たりする, etc.) before the constituent form is available, even if the individual word tags don't explicitly use that form. The pattern in the surface text is the violation, not just the tags. Agent 2 must scan `jp` strings for these patterns, not rely only on `terms` form checking.
 29. **何 tagged as k_nani or generic v_nani without pronunciation context** — 何 has two pronunciations: **なに** (`v_nani`) and **なん** (`v_nan`). Using `k_nani` (kanji entry) makes 何 non-tappable in conversations and readings. Using only `v_nani` for all contexts gives students the wrong reading when the pronunciation is actually なん. **Rules:** Use `v_nani` when 何 precedes を or が, or stands alone (e.g. 何を食べますか、何がいい). Use `v_nan` when 何 precedes です, の, counters, or words starting with d/n/t sounds (e.g. 何ですか、何の本、何人). Never use `k_nani` in conversation, reading, or drill `terms` — it is only for the kanjiGrid. Compound words like 何人, 何時, 何曜日 have their own dedicated entries (`v_nannin`, `v_nanji`, `v_nanyoubi`) and should use those instead.
+36. **後 tagged as v_ushiro regardless of meaning** — 後 has two completely distinct words: **後ろ** (`v_ushiro`, うしろ, spatial "behind") and **後** (`v_ato`, あと, temporal "after/later"). Unlike 何, the written form alone disambiguates them — no context rules needed. **Rule:** Token `後ろ` (with ろ) → `v_ushiro`. Token `後` standalone (no ろ) → `v_ato`. Using `v_ushiro` for temporal 後 is semantically wrong (it displays the wrong reading and meaning to the student). Never use `k_ushiro` in conversation, reading, or drill `terms` — it is only for the kanjiGrid. For 後で ("later"), tag as `v_ato` + `p_de`. Compounds using the on-reading (午後, 後半, etc.) have their own dedicated IDs.
 30. **Grammar under-reinforcement (ます/ました monotony)** — all verbs in conversations and readings default to `polite_masu` or `polite_mashita` when negative forms, te-form, desire, and volitional forms are all available. This is the grammar equivalent of writing with a limited vocabulary — technically correct but failing to exercise the student's growing skillset. Example: an N5.7 lesson has 5 conversations with 20 tagged verbs, but 18 are ます/ました, zero are てください or ています despite te-form being available since N5.5. Agent 2 must consult the Grammar Reinforcement Requirements and vary verb forms intentionally.
 31. **Missing structural patterns in active reinforcement window** — a lesson falls within a grammar milestone's active reinforcement window but none of the required structural patterns (てください, ています, たいです, ましょう, etc.) appear anywhere. This means the student has gone 2+ lessons since learning these patterns without encountering them in natural content. Agent 2 must include at least the minimum count of each pattern required by the reinforcement schedule.
 32. **Warmup grammar stagnation** — warmup items continue using only noun-です patterns (「先生です」「大きいです」) long after polite verb forms, te-form, and other grammar have been unlocked. Warmups after N5.5 should exercise recently-unlocked grammar with prior-lesson vocabulary. Example: an N5.8 warmup should include items like 「先生は毎日学校に行きます」(polite_masu) or 「ここに名前を書いてください」(te-form request), not just 「これは本です」.
