@@ -8,7 +8,7 @@
     "unlocksAfter": "N5.9",
     "focus": "The pivotal transition to plain-form speech: forming plain negative and past-negative, connecting clauses with が/けど (but) and から/ので (because), plain commands, and the なんです explanatory form.",
     "estimatedMinutes": 30,
-    "particles": ["p_kara", "p_ga"],
+    "particles": ["p_ga_but", "p_kara_because", "p_kedo"],
     "grammarForms": ["plain_past", "plain_negative", "plain_past_negative"],
     "icon": "👋"
   },
@@ -362,7 +362,7 @@
           "en": "I want to go, but I have no money.",
           "terms": [
             { "id": "v_iku", "form": "desire_tai" },
-            "p_ga",
+            "p_ga_but",
             "v_okane",
             "p_ga",
             { "id": "v_aru", "form": "polite_negative" }
@@ -391,7 +391,7 @@
             "v_karee",
             "p_wa",
             { "id": "v_oishii", "form": "polite_adj" },
-            "p_kara",
+            "p_kara_because",
             "v_konbini",
             "p_ga",
             { "id": "v_ii", "form": "polite_adj" },
@@ -432,6 +432,7 @@
           "en": "I want to go, but I have no money.",
           "terms": [
             { "id": "v_iku", "form": "desire_tai" },
+            "p_kedo",
             "v_okane",
             "p_ga",
             { "id": "v_aru", "form": "plain_negative" }
@@ -466,7 +467,7 @@
           "en": "Since it's delicious, let's go.",
           "terms": [
             "v_oishii",
-            "p_kara",
+            "p_kara_because",
             { "id": "v_iku", "form": "polite_volitional_mashou" }
           ]
         },
@@ -688,7 +689,7 @@
           "answer": "行きたいですが、お金が ありません。",
           "terms": [
             { "id": "v_iku", "form": "desire_tai" },
-            "p_ga",
+            "p_ga_but",
             "v_okane",
             "p_ga",
             { "id": "v_aru", "form": "polite_negative" }

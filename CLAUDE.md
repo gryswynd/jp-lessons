@@ -139,6 +139,10 @@ CB CHECKLIST
 [ ] Verbs/adjectives use { "id": "...", "form": "..." } objects, never bare strings
 [ ] No invented IDs — every ID was verified against the glossary or particles.json
 [ ] Conversation/reading terms use v_* vocab entries, NOT k_* kanji entries
+[ ] が after a clause-final form (ます/です/plain form) is tagged p_ga_but, not p_ga (see disambiguation rules)
+[ ] から after a verb/adjective/です is tagged p_kara_because, not p_kara (see disambiguation rules)
+[ ] けど is tagged p_kedo (not untagged)
+[ ] Sentence-initial でも is tagged p_demo_but, not p_demo (see disambiguation rules)
 [ ] VocabList covers every glossary+particles.json entry with lesson_ids = this lesson
 [ ] Counter references use { "counter": "...", "n": N } format
 [ ] Drill 1 (vocab MCQ) has NO terms array on items
@@ -921,6 +925,62 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 
 **Compounds** that use the こう/ご on-reading (e.g. 午後, 後半) have their own dedicated vocab IDs and are not tagged as `v_ato`.
 
+### が (ga) — subject marker vs clause connector disambiguation
+
+が has two **completely distinct grammatical roles** that share the same surface form:
+
+| Context | Role | Tag | Examples |
+|---|---|---|---|
+| After a noun/pronoun (marks subject) | Subject marker | `p_ga` | カレー**が**おいしい、お金**が**ない |
+| After a clause-final verb/adjective/です (connects contrasting clauses) | Conjunction "but" | `p_ga_but` | 行きたいです**が**、お金がありません |
+
+**Disambiguation rule — position determines role:**
+
+- **が immediately after a noun/pronoun** → `p_ga` (subject marker)
+- **が after a clause-ending form (ます/ました/ません/です/plain form)** → `p_ga_but` (conjunction "but")
+
+**Both can appear in the same sentence:** 「行きたいですが、お金がありません。」 — first が = `p_ga_but` (after ですが = "but"), second が = `p_ga` (after お金 = subject marker). Tagging both as `p_ga` would show "subject marker" when the student taps the conjunctive が, which is actively misleading.
+
+`p_ga_but` is available from G9. Before G9, all が in content should be `p_ga` (subject marker) — if が appears as "but" before G9, it is an out-of-scope grammar violation.
+
+### から (kara) — "from" vs "because" disambiguation
+
+から has two **distinct grammatical roles**:
+
+| Context | Role | Tag | Examples |
+|---|---|---|---|
+| After a noun (starting point) | "From" | `p_kara` | 東京**から**、月曜日**から** |
+| After a clause-final verb/adjective/です (gives reason) | "Because" | `p_kara_because` | おいしい**から**食べます、高いです**から**買いません |
+
+**Disambiguation rule — what precedes から determines role:**
+
+- **から after a noun** (place, time, person) → `p_kara` ("from")
+- **から after a verb/adjective/です** (clause ending) → `p_kara_because` ("because")
+
+`p_kara_because` is available from G9. Before G9, all から should be `p_kara` ("from"). If から appears as "because" before G9, it is an out-of-scope grammar violation.
+
+**Note:** `p_kara` ("from") was introduced in G3/N5.2. The GRAMMAR_CONTENT.md spec for G9 explicitly states: "Note: から was taught in G3 as a starting-point particle ('from'). This is a different role — teach the distinction explicitly."
+
+### けど (kedo) — casual "but"
+
+けど is a casual clause-linking conjunction ("but") introduced in G9. It has no other grammatical role, so no disambiguation is needed. Tag all instances as `p_kedo`.
+
+けれど is a slightly more formal variant of けど. Both are tagged as `p_kedo`.
+
+### でも (demo) — "even/any~" vs sentence-initial "but"
+
+でも has two distinct roles depending on position:
+
+| Context | Role | Tag | Available from |
+|---|---|---|---|
+| After a noun ("even X") or in compounds (何でも, いつでも) | Inclusive particle "even / any~" | `p_demo` | N4.14 |
+| At the start of a sentence ("But..." / "However...") | Conjunction "but" | `p_demo_but` | G18 |
+
+**Disambiguation rule — position determines role:**
+
+- **でも after a noun** → `p_demo` (子どもでもわかる = "even a child understands")
+- **でも at the start of a sentence/clause** → `p_demo_but` (でも、行きます = "But I'll go")
+
 ### Counter references
 
 When a counter expression appears in a `terms` array:
@@ -1425,6 +1485,9 @@ These are the most frequent errors. All agents should be alert to them.
 28. **Out-of-scope structural grammar pattern** — the `jp` surface text contains a grammar construction (～ている, ～てください, ～ましょう, ～たり～たりする, etc.) before the constituent form is available, even if the individual word tags don't explicitly use that form. The pattern in the surface text is the violation, not just the tags. Agent 2 must scan `jp` strings for these patterns, not rely only on `terms` form checking.
 29. **何 tagged as k_nani or generic v_nani without pronunciation context** — 何 has two pronunciations: **なに** (`v_nani`) and **なん** (`v_nan`). Using `k_nani` (kanji entry) makes 何 non-tappable in conversations and readings. Using only `v_nani` for all contexts gives students the wrong reading when the pronunciation is actually なん. **Rules:** Use `v_nani` when 何 precedes を or が, or stands alone (e.g. 何を食べますか、何がいい). Use `v_nan` when 何 precedes です, の, counters, or words starting with d/n/t sounds (e.g. 何ですか、何の本、何人). Never use `k_nani` in conversation, reading, or drill `terms` — it is only for the kanjiGrid. Compound words like 何人, 何時, 何曜日 have their own dedicated entries (`v_nannin`, `v_nanji`, `v_nanyoubi`) and should use those instead.
 36. **後 tagged as v_ushiro regardless of meaning** — 後 has two completely distinct words: **後ろ** (`v_ushiro`, うしろ, spatial "behind") and **後** (`v_ato`, あと, temporal "after/later"). Unlike 何, the written form alone disambiguates them — no context rules needed. **Rule:** Token `後ろ` (with ろ) → `v_ushiro`. Token `後` standalone (no ろ) → `v_ato`. Using `v_ushiro` for temporal 後 is semantically wrong (it displays the wrong reading and meaning to the student). Never use `k_ushiro` in conversation, reading, or drill `terms` — it is only for the kanjiGrid. For 後で ("later"), tag as `v_ato` + `p_de`. Compounds using the on-reading (午後, 後半, etc.) have their own dedicated IDs.
+37. **が tagged as p_ga regardless of role** — が has two completely distinct grammatical roles: subject marker (`p_ga`, N5.1) and clause connector "but" (`p_ga_but`, G9). They can appear in the same sentence: 「行きたいですが、お金がありません。」 — first が is "but" (`p_ga_but`), second が is subject marker (`p_ga`). Tagging the conjunctive が as `p_ga` displays "Subject marker" when the student taps it, which is actively misleading. **Rule:** が after a clause-final form (ます/です/plain form) → `p_ga_but`. が after a noun/pronoun → `p_ga`. See [が disambiguation](#が-ga--subject-marker-vs-clause-connector-disambiguation).
+38. **から tagged as p_kara regardless of role** — から has two distinct roles: starting point "from" (`p_kara`, G3) and reason "because" (`p_kara_because`, G9). 「東京から来ました」uses p_kara (from). 「おいしいから食べます」uses p_kara_because (because). **Rule:** から after a noun → `p_kara`. から after a verb/adjective/です → `p_kara_because`. Tagging reason-から as p_kara displays "Starting-point marker" which is wrong. See [から disambiguation](#から-kara--from-vs-because-disambiguation).
+39. **でも tagged as p_demo regardless of position** — でも has two roles: inclusive particle "even/any~" (`p_demo`, N4.14) and sentence-initial conjunction "but" (`p_demo_but`, G18). 「子どもでもわかる」= p_demo (even a child). 「でも、行きます」= p_demo_but (but I'll go). Tagging sentence-initial でも as p_demo displays "even / any~" which confuses the student. See [でも disambiguation](#でも-demo--evenany-vs-sentence-initial-but).
 30. **Grammar under-reinforcement (ます/ました monotony)** — all verbs in conversations and readings default to `polite_masu` or `polite_mashita` when negative forms, te-form, desire, and volitional forms are all available. This is the grammar equivalent of writing with a limited vocabulary — technically correct but failing to exercise the student's growing skillset. Example: an N5.7 lesson has 5 conversations with 20 tagged verbs, but 18 are ます/ました, zero are てください or ています despite te-form being available since N5.5. Agent 2 must consult the Grammar Reinforcement Requirements and vary verb forms intentionally.
 31. **Missing structural patterns in active reinforcement window** — a lesson falls within a grammar milestone's active reinforcement window but none of the required structural patterns (てください, ています, たいです, ましょう, etc.) appear anywhere. This means the student has gone 2+ lessons since learning these patterns without encountering them in natural content. Agent 2 must include at least the minimum count of each pattern required by the reinforcement schedule.
 32. **Warmup grammar stagnation** — warmup items continue using only noun-です patterns (「先生です」「大きいです」) long after polite verb forms, te-form, and other grammar have been unlocked. Warmups after N5.5 should exercise recently-unlocked grammar with prior-lesson vocabulary. Example: an N5.8 warmup should include items like 「先生は毎日学校に行きます」(polite_masu) or 「ここに名前を書いてください」(te-form request), not just 「これは本です」.

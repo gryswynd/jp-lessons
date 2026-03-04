@@ -70,7 +70,7 @@
       "particle": "から",
       "reading": "から",
       "role": "from",
-      "explanation": "Starting-point marker. Used for physical origins (from Tokyo), time starting points (from Monday), and reasons/causes (because / since).",
+      "explanation": "Starting-point marker. Used for physical origins (from Tokyo) and time starting points (from Monday). Not the same as から meaning 'because' (see p_kara_because, G9).",
       "introducedIn": "N5.2"
     },
     {
@@ -144,6 +144,38 @@
       "role": "by (deadline)",
       "explanation": "Compound particle まで+に indicating a deadline: 'by the time of' or 'no later than'. Distinct from まで alone (which means 'until'). Example: 金曜日までに提出する = submit by Friday.",
       "introducedIn": "N5.2"
+    },
+    {
+      "id": "p_ga_but",
+      "particle": "が",
+      "reading": "が",
+      "role": "but (clause connector)",
+      "explanation": "Clause-linking conjunction meaning 'but' or 'however'. Attaches to the end of a clause (polite or plain form) to introduce a contrasting or softening second clause. More formal than けど. Not the same as が subject marker (p_ga) — different grammar role entirely.",
+      "introducedIn": "G9"
+    },
+    {
+      "id": "p_kara_because",
+      "particle": "から",
+      "reading": "から",
+      "role": "because / since",
+      "explanation": "Causal conjunction meaning 'because' or 'since'. The reason clause comes first: 暑いから、水を飲みます (Because it's hot, I'll drink water). Uses plain form + から in casual speech; polite form + から in polite speech. Not the same as から meaning 'from' (p_kara, G3) — different grammar role.",
+      "introducedIn": "G9"
+    },
+    {
+      "id": "p_kedo",
+      "particle": "けど",
+      "reading": "けど",
+      "role": "but (casual)",
+      "explanation": "Casual clause-linking conjunction meaning 'but'. The informal equivalent of が (p_ga_but). けれど is a slightly more formal variant. Common as a sentence-ender for polite softening: ～んですけど... (trailing off). Connects two clauses with a contrasting or qualifying relationship.",
+      "introducedIn": "G9"
+    },
+    {
+      "id": "p_demo_but",
+      "particle": "でも",
+      "reading": "でも",
+      "role": "but / however (sentence-initial)",
+      "explanation": "Sentence-starting conjunction meaning 'but' or 'however'. Begins a new sentence that contrasts with the previous one. でも、行きます = But I'll go. Distinct from the particle でも meaning 'even' (p_demo, N4.14) which follows nouns.",
+      "introducedIn": "G18"
     },
     {
       "id": "p_node",
