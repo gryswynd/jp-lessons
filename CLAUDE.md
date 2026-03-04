@@ -13,11 +13,12 @@ This file governs how Claude Code creates all lesson content for this repository
 5. [Term Tagging Reference](#term-tagging-reference)
 6. [Kanji Prerequisite Rules](#kanji-prerequisite-rules)
 7. [Approved Vocabulary Rules](#approved-vocabulary-rules)
-8. [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules)
-9. [Grammar Reinforcement Requirements](#grammar-reinforcement-requirements)
-10. [Quality Gates (Pass/Fail Criteria)](#quality-gates-passfail-criteria)
-11. [File & Structure Reference](#file--structure-reference)
-12. [Common Failure Modes](#common-failure-modes)
+8. [Early-Use Vocabulary Rules](#early-use-vocabulary-rules)
+9. [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules)
+10. [Grammar Reinforcement Requirements](#grammar-reinforcement-requirements)
+11. [Quality Gates (Pass/Fail Criteria)](#quality-gates-passfail-criteria)
+12. [File & Structure Reference](#file--structure-reference)
+13. [Common Failure Modes](#common-failure-modes)
 
 ---
 
@@ -981,6 +982,92 @@ Grammar patterns (particles, sentence-final forms, conjunctions like ～て) are
 
 ---
 
+## Early-Use Vocabulary Rules
+
+### The problem
+
+Some vocabulary is essential for natural conversations long before its kanji is formally taught. For example, わたし (私) is the most basic pronoun in Japanese and is needed from lesson 1, but the kanji 私 is not introduced until N4.3. Without an exception mechanism, agents cannot use these words in early content.
+
+### How the glossary handles this
+
+Each early-use word has its glossary entry set up with:
+- **`surface`**: The kanji form (e.g. 私, 家族, 好き)
+- **`matches`**: An array containing the hiragana writing (e.g. ["わたし", "かぞく", "すき"])
+- **`lesson_ids`**: Set to the lesson where ALL constituent kanji are taught
+
+The `matches` field allows the app to recognize the hiragana form when students type it (compose mode) or when it appears in content. The `lesson_ids` field controls when the full kanji form becomes available.
+
+### Rules for agents
+
+1. **Before the kanji lesson:** Write the word using its hiragana form (from the `matches` field). Tag it in `terms` using the same vocab ID — the ID is valid regardless of writing form.
+2. **From the kanji lesson onward:** Write the word using its full kanji surface form.
+3. **Only words on the approved list below may be used before their `lesson_ids` lesson.** This is a closed list — do not extend it without user approval.
+
+### Approved early-use vocabulary
+
+These words may be written in hiragana and used in content **from the listed lesson onward**, even though their `lesson_ids` (kanji introduction) is later.
+
+| ID | Write as | Use from | Kanji form | Kanji available | Notes |
+|---|---|---|---|---|---|
+| `v_watashi` | わたし | N5.1 | 私 | N4.3 | Essential first-person pronoun |
+| `v_nani` | なに | N5.1 | 何 | N5.2 | Question word (before を/が or standalone) |
+| `v_nan` | なん | N5.1 | 何 | N5.2 | Question word (before です/の/counters/d-n-t sounds) |
+| `v_kazoku` | かぞく | N5.1 | 家族 | N4.7 | Essential for family-themed content from lesson 1 |
+| `v_suki` | すき | N5.7 | 好き | N4.4 | Na-adjective "like" — needed for food/preference conversations |
+
+**Example usage in N5.1 content:**
+```json
+{
+  "jp": "わたしのかぞくは四人です。",
+  "en": "My family has four people.",
+  "terms": ["v_watashi", "v_kazoku", ...]
+}
+```
+
+The term ID `v_watashi` is used normally — the only difference is the surface text is written in hiragana instead of kanji.
+
+### Partial-kanji vocabulary (hybrid writing)
+
+Some compound words contain kanji from different lessons. When the word is introduced at a lesson where only SOME of its kanji have been taught, agents must write the word using partial kanji — available characters in kanji, unavailable characters in hiragana. The `matches` field contains these partial-kanji forms.
+
+Unlike early-use vocabulary, these words are available at their `lesson_ids` lesson through normal rules. The only special instruction is the **writing form**.
+
+| ID | Partial form | Use from | Full kanji form | Full kanji available |
+|---|---|---|---|---|
+| `v_daisuki` | 大すき | N5.7 | 大好き | N4.4 |
+| `v_namae` | 名まえ | N5.1¹ | 名前 | N5.9 |
+| `v_asagohan` | 朝ごはん | N4.3 | 朝ご飯 | N4.6 |
+| `v_bangohan` | 晩ごはん | N4.3 | 晩ご飯 | N4.6 |
+| `v_nichiyoubi` | 日ようび | N5.2 | 日曜日 | N4.14 |
+| `v_getsuyoubi` | 月ようび | N5.2 | 月曜日 | N4.14 |
+| `v_kayoubi` | 火ようび | N5.2 | 火曜日 | N4.14 |
+| `v_suiyoubi` | 水ようび | N5.2 | 水曜日 | N4.14 |
+| `v_mokuyoubi` | 木ようび | N5.2 | 木曜日 | N4.14 |
+| `v_kinyoubi` | 金ようび | N5.2 | 金曜日 | N4.14 |
+| `v_doyoubi` | 土ようび | N5.2 | 土曜日 | N4.14 |
+| `v_nanyoubi` | 何よう日 | N5.2 | 何曜日 | N4.14 |
+
+¹ `v_namae` has `lesson_ids=N5.9`. It is not on the early-use list — agents may only use it from N5.9 onward, at which point both kanji (名 and 前) are taught and the full form 名前 should be used.
+
+**Writing form decision rule:** For any word with a `matches` field, check whether ALL kanji in the surface are in the taught-kanji set for the current lesson. If yes, use the full kanji surface. If no, use the partial-kanji or hiragana form from `matches` that matches the available kanji.
+
+### Maintaining these lists
+
+- **Adding to the early-use list** requires user approval. Do not add words without explicit permission — the list is intentionally small (essential pronouns, question words, and high-frequency words only).
+- **Adding partial-kanji entries** happens naturally when a compound word's constituent kanji are taught in different lessons. Agent 1 should check for this during scoping and ensure the `matches` field includes the appropriate partial form.
+- When a word on either list reaches its full-kanji lesson, no special handling is needed — agents simply start writing the kanji form.
+
+### Agent responsibilities
+
+| Agent | Responsibility |
+|---|---|
+| **Agent 1** | When scoping a lesson, check the early-use list to identify which words are available in hiragana. Include them in the Content Brief's vocabulary scope. |
+| **Agent 2** | Write early-use words in hiragana. Write partial-kanji words using the form appropriate for the lesson tier. Tag with the standard vocab ID regardless of writing form. |
+| **Agent 3** | Verify that any word written in hiragana in a `jp` field either (a) has no kanji in the glossary surface, or (b) is on the early-use list and its kanji is not yet taught. Flag words written in hiragana that SHOULD be written in kanji (because the kanji is already taught). Also verify that early-use words are not used before their "Use from" lesson. |
+| **Agent 4** | No additional checks beyond standard consistency review. |
+
+---
+
 ## Grammar Usage Prerequisite Rules
 
 ### Source of truth: `conjugation_rules.json` and `shared/particles.json`
@@ -1138,6 +1225,9 @@ All of the following must be TRUE for a QA pass:
 - [ ] The JSON validates (no syntax errors)
 - [ ] All required fields are present for the section type
 - [ ] No ID appears in terms that was not verified against the glossary file
+- [ ] Early-use vocabulary written in hiragana is on the approved early-use list and the current lesson ≥ the word's "Use from" lesson (see [Early-Use Vocabulary Rules](#early-use-vocabulary-rules))
+- [ ] Words with taught kanji are written in kanji, not hiragana — hiragana writing is only permitted for words on the early-use list whose kanji is not yet taught
+- [ ] Partial-kanji words use the correct writing form for the lesson tier (e.g. 大すき not 大好き before N4.4)
 - [ ] (Reviews) Scramble `segments` use only taught kanji and approved vocabulary
 - [ ] (Reviews) Scramble `distractors` are plausible (wrong particles, transitive/intransitive confusions, similar words)
 - [ ] (Reviews) Scramble sentences with time expressions or adverbs have `alts` if the element can naturally float
@@ -1313,6 +1403,9 @@ These are the most frequent errors. All agents should be alert to them.
 30. **Grammar under-reinforcement (ます/ました monotony)** — all verbs in conversations and readings default to `polite_masu` or `polite_mashita` when negative forms, te-form, desire, and volitional forms are all available. This is the grammar equivalent of writing with a limited vocabulary — technically correct but failing to exercise the student's growing skillset. Example: an N5.7 lesson has 5 conversations with 20 tagged verbs, but 18 are ます/ました, zero are てください or ています despite te-form being available since N5.5. Agent 2 must consult the Grammar Reinforcement Requirements and vary verb forms intentionally.
 31. **Missing structural patterns in active reinforcement window** — a lesson falls within a grammar milestone's active reinforcement window but none of the required structural patterns (てください, ています, たいです, ましょう, etc.) appear anywhere. This means the student has gone 2+ lessons since learning these patterns without encountering them in natural content. Agent 2 must include at least the minimum count of each pattern required by the reinforcement schedule.
 32. **Warmup grammar stagnation** — warmup items continue using only noun-です patterns (「先生です」「大きいです」) long after polite verb forms, te-form, and other grammar have been unlocked. Warmups after N5.5 should exercise recently-unlocked grammar with prior-lesson vocabulary. Example: an N5.8 warmup should include items like 「先生は毎日学校に行きます」(polite_masu) or 「ここに名前を書いてください」(te-form request), not just 「これは本です」.
+33. **Early-use word written in kanji before kanji is taught** — writing 私 in N5.1 content when the kanji 私 is not introduced until N4.3. Early-use words must be written in their hiragana form (わたし) until the kanji lesson. Similarly, partial-kanji words must use their partial form (大すき, not 大好き) until all constituent kanji are taught. See [Early-Use Vocabulary Rules](#early-use-vocabulary-rules).
+34. **Early-use word written in hiragana after kanji is taught** — writing わたし in N4.5 content when the kanji 私 was introduced in N4.3. Once the kanji is available, the full kanji form must be used. Continuing to write hiragana after the kanji lesson is a missed learning opportunity.
+35. **Using an early-use word before its "Use from" lesson** — using すき in N5.3 content when the early-use list says it is available from N5.7. The "Use from" lesson is a hard gate, not a guideline.
 
 ### Agent 3 failures (caught by Agent 4)
 
