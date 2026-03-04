@@ -1,9 +1,3 @@
----
-
-**⚠️ SCOPE: LESSON & LEARNING CONTENT ONLY.** This file (`CLAUDE.md`) governs all educational content creation: lessons, reviews, compose prompts, stories, glossary entries, and any JSON/MD learning content. It does **NOT** govern visual art asset generation. For all art assets (sprites, portraits, backgrounds, tilesets, UI elements, enemy concepts, anything involving the Gemini image API), follow `RikizoArtPipeline.md` and its companion files (`PaperBanana.md`, `gemini-3-image-api-guide.md`). **Never mix these two systems.** The 4-agent pipeline below (PM → CB → QA → CR) is exclusively for educational content. The 5-agent art pipeline (Retriever → Planner → Stylist → Visualizer → Critic) in `RikizoArtPipeline.md` is exclusively for art assets. If a task involves both (e.g. "create Day 3 with all its assets and lesson content"), treat them as two separate subtasks, each governed by its own document.
-
----
-
 # Content Creation Workflow — Multi-Agent Pipeline
 
 This file governs how Claude Code creates all lesson content for this repository. When a user asks for any content to be created or updated, Claude Code **must** follow the multi-agent pipeline defined here. Do not skip agents, do not merge roles, and do not deliver output that has not passed all quality gates.
