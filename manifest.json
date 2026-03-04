@@ -136,6 +136,7 @@
         {
           "id": "N5.9",
           "title": "Relative Position",
+          "file": "data/N5/lessons/N5.9.json",
           "kanji": [
             "前",
             "後",
@@ -296,6 +297,14 @@
           "file": "data/N5/grammar/G8.json",
           "unlocksAfter": "N5.8",
           "icon": "🎯"
+        },
+        {
+          "id": "G9",
+          "title": "Plain Forms & Basic Connectors",
+          "file": "data/N5/grammar/G9.json",
+          "unlocksAfter": "N5.9",
+          "icon": "👋",
+          "estimatedMinutes": 30
         }
       ],
       "reviews": [
@@ -328,7 +337,8 @@
         { "lesson": "N5.5", "file": "data/N5/compose/compose.N5.5.json" },
         { "lesson": "N5.6", "file": "data/N5/compose/compose.N5.6.json" },
         { "lesson": "N5.7", "file": "data/N5/compose/compose.N5.7.json" },
-        { "lesson": "N5.8", "file": "data/N5/compose/compose.N5.8.json" }
+        { "lesson": "N5.8", "file": "data/N5/compose/compose.N5.8.json" },
+        { "lesson": "N5.9", "file": "data/N5/compose/compose.N5.9.json" }
       ],
       "stories": [
         {
