@@ -17,6 +17,7 @@ window.FinalReviewModule = (function () {
   let allKanjiPool = []; // Full kanji pool from manifest for bingo card generation
 
   // ── State ──
+  let teacherMode = false;
   let totalScore = 0;
   let maxPossible = 0;
   let sectionIdx = 0;
@@ -678,6 +679,43 @@ window.FinalReviewModule = (function () {
         margin: 10px 0;
       }
 
+      /* ── Teacher Mode Nav ── */
+      .fr-teacher-bar {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 10px;
+        background: #263238;
+        border-bottom: 2px solid #FFD700;
+        font-size: 0.75rem;
+        overflow-x: auto;
+      }
+      .fr-teacher-bar button {
+        background: #455A64;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 4px 10px;
+        font-size: 0.75rem;
+        cursor: pointer;
+        white-space: nowrap;
+        font-weight: 600;
+      }
+      .fr-teacher-bar button:hover { background: #607D8B; }
+      .fr-teacher-bar button.active {
+        background: #FFD700;
+        color: #263238;
+      }
+      .fr-teacher-bar .fr-tb-label {
+        color: #FFD700;
+        font-weight: 700;
+        margin-right: 4px;
+        white-space: nowrap;
+      }
+      .fr-header.teacher-active {
+        border-bottom: 2px solid #FFD700;
+      }
+
       /* ── Rikizo Gift Box Sequence ── */
       .fr-gift-scene {
         text-align: center;
@@ -837,6 +875,7 @@ window.FinalReviewModule = (function () {
     container = c;
     config = cfg;
     onExit = exit;
+    teacherMode = false;
     totalScore = 0;
     maxPossible = 0;
     sectionIdx = 0;
@@ -929,19 +968,98 @@ window.FinalReviewModule = (function () {
     const root = document.createElement('div');
     root.id = 'jp-fr-root';
     root.innerHTML = `
-      <div class="fr-header">
+      <div class="fr-header" id="fr-header">
         <div>
           <h2>りきぞうファイナル</h2>
           <div style="font-size:0.8rem;opacity:0.8;">N4 Final Review</div>
         </div>
         <div class="fr-header-score" id="fr-total-score">0 pts</div>
       </div>
+      <div id="fr-teacher-bar-slot"></div>
       <div class="fr-progress-track">
         <div class="fr-progress-bar" id="fr-progress" style="width:0%"></div>
       </div>
       <div class="fr-body" id="fr-stage"></div>
     `;
     container.appendChild(root);
+
+    // Triple-tap header to toggle teacher mode
+    let tapCount = 0;
+    let tapTimer = null;
+    const header = el('fr-header');
+    header.addEventListener('click', () => {
+      tapCount++;
+      clearTimeout(tapTimer);
+      tapTimer = setTimeout(() => { tapCount = 0; }, 500);
+      if (tapCount >= 3) {
+        tapCount = 0;
+        teacherMode = !teacherMode;
+        if (teacherMode) {
+          header.classList.add('teacher-active');
+        } else {
+          header.classList.remove('teacher-active');
+        }
+        renderTeacherBar();
+      }
+    });
+  }
+
+  function renderTeacherBar() {
+    const slot = el('fr-teacher-bar-slot');
+    if (!slot) return;
+    if (!teacherMode) {
+      slot.innerHTML = '';
+      return;
+    }
+    const total = reviewData.sections.length;
+    // currentIdx is sectionIdx (already incremented after finish, so it points to the next one)
+    // For display, show which section is active
+    let btns = '';
+    for (let i = 0; i < total; i++) {
+      const sec = reviewData.sections[i];
+      const label = (i + 1) + '';
+      const isCurrent = (i === sectionIdx) || (sectionIdx > i && i === total - 1);
+      btns += '<button class="' + (i === sectionIdx ? 'active' : '') + '" data-t-idx="' + i + '" title="' + (sec.title || 'Section ' + (i+1)) + '">' + label + '</button>';
+    }
+    btns += '<button data-t-idx="final" title="Final Screen">🏆</button>';
+
+    slot.innerHTML = `
+      <div class="fr-teacher-bar">
+        <span class="fr-tb-label">TEACHER</span>
+        <button data-t-nav="prev">◀ Prev</button>
+        ${btns}
+        <button data-t-nav="next">Next ▶</button>
+      </div>
+    `;
+
+    slot.querySelectorAll('button[data-t-idx]').forEach(btn => {
+      btn.onclick = () => {
+        const idx = btn.dataset.tIdx;
+        teacherJump(idx === 'final' ? total : parseInt(idx));
+      };
+    });
+    slot.querySelector('[data-t-nav="prev"]').onclick = () => {
+      if (sectionIdx > 0) teacherJump(sectionIdx - 1);
+    };
+    slot.querySelector('[data-t-nav="next"]').onclick = () => {
+      teacherJump(Math.min(sectionIdx + 1, total));
+    };
+  }
+
+  function teacherJump(idx) {
+    const total = reviewData.sections.length;
+    // Pad sectionScores so indices stay consistent
+    while (sectionScores.length < idx) {
+      sectionScores.push({ earned: 0, possible: 0 });
+    }
+    sectionIdx = idx;
+    updateProgress();
+    renderTeacherBar();
+    if (idx >= total) {
+      renderFinalScreen();
+    } else {
+      renderSectionIntro();
+    }
   }
 
   function updateProgress() {
@@ -961,6 +1079,7 @@ window.FinalReviewModule = (function () {
       return;
     }
     updateProgress();
+    renderTeacherBar();
     const sec = reviewData.sections[sectionIdx];
     const stage = el('fr-stage');
     stage.innerHTML = `
@@ -996,6 +1115,7 @@ window.FinalReviewModule = (function () {
     maxPossible += possible;
     sectionIdx++;
     updateProgress();
+    renderTeacherBar();
 
     const stage = el('fr-stage');
     const pct = possible > 0 ? Math.round((earned / possible) * 100) : 100;
