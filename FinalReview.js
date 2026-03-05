@@ -381,6 +381,31 @@ window.FinalReviewModule = (function () {
         background: white;
         border: 2px solid var(--fr-primary);
       }
+      .fr-chip.wordle-green {
+        background: #6aaa64 !important;
+        border-color: #6aaa64 !important;
+        color: white !important;
+        pointer-events: none;
+      }
+      .fr-chip.wordle-yellow {
+        background: #c9b458 !important;
+        border-color: #c9b458 !important;
+        color: white !important;
+        pointer-events: none;
+      }
+      .fr-chip.wordle-gray {
+        background: #787c7e !important;
+        border-color: #787c7e !important;
+        color: white !important;
+        pointer-events: none;
+      }
+      @keyframes frFlipIn {
+        0% { transform: scaleY(0); }
+        100% { transform: scaleY(1); }
+      }
+      .fr-chip.wordle-reveal {
+        animation: frFlipIn 0.3s ease;
+      }
       .fr-chip-pool {
         display: flex;
         flex-wrap: wrap;
@@ -1162,6 +1187,13 @@ window.FinalReviewModule = (function () {
         attempts++;
 
         if (isCorrect) {
+          // All green
+          const chips = box.querySelectorAll('.fr-chip');
+          chips.forEach((chip, ci) => {
+            setTimeout(() => {
+              chip.classList.add('wordle-green', 'wordle-reveal');
+            }, ci * 100);
+          });
           box.classList.add('correct');
           const pts = attempts === 1 ? 2 : 1;
           score += pts;
@@ -1172,18 +1204,59 @@ window.FinalReviewModule = (function () {
           idx++;
           setTimeout(showRelay, 1800);
         } else {
-          box.classList.add('wrong');
-          if (attempts >= 3) {
-            // Show answer
-            box.innerHTML = item.segments.map(s => `<div class="fr-chip in-box">${s}</div>`).join('');
-            box.classList.remove('wrong');
-            box.classList.add('correct');
-            checkBtn.style.display = 'none';
-            clearBtn.style.display = 'none';
-            el('fr-scr-explain').classList.add('show');
-            idx++;
-            setTimeout(showRelay, 2000);
+          // Wordle coloring: compare against best matching answer
+          const answer = item.segments;
+          const chips = box.querySelectorAll('.fr-chip');
+
+          // Build color array: green / yellow / gray
+          const colors = new Array(order.length).fill('gray');
+          const answerUsed = new Array(answer.length).fill(false);
+
+          // Pass 1: exact matches (green)
+          for (let i = 0; i < order.length; i++) {
+            if (i < answer.length && order[i] === answer[i]) {
+              colors[i] = 'green';
+              answerUsed[i] = true;
+            }
           }
+          // Pass 2: right word wrong position (yellow)
+          for (let i = 0; i < order.length; i++) {
+            if (colors[i] === 'green') continue;
+            for (let j = 0; j < answer.length; j++) {
+              if (!answerUsed[j] && order[i] === answer[j]) {
+                colors[i] = 'yellow';
+                answerUsed[j] = true;
+                break;
+              }
+            }
+          }
+
+          // Apply colors with staggered animation
+          chips.forEach((chip, ci) => {
+            setTimeout(() => {
+              chip.classList.remove('wordle-green', 'wordle-yellow', 'wordle-gray');
+              chip.classList.add('wordle-' + colors[ci], 'wordle-reveal');
+            }, ci * 120);
+          });
+
+          // After animation, allow retry or show answer
+          const animTime = chips.length * 120 + 400;
+          setTimeout(() => {
+            if (attempts >= 3) {
+              // Show correct answer
+              box.innerHTML = item.segments.map(s =>
+                `<div class="fr-chip in-box wordle-green">${s}</div>`
+              ).join('');
+              box.classList.remove('wrong');
+              box.classList.add('correct');
+              checkBtn.style.display = 'none';
+              clearBtn.style.display = 'none';
+              el('fr-scr-explain').classList.add('show');
+              idx++;
+              setTimeout(showRelay, 2000);
+            }
+            // Otherwise user can clear and retry (chips stay colored as hints)
+          }, animTime);
         }
       };
     }
