@@ -120,16 +120,16 @@
           "explanation": "The stranger says 「駅から歩いて五分ぐらいです」— about 5 minutes walking from the station."
         },
         {
-          "title": "Scene 3: At the Shop",
-          "context": "Rikizo stops at a shop after the movie.",
+          "title": "Scene 3: At the Bookshop",
+          "context": "Rikizo stops at a bookshop after the movie.",
           "lines": [
             { "spk": "店", "jp": "いらっしゃいませ。何を買いたいですか。", "terms": ["v_nani", "p_wo", { "id": "v_kau", "form": "desire_tai" }, "g_desu", "p_ka"] },
-            { "spk": "R", "jp": "漢字の紙を買いたいです。試験の勉強をしています。", "terms": ["v_kanji", "p_no", "v_kami", "p_wo", { "id": "v_kau", "form": "desire_tai" }, "g_desu", "v_shiken", "v_benkyou", { "id": "v_suru", "form": "te_form" }, { "id": "v_iru", "form": "polite_masu" }] },
-            { "spk": "店", "jp": "この紙は特に人気がありますよ。", "terms": ["v_kami", "p_wa", "v_tokuni", "v_ninki", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "p_yo"] },
-            { "spk": "R", "jp": "じゃ、それをください。", "terms": ["p_wo"] }
+            { "spk": "R", "jp": "漢字の本を買いたいです。試験の勉強をしています。", "terms": ["v_kanji", "p_no", "v_hon", "p_wo", { "id": "v_kau", "form": "desire_tai" }, "g_desu", "v_shiken", "p_no", "v_benkyou", "p_wo", { "id": "v_suru", "form": "te_form" }, { "id": "v_iru", "form": "polite_masu" }] },
+            { "spk": "店", "jp": "この本は特に人気がありますよ。", "terms": ["v_hon", "p_wa", "v_tokuni", "v_ninki", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "p_yo"] },
+            { "spk": "R", "jp": "じゃ、それをください。あと、紙も売っていますか。", "terms": ["p_wo", "v_kami", "p_mo", { "id": "v_uru", "form": "te_form" }, { "id": "v_iru", "form": "polite_masu" }, "p_ka"] }
           ],
-          "question": "Why is Rikizo buying kanji paper?",
-          "choices": ["He is studying for an exam", "He wants to teach his sister", "He likes to collect paper", "It was recommended by a friend"],
+          "question": "Why is Rikizo buying a kanji book?",
+          "choices": ["He is studying for an exam", "He wants to teach his sister", "He likes to collect books", "It was recommended by a friend"],
           "answer": "He is studying for an exam",
           "explanation": "Rikizo says 「試験の勉強をしています」— he is studying for an exam."
         },
@@ -138,7 +138,7 @@
           "context": "Rikizo returns home and talks to his family about his day.",
           "lines": [
             { "spk": "父", "jp": "今日はどこに行きましたか。", "terms": ["v_kyou", "v_doko", { "id": "v_iku", "form": "polite_mashita" }, "p_ka"] },
-            { "spk": "R", "jp": "映画を見たり、紙を買ったりしました。", "terms": ["v_eiga", "p_wo", { "id": "v_miru", "form": "tari_form" }, "v_kami", { "id": "v_kau", "form": "tari_form" }, { "id": "v_suru", "form": "polite_mashita" }] },
+            { "spk": "R", "jp": "映画を見たり、本を買ったりしました。", "terms": ["v_eiga", "p_wo", { "id": "v_miru", "form": "tari_form" }, "v_hon", "p_wo", { "id": "v_kau", "form": "tari_form" }, { "id": "v_suru", "form": "polite_mashita" }] },
             { "spk": "姉", "jp": "映画はどうでしたか。おもしろかったですか。", "terms": ["v_eiga", { "id": "v_omoshiroi", "form": "polite_past_adj" }, "p_ka"] },
             { "spk": "R", "jp": "とてもおもしろかったです！来週も行きたいと思います。", "terms": ["v_totemo", { "id": "v_omoshiroi", "form": "polite_past_adj" }, "v_raishuu", { "id": "v_iku", "form": "desire_tai" }, { "id": "v_omou", "form": "polite_masu" }] }
           ],
@@ -266,14 +266,14 @@
           "label": "Clue 2: The Evidence",
           "lines": [
             { "jp": "山田さんは図書館で勉強していたと言いました。", "terms": ["p_wa", "v_toshokan", "p_de", "v_benkyou", { "id": "v_suru", "form": "te_form" }, { "id": "v_iru", "form": "plain_past" }, "p_to", { "id": "v_iu", "form": "polite_mashita" }] },
-            { "jp": "森さんは外で運動していたと言いました。でも、森さんの紙に赤い色がありました。", "terms": ["p_wa", "v_soto", "p_de", "v_undou", { "id": "v_suru", "form": "te_form" }, { "id": "v_iru", "form": "plain_past" }, "p_to", { "id": "v_iu", "form": "polite_mashita" }, "p_demo_but", "v_kami", "p_ni", "v_akai", "v_iro", { "id": "v_aru", "form": "polite_mashita" }] },
+            { "jp": "森さんは外で運動していたと言いました。でも、森さんの手に赤い色がありました。", "terms": ["p_wa", "v_soto", "p_de", "v_undou", { "id": "v_suru", "form": "te_form" }, { "id": "v_iru", "form": "plain_past" }, "p_to", { "id": "v_iu", "form": "polite_mashita" }, "p_demo_but", "p_no", "v_te", "p_ni", "v_akai", "v_iro", { "id": "v_aru", "form": "polite_mashita" }] },
             { "jp": "池田さんは教室の近くで友達を待っていたと言いました。", "terms": ["p_wa", "v_kyoushitsu", "p_no", { "id": "v_chikai", "form": "polite_adj" }, "p_de", "v_tomodachi", "p_wo", { "id": "v_matsu", "form": "te_form" }, { "id": "v_iru", "form": "plain_past" }, "p_to", { "id": "v_iu", "form": "polite_mashita" }] }
           ]
         },
         {
           "label": "Clue 3: The Discovery",
           "lines": [
-            { "jp": "田中先生は答えの紙を見ました。紙に赤い色がありました。", "terms": ["v_sensei", "p_wa", "v_kotae", "p_no", "v_kami", "p_wo", { "id": "v_miru", "form": "polite_mashita" }, "v_kami", "p_ni", "v_akai", "v_iro", { "id": "v_aru", "form": "polite_mashita" }] },
+            { "jp": "田中先生は答えの紙を見ました。紙にも赤い色がありました。", "terms": ["v_sensei", "p_wa", "v_kotae", "p_no", "v_kami", "p_wo", { "id": "v_miru", "form": "polite_mashita" }, "v_kami", "p_ni", "p_mo", "v_akai", "v_iro", { "id": "v_aru", "form": "polite_mashita" }] },
             { "jp": "紙は学校の外にありました。森さんだけが外に行きました。", "terms": ["v_kami", "p_wa", "v_gakkou", "p_no", "v_soto", "p_ni", { "id": "v_aru", "form": "polite_mashita" }, "p_dake", "v_soto", { "id": "v_iku", "form": "polite_mashita" }] }
           ]
         }
@@ -283,7 +283,7 @@
           "q": "Who most likely took the test answers?",
           "choices": ["森さん (Mori-san)", "山田さん (Yamada-san)", "池田さん (Ikeda-san)", "田中先生 (Tanaka-sensei)"],
           "answer": "森さん (Mori-san)",
-          "explanation": "森さん had red marks on her paper, and she was the only one who went outside — where the answer paper was found. The evidence points to 森さん."
+          "explanation": "森さん had red color on her hands, and the answer paper also had red marks. 森さん was the only one who went outside — where the paper was found. The evidence points to 森さん."
         },
         {
           "q": "Where was the answer paper found?",
