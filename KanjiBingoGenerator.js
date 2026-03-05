@@ -16,19 +16,6 @@ window.KanjiBingoGeneratorModule = (function () {
   let currentKanji = null;
   let isSpinning = false;
 
-  // ── Rikizo pixel sprite (base64 inline for the ball center) ──
-  const RIKIZO_STAMP = "data:image/svg+xml," + encodeURIComponent(
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">' +
-    '<circle cx="20" cy="20" r="18" fill="#FFE0B2"/>' +
-    '<circle cx="14" cy="16" r="2.5" fill="#333"/>' +
-    '<circle cx="26" cy="16" r="2.5" fill="#333"/>' +
-    '<path d="M14 26 Q20 32 26 26" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>' +
-    '<rect x="10" y="8" width="8" height="4" rx="1" fill="#333" opacity="0.7"/>' +
-    '<rect x="22" y="8" width="8" height="4" rx="1" fill="#333" opacity="0.7"/>' +
-    '<path d="M6 14 Q8 4 20 2 Q32 4 34 14" stroke="#222" stroke-width="2.5" fill="#222"/>' +
-    '</svg>'
-  );
-
   // ── Ball colors for bingo-style variety ──
   const BALL_COLORS = [
     { bg: '#E91E63', glow: 'rgba(233,30,99,0.4)' },   // pink
@@ -374,76 +361,100 @@ window.KanjiBingoGeneratorModule = (function () {
   async function loadKanjiData() {
     // Load manifest to get all available kanji across lessons
     try {
-      const base = 'https://cdn.jsdelivr.net/gh/' + config.owner + '/' + config.repo + '@' + config.branch;
-      const res = await fetch(base + '/manifest.json');
-      const manifest = await res.json();
+      // Use shared asset loader if available, else fall back to CDN fetch
+      var manifest;
+      var fetchJSON;
+      if (window.getManifest && window.JPShared && window.JPShared.assets) {
+        manifest = await window.getManifest(config);
+        fetchJSON = window.JPShared.assets.fetchJSON;
+      } else {
+        var base = 'https://cdn.jsdelivr.net/gh/' + config.owner + '/' + config.repo + '@' + config.branch;
+        fetchJSON = function (url) { return fetch(url).then(function (r) { return r.json(); }); };
+        manifest = await fetchJSON(base + '/manifest.json');
+      }
 
-      const allKanji = [];
-      const levels = ['N5', 'N4'];
+      // Helper to resolve data file paths
+      function getUrl(filePath) {
+        if (window.JPShared && window.JPShared.assets && window.JPShared.assets.getUrl) {
+          return window.JPShared.assets.getUrl(filePath);
+        }
+        return base + '/' + filePath;
+      }
 
-      for (const level of levels) {
-        const lessons = manifest.data && manifest.data[level] && manifest.data[level].lessons;
+      // Build kanji list from manifest
+      var allKanji = [];
+      var levels = ['N5', 'N4'];
+
+      for (var li = 0; li < levels.length; li++) {
+        var level = levels[li];
+        var lessons = manifest.data && manifest.data[level] && manifest.data[level].lessons;
         if (!lessons) continue;
-        for (const lesson of lessons) {
+        for (var j = 0; j < lessons.length; j++) {
+          var lesson = lessons[j];
           if (lesson.kanji && lesson.kanji.length > 0) {
-            for (const k of lesson.kanji) {
-              allKanji.push({ kanji: k, lessonId: lesson.id });
+            for (var ki = 0; ki < lesson.kanji.length; ki++) {
+              allKanji.push({ kanji: lesson.kanji[ki], lessonId: lesson.id });
             }
           }
         }
       }
 
-      // Also try to load the Final Review kanji pool for richer data (reading + meaning)
-      try {
-        const frRes = await fetch(base + '/data/N4/reviews/N4.Final.Review.json');
-        const frData = await frRes.json();
-        const bingoSection = frData.sections.find(s => s.type === 'kanji_bingo');
-        if (bingoSection && bingoSection.kanjiPool) {
-          // Build a lookup from the rich data
-          const richLookup = {};
-          for (const entry of bingoSection.kanjiPool) {
-            richLookup[entry.kanji] = entry;
-          }
-          // Enrich allKanji with reading/meaning where available
-          for (const item of allKanji) {
-            if (richLookup[item.kanji]) {
-              item.reading = richLookup[item.kanji].reading;
-              item.meaning = richLookup[item.kanji].meaning;
-            }
-          }
-        }
-      } catch (e) {
-        // Not critical — we can work without readings/meanings
-      }
+      // Load BOTH glossaries to get reading/meaning for ALL kanji
+      var glossaryFiles = [
+        manifest.data.N5 && manifest.data.N5.glossary,
+        manifest.data.N4 && manifest.data.N4.glossary
+      ].filter(Boolean);
 
-      // Also load the glossary entries for remaining kanji without readings
-      for (const level of levels) {
-        try {
-          const gRes = await fetch(base + '/data/' + level + '/glossary.' + level + '.json');
-          const glossary = await gRes.json();
-          const kanjiEntries = glossary.filter(e => e.type === 'kanji');
-          const kanjiLookup = {};
-          for (const entry of kanjiEntries) {
+      var kanjiLookup = {};
+      var glossaryResults = await Promise.all(glossaryFiles.map(function (f) {
+        return fetchJSON(getUrl(f)).catch(function () { return []; });
+      }));
+
+      for (var gi = 0; gi < glossaryResults.length; gi++) {
+        var glossary = glossaryResults[gi];
+        if (!Array.isArray(glossary)) continue;
+        for (var ei = 0; ei < glossary.length; ei++) {
+          var entry = glossary[ei];
+          if (entry.type === 'kanji' && entry.surface) {
             kanjiLookup[entry.surface] = entry;
           }
-          for (const item of allKanji) {
-            if (!item.reading && kanjiLookup[item.kanji]) {
-              item.reading = kanjiLookup[item.kanji].reading || kanjiLookup[item.kanji].kun || '';
-              item.meaning = kanjiLookup[item.kanji].meaning || '';
-            }
-          }
-        } catch (e) {
-          // Non-critical
         }
       }
 
-      // Deduplicate by kanji character
-      const seen = new Set();
+      // Enrich all kanji with reading/meaning from glossary
+      for (var ai = 0; ai < allKanji.length; ai++) {
+        var item = allKanji[ai];
+        var gEntry = kanjiLookup[item.kanji];
+        if (gEntry) {
+          item.reading = gEntry.reading || gEntry.kun || '';
+          item.meaning = gEntry.meaning || '';
+        }
+      }
+
+      // Deduplicate by kanji character, preferring entries WITH reading data
+      var seen = {};
       kanjiPool = [];
-      for (const item of allKanji) {
-        if (!seen.has(item.kanji)) {
-          seen.add(item.kanji);
-          kanjiPool.push(item);
+      for (var di = 0; di < allKanji.length; di++) {
+        var k = allKanji[di];
+        if (!seen[k.kanji]) {
+          seen[k.kanji] = true;
+          kanjiPool.push(k);
+        } else if (k.reading && !kanjiPool.find(function (p) { return p.kanji === k.kanji && p.reading; })) {
+          // Replace the entry without reading with this one that has reading
+          for (var ri = 0; ri < kanjiPool.length; ri++) {
+            if (kanjiPool[ri].kanji === k.kanji && !kanjiPool[ri].reading) {
+              kanjiPool[ri] = k;
+              break;
+            }
+          }
+        }
+      }
+
+      if (kanjiPool.length > 0) {
+        // Log any kanji missing reading data for debugging
+        var missing = kanjiPool.filter(function (p) { return !p.reading; });
+        if (missing.length > 0) {
+          console.warn('[KanjiBingoGenerator] Kanji missing reading data:', missing.map(function (m) { return m.kanji; }));
         }
       }
 

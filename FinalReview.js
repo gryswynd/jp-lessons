@@ -23,19 +23,9 @@ window.FinalReviewModule = (function () {
   let sectionIdx = 0;
   let sectionScores = [];
 
-  // ── Rikizo stamp (base64 inline — tiny 40×40 face) ──
-  // We'll generate it as an SVG data URI so no external asset is needed
-  const RIKIZO_STAMP = "data:image/svg+xml," + encodeURIComponent(
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">' +
-    '<circle cx="20" cy="20" r="18" fill="#FFE0B2"/>' +
-    '<circle cx="14" cy="16" r="2.5" fill="#333"/>' +
-    '<circle cx="26" cy="16" r="2.5" fill="#333"/>' +
-    '<path d="M14 26 Q20 32 26 26" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>' +
-    '<rect x="10" y="8" width="8" height="4" rx="1" fill="#333" opacity="0.7"/>' +
-    '<rect x="22" y="8" width="8" height="4" rx="1" fill="#333" opacity="0.7"/>' +
-    '<path d="M6 14 Q8 4 20 2 Q32 4 34 14" stroke="#222" stroke-width="2.5" fill="#222"/>' +
-    '</svg>'
-  );
+  // ── Rikizo image URLs (resolved at start time from config) ──
+  let RIKIZO_STAMP = '';   // rikizo_head.png — used for bingo stamps
+  let RIKIZO_SPRITE = '';  // mesprite.png — used for gift pop-out character
 
   // ── Helpers ──
   function el(id) { return document.getElementById(id); }
@@ -880,6 +870,8 @@ window.FinalReviewModule = (function () {
     maxPossible = 0;
     sectionIdx = 0;
     sectionScores = [];
+    RIKIZO_STAMP = getUrl('references/pixel_characters/rikizo_head.png');
+    RIKIZO_SPRITE = getUrl('references/pixel_characters/mesprite.png');
     injectStyles();
     loadData();
   }
@@ -1957,38 +1949,11 @@ window.FinalReviewModule = (function () {
   }
 
   // ══════════════════════════════════════════════════════════════
-  //  RIKIZO CHARACTER SVG (full body for gift animation)
+  //  RIKIZO CHARACTER (pixel sprite for gift animation)
   // ══════════════════════════════════════════════════════════════
-  const RIKIZO_BODY_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 70" class="fr-rikizo-body">
-    <!-- Hair -->
-    <path d="M10 22 Q12 8 30 5 Q48 8 50 22" stroke="#222" stroke-width="2.5" fill="#222"/>
-    <!-- Face -->
-    <circle cx="30" cy="26" r="16" fill="#FFE0B2"/>
-    <!-- Eyebrows -->
-    <rect x="18" y="16" width="8" height="3.5" rx="1" fill="#333" opacity="0.7"/>
-    <rect x="34" y="16" width="8" height="3.5" rx="1" fill="#333" opacity="0.7"/>
-    <!-- Eyes -->
-    <circle cx="22" cy="24" r="2.5" fill="#333"/>
-    <circle cx="38" cy="24" r="2.5" fill="#333"/>
-    <circle cx="23" cy="23" r="0.8" fill="#fff"/>
-    <circle cx="39" cy="23" r="0.8" fill="#fff"/>
-    <!-- Mouth -->
-    <path d="M22 32 Q30 38 38 32" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <!-- Body -->
-    <rect x="18" y="42" width="24" height="18" rx="4" fill="#E91E63"/>
-    <!-- Arms -->
-    <rect x="8" y="44" width="10" height="6" rx="3" fill="#E91E63"/>
-    <rect x="42" y="44" width="10" height="6" rx="3" fill="#E91E63"/>
-    <!-- Hands -->
-    <circle cx="8" cy="47" r="4" fill="#FFE0B2"/>
-    <circle cx="52" cy="47" r="4" fill="#FFE0B2"/>
-    <!-- Legs -->
-    <rect x="22" y="58" width="6" height="10" rx="3" fill="#333"/>
-    <rect x="32" y="58" width="6" height="10" rx="3" fill="#333"/>
-    <!-- Shoes -->
-    <ellipse cx="25" cy="68" rx="5" ry="3" fill="#795548"/>
-    <ellipse cx="35" cy="68" rx="5" ry="3" fill="#795548"/>
-  </svg>`;
+  function getRikizoBodyHTML() {
+    return '<img src="' + RIKIZO_SPRITE + '" class="fr-rikizo-body" alt="Rikizo" style="width:60px;height:70px;image-rendering:pixelated;" />';
+  }
 
   // ══════════════════════════════════════════════════════════════
   //  FINAL SCREEN
@@ -2105,7 +2070,7 @@ window.FinalReviewModule = (function () {
         const rikizo = document.createElement('div');
         rikizo.className = 'fr-rikizo';
         rikizo.id = 'fr-rikizo';
-        rikizo.innerHTML = RIKIZO_BODY_SVG;
+        rikizo.innerHTML = getRikizoBodyHTML();
         // Start at gift box position
         rikizo.style.left = (boxCenterX - 30) + 'px';
         rikizo.style.top = (boxCenterY - 35) + 'px';
@@ -2169,7 +2134,7 @@ window.FinalReviewModule = (function () {
     // Re-add Rikizo in a fixed spot
     const rikizo2 = document.createElement('div');
     rikizo2.className = 'fr-rikizo';
-    rikizo2.innerHTML = RIKIZO_BODY_SVG;
+    rikizo2.innerHTML = getRikizoBodyHTML();
     rikizo2.style.opacity = '1';
     rikizo2.style.position = 'absolute';
     rikizo2.style.right = '10px';
