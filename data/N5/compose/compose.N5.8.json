@@ -23,14 +23,15 @@
       ]
     },
     {
-      "prompt": "Continue your composition. Write what you want to buy as a present for a friend.",
+      "prompt": "Continue your composition. Write what you want to buy as a present for a friend and whether it is expensive or cheap.",
       "targets": [
         { "id": "v_kau", "count": 1 }
       ],
-      "model": "友だちに プレゼントを 買いたいです。高くないです。",
+      "model": "友だちに プレゼントを 買いたいです。安いですよ。",
       "vocabPool": [
         "v_kau", "v_purezento", "v_hoshii",
-        "v_takai", "v_atarashii", "v_furui", "v_nagai",
+        "v_takai", "v_yasui", "v_atarashii", "v_furui", "v_nagai",
+        "v_ikura", "v_hyaku", "v_sen", "v_en",
         "v_tomodachi", "v_mise",
         "v_ii", "v_totemo", "v_amari", "v_mada", "g_desu"
       ]
@@ -50,14 +51,15 @@
       ]
     },
     {
-      "prompt": "Finish your composition. Write what you bought and describe it — is it new? Expensive?",
+      "prompt": "Finish your composition. Write what you bought and describe it — is it new? Cheap or expensive?",
       "targets": [
         { "id": "v_atarashii", "count": 1 }
       ],
-      "model": "新しい プレゼントを 買いました。高くないです。とても いいです。",
+      "model": "新しい プレゼントを 買いました。安いです。とても いいです。",
       "vocabPool": [
         "v_kau", "v_purezento",
-        "v_atarashii", "v_furui", "v_takai", "v_nagai",
+        "v_atarashii", "v_furui", "v_takai", "v_yasui", "v_nagai",
+        "v_ikura", "v_hyaku", "v_sen", "v_en",
         "v_sugoi", "v_hoshii",
         "v_tomodachi", "v_mata",
         "v_ii", "v_totemo", "v_mou", "g_desu",

@@ -37,16 +37,18 @@
       ]
     },
     {
-      "prompt": "Finish your composition. Write when your birthday is and whether you have money this month.",
+      "prompt": "Finish your composition. Write when your birthday is, how much money you have this month, and how you feel about it.",
       "targets": [
         { "counter": "gatsu", "n": 5, "count": 1 },
-        { "id": "v_okane", "count": 1 }
+        { "id": "v_okane", "count": 1 },
+        { "id": "v_en", "count": 1 }
       ],
-      "model": "たんじょうびは 五月 五日です。今月は お金が あります。うれしいです。",
+      "model": "たんじょうびは 五月 五日です。今月は 千円 あります。うれしいです。",
       "vocabPool": [
         "v_ichinichitsuitachi", "v_futsuka", "v_mikka", "v_yokka",
         "v_itsuka", "v_muika", "v_nanoka", "v_youka", "v_kokonoka", "v_tooka",
-        "v_okane", "v_kongetsu", "v_maigetsu", "v_kyou",
+        "v_okane", "v_hyaku", "v_sen", "v_man", "v_en",
+        "v_kongetsu", "v_maigetsu", "v_kyou",
         "v_aru", "v_ii", "v_ureshii", "v_totemo", "v_takusan", "g_desu",
         "v_ikura", "v_kore", "v_dore"
       ]

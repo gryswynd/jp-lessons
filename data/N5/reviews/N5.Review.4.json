@@ -65,14 +65,14 @@
             },
             {
               "spk": "B",
-              "jp": "新しいです。長いですよ。あまり 高くないです。",
-              "terms": [{ "id": "v_atarashii", "form": "polite_adj" }, { "id": "v_nagai", "form": "polite_adj" }, "p_yo", "v_amari", { "id": "v_takai", "form": "polite_negative" }]
+              "jp": "新しいです。長いですよ。安いですよ。",
+              "terms": [{ "id": "v_atarashii", "form": "polite_adj" }, { "id": "v_nagai", "form": "polite_adj" }, "p_yo", { "id": "v_yasui", "form": "polite_adj" }, "p_yo"]
             }
           ],
           "question": "How does B describe the present?",
-          "choices": ["New, long, and not very expensive", "Old and short", "New and expensive", "Old and long"],
-          "answer": "New, long, and not very expensive",
-          "explanation": "B says 新しいです。長いですよ。あまり高くないです — 'It is new. It is long, you know. It is not very expensive.' 新しい (new, N5.8), 長い (long, N5.8), and あまり高くない (not very expensive) all describe the present. The pattern あまり + adj-くないです = 'not very ~' — あまり always pairs with the negative form."
+          "choices": ["New, long, and cheap", "Old and short", "New and expensive", "Old and long"],
+          "answer": "New, long, and cheap",
+          "explanation": "B says 新しいです。長いですよ。安いですよ — 'It is new. It is long, you know. It is cheap, you know.' 新しい (new, N5.8), 長い (long, N5.8), and 安い (cheap, N5.8) all describe the present. 安い is the direct adjective for 'cheap/inexpensive' — the antonym of 高い (expensive)."
         },
         {
           "title": "Conversation 3",
@@ -188,9 +188,9 @@
           "terms": ["p_wa", "v_depaato", "p_e", "p_mo", { "id": "v_iku", "form": "polite_mashita" }]
         },
         {
-          "jp": "友だちの プレゼントを 買いました。プレゼントは 新しいです。あまり 高くないです。",
-          "en": "He bought a friend's present. The present is new. It is not very expensive.",
-          "terms": ["v_tomodachi", "p_no", "v_purezento", "p_wo", { "id": "v_kau", "form": "polite_mashita" }, "v_purezento", "p_wa", { "id": "v_atarashii", "form": "polite_adj" }, "v_amari", { "id": "v_takai", "form": "polite_negative" }]
+          "jp": "友だちの プレゼントを 買いました。プレゼントは 新しいです。安いですよ。",
+          "en": "He bought a friend's present. The present is new. It is cheap, you know.",
+          "terms": ["v_tomodachi", "p_no", "v_purezento", "p_wo", { "id": "v_kau", "form": "polite_mashita" }, "v_purezento", "p_wa", { "id": "v_atarashii", "form": "polite_adj" }, { "id": "v_yasui", "form": "polite_adj" }, "p_yo"]
         }
       ],
       "questions": [
@@ -213,7 +213,7 @@
           "a": "新しいです。",
           "choices": ["新しいです。", "古いです。", "高いです。", "小さいです。"],
           "terms": ["v_purezento", "p_wa", "v_dou", "g_desu", "p_ka", { "id": "v_atarashii", "form": "polite_adj" }],
-          "explanation": "The passage says プレゼントは新しいです。あまり高くないです — 'The present is new. It is not very expensive.' 新しいです (new) is confirmed. The other choices contradict the passage: 古いです (old) is the antonym of 新しい. 高いです conflicts with あまり高くないです. 小さいです is never mentioned."
+          "explanation": "The passage says プレゼントは新しいです。安いですよ — 'The present is new. It is cheap, you know.' 新しいです (new) is confirmed. The other choices contradict the passage: 古いです (old) is the antonym of 新しい. 高いです (expensive) contradicts 安いです (cheap). 小さいです is never mentioned."
         }
       ]
     },

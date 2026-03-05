@@ -13,7 +13,7 @@
 
 先週、ケンはちょっとうれしかったです。今日はとてもうれしいです。
 
-わたしはお金があります。このケーキはケンのたんじょうびのケーキです！
+わたしはお金があります。千円あります。このケーキはケンのたんじょうびのケーキです！
 
 二人はいっしょにいます。とてもいいですね。
 
@@ -33,7 +33,7 @@ Ken is my very good friend. Every year, March 4th is a happy day.
 
 Last week, Ken was a little happy. Today he is very happy.
 
-I have money. This cake is Ken's birthday cake!
+I have money. I have one thousand yen. This cake is Ken's birthday cake!
 
 The two of us are together. It's really nice.
 
@@ -60,6 +60,8 @@ The two of us are together. It's really nice.
 - この - this ~
 - ケーキ - cake
 - お金 (おかね) - money
+- 千 (せん) - one thousand
+- 円 (えん) - yen; circle
 - ある - to be / to exist (inanimate)
 - 二人 (ふたり) - two people
 - いっしょに - together

@@ -158,6 +158,7 @@
         {
           "id": "N5.11",
           "title": "Sky, Rain & Nature",
+          "file": "data/N5/lessons/N5.11.json",
           "kanji": [
             "空",
             "雨",
@@ -314,6 +315,14 @@
           "unlocksAfter": "N5.10",
           "icon": "🎨",
           "estimatedMinutes": 25
+        },
+        {
+          "id": "G11",
+          "title": "na-Adjective Conjugation",
+          "file": "data/N5/grammar/G11.json",
+          "unlocksAfter": "N5.11",
+          "icon": "🎨",
+          "estimatedMinutes": 20
         }
       ],
       "reviews": [
@@ -353,7 +362,8 @@
         { "lesson": "N5.7", "file": "data/N5/compose/compose.N5.7.json" },
         { "lesson": "N5.8", "file": "data/N5/compose/compose.N5.8.json" },
         { "lesson": "N5.9", "file": "data/N5/compose/compose.N5.9.json" },
-        { "lesson": "N5.10", "file": "data/N5/compose/compose.N5.10.json" }
+        { "lesson": "N5.10", "file": "data/N5/compose/compose.N5.10.json" },
+        { "lesson": "N5.11", "file": "data/N5/compose/compose.N5.11.json" }
       ],
       "stories": [
         {

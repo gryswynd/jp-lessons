@@ -35,14 +35,14 @@
             },
             {
               "spk": "りきぞ",
-              "jp": "はい、そうです。店の 中は 新しいですよ。あまり 高くないです。",
-              "terms": ["p_hai", "p_soudesu", "v_mise", "p_no", "v_naka", "p_wa", { "id": "v_atarashii", "form": "polite_adj" }, "p_yo", "v_amari", { "id": "v_takai", "form": "plain_negative" }, "g_desu"]
+              "jp": "はい、そうです。店の 中は 新しいですよ。安いですよ。",
+              "terms": ["p_hai", "p_soudesu", "v_mise", "p_no", "v_naka", "p_wa", { "id": "v_atarashii", "form": "polite_adj" }, "p_yo", { "id": "v_yasui", "form": "polite_adj" }, "p_yo"]
             }
           ],
           "question": "Where is the department store?",
           "choices": ["In front of the station", "Behind the station", "Inside the train", "Outside the mountain"],
           "answer": "In front of the station",
-          "explanation": "Rikizo says 駅の前にあります — 'It is in front of the station.' 前 (まえ) = front/before. に marks the location of static existence with ある. こちらへ来てください uses the te-form of 来る (来て) + ください = 'please come this way.' どちら (which way, polite) is the polite equivalent of どこ. The store is described as 新しい (new) and あまり高くない (not very expensive) — あまり always pairs with a NEGATIVE form: あまり + adj-くない + です = 'not very ~'."
+          "explanation": "Rikizo says 駅の前にあります — 'It is in front of the station.' 前 (まえ) = front/before. に marks the location of static existence with ある. こちらへ来てください uses the te-form of 来る (来て) + ください = 'please come this way.' どちら (which way, polite) is the polite equivalent of どこ. The store is described as 新しい (new) and 安い (cheap, N5.8) — 安い is the direct い-adjective for 'inexpensive/cheap,' the antonym of 高い (expensive)."
         },
         {
           "title": "Conversation 2",
