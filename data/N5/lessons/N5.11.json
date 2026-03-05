@@ -210,7 +210,7 @@
           "jp": "きれいな 花ですね。毎年、花火も ありますよ。",
           "en": "They're beautiful flowers. Every year there are also fireworks.",
           "terms": [
-            "v_kirei",
+            { "id": "v_kirei", "form": "attributive_na" },
             "v_hana",
             "g_desu",
             "p_ne",
@@ -230,7 +230,7 @@
             "p_wa",
             { "id": "v_ookii", "form": "appearance_sou" },
             "p_yo",
-            "v_kirei",
+            { "id": "v_kirei", "form": "attributive_na" },
             "v_hi",
             "g_desu",
             "p_ne"
@@ -584,7 +584,7 @@
           "terms": [
             "v_kyou",
             "p_wa",
-            "v_kirei",
+            { "id": "v_kirei", "form": "attributive_na" },
             "v_hi",
             "g_desu",
             "v_mata",

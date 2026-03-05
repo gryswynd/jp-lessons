@@ -176,6 +176,17 @@
       }
     }
   },
+  "attributive_na": {
+    "label": "Attributive Na-Form",
+    "description": "Attributive form of na-adjectives. Adds な to connect the adjective to a following noun (e.g. きれいな花 = beautiful flower).",
+    "introducedIn": "N5.11",
+    "rules": {
+      "na_adj": {
+        "type": "suffix",
+        "add": "な"
+      }
+    }
+  },
   "polite_past_adj": {
     "label": "Polite Past Adjective",
     "description": "Polite past affirmative for adjectives.",

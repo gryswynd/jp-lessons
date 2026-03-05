@@ -363,6 +363,7 @@ For **every** draft — not just grammar lessons — Agent 4 must perform a **Gr
    | Form | `introducedIn` | Available from |
    |---|---|---|
    | `polite_adj` | N5.1 | N5.1+ |
+   | `attributive_na` | N5.11 | N5.11+ |
    | `polite_masu`, `polite_mashita`, `polite_negative`, `polite_past_negative` | N5.5 | N5.5+ |
    | `te_form`, `polite_negative_te` | N5.5 | N5.5+ |
    | `plain_past` | N5.5 | N5.5+ |
@@ -863,6 +864,7 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 | `polite_negative` | ～ません |
 | `polite_past_negative` | ～ませんでした |
 | `polite_adj` | adjective + です |
+| `attributive_na` | na-adjective + な (before a noun, e.g. きれいな花) |
 | `polite_past_adj` | adjective past + です |
 | `plain_past` | ～た / ～だった |
 | `plain_negative` | ～ない |
