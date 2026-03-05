@@ -223,29 +223,29 @@
           "explanation": "い-adjective past: おもしろい → おもしろかった. Add です for politeness."
         },
         {
-          "q": "I studied Japanese and read a book.",
-          "segments": ["日本語", "を", "勉強したり", "本", "を", "読んだり", "しました"],
-          "distractors": ["して", "に", "読みたり"],
-          "explanation": "〜たり〜たりする lists representative actions. 勉強した + り, 読んだ + り, しました."
+          "q": "I went to the library and studied.",
+          "segments": ["図書館", "に", "行って", "勉強", "しました"],
+          "distractors": ["を", "で", "行きて"],
+          "explanation": "て-form connects sequential actions: 行って (went and) + 勉強しました (studied). 行く → 行って."
         },
         {
-          "q": "Summer is hotter than spring.",
-          "segments": ["夏", "は", "春", "より", "暑い", "です"],
-          "distractors": ["から", "ほど", "寒い"],
-          "explanation": "AはBより〜です。夏は春より暑いです = Summer is hotter than spring."
+          "q": "I bought coffee and drank it at the park.",
+          "segments": ["コーヒー", "を", "買って", "公園", "で", "飲みました"],
+          "distractors": ["に", "買いて", "飲んで"],
+          "explanation": "て-form connector: 買って (bought and) + 飲みました (drank). 買う → 買って. で marks the location of the action."
         },
         {
-          "q": "Please don't open that door.",
-          "segments": ["その", "ドア", "を", "開けないで", "ください"],
-          "distractors": ["開けて", "に", "開きないで"],
-          "explanation": "Negative request: Verb-ないで + ください. 開ける → 開けない → 開けないでください."
+          "q": "I ate breakfast and went to school.",
+          "segments": ["朝ごはん", "を", "食べて", "学校", "に", "行きました"],
+          "distractors": ["で", "食べって", "来ました"],
+          "explanation": "て-form connects 'ate' and 'went': 食べて + 行きました. 食べる is ichidan → 食べて."
         },
         {
-          "q": "I think I want to travel to Kyoto.",
-          "segments": ["京都", "に", "旅行", "したい", "と", "思います"],
-          "distractors": ["で", "を", "します"],
-          "alts": [["京都", "に", "旅行したい", "と", "思います"]],
-          "explanation": "〜たいと思います = I think I want to ~. 旅行したい + と + 思います."
+          "q": "I want to eat sushi in Tokyo.",
+          "segments": ["東京", "で", "すし", "を", "食べたい", "です"],
+          "distractors": ["に", "食べて", "食べます"],
+          "alts": [["東京", "で", "すし", "を", "食べたいです"]],
+          "explanation": "〜たいです expresses desire. で marks the location where you want to do the action."
         }
       ]
     },
