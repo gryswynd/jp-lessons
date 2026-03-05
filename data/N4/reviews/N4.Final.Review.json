@@ -112,24 +112,24 @@
             { "spk": "R", "jp": "すみません、この電車は東京駅に止まりますか。", "terms": ["v_densha", "v_toukyou", "v_eki", { "id": "v_tomaru", "form": "polite_masu" }, "p_ka"] },
             { "spk": "B", "jp": "はい、次の駅ですよ。", "terms": ["v_tsugi", "v_eki", "g_desu", "p_yo"] },
             { "spk": "R", "jp": "ありがとうございます。映画館に行きたいんですが、近いですか。", "terms": ["v_eigakan", { "id": "v_iku", "form": "desire_tai" }, "p_ga_but", { "id": "v_chikai", "form": "polite_adj" }, "p_ka"] },
-            { "spk": "B", "jp": "駅から歩いて十分ぐらいです。", "terms": ["v_eki", "p_kara", { "id": "v_aruku", "form": "te_form" }, "v_juppun", "g_desu"] }
+            { "spk": "B", "jp": "駅から歩いて五分ぐらいです。", "terms": ["v_eki", "p_kara", { "id": "v_aruku", "form": "te_form" }, { "counter": "fun", "n": 5 }, "g_desu"] }
           ],
           "question": "How far is the movie theater from the station?",
-          "choices": ["About 10 minutes on foot", "Two stops by train", "Right next to the station", "About 30 minutes by bus"],
-          "answer": "About 10 minutes on foot",
-          "explanation": "The stranger says 「駅から歩いて十分ぐらいです」— about 10 minutes walking from the station."
+          "choices": ["About 5 minutes on foot", "Two stops by train", "Right next to the station", "About 30 minutes by bus"],
+          "answer": "About 5 minutes on foot",
+          "explanation": "The stranger says 「駅から歩いて五分ぐらいです」— about 5 minutes walking from the station."
         },
         {
-          "title": "Scene 3: At the Bookshop",
-          "context": "Rikizo stops at a bookshop after the movie.",
+          "title": "Scene 3: At the Shop",
+          "context": "Rikizo stops at a shop after the movie.",
           "lines": [
-            { "spk": "店", "jp": "いらっしゃいませ。何をお持ちですか。", "terms": ["v_nani", { "id": "v_motsu", "form": "polite_masu" }, "p_ka"] },
-            { "spk": "R", "jp": "漢字の本を買いたいです。試験の勉強をしています。", "terms": ["v_kanji", "v_hon", { "id": "v_kau", "form": "desire_tai" }, "g_desu", "v_shiken", "v_benkyou", { "id": "v_suru", "form": "te_form" }, { "id": "v_iru_exist", "form": "polite_masu" }] },
-            { "spk": "店", "jp": "この本は特に人気がありますよ。", "terms": ["v_hon", "v_tokuni", "v_ninki", { "id": "v_aru", "form": "polite_masu" }, "p_yo"] },
-            { "spk": "R", "jp": "じゃ、それをください。あと、紙も売っていますか。", "terms": ["v_kami", { "id": "v_uru", "form": "te_form" }, { "id": "v_iru_exist", "form": "polite_masu" }, "p_ka"] }
+            { "spk": "店", "jp": "いらっしゃいませ。何を買いたいですか。", "terms": ["v_nani", "p_wo", { "id": "v_kau", "form": "desire_tai" }, "g_desu", "p_ka"] },
+            { "spk": "R", "jp": "漢字の紙を買いたいです。試験の勉強をしています。", "terms": ["v_kanji", "p_no", "v_kami", "p_wo", { "id": "v_kau", "form": "desire_tai" }, "g_desu", "v_shiken", "v_benkyou", { "id": "v_suru", "form": "te_form" }, { "id": "v_iru", "form": "polite_masu" }] },
+            { "spk": "店", "jp": "この紙は特に人気がありますよ。", "terms": ["v_kami", "p_wa", "v_tokuni", "v_ninki", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "p_yo"] },
+            { "spk": "R", "jp": "じゃ、それをください。", "terms": ["p_wo"] }
           ],
-          "question": "Why is Rikizo buying a kanji book?",
-          "choices": ["He is studying for an exam", "He wants to teach his sister", "He likes to collect books", "It was recommended by a friend"],
+          "question": "Why is Rikizo buying kanji paper?",
+          "choices": ["He is studying for an exam", "He wants to teach his sister", "He likes to collect paper", "It was recommended by a friend"],
           "answer": "He is studying for an exam",
           "explanation": "Rikizo says 「試験の勉強をしています」— he is studying for an exam."
         },
@@ -138,7 +138,7 @@
           "context": "Rikizo returns home and talks to his family about his day.",
           "lines": [
             { "spk": "父", "jp": "今日はどこに行きましたか。", "terms": ["v_kyou", "v_doko", { "id": "v_iku", "form": "polite_mashita" }, "p_ka"] },
-            { "spk": "R", "jp": "映画を見たり、本を買ったりしました。", "terms": ["v_eiga", { "id": "v_miru", "form": "tari_form" }, "v_hon", { "id": "v_kau", "form": "tari_form" }, { "id": "v_suru", "form": "polite_mashita" }] },
+            { "spk": "R", "jp": "映画を見たり、紙を買ったりしました。", "terms": ["v_eiga", "p_wo", { "id": "v_miru", "form": "tari_form" }, "v_kami", { "id": "v_kau", "form": "tari_form" }, { "id": "v_suru", "form": "polite_mashita" }] },
             { "spk": "姉", "jp": "映画はどうでしたか。おもしろかったですか。", "terms": ["v_eiga", { "id": "v_omoshiroi", "form": "polite_past_adj" }, "p_ka"] },
             { "spk": "R", "jp": "とてもおもしろかったです！来週も行きたいと思います。", "terms": ["v_totemo", { "id": "v_omoshiroi", "form": "polite_past_adj" }, "v_raishuu", { "id": "v_iku", "form": "desire_tai" }, { "id": "v_omou", "form": "polite_masu" }] }
           ],
@@ -258,23 +258,23 @@
         {
           "label": "Clue 1: The Morning",
           "lines": [
-            { "jp": "月曜日の朝、田中先生の教室に入ると、机の上の試験の答えがなくなっていました。", "terms": ["v_getsuyoubi", "v_asa", "v_sensei", "v_kyoushitsu", { "id": "v_hairu", "form": "te_form" }, "v_tsukue", "v_shiken", "v_kotae", { "id": "v_naru", "form": "te_form" }, { "id": "v_iru_exist", "form": "polite_mashita" }] },
-            { "jp": "三人の学生が早く学校に来ていました。山田さん、森さん、と池田さんです。", "terms": ["v_gakusei", { "id": "v_hayai", "form": "adverbial" }, "v_gakkou", { "id": "v_kuru", "form": "te_form" }, { "id": "v_iru_exist", "form": "polite_mashita" }, "g_desu"] }
+            { "jp": "月曜日の朝、田中先生は教室に入りました。試験の答えの紙がありませんでした。", "terms": ["v_getsuyoubi", "v_asa", "v_sensei", "p_wa", "v_kyoushitsu", "p_ni", { "id": "v_hairu", "form": "polite_mashita" }, "v_shiken", "p_no", "v_kotae", "v_kami", { "id": "v_aru", "form": "polite_past_negative" }] },
+            { "jp": "三人の学生が早く学校に来ていました。山田さんと森さんと池田さんです。", "terms": ["v_gakusei", "p_ga", { "id": "v_hayai", "form": "adverbial" }, "v_gakkou", "p_ni", { "id": "v_kuru", "form": "te_form" }, { "id": "v_iru", "form": "polite_mashita" }, "p_to", "g_desu"] }
           ]
         },
         {
           "label": "Clue 2: The Evidence",
           "lines": [
-            { "jp": "山田さんは図書館で勉強していたと言いました。", "terms": ["v_toshokan", "v_benkyou", { "id": "v_suru", "form": "te_form" }, { "id": "v_iru_exist", "form": "plain_past" }, { "id": "v_iu", "form": "polite_mashita" }] },
-            { "jp": "森さんは体育館で運動していたと言いました。でも、森さんの手に赤いインクがありました。", "terms": ["v_taiikukan", "v_undou", { "id": "v_suru", "form": "te_form" }, { "id": "v_iru_exist", "form": "plain_past" }, { "id": "v_iu", "form": "polite_mashita" }, "v_te", "v_akai", "v_inku", { "id": "v_aru", "form": "polite_mashita" }] },
-            { "jp": "池田さんは教室の近くで友達を待っていたと言いました。", "terms": ["v_kyoushitsu", { "id": "v_chikai", "form": "polite_adj" }, "v_tomodachi", { "id": "v_matsu", "form": "te_form" }, { "id": "v_iru_exist", "form": "plain_past" }, { "id": "v_iu", "form": "polite_mashita" }] }
+            { "jp": "山田さんは図書館で勉強していたと言いました。", "terms": ["p_wa", "v_toshokan", "p_de", "v_benkyou", { "id": "v_suru", "form": "te_form" }, { "id": "v_iru", "form": "plain_past" }, "p_to", { "id": "v_iu", "form": "polite_mashita" }] },
+            { "jp": "森さんは外で運動していたと言いました。でも、森さんの紙に赤い色がありました。", "terms": ["p_wa", "v_soto", "p_de", "v_undou", { "id": "v_suru", "form": "te_form" }, { "id": "v_iru", "form": "plain_past" }, "p_to", { "id": "v_iu", "form": "polite_mashita" }, "p_demo_but", "v_kami", "p_ni", "v_akai", "v_iro", { "id": "v_aru", "form": "polite_mashita" }] },
+            { "jp": "池田さんは教室の近くで友達を待っていたと言いました。", "terms": ["p_wa", "v_kyoushitsu", "p_no", { "id": "v_chikai", "form": "polite_adj" }, "p_de", "v_tomodachi", "p_wo", { "id": "v_matsu", "form": "te_form" }, { "id": "v_iru", "form": "plain_past" }, "p_to", { "id": "v_iu", "form": "polite_mashita" }] }
           ]
         },
         {
           "label": "Clue 3: The Discovery",
           "lines": [
-            { "jp": "田中先生は答えの紙を見つけました。紙は赤いインクで汚れていました。", "terms": ["v_sensei", "v_kotae", "v_kami", { "id": "v_mitsukeru", "form": "polite_mashita" }, "v_kami", "v_akai", "v_inku", { "id": "v_yogoreru", "form": "te_form" }, { "id": "v_iru_exist", "form": "polite_mashita" }] },
-            { "jp": "紙は体育館の近くのごみ箱にありました。", "terms": ["v_kami", "v_taiikukan", { "id": "v_chikai", "form": "polite_adj" }, "v_gomibako", { "id": "v_aru", "form": "polite_mashita" }] }
+            { "jp": "田中先生は答えの紙を見ました。紙に赤い色がありました。", "terms": ["v_sensei", "p_wa", "v_kotae", "p_no", "v_kami", "p_wo", { "id": "v_miru", "form": "polite_mashita" }, "v_kami", "p_ni", "v_akai", "v_iro", { "id": "v_aru", "form": "polite_mashita" }] },
+            { "jp": "紙は学校の外にありました。森さんだけが外に行きました。", "terms": ["v_kami", "p_wa", "v_gakkou", "p_no", "v_soto", "p_ni", { "id": "v_aru", "form": "polite_mashita" }, "p_dake", "v_soto", { "id": "v_iku", "form": "polite_mashita" }] }
           ]
         }
       ],
@@ -283,13 +283,13 @@
           "q": "Who most likely took the test answers?",
           "choices": ["森さん (Mori-san)", "山田さん (Yamada-san)", "池田さん (Ikeda-san)", "田中先生 (Tanaka-sensei)"],
           "answer": "森さん (Mori-san)",
-          "explanation": "森さん had red ink on their hands, and the answer paper was stained with red ink. 森さん claimed to be in the gym, and the paper was found near the gym — the evidence points to 森さん."
+          "explanation": "森さん had red marks on her paper, and she was the only one who went outside — where the answer paper was found. The evidence points to 森さん."
         },
         {
           "q": "Where was the answer paper found?",
-          "choices": ["Near the gym in a trash can", "In the library", "In the classroom", "In Mori-san's bag"],
-          "answer": "Near the gym in a trash can",
-          "explanation": "The passage says 「紙は体育館の近くのごみ箱にありました」— the paper was in a trash can near the gym."
+          "choices": ["Outside the school", "In the library", "In the classroom", "In Mori-san's bag"],
+          "answer": "Outside the school",
+          "explanation": "The passage says 「紙は学校の外にありました」— the paper was outside the school."
         },
         {
           "q": "What day of the week did this happen?",
