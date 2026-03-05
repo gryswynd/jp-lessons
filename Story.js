@@ -158,16 +158,16 @@ window.StoryModule = (function() {
           padding: 0;
         }
         .jp-term {
-          color: #D97706;
+          color: #4e54c8;
           font-weight: 700;
           cursor: pointer;
-          border-bottom: 2px solid rgba(217,119,6,0.2);
+          border-bottom: 2px solid rgba(78,84,200,0.2);
           margin-right: 1px;
           transition: 0.2s;
         }
         .jp-term:hover {
-          background: rgba(217,119,6,0.1);
-          border-bottom-color: #D97706;
+          background: rgba(78,84,200,0.08);
+          border-bottom-color: #4e54c8;
         }
         .jp-story-loading {
           text-align: center;
