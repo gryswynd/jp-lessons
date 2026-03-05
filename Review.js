@@ -761,7 +761,9 @@
       }
 
       // Question Text (Processed for highlighting)
-      const qText = window.JPShared.textProcessor.processText(q.q, q.terms, this.state.termMap, this.state.conjugations, this.state.counterRules).replace(/\[(.*?)\]/g, '<span class="jp-highlight">$1</span>');
+      // Don't make terms tappable in bracketed questions — the bracketed word IS the answer
+      const qTerms = /\[/.test(q.q) ? [] : q.terms;
+      const qText = window.JPShared.textProcessor.processText(q.q, qTerms, this.state.termMap, this.state.conjugations, this.state.counterRules).replace(/\[(.*?)\]/g, '<span class="jp-highlight">$1</span>');
       html += `<div class="jp-q-text">${qText}</div>`;
 
       html += `<div id="jp-interaction"></div>`;

@@ -26,7 +26,7 @@
       "on": "よう",
       "kun": "もち(いる)",
       "meaning": "Use / Service",
-      "termId": "k_you"
+      "termId": "k_you_use"
     },
     {
       "kanji": "習",
@@ -40,7 +40,7 @@
       "on": "し",
       "kun": "いち",
       "meaning": "City / Market",
-      "termId": "k_shi"
+      "termId": "k_shi_city"
     }
   ],
   "sections": [
@@ -118,7 +118,7 @@
           "kun": "もち",
           "meaning": "Use / Task",
           "terms": [
-            "k_you",
+            "k_you_use",
             "v_youji",
             "v_youshi",
             "v_youchi",
@@ -146,7 +146,7 @@
           "kun": "いち",
           "meaning": "City / Market",
           "terms": [
-            "k_shi",
+            "k_shi_city",
             "v_shi",
             "v_ichi",
             "v_toshi",

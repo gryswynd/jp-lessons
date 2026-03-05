@@ -331,7 +331,9 @@ window.LessonModule = {
          (sec.items || []).forEach((item, itemIdx) => {
            if (item.kind === 'mcq') {
              const card = el("div", "jp-card");
-             card.innerHTML = `<div class="jp-jp" style="margin-bottom:15px; font-weight:bold;">${window.JPShared.textProcessor.processText(item.q, item.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div>`;
+             // Don't make terms tappable in bracketed questions — the bracketed word IS the answer
+             const qTerms = /\[/.test(item.q) ? [] : item.terms;
+             card.innerHTML = `<div class="jp-jp" style="margin-bottom:15px; font-weight:bold;">${window.JPShared.textProcessor.processText(item.q, qTerms, termMapData, CONJUGATION_RULES, COUNTER_RULES).replace(/\[(.*?)\]/g, '<span class="jp-highlight">$1</span>')}</div>`;
              const optsDiv = el("div");
              let solved = false;
              const itemKey = 'drill__' + itemIdx + '__' + item.q;
