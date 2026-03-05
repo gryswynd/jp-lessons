@@ -115,6 +115,13 @@ window.JPApp = {
           '</div>' +
           '<div class="jp-construction-sticker">\uD83D\uDEA7 Under Construction</div>' +
         '</div>' +
+        '<div class="jp-game-wrap">' +
+          '<div class="jp-menu-btn" onclick="JPApp.launch(\'teacher-bingo\')" style="border-top:3px solid #FF5722;background:linear-gradient(135deg,#fff 80%,#fff3e0);">' +
+            '<div class="jp-menu-title" style="color:#FF5722;">\uD83C\uDFB2 Kanji Bingo Caller</div>' +
+            '<div class="jp-menu-desc">Random kanji generator for bingo games</div>' +
+          '</div>' +
+          '<div class="jp-construction-sticker" style="background:linear-gradient(135deg,#FF9800,#E91E63);">\uD83C\uDFB2 Teacher\'s Tool</div>' +
+        '</div>' +
       '</div>';
     this.container.innerHTML = html;
   },
@@ -194,6 +201,13 @@ window.JPApp = {
         if (!ok) return;
       }
       if (window.GameModule) window.GameModule.start(this.container, this.config, onExit);
+
+    } else if (mode === 'teacher-bingo') {
+      if (!window.KanjiBingoGeneratorModule) {
+        var ok = await this.loadModule('KanjiBingoGenerator.js');
+        if (!ok) return;
+      }
+      if (window.KanjiBingoGeneratorModule) window.KanjiBingoGeneratorModule.start(this.container, this.config, onExit);
     }
   }
 };
