@@ -1,0 +1,414 @@
+{
+  "contentVersion": "1.0.0",
+  "id": "N4.Final.Review",
+  "title": "りきぞうファイナル — N4 Final Review",
+  "meta": {
+    "phase": 4,
+    "type": "final_interactive_review",
+    "focus": "Fun, game-based final assessment covering all N4 kanji, vocabulary, and grammar from lessons N4.1–N4.36.",
+    "kanji": [
+      "帰","作","使","借","働","送","起","着","切",
+      "乗","歩","近","遠",
+      "私","明","朝","晩",
+      "色","茶","好","赤","青","黒",
+      "物","野","菜","料","理","牛","肉",
+      "鳥","同","味","暗","飯","昼",
+      "族","親","兄","姉","妹","弟",
+      "冬","寒","春","暑","夏","秋",
+      "住","所","町","元","去","別",
+      "始","終","映","画","館","英",
+      "旅","自","写","真","世","界",
+      "首","顔","体","頭","心","有",
+      "音","楽","歌","声","低","軽",
+      "仕","事","曜","早","急","員",
+      "薬","病","院","医","者","死",
+      "動","犬","銀","走","運",
+      "京","都","転","回","田","海",
+      "弱","強","勉","風","光","力",
+      "地","図","質","問","題","説",
+      "夜","洋","服","屋",
+      "売","品","持","貸",
+      "漢","字","紙","意",
+      "太","短","重","進",
+      "教","室","試","験",
+      "文","注","研","究",
+      "正","考","方","悪",
+      "待","合","夕","度",
+      "池","林","門","村",
+      "台","知","計","以",
+      "思","特","集","答",
+      "代","森","堂","開",
+      "引","用","習","市",
+      "場","工","広","建",
+      "区","発","県","通",
+      "主","止","民","洗",
+      "不","便","業","産"
+    ],
+    "estimatedMinutes": 60
+  },
+  "sections": [
+    {
+      "type": "speed_round",
+      "title": "⚡ Speed Round — Kanji Flash",
+      "emoji": "⚡",
+      "instructions": "Kanji cards will flash one at a time. You have 5 seconds to pick the correct reading. Build a streak for bonus glory!",
+      "count": 15,
+      "timePerItem": 5000,
+      "items": [
+        { "kanji": "帰", "answer": "かえる — to return", "choices": ["かえる — to return", "つくる — to make", "はたらく — to work", "おくる — to send"], "hint": "N4.1" },
+        { "kanji": "作", "answer": "つくる — to make", "choices": ["つくる — to make", "つかう — to use", "きる — to cut", "おきる — to wake up"], "hint": "N4.1" },
+        { "kanji": "乗", "answer": "のる — to ride", "choices": ["のる — to ride", "あるく — to walk", "はしる — to run", "とおい — far"], "hint": "N4.2" },
+        { "kanji": "朝", "answer": "あさ — morning", "choices": ["あさ — morning", "ばん — evening", "ひる — noon", "よる — night"], "hint": "N4.3" },
+        { "kanji": "赤", "answer": "あか — red", "choices": ["あか — red", "あお — blue", "くろ — black", "いろ — color"], "hint": "N4.4" },
+        { "kanji": "肉", "answer": "にく — meat", "choices": ["にく — meat", "うし — cow", "とり — bird", "さかな — fish"], "hint": "N4.5" },
+        { "kanji": "味", "answer": "あじ — taste", "choices": ["あじ — taste", "おと — sound", "いろ — color", "こえ — voice"], "hint": "N4.6" },
+        { "kanji": "親", "answer": "おや — parent", "choices": ["おや — parent", "あに — older brother", "あね — older sister", "いもうと — younger sister"], "hint": "N4.7" },
+        { "kanji": "夏", "answer": "なつ — summer", "choices": ["なつ — summer", "ふゆ — winter", "はる — spring", "あき — autumn"], "hint": "N4.8" },
+        { "kanji": "町", "answer": "まち — town", "choices": ["まち — town", "むら — village", "みやこ — capital", "まち — street"], "hint": "N4.9" },
+        { "kanji": "映", "answer": "えい — projection", "choices": ["えい — projection", "え — picture", "おと — sound", "うた — song"], "hint": "N4.10" },
+        { "kanji": "旅", "answer": "たび — travel", "choices": ["たび — travel", "うみ — sea", "やま — mountain", "かわ — river"], "hint": "N4.11" },
+        { "kanji": "顔", "answer": "かお — face", "choices": ["かお — face", "あたま — head", "からだ — body", "くび — neck"], "hint": "N4.12" },
+        { "kanji": "歌", "answer": "うた — song", "choices": ["うた — song", "おと — sound", "こえ — voice", "がく — music"], "hint": "N4.13" },
+        { "kanji": "病", "answer": "びょう — illness", "choices": ["びょう — illness", "くすり — medicine", "いん — institution", "い — doctor"], "hint": "N4.15" },
+        { "kanji": "走", "answer": "はしる — to run", "choices": ["はしる — to run", "あるく — to walk", "うごく — to move", "はこぶ — to carry"], "hint": "N4.16" },
+        { "kanji": "海", "answer": "うみ — sea", "choices": ["うみ — sea", "いけ — pond", "かわ — river", "やま — mountain"], "hint": "N4.17" },
+        { "kanji": "強", "answer": "つよい — strong", "choices": ["つよい — strong", "よわい — weak", "おもい — heavy", "かるい — light"], "hint": "N4.18" },
+        { "kanji": "問", "answer": "もん / とう — question", "choices": ["もん / とう — question", "こたえ — answer", "せつ — theory", "もじ — letter"], "hint": "N4.19" },
+        { "kanji": "服", "answer": "ふく — clothes", "choices": ["ふく — clothes", "よう — Western", "やす — cheap", "みせ — shop"], "hint": "N4.20" },
+        { "kanji": "持", "answer": "もつ — to hold", "choices": ["もつ — to hold", "うる — to sell", "かす — to lend", "かう — to buy"], "hint": "N4.21" },
+        { "kanji": "漢", "answer": "かん — Chinese / kanji", "choices": ["かん — Chinese / kanji", "じ — character", "かみ — paper", "ぶん — writing"], "hint": "N4.22" },
+        { "kanji": "教", "answer": "おしえる — to teach", "choices": ["おしえる — to teach", "ならう — to learn", "しる — to know", "こたえる — to answer"], "hint": "N4.24" },
+        { "kanji": "思", "answer": "おもう — to think", "choices": ["おもう — to think", "かんがえる — to consider", "しる — to know", "まつ — to wait"], "hint": "N4.30" },
+        { "kanji": "開", "answer": "あく / ひらく — to open", "choices": ["あく / ひらく — to open", "とめる — to stop", "しめる — to close", "はじまる — to begin"], "hint": "N4.31" },
+        { "kanji": "広", "answer": "ひろい — wide", "choices": ["ひろい — wide", "せまい — narrow", "ながい — long", "みじかい — short"], "hint": "N4.33" },
+        { "kanji": "発", "answer": "はつ — departure", "choices": ["はつ — departure", "つう — pass through", "てん — turn", "かい — time"], "hint": "N4.34" },
+        { "kanji": "産", "answer": "さん — production", "choices": ["さん — production", "ぎょう — business", "べん — convenience", "ふ — un-/non-"], "hint": "N4.36" }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "🗣️ Rikizo's Day Out",
+      "emoji": "🗣️",
+      "instructions": "Follow Rikizo through his day in four scenes. After each conversation, answer the comprehension question.",
+      "items": [
+        {
+          "title": "Scene 1: Morning at Home",
+          "context": "Rikizo wakes up and talks to his mother about breakfast.",
+          "lines": [
+            { "spk": "母", "jp": "りきぞう、朝ごはんを食べましたか。", "terms": ["v_asagohan", { "id": "v_taberu", "form": "polite_mashita" }, "p_ka"] },
+            { "spk": "R", "jp": "まだです。今日は何を作りましたか。", "terms": ["v_kyou", "v_nani", { "id": "v_tsukuru", "form": "polite_mashita" }, "p_ka"] },
+            { "spk": "母", "jp": "牛肉と野菜の料理ですよ。", "terms": ["v_gyuuniku", "v_yasai", "v_ryouri", "g_desu", "p_yo"] },
+            { "spk": "R", "jp": "おいしそうですね！いただきます。", "terms": [{ "id": "v_oishii", "form": "appearance_sou" }, "g_desu", "p_ne"] }
+          ],
+          "question": "What did Rikizo's mother make for breakfast?",
+          "choices": ["Beef and vegetable dish", "Rice and fish", "Toast and tea", "Chicken soup"],
+          "answer": "Beef and vegetable dish",
+          "explanation": "母 says 「牛肉と野菜の料理ですよ」— a beef and vegetable dish."
+        },
+        {
+          "title": "Scene 2: On the Train",
+          "context": "Rikizo rides the train to the city center.",
+          "lines": [
+            { "spk": "R", "jp": "すみません、この電車は東京駅に止まりますか。", "terms": ["v_densha", "v_toukyou", "v_eki", { "id": "v_tomaru", "form": "polite_masu" }, "p_ka"] },
+            { "spk": "B", "jp": "はい、次の駅ですよ。", "terms": ["v_tsugi", "v_eki", "g_desu", "p_yo"] },
+            { "spk": "R", "jp": "ありがとうございます。映画館に行きたいんですが、近いですか。", "terms": ["v_eigakan", { "id": "v_iku", "form": "desire_tai" }, "p_ga_but", { "id": "v_chikai", "form": "polite_adj" }, "p_ka"] },
+            { "spk": "B", "jp": "駅から歩いて十分ぐらいです。", "terms": ["v_eki", "p_kara", { "id": "v_aruku", "form": "te_form" }, "v_juppun", "g_desu"] }
+          ],
+          "question": "How far is the movie theater from the station?",
+          "choices": ["About 10 minutes on foot", "Two stops by train", "Right next to the station", "About 30 minutes by bus"],
+          "answer": "About 10 minutes on foot",
+          "explanation": "The stranger says 「駅から歩いて十分ぐらいです」— about 10 minutes walking from the station."
+        },
+        {
+          "title": "Scene 3: At the Bookshop",
+          "context": "Rikizo stops at a bookshop after the movie.",
+          "lines": [
+            { "spk": "店", "jp": "いらっしゃいませ。何をお持ちですか。", "terms": ["v_nani", { "id": "v_motsu", "form": "polite_masu" }, "p_ka"] },
+            { "spk": "R", "jp": "漢字の本を買いたいです。試験の勉強をしています。", "terms": ["v_kanji", "v_hon", { "id": "v_kau", "form": "desire_tai" }, "g_desu", "v_shiken", "v_benkyou", { "id": "v_suru", "form": "te_form" }, { "id": "v_iru_exist", "form": "polite_masu" }] },
+            { "spk": "店", "jp": "この本は特に人気がありますよ。", "terms": ["v_hon", "v_tokuni", "v_ninki", { "id": "v_aru", "form": "polite_masu" }, "p_yo"] },
+            { "spk": "R", "jp": "じゃ、それをください。あと、紙も売っていますか。", "terms": ["v_kami", { "id": "v_uru", "form": "te_form" }, { "id": "v_iru_exist", "form": "polite_masu" }, "p_ka"] }
+          ],
+          "question": "Why is Rikizo buying a kanji book?",
+          "choices": ["He is studying for an exam", "He wants to teach his sister", "He likes to collect books", "It was recommended by a friend"],
+          "answer": "He is studying for an exam",
+          "explanation": "Rikizo says 「試験の勉強をしています」— he is studying for an exam."
+        },
+        {
+          "title": "Scene 4: Evening at Home",
+          "context": "Rikizo returns home and talks to his family about his day.",
+          "lines": [
+            { "spk": "父", "jp": "今日はどこに行きましたか。", "terms": ["v_kyou", "v_doko", { "id": "v_iku", "form": "polite_mashita" }, "p_ka"] },
+            { "spk": "R", "jp": "映画を見たり、本を買ったりしました。", "terms": ["v_eiga", { "id": "v_miru", "form": "tari_form" }, "v_hon", { "id": "v_kau", "form": "tari_form" }, { "id": "v_suru", "form": "polite_mashita" }] },
+            { "spk": "姉", "jp": "映画はどうでしたか。おもしろかったですか。", "terms": ["v_eiga", { "id": "v_omoshiroi", "form": "polite_past_adj" }, "p_ka"] },
+            { "spk": "R", "jp": "とてもおもしろかったです！来週も行きたいと思います。", "terms": ["v_totemo", { "id": "v_omoshiroi", "form": "polite_past_adj" }, "v_raishuu", { "id": "v_iku", "form": "desire_tai" }, { "id": "v_omou", "form": "polite_masu" }] }
+          ],
+          "question": "What does Rikizo want to do next week?",
+          "choices": ["Go to the movies again", "Buy more books", "Visit his grandparents", "Study for his exam"],
+          "answer": "Go to the movies again",
+          "explanation": "Rikizo says 「来週も行きたいと思います」— he thinks he wants to go again next week too."
+        }
+      ]
+    },
+    {
+      "type": "grammar_roulette",
+      "title": "🎡 Grammar Roulette",
+      "emoji": "🎡",
+      "instructions": "Spin the wheel and answer grammar questions from the category it lands on. Each spin is a surprise!",
+      "count": 8,
+      "categories": [
+        {
+          "label": "て-form",
+          "color": "#E91E63",
+          "items": [
+            { "q": "Choose the correct て-form: 書く →", "choices": ["書いて", "書って", "書きて", "書して"], "answer": "書いて", "explanation": "く-ending godan verbs use いて for て-form. 書く → 書いて." },
+            { "q": "Fill in: 窓を＿＿ください。(Please open the window.)", "choices": ["開けて", "開いて", "開って", "開きて"], "answer": "開けて", "explanation": "開ける (あける) is an ichidan verb → 開けて. 開けてください = Please open (it)." }
+          ]
+        },
+        {
+          "label": "Potential",
+          "color": "#9C27B0",
+          "items": [
+            { "q": "What is the potential form of 読む?", "choices": ["読める", "読まれる", "読みる", "読もる"], "answer": "読める", "explanation": "Godan potential: む → め + る. 読む → 読める (can read)." },
+            { "q": "私は漢字が＿＿。(I can write kanji.)", "choices": ["書けます", "書きます", "書かれます", "書きれます"], "answer": "書けます", "explanation": "書く potential = 書ける. Polite: 書けます. が marks the ability target." }
+          ]
+        },
+        {
+          "label": "たり〜たり",
+          "color": "#FF9800",
+          "items": [
+            { "q": "Complete: 週末は音楽を＿＿、本を＿＿します。", "choices": ["聞いたり / 読んだり", "聞いて / 読んで", "聞きたり / 読みたり", "聞くたり / 読むたり"], "answer": "聞いたり / 読んだり", "explanation": "たり form is based on past tense (た) + り: 聞いた → 聞いたり, 読んだ → 読んだり." }
+          ]
+        },
+        {
+          "label": "Comparison",
+          "color": "#4CAF50",
+          "items": [
+            { "q": "東京は大阪＿＿大きいです。(Tokyo is bigger than Osaka.)", "choices": ["より", "ほど", "から", "まで"], "answer": "より", "explanation": "より marks the comparison standard: AはBより〜 = A is more ~ than B." },
+            { "q": "日本で＿＿高い山は富士山です。(The tallest mountain in Japan is Mt. Fuji.)", "choices": ["いちばん", "もっと", "とても", "より"], "answer": "いちばん", "explanation": "〜でいちばん = 'the most ~ in ~'. いちばん高い山 = the tallest mountain." }
+          ]
+        },
+        {
+          "label": "ましょう",
+          "color": "#2196F3",
+          "items": [
+            { "q": "「一緒に行きましょう」means:", "choices": ["Let's go together", "I went together", "Please go together", "I want to go together"], "answer": "Let's go together", "explanation": "〜ましょう is the volitional polite form — 'Let's ~' or 'Shall we ~'." }
+          ]
+        },
+        {
+          "label": "Desire",
+          "color": "#795548",
+          "items": [
+            { "q": "How do you say 'I want to eat sushi'?", "choices": ["すしを食べたいです", "すしを食べましょう", "すしを食べてください", "すしを食べられます"], "answer": "すしを食べたいです", "explanation": "〜たいです expresses personal desire: Verb-stem + たいです." }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "scramble_relay",
+      "title": "🏃 Scramble Relay",
+      "emoji": "🏃",
+      "instructions": "Build Japanese sentences from word chips. Difficulty increases with each relay leg. Bonus points for first-try answers!",
+      "items": [
+        {
+          "q": "I go to school every day.",
+          "segments": ["私", "は", "毎日", "学校", "に", "行きます"],
+          "distractors": ["を", "で", "来ます"],
+          "alts": [["毎日", "私", "は", "学校", "に", "行きます"]],
+          "explanation": "私は毎日学校に行きます。に marks the destination with 行く."
+        },
+        {
+          "q": "This movie was interesting.",
+          "segments": ["この", "映画", "は", "おもしろかった", "です"],
+          "distractors": ["を", "おもしろい", "でした"],
+          "explanation": "い-adjective past: おもしろい → おもしろかった. Add です for politeness."
+        },
+        {
+          "q": "I studied Japanese and read a book.",
+          "segments": ["日本語", "を", "勉強したり", "本", "を", "読んだり", "しました"],
+          "distractors": ["して", "に", "読みたり"],
+          "explanation": "〜たり〜たりする lists representative actions. 勉強した + り, 読んだ + り, しました."
+        },
+        {
+          "q": "Summer is hotter than spring.",
+          "segments": ["夏", "は", "春", "より", "暑い", "です"],
+          "distractors": ["から", "ほど", "寒い"],
+          "explanation": "AはBより〜です。夏は春より暑いです = Summer is hotter than spring."
+        },
+        {
+          "q": "Please don't open that door.",
+          "segments": ["その", "ドア", "を", "開けないで", "ください"],
+          "distractors": ["開けて", "に", "開きないで"],
+          "explanation": "Negative request: Verb-ないで + ください. 開ける → 開けない → 開けないでください."
+        },
+        {
+          "q": "I think I want to travel to Kyoto.",
+          "segments": ["京都", "に", "旅行", "したい", "と", "思います"],
+          "distractors": ["で", "を", "します"],
+          "alts": [["京都", "に", "旅行したい", "と", "思います"]],
+          "explanation": "〜たいと思います = I think I want to ~. 旅行したい + と + 思います."
+        }
+      ]
+    },
+    {
+      "type": "detective_reading",
+      "title": "🔍 Detective Reading",
+      "emoji": "🔍",
+      "instructions": "Read three clue passages about a mystery at school. Then answer the detective questions using evidence from the clues!",
+      "passages": [
+        {
+          "label": "Clue 1: The Morning",
+          "lines": [
+            { "jp": "月曜日の朝、田中先生の教室に入ると、机の上の試験の答えがなくなっていました。", "terms": ["v_getsuyoubi", "v_asa", "v_sensei", "v_kyoushitsu", { "id": "v_hairu", "form": "te_form" }, "v_tsukue", "v_shiken", "v_kotae", { "id": "v_naru", "form": "te_form" }, { "id": "v_iru_exist", "form": "polite_mashita" }] },
+            { "jp": "三人の学生が早く学校に来ていました。山田さん、森さん、と池田さんです。", "terms": ["v_gakusei", { "id": "v_hayai", "form": "adverbial" }, "v_gakkou", { "id": "v_kuru", "form": "te_form" }, { "id": "v_iru_exist", "form": "polite_mashita" }, "g_desu"] }
+          ]
+        },
+        {
+          "label": "Clue 2: The Evidence",
+          "lines": [
+            { "jp": "山田さんは図書館で勉強していたと言いました。", "terms": ["v_toshokan", "v_benkyou", { "id": "v_suru", "form": "te_form" }, { "id": "v_iru_exist", "form": "plain_past" }, { "id": "v_iu", "form": "polite_mashita" }] },
+            { "jp": "森さんは体育館で運動していたと言いました。でも、森さんの手に赤いインクがありました。", "terms": ["v_taiikukan", "v_undou", { "id": "v_suru", "form": "te_form" }, { "id": "v_iru_exist", "form": "plain_past" }, { "id": "v_iu", "form": "polite_mashita" }, "v_te", "v_akai", "v_inku", { "id": "v_aru", "form": "polite_mashita" }] },
+            { "jp": "池田さんは教室の近くで友達を待っていたと言いました。", "terms": ["v_kyoushitsu", { "id": "v_chikai", "form": "polite_adj" }, "v_tomodachi", { "id": "v_matsu", "form": "te_form" }, { "id": "v_iru_exist", "form": "plain_past" }, { "id": "v_iu", "form": "polite_mashita" }] }
+          ]
+        },
+        {
+          "label": "Clue 3: The Discovery",
+          "lines": [
+            { "jp": "田中先生は答えの紙を見つけました。紙は赤いインクで汚れていました。", "terms": ["v_sensei", "v_kotae", "v_kami", { "id": "v_mitsukeru", "form": "polite_mashita" }, "v_kami", "v_akai", "v_inku", { "id": "v_yogoreru", "form": "te_form" }, { "id": "v_iru_exist", "form": "polite_mashita" }] },
+            { "jp": "紙は体育館の近くのごみ箱にありました。", "terms": ["v_kami", "v_taiikukan", { "id": "v_chikai", "form": "polite_adj" }, "v_gomibako", { "id": "v_aru", "form": "polite_mashita" }] }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "Who most likely took the test answers?",
+          "choices": ["森さん (Mori-san)", "山田さん (Yamada-san)", "池田さん (Ikeda-san)", "田中先生 (Tanaka-sensei)"],
+          "answer": "森さん (Mori-san)",
+          "explanation": "森さん had red ink on their hands, and the answer paper was stained with red ink. 森さん claimed to be in the gym, and the paper was found near the gym — the evidence points to 森さん."
+        },
+        {
+          "q": "Where was the answer paper found?",
+          "choices": ["Near the gym in a trash can", "In the library", "In the classroom", "In Mori-san's bag"],
+          "answer": "Near the gym in a trash can",
+          "explanation": "The passage says 「紙は体育館の近くのごみ箱にありました」— the paper was in a trash can near the gym."
+        },
+        {
+          "q": "What day of the week did this happen?",
+          "choices": ["Monday", "Tuesday", "Friday", "Wednesday"],
+          "answer": "Monday",
+          "explanation": "The first line says 「月曜日の朝」— Monday morning."
+        }
+      ]
+    },
+    {
+      "type": "match_pairs",
+      "title": "🃏 Match Pairs",
+      "emoji": "🃏",
+      "instructions": "Flip cards to find matching kanji-meaning pairs. Try to match them all with as few moves as possible!",
+      "count": 8,
+      "pairs": [
+        { "kanji": "心", "meaning": "heart / mind" },
+        { "kanji": "体", "meaning": "body" },
+        { "kanji": "顔", "meaning": "face" },
+        { "kanji": "頭", "meaning": "head" },
+        { "kanji": "首", "meaning": "neck" },
+        { "kanji": "声", "meaning": "voice" },
+        { "kanji": "旅", "meaning": "travel" },
+        { "kanji": "海", "meaning": "sea" },
+        { "kanji": "森", "meaning": "forest" },
+        { "kanji": "池", "meaning": "pond" },
+        { "kanji": "村", "meaning": "village" },
+        { "kanji": "林", "meaning": "grove" },
+        { "kanji": "門", "meaning": "gate" },
+        { "kanji": "堂", "meaning": "hall" },
+        { "kanji": "風", "meaning": "wind" },
+        { "kanji": "光", "meaning": "light" }
+      ]
+    },
+    {
+      "type": "vocab_categories",
+      "title": "🧩 Vocab Categories",
+      "emoji": "🧩",
+      "instructions": "Sort the vocabulary into the correct categories. Tap a word, then tap the category it belongs to!",
+      "rounds": [
+        {
+          "groups": [
+            { "label": "🍖 Food", "words": ["牛肉", "野菜", "料理", "味"] },
+            { "label": "🏥 Health", "words": ["薬", "病院", "医者", "体"] },
+            { "label": "🎵 Arts", "words": ["音楽", "歌", "映画", "声"] }
+          ]
+        },
+        {
+          "groups": [
+            { "label": "🌳 Nature", "words": ["海", "森", "池", "風"] },
+            { "label": "🏘️ Places", "words": ["町", "村", "都", "区"] },
+            { "label": "👨‍👩‍👧‍👦 Family", "words": ["親", "兄", "姉", "弟"] }
+          ]
+        },
+        {
+          "groups": [
+            { "label": "🌡️ Seasons", "words": ["春", "夏", "秋", "冬"] },
+            { "label": "🎨 Colors", "words": ["赤", "青", "黒", "茶"] },
+            { "label": "📏 Attributes", "words": ["強", "弱", "重", "軽"] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanji_bingo",
+      "title": "🎰 Kanji Bingo — Grand Finale!",
+      "emoji": "🎰",
+      "instructions": "A 5×5 bingo grid with random kanji. Listen to the reading and meaning called out, then tap the matching kanji. Get 5 in a row and Rikizo stamps your card! 🎉",
+      "bingoTarget": 3,
+      "kanjiPool": [
+        { "kanji": "帰", "reading": "かえる", "meaning": "to return" },
+        { "kanji": "作", "reading": "つくる", "meaning": "to make" },
+        { "kanji": "使", "reading": "つかう", "meaning": "to use" },
+        { "kanji": "働", "reading": "はたらく", "meaning": "to work" },
+        { "kanji": "乗", "reading": "のる", "meaning": "to ride" },
+        { "kanji": "歩", "reading": "あるく", "meaning": "to walk" },
+        { "kanji": "朝", "reading": "あさ", "meaning": "morning" },
+        { "kanji": "赤", "reading": "あか", "meaning": "red" },
+        { "kanji": "青", "reading": "あお", "meaning": "blue" },
+        { "kanji": "黒", "reading": "くろ", "meaning": "black" },
+        { "kanji": "味", "reading": "あじ", "meaning": "taste" },
+        { "kanji": "親", "reading": "おや", "meaning": "parent" },
+        { "kanji": "夏", "reading": "なつ", "meaning": "summer" },
+        { "kanji": "冬", "reading": "ふゆ", "meaning": "winter" },
+        { "kanji": "春", "reading": "はる", "meaning": "spring" },
+        { "kanji": "秋", "reading": "あき", "meaning": "autumn" },
+        { "kanji": "町", "reading": "まち", "meaning": "town" },
+        { "kanji": "映", "reading": "えい", "meaning": "projection" },
+        { "kanji": "旅", "reading": "たび", "meaning": "travel" },
+        { "kanji": "顔", "reading": "かお", "meaning": "face" },
+        { "kanji": "体", "reading": "からだ", "meaning": "body" },
+        { "kanji": "心", "reading": "こころ", "meaning": "heart / mind" },
+        { "kanji": "歌", "reading": "うた", "meaning": "song" },
+        { "kanji": "病", "reading": "びょう", "meaning": "illness" },
+        { "kanji": "走", "reading": "はしる", "meaning": "to run" },
+        { "kanji": "海", "reading": "うみ", "meaning": "sea" },
+        { "kanji": "強", "reading": "つよい", "meaning": "strong" },
+        { "kanji": "弱", "reading": "よわい", "meaning": "weak" },
+        { "kanji": "風", "reading": "かぜ", "meaning": "wind" },
+        { "kanji": "光", "reading": "ひかり", "meaning": "light" },
+        { "kanji": "森", "reading": "もり", "meaning": "forest" },
+        { "kanji": "池", "reading": "いけ", "meaning": "pond" },
+        { "kanji": "門", "reading": "もん", "meaning": "gate" },
+        { "kanji": "村", "reading": "むら", "meaning": "village" },
+        { "kanji": "開", "reading": "ひらく", "meaning": "to open" },
+        { "kanji": "思", "reading": "おもう", "meaning": "to think" },
+        { "kanji": "教", "reading": "おしえる", "meaning": "to teach" },
+        { "kanji": "持", "reading": "もつ", "meaning": "to hold" },
+        { "kanji": "売", "reading": "うる", "meaning": "to sell" },
+        { "kanji": "服", "reading": "ふく", "meaning": "clothes" },
+        { "kanji": "夜", "reading": "よる", "meaning": "night" },
+        { "kanji": "広", "reading": "ひろい", "meaning": "wide" },
+        { "kanji": "知", "reading": "しる", "meaning": "to know" },
+        { "kanji": "答", "reading": "こたえ", "meaning": "answer" },
+        { "kanji": "紙", "reading": "かみ", "meaning": "paper" },
+        { "kanji": "薬", "reading": "くすり", "meaning": "medicine" },
+        { "kanji": "犬", "reading": "いぬ", "meaning": "dog" },
+        { "kanji": "鳥", "reading": "とり", "meaning": "bird" }
+      ]
+    }
+  ]
+}
