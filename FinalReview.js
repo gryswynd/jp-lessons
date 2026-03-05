@@ -785,7 +785,7 @@ window.FinalReviewModule = (function () {
       /* Rikizo character */
       .fr-rikizo {
         position: absolute;
-        width: 90px; height: 90px;
+        width: 250px; height: 250px;
         z-index: 10;
         pointer-events: none;
         opacity: 0;
