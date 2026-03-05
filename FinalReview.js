@@ -2076,9 +2076,9 @@ window.FinalReviewModule = (function () {
         rikizo.className = 'fr-rikizo';
         rikizo.id = 'fr-rikizo';
         rikizo.innerHTML = getRikizoBodyHTML();
-        // Start at gift box position
-        rikizo.style.left = (boxCenterX - 30) + 'px';
-        rikizo.style.top = (boxCenterY - 35) + 'px';
+        // Start at gift box position (center the sprite on the box)
+        rikizo.style.left = (boxCenterX - 125) + 'px';
+        rikizo.style.top = (boxCenterY - 125) + 'px';
         scene.appendChild(rikizo);
 
         // Pop out animation
@@ -2093,13 +2093,14 @@ window.FinalReviewModule = (function () {
           const sceneW = scene.offsetWidth;
           const sceneH = scene.offsetHeight;
 
-          // Run path: a few waypoints around the scene
+          // Run path: waypoints sized for the 250px sprite
+          const sprW = 250;
           const waypoints = [
-            { x: sceneW - 80, y: 40 },                 // top-right
-            { x: sceneW - 80, y: sceneH - 100 },       // bottom-right
-            { x: 20, y: sceneH - 100 },                 // bottom-left
-            { x: 20, y: 40 },                            // top-left
-            { x: sceneW / 2 - 30, y: sceneH / 2 - 60 } // center (where score will appear)
+            { x: sceneW - sprW - 10, y: 10 },                      // top-right
+            { x: sceneW - sprW - 10, y: sceneH - sprW - 10 },      // bottom-right
+            { x: 10, y: sceneH - sprW - 10 },                       // bottom-left
+            { x: 10, y: 10 },                                        // top-left
+            { x: (sceneW - sprW) / 2, y: (sceneH - sprW) / 2 }     // center
           ];
 
           let wpIdx = 0;
@@ -2136,21 +2137,7 @@ window.FinalReviewModule = (function () {
     // Build the final score UI inside the scene
     scene.innerHTML = '';
 
-    // Re-add Rikizo in a fixed spot
-    const rikizo2 = document.createElement('div');
-    rikizo2.className = 'fr-rikizo';
-    rikizo2.innerHTML = getRikizoBodyHTML();
-    rikizo2.style.opacity = '1';
-    rikizo2.style.position = 'absolute';
-    rikizo2.style.right = '10px';
-    rikizo2.style.top = '10px';
-    rikizo2.style.left = 'auto';
-    // Stop wobble on final position
-    const rb2 = rikizo2.querySelector('.fr-rikizo-body');
-    if (rb2) rb2.style.animation = 'none';
-    scene.appendChild(rikizo2);
-
-    // Score content
+    // Score content first
     const scoreDiv = document.createElement('div');
     scoreDiv.className = 'fr-final fr-final-reveal';
     scoreDiv.innerHTML = `
@@ -2173,6 +2160,22 @@ window.FinalReviewModule = (function () {
         <button class="fr-btn fr-btn-secondary" onclick="window.FinalReviewModule._onExit()">Back to Menu</button>
     `;
     scene.appendChild(scoreDiv);
+
+    // Rikizo in the upper right — scaled down to fit as a corner badge
+    const rikizo2 = document.createElement('div');
+    rikizo2.className = 'fr-rikizo';
+    rikizo2.innerHTML = getRikizoBodyHTML();
+    rikizo2.style.opacity = '1';
+    rikizo2.style.position = 'absolute';
+    rikizo2.style.right = '10px';
+    rikizo2.style.top = '10px';
+    rikizo2.style.left = 'auto';
+    rikizo2.style.width = '80px';
+    rikizo2.style.height = '80px';
+    // Stop wobble on final position
+    const rb2 = rikizo2.querySelector('.fr-rikizo-body');
+    if (rb2) rb2.style.animation = 'none';
+    scene.appendChild(rikizo2);
 
     // After a beat, Rikizo drops the emoji next to the score
     setTimeout(() => {
