@@ -785,7 +785,7 @@ window.FinalReviewModule = (function () {
       /* Rikizo character */
       .fr-rikizo {
         position: absolute;
-        width: 60px; height: 70px;
+        width: 90px; height: 90px;
         z-index: 10;
         pointer-events: none;
         opacity: 0;
@@ -894,7 +894,7 @@ window.FinalReviewModule = (function () {
       const dataUrl = getUrl(frEntry.file);
 
       // Load data files in parallel
-      const [data, conjData, ctrData, glossN5, glossN4, particles] = await Promise.all([
+      const [data, conjData, ctrData, glossN5Raw, glossN4Raw, particlesRaw] = await Promise.all([
         window.JPShared.assets.fetchJSON(dataUrl),
         window.JPShared.assets.fetchJSON(getUrl(manifest.globalFiles.conjugationRules)),
         window.JPShared.assets.fetchJSON(getUrl(manifest.globalFiles.counterRules)),
@@ -906,6 +906,11 @@ window.FinalReviewModule = (function () {
       reviewData = data;
       conjugations = conjData;
       counterRules = ctrData;
+
+      // Unwrap glossary { entries: [...] } wrapper if present
+      const glossN5 = Array.isArray(glossN5Raw) ? glossN5Raw : (glossN5Raw && glossN5Raw.entries ? glossN5Raw.entries : []);
+      const glossN4 = Array.isArray(glossN4Raw) ? glossN4Raw : (glossN4Raw && glossN4Raw.entries ? glossN4Raw.entries : []);
+      const particles = Array.isArray(particlesRaw) ? particlesRaw : (particlesRaw && (particlesRaw.particles || particlesRaw.entries) ? (particlesRaw.particles || particlesRaw.entries) : []);
 
       // Build term map
       termMap = {};
@@ -1952,7 +1957,7 @@ window.FinalReviewModule = (function () {
   //  RIKIZO CHARACTER (pixel sprite for gift animation)
   // ══════════════════════════════════════════════════════════════
   function getRikizoBodyHTML() {
-    return '<img src="' + RIKIZO_SPRITE + '" class="fr-rikizo-body" alt="Rikizo" style="height:70px;width:auto;image-rendering:pixelated;" />';
+    return '<img src="' + RIKIZO_SPRITE + '" class="fr-rikizo-body" alt="Rikizo" style="width:100%;height:100%;object-fit:contain;image-rendering:pixelated;" />';
   }
 
   // ══════════════════════════════════════════════════════════════

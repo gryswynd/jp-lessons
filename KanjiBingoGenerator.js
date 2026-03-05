@@ -413,8 +413,9 @@ window.KanjiBingoGeneratorModule = (function () {
       }));
 
       for (var gi = 0; gi < glossaryResults.length; gi++) {
-        var glossary = glossaryResults[gi];
-        if (!Array.isArray(glossary)) continue;
+        var raw = glossaryResults[gi];
+        // Glossary JSON is { entries: [...] }, not a bare array
+        var glossary = Array.isArray(raw) ? raw : (raw && raw.entries ? raw.entries : []);
         for (var ei = 0; ei < glossary.length; ei++) {
           var entry = glossary[ei];
           if (entry.type === 'kanji' && entry.surface) {
