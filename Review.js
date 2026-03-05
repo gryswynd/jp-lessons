@@ -189,7 +189,19 @@
       });
     },
 
-    loadReview: function(filePath, reviewId) {
+    loadReview: async function(filePath, reviewId) {
+      // Check if this is a Final Interactive Review — delegate to FinalReviewModule
+      if (reviewId === 'N4.Final.Review' || filePath.includes('Final')) {
+        // Load FinalReview.js if not already loaded
+        if (!window.FinalReviewModule) {
+          var ok = await window.JPApp.loadModule('FinalReview.js');
+          if (!ok) return;
+        }
+        if (window.FinalReviewModule) {
+          window.FinalReviewModule.start(this.container, this.config, this.onExit);
+          return;
+        }
+      }
       this.config.path = filePath;
       this.config._reviewId = reviewId;
       this.buildUI();
