@@ -678,6 +678,145 @@ window.FinalReviewModule = (function () {
         margin: 10px 0;
       }
 
+      /* ── Rikizo Gift Box Sequence ── */
+      .fr-gift-scene {
+        text-align: center;
+        padding: 60px 20px;
+        position: relative;
+        overflow: hidden;
+        min-height: 400px;
+      }
+      .fr-gift-box {
+        display: inline-block;
+        cursor: pointer;
+        animation: frGiftBounce 1.2s ease-in-out infinite;
+        transition: transform 0.3s;
+        position: relative;
+      }
+      .fr-gift-box:hover { transform: scale(1.08); }
+      .fr-gift-box-body {
+        width: 120px; height: 100px;
+        background: linear-gradient(135deg, #E91E63, #C2185B);
+        border-radius: 8px;
+        position: relative;
+        margin: 0 auto;
+        box-shadow: 0 8px 24px rgba(233,30,99,0.3);
+      }
+      .fr-gift-box-body::before {
+        content: '';
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 50%;
+        width: 20px;
+        margin-left: -10px;
+        background: #FFD700;
+      }
+      .fr-gift-lid {
+        width: 136px; height: 30px;
+        background: linear-gradient(135deg, #E91E63, #AD1457);
+        border-radius: 6px;
+        margin: 0 auto 0;
+        position: relative;
+        transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .fr-gift-lid::before {
+        content: '';
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 50%;
+        width: 20px;
+        margin-left: -10px;
+        background: #FFD700;
+      }
+      .fr-gift-lid.open {
+        transform: translateY(-40px) rotate(-25deg) translateX(-30px);
+        opacity: 0;
+      }
+      .fr-gift-bow {
+        width: 40px; height: 40px;
+        position: absolute;
+        top: -18px; left: 50%; margin-left: -20px;
+        z-index: 2;
+      }
+      .fr-gift-prompt {
+        margin-top: 24px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--fr-primary);
+        animation: frPulseText 2s ease-in-out infinite;
+      }
+      @keyframes frGiftBounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+      }
+      @keyframes frPulseText {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+
+      /* Rikizo character */
+      .fr-rikizo {
+        position: absolute;
+        width: 60px; height: 70px;
+        z-index: 10;
+        pointer-events: none;
+        opacity: 0;
+      }
+      .fr-rikizo.pop-out {
+        animation: frRikizoPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+      }
+      @keyframes frRikizoPop {
+        0% { transform: scale(0) translateY(40px); opacity: 0; }
+        60% { transform: scale(1.3) translateY(-20px); opacity: 1; }
+        100% { transform: scale(1) translateY(0); opacity: 1; }
+      }
+      .fr-rikizo.running {
+        transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1), top 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .fr-rikizo-body { animation: frRikizoWobble 0.3s ease-in-out infinite; }
+      @keyframes frRikizoWobble {
+        0%, 100% { transform: rotate(-3deg); }
+        50% { transform: rotate(3deg); }
+      }
+
+      /* Score emoji that Rikizo leaves */
+      .fr-score-emoji {
+        position: absolute;
+        font-size: 2rem;
+        opacity: 0;
+        z-index: 15;
+        pointer-events: none;
+      }
+      .fr-score-emoji.drop {
+        animation: frEmojiDrop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+      }
+      @keyframes frEmojiDrop {
+        0% { transform: scale(0) translateY(-20px); opacity: 0; }
+        70% { transform: scale(1.4) translateY(0); opacity: 1; }
+        100% { transform: scale(1) translateY(0); opacity: 1; }
+      }
+
+      /* Sparkle burst when gift opens */
+      .fr-sparkle {
+        position: absolute;
+        width: 8px; height: 8px;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 5;
+      }
+      .fr-sparkle.burst {
+        animation: frSparkleBurst 0.8s ease-out forwards;
+      }
+      @keyframes frSparkleBurst {
+        0% { transform: translate(0,0) scale(1); opacity: 1; }
+        100% { opacity: 0; }
+      }
+
+      /* Final score reveal after Rikizo is done */
+      .fr-final-reveal {
+        animation: frFadeIn 0.6s ease-out;
+      }
+
       /* ── Responsive ── */
       @media (max-width: 600px) {
         .fr-bingo-cell { font-size: 1.3rem; }
@@ -1698,20 +1837,64 @@ window.FinalReviewModule = (function () {
   }
 
   // ══════════════════════════════════════════════════════════════
+  //  RIKIZO CHARACTER SVG (full body for gift animation)
+  // ══════════════════════════════════════════════════════════════
+  const RIKIZO_BODY_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 70" class="fr-rikizo-body">
+    <!-- Hair -->
+    <path d="M10 22 Q12 8 30 5 Q48 8 50 22" stroke="#222" stroke-width="2.5" fill="#222"/>
+    <!-- Face -->
+    <circle cx="30" cy="26" r="16" fill="#FFE0B2"/>
+    <!-- Eyebrows -->
+    <rect x="18" y="16" width="8" height="3.5" rx="1" fill="#333" opacity="0.7"/>
+    <rect x="34" y="16" width="8" height="3.5" rx="1" fill="#333" opacity="0.7"/>
+    <!-- Eyes -->
+    <circle cx="22" cy="24" r="2.5" fill="#333"/>
+    <circle cx="38" cy="24" r="2.5" fill="#333"/>
+    <circle cx="23" cy="23" r="0.8" fill="#fff"/>
+    <circle cx="39" cy="23" r="0.8" fill="#fff"/>
+    <!-- Mouth -->
+    <path d="M22 32 Q30 38 38 32" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Body -->
+    <rect x="18" y="42" width="24" height="18" rx="4" fill="#E91E63"/>
+    <!-- Arms -->
+    <rect x="8" y="44" width="10" height="6" rx="3" fill="#E91E63"/>
+    <rect x="42" y="44" width="10" height="6" rx="3" fill="#E91E63"/>
+    <!-- Hands -->
+    <circle cx="8" cy="47" r="4" fill="#FFE0B2"/>
+    <circle cx="52" cy="47" r="4" fill="#FFE0B2"/>
+    <!-- Legs -->
+    <rect x="22" y="58" width="6" height="10" rx="3" fill="#333"/>
+    <rect x="32" y="58" width="6" height="10" rx="3" fill="#333"/>
+    <!-- Shoes -->
+    <ellipse cx="25" cy="68" rx="5" ry="3" fill="#795548"/>
+    <ellipse cx="35" cy="68" rx="5" ry="3" fill="#795548"/>
+  </svg>`;
+
+  // ══════════════════════════════════════════════════════════════
   //  FINAL SCREEN
   // ══════════════════════════════════════════════════════════════
+  function getScoreEmoji(pct) {
+    if (pct >= 100) return { emoji: '\uD83D\uDC8E', label: 'Diamond' };      // 💎
+    if (pct >= 90) return { emoji: '\u2B50', label: 'Star' };                 // ⭐
+    if (pct >= 80) return { emoji: '\uD83C\uDF1F', label: 'Glowing Star' };   // 🌟
+    if (pct >= 70) return { emoji: '\uD83D\uDD25', label: 'Fire' };           // 🔥
+    if (pct >= 60) return { emoji: '\uD83D\uDC4D', label: 'Thumbs Up' };     // 👍
+    if (pct >= 40) return { emoji: '\uD83D\uDE05', label: 'Sweat Smile' };   // 😅
+    return { emoji: '\uD83D\uDCA9', label: 'Poop' };                         // 💩
+  }
+
   function renderFinalScreen() {
     updateProgress();
     const pct = maxPossible > 0 ? Math.round((totalScore / maxPossible) * 100) : 100;
     const stage = el('fr-stage');
 
     let rank, rankColor;
-    if (pct >= 100) { rank = '神！ Godlike!'; rankColor = '#8B5CF6'; }
-    else if (pct >= 90) { rank = '天才！ Genius!'; rankColor = '#E91E63'; }
-    else if (pct >= 80) { rank = 'すばらしい！ Wonderful!'; rankColor = '#00BCD4'; }
-    else if (pct >= 70) { rank = 'さすが！ Impressive!'; rankColor = '#FF6B35'; }
-    else if (pct >= 60) { rank = 'いいね！ Nice!'; rankColor = '#FFD700'; }
-    else { rank = '頑張れ！ Keep Going!'; rankColor = '#747d8c'; }
+    if (pct >= 100) { rank = '\u795E\uFF01 Godlike!'; rankColor = '#8B5CF6'; }
+    else if (pct >= 90) { rank = '\u5929\u624D\uFF01 Genius!'; rankColor = '#E91E63'; }
+    else if (pct >= 80) { rank = '\u3059\u3070\u3089\u3057\u3044\uFF01 Wonderful!'; rankColor = '#00BCD4'; }
+    else if (pct >= 70) { rank = '\u3055\u3059\u304C\uFF01 Impressive!'; rankColor = '#FF6B35'; }
+    else if (pct >= 60) { rank = '\u3044\u3044\u306D\uFF01 Nice!'; rankColor = '#FFD700'; }
+    else { rank = '\u9811\u5F35\u308C\uFF01 Keep Going!'; rankColor = '#747d8c'; }
 
     // Save score
     if (window.JPShared && window.JPShared.progress) {
@@ -1721,27 +1904,205 @@ window.FinalReviewModule = (function () {
       }
     }
 
+    const scoreEmoji = getScoreEmoji(pct);
+
+    // Phase 1: Show the gift box
     stage.innerHTML = `
-      <div class="fr-final">
-        <div style="font-size:3rem;margin-bottom:10px;">🏆</div>
+      <div class="fr-gift-scene" id="fr-gift-scene">
+        <div style="font-size:0.85rem;font-weight:700;color:var(--fr-text-sub);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;">
+          You finished!
+        </div>
+        <div class="fr-gift-box" id="fr-gift-box">
+          <div class="fr-gift-lid" id="fr-gift-lid">
+            <div class="fr-gift-bow">
+              <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="14" cy="16" r="10" fill="none" stroke="#FFD700" stroke-width="3"/>
+                <circle cx="26" cy="16" r="10" fill="none" stroke="#FFD700" stroke-width="3"/>
+                <path d="M14 26 L20 36 L26 26" fill="#FFD700"/>
+              </svg>
+            </div>
+          </div>
+          <div class="fr-gift-box-body"></div>
+        </div>
+        <div class="fr-gift-prompt">Tap the present!</div>
+      </div>
+    `;
+
+    const giftBox = document.getElementById('fr-gift-box');
+    let giftOpened = false;
+
+    giftBox.onclick = () => {
+      if (giftOpened) return;
+      giftOpened = true;
+
+      const scene = document.getElementById('fr-gift-scene');
+      const sceneRect = scene.getBoundingClientRect();
+      const lid = document.getElementById('fr-gift-lid');
+      const prompt = scene.querySelector('.fr-gift-prompt');
+
+      // Stop bouncing
+      giftBox.style.animation = 'none';
+      prompt.style.display = 'none';
+
+      // Open the lid
+      lid.classList.add('open');
+
+      // Sparkle burst from the box
+      const boxRect = giftBox.getBoundingClientRect();
+      const boxCenterX = boxRect.left - sceneRect.left + boxRect.width / 2;
+      const boxCenterY = boxRect.top - sceneRect.top + boxRect.height / 2;
+      const sparkleColors = ['#FFD700', '#E91E63', '#00BCD4', '#8B5CF6', '#FF6B35', '#4CAF50'];
+      for (let i = 0; i < 12; i++) {
+        const spark = document.createElement('div');
+        spark.className = 'fr-sparkle';
+        spark.style.left = boxCenterX + 'px';
+        spark.style.top = boxCenterY + 'px';
+        spark.style.background = sparkleColors[i % sparkleColors.length];
+        const angle = (i / 12) * Math.PI * 2;
+        const dist = 60 + Math.random() * 40;
+        const tx = Math.cos(angle) * dist;
+        const ty = Math.sin(angle) * dist;
+        spark.style.setProperty('--tx', tx + 'px');
+        spark.style.setProperty('--ty', ty + 'px');
+        spark.style.animation = 'none';
+        scene.appendChild(spark);
+        // Custom burst direction via inline animation
+        requestAnimationFrame(() => {
+          spark.style.transition = 'transform 0.7s ease-out, opacity 0.7s ease-out';
+          spark.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(0.3)';
+          spark.style.opacity = '0';
+        });
+      }
+
+      // After lid opens, Rikizo pops out
+      setTimeout(() => {
+        // Hide the gift box
+        giftBox.style.transition = 'opacity 0.3s, transform 0.3s';
+        giftBox.style.opacity = '0';
+        giftBox.style.transform = 'scale(0.5)';
+
+        // Create Rikizo
+        const rikizo = document.createElement('div');
+        rikizo.className = 'fr-rikizo';
+        rikizo.id = 'fr-rikizo';
+        rikizo.innerHTML = RIKIZO_BODY_SVG;
+        // Start at gift box position
+        rikizo.style.left = (boxCenterX - 30) + 'px';
+        rikizo.style.top = (boxCenterY - 35) + 'px';
+        scene.appendChild(rikizo);
+
+        // Pop out animation
+        rikizo.classList.add('pop-out');
+
+        // After pop, run around the screen then "check" the score
+        setTimeout(() => {
+          rikizo.classList.remove('pop-out');
+          rikizo.style.opacity = '1';
+          rikizo.classList.add('running');
+
+          const sceneW = scene.offsetWidth;
+          const sceneH = scene.offsetHeight;
+
+          // Run path: a few waypoints around the scene
+          const waypoints = [
+            { x: sceneW - 80, y: 40 },                 // top-right
+            { x: sceneW - 80, y: sceneH - 100 },       // bottom-right
+            { x: 20, y: sceneH - 100 },                 // bottom-left
+            { x: 20, y: 40 },                            // top-left
+            { x: sceneW / 2 - 30, y: sceneH / 2 - 60 } // center (where score will appear)
+          ];
+
+          let wpIdx = 0;
+          function runToNext() {
+            if (wpIdx >= waypoints.length) {
+              // Rikizo has arrived at center — reveal the score
+              setTimeout(() => revealScore(scene, rikizo, pct, rank, rankColor, scoreEmoji), 300);
+              return;
+            }
+            const wp = waypoints[wpIdx];
+            // Flip Rikizo based on direction
+            const curX = parseFloat(rikizo.style.left);
+            if (wp.x < curX) {
+              rikizo.style.transform = 'scaleX(-1)';
+            } else {
+              rikizo.style.transform = 'scaleX(1)';
+            }
+            rikizo.style.left = wp.x + 'px';
+            rikizo.style.top = wp.y + 'px';
+            wpIdx++;
+            setTimeout(runToNext, 650);
+          }
+          runToNext();
+        }, 700);
+      }, 500);
+    };
+  }
+
+  function revealScore(scene, rikizo, pct, rank, rankColor, scoreEmoji) {
+    // Rikizo stops wobbling and "looks" at the score
+    const rikBody = rikizo.querySelector('.fr-rikizo-body');
+    if (rikBody) rikBody.style.animation = 'none';
+
+    // Build the final score UI inside the scene
+    scene.innerHTML = '';
+
+    // Re-add Rikizo in a fixed spot
+    const rikizo2 = document.createElement('div');
+    rikizo2.className = 'fr-rikizo';
+    rikizo2.innerHTML = RIKIZO_BODY_SVG;
+    rikizo2.style.opacity = '1';
+    rikizo2.style.position = 'absolute';
+    rikizo2.style.right = '10px';
+    rikizo2.style.top = '10px';
+    rikizo2.style.left = 'auto';
+    // Stop wobble on final position
+    const rb2 = rikizo2.querySelector('.fr-rikizo-body');
+    if (rb2) rb2.style.animation = 'none';
+    scene.appendChild(rikizo2);
+
+    // Score content
+    const scoreDiv = document.createElement('div');
+    scoreDiv.className = 'fr-final fr-final-reveal';
+    scoreDiv.innerHTML = `
+        <div style="font-size:3rem;margin-bottom:10px;" id="fr-trophy-spot">\uD83C\uDFC6</div>
         <div style="font-size:0.85rem;font-weight:700;color:var(--fr-text-sub);text-transform:uppercase;letter-spacing:1px;">Final Score</div>
-        <div class="fr-final-pct">${pct}%</div>
+        <div class="fr-final-pct" id="fr-final-pct">${pct}%</div>
         <div class="fr-final-rank" style="color:${rankColor};">${rank}</div>
         <div style="margin:12px 0 8px;font-size:1.1rem;color:var(--fr-text-sub);">${totalScore} / ${maxPossible} points</div>
         <div style="margin-bottom:24px;">
           ${sectionScores.map((s, i) => {
             const secName = reviewData.sections[i] ? reviewData.sections[i].title : 'Section ' + (i+1);
             const secPct = s.possible > 0 ? Math.round((s.earned / s.possible) * 100) : 100;
-            return `<div style="display:flex;justify-content:space-between;max-width:350px;margin:4px auto;font-size:0.9rem;">
-              <span>${secName}</span>
-              <span style="font-weight:700;color:${secPct >= 80 ? '#28a745' : secPct >= 60 ? '#FFD700' : '#dc3545'};">${s.earned}/${s.possible}</span>
-            </div>`;
+            return '<div style="display:flex;justify-content:space-between;max-width:350px;margin:4px auto;font-size:0.9rem;">' +
+              '<span>' + secName + '</span>' +
+              '<span style="font-weight:700;color:' + (secPct >= 80 ? '#28a745' : secPct >= 60 ? '#FFD700' : '#dc3545') + ';">' + s.earned + '/' + s.possible + '</span>' +
+            '</div>';
           }).join('')}
         </div>
         <button class="fr-btn fr-btn-primary" style="margin-right:10px;" onclick="window.FinalReviewModule.start(document.getElementById('jp-fr-root').parentElement, window.FinalReviewModule._config, window.FinalReviewModule._onExit)">Try Again</button>
         <button class="fr-btn fr-btn-secondary" onclick="window.FinalReviewModule._onExit()">Back to Menu</button>
-      </div>
     `;
+    scene.appendChild(scoreDiv);
+
+    // After a beat, Rikizo drops the emoji next to the score
+    setTimeout(() => {
+      const trophyEl = document.getElementById('fr-trophy-spot');
+      if (!trophyEl) return;
+      const emojiSpan = document.createElement('span');
+      emojiSpan.className = 'fr-score-emoji drop';
+      emojiSpan.textContent = scoreEmoji.emoji;
+      emojiSpan.style.position = 'relative';
+      emojiSpan.style.display = 'inline-block';
+      emojiSpan.style.marginLeft = '8px';
+      trophyEl.appendChild(emojiSpan);
+
+      // Rikizo does a little celebration wobble
+      const rb = rikizo2.querySelector('.fr-rikizo-body');
+      if (rb) {
+        rb.style.animation = 'frRikizoWobble 0.2s ease-in-out 4';
+        setTimeout(() => { if (rb) rb.style.animation = 'none'; }, 800);
+      }
+    }, 800);
   }
 
   // ── Public interface ──
