@@ -13,7 +13,7 @@
 
 「パンも食べてください。」わたしもパンを食べました。コーヒーとジュースも飲みました。コーヒーは大きいです。ジュースは小さいです。おいしいですね。ごちそうさまでした。
 
-「デパートへ行きましょう。」プレゼントがほしいです。デパートへ行って、プレゼントを買いました。デパートは大きいですよ。やまかわさんのプレゼントは長いです。あまり高くないですよ。すごいですね。
+「デパートへ行きましょう。」プレゼントがほしいです。デパートへ行って、プレゼントを買いました。デパートは大きいですよ。やまかわさんのプレゼントは長いです。安いですよ。すごいですね。
 
 わたしも新しいプレゼントを買いたいです。古いプレゼントはほしくないです。新しいプレゼントを買いました。
 
@@ -35,7 +35,7 @@ Bon appétit! I ate curry. The curry is delicious, you know. Yamakawa ate bread 
 
 "Please eat the bread too." I also ate bread. I also drank coffee and juice. The coffee is a large size. The juice is a small size. Delicious, isn't it! Thank you for the meal.
 
-"Let's go to the department store!" I want a present. I went to the department store and bought a present. The department store is big, you know. Yamakawa's present is long. It is not very expensive, you know. Wonderful, isn't it!
+"Let's go to the department store!" I want a present. I went to the department store and bought a present. The department store is big, you know. Yamakawa's present is long. It is cheap, you know. Wonderful, isn't it!
 
 I also want to buy a new present. I do not want an old present. I bought a new present.
 
@@ -73,8 +73,7 @@ How nice!
 - 行って (いって) - went and... (te-form connector)
 - 買いました (かいました) - bought
 - 長い (ながい) - long
-- あまり - not very
-- 高くない (たかくない) - not expensive
+- 安い (やすい) - cheap / inexpensive
 - すごい - amazing / wonderful
 - 買いたい (かいたい) - want to buy
 - 古い (ふるい) - old
@@ -85,12 +84,12 @@ How nice!
 
 - Copula (です) — わたしはりきぞです
 - Polite past (～ました) — 行きました、食べました、飲みました、買いました
-- Polite adjective (～いです) — 新しいです、大きいです、おいしいです、小さいです、長いです、すごいです
+- Polite adjective (～いです) — 新しいです、大きいです、おいしいです、小さいです、長いです、安いです、すごいです
 - Te-form request (～てください) — 食べてください
 - Te-form connector (～て) — 行って、～て
 - Volitional (～ましょう) — 行きましょう
 - Desire form (～たいです) — 買いたいです
-- Adjective negative (～くないです) — 高くないです、ほしくないです
+- Adjective negative (～くないです) — ほしくないです
 - Particle で (location of action: レストランで)
 - Particle へ (direction: レストランへ、デパートへ)
 - Particle の (possession: やまかわさんの)

@@ -21,7 +21,7 @@
 
 やまかわさんもいます。「こちらへ来てください！」やまかわさんが来ました。
 
-りきぞはカレーを食べました。やまかわさんはパンとサラダを食べています。コーヒーも飲みました。おいしかったです。ごちそうさまでした。
+りきぞはカレーを食べました。やまかわさんはパンとサラダを食べています。コーヒーも飲みました。おいしかったです。安かったです。ごちそうさまでした。
 
 「だいじょうぶですか。」「はい、だいじょうぶです。気分はいいです。」
 
@@ -53,7 +53,7 @@ There is a restaurant behind the station. I went to the restaurant and ate. Bon 
 
 Yamakawa is here too. "Please come this way!" Yamakawa came.
 
-Rikizo ate curry. Yamakawa is eating bread and salad. I also drank coffee. It was delicious. Thank you for the meal!
+Rikizo ate curry. Yamakawa is eating bread and salad. I also drank coffee. It was delicious. It was cheap. Thank you for the meal!
 
 "Are you alright?" "Yes, I'm alright. My mood is good."
 
@@ -86,7 +86,8 @@ Today's weather was good. The day off was good too. I want to eat out by train a
 - だいじょうぶ - alright / okay
 - どうして - why / how come
 
-**N5.10 Vocabulary:**
+**N5.8–N5.10 Vocabulary:**
+- 安い (やすい) - cheap / inexpensive
 - 休み (やすみ) - rest / day off
 - 休む (やすむ) - to rest
 
