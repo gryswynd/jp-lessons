@@ -1952,7 +1952,7 @@ window.FinalReviewModule = (function () {
   //  RIKIZO CHARACTER (pixel sprite for gift animation)
   // ══════════════════════════════════════════════════════════════
   function getRikizoBodyHTML() {
-    return '<img src="' + RIKIZO_SPRITE + '" class="fr-rikizo-body" alt="Rikizo" style="width:60px;height:70px;image-rendering:pixelated;" />';
+    return '<img src="' + RIKIZO_SPRITE + '" class="fr-rikizo-body" alt="Rikizo" style="height:70px;width:auto;image-rendering:pixelated;" />';
   }
 
   // ══════════════════════════════════════════════════════════════

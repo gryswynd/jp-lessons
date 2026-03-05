@@ -361,6 +361,9 @@ window.KanjiBingoGeneratorModule = (function () {
   async function loadKanjiData() {
     // Load manifest to get all available kanji across lessons
     try {
+      // Always compute base URL as fallback
+      var base = 'https://cdn.jsdelivr.net/gh/' + config.owner + '/' + config.repo + '@' + config.branch;
+
       // Use shared asset loader if available, else fall back to CDN fetch
       var manifest;
       var fetchJSON;
@@ -368,15 +371,14 @@ window.KanjiBingoGeneratorModule = (function () {
         manifest = await window.getManifest(config);
         fetchJSON = window.JPShared.assets.fetchJSON;
       } else {
-        var base = 'https://cdn.jsdelivr.net/gh/' + config.owner + '/' + config.repo + '@' + config.branch;
         fetchJSON = function (url) { return fetch(url).then(function (r) { return r.json(); }); };
         manifest = await fetchJSON(base + '/manifest.json');
       }
 
-      // Helper to resolve data file paths
+      // Helper to resolve data file paths — use same pattern as FinalReview.js
       function getUrl(filePath) {
-        if (window.JPShared && window.JPShared.assets && window.JPShared.assets.getUrl) {
-          return window.JPShared.assets.getUrl(filePath);
+        if (window.getAssetUrl) {
+          return window.getAssetUrl(config, filePath);
         }
         return base + '/' + filePath;
       }
