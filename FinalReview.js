@@ -2161,17 +2161,15 @@ window.FinalReviewModule = (function () {
     `;
     scene.appendChild(scoreDiv);
 
-    // Rikizo in the upper right — scaled down to fit as a corner badge
+    // Rikizo in the upper right at full size
     const rikizo2 = document.createElement('div');
     rikizo2.className = 'fr-rikizo';
     rikizo2.innerHTML = getRikizoBodyHTML();
     rikizo2.style.opacity = '1';
     rikizo2.style.position = 'absolute';
-    rikizo2.style.right = '10px';
-    rikizo2.style.top = '10px';
+    rikizo2.style.right = '0';
+    rikizo2.style.top = '0';
     rikizo2.style.left = 'auto';
-    rikizo2.style.width = '80px';
-    rikizo2.style.height = '80px';
     // Stop wobble on final position
     const rb2 = rikizo2.querySelector('.fr-rikizo-body');
     if (rb2) rb2.style.animation = 'none';
