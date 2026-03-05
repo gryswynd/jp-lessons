@@ -12,17 +12,17 @@
 
 三時間後、りきぞは起きました。「ここはどこですか！」知らない駅でした。
 
-りきぞは駅を出ました。小さい町でした。道がわかりません。おなかもすきました。「食べたい！」歩いて、歩いて、やっと店がありました。
+りきぞは駅を出ました。小さい町でした。道がわかりません。「食べたい！」歩いて、歩いて、店がありました。
 
 店に入って、カレーを食べました。「おいしい！都市のカレーよりおいしい！」
 
-そのとき、小さい犬が来ました。犬はりきぞのカレーを見ています。
+その時、小さい犬が来ました。犬はりきぞのカレーを見ています。
 
-「だめですよ。わたしのカレーです！」
+「だめですよ。私のカレーです！」
 
-りきぞが外を見ているとき、犬がカレーを食べました。りきぞのカレーはもうありません。
+りきぞが外を見ている時、犬がカレーを食べました。りきぞのカレーはもうありません。
 
-「わたしのカレー！」りきぞは犬を見ました。犬はりきぞを見ました。
+「私のカレー！」りきぞは犬を見ました。犬はりきぞを見ました。
 
 「...カレーをもう一つください。」
 
@@ -36,29 +36,29 @@
 
 「すみません、入ってもいいですか。」
 
-「いいですよ。でも...あっ！」旅館の人はりきぞの後ろの犬を見ました。
+「いいですよ。でも...あっ！」旅館の主人はりきぞの後ろの犬を見ました。
 
 「この犬は...ポチ！ポチですか！」
 
-旅館の人は犬を知っていました。ポチは旅館の人の犬でした。前に家を出て、帰りませんでした。旅館の人はポチに会えて、とても元気になりました。
+旅館の主人は犬を知っていました。ポチは旅館の主人の犬でした。前に家を出て、帰りませんでした。旅館の主人はポチに会えて、とても元気になりました。
 
 「ありがとうございます！たくさん食べてください。お茶もどうぞ。」
 
-旅館の人はりきぞに料理をたくさん出してくれました。カレーも出してくれました。ポチもりきぞの近くに来ました。りきぞのカレーを見ています。
+旅館の主人はりきぞに料理をたくさん出してくれました。カレーも出してくれました。ポチもりきぞの近くに来ました。りきぞのカレーを見ています。
 
-「だめです！」りきぞは早くカレーを食べました。
+「だめです！」りきぞはカレーを早く食べました。
 
-つぎの朝、天気がよくなりました。旅館の人が教えてくれました。「海はあの山の後ろですよ。歩いてください。」
+つぎの朝、天気がよくなりました。旅館の主人が教えてくれました。「海はあの山の後ろですよ。歩いてください。」
 
 りきぞとポチは海へ歩きました。りきぞは海を見たことがありません。青くて広い海を見て、りきぞは大きい声を出しました。「すごい！世界でいちばんきれいだ！」
 
-ポチは海に走って入りました。りきぞも入りたかったですが...犬のようには走れません。「わたしは犬ではありませんよ！」
+ポチは海に走って入りました。りきぞも入りたかったですが...犬のようには走れません。「私は犬ではありませんよ！」
 
 海の近くを歩いたり、知らない人と話したりしました。「この犬と旅をしていますか。」と聞かれました。
 
-「いいえ、この犬がわたしと旅をしています！」
+「いいえ、この犬が私と旅をしています！」
 
-夕方になりました。りきぞは帰ることにしました。駅で旅館の人とポチに会いました。
+夕方になりました。りきぞは帰ることにしました。駅で旅館の主人とポチに会いました。
 
 「また来てください。ポチも待っていますよ。」
 
@@ -84,7 +84,7 @@ One morning, Rikizo got up early and ran to the station. He got on the train. "I
 
 Three hours later, Rikizo woke up. "Where am I?!" It was a station he didn't know.
 
-Rikizo left the station. It was a small town. He didn't know the way. His stomach was also empty. "I want to eat!" He walked and walked, and finally there was a restaurant.
+Rikizo left the station. It was a small town. He didn't know the way. "I want to eat!" He walked and walked, and there was a restaurant.
 
 He went in and ate curry. "Delicious! Better than city curry!"
 
@@ -118,7 +118,7 @@ The innkeeper knew the dog. Pochi was the innkeeper's dog. She had left home bef
 
 The innkeeper brought Rikizo lots of food. Curry too. Pochi came close to Rikizo. Staring at his curry.
 
-"No!" Rikizo ate his curry fast.
+"No!" Rikizo ate his curry quickly.
 
 The next morning, the weather cleared up. The innkeeper told him, "The ocean is behind that mountain. Just walk that way."
 
