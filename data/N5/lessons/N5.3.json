@@ -406,6 +406,15 @@
           "items": [
             "v_sorekara"
           ]
+        },
+        {
+          "label": "Currency & Large Numbers",
+          "items": [
+            "v_hyaku",
+            "v_sen",
+            "v_man",
+            "v_en"
+          ]
         }
       ]
     },
@@ -725,6 +734,32 @@
             "v_are",
             "v_okane",
             "g_desu"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "いくら ありますか。",
+          "en": "How much is there?",
+          "terms": [
+            "v_ikura",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "千円 あります。",
+          "en": "There is one thousand yen.",
+          "terms": [
+            "v_sen",
+            "v_en",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]

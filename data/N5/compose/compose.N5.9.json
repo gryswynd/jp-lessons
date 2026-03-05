@@ -39,17 +39,17 @@
       ]
     },
     {
-      "prompt": "Continue your composition. Write about wanting to eat out and describe where the restaurant is.",
+      "prompt": "Continue your composition. Write about wanting to eat out, describe where the restaurant is, and mention whether it is cheap or delicious.",
       "targets": [
         { "id": "v_gaishoku", "count": 1 }
       ],
-      "model": "外食を したいです。駅の 前の レストランへ 行きたいです。とても おいしいです。",
+      "model": "外食を したいです。駅の 前の レストランへ 行きたいです。安くて、おいしいです。",
       "vocabPool": [
         "v_gaishoku", "v_resutoran", "v_mise",
         "v_mae", "v_eki", "v_konbini",
         "v_iku", "v_kuru", "v_suru", "v_taberu", "v_nomu",
         "v_karee", "v_pan", "v_sarada", "v_koohii",
-        "v_oishii", "v_takai", "v_daijoubu",
+        "v_oishii", "v_takai", "v_yasui", "v_daijoubu",
         "v_totemo", "v_ii", "g_desu",
         "p_itadakimasu", "p_gochisousama"
       ]

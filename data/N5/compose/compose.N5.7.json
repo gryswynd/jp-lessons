@@ -47,14 +47,16 @@
       ]
     },
     {
-      "prompt": "Finish your composition. Write what you ate and drank at the restaurant, and use the meal-ending phrase.",
+      "prompt": "Finish your composition. Write what you ate and drank at the restaurant, how much it cost, and use the meal-ending phrase.",
       "targets": [
-        { "id": "v_taberu", "count": 1 }
+        { "id": "v_taberu", "count": 1 },
+        { "id": "v_en", "count": 1 }
       ],
-      "model": "カレーと パンを 食べました。コーヒーを 飲みました。ごちそうさまでした。",
+      "model": "カレーと パンを 食べました。千円でした。ごちそうさまでした。",
       "vocabPool": [
         "v_karee", "v_pan", "v_sarada", "v_taberu", "v_nomu",
         "v_koohii", "v_juusu",
+        "v_ikura", "v_hyaku", "v_sen", "v_en",
         "v_iku", "v_kuru", "v_mata",
         "v_raishuu", "v_senshuu", "v_kyou",
         "v_tomodachi", "v_sensei",
