@@ -265,6 +265,46 @@
       "notes": ""
     },
     {
+      "id": "p_arigatou_gozaimasu",
+      "surface": "ありがとうございます",
+      "reading": "ありがとうございます",
+      "meaning": "thank you (polite)",
+      "type": "phrase",
+      "gtype": "set-phrase",
+      "lesson_ids": "N5.1",
+      "notes": "Polite expression of gratitude. Used in most social situations."
+    },
+    {
+      "id": "p_arigatou",
+      "surface": "ありがとう",
+      "reading": "ありがとう",
+      "meaning": "thanks (casual)",
+      "type": "phrase",
+      "gtype": "set-phrase",
+      "lesson_ids": "N5.1",
+      "notes": "Casual form of ありがとうございます. Used with friends, family, and close colleagues."
+    },
+    {
+      "id": "p_douzo",
+      "surface": "どうぞ",
+      "reading": "どうぞ",
+      "meaning": "please / go ahead / here you are",
+      "type": "phrase",
+      "gtype": "set-phrase",
+      "lesson_ids": "N5.1",
+      "notes": "Used when offering something, inviting someone to go first, or granting permission."
+    },
+    {
+      "id": "p_att",
+      "surface": "あっ",
+      "reading": "あっ",
+      "meaning": "oh! / ah!",
+      "type": "phrase",
+      "gtype": "set-phrase",
+      "lesson_ids": "N5.1",
+      "notes": "Interjection expressing surprise or sudden realization."
+    },
+    {
       "id": "v_anata",
       "surface": "あなた",
       "reading": "あなた",
@@ -1835,6 +1875,27 @@
       "verb_class": "godan"
     },
     {
+      "id": "v_toki",
+      "surface": "時",
+      "reading": "とき",
+      "meaning": "time / when",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.4",
+      "notes": "Used as a noun meaning 'time' or as a temporal clause marker meaning 'when'. その時 = at that time. 食べる時 = when eating."
+    },
+    {
+      "id": "v_tsugi",
+      "surface": "次",
+      "reading": "つぎ",
+      "meaning": "next",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.4",
+      "matches": ["つぎ"],
+      "notes": "Used for next in sequence: 次の朝 = the next morning, 次はどこ = where next. Write as つぎ (hiragana) since 次 kanji is not formally taught."
+    },
+    {
       "id": "k_i",
       "lesson": "N5.5",
       "type": "kanji",
@@ -2070,6 +2131,16 @@
       "gtype": "adverb",
       "lesson_ids": "N5.5",
       "notes": "Means 'again' when referring to a repeated action (また来てください = please come again) or 'also/and' when adding a new thought at the start of a sentence."
+    },
+    {
+      "id": "v_dame",
+      "surface": "だめ",
+      "reading": "だめ",
+      "meaning": "no good / not allowed / useless",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "lesson_ids": "N5.5",
+      "notes": "Common expression for prohibition or something being useless/no good. だめです = it's not allowed. だめですよ = you can't do that!"
     },
     {
       "id": "k_kawa",
@@ -2888,6 +2959,17 @@
       "lesson_ids": "N5.10",
       "reading": "やすむ",
       "verb_class": "godan"
+    },
+    {
+      "id": "v_naru",
+      "surface": "なる",
+      "reading": "なる",
+      "meaning": "to become / to turn into",
+      "type": "vocab",
+      "gtype": "verb",
+      "lesson_ids": "N5.10",
+      "verb_class": "godan",
+      "notes": "Used to express change of state. い-adj stem + く + なる (寒くなりました = it became cold). な-adj/noun + に + なる (元気になりました = became well). Essential for weather and state-change expressions."
     },
     {
       "id": "k_ame",

@@ -990,7 +990,7 @@ When a counter expression appears in a `terms` array:
 { "counter": "nin", "n": 4 }
 ```
 
-Valid counter keys: `ji`, `fun`, `hon`, `mai`, `ko`, `hiki`, `hai`, `satsu`, `nin`, `dai`, `kai`, `sai`, `nen`, `kagetsu`, `shu`
+Valid counter keys: `ji`, `fun`, `hon`, `mai`, `ko`, `hiki`, `hai`, `satsu`, `nin`, `dai`, `kai`, `sai`, `nen`, `kagetsu`, `shu`, `tsu`, `gatsu`
 
 ### Example — correct tagging
 
@@ -1098,6 +1098,8 @@ These words may be written in hiragana and used in content **from the listed les
 | `v_nan` | なん | N5.1 | 何 | N5.2 | Question word (before です/の/counters/d-n-t sounds) |
 | `v_kazoku` | かぞく | N5.1 | 家族 | N4.7 | Essential for family-themed content from lesson 1 |
 | `v_suki` | すき | N5.7 | 好き | N4.4 | Na-adjective "like" — needed for food/preference conversations |
+| `v_tsugi` | つぎ | N5.4 | 次 | (not taught) | "Next" — needed for sequencing and time expressions. 次 kanji is not formally introduced in any lesson; always write in hiragana. |
+| `v_koto` | こと | N5.9 | 事 | N4.14 | Nominalizer "thing/fact" — needed for ～ことがある, ～ことにする patterns. Write as こと before N4.14. |
 
 **Example usage in N5.1 content:**
 ```json

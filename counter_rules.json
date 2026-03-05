@@ -135,6 +135,24 @@
       "meaning": "month (calendar month name)",
       "learnedAt": "N5",
       "prefix_overrides": { "4": "し", "7": "しち", "9": "く" }
+    },
+    "tsu": {
+      "surface": "つ",
+      "reading": "つ",
+      "meaning": "general counter (native Japanese)",
+      "learnedAt": "N5",
+      "special": {
+        "1": { "surface": "一つ", "reading": "ひとつ" },
+        "2": { "surface": "二つ", "reading": "ふたつ" },
+        "3": { "surface": "三つ", "reading": "みっつ" },
+        "4": { "surface": "四つ", "reading": "よっつ" },
+        "5": { "surface": "五つ", "reading": "いつつ" },
+        "6": { "surface": "六つ", "reading": "むっつ" },
+        "7": { "surface": "七つ", "reading": "ななつ" },
+        "8": { "surface": "八つ", "reading": "やっつ" },
+        "9": { "surface": "九つ", "reading": "ここのつ" },
+        "10": { "surface": "十", "reading": "とお" }
+      }
     }
   }
 }
