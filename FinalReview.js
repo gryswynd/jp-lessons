@@ -14,6 +14,7 @@ window.FinalReviewModule = (function () {
   let termMap = {};
   let conjugations = null;
   let counterRules = null;
+  let allKanjiPool = []; // Full kanji pool from manifest for bingo card generation
 
   // ── State ──
   let totalScore = 0;
@@ -745,6 +746,34 @@ window.FinalReviewModule = (function () {
       });
       (Array.isArray(particles) ? particles : []).forEach(p => {
         if (p.id) termMap[p.id] = p;
+      });
+
+      // Build full kanji pool from manifest for bingo card generation
+      allKanjiPool = [];
+      const seen = {};
+      ['N5', 'N4'].forEach(function (level) {
+        var lessons = manifest.data && manifest.data[level] && manifest.data[level].lessons;
+        if (!lessons) return;
+        lessons.forEach(function (lesson) {
+          if (!lesson.kanji) return;
+          lesson.kanji.forEach(function (k) {
+            if (seen[k]) return;
+            seen[k] = true;
+            // Try to find reading/meaning from glossary (kanji entries)
+            var entry = null;
+            [glossN5, glossN4].forEach(function (g) {
+              if (entry) return;
+              (Array.isArray(g) ? g : []).forEach(function (e) {
+                if (!entry && e.type === 'kanji' && e.surface === k) entry = e;
+              });
+            });
+            allKanjiPool.push({
+              kanji: k,
+              reading: entry ? (entry.reading || entry.kun || '') : '',
+              meaning: entry ? (entry.meaning || '') : ''
+            });
+          });
+        });
       });
 
       renderShell();
@@ -1543,7 +1572,9 @@ window.FinalReviewModule = (function () {
   //  SECTION 8: KANJI BINGO (Grand Finale!)
   // ══════════════════════════════════════════════════════════════
   function renderKanjiBingo(stage, sec) {
-    const pool = shuffle(sec.kanjiPool.slice());
+    // Use full kanji pool from manifest (all known kanji), fallback to sec.kanjiPool
+    const sourcePool = allKanjiPool.length >= 24 ? allKanjiPool : (sec.kanjiPool || []);
+    const pool = shuffle(sourcePool.slice());
     // Pick 24 for the grid (center is free)
     const gridKanji = pool.slice(0, 24);
     const grid = []; // 25 cells, idx 12 is free
