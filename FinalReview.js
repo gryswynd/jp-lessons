@@ -563,8 +563,7 @@ window.FinalReviewModule = (function () {
       .fr-bingo-cell.stamped {
         pointer-events: none;
       }
-      .fr-bingo-cell.stamped::after {
-        content: '';
+      .fr-bingo-cell.stamped .fr-bingo-stamp {
         position: absolute;
         inset: 4px;
         background: url("${RIKIZO_STAMP}") center/contain no-repeat;
@@ -576,15 +575,11 @@ window.FinalReviewModule = (function () {
         border-color: var(--fr-primary);
         pointer-events: none;
       }
-      .fr-bingo-cell.free::after {
-        content: '';
+      .fr-bingo-cell.free .fr-bingo-stamp {
         position: absolute;
         inset: 4px;
         background: url("${RIKIZO_STAMP}") center/contain no-repeat;
         opacity: 0.85;
-      }
-      .fr-bingo-cell.wrong-tap {
-        animation: frShake 0.4s ease;
       }
       .fr-bingo-cell.bingo-line {
         box-shadow: 0 0 0 3px var(--fr-gold), 0 0 15px rgba(255,215,0,0.5);
@@ -620,9 +615,9 @@ window.FinalReviewModule = (function () {
         margin-bottom: 12px;
       }
       @keyframes frStamp {
-        0% { transform: scale(2); opacity: 0; }
-        60% { transform: scale(0.9); }
-        100% { transform: scale(1); opacity: 0.85; }
+        0% { transform: scale(2) rotate(0deg); opacity: 0; }
+        60% { transform: scale(0.9) rotate(0deg); }
+        100% { transform: scale(1) rotate(0deg); opacity: 0.85; }
       }
       @keyframes frShake {
         0%, 100% { transform: translateX(0); }
@@ -1552,8 +1547,11 @@ window.FinalReviewModule = (function () {
     // Pick 24 for the grid (center is free)
     const gridKanji = pool.slice(0, 24);
     const grid = []; // 25 cells, idx 12 is free
+    // Pre-compute random rotation angles for each cell's stamp
+    const stampAngles = [];
     let gi = 0;
     for (let i = 0; i < 25; i++) {
+      stampAngles.push(Math.floor(Math.random() * 40) - 20); // -20 to +20 degrees
       if (i === 12) {
         grid.push({ kanji: 'FREE', reading: '', meaning: 'りきぞう', stamped: true, isFree: true });
       } else {
@@ -1562,14 +1560,9 @@ window.FinalReviewModule = (function () {
       }
     }
 
-    // Build call queue from the grid kanji (shuffled)
-    const callQueue = shuffle(gridKanji.slice());
-    let callIdx = 0;
-    let bingoCount = 0;
     let stamped = 1; // free space
     const bingoLines = [];
     let score = 0;
-    const maxScore = sec.bingoTarget || 1; // points per bingo line
 
     function checkBingo() {
       const lines = [
@@ -1594,21 +1587,15 @@ window.FinalReviewModule = (function () {
     }
 
     function render() {
-      const currentCall = callIdx < callQueue.length ? callQueue[callIdx] : null;
-
       stage.innerHTML = `
         <div style="animation:frFadeIn 0.3s;">
-          <div class="fr-section-title">🎰 Kanji Bingo</div>
+          <div class="fr-section-title">\uD83C\uDFB0 Kanji Bingo</div>
           <div class="fr-bingo-status" id="fr-bingo-status">
-            ${bingoLines.length > 0 ? '🎉 BINGO x' + bingoLines.length + '!' : 'Find the kanji on your card!'}
+            ${bingoLines.length > 0 ? '\uD83C\uDF89 BINGO x' + bingoLines.length + '!' : 'Tap kanji as your teacher calls them!'}
           </div>
-          ${currentCall ? `
-            <div class="fr-bingo-call" id="fr-bingo-call">
-              <div class="fr-bingo-call-label">Now Calling</div>
-              <div class="fr-bingo-call-text">${currentCall.reading}</div>
-              <div class="fr-bingo-call-hint">${currentCall.meaning}</div>
-            </div>
-          ` : '<div class="fr-bingo-call"><div class="fr-bingo-call-text">Game Over!</div></div>'}
+          <div style="text-align:center;margin-bottom:12px;">
+            <span style="font-size:0.8rem;color:var(--fr-text-sub);font-style:italic;">Listen to your teacher and stamp matching kanji on your card</span>
+          </div>
           <div class="fr-bingo-grid" id="fr-bingo-grid">
             ${grid.map((cell, i) => `
               <div class="fr-bingo-cell ${cell.stamped ? (cell.isFree ? 'free' : 'stamped') : ''} ${bingoLines.some(li => {
@@ -1617,13 +1604,14 @@ window.FinalReviewModule = (function () {
               }) ? 'bingo-line' : ''}"
                 id="fr-bc-${i}" data-idx="${i}">
                 ${cell.isFree ? '' : cell.kanji}
+                ${cell.stamped ? '<div class="fr-bingo-stamp" style="transform:rotate(' + stampAngles[i] + 'deg);"></div>' : ''}
               </div>
             `).join('')}
           </div>
           <div style="text-align:center;margin-top:12px;">
             <span style="font-size:0.85rem;color:var(--fr-text-sub);">Stamped: ${stamped}/25 | Bingos: ${bingoLines.length}</span>
           </div>
-          ${callIdx >= callQueue.length || bingoLines.length >= (sec.bingoTarget || 3) ? `
+          ${bingoLines.length >= (sec.bingoTarget || 3) ? `
             <div style="text-align:center;margin-top:16px;">
               <button class="fr-btn fr-btn-primary" id="fr-bingo-finish">Finish Bingo!</button>
             </div>
@@ -1631,37 +1619,42 @@ window.FinalReviewModule = (function () {
         </div>
       `;
 
-      // Cell clicks
-      if (currentCall) {
-        el('fr-bingo-grid').querySelectorAll('.fr-bingo-cell').forEach(cell => {
-          cell.onclick = () => {
-            const i = parseInt(cell.dataset.idx);
-            if (grid[i].stamped || grid[i].isFree) return;
+      // Cell clicks — any unstamped cell can be tapped freely
+      el('fr-bingo-grid').querySelectorAll('.fr-bingo-cell').forEach(cell => {
+        cell.onclick = () => {
+          const i = parseInt(cell.dataset.idx);
+          if (grid[i].stamped || grid[i].isFree) return;
 
-            if (grid[i].kanji === currentCall.kanji) {
-              // Correct!
-              grid[i].stamped = true;
-              stamped++;
-              cell.classList.add('stamped');
+          // Stamp it — no validation needed, teacher calls separately
+          grid[i].stamped = true;
+          stamped++;
+          cell.classList.add('stamped');
 
-              // Check bingo
-              const newBingos = checkBingo();
-              if (newBingos > 0) {
-                score += newBingos;
-                bingoCount += newBingos;
-              }
+          // Add the rotated stamp overlay
+          const stampDiv = document.createElement('div');
+          stampDiv.className = 'fr-bingo-stamp';
+          stampDiv.style.transform = 'rotate(' + stampAngles[i] + 'deg)';
+          cell.appendChild(stampDiv);
 
-              // Next call
-              callIdx++;
+          // Check bingo
+          const newBingos = checkBingo();
+          if (newBingos > 0) {
+            score += newBingos;
+            // Update status
+            const status = document.getElementById('fr-bingo-status');
+            if (status) status.textContent = '\uD83C\uDF89 BINGO x' + bingoLines.length + '!';
+
+            // Show finish button if target reached
+            if (bingoLines.length >= (sec.bingoTarget || 3)) {
               setTimeout(render, 600);
-            } else {
-              // Wrong
-              cell.classList.add('wrong-tap');
-              setTimeout(() => cell.classList.remove('wrong-tap'), 400);
             }
-          };
-        });
-      }
+          }
+
+          // Update counter
+          const counterEl = stage.querySelector('[style*="Stamped:"]');
+          if (counterEl) counterEl.textContent = 'Stamped: ' + stamped + '/25 | Bingos: ' + bingoLines.length;
+        };
+      });
 
       // Finish button
       const finBtn = document.getElementById('fr-bingo-finish');
