@@ -1640,13 +1640,11 @@ window.FinalReviewModule = (function () {
             `).join('')}
           </div>
           <div style="text-align:center;margin-top:12px;">
-            <span style="font-size:0.85rem;color:var(--fr-text-sub);">Stamped: ${stamped}/25 | Bingos: ${bingoLines.length}</span>
+            <span style="font-size:0.85rem;color:var(--fr-text-sub);">Stamped: ${stamped}/25 | Bingos: ${bingoLines.length}${bingoLines.length >= 2 ? ' \uD83D\uDD25 x' + bingoLines.length + ' multiplier!' : ''}</span>
           </div>
-          ${bingoLines.length >= (sec.bingoTarget || 3) ? `
-            <div style="text-align:center;margin-top:16px;">
-              <button class="fr-btn fr-btn-primary" id="fr-bingo-finish">Finish Bingo!</button>
-            </div>
-          ` : ''}
+          <div style="text-align:center;margin-top:16px;">
+            <button class="fr-btn fr-btn-primary" id="fr-bingo-finish">${bingoLines.length > 0 ? 'Finish Bingo!' : 'End Game'}</button>
+          </div>
         </div>
       `;
 
@@ -1674,24 +1672,23 @@ window.FinalReviewModule = (function () {
             // Update status
             const status = document.getElementById('fr-bingo-status');
             if (status) status.textContent = '\uD83C\uDF89 BINGO x' + bingoLines.length + '!';
-
-            // Show finish button if target reached
-            if (bingoLines.length >= (sec.bingoTarget || 3)) {
-              setTimeout(render, 600);
-            }
           }
 
-          // Update counter
+          // Update counter + multiplier display
           const counterEl = stage.querySelector('[style*="Stamped:"]');
-          if (counterEl) counterEl.textContent = 'Stamped: ' + stamped + '/25 | Bingos: ' + bingoLines.length;
+          if (counterEl) {
+            counterEl.textContent = 'Stamped: ' + stamped + '/25 | Bingos: ' + bingoLines.length +
+              (bingoLines.length >= 2 ? ' \uD83D\uDD25 x' + bingoLines.length + ' multiplier!' : '');
+          }
         };
       });
 
-      // Finish button
+      // Finish button — always visible so students can exit at any time
       const finBtn = document.getElementById('fr-bingo-finish');
       if (finBtn) {
         finBtn.onclick = () => {
           const maxBingo = sec.bingoTarget || 3;
+          // Score: each bingo line = 1 point, capped at bingoTarget
           finishSection(Math.min(score, maxBingo), maxBingo);
         };
       }
