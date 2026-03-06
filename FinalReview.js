@@ -920,7 +920,11 @@ window.FinalReviewModule = (function () {
         });
       });
       (Array.isArray(particles) ? particles : []).forEach(p => {
-        if (p.id) termMap[p.id] = p;
+        if (p.id) {
+          // Normalize: particles use "particle" field instead of "surface"
+          if (p.particle && !p.surface) p.surface = p.particle;
+          termMap[p.id] = p;
+        }
       });
 
       // Build full kanji pool from manifest for bingo card generation
