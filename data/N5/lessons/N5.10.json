@@ -443,7 +443,7 @@
           "terms": [
             "v_tenki",
             "p_ga",
-            { "id": "v_ii", "form": "plain_past" },
+            { "id": "v_ii", "form": "plain_past_adj" },
             "p_kara_because",
             "p_ne"
           ]
@@ -455,11 +455,11 @@
           "terms": [
             "v_densha",
             "p_wa",
-            { "id": "v_nagai", "form": "plain_past" },
+            { "id": "v_nagai", "form": "plain_past_adj" },
             "p_kedo",
             "v_yama",
             "p_wa",
-            { "id": "v_ii", "form": "plain_past" },
+            { "id": "v_ii", "form": "plain_past_adj" },
             "p_yo"
           ]
         },
@@ -470,7 +470,7 @@
           "terms": [
             "v_raishuu",
             "p_mo",
-            { "id": "v_kuru", "form": "desire_tai" },
+            { "id": "v_kuru", "form": "plain_desire_tai" },
             "p_ne"
           ]
         },
@@ -483,7 +483,7 @@
             "p_ni",
             "v_densha",
             "p_de",
-            { "id": "v_iku", "form": "desire_tai" },
+            { "id": "v_iku", "form": "plain_desire_tai" },
             "p_ne"
           ]
         },
@@ -500,7 +500,7 @@
             "v_aru",
             "p_kara_because",
             "p_ne",
-            { "id": "v_iku", "form": "desire_tai" },
+            { "id": "v_iku", "form": "plain_desire_tai" },
             "p_yo"
           ]
         }

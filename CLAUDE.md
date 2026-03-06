@@ -382,6 +382,7 @@ For **every** draft — not just grammar lessons — Agent 4 must perform a **Gr
    | `plain_volitional` | G9 | N5.10+ |
    | `plain_negative`, `plain_past_negative` | N5.9 | N5.9+ |
    | `polite_past_adj`, `adverbial`, `conditional_ba`, `sugiru_form` | N5.10 | N5.10+ |
+   | `plain_past_adj`, `plain_desire_tai`, `plain_appearance_sou` | G9 | N5.10+ |
    | `appearance_sou` | N5.11 | N5.11+ |
    | `potential`, `potential_negative` | N4.3 | N4.3+ |
    | `tari_form`, `nagara_form` | N4.10 | N4.10+ |
@@ -879,7 +880,8 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 | `polite_past_negative` | ～ませんでした |
 | `polite_adj` | adjective + です |
 | `attributive_na` | na-adjective + な (before a noun, e.g. きれいな花) |
-| `polite_past_adj` | adjective past + です |
+| `polite_past_adj` | adjective past + です (polite: かったです / でした) |
+| `plain_past_adj` | adjective past plain (かった / だった — casual speech) |
 | `plain_past` | ～た / ～だった |
 | `plain_negative` | ～ない |
 | `plain_past_negative` | ～なかった |
@@ -887,8 +889,10 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 | `potential` | ～られる / ～える |
 | `potential_negative` | ～られません |
 | `adverbial` | ～く / ～に |
-| `desire_tai` | ～たいです |
-| `appearance_sou` | ～そうです |
+| `desire_tai` | ～たいです (polite desire) |
+| `plain_desire_tai` | ～たい (plain desire — casual speech and subordinate clauses) |
+| `appearance_sou` | ～そうです (polite appearance) |
+| `plain_appearance_sou` | ～そうだ (plain appearance — casual speech) |
 | `polite_volitional_mashou` | ～ましょう |
 | `plain_volitional` | ～おう / ～よう (plain "let's" / intention) |
 | `conditional_ba` | ～ば / ～ければ |
@@ -1201,8 +1205,8 @@ Each conjugation form in `conjugation_rules.json` has an `introducedIn` field sp
 | N5.1 | `polite_adj` |
 | N5.5 | `polite_masu`, `polite_mashita`, `polite_negative`, `polite_past_negative`, `te_form`, `polite_negative_te`, `plain_past` |
 | N5.8 | `desire_tai`, `desire_tai_negative`, `polite_volitional_mashou` |
-| G9 (N5.10+) | `plain_volitional` |
 | N5.9 | `plain_negative`, `plain_past_negative` |
+| G9 (N5.10+) | `plain_volitional`, `plain_desire_tai`, `plain_past_adj`, `plain_appearance_sou` |
 | N5.10 | `polite_past_adj`, `adverbial`, `conditional_ba`, `sugiru_form` |
 | N5.11 | `appearance_sou` |
 | N4.3 | `potential`, `potential_negative` |
