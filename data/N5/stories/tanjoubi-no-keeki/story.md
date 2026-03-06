@@ -5,7 +5,7 @@
 
 ### Story Text (Japanese)
 
-こんにちは！わたしはミクです。
+こんにちは！わたしはりきぞです。
 
 今日は三月四日です。今日はケンのたんじょうびです。
 
@@ -25,7 +25,7 @@
 
 **Birthday Cake**
 
-Hello! I am Miku.
+Hello! I am Rikizo.
 
 Today is March 4th. Today is Ken's birthday.
 

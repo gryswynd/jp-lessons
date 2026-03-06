@@ -5,7 +5,7 @@
 
 ### Story Text (Japanese)
 
-こんにちは！わたしはミクです。
+こんにちは！わたしはりきぞです。
 
 父のなまえはたろうです。父はとてもやさしい人です。
 
@@ -23,7 +23,7 @@
 
 **My Family**
 
-Hello! My name is Miku.
+Hello! I am Rikizo.
 
 My father's name is Taro. My father is a very kind person.
 
@@ -60,7 +60,7 @@ Today is Friday. On Fridays, I am together with Ken. Every day, I am happy! Good
 
 ### Grammar Points Used
 
-- Copula (です) — noun and adjective predicates
+- Copula (です) — わたしはりきぞです、noun and adjective predicates
 - Noun possession with の
 - も (also / too)
 - に — marking a specific day (金よう日に = on Friday)
