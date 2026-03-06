@@ -486,17 +486,17 @@
         },
         {
           "spk": "校長",
-          "jp": "つまらないですが、大学に 行きたい 学生は 学んでください。",
-          "en": "It's boring, but students who want to go to university, please study.",
+          "jp": "つまらないですが、よく 学んでください。大学に 行きたいですか。",
+          "en": "It's boring, but please study well. Do you want to go to university?",
           "terms": [
             { "id": "v_tsumaranai", "form": "polite_adj" },
             "p_ga_but",
+            { "id": "v_ii", "form": "adverbial" },
+            { "id": "v_manabu", "form": "te_form" },
             "v_daigaku",
             "p_ni",
             { "id": "v_iku", "form": "desire_tai" },
-            "v_gakusei",
-            "p_wa",
-            { "id": "v_manabu", "form": "te_form" }
+            "p_ka"
           ]
         },
         {
