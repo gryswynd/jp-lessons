@@ -394,8 +394,8 @@ window.FinalReviewModule = (function () {
         pointer-events: none;
       }
       .fr-chip.wordle-yellow {
-        background: #c9b458 !important;
-        border-color: #c9b458 !important;
+        background: #e74c3c !important;
+        border-color: #c0392b !important;
         color: white !important;
         pointer-events: none;
       }
@@ -1454,6 +1454,7 @@ window.FinalReviewModule = (function () {
         checkBtn.style.opacity = checkBtn.disabled ? '0.4' : '1';
       }
 
+      const inChipToPoolChip = new Map();
       pool.querySelectorAll('.fr-chip').forEach(chip => {
         chip.onclick = () => {
           if (chip.classList.contains('used')) return;
@@ -1466,9 +1467,11 @@ window.FinalReviewModule = (function () {
           const inChip = document.createElement('div');
           inChip.className = 'fr-chip in-box';
           inChip.textContent = chip.dataset.word;
+          inChipToPoolChip.set(inChip, chip);
           inChip.onclick = () => {
             inChip.remove();
             chip.classList.remove('used');
+            inChipToPoolChip.delete(inChip);
             order = order.filter((w, i) => {
               if (w === chip.dataset.word) {
                 order.splice(i, 1);
@@ -1489,7 +1492,12 @@ window.FinalReviewModule = (function () {
       });
 
       clearBtn.onclick = () => {
-        pool.querySelectorAll('.fr-chip').forEach(c => c.classList.remove('used'));
+        pool.querySelectorAll('.fr-chip').forEach(c => {
+          c.classList.remove('used');
+          // Re-enable clicking but keep wordle colors as hints
+          c.style.pointerEvents = '';
+        });
+        inChipToPoolChip.clear();
         order = [];
         box.innerHTML = '<span style="color:#aaa;">Tap words below...</span>';
         box.classList.remove('correct', 'wrong');
@@ -1518,7 +1526,13 @@ window.FinalReviewModule = (function () {
           clearBtn.style.display = 'none';
           el('fr-scr-explain').classList.add('show');
           idx++;
-          setTimeout(showRelay, 1800);
+          // Manual proceed — let the user read the explanation
+          const nextBtn = document.createElement('button');
+          nextBtn.className = 'fr-btn fr-btn-primary';
+          nextBtn.style.marginTop = '12px';
+          nextBtn.textContent = idx < items.length ? 'Next Leg →' : 'Finish →';
+          nextBtn.onclick = showRelay;
+          el('fr-scr-explain').insertAdjacentElement('afterend', nextBtn);
         } else {
           // Wordle coloring: compare against best matching answer
           const answer = item.segments;
@@ -1547,11 +1561,17 @@ window.FinalReviewModule = (function () {
             }
           }
 
-          // Apply colors with staggered animation
+          // Apply colors with staggered animation — mirror to pool chips
           chips.forEach((chip, ci) => {
             setTimeout(() => {
               chip.classList.remove('wordle-green', 'wordle-yellow', 'wordle-gray');
               chip.classList.add('wordle-' + colors[ci], 'wordle-reveal');
+              // Mirror color to pool chip so it persists after clearing
+              const poolChip = inChipToPoolChip.get(chip);
+              if (poolChip) {
+                poolChip.classList.remove('wordle-green', 'wordle-yellow', 'wordle-gray');
+                poolChip.classList.add('wordle-' + colors[ci]);
+              }
             }, ci * 120);
           });
 
@@ -1569,7 +1589,13 @@ window.FinalReviewModule = (function () {
               clearBtn.style.display = 'none';
               el('fr-scr-explain').classList.add('show');
               idx++;
-              setTimeout(showRelay, 2000);
+              // Manual proceed — let the user read the explanation
+              const nextBtn = document.createElement('button');
+              nextBtn.className = 'fr-btn fr-btn-primary';
+              nextBtn.style.marginTop = '12px';
+              nextBtn.textContent = idx < items.length ? 'Next Leg →' : 'Finish →';
+              nextBtn.onclick = showRelay;
+              el('fr-scr-explain').insertAdjacentElement('afterend', nextBtn);
             }
             // Otherwise user can clear and retry (chips stay colored as hints)
           }, animTime);
