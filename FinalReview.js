@@ -180,7 +180,7 @@ window.FinalReviewModule = (function () {
         font-family: inherit;
         font-weight: 600;
       }
-      .fr-speed-choice:hover { border-color: var(--fr-primary); background: #fff0f3; }
+      @media (hover: hover) { .fr-speed-choice:hover { border-color: var(--fr-primary); background: #fff0f3; } }
       .fr-speed-choice.correct { background: #d4edda; border-color: #28a745; color: #155724; }
       .fr-speed-choice.wrong { background: #f8d7da; border-color: #dc3545; color: #721c24; }
       .fr-speed-streak {
@@ -302,7 +302,7 @@ window.FinalReviewModule = (function () {
         font-family: inherit;
         text-align: left;
       }
-      .fr-choice:hover { border-color: var(--fr-primary); }
+      @media (hover: hover) { .fr-choice:hover { border-color: var(--fr-primary); } }
       .fr-choice.correct { background: #d4edda; border-color: #28a745; }
       .fr-choice.wrong { background: #f8d7da; border-color: #dc3545; }
       .fr-choice.locked { pointer-events: none; }
@@ -367,7 +367,7 @@ window.FinalReviewModule = (function () {
         font-family: inherit;
         border: 2px solid transparent;
       }
-      .fr-chip:hover { background: #e0e0e0; }
+      @media (hover: hover) { .fr-chip:hover { background: #e0e0e0; } }
       .fr-chip.used { opacity: 0.3; pointer-events: none; }
       .fr-chip.in-box {
         background: white;
@@ -493,7 +493,7 @@ window.FinalReviewModule = (function () {
         transition: all 0.2s;
         font-family: inherit;
       }
-      .fr-cat-word:hover { border-color: var(--fr-primary); }
+      @media (hover: hover) { .fr-cat-word:hover { border-color: var(--fr-primary); } }
       .fr-cat-word.selected { border-color: var(--fr-primary); background: #fff0f3; }
       .fr-cat-word.placed { opacity: 0.3; pointer-events: none; }
       .fr-cat-slots {
@@ -551,7 +551,7 @@ window.FinalReviewModule = (function () {
         position: relative;
         user-select: none;
       }
-      .fr-bingo-cell:hover { border-color: var(--fr-primary); }
+      @media (hover: hover) { .fr-bingo-cell:hover { border-color: var(--fr-primary); } }
       .fr-bingo-cell.stamped {
         pointer-events: none;
       }
@@ -691,7 +691,7 @@ window.FinalReviewModule = (function () {
         white-space: nowrap;
         font-weight: 600;
       }
-      .fr-teacher-bar button:hover { background: #607D8B; }
+      @media (hover: hover) { .fr-teacher-bar button:hover { background: #607D8B; } }
       .fr-teacher-bar button.active {
         background: #FFD700;
         color: #263238;
@@ -725,7 +725,7 @@ window.FinalReviewModule = (function () {
         transition: transform 0.3s;
         position: relative;
       }
-      .fr-gift-box:hover { transform: scale(1.08); }
+      @media (hover: hover) { .fr-gift-box:hover { transform: scale(1.08); } }
       .fr-gift-box-body {
         width: 120px; height: 100px;
         background: linear-gradient(135deg, #E91E63, #C2185B);
