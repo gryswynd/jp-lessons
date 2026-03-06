@@ -166,12 +166,12 @@
     {
       "type": "conversation",
       "title": "Conversation 1: Japanese Class",
-      "context": "Miki and Ren chat just before their Japanese language class starts.",
+      "context": "Miki and Ren, close friends, chat casually before their Japanese class.",
       "lines": [
         {
           "spk": "ミキ",
-          "jp": "今日の 日本語の クラスは おもしろいですね。",
-          "en": "Today's Japanese class is interesting, isn't it.",
+          "jp": "今日の 日本語の クラスは おもしろいよね。",
+          "en": "Today's Japanese class is interesting, right.",
           "terms": [
             "v_kyou",
             "p_no",
@@ -179,46 +179,48 @@
             "p_no",
             "v_kurasu",
             "p_wa",
-            { "id": "v_omoshiroi", "form": "polite_adj" },
+            "v_omoshiroi",
+            "p_yo",
             "p_ne"
           ]
         },
         {
           "spk": "レン",
-          "jp": "そうですね。テストも あります。",
-          "en": "Yes. There is also a test.",
+          "jp": "うん。けど テストも あるよ。",
+          "en": "Yeah. But there's also a test.",
           "terms": [
-            "p_soudesu",
-            "p_ne",
+            "p_kedo",
             "v_tesuto",
             "p_mo",
-            { "id": "v_aru", "form": "polite_masu" }
+            "v_aru",
+            "p_yo"
           ]
         },
         {
           "spk": "ミキ",
-          "jp": "テストは 長いですか。",
+          "jp": "テストは 長いの。",
           "en": "Is the test long?",
           "terms": [
             "v_tesuto",
             "p_wa",
-            { "id": "v_nagai", "form": "polite_adj" },
-            "p_ka"
+            "v_nagai",
+            "p_no"
           ]
         },
         {
           "spk": "レン",
-          "jp": "ええ、長くて、よくないです。",
-          "en": "Yes, it's long and not good.",
+          "jp": "うん、長くて、よくないよ。",
+          "en": "Yeah, it's long and not good.",
           "terms": [
             { "id": "v_nagai", "form": "te_form" },
-            { "id": "v_ii", "form": "polite_negative" }
+            { "id": "v_ii", "form": "plain_negative" },
+            "p_yo"
           ]
         },
         {
           "spk": "ミキ",
-          "jp": "わたしも 日本語を たくさん 学びたいです。",
-          "en": "I also want to learn a lot of Japanese.",
+          "jp": "わたしも 日本語を たくさん 学びたいな。",
+          "en": "I want to learn a lot of Japanese too.",
           "terms": [
             "v_watashi",
             "p_mo",
@@ -230,15 +232,18 @@
         },
         {
           "spk": "レン",
-          "jp": "わたしも 学びたいです。学校で 学びましょう。",
-          "en": "I also want to learn. Let's study at school.",
+          "jp": "わたしも 学びたいよ。学校で たくさん 学びたいね。",
+          "en": "I want to learn too. I want to study a lot at school.",
           "terms": [
             "v_watashi",
             "p_mo",
             { "id": "v_manabu", "form": "desire_tai" },
+            "p_yo",
             "v_gakkou",
             "p_de",
-            { "id": "v_manabu", "form": "polite_volitional_mashou" }
+            "v_takusan",
+            { "id": "v_manabu", "form": "desire_tai" },
+            "p_ne"
           ]
         }
       ]
