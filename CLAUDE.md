@@ -18,9 +18,10 @@ This file governs how Claude Code creates all lesson content for this repository
 8. [Early-Use Vocabulary Rules](#early-use-vocabulary-rules)
 9. [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules)
 10. [Grammar Reinforcement Requirements](#grammar-reinforcement-requirements)
-11. [Quality Gates (Pass/Fail Criteria)](#quality-gates-passfail-criteria)
-12. [File & Structure Reference](#file--structure-reference)
-13. [Common Failure Modes](#common-failure-modes)
+11. [Register Requirements (Polite vs Casual)](#register-requirements-polite-vs-casual)
+12. [Quality Gates (Pass/Fail Criteria)](#quality-gates-passfail-criteria)
+13. [File & Structure Reference](#file--structure-reference)
+14. [Common Failure Modes](#common-failure-modes)
 
 ---
 
@@ -84,6 +85,7 @@ User Request
 - **Grammar scope lock.** For grammar lessons, the Content Brief's "Grammar points" list is a **locked scope**. Agent 2 may not add, remove, or substitute grammar points. If Agent 2 encounters a problem building content for a listed grammar point (e.g., the available vocabulary cannot support good examples), Agent 2 must flag this in the CB Checklist and return to Agent 1 for a scope adjustment — not silently swap in a different grammar point. Agent 1 documents any scope changes in the "Rewrite notes" field before redispatching.
 - **Grammar prerequisite validation.** Before finalizing the Content Brief, Agent 1 must verify that every grammar point listed can be taught given the `unlocksAfter` lesson. Ask: "Has the student been exposed to the concepts needed to understand this grammar point?" If not, defer the point to a later grammar lesson and note the deferral in the brief. Consult the prerequisite table in Agent 4's Grammar Scope Enforcement section.
 - **Grammar reinforcement planning.** Before finalizing the Content Brief, Agent 1 must consult the [Grammar Reinforcement Requirements](#grammar-reinforcement-requirements) schedule and identify: (a) which grammar milestones are in their **active reinforcement window** for this lesson, and (b) which milestones are in **sustained use**. List the specific reinforcement targets in the Content Brief. Plan at least 1 warmup item that exercises the most recently unlocked grammar using prior-lesson vocabulary. If the lesson's theme naturally supports certain grammar patterns (e.g. a travel theme supports ～たいです for desires, ～てください for requests), note these opportunities in the brief.
+- **Register planning.** Before finalizing the Content Brief, Agent 1 must consult the [Register Requirements](#register-requirements-polite-vs-casual) schedule and determine how many casual conversations the lesson needs. For N5.10+ lessons, plan which conversations will be casual by assigning informal contexts (friends, family, close peers). For lessons before N5.10, confirm register = 100% polite. Include the register plan in the Content Brief.
 
 **Content Brief format (internal working document):**
 
@@ -106,6 +108,10 @@ Grammar reinforcement:
   Sustained use: [milestones in sustained use — e.g. "Polite verbs (N5.5): all four forms should appear"]
   Warmup plan:   [which grammar pattern(s) to exercise in warmup items]
   Theme opportunities: [grammar patterns that fit the lesson theme naturally]
+Register plan:
+  Casual conversations: [0 if before N5.10; 1–3 depending on lesson range — see Register Requirements]
+  Casual contexts: [e.g. "Conv 3: two friends at a cafe", "Conv 5: siblings at home"]
+  Register focus: [which casual patterns to prioritize — e.g. "plain negative, けど connector, だ copula"]
 Rewrite notes: [empty on first pass; filled by Agent 4 feedback]
 ```
 
@@ -161,6 +167,11 @@ CB CHECKLIST
 [ ] Verb forms are varied across conversations (not all ます/ました — negatives, te-form, etc. are used where natural)
 [ ] At least 1 warmup item exercises the most recently unlocked grammar pattern with prior-lesson vocabulary
 [ ] Structural patterns (てください, ています, たいです, ましょう, etc.) appear where the lesson theme naturally supports them
+[ ] (N5.10+) Casual conversation count matches the Register Requirements schedule
+[ ] (N5.10+) Casual conversations use plain forms only — no ます/です in casual dialogue lines
+[ ] (N5.10+) Casual conversation contexts justify informal register (friends, family, close peers)
+[ ] (N5.10+) No register mixing within a single conversation — all lines use same register
+[ ] (Pre-N5.10) No casual register appears — all conversations are 100% polite
 [ ] (Reviews) Scramble items have segments, distractors (3 items), and explanation
 [ ] (Reviews) Scramble sentences with floatable time expressions or adverbs include an alts array
 [ ] (Reviews) Every review section has an instructions field
@@ -522,6 +533,8 @@ Never silently forward content without the accompanying documents. If an agent d
 **Warmup rule.** Warmup sections must contain **exactly 4 items**. All items must use **only** vocabulary and kanji from lessons already completed (lesson_ids strictly less than the current lesson). The purpose of the warmup is to activate prior knowledge, not preview new content. Any item that requires the student to read a new kanji or use a new vocabulary word from the current lesson is invalid.
 
 **Conversation count.** Match the conversation count of the reference template lesson (the highest-numbered existing lesson of the same level and type). If no template exists yet, default to at least 4 conversations. Fewer conversations than the template is a CB failure regardless of how rich the reading sections are.
+
+**Conversation register.** From N5.10 onward, at least 1 conversation per lesson must use casual register (plain forms). See [Register Requirements](#register-requirements-polite-vs-casual) for the full schedule and rules. Casual conversations must have a `context` that justifies informal speech and must not mix registers with polite conversations. Before N5.10, all conversations must be 100% polite.
 
 **Standalone kanji nouns.** When a lesson introduces kanji that are commonly used as standalone nouns (e.g. 水 = water, 木 = tree, 火 = fire, 月 = moon, 日 = sun, 土 = soil, 金 = gold), a dedicated `v_*` vocab entry (type: vocab, gtype: noun) must exist for that standalone use in addition to the `k_*` kanji entry. The `k_*` entry only powers the kanjiGrid display; the `v_*` entry is required for the word to be tappable in conversations and readings.
 
@@ -1102,6 +1115,7 @@ These words may be written in hiragana and used in content **from the listed les
 | `v_suki` | すき | N5.7 | 好き | N4.4 | Na-adjective "like" — needed for food/preference conversations |
 | `v_tsugi` | つぎ | N5.4 | 次 | (not taught) | "Next" — needed for sequencing and time expressions. 次 kanji is not formally introduced in any lesson; always write in hiragana. |
 | `v_koto` | こと | N5.9 | 事 | N4.14 | Nominalizer "thing/fact" — needed for ～ことがある, ～ことにする patterns. Write as こと before N4.14. |
+| `v_kinou` | きのう | N5.4 | 昨日 | (not taught) | "Yesterday" — essential time word paired with きょう. 昨 kanji is not formally introduced in any lesson; always write in hiragana. |
 
 **Example usage in N5.1 content:**
 ```json
@@ -1293,6 +1307,86 @@ This ensures students engage with new grammar patterns using familiar words, red
 
 ---
 
+## Register Requirements (Polite vs Casual)
+
+### The register principle
+
+> G9 (plain forms & basic connectors) formally teaches when and how to use casual speech — with friends, family, and in relaxed settings. From the first content lesson after G9 unlocks (**N5.10**), lessons must include casual conversations to reinforce plain forms, connectors, and commands/prohibition in natural context. The majority of content remains polite to maintain the student's strongest register.
+
+### Register schedule by lesson range
+
+| Lesson range | Casual conversations per lesson | Register balance | Notes |
+|---|---|---|---|
+| N5.1–N5.9 | 0 | 100% polite | G9 not yet available. All conversations use です/ます register. |
+| N5.10–N5.13 | 1 | ~75% polite, ~25% casual | First casual conversations. Keep them simple — friends/family contexts. |
+| N5.14–N5.18 | 1–2 | ~60% polite, ~40% casual | Expand casual contexts: classmates, siblings, close colleagues. |
+| N4.1–N4.18 | 2 | ~50% polite, ~50% casual | Balanced exposure. Casual in personal contexts, polite in service/formal contexts. |
+| N4.19–N4.36 | 2–3 | ~50% polite, ~50% casual | Same balance. Context drives register, not a fixed ratio. |
+
+### Casual conversation rules
+
+1. **Context signals register.** Every conversation has a `context` field. Casual conversations must have a context that justifies informal speech — friends, family, roommates, close classmates, etc. Example: `"context": "Two college friends discussing weekend plans"`. Never use casual register in service encounters, workplaces with superiors, or stranger interactions.
+
+2. **Do not mix registers within a conversation.** A character should not switch between ます and plain form mid-dialogue unless there is a clear in-story reason (e.g. a character talks to their teacher politely, then turns to a friend and speaks casually — but this would be two conversations, not one).
+
+3. **Casual conversations use plain forms naturally.** This means:
+   - Verbs in dictionary form, plain negative (～ない), plain past (～た), plain past negative (～なかった)
+   - だ instead of です for nouns and な-adjectives (but note: だ is often dropped in casual questions and feminine speech)
+   - い-adjectives without です (おいしい rather than おいしいです)
+   - Casual connectors: けど, から (clause-final), し, のに
+   - Sentence-final particles used more freely: よ, ね, な, かな
+   - Questions without ですか — rising intonation or の/かな instead
+
+4. **Casual ≠ rude.** Plain commands (～ろ/～え) and prohibition (～な) are blunt. Use them sparingly and only in appropriate contexts:
+   - Commands: sports coaching, very close male friends, playful/teasing tone, signs/instructions
+   - Prohibition: warning signs (触るな "don't touch"), urgent warnings, parental scolding
+   - For polite casual requests, use ～て (without ください) — this is the most common casual request form
+
+5. **Casual conversations should not be the hardest conversation in the lesson.** The new grammar being practiced is the plain forms themselves, so the casual conversations should feel accessible and natural — not packed with advanced vocabulary.
+
+6. **Tag plain forms correctly.** In casual conversations, verbs will use `plain_negative`, `plain_past`, `plain_past_negative`, and dictionary form (no form tag needed). Do not tag casual speech verbs with polite form tags. The copula だ should be tagged as `g_da` (not `g_desu`). See [Term Tagging Reference](#term-tagging-reference) for all valid form strings.
+
+### What to prioritize in early casual conversations (N5.10–N5.11)
+
+Focus on these patterns first — they are the core G9 concepts:
+
+| Pattern | Example | Priority |
+|---|---|---|
+| Plain negative (～ない) | 食べない、行かない、わからない | High — core G9 |
+| Plain past (～た) | 食べた、行った、見た | High — reinforces ta-form |
+| けど connector | 行きたいけど、お金がない | High — natural casual connector |
+| から as "because" | おいしいから食べる | High — clause-linking |
+| だ copula | これは本だ / 元気だ | Medium — dropped in questions |
+| Sentence-final の | どこに行くの？ | Medium — casual question form |
+| Plain command (～ろ) | Only in appropriate contexts | Low — use sparingly |
+| Prohibition (～な) | Signs/warnings only at first | Low — use sparingly |
+
+### What to avoid in early casual conversations
+
+- Don't use advanced casual patterns (んだけど, ちゃう/じゃう contractions, っぽい, etc.) before they are formally taught
+- Don't drop particles aggressively — casual speech drops は and を sometimes, but lessons should keep particle usage clear for learning purposes
+- Don't have all characters suddenly speaking casually — maintain a realistic social landscape where register depends on relationship
+
+### Register in other content types
+
+| Content type | Register rules |
+|---|---|
+| **Reviews** | Conversations may use either register. Mark context clearly so the student knows why. |
+| **Compose** | Stay in polite register by default. From N5.10+, include one challenge prompt in casual register if the theme supports it (e.g. "Now write a casual version for a friend"). |
+| **Stories** | Narrative prose uses plain past (standard for Japanese storytelling). Dialogue within stories follows the same register rules as lesson conversations — context determines register. |
+| **Drills** | MCQ items may test register awareness from N5.10+: "Which is the casual form of 食べます?" Scramble items may use either register. |
+
+### Enforcement summary
+
+| Agent | Register responsibility |
+|---|---|
+| **Agent 1** | Includes "Register plan" in the Content Brief. Identifies how many casual vs polite conversations to build. Plans casual conversation contexts. For lessons before N5.10, confirms register = 100% polite. |
+| **Agent 2** | Writes casual conversations using only available plain forms. Does not use casual register before N5.10. Tags plain forms correctly. Checks register in the CB Checklist. |
+| **Agent 3** | Verifies casual conversations only appear in N5.10+ lessons. Verifies plain forms used in casual conversations have `introducedIn` ≤ current lesson. Verifies no register mixing within a single conversation. |
+| **Agent 4** | Assesses naturalness of casual dialogue — does it sound like friends talking, not like a textbook exercise with です replaced by だ? Verifies the casual/polite ratio matches the schedule. Flags lessons that are 100% polite after N5.10 as a register reinforcement gap. |
+
+---
+
 ## Quality Gates (Pass/Fail Criteria)
 
 ### Agent 3 (QA) — hard pass/fail
@@ -1329,6 +1423,11 @@ All of the following must be TRUE for a QA pass:
 - [ ] (Stories) Every in-scope particle (p_* with introducedIn ≤ lesson scope) has an entry in terms.json
 - [ ] (Stories) g_desu (です) has an entry in terms.json if the story uses です
 - [ ] (Stories) terms.json keys exactly match the substrings as they appear in story.md
+- [ ] (Register) Lessons N5.10+ have at least 1 casual conversation (see [Register Requirements](#register-requirements-polite-vs-casual))
+- [ ] (Register) Lessons before N5.10 have zero casual conversations — 100% polite register
+- [ ] (Register) Casual conversations do not mix registers — no ます/です forms in casual dialogue lines, no plain forms in polite dialogue lines
+- [ ] (Register) Plain forms in casual conversations have `introducedIn` ≤ current lesson
+- [ ] (Register) Casual conversation `context` fields describe informal relationships (friends, family, close peers)
 
 ### Agent 4 (CR) — soft pass/fail (judgment-based)
 
@@ -1351,6 +1450,10 @@ All of the following should be TRUE for a CR pass:
 - [ ] The content builds genuine skill progression from the previous lesson
 - [ ] Distractors in drills are plausible but clearly wrong
 - [ ] Reading passages are coherent narratives, not disconnected sentences
+- [ ] **Register — ratio check:** Casual/polite conversation ratio matches the Register Requirements schedule for the lesson range (hard fail if a N5.10+ lesson has zero casual conversations)
+- [ ] **Register — naturalness:** Casual conversations sound like real informal speech, not polite sentences with です replaced by だ. Friends use contractions, sentence-final particles, and casual connectors naturally
+- [ ] **Register — context appropriateness:** No casual register in formal contexts (stores, offices with superiors, strangers). No polite register in explicitly casual contexts (close friends at home)
+- [ ] **Register — command/prohibition usage:** Plain commands (～ろ/～え) and prohibition (～な) appear only in appropriate contexts (signs, sports, close friends). Not overused or forced
 
 ---
 
@@ -1500,6 +1603,11 @@ These are the most frequent errors. All agents should be alert to them.
 33. **Early-use word written in kanji before kanji is taught** — writing 私 in N5.1 content when the kanji 私 is not introduced until N4.3. Early-use words must be written in their hiragana form (わたし) until the kanji lesson. Similarly, partial-kanji words must use their partial form (大すき, not 大好き) until all constituent kanji are taught. See [Early-Use Vocabulary Rules](#early-use-vocabulary-rules).
 34. **Early-use word written in hiragana after kanji is taught** — writing わたし in N4.5 content when the kanji 私 was introduced in N4.3. Once the kanji is available, the full kanji form must be used. Continuing to write hiragana after the kanji lesson is a missed learning opportunity.
 35. **Using an early-use word before its "Use from" lesson** — using すき in N5.3 content when the early-use list says it is available from N5.7. The "Use from" lesson is a hard gate, not a guideline.
+40. **Casual conversation before N5.10** — using plain forms in conversation dialogue before G9 has been taught. All conversations in N5.1–N5.9 must use polite register exclusively. A casual conversation in N5.8 is an out-of-scope grammar violation even if the individual plain forms are mechanically available.
+41. **No casual conversation after N5.10** — a lesson at N5.10 or later with zero casual conversations. The register schedule requires at least 1 casual conversation from N5.10 onward. Omitting casual conversations means students never practice plain forms in natural dialogue.
+42. **Register mixing within a conversation** — a character uses ます in one line and plain form in the next without an in-story reason. Each conversation must commit to one register throughout. Example failure: line 1 says 「今日は何を食べますか。」, line 2 responds 「ラーメン食べた。」 — the first speaker is polite, the second is casual, with no contextual justification.
+43. **Mechanical register swap (です→だ find-and-replace)** — writing casual conversations by taking polite sentences and replacing です with だ and ます with dictionary form, without adjusting sentence structure, particle usage, or adding natural casual markers (よ, ね, な, けど, し). Casual Japanese has its own rhythm — it is not polite Japanese with different verb endings. Example failure: 「わたしは学生だ。日本語を勉強する。」 reads like a textbook, not a friend talking. Natural casual: 「おれ、学生だよ。日本語勉強してるんだ。」
+44. **Overusing commands/prohibition** — packing ～ろ/～え commands and ～な prohibition into casual conversations where they don't belong. These forms are blunt/rude and used in narrow contexts (sports, male friends joking, warning signs, urgent situations). A casual conversation between friends discussing weekend plans should not have commands. Overuse makes the student think casual = aggressive.
 
 ### Agent 3 failures (caught by Agent 4)
 
@@ -1508,6 +1616,8 @@ These are the most frequent errors. All agents should be alert to them.
 3. **Missing a grammar level jump** — content using grammar structures 2–3 tiers above the lesson. Now that conjugation forms have concrete `introducedIn` fields, this should be caught by Agent 3's hard gate. But Agent 4 remains the backstop for structural patterns in `jp` text that Agent 3's form-tag check might miss (e.g. a ～ている pattern where the て and いる are tagged separately but neither tag explicitly carries a form that triggers the gate).
 4. **Kanji-only token scan** — checking that kanji-containing words are tagged but not scanning the full `jp` string token by token. Kana-only words (copulas like だ/だった, conjunctions, sentence-final particles, adverbs) can be out of scope, mis-tagged, or missing from `terms` entirely and will be invisible to a visual scan that only flags visually prominent kanji characters.
 5. **Passing under-reinforced content** — approving a draft that meets all structural requirements (correct tags, valid IDs, no out-of-scope forms) but fails to use recently-unlocked grammar. Agent 3 must count tagged forms against the reinforcement schedule minimums and reject drafts that don't meet active-window targets. This is the "floor" complement to the existing "ceiling" checks.
+6. **Approving register violations** — passing a N5.10+ lesson that has zero casual conversations, or a pre-N5.10 lesson that includes casual dialogue. Register requirements are structural checks equivalent to grammar reinforcement minimums — not style preferences.
+7. **Not catching register mixing** — a conversation where one character speaks politely and another speaks casually (without an in-story reason) should be flagged as a structural error, not accepted as "natural variation."
 
 ### Agent 4 failures (caught by Agent 1 in next pass)
 
@@ -1515,6 +1625,8 @@ These are the most frequent errors. All agents should be alert to them.
 2. **Rejecting content for subjective reasons** — if the only issue is style preference rather than a structural problem, prefer a pass with a note over a full rewrite.
 3. **Missing redundancy clusters** — assessing each sentence individually rather than reading scenes as sequences. A cluster of 2+ consecutive sentences that all convey the same fact (three ways of introducing a character, two ways of saying the location is large) is not caught by any per-sentence check. Agent 4 must scan for this pattern explicitly. The root cause is always forced vocabulary insertion by Agent 2, and the fix is a rewrite directive to Agent 1 to redesign the scene so the vocab word appears in a context that actually requires it.
 4. **Not catching grammar reinforcement gaps** — approving content where recently-taught grammar is absent. The Grammar Reinforcement Audit must be performed on every draft. Agent 4 cannot rely on "it sounds natural" as justification for content that avoids using available grammar — natural content that happens to only use ます/ました is still pedagogically deficient if the student knows te-form, negatives, desire, and volitional.
+5. **Approving mechanical casual dialogue** — casual conversations that read like polite conversations with です/ます find-and-replaced to だ/dictionary form. Real casual Japanese has different rhythm, particle usage, and sentence structure. Agent 4 must assess whether casual conversations sound like genuine informal speech between friends.
+6. **Not flagging register ratio violations** — approving a N5.12 lesson where all 5 conversations are polite. The register schedule requires at least 1 casual conversation from N5.10. Agent 4 must check the ratio, not just the individual conversations.
 
 ### Grammar-specific cross-agent failures
 
