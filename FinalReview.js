@@ -718,6 +718,9 @@ window.FinalReviewModule = (function () {
         overflow: hidden;
         min-height: 400px;
       }
+      .fr-gift-scene.fr-scene-expanded {
+        min-height: 80vh;
+      }
       .fr-gift-box {
         display: inline-block;
         cursor: pointer;
@@ -2164,6 +2167,8 @@ window.FinalReviewModule = (function () {
           rikizo.style.opacity = '1';
           rikizo.classList.add('running');
 
+          // Expand scene so waypoints use the full viewport
+          scene.classList.add('fr-scene-expanded');
           const sceneW = scene.offsetWidth;
           const sceneH = scene.offsetHeight;
 
