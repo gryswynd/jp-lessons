@@ -2173,16 +2173,17 @@ window.FinalReviewModule = (function () {
           const sceneW = scene.offsetWidth;
           const sceneH = scene.offsetHeight;
 
-          // Run path: use a smaller offset so Rikizo travels the full width.
-          // The 250px sprite has padding around the character — using 80px
-          // keeps the visible character on screen while maximizing travel.
-          const sprOff = 80;
+          // Run path: sprite is 250px but visible character is ~150px centered
+          // within it, so ~50px of transparent padding on each side.
+          // Offset by 50px so the visible character reaches the edges.
+          const sprSize = 250;
+          const pad = 50;
           const waypoints = [
-            { x: sceneW - sprOff, y: 10 },                             // top-right
-            { x: sceneW - sprOff, y: sceneH - sprOff - 40 },           // bottom-right
-            { x: -40, y: sceneH - sprOff - 40 },                       // bottom-left
-            { x: -40, y: 10 },                                          // top-left
-            { x: (sceneW - 250) / 2, y: (sceneH - 250) / 2 }          // center
+            { x: sceneW - sprSize + pad, y: -pad },                    // top-right
+            { x: sceneW - sprSize + pad, y: sceneH - sprSize + pad },  // bottom-right
+            { x: -pad, y: sceneH - sprSize + pad },                    // bottom-left
+            { x: -pad, y: -pad },                                       // top-left
+            { x: (sceneW - sprSize) / 2, y: (sceneH - sprSize) / 2 }  // center
           ];
 
           let wpIdx = 0;
@@ -2218,6 +2219,9 @@ window.FinalReviewModule = (function () {
 
     // Build the final score UI inside the scene
     scene.innerHTML = '';
+
+    // Restore padding for the score display
+    scene.style.padding = '60px 20px';
 
     // Score content first
     const scoreDiv = document.createElement('div');
