@@ -77,6 +77,30 @@
           '  margin-top: 15px; background: #d4edda; color: #155724;',
           '  padding: 8px 16px; border-radius: 20px; font-weight: 700;',
           '  font-size: 0.85rem; display: none;',
+          '}',
+          '/* Character name highlights */',
+          '.jp-term-name {',
+          '  color: #d45d8a; border-bottom: 2px solid #f4a7c0; cursor: pointer;',
+          '}',
+          '.jp-term-name:hover { color: #b8446e; }',
+          '/* Character card modal variant */',
+          '.jp-modal.jp-modal-character {',
+          '  max-width: 280px; padding: 24px 24px 20px;',
+          '  background: linear-gradient(160deg, #fff5f9 0%, #fff 60%);',
+          '}',
+          '.jp-char-portrait {',
+          '  width: 120px; height: 120px; object-fit: contain;',
+          '  image-rendering: pixelated; margin: 0 auto 12px; display: block;',
+          '}',
+          '.jp-char-name {',
+          '  font-size: 1.6rem; font-weight: 800; color: #d45d8a; margin: 0 0 4px;',
+          '}',
+          '.jp-char-reading {',
+          '  font-size: 1rem; color: #9b6e80; font-weight: 600; margin-bottom: 10px;',
+          '  letter-spacing: 0.08em;',
+          '}',
+          '.jp-char-desc {',
+          '  font-size: 0.82rem; color: #747d8c; line-height: 1.5;',
           '}'
         ].join('\n');
         document.head.appendChild(style);
@@ -90,10 +114,20 @@
       overlay.innerHTML = [
         '<div class="jp-modal">',
         '  <button class="jp-close-btn">✕</button>',
-        '  <h2 id="jp-m-title" style="margin:0 0 5px 0; color:#4e54c8; font-size:2rem;"></h2>',
-        '  <div id="jp-m-meta" style="color:#747d8c; font-weight:700; margin-bottom:15px;"></div>',
-        '  <div id="jp-m-notes" style="line-height:1.5; margin-bottom:15px; font-size:0.95rem; color:#2d3436;"></div>',
-        '  <div class="jp-auto-flag-msg">\u2705 Added to Practice Queue</div>',
+        '  <!-- Standard vocab modal -->',
+        '  <div id="jp-m-vocab">',
+        '    <h2 id="jp-m-title" style="margin:0 0 5px 0; color:#4e54c8; font-size:2rem;"></h2>',
+        '    <div id="jp-m-meta" style="color:#747d8c; font-weight:700; margin-bottom:15px;"></div>',
+        '    <div id="jp-m-notes" style="line-height:1.5; margin-bottom:15px; font-size:0.95rem; color:#2d3436;"></div>',
+        '    <div class="jp-auto-flag-msg">\u2705 Added to Practice Queue</div>',
+        '  </div>',
+        '  <!-- Character card -->',
+        '  <div id="jp-m-character" style="display:none;">',
+        '    <img id="jp-m-portrait" class="jp-char-portrait" src="" alt="">',
+        '    <div id="jp-m-char-name" class="jp-char-name"></div>',
+        '    <div id="jp-m-char-reading" class="jp-char-reading"></div>',
+        '    <div id="jp-m-char-desc" class="jp-char-desc"></div>',
+        '  </div>',
         '</div>'
       ].join('\n');
       document.body.appendChild(overlay);
@@ -129,6 +163,36 @@
 
       var t = _termMap[termId];
       if (!t) return;
+
+      var modal    = document.querySelector('.jp-modal');
+      var vocabEl  = document.getElementById('jp-m-vocab');
+      var charEl   = document.getElementById('jp-m-character');
+      var overlay  = document.querySelector('.jp-modal-overlay');
+
+      // --- Character card branch ---
+      if (t.type === 'character') {
+        if (modal)   { modal.classList.add('jp-modal-character'); }
+        if (vocabEl) { vocabEl.style.display = 'none'; }
+        if (charEl)  { charEl.style.display = 'block'; }
+
+        var portrait = document.getElementById('jp-m-portrait');
+        var nameEl   = document.getElementById('jp-m-char-name');
+        var readEl   = document.getElementById('jp-m-char-reading');
+        var descEl   = document.getElementById('jp-m-char-desc');
+
+        if (portrait) { portrait.src = t.portraitUrl || t.portrait || ''; portrait.alt = t.meaning || ''; }
+        if (nameEl)   { nameEl.innerText = t.surface || ''; }
+        if (readEl)   { readEl.innerText = t.reading || ''; }
+        if (descEl)   { descEl.innerText = t.description || ''; }
+
+        if (overlay) overlay.style.display = 'flex';
+        return;
+      }
+
+      // --- Standard vocab modal ---
+      if (modal)   { modal.classList.remove('jp-modal-character'); }
+      if (vocabEl) { vocabEl.style.display = 'block'; }
+      if (charEl)  { charEl.style.display = 'none'; }
 
       var textToSpeak = t.reading || t.surface;
 
@@ -181,7 +245,6 @@
       }
 
       // --- Show ---
-      var overlay = document.querySelector('.jp-modal-overlay');
       if (overlay) overlay.style.display = 'flex';
     }
 
