@@ -240,6 +240,20 @@ window.FinalReviewModule = (function () {
         line-height: 1.6;
       }
 
+      /* ── Clickable term spans (shared with Lesson/Review) ── */
+      .jp-term {
+        color: #4e54c8;
+        font-weight: 700;
+        cursor: pointer;
+        margin-right: 1px;
+        border-bottom: 2px solid rgba(78,84,200,0.1);
+        transition: 0.2s;
+      }
+      .jp-term:hover {
+        background: rgba(78,84,200,0.05);
+        border-bottom-color: #4e54c8;
+      }
+
       /* ── Grammar Roulette ── */
       .fr-wheel-container {
         position: relative;
@@ -921,11 +935,19 @@ window.FinalReviewModule = (function () {
       });
       (Array.isArray(particles) ? particles : []).forEach(p => {
         if (p.id) {
-          // Normalize: particles use "particle" field instead of "surface"
-          if (p.particle && !p.surface) p.surface = p.particle;
-          termMap[p.id] = p;
+          // Normalize particle fields to match glossary term shape expected by term-modal
+          termMap[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle' };
         }
       });
+
+      // Wire up term modal so tapping vocab shows meaning popup
+      window.JPShared.termModal.setTermMap(termMap);
+      window.JPShared.termModal.inject();
+      window.JP_OPEN_TERM = function(id, enableFlag) {
+        window.JPShared.termModal.open(id, {
+          enableFlag: enableFlag !== false
+        });
+      };
 
       // Build full kanji pool from manifest for bingo card generation
       allKanjiPool = [];
