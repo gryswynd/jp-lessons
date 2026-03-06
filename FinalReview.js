@@ -2098,14 +2098,16 @@ window.FinalReviewModule = (function () {
           const sceneW = scene.offsetWidth;
           const sceneH = scene.offsetHeight;
 
-          // Run path: waypoints sized for the 250px sprite
-          const sprW = 250;
+          // Run path: use a smaller offset so Rikizo travels the full width.
+          // The 250px sprite has padding around the character — using 80px
+          // keeps the visible character on screen while maximizing travel.
+          const sprOff = 80;
           const waypoints = [
-            { x: sceneW - sprW - 10, y: 10 },                      // top-right
-            { x: sceneW - sprW - 10, y: sceneH - sprW - 10 },      // bottom-right
-            { x: 10, y: sceneH - sprW - 10 },                       // bottom-left
-            { x: 10, y: 10 },                                        // top-left
-            { x: (sceneW - sprW) / 2, y: (sceneH - sprW) / 2 }     // center
+            { x: sceneW - sprOff, y: 10 },                             // top-right
+            { x: sceneW - sprOff, y: sceneH - sprOff - 40 },           // bottom-right
+            { x: -40, y: sceneH - sprOff - 40 },                       // bottom-left
+            { x: -40, y: 10 },                                          // top-left
+            { x: (sceneW - 250) / 2, y: (sceneH - 250) / 2 }          // center
           ];
 
           let wpIdx = 0;
