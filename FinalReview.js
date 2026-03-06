@@ -1092,17 +1092,27 @@ window.FinalReviewModule = (function () {
 
   function runSection(sec) {
     const stage = el('fr-stage');
-    switch (sec.type) {
-      case 'speed_round':     renderSpeedRound(stage, sec); break;
-      case 'conversation':    renderConversation(stage, sec); break;
-      case 'grammar_roulette': renderGrammarRoulette(stage, sec); break;
-      case 'scramble_relay':  renderScrambleRelay(stage, sec); break;
-      case 'detective_reading': renderDetectiveReading(stage, sec); break;
-      case 'match_pairs':     renderMatchPairs(stage, sec); break;
-      case 'vocab_categories': renderVocabCategories(stage, sec); break;
-      case 'kanji_bingo':     renderKanjiBingo(stage, sec); break;
-      default:
-        stage.innerHTML = '<p>Unknown section type: ' + sec.type + '</p>';
+    try {
+      switch (sec.type) {
+        case 'speed_round':     renderSpeedRound(stage, sec); break;
+        case 'conversation':    renderConversation(stage, sec); break;
+        case 'grammar_roulette': renderGrammarRoulette(stage, sec); break;
+        case 'scramble_relay':  renderScrambleRelay(stage, sec); break;
+        case 'detective_reading': renderDetectiveReading(stage, sec); break;
+        case 'match_pairs':     renderMatchPairs(stage, sec); break;
+        case 'vocab_categories': renderVocabCategories(stage, sec); break;
+        case 'kanji_bingo':     renderKanjiBingo(stage, sec); break;
+        default:
+          stage.innerHTML = '<p>Unknown section type: ' + sec.type + '</p>';
+      }
+    } catch (err) {
+      console.error('[FinalReview] Section render error:', err);
+      stage.innerHTML = '<div style="color:red;padding:20px;text-align:center;">' +
+        '<p><b>Error in ' + sec.type + ':</b></p>' +
+        '<p>' + err.message + '</p>' +
+        '<pre style="text-align:left;font-size:0.7rem;overflow:auto;max-height:200px;">' + err.stack + '</pre>' +
+        '<button class="fr-btn fr-btn-primary" style="margin-top:16px;" onclick="document.getElementById(\'fr-stage\').innerHTML=\'\'">Skip Section</button>' +
+        '</div>';
     }
   }
 
