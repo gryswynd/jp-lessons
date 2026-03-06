@@ -165,85 +165,90 @@
     },
     {
       "type": "conversation",
-      "title": "Conversation 1: Japanese Class",
-      "context": "Miki and Ren, close friends, chat casually before their Japanese class.",
+      "title": "Conversation 1: Before the Test",
+      "context": "The school principal talks to Miki about an important upcoming test.",
       "lines": [
         {
-          "spk": "ミキ",
-          "jp": "今日の 日本語の クラスは おもしろいよね。",
-          "en": "Today's Japanese class is interesting, right.",
+          "spk": "校長",
+          "jp": "来週、大きい テストが あります。学生は よく 学んでください。",
+          "en": "Next week there is a big test. Students, please study well.",
           "terms": [
-            "v_kyou",
-            "p_no",
+            "v_raishuu",
+            "v_ookii",
+            "v_tesuto",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" },
+            "v_gakusei",
+            "p_wa",
+            { "id": "v_ii", "form": "adverbial" },
+            { "id": "v_manabu", "form": "te_form" }
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "はい。日本語の テストですか。",
+          "en": "Yes. Is it a Japanese test?",
+          "terms": [
+            "p_hai",
             "v_nihongo",
             "p_no",
-            "v_kurasu",
-            "p_wa",
-            "v_omoshiroi",
-            "p_yo",
-            "p_ne"
-          ]
-        },
-        {
-          "spk": "レン",
-          "jp": "うん。けど テストも あるよ。",
-          "en": "Yeah. But there's also a test.",
-          "terms": [
-            "p_kedo",
             "v_tesuto",
-            "p_mo",
-            "v_aru",
-            "p_yo"
+            "g_desu",
+            "p_ka"
           ]
         },
         {
-          "spk": "ミキ",
-          "jp": "テストは 長いの。",
-          "en": "Is the test long?",
+          "spk": "校長",
+          "jp": "ええ、日本語と 学校の テストです。",
+          "en": "Yes, it's a Japanese and school test.",
           "terms": [
-            "v_tesuto",
-            "p_wa",
-            "v_nagai",
-            "p_no"
-          ]
-        },
-        {
-          "spk": "レン",
-          "jp": "うん、長くて、よくないよ。",
-          "en": "Yeah, it's long and not good.",
-          "terms": [
-            { "id": "v_nagai", "form": "te_form" },
-            { "id": "v_ii", "form": "plain_negative" },
-            "p_yo"
-          ]
-        },
-        {
-          "spk": "ミキ",
-          "jp": "わたしも 日本語を たくさん 学びたいな。",
-          "en": "I want to learn a lot of Japanese too.",
-          "terms": [
-            "v_watashi",
-            "p_mo",
             "v_nihongo",
-            "p_wo",
-            "v_takusan",
-            { "id": "v_manabu", "form": "plain_desire_tai" }
+            "p_to",
+            "v_gakkou",
+            "p_no",
+            "v_tesuto",
+            "g_desu"
           ]
         },
         {
-          "spk": "レン",
-          "jp": "わたしも 学びたいよ。学校で たくさん 学びたいね。",
-          "en": "I want to learn too. I want to study a lot at school.",
+          "spk": "ミキ",
+          "jp": "テストは おもしろいですか、つまらないですか。",
+          "en": "Is the test interesting or boring?",
           "terms": [
-            "v_watashi",
-            "p_mo",
-            { "id": "v_manabu", "form": "plain_desire_tai" },
-            "p_yo",
+            "v_tesuto",
+            "p_wa",
+            { "id": "v_omoshiroi", "form": "polite_adj" },
+            "p_ka",
+            { "id": "v_tsumaranai", "form": "polite_adj" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "校長",
+          "jp": "つまらないですが、よく 学んでください。大学に 行きたいですか。",
+          "en": "It's boring, but please study well. Do you want to go to university?",
+          "terms": [
+            { "id": "v_tsumaranai", "form": "polite_adj" },
+            "p_ga_but",
+            { "id": "v_ii", "form": "adverbial" },
+            { "id": "v_manabu", "form": "te_form" },
+            "v_daigaku",
+            "p_ni",
+            { "id": "v_iku", "form": "desire_tai" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "はい！毎日 学校で よく 学びます。",
+          "en": "Yes! I will study well at school every day.",
+          "terms": [
+            "p_hai",
+            "v_mainichi",
             "v_gakkou",
             "p_de",
-            "v_takusan",
-            { "id": "v_manabu", "form": "plain_desire_tai" },
-            "p_ne"
+            { "id": "v_ii", "form": "adverbial" },
+            { "id": "v_manabu", "form": "polite_masu" }
           ]
         }
       ]
@@ -431,90 +436,85 @@
     },
     {
       "type": "conversation",
-      "title": "Conversation 4: Before the Test",
-      "context": "The school principal talks to Miki about an important upcoming test.",
+      "title": "Conversation 4: Japanese Class (Casual)",
+      "context": "Miki and Ren, close friends, chat casually before their Japanese class.",
       "lines": [
         {
-          "spk": "校長",
-          "jp": "来週、大きい テストが あります。学生は よく 学んでください。",
-          "en": "Next week there is a big test. Students, please study well.",
+          "spk": "ミキ",
+          "jp": "今日の 日本語の クラスは おもしろいよね。",
+          "en": "Today's Japanese class is interesting, right.",
           "terms": [
-            "v_raishuu",
-            "v_ookii",
-            "v_tesuto",
-            "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
-            "v_gakusei",
+            "v_kyou",
+            "p_no",
+            "v_nihongo",
+            "p_no",
+            "v_kurasu",
             "p_wa",
-            { "id": "v_ii", "form": "adverbial" },
-            { "id": "v_manabu", "form": "te_form" }
+            "v_omoshiroi",
+            "p_yo",
+            "p_ne"
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "うん。けど テストも あるよ。",
+          "en": "Yeah. But there's also a test.",
+          "terms": [
+            "p_kedo",
+            "v_tesuto",
+            "p_mo",
+            "v_aru",
+            "p_yo"
           ]
         },
         {
           "spk": "ミキ",
-          "jp": "はい。日本語の テストですか。",
-          "en": "Yes. Is it a Japanese test?",
-          "terms": [
-            "p_hai",
-            "v_nihongo",
-            "p_no",
-            "v_tesuto",
-            "g_desu",
-            "p_ka"
-          ]
-        },
-        {
-          "spk": "校長",
-          "jp": "ええ、日本語と 学校の テストです。",
-          "en": "Yes, it's a Japanese and school test.",
-          "terms": [
-            "v_nihongo",
-            "p_to",
-            "v_gakkou",
-            "p_no",
-            "v_tesuto",
-            "g_desu"
-          ]
-        },
-        {
-          "spk": "ミキ",
-          "jp": "テストは おもしろいですか、つまらないですか。",
-          "en": "Is the test interesting or boring?",
+          "jp": "テストは 長いの。",
+          "en": "Is the test long?",
           "terms": [
             "v_tesuto",
             "p_wa",
-            { "id": "v_omoshiroi", "form": "polite_adj" },
-            "p_ka",
-            { "id": "v_tsumaranai", "form": "polite_adj" },
-            "p_ka"
+            "v_nagai",
+            "p_no"
           ]
         },
         {
-          "spk": "校長",
-          "jp": "つまらないですが、よく 学んでください。大学に 行きたいですか。",
-          "en": "It's boring, but please study well. Do you want to go to university?",
+          "spk": "レン",
+          "jp": "うん、長くて、よくないよ。",
+          "en": "Yeah, it's long and not good.",
           "terms": [
-            { "id": "v_tsumaranai", "form": "polite_adj" },
-            "p_ga_but",
-            { "id": "v_ii", "form": "adverbial" },
-            { "id": "v_manabu", "form": "te_form" },
-            "v_daigaku",
-            "p_ni",
-            { "id": "v_iku", "form": "desire_tai" },
-            "p_ka"
+            { "id": "v_nagai", "form": "te_form" },
+            { "id": "v_ii", "form": "plain_negative" },
+            "p_yo"
           ]
         },
         {
           "spk": "ミキ",
-          "jp": "はい！毎日 学校で よく 学びます。",
-          "en": "Yes! I will study well at school every day.",
+          "jp": "わたしも 日本語を たくさん 学びたいな。",
+          "en": "I want to learn a lot of Japanese too.",
           "terms": [
-            "p_hai",
-            "v_mainichi",
+            "v_watashi",
+            "p_mo",
+            "v_nihongo",
+            "p_wo",
+            "v_takusan",
+            { "id": "v_manabu", "form": "plain_desire_tai" }
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "わたしも 学びたいよ。学校で たくさん 学びたいね。",
+          "en": "I want to learn too. I want to study a lot at school.",
+          "terms": [
+            "v_watashi",
+            "p_mo",
+            { "id": "v_manabu", "form": "plain_desire_tai" },
+            "p_yo",
             "v_gakkou",
             "p_de",
-            { "id": "v_ii", "form": "adverbial" },
-            { "id": "v_manabu", "form": "polite_masu" }
+            "v_takusan",
+            { "id": "v_manabu", "form": "plain_desire_tai" },
+            "p_ne"
           ]
         }
       ]

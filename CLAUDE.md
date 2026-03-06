@@ -1334,6 +1334,8 @@ This ensures students engage with new grammar patterns using familiar words, red
 
 1. **Context signals register.** Every conversation has a `context` field. Casual conversations must have a context that justifies informal speech — friends, family, roommates, close classmates, etc. Example: `"context": "Two college friends discussing weekend plans"`. Never use casual register in service encounters, workplaces with superiors, or stranger interactions.
 
+1b. **Casual conversations go last and are labelled.** Within a lesson, casual conversations must be the final conversation(s) — after all polite conversations. Their `title` must include `(Casual)` at the end, e.g. `"Conversation 4: Weekend Plans (Casual)"`. This makes the register shift explicit so students know what to expect.
+
 2. **Do not mix registers within a conversation.** A character should not switch between ます and plain form mid-dialogue unless there is a clear in-story reason (e.g. a character talks to their teacher politely, then turns to a friend and speaks casually — but this would be two conversations, not one).
 
 3. **Casual conversations use plain forms naturally.** This means:

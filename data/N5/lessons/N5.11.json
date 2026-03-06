@@ -240,88 +240,91 @@
     },
     {
       "type": "conversation",
-      "title": "Conversation 2: Fish by the River",
-      "context": "Miki and Ren, close friends, spot fish and goldfish while walking along the river.",
+      "title": "Conversation 2: Fireworks Festival",
+      "context": "Miki and Ren make plans to see the fireworks and eat before the show.",
       "lines": [
         {
           "spk": "ミキ",
-          "jp": "川に 大きい 魚が いるよ。かわいいね。",
-          "en": "There are big fish in the river. They're cute.",
+          "jp": "今日の 花火は きれいそうですね。",
+          "en": "Today's fireworks look like they'll be beautiful.",
           "terms": [
-            "v_kawa",
-            "p_ni",
-            "v_ookii",
-            "v_sakana",
-            "p_ga",
-            "v_iru",
-            "p_yo",
-            "v_kawaii",
+            "v_kyou",
+            "p_no",
+            "v_hanabi",
+            "p_wa",
+            { "id": "v_kirei", "form": "appearance_sou" },
             "p_ne"
           ]
         },
         {
           "spk": "レン",
-          "jp": "うん。川の 魚は おいしそうだね。",
-          "en": "Yeah. The river fish looks delicious.",
+          "jp": "ええ！毎年、花火は 大きくて、きれいですよ。",
+          "en": "Yes! Every year the fireworks are big and beautiful.",
           "terms": [
-            "v_kawa",
-            "p_no",
-            "v_sakana",
+            "v_mainen",
+            "v_hanabi",
             "p_wa",
-            { "id": "v_oishii", "form": "plain_appearance_sou" },
-            "p_ne"
-          ]
-        },
-        {
-          "spk": "ミキ",
-          "jp": "え！魚を 食べたいの。",
-          "en": "What! You want to eat fish?",
-          "terms": [
-            "v_sakana",
-            "p_wo",
-            { "id": "v_taberu", "form": "plain_desire_tai" },
-            "p_no"
-          ]
-        },
-        {
-          "spk": "レン",
-          "jp": "うん！川の 魚は おいしいからね。食べたいよ。",
-          "en": "Yeah! River fish is delicious, you know. I want to eat some.",
-          "terms": [
-            "v_kawa",
-            "p_no",
-            "v_sakana",
-            "p_wa",
-            "v_oishii",
-            "p_kara_because",
-            "p_ne",
-            { "id": "v_taberu", "form": "plain_desire_tai" },
+            { "id": "v_ookii", "form": "te_form" },
+            { "id": "v_kirei", "form": "polite_adj" },
             "p_yo"
           ]
         },
         {
           "spk": "ミキ",
-          "jp": "金魚も いるよ。かわいいね。",
-          "en": "There are goldfish too. They're cute.",
+          "jp": "花火は 高いですか。",
+          "en": "Are the fireworks expensive?",
           "terms": [
-            "v_kingyo",
-            "p_mo",
-            "v_iru",
-            "p_yo",
-            "v_kawaii",
-            "p_ne"
+            "v_hanabi",
+            "p_wa",
+            { "id": "v_takai", "form": "polite_adj" },
+            "p_ka"
           ]
         },
         {
           "spk": "レン",
-          "jp": "うん、金魚は きれいで、かわいいよね。",
-          "en": "Yeah, goldfish are beautiful and cute, right.",
+          "jp": "高くないですよ。安い 花火ですよ。",
+          "en": "They're not expensive. They're cheap fireworks.",
           "terms": [
-            "v_kingyo",
+            { "id": "v_takai", "form": "plain_negative" },
+            "g_desu",
+            "p_yo",
+            { "id": "v_yasui", "form": "polite_adj" },
+            "v_hanabi",
+            "g_desu",
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "よかったです！花火の 前に、カレーを 食べましょう。",
+          "en": "That's great! Let's eat curry before the fireworks.",
+          "terms": [
+            { "id": "v_ii", "form": "polite_past_adj" },
+            "v_hanabi",
+            "p_no",
+            "v_mae",
+            "p_ni",
+            "v_karee",
+            "p_wo",
+            { "id": "v_taberu", "form": "polite_volitional_mashou" }
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "いいですね。花火は きれいで、カレーも おいしくて、いい 日ですね。",
+          "en": "Sounds good. The fireworks are beautiful, the curry is also delicious, it's a great day.",
+          "terms": [
+            { "id": "v_ii", "form": "polite_adj" },
+            "p_ne",
+            "v_hanabi",
             "p_wa",
             { "id": "v_kirei", "form": "te_form" },
-            "v_kawaii",
-            "p_yo",
+            "v_karee",
+            "p_mo",
+            { "id": "v_oishii", "form": "te_form" },
+            { "id": "v_ii", "form": "polite_adj" },
+            "v_hi",
+            "g_desu",
             "p_ne"
           ]
         }
@@ -425,91 +428,88 @@
     },
     {
       "type": "conversation",
-      "title": "Conversation 4: Fireworks Festival",
-      "context": "Miki and Ren make plans to see the fireworks and eat before the show.",
+      "title": "Conversation 4: Fish by the River (Casual)",
+      "context": "Miki and Ren, close friends, spot fish and goldfish while walking along the river.",
       "lines": [
         {
           "spk": "ミキ",
-          "jp": "今日の 花火は きれいそうですね。",
-          "en": "Today's fireworks look like they'll be beautiful.",
+          "jp": "川に 大きい 魚が いるよ。かわいいね。",
+          "en": "There are big fish in the river. They're cute.",
           "terms": [
-            "v_kyou",
-            "p_no",
-            "v_hanabi",
-            "p_wa",
-            { "id": "v_kirei", "form": "appearance_sou" },
+            "v_kawa",
+            "p_ni",
+            "v_ookii",
+            "v_sakana",
+            "p_ga",
+            "v_iru",
+            "p_yo",
+            "v_kawaii",
             "p_ne"
           ]
         },
         {
           "spk": "レン",
-          "jp": "ええ！毎年、花火は 大きくて、きれいですよ。",
-          "en": "Yes! Every year the fireworks are big and beautiful.",
+          "jp": "うん。川の 魚は おいしそうだね。",
+          "en": "Yeah. The river fish looks delicious.",
           "terms": [
-            "v_mainen",
-            "v_hanabi",
-            "p_wa",
-            { "id": "v_ookii", "form": "te_form" },
-            { "id": "v_kirei", "form": "polite_adj" },
-            "p_yo"
-          ]
-        },
-        {
-          "spk": "ミキ",
-          "jp": "花火は 高いですか。",
-          "en": "Are the fireworks expensive?",
-          "terms": [
-            "v_hanabi",
-            "p_wa",
-            { "id": "v_takai", "form": "polite_adj" },
-            "p_ka"
-          ]
-        },
-        {
-          "spk": "レン",
-          "jp": "高くないですよ。安い 花火ですよ。",
-          "en": "They're not expensive. They're cheap fireworks.",
-          "terms": [
-            { "id": "v_takai", "form": "plain_negative" },
-            "g_desu",
-            "p_yo",
-            { "id": "v_yasui", "form": "polite_adj" },
-            "v_hanabi",
-            "g_desu",
-            "p_yo"
-          ]
-        },
-        {
-          "spk": "ミキ",
-          "jp": "よかったです！花火の 前に、カレーを 食べましょう。",
-          "en": "That's great! Let's eat curry before the fireworks.",
-          "terms": [
-            { "id": "v_ii", "form": "polite_past_adj" },
-            "v_hanabi",
+            "v_kawa",
             "p_no",
-            "v_mae",
-            "p_ni",
-            "v_karee",
+            "v_sakana",
+            "p_wa",
+            { "id": "v_oishii", "form": "plain_appearance_sou" },
+            "p_ne"
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "え！魚を 食べたいの。",
+          "en": "What! You want to eat fish?",
+          "terms": [
+            "v_sakana",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_volitional_mashou" }
+            { "id": "v_taberu", "form": "plain_desire_tai" },
+            "p_no"
           ]
         },
         {
           "spk": "レン",
-          "jp": "いいですね。花火は きれいで、カレーも おいしくて、いい 日ですね。",
-          "en": "Sounds good. The fireworks are beautiful, the curry is also delicious, it's a great day.",
+          "jp": "うん！川の 魚は おいしいからね。食べたいよ。",
+          "en": "Yeah! River fish is delicious, you know. I want to eat some.",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
+            "v_kawa",
+            "p_no",
+            "v_sakana",
+            "p_wa",
+            "v_oishii",
+            "p_kara_because",
             "p_ne",
-            "v_hanabi",
+            { "id": "v_taberu", "form": "plain_desire_tai" },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "金魚も いるよ。かわいいね。",
+          "en": "There are goldfish too. They're cute.",
+          "terms": [
+            "v_kingyo",
+            "p_mo",
+            "v_iru",
+            "p_yo",
+            "v_kawaii",
+            "p_ne"
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "うん、金魚は きれいで、かわいいよね。",
+          "en": "Yeah, goldfish are beautiful and cute, right.",
+          "terms": [
+            "v_kingyo",
             "p_wa",
             { "id": "v_kirei", "form": "te_form" },
-            "v_karee",
-            "p_mo",
-            { "id": "v_oishii", "form": "te_form" },
-            { "id": "v_ii", "form": "polite_adj" },
-            "v_hi",
-            "g_desu",
+            "v_kawaii",
+            "p_yo",
             "p_ne"
           ]
         }
