@@ -165,30 +165,27 @@
           ]
         },
         {
-          "label": "Potential",
+          "label": "は vs が",
           "color": "#9C27B0",
           "items": [
-            { "q": "What is the potential form of 読む?", "choices": ["読める", "読まれる", "読みる", "読もる"], "answer": "読める", "explanation": "Godan potential: む → め + る. 読む → 読める (can read)." },
-            { "q": "私は漢字が＿＿。(I can write kanji.)", "choices": ["書けます", "書きます", "書かれます", "書きれます"], "answer": "書けます", "explanation": "書く potential = 書ける. Polite: 書けます. が marks the ability target." }
+            { "q": "＿＿学生です。(I am a student.)", "choices": ["私は", "私が", "私を", "私に"], "answer": "私は", "explanation": "は marks the topic — 'As for me, (I) am a student.' This is a general statement about yourself, so は is natural." },
+            { "q": "だれ＿＿来ましたか。(Who came?)", "choices": ["が", "は", "を", "も"], "answer": "が", "explanation": "が marks the subject when asking/answering 'who' or 'what' — the answer is new information. だれが来ましたか = Who came?" },
+            { "q": "この本＿＿おもしろいです。(This book is interesting.)", "choices": ["は", "が", "を", "の"], "answer": "は", "explanation": "は sets 'this book' as the topic being described. A general comment about a known item uses は." },
+            { "q": "あ、雨＿＿降っています！(Oh, it's raining!)", "choices": ["が", "は", "を", "に"], "answer": "が", "explanation": "が introduces new, just-noticed information — 'Rain (just noticed) is falling!' Spontaneous observations use が." }
           ]
         },
         {
-          "label": "たり〜たり",
+          "label": "に vs で",
           "color": "#FF9800",
           "items": [
-            { "q": "Complete: 週末は音楽を＿＿、本を＿＿します。", "choices": ["聞いたり / 読んだり", "聞いて / 読んで", "聞きたり / 読みたり", "聞くたり / 読むたり"], "answer": "聞いたり / 読んだり", "explanation": "たり form is based on past tense (た) + り: 聞いた → 聞いたり, 読んだ → 読んだり." }
+            { "q": "学校＿＿勉強します。(I study at school.)", "choices": ["で", "に", "は", "を"], "answer": "で", "explanation": "で marks the location where an action takes place. You actively do something (study) at school → で." },
+            { "q": "公園＿＿猫がいます。(There is a cat in the park.)", "choices": ["に", "で", "は", "を"], "answer": "に", "explanation": "に marks the location where something exists. いる/ある (existence verbs) always pair with に, not で." },
+            { "q": "図書館＿＿本を読みました。(I read a book at the library.)", "choices": ["で", "に", "は", "を"], "answer": "で", "explanation": "で marks where an activity happens. Reading is an active action done at the library → で." },
+            { "q": "駅の前＿＿友だちがいます。(My friend is in front of the station.)", "choices": ["に", "で", "は", "の"], "answer": "に", "explanation": "に marks where someone/something exists. いる (to exist, living things) uses に for location." }
           ]
         },
         {
-          "label": "Comparison",
-          "color": "#4CAF50",
-          "items": [
-            { "q": "東京は大阪＿＿大きいです。(Tokyo is bigger than Osaka.)", "choices": ["より", "ほど", "から", "まで"], "answer": "より", "explanation": "より marks the comparison standard: AはBより〜 = A is more ~ than B." },
-            { "q": "日本で＿＿高い山は富士山です。(The tallest mountain in Japan is Mt. Fuji.)", "choices": ["いちばん", "もっと", "とても", "より"], "answer": "いちばん", "explanation": "〜でいちばん = 'the most ~ in ~'. いちばん高い山 = the tallest mountain." }
-          ]
-        },
-        {
-          "label": "ましょう",
+          "label": "Let's ~",
           "color": "#2196F3",
           "items": [
             { "q": "「一緒に行きましょう」means:", "choices": ["Let's go together", "I went together", "Please go together", "I want to go together"], "answer": "Let's go together", "explanation": "〜ましょう is the volitional polite form — 'Let's ~' or 'Shall we ~'." }
