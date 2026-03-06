@@ -241,84 +241,87 @@
     {
       "type": "conversation",
       "title": "Conversation 2: Fish by the River",
-      "context": "Miki and Ren spot fish and goldfish in the clear river.",
+      "context": "Miki and Ren, close friends, spot fish and goldfish while walking along the river.",
       "lines": [
         {
           "spk": "ミキ",
-          "jp": "川に 大きい 魚が います。かわいいですね。",
-          "en": "There are big fish in the river. They're cute, aren't they.",
+          "jp": "川に 大きい 魚が いるよ。かわいいね。",
+          "en": "There are big fish in the river. They're cute.",
           "terms": [
             "v_kawa",
             "p_ni",
             "v_ookii",
             "v_sakana",
             "p_ga",
-            { "id": "v_iru", "form": "polite_masu" },
-            { "id": "v_kawaii", "form": "polite_adj" },
+            "v_iru",
+            "p_yo",
+            "v_kawaii",
             "p_ne"
           ]
         },
         {
           "spk": "レン",
-          "jp": "そうですね。川の 魚は おいしそうですね。",
-          "en": "Yes. The river fish looks delicious, doesn't it.",
+          "jp": "うん。川の 魚は おいしそうだね。",
+          "en": "Yeah. The river fish looks delicious.",
           "terms": [
-            "p_soudesu",
-            "p_ne",
             "v_kawa",
             "p_no",
             "v_sakana",
             "p_wa",
-            { "id": "v_oishii", "form": "appearance_sou" },
+            { "id": "v_oishii", "form": "plain_appearance_sou" },
             "p_ne"
           ]
         },
         {
           "spk": "ミキ",
-          "jp": "え！魚を 食べたいですか。",
-          "en": "What! Do you want to eat fish?",
+          "jp": "え！魚を 食べたいの。",
+          "en": "What! You want to eat fish?",
           "terms": [
             "v_sakana",
             "p_wo",
-            { "id": "v_taberu", "form": "desire_tai" },
-            "p_ka"
+            { "id": "v_taberu", "form": "plain_desire_tai" },
+            "p_no"
           ]
         },
         {
           "spk": "レン",
-          "jp": "はい！川の 魚は おいしいです。食べたいです。",
-          "en": "Yes! River fish is delicious. I want to eat some.",
+          "jp": "うん！川の 魚は おいしいからね。食べたいよ。",
+          "en": "Yeah! River fish is delicious, you know. I want to eat some.",
           "terms": [
-            "p_hai",
             "v_kawa",
             "p_no",
             "v_sakana",
             "p_wa",
-            { "id": "v_oishii", "form": "polite_adj" },
-            { "id": "v_taberu", "form": "desire_tai" }
+            "v_oishii",
+            "p_kara_because",
+            "p_ne",
+            { "id": "v_taberu", "form": "plain_desire_tai" },
+            "p_yo"
           ]
         },
         {
           "spk": "ミキ",
-          "jp": "金魚も います。かわいいですね。",
-          "en": "There are goldfish too. They're cute, aren't they.",
+          "jp": "金魚も いるよ。かわいいね。",
+          "en": "There are goldfish too. They're cute.",
           "terms": [
             "v_kingyo",
             "p_mo",
-            { "id": "v_iru", "form": "polite_masu" },
-            { "id": "v_kawaii", "form": "polite_adj" },
+            "v_iru",
+            "p_yo",
+            "v_kawaii",
             "p_ne"
           ]
         },
         {
           "spk": "レン",
-          "jp": "ええ、金魚は きれいで、かわいいですね。",
-          "en": "Yes, goldfish are beautiful and cute, aren't they.",
+          "jp": "うん、金魚は きれいで、かわいいよね。",
+          "en": "Yeah, goldfish are beautiful and cute, right.",
           "terms": [
             "v_kingyo",
             "p_wa",
             { "id": "v_kirei", "form": "te_form" },
-            { "id": "v_kawaii", "form": "polite_adj" },
+            "v_kawaii",
+            "p_yo",
             "p_ne"
           ]
         }
@@ -400,7 +403,7 @@
         },
         {
           "spk": "レン",
-          "jp": "そうですね。昨日の 雨の 後も、花が きれいに なりましたよ。",
+          "jp": "そうですね。きのうの 雨の 後も、花が きれいに なりましたよ。",
           "en": "Yes. Even after yesterday's rain, the flowers became beautiful.",
           "terms": [
             "p_soudesu",

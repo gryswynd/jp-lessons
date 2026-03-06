@@ -208,6 +208,27 @@
       }
     }
   },
+  "plain_past_adj": {
+    "label": "Plain Past Adjective",
+    "description": "Plain past affirmative for adjectives. i-adjectives: い→かった. na-adjectives: +だった. Used in casual speech and subordinate clauses.",
+    "introducedIn": "G9",
+    "rules": {
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "かった"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "だった"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よかった",
+        "reading": "よかった"
+      }
+    }
+  },
   "plain_past": {
     "label": "Past (Ta/Datta)",
     "description": "Plain past affirmative.",
@@ -471,8 +492,8 @@
     }
   },
   "desire_tai": {
-    "label": "Desire (Tai)",
-    "description": "Expresses desire to do the action (I want to...).",
+    "label": "Desire (Tai) — Polite",
+    "description": "Polite desire form (I want to...). Uses ます-stem + たいです.",
     "introducedIn": "N5.8",
     "rules": {
       "godan": {
@@ -497,9 +518,36 @@
       }
     }
   },
+  "plain_desire_tai": {
+    "label": "Desire (Tai) — Plain",
+    "description": "Plain desire form (I want to...). Uses ます-stem + たい. Used in casual speech and subordinate clauses.",
+    "introducedIn": "G9",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "たい"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "たい"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "したい",
+        "reading": "したい"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来たい",
+        "reading": "きたい"
+      }
+    }
+  },
   "appearance_sou": {
-    "label": "Appearance (Sou)",
-    "description": "Expresses that something looks like or appears to be certain way.",
+    "label": "Appearance (Sou) — Polite",
+    "description": "Polite form expressing that something looks like or appears to be a certain way.",
     "introducedIn": "N5.11",
     "rules": {
       "godan": {
@@ -535,6 +583,74 @@
         "type": "replace",
         "surface": "よさそうです",
         "reading": "よさそうです"
+      }
+    }
+  },
+  "plain_appearance_sou": {
+    "label": "Appearance (Sou) — Plain",
+    "description": "Plain form expressing that something looks like or appears to be a certain way. Uses ～そうだ in casual speech.",
+    "introducedIn": "G9",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "そうだ"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "そうだ"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しそうだ",
+        "reading": "しそうだ"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来そうだ",
+        "reading": "きそうだ"
+      },
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "そうだ"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "そうだ"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よさそうだ",
+        "reading": "よさそうだ"
+      }
+    }
+  },
+  "plain_volitional": {
+    "label": "Let's (Plain Volitional)",
+    "description": "Plain volitional form expressing a casual suggestion or intention. Godan verbs shift the final u-column kana to the o-column and add う. Ichidan verbs replace る with よう.",
+    "introducedIn": "G9",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_o",
+        "add": "う"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "よう"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しよう",
+        "reading": "しよう"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来よう",
+        "reading": "こよう"
       }
     }
   },

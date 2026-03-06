@@ -421,82 +421,87 @@
     {
       "type": "conversation",
       "title": "Conversation 4: Let's Come Again",
-      "context": "Miki and Ren plan their next visit to the mountains.",
+      "context": "Miki and Ren, close friends, chat casually on the train home after their mountain trip.",
       "lines": [
         {
           "spk": "ミキ",
-          "jp": "今日は 気分が いいですね。",
-          "en": "My mood is great today, isn't it.",
+          "jp": "今日は 気分が いいね。",
+          "en": "I feel great today.",
           "terms": [
             "v_kyou",
             "p_wa",
             "v_kibun",
             "p_ga",
-            { "id": "v_ii", "form": "polite_adj" },
+            "v_ii",
             "p_ne"
           ]
         },
         {
           "spk": "レン",
-          "jp": "ええ、天気が よかったですね。",
-          "en": "Yes, the weather was good, wasn't it.",
+          "jp": "うん、天気が よかったからね。",
+          "en": "Yeah, because the weather was good.",
           "terms": [
             "v_tenki",
             "p_ga",
-            { "id": "v_ii", "form": "polite_past_adj" },
+            { "id": "v_ii", "form": "plain_past_adj" },
+            "p_kara_because",
             "p_ne"
           ]
         },
         {
           "spk": "ミキ",
-          "jp": "電車は 長かったですが、山は よかったです。",
+          "jp": "電車は 長かったけど、山は よかったよ。",
           "en": "The train was long, but the mountains were great.",
           "terms": [
             "v_densha",
             "p_wa",
-            { "id": "v_nagai", "form": "polite_past_adj" },
-            "p_ga_but",
+            { "id": "v_nagai", "form": "plain_past_adj" },
+            "p_kedo",
             "v_yama",
             "p_wa",
-            { "id": "v_ii", "form": "polite_past_adj" }
+            { "id": "v_ii", "form": "plain_past_adj" },
+            "p_yo"
           ]
         },
         {
           "spk": "レン",
-          "jp": "来週も また 来たいです。",
+          "jp": "来週も また 来たいね。",
           "en": "I want to come again next week too.",
           "terms": [
             "v_raishuu",
             "p_mo",
-            { "id": "v_kuru", "form": "desire_tai" }
+            { "id": "v_kuru", "form": "plain_desire_tai" },
+            "p_ne"
           ]
         },
         {
           "spk": "ミキ",
-          "jp": "はい！休日に 電車で 来ましょう。",
-          "en": "Yes! Let's come by train on a holiday.",
+          "jp": "うん！休日に 電車で 行きたいね。",
+          "en": "Yeah! I want to go by train on a holiday.",
           "terms": [
-            "p_hai",
             "v_kyuujitsu",
             "p_ni",
             "v_densha",
             "p_de",
-            { "id": "v_kuru", "form": "polite_volitional_mashou" }
+            { "id": "v_iku", "form": "plain_desire_tai" },
+            "p_ne"
           ]
         },
         {
           "spk": "レン",
-          "jp": "この 山は 人気が ありますね。また 来ましょう。",
-          "en": "This mountain is popular. Let's come again.",
+          "jp": "この 山は 人気が あるからね。また 行きたいよ。",
+          "en": "This mountain is popular, after all. I want to go again.",
           "terms": [
             "v_kono",
             "v_yama",
             "p_wa",
             "v_ninki",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            "v_aru",
+            "p_kara_because",
             "p_ne",
-            { "id": "v_kuru", "form": "polite_volitional_mashou" }
+            { "id": "v_iku", "form": "plain_desire_tai" },
+            "p_yo"
           ]
         }
       ]
