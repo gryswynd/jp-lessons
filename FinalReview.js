@@ -387,30 +387,20 @@ window.FinalReviewModule = (function () {
         background: white;
         border: 2px solid var(--fr-primary);
       }
-      .fr-chip.wordle-green {
-        background: #6aaa64 !important;
-        border-color: #6aaa64 !important;
-        color: white !important;
-        pointer-events: none;
+      .fr-chip.fr-chip-correct {
+        background: rgba(46,213,115,0.12) !important;
+        border-color: #2ed573 !important;
+        color: #1a8a45 !important;
       }
-      .fr-chip.wordle-yellow {
-        background: #e74c3c !important;
-        border-color: #c0392b !important;
-        color: white !important;
-        pointer-events: none;
+      .fr-chip.fr-chip-misplaced {
+        background: rgba(255,165,2,0.12) !important;
+        border-color: #ffa502 !important;
+        color: #7d5200 !important;
       }
-      .fr-chip.wordle-gray {
-        background: #787c7e !important;
-        border-color: #787c7e !important;
-        color: white !important;
-        pointer-events: none;
-      }
-      @keyframes frFlipIn {
-        0% { transform: scaleY(0); }
-        100% { transform: scaleY(1); }
-      }
-      .fr-chip.wordle-reveal {
-        animation: frFlipIn 0.3s ease;
+      .fr-chip.fr-chip-wrong {
+        background: rgba(255,71,87,0.12) !important;
+        border-color: #ff4757 !important;
+        color: #c0392b !important;
       }
       .fr-chip-pool {
         display: flex;
@@ -1411,6 +1401,7 @@ window.FinalReviewModule = (function () {
   function renderScrambleRelay(stage, sec) {
     const items = sec.items;
     let idx = 0, score = 0;
+    let cleared = false;
 
     function showRelay() {
       if (idx >= items.length) {
@@ -1420,8 +1411,11 @@ window.FinalReviewModule = (function () {
       const item = items[idx];
       let order = [];
       let attempts = 0;
+      cleared = false;
 
-      const allWords = shuffle([...item.segments, ...(item.distractors || [])]);
+      const distractorWords = item.distractors || [];
+      const allWords = shuffle([...item.segments, ...distractorWords]);
+      const full = item.segments.join('');
       const altFulls = (item.alts || []).map(a => a.join(''));
 
       stage.innerHTML = `
@@ -1433,12 +1427,13 @@ window.FinalReviewModule = (function () {
           <div class="fr-scramble-box" id="fr-scr-box">
             <span style="color:#aaa;">Tap words below...</span>
           </div>
-          <div class="fr-chip-pool" id="fr-scr-pool">
-            ${allWords.map(w => `<div class="fr-chip" data-word="${w}">${w}</div>`).join('')}
-          </div>
-          <div style="text-align:center;">
+          <div class="fr-chip-pool" id="fr-scr-pool"></div>
+          <div style="text-align:center;" id="fr-scr-buttons">
             <button class="fr-btn fr-btn-secondary" id="fr-scr-clear" style="margin-right:8px;">Clear</button>
-            <button class="fr-btn fr-btn-primary" id="fr-scr-check" disabled>Check ✓</button>
+            <button class="fr-btn fr-btn-primary" id="fr-scr-check" disabled style="opacity:0.4;">Check ✓</button>
+          </div>
+          <div id="fr-scr-clear-distractors" style="display:none;text-align:center;margin-top:8px;">
+            <button class="fr-btn fr-btn-secondary" id="fr-scr-remove-extras">🧹 Remove extra words</button>
           </div>
           <div class="fr-explanation" id="fr-scr-explain">${item.explanation || ''}</div>
         </div>
@@ -1448,54 +1443,103 @@ window.FinalReviewModule = (function () {
       const pool = el('fr-scr-pool');
       const checkBtn = el('fr-scr-check');
       const clearBtn = el('fr-scr-clear');
-
-      function updateCheck() {
-        checkBtn.disabled = order.length !== item.segments.length;
-        checkBtn.style.opacity = checkBtn.disabled ? '0.4' : '1';
-      }
+      const removeExtrasDiv = el('fr-scr-clear-distractors');
+      const removeExtrasBtn = el('fr-scr-remove-extras');
 
       const inChipToPoolChip = new Map();
-      pool.querySelectorAll('.fr-chip').forEach(chip => {
+      const allChipMeta = []; // { chip, isDistractor }
+
+      // --- Color helpers (same as Review.js) ---
+      const clearColors = () => {
+        box.querySelectorAll('.fr-chip.in-box').forEach(c =>
+          c.classList.remove('fr-chip-correct', 'fr-chip-misplaced', 'fr-chip-wrong')
+        );
+      };
+
+      const applyColors = () => {
+        const inChips = Array.from(box.querySelectorAll('.fr-chip.in-box'));
+        const segments = item.segments;
+        const usedSeg = new Array(segments.length).fill(false);
+        const result = new Array(order.length).fill('wrong');
+        // Pass 1: exact position matches → correct (green)
+        for (let i = 0; i < order.length; i++) {
+          if (i < segments.length && order[i] === segments[i]) {
+            result[i] = 'correct'; usedSeg[i] = true;
+          }
+        }
+        // Pass 2: right word, wrong spot → misplaced (orange)
+        for (let i = 0; i < order.length; i++) {
+          if (result[i] !== 'wrong') continue;
+          for (let j = 0; j < segments.length; j++) {
+            if (!usedSeg[j] && order[i] === segments[j]) {
+              result[i] = 'misplaced'; usedSeg[j] = true; break;
+            }
+          }
+        }
+        inChips.forEach((chip, i) => {
+          chip.classList.remove('fr-chip-correct', 'fr-chip-misplaced', 'fr-chip-wrong');
+          chip.classList.add('fr-chip-' + result[i]);
+          // Mirror color to pool chip so it persists after clearing
+          const poolChip = inChipToPoolChip.get(chip);
+          if (poolChip) {
+            poolChip.classList.remove('fr-chip-correct', 'fr-chip-misplaced', 'fr-chip-wrong');
+            poolChip.classList.add('fr-chip-' + result[i]);
+          }
+        });
+      };
+
+      function updateCheck() {
+        const ready = order.length === item.segments.length;
+        checkBtn.disabled = !ready;
+        checkBtn.style.opacity = ready ? '1' : '0.4';
+      }
+
+      // --- Build chip pool ---
+      allWords.forEach(word => {
+        const isDistractor = distractorWords.includes(word);
+        const chip = document.createElement('div');
+        chip.className = 'fr-chip';
+        chip.textContent = word;
+        chip.dataset.word = word;
+        allChipMeta.push({ chip, isDistractor });
+
         chip.onclick = () => {
           if (chip.classList.contains('used')) return;
-          chip.classList.add('used');
-          order.push(chip.dataset.word);
-
           // Clear placeholder
           if (box.querySelector('span')) box.innerHTML = '';
 
           const inChip = document.createElement('div');
           inChip.className = 'fr-chip in-box';
-          inChip.textContent = chip.dataset.word;
+          inChip.textContent = word;
           inChipToPoolChip.set(inChip, chip);
+
           inChip.onclick = () => {
             inChip.remove();
             chip.classList.remove('used');
-            inChipToPoolChip.delete(inChip);
-            order = order.filter((w, i) => {
-              if (w === chip.dataset.word) {
-                order.splice(i, 1);
-                return false;
-              }
-              return true;
-            });
-            // Recalculate order from box
-            order = Array.from(box.querySelectorAll('.fr-chip')).map(c => c.textContent);
+            const i = order.lastIndexOf(word);
+            if (i !== -1) order.splice(i, 1);
             if (order.length === 0) box.innerHTML = '<span style="color:#aaa;">Tap words below...</span>';
             box.classList.remove('correct', 'wrong');
+            clearColors();
             updateCheck();
           };
+
           box.appendChild(inChip);
+          order.push(word);
+          chip.classList.add('used');
+          clearColors();
           box.classList.remove('correct', 'wrong');
           updateCheck();
         };
+
+        pool.appendChild(chip);
       });
 
+      // --- Clear button ---
       clearBtn.onclick = () => {
-        pool.querySelectorAll('.fr-chip').forEach(c => {
-          c.classList.remove('used');
-          // Re-enable clicking but keep wordle colors as hints
-          c.style.pointerEvents = '';
+        box.querySelectorAll('.fr-chip.in-box').forEach(ic => {
+          const poolChip = inChipToPoolChip.get(ic);
+          if (poolChip) poolChip.classList.remove('used');
         });
         inChipToPoolChip.clear();
         order = [];
@@ -1504,101 +1548,69 @@ window.FinalReviewModule = (function () {
         updateCheck();
       };
 
+      // --- Remove extra words button ---
+      removeExtrasBtn.onclick = () => {
+        cleared = true;
+        removeExtrasDiv.style.display = 'none';
+        // Clear answer box
+        box.querySelectorAll('.fr-chip.in-box').forEach(ic => {
+          const poolChip = inChipToPoolChip.get(ic);
+          if (poolChip) poolChip.classList.remove('used');
+        });
+        inChipToPoolChip.clear();
+        order = [];
+        box.innerHTML = '<span style="color:#aaa;">Tap words below...</span>';
+        box.classList.remove('correct', 'wrong');
+        // Remove distractor chips from pool
+        allChipMeta.forEach(({ chip, isDistractor }) => {
+          if (isDistractor) chip.remove();
+        });
+        // Show notice
+        const notice = document.createElement('div');
+        notice.style.cssText = 'font-size:0.78rem; color:#aaa; margin-top:6px; font-style:italic; text-align:center;';
+        notice.innerText = 'Extra words removed — max score for this question is now 0 pts.';
+        removeExtrasDiv.after(notice);
+        updateCheck();
+      };
+
+      // --- Check button ---
       checkBtn.onclick = () => {
+        if (order.length !== item.segments.length) return;
         const userAnswer = order.join('');
-        const full = item.segments.join('');
         const isCorrect = userAnswer === full || altFulls.includes(userAnswer);
         attempts++;
 
         if (isCorrect) {
-          // All green
-          const chips = box.querySelectorAll('.fr-chip');
-          chips.forEach((chip, ci) => {
-            setTimeout(() => {
-              chip.classList.add('wordle-green', 'wordle-reveal');
-            }, ci * 100);
-          });
+          const pts = cleared ? 0 : attempts === 1 ? 2 : attempts === 2 ? 1 : 0;
           box.classList.add('correct');
-          const pts = attempts === 1 ? 2 : 1;
-          score += pts;
-          pool.querySelectorAll('.fr-chip').forEach(c => c.style.pointerEvents = 'none');
+          box.classList.remove('wrong');
+          // Lock all interaction
+          allChipMeta.forEach(({ chip }) => chip.style.pointerEvents = 'none');
+          box.querySelectorAll('.fr-chip.in-box').forEach(c => c.style.pointerEvents = 'none');
           checkBtn.style.display = 'none';
           clearBtn.style.display = 'none';
-          el('fr-scr-explain').classList.add('show');
+          removeExtrasDiv.style.display = 'none';
+          score += pts;
+
+          // Show feedback
+          const star = pts === 2 ? '⭐⭐' : pts === 1 ? '⭐' : '';
+          const ptLabel = pts === 1 ? 'point' : 'points';
+          const explainDiv = el('fr-scr-explain');
+          explainDiv.innerHTML = `<div style="color:var(--fr-success,#2ed573);font-weight:700;margin-bottom:6px;">Correct! 🎉 <span style="font-size:0.85rem;">${star} +${pts} ${ptLabel}</span></div>${item.explanation || ''}`;
+          explainDiv.classList.add('show');
           idx++;
-          // Manual proceed — let the user read the explanation
+          // Manual proceed
           const nextBtn = document.createElement('button');
           nextBtn.className = 'fr-btn fr-btn-primary';
           nextBtn.style.marginTop = '12px';
           nextBtn.textContent = idx < items.length ? 'Next Leg →' : 'Finish →';
           nextBtn.onclick = showRelay;
-          el('fr-scr-explain').insertAdjacentElement('afterend', nextBtn);
+          explainDiv.insertAdjacentElement('afterend', nextBtn);
         } else {
-          // Wordle coloring: compare against best matching answer
-          const answer = item.segments;
-          const chips = box.querySelectorAll('.fr-chip');
-
-          // Build color array: green / yellow / gray
-          const colors = new Array(order.length).fill('gray');
-          const answerUsed = new Array(answer.length).fill(false);
-
-          // Pass 1: exact matches (green)
-          for (let i = 0; i < order.length; i++) {
-            if (i < answer.length && order[i] === answer[i]) {
-              colors[i] = 'green';
-              answerUsed[i] = true;
-            }
-          }
-          // Pass 2: right word wrong position (yellow)
-          for (let i = 0; i < order.length; i++) {
-            if (colors[i] === 'green') continue;
-            for (let j = 0; j < answer.length; j++) {
-              if (!answerUsed[j] && order[i] === answer[j]) {
-                colors[i] = 'yellow';
-                answerUsed[j] = true;
-                break;
-              }
-            }
-          }
-
-          // Apply colors with staggered animation — mirror to pool chips
-          chips.forEach((chip, ci) => {
-            setTimeout(() => {
-              chip.classList.remove('wordle-green', 'wordle-yellow', 'wordle-gray');
-              chip.classList.add('wordle-' + colors[ci], 'wordle-reveal');
-              // Mirror color to pool chip so it persists after clearing
-              const poolChip = inChipToPoolChip.get(chip);
-              if (poolChip) {
-                poolChip.classList.remove('wordle-green', 'wordle-yellow', 'wordle-gray');
-                poolChip.classList.add('wordle-' + colors[ci]);
-              }
-            }, ci * 120);
-          });
-
-          // After animation, allow retry or show answer
-          const animTime = chips.length * 120 + 400;
-          setTimeout(() => {
-            if (attempts >= 3) {
-              // Show correct answer
-              box.innerHTML = item.segments.map(s =>
-                `<div class="fr-chip in-box wordle-green">${s}</div>`
-              ).join('');
-              box.classList.remove('wrong');
-              box.classList.add('correct');
-              checkBtn.style.display = 'none';
-              clearBtn.style.display = 'none';
-              el('fr-scr-explain').classList.add('show');
-              idx++;
-              // Manual proceed — let the user read the explanation
-              const nextBtn = document.createElement('button');
-              nextBtn.className = 'fr-btn fr-btn-primary';
-              nextBtn.style.marginTop = '12px';
-              nextBtn.textContent = idx < items.length ? 'Next Leg →' : 'Finish →';
-              nextBtn.onclick = showRelay;
-              el('fr-scr-explain').insertAdjacentElement('afterend', nextBtn);
-            }
-            // Otherwise user can clear and retry (chips stay colored as hints)
-          }, animTime);
+          box.classList.add('wrong');
+          applyColors();
+          // Show remove-extras button if distractors exist
+          if (distractorWords.length > 0) removeExtrasDiv.style.display = 'block';
         }
       };
     }
