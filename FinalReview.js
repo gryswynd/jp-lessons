@@ -716,6 +716,7 @@ window.FinalReviewModule = (function () {
       }
       .fr-gift-scene.fr-scene-expanded {
         min-height: 80vh;
+        padding: 0;
       }
       .fr-gift-box {
         display: inline-block;
