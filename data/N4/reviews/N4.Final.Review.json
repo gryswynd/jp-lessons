@@ -204,45 +204,57 @@
       "type": "scramble_relay",
       "title": "🏃 Scramble Relay",
       "emoji": "🏃",
-      "instructions": "Build Japanese sentences from word chips. Difficulty increases with each relay leg. Bonus points for first-try answers!",
+      "instructions": "Build Japanese sentences from word chips. Each sentence continues the story of Rikizo's trip to the sea — and the grammar gets harder with each leg! Bonus points for first-try answers!",
       "items": [
         {
-          "q": "I go to school every day.",
-          "segments": ["私", "は", "毎日", "学校", "に", "行きます"],
-          "distractors": ["を", "で", "来ます"],
-          "alts": [["毎日", "私", "は", "学校", "に", "行きます"]],
-          "explanation": "私は毎日学校に行きます。に marks the destination with 行く."
+          "q": "Leg 1: Last week, I went to the sea with a friend.",
+          "segments": ["先週", "友だち", "と", "海", "に", "行きました"],
+          "distractors": ["で", "を", "行って"],
+          "alts": [["友だち", "と", "先週", "海", "に", "行きました"]],
+          "explanation": "と marks the companion ('with a friend'). に marks the destination. 先週 (last week) can float before or after the topic."
         },
         {
-          "q": "This movie was interesting.",
-          "segments": ["この", "映画", "は", "おもしろかった", "です"],
-          "distractors": ["を", "おもしろい", "でした"],
-          "explanation": "い-adjective past: おもしろい → おもしろかった. Add です for politeness."
+          "q": "Leg 2: I wanted to eat delicious fish there.",
+          "segments": ["そこ", "で", "おいしい", "魚", "を", "食べたかった", "です"],
+          "distractors": ["に", "食べたい", "食べて"],
+          "explanation": "〜たかったです is the past form of 〜たいです (desire). で marks the location of the action. おいしい directly modifies 魚 as an attributive adjective."
         },
         {
-          "q": "I went to the library and studied.",
-          "segments": ["図書館", "に", "行って", "勉強", "しました"],
-          "distractors": ["を", "で", "行きて"],
-          "explanation": "て-form connects sequential actions: 行って (went and) + 勉強しました (studied). 行く → 行って."
+          "q": "Leg 3: We walked on the beach, sang songs, and did other things.",
+          "segments": ["歩いたり", "歌ったり", "しました"],
+          "distractors": ["歩いて", "歌って", "します"],
+          "explanation": "〜たり〜たりする lists representative actions ('did things like ~'). 歩く (godan) → 歩いたり, 歌う (godan) → 歌ったり. しました closes the pattern. Distractors 歩いて / 歌って are て-form connectors — similar but wrong pattern."
         },
         {
-          "q": "I bought coffee and drank it at the park.",
-          "segments": ["コーヒー", "を", "買って", "公園", "で", "飲みました"],
-          "distractors": ["に", "買いて", "飲んで"],
-          "explanation": "て-form connector: 買って (bought and) + 飲みました (drank). 買う → 買って. で marks the location of the action."
+          "q": "Leg 4: From the sea, we could see a beautiful mountain.",
+          "segments": ["海", "から", "きれいな", "山", "が", "見えました"],
+          "distractors": ["を", "に", "見ました"],
+          "explanation": "見える (to be visible) is an intransitive potential — the mountain is visible, not 'I saw it'. が marks the subject of visibility. きれいな is a な-adjective modifying 山. The distractor 見ました (saw) would need を, not が."
         },
         {
-          "q": "I ate breakfast and went to school.",
-          "segments": ["朝ごはん", "を", "食べて", "学校", "に", "行きました"],
-          "distractors": ["で", "食べって", "来ました"],
-          "explanation": "て-form connects 'ate' and 'went': 食べて + 行きました. 食べる is ichidan → 食べて."
+          "q": "Leg 5: If the weather is good tomorrow, let's go again.",
+          "segments": ["明日", "天気", "が", "よかったら", "また", "行きましょう"],
+          "distractors": ["は", "よければ", "行きたい"],
+          "alts": [["天気", "が", "よかったら", "明日", "また", "行きましょう"]],
+          "explanation": "〜たら is a conditional ('if'). いい → よかったら (irregular: よい stem + かったら). 〜ましょう is a volitional invitation ('let's'). 明日 can appear before or after the conditional. Distractor よければ is the 〜ば conditional — also valid Japanese, but doesn't match the target."
         },
         {
-          "q": "I want to eat sushi in Tokyo.",
-          "segments": ["東京", "で", "すし", "を", "食べたい", "です"],
-          "distractors": ["に", "食べて", "食べます"],
-          "alts": [["東京", "で", "すし", "を", "食べたいです"]],
-          "explanation": "〜たいです expresses desire. で marks the location where you want to do the action."
+          "q": "Leg 6: I walked home while listening to music.",
+          "segments": ["音楽", "を", "聞きながら", "歩いて", "帰りました"],
+          "distractors": ["聞いて", "に", "帰って"],
+          "explanation": "〜ながら means 'while doing'. 聞く → 聞きながら (ます-stem + ながら). 歩いて帰りました uses て-form to connect 'walked' and 'went home'. Distractor 聞いて would make it sequential ('listened, then walked') instead of simultaneous."
+        },
+        {
+          "q": "Leg 7: Even though I was tired, I had too much fun and couldn't go home.",
+          "segments": ["つかれた", "のに", "楽しすぎて", "帰れませんでした"],
+          "distractors": ["ので", "楽しくて", "帰りませんでした"],
+          "explanation": "のに means 'even though' (concessive). 楽しい → 楽し + すぎる (too much) → 楽しすぎて (te-form giving reason = 'it was too fun so...'). 帰る → 帰れる (potential) → 帰れませんでした (past negative potential = 'couldn't go home'). Distractor ので ('because') reverses the logic. Distractor 帰りませんでした ('didn't go home') loses the nuance of inability."
+        },
+        {
+          "q": "Leg 8: My mother made me write a letter to my friend.",
+          "segments": ["母", "に", "友だち", "へ", "手紙", "を", "書かせられました"],
+          "distractors": ["が", "書きました", "書かれました"],
+          "explanation": "書かせられました is the causative-passive of 書く: 書か (あ-stem) + せ (causative) + られ (passive) + ました. 母に marks who caused the action. へ marks the recipient direction. Distractor 書かれました is plain passive ('was written by'); distractor 書きました is just polite past ('wrote'). This is the hardest pattern in N4 — you made it to the finish line! 🎉"
         }
       ]
     },
