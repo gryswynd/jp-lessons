@@ -538,6 +538,33 @@
       }
     }
   },
+  "plain_volitional": {
+    "label": "Let's (Plain Volitional)",
+    "description": "Plain volitional form expressing a casual suggestion or intention. Godan verbs shift the final u-column kana to the o-column and add う. Ichidan verbs replace る with よう.",
+    "introducedIn": "G9",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_o",
+        "add": "う"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "よう"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しよう",
+        "reading": "しよう"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来よう",
+        "reading": "こよう"
+      }
+    }
+  },
   "polite_volitional_mashou": {
     "label": "Let's (Mashou)",
     "description": "Polite volitional form expressing a suggestion or invitation.",

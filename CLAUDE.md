@@ -379,6 +379,7 @@ For **every** draft — not just grammar lessons — Agent 4 must perform a **Gr
    | `te_form`, `polite_negative_te` | N5.5 | N5.5+ |
    | `plain_past` | N5.5 | N5.5+ |
    | `desire_tai`, `desire_tai_negative`, `polite_volitional_mashou` | N5.8 | N5.8+ |
+   | `plain_volitional` | G9 | N5.10+ |
    | `plain_negative`, `plain_past_negative` | N5.9 | N5.9+ |
    | `polite_past_adj`, `adverbial`, `conditional_ba`, `sugiru_form` | N5.10 | N5.10+ |
    | `appearance_sou` | N5.11 | N5.11+ |
@@ -889,6 +890,7 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 | `desire_tai` | ～たいです |
 | `appearance_sou` | ～そうです |
 | `polite_volitional_mashou` | ～ましょう |
+| `plain_volitional` | ～おう / ～よう (plain "let's" / intention) |
 | `conditional_ba` | ～ば / ～ければ |
 | `tari_form` | ～たり (listing representative actions: ～たり～たりする) |
 | `polite_negative_te` | ～ないで (negative te-form: "without doing"; ないでください = "please don't") |
@@ -1199,6 +1201,7 @@ Each conjugation form in `conjugation_rules.json` has an `introducedIn` field sp
 | N5.1 | `polite_adj` |
 | N5.5 | `polite_masu`, `polite_mashita`, `polite_negative`, `polite_past_negative`, `te_form`, `polite_negative_te`, `plain_past` |
 | N5.8 | `desire_tai`, `desire_tai_negative`, `polite_volitional_mashou` |
+| G9 (N5.10+) | `plain_volitional` |
 | N5.9 | `plain_negative`, `plain_past_negative` |
 | N5.10 | `polite_past_adj`, `adverbial`, `conditional_ba`, `sugiru_form` |
 | N5.11 | `appearance_sou` |
