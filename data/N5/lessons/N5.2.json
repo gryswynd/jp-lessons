@@ -143,7 +143,7 @@
           "spk": "B",
           "jp": "りきぞさん、お父さんは 何よう日に いますか。",
           "en": "Rikizo-san, on which days is your father home?",
-          "terms": ["v_san", "v_otousan", "p_wa", "v_nanyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
+          "terms": ["char_rikizo", "v_san", "v_otousan", "p_wa", "v_nanyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
         },
         {
           "spk": "A",
@@ -186,7 +186,7 @@
           "spk": "B",
           "jp": "りきぞさん、よく お金が ありますか。",
           "en": "Rikizo-san, do you often have money?",
-          "terms": ["v_san", "v_yoku", "v_okane", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "p_ka"]
+          "terms": ["char_rikizo", "v_san", "v_yoku", "v_okane", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "p_ka"]
         },
         {
           "spk": "A",
@@ -316,7 +316,7 @@
         {
           "jp": "りきぞは ゲームを します。",
           "en": "Rikizo plays a game.",
-          "terms": ["p_wa", "v_geemu", "p_wo", { "id": "v_suru", "form": "polite_masu" }]
+          "terms": ["char_rikizo", "p_wa", "v_geemu", "p_wo", { "id": "v_suru", "form": "polite_masu" }]
         },
         {
           "jp": "ゲームに 水、木、火、土が あります。",
@@ -336,7 +336,7 @@
         {
           "jp": "今月 金が あります。りきぞは うれしいです。",
           "en": "This month there is gold. Rikizo is happy.",
-          "terms": ["v_kongetsu", "v_kane", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "p_wa", { "id": "v_ureshii", "form": "polite_adj" }]
+          "terms": ["v_kongetsu", "v_kane", "p_ga", { "id": "v_aru", "form": "polite_masu" }, "char_rikizo", "p_wa", { "id": "v_ureshii", "form": "polite_adj" }]
         }
       ],
       "questions": [
