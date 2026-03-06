@@ -1,0 +1,871 @@
+{
+  "contentVersion": "1.0.0",
+  "id": "N5.12",
+  "title": "Study & Country",
+  "meta": {
+    "level": "N5",
+    "lesson_number": 12,
+    "focus": "Schools, languages, and countries — compounds built from 本・語・学・校・国, plus the adjectives おもしろい and つまらない",
+    "estimated_minutes": 30,
+    "kanji": ["本", "語", "学", "校", "国"]
+  },
+  "newKanji": [
+    {
+      "kanji": "本",
+      "on": "ほん",
+      "kun": "もと",
+      "meaning": "book / origin",
+      "termId": "k_moto"
+    },
+    {
+      "kanji": "語",
+      "on": "ご",
+      "kun": "かた",
+      "meaning": "language / word",
+      "termId": "k_kata"
+    },
+    {
+      "kanji": "学",
+      "on": "がく",
+      "kun": "まな",
+      "meaning": "study / learning",
+      "termId": "k_mana"
+    },
+    {
+      "kanji": "校",
+      "on": "こう",
+      "kun": "",
+      "meaning": "school",
+      "termId": "k_u6821"
+    },
+    {
+      "kanji": "国",
+      "on": "こく",
+      "kun": "くに",
+      "meaning": "country",
+      "termId": "k_kuni"
+    }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "Warm-Up: Quick Review",
+      "instructions": "Read each sentence and choose the correct English meaning.",
+      "items": [
+        {
+          "jp": "川の 魚は おいしそうですね。",
+          "en": "The river fish looks delicious, doesn't it.",
+          "terms": [
+            "v_kawa",
+            "p_no",
+            "v_sakana",
+            "p_wa",
+            { "id": "v_oishii", "form": "appearance_sou" },
+            "p_ne"
+          ]
+        },
+        {
+          "jp": "昨日の 花火は とても 大きかったです。",
+          "en": "Yesterday's fireworks were very big.",
+          "terms": [
+            "v_kinou",
+            "p_no",
+            "v_hanabi",
+            "p_wa",
+            "v_totemo",
+            { "id": "v_ookii", "form": "polite_past_adj" }
+          ]
+        },
+        {
+          "jp": "水を 飲んでください。",
+          "en": "Please drink some water.",
+          "terms": [
+            "v_mizu",
+            "p_wo",
+            { "id": "v_nomu", "form": "te_form" }
+          ]
+        },
+        {
+          "jp": "外に 行きましょう。",
+          "en": "Let's go outside.",
+          "terms": [
+            "v_soto",
+            "p_ni",
+            { "id": "v_iku", "form": "polite_volitional_mashou" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "New Kanji",
+      "items": [
+        {
+          "kanji": "本",
+          "on": "ほん",
+          "kun": "もと",
+          "meaning": "book / origin",
+          "terms": ["k_moto"]
+        },
+        {
+          "kanji": "語",
+          "on": "ご",
+          "kun": "かた",
+          "meaning": "language / word",
+          "terms": ["k_kata"]
+        },
+        {
+          "kanji": "学",
+          "on": "がく",
+          "kun": "まな",
+          "meaning": "study / learning",
+          "terms": ["k_mana"]
+        },
+        {
+          "kanji": "校",
+          "on": "こう",
+          "kun": "",
+          "meaning": "school",
+          "terms": ["k_u6821"]
+        },
+        {
+          "kanji": "国",
+          "on": "こく",
+          "kun": "くに",
+          "meaning": "country",
+          "terms": ["k_kuni"]
+        }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "Vocabulary",
+      "groups": [
+        {
+          "label": "Schools",
+          "items": ["v_gakkou", "v_shougakkou", "v_chuugakkou", "v_koukou", "v_daigaku", "v_kouchou", "v_gakusei", "v_kurasu", "v_tesuto"]
+        },
+        {
+          "label": "Countries & Languages",
+          "items": ["v_nihon", "v_nihongo", "v_nihonjin", "v_chuugoku", "v_gaikoku", "v_gaikokujin"]
+        },
+        {
+          "label": "Study Items & Actions",
+          "items": ["v_hon", "v_nooto", "v_pen", "v_manabu"]
+        },
+        {
+          "label": "Adjectives",
+          "items": ["v_omoshiroi", "v_tsumaranai"]
+        },
+        {
+          "label": "Kanji",
+          "items": ["k_moto", "k_kata", "k_mana", "k_u6821", "k_kuni"]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation 1: Japanese Class",
+      "context": "Miki and Ren chat just before their Japanese language class starts.",
+      "lines": [
+        {
+          "spk": "ミキ",
+          "jp": "今日の 日本語の クラスは おもしろいですね。",
+          "en": "Today's Japanese class is interesting, isn't it.",
+          "terms": [
+            "v_kyou",
+            "p_no",
+            "v_nihongo",
+            "p_no",
+            "v_kurasu",
+            "p_wa",
+            { "id": "v_omoshiroi", "form": "polite_adj" },
+            "p_ne"
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "そうですね。テストも あります。",
+          "en": "Yes. There is also a test.",
+          "terms": [
+            "p_soudesu",
+            "p_ne",
+            "v_tesuto",
+            "p_mo",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "テストは 長いですか。",
+          "en": "Is the test long?",
+          "terms": [
+            "v_tesuto",
+            "p_wa",
+            { "id": "v_nagai", "form": "polite_adj" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "ええ、長くて、よくないです。",
+          "en": "Yes, it's long and not good.",
+          "terms": [
+            { "id": "v_nagai", "form": "te_form" },
+            { "id": "v_ii", "form": "polite_negative" }
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "わたしも 日本語を たくさん 学びたいです。",
+          "en": "I also want to learn a lot of Japanese.",
+          "terms": [
+            "v_watashi",
+            "p_mo",
+            "v_nihongo",
+            "p_wo",
+            "v_takusan",
+            { "id": "v_manabu", "form": "desire_tai" }
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "わたしも 学びたいです。学校で 学びましょう。",
+          "en": "I also want to learn. Let's study at school.",
+          "terms": [
+            "v_watashi",
+            "p_mo",
+            { "id": "v_manabu", "form": "desire_tai" },
+            "v_gakkou",
+            "p_de",
+            { "id": "v_manabu", "form": "polite_volitional_mashou" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation 2: School Supplies",
+      "context": "Miki and Ren browse a bookstore near school for study materials.",
+      "lines": [
+        {
+          "spk": "ミキ",
+          "jp": "この 本は おもしろそうですね。",
+          "en": "This book looks interesting, doesn't it.",
+          "terms": [
+            "v_kono",
+            "v_hon",
+            "p_wa",
+            { "id": "v_omoshiroi", "form": "appearance_sou" },
+            "p_ne"
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "そうですね。日本語の 本ですか。",
+          "en": "Yes. Is it a Japanese book?",
+          "terms": [
+            "p_soudesu",
+            "p_ne",
+            "v_nihongo",
+            "p_no",
+            "v_hon",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "ええ。高くないですよ。安い 本ですよ。",
+          "en": "Yes. It's not expensive. It's a cheap book.",
+          "terms": [
+            { "id": "v_takai", "form": "plain_negative" },
+            "g_desu",
+            "p_yo",
+            { "id": "v_yasui", "form": "polite_adj" },
+            "v_hon",
+            "g_desu",
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "この ノートも 安いですか。",
+          "en": "Is this notebook also cheap?",
+          "terms": [
+            "v_kono",
+            "v_nooto",
+            "p_mo",
+            { "id": "v_yasui", "form": "polite_adj" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "ええ、安くて、いいですよ。ペンも あります。",
+          "en": "Yes, it's cheap and good. There are also pens.",
+          "terms": [
+            { "id": "v_yasui", "form": "te_form" },
+            { "id": "v_ii", "form": "polite_adj" },
+            "p_yo",
+            "v_pen",
+            "p_mo",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "いいですね。日本語の 本と ノートと ペンを 買いましょう。",
+          "en": "That's great. Let's buy the Japanese book, notebook, and pen.",
+          "terms": [
+            { "id": "v_ii", "form": "polite_adj" },
+            "p_ne",
+            "v_nihongo",
+            "p_no",
+            "v_hon",
+            "p_to",
+            "v_nooto",
+            "p_to",
+            "v_pen",
+            "p_wo",
+            { "id": "v_kau", "form": "polite_volitional_mashou" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation 3: A Student from China",
+      "context": "Miki meets Ali, a foreign student from China who is learning Japanese at school.",
+      "lines": [
+        {
+          "spk": "アリ",
+          "jp": "わたしは 外国人の 学生です。日本語を 学んでいます。",
+          "en": "I am a foreign student. I am learning Japanese.",
+          "terms": [
+            "v_watashi",
+            "p_wa",
+            "v_gaikokujin",
+            "p_no",
+            "v_gakusei",
+            "g_desu",
+            "v_nihongo",
+            "p_wo",
+            { "id": "v_manabu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "そうですか。外国から 来ましたか。",
+          "en": "Is that so? Did you come from a foreign country?",
+          "terms": [
+            "v_gaikoku",
+            "p_kara",
+            { "id": "v_kuru", "form": "polite_mashita" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "アリ",
+          "jp": "はい、中国から 来ました。日本語は おもしろいですね。",
+          "en": "Yes, I came from China. Japanese is interesting, isn't it.",
+          "terms": [
+            "p_hai",
+            "v_chuugoku",
+            "p_kara",
+            { "id": "v_kuru", "form": "polite_mashita" },
+            "v_nihongo",
+            "p_wa",
+            { "id": "v_omoshiroi", "form": "polite_adj" },
+            "p_ne"
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "日本語の クラスは おもしろいですか。",
+          "en": "Is the Japanese class interesting?",
+          "terms": [
+            "v_nihongo",
+            "p_no",
+            "v_kurasu",
+            "p_wa",
+            { "id": "v_omoshiroi", "form": "polite_adj" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "アリ",
+          "jp": "はい、おもしろくて、いいです。先生も いい 先生ですよ。",
+          "en": "Yes, it's interesting and good. The teacher is also a good teacher.",
+          "terms": [
+            "p_hai",
+            { "id": "v_omoshiroi", "form": "te_form" },
+            { "id": "v_ii", "form": "polite_adj" },
+            "v_sensei",
+            "p_mo",
+            { "id": "v_ii", "form": "polite_adj" },
+            "v_sensei",
+            "g_desu",
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "よかったですね。学校で 学びましょう。",
+          "en": "That's wonderful. Let's study together at school.",
+          "terms": [
+            { "id": "v_ii", "form": "polite_past_adj" },
+            "p_ne",
+            "v_gakkou",
+            "p_de",
+            { "id": "v_manabu", "form": "polite_volitional_mashou" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation 4: Before the Test",
+      "context": "The school principal talks to Miki about an important upcoming test.",
+      "lines": [
+        {
+          "spk": "校長",
+          "jp": "来週、大きい テストが あります。学生は よく 学んでください。",
+          "en": "Next week there is a big test. Students, please study well.",
+          "terms": [
+            "v_raishuu",
+            "v_ookii",
+            "v_tesuto",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" },
+            "v_gakusei",
+            "p_wa",
+            { "id": "v_ii", "form": "adverbial" },
+            { "id": "v_manabu", "form": "te_form" }
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "はい。日本語の テストですか。",
+          "en": "Yes. Is it a Japanese test?",
+          "terms": [
+            "p_hai",
+            "v_nihongo",
+            "p_no",
+            "v_tesuto",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "校長",
+          "jp": "ええ、日本語と 学校の テストです。",
+          "en": "Yes, it's a Japanese and school test.",
+          "terms": [
+            "v_nihongo",
+            "p_to",
+            "v_gakkou",
+            "p_no",
+            "v_tesuto",
+            "g_desu"
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "テストは おもしろいですか、つまらないですか。",
+          "en": "Is the test interesting or boring?",
+          "terms": [
+            "v_tesuto",
+            "p_wa",
+            { "id": "v_omoshiroi", "form": "polite_adj" },
+            "p_ka",
+            { "id": "v_tsumaranai", "form": "polite_adj" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "校長",
+          "jp": "つまらないですが、大学に 行きたい 学生は 学んでください。",
+          "en": "It's boring, but students who want to go to university, please study.",
+          "terms": [
+            { "id": "v_tsumaranai", "form": "polite_adj" },
+            "p_ga_but",
+            "v_daigaku",
+            "p_ni",
+            { "id": "v_iku", "form": "desire_tai" },
+            "v_gakusei",
+            "p_wa",
+            { "id": "v_manabu", "form": "te_form" }
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "はい！毎日 学校で よく 学びます。",
+          "en": "Yes! I will study well at school every day.",
+          "terms": [
+            "p_hai",
+            "v_mainichi",
+            "v_gakkou",
+            "p_de",
+            { "id": "v_ii", "form": "adverbial" },
+            { "id": "v_manabu", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading 1: My School",
+      "passage": [
+        {
+          "jp": "わたしは 学生です。毎日 学校に 行きます。",
+          "en": "I am a student. I go to school every day.",
+          "terms": [
+            "v_watashi",
+            "p_wa",
+            "v_gakusei",
+            "g_desu",
+            "v_mainichi",
+            "v_gakkou",
+            "p_ni",
+            { "id": "v_iku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "学校は 大きくて、新しいです。日本語の クラスも あります。",
+          "en": "The school is big and new. There are also Japanese classes.",
+          "terms": [
+            "v_gakkou",
+            "p_wa",
+            { "id": "v_ookii", "form": "te_form" },
+            { "id": "v_atarashii", "form": "polite_adj" },
+            "v_nihongo",
+            "p_no",
+            "v_kurasu",
+            "p_mo",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "クラスに 外国人の 学生が います。外国から 来ています。",
+          "en": "There are foreign students in the class. They have come from foreign countries.",
+          "terms": [
+            "v_kurasu",
+            "p_ni",
+            "v_gaikokujin",
+            "p_no",
+            "v_gakusei",
+            "p_ga",
+            { "id": "v_iru", "form": "polite_masu" },
+            "v_gaikoku",
+            "p_kara",
+            { "id": "v_kuru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "先週、テストが ありました。テストは 長かったですが、おもしろかったです。",
+          "en": "Last week there was a test. The test was long but interesting.",
+          "terms": [
+            "v_senshuu",
+            "v_tesuto",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_mashita" },
+            "v_tesuto",
+            "p_wa",
+            { "id": "v_nagai", "form": "polite_past_adj" },
+            "p_ga_but",
+            { "id": "v_omoshiroi", "form": "polite_past_adj" }
+          ]
+        },
+        {
+          "jp": "わたしは 日本語を たくさん 学びたいです。",
+          "en": "I want to learn a lot of Japanese.",
+          "terms": [
+            "v_watashi",
+            "p_wa",
+            "v_nihongo",
+            "p_wo",
+            "v_takusan",
+            { "id": "v_manabu", "form": "desire_tai" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "What does the narrator say about the school?",
+          "a": "It is big and new",
+          "choices": [
+            "It is big and new",
+            "It is old and small",
+            "It is cheap and boring",
+            "It is big and cheap"
+          ],
+          "terms": ["v_gakkou", { "id": "v_ookii", "form": "te_form" }, { "id": "v_atarashii", "form": "polite_adj" }]
+        },
+        {
+          "q": "What does the narrator say about last week's test?",
+          "a": "It was long but interesting",
+          "choices": [
+            "It was long but interesting",
+            "It was short and boring",
+            "It was easy and good",
+            "It was big and expensive"
+          ],
+          "terms": ["v_tesuto", { "id": "v_nagai", "form": "polite_past_adj" }, { "id": "v_omoshiroi", "form": "polite_past_adj" }]
+        },
+        {
+          "q": "What does the narrator want to do?",
+          "a": "Learn a lot of Japanese",
+          "choices": [
+            "Learn a lot of Japanese",
+            "Go to a foreign country",
+            "Buy many books",
+            "Rest at school"
+          ],
+          "terms": ["v_nihongo", "v_takusan", { "id": "v_manabu", "form": "desire_tai" }]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading 2: Learning Japanese",
+      "passage": [
+        {
+          "jp": "日本語は おもしろいです。わたしは 毎日 日本語を 学んでいます。",
+          "en": "Japanese is interesting. I study Japanese every day.",
+          "terms": [
+            "v_nihongo",
+            "p_wa",
+            { "id": "v_omoshiroi", "form": "polite_adj" },
+            "v_watashi",
+            "p_wa",
+            "v_mainichi",
+            "v_nihongo",
+            "p_wo",
+            { "id": "v_manabu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "日本語の 本は 高いですが、いい 本です。",
+          "en": "Japanese books are expensive, but they are good books.",
+          "terms": [
+            "v_nihongo",
+            "p_no",
+            "v_hon",
+            "p_wa",
+            { "id": "v_takai", "form": "polite_adj" },
+            "p_ga_but",
+            { "id": "v_ii", "form": "polite_adj" },
+            "v_hon",
+            "g_desu"
+          ]
+        },
+        {
+          "jp": "わたしの クラスに 日本人の 先生と 外国人の 先生が います。",
+          "en": "In my class there are Japanese and foreign teachers.",
+          "terms": [
+            "v_watashi",
+            "p_no",
+            "v_kurasu",
+            "p_ni",
+            "v_nihonjin",
+            "p_no",
+            "v_sensei",
+            "p_to",
+            "v_gaikokujin",
+            "p_no",
+            "v_sensei",
+            "p_ga",
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "テストは 来週 あります。毎日 よく 学んでいます。",
+          "en": "The test is next week. I am studying well every day.",
+          "terms": [
+            "v_tesuto",
+            "p_wa",
+            "v_raishuu",
+            { "id": "v_aru", "form": "polite_masu" },
+            "v_mainichi",
+            { "id": "v_ii", "form": "adverbial" },
+            { "id": "v_manabu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "テストの 前に 日本語の 本を 買いました。ノートと ペンも ありますよ。",
+          "en": "I bought a Japanese book before the test. I also have a notebook and pen.",
+          "terms": [
+            "v_tesuto",
+            "p_no",
+            "v_mae",
+            "p_ni",
+            "v_nihongo",
+            "p_no",
+            "v_hon",
+            "p_wo",
+            { "id": "v_kau", "form": "polite_mashita" },
+            "v_nooto",
+            "p_to",
+            "v_pen",
+            "p_mo",
+            { "id": "v_aru", "form": "polite_masu" },
+            "p_yo"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "What does the narrator study every day?",
+          "a": "Japanese",
+          "choices": [
+            "Japanese",
+            "Chinese",
+            "English",
+            "Math"
+          ],
+          "terms": ["v_nihongo", { "id": "v_manabu", "form": "te_form" }, { "id": "v_iru", "form": "polite_masu" }]
+        },
+        {
+          "q": "What does the narrator say about Japanese books?",
+          "a": "They are expensive but good",
+          "choices": [
+            "They are expensive but good",
+            "They are cheap and boring",
+            "They are old and interesting",
+            "They are small and new"
+          ],
+          "terms": ["v_hon", { "id": "v_takai", "form": "polite_adj" }, { "id": "v_ii", "form": "polite_adj" }]
+        },
+        {
+          "q": "What did the narrator buy before the test?",
+          "a": "A Japanese book",
+          "choices": [
+            "A Japanese book",
+            "A notebook",
+            "A pen",
+            "A new book"
+          ],
+          "terms": ["v_hon", "v_nihongo", { "id": "v_kau", "form": "polite_mashita" }]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Vocabulary",
+      "instructions": "Choose the correct English meaning for each word.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "本",
+          "choices": ["book", "school", "language", "country"],
+          "answer": "book"
+        },
+        {
+          "kind": "mcq",
+          "q": "学校",
+          "choices": ["school", "university", "class", "test"],
+          "answer": "school"
+        },
+        {
+          "kind": "mcq",
+          "q": "日本語",
+          "choices": ["Japanese language", "Japanese person", "Japan", "Chinese"],
+          "answer": "Japanese language"
+        },
+        {
+          "kind": "mcq",
+          "q": "外国人",
+          "choices": ["foreigner", "Japanese person", "student", "principal"],
+          "answer": "foreigner"
+        },
+        {
+          "kind": "mcq",
+          "q": "おもしろい",
+          "choices": ["interesting", "boring", "beautiful", "expensive"],
+          "answer": "interesting"
+        },
+        {
+          "kind": "mcq",
+          "q": "大学",
+          "choices": ["university", "high school", "middle school", "elementary school"],
+          "answer": "university"
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: School Vocabulary",
+      "instructions": "Choose the correct meaning or word to complete each item.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "校長",
+          "choices": ["principal", "student", "teacher", "class"],
+          "answer": "principal",
+          "terms": ["v_kouchou"]
+        },
+        {
+          "kind": "mcq",
+          "q": "外国",
+          "choices": ["foreign country", "China", "Japan", "school"],
+          "answer": "foreign country",
+          "terms": ["v_gaikoku"]
+        },
+        {
+          "kind": "mcq",
+          "q": "中国から 来ました。The speaker came from ___.",
+          "choices": ["China", "Japan", "a foreign country", "school"],
+          "answer": "China",
+          "terms": ["v_chuugoku", "p_kara", { "id": "v_kuru", "form": "polite_mashita" }]
+        },
+        {
+          "kind": "mcq",
+          "q": "わたしは 日本語の クラスで ___ います。（I am learning in Japanese class.）",
+          "choices": ["学んで", "学んだ", "学びます", "学ぶ"],
+          "answer": "学んで",
+          "terms": ["v_nihongo", "p_no", "v_kurasu", "p_de", { "id": "v_manabu", "form": "te_form" }, { "id": "v_iru", "form": "polite_masu" }]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 3: i-Adjective Forms",
+      "instructions": "Choose the correct form to complete each sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "この 本は ___ です。（This book is interesting.）",
+          "choices": ["おもしろい", "おもしろく", "おもしろくて", "おもしろかった"],
+          "answer": "おもしろい",
+          "terms": [{ "id": "v_omoshiroi", "form": "polite_adj" }]
+        },
+        {
+          "kind": "mcq",
+          "q": "テストは おもしろく___ です。（The test wasn't interesting.）",
+          "choices": ["なかった", "ない", "なります", "ありません"],
+          "answer": "なかった",
+          "terms": [{ "id": "v_omoshiroi", "form": "plain_past_negative" }]
+        },
+        {
+          "kind": "mcq",
+          "q": "テストは 長く___、つまらないです。（The test is long and boring.）",
+          "choices": ["て", "に", "く", "な"],
+          "answer": "て",
+          "terms": [{ "id": "v_nagai", "form": "te_form" }, { "id": "v_tsumaranai", "form": "polite_adj" }]
+        },
+        {
+          "kind": "mcq",
+          "q": "日本語は ___ なりました。（Japanese became interesting.）",
+          "choices": ["おもしろく", "おもしろい", "おもしろくて", "おもしろに"],
+          "answer": "おもしろく",
+          "terms": [{ "id": "v_omoshiroi", "form": "adverbial" }, { "id": "v_naru", "form": "polite_mashita" }]
+        }
+      ]
+    }
+  ]
+}
