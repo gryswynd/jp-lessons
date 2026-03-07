@@ -11,7 +11,7 @@
 
 先生が言いました。「今日は日本語の本を読んでください。ゆっくり読んでください。読んだ後で、手で書いてください。」
 
-少年のアリと少女のミキも学校に来ました。アリは空手の本を読みました。「先生、空手の本はとてもおもしろいです！」とアリが言いました。「よかったですね。」と先生が言いました。
+少年のレンと少女のミキも学校に来ました。レンは空手の本を読みました。「先生、空手の本はとてもおもしろいです！」とレンが言いました。「よかったですね。」と先生が言いました。
 
 ミキは白い本を読んでいます。日本語がたくさんあります。「ゆっくり読みます。よく分かりませんが、すきです。」とミキが言いました。
 
@@ -23,7 +23,7 @@
 
 少し後で、ミキから電話がありました。「りきぞさん、今日の本はよかったですね。」とミキが言いました。
 
-「はい、よかったです。また読みましょう。」とわたしは言いました。「多分、また読みますよ。」とアリが言いました。
+「はい、よかったです。また読みましょう。」とわたしは言いました。「多分、また読みますよ。」とレンが言いました。
 
 毎日読んで、書いて、話します。ぜんぜんつまらないです。
 
@@ -41,7 +41,7 @@ My name is Rikizo. Today I have time to read Japanese at school.
 
 The teacher said, "Please read Japanese books today. Please read slowly. After reading, please write by hand."
 
-A boy named Ali and a girl named Miki also came to school. Ali read a book about karate. "Teacher, the karate book is very interesting!" said Ali. "That's great," said the teacher.
+A boy named Ren and a girl named Miki also came to school. Ren read a book about karate. "Teacher, the karate book is very interesting!" said Ren. "That's great," said the teacher.
 
 Miki is reading a white book. There is a lot of Japanese. "I'll read slowly. I don't understand well, but I like it," said Miki.
 
@@ -53,7 +53,7 @@ After school, I went outside. There are many white flowers. The white flowers ar
 
 A little later, Miki called. "Rikizo, today's book was good, wasn't it," said Miki.
 
-"Yes, it was good. Let's read again," I said. "Probably, I'll read again," said Ali.
+"Yes, it was good. Let's read again," I said. "Probably, I'll read again," said Ren.
 
 Every day I read, write, and speak. It's not boring at all.
 
