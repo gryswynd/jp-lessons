@@ -183,6 +183,15 @@
         border-color: rgba(78,84,200,0.4);
       }
       .jp-speak-all-btn:active { transform: scale(0.97); }
+      .jp-speak-all-btn.jp-speak-all-active {
+        background: rgba(220,53,69,0.1);
+        border-color: rgba(220,53,69,0.3);
+        color: #dc3545;
+      }
+      .jp-speak-all-btn.jp-speak-all-active:hover {
+        background: rgba(220,53,69,0.18);
+        border-color: rgba(220,53,69,0.5);
+      }
 
       /* Menu gear — dark version for white background */
       .jp-settings-gear-menu {

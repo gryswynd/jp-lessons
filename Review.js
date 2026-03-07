@@ -752,7 +752,7 @@
       // Conversation Render
       if (q.type === 'conversation_quiz') {
         var convLines = q.lines.map(l => l.jp);
-        html += `<button class="jp-speak-all-btn" onclick="window.JPShared.tts.speakLines(ReviewModule._ttsLines)">\uD83D\uDD0A Play Conversation</button>`;
+        html += `<button class="jp-speak-all-btn" data-tts-play-all="conversation">\uD83D\uDD0A Play Conversation</button>`;
         this._ttsLines = convLines;
         html += `<div class="jp-passage">`;
         if(q.context) html += `<div style="font-style:italic; color:#666; margin-bottom:15px; border-bottom:1px solid #eee; padding-bottom:10px;">Context: ${q.context}</div>`;
@@ -770,7 +770,7 @@
       // Reading Passage Render
       else if (q.type === 'reading_mcq') {
         var passageLines = q.passage.map(p => p.jp);
-        html += `<button class="jp-speak-all-btn" onclick="window.JPShared.tts.speakLines(ReviewModule._ttsLines)">\uD83D\uDD0A Play Passage</button>`;
+        html += `<button class="jp-speak-all-btn" data-tts-play-all="passage">\uD83D\uDD0A Play Passage</button>`;
         this._ttsLines = passageLines;
         html += `<div class="jp-passage">`;
         q.passage.forEach((p, pi) => {
@@ -804,6 +804,27 @@
           }
         };
       });
+
+      // Wire up play-all / stop toggle buttons
+      var playAllBtn = stage.querySelector('[data-tts-play-all]');
+      if (playAllBtn) {
+        var kind = playAllBtn.getAttribute('data-tts-play-all');
+        var label = kind === 'conversation' ? 'Play Conversation' : 'Play Passage';
+        var self = this;
+        function setPlaying(playing) {
+          playAllBtn.textContent = playing ? '\u23F9 Stop' : '\uD83D\uDD0A ' + label;
+          playAllBtn.classList.toggle('jp-speak-all-active', playing);
+        }
+        playAllBtn.onclick = function() {
+          if (window.JPShared.tts.isSpeaking()) {
+            window.JPShared.tts.cancel();
+            setPlaying(false);
+          } else {
+            setPlaying(true);
+            window.JPShared.tts.speakLines(self._ttsLines, { onFinish: function() { setPlaying(false); } });
+          }
+        };
+      }
 
       if(q.type === 'mcq' || q.type === 'reading_mcq' || q.type === 'conversation_quiz') {
         this.renderMCQ(q);

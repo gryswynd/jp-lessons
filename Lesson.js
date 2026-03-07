@@ -279,7 +279,7 @@ window.LessonModule = {
     function renderConversation(sec) {
         const div = el("div", ""); div.appendChild(createToggle());
         const allJp = [];
-        // Play All button
+        // Play/Stop toggle button
         const playAllBtn = el("button", "jp-speak-all-btn", "\uD83D\uDD0A Play Conversation");
         div.appendChild(playAllBtn);
         (sec.lines || []).forEach(line => {
@@ -290,7 +290,19 @@ window.LessonModule = {
           speakBtn.onclick = () => window.JPShared.tts.speak(line.jp);
           div.appendChild(row);
         });
-        playAllBtn.onclick = () => window.JPShared.tts.speakLines(allJp);
+        function setPlaying(playing) {
+          playAllBtn.textContent = playing ? '\u23F9 Stop' : '\uD83D\uDD0A Play Conversation';
+          playAllBtn.classList.toggle('jp-speak-all-active', playing);
+        }
+        playAllBtn.onclick = () => {
+          if (window.JPShared.tts.isSpeaking()) {
+            window.JPShared.tts.cancel();
+            setPlaying(false);
+          } else {
+            setPlaying(true);
+            window.JPShared.tts.speakLines(allJp, { onFinish: () => setPlaying(false) });
+          }
+        };
         return div;
     }
 
@@ -391,9 +403,21 @@ window.LessonModule = {
     function renderReading(sec) {
         const div = el("div", ""); div.appendChild(createToggle());
         const allJp = (sec.passage || []).map(p => p.jp);
-        // Play All button
+        // Play/Stop toggle button
         const playAllBtn = el("button", "jp-speak-all-btn", "\uD83D\uDD0A Play Passage");
-        playAllBtn.onclick = () => window.JPShared.tts.speakLines(allJp);
+        function setPlaying(playing) {
+          playAllBtn.textContent = playing ? '\u23F9 Stop' : '\uD83D\uDD0A Play Passage';
+          playAllBtn.classList.toggle('jp-speak-all-active', playing);
+        }
+        playAllBtn.onclick = () => {
+          if (window.JPShared.tts.isSpeaking()) {
+            window.JPShared.tts.cancel();
+            setPlaying(false);
+          } else {
+            setPlaying(true);
+            window.JPShared.tts.speakLines(allJp, { onFinish: () => setPlaying(false) });
+          }
+        };
         div.appendChild(playAllBtn);
         const pCard = el("div", "jp-card");
         (sec.passage || []).forEach(p => {
