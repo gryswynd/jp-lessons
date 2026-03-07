@@ -232,14 +232,14 @@
         },
         {
           "spk": "リー",
-          "jp": "右の 店は 大きいですよ。また 来てください。",
-          "en": "The shop to the right is large. Please come again.",
+          "jp": "右の 店は 大きそうですよ。また 来てください。",
+          "en": "The shop to the right looks large. Please come again.",
           "terms": [
             "v_migi",
             "p_no",
             "v_mise",
             "p_wa",
-            { "id": "v_ookii", "form": "polite_adj" },
+            { "id": "v_ookii", "form": "appearance_sou" },
             "p_yo",
             "v_mata",
             { "id": "v_kuru", "form": "te_form" },
@@ -327,8 +327,8 @@
         },
         {
           "spk": "けん",
-          "jp": "下には 道が あります。道の 左に 家も あります。毎日 学校に 行っています。",
-          "en": "Below, there's a road. There's also a house to the left of the road. I go to school every day.",
+          "jp": "下には 道が あります。道の 左に 家も あります。長い 道ですね。",
+          "en": "Below, there's a road. There's also a house to the left of the road. It's a long road, isn't it.",
           "terms": [
             "v_shita",
             "p_ni",
@@ -343,11 +343,10 @@
             "v_ie",
             "p_mo",
             { "id": "v_aru", "form": "polite_masu" },
-            "v_mainichi",
-            "v_gakkou",
-            "p_ni",
-            { "id": "v_iku", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            { "id": "v_nagai", "form": "polite_adj" },
+            "v_michi",
+            "g_desu",
+            "p_ne"
           ]
         },
         {
@@ -434,18 +433,18 @@
         },
         {
           "spk": "やまかわ",
-          "jp": "上手に なりたいですか。毎日 少し 上手に なっていますよ。",
-          "en": "Do you want to become skilled? You're getting a little better every day.",
+          "jp": "毎日 少し 上手に なっていますよ。いっしょに 読みましょう。",
+          "en": "You're getting a little better every day. Let's read together!",
           "terms": [
-            { "id": "v_jouzu", "form": "adverbial" },
-            { "id": "v_naru", "form": "desire_tai" },
-            "p_ka",
             "v_mainichi",
             "v_sukoshi",
             { "id": "v_jouzu", "form": "adverbial" },
             { "id": "v_naru", "form": "te_form" },
             { "id": "v_iru", "form": "polite_masu" },
-            "p_yo"
+            "p_yo",
+            "v_issho",
+            "p_ni",
+            { "id": "v_yomu", "form": "polite_volitional_mashou" }
           ]
         },
         {
@@ -552,8 +551,8 @@
         },
         {
           "spk": "レン",
-          "jp": "いいね！右に 行って、上に 行こうよ！",
-          "en": "Sounds great! Let's go right and then up!",
+          "jp": "いいね！右に 行って、上の 店で 食べよう！",
+          "en": "Sounds good! Let's go right and eat at the shop above!",
           "terms": [
             "v_ii",
             "p_ne",
@@ -561,9 +560,10 @@
             "p_ni",
             { "id": "v_iku", "form": "te_form" },
             "v_ue",
-            "p_ni",
-            { "id": "v_iku", "form": "plain_volitional" },
-            "p_yo"
+            "p_no",
+            "v_mise",
+            "p_de",
+            { "id": "v_taberu", "form": "plain_volitional" }
           ]
         }
       ]
