@@ -29,6 +29,7 @@
   var chunkQueue = [];
   var isChunking = false;
   var onFinishCallback = null;
+  var cancelToken = 0;  // incremented on cancel; speakOne checks before speaking
 
   // --- Load saved preferences ---
   function loadPrefs() {
@@ -164,11 +165,15 @@
 
     // Preprocess for pronunciation
     var processed = preprocessForTTS(text);
+    var token = cancelToken;
 
     try {
       window.speechSynthesis.cancel();
 
       setTimeout(function () {
+        // Bail out if cancel() was called during the delay
+        if (token !== cancelToken) { if (onDone) onDone(); return; }
+
         var utterance = new SpeechSynthesisUtterance(processed);
         utterance.lang   = lang;
         utterance.rate   = rate;
@@ -245,10 +250,14 @@
       fireFinish();
       return;
     }
+    var token = cancelToken;
     var chunk = chunkQueue.shift();
     speakOne(chunk, options, function () {
+      // Bail out if cancelled during playback
+      if (token !== cancelToken) return;
       // Small pause between sentences for natural rhythm
       setTimeout(function () {
+        if (token !== cancelToken) return;
         playChunkQueue(options);
       }, 200);
     });
@@ -313,6 +322,7 @@
      * Cancel any currently playing utterance or queued chunks.
      */
     cancel: function () {
+      cancelToken++;
       chunkQueue = [];
       isChunking = false;
       if (window.speechSynthesis) {
