@@ -155,6 +155,7 @@ CB CHECKLIST
 [ ] から after a verb/adjective/です is tagged p_kara_because, not p_kara (see disambiguation rules)
 [ ] けど is tagged p_kedo (not untagged)
 [ ] Sentence-initial でも is tagged p_demo_but, not p_demo (see disambiguation rules)
+[ ] と after a closing 」or after a plain-form clause with 思う/知る is tagged p_to_quote, not p_to (N5.13+)
 [ ] VocabList covers every glossary+particles.json entry with lesson_ids = this lesson
 [ ] Counter references use { "counter": "...", "n": N } format
 [ ] Drill 1 (vocab MCQ) has NO terms array on items
@@ -1048,6 +1049,23 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 - **でも after a noun** → `p_demo` (子どもでもわかる = "even a child understands")
 - **でも at the start of a sentence/clause** → `p_demo_but` (でも、行きます = "But I'll go")
 
+### と (to) — connective vs quotation disambiguation
+
+と has two **completely distinct grammatical roles** that share the same surface form:
+
+| Context | Role | Tag | Available from |
+|---|---|---|---|
+| Between nouns (A and B) or with action verbs (do X with Y) | Connective "and / with" | `p_to` | N5.2 |
+| After quoted speech or thought content (「...」と) | Quotation marker | `p_to_quote` | N5.13 |
+
+**Disambiguation rule — what precedes と determines role:**
+
+- **と between/after nouns** → `p_to` (レンとミキ = "Ren and Miki")
+- **と after a closing 」quotation mark** → `p_to_quote` (「おいしい」と言いました = said "it's delicious")
+- **と after a plain-form clause with 思う/知る** → `p_to_quote` (いいと思います = "I think it's good")
+
+Before N5.13, と appears only as `p_to`. From N5.13, both IDs are in scope — always check which role applies. Tagging quotation と as `p_to` displays "and / with" when the student taps it, which is actively misleading.
+
 ### Counter references
 
 When a counter expression appears in a `terms` array:
@@ -1792,6 +1810,7 @@ These are the most frequent errors. All agents should be alert to them.
 37. **が tagged as p_ga regardless of role** — が has two completely distinct grammatical roles: subject marker (`p_ga`, N5.1) and clause connector "but" (`p_ga_but`, G9). They can appear in the same sentence: 「行きたいですが、お金がありません。」 — first が is "but" (`p_ga_but`), second が is subject marker (`p_ga`). Tagging the conjunctive が as `p_ga` displays "Subject marker" when the student taps it, which is actively misleading. **Rule:** が after a clause-final form (ます/です/plain form) → `p_ga_but`. が after a noun/pronoun → `p_ga`. See [が disambiguation](#が-ga--subject-marker-vs-clause-connector-disambiguation).
 38. **から tagged as p_kara regardless of role** — から has two distinct roles: starting point "from" (`p_kara`, G3) and reason "because" (`p_kara_because`, G9). 「東京から来ました」uses p_kara (from). 「おいしいから食べます」uses p_kara_because (because). **Rule:** から after a noun → `p_kara`. から after a verb/adjective/です → `p_kara_because`. Tagging reason-から as p_kara displays "Starting-point marker" which is wrong. See [から disambiguation](#から-kara--from-vs-because-disambiguation).
 39. **でも tagged as p_demo regardless of position** — でも has two roles: inclusive particle "even/any~" (`p_demo`, N4.14) and sentence-initial conjunction "but" (`p_demo_but`, G18). 「子どもでもわかる」= p_demo (even a child). 「でも、行きます」= p_demo_but (but I'll go). Tagging sentence-initial でも as p_demo displays "even / any~" which confuses the student. See [でも disambiguation](#でも-demo--evenany-vs-sentence-initial-but).
+40. **と tagged as p_to regardless of role** — と has two completely distinct grammatical roles: connective "and/with" (`p_to`, N5.2) and quotation marker (`p_to_quote`, N5.13). 「レンとミキ」= p_to (and). 「おいしい」と言いました = p_to_quote (quotation). Before N5.13, と is always p_to. From N5.13, check what precedes と: after a 」closing mark or after a plain-form clause with 思う/知る → p_to_quote; between/after nouns → p_to. Tagging quotation と as p_to displays "and / with" when the student taps it, which is wrong. See [と disambiguation](#と-to--connective-vs-quotation-disambiguation).
 30. **Grammar under-reinforcement (ます/ました monotony)** — all verbs in conversations and readings default to `polite_masu` or `polite_mashita` when negative forms, te-form, desire, and volitional forms are all available. This is the grammar equivalent of writing with a limited vocabulary — technically correct but failing to exercise the student's growing skillset. Example: an N5.7 lesson has 5 conversations with 20 tagged verbs, but 18 are ます/ました, zero are てください or ています despite te-form being available since N5.5. Agent 2 must consult the Grammar Reinforcement Requirements and vary verb forms intentionally.
 31. **Missing structural patterns in active reinforcement window** — a lesson falls within a grammar milestone's active reinforcement window but none of the required structural patterns (てください, ています, たいです, ましょう, etc.) appear anywhere. This means the student has gone 2+ lessons since learning these patterns without encountering them in natural content. Agent 2 must include at least the minimum count of each pattern required by the reinforcement schedule.
 32. **Warmup grammar stagnation** — warmup items continue using only noun-です patterns (「先生です」「大きいです」) long after polite verb forms, te-form, and other grammar have been unlocked. Warmups after N5.5 should exercise recently-unlocked grammar with prior-lesson vocabulary. Example: an N5.8 warmup should include items like 「先生は毎日学校に行きます」(polite_masu) or 「ここに名前を書いてください」(te-form request), not just 「これは本です」.

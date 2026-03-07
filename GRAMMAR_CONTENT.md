@@ -735,7 +735,7 @@ Build examples around self-introduction, family description, and asking about pe
 - と for complete "and" / "with":
   - Complete list: A と B (only A and B, nothing else)
   - "Together with": 友だちと いっしょに
-  - Quoted speech: 「…」と言う (note: いう not yet formally taught, use hiragana with gloss)
+  - Quoted speech: 「…」と言う (note: いう not yet formally taught, use hiragana with gloss) — **deferred treatment:** at G3, mention that と can frame quoted speech, but do not formally teach it. The quotation role of と (`p_to_quote`) is formally introduced in N5.13 when 言う enters the vocabulary. At that point, distinguish it explicitly from the connective と (`p_to`) that students have used since N5.2 — same surface form, different grammatical role.
 - や for incomplete "and":
   - Incomplete list: A や B (A, B, and others)
   - Often paired with など (etc.)
