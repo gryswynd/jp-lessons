@@ -708,13 +708,33 @@ window.StoryModule = (function() {
       if (contentDiv) {
         contentDiv.scrollTop = 0;
 
-        // Add per-paragraph speaker buttons and a Play Story button
+        // Add per-paragraph speaker buttons and a Play Story button.
+        // Only process Japanese paragraphs — stop at the English Translation section.
         var paragraphs = contentDiv.querySelectorAll('p');
         var storyTexts = [];
+        var hitEnglishSection = false;
         paragraphs.forEach(function (p) {
-          // Extract plain text (strip HTML tags) for TTS
+          if (hitEnglishSection) return;
+          // Skip empty paragraphs
           var plainText = p.textContent.trim();
           if (!plainText) return;
+          // Detect English section boundaries (headers rendered before this <p>)
+          // Check if a preceding sibling is an English section header
+          var prev = p.previousElementSibling;
+          while (prev) {
+            var txt = prev.textContent.trim().toLowerCase();
+            if (prev.tagName && /^H[1-6]$/.test(prev.tagName) &&
+                (txt.indexOf('english') !== -1 || txt.indexOf('vocabulary used') !== -1 || txt.indexOf('grammar points') !== -1)) {
+              hitEnglishSection = true;
+              return;
+            }
+            // Stop searching after a couple elements
+            if (prev.tagName === 'HR') break;
+            prev = prev.previousElementSibling;
+          }
+          if (hitEnglishSection) return;
+          // Skip paragraphs that look like pure English/romaji (no CJK characters)
+          if (!/[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]/.test(plainText)) return;
           storyTexts.push(plainText);
           // Wrap content for flex layout with speaker button
           var wrapper = document.createElement('div');
@@ -732,13 +752,25 @@ window.StoryModule = (function() {
           wrapper.appendChild(btn);
           p.appendChild(wrapper);
         });
-        // Insert Play Story button at top
+        // Insert Play/Stop Story button at top
         if (storyTexts.length > 0) {
           var playBtn = document.createElement('button');
           playBtn.className = 'jp-speak-all-btn';
           playBtn.innerHTML = '\uD83D\uDD0A Play Story';
           playBtn.style.marginTop = '10px';
-          playBtn.onclick = function () { window.JPShared.tts.speakLines(storyTexts); };
+          function setPlaying(playing) {
+            playBtn.textContent = playing ? '\u23F9 Stop' : '\uD83D\uDD0A Play Story';
+            playBtn.classList.toggle('jp-speak-all-active', playing);
+          }
+          playBtn.onclick = function () {
+            if (window.JPShared.tts.isSpeaking()) {
+              window.JPShared.tts.cancel();
+              setPlaying(false);
+            } else {
+              setPlaying(true);
+              window.JPShared.tts.speakLines(storyTexts, { onFinish: function() { setPlaying(false); } });
+            }
+          };
           contentDiv.insertBefore(playBtn, contentDiv.firstChild);
         }
       }

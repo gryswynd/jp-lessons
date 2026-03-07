@@ -8,6 +8,8 @@
  *   - Sequential chunking for long text (passages, conversations)
  *   - localStorage persistence of voice/speed preferences
  *   - Mobile-optimized with retry logic and timeout protection
+ *   - Pronunciation preprocessing for common TTS edge cases
+ *   - onFinish callback for play/stop button integration
  *
  * Load this file before any feature module scripts.
  */
@@ -26,6 +28,7 @@
   var selectedRate = 0.9;
   var chunkQueue = [];
   var isChunking = false;
+  var onFinishCallback = null;
 
   // --- Load saved preferences ---
   function loadPrefs() {
@@ -94,6 +97,58 @@
   // Load saved preferences on init
   loadPrefs();
 
+  // --- Pronunciation preprocessing ---
+  // Fixes common TTS mispronunciations by rewriting text before speaking.
+
+  // Partial-kanji day names that TTS engines often botch
+  var readingFixes = [
+    // Day-of-week partial kanji → full hiragana readings
+    [/金よう日/g, 'きんようび'],
+    [/月よう日/g, 'げつようび'],
+    [/火よう日/g, 'かようび'],
+    [/水よう日/g, 'すいようび'],
+    [/木よう日/g, 'もくようび'],
+    [/土よう日/g, 'どようび'],
+    [/日よう日/g, 'にちようび'],
+    [/何よう日/g, 'なんようび'],
+    // Partial-kanji compounds where TTS misreads the mix
+    [/大すき/g, 'だいすき'],
+    [/朝ごはん/g, 'あさごはん'],
+    [/晩ごはん/g, 'ばんごはん'],
+    [/名まえ/g, 'なまえ']
+  ];
+
+  // Words where は is NOT a particle (must not be converted to わ)
+  // Includes common words starting with は and words containing は mid-word
+  var haWordPatterns = /^(は[いじめなしか]|はし|はこ|はたらく|はたち|はる|はれ|はん|はなし|はなす|はや|はず|はっきり|はんぶん)|こんにちは$|こんばんは$|では|には|ごはん|おはよう/;
+
+  function preprocessForTTS(text) {
+    if (!text) return text;
+
+    // Apply known reading fixes for partial-kanji words
+    for (var i = 0; i < readingFixes.length; i++) {
+      text = text.replace(readingFixes[i][0], readingFixes[i][1]);
+    }
+
+    // Fix は particle pronunciation: replace は with わ when it's a particle
+    // Strategy: split on は, check context to decide particle vs word-internal
+    text = text.replace(/([\u4E00-\u9FFF\u30A0-\u30FF\u3040-\u309Fー])は(?=[\u4E00-\u9FFF\u30A0-\u30FF\u3040-\u309Fー、。！？\s]|$)/g,
+      function(match, preceding) {
+        // Check if this は is part of a known word ending
+        // Get some context: look at what precedes
+        // こんにちは、こんばんは — these end in は pronounced "ha"
+        // We handle these in a second pass below
+        return preceding + 'わ';
+      }
+    );
+
+    // Restore は in greetings and fixed expressions where は = "ha"
+    text = text.replace(/こんにちわ/g, 'こんにちは');
+    text = text.replace(/こんばんわ/g, 'こんばんは');
+
+    return text;
+  }
+
   // --- Core speak function ---
   function speakOne(text, options, onDone) {
     var opts = options || {};
@@ -107,11 +162,14 @@
       return;
     }
 
+    // Preprocess for pronunciation
+    var processed = preprocessForTTS(text);
+
     try {
       window.speechSynthesis.cancel();
 
       setTimeout(function () {
-        var utterance = new SpeechSynthesisUtterance(text);
+        var utterance = new SpeechSynthesisUtterance(processed);
         utterance.lang   = lang;
         utterance.rate   = rate;
         utterance.volume = volume;
@@ -175,9 +233,16 @@
     return chunks;
   }
 
+  function fireFinish() {
+    var cb = onFinishCallback;
+    onFinishCallback = null;
+    if (cb) cb();
+  }
+
   function playChunkQueue(options) {
     if (chunkQueue.length === 0) {
       isChunking = false;
+      fireFinish();
       return;
     }
     var chunk = chunkQueue.shift();
@@ -227,15 +292,21 @@
      *
      * @param {string[]} lines - Array of Japanese text strings
      * @param {Object} [options]
+     * @param {Function} [options.onFinish] - Called when all lines finish or playback is stopped
      */
     speakLines: function (lines, options) {
       this.cancel();
 
       if (!lines || lines.length === 0) return;
 
+      var opts = options || {};
+      if (opts.onFinish) {
+        onFinishCallback = opts.onFinish;
+      }
+
       chunkQueue = lines.filter(function (l) { return l && l.trim(); });
       isChunking = true;
-      playChunkQueue(options);
+      playChunkQueue(opts);
     },
 
     /**
@@ -247,6 +318,7 @@
       if (window.speechSynthesis) {
         window.speechSynthesis.cancel();
       }
+      fireFinish();
     },
 
     /**
@@ -308,7 +380,14 @@
      */
     isSupported: function () {
       return !!window.speechSynthesis;
-    }
+    },
+
+    /**
+     * Preprocess text for TTS (exposed for testing/debugging).
+     * @param {string} text
+     * @returns {string}
+     */
+    preprocess: preprocessForTTS
 
   };
 
