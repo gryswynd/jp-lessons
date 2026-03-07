@@ -1057,14 +1057,16 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 |---|---|---|---|
 | Between nouns (A and B) or with action verbs (do X with Y) | Connective "and / with" | `p_to` | N5.2 |
 | After quoted speech or thought content (「...」と) | Quotation marker | `p_to_quote` | N5.13 |
+| After a plain-form verb/adjective expressing automatic result (AとB) | Conditional "if/when → natural result" | `p_to_conditional` | G20 (N4.25+) |
 
 **Disambiguation rule — what precedes と determines role:**
 
 - **と between/after nouns** → `p_to` (レンとミキ = "Ren and Miki")
 - **と after a closing 」quotation mark** → `p_to_quote` (「おいしい」と言いました = said "it's delicious")
 - **と after a plain-form clause with 思う/知る** → `p_to_quote` (いいと思います = "I think it's good")
+- **と after a plain-form clause expressing automatic/natural result** → `p_to_conditional` (ボタンを押すと開く = "push the button and it opens") — **hard blocker before G20**
 
-Before N5.13, と appears only as `p_to`. From N5.13, both IDs are in scope — always check which role applies. Tagging quotation と as `p_to` displays "and / with" when the student taps it, which is actively misleading.
+Before N5.13, と appears only as `p_to`. From N5.13, `p_to` and `p_to_quote` are both in scope. `p_to_conditional` is not available until G20 (N4.25+) — any sentence using the AとB natural-result pattern (including wishful expressions like あるといいね) before G20 is an out-of-scope grammar violation and must be rewritten. Tagging quotation と as `p_to` displays "and / with" when the student taps it, which is actively misleading.
 
 ### Counter references
 

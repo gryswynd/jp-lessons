@@ -519,18 +519,11 @@
         },
         {
           "spk": "ミキ",
-          "jp": "わかった！白い 花が たくさん あるといいね。",
-          "en": "Got it! I hope there are lots of white flowers.",
+          "jp": "わかった！行こう！",
+          "en": "Got it! Let's go!",
           "terms": [
             { "id": "v_wakaru", "form": "plain_past" },
-            "v_shiroi",
-            "v_hana",
-            "p_ga",
-            "v_takusan",
-            "v_aru",
-            "p_to",
-            "v_ii",
-            "p_ne"
+            { "id": "v_iku", "form": "plain_volitional" }
           ]
         }
       ]
