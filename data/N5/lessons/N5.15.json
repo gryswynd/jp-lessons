@@ -181,8 +181,8 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "北ですね。この 道を 北に 行けば いいですか。",
-          "en": "North, I see. Is it okay to go north along this road?",
+          "jp": "北ですね。この 道を 北に 行きます。いいですか。",
+          "en": "North, I see. I'll go north on this road — is that okay?",
           "terms": [
             "v_kita",
             "g_desu",
@@ -192,7 +192,7 @@
             "p_wo",
             "v_kita",
             "p_ni",
-            { "id": "v_iku", "form": "conditional_ba" },
+            { "id": "v_iku", "form": "polite_masu" },
             { "id": "v_ii", "form": "polite_adj" },
             "p_ka"
           ]
@@ -436,8 +436,8 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "いいですね。北東から 南東まで 行けば、道は 長いですか。",
-          "en": "Sounds great. If we go from northeast to southeast, is the road long?",
+          "jp": "いいですね。北東から 南東まで 行きます。道は 長いですか。",
+          "en": "Sounds great. We'll go from northeast to southeast. Is the road long?",
           "terms": [
             { "id": "v_ii", "form": "polite_adj" },
             "p_ne",
@@ -445,7 +445,7 @@
             "p_kara",
             "v_nantou",
             "p_made",
-            { "id": "v_iku", "form": "conditional_ba" },
+            { "id": "v_iku", "form": "polite_masu" },
             "v_michi",
             "p_wa",
             { "id": "v_nagai", "form": "polite_adj" },
@@ -1013,7 +1013,7 @@
         {
           "kind": "mcq",
           "q": "友だちと いっしょに 北東に ___。（Let's go to the northeast together with friends.）",
-          "choices": ["行きましょう", "行きます", "行かない", "行けば"],
+          "choices": ["行きましょう", "行きます", "行かない", "行きたい"],
           "answer": "行きましょう",
           "terms": [
             "v_tomodachi",

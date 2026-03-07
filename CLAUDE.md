@@ -427,11 +427,13 @@ For **every** draft — not just grammar lessons — Agent 4 must perform a **Gr
    | `desire_tai`, `desire_tai_negative`, `polite_volitional_mashou` | N5.8 | N5.8+ |
    | `plain_volitional` | G9 | N5.10+ |
    | `plain_negative`, `plain_past_negative` | N5.9 | N5.9+ |
-   | `polite_past_adj`, `adverbial`, `conditional_ba`, `sugiru_form` | N5.10 | N5.10+ |
+   | `polite_past_adj`, `adverbial` | N5.10 | N5.10+ |
    | `plain_past_adj`, `plain_desire_tai`, `plain_appearance_sou` | G9 | N5.10+ |
    | `appearance_sou` | N5.11 | N5.11+ |
    | `potential`, `potential_negative` | N4.3 | N4.3+ |
    | `tari_form`, `nagara_form` | N4.10 | N4.10+ |
+   | `sugiru_form` | G15 | N4.5+ |
+   | `conditional_ba` | G20 | N4.25+ |
    | `conditional_tara` | N4.25 | N4.25+ |
    | `passive`, `causative` | N4.31 | N4.31+ |
 
@@ -444,8 +446,8 @@ For **every** draft — not just grammar lessons — Agent 4 must perform a **Gr
    | ～たり～たりする | `tari_form` (N4.10+) | Using ～たりします in N4.8 content |
    | ～ながら | `nagara_form` (N4.10+) | Using ～ながら in N4.5 content |
    | ～たら | `conditional_tara` (N4.25+) | Using ～たら in N4.20 content |
-   | ～ば / ～ければ | `conditional_ba` (N5.10+) | Using ～ば in N5.8 content |
-   | ～すぎる | `sugiru_form` (N5.10+) | Using ～すぎます in N5.7 content |
+   | ～ば / ～ければ | `conditional_ba` (G20 / N4.25+) | Using ～ば in N4.20 content |
+   | ～すぎる | `sugiru_form` (G15 / N4.5+) | Using ～すぎます in N4.3 content |
    | ～られる (passive) | `passive` (N4.31+) | Using ～られます in N4.25 content |
    | ～させる (causative) | `causative` (N4.31+) | Using ～させます in N4.25 content |
    | ～たいです | `desire_tai` (N5.8+) | Using ～たいです in N5.6 content |
@@ -1404,10 +1406,12 @@ Each conjugation form in `conjugation_rules.json` has an `introducedIn` field sp
 | N5.8 | `desire_tai`, `desire_tai_negative`, `polite_volitional_mashou` |
 | N5.9 | `plain_negative`, `plain_past_negative` |
 | G9 (N5.10+) | `plain_volitional`, `plain_desire_tai`, `plain_past_adj`, `plain_appearance_sou` |
-| N5.10 | `polite_past_adj`, `adverbial`, `conditional_ba`, `sugiru_form` |
+| N5.10 | `polite_past_adj`, `adverbial` |
 | N5.11 | `appearance_sou` |
 | N4.3 | `potential`, `potential_negative` |
 | N4.10 | `tari_form`, `nagara_form` |
+| G15 (~N4.5) | `sugiru_form` |
+| G20 (~N4.25) | `conditional_ba` |
 | N4.25 | `conditional_tara` |
 | N4.31 | `passive`, `causative` |
 
@@ -1440,9 +1444,10 @@ Each milestone groups forms that unlock together. The **active reinforcement win
 | **Potential** (G12) | N4.3 | N4.4–N4.6 | ≥1 potential form (affirmative or negative) | Ability/possibility expressions used where natural |
 | **Comparison + degree** (G15) | N4.5 | N4.6–N4.8 | ≥1 `より` comparison, ≥1 `いちばん` superlative or `ほど` degree pattern | Comparison/degree expressions appear where natural (describing preferences, rankings, qualities) |
 | **Tari + nagara** (G17) | N4.10 | N4.11–N4.13 | ≥1 `～たり～たりする` listing, ≥1 `～ながら` simultaneous action | Both patterns appear where natural |
+| **Excessive degree + noun form** (G15) | N4.5 | N4.6–N4.8 | ≥1 `～すぎる` excessive expression | ～すぎる appears where overabundance or excess is natural (eating too much, too expensive, too noisy) |
 | **Limiting particles** (G16) | N4.14 | N4.15–N4.17 | ≥1 `だけ` or `しか～ない` limiting expression | Limiting particles appear where context calls for restriction or exclusion |
 | **Permission + prohibition** (G19) | N4.20 | N4.21–N4.23 | ≥1 `てもいい` permission or ≥1 `てはいけない` prohibition | Both patterns appear where rules, permissions, or social norms are discussed |
-| **Conditional tara** (G20) | N4.25 | N4.26–N4.28 | ≥1 `～たら` conditional in conversation or reading | Conditional appears where natural |
+| **Conditionals** (G20) | N4.25 | N4.26–N4.28 | ≥1 `～たら` or `～ば` conditional in conversation or reading | At least one conditional form (たら or ば) appears where natural |
 | **Passive + causative** (G21/G22) | N4.31 | N4.32–N4.34 | ≥1 passive, ≥1 causative across the lesson | Both voice patterns appear where natural |
 | **Auxiliary compounds** (G23) | N4.34 | N4.35–N4.36 | ≥1 `てみる` (try) or `ておく` (prepare) or `てしまう` (complete/regret) | Auxiliary verb compounds appear where experimentation, preparation, or completion is discussed |
 
@@ -1471,6 +1476,8 @@ Beyond individual conjugation forms, these **structural patterns** combine forms
 | `Verb-ましょう` (let's/shall we) | G8 | N5.9+ | Use in at least 1 conversation per lesson. Natural contexts: making plans together, suggestions, invitations. |
 | `Verb-たり Verb-たりする` (listing actions) | G17 | N4.11+ | Use in at least 1 conversation or reading per lesson. Natural contexts: describing weekends, hobbies, routines. |
 | `Verb-ながら` (while doing) | G17 | N4.11+ | Use occasionally. Natural contexts: multitasking descriptions, daily routines. |
+| `～すぎる` (excessive degree) | G15 | N4.6+ | Use occasionally. Natural contexts: eating too much, too expensive, too loud, overwork. |
+| `～ば / ～ければ` (ba conditional) | G20 | N4.26+ | Use occasionally. Natural contexts: general conditions, advice, logical consequences. |
 | `～たら` (if/when conditional) | G20 | N4.26+ | Use in at least 1 context per lesson. Natural contexts: plans, hypotheticals, advice. |
 | `Verb-てもいい` (permission) | G19 | N4.21+ | Use occasionally. Natural contexts: asking permission, stating what's allowed. |
 | `Verb-てはいけない` (prohibition) | G19 | N4.21+ | Use occasionally. Natural contexts: rules, warnings, social norms. |
