@@ -16,15 +16,15 @@
       "items": [
         {
           "title": "Conversation 1",
-          "context": "Yamamoto-sensei talks with Ali, an international student, about reading and writing Japanese at school.",
+          "context": "Yamamoto-sensei talks with Lee, an international student, about reading and writing Japanese at school.",
           "lines": [
             {
               "spk": "先生",
-              "jp": "アリさんは 毎日 日本語を 読んでいますか。",
-              "terms": ["char_ali", "v_san", "p_wa", "v_mainichi", "v_nihongo", "p_wo", { "id": "v_yomu", "form": "te_form" }, { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
+              "jp": "リーさんは 毎日 日本語を 読んでいますか。",
+              "terms": ["char_lee", "v_san", "p_wa", "v_mainichi", "v_nihongo", "p_wo", { "id": "v_yomu", "form": "te_form" }, { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
             },
             {
-              "spk": "アリ",
+              "spk": "リー",
               "jp": "はい、毎日 少し 読んでいます。ゆっくり 読むのが すきです。",
               "terms": ["p_hai", "v_mainichi", "v_sukoshi", { "id": "v_yomu", "form": "te_form" }, { "id": "v_iru", "form": "polite_masu" }, "v_yukkuri", "v_yomu", "p_no", "p_ga", { "id": "v_suki", "form": "polite_adj" }]
             },
@@ -34,15 +34,15 @@
               "terms": [{ "id": "v_ii", "form": "polite_adj" }, "p_ne", "v_mainichi", "v_te", "p_de", { "id": "v_kaku", "form": "te_form" }, "v_kudasai", "v_yoku", { "id": "v_wakaru", "form": "polite_masu" }, "p_yo"]
             },
             {
-              "spk": "アリ",
+              "spk": "リー",
               "jp": "わかりました。手で 書くことも、電話で 話すことも すきです。",
               "terms": [{ "id": "v_wakaru", "form": "polite_mashita" }, "v_te", "p_de", "v_kaku", "v_koto", "p_mo", "v_denwa", "p_de", "v_hanasu", "v_koto", "p_mo", { "id": "v_suki", "form": "polite_adj" }]
             }
           ],
-          "question": "What does Yamamoto-sensei ask Ali to do every day?",
+          "question": "What does Yamamoto-sensei ask Lee to do every day?",
           "choices": ["Write by hand", "Read slowly", "Call on the phone", "Speak quickly"],
           "answer": "Write by hand",
-          "explanation": "Yamamoto-sensei says 毎日手で書いてください — 'Please write by hand every day.' 書いてください = te-form of 書く + ください = polite request (G7). 手 (N5.13) = hand; 書 (N5.13) = write; 手で = 'by hand' — v_te + p_de, where で marks the instrument/means. Ali replies わかりました = 'Understood' — polite past of 分かる (分 N5.4, read わか). Ali's Line 4 confirms liking both 手で書くこと (writing by hand) and 電話で話すこと (talking on the phone) — こと nominalizes each verb phrase (early-use from N5.9, written in hiragana as こと since 事 is N4.14)."
+          "explanation": "Yamamoto-sensei says 毎日手で書いてください — 'Please write by hand every day.' 書いてください = te-form of 書く + ください = polite request (G7). 手 (N5.13) = hand; 書 (N5.13) = write; 手で = 'by hand' — v_te + p_de, where で marks the instrument/means. Lee replies わかりました = 'Understood' — polite past of 分かる (分 N5.4, read わか). Lee's Line 4 confirms liking both 手で書くこと (writing by hand) and 電話で話すこと (talking on the phone) — こと nominalizes each verb phrase (early-use from N5.9, written in hiragana as こと since 事 is N4.14)."
         },
         {
           "title": "Conversation 2",
