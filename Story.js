@@ -350,6 +350,7 @@ window.StoryModule = (function() {
         <div class="jp-story-header">
           <div class="jp-story-title">📖 Stories</div>
           <div class="jp-story-nav">
+            <button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.3);">\u2699</button>
             <button class="jp-story-nav-btn" id="jp-story-list" style="display:none;">☰ All Stories</button>
             <button class="jp-story-nav-btn" id="jp-story-prev" style="display:none;">← Previous</button>
             <button class="jp-story-nav-btn" id="jp-story-next" style="display:none;">Next →</button>
@@ -706,6 +707,40 @@ window.StoryModule = (function() {
       const contentDiv = storyContainer.querySelector('.jp-story-content');
       if (contentDiv) {
         contentDiv.scrollTop = 0;
+
+        // Add per-paragraph speaker buttons and a Play Story button
+        var paragraphs = contentDiv.querySelectorAll('p');
+        var storyTexts = [];
+        paragraphs.forEach(function (p) {
+          // Extract plain text (strip HTML tags) for TTS
+          var plainText = p.textContent.trim();
+          if (!plainText) return;
+          storyTexts.push(plainText);
+          // Wrap content for flex layout with speaker button
+          var wrapper = document.createElement('div');
+          wrapper.style.cssText = 'display:flex;align-items:flex-start;gap:2px;';
+          var textDiv = document.createElement('div');
+          textDiv.style.flex = '1';
+          // Move all children from p into textDiv
+          while (p.firstChild) textDiv.appendChild(p.firstChild);
+          var btn = document.createElement('button');
+          btn.className = 'jp-speak-sentence';
+          btn.title = 'Listen';
+          btn.textContent = '\uD83D\uDD0A';
+          btn.onclick = function () { window.JPShared.tts.speak(plainText); };
+          wrapper.appendChild(textDiv);
+          wrapper.appendChild(btn);
+          p.appendChild(wrapper);
+        });
+        // Insert Play Story button at top
+        if (storyTexts.length > 0) {
+          var playBtn = document.createElement('button');
+          playBtn.className = 'jp-speak-all-btn';
+          playBtn.innerHTML = '\uD83D\uDD0A Play Story';
+          playBtn.style.marginTop = '10px';
+          playBtn.onclick = function () { window.JPShared.tts.speakLines(storyTexts); };
+          contentDiv.insertBefore(playBtn, contentDiv.firstChild);
+        }
       }
 
     } catch (err) {
