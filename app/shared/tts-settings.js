@@ -341,6 +341,9 @@
     overlay = null;
   }
 
+  // Inject styles immediately so gear buttons render correctly
+  injectStyles();
+
   // --- Public API ---
   window.JPShared.ttsSettings = {
     open: open,

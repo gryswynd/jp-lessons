@@ -84,7 +84,7 @@ window.JPApp = {
       '</style>';
     var html = style +
       '<div class="jp-main-menu" style="position:relative;">' +
-        '<button class="jp-settings-gear-menu" onclick="window.JPShared && window.JPShared.ttsSettings && window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button>' +
+        '<button onclick="JPApp.openTtsSettings()" title="Voice Settings" style="position:absolute;top:15px;right:15px;background:rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.1);color:#666;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1.3rem;display:flex;align-items:center;justify-content:center;padding:0;">\u2699</button>' +
         '<h1 style="color:#2f3542;font-weight:900;">\uD83C\uDDEF\uD83C\uDDF5 Japanese Master</h1>' +
         '<div class="jp-menu-btn" onclick="JPApp.launch(\'lesson\')" style="border-top:3px solid #4e54c8;">' +
           '<div class="jp-menu-title" style="color:#4e54c8;">\uD83D\uDCDA Lessons</div>' +
@@ -126,6 +126,30 @@ window.JPApp = {
         '</div>' +
       '</div>';
     this.container.innerHTML = html;
+  },
+
+  // --- TTS SETTINGS (accessible from main menu before modules load) ---
+  openTtsSettings: async function() {
+    if (window.JPShared && window.JPShared.ttsSettings) {
+      window.JPShared.ttsSettings.open();
+      return;
+    }
+    // Load TTS modules on demand (silently — don't clobber menu on error)
+    try {
+      window.JPShared = window.JPShared || {};
+      var savedHtml = this.container.innerHTML;
+      await this.loadModule('app/shared/tts.js');
+      await this.loadModule('app/shared/tts-settings.js');
+      // Restore menu if loadModule error-displayed something
+      if (!window.JPShared.ttsSettings) {
+        this.container.innerHTML = savedHtml;
+        return;
+      }
+      this.container.innerHTML = savedHtml;
+      window.JPShared.ttsSettings.open();
+    } catch (e) {
+      console.error('Could not load TTS settings:', e);
+    }
   },
 
   // --- LAUNCHER ---
