@@ -175,19 +175,24 @@ window.LessonModule = {
         const manifest = await window.getManifest(REPO_CONFIG);
         const conjUrl     = getCdnUrl(manifest.globalFiles.conjugationRules);
         const counterUrl  = getCdnUrl(manifest.globalFiles.counterRules);
-        const particleUrl = getCdnUrl(manifest.shared.particles);
+        const particleUrl  = getCdnUrl(manifest.shared.particles);
+        const characterUrl = getCdnUrl(manifest.shared.characters);
         console.log('[Lesson] Conjugation URL:', conjUrl);
         console.log('[Lesson] Counter URL:', counterUrl);
-        const [conj, counter, particleData, ...glossParts] = await Promise.all([
+        const [conj, counter, particleData, characterData, ...glossParts] = await Promise.all([
              fetch(conjUrl).then(r => r.json()),
              fetch(counterUrl).then(r => r.json()),
              fetch(particleUrl).then(r => r.json()),
+             fetch(characterUrl).then(r => r.json()),
              ...manifest.levels.map(lvl => fetch(getCdnUrl(manifest.data[lvl].glossary)).then(r => r.json()))
         ]);
         const map = {};
         glossParts.forEach(g => g.entries.forEach(i => { map[i.id] = i; }));
         (particleData.particles || []).forEach(p => {
             map[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle' };
+        });
+        (characterData.characters || []).forEach(c => {
+            map[c.id] = Object.assign({}, c, { portraitUrl: getCdnUrl(c.portrait) });
         });
         return { map, conj, counter };
     }
@@ -273,11 +278,31 @@ window.LessonModule = {
 
     function renderConversation(sec) {
         const div = el("div", ""); div.appendChild(createToggle());
+        const allJp = [];
+        // Play/Stop toggle button
+        const playAllBtn = el("button", "jp-speak-all-btn", "\uD83D\uDD0A Play Conversation");
+        div.appendChild(playAllBtn);
         (sec.lines || []).forEach(line => {
+          allJp.push(line.jp);
           const row = el("div", "jp-row");
-          row.innerHTML = `<div class="jp-speaker-bubble" translate="no">${line.spk}</div><div style="flex:1"><div class="jp-jp">${window.JPShared.textProcessor.processText(line.jp, line.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(line.en)}</div></div>`;
+          row.innerHTML = `<div class="jp-speaker-bubble" translate="no">${line.spk}</div><div style="flex:1;display:flex;align-items:flex-start;"><div style="flex:1"><div class="jp-jp">${window.JPShared.textProcessor.processText(line.jp, line.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(line.en)}</div></div><button class="jp-speak-sentence" title="Listen">\uD83D\uDD0A</button></div>`;
+          const speakBtn = row.querySelector('.jp-speak-sentence');
+          speakBtn.onclick = () => window.JPShared.tts.speak(line.jp);
           div.appendChild(row);
         });
+        function setPlaying(playing) {
+          playAllBtn.textContent = playing ? '\u23F9 Stop' : '\uD83D\uDD0A Play Conversation';
+          playAllBtn.classList.toggle('jp-speak-all-active', playing);
+        }
+        playAllBtn.onclick = () => {
+          if (window.JPShared.tts.isSpeaking()) {
+            window.JPShared.tts.cancel();
+            setPlaying(false);
+          } else {
+            setPlaying(true);
+            window.JPShared.tts.speakLines(allJp, { onFinish: () => setPlaying(false) });
+          }
+        };
         return div;
     }
 
@@ -285,7 +310,8 @@ window.LessonModule = {
         const div = el("div", ""); div.appendChild(createToggle());
         (sec.items || []).forEach((item, idx) => {
             const row = el("div", "jp-row");
-            row.innerHTML = `<div class="jp-speaker-bubble" translate="no">${idx+1}</div><div style="flex:1"><div class="jp-jp">${window.JPShared.textProcessor.processText(item.jp, item.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(item.en)}</div></div>`;
+            row.innerHTML = `<div class="jp-speaker-bubble" translate="no">${idx+1}</div><div style="flex:1;display:flex;align-items:flex-start;"><div style="flex:1"><div class="jp-jp">${window.JPShared.textProcessor.processText(item.jp, item.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(item.en)}</div></div><button class="jp-speak-sentence" title="Listen">\uD83D\uDD0A</button></div>`;
+            row.querySelector('.jp-speak-sentence').onclick = () => window.JPShared.tts.speak(item.jp);
             div.appendChild(row);
         });
         return div;
@@ -376,9 +402,29 @@ window.LessonModule = {
 
     function renderReading(sec) {
         const div = el("div", ""); div.appendChild(createToggle());
+        const allJp = (sec.passage || []).map(p => p.jp);
+        // Play/Stop toggle button
+        const playAllBtn = el("button", "jp-speak-all-btn", "\uD83D\uDD0A Play Passage");
+        function setPlaying(playing) {
+          playAllBtn.textContent = playing ? '\u23F9 Stop' : '\uD83D\uDD0A Play Passage';
+          playAllBtn.classList.toggle('jp-speak-all-active', playing);
+        }
+        playAllBtn.onclick = () => {
+          if (window.JPShared.tts.isSpeaking()) {
+            window.JPShared.tts.cancel();
+            setPlaying(false);
+          } else {
+            setPlaying(true);
+            window.JPShared.tts.speakLines(allJp, { onFinish: () => setPlaying(false) });
+          }
+        };
+        div.appendChild(playAllBtn);
         const pCard = el("div", "jp-card");
         (sec.passage || []).forEach(p => {
-            pCard.appendChild(el("div", "", `<div class="jp-jp" style="margin-bottom:8px;">${window.JPShared.textProcessor.processText(p.jp, p.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(p.en)}</div>`));
+            const pDiv = el("div", "");
+            pDiv.innerHTML = `<div style="display:flex;align-items:flex-start;"><div style="flex:1"><div class="jp-jp" style="margin-bottom:8px;">${window.JPShared.textProcessor.processText(p.jp, p.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(p.en)}</div></div><button class="jp-speak-sentence" title="Listen">\uD83D\uDD0A</button></div>`;
+            pDiv.querySelector('.jp-speak-sentence').onclick = () => window.JPShared.tts.speak(p.jp);
+            pCard.appendChild(pDiv);
         });
         div.appendChild(pCard);
 
@@ -397,7 +443,7 @@ window.LessonModule = {
 
     // --- Logic ---
     async function fetchLessonList() {
-        root.innerHTML = `<div class="jp-header"><div class="jp-title">Library</div><button class="jp-exit-btn">Exit</button></div><div class="jp-body" style="text-align:center; justify-content:center; color:#888;">Loading...</div>`;
+        root.innerHTML = `<div class="jp-header"><div class="jp-title">Library</div><div style="display:flex;gap:8px;align-items:center;"><button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button><button class="jp-exit-btn">Exit</button></div></div><div class="jp-body" style="text-align:center; justify-content:center; color:#888;">Loading...</div>`;
         root.querySelector('.jp-exit-btn').onclick = exitCallback;
 
         try {
@@ -427,7 +473,7 @@ window.LessonModule = {
     }
 
     function renderLevelPicker() {
-        root.innerHTML = `<div class="jp-header"><div class="jp-title">Library</div><button class="jp-exit-btn">Exit</button></div><div class="jp-body"><div class="jp-menu-grid" id="jp-level-container"></div></div>`;
+        root.innerHTML = `<div class="jp-header"><div class="jp-title">Library</div><div style="display:flex;gap:8px;align-items:center;"><button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button><button class="jp-exit-btn">Exit</button></div></div><div class="jp-body"><div class="jp-menu-grid" id="jp-level-container"></div></div>`;
         root.querySelector('.jp-exit-btn').onclick = exitCallback;
         const container = document.getElementById('jp-level-container');
         allLevelsData.forEach(({ level, levelNum, lessons }) => {
@@ -442,7 +488,7 @@ window.LessonModule = {
         currentLevelId = level;
         currentLevelLessons = lessons;
         const levelNum = level.replace('N', '');
-        root.innerHTML = `<div class="jp-header"><button class="jp-back-btn">← Levels</button><div class="jp-title">JLPT Level N${levelNum}</div><button class="jp-exit-btn">Exit</button></div><div class="jp-body"><div class="jp-menu-grid" id="jp-menu-container"></div></div>`;
+        root.innerHTML = `<div class="jp-header"><button class="jp-back-btn">← Levels</button><div class="jp-title">JLPT Level N${levelNum}</div><div style="display:flex;gap:8px;align-items:center;"><button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button><button class="jp-exit-btn">Exit</button></div></div><div class="jp-body"><div class="jp-menu-grid" id="jp-menu-container"></div></div>`;
         root.querySelector('.jp-back-btn').onclick = () => renderLevelPicker();
         root.querySelector('.jp-exit-btn').onclick = exitCallback;
         const menuEl = document.getElementById('jp-menu-container');
@@ -455,7 +501,7 @@ window.LessonModule = {
     }
 
     async function loadLesson(filePath) {
-        root.innerHTML = `<div class="jp-header"><button class="jp-back-btn">← List</button><div class="jp-title">Loading...</div><button class="jp-exit-btn">Exit</button></div><div class="jp-progress-container"><div class="jp-progress-bar"></div></div><div class="jp-body"></div><div class="jp-footer"><button class="jp-nav-btn prev">Prev</button><button class="jp-nav-btn next">Next</button></div>`;
+        root.innerHTML = `<div class="jp-header"><button class="jp-back-btn">← List</button><div class="jp-title">Loading...</div><div style="display:flex;gap:8px;align-items:center;"><button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button><button class="jp-exit-btn">Exit</button></div></div><div class="jp-progress-container"><div class="jp-progress-bar"></div></div><div class="jp-body"></div><div class="jp-footer"><button class="jp-nav-btn prev">Prev</button><button class="jp-nav-btn next">Next</button></div>`;
         root.querySelector('.jp-back-btn').onclick = () => renderMenu(currentLevelId, currentLevelLessons);
         root.querySelector('.jp-exit-btn').onclick = exitCallback;
 

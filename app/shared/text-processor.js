@@ -277,7 +277,8 @@
           }
         }
         if (matchedForm) {
-          var span = '<span class="jp-term" onclick="window.JP_OPEN_TERM(\'' + t.id + '\', true)">' + matchedForm + '</span>';
+          var cls = (t.type === 'character') ? 'jp-term jp-term-name' : 'jp-term';
+          var span = '<span class="' + cls + '" onclick="window.JP_OPEN_TERM(\'' + t.id + '\', true)">' + matchedForm + '</span>';
           if (matchedForm.length === 1) {
             // Single-character terms (particles, etc.): avoid matching characters
             // that are word-internal, e.g. か inside やまかわ vs か at the end of ですか.

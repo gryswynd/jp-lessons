@@ -5,8 +5,6 @@
 
 ### Story Text (Japanese)
 
-こんにちは。わたしはリクです。
-
 今日、かぞくが来ます。わたしはとてもうれしいです。父はメールをしました。「車で来てください。」
 
 道があります。山があります。川もあります。バスはありません。
@@ -25,8 +23,6 @@
 
 **The Family is Coming**
 
-Hello. I am Riku.
-
 Today, the family is coming. I am very happy. Dad sent a message. "Please come by car."
 
 There is a road. There are mountains. There is also a river. There is no bus.
@@ -43,7 +39,6 @@ Next week, the family will come here again. How nice!
 
 ### Vocabulary Used (from glossary)
 
-- こんにちは - hello / good afternoon
 - わたし - I / me
 - 今日 (きょう) - today
 - かぞく (家族) - family
@@ -73,7 +68,7 @@ Next week, the family will come here again. How nice!
 
 ### Grammar Points Used
 
-- Copula (です) — わたしはリクです
+- Copula (です) — noun and adjective predicates
 - Polite present affirmative (～ます) — 来ます、あります
 - Polite past affirmative (～ました) — 行きました、しました、来ました
 - Polite negative (～ません) — ありません

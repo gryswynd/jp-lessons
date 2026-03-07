@@ -157,6 +157,10 @@
           "items": ["v_hoteru"]
         },
         {
+          "label": "Interjections",
+          "items": ["v_un"]
+        },
+        {
           "label": "Kanji",
           "items": ["k_ama", "k_u96fb", "k_u6c17", "k_yasu"]
         }
@@ -441,6 +445,7 @@
           "jp": "うん、天気が よかったからね。",
           "en": "Yeah, because the weather was good.",
           "terms": [
+            "v_un",
             "v_tenki",
             "p_ga",
             { "id": "v_ii", "form": "plain_past_adj" },
@@ -479,6 +484,7 @@
           "jp": "うん！休日に 電車で 行きたいね。",
           "en": "Yeah! I want to go by train on a holiday.",
           "terms": [
+            "v_un",
             "v_kyuujitsu",
             "p_ni",
             "v_densha",

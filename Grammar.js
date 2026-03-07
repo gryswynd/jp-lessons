@@ -1009,7 +1009,7 @@ window.GrammarModule = {
         <div class="gr-header">
           <button class="gr-back-btn">← List</button>
           <div class="gr-title">Loading...</div>
-          <button class="gr-exit-btn">Exit</button>
+          <div style="display:flex;gap:8px;align-items:center;"><button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button><button class="gr-exit-btn">Exit</button></div>
         </div>
         <div class="gr-progress-container"><div class="gr-progress-bar"></div></div>
         <div class="gr-body"></div>
@@ -1053,7 +1053,7 @@ window.GrammarModule = {
       root.innerHTML = `
         <div class="gr-header">
           <div class="gr-title">🌿 Grammar Garden</div>
-          <button class="gr-exit-btn">Exit</button>
+          <div style="display:flex;gap:8px;align-items:center;"><button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button><button class="gr-exit-btn">Exit</button></div>
         </div>
         <div class="gr-body" style="justify-content:center;align-items:center;color:#888;">Loading...</div>`;
       root.querySelector('.gr-exit-btn').onclick = exitCallback;
@@ -1078,7 +1078,7 @@ window.GrammarModule = {
       root.innerHTML = `
         <div class="gr-header">
           <div class="gr-title">🌿 Grammar Garden</div>
-          <button class="gr-exit-btn">Exit</button>
+          <div style="display:flex;gap:8px;align-items:center;"><button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button><button class="gr-exit-btn">Exit</button></div>
         </div>
         <div class="gr-body">
           <div style="font-size:0.8rem;color:#888;margin-bottom:16px;text-transform:uppercase;font-weight:700;letter-spacing:1px;">Grammar Lessons</div>

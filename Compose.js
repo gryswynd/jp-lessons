@@ -237,7 +237,7 @@ window.ComposeModule = {
         </div>
         <header>
             <span onclick="ComposeApp.showMenu()">Compose 作文</span>
-            <button class="c-exit-btn">Exit</button>
+            <div style="display:flex;gap:8px;align-items:center;"><button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button><button class="c-exit-btn">Exit</button></div>
         </header>
         <div id="c-app-container">
             <div id="c-view-menu" style="width:100%"></div>

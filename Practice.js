@@ -123,7 +123,7 @@ window.PracticeModule = {
 
         <header>
            <span onclick="KanjiApp.showMenu()">Kanji Master 先生</span>
-           <button class="k-exit-btn">Exit</button>
+           <div style="display:flex;gap:8px;align-items:center;"><button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button><button class="k-exit-btn">Exit</button></div>
         </header>
 
         <div id="k-app-container">

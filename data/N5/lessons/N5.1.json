@@ -140,7 +140,7 @@
           "spk": "A",
           "jp": "すみません。はじめまして。わたしの 名まえは りきぞです。",
           "en": "Excuse me. Nice to meet you. My name is Rikizo.",
-          "terms": ["p_sumimasen", "p_hajimemashite", "v_watashi", "p_no", "v_namae", "p_wa", "g_desu"]
+          "terms": ["p_sumimasen", "p_hajimemashite", "v_watashi", "p_no", "v_namae", "p_wa", "char_rikizo", "g_desu"]
         },
         {
           "spk": "B",
@@ -213,44 +213,44 @@
     },
     {
       "type": "conversation",
-      "title": "かいわ 3: 友だちの こと（About a Friend）",
-      "context": "An evening conversation about a friend.",
+      "title": "かいわ 3: 先生の こと（About a Teacher）",
+      "context": "Two students chat after school about their Japanese teacher.",
       "lines": [
         {
           "spk": "A",
-          "jp": "こんばんは。友だちは どんな 人ですか。",
-          "en": "Good evening. What kind of person is your friend?",
-          "terms": ["p_konbanwa", "v_tomodachi", "p_wa", "v_donna", "k_hito", "g_desu", "p_ka"]
+          "jp": "こんばんは。先生は どんな 人ですか。",
+          "en": "Good evening. What kind of person is your teacher?",
+          "terms": ["p_konbanwa", "v_sensei", "p_wa", "v_donna", "k_hito", "g_desu", "p_ka"]
         },
         {
           "spk": "B",
           "jp": "やさしい 人です。名まえは すずきさんです。",
-          "en": "A kind person. Their name is Suzuki-san.",
+          "en": "A kind person. Her name is Suzuki-san.",
           "terms": ["v_yasashii", "k_hito", "g_desu", "v_namae", "p_wa", "v_san"]
         },
         {
           "spk": "A",
           "jp": "男の人ですか、女の人ですか。",
-          "en": "Is it a man or a woman?",
+          "en": "Is she a man or a woman?",
           "terms": ["k_otoko", "p_no", "k_hito", "g_desu", "p_ka", "k_onna"]
         },
         {
           "spk": "B",
-          "jp": "女の人です。とても いい 友だちです。",
-          "en": "A woman. She is a really good friend.",
-          "terms": ["k_onna", "p_no", "k_hito", "g_desu", "v_totemo", "v_ii", "v_tomodachi"]
+          "jp": "女の人です。とても いい 先生です。",
+          "en": "A woman. She is a really good teacher.",
+          "terms": ["k_onna", "p_no", "k_hito", "g_desu", "v_totemo", "v_ii", "v_sensei"]
         },
         {
           "spk": "A",
-          "jp": "いいですね。やさしい 友だちですね。",
-          "en": "That's nice. She sounds like a kind friend.",
-          "terms": ["v_ii", "g_desu", "p_ne", "v_yasashii", "v_tomodachi"]
+          "jp": "いいですね。やさしい 先生ですね。",
+          "en": "That's nice. She sounds like a kind teacher.",
+          "terms": ["v_ii", "g_desu", "p_ne", "v_yasashii", "v_sensei"]
         },
         {
           "spk": "B",
-          "jp": "すずきさんは 先生じゃありません。でも、とても いい 人ですよ。",
-          "en": "Suzuki-san isn't a teacher. But she's a very good person, you know.",
-          "terms": ["v_san", "p_wa", "v_sensei", "p_ja", { "id": "v_aru", "form": "polite_negative" }, "v_totemo", "v_ii", "k_hito", "g_desu", "p_yo"]
+          "jp": "すずきさんは とても いい 人ですよ。",
+          "en": "Suzuki-san is a very good person, you know.",
+          "terms": ["v_san", "p_wa", "v_totemo", "v_ii", "k_hito", "g_desu", "p_yo"]
         },
         {
           "spk": "A",
@@ -293,19 +293,19 @@
           "spk": "C",
           "jp": "はじめまして。わたしは りきぞです。よろしく おねがいします。",
           "en": "Nice to meet you. I'm Rikizo. Pleased to meet you.",
-          "terms": ["p_hajimemashite", "v_watashi", "p_wa", "g_desu", "p_yoroshiku"]
+          "terms": ["p_hajimemashite", "v_watashi", "p_wa", "char_rikizo", "g_desu", "p_yoroshiku"]
         },
         {
           "spk": "B",
           "jp": "おはよう、りきぞさん。",
           "en": "Morning, Rikizo!",
-          "terms": ["p_ohayou_casual", "v_san"]
+          "terms": ["p_ohayou_casual", "char_rikizo", "v_san"]
         },
         {
           "spk": "A",
           "jp": "りきぞさん、ようこそ。とても いい 名まえですね。",
           "en": "Rikizo-san, welcome. That's a very nice name.",
-          "terms": ["v_san", "p_youkoso", "v_totemo", "v_ii", "v_namae", "g_desu", "p_ne"]
+          "terms": ["char_rikizo", "v_san", "p_youkoso", "v_totemo", "v_ii", "v_namae", "g_desu", "p_ne"]
         }
       ]
     },
@@ -316,7 +316,7 @@
         {
           "jp": "わたしの 名まえは りきぞです。",
           "en": "My name is Rikizo.",
-          "terms": ["v_watashi", "p_no", "v_namae", "p_wa", "g_desu"]
+          "terms": ["v_watashi", "p_no", "v_namae", "p_wa", "char_rikizo", "g_desu"]
         },
         {
           "jp": "父が います。母が います。さん人です。",
@@ -334,14 +334,14 @@
           "terms": ["v_chichi", "p_wa", "v_totemo", "v_yasashii", "v_sensei", "g_desu"]
         },
         {
-          "jp": "いちばん やさしい 友だちは すずきさんです。",
-          "en": "My kindest friend is Suzuki-san.",
-          "terms": ["v_ichiban", "v_yasashii", "v_tomodachi", "p_wa", "v_san", "g_desu"]
+          "jp": "いちばん やさしい 先生は すずき先生です。",
+          "en": "My kindest teacher is Suzuki-sensei.",
+          "terms": ["v_ichiban", "v_yasashii", "v_sensei", "p_wa", "g_desu"]
         },
         {
-          "jp": "すずきさんは やさしい 人です。",
-          "en": "Suzuki-san is a kind person.",
-          "terms": ["v_san", "p_wa", "v_yasashii", "k_hito", "g_desu"]
+          "jp": "すずき先生は やさしい 人です。",
+          "en": "Suzuki-sensei is a kind person.",
+          "terms": ["v_sensei", "p_wa", "v_yasashii", "k_hito", "g_desu"]
         }
       ],
       "questions": [
@@ -356,9 +356,9 @@
           "terms": ["v_otousan", "p_wa", "v_nani", "p_wo", { "id": "v_suru", "form": "polite_masu" }, "p_ka", "v_sensei", "g_desu"]
         },
         {
-          "q": "いちばん やさしい 友だちは だれですか。",
-          "a": "すずきさんです。",
-          "terms": ["v_ichiban", "v_yasashii", "v_tomodachi", "p_wa", "v_dare", "p_ka", "v_san", "g_desu"]
+          "q": "いちばん やさしい 先生は だれですか。",
+          "a": "すずき先生です。",
+          "terms": ["v_ichiban", "v_yasashii", "v_sensei", "p_wa", "v_dare", "p_ka", "g_desu"]
         },
         {
           "q": "お母さんは なにを しますか。",

@@ -13,15 +13,16 @@ This file governs how Claude Code creates all lesson content for this repository
 3. [The Handoff Protocol](#the-handoff-protocol)
 4. [Content Types & Their Rules](#content-types--their-rules)
 5. [Term Tagging Reference](#term-tagging-reference)
-6. [Kanji Prerequisite Rules](#kanji-prerequisite-rules)
-7. [Approved Vocabulary Rules](#approved-vocabulary-rules)
-8. [Early-Use Vocabulary Rules](#early-use-vocabulary-rules)
-9. [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules)
-10. [Grammar Reinforcement Requirements](#grammar-reinforcement-requirements)
-11. [Register Requirements (Polite vs Casual)](#register-requirements-polite-vs-casual)
-12. [Quality Gates (Pass/Fail Criteria)](#quality-gates-passfail-criteria)
-13. [File & Structure Reference](#file--structure-reference)
-14. [Common Failure Modes](#common-failure-modes)
+6. [Character Name Tagging](#character-name-tagging)
+7. [Kanji Prerequisite Rules](#kanji-prerequisite-rules)
+8. [Approved Vocabulary Rules](#approved-vocabulary-rules)
+9. [Early-Use Vocabulary Rules](#early-use-vocabulary-rules)
+10. [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules)
+11. [Grammar Reinforcement Requirements](#grammar-reinforcement-requirements)
+12. [Register Requirements (Polite vs Casual)](#register-requirements-polite-vs-casual)
+13. [Quality Gates (Pass/Fail Criteria)](#quality-gates-passfail-criteria)
+14. [File & Structure Reference](#file--structure-reference)
+15. [Common Failure Modes](#common-failure-modes)
 
 ---
 
@@ -77,6 +78,7 @@ User Request
 - **Do not read the glossary in full.** The glossary files are large and will exceed output token limits. Instead use targeted Grep queries: search by `lesson_ids` to enumerate vocab for the target lesson, and search by `"id": "v_foo"` to verify individual IDs. See [Glossary Access Pattern](#glossary-access-pattern) below.
 - Build a **Content Brief** (see format below) and pass it to Agent 2.
 - If Agent 4 returns a rewrite note, analyse the feedback, update the brief, and re-dispatch to Agent 2. Log what changed.
+- If Agent 3 returns an Unregistered Word Report (not a FAIL), present the word list to the user using the escalation format. For each word the user approves, add the entry to the correct glossary file before re-dispatching to Agent 2. For each word the user rejects, instruct Agent 2 to remove or replace it. Log all additions and rejections in the Rewrite Notes field.
 - Final: write the approved file to the correct path and update `manifest.json` if required.
 - **Reference template rule.** Before building the Content Brief, identify the highest-numbered existing lesson file of the same content type and level (e.g. for a new N5 lesson, find the highest N5.X.json that exists). Use that file as the structural template — its section counts, conversation count, vocabulary density, and tone represent the current standard. Include it in the Dependencies field of the Content Brief. Earlier lessons may use outdated structures; always defer to the latest. If the curriculum spans multiple levels (e.g. N5 and N4 both exist), the highest-numbered lesson across the highest level is the most authoritative template.
 - **Compound discovery.** When scoping vocabulary for a new lesson, search the glossary for compounds that can be formed from the taught-kanji set. For each newly introduced kanji character, Grep for that character in the glossary's `"surface"` fields to discover existing compound words whose constituent kanji are all now taught. Flag any such compounds to the user as candidates for inclusion. This step ensures the lesson maximises use of newly-unlocked vocabulary.
@@ -140,8 +142,12 @@ Rewrite notes: [empty on first pass; filled by Agent 4 feedback]
 CB CHECKLIST
 ════════════
 [ ] Verified all needed vocab IDs via targeted Grep queries (not full glossary read)
+[ ] Every character name in jp fields has the correct char_* ID in its terms array (see Character Name Tagging)
+[ ] No char_* ID is used that is not registered in shared/characters.json
 [ ] Every kanji used is in the taught-kanji set
+[ ] For every word with a `matches` field in the glossary: verified the jp text uses the correct writing form for the current lesson tier — if any kanji in the glossary `surface` is untaught, the hiragana/partial-kanji form from `matches` was used instead (e.g. いっしょに not 一緒に, だいじょうぶ not 大丈夫, until their kanji are taught)
 [ ] Every content word in every jp/passage field has a corresponding terms entry
+[ ] Every pure-kana lexical word (interjections, casual words, expressions not in particles.json) has a verified glossary entry — any that do not are listed in the CB Checklist under "Unregistered words" for Agent 3 to escalate
 [ ] Verbs/adjectives use { "id": "...", "form": "..." } objects, never bare strings
 [ ] No invented IDs — every ID was verified against the glossary or particles.json
 [ ] Conversation/reading terms use v_* vocab entries, NOT k_* kanji entries
@@ -204,6 +210,8 @@ CB CHECKLIST
 - For every `terms` entry: verify the ID exists in the glossary (cross-reference the glossary file). Then verify the **surface form** of that glossary entry matches (or inflects from) the actual token in the `jp` field. A surface mismatch — e.g. tagging `だ` with `g_desu` whose glossary surface is `です` — is a **hard fail** even if the ID exists.
 - For every verb/adjective term entry: verify the `form` string is a valid key in `conjugation_rules.json`.
 - Verify all kanji in `jp` fields appear in the taught-kanji set (from `manifest.json`).
+- **Glossary-surface writing-form check.** For every word used in `jp` text, look up its glossary entry and check whether its `surface` field contains any kanji that are **not** in the taught-kanji set. If so, the word must appear in the hiragana/partial-kanji form from its `matches` field — never in the full-kanji `surface` form. This check catches cases like 一緒に (surface) written in jp text when the glossary's `matches` form is いっしょに and 緒 is not yet taught, or 大丈夫 written when だいじょうぶ is the required form. Grep the glossary for the word's ID, read both `surface` and `matches`, then verify the jp text uses the form consistent with the current taught-kanji set. Any mismatch is a **hard fail**.
+- **Unregistered kana lexical word check.** For every pure-kana token in `jp` text that is a lexical word (not a particle or copula — use judgement: interjections like うん, confirmations like そう, casual words like だよ/だね count as lexical), verify it has an entry in `glossary.N5.json` or `glossary.N4.json`. If it does not, do **not** issue a standard FAIL — instead, produce an **Unregistered Word Report** (see below) and return it to Agent 1. Agent 1 presents the list to the user and asks whether to add each word to the glossary. This is not a content error by Agent 2 — it is a gap between natural conversational Japanese and the current glossary coverage.
 - Verify the JSON schema matches the content type schema exactly (no extra/missing required fields).
 - Verify answer fields match the correct answer choices.
 - Verify drill distractors are plausible (wrong but not absurd; drawn from same lesson vocab where possible).
@@ -212,6 +220,7 @@ CB CHECKLIST
 
 - **PASS:** Attach a QA-PASS stamp and forward to Agent 4.
 - **FAIL:** Produce an annotated failure report (see format below) and return to Agent 2. Agent 2 must fix every listed issue and resubmit; Agent 3 performs a full re-audit.
+- **ESCALATE (unregistered words):** If the only issues are unregistered kana lexical words — no structural failures, no untaught kanji, no bad IDs — produce an Unregistered Word Report and return to Agent 1 rather than Agent 2. Agent 1 presents the words to the user for a glossary decision, then re-dispatches to Agent 2 with the result. If there are both structural failures AND unregistered words, report both but send back to Agent 2 for the structural fixes first; unregistered words are escalated in a separate pass once the draft is structurally clean.
 
 **QA Failure Report format:**
 
@@ -233,6 +242,42 @@ Line/Section | Issue Type          | Detail
 Total issues: N
 Status: FAIL — return to Agent 2
 ```
+
+**Unregistered Word Report format** (used when escalating to Agent 1 for user decision):
+
+```
+UNREGISTERED WORD REPORT
+════════════════════════
+Draft: [content ID]
+
+The following pure-kana lexical words appear in the draft but have no glossary entry.
+These are not errors by Agent 2 — they represent natural Japanese that is not yet in the
+glossary. Agent 1 must present this list to the user and ask whether to add each word.
+
+Word  | First appears in          | Suggested entry
+──────┼───────────────────────────┼────────────────────────────────────────────────────
+うん  │ [conv 4 line 2]           │ v_un, surface "うん", gtype "interjection", lesson_ids "N5.10", meaning "yeah / uh-huh (casual affirmative)"
+[word]│ [location]                │ [suggested id, surface, gtype, lesson_ids, meaning]
+
+Status: ESCALATE — return to Agent 1 for user decision before re-dispatching to Agent 2
+```
+
+**Agent 1 user escalation format** (when presenting an Unregistered Word Report to the user):
+
+```
+GLOSSARY GAP FOUND
+══════════════════
+Agent 2 used the following natural Japanese words that are not yet in the glossary.
+Please confirm whether to add them, and whether the suggested lesson_ids is correct.
+
+Word  | Suggested entry                               | Add?
+──────┼───────────────────────────────────────────────┼──────
+うん  │ v_un / interjection / "yeah, uh-huh" / N5.10 │ [yes/no/modify]
+
+For each "yes": Agent 1 will add the entry to the glossary before Agent 2 finalises the draft.
+For each "no": Agent 2 must remove the word from the jp text or replace it with a registered alternative.
+```
+
 ### Agent 3 — Grammar Accuracy Gate (grammar lessons only)
 
 When the draft has `"type": "grammar"`, Agent 3 must perform an additional **Grammar Accuracy Audit** before issuing a pass. This audit checks linguistic correctness — something the structural checks cannot catch.
@@ -1035,6 +1080,138 @@ Note: every kanji-containing word is tagged. Particles (は, に, を) are not t
 
 ---
 
+## Character Name Tagging
+
+### Overview
+
+Character names (proper nouns for recurring people in the story world) receive special visual treatment in the app: they render in **sakura pink** and, when tapped, show a **character card popup** with a chibi portrait, the name in Japanese, and its hiragana reading. This is distinct from vocabulary terms (blue underline + vocab modal) and requires its own tagging system.
+
+### The registry: `shared/characters.json`
+
+All character entries live in `shared/characters.json`. This file is loaded by every module (Lesson.js, Game.js, Story.js) and merged into the shared termMap at startup. To add a new character, add an entry here — no other infrastructure changes are needed.
+
+**Entry format:**
+
+```json
+{
+  "id": "char_rikizo",
+  "type": "character",
+  "surface": "りきぞ",
+  "reading": "りきぞ",
+  "meaning": "Rikizo",
+  "description": "The protagonist — a cheerful, curious learner navigating everyday life in Japan.",
+  "portrait": "references/pixel_characters/rikizo_head.png",
+  "matches": ["りきぞう"]
+}
+```
+
+| Field | Required | Description |
+|---|---|---|
+| `id` | Yes | Always prefixed `char_`. Convention: `char_` + romanized name (lowercase, no spaces). |
+| `type` | Yes | Always `"character"`. This is what triggers the pink highlight and portrait popup. |
+| `surface` | Yes | The primary hiragana/katakana form used in most content. |
+| `reading` | Yes | Hiragana reading — shown under the portrait even if already hiragana. |
+| `meaning` | Yes | Romanized name (for display). |
+| `description` | Yes | One-sentence description of the character's role. Shown in the popup. |
+| `portrait` | Yes | Path to the chibi PNG asset (relative to repo root). If no portrait exists yet, use `""` — the popup will still show name + reading. |
+| `matches` | No | Alternate surface spellings (e.g. a longer form, katakana variant). The text processor matches these alongside `surface`. |
+
+**`portrait` is required in the entry even when no asset exists yet.** Use `""` as a placeholder — the popup gracefully omits the image. When the asset is ready, update the path.
+
+### ID convention
+
+| Character | ID | Surface | Matches |
+|---|---|---|---|
+| Rikizo | `char_rikizo` | `りきぞ` | `["りきぞう"]` |
+| Yamakawa | `char_yamakawa` | `やまかわ` | `[]` |
+| Yamamoto-sensei | `char_yamamoto` | `やまもと` | `["やまもとせんせい"]` |
+| Ken | `char_ken` | `けん` | `[]` |
+| Yuki | `char_yuki` | `ゆき` | `[]` |
+| Miku | `char_miku` | `ミク` | `[]` |
+| Riku | `char_riku` | `リク` | `[]` |
+| Lee | `char_lee` | `リー` | `["リーさん"]` |
+| Taro | `char_taro` | `たろう` | `[]` |
+| Sakura | `char_sakura` | `さくら` | `[]` |
+
+**Adding a new character:** Add the entry to `shared/characters.json` and register it in this table. Do not invent a `char_*` ID that is not in this table — the ID must match the registry.
+
+### Tagging in lesson/review/grammar/game content
+
+In lesson JSON files, whenever a `jp` field contains a character's name, add the character's `char_*` ID to the `terms` array of that item. Place it roughly where the name appears in the sentence (position ordering helps readability of the terms array, though the text processor matches by surface form).
+
+```json
+{
+  "jp": "おはよう、りきぞさん。",
+  "en": "Good morning, Rikizo!",
+  "terms": ["p_ohayou_casual", "char_rikizo", "v_san"]
+}
+```
+
+**When a name is followed by さん:** Tag the name and さん separately. `char_rikizo` covers `りきぞ` and `v_san` covers `さん` — the text processor matches longest-first, so りきぞ is highlighted in pink, then さん picks up the suffix.
+
+**Warmup items:** Tag character names the same way — they are conversational context, not new vocabulary.
+
+**Drill `q` fields:** Do **not** add character terms to drill MCQ `q` fields or `choices` arrays. Drill question text is not processed through the standard term-span system.
+
+**Drill `scramble` items:** Do tag character names that appear in scramble `segments` — students need to recognise the name chip.
+
+### Tagging in story content
+
+Stories use a different system. The `terms.json` file maps surface strings (exactly as they appear in the markdown) to `{ "id": "...", "form": null }` pairs. Add the character's name as a key:
+
+```json
+{
+  "terms": {
+    "りきぞ": { "id": "char_rikizo", "form": null },
+    "は": { "id": "p_wa", "form": null },
+    ...
+  }
+}
+```
+
+The story processor performs longest-match, so `"りきぞ"` as a key will highlight every occurrence of `りきぞ` in the story markdown — including inside phrases like `りきぞのカレー`.
+
+**If the story uses an alternate spelling** (e.g. `りきぞう`), add a second key for that spelling pointing to the same ID.
+
+### What character tags are NOT
+
+- Character terms are **not** vocabulary — they are **not** added to `vocabList` sections.
+- Character terms are **not** added to the practice queue (no flagging behaviour).
+- Character terms are **not** listed in `glossary.N5.json` or `glossary.N4.json` — the registry is `shared/characters.json` only.
+- The `char_*` entries do **not** have kanji prerequisite rules — names are always written the same way regardless of which kanji have been taught.
+
+### Agent responsibilities
+
+| Agent | Responsibility |
+|---|---|
+| **Agent 1** | When scoping a lesson, identify which recurring characters appear in the planned conversations and readings. List their `char_*` IDs in the Content Brief so Agent 2 knows to include them in terms arrays. |
+| **Agent 2** | Add the appropriate `char_*` ID to every `terms` array whose `jp` field contains a character name. For stories, add the surface key to `terms.json`. Check the CB Checklist item for character tagging. |
+| **Agent 3** | For every `jp` field containing a name from the character registry, verify the correct `char_*` ID is present in `terms`. A missing character tag is flagged the same as a missing vocabulary term — the name is non-tappable without it. |
+| **Agent 4** | Verify that character names used in conversations are consistent with the established roster (e.g. the teacher is not called やまかわ in one lesson and やまもと in another within the same narrative arc). Flag name inconsistencies under the "Consistency" category. |
+
+### CB Checklist additions (character-specific)
+
+```
+[ ] Every jp field containing a character name has the correct char_* ID in its terms array
+[ ] No char_* ID is used that is not registered in shared/characters.json and the ID table above
+[ ] Character names are NOT added to vocabList sections
+[ ] Character names are NOT added to drill MCQ q fields or choices arrays
+[ ] Story terms.json includes a surface key for every character name that appears in story.md
+[ ] Character name consistency checked — same character referred to by the same name throughout
+```
+
+### Common failures
+
+| Failure | Description |
+|---|---|
+| Untagged character name | `りきぞ` appears in a `jp` field but `char_rikizo` is missing from `terms`. The name renders as plain text with no pink highlight or popup. |
+| Wrong ID type | Using `v_san` or a bare string `"りきぞ"` instead of `char_rikizo`. The ID must match the `shared/characters.json` registry. |
+| Missing story surface key | `りきぞ` appears throughout the story markdown but no `"りきぞ"` key exists in `terms.json`. Every occurrence is dead text. |
+| Invented `char_*` ID | Agent 2 writes `char_yamakawa` in a terms array but the character is not yet registered in `shared/characters.json` and the ID table. The term modal will silently fail to open. |
+| Character in vocabList | Agent 2 adds `char_rikizo` to a vocabList group. Characters are not study vocabulary — they should never appear in vocabList sections. |
+
+---
+
 ## Kanji Prerequisite Rules
 
 ### Source of truth: `manifest.json`
@@ -1403,6 +1580,9 @@ Focus on these patterns first — they are the core G9 concepts:
 All of the following must be TRUE for a QA pass:
 
 - [ ] Every kanji in every `jp`/passage field is in the taught-kanji set
+- [ ] Every character name from the roster (see Character Name Tagging) that appears in a `jp` or passage field has the correct `char_*` ID in the `terms` array
+- [ ] Every `char_*` ID used in `terms` arrays is registered in `shared/characters.json`
+- [ ] (Stories) Every character name in `story.md` has a surface key in `terms.json` pointing to the correct `char_*` ID
 - [ ] Every lexical token in every `jp`/passage field is tagged in the `terms` array — this includes kana-only words (copulas, conjunctions, sentence-final particles, adverbs); not just kanji-containing words
 - [ ] Every kana-only word in a `jp` field that is NOT tagged in `terms` has been verified to have no glossary entry (i.e. it is truly an untaggable function word, not a tagged-but-out-of-scope one)
 - [ ] Every term ID in every `terms` array exists in the glossary
@@ -1419,6 +1599,8 @@ All of the following must be TRUE for a QA pass:
 - [ ] Early-use vocabulary written in hiragana is on the approved early-use list and the current lesson ≥ the word's "Use from" lesson (see [Early-Use Vocabulary Rules](#early-use-vocabulary-rules))
 - [ ] Words with taught kanji are written in kanji, not hiragana — hiragana writing is only permitted for words on the early-use list whose kanji is not yet taught
 - [ ] Partial-kanji words use the correct writing form for the lesson tier (e.g. 大すき not 大好き before N4.4)
+- [ ] Glossary-surface writing-form check: for every word in jp text whose glossary `surface` contains any untaught kanji, the jp text uses the hiragana/partial-kanji `matches` form — not the full-kanji surface (hard fail: 一緒に used in jp text when いっしょに is the glossary matches form and 緒 is not yet taught)
+- [ ] Unregistered kana lexical words are escalated: pure-kana lexical tokens with no glossary entry are listed in an Unregistered Word Report and returned to Agent 1 — they do not produce a standard FAIL
 - [ ] (Reviews) Scramble `segments` use only taught kanji and approved vocabulary
 - [ ] (Reviews) Scramble `distractors` are plausible (wrong particles, transitive/intransitive confusions, similar words)
 - [ ] (Reviews) Scramble sentences with time expressions or adverbs have `alts` if the element can naturally float
@@ -1497,6 +1679,7 @@ When Agent 3 needs to verify IDs in bulk, run a single Grep per unknown ID rathe
 | `data/N5/glossary.N5.json` | All N5 kanji and vocab entries with IDs |
 | `data/N4/glossary.N4.json` | All N4 kanji and vocab entries with IDs |
 | `shared/particles.json` | Particle and set-phrase entries (`p_*` IDs) |
+| `shared/characters.json` | Character registry (`char_*` IDs) — proper names, portraits, descriptions. Read this when any lesson content features a recurring character. |
 | `conjugation_rules.json` | Valid conjugation form strings |
 | `counter_rules.json` | Valid counter keys and their rules |
 | `Lesson Instructions.md` | Authoritative term tagging and drill authoring rules |
@@ -1598,7 +1781,10 @@ These are the most frequent errors. All agents should be alert to them.
 23. **(Compose) Disconnected prompts** — prompts should build one continuous composition, not jump between unrelated topics. Each prompt should extend the narrative from the previous one.
 24. **(Compose) Targets using non-kanji vocabulary** — compose scoring is kanji-based. Target IDs should reference vocabulary that contains kanji so the coverage indicator works correctly.
 25. **(Compose) VocabPool missing historical vocab** — each prompt's vocabPool should include relevant vocabulary from prior lessons, not just the current lesson's words. Students need connector words, common nouns, and adjectives from earlier lessons to write coherent text.
-26. **(Stories) Missing particle/copula tags in terms.json** — particles (は, の, も, と, etc.) and g_desu (です) must be tagged in story terms.json so they are tappable, exactly as in lessons. Omitting them means function words are dead text the student cannot tap to look up. Every particle with a `p_*` entry in `shared/particles.json` whose `introducedIn` is ≤ the story's lesson scope must be included. The `"です"` key covers standalone copula occurrences; い-adjective predicative forms (e.g. `"うれしいです"`) are covered by their own longer key.
+26. **Untagged character name** — a recurring character's name (e.g. りきぞ, やまかわ) appears in a `jp` field but the corresponding `char_*` ID is absent from `terms`. The name renders as plain unclickable text with no sakura pink highlight or portrait popup. Every occurrence in every conversation line and reading passage must be tagged. This is caught by Agent 3 when scanning jp surface tokens. The roster of registered character IDs is in the Character Name Tagging section and `shared/characters.json`.
+27. **Invented `char_*` ID** — Agent 2 adds `char_yamakawa` to a terms array but `char_yamakawa` is not yet registered in `shared/characters.json`. The term modal silently fails to open. Before using any `char_*` ID, verify it exists in `shared/characters.json`. If it doesn't, add the character entry first (or flag to Agent 1 to add it before content is built).
+28. **(Stories) Missing character name key in terms.json** — a character's name appears throughout `story.md` but no surface key for that name exists in `terms.json`. Add the name as a key (e.g. `"りきぞ": { "id": "char_rikizo", "form": null }`) — the story processor highlights every occurrence automatically. If the story uses two spellings (e.g. `りきぞ` and `りきぞう`), add both as separate keys pointing to the same `char_*` ID.
+29. **(Stories) Missing particle/copula tags in terms.json** — particles (は, の, も, と, etc.) and g_desu (です) must be tagged in story terms.json so they are tappable, exactly as in lessons. Omitting them means function words are dead text the student cannot tap to look up. Every particle with a `p_*` entry in `shared/particles.json` whose `introducedIn` is ≤ the story's lesson scope must be included. The `"です"` key covers standalone copula occurrences; い-adjective predicative forms (e.g. `"うれしいです"`) are covered by their own longer key.
 27. **Out-of-scope conjugation form** — using a conjugation form (e.g. `te_form`, `desire_tai`, `conditional_ba`) before its `introducedIn` lesson. This is the grammar equivalent of using an untaught kanji. Example: writing ～ています in N5.3 content when `te_form` has `introducedIn: "N5.5"`. Check every `form` value in `terms` against `conjugation_rules.json`. See [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules).
 28. **Out-of-scope structural grammar pattern** — the `jp` surface text contains a grammar construction (～ている, ～てください, ～ましょう, ～たり～たりする, etc.) before the constituent form is available, even if the individual word tags don't explicitly use that form. The pattern in the surface text is the violation, not just the tags. Agent 2 must scan `jp` strings for these patterns, not rely only on `terms` form checking.
 29. **何 tagged as k_nani or generic v_nani without pronunciation context** — 何 has two pronunciations: **なに** (`v_nani`) and **なん** (`v_nan`). Using `k_nani` (kanji entry) makes 何 non-tappable in conversations and readings. Using only `v_nani` for all contexts gives students the wrong reading when the pronunciation is actually なん. **Rules:** Use `v_nani` when 何 precedes を or が, or stands alone (e.g. 何を食べますか、何がいい). Use `v_nan` when 何 precedes です, の, counters, or words starting with d/n/t sounds (e.g. 何ですか、何の本、何人). Never use `k_nani` in conversation, reading, or drill `terms` — it is only for the kanjiGrid. Compound words like 何人, 何時, 何曜日 have their own dedicated entries (`v_nannin`, `v_nanji`, `v_nanyoubi`) and should use those instead.

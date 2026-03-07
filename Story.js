@@ -350,6 +350,7 @@ window.StoryModule = (function() {
         <div class="jp-story-header">
           <div class="jp-story-title">📖 Stories</div>
           <div class="jp-story-nav">
+            <button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.3);">\u2699</button>
             <button class="jp-story-nav-btn" id="jp-story-list" style="display:none;">☰ All Stories</button>
             <button class="jp-story-nav-btn" id="jp-story-prev" style="display:none;">← Previous</button>
             <button class="jp-story-nav-btn" id="jp-story-next" style="display:none;">Next →</button>
@@ -425,11 +426,13 @@ window.StoryModule = (function() {
     try {
       const manifest = await window.getManifest(config);
       const conjUrl     = getCdnUrl(manifest.globalFiles.conjugationRules);
-      const particleUrl = getCdnUrl(manifest.shared.particles);
+      const particleUrl  = getCdnUrl(manifest.shared.particles);
+      const characterUrl = getCdnUrl(manifest.shared.characters);
       console.log('[Story] Conjugation URL:', conjUrl);
-      const [conjugationRules, particleData, ...glossParts] = await Promise.all([
+      const [conjugationRules, particleData, characterData, ...glossParts] = await Promise.all([
         fetch(conjUrl).then(r => r.json()),
         fetch(particleUrl).then(r => r.json()),
+        fetch(characterUrl).then(r => r.json()),
         ...manifest.levels.map(lvl => fetch(getCdnUrl(manifest.data[lvl].glossary)).then(r => r.json()))
       ]);
       const allEntries = glossParts.flatMap(g => g.entries);
@@ -446,6 +449,9 @@ window.StoryModule = (function() {
       });
       (particleData.particles || []).forEach(p => {
         termMapData[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle' };
+      });
+      (characterData.characters || []).forEach(c => {
+        termMapData[c.id] = Object.assign({}, c, { portraitUrl: getCdnUrl(c.portrait) });
       });
 
       CONJUGATION_RULES = conjugationRules;
@@ -701,6 +707,72 @@ window.StoryModule = (function() {
       const contentDiv = storyContainer.querySelector('.jp-story-content');
       if (contentDiv) {
         contentDiv.scrollTop = 0;
+
+        // Add per-paragraph speaker buttons and a Play Story button.
+        // Only process Japanese paragraphs — stop at the English Translation section.
+        var paragraphs = contentDiv.querySelectorAll('p');
+        var storyTexts = [];
+        var hitEnglishSection = false;
+        paragraphs.forEach(function (p) {
+          if (hitEnglishSection) return;
+          // Skip empty paragraphs
+          var plainText = p.textContent.trim();
+          if (!plainText) return;
+          // Detect English section boundaries (headers rendered before this <p>)
+          // Check if a preceding sibling is an English section header
+          var prev = p.previousElementSibling;
+          while (prev) {
+            var txt = prev.textContent.trim().toLowerCase();
+            if (prev.tagName && /^H[1-6]$/.test(prev.tagName) &&
+                (txt.indexOf('english') !== -1 || txt.indexOf('vocabulary used') !== -1 || txt.indexOf('grammar points') !== -1)) {
+              hitEnglishSection = true;
+              return;
+            }
+            // Stop searching after a couple elements
+            if (prev.tagName === 'HR') break;
+            prev = prev.previousElementSibling;
+          }
+          if (hitEnglishSection) return;
+          // Skip paragraphs that look like pure English/romaji (no CJK characters)
+          if (!/[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]/.test(plainText)) return;
+          storyTexts.push(plainText);
+          // Wrap content for flex layout with speaker button
+          var wrapper = document.createElement('div');
+          wrapper.style.cssText = 'display:flex;align-items:flex-start;gap:2px;';
+          var textDiv = document.createElement('div');
+          textDiv.style.flex = '1';
+          // Move all children from p into textDiv
+          while (p.firstChild) textDiv.appendChild(p.firstChild);
+          var btn = document.createElement('button');
+          btn.className = 'jp-speak-sentence';
+          btn.title = 'Listen';
+          btn.textContent = '\uD83D\uDD0A';
+          btn.onclick = function () { window.JPShared.tts.speak(plainText); };
+          wrapper.appendChild(textDiv);
+          wrapper.appendChild(btn);
+          p.appendChild(wrapper);
+        });
+        // Insert Play/Stop Story button at top
+        if (storyTexts.length > 0) {
+          var playBtn = document.createElement('button');
+          playBtn.className = 'jp-speak-all-btn';
+          playBtn.innerHTML = '\uD83D\uDD0A Play Story';
+          playBtn.style.marginTop = '10px';
+          function setPlaying(playing) {
+            playBtn.textContent = playing ? '\u23F9 Stop' : '\uD83D\uDD0A Play Story';
+            playBtn.classList.toggle('jp-speak-all-active', playing);
+          }
+          playBtn.onclick = function () {
+            if (window.JPShared.tts.isSpeaking()) {
+              window.JPShared.tts.cancel();
+              setPlaying(false);
+            } else {
+              setPlaying(true);
+              window.JPShared.tts.speakLines(storyTexts, { onFinish: function() { setPlaying(false); } });
+            }
+          };
+          contentDiv.insertBefore(playBtn, contentDiv.firstChild);
+        }
       }
 
     } catch (err) {
