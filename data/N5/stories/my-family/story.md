@@ -5,7 +5,7 @@
 
 ### Story Text (Japanese)
 
-こんにちは！わたしはミクです。
+こんにちは！わたしはりきぞです。
 
 父のなまえはたろうです。父はとてもやさしい人です。
 
@@ -23,7 +23,7 @@
 
 **My Family**
 
-Hello! My name is Miku.
+Hello! My name is Rikizo.
 
 My father's name is Taro. My father is a very kind person.
 
