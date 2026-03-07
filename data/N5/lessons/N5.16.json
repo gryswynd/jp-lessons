@@ -227,7 +227,7 @@
             "v_migi",
             "p_ni",
             { "id": "v_iku", "form": "polite_masu" },
-            "p_arigatou"
+            "p_arigatou_gozaimasu"
           ]
         },
         {
@@ -343,7 +343,7 @@
             "v_ie",
             "p_mo",
             { "id": "v_aru", "form": "polite_masu" },
-            { "id": "v_nagai", "form": "polite_adj" },
+            "v_nagai",
             "v_michi",
             "g_desu",
             "p_ne"
@@ -398,7 +398,7 @@
           "jp": "ありがとうございます。まだ 上手ではありません。",
           "en": "Thank you. I'm not skilled yet.",
           "terms": [
-            "p_arigatou",
+            "p_arigatou_gozaimasu",
             "v_mada",
             { "id": "v_jouzu", "form": "polite_adj" },
             "p_dewa",
@@ -443,7 +443,6 @@
             { "id": "v_iru", "form": "polite_masu" },
             "p_yo",
             "v_issho",
-            "p_ni",
             { "id": "v_yomu", "form": "polite_volitional_mashou" }
           ]
         },
