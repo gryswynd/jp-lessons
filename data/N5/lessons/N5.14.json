@@ -330,17 +330,15 @@
         },
         {
           "spk": "ミキ",
-          "jp": "そうですね。また 来ましょう。時間が あれば、いいですね。",
-          "en": "That's right. Let's come again. It would be nice if we had time.",
+          "jp": "そうですね。また 来ましょう。毎週 来たいですね。",
+          "en": "That's right. Let's come again. I want to come every week.",
           "terms": [
             "p_soudesu",
             "p_ne",
             "v_mata",
             { "id": "v_kuru", "form": "polite_volitional_mashou" },
-            "v_jikan",
-            "p_ga",
-            { "id": "v_aru", "form": "conditional_ba" },
-            { "id": "v_ii", "form": "polite_adj" },
+            "v_maishuu",
+            { "id": "v_kuru", "form": "desire_tai" },
             "p_ne"
           ]
         }
@@ -470,15 +468,15 @@
         },
         {
           "spk": "レン",
-          "jp": "いいね！多分 外に 行けば、白い 花が 多いよ。",
-          "en": "Sounds good! If we go outside, there are probably lots of white flowers.",
+          "jp": "いいね！外に 行こう。多分 白い 花が 多いよ。",
+          "en": "Sounds good! Let's go outside. There are probably lots of white flowers.",
           "terms": [
             "v_ii",
             "p_ne",
-            "v_tabun",
             "v_soto",
             "p_ni",
-            { "id": "v_iku", "form": "conditional_ba" },
+            { "id": "v_iku", "form": "plain_volitional" },
+            "v_tabun",
             "v_shiroi",
             "v_hana",
             "p_ga",
@@ -606,15 +604,12 @@
           ]
         },
         {
-          "jp": "多分 また 来ます。時間が あれば、毎週 来たいです。",
-          "en": "I will probably come again. If I have time, I want to come every week.",
+          "jp": "多分 また 来ます。毎週 来たいです。",
+          "en": "I will probably come again. I want to come every week.",
           "terms": [
             "v_tabun",
             "v_mata",
             { "id": "v_kuru", "form": "polite_masu" },
-            "v_jikan",
-            "p_ga",
-            { "id": "v_aru", "form": "conditional_ba" },
             "v_maishuu",
             { "id": "v_kuru", "form": "desire_tai" }
           ]
@@ -654,7 +649,7 @@
           ]
         },
         {
-          "q": "What does the narrator want to do if they have time?",
+          "q": "What does the narrator want to do?",
           "a": "Come every week",
           "choices": [
             "Come every week",
@@ -663,9 +658,6 @@
             "Come every day"
           ],
           "terms": [
-            "v_jikan",
-            "p_ga",
-            { "id": "v_aru", "form": "conditional_ba" },
             "v_maishuu",
             { "id": "v_kuru", "form": "desire_tai" }
           ]
@@ -946,13 +938,10 @@
         },
         {
           "kind": "mcq",
-          "q": "時間が あれば、また___。（If I have time, I want to come again.）",
+          "q": "また___。（I want to come again.）",
           "choices": ["来たいです", "来ます", "来ました", "来ません"],
           "answer": "来たいです",
           "terms": [
-            "v_jikan",
-            "p_ga",
-            { "id": "v_aru", "form": "conditional_ba" },
             "v_mata",
             { "id": "v_kuru", "form": "desire_tai" }
           ]
