@@ -367,20 +367,62 @@
         }
       ],
       "compose": [
-        { "lesson": "N5.1", "file": "data/N5/compose/compose.N5.1.json" },
-        { "lesson": "N5.2", "file": "data/N5/compose/compose.N5.2.json" },
-        { "lesson": "N5.3", "file": "data/N5/compose/compose.N5.3.json" },
-        { "lesson": "N5.4", "file": "data/N5/compose/compose.N5.4.json" },
-        { "lesson": "N5.5", "file": "data/N5/compose/compose.N5.5.json" },
-        { "lesson": "N5.6", "file": "data/N5/compose/compose.N5.6.json" },
-        { "lesson": "N5.7", "file": "data/N5/compose/compose.N5.7.json" },
-        { "lesson": "N5.8", "file": "data/N5/compose/compose.N5.8.json" },
-        { "lesson": "N5.9", "file": "data/N5/compose/compose.N5.9.json" },
-        { "lesson": "N5.10", "file": "data/N5/compose/compose.N5.10.json" },
-        { "lesson": "N5.11", "file": "data/N5/compose/compose.N5.11.json" },
-        { "lesson": "N5.12", "file": "data/N5/compose/compose.N5.12.json" },
-        { "lesson": "N5.13", "file": "data/N5/compose/compose.N5.13.json" },
-        { "lesson": "N5.14", "file": "data/N5/compose/compose.N5.14.json" }
+        {
+          "lesson": "N5.1",
+          "file": "data/N5/compose/compose.N5.1.json"
+        },
+        {
+          "lesson": "N5.2",
+          "file": "data/N5/compose/compose.N5.2.json"
+        },
+        {
+          "lesson": "N5.3",
+          "file": "data/N5/compose/compose.N5.3.json"
+        },
+        {
+          "lesson": "N5.4",
+          "file": "data/N5/compose/compose.N5.4.json"
+        },
+        {
+          "lesson": "N5.5",
+          "file": "data/N5/compose/compose.N5.5.json"
+        },
+        {
+          "lesson": "N5.6",
+          "file": "data/N5/compose/compose.N5.6.json"
+        },
+        {
+          "lesson": "N5.7",
+          "file": "data/N5/compose/compose.N5.7.json"
+        },
+        {
+          "lesson": "N5.8",
+          "file": "data/N5/compose/compose.N5.8.json"
+        },
+        {
+          "lesson": "N5.9",
+          "file": "data/N5/compose/compose.N5.9.json"
+        },
+        {
+          "lesson": "N5.10",
+          "file": "data/N5/compose/compose.N5.10.json"
+        },
+        {
+          "lesson": "N5.11",
+          "file": "data/N5/compose/compose.N5.11.json"
+        },
+        {
+          "lesson": "N5.12",
+          "file": "data/N5/compose/compose.N5.12.json"
+        },
+        {
+          "lesson": "N5.13",
+          "file": "data/N5/compose/compose.N5.13.json"
+        },
+        {
+          "lesson": "N5.14",
+          "file": "data/N5/compose/compose.N5.14.json"
+        }
       ],
       "stories": [
         {
@@ -418,6 +460,12 @@
           "title": "A Rainy Day at School",
           "titleJp": "雨の日の学校",
           "dir": "data/N5/stories/ame-no-hi-no-gakkou"
+        },
+        {
+          "id": "yonde-kaite",
+          "title": "Reading and Writing",
+          "titleJp": "読んで、書いて",
+          "dir": "data/N5/stories/yonde-kaite"
         }
       ],
       "game": [
@@ -932,7 +980,10 @@
         }
       ],
       "compose": [
-        { "lesson": "N4.18", "file": "data/N4/compose/compose.N4.18.json" }
+        {
+          "lesson": "N4.18",
+          "file": "data/N4/compose/compose.N4.18.json"
+        }
       ],
       "stories": [
         {
