@@ -1084,26 +1084,24 @@ This is the pivotal lesson where students transition from polite-only speech to 
 | **Unlocks after** | N5.10 |
 | **Icon** | 🎨 |
 | **Estimated minutes** | 25 |
-| **Grammar forms** | `polite_adj`, `polite_past_adj`, `plain_negative`, `plain_past`, `plain_past_negative`, `te_form`, `adverbial`, `conditional_ba` |
+| **Grammar forms** | `polite_adj`, `polite_past_adj`, `plain_negative`, `plain_past`, `plain_past_negative`, `te_form`, `adverbial` |
 
 **What to teach:**
-- Full i-adjective conjugation paradigm:
-  - Noun form: ～さ (高い → 高さ = height)
+- Core i-adjective conjugation paradigm:
   - Adverb form: ～く (高い → 高く = highly)
   - て-form: ～くて (高い → 高くて)
   - Past: ～かった (高い → 高かった)
   - Negative: ～くない (高い → 高くない)
   - Past negative: ～くなかった
-  - Conditional: ～ければ (高い → 高ければ)
-  - "Too much": ～すぎる (高い → 高すぎる)
 - Polite forms: add です (高いです, 高かったです, 高くないです, 高くなかったです)
 - **いい → よい exception:** いい conjugates as よい (よかった, よくない, よくて, etc.) — NEVER いかった, いくない
+- **Not taught here:** ～ければ conditional (G20), ～すぎる excessive (G15), ～さ noun form (G15)
 
 **Recommended sections:**
 1. `grammarIntro`
-2. `grammarTable` — full i-adjective conjugation chart
+2. `grammarTable` — i-adjective conjugation chart (the 7 core forms only)
 3. `grammarRule` — the いい → よい exception (with emphasis — this is the #1 student error)
-4. `grammarRule` — adverb form ～く and "too much" ～すぎる
+4. `grammarRule` — adverb form ～く (how adjectives become adverbs)
 5. `annotatedExample` — i-adjectives in various forms in context
 6. `conversation` — weather/nature dialogue (matches N5.10 theme) using adjective forms
 7. `conjugationDrill` — conjugate i-adjectives to target forms
@@ -1123,14 +1121,19 @@ This is the pivotal lesson where students transition from polite-only speech to 
 | **Unlocks after** | N5.11 |
 | **Icon** | 🎨 |
 | **Estimated minutes** | 20 |
-| **Grammar forms** | `polite_adj`, `plain_negative`, `te_form`, `adverbial` |
+| **Grammar forms** | `polite_adj`, `polite_past_adj`, `plain_negative`, `plain_past`, `plain_past_negative`, `te_form`, `adverbial` |
 
 **What to teach:**
 - na-adjective conjugation paradigm:
   - Before nouns: ～な (静かな部屋)
   - Adverb form: ～に (静かに歩く)
   - て-form: ～で (静かで広い)
-  - With です: 静かです / 静かでした / 静かではありません / 静かではありませんでした
+  - Present polite: 静かです
+  - Past polite: 静かでした
+  - Negative polite: 静かではありません / 静かじゃありません
+  - Past negative polite: 静かではありませんでした
+  - Plain past: 静かだった
+  - Plain past negative: 静かじゃなかった / 静かではなかった
   - Drop な before forms of である
 - Easily confused na-adjectives (words that look like i-adjectives but aren't):
   - きれい (pretty) — NOT きれいい
@@ -1138,6 +1141,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
   - 嫌い (disliked)
   - If any of these are available in taught vocabulary, use them as examples
 - Combining adjectives: i-adj くて + na-adj で in chains
+- **Not taught here:** ～すぎる excessive (G15), ～さ noun form (G15)
 
 **Recommended sections:**
 1. `grammarIntro`
@@ -1321,12 +1325,25 @@ This is the pivotal lesson where students transition from polite-only speech to 
 | **Icon** | ⚖️ |
 | **Estimated minutes** | 25 |
 | **Particles** | `より`, `ほう`, `ほど`, `くらい`/`ぐらい` |
+| **Grammar forms** | `sugiru_form` |
 
 **What to teach:**
 - ほうが — the preferred/greater element: Aのほうが＋adjective (東京のほうが大きい)
 - より — the lesser element: AよりBのほうが＋adjective (東京より大阪のほうが好きです)
 - ほど — degree / negative comparison: AはBほど～ない (東京は大阪ほど暑くない = Tokyo isn't as hot as Osaka)
 - くらい / ぐらい — approximate degree: ～くらい大きい (about that big); ～時間ぐらい (about X hours)
+- ～すぎる — excessive degree (too much / too ～):
+  - Verbs: ます-stem + すぎる (食べすぎる = eat too much)
+  - i-adjectives: drop い + すぎる (高すぎる = too expensive)
+  - na-adjectives: add すぎる directly (静かすぎる = too quiet)
+  - Polite: すぎます / すぎました; negative: すぎません
+  - Note: すぎる is itself an ichidan verb and conjugates normally after the stem
+- ～さ — noun form of adjectives (abstract quality as a noun):
+  - i-adjectives: drop い + さ (高い → 高さ = height; 大きい → 大きさ = size; 速い → 速さ = speed)
+  - na-adjectives: drop な/だ + さ (静か → 静かさ = quietness; 便利 → 便利さ = convenience)
+  - Used when the quality itself is the subject/topic, not the thing described: この山の高さ (the height of this mountain)
+  - Naturally arises in comparison contexts: 二つの大きさを比べる (compare the sizes of two things)
+  - Note: ～さ is a productive suffix but not a conjugation form — it is word derivation. Only the most common instances need to appear in the glossary; it does not need a `conjugation_rules.json` entry.
 
 **Recommended sections:**
 1. `grammarIntro`
@@ -1334,11 +1351,13 @@ This is the pivotal lesson where students transition from polite-only speech to 
 3. `grammarRule` — より pattern (×1)
 4. `grammarRule` — ほど negative comparison (×1)
 5. `grammarRule` — くらい/ぐらい approximate (×1)
-6. `grammarComparison` — より vs ほど (when to use which)
-7. `annotatedExample` — comparing foods, places, activities
-8. `conversation` — dialogue about preferences
-9. `fillSlot` — choose より/ほう/ほど/くらい
-10. `drills` — mixed MCQ
+6. `grammarRule` — ～すぎる excessive degree (×1)
+7. `grammarRule` — ～さ noun form of adjectives (×1)
+8. `grammarComparison` — より vs ほど (when to use which)
+9. `annotatedExample` — comparing foods, places, activities; excessive degree and abstract quality expressions in context
+10. `conversation` — dialogue about preferences and quantities
+11. `fillSlot` — choose より/ほう/ほど/くらい/すぎる
+12. `drills` — mixed MCQ
 
 ---
 
