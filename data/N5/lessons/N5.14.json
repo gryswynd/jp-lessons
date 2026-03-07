@@ -75,7 +75,8 @@
             "v_nihongo",
             "p_wo",
             "v_yukkuri",
-            { "id": "v_hanasu", "form": "te_form" }
+            { "id": "v_hanasu", "form": "te_form" },
+            "v_kudasai"
           ]
         },
         {
@@ -84,7 +85,8 @@
           "terms": [
             "v_gakkou",
             "p_ni",
-            { "id": "v_iku", "form": "desire_tai_negative" }
+            { "id": "v_iku", "form": "desire_tai_negative" },
+            "g_desu"
           ]
         }
       ]
@@ -156,10 +158,10 @@
     {
       "type": "conversation",
       "title": "Conversation 1: Many Books at School",
-      "context": "Ali and Miki are at the school bookroom. There are many Japanese books on the shelves.",
+      "context": "Lee and Miki are at the school bookroom. There are many Japanese books on the shelves.",
       "lines": [
         {
-          "spk": "アリ",
+          "spk": "リー",
           "jp": "学校に 日本語の 本が 多いですね。",
           "en": "There are many Japanese books at school, aren't there.",
           "terms": [
@@ -190,7 +192,7 @@
           ]
         },
         {
-          "spk": "アリ",
+          "spk": "リー",
           "jp": "わたしも 少し 読みたいです。時間が ありますか。",
           "en": "I want to read a little too. Do you have time?",
           "terms": [
@@ -206,7 +208,7 @@
         },
         {
           "spk": "ミキ",
-          "jp": "はい、今日は 少し あります。一緒に 読みましょう。",
+          "jp": "はい、今日は 少し あります。いっしょに 読みましょう。",
           "en": "Yes, I have a little today. Let's read together.",
           "terms": [
             "p_hai",
@@ -219,7 +221,7 @@
           ]
         },
         {
-          "spk": "アリ",
+          "spk": "リー",
           "jp": "たいてい 学校で 読みますか。",
           "en": "Do you usually read at school?",
           "terms": [
@@ -354,6 +356,9 @@
           "jp": "ミキさんは たいてい 日本語を 話しますか。",
           "en": "Miki, do you usually speak Japanese?",
           "terms": [
+            "char_miki",
+            "v_san",
+            "p_wa",
             "v_taitei",
             "v_nihongo",
             "p_wo",
@@ -376,7 +381,7 @@
         },
         {
           "spk": "先生",
-          "jp": "時間が 多い ですか。",
+          "jp": "時間が 多いですか。",
           "en": "Do you have a lot of time?",
           "terms": [
             "v_jikan",
@@ -448,9 +453,10 @@
         },
         {
           "spk": "ミキ",
-          "jp": "うん、土ようびは 少しあるよ。一緒に どこか 行かない？",
+          "jp": "うん、土ようびは 少しあるよ。いっしょに どこか 行かない？",
           "en": "Yeah, I have a little on Saturday. Wanna go somewhere together?",
           "terms": [
+            "v_un",
             "v_doyoubi",
             "p_wa",
             "v_sukoshi",
@@ -498,7 +504,7 @@
         },
         {
           "spk": "レン",
-          "jp": "大丈夫だよ。少し 時間あるから 行こう！",
+          "jp": "だいじょうぶだよ。少し 時間あるから 行こう！",
           "en": "It's okay. We have a little time so let's go!",
           "terms": [
             "v_daijoubu",
@@ -714,6 +720,8 @@
           "jp": "ケンさんは たいてい 時間が 多いです。よく 本を 読んでいます。",
           "en": "Ken usually has plenty of time. He is often reading books.",
           "terms": [
+            "char_ken",
+            "v_san",
             "p_wa",
             "v_taitei",
             "v_jikan",
@@ -730,6 +738,8 @@
           "jp": "ナナさんは 白い ノートに 書いています。ぜんぜん 休みません。",
           "en": "Nana is writing in a white notebook. She does not rest at all.",
           "terms": [
+            "char_nana",
+            "v_san",
             "p_wa",
             "v_shiroi",
             "v_nooto",
@@ -855,6 +865,7 @@
             "v_hon",
             "p_ga",
             { "id": "v_ooi", "form": "polite_adj" },
+            "g_desu",
             "p_ne"
           ]
         },
@@ -868,7 +879,8 @@
             "p_wa",
             "v_hito",
             "p_ga",
-            { "id": "v_sukunai", "form": "polite_adj" }
+            { "id": "v_sukunai", "form": "polite_adj" },
+            "g_desu"
           ]
         },
         {
@@ -917,9 +929,9 @@
         },
         {
           "kind": "mcq",
-          "q": "白い 花が 多い 学校の 外に 来___。（I came outside the school where there are many white flowers.）",
-          "choices": ["ました", "ます", "たいです", "てください"],
-          "answer": "ました",
+          "q": "白い 花が 多い 学校の 外に___。（I came outside the school where there are many white flowers.）",
+          "choices": ["来ました", "行きました", "います", "ありました"],
+          "answer": "来ました",
           "terms": [
             "v_shiroi",
             "v_hana",
@@ -934,9 +946,9 @@
         },
         {
           "kind": "mcq",
-          "q": "時間が あれば、また 来___です。（If I have time, I want to come again.）",
-          "choices": ["たい", "ます", "ました", "ません"],
-          "answer": "たい",
+          "q": "時間が あれば、また___。（If I have time, I want to come again.）",
+          "choices": ["来たいです", "来ます", "来ました", "来ません"],
+          "answer": "来たいです",
           "terms": [
             "v_jikan",
             "p_ga",
@@ -947,9 +959,9 @@
         },
         {
           "kind": "mcq",
-          "q": "ぜんぜん 話さ___とき は ありません。（There are no times when I don't speak at all.）",
-          "choices": ["ない", "ます", "ました", "て"],
-          "answer": "ない",
+          "q": "ぜんぜん___とき は ありません。（There are no times when I don't speak at all.）",
+          "choices": ["話さない", "話します", "話して", "話した"],
+          "answer": "話さない",
           "terms": [
             "v_zenzen",
             { "id": "v_hanasu", "form": "plain_negative" },

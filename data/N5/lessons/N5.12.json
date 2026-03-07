@@ -346,10 +346,10 @@
     {
       "type": "conversation",
       "title": "Conversation 3: A Student from China",
-      "context": "Miki meets Ali, a foreign student from China who is learning Japanese at school.",
+      "context": "Miki meets Lee, a foreign student from China who is learning Japanese at school.",
       "lines": [
         {
-          "spk": "アリ",
+          "spk": "リー",
           "jp": "わたしは 外国人の 学生です。日本語を 学んでいます。",
           "en": "I am a foreign student. I am learning Japanese.",
           "terms": [
@@ -377,7 +377,7 @@
           ]
         },
         {
-          "spk": "アリ",
+          "spk": "リー",
           "jp": "はい、中国から 来ました。日本語は おもしろいですね。",
           "en": "Yes, I came from China. Japanese is interesting, isn't it.",
           "terms": [
@@ -405,7 +405,7 @@
           ]
         },
         {
-          "spk": "アリ",
+          "spk": "リー",
           "jp": "はい、おもしろくて、いいです。先生も いい 先生ですよ。",
           "en": "Yes, it's interesting and good. The teacher is also a good teacher.",
           "terms": [
@@ -460,6 +460,7 @@
           "jp": "うん。けど テストも あるよ。",
           "en": "Yeah. But there's also a test.",
           "terms": [
+            "v_un",
             "p_kedo",
             "v_tesuto",
             "p_mo",
@@ -483,6 +484,7 @@
           "jp": "うん、長くて、よくないよ。",
           "en": "Yeah, it's long and not good.",
           "terms": [
+            "v_un",
             { "id": "v_nagai", "form": "te_form" },
             { "id": "v_ii", "form": "plain_negative" },
             "p_yo"

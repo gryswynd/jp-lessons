@@ -7,7 +7,7 @@
 
 今日は雨です。天気はよくないです。
 
-わたしの名前はりきぞです。日本人です。中学校の学生です。
+わたしの名前はりきぞです。日本人です。高校の学生です。
 
 雨ですけど、学校へ行きました。学校の前にきれいな花がたくさんあります。雨の花はとてもきれいです。空気もいいですね。
 
@@ -41,7 +41,7 @@
 
 Today it's raining. The weather isn't good.
 
-My name is Rikizo. I'm Japanese. I'm a middle school student.
+My name is Rikizo. I'm Japanese. I'm a high school student.
 
 It's raining, but I went to school. There are beautiful flowers in front of the school. Flowers in the rain are very beautiful. The air is nice too.
 

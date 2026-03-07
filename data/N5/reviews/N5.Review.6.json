@@ -46,15 +46,15 @@
         },
         {
           "title": "Conversation 2",
-          "context": "Yamamoto-sensei talks with Ali, a foreign student learning Japanese at school.",
+          "context": "Yamamoto-sensei talks with Lee, a foreign student from China learning Japanese at school.",
           "lines": [
             {
               "spk": "先生",
-              "jp": "アリさんは 中国から 来ましたね。学校で 日本語を 学んでいますか。",
+              "jp": "リーさんは 中国から 来ましたね。学校で 日本語を 学んでいますか。",
               "terms": ["v_san", "p_wa", "v_chuugoku", "p_kara", { "id": "v_kuru", "form": "polite_mashita" }, "p_ne", "v_gakkou", "p_de", "v_nihongo", "p_wo", { "id": "v_manabu", "form": "te_form" }, { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
             },
             {
-              "spk": "アリ",
+              "spk": "リー",
               "jp": "はい、毎日 学校で 学んでいます。日本語は おもしろいですよ。",
               "terms": ["p_hai", "v_mainichi", "v_gakkou", "p_de", { "id": "v_manabu", "form": "te_form" }, { "id": "v_iru", "form": "polite_masu" }, "v_nihongo", "p_wa", { "id": "v_omoshiroi", "form": "polite_adj" }, "p_yo"]
             },
@@ -64,15 +64,15 @@
               "terms": ["v_nihongo", "p_no", "v_hon", "p_to", "v_nooto", "p_wo", { "id": "v_kau", "form": "polite_mashita" }, "p_ka"]
             },
             {
-              "spk": "アリ",
+              "spk": "リー",
               "jp": "はい、買いました。テストも 来週 あります。よく 学びたいです。",
               "terms": ["p_hai", { "id": "v_kau", "form": "polite_mashita" }, "v_tesuto", "p_mo", "v_raishuu", { "id": "v_aru", "form": "polite_masu" }, { "id": "v_ii", "form": "adverbial" }, { "id": "v_manabu", "form": "desire_tai" }]
             }
           ],
-          "question": "Where does Ali study Japanese every day?",
+          "question": "Where does Lee study Japanese every day?",
           "choices": ["At school", "At home", "At a library", "At a bookstore"],
           "answer": "At school",
-          "explanation": "Ali says 毎日学校で学んでいます — 'I am learning at school every day.' で marks the location of an ongoing action: 学校で = 'at school.' 学んでいます = te-form of 学ぶ (学んで, godan nasal euphonic change: ぶ → んで) + います = progressive 'is studying' (G8). Ali also says よく学びたいです — 'I want to study well.' 来週 (らいしゅう = next week): 来 (くる/らい) + 週 (しゅう). 中国 (ちゅうごく = China): 中 (なか/ちゅう) + 国 (くに/こく), one of the N5.12 kanji."
+          "explanation": "Lee says 毎日学校で学んでいます — 'I am learning at school every day.' で marks the location of an ongoing action: 学校で = 'at school.' 学んでいます = te-form of 学ぶ (学んで, godan nasal euphonic change: ぶ → んで) + います = progressive 'is studying' (G8). Lee also says よく学びたいです — 'I want to study well.' 来週 (らいしゅう = next week): 来 (くる/らい) + 週 (しゅう). 中国 (ちゅうごく = China): 中 (なか/ちゅう) + 国 (くに/こく), one of the N5.12 kanji."
         },
         {
           "title": "Conversation 3 (Casual)",

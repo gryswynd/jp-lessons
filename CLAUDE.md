@@ -78,6 +78,7 @@ User Request
 - **Do not read the glossary in full.** The glossary files are large and will exceed output token limits. Instead use targeted Grep queries: search by `lesson_ids` to enumerate vocab for the target lesson, and search by `"id": "v_foo"` to verify individual IDs. See [Glossary Access Pattern](#glossary-access-pattern) below.
 - Build a **Content Brief** (see format below) and pass it to Agent 2.
 - If Agent 4 returns a rewrite note, analyse the feedback, update the brief, and re-dispatch to Agent 2. Log what changed.
+- If Agent 3 returns an Unregistered Word Report (not a FAIL), present the word list to the user using the escalation format. For each word the user approves, add the entry to the correct glossary file before re-dispatching to Agent 2. For each word the user rejects, instruct Agent 2 to remove or replace it. Log all additions and rejections in the Rewrite Notes field.
 - Final: write the approved file to the correct path and update `manifest.json` if required.
 - **Reference template rule.** Before building the Content Brief, identify the highest-numbered existing lesson file of the same content type and level (e.g. for a new N5 lesson, find the highest N5.X.json that exists). Use that file as the structural template — its section counts, conversation count, vocabulary density, and tone represent the current standard. Include it in the Dependencies field of the Content Brief. Earlier lessons may use outdated structures; always defer to the latest. If the curriculum spans multiple levels (e.g. N5 and N4 both exist), the highest-numbered lesson across the highest level is the most authoritative template.
 - **Compound discovery.** When scoping vocabulary for a new lesson, search the glossary for compounds that can be formed from the taught-kanji set. For each newly introduced kanji character, Grep for that character in the glossary's `"surface"` fields to discover existing compound words whose constituent kanji are all now taught. Flag any such compounds to the user as candidates for inclusion. This step ensures the lesson maximises use of newly-unlocked vocabulary.
@@ -144,7 +145,9 @@ CB CHECKLIST
 [ ] Every character name in jp fields has the correct char_* ID in its terms array (see Character Name Tagging)
 [ ] No char_* ID is used that is not registered in shared/characters.json
 [ ] Every kanji used is in the taught-kanji set
+[ ] For every word with a `matches` field in the glossary: verified the jp text uses the correct writing form for the current lesson tier — if any kanji in the glossary `surface` is untaught, the hiragana/partial-kanji form from `matches` was used instead (e.g. いっしょに not 一緒に, だいじょうぶ not 大丈夫, until their kanji are taught)
 [ ] Every content word in every jp/passage field has a corresponding terms entry
+[ ] Every pure-kana lexical word (interjections, casual words, expressions not in particles.json) has a verified glossary entry — any that do not are listed in the CB Checklist under "Unregistered words" for Agent 3 to escalate
 [ ] Verbs/adjectives use { "id": "...", "form": "..." } objects, never bare strings
 [ ] No invented IDs — every ID was verified against the glossary or particles.json
 [ ] Conversation/reading terms use v_* vocab entries, NOT k_* kanji entries
@@ -207,6 +210,8 @@ CB CHECKLIST
 - For every `terms` entry: verify the ID exists in the glossary (cross-reference the glossary file). Then verify the **surface form** of that glossary entry matches (or inflects from) the actual token in the `jp` field. A surface mismatch — e.g. tagging `だ` with `g_desu` whose glossary surface is `です` — is a **hard fail** even if the ID exists.
 - For every verb/adjective term entry: verify the `form` string is a valid key in `conjugation_rules.json`.
 - Verify all kanji in `jp` fields appear in the taught-kanji set (from `manifest.json`).
+- **Glossary-surface writing-form check.** For every word used in `jp` text, look up its glossary entry and check whether its `surface` field contains any kanji that are **not** in the taught-kanji set. If so, the word must appear in the hiragana/partial-kanji form from its `matches` field — never in the full-kanji `surface` form. This check catches cases like 一緒に (surface) written in jp text when the glossary's `matches` form is いっしょに and 緒 is not yet taught, or 大丈夫 written when だいじょうぶ is the required form. Grep the glossary for the word's ID, read both `surface` and `matches`, then verify the jp text uses the form consistent with the current taught-kanji set. Any mismatch is a **hard fail**.
+- **Unregistered kana lexical word check.** For every pure-kana token in `jp` text that is a lexical word (not a particle or copula — use judgement: interjections like うん, confirmations like そう, casual words like だよ/だね count as lexical), verify it has an entry in `glossary.N5.json` or `glossary.N4.json`. If it does not, do **not** issue a standard FAIL — instead, produce an **Unregistered Word Report** (see below) and return it to Agent 1. Agent 1 presents the list to the user and asks whether to add each word to the glossary. This is not a content error by Agent 2 — it is a gap between natural conversational Japanese and the current glossary coverage.
 - Verify the JSON schema matches the content type schema exactly (no extra/missing required fields).
 - Verify answer fields match the correct answer choices.
 - Verify drill distractors are plausible (wrong but not absurd; drawn from same lesson vocab where possible).
@@ -215,6 +220,7 @@ CB CHECKLIST
 
 - **PASS:** Attach a QA-PASS stamp and forward to Agent 4.
 - **FAIL:** Produce an annotated failure report (see format below) and return to Agent 2. Agent 2 must fix every listed issue and resubmit; Agent 3 performs a full re-audit.
+- **ESCALATE (unregistered words):** If the only issues are unregistered kana lexical words — no structural failures, no untaught kanji, no bad IDs — produce an Unregistered Word Report and return to Agent 1 rather than Agent 2. Agent 1 presents the words to the user for a glossary decision, then re-dispatches to Agent 2 with the result. If there are both structural failures AND unregistered words, report both but send back to Agent 2 for the structural fixes first; unregistered words are escalated in a separate pass once the draft is structurally clean.
 
 **QA Failure Report format:**
 
@@ -236,6 +242,42 @@ Line/Section | Issue Type          | Detail
 Total issues: N
 Status: FAIL — return to Agent 2
 ```
+
+**Unregistered Word Report format** (used when escalating to Agent 1 for user decision):
+
+```
+UNREGISTERED WORD REPORT
+════════════════════════
+Draft: [content ID]
+
+The following pure-kana lexical words appear in the draft but have no glossary entry.
+These are not errors by Agent 2 — they represent natural Japanese that is not yet in the
+glossary. Agent 1 must present this list to the user and ask whether to add each word.
+
+Word  | First appears in          | Suggested entry
+──────┼───────────────────────────┼────────────────────────────────────────────────────
+うん  │ [conv 4 line 2]           │ v_un, surface "うん", gtype "interjection", lesson_ids "N5.10", meaning "yeah / uh-huh (casual affirmative)"
+[word]│ [location]                │ [suggested id, surface, gtype, lesson_ids, meaning]
+
+Status: ESCALATE — return to Agent 1 for user decision before re-dispatching to Agent 2
+```
+
+**Agent 1 user escalation format** (when presenting an Unregistered Word Report to the user):
+
+```
+GLOSSARY GAP FOUND
+══════════════════
+Agent 2 used the following natural Japanese words that are not yet in the glossary.
+Please confirm whether to add them, and whether the suggested lesson_ids is correct.
+
+Word  | Suggested entry                               | Add?
+──────┼───────────────────────────────────────────────┼──────
+うん  │ v_un / interjection / "yeah, uh-huh" / N5.10 │ [yes/no/modify]
+
+For each "yes": Agent 1 will add the entry to the glossary before Agent 2 finalises the draft.
+For each "no": Agent 2 must remove the word from the jp text or replace it with a registered alternative.
+```
+
 ### Agent 3 — Grammar Accuracy Gate (grammar lessons only)
 
 When the draft has `"type": "grammar"`, Agent 3 must perform an additional **Grammar Accuracy Audit** before issuing a pass. This audit checks linguistic correctness — something the structural checks cannot catch.
@@ -1557,6 +1599,8 @@ All of the following must be TRUE for a QA pass:
 - [ ] Early-use vocabulary written in hiragana is on the approved early-use list and the current lesson ≥ the word's "Use from" lesson (see [Early-Use Vocabulary Rules](#early-use-vocabulary-rules))
 - [ ] Words with taught kanji are written in kanji, not hiragana — hiragana writing is only permitted for words on the early-use list whose kanji is not yet taught
 - [ ] Partial-kanji words use the correct writing form for the lesson tier (e.g. 大すき not 大好き before N4.4)
+- [ ] Glossary-surface writing-form check: for every word in jp text whose glossary `surface` contains any untaught kanji, the jp text uses the hiragana/partial-kanji `matches` form — not the full-kanji surface (hard fail: 一緒に used in jp text when いっしょに is the glossary matches form and 緒 is not yet taught)
+- [ ] Unregistered kana lexical words are escalated: pure-kana lexical tokens with no glossary entry are listed in an Unregistered Word Report and returned to Agent 1 — they do not produce a standard FAIL
 - [ ] (Reviews) Scramble `segments` use only taught kanji and approved vocabulary
 - [ ] (Reviews) Scramble `distractors` are plausible (wrong particles, transitive/intransitive confusions, similar words)
 - [ ] (Reviews) Scramble sentences with time expressions or adverbs have `alts` if the element can naturally float
