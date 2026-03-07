@@ -253,6 +253,8 @@
           "jp": "レンさん、電話で 話しましょう。",
           "en": "Ren, let's talk on the phone.",
           "terms": [
+            "char_ren",
+            "v_san",
             "v_denwa",
             "p_de",
             { "id": "v_hanasu", "form": "polite_volitional_mashou" }
@@ -351,6 +353,9 @@
           "jp": "ミキさんは 毎日 日本語を 読んでいますか。",
           "en": "Miki, do you read Japanese every day?",
           "terms": [
+            "char_miki",
+            "v_san",
+            "p_wa",
             "v_mainichi",
             "v_nihongo",
             "p_wo",
@@ -456,6 +461,7 @@
           "jp": "うん、おもしろいよ。空手の 本も 読んだよ。",
           "en": "Yeah, it's interesting. I even read a karate book.",
           "terms": [
+            "v_un",
             "v_omoshiroi",
             "p_yo",
             "v_karate",
@@ -481,6 +487,7 @@
           "jp": "うん、おもしろかったよ。空手を したいな。",
           "en": "Yeah, it was interesting. I want to do karate.",
           "terms": [
+            "v_un",
             { "id": "v_omoshiroi", "form": "plain_past_adj" },
             "p_yo",
             "v_karate",
@@ -508,6 +515,7 @@
           "jp": "うん！毎日 話そうよ。本も 読もう。",
           "en": "Yeah! Let's talk every day. Let's read books too.",
           "terms": [
+            "v_un",
             "v_mainichi",
             { "id": "v_hanasu", "form": "plain_volitional" },
             "p_yo",
@@ -647,6 +655,8 @@
           "jp": "レンさんは 毎日 電話で 話します。日本語で 話します。",
           "en": "Ren speaks on the phone every day. He speaks in Japanese.",
           "terms": [
+            "char_ren",
+            "v_san",
             "p_wa",
             "v_mainichi",
             "v_denwa",
@@ -666,6 +676,8 @@
             "v_hon",
             "p_wa",
             { "id": "v_omoshiroi", "form": "appearance_sou" },
+            "char_ren",
+            "v_san",
             "p_wa",
             { "id": "v_ii", "form": "adverbial" },
             { "id": "v_yomu", "form": "polite_masu" }
@@ -675,6 +687,8 @@
           "jp": "レンさんは ノートに 書きます。手で ゆっくり 書きます。",
           "en": "Ren writes in his notebook. He writes slowly by hand.",
           "terms": [
+            "char_ren",
+            "v_san",
             "p_wa",
             "v_nooto",
             "p_ni",
@@ -703,6 +717,8 @@
           "jp": "レンさんは 空手の 本も 読みます。空手は おもしろいです。",
           "en": "Ren also reads karate books. Karate is interesting.",
           "terms": [
+            "char_ren",
+            "v_san",
             "p_wa",
             "v_karate",
             "p_no",
