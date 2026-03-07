@@ -5,11 +5,12 @@
 
   Load order enforced by this loader:
     1. app/shared/asset-loader.js   — URL builder, manifest, fetchJSON
-    2. app/shared/tts.js            — Text-to-speech
-    3. app/shared/progress.js       — localStorage: flags, scores, drafts
-    4. app/shared/text-processor.js — Conjugation engine, processText
-    5. app/shared/term-modal.js     — Shared term modal overlay
-    6. Feature module (on demand)   — Lesson / Practice / Review / Compose / Story / Grammar
+    2. app/shared/tts.js            — Text-to-speech with voice selection
+    3. app/shared/tts-settings.js   — TTS settings modal (voice picker, speed)
+    4. app/shared/progress.js       — localStorage: flags, scores, drafts
+    5. app/shared/text-processor.js — Conjugation engine, processText
+    6. app/shared/term-modal.js     — Shared term modal overlay
+    7. Feature module (on demand)   — Lesson / Practice / Review / Compose / Story / Grammar
   ============================================================ -->
 
 <div id="app-main-container"></div>
@@ -82,7 +83,8 @@ window.JPApp = {
       'letter-spacing:0.3px;white-space:nowrap;pointer-events:none;}' +
       '</style>';
     var html = style +
-      '<div class="jp-main-menu">' +
+      '<div class="jp-main-menu" style="position:relative;">' +
+        '<button class="jp-settings-gear-menu" onclick="window.JPShared && window.JPShared.ttsSettings && window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button>' +
         '<h1 style="color:#2f3542;font-weight:900;">\uD83C\uDDEF\uD83C\uDDF5 Japanese Master</h1>' +
         '<div class="jp-menu-btn" onclick="JPApp.launch(\'lesson\')" style="border-top:3px solid #4e54c8;">' +
           '<div class="jp-menu-title" style="color:#4e54c8;">\uD83D\uDCDA Lessons</div>' +
@@ -139,10 +141,11 @@ window.JPApp = {
     if (!window.JPShared || !window.JPShared.assets) {
       var sharedModules = [
         'app/shared/asset-loader.js',   // 1. URL builder, manifest, fetchJSON
-        'app/shared/tts.js',            // 2. speak() / cancel()
-        'app/shared/progress.js',       // 3. flags, scores, drafts via localStorage
-        'app/shared/text-processor.js', // 4. conjugate(), processText(), getRootTerm()
-        'app/shared/term-modal.js'      // 5. term overlay (depends on 2, 3, 4)
+        'app/shared/tts.js',            // 2. speak() / cancel() / voice selection
+        'app/shared/tts-settings.js',   // 3. TTS settings modal (depends on 2)
+        'app/shared/progress.js',       // 4. flags, scores, drafts via localStorage
+        'app/shared/text-processor.js', // 5. conjugate(), processText(), getRootTerm()
+        'app/shared/term-modal.js'      // 6. term overlay (depends on 2, 4, 5)
       ];
       for (var i = 0; i < sharedModules.length; i++) {
         var ok = await this.loadModule(sharedModules[i]);

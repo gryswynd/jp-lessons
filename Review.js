@@ -81,7 +81,7 @@
           <div id="jp-test-embed">
             <div class="jp-header">
               <div class="jp-title">Select Review</div>
-              <div class="jp-badge jp-exit-link-header" id="jp-exit-list">Exit</div>
+              <div style="display:flex;gap:8px;align-items:center;"><button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button><div class="jp-badge jp-exit-link-header" id="jp-exit-list">Exit</div></div>
             </div>
             <div id="jp-stage" style="padding: 20px;">
               <div style="text-align:center; color:#888; padding:40px;">Loading reviews...</div>
@@ -217,7 +217,7 @@
                   <button class="jp-review-back-btn" id="jp-back-to-list">← List</button>
                   <div class="jp-title" id="jp-header-title">Loading...</div>
                 </div>
-                <div class="jp-badge">Score: <span id="jp-score">0</span></div>
+                <div style="display:flex;gap:8px;align-items:center;"><button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button><div class="jp-badge">Score: <span id="jp-score">0</span></div></div>
               </div>
 
               <div class="jp-progress-track">
@@ -751,23 +751,30 @@
 
       // Conversation Render
       if (q.type === 'conversation_quiz') {
+        var convLines = q.lines.map(l => l.jp);
+        html += `<button class="jp-speak-all-btn" onclick="window.JPShared.tts.speakLines(ReviewModule._ttsLines)">\uD83D\uDD0A Play Conversation</button>`;
+        this._ttsLines = convLines;
         html += `<div class="jp-passage">`;
         if(q.context) html += `<div style="font-style:italic; color:#666; margin-bottom:15px; border-bottom:1px solid #eee; padding-bottom:10px;">Context: ${q.context}</div>`;
-        q.lines.forEach(line => {
+        q.lines.forEach((line, li) => {
           html += `
-            <div class="jp-convo-line">
+            <div class="jp-convo-line" style="display:flex;align-items:flex-start;">
               <div class="jp-convo-spk">${line.spk}</div>
-              <div class="jp-convo-text">${window.JPShared.textProcessor.processText(line.jp, line.terms, this.state.termMap, this.state.conjugations, this.state.counterRules)}</div>
-              </div>
+              <div class="jp-convo-text" style="flex:1">${window.JPShared.textProcessor.processText(line.jp, line.terms, this.state.termMap, this.state.conjugations, this.state.counterRules)}</div>
+              <button class="jp-speak-sentence" title="Listen" data-tts-idx="${li}">\uD83D\uDD0A</button>
+            </div>
           `;
         });
         html += `</div>`;
       }
       // Reading Passage Render
       else if (q.type === 'reading_mcq') {
+        var passageLines = q.passage.map(p => p.jp);
+        html += `<button class="jp-speak-all-btn" onclick="window.JPShared.tts.speakLines(ReviewModule._ttsLines)">\uD83D\uDD0A Play Passage</button>`;
+        this._ttsLines = passageLines;
         html += `<div class="jp-passage">`;
-        q.passage.forEach(p => {
-            html += `<div style="margin-bottom:12px; font-size:1.1rem; line-height:1.6;">${window.JPShared.textProcessor.processText(p.jp, p.terms, this.state.termMap, this.state.conjugations, this.state.counterRules)}</div>`;
+        q.passage.forEach((p, pi) => {
+            html += `<div style="margin-bottom:12px; font-size:1.1rem; line-height:1.6; display:flex; align-items:flex-start;"><div style="flex:1">${window.JPShared.textProcessor.processText(p.jp, p.terms, this.state.termMap, this.state.conjugations, this.state.counterRules)}</div><button class="jp-speak-sentence" title="Listen" data-tts-idx="${pi}">\uD83D\uDD0A</button></div>`;
         });
         html += `</div>`;
       }
@@ -787,6 +794,16 @@
       html += `</div>`;
 
       stage.innerHTML = html;
+
+      // Wire up sentence-level TTS buttons
+      stage.querySelectorAll('.jp-speak-sentence[data-tts-idx]').forEach(btn => {
+        btn.onclick = () => {
+          var idx = parseInt(btn.getAttribute('data-tts-idx'), 10);
+          if (this._ttsLines && this._ttsLines[idx]) {
+            window.JPShared.tts.speak(this._ttsLines[idx]);
+          }
+        };
+      });
 
       if(q.type === 'mcq' || q.type === 'reading_mcq' || q.type === 'conversation_quiz') {
         this.renderMCQ(q);

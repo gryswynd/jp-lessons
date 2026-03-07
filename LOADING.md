@@ -41,14 +41,32 @@ Canonical URL builder and data fetcher.  Self-contained (no JPShared deps).
 | `window.getManifest` | `(config) → Promise<Object>` | Compat alias for getManifest |
 
 ### 2. `app/shared/tts.js`
-Web Speech API wrapper with mobile retry logic.  No JPShared deps.
+Web Speech API wrapper with voice selection, speed control, and chunking for long text.  No JPShared deps.
 
 | Export | Signature | Description |
 |--------|-----------|-------------|
-| `window.JPShared.tts.speak` | `(text, options?) → void` | Speak Japanese text; options: `{lang, rate, volume}` |
-| `window.JPShared.tts.cancel` | `() → void` | Cancel any in-progress utterance |
+| `window.JPShared.tts.speak` | `(text, options?) → void` | Speak Japanese text; auto-chunks long text on sentence boundaries |
+| `window.JPShared.tts.speakLines` | `(lines, options?) → void` | Speak an array of strings sequentially (for conversations) |
+| `window.JPShared.tts.cancel` | `() → void` | Cancel any in-progress utterance or chunk queue |
+| `window.JPShared.tts.isSpeaking` | `() → boolean` | Whether TTS is currently playing |
+| `window.JPShared.tts.getVoices` | `() → SpeechSynthesisVoice[]` | Get available Japanese voices |
+| `window.JPShared.tts.getSelectedVoice` | `() → SpeechSynthesisVoice\|null` | Get current voice |
+| `window.JPShared.tts.setVoice` | `(voiceURI) → void` | Set voice by URI; persists to localStorage |
+| `window.JPShared.tts.getRate` | `() → number` | Get current speech rate |
+| `window.JPShared.tts.setRate` | `(rate) → void` | Set speech rate (0.5–2.0); persists to localStorage |
+| `window.JPShared.tts.isSupported` | `() → boolean` | Check browser support |
 
-### 3. `app/shared/progress.js`
+Preferences stored in localStorage key `jp-tts-prefs`.
+
+### 3. `app/shared/tts-settings.js`
+TTS voice settings modal — voice picker dropdown, speed slider, test button.  Depends on `tts.js`.
+
+| Export | Signature | Description |
+|--------|-----------|-------------|
+| `window.JPShared.ttsSettings.open` | `() → void` | Open the settings modal |
+| `window.JPShared.ttsSettings.close` | `() → void` | Close the settings modal |
+
+### 4. `app/shared/progress.js`
 All localStorage reads/writes go through this module.  No JPShared deps.
 
 localStorage key schema (unchanged from pre-extraction):
