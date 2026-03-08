@@ -213,4 +213,165 @@ None — all resolved.
 
 ---
 
-*Pending approval before writing Day 2.*
+## Day 2 — "Elements" (unlocked by N5.2: Days of the Week)
+
+### Lesson Kanji & Key Vocab Available
+
+**New kanji (10):** 日、月、火、水、木、金、土、毎、今、何
+
+**Cumulative kanji (20):** All N5.1 kanji + above.
+
+**New vocab highlights:**
+- Elemental nouns: 日 (ひ, day/sun), 月 (つき, moon), 火 (ひ, fire), 水 (みず, water), 木 (き, tree/wood), 金 (かね, gold/money), 土 (つち, earth/soil)
+- Days of the week: 日ようび, 月ようび, 火ようび, 水ようび, 木ようび, 金ようび, 土ようび, 何よう日
+- Time: 今日 (きょう, today), 今月 (こんげつ, this month), 毎日 (まいにち, every day), 毎月 (まいげつ, every month)
+- Questions: 何 (なに/なん), 何人 (なんにん, how many people), いつ (when)
+- Adverbs: いつも (always), よく (often/well)
+- Other: お金 (おかね, money — but no currency system yet), ゲーム (game)
+
+**New particles (N5.2):** に, も, と, から, まで, や, までに
+
+**Grammar available:** Still dictionary forms + polite_adj only. No verb conjugation.
+
+**New this day:** Inventory system activates. First collectible item.
+
+### Location
+
+**Rikizo's house + a yard now exists.** Yesterday, the front door opened to endless white void. Today, it opens to a small yard. A 木 (tree). Patches of 土 (earth). The void has receded to the edge of the yard — it's still there, a wall of white surrounding the property, but the house now has ground around it. Rikizo cannot walk past the yard's edge into the void.
+
+Rikizo does not find this remarkable. Yesterday there was nothing. Today there is a tree. 「木です。」He names it as if it's always been there.
+
+**Interior changes:**
+- A calendar appears on the kitchen wall (days of the week)
+- Dad has a 金 coin on a shelf in the living room (new object)
+- A bottle of 水 appears on the kitchen counter (first inventory item)
+
+**Exterior (yard):**
+- 木 (tree) — central feature, interactable
+- 土 (ground/earth) — the yard is patchy earth, not grass. Raw. New.
+- Void edge — visible at the yard's perimeter. White wall. Rikizo can walk up to it but not into it.
+
+### NPCs
+
+#### Mom (さくら) — Kitchen area
+
+Mom has a new Day 2 conversation. She references the calendar and the routine of days.
+
+**Conversation (4 lines):**
+1. **Mom:** 「りきぞ、今日は何ようびですか？」 — "Rikizo, what day of the week is it today?"
+2. **Rikizo:** 「えっと...」 — "Umm..."
+3. **Mom:** 「毎日、カレンダーを見てね。」 — "Check the calendar every day, okay?" *(Points to the new calendar)*
+4. **Mom:** 「いい先生は毎日がんばるよ。」 — "A good teacher works hard every day."
+
+**Repeatable line:** 「今日もいい日ですね。」("Today is a good day too.") — Mom uses も naturally.
+
+#### Dad (たろう) — Living room area
+
+Dad has a new default conversation and the 金 coin gag begins.
+
+**Conversation (4 lines):**
+1. **Dad:** 「りきぞ、今日もいい子ですね。」 — "Rikizo, you're a good kid today too."
+2. **Rikizo:** 「お父さん、あれは何ですか？」 — "Dad, what's that?" *(Pointing at the gold coin)*
+3. **Dad:** 「金です。お父さんの金です。」 — "Gold. Dad's gold." *(Possessive. Firm.)*
+4. **Dad:** 「...だめですよ。」 — "...Don't even think about it."
+
+**Triggered conversation — "The Nothing" (Day 1 version updates):**
+
+The void conversation from Day 1 changes now that a yard exists. If the player walks to the void edge and interacts:
+
+> Rikizo: 「白いです。何もないです。」("It's white. There's nothing.")
+
+Then talk to Dad:
+
+1. **Rikizo:** 「お父さん、外の白いのは何ですか？」 — "Dad, what's the white stuff outside?"
+2. **Dad:** 「何もないです。いつもですよ。」 — "Nothing. It's always like that." *(Uses いつも — "always." Dad is claiming the void is permanent and normal.)*
+3. **Rikizo:** 「...そうですか。」 — "...Is that so."
+
+Same energy as Day 1. Dad doesn't care. He's never cared. The void has always been there, apparently.
+
+### Interactive Objects
+
+**Interior (updated/new):**
+
+| Object | nameJp | Location | Interaction |
+|---|---|---|---|
+| Calendar | カレンダー | Kitchen wall | 「今日は[X]ようびです。」Displays the current day of the week. Rikizo reads it aloud. Can tap through all seven days. |
+| Gold coin | 金 | Living room shelf | 「お父さんの金です。」("Dad's gold.") If you try to take it: Dad yells from wherever he is: 「金！だめ！」("The gold! No!") Same sixth sense as the toilet door. **Running gag #2 established.** |
+| Water bottle | 水 | Kitchen counter | 「水です。」("Water.") **FIRST INVENTORY ITEM.** Picking it up adds it to inventory. This teaches the player that items can be collected. The water has no gameplay use on Day 2 — it's just... water. In your inventory. |
+| Bed | ベッド | Bedroom | Same as Day 1. Save point. |
+| Laptop | パソコン | Bedroom | Same as Day 1. Teach a lesson exit. |
+| TV | テレビ | Living room | 「テレビです。」 |
+| Kotatsu | こたつ | Living room | 「こたつです。とてもいいです！」 |
+| Fridge | れいぞうこ | Kitchen | 「お母さんのれいぞうこです。」 |
+| Toilet | トイレ | Bathroom | Door gag persists from Day 1. |
+| Front door | ドア | Entryway | Now opens to yard instead of void. 「外です！」("Outside!") — Rikizo is mildly happy to go outside, as if he'd been meaning to but just hadn't gotten around to it. |
+
+**Exterior (new):**
+
+| Object | nameJp | Location | Interaction |
+|---|---|---|---|
+| Tree | 木 | Yard center | 「木です。いい木ですね。」("A tree. Nice tree.") Interact again: 「木...名は何ですか？」("Tree... what's your name?") Interact again: 「今日から友だちです。」("From today, we're friends.") **Comedy beat — Rikizo befriends the tree.** Uses から (from) and 友だち naturally. |
+| Earth/ground | 土 | Yard | 「土です。」("Earth.") Interact again: 「土は土ですね。」("Dirt is dirt.") Rikizo has nothing profound to say about dirt. |
+| Void edge | — | Yard perimeter | 「白いです。何もないです。」("It's white. There's nothing.") Same as always. No change in tone. Triggers the updated Dad conversation (once). |
+
+### Quests
+
+**No formal quests.** The quest system doesn't exist yet.
+
+The player discovers:
+- The yard exists (the world grew overnight)
+- Inventory — picking up the water bottle
+- The calendar (days of the week)
+- Dad's gold coin (don't touch)
+- The tree (comedy)
+- The void has receded but is still there
+
+### Story Beats
+
+| Moment | What Happens | What Rikizo Thinks | What the Player Should Feel |
+|---|---|---|---|
+| Opening the front door | Yesterday: void. Today: a yard with a tree. | 「外です！」(casual, happy) | **Wait.** Yesterday there was NOTHING here. Now there's a yard, a tree, ground. Where did this come from? He's not surprised AT ALL? |
+| Befriending the tree | Rikizo talks to the tree, names it his friend | Genuinely delighted. 「今日から友だちです。」 | Funny. But also — this tree didn't exist yesterday. Rikizo's first friend outside the family is a tree that materialized from nothing. |
+| Dad's gold coin | Dad is intensely protective of a single coin | 「金！だめ！」 | Comedy. Dad has the same sixth sense for gold as he does for bathroom doors. |
+| Walking to the void edge | White wall at the yard's perimeter | 「何もないです。」(same flat tone as Day 1) | The void is still RIGHT THERE. The yard is a tiny island of reality. Everything beyond is nothing. |
+| Dad says it's "always" like this | いつもですよ — the void has always been there | Accepts it | Dad is now claiming the void is permanent, normal, always-been-there. But yesterday the void was at the FRONT DOOR. It moved. He doesn't notice that either. |
+| Picking up the water | First inventory item | 「水です。」 | Mechanical — teaches inventory. But also: where did this water come from? It wasn't here yesterday. The house is generating items. |
+
+**Tone calibration for Day 2:** The comedic obliviousness deepens. The world literally changed overnight and nobody comments on it. The tree is the focal point — Rikizo befriending something that appeared from nothing is both charming and unsettling. The player should be starting to feel the pattern: things appear, nobody questions it, move on.
+
+### Running Gags Established
+
+1. **The Toilet Door** — Continues from Day 1.
+2. **Dad's Gold** — Touch the 金 → Dad yells. Same sixth-sense mechanic as the toilet door. Persists across the game. The gold coin on the shelf is always there, always untouchable.
+
+### Assets Required
+
+| Asset | Type | Mode | Priority | Notes |
+|---|---|---|---|---|
+| Yard map | Tilemap | A (Pixel) | Needed | Small yard: tree, earth patches, void edge visible. Connects to house interior via front door. |
+| Yard collision map | Data | A (Pixel) | Needed | Player can walk the yard but not into the void. |
+| Tree sprite | Object sprite | A (Pixel) | Needed | Simple tree. Central yard feature. |
+| Gold coin sprite | Object sprite | A (Pixel) | Needed | Small, shiny, on a shelf. Visually appealing (you WANT to take it). |
+| Water bottle sprite | Object/item sprite | A (Pixel) | Needed | First inventory item. Simple bottle. |
+| Calendar UI | UI element | — | Needed | Kitchen wall calendar showing 7 days. Tappable. |
+| Inventory UI | UI element | — | Needed | First time inventory is used. Needs to be designed for Day 2 launch. |
+| Void edge visual | Effect/tile | A (Pixel) | Needed | The white void as seen from the yard — a wall at the perimeter. Different from Day 1's "void through doorway" view — now it's a visible boundary around the yard. |
+
+### Non-Kanji Real-World Vocab Used
+
+| Word | Meaning | Glossary ID | In Glossary? | Notes |
+|---|---|---|---|---|
+| カレンダー | calendar | — | Game vocab | Kitchen wall object |
+| ゲーム | game | v_geemu | Yes (N5.2) | Might reference in dialogue or object |
+
+### Open Questions for Day 2
+
+1. **Void edge visual:** How does the void look from the yard? Day 1 it was "open the door, see white." Now it's a boundary at the yard's edge. Is it a sharp cutoff (ground just... stops, white begins)? A gradual fade? A wall? The visual treatment matters — it should feel like reality has a border, not like there's a fence or fog.
+
+2. **Tree persistence:** Does the tree stay across all future days? It should — it's Rikizo's first friend. Future days could add interactions (leaves change with seasons in N4, etc).
+
+3. **Evening/night:** Day 2 introduces 月 (moon). Should there be a simple day/night toggle? If so, the moon is visible at night from the yard. If not, the moon can be referenced in dialogue without appearing. Time-of-day mechanics aren't formally established until Day 4 (時/分), but 月 being visible at night would be a nice touch.
+
+---
+
+*Pending approval before writing Day 3.*
