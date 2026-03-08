@@ -783,6 +783,7 @@ All resolved:
 - Location words: ここ (here), そこ (there), あそこ (over there), どこ (where), うち (home/my place)
 - Transport: バス (bus), タクシー (taxi)
 - Time: 来週 (らいしゅう, next week), 来月 (らいげつ, next month), 来年 (らいねん, next year)
+- Food: おにぎり (rice ball)
 - Other: また (again/also), だめ (no good/not allowed)
 
 **GRAMMAR REVOLUTION — N5.5 unlocks polite verb conjugation:**
@@ -798,7 +799,7 @@ This is the single biggest grammar leap in N5. Characters go from "X is Y" sente
 
 **New particles:** None new, but existing particles now combine with verbs: 駅に行きます, 店から来ました, etc.
 
-**New this day:** Rikizo can leave the yard. The world expands. First NPC outside the family. First shop. Verbs conjugate. Everything changes.
+**New this day:** Rikizo can leave the yard. The world expands. First NPC outside the family. First shop (that you can't buy from — 買う is Day 8). Verbs conjugate. Everything changes.
 
 ### Location
 
@@ -811,7 +812,7 @@ Rikizo steps out of the yard and there is somewhere to go. 行く exists. Places
 | Area | Description | Accessibility |
 |---|---|---|
 | Road | A path leading from the house to the neighborhood. Simple, short. The first connecting geography. | Walkable |
-| コンビニ | Convenience store. Small building with a **passthrough window** (cannot enter — 中 doesn't exist until Day 9). Rikizo buys through the counter window. | Window only |
+| コンビニ | Convenience store. Small building with a **passthrough window** (cannot enter — 中 doesn't exist until Day 9). Items visible through the window but 買う (to buy) doesn't exist until Day 8 — it's a shop you can look at but not shop at. | Window only |
 | 駅 | Train station. Visible, reachable, but there are no trains. The platform exists. The tracks exist. Nothing comes. The station is empty and perfect and waiting for a train that cannot arrive because there is nowhere for it to come from. | Explorable exterior |
 | Void edge (new) | The void has retreated to the edge of the new neighborhood. Still visible — white nothing beyond the last building. The world is bigger but finite. | Visible boundary |
 
@@ -874,31 +875,40 @@ If the player asks about the onigiri (interaction option available Day 7+): 「�
 
 **The いつも pattern:** Dad said いつも about the void on Day 2. Yamakawa says いつも about a store that appeared this morning. The word is becoming a recurring tell — whenever an NPC is confronted with something that clearly just materialized, their instinct is to say it's "always" been this way. It's not that they're lying. It's that for them, it genuinely HAS always been this way. Their memory rewrites itself to match the current state of the world. いつも is the sound of reality smoothing over its own seams.
 
-### The コンビニ (First Shop)
+### The コンビニ (A Shop You Can't Shop At)
 
-The convenience store is the first place Rikizo can spend money. It uses a **passthrough window** — Rikizo stands outside, the shopkeeper stands inside, items are exchanged through a counter window. No entering the building (中 doesn't exist until Day 9).
+The convenience store is the first commercial building in the game. It uses a **passthrough window** — Rikizo stands outside, the shopkeeper stands inside. Items are visible through the window. No entering the building (中 doesn't exist until Day 9).
+
+There is one problem: **買う (to buy) doesn't exist until N5.8 (Day 8).** Rikizo cannot buy things. The verb for purchasing has not been invented. He has 2,000+ yen. There is a shop. There are items. The concept of exchanging money for goods does not exist.
 
 **Shopkeeper:** A generic NPC. Not a named character. Polite, functional.
 
-**Shopkeeper dialogue:**
-> 「いらっしゃいませ！どれですか？」("Welcome! Which one?")
+**Shopkeeper dialogue (when approached):**
+> 「いらっしゃいませ！」("Welcome!")
 
-**Available items (Day 5):**
+The shopkeeper greets Rikizo. And then... nothing. There's no transaction. There's no "which one?" because there's no verb that would complete the interaction. The shopkeeper welcomes you. You stand at the window. Items are visible:
 
-| Item | Price | Effect | Notes |
-|---|---|---|---|
-| 水 (みず) | 百円 | Restores... nothing? It's water. | Player already has water from Day 2. Can buy more. Why? Unclear. |
-| Bandage / ばんそうこう | 二百円 | Inventory item. No use yet. | Game vocab item. Exists for future use. |
-| Notebook / ノート | 三百円 | Inventory item. | Game vocab. Future quest item? |
+**Visible items (Day 5–7, not purchasable):**
 
-**Design note:** The shop's inventory is intentionally sparse. There are three items. One is redundant (more water). The other two have no immediate use. The player has 2,000+ yen and almost nothing to buy. The economy exists but barely functions — mirroring the world itself, which exists but barely extends past the neighborhood edge. The shop's inventory will grow as vocabulary grows. By the time 食べる arrives (Day 7), food items appear. By the time clothing vocab arrives, clothes appear. The shop is a living inventory of what the world can express.
+| Item | Price tag | Notes |
+|---|---|---|
+| おにぎり | 百五十円 | Triangular rice ball. Clearly the same thing Yamakawa is holding. Visible but untouchable. |
+| 水 (みず) | 百円 | Water. Player already has water from Day 2. Can see more water. Cannot acquire more water. |
+| ノート | 三百円 | Notebook. Sits on the shelf. Exists. Cannot be obtained. |
 
-**After purchase:**
-> Shopkeeper: 「ありがとうございます！また来てください。」("Thank you! Please come again.")
+**If the player tries to interact with an item:**
+> 「...」 *(Nothing happens. Rikizo looks at the item. The item exists. The money exists. The bridge between them — the verb — does not.)*
+
+**If the player talks to the shopkeeper again:**
+> 「いらっしゃいませ！」("Welcome!") *(Same line. The shopkeeper is stuck in a greeting loop. They can welcome you. They cannot sell to you. The transaction requires a verb that hasn't been created yet.)*
+
+**Design note:** The コンビニ is a shop that functions as a window display for three days. Rikizo can visit, look at items, and leave. The player has money and wants things. The game has a store. But the verb 買う doesn't arrive until Day 8, at which point the shopkeeper's dialogue expands: 「いらっしゃいませ！どれですか？」("Welcome! Which one?") — and suddenly the whole system works. The three-day gap between "store exists" and "buying exists" is the ontological rule at its most absurd-commercial. Yamakawa is standing RIGHT THERE holding an onigiri. There are onigiri IN THE SHOP. Rikizo has money. He cannot buy one. The verb doesn't exist.
+
+**Day 8 update (買う arrives):** The shopkeeper gains the full interaction: 「どれですか？」→ item selection → 「ありがとうございます！また来てください。」 The shop becomes functional. The inventory grows over time as vocabulary grows.
 
 ### The 駅 (Station)
 
-The train station is the most hauntingly beautiful location in the early game. It's a small, clean, well-maintained platform. Tracks stretch in both directions and vanish into the void. There is a departure board with no departures. A bench. A vending machine (non-functional — 買う "to buy" works but the machine has no interface vocab yet). Everything is perfect and empty and waiting.
+The train station is the most hauntingly beautiful location in the early game. It's a small, clean, well-maintained platform. Tracks stretch in both directions and vanish into the void. There is a departure board with no departures. A bench. A vending machine (non-functional — 買う "to buy" doesn't exist until Day 8). Everything is perfect and empty and waiting.
 
 **Rikizo's reaction:**
 > 「駅です。」("A station.")
@@ -943,7 +953,7 @@ This is a te-form request (来て). It serves as a gentle quest marker — go fi
 | Object | nameJp | Location | Interaction |
 |---|---|---|---|
 | Road | みち (game vocab — 道 kanji arrives Day 6) | Between house and town | 「ここからあそこまで...」("From here to over there...") Rikizo walks the road. It's short. It connects two places that didn't exist relative to each other yesterday. |
-| コンビニ window | コンビニ | Town | Shop interface. See shop section above. |
+| コンビニ window | コンビニ | Town | Items visible through window. Shopkeeper says いらっしゃいませ. Cannot buy anything (買う doesn't exist until Day 8). See shop section. |
 | コンビニ door | ドア | Town | 「...だめです。」("...Can't.") Rikizo can't enter. He doesn't explain why. He just can't. The concept of "going inside" doesn't exist. He stands at the window. |
 | 駅 platform | 駅 | Town edge | 「駅です。」Explorable exterior. See station section. |
 | 駅 tracks | — | 駅 | 「...どこからですか？どこに行きますか？」 |
@@ -976,7 +986,7 @@ This is a te-form request (来て). It serves as a gentle quest marker — go fi
 | First conjugated verb | Dad says 「どこに行きますか？」 | Responds naturally | The player might not consciously notice, but dialogue just transformed. Characters can DO things now, not just BE things. |
 | Meeting Yamakawa | Best friend is at the コンビニ as if he's always been there | 「やまかわ！」(pure happy) | Yamakawa says いつも — "always." The same word Dad used about the void. At a store that appeared this morning. Their memories rewrite to match the world. |
 | The food in Yamakawa's hand | He's holding something food-shaped. It changes. Nobody has a word for what's happening. | Doesn't comment | 食べる doesn't exist. Eating doesn't exist. And yet, food is disappearing from Yamakawa's hand. What is this process? The ontological rules say it can't be eating. But it's clearly eating. The world can't describe what's happening. |
-| The convenience store | Passthrough window. Three items. 2,000 yen. Almost nothing to buy. | Happy to be shopping | The economy barely functions. The store has three items. One is water (redundant). But it's a STORE. Commerce exists. This is progress. |
+| The convenience store | Passthrough window. Items visible: おにぎり, 水, ノート. 2,000 yen in pocket. Can't buy anything. | Confused? Accepting? | A store exists. Money exists. Items exist. The verb for buying doesn't. Rikizo stands at the window. The shopkeeper says いらっしゃいませ and nothing else. Yamakawa is RIGHT THERE holding an onigiri. There are onigiri IN THE SHOP. How did Yamakawa get his? Nobody asks. |
 | The empty station | Perfect platform, tracks into void, no departures | 「いい駅ですね。」 | The most beautiful and sad location yet. A station built for a train system that doesn't exist, tracks that lead into nothing, a departure board with no information. It's the void made architectural. Rikizo thinks it's nice. |
 | Mom says "come home" | 「家に来てくださいね。」— perfectly normal Mom line | Takes it at face value | Is it normal? Or does Mom know that the world beyond the house is unstable, new, not-quite-real? Her "come home" is warm but insistent. Every day from now on. |
 | The phone message | やまかわ messaged despite the phone having no messaging app yesterday | Doesn't question it | How? The phone had nothing. Now it has a message from someone who found the phone's contact info in a system that didn't exist. The phone is generating features the way the world generates buildings. |
@@ -1001,7 +1011,7 @@ This is a te-form request (来て). It serves as a gentle quest marker — go fi
 - `read_yamakawa_message_day5` — Reading the phone message. +1 curiosity (the phone generated a feature). If also `received_phone_day4`: +1 paranoia (the player might connect: empty phone → spontaneous message).
 - `visited_station_day5` — Reaching the station. +1 curiosity.
 - `examined_tracks_and_board_day5` — Examining both the tracks AND departure board on the same visit. +1 paranoia (noticing the station connects to nothing).
-- `bought_item_day5` — First purchase at コンビニ. Economy tutorial complete.
+- `visited_konbini_day5` — Approaching the コンビニ window. Shopkeeper greets you. You can't buy anything. +1 curiosity (why can't I buy things?).
 - `tried_konbini_door_day5` — Trying to enter the convenience store (can't — 中 doesn't exist). +1 curiosity.
 
 **Relationships:**
@@ -1026,7 +1036,7 @@ This is a te-form request (来て). It serves as a gentle quest marker — go fi
 | Town/neighborhood tilemap | Tilemap | A (Pixel) | **Critical** | First exterior map beyond the yard. Road, コンビニ exterior, 駅 platform, void edges. |
 | Town collision map | Data | A (Pixel) | **Critical** | Player can walk road and station platform but not enter buildings or pass void edge. |
 | コンビニ exterior sprite | Building sprite | A (Pixel) | High | Small convenience store with visible passthrough window. Typical Japanese コンビニ look (green/blue/orange stripes). |
-| コンビニ shop UI | UI element | — | High | Item selection through window. Shows items, prices, player balance. |
+| コンビニ window display | UI element / sprite | — | High | Items visible through window (おにぎり, 水, ノート with price tags). NOT interactive until Day 8 when 買う arrives. Window-shopping only. |
 | 駅 exterior/platform | Tileset | A (Pixel) | High | Small station platform. Tracks going both directions into void. Departure board (empty). Bench. Clean, well-maintained, deserted. |
 | Departure board (empty) | Object sprite | A (Pixel) | Medium | Wall-mounted board with no entries. Pure white/blank display. |
 | やまかわ sprite (with onigiri) | Sprite | A (Pixel) | High | Leaning against wall near コンビニ. Holding onigiri in right hand. Casual, relaxed. This is his Day 5–6 sprite. |
@@ -1236,7 +1246,7 @@ This is the first contact from すずき先生 (Suzuki-sensei), the school Japan
 | Window (house) | **Changed** — mountains visible through it now. 「山がありますね。」 |
 | Tree-san | Daily greeting continues. 「木-さん、今日も山がありますよ。」("Tree-san, there are mountains today too.") — Rikizo reports landscape changes to the tree. The tree's response to geological upheaval is the same as its response to everything: being a tree. |
 | Yamakawa's onigiri | **Day 2 of 2.** Sprite: onigiri. Portrait: onigiri. Tomorrow it's gone. |
-| コンビニ | Same inventory. Same passthrough window. Shopkeeper greeting. |
+| コンビニ | Same window display. Still can't buy anything (買う = Day 8). Shopkeeper still stuck on いらっしゃいませ. |
 | 駅 | Same. Empty. No trains. Tracks into void. But now the tracks lead toward the mountains — the void between the station and the mountain range has contracted. The tracks don't reach the mountains, but they point at them. Progress? Or coincidence? |
 | Mom's cake | **Final day.** Day 4–6 persistence ends. The cake is consumed overnight (offscreen, unnarrated — 食べる doesn't exist until tomorrow). On Day 7, the counter is empty. If asked, Mom: 「ケーキ？...ないですよ。」("Cake? ...There isn't any.") The cake's disappearance mirrors the onigiri's — things cease to exist between days. |
 
