@@ -769,4 +769,282 @@ All resolved:
 
 ---
 
-*Pending approval before writing Day 5.*
+## Day 5 — "Going" (unlocked by N5.5: Going & Places)
+
+### Lesson Kanji & Key Vocab Available
+
+**New kanji (5):** 行、来、店、駅、家
+
+**Cumulative kanji (44):** All N5.1–N5.4 + above.
+
+**New vocab highlights:**
+- Movement verbs: 行く (いく, to go), 来る (くる, to come)
+- Places: 駅 (えき, station), 店 (みせ, shop), 家 (いえ, house/home), コンビニ (convenience store), スーパー (supermarket)
+- Location words: ここ (here), そこ (there), あそこ (over there), どこ (where), うち (home/my place)
+- Transport: バス (bus), タクシー (taxi)
+- Time: 来週 (らいしゅう, next week), 来月 (らいげつ, next month), 来年 (らいねん, next year)
+- Other: また (again/also), だめ (no good/not allowed)
+
+**GRAMMAR REVOLUTION — N5.5 unlocks polite verb conjugation:**
+- `polite_masu` — 行きます, 来ます
+- `polite_mashita` — 行きました, 来ました
+- `polite_negative` — 行きません, 来ません
+- `polite_past_negative` — 行きませんでした
+- `te_form` — 行って, 来て (connector, requests)
+- `polite_negative_te` — 行かないで (negative request)
+- `plain_past` — 行った, 来た
+
+This is the single biggest grammar leap in N5. Characters go from "X is Y" sentences to full action narratives: "I went to the station," "Please come here," "I didn't go." Every conversation transforms.
+
+**New particles:** None new, but existing particles now combine with verbs: 駅に行きます, 店から来ました, etc.
+
+**New this day:** Rikizo can leave the yard. The world expands. First NPC outside the family. First shop. Verbs conjugate. Everything changes.
+
+### Location
+
+**THE WORLD EXPANDS.** Yesterday: house + yard + void wall at the perimeter. Today: the void has receded dramatically. A road extends from the house. Buildings have materialized. There is a neighborhood.
+
+Rikizo steps out of the yard and there is somewhere to go. 行く exists. Places exist. The void hasn't disappeared — it's visible at the edges of the new area, a white border around a small town that's just... appeared. But for the first time, there is a "there" to go to.
+
+**New areas:**
+
+| Area | Description | Accessibility |
+|---|---|---|
+| Road | A path leading from the house to the neighborhood. Simple, short. The first connecting geography. | Walkable |
+| コンビニ | Convenience store. Small building with a **passthrough window** (cannot enter — 中 doesn't exist until Day 9). Rikizo buys through the counter window. | Window only |
+| 駅 | Train station. Visible, reachable, but there are no trains. The platform exists. The tracks exist. Nothing comes. The station is empty and perfect and waiting for a train that cannot arrive because there is nowhere for it to come from. | Explorable exterior |
+| Void edge (new) | The void has retreated to the edge of the new neighborhood. Still visible — white nothing beyond the last building. The world is bigger but finite. | Visible boundary |
+
+**Interior changes (house):**
+- Calendar: 「五月一日」(May 1st). The month has changed — 五月 is now writable.
+- Phone: A message icon appears. One message. From やまかわ. (See Phone section below.)
+
+**What does NOT exist yet:**
+- No roads leading out of town (山, 川, 道 are N5.6)
+- No vehicles on the road (車 is N5.6; バス and タクシー are vocab but there's no road system yet)
+- Cannot enter any building (中/外 = N5.9)
+- No other neighborhoods or distant locations
+
+### NPCs
+
+#### Dad (たろう) — Living room area
+
+Dad has a short scene. He acknowledges Rikizo is going out for the first time.
+
+**Conversation — "Going Out" (4 lines):**
+1. **Dad:** 「りきぞ、どこに行きますか？」 — "Rikizo, where are you going?" *(First use of 行きます in dialogue. Dad conjugates a verb for the first time. The world has grammar now.)*
+2. **Rikizo:** 「外に行きます！」 — "I'm going outside!"
+3. **Dad:** 「店に行きますか？」 — "Going to the shops?"
+4. **Dad:** 「だめですよ、金は...だめです。」 — "Don't [spend on]... the gold is off limits." *(Dad's paranoia about money leaking. He doesn't finish the thought. だめ is now formally available and Dad has been waiting for this word his entire life.)*
+
+**Repeatable line (Day 5+):** 「どこに行きますか？」("Where are you going?") — Dad asks this every day from now on. Every single day. Forever. It's how dads work.
+
+#### Mom (さくら) — Kitchen area
+
+Mom has a brief send-off. She's supportive but doesn't leave the house.
+
+**Conversation (3 lines):**
+1. **Mom:** 「りきぞ、今日はどこに行きますか？」 — "Rikizo, where are you going today?"
+2. **Rikizo:** 「店に行きます！」 — "I'm going to the shops!"
+3. **Mom:** 「家に来てくださいね。」 — "Come home, okay?" *(te-form request. Mom's first conjugated verb is a plea to come back. She doesn't say why. She doesn't seem worried. She just wants him to come home. It's a perfectly normal Mom thing to say. It might also be something else.)*
+
+**Repeatable line (Day 5+):** 「また来てくださいね。」("Come back again, okay?") — Every day.
+
+#### やまかわ — Near the コンビニ
+
+**Yamakawa appears.** He's standing near the convenience store, leaning against the wall. He's holding... something. It looks like food. An onigiri-shaped object is in his hand. But 食べる (to eat) doesn't exist until Day 7. Yamakawa is not eating. He is standing near food. He is holding food. The food is sometimes more, and then less, and nobody comments on this process because the word for it hasn't been invented yet.
+
+**First meeting conversation (6 lines):**
+1. **Yamakawa:** 「お、りきぞ！ここに来ましたか！」 — "Oh, Rikizo! You came here!" *(来ました — first past-tense verb from an NPC. Yamakawa talks like someone who's been here the whole time.)*
+2. **Rikizo:** 「やまかわ！」 — "Yamakawa!"
+3. **Yamakawa:** 「毎日ここに来ます。コンビニはいいですよ。」 — "I come here every day. The convenience store is great." *(He says this as if the convenience store has existed for years. It materialized this morning.)*
+4. **Rikizo:** 「いつからですか？」 — "Since when?"
+5. **Yamakawa:** 「いつから？...いつもですよ。」 — "Since when? ...Always." *(The same word Dad uses about the void. いつも. "Always." Yamakawa has always been here, at a convenience store that appeared today, near a road that didn't exist yesterday. He does not find this question interesting.)*
+6. **Yamakawa:** 「また来てくださいね。」 — "Come again, okay?"
+
+**Repeatable line:** 「りきぞ、また来ましたか！いいですね。」("Rikizo, you came again! Nice.")
+
+**Design note — Yamakawa and the food:** Yamakawa is described in the character roster as "always eating." But 食べる doesn't exist. So what IS he doing? The answer: nothing. He's holding food. The food changes state. Nobody has the word for what's happening. This is the ontological rule at its most absurd — a man cannot eat because eating hasn't been invented. When 食べる arrives on Day 7, Yamakawa's dialogue immediately includes it: 「食べましたか？」("Did you eat?") — as if he's been eating the whole time and is shocked Rikizo is only now asking.
+
+**The いつも echo:** This is a deliberate pattern. Dad says いつも about the void (Day 2). Yamakawa says いつも about his presence at a store that didn't exist yesterday. Every NPC treats the newly-materialized world as if it's always been this way. The word いつも is becoming the game's quiet tell — whenever an NPC uses it, they're papering over something impossible. The player should start flinching at いつも.
+
+### The コンビニ (First Shop)
+
+The convenience store is the first place Rikizo can spend money. It uses a **passthrough window** — Rikizo stands outside, the shopkeeper stands inside, items are exchanged through a counter window. No entering the building (中 doesn't exist until Day 9).
+
+**Shopkeeper:** A generic NPC. Not a named character. Polite, functional.
+
+**Shopkeeper dialogue:**
+> 「いらっしゃいませ！どれですか？」("Welcome! Which one?")
+
+**Available items (Day 5):**
+
+| Item | Price | Effect | Notes |
+|---|---|---|---|
+| 水 (みず) | 百円 | Restores... nothing? It's water. | Player already has water from Day 2. Can buy more. Why? Unclear. |
+| Bandage / ばんそうこう | 二百円 | Inventory item. No use yet. | Game vocab item. Exists for future use. |
+| Notebook / ノート | 三百円 | Inventory item. | Game vocab. Future quest item? |
+
+**Design note:** The shop's inventory is intentionally sparse. There are three items. One is redundant (more water). The other two have no immediate use. The player has 2,000+ yen and almost nothing to buy. The economy exists but barely functions — mirroring the world itself, which exists but barely extends past the neighborhood edge. The shop's inventory will grow as vocabulary grows. By the time 食べる arrives (Day 7), food items appear. By the time clothing vocab arrives, clothes appear. The shop is a living inventory of what the world can express.
+
+**After purchase:**
+> Shopkeeper: 「ありがとうございます！また来てください。」("Thank you! Please come again.")
+
+### The 駅 (Station)
+
+The train station is the most hauntingly beautiful location in the early game. It's a small, clean, well-maintained platform. Tracks stretch in both directions and vanish into the void. There is a departure board with no departures. A bench. A vending machine (non-functional — 買う "to buy" works but the machine has no interface vocab yet). Everything is perfect and empty and waiting.
+
+**Rikizo's reaction:**
+> 「駅です。」("A station.")
+
+**If player examines the tracks:**
+> 「...どこからですか？どこに行きますか？」("...From where? Going where?")
+
+**If player examines the departure board:**
+> 「何もないです。」("Nothing.") *(Same flat tone as the void. The departure board IS the void — white, empty, no information. The station exists but connects to nothing.)*
+
+**If player sits on the bench:**
+> 「いい駅ですね。」("Nice station.") *(Rikizo is content. He's at a train station that goes nowhere. He thinks it's nice.)*
+
+**Design note:** The station will eventually connect to other areas as the world grows. Trains will arrive when there are places for them to come from. For now, it's a beautiful monument to potential — a station without a system, tracks without destinations, a departure board without departures. The player who explores it thoroughly gets +1 curiosity. The player who finds it unsettling gets +1 paranoia (if they examine the tracks and the departure board on the same visit — the game interprets this as "noticing something is wrong").
+
+### The Phone — Yamakawa's Message
+
+When the player checks the phone on Day 5, there's a message. The phone that had nothing — no contacts, no messages, no apps — now has one notification.
+
+**Message from やまかわ:**
+> 「りきぞ！コンビニに来て！」("Rikizo! Come to the convenience store!")
+
+This is a te-form request (来て). It serves as a gentle quest marker — go find Yamakawa. The message was somehow sent despite the phone having no messaging app visible on Day 4. How did Yamakawa message him? The phone didn't have contacts. The phone didn't have a messaging function. And yet: one message. From someone who's "always" been at a store that materialized this morning.
+
+**After reading:** The message stays in the phone's message log. It's the first entry. The phone now has a "Messages" section with one conversation.
+
+**Phone UI update (Day 5):**
+
+| Feature | Status |
+|---|---|
+| Clock | Active (from Day 4) |
+| Wallet | Active (from Day 4) |
+| Messages | **NEW** — one message from やまかわ |
+| Contacts | **NEW** — やまかわ auto-added |
+| Map | Still empty |
+| Apps | Still empty |
+
+### Interactive Objects
+
+**New exterior objects:**
+
+| Object | nameJp | Location | Interaction |
+|---|---|---|---|
+| Road | みち (game vocab — 道 kanji arrives Day 6) | Between house and town | 「ここからあそこまで...」("From here to over there...") Rikizo walks the road. It's short. It connects two places that didn't exist relative to each other yesterday. |
+| コンビニ window | コンビニ | Town | Shop interface. See shop section above. |
+| コンビニ door | ドア | Town | 「...だめです。」("...Can't.") Rikizo can't enter. He doesn't explain why. He just can't. The concept of "going inside" doesn't exist. He stands at the window. |
+| 駅 platform | 駅 | Town edge | 「駅です。」Explorable exterior. See station section. |
+| 駅 tracks | — | 駅 | 「...どこからですか？どこに行きますか？」 |
+| 駅 departure board | — | 駅 | 「何もないです。」 |
+| 駅 bench | — | 駅 | 「いい駅ですね。」 Rikizo can sit. |
+| Void edge (town) | — | Beyond the last buildings | Same as always. Bigger world, same boundary. |
+
+**Updated house objects:**
+
+| Object | Change |
+|---|---|
+| Calendar | 「今日は五月一日です。」(May 1st) |
+| Phone | Message notification. See phone section. |
+| Front door | 「行きましょう！」("Let's go!") — wait, ましょう isn't until N5.8. Corrected: 「外に行きます！」("Going outside!") |
+
+**Persistent objects:**
+
+| Object | Status |
+|---|---|
+| Tree (木-さん) | Daily greeting continues (if befriended). 「木-さん、今日も行きますよ。」("Tree-san, I'm heading out today too.") — First time Rikizo tells the tree he's going somewhere. The tree, naturally, is not going anywhere. |
+| Dad's gold | Same. 「だめ」now formally available as a word. |
+| Mom's cake | Still on the counter. Still Mom's. Days 4–6 persistence. |
+| Fridge | No inside. Continues. |
+
+### Story Beats
+
+| Moment | What Happens | What Rikizo Thinks | What the Player Should Feel |
+|---|---|---|---|
+| Stepping beyond the yard | A road exists. Buildings in the distance. The void has retreated. | 「外に行きます！」(thrilled, no questions) | The world DOUBLED overnight. There's a whole neighborhood. Yesterday it was void. Today there are buildings, a road, a station. How? Nobody asks. |
+| First conjugated verb | Dad says 「どこに行きますか？」 | Responds naturally | The player might not consciously notice, but dialogue just transformed. Characters can DO things now, not just BE things. |
+| Meeting Yamakawa | Best friend is at the コンビニ as if he's always been there | 「やまかわ！」(pure happy) | Yamakawa says いつも. The void word. He's "always" been at a store that appeared today. The player's いつも alarm should be going off. |
+| The food in Yamakawa's hand | He's holding something food-shaped. It changes. Nobody has a word for what's happening. | Doesn't comment | 食べる doesn't exist. Eating doesn't exist. And yet, food is disappearing from Yamakawa's hand. What is this process? The ontological rules say it can't be eating. But it's clearly eating. The world can't describe what's happening. |
+| The convenience store | Passthrough window. Three items. 2,000 yen. Almost nothing to buy. | Happy to be shopping | The economy barely functions. The store has three items. One is water (redundant). But it's a STORE. Commerce exists. This is progress. |
+| The empty station | Perfect platform, tracks into void, no departures | 「いい駅ですね。」 | The most beautiful and sad location yet. A station built for a train system that doesn't exist, tracks that lead into nothing, a departure board with no information. It's the void made architectural. Rikizo thinks it's nice. |
+| Mom says "come home" | 「家に来てくださいね。」— perfectly normal Mom line | Takes it at face value | Is it normal? Or does Mom know that the world beyond the house is unstable, new, not-quite-real? Her "come home" is warm but insistent. Every day from now on. |
+| The phone message | やまかわ messaged despite the phone having no messaging app yesterday | Doesn't question it | How? The phone had nothing. Now it has a message from someone who found the phone's contact info in a system that didn't exist. The phone is generating features the way the world generates buildings. |
+
+**Tone calibration for Day 5:** This is the most exciting day so far — the world opens up and Rikizo has a friend and a shop and a station. But the undertone deepens. いつも appears again (Yamakawa). The station is hauntingly empty. The phone generated a feature spontaneously. Mom's "come home" is warm but carries weight. The comedy (Dad saying だめ about money, Yamakawa not-eating, three items in a store) sits alongside genuine unease (tracks into void, a departure board of nothing, a best friend who's "always" been somewhere impossible). Day 5 is where the game's two tones — comedy and cosmic dread — achieve their first real balance.
+
+### Running Gags Updated
+
+1. **The Toilet Door** — Continues. Dad detects it from the living room even when Rikizo was just outside for the first time. Sixth sense undiminished by distance.
+2. **Dad's Gold** — Continues. だめ is now a real word. Dad has been empowered.
+3. **Tree-san** — Rikizo tells the tree he's going out. The tree does not go out. The tree is stationary. Their relationship is asymmetric in mobility.
+4. **The Fridge** — No inside. Continues.
+5. **Family Possessions** — Cake still on counter. Gold still on shelf. Rikizo still has a tree.
+6. **The Empty Phone** — Less empty now! It has a message! And a contact! Progress. (Still no apps, no map, no signal explanation.)
+7. **いつも** — **New pattern.** The word いつも is becoming the game's lie-word. Every NPC uses it to describe things that can't have "always" been true. Dad: void is いつも. Yamakawa: コンビニ is いつも. The player should start noticing.
+8. **Yamakawa's Not-Eating** — **New gag.** Yamakawa holds food. The food changes state. The verb for this process doesn't exist. Resolves Day 7 when 食べる arrives and Yamakawa immediately acts as if he's been eating the whole time.
+
+### State Tracking (Day 5)
+
+**Flags settable:**
+- `met_yamakawa_day5` — Completing Yamakawa's first conversation. Gates Yamakawa as a recurring NPC + daily relationship tracking.
+- `read_yamakawa_message_day5` — Reading the phone message. +1 curiosity (the phone generated a feature). If also `received_phone_day4`: +1 paranoia (the player might connect: empty phone → spontaneous message).
+- `visited_station_day5` — Reaching the station. +1 curiosity.
+- `examined_tracks_and_board_day5` — Examining both the tracks AND departure board on the same visit. +1 paranoia (noticing the station connects to nothing).
+- `bought_item_day5` — First purchase at コンビニ. Economy tutorial complete.
+- `tried_konbini_door_day5` — Trying to enter the convenience store (can't — 中 doesn't exist). +1 curiosity.
+
+**Relationships:**
+- char_taro: +1 (talk)
+- char_sakura: +1 (talk)
+- char_tree: +1 (daily greeting, if befriended)
+- char_yamakawa: +1 (first meeting counts as daily talk) +1 (event bonus: first meeting)
+
+**Hidden stats:**
+- paranoia: 0–8 cumulative possible (phone message + station tracks + board combo)
+- curiosity: 0–13 cumulative possible (station visit, konbini door, phone message, etc.)
+- dad_annoyance: 0–3 net (cooling continues)
+
+**Conditional content (Day 5):**
+- Tree-san's dialogue varies: if befriended, 「木-さん、今日も行きますよ。」 If not: 「木です。」
+- Mom's "come home" line plays regardless of flags — it's always there. But if `stat:paranoia >= 5`, Rikizo pauses slightly before responding. A tiny beat. The first sign paranoia is affecting him.
+
+### Assets Required
+
+| Asset | Type | Mode | Priority | Notes |
+|---|---|---|---|---|
+| Town/neighborhood tilemap | Tilemap | A (Pixel) | **Critical** | First exterior map beyond the yard. Road, コンビニ exterior, 駅 platform, void edges. |
+| Town collision map | Data | A (Pixel) | **Critical** | Player can walk road and station platform but not enter buildings or pass void edge. |
+| コンビニ exterior sprite | Building sprite | A (Pixel) | High | Small convenience store with visible passthrough window. Typical Japanese コンビニ look (green/blue/orange stripes). |
+| コンビニ shop UI | UI element | — | High | Item selection through window. Shows items, prices, player balance. |
+| 駅 exterior/platform | Tileset | A (Pixel) | High | Small station platform. Tracks going both directions into void. Departure board (empty). Bench. Clean, well-maintained, deserted. |
+| Departure board (empty) | Object sprite | A (Pixel) | Medium | Wall-mounted board with no entries. Pure white/blank display. |
+| やまかわ sprite | Sprite | A (Pixel) | High | Leaning against wall near コンビニ. Holding food-shaped object. Casual, relaxed. |
+| やまかわ conversation portrait | Portrait | B (MP100) | High | Friendly, easy-going. Always slightly amused. At least 2 expressions (default, happy). |
+| Phone message UI | UI element | — | High | Message notification, message list (one entry), conversation view. |
+| Road tileset | Tileset | A (Pixel) | Medium | Simple path connecting house area to town area. |
+
+### Non-Kanji Real-World Vocab Used
+
+| Word | Notes |
+|---|---|
+| コンビニ | In glossary (N5.5). Short for コンビニエンスストア. |
+| スーパー | In glossary (N5.5). Not physically present yet (building exists but is background — no window, no interaction until more items are available). |
+| バス | In glossary (N5.5). Vocab exists but no bus appears (no vehicle system yet). |
+| タクシー | In glossary (N5.5). Same — vocab only, no vehicle. |
+| ノート | Game vocab. Shop item. |
+| ばんそうこう | Game vocab. Shop item. |
+
+### Open Questions for Day 5
+
+1. **Yamakawa's food object:** What is he holding? Visually it should read as "food" without being a specific named item (since most food vocab isn't available yet). An onigiri shape works — おにぎり is universally recognizable to the audience even though the word isn't in-game yet. Or it could be abstract/pixelated — a food-colored blob that the art style lets be ambiguous. Recommendation: onigiri shape. It's funnier if it's obviously food and obviously being consumed and nobody can describe the process.
+
+2. **Station sound design:** Should the station be silent (emphasizing emptiness) or have ambient train-station sounds (PA chime, distant rumble) despite no trains existing? Silent is creepier. Ambient sounds without a source is creepier in a different way — where are the sounds coming from? Recommendation: a single, soft PA chime that plays once when you first arrive. Then silence. The chime implies a system. The silence confirms nothing is using it.
+
+---
+
+*Pending approval before writing Day 6.*
