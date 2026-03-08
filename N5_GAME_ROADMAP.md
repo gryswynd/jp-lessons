@@ -355,7 +355,7 @@ The player discovers:
 | Water bottle sprite | Object/item sprite | A (Pixel) | Needed | First inventory item. Simple bottle. |
 | Calendar UI | UI element | — | Needed | Kitchen wall calendar showing 7 days. Tappable. |
 | Inventory UI | UI element | — | Needed | First time inventory is used. Needs to be designed for Day 2 launch. |
-| Void edge visual | Effect/tile | A (Pixel) | Needed | The white void as seen from the yard — a wall at the perimeter. Different from Day 1's "void through doorway" view — now it's a visible boundary around the yard. |
+| Void edge visual | Effect/tile | A (Pixel) | Needed | Sharp cutoff — earth tiles end abruptly, white void begins. No fade, no fog. Reality has a hard border. |
 
 ### Non-Kanji Real-World Vocab Used
 
@@ -364,13 +364,11 @@ The player discovers:
 | カレンダー | calendar | — | Game vocab | Kitchen wall object |
 | ゲーム | game | v_geemu | Yes (N5.2) | Might reference in dialogue or object |
 
-### Open Questions for Day 2
+### Resolved Questions for Day 2
 
-1. **Void edge visual:** How does the void look from the yard? Day 1 it was "open the door, see white." Now it's a boundary at the yard's edge. Is it a sharp cutoff (ground just... stops, white begins)? A gradual fade? A wall? The visual treatment matters — it should feel like reality has a border, not like there's a fence or fog.
-
-2. **Tree persistence:** Does the tree stay across all future days? It should — it's Rikizo's first friend. Future days could add interactions (leaves change with seasons in N4, etc).
-
-3. **Evening/night:** Day 2 introduces 月 (moon). Should there be a simple day/night toggle? If so, the moon is visible at night from the yard. If not, the moon can be referenced in dialogue without appearing. Time-of-day mechanics aren't formally established until Day 4 (時/分), but 月 being visible at night would be a nice touch.
+1. **Void edge visual:** Sharp cutoff. Ground just stops, white begins. No fade, no fog, no wall — reality has a hard border. The earth tiles end and the void starts.
+2. **Tree persistence:** 木-san stays forever. Rikizo's first friend persists across all future days. Future interactions can be added as the game progresses.
+3. **Evening/night:** No day/night cycle until 朝 (あさ) is introduced. Day 2 is permanently daytime. 月 (moon) exists as vocabulary and kanji knowledge but is not visually represented yet.
 
 ---
 
