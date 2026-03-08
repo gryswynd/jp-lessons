@@ -24,7 +24,9 @@ Rikizo is a high schooler on Golden Week vacation. The world outside his house i
 - **Money = teaching payment, from Day 3.** Dad gives Rikizo money he earned from tutoring (the meta: Rikizo teaches Japanese). Running gag: if the player earns too much, Dad pockets the extra claiming it's "for university." In late N4, if the player has earned absurd amounts, Dad starts appearing with luxury items he claims he "found."
 - **Dad stays home Days 1–3.** He first leaves the house on Day 4 to pick up Rikizo's smartphone.
 - **No combat in N5.** Still under consideration for late N5, but the current plan is combat-free. The threat is atmospheric only.
-- **Save system: TBD.** Need to design a save mechanic (bed save point? auto-save? manual save from menu?).
+- **Save system:** Bed = save point. Game also auto-saves when exiting to the lesson menu via the laptop.
+- **Laptop = "teach a lesson" exit.** Interacting with the パソコン gives the option to teach a lesson, which saves and exits to the main menu / lesson select. This is the core game↔learning bridge. Dad's 「先生をするよ」 dialogue is literally telling the player to go use the laptop.
+- **Progression:** Completing a lesson with a high enough score unlocks the next game day (and other content throughout the app). The game day does not advance from within the game — it advances from lesson completion.
 
 ## Character Roster (N5)
 
@@ -128,8 +130,8 @@ Dad treats the void the way you'd treat a rainy day. Matter-of-fact. Untroubled.
 
 | Object | nameJp | Location | Interaction |
 |---|---|---|---|
-| Bed | ベッド | Bedroom | 「いいベッドです。」("A comfortable bed.") |
-| Laptop | パソコン | Bedroom | 「わたしのパソコンです。」("My laptop.") |
+| Bed | ベッド | Bedroom | **SAVE POINT.** 「いいベッドです。」("A comfortable bed.") Interacting gives the option to save the game. |
+| Laptop | パソコン | Bedroom | **TEACH A LESSON.** 「わたしのパソコンです。」("My laptop.") Interacting gives the option to exit the game and teach a lesson (returns to the app's main menu / lesson select). Auto-saves before exiting. This is the core bridge between the game world and the learning modules — Dad telling Rikizo to "go teach" is literally telling the player to use the laptop. |
 | TV | テレビ | Living room | 「テレビです。」("The TV.") |
 | Kotatsu | こたつ | Living room | 「こたつです。とてもいいです！」("The kotatsu. Very nice!") |
 | Fridge | れいぞうこ | Kitchen | 「お母さんのれいぞうこです。」("Mom's fridge.") |
@@ -149,8 +151,10 @@ The player learns through doing:
 - How to talk to NPCs
 - That the bathroom door mechanic exists (Dad teaches them the hard way)
 - That there is nothing outside
+- That the laptop exits to the lesson menu (the core game loop)
+- That the bed saves the game
 
-The implicit "goal" is: talk to everyone, touch everything, open the front door. That's it. The day ends when the player is ready (or after a time/interaction threshold — TBD).
+The implicit flow: explore the house → open the front door (void) → talk to Dad about it → Dad says go teach → use the laptop → exit to lesson menu → complete N5.2 with a passing score → Day 2 unlocks.
 
 ### Story Beats
 
@@ -160,6 +164,7 @@ The implicit "goal" is: talk to everyone, touch everything, open the front door.
 | Asking Dad about the void | Dad confirms it casually: "Yep, nothing. Go teach." | Accepts it completely | Dad KNOWS there's nothing and doesn't care? This family is living in a house surrounded by nonexistence and treating it as normal? |
 | Toilet door gag | Dad yells about the door from across the house | Closes the door, mildly embarrassed | Comic relief. Dad is funny. Also — how did he know from the living room? |
 | Talking to Mom | Warm, loving, encouraging | Happy to be appreciated | Cozy. Normal. Safe. (This contrast with the void outside is the point.) |
+| Using the laptop | Option to "teach a lesson" — exits to main menu | Rikizo is a teacher, this is his job | The meta-narrative clicks: Dad said "go teach." The laptop lets you teach. Completing lessons changes the game world. The player IS Rikizo's student. |
 | Exploring the house | Every object has a simple です description | Just naming things, being Rikizo | The house is small and complete. The world beyond it does not exist. The player sits with that. |
 
 **Tone calibration for Day 1:** The void is the only "wrong" thing. Everything inside the house is warm, cozy, and comedic. The player's discomfort comes from the gap between how terrifying "there is nothing outside" is versus how utterly unbothered everyone is about it. Day 1 should end with the player thinking: "This is fine. This is... probably fine."
@@ -194,15 +199,16 @@ The implicit "goal" is: talk to everyone, touch everything, open the front door.
 | ドア | door | v_doa | Check | Needed for door interactions and toilet gag |
 | こたつ | kotatsu | v_kotatsu | Check | Culturally important. Needs a lesson assignment — TBD which lesson. |
 
+### Resolved Design Decisions
+
+1. **Save system:** Bed = save point. Laptop auto-saves before exiting to lesson menu.
+2. **Day transition:** Days unlock via lesson completion (passing score required), not from within the game. The laptop is the exit point. No in-game day/night cycle on Day 1.
+3. **Void visual:** Pure nothing. White. No ground, no sky, no texture, no particles, no sound. Empty.
+4. **Rikizo spelling:** りきぞ is canonical. Updated in day.json.
+
 ### Open Questions for Day 1
 
-1. **Save system:** Needs design. Options: bed = save point (thematic), auto-save on day transition, manual save from pause menu. This affects the bed interaction — if the bed is a save point, interacting with it gets gameplay significance.
-
-2. **こたつ lesson assignment:** こたつ needs a formal glossary entry with a lesson_ids. It's used from Day 1 but which lesson should formally introduce it? N5.1 makes sense since it's a household item present from the start. Your call.
-
-3. **Day transition:** How does Day 1 end? Does Rikizo go to bed and wake up in Day 2? Or is there a "lesson complete → day unlocked" flow that's separate from in-game time? This is a UX/architecture question that affects all days.
-
-4. **Void visual design:** The void should feel *empty*, not *threatening*. White, not dark. No particles, no shimmer, no sound. Just... nothing. Is this right for Day 1, or do you want even the void to have some subtle quality (like depth, or a barely perceptible gradient)?
+1. **こたつ lesson assignment:** こたつ needs a formal glossary entry with a lesson_ids. N5.1 is already vocab-heavy (40+ entries). Options: (a) add it to N5.1 anyway since it's present from Day 1, (b) assign it to a later lesson like N5.7 (Size & Food — domestic items feel at home there) and treat it as a visible-but-not-formally-introduced background object until then, or (c) add it to a new "game vocab" category that exists outside the lesson progression. Your call.
 
 ---
 
