@@ -1180,21 +1180,32 @@ If the player approaches Dad's car, Dad materializes nearby (if not already ther
 1. **Mom:** 「今日は山が見えますね。」 — Wait, 見える isn't available (potential form, N4.3). Revised: 「今日は山がありますね。」 — "There are mountains today." *(ある is available. Mom says mountains ARE there today. Not "appeared" — ARE there. Present tense. Factual. As if observing the weather. "There are mountains today." Like there might not be tomorrow? Or like she didn't notice them before? Both interpretations are unsettling.)*
 2. **Mom:** 「きれいですね。家に来てくださいね。」 — "Pretty, aren't they. Come home, okay?" *(Same closing line. Every day. Come home.)*
 
-#### やまかわ — Near the コンビニ
+#### やまかわ — At the River
 
-**Still holding the onigiri.** Same onigiri. Same hand. Same position. Sprite: onigiri. Portrait: onigiri. Day 2 of the Eternal Onigiri.
+**Yamakawa has migrated.** He's not at the コンビニ today. He's at the river bank, sitting on a rock, looking at the water. Still holding the onigiri. Same onigiri. Same hand. Day 2 of the Eternal Onigiri.
 
-**Conversation (4 lines):**
-1. **Yamakawa:** 「りきぞ！また来ましたか！」 — "Rikizo! You came again!"
-2. **Yamakawa:** 「今日は山がありますね。いいですね。」 — "Mountains today, huh. Nice." *(Same phrasing as Mom. Mountains ARE there today. Nice. Yamakawa says "nice" to everything. Mountains? Nice. The void? Probably also nice.)*
-3. **Rikizo:** 「大きいですね！」 — "They're big!"
-4. **Yamakawa:** 「川もありますよ。いい川です。」 — "There's a river too. Nice river." *(He is holding an onigiri he cannot eat and is enthusiastic about a river that appeared overnight. Yamakawa's default state is pleasant acceptance of everything.)*
+If the player visits the コンビニ first:
+> The usual spot is empty. Yamakawa isn't leaning against the wall. His absence is noticeable — he was there every time you visited. The shopkeeper still says いらっしゃいませ to the void.
 
-**If player specifically asks about mountains (new interaction option):**
-> 「山はいつもありましたか？」 — "Have the mountains always been there?"
-> Yamakawa: 「山？...いつもですよ。」 — "Mountains? ...Always."
+**Discovery:** When Rikizo arrives at the river bank, Yamakawa is already there. Of course he is. He found the river before Rikizo did. He found the コンビニ before Rikizo did. Yamakawa is always one step ahead in discovering the world's new additions, as if he gets a preview.
 
-いつも again. The mountains that appeared overnight have "always" been there. Yamakawa's memory has already rewritten. For him, there was never a time without mountains.
+**Conversation (6 lines):**
+1. **Yamakawa:** 「お、りきぞ！ここに来ましたか！」 — "Oh, Rikizo! You came here!" *(Same energy as Day 5. Yamakawa greets you at every new location as if he's been waiting.)*
+2. **Rikizo:** 「やまかわ！川ですね！」 — "Yamakawa! A river!"
+3. **Yamakawa:** 「いい川ですよ。毎日ここに来ます。」 — "Good river. I come here every day." *(Every day. The river appeared this morning. Yamakawa comes here every day. His timeline is already overwritten.)*
+4. **Rikizo:** 「水がきれいですね。」 — "The water is pretty."
+5. **Yamakawa:** 「山から来ますよ、この水は。」 — "This water comes from the mountains." *(Yamakawa gestures vaguely upstream. The mountains that materialized overnight are, in Yamakawa's understanding, the ancient source of the river that also materialized overnight. He has a complete geographical model of a landscape that is hours old.)*
+6. **Yamakawa:** 「いいところですね。」 — "Nice place, huh." *(He looks back at the water. He's content. Onigiri in hand. River in front. Mountains on the horizon. Everything is nice. Everything has always been here.)*
+
+**If player asks about the mountains:**
+> Yamakawa: 「山？...いつもありましたよ。」 — "Mountains? ...They were always there."
+
+いつも again. The rewrite is instant. The mountains have always been there. The river has always been there. Yamakawa has always come here every day.
+
+**If player asks about the onigiri (no interaction — 食べる doesn't exist):**
+> The onigiri is visible. Rikizo looks at it. There is no dialogue option about food. You cannot ask about something when the verbs that describe its purpose don't exist. The onigiri is an object. It is in Yamakawa's hand. That is the complete description.
+
+**Design note — Yamakawa at the river:** This is the first time an NPC has moved to a new location between days. Until now, NPCs were fixed: Dad in the living room, Mom in the kitchen, Yamakawa at the コンビニ. Yamakawa's migration to the river signals that NPCs can exist in the wider world, not just at their "assigned" spot. It also makes the river feel alive — it's not just scenery, it's a place where people go. When the player finds Yamakawa already sitting there, looking at the water, it creates the impression that this world has activity even when Rikizo isn't watching. Yamakawa didn't teleport — he walked here. (When? How? He was at the コンビニ yesterday. The river didn't exist yesterday. Don't think about it.)
 
 ### The Phone — Email
 
@@ -1245,8 +1256,8 @@ This is the first contact from すずき先生 (Suzuki-sensei), the school Japan
 |---|---|
 | Window (house) | **Changed** — mountains visible through it now. 「山がありますね。」 |
 | Tree-san | Daily greeting continues. 「木-さん、今日も山がありますよ。」("Tree-san, there are mountains today too.") — Rikizo reports landscape changes to the tree. The tree's response to geological upheaval is the same as its response to everything: being a tree. |
-| Yamakawa's onigiri | **Day 2 of 2.** Sprite: onigiri. Portrait: onigiri. Tomorrow it's gone. |
-| コンビニ | Same window display. Still can't buy anything (買う = Day 8). Shopkeeper still stuck on いらっしゃいませ. |
+| Yamakawa | **Moved to the river.** Not at the コンビニ. Sprite: still holding onigiri (Day 2 of 2). Tomorrow the onigiri is gone. First NPC location change in the game. |
+| コンビニ | Same window display. Still can't buy anything (買う = Day 8). Shopkeeper says いらっしゃいませ to nobody — Yamakawa isn't there. |
 | 駅 | Same. Empty. No trains. Tracks into void. But now the tracks lead toward the mountains — the void between the station and the mountain range has contracted. The tracks don't reach the mountains, but they point at them. Progress? Or coincidence? |
 | Mom's cake | **Final day.** Day 4–6 persistence ends. The cake is consumed overnight (offscreen, unnarrated — 食べる doesn't exist until tomorrow). On Day 7, the counter is empty. If asked, Mom: 「ケーキ？...ないですよ。」("Cake? ...There isn't any.") The cake's disappearance mirrors the onigiri's — things cease to exist between days. |
 
@@ -1259,7 +1270,9 @@ This is the first contact from すずき先生 (Suzuki-sensei), the school Japan
 | First car passes | A car drives through town, silhouettes inside, heading from void to void | 「車です。」 | Where are they going? Where did they come from? WHO is in there? Rikizo doesn't ask. |
 | Dad's car | A car is parked at the house. It wasn't there yesterday. | 「たろうの車です。」 | Dad has a car now. He guards it like a dragon guards gold. Actually, he guards it MORE than the gold. The gold he just says だめ about. The car he teleports to defend. |
 | Touch Dad's car | Player approaches the car. Dad materializes instantly. 「だめ！わたしの車です。」 | Surprised, then amused | The toilet door gag, outdoors, escalated. Dad's sixth sense now covers two objects. The car reaction is FASTER than the toilet reaction. Dad has a hierarchy of territorial instincts and the car is at the top. |
+| Yamakawa at the river | He's not at the コンビニ. He's at the river, sitting on a rock, already there. | 「やまかわ！川ですね！」 | First NPC location change. Yamakawa migrated. He's always one step ahead in discovering the world. He says he comes here "every day." It's been one morning. |
 | The river | Clear water, flowing from mountains toward the void | 「きれいですね。」 | Beautiful. The water flows into nothing. The river doesn't end — it just goes past where you can see. |
+| "This water comes from the mountains" | Yamakawa explains geography that is hours old with the confidence of a geologist | 「山から来ますよ、この水は。」 | He has a complete geographical model of terrain that appeared this morning. He knows where the river comes from. He has always known. |
 | River into void | Following the river downstream — it flows past the world's edge into whiteness | Stops walking. Doesn't comment. | The most visually striking void moment yet. Water flowing into nothing. A natural feature that treats the void as if it's just more landscape. |
 | Mom says mountains "are" today | 「今日は山がありますね。」 | Nods | "There are mountains today." TODAY. The phrasing implies they might not have been there yesterday. Or it's just a comment. The ambiguity is the horror. |
 | Suzuki's email | Something starts next week. It has no name. | Rikizo reads it and doesn't question what "from next week" refers to | A teacher at a school that doesn't exist sends an email about an event that can't be named. The student reads it and nods. |
