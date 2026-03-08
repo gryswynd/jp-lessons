@@ -23,6 +23,7 @@ Rikizo is a high schooler on Golden Week vacation. The world outside his house i
 - **Inventory from Day 2.** First collectible item is a bottle of water (水).
 - **Money = teaching payment, from Day 3.** Dad gives Rikizo money he earned from tutoring (the meta: Rikizo teaches Japanese). Running gag: if the player earns too much, Dad pockets the extra claiming it's "for university." In late N4, if the player has earned absurd amounts, Dad starts appearing with luxury items he claims he "found."
 - **Dad stays home Days 1–3.** He first leaves the house on Day 4 to pick up Rikizo's smartphone.
+- **Game vocab:** Items that exist in the game world but aren't tied to a specific lesson live in a separate "game vocab" category (stored in `shared/helper-vocab.json` or a new `shared/game-vocab.json`). These words are tappable in-game and show glossary popups, but they don't appear in lesson vocabLists or practice queues. Examples: こたつ, れいぞうこ, ドア — household objects present from Day 1 that aren't formally taught in any lesson.
 - **No combat in N5.** Still under consideration for late N5, but the current plan is combat-free. The threat is atmospheric only.
 - **Save system:** Bed = save point. Game also auto-saves when exiting to the lesson menu via the laptop.
 - **Laptop = "teach a lesson" exit.** Interacting with the パソコン gives the option to teach a lesson, which saves and exits to the main menu / lesson select. This is the core game↔learning bridge. Dad's 「先生をするよ」 dialogue is literally telling the player to go use the laptop.
@@ -196,8 +197,8 @@ The implicit flow: explore the house → open the front door (void) → talk to 
 | パソコン | computer | v_pasokon | Yes (N5.1) | |
 | テレビ | TV | v_terebi | Yes (N5.1) | |
 | トイレ | toilet | v_toire | Yes (N5.1) | |
-| ドア | door | v_doa | Check | Needed for door interactions and toilet gag |
-| こたつ | kotatsu | v_kotatsu | Check | Culturally important. Needs a lesson assignment — TBD which lesson. |
+| ドア | door | v_doa | Game vocab | Door interactions and toilet gag |
+| こたつ | kotatsu | v_kotatsu | Game vocab | Household item, present from Day 1 |
 
 ### Resolved Design Decisions
 
@@ -208,7 +209,7 @@ The implicit flow: explore the house → open the front door (void) → talk to 
 
 ### Open Questions for Day 1
 
-1. **こたつ lesson assignment:** こたつ needs a formal glossary entry with a lesson_ids. N5.1 is already vocab-heavy (40+ entries). Options: (a) add it to N5.1 anyway since it's present from Day 1, (b) assign it to a later lesson like N5.7 (Size & Food — domestic items feel at home there) and treat it as a visible-but-not-formally-introduced background object until then, or (c) add it to a new "game vocab" category that exists outside the lesson progression. Your call.
+None — all resolved.
 
 ---
 
