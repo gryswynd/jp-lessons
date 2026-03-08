@@ -537,4 +537,175 @@ None new beyond existing game vocab (カレンダー, etc).
 
 ---
 
-*Pending approval before writing Day 4.*
+## Day 4 — "Time" (unlocked by N5.4: Time & Duration)
+
+### Lesson Kanji & Key Vocab Available
+
+**New kanji (5):** 時、分、年、週、半
+
+**Cumulative kanji (39):** All N5.1–N5.3 + above.
+
+**New vocab highlights:**
+- Time: 何時 (なんじ, what time), 時 (とき, time/when), 時々 (ときどき, sometimes)
+- Duration: 今週 (こんしゅう, this week), 先週 (せんしゅう, last week), 毎週 (まいしゅう, every week), 今年 (ことし, this year), 毎年 (まいねん, every year), 先月 (せんげつ, last month), 半分 (はんぶん, half)
+- Demonstrative adjectives: この (this+noun), その (that+noun), どの (which+noun)
+- Time words: きのう (yesterday), すぐ (soon/right away), ちょっと (a little/moment), つぎ (next)
+- Key new: 分かる (わかる, to understand), スマホ (smartphone), ケーキ (cake)
+
+**New particles:** None new in N5.4.
+
+**Grammar available:** Still dictionary forms + polite_adj only. No verb conjugation yet (that's N5.5).
+
+**New this day:** Time exists (clocks work). Phone returned. Automatic lesson payments. First food item (cake). Yesterday becomes referenceable.
+
+### Location
+
+**Same as Day 2–3 — house + yard.** No new areas. April 30th on the calendar.
+
+**Interior changes:**
+- A clock appears on the wall (or becomes readable). It now displays a time. Previously it was just a decoration — now it's functional because 時 and 分 exist.
+- The phone (スマホ) appears in Rikizo's inventory after Dad's conversation.
+
+**Exterior:** No changes.
+
+### NPCs
+
+#### Dad (たろう) — Living room area
+
+Dad is the star again. He returns Rikizo's phone and explains the new automatic payment system. This is the biggest mechanical moment since currency was introduced — the phone becomes Rikizo's primary tool.
+
+**Conversation — "The Phone" (6 lines):**
+1. **Dad:** 「りきぞ、ちょっと。」 — "Rikizo, a moment." *(First use of ちょっと as a conversational softener/attention-getter.)*
+2. **Dad:** 「これはりきぞのスマホですよ。」 — "This is Rikizo's smartphone." *(Hands it over. Uses これ + の possession.)*
+3. **Rikizo:** 「スマホ！？」 — "A smartphone!?"
+4. **Dad:** 「日本語のお金はすぐスマホです。分かりますか？」 — "The Japanese [lesson] money goes straight to the phone. Understand?" *(Automatic deposits. Payment shows up on the phone now.)*
+5. **Rikizo:** 「分かります！」 — "I understand!"
+6. **Dad:** 「今週は大切ですよ。」 — "This week is important." *(Vague. Doesn't explain why. Golden Week? Something else? Dad doesn't elaborate.)*
+
+**Mechanical result:** Player receives スマホ. The phone becomes the primary UI hub:
+- **Clock** — displays current time (何時何分)
+- **Wallet** — shows 円 balance (replaces the coin purse as currency UI)
+- **Everything else** — empty. No contacts, no apps, no messages. The phone is a clock and a wallet in a world with no internet, no cell towers, and no one to call. It is the most sophisticated object in a universe where the fridge doesn't have an inside.
+
+**Automatic payment confirmation:** From this point forward, lesson completion deposits 二千円 directly. No NPC interaction required. The phone buzzes (or shows a notification) when payment arrives. Dad's earlier manual payment (Day 3) was a one-time ceremony.
+
+#### Mom (さくら) — Kitchen area
+
+Mom has cake. This is the first food item in the game. ケーキ is a celebration — whether for the phone, for Golden Week, or just because Mom made cake.
+
+**Conversation — "Cake" (4 lines):**
+1. **Mom:** 「りきぞ、このケーキはお母さんのですよ。」 — "Rikizo, this cake is Mom's." *(Uses この — attributive demonstrative. Immediately claims ownership.)*
+2. **Rikizo:** 「...半分は？」 — "...Half?"
+3. **Mom:** 「半分もお母さんのです。」 — "The half is also Mom's." *(も — "also." The half is also hers. All of it is hers. Every fraction of it is hers.)*
+4. **Rikizo:** 「...」
+
+**Design note:** The cake exists but Rikizo cannot eat it. Mom's cake follows the same possessive energy as Dad's gold coin. The family owns things. Rikizo does not get those things. He has a smartphone with no apps and 二千円 with nowhere to spend it. The cake is visible, described, and unavailable.
+
+**Optional follow-up (if player interacts with the cake again):**
+> 「お母さんのケーキです。」("Mom's cake.") — Same energy as 「お父さんの金です。」 The family pattern is clear: everyone has a prized possession. Dad has gold. Mom has cake. Rikizo has a tree.
+
+### Interactive Objects
+
+**Interior (updated):**
+
+| Object | nameJp | Location | Interaction |
+|---|---|---|---|
+| Clock | 時 | Living room wall | Now functional: 「今、[X]時[Y]分です。」Displays a time. Player can check anytime. Previously decorative — 時 and 分 didn't exist. |
+| Calendar | カレンダー | Kitchen wall | Updated: 「今日は四月三十日です。」Day 29 now also crossed out. One more day into Golden Week. |
+| Cake | ケーキ | Kitchen counter | 「お母さんのケーキです。」Cannot eat. Cannot take. Cannot have half. Exists only to be observed. |
+| Gold coin | 金 | Living room shelf | Same as before. 「お父さんの金です。」 |
+| Fridge | れいぞうこ | Kitchen | Same as Day 3. No inside. |
+| Phone | スマホ | Inventory | 「りきぞのスマホです。」Shows time + money. Nothing else. First personal possession that isn't a water bottle. |
+
+**Exterior:**
+
+| Object | nameJp | Location | Interaction |
+|---|---|---|---|
+| Tree | 木 | Yard center | 「木-さん、今日もいい日ですね。」 Daily greeting continues. |
+| Earth/ground | 土 | Yard | Same. |
+| Void edge | — | Yard perimeter | Same. |
+
+### The Phone as UI Hub
+
+The phone is both a narrative object and the player's primary interface from Day 4 onward.
+
+| Phone feature | Available Day 4 | Future expansion |
+|---|---|---|
+| Clock | Yes — 何時何分 display | Alarm, schedule (when time-related verbs exist) |
+| Wallet | Yes — 円 balance | Transaction history, shop integration (Day 5+) |
+| Contacts | Empty | Populated as Rikizo meets people outside the house |
+| Messages | None | Unlocks when communication vocab arrives |
+| Map | None | Unlocks when location/direction vocab arrives |
+| Apps | None | ??? |
+
+The phone's emptiness is intentional and funny. It's a smartphone with nothing smart about it. No signal, no data, no contacts. It tells the time and holds money. In a world bounded by void, what would you even connect to?
+
+### "Yesterday" Awareness
+
+きのう (yesterday) means Rikizo can now reference the past. This is small but significant — before Day 4, every day was only the present. Now there's a "before."
+
+**Ambient dialogue change:** When Rikizo interacts with the coin purse location (bedroom desk, now empty since the wallet moved to the phone):
+
+> 「きのうのお金...スマホです。」("Yesterday's money... [is on the] phone now.")
+
+When interacting with Dad after the phone scene:
+
+> Dad: 「きのうの二千円、分かりますか？スマホですよ。」 ("Yesterday's 2,000 yen — you know? It's on the phone.")
+
+This reinforces きのう, 分かる, and the payment migration in one beat.
+
+### Time-of-Day Awareness
+
+With 時 and 分, the game can now acknowledge what time it is. This doesn't create a full day/night cycle (朝/昼/夜 come later), but the clock exists and characters can reference it.
+
+**Dad's ambient time line (repeatable):**
+> 「今、何時ですか？」 *(looks at clock)* 「...時々、時は大切です。」("What time is it now? ...Sometimes, time is important.")
+
+Dad dispenses vague temporal wisdom. He does not answer his own question.
+
+### Story Beats
+
+| Moment | What Happens | What Rikizo Thinks | What the Player Should Feel |
+|---|---|---|---|
+| Getting the phone | Dad returns スマホ, explains auto-payment | 「スマホ！？」(pure joy) | The phone feels like a major unlock — until the player opens it and finds: clock, wallet, void. A smartphone with nothing to connect to. |
+| The empty phone | Clock + wallet. No contacts, no apps, no signal. | Doesn't notice what's missing | The player notices. This is the most powerful device in a world that can't support it. |
+| Mom's cake | ケーキ exists. All of it is Mom's. Including the half. | 「...半分は？」(hopeful) → 「...」(defeated) | Same pattern as Dad's gold. The family collects prized possessions. Rikizo collects disappointment. His only possessions: a phone (empty), money (unspendable), water (useless), and a tree (friend). |
+| Time becomes real | Clock works. きのう exists. | Can reference Day 3 for the first time | The world gains a past. "Yesterday" means the previous day actually happened and is remembered. Time isn't just a number — it's memory. |
+| Dad's vague warning | 「今週は大切ですよ。」 | Doesn't ask why | What's important about this week? It's Golden Week. Is something happening? Dad doesn't say. Another small mystery. |
+
+**Tone calibration for Day 4:** The phone is the comic centrepiece. It's a smartphone in a pre-smartphone world — a tool designed for connectivity in a universe where there's nothing to connect to. The cake scene mirrors the gold coin scene beat-for-beat (family member claims object, Rikizo tries to negotiate, gets shut down), establishing that everyone in this house has something precious except Rikizo. His precious thing is 木-さん, who is free, abundant, and not a person.
+
+### Running Gags Updated
+
+1. **The Toilet Door** — Continues.
+2. **Dad's Gold** — Persists (no new development).
+3. **Tree-san** — Daily greeting continues.
+4. **The Fridge** — No inside. Continues.
+5. **Family Possessions** — New pattern crystallizes. Dad has 金. Mom has ケーキ. Rikizo has... 木-さん. (木-さん is free. 木-さん doesn't cost anything. 木-さん is always available. Maybe that's the point.)
+6. **The Empty Phone** — New gag. A smartphone with: clock, wallet, nothing else. Rikizo never comments on its emptiness. The phone is full to him. He has a clock! He has money on it! What more could you want?
+
+### Assets Required
+
+| Asset | Type | Mode | Priority | Notes |
+|---|---|---|---|---|
+| スマホ sprite | Inventory item / UI icon | A (Pixel) | High | Phone in Rikizo's hand or inventory. Also serves as the UI hub icon. |
+| Phone UI screen | UI element | — | High | Simple interface showing clock (時:分) and wallet (円 balance). Mostly empty space where future features will go. The emptiness should be visible — blank slots or grayed-out icons for contacts/messages/map. |
+| Clock sprite | Object sprite | A (Pixel) | Medium | Wall clock in living room. Now shows a readable time. |
+| Cake sprite | Object sprite | A (Pixel) | Medium | ケーキ on kitchen counter. Looks delicious. Untouchable. |
+
+### Non-Kanji Real-World Vocab Used
+
+| Word | Notes |
+|---|---|
+| スマホ | In glossary (N5.4). Short for スマートフォン. |
+| ケーキ | In glossary (N5.4). Loanword. |
+
+### Open Questions for Day 4
+
+1. **Phone acquisition context:** Dad gives back the phone — implying Rikizo had it before and it was taken away. Why was it confiscated? Was it a punishment? A study incentive? ("Study Japanese, get your phone back"?) The backstory could be left vague or hinted at. Recommendation: leave it vague. Dad just hands it over. The "back" is implied by his tone but never stated. Maybe Rikizo always had a phone. Maybe he didn't. The game doesn't clarify.
+
+2. **Cake permanence:** Does Mom's cake persist across days (she guards it indefinitely) or does it disappear after Day 4 (she ate it)? If it persists, it becomes another long-running visual gag like Dad's gold. If it disappears, that's also funny — she said it was hers, and she meant it. Recommendation: it disappears by Day 5. She ate it. She told you it was hers.
+
+---
+
+*Pending approval before writing Day 5.*
