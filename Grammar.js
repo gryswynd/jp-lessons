@@ -713,7 +713,7 @@ window.GrammarModule = {
       return div;
     }
 
-    function renderSentenceTransform(sec) {
+    function renderSentenceTransform(sec, onComplete) {
       const div = el('div', '');
       const items = sec.items || [];
       let idx = 0, correct = 0, answered = 0;
@@ -735,6 +735,7 @@ window.GrammarModule = {
         if (idx >= items.length) {
           const pct = items.length > 0 ? Math.round(correct / items.length * 100) : 100;
           itemDiv.innerHTML = '<div style="text-align:center;padding:16px;"><div style="font-size:1.4rem;font-weight:900;color:#16A34A;">' + pct + '%</div><div style="color:#888;margin-top:8px;">Transform practice complete!</div></div>';
+          if (onComplete) onComplete();
           return;
         }
         const item = items[idx];
@@ -774,6 +775,7 @@ window.GrammarModule = {
               choices.querySelectorAll('.gr-choice-chip').forEach(b => {
                 if (b.textContent === item.answer) b.classList.add('correct');
               });
+              setTimeout(() => { idx++; renderItem(); }, 1500);
             }
           };
           choices.appendChild(btn);
@@ -784,7 +786,7 @@ window.GrammarModule = {
       return div;
     }
 
-    function renderFillSlot(sec) {
+    function renderFillSlot(sec, onComplete) {
       const div = el('div', '');
       const items = sec.items || [];
       let idx = 0, correct = 0, answered = 0;
@@ -806,6 +808,7 @@ window.GrammarModule = {
         if (idx >= items.length) {
           const pct = items.length > 0 ? Math.round(correct / items.length * 100) : 100;
           itemDiv.innerHTML = '<div style="text-align:center;padding:16px;"><div style="font-size:1.4rem;font-weight:900;color:#16A34A;">' + pct + '%</div><div style="color:#888;margin-top:8px;">Fill-slot practice complete!</div></div>';
+          if (onComplete) onComplete();
           return;
         }
         const item = items[idx];
@@ -980,6 +983,10 @@ window.GrammarModule = {
       const wrap = el('div', '');
       let content = null;
 
+      const isInteractive = sec.type === 'fillSlot' || sec.type === 'sentenceTransform';
+      if (isInteractive) nextBtn.disabled = true;
+      const enableNext = isInteractive ? () => { nextBtn.disabled = false; } : null;
+
       if      (sec.type === 'grammarIntro')      content = renderGrammarIntro(sec);
       else if (sec.type === 'grammarRule')        content = renderGrammarRule(sec);
       else if (sec.type === 'grammarTable')       content = renderGrammarTable(sec);
@@ -987,8 +994,8 @@ window.GrammarModule = {
       else if (sec.type === 'annotatedExample')   content = renderAnnotatedExample(sec);
       else if (sec.type === 'conjugationDrill')   content = renderConjugationDrill(sec);
       else if (sec.type === 'patternMatch')        content = renderPatternMatch(sec);
-      else if (sec.type === 'sentenceTransform')  content = renderSentenceTransform(sec);
-      else if (sec.type === 'fillSlot')           content = renderFillSlot(sec);
+      else if (sec.type === 'sentenceTransform')  content = renderSentenceTransform(sec, enableNext);
+      else if (sec.type === 'fillSlot')           content = renderFillSlot(sec, enableNext);
       else if (sec.type === 'conversation')       content = renderConversation(sec);
       else if (sec.type === 'drills')             content = renderDrills(sec);
       else content = el('div', 'gr-card', '<em>Unknown section type: ' + esc(sec.type) + '</em>');
