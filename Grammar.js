@@ -263,6 +263,18 @@ window.GrammarModule = {
         .gr-term { color: #16A34A; font-weight: 700; cursor: pointer; margin-right: 1px; border-bottom: 2px solid rgba(22,163,74,0.2); transition: 0.2s; }
         .gr-term:hover { background: rgba(22,163,74,0.06); border-bottom-color: #16A34A; }
 
+        /* Markdown rendered in explanation fields */
+        .gr-rule-explanation p { margin: 0 0 8px; }
+        .gr-rule-explanation p:last-child { margin-bottom: 0; }
+        .gr-rule-explanation ul, .gr-rule-explanation ol { margin: 4px 0 8px 18px; padding: 0; }
+        .gr-rule-explanation li { margin-bottom: 3px; }
+        .gr-rule-explanation strong { color: #16A34A; }
+        .gr-rule-explanation del { color: #D63031; text-decoration: line-through; opacity: 0.8; }
+        .gr-md-table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 0.82rem; }
+        .gr-md-table th { background: #DCFCE7; color: #15803D; font-weight: 700; padding: 6px 10px; border: 1px solid #BBF7D0; text-align: left; }
+        .gr-md-table td { padding: 6px 10px; border: 1px solid #e2e8f0; }
+        .gr-md-table tr:nth-child(even) td { background: #F0FDF4; }
+
         /* Summary / celebration */
         .jp-hanabi-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 100; overflow: hidden; }
         .jp-hanabi-particle { position: absolute; border-radius: 50%; }
@@ -291,6 +303,64 @@ window.GrammarModule = {
       return e;
     }
     function esc(s) { return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+    function mdToHtml(text) {
+      if (!text) return '';
+      function safeEsc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+      function inline(s) {
+        return s
+          .replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>')
+          .replace(/~~([^~\n]+)~~/g, '<del>$1</del>');
+      }
+      const lines = text.split('\n');
+      const html = [];
+      let i = 0;
+      while (i < lines.length) {
+        const line = lines[i];
+        if (!line.trim()) { i++; continue; }
+        // Markdown table
+        if (line.trim().startsWith('|')) {
+          const tlines = [];
+          while (i < lines.length && lines[i].trim().startsWith('|')) { tlines.push(lines[i]); i++; }
+          html.push('<table class="gr-md-table">');
+          let isHeader = true;
+          tlines.forEach(tl => {
+            if (/^\s*\|[\s\-|:]+\|\s*$/.test(tl)) { isHeader = false; return; }
+            const cells = tl.split('|').slice(1, -1);
+            const tag = isHeader ? 'th' : 'td';
+            if (isHeader) isHeader = false;
+            html.push('<tr>' + cells.map(c => '<' + tag + '>' + inline(safeEsc(c.trim())) + '</' + tag + '>').join('') + '</tr>');
+          });
+          html.push('</table>');
+          continue;
+        }
+        // Unordered list
+        if (/^[-*] /.test(line)) {
+          html.push('<ul>');
+          while (i < lines.length && /^[-*] /.test(lines[i])) {
+            html.push('<li>' + inline(safeEsc(lines[i].replace(/^[-*] /, ''))) + '</li>'); i++;
+          }
+          html.push('</ul>');
+          continue;
+        }
+        // Ordered list
+        if (/^\d+\. /.test(line)) {
+          html.push('<ol>');
+          while (i < lines.length && /^\d+\. /.test(lines[i])) {
+            html.push('<li>' + inline(safeEsc(lines[i].replace(/^\d+\. /, ''))) + '</li>'); i++;
+          }
+          html.push('</ol>');
+          continue;
+        }
+        // Paragraph
+        const para = [];
+        while (i < lines.length && lines[i].trim() && !lines[i].trim().startsWith('|') && !/^[-*] /.test(lines[i]) && !/^\d+\. /.test(lines[i])) {
+          para.push(lines[i]); i++;
+        }
+        if (para.length) html.push('<p>' + inline(safeEsc(para.join(' '))) + '</p>');
+      }
+      return html.join('');
+    }
     function getCdnUrl(fp) { return window.getAssetUrl(REPO_CONFIG, fp); }
 
     // --- TTS ---
@@ -450,7 +520,7 @@ window.GrammarModule = {
       const div = el('div', 'gr-card');
       div.appendChild(buildFormula(sec.pattern));
       div.appendChild(el('div', 'gr-rule-meaning', esc(sec.meaning)));
-      div.appendChild(el('div', 'gr-rule-explanation', esc(sec.explanation)));
+      div.appendChild(el('div', 'gr-rule-explanation', mdToHtml(sec.explanation)));
 
       if (sec.notes && sec.notes.length) {
         const toggle = el('button', 'gr-notes-toggle', '📝 Notes (' + sec.notes.length + ')');
@@ -577,7 +647,7 @@ window.GrammarModule = {
       return div;
     }
 
-    function renderConjugationDrill(sec) {
+    function renderConjugationDrill(sec, onComplete) {
       const div = el('div', '');
       const items = sec.items || [];
       let idx = 0, correct = 0, answered = 0;
@@ -600,6 +670,7 @@ window.GrammarModule = {
           const pct = items.length > 0 ? Math.round(correct / items.length * 100) : 100;
           progressSet('grammar_' + grammarId + '_conj_score', pct);
           itemDiv.innerHTML = '<div style="text-align:center;padding:20px;"><div style="font-size:1.4rem;font-weight:900;color:#16A34A;">' + pct + '%</div><div style="color:#888;margin-top:8px;">Conjugation complete!</div></div>';
+          if (onComplete) onComplete();
           return;
         }
         const item = items[idx];
@@ -637,10 +708,10 @@ window.GrammarModule = {
               hint.style.display = 'block';
               scoreText.textContent = answered + ' / ' + items.length;
               barFill.style.width = (answered / items.length * 100) + '%';
-              // highlight correct
               choices.querySelectorAll('.gr-choice-chip').forEach(b => {
                 if (b.textContent === item.answer) b.classList.add('correct');
               });
+              setTimeout(() => { idx++; renderItem(); }, 1400);
             }
           };
           choices.appendChild(btn);
@@ -983,7 +1054,7 @@ window.GrammarModule = {
       const wrap = el('div', '');
       let content = null;
 
-      const isInteractive = sec.type === 'fillSlot' || sec.type === 'sentenceTransform';
+      const isInteractive = sec.type === 'fillSlot' || sec.type === 'sentenceTransform' || sec.type === 'conjugationDrill';
       if (isInteractive) nextBtn.disabled = true;
       const enableNext = isInteractive ? () => { nextBtn.disabled = false; } : null;
 
@@ -992,7 +1063,7 @@ window.GrammarModule = {
       else if (sec.type === 'grammarTable')       content = renderGrammarTable(sec);
       else if (sec.type === 'grammarComparison')  content = renderGrammarComparison(sec);
       else if (sec.type === 'annotatedExample')   content = renderAnnotatedExample(sec);
-      else if (sec.type === 'conjugationDrill')   content = renderConjugationDrill(sec);
+      else if (sec.type === 'conjugationDrill')   content = renderConjugationDrill(sec, enableNext);
       else if (sec.type === 'patternMatch')        content = renderPatternMatch(sec);
       else if (sec.type === 'sentenceTransform')  content = renderSentenceTransform(sec, enableNext);
       else if (sec.type === 'fillSlot')           content = renderFillSlot(sec, enableNext);
