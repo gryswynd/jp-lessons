@@ -442,7 +442,7 @@ Mom has no special Day 3 scene. She's available for the family count conversatio
 | Calendar | カレンダー | Kitchen wall | **Full April calendar.** Grid layout showing 四月 (April). Days 1–28 crossed out. Today: 四月二十九日. Interaction: 「今日は四月二十九日です。」Uses month + date vocab. Player can tap different dates to hear readings (一日、二日、三日... etc.) — a natural way to practice the irregular date readings. |
 | Gold coin | 金 | Living room shelf | Same as Day 2. 「お父さんの金です。」Touch attempt: 「金！だめ！」 No price, no change. |
 | Water bottle | 水 | Inventory | Already collected on Day 2. Still in inventory. Still useless. |
-| Fridge | れいぞうこ | Kitchen | Updated: 「お母さんのれいぞうこです。中に何がありますか？」("Mom's fridge. What's inside?") — **Cannot open it.** Not because it's locked — Rikizo just doesn't open it. He asks what's inside, as if it's a philosophical question. He does not check. |
+| Fridge | れいぞうこ | Kitchen | 「お母さんのれいぞうこです。」("Mom's fridge.") — **The fridge has no inside.** Not locked, not sealed — 中 (なか, "inside") doesn't exist as a concept yet (introduced N5.9, Day 9). The fridge is a surface with no interior, the same way the yard has no beyond. Rikizo doesn't try to open it because there is nothing to open *into*. When 中 arrives in Day 9, the fridge gains an interior for the first time and can finally be opened. |
 
 **Interior (new demonstrative interactions):**
 
@@ -478,19 +478,21 @@ Uses: 何人, 四人, 五人, それから, も, と (listing).
 | Moment | What Happens | What Rikizo Thinks | What the Player Should Feel |
 |---|---|---|---|
 | Getting paid by Dad | Dad hands over 二千円 for studying Japanese | 「二千円！？」(shocked, grateful) | The meta-loop clicks: the player studied a real Japanese lesson, and the game rewards them with in-game currency for it. The fourth wall is thin and intentional. |
-| The calendar | Full April grid, 28 days crossed out | 「四月二十九日です。」 | Time has been passing. The game started on April 27th. The crossed-out days are a subtle worldbuilding detail — the world existed before Rikizo "woke up" on Day 1. |
+| The calendar | Full April grid, 28 days crossed out | 「四月二十九日です。」 | Time has been passing. The game started April 27th — just before Golden Week. The whole family is home because it's a holiday stretch. The crossed-out days imply the world existed before Day 1. |
 | Counting the family | Four people — plus Tree-san makes five | Counts the tree as a person, doesn't notice the missing name | Charming. Rikizo doesn't catch that Mom trailed off. The player might. Who's the fourth family member? |
 | Nothing to buy | Has money. World is: house, yard, tree, dirt, void. | Doesn't notice there's nothing to buy | The player notices. 2,000 yen and nowhere to spend it. The economy has no market. The yard has no shop. There is only void. |
 | Greeting the tree | Daily ritual established | 「木-さん、今日もいい日ですね。」 | The tree is becoming a real character through repetition. Rikizo's commitment to this friendship is unreasonable and endearing. |
 
 **Tone calibration for Day 3:** The comedy has two layers. Surface: Rikizo earns money for studying Japanese, has no shops, counts trees as people. Under the surface: Mom can't finish counting the family, the calendar shows time passing before the game "started," and Dad's payment system has a cap he'll never explain. The absurdist humour (void, nothing to buy) continues, but small mysteries are starting to accumulate.
 
+**Ontological rule reinforced:** The fridge establishes that the "vocabulary = existence" rule applies to spatial concepts too, not just geography. The void is "no words for what's out there." The fridge is "no word for inside." Both resolve when the vocabulary arrives. This is now a core design principle: **things that require unknown vocabulary to exist do not exist.** The world is literally made of words.
+
 ### Running Gags Updated
 
 1. **The Toilet Door** — Continues.
 2. **Dad's Gold** — Same as Day 2 (untouchable, no new development this day).
 3. **Tree-san** — Becomes a daily greeting. 木-さん is now counted as family member #5 (to Rikizo, not to Mom).
-4. **The Fridge** — Rikizo asks what's inside. Does not open it. Does not check.
+4. **The Fridge** — Has no inside. 中 doesn't exist yet. The fridge is an exterior-only object until Day 9 (N5.9: Relative Position). Same ontological rule as the void.
 
 ### Currency System Details
 
@@ -513,13 +515,25 @@ Uses: 何人, 四人, 五人, それから, も, と (listing).
 
 None new beyond existing game vocab (カレンダー, etc).
 
-### Open Questions for Day 3
+### Resolved Design Decisions
 
-1. **Fridge:** Rikizo asks what's inside but doesn't open it. Is this a permanent state (the fridge is an existential object you can never open), or does it open on a future day? If it never opens, that's funny. If it opens later with food items (Day 8 when food vocab arrives), that's a reveal.
+1. **Fridge = no inside until Day 9.** 中 (なか) is introduced in N5.9. Until then, the fridge has no interior — same ontological rule as the void beyond the yard. The fridge gains an inside on Day 9 and can be opened for the first time.
 
-2. **Calendar start date:** The calendar shows April 29th as Day 3, meaning Day 1 = April 27th. Is this the canonical game start date? April 27th is a Sunday in some years, which would align with the Day 2 calendar showing days of the week. Need to confirm this timeline works.
+2. **Golden Week timeline confirmed.** Day 1 = April 27th. Day 3 = April 29th (Showa Day, start of Golden Week). The holiday explains why the entire family is home together. Golden Week runs through roughly Day 9 (May 5th, Children's Day), after which normal life resumes — conveniently aligning with when Rikizo's world starts expanding. The game timeline mapped to Golden Week:
 
-3. **Mom's trail-off:** How much should the game signal that Mom is avoiding naming someone? The current version is subtle (she just restates the number). Could be more obvious (a brief pause, a "..." speech bubble) or less obvious (she just says four names and the fourth is りきぞ, making it seem like she counted wrong). Subtle is probably better — let the player wonder.
+   | Day | Date | Holiday |
+   |---|---|---|
+   | 1 | Apr 27 (Sun) | Pre-GW weekend |
+   | 2 | Apr 28 (Mon) | — |
+   | 3 | Apr 29 (Tue) | Showa Day |
+   | 4 | Apr 30 (Wed) | — |
+   | 5 | May 1 (Thu) | — |
+   | 6 | May 2 (Fri) | — |
+   | 7 | May 3 (Sat) | Constitution Memorial Day |
+   | 8 | May 4 (Sun) | Greenery Day |
+   | 9 | May 5 (Mon) | Children's Day (GW end) |
+
+3. **Mom's trail-off stays subtle.** She says 四人, lists three names + trailing 「と...」, restates 四人. No dramatic pause, no obvious signal. Let the player wonder.
 
 ---
 
