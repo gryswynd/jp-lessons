@@ -533,7 +533,7 @@ None new beyond existing game vocab (カレンダー, etc).
    | 8 | May 4 (Sun) | Greenery Day |
    | 9 | May 5 (Mon) | Children's Day (GW end) |
 
-3. **Mom's trail-off stays subtle.** She says 四人, lists three names + trailing 「と...」, restates 四人. No dramatic pause, no obvious signal. Let the player wonder.
+3. **Mom's trail-off has a dramatic pause.** She says 四人, lists three names, then hits a visible 「と...」 with a beat — a pause long enough that the player notices something is being left unsaid. Then she restates 「四人です」 to close the topic. The pause is the signal; nothing is explained. Let the player wonder.
 
 ---
 
