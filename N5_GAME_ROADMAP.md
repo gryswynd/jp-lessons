@@ -1055,4 +1055,296 @@ This is a te-form request (来て). It serves as a gentle quest marker — go fi
 
 ---
 
-*Pending approval before writing Day 6.*
+## Day 6 — "Landscape" (unlocked by N5.6: Landscape & Vehicles)
+
+### Lesson Kanji & Key Vocab Available
+
+**New kanji (4):** 山、川、道、車
+
+**Cumulative kanji (48):** All N5.1–N5.5 + above.
+
+**New vocab highlights:**
+- Landscape: 山 (やま, mountain), 川 (かわ, river), 道 (みち, road/path)
+- Compound: 火山 (かざん, volcano — 火 Day 2 + 山 Day 6)
+- Vehicle: 車 (くるま, car)
+- Communication: メール (email)
+
+**Grammar:** No new unlocks. Same as Day 5 — full polite verb paradigm, te-form, plain_past. G7 (te-form mechanics / てください) formally unlocked after N5.5, so reinforcement targets apply: ≥1 てください, ≥1 て-connector in today's content.
+
+**New this day:** The world gains geography. Mountains on the horizon. A river. Roads extending further. Cars. And a volcano.
+
+### Location
+
+**THE WORLD GETS BIG.** Yesterday: a small neighborhood — house, road, コンビニ, 駅, void at the edges. Today: the camera pulls back. There are mountains on the horizon. A river runs near the town. The road extends further. The void has retreated again — it's now at the base of the mountains, behind the river bend, past where the road curves out of sight. The playable area hasn't grown enormously (new explorable zones are limited), but the *visible* world has expanded dramatically. There's a skyline now. There's terrain.
+
+Rikizo wakes up, looks out the window, and there are mountains. They weren't there yesterday. He does not find this remarkable.
+
+**New areas:**
+
+| Area | Description | Accessibility |
+|---|---|---|
+| Extended road (道) | The road from Day 5 now continues further. It has a proper name-concept. Branches appear — one path leads toward the river, another toward the edge of town where mountains are visible. | Walkable |
+| River bank (川) | A small river runs near the edge of town. Clear water, gentle flow. The river comes from the direction of the mountains and flows toward... the edge of the known world. It doesn't end. It just goes past where you can follow it. | Walkable to the bank. Cannot cross (no bridge — 橋 doesn't exist). |
+| Mountain viewpoint | A spot at the edge of town where the mountains are visible on the horizon. One of them has a wisp of something at the peak — smoke? Steam? It's the 火山. You can't reach the mountains. They're scenery. Beautiful, distant, and new. | View only. Not reachable. |
+| Roadside | Cars pass on the extended road. They come from one direction and go in the other. Where from? Where to? The road curves out of sight in both directions. | Observable from roadside |
+
+**Interior changes (house):**
+- Calendar: 「五月二日」(May 2nd, Friday).
+- Window: Mountains visible through the window for the first time. The view has changed overnight. Nobody comments.
+- Phone: Email icon appears. One new メール. (See Phone section.)
+
+**What does NOT exist yet:**
+- No bridge across the river (橋 not in N5 curriculum)
+- Cannot reach the mountains (too distant, no path extends that far)
+- No other towns or villages visible
+- Still cannot enter buildings (中/外 = N5.9)
+- No bus/taxi vehicles on the road (バス/タクシー are vocab from Day 5 but no bus stops or taxi stands — the vehicles that pass are all 車)
+
+### The Cars
+
+Cars appear on the road. They drive through town — not fast, not slow, just... passing. They come from one direction (where the road curves out of sight toward the void edge) and leave in the other direction (where the road curves out of sight toward the other void edge). They do not stop. They do not park. They pass through like the town is a waypoint on a journey that has no visible origin or destination.
+
+**What's inside them?** Dark silhouettes. Shapes that suggest people. Rikizo never comments on the drivers. If the player tries to examine a passing car:
+
+> 「車です。」("A car.")
+
+That's it. He identifies the object. He does not wonder about the people inside, where they're going, or where they came from. Cars exist now. Cars drive. This is how roads work.
+
+**One exception — Dad's car.** A car is parked in front of the house. It's just... there. Was it always there? It was not. There was no car yesterday. There is a car today. If the player examines it:
+
+> 「たろうの車です。」("Dad's car.")
+
+Dad owns a car now. He has always owned a car. (いつも.) If the player talks to Dad about it, he says: 「車ですか？ああ、あの車ですね。」("The car? Oh, that car.") He acknowledges it exists. He does not say when he got it. He does not say where it came from. He says "that car" as if distinguishing it from other cars, but there are no other parked cars. Just his. And the ones that pass through town toward nothing.
+
+**Design note — Cars from the void:** The passing cars are the first hint that there might be an outside world with *people* in it. The station suggested infrastructure (tracks, departure board) but had no activity. The cars are active — they move, they carry silhouettes, they travel with purpose. But their origin and destination are both beyond the visible world. They emerge from the void and return to the void. This raises a question the game will sit with for a long time: is there a world out there that Rikizo simply can't see yet? Or are the cars... something else?
+
+### The River
+
+The 川 is the first natural feature in the game. Not a building, not a road, not a station — a river. Water that moves. It comes from the direction of the mountains and flows past the edge of town.
+
+**At the river bank:**
+> 「川です。きれいですね。」("A river. It's pretty.")
+
+**If the player examines the water:**
+> 「水です。」("Water.") *(Same word as the bottle. Same kanji. But this water moves. It flows. It goes somewhere. The bottle water just sits there.)*
+
+**If the player tries to cross:**
+> 「...行きません。」("...I won't go.") *(Not "I can't" — he won't. He looks at the other side and decides not to cross. There's nothing over there anyway — just more ground and then the void edge. But the phrasing is interesting. He could say だめ. He says 行きません — the polite negative of going. A deliberate choice.)*
+
+**If the player follows the river downstream (toward the void edge):**
+> The river flows past the last visible terrain and continues into the whiteness. It doesn't end. It doesn't hit a wall. It just goes. The water flows into nothing and Rikizo stops walking before he reaches the edge.
+
+**Design note — The river's direction:** The river flows FROM the mountains (which materialized today) TOWARD the void. Water flows downhill, from high ground to low ground. The mountains are "real" terrain. The void is "below" the mountains. The river treats the void as if it's a continuation of the landscape — as if there's more terrain out there, unseen. The water doesn't stop at the void. It keeps going. What does this mean? Nothing yet. But the player who notices will remember.
+
+### The 火山 (Volcano)
+
+One of the mountains on the horizon has something at its peak. A thin wisp. Smoke? Steam? It's distant enough that the details are unclear in the pixel art — just a faint trail rising from the top of one peak.
+
+**At the mountain viewpoint:**
+> 「山です。大きいですね。」("Mountains. They're big.")
+
+**If the player examines the smoking peak specifically:**
+> 「あの山は...火山ですか？」("That mountain... is it a volcano?")
+
+This is one of the few times Rikizo uses a question mark about the world itself. He's not asking anyone — there's nobody at the viewpoint. He's asking himself. Or the player. A mountain appeared overnight and it's actively smoking. Even Rikizo, champion of obliviousness, pauses at this.
+
+**If the player returns to Dad and asks about the mountain:**
+> Dad: 「火山ですか？ああ、あの火山ですね。だいじょうぶですよ。」("The volcano? Oh, that volcano. It's fine.")
+
+だいじょうぶ (it's fine). Dad's assessment of a volcano that materialized overnight: it's fine. He says あの火山 — "that volcano" — as if there are multiple and he's specifying which one. There is only one.
+
+**If the player asks Yamakawa:**
+> Yamakawa: 「火山？いいですね！」("Volcano? Nice!") *(He thinks a volcano is nice. He is holding an onigiri. He is standing at a convenience store that appeared two days ago. He is the most relaxed person in a deeply unsettling world.)*
+
+**Design note — The volcano as stakes:** The volcano is the game's first environmental "threat" — though in N5 it never erupts, never escalates, and is never directly dangerous. It's atmosphere. A reminder that this world has geology now, and geology means forces larger than anyone in town. The volcano sits on the horizon for the rest of the game, sometimes with more smoke, sometimes less. Players who track it will notice the smoke increases during narrative tension points. This is never acknowledged in dialogue.
+
+### NPCs
+
+#### Dad (たろう) — Living room / Front of house
+
+Dad has a new outdoor position — he can be found near "his" car, looking at it with quiet satisfaction.
+
+**Indoor conversation (morning, 3 lines):**
+1. **Dad:** 「今日もどこに行きますか？」 — "Where are you going today too?"
+2. **Rikizo:** 「道を行きます！」 — "I'm going down the road!"
+3. **Dad:** 「車に気をつけてください。」 — Wait — 気をつける isn't available. Revised: 「だめですよ、車の道はだめです。」 — "No good, the car road is no good." *(Dad's prohibition vocabulary is limited to だめ. Everything dangerous is だめ. Cars? だめ. The road? だめ. The volcano? Presumably also だめ if asked.)*
+
+**Outdoor conversation (near the car, 3 lines):**
+1. **Dad:** 「いい車ですね。」 — "Nice car, huh." *(He admires a car that appeared today as if appraising a long-owned possession.)*
+2. **Rikizo:** 「たろうの車ですか？」 — "Is it your car, Dad?"
+3. **Dad:** 「車です。」 — "It's a car." *(He neither confirms nor denies ownership. He identifies the object. This is what Dad does. He identifies objects and says だめ.)*
+
+**Repeatable line:** 「どこに行きますか？」 — continues from Day 5.
+
+#### Mom (さくら) — Kitchen
+
+**Conversation (2 lines):**
+1. **Mom:** 「今日は山が見えますね。」 — Wait, 見える isn't available (potential form, N4.3). Revised: 「今日は山がありますね。」 — "There are mountains today." *(ある is available. Mom says mountains ARE there today. Not "appeared" — ARE there. Present tense. Factual. As if observing the weather. "There are mountains today." Like there might not be tomorrow? Or like she didn't notice them before? Both interpretations are unsettling.)*
+2. **Mom:** 「きれいですね。家に来てくださいね。」 — "Pretty, aren't they. Come home, okay?" *(Same closing line. Every day. Come home.)*
+
+#### やまかわ — Near the コンビニ
+
+**Still holding the onigiri.** Same onigiri. Same hand. Same position. Sprite: onigiri. Portrait: onigiri. Day 2 of the Eternal Onigiri.
+
+**Conversation (4 lines):**
+1. **Yamakawa:** 「りきぞ！また来ましたか！」 — "Rikizo! You came again!"
+2. **Yamakawa:** 「今日は山がありますね。いいですね。」 — "Mountains today, huh. Nice." *(Same phrasing as Mom. Mountains ARE there today. Nice. Yamakawa says "nice" to everything. Mountains? Nice. Volcano? Nice. The void? Probably nice.)*
+3. **Rikizo:** 「火山もありますよ。」 — "There's a volcano too."
+4. **Yamakawa:** 「火山！いいですね！」 — "A volcano! Nice!" *(He is holding an onigiri he cannot eat and is enthusiastic about a volcano that appeared overnight. The player is alone in finding either of these things concerning.)*
+
+**If player specifically asks about mountains (new interaction option):**
+> 「山はいつもありましたか？」 — "Have the mountains always been there?"
+> Yamakawa: 「山？...いつもですよ。」 — "Mountains? ...Always."
+
+**いつも. Again.** The player has now heard three different NPCs use いつも to describe things that weren't there yesterday. The word is becoming radioactive.
+
+### The Phone — Email
+
+The phone gets another new feature: メール. An email icon appears alongside the existing Messages.
+
+**Email from すずき先生:**
+
+> Subject: 「来週」("Next week")
+> Body: 「りきぞさん、来週から学校です。来てくださいね。」 — "Rikizo, school starts next week. Please come."
+
+This is the first contact from すずき先生 (Suzuki-sensei), the school Japanese teacher. The email mentions 来週 (next week) and 学校... wait — 学校 isn't available (学/校 = N5.12). Let me revise:
+
+> Body: 「りきぞさん、来週からです。来てくださいね。すずき」 — "Rikizo, from next week. Please come. — Suzuki"
+
+来週から — "from next week." From next week... what? Suzuki doesn't say. 学校 doesn't exist. The thing that starts next week has no name. Suzuki-sensei, a teacher at a school that doesn't exist, sends an email about something that starts next week but cannot be described. The player who knows the curriculum knows it's school. Rikizo... accepts it.
+
+**After reading:**
+> Phone gains: Email section (one email). すずき先生 appears as a contact.
+
+**Phone UI update (Day 6):**
+
+| Feature | Status |
+|---|---|
+| Clock | Active |
+| Wallet | Active |
+| Messages | 1 conversation (やまかわ) |
+| Email | **NEW** — 1 email from すずき先生 |
+| Contacts | やまかわ, **すずき先生 (new)** |
+| Map | Still empty |
+| Apps | Still empty |
+
+### Interactive Objects
+
+**New exterior objects:**
+
+| Object | nameJp | Location | Interaction |
+|---|---|---|---|
+| Dad's car | 車 | Front of house | 「たろうの車です。」 If examined while Dad is nearby, triggers car conversation. |
+| Passing cars | 車 | Road | 「車です。」 — Cannot interact further. They don't stop. |
+| River | 川 | River bank area | 「川です。きれいですね。」 Water examination: 「水です。」 |
+| River downstream (toward void) | 川 | River bank edge | The river continues into the void. Rikizo stops walking. |
+| Mountain viewpoint | 山 | Edge of town | 「山です。大きいですね。」 |
+| Volcano (from viewpoint) | 火山 | Visible from viewpoint | 「あの山は...火山ですか？」 |
+| Extended road | 道 | Beyond Day 5 road | 「道です。どこに行きますか...」("A road. Where does it go...") — Another rare moment of Rikizo questioning. He trails off. |
+
+**Persistent objects (updates):**
+
+| Object | Status |
+|---|---|
+| Window (house) | **Changed** — mountains visible through it now. 「山が見... 山がありますね。」 |
+| Tree-san | Daily greeting continues. 「木-さん、今日も山がありますよ。」("Tree-san, there are mountains today too.") — Rikizo reports landscape changes to the tree. The tree's response to geological upheaval is the same as its response to everything: being a tree. |
+| Yamakawa's onigiri | **Day 2 of 2.** Sprite: onigiri. Portrait: onigiri. Tomorrow it's gone. |
+| コンビニ | Same inventory. Same passthrough window. Shopkeeper greeting. |
+| 駅 | Same. Empty. No trains. Tracks into void. But now the tracks lead toward the mountains — the void between the station and the mountain range has contracted. The tracks don't reach the mountains, but they point at them. Progress? Or coincidence? |
+| Mom's cake | **Final day.** Day 4–6 persistence ends. The cake is consumed overnight (offscreen, unnarrated — 食べる doesn't exist until tomorrow). On Day 7, the counter is empty. If asked, Mom: 「ケーキ？...ないですよ。」("Cake? ...There isn't any.") The cake's disappearance mirrors the onigiri's — things cease to exist between days. |
+
+### Story Beats
+
+| Moment | What Happens | What Rikizo Thinks | What the Player Should Feel |
+|---|---|---|---|
+| Mountains through the window | Waking up, looking outside: a mountain range that wasn't there yesterday | 「山がありますね。」(observational, calm) | A MOUNTAIN RANGE appeared overnight. Rikizo treats this as weather. |
+| The extended road | The path from Day 5 goes further now, branching | 「道です。どこに行きますか...」 | Roads to somewhere. Or nowhere. The road curves out of sight — what's beyond the bend? |
+| First car passes | A car drives through town, silhouettes inside, heading from void to void | 「車です。」 | Where are they going? Where did they come from? WHO is in there? Rikizo doesn't ask. |
+| Dad's car | A car is parked at the house. It wasn't there yesterday. | 「たろうの車です。」 | Dad has a car now. He has always had a car. This is the いつも principle applied to physical objects. |
+| The river | Clear water, flowing from mountains toward the void | 「きれいですね。」 | Beautiful. The water flows into nothing. The river doesn't end — it just goes past where you can see. |
+| River into void | Following the river downstream — it flows past the world's edge into whiteness | Stops walking. Doesn't comment. | The most visually striking void moment yet. Water flowing into nothing. A natural feature that predates the void treating the void as if it's just more landscape. |
+| The volcano | A smoking peak on the horizon | 「...火山ですか？」(questioning tone) | Rikizo QUESTIONS this. Rare. A volcano is apparently where his obliviousness has a limit. But only briefly — he moves on. |
+| Dad on the volcano | 「だいじょうぶですよ。」 | Accepts it | Dad says it's fine. Dad says everything is fine. Dad says だめ or だいじょうぶ about everything and both are equally uninformative. |
+| Yamakawa on the mountains | 「いつもですよ。」 | Accepts it | Third NPC to use いつも about something impossible. The pattern is now undeniable. |
+| Mom says mountains "are" today | 「今日は山がありますね。」 | Nods | "There are mountains today." TODAY. The phrasing implies they might not have been there yesterday. Or it's just a comment. The ambiguity is the horror. |
+| Suzuki's email | Something starts next week. It has no name. | Rikizo reads it and doesn't question what "from next week" refers to | A teacher at a school that doesn't exist sends an email about an event that can't be named. The student reads it and nods. |
+| The station tracks | Tracks now point toward the mountains. The void between has contracted. | Doesn't notice | Progress? The infrastructure is reaching toward the new geography. The world is knitting itself together. |
+
+### Running Gags Updated
+
+1. **The Toilet Door** — Continues.
+2. **Dad's Gold** — Continues. Dad might say だめ about the volcano if asked.
+3. **Tree-san** — Rikizo now reports landscape developments to the tree. The tree's participation in these conversations is limited by being a tree.
+4. **The Fridge** — No inside. Continues.
+5. **Family Possessions** — Cake = FINAL DAY. Gold = continues. Car = **new** (Dad's). Tree = Rikizo's.
+6. **The Empty Phone** — Less empty! Email exists. Two contacts now.
+7. **いつも** — **PATTERN ESTABLISHED.** Third NPC usage (Yamakawa on mountains). The word is now a motif. Any player paying attention should recognize it. Dad (void), Yamakawa (コンビニ), Yamakawa (mountains). Always. Always. Always.
+8. **Yamakawa's Eternal Onigiri** — DAY 2 OF 2. Final day with onigiri. Tomorrow: gone. The countdown the player doesn't know about.
+9. **だめ Dad** — **Emerging pattern.** Dad's response vocabulary is narrowing to two words: だめ (for things Rikizo wants to do) and だいじょうぶ (for things that are clearly not fine). Volcano? だいじょうぶ. Road? だめ. Gold? だめ. Car? (silence). Dad is a binary system of prohibition and false reassurance.
+10. **Mom's "Come Home"** — **Pattern crystallizing.** 「家に来てくださいね。」 Every day. Warm. Insistent. She never forgets to say it. She never varies the phrasing. It's a ritual. The player should start wondering why she's so consistent about this specific request.
+
+### State Tracking (Day 6)
+
+**Flags settable:**
+- `visited_river_day6` — Reaching the river bank. +1 curiosity.
+- `followed_river_to_void_day6` — Following the river downstream to the void edge. +1 paranoia (water flows into nothing). +1 curiosity.
+- `saw_volcano_day6` — Examining the smoking peak from the viewpoint. +1 curiosity. +1 paranoia (a volcano appeared overnight).
+- `asked_dad_volcano_day6` — Dad says だいじょうぶ. +1 dad_annoyance if player has talked to Dad every day (he's getting predictable).
+- `asked_yamakawa_mountains_day6` — Yamakawa says いつも. If `itsumou_count >= 2` (tracked from previous いつも encounters): +2 paranoia (the pattern is undeniable now).
+- `read_suzuki_email_day6` — Reading the email about "next week." +1 curiosity (what starts next week?).
+- `examined_road_day6` — Examining the extended road and hearing Rikizo trail off. +1 curiosity.
+- `examined_dads_car_day6` — +1 curiosity (where did the car come from?).
+
+**New tracking variable:**
+- `itsumou_count` — Tracks how many times the player has heard an NPC say いつも in a context that contradicts reality. Triggers escalating paranoia bonuses at 3, 5, and 7 occurrences. Current max possible by Day 6: 3 (Dad Day 2, Yamakawa Day 5, Yamakawa Day 6).
+
+**Relationships:**
+- char_taro: +1 (talk, indoor or outdoor)
+- char_sakura: +1 (talk)
+- char_tree: +1 (daily greeting, if befriended)
+- char_yamakawa: +1 (talk)
+
+**Hidden stats (Day 6 additions):**
+- paranoia: +1 to +4 possible today (river-void, volcano, いつも pattern recognition, mountains overnight)
+- curiosity: +1 to +5 possible today (river, volcano, road, email, car)
+- dad_annoyance: +0 to +1 (Dad is becoming predictable)
+
+**Conditional content (Day 6):**
+- If `stat:paranoia >= 7`: When Rikizo examines the mountains through the window in the morning, there's an extra beat of silence before his line. A pixel-length pause. The first time internal state affects timing.
+- If `stat:curiosity >= 10`: Rikizo's line at the extended road changes from 「道です。どこに行きますか...」 to 「この道は...どこからですか？」("This road... where is it from?") — He asks about origin, not destination. A subtle shift. Curious Rikizo is starting to look backwards, not forwards.
+- If `befriended_tree`: Tree-san's daily line is unique. If not befriended: 「木です。」
+
+### Assets Required
+
+| Asset | Type | Mode | Priority | Notes |
+|---|---|---|---|---|
+| Expanded town tilemap | Tilemap | A (Pixel) | **Critical** | Extends Day 5 map. Add: extended road with curves, river bank area, mountain viewpoint, void edges pushed back. |
+| Mountain skyline | Background layer | A (Pixel) | **Critical** | Parallax mountain range on the horizon. One peak with faint smoke trail (volcano). Visible from multiple locations including through the house window. |
+| River tileset | Tileset | A (Pixel) | High | Flowing water animation (2–3 frame loop). River runs from mountain direction to void direction. |
+| River-void transition | Tileset/FX | A (Pixel) | High | The point where the river flows past the world's edge into white void. Visually striking — water meeting nothing. |
+| Dad's car (parked) | Object sprite | A (Pixel) | Medium | Small car parked in front of the house. Simple, generic. |
+| Passing cars | Sprite | A (Pixel) | Medium | 2–3 car variants that drive across the road. Dark silhouettes visible through windows. Move on a fixed path, spawn offscreen, despawn offscreen. |
+| Volcano smoke | Animated sprite | A (Pixel) | Medium | Small wisp of smoke/steam from the volcano peak. Subtle 3–4 frame animation. Intensity can be parameterized for later narrative beats. |
+| Mountain viewpoint area | Tilemap detail | A (Pixel) | Medium | Small clearing at the edge of town with a view of the mountains. Maybe a fence or railing. |
+| Email UI | UI element | — | Medium | Email list view, email detail view. Simple — one email initially. |
+| すずき先生 contact icon | UI element | — | Low | Small icon for the email sender. No full portrait needed yet (first appears in person Day 12). |
+
+### Non-Kanji Real-World Vocab Used
+
+| Word | Notes |
+|---|---|
+| メール | In glossary (N5.6). Email. Phone feature. |
+| コンビニ | Continues from Day 5. |
+| バス / タクシー | Vocab from Day 5 but no bus/taxi vehicles appear — only generic 車. |
+
+### Open Questions for Day 6
+
+1. **How far can the player walk?** The road extends further, but where does it dead-end? Recommendation: the road curves out of sight and the player can follow it to where it meets the void edge — the pavement continues into whiteness, like the river. The road doesn't end. It goes where you can't follow. This mirrors the river and the train tracks: all infrastructure in this world continues past its edge, implying a larger world that isn't visible. Or implying nothing at all.
+
+2. **Can the player interact with passing cars?** Recommendation: No. Cars are ambient. They pass. Rikizo says 「車です。」 If the player stands in the road, the car... goes through him? Around him? This should be tested. Maybe cars don't come if you're on the road — they only pass when you're on the sidewalk. They're Schrödinger's traffic: observed from the side, never tested.
+
+3. **Station update:** Should the station show any change on Day 6 (tracks now pointing at mountains, void between contracted)? Recommendation: Yes, subtle. The void visible at the end of the tracks is now further away — mountains are faintly visible past where the tracks disappear. No dialogue change. Just a visual update the observant player might notice.
+
+---
+
+*Pending approval before writing Day 7.*
