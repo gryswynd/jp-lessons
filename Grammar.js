@@ -28,6 +28,7 @@ window.GrammarModule = {
     let drillCorrect = 0;
     let drillTotal = 0;
     const drillAnswered = new Set();
+    const completedSteps = new Set();
     let CONJUGATION_RULES = null;
     let COUNTER_RULES = null;
     let currentGrammars = [];
@@ -941,15 +942,38 @@ window.GrammarModule = {
         content.style.flex = '1';
         const jp = el('div', 'gr-jp');
         jp.innerHTML = window.JPShared.textProcessor.processText(line.jp, line.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES);
-        // Apply grammar color highlights to focus particles/forms
+        // Apply grammar color highlights to focus particles/forms (DOM-based — never mutate innerHTML after processText)
         const particles = (grammarData.meta && grammarData.meta.particles) || [];
         if (particles.length) {
-          // Wrap focus particles in highlight spans
-          particles.forEach(p => {
-            jp.innerHTML = jp.innerHTML.replace(
-              new RegExp(p, 'g'),
-              '<span style="background:' + GRAMMAR_COLORS.particle + '40;border-bottom:2px solid ' + GRAMMAR_COLORS.particle + ';border-radius:2px;padding:0 2px;">' + p + '</span>'
-            );
+          const hlStyle = 'background:' + GRAMMAR_COLORS.particle + '40;border-bottom:2px solid ' + GRAMMAR_COLORS.particle + ';border-radius:2px;padding:0 2px;';
+          // Style existing .jp-term spans that match a focus particle
+          jp.querySelectorAll('.jp-term').forEach(span => {
+            if (particles.some(p => span.textContent === p)) {
+              span.setAttribute('style', (span.getAttribute('style') || '') + ';' + hlStyle);
+            }
+          });
+          // Highlight any remaining bare text occurrences (untagged particles) via TreeWalker
+          const walker = document.createTreeWalker(jp, NodeFilter.SHOW_TEXT, null, false);
+          const textNodes = [];
+          let tn;
+          while ((tn = walker.nextNode())) textNodes.push(tn);
+          textNodes.forEach(textNode => {
+            if (!textNode.parentNode) return;
+            particles.forEach(p => {
+              if (!textNode.textContent.includes(p)) return;
+              const parts = textNode.textContent.split(p);
+              const frag = document.createDocumentFragment();
+              parts.forEach((part, i) => {
+                if (part) frag.appendChild(document.createTextNode(part));
+                if (i < parts.length - 1) {
+                  const hl = document.createElement('span');
+                  hl.setAttribute('style', hlStyle);
+                  hl.textContent = p;
+                  frag.appendChild(hl);
+                }
+              });
+              textNode.parentNode.replaceChild(frag, textNode);
+            });
           });
         }
         content.appendChild(jp);
@@ -1055,8 +1079,9 @@ window.GrammarModule = {
       let content = null;
 
       const isInteractive = sec.type === 'fillSlot' || sec.type === 'sentenceTransform' || sec.type === 'conjugationDrill';
-      if (isInteractive) nextBtn.disabled = true;
-      const enableNext = isInteractive ? () => { nextBtn.disabled = false; } : null;
+      const stepIdx = currentStep;
+      if (isInteractive && !completedSteps.has(stepIdx)) nextBtn.disabled = true;
+      const enableNext = isInteractive ? () => { completedSteps.add(stepIdx); nextBtn.disabled = false; } : null;
 
       if      (sec.type === 'grammarIntro')      content = renderGrammarIntro(sec);
       else if (sec.type === 'grammarRule')        content = renderGrammarRule(sec);
@@ -1103,7 +1128,7 @@ window.GrammarModule = {
         const [gRes, resources] = await Promise.all([fetch(url), loadResources()]);
         grammarData = await gRes.json();
         grammarId = id;
-        drillCorrect = 0; drillTotal = 0; drillAnswered.clear();
+        drillCorrect = 0; drillTotal = 0; drillAnswered.clear(); completedSteps.clear();
         termMapData = resources.map;
         CONJUGATION_RULES = resources.conj;
         COUNTER_RULES = resources.counter;
