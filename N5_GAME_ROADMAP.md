@@ -872,7 +872,7 @@ If the player asks about the onigiri (interaction option available Day 7+): 「�
 
 **Design note — Yamakawa and the Eternal Onigiri:** The onigiri gag works on three levels. **Level 1 (comedy):** A man holds a single onigiri for two days and it never changes. His sprite has it. His portrait has it. It's just part of him now. **Level 2 (ontological horror):** He CAN'T eat it. The verb doesn't exist. He is holding food in a world where consumption is undefined. The onigiri is Schrödinger's lunch — observed but never consumed because the concept of consuming doesn't exist in the world's vocabulary. **Level 3 (the punchline):** The instant 食べる exists (Day 7), the onigiri vanishes and Yamakawa asks YOU if YOU ate, as if the verb has always existed and he's been eating normally this whole time. The player watched a frozen onigiri for 48 hours. Yamakawa experienced a normal lunch. These are irreconcilable perspectives and neither character acknowledges the discrepancy.
 
-**NPC obliviousness:** Dad said いつも about the void on Day 2. Yamakawa says いつも about a store that appeared this morning. NPCs treat the newly-materialized world as if it's always been this way. This isn't a tracked mechanic — it's just how they are. They don't notice. They've never noticed. The creepiness comes from the general pattern of acceptance, not from any single word.
+**The いつも pattern:** Dad said いつも about the void on Day 2. Yamakawa says いつも about a store that appeared this morning. The word is becoming a recurring tell — whenever an NPC is confronted with something that clearly just materialized, their instinct is to say it's "always" been this way. It's not that they're lying. It's that for them, it genuinely HAS always been this way. Their memory rewrites itself to match the current state of the world. いつも is the sound of reality smoothing over its own seams.
 
 ### The コンビニ (First Shop)
 
@@ -974,7 +974,7 @@ This is a te-form request (来て). It serves as a gentle quest marker — go fi
 |---|---|---|---|
 | Stepping beyond the yard | A road exists. Buildings in the distance. The void has retreated. | 「外に行きます！」(thrilled, no questions) | The world DOUBLED overnight. There's a whole neighborhood. Yesterday it was void. Today there are buildings, a road, a station. How? Nobody asks. |
 | First conjugated verb | Dad says 「どこに行きますか？」 | Responds naturally | The player might not consciously notice, but dialogue just transformed. Characters can DO things now, not just BE things. |
-| Meeting Yamakawa | Best friend is at the コンビニ as if he's always been there | 「やまかわ！」(pure happy) | Yamakawa claims he's "always" been here. At a store that appeared this morning. He's as oblivious as Dad and Mom — or as committed to the fiction. |
+| Meeting Yamakawa | Best friend is at the コンビニ as if he's always been there | 「やまかわ！」(pure happy) | Yamakawa says いつも — "always." The same word Dad used about the void. At a store that appeared this morning. Their memories rewrite to match the world. |
 | The food in Yamakawa's hand | He's holding something food-shaped. It changes. Nobody has a word for what's happening. | Doesn't comment | 食べる doesn't exist. Eating doesn't exist. And yet, food is disappearing from Yamakawa's hand. What is this process? The ontological rules say it can't be eating. But it's clearly eating. The world can't describe what's happening. |
 | The convenience store | Passthrough window. Three items. 2,000 yen. Almost nothing to buy. | Happy to be shopping | The economy barely functions. The store has three items. One is water (redundant). But it's a STORE. Commerce exists. This is progress. |
 | The empty station | Perfect platform, tracks into void, no departures | 「いい駅ですね。」 | The most beautiful and sad location yet. A station built for a train system that doesn't exist, tracks that lead into nothing, a departure board with no information. It's the void made architectural. Rikizo thinks it's nice. |
@@ -991,7 +991,7 @@ This is a te-form request (来て). It serves as a gentle quest marker — go fi
 4. **The Fridge** — No inside. Continues.
 5. **Family Possessions** — Cake still on counter. Gold still on shelf. Rikizo still has a tree.
 6. **The Empty Phone** — Less empty now! It has a message! And a contact! Progress. (Still no apps, no map, no signal explanation.)
-7. **NPC Obliviousness** — Every NPC treats new things as if they've always existed. Dad says the void is normal. Yamakawa says he's always been at the コンビニ. Nobody questions anything. The creepiness is the pattern of total acceptance, not any single word.
+7. **いつも** — **Recurring tell.** When NPCs are confronted with something impossible, they say いつも — "always." Dad: the void is いつも. Yamakawa: the コンビニ is いつも. Their memories rewrite to match reality. It's not a lie — for them, it genuinely has always been this way. The word is the sound of the world smoothing over its seams. Players who notice the pattern get the creepiest experience; players who don't still get the general NPC obliviousness vibe.
 8. **Yamakawa's Eternal Onigiri** — **New gag, resolves Day 7.** Yamakawa's chibi sprite and conversation portrait both show him holding an onigiri from Day 5 onward. It's always there. Same onigiri. Never changes. Nobody mentions it because 食べる doesn't exist. On Day 7, the onigiri vanishes from sprite and portrait simultaneously. Yamakawa's first line: 「食べましたか？」 — asking Rikizo if HE ate, as if the verb has always existed. If asked about the onigiri: 「食べました。おいしかったです。」 Past tense. He ate it offscreen in the gap between days, the exact moment consumption became possible. Two days of visual constancy erased in a scene transition.
 
 ### State Tracking (Day 5)
@@ -1179,6 +1179,12 @@ If the player approaches Dad's car, Dad materializes nearby (if not already ther
 2. **Yamakawa:** 「今日は山がありますね。いいですね。」 — "Mountains today, huh. Nice." *(Same phrasing as Mom. Mountains ARE there today. Nice. Yamakawa says "nice" to everything. Mountains? Nice. The void? Probably also nice.)*
 3. **Rikizo:** 「大きいですね！」 — "They're big!"
 4. **Yamakawa:** 「川もありますよ。いい川です。」 — "There's a river too. Nice river." *(He is holding an onigiri he cannot eat and is enthusiastic about a river that appeared overnight. Yamakawa's default state is pleasant acceptance of everything.)*
+
+**If player specifically asks about mountains (new interaction option):**
+> 「山はいつもありましたか？」 — "Have the mountains always been there?"
+> Yamakawa: 「山？...いつもですよ。」 — "Mountains? ...Always."
+
+いつも again. The mountains that appeared overnight have "always" been there. Yamakawa's memory has already rewritten. For him, there was never a time without mountains.
 
 ### The Phone — Email
 
