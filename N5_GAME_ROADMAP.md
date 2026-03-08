@@ -396,55 +396,42 @@ The player discovers:
 
 **Grammar available:** Still dictionary forms + polite_adj only. No verb conjugation.
 
-**New this day:** Currency system activates. Demonstrative pointing (これ/それ/あれ). Numbers appear on things.
+**New this day:** Currency system activates. Demonstrative pointing (これ/それ/あれ). Numbers appear on things. Calendar becomes a full April calendar.
 
 ### Location
 
 **Same as Day 2 — house + yard.** No new areas unlock. The void boundary hasn't moved. The tree is still there.
 
 **Interior changes:**
-- The calendar now shows dates (日 numbers), not just days of the week
-- A coin purse / wallet appears on Rikizo's desk in the bedroom (currency UI trigger)
+- The calendar upgrades from day-of-week only to a **full April calendar** — a proper monthly grid with dates. Days 1–28 are crossed out (X marks), showing that today is **四月二十九日** (April 29th). This establishes the game's timeline: it started on April 27th (Day 1).
 - Objects in the house now have quantities when inspected (「三つです」etc.)
-- Dad's 金 coin now has a stated value
 
 **Exterior:** No changes from Day 2.
 
 ### NPCs
 
-#### Mom (さくら) — Kitchen area
-
-Mom introduces money. She gives Rikizo his first 円.
-
-**Conversation — "Allowance" (4 lines):**
-1. **Mom:** 「りきぞ、これはお金ですよ。」 — "Rikizo, this is money." *(Uses これ — first demonstrative in dialogue)*
-2. **Rikizo:** 「いくらですか？」 — "How much is it?"
-3. **Mom:** 「百円です。大切ですよ。」 — "100 yen. It's important."
-4. **Mom:** 「毎日、百円ですからね。」 — "100 yen every day, okay?" *(Daily allowance established — から meaning "because that's the rule")*
-
-**Mechanical result:** Player receives 100円. Balance appears in a UI element (coin purse icon?). **There is nothing to spend it on.** The allowance accumulates each day the player visits Mom — this becomes meaningful later when shops exist (Day 5+).
-
-**Repeatable line:** 「今日のお金ですよ。百円です。」("Here's today's money. 100 yen.") — Collectible once per day-visit.
-
 #### Dad (たろう) — Living room area
 
-Dad's gold coin gag evolves. Now that numbers and money exist, the coin has a price.
+Dad is the central NPC for Day 3. The meta-narrative pays off: Rikizo has been studying Japanese lessons on the computer (the actual app the player is using), and Dad pays him for it. This is Day 3's defining moment — the currency system is earned through learning.
 
-**Conversation — "The Price of Gold" (4 lines):**
-1. **Rikizo:** 「お父さん、金はいくらですか？」 — "Dad, how much is the gold?"
-2. **Dad:** 「一万円です。」 — "10,000 yen." *(Absurdly high for one coin. Dad is either delusional or the coin is genuinely rare.)*
-3. **Rikizo:** 「一万円！？」 — "10,000 yen!?"
-4. **Dad:** 「お父さんの金です。」 — "It's Dad's gold." *(Same possessive energy as Day 2. Not for sale.)*
+**Conversation — "Payment for Studying" (5 lines):**
+1. **Dad:** 「りきぞ、今日もいい日ですね。」 — "Rikizo, today is a good day too."
+2. **Dad:** 「これはお金ですよ。二千円です。」 — "This is money. 2,000 yen." *(Hands Rikizo 2,000円. Uses これ — first demonstrative in dialogue.)*
+3. **Rikizo:** 「二千円！？」 — "2,000 yen!?"
+4. **Dad:** 「日本語のお金です。」 — "It's Japanese [study] money." *(Payment for completing the lesson. Dad frames it simply — money for Japanese.)*
+5. **Dad:** 「大切ですよ。」 — "It's important."
 
-**Triggered — "Attempted Purchase" (if player interacts with the gold coin after learning its price):**
+**Mechanical result:** Player receives 二千円 (2,000円). Currency balance appears in a UI element. **There is nothing to spend it on.** The money accumulates — this becomes meaningful later when shops exist (Day 5+).
 
-> Rikizo: 「百円...一万円...百円...」("100 yen... 10,000 yen... 100 yen...")
->
-> *(He does the math. He has 100 yen. The coin costs 10,000 yen. This is going to take a hundred days.)*
->
-> Dad (from across the room): 「だめですよ。」("No.")
+**How payment works going forward:** After Day 3, Rikizo gets his phone back (established in Day 4). From that point, Dad mentions that payment will happen automatically after each lesson — the money just appears. The player no longer needs to talk to Dad to collect; it's deposited when they complete a lesson. This keeps the meta-joke alive (you earn game money by doing the real thing the game is about) without requiring a manual collection step every time.
 
-**Running gag update:** The gold coin now has a PRICE, which makes it a long-term comedy goal. At 100円/day, the player needs 100 days of allowance to afford it. Whether Dad would actually sell it at that price is... unclear. He has never said he would sell it. He has only stated what it is worth.
+**Dojo multiplier (future system):** A multiplier earned in the Dojo (introduced later) can increase the per-lesson payout. However, Dad pockets anything over 五千円 (5,000円) per lesson. So the effective cap is 5,000円/lesson regardless of multiplier. Dad's cut is presented matter-of-factly — he doesn't apologize or explain. He just takes it. This is never fully justified. Rikizo never questions it. The player might.
+
+**Dad's gold coin — no price scene.** The gold coin remains on its shelf, still untouchable (「金！だめ！」). It does not get a price tag on Day 3. The coin's story develops later.
+
+#### Mom (さくら) — Kitchen area
+
+Mom has no special Day 3 scene. She's available for the family count conversation (see below) and her existing Day 2 interactions persist.
 
 ### Interactive Objects
 
@@ -452,9 +439,8 @@ Dad's gold coin gag evolves. Now that numbers and money exist, the coin has a pr
 
 | Object | nameJp | Location | Interaction |
 |---|---|---|---|
-| Calendar | カレンダー | Kitchen wall | Now shows dates too: 「今日は[X]月[Y]日です。」Uses month + date vocab. |
-| Gold coin | 金 | Living room shelf | 「一万円の金です。お父さんのです。」("10,000-yen gold. Dad's.") Touch attempt still triggers 「金！だめ！」 |
-| Coin purse | — | Bedroom desk | 「お金です。百円です。」 Shows current balance. This is the currency UI anchor object. Player can check balance anytime by interacting with it. |
+| Calendar | カレンダー | Kitchen wall | **Full April calendar.** Grid layout showing 四月 (April). Days 1–28 crossed out. Today: 四月二十九日. Interaction: 「今日は四月二十九日です。」Uses month + date vocab. Player can tap different dates to hear readings (一日、二日、三日... etc.) — a natural way to practice the irregular date readings. |
+| Gold coin | 金 | Living room shelf | Same as Day 2. 「お父さんの金です。」Touch attempt: 「金！だめ！」 No price, no change. |
 | Water bottle | 水 | Inventory | Already collected on Day 2. Still in inventory. Still useless. |
 | Fridge | れいぞうこ | Kitchen | Updated: 「お母さんのれいぞうこです。中に何がありますか？」("Mom's fridge. What's inside?") — **Cannot open it.** Not because it's locked — Rikizo just doesn't open it. He asks what's inside, as if it's a philosophical question. He does not check. |
 
@@ -474,55 +460,54 @@ This is a flavour upgrade, not a system. The script just uses demonstratives mor
 
 ### Family Count Beat
 
-Numbers enable counting the family. This is a small moment but uses 何人 and the people counters.
+Numbers enable counting the family. This is a small moment but uses 何人 and the people counters. The family is four: Dad, Mom, Rikizo, and one older brother who is away and not mentioned by name (he appears in N4).
 
-**Triggered when talking to Mom after receiving allowance:**
+**Triggered when talking to Mom after Dad's payment scene:**
 
 1. **Rikizo:** 「かぞくは何人ですか？」 — "How many people are in the family?"
-2. **Mom:** 「五人ですよ。お父さんとお母さんと、お兄さんとお姉さんと、りきぞ。」 — "Five. Dad, Mom, big brother, big sister, and Rikizo."
-3. **Rikizo:** 「五人...それから、木-さんも！六人です！」 — "Five... and then, Tree-san too! Six people!"
+2. **Mom:** 「四人ですよ。お父さんとお母さんと、りきぞと...四人です。」 — "Four. Dad, Mom, Rikizo, and... four." *(Mom trails off slightly — there's a fourth person she doesn't name. She just restates the number. The older brother exists but is conspicuously unmentioned.)*
+3. **Rikizo:** 「四人...それから、木-さんも！五人です！」 — "Four... and then, Tree-san too! Five!"
 4. **Mom:** 「...木は人ではないですよ。」 — "...A tree is not a person."
 
-Uses: 何人, 五人, 六人, それから, も, と (listing).
+Uses: 何人, 四人, 五人, それから, も, と (listing).
 
-### Birthday Mini-Scene
-
-たんじょうび (birthday) is N5.3 vocab. Small optional conversation with Dad.
-
-**Triggered if player talks to Dad after the gold coin conversation:**
-
-1. **Rikizo:** 「お父さんのたんじょうびはいつですか？」 — "When is Dad's birthday?"
-2. **Dad:** 「五月五日ですよ。」 — "May 5th."
-3. **Rikizo:** 「五月五日...今月ではないですね。」 — "May 5th... not this month, huh."
-4. **Dad:** 「それから、金はだめですよ。」 — "Also, the gold is off limits." *(Preemptive. He knows where this was going.)*
-
-Uses: たんじょうび, いつ, 五月, 五日, 今月, それから.
+**Design note:** Mom says 四人 and lists three names (Dad, Mom, Rikizo) + a trailing 「と...」 that she doesn't finish. She then restates 四人 as if to close the topic. This plants a seed: the player may notice there are only three named people for a count of four. The older brother is not named, not explained, and not discussed further. He simply exists as a gap in the count. This pays off in N4 when he appears.
 
 ### Story Beats
 
 | Moment | What Happens | What Rikizo Thinks | What the Player Should Feel |
 |---|---|---|---|
-| Receiving 100円 | Mom hands over the first money | 「百円です！」(happy) | The world now has a currency. Weird that Rikizo is just getting his first money as if this is normal — was there no money before? |
-| Learning the gold coin costs 10,000円 | Dad puts a number on the gold | Does the math. Realizes it'll take 100 days. | Long-term comedy hook. The player now has a distant goal that may or may not be achievable. |
-| Counting the family | Five people — plus Tree-san | Counts the tree as a person | Charming. Rikizo genuinely considers the tree family. Mom's correction is gentle but firm. |
-| Nothing to buy | Has money. World is: house, yard, tree, dirt, void. | Doesn't notice there's nothing to buy | The player notices. 100 yen and nowhere to spend it. The economy has no market. The yard has no shop. There is only void. |
+| Getting paid by Dad | Dad hands over 二千円 for studying Japanese | 「二千円！？」(shocked, grateful) | The meta-loop clicks: the player studied a real Japanese lesson, and the game rewards them with in-game currency for it. The fourth wall is thin and intentional. |
+| The calendar | Full April grid, 28 days crossed out | 「四月二十九日です。」 | Time has been passing. The game started on April 27th. The crossed-out days are a subtle worldbuilding detail — the world existed before Rikizo "woke up" on Day 1. |
+| Counting the family | Four people — plus Tree-san makes five | Counts the tree as a person, doesn't notice the missing name | Charming. Rikizo doesn't catch that Mom trailed off. The player might. Who's the fourth family member? |
+| Nothing to buy | Has money. World is: house, yard, tree, dirt, void. | Doesn't notice there's nothing to buy | The player notices. 2,000 yen and nowhere to spend it. The economy has no market. The yard has no shop. There is only void. |
 | Greeting the tree | Daily ritual established | 「木-さん、今日もいい日ですね。」 | The tree is becoming a real character through repetition. Rikizo's commitment to this friendship is unreasonable and endearing. |
 
-**Tone calibration for Day 3:** The comedy shifts from existential (void, things appearing from nothing) to absurdist-economic. Rikizo has money in a world with nothing to buy. He counts family members and includes a tree. Dad has assigned a price to gold that would take 100 days of allowance to reach. The number concepts are used immediately but the economy they imply doesn't exist yet — the gap between "knowing numbers" and "having things to count" is the joke.
+**Tone calibration for Day 3:** The comedy has two layers. Surface: Rikizo earns money for studying Japanese, has no shops, counts trees as people. Under the surface: Mom can't finish counting the family, the calendar shows time passing before the game "started," and Dad's payment system has a cap he'll never explain. The absurdist humour (void, nothing to buy) continues, but small mysteries are starting to accumulate.
 
 ### Running Gags Updated
 
 1. **The Toilet Door** — Continues.
-2. **Dad's Gold** — Evolves. Now has a price (一万円). The gag shifts from "don't touch" to "you can't afford it." Both are true. Neither helps Rikizo.
-3. **Tree-san** — Becomes a daily greeting. 木-さん is now family (to Rikizo, not to Mom).
+2. **Dad's Gold** — Same as Day 2 (untouchable, no new development this day).
+3. **Tree-san** — Becomes a daily greeting. 木-さん is now counted as family member #5 (to Rikizo, not to Mom).
+4. **The Fridge** — Rikizo asks what's inside. Does not open it. Does not check.
+
+### Currency System Details
+
+| Parameter | Value | Notes |
+|---|---|---|
+| Base payout per lesson | 二千円 (2,000円) | Set on Day 3. Paid by Dad in person for this lesson only. |
+| Automatic payment | From Day 4 onward | After getting his phone back, payment deposits automatically after each completed lesson. Dad mentions this. |
+| Dojo multiplier | Variable (future system) | Earned through Dojo training. Multiplies the base payout. |
+| Dad's cap | 五千円 (5,000円) per lesson | Dad takes anything above this amount. Not explained. Not negotiable. |
+| Starting balance | 0円 (before Day 3) | No money exists in the game before this moment. |
 
 ### Assets Required
 
 | Asset | Type | Mode | Priority | Notes |
 |---|---|---|---|---|
-| Coin purse sprite | Object/UI sprite | A (Pixel) | Needed | Sits on bedroom desk. Also serves as the currency UI icon. |
-| Currency UI overlay | UI element | — | Needed | Shows 円 balance. Minimal — just a number + 円 symbol. Appears when collecting money and when checking the coin purse. |
-| Updated calendar UI | UI element | — | Low | Calendar now supports month + date display alongside day-of-week. Could be a tab or second interaction on the same object. |
+| Currency UI overlay | UI element | — | Needed | Shows 円 balance. Minimal — just a number + 円 symbol. Appears when collecting money. |
+| April calendar sprite | Object/UI sprite | A (Pixel) | Needed | Full monthly grid for April. Dates 1–28 crossed out. 29th highlighted as today. Must support tappable dates for reading practice. |
 
 ### Non-Kanji Real-World Vocab Used
 
@@ -530,11 +515,11 @@ None new beyond existing game vocab (カレンダー, etc).
 
 ### Open Questions for Day 3
 
-1. **Allowance persistence:** Does the 100円 accumulate daily (every time the player enters Day 3+), or is it a one-time Day 3 gift? Daily accumulation creates the long-term gold coin goal (100 days × 100円 = 10,000円). One-time is simpler. Recommendation: daily accumulation — it gives the player a reason to visit Mom every day and creates a passive savings mechanic.
+1. **Fridge:** Rikizo asks what's inside but doesn't open it. Is this a permanent state (the fridge is an existential object you can never open), or does it open on a future day? If it never opens, that's funny. If it opens later with food items (Day 8 when food vocab arrives), that's a reveal.
 
-2. **Siblings:** Mom counts 五人 including お兄さん and お姉さん, but neither sibling has appeared yet. They're referenced but absent — like they exist elsewhere and just haven't come home. Is this intentional? The siblings could appear later (when the world expands) or remain permanently off-screen as a running mystery.
+2. **Calendar start date:** The calendar shows April 29th as Day 3, meaning Day 1 = April 27th. Is this the canonical game start date? April 27th is a Sunday in some years, which would align with the Day 2 calendar showing days of the week. Need to confirm this timeline works.
 
-3. **Fridge:** Rikizo asks what's inside but doesn't open it. Is this a permanent state (the fridge is an existential object you can never open), or does it open on a future day? If it never opens, that's funny. If it opens later with food items (Day 8 when food vocab arrives), that's a reveal.
+3. **Mom's trail-off:** How much should the game signal that Mom is avoiding naming someone? The current version is subtle (she just restates the number). Could be more obvious (a brief pause, a "..." speech bubble) or less obvious (she just says four names and the fourth is りきぞ, making it seem like she counted wrong). Subtle is probably better — let the player wonder.
 
 ---
 
