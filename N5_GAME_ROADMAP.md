@@ -28,6 +28,7 @@ Rikizo is a high schooler on Golden Week vacation. The world outside his house i
 - **Save system:** Bed = save point. Game also auto-saves when exiting to the lesson menu via the laptop.
 - **Laptop = "teach a lesson" exit.** Interacting with the パソコン gives the option to teach a lesson, which saves and exits to the main menu / lesson select. This is the core game↔learning bridge. Dad's 「先生をするよ」 dialogue is literally telling the player to go use the laptop.
 - **Progression:** Completing a lesson with a high enough score unlocks the next game day (and other content throughout the app). The game day does not advance from within the game — it advances from lesson completion.
+- **Persistent state:** Relationships, hidden stats (paranoia, curiosity, dad_annoyance), and event flags are tracked across days and determine dialogue variants, quest availability, and ending selection. See `GAME_SYSTEMS.md` for the full spec. **No numbers are ever shown to the player.** The systems are invisible — the consequences are not.
 
 ## Character Roster (N5)
 
@@ -207,6 +208,21 @@ The implicit flow: explore the house → open the front door (void) → talk to 
 3. **Void visual:** Pure nothing. White. No ground, no sky, no texture, no particles, no sound. Empty.
 4. **Rikizo spelling:** りきぞ is canonical. Updated in day.json.
 
+### State Tracking (Day 1)
+
+**Flags settable:**
+- `opened_front_door_day1` — Opening front door to void. Gates Dad's void conversation + paranoia.
+- `asked_dad_void_day1` — Completing Dad's void conversation. Gates Day 2 void dialogue update.
+- `toilet_door_open_day1` — Using toilet with door open. +1 dad_annoyance.
+- `talked_to_mom_day1` — Completing Mom's conversation. Gates Mom Day 2 variant.
+- `talked_to_dad_day1` — Completing Dad's default conversation. Gates Dad Day 2 variant.
+
+**Relationships:** char_taro +1 (talk) +1 (void conversation). char_sakura +1 (talk).
+
+**Hidden stats:** paranoia 0–2 possible. dad_annoyance 0–1 possible.
+
+**Design note — the front door is the first choice.** Opening the door is optional. A player who never opens it misses the void, misses Dad's void conversation, and starts with 0 paranoia. The game still works — they just have a cozier, less unsettling Day 1. The player who opens the door gets the first paranoia point and the first hint that something is deeply wrong. This establishes the pattern: curiosity is rewarded with information, and information makes the world darker.
+
 ### Open Questions for Day 1
 
 None — all resolved.
@@ -364,6 +380,20 @@ The player discovers:
 | カレンダー | calendar | — | Game vocab | Kitchen wall object |
 | ゲーム | game | v_geemu | Yes (N5.2) | Might reference in dialogue or object |
 
+### State Tracking (Day 2)
+
+**Flags settable:**
+- `befriended_tree_day2` — **THE most important optional flag in the game.** Interacting with the tree 3 times triggers the naming sequence. Without this flag, the tree remains 「木です。」forever. With it, 木-さん becomes a tracked secret character whose relationship score determines the best ending.
+- `touched_gold_day2` — Trying to take Dad's gold. +1 dad_annoyance.
+- `visited_void_edge_day2` — Walking to void edge. +1 paranoia, gates Day 2 Dad void conversation.
+- `picked_up_water_day2` — Collecting water bottle. Inventory tutorial complete.
+
+**Relationships:** char_taro +1 (talk). char_sakura +1 (talk). char_tree +1 (if befriended — first day of tracking).
+
+**Hidden stats:** paranoia 0–4 cumulative. curiosity 0–3 (room scan, tree talk, new objects). dad_annoyance 0–2 net (after -1 cooling from Day 1).
+
+**Critical path note:** A player who skips the tree naming sequence on Day 2 can never get it back. The three-interaction sequence (「木です」→「木...名は何ですか？」→「今日から友だちです」) is Day 2 only. After Day 2, the tree's first interaction defaults to either the 木-さん greeting (if befriended) or generic 「木です」(if not). This is the game's single most consequential missable moment — and the player has no idea.
+
 ### Resolved Questions for Day 2
 
 1. **Void edge visual:** Sharp cutoff. Ground just stops, white begins. No fade, no fog, no wall — reality has a hard border. The earth tiles end and the void starts.
@@ -514,6 +544,17 @@ Uses: 何人, 四人, 五人, それから, も, と (listing).
 ### Non-Kanji Real-World Vocab Used
 
 None new beyond existing game vocab (カレンダー, etc).
+
+### State Tracking (Day 3)
+
+**Flags settable:**
+- `received_payment_day3` — Completing Dad's payment conversation. Gates currency system + phone payment (Day 4).
+- `asked_family_count_day3` — Completing Mom's family count conversation. +1 curiosity, seeds brother mystery.
+- `noticed_fridge_day3` — Interacting with fridge 3+ times. +1 paranoia, gates special Day 9 fridge scene when 中 unlocks.
+
+**Relationships:** char_taro +1 (talk) +1 (payment conversation). char_sakura +1 (talk) +1 (family count). char_tree +1 (daily greeting, if befriended).
+
+**Hidden stats:** paranoia 0–5 cumulative. curiosity 0–6 cumulative. dad_annoyance 0–2 net.
 
 ### Resolved Design Decisions
 
@@ -699,6 +740,20 @@ Dad dispenses vague temporal wisdom. He does not answer his own question.
 |---|---|
 | スマホ | In glossary (N5.4). Short for スマートフォン. |
 | ケーキ | In glossary (N5.4). Loanword. |
+
+### State Tracking (Day 4)
+
+**Flags settable:**
+- `received_phone_day4` — Completing Dad's phone conversation. Gates phone UI + automatic payments.
+- `tried_cake_day4` — Interacting with Mom's cake. Cake dialogue, Mom possessiveness pattern.
+- `checked_clock_day4` — Interacting with wall clock. +1 curiosity.
+- `asked_dad_week_day4` — Hearing Dad's 「今週は大切ですよ」. Seeds Golden Week mystery.
+
+**Relationships:** char_taro +1 (talk) +1 (phone conversation). char_sakura +1 (talk) +1 (cake interaction counts as conversation). char_tree +1 (daily greeting, if befriended).
+
+**Hidden stats:** paranoia 0–6 cumulative. curiosity 0–9 cumulative. dad_annoyance 0–3 net.
+
+**Note:** Trying to take the cake does NOT annoy Mom. Mom has no annoyance counter — she's unflappable. The cake scene is comedy, not a relationship test. Dad's gold is the annoyance trigger; Mom's cake is just off-limits.
 
 ### Open Questions for Day 4
 
