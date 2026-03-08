@@ -852,7 +852,13 @@ Mom has a brief send-off. She's supportive but doesn't leave the house.
 
 #### やまかわ — Near the コンビニ
 
-**Yamakawa appears.** He's standing near the convenience store, leaning against the wall. He's holding... something. It looks like food. An onigiri-shaped object is in his hand. But 食べる (to eat) doesn't exist until Day 7. Yamakawa is not eating. He is standing near food. He is holding food. The food is sometimes more, and then less, and nobody comments on this process because the word for it hasn't been invented yet.
+**Yamakawa appears.** He's standing near the convenience store, leaning against the wall. He's holding an onigiri. It's clearly an onigiri — triangular, wrapped in nori, unmistakable. But 食べる (to eat) doesn't exist until Day 7. Yamakawa is not eating. He is standing near food. He is holding food.
+
+**THE ONIGIRI IS ALWAYS THERE.** From Day 5 through Day 6, Yamakawa's overworld sprite shows him holding an onigiri. His conversation portrait shows the onigiri. It is a permanent fixture of his visual identity. Every time the player talks to him, the onigiri is visible. It never gets smaller. It never changes. Yamakawa is a man with an onigiri. That's just what he looks like. Nobody mentions it because there is no verb for what one does with food.
+
+Then Day 7 happens. 食べる arrives. The player visits Yamakawa and — **the onigiri is gone.** His sprite: no onigiri. His portrait: empty hands. It vanished between days. And Yamakawa's first line is 「食べましたか？」("Did you eat?") — as if HE has been eating the whole time and is concerned that RIKIZO might not have. The player has watched this man hold a single unchanging onigiri for two days straight, and his first words with the eating verb are to ask someone else about their eating habits.
+
+If the player asks about the onigiri (interaction option available Day 7+): 「おにぎり？ああ、食べました。おいしかったですよ。」("Onigiri? Oh, I ate it. It was delicious.") — past tense. He ate it. When? Between days. Offscreen. The onigiri that was a frozen visual constant for 48 hours was consumed in the gap between Day 6 and Day 7, the exact moment the verb for consumption came into existence. He treats this as completely unremarkable.
 
 **First meeting conversation (6 lines):**
 1. **Yamakawa:** 「お、りきぞ！ここに来ましたか！」 — "Oh, Rikizo! You came here!" *(来ました — first past-tense verb from an NPC. Yamakawa talks like someone who's been here the whole time.)*
@@ -864,7 +870,7 @@ Mom has a brief send-off. She's supportive but doesn't leave the house.
 
 **Repeatable line:** 「りきぞ、また来ましたか！いいですね。」("Rikizo, you came again! Nice.")
 
-**Design note — Yamakawa and the food:** Yamakawa is described in the character roster as "always eating." But 食べる doesn't exist. So what IS he doing? The answer: nothing. He's holding food. The food changes state. Nobody has the word for what's happening. This is the ontological rule at its most absurd — a man cannot eat because eating hasn't been invented. When 食べる arrives on Day 7, Yamakawa's dialogue immediately includes it: 「食べましたか？」("Did you eat?") — as if he's been eating the whole time and is shocked Rikizo is only now asking.
+**Design note — Yamakawa and the Eternal Onigiri:** The onigiri gag works on three levels. **Level 1 (comedy):** A man holds a single onigiri for two days and it never changes. His sprite has it. His portrait has it. It's just part of him now. **Level 2 (ontological horror):** He CAN'T eat it. The verb doesn't exist. He is holding food in a world where consumption is undefined. The onigiri is Schrödinger's lunch — observed but never consumed because the concept of consuming doesn't exist in the world's vocabulary. **Level 3 (the punchline):** The instant 食べる exists (Day 7), the onigiri vanishes and Yamakawa asks YOU if YOU ate, as if the verb has always existed and he's been eating normally this whole time. The player watched a frozen onigiri for 48 hours. Yamakawa experienced a normal lunch. These are irreconcilable perspectives and neither character acknowledges the discrepancy.
 
 **The いつも echo:** This is a deliberate pattern. Dad says いつも about the void (Day 2). Yamakawa says いつも about his presence at a store that didn't exist yesterday. Every NPC treats the newly-materialized world as if it's always been this way. The word いつも is becoming the game's quiet tell — whenever an NPC uses it, they're papering over something impossible. The player should start flinching at いつも.
 
@@ -986,7 +992,7 @@ This is a te-form request (来て). It serves as a gentle quest marker — go fi
 5. **Family Possessions** — Cake still on counter. Gold still on shelf. Rikizo still has a tree.
 6. **The Empty Phone** — Less empty now! It has a message! And a contact! Progress. (Still no apps, no map, no signal explanation.)
 7. **いつも** — **New pattern.** The word いつも is becoming the game's lie-word. Every NPC uses it to describe things that can't have "always" been true. Dad: void is いつも. Yamakawa: コンビニ is いつも. The player should start noticing.
-8. **Yamakawa's Not-Eating** — **New gag.** Yamakawa holds food. The food changes state. The verb for this process doesn't exist. Resolves Day 7 when 食べる arrives and Yamakawa immediately acts as if he's been eating the whole time.
+8. **Yamakawa's Eternal Onigiri** — **New gag, resolves Day 7.** Yamakawa's chibi sprite and conversation portrait both show him holding an onigiri from Day 5 onward. It's always there. Same onigiri. Never changes. Nobody mentions it because 食べる doesn't exist. On Day 7, the onigiri vanishes from sprite and portrait simultaneously. Yamakawa's first line: 「食べましたか？」 — asking Rikizo if HE ate, as if the verb has always existed. If asked about the onigiri: 「食べました。おいしかったです。」 Past tense. He ate it offscreen in the gap between days, the exact moment consumption became possible. Two days of visual constancy erased in a scene transition.
 
 ### State Tracking (Day 5)
 
@@ -1023,8 +1029,10 @@ This is a te-form request (来て). It serves as a gentle quest marker — go fi
 | コンビニ shop UI | UI element | — | High | Item selection through window. Shows items, prices, player balance. |
 | 駅 exterior/platform | Tileset | A (Pixel) | High | Small station platform. Tracks going both directions into void. Departure board (empty). Bench. Clean, well-maintained, deserted. |
 | Departure board (empty) | Object sprite | A (Pixel) | Medium | Wall-mounted board with no entries. Pure white/blank display. |
-| やまかわ sprite | Sprite | A (Pixel) | High | Leaning against wall near コンビニ. Holding food-shaped object. Casual, relaxed. |
-| やまかわ conversation portrait | Portrait | B (MP100) | High | Friendly, easy-going. Always slightly amused. At least 2 expressions (default, happy). |
+| やまかわ sprite (with onigiri) | Sprite | A (Pixel) | High | Leaning against wall near コンビニ. Holding onigiri in right hand. Casual, relaxed. This is his Day 5–6 sprite. |
+| やまかわ sprite (no onigiri) | Sprite | A (Pixel) | High | Same pose/location but empty-handed. Swapped in on Day 7 when 食べる unlocks. |
+| やまかわ conversation portrait (with onigiri) | Portrait | B (MP100) | High | Friendly, easy-going. Onigiri visible in hand/frame. At least 2 expressions (default, happy). Day 5–6 version. |
+| やまかわ conversation portrait (no onigiri) | Portrait | B (MP100) | High | Same character, no onigiri. Day 7+ version. At least 2 expressions (default, happy). |
 | Phone message UI | UI element | — | High | Message notification, message list (one entry), conversation view. |
 | Road tileset | Tileset | A (Pixel) | Medium | Simple path connecting house area to town area. |
 
@@ -1041,7 +1049,7 @@ This is a te-form request (来て). It serves as a gentle quest marker — go fi
 
 ### Open Questions for Day 5
 
-1. **Yamakawa's food object:** What is he holding? Visually it should read as "food" without being a specific named item (since most food vocab isn't available yet). An onigiri shape works — おにぎり is universally recognizable to the audience even though the word isn't in-game yet. Or it could be abstract/pixelated — a food-colored blob that the art style lets be ambiguous. Recommendation: onigiri shape. It's funnier if it's obviously food and obviously being consumed and nobody can describe the process.
+1. ~~**Yamakawa's food object:**~~ **RESOLVED — Onigiri.** Yamakawa holds an onigiri in both his overworld sprite and conversation portrait from Day 5–6. It's always the same onigiri. It never changes. It vanishes on Day 7 when 食べる unlocks. See "Yamakawa's Eternal Onigiri" in the running gags and NPC section for full design.
 
 2. **Station sound design:** Should the station be silent (emphasizing emptiness) or have ambient train-station sounds (PA chime, distant rumble) despite no trains existing? Silent is creepier. Ambient sounds without a source is creepier in a different way — where are the sounds coming from? Recommendation: a single, soft PA chime that plays once when you first arrive. Then silence. The chime implies a system. The silence confirms nothing is using it.
 
