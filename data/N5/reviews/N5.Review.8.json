@@ -61,7 +61,7 @@
             {
               "spk": "りきぞ",
               "jp": "上ですか。左の 小さい 本は 何ですか。",
-              "terms": ["v_ue", "g_desu", "p_ka", "v_hidari", "p_no", "v_chiisai", "v_hon", "p_wa", "v_nani", "g_desu", "p_ka"]
+              "terms": ["v_ue", "g_desu", "p_ka", "v_hidari", "p_no", "v_chiisai", "v_hon", "p_wa", "v_nan", "g_desu", "p_ka"]
             },
             {
               "spk": "先生",
@@ -290,7 +290,7 @@
           "q": "日本語を 書くのが _______ です。（I am good at writing Japanese.）",
           "choices": ["上手", "下手", "上", "下"],
           "answer": "上手",
-          "terms": ["v_nihongo", "p_wo", "v_kaku", "p_no", "p_ga", "v_jouzu", "g_desu"],
+          "terms": ["v_nihongo", "p_wo", "v_kaku", "p_no", "p_ga", { "id": "v_jouzu", "form": "polite_adj" }],
           "explanation": "上手 (N5.16, じょうず) = skilled/good at — a な-adjective describing ability. 上手です = 'is good at.' 下手 (N5.16, へた) = unskilled/bad at — the antonym; would change the meaning to 'bad at writing Japanese.' 上 (N5.16, うえ) = above — a positional noun, not a skill description. 下 (N5.16, した) = below — a positional noun. Note: 上手 uses the on-reading of 上 (じょう), not the kun-reading (うえ). Similarly, 下手 uses the on-reading of 下 (へ/げ, as in へた), not した."
         },
         {
