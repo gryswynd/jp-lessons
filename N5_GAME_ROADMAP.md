@@ -617,13 +617,13 @@ Dad is the star again. He returns Rikizo's phone and explains the new automatic 
 
 **Conversation — "The Phone" (6 lines):**
 1. **Dad:** 「りきぞ、ちょっと。」 — "Rikizo, a moment." *(First use of ちょっと as a conversational softener/attention-getter.)*
-2. **Dad:** 「これはりきぞのスマホですよ。」 — "This is Rikizo's smartphone." *(Hands it over. Uses これ + の possession.)*
-3. **Rikizo:** 「スマホ！？」 — "A smartphone!?"
+2. **Dad:** 「これはりきぞのスマホですよ。」 — "This is Rikizo's smartphone." *(Hands it over. The phone was broken — Dad had it repaired. Uses これ + の possession.)*
+3. **Rikizo:** 「スマホ！？」 — "A smartphone!?" *(Pure relief. He's been without it for days.)*
 4. **Dad:** 「日本語のお金はすぐスマホです。分かりますか？」 — "The Japanese [lesson] money goes straight to the phone. Understand?" *(Automatic deposits. Payment shows up on the phone now.)*
 5. **Rikizo:** 「分かります！」 — "I understand!"
 6. **Dad:** 「今週は大切ですよ。」 — "This week is important." *(Vague. Doesn't explain why. Golden Week? Something else? Dad doesn't elaborate.)*
 
-**Mechanical result:** Player receives スマホ. The phone becomes the primary UI hub:
+**Mechanical result:** Player receives スマホ (repaired — it was broken before the game started). The phone becomes the primary UI hub:
 - **Clock** — displays current time (何時何分)
 - **Wallet** — shows 円 balance (replaces the coin purse as currency UI)
 - **Everything else** — empty. No contacts, no apps, no messages. The phone is a clock and a wallet in a world with no internet, no cell towers, and no one to call. It is the most sophisticated object in a universe where the fridge doesn't have an inside.
@@ -642,8 +642,7 @@ Mom has cake. This is the first food item in the game. ケーキ is a celebratio
 
 **Design note:** The cake exists but Rikizo cannot eat it. Mom's cake follows the same possessive energy as Dad's gold coin. The family owns things. Rikizo does not get those things. He has a smartphone with no apps and 二千円 with nowhere to spend it. The cake is visible, described, and unavailable.
 
-**Optional follow-up (if player interacts with the cake again):**
-> 「お母さんのケーキです。」("Mom's cake.") — Same energy as 「お父さんの金です。」 The family pattern is clear: everyone has a prized possession. Dad has gold. Mom has cake. Rikizo has a tree.
+**Cake persistence:** The cake remains on the counter from Day 4 through Day 6, guarded by Mom. Each day, interacting with it produces: 「お母さんのケーキです。」("Mom's cake.") — Same energy as 「お父さんの金です。」 On **Day 7**, when 食べる (to eat) enters the world, the cake vanishes. See [Open Questions](#open-questions-for-day-4) for the conditional dialogue payoff (Mom blames Tree-san if the tree was befriended).
 
 ### Interactive Objects
 
@@ -757,9 +756,16 @@ Dad dispenses vague temporal wisdom. He does not answer his own question.
 
 ### Open Questions for Day 4
 
-1. **Phone acquisition context:** Dad gives back the phone — implying Rikizo had it before and it was taken away. Why was it confiscated? Was it a punishment? A study incentive? ("Study Japanese, get your phone back"?) The backstory could be left vague or hinted at. Recommendation: leave it vague. Dad just hands it over. The "back" is implied by his tone but never stated. Maybe Rikizo always had a phone. Maybe he didn't. The game doesn't clarify.
+All resolved:
 
-2. **Cake permanence:** Does Mom's cake persist across days (she guards it indefinitely) or does it disappear after Day 4 (she ate it)? If it persists, it becomes another long-running visual gag like Dad's gold. If it disappears, that's also funny — she said it was hers, and she meant it. Recommendation: it disappears by Day 5. She ate it. She told you it was hers.
+1. **Phone backstory: RESOLVED.** The phone was broken — not confiscated. Dad had it repaired. This explains the delay (Days 1-3 without a phone) without implying punishment. Dad's line is simply 「これはりきぞのスマホですよ。」 — he's returning a fixed item, not unlocking a reward. Why it was broken is not explained. Maybe Rikizo dropped it. Maybe the world broke it. The game doesn't say.
+
+2. **Cake permanence: RESOLVED.** The cake persists from Day 4 through Day 6. On **Day 7** (N5.7: 食べる unlocks), the cake vanishes. The verb "to eat" now exists in the world, and Mom has used it.
+   - If player interacts with the empty counter: 「ケーキは...？」("The cake...?")
+   - If player asks Mom (default): 「お母さんのケーキです。お母さんが食べました。」("It was Mom's cake. Mom ate it.") She's matter-of-fact. She told you it was hers.
+   - If player asks Mom **AND `flag:befriended_tree_day2` is set**: 「木-さんが食べました。」("Tree-san ate it.") Mom blames the tree. She says this with a straight face. The tree is outside. The tree has no mouth. The tree did not eat the cake. Mom does not elaborate. If Rikizo pushes: 「...お母さんのケーキです。」 She falls back to the ownership defense without confirming or denying the tree accusation.
+
+   **Design note:** This is the first time the game's conditional flag system produces a visibly different (and funnier) outcome. Players who befriended the tree get rewarded with a joke. Players who didn't get the honest answer. Both are funny. The tree version is funnier. This teaches players (subconsciously) that their choices from earlier days have consequences — even silly ones.
 
 ---
 
