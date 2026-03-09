@@ -1349,4 +1349,364 @@ This is the first contact from すずき先生 (Suzuki-sensei), the school Japan
 
 ---
 
-*Pending approval before writing Day 7.*
+## Day 7 — "Hunger" (unlocked by N5.7: Size & Food)
+
+### Lesson Kanji & Key Vocab Available
+
+**New kanji (4):** 大、小、食、飲
+
+**Cumulative kanji (52):** All N5.1–N5.6 + above.
+
+**New vocab highlights:**
+- Actions: 食べる (たべる, to eat), 飲む (のむ, to drink)
+- Size: 大きい (おおきい, big), 小さい (ちいさい, small)
+- Feelings: すき (like — early-use hiragana, 好き kanji = N4.4), 大すき (だいすき, love — partial kanji)
+- Food: カレー (curry), パン (bread), サラダ (salad), おにぎり (rice ball — from Day 5 glossary)
+- Drinks: コーヒー (coffee), ジュース (juice/soft drink)
+- Places: レストラン (restaurant)
+- Set phrases: いただきます (before eating), ごちそうさまでした (after eating)
+
+**Grammar:** No new unlocks. Same as Day 5–6 — full polite verb paradigm, te-form, plain_past. G7 reinforcement continues: ≥1 てください, ≥1 て-connector.
+
+**New this day:** FOOD EXISTS. 食べる and 飲む enter the world simultaneously. The cake resolves. The onigiri resolves. The コンビニ gains おにぎり as a visible food item (still can't buy — 買う = Day 8). Mom's kitchen becomes a place where eating happens. The world transitions from a place where objects exist to a place where objects can be consumed.
+
+---
+
+### The Day Food Entered the World
+
+Day 7 is the most consequential vocabulary expansion since Day 5 gave Rikizo legs. Two verbs — 食べる and 飲む — transform every food and drink object that has existed as static inventory into something with *purpose*. Water is no longer just 水. It's something you 飲む. The cake that sat on the counter for three days wasn't waiting — it was inedible. Not "Rikizo chose not to eat it." The *concept* of eating it did not exist.
+
+Today, that changes. And the game acknowledges the change by resolving every frozen food reference simultaneously.
+
+---
+
+### Morning — The Kitchen Revolution
+
+Rikizo wakes up. The calendar reads 「五月三日」(May 3rd, Saturday).
+
+**THE CAKE IS GONE.**
+
+The counter where Mom's cake has sat since Day 4 is empty. The cake — that inviolable, permanent, possessively-guarded object — has vanished overnight.
+
+**If player interacts with the empty counter:**
+> 「ケーキは...？」("The cake...?")
+
+**If player asks Mom (default path):**
+> Mom: 「お母さんのケーキです。お母さんが食べました。」("It was Mom's cake. Mom ate it.")
+
+She's matter-of-fact. She told you it was hers. On Day 4 she said 「お母さんのケーキです。」 She was not describing it. She was filing a property claim. And overnight — the *exact night* that 食べる entered the world — she exercised her rights. She didn't share. She didn't offer. She ate the entire thing. Offscreen. Between days. The first act of eating in this world was Mom consuming a cake that had been untouchable for 72 hours.
+
+**If player asks Mom AND `flag:befriended_tree_day2` is set:**
+> Mom: 「木-さんが食べました。」("Tree-san ate it.")
+
+Mom blames the tree. She says this with a straight face. The tree is outside. The tree has no mouth. The tree did not eat the cake. Mom does not elaborate.
+
+**If Rikizo pushes (talks to Mom again):**
+> Mom: 「...お母さんのケーキです。」("...It was Mom's cake.")
+
+She falls back to the ownership defense without confirming or denying the tree accusation. Did the tree eat it? Did Mom eat it and blame the tree? Was there ever a cake? Mom's final position is: it was hers. What happened to it is immaterial.
+
+**Design note:** This is the first time the game's conditional flag system produces a visibly different (and funnier) outcome. Players who befriended the tree get rewarded with a joke. Players who didn't get the honest answer. Both are funny. The tree version is funnier. This teaches players (subconsciously) that their choices from earlier days have consequences — even silly ones.
+
+### Breakfast — First Meal
+
+Mom has prepared breakfast. This is the first time food appears as something to be *consumed*, not just observed.
+
+**Mom's breakfast conversation (4 lines):**
+1. **Mom:** 「朝ごはんを食べてください。」 — "Please eat breakfast." *(The first てください about food. The first time anyone in this world has invited anyone to eat. Mom says it casually, as if breakfast has always existed.)*
+2. **Rikizo:** 「いただきます！」 — *(First use. The ritual begins.)*
+3. **Mom:** 「パンとサラダです。コーヒーもありますよ。」 — "Bread and salad. There's coffee too." *(Mom lists food by name. These words are new. Each one is a small miracle — yesterday, this meal would have been indescribable.)*
+4. **Rikizo:** 「ごちそうさまでした！」 — *(First use. The ritual completes.)*
+
+**After breakfast, Mom's regular line:**
+> 「今日もどこに行きますか？家に来てくださいね。」 — "Where are you going today? Come home, okay."
+
+The pattern holds. Come home. Every day.
+
+**Design note — いただきます / ごちそうさまでした:** These are not vocabulary items in the usual sense. They are *rituals*. The game treats them as such — they bookend the meal. Every meal in the game from this point forward will begin with いただきます and end with ごちそうさまでした. The player will learn these phrases through pure repetition, the way Japanese children do. No flashcard needed. You say it before you eat. You say it after.
+
+---
+
+### Location
+
+**No new areas.** The map is the same as Day 6 — house, road, town, コンビニ, 駅, river, mountain viewpoint. The change today is not geographical. It's ontological. The same locations now support *consumption*. The コンビニ has food that could theoretically be eaten (if you could buy it). The kitchen is a place where meals happen. Water at the river is the same 水 as water you drink, but one is a landscape feature and the other is a beverage. The distinction is new.
+
+**Interior changes (house):**
+- Calendar: 「五月三日」(May 3rd, Saturday).
+- Kitchen counter: **Empty.** The cake is gone. See above.
+- Kitchen table: Breakfast items visible (パン, サラダ, コーヒー). After the breakfast conversation, they're cleared. The meal is finite.
+
+**What does NOT exist yet:**
+- Still cannot buy anything at the コンビニ (買う = Day 8)
+- No restaurant building (レストラン is vocab only — the word exists, the place doesn't yet)
+- Cannot enter buildings (中/外 = Day 9)
+
+---
+
+### NPCs
+
+#### Mom (さくら) — Kitchen
+
+Mom has the most expanded role today. She made breakfast. She ate the cake. She runs the food economy of this household.
+
+**Breakfast conversation:** See above.
+
+**Post-breakfast conversation (2 lines):**
+1. **Mom:** 「大きいパンでしたね。おいしかったですか？」 — "It was a big piece of bread, wasn't it. Was it tasty?" *(大きい — first size adjective in conversation. Mom comments on the size of the bread Rikizo ate.)*
+2. **Rikizo:** 「おいしかったです！」 — "It was delicious!" *(Past tense. It has been consumed. The first meal is in the past.)*
+
+**Repeatable line:**
+> 「水を飲んでくださいね。」 — "Drink some water, okay." *(Mom's universal advice. 飲んでください — te-form request with the new verb. Mom weaponizes new vocabulary immediately.)*
+
+#### Dad (たろう) — Living room / Near car
+
+**Indoor conversation (3 lines):**
+1. **Dad:** 「朝ごはんを食べましたか？」 — "Did you eat breakfast?" *(Dad's first food-related line. He asks about breakfast. He didn't make breakfast. He didn't eat with you. He asks if you ate, in past tense, as if checking a box.)*
+2. **Rikizo:** 「食べました！パンを食べました。」 — "I ate! I ate bread."
+3. **Dad:** 「いいですね。」 — "Good." *(Minimal. Dad approves of eating. He does not elaborate. His emotional investment is reserved for the car.)*
+
+**Outdoor — car gag continues:**
+> Same as Day 6. Touch car → Dad appears. 「だめ！わたしの車です。」 The teleportation gag is now a known pattern. Players test it from increasingly creative positions.
+
+#### やまかわ — Back at the コンビニ
+
+**THE ONIGIRI IS GONE.**
+
+Yamakawa is back at the コンビニ. Leaning against the wall. Same pose. But his hand is empty. The onigiri — that permanent, immutable, frozen-in-time triangular rice ball that defined his visual identity for two days — has vanished. Yamakawa's sprite and portrait no longer show the onigiri. He just looks like a guy now.
+
+**If player talks to Yamakawa (4 lines):**
+1. **Yamakawa:** 「りきぞ！」 — "Rikizo!"
+2. **Rikizo:** 「やまかわ！...おにぎりは？」 — "Yamakawa! ...The onigiri?"
+3. **Yamakawa:** 「おにぎり？ああ、食べました。おいしかったですよ。」 — "Onigiri? Oh, I ate it. It was delicious." *(Past tense. He ate it. When? Between days. Offscreen. The onigiri that was a frozen visual constant for 48 hours was consumed in the gap between Day 6 and Day 7, the exact moment 食べる came into existence. He treats this as completely unremarkable.)*
+4. **Yamakawa:** 「りきぞも食べましたか？朝ごはん。」 — "Did you eat too, Rikizo? Breakfast." *(Yamakawa asks about breakfast. Everyone asks about breakfast on the day eating was invented. It's the only thing to ask about.)*
+
+**If player asks about the river:**
+> Yamakawa: 「川ですか？いい川ですよ。また行きます。」 — "The river? Good river. I'll go again." *(He went yesterday. He'll go again. The river is part of his routine now — a routine that is 24 hours old.)*
+
+**Design note — The onigiri resolution:** The onigiri's disappearance is one of the most carefully timed moments in the game. For two days, the player has seen this onigiri in every interaction with Yamakawa. It's in his sprite. It's in his portrait. It's become part of who Yamakawa IS. And then — the morning 食べる enters the world — it's just gone. Yamakawa ate it. Of course he did. The verb exists now. He treats two days of holding an uneaten onigiri as perfectly normal because, in his reality, there was nothing unusual about it. He was holding food. Now he's eaten food. What's the question?
+
+The player, who has been watching this onigiri for two days, knowing it couldn't be eaten, knowing there was no verb for consumption — the player understands what happened. The onigiri was frozen in time because the concept of eating didn't exist. The moment it did, everything food-related resolved overnight. Mom ate the cake. Yamakawa ate the onigiri. The world caught up.
+
+---
+
+### The コンビニ Update
+
+The コンビニ window display now has additional context: おにぎり is recognizable as FOOD. Yesterday it was an object with a price tag. Today it's something that could be 食べる'd — if you could buy it. Which you can't. 買う = Day 8.
+
+**Shopkeeper (unchanged):**
+> 「いらっしゃいませ！」
+
+Still stuck. Still can't sell. But now the items in the window have a new dimension: they're not just objects with prices. They're food. Food you can see. Food someone else has eaten (Yamakawa ate an onigiri! He said it was おいしい!). Food with a price tag. And no verb for purchasing.
+
+The gap is now crueller. Yesterday, the コンビニ was a window display of abstract objects. Today, the player knows what おにぎり tastes like (おいしかった, according to Yamakawa) and can see one through the glass, and STILL can't buy it.
+
+**Window items (updated descriptions, same items):**
+
+| Item | Price tag | Notes |
+|---|---|---|
+| おにぎり | 百五十円 | Now recognized as food. Yamakawa ate one and said it was delicious. This one sits behind the glass. Taunting. |
+| 水 (みず) | 百円 | Now recognized as something you 飲む. Still can't buy more. |
+| ノート | 三百円 | Still just an object. No verb for what you do with a notebook exists yet (書く = write, N5.9). |
+
+---
+
+### The River (Revisit)
+
+The river is accessible but Yamakawa is not there today — he's back at the コンビニ. The river feels different without him. Quieter.
+
+**If player visits the river:**
+> 「川です。水がきれいですね。」 — Same as yesterday.
+
+**New interaction — drinking from the river:**
+> 「...飲みますか？...飲みません。」 — "...Drink? ...No." *(Rikizo considers drinking river water. He decides against it. 飲みません — the first polite negative of the new verb. The river water is pretty but not potable. Or maybe Rikizo just has standards. He does have bottled water at home.)*
+
+**Design note:** This tiny moment — Rikizo considering and rejecting drinking river water — demonstrates that new verbs don't just create new actions. They create new *decisions*. Before 飲む existed, the river was scenery. Now it's a potential drink source that Rikizo actively rejects. The world has moved from "things exist" to "things can be interacted with, and you can choose not to."
+
+---
+
+### The レストラン Problem
+
+レストラン is now vocabulary. The word exists. There is no restaurant building in the world. This is the inverse of the コンビニ problem (building exists, purchasing doesn't). Here the *concept* exists but the *place* doesn't.
+
+**If player walks through town:**
+No restaurant is visible. The word is in Rikizo's vocabulary — he could say レストラン — but there is nothing in the world corresponding to it. The restaurant is a Platonic ideal: a word without a referent.
+
+**Design note:** Not every vocab item needs an immediate world anchor. レストラン exists as knowledge — Rikizo knows what a restaurant is. One will appear eventually (likely when the town expands in later lessons with more building interiors). For now, it sits in vocabulary like a promise. The player might look for it and find nothing. That absence is intentional.
+
+---
+
+### Size — 大きい and 小さい
+
+The size adjectives transform description. Until today, things just *were*. Now they can be big or small. Mountains are 大きい. The river is not 小さい but also not 大きい — it's medium? There is no word for medium (中 as a size concept isn't available until Day 9). Binary size: things are either big or small. The continuum between them doesn't exist.
+
+**Objects that gain size descriptions:**
+
+| Object | Description | Notes |
+|---|---|---|
+| Mountains | 「大きい山ですね。」 — "Big mountains." | Obviously. They're mountains. |
+| River | 「小さい川ですね。」 — "Small river." | Compared to what? To the mountains? To an imagined bigger river? Rikizo has no frame of reference. He just knows this river is 小さい. |
+| Dad's car | 「大きい車ですね。」 — "Big car." | Is it? It's a car. Dad: 「大きいですよ！いい車です！」("It IS big! Good car!") Dad takes the compliment. |
+| おにぎり (in window) | 「小さいおにぎりですね。」 — "Small onigiri." | Store onigiri. Standard size. But to Rikizo, who has never eaten one, it's small. |
+| Tree-san | 「大きい木-さんですね。」 — "Big Tree-san." | Rikizo has been talking to this tree since Day 2. Now he can describe it. It's big. He reports this to the tree, who remains a tree. |
+
+---
+
+### すき — The Beginning of Preferences
+
+すき (like) arrives as an early-use word. It's written in hiragana (好き kanji = N4.4). But it fundamentally changes how characters can relate to the world. Before today, people could say things were いい (good) or きれい (pretty) or だめ (no good). These are objective observations. すき is *subjective*. It's personal.
+
+**Mom uses it first:**
+> 「りきぞはパンがすきですか？」 — "Do you like bread, Rikizo?"
+
+This is the first time anyone has asked Rikizo about his *preferences*. Not what things are. What he *likes*. The answer doesn't change the game state. But the question itself is revolutionary — the world now cares about individual taste.
+
+**Yamakawa uses it about the river:**
+> If asked about the river again: 「川がすきですよ。いい川です。」 — "I like the river. Good river." *(Yamakawa upgrades from いい to すき. Yesterday the river was "good." Today he "likes" it. Feelings have entered the world.)*
+
+---
+
+### NPCs — Full Interactions
+
+#### Tree-san
+
+**Daily greeting (updated):**
+> 「木-さん、大きいですね！」 — "Tree-san, you're big!" *(Rikizo can finally describe Tree-san's defining physical characteristic. He says this with genuine enthusiasm, as if discovering something new about a friend he's talked to every day.)*
+
+**If `flag:befriended_tree_day2` is set:**
+> 「木-さんは大すきです。」 — "I love Tree-san." *(大すき. The strongest positive feeling available. Rikizo's first expression of love in the entire game is directed at a tree.)*
+
+#### すずき先生 — Email Reply
+
+**If the player opens the phone email:**
+> A reply option appears for すずき先生's Day 6 email (「来週からです。来てくださいね。」).
+
+**Rikizo's reply (auto-generated, player triggers it):**
+> 「はい、行きます。」 — "Yes, I'll go."
+
+Rikizo agrees to go to the thing that starts next week. The thing that has no name. He doesn't ask what it is or where it is. He says yes. He'll go.
+
+**すずき先生's reply arrives later in the day:**
+> 「いいですね！来てくださいね。」 — "Great! Please come."
+
+来てください — the same construction Mom uses. Come. Come home. Come to the unnamed thing. Everyone asks Rikizo to come places. He always says yes.
+
+---
+
+### Phone Update
+
+**Phone UI (Day 7):**
+
+| Feature | Status |
+|---|---|
+| Clock | Active |
+| Wallet | Active |
+| Messages | 1 conversation (やまかわ) |
+| Email | 2 emails (すずき先生 thread — original + reply) |
+| Contacts | やまかわ, すずき先生 |
+| Map | Still empty |
+| Apps | Still empty |
+
+---
+
+### Interactive Objects
+
+**Updated interactions (food-aware):**
+
+| Object | Location | Interaction |
+|---|---|---|
+| Kitchen counter | Kitchen | **EMPTY.** 「ケーキは...？」 See cake resolution above. |
+| Kitchen table (breakfast) | Kitchen | Pre-meal: visible food. Post-meal: cleared. |
+| Fridge | Kitchen | Still can't open. 「...」 No 中. But now the player KNOWS there's food in this world. The fridge gains new significance: it contains food. Probably. You can't check. |
+| 水 (home) | Kitchen | 「水を飲みます。」("I'll drink water.") New! Rikizo can drink his own water. The first consumable action available at home. |
+| River water | River bank | 「...飲みません。」("Won't drink.") River water: rejected. |
+| コンビニ window | Town | Updated awareness: items are now recognizable as food/drink. Still can't buy. |
+| Dad's car | Front of house | Unchanged. Touch → Dad appears. 「だめ！」 |
+
+**Persistent objects (updates):**
+
+| Object | Status |
+|---|---|
+| Window (house) | Mountains visible (Day 6+). |
+| Tree-san | 「大きいですね！」 — Rikizo can now describe the tree. If befriended: 「大すきです。」 |
+| Yamakawa | Back at the コンビニ. No onigiri. He ate it. He is now just a man. |
+| コンビニ | Same window display. Same items. Food items now have existential weight — you know they can be eaten. You just can't buy them. |
+| 駅 | Same. Empty. No trains. |
+| River | Same. Yamakawa not present today. Rikizo can now consider (and reject) drinking from it. |
+| Mom's cake | **GONE.** Resolved. Mom ate it / Tree-san ate it. The three-day saga ends. |
+| Dad's gold | Persists. Dad still says だめ. But his passion has shifted to the car. Gold is the old love. |
+
+---
+
+### Story Beats
+
+| Moment | What Happens | What Rikizo Thinks | What the Player Should Feel |
+|---|---|---|---|
+| The empty counter | The cake is gone. Three days of 「お母さんのケーキです。」 — resolved overnight. | 「ケーキは...？」 | Satisfaction? Loss? The cake was a fixture. It's gone. The first thing that ever left. |
+| Mom ate the cake | 「お母さんが食べました。」 / 「木-さんが食べました。」 | Accepts either explanation | The tree version is comedy gold. Mom blaming an inanimate object she watched her son befriend. |
+| First breakfast | いただきます. パンとサラダ. ごちそうさまでした. | Happy. Fed. | The ritual of eating is established. This will happen every day from now on. |
+| The missing onigiri | Yamakawa's hand is empty. After two days of the Eternal Onigiri. | 「...おにぎりは？」 | The player has been WAITING for this. Two days of watching an uneaten onigiri. Now it's gone. Of course it is. 食べる exists. |
+| 「おいしかったですよ。」 | Yamakawa reports the onigiri was delicious. Past tense. Offscreen consumption. | Rikizo nods | Yamakawa ate an onigiri that was frozen in his hand for 48 hours and his review is: "delicious." No explanation for the delay. No awareness that anything was unusual. |
+| River water — no | Rikizo considers and rejects drinking river water. | 「...飲みません。」 | New verbs create new choices. Including the choice NOT to do something. |
+| Size descriptions | Everything gains dimensions. Mountains are big. The river is small. Tree-san is big. | Descriptive, enthusiastic | The world has adjectives now. Things aren't just here — they're big or small. (Nothing is medium. 中 = Day 9.) |
+| すき — preferences arrive | Mom asks if Rikizo likes bread. Yamakawa likes the river. | The world cares about opinion | Before today: objective descriptions. Today: subjective feelings. This is a bigger shift than it appears. |
+| Tree-san love confession | 「木-さんは大すきです。」 — if befriended | Pure, genuine | Rikizo's first love is a tree. |
+| The fridge (updated) | Still can't open. But now the player knows food exists. The fridge's contents are more tantalizing than ever. | 「...」 | You KNOW there's food in there. You know eating is possible. You still can't open the fridge. 中 = Day 9. TWO MORE DAYS. |
+| Email to Suzuki | Rikizo agrees to go to the unnamed thing next week. | 「はい、行きます。」 | He didn't ask what it is. He didn't ask where. He just said yes. |
+
+---
+
+### Running Gags Updated
+
+1. **The Toilet Door** — Continues. Dad now has three territorial objects: car > gold > toilet.
+2. **Dad's Gold** — Continues. Slowly being eclipsed by the car in Dad's emotional hierarchy.
+3. **Dad's Car** — Continues. Touch → teleport → だめ.
+4. **Tree-san** — **UPGRADED.** Rikizo can now describe the tree (大きい) and declare love (大すき). The tree relationship has grown from greeting to genuine affection. The tree does not reciprocate. The tree is a tree.
+5. **The Fridge** — **INTENSIFIED.** Food exists now. Eating is real. The fridge — which definitely contains food — remains unopenable. Every day it becomes slightly more maddening. The fridge is Schrödinger's pantry: the food inside is simultaneously there and inaccessible. Day 9 (中/外) will resolve this. Two more days.
+6. **Family Possessions** — Cake = RESOLVED (eaten). Gold = continues. Car = continues (dominant). Water = now drinkable.
+7. **The Empty Phone** — Email thread growing. Two contacts. Still no map, no apps. The phone is becoming useful in tiny increments.
+8. **Yamakawa's Eternal Onigiri** — **RESOLVED.** 食べました. おいしかったです. The two-day saga ends with three words and zero self-awareness. Yamakawa has entered the post-onigiri era.
+9. **Mom's "Come Home"** — 「家に来てくださいね。」 Day 7. Every day. The pattern is now well-established enough that the player should notice it's not just flavor text — it's a persistent, unvarying request.
+10. **Mom's Eating Authority** — **NEW.** Mom ate the cake overnight. She ate the ENTIRE thing. She told you it was hers. She wasn't lying. But the speed and totality of her consumption — the moment eating became possible — establishes Mom as the supreme food authority. She made breakfast. She controls the kitchen. She decides what gets eaten and when. This dynamic will persist.
+11. **いただきます / ごちそうさまでした** — **NEW RITUAL.** From today onward, every meal begins and ends with these phrases. They are not optional. They are not flavor text. They are how eating works in this world. The player will learn them through repetition, like learning to say "please" and "thank you."
+
+---
+
+### State Tracking (Day 7)
+
+**New flags:**
+- `ate_breakfast_day7` — First meal in the game. いただきます → food → ごちそうさまでした. The eating ritual is established.
+- `cake_resolved` — The cake is gone. Tracks which version the player sees (Mom ate it vs Tree-san ate it).
+- `onigiri_resolved` — Yamakawa's onigiri has been eaten. He is now onigiri-free. The eternal has become past tense.
+- `replied_to_suzuki` — Rikizo agreed to go to the unnamed thing next week.
+- `described_tree_big` — Rikizo told Tree-san it's big. (First size adjective used on a befriended object.)
+- `tree_love_confession` — (If befriended) Rikizo said 大すき to a tree. First love declaration in the game.
+
+**Economy:**
+- Wallet: Still 二千円 (2,000 yen). Cannot spend money. 買う = Day 8.
+
+---
+
+### Art Assets Required (Day 7)
+
+| Asset | Type | Style | Priority | Notes |
+|---|---|---|---|---|
+| Yamakawa sprite (no onigiri) | Overworld sprite | A (Pixel) | High | Same design as Day 5 sprite but empty-handed. Swapped in on Day 7. |
+| Yamakawa portrait (no onigiri) | Conversation portrait | B (MP100) | High | Same character, no onigiri. Day 7+ version. At least 2 expressions. |
+| Kitchen — breakfast scene | Background variant | B (MP100) | Medium | Kitchen with visible breakfast items on table (パン, サラダ, コーヒー). Variant of existing kitchen BG. |
+| Kitchen — empty counter | Background variant | B (MP100) | Medium | Kitchen without the cake on the counter. Variant of Day 4–6 kitchen. |
+| River — solo version | Background variant | B (MP100) | Low | River bank without Yamakawa. Day 6 has Yamakawa there; Day 7 river is empty/peaceful. |
+| レストラン | — | — | NOT YET | The building doesn't exist in the world yet. No asset needed. |
+
+---
+
+### Open Questions for Day 7
+
+1. **Does Mom offer more food throughout the day?** Recommendation: No. One meal per day for now. Breakfast is established as the daily meal event. Lunch and dinner will arrive when daily time progression becomes more detailed (likely N5.10+ when time-of-day vocab expands). For Day 7, breakfast is the one meal, and it's enough — the point is that eating exists, not that it's complex.
+
+2. **Can Rikizo eat the おにぎり he already has?** If Rikizo received おにぎり somehow (he can't — the only onigiri was Yamakawa's, and it's been eaten; the コンビニ ones are behind glass), could he eat it? Hypothetically yes — 食べる exists. But he has no food inventory items. This becomes relevant on Day 8 when 買う arrives and the コンビニ unlocks. The first purchased おにぎり will be the first player-triggered 食べる event.
+
+3. **River drinking — should it work?** Currently Rikizo rejects it (飲みません). Could there be a secret "drink river water" path? Recommendation: No. River water = no. Tap water = no (where's the tap? Inside, where 中 doesn't exist). Bottled water = yes (Mom's kitchen). This is fine. Drinking options will expand with the コンビニ on Day 8.
+
+4. **Yamakawa's location pattern:** Day 5 = コンビニ. Day 6 = river. Day 7 = back at コンビニ. Should he alternate, or settle? Recommendation: Yamakawa settles back at the コンビニ as his default spot. The Day 6 river visit was a special event — he explored the new geography. Now he's back to his routine. Future days may move him again when new locations appear, but the コンビニ wall is his home base. He has an anchor. He always comes back.
+
+---
