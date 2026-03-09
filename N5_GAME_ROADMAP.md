@@ -895,11 +895,7 @@ Mom has a brief send-off. She's supportive but doesn't leave the house.
 
 **Yamakawa appears.** He's standing near the convenience store, leaning against the wall. He's holding an onigiri. It's clearly an onigiri — triangular, wrapped in nori, unmistakable. But 食べる (to eat) doesn't exist until Day 7. Yamakawa is not eating. He is standing near food. He is holding food.
 
-**THE ONIGIRI IS ALWAYS THERE.** From Day 5 through Day 6, Yamakawa's overworld sprite shows him holding an onigiri. His conversation portrait shows the onigiri. It is a permanent fixture of his visual identity. Every time the player talks to him, the onigiri is visible. It never gets smaller. It never changes. Yamakawa is a man with an onigiri. That's just what he looks like. Nobody mentions it because there is no verb for what one does with food.
-
-Then Day 7 happens. 食べる arrives. The player visits Yamakawa and — **the onigiri is gone.** His sprite: no onigiri. His portrait: empty hands. It vanished between days. And Yamakawa's first line is 「食べましたか？」("Did you eat?") — as if HE has been eating the whole time and is concerned that RIKIZO might not have. The player has watched this man hold a single unchanging onigiri for two days straight, and his first words with the eating verb are to ask someone else about their eating habits.
-
-If the player asks about the onigiri (interaction option available Day 7+): 「おにぎり？ああ、食べました。おいしかったですよ。」("Onigiri? Oh, I ate it. It was delicious.") — past tense. He ate it. When? Between days. Offscreen. The onigiri that was a frozen visual constant for 48 hours was consumed in the gap between Day 6 and Day 7, the exact moment the verb for consumption came into existence. He treats this as completely unremarkable.
+**THE ONIGIRI IS HIS.** From Day 5 through Day 7, Yamakawa's overworld sprite shows him holding an onigiri. His conversation portrait shows the onigiri. It is a permanent fixture of his visual identity. Every time the player talks to him, the onigiri is visible. It never gets smaller. It never changes. Yamakawa is a man with an onigiri. That's just what he looks like. Nobody mentions it because there is no verb for what one does with food — but the body language is clear. The way he holds it. The way he doesn't offer it. This is *his* onigiri.
 
 **First meeting conversation (6 lines):**
 1. **Yamakawa:** 「お、りきぞ！ここに来ましたか！」 — "Oh, Rikizo! You came here!" *(来ました — first past-tense verb from an NPC. Yamakawa talks like someone who's been here the whole time.)*
@@ -911,7 +907,7 @@ If the player asks about the onigiri (interaction option available Day 7+): 「�
 
 **Repeatable line:** 「りきぞ、また来ましたか！いいですね。」("Rikizo, you came again! Nice.")
 
-**Design note — Yamakawa and the Eternal Onigiri:** The onigiri gag works on three levels. **Level 1 (comedy):** A man holds a single onigiri for two days and it never changes. His sprite has it. His portrait has it. It's just part of him now. **Level 2 (ontological horror):** He CAN'T eat it. The verb doesn't exist. He is holding food in a world where consumption is undefined. The onigiri is Schrödinger's lunch — observed but never consumed because the concept of consuming doesn't exist in the world's vocabulary. **Level 3 (the punchline):** The instant 食べる exists (Day 7), the onigiri vanishes and Yamakawa asks YOU if YOU ate, as if the verb has always existed and he's been eating normally this whole time. The player watched a frozen onigiri for 48 hours. Yamakawa experienced a normal lunch. These are irreconcilable perspectives and neither character acknowledges the discrepancy.
+**Design note — Yamakawa and the Eternal Onigiri:** The onigiri gag works on three levels. **Level 1 (comedy):** A man holds a single onigiri for three days and it never changes. His sprite has it. His portrait has it. It's just part of him now. The player starts to wonder if this is just... what Yamakawa looks like. **Level 2 (ontological horror):** He CAN'T eat it. The verb doesn't exist. He is holding food in a world where consumption is undefined. The onigiri is Schrödinger's lunch — observed but never consumed because the concept of consuming doesn't exist in the world's vocabulary. **Level 3 (the punchline):** The instant 食べる exists (Day 7), Rikizo asks if he can have it. Yamakawa says no. And then eats it. Right there. In front of you. The onigiri that was a frozen visual constant for three days is consumed in seconds — not offscreen, not between days, but while you watch. The man who couldn't eat for three days eats the moment the verb arrives, and he doesn't share.
 
 **The いつも pattern:** Dad said いつも about the void on Day 2. Yamakawa says いつも about a store that appeared this morning. The word is becoming a recurring tell — whenever an NPC is confronted with something that clearly just materialized, their instinct is to say it's "always" been this way. It's not that they're lying. It's that for them, it genuinely HAS always been this way. Their memory rewrites itself to match the current state of the world. いつも is the sound of reality smoothing over its own seams.
 
@@ -932,7 +928,7 @@ The shopkeeper greets Rikizo. And then... nothing. There's no transaction. There
 
 | Item | Price tag | Notes |
 |---|---|---|
-| おにぎり | 百五十円 | Triangular rice ball. Clearly the same thing Yamakawa is holding. Visible but untouchable. |
+| おにぎり | 百五十円 | Triangular rice ball. Same thing Yamakawa is holding outside. Visible but untouchable. His won't be available either, as it turns out. |
 | 水 (みず) | 百円 | Water. Player already has water from Day 2. Can see more water. Cannot acquire more water. |
 | ノート | 三百円 | Notebook. Sits on the shelf. Exists. Cannot be obtained. |
 
@@ -1026,7 +1022,7 @@ This is a te-form request (来て). It serves as a gentle quest marker — go fi
 | First conjugated verb | Dad says 「どこに行きますか？」 | Responds naturally | The player might not consciously notice, but dialogue just transformed. Characters can DO things now, not just BE things. |
 | Meeting Yamakawa | Best friend is at the コンビニ as if he's always been there | 「やまかわ！」(pure happy) | Yamakawa says いつも — "always." The same word Dad used about the void. At a store that appeared this morning. Their memories rewrite to match the world. |
 | The food in Yamakawa's hand | He's holding something food-shaped. It changes. Nobody has a word for what's happening. | Doesn't comment | 食べる doesn't exist. Eating doesn't exist. And yet, food is disappearing from Yamakawa's hand. What is this process? The ontological rules say it can't be eating. But it's clearly eating. The world can't describe what's happening. |
-| The convenience store | Passthrough window. Items visible: おにぎり, 水, ノート. 2,000 yen in pocket. Can't buy anything. | Confused? Accepting? | A store exists. Money exists. Items exist. The verb for buying doesn't. Rikizo stands at the window. The shopkeeper says いらっしゃいませ and nothing else. Yamakawa is RIGHT THERE holding an onigiri. There are onigiri IN THE SHOP. How did Yamakawa get his? Nobody asks. |
+| The convenience store | Passthrough window. Items visible: おにぎり, 水, ノート. 2,000 yen in pocket. Can't buy anything. | Confused? Accepting? | A store exists. Money exists. Items exist. The verb for buying doesn't. Rikizo stands at the window. The shopkeeper says いらっしゃいませ and nothing else. Yamakawa is RIGHT THERE holding an onigiri. There are onigiri IN THE SHOP. How did Yamakawa get his? Nobody asks. (Spoiler: he won't share it either.) |
 | The empty station | Perfect platform, tracks into void, no departures | 「いい駅ですね。」 | The most beautiful and sad location yet. A station built for a train system that doesn't exist, tracks that lead into nothing, a departure board with no information. It's the void made architectural. Rikizo thinks it's nice. |
 | Mom says "come home" | 「家に来てくださいね。」— perfectly normal Mom line | Takes it at face value | Is it normal? Or does Mom know that the world beyond the house is unstable, new, not-quite-real? Her "come home" is warm but insistent. Every day from now on. |
 | The phone message | やまかわ messaged despite the phone having no messaging app yesterday | Doesn't question it | How? The phone had nothing. Now it has a message from someone who found the phone's contact info in a system that didn't exist. The phone is generating features the way the world generates buildings. |
@@ -1042,7 +1038,7 @@ This is a te-form request (来て). It serves as a gentle quest marker — go fi
 5. **Family Possessions** — Cake still on counter. Gold still on shelf. Rikizo still has a tree.
 6. **The Empty Phone** — Less empty now! It has a message! And a contact! Progress. (Still no apps, no map, no signal explanation.)
 7. **いつも** — **Recurring tell.** When NPCs are confronted with something impossible, they say いつも — "always." Dad: the void is いつも. Yamakawa: the コンビニ is いつも. Their memories rewrite to match reality. It's not a lie — for them, it genuinely has always been this way. The word is the sound of the world smoothing over its seams. Players who notice the pattern get the creepiest experience; players who don't still get the general NPC obliviousness vibe.
-8. **Yamakawa's Eternal Onigiri** — **New gag, resolves Day 7.** Yamakawa's chibi sprite and conversation portrait both show him holding an onigiri from Day 5 onward. It's always there. Same onigiri. Never changes. Nobody mentions it because 食べる doesn't exist. On Day 7, the onigiri vanishes from sprite and portrait simultaneously. Yamakawa's first line: 「食べましたか？」 — asking Rikizo if HE ate, as if the verb has always existed. If asked about the onigiri: 「食べました。おいしかったです。」 Past tense. He ate it offscreen in the gap between days, the exact moment consumption became possible. Two days of visual constancy erased in a scene transition.
+8. **Yamakawa's Eternal Onigiri** — **New gag, resolves Day 7.** Yamakawa's chibi sprite and conversation portrait both show him holding an onigiri from Day 5 onward. It's always there. Same onigiri. Never changes. Nobody can mention it because 食べる doesn't exist. On Day 7, 食べる arrives. Rikizo can finally ask about the onigiri. He asks to eat it. Yamakawa says no — it's his. Then eats it right there, mid-conversation, in front of Rikizo. Sprite changes from onigiri-in-hand to empty-hand during the dialogue. 「おいしかったですよ。」 Three days of visual constancy resolved in three seconds of onscreen cruelty.
 
 ### State Tracking (Day 5)
 
@@ -1079,10 +1075,10 @@ This is a te-form request (来て). It serves as a gentle quest marker — go fi
 | コンビニ window display | UI element / sprite | — | High | Items visible through window (おにぎり, 水, ノート with price tags). NOT interactive until Day 8 when 買う arrives. Window-shopping only. |
 | 駅 exterior/platform | Tileset | A (Pixel) | High | Small station platform. Tracks going both directions into void. Departure board (empty). Bench. Clean, well-maintained, deserted. |
 | Departure board (empty) | Object sprite | A (Pixel) | Medium | Wall-mounted board with no entries. Pure white/blank display. |
-| やまかわ sprite (with onigiri) | Sprite | A (Pixel) | High | Leaning against wall near コンビニ. Holding onigiri in right hand. Casual, relaxed. This is his Day 5–6 sprite. |
-| やまかわ sprite (no onigiri) | Sprite | A (Pixel) | High | Same pose/location but empty-handed. Swapped in on Day 7 when 食べる unlocks. |
-| やまかわ conversation portrait (with onigiri) | Portrait | B (MP100) | High | Friendly, easy-going. Onigiri visible in hand/frame. At least 2 expressions (default, happy). Day 5–6 version. |
-| やまかわ conversation portrait (no onigiri) | Portrait | B (MP100) | High | Same character, no onigiri. Day 7+ version. At least 2 expressions (default, happy). |
+| やまかわ sprite (with onigiri) | Sprite | A (Pixel) | High | Leaning against wall near コンビニ. Holding onigiri in right hand. Casual, relaxed. This is his Day 5–7 sprite (until the player talks to him on Day 7 and he eats it). |
+| やまかわ sprite (no onigiri) | Sprite | A (Pixel) | High | Same pose/location but empty-handed. Swapped in mid-conversation on Day 7 when he eats the onigiri in front of Rikizo. Permanent from then on. |
+| やまかわ conversation portrait (with onigiri) | Portrait | B (MP100) | High | Friendly, easy-going. Onigiri visible in hand/frame. At least 2 expressions (default, happy). Day 5–7 version (pre-eating). |
+| やまかわ conversation portrait (no onigiri) | Portrait | B (MP100) | High | Same character, no onigiri. Post-eating version (Day 7+ after the conversation). At least 2 expressions (default, happy). |
 | Phone message UI | UI element | — | High | Message notification, message list (one entry), conversation view. |
 | Road tileset | Tileset | A (Pixel) | Medium | Simple path connecting house area to town area. |
 
@@ -1099,7 +1095,7 @@ This is a te-form request (来て). It serves as a gentle quest marker — go fi
 
 ### Open Questions for Day 5
 
-1. ~~**Yamakawa's food object:**~~ **RESOLVED — Onigiri.** Yamakawa holds an onigiri in both his overworld sprite and conversation portrait from Day 5–6. It's always the same onigiri. It never changes. It vanishes on Day 7 when 食べる unlocks. See "Yamakawa's Eternal Onigiri" in the running gags and NPC section for full design.
+1. ~~**Yamakawa's food object:**~~ **RESOLVED — Onigiri.** Yamakawa holds an onigiri in both his overworld sprite and conversation portrait from Day 5–7. It's always the same onigiri. It never changes. On Day 7, when 食べる unlocks, Rikizo asks if he can eat it. Yamakawa says no and eats it himself, right there. Sprite changes mid-conversation. See "Yamakawa's Eternal Onigiri" in the running gags and NPC section for full design.
 
 2. **Station sound design:** Should the station be silent (emphasizing emptiness) or have ambient train-station sounds (PA chime, distant rumble) despite no trains existing? Silent is creepier. Ambient sounds without a source is creepier in a different way — where are the sounds coming from? Recommendation: a single, soft PA chime that plays once when you first arrive. Then silence. The chime implies a system. The silence confirms nothing is using it.
 
@@ -1222,7 +1218,7 @@ If the player approaches Dad's car, Dad materializes nearby (if not already ther
 
 #### やまかわ — At the River
 
-**Yamakawa has migrated.** He's not at the コンビニ today. He's at the river bank, sitting on a rock, looking at the water. Still holding the onigiri. Same onigiri. Same hand. Day 2 of the Eternal Onigiri.
+**Yamakawa has migrated.** He's not at the コンビニ today. He's at the river bank, sitting on a rock, looking at the water. Still holding the onigiri. Same onigiri. Same hand. Day 3 of the Eternal Onigiri. (Day 5, 6, and 7 — he holds it all three days. It resolves on Day 7 when 食べる arrives.)
 
 If the player visits the コンビニ first:
 > The usual spot is empty. Yamakawa isn't leaning against the wall. His absence is noticeable — he was there every time you visited. The shopkeeper still says いらっしゃいませ to the void.
@@ -1243,7 +1239,7 @@ If the player visits the コンビニ first:
 いつも again. The rewrite is instant. The mountains have always been there. The river has always been there. Yamakawa has always come here every day.
 
 **If player asks about the onigiri (no interaction — 食べる doesn't exist):**
-> The onigiri is visible. Rikizo looks at it. There is no dialogue option about food. You cannot ask about something when the verbs that describe its purpose don't exist. The onigiri is an object. It is in Yamakawa's hand. That is the complete description.
+> The onigiri is visible. Rikizo looks at it. There is no dialogue option about food. You cannot ask about something when the verbs that describe its purpose don't exist. The onigiri is an object. It is in Yamakawa's hand. That is the complete description. The player who has been eyeing it since Day 5 has no way to express interest, let alone request a bite.
 
 **Design note — Yamakawa at the river:** This is the first time an NPC has moved to a new location between days. Until now, NPCs were fixed: Dad in the living room, Mom in the kitchen, Yamakawa at the コンビニ. Yamakawa's migration to the river signals that NPCs can exist in the wider world, not just at their "assigned" spot. It also makes the river feel alive — it's not just scenery, it's a place where people go. When the player finds Yamakawa already sitting there, looking at the water, it creates the impression that this world has activity even when Rikizo isn't watching. Yamakawa didn't teleport — he walked here. (When? How? He was at the コンビニ yesterday. The river didn't exist yesterday. Don't think about it.)
 
@@ -1296,7 +1292,7 @@ This is the first contact from すずき先生 (Suzuki-sensei), the school Japan
 |---|---|
 | Window (house) | **Changed** — mountains visible through it now. 「山がありますね。」 |
 | Tree-san | Daily greeting continues. 「木-さん、今日も山がありますよ。」("Tree-san, there are mountains today too.") — Rikizo reports landscape changes to the tree. The tree's response to geological upheaval is the same as its response to everything: being a tree. |
-| Yamakawa | **Moved to the river.** Not at the コンビニ. Sprite: still holding onigiri (Day 2 of 2). Tomorrow the onigiri is gone. First NPC location change in the game. |
+| Yamakawa | **Moved to the river.** Not at the コンビニ. Sprite: still holding onigiri (Day 2 of 3). Tomorrow: 食べる arrives. Rikizo will finally be able to ask about it. First NPC location change in the game. |
 | コンビニ | Same window display. Still can't buy anything (買う = Day 8). Shopkeeper says いらっしゃいませ to nobody — Yamakawa isn't there. |
 | 駅 | Same. Empty. No trains. Tracks into void. But now the tracks lead toward the mountains — the void between the station and the mountain range has contracted. The tracks don't reach the mountains, but they point at them. Progress? Or coincidence? |
 | Mom's cake | **Final day.** Day 4–6 persistence ends. The cake is consumed overnight (offscreen, unnarrated — 食べる doesn't exist until tomorrow). On Day 7, the counter is empty. If asked, Mom: 「ケーキ？...ないですよ。」("Cake? ...There isn't any.") The cake's disappearance mirrors the onigiri's — things cease to exist between days. |
@@ -1327,7 +1323,7 @@ This is the first contact from すずき先生 (Suzuki-sensei), the school Japan
 5. **The Fridge** — No inside. Continues.
 6. **Family Possessions** — Cake = FINAL DAY. Gold = continues (demoted in Dad's heart). Car = **new** (Dad's most beloved). Tree = Rikizo's.
 7. **The Empty Phone** — Less empty! Email exists. Two contacts now.
-8. **Yamakawa's Eternal Onigiri** — DAY 2 OF 2. Final day with onigiri. Tomorrow: gone. The countdown the player doesn't know about.
+8. **Yamakawa's Eternal Onigiri** — DAY 2 OF 3. Tomorrow: 食べる arrives. The onigiri is still there. The verb for eating is not. One more day.
 9. **Mom's "Come Home"** — **Pattern crystallizing.** 「家に来てくださいね。」 Every day. Warm. Insistent. She never forgets to say it. She never varies the phrasing. It's a ritual. The player should start wondering why she's so consistent about this specific request.
 
 ### State Tracking (Day 6)
@@ -1508,24 +1504,32 @@ Mom has the most expanded role today. She made breakfast. She ate the cake. She 
 **Outdoor — car gag continues:**
 > Same as Day 6. Touch car → Dad appears. 「だめ！わたしの車です。」 The teleportation gag is now a known pattern. Players test it from increasingly creative positions.
 
-#### やまかわ — Back at the コンビニ
+#### やまかわ — Back at the コンビニ (THE ONIGIRI RESOLUTION)
 
-**THE ONIGIRI IS GONE.**
+**THE ONIGIRI IS STILL THERE.**
 
-Yamakawa is back at the コンビニ. Leaning against the wall. Same pose. But his hand is empty. The onigiri — that permanent, immutable, frozen-in-time triangular rice ball that defined his visual identity for two days — has vanished. Yamakawa's sprite and portrait no longer show the onigiri. He just looks like a guy now.
+Yamakawa is back at the コンビニ. Leaning against the wall. Same pose. Same onigiri. Day 3. The player has seen this onigiri in every interaction with Yamakawa since Day 5. It's in his sprite. It's in his portrait. It's become part of who Yamakawa IS. But today is different. Today, 食べる exists. And for the first time, Rikizo can *talk about what you do with food.*
 
-**If player talks to Yamakawa (4 lines):**
-1. **Yamakawa:** 「りきぞ！」 — "Rikizo!"
-2. **Rikizo:** 「やまかわ！...おにぎりは？」 — "Yamakawa! ...The onigiri?"
-3. **Yamakawa:** 「おにぎり？ああ、食べました。おいしかったですよ。」 — "Onigiri? Oh, I ate it. It was delicious." *(Past tense. He ate it. When? Between days. Offscreen. The onigiri that was a frozen visual constant for 48 hours was consumed in the gap between Day 6 and Day 7, the exact moment 食べる came into existence. He treats this as completely unremarkable.)*
-4. **Yamakawa:** 「りきぞも食べましたか？朝ごはん。」 — "Did you eat too, Rikizo? Breakfast." *(Yamakawa asks about breakfast. Everyone asks about breakfast on the day eating was invented. It's the only thing to ask about.)*
+**If player talks to Yamakawa (6 lines):**
+1. **Yamakawa:** 「お、りきぞ！」 — "Oh, Rikizo!"
+2. **Rikizo:** 「やまかわ！そのおにぎり...食べてもいいですか？」 — "Yamakawa! That onigiri... is it okay if I eat it?" *(The player has been staring at this onigiri for three days. Rikizo finally has the verb. He asks. Politely. Hopefully.)*
+3. **Yamakawa:** 「...だめですよ。わたしのおにぎりです。」 — "...No way. It's MY onigiri." *(A beat. Yamakawa looks at Rikizo. Looks at the onigiri. Looks back at Rikizo. And then—)*
+4. *(Yamakawa eats the onigiri. Right there. In front of Rikizo. The sprite changes mid-conversation — onigiri-in-hand becomes empty-hand. The portrait updates. The onigiri that was a frozen visual constant for three days is consumed in a single animation. It takes maybe two seconds.)*
+5. **Yamakawa:** 「おいしかったですよ。」 — "It was delicious." *(Past tense. Already past tense. He just ate it and it's already in the past. He's smiling. He is not sorry.)*
+6. **Yamakawa:** 「りきぞも食べましたか？朝ごはん。」 — "Did you eat too, Rikizo? Breakfast." *(He just ate the only available onigiri in front of the person who asked for it, and his follow-up is to ask if THEY'VE eaten. As if concerned for their wellbeing. As if he didn't just do what he did.)*
+
+**After the conversation:** Yamakawa's sprite and portrait are permanently updated — no onigiri. He's just a guy now. The onigiri is gone forever. There is no second onigiri. The コンビニ has onigiri in its window display, but 買う doesn't exist until Day 8. The player watched the only free onigiri in the world get eaten by someone else.
+
+**Repeatable line (post-onigiri):** 「りきぞ、また来ましたか！いいですね。」 ("Rikizo, you came again! Nice.") — Same as before, but now his hands are empty. He never mentions the onigiri again. It happened. It's over.
 
 **If player asks about the river:**
 > Yamakawa: 「川ですか？いい川ですよ。また行きます。」 — "The river? Good river. I'll go again." *(He went yesterday. He'll go again. The river is part of his routine now — a routine that is 24 hours old.)*
 
-**Design note — The onigiri resolution:** The onigiri's disappearance is one of the most carefully timed moments in the game. For two days, the player has seen this onigiri in every interaction with Yamakawa. It's in his sprite. It's in his portrait. It's become part of who Yamakawa IS. And then — the morning 食べる enters the world — it's just gone. Yamakawa ate it. Of course he did. The verb exists now. He treats two days of holding an uneaten onigiri as perfectly normal because, in his reality, there was nothing unusual about it. He was holding food. Now he's eaten food. What's the question?
+**Design note — The onigiri resolution:** The punchline is the *cruelty of timing*. For three days, the player has watched Yamakawa hold this onigiri. They couldn't ask about it. They couldn't express interest. They had no verb for what you do with food. Then — the moment 食べる arrives — Rikizo can finally ask. And the answer is no. And then Yamakawa eats it in front of you. The three-day wait doesn't earn you the onigiri. It earns you the vocabulary to *watch someone else eat it*.
 
-The player, who has been watching this onigiri for two days, knowing it couldn't be eaten, knowing there was no verb for consumption — the player understands what happened. The onigiri was frozen in time because the concept of eating didn't exist. The moment it did, everything food-related resolved overnight. Mom ate the cake. Yamakawa ate the onigiri. The world caught up.
+This is funnier than the offscreen consumption version because it's *personal*. Yamakawa doesn't eat the onigiri between days where nobody sees it. He eats it right in your face, after you asked for it, and then asks if YOU'VE eaten. The gag has a victim now — and it's Rikizo (and by extension, the player).
+
+The player, who has been watching this onigiri for three days, knowing it couldn't be eaten, knowing there was no verb for consumption — they finally get the verb and immediately discover that having the verb doesn't mean you get the food. Vocabulary unlocks the *ability to ask*, not the *guarantee of receiving*. This is actually a more honest thesis statement than "vocabulary unlocks the world." Sometimes vocabulary just lets you understand that you can't have something.
 
 ---
 
@@ -1536,15 +1540,15 @@ The コンビニ window display now has additional context: おにぎり is reco
 **Shopkeeper (unchanged):**
 > 「いらっしゃいませ！」
 
-Still stuck. Still can't sell. But now the items in the window have a new dimension: they're not just objects with prices. They're food. Food you can see. Food someone else has eaten (Yamakawa ate an onigiri! He said it was おいしい!). Food with a price tag. And no verb for purchasing.
+Still stuck. Still can't sell. But now the items in the window have a new dimension: they're not just objects with prices. They're food. Food you can see. Food someone just ate *right in front of you* (Yamakawa! He said it was おいしい! While you watched!). Food with a price tag. And no verb for purchasing.
 
-The gap is now crueller. Yesterday, the コンビニ was a window display of abstract objects. Today, the player knows what おにぎり tastes like (おいしかった, according to Yamakawa) and can see one through the glass, and STILL can't buy it.
+The gap is now crueller. Yesterday, the コンビニ was a window display of abstract objects. Today, the player watched Yamakawa eat an onigiri after being asked to share it, and can see *more onigiri* through the glass, and STILL can't buy one.
 
 **Window items (updated descriptions, same items):**
 
 | Item | Price tag | Notes |
 |---|---|---|
-| おにぎり | 百五十円 | Now recognized as food. Yamakawa ate one and said it was delicious. This one sits behind the glass. Taunting. |
+| おにぎり | 百五十円 | Now recognized as food. Yamakawa ate one *in front of you* after you asked for it. This one sits behind the glass. Taunting. |
 | 水 (みず) | 百円 | Now recognized as something you 飲む. Still can't buy more. |
 | ノート | 三百円 | Still just an object. No verb for what you do with a notebook exists yet (書く = write, N5.9). |
 
@@ -1697,7 +1701,7 @@ Rikizo agrees to go to the thing that starts next week. The thing that has no na
 |---|---|
 | Window (house) | Mountains visible (Day 6+). |
 | Tree-san | 「大きいですね！」 — Rikizo can now describe the tree. If befriended: 「大すきです。」 |
-| Yamakawa | Back at the コンビニ. No onigiri. He ate it. He is now just a man. |
+| Yamakawa | Back at the コンビニ. Still holding onigiri — until you talk to him. Then: no onigiri. He ate it. In front of you. After you asked for it. He is now just a man. |
 | コンビニ | Same window display. Same items. Food items now have existential weight — you know they can be eaten. You just can't buy them. |
 | 駅 | Same. Empty. No trains. |
 | River | Same. Yamakawa not present today. Rikizo can now consider (and reject) drinking from it. |
@@ -1713,8 +1717,9 @@ Rikizo agrees to go to the thing that starts next week. The thing that has no na
 | The empty counter | The cake is gone. Three days of 「お母さんのケーキです。」 — resolved overnight. | 「ケーキは...？」 | Satisfaction? Loss? The cake was a fixture. It's gone. The first thing that ever left. |
 | Mom ate the cake | 「お母さんが食べました。」 / 「木-さんが食べました。」 | Accepts either explanation | The tree version is comedy gold. Mom blaming an inanimate object she watched her son befriend. |
 | First breakfast | いただきます. パンとサラダ. ごちそうさまでした. | Happy. Fed. | The ritual of eating is established. This will happen every day from now on. |
-| The missing onigiri | Yamakawa's hand is empty. After two days of the Eternal Onigiri. | 「...おにぎりは？」 | The player has been WAITING for this. Two days of watching an uneaten onigiri. Now it's gone. Of course it is. 食べる exists. |
-| 「おいしかったですよ。」 | Yamakawa reports the onigiri was delicious. Past tense. Offscreen consumption. | Rikizo nods | Yamakawa ate an onigiri that was frozen in his hand for 48 hours and his review is: "delicious." No explanation for the delay. No awareness that anything was unusual. |
+| 「食べてもいいですか？」 | Rikizo finally asks about the onigiri. Three days of waiting. The verb exists. He asks. | Hopeful | The player has been WAITING for this. Three days of watching an uneaten onigiri. Finally, FINALLY you can ask — |
+| 「だめですよ。」→ *eats it* | Yamakawa says no. Then eats it. Right there. In front of you. Sprite changes mid-conversation. | Rikizo watches | — and the answer is no. And then he eats it while you watch. Three days of patience. Zero onigiri. The cruelest punchline in the game. |
+| 「おいしかったですよ。」 | Yamakawa reports the onigiri was delicious. He just ate it. He is not sorry. Then asks if YOU'VE eaten. | Rikizo is speechless | He ate your onigiri (it was never your onigiri) and his concern is whether you had breakfast. The man is either oblivious or a sociopath. |
 | River water — no | Rikizo considers and rejects drinking river water. | 「...飲みません。」 | New verbs create new choices. Including the choice NOT to do something. |
 | The water bottle / quest complete | ◻ 水を＿＿ → ◻ 水を飲む → ✅ 水を飲む. The blank fills in. The sentence completes. You drink. Chime. Checkmark. Five days. | Happy. Hydrated. Accomplished? | The game's thesis statement. You had water. You had an incomplete sentence. You couldn't read it or do it. Five days later, the word fills in, and you drink your water. The reward is nothing. The reward is everything. |
 | Size descriptions | Everything gains dimensions. Mountains are big. The river is small. Tree-san is big. | Descriptive, enthusiastic | The world has adjectives now. Things aren't just here — they're big or small. (Nothing is medium. 中 = Day 9.) |
@@ -1735,7 +1740,7 @@ Rikizo agrees to go to the thing that starts next week. The thing that has no na
 6. **Family Possessions** — Cake = RESOLVED (eaten). Gold = continues. Car = continues (dominant).
 7. **The Water Bottle / First Quest** — **RESOLVED.** ◻ 水を＿＿ → ✅ 水を飲む. The game's first quest, given on Day 2 as an incomplete sentence. The blank sits in the quest log for five days. On Day 7, the word fills in, the sentence completes, and you drink water. Full fanfare for... drinking water. The game's thesis statement: vocabulary completes sentences, sentences unlock the world. The bottle stays in inventory as a reusable comfort action.
 8. **The Empty Phone** — Email thread growing. Two contacts. Still no map, no apps. The phone is becoming useful in tiny increments.
-9. **Yamakawa's Eternal Onigiri** — **RESOLVED.** 食べました. おいしかったです. The two-day saga ends with three words and zero self-awareness. Yamakawa has entered the post-onigiri era.
+9. **Yamakawa's Eternal Onigiri** — **RESOLVED.** Rikizo asks. Yamakawa says no. Yamakawa eats it in front of him. おいしかったですよ. The three-day saga ends with Rikizo watching someone else eat the thing he's been staring at since Day 5. Yamakawa has entered the post-onigiri era. He is not sorry.
 10. **Mom's "Come Home"** — 「家に来てくださいね。」 Day 7. Every day. The pattern is now well-established enough that the player should notice it's not just flavor text — it's a persistent, unvarying request.
 11. **Mom's Eating Authority** — **NEW.** Mom ate the cake overnight. She ate the ENTIRE thing. She told you it was hers. She wasn't lying. But the speed and totality of her consumption — the moment eating became possible — establishes Mom as the supreme food authority. She made breakfast. She controls the kitchen. She decides what gets eaten and when. This dynamic will persist.
 12. **いただきます / ごちそうさまでした** — **NEW RITUAL.** From today onward, every meal begins and ends with these phrases. They are not optional. They are not flavor text. They are how eating works in this world. The player will learn them through repetition, like learning to say "please" and "thank you."
@@ -1747,7 +1752,7 @@ Rikizo agrees to go to the thing that starts next week. The thing that has no na
 **New flags:**
 - `ate_breakfast_day7` — First meal in the game. いただきます → food → ごちそうさまでした. The eating ritual is established.
 - `cake_resolved` — The cake is gone. Tracks which version the player sees (Mom ate it vs Tree-san ate it).
-- `onigiri_resolved` — Yamakawa's onigiri has been eaten. He is now onigiri-free. The eternal has become past tense.
+- `onigiri_resolved` — Yamakawa ate the onigiri in front of Rikizo after refusing to share. He is now onigiri-free. The eternal has become personal.
 - `replied_to_suzuki` — Rikizo agreed to go to the unnamed thing next week.
 - `described_tree_big` — Rikizo told Tree-san it's big. (First size adjective used on a befriended object.)
 - `tree_love_confession` — (If befriended) Rikizo said 大すき to a tree. First love declaration in the game.
@@ -1761,8 +1766,9 @@ Rikizo agrees to go to the thing that starts next week. The thing that has no na
 
 | Asset | Type | Style | Priority | Notes |
 |---|---|---|---|---|
-| Yamakawa sprite (no onigiri) | Overworld sprite | A (Pixel) | High | Same design as Day 5 sprite but empty-handed. Swapped in on Day 7. |
-| Yamakawa portrait (no onigiri) | Conversation portrait | B (MP100) | High | Same character, no onigiri. Day 7+ version. At least 2 expressions. |
+| Yamakawa sprite (no onigiri) | Overworld sprite | A (Pixel) | High | Same design as Day 5 sprite but empty-handed. Swapped in mid-conversation on Day 7 when he eats the onigiri. |
+| Yamakawa portrait (no onigiri) | Conversation portrait | B (MP100) | High | Same character, no onigiri. Swapped mid-conversation Day 7. At least 2 expressions. |
+| Yamakawa eating animation | Conversation portrait / sprite | A+B | Medium | Brief animation of Yamakawa eating the onigiri. Can be as simple as 2–3 frames: onigiri to mouth → bite → empty hand + satisfied expression. Plays mid-conversation on Day 7. |
 | Kitchen — breakfast scene | Background variant | B (MP100) | Medium | Kitchen with visible breakfast items on table (パン, サラダ, コーヒー). Variant of existing kitchen BG. |
 | Kitchen — empty counter | Background variant | B (MP100) | Medium | Kitchen without the cake on the counter. Variant of Day 4–6 kitchen. |
 | River — solo version | Background variant | B (MP100) | Low | River bank without Yamakawa. Day 6 has Yamakawa there; Day 7 river is empty/peaceful. |
@@ -1774,7 +1780,7 @@ Rikizo agrees to go to the thing that starts next week. The thing that has no na
 
 1. **Does Mom offer more food throughout the day?** Recommendation: No. One meal per day for now. Breakfast is established as the daily meal event. Lunch and dinner will arrive when daily time progression becomes more detailed (likely N5.10+ when time-of-day vocab expands). For Day 7, breakfast is the one meal, and it's enough — the point is that eating exists, not that it's complex.
 
-2. **Can Rikizo eat the おにぎり he already has?** If Rikizo received おにぎり somehow (he can't — the only onigiri was Yamakawa's, and it's been eaten; the コンビニ ones are behind glass), could he eat it? Hypothetically yes — 食べる exists. But he has no food inventory items. This becomes relevant on Day 8 when 買う arrives and the コンビニ unlocks. The first purchased おにぎり will be the first player-triggered 食べる event.
+2. **Can Rikizo eat an おにぎり?** Not yet. The only free onigiri was Yamakawa's — and he ate it in front of you after saying no. The コンビニ has onigiri behind the window, but 買う doesn't exist until Day 8. The first purchased おにぎり will be the first player-triggered 食べる event. Yamakawa's onigiri was the first 食べる event in the game, but the player didn't get to do it — they just watched.
 
 3. **River drinking — should it work?** Currently Rikizo rejects it (飲みません). Could there be a secret "drink river water" path? Recommendation: No. River water = no. Tap water = no (where's the tap? Inside, where 中 doesn't exist). Bottled water = yes (Mom's kitchen). This is fine. Drinking options will expand with the コンビニ on Day 8.
 
