@@ -40,7 +40,7 @@
 
 りきぞは外に出ました。魚はとても大きかったです。とても長かったです。
 
-道の人がりきぞを見ました。「あの魚は何ですか！」と人が言いました。「大きい！大きい！」と人が言いました。
+道の人がりきぞを見ました。「あの魚は何ですか！」と男の人が言いました。「大きい！大きい！」と子どもが言いました。
 
 「うーん。」とりきぞが言いました。
 
@@ -138,7 +138,7 @@ Rikizo looked at the fish. The fish looked at Rikizo too.
 
 Rikizo went outside. The fish was very big. Very long.
 
-People on the street looked at Rikizo. "What is that fish!" said a person. "Big! Big!" said another person.
+People on the street looked at Rikizo. "What is that fish!" said a man. "Big! Big!" said a child.
 
 "Hmm," said Rikizo.
 
