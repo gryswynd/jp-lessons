@@ -4569,3 +4569,164 @@ The most interesting Day 16 vocabulary isn't directional — it's 上手 (skille
 2. **覚える availability** — Is 覚える in scope for Dad's "remember that" line? If not, simplify to declarative: 「学校は南だ。」
 
 ---
+
+## Day 17 — "Work & Society" (unlocked by N5.17)
+
+**New kanji:** 午、口、出、入、会、社
+
+**New vocabulary:**
+- 午前 (morning/AM), 午後 (afternoon/PM)
+- 出る (to exit), 出す (to take out), 出口 (exit)
+- 入る (to enter), 入れる (to put in), 入り口 (entrance)
+- 会う (to meet), 会社 (company), 会話 (conversation)
+- 社長 (company president), 社会 (society)
+- 口 (mouth/opening)
+- アルバイト (part-time job)
+
+**Calendar:** 五月十三日 (May 13th, Tuesday). Third school week. Routine established.
+
+**Grammar context:** No new unlocks. All forms through G11 in sustained use. The grammar is stable — vocabulary continues to reshape the world.
+
+---
+
+### The Day the Adults Got Jobs
+
+For sixteen days, the adults in Rikizo's world have been... present. Mom cooks and cleans. Dad sits around the house making observations. Yamakawa stands in front of the コンビニ. The hotel clerk waits at the front desk. Each adult occupies a space but none of them *go to work*. There has been no concept of employment because there has been no word for it.
+
+Today, 会社 materializes. Company. Workplace. The place adults go when they're not at home. And with it: 午前 and 午後 — morning and afternoon. AM and PM. The day splits in half. Time, which has been a continuous blob (morning → daytime → evening → night), suddenly has structure. There is a before-noon and an after-noon, and the difference matters because adults go to 会社 in the 午前 and come home in the 午後.
+
+This is a mirror of Day 12. Day 12 gave Rikizo an obligation (school). Day 17 gives the *adults* obligations. Mom doesn't just cook — she manages a household while Dad is at work. Dad doesn't just sit — he comes home from somewhere. The world gains an economy. People do things for reasons beyond the player's direct observation.
+
+And then there's 出口 and 入り口. Exit and entrance. Every building in the game has had doors, but doors haven't had *labels*. Now they do. The school gate has an 入り口 side and an 出口 side. The コンビニ has an entrance. The station has exits. The world gains flow — directional movement through spaces. You enter, you exit. These aren't the same act.
+
+---
+
+### Morning — Dad Leaves
+
+This is the morning Dad doesn't stay.
+
+1. **Mom:** 「おはよう。お父さんはもう出ましたよ。」 — "Good morning. Dad already left." *(出ました — polite past of 出る. Dad has exited. He's gone. For the first time in 17 days, Dad is not at the breakfast table. The chair is empty. Mom says it casually — as if this has always been the routine. But the player has watched Dad eat breakfast every single morning. His absence is jarring.)*
+
+2. **Rikizo:** 「お父さんは...どこに？」 — "Dad... where to?"
+
+3. **Mom:** 「会社ですよ。午前は会社です。午後に帰ります。」 — "The company. He's at the company in the morning. He comes home in the afternoon." *(会社. Mom names it. Dad goes to a company. He works there. In the morning. He returns in the afternoon. This is the most matter-of-fact revelation in the game — Dad has a job. He's always had a job. He's been going to work since before Rikizo was born. It just hasn't been sayable until now. The player has been seeing Dad on vacation — Golden Week, then weekend, then the gap between weekday mornings and his return. Today the gap has a name: 会社.)*
+
+4. **Mom:** 「りきぞも学校の時間ですよ。午前は学校、午後は...」 — "It's school time for you too, Rikizo. Mornings are school, afternoons are..." *(She structures the day. 午前 = school. 午後 = free. The split creates a framework. Rikizo's day, which has been "do whatever," is now divided. Morning: obligation. Afternoon: choice. This is how adults experience time — segmented, allocated, finite. Rikizo is learning time management through vocabulary.)*
+
+**Design note — Dad's job:** What does Dad do? The game never says. He goes to 会社. He comes home. He's tired or not tired. He has opinions about things. His job is deliberately undefined — not because it doesn't matter, but because the vocabulary to describe specific jobs doesn't arrive for a while. The concept of "company" is enough for now. In N4, when professional vocabulary expands, Dad's role at the company may be specified — or it may remain vague, Dad's eternal mystery.
+
+**Design note — Mom's role:** Mom doesn't go to 会社. She's at home. The game doesn't comment on this — it's a common Japanese family structure. Mom manages the household, the finances, the children. She is, in many ways, the most competent person in the game — she runs everything while Dad works and Rikizo goes to school. Whether the game eventually gives Mom her own professional arc (part-time work, community involvement) is a future decision. For now, she is the anchor of the household, and the household runs because of her.
+
+---
+
+### Walking to School — Exits and Entrances
+
+The walk to school feels different today. Signs are appearing. Not new signs — the signs were always there. But today they're *labeled*.
+
+The station, which Rikizo passes every day, now has visible text:
+> 「出口」 — "Exit"
+> 「入り口」 — "Entrance"
+
+These are the first *functional* environmental texts — they tell you what to do. The bulletin board (Day 13) was informational. 出口 and 入り口 are *directional*. They organize movement. Enter here. Exit there. The world has flow.
+
+**Station master interaction:**
+
+1. **Station Master:** 「入り口はこちらです。出口はあちらです。」 — "The entrance is this way. The exit is that way." *(The station master — who has been standing at an empty station since Day 5 — now has directional information to share. He can guide people. He has a purpose beyond waiting. The entrance/exit distinction gives his station functional architecture even though no trains come.)*
+
+**At the school gate:**
+
+The school gate now has labels visible to the player:
+> 「入り口」on the way in.
+
+The concept of entering (入る) is formalized. Rikizo doesn't just walk through the gate — he *enters* the school. The verb gives the act intentionality.
+
+---
+
+### Classroom — 会う and 会話
+
+Today's class has a theme: meeting and conversation.
+
+1. **すずき:** 「今日は新しい言葉を学びましょう。"会う"は何ですか？」 — "Let's learn new words today. What is 'meeting'?" *(会う — to meet. すずき teaches it as a formal vocabulary item.)*
+
+2. **すずき:** 「人に会います。友だちに会います。先生に会います。毎日、たくさんの人に会いますね。」 — "We meet people. We meet friends. We meet teachers. Every day, we meet many people." *(She builds from abstract to concrete. The grammar is simple — polite present. The concept is social: meeting is something humans do constantly, and now there's a word for it.)*
+
+3. **けん:** 「おれは毎日りきぞに会うよ！」 — "I meet Rikizo every day!" *(けん, inserting himself. Casual register. He frames friendship through the verb — meeting someone daily IS friendship. Simple, true, very けん.)*
+
+4. **すずき:** 「会話もしましょう。会話は"会う"と"話す"ですね。」 — "Let's practice conversation too. Conversation is 'meeting' and 'speaking.'" *(会話 — now writable because 会 is taught today. She breaks the compound down: 会 + 話 = conversation. Meeting + speaking. The etymology is exposed through the lesson. The player learns not just the word but why it's constructed the way it is.)*
+
+**Design note — kanji etymology in classroom scenes:** すずき先生 occasionally breaks down compound words by their constituent kanji. This mirrors a real Japanese classroom technique and reinforces the player's kanji knowledge. 会話 = 会 + 話 is a clean example. Future candidates: 電話 = 電 + 話 (electric + speaking), 会社 = 会 + 社 (meeting + company/shrine). This technique works best when both kanji are recently taught.
+
+---
+
+### 社会 — A Word the World Isn't Ready For
+
+社会 (society) is in the vocabulary list. It's a big word. 社 (company/community) + 会 (meeting/association). Together: society. The organized structure of human interaction.
+
+The game doesn't force this word into a conversation. It exists in the lesson content — the player learns it — but its application in the game world is limited on Day 17. What does "society" mean in a town with a dozen named characters and no visible government, no police, no public services? The word exists before the thing it describes is fully developed.
+
+This is different from 学校 (which materialized alongside the concept) or 書く (which completed deferred actions). 社会 is a word without a clear referent *yet*. It will gain meaning in N4 as the world's social structures become more visible — community meetings, local governance, historical context. For now, it's a vocabulary entry that sits quietly in the glossary, waiting.
+
+**Design note — 社長 (company president):** Another word that implies a world larger than what the player sees. There's a 会社. There's a 社長. Who is the 社長? Not Dad — he goes to 会社 but his position is unspecified. The 社長 is unseen. Like the 校長 was before Day 12, the 社長 exists as a title before a character fills it. In N4, the 社長 may become a named NPC — or may remain a phantom, referenced but never encountered.
+
+---
+
+### After School — 午後
+
+The afternoon. 午後. The new word gives the time of day a name, and with it a quality. 午前 was school, obligation, structure. 午後 is free, open, choice. The split redefines Rikizo's daily experience.
+
+**Yamakawa (コンビニ, afternoon):**
+
+1. **Yamakawa:** 「午後だね。会社の人がたくさん来るよ。」 — "It's afternoon. Lots of company people come." *(Yamakawa observes the afternoon rush — 会社 workers on break or heading home. He tracks the patterns of his customers. 午前 is quiet. 午後 is busy. The コンビニ has daily rhythms that Yamakawa has always known but couldn't describe until today.)*
+
+2. **Yamakawa:** 「おれはアルバイトじゃないけどね。毎日ここにいるだけだよ。」 — "I'm not a part-timer though. I'm just here every day." *(アルバイト — part-time job. Yamakawa clarifies: he's not employed by the コンビニ. He just... is there. Every day. All day. This is the closest the game has come to addressing the Yamakawa question: why is this teenager always at the convenience store? His answer is simultaneously honest and evasive. He's not working. He's just existing. At the コンビニ. As he has since Day 5. The player might find this funny, or unsettling, or both.)*
+
+**Evening — Dad comes home:**
+
+Dad returns in the 午後, as Mom predicted. He's the same Dad — but now he's coming from somewhere. He has a context outside the house. The chair that was empty this morning is occupied again.
+
+1. **Dad:** 「ただいま。」 — "I'm home." *(Standard greeting. But it hits different when the player knows he actually left. Before today, ただいま was just a thing people say. Now it's a return. He went to 会社. He came back. The word has weight.)*
+
+2. **Mom:** 「おかえり。会社はどうでしたか？」 — "Welcome back. How was the company?"
+
+3. **Dad:** 「...たくさん人に会った。」 — "...Met lots of people." *(会った — plain past of 会う. Dad describes his day in one sentence. Minimal, as always. He met people. At the company. It's the most Dad has ever said about his life outside the house, and it's almost nothing.)*
+
+---
+
+### Story Beats
+
+| Moment | What Happens | What the Player Should Feel |
+|---|---|---|
+| Dad's chair is empty | He left for 会社 before Rikizo woke up | Disorientation — Dad has ALWAYS been there at breakfast |
+| Mom structures the day | 午前 = school, 午後 = free | Time just got divided. Life has a schedule. |
+| Exit/entrance signs appear | 出口、入り口 on every building | The world has flow — movement is directional |
+| Yamakawa "I'm not part-time" | He's just... there | Funny? Unsettling? Why IS he always there? |
+| Dad says ただいま | Coming home from somewhere | The word means something now. He actually left. |
+| 社会 exists as a word | Society — but what society? | A vocabulary item waiting for a world to describe |
+
+---
+
+### State Tracking (End of Day 17)
+
+**No new locations.** 会社 is referenced but not visitable (it's Dad's workplace, off-screen). Exits and entrances are labeled on existing buildings.
+
+**No new NPCs.** 社長 referenced but not introduced.
+
+**Vocabulary-driven world changes:**
+- Buildings now have 出口/入り口 labels
+- Time of day has names: 午前, 午後
+- Dad has a commute cycle (leaves AM, returns PM)
+- Environmental signage continues to expand with taught kanji
+
+**Flags:**
+- `dad_works` — Dad goes to 会社. Permanent world state change.
+- `am_pm_unlocked` — Time can be described as 午前/午後.
+- `exit_entrance_labeled` — Buildings gain directional signage.
+- `yamakawa_not_baito` — Yamakawa confirmed: not a part-timer. He just exists at the コンビニ.
+
+**Art assets:**
+| Asset | Type | Priority | Notes |
+|---|---|---|---|
+| 出口/入り口 signs | BG detail set | High | Labels on station, school, コンビニ, デパート. Readable kanji. |
+| Empty Dad chair (morning) | BG variant | Medium | Kitchen scene with Dad's usual seat empty. Small detail, big impact. |
+
+---
