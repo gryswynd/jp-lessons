@@ -3913,9 +3913,9 @@ Mom asks about school. Dad grunts approval. Standard evening routine — but now
 けん sends the first casual text message from a classmate. 会おう — plain volitional of 会う, "let's meet." G9 sustained use. His energy carries into text. He's already planning tomorrow.
 
 **Message from Yamakawa:**
-> 「学校？おれは行かないよ。コンビニの方がいい。」 — "School? I'm not going. The convenience store is better."
+> 「学校？いいよ。おれはコンビニだ。」 — "School? Nah. I'm a convenience store guy."
 
-Yamakawa confirms: he doesn't go to school. He knows it exists. He's chosen the コンビニ. 行かない — plain negative. G9 sustained use. 方がいい — comparison pattern (technically G15, N4.5+ — but this is an NPC text message, not player-produced content; NPCs occasionally use patterns slightly ahead of the curriculum as natural speech, creating comprehensible input the player will formally learn later. Flag for review: if this is too early, simplify to 「学校？いいよ。おれはコンビニだ。」).
+Yamakawa confirms: he doesn't go to school. He knows it exists. He's chosen the コンビニ. だ — casual copula. G9 sustained use. He doesn't say he *can't* go or *won't* go — he just identifies with the コンビニ. おれはコンビニだ. I am convenience store. It's an identity statement, not an excuse.
 
 **Design note — Yamakawa and school:** Yamakawa's refusal to attend school is played for comedy but has undertones. He's a teenager who spends all day at the convenience store instead of going to school. In a realistic context, this would be concerning. In the game world, it's just Yamakawa being Yamakawa — he's where he wants to be. But the player who thinks about it should wonder: *why* doesn't Yamakawa go to school? Is he a dropout? A truant? Does he have a different role in this world? The answer, like many things, will unfold slowly.
 
@@ -4043,16 +4043,32 @@ dad_annoyance:  -1 (daily cooling)
 
 ### Open Questions for Day 12
 
-1. **Should Yamakawa's 方がいい text be simplified?** His message uses comparison grammar (方がいい) which is technically G15/N4.5+. Options: (a) keep it as natural NPC speech that's slightly ahead of the curriculum — comprehensible input; (b) simplify to 「学校？いいよ。おれはコンビニだ。」 which uses only available grammar. Recommendation: simplify for now. NPC text shouldn't confuse students with unlearned patterns. Save 方がいい for when it's taught.
+**All resolved:**
 
-2. **Does the school have other students (background NPCs)?** The classroom has 4 named students. Should there be unnamed background sprites filling other desks? Recommendation: no. The empty desks are more unsettling. A class of 4 in a school built for hundreds. Nobody mentions it. The emptiness is a feature, not a bug. It mirrors the town: named characters in a world that implies population but doesn't show it.
+1. **Yamakawa's text** → RESOLVED: Simplify. No 方がいい. Use: 「学校？いいよ。おれはコンビニだ。」 Save comparison grammar for G15/N4.5+.
 
-3. **What happens if the player skips school (future days)?** On Day 12, attendance is mandatory (narrative requirement). From Day 13+, the player can choose not to go. Recommendation: subtle social consequences. すずき先生 sends a concerned email. けん asks where Rikizo was. ミキ doesn't notice (she was reading). リー noticed but says nothing (polite). After 3 consecutive skips, Mom intervenes. After 5, Dad intervenes (rare Dad-gets-serious moment). No game-over state — just relationship penalties and missed classroom scenes.
+2. **Background students** → RESOLVED: No. Empty desks are the feature. A class of 4 in a school built for hundreds. Nobody mentions it. Mirrors the town — named characters in a world that implies population but doesn't show it.
 
-4. **When does ミキ's book become plot-relevant?** Recommendation: N4.10+ (when she starts reading about town history). In N5, her books are normal school texts or light novels. The shift to historical texts is a subtle signal that she's investigating something. The player who talks to ミキ every day will notice the change in her reading material before any explicit plot flag.
+3. **Skipping school (future days)** → RESOLVED: Subtle social consequences. すずき先生 sends a concerned email. けん asks where Rikizo was. ミキ doesn't notice (reading). リー noticed but says nothing (polite). 3 consecutive skips → Mom intervenes. 5 skips → Dad intervenes (rare serious moment). No game-over state — just relationship penalties and missed classroom scenes.
 
-5. **Does リー's Japanese get more casual over time?** Recommendation: yes, very gradually. By mid-N4, リー occasionally drops です in casual contexts (a huge moment for her character). By late N4, she uses けど and plain negatives with friends. Her casual speech development mirrors the player's own — she's always about 3–5 lessons behind the player in register comfort, making her a lagging mirror rather than a leading one.
+4. **ミキ's book becomes plot-relevant** → RESOLVED: N4.10+. N5 books are normal school texts / light novels. Shift to historical texts signals investigation. Players who talk to ミキ daily notice the change before any explicit plot flag.
 
-6. **Where does ゆき go during school hours?** Recommendation: nobody knows. She's not at school. She's not at the river during school hours (the player is in class). She's simply absent during the structured part of the day and appears in natural spaces during free time. In N4, if the player tracks her movements, they'll find she's always at places that materialized recently — as if she's drawn to newly-created parts of the world. She gravitates toward fresh reality.
+5. **リー's register loosens over time** → RESOLVED: Yes, gradually. ~3–5 lessons behind the player in register comfort (lagging mirror). Mid-N4: occasionally drops です. Late N4: uses けど and plain negatives with friends.
+
+6. **ゆき during school hours** → RESOLVED: Nobody knows. Absent during structured hours, appears in natural spaces during free time. N4 revelation: she gravitates toward newly-created parts of the world — drawn to fresh reality.
+
+### School Schedule Rule
+
+**School is open on weekdays only (Monday–Friday).** The gate is closed on Saturday and Sunday. On weekends, the school building is visible but inaccessible — the gate is shut, the 校長 is absent, and the windows are dark. This means:
+
+- Day 12 (Thursday 5/8) — school open ✓
+- Day 13 (Friday 5/9) — school open ✓
+- Day 14 (Saturday 5/10) — school **closed** (gate locked, no class scene)
+- Day 15 (Sunday 5/11) — school **closed**
+- Day 16 (Monday 5/12) — school open ✓
+
+On closed days, school classmates may appear elsewhere in town (けん at the コンビニ with Yamakawa, リー at the 図書室 if it exists, ミキ on a bench reading). すずき先生 is not seen on weekends — she has a life outside school that the player never witnesses.
+
+This creates a natural weekly rhythm: weekdays have structure (school → home), weekends return to the formless exploration of Golden Week. The contrast reinforces that school changed the texture of Rikizo's life — but only five days a week.
 
 ---
