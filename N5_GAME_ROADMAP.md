@@ -2930,12 +2930,416 @@ dad_annoyance:  -1 (daily cooling at day start)
 
 ### Open Questions for Day 10
 
-1. **Does weather ever change within a day?** Recommendation: Not yet. Day 10 weather is fixed (nice all day). Dynamic weather (rain, clouds) comes with later N4 vocabulary (雨, 曇り). For now, weather is a conversation topic and a TV broadcast, not a mechanic.
+1. **Does weather ever change within a day?** Recommendation: Not yet. Day 10 weather is fixed (nice all day). 雨 (rain) arrives next day (N5.11) — dynamic weather becomes possible then. For now, weather is a conversation topic and a TV broadcast, not a mechanic.
 
 2. **The hotel guest — recurring?** Recommendation: He's there every day from now on. Same spot. Same lack of luggage. Same deflected questions about where he's from. He becomes another quiet anomaly for observant players. He never checks out. He never has bags. He's always "on holiday." On Day 17, when ナナ arrives, she might be the first character to notice him: 「あの人は... 毎日いますね。」 "That person is... here every day."
 
 3. **Should Yamakawa's broken word be repeatable?** Recommendation: No. It happens once, during the initial conversation. If the player replays the conversation (talking to Yamakawa again), the broken word moment is gone — replaced with normal casual dialogue. The glitch was a one-time event. This makes it feel more like a real glitch and less like a scripted moment. Players who weren't paying attention miss it. That's the point.
 
 4. **電気 — do lights ever go out?** Recommendation: Not in Day 10. Lights are toggleable but reliable. In a future Day (maybe N4, when the world starts showing cracks), lights might flicker. Electricity might fail. 電気 stops working. That's a horror beat for later. For now, 電気 is functional and reassuring — you can control the light.
+
+---
+
+## Day 11 — "Sky, Rain & Nature" (unlocked by N5.11: Sky, Rain & Nature)
+
+### Lesson Kanji & Key Vocab Available
+
+**New kanji (4):** 空、雨、花、魚
+
+**Cumulative kanji (70):** All N5.1–N5.10 + above.
+
+**New vocab highlights:**
+- Sky: 空 (そら, sky)
+- Weather: 雨 (あめ, rain)
+- Nature: 花 (はな, flower), 魚 (さかな, fish)
+- Compounds: 花火 (はなび, fireworks), 金魚 (きんぎょ, goldfish), 空気 (くうき, atmosphere/air)
+- Adjectives: かわいい (cute), きれい (beautiful/clean — na-adjective)
+- Grammar: `appearance_sou` (～そうです — "looks like / seems") becomes available at N5.11. Also `attributive_na` (な-adjective + な before nouns, e.g. きれいな花).
+
+**G10 is now in its active reinforcement window.** G10 unlocked after N5.10. This means:
+- `polite_past_adj` (かったです / でした) — actively reinforce
+- `adverbial` (～く / ～に) — actively reinforce
+
+**G9 plain forms move to sustained use.** No longer in active window but should not be absent.
+
+**Calendar:** 五月七日 (May 7th, Wednesday). Extended Golden Week continues. Still no school.
+
+**Character debut: ゆき.** The quiet nature lover. The only character who gently questions things. She appears for the first time in the game world — not at a building, not at the station. She's standing outside, looking at the sky.
+
+---
+
+### The Day the World Got Beautiful
+
+Ten days of vocabulary have built a functional world. A house with rooms. A town with shops. A station with a train. People with names and relationships. But something has been missing from this world, something that no one noticed because the vocabulary for noticing it didn't exist: *beauty*.
+
+The world has had adjectives. いい (good), 大きい (big), 高い (expensive/tall), 新しい (new), きれい (beautiful — but only as a generic compliment, not attached to natural beauty specifically). The world has had objects to describe. But it hasn't had things that exist *because they are beautiful*.
+
+Today: 花. Flowers. Not functional objects. Not buildings or vehicles or food. Just... flowers. Growing. Being pretty. Existing for no utilitarian reason except that the world is more complete with them.
+
+And 空. The sky has been there since Day 6 when the landscape materialized. The player has looked at it. NPCs have commented on the 天気 (since yesterday). But the sky itself — not the weather it produces, not the function it serves — the sky as a *thing*, blue and vast and above — has not had a name. Today it does. The sky becomes an object of attention, not just a backdrop.
+
+And 雨. Rain. The first weather that isn't nice. For ten days straight, it's been いい天気. Perfect blue sky. No variation. Today, the sky can do something other than be nice. It can rain. The world gains imperfection — and imperfection is beautiful in its own way. The rain on the flowers. The fish in the river. The sky changing its mind. Nature arrives, and nature is messy.
+
+---
+
+### Morning — Rain
+
+Rikizo wakes up. The calendar reads 「五月七日」(May 7th, Wednesday).
+
+Something is different outside the window. The sky — which has been blue every single day since it materialized — is grey. Not void-grey. Cloud-grey. Weather-grey. And there's a sound the game has never made before: a soft, steady patter. Rain on the roof.
+
+**If player looks out the window:**
+> 「雨ですか...」 — "Rain..." *(Rikizo's first encounter with non-perfect weather. He doesn't sound disappointed. He sounds thoughtful. The world has been relentlessly pleasant until now. Today it's doing something different. The sky has opinions.)*
+
+**Breakfast with Mom:**
+
+1. **Mom:** 「おはよう、りきぞ。今日は雨ですね。」 — "Good morning, Rikizo. It's raining today." *(Mom states it like information, not complaint. She has never seen rain before — rain has never existed — but she talks about it as if it's a normal Tuesday occurrence.)*
+
+2. **Rikizo:** 「雨ですか...天気がよくなかったですね。」 — "Rain... the weather wasn't good." *(`polite_past_adj` — negative past adjective. G10 reinforcement in the first sentence of the day. Rikizo uses the newly-reinforced form naturally.)*
+
+3. **Mom:** 「でも、花にはいいですよ。」 — "But it's good for the flowers." *(花. Mom mentions flowers before Rikizo has seen them. She knows they're out there. She's always known. The flowers materialized with the rain, but in Mom's world, they've been in the garden forever.)*
+
+4. **Rikizo:** 「花？」 — "Flowers?"
+
+5. **Mom:** 「うん。家の後ろにありますよ。きれいですよ。」 — "Yeah. They're behind the house. They're beautiful." *(家の後ろ — behind the house. The garden area from Day 9 that was visible but empty. Today it has flowers. きれい — the na-adjective gets its defining context. Not "clean." Beautiful. Mom says it with warmth. She's proud of her garden. The garden that appeared overnight. That she has always tended.)*
+
+---
+
+### The Garden — Behind the House
+
+The player walks behind the house to the area that has been a blank space since Day 9 gave us 後ろ. Today:
+
+Flowers. A small, tidy garden. Reds, yellows, whites — small pixel flowers in neat rows. They're wet from the rain. They glisten. The rain falls on them and they look alive in a way that nothing in this game has looked alive before. Objects have existed. Buildings have appeared. But flowers are the first thing in the game world that looks like it *grew*.
+
+**If player examines the flowers:**
+> 「花です。きれいな花ですね。」 — "Flowers. Pretty flowers." *(`attributive_na` — first use. きれいな花. The na-adjective modifying a noun directly. The grammar form arrives alongside its perfect example.)*
+
+**If player examines further:**
+> 「お母さんの花ですか...」 — "Mom's flowers..." *(Mom claimed them. By mentioning them first, she established ownership. The garden is Mom's domain. It extends her kitchen authority to the outdoors — Mom controls food inside and beauty outside. Dad controls vehicles and gold. The house is a territory map.)*
+
+**A goldfish pond:**
+
+In the corner of the garden: a small ornamental pond. And in the pond — 金魚. Goldfish. Orange specks drifting through dark water. They are absurdly, pointlessly beautiful.
+
+> 「金魚です！かわいいですね！」 — "Goldfish! They're cute!" *(かわいい. The first thing in the game that Rikizo calls cute. Not good, not big, not expensive. Cute. An emotional response to something small and alive. 金魚 = gold + fish. Both kanji taught: 金 from N5.3, 魚 from today. The compound word was waiting for its second character.)*
+
+**If player interacts with the goldfish multiple times:**
+> 1st: 「かわいい金魚ですね。」 — "Cute goldfish."
+> 2nd: 「何びきいますか...?」 — "How many are there...?" *(Counter: ひき/匹. The player might not have this counter yet, but Rikizo tries.)*
+> 3rd: 「金魚は気分がいいですか？」 — "Are the goldfish in a good mood?" *(Rikizo projects mood onto fish. 気分 from Day 10 applied to animals. He's talking to goldfish. He talks to a tree. This is consistent behavior.)*
+
+**Design note — the garden:** The garden is Mom's Tree-san. The tree is Rikizo's impossible friendship. The garden is Mom's impossible creation — a garden that appeared overnight, fully formed, that she tends as if she planted the seeds herself. The garden does not have a relationship system. It's environmental storytelling. Mom has always had a garden. The flowers have always been there. The goldfish have always been goldfish. The rain falls on them and they're beautiful.
+
+---
+
+### The Sky — 空
+
+The sky has been a visual element since Day 6. Today it gets a name.
+
+**If player looks up anywhere outdoors:**
+> 「空...」 — "The sky..." *(Rikizo names it. The grey, rainy sky. Not the perfect blue of the last five days. The sky on the day it gets its name happens to be grey. This is either bad luck or poetic timing — the thing you name the moment it stops being perfect.)*
+
+**空気 (atmosphere/air):**
+A compound that merges sky (空) with feeling (気). The atmosphere — the mood of a place.
+
+> **In the garden:** 「空気がいいですね。」 — "The atmosphere is nice." *(Rain + flowers + quiet. The garden has an atmosphere. The game's first environmental quality description. Not "there is a garden." The garden *feels* a certain way.)*
+
+> **At the station:** 「空気が...」 *(Rikizo starts to say something about the station's atmosphere and trails off. The station has a different 空気 than the garden. Quieter. Heavier. The train sits there, inert. The station master sits there, waiting. The air itself feels like it's waiting. Rikizo can name this feeling now — 空気 — but he doesn't finish the sentence. The atmosphere at the station resists description.)*
+
+**If player has paranoia ≥ 5:**
+> 「この空気は... 何ですか？」 — "This atmosphere... what is it?" *(Rikizo almost questions the ambient wrongness. The station's 空気 — it's not just quiet. It's *heavy*. Something hangs in the air at the station that hangs nowhere else. It's been there since Day 5. Rikizo couldn't name it until today. Now he can almost name it, and it unsettles him for a moment before he moves on.)*
+
+---
+
+### 雨 — The First Bad Weather
+
+For ten days, the weather has been perfect. いい天気. Every NPC confirmed it. The TV broadcast it. The sky was blue and clear and unchanging.
+
+Today it rains.
+
+This is the first time the game world has done something *other* than be pleasant. The void is unsettling, but it's not weather — it's absence. The rain is a presence. It's active. The sky chose to rain. The world has agency it didn't have before.
+
+**Gameplay effect:** The rain is visual and auditory. Rain animation over all outdoor screens. A soft rain sound loop. NPCs reference it. It does not prevent the player from doing anything — you can still walk around, still talk to people, still enter buildings. The rain is atmosphere, not mechanic (same principle as Day 10's weather: visual only until N4 when weather systems have more vocabulary support).
+
+**NPC reactions to rain:**
+
+**Shopkeeper (コンビニ):**
+> 「雨ですね。中にどうぞ。」 — "It's raining. Please come inside." *(She invites Rikizo in from the rain. This is the first time an NPC has responded to weather. The world has weather-reactive behavior now.)*
+
+**Yamakawa (inside コンビニ, of course):**
+> 「雨だね。外に出たくないよ。」 — "It's raining, huh. Don't wanna go outside." *(出たくない — plain desire negative. Yamakawa doesn't want to go out. He has found his natural habitat: indoors, sitting, eating. The rain gives him an excuse to never leave the コンビニ. He's thrilled.)*
+
+**Station master:**
+> 「雨ですか。電車にはいい天気ですよ。」 — "Rain? It's good weather for the train." *(What does that mean? Rain is good weather for a train? A train that doesn't move? The station master says something that sounds like wisdom but makes no sense. Or maybe it makes perfect sense — the train sits in the rain and the rain runs down its windows and the station master watches and it's beautiful and sad and patient, like everything about the station.)*
+
+**Hotel clerk:**
+> 「雨の日は人気ですよ。」 — "Rainy days are popular (here)." *(The hotel is popular when it rains. Because people need shelter? Because rain drives people indoors? The clerk says it with professional pride. The hotel has weather-dependent business patterns. In a world where yesterday was the first day weather could be discussed.)*
+
+**Hotel guest:**
+> 「雨ですか。...いいですね。」 — "Rain? ...Nice." *(The guest likes rain. He sits in the hotel lobby, luggage-less, origin-less, and says rain is nice. He's the most content person in the game. Nothing bothers him. He has no past to miss, no luggage to carry, no destination to reach. Rain is nice. Everything is nice. He is the most unsettling character in the game because he is perfectly at peace.)*
+
+---
+
+### ゆき — The Nature Girl
+
+The player is walking through the rain. Between buildings, or near the edge of town, or in a spot that doesn't get much traffic. And there's someone new.
+
+A girl. Standing in the rain. Not under an awning, not rushing to shelter. Standing still, face tilted slightly upward, looking at the sky. She's getting wet. She doesn't seem to mind.
+
+This is ゆき.
+
+**First encounter (5 lines):**
+
+1. **Rikizo:** 「...あ。こんにちは。」 — "...Oh. Hello." *(Rikizo notices her. She doesn't notice him first. She's absorbed in the rain. He has to initiate. This is the opposite of every other NPC introduction — Yamakawa called out to him, the shopkeeper welcomed him, the station master greeted him. ゆき is somewhere else. The player walks up to her.)*
+
+2. **ゆき:** 「...こんにちは。」 — "...Hello." *(A beat. She was somewhere in her head. She comes back slowly. Her greeting is quiet, not cold — she's not unfriendly, just... elsewhere. A quality no other NPC has shown. Everyone in this game is present, engaged, performatively social. ゆき is the first character who seems to have an inner life independent of the player.)*
+
+3. **Rikizo:** 「雨ですよ。だいじょうぶですか？」 — "It's raining, you know. Are you okay?" *(Rikizo is concerned. She's standing in the rain. Normal human response.)*
+
+4. **ゆき:** 「うん...空がきれいだから。」 — "Yeah... because the sky is beautiful." *(The sky. The grey, rainy sky. She thinks it's beautiful. Not the blue sky everyone else praised. Not いい天気. The rain sky. She looks up at the clouds and calls them beautiful. This sentence does three things: (a) it uses casual register naturally — ゆき is a peer, she speaks casually; (b) it uses から as "because" (G9 reinforcement); (c) it establishes ゆき as someone who sees beauty where others see inconvenience. The rain that makes Yamakawa not want to go outside makes ゆき want to stand in it.)*
+
+5. **ゆき:** 「...花も雨がすきだよ。」 — "...The flowers like the rain too." *(すき. ゆき says the flowers like the rain. She attributes feelings to nature — the same way Rikizo talks to a tree. But where Rikizo's tree-talking is played for comedy (a boy befriending a tree), ゆき's nature empathy is played straight. She's not being funny. She believes the flowers have preferences. She might be right. In this world, flowers appeared overnight with the vocabulary for them. Who's to say they don't have feelings?)*
+
+**If player talks to ゆき again:**
+
+6. **ゆき:** 「魚も雨がすきだと思う。」 — "I think fish like the rain too." *(と思う — casual quotation. She continues: fish like rain. She's building a picture of a natural world where everything is connected, everything has preferences, everything is alive in its own way.)*
+
+7. **Rikizo:** 「魚...? 川に魚がいますか？」 — "Fish...? Are there fish in the river?" *(There IS a river. Since Day 6 when 川 appeared. Rikizo has never seen fish in it. He's asking: are there fish now?)*
+
+8. **ゆき:** 「うん。見に行こう。」 — "Yeah. Let's go look." *(行こう — plain volitional. ゆき uses the casual "let's go" — the same form Yamakawa used yesterday for the hotel. But ゆき says it differently. Yamakawa's 行こう was excited, energetic. ゆき's is quiet, an invitation. She walks toward the river. The player can follow.)*
+
+**At the river (if player follows):**
+
+Fish. In the river. Silver-grey shapes flickering in the water, visible between the rain-rippled surface. They've always been there, apparently. Fish require the word 魚 to exist, and 魚 arrived today. The river gained inhabitants.
+
+> **ゆき:** 「きれいでしょう？」 — "Beautiful, right?" *(でしょう — G8 conjecture, available since N5.8. ゆき asks if Rikizo agrees: the fish are beautiful. She's sharing something she cares about. This is the start of her character: nature, beauty, quiet attention to things others overlook.)*
+
+> **Rikizo:** 「うん。きれいだね。」 — "Yeah. They're beautiful." *(Casual agreement. Rikizo and ゆき are already speaking casually. They're peers. The register matched instantly, like Yamakawa — but the energy is completely different. Yamakawa's casual is loud. ゆき's casual is soft.)*
+
+**Design note — ゆき's introduction:** ゆき is the anti-Yamakawa. Where Yamakawa is loud, social, always eating, always at the コンビニ — ゆき is quiet, solitary, standing in rain, looking at the sky. She's introduced through nature (rain, flowers, fish) rather than through a building. She doesn't have a "spot" — she's found in transitional spaces, between locations, at the edges. This is her character: she exists at the margins. She notices things at the margins. She's the only NPC who looks at the sky and says it's beautiful when it's grey. She's the only NPC who will, eventually, notice that the world is wrong — not because she's paranoid, but because she pays attention to things that don't demand attention.
+
+---
+
+### ゆき's Quiet Observations
+
+ゆき says things that sound simple but sit differently in the player's mind. She doesn't question the world directly. She observes it with care, and her observations have edges.
+
+**After the river scene, if player talks to ゆき again:**
+
+> 「空気がいつもと ちがうね、今日は。」 — "The atmosphere feels different today, doesn't it?" *(空気. Atmosphere. "Different from usual." ゆき says the air feels different today. She's right — it's raining for the first time. But "different from usual" implies she has a sense of usual. She has expectations about how the world should feel. No other NPC has expectations. Every other NPC accepts each day as it is. ゆき compares today to yesterday. This is the beginning of awareness.)*
+
+**If player has paranoia ≥ 3:**
+> Rikizo pauses at this. 「...ちがう?」 — "...Different?" He almost engages with the observation. But ゆき has already moved on, looking at the rain again.
+
+**If player has paranoia ≥ 6 AND talks to ゆき a third time:**
+> **ゆき:** 「この花は...いつからありましたか？」 — "These flowers... since when have they been here?" *(She asks. She asks the question. Not aggressively, not fearfully — gently. As if she genuinely doesn't remember the flowers being here yesterday. Because they weren't. They materialized today. ゆき is the first NPC to express uncertainty about the timeline of the world's existence. She's not calling it fake. She's asking when it became real.)*
+> **Rikizo:** 「...ずっと前からですよ。」 — "...From a long time ago." *(Rikizo answers without hesitation. The flowers have always been here. He believes this completely. ゆき nods slowly. She doesn't argue. She doesn't push. She accepts his answer. But the player saw her face when she asked. She wasn't sure. She's the first NPC who wasn't sure.)*
+> **paranoia +1** for witnessing this exchange.
+
+---
+
+### 花火 — The Promise of Fireworks
+
+花火 = flower + fire. Fireworks. The word arrives with the other 花 vocabulary. But fireworks don't happen during the day in the rain. They're an *event*. A future event.
+
+**Mom brings it up:**
+> 「花火がありますよ、今週。」 — "There'll be fireworks this week." *(Mom casually mentions fireworks. A fireworks event. This week. This is the first scheduled community event in the game — something happening in the future that multiple NPCs know about and look forward to. The world has a social calendar now.)*
+
+**Yamakawa confirms:**
+> 「花火！行こう、りきぞ！」 — "Fireworks! Let's go, Rikizo!" *(Of course Yamakawa is excited. Of course he wants to go. 花火 is the first thing in the game that is both beautiful AND an event. It combines nature (花) with spectacle (火). Yamakawa has never seen fireworks. He's extremely certain he loves them.)*
+
+**ゆき's reaction (if player mentions fireworks near her):**
+> 「花火...空がきれいになりますね。」 — "Fireworks... the sky becomes beautiful." *(なる again. The sky *becomes* beautiful. ゆき sees fireworks as a transformation of the sky — the same sky she stood in the rain admiring. For ゆき, the sky is always the point. Fireworks just add color.)*
+
+**Design note — 花火 as narrative seed:** The fireworks event doesn't happen on Day 11. It's announced. It creates anticipation. The player now has something to look forward to — a future event that multiple characters reference. This is the first time the game has created forward momentum through social planning rather than vocabulary unlocks. The fireworks will happen on a later day (Day 13 or 14, timing TBD). Until then, NPCs mention it, Yamakawa brings it up every conversation, and the anticipation builds. 花火 is a word that arrived before its event.
+
+---
+
+### Yamakawa — Rainy Day Energy
+
+Yamakawa is in the コンビニ. Where else would he be? It's raining. He has zero interest in rain.
+
+**Yamakawa conversation (6 lines):**
+
+1. **Yamakawa:** 「よ、りきぞ。雨だね。外に出たくない。」 — "Yo, Rikizo. It's raining huh. Don't wanna go outside." *(出たくない — plain desire negative. A natural, casual complaint. Yamakawa in his element: indoors, commenting on how much he doesn't want to be outdoors.)*
+
+2. **Rikizo:** 「やまかわはいつもここにいるね。」 — "Yamakawa, you're always here." *(いつもここにいる. Rikizo notices. He says it casually, but the player should catch it: Yamakawa is ALWAYS HERE. コンビニ wall → コンビニ chair → still here. He has migrated zero meters in six days. His entire world is one building.)*
+
+3. **Yamakawa:** 「ここがいちばんいいよ。」 — "This place is the best." *(いちばんいい. Yamakawa has ranked the entire accessible world and concluded that a コンビニ is the peak of civilization. He's not wrong — it has food, shelter, and a chair. What more does a person need?)*
+
+4. **Rikizo:** 「ゆきに会った？」 — "Did you meet Yuki?" *(If the player has already met ゆき. Rikizo asks about the new person in town.)*
+
+5. **Yamakawa:** 「ゆき？ああ、あの子。雨の中にいたよ。」 — "Yuki? Oh, that girl. She was out in the rain." *(Yamakawa knows ゆき already — or at least, he recognized her. NPCs knowing each other before the player introduces them is another subtle wrongness: in a normal story, the player would introduce characters to each other. Here, they already know each other. They always have. Even ゆき, who just appeared today.)*
+
+6. **Yamakawa:** 「ゆきは...ちょっとふしぎだよ。」 — "Yuki is... a little mysterious." *(ふしぎ — "mysterious/strange." If it's in the glossary. If not, Yamakawa might say 「ちょっとちがう」 — "a little different." Either way, Yamakawa has noticed that ゆき is not like the other NPCs. He can't articulate what's different. But he's noticed. Yamakawa, who notices nothing about the void or the materializations or the linguistic limits of reality, has noticed that one person doesn't quite fit. This is character insight that defies his usual obliviousness — Yamakawa is socially perceptive even when he's cosmically oblivious.)*
+
+---
+
+### Dad — The Fish Enthusiast
+
+Dad is home. Looking out the window at the rain with the expression of a man whose car is getting wet and he can't drive it.
+
+**Dad conversation (5 lines):**
+
+1. **Dad:** 「雨ですね。車が...」 — "It's raining. The car..." *(Dad's first thought in rain: the car. His car is outside. In the rain. Getting wet. He can't drive it (乗る still doesn't exist). He can't put it in a garage (no garage vocabulary). He can only watch it get rained on. Dad's suffering is mundane and endless.)*
+
+2. **Rikizo:** 「お父さん、川に魚がいますよ！」 — "Dad, there are fish in the river!"
+
+3. **Dad:** 「魚か！いいですね。」 — "Fish! Nice." *(Dad perks up. Fish interests him. This is new character information — Dad likes fish. Maybe he's a fishing type. Maybe he just likes the idea of something alive in the river. Either way, fish > rain > car worries for Dad.)*
+
+4. **Dad:** 「金魚もいますか？」 — "Are there goldfish too?"
+
+5. **Rikizo:** 「うん、お母さんの庭に。」 — "Yeah, in Mom's garden." *(庭 — garden. If this isn't available as vocab, replace with 「家の後ろに」— "behind the house." Dad nods. He doesn't go see them. He's Dad. He doesn't move.)*
+
+**If player tells Dad about the goldfish pond:**
+> Dad: 「金魚は...わたしのですか？」 — "Are the goldfish... mine?" *(Dad immediately attempts to claim the goldfish. The goldfish are in Mom's garden. They are not Dad's. But Dad's instinct — car, gold, toilet — is to claim. Mom will win this territorial dispute, but Dad tried.)*
+
+---
+
+### The Station in Rain
+
+The station in the rain is the most atmospheric location in the game today. Rain runs down the platform roof. The idle train sits on wet tracks, water beading on its windows. The platform is empty except for the station master.
+
+**Station master:**
+
+1. **駅長:** 「雨の日もいい日ですよ。」 — "A rainy day is a good day too." *(The station master finds rainy days good. He finds everything good. He waits in any weather. But today he says something that echoes ゆき — both the station master and ゆき appreciate the non-perfect. Both find beauty or value in rain. They are the game's two characters who look past the surface.)*
+
+2. **Rikizo:** 「電車は...まだですか？」 — "The train... still not yet?"
+
+3. **駅長:** 「まだですよ。でも...雨の後ですね。」 — "Not yet. But... after the rain." *(後. After. The station master gives the most specific timeline he's ever given: after the rain. This is still vague — when does the rain stop? — but it's the first time まだ has been qualified with a condition. Before, it was just "not yet." Now it's "not yet, but after the rain." The train's timeline is tied to the weather. Or maybe the station master is just making small talk. The player can't be sure.)*
+
+**If player asks further:**
+> **駅長:** 「雨が止んで... 空がきれいになったら...」 — "When the rain stops... when the sky becomes beautiful..." *(He trails off. He was about to say something conditional — "when X happens, then Y" — but the grammar for conditionals (～たら) isn't available until N4.25. The station master's sentence breaks the same way Yamakawa's did on Day 10. He can't complete the thought because the grammar doesn't exist yet. But unlike Yamakawa, the station master seems aware that he couldn't finish. He pauses. He looks at the rain. He says nothing more.)*
+> **paranoia +1** if the player noticed Yamakawa's broken word on Day 10 (`yamakawa_broken_word` flag set) — the pattern repeats.
+
+**Design note — linguistic fractures:** Day 10 introduced the concept of characters being interrupted by missing vocabulary (Yamakawa's 乗れな...). Day 11 escalates it: the station master is interrupted by missing *grammar*. The sentence structure he needs — conditional ～たら — doesn't exist yet. This is subtler and more disturbing than a missing word. A missing word is a gap in the dictionary. Missing grammar is a gap in the ability to *think*. The station master's thoughts are bounded by the student's progress. His mind can go as far as the grammar lesson has reached, and no further.
+
+---
+
+### ～そうです — The World Looks Like Something
+
+`appearance_sou` (～そうです, "looks like / seems") becomes available at N5.11. This is the first grammar form that describes *appearance* rather than fact. Until now, characters have stated things as true: 「おいしいです」 (it's delicious), 「高いです」 (it's expensive). Today they can say: 「おいしそうです」 (it *looks* delicious).
+
+The distinction matters: ～そうです introduces subjectivity. The speaker isn't stating a fact — they're reporting an impression. This is the first time the game's language can express uncertainty about reality. Not doubt — just the gap between appearance and truth.
+
+**Where it appears naturally:**
+
+**ゆき, looking at the sky:**
+> 「雨がやみそうですね。」 — "It looks like the rain is going to stop." *(～そう applied to rain stopping. ゆき reads the weather. She observes and predicts. The first NPC to make a prediction about the near future based on observation rather than declaration.)*
+
+**Yamakawa, looking at food:**
+> 「このおにぎり、おいしそうだよ。」 — "This onigiri looks delicious." *(The most natural ～そう usage in any language: food looks good. Yamakawa, the food character, uses the food form. Perfect.)*
+
+**Mom, looking at Rikizo:**
+> 「りきぞ、たのしそうですね。」 — "Rikizo, you look like you're having fun." *(Mom observes her son's mood. She doesn't say he IS having fun — she says he LOOKS like he is. This is subtle maternal awareness: she's reading him, not stating.)*
+
+**Design note — ～そうです as worldbuilding:** In a game where the player suspects the world isn't real, a grammar form that separates appearance from reality is loaded. Everything in this world *looks* real. The sky *looks* blue (when it's not raining). The NPCs *look* normal. The town *looks* like a town. ～そうです lets characters describe appearances — and the player can wonder: is the appearance all there is?
+
+---
+
+### The Phone — Messages in the Rain
+
+**Message from やまかわ:**
+> 「雨だ。コンビニから出たくない。花火、たのしみだね！」 — "It's raining. Don't wanna leave the convenience store. Looking forward to the fireworks!" *(たのしみ — looking forward to. Yamakawa's message is pure Yamakawa: weather complaint + food location + excitement about a future event.)*
+
+**Message from すずき先生:**
+> 「今週の天気はどうですか？名前はまだですか？」 — "How's the weather this week? Have you written your name yet?" *(すずき checks in. She asks about the weather (now answerable!) and the name-writing task (still impossible — 書く = N5.13). The task sits. The notebook sits. Two more lessons.)*
+
+**Message from ゆき (NEW CONTACT):**
+> 「今日は空がきれいでした。また明日。」 — "The sky was beautiful today. See you tomorrow." *(ゆき sends a message. She was added to the phone contacts after meeting her. Her message is short, poetic, and slightly melancholy. "The sky was beautiful." Past tense — the day is ending for her. "See you tomorrow." She'll be there. The player now has a reason to find ゆき each day. She's a daily appointment, like the tree.)*
+
+---
+
+### Running Gags Updated
+
+1. **The Toilet Door** — Status quo. Resolved.
+2. **Dad's Gold** — Continues. 「だめ！」
+3. **Dad's Car** — New dimension: Dad worries about the car in the rain. 「車が雨に...」 He can't protect it. He can't drive it. He can only worry about it. This is the most Dad thing in the game.
+4. **Tree-san** — In the rain. If befriended, Rikizo greets the tree: 「木-さん、雨ですね。だいじょうぶですか？」 "Tree-san, it's raining. Are you okay?" The tree is a tree. Trees love rain. But Rikizo asks. Of course he asks. (+1 relationship for daily greeting as always.)
+5. **The Fridge** — Normal. Functional. Contains food. Mom's domain.
+6. **The Water Bottle** — Still in inventory. With rain falling and a river with fish and a goldfish pond, water is everywhere. The original water bottle is a relic.
+7. **The Empty Phone** — Three contacts. Now four: Yamakawa, すずき, and ゆき. The phone is becoming a social network.
+8. **Yamakawa's Migration** — Still in the コンビニ. Now with a reason: rain. He doesn't want to go outside. He never wanted to go outside. The rain is an excuse, not a cause.
+9. **Mom's "Come Home"** — 「雨ですよ。家に来てくださいね。」 "It's raining. Please come home." Rain gives Mom a reason for her eternal request.
+10. **Mom's Kitchen Authority** — Expands to garden authority. The flowers are hers. The goldfish are hers. The garden is her outdoor domain.
+11. **いただきます / ごちそうさまでした** — Day 5 of the ritual.
+12. **The Station Master's まだ** — Evolves again. "After the rain." A condition. A timeline. The most specific he's ever been. The train sits in the rain and waits.
+13. **The ノート** — Still waiting for 書く (N5.13). Two more lessons. すずき asked again.
+14. **Weather Small Talk** — Evolves from 「いい天気ですね」 to 「雨ですね」. The conversation topic has a second state. Weather can be good or bad. The world has tonal variety.
+15. **The Hotel Guest** — Still there. Still luggage-less. Likes rain. 「雨ですか。...いいですね。」 The most content person in existence.
+16. **Yamakawa's Broken Word** — Not repeated. But the station master had a similar linguistic fracture today (grammar-level, not vocabulary-level). The pattern is escalating.
+17. **花火 Anticipation** — NEW. Fireworks this week. Every NPC knows about it. Yamakawa is counting down. ゆき is thinking about the sky. The game has its first forward-looking communal event.
+18. **ゆき's Questions** — NEW. She asked when the flowers appeared. She's the first NPC to question the timeline of the world. She didn't push. She accepted Rikizo's answer. But she asked. She's the crack in the wall.
+
+---
+
+### State Tracking (Day 11)
+
+**New flags:**
+- `met_yuki_day11` — Player met ゆき for the first time. **Milestone flag** — unlocks ゆき as a daily NPC and phone contact.
+- `followed_yuki_river` — Player followed ゆき to the river to see fish.
+- `yuki_flower_question` — ゆき asked "since when have the flowers been here?" (paranoia ≥ 6 required). +1 paranoia.
+- `saw_garden` — Player visited the garden behind the house.
+- `saw_goldfish` — Player interacted with the goldfish pond.
+- `dad_claims_goldfish` — Dad tried to claim the goldfish.
+- `ekichou_after_rain` — Station master said "after the rain." First conditional timeline for the train.
+- `ekichou_grammar_break` — Station master's sentence broke mid-grammar (conditional ～たら). +1 paranoia if yamakawa_broken_word was set.
+- `hanabi_announced` — Player heard about the fireworks event.
+- `yuki_phone_added` — ゆき added to phone contacts.
+
+**Economy:**
+- Wallet: unchanged. No new purchasable items.
+
+**Relationships available:**
+```
+char_taro:     +1 (daily talk)
+char_sakura:   +1 (daily talk), +1 (garden conversation about flowers)
+char_tree:     +1 (daily greeting, if befriended)
+char_yamakawa: +1 (daily talk)
+char_yuki:     +1 (first meeting — initial relationship established at 1, not 0)
+               +1 (following her to the river)
+```
+
+**Hidden stats:**
+```
+paranoia:       +1 (yuki_flower_question, if paranoia ≥ 6)
+                +1 (ekichou_grammar_break, if yamakawa_broken_word was set)
+curiosity:      +1 (saw_garden — new area explored)
+                +1 (saw_goldfish — new interaction)
+                +1 (followed_yuki_river — following an NPC to a new discovery)
+dad_annoyance:  -1 (daily cooling)
+```
+
+---
+
+### Art Assets Required (Day 11)
+
+| Asset | Type | Style | Priority | Notes |
+|---|---|---|---|---|
+| Rain overlay | Animation / VFX | B (MP100) | **Critical** | Rain animation layer for all outdoor backgrounds. Soft, steady rain. First weather VFX in the game. |
+| Garden (behind house) | Background | B (MP100) | **Critical** | Mom's garden: neat flower rows (red, yellow, white), a small goldfish pond in one corner. Wet from rain. The first purely beautiful location. |
+| Goldfish pond close-up | Sprite / UI | A+B | High | Close-up view when examining the pond: orange goldfish drifting in dark water. Rain ripples on the surface. |
+| ゆき sprite | Sprite | A (Pixel) | **Critical** | Girl standing outdoors. Quiet posture, face slightly tilted up. Not expressive — calm. Should feel like she belongs outside, not at a building. |
+| ゆき conversation portrait | Portrait | B (MP100) | **Critical** | Soft features, thoughtful expression. Not smiling per se — at peace. Hair wet from rain (in initial scenes). |
+| Fish in river | Sprite / animation | A (Pixel) | High | Silver-grey fish shapes visible in the river (from Day 6 川). Flickering movement under rain-rippled water. |
+| Grey sky | BG variant / palette | B | High | Overcast sky replacing the standard blue. Rain-grey, not void-grey — distinguishable. Clouds with texture, not flat. |
+| Station in rain | BG variant | B (MP100) | Medium | Station platform with rain. Train with water on windows. Wet tracks. Atmospheric and melancholic. |
+| Town in rain | BG variant / overlay | B (MP100) | Medium | Town streets with rain. Puddles optional. Wet surfaces. Everything slightly muted compared to sunny days. |
+
+---
+
+### Open Questions for Day 11
+
+1. **When do the fireworks happen?** Recommendation: Day 13 or 14. This gives 2-3 days of anticipation. NPCs mention it each day. Yamakawa gets increasingly excited. The event becomes the first shared social experience in the game.
+
+2. **Does the rain stop during Day 11?** Recommendation: Yes. Partway through the day, the rain clears and the sky goes blue. This creates a before/after: rain → clearing → post-rain beauty. ゆき's prediction (「雨がやみそうですね」) comes true. The station master's "after the rain" gains weight. The first weather change within a single game day.
+
+3. **ゆき's daily location — where is she found?** Recommendation: ゆき is never in the same spot twice. She's found in different outdoor locations each day — near the river, by the tree, at the edge of town, outside the station. The player has to look for her. Unlike Yamakawa (always at the コンビニ), ゆき moves. Finding her each day is a mini-exploration incentive. Her phone message the previous day sometimes hints at where she'll be.
+
+4. **Does ゆき have a relationship track?** Recommendation: Yes. Standard relationship system. Daily talk +1. Following her to places (like the river) +1. Answering her questions honestly (future days) +1. At high relationship (8+), her observations become more pointed and her quest "What Yuki Remembers" becomes available. See GAME_SYSTEMS.md.
+
+5. **Dad and the goldfish — does he actually try to claim them?** Recommendation: Yes, but it's immediately shot down. If the player tells Dad about the goldfish and then talks to Mom: 「お父さんが金魚は自分のだと...」 "Dad said the goldfish are his..." → Mom: 「...金魚はお母さんのですよ。」 "...The goldfish are Mom's." Case closed. Dad doesn't push it. He knows the territorial hierarchy.
+
+6. **空 vs 天気 — do they overlap?** Recommendation: 空 is the physical sky (the thing you look at). 天気 is the weather (the state of the sky). They co-exist naturally: 空 gets a visual description (blue, grey, beautiful), 天気 gets a quality judgment (いい, わるい). NPCs can use both in the same conversation: 「天気はよくないけど、空はきれいですね。」 "The weather isn't great, but the sky is beautiful." This is basically ゆき's entire worldview in one sentence.
 
 ---
