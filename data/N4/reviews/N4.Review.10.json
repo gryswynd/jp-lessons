@@ -1,176 +1,144 @@
 {
   "contentVersion": "1.0.0",
   "id": "N4.Review.10",
-  "title": "Phase 4 Review: Owners, Business & Production",
+  "title": "Phase 4 Review: Body, Life & Work",
   "meta": {
     "phase": 4,
     "type": "assessment",
-    "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 35–36.",
-    "kanji": ["主", "止", "民", "洗", "不", "便", "業", "産"]
+    "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 12-15.",
+    "kanji": [
+      "頭",
+      "顔",
+      "体",
+      "首",
+      "心",
+      "有",
+      "音",
+      "楽",
+      "歌",
+      "声",
+      "低",
+      "軽",
+      "仕",
+      "事",
+      "曜",
+      "早",
+      "急",
+      "員",
+      "薬",
+      "病",
+      "院",
+      "医",
+      "者",
+      "死"
+    ]
   },
   "sections": [
     {
       "type": "conversation",
       "title": "Part 1: Conversation Check",
-      "instructions": "Read each conversation and select the best answer.",
+      "instructions": "Read the conversation and select the best summary.",
       "items": [
         {
           "title": "Conversation 1",
-          "context": "A car wash owner calls a contractor about a water problem.",
+          "context": "A and B are talking about health.",
           "lines": [
             {
               "spk": "A",
-              "jp": "洗車が 中止に なりましたね。",
-              "terms": [
-                "v_sensha",
-                "v_chuushi"
-              ]
+              "jp": "顔色が わるいですね。どうしましたか。"
             },
             {
               "spk": "B",
-              "jp": "はい。水が 止まって います。業者が 来て います。",
-              "terms": [
-                "v_mizu",
-                { "id": "v_tomaru", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_masu" },
-                "v_gyousha",
-                { "id": "v_kuru", "form": "te_form" }
-              ]
+              "jp": "頭が いたいです。少し 気分も わるいです。"
             },
             {
               "spk": "A",
-              "jp": "主に 洗車を する 業者 ですから、不運ですね。",
-              "terms": [
-                "v_omoni",
-                "v_sensha",
-                "v_gyousha",
-                "v_fuun"
-              ]
+              "jp": "仕事は 休みましょう。病院へ 行った ほうが いいですよ。"
             },
             {
               "spk": "B",
-              "jp": "水を 止めて くれます。少し 待って ください。",
-              "terms": [
-                "v_mizu",
-                { "id": "v_tomeru", "form": "te_form" },
-                "v_sukoshi",
-                { "id": "v_matsu", "form": "te_form" }
-              ]
+              "jp": "はい。駅員に 電車の 時間を 聞きます。"
+            },
+            {
+              "spk": "A",
+              "jp": "お大事に。"
             }
           ],
-          "question": "What happened to the car wash service?",
+          "question": "What is the situation?",
           "choices": [
-            "The water stopped and the car wash was cancelled.",
-            "The contractor refused to wash cars.",
-            "Citizens moved the car wash to another district.",
-            "The owner washed cars alone all day."
+            "B is sick and A suggests going to the hospital.",
+            "A is sick and B suggests going home.",
+            "They are working late at the station.",
+            "B is asking A for money."
           ],
-          "answer": "The water stopped and the car wash was cancelled.",
-          "explanation": "A says 洗車が中止になりました (the car wash was cancelled) and B says 水が止まっています (the water has stopped)."
+          "answer": "B is sick and A suggests going to the hospital.",
+          "explanation": "B says their head hurts (頭がいたい) and A suggests the hospital (病院)."
         },
         {
           "title": "Conversation 2",
-          "context": "Two colleagues discuss the limited bus service in their area.",
+          "context": "Two friends discussing music.",
           "lines": [
             {
               "spk": "A",
-              "jp": "バスの 便は 不便ですね。",
-              "terms": [
-                "v_bin",
-                { "id": "v_fuben", "form": "polite_adj" }
-              ]
+              "jp": "あの 歌手は 声が 低いですが、いいですね。"
             },
             {
               "spk": "B",
-              "jp": "そうですね。主に 夕方だけ 動いて います。",
-              "terms": [
-                "v_omoni",
-                "v_yuugata",
-                { "id": "v_ugoku", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_masu" }
-              ]
+              "jp": "はい、有名ですよ。私は よく あの 人の 音楽を 聞きます。"
             },
             {
               "spk": "A",
-              "jp": "業者に たのんで、もっと 便を ふやして ほしいですね。",
-              "terms": [
-                "v_gyousha",
-                "v_bin"
-              ]
+              "jp": "来週の 日曜日、コンサートに 行きたいですか。"
             },
             {
               "spk": "B",
-              "jp": "産業も 少なく なりました。不運ですね。",
-              "terms": [
-                "v_sangyou",
-                { "id": "v_sukunai", "form": "adverbial" },
-                "v_fuun"
-              ]
+              "jp": "行きたいです！ 楽しみです。"
             }
           ],
-          "question": "How is the bus service described?",
+          "question": "What do they decide to do?",
           "choices": [
-            "It mainly runs in the evening only.",
-            "It stops completely in winter.",
-            "The contractor refuses to drive.",
-            "Citizens pay extra for the service."
+            "They critique a singer with a bad voice.",
+            "They decide to go to a concert on Sunday.",
+            "They are singing songs at a karaoke bar.",
+            "They are buying music CDs."
           ],
-          "answer": "It mainly runs in the evening only.",
-          "explanation": "B says 主に夕方だけ動いています (it mainly runs only in the evening)."
+          "answer": "They decide to go to a concert on Sunday.",
+          "explanation": "A asks to go to a concert (コンサート) on Sunday (日曜日), and B agrees."
         },
         {
           "title": "Conversation 3",
-          "context": "Two neighbors discuss the industrial products of their district.",
+          "context": "Rushing in the morning.",
           "lines": [
             {
               "spk": "A",
-              "jp": "この 地区の 産業は 何ですか。",
-              "terms": [
-                "v_chiku",
-                "v_sangyou",
-                "v_nan"
-              ]
+              "jp": "急いで ください！ 急行が 来ますよ。"
             },
             {
               "spk": "B",
-              "jp": "主に 工業です。業者が 産物を 作って います。",
-              "terms": [
-                "v_omoni",
-                "v_kougyou",
-                "v_gyousha",
-                "v_sanbutsu",
-                { "id": "v_tsukuru", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_masu" }
-              ]
+              "jp": "すみません。お金が ありません。"
             },
             {
               "spk": "A",
-              "jp": "不正な ことは ないですか。",
-              "terms": [
-                "v_fusei"
-              ]
+              "jp": "えっ、家に ありますか。"
             },
             {
               "spk": "B",
-              "jp": "いいえ。国民は 産業を 大切に して います。",
-              "terms": [
-                "v_kokumin",
-                "v_sangyou",
-                "v_taisetsu",
-                { "id": "v_suru", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_masu" }
-              ]
+              "jp": "はい。家に 帰ります。"
+            },
+            {
+              "spk": "A",
+              "jp": "時間が ありませんよ..."
             }
           ],
-          "question": "What do the citizens do with the industry?",
+          "question": "Why is A worried?",
           "choices": [
-            "They value and care for the industry.",
-            "They stop industrial production.",
-            "They wash industrial products daily.",
-            "They mainly work outside the district."
+            "They are early for work and relaxing.",
+            "B forgot their money and must return home.",
+            "A lost their bag in the car.",
+            "The train is moving too slowly."
           ],
-          "answer": "They value and care for the industry.",
-          "explanation": "B says 国民は産業を大切にしています (the citizens value the industry)."
+          "answer": "B forgot their money and must return home.",
+          "explanation": "B has no money (お金がありません) and must return home (帰ります), so there is no time (時間がありません)."
         }
       ]
     },
@@ -181,434 +149,543 @@
       "items": [
         {
           "kind": "scramble",
-          "q": "This district's industry mainly produces goods.",
+          "q": "My head hurts, so I will take medicine.",
           "segments": [
-            "この",
-            "地区",
-            "の",
-            "産業",
-            "は",
-            "主に",
-            "産物",
-            "を",
-            "作ります"
-          ],
-          "distractors": [
+            "頭",
             "が",
-            "業者",
-            "作りません"
+            "いたい",
+            "ですから",
+            "薬",
+            "を",
+            "飲みます"
           ],
-          "explanation": "この + 地区の + 産業 + は (topic) + 主に + 産物 + を (object) + 作ります. Use は to mark the topic (industry), を to mark the object of 作る (goods). が marks a grammatical subject, not a topic."
+          "explanation": "Reason (pain) + desukara + Action (take medicine)."
         },
         {
           "kind": "scramble",
-          "q": "Citizens wash their cars every day.",
+          "q": "I want to become a doctor.",
           "segments": [
-            "国民",
+            "私",
             "は",
-            "毎日",
-            "車",
-            "を",
-            "洗います"
-          ],
-          "alts": [
-            ["毎日", "国民", "は", "車", "を", "洗います"]
-          ],
-          "distractors": [
+            "医者",
             "に",
-            "洗車",
-            "洗いません"
+            "なりたい",
+            "です"
           ],
-          "explanation": "国民 + は (topic) + 毎日 + 車 + を (object) + 洗います. Time words like 毎日 can also go at the start: 毎日 + 国民は + 車を + 洗います. Use を to mark 車 as the thing being washed. に marks a destination or result, not a direct object."
+          "explanation": "Target (Doctor) + ni + naritai (want to become)."
         },
         {
           "kind": "scramble",
-          "q": "The contractor said the bus service is inconvenient.",
+          "q": "Please hurry to the station.",
           "segments": [
-            "業者",
+            "駅",
+            "へ",
+            "急いで",
+            "ください"
+          ],
+          "explanation": "Destination (Station) + he + Te-form of Isogu (Hurry) + kudasai."
+        },
+        {
+          "kind": "scramble",
+          "q": "Work is busy, but fun.",
+          "segments": [
+            "仕事",
             "は",
-            "バス",
-            "の",
-            "便",
-            "が",
-            "不便",
-            "だと",
-            "言いました"
+            "いそがしい",
+            "ですが",
+            "楽しい",
+            "です"
           ],
-          "distractors": [
-            "を",
-            "産業",
-            "言います"
-          ],
-          "explanation": "業者 + は (topic) + バスの + 便 + が (subject of embedded clause) + 不便だと + 言いました (past tense). Inside a quoted clause ～と言う, が marks the grammatical subject. を marks a direct object, which doesn't apply here."
+          "explanation": "Contrastive 'ga' (but) connects Busy and Fun."
         },
         {
           "kind": "scramble",
-          "q": "The contractor stopped the car wash water and went home.",
+          "q": "That person spoke with a low voice.",
           "segments": [
-            "業者",
-            "は",
-            "洗車",
-            "の",
-            "水",
-            "を",
-            "止めて",
-            "帰りました"
-          ],
-          "distractors": [
-            "に",
-            "産業",
-            "止まって"
-          ],
-          "explanation": "業者 + は (topic) + 洗車の + 水 + を (object) + 止めて (transitive te-form) + 帰りました. 止める is transitive — someone stops something. 止まる/止まって is intransitive — something stops by itself. The contractor actively stops the water, so 止めて is correct."
-        },
-        {
-          "kind": "scramble",
-          "q": "The bus service was cancelled because it was inconvenient.",
-          "segments": [
-            "バス",
-            "の",
-            "便",
-            "が",
-            "不便",
+            "あの",
+            "人は",
+            "低い",
+            "声",
             "で",
-            "中止に",
-            "なりました"
+            "話しました"
           ],
-          "distractors": [
-            "を",
-            "国民",
-            "なります"
-          ],
-          "explanation": "バスの + 便 + が (subject) + 不便で (conjunctive na-adj form) + 中止に + なりました (past tense). が marks 便 as the subject of the change. 不便で connects the cause to the result. なりました is past — the cancellation already happened."
+          "explanation": "Means/State (Low Voice) + de + Action (Spoke)."
         }
       ]
     },
     {
       "type": "reading",
-      "title": "Part 3: Reading — Working in the Industrial District",
+      "title": "Part 3: Reading - The Doctor's Day",
       "passage": [
         {
-          "jp": "私は 工業の 地区に 住んで います。",
-          "en": "I live in an industrial district.",
+          "jp": "田中さんは 医者です。",
+          "en": "Tanaka-san is a doctor.",
           "terms": [
-            "v_watashi",
-            "v_kougyou",
-            "v_chiku",
-            { "id": "v_sumu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            "v_isha"
           ]
         },
         {
-          "jp": "主に 洗車と 産業の 仕事が あります。",
-          "en": "There is mainly car wash and industrial work here.",
+          "jp": "毎日、朝 早く 起きます。",
+          "en": "Every day, he wakes up early in the morning.",
           "terms": [
-            "v_omoni",
-            "v_sensha",
-            "v_sangyou",
+            "v_mainichi",
+            "k_asa",
+            "v_hayai",
+            "v_okiru"
+          ]
+        },
+        {
+          "jp": "急行の 電車に 乗って、病院へ 行きます。",
+          "en": "He rides the express train and goes to the hospital.",
+          "terms": [
+            "v_kyuukou",
+            "v_densha",
+            "v_noru",
+            "v_byouin",
+            "v_iku"
+          ]
+        },
+        {
+          "jp": "仕事は いそがしいですが、楽しいです。",
+          "en": "The work is busy, but fun.",
+          "terms": [
             "v_shigoto",
-            { "id": "v_aru", "form": "polite_masu" }
+            "v_tanoshii"
           ]
         },
         {
-          "jp": "民家の 主人が 業者に 来て もらいます。",
-          "en": "The owner of the private house has the contractor come.",
+          "jp": "田中さんは 音楽が 好きですから、日曜日は 歌を 歌います。",
+          "en": "Tanaka-san likes music, so on Sundays he sings songs.",
           "terms": [
-            "v_minka",
-            "v_shujin",
-            "v_gyousha",
-            { "id": "v_kuru", "form": "te_form" }
-          ]
-        },
-        {
-          "jp": "業者は 水を 止めて から、洗車を します。",
-          "en": "The contractor stops the water, then does the car wash.",
-          "terms": [
-            "v_gyousha",
-            "v_mizu",
-            { "id": "v_tomeru", "form": "te_form" },
-            "v_sensha",
-            { "id": "v_suru", "form": "polite_masu" }
-          ]
-        },
-        {
-          "jp": "不便な ことも ありますが、国民は 産業を 大切に して います。",
-          "en": "There are inconvenient things too, but citizens value the industry.",
-          "terms": [
-            "v_fuben",
-            { "id": "v_aru", "form": "polite_masu" },
-            "v_kokumin",
-            "v_sangyou",
-            "v_taisetsu",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            "v_ongaku",
+            "v_suki",
+            "v_nichiyoubi",
+            "v_uta",
+            "v_utau"
           ]
         }
       ],
       "questions": [
         {
-          "q": "どこに 住んで いますか。",
-          "a": "工業の 地区",
+          "q": "田中さんの 仕事は 何ですか。",
+          "a": "医者です。",
           "choices": [
-            "大きい 民家",
-            "国民の 工場",
-            "工業の 地区",
-            "不便な 場所"
+            "駅員",
+            "医者",
+            "歌手",
+            "店員"
           ],
           "terms": [
-            "v_doko",
-            "v_sumu",
-            "v_kougyou",
-            "v_chiku"
+            "v_isha"
           ]
         },
         {
-          "q": "業者は 何を して から、洗車を しますか。",
-          "a": "水を 止めます",
+          "q": "朝、どうですか。",
+          "a": "早く 起きます。",
           "choices": [
-            "産物を 作ります",
-            "水を 止めます",
-            "主人に 来ます",
-            "業者に 帰ります"
+            "おそく 起きます",
+            "早く 起きます",
+            "寝ません",
+            "急ぎません"
           ],
           "terms": [
-            "v_gyousha",
-            "v_nani",
-            "v_suru",
-            "v_sensha",
-            "v_mizu",
-            { "id": "v_tomeru", "form": "polite_masu" }
+            "v_hayai",
+            "v_okiru"
           ]
         },
         {
-          "q": "国民は 産業を どう して いますか。",
-          "a": "大切に して います",
+          "q": "何で 病院へ 行きますか。",
+          "a": "急行の 電車",
           "choices": [
-            "中止に して います",
-            "不便に して います",
-            "大切に して います",
-            "止めて います"
+            "車",
+            "急行の 電車",
+            "歩いて",
+            "バス"
           ],
           "terms": [
-            "v_kokumin",
-            "v_sangyou",
-            "v_taisetsu",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            "v_kyuukou",
+            "v_densha"
+          ]
+        },
+        {
+          "q": "日曜日に 何を しますか。",
+          "a": "歌を 歌います。",
+          "choices": [
+            "仕事を します",
+            "休みます",
+            "薬を 作ります",
+            "歌を 歌います"
+          ],
+          "terms": [
+            "v_uta",
+            "v_utau"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Part 4: Reading - My Friend's Illness",
+      "passage": [
+        {
+          "jp": "先週、友だちの 山田さんに 会いました。",
+          "en": "Last week, I met my friend Yamada-san.",
+          "terms": [
+            "v_senshuu",
+            "v_tomodachi",
+            "v_au"
+          ]
+        },
+        {
+          "jp": "山田さんは 顔色が わるかったです。",
+          "en": "Yamada-san's complexion was bad.",
+          "terms": [
+            "v_kaoiro"
+          ]
+        },
+        {
+          "jp": "「頭と 体が いたいです」と 言いました。",
+          "en": "He said 'My head and body hurt'.",
+          "terms": [
+            "k_atama",
+            "k_karada",
+            "v_iu"
+          ]
+        },
+        {
+          "jp": "私は 「病院へ 行って、薬を 飲んで ください」と 言いました。",
+          "en": "I said 'Please go to the hospital and take medicine'.",
+          "terms": [
+            "v_byouin",
+            "v_iku",
+            "v_kusuri",
+            "v_nomu"
+          ]
+        },
+        {
+          "jp": "山田さんは 今日は 元気です。",
+          "en": "Yamada-san is healthy today.",
+          "terms": [
+            "v_kyou",
+            "v_genki"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "山田さんは どうでしたか。",
+          "a": "顔色が わるかったです。",
+          "choices": [
+            "顔色が よかったです",
+            "足が 長かったです",
+            "顔色が わるかったです",
+            "歌が 上手でした"
+          ],
+          "terms": [
+            "v_kaoiro"
+          ]
+        },
+        {
+          "q": "どこが いたかったですか。",
+          "a": "頭と 体",
+          "choices": [
+            "手と 足",
+            "目と 耳",
+            "首と 顔",
+            "頭と 体"
+          ],
+          "terms": [
+            "k_atama",
+            "k_karada"
+          ]
+        },
+        {
+          "q": "私は 何と 言いましたか。",
+          "a": "病院へ 行って ください。",
+          "choices": [
+            "走って ください",
+            "病院へ 行って ください",
+            "歌って ください",
+            "仕事を して ください"
+          ],
+          "terms": [
+            "v_byouin",
+            "v_iku"
+          ]
+        },
+        {
+          "q": "山田さんは 今 どうですか。",
+          "a": "元気です。",
+          "choices": [
+            "病気です",
+            "死にました",
+            "元気です",
+            "有名です"
+          ],
+          "terms": [
+            "v_genki"
           ]
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Part 4: Kanji Readings",
+      "title": "Part 5: Kanji Readings",
       "instructions": "Select the correct reading for the [bracketed] word.",
       "items": [
         {
           "kind": "mcq",
-          "q": "毎日 [洗車]を します。",
+          "q": "彼は [有名]な 歌手です。",
           "choices": [
-            "せんしゃ",
-            "あらくるま",
-            "せんそう",
-            "せいしゃ"
+            "ゆうな",
+            "ゆめい",
+            "ゆうめい",
+            "あな"
           ],
-          "answer": "せんしゃ",
-          "explanation": "洗車 (car wash) is read as <b>sensha</b>. 洗 (N4.35) + 車 (N5)."
+          "answer": "ゆうめい",
+          "explanation": "有名 (famous) is read as <b>yuumei</b>.",
+          "terms": [
+            "v_yuumei",
+            "v_kashu"
+          ]
         },
         {
           "kind": "mcq",
-          "q": "[主]に 産業の 仕事を します。",
+          "q": "[病院]へ 行きました。",
           "choices": [
-            "おもに",
-            "ぬしに",
-            "しゅに",
-            "もにに"
+            "びよういん",
+            "びょういん",
+            "びよいん",
+            "びょうき"
           ],
-          "answer": "おもに",
-          "explanation": "主に (mainly) uses the kun-reading おも of 主, read as <b>omoni</b>."
+          "answer": "びょういん",
+          "explanation": "病院 (hospital) is read as <b>byouin</b>.",
+          "terms": [
+            "v_byouin",
+            "v_iku"
+          ]
         },
         {
           "kind": "mcq",
-          "q": "バスが [中止]に なりました。",
+          "q": "[薬]を 飲みました。",
           "choices": [
-            "ちゅうし",
-            "なかとめ",
-            "ちゅうとめ",
-            "ちゅうしゃ"
+            "めぐすり",
+            "がく",
+            "くすり",
+            "たの"
           ],
-          "answer": "ちゅうし",
-          "explanation": "中止 (cancellation) is read as <b>chuushi</b>. 中 (N5) + 止 (N4.35)."
+          "answer": "くすり",
+          "explanation": "薬 (medicine) is read as <b>kusuri</b>.",
+          "terms": [
+            "v_kusuri",
+            "v_nomu"
+          ]
         },
         {
           "kind": "mcq",
-          "q": "[不便]な 地区に 住んで います。",
+          "q": "日曜日は [仕事]が ありません。",
           "choices": [
-            "ふべん",
-            "ふびん",
-            "ぶべん",
-            "ふへん"
+            "のこと",
+            "しごと",
+            "しじ",
+            "じごと"
           ],
-          "answer": "ふべん",
-          "explanation": "不便 (inconvenient) is read as <b>fuben</b>. 不 (N4.36) + 便 (N4.36)."
+          "answer": "しごと",
+          "explanation": "仕事 (job/work) is read as <b>shigoto</b>.",
+          "terms": [
+            "v_shigoto"
+          ]
         },
         {
           "kind": "mcq",
-          "q": "[工業]は この 地区の 主な 産業です。",
+          "q": "[頭]が いいですね。",
           "choices": [
-            "こうぎょう",
-            "くぎょう",
-            "こうごう",
-            "こうぎょ"
+            "かお",
+            "あたま",
+            "からだ",
+            "くび"
           ],
-          "answer": "こうぎょう",
-          "explanation": "工業 (manufacturing industry) is read as <b>kougyou</b>. 工 (N4.33) + 業 (N4.36)."
+          "answer": "あたま",
+          "explanation": "頭 (head) is read as <b>atama</b>.",
+          "terms": [
+            "v_atamagaii"
+          ]
         },
         {
           "kind": "mcq",
-          "q": "この 地区の [産物]を 作って います。",
+          "q": "あの 先生は [早口]です。",
           "choices": [
-            "さんぶつ",
-            "うみもの",
-            "さんもの",
-            "せいぶつ"
+            "はやぐち",
+            "そうこう",
+            "はやくち",
+            "さくち"
           ],
-          "answer": "さんぶつ",
-          "explanation": "産物 (product / output) is read as <b>sanbutsu</b>. 産 (N4.36) + 物 (N4.5)."
-        },
-        {
-          "kind": "mcq",
-          "q": "水を [止めて] ください。",
-          "choices": [
-            "とめて",
-            "やめて",
-            "しめて",
-            "どめて"
-          ],
-          "answer": "とめて",
-          "explanation": "止める (to stop, transitive) is read とめる; in て-form, <b>tomete</b>. 止 (N4.35)."
-        },
-        {
-          "kind": "mcq",
-          "q": "[国民]が 産業を 大切に します。",
-          "choices": [
-            "こくみん",
-            "くにたみ",
-            "こくじん",
-            "くにびと"
-          ],
-          "answer": "こくみん",
-          "explanation": "国民 (citizen / national) is read as <b>kokumin</b>. 国 (N5) + 民 (N4.35)."
+          "answer": "はやくち",
+          "explanation": "早口 (fast speaking) is read as <b>hayakuchi</b>.",
+          "terms": [
+            "v_hayakuchi"
+          ]
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Part 5: Context & Vocabulary",
+      "title": "Part 6: Context & Vocabulary",
       "instructions": "Select the best word to complete the sentence.",
       "items": [
         {
           "kind": "mcq",
-          "q": "今日 ______ を して、車が きれいに なりました。",
+          "q": "駅で ______ に 道を 聞きました。",
           "choices": [
-            "洗車",
-            "中止",
-            "不正",
-            "産業"
+            "医者",
+            "駅員",
+            "歌手",
+            "店員"
           ],
-          "answer": "洗車",
-          "explanation": "洗車 (sensha, car wash) fits: I did a car wash on the weekend and the car became clean. 洗 (wash) + 車 (car)."
+          "answer": "駅員",
+          "explanation": "At a station (駅), you ask a Station Attendant (駅員).",
+          "terms": [
+            "v_ekiin",
+            "k_michi",
+            "v_kiku"
+          ]
         },
         {
           "kind": "mcq",
-          "q": "不便な 地区の 業者は ______ でした。",
+          "q": "あの 人は ______ が 低いです。",
           "choices": [
-            "不運",
-            "不正",
-            "産物",
-            "国民"
+            "音",
+            "楽",
+            "歌",
+            "声"
           ],
-          "answer": "不運",
-          "explanation": "不運 (fuun, bad luck) fits: the contractor in the inconvenient district had bad luck. 不 (negative prefix) + 運 (luck, N4.16)."
+          "answer": "声",
+          "explanation": "A person has a low voice (声).",
+          "terms": [
+            "v_koe",
+            "v_hikui"
+          ]
         },
         {
           "kind": "mcq",
-          "q": "この 地区の ______ は 工業と 産物 ビジネス です。",
+          "q": "時間が ありません。______。",
           "choices": [
-            "産業",
-            "民族",
-            "中止",
-            "主人"
+            "働きましょう",
+            "歌いましょう",
+            "急ぎましょう",
+            "死にましょう"
           ],
-          "answer": "産業",
-          "explanation": "産業 (sangyou, industry) fits: the industry of this district is manufacturing and product businesses. 産 (produce) + 業 (business)."
+          "answer": "急ぎましょう",
+          "explanation": "If you have no time, you should hurry (急ぐ).",
+          "terms": [
+            "v_jikan",
+            "v_isogu"
+          ]
         },
         {
           "kind": "mcq",
-          "q": "水が 止まったので、洗車が ______ に なりました。",
+          "q": "______ ですから、学校を 休みます。",
           "choices": [
-            "中止",
-            "主語",
-            "産物",
-            "民家"
+            "元気",
+            "有名",
+            "病気",
+            "手軽"
           ],
-          "answer": "中止",
-          "explanation": "中止 (chuushi, cancellation) fits: the car wash was cancelled because the water stopped. 中止になる means 'to be called off'."
+          "answer": "病気",
+          "explanation": "You rest from school because you are sick (病気).",
+          "terms": [
+            "v_byouki",
+            "k_gakkou",
+            "v_yasumu"
+          ]
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Part 6: Grammar Check",
-      "instructions": "Choose the correct particle or verb form to complete the sentence.",
+      "title": "Part 7: Grammar Check",
+      "instructions": "Choose the correct particle or form to complete the sentence.",
       "items": [
         {
           "kind": "mcq",
-          "q": "水 ______ 止めて ください。",
+          "q": "医者 ______ なりたいです。",
           "choices": [
-            "を",
-            "に",
             "が",
-            "で"
-          ],
-          "answer": "を",
-          "explanation": "Use を to mark the object of the transitive verb 止める (to stop something). 水を止める = 'stop the water'."
-        },
-        {
-          "kind": "mcq",
-          "q": "業者が 洗車 ______ して います。",
-          "choices": [
-            "を",
-            "に",
-            "が",
-            "で"
-          ],
-          "answer": "を",
-          "explanation": "Use を to mark the object of する; 洗車をする = 'to do a car wash'. する takes an object with を."
-        },
-        {
-          "kind": "mcq",
-          "q": "水が 止まりました。だから、洗車が 中止 ______ なりました。",
-          "choices": [
             "に",
             "を",
-            "が",
             "で"
           ],
           "answer": "に",
-          "explanation": "Use に with なる to indicate the result of a change: 中止になる = 'to become cancelled / to be called off'."
+          "explanation": "We use 'ni' with narimasu/naritai (to become).",
+          "terms": [
+            "v_isha",
+            "v_naritai"
+          ]
         },
         {
           "kind": "mcq",
-          "q": "新しい 民家を ______。",
+          "q": "父は 「仕事は 楽しい」______ 言いました。",
           "choices": [
-            "建てます",
-            "建ちます",
-            "建っています",
-            "建てて"
+            "と",
+            "を",
+            "が",
+            "に"
           ],
-          "answer": "建てます",
-          "explanation": "To build (transitive) a house uses 建てる → 建てます (tateru/tatemasu). 建つ/建ちます is intransitive and does not take an object with を."
+          "answer": "と",
+          "explanation": "Particle 'to' marks the quotation (what was said).",
+          "terms": [
+            "k_chichi",
+            "v_shigoto",
+            "v_tanoshii",
+            "v_iu"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "頭 ______ いたいです。",
+          "choices": [
+            "を",
+            "に",
+            "で",
+            "が"
+          ],
+          "answer": "が",
+          "explanation": "With body parts and sensations (itai), we typically use 'ga'.",
+          "terms": [
+            "k_atama"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "急行 ______ 行きましょう。",
+          "choices": [
+            "で",
+            "を",
+            "に",
+            "が"
+          ],
+          "answer": "で",
+          "explanation": "Particle 'de' indicates the means of transport (by express train).",
+          "terms": [
+            "v_kyuukou",
+            "v_iku"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "薬を ______ ください。",
+          "choices": [
+            "飲む",
+            "飲んで",
+            "飲み",
+            "飲んだ"
+          ],
+          "answer": "飲んで",
+          "explanation": "Request form uses the Te-form (Nonde) + kudasai.",
+          "terms": [
+            "v_kusuri",
+            "v_nomu"
+          ]
         }
       ]
     }
