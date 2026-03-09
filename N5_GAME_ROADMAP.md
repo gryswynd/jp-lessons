@@ -3679,3 +3679,60 @@ A man stands at the gate. Older. Formal posture. He greets every student who wal
 All of these words arrive simultaneously. The student hasn't just learned "school" — they've learned the entire educational hierarchy in one day. The game can reference this: a bulletin board in the hallway lists the school types. A display case shows photos of 大学 graduation (all identical, newly materialized, nobody questions this). The education system exists fully formed because the vocabulary for it arrived all at once.
 
 ---
+
+### すずき先生 — The Voice Becomes a Person
+
+The hallway is clean. Lockers line one wall. Classroom doors with numbers. Rikizo doesn't know which one is his — but his feet do. He walks to 1-A like he's done it a thousand times. The door is open. A woman stands at the front. She turns.
+
+She's younger than the player might expect from the emails. Mid-thirties, maybe. Warm eyes. A cardigan over professional clothes. She smiles when she sees Rikizo — not a teacher smile (polite, institutional) but a *recognition* smile. She's been emailing this student for six days. She knows him. He's never seen her face.
+
+**すずき先生 — first meeting (6 lines):**
+
+1. **すずき:** 「りきぞさん！来ましたね。よかったです。」 — "Rikizo! You came. I'm glad." *(よかったです — polite_past_adj of いい. G10 reinforcement. She's genuinely relieved. Not because she doubted he'd come — teachers in this world don't doubt students — but because the arrival is meaningful. She's been sending emails into the void for six days. Now the student is here. The abstract has become concrete.)*
+
+2. **Rikizo:** 「すずき先生ですか？メールを読みました。」 — "Are you すずき先生? I read your emails." *(He identifies her by name. He's putting a face to the contact in his phone. The player is doing the same — after six days of text-only interaction, すずき gains a sprite, a portrait, a voice. She is no longer just an email sender.)*
+
+3. **すずき:** 「はい、すずきです。日本語の先生ですよ。」 — "Yes, I'm Suzuki. I'm the Japanese teacher." *(日本語の先生. She teaches Japanese. This is the first use of 日本語 as a subject name — something that can be taught, studied, tested. The language Rikizo has been speaking for 11 days finally has a name. And it's a school subject. And she teaches it. The meta-level is dizzying: a Japanese teacher in a Japanese game teaching Japanese to a character who learns Japanese so the player can learn Japanese.)*
+
+4. **すずき:** 「新しい本がありますよ。これです。」 — "There are new books. These are them." *(She holds up textbooks. 本 — the "new books" from her Day 8 email. They're real now. Physical objects in the game world. The email said「新しい本がありますよ」 — the exact same sentence, word for word. She's been quoting reality before it existed.)*
+
+5. **Rikizo:** 「おもしろそうですね。」 — "They look interesting." *(おもしろそうです — appearance_sou form. G11 active reinforcement. Rikizo's first impression of the textbooks uses the newly unlocked grammar. He's not saying they ARE interesting — he hasn't read them. He's saying they LOOK interesting. The distinction between appearance and reality, encoded in grammar, manifests naturally. Also: おもしろい is new today. The concept of "interesting" didn't exist until this lesson. Learning creates the capacity to find things interesting.)*
+
+6. **すずき:** 「うれしいです！ノートとペンは持っていますか？」 — "I'm happy! Do you have a notebook and pen?" *(She asks about the ノート. This is the Day 9 email callback. She asked Rikizo to write his name in the notebook. He has the notebook. He has a pen now. He still can't write — 書く is N5.13. すずき will discover this gap in a moment.)*
+
+**Design note — すずき先生's register:** すずき is warm but professional. Not as formal as the 校長 (no ございます) but more formal than Mom (no casual particles, no sentence-trailing ね without です). Her register sits precisely between institutional authority and personal warmth — she's a teacher who genuinely cares about her students. She uses ですよ (encouraging) more than ですか (interrogating). She ends sentences with ね (seeking agreement) more often than よ (asserting). She's the first NPC whose register communicates emotional intelligence rather than just social position.
+
+**The ノート moment:**
+
+After the greeting, すずき asks Rikizo to open his notebook.
+
+1. **すずき:** 「ノートに名前を...」 — "In the notebook, your name..." *(She starts the sentence. She's about to say 書いてください — "please write." But 書く doesn't exist. The grammar is there (て-form + ください has been available since N5.5). The vocabulary is not. すずき hits the same wall as every NPC who has tried to reference writing.)*
+
+2. **すずき:** 「名前を...」 — "Your name..." *(She tries again. The sentence won't complete. This is different from Yamakawa's broken 乗れな... on Day 10. Yamakawa was trying to use a conjugation form that didn't exist (potential). すずき is trying to use a verb that doesn't exist. The grammar is available. The word isn't. She can form the request — she just can't finish it because the core verb is missing from the world.)*
+
+3. **すずき:** 「...だいじょうぶです。来週でいいですよ。」 — "...It's okay. Next week is fine." *(She recovers. 来週 — next week. Again. The woman who told Rikizo "from next week" on Day 6 is now pushing the deadline to next week again. It's 来週 all the way down. The task that couldn't be completed before this week can't be completed this week either. The notebook remains blank. 書く arrives tomorrow — N5.13. One. More. Day.)*
+
+**Design note — 書く as the longest deferred action:** The notebook was purchased on Day 8. すずき asked Rikizo to write his name on Day 9. The player has been carrying an empty notebook for four game days. 書く arrives on Day 13 (N5.13). The total wait: five days from purchase to first use. This is the longest a game item has been in inventory without fulfilling its purpose. The pen (also Day 12) joins it — a writing instrument that can't write. Together they represent the most patient Chekhov's gun in the game.
+
+---
+
+### The Classroom
+
+The classroom is a standard Japanese high school room. Desks in rows. A blackboard (チョーク is not a taught word — the chalk is just there, visual). Windows along one wall showing the school yard. すずき先生's desk at the front, covered in papers and books.
+
+**Interactable objects:**
+
+| Object | Interaction | Notes |
+|---|---|---|
+| すずき先生's desk | 「先生の本がたくさんあります。」 "The teacher has many books." | 本 reinforcement. The desk establishes すずき as an intellectual — she has more books than furniture. |
+| Textbook (本) | 「日本語の本です。新しいです。」 "It's a Japanese language book. It's new." | The textbook is the physical manifestation of すずき's Day 8 email promise. 日本語 as a subject appears on the cover. |
+| Blackboard | 「学校の...」 (trails off) | The blackboard exists but its purpose (writing/reading) is deferred — 書く/読む vocabulary isn't available. It's a blank surface. Another Chekhov's prop. |
+| Empty desks | 「クラスの学生は...三人？」 "The class has... three students?" | Only three other desks are occupied. The class is impossibly small. Rikizo doesn't question this. The player should — where are the other students? Are there other students? Did they just not materialize? |
+| Window | 「学校の外は...きれいですね。」 "Outside the school is... pretty." | Looking out the window shows the town from a new angle. The 花 from yesterday are visible. The station is in the distance. Rikizo's world, seen from above for the first time. |
+| ノート (in inventory) | 「名前を...まだ...」 "My name... not yet..." | Rikizo tries to use the notebook. Can't. 書く is still missing. The notebook remains the game's most patient inventory item. |
+
+**Design note — class size:** The class has exactly four students: Rikizo, けん, リー, and ミキ. This is absurdly small for a Japanese high school class (typically 30–40 students). The game doesn't explain this. Background NPCs could fill the desks — unnamed sprites sitting quietly — but the *named* class is four people. This parallels the town: a handful of named characters in a world that implies a population but never shows it. The school exists for these four students the way the コンビニ exists for Yamakawa.
+
+**Design note — the blackboard as void:** The blackboard is the classroom's central feature, and it's blank. In a real school, it would have the date, the subject, notes from the previous class. Here, it's an empty surface — because filling it requires 書く. When writing arrives (Day 13), the blackboard will become the first surface in the game to display *written Japanese that the player can read*. The anticipation is built into the empty space.
+
+---
