@@ -4730,3 +4730,223 @@ Dad returns in the 午後, as Mom predicted. He's the same Dad — but now he's 
 | Empty Dad chair (morning) | BG variant | Medium | Kitchen scene with Dad's usual seat empty. Small detail, big impact. |
 
 ---
+
+## Day 18 — "Body & Senses" (unlocked by N5.18)
+
+**New kanji:** 目、見、耳、聞、足、立
+
+**New vocabulary:**
+- 目 (eye), 耳 (ear), 足 (foot/leg)
+- 見る (to see), 見える (to be visible), 見せる (to show)
+- 聞く (to hear/ask), 新聞 (newspaper)
+- 立つ (to stand)
+- いたい (painful), かなしい (sad), こわい (scary)
+
+**Calendar:** 五月十四日 (May 14th, Wednesday). Mid-week. School day. Routine.
+
+**Grammar context:** No new unlocks. This is the **final N5 lesson**. After Day 18, the N5 vocabulary arc is complete. The game continues into N4, but this is the last day of the foundational layer.
+
+---
+
+### The Day the World Got a Body
+
+For seventeen days, Rikizo has existed as a consciousness that moves through space, speaks, and acts — but has no body. He can eat (食べる, Day 5) but has no mouth (口 arrived yesterday, Day 17). He can walk but has no feet. He can look but has no eyes. The body has been implied by every physical action but never named.
+
+Today, the body exists. Eyes, ears, feet. And with them: perception. 見る (to see), 聞く (to hear). These aren't just vocabulary — they're the senses that the player has been using since Day 1 without being able to name them. Every time the player looked at something in the game world, they were performing 見る. Every time they listened to an NPC, they were performing 聞く. The verbs arrive last, after the actions they describe have been performed thousands of times.
+
+And then: emotions. いたい (painful), かなしい (sad), こわい (scary). For seventeen days, the game's emotional palette has been limited to positive descriptors — おもしろい (interesting), きれい (beautiful), おいしい (delicious), たのしい (fun). The negative emotions didn't exist. Characters couldn't be sad because sad wasn't a word. Things couldn't be scary because scary wasn't a concept. Today, the world gains its shadow side. Not dramatically — these are just adjectives. But their arrival means that the game's emotional range is no longer limited to happiness and interest. Rikizo can now be in pain. Things can be frightening. People can be sad.
+
+For the final N5 lesson, this is exactly right. The foundational layer closes by giving the world a body and teaching it to feel.
+
+---
+
+### Morning — The Body Noticed
+
+1. **Mom:** 「目が赤いですよ。大丈夫ですか？」 — "Your eyes are red. Are you okay?" *(目 — eyes. Mom notices Rikizo's eyes first thing in the morning. She's been looking at his face every day for 18 days, but today she can *name* what she sees. Eyes. And they're red — he was up late, maybe playing games at けん's, maybe reading. Mom observes through the new vocabulary.)*
+
+2. **Rikizo:** 「だいじょうぶです。少し...」 — "I'm fine. Just a little..." *(少し — from Day 14. He trails off. He can't say 疲れた (tired) — it's not available. The concept of tiredness remains deferred. But the physical symptom — red eyes — is observable because 目 exists now.)*
+
+3. **Dad** (if home — check: is it before his 会社 departure?): 「足で歩け。車じゃないぞ。」 — "Walk with your feet. No car." *(足 — feet. Dad, practical and blunt. He's telling Rikizo to walk to school. 車 (car, Day 5) exists but isn't for Rikizo. Dad names the body part — feet — and the action — walking. The body is functional equipment in Dad's worldview.)*
+
+---
+
+### Walking to School — Perception
+
+The walk is different today. Not because the route changed — because Rikizo can now describe what he perceives.
+
+> Rikizo walks south. He sees the school (学校が見えます — 見える, the visibility verb). He hears birds (鳥の声が聞こえます — 聞こえる... check: is 聞こえる in the glossary? If only 聞く, restructure to: 鳥の声を聞きます). He walks on his feet (足で歩きます). Every step is now a named physical act performed by a named body part through named senses.
+
+The game world, which has been *experienced* through senses since Day 1, is now *described* through senses. The player has always seen the school, heard the river, walked the streets. Today, the game catches up to the player — the vocabulary for perception matches the experience of perception.
+
+**Design note — 見る vs 見える vs 見せる:** Three verbs from one kanji, each with a different relationship to vision:
+- 見る = to see (active — you choose to look)
+- 見える = to be visible (passive — it appears in your field of vision)
+- 見せる = to show (causative — you make something visible to someone)
+
+This triad is one of the most elegant verb families in Japanese, and the game can demonstrate all three in a single school day: Rikizo 見る-s the blackboard (active looking), the school 見える-s from the hill (it's visible), すずき先生 見せる-s a new book to the class (showing). Three perspectives on the same sense.
+
+---
+
+### Classroom — The Senses Lesson
+
+1. **すずき:** 「目で見ます。耳で聞きます。口で話します。手で書きます。足で歩きます。」 — "We see with our eyes. We hear with our ears. We speak with our mouths. We write with our hands. We walk with our feet." *(すずき lists the body-sense pairings. Each pair connects a body part (today's kanji) with a verb (previously learned or today). This is a pedagogical moment that doubles as a world-building moment: the body and its functions are enumerated. Rikizo is a complete organism. He has parts. They do things.)*
+
+2. **すずき:** 「何が見えますか？」 — "What can you see?" *(She asks the class. 見える — what is visible. The classroom becomes an exercise in perception.)*
+
+3. **けん:** 「窓が見えるよ。外も見える。」 — "I can see the window. And outside." *(けん looks out the window. He sees the world. This is characteristically けん — his answer is literal and immediate. He sees what's directly in front of him.)*
+
+4. **リー:** 「本が見えます。すずき先生も見えます。」 — "I can see books. And I can see すずき先生." *(リー is more descriptive. She names multiple visible things. She's processing the classroom through the new verb.)*
+
+5. **ミキ:** 「...」 *(ミキ doesn't answer. She's reading. What does ミキ see? The book. Always the book. Her perception is directed inward, toward text. She sees words. She hears words. The physical world is secondary.)*
+
+---
+
+### Emotional Adjectives — The Shadow Side Arrives
+
+いたい (painful), かなしい (sad), こわい (scary). Three adjectives that break the game's emotional monotone.
+
+**いたい — pain:**
+
+1. **けん** (after PE or during break, rubbing his leg): 「いたい！足がいたい！」 — "Ow! My foot hurts!" *(けん, the first character to be in pain. Physical pain, trivially caused — he kicked something, tripped, ran too hard. いたい is deployed casually, comically. Pain exists, but it's not tragic. It's けん being けん.)*
+
+This sets the tone: いたい is physical first. It can be emotional later (心がいたい — "my heart hurts" — but 心 isn't taught yet). For now, pain is a body thing. Feet hurt. That's enough.
+
+**かなしい — sadness:**
+
+This one is subtler. No character cries on Day 18. Nobody has a reason to be sad in the immediate narrative. But the word arrives, and it quietly changes the emotional possibilities.
+
+**ゆき** (optional, river encounter):
+
+1. **ゆき:** 「花が少なくなりましたね。少しかなしいです。」 — "The flowers have gotten fewer. I'm a little sad." *(少なくなりました — have become fewer. かなしい — sad. ゆき connects to the natural world through the new emotional vocabulary. The flowers from Day 11 are fading — it's mid-May, cherry blossom season is ending. ゆき feels their loss. She's the game's first character to express sadness, and she expresses it about nature, not people. This is perfectly in character: ゆき's emotional life is tied to the environment, not to social situations. She feels what the world feels.)*
+
+**こわい — fear:**
+
+1. **けん** (telling a story during break): 「昨日、こわい話を聞いたよ。夜、学校に...」 — "Yesterday, I heard a scary story. At night, at the school..." *(こわい話 — scary story. けん starts a ghost story about the school at night. He trails off — not because the vocabulary runs out, but because すずき interrupts him (「けんさん！」). The ghost story is never finished. But the seed is planted: the school at night is potentially scary. In N4, this becomes relevant — nighttime school exploration is a potential quest.)*
+
+**Design note — emotional adjectives as world-expansion:** These three adjectives don't create physical things (no new buildings, no new NPCs). They create *possible states of being*. The world before Day 18 was pleasant — things were interesting, beautiful, delicious. The world after Day 18 can also be painful, sad, and scary. This isn't a tonal shift — the game doesn't suddenly become dark. But the palette widens. Characters can now have bad days. Things can go wrong. Stories can have tension. The emotional vocabulary is the final piece of the N5 foundation.
+
+---
+
+### 新聞 — The Object That Bridges Two Worlds
+
+新聞 (newspaper). 新 (new, Day 10) + 聞 (hear, today). Literally: "new hearings." A newspaper.
+
+**Dad reads the newspaper.** This is a new evening interaction. Dad, home from 会社, sits with a 新聞. He reads it (読む, Day 13). He's quiet. The newspaper is the first informational object in the game — it contains knowledge about the world outside the town. What does it say? The player can't read most of it (untaught kanji), but the fact that Dad reads a newspaper implies a world of events beyond what the player can see.
+
+1. **Rikizo:** 「お父さん、何を読んでいますか？」 — "Dad, what are you reading?"
+2. **Dad:** 「新聞だ。社会のことだ。」 — "The newspaper. About society." *(社会 — from yesterday. Dad reads about society. The newspaper connects yesterday's abstract word to today's concrete object. 社会 exists because people write about it and other people read about it.)*
+
+**Design note — the newspaper as a mystery vehicle:** In N4, the 新聞 becomes a source of plot information. Headlines about strange events in the town, historical anniversaries that don't match the timeline, weather patterns that don't make sense. Dad reads the newspaper and occasionally mentions headlines. The player can check the newspaper themselves (if they walk to the コンビニ and find one) and discover articles that seed the larger mystery. The newspaper is a window into the world's inconsistencies, delivered in a format that requires 読む to access.
+
+---
+
+### Evening — N5 Complete
+
+Day 18 is the final N5 lesson. The player has learned all 90 N5 kanji. Every N5 vocabulary word is available. The game world has:
+
+- A house with rooms, furniture, appliances
+- A family with roles, jobs, schedules
+- A town with shops, a station, a school, a river, a park
+- Classmates, a teacher, a principal
+- Compass directions, relative positions, exits, entrances
+- Weather, time (AM/PM), days of the week, dates
+- Communication verbs (read, write, speak, hear, see)
+- A body with eyes, ears, hands, feet
+- Emotions ranging from happy/interested/delicious to painful/sad/scary
+- An economy (money, shopping, food)
+- An outside (foreign countries, languages, nationalities)
+- A mystery thread (ゆき's observations, ミキ's reading, the town's inconsistencies)
+
+This is the complete N5 game world. Everything from this point forward (N4) is expansion, complication, and deepening. The foundation is built.
+
+**Design note — no "you completed N5!" fanfare:** The game doesn't announce that N5 is finished. There is no achievement popup, no credits, no summary screen. Day 18 ends like any other day — dinner, phone messages, bed. The transition to N4 is seamless. The player may not even realize they've crossed a threshold until they notice the lesson numbers have changed. This is intentional: language learning doesn't have a finish line. N5 is a milestone, not a destination. The game treats it as a Wednesday.
+
+---
+
+### Story Beats
+
+| Moment | What Happens | What the Player Should Feel |
+|---|---|---|
+| Mom notices Rikizo's eyes | 目 as the first body-part observation | My character has a body now |
+| すずき's body-sense list | Eyes see, ears hear, hands write, feet walk | The organism is complete — every part has a function |
+| けん says いたい | First pain in the game | Lightness — pain is comic here, not tragic |
+| ゆき is sad about flowers | かなしい — the first sadness | Tenderness. The world can feel loss. |
+| けん's unfinished ghost story | こわい — the school at night... | Intrigue. What was he going to say? |
+| Dad reads the newspaper | 新聞 — information about 社会 | The world is bigger than what we can see |
+| Day ends normally | No fanfare. N5 is complete. | Wait... is that it? (Yes. That's the point.) |
+
+---
+
+### Running Gags Updated (End of N5 arc)
+
+1. **The Fridge** — Eternal. 18 days and counting. The fridge will outlive the game.
+2. **けん and Tests** — Recurring. Every class. 「テストは？」 This gag has legs through all of N4.
+3. **ミキ's Book** — Rotating titles. Now into Day 6 of the readable-title mechanic. She's reading something about nature (Day 18 theme).
+4. **Station Master** — Still waiting. No trains. The station has 出口 and 入り口 signs now. The exits lead to the same place. The entrances lead to the same place. The station master guards a loop.
+5. **Yamakawa's Existence** — Not a part-timer. Not a student. Just... present. At the コンビニ. Every day. The game's most benign mystery.
+6. **What Yuki Notices** — She noticed the school was new. She noticed the flowers fading. She notices everything nobody else does. The data accumulates.
+7. **Dad's Job** — He goes to 会社. He comes home. He reads the 新聞. His life outside the house is a black box with a newspaper-shaped output.
+
+**Quest log state (end of Day 18 / end of N5):**
+> 📋 Quest Log
+> ✓ 水を飲む (Day 5 → Day 5)
+> ✓ おにぎりを食べる (Day 5 → Day 8)
+> ✓ お母さんの買い物 (Day 8 → Day 9)
+> ✓ ノートに名前を書く (Day 9 → Day 13)
+> ◻ やまかわのごはん: 新しい食べ物をさがす (Day 10 → ???)
+> ◻ ゆきのきおく: ゆきの話を聞く (Day 11 → N4)
+
+Two open quests carry into N4. Everything else is resolved. The foundation supports what comes next.
+
+---
+
+### State Tracking (End of Day 18 / End of N5)
+
+**Cumulative world state — full N5 summary:**
+
+| Category | State |
+|---|---|
+| **Locations** | House (all rooms), コンビニ, デパート, 駅 (empty), 学校 (weekdays), river, park, けん's house, hotel |
+| **Named NPCs** | Mom, Dad, Yamakawa, ゆき, すずき先生, けん, リー, ミキ, station master, hotel clerk, 校長 |
+| **Economy** | Wallet active. Shopping at コンビニ and デパート. No income system yet. |
+| **Time system** | Calendar (dates), day-of-week, 午前/午後 split, weekday/weekend rhythm |
+| **School** | Weekdays only. Class scenes daily. すずき teaches, けん disrupts, リー studies, ミキ reads. |
+| **Spatial** | Compass (N/S/E/W), relative (上下左右), exits/entrances labeled |
+| **Communication** | Phone (email + text), writing (書く), reading (読む), speech verbs (話す/言う) |
+| **Perception** | 見る/見える/見せる, 聞く. Body parts: 目/耳/手/足/口 |
+| **Emotions** | Positive: おもしろい, きれい, おいしい, たのしい, うれしい. Negative: いたい, かなしい, こわい |
+| **Mystery threads** | ゆき's observations (school new, flowers fading, writing remains). ミキ's reading. Station with no trains. Yamakawa's non-employment. |
+| **Relationship max** | Most NPCs at 10–15 range depending on player engagement |
+
+**Hidden stats (approximate end-of-N5 ranges):**
+```
+paranoia:       3–8 (depending on ゆき interactions)
+curiosity:      5–12 (depending on exploration)
+dad_annoyance:  0–3 (mostly cooled by daily decay)
+```
+
+---
+
+### Art Assets Required (Day 18)
+
+| Asset | Type | Priority | Notes |
+|---|---|---|---|
+| Dad with newspaper | Sprite variant | High | Evening Dad, seated, holding 新聞. New default evening pose. |
+| けん rubbing leg | Sprite variant | Medium | いたい expression — comedic pain, not serious injury |
+| Fading flowers (river) | BG variant | Medium | Cherry blossoms thinning compared to Day 11. Seasonal progression. ゆき notices. |
+
+Light asset day — the final N5 lesson adds emotional range, not physical locations.
+
+---
+
+### Open Questions for Day 18
+
+1. **聞こえる (to be audible) availability** — Is 聞こえる in the N5 glossary alongside 聞く? If yes, it mirrors the 見る/見える pair. If not, Day 18 only has active perception (聞く = choose to listen), not passive (聞こえる = sounds reach you). Check before implementation.
+
+2. **けん's ghost story** — How much of the story does he tell before すずき interrupts? Recommendation: enough to establish "school at night is scary" as a concept, not enough to tell a complete narrative. The interruption IS the point — the story is unfinished, creating anticipation. In N4, けん can tell the full version during a nighttime school event (cultural festival preparation, etc.).
+
+3. **N5 → N4 transition** — Is there any in-game marker? Recommendation: no explicit marker. Day 19 simply starts with new kanji and the lesson counter reads N4.1. The player might notice the level change in the app UI (lesson selection screen) but the game world is continuous. Maybe すずき says 「新しい本がありますよ」— same phrase as Day 12, but this time it's the N4 textbook. A quiet callback.
+
+4. **Seasonal progression** — ゆき notices flowers fading. Should the game track real seasonal changes? Recommendation: yes, subtly. Cherry blossoms fade through mid-May. By June (N4 mid-range), rainy season begins. The background art and ゆき's commentary shift with the calendar. Weather affects NPC placement: rainy days move outdoor NPCs indoors or under awnings. This is a significant system investment but massively atmospheric.
+
+---
