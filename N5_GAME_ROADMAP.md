@@ -3817,3 +3817,242 @@ Three students are already seated when Rikizo enters. Each occupies a distinct p
 | ミキ | The reader | Polite (formal personality) | Mystery thread, intellectual content, book references | Discovers historical inconsistencies, investigator role in N4 |
 
 ---
+
+### The First Lesson — 日本語
+
+すずき先生 teaches a class. The subject: 日本語. The game's first formal lesson-within-a-lesson.
+
+This is a meta moment the game doesn't call attention to but the player will feel. すずき先生 teaches Japanese vocabulary. The player is learning Japanese vocabulary. すずき writes words on the board — except she can't write yet (書く, N5.13), so she *says* them and the students repeat. The lesson is oral. It has to be.
+
+**Class scene (brief — this is a montage, not a full conversation):**
+
+すずき先生 stands at the front. The three classmates are seated. She begins.
+
+1. **すずき:** 「今日は日本語の学校の一日目ですね。」 — "Today is the first day of Japanese language school." *(一日目 — first day. She frames the day as a beginning. For the characters, this is the start of the school year. For the player, it's Day 12 of the game. Both are correct.)*
+
+2. **すずき:** 「日本語はおもしろい語ですよ。学ぶのが好きになりますよ。」 — "Japanese is an interesting language. You'll come to like studying it." *(学ぶ — to learn. 好きになる — to come to like. She's optimistic. She's also describing the player's journey.)*
+
+3. **けん** (whispering to Rikizo): 「テストはないよね...？」 — "There's no test... right?" *(けん's first concern. Tests. Always tests. つまらない.)*
+
+4. **すずき:** 「けんさん、聞いていますか？」 — "Ken, are you listening?" *(聞いている — te-form progressive. She caught him whispering. This is the start of a running gag: すずき calling on けん, けん not paying attention, the class quietly amused.)*
+
+**Design note — class scenes in future days:** From Day 12 onward, school is a daily location with a class scene. These scenes serve multiple purposes: (1) they introduce or reinforce vocabulary from the day's lesson in a naturalistic context; (2) they advance classmate relationships; (3) they provide a structured environment for grammar reinforcement (すずき can explain grammar rules in-world, mirroring the lesson content). Class scenes are short — 3–5 dialogue lines — and optional to sit through. The player can arrive at school, attend class (gaining relationship points with すずき and classmates), or skip it and explore the school building. Skipping has no mechanical penalty on Day 12 but accumulates social consequences over time (すずき comments, けん asks where Rikizo was, etc.).
+
+---
+
+### Identity — The World Gets a Name
+
+Sometime during the school day — during class, during break, or during a conversation with リー — the following concepts crystallize:
+
+**日本 (Japan):** The world has a name. This town, this country, this place — it's 日本. For eleven days, Rikizo has been living in a town with no country. There was no nation. No map. No border. Just a town that expanded as vocabulary grew. Now the town is in a country, and that country is Japan, and that fact has always been true but has never been sayable.
+
+**日本語 (Japanese):** The language has a name. Every word Rikizo has spoken — every sentence, every conversation, every email — has been in Japanese. But "Japanese" as a named, identifiable language didn't exist until today. It was just... how people talk. Now it's a subject. A thing you can study. A thing リー came from another country to learn. A thing すずき先生 teaches. The act of speaking has been retroactively categorized.
+
+**日本人 (Japanese person):** Identity has a label. Mom, Dad, Rikizo, the shopkeepers, the station master — they're all 日本人. Not because anything about them changed, but because the word exists and it applies. Before today, there was no word for what they are. They were just... people. Now they're a *kind* of people. The kind that lives in 日本 and speaks 日本語.
+
+**外国 (foreign country):** There is an *elsewhere*. This is the most conceptually radical word of the day. The game world has expanded from a room (Day 1) to a house to a town to a region with a station and hotel. But it has never had an *outside*. 外 (outside) existed since Day 9, but 外 was the yard. 外国 is different. 外国 is a country that isn't here. A place Rikizo has never seen, will probably never see, but that definitively exists. 中国 is a specific example — it's where リー is from. But 外国 as a concept opens the door to *everywhere else*.
+
+**外国人 (foreigner):** And there are people from there. リー is 外国人. The word is polite — it means "person from an outside country," not a pejorative. But its existence implies a category boundary. There are 日本人 and there are 外国人. There is an inside and an outside. There is us and there is them. These categories materialized today, fully formed, along with a person who embodies the distinction.
+
+**Design note — identity vocabulary as a theme:** This is the only lesson in the game where an entire vocabulary cluster is dedicated to national and cultural identity. The game doesn't moralize about this — it doesn't tell the player that categories are good or bad, that borders are real or artificial. It presents the vocabulary and lets the world react. リー is 外国人 and she's a classmate. She's from 中国 and she studies 日本語. The categories exist and the human reality is more nuanced than the categories. This is true of every vocabulary word in the game — the word "rain" doesn't capture the experience of rain — but it's most pointed here, where the words categorize *people*.
+
+**リー and identity — optional conversation:**
+
+If the player talks to リー during break:
+
+1. **リー:** 「日本はきれいですね。中国も大きくてきれいですよ。」 — "Japan is beautiful. China is also big and beautiful." *(大きくて — adverbial te-form connector. G10 reinforcement. リー compares countries. She's not homesick — she's proud of both places. Her 中国 is large and beautiful. Her 日本 is beautiful too. She holds both.)*
+
+2. **Rikizo:** 「中国はどんな国ですか？」 — "What kind of country is China?" *(どんな — what kind of. He asks because he can ask. The word 国 exists. The question is possible.)*
+
+3. **リー:** 「大きい国です。人がたくさんいます。食べ物がおいしいですよ！」 — "It's a big country. There are many people. The food is delicious!" *(She describes her country in terms Rikizo — and the player — can understand. Big, lots of people, good food. Simple vocabulary, complex emotion. She's describing home to someone who has never been there, in a language neither of them was born speaking.)*
+
+4. **Rikizo:** 「おもしろそうですね。」 — "It sounds interesting." *(appearance_sou again — G11 reinforcement. He can't see China. He can only imagine it based on what リー says. So he uses the appearance form: it *seems* interesting. The grammar captures the epistemic gap perfectly.)*
+
+---
+
+### After School — The Walk Home
+
+School ends. Rikizo walks home. The town feels different now — not because anything has changed physically, but because Rikizo's relationship to it has changed. He has a schedule now. He has a place he goes in the morning and a place he returns to in the afternoon. The formless Golden Week life is over. Structure has arrived.
+
+**On the walk home — ゆき encounter (optional):**
+
+If the player takes the long way home (past the river), ゆき is there. She's not at school. She wasn't in the classroom. She doesn't seem to go to school. The player might not notice this today — there's too much else happening — but it should nag at them later. Every teenager in this world goes to school... except ゆき. She's always outside. Always somewhere natural. Never in an institution.
+
+1. **ゆき:** 「学校に行きましたか？」 — "Did you go to school?" *(She asks. She knows about school. She doesn't go. She asks about it the way you'd ask about a foreign country — curious, distant.)*
+
+2. **Rikizo:** 「うん。おもしろかったよ。」 — "Yeah. It was interesting." *(Casual register with ゆき — they're friends after Day 11. おもしろかった — plain past adjective. G10 sustained use.)*
+
+3. **ゆき:** 「学校は...新しそうですね。」 — "The school... looks new." *(新しそう — appearance_sou. G11 reinforcement. She says the school looks new. Because it IS new. It materialized today. But every other character acts like it's always been there. ゆき is the only one who notices that it looks freshly created. She doesn't push the point. She never does. She just observes.)*
+
+**Design note — ゆき doesn't go to school:** This is an intentional absence that will become significant. ゆき is a 高校生-age character who doesn't attend school. No one mentions this. No one asks her why. She exists in the natural spaces of the world — river, park, garden, roadside — never in institutional spaces. In N4, this absence becomes a clue: if ゆき is from another timeline (as her quest suggests), she may not *have* a school here. She may not be registered. She may not be real in the way the other characters are real. Her absence from school is the first structural evidence of this.
+
+**Evening at home:**
+
+Mom asks about school. Dad grunts approval. Standard evening routine — but now with a new topic of conversation.
+
+1. **Mom:** 「学校はどうでしたか？」 — "How was school?" *(The most universal parent question. Mom has been waiting 12 days to ask this.)*
+
+2. **Rikizo:** 「よかったです。すずき先生はやさしそうです。クラスに友だちがいます。」 — "It was good. すずき先生 seems kind. I have friends in the class." *(よかった — past adjective. やさしそう — appearance_sou. This brief report uses three grammar forms naturally: past adjective, appearance, and existential いる.)*
+
+3. **Dad:** 「テストはあるか？」 — "Are there tests?" *(Dad cuts to the functional question. テスト — tests. Dad's concern is performance, not experience. His register is casual-authoritative: あるか without です. Standard Dad.)*
+
+4. **Mom:** 「お父さん...まだ一日目ですよ。」 — "Dear... it's only the first day." *(Mom mediates. As always. The family dynamic holds even with new topics.)*
+
+---
+
+### Phone Updates
+
+**Message from すずき先生:**
+> 「今日はありがとう。明日も来てくださいね。本を読んでください。」 — "Thank you for today. Please come tomorrow too. Please read the books."
+
+読む doesn't exist yet (N5.13, same lesson as 書く). すずき asks Rikizo to read the textbooks. He can't. Two verbs — 書く and 読む — both arriving tomorrow, both needed today, both deferred. The textbooks join the notebook as objects with purposes they can't fulfill yet.
+
+**Message from けん:**
+> 「今日はおもしろかったね！明日も学校で会おう！」 — "Today was fun, right! Let's meet at school tomorrow too!"
+
+けん sends the first casual text message from a classmate. 会おう — plain volitional of 会う, "let's meet." G9 sustained use. His energy carries into text. He's already planning tomorrow.
+
+**Message from Yamakawa:**
+> 「学校？おれは行かないよ。コンビニの方がいい。」 — "School? I'm not going. The convenience store is better."
+
+Yamakawa confirms: he doesn't go to school. He knows it exists. He's chosen the コンビニ. 行かない — plain negative. G9 sustained use. 方がいい — comparison pattern (technically G15, N4.5+ — but this is an NPC text message, not player-produced content; NPCs occasionally use patterns slightly ahead of the curriculum as natural speech, creating comprehensible input the player will formally learn later. Flag for review: if this is too early, simplify to 「学校？いいよ。おれはコンビニだ。」).
+
+**Design note — Yamakawa and school:** Yamakawa's refusal to attend school is played for comedy but has undertones. He's a teenager who spends all day at the convenience store instead of going to school. In a realistic context, this would be concerning. In the game world, it's just Yamakawa being Yamakawa — he's where he wants to be. But the player who thinks about it should wonder: *why* doesn't Yamakawa go to school? Is he a dropout? A truant? Does he have a different role in this world? The answer, like many things, will unfold slowly.
+
+---
+
+### Story Beats
+
+| Moment | What Happens | What Rikizo Thinks | What the Player Should Feel |
+|---|---|---|---|
+| Mom says 学校 | The word exits her mouth. The building exists. | 「学校...」 | Eleven days of no school, and now it's the most normal thing in the world. Mom isn't even surprised. |
+| The email thread resolves | Every すずき email suddenly makes sense | Clarity — and unease | She was describing a building that didn't exist, requesting actions that couldn't be done. And Rikizo said yes to all of it. |
+| Walking to school | First mandatory destination | 「行きます。」 | The game has structure now. Freedom contracts. This is what growing up feels like. |
+| The school is perfect | New building, no wear, no history | 「きれいですね。」 | Too clean. Too new. Nobody notices. |
+| Meeting けん | Loud, casual, immediate friend | Surprised — this is easy | Social warmth. School might actually be fun. |
+| Meeting リー | 中国から来ました | 「外国...」 | The world has an outside. Other countries exist. Other people come from them. |
+| Meeting ミキ | She's reading. She barely looks up. | 「本が好きですね。」 | Intrigue. She's different from everyone else. What is she reading? |
+| すずき can't say 書く | The verb doesn't exist mid-sentence | — | The teacher hit the same wall as every NPC. Even the authority figure can't complete her instructions. |
+| ゆき says the school looks new | It does. It materialized today. | 「...うん。」 | She noticed. She always notices. Nobody else does. |
+| Yamakawa's text | He's not going to school. コンビニ > 学校. | Amusement | Why doesn't he go to school? |
+
+---
+
+### Running Gags Updated
+
+1. **Dad's "Do Your Best"** — 「がんばれ。」 Dad has graduated from long-winded vague warnings to single-word encouragement. He says it at the gate like a samurai sending his son to war. It's a normal school day.
+2. **Mom's "Come Home"** — Now has a counterpart: 「学校に行ってね」 "Go to school." Mom's request portfolio has expanded from one direction (come home) to two (go to school, then come home). She's managing Rikizo's schedule.
+3. **The Fridge** — Still accessible. Still opened triumphantly every morning. The fridge never gets old.
+4. **Station Master** — Still at the station. Still waiting. School exists now, and the train still goes nowhere. The station master doesn't comment on school. He exists outside of institutional time.
+5. **Yamakawa's Appetite** — ◻ やまかわのごはん persists. Yamakawa hasn't found new food. He hasn't gone to school. He's exactly where he was yesterday. The quest waits.
+6. **けん and Tests** — NEW. けん's first question in class was about tests. This becomes a daily pattern: すずき announces something, けん asks if there's a test, the class has a moment. つまらない is けん's word. He owns it.
+7. **ミキ's Book** — NEW. ミキ is always reading. The title is unreadable until 書く arrives (Day 13). After that, each day's book title is different and tappable. A small mystery: what is she reading, and does it matter?
+8. **What Yuki Remembers** — ◻ ゆきのきおく continues. She noticed the school looks new. Another data point. Another quiet observation nobody else makes.
+9. **The Empty Notebook** — Day 4 of carrying an empty notebook. すずき asked Rikizo to write his name. He can't. 書く arrives tomorrow. The most patient Chekhov's gun in the game enters its final day of waiting.
+
+**Quest log state (end of Day 12):**
+> 📋 Quest Log
+> ✓ 水を飲む (Day 5 → Day 5)
+> ✓ おにぎりを食べる (Day 5 → Day 8)
+> ✓ お母さんの買い物 (Day 8 → Day 9)
+> ◻ やまかわのごはん: 新しい食べ物をさがす (Day 10 → ???)
+> ◻ ゆきのきおく: ゆきの話を聞く (Day 11 → N4) *(conditional — paranoia ≥ 6 only)*
+
+No new quests on Day 12. The school introduces too many characters and concepts to also add a fetch quest. The narrative load is the quest itself — processing the social explosion of school, meeting three new people, learning that the world has an outside. Quest additions resume when the vocabulary supports mechanical objectives (書く on Day 13 is the obvious candidate: finally writing your name in the notebook).
+
+---
+
+### State Tracking (End of Day 12)
+
+**New locations accessible:**
+- 学校 (school) — new zone south of station. Interior: hallway, classroom 1-A, school yard (limited). Additional rooms unlock with future vocabulary (図書室/library = N4, 体育館/gym = N4).
+
+**New NPCs:**
+- すずき先生 (`char_suzuki`) — in person. Classroom. Japanese teacher. Warm, encouraging, formal-but-caring register.
+- けん (`char_ken`) — classroom. Upbeat classmate. Casual register. Comic relief.
+- リー (`char_lee`) — classroom. Exchange student from 中国. Polite register. Player mirror.
+- ミキ (`char_miki`) — classroom. Always reading. Polite-minimal register. Mystery thread.
+- 校長 — gate. Non-named NPC. Formal register.
+
+**New items:**
+- 本 (textbook) — given by すずき先生. In inventory. Can't be read yet (読む = N5.13).
+- ペン (pen) — available at school. In inventory. Can't write yet (書く = N5.13).
+
+**Inventory status:**
+- ノート (notebook, Day 8) — still blank. 4 days waiting for 書く.
+- 本 (textbook, Day 12) — new. Unreadable until 読む.
+- ペン (pen, Day 12) — new. Unusable until 書く.
+- Three items that require N5.13 vocabulary to use. Tomorrow.
+
+**Flags set:**
+- `school_visited` — Player entered the school building. Permanent unlock.
+- `met_suzuki_sensei` — すずき先生 met in person (was phone-only since Day 4).
+- `met_ken` — First classmate met.
+- `met_lee` — First 外国人 character met.
+- `met_miki` — Mystery-thread character introduced.
+- `attended_class_day12` — Attended the first class scene. +1 relationship with すずき先生.
+- `lee_china_talk` — (optional) Heard リー describe 中国. +1 curiosity.
+- `yuki_school_new` — (optional) ゆき commented that the school looks new. +1 paranoia (if paranoia ≥ 4).
+- `yamakawa_no_school` — Yamakawa's text confirming he doesn't attend school. Seeds future questions.
+
+**Economy:**
+- Wallet: unchanged. No new purchasable items. School is free (as it should be).
+
+**Relationships available:**
+```
+char_suzuki:   +1 (attending class), +1 (talking after class)
+char_ken:      +1 (first meeting), +1 (talking during break)
+char_lee:      +1 (first meeting), +1 (identity conversation)
+char_miki:     +1 (first meeting — this is the hardest +1 in the game; she barely engages)
+char_yamakawa: +1 (daily talk, if visited コンビニ)
+char_yuki:     +1 (river encounter, if taken)
+char_taro:     +1 (daily talk)
+char_sakura:   +1 (daily talk), +1 (school report conversation)
+```
+
+**Hidden stats:**
+```
+paranoia:       +1 (yuki_school_new, if paranoia ≥ 4 — she noticed the school is new)
+curiosity:      +1 (lee_china_talk — first foreign country described)
+                +1 (school_visited — new zone explored)
+dad_annoyance:  -1 (daily cooling)
+```
+
+---
+
+### Art Assets Required (Day 12)
+
+| Asset | Type | Style | Priority | Notes |
+|---|---|---|---|---|
+| School exterior | Background | B (MP100) | **Critical** | Two-story building, gate, cherry trees (花 from Day 11), institutional but warm. Too clean — newly materialized. School name readable on gate. |
+| School hallway | Background | B (MP100) | **Critical** | Clean hallway with lockers, classroom doors numbered. Bulletin board (content unreadable until 書く). Linoleum floors, fluorescent lights. |
+| Classroom 1-A | Background | B (MP100) | **Critical** | Standard Japanese classroom: rows of desks (4 occupied, rest empty), blackboard (blank), windows along one wall showing school yard, teacher's desk at front piled with books. |
+| すずき先生 sprite | Sprite | A (Pixel) | **Critical** | Woman, mid-thirties, cardigan over professional clothes. Warm posture. Standing at the front of the classroom or at her desk. |
+| すずき先生 portrait | Portrait | B (MP100) | **Critical** | Kind eyes, genuine smile. Younger than expected. Professional but approachable. The face behind 6 days of emails. |
+| けん sprite | Sprite | A (Pixel) | **Critical** | Teenage boy, energetic posture, leaning forward or gesturing. School uniform worn loosely. Radiates enthusiasm. |
+| けん portrait | Portrait | B (MP100) | **Critical** | Big grin, slightly messy hair. Looks like he's about to say something loud. Friendly and open. |
+| リー sprite | Sprite | A (Pixel) | **Critical** | Teenage girl, neat posture, holding a book or sitting attentively. School uniform worn properly. Calm and focused. |
+| リー portrait | Portrait | B (MP100) | **Critical** | Thoughtful expression, gentle eyes. Looks like she's listening carefully. Foreign but at home. |
+| ミキ sprite | Sprite | A (Pixel) | **Critical** | Teenage girl, always looking down at a book. Seated, slightly hunched over reading. School uniform, glasses optional. |
+| ミキ portrait | Portrait | B (MP100) | **Critical** | Serious expression, eyes that suggest she's thinking about something else. Glasses if we go that route. Intellectual energy. |
+| School yard | Background | B (MP100) | High | Visible through classroom windows and accessible during break. Small area: trees, bench, fence. |
+| Textbook (本) | Sprite / Item | A | Medium | Japanese textbook prop. すずき先生 holds it. Player receives one. Title area intentionally blank (no 書く yet). |
+| School gate close-up | BG detail | B | Medium | The gate moment — first mandatory passage. Cherry trees, school name, 校長 standing to one side. |
+
+---
+
+### Open Questions for Day 12
+
+1. **Should Yamakawa's 方がいい text be simplified?** His message uses comparison grammar (方がいい) which is technically G15/N4.5+. Options: (a) keep it as natural NPC speech that's slightly ahead of the curriculum — comprehensible input; (b) simplify to 「学校？いいよ。おれはコンビニだ。」 which uses only available grammar. Recommendation: simplify for now. NPC text shouldn't confuse students with unlearned patterns. Save 方がいい for when it's taught.
+
+2. **Does the school have other students (background NPCs)?** The classroom has 4 named students. Should there be unnamed background sprites filling other desks? Recommendation: no. The empty desks are more unsettling. A class of 4 in a school built for hundreds. Nobody mentions it. The emptiness is a feature, not a bug. It mirrors the town: named characters in a world that implies population but doesn't show it.
+
+3. **What happens if the player skips school (future days)?** On Day 12, attendance is mandatory (narrative requirement). From Day 13+, the player can choose not to go. Recommendation: subtle social consequences. すずき先生 sends a concerned email. けん asks where Rikizo was. ミキ doesn't notice (she was reading). リー noticed but says nothing (polite). After 3 consecutive skips, Mom intervenes. After 5, Dad intervenes (rare Dad-gets-serious moment). No game-over state — just relationship penalties and missed classroom scenes.
+
+4. **When does ミキ's book become plot-relevant?** Recommendation: N4.10+ (when she starts reading about town history). In N5, her books are normal school texts or light novels. The shift to historical texts is a subtle signal that she's investigating something. The player who talks to ミキ every day will notice the change in her reading material before any explicit plot flag.
+
+5. **Does リー's Japanese get more casual over time?** Recommendation: yes, very gradually. By mid-N4, リー occasionally drops です in casual contexts (a huge moment for her character). By late N4, she uses けど and plain negatives with friends. Her casual speech development mirrors the player's own — she's always about 3–5 lessons behind the player in register comfort, making her a lagging mirror rather than a leading one.
+
+6. **Where does ゆき go during school hours?** Recommendation: nobody knows. She's not at school. She's not at the river during school hours (the player is in class). She's simply absent during the structured part of the day and appears in natural spaces during free time. In N4, if the player tracks her movements, they'll find she's always at places that materialized recently — as if she's drawn to newly-created parts of the world. She gravitates toward fresh reality.
+
+---
