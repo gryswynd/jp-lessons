@@ -4072,3 +4072,291 @@ On closed days, school classmates may appear elsewhere in town (けん at the �
 This creates a natural weekly rhythm: weekdays have structure (school → home), weekends return to the formless exploration of Golden Week. The contrast reinforces that school changed the texture of Rikizo's life — but only five days a week.
 
 ---
+
+## Day 13 — "Communication" (unlocked by N5.13)
+
+**New kanji:** 手、言、読、書、話
+
+**New vocabulary:**
+- 書く (to write), 読む (to read), 話す (to speak), 言う (to say)
+- 電話 (telephone), 会話 (conversation — but 会 is N5.17; check writing form)
+- 手 (hand), 空手 (karate)
+- ゆっくり (slowly / at ease)
+
+**Calendar:** 五月九日 (May 9th, Friday). Second school day. Last weekday before the first weekend with school in Rikizo's life.
+
+**Grammar context:** No new grammar lessons unlock. G11 (appearance ～そうです) in sustained reinforcement. All prior forms available. The grammar is stable — the vocabulary is the earthquake.
+
+---
+
+### The Day the World Became Literate
+
+For twelve days, nobody in this world could read or write. Not because they were illiterate — because the verbs didn't exist. 書く and 読む arrive today, and they don't just add two actions to the world. They retroactively create the entire concept of written language.
+
+Think about what has been waiting for this day:
+- **The notebook** (Day 8) — purchased, carried for five days, blank. すずき先生 asked Rikizo to write his name in it on Day 9. He couldn't. She tried again on Day 12. She couldn't finish the sentence.
+- **The textbook** (Day 12) — given by すずき先生. 「読んでください」she'll say today. Yesterday she couldn't.
+- **The blackboard** (Day 12) — blank surface in the classroom. Today it gets writing.
+- **ミキ's book** — she's been holding it, staring at it, turning pages. Today we learn she's been *reading* it. The action she's been performing has a name.
+- **すずき先生's emails** — she's been writing to Rikizo since Day 4. The word for what she was doing didn't exist until now. She was 書く-ing before 書く.
+
+This is the most anticipated vocabulary arrival in the game. Not because writing and reading are exciting actions — they're mundane. But because their absence has been *felt* across five days of accumulating props, deferred instructions, and incomplete sentences. The notebook has been the game's most patient Chekhov's gun. Today it fires.
+
+---
+
+### Morning — The Verb Arrives
+
+Rikizo wakes up. Friday. Second school day. The morning routine is settling into structure — the post-Golden-Week rhythm is forming.
+
+**Breakfast — brief (3 lines):**
+
+1. **Mom:** 「おはよう。学校の本を読みましたか？」 — "Good morning. Did you read the school books?" *(読みました. She says it like she's always been able to say it. The verb exists now, deployed casually in a morning question. Mom doesn't marvel at the fact that she can suddenly reference reading. She just asks. The player, who has watched this family struggle around the absence of 読む for days, should feel the ground shift.)*
+
+2. **Rikizo:** 「まだです...」 — "Not yet..." *(He hasn't. He couldn't — until this morning. But "not yet" implies he will. The verb's existence creates the obligation.)*
+
+3. **Dad:** 「名前を書いたか？」 — "Did you write your name?" *(Dad, cutting to the point. 書いた — plain past. He's asking about the notebook. The task すずき assigned on Day 9. Five days ago. Dad remembers. Of course he does — he's been waiting for 書く as long as everyone else.)*
+
+**The notebook moment — at home, before leaving:**
+
+This can happen at the breakfast table or in Rikizo's room. The player opens the inventory. The notebook is there. It has been there since Day 8. For the first time, an interaction option appears that wasn't there yesterday:
+
+> **[書く]**
+
+The player taps it. The screen shows Rikizo holding the pen (Day 12), opening the notebook, and writing. What does he write? His name. りきぞ. In hiragana — because that's the writing system available. The notebook is no longer blank. After five days, the most patient item in the game has fulfilled its purpose.
+
+**Design note — the weight of 書く:** This moment should feel significant without being melodramatic. No cutscene. No fanfare. Just a quiet interaction: open notebook, write name, close notebook. The weight comes from the accumulated absence — the player has tried to use this notebook before and couldn't. Every NPC who referenced writing hit a wall. Now the wall is gone, and the action is as simple as tapping a button. The gap between the buildup and the simplicity of the act IS the emotional beat. All that waiting, and it's just... writing your name. Of course it is. That's what writing is.
+
+**Design note — what Rikizo writes:** Hiragana only. The game doesn't have a writing minigame (yet — this could be a future feature). The act is abstracted: player taps [書く], the notebook updates to show りきぞ written inside. Simple. Clean. The point isn't the mechanics of writing — it's the fact that writing is now *possible*.
+
+---
+
+### Walking to School — Friday Energy
+
+The walk is shorter narratively today — school is no longer new. The route is established. The gate is open. 校長 is there.
+
+- **校長:** 「おはようございます。今日もがんばってください。」 — "Good morning. Please do your best today too." *(Standard. The principal's dialogue is ritualistic and will vary only slightly day to day. He's furniture with a greeting.)*
+
+**Hallway — the first readable text:**
+
+On the way to the classroom, Rikizo passes the bulletin board. Yesterday it was a blur — shapes that might have been text but couldn't be processed. Today:
+
+> 「お知らせ」 — "Notice"
+
+It's readable. One word on a bulletin board. But it's the first piece of *environmental text* the player can decode. The school has written surfaces — signs, notices, labels on doors — and today they resolve from visual noise into language. Not all of it (many kanji aren't taught yet), but enough that the school feels like a place with *written communication*.
+
+**Design note — environmental text as progressive revelation:** From Day 13 onward, signs and labels in the game world become partially readable. The taught-kanji set determines what the player can decode. A sign reading 「入り口」 (entrance) won't be readable until Day 17 (入, N5.17). A sign reading 「出口」 (exit) same. But 「本」 on a bookshelf label is readable now. The world's text resolves incrementally as the player learns — exactly like real Japan for a learner. This is one of the game's most powerful immersion tools, and it starts today.
+
+---
+
+### Classroom — The Blackboard Speaks
+
+すずき先生 is at the front. The blackboard is no longer blank.
+
+Written on it — for the first time in the game's history — are characters. Not all readable (some kanji are beyond the taught set), but the date is there: 「五月九日」. And the subject: 「日本語」. The blackboard has been activated. The classroom's central surface has been given its function.
+
+**すずき先生 — class scene (5 lines):**
+
+1. **すずき:** 「おはようございます。今日は読むことと書くことを学びましょう！」 — "Good morning. Today let's learn about reading and writing!" *(学びましょう — volitional, G8 sustained use. こと — nominalizer, available since N5.9. She announces the day's topic. The meta is thick: the game is teaching reading and writing on the day the teacher teaches reading and writing. The player is learning these verbs at the same moment Rikizo is.)*
+
+2. **すずき:** 「りきぞさん、ノートに名前を書きましたか？」 — "Rikizo, did you write your name in the notebook?" *(The sentence she couldn't finish yesterday. Yesterday: 「ノートに名前を...」 — she trailed off, unable to produce 書いてください. Today: 「書きましたか？」 — past tense, did you do it. The grammar hasn't changed (て-form has been available since N5.5). The verb arrived. She can complete the sentence. If the player wrote the name at home, Rikizo can say yes.)*
+
+3. **Rikizo (if wrote name):** 「はい、書きました！」 — "Yes, I wrote it!" *(Triumph. Small, quiet triumph. Five days of carrying a blank notebook, and now he can show it. すずき先生 smiles. She's been waiting for this too — she assigned the task on Day 9.)*
+
+3b. **Rikizo (if didn't write name):** 「まだ書いていません...」 — "I haven't written it yet..." *(ていません — negative progressive. He hasn't done it yet. すずき gives him a moment in class to write it. The task can be completed either way — at home or at school. But completing it at home feels better. It means the player remembered.)*
+
+4. **すずき:** 「みなさん、この本を読んでください。」 — "Everyone, please read this book." *(読んでください. て-form + ください. The request she couldn't make yesterday about the textbooks. Today it's effortless. She holds up the textbook — the same one she gave Rikizo on Day 12 — and asks the class to read it. 読む has existed for approximately two hours and it's already being assigned as homework.)*
+
+5. **けん:** 「読む...？本はつまらないよ...」 — "Read...? Books are boring..." *(けん, on brand. つまらない, his word. He doesn't want to read. ミキ, in the background, is already reading. She's been reading since before reading existed.)*
+
+**ミキ's book — the reveal:**
+
+After class (or during break), the player can talk to ミキ. For the first time, her book has a visible title. The game renders text on the cover because 読む exists — the concept of reading makes book titles displayable.
+
+1. **Rikizo:** 「ミキさん、何を読んでいますか？」 — "Miki, what are you reading?" *(何を読んでいる — what are you reading. The most natural question in the world, impossible before today.)*
+
+2. **ミキ:** 「...本です。」 — "...A book." *(ミキ gives the minimum answer. She's not rude — she's private. The book is hers. Its contents are hers. She shares reluctantly.)*
+
+3. **Rikizo:** 「おもしろいですか？」 — "Is it interesting?"
+
+4. **ミキ:** 「おもしろいです。でも、ゆっくり読んでいます。むずかしいから。」 — "It's interesting. But I'm reading it slowly. Because it's difficult." *(ゆっくり — new adverb. から — because, G9. ミキ reads slowly because the book is difficult. This is the first hint that ミキ reads above her level — she's reaching for material that challenges her. In N5, this is just characterization. In N4, the difficulty of what she reads becomes plot-relevant: she's reading historical documents about the town that aren't meant for high school students.)*
+
+**Design note — ミキ's book rotation:** From Day 13 onward, ミキ's book title changes every 2–3 game days. The titles are rendered on the sprite/UI as readable text (to the extent the taught-kanji set allows). Early titles are simple: 「日本の話」(Stories of Japan), 「大きい山と小さい川」(Big Mountains and Small Rivers). By N4, the titles shift toward historical/investigative content: 「この町の前」(Before This Town), 「時間の間」(Between Times). The player who tracks ミキ's reading list across the game will see her interests evolve from casual reading to active research.
+
+---
+
+### Communication — The Theme Expands
+
+Beyond 書く and 読む, Day 13 introduces a full communication cluster:
+
+**話す (to speak):** The act of speaking gains a name. Characters have been speaking for 13 days. Now they can talk *about* speaking. 「日本語を話します」— "I speak Japanese." The language that gained a name yesterday (日本語) can now be described as something people *do*.
+
+**言う (to say):** Distinct from 話す. 話す is conversational — you 話す with someone. 言う is declarative — you 言う something specific. The distinction matters for Japanese and for the game: 話す is dialogue, 言う is quotation.
+
+**電話 (telephone):** The phone in Rikizo's pocket has been a texting device. Email, messages, contacts. 電話 gives it a second function — voice calls. Whether the game implements actual phone calls or just references them is a design decision, but the word opens the possibility.
+
+**会話 (conversation):** Literally 会 (meet) + 話 (speak). But 会 isn't taught until N5.17. Writing form check: 会 is untaught → write as かいわ? No — check the glossary. *(Agent note: verify whether 会話 has a matches field with a kana form. If not, this word may need to wait until N5.17, or the entry needs a matches form added.)*
+
+**空手 (karate):** 空 (sky, Day 11) + 手 (hand, today). Empty hand. The martial art. This is a fun compound — the player knows 空 as "sky" and now learns 手 as "hand," and the combination means something entirely different. It's a great example of how kanji compounds create meaning beyond their parts. Does anyone in the game do karate? Not yet. But the word exists, and perhaps けん mentions it casually — he seems like the type.
+
+**ゆっくり (slowly):** An adverb that transforms conversations. Before today, everything happened at one speed. Now actions can be slow. 「ゆっくり読んでいます」— "I'm reading slowly." 「ゆっくり話してください」— "Please speak slowly." The second phrase is possibly the most useful Japanese sentence for any learner — and now it exists in the game world.
+
+**Design note — 「ゆっくり話してください」as a game mechanic:** This phrase could function as an actual game mechanic: when talking to an NPC whose dialogue moves too fast, the player can select ゆっくり話してください to slow the text speed. This would be both a language-learning reinforcement and a genuine accessibility feature. Tag for future implementation — not Day 13, but soon.
+
+---
+
+### リー and Communication
+
+リー's story is about communication. She's from 中国. She speaks 日本語. The communication verbs arrive on the day after she was introduced — and they transform her character.
+
+**リー conversation (break time, 4 lines):**
+
+1. **リー:** 「りきぞさんは日本語を話しますね。わたしも日本語を話します。でも、ゆっくり話します。」 — "Rikizo, you speak Japanese. I also speak Japanese. But I speak slowly." *(ゆっくり — she uses the new adverb to describe herself. She speaks slowly. Not badly — slowly. The distinction matters. ゆっくり is an adverb of pace, not quality. She's careful, not unskilled.)*
+
+2. **Rikizo:** 「リーさんの日本語はじょうずですよ！」 — "Your Japanese is good!" *(He repeats yesterday's compliment. It's becoming a pattern — Rikizo encourages リー. This is what friends do.)*
+
+3. **リー:** 「中国語も話しますよ。二つの語を話します。」 — "I also speak Chinese. I speak two languages." *(中国語 — Chinese language. 二つの語 — two languages. リー is bilingual. She exists in two linguistic worlds. The player, learning Japanese, might relate — they're also straddling two languages.)*
+
+4. **リー:** 「りきぞさんは手紙を書きますか？」 — "Rikizo, do you write letters?" *(手紙 — letter. 手 [hand] + 紙 [paper]. But 紙 isn't taught yet. Check: does 手紙 have a matches/kana form? If not, リー might ask 「書くのが好きですか？」 instead — "Do you like writing?" Either way, she's asking about writing — the new verb — in a personal, conversational context. She wants to know if Rikizo writes. Not for school. For connection.)*
+
+**Design note — リー and letters:** If 手紙 is available (check glossary), this plants a future interaction: リー and Rikizo exchange letters. Written communication between characters. In a world where writing just became possible, the first personal use of writing is a letter between friends. If 手紙 isn't in the glossary until later, defer this seed — but flag it. The moment リー asks Rikizo to write to her is the moment writing becomes more than a school task.
+
+---
+
+### After School — Friday Afternoon
+
+School ends. It's Friday. Tomorrow is Saturday — the first weekend since school started. The first day the gate will be closed.
+
+**けん at the gate (casual, 3 lines):**
+
+1. **けん:** 「やった！明日は学校がないよ！」 — "Yes! No school tomorrow!" *(やった — casual exclamation. 学校がない — plain negative existential. けん celebrates the weekend the way けん celebrates everything: loudly. He exists for weekends.)*
+
+2. **Rikizo:** 「何をする？」 — "What will you do?" *(Plain form with けん — their register is established as casual.)*
+
+3. **けん:** 「ゲームだよ！テレビゲーム！朝から晩まで！」 — "Games! Video games! From morning to night!" *(から...まで — from...to. G3 particle reinforcement. けん's weekend plan is exactly what you'd expect: all games, no books. He's the anti-ミキ.)*
+
+**Walking home — ゆき (optional):**
+
+If the player takes the river path:
+
+1. **ゆき:** 「学校で何を学びましたか？」 — "What did you learn at school?" *(She asks about learning. She doesn't go to school. She asks about it the way a researcher asks about a foreign custom — interested, external.)*
+
+2. **Rikizo:** 「読むことと書くこと。」 — "Reading and writing." *(He names the day's achievement simply. こと nominalizer for both.)*
+
+3. **ゆき:** 「書く...いいですね。書くと、残りますから。」 — "Writing... that's good. When you write, things remain." *(残る — to remain. Not in the taught vocab. ゆき uses a word that isn't available yet — she does this occasionally, reaching beyond the vocabulary set. The player won't be able to tap it for a definition. It'll be a mystery word. But the meaning is clear from context: writing makes things permanent. Things that are written down stay. ゆき, who may be from another timeline, who notices things nobody else notices, who gravitates toward newly created spaces — she values writing because writing persists. Memory doesn't. Words fade. But writing remains. This is ゆき at her most philosophical, and the player may not fully understand it until N4.)*
+
+**Design note — ゆき and mystery vocabulary:** ゆき occasionally uses words beyond the current vocabulary set. These words are untappable — the player can't look them up through the game's term system. They're mystery tokens. The player has to infer meaning from context. This is deliberate: (a) it mirrors real language learning, where you encounter unknown words constantly; (b) it characterizes ゆき as someone who knows more than she should; (c) it creates breadcrumbs — when the player finally learns 残る in a future lesson, they'll remember ゆき said it. She was talking about permanence before permanence had a word. Because she always is.
+
+---
+
+### Evening
+
+Standard evening routine with one new element: Rikizo can now describe what he did at school using communication verbs.
+
+1. **Mom:** 「今日は何を学びましたか？」 — "What did you learn today?"
+
+2. **Rikizo:** 「読むことと書くことです。名前も書きました。」 — "Reading and writing. I also wrote my name." *(The notebook task — completed. Reported to Mom. The thread that started on Day 9 with すずき's email closes cleanly. Name → notebook → pen → 書く → done.)*
+
+3. **Mom:** 「よかったですね！すずき先生に言ってくださいね。」 — "That's great! Please tell すずき先生." *(言って — te-form of 言う. Mom tells Rikizo to tell his teacher. Communication verbs used in a communication chain: Mom → Rikizo → すずき.)*
+
+**Phone updates:**
+
+**すずき先生:**
+> 「今日はよく読みましたね。来週もがんばりましょう！いい週末を。」 — "You read well today. Let's keep trying next week! Have a good weekend."
+
+来週 — next week. Again. すずき先生's recurring temporal anchor. But this time it's benign — just a "see you Monday." No deferred mysteries. Just a teacher saying goodbye for the weekend.
+
+**けん:**
+> 「明日ゲームするよ！りきぞもやる？」 — "I'm playing games tomorrow! You too, Rikizo?"
+
+けん inviting Rikizo to his weekend plans. This could be a Day 14 activity option — visiting けん's house on Saturday. If implemented, it would be the first time the player visits a classmate's home, opening a new micro-location.
+
+---
+
+### Story Beats
+
+| Moment | What Happens | What the Player Should Feel |
+|---|---|---|
+| [書く] appears on the notebook | Five days of waiting. One tap. Name written. | Quiet satisfaction. The longest-deferred action in the game, resolved simply. |
+| Mom says 読みましたか | She uses the verb like it's always existed | The ground shifts — literacy is retroactive |
+| Blackboard has writing | Date and subject visible for the first time | The classroom gained its purpose overnight |
+| すずき finishes her sentence | 「名前を書きましたか？」 — yesterday she couldn't | Relief. She's been waiting too. |
+| ミキ was reading all along | She's been doing this action for a day. Now it has a name. | The action existed before the verb. Or did it? |
+| ゆき: "writing remains" | A word the player can't look up. A truth they'll understand later. | Unease. Beauty. The sense that ゆき knows something. |
+| Environmental text resolves | Signs, labels, book titles — partially readable | The world just got richer. This is what real Japan feels like. |
+
+---
+
+### Running Gags Updated
+
+1. **The Fridge** — Still opened. Still triumphant. The fridge is eternal.
+2. **けん and Tests** — 「テストは？」 — he asks in class. すずき says not today. けん celebrates. Tomorrow repeats.
+3. **ミキ's Book** — NOW READABLE. Title visible for the first time. Day 1 of the book rotation mechanic.
+4. **The Empty Notebook** — ✓ RESOLVED. The notebook has a name in it. Five days, resolved. The longest running gag in the game pays off with the quietest moment. No new notebook gag replaces it — but the pen now works, opening future writing interactions.
+5. **Station Master** — Still there. Still waiting. Can the player read the station sign now? Only if the kanji are taught. 駅 was Day 5. The sign says 駅. That's all it needs to say.
+
+**Quest log state (end of Day 13):**
+> 📋 Quest Log
+> ✓ 水を飲む (Day 5 → Day 5)
+> ✓ おにぎりを食べる (Day 5 → Day 8)
+> ✓ お母さんの買い物 (Day 8 → Day 9)
+> ◻ やまかわのごはん: 新しい食べ物をさがす (Day 10 → ???)
+> ◻ ゆきのきおく: ゆきの話を聞く (Day 11 → N4)
+> ✓ ノートに名前を書く (Day 9 → Day 13) ← NEW completion
+
+The notebook quest was never formally added to the quest log because 書く didn't exist to name it. But retroactively, this has been a quest since Day 9: すずき asked → Rikizo couldn't → 書く arrived → Rikizo wrote. It's the game's first *implicit* quest — one that existed in the player's mind before the game could articulate it.
+
+---
+
+### State Tracking (End of Day 13)
+
+**No new locations.** School is still the newest zone. No new rooms unlock today.
+
+**No new NPCs.** All school characters debuted yesterday.
+
+**Inventory updates:**
+- ノート — no longer blank. Contains りきぞ in hiragana. Status: fulfilled.
+- 本 (textbook) — now readable (partially). すずき assigned reading.
+- ペン — now usable. Writing is possible.
+
+**Flags set:**
+- `wrote_name_home` — (optional) Player wrote name before school. +1 relationship すずき (she notices initiative).
+- `wrote_name_school` — (fallback) Player wrote name during class.
+- `notebook_complete` — Notebook quest resolved. 5-day thread closed.
+- `blackboard_active` — Classroom blackboard now displays text.
+- `miki_book_day1` — First readable ミキ book title logged.
+- `yuki_writing_remains` — (optional) Heard ゆき's philosophical comment about writing. +1 paranoia (if ≥ 5).
+- `lee_bilingual` — (optional) Learned リー speaks two languages. +1 curiosity.
+- `ken_weekend_invite` — (optional) けん invited Rikizo to play games Saturday. Seeds Day 14 option.
+
+**Hidden stats:**
+```
+paranoia:       +1 (yuki_writing_remains, if paranoia ≥ 5)
+curiosity:      +1 (lee_bilingual)
+```
+
+---
+
+### Art Assets Required (Day 13)
+
+| Asset | Type | Style | Priority | Notes |
+|---|---|---|---|---|
+| Blackboard with text | BG variant | B (MP100) | **Critical** | Classroom 1-A blackboard, no longer blank. 「五月九日」and「日本語」written in chalk. First written text in the game. |
+| Notebook with name | UI / Item | A (Pixel) | **Critical** | Notebook interior showing りきぞ in hiragana. Simple, clean. The payoff image. |
+| Bulletin board (readable) | BG detail | B | Medium | Hallway bulletin board with partially readable notices. Some kanji clear, others blurred (untaught). |
+| ミキ's book cover | Sprite detail | A | Medium | Book in ミキ's hands with a readable title. First of the rotating book covers. |
+
+Light asset day — most environments were built for Day 12. Day 13 is variant art (blackboard filled, notebook interior) rather than new locations.
+
+---
+
+### Open Questions for Day 13
+
+1. **会話 writing form** — 会 is N5.17 (untaught on Day 13). Does the glossary entry for 会話 have a `matches` kana form (かいわ)? If yes, write as かいわ. If not, defer the word to Day 17 or add a matches entry. Need to verify before implementation.
+
+2. **手紙 availability** — Is 手紙 in the glossary? 紙 is not in the taught kanji set. If 手紙 has a matches form (てがみ), リー's letter-writing seed can stay. If not, replace her dialogue with a simpler writing question.
+
+3. **ゆき's mystery word (残る)** — Should untappable words in NPC dialogue be a formal mechanic? Recommendation: yes, but rare. Limit to ゆき and occasionally ミキ. No more than 1 mystery word per day. The player should feel intrigued, not lost.
+
+4. **けん's Saturday invite** — Does Day 14 include a visit to けん's house? If yes, it opens the first classmate-home location. If no, the invite is acknowledged but deferred ("maybe next week"). Recommendation: include it — Day 14 is a lean day (quantity/space vocab), and visiting けん adds narrative color to an otherwise expansion-only day.
+
+---
