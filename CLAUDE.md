@@ -148,8 +148,14 @@ CB CHECKLIST
 [ ] For every word with a `matches` field in the glossary: verified the jp text uses the correct writing form for the current lesson tier — if any kanji in the glossary `surface` is untaught, the hiragana/partial-kanji form from `matches` was used instead (e.g. いっしょに not 一緒に, だいじょうぶ not 大丈夫, until their kanji are taught)
 [ ] Every content word in every jp/passage field has a corresponding terms entry
 [ ] Every pure-kana lexical word (interjections, casual words, expressions not in particles.json) has a verified glossary entry — any that do not are listed in the CB Checklist under "Unregistered words" for Agent 3 to escalate
+[ ] Question words and kana-only adverbs explicitly checked: for every jp field, scan for どう, どこ, どれ, どちら, いつ, なぜ, いくら, いくつ, いつも, もう, まだ, よく, たいてい, ぜんぜん, and any similar kana-only vocab — these have registered IDs and must appear in terms even though they look like plain kana
+[ ] For every い-adjective in jp text: verify position — bare string if attributive (precedes a noun); { "id": "...", "form": "polite_adj" } only if predicate (sentence-final before です/でした). Never use polite_adj for an attributive adjective.
+[ ] For every な-adjective in jp text: { "form": "attributive_na" } if it precedes a noun (大切な こと); { "form": "polite_adj" } if sentence-final predicate (大切です)
+[ ] For every desire expression (〜たい): desire_tai only when the sentence actually ends with です (〜たいです polite); plain_desire_tai when the sentence is plain/casual (〜たい、〜たいから、〜たいよ, etc.)
+[ ] For every verb in purpose-construction masu-stem + に (e.g. 買いに, 食べに, 借りに): use { "form": null } — no form string exists for this construction
 [ ] Verbs/adjectives use { "id": "...", "form": "..." } objects, never bare strings
 [ ] No invented IDs — every ID was verified against the glossary or particles.json
+[ ] Every vocab word used in jp text was Grep-verified to exist in the glossary BEFORE being written into the content — if a word lacks a glossary entry, it must be added (or flagged to Agent 1) before proceeding, never used speculatively
 [ ] Conversation/reading terms use v_* vocab entries, NOT k_* kanji entries
 [ ] が after a clause-final form (ます/です/plain form) is tagged p_ga_but, not p_ga (see disambiguation rules)
 [ ] から after a verb/adjective/です is tagged p_kara_because, not p_kara (see disambiguation rules)
@@ -1042,6 +1048,46 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 
 **Godan euphonic note.** `tari_form` and `conditional_tara` use `godan_euphonic` map types (`"map": "tari_form"` and `"map": "tara_form"`) that parallel `ta_form` but produce たり/だり and たら/だら endings respectively. The rendering engine will need these map types added alongside any future grammar module build. All ichidan, irregular, and adjective rules are fully defined in data and require no code changes.
 
+### い-adjective form selection — attributive vs predicate
+
+い-adjectives have two distinct syntactic positions that require different tagging:
+
+| Position | Example | Form | Tag |
+|---|---|---|---|
+| **Attributive** — modifies a noun (〜い + noun) | 長い 一日、大きい 魚、小さい 声 | dictionary form | bare string: `"v_nagai"` |
+| **Predicate** — sentence-final before です/でした | 一日が 長いです、魚が 大きいです | adjective + です | `{ "id": "v_nagai", "form": "polite_adj" }` |
+
+**The critical distinction:** `polite_adj` means the adjective IS the predicate of a sentence ending `〜いです`. It does **not** mean "used politely." An い-adjective that precedes a noun is in attributive position and takes a **bare string** regardless of the surrounding sentence's register.
+
+**Common error:** Seeing 「長い 一日でした」and tagging `長い` as `polite_adj` because the sentence is polite. Wrong — `長い` here modifies 一日 (attributive), so it is a bare string. The copula でした carries the polite register, not the adjective.
+
+**Quick test:** "Is this adjective the main predicate before a です/でした?" → `polite_adj`. "Does it appear before a noun?" → bare string.
+
+な-adjectives follow the same pattern with a dedicated form string:
+- **Attributive** (before a noun): `{ "id": "v_taisetsu", "form": "attributive_na" }` — e.g. 大切な こと、きれいな 花
+- **Predicate** (sentence-final): `{ "id": "v_taisetsu", "form": "polite_adj" }` — e.g. 大切です、きれいです
+
+### Purpose construction (masu-stem + に)
+
+The masu-stem + に construction expresses purpose ("in order to ~"). Examples: 買いに、食べに、借りに、送りに. There is **no form string** for this construction in `conjugation_rules.json` — it is a grammatical construction, not a conjugated form. Tag purpose verbs with `form: null`:
+
+```json
+{ "id": "v_kau", "form": null }
+```
+
+Do not use `polite_masu` (which implies the verb is the sentence predicate in ます form) or `te_form` (which implies a て-connector or request). The `form: null` tag makes the verb chip tappable with its dictionary-form gloss, which is correct for this construction.
+
+### desire_tai vs plain_desire_tai — register disambiguation
+
+Both forms express "want to ~" but differ by register. The surface text alone determines which to use:
+
+| Surface text | Sentence ending | Form | Example |
+|---|---|---|---|
+| 〜たいです | ends with です | `desire_tai` | 食べたいです — polite desire |
+| 〜たい (no です) | plain ending | `plain_desire_tai` | 食べたい — casual desire, or subordinate clause |
+
+**Rule:** Look at the actual sentence ending before choosing. In a casual conversation where a line ends with `〜たいから` or `〜たいよ` (no です), use `plain_desire_tai`. In a polite context where the line ends `〜たいです`, use `desire_tai`. This distinction applies to all `〜たい` forms including `desire_tai_negative` (〜たくないです) vs `plain_desire_tai` (〜たくない).
+
 ### 何 (nani/nan) pronunciation tagging
 
 何 has two distinct pronunciations that require different vocab IDs:
@@ -1918,6 +1964,11 @@ These are the most frequent errors. All agents should be alert to them.
 43. **Mechanical register swap (です→だ find-and-replace)** — writing casual conversations by taking polite sentences and replacing です with だ and ます with dictionary form, without adjusting sentence structure, particle usage, or adding natural casual markers (よ, ね, な, けど, し). Casual Japanese has its own rhythm — it is not polite Japanese with different verb endings. Example failure: 「わたしは学生だ。日本語を勉強する。」 reads like a textbook, not a friend talking. Natural casual: 「おれ、学生だよ。日本語勉強してるんだ。」
 44. **Overusing commands/prohibition** — packing ～ろ/～え commands and ～な prohibition into casual conversations where they don't belong. These forms are blunt/rude and used in narrow contexts (sports, male friends joking, warning signs, urgent situations). A casual conversation between friends discussing weekend plans should not have commands. Overuse makes the student think casual = aggressive.
 45. **(Final Interactive Review) Missing sections** — a `final_interactive_review` draft that omits one or more of the 8 required sections. The most commonly dropped sections are `vocab_categories` and `kanji_bingo` because they come last and are easiest to run out of context budget for. All 8 sections are required regardless of file length. Agent 2 must check off each section type in the CB Checklist before handing off. Agent 3 must count sections and reject any draft with fewer than 8.
+46. **Kana-only vocabulary systematically untagged** — question words (どう, どこ, いつ, なぜ, いくら) and kana-only adverbs (いつも, よく, まだ, もう, たいてい) are glossary-registered vocab IDs that must appear in `terms`. The most common failure is scanning `jp` text visually and only tagging kanji-containing words, leaving every kana-only lexical word invisible to the student. Treat kana-only vocab exactly the same as kanji vocab: if it has a `v_*` ID in the glossary, it must be tagged. Agent 3 must tokenize the full surface string, not just highlight-scan for kanji.
+47. **い-adjective attributive vs predicate form confusion** — using `polite_adj` for an い-adjective that appears before a noun (attributive position). `polite_adj` means `〜いです` (the adjective IS the predicate). An adjective modifying a noun (長い 一日, 大きい 魚) is in attributive position and takes a **bare string**. The error typically happens when the sentence is polite overall: 「長い 一日でした」→ Agent 2 sees polite Japanese and reaches for `polite_adj`, but `長い` modifies 一日, not the sentence predicate. Same error for な-adjectives: 「大切な こと」requires `attributive_na`, not a bare string. Agent 3 must check whether the adjective precedes a noun or is sentence-final before accepting the form.
+48. **desire_tai / plain_desire_tai conflation** — using `desire_tai` (which represents `〜たいです`, polite) for a casual/plain sentence that ends `〜たい` without です. Example: a casual conversation line `友だちに 送りたいから` is plain desire — the form is `plain_desire_tai`, not `desire_tai`. The test is simple: does the sentence actually end with `です`? If not, the form must be `plain_desire_tai`. This error is almost always found in casual conversations where the agent reached for the more familiar form string without reading the sentence ending.
+49. **Purpose construction tagged as polite_masu** — the masu-stem + に construction (買いに, 食べに, 借りに) has no form string in `conjugation_rules.json`. It must be tagged `form: null`. Tagging it as `polite_masu` is wrong — that form string means the verb IS the sentence predicate in ます form (食べます), not a purpose-direction construction (食べに行く). Agent 3 must recognize masu-stem forms used with に as purpose markers and verify they are tagged `form: null`.
+50. **Vocabulary used before glossary entry exists** — Agent 2 writes sentences using words (e.g. シャツ, 帰り, 今) and tags them with IDs without first Grep-verifying those IDs exist in the glossary. The draft then passes Agent 2's self-check ("no invented IDs" was interpreted as "no obviously fake IDs") but Agent 3 finds the IDs are missing. The correct process is: identify every content word needed for the lesson, Grep-verify each ID exists, and add any missing entries to the glossary **before** writing content that uses them. If Agent 2 discovers a missing entry mid-draft, it must stop, flag the gap in the CB Checklist, and either add the entry or restructure the sentence — never proceed with an unverified ID.
 
 ### Agent 3 failures (caught by Agent 4)
 
@@ -1925,6 +1976,7 @@ These are the most frequent errors. All agents should be alert to them.
 2. **Approving overstuffed sections** — 30 vocabulary chips, 5 conversations, 4 readings in one lesson.
 3. **Missing a grammar level jump** — content using grammar structures 2–3 tiers above the lesson. Now that conjugation forms have concrete `introducedIn` fields, this should be caught by Agent 3's hard gate. But Agent 4 remains the backstop for structural patterns in `jp` text that Agent 3's form-tag check might miss (e.g. a ～ている pattern where the て and いる are tagged separately but neither tag explicitly carries a form that triggers the gate).
 4. **Kanji-only token scan** — checking that kanji-containing words are tagged but not scanning the full `jp` string token by token. Kana-only words (copulas like だ/だった, conjunctions, sentence-final particles, adverbs) can be out of scope, mis-tagged, or missing from `terms` entirely and will be invisible to a visual scan that only flags visually prominent kanji characters.
+5b. **Accepting wrong adjective form without checking position** — approving a `polite_adj` tag on an い-adjective that appears before a noun. Agent 3 must verify: is the adjective sentence-final (predicate)? If it precedes a noun, `polite_adj` is wrong and the tag must be a bare string. Same check for `attributive_na` on な-adjectives: required before nouns, not for predicates.
 5. **Passing under-reinforced content** — approving a draft that meets all structural requirements (correct tags, valid IDs, no out-of-scope forms) but fails to use recently-unlocked grammar. Agent 3 must count tagged forms against the reinforcement schedule minimums and reject drafts that don't meet active-window targets. This is the "floor" complement to the existing "ceiling" checks.
 6. **Approving register violations** — passing a N5.10+ lesson that has zero casual conversations, or a pre-N5.10 lesson that includes casual dialogue. Register requirements are structural checks equivalent to grammar reinforcement minimums — not style preferences.
 7. **Not catching register mixing** — a conversation where one character speaks politely and another speaks casually (without an in-story reason) should be flagged as a structural error, not accepted as "natural variation."
