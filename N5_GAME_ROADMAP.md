@@ -2592,7 +2592,7 @@ Yamakawa has discovered interiority and wants to share the news. He sends this m
 
 ### The Day the World Got a Mood
 
-Something shifted overnight. Not in the world — in the *air*. Yesterday the world gained depth (中/外). Today it gains... atmosphere. 天気 gives the sky a name. 気分 gives Rikizo an inner state. 電気 gives the house a pulse — lights that turn on, a TV that has a power state, a world that distinguishes between on and off. And 休み names the thing Rikizo has been doing for nine days without a word for it.
+Something shifted overnight. Not in the world — in the *air*. Yesterday the world gained depth (中/外). Today it gains... atmosphere. 天気 gives the sky a name. 気分 gives Rikizo an inner state. 電気 gives the house a pulse — a TV that has a power state, a lamp that can be toggled. And 休み names the thing Rikizo has been doing for nine days without a word for it.
 
 But the real earthquake is G9. Casual speech. For nine days, every character has spoken to Rikizo in polite register. Mom, Dad, Yamakawa, the shopkeepers, the station master — everyone has been performing formality. Yamakawa, Rikizo's best friend since Day 5, has been saying です and ます to him like a bank teller. Today, the mask slips. Yamakawa drops polite form and talks like what he is: a teenager talking to his best friend.
 
@@ -2604,7 +2604,7 @@ This is the first time the game's linguistic reality has shifted not by adding o
 
 Rikizo wakes up. The calendar reads 「五月六日」(May 6th, Tuesday).
 
-Something is different in the bedroom. Not different-wrong — different-new. There's a lamp on the desk next to the パソコン. It has always been there (object decoration from Day 1). But today it's... on. A warm yellow glow. The room has ambient light that it didn't have before. 電気 exists. The house has electricity now — not as infrastructure (the TV has worked since Day 1) but as a *concept*. Things can be turned on and off.
+Something is different in the bedroom. Not different-wrong — different-new. There's a lamp on the desk next to the パソコン. It has always been there (object decoration from Day 1). But today it responds to a tap — on, off, on, off. 電気 exists. The house has electricity now — not as infrastructure (the TV has worked since Day 1) but as a *concept*. Things can be turned on and off.
 
 **If player interacts with the lamp:**
 > 「電気です。」 — "Electricity." *(Rikizo names it. The lamp becomes the first toggle-able object in the game: tap to turn on, tap to turn off. A tiny mechanic, but it establishes that the world has states now — not just existence and non-existence, but on and off.)*
@@ -2635,9 +2635,7 @@ Mom is in the kitchen. The ritual continues. いただきます. But today, the 
 
 5. **Mom:** 「天気もいいですし、気分もいいですね。」 — "The weather is good and the mood is good too." *(し — "and also" — is Mom reinforcing the pattern. 天気 and 気分 side by side, both using 気.)*
 
-6. **Mom:** 「でも...今日は電気をつけてくださいね。夜になりますから。」 — "But... please turn on the lights today, okay? Because it'll get dark." *(なる — "to become." Mom says evening will come. This is the first hint that this day has a NIGHT PHASE. Previous days have been timeless — daytime forever. Today, for the first time, なる creates temporal change within a single game day. Evening なる arrives. Lights matter.)*
-
-**Design note — the night phase:** Day 10 is the first day with a distinct evening/night segment. When the player has completed enough interactions, the sky dims. The void (if still visible at world edges) shifts from white to dark grey. Streetlights come on in town (電気). The house windows glow. This is cosmetic but atmospheric — the world that was eternal daylight now has a rhythm. なる made it possible: the day *becomes* night.
+6. **Mom:** 「りきぞは先生になりましたね。」 — "You've become a teacher, Rikizo." *(なる — "to become." Mom uses it warmly, reflecting on Rikizo's role. This is the first natural use of なる in dialogue — not philosophical, just maternal pride. But the word sits in the air. Became. Things become. Everything in this world has been becoming.)*
 
 ---
 
@@ -2808,10 +2806,7 @@ Weather has been implicit since Day 6 (when the sky first appeared with the land
 **If the player checks weather on TV first, then goes outside:**
 > Rikizo: 「テレビの天気と同じですね。」 — "Same as the TV weather." *(A small moment of environmental consistency — the TV broadcast matches reality. In most games this is trivial. In THIS game, where reality is constructed from vocabulary, the TV and the sky agreeing is mildly reassuring.)*
 
-**Night phase weather shift:**
-> When evening arrives: 「天気が...暗くなりました。」 — "The weather got... dark." *(暗い — "dark" — is not yet available as vocab (N4). But なる is. The sky なる-ed into something. Rikizo can name the change but not the state. He knows the weather became something. He can't say what it became.)*
-
-**Design note — weather as atmosphere:** Weather is cosmetic for now. It doesn't affect gameplay. But it transforms the world's mood — sunny, cloudy, evening light — and gives NPCs their most natural conversation topic. In later N4 days, weather can become functional (rain prevents certain actions, heat changes NPC behavior). For Day 10, it's about naming: the sky has a word now.
+**Design note — weather as atmosphere:** Weather is cosmetic for now. It doesn't affect gameplay. But it gives NPCs their most natural conversation topic. In later N4 days, weather can become functional (rain prevents certain actions, heat changes NPC behavior). Day-night cycles also arrive in N4 with 朝/夜 vocabulary. For Day 10, it's about naming: the sky has a word now.
 
 ---
 
@@ -2824,7 +2819,7 @@ Nine days. Rikizo has been on vacation for nine days. He did not have the word f
 **Mom uses it to reframe the whole trip:**
 > 「休みはいいですね。天気もいいし、気分もいいし。」 — "Holidays are good. Nice weather, nice mood." *(Mom stacks し — "and also" — to build a picture of contentment. The holiday is good. The weather is good. The mood is good. Everything is good. Mom is at peace. This should feel warm on the surface and hollow underneath — everything being good in a world built from nothing is either idyllic or synthetic, depending on how much the player has been paying attention.)*
 
-**Dad in the evening:**
+**Dad (later in the day):**
 > 「今日は休日です。明日も休みですよ。」 — "Today is a holiday. Tomorrow is a day off too." *(Dad confirms: the vacation continues. The extended Golden Week. But the player should wonder — when does it end? The lesson title is "Weather & Energy" but the real theme is rest. Rikizo is resting in a world that was built for him to rest in. The vacation might never end. School is two lessons away. Until then: 休み.)*
 
 ---
@@ -2835,43 +2830,15 @@ Nine days. Rikizo has been on vacation for nine days. He did not have the word f
 
 The game doesn't draw attention to this. No NPC says 「世界はなりました」(the world became). But the verb appears in natural contexts that the observant player can read as meta-commentary:
 
-- **Mom:** 「夜になりますから。」 — "Because it'll become night."
+- **Mom:** 「りきぞは先生になりましたね。」 — "You've become a teacher, Rikizo."
 - **Yamakawa:** 「天気よくなったね！」 — "The weather got good, huh!"
 - **Station master:** 「いい日になりましたね。」 — "It's become a nice day."
+- **Hotel clerk:** 「人気になりましたよ。」 — "It's become popular."
 
 Every use of なる is innocent. Every use of なる also describes the fundamental mechanic of the game. The world is always becoming. It has been becoming for ten days.
 
 **If player has paranoia ≥ 6:**
-> When Rikizo uses なる himself — 「暗くなった...」 ("It got dark...") — there's a pause. A half-second longer than normal. As if the word tastes strange in his mouth. As if "becoming" is something he almost recognizes from the other side. Then the moment passes and he's fine.
-
----
-
-### The Night Phase
-
-Day 10 is the first day with a distinct night segment. After the player has completed a threshold of interactions (visiting the station, the hotel, and either the コンビニ or デパート), the sky begins to dim. Sunset colors streak the background. Then: evening.
-
-**What changes at night:**
-
-1. **The house:** Windows glow warm yellow (電気 from inside). The lamp in Rikizo's room — if turned on — is visible from outside. The house looks like a home for the first time. Not just a building with rooms — a warm place in a darkening world.
-
-2. **The town:** Streetlights come on. The コンビニ glows fluorescent (it's always open — コンビニ don't close). The デパート is dark (closed). The station has a single light on the platform, illuminating the parked train. The ホテル lobby glows warmly.
-
-3. **NPCs:** Most NPCs are gone. The shopkeeper is inside her lit コンビニ. The station master is... still there. Sitting in the waiting room. A light on. Waiting. At night. He doesn't go home. He doesn't sleep. He waits. (If the player visits: 「まだですよ。」 — "Not yet." Same as always. The night doesn't change his patience.)
-
-4. **The void (at world edges):** During the day, the void is white. At night, it's dark. Not black — dark grey. The void has a night mode. This is wrong. The void shouldn't respond to time. It's nothing. But the nothing got darker. (+1 paranoia if the player walks to the void edge at night and examines it.)
-
-5. **Home — evening scene:**
-
-**Mom (evening):**
-> 「電気をつけましたか？暗くなりましたね。」 — "Did you turn on the lights? It's gotten dark." *(Mom checks. This is the game teaching the player to use the lamp/light toggle. If the player hasn't turned on lights, the house is noticeably dimmer.)*
-
-**Dad (evening):**
-> 「休みたいです...」 — "I want to rest..." *(休む + たいです. Dad wants to rest. He's been resting for ten days. He wants to rest more. This is Dad's defining energy: possession and inertia.)*
-
-**If player interacts with the bed at night:**
-> 「今日はいい休日でした。天気もよかったし、気分もよかった。おやすみなさい。」 — "Today was a nice holiday. The weather was good, the mood was good. Good night."
-> *(おやすみなさい. The greeting has been available since Day 1 but this is its first natural use — actually saying goodnight at night, at bedtime, at the end of a day that had a beginning and an end. The day-night cycle gives おやすみなさい its purpose.)*
-> **SAVE POINT. Day 10 complete.**
+> When Rikizo uses なる himself — 「いい天気になった...」 ("It became nice weather...") — there's a pause. A half-second longer than normal. As if the word tastes strange in his mouth. As if "becoming" is something he almost recognizes from the other side. Then the moment passes and he's fine.
 
 ---
 
@@ -2885,9 +2852,6 @@ The tree is in front of the house, as always. The spatial tag from Day 9 persist
 **If befriended + curiosity ≥ 6:**
 > 「木-さん... 休みはいつまでですか？」 — "Tree-san... how long is the holiday?" *(Rikizo asks the tree what he hasn't asked anyone else. When does the vacation end? The tree doesn't answer. It never answers. But the question is in the air now. Rikizo is, for the first time, thinking about the holiday's *end* — which implies a beginning, a duration, a structure. The vacation has been formless. 休み gives it a name. Names imply limits.)*
 
-**Night version (if player visits tree at night):**
-> 「木-さん、おやすみ。暗くなったね。」 — "Good night, Tree-san. It got dark." *(First nighttime tree visit. The tree at night. Its leaves dark against the void-grey sky. If the player has been talking to the tree every day, this quiet nighttime greeting is... tender. Rikizo says goodnight to a tree. The tree is a silhouette. The relationship score ticks up by +1.)*
-
 ---
 
 ### Running Gags Updated
@@ -2895,16 +2859,15 @@ The tree is in front of the house, as always. The spatial tag from Day 9 persist
 1. **The Toilet Door** — Status quo. Resolved in Day 9. Dad may or may not be guarding it. No new developments.
 2. **Dad's Gold** — Continues. 「だめ！」 Dad's gold is eternal.
 3. **Dad's Car** — Evolves. Dad stares at the car AND the train. He owns one and desires the other. Both are unusable for the same reason: 乗る doesn't exist. 「車も電車も...まだです。」 — "The car and the train... not yet."
-4. **Tree-san** — Upgraded with casual speech and nighttime variant. The relationship deepens.
+4. **Tree-san** — Upgraded with casual speech. The relationship deepens.
 5. **The Fridge** — Resolved since Day 9. Functional. Contains food. Normal.
-6. **Family Possessions** — 電気 gives Dad a new domain: 「電気はだいじです！」 "Electricity is important!" He treats the light switches as territory. Turning off lights Dad turned on: +1 dad_annoyance. *(A very Japanese domestic conflict: Dad leaves lights on, someone turns them off. But in Dad's mind, he TURNED THEM ON. They are HIS photons.)*
-7. **The Water Bottle** — Still in inventory. Truly vestigial now.
-8. **The Empty Phone** — New message from Yamakawa (casual register). すずき's homework still pending (書く = N5.13).
-9. **Yamakawa's Migration** — From wall (Days 5–8) to chair (Day 9) to... still chair. But now he talks different. Same location, transformed character.
-10. **Mom's "Come Home"** — Evening variant: 「暗くなりましたよ。家に来てくださいね。」 "It's gotten dark. Please come home." *(なる. Mom uses it to justify the request. The darkness *became*. Therefore, come home.)*
-11. **Mom's Kitchen Authority** — Unchanged. She still controls the fridge and the kitchen. 電気 in the kitchen is Mom's domain.
-12. **いただきます / ごちそうさまでした** — Day 4 of the ritual. Automatic.
-13. **The Station Master's まだ** — Evolves. The train is HERE. The まだ now applies to riding it, not to its existence. The station master's patience has a new object. He sits in the waiting room at night, under a single light, next to an idle train, and waits.
+6. **The Water Bottle** — Still in inventory. Truly vestigial now.
+7. **The Empty Phone** — New message from Yamakawa (casual register). すずき's homework still pending (書く = N5.13).
+8. **Yamakawa's Migration** — From wall (Days 5–8) to chair (Day 9) to... still chair. But now he talks different. Same location, transformed character.
+9. **Mom's "Come Home"** — 「家に来てくださいね。」 Every day. Unchanged but persistent.
+10. **Mom's Kitchen Authority** — Unchanged. She still controls the fridge and the kitchen.
+11. **いただきます / ごちそうさまでした** — Day 4 of the ritual. Automatic.
+12. **The Station Master's まだ** — Evolves. The train is HERE. The まだ now applies to riding it, not to its existence. The station master's patience has a new object. He sits in the waiting room, next to an idle train, and waits.
 14. **The ノート** — Still waiting for 書く (N5.13). The wait grows.
 15. **Weather Small Talk** — NEW. Every NPC can now discuss the weather. This is the most Japanese conversation topic possible. The game has unlocked small talk. 「いい天気ですね」 is the new universal greeting. This gag doesn't have a punchline — it's just accurate cultural simulation. Everyone talks about the weather because everyone can finally talk about the weather.
 16. **The Hotel Guest** — NEW. A man on vacation with no luggage and no origin. He came from "nearby." He is made of today's vocabulary. He might be the most distilled NPC in the game: a person who exists because the word for his situation (休み) exists. If the word for "where he's from" existed, he might have an answer.
@@ -2922,13 +2885,9 @@ The tree is in front of the house, as always. The spatial tag from Day 9 persist
 - `entered_hotel` — Player entered the ホテル.
 - `talked_to_hotel_guest` — Completed guest conversation.
 - `guest_no_luggage` — Player noticed the guest has no luggage (paranoia ≥ 5).
-- `night_phase_reached` — Player triggered the evening transition.
-- `void_at_night` — Player examined the void during nighttime. +1 paranoia.
 - `tv_turned_on` — Player turned on the TV (first toggle interaction).
 - `lamp_toggled` — Player toggled the desk lamp (on/off state mechanic established).
 - `ekichou_train_holiday` — Heard the station master say the train is "on holiday."
-- `tree_night_greeting` — (If befriended) Player visited tree at night.
-- `dad_light_annoyance` — Player turned off a light Dad turned on. +1 dad_annoyance.
 
 **Economy:**
 - Wallet: unchanged from Day 9 (no new purchases available today unless they visit existing shops).
@@ -2937,7 +2896,7 @@ The tree is in front of the house, as always. The spatial tag from Day 9 persist
 **Relationships available:**
 ```
 char_taro:     +1 (daily talk), +1 (train conversation — bonding over shared vehicle frustration)
-char_sakura:   +1 (daily talk), +1 (morning/evening conversations about 休み)
+char_sakura:   +1 (daily talk), +1 (morning conversation about 休み)
 char_tree:     +1 (daily greeting, if befriended)
 char_yamakawa: +1 (daily talk), +2 (completing the full casual conversation — milestone bonus for first casual interaction)
 ```
@@ -2945,13 +2904,11 @@ char_yamakawa: +1 (daily talk), +2 (completing the full casual conversation — 
 **Hidden stats:**
 ```
 paranoia:       +1 (yamakawa_broken_word, if asked about it)
-                +1 (void_at_night, examining void in darkness)
                 +1 (guest_no_luggage, noticing hotel guest has nothing)
 curiosity:      +1 (entering hotel — new location)
                 +1 (trying train doors — investigating new object)
                 +1 (turning on TV — new mechanic)
-dad_annoyance:  +1 (turning off Dad's lights)
-                -1 (daily cooling at day start)
+dad_annoyance:  -1 (daily cooling at day start)
 ```
 
 ---
@@ -2965,30 +2922,20 @@ dad_annoyance:  +1 (turning off Dad's lights)
 | ホテル lobby interior | Background | B (MP100) | **Critical** | Clean lobby: front desk with bell, plants, seating area with couches, elevator door (decorative), staircase up. Warm lighting. |
 | Hotel clerk | Sprite + portrait | A+B | High | Female clerk behind front desk. Professional, composed. Service-industry posture. |
 | Hotel guest | Sprite | A+B | Medium | Male guest sitting in lobby seating area. Relaxed posture. No luggage (deliberately). Casual clothing. |
-| Night sky / evening transition | BG overlay / palette swap | B | **Critical** | Sunset → evening → night palette for all outdoor backgrounds. Warm orange → deep blue → dark. This is the first time-of-day transition. |
-| Streetlights (on) | Sprite overlay | A (Pixel) | High | Simple streetlight sprites with warm glow circles for the night phase of town areas. |
-| House at night (exterior) | BG variant | B (MP100) | High | The house with warm window glow visible from outside. The first time the player sees the house as a lit shelter against darkness. |
 | Lamp (on/off states) | Sprite | A (Pixel) | Medium | Desk lamp with two states: off (dark) and on (warm yellow glow). First toggleable object. |
 | TV (on/off states) | Sprite | A (Pixel) | Medium | TV with two states: off (dark screen) and on (glowing with weather broadcast image). |
-| Station at night | BG variant | B (MP100) | Medium | Station platform at night: single light illuminating the idle train. Station master visible in waiting room window. Atmospheric. |
-| Void at night | BG overlay | B | Medium | The void edges shift from white to dark grey at night. Unsettling — the void shouldn't respond to time, but it does. |
 | Train timetable (with 電車) | UI element | A (Pixel) | Low | The station timetable board with a single entry: 「電車」. No schedule, no destination. Just the word. |
-| コンビニ at night | BG variant | B (MP100) | Low | Convenience store glowing fluorescent in the dark town. Always open. Warm light spilling onto the street. |
 
 ---
 
 ### Open Questions for Day 10
 
-1. **How does the night phase trigger?** Recommendation: After the player has visited 3+ distinct locations (home, station, hotel, コンビニ, デパート), the sky begins to transition. This gates the night behind exploration — you can't skip to evening without seeing the day's content. The transition is gradual (5-10 seconds of sky dimming).
+1. **Does weather ever change within a day?** Recommendation: Not yet. Day 10 weather is fixed (nice all day). Dynamic weather (rain, clouds) comes with later N4 vocabulary (雨, 曇り). For now, weather is a conversation topic and a TV broadcast, not a mechanic.
 
-2. **Does weather ever change within a day?** Recommendation: Not yet. Day 10 weather is fixed (nice all day, then dark at night). Dynamic weather (rain, clouds) comes with later N4 vocabulary (雨, 曇り). For now, weather is a conversation topic and a TV broadcast, not a mechanic.
+2. **The hotel guest — recurring?** Recommendation: He's there every day from now on. Same spot. Same lack of luggage. Same deflected questions about where he's from. He becomes another quiet anomaly for observant players. He never checks out. He never has bags. He's always "on holiday." On Day 17, when ナナ arrives, she might be the first character to notice him: 「あの人は... 毎日いますね。」 "That person is... here every day."
 
-3. **The hotel guest — recurring?** Recommendation: He's there every day from now on. Same spot. Same lack of luggage. Same deflected questions about where he's from. He becomes another quiet anomaly for observant players. He never checks out. He never has bags. He's always "on holiday." On Day 17, when ナナ arrives, she might be the first character to notice him: 「あの人は... 毎日いますね。」 "That person is... here every day."
+3. **Should Yamakawa's broken word be repeatable?** Recommendation: No. It happens once, during the initial conversation. If the player replays the conversation (talking to Yamakawa again), the broken word moment is gone — replaced with normal casual dialogue. The glitch was a one-time event. This makes it feel more like a real glitch and less like a scripted moment. Players who weren't paying attention miss it. That's the point.
 
-4. **Should Yamakawa's broken word be repeatable?** Recommendation: No. It happens once, during the initial conversation. If the player replays the conversation (talking to Yamakawa again), the broken word moment is gone — replaced with normal casual dialogue. The glitch was a one-time event. This makes it feel more like a real glitch and less like a scripted moment. Players who weren't paying attention miss it. That's the point.
-
-5. **Night phase — does the player HAVE to sleep?** Recommendation: No. The bed offers sleep (save + end day) but the player can wander the night town indefinitely. There's just less to do: most NPCs are gone, most shops are closed. The station master and the コンビニ shopkeeper are the only NPCs available at night. The night is quiet. The void is dark. The tree is a silhouette. The game trusts the player to go to bed when they're ready.
-
-6. **電気 — do lights ever go out?** Recommendation: Not in Day 10. Lights are toggleable but reliable. In a future Day (maybe N4, when the world starts showing cracks), lights might flicker. Electricity might fail. 電気 stops working. That's a horror beat for later. For now, 電気 is functional and reassuring — you can control the light. The darkness outside is natural. The light inside is yours.
+4. **電気 — do lights ever go out?** Recommendation: Not in Day 10. Lights are toggleable but reliable. In a future Day (maybe N4, when the world starts showing cracks), lights might flicker. Electricity might fail. 電気 stops working. That's a horror beat for later. For now, 電気 is functional and reassuring — you can control the light.
 
 ---
