@@ -1076,6 +1076,116 @@
           "meaning": "west"
         }
       ]
+    },
+    {
+      "type": "vocab_categories",
+      "title": "🧩 Vocab Categories",
+      "emoji": "🧩",
+      "instructions": "Sort the vocabulary into the correct categories. Tap a word, then tap the category it belongs to!",
+      "rounds": [
+        {
+          "groups": [
+            {
+              "label": "👨‍👩‍👧 Family & People",
+              "words": ["先生", "母", "父", "友"]
+            },
+            {
+              "label": "⏰ Time & Calendar",
+              "words": ["毎日", "今日", "今年", "毎週"]
+            },
+            {
+              "label": "🚃 Transport & Places",
+              "words": ["電車", "駅", "道", "車"]
+            }
+          ]
+        },
+        {
+          "groups": [
+            {
+              "label": "🌿 Nature & Weather",
+              "words": ["山", "川", "花", "天気"]
+            },
+            {
+              "label": "🏫 School & Study",
+              "words": ["学校", "本", "国語", "読書"]
+            },
+            {
+              "label": "💴 Numbers & Money",
+              "words": ["百", "千", "万", "円"]
+            }
+          ]
+        },
+        {
+          "groups": [
+            {
+              "label": "🧭 Compass Directions",
+              "words": ["北", "南", "東", "西"]
+            },
+            {
+              "label": "👁️ Body Parts",
+              "words": ["目", "耳", "手", "足"]
+            },
+            {
+              "label": "🏢 Places & Signs",
+              "words": ["出口", "入口", "会社", "家"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanji_bingo",
+      "title": "🎰 Kanji Bingo — Grand Finale!",
+      "emoji": "🎰",
+      "instructions": "A 5×5 bingo grid with random kanji. Listen to the reading and meaning called out, then tap the matching kanji. Get 5 in a row and Rikizo stamps your card! 🎉",
+      "bingoTarget": 3,
+      "kanjiPool": [
+        { "kanji": "人", "reading": "ひと", "meaning": "person" },
+        { "kanji": "女", "reading": "おんな", "meaning": "woman" },
+        { "kanji": "母", "reading": "はは", "meaning": "mother" },
+        { "kanji": "父", "reading": "ちち", "meaning": "father" },
+        { "kanji": "友", "reading": "とも", "meaning": "friend" },
+        { "kanji": "日", "reading": "ひ", "meaning": "sun / day" },
+        { "kanji": "月", "reading": "つき", "meaning": "moon / month" },
+        { "kanji": "水", "reading": "みず", "meaning": "water" },
+        { "kanji": "木", "reading": "き", "meaning": "tree" },
+        { "kanji": "金", "reading": "きん", "meaning": "gold / money" },
+        { "kanji": "百", "reading": "ひゃく", "meaning": "hundred" },
+        { "kanji": "千", "reading": "せん", "meaning": "thousand" },
+        { "kanji": "円", "reading": "えん", "meaning": "yen" },
+        { "kanji": "時", "reading": "じ", "meaning": "o'clock / time" },
+        { "kanji": "年", "reading": "とし", "meaning": "year" },
+        { "kanji": "週", "reading": "しゅう", "meaning": "week" },
+        { "kanji": "行", "reading": "いく", "meaning": "to go" },
+        { "kanji": "来", "reading": "くる", "meaning": "to come" },
+        { "kanji": "駅", "reading": "えき", "meaning": "station" },
+        { "kanji": "山", "reading": "やま", "meaning": "mountain" },
+        { "kanji": "川", "reading": "かわ", "meaning": "river" },
+        { "kanji": "車", "reading": "くるま", "meaning": "car" },
+        { "kanji": "大", "reading": "おおきい", "meaning": "big" },
+        { "kanji": "小", "reading": "ちいさい", "meaning": "small" },
+        { "kanji": "食", "reading": "たべる", "meaning": "to eat" },
+        { "kanji": "新", "reading": "あたらしい", "meaning": "new" },
+        { "kanji": "高", "reading": "たかい", "meaning": "expensive / tall" },
+        { "kanji": "安", "reading": "やすい", "meaning": "cheap" },
+        { "kanji": "天", "reading": "てん", "meaning": "sky / heaven" },
+        { "kanji": "花", "reading": "はな", "meaning": "flower" },
+        { "kanji": "魚", "reading": "さかな", "meaning": "fish" },
+        { "kanji": "本", "reading": "ほん", "meaning": "book" },
+        { "kanji": "学", "reading": "まなぶ", "meaning": "to study / learn" },
+        { "kanji": "国", "reading": "くに", "meaning": "country" },
+        { "kanji": "白", "reading": "しろ", "meaning": "white" },
+        { "kanji": "北", "reading": "きた", "meaning": "north" },
+        { "kanji": "東", "reading": "ひがし", "meaning": "east" },
+        { "kanji": "右", "reading": "みぎ", "meaning": "right" },
+        { "kanji": "上", "reading": "うえ", "meaning": "above / up" },
+        { "kanji": "口", "reading": "くち", "meaning": "mouth" },
+        { "kanji": "出", "reading": "でる", "meaning": "to exit / emerge" },
+        { "kanji": "会", "reading": "あう", "meaning": "to meet" },
+        { "kanji": "目", "reading": "め", "meaning": "eye" },
+        { "kanji": "耳", "reading": "みみ", "meaning": "ear" },
+        { "kanji": "足", "reading": "あし", "meaning": "foot / leg" }
+      ]
     }
   ]
 }
