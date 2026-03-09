@@ -216,6 +216,7 @@
         {
           "id": "N5.16",
           "title": "Sides & Vertical",
+          "file": "data/N5/lessons/N5.16.json",
           "kanji": [
             "右",
             "左",
@@ -226,6 +227,7 @@
         {
           "id": "N5.17",
           "title": "Work & Society",
+          "file": "data/N5/lessons/N5.17.json",
           "kanji": [
             "午",
             "口",
@@ -238,6 +240,7 @@
         {
           "id": "N5.18",
           "title": "Body & Senses",
+          "file": "data/N5/lessons/N5.18.json",
           "kanji": [
             "目",
             "見",
@@ -365,6 +368,22 @@
           "id": "N5.Review.7",
           "title": "Communication & Quantity",
           "file": "data/N5/reviews/N5.Review.7.json"
+        },
+        {
+          "id": "N5.Review.8",
+          "title": "Cardinal Directions & Sides",
+          "file": "data/N5/reviews/N5.Review.8.json"
+        },
+        {
+          "id": "N5.Review.9",
+          "title": "Work, Society & Body Senses",
+          "file": "data/N5/reviews/N5.Review.9.json"
+        },
+        {
+          "id": "N5.Final.Review",
+          "title": "りきぞ N5ファイナル — N5 Final Review",
+          "scope": "N5.1–N5.18",
+          "file": "data/N5/reviews/N5.Final.Review.json"
         }
       ],
       "compose": [
@@ -427,6 +446,18 @@
         {
           "lesson": "N5.15",
           "file": "data/N5/compose/compose.N5.15.json"
+        },
+        {
+          "lesson": "N5.16",
+          "file": "data/N5/compose/compose.N5.16.json"
+        },
+        {
+          "lesson": "N5.17",
+          "file": "data/N5/compose/compose.N5.17.json"
+        },
+        {
+          "lesson": "N5.18",
+          "file": "data/N5/compose/compose.N5.18.json"
         }
       ],
       "stories": [
@@ -471,6 +502,24 @@
           "title": "Reading and Writing",
           "titleJp": "読んで、書いて",
           "dir": "data/N5/stories/yonde-kaite"
+        },
+        {
+          "id": "kita-minami-higashi-nishi",
+          "title": "North, South, East, and West",
+          "titleJp": "北と南と東と西",
+          "dir": "data/N5/stories/kita-minami-higashi-nishi"
+        },
+        {
+          "id": "kaisha-de-no-arubaito",
+          "title": "Part-time Job at the Company",
+          "titleJp": "会社でのアルバイト",
+          "dir": "data/N5/stories/kaisha-de-no-arubaito"
+        },
+        {
+          "id": "rikizo-to-ookii-sakana",
+          "title": "Rikizo and the Big Fish",
+          "titleJp": "りきぞと大きい魚",
+          "dir": "data/N5/stories/rikizo-to-ookii-sakana"
         }
       ],
       "game": [
@@ -488,6 +537,7 @@
         {
           "id": "N4.1",
           "title": "Returning & Using",
+          "file": "data/N4/lessons/N4.1.json",
           "kanji": [
             "帰",
             "作",
@@ -503,6 +553,7 @@
         {
           "id": "N4.2",
           "title": "Riding & Distance",
+          "file": "data/N4/lessons/N4.2.json",
           "kanji": [
             "乗",
             "歩",
@@ -985,6 +1036,14 @@
         }
       ],
       "compose": [
+        {
+          "lesson": "N4.1",
+          "file": "data/N4/compose/compose.N4.1.json"
+        },
+        {
+          "lesson": "N4.2",
+          "file": "data/N4/compose/compose.N4.2.json"
+        },
         {
           "lesson": "N4.18",
           "file": "data/N4/compose/compose.N4.18.json"

@@ -11,6 +11,8 @@ window.FinalReviewModule = (function () {
   let config = null;
   let onExit = null;
   let reviewData = null;
+  let _reviewId = null;
+  let _filePath = null;
   let termMap = {};
   let conjugations = null;
   let counterRules = null;
@@ -869,10 +871,12 @@ window.FinalReviewModule = (function () {
   // ══════════════════════════════════════════════════════════════
   //  PUBLIC START
   // ══════════════════════════════════════════════════════════════
-  function start(c, cfg, exit) {
+  function start(c, cfg, exit, filePath, reviewId) {
     container = c;
     config = cfg;
     onExit = exit;
+    _filePath = filePath || null;
+    _reviewId = reviewId || 'N4.Final.Review';
     teacherMode = false;
     totalScore = 0;
     maxPossible = 0;
@@ -888,12 +892,17 @@ window.FinalReviewModule = (function () {
     container.innerHTML = '<div style="text-align:center;padding:60px;color:#888;">Loading Final Review...</div>';
     try {
       const manifest = await window.getManifest(config);
-      // Find the final review file
-      const n4Reviews = (manifest.data.N4.reviews || []);
-      let frEntry = n4Reviews.find(r => r.id === 'N4.Final.Review');
+      // Find the final review file — search all level review arrays
+      const allReviews = [
+        ...(manifest.data.N5 && manifest.data.N5.reviews || []),
+        ...(manifest.data.N4 && manifest.data.N4.reviews || [])
+      ];
+      let frEntry = allReviews.find(r => r.id === _reviewId);
+      if (!frEntry && _filePath) {
+        frEntry = allReviews.find(r => r.file === _filePath);
+      }
       if (!frEntry) {
-        // fallback search
-        frEntry = n4Reviews.find(r => r.file && r.file.includes('Final'));
+        frEntry = allReviews.find(r => r.file && r.file.includes('Final'));
       }
       if (!frEntry) {
         container.innerHTML = '<div style="text-align:center;padding:40px;color:red;">Final Review not found in manifest.</div><button onclick="arguments[0]()" style="margin:20px auto;display:block;">Back</button>';
@@ -987,8 +996,8 @@ window.FinalReviewModule = (function () {
     root.innerHTML = `
       <div class="fr-header" id="fr-header">
         <div>
-          <h2>りきぞうファイナル</h2>
-          <div style="font-size:0.8rem;opacity:0.8;">N4 Final Review</div>
+          <h2>${reviewData.title || 'りきぞうファイナル'}</h2>
+          <div style="font-size:0.8rem;opacity:0.8;">${_reviewId}</div>
         </div>
         <div class="fr-header-score" id="fr-total-score">0 pts</div>
       </div>
@@ -2066,9 +2075,9 @@ window.FinalReviewModule = (function () {
 
     // Save score
     if (window.JPShared && window.JPShared.progress) {
-      const prev = window.JPShared.progress.getReviewScore('N4.Final.Review');
+      const prev = window.JPShared.progress.getReviewScore(_reviewId);
       if (prev === undefined || pct > prev) {
-        window.JPShared.progress.setReviewScore('N4.Final.Review', pct);
+        window.JPShared.progress.setReviewScore(_reviewId, pct);
       }
     }
 
@@ -2284,10 +2293,10 @@ window.FinalReviewModule = (function () {
 
   // ── Public interface ──
   return {
-    start: function(c, cfg, exit) {
+    start: function(c, cfg, exit, filePath, reviewId) {
       this._config = cfg;
       this._onExit = exit;
-      start(c, cfg, exit);
+      start(c, cfg, exit, filePath, reviewId);
     }
   };
 })();

@@ -198,7 +198,7 @@
           if (!ok) return;
         }
         if (window.FinalReviewModule) {
-          window.FinalReviewModule.start(this.container, this.config, this.onExit);
+          window.FinalReviewModule.start(this.container, this.config, this.onExit, filePath, reviewId);
           return;
         }
       }
