@@ -2159,4 +2159,394 @@ The wallet is finally active. Purchases deduct from the total. There is no incom
 
 5. **Station master's name:** Does he have one? Recommendation: Not yet. He's 駅長. A title, not a person. He may gain a name later when the station becomes more central to the plot. For now, his identity IS his role. He's the first NPC defined by function rather than personality.
 
+6. **Day 8 correction — 書く:** Earlier notes suggested 書く (to write) = N5.9. It's actually N5.13. The notebook remains an item without its verb for longer than expected. This is fine — it sits in inventory as a mystery object, and the longer it waits, the more satisfying the eventual payoff.
+
+---
+
+## Day 9 — "Inside" (unlocked by N5.9: Relative Position)
+
+### Lesson Kanji & Key Vocab Available
+
+**New kanji (4):** 前、後、中、外
+
+**Cumulative kanji (62):** All N5.1–N5.8 + above.
+
+**New vocab highlights:**
+- Spatial: 中 (なか, inside), 外 (そと, outside), 前 (まえ, front/before), 後ろ (うしろ, behind)
+- Temporal: 後 (あと, after/later) — same kanji as 後ろ, completely different word
+- Polite direction: こちら (this way), そちら (that way), あちら (over there), どちら (which way)
+- Question: どうして (why/how come)
+- Reassurance: だいじょうぶ (alright/okay)
+- Compounds: 外人 (がいじん, foreigner), 外食 (がいしょく, eating out), 名前 (なまえ, name — 名 was N5.1, 前 is now taught)
+
+**Grammar:** G9 unlocks after this lesson — plain forms, けど/から (clause connectors), plain commands, plain prohibition, のです/なんです. These will be available from Day 10 onward. For Day 9 content, the available grammar remains the same as Days 5–8: polite verb paradigm, te-form, plain_past, desire (たいです), volitional (ましょう from G8 which unlocked after Day 8).
+
+**Wait — G8 grammar is now available.** G8 unlocked after N5.8 (Day 8). This means Day 9 is the first day with:
+- ～ています (progressive: "is doing")
+- ～たいです (desire: "want to")
+- ～ましょう (invitation: "let's")
+- ～でしょう (conjecture: "probably")
+
+This is massive. Day 9 doesn't just add spatial vocabulary. It adds spatial vocabulary *and* the ability to express desire, ongoing actions, and suggestions. 「中に入りたいです」 — "I want to go inside." That sentence was impossible yesterday.
+
+**New this day:** THE WORLD GAINS DEPTH. 中 and 外 transform every building from a facade into a space. The fridge becomes openable. The デパート becomes enterable. The コンビニ gains an interior. The house has rooms you can be *in*, not just *at*. Simultaneously, 前/後ろ/後 give the world a front and a back — things are no longer floating labels but objects with spatial relationships. And G8's ～たいです/～ましょう arrive to let Rikizo *want* things and *suggest* actions for the first time.
+
+---
+
+### The Day the World Became Three-Dimensional
+
+Every day so far, Rikizo has experienced the world as a surface. Buildings have exteriors. Rooms have doors. Objects have faces pointed toward you. The concept of being *inside* something — surrounded by walls, enclosed, contained — has not existed. The fridge is a door with no behind-the-door. The convenience store is a window with no behind-the-window. The house is a collection of rooms Rikizo is always, somehow, standing *at* rather than *in*.
+
+Today, 中 exists. And everything unfolds.
+
+This is the biggest single spatial expansion since Day 5 gave Rikizo the ability to leave the house. Day 5 was horizontal expansion — the world got wider. Day 9 is depth expansion — the world gets *deeper*. Buildings gain interiors. Objects gain insides. The void that filled every doorframe is replaced by rooms that have things in them. And 外 arrives simultaneously, because the concept of "inside" inherently creates "outside." You can't have 中 without 外. They're born together, two halves of a door that finally swings both ways.
+
+But the real surprise is 前 and 後ろ. Front and behind. The world hasn't just gained depth — it's gained *orientation*. Things have a face and a back. You can be in front of the station or behind the house. The flat map becomes navigable in a way that was impossible when everything was just "here" or "there."
+
+---
+
+### Morning — The Fridge
+
+Rikizo wakes up. The calendar reads 「五月五日」(May 5th, Monday — Children's Day, a national holiday).
+
+Breakfast with Mom. いただきます. パン and コーヒー. ごちそうさまでした. The ritual is established. Three days running.
+
+But after breakfast, something is different. The kitchen looks the same. The fridge is in the same place it's been since Day 1. The same fridge that has mocked Rikizo for eight days — a door to nothing, a container without containment, a monument to vocabulary-gated frustration.
+
+Today, Rikizo walks up to the fridge.
+
+**THE FRIDGE OPENS.**
+
+> Rikizo: 「中に...」 — "Inside..." *(He reaches for the handle. He has never done this before. Not because he chose not to — because "inside" didn't exist. Today it does. His hand knows where the handle is. He's been looking at this fridge for eight days.)*
+
+> *The fridge door swings open.*
+
+> Rikizo: 「中にありますよ！食べ物があります！」 — "There's stuff inside! There's food!"
+
+**The fridge contains:**
+- 水 (water bottles)
+- ジュース (juice)
+- たまご (eggs — visible but not yet vocab. Decorative food. The fridge has things you can't name.)
+- Something wrapped in plastic (unknown. No vocabulary for it. It's just a shape.)
+
+**If player takes water from the fridge:**
+> 「水を飲みたいです。」 — "I want to drink water." *(First ～たいです usage in the game. The desire form, available since G8 unlocked after Day 8, finds its natural first use: wanting a drink from the fridge you've been staring at for eight days.)*
+
+**If player examines the unknown wrapped thing:**
+> 「...何ですか？」 — "...What is it?" *(No vocabulary for it. Even with 中 unlocked, the fridge still has mysteries. The world opens in layers, not all at once.)*
+
+**Mom, watching from the kitchen:**
+> 「だいじょうぶですよ。」 — "It's alright." *(だいじょうぶ. The first use of this word. Mom says it casually, as if her child has always been able to open the fridge. As if the fridge has always had an inside. She's not surprised. She's never been surprised by anything.)*
+
+**Design note — the fridge resolution:** This is the single most-anticipated unlock in the game so far. The fridge has been a running gag for EIGHT DAYS. Every day, the player has walked past it knowing it should open. Every day, it hasn't. The moment it opens is the game's proof-of-concept: vocabulary unlocks the world. The fridge had food in it the whole time. The food was always there. The word wasn't.
+
+---
+
+### The House — Rooms Have Insides
+
+With 中 and 外 active, the house transforms. Rikizo has been navigating the house as a series of connected spaces, but now those spaces have explicit spatial properties.
+
+**The kitchen:**
+> 「台所の中にいます。」 — "I'm inside the kitchen." *(First time Rikizo explicitly locates himself INSIDE a room, not just AT a room.)*
+
+**If player goes to the front door:**
+> 「外に行きたいですか？」 — "Do you want to go outside?" *(The game asks. This is new. Before, leaving was just... leaving. Now there's a threshold: 中 → 外. The door has two sides.)*
+
+**If player looks outside from the front door:**
+> 「外はいいてんきですね。」 — "It's nice weather outside." *(Narrative license — てんき (weather) isn't formally taught until N5.10, but can appear as a set phrase in Mom's or NPC dialogue as flavor. Alternatively, use: 「外はきれいですね。」 — "It's pretty outside." — which uses only available vocab.)*
+
+**The toilet door:**
+> Finally. FINALLY. The toilet door that has been locked since Day 1 — the door Dad guards, the door that has no behind-the-door — today it has a behind-the-door.
+
+> *Player approaches the toilet door.*
+> Rikizo: 「中に...」 — "Inside..."
+
+> **OPTION A (Dad is nearby):**
+> Dad: 「だめ！わたしのトイレです！」 — "No! My toilet!" *(Dad has upgraded from blocking the door to claiming the room. The toilet has an inside now, and Dad insists it's HIS inside. The gag evolves: it was never about the door. It's about ownership.)*
+
+> **OPTION B (Dad is not nearby):**
+> *The door opens. Inside: a small, clean, normal bathroom. Toilet. Small sink. A hand towel. Absolutely nothing special. Nothing worth guarding. Nothing worth eight days of territorial behavior.*
+> Rikizo: 「...ふつうのトイレです。」 — "...It's a normal toilet."
+> *(ふつう — "normal/ordinary" — is N4 vocab, so this specific word may not be available. Alternative: 「...トイレです。」 — flatly. The anticlimax IS the punchline. The most guarded room in the house contains exactly what you'd expect.)*
+
+**Design note — the toilet resolution:** The toilet door is the oldest running gag in the game (Day 1). Its resolution should be deliberately anticlimactic. The player has been imagining what could possibly be behind a door that Dad guards so fiercely. Gold? A secret room? The answer is: a toilet. Just a toilet. Dad's possessiveness has no rational basis. He guards it because it's *his*, not because it contains anything worth guarding. This is consistent with his character: car (his), gold (his), toilet (his). Dad's defining trait is ownership, not value assessment.
+
+---
+
+### The コンビニ — You Can Go Inside Now
+
+The コンビニ has been a window counter since Day 5. The shopkeeper has been visible through glass. Items have been on display. Rikizo has been buying from outside, pointing at items through the window.
+
+Today, the door exists.
+
+**If player enters the コンビニ:**
+> Rikizo: 「コンビニの中ですか...!」 — "I'm inside the convenience store...!"
+
+> Shopkeeper: 「いらっしゃいませ！中にどうぞ。」 — "Welcome! Please come in." *(She says this as if people have always come inside. The window-counter era never happened in her memory.)*
+
+**The interior reveals:**
+- The same items as before (おにぎり, 水, ノート) — now on shelves instead of behind glass
+- New items visible but not purchasable (no vocab for them: magazines, snacks with kanji the player can't read)
+- A small seating area (two chairs, a counter by the window)
+- The shopkeeper, now full-body visible instead of just head-and-shoulders through the window
+
+**Yamakawa is also inside.**
+> Yamakawa: 「お！りきぞ！中に来ましたか！すごいですね！」 — "Oh! Rikizo! You came inside! Amazing!" *(Yamakawa treats this as an achievement. He has been leaning against the OUTSIDE wall for four days. Today, for the first time, he's inside. He's sitting on one of the chairs. He looks comfortable. He has always been comfortable here, apparently.)*
+
+**If player examines the shelves:**
+> Items on high shelves: 「高いです...」 — This could mean "expensive" OR "high up." The double meaning of 高い (tall/expensive) triggers for the first time in a spatial context. The shelf is physically 高い. The items on it might also be 高い (price-wise). Rikizo isn't sure which meaning he means. Neither is the player. This is the joke.
+
+**Design note — the コンビニ interior:** The コンビニ becoming enterable is a smaller payoff than the fridge but still significant. It changes the shopping experience from transactional (point at window → buy) to spatial (browse shelves → select → buy). Future items will be discoverable by exploring the interior. The seating area is Yamakawa's new spot — he's migrated from the outside wall to the inside chair. His territory has expanded inward.
+
+---
+
+### The デパート — Finally Inside
+
+The department store was the vocabulary gate of Day 8. You could see it. You couldn't enter it. Today:
+
+**If player enters the デパート:**
+> Rikizo: 「大きいですね...中も大きいです！」 — "It's big... the inside is big too!"
+
+The デパート interior is the largest indoor space in the game so far. Multiple sections. Higher-end items. A different atmosphere from the コンビニ — quieter, cleaner, more intimidating.
+
+**Visible sections:**
+| Section | What's visible | Can buy? |
+|---|---|---|
+| Food floor (一かい) | Beautiful food displays, wrapped packages | Yes — but expensive. おかし (snacks) 五百円, プレゼント gift boxes 千円+ |
+| Clothing (二かい) | Mannequins, folded clothes | No — no clothing vocab yet. Window-shopping only. |
+| Electronics (三かい) | Something that looks like phones/devices | No — no vocab. Decorative. |
+
+**Floor indicator:** The player can see 一かい、二かい、三かい markers. Counter vocabulary hasn't been fully taught, but the kanji 一, 二, 三 are from N5.1 and かい is readable. The デパート teaches floor counting through environment, not lecture.
+
+**Shopkeeper (different from コンビニ):**
+> 「いらっしゃいませ。こちらにどうぞ。」 — "Welcome. This way, please." *(こちら. The polite direction word finds its natural habitat: a department store employee guiding customers. The コンビニ shopkeeper says いらっしゃいませ. The デパート shopkeeper says いらっしゃいませ AND こちらにどうぞ. More words = more formal = more expensive store.)*
+
+**If player tries to buy プレゼント:**
+> 千円 (1,000 yen). If the player has enough money: 「プレゼントを買いました！」 A gift box enters inventory. Who is it for? The game doesn't say. The player has a gift. They have no one to give it to (no gift-giving vocabulary/mechanic yet). The gift sits in inventory, waiting — like the notebook, like the water bottle was. Items arrive before their purpose.
+
+> If not enough money: 「お金がありません...高いですね。」 — "No money... it's expensive."
+
+**If player goes to the clothing floor:**
+> Rikizo: 「...きれいですね。」 — "...Pretty." *(He can see clothes. He can't name them. He can't buy them. The vocabulary gate continues, one floor up. The デパート is a vertical vocabulary progression — each floor unlocks as the student's vocabulary grows.)*
+
+**Design note — the デパート as vertical world:** The department store is the game's first multi-level interior. Each floor represents a vocabulary tier: Floor 1 (food) is accessible with current vocab. Floor 2 (clothing) requires N4 vocab. Floor 3 (electronics) requires even more. The building physically embodies the curriculum — you can ride the escalator up, but the higher you go, the less you can interact with. The building grows with the student.
+
+---
+
+### The 駅 — Behind the Platform
+
+The station gains depth. The station master is still there, still saying まだ.
+
+**New spatial interactions:**
+> 前: 「駅の前にいます。」 — "I'm in front of the station." *(First use of 前 as positional. Rikizo can now stand IN FRONT OF the station, not just AT it.)*
+
+> 後ろ: If the player walks behind the station: 「駅の後ろですか...何もないです。」 — "Behind the station? ...Nothing." *(The back of the station is empty. Not void-empty — just normal-empty. A wall, some weeds, nothing interesting. But the fact that "behind" exists as a navigable direction is new.)*
+
+**Station master interaction:**
+1. 駅長: 「おはようございます。中にどうぞ。」 — "Good morning. Please come inside." *(The station has an interior now. The waiting room.)*
+2. Rikizo enters the waiting room. A bench. A clock. A timetable board — still empty.
+3. 駅長: 「まだですよ。でも、だいじょうぶです。」 — "Not yet. But it's alright." *(まだ + だいじょうぶ. Two of today's new words, combined. The station master acknowledges the train isn't here but insists it's fine. He's patient. He's always been patient.)*
+
+**If player asks どうして (why):**
+> Rikizo: 「どうしてまだですか？」 — "Why not yet?"
+> 駅長: 「...長い道ですから。」 — "...It's a long road." *(Same answer as yesterday. He deflects. The station master's mystery deepens — he knows something is coming, he won't say when, he isn't worried. He sits in an empty waiting room and waits. His まだ is either the most reassuring or the most ominous word in the game.)*
+
+---
+
+### 前 / 後ろ / 後 — The World Gets Orientation
+
+With front, behind, and after available, the world reorients. Objects that were just "there" now have faces.
+
+**At home:**
+- 「家の前に木があります。」 — "There's a tree in front of the house." *(Tree-san gets a location. It's in FRONT of the house. It has always been in front of the house. The spatial relationship was always true — the word for it is new.)*
+- 「家の後ろに何がありますか？」 — "What's behind the house?" *(Behind the house: a small garden area becomes visible for the first time. Not explorable yet — no garden vocabulary — but the space exists. The world extends backward as well as inward.)*
+
+**In town:**
+- 「コンビニの前にやまかわがいます。」 — "Yamakawa is in front of the convenience store." *(Wait — he's inside now. This sentence is wrong, which is itself a moment: the spatial relationships are catching up with the narrative. Yamakawa's location has changed, and the spatial vocabulary can now track it: 「コンビニの中にやまかわがいます。」)*
+
+**The after/later distinction (後 vs 後ろ):**
+> 後ろ (うしろ) = behind, spatial. 後ろ always has the ろ.
+> 後 (あと) = after, temporal. 後 stands alone.
+
+The game teaches this through context, not explanation:
+- Station master: 「後でまた来てください。」 — "Please come again later." (後で = temporal)
+- Rikizo behind a building: 「後ろにいます。」 — "I'm behind (it)." (後ろ = spatial)
+
+The player encounters both within minutes. The kanji is the same. The meaning is different. The ろ is the marker. This is one of those Japanese distinctions that textbooks explain in a paragraph but games can teach in two interactions.
+
+---
+
+### こちら / そちら / あちら / どちら — Polite Space
+
+The polite direction words are a gift from the デパート. The department store employee says こちら. The station master says あちら. These words don't replace ここ/そこ/あそこ — they're the formal version, the customer-service version, the "please follow me" version.
+
+**Where they appear naturally:**
+- **こちら** — デパート employee: 「こちらにどうぞ。」 ("This way, please.")
+- **そちら** — Shopkeeper pointing across the store: 「そちらにあります。」 ("It's over that way.")
+- **あちら** — Station master pointing down the platform: 「あちらにベンチがあります。」 ("There's a bench over there.")
+- **どちら** — Shopkeeper: 「どちらがほしいですか？」 ("Which one do you want?" — polite)
+
+**Design note:** The こそあど system (this/that/over there/which) already exists via ここ/そこ/あそこ/どこ (from N5.3). The ちら variants are the polite register. The game teaches this naturally by having service NPCs use こちら while friends use ここ. Yamakawa says ここ. The station master says あちら. The register difference maps onto character personality.
+
+---
+
+### Yamakawa — Interior Decorator
+
+Yamakawa has migrated indoors. For four days he leaned against the コンビニ exterior wall. Today he's sitting on a chair inside. His wall era is over. His chair era begins.
+
+**If player talks to Yamakawa inside the コンビニ:**
+1. **Yamakawa:** 「中はいいですね！」 — "It's nice inside!" *(He says this as if discovering the interior. He has been standing outside this building for four days. He has been watching other people go through the door. He did not go inside because — well, the game doesn't explain why. Because 中 didn't exist. Because Yamakawa, like Rikizo, lives in a world made of words.)*
+2. **Rikizo:** 「やまかわ、まえは外にいましたね。」 — "Yamakawa, before you were outside." *(前 used temporally: "before." Rikizo notices the change.)*
+3. **Yamakawa:** 「え？外ですか？あまりおぼえていません。」 — "Huh? Outside? I don't really remember." *(あまり + negative. He doesn't really remember standing outside. Of course he doesn't. Yamakawa's memory is a present-tense phenomenon. He is always where he is. Where he was doesn't interest him.)*
+4. **Yamakawa:** 「デパートに行きましょう！」 — "Let's go to the department store!" *(～ましょう. First NPC use of the invitation form. Yamakawa suggests going to the デパート together. This is the first time an NPC has proposed a joint activity.)*
+
+**If player says yes to the デパート trip:**
+> Yamakawa walks with Rikizo to the デパート. Inside, Yamakawa looks at everything:
+> 「すごいですね！高いです！」 — "Amazing! Expensive!" *(He touches nothing. He buys nothing. He is enthusiastic about the existence of expensive things. His appreciation is purely aesthetic.)*
+
+**If player says no:**
+> Yamakawa: 「だいじょうぶですよ。また後で。」 — "That's alright. Later then." *(だいじょうぶ + 後で. Two new words in one casual response.)*
+
+---
+
+### 外人 and 名前 — Identity Words
+
+Two compound words become available that touch on identity:
+
+**外人 (がいじん, foreigner):**
+A word that exists in the vocabulary but doesn't have a clear game trigger yet. Is Rikizo a 外人? The game doesn't specify. Rikizo has a Japanese name, lives with a Japanese family, speaks Japanese. But the player might not be Japanese. The word sits in the vocabulary like a question the game hasn't asked.
+
+**Possible encounter:** A passing NPC (not a named character) uses the word:
+> NPC: 「あ、外人ですか？」 — "Oh, a foreigner?"
+> Rikizo: 「...」 *(No response. The game doesn't answer. The player decides.)*
+
+**Design note:** 外人 is a loaded word in real Japan. The game acknowledges it exists without making a judgment. It's available as vocabulary. Whether it describes Rikizo is left ambiguous. This is intentional — the player's identity is their own.
+
+**名前 (なまえ, name):**
+Both kanji are now taught (名 from N5.1, 前 from N5.9). The word becomes writable in full kanji for the first time.
+
+**The station master uses it:**
+> 駅長: 「名前は...駅長です。」 — "My name is... Station Master." *(He introduces himself by title. Not a name — a function. This is either because he has no name or because his name IS his role. The game leaves this open. If the player asks again: 「駅長です。」 Same answer. He is what he does.)*
+
+**Yamakawa notices:**
+> Yamakawa: 「りきぞ、駅長の名前をしっていますか？」 — "Rikizo, do you know the station master's name?" *(知る = N5.6. Yamakawa asks a question the game can't answer. The station master's name might not exist.)*
+
+---
+
+### 外食 — Eating Out
+
+外食 (がいしょく, eating out) is a compound of 外 (outside) + 食 (eat, from Day 7). The word creates a concept: eating that happens *outside the home*. Mom's kitchen is 食 (eating). The コンビニ onigiri eaten on a bench is 外食.
+
+**Mom's reaction to the concept:**
+> Mom: 「外食ですか？だいじょうぶですか？」 — "Eating out? Are you sure?" *(Mom is skeptical. She controls the kitchen. She made breakfast. The idea of eating outside her domain is mildly threatening to her kitchen authority. だいじょうぶですか here is not "are you okay?" but "is that really a good idea?" — the classic Japanese passive-aggressive check.)*
+
+**If player eats a purchased おにぎり outside the house:**
+> 「外食です！」 — "Eating out!" *(The game labels the action. The player has performed 外食 for the first time. It's the same onigiri. It tastes the same. But eating it outside makes it a different category of eating. Japanese vocabulary doesn't just describe the world — it categorizes it.)*
+
+---
+
+### The Phone — Yamakawa's Interior Report
+
+**Message from やまかわ:**
+> 「コンビニの中はいいですよ！前は外にいました。中の方がいいですね！」 — "The inside of the convenience store is great! Before I was outside. Inside is better!"
+
+Yamakawa has discovered interiority and wants to share the news. He sends this message even if the player visited him inside the コンビニ already. He would send it regardless. He is reporting a discovery to a person who may have made the same discovery at the same time. He doesn't check.
+
+**Email from すずき先生:**
+> 「来週の前に、名前を書いてください。りきぞさんの名前です。だいじょうぶですか？」 — "Before next week, please write your name. Your name, Rikizo. Is that okay?"
+
+すずき is asking Rikizo to write his name before the event next week. This is the first concrete *task* assigned by an NPC beyond "come to a place." The event is getting closer. It requires preparation. Writing a name requires... 書く. Which doesn't exist until N5.13. Rikizo can read the request. He cannot fulfill it. Another word-gated task — but this time, the gap is longer. The notebook in inventory gains a purpose it can't yet serve.
+
+---
+
+### Story Beats
+
+| Moment | What Happens | What Rikizo Thinks | What the Player Should Feel |
+|---|---|---|---|
+| The fridge opens | Eight days of waiting. One kanji (中). The door swings open. Food inside. | 「中にあります！」 | The single most satisfying moment in the game so far. YOU KNEW there was food in there. Now you can reach it. |
+| Mom says だいじょうぶ | She acts like the fridge always opened | Slight disorientation | Of course she does. She always does this. The world is always how it is now. |
+| The toilet | Dad's most guarded territory revealed: a normal toilet | 「...」 | Anticlimax as punchline. Eight days of guarding. A toilet. Just a toilet. |
+| Entering the コンビニ | The window counter becomes a door | 「中ですか...!」 | Satisfying but quieter than the fridge. You've been buying from outside. Now you're inside. The items are the same but the experience is different. |
+| Yamakawa is inside | He's been standing outside for four days. Now he's on a chair. | 「外にいましたね。」 | He doesn't remember being outside. Of course he doesn't. |
+| Yamakawa says ～ましょう | "Let's go to the department store!" First joint activity invitation. | Surprised | An NPC just suggested doing something TOGETHER. This hasn't happened before. The game just gained cooperative social interaction. |
+| The デパート interior | Three floors. Each a different vocabulary tier. | 「大きいです...」 | Awe. And the dawning realization that higher floors = more words needed. The building IS the curriculum. |
+| Station master says だいじょうぶ | "Not yet. But it's alright." | Trust? Doubt? | He's still waiting. Still not worried. His patience is either comforting or eerie. |
+| どうして / まだ exchange | "Why not yet?" / "Long road." | Frustrated curiosity | The station master knows something. He won't explain. The mystery deepens. |
+| 名前 / station master | "My name is... Station Master." | 「名前は...？」 | He has no name. Or his name IS his title. This is unsettling in a way that's hard to articulate. |
+| すずき's task | Write your name before next week | Can't do it | 書く doesn't exist yet (N5.13). The request sits in the phone, unfulfillable. A longer wait than the fridge. |
+
+---
+
+### Running Gags Updated
+
+1. **The Toilet Door** — **RESOLVED.** Behind the most guarded door in the house: a toilet. A completely normal toilet. Dad will still guard it (「わたしのトイレです！」) but the mystery is gone. The punchline is that there was no punchline. It was always just a toilet.
+2. **Dad's Gold** — Continues. Still untouchable. Now there's a 中 to Dad's treasure area, but he blocks access the same way.
+3. **Dad's Car** — Continues. 「新しいです！」 (from Day 8). Now also: 「車の中に...」 "Inside the car..." → 「だめ！」 The car has an interior now. Dad guards the interior too.
+4. **Tree-san** — Continues. 「大きくて古い木です。」 From Day 7–8. Today: 「家の前にあります。」 — Tree-san is in front of the house. The tree gains a spatial address. (If befriended: 「木の後ろに何がありますか？」 — "What's behind the tree?" Answer: the side of the house. Nothing special. But checking behind a tree is the kind of thing only a friend would do.)
+5. **The Fridge** — **RESOLVED.** The eight-day saga ends. The fridge opens. Food is inside. It was always inside. The resolution is simultaneously satisfying and anticlimactic — of course there was food in there. It's a fridge. But the emotional weight of eight days of inaccessibility makes "a fridge with food in it" feel like finding treasure.
+6. **Family Possessions** — Car interior = Dad's. Toilet interior = Dad's. Fridge interior = Mom's domain. The house has rooms now, and every room has an owner.
+7. **The Water Bottle** — Still in inventory. Now slightly redundant: fridge has water, vending machine has water, コンビニ sells water. But it's the original. Sentimental.
+8. **The Empty Phone** — Three contacts. Yamakawa sends interior design reviews. すずき assigns homework. The phone is becoming a task manager.
+9. **Yamakawa's Migration** — From コンビニ wall (Days 5–8) to コンビニ chair (Day 9). He has gone inside. He does not remember being outside. His anchor point is the same building — the transition was horizontal to interior, not location to location. He has depth now.
+10. **Mom's "Come Home"** — 「家に来てくださいね。」 Day 9. Every day. But now with spatial awareness: she's asking him to come *inside* the home, not just *to* it.
+11. **Mom's Kitchen Authority** — Reinforced. She's skeptical of 外食. The kitchen is her domain. The fridge is technically openable but emotionally Mom's territory.
+12. **いただきます / ごちそうさまでした** — Day 3 of the ritual. Automatic.
+13. **The Station Master's まだ** — Continues. Now with だいじょうぶ. "Not yet. But it's alright." He still won't explain. He still isn't worried. He has a waiting room now — because the station has an interior. He sits in it. He waits.
+14. **The ノート** — Continues waiting. 書く = N5.13, not N5.9 as originally guessed. The notebook's wait just got longer. And すずき has now assigned a task that requires writing. The notebook is in inventory. The verb is four lessons away. The task cannot be completed. This is the fridge situation all over again, but slower.
+
+---
+
+### State Tracking (Day 9)
+
+**New flags:**
+- `fridge_opened` — The fridge has been opened for the first time. The eight-day saga ends.
+- `toilet_resolved` — Player has seen inside the toilet. (Dad may still block future access.)
+- `entered_konbini` — Player has gone inside the convenience store.
+- `entered_depaato` — Player has entered the department store.
+- `depaato_with_yamakawa` — Player went to the デパート with Yamakawa (accepted ましょう invitation).
+- `bought_present` — Player purchased a プレゼント at the デパート.
+- `entered_station_waiting_room` — Player went inside the station.
+- `asked_doushite` — Player asked the station master why.
+- `heard_daijoubu` — Station master said だいじょうぶ.
+- `ekichou_name_asked` — Player asked the station master's name. Answer: 駅長.
+- `suzuki_task_received` — すずき assigned the name-writing task. Cannot be completed yet.
+- `ate_outside` — Player performed 外食 (eating a purchased food item outside the home).
+
+**Economy:**
+- Wallet: variable from Day 8. If player buys a プレゼント (1,000¥), wallet decreases significantly.
+- New purchasable items: デパート food floor (higher prices)
+
+---
+
+### Art Assets Required (Day 9)
+
+| Asset | Type | Style | Priority | Notes |
+|---|---|---|---|---|
+| Fridge interior | UI element / sprite | B (MP100) | **Critical** | Inside of fridge when opened: shelves with water, juice, eggs, wrapped mystery item. The most anticipated art reveal so far. |
+| Fridge opening animation | Animation | A+B | **Critical** | 2–3 frames: closed → handle pull → open → interior visible. This is the payoff of eight days. It should feel satisfying. |
+| コンビニ interior | Background | B (MP100) | **Critical** | Inside the convenience store: shelves, counter, seating area (2 chairs by window). Warm, well-lit. Small but complete. |
+| デパート interior (Floor 1) | Background | B (MP100) | High | Food floor: display cases, wrapped gifts, elegant food presentation. Upscale feel compared to コンビニ. |
+| デパート interior (Floor 2) | Background | B (MP100) | Medium | Clothing floor: mannequins, shelves. Player can see but not interact. Decorative. |
+| Station waiting room | Background | B (MP100) | High | Small room inside the station: bench, clock, empty timetable board. Quiet, contemplative. |
+| Toilet interior | Background / sprite | B (MP100) | Medium | Deliberately boring. Normal bathroom. Toilet, sink, hand towel. The anticlimax is the point. |
+| Behind the house | Background variant | B (MP100) | Low | Small garden area behind the house. Not detailed — just establishing that "behind the house" is a place. |
+| Yamakawa (sitting) | Sprite + portrait | A+B | Medium | Yamakawa sitting on a chair inside コンビニ instead of leaning against the wall outside. New pose, same energy. |
+| プレゼント inventory item | Item sprite | A (Pixel) | Low | Gift box icon. In inventory with no recipient. |
+
+---
+
+### Open Questions for Day 9
+
+1. **Should all buildings become enterable at once?** Recommendation: Yes. 中 is a universal concept — once it exists, it applies everywhere. But not all interiors need to be fully designed. The コンビニ and デパート get full interiors. The station gets a waiting room. Other buildings (if any) get placeholder interiors or "there's nothing interesting inside" responses. The principle: 中 unlocks the *concept*; individual locations get fleshed out as vocabulary supports them.
+
+2. **Does the garden behind the house do anything?** Recommendation: Not yet. It's visible — you can walk there — but there's no interaction. Garden vocabulary (花 = flower, etc.) comes later. For now, it establishes that "behind the house" is a space that exists. Future days will fill it.
+
+3. **Should Dad always block the toilet?** Recommendation: 50/50 chance. Sometimes Dad is there (blocks access, comedy continues). Sometimes he's not (toilet accessible, anticlimactic reveal). The toilet's content never changes — it's always just a toilet. The variable is Dad's guard schedule. This keeps the gag alive without making it a permanent blocker.
+
+4. **How much can you buy at the デパート?** Recommendation: Limited selection. Food floor has a few expensive items (プレゼント at 1,000¥, おかし/snacks at 500¥ if vocab supports it). Upper floors are browse-only. The デパート should feel like a place you'll return to as your vocabulary grows — each visit unlocking more interaction as new words arrive.
+
+5. **The 外人 encounter — should it happen?** Recommendation: Optional/rare. It can be a random NPC encounter that triggers once. The game presents the word without judgment. Rikizo's silence in response is the design choice — the player fills in the meaning. If this feels too loaded for a game about learning vocabulary, it can be deferred to N4 when the player has more nuanced language to process it. The word exists in the glossary either way.
+
+6. **こちら/そちら/あちら — are they too formal for early game?** Recommendation: No. They're *appropriately* formal for where they appear (department store, station). The game naturally teaches register by having different NPCs use different politeness levels. Yamakawa says ここ. The station master says あちら. The player learns that formality varies by context, not by rule. This is better pedagogy than explaining register in a grammar box.
+
 ---
