@@ -1,0 +1,658 @@
+{
+  "contentVersion": "1.0.0",
+  "id": "N4.3",
+  "title": "Phase 4 Lesson 3: Self & Time of Day",
+  "meta": {
+    "phase": 4,
+    "lesson": 3,
+    "focus": "Morning and evening time expressions; the 私 kanji; introducing potential form (can/be able to).",
+    "kanji": ["私", "明", "朝", "晩"]
+  },
+  "newKanji": [
+    { "kanji": "私", "on": "し", "kun": "わたし", "meaning": "I / Self", "termId": "k_watashi" },
+    { "kanji": "明", "on": "めい / みょう", "kun": "あか(るい) / あ(ける)", "meaning": "Bright / Dawn", "termId": "k_aka" },
+    { "kanji": "朝", "on": "ちょう", "kun": "あさ", "meaning": "Morning", "termId": "k_asa" },
+    { "kanji": "晩", "on": "ばん", "kun": "", "meaning": "Evening / Night", "termId": "k_u6669" }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "Warm-Up Review（ウォームアップ）",
+      "instructions": "Ask your partner these questions using previously learned vocabulary:",
+      "items": [
+        {
+          "jp": "毎日 何時に 起きますか。",
+          "en": "What time do you wake up every day?",
+          "terms": [
+            "v_mainichi",
+            "v_nanji",
+            { "id": "v_okiru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "帰ってから 何を しますか。",
+          "en": "What do you do after returning home?",
+          "terms": [
+            { "id": "v_kaeru", "form": "te_form" },
+            "v_nani",
+            { "id": "v_suru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "電車に 乗って 学校に 来ますか。",
+          "en": "Do you come to school by riding the train?",
+          "terms": [
+            "v_densha",
+            { "id": "v_noru", "form": "te_form" },
+            "v_gakkou",
+            { "id": "v_kuru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "今日 は 会社まで 歩いて 行きましたか。",
+          "en": "Did you walk to work today?",
+          "terms": [
+            "v_kyou",
+            "v_kaisha",
+            { "id": "v_aruku", "form": "te_form" },
+            { "id": "v_iku", "form": "polite_mashita" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "New Kanji（新しい 漢字）",
+      "items": [
+        {
+          "kanji": "私",
+          "on": "し",
+          "kun": "わたし",
+          "meaning": "I / Self",
+          "terms": ["k_watashi", "v_watashi"]
+        },
+        {
+          "kanji": "明",
+          "on": "めい / みょう",
+          "kun": "あか / あ",
+          "meaning": "Bright / Dawn",
+          "terms": ["k_aka", "v_akarui", "v_ashita"]
+        },
+        {
+          "kanji": "朝",
+          "on": "ちょう",
+          "kun": "あさ",
+          "meaning": "Morning",
+          "terms": ["k_asa", "v_asa", "v_asagohan", "v_kesa", "v_maiasa"]
+        },
+        {
+          "kanji": "晩",
+          "on": "ばん",
+          "kun": "",
+          "meaning": "Evening / Night",
+          "terms": ["k_u6669", "v_ban", "v_bangohan", "v_konban", "v_maiban"]
+        }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "Vocabulary & Compounds（ことば）",
+      "groups": [
+        {
+          "label": "Morning Expressions",
+          "items": ["v_asa", "v_asagohan", "v_kesa", "v_maiasa"]
+        },
+        {
+          "label": "Evening Expressions",
+          "items": ["v_ban", "v_bangohan", "v_konban", "v_maiban"]
+        },
+        {
+          "label": "Adjectives & Other Vocabulary",
+          "items": ["v_akarui", "v_ashita", "v_watashi", "v_kureru"]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 1（会話）: Morning at School",
+      "context": "Rikizo and Yamakawa meet at school early in the morning and chat about their routines.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "やまかわさん、今朝 は 何時に 起きましたか。",
+          "en": "Yamakawa, what time did you wake up this morning?",
+          "terms": [
+            "char_yamakawa",
+            "v_kesa",
+            "v_nanji",
+            { "id": "v_okiru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "六時に 起きました。毎朝 朝ごはんを 食べてから 学校に 来ます。",
+          "en": "I woke up at six. Every morning I come to school after eating breakfast.",
+          "terms": [
+            { "id": "v_okiru", "form": "polite_mashita" },
+            "v_maiasa",
+            "v_asagohan",
+            { "id": "v_taberu", "form": "te_form" },
+            "v_gakkou",
+            { "id": "v_kuru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "私 も 毎朝 朝ごはんを 食べます。今朝 は 明るい 朝ですね。",
+          "en": "I eat breakfast every morning too. It's a bright morning today, isn't it.",
+          "terms": [
+            "v_watashi",
+            "v_maiasa",
+            "v_asagohan",
+            { "id": "v_taberu", "form": "polite_masu" },
+            "v_kesa",
+            "v_akarui",
+            "v_asa"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "そうですね。明日 も 学校に 来られますか。",
+          "en": "You're right. Can you come to school tomorrow too?",
+          "terms": [
+            "v_ashita",
+            "v_gakkou",
+            { "id": "v_kuru", "form": "potential" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "はい、明日 も 来られます。朝ごはんを 食べてから 来ます。",
+          "en": "Yes, I can come tomorrow too. I'll come after eating breakfast.",
+          "terms": [
+            "v_ashita",
+            { "id": "v_kuru", "form": "potential" },
+            "v_asagohan",
+            { "id": "v_taberu", "form": "te_form" },
+            { "id": "v_kuru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 2（会話）: This Evening's Plans",
+      "context": "Two colleagues in the office discuss their evening plans and mention くれる.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "今晩 は 何を しますか。",
+          "en": "What are you doing this evening?",
+          "terms": [
+            "v_konban",
+            "v_nani",
+            { "id": "v_suru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "今晩 は 家で 晩ごはんを 食べます。母 が 作って くれます。",
+          "en": "I'll eat dinner at home tonight. My mother will make it for me.",
+          "terms": [
+            "v_konban",
+            "v_ie",
+            "v_bangohan",
+            { "id": "v_taberu", "form": "polite_masu" },
+            "v_haha",
+            { "id": "v_tsukuru", "form": "te_form" },
+            { "id": "v_kureru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "いいですね。私 も 今晩 は 家で 晩ごはんを 食べたいです。",
+          "en": "How nice. I also want to eat dinner at home tonight.",
+          "terms": [
+            { "id": "v_ii", "form": "polite_adj" },
+            "v_watashi",
+            "v_konban",
+            "v_ie",
+            "v_bangohan",
+            { "id": "v_taberu", "form": "desire_tai" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "明日 の 朝 も 来られますか。",
+          "en": "Can you come tomorrow morning too?",
+          "terms": [
+            "v_ashita",
+            "v_asa",
+            { "id": "v_kuru", "form": "potential" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "はい、明日 は 七時に 来られます。毎朝 朝ごはんを 食べてから 来ますよ。",
+          "en": "Yes, I can come at seven tomorrow. I come every morning after eating breakfast.",
+          "terms": [
+            "v_ashita",
+            { "id": "v_kuru", "form": "potential" },
+            "v_maiasa",
+            "v_asagohan",
+            { "id": "v_taberu", "form": "te_form" },
+            { "id": "v_kuru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 3（会話）: Dinner at Yuki's Tonight (Casual)",
+      "context": "Two close friends, Yuki and Rikizo, make plans for this evening.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "今晩、家に 来ない？ 晩ごはんを 食べようよ。",
+          "en": "Want to come over tonight? Let's eat dinner together.",
+          "terms": [
+            "char_yuki",
+            "v_konban",
+            "v_ie",
+            { "id": "v_kuru", "form": "plain_negative" },
+            "v_bangohan",
+            { "id": "v_taberu", "form": "plain_volitional" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "いいね！ 何時から？",
+          "en": "Sounds great! From what time?",
+          "terms": [
+            { "id": "v_ii", "form": null },
+            "v_nanji"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "六時から。母 が 晩ごはんを 作って くれるよ。",
+          "en": "From six. My mother will make dinner for us.",
+          "terms": [
+            "v_haha",
+            "v_bangohan",
+            { "id": "v_tsukuru", "form": "te_form" },
+            { "id": "v_kureru", "form": null }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "うん、六時に 行けるよ！",
+          "en": "Yeah, I can make it at six!",
+          "terms": [
+            "v_un",
+            { "id": "v_iku", "form": "potential" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 4（会話）: Tomorrow Morning (Casual)",
+      "context": "Ken and Rikizo chat casually about waking up tomorrow morning.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "明日 の 朝、何時に 起きる？",
+          "en": "What time are you getting up tomorrow morning?",
+          "terms": [
+            "v_ashita",
+            "v_asa",
+            "v_nanji",
+            { "id": "v_okiru", "form": null }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "六時に 起きるよ。今朝 も 六時に 起きた。",
+          "en": "I'm getting up at six. This morning I got up at six too.",
+          "terms": [
+            { "id": "v_okiru", "form": null },
+            "v_kesa",
+            { "id": "v_okiru", "form": "plain_past" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "えっ、私 は 六時には 起きたくないよ。",
+          "en": "Whoa, I don't want to wake up at six.",
+          "terms": [
+            "v_watashi",
+            { "id": "v_okiru", "form": "desire_tai_negative" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "朝ごはんを 食べたいから、起きられるよ！",
+          "en": "Because I want to eat breakfast, I can get up!",
+          "terms": [
+            "v_asagohan",
+            { "id": "v_taberu", "form": "plain_desire_tai" },
+            { "id": "v_okiru", "form": "potential" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 1: Rikizo's Morning Routine",
+      "passage": [
+        {
+          "jp": "りきぞ は 毎朝 六時に 起きます。",
+          "en": "Rikizo wakes up every morning at six.",
+          "terms": [
+            "char_rikizo",
+            "v_maiasa",
+            { "id": "v_okiru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "起きてから、朝ごはんを 食べます。",
+          "en": "After waking up, he eats breakfast.",
+          "terms": [
+            { "id": "v_okiru", "form": "te_form" },
+            "v_asagohan",
+            { "id": "v_taberu", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "今朝 は りきぞ の 母 が 朝ごはんを 作って くれました。",
+          "en": "This morning, Rikizo's mother made breakfast for him.",
+          "terms": [
+            "v_kesa",
+            "char_rikizo",
+            "v_haha",
+            "v_asagohan",
+            { "id": "v_tsukuru", "form": "te_form" },
+            { "id": "v_kureru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "今日 は 朝 から 明るい 天気 です。",
+          "en": "Today the weather has been bright since morning.",
+          "terms": [
+            "v_kyou",
+            "v_asa",
+            "v_akarui",
+            "v_tenki"
+          ]
+        },
+        {
+          "jp": "りきぞ は 毎朝 朝ごはんを 食べてから 学校に 来られます。",
+          "en": "Rikizo can come to school every morning after eating breakfast.",
+          "terms": [
+            "char_rikizo",
+            "v_maiasa",
+            "v_asagohan",
+            { "id": "v_taberu", "form": "te_form" },
+            "v_gakkou",
+            { "id": "v_kuru", "form": "potential" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "りきぞ は 毎朝 何時に 起きますか。",
+          "a": "六時に 起きます。",
+          "terms": [
+            "char_rikizo",
+            "v_maiasa",
+            "v_nanji",
+            { "id": "v_okiru", "form": "polite_masu" },
+            { "id": "v_okiru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "q": "今朝 は だれ が 朝ごはんを 作りましたか。",
+          "a": "りきぞ の 母 が 作って くれました。",
+          "terms": [
+            "v_kesa",
+            "v_dare",
+            "v_asagohan",
+            { "id": "v_tsukuru", "form": "polite_mashita" },
+            "char_rikizo",
+            "v_haha",
+            { "id": "v_tsukuru", "form": "te_form" },
+            { "id": "v_kureru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "q": "今日 の 天気 は どうですか。",
+          "a": "朝 から 明るい 天気 です。",
+          "terms": [
+            "v_kyou",
+            "v_tenki",
+            "v_dou",
+            "v_asa",
+            "v_akarui",
+            "v_tenki"
+          ]
+        },
+        {
+          "q": "りきぞ は 学校に 来る 前に 何を しますか。",
+          "a": "朝ごはんを 食べてから 来ます。",
+          "terms": [
+            "char_rikizo",
+            "v_gakkou",
+            { "id": "v_kuru", "form": null },
+            "v_mae",
+            "v_nani",
+            { "id": "v_suru", "form": "polite_masu" },
+            "v_asagohan",
+            { "id": "v_taberu", "form": "te_form" },
+            { "id": "v_kuru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: Evening with Friends",
+      "passage": [
+        {
+          "jp": "今晩 は ゆき の 家で 晩ごはんを 食べます。",
+          "en": "Tonight we eat dinner at Yuki's house.",
+          "terms": [
+            "v_konban",
+            "char_yuki",
+            "v_ie",
+            "v_bangohan",
+            { "id": "v_taberu", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "ゆき の 母 が 晩ごはんを 作って くれます。",
+          "en": "Yuki's mother makes dinner for us.",
+          "terms": [
+            "char_yuki",
+            "v_haha",
+            "v_bangohan",
+            { "id": "v_tsukuru", "form": "te_form" },
+            { "id": "v_kureru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "毎晩 ゆき の 家で 晩ごはんを 食べたいです。",
+          "en": "I want to eat dinner at Yuki's house every evening.",
+          "terms": [
+            "v_maiban",
+            "char_yuki",
+            "v_ie",
+            "v_bangohan",
+            { "id": "v_taberu", "form": "desire_tai" }
+          ]
+        },
+        {
+          "jp": "今晩 は 六時に ゆき の 家に 行けます。",
+          "en": "Tonight I can go to Yuki's house at six.",
+          "terms": [
+            "v_konban",
+            "char_yuki",
+            "v_ie",
+            { "id": "v_iku", "form": "potential" }
+          ]
+        },
+        {
+          "jp": "晩ごはんを 食べてから、いっしょに 帰ります。",
+          "en": "After eating dinner, we all go home together.",
+          "terms": [
+            "v_bangohan",
+            { "id": "v_taberu", "form": "te_form" },
+            "v_issho",
+            { "id": "v_kaeru", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "今晩 は どこで 晩ごはんを 食べますか。",
+          "a": "ゆき の 家で 食べます。",
+          "terms": [
+            "v_konban",
+            "v_doko",
+            "v_bangohan",
+            { "id": "v_taberu", "form": "polite_masu" },
+            "char_yuki",
+            "v_ie",
+            { "id": "v_taberu", "form": "polite_masu" }
+          ]
+        },
+        {
+          "q": "だれ が 晩ごはんを 作りますか。",
+          "a": "ゆき の 母 が 作って くれます。",
+          "terms": [
+            "v_dare",
+            "v_bangohan",
+            { "id": "v_tsukuru", "form": "polite_masu" },
+            "char_yuki",
+            "v_haha",
+            { "id": "v_tsukuru", "form": "te_form" },
+            { "id": "v_kureru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "q": "毎晩 どこで 晩ごはんを 食べたいですか。",
+          "a": "毎晩 ゆき の 家で 食べたいです。",
+          "terms": [
+            "v_maiban",
+            "v_doko",
+            "v_bangohan",
+            { "id": "v_taberu", "form": "desire_tai" },
+            "v_maiban",
+            "char_yuki",
+            "v_ie",
+            { "id": "v_taberu", "form": "desire_tai" }
+          ]
+        },
+        {
+          "q": "今晩 は 何時に 行けますか。",
+          "a": "六時に 行けます。",
+          "terms": [
+            "v_konban",
+            "v_nanji",
+            { "id": "v_iku", "form": "potential" },
+            { "id": "v_iku", "form": "potential" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Vocabulary Reading",
+      "instructions": "Select the correct meaning for the word shown.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "今朝 [けさ]",
+          "choices": ["this morning", "every morning", "tomorrow morning", "this evening"],
+          "answer": "this morning",
+          "terms": []
+        },
+        {
+          "kind": "mcq",
+          "q": "晩ごはん [ばんごはん]",
+          "choices": ["dinner", "breakfast", "lunch", "a snack"],
+          "answer": "dinner",
+          "terms": []
+        },
+        {
+          "kind": "mcq",
+          "q": "明るい [あかるい]",
+          "choices": ["bright", "dark", "narrow", "wide"],
+          "answer": "bright",
+          "terms": []
+        },
+        {
+          "kind": "mcq",
+          "q": "くれる",
+          "choices": ["to give (to me/us)", "to receive", "to borrow", "to lend"],
+          "answer": "to give (to me/us)",
+          "terms": []
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Grammar & Context",
+      "instructions": "Choose the correct form to complete each sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "明日 の 朝 も ______ か。",
+          "choices": ["来られます", "来ます", "来ました", "来てください"],
+          "answer": "来られます",
+          "terms": [
+            "v_ashita",
+            "v_asa",
+            { "id": "v_kuru", "form": "potential" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "母 が 晩ごはんを 作って ______。",
+          "choices": ["くれます", "もらいます", "あります", "います"],
+          "answer": "くれます",
+          "terms": [
+            "v_haha",
+            "v_bangohan",
+            { "id": "v_tsukuru", "form": "te_form" },
+            { "id": "v_kureru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "今晩 は 家で 晩ごはんを ______。",
+          "choices": ["食べたいです", "食べられます", "食べてください", "食べました"],
+          "answer": "食べたいです",
+          "terms": [
+            "v_konban",
+            "v_ie",
+            "v_bangohan",
+            { "id": "v_taberu", "form": "desire_tai" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "朝ごはんを ______ 学校に 来ます。",
+          "choices": ["食べてから", "食べましたから", "食べたから", "食べているから"],
+          "answer": "食べてから",
+          "terms": [
+            "v_asagohan",
+            { "id": "v_taberu", "form": "te_form" },
+            "v_gakkou",
+            { "id": "v_kuru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    }
+  ]
+}
