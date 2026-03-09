@@ -2293,10 +2293,10 @@ window.FinalReviewModule = (function () {
 
   // ── Public interface ──
   return {
-    start: function(c, cfg, exit) {
+    start: function(c, cfg, exit, filePath, reviewId) {
       this._config = cfg;
       this._onExit = exit;
-      start(c, cfg, exit);
+      start(c, cfg, exit, filePath, reviewId);
     }
   };
 })();
