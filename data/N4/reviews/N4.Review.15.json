@@ -1,20 +1,20 @@
 {
   "contentVersion": "1.0.0",
   "id": "N4.Review.15",
-  "title": "Phase 4 Review: Cities, Work & Construction",
+  "title": "Phase 4 Review: Thoughts, Times & Openings",
   "meta": {
     "phase": 4,
     "type": "assessment",
-    "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 32-33.",
+    "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 30-31.",
     "kanji": [
-      "引",
-      "用",
-      "習",
-      "市",
-      "場",
-      "工",
-      "広",
-      "建"
+      "思",
+      "特",
+      "集",
+      "答",
+      "代",
+      "森",
+      "堂",
+      "開"
     ]
   },
   "sections": [
@@ -25,194 +25,185 @@
       "items": [
         {
           "title": "Conversation 1",
-          "context": "At the city office.",
+          "context": "Talking about a quiz.",
           "lines": [
             {
               "spk": "A",
-              "jp": "すみません、この 用紙を 使用しても いいですか。",
+              "jp": "この 問題の 答えが 分かりますか。",
               "terms": [
-                "v_sumimasen",
                 "k_kono",
-                "v_youshi",
+                "v_mondai",
+                "v_kotae",
                 {
-                  "id": "v_shiyou",
-                  "form": "te_form"
+                  "id": "v_wakaru",
+                  "form": "polite_masu"
+                }
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "いいえ、思い出せません。難しいです。",
+              "terms": [
+                {
+                  "id": "v_omoidasu",
+                  "form": "potential_negative"
                 },
-                "v_ii"
-              ]
-            },
-            {
-              "spk": "B",
-              "jp": "はい。そこに 名前を 書いて ください。",
-              "terms": [
-                "v_hai",
-                "k_soko",
-                "v_namae",
-                {
-                  "id": "v_kaku",
-                  "form": "te_form"
-                },
-                "v_kudasai"
-              ]
-            },
-            {
-              "spk": "A",
-              "jp": "市長は いますか。",
-              "terms": [
-                "v_shichou",
-                {
-                  "id": "v_iru",
-                  "form": "polite_masu"
-                }
-              ]
-            },
-            {
-              "spk": "B",
-              "jp": "いいえ、今は 工場へ 行って います。",
-              "terms": [
-                "k_ima",
-                "v_koujou",
-                {
-                  "id": "v_iku",
-                  "form": "te_form"
-                },
-                {
-                  "id": "v_iru",
-                  "form": "polite_masu"
-                }
-              ]
-            }
-          ],
-          "question": "Where is the mayor?",
-          "choices": [
-            "At the city office.",
-            "At the factory.",
-            "At the station.",
-            "At home."
-          ],
-          "answer": "At the factory.",
-          "explanation": "B states the mayor is going to the factory (koujou)."
-        },
-        {
-          "title": "Conversation 2",
-          "context": "Talking about family work.",
-          "lines": [
-            {
-              "spk": "A",
-              "jp": "お父さんの 仕事は 何ですか。",
-              "terms": [
-                "v_chichi",
-                "v_shigoto",
-                "v_nan"
-              ]
-            },
-            {
-              "spk": "B",
-              "jp": "大工です。家を 建てる 仕事です。",
-              "terms": [
-                "v_daiku",
-                "k_ie",
-                "v_tateru",
-                "v_shigoto"
-              ]
-            },
-            {
-              "spk": "A",
-              "jp": "どこで 働いて いますか。",
-              "terms": [
-                "v_doko",
-                {
-                  "id": "v_hataraku",
-                  "form": "te_form"
-                },
-                {
-                  "id": "v_iru",
-                  "form": "polite_masu"
-                }
-              ]
-            },
-            {
-              "spk": "B",
-              "jp": "新しい 広場の 近くです。",
-              "terms": [
-                "v_atarashii",
-                "v_hiroba",
-                "v_chika"
-              ]
-            }
-          ],
-          "question": "What is the father's job?",
-          "choices": [
-            "Factory worker.",
-            "Mayor.",
-            "Carpenter.",
-            "Teacher."
-          ],
-          "answer": "Carpenter.",
-          "explanation": "B says their father is a carpenter (daiku)."
-        },
-        {
-          "title": "Conversation 3",
-          "context": "Discussing hobbies.",
-          "lines": [
-            {
-              "spk": "A",
-              "jp": "しゅうまつ、何を しますか。",
-              "terms": [
-                "v_shuumatsu",
-                "v_nani",
-                {
-                  "id": "v_suru",
-                  "form": "polite_masu"
-                }
-              ]
-            },
-            {
-              "spk": "B",
-              "jp": "日本語の 習字を 習います。",
-              "terms": [
-                "v_nihongo",
-                "v_shuuji",
-                {
-                  "id": "v_narau",
-                  "form": "polite_masu"
-                }
-              ]
-            },
-            {
-              "spk": "A",
-              "jp": "むずかしいですか。",
-              "terms": [
                 "v_muzukashii"
               ]
             },
             {
-              "spk": "B",
-              "jp": "はい。でも、先生を 見習って がんばります。",
+              "spk": "A",
+              "jp": "先生に 聞きましょうか。",
               "terms": [
-                "v_hai",
-                "v_demo",
                 "v_sensei",
                 {
-                  "id": "v_minarau",
-                  "form": "te_form"
-                },
+                  "id": "v_kiku",
+                  "form": "polite_volitional_mashou"
+                }
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "はい。それが いいと 思います。",
+              "terms": [
+                "v_ii",
                 {
-                  "id": "v_ganbaru",
+                  "id": "v_omou",
                   "form": "polite_masu"
                 }
               ]
             }
           ],
-          "question": "What is B learning?",
+          "question": "Does B know the answer?",
           "choices": [
-            "Engineering.",
-            "Calligraphy.",
-            "Cooking.",
-            "English."
+            "Yes, B knows it.",
+            "No, B cannot recall it.",
+            "B thinks it is easy.",
+            "B already asked the teacher."
           ],
-          "answer": "Calligraphy.",
-          "explanation": "B mentions learning calligraphy (shuuji)."
+          "answer": "No, B cannot recall it.",
+          "explanation": "B says 'omoidasemasen' (I cannot recall)."
+        },
+        {
+          "title": "Conversation 2",
+          "context": "Planning a meeting.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "今度の 集会は どこで 開きますか。",
+              "terms": [
+                "v_kondo",
+                "v_shuukai",
+                "v_doko",
+                {
+                  "id": "v_hiraku",
+                  "form": "polite_masu"
+                }
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "森の 中の 会堂に 集まりましょう。",
+              "terms": [
+                "v_mori",
+                "k_naka",
+                "v_kaidou",
+                {
+                  "id": "v_atsumaru",
+                  "form": "polite_volitional_mashou"
+                }
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "何時に 会堂を 開けますか。",
+              "terms": [
+                "v_nanji",
+                "v_kaidou",
+                {
+                  "id": "v_akeru",
+                  "form": "polite_masu"
+                }
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "十時に 開けます。",
+              "terms": [
+                "v_juuji",
+                {
+                  "id": "v_akeru",
+                  "form": "polite_masu"
+                }
+              ]
+            }
+          ],
+          "question": "Where will they gather?",
+          "choices": [
+            "At the station.",
+            "In the forest hall.",
+            "At the cafeteria.",
+            "In the classroom."
+          ],
+          "answer": "In the forest hall.",
+          "explanation": "B suggests gathering at the assembly hall in the forest (森の中の会堂)."
+        },
+        {
+          "title": "Conversation 3",
+          "context": "Discussing changes.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "この 町は 代わりましたね。",
+              "terms": [
+                "k_kono",
+                "k_machi",
+                {
+                  "id": "v_kawaru",
+                  "form": "polite_mashita"
+                }
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "はい。特に 新しい 食堂が たくさん できました。",
+              "terms": [
+                "v_tokuni",
+                "v_atarashii",
+                "v_shokudou",
+                "v_takusan",
+                {
+                  "id": "v_dekiru",
+                  "form": "polite_mashita"
+                }
+              ]
+            },
+            {
+              "spk": "A",
+              "jp": "今の 時代は 早いですね。",
+              "terms": [
+                "k_ima",
+                "v_jidai",
+                "v_hayai"
+              ]
+            },
+            {
+              "spk": "B",
+              "jp": "そうですね。",
+              "terms": [
+                "v_sou"
+              ]
+            }
+          ],
+          "question": "What is new in the town?",
+          "choices": [
+            "Many new cafeterias.",
+            "A new forest.",
+            "A special train.",
+            "A big clock."
+          ],
+          "answer": "Many new cafeterias.",
+          "explanation": "B mentions many new cafeterias (新しい食堂) were built."
         }
       ]
     },
@@ -223,100 +214,102 @@
       "items": [
         {
           "kind": "scramble",
-          "q": "I pulled out the drawer.",
+          "q": "Let's gather in the forest.",
           "segments": [
-            "引き出し",
-            "を",
-            "引きました"
-          ],
-          "explanation": "Drawer (Hikidashi) + wo + Pulled (Hikimashita)."
-        },
-        {
-          "kind": "scramble",
-          "q": "I have urgent business in the city.",
-          "segments": [
-            "市",
+            "森",
+            "の",
+            "中",
             "に",
-            "急用",
-            "が",
-            "あります"
+            "集まりましょう"
           ],
-          "explanation": "City (Shi) + ni + Urgent Business (Kyuuyou) + ga + Exists (Arimasu)."
+          "explanation": "Forest (Mori) + no + Inside (Naka) + ni + Let's gather (Atsumarimashou)."
         },
         {
           "kind": "scramble",
-          "q": "I learn engineering at university.",
+          "q": "Please open the entrance.",
           "segments": [
-            "大学",
-            "で",
-            "工学",
+            "入り口",
             "を",
-            "習います"
+            "開けて",
+            "ください"
           ],
-          "explanation": "University (Daigaku) + de + Engineering (Kougaku) + wo + Learn (Naraimasu)."
+          "explanation": "Entrance (Iriguchi) + wo + Open (Akete) + Please (Kudasai)."
         },
         {
           "kind": "scramble",
-          "q": "The factory is in a wide place.",
+          "q": "I think this era is special.",
           "segments": [
-            "工場",
+            "この",
+            "時代",
             "は",
-            "広い",
-            "場所",
-            "に",
-            "あります"
+            "特別だと",
+            "思います"
           ],
-          "explanation": "Factory (Koujou) + wa + Wide (Hiroi) + Place (Basho) + ni + Exists (Arimasu)."
+          "explanation": "This (Kono) + Era (Jidai) + wa + Special (Tokubetsu da to) + Think (Omoimasu)."
         },
         {
           "kind": "scramble",
-          "q": "A new building stands.",
+          "q": "I will collect the cost of the meal.",
           "segments": [
-            "新しい",
-            "建物",
-            "が",
-            "建って",
-            "います"
+            "食事",
+            "の",
+            "代金",
+            "を",
+            "集めます"
           ],
-          "explanation": "New (Atarashii) + Building (Tatemono) + ga + Standing (Tatte imasu)."
+          "explanation": "Meal (Shokuji) + no + Cost (Daikin) + wo + Collect (Atsumemasu)."
+        },
+        {
+          "kind": "scramble",
+          "q": "I collected old stamps.",
+          "segments": [
+            "古い",
+            "切手",
+            "を",
+            "集めました"
+          ],
+          "explanation": "Old (Furui) + Stamps (Kitte) + wo + Collected (Atsumemashita)."
         }
       ]
     },
     {
       "type": "reading",
-      "title": "Part 3: Reading - The New City",
+      "title": "Part 3: Reading - The Special Shop",
       "passage": [
         {
-          "jp": "私の 市に 新しい 工場が 建ちました。",
-          "en": "A new factory was built in my city.",
+          "jp": "森の 中に 特別な 店が あります。",
+          "en": "There is a special shop in the forest.",
           "terms": [
-            "k_watashi",
-            "v_shi",
-            "v_atarashii",
-            "v_koujou",
+            "v_mori",
+            "k_naka",
+            "v_tokubetsu",
+            "k_mise",
             {
-              "id": "v_tatsu",
-              "form": "polite_mashita"
+              "id": "v_aru",
+              "form": "polite_masu"
             }
           ]
         },
         {
-          "jp": "工場の 名前は「みらい」です。",
-          "en": "The factory's name is 'Mirai'.",
+          "jp": "店は 午後 一時に 開きます。",
+          "en": "The shop opens at 1:00 PM.",
           "terms": [
-            "v_koujou",
-            "v_namae",
-            "v_mirai"
+            "k_mise",
+            "v_gogo",
+            "v_ichiji",
+            {
+              "id": "v_aku_2",
+              "form": "polite_masu"
+            }
           ]
         },
         {
-          "jp": "工員は 毎日、広い 広場に 集まります。",
-          "en": "Workers gather in the wide square every day.",
+          "jp": "いろいろな 世代の 人が 集まります。",
+          "en": "People of various generations gather.",
           "terms": [
-            "v_kouin",
-            "v_mainichi",
-            "v_hiroi",
-            "v_hiroba",
+            "v_iroiro",
+            "v_sedai",
+            "k_hito",
             {
               "id": "v_atsumaru",
               "form": "polite_masu"
@@ -324,80 +317,75 @@
           ]
         },
         {
-          "jp": "そこで 運動を します。",
-          "en": "They exercise there.",
+          "jp": "みんな 店の コーヒーが 大好きだと 思います。",
+          "en": "I think everyone loves the shop's coffee.",
           "terms": [
-            "k_soko",
-            "v_undou",
+            "k_mise",
+            "v_daisuki",
             {
-              "id": "v_suru",
+              "id": "v_omou",
               "form": "polite_masu"
             }
           ]
         },
         {
-          "jp": "工場の 近くに 朝市も あります。",
-          "en": "There is also a morning market near the factory.",
+          "jp": "代金も 安いです。",
+          "en": "The price is also cheap.",
           "terms": [
-            "v_koujou",
-            "v_chika",
-            "v_asaichi",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            }
+            "v_daikin",
+            "v_yasui"
           ]
         }
       ],
       "questions": [
         {
-          "q": "何が 建ちましたか。",
-          "a": "新しい 工場",
+          "q": "店は どこに ありますか。",
+          "a": "森の 中",
           "choices": [
-            "新しい 家",
-            "新しい 工場",
-            "広い 学校",
-            "古い 建物"
-          ],
-          "terms": [
-            "v_nani",
-            "v_tatsu",
-            "v_atarashii",
-            "v_koujou"
-          ]
-        },
-        {
-          "q": "工員は どこに 集まりますか。",
-          "a": "広い 広場",
-          "choices": [
-            "狭い 部屋",
-            "広い 広場",
+            "森の 中",
             "駅の 前",
-            "山"
+            "学校の 中",
+            "川の 近く"
           ],
           "terms": [
-            "v_kouin",
+            "k_mise",
             "v_doko",
-            "v_atsumaru",
-            "v_hiroi",
-            "v_hiroba"
+            "v_mori",
+            "k_naka"
           ]
         },
         {
-          "q": "工場の 近くに 何が ありますか。",
-          "a": "朝市",
+          "q": "何時に 店は 開きますか。",
+          "a": "午後 一時",
           "choices": [
-            "大学",
-            "朝市",
-            "動物",
-            "病院"
+            "午後 一時",
+            "午前 一時",
+            "午後 十時",
+            "朝"
           ],
           "terms": [
-            "v_koujou",
-            "v_chika",
-            "v_nani",
-            "v_aru",
-            "v_asaichi"
+            "v_nanji",
+            "k_mise",
+            "v_aku_2",
+            "v_gogo",
+            "v_ichiji"
+          ]
+        },
+        {
+          "q": "だれが 集まりますか。",
+          "a": "いろいろな 世代の 人",
+          "choices": [
+            "学生だけ",
+            "いろいろな 世代の 人",
+            "店員だけ",
+            "鳥"
+          ],
+          "terms": [
+            "v_dare",
+            "v_atsumaru",
+            "v_iroiro",
+            "v_sedai",
+            "k_hito"
           ]
         }
       ]
@@ -409,75 +397,75 @@
       "items": [
         {
           "kind": "mcq",
-          "q": "[市長]に 会います。",
+          "q": "古い [時代]。",
           "choices": [
-            "しちょう",
-            "いちちょう",
-            "とちょう",
-            "しなが"
+            "じだい",
+            "しだい",
+            "ときだい",
+            "じたい"
           ],
-          "answer": "しちょう",
-          "explanation": "市長 (Mayor) is read as <b>shichou</b>."
+          "answer": "じだい",
+          "explanation": "時代 (Era) is read as <b>jidai</b>."
         },
         {
           "kind": "mcq",
-          "q": "文を [引用]する。",
+          "q": "大きい [森林]。",
           "choices": [
-            "いんよう",
-            "ひきよう",
-            "いんもち",
-            "ひきもち"
+            "しんりん",
+            "もりりん",
+            "しんもり",
+            "もります"
           ],
-          "answer": "いんよう",
-          "explanation": "引用 (Citation) is read as <b>inyou</b>."
+          "answer": "しんりん",
+          "explanation": "森林 (Forest) is read as <b>shinrin</b>."
         },
         {
           "kind": "mcq",
-          "q": "大きい [建物]。",
+          "q": "ドアを [開ける]。",
           "choices": [
-            "たてもの",
-            "けんぶつ",
-            "けんもの",
-            "たてぶつ"
+            "あける",
+            "ひらける",
+            "かける",
+            "さける"
           ],
-          "answer": "たてもの",
-          "explanation": "建物 (Building) is read as <b>tatemono</b>."
+          "answer": "あける",
+          "explanation": "開ける (To open) is read as <b>akeru</b>."
         },
         {
           "kind": "mcq",
-          "q": "町の [工場]。",
+          "q": "名前を [思い出す]。",
           "choices": [
-            "こうじょう",
-            "こうば",
-            "くじょう",
-            "こうま"
+            "おもいだす",
+            "かんがえだす",
+            "おもいだして",
+            "しりだす"
           ],
-          "answer": "こうじょう",
-          "explanation": "工場 (Factory) is read as <b>koujou</b>."
+          "answer": "おもいだす",
+          "explanation": "思い出す (Recall) is read as <b>omoidasu</b>."
         },
         {
           "kind": "mcq",
-          "q": "[広大]な 土地。",
+          "q": "[特別]な 日。",
           "choices": [
-            "こうだい",
-            "ひろだい",
-            "こうおお",
-            "ひろおお"
+            "とくべつ",
+            "とっべつ",
+            "とくわか",
+            "とくべ"
           ],
-          "answer": "こうだい",
-          "explanation": "広大 (Vast) is read as <b>koudai</b>."
+          "answer": "とくべつ",
+          "explanation": "特別 (Special) is read as <b>tokubetsu</b>."
         },
         {
           "kind": "mcq",
-          "q": "先生を [見習う]。",
+          "q": "[集中]して ください。",
           "choices": [
-            "みならう",
-            "みしゅう",
-            "けんならう",
-            "けんしゅう"
+            "しゅうちゅう",
+            "あつなか",
+            "しゅうなか",
+            "しゅじゅう"
           ],
-          "answer": "みならう",
-          "explanation": "見習う (To emulate) is read as <b>minarau</b>."
+          "answer": "しゅうちゅう",
+          "explanation": "集中 (Concentrate) is read as <b>shuuchuu</b>."
         }
       ]
     },
@@ -488,51 +476,51 @@
       "items": [
         {
           "kind": "mcq",
-          "q": "今日は ______ が ありますから、早く 行きます。",
+          "q": "レストランの ______ は 安いです。",
           "choices": [
-            "用事",
-            "用紙",
-            "引用",
-            "使用"
+            "代金",
+            "時代",
+            "本堂",
+            "世代"
           ],
-          "answer": "用事",
-          "explanation": "Since I have business/errands (用事), I am going early."
+          "answer": "代金",
+          "explanation": "The restaurant's cost/price (代金) is cheap."
         },
         {
           "kind": "mcq",
-          "q": "ペンは 机の ______ の 中です。",
+          "q": "先生の 質問に ______。",
           "choices": [
-            "引き出し",
-            "建物",
-            "朝市",
-            "大工"
+            "答えました",
+            "集まりました",
+            "開けました",
+            "代わりました"
           ],
-          "answer": "引き出し",
-          "explanation": "The pen is inside the desk drawer (引き出し)."
+          "answer": "答えました",
+          "explanation": "You answer (答えました) a teacher's question."
         },
         {
           "kind": "mcq",
-          "q": "あの ______ は 家を 作ります。",
+          "q": "急いで いますから、 ______ で 行きます。",
           "choices": [
-            "大工",
-            "市長",
-            "工学",
-            "人工"
+            "特急",
+            "特集",
+            "特別",
+            "特に"
           ],
-          "answer": "大工",
-          "explanation": "That carpenter (大工) makes houses."
+          "answer": "特急",
+          "explanation": "Since you are hurrying, you go by express train (特急)."
         },
         {
           "kind": "mcq",
-          "q": "この カメラの ______ は 難しいです。",
+          "q": "本堂は あの ______ の 中です。",
           "choices": [
-            "使用",
-            "引用",
-            "場所",
-            "広場"
+            "森",
+            "池",
+            "門",
+            "代"
           ],
-          "answer": "使用",
-          "explanation": "The usage (使用) of this camera is difficult."
+          "answer": "森",
+          "explanation": "The main hall is inside that forest (森)."
         }
       ]
     },
@@ -543,19 +531,31 @@
       "items": [
         {
           "kind": "mcq",
-          "q": "ドアを ______ ください。",
+          "q": "明日、新しい 店が ______。",
           "choices": [
-            "引いて",
-            "引きて",
-            "引きて",
-            "引って"
+            "開きます",
+            "開けます",
+            "開いて",
+            "開けて"
           ],
-          "answer": "引いて",
-          "explanation": "The te-form of Hiku (to pull) is Hiite (引いて)."
+          "answer": "開きます",
+          "explanation": "For a shop opening (intransitive event), we use Akimasu (開きます) or Hirakimasu."
         },
         {
           "kind": "mcq",
-          "q": "広場 ______ 人が 集まります。",
+          "q": "あの 人は 先生 ______ 思います。",
+          "choices": [
+            "だと",
+            "を",
+            "に",
+            "が"
+          ],
+          "answer": "だと",
+          "explanation": "To quote a thought about a noun/na-adj, use 'da to' (先生だと 思います)."
+        },
+        {
+          "kind": "mcq",
+          "q": "会堂 ______ 人が 集まります。",
           "choices": [
             "に",
             "を",
@@ -563,31 +563,19 @@
             "と"
           ],
           "answer": "に",
-          "explanation": "Use 'ni' to indicate the location where people gather (destination)."
+          "explanation": "Use 'ni' to indicate the location where people gather (destination of gathering)."
         },
         {
           "kind": "mcq",
-          "q": "新しい 家を ______。",
+          "q": "入り口を ______ ください。",
           "choices": [
-            "建てます",
-            "建ちます",
-            "建っています",
-            "建って"
+            "開けて",
+            "開いて",
+            "開きまして",
+            "開けまして"
           ],
-          "answer": "建てます",
-          "explanation": "To build (transitive) a house is Tatemasu (建てます)."
-        },
-        {
-          "kind": "mcq",
-          "q": "大学で 工学 ______ 習います。",
-          "choices": [
-            "を",
-            "に",
-            "で",
-            "へ"
-          ],
-          "answer": "を",
-          "explanation": "Use 'wo' to mark the object being learned (engineering)."
+          "answer": "開けて",
+          "explanation": "Please open (transitive) is 'Akete kudasai'."
         }
       ]
     }
