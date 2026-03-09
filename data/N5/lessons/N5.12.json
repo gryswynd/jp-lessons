@@ -378,17 +378,19 @@
         },
         {
           "spk": "リー",
-          "jp": "はい、中国から 来ました。日本語は おもしろいですね。",
-          "en": "Yes, I came from China. Japanese is interesting, isn't it.",
+          "jp": "はい、中国から 来ました。日本語の ことが とても すきです。",
+          "en": "Yes, I came from China. I really like things about Japanese.",
           "terms": [
             "p_hai",
             "v_chuugoku",
             "p_kara",
             { "id": "v_kuru", "form": "polite_mashita" },
             "v_nihongo",
-            "p_wa",
-            { "id": "v_omoshiroi", "form": "polite_adj" },
-            "p_ne"
+            "p_no",
+            "v_koto",
+            "p_ga",
+            "v_totemo",
+            { "id": "v_suki", "form": "polite_adj" }
           ]
         },
         {

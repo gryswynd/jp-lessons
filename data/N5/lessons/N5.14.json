@@ -486,11 +486,14 @@
         },
         {
           "spk": "ミキ",
-          "jp": "白い 花、すきだよ。時間が 少ないけど。",
-          "en": "I love white flowers. But we don't have much time though.",
+          "jp": "外に 来ることが すきだよ。時間が 少ないけど。",
+          "en": "I like coming outside. But we don't have much time though.",
           "terms": [
-            "v_shiroi",
-            "v_hana",
+            "v_soto",
+            "p_ni",
+            { "id": "v_kuru", "form": null },
+            "v_koto",
+            "p_ga",
             "v_suki",
             "g_da",
             "p_yo",

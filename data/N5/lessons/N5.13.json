@@ -205,13 +205,16 @@
         },
         {
           "spk": "ミキ",
-          "jp": "日本語は とても おもしろいです。毎日 話したいです。",
-          "en": "Japanese is very interesting. I want to speak it every day.",
+          "jp": "日本語を 話すことが とても すきです。毎日 話したいです。",
+          "en": "I really like speaking Japanese. I want to speak it every day.",
           "terms": [
             "v_nihongo",
-            "p_wa",
+            "p_wo",
+            { "id": "v_hanasu", "form": null },
+            "v_koto",
+            "p_ga",
             "v_totemo",
-            { "id": "v_omoshiroi", "form": "polite_adj" },
+            { "id": "v_suki", "form": "polite_adj" },
             "v_mainichi",
             { "id": "v_hanasu", "form": "desire_tai" }
           ]

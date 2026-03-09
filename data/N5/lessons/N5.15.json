@@ -761,14 +761,17 @@
           ]
         },
         {
-          "jp": "電車で 北東に 行きます。道は 少し 長いです。",
-          "en": "They are going to the northeast by train. The road is a little long.",
+          "jp": "電車で 北東に 行くことが すきです。道は 少し 長いです。",
+          "en": "He likes going to the northeast by train. The road is a little long.",
           "terms": [
             "v_densha",
             "p_de",
             "v_hokutou",
             "p_ni",
-            { "id": "v_iku", "form": "polite_masu" },
+            { "id": "v_iku", "form": null },
+            "v_koto",
+            "p_ga",
+            { "id": "v_suki", "form": "polite_adj" },
             "v_michi",
             "p_wa",
             "v_sukoshi",
