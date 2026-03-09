@@ -564,6 +564,7 @@
         {
           "id": "N4.3",
           "title": "Self & Time of Day",
+          "file": "data/N4/lessons/N4.3.json",
           "kanji": [
             "私",
             "明",
@@ -968,53 +969,58 @@
       "reviews": [
         {
           "id": "N4.Review.1",
-          "title": "Comprehensive Assessment",
+          "title": "Returning, Using & Getting Around",
           "file": "data/N4/reviews/N4.Review.1.json"
         },
         {
-          "id": "N4.Review.2",
-          "title": "Body, Life & Work",
-          "file": "data/N4/reviews/N4.Review.2.json"
-        },
-        {
-          "id": "N4.Review.3",
-          "title": "Movement, Nature & Geography",
-          "file": "data/N4/reviews/N4.Review.3.json"
-        },
-        {
-          "id": "N4.Review.4",
-          "title": "Lifestyle, Trade & Attributes",
-          "file": "data/N4/reviews/N4.Review.4.json"
-        },
-        {
-          "id": "N4.Review.5",
-          "title": "Education, Research & Methods",
-          "file": "data/N4/reviews/N4.Review.5.json"
-        },
-        {
-          "id": "N4.Review.6",
-          "title": "Nature, Places & Measurement",
-          "file": "data/N4/reviews/N4.Review.6.json"
-        },
-        {
-          "id": "N4.Review.7",
-          "title": "Thoughts, Times & Openings",
-          "file": "data/N4/reviews/N4.Review.7.json"
-        },
-        {
-          "id": "N4.Review.8",
-          "title": "Cities, Work & Construction",
-          "file": "data/N4/reviews/N4.Review.8.json"
-        },
-        {
           "id": "N4.Review.9",
-          "title": "Districts, Departure & City Life",
+          "title": "Comprehensive Assessment",
           "file": "data/N4/reviews/N4.Review.9.json"
         },
         {
           "id": "N4.Review.10",
-          "title": "Owners, Business & Production",
+          "title": "Body, Life & Work",
           "file": "data/N4/reviews/N4.Review.10.json"
+        },
+        {
+          "id": "N4.Review.11",
+          "title": "Movement, Nature & Geography",
+          "file": "data/N4/reviews/N4.Review.11.json"
+        },
+        {
+          "id": "N4.Review.12",
+          "title": "Lifestyle, Trade & Attributes",
+          "file": "data/N4/reviews/N4.Review.12.json"
+        },
+        {
+          "id": "N4.Review.13",
+          "title": "Education, Research & Methods",
+          "file": "data/N4/reviews/N4.Review.13.json"
+        },
+        {
+          "id": "N4.Review.14",
+          "title": "Nature, Places & Measurement",
+          "file": "data/N4/reviews/N4.Review.14.json"
+        },
+        {
+          "id": "N4.Review.15",
+          "title": "Thoughts, Times & Openings",
+          "file": "data/N4/reviews/N4.Review.15.json"
+        },
+        {
+          "id": "N4.Review.16",
+          "title": "Cities, Work & Construction",
+          "file": "data/N4/reviews/N4.Review.16.json"
+        },
+        {
+          "id": "N4.Review.17",
+          "title": "Districts, Departure & City Life",
+          "file": "data/N4/reviews/N4.Review.17.json"
+        },
+        {
+          "id": "N4.Review.18",
+          "title": "Owners, Business & Production",
+          "file": "data/N4/reviews/N4.Review.18.json"
         },
         {
           "id": "N4 1st Half Review",
@@ -1043,6 +1049,10 @@
         {
           "lesson": "N4.2",
           "file": "data/N4/compose/compose.N4.2.json"
+        },
+        {
+          "lesson": "N4.3",
+          "file": "data/N4/compose/compose.N4.3.json"
         },
         {
           "lesson": "N4.18",
@@ -1075,7 +1085,17 @@
           "dir": "data/N4/stories/rikizo-journey"
         }
       ],
-      "game": []
+      "game": [],
+      "grammar": [
+        {
+          "id": "G12",
+          "title": "Potential Form — Can / Able to",
+          "file": "data/N4/grammar/G12.json",
+          "unlocksAfter": "N4.3",
+          "icon": "💪",
+          "estimatedMinutes": 25
+        }
+      ]
     }
   }
 }
