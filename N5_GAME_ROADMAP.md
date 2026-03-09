@@ -3557,3 +3557,125 @@ dad_annoyance:  -1 (daily cooling)
 6. **空 vs 天気 — do they overlap?** Recommendation: 空 is the physical sky (the thing you look at). 天気 is the weather (the state of the sky). They co-exist naturally: 空 gets a visual description (blue, grey, beautiful), 天気 gets a quality judgment (いい, わるい). NPCs can use both in the same conversation: 「天気はよくないけど、空はきれいですね。」 "The weather isn't great, but the sky is beautiful." This is basically ゆき's entire worldview in one sentence.
 
 ---
+
+## Day 12 — "Study & Country" (unlocked by N5.12)
+
+**New kanji:** 本、語、学、校、国
+
+**New vocabulary:**
+- 本 (book), 日本 (Japan), 日本語 (Japanese language), 日本人 (Japanese person)
+- 学校 (school), 学生 (student), 学ぶ (to learn)
+- 高校 (high school), 中学校 (middle school), 大学 (university), 小学校 (elementary school), 校長 (principal)
+- 外国 (foreign country), 外国人 (foreigner — polite), 中国 (China)
+- クラス (class), テスト (test/exam), ペン (pen), ノート (notebook — re-introduced)
+- おもしろい (interesting/funny), つまらない (boring)
+
+**Grammar context:**
+
+**G11 (Appearance ～そうです) enters its active reinforcement window.** G11 unlocked after N5.11. This means:
+- `appearance_sou` (～そうです) — actively reinforce. NPCs can now comment on how things *look* rather than just how they *are*.
+- The school looks big (大きそうです). すずき先生 looks kind (やさしそうです). The test looks hard (むずかしそうです). These are first impressions — the vocabulary of arriving somewhere new.
+
+**G10 (Adj past + adverbial) remains in active window.** N5.11–N5.12:
+- `polite_past_adj` (かったです / でした) — actively reinforce
+- `adverbial` (～く / ～に) — actively reinforce
+
+**G9 plain forms in sustained use.** Should not be absent. At least 1 casual conversation.
+
+**Calendar:** 五月八日 (May 8th, Thursday). Golden Week is over. Extended vacation is over. Today is a school day. For the first time in the game, there is somewhere Rikizo is *supposed* to be.
+
+**Character debuts: すずき先生 (in person), けん, リー, ミキ.** Four new named NPCs in one day. This is by far the largest character introduction in the game — intentionally so. School is a social explosion. After 11 days of the same 5–6 characters, Rikizo walks into a building full of people.
+
+---
+
+### The Day the World Got Structure
+
+For eleven days, Rikizo's life has been formless. Wake up, eat, explore, talk to whoever happens to be around, go to bed. No schedule. No obligations. No place he's expected to be at a specific time. Golden Week has been a vacation from a life that — as far as the player has seen — never had structure to begin with.
+
+Today that changes. 学校 materializes, and with it comes the concept of *having to be somewhere*. Not because you want to explore it (like the デパート) or because someone invited you (like the ホテル). Because you're a 高校生 and it's a school day and you go to school. Period.
+
+This is the game's first externally imposed obligation. Every previous day, the player chose where to go and what to do. Today, there is a correct answer to "where should Rikizo be this morning?" For the first time, not going somewhere has a social cost.
+
+The vocabulary cluster makes this day uniquely dense with identity concepts. 日本. 日本語. 日本人. 外国. 外国人. These aren't objects or locations — they're categories. The world has had things (水, 本) and places (店, 駅) and qualities (大きい, 新しい). Now it has *nations*. The concept of "here" and "not here." The concept of "us" and "them." The concept that this world is specifically Japan, not just a town, and that the language Rikizo speaks has a name, and that there are places and people from elsewhere.
+
+For a world that didn't have an outside until Day 5, gaining a national identity is a conceptual earthquake.
+
+---
+
+### Morning — The Last Day of Nowhere to Be
+
+Rikizo wakes up. The calendar reads 「五月八日」(May 8th, Thursday).
+
+Mom is in the kitchen, but she's different today. More purposeful. She's packing something. She has the energy of someone with a schedule.
+
+**Breakfast conversation:**
+
+1. **Mom:** 「おはよう、りきぞ。今日は学校ですよ。」 — "Good morning, Rikizo. Today is school." *(学校. The word exists. It exits Mom's mouth and hits the air and the world reorganizes itself around it. Mom has always known about school. She's been waiting for this word the way she waited for 冷蔵庫 — patiently, as if the thing has always been there and today just happens to be the day it gets mentioned.)*
+
+2. **Rikizo:** 「学校...？」 — "School...?" *(He repeats the word. Not confused — processing. A building he's never seen, a concept he's never encountered, but the word arrives and he knows what it means. He's a 高校生. He goes to 学校. This has always been true. It just hasn't been sayable until now.)*
+
+3. **Mom:** 「すずき先生からのメールを読みましたか？来週からって...今日ですよ。」 — "Did you read すずき先生's email? She said 'from next week'... that's today." *(Mom connects the email thread. 「来週から」 — "from next week" — the phrase すずき sent on Day 6. Six days ago, the unnamed thing that started "next week" had no description. Now it has a name: 学校. Mom is telling Rikizo — and the player — that the mystery of what starts next week has been answered. It was always school. It just couldn't be said.)*
+
+4. **Dad:** 「本を持っていますか？ペンは？」 — "Do you have books? A pen?" *(Dad, practical as ever. 本 and ペン — the tools of school. Dad doesn't ask if Rikizo knows where the school is. He doesn't give directions. In this world, you don't need directions to places that exist. You just... go to them. The path materializes when the destination does.)*
+
+5. **Mom:** 「ノートも持ってくださいね。すずき先生が名前を書いてって...」 — "Please take your notebook too. すずき先生 said to write your name..." *(She trails off. 書く doesn't exist yet — N5.13. Mom can reference the concept — she can gesture toward the act of writing — but she can't complete the instruction. The notebook goes into Rikizo's bag. Its purpose remains deferred. One more day.)*
+
+**Design note — Mom's tone:** Mom isn't surprised by school. She isn't excited. She's matter-of-fact. In her reality, school has always existed and today is a normal school day after a normal Golden Week. The dissonance is entirely on the player's side: they've watched this family live for 11 days with no mention of school, no evidence of school, no building, no teachers, no classmates. And now Mom is acting like it's the most ordinary thing in the world. Because it is. It always was. The word just arrived.
+
+**If player checks phone before leaving:**
+
+すずき先生's email thread now reads differently. The player can scroll back:
+- Day 6: 「来週からです。来てくださいね。」 — "From next week. Please come."
+- Day 7: 「はい、行きます。」 — Rikizo's reply.
+- Day 8: 「新しい本がありますよ。来週、見てくださいね。」 — "There are new books. Please look at them next week."
+- Day 9: 「来週の前に、名前を書いてください。」 — "Before next week, please write your name."
+
+Every email now resolves. 「来週からです」 = school starts this week. 「新しい本」 = textbooks. 「名前を書いてください」 = the enrollment form. すずき先生 has been preparing Rikizo for this day since Day 6. She was talking about school before school could be named. She was talking about books before 本 existed. She was asking Rikizo to write before 書く was available. The entire email thread was a woman describing a building that didn't exist, requesting actions that couldn't be performed, for an event that couldn't be named.
+
+And Rikizo said yes to all of it. Without question.
+
+---
+
+### Walking to School — A New Building
+
+Rikizo leaves the house. The town is familiar — road, shops, station, river. But there's something new on the skyline. South of the station, past the park, a building. Large. Institutional. Gated. It has always been there. It just hasn't been *visible* until now.
+
+The walk to school is the first time the game requires the player to go to a specific location for a non-optional reason. Every previous destination was chosen by the player. The コンビニ, the デパート, the ホテル, the river — all optional. All exploration. School is not optional. It's where Rikizo goes because he's a student and it's a school day.
+
+**Walking past familiar NPCs:**
+
+The town NPCs react to Rikizo heading in an unusual direction.
+
+- **Yamakawa** (if player passes the コンビニ): 「おはよう！学校？いいね。」 — "Morning! School? Nice." *(Yamakawa knows about school. Of course he does. Does Yamakawa go to the same school? He doesn't say. He doesn't follow. He stays at the コンビニ. His relationship to school is ambiguous — he knows the word, acknowledges it, but doesn't seem to participate in it. File this for later.)*
+
+- **Dad** (at the gate, if Dad leaves before Rikizo): 「がんばれ。」 — "Do your best." *(One word. No explanation. Dad standing at the gate seeing Rikizo off is a tiny moment, but it's the first time a parent has appeared at a transition point. He's not going with Rikizo. He's sending him out. The family home → school boundary is real.)*
+
+**Approaching the school:**
+
+> The building is larger than the デパート. Two stories — maybe three. Windows in neat rows. A gate with the school name: **[school name in kanji — the player can read 学校 now]**. Cherry trees lining the path (花, from yesterday). Everything looks new. Not "recently built" new — "recently materialized" new. The paint is too perfect. The windows are too clean. There are no scuff marks on the floors. This building appeared today, fully formed, complete with furniture and books and a principal's office. Nobody finds this remarkable.
+
+**Design note — school location:** The school is placed south of the station, establishing a new zone of the map. The town now has clear geography: house (center-north) → town/shops (center) → station (center-south) → school (south). Each zone was unlocked by vocabulary: house (Day 1), town (Day 5), station (Day 5), hotel (Day 10), school (Day 12). The world grows outward from home.
+
+**Design note — the school gate:** The gate is the first mandatory passage point in the game. The player must walk through it. There's no "not going to school" option on Day 12. The game gently but firmly establishes that school is not a side activity. On future days, the player CAN skip school (with consequences — すずき先生 notices, classmates comment), but on Day 12, the narrative requires attendance to introduce the characters and setting.
+
+**At the gate — 校長 (principal):**
+
+A man stands at the gate. Older. Formal posture. He greets every student who walks in. He greets Rikizo.
+
+1. **校長:** 「おはようございます。学生ですか？」 — "Good morning. Are you a student?" *(校長. Principal. His register is the most formal in the game — more formal even than the hotel clerk. He uses おはようございます as an indicator of institutional authority. The school has a hierarchy, and he's at the top.)*
+
+2. **Rikizo:** 「はい、高校生です。」 — "Yes, I'm a high school student." *(高校生. Rikizo identifies himself within the school system for the first time. He's not just a 学生 — he's a 高校生 specifically. The vocabulary gives him a position in an institution.)*
+
+3. **校長:** 「いい学校ですよ。がんばってくださいね。」 — "It's a good school. Please do your best." *(The principal endorses his own school. Of course it's a good school — it materialized today in perfect condition. The "do your best" is a standard Japanese school-gate phrase, as ritualistic as いただきます before a meal.)*
+
+**Design note — 校長 as a non-named NPC:** The principal is a functional NPC like the hotel clerk. No char_* ID, no relationship track. He appears at the gate on Day 12 and occasionally thereafter. His role is institutional — he represents the school's authority, not a personal relationship. His dialogue is generic encouragement. He exists to make the school feel like an institution with layers, not just a classroom with すずき先生 in it.
+
+**The school hierarchy in vocabulary:**
+- 校長 (principal) — top of the school
+- すずき先生 (teacher) — classroom authority
+- 高校生/学生 (student) — that's Rikizo
+- 小学校 → 中学校 → 高校 → 大学 — the progression through the education system
+
+All of these words arrive simultaneously. The student hasn't just learned "school" — they've learned the entire educational hierarchy in one day. The game can reference this: a bulletin board in the hallway lists the school types. A display case shows photos of 大学 graduation (all identical, newly materialized, nobody questions this). The education system exists fully formed because the vocabulary for it arrived all at once.
+
+---
