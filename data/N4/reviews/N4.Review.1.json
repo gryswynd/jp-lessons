@@ -1,457 +1,373 @@
 {
   "contentVersion": "1.0.0",
   "id": "N4.Review.1",
-  "title": "Phase 4 Comprehensive Assessment",
+  "title": "Phase 4 Review: Returning, Using & Getting Around",
   "meta": {
     "phase": 4,
     "type": "assessment",
-    "focus": "Final N4 check: Kanji, Vocabulary, Particles, and Reading.",
-    "timeLimit": 35
+    "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 1–2.",
+    "kanji": ["帰", "作", "使", "借", "働", "送", "起", "着", "切", "乗", "歩", "近", "遠"]
   },
   "sections": [
     {
-      "type": "drills",
-      "title": "Part 1: Kanji Readings",
-      "instructions": "Select the correct reading for the [bracketed] word.",
+      "type": "conversation",
+      "title": "Part 1: Conversation Check",
+      "instructions": "Read each conversation and select the best answer.",
       "items": [
         {
-          "kind": "mcq",
-          "q": "[弟]と こうえんで あそびました。",
-          "choices": [
-            "あに",
-            "おとうと",
-            "いもうと",
-            "おとこ"
+          "title": "Conversation 1",
+          "context": "Two coworkers talking at the office before one leaves for home.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "今日は 何時に 帰りますか。",
+              "terms": ["v_kyou", "v_nanji", { "id": "v_kaeru", "form": "polite_masu" }]
+            },
+            {
+              "spk": "B",
+              "jp": "七時に 帰ります。帰り道に 切手を 買います。",
+              "terms": [{ "id": "v_kaeru", "form": "polite_masu" }, "v_kaerimichi", "v_kitte", { "id": "v_kau", "form": "polite_masu" }]
+            },
+            {
+              "spk": "A",
+              "jp": "友だちに 本を 送りますか。",
+              "terms": ["v_tomodachi", "v_hon", { "id": "v_okuru", "form": "polite_masu" }]
+            },
+            {
+              "spk": "B",
+              "jp": "はい。友だちに 本を 送りたいです。大切な 友だちです。",
+              "terms": ["v_tomodachi", "v_hon", { "id": "v_okuru", "form": "desire_tai" }, { "id": "v_taisetsu", "form": "attributive_na" }, "v_tomodachi"]
+            }
           ],
-          "answer": "おとうと",
-          "explanation": "弟 (younger brother) is read as <b>otouto</b>."
+          "question": "What does B plan to do on the way home?",
+          "choices": [
+            "Buy stamps and send a book to a friend",
+            "Borrow money from a coworker",
+            "Cut fish at the station store",
+            "Work at the company until midnight"
+          ],
+          "answer": "Buy stamps and send a book to a friend",
+          "explanation": "B says 帰り道に切手を買います (will buy stamps on the way home) and 友だちに本を送りたいです (wants to send a book to a friend)."
         },
         {
-          "kind": "mcq",
-          "q": "晩ご飯は [牛肉]でした。",
-          "choices": [
-            "ぎゅうにく",
-            "とりにく",
-            "ぎゅうにゅう",
-            "うまにく"
+          "title": "Conversation 2",
+          "context": "A teacher and student at school discussing how the student gets to school each day.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "毎日 何で 学校に 来ますか。",
+              "terms": ["v_mainichi", "v_nan", "v_gakkou", { "id": "v_kuru", "form": "polite_masu" }]
+            },
+            {
+              "spk": "B",
+              "jp": "電車に 乗って 来ます。家は 学校から 少し 遠いです。",
+              "terms": ["v_densha", { "id": "v_noru", "form": "te_form" }, { "id": "v_kuru", "form": "polite_masu" }, "v_ie", "v_gakkou", "v_sukoshi", { "id": "v_tooi", "form": "polite_adj" }]
+            },
+            {
+              "spk": "A",
+              "jp": "駅は 家から 近いですか。",
+              "terms": ["v_eki", "v_ie", { "id": "v_chikai", "form": "polite_adj" }]
+            },
+            {
+              "spk": "B",
+              "jp": "はい、近いです。駅まで 歩いて、電車に 乗ります。",
+              "terms": [{ "id": "v_chikai", "form": "polite_adj" }, "v_eki", { "id": "v_aruku", "form": "te_form" }, "v_densha", { "id": "v_noru", "form": "polite_masu" }]
+            }
           ],
-          "answer": "ぎゅうにく",
-          "explanation": "牛肉 (beef) is read as <b>gyuuniku</b>."
+          "question": "How does B get to school each day?",
+          "choices": [
+            "Walks to the station and rides the train",
+            "Rides a bus all the way from home",
+            "Borrows a car from the teacher",
+            "Works near the school each morning"
+          ],
+          "answer": "Walks to the station and rides the train",
+          "explanation": "B says 駅まで歩いて、電車に乗ります — walks to the station, then rides the train to school."
         },
         {
-          "kind": "mcq",
-          "q": "[黒い] ふくを 着ます。",
-          "choices": [
-            "あおい",
-            "しろい",
-            "くろい",
-            "あかい"
+          "title": "Conversation 3",
+          "context": "Two close friends casually planning to visit a mountain on a day off.",
+          "lines": [
+            {
+              "spk": "A",
+              "jp": "今日、山まで 電車に 乗って 行かない？",
+              "terms": ["v_kyou", "v_yama", "v_densha", { "id": "v_noru", "form": "te_form" }, { "id": "v_iku", "form": "plain_negative" }]
+            },
+            {
+              "spk": "B",
+              "jp": "いいよ！山は 遠い？",
+              "terms": [{ "id": "v_ii", "form": null }, "v_yama", { "id": "v_tooi", "form": null }]
+            },
+            {
+              "spk": "A",
+              "jp": "少し 遠いけど、電車で 行くよ。",
+              "terms": ["v_sukoshi", { "id": "v_tooi", "form": null }, "p_kedo", "v_densha", { "id": "v_iku", "form": null }]
+            },
+            {
+              "spk": "B",
+              "jp": "分かった！着いて、山の 道を 歩こう。",
+              "terms": [{ "id": "v_wakaru", "form": "plain_past" }, { "id": "v_tsuku", "form": "te_form" }, "v_yama", "v_michi", { "id": "v_aruku", "form": "plain_volitional" }]
+            }
           ],
-          "answer": "くろい",
-          "explanation": "黒い (black) is read as <b>kuroi</b>."
-        },
-        {
-          "kind": "mcq",
-          "q": "あの 人は [歌]が 上手です。",
+          "question": "What do they plan to do after arriving at the mountain?",
           "choices": [
-            "おと",
-            "こえ",
-            "うた",
-            "え"
+            "Walk along the mountain path",
+            "Send photos to friends at home",
+            "Work at a shop near the mountain",
+            "Ride the train back home immediately"
           ],
-          "answer": "うた",
-          "explanation": "歌 (song) is read as <b>uta</b>."
-        },
-        {
-          "kind": "mcq",
-          "q": "野菜を [切って] ください。",
-          "choices": [
-            "きって",
-            "とって",
-            "まって",
-            "かって"
-          ],
-          "answer": "きって",
-          "explanation": "切って (cut - te form) is read as <b>kitte</b>."
-        },
-        {
-          "kind": "mcq",
-          "q": "きょうとに [旅館]が あります。",
-          "choices": [
-            "りょこう",
-            "りょかん",
-            "かいかん",
-            "としょかん"
-          ],
-          "answer": "りょかん",
-          "explanation": "旅館 (Japanese inn) is read as <b>ryokan</b>."
-        },
-        {
-          "kind": "mcq",
-          "q": "[写真]を 見ました。",
-          "choices": [
-            "しんしゃ",
-            "しゃしん",
-            "さしん",
-            "しょうしん"
-          ],
-          "answer": "しゃしん",
-          "explanation": "写真 (photo) is read as <b>shashin</b>."
+          "answer": "Walk along the mountain path",
+          "explanation": "B says 着いて、山の道を歩こう — after arriving, let's walk the mountain path."
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Part 2: Vocabulary & Context",
-      "instructions": "Select the best word to complete the sentence.",
-      "items": [
-        {
-          "kind": "mcq",
-          "q": "毎日、６時に ______。",
-          "choices": [
-            "起きます",
-            "借ります",
-            "働きます",
-            "使います"
-          ],
-          "answer": "起きます",
-          "explanation": "起きます (okimasu) means to wake up."
-        },
-        {
-          "kind": "mcq",
-          "q": "父は ______ が 長いです。",
-          "choices": [
-            "頭",
-            "足",
-            "北",
-            "方"
-          ],
-          "answer": "足",
-          "explanation": "足 (ashi) means legs."
-        },
-        {
-          "kind": "mcq",
-          "q": "スーパーは 家から ______ ですから、歩いて 行けません。",
-          "choices": [
-            "近い",
-            "遠い",
-            "明るい",
-            "暗い"
-          ],
-          "answer": "遠い",
-          "explanation": "If you cannot walk there, it must be 遠い (tooi - far)."
-        },
-        {
-          "kind": "mcq",
-          "q": "友だちに てがみを ______。",
-          "choices": [
-            "送りました",
-            "着ました",
-            "住みました",
-            "別れました"
-          ],
-          "answer": "送りました",
-          "explanation": "送りました (okurimashita) means 'sent'."
-        },
-        {
-          "kind": "mcq",
-          "q": "あの 人は 有名な ______ です。",
-          "choices": [
-            "歌手",
-            "歌",
-            "音楽",
-            "音"
-          ],
-          "answer": "歌手",
-          "explanation": "歌手 (kashu) means singer."
-        },
-        {
-          "kind": "mcq",
-          "q": "ここで ______ を とらないで ください。",
-          "choices": [
-            "写真",
-            "音楽",
-            "手紙",
-            "牛"
-          ],
-          "answer": "写真",
-          "explanation": "You take (toru) a <b>photo</b> (shashin)."
-        }
-      ]
-    },
-    {
-      "type": "drills",
-      "title": "Part 3: Grammar Scramble",
+      "title": "Part 2: Grammar Scramble",
       "instructions": "Construct the sentence by clicking the words in the correct order.",
       "items": [
         {
           "kind": "scramble",
-          "q": "I can write Kanji.",
-          "segments": [
-            "私",
-            "は",
-            "かんじ",
-            "を",
-            "書けます"
-          ],
-          "explanation": "Potential form: かんじを書けます (Can write Kanji)."
+          "q": "Rikizo arrived at the station and bought stamps.",
+          "segments": ["りきぞ", "は", "駅", "に", "着いて", "切手", "を", "買いました"],
+          "distractors": ["が", "切って", "送って"],
+          "explanation": "りきぞ + は (topic) + 駅 + に (destination of 着く) + 着いて (te-form, sequential action) + 切手 + を (object) + 買いました. に marks where Rikizo arrived; を marks what was bought. が is a subject marker, not a topic marker here."
         },
         {
           "kind": "scramble",
-          "q": "I eat breakfast, then go to the company.",
-          "segments": [
-            "朝ご飯",
-            "を",
-            "食べて",
-            "会社",
-            "へ",
-            "行きます"
+          "q": "Every day I wake up, put on a shirt, and go to the company.",
+          "segments": ["毎日", "起きて", "シャツ", "を", "着て", "会社", "へ", "行きます"],
+          "distractors": ["に", "帰って", "借りて"],
+          "alts": [
+            ["起きて", "毎日", "シャツ", "を", "着て", "会社", "へ", "行きます"]
           ],
-          "explanation": "Te-form (食べて) connects sequential actions."
+          "explanation": "毎日 + 起きて (wake up, te-connector) + シャツ + を (object of 着る) + 着て (wear, te-connector) + 会社 + へ (direction) + 行きます. Time words like 毎日 can appear at the start or after the first verb. Use を for what you wear; へ marks direction for 行く."
         },
         {
           "kind": "scramble",
-          "q": "I had a fight with my younger sister.",
-          "segments": [
-            "妹",
-            "と",
-            "ケンカ",
-            "を",
-            "しました"
-          ],
-          "explanation": "Particle と (to) indicates 'with' whom you did the action."
+          "q": "Rikizo walked along the mountain path.",
+          "segments": ["りきぞ", "は", "山", "の", "道", "を", "歩きました"],
+          "distractors": ["が", "乗りました", "帰りました"],
+          "explanation": "りきぞ + は (topic) + 山 + の (modification) + 道 + を (path traversed with 歩く) + 歩きました. The を particle with movement verbs like 歩く marks the path or space traversed, not just a direct object."
         },
         {
           "kind": "scramble",
-          "q": "This bag is expensive, but light.",
-          "segments": [
-            "この",
-            "カバン",
-            "は",
-            "高い",
-            "が",
-            "軽い",
-            "です"
-          ],
-          "explanation": "Takai (expensive) but Karui (light). Adjectives connected with 'ga'."
+          "q": "The station is close, so let's walk there.",
+          "segments": ["駅", "は", "近いです", "から", "歩きましょう"],
+          "distractors": ["が", "遠いです", "乗りましょう"],
+          "explanation": "駅 + は (topic) + 近いです (predicate adjective) + から (because — reason connector after a predicate) + 歩きましょう (polite volitional: let's walk). から after an adjective+です expresses reason. が would mean 'but', creating a contradiction with walking being the natural choice."
         },
         {
           "kind": "scramble",
-          "q": "Spoke with a small voice.",
-          "segments": [
-            "小さい",
-            "声",
-            "で",
-            "話しました"
+          "q": "I use the computer and read books.",
+          "segments": ["パソコン", "を", "使って", "本", "を", "読みます"],
+          "distractors": ["が", "借りて", "作って"],
+          "explanation": "パソコン + を (object) + 使って (use — te-form connector) + 本 + を (object) + 読みます. The te-form 使って links two sequential actions. Both パソコン and 本 are objects of their respective verbs and take を."
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Part 3: Reading — Rikizo's Daily Routine",
+      "passage": [
+        {
+          "jp": "りきぞは 毎日 六時に 起きます。",
+          "en": "Rikizo wakes up at 6 every day.",
+          "terms": ["char_rikizo", "v_mainichi", { "id": "v_okiru", "form": "polite_masu" }]
+        },
+        {
+          "jp": "起きて、シャツを 着て、会社へ 行きます。",
+          "en": "He wakes up, puts on a shirt, and goes to work.",
+          "terms": [{ "id": "v_okiru", "form": "te_form" }, "v_shatsu", { "id": "v_kiru", "form": "te_form" }, "v_kaisha", { "id": "v_iku", "form": "polite_masu" }]
+        },
+        {
+          "jp": "電車に 乗って、三十分で 駅に 着きます。",
+          "en": "He rides the train and arrives at the station in thirty minutes.",
+          "terms": ["v_densha", { "id": "v_noru", "form": "te_form" }, "v_eki", { "id": "v_tsuku", "form": "polite_masu" }]
+        },
+        {
+          "jp": "会社は 駅から 少し 遠いですが、毎日 歩いて 行きます。",
+          "en": "The company is a little far from the station, but he walks there every day.",
+          "terms": ["v_kaisha", "v_eki", "v_sukoshi", { "id": "v_tooi", "form": "polite_adj" }, "p_ga_but", "v_mainichi", { "id": "v_aruku", "form": "te_form" }, { "id": "v_iku", "form": "polite_masu" }]
+        },
+        {
+          "jp": "会社で パソコンを よく 使って、たくさん 働きます。",
+          "en": "At the company he often uses the computer and works hard.",
+          "terms": ["v_kaisha", "v_pasokon", "v_yoku", { "id": "v_tsukau", "form": "te_form" }, "v_takusan", { "id": "v_hataraku", "form": "polite_masu" }]
+        },
+        {
+          "jp": "帰り道に 切手を 買って、友だちに 本を 送りたいです。",
+          "en": "On the way home he wants to buy stamps and send a book to a friend.",
+          "terms": ["v_kaerimichi", "v_kitte", { "id": "v_kau", "form": "te_form" }, "v_tomodachi", "v_hon", { "id": "v_okuru", "form": "desire_tai" }]
+        }
+      ],
+      "questions": [
+        {
+          "q": "りきぞは 毎日 何時に 起きますか。",
+          "a": "六時",
+          "choices": ["六時", "七時", "六時半", "五時"],
+          "terms": ["char_rikizo", "v_mainichi", "v_nanji", { "id": "v_okiru", "form": "polite_masu" }],
+          "explanation": "りきぞは毎日六時に起きます — Rikizo wakes up at 6 o'clock every day."
+        },
+        {
+          "q": "会社は 駅から どうですか。",
+          "a": "少し 遠いです",
+          "choices": ["少し 遠いです", "とても 近いです", "駅の 中です", "とても 大きいです"],
+          "terms": ["v_kaisha", "v_eki", "v_dou"],
+          "explanation": "会社は駅から少し遠いですが — the company is a little far from the station."
+        },
+        {
+          "q": "帰り道に 何を したいですか。",
+          "a": "切手を 買って、本を 送りたいです",
+          "choices": [
+            "切手を 買って、本を 送りたいです",
+            "友だちから お金を 借ります",
+            "シャツを 着て 帰ります",
+            "山の 道を 歩きます"
           ],
-          "explanation": "Particle で (de) indicates the means/manner (with a small voice)."
+          "terms": ["v_kaerimichi", "v_nani", { "id": "v_suru", "form": "polite_masu" }],
+          "explanation": "帰り道に切手を買って、友だちに本を送りたいです — on the way home he wants to buy stamps and send a book to a friend."
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Part 4: Particles & Grammar Check",
-      "instructions": "Choose the correct particle or form.",
+      "title": "Part 4: Kanji Readings",
+      "instructions": "Select the correct reading for the [bracketed] word.",
       "items": [
         {
           "kind": "mcq",
-          "q": "電車 ______ 乗ります。",
-          "choices": [
-            "に",
-            "を",
-            "で",
-            "へ"
-          ],
+          "q": "[帰り道]を 歩きました。",
+          "choices": ["かえりみち", "かえりどう", "きりみち", "きりもの"],
+          "answer": "かえりみち",
+          "explanation": "帰り道 (the way home / route back) is read as <b>kaerimichi</b>. 帰 (N4.1) + 道 (N5.6)."
+        },
+        {
+          "kind": "mcq",
+          "q": "先生から ノートを [借りました]。",
+          "choices": ["かりました", "きりました", "つかいました", "おくりました"],
+          "answer": "かりました",
+          "explanation": "借りる (to borrow) is read as <b>kariru</b>; past tense form <b>karimashita</b>. 借 (N4.1)."
+        },
+        {
+          "kind": "mcq",
+          "q": "[切手]を 買いました。",
+          "choices": ["きって", "きっぷ", "せって", "せっき"],
+          "answer": "きって",
+          "explanation": "切手 (postage stamp) is read as <b>kitte</b>. 切 (N4.1) + 手 (N5.13)."
+        },
+        {
+          "kind": "mcq",
+          "q": "電車に [乗りました]。",
+          "choices": ["のりました", "きりました", "はたらきました", "おきました"],
+          "answer": "のりました",
+          "explanation": "乗る (to ride / to board) is read as <b>noru</b>; past tense <b>norimashita</b>. 乗 (N4.2)."
+        },
+        {
+          "kind": "mcq",
+          "q": "[歩いて] 学校へ 行きます。",
+          "choices": ["あるいて", "のって", "はたらいて", "おきて"],
+          "answer": "あるいて",
+          "explanation": "歩く (to walk) in te-form is <b>aruite</b>. 歩 (N4.2)."
+        },
+        {
+          "kind": "mcq",
+          "q": "駅は 家から [近い]ですよ。",
+          "choices": ["ちかい", "とおい", "ながい", "たかい"],
+          "answer": "ちかい",
+          "explanation": "近い (near / close) is read as <b>chikai</b>. 近 (N4.2)."
+        },
+        {
+          "kind": "mcq",
+          "q": "友だちに 本を [送りました]。",
+          "choices": ["おくりました", "かりました", "つかいました", "きりました"],
+          "answer": "おくりました",
+          "explanation": "送る (to send) is read as <b>okuru</b>; past tense <b>okurimashita</b>. 送 (N4.1)."
+        },
+        {
+          "kind": "mcq",
+          "q": "毎日 六時に [起きます]。",
+          "choices": ["おきます", "きます", "のります", "はたらきます"],
+          "answer": "おきます",
+          "explanation": "起きる (to wake up) in polite present form is <b>okimasu</b>. 起 (N4.1)."
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 5: Context & Vocabulary",
+      "instructions": "Select the best word to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "毎日 起きて、______ を 着て、学校へ 行きます。",
+          "choices": ["シャツ", "切手", "借金", "帰り道"],
+          "answer": "シャツ",
+          "explanation": "シャツ (shirt) fits: every day I wake up, put on a shirt, and go to school. You wear (着る) a shirt — シャツを着る.",
+          "terms": [{ "id": "v_okiru", "form": "te_form" }, "v_shatsu", { "id": "v_kiru", "form": "te_form" }, "v_gakkou", { "id": "v_iku", "form": "polite_masu" }]
+        },
+        {
+          "kind": "mcq",
+          "q": "駅は 家から 近いから、毎日 ______。",
+          "choices": ["歩きます", "乗ります", "帰ります", "起きます"],
+          "answer": "歩きます",
+          "explanation": "歩きます (walks) fits: because the station is close, walking there every day is natural. 乗ります (ride) is less logical when something is close; 帰ります (go home) and 起きます (wake up) don't fit the context.",
+          "terms": ["v_eki", "v_ie", { "id": "v_chikai", "form": null }, "v_mainichi", { "id": "v_aruku", "form": "polite_masu" }]
+        },
+        {
+          "kind": "mcq",
+          "q": "先生に ノートを ______。",
+          "choices": ["借りました", "切りました", "起きました", "使いました"],
+          "answer": "借りました",
+          "explanation": "借りました (borrowed) fits: I borrowed a notebook from the teacher. 先生にノートを借りる = borrow a notebook from the teacher. に marks the person you borrow from.",
+          "terms": ["v_sensei", { "id": "v_kariru", "form": "polite_mashita" }]
+        },
+        {
+          "kind": "mcq",
+          "q": "遠足は 学校から 少し ______。電車に 乗って 行きます。",
+          "choices": ["遠いです", "近いです", "長いです", "古いです"],
+          "answer": "遠いです",
+          "explanation": "遠いです (is far) fits: the excursion is a bit far from school, which is why they take the train. 近いです (close) would make a train journey unnecessary.",
+          "terms": ["v_ensoku", "v_gakkou", "v_sukoshi", { "id": "v_tooi", "form": "polite_adj" }, "v_densha", { "id": "v_noru", "form": "te_form" }, { "id": "v_iku", "form": "polite_masu" }]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Part 6: Grammar Check",
+      "instructions": "Choose the correct particle or verb form to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "友だち ______ 本を 送りたいです。",
+          "choices": ["に", "を", "が", "で"],
           "answer": "に",
-          "explanation": "We use 'ni' with 'norimasu' (to ride/get on)."
+          "explanation": "Use に to mark the recipient of a sending or giving action. 友だちに本を送る = 'send a book to a friend'. を already marks 本 (the thing sent); the person receiving it takes に, not を.",
+          "terms": ["v_tomodachi", "v_hon", { "id": "v_okuru", "form": "desire_tai" }]
         },
         {
           "kind": "mcq",
-          "q": "どこ ______ 行きませんでした。",
-          "choices": [
-            "へも",
-            "へ",
-            "に",
-            "を"
-          ],
-          "answer": "へも",
-          "explanation": "When saying 'didn't go anywhere', we use 'Question Word + mo + Negative'."
+          "q": "電車 ______ 乗って、学校へ 行きます。",
+          "choices": ["に", "を", "が", "で"],
+          "answer": "に",
+          "explanation": "The verb 乗る (to ride / board) always takes に to mark the vehicle boarded. 電車に乗る = 'ride the train'. Compare: 電車で行く (go by train) — で marks the means of transport with 行く, but に is required with 乗る specifically.",
+          "terms": ["v_densha", { "id": "v_noru", "form": "te_form" }, "v_gakkou", { "id": "v_iku", "form": "polite_masu" }]
         },
         {
           "kind": "mcq",
-          "q": "日本語 ______ 話せますか。",
-          "choices": [
-            "が",
-            "を",
-            "に",
-            "は"
-          ],
-          "answer": "が",
-          "explanation": "With potential verbs (hanasemasu), we often use 'ga' instead of 'o'."
+          "q": "今、パソコンを 使って、本を ______。",
+          "choices": ["読んでいます", "読みましょう", "読みました", "読みません"],
+          "answer": "読んでいます",
+          "explanation": "読んでいます (te-form + います) expresses an action happening right now. 今 (now) signals a present progressive. 読みました is past (finished reading), 読みましょう is a suggestion (let's read), 読みません is negative (don't read).",
+          "terms": ["v_ima", "v_pasokon", { "id": "v_tsukau", "form": "te_form" }, "v_hon", { "id": "v_yomu", "form": "te_form" }, { "id": "v_iru", "form": "polite_masu" }]
         },
         {
           "kind": "mcq",
-          "q": "あの 店は ゆうめい ______、大きいです。",
-          "choices": [
-            "で",
-            "が",
-            "くて",
-            "に"
-          ],
-          "answer": "で",
-          "explanation": "'Yuumei' is a Na-adjective. To connect it (and), we use 'de'."
-        },
-        {
-          "kind": "mcq",
-          "q": "映画が ______。",
-          "choices": [
-            "始まります",
-            "始めます",
-            "泳ぎます",
-            "住みます"
-          ],
-          "answer": "始まります",
-          "explanation": "始まります (hajimarimasu/starts) is the correct intransitive verb for a movie."
-        }
-      ]
-    },
-    {
-      "type": "reading",
-      "title": "Part 5: Reading - The Concert",
-      "passage": [
-        {
-          "jp": "先週の 土よう日、私は 兄と とうきょうへ 行きました。"
-        },
-        {
-          "jp": "私たちは 音楽が 大好きですから、コンサートに 行きました。"
-        },
-        {
-          "jp": "歌手は 男の人でした。声が 低くて、大きかったです。"
-        },
-        {
-          "jp": "コンサートの あとで、近くの 店で 晩ご飯を 食べました。"
-        },
-        {
-          "jp": "私は カレーを 食べましたが、兄は 肉を 食べました。"
-        },
-        {
-          "jp": "とても 楽しい 一日でした。"
-        }
-      ],
-      "questions": [
-        {
-          "q": "誰と とうきょうへ 行きましたか。",
-          "a": "兄",
-          "choices": [
-            "姉",
-            "弟",
-            "兄",
-            "妹"
-          ],
-          "explanation": "The text says '兄と' (with older brother)."
-        },
-        {
-          "q": "歌手の 声は どうでしたか。",
-          "a": "低かったです",
-          "choices": [
-            "高かったです",
-            "低かったです",
-            "小さかったです",
-            "わるかったです"
-          ],
-          "explanation": "The text says '声が 低くて' (voice was low)."
-        },
-        {
-          "q": "兄は 何を 食べましたか。",
-          "a": "肉",
-          "choices": [
-            "カレー",
-            "肉",
-            "魚",
-            "パン"
-          ],
-          "explanation": "The text says '兄は 肉を 食べました'."
-        },
-        {
-          "q": "どんな 一日 でしたか。",
-          "a": "楽しい 一日",
-          "choices": [
-            "いそがしい 一日",
-            "楽しい 一日",
-            "寒い 一日",
-            "長い 一日"
-          ],
-          "explanation": "The final sentence is 'とても 楽しい 一日でした'."
-        }
-      ]
-    },
-    {
-      "type": "reading",
-      "title": "Part 6: Reading - Family Dinner",
-      "passage": [
-        {
-          "jp": "私の 家族は 父と 母と 兄と 私です。"
-        },
-        {
-          "jp": "父は 料理が 上手です。"
-        },
-        {
-          "jp": "日曜日、父は 牛肉と 野菜の 料理を 作りました。"
-        },
-        {
-          "jp": "兄は 「好きです！」と 言いました。"
-        },
-        {
-          "jp": "兄は たくさん 食べました。"
-        },
-        {
-          "jp": "晩ご飯は とても 楽しかったです。"
-        }
-      ],
-      "questions": [
-        {
-          "q": "家族は 何人ですか。",
-          "a": "四人",
-          "choices": [
-            "三人",
-            "四人",
-            "五人",
-            "六人"
-          ],
-          "explanation": "Father, Mother, Brother, Me = 4 people."
-        },
-        {
-          "q": "だれが 料理を 作りましたか。",
-          "a": "父",
-          "choices": [
-            "母",
-            "父",
-            "兄",
-            "私"
-          ],
-          "explanation": "The text says '父は... 作りました'."
-        },
-        {
-          "q": "兄は 何と 言いましたか。",
-          "a": "好きです",
-          "choices": [
-            "好きです",
-            "きらいです",
-            "まずいです",
-            "安いです"
-          ],
-          "explanation": "Brother said 'Suki desu!' (I like it)."
-        },
-        {
-          "q": "兄は 料理を 食べましたか。",
-          "a": "はい、たくさん 食べました",
-          "choices": [
-            "はい、少し 食べました",
-            "いいえ、食べませんでした",
-            "はい、たくさん 食べました",
-            "わかりません"
-          ],
-          "explanation": "The text says 'たくさん 食べました' (ate a lot)."
+          "q": "学校は 遠いです ______ 毎日 電車に 乗って 行きます。",
+          "choices": ["から", "けど", "まで", "より"],
+          "answer": "から",
+          "explanation": "から after a predicate (遠いですから) expresses reason or cause: 'because it is far'. けど means 'but', suggesting a contrast rather than a reason. まで means 'until / as far as'. より means 'more than' (for comparisons).",
+          "terms": ["v_gakkou", { "id": "v_tooi", "form": "polite_adj" }, "v_mainichi", "v_densha", { "id": "v_noru", "form": "te_form" }, { "id": "v_iku", "form": "polite_masu" }]
         }
       ]
     }
