@@ -1,0 +1,644 @@
+{
+  "contentVersion": "1.0.0",
+  "id": "N4.2",
+  "title": "Phase 4 Lesson 2: Riding & Distance",
+  "meta": {
+    "phase": 4,
+    "lesson": 2,
+    "focus": "Everyday movement verbs: riding vehicles and walking; describing distances as near or far.",
+    "kanji": ["乗", "歩", "近", "遠"]
+  },
+  "newKanji": [
+    { "kanji": "乗", "on": "じょう", "kun": "の(る)", "meaning": "Ride / Board", "termId": "k_no_2" },
+    { "kanji": "歩", "on": "ほ / ぽ", "kun": "ある(く)", "meaning": "Walk", "termId": "k_aru" },
+    { "kanji": "近", "on": "きん", "kun": "ちか(い)", "meaning": "Near / Close", "termId": "k_chika" },
+    { "kanji": "遠", "on": "えん", "kun": "とお(い)", "meaning": "Far / Distant", "termId": "k_too_2" }
+  ],
+  "sections": [
+    {
+      "type": "warmup",
+      "title": "Warm-Up Review（ウォームアップ）",
+      "instructions": "Ask your partner these questions using previously learned vocabulary:",
+      "items": [
+        {
+          "jp": "今日は 何時に 起きましたか。",
+          "en": "What time did you wake up today?",
+          "terms": [
+            "v_kyou",
+            "v_nanji",
+            { "id": "v_okiru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "今、何を 使っていますか。",
+          "en": "What are you using right now?",
+          "terms": [
+            "v_ima",
+            "v_nani",
+            { "id": "v_tsukau", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "会社まで 電車で 行きますか、バスで 行きますか。",
+          "en": "Do you go to work by train or by bus?",
+          "terms": [
+            "v_kaisha",
+            "v_densha",
+            { "id": "v_iku", "form": "polite_masu" },
+            "v_basu",
+            { "id": "v_iku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "いっしょに 帰りませんか。",
+          "en": "Would you like to go home together?",
+          "terms": [
+            "v_issho",
+            { "id": "v_kaeru", "form": "polite_negative" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kanjiGrid",
+      "title": "New Kanji（新しい 漢字）",
+      "items": [
+        {
+          "kanji": "乗",
+          "on": "じょう",
+          "kun": "の",
+          "meaning": "Ride / Board",
+          "terms": ["k_no_2", "v_noru"]
+        },
+        {
+          "kanji": "歩",
+          "on": "ほ / ぽ",
+          "kun": "ある",
+          "meaning": "Walk",
+          "terms": ["k_aru", "v_aruku"]
+        },
+        {
+          "kanji": "近",
+          "on": "きん",
+          "kun": "ちか",
+          "meaning": "Near / Close",
+          "terms": ["k_chika", "v_chikai"]
+        },
+        {
+          "kanji": "遠",
+          "on": "えん",
+          "kun": "とお",
+          "meaning": "Far / Distant",
+          "terms": ["k_too_2", "v_tooi", "v_ensoku"]
+        }
+      ]
+    },
+    {
+      "type": "vocabList",
+      "title": "Vocabulary & Compounds（ことば）",
+      "groups": [
+        {
+          "label": "Movement Verbs",
+          "items": ["v_noru", "v_aruku"]
+        },
+        {
+          "label": "Distance Adjectives",
+          "items": ["v_chikai", "v_tooi"]
+        },
+        {
+          "label": "Nouns",
+          "items": ["v_ensoku"]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 1（会話）: Morning Commute",
+      "context": "Two colleagues at the train station in the morning, discussing how they get to school.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "りきぞさんは 毎日 電車に 乗りますか。",
+          "en": "Do you ride the train every day, Rikizo?",
+          "terms": [
+            "char_rikizo",
+            "v_mainichi",
+            "v_densha",
+            { "id": "v_noru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい、乗ります。駅から 学校まで 少し 歩きます。近いですよ。",
+          "en": "Yes, I do. I walk a little from the station to school. It's close!",
+          "terms": [
+            { "id": "v_noru", "form": "polite_masu" },
+            "v_eki",
+            "v_gakkou",
+            "v_sukoshi",
+            { "id": "v_aruku", "form": "polite_masu" },
+            { "id": "v_chikai", "form": "polite_adj" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "いいですね。わたしの 家は 少し 遠いですから、バスに 乗ります。",
+          "en": "Nice! My house is a bit far, so I take the bus.",
+          "terms": [
+            "v_ie",
+            "v_sukoshi",
+            { "id": "v_tooi", "form": "polite_adj" },
+            "v_basu",
+            { "id": "v_noru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "バスも いいですね。どこから 乗りますか。",
+          "en": "That's nice too. Where do you board?",
+          "terms": [
+            "v_basu",
+            "v_doko",
+            { "id": "v_noru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 2（会話）: Class Excursion",
+      "context": "A teacher informs students about the day's excursion before they head out.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "今日の 遠足は 学校から 少し 遠いです。電車に 乗って 行きます。",
+          "en": "Today's excursion is a bit far from school. We'll go by train.",
+          "terms": [
+            "v_kyou",
+            "v_ensoku",
+            "v_gakkou",
+            "v_sukoshi",
+            { "id": "v_tooi", "form": "polite_adj" },
+            "v_densha",
+            { "id": "v_noru", "form": "te_form" },
+            { "id": "v_iku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "先生、駅は 学校から 近いですか。",
+          "en": "Sensei, is the station close to the school?",
+          "terms": [
+            "v_sensei",
+            "v_eki",
+            "v_gakkou",
+            { "id": "v_chikai", "form": "polite_adj" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "はい、近いです。駅まで 歩いて 行きましょう。",
+          "en": "Yes, it's close. Let's walk to the station.",
+          "terms": [
+            { "id": "v_chikai", "form": "polite_adj" },
+            "v_eki",
+            { "id": "v_aruku", "form": "te_form" },
+            { "id": "v_iku", "form": "polite_volitional_mashou" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "分かりました。電車に 乗りましょう！",
+          "en": "Understood. Let's ride the train!",
+          "terms": [
+            { "id": "v_wakaru", "form": "polite_mashita" },
+            "v_densha",
+            { "id": "v_noru", "form": "polite_volitional_mashou" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 3（会話）: Getting to School (Casual)",
+      "context": "Two classmates chat casually about how they travel to school each day.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "けんは 毎日 何で 学校に 来る？",
+          "en": "How do you get to school every day, Ken?",
+          "terms": [
+            "char_ken",
+            "v_mainichi",
+            "v_nan",
+            "v_gakkou",
+            { "id": "v_kuru", "form": null }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "歩いて 来るよ。家が 学校に 近いから。",
+          "en": "I walk here. My house is close to school.",
+          "terms": [
+            { "id": "v_aruku", "form": "te_form" },
+            { "id": "v_kuru", "form": null },
+            "v_ie",
+            "v_gakkou",
+            { "id": "v_chikai", "form": null }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "いいね。わたしの 家は 遠いよ。電車に 乗って 来る。",
+          "en": "Lucky! My house is far. I come by riding the train.",
+          "terms": [
+            { "id": "v_ii", "form": null },
+            "v_watashi",
+            "v_ie",
+            { "id": "v_tooi", "form": null },
+            "v_densha",
+            { "id": "v_noru", "form": "te_form" },
+            { "id": "v_kuru", "form": null }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "電車に 乗る？ わたしも 乗りたいよ。",
+          "en": "You ride the train? I want to ride too!",
+          "terms": [
+            "v_densha",
+            { "id": "v_noru", "form": null },
+            "v_watashi",
+            { "id": "v_noru", "form": "plain_desire_tai" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation Practice 4（会話）: Planning a Hike (Casual)",
+      "context": "Two friends plan a hiking excursion together on a day off.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "ゆきと いっしょに 遠足に 行かない？",
+          "en": "Want to go on a hike together with me, Yuki?",
+          "terms": [
+            "char_yuki",
+            "v_issho",
+            "v_ensoku",
+            { "id": "v_iku", "form": "plain_negative" }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "いいよ！どこに 行く？",
+          "en": "Sounds good! Where are we going?",
+          "terms": [
+            { "id": "v_ii", "form": null },
+            "v_doko",
+            { "id": "v_iku", "form": null }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "電車に 乗って、山まで 行きたいよ。そこから 少し 歩く。",
+          "en": "I want to go to the mountain by train. We'll walk a bit from there.",
+          "terms": [
+            "v_densha",
+            { "id": "v_noru", "form": "te_form" },
+            "v_yama",
+            { "id": "v_iku", "form": "plain_desire_tai" },
+            "v_soko",
+            "v_sukoshi",
+            { "id": "v_aruku", "form": null }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "山は 遠い？ バスにも 乗る？",
+          "en": "Is the mountain far? Will we take a bus too?",
+          "terms": [
+            "v_yama",
+            { "id": "v_tooi", "form": null },
+            "v_basu",
+            { "id": "v_noru", "form": null }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 1: Rikizo's Daily Commute",
+      "passage": [
+        {
+          "jp": "りきぞは 毎日 電車に 乗って 学校へ 行きます。",
+          "en": "Rikizo rides the train to school every day.",
+          "terms": [
+            "char_rikizo",
+            "v_mainichi",
+            "v_densha",
+            { "id": "v_noru", "form": "te_form" },
+            "v_gakkou",
+            { "id": "v_iku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "家から 駅まで 少し 歩きますが、近いです。",
+          "en": "He walks a little from home to the station, but it is close.",
+          "terms": [
+            "v_ie",
+            "v_eki",
+            "v_sukoshi",
+            { "id": "v_aruku", "form": "polite_masu" },
+            { "id": "v_chikai", "form": "polite_adj" }
+          ]
+        },
+        {
+          "jp": "電車で 学校まで 三十分 乗ります。",
+          "en": "He rides the train for thirty minutes to school.",
+          "terms": [
+            "v_densha",
+            "v_gakkou",
+            { "id": "v_noru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "学校の 駅に 着いて、少し 歩きます。",
+          "en": "He arrives at the school's station and walks a little.",
+          "terms": [
+            "v_gakkou",
+            "v_eki",
+            { "id": "v_tsuku", "form": "te_form" },
+            "v_sukoshi",
+            { "id": "v_aruku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "学校は 少し 遠いですが、毎日 電車に 乗って 行きます。",
+          "en": "School is a bit far, but he goes by riding the train every day.",
+          "terms": [
+            "v_gakkou",
+            "v_sukoshi",
+            { "id": "v_tooi", "form": "polite_adj" },
+            "v_mainichi",
+            "v_densha",
+            { "id": "v_noru", "form": "te_form" },
+            { "id": "v_iku", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "りきぞは 毎日 どこへ 行きますか。",
+          "a": "学校へ 行きます。",
+          "terms": [
+            "char_rikizo",
+            "v_mainichi",
+            "v_doko",
+            "v_gakkou",
+            { "id": "v_iku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "q": "駅は 家から 近いですか、遠いですか。",
+          "a": "近いです。",
+          "terms": [
+            "v_eki",
+            "v_ie",
+            { "id": "v_chikai", "form": "polite_adj" },
+            { "id": "v_tooi", "form": "polite_adj" },
+            { "id": "v_chikai", "form": "polite_adj" }
+          ]
+        },
+        {
+          "q": "電車で 学校まで 何分 乗りますか。",
+          "a": "三十分 乗ります。",
+          "terms": [
+            "v_densha",
+            "v_gakkou",
+            "v_nan",
+            { "id": "v_noru", "form": "polite_masu" },
+            { "id": "v_noru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "q": "りきぞは 毎日 電車で 学校へ 行きますか。",
+          "a": "はい、電車に 乗って 行きます。",
+          "terms": [
+            "char_rikizo",
+            "v_mainichi",
+            "v_densha",
+            "v_gakkou",
+            { "id": "v_iku", "form": "polite_masu" },
+            "v_densha",
+            { "id": "v_noru", "form": "te_form" },
+            { "id": "v_iku", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: The Class Excursion",
+      "passage": [
+        {
+          "jp": "今日は クラスの 遠足です。学校から 電車に 乗って 行きます。",
+          "en": "Today is the class excursion. We go by riding the train from school.",
+          "terms": [
+            "v_kyou",
+            "v_kurasu",
+            "v_ensoku",
+            "v_gakkou",
+            "v_densha",
+            { "id": "v_noru", "form": "te_form" },
+            { "id": "v_iku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "学校から 駅まで 歩きます。駅は 学校から 近いです。",
+          "en": "We walk from school to the station. The station is close to school.",
+          "terms": [
+            "v_gakkou",
+            "v_eki",
+            { "id": "v_aruku", "form": "polite_masu" },
+            "v_eki",
+            "v_gakkou",
+            { "id": "v_chikai", "form": "polite_adj" }
+          ]
+        },
+        {
+          "jp": "電車で 一時間 乗りました。山は 遠かったですが、電車で 行きました。",
+          "en": "We rode the train for one hour. The mountain was far, but we went by train.",
+          "terms": [
+            "v_densha",
+            { "id": "v_noru", "form": "polite_mashita" },
+            "v_yama",
+            { "id": "v_tooi", "form": "polite_past_adj" },
+            "v_densha",
+            { "id": "v_iku", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "山に 着いて、山の 道を 長く 歩きました。いい 遠足でした。",
+          "en": "We arrived at the mountain and walked the mountain path for a long way. It was a good excursion.",
+          "terms": [
+            "v_yama",
+            { "id": "v_tsuku", "form": "te_form" },
+            "v_yama",
+            "v_michi",
+            { "id": "v_nagai", "form": "adverbial" },
+            { "id": "v_aruku", "form": "polite_mashita" },
+            "v_ii",
+            "v_ensoku"
+          ]
+        },
+        {
+          "jp": "学校に 帰りました。いい 一日でした。",
+          "en": "We returned to school. It was a good day.",
+          "terms": [
+            "v_gakkou",
+            { "id": "v_kaeru", "form": "polite_mashita" },
+            "v_ii",
+            "v_ichinichi"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "今日は 何ですか。",
+          "a": "クラスの 遠足です。",
+          "terms": [
+            "v_kyou",
+            "v_nan",
+            "v_kurasu",
+            "v_ensoku"
+          ]
+        },
+        {
+          "q": "学校から 駅まで 歩きますか。",
+          "a": "はい、歩きます。",
+          "terms": [
+            "v_gakkou",
+            "v_eki",
+            { "id": "v_aruku", "form": "polite_masu" },
+            { "id": "v_aruku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "q": "山は 学校から 遠かったですか。",
+          "a": "はい、遠かったですが、電車で 行きました。",
+          "terms": [
+            "v_yama",
+            "v_gakkou",
+            { "id": "v_tooi", "form": "polite_past_adj" },
+            { "id": "v_tooi", "form": "polite_past_adj" },
+            "v_densha",
+            { "id": "v_iku", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "q": "山で 何を しましたか。",
+          "a": "山の 道を 歩きました。",
+          "terms": [
+            "v_yama",
+            "v_nani",
+            { "id": "v_suru", "form": "polite_mashita" },
+            "v_yama",
+            "v_michi",
+            { "id": "v_aruku", "form": "polite_mashita" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Vocabulary Reading",
+      "instructions": "Select the correct meaning for the kanji word shown.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "乗る [のる]",
+          "choices": ["to ride", "to walk", "to arrive", "to borrow"],
+          "answer": "to ride",
+          "terms": []
+        },
+        {
+          "kind": "mcq",
+          "q": "歩く [あるく]",
+          "choices": ["to walk", "to run", "to ride", "to work"],
+          "answer": "to walk",
+          "terms": []
+        },
+        {
+          "kind": "mcq",
+          "q": "近い [ちかい]",
+          "choices": ["near", "far", "long", "tall"],
+          "answer": "near",
+          "terms": []
+        },
+        {
+          "kind": "mcq",
+          "q": "遠足 [えんそく]",
+          "choices": ["hike / field trip", "train ride", "road", "station"],
+          "answer": "hike / field trip",
+          "terms": []
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Grammar & Context",
+      "instructions": "Choose the correct verb or adjective form to complete each sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "毎日 電車に ______ 学校へ 行きます。",
+          "choices": ["乗って", "歩いて", "出て", "帰って"],
+          "answer": "乗って",
+          "terms": [
+            "v_mainichi",
+            "v_densha",
+            "v_gakkou",
+            { "id": "v_noru", "form": "te_form" },
+            { "id": "v_iku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "家から 駅まで 五分で ______。",
+          "choices": ["着きます", "乗ります", "歩きます", "帰ります"],
+          "answer": "着きます",
+          "terms": [
+            "v_ie",
+            "v_eki",
+            { "id": "v_tsuku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "学校は 遠いですから、バスに ______。",
+          "choices": ["乗ります", "歩きます", "帰ります", "使います"],
+          "answer": "乗ります",
+          "terms": [
+            "v_gakkou",
+            { "id": "v_tooi", "form": "polite_adj" },
+            "v_basu",
+            { "id": "v_noru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "山まで 歩き______。",
+          "choices": ["たいです", "ました", "ません", "ましょうか"],
+          "answer": "たいです",
+          "terms": [
+            "v_yama",
+            { "id": "v_aruku", "form": "desire_tai" }
+          ]
+        }
+      ]
+    }
+  ]
+}
