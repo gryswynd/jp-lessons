@@ -2,12 +2,12 @@
   "contentVersion": "1.0.0",
   "id": "G11",
   "type": "grammar",
-  "title": "na-Adjective Conjugation",
+  "title": "na-Adjective Conjugation & こと Nominalization",
   "meta": {
     "level": "N5",
     "unlocksAfter": "N5.11",
-    "focus": "Full na-adjective conjugation paradigm: before nouns (～な), adverb form (～に), te-form connector (～で), and polite conjugations. Plus easily confused words that look like i-adjectives but are actually na-adjectives (きれい, 有名, 嫌い).",
-    "estimatedMinutes": 20,
+    "focus": "Full na-adjective conjugation paradigm: before nouns (～な), adverb form (～に), te-form connector (～で), and polite conjugations. Easily confused na-adjectives (きれい, 有名, 嫌い). Plus こと as a nominalizer: turning verb phrases into nouns, Xのことが好き (holistic liking), and ～たことがある (experiential 'have done').",
+    "estimatedMinutes": 25,
     "particles": [],
     "grammarForms": ["polite_adj", "plain_negative", "te_form", "adverbial"],
     "icon": "🎨"
@@ -15,10 +15,10 @@
   "sections": [
     {
       "type": "grammarIntro",
-      "title": "na-Adjectives — A Different Kind of Adjective",
+      "title": "na-Adjectives & こと — Two Patterns in One Lesson",
       "icon": "🎨",
-      "summary": "Japanese has two types of adjectives: い-adjectives (which end in い and conjugate by modifying the stem) and な-adjectives (which behave more like nouns and use different endings). You have already used きれいです in the lesson — this lesson shows you the full range of な-adjective forms.",
-      "whyItMatters": "な-adjectives are extremely common in everyday Japanese. Words like きれい (beautiful), 有名 (famous), and 嫌い (disliked) are na-adjectives. Without knowing how to conjugate them, you cannot say things like 'it became beautiful', 'it isn't clean', or 'the beautiful flowers'. Once you know the pattern, all na-adjectives follow it — making this one of the most efficient grammar rules to learn.",
+      "summary": "This lesson covers two key grammar areas: the full na-adjective conjugation paradigm, and こと — a small but powerful word that turns verbs into nouns. Together they expand the range of sentences you can build dramatically.",
+      "whyItMatters": "な-adjectives are extremely common in everyday Japanese. Words like きれい (beautiful), 有名 (famous), and 嫌い (disliked) are na-adjectives — master the pattern once and every na-adjective follows it. こと then lets you nominalise any verb phrase ('eating', 'going to Japan', 'having seen something'), unlocking natural expressions like 'I like eating' and 'Have you ever been to Japan?' These two tools together take your Japanese from simple to expressive.",
       "youWillLearn": [
         "Before nouns: きれいな 花 (beautiful flower) — add な before the noun",
         "Polite present: きれいです (is beautiful)",
@@ -27,7 +27,10 @@
         "Polite past negative: きれいじゃなかったです (was not beautiful)",
         "て-form connector: きれいで (beautiful and…) — use で to chain adjectives",
         "Adverb form: きれいに (beautifully / in a clean way) — modifies verbs",
-        "⚠ Watch out: きれい, 有名, 嫌い LOOK like i-adjectives but are NOT. Never say きれいい or きれいくない!"
+        "⚠ Watch out: きれい, 有名, 嫌い LOOK like i-adjectives but are NOT. Never say きれいい or きれいくない!",
+        "こと: plain form verb + こと turns the verb into a noun phrase (食べること = 'eating')",
+        "Xのことが好き: liking X as a whole — deeper and more encompassing than plain が好き",
+        "～たことがある: express past experience — 'I have (ever) done ~'"
       ]
     },
     {
@@ -170,6 +173,130 @@
       ]
     },
     {
+      "type": "grammarRule",
+      "id": "rule_koto_nominalizer",
+      "pattern": [
+        { "label": "VERB (plain form)", "color": "verb", "text": "行く" },
+        { "label": "+ こと", "color": "subject", "text": "+ こと" },
+        { "label": "→ NOUN PHRASE", "color": "predicate", "text": "行くこと = 'going'" }
+      ],
+      "meaning": "Plain form + こと — turns a verb phrase into a noun ('the act of ~')",
+      "explanation": "こと is a special noun meaning 'thing / matter / fact' (always written in hiragana, never as 事 in modern usage). When placed after a **plain form verb**, こと converts the entire verb phrase into a noun that can then fill any noun role in a sentence — subject, object, or topic.\n\n**The pattern:**\n```\n[plain form verb phrase] + こと\n食べること  (eating / the act of eating)\n日本に行くこと  (going to Japan)\n花火を見ること  (watching fireworks)\n```\n\n**In a full sentence:**\n- 食べることが好きです (I like eating)\n- 日本に行くことが夢です (Going to Japan is my dream)\n- 花火を見ることが楽しいです (Watching fireworks is fun)\n\n**Key point:** The verb before こと is always in its **plain form** (dictionary form for present; more on past below). Even in a polite sentence, the verb inside こと stays plain — politeness comes from the ending (です, ます) after こと.\n\nMore advanced こと patterns (ことができる for ability, ことにする for decisions) are taught in N4 grammar lessons.",
+      "notes": [
+        "こと is always written in hiragana — 事 (the kanji) exists but is not used in grammar contexts.",
+        "The verb immediately before こと must be in the plain/dictionary form: 食べること ✓, 食べますこと ✗.",
+        "こと is different from もの (physical object) and の (softer nominalizer used in spoken language). For grammar patterns, こと is the standard choice.",
+        "Reminder: こと is available from N5.9 as an early-use word — always write it in hiragana."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "山に 行くことが", "role": "subject", "gloss": "going to the mountains (nominalised by こと)" },
+            { "text": "好きです。", "role": "predicate", "gloss": "like / fond of (na-adj + です)" }
+          ],
+          "en": "I like going to the mountains.",
+          "breakdown": "行く (dictionary form) + こと = 行くこと (the act of going). が marks it as the subject/object of 好きです."
+        },
+        {
+          "parts": [
+            { "text": "花火を 見ることが", "role": "subject", "gloss": "watching fireworks (nominalised verb phrase)" },
+            { "text": "楽しいです。", "role": "predicate", "gloss": "is fun (い-adjective + です)" }
+          ],
+          "en": "Watching fireworks is fun.",
+          "breakdown": "見る (dictionary form) + こと = 見ること. The whole phrase 花火を見ること acts as the subject of 楽しいです."
+        },
+        {
+          "parts": [
+            { "text": "食べることが", "role": "subject", "gloss": "eating (nominalised verb)" },
+            { "text": "好きです。", "role": "predicate", "gloss": "like (na-adj + です)" }
+          ],
+          "en": "I like eating.",
+          "breakdown": "食べる (dictionary form) + こと = 食べること (eating as a concept). Simple and extremely common — you will use this pattern all the time."
+        }
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_koto_suki",
+      "pattern": [
+        { "label": "X + の", "color": "topic", "text": "日本 の" },
+        { "label": "こと", "color": "subject", "text": "こと" },
+        { "label": "が 好き", "color": "predicate", "text": "が すき です" }
+      ],
+      "meaning": "Xのことが好き — liking X as a whole, holistically",
+      "explanation": "You already know Xが好き (like X). Adding の + こと changes the nuance from 'like the specific thing X' to 'like everything about X' — a deeper, more encompassing fondness.\n\n| Pattern | Nuance | Example |\n|---|---|---|\n| 日本が好きです | I like Japan (the country, as a direct object) | Simple preference |\n| 日本のことが好きです | I love Japan / everything about Japan | Broader, deeper feeling |\n\nThe pattern Xのことが好き is especially natural with **people**: it implies you like someone as a whole person, not just a surface quality.\n\n**More examples:**\n- この川のことがすきです → I love this river (holistically)\n- りきぞさんのことが好きです → I like Rikizo (as a person)\n- 音楽のことが好きです → I love music (everything about it)\n\nNote: すき uses hiragana because the kanji 好 is not taught until N4.",
+      "notes": [
+        "The の in Xのこと is the possessive/connector particle (taught in G2). こと here means 'the matter/existence of X' — so Xのこと = 'the matter of X / everything about X'.",
+        "In everyday speech, Xのことが好き vs Xが好き sounds very similar, but native speakers feel the difference. Xのことが好き tends to sound more heartfelt.",
+        "You can also use Xのことが好きじゃない (I don't like X) or Xのことが嫌い (I dislike X) following the same pattern."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "日本の", "role": "topic", "gloss": "Japan's / of Japan" },
+            { "text": "ことが", "role": "subject", "gloss": "everything about ~ (こと + が)" },
+            { "text": "すきです。", "role": "predicate", "gloss": "like / fond of (な-adj: すき + です)" }
+          ],
+          "en": "I love Japan / I love everything about Japan.",
+          "breakdown": "日本 + の + こと = 'the matter/essence of Japan'. が marks it as what's liked. すきです = polite 'like'."
+        },
+        {
+          "parts": [
+            { "text": "この 川の", "role": "topic", "gloss": "this river's / of this river" },
+            { "text": "ことが", "role": "subject", "gloss": "everything about ~" },
+            { "text": "すきです。", "role": "predicate", "gloss": "like (な-adj polite)" }
+          ],
+          "en": "I love this river.",
+          "breakdown": "この川 + の + こと = 'everything about this river'. A warmer, more encompassing statement than この川がすきです."
+        }
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_koto_experience",
+      "pattern": [
+        { "label": "VERB (plain past)", "color": "verb", "text": "見た" },
+        { "label": "+ こと が", "color": "subject", "text": "+ こと が" },
+        { "label": "あります", "color": "predicate", "text": "あります" }
+      ],
+      "meaning": "～たことがある — 'have (ever) done ~'; expressing past experience",
+      "explanation": "This is one of the most useful patterns in Japanese. ～たことがある lets you say whether or not you have ever had a particular experience.\n\n**The pattern — always plain past (た-form) before こと:**\n```\n[verb plain past] + こと + が + ある/あります\n花火を見たことがあります  (I have seen fireworks [before])\n日本に行ったことがあります  (I have been to Japan)\n```\n\n**Negative — replace ある with ない:**\n```\n[verb plain past] + こと + が + ない/ありません\n食べたことがありません  (I have never eaten [it])\n```\n\n**Question — add か at the end:**\n```\n[verb plain past] + こと + が + ありますか\n日本に行ったことがありますか  (Have you ever been to Japan?)\n```\n\n**Critical rule:** The verb before こと is ALWAYS the **plain past** (た-form), even in polite sentences. The politeness comes from ます/ません at the very end. Never say ~~行きますことがあります~~ — that is wrong.",
+      "notes": [
+        "Think of ～たことがある as 'I have a record/experience of having done ~'. こと here = 'the experience of'.",
+        "The past tense of this pattern (I had done it before a certain point) uses ことがあった: 子どものとき、山に登ったことがありました (When I was a child, I had climbed a mountain).",
+        "Don't confuse with ～ことがある (dictionary form + ことがある), which means 'there are times when ~'. That is a separate, more advanced pattern.",
+        "This pattern pairs naturally with: 一度 (once), 何度も (many times), 一度も～ない (not even once)."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "花火を", "role": "object", "gloss": "fireworks (direct object)" },
+            { "text": "見たことが", "role": "subject", "gloss": "the experience of having seen (plain past: 見た + こと + が)" },
+            { "text": "あります。", "role": "predicate", "gloss": "exists / have (polite: あります)" }
+          ],
+          "en": "I have seen fireworks before.",
+          "breakdown": "見た (plain past of 見る) + こと + が + あります. The plain past た is key — this is a fixed construction."
+        },
+        {
+          "parts": [
+            { "text": "日本に", "role": "destination", "gloss": "to Japan (destination: に)" },
+            { "text": "行ったことが", "role": "subject", "gloss": "the experience of having gone (行った + こと + が)" },
+            { "text": "ありますか。", "role": "predicate", "gloss": "exists? (polite question)" }
+          ],
+          "en": "Have you ever been to Japan?",
+          "breakdown": "行った (plain past of 行く) + こと + が + ありますか = 'Do you have the experience of having gone to Japan?' This is the standard 'Have you ever ~?' pattern in Japanese."
+        },
+        {
+          "parts": [
+            { "text": "食べたことが", "role": "subject", "gloss": "the experience of having eaten (食べた + こと + が)" },
+            { "text": "ありません。", "role": "predicate", "gloss": "does not exist (polite negative: ありません)" }
+          ],
+          "en": "I have never eaten it.",
+          "breakdown": "食べた (plain past of 食べる) + こと + が + ありません. Swap あります → ありません for negative. This is 'I do not have the experience of having eaten it.'"
+        }
+      ]
+    },
+    {
       "type": "annotatedExample",
       "title": "na-Adjectives in Context — Reading a Sentence",
       "sentence": "花は きれいで、かわいくて、空気も きれいに なりました。",
@@ -271,6 +398,35 @@
             "p_ne",
             "v_mata",
             { "id": "v_kuru", "form": "desire_tai" }
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "ここで 花火を 見たことが ありますか。",
+          "en": "Have you ever seen fireworks here?",
+          "terms": [
+            "v_koko",
+            "p_de",
+            "v_hanabi",
+            "p_wo",
+            { "id": "v_miru", "form": "plain_past" },
+            "v_koto",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "ええ、あります。この 川の ことが すきです。",
+          "en": "Yes, I have. I love everything about this river.",
+          "terms": [
+            { "id": "v_aru", "form": "polite_masu" },
+            "v_kawa",
+            "p_no",
+            "v_koto",
+            "p_ga",
+            { "id": "v_suki", "form": "polite_adj" }
           ]
         }
       ]
@@ -394,6 +550,30 @@
           "answer": "きれいかったです",
           "terms": [{ "id": "v_kirei", "form": "polite_adj" }],
           "explanation": "きれいかったです is WRONG — きれい is a な-adjective, not an い-adjective. The correct past tense is きれいでした. The other three forms are all correct: でした (past), じゃなかったです (past negative), に なりました (became, adverb + naru)."
+        },
+        {
+          "kind": "mcq",
+          "q": "Which sentence correctly uses こと as a nominalizer?",
+          "choices": ["山に 行くことが 好きです。", "山に 行きことが 好きです。", "山こと 行くが 好きです。", "山が こと 行き 好きです。"],
+          "answer": "山に 行くことが 好きです。",
+          "terms": ["v_yama", "p_ni", { "id": "v_iku", "form": null }, "v_koto", "p_ga", { "id": "v_suki", "form": "polite_adj" }],
+          "explanation": "The pattern is: [plain form verb phrase] + こと. 行く (dictionary form) + こと turns 'go to the mountains' into a noun phrase. が marks it as the subject/object of 好きです. The verb must be in plain dictionary form before こと — 行きこと (using the masu-stem) is wrong."
+        },
+        {
+          "kind": "mcq",
+          "q": "What does「花火を 見たことが あります」mean?",
+          "choices": ["I have seen fireworks before.", "I want to see fireworks.", "I am watching fireworks.", "I saw fireworks yesterday."],
+          "answer": "I have seen fireworks before.",
+          "terms": ["v_hanabi", "p_wo", { "id": "v_miru", "form": "plain_past" }, "v_koto", "p_ga", { "id": "v_aru", "form": "polite_masu" }],
+          "explanation": "～たことがある expresses past experience: 'have (ever) done ~'. 見た (plain past of 見る) + こと + が + あります = 'I have the experience of having seen fireworks'. The plain past た-form before こと is the key — it is always the past form here, even in a polite sentence."
+        },
+        {
+          "kind": "mcq",
+          "q": "How is「日本のことが好きです」different from「日本が好きです」?",
+          "choices": ["のことが好き expresses a broader, more encompassing fondness for Japan as a whole.", "のことが好き is past tense; が好き is present tense.", "のことが好き is more formal; が好き is casual.", "They mean exactly the same thing with no difference."],
+          "answer": "のことが好き expresses a broader, more encompassing fondness for Japan as a whole.",
+          "terms": ["v_koto", "p_ga", { "id": "v_suki", "form": "polite_adj" }],
+          "explanation": "Xが好き means 'I like X' — direct preference for the specific thing. Xのことが好き means 'I love everything about X' — a holistic fondness covering all aspects. のこと adds the nuance of 'the whole matter/essence of X'. In practice, Xのことが好き sounds warmer and more heartfelt."
         }
       ]
     }

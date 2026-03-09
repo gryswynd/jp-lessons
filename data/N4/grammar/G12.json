@@ -6,8 +6,8 @@
   "meta": {
     "level": "N4",
     "unlocksAfter": "N4.3",
-    "focus": "Expressing ability and possibility using the potential form: RU-verbs add られる, U-verbs shift to the え-column, する becomes できる, 来る becomes 来られる. Includes the particle shift を→が and colloquial shortening られる→れる.",
-    "estimatedMinutes": 25,
+    "focus": "Expressing ability and possibility using the potential form: RU-verbs add られる, U-verbs shift to the え-column, する becomes できる, 来る becomes 来られる. Includes the particle shift を→が, colloquial shortening られる→れる, and ことができる — the formal/written alternative to the potential form introduced in G11.",
+    "estimatedMinutes": 30,
     "particles": [],
     "grammarForms": ["potential", "potential_negative"],
     "icon": "💪"
@@ -26,7 +26,8 @@
         "Irregular 来る: its potential form is 来られる (korareru — can come)",
         "Particle shift: を often becomes が with potential forms (日本語を話す → 日本語が話せる)",
         "Negative potential: 食べられません (cannot eat), 話せません (cannot speak)",
-        "⚠ Colloquial shortening: RU-verbs often drop ら in casual speech (食べれる, 見れる) — correct in conversation, but not standard written Japanese"
+        "⚠ Colloquial shortening: RU-verbs often drop ら in casual speech (食べれる, 見れる) — correct in conversation, but not standard written Japanese",
+        "ことができる: the formal/written alternative to the potential form — 日本語を話すことができます (I can speak Japanese). Introduced in G11; practiced here alongside the potential form."
       ]
     },
     {
@@ -216,6 +217,92 @@
       ]
     },
     {
+      "type": "grammarRule",
+      "id": "rule_koto_ga_dekiru",
+      "pattern": [
+        { "label": "VERB (dict form)", "color": "verb", "text": "話す" },
+        { "label": "+ こと が", "color": "subject", "text": "+ こと が" },
+        { "label": "できる", "color": "predicate", "text": "できる / できます" }
+      ],
+      "meaning": "Dictionary form + ことができる — formal/written expression of ability",
+      "explanation": "You have just learned the potential form (話せる, 書ける, できる, 来られる). Japanese also has a second way to express the same meaning using こと — the nominalizer introduced in G11.\n\n**The pattern:**\n```\n[verb dictionary form] + こと + が + できる / できます\n日本語を 話すことができます  →  I can speak Japanese  (formal)\n本を 読むことができます  →  I can read books  (formal)\n```\n\n**Negative:** Replace できる with できない / できません\n```\n日本語を 書くことができません  →  I cannot write Japanese\n```\n\n**How it works:** こと nominalises the verb phrase ('the act of speaking Japanese'), then が marks it as the subject of できる (which you already know as the potential of する). So literally: 'The act of speaking Japanese exists as an ability for me.'\n\n**When to use which form:**\n- Conversation / casual: → **potential form** (話せます) — shorter, more natural\n- Formal writing, resumes, announcements: → **ことができる** (話すことができます) — longer, more explicit\n\n**Particle note:** With ことができる, the object keeps **を** (not が as with the potential form). This is because を marks the object of the nominalised verb phrase, not of できる itself.",
+      "notes": [
+        "ことができる is the pattern you will see on job application forms: 日本語を話すことができます、Excelを使うことができます. Learn it for reading and writing; use the potential form in speech.",
+        "The できる in ことができる is the same できる that is the potential form of する. They are identical in form — but in ことができる, できる is acting as the main predicate expressing ability.",
+        "Negative: ことができません (polite), ことができない (plain). The rest of the sentence stays the same.",
+        "Unlike the potential form where を shifts to が, ことができる keeps を: 日本語を話すことができます (を stays). This is one of the key structural differences."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "日本語を", "role": "object", "gloss": "Japanese (object: を stays — does not shift to が here)" },
+            { "text": "話すことが", "role": "subject", "gloss": "the act of speaking (dictionary form 話す + こと + が)" },
+            { "text": "できます。", "role": "predicate", "gloss": "can / is possible (potential of する)" }
+          ],
+          "en": "I can speak Japanese. (formal)",
+          "breakdown": "話す (dict. form) + こと + が + できます. Compare with the potential form: 日本語が話せます — shorter and more conversational. Both are correct; register determines the choice."
+        },
+        {
+          "parts": [
+            { "text": "本を", "role": "object", "gloss": "books (object: を)" },
+            { "text": "読むことが", "role": "subject", "gloss": "the act of reading (読む + こと + が)" },
+            { "text": "できません。", "role": "predicate", "gloss": "cannot (negative potential of する)" }
+          ],
+          "en": "I cannot read books. (formal)",
+          "breakdown": "読む (dict. form) + こと + が + できません. Negative of ことができる simply replaces できます with できません."
+        },
+        {
+          "parts": [
+            { "text": "一人で", "role": "manner", "gloss": "alone / by oneself" },
+            { "text": "来ることが", "role": "subject", "gloss": "the act of coming (来る + こと + が)" },
+            { "text": "できますか。", "role": "predicate", "gloss": "can? (polite question)" }
+          ],
+          "en": "Can you come by yourself?",
+          "breakdown": "来る + こと + が + できますか. This uses 来る (irregular), not 来られる — because in ことができる the verb is always in its dictionary form."
+        }
+      ]
+    },
+    {
+      "type": "grammarComparison",
+      "title": "Potential Form vs ことができる",
+      "items": [
+        {
+          "label": "Potential Form (conversational)",
+          "color": "verb",
+          "points": [
+            "Short and direct — the natural choice in conversation",
+            "Object を shifts to が (particle change)",
+            "The verb itself conjugates: 話す → 話せる"
+          ],
+          "example": {
+            "parts": [
+              { "text": "日本語が", "role": "subject", "gloss": "Japanese (を shifted to が)" },
+              { "text": "話せます。", "role": "predicate", "gloss": "can speak (potential: 話す → 話せ + ます)" }
+            ],
+            "en": "I can speak Japanese. (conversational)"
+          }
+        },
+        {
+          "label": "ことができる (formal / written)",
+          "color": "predicate",
+          "points": [
+            "Longer and more explicit — preferred in writing and formal contexts",
+            "Object を stays as を (no particle change)",
+            "The verb stays in dictionary form before こと"
+          ],
+          "example": {
+            "parts": [
+              { "text": "日本語を", "role": "object", "gloss": "Japanese (を stays as を — no shift)" },
+              { "text": "話すことが", "role": "subject", "gloss": "the act of speaking (話す + こと + が)" },
+              { "text": "できます。", "role": "predicate", "gloss": "can / is possible" }
+            ],
+            "en": "I can speak Japanese. (formal)"
+          }
+        }
+      ],
+      "tip": "Talking to a friend? → potential form (話せます). Writing a resume or formal statement? → ことができる (話すことができます). Both express the same ability — register decides which to use."
+    },
+    {
       "type": "annotatedExample",
       "title": "Potential Form in Context — Reading a Sentence",
       "sentence": "私は 日本語が 話せますが、まだ 上手に 書けません。",
@@ -326,6 +413,37 @@
           "terms": [
             { "id": "v_yomu", "form": "potential" },
             "p_yo"
+          ]
+        },
+        {
+          "spk": "けん",
+          "jp": "じゃあ、日本語を 書くことも できますか。",
+          "en": "Then, can you also write Japanese?",
+          "terms": [
+            "v_nihongo",
+            "p_wo",
+            { "id": "v_kaku", "form": null },
+            "v_koto",
+            "p_mo",
+            { "id": "v_suru", "form": "potential" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "少しは 書くことが できます。でも、まだ 上手に 書けません。",
+          "en": "I can write a little. But I still can't write well.",
+          "terms": [
+            "v_sukoshi",
+            "p_wa",
+            { "id": "v_kaku", "form": null },
+            "v_koto",
+            "p_ga",
+            { "id": "v_suru", "form": "potential" },
+            "p_demo_but",
+            "v_mada",
+            { "id": "v_jouzu", "form": "adverbial" },
+            { "id": "v_kaku", "form": "potential_negative" }
           ]
         }
       ]
@@ -573,6 +691,72 @@
             { "id": "v_kuru", "form": "potential_negative" }
           ],
           "explanation": "来られません is the polite negative potential of 来る. The potential of 来る is 来られる (korareru). Adding the polite negative ending ません gives 来られません = 'cannot come'. Reading: こられません."
+        },
+        {
+          "kind": "mcq",
+          "q": "Which sentence expresses ability using ことができる (NOT the potential form)?",
+          "choices": [
+            "日本語を 話すことが できます。",
+            "日本語が 話せます。",
+            "日本語を 話しています。",
+            "日本語が 話したいです。"
+          ],
+          "answer": "日本語を 話すことが できます。",
+          "terms": [
+            "v_nihongo",
+            "p_wo",
+            { "id": "v_hanasu", "form": null },
+            "v_koto",
+            "p_ga",
+            { "id": "v_suru", "form": "potential" }
+          ],
+          "explanation": "日本語を話すことができます uses the ことができる pattern: dictionary form (話す) + こと + が + できます. Note that を stays as を — it does NOT shift to が, unlike the potential form (日本語が話せます). ことができる is the formal/written alternative; 話せます is more natural in conversation."
+        },
+        {
+          "kind": "mcq",
+          "q": "With ことができる, which particle marks the object — を or が?",
+          "choices": [
+            "を (object keeps を — no particle shift)",
+            "が (object shifts to が like the potential form)",
+            "に (indirect object marker)",
+            "It depends on the verb type"
+          ],
+          "answer": "を (object keeps を — no particle shift)",
+          "terms": [
+            "p_wo"
+          ],
+          "explanation": "This is a key difference between ことができる and the potential form. With the potential form, を shifts to が: 日本語を話す → 日本語が話せます. With ことができる, を stays: 日本語を話すことができます. The object (日本語) belongs to the nominalised verb phrase (話すこと), not to できる directly."
+        }
+      ]
+    },
+    {
+      "type": "sentenceTransform",
+      "title": "Potential Form ↔ ことができる",
+      "instructions": "Each sentence is in the conversational potential form. Choose the correct ことができる equivalent.",
+      "items": [
+        {
+          "given": "日本語が 話せます。",
+          "givenLabel": "Potential form (conversational)",
+          "targetLabel": "Formal equivalent using ことができる",
+          "answer": "日本語を 話すことが できます。",
+          "choices": [
+            "日本語を 話すことが できます。",
+            "日本語が 話すことが できます。",
+            "日本語を 話すことが あります。",
+            "日本語が 話すことが できます。"
+          ]
+        },
+        {
+          "given": "本が 読めません。",
+          "givenLabel": "Negative potential (conversational)",
+          "targetLabel": "Formal negative using ことができない",
+          "answer": "本を 読むことが できません。",
+          "choices": [
+            "本を 読むことが できません。",
+            "本が 読むことが できません。",
+            "本を 読むことが ありません。",
+            "本を 読んだことが できません。"
+          ]
         }
       ]
     }
