@@ -3736,3 +3736,84 @@ The classroom is a standard Japanese high school room. Desks in rows. A blackboa
 **Design note — the blackboard as void:** The blackboard is the classroom's central feature, and it's blank. In a real school, it would have the date, the subject, notes from the previous class. Here, it's an empty surface — because filling it requires 書く. When writing arrives (Day 13), the blackboard will become the first surface in the game to display *written Japanese that the player can read*. The anticipation is built into the empty space.
 
 ---
+
+### The Classmates
+
+Three students are already seated when Rikizo enters. Each occupies a distinct position in the room, a distinct social niche, and a distinct relationship with the game's themes. Together with Rikizo, they form a class of four — an absurdly small cohort that nobody finds unusual.
+
+---
+
+#### けん — The One Who Doesn't Study
+
+けん is loud. Not aggressive-loud — joyful-loud. He's the first person to talk to Rikizo, standing up from his desk before Rikizo even sits down. He radiates energy the way Yamakawa radiates appetite.
+
+**けん introduction (5 lines — casual register):**
+
+1. **けん:** 「おう！新しい学生？おれもこの学校だよ！」 — "Hey! New student? I'm at this school too!" *(Casual. けん speaks casually from the first word. おれ, not わたし. だよ, not です. He's the game's second casual NPC after the hotel guest on Day 10, but unlike the guest — a stranger being informally relaxed — けん is casual because he's a peer. Same age, same school, same class. The register communicates equality instantly.)*
+
+2. **Rikizo:** 「はい、りきぞです。」 — "Yeah, I'm Rikizo." *(Rikizo defaults to neutral — not polite, not casual. He's calibrating. This is the player's first peer interaction outside of Yamakawa, and Yamakawa is a special case. けん is a classmate. The social dynamics are different.)*
+
+3. **けん:** 「けんだ。よろしく！勉強はつまらないけど、学校はおもしろいよ。」 — "I'm Ken. Nice to meet you! Studying is boring, but school is interesting." *(つまらない and おもしろい in the same sentence — the two new opinion adjectives deployed as a personality statement. けん has opinions. Strong ones. He thinks studying is boring but school is interesting — meaning he's here for the social experience, not the academics. This one sentence tells the player everything they need to know about けん.)*
+
+4. **Rikizo:** 「おもしろい？」 — "Interesting?"
+
+5. **けん:** 「友だちがいるから！すずき先生もおもしろいよ。テストはつまらないけどね。」 — "Because there are friends! すずき先生 is interesting too. Tests are boring though." *(から as "because" — G9 reinforcement. けど — casual "but." ね — softening. けん's casual Japanese is natural — not a polite sentence with です removed, but genuinely informal speech patterns. He uses から for reasons, けど for contrast, ね for rapport. This is what real casual Japanese sounds like between classmates.)*
+
+**Design note — けん's role:** けん is the game's comic relief at school, the way Dad is comic relief at home. He's not stupid — he's socially intelligent and emotionally generous. He just doesn't care about tests. His function in the narrative is threefold: (1) he makes school feel fun and accessible, countering any anxiety the player might feel about a new institutional environment; (2) he provides reliable casual-register dialogue for grammar reinforcement; (3) in later days, his indifference to studying creates comedy when すずき先生 calls on him and he doesn't know the answer. He's the friend who makes you laugh in class.
+
+**Design note — けん and Yamakawa:** けん fills a similar emotional niche to Yamakawa — upbeat, friendly, always talking. But their relationship to Rikizo is different. Yamakawa is a town friend (outdoor, unstructured, food-centered). けん is a school friend (indoor, structured, socially-centered). The player will naturally compare them. In late N4, they meet each other, and the dynamic is explosive — two extroverts with completely different worlds discovering they have Rikizo in common.
+
+---
+
+#### リー — The One From Elsewhere
+
+リー is sitting quietly, reading a book. She looks up when Rikizo enters but doesn't immediately speak. She waits for すずき先生 to introduce her — she's formal that way. When she does speak, her Japanese is careful, precise, and slightly slower than the other students. Not because she's bad at it — because she's *attentive* to it. She treats Japanese as something to be appreciated, not just used.
+
+**すずき先生 introduces リー:**
+
+1. **すずき:** 「りきぞさん、こちらはリーさんです。中国から来ました。」 — "Rikizo, this is Lee. She came from China." *(中国から — from China. The first mention of another country in the game. 中国 and から together — a person from somewhere that isn't here. The world has had an outside since Day 5 (外), but the outside was just the yard, the town, the area beyond the house. Now the outside includes other countries. Other nations. Places with their own names and their own people.)*
+
+2. **リー:** 「はじめまして。リーです。中国人です。日本語を学んでいます。」 — "Nice to meet you. I'm Lee. I'm Chinese. I'm studying Japanese." *(中国人. 日本語を学んでいます — ている progressive, G8 reinforcement. リー identifies herself by nationality. She's 中国人. This is the first time any character has identified themselves by national origin. Mom is not "日本人" in conversation — she's just Mom. Dad doesn't say "I'm Japanese." The concept of nationality only becomes conversationally relevant when someone from a different nation is present. リー's existence makes nationality matter.)*
+
+3. **Rikizo:** 「日本語がじょうずですね！」 — "Your Japanese is good!" *(The standard compliment. じょうず = skillful. Rikizo gives the expected response. But the player should notice something: Rikizo has been speaking Japanese for 12 days without ever calling it 日本語. He didn't know the language had a name. Now that it does, he can compliment someone's ability in it. The vocabulary creates the capacity for cultural interaction.)*
+
+4. **リー:** 「ありがとうございます。日本語はおもしろいです。漢字はむずかしいですけど...」 — "Thank you. Japanese is interesting. But kanji is difficult..." *(おもしろい applied to the language itself. And 漢字はむずかしい — kanji is difficult. リー is a character who finds the same language the player is learning both interesting and hard. She is, in a very direct way, the player's mirror. She's studying the same thing. She struggles with the same things. The empathy is immediate and intentional.)*
+
+5. **すずき:** 「リーさんは毎日学んでいますよ。いい学生ですね。」 — "Lee studies every day. She's a good student." *(学ぶ — to learn. Active verb. すずき praises リー's work ethic. This contrasts sharply with how she'll describe けん in future interactions.)*
+
+**Design note — リー as 外国人:** リー is the game's first 外国人. Not as a political concept — as a narrative reality. She is from 中国. She is in 日本. She studies 日本語. The vocabulary for her existence — 外国, 外国人, 中国, 中国人, 日本語 — all arrived today. リー could not have been introduced on any earlier day because the words to describe her didn't exist. She materializes alongside the vocabulary that makes her describable. This is the ontological rule applied to identity: you can't be from another country until "other country" is a concept in the world.
+
+**Design note — リー's register:** リー speaks polite Japanese. Not because she's formal — because she's a learner. Learners of Japanese almost universally learn polite forms first and casual forms later (exactly like the player in this game). リー's polite register is a mirror of the player's own skill level. As the game progresses into N4 and リー grows more comfortable, she'll occasionally use casual forms — and each time she does, it'll feel like a breakthrough, both for her character and for the player.
+
+**Design note — リー and the meta:** リー is studying Japanese. The player is studying Japanese. リー finds kanji difficult. The player finds kanji difficult. リー uses polite forms because she learned them first. The player uses polite forms because they learned them first. The parallels are deliberate and unsubtle — but they're never *stated*. No character says "you're just like リー." The mirror works through experience, not exposition.
+
+---
+
+#### ミキ — The One Who Reads
+
+ミキ doesn't look up from her book when Rikizo enters. She's aware — she glances briefly — but she doesn't stop reading. She's the only character in the game whose default state is *doing something other than waiting for the player to interact with them*. Every other NPC stands, walks, or sits idle until the player approaches. ミキ reads.
+
+**ミキ introduction (4 lines):**
+
+1. **すずき:** 「ミキさん。」 — "Miki." *(すずき has to call her name to get her attention. This is a tiny detail but an important characterization choice: ミキ doesn't respond to ambient social cues. She responds to direct address.)*
+
+2. **ミキ:** 「...あ。はい。はじめまして。ミキです。」 — "...Oh. Yes. Nice to meet you. I'm Miki." *(The pause. The "oh." She was elsewhere — in the book. Now she's here. She's polite but brief. She doesn't volunteer information. She doesn't smile performatively. She gives exactly the amount of social interaction required and no more.)*
+
+3. **Rikizo:** 「本が好きですか？」 — "Do you like books?" *(すき — available since N5.7. 本 — new today. Rikizo asks the obvious question. It's a good question — it gives ミキ an opening.)*
+
+4. **ミキ:** 「本はおもしろいです。人より...おもしろいです。」 — "Books are interesting. More interesting than... people." *(She almost says something she shouldn't. The pause before おもしろい is her editing herself. She started to say 人よりおもしろい — "more interesting than people" — but caught herself and softened it to a separate sentence. The comparison grammar (より) isn't available yet (G15, N4.5+), so the sentence splits. Even if the grammar existed, ミキ would self-edit. She's honest but not rude. She just... prefers books.)*
+
+**Design note — ミキ's book:** ミキ is always reading. On Day 12, the book has no visible title (the game can't render written text yet — 書く/読む arrive tomorrow). From Day 13 on, ミキ's book titles become readable and rotate — each one is a real Japanese book at the appropriate level, and talking to ミキ about her book is a recurring interaction that scales with vocabulary. In N4, ミキ's reading interests lead her toward texts about the town's history, which feeds into the larger mystery. She's the game's intellectual thread — the character who discovers things through research rather than observation (ゆき) or social connection (けん).
+
+**Design note — ミキ vs ゆき:** Both are quiet female characters. Both observe things others don't. But their methods are completely different. ゆき notices through *feeling* — she senses that the flowers weren't there yesterday, that the rain changes something, that time works differently than it should. ミキ notices through *reading* — she finds inconsistencies in books, dates that don't add up, records that reference things before they existed. ゆき is intuitive. ミキ is analytical. In N4, they become reluctant allies in the investigation — each contributing evidence the other can't access.
+
+**Design note — the four-student class as a narrative unit:**
+
+| Student | Archetype | Register | Function | Future arc |
+|---|---|---|---|---|
+| りきぞ | Protagonist | Adaptive (polite default, casual with friends) | Player surrogate | Central to everything |
+| けん | The social one | Casual from Day 1 | Comic relief, friendship, casual register practice | Social network expander — knows everyone, introduces new NPCs |
+| リー | The learner | Polite (learner default) | Player mirror, cultural bridge, 外国 conceptualization | Grows in confidence, eventual casual speech breakthrough |
+| ミキ | The reader | Polite (formal personality) | Mystery thread, intellectual content, book references | Discovers historical inconsistencies, investigator role in N4 |
+
+---
