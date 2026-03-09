@@ -909,6 +909,65 @@ Mom has a brief send-off. She's supportive but doesn't leave the house.
 
 **Design note — Yamakawa and the Eternal Onigiri:** The onigiri gag works on three levels. **Level 1 (comedy):** A man holds a single onigiri for three days and it never changes. His sprite has it. His portrait has it. It's just part of him now. The player starts to wonder if this is just... what Yamakawa looks like. **Level 2 (ontological horror):** He CAN'T eat it. The verb doesn't exist. He is holding food in a world where consumption is undefined. The onigiri is Schrödinger's lunch — observed but never consumed because the concept of consuming doesn't exist in the world's vocabulary. **Level 3 (the punchline):** The instant 食べる exists (Day 7), Rikizo asks if he can have it. Yamakawa says no. And then eats it. Right there. In front of you. The onigiri that was a frozen visual constant for three days is consumed in seconds — not offscreen, not between days, but while you watch. The man who couldn't eat for three days eats the moment the verb arrives, and he doesn't share.
 
+### The Onigiri Quest — ◻ おにぎりを＿＿
+
+When Rikizo finishes his first conversation with Yamakawa, something happens. Yamakawa waves the onigiri casually — and a small piece breaks off and falls. Rikizo catches it. The piece enters inventory.
+
+> **Quest log update:** ◻ おにぎりを＿＿
+
+The second quest in the game. Same pattern as the water bottle: an item paired with an incomplete sentence. The verb is missing. What do you do with おにぎり? The word for it doesn't exist.
+
+**How the player receives it:**
+
+After line 6 of Yamakawa's first conversation, an additional beat:
+
+> **Yamakawa:** 「あ。」 *(A piece of onigiri crumbles off. Yamakawa doesn't notice — or doesn't care. The piece falls. Rikizo catches it instinctively.)*
+> **Rikizo:** 「おにぎり...」 *(He's holding a fragment of rice ball. It's not enough to be a meal. It's a morsel. A token. A piece of Yamakawa's eternal snack.)*
+
+**Quest log:** ◻ おにぎりを＿＿
+
+The player now has two incomplete quests:
+- ◻ 水を＿＿ (from Day 2 — still waiting for 飲む)
+- ◻ おにぎりを＿＿ (from Day 5 — waiting for 食べる)
+
+Both are nouns waiting for their verbs. The quest log is becoming a vocabulary gap list.
+
+**Days 5–6:** The onigiri fragment sits in inventory. Tapping it produces: 「おにぎりです。」 That's it. It's a piece of food. What you do with food has no name.
+
+**Day 7 (食べる arrives) — Phase 2: The Social Block:**
+
+When 食べる unlocks, the quest text fills in:
+
+> ◻ おにぎりを＿＿ → ◻ おにぎりを食べる
+
+The player can read the quest! They have the onigiri fragment in inventory! They try to eat it:
+
+> Rikizo: 「おにぎりを食べ—」
+> Yamakawa: 「あ！だめだめ！わたしのおにぎりですよ！」 — "Hey! No no no! That's MY onigiri!"
+
+Yamakawa appears. Somehow. Like Dad and the car, Yamakawa has a sixth sense for his food. The fragment was his. It's *always* been his. He snatches it back.
+
+> **Rikizo:** 「...」
+> **Quest log:** ◻ おにぎりを食べる *(Still incomplete. You had the verb. You had the food. Yamakawa said no.)*
+
+This is the escalation from the water quest: 水を飲む was blocked by vocabulary alone — once the verb existed, the quest completed. おにぎりを食べる is blocked by vocabulary AND then by a character. Having the words isn't enough. You also need your *own* onigiri.
+
+**Day 8 (買う arrives) — Phase 3: Resolution:**
+
+The player can now buy an onigiri at the コンビニ (150 yen). When they eat a *purchased* onigiri:
+
+> 「おにぎりを食べます。いただきます！...おいしいです！」
+
+> **Quest complete.** ✅ おにぎりを食べる
+
+The quest that took three days and two vocabulary unlocks to complete. The water bottle needed one verb. The onigiri needed a verb AND a second verb to acquire its own supply. The game teaches: vocabulary unlocks ability, but sometimes you need *multiple* words working together to accomplish a single goal. 食べる lets you eat. 買う lets you *have something to eat*.
+
+**Thematic parallel:**
+- Water quest: Blocked by missing verb → verb arrives → quest completes. (Linguistic obstacle only.)
+- Onigiri quest: Blocked by missing verb → verb arrives → blocked by NPC → second verb arrives → quest completes. (Linguistic obstacle + social obstacle + economic obstacle.)
+
+The onigiri quest is harder because the world is more complex now. Day 2's world had objects and nothing else. Day 5's world has objects, people, and ownership. Yamakawa's 「だめ！」 is the social version of the void — a barrier that requires a different kind of vocabulary to circumvent.
+
 **The いつも pattern:** Dad said いつも about the void on Day 2. Yamakawa says いつも about a store that appeared this morning. The word is becoming a recurring tell — whenever an NPC is confronted with something that clearly just materialized, their instinct is to say it's "always" been this way. It's not that they're lying. It's that for them, it genuinely HAS always been this way. Their memory rewrites itself to match the current state of the world. いつも is the sound of reality smoothing over its own seams.
 
 ### The コンビニ (A Shop You Can't Shop At)
@@ -1039,11 +1098,13 @@ This is a te-form request (来て). It serves as a gentle quest marker — go fi
 6. **The Empty Phone** — Less empty now! It has a message! And a contact! Progress. (Still no apps, no map, no signal explanation.)
 7. **いつも** — **Recurring tell.** When NPCs are confronted with something impossible, they say いつも — "always." Dad: the void is いつも. Yamakawa: the コンビニ is いつも. Their memories rewrite to match reality. It's not a lie — for them, it genuinely has always been this way. The word is the sound of the world smoothing over its seams. Players who notice the pattern get the creepiest experience; players who don't still get the general NPC obliviousness vibe.
 8. **Yamakawa's Eternal Onigiri** — **New gag, resolves Day 7.** Yamakawa's chibi sprite and conversation portrait both show him holding an onigiri from Day 5 onward. It's always there. Same onigiri. Never changes. Nobody can mention it because 食べる doesn't exist. On Day 7, 食べる arrives. Rikizo can finally ask about the onigiri. He asks to eat it. Yamakawa says no — it's his. Then eats it right there, mid-conversation, in front of Rikizo. Sprite changes from onigiri-in-hand to empty-hand during the dialogue. 「おいしかったですよ。」 Three days of visual constancy resolved in three seconds of onscreen cruelty.
+9. **The Onigiri Quest** — **NEW. ◻ おにぎりを＿＿.** Second quest in the game. Same blank-verb pattern as water. A fragment of Yamakawa's onigiri enters inventory. The verb (食べる) arrives Day 7 → text fills in → but Yamakawa blocks you (「だめ！わたしのおにぎり！」). Resolution requires 買う (Day 8) to buy your own. Three-day, two-verb quest. The game's thesis escalation: water needed one word. Onigiri needs two words and the social awareness to go around a stubborn friend.
 
 ### State Tracking (Day 5)
 
 **Flags settable:**
 - `met_yamakawa_day5` — Completing Yamakawa's first conversation. Gates Yamakawa as a recurring NPC + daily relationship tracking.
+- `received_onigiri_fragment` — Rikizo caught the onigiri fragment from Yamakawa. Quest ◻ おにぎりを＿＿ added to quest log.
 - `read_yamakawa_message_day5` — Reading the phone message. +1 curiosity (the phone generated a feature). If also `received_phone_day4`: +1 paranoia (the player might connect: empty phone → spontaneous message).
 - `visited_station_day5` — Reaching the station. +1 curiosity.
 - `examined_tracks_and_board_day5` — Examining both the tracks AND departure board on the same visit. +1 paranoia (noticing the station connects to nothing).
@@ -1324,7 +1385,8 @@ This is the first contact from すずき先生 (Suzuki-sensei), the school Japan
 6. **Family Possessions** — Cake = FINAL DAY. Gold = continues (demoted in Dad's heart). Car = **new** (Dad's most beloved). Tree = Rikizo's.
 7. **The Empty Phone** — Less empty! Email exists. Two contacts now.
 8. **Yamakawa's Eternal Onigiri** — DAY 2 OF 3. Tomorrow: 食べる arrives. The onigiri is still there. The verb for eating is not. One more day.
-9. **Mom's "Come Home"** — **Pattern crystallizing.** 「家に来てくださいね。」 Every day. Warm. Insistent. She never forgets to say it. She never varies the phrasing. It's a ritual. The player should start wondering why she's so consistent about this specific request.
+9. **The Onigiri Quest** — ◻ おにぎりを＿＿ persists. Day 2 of blank. Fragment in inventory: 「おにぎりです。」 That's all you can say.
+10. **Mom's "Come Home"** — **Pattern crystallizing.** 「家に来てくださいね。」 Every day. Warm. Insistent. She never forgets to say it. She never varies the phrasing. It's a ritual. The player should start wondering why she's so consistent about this specific request.
 
 ### State Tracking (Day 6)
 
@@ -1530,6 +1592,29 @@ Yamakawa is back at the コンビニ. Leaning against the wall. Same pose. Same 
 This is funnier than the offscreen consumption version because it's *personal*. Yamakawa doesn't eat the onigiri between days where nobody sees it. He eats it right in your face, after you asked for it, and then asks if YOU'VE eaten. The gag has a victim now — and it's Rikizo (and by extension, the player).
 
 The player, who has been watching this onigiri for three days, knowing it couldn't be eaten, knowing there was no verb for consumption — they finally get the verb and immediately discover that having the verb doesn't mean you get the food. Vocabulary unlocks the *ability to ask*, not the *guarantee of receiving*. This is actually a more honest thesis statement than "vocabulary unlocks the world." Sometimes vocabulary just lets you understand that you can't have something.
+
+### The Onigiri Quest — Phase 2 (Social Block)
+
+The quest text fills in today:
+
+> ◻ おにぎりを＿＿ → ◻ おにぎりを食べる
+
+The player has the onigiri fragment in inventory from Day 5. They have the verb. They try to eat it:
+
+> Rikizo: 「おにぎりを食べ—」
+
+**Yamakawa appears.** Like Dad and the car. Sixth sense for his food.
+
+> Yamakawa: 「あ！だめだめ！わたしのおにぎりですよ！」 — "Hey! No no no! That's MY onigiri!"
+
+He takes the fragment back. It leaves inventory. The quest remains incomplete:
+
+> ◻ おにぎりを食べる *(You can read it now. You just can't do it. Yamakawa's だめ is the social equivalent of a missing verb.)*
+
+**If the player tries again (anywhere):**
+> 「おにぎりがありません...」 — "I don't have an onigiri..." *(The fragment is gone. Yamakawa reclaimed it. The player needs a NEW onigiri — one that is unambiguously theirs. 買う arrives tomorrow.)*
+
+**Design note — the social block:** The water quest had one gate: vocabulary. The onigiri quest has two: vocabulary (食べる, Day 7) and economy (買う, Day 8). The player can now READ the quest (progress!) but can't COMPLETE it (frustration!). This one-day gap between readability and completability teaches that language alone isn't enough — you also need the means. Yamakawa is the embodiment of this lesson: he has food, you have words, and words without means equal nothing.
 
 ---
 
@@ -1741,7 +1826,8 @@ Rikizo agrees to go to the thing that starts next week. The thing that has no na
 7. **The Water Bottle / First Quest** — **RESOLVED.** ◻ 水を＿＿ → ✅ 水を飲む. The game's first quest, given on Day 2 as an incomplete sentence. The blank sits in the quest log for five days. On Day 7, the word fills in, the sentence completes, and you drink water. Full fanfare for... drinking water. The game's thesis statement: vocabulary completes sentences, sentences unlock the world. The bottle stays in inventory as a reusable comfort action.
 8. **The Empty Phone** — Email thread growing. Two contacts. Still no map, no apps. The phone is becoming useful in tiny increments.
 9. **Yamakawa's Eternal Onigiri** — **RESOLVED.** Rikizo asks. Yamakawa says no. Yamakawa eats it in front of him. おいしかったですよ. The three-day saga ends with Rikizo watching someone else eat the thing he's been staring at since Day 5. Yamakawa has entered the post-onigiri era. He is not sorry.
-10. **Mom's "Come Home"** — 「家に来てくださいね。」 Day 7. Every day. The pattern is now well-established enough that the player should notice it's not just flavor text — it's a persistent, unvarying request.
+10. **The Onigiri Quest** — **PHASE 2: SOCIAL BLOCK.** ◻ おにぎりを＿＿ → ◻ おにぎりを食べる. The text fills in (食べる exists!) but Yamakawa reclaims the fragment: 「だめ！わたしのおにぎり！」 Quest is readable but incomplete. Player needs to BUY their own onigiri. 買う = Day 8. One more day.
+11. **Mom's "Come Home"** — 「家に来てくださいね。」 Day 7. Every day. The pattern is now well-established enough that the player should notice it's not just flavor text — it's a persistent, unvarying request.
 11. **Mom's Eating Authority** — **NEW.** Mom ate the cake overnight. She ate the ENTIRE thing. She told you it was hers. She wasn't lying. But the speed and totality of her consumption — the moment eating became possible — establishes Mom as the supreme food authority. She made breakfast. She controls the kitchen. She decides what gets eaten and when. This dynamic will persist.
 12. **いただきます / ごちそうさまでした** — **NEW RITUAL.** From today onward, every meal begins and ends with these phrases. They are not optional. They are not flavor text. They are how eating works in this world. The player will learn them through repetition, like learning to say "please" and "thank you."
 
@@ -1840,6 +1926,24 @@ The 二千円 (2,000 yen) has been in Rikizo's wallet since the beginning. Rikiz
 
 > Mom: 「高いものは買わないでくださいね。」 — "Don't buy expensive things, okay?" *(買わないでください — negative te-form request. Mom's first shopping instruction. She uses 高い, one of today's new adjectives, as if the concept of "expensive" has always existed in this household.)*
 
+**Then, casually:**
+> Mom: 「あ、りきぞ。プレゼントを買ってきてください。お父さんのプレゼントです。」 — "Oh, Rikizo. Please go buy a present. It's a present for Dad."
+
+**Quest log update:** ◻ お母さんの買い物: プレゼントを買う
+
+The third quest. Unlike the first two (incomplete sentences waiting for verbs), this one is readable from the start — you know what to do. The challenge is *where*. Mom said プレゼント. The コンビニ doesn't sell プレゼント. The コンビニ sells おにぎり, 水, and ノート. Gift boxes are a デパート item. And the デパート... you can't go inside. 中 doesn't exist until Day 9.
+
+**If the player checks the コンビニ:**
+> No プレゼント. The shopkeeper doesn't sell gifts. The コンビニ is functional but limited.
+
+**If the player approaches the デパート:**
+> 「プレゼント...ここにありますか？」 — "A present... is it here?" *(Rikizo can see gift-looking boxes through the デパート windows. But the doors don't open. 中 doesn't exist. The present is behind glass in a store he can't enter.)*
+
+**If the player returns to Mom empty-handed:**
+> Mom: 「だいじょうぶですよ。明日でもいいです。」 — "It's alright. Tomorrow is fine too." *(Mom is patient. She knows somehow that the デパート will be accessible tomorrow. Or she's just being a kind parent. Either way, the quest persists.)*
+
+**Design note — the shopping quest:** This is the first quest that is fully readable from the moment it's given but *physically impossible* to complete on the day you receive it. The water quest was unreadable (missing verb). The onigiri quest was unreadable then socially blocked. Mom's quest is perfectly clear — buy a present — but the only store that sells presents can't be entered. The obstacle is spatial, not linguistic. The solution arrives tomorrow with 中 (Day 9). The quest teaches: sometimes you understand exactly what to do and still can't do it — because the world isn't ready yet.
+
 ---
 
 ### Dad — Unmoved by Commerce
@@ -1892,6 +1996,14 @@ The コンビニ becomes an interactive shop. When Rikizo approaches, a purchase
 This is the first player-initiated 食べる moment waiting to happen. The player has bought food. They can eat it from inventory:
 
 > 「おにぎりを食べます。いただきます！...おいしいです！」 — "I'll eat the onigiri. Itadakimasu! ...It's delicious!"
+
+**Quest complete.** ✅ おにぎりを食べる. The game's second quest, resolved. Three days and two vocabulary unlocks: 食べる let you read it, 買う let you do it. The fanfare plays. The quest that Yamakawa blocked with 「だめ！」 is conquered not by arguing with him, but by going around him. You didn't need HIS onigiri. You needed YOUR OWN.
+
+> 📋 Quest Log
+> ✅ 水を飲む (Day 2 → Day 7)
+> ✅ おにぎりを食べる (Day 5 → Day 8)
+
+Two quests. Both complete. Both followed the same pattern: incomplete sentence → verb fills in → complete. The onigiri quest added a social obstacle that the water quest didn't have. The next quest will add something new again.
 
 The player has now completed the full economic cycle for the first time: see item → want item → buy item → consume item. This cycle was impossible three days ago. Today it takes four taps.
 
@@ -2104,8 +2216,10 @@ The wallet is finally active. Purchases deduct from the total. There is no incom
 7. **The Water Bottle** — Still in inventory. Still reusable. Now somewhat redundant — you can buy water. But it's free and it's yours. The sentimental value of the first inventory item.
 8. **The Empty Phone** — Two contacts. Shopping texts from Yamakawa. Academic texts from すずき先生. The phone is slowly becoming useful.
 9. **Yamakawa's Onigiri Legacy** — Post-onigiri Yamakawa now *recommends* onigiri to the person he refused to share with. He has transcended selfishness into a pure, uncomplicated enthusiasm for rice balls that exists independently of any awareness of his own recent history.
-10. **Mom's "Come Home"** — 「家に来てくださいね。」 Day 8. Always.
-11. **Mom's Kitchen Authority** — Mom knew you were going shopping before you did. She gave spending advice (don't buy expensive things). She made breakfast. She is the household's central intelligence.
+10. **The Onigiri Quest** — **RESOLVED.** ✅ おにぎりを食べる. Three days, two verbs. The game's second quest and its first multi-gate quest. Water needed one word. Onigiri needed two words and the social awareness to go around Yamakawa.
+11. **Mom's Shopping Quest** — **NEW. ◻ お母さんの買い物: プレゼントを買う.** Mom asks Rikizo to buy a present for Dad. Fully readable from the start — but the デパート can't be entered (中 = Day 9). The quest sits for one day. First quest with a spatial obstacle instead of a linguistic one.
+12. **Mom's "Come Home"** — 「家に来てくださいね。」 Day 8. Always.
+13. **Mom's Kitchen Authority** — Mom knew you were going shopping before you did. She gave spending advice (don't buy expensive things). She made breakfast. She is the household's central intelligence.
 12. **いただきます / ごちそうさまでした** — Day 2 of the ritual. Becoming automatic.
 13. **The Station Master's まだ** — **NEW.** The only NPC who says "not yet" instead of "always." In a world of いつも, he is まだ. He is either the most honest or the most patient character in the game. He is waiting for something. He won't say what.
 
@@ -2322,7 +2436,37 @@ The デパート interior is the largest indoor space in the game so far. Multip
 > 「いらっしゃいませ。こちらにどうぞ。」 — "Welcome. This way, please." *(こちら. The polite direction word finds its natural habitat: a department store employee guiding customers. The コンビニ shopkeeper says いらっしゃいませ. The デパート shopkeeper says いらっしゃいませ AND こちらにどうぞ. More words = more formal = more expensive store.)*
 
 **If player tries to buy プレゼント:**
-> 千円 (1,000 yen). If the player has enough money: 「プレゼントを買いました！」 A gift box enters inventory. Who is it for? The game doesn't say. The player has a gift. They have no one to give it to (no gift-giving vocabulary/mechanic yet). The gift sits in inventory, waiting — like the notebook, like the water bottle was. Items arrive before their purpose.
+> 千円 (1,000 yen). If the player has enough money: 「プレゼントを買いました！」 A gift box enters inventory.
+
+**Mom's Shopping Quest — Resolution:**
+
+If the player has the active quest ◻ お母さんの買い物: プレゼントを買う (from Day 8), buying the プレゼント triggers a quest update:
+
+> **Quest log:** ◻ お母さんの買い物: プレゼントを買う → ◻ お母さんにプレゼントをあげる... *(wait — あげる [to give] isn't available yet. The quest updates to:)* ◻ お母さんの買い物: 家に来てください
+
+The quest becomes: go home. Bring the present to Mom. When the player returns home and talks to Mom:
+
+> **Mom:** 「あ！プレゼントを買いましたか？ありがとう、りきぞ！」 — "Oh! You bought the present? Thank you, Rikizo!"
+> **Rikizo:** 「お父さんのプレゼントです。」 — "It's Dad's present."
+> **Mom:** 「そうですね。後でお父さんにあげましょう。」 — "That's right. Let's give it to Dad later."
+
+**Quest complete.** ✅ お母さんの買い物. The present disappears from inventory. Mom takes it. The player receives 五百円 (500 yen) — Mom's first monetary reward.
+
+> 📋 Quest Log
+> ✅ 水を飲む (Day 2 → Day 7)
+> ✅ おにぎりを食べる (Day 5 → Day 8)
+> ✅ お母さんの買い物 (Day 8 → Day 9)
+
+Three quests. Each with a different obstacle: missing verb, social block + missing verb, spatial block. Each resolved by a different vocabulary unlock: 飲む, 買う, 中. The quest system is teaching the player that every barrier in this world is linguistic — and every solution is a new word.
+
+**The 500 yen reward:** This is the first time the player EARNS money. The 2,000 yen from Day 1 was a starting allowance. This 500 yen was *earned* by doing a task. Mom just created the first job in the game world. The economic system now has income, not just expenditure.
+
+**If player bought the プレゼント before the quest:** The game tracks inventory. If the player already bought a プレゼント during Day 8's デパート window-shopping (they couldn't enter, but if they somehow got one — they didn't), or during a Day 9 visit without checking the quest log, Mom recognizes it: 「もう買いましたか？すごいですね！」 ("You already bought it? Amazing!")
+
+**If the player doesn't have enough money:**
+> Mom: 「お金がないですか？はい、どうぞ。」 — "No money? Here you go." *(Mom gives Rikizo 千円 to cover the purchase. This only triggers if the wallet is under 1,000 yen. Mom is practical.)*
+
+**Design note — quest economy:** Mom's quest introduces two things: (a) quests can give monetary rewards, and (b) NPCs can fund quests if the player is broke. This prevents the soft-lock where a player who spent all 2,000 yen on onigiri can't complete the quest. The game never punishes exploration spending — Mom backstops the economy.
 
 > If not enough money: 「お金がありません...高いですね。」 — "No money... it's expensive."
 
@@ -2493,6 +2637,7 @@ Yamakawa has discovered interiority and wants to share the news. He sends this m
 12. **いただきます / ごちそうさまでした** — Day 3 of the ritual. Automatic.
 13. **The Station Master's まだ** — Continues. Now with だいじょうぶ. "Not yet. But it's alright." He still won't explain. He still isn't worried. He has a waiting room now — because the station has an interior. He sits in it. He waits.
 14. **The ノート** — Continues waiting. 書く = N5.13, not N5.9 as originally guessed. The notebook's wait just got longer. And すずき has now assigned a task that requires writing. The notebook is in inventory. The verb is four lessons away. The task cannot be completed. This is the fridge situation all over again, but slower.
+15. **Mom's Shopping Quest** — **RESOLVED.** ✅ お母さんの買い物. Player buys a プレゼント at the デパート (千円), brings it home. Mom gives 500 yen reward — the first earned income in the game. The quest that was spatially blocked on Day 8 (can't enter デパート) is resolved on Day 9 (中 exists). Each quest teaches a different lesson: water = vocabulary unlocks action, onigiri = vocabulary + social navigation, shopping = vocabulary + spatial access.
 
 ---
 
@@ -2503,6 +2648,7 @@ Yamakawa has discovered interiority and wants to share the news. He sends this m
 - `toilet_resolved` — Player has seen inside the toilet. (Dad may still block future access.)
 - `entered_konbini` — Player has gone inside the convenience store.
 - `entered_depaato` — Player has entered the department store.
+- `moms_shopping_complete` — Player bought the プレゼント and returned it to Mom. +500 yen reward.
 - `depaato_with_yamakawa` — Player went to the デパート with Yamakawa (accepted ましょう invitation).
 - `bought_present` — Player purchased a プレゼント at the デパート.
 - `entered_station_waiting_room` — Player went inside the station.
@@ -2726,6 +2872,28 @@ The player finds Yamakawa in his usual spot — inside the コンビニ, sitting
 
 **Yamakawa's cut-off word:** The moment where Yamakawa can't say 乗れない is the first time a character has been *interrupted by vocabulary limitations* mid-word. Previously, characters simply didn't attempt sentences they couldn't finish. They routed around missing vocabulary. Yamakawa, in his casual recklessness, tried to say something the world doesn't support yet. The word broke in his mouth. This is deeply, fundamentally wrong. Characters shouldn't know words that don't exist yet. Yamakawa almost said one. The game is glitching at the linguistic level.
 
+### Yamakawa's Appetite — Quest Seed
+
+After the hotel visit (or if the player talks to Yamakawa again later in the day), Yamakawa brings up food. Of course he does.
+
+> **Yamakawa:** 「りきぞ、コンビニのおにぎりはおいしいけど...もう毎日だよ。」 — "Rikizo, the convenience store onigiri is tasty, but... it's every day already."
+> **Rikizo:** 「ちがうものを食べたい？」 — "You want to eat something different?"
+> **Yamakawa:** 「うん！何か...新しいものがほしい！」 — "Yeah! Something... new!" *(新しい + もの + ほしい. Yamakawa wants new food. He has eaten onigiri every single day since Day 5. He wants variety. This is the most relatable thing he's ever said.)*
+
+**Quest log update:** ◻ やまかわのごはん: 新しい食べ物をさがす
+
+"Yamakawa's Meal: Find new food." The quest is vague — 新しい食べ物 (new food) could be anything. This is the first open-ended quest. The water quest and onigiri quest had specific solutions (drink water, eat onigiri). Mom's quest had a specific item (プレゼント). Yamakawa's quest says "find something new" without specifying what.
+
+**Why it can't complete yet:** The available food items are: おにぎり (コンビニ), パン (Mom's breakfast), and whatever's in the fridge (水, ジュース). None of these is "new" to Yamakawa — he's been in this world as long as Rikizo has. New food requires... new vocabulary. And new vocabulary arrives with new lessons.
+
+**How it will resolve (future days):** Each subsequent lesson that introduces food vocabulary (魚 on Day 11, and further food items in later lessons) creates a potential solution. The first time the player obtains a food item that isn't おにぎり, パン, or water and brings it to Yamakawa, the quest completes. The quest is a rolling reward for future vocabulary — every new food word is a potential quest solution.
+
+**If the player tries existing food:**
+> Yamakawa: 「おにぎり？...もう食べた。」 — "Onigiri? ...Already ate that." *(Past. Flat. Uninterested.)*
+> Yamakawa: 「パン？...いつも食べてるよ。」 — "Bread? ...Always eating that." *(He rejects both. He wants NOVELTY. The man who ate the same onigiri for three days straight now craves variety. Character growth — of a kind.)*
+
+**Design note — Yamakawa's Appetite as a rolling quest:** This quest is different from the previous three in a critical way: it doesn't have a single predetermined solution. It's a feed-forward hook — it makes future vocabulary personally meaningful. When 魚 arrives on Day 11, the player who has this quest thinks "fish! Yamakawa might want fish!" The vocabulary isn't just a lesson item — it's a quest solution. The quest turns future lessons into loot drops. This is the game's first quest that bridges across multiple days with an open-ended solution set.
+
 **paranoia +1 if the player interacts with Yamakawa again and asks about it:**
 > **Rikizo:** 「やまかわ、さっき...何を言った？」 — "Yamakawa, just now... what did you say?"
 > **Yamakawa:** 「え？何も言ってないよ。」 — "Huh? I didn't say anything." *(He doesn't remember. Of course he doesn't.)*
@@ -2872,6 +3040,7 @@ The tree is in front of the house, as always. The spatial tag from Day 9 persist
 15. **Weather Small Talk** — NEW. Every NPC can now discuss the weather. This is the most Japanese conversation topic possible. The game has unlocked small talk. 「いい天気ですね」 is the new universal greeting. This gag doesn't have a punchline — it's just accurate cultural simulation. Everyone talks about the weather because everyone can finally talk about the weather.
 16. **The Hotel Guest** — NEW. A man on vacation with no luggage and no origin. He came from "nearby." He is made of today's vocabulary. He might be the most distilled NPC in the game: a person who exists because the word for his situation (休み) exists. If the word for "where he's from" existed, he might have an answer.
 17. **Yamakawa's Broken Word** — NEW. The first time a character tried to say a word that doesn't exist yet. The sentence cut off. He doesn't remember. This is a new category of anomaly: linguistic glitch. Not a missing object or a void — a missing *word* that a character almost said. The game is breaking at the speech level now.
+18. **Yamakawa's Appetite** — **NEW QUEST. ◻ やまかわのごはん: 新しい食べ物をさがす.** Yamakawa is tired of onigiri every day and wants something new. First open-ended quest — no specific solution, just "find new food." Each future lesson that introduces food vocabulary creates a potential solution. The quest turns future vocab into loot drops.
 
 ---
 
@@ -2888,6 +3057,7 @@ The tree is in front of the house, as always. The spatial tag from Day 9 persist
 - `tv_turned_on` — Player turned on the TV (first toggle interaction).
 - `lamp_toggled` — Player toggled the desk lamp (on/off state mechanic established).
 - `ekichou_train_holiday` — Heard the station master say the train is "on holiday."
+- `yamakawa_appetite_quest` — Yamakawa asked for new food. Quest ◻ やまかわのごはん added to quest log.
 
 **Economy:**
 - Wallet: unchanged from Day 9 (no new purchases available today unless they visit existing shops).
@@ -3212,6 +3382,39 @@ The station in the rain is the most atmospheric location in the game today. Rain
 > **駅長:** 「雨が止んで... 空がきれいになったら...」 — "When the rain stops... when the sky becomes beautiful..." *(He trails off. He was about to say something conditional — "when X happens, then Y" — but the grammar for conditionals (～たら) isn't available until N4.25. The station master's sentence breaks the same way Yamakawa's did on Day 10. He can't complete the thought because the grammar doesn't exist yet. But unlike Yamakawa, the station master seems aware that he couldn't finish. He pauses. He looks at the rain. He says nothing more.)*
 > **paranoia +1** if the player noticed Yamakawa's broken word on Day 10 (`yamakawa_broken_word` flag set) — the pattern repeats.
 
+### What Yuki Remembers — Quest Seed
+
+If the player has met ゆき, followed her to the river, AND witnessed her flower question (paranoia ≥ 6 path), a quiet quest activates at the end of the day. It doesn't trigger from a conversation — it triggers from ゆき's phone message.
+
+**Message from ゆき (evening):**
+> 「今日は空がきれいでした。でも...花は前からありましたか？わたしは...わからない。また明日。」 — "The sky was beautiful today. But... were the flowers there before? I... don't know. See you tomorrow."
+
+She asks the question again. In writing this time. Not to Rikizo face-to-face but in a message, alone, to herself as much as to him. She doesn't know if the flowers were there before. She's the only character who has ever expressed uncertainty about the world's history.
+
+**Quest log update:** ◻ ゆきのきおく: ゆきの話を聞く
+
+"Yuki's Memory: Listen to Yuki's story." The quest is passive — it doesn't ask the player to find an item or complete an action. It asks them to *listen*. To pay attention to ゆき over time. To talk to her each day and hear what she says. The quest advances not through mechanical steps but through relationship — higher relationship with ゆき unlocks more of her observations, which become more pointed, which eventually lead to the truth she's circling.
+
+**Why it can't complete in N5:** Yuki's memories require vocabulary and grammar that doesn't exist yet. She needs to describe things she half-remembers — scenes from another timeline, fragments of knowledge that shouldn't exist. The conditional forms (～たら, ～ば), the ability to say "if I remember correctly" (確か), the vocabulary for dreams (夢, N4) and memories (思い出, N4) — none of these exist in N5. ゆき is trying to articulate something the language can't yet express. Her quest is blocked by grammar, not by a missing item. This is thematically perfect: she's the only character aware that the world has limits, and her quest is limited by those same limits.
+
+**Quest progression (across future days):** Each day ゆき appears, talking to her advances the quest. At relationship 4, she shares small observations ("the river was quiet yesterday"). At relationship 6, she asks questions ("do you remember when the road appeared?"). At relationship 8, she describes fragments ("I had a dream about a place with no sky..."). The quest formally completes in N4, when the grammar and vocabulary exist for her to articulate what she remembers. The payoff is the game's deepest lore revelation — but the seed is planted here, on a rainy day, with a girl looking at flowers and asking when they appeared.
+
+**Design note — quest type taxonomy:** By Day 11, the quest log has taught the player four distinct quest types:
+
+| Quest | Type | Obstacle | Resolution |
+|---|---|---|---|
+| ◻ 水を飲む | Vocab-gated (verb) | Missing verb (飲む) | Learn the word |
+| ◻ おにぎりを食べる | Vocab + social | Missing verb (食べる) + NPC block (Yamakawa) | Learn the word + buy your own (買う) |
+| ◻ お母さんの買い物 | Spatial | Can't enter building (中) | Learn the word for inside |
+| ◻ やまかわのごはん | Open-ended | No specific item — needs "new food" | Future vocabulary = future solutions |
+| ◻ ゆきのきおく | Relationship | Needs time + trust + grammar that doesn't exist yet | Listen. Come back. Wait for the language to catch up with the story. |
+
+Each quest type teaches the player something different about how vocabulary, grammar, and the game world interact. The complexity escalates: single word → two words + social → spatial → open-ended → relationship + grammar. By the end of N5, the player has internalized the game's core thesis: everything in this world — including your ability to understand it — is bounded by language.
+
+**Design note — ゆきのきおく as long-term engagement:** This is the game's first "main story" quest seed. The water and onigiri quests were tutorials. Mom's quest was a fetch quest. Yamakawa's is a rolling side quest. ゆき's quest is *the* narrative quest — the one that connects to the central mystery of the game. It won't complete for dozens of game-days. But it starts here, with one quiet question about flowers.
+
+---
+
 **Design note — linguistic fractures:** Day 10 introduced the concept of characters being interrupted by missing vocabulary (Yamakawa's 乗れな...). Day 11 escalates it: the station master is interrupted by missing *grammar*. The sentence structure he needs — conditional ～たら — doesn't exist yet. This is subtler and more disturbing than a missing word. A missing word is a gap in the dictionary. Missing grammar is a gap in the ability to *think*. The station master's thoughts are bounded by the student's progress. His mind can go as far as the grammar lesson has reached, and no further.
 
 ---
@@ -3270,6 +3473,16 @@ The distinction matters: ～そうです introduces subjectivity. The speaker is
 16. **Yamakawa's Broken Word** — Not repeated. But the station master had a similar linguistic fracture today (grammar-level, not vocabulary-level). The pattern is escalating.
 17. **花火 Anticipation** — NEW. Fireworks this week. Every NPC knows about it. Yamakawa is counting down. ゆき is thinking about the sky. The game has its first forward-looking communal event.
 18. **ゆき's Questions** — NEW. She asked when the flowers appeared. She's the first NPC to question the timeline of the world. She didn't push. She accepted Rikizo's answer. But she asked. She's the crack in the wall.
+19. **Yamakawa's Appetite** — ◻ やまかわのごはん persists from Day 10. Yamakawa wants new food. 魚 arrived today — if the player can obtain fish (future mechanic: fishing or buying), this quest could resolve. But no fish-purchasing or fishing mechanic exists yet. The quest waits.
+20. **What Yuki Remembers** — **NEW QUEST (conditional). ◻ ゆきのきおく: ゆきの話を聞く.** If paranoia ≥ 6 and ゆき asked about the flowers, her evening message triggers the quest. The game's first narrative quest — passive, relationship-based, completing in N4. The quest log now carries a mystery alongside its fetch quests.
+
+**Quest log state (end of Day 11):**
+> 📋 Quest Log
+> ✅ 水を飲む (Day 2 → Day 7)
+> ✅ おにぎりを食べる (Day 5 → Day 8)
+> ✅ お母さんの買い物 (Day 8 → Day 9)
+> ◻ やまかわのごはん: 新しい食べ物をさがす (Day 10 → ???)
+> ◻ ゆきのきおく: ゆきの話を聞く (Day 11 → N4) *(conditional — paranoia ≥ 6 only)*
 
 ---
 
@@ -3286,6 +3499,7 @@ The distinction matters: ～そうです introduces subjectivity. The speaker is
 - `ekichou_grammar_break` — Station master's sentence broke mid-grammar (conditional ～たら). +1 paranoia if yamakawa_broken_word was set.
 - `hanabi_announced` — Player heard about the fireworks event.
 - `yuki_phone_added` — ゆき added to phone contacts.
+- `yuki_memory_quest` — ゆき's evening message triggered the quest ◻ ゆきのきおく (requires `yuki_flower_question` flag). The game's first narrative quest.
 
 **Economy:**
 - Wallet: unchanged. No new purchasable items.
