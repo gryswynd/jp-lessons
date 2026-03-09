@@ -1787,3 +1787,376 @@ Rikizo agrees to go to the thing that starts next week. The thing that has no na
 4. **Yamakawa's location pattern:** Day 5 = コンビニ. Day 6 = river. Day 7 = back at コンビニ. Should he alternate, or settle? Recommendation: Yamakawa settles back at the コンビニ as his default spot. The Day 6 river visit was a special event — he explored the new geography. Now he's back to his routine. Future days may move him again when new locations appear, but the コンビニ wall is his home base. He has an anchor. He always comes back.
 
 ---
+
+## Day 8 — "Commerce" (unlocked by N5.8: Shopping & Adjectives)
+
+### Lesson Kanji & Key Vocab Available
+
+**New kanji (6):** 古、新、買、長、高、安
+
+**Cumulative kanji (58):** All N5.1–N5.7 + above.
+
+**New vocab highlights:**
+- Action: 買う (かう, to buy) — THE VERB. Three days of window-shopping end today.
+- Adjectives: 新しい (あたらしい, new), 古い (ふるい, old), 高い (たかい, expensive/tall), 安い (やすい, cheap), 長い (ながい, long)
+- Feelings: ほしい (wanted/desired), すごい (amazing/awesome)
+- Time: もう (already), まだ (still/not yet), あまり (not very — with negatives)
+- Places: デパート (department store)
+- People: 駅長 (えきちょう, station master)
+- Things: プレゼント (present/gift)
+- Food: おいしい (delicious — formally introduced; used by Yamakawa on Day 7)
+
+**Grammar:** G8 unlocks after this lesson — ている (progressive), たいです (desire), ましょう (let's). These forms will be available from Day 9 onward. For Day 8 content, the available grammar is the same as Days 5–7: full polite verb paradigm, te-form, plain_past. G7 reinforcement continues.
+
+**New this day:** COMMERCE EXISTS. 買う enters the world and transforms every shopping venue from a display case into a functional store. The コンビニ that has been a window display for three days becomes a place where you exchange money for goods. The vending machine at the station turns on. And a new location — the デパート — appears. Rikizo can finally spend the 2,000 yen he's been carrying since Day 1. Simultaneously, adjectives for evaluation arrive: things aren't just objects anymore. They're 高い or 安い, 新しい or 古い. The world gains *judgment*.
+
+---
+
+### The Day Money Learned to Move
+
+Day 8 is the economic awakening. For three days, Rikizo has stood at shop windows with money in his pocket and no way to spend it. The shopkeeper has said いらっしゃいませ to an audience that could only stare. Items have had price tags that functioned as decoration — numbers attached to objects with no mechanism for exchange.
+
+Today, 買う exists. And with it, the entire concept of commerce materializes. Money moves. Items change hands. Prices become real — not because the numbers changed, but because the *act of purchasing* now exists to make them meaningful.
+
+But Day 8 isn't just about buying. It's about *evaluating*. Five adjectives arrive simultaneously: 高い, 安い, 新しい, 古い, 長い. For the first time, Rikizo can look at something and have an opinion beyond 「いいです」 or 「きれいです」. The world gains texture. Things have qualities. And qualities have prices.
+
+---
+
+### Morning — The Wallet Wakes Up
+
+Rikizo wakes up. The calendar reads 「五月四日」(May 4th, Sunday).
+
+Breakfast continues — the eating ritual from Day 7 is now established. Mom makes food. いただきます. Eat. ごちそうさまでした. This is now routine. (The specific food can vary: パン, or rice, or whatever Mom prepares. The ritual is the constant.)
+
+**Mom's new line after breakfast:**
+> 「りきぞ、買い物に行きますか？」 — "Rikizo, are you going shopping?"
+
+買い物 (かいもの, shopping). Mom says the word casually, as if shopping has always been a thing people do. As if there's always been somewhere to shop. As if the verb that makes shopping possible didn't materialize this morning.
+
+**If player says yes:**
+> Mom: 「お金はありますか？」 — "Do you have money?"
+
+The 二千円 (2,000 yen) has been in Rikizo's wallet since the beginning. Rikizo nods. Mom nods. The transaction tutorial has begun, and it started in the kitchen.
+
+> Mom: 「高いものは買わないでくださいね。」 — "Don't buy expensive things, okay?" *(買わないでください — negative te-form request. Mom's first shopping instruction. She uses 高い, one of today's new adjectives, as if the concept of "expensive" has always existed in this household.)*
+
+---
+
+### Dad — Unmoved by Commerce
+
+Dad is in his chair. The world has gained an entire economic system overnight. Dad does not care.
+
+**If player talks to Dad:**
+> 「...車はいいですよ。新しい車です。」 — "...The car is good. It's a new car."
+
+Dad has adopted 新しい instantly. His car is 新しい. It has always been 新しい. The adjective exists to describe his car and nothing else. He does not mention shopping, money, or the existence of stores. These things are beneath the car.
+
+**If player touches the car:**
+> Same as always. Dad teleports. 「だめ！わたしの車です。」 But now add: 「新しいです！」 — "It's NEW!" *(The adjective gives Dad a new dimension of protectiveness. It's not just his car. It's his NEW car. Touch it and you'll scratch the newness off.)*
+
+**Design note:** Dad's instant adoption of 新しい for his car — which appeared on Day 6 and is therefore two days old — is another いつも-tier reality edit. The car is new because 新しい exists. Not new-as-in-recently-acquired. New-as-in-the-adjective-new-applies-to-it. In Dad's reality, the car has always been new. The adjective doesn't describe a temporal property. It describes an inherent quality.
+
+---
+
+### The コンビニ — OPEN FOR BUSINESS
+
+**The three-day embargo ends.**
+
+When Rikizo arrives at the コンビニ, everything looks the same. Yamakawa is leaning against the wall (empty-handed now, post-onigiri). The shopkeeper is behind the window. The items are on display with their price tags.
+
+But today, when Rikizo approaches the window:
+
+> Shopkeeper: 「いらっしゃいませ！何がほしいですか？」 — "Welcome! What do you want?"
+
+何がほしいですか. *What do you want.* For three days, the shopkeeper has only been able to greet. Today she can ask. And Rikizo can answer.
+
+**THE FIRST PURCHASE IN THE GAME.**
+
+The コンビニ becomes an interactive shop. When Rikizo approaches, a purchase UI appears: the window display items are now selectable. Each item shows its name and price.
+
+| Item | Price | New description |
+|---|---|---|
+| おにぎり | 百五十円 (150¥) | 「おにぎりです。安いですね。」 — "An onigiri. It's cheap." |
+| 水 (みず) | 百円 (100¥) | 「水です。もうあります。」 — "Water. I already have some." *(Rikizo has the bottle from Day 2.)* |
+| ノート | 三百円 (300¥) | 「ノートです。新しいです。」 — "A notebook. It's new." |
+
+**When the player selects an item:**
+1. Shopkeeper: 「はい、どうぞ。」 — "Here you go."
+2. Money deducts from wallet. Sound effect: coin clink.
+3. Item enters inventory.
+4. Shopkeeper: 「ありがとうございます！また来てくださいね。」 — "Thank you! Please come again."
+
+**If player buys the おにぎり (expected first purchase):**
+> 「おにぎりを買いました！」 — "I bought an onigiri!"
+
+This is the first player-initiated 食べる moment waiting to happen. The player has bought food. They can eat it from inventory:
+
+> 「おにぎりを食べます。いただきます！...おいしいです！」 — "I'll eat the onigiri. Itadakimasu! ...It's delicious!"
+
+The player has now completed the full economic cycle for the first time: see item → want item → buy item → consume item. This cycle was impossible three days ago. Today it takes four taps.
+
+**If player tries to buy everything:**
+> The wallet updates after each purchase. 二千円 is a lot for コンビニ prices. The player can buy multiples. There's no purchase limit — but the wallet will eventually empty. The game does not replenish money automatically. (How Rikizo earns money is a future system. For now, the 2,000 yen is finite.)
+
+**If player checks wallet after shopping:**
+> The wallet shows the remaining balance. This is the first time the number has changed from 二千円. Money is real now.
+
+**Design note — the first purchase:** The コンビニ is deliberately the *first* place the player can shop. Not the デパート (which is bigger and more intimidating). Not a vending machine (which is impersonal). The コンビニ — a small, familiar window where you've been standing for three days — is where commerce begins. The shopkeeper who has greeted you every day finally gets to do her job. The items you've memorized through the glass finally cross the counter. The first purchase should feel like a relief, not a tutorial.
+
+---
+
+### The おにぎり Moment
+
+The player's first purchased おにぎり deserves special attention. This is the food that Yamakawa ate in front of Rikizo yesterday. The one Rikizo asked for and was denied. And now — through the miraculous arrival of 買う — Rikizo can get his own.
+
+**If Rikizo eats the purchased おにぎり near Yamakawa:**
+> Yamakawa: 「お、おにぎりですか！いいですね。」 — "Oh, an onigiri! Nice." *(No acknowledgment. No guilt. No awareness that yesterday he ate one in front of Rikizo after refusing to share. Yamakawa lives in the eternal present.)*
+
+**If Rikizo eats it anywhere else:**
+> 「おいしいです！やまかわのおにぎりと...おなじですか？」 — "Delicious! Same as Yamakawa's...?" *(Rikizo wonders if it tastes the same as the one he never got to try. He'll never know. Yamakawa said おいしかった. Rikizo says おいしい. They have the same word but different experiences.)*
+
+---
+
+### The 駅 — The Station Master Appears
+
+The station has been empty and haunting since Day 5. Tracks to nowhere. A departure board with no departures. A bench. Silence.
+
+Today, the station has a person.
+
+**The 駅長 (station master)** stands on the platform. He's in uniform. He's official. He's the first NPC in the game who has a *title* instead of just a name. He is not やまかわ or Mom or Dad. He is 駅長 — a function, a role, a piece of institutional infrastructure given human form.
+
+**First interaction (4 lines):**
+1. **駅長:** 「いらっしゃいませ。」 — "Welcome." *(Same greeting as the shopkeeper. The station is a service venue. The station master is staff. But his いらっしゃいませ is quieter, more formal. He's welcoming you to a station that goes nowhere.)*
+2. **Rikizo:** 「駅長ですか？」 — "Are you the station master?"
+3. **駅長:** 「はい。この駅は古い駅ですよ。」 — "Yes. This is an old station." *(古い. The station is OLD. The station that materialized on Day 5 — four days ago — is, in the station master's reality, old. It has history. It has age. It has been here long enough to be 古い. He says this with pride, the way someone says "this is a historic building." The adjective gives the station a past it does not have.)*
+4. **駅長:** 「長い道ですから。」 — "It's a long road, you see." *(長い. The road — which the player has walked end to end in seconds — is long. The station master's geography doesn't match the player's geography. His road is longer. His station is older. His world has more history. NPCs experience a denser, richer version of the same terrain.)*
+
+**If player examines the departure board:**
+> Still empty. 「何もないです。」 But now the station master adds: 「まだです。」 — "Not yet." *(まだ. Not yet. Not "nothing" — "not yet." This is the first time an NPC has acknowledged that something WILL come. The departure board isn't empty forever. It's empty for now. Trains are coming. When? まだです. Not yet.)*
+
+**If player examines the vending machine:**
+> It works now. 買う exists. The vending machine has two items:
+
+| Item | Price |
+|---|---|
+| 水 | 百円 (100¥) |
+| ジュース | 百二十円 (120¥) |
+
+Vending machine purchases are simpler than the コンビニ — no dialogue, just select → coin sound → item dispensed. A small functional moment. The machine that was dead since Day 5 hums to life.
+
+**If player sits on the bench:**
+> 「いい駅ですね。」 — Same as before. But if the station master is nearby: 「古い駅ですが、いい駅です。」 — "It's an old station, but it's a good station." *(Rikizo has absorbed the station master's assessment. The station is old now, in Rikizo's mind too. The adjective is contagious.)*
+
+**Repeatable line (station master):**
+> 「まだですよ。」 — "Not yet." *(He says this about everything. The train? まだ. The schedule? まだ. Where does the track go? まだ. He is a man whose entire professional existence is organized around something that hasn't happened yet. He is patient. He has been patient, apparently, for a very long time. The station is old, after all.)*
+
+**Design note — the station master's "not yet":** まだ is one of the most important words introduced this lesson, and the station master is its avatar. Everything about the station is まだ — not yet. The train isn't here *yet*. The departure board is empty *for now*. The tracks go somewhere *eventually*. In a game where new things materialize with each lesson, the station master is the first NPC who explicitly acknowledges that the world is incomplete and that completion is coming. Every other NPC treats the current state as eternal (いつも). The station master treats it as temporary (まだ). He is either the most honest character in the game or the most deluded — and the player can't tell which.
+
+---
+
+### The デパート — A Building Too Big for Its Vocabulary
+
+A new building appears in the town: the デパート (department store). It's visibly larger than the コンビニ. Multiple floors implied by the exterior. Glass windows. A more urban feel — this is a real store, not a window counter.
+
+**But there's a problem.** The デパート exists as a building, but Rikizo cannot go inside. 中 (inside) doesn't exist until Day 9. The department store is the コンビニ situation reversed: instead of having items visible but unpurchasable, the デパート has a door but no concept of entering.
+
+**If player approaches the デパート:**
+> 「デパートです。大きいですね！」 — "A department store. It's big!" *(大きい from Day 7. The size adjective finds its most appropriate target yet.)*
+
+**If player tries to enter:**
+> 「...」 *(Nothing happens. The door exists. Rikizo stands in front of it. There is no interaction prompt. He cannot go in. He doesn't try. The concept of going inside a building doesn't exist. He stands outside a department store the way he stands outside the world — looking at something that should be accessible but isn't.)*
+
+**If player examines the windows:**
+> 「...高いですか？」 — "...Expensive?" *(Rikizo can see items through the windows. They look nicer than the コンビニ's stock. He suspects 高い. He's right — デパート items will be more expensive. But he can't confirm because he can't go inside.)*
+
+**Design note — the デパート as vocabulary teaser:** The デパート serves the same function on Day 8 that the コンビニ served on Day 5: it introduces a location that vocabulary hasn't fully enabled yet. The player can shop at the コンビニ (買う works there) but not at the デパート (中 is needed). This creates the next "vocabulary gate" — the player knows that going inside is the missing piece, and they may even guess that a word for "inside" or "enter" is coming. The デパート is bigger and has better stuff. The player wants in. The word arrives tomorrow.
+
+---
+
+### Yamakawa — Shopping Companion
+
+Yamakawa is at the コンビニ. Empty-handed. Post-onigiri era. But today he has opinions.
+
+**If player talks to Yamakawa (4 lines):**
+1. **Yamakawa:** 「りきぞ！買い物ですか？」 — "Rikizo! Shopping?"
+2. **Rikizo:** 「はい！」 — "Yes!"
+3. **Yamakawa:** 「いいですね。おにぎりは安いですよ。」 — "Nice. The onigiri is cheap." *(安い. He recommends the onigiri. The item he refused to share yesterday. He recommends it to the person he refused to share it with. He sees no contradiction. He is helping.)*
+4. **Yamakawa:** 「ジュースもいいですよ。」 — "Juice is good too." *(A suggestion. The first NPC shopping recommendation in the game.)*
+
+**If player buys an onigiri and shows Yamakawa (eats it near him):**
+> Yamakawa: 「お、おにぎりですか！いいですね。」 *(See above. Zero memory. Zero guilt. Yamakawa is sunshine and amnesia.)*
+
+**If player asks about the デパート:**
+> Yamakawa: 「デパートですか？大きいですね。」 — "The department store? It's big." *(Same assessment as Rikizo. Nobody can go inside. Nobody mentions this as a problem. Going inside is not a concept.)*
+
+**Repeatable line:**
+> 「りきぞ、また来ましたか！コンビニはいいですよ。」 — "Rikizo, you came again! The convenience store is great." *(His loyalty to the コンビニ is unwavering. There is a department store now. Yamakawa does not care. He has his wall. He has his spot. He does not need more.)*
+
+---
+
+### The Adjective Revolution (World Exploration)
+
+Five new adjectives change how Rikizo describes the world. Every existing object can now be evaluated:
+
+**At home:**
+- Tree-san: 「大きい木ですね。古いですか？...古い木です。」 — "Big tree. Old? ...An old tree." *(Tree-san gains a second adjective. First it was 大きい. Now it's 古い. The tree has history — or at least, the adjective that implies history.)*
+- Dad's car: 「新しい車です。」 — "A new car." *(Dad agrees vigorously.)*
+- The fridge: 「古いですか？新しいですか？...わかりません。」 — "Old? New? ...I don't know." *(The fridge resists classification. It has no age because it has no inside. It's just a door.)*
+
+**In town:**
+- The road: 「長い道ですね。」 — "A long road." *(長い finds its first outdoor use.)*
+- The river: 「長い川ですね。」 — "A long river." *(Same adjective, different noun. The world is becoming measurable.)*
+- The mountains: 「高い山ですね！すごいです！」 — "Tall mountains! Amazing!" *(高い = tall AND expensive. Here it's tall. すごい finds its natural habitat — looking at something impressive. The mountains have been scenery since Day 6. Today they're すごい.)*
+
+**At the station:**
+- The tracks: 「長い...ですね。」 — "Long..." *(Trailing off. The tracks are long. They go into the void. Or into the distance. Or both.)*
+- The vending machine: 「安いです。」 — "It's cheap." *(100¥ water. Rikizo notices prices now.)*
+
+**Design note — adjective distribution:** The five adjectives aren't random. They form natural pairs: 新しい/古い (new/old), 高い/安い (expensive/cheap or tall/short), and 長い on its own (long — 短い "short" comes later). The pairs create *comparison*, even before the grammar for comparison (より, N4.5) exists. The player evaluates objects by binary: is this 高い or 安い? 新しい or 古い? The world becomes a place with qualities, not just labels.
+
+---
+
+### The Phone — Yamakawa's Shopping Tips
+
+**Message from やまかわ:**
+> 「コンビニで買い物！おにぎりは安いです。おいしいですよ！」 — "Shopping at the convenience store! The onigiri is cheap. It's delicious!"
+
+Yamakawa is texting about onigiri again. He has moved on. He has fully moved on. He is recommending the food he ate in front of you to you, via text, as if sharing a life hack. He is impossible.
+
+**If player responds:**
+> 「もう買いました。」 — "Already bought one."
+
+もう. Already. The first time Rikizo uses this adverb in conversation. It carries the weight of three days of waiting.
+
+**Email from すずき先生:**
+> 「新しい本がありますよ。来週、見てくださいね。」 — "There are new books. Please look at them next week."
+
+The unnamed event next week is slowly gaining detail. First it was just a place to go. Now there are new books there. This is either a school, a bookstore, or a library. すずき先生 is building anticipation through vocabulary drips.
+
+---
+
+### Economy Update
+
+**Starting balance:** 二千円 (2,000 yen)
+
+The wallet is finally active. Purchases deduct from the total. There is no income source yet — 仕事 (work/job) vocabulary doesn't appear until N4.
+
+**Price reference (all purchasable items):**
+
+| Location | Item | Price |
+|---|---|---|
+| コンビニ | おにぎり | 150¥ |
+| コンビニ | 水 | 100¥ |
+| コンビニ | ノート | 300¥ |
+| 駅 vending | 水 | 100¥ |
+| 駅 vending | ジュース | 120¥ |
+
+**If the player spends everything:** The wallet shows ゼロ (zero) or 〇円. Rikizo can no longer buy anything. This creates a mild soft-lock of the economy — no income means no recovery. The game should acknowledge this:
+
+> 「お金がありません。」 — "I have no money."
+
+**Design note — finite money:** The 2,000 yen is deliberately finite and non-renewable for now. This teaches resource management organically. The player who buys 13 onigiri (150 × 13 = 1,950) will be nearly broke. The player who buys one of each (150 + 100 + 300 + 100 + 120 = 770) keeps 1,230 yen for future shopping. There's no wrong choice — the game won't hard-lock — but the player's wallet becomes a record of their priorities. Future money sources (allowance, found coins, helping NPCs) will replenish the economy, but not until later.
+
+---
+
+### ほしい — The Emotion of Wanting
+
+ほしい (wanted/desired) is not 買う. 買う is the action. ほしい is the feeling. And the game uses both — sometimes together, sometimes apart.
+
+**Objects you can buy but might not want:**
+> コンビニ水: 「もうあります。ほしくないです。」 — "I already have some. I don't want it."
+
+**Objects you want but can't buy:**
+> デパート items (visible through window): 「ほしいです...」 — "I want it..." *(Trailing off. You want it. You can see it. You can't go inside. ほしい without 買う is longing.)*
+
+**Objects you can't even see:**
+> Fridge contents: 「何がありますか？...ほしいです。」 — "What's in there? ...I want it." *(Rikizo wants whatever is in the fridge. He doesn't know what it is. He wants it anyway. 中 = Day 9.)*
+
+**Design note — ほしい vs 買う:** The distinction between wanting and buying is pedagogically important and narratively rich. ほしい is the softer, more emotional word — students often confuse it with たい (which arrives via G8 after this lesson). The game separates them temporally: ほしい is available now; たいです arrives when G8 unlocks after this lesson. By the time students learn たいです (want to DO something), they already understand ほしい (want to HAVE something). The game teaches the distinction through experience, not explanation.
+
+---
+
+### Story Beats
+
+| Moment | What Happens | What Rikizo Thinks | What the Player Should Feel |
+|---|---|---|---|
+| Mom says 買い物 | Shopping exists. Mom mentions it like it's always existed. | Ready to go | After three days of staring at windows, YES. FINALLY. Shopping! |
+| Dad says 新しい車 | Dad instantly claims the adjective for his car | 「新しいですね。」 | Of course. The car got an adjective before anything else. |
+| First コンビニ purchase | Select item → pay → item enters inventory. Money leaves wallet. | 「買いました！」 | *Satisfaction.* Three days of waiting. One click. The embargo is over. |
+| Buying the おにぎり | The food Yamakawa refused to share — now purchasable | 「おいしいです！」 | Sweet revenge. Not really revenge. But *something*. You have your own onigiri now. |
+| Eating near Yamakawa | Yamakawa says "nice!" about you eating the thing he denied you | Slight frustration? | He doesn't remember. He genuinely doesn't remember. Move on. |
+| Station master says 古い | The 4-day-old station is "old" | 「古いですか？」 | Another いつも-tier delusion. But... kinder? The station master seems to love his station's imaginary history. |
+| Station master says まだ | "Not yet." The departure board is empty but temporary. | Notices the difference | *Wait.* Every other NPC says いつも ("always"). This one says まだ ("not yet"). He knows something is coming. He *knows* the world isn't finished. |
+| The デパート | A building you can see but can't enter | 「大きいですね！...」 | The new vocabulary gate. The コンビニ is solved. The デパート is the next wall. You KNOW a word for "inside" must be coming. |
+| ほしいです at the デパート | Wanting something you can see but can't reach | 「ほしいです...」 | The ache of vocabulary-gated desire. You have the word for wanting. You don't have the word for entering. |
+| Yamakawa recommends onigiri | Via text. The food he refused to share. Recommended cheerfully. | Reads the message twice | This man. THIS MAN. |
+
+---
+
+### Running Gags Updated
+
+1. **The Toilet Door** — Continues. Unresolved. 中 = Day 9.
+2. **Dad's Gold** — Continues. Still untouchable.
+3. **Dad's Car** — **UPGRADED.** Now it's 「新しいです！」 Dad's protectiveness gains an adjective dimension. The car isn't just his — it's *new*. The newness must be preserved.
+4. **Tree-san** — **AGED.** Tree-san is now 古い in addition to 大きい and 大すき. The tree has gained history. The relationship deepens with every adjective. (If befriended: 「大きくて古い木です。大すきです。」 — "A big, old tree. I love it." The most complete sentence Rikizo has ever said to a tree.)
+5. **The Fridge** — Continues. Still cannot open. ほしい makes it worse — you can now *want* what's inside, you just can't *access* what's inside. The fridge has gone from frustrating to philosophically tormenting. One more day.
+6. **Family Possessions** — Car = 新しい + Dad's. Gold = Dad's. Fridge = sealed.
+7. **The Water Bottle** — Still in inventory. Still reusable. Now somewhat redundant — you can buy water. But it's free and it's yours. The sentimental value of the first inventory item.
+8. **The Empty Phone** — Two contacts. Shopping texts from Yamakawa. Academic texts from すずき先生. The phone is slowly becoming useful.
+9. **Yamakawa's Onigiri Legacy** — Post-onigiri Yamakawa now *recommends* onigiri to the person he refused to share with. He has transcended selfishness into a pure, uncomplicated enthusiasm for rice balls that exists independently of any awareness of his own recent history.
+10. **Mom's "Come Home"** — 「家に来てくださいね。」 Day 8. Always.
+11. **Mom's Kitchen Authority** — Mom knew you were going shopping before you did. She gave spending advice (don't buy expensive things). She made breakfast. She is the household's central intelligence.
+12. **いただきます / ごちそうさまでした** — Day 2 of the ritual. Becoming automatic.
+13. **The Station Master's まだ** — **NEW.** The only NPC who says "not yet" instead of "always." In a world of いつも, he is まだ. He is either the most honest or the most patient character in the game. He is waiting for something. He won't say what.
+
+---
+
+### State Tracking (Day 8)
+
+**New flags:**
+- `first_purchase` — Tracks the first item the player buys. (Most likely おにぎり, but could be anything.)
+- `bought_onigiri` — Did the player buy an onigiri? (Relevant for the Yamakawa interaction.)
+- `ate_purchased_onigiri` — Did the player eat a purchased onigiri? (First player-triggered 食べる of purchased food.)
+- `ate_onigiri_near_yamakawa` — Ate the onigiri near Yamakawa? (Triggers his oblivious response.)
+- `met_ekichou` — Player has met the station master.
+- `heard_mada` — Player heard the station master say まだ. (Distinct from other NPCs' いつも pattern.)
+- `visited_depaato` — Player has seen the department store exterior.
+- `tried_depaato_door` — Player tried to enter the department store.
+- `wallet_empty` — Player has spent all 2,000 yen.
+
+**Economy:**
+- Starting: 二千円 (2,000 yen)
+- Ending: variable — depends on player purchases
+- All purchases tracked in inventory
+
+---
+
+### Art Assets Required (Day 8)
+
+| Asset | Type | Style | Priority | Notes |
+|---|---|---|---|---|
+| コンビニ purchase UI | UI element | — | **Critical** | Item selection overlay on コンビニ window. Show items with prices, selectable. Wallet balance visible. |
+| 駅長 sprite | Overworld sprite | A (Pixel) | High | Standing on station platform. Uniform. Formal posture. Small, dignified. |
+| 駅長 conversation portrait | Portrait | B (MP100) | High | Calm, professional. At least 2 expressions (default, gentle smile when saying まだ). Uniform details. |
+| デパート exterior | Building sprite/background | A (Pixel) | High | Larger than コンビニ. Multiple floors implied. Glass windows. Urban feel. Door visible but non-interactive. |
+| Vending machine (active) | Sprite variant | A (Pixel) | Medium | Same station vending machine from Day 5 but now lit up / active. Purchase interaction: select item → dispense. |
+| Wallet UI | UI element | — | Medium | Shows current yen balance. Updates after purchases. Position: corner of screen or in inventory. |
+| おにぎり inventory item | Item sprite | A (Pixel) | Medium | Small onigiri icon for inventory. Can be consumed (triggers eating interaction). |
+| ノート inventory item | Item sprite | A (Pixel) | Low | Notebook icon for inventory. No current use — 書く (to write) doesn't exist until N5.9. Another "item waiting for its verb." |
+| ジュース inventory item | Item sprite | A (Pixel) | Low | Juice can/bottle icon. Consumable (飲む interaction). |
+
+---
+
+### Open Questions for Day 8
+
+1. **Should the player be able to buy multiple of the same item?** Recommendation: Yes. Inventory can hold multiples. Each おにぎり is a separate consumable. The wallet is the only limiting factor. Let the player buy 13 onigiri if they want.
+
+2. **What happens when money runs out?** Recommendation: Gentle acknowledgment (「お金がありません。」) but no hard punishment. The game continues — you just can't buy things. Money replenishment should come within 2–3 days (found coin, Mom's allowance, helping an NPC). Don't let the player feel stuck.
+
+3. **Should the デパート have visible items through its windows?** Recommendation: Yes — but they should be vague/expensive-looking. プレゼント (gift boxes), clothing shapes, shiny objects. No specific item names yet (the vocab for clothes and gifts is limited). The player should see *stuff* and want to go inside. High prices visible: 五千円, 一万円. This contrasts with the コンビニ's 百円 items and makes the player feel the 高い/安い distinction viscerally.
+
+4. **The ノート — an item waiting for its verb.** 書く (to write) is N5.9. The player can buy a notebook today but can't use it until tomorrow. This mirrors the Day 2 water bottle — an item in inventory with no applicable verb. Should the game acknowledge this? Recommendation: Yes, subtly. If the player tries to use the notebook: 「ノートです。...きれいですね。」 ("A notebook. ...It's clean.") It's just an object. Tomorrow, it becomes a tool.
+
+5. **Station master's name:** Does he have one? Recommendation: Not yet. He's 駅長. A title, not a person. He may gain a name later when the station becomes more central to the plot. For now, his identity IS his role. He's the first NPC defined by function rather than personality.
+
+---
