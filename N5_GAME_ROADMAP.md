@@ -313,7 +313,7 @@ Same energy as Day 1. Dad doesn't care. He's never cared. The void has always be
 |---|---|---|---|
 | Calendar | カレンダー | Kitchen wall | 「今日は[X]ようびです。」Displays the current day of the week. Rikizo reads it aloud. Can tap through all seven days. |
 | Gold coin | 金 | Living room shelf | 「お父さんの金です。」("Dad's gold.") If you try to take it: Dad yells from wherever he is: 「金！だめ！」("The gold! No!") Same sixth sense as the toilet door. **Running gag #2 established.** |
-| Water bottle | 水 | Kitchen counter | 「水です。」("Water.") **FIRST INVENTORY ITEM.** Picking it up adds it to inventory AND triggers the quest log for the first time: ◻ 水を飲む ("Drink the water."). Two tutorials in one interaction — inventory and quests. The quest is immediately, silently impossible: 飲む doesn't exist yet. The water sits in inventory. The quest sits in the log. Neither does anything until Day 7. |
+| Water bottle | 水 | Kitchen counter | 「水です。」("Water.") **FIRST INVENTORY ITEM.** Picking it up adds it to inventory AND triggers the quest log for the first time: ◻ 水を＿＿. Two tutorials in one interaction — inventory and quests. The verb is a blank. The player can't read the quest, can't complete the quest, can't do anything with the water. The sentence has a hole where the verb should be. It stays that way until Day 7. |
 | Bed | ベッド | Bedroom | Same as Day 1. Save point. |
 | Laptop | パソコン | Bedroom | Same as Day 1. Teach a lesson exit. |
 | TV | テレビ | Living room | 「テレビです。」 |
@@ -339,17 +339,26 @@ When Rikizo picks up the water bottle, a small UI notification pops: a quest log
 ```
 📋 Quest Log
 ─────────────
+◻ 水を＿＿
+  "_____ the water."
+```
+
+That's it. One quest. Do *something* to the water. But what? The verb is blank — a fill-in-the-blank with no answer yet. The player has just learned that inventory exists (by picking up the water) and that quests exist (by receiving one). The quest seems like it should be simple — you have water, do the thing — but the thing has no name. 飲む doesn't exist. The verb for drinking has not been introduced. The quest isn't just impossible to *complete*. It's impossible to *read*.
+
+The player will try to use the water. Nothing happens. 「水です。」 It's water. That's all you can say about it. The quest sits in the log with its blank slot. Uncompleted. Unreadable. The first quest the game ever gives you is one you cannot do — and one you cannot even fully understand.
+
+**Days 3–6:** The quest persists. Every time the player checks the quest log (if they do), there it is: ◻ 水を＿＿. Still incomplete. Still blank. The water bottle is in inventory. The quest is in the log. Neither does anything. The blank stares back. Veteran RPG players will recognize this as a "come back later" quest. They'll assume a mechanic needs to unlock. They're right — but the mechanic is a *vocabulary word*, and the quest itself is waiting for it.
+
+**Day 7 resolution:** See Day 7 — "The Water Bottle." When N5.7 unlocks and 飲む enters the world, the quest text fills in:
+
+```
+📋 Quest Log
+─────────────
 ◻ 水を飲む
   "Drink the water."
 ```
 
-That's it. One quest. Drink the water. The player has just learned that inventory exists (by picking up the water) and that quests exist (by receiving one). The quest seems trivial — drink the water you just picked up. Except: 飲む doesn't exist. The verb for drinking has not been introduced. Rikizo has no way to drink anything. The quest is *literally impossible*.
-
-The player will try to use the water. Nothing happens. 「水です。」 It's water. That's all you can say about it. The quest sits in the log. Uncompleted. Unmovable. The first quest the game ever gives you is one you cannot do.
-
-**Days 3–6:** The quest persists. Every time the player checks the quest log (if they do), there it is: ◻ 水を飲む. Still incomplete. Still impossible. The water bottle is in inventory. The quest is in the log. Neither does anything. Veteran RPG players will recognize this as a "come back later" quest. They'll assume a mechanic needs to unlock. They're right — but the mechanic is a *vocabulary word*.
-
-**Day 7 resolution:** See Day 7 — "The Water Bottle." When Rikizo drinks the water, the quest completes with whatever fanfare the game uses for quest completion (a small chime, a checkmark, maybe a brief celebratory particle effect). Five days. One verb. Quest complete.
+The blank becomes a word. The quest that was unreadable for five days suddenly makes sense. And now you can do it. Tap the water bottle. Quest complete. Chime. Checkmark. Fanfare.
 
 ```
 📋 Quest Log
@@ -359,12 +368,14 @@ The player will try to use the water. Nothing happens. 「水です。」 It's w
    Completed: Day 7
 ```
 
-**Design note — quest system introduction:** This is deliberately the game's tutorial for quests. The first quest teaches: (1) quests exist, (2) quests persist across days, (3) some quests can't be completed immediately, (4) the game world's constraints are *linguistic*. The player learns that vocabulary gates gameplay — not keys, not levels, not items. Words. The word for "drink" is the key that unlocks the water bottle.
+Five days. One verb. The verb didn't just unlock the action — it completed the *sentence*.
+
+**Design note — quest system introduction:** This is deliberately the game's tutorial for quests. The first quest teaches: (1) quests exist, (2) quests persist across days, (3) some quests can't be completed immediately, (4) the game world's constraints are *linguistic*. The blank verb slot makes this visceral — the player can SEE that something is missing. They have を, which by Day 2 they may not even understand yet (it's taught in N5.3). The quest is a sentence with a hole in it. Learning Japanese fills the hole. This is the game.
 
 The player discovers:
 - The yard exists (the world grew overnight)
 - Inventory — picking up the water bottle
-- **The quest system** — first quest received (水を飲む), first quest impossible
+- **The quest system** — first quest received (水を＿＿), first quest unreadable AND impossible
 - The calendar (days of the week)
 - Dad's gold coin (don't touch)
 - The tree (comedy)
@@ -379,7 +390,7 @@ The player discovers:
 | Dad's gold coin | Dad is intensely protective of a single coin | 「金！だめ！」 | Comedy. Dad has the same sixth sense for gold as he does for bathroom doors. |
 | Walking to the void edge | White wall at the yard's perimeter | 「何もないです。」(same flat tone as Day 1) | The void is still RIGHT THERE. The yard is a tiny island of reality. Everything beyond is nothing. |
 | Dad says it's "always" like this | いつもですよ — the void has always been there | Accepts it | Dad is now claiming the void is permanent, normal, always-been-there. But yesterday the void was at the FRONT DOOR. It moved. He doesn't notice that either. |
-| Picking up the water | First inventory item + first quest (◻ 水を飲む) | 「水です。」 | Two systems unlock at once: inventory and quests. The quest says "Drink the water." You just picked up water. You try to drink it. You can't. There is no verb for drinking. The quest will sit in your log for **five days**. This is the game teaching you that vocabulary = ability. |
+| Picking up the water | First inventory item + first quest (◻ 水を＿＿) | 「水です。」 | Two systems unlock at once: inventory and quests. The quest has a blank where the verb should be. You can't read it. You can't do it. You have water and a sentence with a hole. The quest will sit in your log for **five days** with that blank staring at you. On Day 7, the word fills in. This is the game teaching you that vocabulary = ability. |
 
 **Tone calibration for Day 2:** The comedic obliviousness deepens. The world literally changed overnight and nobody comments on it. The tree is the focal point — Rikizo befriending something that appeared from nothing is both charming and unsettling. The player should be starting to feel the pattern: things appear, nobody questions it, move on.
 
@@ -500,7 +511,7 @@ Mom has no special Day 3 scene. She's available for the family count conversatio
 |---|---|---|---|
 | Calendar | カレンダー | Kitchen wall | **Full April calendar.** Grid layout showing 四月 (April). Days 1–28 crossed out. Today: 四月二十九日. Interaction: 「今日は四月二十九日です。」Uses month + date vocab. Player can tap different dates to hear readings (一日、二日、三日... etc.) — a natural way to practice the irregular date readings. |
 | Gold coin | 金 | Living room shelf | Same as Day 2. 「お父さんの金です。」Touch attempt: 「金！だめ！」 No price, no change. |
-| Water bottle | 水 | Inventory | Already collected on Day 2. Still in inventory. Still useless. Quest log still shows ◻ 水を飲む. Still impossible. Day 3 of carrying water you can't drink. |
+| Water bottle | 水 | Inventory | Already collected on Day 2. Still in inventory. Still useless. Quest log still shows ◻ 水を＿＿. Still blank. Still impossible. Day 3 of carrying water you can't ＿＿. |
 | Fridge | れいぞうこ | Kitchen | 「お母さんのれいぞうこです。」("Mom's fridge.") — **The fridge has no inside.** Not locked, not sealed — 中 (なか, "inside") doesn't exist as a concept yet (introduced N5.9, Day 9). The fridge is a surface with no interior, the same way the yard has no beyond. Rikizo doesn't try to open it because there is nothing to open *into*. When 中 arrives in Day 9, the fridge gains an interior for the first time and can finally be opened. |
 
 **Interior (new demonstrative interactions):**
@@ -1555,9 +1566,13 @@ The river is accessible but Yamakawa is not there today — he's back at the コ
 
 ### The Water Bottle — Five Days of Patience Rewarded
 
-The water bottle has been in Rikizo's inventory since Day 2. Five days. It was the first item the player ever picked up — the game's way of teaching that inventory exists. And for five days it has sat there: 「水です。」 Water. Just water. A noun in your pocket.
+The water bottle has been in Rikizo's inventory since Day 2. Five days. It was the first item the player ever picked up — the game's way of teaching that inventory exists. And for five days it has sat there: 「水です。」 Water. Just water. A noun in your pocket. And a quest in the log — ◻ 水を＿＿ — with a blank where the verb should be.
 
-Today, 飲む exists. The water bottle gains an interaction. And the quest that has been sitting in the log since Day 2 — ◻ 水を飲む — becomes completable.
+Today, 飲む exists. The blank fills in. The quest log updates:
+
+> ◻ 水を＿＿ → ◻ 水を飲む
+
+The sentence completes itself. The player can now *read* the quest for the first time. And they can do it.
 
 **If player opens inventory and taps the water bottle:**
 > 「水を飲みます。おいしいです！」 — "I'll drink the water. It's tasty!"
@@ -1571,7 +1586,7 @@ The bottle is not consumed — it's reusable, or infinite, or the game doesn't t
 
 Rikizo clarifies. He has standards. He brought his own. The river is for looking. The bottle is for drinking. These are different waters.
 
-**Design note — the quest as vocabulary tutorial:** The 水を飲む quest is the game's thesis statement compressed into one interaction. On Day 2, the player picks up water and receives a quest: drink it. They try. They can't. Not because of a locked door or a missing key or a level requirement — because the *verb* doesn't exist. The concept of drinking is not in the world yet. For five days the quest sits there, a constant reminder that something basic is missing. Then N5.7 teaches 飲む. The player returns to inventory. Drinks the water. Quest complete. The moment teaches, retroactively, what kind of game this is: **vocabulary is the key to everything.** Not items, not stats, not puzzles. Words. The word for "drink" was the key that unlocked a water bottle. Every future impossible-seeming moment in the game — every door that won't open, every conversation that dead-ends, every object that just sits there — the player now knows: *a word is coming*.
+**Design note — the quest as vocabulary tutorial:** The 水を＿＿ quest is the game's thesis statement compressed into one interaction. On Day 2, the player picks up water and receives a quest with a hole in it. They can't read it. They can't do it. Not because of a locked door or a missing key or a level requirement — because the *word* doesn't exist. The sentence itself is incomplete. For five days the quest sits there with its blank, a constant visible reminder that something is missing from the language. Then N5.7 teaches 飲む. The blank fills in. 水を飲む. The player reads the quest for the first time. They drink the water. Quest complete. The moment teaches, retroactively, what kind of game this is: **vocabulary completes sentences, and sentences unlock the world.** Every future impossible-seeming moment in the game — every door that won't open, every conversation that dead-ends, every object that just sits there — the player now knows: *a word is coming*.
 
 This is also a deliberate design pattern for the whole game: items and objects are introduced before the verbs that activate them. The water bottle taught inventory on Day 2. The cake taught possession on Day 4. The コンビニ taught commerce-without-purchasing on Day 5. In each case, the object exists first, and the verb that gives it purpose arrives later. The water bottle has the longest gap (5 days) and the smallest payoff (you drink water, nothing happens). But that smallness IS the joke — and the lesson. The game's first quest, its most dramatic wait, its biggest fanfare... is for drinking a bottle of water.
 
@@ -1701,7 +1716,7 @@ Rikizo agrees to go to the thing that starts next week. The thing that has no na
 | The missing onigiri | Yamakawa's hand is empty. After two days of the Eternal Onigiri. | 「...おにぎりは？」 | The player has been WAITING for this. Two days of watching an uneaten onigiri. Now it's gone. Of course it is. 食べる exists. |
 | 「おいしかったですよ。」 | Yamakawa reports the onigiri was delicious. Past tense. Offscreen consumption. | Rikizo nods | Yamakawa ate an onigiri that was frozen in his hand for 48 hours and his review is: "delicious." No explanation for the delay. No awareness that anything was unusual. |
 | River water — no | Rikizo considers and rejects drinking river water. | 「...飲みません。」 | New verbs create new choices. Including the choice NOT to do something. |
-| The water bottle / quest complete | ✅ 水を飲む — the game's first quest, given on Day 2, completed on Day 7. Five days. One verb. Chime. Checkmark. Fanfare. For drinking water. | Happy. Hydrated. Accomplished? | The game's thesis statement. You had water. You had a quest. You couldn't drink because the verb didn't exist. Five days later, the word arrives, and you drink your water. Quest complete. The reward is nothing. The reward is everything. |
+| The water bottle / quest complete | ◻ 水を＿＿ → ◻ 水を飲む → ✅ 水を飲む. The blank fills in. The sentence completes. You drink. Chime. Checkmark. Five days. | Happy. Hydrated. Accomplished? | The game's thesis statement. You had water. You had an incomplete sentence. You couldn't read it or do it. Five days later, the word fills in, and you drink your water. The reward is nothing. The reward is everything. |
 | Size descriptions | Everything gains dimensions. Mountains are big. The river is small. Tree-san is big. | Descriptive, enthusiastic | The world has adjectives now. Things aren't just here — they're big or small. (Nothing is medium. 中 = Day 9.) |
 | すき — preferences arrive | Mom asks if Rikizo likes bread. Yamakawa likes the river. | The world cares about opinion | Before today: objective descriptions. Today: subjective feelings. This is a bigger shift than it appears. |
 | Tree-san love confession | 「木-さんは大すきです。」 — if befriended | Pure, genuine | Rikizo's first love is a tree. |
@@ -1718,7 +1733,7 @@ Rikizo agrees to go to the thing that starts next week. The thing that has no na
 4. **Tree-san** — **UPGRADED.** Rikizo can now describe the tree (大きい) and declare love (大すき). The tree relationship has grown from greeting to genuine affection. The tree does not reciprocate. The tree is a tree.
 5. **The Fridge** — **INTENSIFIED.** Food exists now. Eating is real. The fridge — which definitely contains food — remains unopenable. Every day it becomes slightly more maddening. The fridge is Schrödinger's pantry: the food inside is simultaneously there and inaccessible. Day 9 (中/外) will resolve this. Two more days.
 6. **Family Possessions** — Cake = RESOLVED (eaten). Gold = continues. Car = continues (dominant).
-7. **The Water Bottle / First Quest** — **RESOLVED.** ◻→✅ 水を飲む. The game's first quest, given on Day 2 when the player picks up the water bottle. Impossible for five days because 飲む doesn't exist. Completed on Day 7 with full fanfare for... drinking water. The reward is nothing. The game's thesis statement: vocabulary is the key to everything. The bottle stays in inventory as a reusable comfort action.
+7. **The Water Bottle / First Quest** — **RESOLVED.** ◻ 水を＿＿ → ✅ 水を飲む. The game's first quest, given on Day 2 as an incomplete sentence. The blank sits in the quest log for five days. On Day 7, the word fills in, the sentence completes, and you drink water. Full fanfare for... drinking water. The game's thesis statement: vocabulary completes sentences, sentences unlock the world. The bottle stays in inventory as a reusable comfort action.
 8. **The Empty Phone** — Email thread growing. Two contacts. Still no map, no apps. The phone is becoming useful in tiny increments.
 9. **Yamakawa's Eternal Onigiri** — **RESOLVED.** 食べました. おいしかったです. The two-day saga ends with three words and zero self-awareness. Yamakawa has entered the post-onigiri era.
 10. **Mom's "Come Home"** — 「家に来てくださいね。」 Day 7. Every day. The pattern is now well-established enough that the player should notice it's not just flavor text — it's a persistent, unvarying request.
