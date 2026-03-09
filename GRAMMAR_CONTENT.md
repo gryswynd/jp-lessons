@@ -636,7 +636,7 @@ Agent 3 does **not** run term-ID verification on these sections. Instead, Agent 
 - じゃ as a standard spoken contraction of では (not slang, not incorrect)
 
 **What NOT to teach in G1:**
-- ~~Nominalization rules (だ→な before の, である before こと)~~ → Deferred. Requires の particle (G2) and nominalizer concepts.
+- ~~Nominalization rules (だ→な before の, である before こと)~~ → Deferred. こと nominalization Tier 1 (basic nominalizer + ことがある) is taught in G11; Tier 2 (ことができる) in G12; Tier 2 (ことにする/ことになる) in G17.
 - ~~なんです / のです explanatory form~~ → Deferred to G9 (Plain Forms & Basic Connectors), where plain form prerequisite is established.
 - Verb conjugation of any kind — G1 is strictly about the copula with nouns and adjectives.
 
@@ -1112,7 +1112,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-### G11 — na-Adjective Conjugation
+### G11 — na-Adjective Conjugation & こと Nominalization (Tier 1)
 
 | Field | Value |
 |---|---|
@@ -1120,10 +1120,12 @@ This is the pivotal lesson where students transition from polite-only speech to 
 | **Level** | N5 |
 | **Unlocks after** | N5.11 |
 | **Icon** | 🎨 |
-| **Estimated minutes** | 20 |
+| **Estimated minutes** | 25 |
 | **Grammar forms** | `polite_adj`, `polite_past_adj`, `plain_negative`, `plain_past`, `plain_past_negative`, `te_form`, `adverbial` |
 
 **What to teach:**
+
+*Part A — na-adjective conjugation:*
 - na-adjective conjugation paradigm:
   - Before nouns: ～な (静かな部屋)
   - Adverb form: ～に (静かに歩く)
@@ -1141,20 +1143,47 @@ This is the pivotal lesson where students transition from polite-only speech to 
   - 嫌い (disliked)
   - If any of these are available in taught vocabulary, use them as examples
 - Combining adjectives: i-adj くて + na-adj で in chains
-- **Not taught here:** ～すぎる excessive (G15), ～さ noun form (G15)
+
+*Part B — こと nominalization (Tier 1):*
+
+こと turns verbs and adjective phrases into noun phrases ("the act of ~", "the fact that ~"). This is the first tier of こと grammar — basic nominalization and the experience pattern. More advanced こと patterns (ことができる, ことにする, ことになる) are taught in N4 grammar lessons (G12, G17).
+
+- Basic nominalization — plain form + こと:
+  - 食べること (eating / the act of eating)
+  - 日本語を話すこと (speaking Japanese)
+  - Used when a verb needs to fill a noun role: 食べることが好きです (I like eating)
+  - Note: こと is conventionally written in hiragana, not as 事
+- Xのことが好き — "to like X (as a whole / everything about X)":
+  - 日本のことが好きです (I like Japan / everything about Japan)
+  - Contrast with plain Xが好き: 日本が好き focuses on the entity; 日本のこと conveys a broader, more encompassing affection
+  - Common with people: あの先生のことが好きです (I like that teacher — as a person, holistically)
+- ～ことがある — "have the experience of ~" (experiential pattern):
+  - Plain past + ことがある: 日本に行ったことがあります (I have been to Japan / I have the experience of going to Japan)
+  - Negative: 食べたことがありません (I have never eaten [it])
+  - Question: 日本に行ったことがありますか (Have you ever been to Japan?)
+  - Always uses plain past (～た) before こと, even in polite sentences — the ある/あります at the end carries the politeness
+  - This is a formulaic pattern — the student should internalize "～たことがある" as a unit
+
+**What NOT to teach in G11:**
+- ～すぎる excessive (G15), ～さ noun form (G15)
+- ことができる "can do" (G12 — taught alongside potential form as the formal alternative)
+- ことにする "decide to" / ことになる "it has been decided" (G17 — taught with other action-connecting patterns)
 
 **Recommended sections:**
-1. `grammarIntro`
+1. `grammarIntro` — two topics: na-adjective conjugation patterns + introducing こと as a bridge between verbs and nouns
 2. `grammarTable` — na-adjective conjugation chart
 3. `grammarComparison` — i-adjective vs na-adjective (side-by-side conjugation comparison)
 4. `grammarRule` — easily confused na-adjectives
 5. `grammarRule` — chaining adjectives (くて/で)
-6. `annotatedExample` — na-adjectives describing places and people
-7. `conversation` — nature/environment dialogue (matches N5.11 theme)
-8. `conjugationDrill` — conjugate na-adjectives
-9. `drills` — mixed MCQ (include i-adj vs na-adj traps)
+6. `grammarRule` — こと as nominalizer (plain form + こと turns verbs into nouns; with 3 examples)
+7. `grammarRule` — Xのことが好き (holistic liking; contrast with plain Xが好き)
+8. `grammarRule` — ～たことがある (experiential "have done"; with question/negative forms)
+9. `annotatedExample` — na-adjectives describing places and people + こと patterns in conversation
+10. `conversation` — nature/environment dialogue (matches N5.11 theme); incorporate ～ことがありますか and Xのことが好き naturally
+11. `conjugationDrill` — conjugate na-adjectives
+12. `drills` — mixed MCQ (include i-adj vs na-adj traps + こと pattern recognition)
 
-**Available vocabulary context:** Through N5.11.
+**Available vocabulary context:** Through N5.11. こと is available as `v_koto` (lesson_ids: N4.14 in glossary, but added to early-use vocabulary list from N5.9 — always written in hiragana).
 
 ---
 
@@ -1184,6 +1213,13 @@ This is the pivotal lesson where students transition from polite-only speech to 
 - Particle shift: を often becomes が with potential (日本語が話せる)
 - Negative potential: ～られない / ～えない
 - Polite forms: ～られます / ～えます
+- ことができる — formal/written alternative to the potential form (こと Tier 2a):
+  - Dictionary form + ことができる: 日本語を話すことができます (I can speak Japanese)
+  - More formal and explicit than the potential form — common in writing, announcements, and official contexts
+  - Negative: ～ことができません
+  - Note: こと as a nominalizer was introduced in G11. Here it combines with できる (the する potential) to express ability
+  - Contrast with potential form: 話せます (conversational) vs 話すことができます (formal/written) — same meaning, different register
+  - Students should learn to recognize both forms but use the potential form in conversation and ことができる in writing
 
 **Recommended sections:**
 1. `grammarIntro`
@@ -1191,11 +1227,13 @@ This is the pivotal lesson where students transition from polite-only speech to 
 3. `grammarTable` — potential form chart (RU, U, する, くる)
 4. `grammarRule` — particle shift を → が
 5. `grammarRule` — colloquial shortening (られる → れる)
-6. `annotatedExample` — expressing abilities in various contexts
-7. `conversation` — discussing what one can/can't do
-8. `conjugationDrill` — dictionary form → potential form
-9. `sentenceTransform` — make it "can do" / "can't do"
-10. `drills` — mixed MCQ
+6. `grammarRule` — ことができる (formal ability expression; contrast with potential form)
+7. `grammarComparison` — potential form vs ことができる (when to use which)
+8. `annotatedExample` — expressing abilities in various contexts (mix both forms)
+9. `conversation` — discussing what one can/can't do
+10. `conjugationDrill` — dictionary form → potential form
+11. `sentenceTransform` — make it "can do" / "can't do" (include ことができる variants)
+12. `drills` — mixed MCQ
 
 ---
 
@@ -1415,8 +1453,20 @@ This is the pivotal lesson where students transition from polite-only speech to 
   - Ends with する (or します in polite form)
   - Commonly used to describe a typical day or weekend activities
   - Formation: same sound-change rules as た-form (G7); just add り instead of nothing
+- ことにする / ことになる — decision and outcome patterns (こと Tier 2b):
+  - Dictionary form + ことにする: 日本語を勉強することにしました (I decided to study Japanese)
+    - Expresses a deliberate, personal decision
+    - The する can be conjugated: ことにします (polite), ことにした (plain past)
+  - Dictionary form + ことになる: 来月日本に行くことになりました (It has been decided that I'll go to Japan next month)
+    - Expresses an outcome that happened naturally, was decided by circumstances, or by someone other than the speaker
+    - Common in business/formal announcements: 会議は三時からになりました → 会議は三時から始まることになりました
+  - Contrast: ことにする = "I decide to ~" (active agency) vs ことになる = "it turns out that ~ / it has been arranged that ~" (passive/impersonal outcome)
+  - ことにしている — habitual decision ("I make it a rule to ~"):
+    - 毎日走ることにしています (I make it a rule to run every day)
+    - Combines ことにする with ている progressive to express an ongoing personal rule/habit
+  - Note: こと as a nominalizer was introduced in G11, and ことができる was taught in G12. These patterns extend こと to express decisions and outcomes.
 
-**Note:** から and ので (because) were taught as basic connectors in G9. G17 focuses on sequential, simultaneous, purposive, and non-exhaustive action patterns. Do not re-teach から/ので here — reinforce them through example sentences where appropriate.
+**Note:** から and ので (because) were taught as basic connectors in G9. G17 focuses on sequential, simultaneous, purposive, and non-exhaustive action patterns, plus decision/outcome patterns with こと. Do not re-teach から/ので here — reinforce them through example sentences where appropriate.
 
 **Recommended sections:**
 1. `grammarIntro`
@@ -1425,10 +1475,12 @@ This is the pivotal lesson where students transition from polite-only speech to 
 4. `grammarRule` — ために (×1)
 5. `grammarRule` — ながら (×1)
 6. `grammarRule` — ～たり～たりする (×1)
-7. `annotatedExample` — daily routine descriptions using time connectors
-8. `conversation` — planning a day / travel itinerary
-9. `sentenceTransform` — combine two sentences using てから/まえに/ながら/たり
-10. `drills` — mixed MCQ
+7. `grammarRule` — ことにする / ことになる (×1, contrast active decision vs passive outcome)
+8. `grammarComparison` — ことにする vs ことになる (parallel examples showing same event from agent vs non-agent perspective)
+9. `annotatedExample` — daily routine descriptions using time connectors + decision/outcome patterns
+10. `conversation` — planning a day / travel itinerary (incorporate ことにしました naturally)
+11. `sentenceTransform` — combine two sentences using てから/まえに/ながら/たり; convert "I decided" to ことにする
+12. `drills` — mixed MCQ
 
 ---
 
