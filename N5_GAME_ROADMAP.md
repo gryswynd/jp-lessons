@@ -1524,6 +1524,28 @@ The river is accessible but Yamakawa is not there today — he's back at the コ
 
 ---
 
+### The Water Bottle — Five Days of Patience Rewarded
+
+The water bottle has been in Rikizo's inventory since Day 2. Five days. It was the first item the player ever picked up — the game's way of teaching that inventory exists. And for five days it has sat there: 「水です。」 Water. Just water. A noun in your pocket.
+
+Today, 飲む exists. The water bottle gains an interaction.
+
+**If player opens inventory and taps the water bottle:**
+> 「水を飲みます。おいしいです！」 — "I'll drink the water. It's tasty!"
+
+That's it. Rikizo drinks from his water bottle. It's not consumed — it's a reusable bottle, or it's infinite, or the game doesn't track liquid levels. The point is not the mechanics. The point is that an item the player has been carrying since the *second day of the game* finally does something. The first inventory item. The first thing you ever collected. And it took five days and one verb for it to become anything more than a label.
+
+**The bottle remains in inventory.** The player can drink again whenever they want. Each time: 「水を飲みます。」 It's a comfort action. A tiny reward loop. The water is always there.
+
+**If player drinks the water at the river:**
+> 「水を飲みます。...川の水じゃないですよ。」 — "I'll drink water. ...Not the river water though."
+
+Rikizo clarifies. He has standards. He brought his own. The river is for looking. The bottle is for drinking. These are different waters.
+
+**Design note — the long payoff:** This is a deliberate design pattern for the whole game: items and objects are introduced before the verbs that activate them. The water bottle taught inventory on Day 2. The cake taught possession on Day 4. The コンビニ taught commerce-without-purchasing on Day 5. In each case, the object exists first, and the verb that gives it purpose arrives later. The water bottle has the longest gap (5 days) and the smallest payoff (you drink water, nothing happens). But that smallness is the joke — and the lesson. Not everything has to be dramatic. Sometimes you just drink your water.
+
+---
+
 ### The レストラン Problem
 
 レストラン is now vocabulary. The word exists. There is no restaurant building in the world. This is the inverse of the コンビニ problem (building exists, purchasing doesn't). Here the *concept* exists but the *place* doesn't.
@@ -1617,7 +1639,8 @@ Rikizo agrees to go to the thing that starts next week. The thing that has no na
 | Kitchen counter | Kitchen | **EMPTY.** 「ケーキは...？」 See cake resolution above. |
 | Kitchen table (breakfast) | Kitchen | Pre-meal: visible food. Post-meal: cleared. |
 | Fridge | Kitchen | Still can't open. 「...」 No 中. But now the player KNOWS there's food in this world. The fridge gains new significance: it contains food. Probably. You can't check. |
-| 水 (home) | Kitchen | 「水を飲みます。」("I'll drink water.") New! Rikizo can drink his own water. The first consumable action available at home. |
+| 水 (home) | Kitchen | 「水を飲みます。」("I'll drink water.") New! Rikizo can drink his own water at the kitchen sink/counter. |
+| 水 (inventory) | Anywhere | **THE WATER BOTTLE WORKS.** 「水を飲みます。おいしいです！」("I'll drink the water. Tasty!") The bottle Rikizo picked up on Day 2 — five days ago — finally has a purpose. The first *player-initiated* consumption in the game. Tap the water bottle in inventory → Rikizo drinks. The bottle is not consumed (it's reusable, or infinite — the game doesn't care about realism here). This is the payoff for carrying a useless item for five days. |
 | River water | River bank | 「...飲みません。」("Won't drink.") River water: rejected. |
 | コンビニ window | Town | Updated awareness: items are now recognizable as food/drink. Still can't buy. |
 | Dad's car | Front of house | Unchanged. Touch → Dad appears. 「だめ！」 |
@@ -1647,6 +1670,7 @@ Rikizo agrees to go to the thing that starts next week. The thing that has no na
 | The missing onigiri | Yamakawa's hand is empty. After two days of the Eternal Onigiri. | 「...おにぎりは？」 | The player has been WAITING for this. Two days of watching an uneaten onigiri. Now it's gone. Of course it is. 食べる exists. |
 | 「おいしかったですよ。」 | Yamakawa reports the onigiri was delicious. Past tense. Offscreen consumption. | Rikizo nods | Yamakawa ate an onigiri that was frozen in his hand for 48 hours and his review is: "delicious." No explanation for the delay. No awareness that anything was unusual. |
 | River water — no | Rikizo considers and rejects drinking river water. | 「...飲みません。」 | New verbs create new choices. Including the choice NOT to do something. |
+| The water bottle | The water from Day 2 — five days in inventory — finally works. Tap it: 「水を飲みます。おいしいです！」 | Happy. Hydrated. | The longest payoff for the smallest reward. You've been carrying this water since Day 2. It took five days and one verb. You drink it. Nothing happens. It's wonderful. |
 | Size descriptions | Everything gains dimensions. Mountains are big. The river is small. Tree-san is big. | Descriptive, enthusiastic | The world has adjectives now. Things aren't just here — they're big or small. (Nothing is medium. 中 = Day 9.) |
 | すき — preferences arrive | Mom asks if Rikizo likes bread. Yamakawa likes the river. | The world cares about opinion | Before today: objective descriptions. Today: subjective feelings. This is a bigger shift than it appears. |
 | Tree-san love confession | 「木-さんは大すきです。」 — if befriended | Pure, genuine | Rikizo's first love is a tree. |
@@ -1662,12 +1686,13 @@ Rikizo agrees to go to the thing that starts next week. The thing that has no na
 3. **Dad's Car** — Continues. Touch → teleport → だめ.
 4. **Tree-san** — **UPGRADED.** Rikizo can now describe the tree (大きい) and declare love (大すき). The tree relationship has grown from greeting to genuine affection. The tree does not reciprocate. The tree is a tree.
 5. **The Fridge** — **INTENSIFIED.** Food exists now. Eating is real. The fridge — which definitely contains food — remains unopenable. Every day it becomes slightly more maddening. The fridge is Schrödinger's pantry: the food inside is simultaneously there and inaccessible. Day 9 (中/外) will resolve this. Two more days.
-6. **Family Possessions** — Cake = RESOLVED (eaten). Gold = continues. Car = continues (dominant). Water = now drinkable.
-7. **The Empty Phone** — Email thread growing. Two contacts. Still no map, no apps. The phone is becoming useful in tiny increments.
-8. **Yamakawa's Eternal Onigiri** — **RESOLVED.** 食べました. おいしかったです. The two-day saga ends with three words and zero self-awareness. Yamakawa has entered the post-onigiri era.
-9. **Mom's "Come Home"** — 「家に来てくださいね。」 Day 7. Every day. The pattern is now well-established enough that the player should notice it's not just flavor text — it's a persistent, unvarying request.
-10. **Mom's Eating Authority** — **NEW.** Mom ate the cake overnight. She ate the ENTIRE thing. She told you it was hers. She wasn't lying. But the speed and totality of her consumption — the moment eating became possible — establishes Mom as the supreme food authority. She made breakfast. She controls the kitchen. She decides what gets eaten and when. This dynamic will persist.
-11. **いただきます / ごちそうさまでした** — **NEW RITUAL.** From today onward, every meal begins and ends with these phrases. They are not optional. They are not flavor text. They are how eating works in this world. The player will learn them through repetition, like learning to say "please" and "thank you."
+6. **Family Possessions** — Cake = RESOLVED (eaten). Gold = continues. Car = continues (dominant).
+7. **The Water Bottle** — **RESOLVED (sort of).** The first inventory item from Day 2 is now drinkable. Five days of carrying a useless noun in your pocket. The payoff is small and satisfying. The bottle stays in inventory — infinite water. Rikizo is hydrated. The game's longest-running inventory joke becomes a comfort action.
+8. **The Empty Phone** — Email thread growing. Two contacts. Still no map, no apps. The phone is becoming useful in tiny increments.
+9. **Yamakawa's Eternal Onigiri** — **RESOLVED.** 食べました. おいしかったです. The two-day saga ends with three words and zero self-awareness. Yamakawa has entered the post-onigiri era.
+10. **Mom's "Come Home"** — 「家に来てくださいね。」 Day 7. Every day. The pattern is now well-established enough that the player should notice it's not just flavor text — it's a persistent, unvarying request.
+11. **Mom's Eating Authority** — **NEW.** Mom ate the cake overnight. She ate the ENTIRE thing. She told you it was hers. She wasn't lying. But the speed and totality of her consumption — the moment eating became possible — establishes Mom as the supreme food authority. She made breakfast. She controls the kitchen. She decides what gets eaten and when. This dynamic will persist.
+12. **いただきます / ごちそうさまでした** — **NEW RITUAL.** From today onward, every meal begins and ends with these phrases. They are not optional. They are not flavor text. They are how eating works in this world. The player will learn them through repetition, like learning to say "please" and "thank you."
 
 ---
 
