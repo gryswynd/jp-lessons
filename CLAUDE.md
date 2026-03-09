@@ -737,6 +737,91 @@ All drill items must have `explanation`. Scramble items must have `distractors` 
 
 ---
 
+### Final Interactive Review (`data/N5/reviews/N5.Final.Review.json`, `data/N4/reviews/N4.Final.Review.json`)
+
+Final interactive reviews are game-style terminal assessments covering an entire level. They use `"type": "final_interactive_review"` and must contain **exactly 8 sections in the order listed below**. The reference template is the existing file for the other level (e.g. when building the N5 Final Review, read `N4.Final.Review.json` as the structural template).
+
+**Top-level required fields:**
+
+```json
+{
+  "contentVersion": "1.0.0",
+  "id": "N5.Final.Review",
+  "title": "りきぞ N5ファイナル — N5 Final Review",
+  "meta": {
+    "phase": 5,
+    "type": "final_interactive_review",
+    "focus": "Fun, game-based final assessment covering all N5 kanji, vocabulary, and grammar from lessons N5.1–N5.18.",
+    "kanji": ["...all kanji for the level..."],
+    "estimatedMinutes": 45
+  },
+  "sections": [...]
+}
+```
+
+**The 8 required sections — all must be present, in this order:**
+
+| # | Section type | Description |
+|---|---|---|
+| 1 | `speed_round` | 15 fast-fire Q&A items testing kanji readings, vocab meanings, and grammar forms |
+| 2 | `conversation` | 4 mini-scenes following Rikizo through a day; each scene has `lines[]` and a comprehension `question` |
+| 3 | `grammar_roulette` | 5 grammar categories (e.g. particles, verb forms, adjectives) each with 3 MCQ items |
+| 4 | `scramble_relay` | 6 sentence-building legs; each has `segments[]`, `distractors[]` (3 items), and `explanation` |
+| 5 | `detective_reading` | A short reading passage split into `clues[]`, followed by 3 comprehension questions |
+| 6 | `match_pairs` | 8–16 kanji–meaning flip-card pairs; each pair has `kanji` and `meaning` |
+| 7 | `vocab_categories` | 3 rounds × 3 themed groups × 4 vocabulary words; words are kanji-containing N-level vocab |
+| 8 | `kanji_bingo` | A kanji pool (≥40 entries) for bingo card generation; each entry has `kanji`, `reading`, `meaning`; `bingoTarget: 3` |
+
+**`vocab_categories` structure:**
+
+```json
+{
+  "type": "vocab_categories",
+  "title": "🧩 Vocab Categories",
+  "emoji": "🧩",
+  "instructions": "Sort the vocabulary into the correct categories...",
+  "rounds": [
+    {
+      "groups": [
+        { "label": "👨‍👩‍👧 Family & People", "words": ["先生", "母", "父", "友"] },
+        { "label": "⏰ Time & Calendar",    "words": ["毎日", "今日", "今年", "毎週"] },
+        { "label": "🚃 Transport",          "words": ["電車", "駅", "道", "車"] }
+      ]
+    }
+  ]
+}
+```
+
+Rules: 3 rounds, 3 groups per round, 4 words per group (36 words total). No word may appear in more than one group. All words must use only taught kanji for the level.
+
+**`kanji_bingo` structure:**
+
+```json
+{
+  "type": "kanji_bingo",
+  "title": "🎰 Kanji Bingo — Grand Finale!",
+  "emoji": "🎰",
+  "instructions": "A 5×5 bingo grid with random kanji...",
+  "bingoTarget": 3,
+  "kanjiPool": [
+    { "kanji": "人", "reading": "ひと", "meaning": "person" }
+  ]
+}
+```
+
+Rules: pool size ≥ 40 entries; spread evenly across all lessons in the level; `reading` is the primary kun-reading (verb forms like "たべる" are acceptable for verb kanji); `bingoTarget: 3`.
+
+**Agent responsibilities for final interactive reviews:**
+
+| Agent | Responsibility |
+|---|---|
+| **Agent 1** | Read the other level's Final Review as the reference template. Explicitly list all 8 section types in the Content Brief. Note the `vocab_categories` theme plan (which 9 groups, 36 words) and the `kanji_bingo` pool strategy (lessons to draw from). |
+| **Agent 2** | Build all 8 sections. Check off each section type in the CB Checklist. Do not omit any section even if the brief seems to allow it. |
+| **Agent 3** | Verify all 8 section types are present in the correct order. A missing section is a **hard fail** regardless of how complete the other sections are. Count `vocab_categories` rounds (must be 3), groups per round (must be 3), words per group (must be 4). Count `kanji_bingo` pool size (must be ≥ 40). |
+| **Agent 4** | Confirm the 8-section count and order. Verify `vocab_categories` word groupings are thematically coherent. Verify `kanji_bingo` pool covers all lessons in the level, not just the early ones. |
+
+---
+
 ### Scramble Drill Items
 
 Scramble drills present the student with word chips that must be tapped in the correct order to build a Japanese sentence. They appear as `kind: "scramble"` items inside a `drills` section.
@@ -1767,6 +1852,7 @@ Adjective gtypes: `i_adj`, `na_adj`
 |---|---|
 | Lesson | `data/N5/lessons/N5.X.json` |
 | Review | `data/N4/reviews/N4.Review.X.json` |
+| Final Interactive Review | `data/N5/reviews/N5.Final.Review.json` / `data/N4/reviews/N4.Final.Review.json` |
 | N5 Compose | `data/N5/compose/compose.N5.X.json` (one file per lesson) |
 | N4 Compose | `data/N4/compose/compose.N4.X.json` (one file per lesson) |
 | Story markdown | `data/N5/stories/[slug]/story.md` |
@@ -1831,6 +1917,7 @@ These are the most frequent errors. All agents should be alert to them.
 42. **Register mixing within a conversation** — a character uses ます in one line and plain form in the next without an in-story reason. Each conversation must commit to one register throughout. Example failure: line 1 says 「今日は何を食べますか。」, line 2 responds 「ラーメン食べた。」 — the first speaker is polite, the second is casual, with no contextual justification.
 43. **Mechanical register swap (です→だ find-and-replace)** — writing casual conversations by taking polite sentences and replacing です with だ and ます with dictionary form, without adjusting sentence structure, particle usage, or adding natural casual markers (よ, ね, な, けど, し). Casual Japanese has its own rhythm — it is not polite Japanese with different verb endings. Example failure: 「わたしは学生だ。日本語を勉強する。」 reads like a textbook, not a friend talking. Natural casual: 「おれ、学生だよ。日本語勉強してるんだ。」
 44. **Overusing commands/prohibition** — packing ～ろ/～え commands and ～な prohibition into casual conversations where they don't belong. These forms are blunt/rude and used in narrow contexts (sports, male friends joking, warning signs, urgent situations). A casual conversation between friends discussing weekend plans should not have commands. Overuse makes the student think casual = aggressive.
+45. **(Final Interactive Review) Missing sections** — a `final_interactive_review` draft that omits one or more of the 8 required sections. The most commonly dropped sections are `vocab_categories` and `kanji_bingo` because they come last and are easiest to run out of context budget for. All 8 sections are required regardless of file length. Agent 2 must check off each section type in the CB Checklist before handing off. Agent 3 must count sections and reject any draft with fewer than 8.
 
 ### Agent 3 failures (caught by Agent 4)
 
