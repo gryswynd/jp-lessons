@@ -438,7 +438,7 @@ For **every** draft — not just grammar lessons — Agent 4 must perform a **Gr
    | `appearance_sou` | N5.11 | N5.11+ |
    | `potential`, `potential_negative` | N4.3 | N4.3+ |
    | `tari_form`, `nagara_form` | N4.10 | N4.10+ |
-   | `sugiru_form` | G15 | N4.5+ |
+   | `sugiru_form` | G14 | N4.5+ |
    | `conditional_ba` | G20 | N4.25+ |
    | `conditional_tara` | N4.25 | N4.25+ |
    | `passive`, `causative` | N4.31 | N4.31+ |
@@ -453,7 +453,7 @@ For **every** draft — not just grammar lessons — Agent 4 must perform a **Gr
    | ～ながら | `nagara_form` (N4.10+) | Using ～ながら in N4.5 content |
    | ～たら | `conditional_tara` (N4.25+) | Using ～たら in N4.20 content |
    | ～ば / ～ければ | `conditional_ba` (G20 / N4.25+) | Using ～ば in N4.20 content |
-   | ～すぎる | `sugiru_form` (G15 / N4.5+) | Using ～すぎます in N4.3 content |
+   | ～すぎる | `sugiru_form` (G14 / N4.5+) | Using ～すぎます in N4.3 content |
    | ～られる (passive) | `passive` (N4.31+) | Using ～られます in N4.25 content |
    | ～させる (causative) | `causative` (N4.31+) | Using ～させます in N4.25 content |
    | ～たいです | `desire_tai` (N5.8+) | Using ～たいです in N5.6 content |
@@ -528,7 +528,7 @@ Grammar reinforcement | Verb form distribution: 89% ます/ました, only 11% o
 Grammar reinforcement | Sustained use: no polite_negative (ません) instance in entire lesson — add 1 natural negative context
 Grammar reinforcement | Warmup uses only noun-です patterns; should exercise te-form with prior vocab
 Grammar reinforcement | No ましょう in 3 consecutive lessons (N5.10-N5.12) despite availability since N5.8
-Grammar reinforcement | No より/comparison in N4.7-N4.9 despite G15 teaching comparison at N4.5 — themes support preferences
+Grammar reinforcement | No より/comparison in N4.7-N4.9 despite G14 teaching comparison at N4.5 — themes support preferences
 Rewrite directive     | Add a てください request in conv 2 or 3; replace 1 ます sentence in reading with ています progressive
 ```
 
@@ -1541,7 +1541,7 @@ Each conjugation form in `conjugation_rules.json` has an `introducedIn` field sp
 | N5.11 | `appearance_sou` |
 | N4.3 | `potential`, `potential_negative` |
 | N4.10 | `tari_form`, `nagara_form` |
-| G15 (~N4.5) | `sugiru_form` |
+| G14 (~N4.5) | `sugiru_form` |
 | G20 (~N4.25) | `conditional_ba` |
 | N4.25 | `conditional_tara` |
 | N4.31 | `passive`, `causative` |
@@ -1573,9 +1573,9 @@ Each milestone groups forms that unlock together. The **active reinforcement win
 | **Adj past + adverbial** (G10) | N5.10 | N5.11–N5.12 | ≥1 past-tense adjective (`polite_past_adj`), ≥1 adverbial form (`adverbial`) | Both used naturally in descriptions and narratives |
 | **Appearance** (G11) | N5.11 | N5.12–N5.13 | ≥1 `～そうです` appearance pattern | Appears where observations or impressions are natural |
 | **Potential** (G12) | N4.3 | N4.4–N4.6 | ≥1 potential form (affirmative or negative) | Ability/possibility expressions used where natural |
-| **Comparison + degree** (G15) | N4.5 | N4.6–N4.8 | ≥1 `より` comparison, ≥1 `いちばん` superlative or `ほど` degree pattern | Comparison/degree expressions appear where natural (describing preferences, rankings, qualities) |
+| **Comparison + degree** (G14) | N4.5 | N4.6–N4.8 | ≥1 `より` comparison, ≥1 `いちばん` superlative or `ほど` degree pattern | Comparison/degree expressions appear where natural (describing preferences, rankings, qualities) |
 | **Tari + nagara** (G17) | N4.10 | N4.11–N4.13 | ≥1 `～たり～たりする` listing, ≥1 `～ながら` simultaneous action | Both patterns appear where natural |
-| **Excessive degree + noun form** (G15) | N4.5 | N4.6–N4.8 | ≥1 `～すぎる` excessive expression | ～すぎる appears where overabundance or excess is natural (eating too much, too expensive, too noisy) |
+| **Excessive degree + noun form** (G14) | N4.5 | N4.6–N4.8 | ≥1 `～すぎる` excessive expression | ～すぎる appears where overabundance or excess is natural (eating too much, too expensive, too noisy) |
 | **Limiting particles** (G16) | N4.14 | N4.15–N4.17 | ≥1 `だけ` or `しか～ない` limiting expression | Limiting particles appear where context calls for restriction or exclusion |
 | **Permission + prohibition** (G19) | N4.20 | N4.21–N4.23 | ≥1 `てもいい` permission or ≥1 `てはいけない` prohibition | Both patterns appear where rules, permissions, or social norms are discussed |
 | **Conditionals** (G20) | N4.25 | N4.26–N4.28 | ≥1 `～たら` or `～ば` conditional in conversation or reading | At least one conditional form (たら or ば) appears where natural |
@@ -1607,7 +1607,7 @@ Beyond individual conjugation forms, these **structural patterns** combine forms
 | `Verb-ましょう` (let's/shall we) | G8 | N5.9+ | Use in at least 1 conversation per lesson. Natural contexts: making plans together, suggestions, invitations. |
 | `Verb-たり Verb-たりする` (listing actions) | G17 | N4.11+ | Use in at least 1 conversation or reading per lesson. Natural contexts: describing weekends, hobbies, routines. |
 | `Verb-ながら` (while doing) | G17 | N4.11+ | Use occasionally. Natural contexts: multitasking descriptions, daily routines. |
-| `～すぎる` (excessive degree) | G15 | N4.6+ | Use occasionally. Natural contexts: eating too much, too expensive, too loud, overwork. |
+| `～すぎる` (excessive degree) | G14 | N4.6+ | Use occasionally. Natural contexts: eating too much, too expensive, too loud, overwork. |
 | `～ば / ～ければ` (ba conditional) | G20 | N4.26+ | Use occasionally. Natural contexts: general conditions, advice, logical consequences. |
 | `～たら` (if/when conditional) | G20 | N4.26+ | Use in at least 1 context per lesson. Natural contexts: plans, hypotheticals, advice. |
 | `Verb-てもいい` (permission) | G19 | N4.21+ | Use occasionally. Natural contexts: asking permission, stating what's allowed. |
@@ -1620,9 +1620,9 @@ Beyond individual conjugation forms, these **structural patterns** combine forms
 
 | Pattern | Taught in | Particles/tracking | Reinforce from | How to reinforce |
 |---|---|---|---|---|
-| `X の方が Y より ～` (comparison) | G15 | `p_yori` | N4.6+ | Use in at least 1 context per lesson. Natural contexts: comparing food, places, seasons, preferences. |
-| `X で いちばん ～` (superlative) | G15 | `v_ichiban` (vocab) | N4.6+ | Use occasionally alongside comparison. Natural contexts: "the most ～ in ～". |
-| `X は Y ほど ～ない` (negative degree) | G15 | `p_hodo` | N4.6+ | Use occasionally. Natural contexts: "X is not as ～ as Y". |
+| `X の方が Y より ～` (comparison) | G14 | `p_yori` | N4.6+ | Use in at least 1 context per lesson. Natural contexts: comparing food, places, seasons, preferences. |
+| `X で いちばん ～` (superlative) | G14 | `v_ichiban` (vocab) | N4.6+ | Use occasionally alongside comparison. Natural contexts: "the most ～ in ～". |
+| `X は Y ほど ～ない` (negative degree) | G14 | `p_hodo` | N4.6+ | Use occasionally. Natural contexts: "X is not as ～ as Y". |
 | `～だけ` (only/just) | G16 | `p_dake` | N4.15+ | Use occasionally. Natural contexts: limitations, quantities. |
 | `～しか～ない` (nothing but) | G16 | `p_shika` | N4.15+ | Use occasionally. Natural contexts: scarcity, emphasis on limits. |
 | `～ので` (because — polite) | G17 | `p_node` | N4.11+ | Use occasionally as an alternative to から. Natural contexts: giving reasons in polite speech. |
