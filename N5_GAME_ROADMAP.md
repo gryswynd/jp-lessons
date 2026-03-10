@@ -4529,7 +4529,7 @@ The new vocabulary layers onto the existing world:
 
 - **Yamakawa** at the コンビニ: 「今日はお客さんが少ないよ。」 — "Few customers today." *(少ない — new. Weekends are slow at the コンビニ. Yamakawa notices. He's always there, so he tracks traffic patterns. This is the first time he's described a *quantity* of people.)*
 
-- **Yamakawa follow-up:** 「たいてい週末は少ないんだ。ぜんぜんいない時もある。」 — "Usually weekends are sparse. Sometimes nobody at all." *(たいてい — usually. ぜんぜん — not at all. Two new adverbs deployed in one observation. Yamakawa as a small-business observer.)*
+- **Yamakawa follow-up:** 「たいてい週末は少ないんだ。ぜんぜんいない時もある。多分、みんな出かけているよ。」 — "Usually weekends are sparse. Sometimes nobody at all. Probably everyone's out." *(たいてい — usually. ぜんぜん — not at all. 多分 — probably. Three new adverbs in one observation. Yamakawa as a small-business observer, speculating about where his absent customers went. 多分 gives him uncertainty — the first time any character has hedged instead of stating facts. Yamakawa doesn't KNOW where they are. He guesses. It makes him feel more real.)*
 
 - **コンビニ items:** The player can now describe quantities. Looking at the shelves: 「おにぎりが多いです。サンドイッチは少ないです。」 — "Lots of onigiri. Few sandwiches." The world's objects, which previously could only be named and located, can now be counted comparatively.
 
@@ -4569,7 +4569,7 @@ The new vocabulary layers onto the existing world:
 
 **Open questions (Day 14):**
 
-1. **多分 placement** — 多分 (probably) was in the removed Evening section. Should it appear elsewhere on Day 14? Options: (a) Rikizo uses it internally when deciding whether to visit けん — 「多分...行く。」("Probably... I'll go."), (b) Yamakawa uses it at the コンビニ — 「多分、雨が来るよ。」("Probably rain coming."), (c) defer to natural use in Day 15+. Recommendation: (a), since it gives the player a moment of uncertainty before the action-costing choice.
+1. ✅ **多分 placement — resolved.** Moved to Yamakawa's コンビニ follow-up line: 「多分、みんな出かけているよ。」 He speculates about where his absent weekend customers went. Natural, in-character, and introduces 多分 as hedging/uncertainty.
 
 2. **Time-skip duration** — How long does the silhouette sequence play? Recommendation: 5–8 seconds. Long enough to feel like time passing, short enough to not bore. The clock advances through 3–4 visible jumps. No player input — it's a cutscene.
 
