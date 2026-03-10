@@ -3,15 +3,26 @@
   Paste this into Webflow > Page Settings > Custom Code > Before </body>
   (or into a Custom Code embed element on the page).
 
+  SERVING MODES — set window.RIKIZO_CONFIG before this script runs:
+    Gated page (new students):    window.RIKIZO_CONFIG = { mode: 'gated' };
+    Unlocked page (existing):     window.RIKIZO_CONFIG = { mode: 'free'  };
+  Default (no config set) = gated.
+
   Load order enforced by this loader:
     1. app/shared/asset-loader.js   — URL builder, manifest, fetchJSON
     2. app/shared/tts.js            — Text-to-speech with voice selection
     3. app/shared/tts-settings.js   — TTS settings modal (voice picker, speed)
     4. app/shared/progress.js       — localStorage: flags, scores, drafts
-    5. app/shared/text-processor.js — Conjugation engine, processText
-    6. app/shared/term-modal.js     — Shared term modal overlay
-    7. Feature module (on demand)   — Lesson / Practice / Review / Compose / Story / Grammar
+    5. app/shared/unlock.js         — Content gating / progressive unlock engine
+    6. app/shared/text-processor.js — Conjugation engine, processText
+    7. app/shared/term-modal.js     — Shared term modal overlay
+    8. Feature module (on demand)   — Lesson / Practice / Review / Compose / Story / Grammar
   ============================================================ -->
+
+<!-- Default serving mode — override on each Webflow page embed before this block -->
+<script>
+window.RIKIZO_CONFIG = window.RIKIZO_CONFIG || { mode: 'gated' };
+</script>
 
 <div id="app-main-container"></div>
 <script>
@@ -27,6 +38,32 @@ window.JPApp = {
   // --- STATE ---
   state: {
     flags: JSON.parse(localStorage.getItem('k-flags') || '{}')
+  },
+
+  // --- INLINE GATE CHECK (works before unlock.js loads) ---
+  // Reads localStorage directly so the menu can be rendered immediately on init.
+  _isModuleVisible: function(module) {
+    var cfg = window.RIKIZO_CONFIG;
+    if (cfg && cfg.mode === 'free') return true;
+    // Delegate to unlock.js once loaded.
+    if (window.JPShared && window.JPShared.unlock) {
+      return window.JPShared.unlock.isModuleVisible(module);
+    }
+    // Inline fallback (mirrors unlock.js logic using raw localStorage).
+    var scores    = JSON.parse(localStorage.getItem('k-lesson-scores')    || '{}');
+    var completed = JSON.parse(localStorage.getItem('k-lesson-completed') || '{}');
+    var pass = function(id) { return (scores[id] || 0) >= 75; };
+    var done = function(id) { return !!completed[id]; };
+    switch (module) {
+      case 'lesson':   return true;
+      case 'grammar':  return done('N5.1');
+      case 'practice': return done('N5.1');
+      case 'compose':  return pass('N5.1');
+      case 'game':     return pass('N5.1');
+      case 'story':    return pass('N5.2');
+      case 'review':   return pass('N5.2');
+      default:         return false;
+    }
   },
 
   // --- HELPER: Fetch and inject a JS module from GitHub raw ---
@@ -65,6 +102,7 @@ window.JPApp = {
 
   // --- RENDER MENU ---
   renderMenu: function() {
+    var self = this;
     this.container.innerHTML = '';
     var style = '<style>' +
       '.jp-main-menu{width:100%;max-width:600px;margin:0 auto;' +
@@ -82,41 +120,46 @@ window.JPApp = {
       'transform:rotate(8deg);box-shadow:0 2px 8px rgba(0,0,0,0.25);' +
       'letter-spacing:0.3px;white-space:nowrap;pointer-events:none;}' +
       '</style>';
+
+    // Helper — build a module button or nothing if gated+locked.
+    // clickMode: the mode string passed to JPApp.launch()
+    // Returns an HTML string or '' if the module is hidden.
+    function btn(clickMode, borderColor, titleColor, iconAndTitle, desc, wrap) {
+      if (!self._isModuleVisible(clickMode)) return '';
+      var inner =
+        '<div class="jp-menu-btn" onclick="JPApp.launch(\'' + clickMode + '\')" style="border-top:3px solid ' + borderColor + ';">' +
+          '<div class="jp-menu-title" style="color:' + titleColor + ';">' + iconAndTitle + '</div>' +
+          '<div class="jp-menu-desc">' + desc + '</div>' +
+        '</div>';
+      if (wrap) {
+        return '<div class="jp-game-wrap">' + inner + wrap + '</div>';
+      }
+      return inner;
+    }
+
     var html = style +
       '<div class="jp-main-menu" style="position:relative;">' +
         '<button onclick="JPApp.openTtsSettings()" title="Voice Settings" style="position:absolute;top:15px;right:15px;background:rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.1);color:#666;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1.3rem;display:flex;align-items:center;justify-content:center;padding:0;">\u2699</button>' +
         '<h1 style="color:#2f3542;font-weight:900;">\uD83C\uDDEF\uD83C\uDDF5 Japanese Master</h1>' +
+        // Lessons — always visible
         '<div class="jp-menu-btn" onclick="JPApp.launch(\'lesson\')" style="border-top:3px solid #4e54c8;">' +
           '<div class="jp-menu-title" style="color:#4e54c8;">\uD83D\uDCDA Lessons</div>' +
           '<div class="jp-menu-desc">Structured paths &amp; reading</div>' +
         '</div>' +
-        '<div class="jp-menu-btn" onclick="JPApp.launch(\'grammar\')" style="border-top:3px solid #16A34A;">' +
-          '<div class="jp-menu-title" style="color:#16A34A;">\uD83C\uDF3F Grammar Garden</div>' +
-          '<div class="jp-menu-desc">Particles, conjugation &amp; sentence patterns</div>' +
-        '</div>' +
-        '<div class="jp-menu-btn" onclick="JPApp.launch(\'practice\')" style="border-top:3px solid #DC2626;">' +
-          '<div class="jp-menu-title" style="color:#DC2626;">\uD83E\uDD4B Dojo</div>' +
-          '<div class="jp-menu-desc">Flashcards &amp; Quizzes</div>' +
-        '</div>' +
-        '<div class="jp-menu-btn" onclick="JPApp.launch(\'compose\')" style="border-top:3px solid #00897B;">' +
-          '<div class="jp-menu-title" style="color:#00897B;">\u270F\uFE0F Compose</div>' +
-          '<div class="jp-menu-desc">Write Japanese with guided prompts</div>' +
-        '</div>' +
-        '<div class="jp-menu-btn" onclick="JPApp.launch(\'story\')" style="border-top:3px solid #D97706;">' +
-          '<div class="jp-menu-title" style="color:#D97706;">\uD83D\uDCD6 Stories</div>' +
-          '<div class="jp-menu-desc">Read Japanese stories with furigana</div>' +
-        '</div>' +
-        '<div class="jp-menu-btn" onclick="JPApp.launch(\'review\')" style="border-top:3px solid #7C3AED;">' +
-          '<div class="jp-menu-title" style="color:#7C3AED;">\uD83D\uDCDD Review</div>' +
-          '<div class="jp-menu-desc">Assessment &amp; Drills</div>' +
-        '</div>' +
-        '<div class="jp-game-wrap">' +
-          '<div class="jp-menu-btn" onclick="JPApp.launch(\'game\')" style="border-top:3px solid #F48FB1;">' +
-            '<div class="jp-menu-title" style="color:#C2185B;">\uD83C\uDFAE Rikizo\'s Adventures</div>' +
-            '<div class="jp-menu-desc">Explore interactive Japanese adventures</div>' +
-          '</div>' +
-          '<div class="jp-construction-sticker">\uD83D\uDEA7 Under Construction</div>' +
-        '</div>' +
+        // Grammar Garden — unlocks on any N5.1 completion
+        btn('grammar', '#16A34A', '#16A34A', '\uD83C\uDF3F Grammar Garden', 'Particles, conjugation &amp; sentence patterns') +
+        // Dojo — unlocks on any N5.1 completion
+        btn('practice', '#DC2626', '#DC2626', '\uD83E\uDD4B Dojo', 'Flashcards &amp; Quizzes') +
+        // Compose — unlocks on N5.1 ≥75%
+        btn('compose', '#00897B', '#00897B', '\u270F\uFE0F Compose', 'Write Japanese with guided prompts') +
+        // Stories — unlocks on N5.2 ≥75%
+        btn('story', '#D97706', '#D97706', '\uD83D\uDCD6 Stories', 'Read Japanese stories with furigana') +
+        // Review — unlocks on N5.2 ≥75%
+        btn('review', '#7C3AED', '#7C3AED', '\uD83D\uDCDD Review', 'Assessment &amp; Drills') +
+        // Game — unlocks on N5.1 ≥75% (Under Construction sticker)
+        btn('game', '#F48FB1', '#C2185B', '\uD83C\uDFAE Rikizo\'s Adventures', 'Explore interactive Japanese adventures',
+            '<div class="jp-construction-sticker">\uD83D\uDEA7 Under Construction</div>') +
+        // Teacher Bingo — always visible (teacher tool, no gate)
         '<div class="jp-game-wrap">' +
           '<div class="jp-menu-btn" onclick="JPApp.launch(\'teacher-bingo\')" style="border-top:3px solid #FF5722;background:linear-gradient(135deg,#fff 80%,#fff3e0);">' +
             '<div class="jp-menu-title" style="color:#FF5722;">\uD83C\uDFB2 Kanji Bingo Caller</div>' +
@@ -168,8 +211,9 @@ window.JPApp = {
         'app/shared/tts.js',            // 2. speak() / cancel() / voice selection
         'app/shared/tts-settings.js',   // 3. TTS settings modal (depends on 2)
         'app/shared/progress.js',       // 4. flags, scores, drafts via localStorage
-        'app/shared/text-processor.js', // 5. conjugate(), processText(), getRootTerm()
-        'app/shared/term-modal.js'      // 6. term overlay (depends on 2, 4, 5)
+        'app/shared/unlock.js',         // 5. content gating / progressive unlock
+        'app/shared/text-processor.js', // 6. conjugate(), processText(), getRootTerm()
+        'app/shared/term-modal.js'      // 7. term overlay (depends on 2, 4, 5)
       ];
       for (var i = 0; i < sharedModules.length; i++) {
         var ok = await this.loadModule(sharedModules[i]);
