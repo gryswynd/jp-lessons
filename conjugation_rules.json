@@ -466,8 +466,35 @@
     }
   },
   "potential_negative": {
-    "label": "Potential Negative",
-    "description": "Polite form expressing inability (cannot do).",
+    "label": "Potential Negative (Polite)",
+    "description": "Polite form expressing inability (cannot do). NOTE: Despite lacking a 'polite_' prefix, this is the polite negative. Legacy name — prefer polite_potential_negative for new content.",
+    "introducedIn": "N4.3",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_e",
+        "add": "ません"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "られません"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "できません",
+        "reading": "できません"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来られません",
+        "reading": "こられません"
+      }
+    }
+  },
+  "polite_potential_negative": {
+    "label": "Polite Potential Negative",
+    "description": "Polite form expressing inability (cannot do). Preferred name — identical rules to potential_negative (the legacy name).",
     "introducedIn": "N4.3",
     "rules": {
       "godan": {
@@ -1363,6 +1390,142 @@
         "type": "replace",
         "surface": "来させた",
         "reading": "こさせた"
+      }
+    }
+  },
+  "causative_passive": {
+    "label": "Causative-Passive Form",
+    "description": "Expresses being made to do something (against one's will). The causative base (あ-row + せる/させる) is treated as ichidan and receives the passive suffix られる. Introduced in G22.",
+    "introducedIn": "N4.31",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "せられる"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "させられる"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "させられる",
+        "reading": "させられる"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来させられる",
+        "reading": "こさせられる"
+      }
+    }
+  },
+  "polite_causative_passive": {
+    "label": "Polite Causative-Passive Form",
+    "description": "Polite form expressing being made to do something (against one's will).",
+    "introducedIn": "N4.31",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "せられます"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "させられます"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "させられます",
+        "reading": "させられます"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来させられます",
+        "reading": "こさせられます"
+      }
+    }
+  },
+  "sugiru_past": {
+    "label": "Excessive Degree Past (Sugita)",
+    "description": "Plain past form expressing 'too much/excessively'. すぎる is ichidan-patterned, so past = remove る + た applied to the すぎ stem.",
+    "introducedIn": "G15",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "すぎた"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "すぎた"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しすぎた",
+        "reading": "しすぎた"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "きすぎた",
+        "reading": "きすぎた"
+      },
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "すぎた"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "すぎた"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よすぎた",
+        "reading": "よすぎた"
+      }
+    }
+  },
+  "polite_sugiru_past": {
+    "label": "Polite Excessive Degree Past (Sugimashita)",
+    "description": "Polite past form expressing 'too much/excessively'.",
+    "introducedIn": "G15",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "すぎました"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "すぎました"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しすぎました",
+        "reading": "しすぎました"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "きすぎました",
+        "reading": "きすぎました"
+      },
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "すぎました"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "すぎました"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よすぎました",
+        "reading": "よすぎました"
       }
     }
   }

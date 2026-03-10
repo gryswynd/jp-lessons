@@ -438,10 +438,10 @@ For **every** draft — not just grammar lessons — Agent 4 must perform a **Gr
    | `appearance_sou` | N5.11 | N5.11+ |
    | `potential`, `polite_potential`, `potential_negative`, `plain_potential_negative`, `polite_potential_past`, `plain_potential_past` | N4.3 | N4.3+ |
    | `tari_form`, `nagara_form` | N4.10 | N4.10+ |
-   | `sugiru_form`, `polite_sugiru_form` | G15 | N4.5+ |
+   | `sugiru_form`, `polite_sugiru_form`, `sugiru_past`, `polite_sugiru_past` | G15 | N4.5+ |
    | `conditional_ba` | G20 | N4.25+ |
    | `conditional_tara` | N4.25 | N4.25+ |
-   | `passive`, `polite_passive`, `polite_passive_past`, `plain_passive_past`, `causative`, `polite_causative`, `polite_causative_past`, `plain_causative_past` | N4.31 | N4.31+ |
+   | `passive`, `polite_passive`, `polite_passive_past`, `plain_passive_past`, `causative`, `polite_causative`, `polite_causative_past`, `plain_causative_past`, `causative_passive`, `polite_causative_passive` | N4.31 | N4.31+ |
 
 2. **Structural grammar pattern scan.** Beyond tagged conjugation forms, scan the `jp` surface text for structural grammar patterns that imply knowledge of specific forms even when the individual verb tags might look in-scope. Common patterns to flag:
 
@@ -1057,6 +1057,11 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 | `polite_causative` | ～させます / ～せます (polite causative) |
 | `polite_causative_past` | ～させました / ～せました (polite past causative) |
 | `plain_causative_past` | ～させた / ～せた (plain past causative — for stories/casual) |
+| `causative_passive` | ～させられる / ～せられる (plain causative-passive — "being made to do") |
+| `polite_causative_passive` | ～させられます / ～せられます (polite causative-passive — "being made to do") |
+| `polite_potential_negative` | ～られません / ～えません (polite potential negative — properly-named alias for `potential_negative`) |
+| `sugiru_past` | ～すぎた (plain past excessive — "was too much") |
+| `polite_sugiru_past` | ～すぎました (polite past excessive — "was too much") |
 
 **Unlock schedule.** Each form is available from the grammar lesson that formally teaches it. The `introducedIn` field in `conjugation_rules.json` records this, using grammar lesson IDs (e.g. `"G6"`) or content lesson IDs (e.g. `"N5.1"`). All forms have this field. Similarly, particles in `shared/particles.json` carry an `introducedIn` field using lesson or grammar IDs.
 
@@ -1557,10 +1562,10 @@ Each conjugation form in `conjugation_rules.json` has an `introducedIn` field sp
 | N5.11 | `appearance_sou` |
 | N4.3 | `potential`, `polite_potential`, `potential_negative`, `plain_potential_negative`, `polite_potential_past`, `plain_potential_past` |
 | N4.10 | `tari_form`, `nagara_form` |
-| G15 (~N4.5) | `sugiru_form`, `polite_sugiru_form` |
+| G15 (~N4.5) | `sugiru_form`, `polite_sugiru_form`, `sugiru_past`, `polite_sugiru_past` |
 | G20 (~N4.25) | `conditional_ba` |
 | N4.25 | `conditional_tara` |
-| N4.31 | `passive`, `polite_passive`, `polite_passive_past`, `plain_passive_past`, `causative`, `polite_causative`, `polite_causative_past`, `plain_causative_past` |
+| N4.31 | `passive`, `polite_passive`, `polite_passive_past`, `plain_passive_past`, `causative`, `polite_causative`, `polite_causative_past`, `plain_causative_past`, `causative_passive`, `polite_causative_passive` |
 
 Before N5.5, only `polite_adj` and dictionary forms are available. This means N5.1–N5.4 content is limited to noun-です sentences, い-adjective+です sentences, and verbs in dictionary form. Plan sentences accordingly.
 
