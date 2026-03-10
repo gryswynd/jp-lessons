@@ -29,7 +29,7 @@
           "terms": [
             "v_kyou",
             "p_wa",
-            "v_nan",
+            "v_nani",
             "v_iro",
             "p_no",
             "v_shatsu",
@@ -49,7 +49,7 @@
             "p_kara",
             "v_gakkou",
             "p_ni",
-            { "id": "v_kuru", "form": "potential" },
+            { "id": "v_kuru", "form": "polite_potential" },
             "p_ka"
           ]
         },
@@ -221,7 +221,7 @@
             "v_oishii",
             "v_tabemono",
             "p_ga",
-            { "id": "v_tsukuru", "form": "potential" },
+            { "id": "v_tsukuru", "form": "polite_potential" },
             "p_yo"
           ]
         }
@@ -234,7 +234,7 @@
       "lines": [
         {
           "spk": "A",
-          "jp": "りきぞさん、今日は 何の 料理を 作りますか。",
+          "jp": "りきぞさん、今日は 何 の 料理を 作りますか。",
           "en": "Rikizo, what dish are you making today?",
           "terms": [
             "char_rikizo",
@@ -290,7 +290,7 @@
           "terms": [
             "v_nomimono",
             "p_mo",
-            { "id": "v_tsukuru", "form": "potential" },
+            { "id": "v_tsukuru", "form": "polite_potential" },
             "p_ka"
           ]
         },
@@ -300,7 +300,7 @@
           "en": "Yes, I can. Beef and vegetable dishes are delicious.",
           "terms": [
             "p_hai",
-            { "id": "v_tsukuru", "form": "potential" },
+            { "id": "v_tsukuru", "form": "polite_potential" },
             "p_yo",
             "v_gyuuniku",
             "p_to",
@@ -614,7 +614,7 @@
             "v_nomimono",
             "p_wo",
             { "id": "v_jouzu", "form": "adverbial" },
-            { "id": "v_tsukuru", "form": "potential" }
+            { "id": "v_tsukuru", "form": "polite_potential" }
           ]
         },
         {
@@ -669,7 +669,7 @@
             "p_wa",
             "v_nani",
             "p_wo",
-            { "id": "v_tsukuru", "form": "potential" },
+            { "id": "v_tsukuru", "form": "polite_potential" },
             "p_ka",
             { "id": "v_iroiro", "form": "attributive_na" },
             "v_tabemono",
@@ -748,7 +748,7 @@
             "v_oishii",
             "v_ryouri",
             "p_ga",
-            { "id": "v_tsukuru", "form": "potential" }
+            { "id": "v_tsukuru", "form": "polite_potential" }
           ]
         },
         {

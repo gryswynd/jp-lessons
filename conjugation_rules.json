@@ -438,6 +438,33 @@
       }
     }
   },
+  "polite_potential": {
+    "label": "Polite Potential Form",
+    "description": "Polite form expressing ability (can do).",
+    "introducedIn": "N4.3",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_e",
+        "add": "ます"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "られます"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "できます",
+        "reading": "できます"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来られます",
+        "reading": "こられます"
+      }
+    }
+  },
   "potential_negative": {
     "label": "Potential Negative",
     "description": "Polite form expressing inability (cannot do).",
