@@ -4682,9 +4682,77 @@ The walk home. The pattern from Day 13 continues: classmates who were quiet in t
 
 ---
 
+### The House Gets a Second Floor
+
+上 and 下 don't just label positions — they unlock vertical space. Until today, every building in the game has been flat. The house has rooms on one level. The デパート has floor indicators you can read (一かい、二かい) but going "up" wasn't a verb you could enact spatially. Now it is.
+
+**The staircase.** When the player returns home, there's a staircase that has been there since Day 1. It was always part of the house sprite — stairs going up, visible in the background. But there was no interaction prompt. No arrow. No way to go up. Today, an 上 arrow appears at the base of the stairs. The staircase just... became usable. Like everything else in this world, it existed before the word for it did.
+
+**Going upstairs:**
+
+> Rikizo: 「上に行きましょう！」 — "Let's go up!" *(He says "let's" to himself. The ましょう is self-directed enthusiasm. He's excited about stairs.)*
+
+**The upstairs hallway.** A narrow corridor. Three doors.
+
+1. **Door 1 (left) — Parents' room.** A closed door. The player can approach it, but it doesn't open.
+   > 「お父さんとお母さんの...」 — "Dad and Mom's..." *(Rikizo trails off. He doesn't enter his parents' room. The door is simply closed. Not locked in a game-mechanic sense — just closed, the way a teenager's parents' bedroom door is always closed. It's not his space. There's nothing performative about it. He just doesn't open it.)*
+
+2. **Door 2 (right) — The closed door.** Another door. Also closed. No name plate. No clue who lives here.
+   > 「...」 *(Nothing. Rikizo looks at the door. He doesn't say anything. He doesn't try it. There is a beat — a pause that is slightly too long. Then the player regains control. The game offers no interaction prompt for this door.)*
+
+   **Design note — the brother's door:** This is the fourth family member from Mom's 四人 count on Day 3. The player who noticed the gap (three named people, four counted) now has physical evidence: a door that belongs to nobody Rikizo will name. The door is not locked, barred, or decorated with mystery symbols. It's just a door that Rikizo won't interact with. The game's silence is louder than any cutscene. In N4, when 兄 (older brother) vocabulary arrives, this door opens. Until then, it's the most conspicuous nothing in the game.
+
+3. **Door 3 (center/end of hall) — Rikizo's room... upstairs?** The door opens. It's a small storage room. Boxes. A window with a view of the town.
+   > Rikizo: 「あ、上から町が見えますね。」 — "Ah, you can see the town from above." *(上から — from above. The view reinforces the spatial vocabulary. The player can see the town layout from a new angle — the same map that appeared on their phone yesterday, but now rendered as a window view.)*
+
+   **If the player examines the boxes:**
+   > 「何ですか...？わかりません。」 — "What is this...? I don't know." *(The boxes are the brother's things. Rikizo doesn't say this. He doesn't know whose they are, or maybe he does and won't say. The boxes are another silence.)*
+
+---
+
+### The デパート Gets Vertical
+
+The デパート already had floor markers (一かい、二かい、三かい) since Day 9. But going up was just walking past decorative floor labels. Today, with 上/下 active, the spatial relationship becomes explicit. The escalator has 上 and 下 arrows. The elevator has 上 and 下 buttons. Going up and coming down are now navigable actions, not just observed labels.
+
+**Basement (地下 — B1):**
+
+Until today, the デパート only went up. Now 下 exists, and the building goes down too. A staircase near the entrance leads to B1.
+
+> Rikizo: 「下にも何かありますか？」 — "Is there something below too?" *(も — "also/too." The building extends downward. Rikizo is genuinely surprised.)*
+
+**The basement floor.** Dimmer lighting. A different feel from the polished upstairs. Two distinct zones:
+
+1. **ゲーム corner.** Shelves of video game boxes. Console displays. This is けん's paradise — and the player's, because ゲーム has been vocabulary since N5.2.
+   > Rikizo: 「ゲームがたくさんありますね！」 — "There are so many games!" *(たくさん — lots. The shelf is stacked. Some boxes have readable titles: simple katakana names the player can sound out. Others have kanji they can't read yet — blurred by the environmental text system.)*
+
+   **If the player examines specific games:**
+   > 「このゲームは...千円です。」 — "This game is... 1,000 yen." *(Expensive for Rikizo's wallet, but browseable. The basement is a place to want things you can't afford yet.)*
+
+   > 「けんはゲームが上手です...このゲームもありますか？」 — "Ken is good at games... does he have this one too?" *(上手 callback from earlier today. Rikizo thinks of けん when he sees games. The social link is forming through shared vocabulary.)*
+
+2. **カード corner.** Glass cases with collectible cards. Shiny foil. Organized by series. The player can see them but can't name most of what's displayed.
+   > Rikizo: 「きれいですね...」 — "Pretty..." *(きれい — the same word he used on the clothing floor back on Day 9. The vocabulary for "I see something nice but can't describe it" is getting a workout.)*
+
+   **If the player approaches the card displays:**
+   > 「カード...ほしいです。」 — "Cards... I want them." *(ほしい from Day 8. Desire without vocabulary is a recurring theme. The player can want the cards but can't engage with the card game system until collectible-game vocabulary arrives — probably N4.)*
+
+   **Design note — CCG as future system:** The card displays are a seed for a collectible card game mechanic in N4. When vocabulary for card game terms arrives (対戦 "match," デッキ "deck," etc.), the basement becomes an interactive space. For now it's a window into a future the player can't access — the same pattern as the clothing floor on Day 9, but nerdier.
+
+**Clothing floor (二かい) — still decorative, now with 上/下 navigation:**
+
+The clothing floor was browse-only since Day 9. That hasn't changed — there are still no clothing words (シャツ, ズボン, etc. are N4.1+). But now the player navigates there with explicit 上 movement rather than just wandering onto the floor.
+
+> Rikizo: 「上の服は...名前がわかりません。」 — "The clothes upstairs... I don't know their names." *(服 isn't available as specific vocabulary yet, but the concept of "things you wear" is visible. The player is experiencing the vocabulary gap as a spatial experience: you can go up to the floor, but you can't shop there.)*
+
+**Design note — the デパート as vertical vocabulary progression (updated):** Day 9 established the department store as a building where each floor represents a vocabulary tier. Day 16 makes this spatial: the player physically goes 上 and 下 between tiers. The basement (games, cards) is partially accessible because ゲーム exists. The ground floor (food) is fully shoppable. The second floor (clothing) is browse-only. The third floor (electronics) is still decorative. The building is a four-tier vocabulary meter. The player can literally see how far their Japanese reaches by how high they can interact.
+
+---
+
 ### State Tracking (End of Day 16)
 
-**No new locations.** The existing world gains relative labels.
+**New accessible areas:**
+- Rikizo's house 2F: hallway with three doors (parents' room — closed, mystery door — sealed, storage room — open with town view)
+- デパート B1: ゲーム corner (browseable, purchasable), カード corner (browse-only)
 
 **No new NPCs.**
 
@@ -4692,11 +4760,30 @@ The walk home. The pattern from Day 13 continues: classmates who were quiet in t
 - `jouzu_heta_unlocked` — 上手/下手 available as character descriptors.
 - `school_week2_monday` — Attended school on the second Monday. Weekly rhythm confirmed.
 - `lee_karate` — (optional) Learned リー tried karate. +1 curiosity.
+- `house_upstairs_unlocked` — Accessed 2F of Rikizo's house. Discovered parents' room (closed) and mystery door.
+- `mystery_door_seen` — Noticed the unnamed door on 2F. +1 curiosity. Seeds brother reveal in N4.
+- `storage_room_boxes` — (optional) Examined boxes in storage room. +1 curiosity.
+- `depato_basement_unlocked` — Accessed デパート B1. Browsed games and/or cards.
+
+**Economy:**
+- デパート B1 games available for purchase (~1,000¥). First non-food, non-gift purchasable items.
 
 **Art assets:**
 | Asset | Type | Priority | Notes |
 |---|---|---|---|
 | Classroom direction scene | BG variant | Medium | Students looking right/left on すずき's command. けん looking the wrong way. |
+| House 2F hallway | Background | B (MP100) | **High** | Narrow corridor. Three doors. Soft lighting. Parents' door on left, mystery door on right, storage room at end. The mystery door should look identical to the others — no visual distinction. The absence of distinction IS the design. |
+| Storage room / town view | Background | B (MP100) | Medium | Small room with stacked boxes. Window showing bird's-eye town view — callback to phone map from Day 15. |
+| デパート B1 — game corner | Background | B (MP100) | High | Shelves of game boxes. Console display units. Slightly dim basement lighting. Neon accent lights on displays. けん would love it here. |
+| デパート B1 — card corner | Background | B (MP100) | Medium | Glass display cases with foil cards. Organized, collectible feel. Shiny. Aspirational. |
+| 上/下 navigation arrows | UI element | — | Medium | Appear at staircases/escalators when 上/下 vocabulary is active. Simple directional indicators. |
+
+**Open questions:**
+1. **Can the player buy games at the デパート B1?** Recommendation: Yes, but they're expensive (千円+). Buying a game is a significant wallet event. The purchased game could appear in Rikizo's room as a decorative object, or could be a gift for けん (social link fuel). If けん receives a game as a gift, it strengthens the friendship — a parallel to Mom's プレゼント quest from Day 8, but player-initiated rather than quest-driven.
+
+2. **Should the mystery door have any interaction at all?** Recommendation: Minimal. The player can approach it. Rikizo says nothing. There is no interaction prompt. If the player repeatedly approaches, after the 3rd attempt: 「...」 (ellipsis only). The game acknowledges the player is trying. It gives nothing. This is more unsettling than a "locked door" message because locked doors imply a key exists. This door implies something else entirely.
+
+3. **Does けん react if you tell him about the デパート basement?** Recommendation: Yes, if you visit けん after discovering B1: 「ゲーム！？下にゲームがありますか！？」 — "Games!? There are games downstairs!?" けん loses his mind. This could set up a future Day where けん is found browsing the B1 game corner instead of at his house — NPCs responding to the world the player has discovered.
 
 ---
 
