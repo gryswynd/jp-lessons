@@ -146,13 +146,13 @@
           "spk": "B",
           "jp": "はじめまして。やまかわです。よろしく おねがいします。",
           "en": "Nice to meet you. I'm Yamakawa. Pleased to meet you.",
-          "terms": ["p_hajimemashite", "g_desu", "p_yoroshiku"]
+          "terms": ["p_hajimemashite", "char_yamakawa", "g_desu", "p_yoroshiku"]
         },
         {
           "spk": "A",
           "jp": "やまかわさんは 先生ですか。",
           "en": "Are you a teacher, Yamakawa-san?",
-          "terms": ["v_san", "p_wa", "v_sensei", "g_desu", "p_ka"]
+          "terms": ["char_yamakawa", "v_san", "p_wa", "v_sensei", "g_desu", "p_ka"]
         },
         {
           "spk": "B",
@@ -164,7 +164,7 @@
           "spk": "A",
           "jp": "そうですか。やまかわさんは とても やさしいですね。",
           "en": "I see. Yamakawa-san, you seem very kind.",
-          "terms": ["p_soudesuka", "v_san", "p_wa", "v_totemo", { "id": "v_yasashii", "form": "polite_adj" }, "p_ne"]
+          "terms": ["p_soudesuka", "char_yamakawa", "v_san", "p_wa", "v_totemo", { "id": "v_yasashii", "form": "polite_adj" }, "p_ne"]
         }
       ]
     },
@@ -226,7 +226,7 @@
           "spk": "B",
           "jp": "やさしい 人です。名まえは すずきさんです。",
           "en": "A kind person. Her name is Suzuki-san.",
-          "terms": ["v_yasashii", "k_hito", "g_desu", "v_namae", "p_wa", "v_san"]
+          "terms": ["v_yasashii", "k_hito", "g_desu", "v_namae", "p_wa", "char_suzuki", "v_san"]
         },
         {
           "spk": "A",
@@ -250,7 +250,7 @@
           "spk": "B",
           "jp": "すずきさんは とても いい 人ですよ。",
           "en": "Suzuki-san is a very good person, you know.",
-          "terms": ["v_san", "p_wa", "v_totemo", "v_ii", "k_hito", "g_desu", "p_yo"]
+          "terms": ["char_suzuki", "v_san", "p_wa", "v_totemo", "v_ii", "k_hito", "g_desu", "p_yo"]
         },
         {
           "spk": "A",
@@ -336,12 +336,12 @@
         {
           "jp": "いちばん やさしい 先生は すずき先生です。",
           "en": "My kindest teacher is Suzuki-sensei.",
-          "terms": ["v_ichiban", "v_yasashii", "v_sensei", "p_wa", "g_desu"]
+          "terms": ["v_ichiban", "v_yasashii", "v_sensei", "p_wa", "char_suzuki", "g_desu"]
         },
         {
           "jp": "すずき先生は やさしい 人です。",
           "en": "Suzuki-sensei is a kind person.",
-          "terms": ["v_sensei", "p_wa", "v_yasashii", "k_hito", "g_desu"]
+          "terms": ["char_suzuki", "v_sensei", "p_wa", "v_yasashii", "k_hito", "g_desu"]
         }
       ],
       "questions": [
