@@ -237,6 +237,8 @@ window.GrammarModule = {
         .gr-slot-choices { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 8px; }
         .gr-slot-chip { padding: 8px 18px; border-radius: 20px; border: 2px solid #eee; background: white; cursor: pointer; font-family: 'Noto Sans JP', sans-serif; font-size: 1rem; font-weight: 700; transition: 0.18s; }
         .gr-slot-chip:hover { border-color: #FDCB6E; background: #FFFDE7; }
+        .gr-slot-next { display: block; margin: 16px auto 0; padding: 10px 28px; border-radius: 20px; border: none; background: #6C5CE7; color: white; font-size: 1rem; font-weight: 700; cursor: pointer; transition: 0.18s; }
+        .gr-slot-next:hover { background: #5a4bd1; }
 
         /* Pattern match */
         .gr-pm-card { background: white; border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; border: 2px solid #eee; cursor: pointer; transition: 0.2s; }
@@ -899,6 +901,10 @@ window.GrammarModule = {
         expEl.style.display = 'none';
 
         const chipsRow = el('div', 'gr-slot-choices');
+        const nextBtn = el('button', 'gr-slot-next', idx + 1 < items.length ? 'Next →' : 'Finish');
+        nextBtn.style.display = 'none';
+        nextBtn.onclick = () => { idx++; renderItem(); };
+
         let solved = false;
         (item.choices || []).forEach(ch => {
           const chip = el('button', 'gr-slot-chip', esc(ch));
@@ -906,10 +912,10 @@ window.GrammarModule = {
             if (solved) return;
             solved = true;
             blank.textContent = ch;
+            const fullSentence = (item.before || '') + ch + (item.after || '');
             if (ch === item.answer) {
               correct++; answered++;
               blank.classList.add('filled-correct');
-              speakText(item.before + ch + (item.after || ''));
             } else {
               answered++;
               blank.classList.add('filled-wrong');
@@ -920,12 +926,16 @@ window.GrammarModule = {
             expEl.style.display = 'block';
             scoreText.textContent = answered + ' / ' + items.length;
             barFill.style.width = (answered / items.length * 100) + '%';
-            setTimeout(() => { idx++; renderItem(); }, 1600);
+            const ttsBtn = el('button', 'gr-tts-btn', '🔊');
+            ttsBtn.onclick = () => speakText(fullSentence);
+            expEl.appendChild(ttsBtn);
+            nextBtn.style.display = 'block';
           };
           chipsRow.appendChild(chip);
         });
         itemDiv.appendChild(chipsRow);
         itemDiv.appendChild(expEl);
+        itemDiv.appendChild(nextBtn);
       }
       renderItem();
       return div;
