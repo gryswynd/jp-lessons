@@ -1095,7 +1095,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
   - Past negative: ～くなかった
 - Polite forms: add です (高いです, 高かったです, 高くないです, 高くなかったです)
 - **いい → よい exception:** いい conjugates as よい (よかった, よくない, よくて, etc.) — NEVER いかった, いくない
-- **Not taught here:** ～ければ conditional (G20), ～すぎる excessive (G15), ～さ noun form (G15)
+- **Not taught here:** ～ければ conditional (G20), ～すぎる excessive (G14), ～さ noun form (G14)
 
 **Recommended sections:**
 1. `grammarIntro`
@@ -1141,7 +1141,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
   - 嫌い (disliked)
   - If any of these are available in taught vocabulary, use them as examples
 - Combining adjectives: i-adj くて + na-adj で in chains
-- **Not taught here:** ～すぎる excessive (G15), ～さ noun form (G15)
+- **Not taught here:** ～すぎる excessive (G14), ～さ noun form (G14)
 
 **Recommended sections:**
 1. `grammarIntro`
@@ -1299,11 +1299,42 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-### G15 — Transitive & Intransitive Verb Pairs (自動詞・他動詞)
+### G15 — Limiting Particles (だけ, しか, ばかり, でも)
 
 | Field | Value |
 |---|---|
 | **ID** | `G15` |
+| **Level** | N4 |
+| **Unlocks after** | ~N4.7 (TBD) |
+| **Icon** | 🔒 |
+| **Estimated minutes** | 20 |
+| **Particles** | `だけ`, `しか`, `ばかり`, `でも` |
+
+**What to teach:**
+- だけ — just/only: 水だけ飲む (drink only water); できるだけ (as much as possible)
+- しか — firm limit, ALWAYS with negative verb: 水しか飲まない (drink nothing but water)
+- ばかり — nothing but / only: 肉ばかり食べる (eat nothing but meat); ～たばかり (just did ~)
+- でも — even / any~: 子どもでもわかる (even a child understands); 何でも (anything), いつでも (anytime)
+
+**Recommended sections:**
+1. `grammarIntro`
+2. `grammarRule` — だけ (×1)
+3. `grammarRule` — しか + negative (×1)
+4. `grammarComparison` — だけ vs しか (same meaning, different grammar)
+5. `grammarRule` — ばかり (×1)
+6. `grammarRule` — でも (×1)
+7. `annotatedExample` — limiting particles in daily life contexts
+8. `conversation` — dialogue about habits or restrictions
+9. `fillSlot` — choose だけ/しか/ばかり/でも
+10. `drills` — mixed MCQ
+
+---
+
+### G16 — Transitive & Intransitive Verb Pairs (自動詞・他動詞)
+
+| Field | Value |
+|---|---|
+| **ID** | `G16` |
 | **Level** | N4 |
 | **Unlocks after** | N4.10 |
 | **Icon** | 🔀 |
@@ -1358,37 +1389,6 @@ This is the pivotal lesson where students transition from polite-only speech to 
 10. `drills` — mixed MCQ
 
 **Available vocabulary context:** Through N4.10. Three complete pairs are available (出る/出す, 入る/入れる, 始まる/始める). Later pairs (集まる/集める N4.30, 開く/開ける N4.31, 止まる/止める N4.35) are not yet in scope but can be referenced in the grammarRule morphological-clues section as "patterns you'll see later."
-
----
-
-### G16 — Limiting Particles (だけ, しか, ばかり, でも)
-
-| Field | Value |
-|---|---|
-| **ID** | `G16` |
-| **Level** | N4 |
-| **Unlocks after** | ~N4.7 (TBD) |
-| **Icon** | 🔒 |
-| **Estimated minutes** | 20 |
-| **Particles** | `だけ`, `しか`, `ばかり`, `でも` |
-
-**What to teach:**
-- だけ — just/only: 水だけ飲む (drink only water); できるだけ (as much as possible)
-- しか — firm limit, ALWAYS with negative verb: 水しか飲まない (drink nothing but water)
-- ばかり — nothing but / only: 肉ばかり食べる (eat nothing but meat); ～たばかり (just did ~)
-- でも — even / any~: 子どもでもわかる (even a child understands); 何でも (anything), いつでも (anytime)
-
-**Recommended sections:**
-1. `grammarIntro`
-2. `grammarRule` — だけ (×1)
-3. `grammarRule` — しか + negative (×1)
-4. `grammarComparison` — だけ vs しか (same meaning, different grammar)
-5. `grammarRule` — ばかり (×1)
-6. `grammarRule` — でも (×1)
-7. `annotatedExample` — limiting particles in daily life contexts
-8. `conversation` — dialogue about habits or restrictions
-9. `fillSlot` — choose だけ/しか/ばかり/でも
-10. `drills` — mixed MCQ
 
 ---
 

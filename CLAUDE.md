@@ -1576,7 +1576,7 @@ Each milestone groups forms that unlock together. The **active reinforcement win
 | **Comparison + degree** (G14) | N4.5 | N4.6–N4.8 | ≥1 `より` comparison, ≥1 `いちばん` superlative or `ほど` degree pattern | Comparison/degree expressions appear where natural (describing preferences, rankings, qualities) |
 | **Tari + nagara** (G17) | N4.10 | N4.11–N4.13 | ≥1 `～たり～たりする` listing, ≥1 `～ながら` simultaneous action | Both patterns appear where natural |
 | **Excessive degree + noun form** (G14) | N4.5 | N4.6–N4.8 | ≥1 `～すぎる` excessive expression | ～すぎる appears where overabundance or excess is natural (eating too much, too expensive, too noisy) |
-| **Limiting particles** (G16) | N4.14 | N4.15–N4.17 | ≥1 `だけ` or `しか～ない` limiting expression | Limiting particles appear where context calls for restriction or exclusion |
+| **Limiting particles** (G15) | N4.14 | N4.15–N4.17 | ≥1 `だけ` or `しか～ない` limiting expression | Limiting particles appear where context calls for restriction or exclusion |
 | **Permission + prohibition** (G19) | N4.20 | N4.21–N4.23 | ≥1 `てもいい` permission or ≥1 `てはいけない` prohibition | Both patterns appear where rules, permissions, or social norms are discussed |
 | **Conditionals** (G20) | N4.25 | N4.26–N4.28 | ≥1 `～たら` or `～ば` conditional in conversation or reading | At least one conditional form (たら or ば) appears where natural |
 | **Passive + causative** (G21/G22) | N4.31 | N4.32–N4.34 | ≥1 passive, ≥1 causative across the lesson | Both voice patterns appear where natural |
@@ -1623,8 +1623,8 @@ Beyond individual conjugation forms, these **structural patterns** combine forms
 | `X の方が Y より ～` (comparison) | G14 | `p_yori` | N4.6+ | Use in at least 1 context per lesson. Natural contexts: comparing food, places, seasons, preferences. |
 | `X で いちばん ～` (superlative) | G14 | `v_ichiban` (vocab) | N4.6+ | Use occasionally alongside comparison. Natural contexts: "the most ～ in ～". |
 | `X は Y ほど ～ない` (negative degree) | G14 | `p_hodo` | N4.6+ | Use occasionally. Natural contexts: "X is not as ～ as Y". |
-| `～だけ` (only/just) | G16 | `p_dake` | N4.15+ | Use occasionally. Natural contexts: limitations, quantities. |
-| `～しか～ない` (nothing but) | G16 | `p_shika` | N4.15+ | Use occasionally. Natural contexts: scarcity, emphasis on limits. |
+| `～だけ` (only/just) | G15 | `p_dake` | N4.15+ | Use occasionally. Natural contexts: limitations, quantities. |
+| `～しか～ない` (nothing but) | G15 | `p_shika` | N4.15+ | Use occasionally. Natural contexts: scarcity, emphasis on limits. |
 | `～ので` (because — polite) | G17 | `p_node` | N4.11+ | Use occasionally as an alternative to から. Natural contexts: giving reasons in polite speech. |
 
 ### Reinforcement in warmups
