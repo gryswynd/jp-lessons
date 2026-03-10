@@ -69,7 +69,7 @@ window.ComposeModule = {
             .c-menu-tag-draft { background: #e3f2fd; color: #1565c0; }
 
             /* LEVEL PICKER */
-            .c-level-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px; }
+            .c-level-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 8px; }
             .c-level-card {
                 background: white; padding: 28px 24px; border-radius: 20px; cursor: pointer;
                 box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s;
@@ -378,16 +378,26 @@ window.ComposeModule = {
             return;
         }
 
+        // Filter to only unlocked compose files
+        const unlockApi = window.JPShared && window.JPShared.unlock;
+        const visibleFiles = COMPOSE_FILES.filter(cf =>
+            !unlockApi || unlockApi.isFree() || unlockApi.isComposeUnlocked(cf)
+        );
+
         // Group compose files by level
         const byLevel = {};
-        COMPOSE_FILES.forEach(cf => {
+        visibleFiles.forEach(cf => {
             const lvl = cf.level || 'Other';
             if (!byLevel[lvl]) byLevel[lvl] = [];
             byLevel[lvl].push(cf);
         });
         ComposeApp._byLevel = byLevel;
 
-        const levels = ['N5', 'N4'].filter(l => byLevel[l] && byLevel[l].length);
+        const levels = ['N5', 'N4'].filter(l => {
+            if (!byLevel[l] || !byLevel[l].length) return false;
+            if (l === 'N4' && unlockApi && !unlockApi.isFree() && !unlockApi.isN4Unlocked()) return false;
+            return true;
+        });
 
         let html = '';
         levels.forEach(level => {
@@ -1063,12 +1073,16 @@ window.ComposeModule = {
             lessonMeta = new Map();
             [...n5.lessons, ...n4.lessons].forEach(l => lessonMeta.set(l.id, { title: l.title }));
 
-            // Collect compose file paths from both levels
+            // Collect compose file paths and metadata from both levels
             const composePaths = [];
-            [n5, n4].forEach(level => {
-                if (Array.isArray(level.compose)) {
-                    level.compose.forEach(entry => {
-                        composePaths.push(typeof entry === 'string' ? entry : entry.file);
+            const composeEntryMeta = [];
+            [n5, n4].forEach((levelData, idx) => {
+                const levelName = ['N5', 'N4'][idx];
+                if (Array.isArray(levelData.compose)) {
+                    levelData.compose.forEach(entry => {
+                        const file = typeof entry === 'string' ? entry : entry.file;
+                        composePaths.push(file);
+                        composeEntryMeta.push({ unlocksAfter: entry.unlocksAfter, level: levelName });
                     });
                 }
             });
@@ -1100,8 +1114,12 @@ window.ComposeModule = {
                 if (k !== 'contentVersion') conjugationRules[k] = conjData[k];
             });
 
-            // Store compose files
-            COMPOSE_FILES = composeResults;
+            // Store compose files, merging unlocksAfter and level from manifest metadata
+            COMPOSE_FILES = composeResults.map((cf, i) => ({
+                ...cf,
+                unlocksAfter: cf.unlocksAfter || composeEntryMeta[i].unlocksAfter,
+                level: cf.level || composeEntryMeta[i].level
+            }));
 
             const loader = document.getElementById('c-loader');
             if (loader) loader.classList.add('c-hidden');
