@@ -59,7 +59,7 @@
           "id": "N5.3",
           "title": "Numbers & Money",
           "file": "data/N5/lessons/N5.3.json",
-          "unlocksAfter": "G3",
+          "unlocksAfter": "N5.Review.1",
           "kanji": [
             "一",
             "二",
@@ -94,7 +94,7 @@
           "id": "N5.5",
           "title": "Going & Places",
           "file": "data/N5/lessons/N5.5.json",
-          "unlocksAfter": "G7",
+          "unlocksAfter": "N5.Review.2",
           "kanji": [
             "行",
             "来",
@@ -107,7 +107,7 @@
           "id": "N5.6",
           "title": "Landscape & Vehicles",
           "file": "data/N5/lessons/N5.6.json",
-          "unlocksAfter": "N5.5",
+          "unlocksAfter": "G7",
           "kanji": [
             "山",
             "川",
@@ -169,7 +169,7 @@
           "id": "N5.11",
           "title": "Sky, Rain & Nature",
           "file": "data/N5/lessons/N5.11.json",
-          "unlocksAfter": "G10",
+          "unlocksAfter": "N5.Review.5",
           "kanji": [
             "空",
             "雨",
@@ -287,14 +287,14 @@
           "id": "G3",
           "title": "Core Particles II: も, と, や, から, まで",
           "file": "data/N5/grammar/G3.json",
-          "unlocksAfter": "N5.Review.1",
+          "unlocksAfter": "N5.2",
           "icon": "📌"
         },
         {
           "id": "G4",
           "title": "Core Particles III: に, で, へ",
           "file": "data/N5/grammar/G4.json",
-          "unlocksAfter": "N5.Review.2",
+          "unlocksAfter": "N5.5",
           "icon": "📌"
         },
         {
@@ -337,7 +337,7 @@
           "id": "G10",
           "title": "i-Adjective Conjugation",
           "file": "data/N5/grammar/G10.json",
-          "unlocksAfter": "N5.Review.5",
+          "unlocksAfter": "N5.10",
           "icon": "🎨",
           "estimatedMinutes": 25
         },
@@ -355,7 +355,7 @@
           "id": "N5.Review.1",
           "title": "People, Family & Days of the Week",
           "file": "data/N5/reviews/N5.Review.1.json",
-          "unlocksAfter": "N5.2"
+          "unlocksAfter": "G3"
         },
         {
           "id": "N5.Review.2",
@@ -379,7 +379,7 @@
           "id": "N5.Review.5",
           "title": "Relative Position, Weather & Energy",
           "file": "data/N5/reviews/N5.Review.5.json",
-          "unlocksAfter": "N5.10"
+          "unlocksAfter": "G10"
         },
         {
           "id": "N5.Review.6",
@@ -511,7 +511,7 @@
           "title": "My Family",
           "titleJp": "わたしのかぞく",
           "dir": "data/N5/stories/my-family",
-          "unlocksAfter": "N5.2"
+          "unlocksAfter": "G3"
         },
         {
           "id": "tanjoubi-no-keeki",
