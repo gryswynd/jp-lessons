@@ -4045,7 +4045,7 @@ dad_annoyance:  -1 (daily cooling)
 
 **All resolved:**
 
-1. **Yamakawa's text** → RESOLVED: Simplify. No 方がいい. Use: 「学校？いいよ。おれはコンビニだ。」 Save comparison grammar for G15/N4.5+.
+1. **Yamakawa's text** → RESOLVED: Simplify. No 方がいい. Use: 「学校？いいよ。おれはコンビニだ。」 Save comparison grammar for G14/N4.5+.
 
 2. **Background students** → RESOLVED: No. Empty desks are the feature. A class of 4 in a school built for hundreds. Nobody mentions it. Mirrors the town — named characters in a world that implies population but doesn't show it.
 

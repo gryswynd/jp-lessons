@@ -1095,7 +1095,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
   - Past negative: ～くなかった
 - Polite forms: add です (高いです, 高かったです, 高くないです, 高くなかったです)
 - **いい → よい exception:** いい conjugates as よい (よかった, よくない, よくて, etc.) — NEVER いかった, いくない
-- **Not taught here:** ～ければ conditional (G20), ～すぎる excessive (G15), ～さ noun form (G15)
+- **Not taught here:** ～ければ conditional (G20), ～すぎる excessive (G14), ～さ noun form (G14)
 
 **Recommended sections:**
 1. `grammarIntro`
@@ -1141,7 +1141,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
   - 嫌い (disliked)
   - If any of these are available in taught vocabulary, use them as examples
 - Combining adjectives: i-adj くて + na-adj で in chains
-- **Not taught here:** ～すぎる excessive (G15), ～さ noun form (G15)
+- **Not taught here:** ～すぎる excessive (G14), ～さ noun form (G14)
 
 **Recommended sections:**
 1. `grammarIntro`
@@ -1199,11 +1199,142 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-### G13 — Transitive & Intransitive Verb Pairs (自動詞・他動詞)
+### G13 — Give & Receive (あげる / もらう / くれる)
 
 | Field | Value |
 |---|---|
 | **ID** | `G13` |
+| **Level** | N4 |
+| **Unlocks after** | ~N4.5 (TBD) |
+| **Icon** | 🎁 |
+| **Estimated minutes** | 25 |
+| **Grammar forms** | `te_form` |
+
+**What to teach:**
+
+*The three core give/receive verbs:*
+- あげる — give (I/insider give to someone else or an outsider):
+  - わたしは友だちにプレゼントをあげます (I give a present to my friend)
+  - Direction: speaker/insider → recipient
+- くれる — give (someone gives TO me or my insider group):
+  - 友だちはわたしにプレゼントをくれます (My friend gives a present to me)
+  - Direction: giver → speaker/insider (the beneficiary perspective is "me")
+  - Key distinction: same physical transfer as あげる, but told from the receiving side's perspective
+- もらう — receive (I/insider receive from someone):
+  - わたしは友だちにプレゼントをもらいます (I receive a present from my friend)
+  - The giver is marked with に (or から for more distance)
+
+*Perspective is everything:* The same gift-giving event can be described with あげる (giver's view), くれる (receiver's view emphasizing the benefit to me), or もらう (receiver actively acquiring).
+
+*て-form + give/receive (doing something as a favor):*
+- て-form + あげる — do something for someone (you → them): 教えてあげる (I'll explain it for you)
+- て-form + くれる — someone does something for me (them → me): 教えてくれた (they explained it for me)
+- て-form + もらう — receive the benefit of someone doing something: 教えてもらった (I had them explain it to me / got them to explain)
+
+*Honorific/humble variants (introduce as reference — active use is N3+):*
+- さしあげる — humble あげる (I humbly give to a superior)
+- いただく — humble もらう (I humbly receive from a superior)
+- くださる → ください — honorific くれる (a superior gives to me); てください is the request form already taught in G7
+
+**Recommended sections:**
+1. `grammarIntro` — the Japanese "gift economy" of verbs; why directionality matters
+2. `grammarRule` — あげる (giving out from speaker/insider group)
+3. `grammarRule` — くれる (someone gives to me/insider — benefit perspective)
+4. `grammarComparison` — あげる vs くれる (same action, different perspective)
+5. `grammarRule` — もらう (I receive — active acquisition framing)
+6. `grammarTable` — full give/receive chart (plain + honorific/humble variants as reference)
+7. `grammarRule` — て-form + あげる/もらう/くれる (doing favors)
+8. `annotatedExample` — give/receive in daily scenarios (gifts, helping, favors)
+9. `conversation` — gift-giving scene, asking for help, expressing thanks
+10. `fillSlot` — choose あげる/くれる/もらう in context
+11. `drills` — mixed MCQ
+
+**Available vocabulary context:** Through ~N4.5. The verbs あげる, もらう, くれる may be written in hiragana if not yet in the glossary; add inline glosses. くださる is already known as ください from G7 — teach the connection explicitly.
+
+---
+
+### G14 — Comparison & Degree (より, ほう, ほど, くらい)
+
+| Field | Value |
+|---|---|
+| **ID** | `G14` |
+| **Level** | N4 |
+| **Unlocks after** | ~N4.5 (TBD) |
+| **Icon** | ⚖️ |
+| **Estimated minutes** | 25 |
+| **Particles** | `より`, `ほう`, `ほど`, `くらい`/`ぐらい` |
+| **Grammar forms** | `sugiru_form` |
+
+**What to teach:**
+- ほうが — the preferred/greater element: Aのほうが＋adjective (東京のほうが大きい)
+- より — the lesser element: AよりBのほうが＋adjective (東京より大阪のほうが好きです)
+- ほど — degree / negative comparison: AはBほど～ない (東京は大阪ほど暑くない = Tokyo isn't as hot as Osaka)
+- くらい / ぐらい — approximate degree: ～くらい大きい (about that big); ～時間ぐらい (about X hours)
+- ～すぎる — excessive degree (too much / too ～):
+  - Verbs: ます-stem + すぎる (食べすぎる = eat too much)
+  - i-adjectives: drop い + すぎる (高すぎる = too expensive)
+  - na-adjectives: add すぎる directly (静かすぎる = too quiet)
+  - Polite: すぎます / すぎました; negative: すぎません
+  - Note: すぎる is itself an ichidan verb and conjugates normally after the stem
+- ～さ — noun form of adjectives (abstract quality as a noun):
+  - i-adjectives: drop い + さ (高い → 高さ = height; 大きい → 大きさ = size; 速い → 速さ = speed)
+  - na-adjectives: drop な/だ + さ (静か → 静かさ = quietness; 便利 → 便利さ = convenience)
+  - Used when the quality itself is the subject/topic, not the thing described: この山の高さ (the height of this mountain)
+  - Naturally arises in comparison contexts: 二つの大きさを比べる (compare the sizes of two things)
+  - Note: ～さ is a productive suffix but not a conjugation form — it is word derivation. Only the most common instances need to appear in the glossary; it does not need a `conjugation_rules.json` entry.
+
+**Recommended sections:**
+1. `grammarIntro`
+2. `grammarRule` — ほうが pattern (×1)
+3. `grammarRule` — より pattern (×1)
+4. `grammarRule` — ほど negative comparison (×1)
+5. `grammarRule` — くらい/ぐらい approximate (×1)
+6. `grammarRule` — ～すぎる excessive degree (×1)
+7. `grammarRule` — ～さ noun form of adjectives (×1)
+8. `grammarComparison` — より vs ほど (when to use which)
+9. `annotatedExample` — comparing foods, places, activities; excessive degree and abstract quality expressions in context
+10. `conversation` — dialogue about preferences and quantities
+11. `fillSlot` — choose より/ほう/ほど/くらい/すぎる
+12. `drills` — mixed MCQ
+
+---
+
+### G15 — Limiting Particles (だけ, しか, ばかり, でも)
+
+| Field | Value |
+|---|---|
+| **ID** | `G15` |
+| **Level** | N4 |
+| **Unlocks after** | ~N4.7 (TBD) |
+| **Icon** | 🔒 |
+| **Estimated minutes** | 20 |
+| **Particles** | `だけ`, `しか`, `ばかり`, `でも` |
+
+**What to teach:**
+- だけ — just/only: 水だけ飲む (drink only water); できるだけ (as much as possible)
+- しか — firm limit, ALWAYS with negative verb: 水しか飲まない (drink nothing but water)
+- ばかり — nothing but / only: 肉ばかり食べる (eat nothing but meat); ～たばかり (just did ~)
+- でも — even / any~: 子どもでもわかる (even a child understands); 何でも (anything), いつでも (anytime)
+
+**Recommended sections:**
+1. `grammarIntro`
+2. `grammarRule` — だけ (×1)
+3. `grammarRule` — しか + negative (×1)
+4. `grammarComparison` — だけ vs しか (same meaning, different grammar)
+5. `grammarRule` — ばかり (×1)
+6. `grammarRule` — でも (×1)
+7. `annotatedExample` — limiting particles in daily life contexts
+8. `conversation` — dialogue about habits or restrictions
+9. `fillSlot` — choose だけ/しか/ばかり/でも
+10. `drills` — mixed MCQ
+
+---
+
+### G16 — Transitive & Intransitive Verb Pairs (自動詞・他動詞)
+
+| Field | Value |
+|---|---|
+| **ID** | `G16` |
 | **Level** | N4 |
 | **Unlocks after** | N4.10 |
 | **Icon** | 🔀 |
@@ -1258,137 +1389,6 @@ This is the pivotal lesson where students transition from polite-only speech to 
 10. `drills` — mixed MCQ
 
 **Available vocabulary context:** Through N4.10. Three complete pairs are available (出る/出す, 入る/入れる, 始まる/始める). Later pairs (集まる/集める N4.30, 開く/開ける N4.31, 止まる/止める N4.35) are not yet in scope but can be referenced in the grammarRule morphological-clues section as "patterns you'll see later."
-
----
-
-### G14 — Give & Receive (あげる / もらう / くれる)
-
-| Field | Value |
-|---|---|
-| **ID** | `G14` |
-| **Level** | N4 |
-| **Unlocks after** | ~N4.5 (TBD) |
-| **Icon** | 🎁 |
-| **Estimated minutes** | 25 |
-| **Grammar forms** | `te_form` |
-
-**What to teach:**
-
-*The three core give/receive verbs:*
-- あげる — give (I/insider give to someone else or an outsider):
-  - わたしは友だちにプレゼントをあげます (I give a present to my friend)
-  - Direction: speaker/insider → recipient
-- くれる — give (someone gives TO me or my insider group):
-  - 友だちはわたしにプレゼントをくれます (My friend gives a present to me)
-  - Direction: giver → speaker/insider (the beneficiary perspective is "me")
-  - Key distinction: same physical transfer as あげる, but told from the receiving side's perspective
-- もらう — receive (I/insider receive from someone):
-  - わたしは友だちにプレゼントをもらいます (I receive a present from my friend)
-  - The giver is marked with に (or から for more distance)
-
-*Perspective is everything:* The same gift-giving event can be described with あげる (giver's view), くれる (receiver's view emphasizing the benefit to me), or もらう (receiver actively acquiring).
-
-*て-form + give/receive (doing something as a favor):*
-- て-form + あげる — do something for someone (you → them): 教えてあげる (I'll explain it for you)
-- て-form + くれる — someone does something for me (them → me): 教えてくれた (they explained it for me)
-- て-form + もらう — receive the benefit of someone doing something: 教えてもらった (I had them explain it to me / got them to explain)
-
-*Honorific/humble variants (introduce as reference — active use is N3+):*
-- さしあげる — humble あげる (I humbly give to a superior)
-- いただく — humble もらう (I humbly receive from a superior)
-- くださる → ください — honorific くれる (a superior gives to me); てください is the request form already taught in G7
-
-**Recommended sections:**
-1. `grammarIntro` — the Japanese "gift economy" of verbs; why directionality matters
-2. `grammarRule` — あげる (giving out from speaker/insider group)
-3. `grammarRule` — くれる (someone gives to me/insider — benefit perspective)
-4. `grammarComparison` — あげる vs くれる (same action, different perspective)
-5. `grammarRule` — もらう (I receive — active acquisition framing)
-6. `grammarTable` — full give/receive chart (plain + honorific/humble variants as reference)
-7. `grammarRule` — て-form + あげる/もらう/くれる (doing favors)
-8. `annotatedExample` — give/receive in daily scenarios (gifts, helping, favors)
-9. `conversation` — gift-giving scene, asking for help, expressing thanks
-10. `fillSlot` — choose あげる/くれる/もらう in context
-11. `drills` — mixed MCQ
-
-**Available vocabulary context:** Through ~N4.5. The verbs あげる, もらう, くれる may be written in hiragana if not yet in the glossary; add inline glosses. くださる is already known as ください from G7 — teach the connection explicitly.
-
----
-
-### G15 — Comparison & Degree (より, ほう, ほど, くらい)
-
-| Field | Value |
-|---|---|
-| **ID** | `G15` |
-| **Level** | N4 |
-| **Unlocks after** | ~N4.5 (TBD) |
-| **Icon** | ⚖️ |
-| **Estimated minutes** | 25 |
-| **Particles** | `より`, `ほう`, `ほど`, `くらい`/`ぐらい` |
-| **Grammar forms** | `sugiru_form` |
-
-**What to teach:**
-- ほうが — the preferred/greater element: Aのほうが＋adjective (東京のほうが大きい)
-- より — the lesser element: AよりBのほうが＋adjective (東京より大阪のほうが好きです)
-- ほど — degree / negative comparison: AはBほど～ない (東京は大阪ほど暑くない = Tokyo isn't as hot as Osaka)
-- くらい / ぐらい — approximate degree: ～くらい大きい (about that big); ～時間ぐらい (about X hours)
-- ～すぎる — excessive degree (too much / too ～):
-  - Verbs: ます-stem + すぎる (食べすぎる = eat too much)
-  - i-adjectives: drop い + すぎる (高すぎる = too expensive)
-  - na-adjectives: add すぎる directly (静かすぎる = too quiet)
-  - Polite: すぎます / すぎました; negative: すぎません
-  - Note: すぎる is itself an ichidan verb and conjugates normally after the stem
-- ～さ — noun form of adjectives (abstract quality as a noun):
-  - i-adjectives: drop い + さ (高い → 高さ = height; 大きい → 大きさ = size; 速い → 速さ = speed)
-  - na-adjectives: drop な/だ + さ (静か → 静かさ = quietness; 便利 → 便利さ = convenience)
-  - Used when the quality itself is the subject/topic, not the thing described: この山の高さ (the height of this mountain)
-  - Naturally arises in comparison contexts: 二つの大きさを比べる (compare the sizes of two things)
-  - Note: ～さ is a productive suffix but not a conjugation form — it is word derivation. Only the most common instances need to appear in the glossary; it does not need a `conjugation_rules.json` entry.
-
-**Recommended sections:**
-1. `grammarIntro`
-2. `grammarRule` — ほうが pattern (×1)
-3. `grammarRule` — より pattern (×1)
-4. `grammarRule` — ほど negative comparison (×1)
-5. `grammarRule` — くらい/ぐらい approximate (×1)
-6. `grammarRule` — ～すぎる excessive degree (×1)
-7. `grammarRule` — ～さ noun form of adjectives (×1)
-8. `grammarComparison` — より vs ほど (when to use which)
-9. `annotatedExample` — comparing foods, places, activities; excessive degree and abstract quality expressions in context
-10. `conversation` — dialogue about preferences and quantities
-11. `fillSlot` — choose より/ほう/ほど/くらい/すぎる
-12. `drills` — mixed MCQ
-
----
-
-### G16 — Limiting Particles (だけ, しか, ばかり, でも)
-
-| Field | Value |
-|---|---|
-| **ID** | `G16` |
-| **Level** | N4 |
-| **Unlocks after** | ~N4.7 (TBD) |
-| **Icon** | 🔒 |
-| **Estimated minutes** | 20 |
-| **Particles** | `だけ`, `しか`, `ばかり`, `でも` |
-
-**What to teach:**
-- だけ — just/only: 水だけ飲む (drink only water); できるだけ (as much as possible)
-- しか — firm limit, ALWAYS with negative verb: 水しか飲まない (drink nothing but water)
-- ばかり — nothing but / only: 肉ばかり食べる (eat nothing but meat); ～たばかり (just did ~)
-- でも — even / any~: 子どもでもわかる (even a child understands); 何でも (anything), いつでも (anytime)
-
-**Recommended sections:**
-1. `grammarIntro`
-2. `grammarRule` — だけ (×1)
-3. `grammarRule` — しか + negative (×1)
-4. `grammarComparison` — だけ vs しか (same meaning, different grammar)
-5. `grammarRule` — ばかり (×1)
-6. `grammarRule` — でも (×1)
-7. `annotatedExample` — limiting particles in daily life contexts
-8. `conversation` — dialogue about habits or restrictions
-9. `fillSlot` — choose だけ/しか/ばかり/でも
-10. `drills` — mixed MCQ
 
 ---
 
