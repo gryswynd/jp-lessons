@@ -4244,6 +4244,8 @@ School ends. It's Friday. The bell rings and the institutional frame dissolves. 
 
 4. **けん:** 「ああ！りきぞ、水を買ってよ！」 — "Hey! Rikizo, buy me some water!" *(買って — te-form of 買う as a casual request. けん wants Rikizo to get him water. He says it like it's nothing — no please, no apology, just an assumption that friends do this. This is the first instance of the BUY-ME-SOMETHING running gag.)*
 
+**Player choice — yes or no:** The player gets a simple dialogue choice. If yes: Rikizo goes to the コンビニ, buys water, delivers it. けん: 「やった！ありがとう！」 (+1 relationship). If no: けん pouts. 「ええ〜。つまらない。」 — "Ehh. Boring." *(He uses his word. Everything he doesn't like is つまらない — books, school, and now Rikizo's refusal. He gets over it instantly. No hard feelings. No consequences. He just pouts for one line and moves on. This sets the tone for all future buy-requests: fulfilling is rewarding, refusing is free.)*
+
 **Design note — the "buy me something" running gag:** From Day 13 onward, classmates and NPCs occasionally ask Rikizo to buy things for them. The pattern reinforces 買う (N5.8) and item vocabulary in a natural, repeatable context. It starts small — けん wants water — and escalates:
 - **けん** asks for snacks, drinks, whatever. Always casual. Always unapologetic. Never says please.
 - **リー** asks politely for something specific she can't find. Her requests are earnest and she thanks you properly.
@@ -4262,23 +4264,32 @@ The day 読む arrived, the station master felt it. He stands near the bench in 
 
 **Station master interaction (3 lines):**
 
-1. **駅長:** 「おはようございます。今日は...読むことができます。でも...」 *(He trails off. He gestures at the empty rack. He pats the space where something should be.)* 「ここに...」 *(He can't finish. The word he needs doesn't exist yet. He can express 読む now — everyone can — but the THING he wants to read has no name. He mouths something. The text box shows: 「ここに...???...がないです。」 — "Here... [???]... there isn't any.")*
+1. **駅長:** 「何かを読みたいです...でも、わかりません。」 — "I want to read something... but I don't know (what)." *(読みたい — he wants to read. The verb just arrived today and the desire hit him immediately. But わかりません — he literally doesn't know. Not "I can't explain it to you" but "I don't know what it is." The vocabulary gap is HIS, not just the player's. He can feel the want but can't name the object. He gestures at the empty rack.)*
 
 2. **Rikizo:** 「何ですか？」 — "What is it?"
 
-3. **駅長:** 「...まだです。」 *(His word. But different this time. Before, まだ was about the train. Now it's about the thing he can't name. He smiles — patient as always — and sits back down. He'll wait. He's always waiting.)*
+3. **駅長:** 「わかりません...何かがほしいです。ここに。」 — "I don't know... I want something. Here." *(He pats the empty rack. He can't name it because the word doesn't exist yet. But the desire is real. The interaction ends and a **trade window** opens.)*
 
-**Quest log entry — unanswerable:**
+**The trade window:** After the conversation, a give-item interface appears — the same UI used for delivering quest items. The player can offer anything in their inventory: 水, パン, おにぎり, 本. The station master examines each offering, then shakes his head gently:
+
+- **Most items:** 「...いいえ。これじゃないです。」 — "No. It's not this."
+- **本 (book):** 「本...いいえ。本じゃないです。でも...にていますね...」 — "A book... no. It's not a book. But... it's similar..." *(にている — te-form of 似る. The closest he can get to describing a newspaper without the word. A book is LIKE the thing he wants, but not it. This is the best hint the player gets — flat, readable, not a book. What else is there?)*
+
+Nothing works. Nothing CAN work — the item doesn't exist in the game's vocabulary yet. Every subsequent visit, the player can re-open the trade window and try again. Same result until N5.18. The station master never gets frustrated. He never stops wanting. He just shakes his head gently and waits. He doesn't even look disappointed — he looks like a man who has been waiting his whole life and has made peace with it.
+
+**Design note — the trade window as a teaching tool:** The trade window does two things simultaneously. First, it gives the player agency — you're not just watching a cutscene, you're actively trying to solve a problem. The failure feels interactive, not scripted. Second, it teaches item vocabulary through negative reinforcement: every item you offer, you see its name, you see the station master reject it, and you narrow the possibility space. By the time 新聞 appears at N5.18, the player has mentally catalogued everything it ISN'T. The word arrives into a shaped absence.
+
+**Quest log entry:**
 
 > ◻ 駅長の「???」: 駅長は何かを読みたいです。でも、何？ (Day 13 → ???)
 
-The quest sits in the log. The player can't complete it because they don't know what the station master wants. The word 新聞 doesn't exist until N5.18 — five days away. The quest marker stays, unresolvable. Every time the player visits the station, the empty rack is there. The station master glances at it. He doesn't repeat the request — he said it once, and he'll wait.
+The quest sits in the log. The player can't complete it because neither they nor the station master know what he wants. The word 新聞 doesn't exist until N5.18 — five days away. The quest marker stays, unresolvable. Every visit, the empty rack is there. The trade window is always available. The station master always shakes his head.
 
 **Day 18 resolution (forward reference):** When 新聞 (newspaper) arrives at N5.18, the quest becomes completable. The player buys a 新聞 at the コンビニ (買う, N5.8) and brings it to the station. The station master receives it. He unfolds it. He sits down on the bench. He reads.
 
 A man who has been waiting since Day 5. Who has said まだ to everything. Who watched the train arrive and couldn't ride it. Who sat in an empty waiting room through rain and sun. Now he has something to do while he waits. He reads the newspaper. It's the most mundane, human, beautiful completion of any quest in the game. The train still doesn't move. He still waits. But now he has something to read. The station feels less empty. A newspaper rack, filled. A bench, occupied by a man reading. The station has life.
 
-**Design note — wait-to-complete quests:** This is the game's second major deferred quest (after the notebook, Day 9 → Day 13). But where the notebook quest was deferred by a missing VERB (書く), this one is deferred by a missing NOUN (新聞). The player has all the grammar — they can express "want to read" (読みたいです), "to buy" (買う), and they can physically walk to the store. What they lack is the WORD for the object. The vocabulary gap IS the game mechanic. When 新聞 finally unlocks, the player doesn't learn a new action — they learn a new THING. And they already know exactly what to do with it. Five days of waiting, then: buy newspaper, give to station master, done. The delay makes the completion feel earned — and the payoff is a man quietly reading the paper. No fanfare. Just life.
+**Design note — wait-to-complete quests:** This is the game's second major deferred quest (after the notebook, Day 9 → Day 13). But where the notebook quest was deferred by a missing VERB (書く), this one is deferred by a missing NOUN (新聞). The player has all the tools — 買う (buy), the コンビニ (store), the trade window (delivery interface). What they lack is the WORD for the object. The vocabulary gap IS the game mechanic. And unlike the notebook quest (which was passive — you just waited for 書く), this quest is ACTIVE. The trade window invites you to keep trying. You offer 水. No. パン. No. 本. "Similar, but no." Every failure teaches you what it isn't. When 新聞 finally unlocks at N5.18, the player doesn't learn a new action — they learn a new THING. And they already know exactly what to do with it, because they've been trying to do it for five days. Buy newspaper, open trade window, offer it. He takes it. He reads it. Done. The delay makes the completion feel earned — and the payoff is a man quietly reading the paper. No fanfare. Just life.
 
 **Design note — the rack as environmental storytelling:** The empty newspaper rack persists in the station from Day 13 onward. It's the visual equivalent of the station master's まだ — something that should be full but isn't. Before Day 18, the player can examine it: 「何かのラック...でも、何もないです。」 ("Some kind of rack... but nothing.") After Day 18, the rack has newspapers in it. One small object, resolved. The station feels incrementally more like a real station.
 
@@ -4402,13 +4413,13 @@ Light asset day — most environments were built for Day 12. Day 13 is variant a
 
 ### Open Questions for Day 13
 
-1. **Station master's rack — how explicit?** Current design: he gestures and trails off with「???」in the text box. Alternative: thought bubble with a blurred/unreadable item sprite (the newspaper, but illegible). When 新聞 unlocks at N5.18, the thought bubble resolves into a clear image. Recommendation: thought bubble with blur — the player literally can't "read" the image, mirroring the vocabulary gap.
+1. ✅ **Station master's rack — resolved.** He says わかりません (he doesn't know what he wants), then a trade window opens. Player can try offering any item. 本 gets the closest response: 「にていますね...」("it's similar..."). Everything else is a gentle 「これじゃないです」. Trade window reopens every visit until N5.18.
 
-2. **Buy-me-something gag — refusal?** Can the player say no to けん? Recommendation: yes, always. Ambient request — no consequences for ignoring. Fulfilling = +1 relationship. Refusing = nothing. Same calculus as real friendships.
+2. ✅ **Buy-me-something refusal — resolved.** Player can say no. けん pouts:「ええ〜。つまらない。」 Gets over it instantly. No consequences. Fulfilling = +1 relationship, refusing = nothing.
 
 3. **けん's Saturday invite** — Deferred to Day 14 morning phone message: 「りきぞ！ゲームしない？」 Avoids temporal vocabulary (no 明日). Seeds Day 14 activity.
 
-4. **Station master quest — intermediate hints?** Between Day 13 and Day 18, should he give additional clues? Recommendation: no. He said it once. He'll wait. The rack is the hint — it's there every visit. His silence makes the eventual delivery more meaningful. He trusted you to figure it out.
+4. **Station master quest — intermediate hints?** Between Day 13 and Day 18, the trade window IS the hint. No additional dialogue needed. The player's repeated failures with the trade window build the shaped absence that 新聞 fills. His patience is the design.
 
 ---
 
