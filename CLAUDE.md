@@ -430,18 +430,18 @@ For **every** draft — not just grammar lessons — Agent 4 must perform a **Gr
    | `polite_masu`, `polite_mashita`, `polite_negative`, `polite_past_negative` | N5.5 | N5.5+ |
    | `te_form`, `polite_negative_te` | N5.5 | N5.5+ |
    | `plain_past` | N5.5 | N5.5+ |
-   | `desire_tai`, `desire_tai_negative`, `polite_volitional_mashou` | N5.8 | N5.8+ |
+   | `desire_tai`, `desire_tai_negative`, `polite_desire_tai_negative`, `polite_volitional_mashou` | N5.8 | N5.8+ |
    | `plain_volitional` | G9 | N5.10+ |
    | `plain_negative`, `plain_past_negative` | N5.9 | N5.9+ |
-   | `polite_past_adj`, `adverbial` | N5.10 | N5.10+ |
-   | `plain_past_adj`, `plain_desire_tai`, `plain_appearance_sou` | G9 | N5.10+ |
+   | `polite_past_adj`, `adverbial`, `desire_tai_past` | N5.10 | N5.10+ |
+   | `plain_past_adj`, `plain_desire_tai`, `plain_appearance_sou`, `plain_desire_tai_past` | G9 | N5.10+ |
    | `appearance_sou` | N5.11 | N5.11+ |
-   | `potential`, `potential_negative` | N4.3 | N4.3+ |
+   | `potential`, `polite_potential`, `potential_negative`, `plain_potential_negative`, `polite_potential_past`, `plain_potential_past` | N4.3 | N4.3+ |
    | `tari_form`, `nagara_form` | N4.10 | N4.10+ |
-   | `sugiru_form` | G15 | N4.5+ |
+   | `sugiru_form`, `polite_sugiru_form` | G15 | N4.5+ |
    | `conditional_ba` | G20 | N4.25+ |
    | `conditional_tara` | N4.25 | N4.25+ |
-   | `passive`, `causative` | N4.31 | N4.31+ |
+   | `passive`, `polite_passive`, `polite_passive_past`, `plain_passive_past`, `causative`, `polite_causative`, `polite_causative_past`, `plain_causative_past` | N4.31 | N4.31+ |
 
 2. **Structural grammar pattern scan.** Beyond tagged conjugation forms, scan the `jp` surface text for structural grammar patterns that imply knowledge of specific forms even when the individual verb tags might look in-scope. Common patterns to flag:
 
@@ -1025,11 +1025,19 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 | `plain_negative` | ～ない |
 | `plain_past_negative` | ～なかった |
 | `te_form` | ～て / ～で |
-| `potential` | ～られる / ～える |
-| `potential_negative` | ～られません |
+| `potential` | ～られる / ～える (plain potential — can do) |
+| `polite_potential` | ～られます / ～えます (polite potential — can do) |
+| `potential_negative` | ～られません / ～えません (polite potential negative — cannot do) |
+| `plain_potential_negative` | ～られない / ～えない (plain potential negative — casual "can't do") |
+| `polite_potential_past` | ～られました / ～えました (polite past potential — was able to do) |
+| `plain_potential_past` | ～られた / ～えた (plain past potential — casual "could do") |
 | `adverbial` | ～く / ～に |
 | `desire_tai` | ～たいです (polite desire) |
 | `plain_desire_tai` | ～たい (plain desire — casual speech and subordinate clauses) |
+| `desire_tai_negative` | ～たくない (plain negative desire — I don't want to) |
+| `polite_desire_tai_negative` | ～たくないです (polite negative desire — I don't want to) |
+| `desire_tai_past` | ～たかったです (polite past desire — I wanted to) |
+| `plain_desire_tai_past` | ～たかった (plain past desire — casual "I wanted to") |
 | `appearance_sou` | ～そうです (polite appearance) |
 | `plain_appearance_sou` | ～そうだ (plain appearance — casual speech) |
 | `polite_volitional_mashou` | ～ましょう |
@@ -1037,14 +1045,22 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 | `conditional_ba` | ～ば / ～ければ |
 | `tari_form` | ～たり (listing representative actions: ～たり～たりする) |
 | `polite_negative_te` | ～ないで (negative te-form: "without doing"; ないでください = "please don't") |
-| `desire_tai_negative` | ～たくない / ～たくないです (don't want to) |
-| `sugiru_form` | ～すぎる (too much / excessively — verbs and adjectives) |
+| `sugiru_form` | ～すぎる (plain excessive degree — too much / excessively) |
+| `polite_sugiru_form` | ～すぎます (polite excessive degree — too much / excessively) |
 | `nagara_form` | ～ながら (while doing — simultaneous actions) |
 | `conditional_tara` | ～たら / ～だったら (if / when — completed-action conditional) |
-| `passive` | ～られる / ～れる (passive — being acted upon) |
-| `causative` | ～させる / ～せる (causative — making/letting someone do) |
+| `passive` | ～られる / ～れる (plain passive — being acted upon) |
+| `polite_passive` | ～られます / ～れます (polite passive) |
+| `polite_passive_past` | ～られました / ～れました (polite past passive) |
+| `plain_passive_past` | ～られた / ～れた (plain past passive — for stories/casual) |
+| `causative` | ～させる / ～せる (plain causative — making/letting someone do) |
+| `polite_causative` | ～させます / ～せます (polite causative) |
+| `polite_causative_past` | ～させました / ～せました (polite past causative) |
+| `plain_causative_past` | ～させた / ～せた (plain past causative — for stories/casual) |
 
-**Unlock schedule.** Each form is available from the grammar lesson that formally teaches it. The `introducedIn` field in `conjugation_rules.json` records this, using grammar lesson IDs (e.g. `"G6"`) or content lesson IDs (e.g. `"N5.1"`). All 25 forms have this field. Similarly, particles in `shared/particles.json` carry an `introducedIn` field using lesson or grammar IDs.
+**Unlock schedule.** Each form is available from the grammar lesson that formally teaches it. The `introducedIn` field in `conjugation_rules.json` records this, using grammar lesson IDs (e.g. `"G6"`) or content lesson IDs (e.g. `"N5.1"`). All forms have this field. Similarly, particles in `shared/particles.json` carry an `introducedIn` field using lesson or grammar IDs.
+
+**Note on `potential_negative` naming.** Despite the name, `potential_negative` produces the **polite** negative potential form (～られません / ～えません). Use `plain_potential_negative` for the plain/casual form (～られない / ～えない). This asymmetry is a legacy naming issue — do not rename to avoid breaking existing content.
 
 **Godan euphonic note.** `tari_form` and `conditional_tara` use `godan_euphonic` map types (`"map": "tari_form"` and `"map": "tara_form"`) that parallel `ta_form` but produce たり/だり and たら/だら endings respectively. The rendering engine will need these map types added alongside any future grammar module build. All ichidan, irregular, and adjective rules are fully defined in data and require no code changes.
 
@@ -1534,17 +1550,17 @@ Each conjugation form in `conjugation_rules.json` has an `introducedIn` field sp
 |---|---|
 | N5.1 | `polite_adj` |
 | N5.5 | `polite_masu`, `polite_mashita`, `polite_negative`, `polite_past_negative`, `te_form`, `polite_negative_te`, `plain_past` |
-| N5.8 | `desire_tai`, `desire_tai_negative`, `polite_volitional_mashou` |
+| N5.8 | `desire_tai`, `desire_tai_negative`, `polite_desire_tai_negative`, `polite_volitional_mashou` |
 | N5.9 | `plain_negative`, `plain_past_negative` |
-| G9 (N5.10+) | `plain_volitional`, `plain_desire_tai`, `plain_past_adj`, `plain_appearance_sou` |
-| N5.10 | `polite_past_adj`, `adverbial` |
+| G9 (N5.10+) | `plain_volitional`, `plain_desire_tai`, `plain_past_adj`, `plain_appearance_sou`, `plain_desire_tai_past` |
+| N5.10 | `polite_past_adj`, `adverbial`, `desire_tai_past` |
 | N5.11 | `appearance_sou` |
-| N4.3 | `potential`, `potential_negative` |
+| N4.3 | `potential`, `polite_potential`, `potential_negative`, `plain_potential_negative`, `polite_potential_past`, `plain_potential_past` |
 | N4.10 | `tari_form`, `nagara_form` |
-| G15 (~N4.5) | `sugiru_form` |
+| G15 (~N4.5) | `sugiru_form`, `polite_sugiru_form` |
 | G20 (~N4.25) | `conditional_ba` |
 | N4.25 | `conditional_tara` |
-| N4.31 | `passive`, `causative` |
+| N4.31 | `passive`, `polite_passive`, `polite_passive_past`, `plain_passive_past`, `causative`, `polite_causative`, `polite_causative_past`, `plain_causative_past` |
 
 Before N5.5, only `polite_adj` and dictionary forms are available. This means N5.1–N5.4 content is limited to noun-です sentences, い-adjective+です sentences, and verbs in dictionary form. Plan sentences accordingly.
 

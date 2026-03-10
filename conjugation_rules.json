@@ -492,6 +492,87 @@
       }
     }
   },
+  "plain_potential_negative": {
+    "label": "Plain Potential Negative",
+    "description": "Plain form expressing inability (can't do). Used in casual speech and subordinate clauses. Complements potential_negative (polite: 作れません) for plain contexts.",
+    "introducedIn": "N4.3",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_e",
+        "add": "ない"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "られない"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "できない",
+        "reading": "できない"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来られない",
+        "reading": "こられない"
+      }
+    }
+  },
+  "polite_potential_past": {
+    "label": "Polite Potential Past",
+    "description": "Polite past form expressing ability that existed or was exercised in the past (was able to do).",
+    "introducedIn": "N4.3",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_e",
+        "add": "ました"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "られました"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "できました",
+        "reading": "できました"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来られました",
+        "reading": "こられました"
+      }
+    }
+  },
+  "plain_potential_past": {
+    "label": "Plain Potential Past",
+    "description": "Plain past form expressing ability that existed or was exercised in the past. Used in casual speech and narratives.",
+    "introducedIn": "N4.3",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_e",
+        "add": "た"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "られた"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "できた",
+        "reading": "できた"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来られた",
+        "reading": "こられた"
+      }
+    }
+  },
   "adverbial": {
     "label": "Adverbial Form (Ku/Ni)",
     "description": "Changes the adjective into an adverb.",
@@ -807,6 +888,33 @@
       }
     }
   },
+  "polite_desire_tai_negative": {
+    "label": "Polite Negative Desire (Takunai Desu)",
+    "description": "Polite form expressing not wanting to do something (I don't want to...). Uses the ます-stem + たくないです.",
+    "introducedIn": "N5.8",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "たくないです"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "たくないです"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "したくないです",
+        "reading": "したくないです"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来たくないです",
+        "reading": "きたくないです"
+      }
+    }
+  },
   "desire_tai_negative": {
     "label": "Negative Desire (Takunai)",
     "description": "Expresses not wanting to do something (I don't want to...). Uses the ます-stem + たくない. Conjugates like an i-adjective in further negative/past forms.",
@@ -831,6 +939,60 @@
         "type": "replace",
         "surface": "きたくない",
         "reading": "きたくない"
+      }
+    }
+  },
+  "desire_tai_past": {
+    "label": "Polite Past Desire (Takatta Desu)",
+    "description": "Polite past desire form (I wanted to...). Uses the ます-stem + たかったです. Available from N5.10 when past adjective forms are taught.",
+    "introducedIn": "N5.10",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "たかったです"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "たかったです"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "したかったです",
+        "reading": "したかったです"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来たかったです",
+        "reading": "きたかったです"
+      }
+    }
+  },
+  "plain_desire_tai_past": {
+    "label": "Plain Past Desire (Takatta)",
+    "description": "Plain past desire form (I wanted to...). Uses the ます-stem + たかった. Used in casual speech. Available from G9.",
+    "introducedIn": "G9",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "たかった"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "たかった"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "したかった",
+        "reading": "したかった"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来たかった",
+        "reading": "きたかった"
       }
     }
   },
@@ -872,6 +1034,47 @@
         "type": "replace",
         "surface": "よすぎる",
         "reading": "よすぎる"
+      }
+    }
+  },
+  "polite_sugiru_form": {
+    "label": "Polite Excessive Degree (Sugimasu)",
+    "description": "Polite form expressing 'too much' or 'excessively'. Verbs use the ます-stem + すぎます; i-adjectives drop い + すぎます; na-adjectives add すぎます directly.",
+    "introducedIn": "G15",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "すぎます"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "すぎます"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しすぎます",
+        "reading": "しすぎます"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "きすぎます",
+        "reading": "きすぎます"
+      },
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "すぎます"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "すぎます"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よすぎます",
+        "reading": "よすぎます"
       }
     }
   },
@@ -998,6 +1201,168 @@
         "type": "replace",
         "surface": "来させる",
         "reading": "こさせる"
+      }
+    }
+  },
+  "polite_passive": {
+    "label": "Polite Passive Form",
+    "description": "Polite form expressing that the subject is acted upon by an external agent (is done to). RU-verbs drop る and add られます; U-verbs shift to the あ-row and add れます.",
+    "introducedIn": "N4.31",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "れます"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "られます"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "されます",
+        "reading": "されます"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来られます",
+        "reading": "こられます"
+      }
+    }
+  },
+  "polite_passive_past": {
+    "label": "Polite Passive Past",
+    "description": "Polite past form expressing that the subject was acted upon by an external agent.",
+    "introducedIn": "N4.31",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "れました"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "られました"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "されました",
+        "reading": "されました"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来られました",
+        "reading": "こられました"
+      }
+    }
+  },
+  "plain_passive_past": {
+    "label": "Plain Passive Past",
+    "description": "Plain past form expressing that the subject was acted upon. Used in casual speech and narrative prose (stories).",
+    "introducedIn": "N4.31",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "れた"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "られた"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "された",
+        "reading": "された"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来られた",
+        "reading": "こられた"
+      }
+    }
+  },
+  "polite_causative": {
+    "label": "Polite Causative Form",
+    "description": "Polite form expressing making or letting someone do an action. RU-verbs drop る and add させます; U-verbs shift to the あ-row and add せます.",
+    "introducedIn": "N4.31",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "せます"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "させます"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "させます",
+        "reading": "させます"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来させます",
+        "reading": "こさせます"
+      }
+    }
+  },
+  "polite_causative_past": {
+    "label": "Polite Causative Past",
+    "description": "Polite past form expressing making or letting someone do an action.",
+    "introducedIn": "N4.31",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "せました"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "させました"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "させました",
+        "reading": "させました"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来させました",
+        "reading": "こさせました"
+      }
+    }
+  },
+  "plain_causative_past": {
+    "label": "Plain Causative Past",
+    "description": "Plain past form expressing making or letting someone do an action. Used in casual speech and narrative prose.",
+    "introducedIn": "N4.31",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "せた"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "させた"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "させた",
+        "reading": "させた"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来させた",
+        "reading": "こさせた"
       }
     }
   }
