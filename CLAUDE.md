@@ -203,6 +203,7 @@ CB CHECKLIST
 [ ] (Stories) g_desu (です) is tagged in terms.json when the story uses です
 [ ] (Stories) terms.json keys match exactly how each word appears in story.md (including kana-only spellings of words with untaught kanji)
 [ ] (Stories) No particle or copula occurrence is left untagged / unclickable
+[ ] (Grammar) Every grammar-specific section uses the correct field names — annotatedExample uses `examples[]` not `parts[]`; grammarComparison uses `items[]` not `itemA`/`itemB` — verified against the Grammar JSON schema in Content Types
 ```
 
 ---
@@ -599,6 +600,107 @@ Never silently forward content without the accompanying documents. If an agent d
 **VocabList completeness.** The vocabList must cover **every** glossary entry (across `glossary.N5.json`, `glossary.N4.json`, and `shared/particles.json`) whose `lesson_ids` equals the current lesson. This includes nouns, verbs, adjectives, adverbs, pronouns, particles, set phrases, and grammar items — not just the main content words. Agent 1 must enumerate the full target ID list from the glossary files as part of the Content Brief so Agent 2 can verify completeness in the CB Checklist. Agent 3 must confirm every such entry is present in a vocabList group.
 
 **Drill types:** `mcq` and `scramble`. For MCQ: choices array must have exactly 4 options; the `answer` string must exactly match one of the `choices` strings. For scramble: see [Scramble Drill Items](#scramble-drill-items) in the Review section — scramble drills appear in reviews only, not in lessons.
+
+---
+
+### Grammar JSON (`data/N5/grammar/G1.json` … `data/N4/grammar/G23.json`)
+
+Grammar lesson files use `"type": "grammar"` at the top level and are rendered by `Grammar.js`. Each section type has a specific field schema — **using the wrong field names causes the section to render empty without throwing an error.** Agent 2 must use the exact field names below.
+
+**Top-level required fields:**
+
+```json
+{
+  "contentVersion": "1.0.0",
+  "id": "G1",
+  "type": "grammar",
+  "title": "...",
+  "meta": {
+    "level": "N5",
+    "unlocksAfter": "N5.X",
+    "focus": "...",
+    "estimatedMinutes": N,
+    "particles": ["p_foo"],
+    "grammarForms": ["te_form"],
+    "icon": "🔤"
+  },
+  "sections": [...]
+}
+```
+
+**Grammar section types and their required fields:**
+
+| Section type | Required fields | Notes |
+|---|---|---|
+| `grammarIntro` | `type`, `title`, `icon`, `summary`, `whyItMatters`, `youWillLearn[]` | Always the first section. |
+| `grammarRule` | `type`, `id`, `pattern[]`, `meaning`, `explanation`, `notes[]`, `examples[]` | Core teaching unit. Each `example` has `parts[]`, `en`, `breakdown`. Each `part` has `text`, `role`, `gloss`. |
+| `grammarTable` | `type`, `title`, `description`, `tableType`, `headers[]`, `rows[]` | Each row has `label`, `cells[]`, `meaning`. Optional `notes[]`. |
+| `grammarComparison` | `type`, `title`, `items[]`, optional `tip` | **`items[]` — NOT `itemA`/`itemB`.** Each item: `label`, `color`, `points[]`, optional `example`. |
+| `annotatedExample` | `type`, `title`, `examples[]` | **`examples[]` — NOT `sentence`/`parts[]`.** Each example: `parts[]`, `en`, optional `context`, optional `note`. Each `part`: `text`, `role`, `gloss`. |
+| `conjugationDrill` | `type`, `title`, `instructions`, `items[]` | Each item: `verb`, `type`, `reading`, `targetForm`, `answer`, `answerReading`, `hint`, `choices[]`. |
+| `patternMatch` | `type`, `title`, `instructions`, `items[]` | Each item: `sentence`, `answer` (bool), `explanation`. |
+| `sentenceTransform` | `type`, `title`, `instructions`, `items[]` | Each item: `given`, `givenReading`, `targetLabel`, `answer`, `answerReading`, `hint`. |
+| `fillSlot` | `type`, `title`, `instructions`, `items[]` | Each item: `sentence`, `translation`, `choices[]`, `answer`, `explanation`. |
+| `conversation` | `type`, `title`, `context`, `lines[]` | Same as lesson conversations. Each line: `spk`, `jp`, `en`, `terms[]`. |
+| `drills` | `type`, `title`, `instructions`, `items[]` | Same as lesson drills. Every item **must** have `explanation`. |
+
+**Critical schema rules — the two most common silent-failure mistakes:**
+
+**`annotatedExample` — must use `examples[]`:**
+```json
+{
+  "type": "annotatedExample",
+  "title": "...",
+  "examples": [
+    {
+      "context": "Optional label shown above the sentence card",
+      "parts": [
+        { "text": "電車は", "role": "topic", "gloss": "train (topic: は)" },
+        { "text": "長かったです。", "role": "predicate", "gloss": "was long (長い → 長かったです)" }
+      ],
+      "en": "The train was long.",
+      "note": "Optional explanation shown below the card."
+    }
+  ]
+}
+```
+
+**Never use** `"sentence"`, `"translation"`, or a top-level `"parts"` array — those fields are ignored by the renderer and the section will appear empty.
+
+**`grammarComparison` — must use `items[]`:**
+```json
+{
+  "type": "grammarComparison",
+  "title": "...",
+  "items": [
+    {
+      "label": "あげる",
+      "color": "verb",
+      "points": ["The speaker is the GIVER", "Direction: outward"],
+      "example": {
+        "parts": [
+          { "text": "わたしは", "role": "topic", "gloss": "I (topic: は)" },
+          { "text": "あげた。", "role": "predicate", "gloss": "gave (plain past)" }
+        ],
+        "en": "I gave it."
+      }
+    },
+    {
+      "label": "くれる",
+      "color": "modifier",
+      "points": ["The speaker is the RECEIVER", "Direction: inward"],
+      "example": { "parts": [...], "en": "..." }
+    }
+  ],
+  "tip": "Optional tip shown at the bottom of the comparison card."
+}
+```
+
+**Never use** `"itemA"` / `"itemB"` — those fields are ignored and the section will appear empty.
+
+**Valid `color` values for `grammarComparison` items and `grammarRule` pattern chips:** `"topic"`, `"subject"`, `"object"`, `"predicate"`, `"connector"`, `"modifier"`, `"verb"`, `"adverb"`.
+
+**Valid `role` values for `parts` in annotated examples and comparisons:** `"topic"`, `"subject"`, `"object"`, `"predicate"`, `"connector"`, `"modifier"`, `"adverb"`, `"time"`.
 
 ---
 
@@ -1969,6 +2071,7 @@ These are the most frequent errors. All agents should be alert to them.
 48. **desire_tai / plain_desire_tai conflation** — using `desire_tai` (which represents `〜たいです`, polite) for a casual/plain sentence that ends `〜たい` without です. Example: a casual conversation line `友だちに 送りたいから` is plain desire — the form is `plain_desire_tai`, not `desire_tai`. The test is simple: does the sentence actually end with `です`? If not, the form must be `plain_desire_tai`. This error is almost always found in casual conversations where the agent reached for the more familiar form string without reading the sentence ending.
 49. **Purpose construction tagged as polite_masu** — the masu-stem + に construction (買いに, 食べに, 借りに) has no form string in `conjugation_rules.json`. It must be tagged `form: null`. Tagging it as `polite_masu` is wrong — that form string means the verb IS the sentence predicate in ます form (食べます), not a purpose-direction construction (食べに行く). Agent 3 must recognize masu-stem forms used with に as purpose markers and verify they are tagged `form: null`.
 50. **Vocabulary used before glossary entry exists** — Agent 2 writes sentences using words (e.g. シャツ, 帰り, 今) and tags them with IDs without first Grep-verifying those IDs exist in the glossary. The draft then passes Agent 2's self-check ("no invented IDs" was interpreted as "no obviously fake IDs") but Agent 3 finds the IDs are missing. The correct process is: identify every content word needed for the lesson, Grep-verify each ID exists, and add any missing entries to the glossary **before** writing content that uses them. If Agent 2 discovers a missing entry mid-draft, it must stop, flag the gap in the CB Checklist, and either add the entry or restructure the sentence — never proceed with an unverified ID.
+51. **(Grammar) Wrong field names on `annotatedExample` or `grammarComparison`** — these sections silently render empty when the wrong field names are used. There is no error message; the section simply shows nothing. The renderer ignores unrecognised fields. **`annotatedExample` must use `examples[]`** (array of `{context?, parts[], en, note?}` objects) — never `sentence`, `translation`, or a top-level `parts[]`. **`grammarComparison` must use `items[]`** (array of `{label, color, points[], example?}`) — never `itemA`/`itemB`. Agent 2 must verify these field names against the Grammar JSON schema in the Content Types section before submitting. Agent 3 must check that `annotatedExample` sections have an `examples` array (not a `parts` array) and that `grammarComparison` sections have an `items` array (not `itemA`/`itemB`). A section with the wrong schema is a **hard fail** equivalent to a missing required field.
 
 ### Agent 3 failures (caught by Agent 4)
 
