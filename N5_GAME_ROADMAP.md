@@ -4595,19 +4595,9 @@ Sunday. School still closed. Rikizo explores the town — but today, the town ha
 
 Before today, the player knew locations: house, school, station, コンビニ, river. After today, the player knows where they are *relative to each other*: school is south of the station, the mountains are north, the コンビニ is east. The world gains spatial structure. Not new buildings — new labels on the buildings that already exist.
 
-**The map materializes:** This is a conceptual upgrade, not a physical one. The game map — which the player has been navigating by landmark since Day 1 — now has compass labels. North, south, east, west. The mini-map (if the game has one) adds directional indicators. Street signs (newly readable since Day 13) include directional information.
+**The phone map unlocks:** Rikizo's phone gains a map feature. When the player opens it, the town is displayed with compass labels — 北、南、東、西 — at the edges. But most of the map is white. Blank. Empty. Like a real map of an area you haven't explored, the edges fade into nothing. The town Rikizo knows occupies a small cluster in the center: house, school, station, コンビニ, river, デパート. Beyond that — white. North has mountains drawn faintly at the edge. West is completely empty. The map tells you two things simultaneously: where things are, and how much you don't know.
 
----
-
-### Morning — Dad and Directions
-
-1. **Dad:** 「東はどっちだ？」 — "Which way is east?" *(Dad quizzing Rikizo. In character: Dad is practical, he tests knowledge. 東 — east. どっち — which direction. This is Dad's version of engagement — he doesn't play games with Rikizo like けん does. He quizzes.)*
-
-2. **Rikizo:** 「あっちです。」 — "That way."
-
-3. **Dad:** 「南は？」 — "South?"
-
-4. **Dad:** 「学校は南だ。」 — "School is to the south." *(Dad orients Rikizo's mental map. South = school. He's training spatial awareness the way a dad would — through casual interrogation at breakfast.)*
+**Design note — the white map:** This mirrors real-world mapping apps when you zoom into a rural area with sparse data. The white space isn't "error" — it's honest. The game world hasn't been built there yet, and the map reflects that. As N4 opens new locations, the white fills in. The map becomes a progress tracker: how much of the world has vocabulary made visible? On Day 15, the answer is: not much. The white is bigger than the drawn. That's the point.
 
 ---
 
@@ -4637,7 +4627,7 @@ The new vocabulary layers onto existing NPC conversations. Everyone suddenly has
 **Art assets:**
 | Asset | Type | Priority | Notes |
 |---|---|---|---|
-| Map with compass labels | UI overlay | High | N/S/E/W labels added to the game map. First time directions are visually represented. |
+| Phone map screen | UI screen | **Critical** | Town map with 北/南/東/西 compass labels. Known locations clustered in center. Most of the map is white/blank — unexplored world. Mountains faintly sketched at northern edge. West completely empty. Fills in as N4 adds locations. |
 | Directional street signs | BG detail set | Medium | Signs at intersections showing 北/南/東/西. Readable now because kanji are taught. |
 
 ---
