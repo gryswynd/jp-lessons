@@ -172,17 +172,35 @@
     {
       "type": "annotatedExample",
       "title": "na-Adjectives in Context — Reading a Sentence",
-      "sentence": "花は きれいで、かわいくて、空気も きれいに なりました。",
-      "translation": "The flowers are beautiful and cute, and the air also became clean.",
-      "parts": [
-        { "text": "花は", "role": "topic", "gloss": "flowers (topic)" },
-        { "text": "きれいで、", "role": "modifier", "gloss": "beautiful and… (na-adj て-form: きれい + で)" },
-        { "text": "かわいくて、", "role": "modifier", "gloss": "cute and… (i-adj て-form: かわい + くて)" },
-        { "text": "空気も", "role": "topic", "gloss": "air also (topic + も)" },
-        { "text": "きれいに", "role": "modifier", "gloss": "cleanly (na-adj adverb: きれい + に)" },
-        { "text": "なりました。", "role": "predicate", "gloss": "became (polite past of なる)" }
-      ],
-      "breakdown": "This sentence uses three different adjective forms: (1) きれいで = na-adj て-form, linking to the next; (2) かわいくて = i-adj て-form, continuing the chain; (3) きれいに = na-adj adverb form modifying なりました. Notice how な-adj uses で for the te-form and に for the adverb — while い-adj uses くて and く."
+      "examples": [
+        {
+          "context": "な-adj て-form connector — きれいで",
+          "parts": [
+            { "text": "花は", "role": "topic", "gloss": "flowers (topic: は)" },
+            { "text": "きれいで、", "role": "connector", "gloss": "beautiful and… (na-adj て-form: きれい + で)" }
+          ],
+          "en": "The flowers are beautiful and…",
+          "note": "な-adj て-form: base + で. きれい → きれいで. Compare with い-adj: かわいい → かわいくて. The te-form connects to the next adjective or clause."
+        },
+        {
+          "context": "い-adj て-form in the same chain — かわいくて",
+          "parts": [
+            { "text": "かわいくて、", "role": "connector", "gloss": "cute and… (i-adj て-form: かわいい → かわい + くて)" }
+          ],
+          "en": "…cute and…",
+          "note": "い-adj て-form: drop い → add くて. かわいい → かわいくて. The chain continues: na-adj uses で, i-adj uses くて — different connectors depending on adjective type."
+        },
+        {
+          "context": "な-adj adverb form — きれいに + なる",
+          "parts": [
+            { "text": "空気も", "role": "topic", "gloss": "air also (topic: も = also)" },
+            { "text": "きれいに", "role": "adverb", "gloss": "cleanly (na-adj adverb form: きれい + に)" },
+            { "text": "なりました。", "role": "predicate", "gloss": "became (なる, polite past — 'became clean')" }
+          ],
+          "en": "…and the air also became clean.",
+          "note": "な-adj adverb: base + に. きれい → きれいに modifies the verb なる ('become'). Compare い-adj adverb: 大きい → 大きく. Adverbs modify verbs, not nouns."
+        }
+      ]
     },
     {
       "type": "conversation",

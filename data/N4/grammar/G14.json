@@ -256,92 +256,81 @@
     {
       "type": "grammarComparison",
       "title": "より vs ほど — Same Fact, Two Structures",
-      "itemA": {
-        "label": "より (positive comparison)",
-        "color": "verb",
-        "pattern": "野菜より 肉のほうが 高いです。",
-        "translation": "Meat is more expensive than vegetables.",
-        "points": [
-          "より marks the lesser element (vegetables — the cheaper one)",
-          "ほうが marks the greater/preferred side (meat — the more expensive)",
-          "The adjective is POSITIVE (高い — expensive)",
-          "Use より + ほうが to say 'B is more ～ than A'"
-        ]
-      },
-      "itemB": {
-        "label": "ほど (negative comparison)",
-        "color": "modifier",
-        "pattern": "野菜は 肉ほど 高くないです。",
-        "translation": "Vegetables are not as expensive as meat.",
-        "points": [
-          "は marks the subject (vegetables — the one falling short)",
-          "ほど marks the standard not reached (meat — the benchmark)",
-          "The adjective is NEGATIVE (高くない — not expensive)",
-          "Use ほど with negative adjective to say 'A is not as ～ as B'"
-        ]
-      },
-      "summary": "より + ほうが says 'B is MORE ～ than A' (positive claim about B). ほど + negative says 'A is NOT AS ～ as B' (negative claim about A). Both sentences express the same fact — meat is expensive relative to vegetables — but emphasize different things.",
-      "commonMistakes": [
-        "×野菜は肉ほど高いです — WRONG. ほど must be followed by a NEGATIVE form. Use 高くない, not 高い.",
-        "×肉より野菜のほうが高くないです — Grammatically possible but unnatural. Use より+ほうが with a positive adjective.",
-        "✓ Quick rule: より + ほうが = positive comparison. ほど = negative comparison."
-      ]
+      "items": [
+        {
+          "label": "より + ほうが (positive)",
+          "color": "verb",
+          "points": [
+            "より marks the lesser element (vegetables — the cheaper one)",
+            "ほうが marks the greater/preferred side (meat — the more expensive)",
+            "The adjective is POSITIVE (高い — expensive)",
+            "Use より + ほうが to say 'B is more ～ than A'"
+          ],
+          "example": {
+            "parts": [
+              { "text": "野菜より", "role": "object", "gloss": "than vegetables (より = than — lesser element)" },
+              { "text": "肉の", "role": "topic", "gloss": "meat (の = classifier)" },
+              { "text": "ほうが", "role": "subject", "gloss": "the side of (ほうが marks the greater element)" },
+              { "text": "高いです。", "role": "predicate", "gloss": "is expensive (高い, polite — POSITIVE adjective)" }
+            ],
+            "en": "Meat is more expensive than vegetables."
+          }
+        },
+        {
+          "label": "ほど + negative",
+          "color": "modifier",
+          "points": [
+            "は marks the subject (vegetables — the one falling short)",
+            "ほど marks the standard not reached (meat — the benchmark)",
+            "The adjective is NEGATIVE (高くない — not expensive)",
+            "Use ほど with negative adjective to say 'A is not as ～ as B'"
+          ],
+          "example": {
+            "parts": [
+              { "text": "野菜は", "role": "topic", "gloss": "vegetables (topic: は — the one falling short)" },
+              { "text": "肉ほど", "role": "object", "gloss": "as much as meat (ほど = to that degree — sets the benchmark)" },
+              { "text": "高くないです。", "role": "predicate", "gloss": "is not expensive (高い → 高くない — NEGATIVE adjective required)" }
+            ],
+            "en": "Vegetables are not as expensive as meat."
+          }
+        }
+      ],
+      "tip": "より + ほうが says 'B is MORE ～ than A' (positive claim about B). ほど + negative says 'A is NOT AS ～ as B' (negative claim about A). Both sentences express the same fact — meat is expensive relative to vegetables — but emphasize different things. ⚠ ほど must always be followed by a NEGATIVE form."
     },
     {
       "type": "annotatedExample",
       "title": "Comparing Foods — Degree and Preference",
-      "sentence": "野菜より魚のほうが好きですが、この魚は高すぎます。あの店の魚はこの店ほど高くないです。",
-      "translation": "I prefer fish over vegetables, but this fish is too expensive. The fish at that store is not as expensive as this store.",
-      "parts": [
+      "examples": [
         {
-          "text": "野菜より",
-          "role": "object",
-          "gloss": "than vegetables (より = than — lesser element)"
+          "context": "より + ほうが — preference comparison (positive adjective)",
+          "parts": [
+            { "text": "野菜より", "role": "object", "gloss": "than vegetables (より = than — marks the lesser element)" },
+            { "text": "魚の", "role": "topic", "gloss": "fish (の = classifier)" },
+            { "text": "ほうが", "role": "subject", "gloss": "the side of (ほうが marks the preferred/greater element)" },
+            { "text": "好きです。", "role": "predicate", "gloss": "I like / prefer (好き, polite — POSITIVE predicate)" }
+          ],
+          "en": "I prefer fish over vegetables.",
+          "note": "Pattern: [lesser element]より [preferred element]のほうが [positive adjective/predicate]。より = 'than'; ほうが = 'the side of'."
         },
         {
-          "text": "魚の",
-          "role": "topic",
-          "gloss": "fish (の = classifier)"
+          "context": "すぎる — excessive degree (too much)",
+          "parts": [
+            { "text": "この魚は", "role": "topic", "gloss": "this fish (topic: は)" },
+            { "text": "高", "role": "connector", "gloss": "expensive — い-adjective stem (高い → drop い before すぎる)" },
+            { "text": "すぎます。", "role": "predicate", "gloss": "too (much) — すぎる, polite present" }
+          ],
+          "en": "This fish is too expensive.",
+          "note": "い-adj: drop い and add すぎる. 高い → 高 + すぎる = 高すぎる. すぎる itself conjugates: すぎます / すぎました / すぎません."
         },
         {
-          "text": "ほうが",
-          "role": "subject",
-          "gloss": "the side of (ほうが marks the preferred element)"
-        },
-        {
-          "text": "好きですが、",
-          "role": "predicate",
-          "gloss": "I like (好き, polite) — が = but (clause connector)"
-        },
-        {
-          "text": "この魚は",
-          "role": "topic",
-          "gloss": "this fish (topic: は)"
-        },
-        {
-          "text": "高",
-          "role": "connector",
-          "gloss": "expensive — い-adjective stem (高い → drop い)"
-        },
-        {
-          "text": "すぎます。",
-          "role": "predicate",
-          "gloss": "too (much) — すぎる, polite"
-        },
-        {
-          "text": "あの店の魚は",
-          "role": "topic",
-          "gloss": "the fish at that store (の = possessive)"
-        },
-        {
-          "text": "この店ほど",
-          "role": "object",
-          "gloss": "as much as this store (ほど = to that degree — negative standard)"
-        },
-        {
-          "text": "高くないです。",
-          "role": "predicate",
-          "gloss": "is not expensive (高い → 高くない, polite negative)"
+          "context": "ほど + negative — negative comparison (not as ～ as)",
+          "parts": [
+            { "text": "あの店の魚は", "role": "topic", "gloss": "the fish at that store (の = possessive; は = topic)" },
+            { "text": "この店ほど", "role": "object", "gloss": "as much as this store (ほど = to that degree — sets the benchmark)" },
+            { "text": "高くないです。", "role": "predicate", "gloss": "is not expensive (高い → 高くない — NEGATIVE adjective required with ほど)" }
+          ],
+          "en": "The fish at that store is not as expensive as this store.",
+          "note": "Pattern: [subject]は [standard]ほど [NEGATIVE adjective]。ほど always requires a negative — ×高いです is wrong here."
         }
       ]
     },
