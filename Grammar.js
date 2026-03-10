@@ -33,6 +33,7 @@ window.GrammarModule = {
     let COUNTER_RULES = null;
     let currentGrammars = [];
     let grammarId = null;
+    let _manifestCache = null; // stored for unlock engine calls
 
     // --- Setup UI Container ---
     container.innerHTML = '';
@@ -1056,6 +1057,23 @@ window.GrammarModule = {
         const pct = drillTotal > 0 ? Math.round(drillCorrect / drillTotal * 100) : 100;
         const rank = [...SCORE_RANKS].reverse().find(r => pct >= r.min) || SCORE_RANKS[0];
         markGrammarComplete(grammarId, pct);
+
+        // Bridge into the unlock engine so grammar completion gates downstream content.
+        const unlockApi = window.JPShared && window.JPShared.unlock;
+        const unlockResult = unlockApi && _manifestCache
+          ? unlockApi.computeUnlocks(grammarId, 100, _manifestCache)
+          : null;
+        const newItems = (unlockResult && unlockResult.newItems) || [];
+
+        // Build unlock chips (same style as Lesson.js reveal).
+        const unlockHtml = newItems.length > 0 ? `
+          <div style="margin-top:18px;border-top:1px solid #f0f0f0;padding-top:14px;">
+            <div style="font-size:0.75rem;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">🔓 Unlocked</div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+              ${newItems.map(item => `<div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:6px 12px;font-size:0.85rem;font-weight:700;color:#15803d;">${item.icon} ${item.label}</div>`).join('')}
+            </div>
+          </div>` : '';
+
         body.innerHTML = `
           <div class="gr-card" style="text-align:center; position:relative; padding:30px 20px;">
             <h2 style="margin-bottom:15px;">🌿 Grammar Lesson Complete!</h2>
@@ -1066,6 +1084,7 @@ window.GrammarModule = {
             <div style="font-size:2.2rem;font-weight:900;color:#16A34A;">${pct}%</div>
             <div style="font-size:0.9rem;color:#888;margin-top:4px;">${drillCorrect} / ${drillTotal} correct</div>
             ` : ''}
+            ${unlockHtml}
           </div>`;
         nextBtn.innerText = 'Finish';
         if (drillTotal > 0) launchHanabi(rank, body.querySelector('.gr-card'));
@@ -1163,6 +1182,7 @@ window.GrammarModule = {
 
       try {
         const manifest = await window.getManifest(REPO_CONFIG);
+        _manifestCache = manifest;
         currentGrammars = [];
         (manifest.levels || []).forEach(level => {
           const levelData = manifest.data && manifest.data[level];

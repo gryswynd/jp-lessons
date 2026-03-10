@@ -41,7 +41,7 @@
           "id": "N5.2",
           "title": "Days of the Week",
           "file": "data/N5/lessons/N5.2.json",
-          "unlocksAfter": "N5.1",
+          "unlocksAfter": "G2",
           "kanji": [
             "日",
             "月",
@@ -59,7 +59,7 @@
           "id": "N5.3",
           "title": "Numbers & Money",
           "file": "data/N5/lessons/N5.3.json",
-          "unlocksAfter": "N5.Review.1",
+          "unlocksAfter": "G3",
           "kanji": [
             "一",
             "二",
@@ -94,7 +94,7 @@
           "id": "N5.5",
           "title": "Going & Places",
           "file": "data/N5/lessons/N5.5.json",
-          "unlocksAfter": "N5.Review.2",
+          "unlocksAfter": "G7",
           "kanji": [
             "行",
             "来",
@@ -145,7 +145,7 @@
           "id": "N5.9",
           "title": "Relative Position",
           "file": "data/N5/lessons/N5.9.json",
-          "unlocksAfter": "N5.Review.4",
+          "unlocksAfter": "G8",
           "kanji": [
             "前",
             "後",
@@ -157,7 +157,7 @@
           "id": "N5.10",
           "title": "Weather & Energy",
           "file": "data/N5/lessons/N5.10.json",
-          "unlocksAfter": "N5.9",
+          "unlocksAfter": "G9",
           "kanji": [
             "天",
             "電",
@@ -169,7 +169,7 @@
           "id": "N5.11",
           "title": "Sky, Rain & Nature",
           "file": "data/N5/lessons/N5.11.json",
-          "unlocksAfter": "N5.Review.5",
+          "unlocksAfter": "G10",
           "kanji": [
             "空",
             "雨",
@@ -181,7 +181,7 @@
           "id": "N5.12",
           "title": "Study & Country",
           "file": "data/N5/lessons/N5.12.json",
-          "unlocksAfter": "N5.11",
+          "unlocksAfter": "G11",
           "kanji": [
             "本",
             "語",
@@ -280,49 +280,49 @@
           "id": "G2",
           "title": "Core Particles I: は, が, の, か, を",
           "file": "data/N5/grammar/G2.json",
-          "unlocksAfter": "N5.1",
+          "unlocksAfter": "G1",
           "icon": "📌"
         },
         {
           "id": "G3",
           "title": "Core Particles II: も, と, や, から, まで",
           "file": "data/N5/grammar/G3.json",
-          "unlocksAfter": "N5.2",
+          "unlocksAfter": "N5.Review.1",
           "icon": "📌"
         },
         {
           "id": "G4",
           "title": "Core Particles III: に, で, へ",
           "file": "data/N5/grammar/G4.json",
-          "unlocksAfter": "N5.5",
+          "unlocksAfter": "N5.Review.2",
           "icon": "📌"
         },
         {
           "id": "G5",
           "title": "Verb Types — RU-Verbs vs U-Verbs vs Irregulars",
           "file": "data/N5/grammar/G5.json",
-          "unlocksAfter": "N5.5",
+          "unlocksAfter": "G4",
           "icon": "⚙️"
         },
         {
           "id": "G6",
           "title": "Polite Verb Forms — ます形",
           "file": "data/N5/grammar/G6.json",
-          "unlocksAfter": "N5.5",
+          "unlocksAfter": "G5",
           "icon": "🔤"
         },
         {
           "id": "G7",
           "title": "て-form — Connecting Actions",
           "file": "data/N5/grammar/G7.json",
-          "unlocksAfter": "N5.5",
+          "unlocksAfter": "G6",
           "icon": "🔗"
         },
         {
           "id": "G8",
           "title": "ている・たいです・ましょう — Progressive, Desire & Invitation",
           "file": "data/N5/grammar/G8.json",
-          "unlocksAfter": "N5.8",
+          "unlocksAfter": "N5.Review.4",
           "icon": "🎯"
         },
         {
@@ -337,7 +337,7 @@
           "id": "G10",
           "title": "i-Adjective Conjugation",
           "file": "data/N5/grammar/G10.json",
-          "unlocksAfter": "N5.10",
+          "unlocksAfter": "N5.Review.5",
           "icon": "🎨",
           "estimatedMinutes": 25
         },

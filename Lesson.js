@@ -590,8 +590,9 @@ window.LessonModule = {
         allLevelsData.forEach(({ level, levelNum, lessons }) => {
           // N4 is a paid gateway — hide it entirely until explicitly unlocked.
           if (level === 'N4' && unlockApi && !unlockApi.isFree() && !unlockApi.isN4Unlocked()) return;
+          const visibleCount = lessons.filter(l => !unlockApi || unlockApi.isFree() || unlockApi.isLessonUnlocked(l)).length;
           const card = el('div', 'jp-level-card');
-          card.innerHTML = `<div class="jp-level-name">JLPT Level N${levelNum}</div><div class="jp-level-count">${lessons.length} lesson${lessons.length !== 1 ? 's' : ''}</div>`;
+          card.innerHTML = `<div class="jp-level-name">JLPT Level N${levelNum}</div><div class="jp-level-count">${visibleCount} lesson${visibleCount !== 1 ? 's' : ''}</div>`;
           card.onclick = () => renderMenu(level, lessons);
           container.appendChild(card);
         });

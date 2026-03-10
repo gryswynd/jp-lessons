@@ -573,12 +573,17 @@ window.StoryModule = (function() {
       return true;
     });
 
-    const levelCardsHtml = levels.map(level => `
-      <div class="jp-story-level-card" data-level="${level}">
-        <div class="jp-story-level-name">JLPT ${level}</div>
-        <div class="jp-story-level-count">${byLevel[level].length} stor${byLevel[level].length !== 1 ? 'ies' : 'y'}</div>
-      </div>
-    `).join('');
+    const levelCardsHtml = levels.map(level => {
+      const visibleCount = !unlockApi || unlockApi.isFree()
+        ? byLevel[level].length
+        : byLevel[level].filter(s => unlockApi.isStoryUnlocked(s)).length;
+      return `
+        <div class="jp-story-level-card" data-level="${level}">
+          <div class="jp-story-level-name">JLPT ${level}</div>
+          <div class="jp-story-level-count">${visibleCount} stor${visibleCount !== 1 ? 'ies' : 'y'}</div>
+        </div>
+      `;
+    }).join('');
 
     if (contentArea) {
       contentArea.outerHTML = `

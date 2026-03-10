@@ -71,9 +71,12 @@
 
   // Returns true if the prerequisite ID has been passed (≥75%) or completed
   // (any score) depending on anyCompletion flag.
+  // Grammar lesson IDs (G1, G2, …) always use any-completion semantics —
+  // they have no pass/fail score, so completing them is sufficient.
   function _prereqMet(prereqId, anyCompletion) {
     if (!prereqId) return true; // no prerequisite → always available
-    if (anyCompletion) return !!_getCompleted()[prereqId];
+    var isGrammarId = /^G\d+$/.test(prereqId);
+    if (isGrammarId || anyCompletion) return !!_getCompleted()[prereqId];
     return (_getScores()[prereqId] || 0) >= PASS_THRESHOLD;
   }
 
