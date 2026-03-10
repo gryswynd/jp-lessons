@@ -2423,14 +2423,12 @@ The department store was the vocabulary gate of Day 8. You could see it. You cou
 
 The デパート interior is the largest indoor space in the game so far. Multiple sections. Higher-end items. A different atmosphere from the コンビニ — quieter, cleaner, more intimidating.
 
-**Visible sections:**
-| Section | What's visible | Can buy? |
-|---|---|---|
-| Food floor (一かい) | Beautiful food displays, wrapped packages | Yes — but expensive. おかし (snacks) 五百円, プレゼント gift boxes 千円+ |
-| Clothing (二かい) | Mannequins, folded clothes | No — no clothing vocab yet. Window-shopping only. |
-| Electronics (三かい) | Something that looks like phones/devices | No — no vocab. Decorative. |
+**The ground floor.** The player is on 一かい. Beautiful food displays, wrapped packages. Expensive. おかし (snacks) 五百円, プレゼント gift boxes 千円+.
 
-**Floor indicator:** The player can see 一かい、二かい、三かい markers. Counter vocabulary hasn't been fully taught, but the kanji 一, 二, 三 are from N5.1 and かい is readable. The デパート teaches floor counting through environment, not lecture.
+**The escalator.** There's an escalator in the back. It goes up. The player can see it. There are floor markers on the wall: 一かい、二かい、三かい — the kanji 一, 二, 三 are from N5.1 and かい is readable. But there is no interaction prompt on the escalator. The concept of going 上 doesn't exist until Day 16. The player can stand at the base of the escalator and see it moving, carrying nobody, going to floors they cannot reach. The デパート is taller than the player's vocabulary.
+
+**If the player tries to use the escalator:**
+> 「...」 *(Nothing. Same as the front door before 中 existed. The escalator is there. Rikizo doesn't step on it. Going "up" is not a concept he can perform. The upper floors are visible — mannequins on the second floor, glowing screens on the third — but they exist behind a vocabulary gate that won't open for seven more days.)*
 
 **Shopkeeper (different from コンビニ):**
 > 「いらっしゃいませ。こちらにどうぞ。」 — "Welcome. This way, please." *(こちら. The polite direction word finds its natural habitat: a department store employee guiding customers. The コンビニ shopkeeper says いらっしゃいませ. The デパート shopkeeper says いらっしゃいませ AND こちらにどうぞ. More words = more formal = more expensive store.)*
@@ -2470,10 +2468,7 @@ Three quests. Each with a different obstacle: missing verb, social block + missi
 
 > If not enough money: 「お金がありません...高いですね。」 — "No money... it's expensive."
 
-**If player goes to the clothing floor:**
-> Rikizo: 「...きれいですね。」 — "...Pretty." *(He can see clothes. He can't name them. He can't buy them. The vocabulary gate continues, one floor up. The デパート is a vertical vocabulary progression — each floor unlocks as the student's vocabulary grows.)*
-
-**Design note — the デパート as vertical world:** The department store is the game's first multi-level interior. Each floor represents a vocabulary tier: Floor 1 (food) is accessible with current vocab. Floor 2 (clothing) requires N4 vocab. Floor 3 (electronics) requires even more. The building physically embodies the curriculum — you can ride the escalator up, but the higher you go, the less you can interact with. The building grows with the student.
+**Design note — the デパート as vertical teaser:** The department store is the game's first multi-level interior, but the player can only access the ground floor. The upper floors are *visible* — through the escalator gap, through the floor-indicator signs — but unreachable. This mirrors Day 8's front-door situation: the building existed but couldn't be entered because 中 didn't exist. Now the inside exists but the upper floors don't, because 上 doesn't exist. Each vocabulary unlock peels back one more layer. On Day 16, when 上/下 arrive, the escalator becomes usable and the full vertical building opens. The デパート is designed to be revisited — every visit reveals more as vocabulary grows.
 
 ---
 
@@ -2613,7 +2608,7 @@ Yamakawa has discovered interiority and wants to share the news. He sends this m
 | Entering the コンビニ | The window counter becomes a door | 「中ですか...!」 | Satisfying but quieter than the fridge. You've been buying from outside. Now you're inside. The items are the same but the experience is different. |
 | Yamakawa is inside | He's been standing outside for four days. Now he's on a chair. | 「外にいましたね。」 | He doesn't remember being outside. Of course he doesn't. |
 | Yamakawa says ～ましょう | "Let's go to the department store!" First joint activity invitation. | Surprised | An NPC just suggested doing something TOGETHER. This hasn't happened before. The game just gained cooperative social interaction. |
-| The デパート interior | Three floors. Each a different vocabulary tier. | 「大きいです...」 | Awe. And the dawning realization that higher floors = more words needed. The building IS the curriculum. |
+| The デパート interior | Ground floor only, but an escalator going up to floors you can't reach. | 「大きいです...」 | Awe. The escalator moves but Rikizo can't step on it. The building is taller than his vocabulary. |
 | Station master says だいじょうぶ | "Not yet. But it's alright." | Trust? Doubt? | He's still waiting. Still not worried. His patience is either comforting or eerie. |
 | どうして / まだ exchange | "Why not yet?" / "Long road." | Frustrated curiosity | The station master knows something. He won't explain. The mystery deepens. |
 | 名前 / station master | "My name is... Station Master." | 「名前は...？」 | He has no name. Or his name IS his title. This is unsettling in a way that's hard to articulate. |
@@ -2671,8 +2666,7 @@ Yamakawa has discovered interiority and wants to share the news. He sends this m
 | Fridge interior | UI element / sprite | B (MP100) | **Critical** | Inside of fridge when opened: shelves with water, juice, eggs, wrapped mystery item. The most anticipated art reveal so far. |
 | Fridge opening animation | Animation | A+B | **Critical** | 2–3 frames: closed → handle pull → open → interior visible. This is the payoff of eight days. It should feel satisfying. |
 | コンビニ interior | Background | B (MP100) | **Critical** | Inside the convenience store: shelves, counter, seating area (2 chairs by window). Warm, well-lit. Small but complete. |
-| デパート interior (Floor 1) | Background | B (MP100) | High | Food floor: display cases, wrapped gifts, elegant food presentation. Upscale feel compared to コンビニ. |
-| デパート interior (Floor 2) | Background | B (MP100) | Medium | Clothing floor: mannequins, shelves. Player can see but not interact. Decorative. |
+| デパート interior (Floor 1) | Background | B (MP100) | High | Food floor: display cases, wrapped gifts, elegant food presentation. Upscale feel compared to コンビニ. Escalator visible in background going up — but not interactive until Day 16. Upper floors faintly visible through the escalator gap. |
 | Station waiting room | Background | B (MP100) | High | Small room inside the station: bench, clock, empty timetable board. Quiet, contemplative. |
 | Toilet interior | Background / sprite | B (MP100) | Medium | Deliberately boring. Normal bathroom. Toilet, sink, hand towel. The anticlimax is the point. |
 | Behind the house | Background variant | B (MP100) | Low | Small garden area behind the house. Not detailed — just establishing that "behind the house" is a place. |
@@ -2689,7 +2683,7 @@ Yamakawa has discovered interiority and wants to share the news. He sends this m
 
 3. **Should Dad always block the toilet?** Recommendation: 50/50 chance. Sometimes Dad is there (blocks access, comedy continues). Sometimes he's not (toilet accessible, anticlimactic reveal). The toilet's content never changes — it's always just a toilet. The variable is Dad's guard schedule. This keeps the gag alive without making it a permanent blocker.
 
-4. **How much can you buy at the デパート?** Recommendation: Limited selection. Food floor has a few expensive items (プレゼント at 1,000¥, おかし/snacks at 500¥ if vocab supports it). Upper floors are browse-only. The デパート should feel like a place you'll return to as your vocabulary grows — each visit unlocking more interaction as new words arrive.
+4. **How much can you buy at the デパート?** Recommendation: Limited selection. Food floor only (upper floors are inaccessible until Day 16 when 上/下 unlock). A few expensive items: プレゼント at 1,000¥, おかし/snacks at 500¥ if vocab supports it. The デパート should feel like a place you'll return to as your vocabulary grows — the escalator going up is a constant visual reminder that there's more above.
 
 5. **The 外人 encounter — should it happen?** Recommendation: Optional/rare. It can be a random NPC encounter that triggers once. The game presents the word without judgment. Rikizo's silence in response is the design choice — the player fills in the meaning. If this feels too loaded for a game about learning vocabulary, it can be deferred to N4 when the player has more nuanced language to process it. The word exists in the glossary either way.
 
@@ -4335,12 +4329,21 @@ Standard evening routine. Rikizo reports his day using the new communication ver
 
 ### Running Gags Updated
 
-1. **けん and Tests** — 「テストは？」 — he asks in class. すずき says not today. けん celebrates.
-2. **ミキ's Book** — NOW READABLE. Title visible for the first time. Day 1 of the book rotation mechanic.
-3. **The Empty Notebook** — ✓ RESOLVED. Five days, resolved with the quietest moment. The pen now works, opening future writing interactions.
-4. **Buy Me Something** — NEW. けん asks Rikizo to buy water. First instance of the recurring buy-request gag. Will escalate across classmates.
-5. **Station Master's ??? Quest** — NEW. He wants something to read. The word doesn't exist. The empty rack waits. Resolves at N5.18 (新聞).
-6. **Station Master's まだ** — Continues, with a new dimension. He's not just waiting for the train — he's waiting for his newspaper. But he can't say that yet.
+1. **Dad's Gold** — Continues. 「だめ！」 Eternal. Dad has found something he cares about more than gold (the car), but the gold reflex persists. He guards it on principle now, not passion.
+2. **Dad's Car** — Stable. The car sits. Dad stares at it. He can't drive it (乗る = N5.17). On rainy days he worries. On clear days he admires. The car is Dad's second self — a possession that defines him even though he can't use it.
+3. **Tree-san** — Daily greeting continues. If befriended, Rikizo greets the tree each morning. (+1 relationship for daily greeting as always.) The tree is a tree. It doesn't change. Rikizo talks to it anyway.
+4. **The Fridge** — Still opens triumphantly. Mom's domain. Functional. Contains food. The fridge never gets old.
+5. **The Water Bottle** — Still in inventory. Truly vestigial. A relic of the time when getting a drink of water was a five-day quest.
+6. **Mom's "Come Home"** — 「学校に行ってね。」 in the morning, 「家に来てくださいね。」 in the evening. Mom's request portfolio now covers both directions.
+7. **けん and Tests** — 「テストは？」 — Day 2 of the pattern. He asks in class. すずき says not today. けん celebrates. つまらない is けん's word. He owns it.
+8. **ミキ's Book** — NOW READABLE. Title visible for the first time: 「水の話」(Story of Water). Day 1 of the book rotation mechanic. Title changes every 2–3 days.
+9. **The Empty Notebook** — ✓ RESOLVED. Five days of carrying a blank notebook, resolved with the quietest moment. The pen now works, opening future writing interactions.
+10. **Buy Me Something** — NEW. けん asks Rikizo to buy water at the コンビニ. This is けん's gag — he's the shameless mooch. He asks on the street, near stores, whenever convenience and opportunity align. Other classmates don't do this. It's uniquely けん.
+11. **Station Master's ??? Quest** — NEW. He wants something to read. The word doesn't exist. The empty rack waits. Resolves at N5.18 (新聞). Day 1 of 5.
+12. **Station Master's まだ** — Continues, with a new dimension. He's not just waiting for the train — he's waiting for his newspaper. But he can't say that yet. The まだ now has two objects.
+13. **Environmental Text** — First readable signs since 書く/読む/聞く arrived. Book titles, shop signs, blackboard text — partially readable based on the taught-kanji set. Progressive literacy is now active everywhere.
+14. **やまかわのごはん** — ◻ Persists from Day 10. Yamakawa wants new food. No resolution yet. He's still eating onigiri. Every new food word that arrives is a potential solution.
+15. **ゆきのきおく** — ◻ Persists from Day 11. ゆき noticed the school looks new. Another quiet observation. The quest waits — resolves in N4.
 
 **Quest log state (end of Day 13):**
 > 📋 Quest Log
@@ -4545,6 +4548,37 @@ The new vocabulary layers onto the existing world:
 
 ---
 
+### Running Gags Updated
+
+1. **Dad's Gold** — Continues. 「だめ！」 Saturday Dad is home all day, which means all-day gold guarding. He's committed.
+2. **Dad's Car** — Dad has 時間 now. He spends it staring at the car. 「時間がたくさんある。」 — he says this about the day, but it applies to his car vigil too. Unlimited time to admire a car he can't drive.
+3. **Tree-san** — Daily greeting continues. Saturday means no school detour — Rikizo can visit the tree at leisure.
+4. **The Fridge** — Still opens triumphantly. Saturday fridge is the same as Tuesday fridge. Consistency.
+5. **The Water Bottle** — Still in inventory. Approaching artifact status.
+6. **Mom's "Come Home"** — Saturday variant: 「今日は学校がありませんよ。ゆっくりしてくださいね。」 Mom's request adapts to weekends — stay home, relax. Same instinct, different vocabulary.
+7. **けん and Tests** — DORMANT. No school on Saturday. The pattern sleeps. けん is at home playing games instead of worrying about tests. The contrast is the joke: school-けん dreads tests, home-けん is pure joy.
+8. **ミキ's Book** — 「水の話」continues. Day 2 of the rotation. ミキ is not visible on Saturday (she has a life outside of school that Rikizo doesn't see yet). The book exists in the player's mind even when ミキ doesn't appear.
+9. **Buy Me Something** — DORMANT. けん is the host at his own house — he offers snacks and games, not demands. The buy-me-something gag is an outdoor/street behavior. At home, けん is generous. The player who visits his house sees a different side of him.
+10. **Station Master's ??? Quest** — Day 2 of 5. Player can visit. Same result — nothing in inventory matches. The rack is still empty. The station master doesn't mention it again unless the player examines the rack.
+11. **Station Master's まだ** — Continues. Saturday doesn't change his routine. He's there every day.
+12. **Environmental Text** — けん's room is a new environmental text zone. Game spines with mixed readability. Some titles fully readable (taught kanji), some partial, some blurred. Progressive literacy applies to private spaces too.
+13. **やまかわのごはん** — ◻ Persists. Yamakawa notices 少ない customers. He speculates about where they went (多分). He's still eating onigiri. The quest waits.
+14. **ゆきのきおく** — ◻ Persists. ゆき is at the river — 「今日は魚が少ないですね。いつもは多いのに。」 She's tracking quantities in nature. Another quiet observation. The quest waits.
+
+**Quest log state (end of Day 14):**
+> 📋 Quest Log
+> ✓ 水を飲む (Day 5 → Day 5)
+> ✓ おにぎりを食べる (Day 5 → Day 8)
+> ✓ お母さんの買い物 (Day 8 → Day 9)
+> ◻ やまかわのごはん: 新しい食べ物をさがす (Day 10 → ???)
+> ◻ ゆきのきおく: ゆきの話を聞く (Day 11 → N4)
+> ✓ ノートに名前を書く (Day 9 → Day 13)
+> ◻ 駅長の「???」: 駅長は何かを読みたいです。でも、何？ (Day 13 → N5.18)
+
+No new quest log entries. The weekend is a breathing day — no new fetch quests, no new mysteries. The existing quests persist in the background. やまかわのごはん waits for new food vocabulary. 駅長の「???」 waits for 新聞. ゆきのきおく waits for N4. The player carries three open threads into Sunday.
+
+---
+
 ### State Tracking (End of Day 14)
 
 **New locations:** けん's house (optional micro-location, residential area). First private residence. Consumes an action to visit.
@@ -4615,6 +4649,37 @@ The new vocabulary layers onto existing NPC conversations. Everyone suddenly has
 
 ---
 
+### Running Gags Updated
+
+1. **Dad's Gold** — Continues. Sunday Dad is the same as Saturday Dad: home, guarding, eternal.
+2. **Dad's Car** — The car now has a compass context. Is the car facing 北? 南? Dad doesn't know. He stares at it the same way regardless of direction. The compass doesn't change his relationship with the car.
+3. **Tree-san** — Daily greeting continues. The compass gives Rikizo a new way to think about Tree-san's location: 「木-さんは...北にいますか？」 The tree doesn't move. But Rikizo can now describe where it is relative to everything else.
+4. **The Fridge** — Unchanged. The fridge is not north or south. It's in the kitchen. Some things resist spatial mapping.
+5. **The Water Bottle** — Still in inventory. Day 11 of carrying a relic.
+6. **Mom's "Come Home"** — Sunday variant: similar to Saturday. Mom's at home. She might mention directions — 「北の方は寒いですよ。」 Mom has opinions about compass directions now.
+7. **けん and Tests** — DORMANT. Second day off. けん is presumably at home playing games. No test anxiety on Sundays.
+8. **ミキ's Book** — 「水の話」continues. Day 3 of the rotation — the title is about to change. ミキ is not visible on Sunday (same as Saturday — she has a private weekend life). The book rotation ticks forward silently.
+9. **Buy Me Something** — DORMANT. No けん encounter on Sunday. The gag sleeps.
+10. **Station Master's ??? Quest** — Day 3 of 5. Still available. Still nothing works. The rack is still empty. The station master has compass words now — he can describe where the train should come from. He can't describe what he wants to read. Different vocabularies, different frustrations.
+11. **Station Master's まだ** — Evolves slightly. The station master can now say the train comes from the 北 or the 南. But it still doesn't come. He has more words for the thing that isn't happening. This is either progress or cruelty.
+12. **Environmental Text** — Street signs with 北/南/東/西 are now readable. The compass kanji on intersection signs resolve. Environmental text has expanded from indoor signs (Day 13) to outdoor infrastructure.
+13. **やまかわのごはん** — ◻ Persists. Yamakawa is at the コンビニ as always. 「西には何もないよ。」 He dismisses the west. In N4, the west develops. His dismissal becomes ironic.
+14. **ゆきのきおく** — ◻ Persists. ゆき is at the river, looking north toward the mountains. 「北の山はきれいですね。」 She stares a beat too long. She's the only character who looks at the horizon and seems to see something specific. What's up there? The quest waits.
+
+**Quest log state (end of Day 15):**
+> 📋 Quest Log
+> ✓ 水を飲む (Day 5 → Day 5)
+> ✓ おにぎりを食べる (Day 5 → Day 8)
+> ✓ お母さんの買い物 (Day 8 → Day 9)
+> ◻ やまかわのごはん: 新しい食べ物をさがす (Day 10 → ???)
+> ◻ ゆきのきおく: ゆきの話を聞く (Day 11 → N4)
+> ✓ ノートに名前を書く (Day 9 → Day 13)
+> ◻ 駅長の「???」: 駅長は何かを読みたいです。でも、何？ (Day 13 → N5.18)
+
+No new quest log entries. The weekend ends with all threads intact. ゆき was at the river both days — watching nature, counting fish, gazing north. She'll be back at school tomorrow. Probably.
+
+---
+
 ### State Tracking (End of Day 15)
 
 **Map upgrade:** Compass directions visible on the game map. Directional labels on key locations.
@@ -4654,31 +4719,132 @@ And then there's 上手 and 下手. Skill adjectives built from spatial kanji. �
 
 ---
 
-### Classroom — Right and Left
+### Classroom — Right, Left, and the Scramble
 
-Today's vocabulary is physical. 右、左、上、下 — right, left, above, below. すずき先生 uses them in class.
+Monday. Second week. The routine is established: arrive, sit, すずき teaches. But today's vocabulary is physical, and すずき turns the classroom into a game.
 
-1. **すずき:** 「右を見てください。左を見てください。」 — "Please look right. Please look left." *(Classroom instruction using て-form commands. すずき teaches directions through physical action — look right, look left. The students move. The classroom becomes interactive.)*
+**Before the lesson — the empty seat:**
 
-2. **けん** (looking the wrong way): 「こっち？」 — "This way?" *(けん gets it wrong. Comedy. すずき corrects him gently. 左 and 右 are notoriously confusable — けん's mistake mirrors what every learner experiences.)*
+The classroom is almost full. けん is in his seat. ミキ is reading. リー is organizing her notebook. But one desk is empty: ゆき's.
+
+すずき takes attendance. A pause.
+
+> **すずき:** 「ゆきさんは...どこですか？」 — "Where is... Yuki?"
+
+Silence. Nobody knows. けん shrugs. ミキ glances at the empty seat and says nothing. リー looks concerned but doesn't speak.
+
+> **すずき:** 「...そうですか。では、始めましょう。」 — "...I see. Well, let's begin."
+
+She moves on. The empty seat stays empty. The player who saw ゆき at the river yesterday — watching the mountains, counting fish — now has a question: where is she today? She was fine on Sunday. She didn't mention being sick. She didn't say she'd be absent. She just... isn't here. For a character who has been quietly observing the world's inconsistencies since Day 11, her own inconsistency is the loudest data point yet.
+
+**けん — the test question (Day 5 of the pattern):**
+
+Before すずき starts the direction game, the ritual:
+
+> **けん:** 「先生！今日はテストがありますか？」 — "Sensei! Is there a test today?"
+>
+> **すずき:** 「ありません。」 — "No."
+>
+> **けん:** 「よかった！」 — "Thank goodness!" *(よかった — plain past of いい. Relief. Every Monday starts with this. The class expects it now. Even ミキ almost smiles.)*
+
+**すずき先生 — class scene (6 lines):**
+
+1. **すずき:** 「今日は楽しいことをしましょう。」 — "Today let's do something fun." *(ましょう — volitional, G8 sustained. 楽しい — fun. The class perks up. Even けん lifts his head.)*
+
+2. **すずき:** 「右を見てください。」 — "Please look right." *(The whole class turns right. Except—)*
+
+3. **けん** (looking left): 「こっち？」 — "This way?" *(けん gets it wrong. A beat. ミキ, without moving her head, murmurs: 「右。」 — "Right." One word, flat delivery. けん swivels. The class laughs. すずき smiles and doesn't correct him — ミキ already did.)*
+
+4. **すずき:** 「左を見てください。」 — "Please look left." *(Everyone turns left. けん turns left — correctly this time, with exaggerated confidence.)* **けん:** 「かんたんだよ！」 — "Easy!" *(かんたん — simple/easy. The bravado of someone who just got it wrong.)*
+
+5. **すずき:** 「では、上を見てください。」 — "Now, please look up." *(The class looks at the ceiling. There's nothing there. すずき lets the silence hang for a beat.)* **すずき:** 「下を見てください。」 — "Please look down." *(Desks. Notebooks. Shoes. The mundane suddenly has a name. Up and down. The vertical axis just materialized in a classroom.)*
+
+6. **すずき:** 「りきぞさんの右にだれがいますか？」 — "Who is to Rikizo's right?" *(Direct question. Rikizo has to look right and identify the person. Depending on seating: ミキ, けん, or リー. The answer reinforces the vocabulary through personal context — not abstract space, but "who is next to me.")*
+
+**Student interactions — during the lesson:**
+
+すずき turns the rest of class into a direction game. She places items on different desks and asks students to describe where they are. This creates natural classroom cross-talk:
+
+- **すずき:** Places a book on ミキ's desk. 「本はどこにありますか？」 — "Where is the book?"
+- **けん:** 「ミキさんの...左？右？...ミキさんの上！」 — "Miki's... left? Right?... on top of Miki!" *(He means on her desk but says 上 — on top of. He's technically right: the book is above the desk surface. すずき lets it pass. ミキ does not find it funny.)*
+- **リー:** 「ミキさんの机の上にあります。」 — "It's on Miki's desk." *(Precise. Complete sentence. 机の上 — on top of the desk. リー speaks when she has the correct answer. She doesn't guess.)*
+
+**After the direction game — free moment:**
+
+The formal lesson ends. すずき gives the class a few minutes. The classroom relaxes.
+
+- **ミキ:** Opens her book immediately. If the player approaches: 「...今日の先生の話はおもしろかったですね。」 — "...Today's lesson was interesting, wasn't it." *(A full sentence. Directed at Rikizo. This is progress — on Day 13 she gave him silence. On Day 16 she offers a conversational opinion. Still brief, still private, but the wall has a crack.)*
+
+- **けん:** Leaning back in his chair. 「右と左はむずかしい！ゲームでは右は右だよ。」 — "Right and left are hard! In games, right is right." *(He's comparing the classroom's relative directions to game controls, where right is always right on the screen. The spatial concepts confuse him because they change based on perspective. ゲーム is his reference point for everything.)*
+
+- **リー:** Writing something in her notebook. If the player approaches: 「わたしは右手で書きます。りきぞさんは？」 — "I write with my right hand. Do you, Rikizo?" *(右手 — right hand. 手 from Day 13, 右 from today. リー makes compounds naturally. She's combining kanji faster than the others.)*
+
+**Design note — classroom warmth by Week 2:** Day 13's classroom was "the wall" — students present but dismissive. Four days later, the dynamic has shifted. ミキ volunteers a sentence. けん's failures are communal comedy instead of isolated embarrassment. リー asks a personal question. The classroom is still not where deep connection happens — that's the walk home — but it's no longer hostile. The wall has cracks. すずき's direction game helped: it gave students a reason to interact with each other, not just perform for the teacher.
 
 ---
 
 ### After School — 上手 and 下手
 
-The walk home. The pattern from Day 13 continues: classmates who were quiet in the classroom open up outside.
+The bell rings. Second Monday complete. The after-school walk-home pattern from Day 13 continues — but the social dynamics have evolved. It's not just one encounter anymore. The classmates have started to become people.
 
-**リー conversation (walking home):**
+**ミキ — at the school gate:**
 
-1. **リー:** 「りきぞさんは日本語が上手ですね。」 — "You're good at Japanese, Rikizo." *(上手 — the compliment. リー gives it genuinely. She herself was complimented on Day 12 (じょうず). Now she returns it using a different word. 上手 and じょうず are near-synonyms, but 上手 has kanji the player can read — it feels more formal, more "real.")*
+ミキ is packing her bag slowly. She's not rushing. If the player approaches her at the gate:
+
+1. **ミキ:** 「りきぞさん。」 *(Just his name. An acknowledgment. On Day 13 she gave nothing at the gate. Today, a name. For ミキ, this is practically a speech.)*
+
+2. **Rikizo:** 「ミキさん、今日の...右と左のこと、おもしろかったですね。」 — "Miki, today's... right and left thing, that was fun, wasn't it."
+
+3. **ミキ:** 「けんさんは...」 *(A pause. Almost a smile.)* 「右と左が下手ですね。」 — "Ken is... bad at right and left." *(下手. ミキ just used the new vocabulary to gently roast けん. It's deadpan. It's the first time she's made something resembling a joke. The player should feel the significance: ミキ opened up enough to be funny.)*
+
+**けん — already outside, restless:**
+
+けん is bouncing on his heels near the school gate. He wasn't waiting for Rikizo specifically — he just has energy and nowhere to put it.
+
+1. **けん:** 「りきぞ！上手な話があるよ！」 — "Rikizo! I've got a good story!" *(上手な — he's misusing it. 上手 means skilled, not "good" in the sense of "a good story." He's approximating. The slight misuse is characterization: けん speaks fast and imprecise. He'll self-correct over time — or he won't, and it'll be endearing.)*
+
+2. **Rikizo:** 「何？」 — "What?"
+
+3. **けん:** 「おれ、ゲームが上手だよ！先週、すごいゲームをしたんだ。」 — "I'm good at games! Last week, I played an amazing game." *(上手 — correct usage this time. He's praising himself. The brag is unashamed and joyful. すごい finds its home in けん's vocabulary: everything that excites him is すごい.)*
+
+4. **けん:** 「りきぞは？何が上手？」 — "How about you? What are you good at?" *(A real question. けん wants to know. He doesn't wait for the answer — he guesses:)* 「日本語？日本語が上手だよ！」 — "Japanese? You're good at Japanese!" *(He gives the compliment before Rikizo can answer. This is けん: he asks, then answers his own question, and means it.)*
+
+**リー — on the path toward town:**
+
+リー is walking home at her own pace. Unhurried. She falls into step with Rikizo naturally.
+
+1. **リー:** 「りきぞさんは日本語が上手ですね。」 — "You're good at Japanese, Rikizo." *(上手 — the same compliment けん just gave, but in polite form. The register contrast is immediate: けん said 上手だよ, リー says 上手ですね. Same word, different social texture. The player experiences both registers within minutes of each other.)*
 
 2. **Rikizo:** 「リーさんも上手ですよ！」 — "You're good too, Lee!"
 
-3. **リー:** 「空手は下手です...」 — "I'm bad at karate..." *(下手 — unskilled. 空手 callback from Day 13. リー reveals she tried karate and wasn't good at it. Characterization through vocabulary: the same adjective pair applied to different domains reveals different facets of a character. リー is good at languages, bad at physical activities. ミキ is probably 上手 at reading, 下手 at socializing. けん is 上手 at games, 下手 at tests.)*
+3. **リー:** 「空手は下手です...」 — "I'm bad at karate..." *(下手 — unskilled. 空手 callback from Day 13 when the word was introduced. リー reveals she tried karate and wasn't good at it. Characterization through vocabulary: the same adjective pair applied to different domains reveals different facets of a character.)*
+
+4. **リー:** 「りきぞさんは何が下手ですか？」 — "What are you bad at, Rikizo?" *(She turns it around. Intimate question — she's asking about weakness, not strength. This is deeper than the 上手 compliment. It requires vulnerability. Rikizo's answer doesn't matter — what matters is that リー asked.)*
+
+**Design note — three walk-home encounters, three social textures:**
+
+| Character | Tone | 上手/下手 usage | What it reveals |
+|---|---|---|---|
+| ミキ | Deadpan, observational | Uses 下手 to gently mock けん | She's quietly funny when she trusts you enough |
+| けん | Loud, self-congratulatory | Uses 上手 to praise himself and then you | He gives compliments as reflexively as he breathes |
+| リー | Earnest, reciprocal | Uses both — confesses 下手, asks about yours | She builds connection through mutual vulnerability |
+
+The same vocabulary, used three different ways by three different people. The player learns that words mean different things in different mouths. This is the social layer of language learning: vocabulary isn't just definition — it's relationship.
 
 **Design note — 上手/下手 as character descriptors:** These adjectives become a recurring conversational tool. NPCs use them to describe each other: 「けんはゲームが上手だよ」(Ken is good at games), 「ミキさんは読むのが上手ですね」(Miki is good at reading). The player builds a mental map of each character's skills — a social version of the spatial map that compass directions created yesterday.
 
 **Station master trade window:** Still available. Still nothing works. Day 4 of 5.
+
+**Yamakawa — コンビニ after school:**
+
+Yamakawa is at the コンビニ, as always. Monday means school-age customers are back.
+
+> **Yamakawa:** 「学校はどうだった？」 — "How was school?" *(どう — how. He asks like an uncle. Yamakawa has no formal relationship to Rikizo's school life, but he asks anyway. He cares in the way コンビニ regulars care about the people who walk through their door every day.)*
+
+> **Yamakawa:** 「今日のおにぎりは上手に作ったよ。」 — "Today's onigiri were made skillfully." *(上手に — adverbial form. Yamakawa co-opts the day's new adjective to describe his onigiri arrangement. He's been selling onigiri since Day 5. Today, for the first time, he can describe HOW he did it. Whether his onigiri arrangement is actually 上手 is debatable. But he thinks it is.)*
+
+If the player examines the コンビニ shelves:
+> 「右のおにぎりと左のおにぎり、どっちがいいですか？」 — "The right onigiri or the left onigiri, which is better?" *(右/左 — today's kanji. Even the おにぎり display has spatial relationships now.)*
 
 ---
 
@@ -4712,15 +4878,39 @@ The walk home. The pattern from Day 13 continues: classmates who were quiet in t
 
 ### The デパート Gets Vertical
 
-The デパート already had floor markers (一かい、二かい、三かい) since Day 9. But going up was just walking past decorative floor labels. Today, with 上/下 active, the spatial relationship becomes explicit. The escalator has 上 and 下 arrows. The elevator has 上 and 下 buttons. Going up and coming down are now navigable actions, not just observed labels.
+Since Day 9, the デパート has had an escalator going up that Rikizo couldn't step on — the concept of 上 didn't exist. Floor markers on the wall (一かい、二かい、三かい) were readable but taunting. Today, 上/下 arrive and the escalator becomes usable. For the first time, the building is taller than one floor.
 
-**Basement (地下 — B1):**
+**Going up:**
 
-Until today, the デパート only went up. Now 下 exists, and the building goes down too. A staircase near the entrance leads to B1.
+> Rikizo: 「上に行きましょう！」 — "Let's go up!" *(He steps onto the escalator. It's been running this whole time — seven days of mechanical motion carrying nobody. Now it carries him.)*
+
+**二かい — Clothing floor (NEW):**
+
+The second floor materializes around the player as they rise. Mannequins in neat rows. Folded clothes on tables. A different shopkeeper — more formal than the food floor. The air smells different (or the game implies it does through visual cues: warmer lighting, softer carpet).
+
+> Rikizo: 「...きれいですね。」 — "...Pretty." *(He can see clothes. He can't name them. There are no clothing words — シャツ, ズボン, スカート are all N4.1+. The mannequins wear things. Things with no names. The vocabulary gap is a physical experience: you can walk among the racks but you cannot point at anything and say what it is.)*
+
+**If the player examines specific clothing:**
+> 「これは...何ですか？名前がわかりません。」 — "This is... what? I don't know the name." *(何 — the honest question. The clothes exist. The words don't. The デパート is teaching the player what it feels like to be surrounded by things you can't describe.)*
+
+**Shopkeeper (二かい):**
+> 「いらっしゃいませ。何をお探しですか？」 *(The shopkeeper asks what you're looking for. Rikizo can't answer — not because he doesn't understand the question, but because he doesn't have the vocabulary to name what he might want. He stands in a clothing store with no words for clothes.)*
+
+**三かい — Electronics floor (NEW):**
+
+One more escalator up. The third floor. Screens. Devices. Things that glow and hum. Even less vocabulary applies here.
+
+> Rikizo: 「すごい...でも、何ですか？」 — "Amazing... but what is it?" *(すごい — his go-to for things that impress him. Everything on this floor impresses him. Nothing on this floor has a name.)*
+
+**Design note — 三かい as pure aspiration:** The electronics floor is the most vocabulary-gated space in the game. The player can ride the escalator up, look at screens and devices, and say almost nothing about any of it. This floor represents N4's furthest horizon — the things Rikizo will eventually be able to discuss but can't yet even name. It's the top of the building and the edge of the curriculum, compressed into one room.
+
+**Going down — Basement (地下 — B1):**
+
+The building doesn't just go up. Near the entrance, a staircase leads down. This wasn't visible before — or maybe it was, and without 下 as a concept, Rikizo's eyes slid past it the way they slid past the escalator.
 
 > Rikizo: 「下にも何かありますか？」 — "Is there something below too?" *(も — "also/too." The building extends downward. Rikizo is genuinely surprised.)*
 
-**The basement floor.** Dimmer lighting. A different feel from the polished upstairs. Two distinct zones:
+**The basement floor.** Dimmer lighting. A different atmosphere from the polished floors above. Two distinct zones:
 
 1. **ゲーム corner.** Shelves of video game boxes. Console displays. This is けん's paradise — and the player's, because ゲーム has been vocabulary since N5.2.
    > Rikizo: 「ゲームがたくさんありますね！」 — "There are so many games!" *(たくさん — lots. The shelf is stacked. Some boxes have readable titles: simple katakana names the player can sound out. Others have kanji they can't read yet — blurred by the environmental text system.)*
@@ -4728,23 +4918,58 @@ Until today, the デパート only went up. Now 下 exists, and the building goe
    **If the player examines specific games:**
    > 「このゲームは...千円です。」 — "This game is... 1,000 yen." *(Expensive for Rikizo's wallet, but browseable. The basement is a place to want things you can't afford yet.)*
 
-   > 「けんはゲームが上手です...このゲームもありますか？」 — "Ken is good at games... does he have this one too?" *(上手 callback from earlier today. Rikizo thinks of けん when he sees games. The social link is forming through shared vocabulary.)*
+   > 「けんはゲームが上手です...このゲームもありますか？」 — "Ken is good at games... does he have this one too?" *(上手 callback from the walk home. Rikizo thinks of けん when he sees games. The social link is forming through shared vocabulary.)*
 
 2. **カード corner.** Glass cases with collectible cards. Shiny foil. Organized by series. The player can see them but can't name most of what's displayed.
-   > Rikizo: 「きれいですね...」 — "Pretty..." *(きれい — the same word he used on the clothing floor back on Day 9. The vocabulary for "I see something nice but can't describe it" is getting a workout.)*
+   > Rikizo: 「きれいですね...」 — "Pretty..." *(きれい — the vocabulary for "I see something nice but can't describe it" is getting a workout today.)*
 
    **If the player approaches the card displays:**
    > 「カード...ほしいです。」 — "Cards... I want them." *(ほしい from Day 8. Desire without vocabulary is a recurring theme. The player can want the cards but can't engage with the card game system until collectible-game vocabulary arrives — probably N4.)*
 
-   **Design note — CCG as future system:** The card displays are a seed for a collectible card game mechanic in N4. When vocabulary for card game terms arrives (対戦 "match," デッキ "deck," etc.), the basement becomes an interactive space. For now it's a window into a future the player can't access — the same pattern as the clothing floor on Day 9, but nerdier.
+   **Design note — CCG as future system:** The card displays are a seed for a collectible card game mechanic in N4. When vocabulary for card game terms arrives (対戦 "match," デッキ "deck," etc.), the basement becomes an interactive space. For now it's a window into a future the player can't access — the same pattern as the clothing floor upstairs, but nerdier.
 
-**Clothing floor (二かい) — still decorative, now with 上/下 navigation:**
+**Design note — the デパート as vertical vocabulary progression:** The デパート is the game's vocabulary meter rendered as architecture. The player physically traverses the building and feels where their Japanese runs out:
 
-The clothing floor was browse-only since Day 9. That hasn't changed — there are still no clothing words (シャツ, ズボン, etc. are N4.1+). But now the player navigates there with explicit 上 movement rather than just wandering onto the floor.
+| Floor | What's there | Can interact? | Vocabulary gate |
+|---|---|---|---|
+| B1 (地下) | Games, cards | Partially — ゲーム exists, カード exists, but CCG system is N4 | Lowest barrier — katakana loan words carry you |
+| 1F (一かい) | Food, gifts | Fully — food vocab from Day 5+, プレゼント from Day 8 | Open since Day 9 |
+| 2F (二かい) | Clothing | Browse only — no clothing words until N4.1 | First opened today |
+| 3F (三かい) | Electronics | Almost nothing — すごい and that's it | First opened today |
 
-> Rikizo: 「上の服は...名前がわかりません。」 — "The clothes upstairs... I don't know their names." *(服 isn't available as specific vocabulary yet, but the concept of "things you wear" is visible. The player is experiencing the vocabulary gap as a spatial experience: you can go up to the floor, but you can't shop there.)*
+Each revisit as vocabulary grows will unlock more interaction. The building doesn't change — the player's ability to describe it does.
 
-**Design note — the デパート as vertical vocabulary progression (updated):** Day 9 established the department store as a building where each floor represents a vocabulary tier. Day 16 makes this spatial: the player physically goes 上 and 下 between tiers. The basement (games, cards) is partially accessible because ゲーム exists. The ground floor (food) is fully shoppable. The second floor (clothing) is browse-only. The third floor (electronics) is still decorative. The building is a four-tier vocabulary meter. The player can literally see how far their Japanese reaches by how high they can interact.
+---
+
+### Running Gags Updated
+
+1. **Dad's Gold** — Continues. 「だめ！」 Dad is upstairs now — the 2F unlock means the player might discover gold hidden in the parents' room. But the door doesn't open. The gold is safe behind a closed door and an eternal reflex.
+2. **Dad's Car** — Stable. One more day of admiration. 乗る is two days away (N5.17). The car's patience is almost rewarded.
+3. **Tree-san** — Daily greeting continues. The player can now describe Tree-san's position: 「木-さんは右にいます」or「左にいます」depending on approach direction. Relative directions make the relationship feel spatial, not just social.
+4. **The Fridge** — Still opens triumphantly. Now also "下" — downstairs. The fridge gains a spatial dimension: it's on the first floor. You go 下 to reach it. Some things stay the same even as the world expands vertically.
+5. **The Water Bottle** — Still in inventory. Day 12 of carrying.
+6. **Mom's "Come Home"** — Monday variant: 「学校に行ってね。」 morning, 「家に来てくださいね。」 evening. The routine is weekly now.
+7. **けん and Tests** — 「先生！今日はテストがありますか？」 Day 5 of the pattern. The class expects it. Even ミキ almost smiles. The gag has become communal — not just けん's anxiety, but the classroom's shared ritual. *(Finishes Day 18.)*
+8. **ミキ's Book** — NEW TITLE. 「白い山」(White Mountain). Day 1 of a new rotation. ミキ finished 「水の話」over the weekend. The new title uses 白 (Day 14) and 山 (Day 4) — both taught kanji. The book rotation is working: each title is readable with the current kanji set, and each title change signals that ミキ has a reading life that continues offscreen.
+9. **Buy Me Something** — ACTIVE. School day means けん is outside, near the コンビニ route. Did he ask today? If the player walks home past the コンビニ with けん nearby: 「りきぞ、何か買って！」 The gag is けん's — street behavior, convenience proximity, shameless. At school he doesn't ask. At home he doesn't ask. Only outdoors, near a store.
+10. **Station Master's ??? Quest** — Day 4 of 5. One day left before N5.17. The rack is still empty. Tomorrow (Day 17, N5.17) doesn't help either — 新聞 doesn't arrive until N5.18. The station master waits. The rack waits. The word waits.
+11. **Station Master's まだ** — Continues. The station master can now describe where the train should come from (北? 南?) and which side of the platform to wait on (右? 左?). He has more words for the waiting. The waiting itself is unchanged.
+12. **Environmental Text** — Big day. 上/下 arrows on staircases and escalators are now readable. The navigation UI itself is environmental text. The デパート floor signs resolve. The house staircase gains an arrow. Vertical text joins horizontal text in the progressive literacy system.
+13. **やまかわのごはん** — ◻ Persists. Yamakawa described his onigiri as 上手に作った. He's proud of his arrangement. He's still eating onigiri though. The quest isn't about arrangement — it's about variety. No new food vocabulary today.
+14. **ゆきのきおく** — ◻ Persists — and ESCALATES. ゆき is absent from school. すずき noticed. Nobody knows where she is. She was at the river yesterday, watching the mountains. She didn't mention being sick. She didn't warn anyone. This is the first time a classmate has been absent, and it's the one classmate who has been quietly questioning the world's timeline. Her absence is either mundane (a cold, a family errand) or significant (she saw something in the 北 mountains). The game doesn't say which. The quest log doesn't update. But the player feels it.
+15. **The Mystery Door** — NEW. The door on 2F that belongs to nobody. No nameplate. No interaction prompt. Rikizo won't talk about it. The fourth family member from Mom's 四人 count on Day 3 now has physical evidence: a room. Seeds 兄 (older brother) reveal in N4.
+
+**Quest log state (end of Day 16):**
+> 📋 Quest Log
+> ✓ 水を飲む (Day 5 → Day 5)
+> ✓ おにぎりを食べる (Day 5 → Day 8)
+> ✓ お母さんの買い物 (Day 8 → Day 9)
+> ◻ やまかわのごはん: 新しい食べ物をさがす (Day 10 → ???)
+> ◻ ゆきのきおく: ゆきの話を聞く (Day 11 → N4)
+> ✓ ノートに名前を書く (Day 9 → Day 13)
+> ◻ 駅長の「???」: 駅長は何かを読みたいです。でも、何？ (Day 13 → N5.18)
+
+No new quest log entries. But two threads advanced today without formal quest-log activity: ゆき's absence is the most significant ゆきのきおく development since Day 11, and the mystery door on 2F is a new physical clue in the four-person family mystery. Neither generates a quest notification. Both generate player questions. The best mysteries don't announce themselves — they just leave a door closed and a desk empty.
 
 ---
 
@@ -4752,18 +4977,26 @@ The clothing floor was browse-only since Day 9. That hasn't changed — there ar
 
 **New accessible areas:**
 - Rikizo's house 2F: hallway with three doors (parents' room — closed, mystery door — sealed, storage room — open with town view)
-- デパート B1: ゲーム corner (browseable, purchasable), カード corner (browse-only)
+- デパート 2F (二かい): clothing floor — browse-only, no clothing vocabulary
+- デパート 3F (三かい): electronics floor — almost entirely vocabulary-gated
+- デパート B1 (地下): ゲーム corner (browseable, purchasable), カード corner (browse-only)
 
 **No new NPCs.**
 
 **Flags:**
 - `jouzu_heta_unlocked` — 上手/下手 available as character descriptors.
 - `school_week2_monday` — Attended school on the second Monday. Weekly rhythm confirmed.
+- `miki_joke` — (optional) ミキ used 下手 to describe けん. +1 relationship. First sign of humor from her.
+- `ken_jouzu_brag` — けん declared himself ゲームが上手. Self-assessment logged for future callbacks.
 - `lee_karate` — (optional) Learned リー tried karate. +1 curiosity.
+- `lee_heta_question` — (optional) リー asked what Rikizo is bad at. +1 intimacy.
 - `house_upstairs_unlocked` — Accessed 2F of Rikizo's house. Discovered parents' room (closed) and mystery door.
 - `mystery_door_seen` — Noticed the unnamed door on 2F. +1 curiosity. Seeds brother reveal in N4.
 - `storage_room_boxes` — (optional) Examined boxes in storage room. +1 curiosity.
-- `depato_basement_unlocked` — Accessed デパート B1. Browsed games and/or cards.
+- `yuki_absent_day16` — ゆき was absent from school. すずき asked. Nobody knew. First classmate absence event.
+- `ken_test_day5` — けん asked about tests. Day 5 of the pattern. Class ritual established.
+- `depato_vertical_unlocked` — Accessed デパート 2F, 3F, and B1 for the first time. The building is now fully navigable.
+- `depato_basement_visited` — (optional) Browsed B1 games and/or cards.
 
 **Economy:**
 - デパート B1 games available for purchase (~1,000¥). First non-food, non-gift purchasable items.
@@ -4771,9 +5004,11 @@ The clothing floor was browse-only since Day 9. That hasn't changed — there ar
 **Art assets:**
 | Asset | Type | Priority | Notes |
 |---|---|---|---|
-| Classroom direction scene | BG variant | Medium | Students looking right/left on すずき's command. けん looking the wrong way. |
+| Classroom direction game | BG variant | Medium | Students looking right/left on すずき's command. けん looking the wrong way. ミキ unimpressed. リー precise. |
 | House 2F hallway | Background | B (MP100) | **High** | Narrow corridor. Three doors. Soft lighting. Parents' door on left, mystery door on right, storage room at end. The mystery door should look identical to the others — no visual distinction. The absence of distinction IS the design. |
 | Storage room / town view | Background | B (MP100) | Medium | Small room with stacked boxes. Window showing bird's-eye town view — callback to phone map from Day 15. |
+| デパート 2F — clothing floor | Background | B (MP100) | High | Mannequins, folded clothes on tables, warm lighting, soft carpet. More formal shopkeeper. Player can browse but can't buy or name anything. |
+| デパート 3F — electronics floor | Background | B (MP100) | Medium | Screens, devices, glowing displays. Futuristic compared to the rest of the store. Almost entirely vocabulary-gated. |
 | デパート B1 — game corner | Background | B (MP100) | High | Shelves of game boxes. Console display units. Slightly dim basement lighting. Neon accent lights on displays. けん would love it here. |
 | デパート B1 — card corner | Background | B (MP100) | Medium | Glass display cases with foil cards. Organized, collectible feel. Shiny. Aspirational. |
 | 上/下 navigation arrows | UI element | — | Medium | Appear at staircases/escalators when 上/下 vocabulary is active. Simple directional indicators. |
