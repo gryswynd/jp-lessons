@@ -929,7 +929,7 @@ window.GrammarModule = {
             if (ch === item.answer) {
               const ttsBtn = el('button', 'gr-tts-btn', '🔊');
               ttsBtn.onclick = () => speakText(fullSentence);
-              expEl.appendChild(ttsBtn);
+              sent.appendChild(ttsBtn);
             }
             nextBtn.style.display = 'block';
           };
