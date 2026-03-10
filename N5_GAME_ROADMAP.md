@@ -4577,37 +4577,29 @@ The new vocabulary layers onto the existing world:
 
 ---
 
-## Days 15 + 16 — "Cardinal Directions" + "Sides & Vertical" (unlocked by N5.15, N5.16)
+## Day 15 — "Cardinal Directions" (unlocked by N5.15)
 
-**Day 15 kanji:** 北、南、東、西
-**Day 16 kanji:** 右、左、上、下
+**New kanji:** 北、南、東、西
 
-**Day 15 vocabulary:** 北/南/東/西 (compass directions), 北東/北西/南東/南西 (compounds)
-**Day 16 vocabulary:** 右/左/上/下 (relative directions), 上手/下手 (skilled/unskilled)
+**New vocabulary:** 北/南/東/西 (compass directions), 北東/北西/南東/南西 (compounds)
 
-**Calendar:**
-- Day 15: 五月十一日 (Sunday) — school closed, second weekend day
-- Day 16: 五月十二日 (Monday) — school reopens
+**Calendar:** 五月十一日 (May 11th, Sunday). Second weekend day. School still closed.
 
 **Grammar context:** No new unlocks. Sustained reinforcement of everything through G11.
 
 ---
 
-### The Weekend the World Got Labeled
-
-Days 15 and 16 are treated as a paired unit because they complete a single conceptual system: **spatial orientation**. Day 15 gives the world compass directions (absolute positioning — north is always north). Day 16 gives it relative directions (contextual positioning — right depends on which way you're facing). Together they form the navigational vocabulary that transforms the game map from "places Rikizo goes" to "places in relation to each other."
-
-Before this weekend, the player knew locations: house, school, station, コンビニ, river. After this weekend, the player knows the *map*: school is south of the station, the river is east of the park, the コンビニ is to the right of the station exit. The world gains spatial structure.
-
----
-
-### Day 15 (Sunday) — Compass
+### The Day the Map Got a Compass
 
 Sunday. School still closed. Rikizo explores the town — but today, the town has directions.
 
-**The map materializes:** This is not a new building or NPC. It's a conceptual upgrade. The game map — which the player has been navigating by landmark since Day 1 — now has compass labels. North, south, east, west. The mini-map (if the game has one) adds directional indicators. Street signs (newly readable since Day 13) include directional information.
+Before today, the player knew locations: house, school, station, コンビニ, river. After today, the player knows where they are *relative to each other*: school is south of the station, the mountains are north, the コンビニ is east. The world gains spatial structure. Not new buildings — new labels on the buildings that already exist.
 
-**Morning — Dad and directions:**
+**The map materializes:** This is a conceptual upgrade, not a physical one. The game map — which the player has been navigating by landmark since Day 1 — now has compass labels. North, south, east, west. The mini-map (if the game has one) adds directional indicators. Street signs (newly readable since Day 13) include directional information.
+
+---
+
+### Morning — Dad and Directions
 
 1. **Dad:** 「東はどっちだ？」 — "Which way is east?" *(Dad quizzing Rikizo. In character: Dad is practical, he tests knowledge. 東 — east. どっち — which direction. This is Dad's version of engagement — he doesn't play games with Rikizo like けん does. He quizzes.)*
 
@@ -4615,58 +4607,32 @@ Sunday. School still closed. Rikizo explores the town — but today, the town ha
 
 3. **Dad:** 「南は？」 — "South?"
 
-4. **Dad:** 「学校は南にある。覚えてくれ。」 — "School is to the south. Remember that." *(Dad orients Rikizo's mental map. South = school. He's training spatial awareness the way a dad would — through casual interrogation at breakfast. 覚える isn't available — check. If not, simplify to 「学校は南だ。」)*
+4. **Dad:** 「学校は南だ。」 — "School is to the south." *(Dad orients Rikizo's mental map. South = school. He's training spatial awareness the way a dad would — through casual interrogation at breakfast.)*
 
-**Town exploration — directional NPCs:**
+---
+
+### Town Exploration — Directional NPCs
+
+The new vocabulary layers onto existing NPC conversations. Everyone suddenly has spatial opinions.
 
 - **Station master:** 「北の方に山があります。南の方に学校があります。」 — "Mountains to the north. School to the south." *(The station master — who has been waiting at an empty station since Day 5 — finally has spatial information to share. He knows where things are. He's been watching the world materialize around him and he knows the compass.)*
 
 - **Yamakawa:** 「コンビニは東だよ。西には何もないよ。」 — "The convenience store is east. Nothing to the west." *(Nothing to the west. Yet. The game world's western edge is undefined. Yamakawa says "nothing" because nothing has been built there. In N4, the western zone develops. Yamakawa's casual dismissal of the west becomes ironic later.)*
 
-- **ゆき:** 「北の山はきれいですね。でも...遠いですね。」 — "The northern mountains are beautiful. But... far away." *(ゆき looks north. The mountains are visible but distant. 遠い — far. Is this available? Check vocab. If not, the concept is communicated through her gaze and pause. ゆき looking toward mountains she can't reach is thematically potent regardless of vocabulary availability.)*
+- **ゆき** (at the river, optional): 「北の山はきれいですね。」 — "The northern mountains are beautiful." *(ゆき looks north. The mountains are visible but distant. She stares at them a beat too long. What's up there? Nothing yet — but ゆき's gaze marks the north as significant. A seed for later.)*
+
+**Station master trade window:** Still available. Still nothing works. The rack is still empty. Day 3 of 5.
 
 ---
 
-### Day 16 (Monday) — Relative Position
-
-Monday. School reopens. The gate is open. 校長 is back. The weekly rhythm resumes.
-
-**Classroom — relative directions:**
-
-Today's vocabulary is physical. 右、左、上、下 — right, left, above, below. すずき先生 uses them in class.
-
-1. **すずき:** 「右を見てください。左を見てください。」 — "Please look right. Please look left." *(Classroom instruction using て-form commands. すずき teaches directions through physical action — look right, look left. The students move. The classroom becomes interactive.)*
-
-2. **けん** (looking the wrong way): 「こっち？」 — "This way?" *(けん gets it wrong. Comedy. すずき corrects him gently. 左 and 右 are notoriously confusable — けん's mistake mirrors what every learner experiences.)*
-
-**上手 / 下手 — skill adjectives:**
-
-The most interesting Day 16 vocabulary isn't directional — it's 上手 (skilled) and 下手 (unskilled). These are na-adjectives built from 上 (above) and 下 (below) + 手 (hand, Day 13). Literally: "upper hand" and "lower hand." The metaphor is vertical — skill is up, lack of skill is down.
-
-**リー conversation:**
-
-1. **リー:** 「りきぞさんは日本語が上手ですね。」 — "You're good at Japanese, Rikizo." *(上手 — the compliment. リー gives it genuinely. She herself was complimented on Day 12 (じょうず). Now she returns it using a different word. 上手 and じょうず are near-synonyms, but 上手 has kanji the player can read — it feels more formal, more "real.")*
-
-2. **Rikizo:** 「リーさんも上手ですよ！」 — "You're good too, Lee!"
-
-3. **リー:** 「空手は下手です...」 — "I'm bad at karate..." *(下手 — unskilled. 空手 callback from Day 13. リー reveals she tried karate and wasn't good at it. This is characterization through vocabulary: the same adjective pair (上手/下手) applied to different domains (language vs martial arts) reveals different facets of a character. リー is good at languages, bad at physical activities. ミキ is probably 上手 at reading, 下手 at socializing. けん is 上手 at games, 下手 at tests. The vocabulary creates a framework for describing people's strengths and weaknesses.)*
-
-**Design note — 上手/下手 as character descriptors:** These adjectives become a recurring conversational tool. NPCs use them to describe each other: 「けんはゲームが上手だよ」(Ken is good at games), 「ミキさんは読むのが上手ですね」(Miki is good at reading). The player builds a mental map of each character's skills through these descriptions — a social version of the spatial map that compass directions created.
-
----
-
-### State Tracking (End of Days 15-16)
+### State Tracking (End of Day 15)
 
 **Map upgrade:** Compass directions visible on the game map. Directional labels on key locations.
 
 **No new locations.** The existing world gains labels, not new buildings.
 
-**No new NPCs.**
-
 **Flags:**
 - `compass_learned` — Player has encountered all four cardinal directions in NPC dialogue.
-- `jouzu_heta_unlocked` — 上手/下手 available as character descriptors.
-- `school_week2_monday` — Attended school on the second Monday. Weekly rhythm confirmed.
 
 **Art assets:**
 | Asset | Type | Priority | Notes |
@@ -4674,11 +4640,73 @@ The most interesting Day 16 vocabulary isn't directional — it's 上手 (skille
 | Map with compass labels | UI overlay | High | N/S/E/W labels added to the game map. First time directions are visually represented. |
 | Directional street signs | BG detail set | Medium | Signs at intersections showing 北/南/東/西. Readable now because kanji are taught. |
 
-**Open questions (Days 15-16):**
+---
 
-1. **遠い availability** — Is 遠い in the glossary for N5.15 or earlier? If not, ゆき's "far mountains" line needs restructuring. Check before implementation.
+## Day 16 — "Sides & Vertical" (unlocked by N5.16)
 
-2. **覚える availability** — Is 覚える in scope for Dad's "remember that" line? If not, simplify to declarative: 「学校は南だ。」
+**New kanji:** 右、左、上、下
+
+**New vocabulary:** 右/左/上/下 (relative directions), 上手/下手 (skilled/unskilled)
+
+**Calendar:** 五月十二日 (May 12th, Monday). School reopens. The weekly rhythm resumes.
+
+**Grammar context:** No new unlocks. Sustained reinforcement of everything through G11.
+
+---
+
+### The Day the World Got a Left and a Right
+
+Monday. The gate is open. 校長 is back. The second week begins.
+
+Yesterday the world got a compass — absolute directions that don't change. Today it gets relative directions — positions that depend on where you're standing. North is always north. But right depends on which way you're facing. This is a subtler vocabulary: it requires the player to think about perspective, not just geography.
+
+And then there's 上手 and 下手. Skill adjectives built from spatial kanji. 上 (above) + 手 (hand, Day 13) = skilled. 下 (below) + 手 = unskilled. The metaphor is vertical — skill is up, lack of skill is down. These two words do more character work than any dialogue: once the player has 上手 and 下手, every NPC can be described by what they're good and bad at.
+
+---
+
+### Classroom — Right and Left
+
+Today's vocabulary is physical. 右、左、上、下 — right, left, above, below. すずき先生 uses them in class.
+
+1. **すずき:** 「右を見てください。左を見てください。」 — "Please look right. Please look left." *(Classroom instruction using て-form commands. すずき teaches directions through physical action — look right, look left. The students move. The classroom becomes interactive.)*
+
+2. **けん** (looking the wrong way): 「こっち？」 — "This way?" *(けん gets it wrong. Comedy. すずき corrects him gently. 左 and 右 are notoriously confusable — けん's mistake mirrors what every learner experiences.)*
+
+---
+
+### After School — 上手 and 下手
+
+The walk home. The pattern from Day 13 continues: classmates who were quiet in the classroom open up outside.
+
+**リー conversation (walking home):**
+
+1. **リー:** 「りきぞさんは日本語が上手ですね。」 — "You're good at Japanese, Rikizo." *(上手 — the compliment. リー gives it genuinely. She herself was complimented on Day 12 (じょうず). Now she returns it using a different word. 上手 and じょうず are near-synonyms, but 上手 has kanji the player can read — it feels more formal, more "real.")*
+
+2. **Rikizo:** 「リーさんも上手ですよ！」 — "You're good too, Lee!"
+
+3. **リー:** 「空手は下手です...」 — "I'm bad at karate..." *(下手 — unskilled. 空手 callback from Day 13. リー reveals she tried karate and wasn't good at it. Characterization through vocabulary: the same adjective pair applied to different domains reveals different facets of a character. リー is good at languages, bad at physical activities. ミキ is probably 上手 at reading, 下手 at socializing. けん is 上手 at games, 下手 at tests.)*
+
+**Design note — 上手/下手 as character descriptors:** These adjectives become a recurring conversational tool. NPCs use them to describe each other: 「けんはゲームが上手だよ」(Ken is good at games), 「ミキさんは読むのが上手ですね」(Miki is good at reading). The player builds a mental map of each character's skills — a social version of the spatial map that compass directions created yesterday.
+
+**Station master trade window:** Still available. Still nothing works. Day 4 of 5.
+
+---
+
+### State Tracking (End of Day 16)
+
+**No new locations.** The existing world gains relative labels.
+
+**No new NPCs.**
+
+**Flags:**
+- `jouzu_heta_unlocked` — 上手/下手 available as character descriptors.
+- `school_week2_monday` — Attended school on the second Monday. Weekly rhythm confirmed.
+- `lee_karate` — (optional) Learned リー tried karate. +1 curiosity.
+
+**Art assets:**
+| Asset | Type | Priority | Notes |
+|---|---|---|---|
+| Classroom direction scene | BG variant | Medium | Students looking right/left on すずき's command. けん looking the wrong way. |
 
 ---
 
