@@ -28,11 +28,15 @@
           "en": "What color shirt are you wearing today?",
           "terms": [
             "v_kyou",
-            "v_nan",
+            "p_wa",
+            "v_nani",
             "v_iro",
+            "p_no",
             "v_shatsu",
+            "p_wo",
             { "id": "v_kiru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            { "id": "v_iru", "form": "polite_masu" },
+            "p_ka"
           ]
         },
         {
@@ -40,9 +44,13 @@
           "en": "Can you come to school after eating breakfast?",
           "terms": [
             "v_asagohan",
+            "p_wo",
             { "id": "v_taberu", "form": "te_form" },
+            "p_kara",
             "v_gakkou",
-            { "id": "v_kuru", "form": "potential" }
+            "p_ni",
+            { "id": "v_kuru", "form": "polite_potential" },
+            "p_ka"
           ]
         },
         {
@@ -51,8 +59,10 @@
           "terms": [
             "v_mainichi",
             "v_ocha",
+            "p_wo",
             { "id": "v_nomu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            { "id": "v_iru", "form": "polite_masu" },
+            "p_ka"
           ]
         },
         {
@@ -60,9 +70,12 @@
           "en": "What kind of colors does the teacher like?",
           "terms": [
             "v_sensei",
+            "p_wa",
             "v_donna",
             "v_iro",
-            { "id": "v_suki", "form": "polite_adj" }
+            "p_ga",
+            { "id": "v_suki", "form": "polite_adj" },
+            "p_ka"
           ]
         }
       ]
@@ -124,7 +137,7 @@
     },
     {
       "type": "vocabList",
-      "title": "Vocabulary & Compounds（ことば）",
+      "title": "Vocabulary（語彙リスト）",
       "groups": [
         {
           "label": "Food & Ingredients",
@@ -152,8 +165,11 @@
           "terms": [
             "p_sumimasen",
             "v_yasai",
+            "p_wa",
             "v_doko",
-            { "id": "v_aru", "form": "polite_masu" }
+            "p_ni",
+            { "id": "v_aru", "form": "polite_masu" },
+            "p_ka"
           ]
         },
         {
@@ -162,10 +178,14 @@
           "en": "The vegetables are over there. The beef is also nearby.",
           "terms": [
             "v_yasai",
+            "p_wa",
             "v_asoko",
+            "p_ni",
             { "id": "v_aru", "form": "polite_masu" },
             "v_gyuuniku",
+            "p_mo",
             { "id": "v_chikai", "form": "adverbial" },
+            "p_ni",
             { "id": "v_aru", "form": "polite_masu" },
             "p_yo"
           ]
@@ -177,10 +197,14 @@
           "terms": [
             "p_arigatou_gozaimasu",
             "v_ryouri",
+            "p_ni",
             "v_yasai",
+            "p_to",
             "v_gyuuniku",
+            "p_wo",
             "v_yoku",
-            { "id": "v_tsukau", "form": "polite_masu" }
+            { "id": "v_tsukau", "form": "polite_masu" },
+            "p_ka"
           ]
         },
         {
@@ -188,12 +212,16 @@
           "jp": "はい、野菜の 料理が 大好きです。おいしい 食べ物が 作れますよ。",
           "en": "Yes, I love vegetable dishes. You can make delicious food.",
           "terms": [
+            "p_hai",
             "v_yasai",
+            "p_no",
             "v_ryouri",
-            "v_daisuki",
+            "p_ga",
+            { "id": "v_daisuki", "form": "polite_adj" },
             "v_oishii",
             "v_tabemono",
-            { "id": "v_tsukuru", "form": "potential" },
+            "p_ga",
+            { "id": "v_tsukuru", "form": "polite_potential" },
             "p_yo"
           ]
         }
@@ -206,14 +234,19 @@
       "lines": [
         {
           "spk": "A",
-          "jp": "りきぞさん、今日は 何の 料理を 作りますか。",
+          "jp": "りきぞさん、今日は 何 の 料理を 作りますか。",
           "en": "Rikizo, what dish are you making today?",
           "terms": [
             "char_rikizo",
+            "v_san",
             "v_kyou",
+            "p_wa",
             "v_nan",
+            "p_no",
             "v_ryouri",
-            { "id": "v_tsukuru", "form": "polite_masu" }
+            "p_wo",
+            { "id": "v_tsukuru", "form": "polite_masu" },
+            "p_ka"
           ]
         },
         {
@@ -222,10 +255,14 @@
           "en": "I want to make a beef and vegetable dish. I bought lots of food.",
           "terms": [
             "v_yasai",
+            "p_to",
             "v_gyuuniku",
+            "p_no",
             "v_ryouri",
+            "p_wo",
             { "id": "v_tsukuru", "form": "desire_tai" },
             "v_tabemono",
+            "p_wo",
             "v_takusan",
             { "id": "v_kau", "form": "te_form" },
             { "id": "v_kuru", "form": "polite_mashita" }
@@ -239,6 +276,7 @@
             { "id": "v_ii", "form": "polite_adj" },
             "p_ne",
             "v_gyuuniku",
+            "p_mo",
             { "id": "v_kau", "form": "polite_mashita" },
             "p_kara_because",
             "v_issho",
@@ -251,7 +289,9 @@
           "en": "Can you also make drinks?",
           "terms": [
             "v_nomimono",
-            { "id": "v_tsukuru", "form": "potential" }
+            "p_mo",
+            { "id": "v_tsukuru", "form": "polite_potential" },
+            "p_ka"
           ]
         },
         {
@@ -259,11 +299,15 @@
           "jp": "はい、作れますよ。牛肉と 野菜の 料理は おいしいですね。",
           "en": "Yes, I can. Beef and vegetable dishes are delicious.",
           "terms": [
-            { "id": "v_tsukuru", "form": "potential" },
+            "p_hai",
+            { "id": "v_tsukuru", "form": "polite_potential" },
             "p_yo",
             "v_gyuuniku",
+            "p_to",
             "v_yasai",
+            "p_no",
             "v_ryouri",
+            "p_wa",
             { "id": "v_oishii", "form": "polite_adj" },
             "p_ne"
           ]
@@ -282,7 +326,9 @@
           "terms": [
             "char_ken",
             "v_kyou",
+            "p_wa",
             "v_nani",
+            "p_wo",
             { "id": "v_tsukuru", "form": null }
           ]
         },
@@ -292,10 +338,14 @@
           "en": "I want to make a beef and vegetable dish. I bought lots of stuff at the supermarket.",
           "terms": [
             "v_yasai",
+            "p_to",
             "v_gyuuniku",
+            "p_no",
             "v_ryouri",
+            "p_wo",
             { "id": "v_tsukuru", "form": "plain_desire_tai" },
             "v_suupaa",
+            "p_de",
             "v_takusan",
             { "id": "v_kau", "form": "te_form" },
             { "id": "v_kuru", "form": "plain_past" },
@@ -310,6 +360,7 @@
             { "id": "v_ii", "form": null },
             "p_ne",
             "v_nomimono",
+            "p_mo",
             { "id": "v_kau", "form": "plain_past" }
           ]
         },
@@ -320,6 +371,7 @@
           "terms": [
             "v_un",
             "v_ocha",
+            "p_wo",
             { "id": "v_kau", "form": "plain_past" },
             { "id": "v_oishii", "form": "adverbial" },
             { "id": "v_tsukuru", "form": "te_form" },
@@ -341,7 +393,9 @@
           "terms": [
             "char_rikizo",
             "v_kyou",
+            "p_wa",
             "v_nani",
+            "p_ga",
             { "id": "v_taberu", "form": "plain_desire_tai" }
           ]
         },
@@ -351,8 +405,11 @@
           "en": "I want to eat a beef and vegetable dish. Let's go shopping together.",
           "terms": [
             "v_gyuuniku",
+            "p_to",
             "v_yasai",
+            "p_no",
             "v_ryouri",
+            "p_ga",
             { "id": "v_taberu", "form": "plain_desire_tai" },
             "v_issho",
             "v_kaimono",
@@ -367,6 +424,7 @@
           "terms": [
             "v_donna",
             "v_tabemono",
+            "p_wo",
             { "id": "v_kau", "form": null }
           ]
         },
@@ -377,10 +435,13 @@
           "terms": [
             "v_oishii",
             "v_yasai",
+            "p_to",
             "v_gyuuniku",
+            "p_wo",
             { "id": "v_kau", "form": "plain_desire_tai" },
             "p_yo",
             "v_ryouri",
+            "p_ni",
             { "id": "v_tsukau", "form": "plain_desire_tai" },
             "p_kara_because"
           ]
@@ -396,10 +457,13 @@
           "en": "Rikizo went to the supermarket today and bought food.",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_kyou",
             "v_suupaa",
+            "p_ni",
             { "id": "v_iku", "form": "te_form" },
             "v_tabemono",
+            "p_wo",
             { "id": "v_kau", "form": "polite_mashita" }
           ]
         },
@@ -408,11 +472,14 @@
           "en": "He bought a lot of vegetables and beef. Because he loves cooking.",
           "terms": [
             "v_yasai",
+            "p_to",
             "v_gyuuniku",
+            "p_wo",
             "v_takusan",
             { "id": "v_kau", "form": "polite_mashita" },
             "v_ryouri",
-            "v_daisuki",
+            "p_ga",
+            { "id": "v_daisuki", "form": "polite_adj" },
             "p_kara_because"
           ]
         },
@@ -421,10 +488,15 @@
           "en": "After returning home, he made a beef and vegetable dish.",
           "terms": [
             "v_ie",
+            "p_ni",
             { "id": "v_kaeru", "form": "te_form" },
+            "p_kara",
             "v_gyuuniku",
+            "p_to",
             "v_yasai",
+            "p_no",
             "v_ryouri",
+            "p_wo",
             { "id": "v_tsukuru", "form": "polite_mashita" }
           ]
         },
@@ -434,6 +506,7 @@
           "terms": [
             "v_sono",
             "v_ryouri",
+            "p_wa",
             "v_totemo",
             { "id": "v_oishii", "form": "polite_past_adj" }
           ]
@@ -443,6 +516,7 @@
           "en": "He also made drinks and ate deliciously.",
           "terms": [
             "v_nomimono",
+            "p_mo",
             { "id": "v_tsukuru", "form": "te_form" },
             { "id": "v_oishii", "form": "adverbial" },
             { "id": "v_taberu", "form": "polite_mashita" }
@@ -455,11 +529,13 @@
           "a": "スーパーに 行きました。",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_kyou",
             "v_doko",
+            "p_ni",
             { "id": "v_iku", "form": "polite_mashita" },
-            "v_suupaa",
-            { "id": "v_iku", "form": "polite_mashita" }
+            "p_ka",
+            "v_suupaa"
           ]
         },
         {
@@ -467,12 +543,16 @@
           "a": "牛肉と 野菜の 料理を 作りました。",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_nani",
+            "p_wo",
             { "id": "v_tsukuru", "form": "polite_mashita" },
+            "p_ka",
             "v_gyuuniku",
+            "p_to",
             "v_yasai",
-            "v_ryouri",
-            { "id": "v_tsukuru", "form": "polite_mashita" }
+            "p_no",
+            "v_ryouri"
           ]
         },
         {
@@ -481,9 +561,11 @@
           "terms": [
             "v_sono",
             "v_ryouri",
+            "p_wa",
             { "id": "v_oishii", "form": "polite_past_adj" },
-            "v_totemo",
-            { "id": "v_oishii", "form": "polite_past_adj" }
+            "p_ka",
+            "p_hai",
+            "v_totemo"
           ]
         }
       ]
@@ -497,7 +579,10 @@
           "en": "Yamakawa is very skilled at cooking.",
           "terms": [
             "char_yamakawa",
+            "v_san",
+            "p_wa",
             "v_ryouri",
+            "p_ga",
             "v_totemo",
             { "id": "v_jouzu", "form": "polite_adj" }
           ]
@@ -508,10 +593,13 @@
           "terms": [
             "v_mainichi",
             "v_yasai",
+            "p_to",
             "v_gyuuniku",
+            "p_wo",
             { "id": "v_tsukau", "form": "te_form" },
             "v_oishii",
             "v_ryouri",
+            "p_wo",
             { "id": "v_tsukuru", "form": "te_form" },
             { "id": "v_iru", "form": "polite_masu" }
           ]
@@ -524,8 +612,9 @@
             "v_tabemono",
             "p_ya",
             "v_nomimono",
+            "p_wo",
             { "id": "v_jouzu", "form": "adverbial" },
-            { "id": "v_tsukuru", "form": "potential" }
+            { "id": "v_tsukuru", "form": "polite_potential" }
           ]
         },
         {
@@ -533,10 +622,14 @@
           "en": "Rikizo wants to cook as skillfully as Yamakawa.",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "char_yamakawa",
+            "v_san",
+            "p_no",
             "v_you_manner",
             { "id": "v_jouzu", "form": "adverbial" },
             "v_ryouri",
+            "p_wo",
             { "id": "v_tsukuru", "form": "desire_tai" }
           ]
         },
@@ -545,6 +638,7 @@
           "en": "He also wants to become good at shopping.",
           "terms": [
             "v_kaimono",
+            "p_mo",
             { "id": "v_jouzu", "form": "adverbial" },
             { "id": "v_naru", "form": "desire_tai" }
           ]
@@ -556,10 +650,14 @@
           "a": "はい、とても 上手です。",
           "terms": [
             "char_yamakawa",
+            "v_san",
+            "p_wa",
             "v_ryouri",
+            "p_ga",
             { "id": "v_jouzu", "form": "polite_adj" },
-            "v_totemo",
-            { "id": "v_jouzu", "form": "polite_adj" }
+            "p_ka",
+            "p_hai",
+            "v_totemo"
           ]
         },
         {
@@ -567,13 +665,16 @@
           "a": "色々な 食べ物や 飲み物を 作れます。",
           "terms": [
             "char_yamakawa",
+            "v_san",
+            "p_wa",
             "v_nani",
-            { "id": "v_tsukuru", "form": "potential" },
+            "p_wo",
+            { "id": "v_tsukuru", "form": "polite_potential" },
+            "p_ka",
             { "id": "v_iroiro", "form": "attributive_na" },
             "v_tabemono",
             "p_ya",
-            "v_nomimono",
-            { "id": "v_tsukuru", "form": "potential" }
+            "v_nomimono"
           ]
         },
         {
@@ -581,13 +682,16 @@
           "a": "やまかわさんの ように 作りたいです。",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_dare",
+            "p_no",
             "v_you_manner",
             "v_ryouri",
+            "p_ga",
             { "id": "v_tsukuru", "form": "desire_tai" },
+            "p_ka",
             "char_yamakawa",
-            "v_you_manner",
-            { "id": "v_tsukuru", "form": "desire_tai" }
+            "v_san"
           ]
         }
       ]
@@ -640,9 +744,11 @@
           "terms": [
             "v_kono",
             "v_mise",
+            "p_dewa",
             "v_oishii",
             "v_ryouri",
-            { "id": "v_tsukuru", "form": "potential" }
+            "p_ga",
+            { "id": "v_tsukuru", "form": "polite_potential" }
           ]
         },
         {
@@ -652,8 +758,11 @@
           "answer": "料理を 作りました",
           "terms": [
             "v_suupaa",
+            "p_de",
             "v_yasai",
+            "p_to",
             "v_gyuuniku",
+            "p_wo",
             { "id": "v_kau", "form": "te_form" },
             "v_ryouri",
             { "id": "v_tsukuru", "form": "polite_mashita" }
@@ -665,9 +774,12 @@
           "choices": ["ように", "ような", "ようが", "ようと"],
           "answer": "ように",
           "terms": [
+            "v_san",
+            "p_no",
             "v_you_manner",
             { "id": "v_jouzu", "form": "adverbial" },
             "v_ryouri",
+            "p_wo",
             { "id": "v_tsukuru", "form": "desire_tai" }
           ]
         },
@@ -678,8 +790,10 @@
           "answer": "食べ物",
           "terms": [
             "v_suupaa",
+            "p_de",
             "v_nomimono",
-            "v_tabemono",
+            "p_to",
+            "p_wo",
             { "id": "v_kau", "form": "polite_mashita" }
           ]
         }
