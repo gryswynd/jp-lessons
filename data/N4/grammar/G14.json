@@ -498,38 +498,43 @@
       "instructions": "Choose the correct word or pattern to complete each sentence naturally.",
       "items": [
         {
-          "sentence": "野菜___魚のほうが好きです。",
+          "before": "野菜",
+          "after": "魚のほうが好きです。",
           "translation": "I prefer fish over vegetables.",
           "choices": ["より", "ほど", "くらい", "すぎる"],
           "answer": "より",
           "explanation": "より marks the lesser element in a comparison: 野菜より = 'than vegetables.' The preferred side (魚) is marked by ほうが."
         },
         {
-          "sentence": "この本はあの本___おもしろくないです。",
+          "before": "この本はあの本",
+          "after": "おもしろくないです。",
           "translation": "This book is not as interesting as that book.",
           "choices": ["より", "ほど", "くらい", "のほうが"],
           "answer": "ほど",
           "explanation": "ほど is used in NEGATIVE comparisons: AはBほど～ない (A is not as ～ as B). ほど follows the standard/benchmark (あの本ほど = not to the level of that book)."
         },
         {
-          "sentence": "三時間___働きました。",
+          "before": "三時間",
+          "after": "働きました。",
           "translation": "I worked for about three hours.",
           "choices": ["より", "ほど", "くらい", "のほうが"],
           "answer": "くらい",
           "explanation": "くらい/ぐらい follows quantities to mean 'about / approximately.' 三時間くらい = about three hours. It gives a rough, non-exact duration."
         },
         {
-          "sentence": "食べ___て、気分が悪いです。",
+          "before": "食べ",
+          "after": "て、気分が悪いです。",
           "translation": "I ate too much and feel sick.",
           "choices": ["すぎ", "より", "ほど", "くらい"],
           "answer": "すぎ",
           "explanation": "すぎる attaches to the ます-stem of verbs: 食べる → ます-stem 食べ + すぎる = 食べすぎる (eat too much). The て-form is 食べすぎて. The blank needs the すぎ stem before て."
         },
         {
-          "sentence": "この料理は高___すぎます。",
+          "before": "この料理は高",
+          "after": "すぎます。",
           "translation": "This dish is too expensive.",
-          "choices": ["さ", "く", "（blank — nothing）", "い"],
-          "answer": "（blank — nothing）",
+          "choices": ["さ", "く", "（なし）", "い"],
+          "answer": "（なし）",
           "explanation": "For い-adjectives, drop the final い and add すぎる directly: 高い → 高 + すぎる = 高すぎます. Nothing goes between 高 and すぎます — the い must be dropped completely."
         }
       ]
