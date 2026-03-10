@@ -41,7 +41,7 @@
           "id": "N5.2",
           "title": "Days of the Week",
           "file": "data/N5/lessons/N5.2.json",
-          "unlocksAfter": "N5.1",
+          "unlocksAfter": "G2",
           "kanji": [
             "日",
             "月",
@@ -107,7 +107,7 @@
           "id": "N5.6",
           "title": "Landscape & Vehicles",
           "file": "data/N5/lessons/N5.6.json",
-          "unlocksAfter": "N5.5",
+          "unlocksAfter": "G7",
           "kanji": [
             "山",
             "川",
@@ -145,7 +145,7 @@
           "id": "N5.9",
           "title": "Relative Position",
           "file": "data/N5/lessons/N5.9.json",
-          "unlocksAfter": "N5.Review.4",
+          "unlocksAfter": "G8",
           "kanji": [
             "前",
             "後",
@@ -157,7 +157,7 @@
           "id": "N5.10",
           "title": "Weather & Energy",
           "file": "data/N5/lessons/N5.10.json",
-          "unlocksAfter": "N5.9",
+          "unlocksAfter": "G9",
           "kanji": [
             "天",
             "電",
@@ -181,7 +181,7 @@
           "id": "N5.12",
           "title": "Study & Country",
           "file": "data/N5/lessons/N5.12.json",
-          "unlocksAfter": "N5.11",
+          "unlocksAfter": "G11",
           "kanji": [
             "本",
             "語",
@@ -280,7 +280,7 @@
           "id": "G2",
           "title": "Core Particles I: は, が, の, か, を",
           "file": "data/N5/grammar/G2.json",
-          "unlocksAfter": "N5.1",
+          "unlocksAfter": "G1",
           "icon": "📌"
         },
         {
@@ -301,28 +301,28 @@
           "id": "G5",
           "title": "Verb Types — RU-Verbs vs U-Verbs vs Irregulars",
           "file": "data/N5/grammar/G5.json",
-          "unlocksAfter": "N5.5",
+          "unlocksAfter": "G4",
           "icon": "⚙️"
         },
         {
           "id": "G6",
           "title": "Polite Verb Forms — ます形",
           "file": "data/N5/grammar/G6.json",
-          "unlocksAfter": "N5.5",
+          "unlocksAfter": "G5",
           "icon": "🔤"
         },
         {
           "id": "G7",
           "title": "て-form — Connecting Actions",
           "file": "data/N5/grammar/G7.json",
-          "unlocksAfter": "N5.5",
+          "unlocksAfter": "G6",
           "icon": "🔗"
         },
         {
           "id": "G8",
           "title": "ている・たいです・ましょう — Progressive, Desire & Invitation",
           "file": "data/N5/grammar/G8.json",
-          "unlocksAfter": "N5.8",
+          "unlocksAfter": "N5.Review.4",
           "icon": "🎯"
         },
         {
@@ -355,7 +355,7 @@
           "id": "N5.Review.1",
           "title": "People, Family & Days of the Week",
           "file": "data/N5/reviews/N5.Review.1.json",
-          "unlocksAfter": "N5.2"
+          "unlocksAfter": "G3"
         },
         {
           "id": "N5.Review.2",
@@ -379,7 +379,7 @@
           "id": "N5.Review.5",
           "title": "Relative Position, Weather & Energy",
           "file": "data/N5/reviews/N5.Review.5.json",
-          "unlocksAfter": "N5.10"
+          "unlocksAfter": "G10"
         },
         {
           "id": "N5.Review.6",
@@ -511,7 +511,7 @@
           "title": "My Family",
           "titleJp": "わたしのかぞく",
           "dir": "data/N5/stories/my-family",
-          "unlocksAfter": "N5.2"
+          "unlocksAfter": "G3"
         },
         {
           "id": "tanjoubi-no-keeki",

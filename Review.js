@@ -141,11 +141,13 @@
       levels.forEach(level => {
         // N4 is a paid gateway — hide it entirely until explicitly unlocked.
         if (level === 'N4' && unlockApi && !unlockApi.isFree() && !unlockApi.isN4Unlocked()) return;
-        const count = byLevel[level].length;
+        const visibleCount = !unlockApi || unlockApi.isFree()
+          ? byLevel[level].length
+          : byLevel[level].filter(r => unlockApi.isReviewUnlocked(r)).length;
         html += `
           <div class="jp-review-level-card" data-level="${level}">
             <div class="jp-review-level-name">JLPT ${level}</div>
-            <div class="jp-review-level-count">${count} review${count !== 1 ? 's' : ''}</div>
+            <div class="jp-review-level-count">${visibleCount} review${visibleCount !== 1 ? 's' : ''}</div>
           </div>
         `;
       });
