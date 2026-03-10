@@ -926,9 +926,11 @@ window.GrammarModule = {
             expEl.style.display = 'block';
             scoreText.textContent = answered + ' / ' + items.length;
             barFill.style.width = (answered / items.length * 100) + '%';
-            const ttsBtn = el('button', 'gr-tts-btn', '🔊');
-            ttsBtn.onclick = () => speakText(fullSentence);
-            expEl.appendChild(ttsBtn);
+            if (ch === item.answer) {
+              const ttsBtn = el('button', 'gr-tts-btn', '🔊');
+              ttsBtn.onclick = () => speakText(fullSentence);
+              expEl.appendChild(ttsBtn);
+            }
             nextBtn.style.display = 'block';
           };
           chipsRow.appendChild(chip);
