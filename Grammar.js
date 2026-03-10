@@ -1190,7 +1190,12 @@ window.GrammarModule = {
       root.querySelector('.gr-exit-btn').onclick = exitCallback;
       const menuEl = document.getElementById('gr-menu-container');
 
-      currentGrammars.forEach(g => {
+      const unlockApi = window.JPShared && window.JPShared.unlock;
+      const visibleGrammars = currentGrammars.filter(g =>
+        !unlockApi || unlockApi.isFree() || unlockApi.isGrammarUnlocked(g)
+      );
+
+      visibleGrammars.forEach(g => {
         const done = isGrammarComplete(g.id);
         const item = el('div', 'gr-menu-item' + (false ? ' locked' : ''));
         const left = el('div', '', '');
@@ -1209,7 +1214,7 @@ window.GrammarModule = {
         menuEl.appendChild(item);
       });
 
-      if (currentGrammars.length === 0) {
+      if (visibleGrammars.length === 0) {
         menuEl.innerHTML = '<div style="text-align:center;color:#aaa;padding:40px;">No grammar lessons available yet.</div>';
       }
     }

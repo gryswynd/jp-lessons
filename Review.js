@@ -100,7 +100,7 @@
         (manifest.levels || []).forEach(level => {
           const levelData = manifest.data && manifest.data[level];
           if (!levelData || !levelData.reviews || !levelData.reviews.length) return;
-          byLevel[level] = levelData.reviews.map(r => ({ id: r.id, title: r.title, file: r.file, level }));
+          byLevel[level] = levelData.reviews.map(r => ({ id: r.id, title: r.title, file: r.file, level, unlocksAfter: r.unlocksAfter }));
           // Sort: non-numeric IDs (Half Review, Full Review) first, then numeric descending (10 → 1)
           byLevel[level].sort((a, b) => {
             const numA = a.id.match(/\.Review\.(\d+)/);
@@ -161,9 +161,14 @@
       this._selectedLevel = level;
       const stage = document.getElementById('jp-stage');
 
+      const unlockApi = window.JPShared && window.JPShared.unlock;
+      const visibleReviews = reviews.filter(r =>
+        !unlockApi || unlockApi.isFree() || unlockApi.isReviewUnlocked(r)
+      );
+
       let html = `<button class="jp-review-level-back-btn" id="jp-back-to-levels">← Levels</button>`;
       html += '<div class="jp-review-menu-grid">';
-      reviews.forEach(review => {
+      visibleReviews.forEach(review => {
         const topScore = window.JPShared.progress.getReviewScore(review.id);
         const scoreDisplay = topScore !== undefined
           ? `<div class="jp-review-score">Best: ${topScore}%</div>`
@@ -637,7 +642,7 @@
             .jp-review-back-btn:hover { color: white; background: rgba(255,255,255,0.1); }
 
             /* Level Picker */
-            .jp-review-level-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px; }
+            .jp-review-level-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 8px; }
             .jp-review-level-card {
                 background: #fff; padding: 28px 24px; border-radius: 20px; cursor: pointer;
                 box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s;
