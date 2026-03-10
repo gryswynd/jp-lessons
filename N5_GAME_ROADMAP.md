@@ -4452,31 +4452,74 @@ The emotional tone is relaxation. けん's house. Yamakawa at the コンビニ. 
 
 ### Morning — Slow Saturday
 
-1. **Mom:** 「今日は学校がありませんよ。ゆっくりしてくださいね。」 — "No school today. Please take it easy." *(ゆっくり — from yesterday. Mom uses it as an instruction: be slow. Relax. This is the first time she's told Rikizo to do *less* rather than more. The word for slowness arrived yesterday; today it becomes a lifestyle instruction.)*
+**Phone message from けん** (first thing):
+> 「りきぞ！ゲームしない？」 — "Rikizo! Wanna play games?"
 
-2. **Dad:** 「時間がたくさんある。」 — "There's lots of time." *(時間 — new. Dad's first philosophical observation. Time, which has been unnamed until today, exists as a measurable quantity. And today there's a lot of it. Dad says this plainly, staring at the ceiling or out the window. It's either profound or incredibly lazy. With Dad, it's both.)*
+けん's Saturday invite. No temporal vocabulary needed — no 明日, no 朝. Just a direct question: do you want to play? The player can respond or ignore. This is the Day 14 activity hook.
+
+1. **Mom:** 「今日は学校がありませんよ。ゆっくりしてくださいね。」 — "No school today. Please take it easy." *(ゆっくり — from yesterday. Mom uses it as an instruction: be slow. Relax. The word for slowness arrived yesterday; today it becomes a lifestyle instruction.)*
+
+2. **Dad:** 「時間がたくさんある。」 — "There's lots of time." *(時間 — new. Dad's first philosophical observation. Time, which has been unnamed until today, exists as a measurable quantity. And today there's a lot of it. Dad says this plainly. It's either profound or incredibly lazy. With Dad, it's both.)*
 
 ---
 
 ### けん's House (optional but recommended)
 
-If the player follows up on けん's Friday invite, a new micro-location opens: けん's house. It's in the residential area near Rikizo's house — close, walking distance. The interior is messier than Rikizo's home. More color. More stuff. A TV with a game console. Snack wrappers. Posters. It's the house of someone who prioritizes fun over order.
+If the player follows up on けん's phone invite, a new micro-location opens: けん's house. It's in the residential area near Rikizo's house — close, walking distance.
 
-**けん's room (4 lines — casual):**
+**Design note — private residences consume an action:** Entering someone's home is a commitment. Unlike the コンビニ (pop in and out freely) or the station (always open), visiting a friend's house **consumes your current time block**. You go in, you spend time, you come out and the day has moved forward. This is the game's first "action cost" — a precursor to the Persona time-slot system planned for N4. The player should feel this: choosing to visit けん means NOT visiting the station, NOT checking on ゆき, NOT exploring town. The opportunity cost makes the choice meaningful. For now this is soft (the game doesn't have formal time slots yet), but the feel should be: you go to けん's house, and when you leave, the afternoon light has shifted.
 
-1. **けん:** 「来たね！入って入って！」 — "You came! Come in, come in!" *(入って — te-form of 入る. Wait — 入る is N5.17. Check: is this out of scope? 入る as a verb doesn't exist yet. But 入って as a casual invitation might work as a set phrase... No. Strict rule: 入る isn't available. Restructure: けん can gesture Rikizo inside without using the verb. Alternative:)*
+**Arrival — けん at the door:**
 
-1. **けん (revised):** 「来たね！ここだよ！」 — "You came! It's here!" *(He points to his room. No verb for entering required — just demonstrative ここ and welcoming energy.)*
+1. **けん:** 「来たね！ここだよ！」 — "You came! It's here!" *(He waves Rikizo toward his room. No verb for entering required — 入る is N5.17. Just demonstrative ここ and pure welcoming energy.)*
 
-2. **けん:** 「ゲームがたくさんあるよ。多いでしょ？」 — "I have tons of games. A lot, right?" *(多い — new adjective. たくさん — existing vocab. けん's room has too many games. 多い reinforced through pure enthusiasm.)*
+**けん's room — the reveal:**
+
+The interior is messier than Rikizo's home. More color. More stuff. Posters on the walls (partially readable — some kanji taught, some not). Snack wrappers on the floor. A futon that hasn't been folded. And against the wall: a TV with a game console. Next to it, stacks of games.
+
+The room IS けん. Every object characterizes him without dialogue. The mess says "I don't care about order." The game stacks say "this is what I care about." The snack wrappers say "I eat where I play." The unfolded futon says "I sleep where I eat where I play." けん's entire life happens in this room.
+
+**Conversation (4 lines — casual):**
+
+2. **けん:** 「ゲームがたくさんあるよ。多いでしょ？」 — "I have tons of games. A lot, right?" *(多い — new adjective. けん's room has too many games. 多い reinforced through pure enthusiasm. He's proud of the collection the way some people are proud of a library.)*
 
 3. **Rikizo:** 「多いね...時間はある？」 — "That's a lot... do we have time?"
 
 4. **けん:** 「時間？たくさんあるよ！学校はないから！」 — "Time? We've got tons! No school, so!" *(時間 — new. から — because. けん equates freedom with time. No school = unlimited time. His worldview is transparent and joyful.)*
 
-**Design note — けん's house as a new location type:** This is the first time the player enters another character's home. Every previous interior has been institutional (school), commercial (コンビニ, デパート), or family (Rikizo's house). けん's house is *social* — a friend's space. The mess, the games, the casual energy — it all characterizes けん without dialogue. The environment IS the character.
+**Design note — けん as host:** At his own house, けん does NOT ask Rikizo to buy things. The buy-me-something gag is an outdoor/ambient behavior — けん spots Rikizo on the street and makes casual demands because the コンビニ is right there. At home, he's the host. He has snacks. He has drinks. He offers, not asks. This distinction matters: けん has different social modes. Outside = shameless mooch. At home = generous host who shares everything he has. The player who visits けん's house sees a different side of him.
 
-**Design note — けん's parents:** Not seen on Day 14. けん refers to them in passing (「お母さんは買い物に行った」 "Mom went shopping") but they don't appear as NPCs. They may appear in future days if けん's home becomes a recurring location. Keep them absent for now — the focus is the friendship, not the family.
+**Room exploration — after the conversation:**
+
+After the initial dialogue, the player can move around けん's room and interact with objects. This is the game's first **free-roam interior exploration** of another person's space.
+
+**Game stacks:** Piles of game cases next to the TV. The player can examine them. Each stack has 3–4 visible titles rendered as text on the spines:
+- 「大きい山」 — "Big Mountain" *(Both kanji taught. Fully readable. Sounds like an adventure game.)*
+- 「水と火」 — "Water and Fire" *(Both taught. An elemental RPG?)*
+- 「たたかいの...」 — remaining kanji blurred *(たたかい = battle, but 戦 isn't taught. The player gets the hiragana but the kanji title is illegible. Partial reading — mirrors real life.)*
+- Several titles are fully blurred — untaught kanji. The player can see they're text but can't decode them. The taught-kanji set determines what's readable, just like environmental text since Day 13.
+
+**Design note — game titles as environmental text:** The game stacks are a microcosm of the broader environmental-text system. Some titles are fully readable (taught kanji), some partially (mix of taught and untaught), some completely opaque. This teaches the player that literacy is progressive — you can read MORE of the world with every lesson, but you can't read ALL of it yet. けん's room is a small library of unreadable texts, and the player will be able to read more of them every time they visit.
+
+**The console — play game:**
+
+The TV and console are interactable. When the player selects the console:
+
+> **[ゲームをする]**
+
+The screen transitions. A graphic shows two silhouettes — Rikizo and けん — sitting in front of the TV, controllers in hand. The art style shifts to something warm and simple: just outlines against the glow of the screen. They're playing. The player doesn't play a game-within-a-game — there's no minigame. Instead:
+
+A clock appears on screen. It ticks forward. Time is visibly passing. The numbers advance — not in real time, but in accelerated jumps. The afternoon bleeds away. The light from the window behind the silhouettes shifts from bright to golden to dim. They're still playing. They don't talk. They don't need to. This is what friendship looks like at fifteen: sitting next to someone, doing the same thing, saying nothing. The clock keeps ticking.
+
+When the transition ends, the player is either:
+- **On the street outside けん's house** — if there's still time in the day
+- **At home** — if the visit consumed the rest of the afternoon
+
+けん waves from the door: 「またね！」 — "See you!" *(また — again. ね — right? He expects you'll come back. Of course he does.)*
+
+**Design note — the silhouette time-skip:** This is the game's first time-skip that the player can *see*. Previous transitions between day segments are instant — you go from morning to afternoon and the light changes. This one shows time PASSING. The clock. The shifting light. The two still silhouettes. It communicates: you spent real time here. You chose this. It was worth it. The game doesn't judge (no lost quest progress, no missed NPC), but it shows the cost. Time is a resource. You spent it on friendship. That's the Persona philosophy: time management IS the gameplay, and how you spend your time defines your character.
+
+**けん's parents:** Not seen. けん mentions in passing: 「お母さんは買い物。」 — "Mom's shopping." *(No verb needed. Just a noun and context. Parents are absent but real — they have lives offscreen. They may appear in future visits if けん's home becomes recurring.)*
 
 ---
 
@@ -4502,28 +4545,35 @@ The new vocabulary layers onto the existing world:
 
 ---
 
-### Evening — 多分
-
-1. **Mom:** 「明日は何をしますか？」 — "What will you do tomorrow?"
-2. **Rikizo:** 「多分...ゆっくりします。」 — "Probably... take it easy." *(多分 — probably. New. Rikizo has learned uncertainty. Before today, his statements were declarative — "I will go," "I have books." Now he can hedge. 多分 is the word for "I'm not sure but here's my guess." It makes the world less absolute.)*
-
----
-
 ### State Tracking (End of Day 14)
 
-**New locations:** けん's house (optional micro-location, residential area)
+**New locations:** けん's house (optional micro-location, residential area). First private residence. Consumes an action to visit.
 
 **Flags:**
 - `visited_ken_house` — (optional) First classmate home visit. +2 relationship けん.
+- `played_games_ken` — (optional) Selected ゲームをする at the console. Saw silhouette time-skip. +1 relationship けん.
+- `read_game_titles` — (optional) Examined game stacks. Environmental text encounter in a private space.
 - `school_closed_saturday` — Player saw the closed gate. Weekday rule confirmed experientially.
 
-**No new quest log entries.** やまかわのごはん and ゆきのきおく continue.
+**No new quest log entries.** やまかわのごはん, ゆきのきおく, and 駅長の「???」 continue.
+
+**Station master trade window:** Available this visit. Same result — nothing in inventory matches. The rack is still empty.
 
 **Art assets:**
 | Asset | Type | Priority | Notes |
 |---|---|---|---|
 | School gate (closed) | BG variant | High | Same gate, locked. Dark windows. No 校長. Visual confirmation of the weekday rule. |
-| けん's room | Background | Medium | Messy teenage room. Game console, TV, snack wrappers, posters. Warm colors. Anti-ミキ energy. |
+| けん's room | Background | **Critical** | Messy teenage room. Game console + TV against wall, game stacks with readable spines, snack wrappers, unfolded futon, posters (some readable). Warm colors. Anti-ミキ energy. |
+| Game silhouette time-skip | Cutscene / transition | **Critical** | Two silhouettes (Rikizo + けん) sitting before TV glow. Controllers in hand. Window light shifts from bright → golden → dim. Clock overlay ticks forward. Simple, warm, wordless. |
+| Game stack close-up | UI / interactable | Medium | Close-up of game case spines. 3–4 titles with mix of readable/blurred kanji. Same progressive-literacy system as environmental text. |
+
+**Open questions (Day 14):**
+
+1. **多分 placement** — 多分 (probably) was in the removed Evening section. Should it appear elsewhere on Day 14? Options: (a) Rikizo uses it internally when deciding whether to visit けん — 「多分...行く。」("Probably... I'll go."), (b) Yamakawa uses it at the コンビニ — 「多分、雨が来るよ。」("Probably rain coming."), (c) defer to natural use in Day 15+. Recommendation: (a), since it gives the player a moment of uncertainty before the action-costing choice.
+
+2. **Time-skip duration** — How long does the silhouette sequence play? Recommendation: 5–8 seconds. Long enough to feel like time passing, short enough to not bore. The clock advances through 3–4 visible jumps. No player input — it's a cutscene.
+
+3. **Post-visit state** — Does the player end up on the street or at home? Recommendation: on the street outside けん's house. This lets the player still visit one more location (station, コンビニ, river) before the day ends, preserving some agency. If we put them at home, the visit consumed the ENTIRE day — too punishing for an optional activity.
 
 ---
 
