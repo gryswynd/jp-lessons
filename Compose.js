@@ -511,9 +511,6 @@ window.ComposeModule = {
         const regularCount = (compose.prompts || []).length;
         const totalPrompts = allP.length;
 
-        // Build timeline
-        const timelineHtml = ComposeApp.buildTimeline(draftText || '');
-
         // Build active prompt banner and targets
         let promptBannerHtml = '';
         let targetHtml = '';
@@ -612,8 +609,6 @@ window.ComposeModule = {
                     <div class="c-compose-header-theme">${escHtml(compose.theme || '')}</div>
                 </div>
             </div>
-
-            <div class="c-timeline" id="c-timeline">${timelineHtml}</div>
 
             ${promptBannerHtml}
 
@@ -965,7 +960,7 @@ window.ComposeModule = {
 
         // 2. Length Score (0-30)
         const charCount = text.length;
-        const lengthScore = Math.min(30, Math.floor(charCount / 5));
+        const lengthScore = Math.min(30, Math.floor(charCount / 3));
 
         // 3. Grammar Score (0-30)
         const politePatterns = ['ます', 'ました', 'ません', 'ませんでした', 'ましょう', 'ですか', 'でした'];
@@ -1012,10 +1007,10 @@ window.ComposeModule = {
 
         const total = vocabScore + lengthScore + grammarScore;
         let grade = ''; let gradeColor = '';
-        if (total >= 90) { grade = 'S  Excellent!'; gradeColor = '#f39c12'; }
-        else if (total >= 75) { grade = 'A  Great Work!'; gradeColor = '#2ed573'; }
-        else if (total >= 60) { grade = 'B  Good Job!'; gradeColor = '#00897B'; }
-        else if (total >= 40) { grade = 'C  Keep Going!'; gradeColor = '#3498db'; }
+        if (total >= 85) { grade = 'S  Excellent!'; gradeColor = '#f39c12'; }
+        else if (total >= 68) { grade = 'A  Great Work!'; gradeColor = '#2ed573'; }
+        else if (total >= 50) { grade = 'B  Good Job!'; gradeColor = '#00897B'; }
+        else if (total >= 30) { grade = 'C  Keep Going!'; gradeColor = '#3498db'; }
         else { grade = 'D  Keep Practicing!'; gradeColor = '#78909C'; }
 
         const overlay = document.createElement('div');
@@ -1038,7 +1033,7 @@ window.ComposeModule = {
                     <div class="c-score-row">
                         <div>
                             <div class="c-score-row-label">Length</div>
-                            <div class="c-score-row-detail">${charCount} characters (1pt per 5)</div>
+                            <div class="c-score-row-detail">${charCount} characters (1pt per 3)</div>
                             <div class="c-score-bar"><div class="c-score-bar-fill" style="width:${Math.round(lengthScore/30*100)}%;background:var(--c-success)"></div></div>
                         </div>
                         <div class="c-score-row-pts">${lengthScore}/30</div>
