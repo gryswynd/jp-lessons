@@ -28,6 +28,7 @@ window.FinalReviewModule = (function () {
   // ── Rikizo image URLs (resolved at start time from config) ──
   let RIKIZO_STAMP = '';   // rikizo_head.png — used for bingo stamps
   let RIKIZO_SPRITE = '';  // mesprite.png — used for gift pop-out character
+  let _manifestCache = null; // cached manifest for unlock computations
 
   // ── Helpers ──
   function el(id) { return document.getElementById(id); }
@@ -892,6 +893,7 @@ window.FinalReviewModule = (function () {
     container.innerHTML = '<div style="text-align:center;padding:60px;color:#888;">Loading Final Review...</div>';
     try {
       const manifest = await window.getManifest(config);
+      _manifestCache = manifest; // cache for unlock computations
       // Find the final review file — search all level review arrays
       const allReviews = [
         ...(manifest.data.N5 && manifest.data.N5.reviews || []),
@@ -2232,6 +2234,37 @@ window.FinalReviewModule = (function () {
     // Restore padding for the score display
     scene.style.padding = '60px 20px';
 
+    // Record score via unlock engine so progression gates update correctly.
+    const unlockApi = window.JPShared && window.JPShared.unlock;
+    if (unlockApi && _manifestCache) {
+      unlockApi.computeUnlocks(_reviewId, pct, _manifestCache);
+    }
+
+    // Build N4 unlock CTA for the N5 Final Review (paid gateway placeholder).
+    const isN5Final = _reviewId === 'N5.Final.Review';
+    const alreadyUnlocked = unlockApi && unlockApi.isN4Unlocked();
+    let n4SectionHtml = '';
+    if (isN5Final && pct >= 75 && !alreadyUnlocked) {
+      n4SectionHtml = `
+        <div id="fr-n4-gateway" style="margin:20px auto;max-width:380px;padding:20px 24px;
+          background:linear-gradient(135deg,#667eea,#764ba2);border-radius:16px;
+          color:white;text-align:center;box-shadow:0 8px 24px rgba(102,126,234,0.35);">
+          <div style="font-size:1.6rem;margin-bottom:6px;">🎓</div>
+          <div style="font-size:1rem;font-weight:800;margin-bottom:6px;">N5 Complete!</div>
+          <div style="font-size:0.85rem;opacity:0.9;margin-bottom:16px;line-height:1.4;">
+            You've mastered all of N5 Japanese.<br>Ready to continue to N4?
+          </div>
+          <button id="fr-unlock-n4-btn" style="background:white;color:#667eea;font-weight:900;
+            font-size:0.95rem;padding:12px 28px;border:none;border-radius:10px;cursor:pointer;
+            box-shadow:0 4px 12px rgba(0,0,0,0.15);transition:transform 0.1s;">
+            🔓 Unlock N4 Content
+          </button>
+          <div style="font-size:0.7rem;opacity:0.6;margin-top:10px;">
+            Future versions will include payment here
+          </div>
+        </div>`;
+    }
+
     // Score content first
     const scoreDiv = document.createElement('div');
     scoreDiv.className = 'fr-final fr-final-reveal';
@@ -2251,10 +2284,27 @@ window.FinalReviewModule = (function () {
             '</div>';
           }).join('')}
         </div>
+        ${n4SectionHtml}
         <button class="fr-btn fr-btn-primary" style="margin-right:10px;" onclick="window.FinalReviewModule.start(document.getElementById('jp-fr-root').parentElement, window.FinalReviewModule._config, window.FinalReviewModule._onExit)">Try Again</button>
         <button class="fr-btn fr-btn-secondary" onclick="window.FinalReviewModule._onExit()">Back to Menu</button>
     `;
     scene.appendChild(scoreDiv);
+
+    // Wire up the N4 unlock button after the DOM is built.
+    if (isN5Final && pct >= 75 && !alreadyUnlocked) {
+      const unlockBtn = scoreDiv.querySelector('#fr-unlock-n4-btn');
+      if (unlockBtn) {
+        unlockBtn.addEventListener('click', function() {
+          if (unlockApi) unlockApi.unlockN4();
+          const gateway = scoreDiv.querySelector('#fr-n4-gateway');
+          if (gateway) {
+            gateway.innerHTML = '<div style="font-size:1.4rem;margin-bottom:8px;">🎉</div>' +
+              '<div style="font-size:1rem;font-weight:800;">N4 Unlocked!</div>' +
+              '<div style="font-size:0.85rem;opacity:0.9;margin-top:6px;">Return to the main menu to start N4 lessons.</div>';
+          }
+        });
+      }
+    }
 
     // Rikizo in the upper right at full size
     const rikizo2 = document.createElement('div');

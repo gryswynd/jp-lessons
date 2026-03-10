@@ -136,8 +136,11 @@
         return;
       }
 
+      const unlockApi = window.JPShared && window.JPShared.unlock;
       let html = '<div class="jp-review-level-grid">';
       levels.forEach(level => {
+        // N4 is a paid gateway — hide it entirely until explicitly unlocked.
+        if (level === 'N4' && unlockApi && !unlockApi.isFree() && !unlockApi.isN4Unlocked()) return;
         const count = byLevel[level].length;
         html += `
           <div class="jp-review-level-card" data-level="${level}">

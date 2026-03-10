@@ -586,7 +586,10 @@ window.LessonModule = {
         root.innerHTML = `<div class="jp-header"><div class="jp-title">Library</div><div style="display:flex;gap:8px;align-items:center;"><button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button><button class="jp-exit-btn">Exit</button></div></div><div class="jp-body"><div class="jp-menu-grid" id="jp-level-container"></div></div>`;
         root.querySelector('.jp-exit-btn').onclick = exitCallback;
         const container = document.getElementById('jp-level-container');
+        const unlockApi = window.JPShared && window.JPShared.unlock;
         allLevelsData.forEach(({ level, levelNum, lessons }) => {
+          // N4 is a paid gateway — hide it entirely until explicitly unlocked.
+          if (level === 'N4' && unlockApi && !unlockApi.isFree() && !unlockApi.isN4Unlocked()) return;
           const card = el('div', 'jp-level-card');
           card.innerHTML = `<div class="jp-level-name">JLPT Level N${levelNum}</div><div class="jp-level-count">${lessons.length} lesson${lessons.length !== 1 ? 's' : ''}</div>`;
           card.onclick = () => renderMenu(level, lessons);
@@ -603,11 +606,15 @@ window.LessonModule = {
         root.querySelector('.jp-exit-btn').onclick = exitCallback;
         const menuEl = document.getElementById('jp-menu-container');
         const unlockApi = window.JPShared && window.JPShared.unlock;
-        lessons.forEach(lesson => {
-          const locked = unlockApi && !unlockApi.isFree() && !unlockApi.isLessonUnlocked(lesson);
-          const btn = el("div", "jp-menu-item" + (locked ? " jp-menu-item--locked" : ""));
-          btn.innerHTML = `<div class="jp-menu-id">${locked ? '🔒 ' : ''}${lesson.id}</div><div class="jp-menu-name">${lesson.title || 'Start'}</div>`;
-          if (!locked) btn.onclick = () => loadLesson(lesson.file);
+        // Only show unlocked lessons. List is sorted highest-first so the most
+        // recently unlocked lesson appears at the top.
+        const visibleLessons = lessons.filter(l =>
+          !unlockApi || unlockApi.isFree() || unlockApi.isLessonUnlocked(l)
+        );
+        visibleLessons.forEach(lesson => {
+          const btn = el("div", "jp-menu-item");
+          btn.innerHTML = `<div class="jp-menu-id">${lesson.id}</div><div class="jp-menu-name">${lesson.title || 'Start'}</div>`;
+          btn.onclick = () => loadLesson(lesson.file);
           menuEl.appendChild(btn);
         });
     }

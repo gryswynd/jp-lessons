@@ -31,6 +31,9 @@
 
   var PASS_THRESHOLD = 75; // minimum percentage to "pass" a lesson
 
+  // localStorage key for the explicit N4 unlock (paid gateway placeholder).
+  var N4_UNLOCK_KEY = 'k-n4-unlocked';
+
   var MODULE_META = {
     grammar:  { icon: '🌿', label: 'Grammar Garden' },
     practice: { icon: '🥋', label: 'Dojo' },
@@ -162,6 +165,27 @@
     PASS_THRESHOLD: PASS_THRESHOLD,
     MODULE_META: MODULE_META,
 
+    // ── N4 gateway ─────────────────────────────────────────────────────────
+
+    /**
+     * Returns true when the student has explicitly unlocked N4 content
+     * (by tapping the unlock button on the N5 Final Review completion screen).
+     * Free mode always returns true.
+     * This is a placeholder for a future paid gateway.
+     */
+    isN4Unlocked: function () {
+      if (this.isFree()) return true;
+      return localStorage.getItem(N4_UNLOCK_KEY) === 'true';
+    },
+
+    /**
+     * Grants access to all N4 content. Call this when the student taps
+     * the "Unlock N4" button on the N5 Final Review completion screen.
+     */
+    unlockN4: function () {
+      localStorage.setItem(N4_UNLOCK_KEY, 'true');
+    },
+
     // ── Mode ───────────────────────────────────────────────────────────────
 
     /**
@@ -212,9 +236,11 @@
     /**
      * Lesson entry unlocks when its prereq has been *passed* (≥75%).
      * N5.1 has no unlocksAfter → always unlocked.
+     * Any N4 lesson requires the explicit N4 unlock in addition.
      */
     isLessonUnlocked: function (entry) {
       if (this.isFree()) return true;
+      if (entry.id && /^N4\./.test(entry.id)) return this.isN4Unlocked();
       return _prereqMet(entry.unlocksAfter, false);
     },
 
@@ -228,9 +254,11 @@
 
     /**
      * Review entries unlock when their prereq has been *passed* (≥75%).
+     * Any N4 review requires the explicit N4 unlock in addition.
      */
     isReviewUnlocked: function (entry) {
       if (this.isFree()) return true;
+      if (entry.id && /^N4\./.test(entry.id)) return this.isN4Unlocked();
       return _prereqMet(entry.unlocksAfter, false);
     },
 
