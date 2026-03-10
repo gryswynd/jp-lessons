@@ -141,36 +141,47 @@
     {
       "type": "grammarComparison",
       "title": "あげる vs くれる — Same Gift, Two Perspectives",
-      "itemA": {
-        "label": "あげる",
-        "color": "verb",
-        "pattern": "わたしは 友だちに プレゼントを あげた",
-        "translation": "I gave a present to my friend.",
-        "points": [
-          "The speaker (I) is the GIVER",
-          "Direction: outward — away from speaker",
-          "Focus: the speaker's action of giving",
-          "Used when the gift goes from me/in-group → to someone else"
-        ]
-      },
-      "itemB": {
-        "label": "くれる",
-        "color": "modifier",
-        "pattern": "友だちが わたしに プレゼントを くれた",
-        "translation": "My friend gave me a present.",
-        "points": [
-          "The speaker (I) is the RECEIVER",
-          "Direction: inward — toward speaker",
-          "Focus: the other person's kindness toward me",
-          "Used when someone gives to me/in-group"
-        ]
-      },
-      "summary": "Both sentences describe the exact same gift-giving event. あげる tells it from the giver's side ('I gave'). くれる tells it from the receiver's side ('they gave to me'). Japanese forces you to choose the perspective that matches your role in the exchange.",
-      "commonMistakes": [
-        "×わたしはりきぞにプレゼントをくれた — WRONG. The speaker cannot be the subject of くれる. Use あげた.",
-        "×友だちがわたしにプレゼントをあげた (when speaker is the receiver) — Technically possible if narrating from outside, but sounds unnatural. In Japanese, when YOU receive something, くれた is far more natural.",
-        "✓ Remembering the direction: あげる = give OUT (→), くれる = give IN (← me)"
-      ]
+      "items": [
+        {
+          "label": "あげる",
+          "color": "verb",
+          "points": [
+            "The speaker (I) is the GIVER",
+            "Direction: outward — away from speaker",
+            "Focus: the speaker's action of giving",
+            "Used when the gift goes from me/in-group → to someone else"
+          ],
+          "example": {
+            "parts": [
+              { "text": "わたしは", "role": "topic", "gloss": "I (topic: は — the giver)" },
+              { "text": "友だちに", "role": "object", "gloss": "to my friend (recipient: に)" },
+              { "text": "プレゼントを", "role": "object", "gloss": "a present (object: を)" },
+              { "text": "あげた。", "role": "predicate", "gloss": "gave (あげる, plain past — outward direction)" }
+            ],
+            "en": "I gave a present to my friend."
+          }
+        },
+        {
+          "label": "くれる",
+          "color": "modifier",
+          "points": [
+            "The speaker (I) is the RECEIVER",
+            "Direction: inward — toward speaker",
+            "Focus: the other person's kindness toward me",
+            "Used when someone gives to me/in-group"
+          ],
+          "example": {
+            "parts": [
+              { "text": "友だちが", "role": "subject", "gloss": "my friend (subject: が — the giver)" },
+              { "text": "わたしに", "role": "object", "gloss": "to me (recipient: に)" },
+              { "text": "プレゼントを", "role": "object", "gloss": "a present (object: を)" },
+              { "text": "くれた。", "role": "predicate", "gloss": "gave (to me) — くれる, plain past — inward direction" }
+            ],
+            "en": "My friend gave me a present."
+          }
+        }
+      ],
+      "tip": "Both sentences describe the exact same gift-giving event. あげる tells it from the giver's side ('I gave'). くれる tells it from the receiver's side ('they gave to me'). Japanese forces you to choose the perspective that matches your role in the exchange."
     },
     {
       "type": "grammarRule",
@@ -323,73 +334,39 @@
     {
       "type": "annotatedExample",
       "title": "Give & Receive in Context — Birthday Gifts",
-      "sentence": "りきぞは友だちに花をあげましたが、友だちもりきぞに本をくれました。それで、りきぞは友だちから本をもらいました。",
-      "translation": "Rikizo gave flowers to his friend, but his friend also gave Rikizo a book. So Rikizo received a book from his friend.",
-      "parts": [
+      "examples": [
         {
-          "text": "りきぞは",
-          "role": "topic",
-          "gloss": "Rikizo (topic: は)"
+          "context": "あげる — Rikizo gives outward (speaker's in-group → outsider)",
+          "parts": [
+            { "text": "りきぞは", "role": "topic", "gloss": "Rikizo (topic: は — the giver)" },
+            { "text": "友だちに", "role": "object", "gloss": "to his friend (recipient: に)" },
+            { "text": "花を", "role": "object", "gloss": "flowers (object: を)" },
+            { "text": "あげました。", "role": "predicate", "gloss": "gave (あげる, polite past) — Rikizo's action, directed outward" }
+          ],
+          "en": "Rikizo gave flowers to his friend.",
+          "note": "あげる: the giver is the topic. Direction is outward — away from the speaker's in-group toward someone else."
         },
         {
-          "text": "友だちに",
-          "role": "object",
-          "gloss": "to his friend (recipient: に)"
+          "context": "くれる — friend gives inward (outsider → Rikizo's in-group)",
+          "parts": [
+            { "text": "友だちも", "role": "subject", "gloss": "his friend also (も = also — the giver)" },
+            { "text": "りきぞに", "role": "object", "gloss": "to Rikizo (recipient: に — in-group)" },
+            { "text": "本を", "role": "object", "gloss": "a book (object: を)" },
+            { "text": "くれました。", "role": "predicate", "gloss": "gave (to him) — くれる, polite past — outsider gives to in-group" }
+          ],
+          "en": "His friend also gave Rikizo a book.",
+          "note": "くれる: someone outside gives TO the in-group. Direction is inward — the in-group (Rikizo) is the beneficiary."
         },
         {
-          "text": "花を",
-          "role": "object",
-          "gloss": "flowers (object: を)"
-        },
-        {
-          "text": "あげましたが、",
-          "role": "predicate",
-          "gloss": "gave (あげる, polite past) — but (が = clause connector)"
-        },
-        {
-          "text": "友だちも",
-          "role": "subject",
-          "gloss": "his friend also (も = also)"
-        },
-        {
-          "text": "りきぞに",
-          "role": "object",
-          "gloss": "to Rikizo (recipient: に)"
-        },
-        {
-          "text": "本を",
-          "role": "object",
-          "gloss": "a book (object: を)"
-        },
-        {
-          "text": "くれました。",
-          "role": "predicate",
-          "gloss": "gave (to Rikizo/in-group) — くれる, polite past"
-        },
-        {
-          "text": "それで、",
-          "role": "connector",
-          "gloss": "so / therefore"
-        },
-        {
-          "text": "りきぞは",
-          "role": "topic",
-          "gloss": "Rikizo (topic: は — now the receiver)"
-        },
-        {
-          "text": "友だちから",
-          "role": "subject",
-          "gloss": "from his friend (source: から — slightly more distance than に)"
-        },
-        {
-          "text": "本を",
-          "role": "object",
-          "gloss": "a book (object: を)"
-        },
-        {
-          "text": "もらいました。",
-          "role": "predicate",
-          "gloss": "received (もらう, polite past)"
+          "context": "もらう — same event, Rikizo as the active receiver",
+          "parts": [
+            { "text": "りきぞは", "role": "topic", "gloss": "Rikizo (topic: は — now the active receiver)" },
+            { "text": "友だちから", "role": "subject", "gloss": "from his friend (source: から — slightly more distance than に)" },
+            { "text": "本を", "role": "object", "gloss": "a book (object: を)" },
+            { "text": "もらいました。", "role": "predicate", "gloss": "received (もらう, polite past) — Rikizo actively acquired it" }
+          ],
+          "en": "Rikizo received a book from his friend.",
+          "note": "もらう: same event as くれました above, but focus shifts from the friend's kindness to Rikizo's acquisition."
         }
       ]
     },
