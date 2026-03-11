@@ -1073,6 +1073,8 @@ Rules:
 
 ### Story Files (`data/N5/stories/[slug]/story.md` + `terms.json`)
 
+**Lesson scope.** Each story entry in `manifest.json` has an `unlocksAfter` field (e.g. `"unlocksAfter": "N5.8"` or `"unlocksAfter": "N4.19"`). This field defines the story's **lesson scope**: the kanji, vocabulary, conjugation forms, and grammar patterns available to the story are exactly those that are available at that lesson. Before starting work on any story, read its `unlocksAfter` value from `manifest.json` and treat it the same way as the `lesson` field on a regular content file — it gates all kanji, vocab, and grammar decisions. The story picker also orders stories by this value, so it must accurately reflect the story's actual content ceiling.
+
 **story.md:** Standard Markdown. Japanese text uses only taught kanji and vocab. No term tags in the raw markdown — term highlighting is applied by `terms.json`.
 
 **terms.json required fields:**
@@ -2029,6 +2031,8 @@ Adjective gtypes: `i_adj`, `na_adj`
 | Story terms | `data/N5/stories/[slug]/terms.json` |
 
 After writing new files, `manifest.json` must be updated. Lessons get an entry under `data.N5.lessons` or `data.N4.lessons`. Stories get an entry under `data.N5.stories` or `data.N4.stories`. Reviews get an entry under `data.N4.reviews`. Compose files get an entry in the `compose` array: `{ "lesson": "N5.X", "file": "data/N5/compose/compose.N5.X.json" }`.
+
+Story entries in `manifest.json` must include an `unlocksAfter` field set to the last lesson whose content is required by the story. This controls both the unlock gate (the student must pass that lesson before the story appears) and the story's content scope (all kanji, vocab, and grammar in the story must be available at that lesson). The story picker lists stories in `unlocksAfter` order. New stories must always have this field.
 
 ---
 

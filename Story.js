@@ -508,9 +508,45 @@ window.StoryModule = (function() {
     }
   }
 
+  // Build a map of lesson/grammar IDs → curriculum sort key for ordering stories.
+  // N5 lessons → 1000–1999, G-lessons → resolved after their unlocksAfter lesson,
+  // N4 lessons → 10000+. Stories with no unlocksAfter sort last.
+  function buildCurriculumSortKeys(manifest) {
+    const keys = {};
+    const d = manifest && manifest.data;
+    if (!d) return keys;
+
+    // N5 content lessons
+    ((d.N5 && d.N5.lessons) || []).forEach((l, i) => { keys[l.id] = 1000 + i * 10; });
+    // N5 review milestones (needed to resolve G-lessons that unlock after a review)
+    ((d.N5 && d.N5.reviews) || []).forEach((r, i) => { keys[r.id] = 1900 + i * 10; });
+    // N4 content lessons
+    ((d.N4 && d.N4.lessons) || []).forEach((l, i) => { keys[l.id] = 10000 + i * 10; });
+    // N4 review milestones
+    ((d.N4 && d.N4.reviews) || []).forEach((r, i) => { keys[r.id] = 11900 + i * 10; });
+
+    // Grammar lessons: resolve iteratively until stable (handles chains like G2→G1→N5.1)
+    const gLessons = [
+      ...((d.N5 && d.N5.grammar) || []),
+      ...((d.N4 && d.N4.grammar) || [])
+    ];
+    let changed = true;
+    while (changed) {
+      changed = false;
+      gLessons.forEach(g => {
+        if (keys[g.id] === undefined && keys[g.unlocksAfter] !== undefined) {
+          keys[g.id] = keys[g.unlocksAfter] + 1;
+          changed = true;
+        }
+      });
+    }
+    return keys;
+  }
+
   async function loadStoryList() {
     try {
       const manifest = await window.getManifest(config);
+      const sortKeys = buildCurriculumSortKeys(manifest);
 
       storyList = [];
       const levels = manifest.levels || [];
@@ -529,6 +565,15 @@ window.StoryModule = (function() {
             unlocksAfter: story.unlocksAfter
           });
         });
+      });
+
+      // Sort by curriculum position so the picker lists stories in lesson order
+      storyList.sort((a, b) => {
+        const ka = (a.unlocksAfter && sortKeys[a.unlocksAfter] !== undefined)
+          ? sortKeys[a.unlocksAfter] : 99999;
+        const kb = (b.unlocksAfter && sortKeys[b.unlocksAfter] !== undefined)
+          ? sortKeys[b.unlocksAfter] : 99999;
+        return ka - kb;
       });
 
       console.log('[Story] Found', storyList.length, 'stories from manifest');
