@@ -618,12 +618,12 @@
           "jp": "男の人ですか、女の人ですか。",
           "en": "Is she a man or a woman?",
           "terms": [
-            "v_otoko",
+            "k_otoko",
             "p_no",
             "v_hito",
             "g_desu",
             "p_ka",
-            "v_onna"
+            "k_onna"
           ]
         },
         {
@@ -631,7 +631,7 @@
           "jp": "女の人です。とても いい 先生です。",
           "en": "A woman. She is a really good teacher.",
           "terms": [
-            "v_onna",
+            "k_onna",
             "p_no",
             "v_hito",
             "g_desu",
@@ -917,6 +917,7 @@
           "jp": "先生が います。名まえは やまもとさんです。",
           "en": "There is a teacher. Her name is Yamamoto-san.",
           "terms": [
+            "char_yamamoto",
             "v_sensei",
             "p_ga",
             {
@@ -933,9 +934,10 @@
           "jp": "やまもと先生は 女の人です。",
           "en": "Yamamoto-sensei is a woman.",
           "terms": [
+            "char_yamamoto",
             "v_sensei",
             "p_wa",
-            "v_onna",
+            "k_onna",
             "p_no",
             "v_hito",
             "g_desu"
@@ -945,6 +947,7 @@
           "jp": "やまもと先生は 生まれました。",
           "en": "Yamamoto-sensei was born.",
           "terms": [
+            "char_yamamoto",
             "v_sensei",
             "p_wa",
             {
@@ -1018,12 +1021,12 @@
           "terms": [
             "v_sensei",
             "p_wa",
-            "v_otoko",
+            "k_otoko",
             "p_no",
             "v_hito",
             "g_desu",
             "p_ka",
-            "v_onna"
+            "k_onna"
           ]
         },
         {
@@ -1218,12 +1221,13 @@
           "terms": [
             "v_watashi",
             "p_no",
-            "v_otoko",
+            "k_otoko",
             "p_wa",
             {
               "id": "v_yasashii",
               "form": "polite_adj"
-            }
+            },
+            "k_ko"
           ]
         },
         {
@@ -1283,7 +1287,7 @@
           "terms": [
             "v_san",
             "p_wa",
-            "v_onna",
+            "k_onna",
             "p_no",
             "v_hito",
             "g_desu"
