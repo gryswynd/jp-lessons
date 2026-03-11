@@ -191,18 +191,36 @@
     {
       "type": "annotatedExample",
       "title": "Adjectives in Context — Reading a Sentence",
-      "sentence": "電車は 長かったですが、山の 天気が よくて 気分が よかったです。",
-      "translation": "The train was long, but the mountain weather was nice and my mood was good.",
-      "parts": [
-        { "text": "電車は", "role": "topic", "gloss": "train (topic)" },
-        { "text": "長かったですが、", "role": "modifier", "gloss": "was long but… (past + contrast が)" },
-        { "text": "山の", "role": "modifier", "gloss": "mountain's (possessive)" },
-        { "text": "天気が", "role": "topic", "gloss": "weather (subject)" },
-        { "text": "よくて", "role": "modifier", "gloss": "good and… (て-form of いい: よ+くて)" },
-        { "text": "気分が", "role": "topic", "gloss": "mood (subject)" },
-        { "text": "よかったです。", "role": "predicate", "gloss": "was good (past of いい: よ+かったです)" }
-      ],
-      "breakdown": "This sentence uses three key i-adjective forms: (1) 長かったです = past polite of 長い; (2) よくて = te-form connector of いい (よ- stem); (3) よかったです = past polite of いい (よ- stem). Notice how the contrast が follows the past form 長かったです, and よくて links the two positive descriptions without a second past ending."
+      "examples": [
+        {
+          "context": "Past polite + contrast が — 長かったですが",
+          "parts": [
+            { "text": "電車は", "role": "topic", "gloss": "train (topic: は)" },
+            { "text": "長かったですが、", "role": "predicate", "gloss": "was long — but (長い → 長かったです, polite past; が = contrast connector)" }
+          ],
+          "en": "The train was long, but…",
+          "note": "い-adj past polite: drop い → add かったです. 長い → 長かったです. The clause-final が connects to the next clause with a 'but' nuance."
+        },
+        {
+          "context": "て-form connector — よくて (irregular いい → よ- stem)",
+          "parts": [
+            { "text": "山の", "role": "modifier", "gloss": "mountain's (possessive: の)" },
+            { "text": "天気が", "role": "subject", "gloss": "weather (subject: が)" },
+            { "text": "よくて", "role": "connector", "gloss": "good and… (いい → te-form: よ + くて — irregular stem よ-)" }
+          ],
+          "en": "…the mountain weather was nice and…",
+          "note": "いい is irregular — its stem is よ- in all conjugated forms. Te-form: いい → よくて. Compare regular い-adj: 長い → 長くて."
+        },
+        {
+          "context": "Past polite — よかったです (irregular いい → よ- stem)",
+          "parts": [
+            { "text": "気分が", "role": "subject", "gloss": "mood / feeling (subject: が)" },
+            { "text": "よかったです。", "role": "predicate", "gloss": "was good (いい → past polite: よ + かったです)" }
+          ],
+          "en": "…my mood was good.",
+          "note": "Past polite: いい → よかったです. ⚠ Never いかったです — all conjugated forms of いい use the よ- stem."
+        }
+      ]
     },
     {
       "type": "conversation",

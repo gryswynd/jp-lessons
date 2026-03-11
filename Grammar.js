@@ -33,6 +33,7 @@ window.GrammarModule = {
     let COUNTER_RULES = null;
     let currentGrammars = [];
     let grammarId = null;
+    let _manifestCache = null; // stored for unlock engine calls
 
     // --- Setup UI Container ---
     container.innerHTML = '';
@@ -236,6 +237,8 @@ window.GrammarModule = {
         .gr-slot-choices { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 8px; }
         .gr-slot-chip { padding: 8px 18px; border-radius: 20px; border: 2px solid #eee; background: white; cursor: pointer; font-family: 'Noto Sans JP', sans-serif; font-size: 1rem; font-weight: 700; transition: 0.18s; }
         .gr-slot-chip:hover { border-color: #FDCB6E; background: #FFFDE7; }
+        .gr-slot-next { display: block; margin: 16px auto 0; padding: 10px 28px; border-radius: 20px; border: none; background: #6C5CE7; color: white; font-size: 1rem; font-weight: 700; cursor: pointer; transition: 0.18s; }
+        .gr-slot-next:hover { background: #5a4bd1; }
 
         /* Pattern match */
         .gr-pm-card { background: white; border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; border: 2px solid #eee; cursor: pointer; transition: 0.2s; }
@@ -465,16 +468,21 @@ window.GrammarModule = {
       const conjUrl    = getCdnUrl(manifest.globalFiles.conjugationRules);
       const counterUrl = getCdnUrl(manifest.globalFiles.counterRules);
       const particleUrl = getCdnUrl(manifest.shared.particles);
-      const [conj, counter, particleData, ...glossParts] = await Promise.all([
+      const characterUrl = getCdnUrl(manifest.shared.characters);
+      const [conj, counter, particleData, characterData, ...glossParts] = await Promise.all([
         fetch(conjUrl).then(r => r.json()),
         fetch(counterUrl).then(r => r.json()),
         fetch(particleUrl).then(r => r.json()),
+        fetch(characterUrl).then(r => r.json()),
         ...manifest.levels.map(lvl => fetch(getCdnUrl(manifest.data[lvl].glossary)).then(r => r.json()))
       ]);
       const map = {};
       glossParts.forEach(g => g.entries.forEach(i => { map[i.id] = i; }));
       (particleData.particles || []).forEach(p => {
         map[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle' };
+      });
+      (characterData.characters || []).forEach(c => {
+        map[c.id] = Object.assign({}, c, { portraitUrl: getCdnUrl(c.portrait) });
       });
       return { map, conj, counter };
     }
@@ -898,6 +906,10 @@ window.GrammarModule = {
         expEl.style.display = 'none';
 
         const chipsRow = el('div', 'gr-slot-choices');
+        const nextBtn = el('button', 'gr-slot-next', idx + 1 < items.length ? 'Next →' : 'Finish');
+        nextBtn.style.display = 'none';
+        nextBtn.onclick = () => { idx++; renderItem(); };
+
         let solved = false;
         (item.choices || []).forEach(ch => {
           const chip = el('button', 'gr-slot-chip', esc(ch));
@@ -905,10 +917,10 @@ window.GrammarModule = {
             if (solved) return;
             solved = true;
             blank.textContent = ch;
+            const fullSentence = (item.before || '') + ch + (item.after || '');
             if (ch === item.answer) {
               correct++; answered++;
               blank.classList.add('filled-correct');
-              speakText(item.before + ch + (item.after || ''));
             } else {
               answered++;
               blank.classList.add('filled-wrong');
@@ -919,12 +931,18 @@ window.GrammarModule = {
             expEl.style.display = 'block';
             scoreText.textContent = answered + ' / ' + items.length;
             barFill.style.width = (answered / items.length * 100) + '%';
-            setTimeout(() => { idx++; renderItem(); }, 1600);
+            if (ch === item.answer) {
+              const ttsBtn = el('button', 'gr-tts-btn', '🔊');
+              ttsBtn.onclick = () => speakText(fullSentence);
+              expEl.appendChild(ttsBtn);
+            }
+            nextBtn.style.display = 'block';
           };
           chipsRow.appendChild(chip);
         });
         itemDiv.appendChild(chipsRow);
         itemDiv.appendChild(expEl);
+        itemDiv.appendChild(nextBtn);
       }
       renderItem();
       return div;
@@ -1056,6 +1074,23 @@ window.GrammarModule = {
         const pct = drillTotal > 0 ? Math.round(drillCorrect / drillTotal * 100) : 100;
         const rank = [...SCORE_RANKS].reverse().find(r => pct >= r.min) || SCORE_RANKS[0];
         markGrammarComplete(grammarId, pct);
+
+        // Bridge into the unlock engine so grammar completion gates downstream content.
+        const unlockApi = window.JPShared && window.JPShared.unlock;
+        const unlockResult = unlockApi && _manifestCache
+          ? unlockApi.computeUnlocks(grammarId, 100, _manifestCache)
+          : null;
+        const newItems = (unlockResult && unlockResult.newItems) || [];
+
+        // Build unlock chips (same style as Lesson.js reveal).
+        const unlockHtml = newItems.length > 0 ? `
+          <div style="margin-top:18px;border-top:1px solid #f0f0f0;padding-top:14px;">
+            <div style="font-size:0.75rem;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">🔓 Unlocked</div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+              ${newItems.map(item => `<div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:6px 12px;font-size:0.85rem;font-weight:700;color:#15803d;">${item.icon} ${item.label}</div>`).join('')}
+            </div>
+          </div>` : '';
+
         body.innerHTML = `
           <div class="gr-card" style="text-align:center; position:relative; padding:30px 20px;">
             <h2 style="margin-bottom:15px;">🌿 Grammar Lesson Complete!</h2>
@@ -1066,6 +1101,7 @@ window.GrammarModule = {
             <div style="font-size:2.2rem;font-weight:900;color:#16A34A;">${pct}%</div>
             <div style="font-size:0.9rem;color:#888;margin-top:4px;">${drillCorrect} / ${drillTotal} correct</div>
             ` : ''}
+            ${unlockHtml}
           </div>`;
         nextBtn.innerText = 'Finish';
         if (drillTotal > 0) launchHanabi(rank, body.querySelector('.gr-card'));
@@ -1163,6 +1199,7 @@ window.GrammarModule = {
 
       try {
         const manifest = await window.getManifest(REPO_CONFIG);
+        _manifestCache = manifest;
         currentGrammars = [];
         (manifest.levels || []).forEach(level => {
           const levelData = manifest.data && manifest.data[level];
@@ -1190,7 +1227,12 @@ window.GrammarModule = {
       root.querySelector('.gr-exit-btn').onclick = exitCallback;
       const menuEl = document.getElementById('gr-menu-container');
 
-      currentGrammars.forEach(g => {
+      const unlockApi = window.JPShared && window.JPShared.unlock;
+      const visibleGrammars = currentGrammars.filter(g =>
+        !unlockApi || unlockApi.isFree() || unlockApi.isGrammarUnlocked(g)
+      );
+
+      visibleGrammars.forEach(g => {
         const done = isGrammarComplete(g.id);
         const item = el('div', 'gr-menu-item' + (false ? ' locked' : ''));
         const left = el('div', '', '');
@@ -1209,7 +1251,7 @@ window.GrammarModule = {
         menuEl.appendChild(item);
       });
 
-      if (currentGrammars.length === 0) {
+      if (visibleGrammars.length === 0) {
         menuEl.innerHTML = '<div style="text-align:center;color:#aaa;padding:40px;">No grammar lessons available yet.</div>';
       }
     }

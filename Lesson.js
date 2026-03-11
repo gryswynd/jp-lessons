@@ -18,6 +18,7 @@ window.LessonModule = {
     let allLevelsData = null;     // [{ level, levelNum, lessons[] }]
     let currentLevelId = null;    // e.g. "N4"
     let currentLevelLessons = null; // lessons[] for selected level
+    let manifestData = null;      // cached manifest for unlock computations
 
     // --- Setup UI Container (Mobile Look) ---
     container.innerHTML = '';
@@ -150,6 +151,26 @@ window.LessonModule = {
               80%  { transform: translate(-50%, -50%) scale(1);   opacity: 1; }
               100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0; }
           }
+
+          /* UNLOCK REVEAL CARDS */
+          .jp-unlock-reveal { padding: 4px 0 8px; }
+          .jp-unlock-card {
+              display: flex; align-items: center; gap: 10px;
+              background: white; border-radius: 12px;
+              padding: 10px 16px; margin-bottom: 8px;
+              border-left: 4px solid #4e54c8;
+              box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              opacity: 0; transform: translateY(20px);
+              transition: opacity 0.4s ease, transform 0.4s ease;
+          }
+          .jp-unlock-card--animate { opacity: 1; transform: translateY(0); }
+          .jp-unlock-card--module { border-left-color: #FF9800; background: linear-gradient(135deg, #fff 80%, #fff8e1); }
+          .jp-unlock-card-icon { font-size: 1.4rem; flex-shrink: 0; }
+          .jp-unlock-card-label { font-size: 0.9rem; font-weight: 700; color: #2f3542; }
+
+          /* LOCKED LESSON ITEMS */
+          .jp-menu-item--locked { opacity: 0.5; cursor: default; }
+          .jp-menu-item--locked:hover { transform: none; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border-color: transparent; }
 
         `;
         document.head.appendChild(style);
@@ -441,6 +462,94 @@ window.LessonModule = {
         return div;
     }
 
+    // --- Summary helpers ---
+
+    function buildUnlockReveal(items) {
+        const wrap = el('div', 'jp-unlock-reveal');
+        const heading = document.createElement('div');
+        heading.style.cssText = 'font-size:1rem;font-weight:700;color:#4e54c8;text-transform:uppercase;letter-spacing:1px;margin:20px 0 12px;text-align:center;';
+        heading.textContent = '🎁 Unlocked!';
+        wrap.appendChild(heading);
+        items.forEach(function(item, i) {
+            const card = el('div', 'jp-unlock-card');
+            if (item.type === 'module') card.classList.add('jp-unlock-card--module');
+            card.innerHTML = '<span class="jp-unlock-card-icon">' + item.icon + '</span>' +
+                             '<span class="jp-unlock-card-label">' + item.label + '</span>';
+            wrap.appendChild(card);
+            setTimeout(function() {
+                requestAnimationFrame(function() { card.classList.add('jp-unlock-card--animate'); });
+            }, i * 150);
+        });
+        return wrap;
+    }
+
+    function buildEncouragement(pending) {
+        const wrap = el('div', '');
+        let html = '<div style="text-align:center;padding:16px;background:#fff8e1;border-radius:12px;margin-bottom:12px;">' +
+                   '<div style="font-size:1.5rem;">💪</div>' +
+                   '<div style="font-size:1rem;font-weight:700;color:#F59E0B;margin:4px 0;">Keep going!</div>' +
+                   '<div style="font-size:0.85rem;color:#747d8c;">Score <strong>75% or higher</strong> to unlock:</div>';
+        if (pending.length > 0) {
+            html += '<div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:6px;justify-content:center;">';
+            pending.forEach(function(item) {
+                html += '<div style="background:white;border:1px solid #e2e8f0;border-radius:8px;padding:6px 12px;font-size:0.8rem;font-weight:600;color:#4e54c8;">' +
+                        item.icon + ' ' + item.label + '</div>';
+            });
+            html += '</div>';
+        }
+        html += '</div>';
+        html += '<div style="text-align:center;padding:12px;background:#e8f5e9;border-radius:12px;">' +
+                '<div style="font-size:0.85rem;color:#16A34A;font-weight:600;">✅ Already unlocked for you:</div>' +
+                '<div style="font-size:0.8rem;color:#4CAF50;margin-top:4px;">🥋 Dojo &amp; 🌿 Grammar Garden are available to help you practice!</div>' +
+                '</div>';
+        wrap.innerHTML = html;
+        return wrap;
+    }
+
+    function renderSummary(body, nextBtn, prevBtn, pct) {
+        const rank = [...SCORE_RANKS].reverse().find(r => pct >= r.min) || SCORE_RANKS[0];
+        body.innerHTML = `
+            <div class="jp-card jp-summary-score-card" style="text-align:center; position:relative; padding:30px 20px; margin-bottom:0;">
+                <h2 style="margin-bottom:15px;">🎉 Lesson Complete!</h2>
+                ${drillTotal > 0 ? `
+                <div style="font-size:0.8rem; font-weight:700; color:#aaa; text-transform:uppercase; letter-spacing:1px; margin-bottom:10px;">Drill Score</div>
+                <div style="font-size:3rem; font-weight:900; color:${rank.colors[0]}; line-height:1.1;">${rank.msg}</div>
+                <div style="font-size:1rem; color:#747d8c; font-weight:600; margin:6px 0 14px;">${rank.sub}</div>
+                <div style="font-size:2.2rem; font-weight:900; color:var(--primary);">${pct}%</div>
+                <div style="font-size:0.9rem; color:#888; margin-top:4px;">${drillCorrect} / ${drillTotal} correct</div>
+                ` : ''}
+            </div>`;
+
+        if (drillTotal > 0) launchHanabi(rank, body.querySelector('.jp-summary-score-card'));
+
+        const unlock = window.JPShared && window.JPShared.unlock;
+        if (!unlock || unlock.isFree() || !manifestData || !lessonData || !lessonData.id) {
+            nextBtn.innerText = "Finish";
+            prevBtn.style.visibility = 'hidden';
+            return;
+        }
+
+        const result = unlock.computeUnlocks(lessonData.id, pct, manifestData);
+
+        if (result.passed) {
+            nextBtn.innerText = "Continue \u2192";
+            prevBtn.style.visibility = 'hidden';
+            if (result.newItems.length > 0) body.appendChild(buildUnlockReveal(result.newItems));
+        } else {
+            const pending = unlock.getPendingUnlocks(lessonData.id, manifestData);
+            body.appendChild(buildEncouragement(pending));
+            prevBtn.style.visibility = 'visible';
+            prevBtn.disabled = false;
+            prevBtn.innerText = "\u2190 Menu";
+            prevBtn.onclick = function() { renderMenu(currentLevelId, currentLevelLessons); };
+            nextBtn.innerText = "Try Again";
+            nextBtn.onclick = function() {
+                var entry = currentLevelLessons && currentLevelLessons.find(function(l) { return l.id === lessonData.id; });
+                if (entry) loadLesson(entry.file);
+            };
+        }
+    }
+
     // --- Logic ---
     async function fetchLessonList() {
         root.innerHTML = `<div class="jp-header"><div class="jp-title">Library</div><div style="display:flex;gap:8px;align-items:center;"><button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button><button class="jp-exit-btn">Exit</button></div></div><div class="jp-body" style="text-align:center; justify-content:center; color:#888;">Loading...</div>`;
@@ -448,11 +557,12 @@ window.LessonModule = {
 
         try {
           const manifest = await window.getManifest(REPO_CONFIG);
+          manifestData = manifest; // cache for unlock computations
           const levelsData = [];
           (manifest.levels || []).forEach(level => {
             const levelData = manifest.data && manifest.data[level];
             if (!levelData || !levelData.lessons) return;
-            const lessons = levelData.lessons.map(l => ({ id: l.id, title: l.title, file: l.file }));
+            const lessons = levelData.lessons.map(l => ({ id: l.id, title: l.title, file: l.file, unlocksAfter: l.unlocksAfter }));
             // Sort lessons within level: highest lesson number first
             lessons.sort((a, b) => {
               const partsA = a.id.replace('N','').split('.').map(Number);
@@ -476,9 +586,13 @@ window.LessonModule = {
         root.innerHTML = `<div class="jp-header"><div class="jp-title">Library</div><div style="display:flex;gap:8px;align-items:center;"><button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button><button class="jp-exit-btn">Exit</button></div></div><div class="jp-body"><div class="jp-menu-grid" id="jp-level-container"></div></div>`;
         root.querySelector('.jp-exit-btn').onclick = exitCallback;
         const container = document.getElementById('jp-level-container');
+        const unlockApi = window.JPShared && window.JPShared.unlock;
         allLevelsData.forEach(({ level, levelNum, lessons }) => {
+          // N4 is a paid gateway — hide it entirely until explicitly unlocked.
+          if (level === 'N4' && unlockApi && !unlockApi.isFree() && !unlockApi.isN4Unlocked()) return;
+          const visibleCount = lessons.filter(l => !unlockApi || unlockApi.isFree() || unlockApi.isLessonUnlocked(l)).length;
           const card = el('div', 'jp-level-card');
-          card.innerHTML = `<div class="jp-level-name">JLPT Level N${levelNum}</div><div class="jp-level-count">${lessons.length} lesson${lessons.length !== 1 ? 's' : ''}</div>`;
+          card.innerHTML = `<div class="jp-level-name">JLPT Level N${levelNum}</div><div class="jp-level-count">${visibleCount} lesson${visibleCount !== 1 ? 's' : ''}</div>`;
           card.onclick = () => renderMenu(level, lessons);
           container.appendChild(card);
         });
@@ -492,7 +606,13 @@ window.LessonModule = {
         root.querySelector('.jp-back-btn').onclick = () => renderLevelPicker();
         root.querySelector('.jp-exit-btn').onclick = exitCallback;
         const menuEl = document.getElementById('jp-menu-container');
-        lessons.forEach(lesson => {
+        const unlockApi = window.JPShared && window.JPShared.unlock;
+        // Only show unlocked lessons. List is sorted highest-first so the most
+        // recently unlocked lesson appears at the top.
+        const visibleLessons = lessons.filter(l =>
+          !unlockApi || unlockApi.isFree() || unlockApi.isLessonUnlocked(l)
+        );
+        visibleLessons.forEach(lesson => {
           const btn = el("div", "jp-menu-item");
           btn.innerHTML = `<div class="jp-menu-id">${lesson.id}</div><div class="jp-menu-name">${lesson.title || 'Start'}</div>`;
           btn.onclick = () => loadLesson(lesson.file);
@@ -563,23 +683,7 @@ window.LessonModule = {
         if (currentStep >= lessonData.sections.length) {
             title.innerText = "Summary";
             const pct = drillTotal > 0 ? Math.round(drillCorrect / drillTotal * 100) : 100;
-            const rank = [...SCORE_RANKS].reverse().find(r => pct >= r.min) || SCORE_RANKS[0];
-            body.innerHTML = `
-                <div class="jp-card" style="text-align:center; position:relative; padding:30px 20px;">
-                    <h2 style="margin-bottom:15px;">🎉 Lesson Complete!</h2>
-                    ${drillTotal > 0 ? `
-                    <div style="font-size:0.8rem; font-weight:700; color:#aaa; text-transform:uppercase; letter-spacing:1px; margin-bottom:10px;">Drill Score</div>
-                    <div style="font-size:3rem; font-weight:900; color:${rank.colors[0]}; line-height:1.1;">${rank.msg}</div>
-                    <div style="font-size:1rem; color:#747d8c; font-weight:600; margin:6px 0 14px;">${rank.sub}</div>
-                    <div style="font-size:2.2rem; font-weight:900; color:var(--primary);">${pct}%</div>
-                    <div style="font-size:0.9rem; color:#888; margin-top:4px;">${drillCorrect} / ${drillTotal} correct</div>
-                    ` : ''}
-                </div>`;
-            nextBtn.innerText = "Finish";
-            if (drillTotal > 0) {
-                const card = body.querySelector('.jp-card');
-                launchHanabi(rank, card);
-            }
+            renderSummary(body, nextBtn, prevBtn, pct);
             return;
         }
 

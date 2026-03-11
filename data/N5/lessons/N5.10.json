@@ -7,7 +7,12 @@
     "lesson_number": 10,
     "focus": "Weather, electricity, and rest — compounds built from 天・電・気・休, plus i-adjective past tense よかったです and 高かったです",
     "estimated_minutes": 30,
-    "kanji": ["天", "電", "気", "休"]
+    "kanji": [
+      "天",
+      "電",
+      "気",
+      "休"
+    ]
   },
   "newKanji": [
     {
@@ -49,12 +54,19 @@
           "jp": "やまかわさんは コーヒーを 飲んでいます。",
           "en": "Yamakawa-san is drinking coffee.",
           "terms": [
+            "char_yamakawa",
             "v_san",
             "p_wa",
             "v_koohii",
             "p_wo",
-            { "id": "v_nomu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_nomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -63,7 +75,10 @@
           "terms": [
             "v_eki",
             "p_e",
-            { "id": "v_kuru", "form": "te_form" },
+            {
+              "id": "v_kuru",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
@@ -74,9 +89,15 @@
             "v_kono",
             "v_mise",
             "p_wa",
-            { "id": "v_atarashii", "form": "polite_adj" },
+            {
+              "id": "v_atarashii",
+              "form": "polite_adj"
+            },
             "p_ga_but",
-            { "id": "v_takai", "form": "polite_adj" }
+            {
+              "id": "v_takai",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -85,7 +106,10 @@
           "terms": [
             "v_yama",
             "p_ni",
-            { "id": "v_iku", "form": "desire_tai" }
+            {
+              "id": "v_iku",
+              "form": "desire_tai"
+            }
           ]
         }
       ]
@@ -99,28 +123,36 @@
           "on": "てん",
           "kun": "あま",
           "meaning": "heaven / sky / weather",
-          "terms": ["k_ama"]
+          "terms": [
+            "k_ama"
+          ]
         },
         {
           "kanji": "電",
           "on": "でん",
           "kun": "",
           "meaning": "electricity / electric",
-          "terms": ["k_u96fb"]
+          "terms": [
+            "k_u96fb"
+          ]
         },
         {
           "kanji": "気",
           "on": "き",
           "kun": "",
           "meaning": "spirit / energy / feeling",
-          "terms": ["k_u6c17"]
+          "terms": [
+            "k_u6c17"
+          ]
         },
         {
           "kanji": "休",
           "on": "きゅう",
           "kun": "やす",
           "meaning": "rest / day off",
-          "terms": ["k_yasu"]
+          "terms": [
+            "k_yasu"
+          ]
         }
       ]
     },
@@ -130,39 +162,66 @@
       "groups": [
         {
           "label": "Weather",
-          "items": ["v_tenki"]
+          "items": [
+            "v_tenki"
+          ]
         },
         {
           "label": "Energy & Transport",
-          "items": ["v_denki", "v_densha"]
+          "items": [
+            "v_denki",
+            "v_densha"
+          ]
         },
         {
           "label": "Feelings & Mood",
-          "items": ["v_kibun"]
+          "items": [
+            "v_kibun"
+          ]
         },
         {
           "label": "Popularity",
-          "items": ["v_ninki"]
+          "items": [
+            "v_ninki"
+          ]
         },
         {
           "label": "Rest & Days Off",
-          "items": ["v_yasumi", "v_kyuujitsu", "v_yasumu"]
+          "items": [
+            "v_yasumi",
+            "v_kyuujitsu",
+            "v_yasumu"
+          ]
         },
         {
           "label": "Change & State",
-          "items": ["v_naru"]
+          "items": [
+            "v_naru"
+          ]
         },
         {
           "label": "Places",
-          "items": ["v_hoteru"]
+          "items": [
+            "v_hoteru"
+          ]
         },
         {
           "label": "Interjections",
-          "items": ["v_un", "v_uun", "v_ee", "v_waa"]
+          "items": [
+            "v_un",
+            "v_uun",
+            "v_ee",
+            "v_waa"
+          ]
         },
         {
           "label": "Kanji",
-          "items": ["k_ama", "k_u96fb", "k_u6c17", "k_yasu"]
+          "items": [
+            "k_ama",
+            "k_u96fb",
+            "k_u6c17",
+            "k_yasu"
+          ]
         }
       ]
     },
@@ -197,7 +256,10 @@
             "v_tenki",
             "g_desu",
             "p_yo",
-            { "id": "v_ii", "form": "polite_past_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            },
             "p_ne"
           ]
         },
@@ -208,7 +270,10 @@
           "terms": [
             "v_doko",
             "p_ni",
-            { "id": "v_iku", "form": "desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "desire_tai"
+            },
             "p_ka"
           ]
         },
@@ -219,10 +284,16 @@
           "terms": [
             "v_yama",
             "p_ni",
-            { "id": "v_iku", "form": "polite_volitional_mashou" },
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            },
             "v_densha",
             "p_de",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -232,7 +303,10 @@
           "terms": [
             "v_densha",
             "p_wa",
-            { "id": "v_takai", "form": "polite_adj" },
+            {
+              "id": "v_takai",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -243,7 +317,10 @@
           "terms": [
             "v_daijoubu",
             "g_desu",
-            { "id": "v_takai", "form": "plain_negative" },
+            {
+              "id": "v_takai",
+              "form": "plain_negative"
+            },
             "g_desu",
             "p_yo"
           ]
@@ -263,11 +340,17 @@
             "v_kono",
             "v_hoteru",
             "p_wa",
-            { "id": "v_furui", "form": "polite_adj" },
+            {
+              "id": "v_furui",
+              "form": "polite_adj"
+            },
             "p_ga_but",
             "v_ninki",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_yo"
           ]
         },
@@ -292,7 +375,10 @@
             "p_no",
             "v_naka",
             "p_ni",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_yo"
           ]
         },
@@ -303,12 +389,21 @@
           "terms": [
             "v_kibun",
             "p_ga",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_yama",
             "p_ni",
-            { "id": "v_kuru", "form": "te_form" },
-            { "id": "v_ii", "form": "polite_past_adj" }
+            {
+              "id": "v_kuru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
@@ -318,10 +413,16 @@
           "terms": [
             "v_hoteru",
             "p_de",
-            { "id": "v_taberu", "form": "polite_volitional_mashou" },
+            {
+              "id": "v_taberu",
+              "form": "polite_volitional_mashou"
+            },
             "v_nani",
             "p_wo",
-            { "id": "v_taberu", "form": "desire_tai" },
+            {
+              "id": "v_taberu",
+              "form": "desire_tai"
+            },
             "p_ka"
           ]
         },
@@ -332,11 +433,17 @@
           "terms": [
             "v_karee",
             "p_wo",
-            { "id": "v_taberu", "form": "desire_tai" },
+            {
+              "id": "v_taberu",
+              "form": "desire_tai"
+            },
             "v_oishii",
             "v_karee",
             "p_ga",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne"
           ]
         }
@@ -355,7 +462,10 @@
             "v_kyou",
             "p_wa",
             "v_totemo",
-            { "id": "v_nagai", "form": "polite_past_adj" },
+            {
+              "id": "v_nagai",
+              "form": "polite_past_adj"
+            },
             "p_ne"
           ]
         },
@@ -368,7 +478,10 @@
             "p_ne",
             "v_densha",
             "p_mo",
-            { "id": "v_nagai", "form": "polite_past_adj" }
+            {
+              "id": "v_nagai",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
@@ -376,10 +489,16 @@
           "jp": "休みたいです。電気は ありますか。",
           "en": "I want to rest. Is there electricity?",
           "terms": [
-            { "id": "v_yasumu", "form": "desire_tai" },
+            {
+              "id": "v_yasumu",
+              "form": "desire_tai"
+            },
             "v_denki",
             "p_wa",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -388,11 +507,17 @@
           "jp": "ありますよ。テレビも あります。",
           "en": "Yes, there is. There's also a TV.",
           "terms": [
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_yo",
             "v_terebi",
             "p_mo",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -400,10 +525,16 @@
           "jp": "よかったです！ホテルで 休みましょう。",
           "en": "That's great! Let's rest at the hotel.",
           "terms": [
-            { "id": "v_ii", "form": "polite_past_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            },
             "v_hoteru",
             "p_de",
-            { "id": "v_yasumu", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_yasumu",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -415,8 +546,14 @@
             "p_ne",
             "v_denki",
             "p_ga",
-            { "id": "v_aru", "form": "te_form" },
-            { "id": "v_ii", "form": "polite_past_adj" },
+            {
+              "id": "v_aru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            },
             "p_ne"
           ]
         }
@@ -448,7 +585,10 @@
             "v_un",
             "v_tenki",
             "p_ga",
-            { "id": "v_ii", "form": "plain_past_adj" },
+            {
+              "id": "v_ii",
+              "form": "plain_past_adj"
+            },
             "p_kara_because",
             "p_ne"
           ]
@@ -460,11 +600,17 @@
           "terms": [
             "v_densha",
             "p_wa",
-            { "id": "v_nagai", "form": "plain_past_adj" },
+            {
+              "id": "v_nagai",
+              "form": "plain_past_adj"
+            },
             "p_kedo",
             "v_yama",
             "p_wa",
-            { "id": "v_ii", "form": "plain_past_adj" },
+            {
+              "id": "v_ii",
+              "form": "plain_past_adj"
+            },
             "p_yo"
           ]
         },
@@ -475,7 +621,10 @@
           "terms": [
             "v_raishuu",
             "p_mo",
-            { "id": "v_kuru", "form": "plain_desire_tai" },
+            {
+              "id": "v_kuru",
+              "form": "plain_desire_tai"
+            },
             "p_ne"
           ]
         },
@@ -489,7 +638,10 @@
             "p_ni",
             "v_densha",
             "p_de",
-            { "id": "v_iku", "form": "plain_desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
             "p_ne"
           ]
         },
@@ -506,7 +658,10 @@
             "v_aru",
             "p_kara_because",
             "p_ne",
-            { "id": "v_iku", "form": "plain_desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
             "p_yo"
           ]
         }
@@ -525,7 +680,10 @@
             "v_kyuujitsu",
             "v_tenki",
             "p_ga",
-            { "id": "v_ii", "form": "polite_past_adj" }
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
@@ -536,11 +694,17 @@
             "p_de",
             "v_yama",
             "p_ni",
-            { "id": "v_iku", "form": "polite_mashita" },
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
             "v_densha",
             "p_wa",
             "v_totemo",
-            { "id": "v_nagai", "form": "polite_past_adj" }
+            {
+              "id": "v_nagai",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
@@ -553,14 +717,23 @@
             "p_ni",
             "v_hoteru",
             "p_ga",
-            { "id": "v_aru", "form": "polite_mashita" },
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            },
             "v_hoteru",
             "p_wa",
-            { "id": "v_furui", "form": "polite_adj" },
+            {
+              "id": "v_furui",
+              "form": "polite_adj"
+            },
             "p_ga_but",
             "v_ninki",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -569,12 +742,18 @@
           "terms": [
             "v_kibun",
             "p_ga",
-            { "id": "v_ii", "form": "polite_past_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            },
             "v_yama",
             "p_no",
             "v_tenki",
             "p_ga",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne"
           ]
         },
@@ -584,11 +763,17 @@
           "terms": [
             "v_raishuu",
             "p_mo",
-            { "id": "v_kuru", "form": "desire_tai" },
+            {
+              "id": "v_kuru",
+              "form": "desire_tai"
+            },
             "v_yama",
             "p_wa",
             "v_totemo",
-            { "id": "v_ii", "form": "polite_past_adj" }
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            }
           ]
         }
       ],
@@ -602,7 +787,10 @@
             "On foot",
             "By bus"
           ],
-          "terms": ["v_densha", "p_de"]
+          "terms": [
+            "v_densha",
+            "p_de"
+          ]
         },
         {
           "q": "What was the narrator's mood like in the mountains?",
@@ -613,7 +801,13 @@
             "Tired",
             "Boring"
           ],
-          "terms": ["v_kibun", { "id": "v_ii", "form": "polite_past_adj" }]
+          "terms": [
+            "v_kibun",
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            }
+          ]
         },
         {
           "q": "What does the narrator want to do next week?",
@@ -624,7 +818,13 @@
             "Rest at home",
             "Buy a train ticket"
           ],
-          "terms": ["v_raishuu", { "id": "v_kuru", "form": "desire_tai" }]
+          "terms": [
+            "v_raishuu",
+            {
+              "id": "v_kuru",
+              "form": "desire_tai"
+            }
+          ]
         }
       ]
     },
@@ -641,11 +841,20 @@
             "p_ni",
             "v_denki",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "v_denki",
             "p_ga",
-            { "id": "v_aru", "form": "te_form" },
-            { "id": "v_ii", "form": "polite_past_adj" }
+            {
+              "id": "v_aru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
@@ -657,11 +866,17 @@
             "p_wa",
             "v_ninki",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "v_ookii",
             "v_densha",
             "p_mo",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -670,10 +885,16 @@
           "terms": [
             "v_denki",
             "p_ga",
-            { "id": "v_aru", "form": "polite_negative" },
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            },
             "v_densha",
             "p_mo",
-            { "id": "v_kuru", "form": "polite_negative" }
+            {
+              "id": "v_kuru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -683,11 +904,17 @@
             "v_mainichi",
             "v_denki",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_kara_because",
             "v_kibun",
             "p_ga",
-            { "id": "v_ii", "form": "polite_adj" }
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -699,11 +926,20 @@
             "v_ninki",
             "p_wa",
             "v_totemo",
-            { "id": "v_takai", "form": "polite_adj" },
+            {
+              "id": "v_takai",
+              "form": "polite_adj"
+            },
             "v_denki",
             "p_ga",
-            { "id": "v_aru", "form": "te_form" },
-            { "id": "v_ii", "form": "polite_past_adj" }
+            {
+              "id": "v_aru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            }
           ]
         }
       ],
@@ -717,7 +953,11 @@
             "Long trains are old",
             "Long trains have no electricity"
           ],
-          "terms": ["v_nagai", "v_densha", "v_ninki"]
+          "terms": [
+            "v_nagai",
+            "v_densha",
+            "v_ninki"
+          ]
         },
         {
           "q": "What happens when there is no electricity?",
@@ -728,7 +968,18 @@
             "The mood gets good",
             "You can rest"
           ],
-          "terms": ["v_denki", { "id": "v_aru", "form": "polite_negative" }, "v_densha", { "id": "v_kuru", "form": "polite_negative" }]
+          "terms": [
+            "v_denki",
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            },
+            "v_densha",
+            {
+              "id": "v_kuru",
+              "form": "polite_negative"
+            }
+          ]
         },
         {
           "q": "Why is the narrator in a good mood every day?",
@@ -739,7 +990,16 @@
             "Because it is a holiday",
             "Because the weather is nice"
           ],
-          "terms": ["v_mainichi", "v_denki", "p_kara", "v_kibun", { "id": "v_ii", "form": "polite_adj" }]
+          "terms": [
+            "v_mainichi",
+            "v_denki",
+            "p_kara",
+            "v_kibun",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
+          ]
         }
       ]
     },
@@ -751,37 +1011,67 @@
         {
           "kind": "mcq",
           "q": "天気",
-          "choices": ["weather", "electricity", "rest", "mood"],
+          "choices": [
+            "weather",
+            "electricity",
+            "rest",
+            "mood"
+          ],
           "answer": "weather"
         },
         {
           "kind": "mcq",
           "q": "電気",
-          "choices": ["electricity", "train", "weather", "day off"],
+          "choices": [
+            "electricity",
+            "train",
+            "weather",
+            "day off"
+          ],
           "answer": "electricity"
         },
         {
           "kind": "mcq",
           "q": "気分",
-          "choices": ["mood / feeling", "energy", "rest", "weather"],
+          "choices": [
+            "mood / feeling",
+            "energy",
+            "rest",
+            "weather"
+          ],
           "answer": "mood / feeling"
         },
         {
           "kind": "mcq",
           "q": "休日",
-          "choices": ["holiday / day off", "rest", "train", "hotel"],
+          "choices": [
+            "holiday / day off",
+            "rest",
+            "train",
+            "hotel"
+          ],
           "answer": "holiday / day off"
         },
         {
           "kind": "mcq",
           "q": "人気",
-          "choices": ["popularity", "feeling", "person", "weather"],
+          "choices": [
+            "popularity",
+            "feeling",
+            "person",
+            "weather"
+          ],
           "answer": "popularity"
         },
         {
           "kind": "mcq",
           "q": "電車",
-          "choices": ["train", "electricity", "energy", "mood"],
+          "choices": [
+            "train",
+            "electricity",
+            "energy",
+            "mood"
+          ],
           "answer": "train"
         }
       ]
@@ -794,30 +1084,70 @@
         {
           "kind": "mcq",
           "q": "Today was good. （いい → past）",
-          "choices": ["よかったです", "いかったです", "いいでした", "よいでした"],
+          "choices": [
+            "よかったです",
+            "いかったです",
+            "いいでした",
+            "よいでした"
+          ],
           "answer": "よかったです",
-          "terms": [{ "id": "v_ii", "form": "polite_past_adj" }]
+          "terms": [
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            }
+          ]
         },
         {
           "kind": "mcq",
           "q": "The train was expensive. （高い → past）",
-          "choices": ["高かったです", "高いでした", "高くなかったです", "高いです"],
+          "choices": [
+            "高かったです",
+            "高いでした",
+            "高くなかったです",
+            "高いです"
+          ],
           "answer": "高かったです",
-          "terms": [{ "id": "v_takai", "form": "polite_past_adj" }]
+          "terms": [
+            {
+              "id": "v_takai",
+              "form": "polite_past_adj"
+            }
+          ]
         },
         {
           "kind": "mcq",
           "q": "The trip was long. （長い → past）",
-          "choices": ["長かったです", "長いでした", "長くないです", "長いました"],
+          "choices": [
+            "長かったです",
+            "長いでした",
+            "長くないです",
+            "長いました"
+          ],
           "answer": "長かったです",
-          "terms": [{ "id": "v_nagai", "form": "polite_past_adj" }]
+          "terms": [
+            {
+              "id": "v_nagai",
+              "form": "polite_past_adj"
+            }
+          ]
         },
         {
           "kind": "mcq",
           "q": "The weather was not good. （いい → past negative）",
-          "choices": ["よくなかったです", "いくなかったです", "よくないでした", "いいませんでした"],
+          "choices": [
+            "よくなかったです",
+            "いくなかったです",
+            "よくないでした",
+            "いいませんでした"
+          ],
           "answer": "よくなかったです",
-          "terms": [{ "id": "v_ii", "form": "polite_past_adj" }]
+          "terms": [
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            }
+          ]
         }
       ]
     },
@@ -829,30 +1159,93 @@
         {
           "kind": "mcq",
           "q": "山に 来て ___です。（I'm glad I came to the mountains.）",
-          "choices": ["よかった", "いかった", "よかって", "よい"],
+          "choices": [
+            "よかった",
+            "いかった",
+            "よかって",
+            "よい"
+          ],
           "answer": "よかった",
-          "terms": ["v_yama", "p_ni", { "id": "v_kuru", "form": "te_form" }, { "id": "v_ii", "form": "polite_past_adj" }]
+          "terms": [
+            "v_yama",
+            "p_ni",
+            {
+              "id": "v_kuru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            }
+          ]
         },
         {
           "kind": "mcq",
           "q": "天気が ___ から、外に 行きましょう。（Because the weather is good, let's go outside.）",
-          "choices": ["いい", "よかった", "いかった", "よい"],
+          "choices": [
+            "いい",
+            "よかった",
+            "いかった",
+            "よい"
+          ],
           "answer": "いい",
-          "terms": ["v_tenki", "p_ga", { "id": "v_ii", "form": "polite_adj" }, "p_kara", "v_soto", "p_ni", { "id": "v_iku", "form": "polite_volitional_mashou" }]
+          "terms": [
+            "v_tenki",
+            "p_ga",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
+            "p_kara",
+            "v_soto",
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
+          ]
         },
         {
           "kind": "mcq",
           "q": "休日に ___ たいです。（I want to rest on the holiday.）",
-          "choices": ["休み", "休む", "休んで", "休め"],
+          "choices": [
+            "休み",
+            "休む",
+            "休んで",
+            "休め"
+          ],
           "answer": "休み",
-          "terms": ["v_kyuujitsu", "p_ni", { "id": "v_yasumu", "form": "desire_tai" }]
+          "terms": [
+            "v_kyuujitsu",
+            "p_ni",
+            {
+              "id": "v_yasumu",
+              "form": "desire_tai"
+            }
+          ]
         },
         {
           "kind": "mcq",
           "q": "電気が あって ___。（It's great that there's electricity.）",
-          "choices": ["よかったです", "いかったです", "よいです", "よかって"],
+          "choices": [
+            "よかったです",
+            "いかったです",
+            "よいです",
+            "よかって"
+          ],
           "answer": "よかったです",
-          "terms": ["v_denki", "p_ga", { "id": "v_aru", "form": "te_form" }, { "id": "v_ii", "form": "polite_past_adj" }]
+          "terms": [
+            "v_denki",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            }
+          ]
         }
       ]
     }

@@ -336,7 +336,7 @@
           "jp": "あの 人の 名前は 何ですか。",
           "en": "What is that person's name?",
           "terms": [
-            "k_hito",
+            "v_hito",
             "v_namae",
             "v_nan"
           ]
@@ -352,7 +352,7 @@
               "form": "polite_negative"
             },
             "v_warui",
-            "k_hito"
+            "v_hito"
           ]
         },
         {
@@ -361,7 +361,7 @@
           "en": "Is that so? There are malicious people too, so please be careful.",
           "terms": [
             "v_akushitsu",
-            "k_hito",
+            "v_hito",
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -671,7 +671,7 @@
           ],
           "answer": "悪い",
           "terms": [
-            "k_hito",
+            "v_hito",
             "v_warui"
           ]
         },

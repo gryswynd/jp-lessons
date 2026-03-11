@@ -7,7 +7,12 @@
     "lesson_number": 7,
     "focus": "Size adjectives 大きい / 小さい and eating and drinking vocabulary — 食べる and 飲む — used in restaurant and daily food contexts",
     "estimated_minutes": 50,
-    "kanji": ["大", "小", "食", "飲"]
+    "kanji": [
+      "大",
+      "小",
+      "食",
+      "飲"
+    ]
   },
   "newKanji": [
     {
@@ -52,7 +57,10 @@
             "v_mainichi",
             "v_doko",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -63,7 +71,10 @@
             "v_senshuu",
             "v_yama",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" },
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -75,7 +86,10 @@
             "p_de",
             "v_eki",
             "p_kara",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -86,7 +100,10 @@
             "v_senshuu",
             "v_kuruma",
             "p_de",
-            { "id": "v_kuru", "form": "polite_past_negative" },
+            {
+              "id": "v_kuru",
+              "form": "polite_past_negative"
+            },
             "p_ka"
           ]
         }
@@ -101,28 +118,36 @@
           "on": "だい/たい",
           "kun": "おお",
           "meaning": "big / large",
-          "terms": ["k_oo_2"]
+          "terms": [
+            "k_oo_2"
+          ]
         },
         {
           "kanji": "小",
           "on": "しょう",
           "kun": "ちい/こ",
           "meaning": "small",
-          "terms": ["k_chii"]
+          "terms": [
+            "k_chii"
+          ]
         },
         {
           "kanji": "食",
           "on": "しょく/じき",
           "kun": "た",
           "meaning": "eat / food",
-          "terms": ["k_ta"]
+          "terms": [
+            "k_ta"
+          ]
         },
         {
           "kanji": "飲",
           "on": "いん",
           "kun": "の",
           "meaning": "drink",
-          "terms": ["k_no"]
+          "terms": [
+            "k_no"
+          ]
         }
       ]
     },
@@ -132,27 +157,50 @@
       "groups": [
         {
           "label": "New Kanji",
-          "items": ["k_oo_2", "k_chii", "k_ta", "k_no"]
+          "items": [
+            "k_oo_2",
+            "k_chii",
+            "k_ta",
+            "k_no"
+          ]
         },
         {
           "label": "Size Adjectives",
-          "items": ["v_ookii", "v_chiisai"]
+          "items": [
+            "v_ookii",
+            "v_chiisai"
+          ]
         },
         {
           "label": "Verbs",
-          "items": ["v_taberu", "v_nomu"]
+          "items": [
+            "v_taberu",
+            "v_nomu"
+          ]
         },
         {
           "label": "Food & Drinks",
-          "items": ["v_karee", "v_pan", "v_sarada", "v_koohii", "v_juusu"]
+          "items": [
+            "v_karee",
+            "v_pan",
+            "v_sarada",
+            "v_koohii",
+            "v_juusu"
+          ]
         },
         {
           "label": "Places",
-          "items": ["v_resutoran"]
+          "items": [
+            "v_resutoran"
+          ]
         },
         {
           "label": "Expressions",
-          "items": ["v_daisuki", "p_itadakimasu", "p_gochisousama"]
+          "items": [
+            "v_daisuki",
+            "p_itadakimasu",
+            "p_gochisousama"
+          ]
         }
       ]
     },
@@ -166,11 +214,15 @@
           "jp": "やまかわさん、今日 どこへ 行きますか。",
           "en": "Yamakawa-san, where are you going today?",
           "terms": [
+            "char_yamakawa",
             "v_san",
             "v_kyou",
             "v_doko",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -181,11 +233,17 @@
           "terms": [
             "v_resutoran",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "char_rikizo",
             "v_san",
             "p_mo",
-            { "id": "v_kuru", "form": "polite_masu" },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -195,10 +253,16 @@
           "en": "Yes, I will go. What will you eat?",
           "terms": [
             "p_hai",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "v_nani",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_masu" },
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -209,10 +273,16 @@
           "terms": [
             "v_karee",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_masu" },
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            },
             "v_karee",
             "p_wa",
-            { "id": "v_ookii", "form": "polite_adj" },
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         },
@@ -221,11 +291,17 @@
           "jp": "いいですね。コーヒーも 飲みますか。",
           "en": "That sounds nice. Will you drink coffee too?",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_koohii",
             "p_mo",
-            { "id": "v_nomu", "form": "polite_masu" },
+            {
+              "id": "v_nomu",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -235,10 +311,16 @@
           "en": "Yes, I will. The restaurant is big, you know.",
           "terms": [
             "p_hai",
-            { "id": "v_nomu", "form": "polite_masu" },
+            {
+              "id": "v_nomu",
+              "form": "polite_masu"
+            },
             "v_resutoran",
             "p_wa",
-            { "id": "v_ookii", "form": "polite_adj" },
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         }
@@ -256,7 +338,10 @@
           "terms": [
             "v_karee",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_masu" },
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -266,10 +351,16 @@
           "en": "Yes, I will eat. Will you drink coffee too?",
           "terms": [
             "p_hai",
-            { "id": "v_taberu", "form": "polite_masu" },
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            },
             "v_koohii",
             "p_mo",
-            { "id": "v_nomu", "form": "polite_masu" },
+            {
+              "id": "v_nomu",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -280,10 +371,16 @@
           "terms": [
             "v_koohii",
             "p_wa",
-            { "id": "v_nomu", "form": "polite_negative" },
+            {
+              "id": "v_nomu",
+              "form": "polite_negative"
+            },
             "v_juusu",
             "p_wo",
-            { "id": "v_nomu", "form": "polite_masu" }
+            {
+              "id": "v_nomu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -293,7 +390,10 @@
           "terms": [
             "v_juusu",
             "p_wa",
-            { "id": "v_ookii", "form": "polite_adj" },
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -303,11 +403,17 @@
           "en": "Yes, it is big, you know. Will you eat bread too?",
           "terms": [
             "p_hai",
-            { "id": "v_ookii", "form": "polite_adj" },
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            },
             "p_yo",
             "v_pan",
             "p_mo",
-            { "id": "v_taberu", "form": "polite_masu" },
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -339,7 +445,10 @@
           "en": "Yes, I will eat. Bon appétit!",
           "terms": [
             "p_hai",
-            { "id": "v_taberu", "form": "polite_masu" },
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            },
             "p_itadakimasu"
           ]
         }
@@ -359,7 +468,10 @@
             "v_san",
             "v_nani",
             "p_wo",
-            { "id": "v_nomu", "form": "polite_masu" },
+            {
+              "id": "v_nomu",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -370,12 +482,18 @@
           "terms": [
             "v_koohii",
             "p_wo",
-            { "id": "v_nomu", "form": "polite_masu" },
+            {
+              "id": "v_nomu",
+              "form": "polite_masu"
+            },
             "v_sensei",
             "p_wa",
             "v_nani",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_masu" },
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -386,10 +504,16 @@
           "terms": [
             "v_sarada",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_masu" },
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            },
             "v_sarada",
             "p_wa",
-            { "id": "v_chiisai", "form": "polite_adj" },
+            {
+              "id": "v_chiisai",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         },
@@ -402,7 +526,10 @@
             "p_wa",
             "v_resutoran",
             "p_de",
-            { "id": "v_taberu", "form": "polite_masu" },
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -414,10 +541,16 @@
             "p_hai",
             "v_resutoran",
             "p_de",
-            { "id": "v_taberu", "form": "polite_masu" },
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            },
             "v_pan",
             "p_mo",
-            { "id": "v_taberu", "form": "te_form" },
+            {
+              "id": "v_taberu",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
@@ -427,8 +560,14 @@
           "en": "Yes, I will eat it. That is nice.",
           "terms": [
             "p_hai",
-            { "id": "v_taberu", "form": "polite_masu" },
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne"
           ]
         }
@@ -456,7 +595,10 @@
             "v_kyou",
             "v_karee",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_mashita" }
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -468,10 +610,16 @@
             "p_to",
             "v_pan",
             "p_mo",
-            { "id": "v_taberu", "form": "polite_mashita" },
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            },
             "v_juusu",
             "p_mo",
-            { "id": "v_nomu", "form": "polite_mashita" }
+            {
+              "id": "v_nomu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -481,7 +629,10 @@
           "terms": [
             "v_koohii",
             "p_mo",
-            { "id": "v_nomu", "form": "polite_mashita" },
+            {
+              "id": "v_nomu",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -491,10 +642,16 @@
           "en": "Yes, I did. The restaurant is big, isn't it.",
           "terms": [
             "p_hai",
-            { "id": "v_nomu", "form": "polite_mashita" },
+            {
+              "id": "v_nomu",
+              "form": "polite_mashita"
+            },
             "v_resutoran",
             "p_wa",
-            { "id": "v_ookii", "form": "polite_adj" },
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            },
             "p_ne"
           ]
         },
@@ -507,7 +664,10 @@
             "p_ne",
             "v_raishuu",
             "p_mo",
-            { "id": "v_kuru", "form": "polite_masu" },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         }
@@ -521,13 +681,17 @@
           "jp": "やまかわと りきぞは 今日 レストランで 食べました。",
           "en": "Yamakawa and Rikizo ate at the restaurant today.",
           "terms": [
+            "char_yamakawa",
             "p_to",
             "char_rikizo",
             "p_wa",
             "v_kyou",
             "v_resutoran",
             "p_de",
-            { "id": "v_taberu", "form": "polite_mashita" }
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -538,34 +702,48 @@
             "p_wa",
             "v_karee",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_mashita" }
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "jp": "やまかわは カレーと パンを 食べました。",
           "en": "Yamakawa ate curry and bread.",
           "terms": [
+            "char_yamakawa",
             "p_wa",
             "v_karee",
             "p_to",
             "v_pan",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_mashita" }
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "jp": "りきぞは コーヒーを 飲みました。やまかわは ジュースを 飲みました。",
           "en": "Rikizo drank coffee. Yamakawa drank juice.",
           "terms": [
+            "char_yamakawa",
             "char_rikizo",
             "p_wa",
             "v_koohii",
             "p_wo",
-            { "id": "v_nomu", "form": "polite_mashita" },
+            {
+              "id": "v_nomu",
+              "form": "polite_mashita"
+            },
             "p_wa",
             "v_juusu",
             "p_wo",
-            { "id": "v_nomu", "form": "polite_mashita" }
+            {
+              "id": "v_nomu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -574,7 +752,10 @@
           "terms": [
             "v_karee",
             "p_wa",
-            { "id": "v_ookii", "form": "polite_adj" }
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -583,7 +764,10 @@
           "terms": [
             "v_resutoran",
             "p_mo",
-            { "id": "v_ookii", "form": "polite_adj" }
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            }
           ]
         }
       ],
@@ -595,7 +779,10 @@
             "p_wa",
             "v_nani",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_mashita" },
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "v_karee"
           ]
@@ -607,7 +794,10 @@
             "p_wa",
             "v_nani",
             "p_wo",
-            { "id": "v_nomu", "form": "polite_mashita" },
+            {
+              "id": "v_nomu",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "v_juusu"
           ]
@@ -621,7 +811,10 @@
             "v_dou",
             "g_desu",
             "p_ka",
-            { "id": "v_ookii", "form": "polite_adj" }
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -630,7 +823,10 @@
           "terms": [
             "v_doko",
             "p_de",
-            { "id": "v_taberu", "form": "polite_mashita" },
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "v_resutoran"
           ]
@@ -650,7 +846,10 @@
             "v_kyou",
             "v_resutoran",
             "p_de",
-            { "id": "v_taberu", "form": "polite_mashita" }
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -661,7 +860,10 @@
             "p_to",
             "v_pan",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_mashita" }
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -670,10 +872,16 @@
           "terms": [
             "v_pan",
             "p_wo",
-            { "id": "v_taberu", "form": "te_form" },
+            {
+              "id": "v_taberu",
+              "form": "te_form"
+            },
             "v_koohii",
             "p_wo",
-            { "id": "v_nomu", "form": "polite_mashita" }
+            {
+              "id": "v_nomu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -682,10 +890,16 @@
           "terms": [
             "v_sarada",
             "p_wa",
-            { "id": "v_chiisai", "form": "polite_adj" },
+            {
+              "id": "v_chiisai",
+              "form": "polite_adj"
+            },
             "v_pan",
             "p_wa",
-            { "id": "v_ookii", "form": "polite_adj" }
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -694,7 +908,10 @@
           "terms": [
             "v_resutoran",
             "p_wa",
-            { "id": "v_ii", "form": "polite_adj" }
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -707,7 +924,10 @@
             "p_mo",
             "v_resutoran",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -720,7 +940,10 @@
             "p_wa",
             "v_nani",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_mashita" },
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "v_sarada",
             "p_to",
@@ -733,7 +956,10 @@
           "terms": [
             "v_nani",
             "p_wo",
-            { "id": "v_nomu", "form": "polite_mashita" },
+            {
+              "id": "v_nomu",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "v_koohii"
           ]
@@ -747,7 +973,10 @@
             "v_dou",
             "g_desu",
             "p_ka",
-            { "id": "v_chiisai", "form": "polite_adj" }
+            {
+              "id": "v_chiisai",
+              "form": "polite_adj"
+            }
           ]
         }
       ]
@@ -760,31 +989,56 @@
         {
           "kind": "mcq",
           "q": "[大] の よみかたは？",
-          "choices": ["おお", "しょう", "た", "いん"],
+          "choices": [
+            "おお",
+            "しょう",
+            "た",
+            "いん"
+          ],
           "answer": "おお"
         },
         {
           "kind": "mcq",
           "q": "[小] の よみかたは？",
-          "choices": ["ちい", "だい", "の", "おお"],
+          "choices": [
+            "ちい",
+            "だい",
+            "の",
+            "おお"
+          ],
           "answer": "ちい"
         },
         {
           "kind": "mcq",
           "q": "[食] の よみかたは？",
-          "choices": ["た", "の", "おお", "ちい"],
+          "choices": [
+            "た",
+            "の",
+            "おお",
+            "ちい"
+          ],
           "answer": "た"
         },
         {
           "kind": "mcq",
           "q": "[飲] の よみかたは？",
-          "choices": ["の", "た", "しょく", "おお"],
+          "choices": [
+            "の",
+            "た",
+            "しょく",
+            "おお"
+          ],
           "answer": "の"
         },
         {
           "kind": "mcq",
           "q": "[食べる] の よみかたは？",
-          "choices": ["たべる", "のむ", "おおきい", "ちいさい"],
+          "choices": [
+            "たべる",
+            "のむ",
+            "おおきい",
+            "ちいさい"
+          ],
           "answer": "たべる"
         }
       ]
@@ -797,95 +1051,162 @@
         {
           "kind": "mcq",
           "q": "カレー _______ 食べますか。",
-          "choices": ["を", "は", "に", "で"],
+          "choices": [
+            "を",
+            "は",
+            "に",
+            "で"
+          ],
           "answer": "を",
           "terms": [
             "v_karee",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_masu" },
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
         {
           "kind": "mcq",
           "q": "コーヒーを _______。",
-          "choices": ["飲みます", "食べます", "行きます", "来ます"],
+          "choices": [
+            "飲みます",
+            "食べます",
+            "行きます",
+            "来ます"
+          ],
           "answer": "飲みます",
           "terms": [
             "v_koohii",
             "p_wo",
-            { "id": "v_nomu", "form": "polite_masu" }
+            {
+              "id": "v_nomu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "レストラン _______ 食べます。",
-          "choices": ["で", "へ", "に", "は"],
+          "choices": [
+            "で",
+            "へ",
+            "に",
+            "は"
+          ],
           "answer": "で",
           "terms": [
             "v_resutoran",
             "p_de",
-            { "id": "v_taberu", "form": "polite_masu" }
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "カレーは _______。",
-          "choices": ["大きいです", "飲みます", "行きます", "来ます"],
+          "choices": [
+            "大きいです",
+            "飲みます",
+            "行きます",
+            "来ます"
+          ],
           "answer": "大きいです",
           "terms": [
             "v_karee",
             "p_wa",
-            { "id": "v_ookii", "form": "polite_adj" }
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "先週 コーヒーを _______。",
-          "choices": ["飲みました", "飲みます", "食べました", "行きました"],
+          "choices": [
+            "飲みました",
+            "飲みます",
+            "食べました",
+            "行きました"
+          ],
           "answer": "飲みました",
           "terms": [
             "v_senshuu",
             "v_koohii",
             "p_wo",
-            { "id": "v_nomu", "form": "polite_mashita" }
+            {
+              "id": "v_nomu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "サラダは _______ です。",
-          "choices": ["小さい", "大きい", "いい", "飲みます"],
+          "choices": [
+            "小さい",
+            "大きい",
+            "いい",
+            "飲みます"
+          ],
           "answer": "小さい",
           "terms": [
             "v_sarada",
             "p_wa",
-            { "id": "v_chiisai", "form": "polite_adj" }
+            {
+              "id": "v_chiisai",
+              "form": "polite_adj"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "今日 レストランへ _______。",
-          "choices": ["行きました", "食べました", "飲みました", "来ませんでした"],
+          "choices": [
+            "行きました",
+            "食べました",
+            "飲みました",
+            "来ませんでした"
+          ],
           "answer": "行きました",
           "terms": [
             "v_kyou",
             "v_resutoran",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "パンは 大きいです。ジュースは _______。",
-          "choices": ["小さいです", "大きいです", "飲みます", "来ます"],
+          "choices": [
+            "小さいです",
+            "大きいです",
+            "飲みます",
+            "来ます"
+          ],
           "answer": "小さいです",
           "terms": [
             "v_pan",
             "p_wa",
-            { "id": "v_ookii", "form": "polite_adj" },
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            },
             "v_juusu",
             "p_wa",
-            { "id": "v_chiisai", "form": "polite_adj" }
+            {
+              "id": "v_chiisai",
+              "form": "polite_adj"
+            }
           ]
         }
       ]
@@ -898,103 +1219,173 @@
         {
           "kind": "mcq",
           "q": "カレー _______ 食べました。",
-          "choices": ["を", "は", "が", "に"],
+          "choices": [
+            "を",
+            "は",
+            "が",
+            "に"
+          ],
           "answer": "を",
           "terms": [
             "v_karee",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_mashita" }
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "レストラン _______ 大きいです。",
-          "choices": ["は", "を", "で", "が"],
+          "choices": [
+            "は",
+            "を",
+            "で",
+            "が"
+          ],
           "answer": "は",
           "terms": [
             "v_resutoran",
             "p_wa",
-            { "id": "v_ookii", "form": "polite_adj" }
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "コーヒーは 飲みません。ジュース _______ 飲みます。",
-          "choices": ["を", "は", "に", "で"],
+          "choices": [
+            "を",
+            "は",
+            "に",
+            "で"
+          ],
           "answer": "を",
           "terms": [
             "v_koohii",
             "p_wa",
-            { "id": "v_nomu", "form": "polite_negative" },
+            {
+              "id": "v_nomu",
+              "form": "polite_negative"
+            },
             "v_juusu",
             "p_wo",
-            { "id": "v_nomu", "form": "polite_masu" }
+            {
+              "id": "v_nomu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "パン _______ サラダを 食べました。",
-          "choices": ["と", "は", "が", "で"],
+          "choices": [
+            "と",
+            "は",
+            "が",
+            "で"
+          ],
           "answer": "と",
           "terms": [
             "v_pan",
             "p_to",
             "v_sarada",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_mashita" }
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "先生は レストラン _______ 食べますか。",
-          "choices": ["で", "へ", "に", "から"],
+          "choices": [
+            "で",
+            "へ",
+            "に",
+            "から"
+          ],
           "answer": "で",
           "terms": [
             "v_sensei",
             "p_wa",
             "v_resutoran",
             "p_de",
-            { "id": "v_taberu", "form": "polite_masu" },
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
         {
           "kind": "mcq",
           "q": "今日 カレーを 食べ _______。",
-          "choices": ["ました", "ます", "ません", "ませんでした"],
+          "choices": [
+            "ました",
+            "ます",
+            "ません",
+            "ませんでした"
+          ],
           "answer": "ました",
           "terms": [
             "v_kyou",
             "v_karee",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_mashita" }
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "サラダは 小さいです。カレーは _______。",
-          "choices": ["大きいです", "小さいです", "飲みます", "行きます"],
+          "choices": [
+            "大きいです",
+            "小さいです",
+            "飲みます",
+            "行きます"
+          ],
           "answer": "大きいです",
           "terms": [
             "v_sarada",
             "p_wa",
-            { "id": "v_chiisai", "form": "polite_adj" },
+            {
+              "id": "v_chiisai",
+              "form": "polite_adj"
+            },
             "v_karee",
             "p_wa",
-            { "id": "v_ookii", "form": "polite_adj" }
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "友だち _______ レストランへ 行きます。",
-          "choices": ["と", "を", "に", "は"],
+          "choices": [
+            "と",
+            "を",
+            "に",
+            "は"
+          ],
           "answer": "と",
           "terms": [
             "v_tomodachi",
             "p_to",
             "v_resutoran",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         }
       ]

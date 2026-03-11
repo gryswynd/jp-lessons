@@ -203,6 +203,7 @@ CB CHECKLIST
 [ ] (Stories) g_desu (です) is tagged in terms.json when the story uses です
 [ ] (Stories) terms.json keys match exactly how each word appears in story.md (including kana-only spellings of words with untaught kanji)
 [ ] (Stories) No particle or copula occurrence is left untagged / unclickable
+[ ] (Grammar) Every grammar-specific section uses the correct field names — annotatedExample uses `examples[]` not `parts[]`; grammarComparison uses `items[]` not `itemA`/`itemB` — verified against the Grammar JSON schema in Content Types
 ```
 
 ---
@@ -430,18 +431,18 @@ For **every** draft — not just grammar lessons — Agent 4 must perform a **Gr
    | `polite_masu`, `polite_mashita`, `polite_negative`, `polite_past_negative` | N5.5 | N5.5+ |
    | `te_form`, `polite_negative_te` | N5.5 | N5.5+ |
    | `plain_past` | N5.5 | N5.5+ |
-   | `desire_tai`, `desire_tai_negative`, `polite_volitional_mashou` | N5.8 | N5.8+ |
+   | `desire_tai`, `desire_tai_negative`, `polite_desire_tai_negative`, `polite_volitional_mashou` | N5.8 | N5.8+ |
    | `plain_volitional` | G9 | N5.10+ |
    | `plain_negative`, `plain_past_negative` | N5.9 | N5.9+ |
-   | `polite_past_adj`, `adverbial` | N5.10 | N5.10+ |
-   | `plain_past_adj`, `plain_desire_tai`, `plain_appearance_sou` | G9 | N5.10+ |
+   | `polite_past_adj`, `adverbial`, `desire_tai_past` | N5.10 | N5.10+ |
+   | `plain_past_adj`, `plain_desire_tai`, `plain_appearance_sou`, `plain_desire_tai_past` | G9 | N5.10+ |
    | `appearance_sou` | N5.11 | N5.11+ |
-   | `potential`, `potential_negative` | N4.3 | N4.3+ |
+   | `potential`, `polite_potential`, `potential_negative`, `plain_potential_negative`, `polite_potential_past`, `plain_potential_past` | N4.3 | N4.3+ |
    | `tari_form`, `nagara_form` | N4.10 | N4.10+ |
-   | `sugiru_form` | G15 | N4.5+ |
+   | `sugiru_form`, `polite_sugiru_form`, `sugiru_past`, `polite_sugiru_past` | G14 | N4.5+ |
    | `conditional_ba` | G20 | N4.25+ |
    | `conditional_tara` | N4.25 | N4.25+ |
-   | `passive`, `causative` | N4.31 | N4.31+ |
+   | `passive`, `polite_passive`, `polite_passive_past`, `plain_passive_past`, `causative`, `polite_causative`, `polite_causative_past`, `plain_causative_past`, `causative_passive`, `polite_causative_passive` | N4.31 | N4.31+ |
 
 2. **Structural grammar pattern scan.** Beyond tagged conjugation forms, scan the `jp` surface text for structural grammar patterns that imply knowledge of specific forms even when the individual verb tags might look in-scope. Common patterns to flag:
 
@@ -453,7 +454,7 @@ For **every** draft — not just grammar lessons — Agent 4 must perform a **Gr
    | ～ながら | `nagara_form` (N4.10+) | Using ～ながら in N4.5 content |
    | ～たら | `conditional_tara` (N4.25+) | Using ～たら in N4.20 content |
    | ～ば / ～ければ | `conditional_ba` (G20 / N4.25+) | Using ～ば in N4.20 content |
-   | ～すぎる | `sugiru_form` (G15 / N4.5+) | Using ～すぎます in N4.3 content |
+   | ～すぎる | `sugiru_form` (G14 / N4.5+) | Using ～すぎます in N4.3 content |
    | ～られる (passive) | `passive` (N4.31+) | Using ～られます in N4.25 content |
    | ～させる (causative) | `causative` (N4.31+) | Using ～させます in N4.25 content |
    | ～たいです | `desire_tai` (N5.8+) | Using ～たいです in N5.6 content |
@@ -528,7 +529,7 @@ Grammar reinforcement | Verb form distribution: 89% ます/ました, only 11% o
 Grammar reinforcement | Sustained use: no polite_negative (ません) instance in entire lesson — add 1 natural negative context
 Grammar reinforcement | Warmup uses only noun-です patterns; should exercise te-form with prior vocab
 Grammar reinforcement | No ましょう in 3 consecutive lessons (N5.10-N5.12) despite availability since N5.8
-Grammar reinforcement | No より/comparison in N4.7-N4.9 despite G15 teaching comparison at N4.5 — themes support preferences
+Grammar reinforcement | No より/comparison in N4.7-N4.9 despite G14 teaching comparison at N4.5 — themes support preferences
 Rewrite directive     | Add a てください request in conv 2 or 3; replace 1 ます sentence in reading with ています progressive
 ```
 
@@ -599,6 +600,107 @@ Never silently forward content without the accompanying documents. If an agent d
 **VocabList completeness.** The vocabList must cover **every** glossary entry (across `glossary.N5.json`, `glossary.N4.json`, and `shared/particles.json`) whose `lesson_ids` equals the current lesson. This includes nouns, verbs, adjectives, adverbs, pronouns, particles, set phrases, and grammar items — not just the main content words. Agent 1 must enumerate the full target ID list from the glossary files as part of the Content Brief so Agent 2 can verify completeness in the CB Checklist. Agent 3 must confirm every such entry is present in a vocabList group.
 
 **Drill types:** `mcq` and `scramble`. For MCQ: choices array must have exactly 4 options; the `answer` string must exactly match one of the `choices` strings. For scramble: see [Scramble Drill Items](#scramble-drill-items) in the Review section — scramble drills appear in reviews only, not in lessons.
+
+---
+
+### Grammar JSON (`data/N5/grammar/G1.json` … `data/N4/grammar/G23.json`)
+
+Grammar lesson files use `"type": "grammar"` at the top level and are rendered by `Grammar.js`. Each section type has a specific field schema — **using the wrong field names causes the section to render empty without throwing an error.** Agent 2 must use the exact field names below.
+
+**Top-level required fields:**
+
+```json
+{
+  "contentVersion": "1.0.0",
+  "id": "G1",
+  "type": "grammar",
+  "title": "...",
+  "meta": {
+    "level": "N5",
+    "unlocksAfter": "N5.X",
+    "focus": "...",
+    "estimatedMinutes": N,
+    "particles": ["p_foo"],
+    "grammarForms": ["te_form"],
+    "icon": "🔤"
+  },
+  "sections": [...]
+}
+```
+
+**Grammar section types and their required fields:**
+
+| Section type | Required fields | Notes |
+|---|---|---|
+| `grammarIntro` | `type`, `title`, `icon`, `summary`, `whyItMatters`, `youWillLearn[]` | Always the first section. |
+| `grammarRule` | `type`, `id`, `pattern[]`, `meaning`, `explanation`, `notes[]`, `examples[]` | Core teaching unit. Each `example` has `parts[]`, `en`, `breakdown`. Each `part` has `text`, `role`, `gloss`. |
+| `grammarTable` | `type`, `title`, `description`, `tableType`, `headers[]`, `rows[]` | Each row has `label`, `cells[]`, `meaning`. Optional `notes[]`. |
+| `grammarComparison` | `type`, `title`, `items[]`, optional `tip` | **`items[]` — NOT `itemA`/`itemB`.** Each item: `label`, `color`, `points[]`, optional `example`. |
+| `annotatedExample` | `type`, `title`, `examples[]` | **`examples[]` — NOT `sentence`/`parts[]`.** Each example: `parts[]`, `en`, optional `context`, optional `note`. Each `part`: `text`, `role`, `gloss`. |
+| `conjugationDrill` | `type`, `title`, `instructions`, `items[]` | Each item: `verb`, `type`, `reading`, `targetForm`, `answer`, `answerReading`, `hint`, `choices[]`. |
+| `patternMatch` | `type`, `title`, `instructions`, `items[]` | Each item: `sentence`, `answer` (bool), `explanation`. |
+| `sentenceTransform` | `type`, `title`, `instructions`, `items[]` | Each item: `given`, `givenReading`, `targetLabel`, `answer`, `answerReading`, `hint`. |
+| `fillSlot` | `type`, `title`, `instructions`, `items[]` | Each item: `before`, `after`, `translation`, `choices[]`, `answer`, `explanation`. **Never use `sentence` with a `___` placeholder** — the renderer requires pre-split `before`/`after` strings. |
+| `conversation` | `type`, `title`, `context`, `lines[]` | Same as lesson conversations. Each line: `spk`, `jp`, `en`, `terms[]`. |
+| `drills` | `type`, `title`, `instructions`, `items[]` | Same as lesson drills. Every item **must** have `explanation`. |
+
+**Critical schema rules — the two most common silent-failure mistakes:**
+
+**`annotatedExample` — must use `examples[]`:**
+```json
+{
+  "type": "annotatedExample",
+  "title": "...",
+  "examples": [
+    {
+      "context": "Optional label shown above the sentence card",
+      "parts": [
+        { "text": "電車は", "role": "topic", "gloss": "train (topic: は)" },
+        { "text": "長かったです。", "role": "predicate", "gloss": "was long (長い → 長かったです)" }
+      ],
+      "en": "The train was long.",
+      "note": "Optional explanation shown below the card."
+    }
+  ]
+}
+```
+
+**Never use** `"sentence"`, `"translation"`, or a top-level `"parts"` array — those fields are ignored by the renderer and the section will appear empty.
+
+**`grammarComparison` — must use `items[]`:**
+```json
+{
+  "type": "grammarComparison",
+  "title": "...",
+  "items": [
+    {
+      "label": "あげる",
+      "color": "verb",
+      "points": ["The speaker is the GIVER", "Direction: outward"],
+      "example": {
+        "parts": [
+          { "text": "わたしは", "role": "topic", "gloss": "I (topic: は)" },
+          { "text": "あげた。", "role": "predicate", "gloss": "gave (plain past)" }
+        ],
+        "en": "I gave it."
+      }
+    },
+    {
+      "label": "くれる",
+      "color": "modifier",
+      "points": ["The speaker is the RECEIVER", "Direction: inward"],
+      "example": { "parts": [...], "en": "..." }
+    }
+  ],
+  "tip": "Optional tip shown at the bottom of the comparison card."
+}
+```
+
+**Never use** `"itemA"` / `"itemB"` — those fields are ignored and the section will appear empty.
+
+**Valid `color` values for `grammarComparison` items and `grammarRule` pattern chips:** `"topic"`, `"subject"`, `"object"`, `"predicate"`, `"connector"`, `"modifier"`, `"verb"`, `"adverb"`.
+
+**Valid `role` values for `parts` in annotated examples and comparisons:** `"topic"`, `"subject"`, `"object"`, `"predicate"`, `"connector"`, `"modifier"`, `"adverb"`, `"time"`.
 
 ---
 
@@ -1025,11 +1127,19 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 | `plain_negative` | ～ない |
 | `plain_past_negative` | ～なかった |
 | `te_form` | ～て / ～で |
-| `potential` | ～られる / ～える |
-| `potential_negative` | ～られません |
+| `potential` | ～られる / ～える (plain potential — can do) |
+| `polite_potential` | ～られます / ～えます (polite potential — can do) |
+| `potential_negative` | ～られません / ～えません (polite potential negative — cannot do) |
+| `plain_potential_negative` | ～られない / ～えない (plain potential negative — casual "can't do") |
+| `polite_potential_past` | ～られました / ～えました (polite past potential — was able to do) |
+| `plain_potential_past` | ～られた / ～えた (plain past potential — casual "could do") |
 | `adverbial` | ～く / ～に |
 | `desire_tai` | ～たいです (polite desire) |
 | `plain_desire_tai` | ～たい (plain desire — casual speech and subordinate clauses) |
+| `desire_tai_negative` | ～たくない (plain negative desire — I don't want to) |
+| `polite_desire_tai_negative` | ～たくないです (polite negative desire — I don't want to) |
+| `desire_tai_past` | ～たかったです (polite past desire — I wanted to) |
+| `plain_desire_tai_past` | ～たかった (plain past desire — casual "I wanted to") |
 | `appearance_sou` | ～そうです (polite appearance) |
 | `plain_appearance_sou` | ～そうだ (plain appearance — casual speech) |
 | `polite_volitional_mashou` | ～ましょう |
@@ -1037,14 +1147,27 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 | `conditional_ba` | ～ば / ～ければ |
 | `tari_form` | ～たり (listing representative actions: ～たり～たりする) |
 | `polite_negative_te` | ～ないで (negative te-form: "without doing"; ないでください = "please don't") |
-| `desire_tai_negative` | ～たくない / ～たくないです (don't want to) |
-| `sugiru_form` | ～すぎる (too much / excessively — verbs and adjectives) |
+| `sugiru_form` | ～すぎる (plain excessive degree — too much / excessively) |
+| `polite_sugiru_form` | ～すぎます (polite excessive degree — too much / excessively) |
 | `nagara_form` | ～ながら (while doing — simultaneous actions) |
 | `conditional_tara` | ～たら / ～だったら (if / when — completed-action conditional) |
-| `passive` | ～られる / ～れる (passive — being acted upon) |
-| `causative` | ～させる / ～せる (causative — making/letting someone do) |
+| `passive` | ～られる / ～れる (plain passive — being acted upon) |
+| `polite_passive` | ～られます / ～れます (polite passive) |
+| `polite_passive_past` | ～られました / ～れました (polite past passive) |
+| `plain_passive_past` | ～られた / ～れた (plain past passive — for stories/casual) |
+| `causative` | ～させる / ～せる (plain causative — making/letting someone do) |
+| `polite_causative` | ～させます / ～せます (polite causative) |
+| `polite_causative_past` | ～させました / ～せました (polite past causative) |
+| `plain_causative_past` | ～させた / ～せた (plain past causative — for stories/casual) |
+| `causative_passive` | ～させられる / ～せられる (plain causative-passive — "being made to do") |
+| `polite_causative_passive` | ～させられます / ～せられます (polite causative-passive — "being made to do") |
+| `polite_potential_negative` | ～られません / ～えません (polite potential negative — properly-named alias for `potential_negative`) |
+| `sugiru_past` | ～すぎた (plain past excessive — "was too much") |
+| `polite_sugiru_past` | ～すぎました (polite past excessive — "was too much") |
 
-**Unlock schedule.** Each form is available from the grammar lesson that formally teaches it. The `introducedIn` field in `conjugation_rules.json` records this, using grammar lesson IDs (e.g. `"G6"`) or content lesson IDs (e.g. `"N5.1"`). All 25 forms have this field. Similarly, particles in `shared/particles.json` carry an `introducedIn` field using lesson or grammar IDs.
+**Unlock schedule.** Each form is available from the grammar lesson that formally teaches it. The `introducedIn` field in `conjugation_rules.json` records this, using grammar lesson IDs (e.g. `"G6"`) or content lesson IDs (e.g. `"N5.1"`). All forms have this field. Similarly, particles in `shared/particles.json` carry an `introducedIn` field using lesson or grammar IDs.
+
+**Note on `potential_negative` naming.** Despite the name, `potential_negative` produces the **polite** negative potential form (～られません / ～えません). Use `plain_potential_negative` for the plain/casual form (～られない / ～えない). This asymmetry is a legacy naming issue — do not rename to avoid breaking existing content.
 
 **Godan euphonic note.** `tari_form` and `conditional_tara` use `godan_euphonic` map types (`"map": "tari_form"` and `"map": "tara_form"`) that parallel `ta_form` but produce たり/だり and たら/だら endings respectively. The rendering engine will need these map types added alongside any future grammar module build. All ichidan, irregular, and adjective rules are fully defined in data and require no code changes.
 
@@ -1534,17 +1657,17 @@ Each conjugation form in `conjugation_rules.json` has an `introducedIn` field sp
 |---|---|
 | N5.1 | `polite_adj` |
 | N5.5 | `polite_masu`, `polite_mashita`, `polite_negative`, `polite_past_negative`, `te_form`, `polite_negative_te`, `plain_past` |
-| N5.8 | `desire_tai`, `desire_tai_negative`, `polite_volitional_mashou` |
+| N5.8 | `desire_tai`, `desire_tai_negative`, `polite_desire_tai_negative`, `polite_volitional_mashou` |
 | N5.9 | `plain_negative`, `plain_past_negative` |
-| G9 (N5.10+) | `plain_volitional`, `plain_desire_tai`, `plain_past_adj`, `plain_appearance_sou` |
-| N5.10 | `polite_past_adj`, `adverbial` |
+| G9 (N5.10+) | `plain_volitional`, `plain_desire_tai`, `plain_past_adj`, `plain_appearance_sou`, `plain_desire_tai_past` |
+| N5.10 | `polite_past_adj`, `adverbial`, `desire_tai_past` |
 | N5.11 | `appearance_sou` |
-| N4.3 | `potential`, `potential_negative` |
+| N4.3 | `potential`, `polite_potential`, `potential_negative`, `plain_potential_negative`, `polite_potential_past`, `plain_potential_past` |
 | N4.10 | `tari_form`, `nagara_form` |
-| G15 (~N4.5) | `sugiru_form` |
+| G14 (~N4.5) | `sugiru_form`, `polite_sugiru_form`, `sugiru_past`, `polite_sugiru_past` |
 | G20 (~N4.25) | `conditional_ba` |
 | N4.25 | `conditional_tara` |
-| N4.31 | `passive`, `causative` |
+| N4.31 | `passive`, `polite_passive`, `polite_passive_past`, `plain_passive_past`, `causative`, `polite_causative`, `polite_causative_past`, `plain_causative_past`, `causative_passive`, `polite_causative_passive` |
 
 Before N5.5, only `polite_adj` and dictionary forms are available. This means N5.1–N5.4 content is limited to noun-です sentences, い-adjective+です sentences, and verbs in dictionary form. Plan sentences accordingly.
 
@@ -1573,10 +1696,10 @@ Each milestone groups forms that unlock together. The **active reinforcement win
 | **Adj past + adverbial** (G10) | N5.10 | N5.11–N5.12 | ≥1 past-tense adjective (`polite_past_adj`), ≥1 adverbial form (`adverbial`) | Both used naturally in descriptions and narratives |
 | **Appearance** (G11) | N5.11 | N5.12–N5.13 | ≥1 `～そうです` appearance pattern | Appears where observations or impressions are natural |
 | **Potential** (G12) | N4.3 | N4.4–N4.6 | ≥1 potential form (affirmative or negative) | Ability/possibility expressions used where natural |
-| **Comparison + degree** (G15) | N4.5 | N4.6–N4.8 | ≥1 `より` comparison, ≥1 `いちばん` superlative or `ほど` degree pattern | Comparison/degree expressions appear where natural (describing preferences, rankings, qualities) |
+| **Comparison + degree** (G14) | N4.5 | N4.6–N4.8 | ≥1 `より` comparison, ≥1 `いちばん` superlative or `ほど` degree pattern | Comparison/degree expressions appear where natural (describing preferences, rankings, qualities) |
 | **Tari + nagara** (G17) | N4.10 | N4.11–N4.13 | ≥1 `～たり～たりする` listing, ≥1 `～ながら` simultaneous action | Both patterns appear where natural |
-| **Excessive degree + noun form** (G15) | N4.5 | N4.6–N4.8 | ≥1 `～すぎる` excessive expression | ～すぎる appears where overabundance or excess is natural (eating too much, too expensive, too noisy) |
-| **Limiting particles** (G16) | N4.14 | N4.15–N4.17 | ≥1 `だけ` or `しか～ない` limiting expression | Limiting particles appear where context calls for restriction or exclusion |
+| **Excessive degree + noun form** (G14) | N4.5 | N4.6–N4.8 | ≥1 `～すぎる` excessive expression | ～すぎる appears where overabundance or excess is natural (eating too much, too expensive, too noisy) |
+| **Limiting particles** (G15) | N4.14 | N4.15–N4.17 | ≥1 `だけ` or `しか～ない` limiting expression | Limiting particles appear where context calls for restriction or exclusion |
 | **Permission + prohibition** (G19) | N4.20 | N4.21–N4.23 | ≥1 `てもいい` permission or ≥1 `てはいけない` prohibition | Both patterns appear where rules, permissions, or social norms are discussed |
 | **Conditionals** (G20) | N4.25 | N4.26–N4.28 | ≥1 `～たら` or `～ば` conditional in conversation or reading | At least one conditional form (たら or ば) appears where natural |
 | **Passive + causative** (G21/G22) | N4.31 | N4.32–N4.34 | ≥1 passive, ≥1 causative across the lesson | Both voice patterns appear where natural |
@@ -1607,7 +1730,7 @@ Beyond individual conjugation forms, these **structural patterns** combine forms
 | `Verb-ましょう` (let's/shall we) | G8 | N5.9+ | Use in at least 1 conversation per lesson. Natural contexts: making plans together, suggestions, invitations. |
 | `Verb-たり Verb-たりする` (listing actions) | G17 | N4.11+ | Use in at least 1 conversation or reading per lesson. Natural contexts: describing weekends, hobbies, routines. |
 | `Verb-ながら` (while doing) | G17 | N4.11+ | Use occasionally. Natural contexts: multitasking descriptions, daily routines. |
-| `～すぎる` (excessive degree) | G15 | N4.6+ | Use occasionally. Natural contexts: eating too much, too expensive, too loud, overwork. |
+| `～すぎる` (excessive degree) | G14 | N4.6+ | Use occasionally. Natural contexts: eating too much, too expensive, too loud, overwork. |
 | `～ば / ～ければ` (ba conditional) | G20 | N4.26+ | Use occasionally. Natural contexts: general conditions, advice, logical consequences. |
 | `～たら` (if/when conditional) | G20 | N4.26+ | Use in at least 1 context per lesson. Natural contexts: plans, hypotheticals, advice. |
 | `Verb-てもいい` (permission) | G19 | N4.21+ | Use occasionally. Natural contexts: asking permission, stating what's allowed. |
@@ -1620,11 +1743,11 @@ Beyond individual conjugation forms, these **structural patterns** combine forms
 
 | Pattern | Taught in | Particles/tracking | Reinforce from | How to reinforce |
 |---|---|---|---|---|
-| `X の方が Y より ～` (comparison) | G15 | `p_yori` | N4.6+ | Use in at least 1 context per lesson. Natural contexts: comparing food, places, seasons, preferences. |
-| `X で いちばん ～` (superlative) | G15 | `v_ichiban` (vocab) | N4.6+ | Use occasionally alongside comparison. Natural contexts: "the most ～ in ～". |
-| `X は Y ほど ～ない` (negative degree) | G15 | `p_hodo` | N4.6+ | Use occasionally. Natural contexts: "X is not as ～ as Y". |
-| `～だけ` (only/just) | G16 | `p_dake` | N4.15+ | Use occasionally. Natural contexts: limitations, quantities. |
-| `～しか～ない` (nothing but) | G16 | `p_shika` | N4.15+ | Use occasionally. Natural contexts: scarcity, emphasis on limits. |
+| `X の方が Y より ～` (comparison) | G14 | `p_yori` | N4.6+ | Use in at least 1 context per lesson. Natural contexts: comparing food, places, seasons, preferences. |
+| `X で いちばん ～` (superlative) | G14 | `v_ichiban` (vocab) | N4.6+ | Use occasionally alongside comparison. Natural contexts: "the most ～ in ～". |
+| `X は Y ほど ～ない` (negative degree) | G14 | `p_hodo` | N4.6+ | Use occasionally. Natural contexts: "X is not as ～ as Y". |
+| `～だけ` (only/just) | G15 | `p_dake` | N4.15+ | Use occasionally. Natural contexts: limitations, quantities. |
+| `～しか～ない` (nothing but) | G15 | `p_shika` | N4.15+ | Use occasionally. Natural contexts: scarcity, emphasis on limits. |
 | `～ので` (because — polite) | G17 | `p_node` | N4.11+ | Use occasionally as an alternative to から. Natural contexts: giving reasons in polite speech. |
 
 ### Reinforcement in warmups
@@ -1969,6 +2092,8 @@ These are the most frequent errors. All agents should be alert to them.
 48. **desire_tai / plain_desire_tai conflation** — using `desire_tai` (which represents `〜たいです`, polite) for a casual/plain sentence that ends `〜たい` without です. Example: a casual conversation line `友だちに 送りたいから` is plain desire — the form is `plain_desire_tai`, not `desire_tai`. The test is simple: does the sentence actually end with `です`? If not, the form must be `plain_desire_tai`. This error is almost always found in casual conversations where the agent reached for the more familiar form string without reading the sentence ending.
 49. **Purpose construction tagged as polite_masu** — the masu-stem + に construction (買いに, 食べに, 借りに) has no form string in `conjugation_rules.json`. It must be tagged `form: null`. Tagging it as `polite_masu` is wrong — that form string means the verb IS the sentence predicate in ます form (食べます), not a purpose-direction construction (食べに行く). Agent 3 must recognize masu-stem forms used with に as purpose markers and verify they are tagged `form: null`.
 50. **Vocabulary used before glossary entry exists** — Agent 2 writes sentences using words (e.g. シャツ, 帰り, 今) and tags them with IDs without first Grep-verifying those IDs exist in the glossary. The draft then passes Agent 2's self-check ("no invented IDs" was interpreted as "no obviously fake IDs") but Agent 3 finds the IDs are missing. The correct process is: identify every content word needed for the lesson, Grep-verify each ID exists, and add any missing entries to the glossary **before** writing content that uses them. If Agent 2 discovers a missing entry mid-draft, it must stop, flag the gap in the CB Checklist, and either add the entry or restructure the sentence — never proceed with an unverified ID.
+51. **(Grammar) Wrong field names on `annotatedExample` or `grammarComparison`** — these sections silently render empty when the wrong field names are used. There is no error message; the section simply shows nothing. The renderer ignores unrecognised fields. **`annotatedExample` must use `examples[]`** (array of `{context?, parts[], en, note?}` objects) — never `sentence`, `translation`, or a top-level `parts[]`. **`grammarComparison` must use `items[]`** (array of `{label, color, points[], example?}`) — never `itemA`/`itemB`. Agent 2 must verify these field names against the Grammar JSON schema in the Content Types section before submitting. Agent 3 must check that `annotatedExample` sections have an `examples` array (not a `parts` array) and that `grammarComparison` sections have an `items` array (not `itemA`/`itemB`). A section with the wrong schema is a **hard fail** equivalent to a missing required field.
+52. **(Grammar) `fillSlot` items using `sentence` instead of `before`/`after`** — the `fillSlot` renderer splits the sentence display using `item.before` and `item.after` strings. Using a `sentence` field with `___` as the blank placeholder is the wrong schema — the renderer will render `before` as undefined (empty) and ignore the rest. **Always pre-split each item into `before` (text before the blank) and `after` (text after the blank).** Example: `"sentence": "野菜___が好きです"` must become `"before": "野菜"` and `"after": "が好きです"`. This is the same class of silent-failure as wrong `annotatedExample` field names — no error, just empty/broken UI.
 
 ### Agent 3 failures (caught by Agent 4)
 

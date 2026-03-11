@@ -280,11 +280,11 @@
           "jp": "私の 家族は 毎週 洋食の 店へ 行きます。",
           "en": "My family goes to a Western food shop every week.",
           "terms": [
-            "k_watashi",
+            "v_watashi",
             "v_kazoku",
             "v_maishuu",
             "v_youshoku",
-            "k_mise",
+            "v_mise",
             {
               "id": "v_iku",
               "form": "polite_masu"
@@ -295,7 +295,7 @@
           "jp": "父は いつも お茶を 注文します。",
           "en": "Father always orders tea.",
           "terms": [
-            "k_chichi",
+            "v_chichi",
             "v_ocha",
             {
               "id": "v_chuumon",
@@ -307,7 +307,7 @@
           "jp": "私は 試食が 好きですから、新しい 料理を 食べます。",
           "en": "Because I like food sampling, I eat new cuisine.",
           "terms": [
-            "k_watashi",
+            "v_watashi",
             "v_shishoku",
             "v_suki",
             "v_atarashii",
@@ -322,10 +322,10 @@
           "jp": "この 店の 料理は 私の 口に 合います。",
           "en": "This shop's cuisine suits my taste.",
           "terms": [
-            "k_mise",
+            "v_mise",
             "v_ryouri",
-            "k_watashi",
-            "k_kuchi",
+            "v_watashi",
+            "v_kuchi",
             {
               "id": "v_au_2",
               "form": "polite_masu"
@@ -360,7 +360,7 @@
             "肉"
           ],
           "terms": [
-            "k_chichi",
+            "v_chichi",
             "v_chuumon",
             "v_ocha"
           ]
@@ -375,7 +375,7 @@
             "仕事"
           ],
           "terms": [
-            "k_watashi",
+            "v_watashi",
             "v_suki",
             "v_shishoku"
           ]
@@ -391,9 +391,9 @@
           ],
           "terms": [
             "v_ryouri",
-            "k_watashi",
+            "v_watashi",
             "v_dou",
-            "k_kuchi",
+            "v_kuchi",
             "v_au_2"
           ]
         }

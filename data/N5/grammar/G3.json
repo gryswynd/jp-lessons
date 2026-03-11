@@ -8,7 +8,14 @@
     "unlocksAfter": "N5.2",
     "focus": "Inclusion, listing, time ranges, and marking specific times with に",
     "estimatedMinutes": 30,
-    "particles": ["も", "と", "や", "から", "まで", "に"],
+    "particles": [
+      "も",
+      "と",
+      "や",
+      "から",
+      "まで",
+      "に"
+    ],
     "grammarForms": [],
     "icon": "📌"
   },
@@ -32,9 +39,21 @@
       "type": "grammarRule",
       "id": "rule_mo_also",
       "pattern": [
-        { "label": "NOUN", "color": "topic", "text": "X" },
-        { "label": "PARTICLE", "color": "particle", "text": "も" },
-        { "label": "PREDICATE", "color": "verb", "text": "..." }
+        {
+          "label": "NOUN",
+          "color": "topic",
+          "text": "X"
+        },
+        {
+          "label": "PARTICLE",
+          "color": "particle",
+          "text": "も"
+        },
+        {
+          "label": "PREDICATE",
+          "color": "verb",
+          "text": "..."
+        }
       ],
       "meaning": "'X also / X too / even X ...'",
       "explanation": "も replaces は, が, or を to add the meaning 'also' or 'too'. It cannot be stacked on top of those particles — it replaces them. When used with negatives, も means 'either' or 'not even'.",
@@ -46,29 +65,71 @@
       "examples": [
         {
           "parts": [
-            { "text": "わたし", "role": "topic", "gloss": "I" },
-            { "text": "も", "role": "particle" },
-            { "text": "がくせい", "role": "predicate", "gloss": "student" },
-            { "text": "です", "role": "verb" }
+            {
+              "text": "わたし",
+              "role": "topic",
+              "gloss": "I"
+            },
+            {
+              "text": "も",
+              "role": "particle"
+            },
+            {
+              "text": "がくせい",
+              "role": "predicate",
+              "gloss": "student"
+            },
+            {
+              "text": "です",
+              "role": "verb"
+            }
           ],
           "en": "I am also a student.",
           "breakdown": "も replaces は — 'I too, am a student'"
         },
         {
           "parts": [
-            { "text": "友だち", "role": "topic", "gloss": "friend" },
-            { "text": "も", "role": "particle" },
-            { "text": "やさしい", "role": "predicate", "gloss": "kind" },
-            { "text": "です", "role": "verb" }
+            {
+              "text": "友だち",
+              "role": "topic",
+              "gloss": "friend"
+            },
+            {
+              "text": "も",
+              "role": "particle"
+            },
+            {
+              "text": "やさしい",
+              "role": "predicate",
+              "gloss": "kind"
+            },
+            {
+              "text": "です",
+              "role": "verb"
+            }
           ],
           "en": "My friend is also kind."
         },
         {
           "parts": [
-            { "text": "土よう日", "role": "topic", "gloss": "Saturday" },
-            { "text": "も", "role": "particle" },
-            { "text": "いい", "role": "predicate", "gloss": "good" },
-            { "text": "です", "role": "verb" }
+            {
+              "text": "土よう日",
+              "role": "topic",
+              "gloss": "Saturday"
+            },
+            {
+              "text": "も",
+              "role": "particle"
+            },
+            {
+              "text": "いい",
+              "role": "predicate",
+              "gloss": "good"
+            },
+            {
+              "text": "です",
+              "role": "verb"
+            }
           ],
           "en": "Saturday is also fine.",
           "breakdown": "も replaces は — 'Saturday too, is fine'"
@@ -79,9 +140,21 @@
       "type": "grammarRule",
       "id": "rule_to_and_with",
       "pattern": [
-        { "label": "NOUN A", "color": "topic", "text": "A" },
-        { "label": "PARTICLE", "color": "connector", "text": "と" },
-        { "label": "NOUN B", "color": "topic", "text": "B" }
+        {
+          "label": "NOUN A",
+          "color": "topic",
+          "text": "A"
+        },
+        {
+          "label": "PARTICLE",
+          "color": "connector",
+          "text": "と"
+        },
+        {
+          "label": "NOUN B",
+          "color": "topic",
+          "text": "B"
+        }
       ],
       "meaning": "'A and B' (complete list) / 'together with'",
       "explanation": "と connects nouns to mean 'and'. Unlike English, と lists things completely — A と B means 'A and B, and nothing else.' と can also mean 'together with' a person.",
@@ -93,32 +166,82 @@
       "examples": [
         {
           "parts": [
-            { "text": "母", "role": "topic", "gloss": "mother" },
-            { "text": "と", "role": "connector" },
-            { "text": "父", "role": "topic", "gloss": "father" },
-            { "text": "は", "role": "particle" },
-            { "text": "先生", "role": "predicate", "gloss": "teacher" },
-            { "text": "です", "role": "verb" }
+            {
+              "text": "母",
+              "role": "topic",
+              "gloss": "mother"
+            },
+            {
+              "text": "と",
+              "role": "connector"
+            },
+            {
+              "text": "父",
+              "role": "topic",
+              "gloss": "father"
+            },
+            {
+              "text": "は",
+              "role": "particle"
+            },
+            {
+              "text": "先生",
+              "role": "predicate",
+              "gloss": "teacher"
+            },
+            {
+              "text": "です",
+              "role": "verb"
+            }
           ],
           "en": "My mother and father are teachers.",
           "breakdown": "と links two nouns completely: mother and father (just them)"
         },
         {
           "parts": [
-            { "text": "月よう日", "role": "topic", "gloss": "Monday" },
-            { "text": "と", "role": "connector" },
-            { "text": "水よう日", "role": "topic", "gloss": "Wednesday" },
-            { "text": "と", "role": "connector" },
-            { "text": "金よう日", "role": "topic", "gloss": "Friday" }
+            {
+              "text": "月よう日",
+              "role": "topic",
+              "gloss": "Monday"
+            },
+            {
+              "text": "と",
+              "role": "connector"
+            },
+            {
+              "text": "水よう日",
+              "role": "topic",
+              "gloss": "Wednesday"
+            },
+            {
+              "text": "と",
+              "role": "connector"
+            },
+            {
+              "text": "金よう日",
+              "role": "topic",
+              "gloss": "Friday"
+            }
           ],
           "en": "Monday, Wednesday, and Friday.",
           "breakdown": "と chains nouns in a complete list"
         },
         {
           "parts": [
-            { "text": "友だち", "role": "topic", "gloss": "friend" },
-            { "text": "と", "role": "connector" },
-            { "text": "いっしょに", "role": "modifier", "gloss": "together" }
+            {
+              "text": "友だち",
+              "role": "topic",
+              "gloss": "friend"
+            },
+            {
+              "text": "と",
+              "role": "connector"
+            },
+            {
+              "text": "いっしょに",
+              "role": "modifier",
+              "gloss": "together"
+            }
           ],
           "en": "Together with a friend.",
           "breakdown": "と + いっしょに = 'together with'"
@@ -129,9 +252,21 @@
       "type": "grammarRule",
       "id": "rule_ya_and_examples",
       "pattern": [
-        { "label": "NOUN A", "color": "topic", "text": "A" },
-        { "label": "PARTICLE", "color": "connector", "text": "や" },
-        { "label": "NOUN B", "color": "topic", "text": "B" }
+        {
+          "label": "NOUN A",
+          "color": "topic",
+          "text": "A"
+        },
+        {
+          "label": "PARTICLE",
+          "color": "connector",
+          "text": "や"
+        },
+        {
+          "label": "NOUN B",
+          "color": "topic",
+          "text": "B"
+        }
       ],
       "meaning": "'A, B, etc.' (incomplete list — and others)",
       "explanation": "や connects nouns like と, but implies there are more items not mentioned. A や B means 'things like A and B (and others).' It gives examples from a larger set.",
@@ -143,18 +278,40 @@
       "examples": [
         {
           "parts": [
-            { "text": "先生", "role": "topic", "gloss": "teacher" },
-            { "text": "や", "role": "connector" },
-            { "text": "友だち", "role": "topic", "gloss": "friend" }
+            {
+              "text": "先生",
+              "role": "topic",
+              "gloss": "teacher"
+            },
+            {
+              "text": "や",
+              "role": "connector"
+            },
+            {
+              "text": "友だち",
+              "role": "topic",
+              "gloss": "friend"
+            }
           ],
           "en": "Teachers, friends, (and others).",
           "breakdown": "や implies more people exist beyond those named"
         },
         {
           "parts": [
-            { "text": "月よう日", "role": "topic", "gloss": "Monday" },
-            { "text": "や", "role": "connector" },
-            { "text": "木よう日", "role": "topic", "gloss": "Thursday" }
+            {
+              "text": "月よう日",
+              "role": "topic",
+              "gloss": "Monday"
+            },
+            {
+              "text": "や",
+              "role": "connector"
+            },
+            {
+              "text": "木よう日",
+              "role": "topic",
+              "gloss": "Thursday"
+            }
           ],
           "en": "Days like Monday, Thursday, (and others).",
           "breakdown": "や gives examples — other days are implied"
@@ -175,9 +332,18 @@
           ],
           "example": {
             "parts": [
-              { "text": "母", "role": "topic" },
-              { "text": "と", "role": "connector" },
-              { "text": "父", "role": "topic" }
+              {
+                "text": "母",
+                "role": "topic"
+              },
+              {
+                "text": "と",
+                "role": "connector"
+              },
+              {
+                "text": "父",
+                "role": "topic"
+              }
             ],
             "en": "Mother and father. (just those two)"
           }
@@ -192,9 +358,18 @@
           ],
           "example": {
             "parts": [
-              { "text": "母", "role": "topic" },
-              { "text": "や", "role": "connector" },
-              { "text": "父", "role": "topic" }
+              {
+                "text": "母",
+                "role": "topic"
+              },
+              {
+                "text": "や",
+                "role": "connector"
+              },
+              {
+                "text": "父",
+                "role": "topic"
+              }
             ],
             "en": "People like my mother, father, (and others)."
           }
@@ -206,10 +381,26 @@
       "type": "grammarRule",
       "id": "rule_kara_made",
       "pattern": [
-        { "label": "START", "color": "time", "text": "A" },
-        { "label": "PARTICLE", "color": "particle", "text": "から" },
-        { "label": "END", "color": "time", "text": "B" },
-        { "label": "PARTICLE", "color": "particle", "text": "まで" }
+        {
+          "label": "START",
+          "color": "time",
+          "text": "A"
+        },
+        {
+          "label": "PARTICLE",
+          "color": "particle",
+          "text": "から"
+        },
+        {
+          "label": "END",
+          "color": "time",
+          "text": "B"
+        },
+        {
+          "label": "PARTICLE",
+          "color": "particle",
+          "text": "まで"
+        }
       ],
       "meaning": "'from A to/until B'",
       "explanation": "から marks a starting point ('from') and まで marks an ending point ('until' or 'as far as'). They are often used together to describe a range, especially for time. Each can also be used alone.",
@@ -222,27 +413,59 @@
       "examples": [
         {
           "parts": [
-            { "text": "月よう日", "role": "time", "gloss": "Monday" },
-            { "text": "から", "role": "particle" },
-            { "text": "金よう日", "role": "time", "gloss": "Friday" },
-            { "text": "まで", "role": "particle" }
+            {
+              "text": "月よう日",
+              "role": "time",
+              "gloss": "Monday"
+            },
+            {
+              "text": "から",
+              "role": "particle"
+            },
+            {
+              "text": "金よう日",
+              "role": "time",
+              "gloss": "Friday"
+            },
+            {
+              "text": "まで",
+              "role": "particle"
+            }
           ],
           "en": "From Monday to Friday.",
           "breakdown": "から = starting point, まで = ending point"
         },
         {
           "parts": [
-            { "text": "今日", "role": "time", "gloss": "today" },
-            { "text": "から", "role": "particle" },
-            { "text": "毎日", "role": "time", "gloss": "every day" }
+            {
+              "text": "今日",
+              "role": "time",
+              "gloss": "today"
+            },
+            {
+              "text": "から",
+              "role": "particle"
+            },
+            {
+              "text": "毎日",
+              "role": "time",
+              "gloss": "every day"
+            }
           ],
           "en": "From today, every day.",
           "breakdown": "から marks the starting point of a routine"
         },
         {
           "parts": [
-            { "text": "今月", "role": "time", "gloss": "this month" },
-            { "text": "まで", "role": "particle" }
+            {
+              "text": "今月",
+              "role": "time",
+              "gloss": "this month"
+            },
+            {
+              "text": "まで",
+              "role": "particle"
+            }
           ],
           "en": "Until this month.",
           "breakdown": "まで alone marks the end point"
@@ -253,9 +476,21 @@
       "type": "grammarRule",
       "id": "rule_ni_time",
       "pattern": [
-        { "label": "SPECIFIC TIME", "color": "time", "text": "月曜日" },
-        { "label": "PARTICLE", "color": "particle", "text": "に" },
-        { "label": "EVENT", "color": "verb", "text": "..." }
+        {
+          "label": "SPECIFIC TIME",
+          "color": "time",
+          "text": "月曜日"
+        },
+        {
+          "label": "PARTICLE",
+          "color": "particle",
+          "text": "に"
+        },
+        {
+          "label": "EVENT",
+          "color": "verb",
+          "text": "..."
+        }
       ],
       "meaning": "'on [day]' / 'on the [date]' — pinning an event to a fixed point in time",
       "explanation": "に marks a specific, fixed time — a particular day of the week, a specific date, or a set time. Think of it as a pin: it anchors what happens to an exact point on the calendar. Without に, the sentence just floats in time.",
@@ -268,28 +503,65 @@
       "examples": [
         {
           "parts": [
-            { "text": "月よう日", "role": "time", "gloss": "Monday" },
-            { "text": "に", "role": "particle" },
-            { "text": "います", "role": "verb", "gloss": "is here" }
+            {
+              "text": "月よう日",
+              "role": "time",
+              "gloss": "Monday"
+            },
+            {
+              "text": "に",
+              "role": "particle"
+            },
+            {
+              "text": "います",
+              "role": "verb",
+              "gloss": "is here"
+            }
           ],
           "en": "She is here on Monday.",
           "breakdown": "月よう日 = specific day → に ✓"
         },
         {
           "parts": [
-            { "text": "毎日", "role": "time", "gloss": "every day" },
-            { "text": "います", "role": "verb", "gloss": "is here" }
+            {
+              "text": "毎日",
+              "role": "time",
+              "gloss": "every day"
+            },
+            {
+              "text": "います",
+              "role": "verb",
+              "gloss": "is here"
+            }
           ],
           "en": "She is here every day. (no に)",
           "breakdown": "毎日 = relative/floating → no に ✗"
         },
         {
           "parts": [
-            { "text": "金よう日", "role": "time", "gloss": "Friday" },
-            { "text": "に", "role": "particle" },
-            { "text": "お金", "role": "subject", "gloss": "money" },
-            { "text": "が", "role": "particle" },
-            { "text": "あります", "role": "verb", "gloss": "there is" }
+            {
+              "text": "金よう日",
+              "role": "time",
+              "gloss": "Friday"
+            },
+            {
+              "text": "に",
+              "role": "particle"
+            },
+            {
+              "text": "お金",
+              "role": "subject",
+              "gloss": "money"
+            },
+            {
+              "text": "が",
+              "role": "particle"
+            },
+            {
+              "text": "あります",
+              "role": "verb",
+              "gloss": "there is"
+            }
           ],
           "en": "On Friday, there is money.",
           "breakdown": "金よう日 = specific day → に ✓"
@@ -303,10 +575,24 @@
         {
           "context": "も — Also (replacing は)",
           "parts": [
-            { "text": "父", "role": "topic", "gloss": "father" },
-            { "text": "も", "role": "particle" },
-            { "text": "先生", "role": "predicate", "gloss": "teacher" },
-            { "text": "です", "role": "verb" }
+            {
+              "text": "父",
+              "role": "topic",
+              "gloss": "father"
+            },
+            {
+              "text": "も",
+              "role": "particle"
+            },
+            {
+              "text": "先生",
+              "role": "predicate",
+              "gloss": "teacher"
+            },
+            {
+              "text": "です",
+              "role": "verb"
+            }
           ],
           "en": "My father is also a teacher.",
           "note": "も replaces は — 'father too is a teacher'."
@@ -314,12 +600,33 @@
         {
           "context": "と — Complete list",
           "parts": [
-            { "text": "月よう日", "role": "topic", "gloss": "Monday" },
-            { "text": "と", "role": "connector" },
-            { "text": "金よう日", "role": "topic", "gloss": "Friday" },
-            { "text": "は", "role": "particle" },
-            { "text": "いい", "role": "predicate", "gloss": "good" },
-            { "text": "です", "role": "verb" }
+            {
+              "text": "月よう日",
+              "role": "topic",
+              "gloss": "Monday"
+            },
+            {
+              "text": "と",
+              "role": "connector"
+            },
+            {
+              "text": "金よう日",
+              "role": "topic",
+              "gloss": "Friday"
+            },
+            {
+              "text": "は",
+              "role": "particle"
+            },
+            {
+              "text": "いい",
+              "role": "predicate",
+              "gloss": "good"
+            },
+            {
+              "text": "です",
+              "role": "verb"
+            }
           ],
           "en": "Monday and Friday are good.",
           "note": "と connects exactly two items — only those days."
@@ -327,11 +634,29 @@
         {
           "context": "や — Incomplete list",
           "parts": [
-            { "text": "先生", "role": "topic", "gloss": "teacher" },
-            { "text": "や", "role": "connector" },
-            { "text": "がくせい", "role": "topic", "gloss": "student" },
-            { "text": "が", "role": "particle" },
-            { "text": "います", "role": "verb", "gloss": "exist" }
+            {
+              "text": "先生",
+              "role": "topic",
+              "gloss": "teacher"
+            },
+            {
+              "text": "や",
+              "role": "connector"
+            },
+            {
+              "text": "がくせい",
+              "role": "topic",
+              "gloss": "student"
+            },
+            {
+              "text": "が",
+              "role": "particle"
+            },
+            {
+              "text": "います",
+              "role": "verb",
+              "gloss": "exist"
+            }
           ],
           "en": "There are teachers, students, (and others).",
           "note": "や gives a sample — more people are implied."
@@ -339,9 +664,19 @@
         {
           "context": "から — Starting point",
           "parts": [
-            { "text": "月よう日", "role": "time", "gloss": "Monday" },
-            { "text": "から", "role": "particle" },
-            { "text": "です", "role": "verb" }
+            {
+              "text": "月よう日",
+              "role": "time",
+              "gloss": "Monday"
+            },
+            {
+              "text": "から",
+              "role": "particle"
+            },
+            {
+              "text": "です",
+              "role": "verb"
+            }
           ],
           "en": "It's from Monday.",
           "note": "から marks where something begins."
@@ -349,9 +684,19 @@
         {
           "context": "まで — Ending point",
           "parts": [
-            { "text": "金よう日", "role": "time", "gloss": "Friday" },
-            { "text": "まで", "role": "particle" },
-            { "text": "です", "role": "verb" }
+            {
+              "text": "金よう日",
+              "role": "time",
+              "gloss": "Friday"
+            },
+            {
+              "text": "まで",
+              "role": "particle"
+            },
+            {
+              "text": "です",
+              "role": "verb"
+            }
           ],
           "en": "It's until Friday.",
           "note": "まで marks where something ends."
@@ -359,9 +704,20 @@
         {
           "context": "に — Specific time (pinpoint)",
           "parts": [
-            { "text": "土よう日", "role": "time", "gloss": "Saturday" },
-            { "text": "に", "role": "particle" },
-            { "text": "います", "role": "verb", "gloss": "is here" }
+            {
+              "text": "土よう日",
+              "role": "time",
+              "gloss": "Saturday"
+            },
+            {
+              "text": "に",
+              "role": "particle"
+            },
+            {
+              "text": "います",
+              "role": "verb",
+              "gloss": "is here"
+            }
           ],
           "en": "She is here on Saturday.",
           "note": "に pins an event to a specific day. 毎日 and 今日 would have no に."
@@ -377,37 +733,101 @@
           "spk": "A",
           "jp": "やまもと先生は 何よう日に いますか。",
           "en": "On which day is Yamamoto-sensei here?",
-          "terms": ["v_sensei", "p_wa", "v_nanyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
+          "terms": [
+            "char_yamamoto",
+            "v_sensei",
+            "p_wa",
+            "v_nanyoubi",
+            "p_ni",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
         },
         {
           "spk": "B",
           "jp": "月よう日と 水よう日と 金よう日に います。",
           "en": "She is here on Monday, Wednesday, and Friday.",
-          "terms": ["v_getsuyoubi", "p_to", "v_suiyoubi", "p_to", "v_kinyoubi", "p_ni", { "id": "v_iru", "form": "polite_masu" }]
+          "terms": [
+            "v_getsuyoubi",
+            "p_to",
+            "v_suiyoubi",
+            "p_to",
+            "v_kinyoubi",
+            "p_ni",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
         },
         {
           "spk": "A",
           "jp": "土よう日も いますか。",
           "en": "Is she also here on Saturday?",
-          "terms": ["v_doyoubi", "p_mo", { "id": "v_iru", "form": "polite_masu" }, "p_ka"]
+          "terms": [
+            "v_doyoubi",
+            "p_mo",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
         },
         {
           "spk": "B",
           "jp": "いいえ。月よう日から 金よう日まで です。毎日は いません。",
           "en": "No. It's from Monday to Friday. She's not here every day.",
-          "terms": ["v_getsuyoubi", "p_kara", "v_kinyoubi", "p_made", "g_desu", "v_mainichi", "p_wa", { "id": "v_iru", "form": "polite_negative" }]
+          "terms": [
+            "v_getsuyoubi",
+            "p_kara",
+            "v_kinyoubi",
+            "p_made",
+            "g_desu",
+            "v_mainichi",
+            "p_wa",
+            {
+              "id": "v_iru",
+              "form": "polite_negative"
+            }
+          ]
         },
         {
           "spk": "A",
           "jp": "そうですか。わたしの 母も 先生です。毎日 います。",
           "en": "I see. My mother is also a teacher. She is here every day.",
-          "terms": ["p_soudesuka", "v_watashi", "p_no", "v_haha", "p_mo", "v_sensei", "g_desu", "v_mainichi", { "id": "v_iru", "form": "polite_masu" }]
+          "terms": [
+            "p_soudesuka",
+            "v_watashi",
+            "p_no",
+            "v_haha",
+            "p_mo",
+            "v_sensei",
+            "g_desu",
+            "v_mainichi",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
         },
         {
           "spk": "B",
           "jp": "毎日ですか！先生や お母さんは たいへんですね。",
           "en": "Every day! Teachers, mothers, and the like sure have it tough.",
-          "terms": ["v_mainichi", "g_desu", "p_ka", "v_sensei", "p_ya", "v_okaasan", "p_wa", "p_ne"]
+          "terms": [
+            "v_mainichi",
+            "g_desu",
+            "p_ka",
+            "v_sensei",
+            "p_ya",
+            "v_okaasan",
+            "p_wa",
+            "p_ne"
+          ]
         }
       ]
     },
@@ -419,7 +839,12 @@
           "before": "わたし",
           "slot": true,
           "after": "がくせいです。",
-          "choices": ["も", "と", "や", "から"],
+          "choices": [
+            "も",
+            "と",
+            "や",
+            "から"
+          ],
           "answer": "も",
           "explanation": "も replaces は to mean 'also' — 'I am also a student.'"
         },
@@ -427,7 +852,12 @@
           "before": "母",
           "slot": true,
           "after": "父は 先生です。",
-          "choices": ["と", "や", "も", "まで"],
+          "choices": [
+            "と",
+            "や",
+            "も",
+            "まで"
+          ],
           "answer": "と",
           "explanation": "と connects nouns as a complete list — 'mother and father (are teachers).'"
         },
@@ -435,7 +865,12 @@
           "before": "先生",
           "slot": true,
           "after": "友だちが います。",
-          "choices": ["や", "と", "も", "から"],
+          "choices": [
+            "や",
+            "と",
+            "も",
+            "から"
+          ],
           "answer": "や",
           "explanation": "や lists examples — 'teachers, friends, (and others) are here.'"
         },
@@ -443,7 +878,12 @@
           "before": "月よう日",
           "slot": true,
           "after": "金よう日まで です。",
-          "choices": ["から", "まで", "と", "や"],
+          "choices": [
+            "から",
+            "まで",
+            "と",
+            "や"
+          ],
           "answer": "から",
           "explanation": "から marks the starting point — 'from Monday to Friday.'"
         },
@@ -451,7 +891,12 @@
           "before": "今月",
           "slot": true,
           "after": "です。",
-          "choices": ["まで", "から", "も", "と"],
+          "choices": [
+            "まで",
+            "から",
+            "も",
+            "と"
+          ],
           "answer": "まで",
           "explanation": "まで marks the ending point — 'until this month.'"
         },
@@ -459,7 +904,12 @@
           "before": "金よう日",
           "slot": true,
           "after": "お金が あります。",
-          "choices": ["に", "は", "も", "と"],
+          "choices": [
+            "に",
+            "は",
+            "も",
+            "と"
+          ],
           "answer": "に",
           "explanation": "に marks a specific day — 'On Friday, there is money.' 金よう日 is a fixed point on the calendar, so に is correct."
         },
@@ -467,7 +917,12 @@
           "before": "土よう日",
           "slot": true,
           "after": "いいですか。",
-          "choices": ["も", "と", "や", "まで"],
+          "choices": [
+            "も",
+            "と",
+            "や",
+            "まで"
+          ],
           "answer": "も",
           "explanation": "も replaces は to ask 'is Saturday also OK?' — 'also' applies to Saturday."
         }
@@ -481,55 +936,111 @@
         {
           "kind": "mcq",
           "q": "母 ______ 父は やさしいです。(Mother and father are kind.)",
-          "choices": ["と", "や", "も", "から"],
+          "choices": [
+            "と",
+            "や",
+            "も",
+            "から"
+          ],
           "answer": "と",
-          "terms": ["v_haha", "v_chichi", "v_yasashii"],
+          "terms": [
+            "v_haha",
+            "v_chichi",
+            "v_yasashii"
+          ],
           "explanation": "と lists items completely — exactly mother and father, no one else implied."
         },
         {
           "kind": "mcq",
           "q": "月よう日 ______ 金よう日まで です。",
-          "choices": ["から", "まで", "と", "も"],
+          "choices": [
+            "から",
+            "まで",
+            "と",
+            "も"
+          ],
           "answer": "から",
-          "terms": ["v_getsuyoubi", "v_kinyoubi"],
+          "terms": [
+            "v_getsuyoubi",
+            "v_kinyoubi"
+          ],
           "explanation": "から marks the starting point — 'from Monday to Friday.'"
         },
         {
           "kind": "mcq",
           "q": "Which sentence means 'My friend is also kind'?",
-          "choices": ["友だちも やさしいです。", "友だちはも やさしいです。", "友だちと やさしいです。", "友だちや やさしいです。"],
+          "choices": [
+            "友だちも やさしいです。",
+            "友だちはも やさしいです。",
+            "友だちと やさしいです。",
+            "友だちや やさしいです。"
+          ],
           "answer": "友だちも やさしいです。",
-          "terms": ["v_tomodachi", "v_yasashii"],
+          "terms": [
+            "v_tomodachi",
+            "v_yasashii"
+          ],
           "explanation": "も REPLACES は — you write 友だちも, never 友だちはも."
         },
         {
           "kind": "mcq",
           "q": "Which particle gives an INCOMPLETE list (implies more items)?",
-          "choices": ["や", "と", "も", "まで"],
+          "choices": [
+            "や",
+            "と",
+            "も",
+            "まで"
+          ],
           "answer": "や",
           "explanation": "や lists examples and implies others exist. と lists everything completely."
         },
         {
           "kind": "mcq",
           "q": "先生 ______ がくせいが たくさん います。(There are many people like teachers, students, etc.)",
-          "choices": ["や", "と", "も", "から"],
+          "choices": [
+            "や",
+            "と",
+            "も",
+            "から"
+          ],
           "answer": "や",
-          "terms": ["v_sensei", "v_gakusei", "v_takusan"],
+          "terms": [
+            "v_sensei",
+            "v_gakusei",
+            "v_takusan"
+          ],
           "explanation": "や gives a sample list — teachers and students are examples, and others are implied."
         },
         {
           "kind": "mcq",
           "q": "Which time word TAKES に?",
-          "choices": ["月よう日", "毎日", "今日", "今月"],
+          "choices": [
+            "月よう日",
+            "毎日",
+            "今日",
+            "今月"
+          ],
           "answer": "月よう日",
           "explanation": "月よう日 is a specific, fixed point on the calendar → に ✓. 毎日, 今日, and 今月 are relative or floating time expressions → no に."
         },
         {
           "kind": "mcq",
           "q": "水よう日 ______ 先生が います。(On Wednesday, the teacher is here.)",
-          "choices": ["に", "は", "も", "から"],
+          "choices": [
+            "に",
+            "は",
+            "も",
+            "から"
+          ],
           "answer": "に",
-          "terms": ["v_suiyoubi", "v_sensei", { "id": "v_iru", "form": "polite_masu" }],
+          "terms": [
+            "v_suiyoubi",
+            "v_sensei",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ],
           "explanation": "水よう日 is a specific day → に marks it as the time of the event. は would make it the topic, not a time marker."
         }
       ]

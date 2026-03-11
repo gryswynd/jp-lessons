@@ -18,7 +18,7 @@
     },
     "来ました": {
       "id": "v_kuru",
-      "form": "polite_past"
+      "form": "polite_mashita"
     },
     "村人": {
       "id": "v_murabito",
@@ -34,7 +34,7 @@
     },
     "思いました": {
       "id": "v_omou",
-      "form": "polite_past"
+      "form": "polite_mashita"
     },
     "広大": {
       "id": "v_koudai",
@@ -70,7 +70,7 @@
     },
     "通いました": {
       "id": "v_kayou",
-      "form": "polite_past"
+      "form": "polite_mashita"
     },
     "広い": {
       "id": "v_hiroi",
@@ -118,7 +118,7 @@
     },
     "習いました": {
       "id": "v_narau",
-      "form": "polite_past"
+      "form": "polite_mashita"
     },
     "集中して": {
       "id": "v_shuuchuu",
@@ -134,7 +134,7 @@
     },
     "話しました": {
       "id": "v_hanasu",
-      "form": "polite_past"
+      "form": "polite_mashita"
     },
     "急用": {
       "id": "v_kyuuyou",
@@ -142,7 +142,7 @@
     },
     "早く": {
       "id": "v_hayai",
-      "form": "adverb"
+      "form": "adverbial"
     },
     "門": {
       "id": "v_mon",
@@ -150,11 +150,11 @@
     },
     "発見しました": {
       "id": "v_hakken",
-      "form": "polite_past"
+      "form": "polite_mashita"
     },
     "近く": {
       "id": "v_chikai",
-      "form": "adverb"
+      "form": "adverbial"
     },
     "森": {
       "id": "v_mori",
@@ -170,7 +170,7 @@
     },
     "開けました": {
       "id": "v_akeru",
-      "form": "polite_past"
+      "form": "polite_mashita"
     },
     "時計": {
       "id": "v_tokei",
@@ -182,7 +182,7 @@
     },
     "考えました": {
       "id": "v_kangaeru",
-      "form": "polite_past"
+      "form": "polite_mashita"
     },
     "市長": {
       "id": "v_shichou",
@@ -198,7 +198,7 @@
     },
     "会いました": {
       "id": "v_au",
-      "form": "polite_past"
+      "form": "polite_mashita"
     },
     "地区": {
       "id": "v_chiku",
@@ -210,7 +210,7 @@
     },
     "言いました": {
       "id": "v_iu",
-      "form": "polite_past"
+      "form": "polite_mashita"
     },
     "知って": {
       "id": "v_shiru",
@@ -228,13 +228,29 @@
       "id": "k_mono",
       "form": null
     },
-    "働いていました": {
+    "働いて": {
       "id": "v_hataraku",
-      "form": "te_iru_past"
+      "form": "te_form"
     },
-    "通っています": {
+    "いました": {
+      "id": "v_iru",
+      "form": "polite_mashita"
+    },
+    "通って": {
       "id": "v_kayou",
-      "form": "te_iru"
+      "form": "te_form"
+    },
+    "います": {
+      "id": "v_iru",
+      "form": "polite_masu"
+    },
+    "ゆき": {
+      "id": "char_yuki",
+      "form": null
+    },
+    "ゆきさん": {
+      "id": "char_yuki",
+      "form": null
     }
   }
 }

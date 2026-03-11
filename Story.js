@@ -220,8 +220,8 @@ window.StoryModule = (function() {
         }
         .jp-story-level-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-          gap: 16px;
+          grid-template-columns: 1fr;
+          gap: 12px;
         }
         .jp-story-level-card {
           background: linear-gradient(135deg, #FFFBEB 0%, #FDE68A 100%);
@@ -519,12 +519,14 @@ window.StoryModule = (function() {
         if (!levelData || !levelData.stories) return;
         levelData.stories.forEach(story => {
           storyList.push({
+            id: story.id,
             dir: story.dir,
             mdFile: story.dir + '/story.md',
             jsonFile: story.dir + '/terms.json',
             title: story.titleJp || story.title,
             subtitle: story.title,
-            level: level
+            level: level,
+            unlocksAfter: story.unlocksAfter
           });
         });
       });
@@ -564,14 +566,24 @@ window.StoryModule = (function() {
       if (!byLevel[lvl]) byLevel[lvl] = [];
       byLevel[lvl].push(story);
     });
-    const levels = ['N5', 'N4'].filter(l => byLevel[l] && byLevel[l].length);
+    const unlockApi = window.JPShared && window.JPShared.unlock;
+    const levels = ['N5', 'N4'].filter(l => {
+      if (!byLevel[l] || !byLevel[l].length) return false;
+      if (l === 'N4' && unlockApi && !unlockApi.isFree() && !unlockApi.isN4Unlocked()) return false;
+      return true;
+    });
 
-    const levelCardsHtml = levels.map(level => `
-      <div class="jp-story-level-card" data-level="${level}">
-        <div class="jp-story-level-name">JLPT ${level}</div>
-        <div class="jp-story-level-count">${byLevel[level].length} stor${byLevel[level].length !== 1 ? 'ies' : 'y'}</div>
-      </div>
-    `).join('');
+    const levelCardsHtml = levels.map(level => {
+      const visibleCount = !unlockApi || unlockApi.isFree()
+        ? byLevel[level].length
+        : byLevel[level].filter(s => unlockApi.isStoryUnlocked(s)).length;
+      return `
+        <div class="jp-story-level-card" data-level="${level}">
+          <div class="jp-story-level-name">JLPT ${level}</div>
+          <div class="jp-story-level-count">${visibleCount} stor${visibleCount !== 1 ? 'ies' : 'y'}</div>
+        </div>
+      `;
+    }).join('');
 
     if (contentArea) {
       contentArea.outerHTML = `
@@ -599,7 +611,12 @@ window.StoryModule = (function() {
                         storyContainer.querySelector('.jp-story-content') ||
                         storyContainer.querySelector('.jp-story-error');
 
-    const cardsHtml = stories.map(story => {
+    const unlockApi = window.JPShared && window.JPShared.unlock;
+    const visibleStories = stories.filter(s =>
+      !unlockApi || unlockApi.isFree() || unlockApi.isStoryUnlocked(s)
+    );
+
+    const cardsHtml = visibleStories.map(story => {
       const index = storyList.indexOf(story);
       return `
         <div class="jp-story-card" data-story-index="${index}">
@@ -615,7 +632,7 @@ window.StoryModule = (function() {
         <div class="jp-story-selector">
           <button class="jp-story-level-back-btn" id="jp-story-back-to-levels">← Levels</button>
           <h2>JLPT ${level} Stories</h2>
-          <p>${stories.length} stor${stories.length !== 1 ? 'ies' : 'y'} available</p>
+          <p>${visibleStories.length} stor${visibleStories.length !== 1 ? 'ies' : 'y'} available</p>
           <div class="jp-story-selector-grid">
             ${cardsHtml}
           </div>
@@ -826,7 +843,9 @@ window.StoryModule = (function() {
         html += escapeHtml(node.textContent.substring(lastIndex, match.index));
         // Add clickable term
         const formStr = match.form ? `'${match.form}'` : 'null';
-        html += `<span class="jp-term" onclick="window.JP_OPEN_TERM('${match.termId}', ${formStr}, true)">${escapeHtml(match.text)}</span>`;
+        const matchedTerm = termMapData[match.termId];
+        const termCls = (matchedTerm && matchedTerm.type === 'character') ? 'jp-term jp-term-name' : 'jp-term';
+        html += `<span class="${termCls}" onclick="window.JP_OPEN_TERM('${match.termId}', ${formStr}, true)">${escapeHtml(match.text)}</span>`;
         lastIndex = match.index + match.text.length;
       });
 

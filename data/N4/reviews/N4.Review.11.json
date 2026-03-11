@@ -151,7 +151,7 @@
                   "id": "v_iku",
                   "form": "tari_form"
                 },
-                "k_yama",
+                "v_yama",
                 {
                   "id": "v_hashiru",
                   "form": "tari_form"
@@ -167,7 +167,7 @@
               "jp": "すごいですね。私は 弱いですから、できません。",
               "terms": [
                 "v_sugoi",
-                "k_watashi",
+                "v_watashi",
                 "v_yowai",
                 {
                   "id": "v_dekiru",
@@ -200,7 +200,7 @@
                   "id": "v_iku",
                   "form": "polite_masu"
                 },
-                "k_kuruma",
+                "v_kuruma",
                 {
                   "id": "v_iku",
                   "form": "conditional_ba"
@@ -213,7 +213,7 @@
               "jp": "でも、京都は 人が 多いですから、運転が むずかしいです。",
               "terms": [
                 "v_kyouto",
-                "k_hito",
+                "v_hito",
                 "v_ooi",
                 "v_unten",
                 "v_muzukashii"
@@ -327,7 +327,7 @@
           "en": "Last month, I went from Kyoto to Tokyo.",
           "terms": [
             "v_sengetsu",
-            "k_watashi",
+            "v_watashi",
             "v_kyouto",
             "v_toukyou",
             {
@@ -341,7 +341,7 @@
           "en": "There were many people in Tokyo.",
           "terms": [
             "v_toukyou",
-            "k_hito",
+            "v_hito",
             {
               "id": "v_ooi",
               "form": "plain_past"
@@ -352,13 +352,13 @@
           "jp": "私は 自転車を 借りて、町を 走りました。",
           "en": "I rented a bicycle and ran (rode) through the town.",
           "terms": [
-            "k_watashi",
+            "v_watashi",
             "v_jitensha",
             {
               "id": "v_kariru",
               "form": "te_form"
             },
-            "k_machi",
+            "v_machi",
             {
               "id": "v_hashiru",
               "form": "polite_mashita"
@@ -385,7 +385,7 @@
           "jp": "夜は 有名な レストランで 食べました。",
           "en": "At night, I ate at a famous restaurant.",
           "terms": [
-            "k_yoru",
+            "v_yoru",
             "v_yuumei",
             {
               "id": "v_taberu",
@@ -422,7 +422,7 @@
             "銀行へ 行きました"
           ],
           "terms": [
-            "k_machi",
+            "v_machi",
             "v_jitensha",
             {
               "id": "v_hashiru",
@@ -458,7 +458,7 @@
             "友達に 会いました"
           ],
           "terms": [
-            "k_yoru",
+            "v_yoru",
             {
               "id": "v_taberu",
               "form": "polite_mashita"

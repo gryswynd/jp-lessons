@@ -100,7 +100,7 @@
         (manifest.levels || []).forEach(level => {
           const levelData = manifest.data && manifest.data[level];
           if (!levelData || !levelData.reviews || !levelData.reviews.length) return;
-          byLevel[level] = levelData.reviews.map(r => ({ id: r.id, title: r.title, file: r.file, level }));
+          byLevel[level] = levelData.reviews.map(r => ({ id: r.id, title: r.title, file: r.file, level, unlocksAfter: r.unlocksAfter }));
           // Sort: non-numeric IDs (Half Review, Full Review) first, then numeric descending (10 → 1)
           byLevel[level].sort((a, b) => {
             const numA = a.id.match(/\.Review\.(\d+)/);
@@ -136,13 +136,18 @@
         return;
       }
 
+      const unlockApi = window.JPShared && window.JPShared.unlock;
       let html = '<div class="jp-review-level-grid">';
       levels.forEach(level => {
-        const count = byLevel[level].length;
+        // N4 is a paid gateway — hide it entirely until explicitly unlocked.
+        if (level === 'N4' && unlockApi && !unlockApi.isFree() && !unlockApi.isN4Unlocked()) return;
+        const visibleCount = !unlockApi || unlockApi.isFree()
+          ? byLevel[level].length
+          : byLevel[level].filter(r => unlockApi.isReviewUnlocked(r)).length;
         html += `
           <div class="jp-review-level-card" data-level="${level}">
             <div class="jp-review-level-name">JLPT ${level}</div>
-            <div class="jp-review-level-count">${count} review${count !== 1 ? 's' : ''}</div>
+            <div class="jp-review-level-count">${visibleCount} review${visibleCount !== 1 ? 's' : ''}</div>
           </div>
         `;
       });
@@ -158,9 +163,14 @@
       this._selectedLevel = level;
       const stage = document.getElementById('jp-stage');
 
+      const unlockApi = window.JPShared && window.JPShared.unlock;
+      const visibleReviews = reviews.filter(r =>
+        !unlockApi || unlockApi.isFree() || unlockApi.isReviewUnlocked(r)
+      );
+
       let html = `<button class="jp-review-level-back-btn" id="jp-back-to-levels">← Levels</button>`;
       html += '<div class="jp-review-menu-grid">';
-      reviews.forEach(review => {
+      visibleReviews.forEach(review => {
         const topScore = window.JPShared.progress.getReviewScore(review.id);
         const scoreDisplay = topScore !== undefined
           ? `<div class="jp-review-score">Best: ${topScore}%</div>`
@@ -288,6 +298,7 @@
         const conjUrl     = this.getUrl(manifest.globalFiles.conjugationRules);
         const counterUrl  = this.getUrl(manifest.globalFiles.counterRules);
         const particleUrl = this.getUrl(manifest.shared.particles);
+        const characterUrl = this.getUrl(manifest.shared.characters);
         const glossaryUrls = manifest.levels.map(lvl => this.getUrl(manifest.data[lvl].glossary));
 
         console.log('[Review] Quiz URL:', quizUrl);
@@ -295,11 +306,12 @@
         console.log('[Review] Counter URL:', counterUrl);
 
         // 1. Fetch Quiz Data + Glossary + Conjugations + Counter Rules in parallel
-        const [quizRes, conjRes, counterRes, particleRes, ...glossResponses] = await Promise.all([
+        const [quizRes, conjRes, counterRes, particleRes, characterRes, ...glossResponses] = await Promise.all([
             fetch(quizUrl),
             fetch(conjUrl),
             fetch(counterUrl),
             fetch(particleUrl),
+            fetch(characterUrl),
             ...glossaryUrls.map(u => fetch(u))
         ]);
 
@@ -309,11 +321,12 @@
           glossary: glossOk,
           conjugations: conjRes.ok,
           counters: counterRes.ok,
-          particles: particleRes.ok
+          particles: particleRes.ok,
+          characters: characterRes.ok
         });
 
-        if (!quizRes.ok || !glossOk || !conjRes.ok || !counterRes.ok || !particleRes.ok) {
-          throw new Error(`Failed to fetch resources: Quiz(${quizRes.status}) Glossary(${glossResponses.map(r => r.status)}) Conjugations(${conjRes.status}) Counters(${counterRes.status}) Particles(${particleRes.status})`);
+        if (!quizRes.ok || !glossOk || !conjRes.ok || !counterRes.ok || !particleRes.ok || !characterRes.ok) {
+          throw new Error(`Failed to fetch resources: Quiz(${quizRes.status}) Glossary(${glossResponses.map(r => r.status)}) Conjugations(${conjRes.status}) Counters(${counterRes.status}) Particles(${particleRes.status}) Characters(${characterRes.status})`);
         }
 
         console.log('[Review] Parsing JSON...');
@@ -322,16 +335,20 @@
         this.state.conjugations = await conjRes.json();
         this.state.counterRules = await counterRes.json();
         const particleData = await particleRes.json();
+        const characterData = await characterRes.json();
 
         const glossData = { entries: glossParts.flatMap(g => g.entries) };
         console.log('[Review] Quiz title:', quizData.title);
         console.log('[Review] Glossary entries:', glossData.entries.length);
 
-        // 2. Map Glossary + Particles
+        // 2. Map Glossary + Particles + Characters
         this.state.termMap = {};
         glossData.entries.forEach(i => { this.state.termMap[i.id] = i; });
         (particleData.particles || []).forEach(p => {
             this.state.termMap[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle' };
+        });
+        (characterData.characters || []).forEach(c => {
+            this.state.termMap[c.id] = Object.assign({}, c, { portraitUrl: this.getUrl(c.portrait) });
         });
 
         // 3. Inject Styles & Modal
@@ -634,7 +651,7 @@
             .jp-review-back-btn:hover { color: white; background: rgba(255,255,255,0.1); }
 
             /* Level Picker */
-            .jp-review-level-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px; }
+            .jp-review-level-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 8px; }
             .jp-review-level-card {
                 background: #fff; padding: 28px 24px; border-radius: 20px; cursor: pointer;
                 box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s;

@@ -355,7 +355,7 @@
             "v_hai",
             "v_iroiro",
             "v_minzoku",
-            "k_hito",
+            "v_hito",
             {
               "id": "v_sumu",
               "form": "te_form"
@@ -535,7 +535,10 @@
           "terms": [
             "v_shujin",
             "v_nani",
-            { "id": "v_uru", "form": "te_form" },
+            {
+              "id": "v_uru",
+              "form": "te_form"
+            },
             "v_yasai"
           ]
         },
@@ -545,7 +548,10 @@
           "terms": [
             "v_dare",
             "k_mise",
-            { "id": "v_kuru", "form": "polite_masu" },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
             "v_kinjo",
             "v_kokumin"
           ]
@@ -559,8 +565,14 @@
             "v_shujin",
             "v_nani",
             "v_tearai",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_kaeru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kaeru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -637,7 +649,10 @@
             "v_naze",
             "v_shiai",
             "v_chuushi",
-            { "id": "v_naru", "form": "polite_mashita" },
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            },
             "k_ame"
           ]
         },
@@ -647,9 +662,15 @@
           "terms": [
             "k_ie",
             "v_nani",
-            { "id": "v_suru", "form": "polite_mashita" },
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            },
             "k_kuruma",
-            { "id": "v_arau", "form": "polite_mashita" }
+            {
+              "id": "v_arau",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -660,7 +681,10 @@
             "k_ushiro",
             "v_nani",
             "v_tearai",
-            { "id": "v_suru", "form": "polite_mashita" }
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -673,37 +697,67 @@
         {
           "kind": "mcq",
           "q": "[主人] の よみかたは？",
-          "choices": ["しゅじん", "しゅにん", "ぬしじん", "しゅじょう"],
+          "choices": [
+            "しゅじん",
+            "しゅにん",
+            "ぬしじん",
+            "しゅじょう"
+          ],
           "answer": "しゅじん"
         },
         {
           "kind": "mcq",
           "q": "[中止] の よみかたは？",
-          "choices": ["ちゅうし", "ちゅうじ", "なかどまり", "ちゅうり"],
+          "choices": [
+            "ちゅうし",
+            "ちゅうじ",
+            "なかどまり",
+            "ちゅうり"
+          ],
           "answer": "ちゅうし"
         },
         {
           "kind": "mcq",
           "q": "[民族] の よみかたは？",
-          "choices": ["みんぞく", "たみぞく", "みんぞう", "みんるい"],
+          "choices": [
+            "みんぞく",
+            "たみぞく",
+            "みんぞう",
+            "みんるい"
+          ],
           "answer": "みんぞく"
         },
         {
           "kind": "mcq",
           "q": "[洗う] の よみかたは？",
-          "choices": ["あらう", "ぬぐう", "ふく", "そう"],
+          "choices": [
+            "あらう",
+            "ぬぐう",
+            "ふく",
+            "そう"
+          ],
           "answer": "あらう"
         },
         {
           "kind": "mcq",
           "q": "[止まる] の よみかたは？",
-          "choices": ["とまる", "とめる", "とどむ", "やめる"],
+          "choices": [
+            "とまる",
+            "とめる",
+            "とどむ",
+            "やめる"
+          ],
           "answer": "とまる"
         },
         {
           "kind": "mcq",
           "q": "[国民] の よみかたは？",
-          "choices": ["こくみん", "くにたみ", "こくたみ", "こくにん"],
+          "choices": [
+            "こくみん",
+            "くにたみ",
+            "こくたみ",
+            "こくにん"
+          ],
           "answer": "こくみん"
         }
       ]
@@ -716,30 +770,51 @@
         {
           "kind": "mcq",
           "q": "雨で 試合が ______。",
-          "choices": ["中止に なりました", "休止して います", "止まりました", "止めました"],
+          "choices": [
+            "中止に なりました",
+            "休止して います",
+            "止まりました",
+            "止めました"
+          ],
           "answer": "中止に なりました",
           "terms": [
             "k_ame",
             "v_shiai",
             "v_chuushi",
-            { "id": "v_naru", "form": "polite_mashita" }
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "お店の ______ は 親切です。",
-          "choices": ["主人", "主語", "国民", "民家"],
+          "choices": [
+            "主人",
+            "主語",
+            "国民",
+            "民家"
+          ],
           "answer": "主人",
           "terms": [
             "k_mise",
             "v_shujin",
-            { "id": "v_shinsetsu", "form": "polite_adj" }
+            {
+              "id": "v_shinsetsu",
+              "form": "polite_adj"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "この 地区には ______ が 多い。",
-          "choices": ["民家", "洗車", "休止", "主語"],
+          "choices": [
+            "民家",
+            "洗車",
+            "休止",
+            "主語"
+          ],
           "answer": "民家",
           "terms": [
             "v_chiku",
@@ -750,36 +825,63 @@
         {
           "kind": "mcq",
           "q": "車を ______。",
-          "choices": ["洗います", "止めます", "止まります", "休止します"],
+          "choices": [
+            "洗います",
+            "止めます",
+            "止まります",
+            "休止します"
+          ],
           "answer": "洗います",
           "terms": [
             "k_kuruma",
-            { "id": "v_arau", "form": "polite_masu" }
+            {
+              "id": "v_arau",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "洗車の 後で ______ も しました。",
-          "choices": ["手洗い", "洗車", "民家", "国民"],
+          "choices": [
+            "手洗い",
+            "洗車",
+            "民家",
+            "国民"
+          ],
           "answer": "手洗い",
           "terms": [
             "v_sensha",
             "k_ushiro",
             "v_tearai",
-            { "id": "v_suru", "form": "polite_mashita" }
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "いろいろな ______ の 人が 住んで います。",
-          "choices": ["民族", "国民", "民家", "主語"],
+          "choices": [
+            "民族",
+            "国民",
+            "民家",
+            "主語"
+          ],
           "answer": "民族",
           "terms": [
             "v_iroiro",
             "v_minzoku",
-            "k_hito",
-            { "id": "v_sumu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            "v_hito",
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -792,31 +894,52 @@
         {
           "kind": "mcq",
           "q": "雨 ______ 試合が 中止に なりました。",
-          "choices": ["で", "に", "を", "は"],
+          "choices": [
+            "で",
+            "に",
+            "を",
+            "は"
+          ],
           "answer": "で",
           "terms": [
             "k_ame",
             "p_de",
             "v_shiai",
             "v_chuushi",
-            { "id": "v_naru", "form": "polite_mashita" }
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "バス ______ 止めました。",
-          "choices": ["を", "が", "に", "で"],
+          "choices": [
+            "を",
+            "が",
+            "に",
+            "で"
+          ],
           "answer": "を",
           "terms": [
             "v_basu",
             "p_wo",
-            { "id": "v_tomeru", "form": "polite_mashita" }
+            {
+              "id": "v_tomeru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "この 店 ______ 主人は だれですか。",
-          "choices": ["の", "は", "を", "に"],
+          "choices": [
+            "の",
+            "は",
+            "を",
+            "に"
+          ],
           "answer": "の",
           "terms": [
             "k_mise",
@@ -828,37 +951,64 @@
         {
           "kind": "mcq",
           "q": "車 ______ 洗いましょうか。",
-          "choices": ["を", "が", "に", "で"],
+          "choices": [
+            "を",
+            "が",
+            "に",
+            "で"
+          ],
           "answer": "を",
           "terms": [
             "k_kuruma",
             "p_wo",
-            { "id": "v_arau", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_arau",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "近所 ______ 国民が よく 来ます。",
-          "choices": ["の", "は", "を", "で"],
+          "choices": [
+            "の",
+            "は",
+            "を",
+            "で"
+          ],
           "answer": "の",
           "terms": [
             "v_kinjo",
             "p_no",
             "v_kokumin",
             "v_yoku",
-            { "id": "v_kuru", "form": "polite_masu" }
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "手洗い ______ して から 帰ります。",
-          "choices": ["を", "の", "で", "に"],
+          "choices": [
+            "を",
+            "の",
+            "で",
+            "に"
+          ],
           "answer": "を",
           "terms": [
             "v_tearai",
             "p_wo",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_kaeru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kaeru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]

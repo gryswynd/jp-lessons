@@ -290,7 +290,10 @@
           "en": "It departs at 2:00 PM.",
           "terms": [
             "v_gogo",
-            { "counter": "ji", "n": 2 },
+            {
+              "counter": "ji",
+              "n": 2
+            },
             "v_hatsu"
           ]
         },
@@ -488,7 +491,7 @@
           "terms": [
             "v_shihatsu",
             "v_densha",
-            "k_hito",
+            "v_hito",
             {
               "id": "v_sukunai",
               "form": "polite_adj"
@@ -641,37 +644,67 @@
         {
           "kind": "mcq",
           "q": "[区別] の よみかたは？",
-          "choices": ["くべつ", "くほつ", "ちべつ", "くわか"],
+          "choices": [
+            "くべつ",
+            "くほつ",
+            "ちべつ",
+            "くわか"
+          ],
           "answer": "くべつ"
         },
         {
           "kind": "mcq",
           "q": "[発見] の よみかたは？",
-          "choices": ["はっけん", "はつみ", "ほっけん", "はつけん"],
+          "choices": [
+            "はっけん",
+            "はつみ",
+            "ほっけん",
+            "はつけん"
+          ],
           "answer": "はっけん"
         },
         {
           "kind": "mcq",
           "q": "[通う] の よみかたは？",
-          "choices": ["かよう", "とおる", "かう", "つうう"],
+          "choices": [
+            "かよう",
+            "とおる",
+            "かう",
+            "つうう"
+          ],
           "answer": "かよう"
         },
         {
           "kind": "mcq",
           "q": "[県外] の よみかたは？",
-          "choices": ["けんがい", "けんがえ", "きんがい", "けんほか"],
+          "choices": [
+            "けんがい",
+            "けんがえ",
+            "きんがい",
+            "けんほか"
+          ],
           "answer": "けんがい"
         },
         {
           "kind": "mcq",
           "q": "[始発] の よみかたは？",
-          "choices": ["しはつ", "しっぱつ", "はじはつ", "しこう"],
+          "choices": [
+            "しはつ",
+            "しっぱつ",
+            "はじはつ",
+            "しこう"
+          ],
           "answer": "しはつ"
         },
         {
           "kind": "mcq",
           "q": "[出発] の よみかたは？",
-          "choices": ["しゅっぱつ", "でっぱつ", "しゅつはつ", "でぱつ"],
+          "choices": [
+            "しゅっぱつ",
+            "でっぱつ",
+            "しゅつはつ",
+            "でぱつ"
+          ],
           "answer": "しゅっぱつ"
         }
       ]
@@ -684,28 +717,49 @@
         {
           "kind": "mcq",
           "q": "学校に ______。",
-          "choices": ["通います", "県外です", "区切ります", "発言します"],
+          "choices": [
+            "通います",
+            "県外です",
+            "区切ります",
+            "発言します"
+          ],
           "answer": "通います",
           "terms": [
             "v_gakkou",
-            { "id": "v_kayou", "form": "polite_masu" }
+            {
+              "id": "v_kayou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "明日の 朝、______ します。",
-          "choices": ["出発", "発見", "区別", "発音"],
+          "choices": [
+            "出発",
+            "発見",
+            "区別",
+            "発音"
+          ],
           "answer": "出発",
           "terms": [
             "v_ashita",
             "k_asa",
-            { "id": "v_shuppatsu", "form": "polite_masu" }
+            {
+              "id": "v_shuppatsu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "ここは 特別な ______ です。",
-          "choices": ["区", "県", "発", "通"],
+          "choices": [
+            "区",
+            "県",
+            "発",
+            "通"
+          ],
           "answer": "区",
           "terms": [
             "k_koko",
@@ -716,18 +770,31 @@
         {
           "kind": "mcq",
           "q": "広い 道を ______。",
-          "choices": ["通ります", "発見します", "発言します", "区別します"],
+          "choices": [
+            "通ります",
+            "発見します",
+            "発言します",
+            "区別します"
+          ],
           "answer": "通ります",
           "terms": [
             "v_hiroi",
             "k_michi",
-            { "id": "v_tooru", "form": "polite_masu" }
+            {
+              "id": "v_tooru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "秋田県は 東京の ______ です。",
-          "choices": ["県外", "地区", "区別", "発見"],
+          "choices": [
+            "県外",
+            "地区",
+            "区別",
+            "発見"
+          ],
           "answer": "県外",
           "terms": [
             "v_akitaken",
@@ -738,12 +805,20 @@
         {
           "kind": "mcq",
           "q": "古い お金を ______ しました。",
-          "choices": ["発見", "出発", "発言", "発音"],
+          "choices": [
+            "発見",
+            "出発",
+            "発言",
+            "発音"
+          ],
           "answer": "発見",
           "terms": [
             "v_furui",
             "k_kane",
-            { "id": "v_hakken", "form": "polite_mashita" }
+            {
+              "id": "v_hakken",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -756,71 +831,119 @@
         {
           "kind": "mcq",
           "q": "学校 ______ 通います。",
-          "choices": ["に", "で", "を", "は"],
+          "choices": [
+            "に",
+            "で",
+            "を",
+            "は"
+          ],
           "answer": "に",
           "terms": [
             "v_gakkou",
             "p_ni",
-            { "id": "v_kayou", "form": "polite_masu" }
+            {
+              "id": "v_kayou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "県外 ______ 会社に 通います。",
-          "choices": ["から", "まで", "に", "で"],
+          "choices": [
+            "から",
+            "まで",
+            "に",
+            "で"
+          ],
           "answer": "から",
           "terms": [
             "v_kengai",
             "p_kara",
             "v_kaisha",
-            { "id": "v_kayou", "form": "polite_masu" }
+            {
+              "id": "v_kayou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "始発 ______ 電車で 来ます。",
-          "choices": ["の", "を", "に", "で"],
+          "choices": [
+            "の",
+            "を",
+            "に",
+            "で"
+          ],
           "answer": "の",
           "terms": [
             "v_shihatsu",
             "p_no",
             "v_densha",
-            { "id": "v_kuru", "form": "polite_masu" }
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "広い 大通り ______ 通ります。",
-          "choices": ["を", "で", "に", "は"],
+          "choices": [
+            "を",
+            "で",
+            "に",
+            "は"
+          ],
           "answer": "を",
           "terms": [
             "v_hiroi",
             "v_oodoori",
             "p_wo",
-            { "id": "v_tooru", "form": "polite_masu" }
+            {
+              "id": "v_tooru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "秋田県 ______ 行きます。",
-          "choices": ["へ", "を", "で", "が"],
+          "choices": [
+            "へ",
+            "を",
+            "で",
+            "が"
+          ],
           "answer": "へ",
           "terms": [
             "v_akitaken",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "この 地区 ______ 買い物を します。",
-          "choices": ["で", "に", "を", "は"],
+          "choices": [
+            "で",
+            "に",
+            "を",
+            "は"
+          ],
           "answer": "で",
           "terms": [
             "v_chiku",
             "p_de",
             "v_kaimono",
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]

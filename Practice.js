@@ -779,6 +779,15 @@ window.PracticeModule = {
         try {
             await new Promise(r => setTimeout(r, 50));
             const manifest = await window.getManifest(REPO_CONFIG);
+
+            // Build a lookup: lessonId → manifest entry (carries unlocksAfter)
+            const manifestLessonMap = {};
+            (manifest.levels || ['N5','N4']).forEach(lvl => {
+                ((manifest.data[lvl] || {}).lessons || []).forEach(entry => {
+                    manifestLessonMap[entry.id] = entry;
+                });
+            });
+
             const glossParts = await Promise.all(
                 manifest.levels.map(lvl => fetch(window.getAssetUrl(REPO_CONFIG, manifest.data[lvl].glossary) + "?t=" + Date.now()).then(r => r.json()))
             );
@@ -828,7 +837,13 @@ window.PracticeModule = {
             if(container) {
                 container.innerHTML = '';
                 const groups = {};
+                const unlock = window.JPShared && window.JPShared.unlock;
                 DB.lessons.forEach(l => {
+                    // Skip lessons that are locked in gated mode
+                    if (unlock && !unlock.isFree()) {
+                        const entry = manifestLessonMap[l.id] || { id: l.id };
+                        if (!unlock.isLessonUnlocked(entry)) return;
+                    }
                     const cls = l.id.split('.')[0] || "Other";
                     if(!groups[cls]) groups[cls] = [];
                     groups[cls].push(l);

@@ -218,38 +218,19 @@
     {
       "type": "annotatedExample",
       "title": "Potential Form in Context — Reading a Sentence",
-      "sentence": "私は 日本語が 話せますが、まだ 上手に 書けません。",
-      "translation": "I can speak Japanese, but I still cannot write it well.",
-      "parts": [
+      "examples": [
         {
-          "text": "私は",
-          "role": "topic",
-          "gloss": "I (topic marker は)"
-        },
-        {
-          "text": "日本語が",
-          "role": "subject",
-          "gloss": "Japanese (potential object — を shifts to が)"
-        },
-        {
-          "text": "話せますが、",
-          "role": "predicate",
-          "gloss": "can speak — but (U-verb: 話す → 話せ + ます; が = clause connector 'but')"
-        },
-        {
-          "text": "まだ",
-          "role": "adverb",
-          "gloss": "still / not yet (used with negative)"
-        },
-        {
-          "text": "上手に",
-          "role": "adverb",
-          "gloss": "well / skilfully (na-adj adverb: 上手 + に)"
-        },
-        {
-          "text": "書けません。",
-          "role": "predicate",
-          "gloss": "cannot write (U-verb: 書く → 書け + ません, polite negative potential)"
+          "context": "Ability (positive) + Ability (negative) in one sentence",
+          "parts": [
+            { "text": "私は", "role": "topic", "gloss": "I (topic marker は)" },
+            { "text": "日本語が", "role": "subject", "gloss": "Japanese (potential object — を shifts to が)" },
+            { "text": "話せますが、", "role": "predicate", "gloss": "can speak — but (U-verb: 話す → 話せ + ます; が = clause connector 'but')" },
+            { "text": "まだ", "role": "adverb", "gloss": "still / not yet (used with negative)" },
+            { "text": "上手に", "role": "adverb", "gloss": "well / skilfully (na-adj adverb: 上手 + に)" },
+            { "text": "書けません。", "role": "predicate", "gloss": "cannot write (U-verb: 書く → 書け + ません, polite negative potential)" }
+          ],
+          "en": "I can speak Japanese, but I still cannot write it well.",
+          "note": "Note the particle shift: 日本語を話す (plain) → 日本語が話せる (potential). を often becomes が when the verb is in potential form."
         }
       ]
     },
@@ -267,7 +248,7 @@
             "v_san",
             "v_nihongo",
             "p_ga",
-            { "id": "v_hanasu", "form": "potential" },
+            { "id": "v_hanasu", "form": "polite_potential" },
             "p_ka"
           ]
         },
@@ -277,10 +258,10 @@
           "en": "Yes, I can speak a little. I can read books too.",
           "terms": [
             "v_sukoshi",
-            { "id": "v_hanasu", "form": "potential" },
+            { "id": "v_hanasu", "form": "polite_potential" },
             "v_hon",
             "p_mo",
-            { "id": "v_yomu", "form": "potential" },
+            { "id": "v_yomu", "form": "polite_potential" },
             "p_yo"
           ]
         },
@@ -291,7 +272,7 @@
           "terms": [
             { "id": "v_jouzu", "form": "polite_adj" },
             "p_ne",
-            { "id": "v_kaku", "form": "potential" },
+            { "id": "v_kaku", "form": "polite_potential" },
             "p_ka"
           ]
         },
@@ -302,7 +283,7 @@
           "terms": [
             "v_sukoshi",
             "p_wa",
-            { "id": "v_kaku", "form": "potential" },
+            { "id": "v_kaku", "form": "polite_potential" },
             "p_ga_but",
             "v_mada",
             { "id": "v_jouzu", "form": "adverbial" },
@@ -324,7 +305,7 @@
           "jp": "はい、読めますよ！",
           "en": "Yes, I can read!",
           "terms": [
-            { "id": "v_yomu", "form": "potential" },
+            { "id": "v_yomu", "form": "polite_potential" },
             "p_yo"
           ]
         }
