@@ -49,7 +49,7 @@
                 "v_asagohan",
                 { "id": "v_taberu", "form": "polite_masu" },
                 "v_maiasa",
-                { "id": "v_okiru", "form": "potential" }
+                { "id": "v_okiru", "form": "polite_potential" }
               ]
             },
             {
@@ -57,7 +57,7 @@
               "jp": "はい、起きられます。明るい 朝が 好きですよ。",
               "terms": [
                 "p_hai",
-                { "id": "v_okiru", "form": "potential" },
+                { "id": "v_okiru", "form": "polite_potential" },
                 "v_akarui",
                 "v_asa",
                 { "id": "v_suki", "form": "polite_adj" }
@@ -114,7 +114,7 @@
                 "p_ga_but",
                 "v_aoi",
                 "v_shatsu",
-                { "id": "v_miru", "form": "potential" }
+                { "id": "v_miru", "form": "polite_potential" }
               ]
             },
             {
@@ -534,7 +534,7 @@
             { "id": "v_iroiro", "form": "attributive_na" },
             "v_iro",
             "v_shatsu",
-            { "id": "v_miru", "form": "potential" }
+            { "id": "v_miru", "form": "polite_potential" }
           ]
         },
         {
