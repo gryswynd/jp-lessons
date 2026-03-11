@@ -54,6 +54,10 @@
 
 「色々な色があってきれいよ。」と母が言いました。
 
+「週まつは いっしょに 朝ごはんを 食べようよ。」とりきぞが言いました。
+
+「いいわよ。週まつは 明るい 朝ごはんにしましょうね。」
+
 りきぞはおもいました。「私は青がいちばん好きだ。明日の朝も、明るい青い空が見たいな。」
 
 **おわり**
@@ -112,6 +116,10 @@ His mother made green tea too. The color of the tea was also brown.
 
 "There are various beautiful colors," his mother said.
 
+"Let's eat breakfast together on the weekend!" Rikizo said.
+
+"That sounds nice. Let's make it a bright, cheerful breakfast on the weekend."
+
 Rikizo thought: "I like blue best. Tomorrow morning too, I want to see a bright blue sky."
 
 **The End**
@@ -130,6 +138,7 @@ Rikizo thought: "I like blue best. Tomorrow morning too, I want to see a bright 
 - 晩ごはん (ばんごはん) — dinner
 - 今晩 (こんばん) — tonight
 - くれる — to give (to me / in-group)
+- 週まつ (しゅうまつ) — weekend
 
 **Key Vocabulary (N4.4 — Colors & Preferences):**
 - 色 (いろ) — color

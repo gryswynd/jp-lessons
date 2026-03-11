@@ -420,6 +420,13 @@
           "choices": ["くろい", "あかい", "あおい", "ちゃいろい"],
           "answer": "くろい",
           "explanation": "黒い (black) is read as <b>kuroi</b>. 黒 (N4.4). Contrast: 赤い (akai, red) and 茶色い (chairoi, brown) are common distractors for color vocabulary."
+        },
+        {
+          "kind": "mcq",
+          "q": "[週まつ]は 家で 晩ごはんを 食べます。",
+          "choices": ["しゅうまつ", "まいしゅう", "しゅうかん", "しゅうじつ"],
+          "answer": "しゅうまつ",
+          "explanation": "週まつ (weekend) is read as <b>shuumatsu</b>. 週 (N5.6) means week; 末 is written in hiragana (まつ) since the kanji 末 is not formally taught. Contrast: 毎週 (まいしゅう, every week), 週間 (しゅうかん, a week-long period)."
         }
       ]
     },
@@ -470,6 +477,22 @@
             { "id": "v_iroiro", "form": "attributive_na" },
             "v_iro",
             { "id": "v_suki", "form": "polite_adj" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "______は 家で 晩ごはんを 食べます。",
+          "choices": ["週まつ", "今朝", "朝ごはん", "お茶"],
+          "answer": "週まつ",
+          "explanation": "週まつ (the weekend) is the natural time expression here — on the weekend, you eat dinner at home. 今朝 (this morning) is a morning time, not when you have dinner. 朝ごはん is breakfast (a meal, not a time). お茶 is a drink, not a time expression.",
+          "terms": [
+            "v_shuumatsu",
+            "v_kesa",
+            "v_asagohan",
+            "v_ocha",
+            "v_ie",
+            "v_bangohan",
+            { "id": "v_taberu", "form": "polite_masu" }
           ]
         },
         {
