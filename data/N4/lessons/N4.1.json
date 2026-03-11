@@ -6,18 +6,82 @@
     "phase": 4,
     "lesson": 1,
     "focus": "Everyday action verbs: working, returning home, making things, cutting, wearing, waking up, borrowing, sending, and arriving.",
-    "kanji": ["帰", "作", "使", "借", "働", "送", "起", "着", "切"]
+    "kanji": [
+      "帰",
+      "作",
+      "使",
+      "借",
+      "働",
+      "送",
+      "起",
+      "着",
+      "切"
+    ]
   },
   "newKanji": [
-    { "kanji": "帰", "on": "き", "kun": "かえ(る)", "meaning": "Return / Go home", "termId": "k_kae" },
-    { "kanji": "作", "on": "さく", "kun": "つく(る)", "meaning": "Make / Create", "termId": "k_tsuku" },
-    { "kanji": "使", "on": "し", "kun": "つか(う)", "meaning": "Use", "termId": "k_tsuka" },
-    { "kanji": "借", "on": "しゃく", "kun": "か(りる)", "meaning": "Borrow", "termId": "k_ka_3" },
-    { "kanji": "働", "on": "どう", "kun": "はたら(く)", "meaning": "Work", "termId": "k_hatara" },
-    { "kanji": "送", "on": "そう", "kun": "おく(る)", "meaning": "Send", "termId": "k_oku" },
-    { "kanji": "起", "on": "き", "kun": "お(きる)", "meaning": "Wake up / Rise", "termId": "k_o" },
-    { "kanji": "着", "on": "ちゃく", "kun": "き(る) / つ(く)", "meaning": "Wear / Arrive", "termId": "k_ki_3" },
-    { "kanji": "切", "on": "せつ", "kun": "き(る)", "meaning": "Cut", "termId": "k_ki_4" }
+    {
+      "kanji": "帰",
+      "on": "き",
+      "kun": "かえ(る)",
+      "meaning": "Return / Go home",
+      "termId": "k_kae"
+    },
+    {
+      "kanji": "作",
+      "on": "さく",
+      "kun": "つく(る)",
+      "meaning": "Make / Create",
+      "termId": "k_tsuku"
+    },
+    {
+      "kanji": "使",
+      "on": "し",
+      "kun": "つか(う)",
+      "meaning": "Use",
+      "termId": "k_tsuka"
+    },
+    {
+      "kanji": "借",
+      "on": "しゃく",
+      "kun": "か(りる)",
+      "meaning": "Borrow",
+      "termId": "k_ka_3"
+    },
+    {
+      "kanji": "働",
+      "on": "どう",
+      "kun": "はたら(く)",
+      "meaning": "Work",
+      "termId": "k_hatara"
+    },
+    {
+      "kanji": "送",
+      "on": "そう",
+      "kun": "おく(る)",
+      "meaning": "Send",
+      "termId": "k_oku"
+    },
+    {
+      "kanji": "起",
+      "on": "き",
+      "kun": "お(きる)",
+      "meaning": "Wake up / Rise",
+      "termId": "k_o"
+    },
+    {
+      "kanji": "着",
+      "on": "ちゃく",
+      "kun": "き(る) / つ(く)",
+      "meaning": "Wear / Arrive",
+      "termId": "k_ki_3"
+    },
+    {
+      "kanji": "切",
+      "on": "せつ",
+      "kun": "き(る)",
+      "meaning": "Cut",
+      "termId": "k_ki_4"
+    }
   ],
   "sections": [
     {
@@ -28,7 +92,11 @@
         {
           "jp": "今日の 天気は どうですか。",
           "en": "How is today's weather?",
-          "terms": ["v_kyou", "v_tenki", "v_dou"]
+          "terms": [
+            "v_kyou",
+            "v_tenki",
+            "v_dou"
+          ]
         },
         {
           "jp": "先週、どこへ 行きましたか。",
@@ -36,7 +104,10 @@
           "terms": [
             "v_senshuu",
             "v_doko",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -46,7 +117,10 @@
             "v_mainichi",
             "v_densha",
             "v_gakkou",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -56,8 +130,14 @@
             "v_ima",
             "v_nan",
             "v_hon",
-            { "id": "v_yomu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -71,63 +151,94 @@
           "on": "き",
           "kun": "かえ",
           "meaning": "Return / Go home",
-          "terms": ["k_kae", "v_kaeru", "v_kaerimichi"]
+          "terms": [
+            "k_kae",
+            "v_kaeru",
+            "v_kaerimichi"
+          ]
         },
         {
           "kanji": "作",
           "on": "さく",
           "kun": "つく",
           "meaning": "Make / Create",
-          "terms": ["k_tsuku", "v_tsukuru"]
+          "terms": [
+            "k_tsuku",
+            "v_tsukuru"
+          ]
         },
         {
           "kanji": "使",
           "on": "し",
           "kun": "つか",
           "meaning": "Use",
-          "terms": ["k_tsuka", "v_tsukau"]
+          "terms": [
+            "k_tsuka",
+            "v_tsukau"
+          ]
         },
         {
           "kanji": "借",
           "on": "しゃく",
           "kun": "か",
           "meaning": "Borrow",
-          "terms": ["k_ka_3", "v_kariru", "v_shakkin"]
+          "terms": [
+            "k_ka_3",
+            "v_kariru",
+            "v_shakkin"
+          ]
         },
         {
           "kanji": "働",
           "on": "どう",
           "kun": "はたら",
           "meaning": "Work",
-          "terms": ["k_hatara", "v_hataraku"]
+          "terms": [
+            "k_hatara",
+            "v_hataraku"
+          ]
         },
         {
           "kanji": "送",
           "on": "そう",
           "kun": "おく",
           "meaning": "Send",
-          "terms": ["k_oku", "v_okuru"]
+          "terms": [
+            "k_oku",
+            "v_okuru"
+          ]
         },
         {
           "kanji": "起",
           "on": "き",
           "kun": "お",
           "meaning": "Wake up / Rise",
-          "terms": ["k_o", "v_okiru"]
+          "terms": [
+            "k_o",
+            "v_okiru"
+          ]
         },
         {
           "kanji": "着",
           "on": "ちゃく",
           "kun": "き / つ",
           "meaning": "Wear / Arrive",
-          "terms": ["k_ki_3", "v_kiru", "v_tsuku"]
+          "terms": [
+            "k_ki_3",
+            "v_kiru",
+            "v_tsuku"
+          ]
         },
         {
           "kanji": "切",
           "on": "せつ",
           "kun": "き",
           "meaning": "Cut",
-          "terms": ["k_ki_4", "v_kiru_2", "v_kitte"]
+          "terms": [
+            "k_ki_4",
+            "v_kiru_2",
+            "v_kitte"
+          ]
         }
       ]
     },
@@ -137,15 +248,34 @@
       "groups": [
         {
           "label": "Work & Movement",
-          "items": ["v_hataraku", "v_kaeru", "v_okiru", "v_tsuku"]
+          "items": [
+            "v_hataraku",
+            "v_kaeru",
+            "v_okiru",
+            "v_tsuku"
+          ]
         },
         {
           "label": "Making, Using & Sending",
-          "items": ["v_tsukuru", "v_tsukau", "v_kiru", "v_kiru_2", "v_okuru", "v_kariru"]
+          "items": [
+            "v_tsukuru",
+            "v_tsukau",
+            "v_kiru",
+            "v_kiru_2",
+            "v_okuru",
+            "v_kariru"
+          ]
         },
         {
           "label": "Nouns & Key Words",
-          "items": ["v_kaerimichi", "v_kaeri", "v_shatsu", "v_kitte", "v_shakkin", "v_taisetsu"]
+          "items": [
+            "v_kaerimichi",
+            "v_kaeri",
+            "v_shatsu",
+            "v_kitte",
+            "v_shakkin",
+            "v_taisetsu"
+          ]
         }
       ]
     },
@@ -162,7 +292,10 @@
             "v_kyou",
             "v_nanji",
             "v_kaisha",
-            { "id": "v_hataraku", "form": "polite_mashita" }
+            {
+              "id": "v_hataraku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -170,7 +303,10 @@
           "jp": "六時まで 働きました。長い 一日でした。",
           "en": "I worked until 6. It was a long day.",
           "terms": [
-            { "id": "v_hataraku", "form": "polite_mashita" },
+            {
+              "id": "v_hataraku",
+              "form": "polite_mashita"
+            },
             "v_nagai",
             "v_ichinichi"
           ]
@@ -191,9 +327,15 @@
           "terms": [
             "v_ima",
             "v_densha",
-            { "id": "v_kaeru", "form": "polite_masu" },
+            {
+              "id": "v_kaeru",
+              "form": "polite_masu"
+            },
             "v_eki",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -211,7 +353,10 @@
             "char_rikizo",
             "v_san",
             "v_sakana",
-            { "id": "v_kiru_2", "form": "te_form" }
+            {
+              "id": "v_kiru_2",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -219,8 +364,14 @@
           "jp": "はい。大きく 切りますか。",
           "en": "Sure. Should I cut it into large pieces?",
           "terms": [
-            { "id": "v_ookii", "form": "adverbial" },
-            { "id": "v_kiru_2", "form": "polite_masu" }
+            {
+              "id": "v_ookii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_kiru_2",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -228,8 +379,14 @@
           "jp": "いいえ、小さく 切ってください。",
           "en": "No, please cut it into small pieces.",
           "terms": [
-            { "id": "v_chiisai", "form": "adverbial" },
-            { "id": "v_kiru_2", "form": "te_form" }
+            {
+              "id": "v_chiisai",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_kiru_2",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -237,70 +394,103 @@
           "jp": "わかりました。小さく 切って、いっしょに 作りましょう！",
           "en": "Understood. Let's cut it small and make it together!",
           "terms": [
-            { "id": "v_wakaru", "form": "polite_mashita" },
-            { "id": "v_chiisai", "form": "adverbial" },
-            { "id": "v_kiru_2", "form": "te_form" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            },
+            {
+              "id": "v_chiisai",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_kiru_2",
+              "form": "te_form"
+            },
             "v_issho",
-            { "id": "v_tsukuru", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_tsukuru",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 3（会話）: Morning Routines (Casual)",
-      "context": "Two friends chatting about their daily morning schedule.",
+      "title": "Conversation Practice 3（会話）: Morning Routines",
+      "context": "Two classmates chat about their daily morning schedule before class.",
       "lines": [
         {
           "spk": "A",
-          "jp": "毎日 何時に 起きる？",
+          "jp": "毎日 何時に 起きますか。",
           "en": "What time do you wake up every day?",
           "terms": [
             "v_mainichi",
             "v_nanji",
-            { "id": "v_okiru", "form": null }
+            {
+              "id": "v_okiru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "spk": "B",
-          "jp": "六時半に 起きるよ。シャツを 着て、電車で 学校へ 行く。",
+          "jp": "六時半に 起きます。シャツを 着て、電車で 学校へ 行きます。",
           "en": "I wake up at 6:30. I put on a shirt and go to school by train.",
           "terms": [
-            { "id": "v_okiru", "form": null },
+            {
+              "id": "v_okiru",
+              "form": "polite_masu"
+            },
             "v_shatsu",
-            { "id": "v_kiru", "form": "te_form" },
+            {
+              "id": "v_kiru",
+              "form": "te_form"
+            },
             "v_densha",
             "v_gakkou",
-            { "id": "v_iku", "form": null }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "spk": "A",
-          "jp": "電車、毎日 使うの？ 帰り道も 電車？",
-          "en": "Do you use the train every day? And the train on the way home too?",
+          "jp": "毎日 電車を 使いますか。帰り道も 電車ですか。",
+          "en": "Do you use the train every day? Is the way home by train too?",
           "terms": [
-            "v_densha",
             "v_mainichi",
-            { "id": "v_tsukau", "form": null },
+            "v_densha",
+            {
+              "id": "v_tsukau",
+              "form": "polite_masu"
+            },
             "v_kaerimichi",
             "v_densha"
           ]
         },
         {
           "spk": "B",
-          "jp": "いつも 電車だよ。友だちに 本を 送りたいから、帰りに 駅で 切手を 買う。",
-          "en": "It's always the train. I want to send a book to a friend, so I'll buy stamps at the station on the way home.",
+          "jp": "いつも 電車です。友だちに 本を 送りたいですから、帰りに 駅で 切手を 買います。",
+          "en": "It's always the train. Since I want to send a book to a friend, I'll buy stamps at the station on the way home.",
           "terms": [
             "v_itsumo",
             "v_densha",
-            "g_da",
             "v_tomodachi",
             "v_hon",
-            { "id": "v_okuru", "form": "plain_desire_tai" },
+            {
+              "id": "v_okuru",
+              "form": "desire_tai"
+            },
+            "p_kara_because",
             "v_kaeri",
             "v_eki",
             "v_kitte",
-            { "id": "v_kau", "form": null }
+            {
+              "id": "v_kau",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -316,7 +506,10 @@
           "en": "I have a debt.",
           "terms": [
             "v_shakkin",
-            { "id": "v_aru", "form": null }
+            {
+              "id": "v_aru",
+              "form": null
+            }
           ]
         },
         {
@@ -325,7 +518,10 @@
           "en": "How much? That's an important matter.",
           "terms": [
             "v_ikura",
-            { "id": "v_taisetsu", "form": "attributive_na" },
+            {
+              "id": "v_taisetsu",
+              "form": "attributive_na"
+            },
             "v_koto",
             "g_da"
           ]
@@ -335,7 +531,10 @@
           "jp": "五万円。働かないと。",
           "en": "50,000 yen. I've got to work.",
           "terms": [
-            { "id": "v_hataraku", "form": "plain_negative" }
+            {
+              "id": "v_hataraku",
+              "form": "plain_negative"
+            }
           ]
         },
         {
@@ -345,11 +544,20 @@
           "terms": [
             "v_issho",
             "v_kaisha",
-            { "id": "v_hataraku", "form": "plain_volitional" },
+            {
+              "id": "v_hataraku",
+              "form": "plain_volitional"
+            },
             "v_tomodachi",
             "v_okane",
-            { "id": "v_kariru", "form": null },
-            { "id": "v_ii", "form": "plain_negative" }
+            {
+              "id": "v_kariru",
+              "form": null
+            },
+            {
+              "id": "v_ii",
+              "form": "plain_negative"
+            }
           ]
         }
       ]
@@ -365,8 +573,14 @@
             "char_rikizo",
             "v_mainichi",
             "v_kaisha",
-            { "id": "v_hataraku", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_hataraku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -376,10 +590,16 @@
             "v_kaisha",
             "v_pasokon",
             "v_yoku",
-            { "id": "v_tsukau", "form": "polite_masu" },
+            {
+              "id": "v_tsukau",
+              "form": "polite_masu"
+            },
             "v_mainichi",
             "v_takusan",
-            { "id": "v_hataraku", "form": "polite_masu" }
+            {
+              "id": "v_hataraku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -387,9 +607,15 @@
           "en": "He leaves the company at 6 and goes home by train.",
           "terms": [
             "v_kaisha",
-            { "id": "v_deru", "form": "te_form" },
+            {
+              "id": "v_deru",
+              "form": "te_form"
+            },
             "v_densha",
-            { "id": "v_kaeru", "form": "polite_masu" }
+            {
+              "id": "v_kaeru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -405,11 +631,20 @@
           "en": "He arrives home and eats fish. It is a very important time.",
           "terms": [
             "v_ie",
-            { "id": "v_tsuku", "form": "te_form" },
+            {
+              "id": "v_tsuku",
+              "form": "te_form"
+            },
             "v_sakana",
-            { "id": "v_taberu", "form": "polite_masu" },
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            },
             "v_totemo",
-            { "id": "v_taisetsu", "form": "attributive_na" },
+            {
+              "id": "v_taisetsu",
+              "form": "attributive_na"
+            },
             "v_jikan"
           ]
         }
@@ -422,8 +657,14 @@
             "char_rikizo",
             "v_doko",
             "v_kaisha",
-            { "id": "v_hataraku", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_hataraku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -433,7 +674,10 @@
             "v_kaisha",
             "v_nani",
             "v_pasokon",
-            { "id": "v_tsukau", "form": "polite_masu" }
+            {
+              "id": "v_tsukau",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -450,10 +694,16 @@
           "a": "魚を 食べます。",
           "terms": [
             "v_ie",
-            { "id": "v_tsuku", "form": "te_form" },
+            {
+              "id": "v_tsuku",
+              "form": "te_form"
+            },
             "v_nani",
             "v_sakana",
-            { "id": "v_taberu", "form": "polite_masu" }
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -468,16 +718,25 @@
           "terms": [
             "v_watashi",
             "v_mainichi",
-            { "id": "v_okiru", "form": "polite_masu" }
+            {
+              "id": "v_okiru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "jp": "起きて、シャツを 着ます。",
           "en": "I wake up and put on a shirt.",
           "terms": [
-            { "id": "v_okiru", "form": "te_form" },
+            {
+              "id": "v_okiru",
+              "form": "te_form"
+            },
             "v_shatsu",
-            { "id": "v_kiru", "form": "polite_masu" }
+            {
+              "id": "v_kiru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -487,7 +746,10 @@
             "v_kyou",
             "v_tomodachi",
             "v_hon",
-            { "id": "v_okuru", "form": "desire_tai" }
+            {
+              "id": "v_okuru",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -495,9 +757,15 @@
           "en": "I will go to the station to buy stamps.",
           "terms": [
             "v_kitte",
-            { "id": "v_kau", "form": null },
+            {
+              "id": "v_kau",
+              "form": null
+            },
             "v_eki",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -505,9 +773,15 @@
           "en": "I arrived at the station and bought the stamps.",
           "terms": [
             "v_eki",
-            { "id": "v_tsuku", "form": "te_form" },
+            {
+              "id": "v_tsuku",
+              "form": "te_form"
+            },
             "v_kitte",
-            { "id": "v_kau", "form": "polite_mashita" }
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            }
           ]
         }
       ],
@@ -518,18 +792,30 @@
           "terms": [
             "v_mainichi",
             "v_nanji",
-            { "id": "v_okiru", "form": "polite_masu" }
+            {
+              "id": "v_okiru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "起きて、何を しますか。",
           "a": "シャツを 着ます。",
           "terms": [
-            { "id": "v_okiru", "form": "te_form" },
+            {
+              "id": "v_okiru",
+              "form": "te_form"
+            },
             "v_nani",
-            { "id": "v_suru", "form": "polite_masu" },
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
             "v_shatsu",
-            { "id": "v_kiru", "form": "polite_masu" }
+            {
+              "id": "v_kiru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -540,7 +826,10 @@
             "v_tomodachi",
             "v_nani",
             "v_hon",
-            { "id": "v_okuru", "form": "desire_tai" }
+            {
+              "id": "v_okuru",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -549,9 +838,15 @@
           "terms": [
             "v_doko",
             "v_kitte",
-            { "id": "v_kau", "form": null },
+            {
+              "id": "v_kau",
+              "form": null
+            },
             "v_eki",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -564,28 +859,48 @@
         {
           "kind": "mcq",
           "q": "帰る [かえる]",
-          "choices": ["to return home", "to work", "to borrow", "to send"],
+          "choices": [
+            "to return home",
+            "to work",
+            "to borrow",
+            "to send"
+          ],
           "answer": "to return home",
           "terms": []
         },
         {
           "kind": "mcq",
           "q": "借りる [かりる]",
-          "choices": ["to borrow", "to cut", "to wear", "to wake up"],
+          "choices": [
+            "to borrow",
+            "to cut",
+            "to wear",
+            "to wake up"
+          ],
           "answer": "to borrow",
           "terms": []
         },
         {
           "kind": "mcq",
           "q": "切手 [きって]",
-          "choices": ["postage stamp", "scissors", "debt", "envelope"],
+          "choices": [
+            "postage stamp",
+            "scissors",
+            "debt",
+            "envelope"
+          ],
           "answer": "postage stamp",
           "terms": []
         },
         {
           "kind": "mcq",
           "q": "借金 [しゃっきん]",
-          "choices": ["debt", "wages", "savings", "company"],
+          "choices": [
+            "debt",
+            "wages",
+            "savings",
+            "company"
+          ],
           "answer": "debt",
           "terms": []
         }
@@ -599,44 +914,79 @@
         {
           "kind": "mcq",
           "q": "魚を 小さく ______ ください。",
-          "choices": ["切って", "帰って", "起きて", "着て"],
+          "choices": [
+            "切って",
+            "帰って",
+            "起きて",
+            "着て"
+          ],
           "answer": "切って",
           "terms": [
             "v_sakana",
-            { "id": "v_chiisai", "form": "adverbial" },
-            { "id": "v_kiru_2", "form": "te_form" }
+            {
+              "id": "v_chiisai",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_kiru_2",
+              "form": "te_form"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "毎日 六時まで 会社で ______。",
-          "choices": ["働きます", "帰ります", "借ります", "起きます"],
+          "choices": [
+            "働きます",
+            "帰ります",
+            "借ります",
+            "起きます"
+          ],
           "answer": "働きます",
           "terms": [
             "v_mainichi",
             "v_kaisha",
-            { "id": "v_hataraku", "form": "polite_masu" }
+            {
+              "id": "v_hataraku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "電車で 家に ______。",
-          "choices": ["着きます", "使います", "切ります", "借ります"],
+          "choices": [
+            "着きます",
+            "使います",
+            "切ります",
+            "借ります"
+          ],
           "answer": "着きます",
           "terms": [
             "v_densha",
             "v_ie",
-            { "id": "v_tsuku", "form": "polite_masu" }
+            {
+              "id": "v_tsuku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "この パソコンを ______ ください。",
-          "choices": ["使って", "切って", "着て", "送って"],
+          "choices": [
+            "使って",
+            "切って",
+            "着て",
+            "送って"
+          ],
           "answer": "使って",
           "terms": [
             "v_pasokon",
-            { "id": "v_tsukau", "form": "te_form" }
+            {
+              "id": "v_tsukau",
+              "form": "te_form"
+            }
           ]
         }
       ]

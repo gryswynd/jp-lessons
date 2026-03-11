@@ -7,7 +7,14 @@
     "lesson_number": 7,
     "focus": "Family members — siblings, parents, and relationship vocabulary; polite vs. plain family terms",
     "estimated_minutes": 45,
-    "kanji": ["族", "親", "兄", "姉", "妹", "弟"]
+    "kanji": [
+      "族",
+      "親",
+      "兄",
+      "姉",
+      "妹",
+      "弟"
+    ]
   },
   "newKanji": [
     {
@@ -61,7 +68,10 @@
             "p_wa",
             "v_yasai",
             "p_yori",
-            { "id": "v_oishii", "form": "polite_adj" },
+            {
+              "id": "v_oishii",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -74,7 +84,10 @@
             "p_ni",
             "v_nan",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_mashita" },
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -85,8 +98,14 @@
             "v_mainichi",
             "v_ryouri",
             "p_wo",
-            { "id": "v_tsukuru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_tsukuru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -99,7 +118,10 @@
             "p_to",
             "v_doko",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" },
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         }
@@ -112,42 +134,54 @@
         {
           "kanji": "族",
           "meaning": "family / tribe",
-          "terms": ["k_zoku"],
+          "terms": [
+            "k_zoku"
+          ],
           "on": "ぞく",
           "kun": "(なし)"
         },
         {
           "kanji": "親",
           "meaning": "parent; intimacy",
-          "terms": ["k_oya"],
+          "terms": [
+            "k_oya"
+          ],
           "on": "しん",
           "kun": "おや / した(しい)"
         },
         {
           "kanji": "兄",
           "meaning": "older brother",
-          "terms": ["k_ani"],
+          "terms": [
+            "k_ani"
+          ],
           "on": "けい / きょう",
           "kun": "あに"
         },
         {
           "kanji": "姉",
           "meaning": "older sister",
-          "terms": ["k_ane"],
+          "terms": [
+            "k_ane"
+          ],
           "on": "し",
           "kun": "あね"
         },
         {
           "kanji": "妹",
           "meaning": "younger sister",
-          "terms": ["k_imouto"],
+          "terms": [
+            "k_imouto"
+          ],
           "on": "まい",
           "kun": "いもうと"
         },
         {
           "kanji": "弟",
           "meaning": "younger brother",
-          "terms": ["k_otouto"],
+          "terms": [
+            "k_otouto"
+          ],
           "on": "だい",
           "kun": "おとうと"
         }
@@ -159,19 +193,33 @@
       "groups": [
         {
           "label": "Family (General)",
-          "items": ["v_kazoku", "v_kyoudai", "v_oya"]
+          "items": [
+            "v_kazoku",
+            "v_kyoudai",
+            "v_oya"
+          ]
         },
         {
           "label": "Older Siblings (Own / Polite)",
-          "items": ["v_ani", "v_oniisan", "v_ane", "v_oneesan"]
+          "items": [
+            "v_ani",
+            "v_oniisan",
+            "v_ane",
+            "v_oneesan"
+          ]
         },
         {
           "label": "Younger Siblings",
-          "items": ["v_imouto", "v_otouto"]
+          "items": [
+            "v_imouto",
+            "v_otouto"
+          ]
         },
         {
           "label": "Personality",
-          "items": ["v_shinsetsu"]
+          "items": [
+            "v_shinsetsu"
+          ]
         }
       ]
     },
@@ -202,7 +250,10 @@
             "p_to",
             "v_ani",
             "p_ga",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -224,11 +275,20 @@
             "v_ani",
             "p_wa",
             "v_totemo",
-            { "id": "v_shinsetsu", "form": "polite_adj" },
+            {
+              "id": "v_shinsetsu",
+              "form": "polite_adj"
+            },
             "v_kaisha",
             "p_de",
-            { "id": "v_hataraku", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_hataraku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -245,7 +305,10 @@
             "p_to",
             "v_otouto",
             "p_ga",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -255,7 +318,10 @@
           "terms": [
             "v_kyoudai",
             "p_ga",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ne"
           ]
         }
@@ -275,7 +341,10 @@
             "p_to",
             "v_oniisan",
             "p_to",
-            { "id": "v_shinsetsu", "form": "polite_adj" },
+            {
+              "id": "v_shinsetsu",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -288,14 +357,23 @@
             "p_wa",
             "v_ani",
             "p_yori",
-            { "id": "v_shinsetsu", "form": "polite_adj" },
+            {
+              "id": "v_shinsetsu",
+              "form": "polite_adj"
+            },
             "v_mainichi",
             "v_watashi",
             "p_ni",
             "v_ryouri",
             "p_wo",
-            { "id": "v_tsukuru", "form": "te_form" },
-            { "id": "v_kureru", "form": "polite_masu" }
+            {
+              "id": "v_tsukuru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kureru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -310,7 +388,10 @@
             "v_ichiban",
             "v_ryouri",
             "p_ga",
-            { "id": "v_jouzu", "form": "attributive_na" },
+            {
+              "id": "v_jouzu",
+              "form": "attributive_na"
+            },
             "v_hito",
             "p_wa",
             "v_dare",
@@ -325,13 +406,19 @@
             "v_ane",
             "p_ga",
             "v_ichiban",
-            { "id": "v_jouzu", "form": "polite_adj" },
+            {
+              "id": "v_jouzu",
+              "form": "polite_adj"
+            },
             "v_ane",
             "p_no",
             "v_ryouri",
             "p_wa",
             "v_totemo",
-            { "id": "v_oishii", "form": "polite_adj" },
+            {
+              "id": "v_oishii",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         },
@@ -343,7 +430,10 @@
             "v_imouto",
             "v_otouto",
             "p_ga",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -355,27 +445,37 @@
             "v_imouto",
             "p_ga",
             "v_hitori",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "v_mada",
-            { "id": "v_chiisai", "form": "polite_adj" },
+            {
+              "id": "v_chiisai",
+              "form": "polite_adj"
+            },
             "p_ga_but",
             "v_totemo",
-            { "id": "v_kawaii", "form": "polite_adj" }
+            {
+              "id": "v_kawaii",
+              "form": "polite_adj"
+            }
           ]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation 3: My Older Brother (Casual)",
-      "context": "Two close friends talking casually about their older brothers after school.",
+      "title": "Conversation 3: My Older Brother",
+      "context": "Two classmates talk about their older brothers after school.",
       "lines": [
         {
           "spk": "A",
-          "jp": "けんの お兄さんは どんな 人？",
-          "en": "What's your older brother like, Ken?",
+          "jp": "けんさんの お兄さんは どんな 人ですか。",
+          "en": "What is your older brother like, Ken?",
           "terms": [
             "char_ken",
+            "v_san",
             "p_no",
             "v_oniisan",
             "p_wa",
@@ -385,80 +485,105 @@
         },
         {
           "spk": "B",
-          "jp": "兄は とても 親切だよ。私に ご飯を 作って くれる。",
+          "jp": "兄は とても 親切です。私に ご飯を 作って くれます。",
           "en": "My brother is really kind. He makes food for me.",
           "terms": [
             "v_ani",
             "p_wa",
             "v_totemo",
-            { "id": "v_shinsetsu", "form": null },
-            "g_da",
-            "p_yo",
+            {
+              "id": "v_shinsetsu",
+              "form": "polite_adj"
+            },
             "v_watashi",
             "p_ni",
             "v_gohan",
             "p_wo",
-            { "id": "v_tsukuru", "form": "te_form" },
-            { "id": "v_kureru", "form": null }
+            {
+              "id": "v_tsukuru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kureru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "spk": "A",
-          "jp": "いいな。私の 兄は あまり 家に 帰らない。",
-          "en": "Nice. My older brother doesn't come home much.",
+          "jp": "いいですね。私の 兄は あまり 家に 帰りません。",
+          "en": "That's nice. My older brother doesn't come home much.",
           "terms": [
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "v_watashi",
             "p_no",
             "v_ani",
             "p_wa",
             "v_ie",
             "p_ni",
-            { "id": "v_kaeru", "form": "plain_negative" }
+            {
+              "id": "v_kaeru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
           "spk": "B",
-          "jp": "そう？ 会社で 毎日 働いて いるの？",
+          "jp": "そうですか。会社で 毎日 働いて いますか。",
           "en": "Really? Does he work at a company every day?",
           "terms": [
             "v_kaisha",
             "p_de",
             "v_mainichi",
-            { "id": "v_hataraku", "form": "te_form" },
-            { "id": "v_iru", "form": null },
-            "p_no"
+            {
+              "id": "v_hataraku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "spk": "A",
-          "jp": "うん。兄と いっしょに ご飯を 食べたいよ。",
-          "en": "Yeah. I want to eat together with my brother.",
+          "jp": "はい。兄と いっしょに ご飯を 食べたいです。",
+          "en": "Yes. I want to eat together with my brother.",
           "terms": [
-            "v_un",
             "v_ani",
             "p_to",
             "v_issho",
             "p_ni",
             "v_gohan",
             "p_wo",
-            { "id": "v_taberu", "form": "plain_desire_tai" },
-            "p_yo"
+            {
+              "id": "v_taberu",
+              "form": "desire_tai"
+            }
           ]
         },
         {
           "spk": "B",
-          "jp": "家族と ご飯を 食べるのは いいね。",
+          "jp": "家族と ご飯を 食べるのは いいですね。",
           "en": "Eating together with family is nice.",
           "terms": [
             "v_kazoku",
             "p_to",
             "v_gohan",
             "p_wo",
-            { "id": "v_taberu", "form": null },
+            {
+              "id": "v_taberu",
+              "form": null
+            },
             "p_no",
             "p_wa",
-            { "id": "v_ii", "form": null },
-            "p_ne"
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         }
       ]
@@ -477,7 +602,10 @@
             "v_kyou",
             "v_nani",
             "p_ka",
-            { "id": "v_taberu", "form": "plain_desire_tai" }
+            {
+              "id": "v_taberu",
+              "form": "plain_desire_tai"
+            }
           ]
         },
         {
@@ -490,7 +618,10 @@
             "v_karee",
             "p_ga",
             "v_ichiban",
-            { "id": "v_suki", "form": null }
+            {
+              "id": "v_suki",
+              "form": null
+            }
           ]
         },
         {
@@ -500,7 +631,10 @@
           "terms": [
             "v_issho",
             "p_ni",
-            { "id": "v_tsukuru", "form": "plain_volitional" },
+            {
+              "id": "v_tsukuru",
+              "form": "plain_volitional"
+            },
             "p_ka"
           ]
         },
@@ -513,9 +647,15 @@
             "p_no",
             "v_ryouri",
             "v_ichiban",
-            { "id": "v_oishii", "form": null },
+            {
+              "id": "v_oishii",
+              "form": null
+            },
             "p_kara_because",
-            { "id": "v_suki", "form": null }
+            {
+              "id": "v_suki",
+              "form": null
+            }
           ]
         },
         {
@@ -524,7 +664,10 @@
           "en": "Goodness, I'm so happy!",
           "terms": [
             "v_mou",
-            { "id": "v_ureshii", "form": null },
+            {
+              "id": "v_ureshii",
+              "form": null
+            },
             "p_yo"
           ]
         },
@@ -534,7 +677,10 @@
           "en": "Because it's always delicious!",
           "terms": [
             "v_itsumo",
-            { "id": "v_oishii", "form": null },
+            {
+              "id": "v_oishii",
+              "form": null
+            },
             "p_kara_because"
           ]
         }
@@ -571,12 +717,21 @@
             "v_ima",
             "v_kaisha",
             "p_de",
-            { "id": "v_hataraku", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_hataraku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "v_oya",
             "p_wa",
             "v_ie",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -589,13 +744,19 @@
             "p_yori",
             "v_ryouri",
             "p_ga",
-            { "id": "v_jouzu", "form": "polite_adj" },
+            {
+              "id": "v_jouzu",
+              "form": "polite_adj"
+            },
             "v_kazoku",
             "p_no",
             "v_naka",
             "p_de",
             "v_ichiban",
-            { "id": "v_jouzu", "form": "polite_adj" }
+            {
+              "id": "v_jouzu",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -605,10 +766,16 @@
             "v_imouto",
             "p_wa",
             "v_mada",
-            { "id": "v_chiisai", "form": "polite_adj" },
+            {
+              "id": "v_chiisai",
+              "form": "polite_adj"
+            },
             "p_ga_but",
             "v_totemo",
-            { "id": "v_kawaii", "form": "te_form" }
+            {
+              "id": "v_kawaii",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -617,12 +784,18 @@
           "terms": [
             "v_shuumatsu",
             "p_wa",
-            { "id": "v_au", "form": "te_form" },
+            {
+              "id": "v_au",
+              "form": "te_form"
+            },
             "v_issho",
             "p_ni",
             "v_gohan",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_masu" }
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -642,7 +815,10 @@
             "v_ane",
             "v_ani",
             "v_ryouri",
-            { "id": "v_jouzu", "form": "polite_adj" }
+            {
+              "id": "v_jouzu",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -652,7 +828,10 @@
             "v_shuumatsu",
             "v_kazoku",
             "v_gohan",
-            { "id": "v_taberu", "form": "polite_masu" }
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -670,7 +849,10 @@
             "v_ane",
             "p_wa",
             "v_totemo",
-            { "id": "v_shinsetsu", "form": null },
+            {
+              "id": "v_shinsetsu",
+              "form": null
+            },
             "v_yasashii",
             "v_hito"
           ]
@@ -685,13 +867,22 @@
             "p_yori",
             "v_ryouri",
             "p_ga",
-            { "id": "v_jouzu", "form": "polite_adj" },
+            {
+              "id": "v_jouzu",
+              "form": "polite_adj"
+            },
             "p_de",
             "v_tokidoki",
             "v_karee",
             "p_wo",
-            { "id": "v_tsukuru", "form": "te_form" },
-            { "id": "v_kureru", "form": "polite_masu" }
+            {
+              "id": "v_tsukuru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kureru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -703,8 +894,14 @@
             "v_ima",
             "v_kaisha",
             "p_de",
-            { "id": "v_hataraku", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_hataraku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -714,13 +911,22 @@
             "v_mainichi",
             "v_denwa",
             "p_de",
-            { "id": "v_hanasu", "form": "polite_masu" },
+            {
+              "id": "v_hanasu",
+              "form": "polite_masu"
+            },
             "v_ane",
             "p_to",
-            { "id": "v_hanasu", "form": null },
+            {
+              "id": "v_hanasu",
+              "form": null
+            },
             "p_no",
             "p_ga",
-            { "id": "v_daisuki", "form": "polite_adj" }
+            {
+              "id": "v_daisuki",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -730,12 +936,18 @@
             "v_raishuu",
             "v_ane",
             "p_ga",
-            { "id": "v_kaeru", "form": "te_form" },
+            {
+              "id": "v_kaeru",
+              "form": "te_form"
+            },
             "v_issho",
             "p_ni",
             "v_kaimono",
             "p_ni",
-            { "id": "v_iku", "form": "desire_tai" }
+            {
+              "id": "v_iku",
+              "form": "desire_tai"
+            }
           ]
         }
       ],
@@ -746,7 +958,10 @@
           "terms": [
             "v_ane",
             "v_ryouri",
-            { "id": "v_jouzu", "form": "polite_adj" }
+            {
+              "id": "v_jouzu",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -755,8 +970,14 @@
           "terms": [
             "v_ane",
             "v_kaisha",
-            { "id": "v_hataraku", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_hataraku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -766,7 +987,10 @@
             "v_raishuu",
             "v_issho",
             "v_kaimono",
-            { "id": "v_iku", "form": "desire_tai" }
+            {
+              "id": "v_iku",
+              "form": "desire_tai"
+            }
           ]
         }
       ]
@@ -779,25 +1003,45 @@
         {
           "kind": "mcq",
           "q": "私の【兄】は 会社で 働いて います。",
-          "choices": ["あに", "おとうと", "おにいさん", "いもうと"],
+          "choices": [
+            "あに",
+            "おとうと",
+            "おにいさん",
+            "いもうと"
+          ],
           "answer": "あに"
         },
         {
           "kind": "mcq",
           "q": "【妹】は まだ 小学生です。",
-          "choices": ["いもうと", "おとうと", "あね", "あに"],
+          "choices": [
+            "いもうと",
+            "おとうと",
+            "あね",
+            "あに"
+          ],
           "answer": "いもうと"
         },
         {
           "kind": "mcq",
           "q": "【親切】な 人ですね。",
-          "choices": ["しんせつ", "おやせつ", "しんきり", "おやきり"],
+          "choices": [
+            "しんせつ",
+            "おやせつ",
+            "しんきり",
+            "おやきり"
+          ],
           "answer": "しんせつ"
         },
         {
           "kind": "mcq",
           "q": "【兄弟】は 何人 いますか。",
-          "choices": ["きょうだい", "あにおとうと", "おにいさん", "かぞく"],
+          "choices": [
+            "きょうだい",
+            "あにおとうと",
+            "おにいさん",
+            "かぞく"
+          ],
           "answer": "きょうだい"
         }
       ]
@@ -810,30 +1054,61 @@
         {
           "kind": "mcq",
           "q": "私の _______ は ４人です。父と 母と 兄と 私です。",
-          "choices": ["家族", "兄弟", "親切", "姉妹"],
+          "choices": [
+            "家族",
+            "兄弟",
+            "親切",
+            "姉妹"
+          ],
           "answer": "家族",
-          "terms": ["v_kazoku"]
+          "terms": [
+            "v_kazoku"
+          ]
         },
         {
           "kind": "mcq",
           "q": "父と 母は 私の _______ です。",
-          "choices": ["親", "兄", "弟", "家族"],
+          "choices": [
+            "親",
+            "兄",
+            "弟",
+            "家族"
+          ],
           "answer": "親",
-          "terms": ["v_oya"]
+          "terms": [
+            "v_oya"
+          ]
         },
         {
           "kind": "mcq",
           "q": "_______ さんは どんな 人ですか。（だれかの 姉について 聞く）",
-          "choices": ["お姉", "姉", "お兄", "妹"],
+          "choices": [
+            "お姉",
+            "姉",
+            "お兄",
+            "妹"
+          ],
           "answer": "お姉",
-          "terms": ["v_oneesan"]
+          "terms": [
+            "v_oneesan"
+          ]
         },
         {
           "kind": "mcq",
           "q": "中川さんは とても _______ な 人です。",
-          "choices": ["親切", "家族", "兄弟", "親"],
+          "choices": [
+            "親切",
+            "家族",
+            "兄弟",
+            "親"
+          ],
           "answer": "親切",
-          "terms": [{ "id": "v_shinsetsu", "form": "attributive_na" }]
+          "terms": [
+            {
+              "id": "v_shinsetsu",
+              "form": "attributive_na"
+            }
+          ]
         }
       ]
     },
@@ -845,30 +1120,89 @@
         {
           "kind": "mcq",
           "q": "姉 ______ 兄より 料理が 上手です。",
-          "choices": ["は", "が", "の", "を"],
+          "choices": [
+            "は",
+            "が",
+            "の",
+            "を"
+          ],
           "answer": "は",
-          "terms": ["v_ane", "v_ani", "p_yori", "v_ryouri", { "id": "v_jouzu", "form": "polite_adj" }]
+          "terms": [
+            "v_ane",
+            "v_ani",
+            "p_yori",
+            "v_ryouri",
+            {
+              "id": "v_jouzu",
+              "form": "polite_adj"
+            }
+          ]
         },
         {
           "kind": "mcq",
           "q": "妹は 私 ______ 料理を 作って くれます。",
-          "choices": ["に", "を", "で", "と"],
+          "choices": [
+            "に",
+            "を",
+            "で",
+            "と"
+          ],
           "answer": "に",
-          "terms": ["v_imouto", "v_watashi", "v_ryouri", { "id": "v_tsukuru", "form": "te_form" }, { "id": "v_kureru", "form": "polite_masu" }]
+          "terms": [
+            "v_imouto",
+            "v_watashi",
+            "v_ryouri",
+            {
+              "id": "v_tsukuru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kureru",
+              "form": "polite_masu"
+            }
+          ]
         },
         {
           "kind": "mcq",
           "q": "家族の 中で、兄が _______ 親切です。",
-          "choices": ["いちばん", "より", "ほど", "もっと"],
+          "choices": [
+            "いちばん",
+            "より",
+            "ほど",
+            "もっと"
+          ],
           "answer": "いちばん",
-          "terms": ["v_kazoku", "v_naka", "v_ani", "v_ichiban", { "id": "v_shinsetsu", "form": "polite_adj" }]
+          "terms": [
+            "v_kazoku",
+            "v_naka",
+            "v_ani",
+            "v_ichiban",
+            {
+              "id": "v_shinsetsu",
+              "form": "polite_adj"
+            }
+          ]
         },
         {
           "kind": "mcq",
           "q": "カレーは ご飯 ______ 好きです。",
-          "choices": ["ほど", "より", "だけ", "まで"],
+          "choices": [
+            "ほど",
+            "より",
+            "だけ",
+            "まで"
+          ],
           "answer": "ほど",
-          "terms": ["v_karee", "p_wa", "v_gohan", "p_hodo", { "id": "v_suki", "form": "polite_adj" }]
+          "terms": [
+            "v_karee",
+            "p_wa",
+            "v_gohan",
+            "p_hodo",
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            }
+          ]
         }
       ]
     }

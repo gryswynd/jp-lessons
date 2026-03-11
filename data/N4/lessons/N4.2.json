@@ -6,13 +6,42 @@
     "phase": 4,
     "lesson": 2,
     "focus": "Everyday movement verbs: riding vehicles and walking; describing distances as near or far.",
-    "kanji": ["乗", "歩", "近", "遠"]
+    "kanji": [
+      "乗",
+      "歩",
+      "近",
+      "遠"
+    ]
   },
   "newKanji": [
-    { "kanji": "乗", "on": "じょう", "kun": "の(る)", "meaning": "Ride / Board", "termId": "k_no_2" },
-    { "kanji": "歩", "on": "ほ / ぽ", "kun": "ある(く)", "meaning": "Walk", "termId": "k_aru" },
-    { "kanji": "近", "on": "きん", "kun": "ちか(い)", "meaning": "Near / Close", "termId": "k_chika" },
-    { "kanji": "遠", "on": "えん", "kun": "とお(い)", "meaning": "Far / Distant", "termId": "k_too_2" }
+    {
+      "kanji": "乗",
+      "on": "じょう",
+      "kun": "の(る)",
+      "meaning": "Ride / Board",
+      "termId": "k_no_2"
+    },
+    {
+      "kanji": "歩",
+      "on": "ほ / ぽ",
+      "kun": "ある(く)",
+      "meaning": "Walk",
+      "termId": "k_aru"
+    },
+    {
+      "kanji": "近",
+      "on": "きん",
+      "kun": "ちか(い)",
+      "meaning": "Near / Close",
+      "termId": "k_chika"
+    },
+    {
+      "kanji": "遠",
+      "on": "えん",
+      "kun": "とお(い)",
+      "meaning": "Far / Distant",
+      "termId": "k_too_2"
+    }
   ],
   "sections": [
     {
@@ -26,7 +55,10 @@
           "terms": [
             "v_kyou",
             "v_nanji",
-            { "id": "v_okiru", "form": "polite_mashita" }
+            {
+              "id": "v_okiru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -35,8 +67,14 @@
           "terms": [
             "v_ima",
             "v_nani",
-            { "id": "v_tsukau", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_tsukau",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -45,9 +83,15 @@
           "terms": [
             "v_kaisha",
             "v_densha",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "v_basu",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -55,7 +99,10 @@
           "en": "Would you like to go home together?",
           "terms": [
             "v_issho",
-            { "id": "v_kaeru", "form": "polite_negative" }
+            {
+              "id": "v_kaeru",
+              "form": "polite_negative"
+            }
           ]
         }
       ]
@@ -69,28 +116,41 @@
           "on": "じょう",
           "kun": "の",
           "meaning": "Ride / Board",
-          "terms": ["k_no_2", "v_noru"]
+          "terms": [
+            "k_no_2",
+            "v_noru"
+          ]
         },
         {
           "kanji": "歩",
           "on": "ほ / ぽ",
           "kun": "ある",
           "meaning": "Walk",
-          "terms": ["k_aru", "v_aruku"]
+          "terms": [
+            "k_aru",
+            "v_aruku"
+          ]
         },
         {
           "kanji": "近",
           "on": "きん",
           "kun": "ちか",
           "meaning": "Near / Close",
-          "terms": ["k_chika", "v_chikai"]
+          "terms": [
+            "k_chika",
+            "v_chikai"
+          ]
         },
         {
           "kanji": "遠",
           "on": "えん",
           "kun": "とお",
           "meaning": "Far / Distant",
-          "terms": ["k_too_2", "v_tooi", "v_ensoku"]
+          "terms": [
+            "k_too_2",
+            "v_tooi",
+            "v_ensoku"
+          ]
         }
       ]
     },
@@ -100,15 +160,23 @@
       "groups": [
         {
           "label": "Movement Verbs",
-          "items": ["v_noru", "v_aruku"]
+          "items": [
+            "v_noru",
+            "v_aruku"
+          ]
         },
         {
           "label": "Distance Adjectives",
-          "items": ["v_chikai", "v_tooi"]
+          "items": [
+            "v_chikai",
+            "v_tooi"
+          ]
         },
         {
           "label": "Nouns",
-          "items": ["v_ensoku"]
+          "items": [
+            "v_ensoku"
+          ]
         }
       ]
     },
@@ -125,7 +193,10 @@
             "char_rikizo",
             "v_mainichi",
             "v_densha",
-            { "id": "v_noru", "form": "polite_masu" }
+            {
+              "id": "v_noru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -133,12 +204,21 @@
           "jp": "はい、乗ります。駅から 学校まで 少し 歩きます。近いですよ。",
           "en": "Yes, I do. I walk a little from the station to school. It's close!",
           "terms": [
-            { "id": "v_noru", "form": "polite_masu" },
+            {
+              "id": "v_noru",
+              "form": "polite_masu"
+            },
             "v_eki",
             "v_gakkou",
             "v_sukoshi",
-            { "id": "v_aruku", "form": "polite_masu" },
-            { "id": "v_chikai", "form": "polite_adj" }
+            {
+              "id": "v_aruku",
+              "form": "polite_masu"
+            },
+            {
+              "id": "v_chikai",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -148,9 +228,15 @@
           "terms": [
             "v_ie",
             "v_sukoshi",
-            { "id": "v_tooi", "form": "polite_adj" },
+            {
+              "id": "v_tooi",
+              "form": "polite_adj"
+            },
             "v_basu",
-            { "id": "v_noru", "form": "polite_masu" }
+            {
+              "id": "v_noru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -160,7 +246,10 @@
           "terms": [
             "v_basu",
             "v_doko",
-            { "id": "v_noru", "form": "polite_masu" }
+            {
+              "id": "v_noru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -179,10 +268,19 @@
             "v_ensoku",
             "v_gakkou",
             "v_sukoshi",
-            { "id": "v_tooi", "form": "polite_adj" },
+            {
+              "id": "v_tooi",
+              "form": "polite_adj"
+            },
             "v_densha",
-            { "id": "v_noru", "form": "te_form" },
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_noru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -193,7 +291,10 @@
             "v_sensei",
             "v_eki",
             "v_gakkou",
-            { "id": "v_chikai", "form": "polite_adj" }
+            {
+              "id": "v_chikai",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -201,10 +302,19 @@
           "jp": "はい、近いです。駅まで 歩いて 行きましょう。",
           "en": "Yes, it's close. Let's walk to the station.",
           "terms": [
-            { "id": "v_chikai", "form": "polite_adj" },
+            {
+              "id": "v_chikai",
+              "form": "polite_adj"
+            },
             "v_eki",
-            { "id": "v_aruku", "form": "te_form" },
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_aruku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -212,65 +322,104 @@
           "jp": "分かりました。電車に 乗りましょう！",
           "en": "Understood. Let's ride the train!",
           "terms": [
-            { "id": "v_wakaru", "form": "polite_mashita" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            },
             "v_densha",
-            { "id": "v_noru", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_noru",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 3（会話）: Getting to School (Casual)",
-      "context": "Two classmates chat casually about how they travel to school each day.",
+      "title": "Conversation Practice 3（会話）: Getting to School",
+      "context": "Two classmates chat about how they travel to school each day.",
       "lines": [
         {
           "spk": "A",
-          "jp": "けんは 毎日 何で 学校に 来る？",
+          "jp": "けんさんは 毎日 何で 学校に 来ますか。",
           "en": "How do you get to school every day, Ken?",
           "terms": [
             "char_ken",
+            "v_san",
             "v_mainichi",
             "v_nan",
             "v_gakkou",
-            { "id": "v_kuru", "form": null }
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "spk": "B",
-          "jp": "歩いて 来るよ。家が 学校に 近いから。",
+          "jp": "歩いて 来ます。家が 学校に 近いですから。",
           "en": "I walk here. My house is close to school.",
           "terms": [
-            { "id": "v_aruku", "form": "te_form" },
-            { "id": "v_kuru", "form": null },
+            {
+              "id": "v_aruku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
             "v_ie",
             "v_gakkou",
-            { "id": "v_chikai", "form": null }
+            {
+              "id": "v_chikai",
+              "form": "polite_adj"
+            },
+            "p_kara_because"
           ]
         },
         {
           "spk": "A",
-          "jp": "いいね。わたしの 家は 遠いよ。電車に 乗って 来る。",
-          "en": "Lucky! My house is far. I come by riding the train.",
+          "jp": "いいですね。私の 家は 少し 遠いです。電車に 乗って 来ます。",
+          "en": "Nice. My house is a bit far. I come by riding the train.",
           "terms": [
-            { "id": "v_ii", "form": null },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "v_watashi",
             "v_ie",
-            { "id": "v_tooi", "form": null },
+            "v_sukoshi",
+            {
+              "id": "v_tooi",
+              "form": "polite_adj"
+            },
             "v_densha",
-            { "id": "v_noru", "form": "te_form" },
-            { "id": "v_kuru", "form": null }
+            {
+              "id": "v_noru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "spk": "B",
-          "jp": "電車に 乗る？ わたしも 乗りたいよ。",
-          "en": "You ride the train? I want to ride too!",
+          "jp": "電車に 乗りますか。私も 乗りたいです。",
+          "en": "You ride the train? I want to ride too.",
           "terms": [
             "v_densha",
-            { "id": "v_noru", "form": null },
+            {
+              "id": "v_noru",
+              "form": "polite_masu"
+            },
             "v_watashi",
-            { "id": "v_noru", "form": "plain_desire_tai" }
+            {
+              "id": "v_noru",
+              "form": "desire_tai"
+            }
           ]
         }
       ]
@@ -288,7 +437,10 @@
             "char_yuki",
             "v_issho",
             "v_ensoku",
-            { "id": "v_iku", "form": "plain_negative" }
+            {
+              "id": "v_iku",
+              "form": "plain_negative"
+            }
           ]
         },
         {
@@ -296,9 +448,15 @@
           "jp": "いいよ！どこに 行く？",
           "en": "Sounds good! Where are we going?",
           "terms": [
-            { "id": "v_ii", "form": null },
+            {
+              "id": "v_ii",
+              "form": null
+            },
             "v_doko",
-            { "id": "v_iku", "form": null }
+            {
+              "id": "v_iku",
+              "form": null
+            }
           ]
         },
         {
@@ -307,12 +465,21 @@
           "en": "I want to go to the mountain by train. We'll walk a bit from there.",
           "terms": [
             "v_densha",
-            { "id": "v_noru", "form": "te_form" },
+            {
+              "id": "v_noru",
+              "form": "te_form"
+            },
             "v_yama",
-            { "id": "v_iku", "form": "plain_desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
             "v_soko",
             "v_sukoshi",
-            { "id": "v_aruku", "form": null }
+            {
+              "id": "v_aruku",
+              "form": null
+            }
           ]
         },
         {
@@ -321,9 +488,15 @@
           "en": "Is the mountain far? Will we take a bus too?",
           "terms": [
             "v_yama",
-            { "id": "v_tooi", "form": null },
+            {
+              "id": "v_tooi",
+              "form": null
+            },
             "v_basu",
-            { "id": "v_noru", "form": null }
+            {
+              "id": "v_noru",
+              "form": null
+            }
           ]
         }
       ]
@@ -339,9 +512,15 @@
             "char_rikizo",
             "v_mainichi",
             "v_densha",
-            { "id": "v_noru", "form": "te_form" },
+            {
+              "id": "v_noru",
+              "form": "te_form"
+            },
             "v_gakkou",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -351,8 +530,14 @@
             "v_ie",
             "v_eki",
             "v_sukoshi",
-            { "id": "v_aruku", "form": "polite_masu" },
-            { "id": "v_chikai", "form": "polite_adj" }
+            {
+              "id": "v_aruku",
+              "form": "polite_masu"
+            },
+            {
+              "id": "v_chikai",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -361,7 +546,10 @@
           "terms": [
             "v_densha",
             "v_gakkou",
-            { "id": "v_noru", "form": "polite_masu" }
+            {
+              "id": "v_noru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -370,9 +558,15 @@
           "terms": [
             "v_gakkou",
             "v_eki",
-            { "id": "v_tsuku", "form": "te_form" },
+            {
+              "id": "v_tsuku",
+              "form": "te_form"
+            },
             "v_sukoshi",
-            { "id": "v_aruku", "form": "polite_masu" }
+            {
+              "id": "v_aruku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -381,11 +575,20 @@
           "terms": [
             "v_gakkou",
             "v_sukoshi",
-            { "id": "v_tooi", "form": "polite_adj" },
+            {
+              "id": "v_tooi",
+              "form": "polite_adj"
+            },
             "v_mainichi",
             "v_densha",
-            { "id": "v_noru", "form": "te_form" },
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_noru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -398,7 +601,10 @@
             "v_mainichi",
             "v_doko",
             "v_gakkou",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -407,9 +613,18 @@
           "terms": [
             "v_eki",
             "v_ie",
-            { "id": "v_chikai", "form": "polite_adj" },
-            { "id": "v_tooi", "form": "polite_adj" },
-            { "id": "v_chikai", "form": "polite_adj" }
+            {
+              "id": "v_chikai",
+              "form": "polite_adj"
+            },
+            {
+              "id": "v_tooi",
+              "form": "polite_adj"
+            },
+            {
+              "id": "v_chikai",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -419,8 +634,14 @@
             "v_densha",
             "v_gakkou",
             "v_nan",
-            { "id": "v_noru", "form": "polite_masu" },
-            { "id": "v_noru", "form": "polite_masu" }
+            {
+              "id": "v_noru",
+              "form": "polite_masu"
+            },
+            {
+              "id": "v_noru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -431,10 +652,19 @@
             "v_mainichi",
             "v_densha",
             "v_gakkou",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "v_densha",
-            { "id": "v_noru", "form": "te_form" },
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_noru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -452,8 +682,14 @@
             "v_ensoku",
             "v_gakkou",
             "v_densha",
-            { "id": "v_noru", "form": "te_form" },
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_noru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -462,10 +698,16 @@
           "terms": [
             "v_gakkou",
             "v_eki",
-            { "id": "v_aruku", "form": "polite_masu" },
+            {
+              "id": "v_aruku",
+              "form": "polite_masu"
+            },
             "v_eki",
             "v_gakkou",
-            { "id": "v_chikai", "form": "polite_adj" }
+            {
+              "id": "v_chikai",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -473,11 +715,20 @@
           "en": "We rode the train for one hour. The mountain was far, but we went by train.",
           "terms": [
             "v_densha",
-            { "id": "v_noru", "form": "polite_mashita" },
+            {
+              "id": "v_noru",
+              "form": "polite_mashita"
+            },
             "v_yama",
-            { "id": "v_tooi", "form": "polite_past_adj" },
+            {
+              "id": "v_tooi",
+              "form": "polite_past_adj"
+            },
             "v_densha",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -485,11 +736,20 @@
           "en": "We arrived at the mountain and walked the mountain path for a long way. It was a good excursion.",
           "terms": [
             "v_yama",
-            { "id": "v_tsuku", "form": "te_form" },
+            {
+              "id": "v_tsuku",
+              "form": "te_form"
+            },
             "v_yama",
             "v_michi",
-            { "id": "v_nagai", "form": "adverbial" },
-            { "id": "v_aruku", "form": "polite_mashita" },
+            {
+              "id": "v_nagai",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_aruku",
+              "form": "polite_mashita"
+            },
             "v_ii",
             "v_ensoku"
           ]
@@ -499,7 +759,10 @@
           "en": "We returned to school. It was a good day.",
           "terms": [
             "v_gakkou",
-            { "id": "v_kaeru", "form": "polite_mashita" },
+            {
+              "id": "v_kaeru",
+              "form": "polite_mashita"
+            },
             "v_ii",
             "v_ichinichi"
           ]
@@ -522,8 +785,14 @@
           "terms": [
             "v_gakkou",
             "v_eki",
-            { "id": "v_aruku", "form": "polite_masu" },
-            { "id": "v_aruku", "form": "polite_masu" }
+            {
+              "id": "v_aruku",
+              "form": "polite_masu"
+            },
+            {
+              "id": "v_aruku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -532,10 +801,19 @@
           "terms": [
             "v_yama",
             "v_gakkou",
-            { "id": "v_tooi", "form": "polite_past_adj" },
-            { "id": "v_tooi", "form": "polite_past_adj" },
+            {
+              "id": "v_tooi",
+              "form": "polite_past_adj"
+            },
+            {
+              "id": "v_tooi",
+              "form": "polite_past_adj"
+            },
             "v_densha",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -544,10 +822,16 @@
           "terms": [
             "v_yama",
             "v_nani",
-            { "id": "v_suru", "form": "polite_mashita" },
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            },
             "v_yama",
             "v_michi",
-            { "id": "v_aruku", "form": "polite_mashita" }
+            {
+              "id": "v_aruku",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -560,28 +844,48 @@
         {
           "kind": "mcq",
           "q": "乗る [のる]",
-          "choices": ["to ride", "to walk", "to arrive", "to borrow"],
+          "choices": [
+            "to ride",
+            "to walk",
+            "to arrive",
+            "to borrow"
+          ],
           "answer": "to ride",
           "terms": []
         },
         {
           "kind": "mcq",
           "q": "歩く [あるく]",
-          "choices": ["to walk", "to run", "to ride", "to work"],
+          "choices": [
+            "to walk",
+            "to run",
+            "to ride",
+            "to work"
+          ],
           "answer": "to walk",
           "terms": []
         },
         {
           "kind": "mcq",
           "q": "近い [ちかい]",
-          "choices": ["near", "far", "long", "tall"],
+          "choices": [
+            "near",
+            "far",
+            "long",
+            "tall"
+          ],
           "answer": "near",
           "terms": []
         },
         {
           "kind": "mcq",
           "q": "遠足 [えんそく]",
-          "choices": ["hike / field trip", "train ride", "road", "station"],
+          "choices": [
+            "hike / field trip",
+            "train ride",
+            "road",
+            "station"
+          ],
           "answer": "hike / field trip",
           "terms": []
         }
@@ -595,47 +899,85 @@
         {
           "kind": "mcq",
           "q": "毎日 電車に ______ 学校へ 行きます。",
-          "choices": ["乗って", "歩いて", "出て", "帰って"],
+          "choices": [
+            "乗って",
+            "歩いて",
+            "出て",
+            "帰って"
+          ],
           "answer": "乗って",
           "terms": [
             "v_mainichi",
             "v_densha",
             "v_gakkou",
-            { "id": "v_noru", "form": "te_form" },
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_noru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "家から 駅まで 五分で ______。",
-          "choices": ["着きます", "乗ります", "歩きます", "帰ります"],
+          "choices": [
+            "着きます",
+            "乗ります",
+            "歩きます",
+            "帰ります"
+          ],
           "answer": "着きます",
           "terms": [
             "v_ie",
             "v_eki",
-            { "id": "v_tsuku", "form": "polite_masu" }
+            {
+              "id": "v_tsuku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "学校は 遠いですから、バスに ______。",
-          "choices": ["乗ります", "歩きます", "帰ります", "使います"],
+          "choices": [
+            "乗ります",
+            "歩きます",
+            "帰ります",
+            "使います"
+          ],
           "answer": "乗ります",
           "terms": [
             "v_gakkou",
-            { "id": "v_tooi", "form": "polite_adj" },
+            {
+              "id": "v_tooi",
+              "form": "polite_adj"
+            },
             "v_basu",
-            { "id": "v_noru", "form": "polite_masu" }
+            {
+              "id": "v_noru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "山まで 歩き______。",
-          "choices": ["たいです", "ました", "ません", "ましょうか"],
+          "choices": [
+            "たいです",
+            "ました",
+            "ません",
+            "ましょうか"
+          ],
           "answer": "たいです",
           "terms": [
             "v_yama",
-            { "id": "v_aruku", "form": "desire_tai" }
+            {
+              "id": "v_aruku",
+              "form": "desire_tai"
+            }
           ]
         }
       ]
