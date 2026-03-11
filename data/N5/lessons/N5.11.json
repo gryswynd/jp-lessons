@@ -7,7 +7,12 @@
     "lesson_number": 11,
     "focus": "Sky, rain, flowers, and fish — compounds built from 空・雨・花・魚, plus the appearance expression ～そうです and the na-adjective きれい",
     "estimated_minutes": 30,
-    "kanji": ["空", "雨", "花", "魚"]
+    "kanji": [
+      "空",
+      "雨",
+      "花",
+      "魚"
+    ]
   },
   "newKanji": [
     {
@@ -53,7 +58,10 @@
             "p_no",
             "v_tenki",
             "p_wa",
-            { "id": "v_ii", "form": "polite_past_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            },
             "p_ne"
           ]
         },
@@ -64,8 +72,14 @@
             "v_kono",
             "v_densha",
             "p_wa",
-            { "id": "v_nagai", "form": "te_form" },
-            { "id": "v_takai", "form": "plain_negative" },
+            {
+              "id": "v_nagai",
+              "form": "te_form"
+            },
+            {
+              "id": "v_takai",
+              "form": "plain_negative"
+            },
             "g_desu"
           ]
         },
@@ -73,10 +87,17 @@
           "jp": "やまかわさんは 休んでいます。",
           "en": "Yamakawa-san is resting.",
           "terms": [
+            "char_yamakawa",
             "v_san",
             "p_wa",
-            { "id": "v_yasumu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_yasumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -85,7 +106,10 @@
           "terms": [
             "v_yama",
             "p_ni",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -99,28 +123,36 @@
           "on": "くう",
           "kun": "そら",
           "meaning": "sky / empty",
-          "terms": ["k_sora"]
+          "terms": [
+            "k_sora"
+          ]
         },
         {
           "kanji": "雨",
           "on": "う",
           "kun": "あめ",
           "meaning": "rain",
-          "terms": ["k_ame"]
+          "terms": [
+            "k_ame"
+          ]
         },
         {
           "kanji": "花",
           "on": "か",
           "kun": "はな",
           "meaning": "flower",
-          "terms": ["k_hana"]
+          "terms": [
+            "k_hana"
+          ]
         },
         {
           "kanji": "魚",
           "on": "ぎょ",
           "kun": "さかな",
           "meaning": "fish",
-          "terms": ["k_sakana"]
+          "terms": [
+            "k_sakana"
+          ]
         }
       ]
     },
@@ -130,19 +162,36 @@
       "groups": [
         {
           "label": "Sky & Weather",
-          "items": ["v_sora", "v_ame", "v_kuuki"]
+          "items": [
+            "v_sora",
+            "v_ame",
+            "v_kuuki"
+          ]
         },
         {
           "label": "Nature",
-          "items": ["v_hana", "v_sakana", "v_kingyo", "v_hanabi"]
+          "items": [
+            "v_hana",
+            "v_sakana",
+            "v_kingyo",
+            "v_hanabi"
+          ]
         },
         {
           "label": "Adjectives",
-          "items": ["v_kirei", "v_kawaii"]
+          "items": [
+            "v_kirei",
+            "v_kawaii"
+          ]
         },
         {
           "label": "Kanji",
-          "items": ["k_sora", "k_ame", "k_hana", "k_sakana"]
+          "items": [
+            "k_sora",
+            "k_ame",
+            "k_hana",
+            "k_sakana"
+          ]
         }
       ]
     },
@@ -161,7 +210,10 @@
             "v_sora",
             "p_wa",
             "v_totemo",
-            { "id": "v_kirei", "form": "polite_adj" },
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            },
             "p_ne"
           ]
         },
@@ -175,7 +227,10 @@
             "v_kuuki",
             "p_mo",
             "v_totemo",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         },
@@ -189,8 +244,14 @@
             "v_hana",
             "p_ga",
             "v_takusan",
-            { "id": "v_aru", "form": "polite_masu" },
-            { "id": "v_kirei", "form": "appearance_sou" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            {
+              "id": "v_kirei",
+              "form": "appearance_sou"
+            },
             "p_ne"
           ]
         },
@@ -201,8 +262,14 @@
           "terms": [
             "v_hana",
             "p_wa",
-            { "id": "v_kirei", "form": "te_form" },
-            { "id": "v_kawaii", "form": "polite_adj" }
+            {
+              "id": "v_kirei",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kawaii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -210,14 +277,20 @@
           "jp": "きれいな 花ですね。毎年、花火も ありますよ。",
           "en": "They're beautiful flowers. Every year there are also fireworks.",
           "terms": [
-            { "id": "v_kirei", "form": "attributive_na" },
+            {
+              "id": "v_kirei",
+              "form": "attributive_na"
+            },
             "v_hana",
             "g_desu",
             "p_ne",
             "v_mainen",
             "v_hanabi",
             "p_mo",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_yo"
           ]
         },
@@ -228,9 +301,15 @@
           "terms": [
             "v_hanabi",
             "p_wa",
-            { "id": "v_ookii", "form": "appearance_sou" },
+            {
+              "id": "v_ookii",
+              "form": "appearance_sou"
+            },
             "p_yo",
-            { "id": "v_kirei", "form": "attributive_na" },
+            {
+              "id": "v_kirei",
+              "form": "attributive_na"
+            },
             "v_hi",
             "g_desu",
             "p_ne"
@@ -252,7 +331,10 @@
             "p_no",
             "v_hanabi",
             "p_wa",
-            { "id": "v_kirei", "form": "appearance_sou" },
+            {
+              "id": "v_kirei",
+              "form": "appearance_sou"
+            },
             "p_ne"
           ]
         },
@@ -264,8 +346,14 @@
             "v_mainen",
             "v_hanabi",
             "p_wa",
-            { "id": "v_ookii", "form": "te_form" },
-            { "id": "v_kirei", "form": "polite_adj" },
+            {
+              "id": "v_ookii",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         },
@@ -276,7 +364,10 @@
           "terms": [
             "v_hanabi",
             "p_wa",
-            { "id": "v_takai", "form": "polite_adj" },
+            {
+              "id": "v_takai",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -285,10 +376,16 @@
           "jp": "高くないですよ。安い 花火ですよ。",
           "en": "They're not expensive. They're cheap fireworks.",
           "terms": [
-            { "id": "v_takai", "form": "plain_negative" },
+            {
+              "id": "v_takai",
+              "form": "plain_negative"
+            },
             "g_desu",
             "p_yo",
-            { "id": "v_yasui", "form": "polite_adj" },
+            {
+              "id": "v_yasui",
+              "form": "polite_adj"
+            },
             "v_hanabi",
             "g_desu",
             "p_yo"
@@ -299,14 +396,20 @@
           "jp": "よかったです！花火の 前に、カレーを 食べましょう。",
           "en": "That's great! Let's eat curry before the fireworks.",
           "terms": [
-            { "id": "v_ii", "form": "polite_past_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            },
             "v_hanabi",
             "p_no",
             "v_mae",
             "p_ni",
             "v_karee",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_taberu",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -314,15 +417,27 @@
           "jp": "いいですね。花火は きれいで、カレーも おいしくて、いい 日ですね。",
           "en": "Sounds good. The fireworks are beautiful, the curry is also delicious, it's a great day.",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_hanabi",
             "p_wa",
-            { "id": "v_kirei", "form": "te_form" },
+            {
+              "id": "v_kirei",
+              "form": "te_form"
+            },
             "v_karee",
             "p_mo",
-            { "id": "v_oishii", "form": "te_form" },
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_oishii",
+              "form": "te_form"
+            },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "v_hi",
             "g_desu",
             "p_ne"
@@ -344,7 +459,10 @@
             "p_no",
             "v_sora",
             "p_wa",
-            { "id": "v_kirei", "form": "plain_negative" },
+            {
+              "id": "v_kirei",
+              "form": "plain_negative"
+            },
             "g_desu",
             "p_ne"
           ]
@@ -358,7 +476,10 @@
             "p_ne",
             "v_ame",
             "p_ga",
-            { "id": "v_kuru", "form": "appearance_sou" },
+            {
+              "id": "v_kuru",
+              "form": "appearance_sou"
+            },
             "p_yo"
           ]
         },
@@ -373,7 +494,10 @@
             "p_wa",
             "v_soto",
             "p_ni",
-            { "id": "v_iku", "form": "desire_tai_negative" }
+            {
+              "id": "v_iku",
+              "form": "desire_tai_negative"
+            }
           ]
         },
         {
@@ -385,7 +509,10 @@
             "p_ne",
             "v_ie",
             "p_de",
-            { "id": "v_yasumu", "form": "desire_tai" },
+            {
+              "id": "v_yasumu",
+              "form": "desire_tai"
+            },
             "p_ne"
           ]
         },
@@ -396,12 +523,18 @@
           "terms": [
             "v_tenki",
             "p_ga",
-            { "id": "v_ii", "form": "plain_negative" },
+            {
+              "id": "v_ii",
+              "form": "plain_negative"
+            },
             "g_desu",
             "p_ga_but",
             "v_kuuki",
             "p_wa",
-            { "id": "v_kirei", "form": "polite_adj" }
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -419,8 +552,14 @@
             "p_mo",
             "v_hana",
             "p_ga",
-            { "id": "v_kirei", "form": "adverbial" },
-            { "id": "v_naru", "form": "polite_mashita" },
+            {
+              "id": "v_kirei",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            },
             "p_yo"
           ]
         }
@@ -457,7 +596,10 @@
             "p_no",
             "v_sakana",
             "p_wa",
-            { "id": "v_oishii", "form": "plain_appearance_sou" },
+            {
+              "id": "v_oishii",
+              "form": "plain_appearance_sou"
+            },
             "p_ne"
           ]
         },
@@ -468,7 +610,10 @@
           "terms": [
             "v_sakana",
             "p_wo",
-            { "id": "v_taberu", "form": "plain_desire_tai" },
+            {
+              "id": "v_taberu",
+              "form": "plain_desire_tai"
+            },
             "p_no"
           ]
         },
@@ -485,7 +630,10 @@
             "v_oishii",
             "p_kara_because",
             "p_ne",
-            { "id": "v_taberu", "form": "plain_desire_tai" },
+            {
+              "id": "v_taberu",
+              "form": "plain_desire_tai"
+            },
             "p_yo"
           ]
         },
@@ -510,7 +658,10 @@
             "v_un",
             "v_kingyo",
             "p_wa",
-            { "id": "v_kirei", "form": "te_form" },
+            {
+              "id": "v_kirei",
+              "form": "te_form"
+            },
             "v_kawaii",
             "p_yo",
             "p_ne"
@@ -531,10 +682,16 @@
             "v_sora",
             "p_wa",
             "v_totemo",
-            { "id": "v_kirei", "form": "polite_adj" },
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            },
             "v_kuuki",
             "p_mo",
-            { "id": "v_ii", "form": "polite_adj" }
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -546,11 +703,20 @@
             "v_hana",
             "p_ga",
             "v_takusan",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "v_hana",
             "p_wa",
-            { "id": "v_kirei", "form": "te_form" },
-            { "id": "v_kawaii", "form": "polite_adj" }
+            {
+              "id": "v_kirei",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kawaii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -562,10 +728,16 @@
             "v_ookii",
             "v_sakana",
             "p_mo",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "v_sakana",
             "p_wa",
-            { "id": "v_oishii", "form": "appearance_sou" },
+            {
+              "id": "v_oishii",
+              "form": "appearance_sou"
+            },
             "p_ne"
           ]
         },
@@ -576,11 +748,20 @@
             "v_mainen",
             "v_hanabi",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "v_hanabi",
             "p_wa",
-            { "id": "v_ookii", "form": "te_form" },
-            { "id": "v_kirei", "form": "polite_adj" },
+            {
+              "id": "v_ookii",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         },
@@ -590,11 +771,17 @@
           "terms": [
             "v_kyou",
             "p_wa",
-            { "id": "v_kirei", "form": "attributive_na" },
+            {
+              "id": "v_kirei",
+              "form": "attributive_na"
+            },
             "v_hi",
             "g_desu",
             "v_mata",
-            { "id": "v_kuru", "form": "desire_tai" }
+            {
+              "id": "v_kuru",
+              "form": "desire_tai"
+            }
           ]
         }
       ],
@@ -608,7 +795,17 @@
             "They are old and small",
             "They look delicious"
           ],
-          "terms": ["v_hana", { "id": "v_kirei", "form": "te_form" }, { "id": "v_kawaii", "form": "polite_adj" }]
+          "terms": [
+            "v_hana",
+            {
+              "id": "v_kirei",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kawaii",
+              "form": "polite_adj"
+            }
+          ]
         },
         {
           "q": "What does the narrator think the fish looks like?",
@@ -619,7 +816,13 @@
             "Beautiful",
             "Big"
           ],
-          "terms": ["v_sakana", { "id": "v_oishii", "form": "appearance_sou" }]
+          "terms": [
+            "v_sakana",
+            {
+              "id": "v_oishii",
+              "form": "appearance_sou"
+            }
+          ]
         },
         {
           "q": "What does the narrator want to do?",
@@ -630,7 +833,13 @@
             "Eat curry",
             "See the sky"
           ],
-          "terms": ["v_mata", { "id": "v_kuru", "form": "desire_tai" }]
+          "terms": [
+            "v_mata",
+            {
+              "id": "v_kuru",
+              "form": "desire_tai"
+            }
+          ]
         }
       ]
     },
@@ -646,11 +855,17 @@
             "p_no",
             "v_sora",
             "p_wa",
-            { "id": "v_kirei", "form": "plain_negative" },
+            {
+              "id": "v_kirei",
+              "form": "plain_negative"
+            },
             "g_desu",
             "v_ame",
             "p_ga",
-            { "id": "v_kuru", "form": "appearance_sou" }
+            {
+              "id": "v_kuru",
+              "form": "appearance_sou"
+            }
           ]
         },
         {
@@ -663,10 +878,16 @@
             "p_wa",
             "v_soto",
             "p_ni",
-            { "id": "v_iku", "form": "polite_negative" },
+            {
+              "id": "v_iku",
+              "form": "polite_negative"
+            },
             "v_ie",
             "p_de",
-            { "id": "v_yasumu", "form": "desire_tai" }
+            {
+              "id": "v_yasumu",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -675,7 +896,10 @@
           "terms": [
             "v_tenki",
             "p_ga",
-            { "id": "v_ii", "form": "plain_negative" },
+            {
+              "id": "v_ii",
+              "form": "plain_negative"
+            },
             "g_desu",
             "p_ga_but",
             "v_ame",
@@ -684,7 +908,10 @@
             "p_no",
             "v_kuuki",
             "p_wa",
-            { "id": "v_kirei", "form": "polite_adj" }
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -696,8 +923,14 @@
             "v_ato",
             "v_hana",
             "p_ga",
-            { "id": "v_kirei", "form": "adverbial" },
-            { "id": "v_naru", "form": "polite_masu" }
+            {
+              "id": "v_kirei",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -712,10 +945,16 @@
             "p_no",
             "v_hi",
             "p_mo",
-            { "id": "v_kirei", "form": "polite_adj" },
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            },
             "v_kingyo",
             "p_wa",
-            { "id": "v_kawaii", "form": "plain_negative" },
+            {
+              "id": "v_kawaii",
+              "form": "plain_negative"
+            },
             "g_desu",
             "p_ka"
           ]
@@ -731,7 +970,18 @@
             "It is very big",
             "It is clear and nice"
           ],
-          "terms": ["v_sora", { "id": "v_kirei", "form": "plain_negative" }, "v_ame", { "id": "v_kuru", "form": "appearance_sou" }]
+          "terms": [
+            "v_sora",
+            {
+              "id": "v_kirei",
+              "form": "plain_negative"
+            },
+            "v_ame",
+            {
+              "id": "v_kuru",
+              "form": "appearance_sou"
+            }
+          ]
         },
         {
           "q": "What does the narrator want to do on a rainy day?",
@@ -742,7 +992,14 @@
             "See the flowers",
             "Buy fish"
           ],
-          "terms": ["v_ie", "p_de", { "id": "v_yasumu", "form": "desire_tai" }]
+          "terms": [
+            "v_ie",
+            "p_de",
+            {
+              "id": "v_yasumu",
+              "form": "desire_tai"
+            }
+          ]
         },
         {
           "q": "What happens to flowers after the rain?",
@@ -753,7 +1010,17 @@
             "They go away",
             "They look cute"
           ],
-          "terms": ["v_hana", { "id": "v_kirei", "form": "adverbial" }, { "id": "v_naru", "form": "polite_masu" }]
+          "terms": [
+            "v_hana",
+            {
+              "id": "v_kirei",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            }
+          ]
         }
       ]
     },
@@ -765,37 +1032,67 @@
         {
           "kind": "mcq",
           "q": "空",
-          "choices": ["sky", "rain", "flower", "fish"],
+          "choices": [
+            "sky",
+            "rain",
+            "flower",
+            "fish"
+          ],
           "answer": "sky"
         },
         {
           "kind": "mcq",
           "q": "雨",
-          "choices": ["rain", "sky", "flower", "atmosphere"],
+          "choices": [
+            "rain",
+            "sky",
+            "flower",
+            "atmosphere"
+          ],
           "answer": "rain"
         },
         {
           "kind": "mcq",
           "q": "花",
-          "choices": ["flower", "fish", "fireworks", "goldfish"],
+          "choices": [
+            "flower",
+            "fish",
+            "fireworks",
+            "goldfish"
+          ],
           "answer": "flower"
         },
         {
           "kind": "mcq",
           "q": "金魚",
-          "choices": ["goldfish", "fish", "flower", "fireworks"],
+          "choices": [
+            "goldfish",
+            "fish",
+            "flower",
+            "fireworks"
+          ],
           "answer": "goldfish"
         },
         {
           "kind": "mcq",
           "q": "きれい",
-          "choices": ["beautiful / clean", "cute", "good", "popular"],
+          "choices": [
+            "beautiful / clean",
+            "cute",
+            "good",
+            "popular"
+          ],
           "answer": "beautiful / clean"
         },
         {
           "kind": "mcq",
           "q": "空気",
-          "choices": ["atmosphere / air", "sky", "weather", "rain"],
+          "choices": [
+            "atmosphere / air",
+            "sky",
+            "weather",
+            "rain"
+          ],
           "answer": "atmosphere / air"
         }
       ]
@@ -808,30 +1105,70 @@
         {
           "kind": "mcq",
           "q": "The flowers look beautiful. （きれい → appearance）",
-          "choices": ["きれいそうです", "きれいいそうです", "きれいくそうです", "きれいなそうです"],
+          "choices": [
+            "きれいそうです",
+            "きれいいそうです",
+            "きれいくそうです",
+            "きれいなそうです"
+          ],
           "answer": "きれいそうです",
-          "terms": [{ "id": "v_kirei", "form": "appearance_sou" }]
+          "terms": [
+            {
+              "id": "v_kirei",
+              "form": "appearance_sou"
+            }
+          ]
         },
         {
           "kind": "mcq",
           "q": "It looks like rain is coming. （来る → appearance）",
-          "choices": ["来そうです", "来りそうです", "来るそうです", "来ましそうです"],
+          "choices": [
+            "来そうです",
+            "来りそうです",
+            "来るそうです",
+            "来ましそうです"
+          ],
           "answer": "来そうです",
-          "terms": [{ "id": "v_kuru", "form": "appearance_sou" }]
+          "terms": [
+            {
+              "id": "v_kuru",
+              "form": "appearance_sou"
+            }
+          ]
         },
         {
           "kind": "mcq",
           "q": "The fish looks delicious. （おいしい → appearance）",
-          "choices": ["おいしそうです", "おいしいそうです", "おいしくそうです", "おいしなそうです"],
+          "choices": [
+            "おいしそうです",
+            "おいしいそうです",
+            "おいしくそうです",
+            "おいしなそうです"
+          ],
           "answer": "おいしそうです",
-          "terms": [{ "id": "v_oishii", "form": "appearance_sou" }]
+          "terms": [
+            {
+              "id": "v_oishii",
+              "form": "appearance_sou"
+            }
+          ]
         },
         {
           "kind": "mcq",
           "q": "The fireworks look big. （大きい → appearance）",
-          "choices": ["大きそうです", "大きいそうです", "大きくそうです", "大きかそうです"],
+          "choices": [
+            "大きそうです",
+            "大きいそうです",
+            "大きくそうです",
+            "大きかそうです"
+          ],
           "answer": "大きそうです",
-          "terms": [{ "id": "v_ookii", "form": "appearance_sou" }]
+          "terms": [
+            {
+              "id": "v_ookii",
+              "form": "appearance_sou"
+            }
+          ]
         }
       ]
     },
@@ -843,30 +1180,78 @@
         {
           "kind": "mcq",
           "q": "今日の 空は ___ です。（The sky is beautiful.）",
-          "choices": ["きれい", "きれいい", "きれいく", "きれいな"],
+          "choices": [
+            "きれい",
+            "きれいい",
+            "きれいく",
+            "きれいな"
+          ],
           "answer": "きれい",
-          "terms": [{ "id": "v_kirei", "form": "polite_adj" }]
+          "terms": [
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            }
+          ]
         },
         {
           "kind": "mcq",
           "q": "今日の 空は ___ じゃないです。（The sky isn't beautiful today.）",
-          "choices": ["きれい", "きれいく", "きれいい", "きれいに"],
+          "choices": [
+            "きれい",
+            "きれいく",
+            "きれいい",
+            "きれいに"
+          ],
           "answer": "きれい",
-          "terms": [{ "id": "v_kirei", "form": "plain_negative" }]
+          "terms": [
+            {
+              "id": "v_kirei",
+              "form": "plain_negative"
+            }
+          ]
         },
         {
           "kind": "mcq",
           "q": "花は きれい___、かわいいです。（The flowers are beautiful and cute.）",
-          "choices": ["で", "くて", "に", "な"],
+          "choices": [
+            "で",
+            "くて",
+            "に",
+            "な"
+          ],
           "answer": "で",
-          "terms": [{ "id": "v_kirei", "form": "te_form" }, { "id": "v_kawaii", "form": "polite_adj" }]
+          "terms": [
+            {
+              "id": "v_kirei",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kawaii",
+              "form": "polite_adj"
+            }
+          ]
         },
         {
           "kind": "mcq",
           "q": "雨の 後、花が きれい___ なります。（After rain, flowers become beautiful.）",
-          "choices": ["に", "で", "く", "な"],
+          "choices": [
+            "に",
+            "で",
+            "く",
+            "な"
+          ],
           "answer": "に",
-          "terms": [{ "id": "v_kirei", "form": "adverbial" }, { "id": "v_naru", "form": "polite_masu" }]
+          "terms": [
+            {
+              "id": "v_kirei",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            }
+          ]
         }
       ]
     }

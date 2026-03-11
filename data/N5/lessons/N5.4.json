@@ -7,7 +7,13 @@
     "lesson_number": 4,
     "focus": "Telling time in hours, weekly and yearly time expressions, demonstrative adnominals (この/その/あの/どの), and the verb 分かる",
     "estimated_minutes": 50,
-    "kanji": ["時", "分", "年", "週", "半"]
+    "kanji": [
+      "時",
+      "分",
+      "年",
+      "週",
+      "半"
+    ]
   },
   "newKanji": [
     {
@@ -71,7 +77,10 @@
             "p_no",
             "v_tanjoubi",
             "p_wa",
-            { "counter": "gatsu", "n": 3 },
+            {
+              "counter": "gatsu",
+              "n": 3
+            },
             "g_desu",
             "p_ka"
           ]
@@ -83,7 +92,10 @@
             "v_tomodachi",
             "p_wa",
             "v_nannin",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -94,7 +106,10 @@
             "v_otousan",
             "p_wa",
             "v_mainichi",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         }
@@ -109,35 +124,45 @@
           "on": "じ",
           "kun": "とき",
           "meaning": "time / hour",
-          "terms": ["k_toki"]
+          "terms": [
+            "k_toki"
+          ]
         },
         {
           "kanji": "分",
           "on": "ふん/ぶん",
           "kun": "わ",
           "meaning": "minute / part",
-          "terms": ["k_wa"]
+          "terms": [
+            "k_wa"
+          ]
         },
         {
           "kanji": "年",
           "on": "ねん",
           "kun": "とし",
           "meaning": "year",
-          "terms": ["k_toshi"]
+          "terms": [
+            "k_toshi"
+          ]
         },
         {
           "kanji": "週",
           "on": "しゅう",
           "kun": "",
           "meaning": "week",
-          "terms": ["k_u9031"]
+          "terms": [
+            "k_u9031"
+          ]
         },
         {
           "kanji": "半",
           "on": "はん",
           "kun": "",
           "meaning": "half",
-          "terms": ["k_u534a"]
+          "terms": [
+            "k_u534a"
+          ]
         }
       ]
     },
@@ -147,47 +172,85 @@
       "groups": [
         {
           "label": "New Kanji",
-          "items": ["k_toki", "k_wa", "k_toshi", "k_u9031", "k_u534a"]
+          "items": [
+            "k_toki",
+            "k_wa",
+            "k_toshi",
+            "k_u9031",
+            "k_u534a"
+          ]
         },
         {
           "label": "Telling Time",
-          "items": ["v_toki", "v_nanji", "v_tokidoki"]
+          "items": [
+            "v_toki",
+            "v_nanji",
+            "v_tokidoki"
+          ]
         },
         {
           "label": "This / Last / Every — Week",
-          "items": ["v_konshuu", "v_senshuu", "v_maishuu"]
+          "items": [
+            "v_konshuu",
+            "v_senshuu",
+            "v_maishuu"
+          ]
         },
         {
           "label": "This / Last / Every — Month & Year",
-          "items": ["v_sengetsu", "v_kotoshi", "v_mainen"]
+          "items": [
+            "v_sengetsu",
+            "v_kotoshi",
+            "v_mainen"
+          ]
         },
         {
           "label": "Verbs",
-          "items": ["v_wakaru"]
+          "items": [
+            "v_wakaru"
+          ]
         },
         {
           "label": "Half",
-          "items": ["v_hanbun"]
+          "items": [
+            "v_hanbun"
+          ]
         },
         {
           "label": "Adverbs",
-          "items": ["v_sugu", "v_chotto", "v_tsugi"]
+          "items": [
+            "v_sugu",
+            "v_chotto",
+            "v_tsugi"
+          ]
         },
         {
           "label": "Yesterday",
-          "items": ["v_kinou"]
+          "items": [
+            "v_kinou"
+          ]
         },
         {
           "label": "Demonstrative Adnominals",
-          "items": ["v_kono", "v_sono", "v_ano", "v_dono"]
+          "items": [
+            "v_kono",
+            "v_sono",
+            "v_ano",
+            "v_dono"
+          ]
         },
         {
           "label": "Everyday Objects",
-          "items": ["v_sumaho", "v_keeki"]
+          "items": [
+            "v_sumaho",
+            "v_keeki"
+          ]
         },
         {
           "label": "Expressions",
-          "items": ["p_irasshaimase"]
+          "items": [
+            "p_irasshaimase"
+          ]
         }
       ]
     },
@@ -206,7 +269,10 @@
             "v_kyou",
             "v_nanji",
             "p_ni",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -215,9 +281,15 @@
           "jp": "三時に います。",
           "en": "I am here at three o'clock.",
           "terms": [
-            { "counter": "ji", "n": 3 },
+            {
+              "counter": "ji",
+              "n": 3
+            },
             "p_ni",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -229,7 +301,10 @@
             "p_wa",
             "v_nanji",
             "p_ni",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -240,9 +315,15 @@
           "terms": [
             "v_sensei",
             "p_wa",
-            { "counter": "ji", "n": 4 },
+            {
+              "counter": "ji",
+              "n": 4
+            },
             "p_ni",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -251,7 +332,10 @@
           "en": "Every day at four o'clock?",
           "terms": [
             "v_mainichi",
-            { "counter": "ji", "n": 4 },
+            {
+              "counter": "ji",
+              "n": 4
+            },
             "g_desu",
             "p_ka"
           ]
@@ -263,9 +347,15 @@
           "terms": [
             "p_hai",
             "v_mainichi",
-            { "counter": "ji", "n": 4 },
+            {
+              "counter": "ji",
+              "n": 4
+            },
             "p_ni",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -284,7 +374,10 @@
             "v_san",
             "v_konshuu",
             "p_wa",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -297,7 +390,10 @@
             "v_konshuu",
             "p_wa",
             "v_mainichi",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -308,7 +404,10 @@
             "v_senshuu",
             "p_mo",
             "v_mainichi",
-            { "id": "v_iru", "form": "polite_mashita" },
+            {
+              "id": "v_iru",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -324,7 +423,10 @@
             "p_to",
             "v_suiyoubi",
             "p_ni",
-            { "id": "v_iru", "form": "polite_mashita" }
+            {
+              "id": "v_iru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -334,7 +436,10 @@
           "terms": [
             "p_soudesuka",
             "v_maishuu",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ne"
           ]
         },
@@ -345,8 +450,14 @@
           "terms": [
             "p_hai",
             "v_maishuu",
-            { "id": "v_iru", "form": "polite_masu" },
-            { "id": "v_ii", "form": "polite_past_adj" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            },
             "p_ne"
           ]
         }
@@ -365,7 +476,10 @@
             "char_rikizo",
             "v_san",
             "p_wa",
-            { "id": "v_wakaru", "form": "polite_masu" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -375,7 +489,10 @@
           "en": "I understand sometimes.",
           "terms": [
             "v_tokidoki",
-            { "id": "v_wakaru", "form": "polite_masu" }
+            {
+              "id": "v_wakaru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -385,7 +502,10 @@
           "terms": [
             "p_soudesuka",
             "v_hanbun",
-            { "id": "v_wakaru", "form": "polite_masu" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -396,7 +516,10 @@
           "terms": [
             "p_hai",
             "v_hanbun",
-            { "id": "v_wakaru", "form": "polite_masu" }
+            {
+              "id": "v_wakaru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -405,10 +528,16 @@
           "en": "You are here every week. You will understand right away!",
           "terms": [
             "v_maishuu",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ne",
             "v_sugu",
-            { "id": "v_wakaru", "form": "polite_masu" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_masu"
+            },
             "p_yo"
           ]
         },
@@ -417,9 +546,15 @@
           "jp": "よかったです。毎週 分かります。",
           "en": "That's wonderful. I understand more every week.",
           "terms": [
-            { "id": "v_ii", "form": "polite_past_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            },
             "v_maishuu",
-            { "id": "v_wakaru", "form": "polite_masu" }
+            {
+              "id": "v_wakaru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -434,11 +569,15 @@
           "jp": "やまかわさん、このケーキは いいですか。",
           "en": "Yamakawa-san, is this cake good?",
           "terms": [
+            "char_yamakawa",
             "v_san",
             "v_kono",
             "v_keeki",
             "p_wa",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -452,7 +591,10 @@
             "v_keeki",
             "p_wa",
             "v_totemo",
-            { "id": "v_ii", "form": "polite_adj" }
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -463,7 +605,10 @@
             "v_sono",
             "v_keeki",
             "p_mo",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -477,7 +622,10 @@
             "v_sono",
             "v_keeki",
             "p_mo",
-            { "id": "v_ii", "form": "polite_adj" }
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -488,7 +636,10 @@
             "v_kinou",
             "v_keeki",
             "p_ga",
-            { "id": "v_aru", "form": "polite_mashita" },
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -500,9 +651,15 @@
             "p_hai",
             "v_kinou",
             "p_mo",
-            { "id": "v_aru", "form": "polite_mashita" },
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            },
             "v_chotto",
-            { "id": "v_aru", "form": "polite_mashita" }
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -515,9 +672,13 @@
           "jp": "やまかわは 今週 います。",
           "en": "Yamakawa is here this week.",
           "terms": [
+            "char_yamakawa",
             "p_wa",
             "v_konshuu",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -530,7 +691,10 @@
             "p_to",
             "v_suiyoubi",
             "p_ni",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -541,7 +705,10 @@
             "p_wa",
             "v_getsuyoubi",
             "p_ni",
-            { "id": "v_iru", "form": "polite_mashita" }
+            {
+              "id": "v_iru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -551,9 +718,15 @@
             "v_sensei",
             "p_wa",
             "v_maishuu",
-            { "counter": "ji", "n": 3 },
+            {
+              "counter": "ji",
+              "n": 3
+            },
             "p_ni",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -564,7 +737,10 @@
             "v_san",
             "p_mo",
             "v_maishuu",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -572,10 +748,16 @@
           "en": "They are here every week — how wonderful!",
           "terms": [
             "v_maishuu",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ne",
             "v_totemo",
-            { "id": "v_ureshii", "form": "polite_adj" }
+            {
+              "id": "v_ureshii",
+              "form": "polite_adj"
+            }
           ]
         }
       ],
@@ -586,7 +768,10 @@
           "terms": [
             "p_wa",
             "v_konshuu",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka",
             "p_hai"
           ]
@@ -599,7 +784,10 @@
             "p_wa",
             "v_nanyoubi",
             "p_ni",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka",
             "v_getsuyoubi",
             "p_to",
@@ -614,7 +802,10 @@
             "p_wa",
             "v_nanyoubi",
             "p_ni",
-            { "id": "v_iru", "form": "polite_mashita" },
+            {
+              "id": "v_iru",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "v_getsuyoubi"
           ]
@@ -627,9 +818,15 @@
             "p_wa",
             "v_nanji",
             "p_ni",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka",
-            { "counter": "ji", "n": 3 }
+            {
+              "counter": "ji",
+              "n": 3
+            }
           ]
         }
       ]
@@ -646,7 +843,10 @@
             "p_no",
             "v_tanjoubi",
             "p_wa",
-            { "counter": "gatsu", "n": 3 },
+            {
+              "counter": "gatsu",
+              "n": 3
+            },
             "v_mikka",
             "g_desu"
           ]
@@ -656,11 +856,17 @@
           "en": "Every year in March there is a birthday.",
           "terms": [
             "v_mainen",
-            { "counter": "gatsu", "n": 3 },
+            {
+              "counter": "gatsu",
+              "n": 3
+            },
             "p_ni",
             "v_tanjoubi",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -670,7 +876,10 @@
             "v_kinou",
             "v_keeki",
             "p_ga",
-            { "id": "v_aru", "form": "polite_mashita" }
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -681,7 +890,10 @@
             "v_keeki",
             "p_wa",
             "v_totemo",
-            { "id": "v_ii", "form": "polite_adj" }
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -691,7 +903,10 @@
             "v_tomodachi",
             "p_wa",
             "v_konshuu",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -700,7 +915,10 @@
           "terms": [
             "v_mainen",
             "v_totemo",
-            { "id": "v_ureshii", "form": "polite_adj" }
+            {
+              "id": "v_ureshii",
+              "form": "polite_adj"
+            }
           ]
         }
       ],
@@ -711,7 +929,10 @@
           "terms": [
             "v_tanjoubi",
             "p_wa",
-            { "counter": "gatsu", "n": 3 },
+            {
+              "counter": "gatsu",
+              "n": 3
+            },
             "v_mikka",
             "g_desu",
             "p_ka",
@@ -726,7 +947,10 @@
             "v_kinou",
             "v_nani",
             "p_ga",
-            { "id": "v_aru", "form": "polite_mashita" },
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "v_keeki"
           ]
@@ -742,7 +966,10 @@
             "g_desu",
             "p_ka",
             "v_totemo",
-            { "id": "v_ii", "form": "polite_adj" }
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -752,7 +979,10 @@
             "v_tomodachi",
             "p_wa",
             "v_konshuu",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka",
             "p_hai"
           ]
@@ -767,37 +997,67 @@
         {
           "kind": "mcq",
           "q": "[時] の よみかたは？",
-          "choices": ["じ", "ふん", "ねん", "しゅう"],
+          "choices": [
+            "じ",
+            "ふん",
+            "ねん",
+            "しゅう"
+          ],
           "answer": "じ"
         },
         {
           "kind": "mcq",
           "q": "[分] の よみかたは？",
-          "choices": ["ふん", "じ", "ねん", "はん"],
+          "choices": [
+            "ふん",
+            "じ",
+            "ねん",
+            "はん"
+          ],
           "answer": "ふん"
         },
         {
           "kind": "mcq",
           "q": "[年] の よみかたは？",
-          "choices": ["ねん", "しゅう", "はん", "じ"],
+          "choices": [
+            "ねん",
+            "しゅう",
+            "はん",
+            "じ"
+          ],
           "answer": "ねん"
         },
         {
           "kind": "mcq",
           "q": "[週] の よみかたは？",
-          "choices": ["しゅう", "ねん", "じ", "ふん"],
+          "choices": [
+            "しゅう",
+            "ねん",
+            "じ",
+            "ふん"
+          ],
           "answer": "しゅう"
         },
         {
           "kind": "mcq",
           "q": "[半] の よみかたは？",
-          "choices": ["はん", "じ", "ふん", "ねん"],
+          "choices": [
+            "はん",
+            "じ",
+            "ふん",
+            "ねん"
+          ],
           "answer": "はん"
         },
         {
           "kind": "mcq",
           "q": "[今週] の よみかたは？",
-          "choices": ["こんしゅう", "こんがつ", "まいしゅう", "せんしゅう"],
+          "choices": [
+            "こんしゅう",
+            "こんがつ",
+            "まいしゅう",
+            "せんしゅう"
+          ],
           "answer": "こんしゅう"
         }
       ]
@@ -810,7 +1070,12 @@
         {
           "kind": "mcq",
           "q": "_______ は 月よう日と 水よう日に います。",
-          "choices": ["今週", "先週", "今年", "きのう"],
+          "choices": [
+            "今週",
+            "先週",
+            "今年",
+            "きのう"
+          ],
           "answer": "今週",
           "terms": [
             "v_konshuu",
@@ -819,62 +1084,102 @@
             "p_to",
             "v_suiyoubi",
             "p_ni",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "_______ 月よう日に いました。",
-          "choices": ["先週は", "今週は", "毎週は", "今年は"],
+          "choices": [
+            "先週は",
+            "今週は",
+            "毎週は",
+            "今年は"
+          ],
           "answer": "先週は",
           "terms": [
             "v_senshuu",
             "p_wa",
             "v_getsuyoubi",
             "p_ni",
-            { "id": "v_iru", "form": "polite_mashita" }
+            {
+              "id": "v_iru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "たんじょうびは _______ 三月です。",
-          "choices": ["毎年", "今日", "先週", "きのう"],
+          "choices": [
+            "毎年",
+            "今日",
+            "先週",
+            "きのう"
+          ],
           "answer": "毎年",
           "terms": [
             "v_tanjoubi",
             "p_wa",
             "v_mainen",
-            { "counter": "gatsu", "n": 3 },
+            {
+              "counter": "gatsu",
+              "n": 3
+            },
             "g_desu"
           ]
         },
         {
           "kind": "mcq",
           "q": "にほんごは _______ 分かります。",
-          "choices": ["時々", "毎週", "先週", "きのう"],
+          "choices": [
+            "時々",
+            "毎週",
+            "先週",
+            "きのう"
+          ],
           "answer": "時々",
           "terms": [
             "p_wa",
             "v_tokidoki",
-            { "id": "v_wakaru", "form": "polite_masu" }
+            {
+              "id": "v_wakaru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "_______ ケーキが ありました。",
-          "choices": ["きのう", "今日", "今週", "毎週"],
+          "choices": [
+            "きのう",
+            "今日",
+            "今週",
+            "毎週"
+          ],
           "answer": "きのう",
           "terms": [
             "v_kinou",
             "v_keeki",
             "p_ga",
-            { "id": "v_aru", "form": "polite_mashita" }
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "_______ スマホは 先生のですか。",
-          "choices": ["どの", "この", "その", "あの"],
+          "choices": [
+            "どの",
+            "この",
+            "その",
+            "あの"
+          ],
           "answer": "どの",
           "terms": [
             "v_dono",
@@ -889,18 +1194,31 @@
         {
           "kind": "mcq",
           "q": "_______ 分かりますよ。",
-          "choices": ["すぐ", "時々", "毎週", "先週"],
+          "choices": [
+            "すぐ",
+            "時々",
+            "毎週",
+            "先週"
+          ],
           "answer": "すぐ",
           "terms": [
             "v_sugu",
-            { "id": "v_wakaru", "form": "polite_masu" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_masu"
+            },
             "p_yo"
           ]
         },
         {
           "kind": "mcq",
           "q": "この スマホは _______ ですか。",
-          "choices": ["だれの", "どれ", "どの", "なに"],
+          "choices": [
+            "だれの",
+            "どれ",
+            "どの",
+            "なに"
+          ],
           "answer": "だれの",
           "terms": [
             "v_kono",
@@ -922,56 +1240,96 @@
         {
           "kind": "mcq",
           "q": "今週 _______ 月よう日に います。",
-          "choices": ["は", "が", "を", "に"],
+          "choices": [
+            "は",
+            "が",
+            "を",
+            "に"
+          ],
           "answer": "は",
           "terms": [
             "v_konshuu",
             "p_wa",
             "v_getsuyoubi",
             "p_ni",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "三時 _______ います。",
-          "choices": ["に", "は", "が", "を"],
+          "choices": [
+            "に",
+            "は",
+            "が",
+            "を"
+          ],
           "answer": "に",
           "terms": [
-            { "counter": "ji", "n": 3 },
+            {
+              "counter": "ji",
+              "n": 3
+            },
             "p_ni",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "毎週 友だち _______ います。",
-          "choices": ["が", "は", "を", "に"],
+          "choices": [
+            "が",
+            "は",
+            "を",
+            "に"
+          ],
           "answer": "が",
           "terms": [
             "v_maishuu",
             "v_tomodachi",
             "p_ga",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "きのう ケーキ _______ ありましたか。",
-          "choices": ["が", "は", "を", "も"],
+          "choices": [
+            "が",
+            "は",
+            "を",
+            "も"
+          ],
           "answer": "が",
           "terms": [
             "v_kinou",
             "v_keeki",
             "p_ga",
-            { "id": "v_aru", "form": "polite_mashita" },
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
         {
           "kind": "mcq",
           "q": "この スマホ _______ 先生のです。",
-          "choices": ["は", "が", "を", "に"],
+          "choices": [
+            "は",
+            "が",
+            "を",
+            "に"
+          ],
           "answer": "は",
           "terms": [
             "v_kono",
@@ -985,40 +1343,67 @@
         {
           "kind": "mcq",
           "q": "毎年 三月 _______ たんじょうびが あります。",
-          "choices": ["に", "は", "を", "も"],
+          "choices": [
+            "に",
+            "は",
+            "を",
+            "も"
+          ],
           "answer": "に",
           "terms": [
             "v_mainen",
-            { "counter": "gatsu", "n": 3 },
+            {
+              "counter": "gatsu",
+              "n": 3
+            },
             "p_ni",
             "v_tanjoubi",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "どの ケーキ _______ いいですか。",
-          "choices": ["が", "は", "を", "に"],
+          "choices": [
+            "が",
+            "は",
+            "を",
+            "に"
+          ],
           "answer": "が",
           "terms": [
             "v_dono",
             "v_keeki",
             "p_ga",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
         {
           "kind": "mcq",
           "q": "先週 月よう日 _______ いましたか。",
-          "choices": ["に", "は", "を", "も"],
+          "choices": [
+            "に",
+            "は",
+            "を",
+            "も"
+          ],
           "answer": "に",
           "terms": [
             "v_senshuu",
             "v_getsuyoubi",
             "p_ni",
-            { "id": "v_iru", "form": "polite_mashita" },
+            {
+              "id": "v_iru",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         }
