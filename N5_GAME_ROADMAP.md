@@ -5034,6 +5034,9 @@ No new quest log entries. But two threads advanced today without formal quest-lo
 - 社長 (company president), 社会 (society)
 - 口 (mouth/opening)
 - アルバイト (part-time job)
+- ビル (building — loan word, **add to glossary as v_biru, lesson_ids N5.17**)
+- カードキー (key card — loan word, **add to glossary as v_kaadokii, lesson_ids N5.17**)
+- サンドイッチ (sandwich — already in glossary at N5.9, available)
 
 **Calendar:** 五月十三日 (May 13th, Tuesday). Third school week. Routine established.
 
@@ -5051,23 +5054,66 @@ This is a mirror of Day 12. Day 12 gave Rikizo an obligation (school). Day 17 gi
 
 And then there's 出口 and 入り口. Exit and entrance. Every building in the game has had doors, but doors haven't had *labels*. Now they do. The school gate has an 入り口 side and an 出口 side. The コンビニ has an entrance. The station has exits. The world gains flow — directional movement through spaces. You enter, you exit. These aren't the same act.
 
+And: a new building. The ビル. It has always been there — a tall structure in the town that the player has walked past since Day 5. But it had no name. No entrance prompt. No interior. Today it gets a name, a lobby, and locked floors. It's where Dad works. It's where the world's economy lives. And it is, unexpectedly, where Rikizo will meet someone new.
+
 ---
 
-### Morning — Dad Leaves
+### Morning — Dad's Gone, the Car's Gone, the Sando's Here
 
-This is the morning Dad doesn't stay.
+This is the morning everything changes.
+
+Dad's chair is empty. The car is gone from the driveway. For sixteen days, the car has been a permanent fixture — admired, touched, talked about, never ridden in. Today it's simply absent. The space where it sat is bare. Dad drove it to work. The car, like Dad, has a life beyond Rikizo's observation.
 
 1. **Mom:** 「おはよう。お父さんはもう出ましたよ。」 — "Good morning. Dad already left." *(出ました — polite past of 出る. Dad has exited. He's gone. For the first time in 17 days, Dad is not at the breakfast table. The chair is empty. Mom says it casually — as if this has always been the routine. But the player has watched Dad eat breakfast every single morning. His absence is jarring.)*
 
 2. **Rikizo:** 「お父さんは...どこに？」 — "Dad... where to?"
 
-3. **Mom:** 「会社ですよ。午前は会社です。午後に帰ります。」 — "The company. He's at the company in the morning. He comes home in the afternoon." *(会社. Mom names it. Dad goes to a company. He works there. In the morning. He returns in the afternoon. This is the most matter-of-fact revelation in the game — Dad has a job. He's always had a job. He's been going to work since before Rikizo was born. It just hasn't been sayable until now. The player has been seeing Dad on vacation — Golden Week, then weekend, then the gap between weekday mornings and his return. Today the gap has a name: 会社.)*
+3. **Mom:** 「会社ですよ。午前は会社です。」 — "The company. He's at the company in the morning." *(会社. Mom names it. Dad goes to a company. He works there. In the morning. This is the most matter-of-fact revelation in the game — Dad has a job. He's always had a job. He's been going to work since before Rikizo was born. It just hasn't been sayable until now. The player has been seeing Dad on vacation — Golden Week, then weekend, then the gap between weekday mornings and his return. Today the gap has a name: 会社.)*
 
-4. **Mom:** 「りきぞも学校の時間ですよ。午前は学校、午後は...」 — "It's school time for you too, Rikizo. Mornings are school, afternoons are..." *(She structures the day. 午前 = school. 午後 = free. The split creates a framework. Rikizo's day, which has been "do whatever," is now divided. Morning: obligation. Afternoon: choice. This is how adults experience time — segmented, allocated, finite. Rikizo is learning time management through vocabulary.)*
+4. **Mom notices something on the table:** 「あ。お父さんのサンドイッチ...」 — "Oh. Dad's sandwich..." *(She picks up a wrapped sandwich. Dad left it behind. He forgot his lunch. This is the most domestic, human thing that has happened in this game. Dad, who yells about gold and doors with supernatural awareness, forgot his sandwich on the kitchen table.)*
 
-**Design note — Dad's job:** What does Dad do? The game never says. He goes to 会社. He comes home. He's tired or not tired. He has opinions about things. His job is deliberately undefined — not because it doesn't matter, but because the vocabulary to describe specific jobs doesn't arrive for a while. The concept of "company" is enough for now. In N4, when professional vocabulary expands, Dad's role at the company may be specified — or it may remain vague, Dad's eternal mystery.
+5. **Mom:** 「りきぞ、学校の前に会社に行ってください。お父さんにサンドイッチを出してください。」 — "Rikizo, please go to the company before school. Please give Dad his sandwich." *(Two てください requests in one beat. Mom is giving Rikizo a quest — the most mundane quest imaginable. Deliver a sandwich. But it requires going somewhere new: the 会社. And to get in, you'll need something.)*
+
+6. **Mom gives you a カードキー:** 「これはお父さんのカードキーです。ビルの三かいに入ってください。」 — "This is Dad's key card. Please enter the third floor of the building." *(カードキー — key card. A loan word. Mom hands over the physical key to Dad's workspace. The ビル has floors — and this card unlocks one of them. 三かい — third floor, using the counter from Day 16. The quest is simple: take sandwich, use card, find Dad.)*
+
+**Quest log updates:**
+> ◻ お父さんのサンドイッチ: 会社にサンドイッチを出してください。
+
+**Items received:**
+- サンドイッチ (Dad's sandwich — quest item)
+- カードキー (Dad's key card — quest item, unlocks ビル 3F)
+
+**Design note — Dad's job:** What does Dad do? The game never says. He goes to 会社. He forgot his lunch. He has a key card for the third floor. His job is deliberately undefined — not because it doesn't matter, but because the vocabulary to describe specific jobs doesn't arrive for a while. The concept of "company" is enough for now. In N4, when professional vocabulary expands, Dad's role at the company may be specified — or it may remain vague, Dad's eternal mystery.
 
 **Design note — Mom's role:** Mom doesn't go to 会社. She's at home. The game doesn't comment on this — it's a common Japanese family structure. Mom manages the household, the finances, the children. She is, in many ways, the most competent person in the game — she runs everything while Dad works and Rikizo goes to school. Whether the game eventually gives Mom her own professional arc (part-time work, community involvement) is a future decision. For now, she is the anchor of the household, and the household runs because of her.
+
+**Design note — "Where's Dad?" (permanent state change):** From Day 17 onward, Dad is at work. He does not come home in the afternoon. He does not come home in the evening. Until evening mechanics are introduced in N4, Dad is simply *gone during the day*. The car is gone. His chair is empty. If the player goes home and talks to Mom, she says: 「お父さんは会社ですよ。」 — "Dad's at the company." No elaboration. No timeline for return. He just... works now. This is a permanent world state change. The house loses a family member during daylight hours.
+
+---
+
+### The Gold Coin — Dad's Not Home
+
+Dad is at work. The car is gone. The house is quiet. And the gold coin is sitting on the living room shelf. Unguarded. For the first time since Day 2, there is no Dad to yell 「金！だめ！」 from wherever he is. His sixth sense doesn't extend to the office.
+
+**If the player interacts with the gold:**
+
+The coin glows invitingly. No yell comes. The player can... take it?
+
+**[YES — TAKE THE GOLD]**
+
+The moment Rikizo picks up the gold coin, the screen flashes. A phone rings — Rikizo's phone. It's Mom. She's in the kitchen. The kitchen is ten feet away.
+
+1. **Mom (phone):** 「りきぞ。」 — "Rikizo." *(Flat. No question mark. She knows.)*
+
+2. **Mom (phone):** 「金を出してください。」 — "Please put the gold back." *(出してください — polite request using 出す. She didn't even look. She didn't need to. Mom has inherited Dad's sixth sense. Or maybe she always had it. Maybe Dad's sixth sense was always Mom's sixth sense, routed through Dad.)*
+
+3. **If the player puts it back:** Normal gameplay resumes. Mom says nothing further. The incident is not mentioned again. But the player knows: the gold is protected by something that transcends physical presence.
+
+4. **If the player tries to leave the house with it:** The front door won't open. 「ドアが開きません。」 — "The door won't open." The house itself is refusing. Rikizo must put the gold back. There is no stealing the gold. There has never been a way to steal the gold. The gold protects itself.
+
+5. **If the player puts it back and then tries to take it AGAIN:** Mom doesn't call. She's standing behind Rikizo. She was not there a moment ago. She says nothing. She just stands there. Rikizo puts the gold back. The interaction prompt disappears for the rest of the day.
+
+**Design note — the gold is comedy, not frustration.** Every escalation is absurd. Phone call from ten feet away. Door that won't open. Mom teleporting. The player should be laughing, not annoyed. The gold is the game's most protected object. More protected than quest items. More protected than save files. The gold belongs to Dad, and the universe enforces this.
 
 ---
 
@@ -5080,6 +5126,21 @@ The station, which Rikizo passes every day, now has visible text:
 > 「入り口」 — "Entrance"
 
 These are the first *functional* environmental texts — they tell you what to do. The bulletin board (Day 13) was informational. 出口 and 入り口 are *directional*. They organize movement. Enter here. Exit there. The world has flow.
+
+**The ビル — new building in town:**
+
+On the walk to school, the player passes the ビル for the first time. It has always been in the background — a tall, generic building between the station and the school. But today it has a name plate visible to the player:
+
+> 「ビル」
+
+And an entrance:
+> 「入り口」
+
+The ビル is multi-floor. From the outside, the player can see windows going up several stories. It's the tallest building in town — taller than the デパート, taller than the ホテル. It looks like a real office building. It looks like the kind of place where adults go to do things Rikizo doesn't understand yet.
+
+**If the player enters the ビル before school (with カードキー):** See "The ビル — Dad's Office" section below.
+
+**If the player goes to school first:** The quest waits. The sandwich is in inventory. The card is in inventory. School proceeds normally. The ビル can be visited after school.
 
 **Station master interaction:**
 
@@ -5122,9 +5183,66 @@ This is different from 学校 (which materialized alongside the concept) or 書�
 
 ---
 
+### The ビル — Dad's Office
+
+The ビル is the first truly multi-floor explorable building in the game that isn't the house or the デパート. It has a lobby, an elevator panel, and floors. All floors are locked except the one the カードキー opens.
+
+**Entering the lobby:**
+
+The lobby is clean and quiet. There's a reception counter (unmanned — no receptionist NPC exists yet). An elevator. A floor directory on the wall that's partially readable with taught kanji. And someone mopping the floor.
+
+1. **レン:** 「あ、いらっしゃい！...あ、ここは会社だ。いらっしゃいませは変だね。」 — "Ah, welcome!... Oh wait, this is a company. 'Welcome' is weird here, huh?" *(いらっしゃいませ — the store greeting. レン says it reflexively, then catches himself. He's used to greeting customers. He works everywhere. This is his first line in the game, and it immediately establishes his character: he's a worker, he's casual, and he doesn't quite know what context he's in.)*
+
+2. **Rikizo:** 「...だれ？」 — "...Who?"
+
+3. **レン:** 「おれはレン！ここでアルバイトしてるよ。」 — "I'm Ren! I'm doing a part-time job here." *(アルバイト — the word from the vocabulary list finds its character. レン works here. Part-time. As an アルバイト. He's mopping the lobby of Dad's office building. He looks like he's Rikizo's age. Maybe a little older. He has the energy of someone who has never considered the concept of not working.)*
+
+4. **レン:** 「午前はここ、午後はコンビニ。毎日たくさんのアルバイトがあるよ！」 — "Mornings here, afternoons at the コンビニ. There are lots of part-time jobs every day!" *(He works multiple jobs. Every day. 午前 at the ビル, 午後 at the コンビニ. He frames this as exciting, not exhausting. The character description says "doesn't understand the concept of rest" — this is the proof. He is genuinely delighted by having many jobs.)*
+
+5. **Rikizo:** 「お父さんの会社はどこですか？」 — "Where is my dad's company?"
+
+6. **レン:** 「三かい？カードキーで入ってね。」 — "Third floor? Go in with the key card." *(Casual. Helpful. He points at the elevator. The quest path is clear.)*
+
+**Design note — レン's introduction:** レン is the game's first hustler archetype. While けん is pure friendship energy and ミキ is quiet observation, レン is *doing things*. Always. He works at the ビル in the morning and the コンビニ in the afternoon. He might have other jobs the player hasn't discovered yet. He's cheerful, direct, and speaks casually from the first interaction — no polite register, no formality. He treats Rikizo like a friend immediately because everyone is レン's friend. That's just efficient.
+
+**Elevator:**
+
+The elevator panel shows floor buttons. All are grayed out / inaccessible except 三かい (3F), which glows when the player has the カードキー in inventory.
+
+**If the player tries other floors:** 「カードキーがありません。」 — "You don't have a key card (for this floor)." Every floor is locked behind its own card. Dad's card only opens Dad's floor. The ビル has secrets on every floor — but they're for N4 and beyond. For now, the locked floors are a promise: this building has depth.
+
+**Third floor — Dad's office:**
+
+The third floor is a small office space. Desks. Papers. A window looking out over the town. And Dad, sitting at a desk, looking exactly like he looks at home — same sprite, same posture — except he's at work.
+
+1. **Dad:** 「りきぞ？何で会社に来ましたか？」 — "Rikizo? Why did you come to the company?" *(Genuinely surprised. Dad's work life and home life have never intersected. Rikizo showing up at the office is unprecedented.)*
+
+2. **Rikizo gives the サンドイッチ:**
+
+3. **Dad:** 「...あ。サンドイッチ。」 — "...Oh. The sandwich." *(A pause. Recognition. He forgot his lunch. Mom sent Rikizo. The most domestic possible quest resolution.)*
+
+4. **Dad:** 「...ありがとう。」 — "...Thanks." *(Dad says thank you. This is notable. Dad rarely thanks anyone. The sandwich delivery has achieved something that years of family life apparently haven't: genuine gratitude from Dad.)*
+
+5. **Dad:** 「学校に行ってください。午前は学校の時間ですよ。」 — "Please go to school. Mornings are school time." *(And just like that, Dad sends Rikizo away. The visit was brief. The sandwich was delivered. The quest is complete. Dad returns to work — whatever work is. The office door closes behind Rikizo.)*
+
+**Quest log updates:**
+> ✓ お父さんのサンドイッチ: 会社にサンドイッチを出してください。 (Day 17 → Day 17)
+
+**Items removed:**
+- サンドイッチ (delivered to Dad)
+- カードキー (returned — or kept? Design decision: does Rikizo keep the card? If yes, it becomes a permanent inventory item that lets the player visit Dad's floor anytime. If no, the ビル becomes locked again until the next quest gives a reason to visit. **Recommendation: Rikizo keeps the card.** It lets the player visit Dad's empty desk after school — he's there in the morning, gone by afternoon. The card becomes a key to an empty room. Haunting.)
+
+**Design note — the sando quest as tutorial for the ビル:** The sandwich delivery is deliberately simple. Go to building, use card, go to floor, talk to Dad. It teaches the player: (1) the ビル exists, (2) floors require key cards, (3) NPCs have lives in places the player hasn't been. The quest is a tutorial disguised as a family errand. In N4, the ビル's other floors will unlock with new cards obtained through new quests — each floor a new world to explore. The third floor was just the door.
+
+---
+
 ### After School — 午後
 
 The afternoon. 午後. The new word gives the time of day a name, and with it a quality. 午前 was school, obligation, structure. 午後 is free, open, choice. The split redefines Rikizo's daily experience.
+
+**If the player visits the ビル after school (with カードキー):** Dad's floor is accessible but Dad's desk is empty. He's already gone — but gone *where*? Not home. The car isn't in the driveway. Dad doesn't come home in the afternoon anymore. Dad doesn't come home in the evening anymore. Until N4 introduces evening mechanics, Dad is at 会社 during the day and simply... not present at home. Where he goes between afternoon and the next morning is undefined. Mom doesn't worry. Mom says 「会社ですよ」and that's that.
+
+**レン (ビル lobby, if visited after school):** レン is gone. His mop is leaned against the wall. He's at the コンビニ now — his afternoon job. If the player visits the コンビニ, they might spot him there. (See Yamakawa section below.)
 
 **Yamakawa (コンビニ, afternoon):**
 
@@ -5132,15 +5250,25 @@ The afternoon. 午後. The new word gives the time of day a name, and with it a 
 
 2. **Yamakawa:** 「おれはアルバイトじゃないけどね。毎日ここにいるだけだよ。」 — "I'm not a part-timer though. I'm just here every day." *(アルバイト — part-time job. Yamakawa clarifies: he's not employed by the コンビニ. He just... is there. Every day. All day. This is the closest the game has come to addressing the Yamakawa question: why is this teenager always at the convenience store? His answer is simultaneously honest and evasive. He's not working. He's just existing. At the コンビニ. As he has since Day 5. The player might find this funny, or unsettling, or both.)*
 
-**Evening — Dad comes home:**
+3. **If レン is present (afternoon):** レン is behind the counter or stocking shelves. Yamakawa and レン coexist at the コンビニ but in completely different modes — レン is *working*, Yamakawa is *existing*. The contrast is stark and uncommented upon.
 
-Dad returns in the 午後, as Mom predicted. He's the same Dad — but now he's coming from somewhere. He has a context outside the house. The chair that was empty this morning is occupied again.
+    - **レン:** 「やまかわさん、手を出してよ。」 — "Yamakawa, lend a hand." *(Casual request. レン assumes everyone should be working because レン is always working.)*
+    - **Yamakawa:** 「おれはアルバイトじゃないって。」 — "I told you, I'm not a part-timer." *(The same line, directed at a different person. Yamakawa's status at the コンビニ is a recurring mystery for everyone, not just the player.)*
 
-1. **Dad:** 「ただいま。」 — "I'm home." *(Standard greeting. But it hits different when the player knows he actually left. Before today, ただいま was just a thing people say. Now it's a return. He went to 会社. He came back. The word has weight.)*
+**Design note — レン and Yamakawa:** These two are a natural comedy pair. レン works constantly, everywhere, for everyone. Yamakawa works nowhere, for nobody, forever. They occupy the same space (the コンビニ) with diametrically opposite relationships to labor. This dynamic can develop across N4 — do they become friends? Does レン try to recruit Yamakawa? Does Yamakawa try to convince レン to stop? The potential is there.
 
-2. **Mom:** 「おかえり。会社はどうでしたか？」 — "Welcome back. How was the company?"
+**Evening — Dad does NOT come home:**
 
-3. **Dad:** 「...たくさん人に会った。」 — "...Met lots of people." *(会った — plain past of 会う. Dad describes his day in one sentence. Minimal, as always. He met people. At the company. It's the most Dad has ever said about his life outside the house, and it's almost nothing.)*
+This is the change. In the original Day 17 plan, Dad returned in the 午後 and said ただいま. That no longer happens. From Day 17 onward, Dad is absent from the house during the game's playable hours. He left in the morning. The car left with him. He does not return before the game transitions to the next day.
+
+If the player goes home in the evening:
+- Mom is there. She's cooking or cleaning. Normal.
+- Dad's chair is empty. The car is not outside.
+- If the player asks Mom: 「お父さんは？」
+
+1. **Mom:** 「会社ですよ。」 — "He's at the company." *(No elaboration. No "he'll be home soon." No concern. Dad is at work. That's where dads go. This is what family life looks like when the concept of employment materializes: someone leaves and the house has a hole in it.)*
+
+This absence becomes permanent. In N4, when evening mechanics arrive, Dad will start coming home — ただいま will mean something again. But for the rest of N5, Dad's chair is empty and the car is gone and Mom says 「会社ですよ」 like it's the most natural thing in the world.
 
 ---
 
@@ -5148,38 +5276,66 @@ Dad returns in the 午後, as Mom predicted. He's the same Dad — but now he's 
 
 | Moment | What Happens | What the Player Should Feel |
 |---|---|---|
-| Dad's chair is empty | He left for 会社 before Rikizo woke up | Disorientation — Dad has ALWAYS been there at breakfast |
-| Mom structures the day | 午前 = school, 午後 = free | Time just got divided. Life has a schedule. |
+| Dad's chair is empty, car is gone | He left for 会社 before Rikizo woke up | Disorientation — Dad has ALWAYS been there. Now he's just... not. |
+| Mom gives you a sandwich and a key card | Dad forgot his lunch. Simple errand. | Warmth — the most human quest in the game |
+| The gold coin is unguarded | Dad's not home. The gold is RIGHT THERE. | Temptation... then comedy escalation |
+| The ビル appears in town | Multi-floor building, mostly locked | The world has infrastructure. Buildings have insides. |
+| Meeting レン in the lobby | Works everywhere, always cheerful | Instant energy — a new character who is fundamentally different from everyone else |
+| Dad at his desk | Same Dad, different context. Brief visit. | Seeing a parent at work for the first time — small but memorable |
 | Exit/entrance signs appear | 出口、入り口 on every building | The world has flow — movement is directional |
-| Yamakawa "I'm not part-time" | He's just... there | Funny? Unsettling? Why IS he always there? |
-| Dad says ただいま | Coming home from somewhere | The word means something now. He actually left. |
+| Yamakawa "I'm not part-time" | He's just... there. レン works next to him. | The contrast is hilarious and unsettling |
+| Dad doesn't come home | Evening — empty chair, no car, Mom unbothered | Loss. A permanent absence. The house got smaller. |
 | 社会 exists as a word | Society — but what society? | A vocabulary item waiting for a world to describe |
 
 ---
 
 ### State Tracking (End of Day 17)
 
-**No new locations.** 会社 is referenced but not visitable (it's Dad's workplace, off-screen). Exits and entrances are labeled on existing buildings.
+**New locations:**
+- **ビル** (office building) — lobby accessible, 3F accessible with カードキー. Other floors locked. Multi-floor explorable interior. Located between station and school on the town map.
 
-**No new NPCs.** 社長 referenced but not introduced.
+**New NPCs:**
+- **レン** (`char_ren`) — works at the ビル (mornings) and コンビニ (afternoons). Introduced during the sando quest. Casual register, high energy, always working.
 
 **Vocabulary-driven world changes:**
 - Buildings now have 出口/入り口 labels
 - Time of day has names: 午前, 午後
-- Dad has a commute cycle (leaves AM, returns PM)
+- Dad has a commute cycle (leaves AM, does NOT return during playable hours)
+- The car is absent from the driveway (permanent during N5)
 - Environmental signage continues to expand with taught kanji
+- The ビル adds vertical exploration to the town (floors, elevator, key cards)
 
-**Flags:**
-- `dad_works` — Dad goes to 会社. Permanent world state change.
+**Permanent state changes:**
+- `dad_works` — Dad goes to 会社. He does not come home during N5 playable hours.
+- `dad_car_gone` — The car is gone with Dad. No longer visible at the house.
+- `biru_unlocked` — The ビル is explorable. Lobby always accessible. 3F accessible with カードキー.
+- `ren_introduced` — レン is now a recurring NPC at the ビル (AM) and コンビニ (PM).
 - `am_pm_unlocked` — Time can be described as 午前/午後.
 - `exit_entrance_labeled` — Buildings gain directional signage.
 - `yamakawa_not_baito` — Yamakawa confirmed: not a part-timer. He just exists at the コンビニ.
 
+**Flags:**
+- `sando_quest_complete` — Dad's sandwich delivered. *(If player kept カードキー: `has_kaadokii` flag set.)*
+- `gold_attempted` — Set if player tried to take the gold. Comedy sequence triggered. No gameplay consequence. Mom remembers nothing. Dad never finds out. The universe quietly resets.
+
 **Art assets:**
 | Asset | Type | Priority | Notes |
 |---|---|---|---|
-| 出口/入り口 signs | BG detail set | High | Labels on station, school, コンビニ, デパート. Readable kanji. |
+| ビル exterior | BG / Building | **Critical** | Tall office building on the town map. Multiple visible floors. 入り口 sign at ground level. |
+| ビル lobby | BG interior | **Critical** | Clean corporate lobby. Reception counter (unmanned). Elevator. Floor directory. Mop against wall (レン's). |
+| ビル 3F — Dad's office | BG interior | High | Small office. Desks, papers, window with town view. Dad sitting at desk (morning variant). Empty desk (afternoon variant). |
+| レン sprite (overworld) | Character sprite | **Critical** | Young, energetic. Work uniform (changes based on location — ビル uniform in lobby, コンビニ apron at store). Always in motion. |
+| レン portrait | Character portrait | **Critical** | Conversation portrait. Cheerful, slightly sweaty. Hair messy from working. |
+| 出口/入り口 signs | BG detail set | High | Labels on station, school, コンビニ, デパート, ビル. Readable kanji. |
 | Empty Dad chair (morning) | BG variant | Medium | Kitchen scene with Dad's usual seat empty. Small detail, big impact. |
+| Empty driveway (car gone) | BG variant | Medium | House exterior without the car. The space is conspicuously bare. |
+| Gold coin glow | Animation / FX | Low | Subtle glow on the gold when Dad is absent. Temptation visual. |
+
+**Glossary additions needed:**
+| ID | Surface | Reading | Meaning | Type | Gtype | lesson_ids |
+|---|---|---|---|---|---|---|
+| `v_biru` | ビル | びる | building (office building) | vocab | noun | N5.17 |
+| `v_kaadokii` | カードキー | かーどきー | key card | vocab | noun | N5.17 |
 
 ---
 
@@ -5218,7 +5374,7 @@ For the final N5 lesson, this is exactly right. The foundational layer closes by
 
 2. **Rikizo:** 「だいじょうぶです。少し...」 — "I'm fine. Just a little..." *(少し — from Day 14. He trails off. He can't say 疲れた (tired) — it's not available. The concept of tiredness remains deferred. But the physical symptom — red eyes — is observable because 目 exists now.)*
 
-3. **Dad** (if home — check: is it before his 会社 departure?): 「足で歩け。車じゃないぞ。」 — "Walk with your feet. No car." *(足 — feet. Dad, practical and blunt. He's telling Rikizo to walk to school. 車 (car, Day 5) exists but isn't for Rikizo. Dad names the body part — feet — and the action — walking. The body is functional equipment in Dad's worldview.)*
+3. *(Dad is at 会社. The car is gone. His chair is empty, as it has been since Day 17. No blunt advice this morning. Mom handles the morning alone — she always has, really. Dad's absence is normal now.)*
 
 ---
 
@@ -5335,9 +5491,11 @@ This is the complete N5 game world. Everything from this point forward (N4) is e
 2. **けん and Tests** — Recurring. Every class. 「テストは？」 This gag has legs through all of N4.
 3. **ミキ's Book** — Rotating titles. Now into Day 6 of the readable-title mechanic. She's reading something about nature (Day 18 theme).
 4. **Station Master** — Still waiting. No trains. The station has 出口 and 入り口 signs now. The exits lead to the same place. The entrances lead to the same place. The station master guards a loop.
-5. **Yamakawa's Existence** — Not a part-timer. Not a student. Just... present. At the コンビニ. Every day. The game's most benign mystery.
+5. **Yamakawa's Existence** — Not a part-timer. Not a student. Just... present. At the コンビニ. Every day. Now with レン working next to him. The contrast is deafening.
 6. **What Yuki Notices** — She noticed the school was new. She noticed the flowers fading. She notices everything nobody else does. The data accumulates.
-7. **Dad's Job** — He goes to 会社. He comes home. He reads the 新聞. His life outside the house is a black box with a newspaper-shaped output.
+7. **Dad's Absence** — He goes to 会社. He does NOT come home during N5 playable hours. The car is gone. The chair is empty. Mom says 「会社ですよ」 and nothing else. Dad exists as an absence now. He reads the 新聞 when evening mechanics arrive in N4. If the player visits the ビル 3F in the morning, Dad is at his desk. In the afternoon, the desk is empty. Where he goes between afternoon and the next morning is undefined.
+8. **Dad's Gold — ESCALATION** — Day 17 is the first time Dad isn't home to yell 「金！だめ！」. If the player tries: Mom calls from ten feet away. If they persist: the front door locks. If they try AGAIN: Mom is standing behind them. She was not there before. The gold is protected by forces beyond mortal understanding. Dad's sixth sense was always Mom's sixth sense.
+9. **レン's Jobs** — NEW. レン works at the ビル (mornings) and the コンビニ (afternoons). He will accumulate more jobs across N4. His job count is a running number. He never complains. He never rests. He greets everyone with store-appropriate phrases regardless of context.
 
 **Quest log state (end of Day 18 / end of N5):**
 > 📋 Quest Log
@@ -5345,6 +5503,7 @@ This is the complete N5 game world. Everything from this point forward (N4) is e
 > ✓ おにぎりを食べる (Day 5 → Day 8)
 > ✓ お母さんの買い物 (Day 8 → Day 9)
 > ✓ ノートに名前を書く (Day 9 → Day 13)
+> ✓ お父さんのサンドイッチ (Day 17 → Day 17)
 > ◻ やまかわのごはん: 新しい食べ物をさがす (Day 10 → ???)
 > ◻ ゆきのきおく: ゆきの話を聞く (Day 11 → N4)
 
@@ -5358,8 +5517,8 @@ Two open quests carry into N4. Everything else is resolved. The foundation suppo
 
 | Category | State |
 |---|---|
-| **Locations** | House (all rooms), コンビニ, デパート, 駅 (empty), 学校 (weekdays), river, park, けん's house, hotel |
-| **Named NPCs** | Mom, Dad, Yamakawa, ゆき, すずき先生, けん, リー, ミキ, station master, hotel clerk, 校長 |
+| **Locations** | House (all rooms), コンビニ, デパート, 駅 (empty), 学校 (weekdays), river, park, けん's house, hotel, ビル (lobby + 3F) |
+| **Named NPCs** | Mom, Dad, Yamakawa, ゆき, すずき先生, けん, リー, ミキ, レン, station master, hotel clerk, 校長 |
 | **Economy** | Wallet active. Shopping at コンビニ and デパート. No income system yet. |
 | **Time system** | Calendar (dates), day-of-week, 午前/午後 split, weekday/weekend rhythm |
 | **School** | Weekdays only. Class scenes daily. すずき teaches, けん disrupts, リー studies, ミキ reads. |
@@ -5383,7 +5542,7 @@ dad_annoyance:  0–3 (mostly cooled by daily decay)
 
 | Asset | Type | Priority | Notes |
 |---|---|---|---|
-| Dad with newspaper | Sprite variant | High | Evening Dad, seated, holding 新聞. New default evening pose. |
+| Dad with newspaper | Sprite variant | Medium | **Deferred to N4 evening mechanics.** Dad doesn't come home during N5 playable hours (from Day 17 onward). This sprite is needed when evening scenes arrive in N4 — Dad seated, holding 新聞. |
 | けん rubbing leg | Sprite variant | Medium | いたい expression — comedic pain, not serious injury |
 | Fading flowers (river) | BG variant | Medium | Cherry blossoms thinning compared to Day 11. Seasonal progression. ゆき notices. |
 
