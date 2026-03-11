@@ -31,7 +31,7 @@
               "spk": "A",
               "jp": "この 問題の 答えが 分かりますか。",
               "terms": [
-                "k_kono",
+                "v_kono",
                 "v_mondai",
                 "v_kotae",
                 {
@@ -106,7 +106,7 @@
               "jp": "森の 中の 会堂に 集まりましょう。",
               "terms": [
                 "v_mori",
-                "k_naka",
+                "v_naka",
                 "v_kaidou",
                 {
                   "id": "v_atsumaru",
@@ -156,8 +156,8 @@
               "spk": "A",
               "jp": "この 町は 代わりましたね。",
               "terms": [
-                "k_kono",
-                "k_machi",
+                "v_kono",
+                "v_machi",
                 {
                   "id": "v_kawaru",
                   "form": "polite_mashita"
@@ -182,7 +182,7 @@
               "spk": "A",
               "jp": "今の 時代は 早いですね。",
               "terms": [
-                "k_ima",
+                "v_ima",
                 "v_jidai",
                 "v_hayai"
               ]
@@ -281,9 +281,9 @@
           "en": "There is a special shop in the forest.",
           "terms": [
             "v_mori",
-            "k_naka",
+            "v_naka",
             "v_tokubetsu",
-            "k_mise",
+            "v_mise",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -294,7 +294,7 @@
           "jp": "店は 午後 一時に 開きます。",
           "en": "The shop opens at 1:00 PM.",
           "terms": [
-            "k_mise",
+            "v_mise",
             "v_gogo",
             "v_ichiji",
             {
@@ -309,7 +309,7 @@
           "terms": [
             "v_iroiro",
             "v_sedai",
-            "k_hito",
+            "v_hito",
             {
               "id": "v_atsumaru",
               "form": "polite_masu"
@@ -320,7 +320,7 @@
           "jp": "みんな 店の コーヒーが 大好きだと 思います。",
           "en": "I think everyone loves the shop's coffee.",
           "terms": [
-            "k_mise",
+            "v_mise",
             "v_daisuki",
             {
               "id": "v_omou",
@@ -348,10 +348,10 @@
             "川の 近く"
           ],
           "terms": [
-            "k_mise",
+            "v_mise",
             "v_doko",
             "v_mori",
-            "k_naka"
+            "v_naka"
           ]
         },
         {
@@ -365,7 +365,7 @@
           ],
           "terms": [
             "v_nanji",
-            "k_mise",
+            "v_mise",
             "v_aku_2",
             "v_gogo",
             "v_ichiji"
@@ -385,7 +385,7 @@
             "v_atsumaru",
             "v_iroiro",
             "v_sedai",
-            "k_hito"
+            "v_hito"
           ]
         }
       ]

@@ -7,9 +7,18 @@
     "type": "assessment",
     "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 32-34.",
     "kanji": [
-      "引", "用", "習", "市",
-      "場", "工", "広", "建",
-      "区", "発", "県", "通"
+      "引",
+      "用",
+      "習",
+      "市",
+      "場",
+      "工",
+      "広",
+      "建",
+      "区",
+      "発",
+      "県",
+      "通"
     ]
   },
   "sections": [
@@ -34,7 +43,10 @@
               "spk": "B",
               "jp": "八時 発です。",
               "terms": [
-                { "counter": "ji", "n": 8 },
+                {
+                  "counter": "ji",
+                  "n": 8
+                },
                 "v_hatsu"
               ]
             },
@@ -43,9 +55,12 @@
               "jp": "電車は この 市を 通りますか。",
               "terms": [
                 "v_densha",
-                "k_kono",
+                "v_kono",
                 "v_shi",
-                { "id": "v_tooru", "form": "polite_masu" }
+                {
+                  "id": "v_tooru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -55,7 +70,10 @@
                 "v_hai",
                 "v_ookii",
                 "v_toshi",
-                { "id": "v_tooru", "form": "polite_masu" }
+                {
+                  "id": "v_tooru",
+                  "form": "polite_masu"
+                }
               ]
             }
           ],
@@ -77,7 +95,7 @@
               "spk": "A",
               "jp": "この 地区に 大きい 工場が ありますね。",
               "terms": [
-                "k_kono",
+                "v_kono",
                 "v_chiku",
                 "v_ookii",
                 "v_koujou"
@@ -90,8 +108,14 @@
                 "v_hai",
                 "v_hiroi",
                 "v_basho",
-                { "id": "v_tatsu", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_masu" }
+                {
+                  "id": "v_tatsu",
+                  "form": "te_form"
+                },
+                {
+                  "id": "v_iru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -100,18 +124,30 @@
               "terms": [
                 "v_kouin",
                 "v_nannin",
-                { "id": "v_iru", "form": "polite_masu" }
+                {
+                  "id": "v_iru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
               "spk": "B",
               "jp": "多く います。区内に 広場も あります。",
               "terms": [
-                { "id": "v_ooi", "form": "adverbial" },
-                { "id": "v_iru", "form": "polite_masu" },
+                {
+                  "id": "v_ooi",
+                  "form": "adverbial"
+                },
+                {
+                  "id": "v_iru",
+                  "form": "polite_masu"
+                },
                 "v_ku",
                 "v_hiroba",
-                { "id": "v_aru", "form": "polite_masu" }
+                {
+                  "id": "v_aru",
+                  "form": "polite_masu"
+                }
               ]
             }
           ],
@@ -135,8 +171,14 @@
               "terms": [
                 "v_mainichi",
                 "v_doko",
-                { "id": "v_kayou", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_masu" }
+                {
+                  "id": "v_kayou",
+                  "form": "te_form"
+                },
+                {
+                  "id": "v_iru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -145,8 +187,14 @@
               "terms": [
                 "v_shuuji",
                 "v_kyoushuu",
-                { "id": "v_kayou", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_masu" }
+                {
+                  "id": "v_kayou",
+                  "form": "te_form"
+                },
+                {
+                  "id": "v_iru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -154,7 +202,10 @@
               "jp": "先生を 見習いますか。",
               "terms": [
                 "v_sensei",
-                { "id": "v_minarau", "form": "polite_masu" }
+                {
+                  "id": "v_minarau",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -291,10 +342,16 @@
           "jp": "私は 青森県に 住んで います。",
           "en": "I live in Aomori Prefecture.",
           "terms": [
-            "k_watashi",
+            "v_watashi",
             "v_aomoriken",
-            { "id": "v_sumu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -304,7 +361,10 @@
             "v_mainichi",
             "v_densha",
             "v_toshi",
-            { "id": "v_kayou", "form": "polite_masu" }
+            {
+              "id": "v_kayou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -315,7 +375,10 @@
             "v_densha",
             "v_hiroi",
             "v_oodoori",
-            { "id": "v_tooru", "form": "polite_masu" }
+            {
+              "id": "v_tooru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -326,7 +389,10 @@
             "v_chiku",
             "v_ookii",
             "v_koujou",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -335,8 +401,14 @@
           "terms": [
             "v_daigaku",
             "v_kougaku",
-            { "id": "v_narau", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_narau",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],

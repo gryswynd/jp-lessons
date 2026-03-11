@@ -70,7 +70,7 @@
           "en": "Do you read books often?",
           "terms": [
             "v_yoku",
-            "k_hon",
+            "v_hon",
             {
               "id": "v_yomu",
               "form": "polite_masu"
@@ -90,8 +90,8 @@
           "jp": "あなたの 町は どんな 所ですか。",
           "en": "What kind of place is your town?",
           "terms": [
-            "k_machi",
-            "k_tokoro"
+            "v_machi",
+            "v_tokoro"
           ]
         },
         {
@@ -254,8 +254,8 @@
           "jp": "「ほんまち」です。私が 道を 説明します。",
           "en": "It is 'Honmachi'. I will explain the way.",
           "terms": [
-            "k_watashi",
-            "k_michi",
+            "v_watashi",
+            "v_michi",
             {
               "id": "v_setsumei",
               "form": "polite_masu"
@@ -312,7 +312,7 @@
           "jp": "じゃあ、私が 説明しましょう。",
           "en": "Well then, let me explain.",
           "terms": [
-            "k_watashi",
+            "v_watashi",
             "v_setsumei",
             {
               "id": "v_suru",
@@ -375,7 +375,7 @@
               "form": "te_form"
             },
             "v_iru",
-            "k_hito",
+            "v_hito",
             "v_monogatari"
           ]
         }
@@ -391,7 +391,7 @@
           "jp": "駅まで どうやって 行きますか。",
           "en": "How will we go to the station?",
           "terms": [
-            "k_u99c5",
+            "v_eki",
             {
               "id": "v_iku",
               "form": "polite_masu"
@@ -450,7 +450,7 @@
           "jp": "これは 町の 地図です。",
           "en": "This is a town map.",
           "terms": [
-            "k_machi",
+            "v_machi",
             "v_chizu"
           ]
         },
@@ -459,7 +459,7 @@
           "en": "The library is near the station.",
           "terms": [
             "v_toshokan",
-            "k_u99c5",
+            "v_eki",
             {
               "id": "v_chikai",
               "form": "adverbial"
@@ -475,8 +475,8 @@
               "id": "v_iku",
               "form": "conditional_ba"
             },
-            "k_ame",
-            "k_hi"
+            "v_ame",
+            "v_hi"
           ]
         },
         {
@@ -487,7 +487,7 @@
             "v_omoshiroi",
             "v_shousetsu",
             "v_muzukashii",
-            "k_hon"
+            "v_hon"
           ]
         }
       ],
@@ -521,7 +521,7 @@
           "q": "これは 何の 地図ですか。",
           "a": "町の 地図です。",
           "terms": [
-            "k_machi",
+            "v_machi",
             "v_chizu"
           ]
         }

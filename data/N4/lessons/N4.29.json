@@ -53,7 +53,7 @@
           "jp": "今、何時ですか。",
           "en": "What time is it now?",
           "terms": [
-            "k_ima",
+            "v_ima",
             "v_nanji"
           ]
         },
@@ -71,7 +71,7 @@
           "en": "Did you buy a new car?",
           "terms": [
             "v_atarashii",
-            "k_kuruma",
+            "v_kuruma",
             {
               "id": "v_kau",
               "form": "polite_mashita"
@@ -82,7 +82,7 @@
           "jp": "あなたの 家は 明るいですか。",
           "en": "Is your house bright?",
           "terms": [
-            "k_ie",
+            "v_ie",
             "v_akarui"
           ]
         }
@@ -213,7 +213,7 @@
           "jp": "家から 出ません。私の 家は 高台に あります。",
           "en": "I will not leave the house. My house is on high ground.",
           "terms": [
-            "k_ie",
+            "v_ie",
             {
               "id": "v_deru",
               "form": "polite_negative"
@@ -250,7 +250,7 @@
           "jp": "いいえ、私のです。台所に ありましたか。",
           "en": "No, it is mine. Was it in the kitchen?",
           "terms": [
-            "k_watashi",
+            "v_watashi",
             "v_daidokoro",
             {
               "id": "v_aru",
@@ -304,7 +304,10 @@
           "jp": "十人 以上 います。",
           "en": "There are more than ten.",
           "terms": [
-            { "counter": "nin", "n": 10 },
+            {
+              "counter": "nin",
+              "n": 10
+            },
             "v_ijou",
             {
               "id": "v_iru",
@@ -325,7 +328,10 @@
           "jp": "五人 以下です。",
           "en": "Less than five.",
           "terms": [
-            { "counter": "nin", "n": 5 },
+            {
+              "counter": "nin",
+              "n": 5
+            },
             "v_ika"
           ]
         }
@@ -341,7 +347,7 @@
           "jp": "あの 人を 知って いますか。",
           "en": "Do you know that person?",
           "terms": [
-            "k_hito",
+            "v_hito",
             {
               "id": "v_shiru",
               "form": "te_form"
@@ -416,9 +422,9 @@
           "jp": "私の 家は 高台に ありますから、家で 本を 読みます。",
           "en": "My house is on high ground, so I will read a book at home.",
           "terms": [
-            "k_ie",
+            "v_ie",
             "v_takadai",
-            "k_moto",
+            "v_hon",
             {
               "id": "v_yomu",
               "form": "polite_masu"
@@ -453,7 +459,7 @@
           "terms": [
             "v_doko",
             "v_takadai",
-            "k_ie"
+            "v_ie"
           ]
         }
       ]
@@ -648,7 +654,7 @@
           ],
           "answer": "人見知り",
           "terms": [
-            "k_hito",
+            "v_hito",
             "v_hitomishiri",
             "v_hanasu"
           ]
@@ -664,7 +670,7 @@
           ],
           "answer": "一台",
           "terms": [
-            "k_kuruma",
+            "v_kuruma",
             "v_ichidai",
             "v_aru"
           ]
