@@ -4186,7 +4186,42 @@ Beyond 書く and 読む, Day 13 introduces a full communication cluster:
 
 **電話 (telephone):** The phone in Rikizo's pocket has been a texting device. Email, messages, contacts. 電話 gives it a second function — voice calls.
 
-**空手 (karate):** 空 (sky, Day 11) + 手 (hand, today). Empty hand. The martial art. A fun compound — the player knows 空 as "sky" and now learns 手 as "hand," and the combination means something entirely different. Does anyone in the game do karate? Not yet. But the word exists, and perhaps けん mentions it casually — he seems like the type.
+**空手 (karate):** 空 (sky, Day 11) + 手 (hand, today). Empty hand. The martial art. A fun compound — the player knows 空 as "sky" and now learns 手 as "hand," and the combination means something entirely different. And today, unlike most vocabulary arrivals, this word materializes a building.
+
+**The 道場 (dojo) — new location:**
+
+On the walk to school — or on the walk home, or any time the player walks through town — there's a new building. It wasn't there yesterday. A low, traditional-looking structure with a sign the player can partially read: 「道◻」. The first kanji is 道 (road, Day 6). The second is 場 — not yet taught (N4.33). The building is half-readable, half-mystery. But everyone in town seems to know what it is.
+
+The building has an entrance. You can go inside.
+
+**Inside the dojo:**
+
+A clean wooden floor. Training dummies in the back. A wall scroll with kanji the player can't read yet. And a man standing in the center — arms crossed, wearing a white gi. He's the sensei. He has no name. He is simply **からて先生** (karate teacher).
+
+1. **からて先生:** 「おお、来ましたか。」 — "Oh, you came." *(He speaks like he was expecting you. He wasn't. He speaks like this to everyone.)*
+
+2. **Rikizo:** 「ここは何ですか？」 — "What is this place?"
+
+3. **からて先生:** 「空手だよ。空手がしたいですか？」 — "Karate. Do you want to do karate?" *(したいですか — desire form. He asks directly. His tone is inviting, almost eager. He wants students.)*
+
+4. **[If player says yes]:** からて先生 nods enthusiastically. 「いいですね！空手はいいですよ！」 — "Nice! Karate is great!" *(A pause. He seems about to begin a lesson. Then—)*
+
+5. **からて先生:** 「...でも、今日はだめですね。また来てください。」 — "...But, today's no good. Please come again." *(また — again. He defers. No reason given. Just "not today." The player is politely turned away.)*
+
+6. **[If player says no]:** からて先生 shrugs. 「そうですか。でも、空手はいいですよ。」 — "I see. But karate is great." *(He says karate is great regardless.)*
+
+**Every subsequent visit (Day 13 onward):** からて先生 says variations of the same thing:
+- 「空手がしたいですか？いいですね！...でも、今日はちょっと...」 — "Want to do karate? Nice!... But today is a bit..."
+- 「また来ましたか！空手は...ああ、また今度ね。」 — "You came again! Karate is... ah, next time."
+- 「空手はとてもいいですよ。いつか...」 — "Karate is really great. Someday..."
+
+He always enthuses. He always defers. He never teaches. The player cannot learn karate from this man. Not because he's a fraud — he clearly knows karate. The training dummies are worn. His stance is perfect. He just never gets around to the actual teaching. Every visit is an almost-lesson that dissolves at the last moment.
+
+**Why he can't teach:** The verb 教える (to teach) doesn't exist until N4.24. The karate sensei literally cannot teach because the concept of teaching — beyond すずき先生's classroom context — has not materialized as a verb the world can use in this way. He wants to. He tries to. The vocabulary won't let him. This is the game's most patient running gag after the station master's newspaper: a man with knowledge and a student with desire, separated by a missing verb.
+
+**Design note — the dojo as deferred content:** The dojo is a Day 13 location that doesn't become functional until N4.24 — potentially 20+ game days away. During all of N5 and most of N4, it exists as a beautiful, usable-looking space where nothing happens. The sensei is always there. He always asks if you want to do karate. He always can't quite get to the lesson. The player who keeps visiting builds a relationship through repetition (the same way the station master's rack builds anticipation). When 教える finally arrives and the sensei says 「今日、教えましょう！」 — "Today, let's learn!" — the payoff spans the entire back half of the game.
+
+**Design note — no glossary entry for 道場 yet.** The building exists in the game world but the word 道場 isn't formally taught (場 = N4.33). The sign reads 「道◻」with the second character unresolved. Players can enter and interact without knowing the word. When 場 is eventually taught, the sign resolves to 「道場」and the environmental text system does its job. Until then, the building is "the karate place" — known by function, not name.
 
 **ゆっくり (slowly):** An adverb that transforms conversations. Before today, everything happened at one speed. Now actions can be slow. 「ゆっくり読んでいます」— "I'm reading slowly." 「ゆっくり話してください」— "Please speak slowly." The second phrase is possibly the most useful Japanese sentence for any learner.
 
@@ -4344,6 +4379,7 @@ Standard evening routine. Rikizo reports his day using the new communication ver
 13. **Environmental Text** — First readable signs since 書く/読む/聞く arrived. Book titles, shop signs, blackboard text — partially readable based on the taught-kanji set. Progressive literacy is now active everywhere.
 14. **やまかわのごはん** — ◻ Persists from Day 10. Yamakawa wants new food. No resolution yet. He's still eating onigiri. Every new food word that arrives is a potential solution.
 15. **ゆきのきおく** — ◻ Persists from Day 11. ゆき noticed the school looks new. Another quiet observation. The quest waits — resolves in N4.
+16. **からて先生の「また今度」** — NEW. The karate sensei always asks if you want to do karate. He always defers. He will do this for the entire rest of N5 and most of N4. He is the game's most patient tease. Resolves at N4.24 when 教える (to teach) becomes a verb.
 
 **Quest log state (end of Day 13):**
 > 📋 Quest Log
@@ -4369,9 +4405,11 @@ The notebook quest was the game's first *implicit* quest — one that existed in
 
 ### State Tracking (End of Day 13)
 
-**No new locations.** School is still the newest zone.
+**New locations:**
+- **道場 (dojo)** — karate dojo in town. からて先生 is always inside. Building sign partially readable (道◻). Player can enter and talk to the sensei, but no karate instruction is available until N4.24 (教える).
 
-**No new NPCs.** All school characters debuted yesterday.
+**New NPCs:**
+- **からて先生** — the karate sensei. Unnamed beyond his title. Always at the dojo. Always enthusiastic about karate. Never actually teaches. Defers every lesson with a polite excuse. Becomes functional when 教える (N4.24) unlocks.
 
 **Inventory updates:**
 - ノート — no longer blank. Contains りきぞ in hiragana. Status: fulfilled.
@@ -4387,6 +4425,8 @@ The notebook quest was the game's first *implicit* quest — one that existed in
 - `miki_after_school` — (optional) Talked to ミキ on the walk home. +1 relationship ミキ.
 - `lee_bilingual` — (optional) Learned リー speaks two languages. +1 curiosity.
 - `lee_writing` — (optional) リー asked if Rikizo likes writing. Seeds letter exchange arc.
+- `dojo_unlocked` — 道場 is explorable. からて先生 is inside.
+- `dojo_visited` — (optional) Player entered the dojo and talked to the sensei. First "want to do karate?" deferral.
 - `ken_buy_water` — (optional) けん asked Rikizo to buy water. First buy-request gag.
 - `ken_buy_water_fulfilled` — (optional) Player bought and delivered water. +1 relationship けん.
 - `ekichou_newspaper_quest` — Station master quest started. Empty rack observed. Resolves N5.18.
@@ -4410,7 +4450,12 @@ social:         +1 (any after-school classmate conversation)
 | ミキ's book cover | Sprite detail | A | Medium | Book in ミキ's hands with a readable title. First of the rotating book covers. |
 | Station newspaper rack (empty) | BG detail | A | Medium | Empty display rack beside the station bench. Sized for newspapers but visibly empty. Persists until Day 18 when it fills. |
 
-Light asset day — most environments were built for Day 12. Day 13 is variant art (blackboard filled, notebook interior) plus one new prop (empty rack).
+| 道場 exterior | BG / Building | B (MP100) | High | Traditional low building in town. Wooden. Partially readable sign (道◻). 入り口 visible. |
+| 道場 interior | BG interior | B (MP100) | High | Clean wooden floor. Training dummies in back. Wall scroll with unreadable kanji. Open, airy space. |
+| からて先生 sprite | Character sprite | A (Pixel) | High | Man in white gi, arms crossed. Confident stance. No name plate — just presence. |
+| からて先生 portrait | Character portrait | B (MP100) | High | Conversation portrait. Enthusiastic expression. Strong jaw. Slight smile that says "I want to teach you but I can't." |
+
+Moderate asset day — classroom variants from Day 12, plus the dojo (new building with interior) and karate sensei (new NPC with sprite and portrait).
 
 ---
 
@@ -4821,6 +4866,28 @@ The bell rings. Second Monday complete. The after-school walk-home pattern from 
 
 4. **リー:** 「りきぞさんは何が下手ですか？」 — "What are you bad at, Rikizo?" *(She turns it around. Intimate question — she's asking about weakness, not strength. This is deeper than the 上手 compliment. It requires vulnerability. Rikizo's answer doesn't matter — what matters is that リー asked.)*
 
+**The day after this conversation — permanent behavior change:**
+
+From **Day 17 onward**, リー is no longer on the walk home after school. She's at the 道場. Every afternoon, without explanation, リー leaves school and goes straight to the karate dojo. She doesn't announce this. She doesn't invite Rikizo. She just... starts going.
+
+**If the player visits the dojo after school (Day 17+):**
+
+リー is there. Standing in the corner. Not training — she doesn't know how (からて先生 can't teach yet). She's just... present. Watching. Waiting. Existing in the space the way Yamakawa exists at the コンビニ.
+
+1. **Rikizo:** 「リーさん？」
+
+2. **リー:** 「...」 *(Nothing. She looks at Rikizo. She looks back at the training dummies. She doesn't explain. She doesn't leave. She just stands there.)*
+
+3. **[Subsequent visits]:** 「...」 *(Always the same. One ellipsis. リー is not rude — she's focused. Or ashamed. Or determined. The player can't tell. She said she was 下手 at karate, and the next day she started going to the karate dojo. The connection is obvious. The motivation is opaque. Is she trying to get better? Is she punishing herself? Is she waiting for someone to teach her? からて先生 stands in the center of the dojo, unable to teach. リー stands in the corner, unable to learn. They share a space and a silence.)*
+
+**Design note — リー's dojo pattern:** This is the second "NPC in a location, doing nothing, saying nothing" pattern in the game (the first is Yamakawa at the コンビニ). But where Yamakawa's presence is comedic and mysterious, リー's is melancholic and determined. She told Rikizo she was bad at karate. The next day she started going to the place where karate happens. She can't articulate why (the vocabulary for motivation and self-improvement arrives in N4). She just goes. Every day. The player who tracks NPC patterns will notice her absence from the walk home and her presence at the dojo. The player who doesn't track patterns will discover her there eventually and wonder how long she's been coming.
+
+**Design note — リー's 「...」:** Her silence at the dojo is distinct from ミキ's silence. ミキ says 「...」because she's absorbed in her book — she doesn't need conversation. リー says 「...」because she can't express what she's feeling. She's not being private. She's being inarticulate. The vocabulary for what she wants to say — determination, frustration, the desire to improve — doesn't exist in her available word set. So she says nothing. When N4 vocabulary expands her emotional range, リー's dojo silence will break. But for now, she stands in the corner and says nothing, and it means everything.
+
+**からて先生 (when リー is present):** The sensei acknowledges リー but doesn't address her differently.
+- 「ああ、リーさんも来ましたか。いいですね。空手は...また今度ね。」 — "Ah, Lee came too. Nice. Karate is... next time."
+He can't teach her either. The same deferral, the same enthusiasm without follow-through. Two people in a room who want the same thing (to practice karate) and a sensei who can't deliver it. The comedy and the sadness coexist.
+
 **Design note — three walk-home encounters, three social textures:**
 
 | Character | Tone | 上手/下手 usage | What it reveals |
@@ -4958,6 +5025,8 @@ Each revisit as vocabulary grows will unlock more interaction. The building does
 13. **やまかわのごはん** — ◻ Persists. Yamakawa described his onigiri as 上手に作った. He's proud of his arrangement. He's still eating onigiri though. The quest isn't about arrangement — it's about variety. No new food vocabulary today.
 14. **ゆきのきおく** — ◻ Persists — and ESCALATES. ゆき is absent from school. すずき noticed. Nobody knows where she is. She was at the river yesterday, watching the mountains. She didn't mention being sick. She didn't warn anyone. This is the first time a classmate has been absent, and it's the one classmate who has been quietly questioning the world's timeline. Her absence is either mundane (a cold, a family errand) or significant (she saw something in the 北 mountains). The game doesn't say which. The quest log doesn't update. But the player feels it.
 15. **The Mystery Door** — NEW. The door on 2F that belongs to nobody. No nameplate. No interaction prompt. Rikizo won't talk about it. The fourth family member from Mom's 四人 count on Day 3 now has physical evidence: a room. Seeds 兄 (older brother) reveal in N4.
+16. **からて先生の「また今度」** — Continues from Day 13. The sensei still defers. Still enthusiastic. Still teaches nothing. Day 4 of the pattern. The training dummies remain untouched.
+17. **リーの道場** — NEW. リー confessed she was 下手 at karate today. Tomorrow (Day 17) she starts going to the 道場 after school. Every day. She says nothing. She stands in the corner. She watches. The walk-home リー is gone — replaced by the dojo リー. The silence is new. The determination is implied.
 
 **Quest log state (end of Day 16):**
 > 📋 Quest Log
@@ -5493,6 +5562,8 @@ This is the complete N5 game world. Everything from this point forward (N4) is e
 4. **Station Master** — Still waiting. No trains. The station has 出口 and 入り口 signs now. The exits lead to the same place. The entrances lead to the same place. The station master guards a loop.
 5. **Yamakawa's Existence** — Not a part-timer. Not a student. Just... present. At the コンビニ. Every day. Now with レン working next to him. The contrast is deafening.
 6. **What Yuki Notices** — She noticed the school was new. She noticed the flowers fading. She notices everything nobody else does. The data accumulates.
+6b. **からて先生の「また今度」** — Six days of deferrals and counting (Day 13 → Day 18). He still can't teach. 教える doesn't arrive until N4.24. The sensei remains the game's most enthusiastic non-teacher. The dojo is a beautiful room where nothing happens.
+6c. **リーの道場** — Three days of silence (Day 17 → Day 18). リー stands in the corner of the dojo every afternoon. 「...」. She doesn't train (no one can). She doesn't explain. She just goes. The walk-home リー from Days 13–16 is gone. The player who tracked her after-school patterns notices her absence; the player who visits the dojo finds her there. Both wonder why.
 7. **Dad's Absence** — He goes to 会社. He does NOT come home during N5 playable hours. The car is gone. The chair is empty. Mom says 「会社ですよ」 and nothing else. Dad exists as an absence now. He reads the 新聞 when evening mechanics arrive in N4. If the player visits the ビル 3F in the morning, Dad is at his desk. In the afternoon, the desk is empty. Where he goes between afternoon and the next morning is undefined.
 8. **Dad's Gold — ESCALATION** — Day 17 is the first time Dad isn't home to yell 「金！だめ！」. If the player tries: Mom calls from ten feet away. If they persist: the front door locks. If they try AGAIN: Mom is standing behind them. She was not there before. The gold is protected by forces beyond mortal understanding. Dad's sixth sense was always Mom's sixth sense.
 9. **レン's Jobs** — NEW. レン works at the ビル (mornings) and the コンビニ (afternoons). He will accumulate more jobs across N4. His job count is a running number. He never complains. He never rests. He greets everyone with store-appropriate phrases regardless of context.
@@ -5517,8 +5588,8 @@ Two open quests carry into N4. Everything else is resolved. The foundation suppo
 
 | Category | State |
 |---|---|
-| **Locations** | House (all rooms), コンビニ, デパート, 駅 (empty), 学校 (weekdays), river, park, けん's house, hotel, ビル (lobby + 3F) |
-| **Named NPCs** | Mom, Dad, Yamakawa, ゆき, すずき先生, けん, リー, ミキ, レン, station master, hotel clerk, 校長 |
+| **Locations** | House (all rooms), コンビニ, デパート, 駅 (empty), 学校 (weekdays), river, park, けん's house, hotel, ビル (lobby + 3F), 道場 |
+| **Named NPCs** | Mom, Dad, Yamakawa, ゆき, すずき先生, けん, リー, ミキ, レン, からて先生, station master, hotel clerk, 校長 |
 | **Economy** | Wallet active. Shopping at コンビニ and デパート. No income system yet. |
 | **Time system** | Calendar (dates), day-of-week, 午前/午後 split, weekday/weekend rhythm |
 | **School** | Weekdays only. Class scenes daily. すずき teaches, けん disrupts, リー studies, ミキ reads. |
