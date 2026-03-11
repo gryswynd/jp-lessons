@@ -468,16 +468,21 @@ window.GrammarModule = {
       const conjUrl    = getCdnUrl(manifest.globalFiles.conjugationRules);
       const counterUrl = getCdnUrl(manifest.globalFiles.counterRules);
       const particleUrl = getCdnUrl(manifest.shared.particles);
-      const [conj, counter, particleData, ...glossParts] = await Promise.all([
+      const characterUrl = getCdnUrl(manifest.shared.characters);
+      const [conj, counter, particleData, characterData, ...glossParts] = await Promise.all([
         fetch(conjUrl).then(r => r.json()),
         fetch(counterUrl).then(r => r.json()),
         fetch(particleUrl).then(r => r.json()),
+        fetch(characterUrl).then(r => r.json()),
         ...manifest.levels.map(lvl => fetch(getCdnUrl(manifest.data[lvl].glossary)).then(r => r.json()))
       ]);
       const map = {};
       glossParts.forEach(g => g.entries.forEach(i => { map[i.id] = i; }));
       (particleData.particles || []).forEach(p => {
         map[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle' };
+      });
+      (characterData.characters || []).forEach(c => {
+        map[c.id] = Object.assign({}, c, { portraitUrl: getCdnUrl(c.portrait) });
       });
       return { map, conj, counter };
     }

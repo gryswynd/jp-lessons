@@ -843,7 +843,9 @@ window.StoryModule = (function() {
         html += escapeHtml(node.textContent.substring(lastIndex, match.index));
         // Add clickable term
         const formStr = match.form ? `'${match.form}'` : 'null';
-        html += `<span class="jp-term" onclick="window.JP_OPEN_TERM('${match.termId}', ${formStr}, true)">${escapeHtml(match.text)}</span>`;
+        const matchedTerm = termMapData[match.termId];
+        const termCls = (matchedTerm && matchedTerm.type === 'character') ? 'jp-term jp-term-name' : 'jp-term';
+        html += `<span class="${termCls}" onclick="window.JP_OPEN_TERM('${match.termId}', ${formStr}, true)">${escapeHtml(match.text)}</span>`;
         lastIndex = match.index + match.text.length;
       });
 
