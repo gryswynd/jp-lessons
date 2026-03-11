@@ -5466,7 +5466,9 @@ This triad is one of the most elegant verb families in Japanese, and the game ca
 
 ### Classroom — The Senses Lesson
 
-1. **すずき:** 「目で見ます。耳で聞きます。口で話します。手で書きます。足で歩きます。」 — "We see with our eyes. We hear with our ears. We speak with our mouths. We write with our hands. We walk with our feet." *(すずき lists the body-sense pairings. Each pair connects a body part (today's kanji) with a verb (previously learned or today). This is a pedagogical moment that doubles as a world-building moment: the body and its functions are enumerated. Rikizo is a complete organism. He has parts. They do things.)*
+**The mannequin.** In the corner of the classroom, a new prop: a chibi anatomy mannequin. Labelled body parts — 目, 耳, 口, 手, 足 — in clean handwriting on little tags. すずき clearly set this up for the lesson. The mannequin is interactable: tapping each tag shows the kanji reading and the associated verb (目 → 見る, 耳 → 聞く, etc.). It's a tactile vocabulary map of the body. It stays in the classroom permanently after today, a quiet reminder that Rikizo is a physical being now.
+
+1. **すずき** (gesturing at the mannequin): 「目で見ます。耳で聞きます。口で話します。手で書きます。足で歩きます。」 — "We see with our eyes. We hear with our ears. We speak with our mouths. We write with our hands. We walk with our feet." *(すずき lists the body-sense pairings, pointing to each part on the mannequin as she says it. Each pair connects a body part (today's kanji) with a verb (previously learned or today). This is a pedagogical moment that doubles as a world-building moment: the body and its functions are enumerated. Rikizo is a complete organism. He has parts. They do things.)*
 
 2. **すずき:** 「何が見えますか？」 — "What can you see?" *(She asks the class. 見える — what is visible. The classroom becomes an exercise in perception.)*
 
@@ -5480,27 +5482,85 @@ This triad is one of the most elegant verb families in Japanese, and the game ca
 
 ### Emotional Adjectives — The Shadow Side Arrives
 
-いたい (painful), かなしい (sad), こわい (scary). Three adjectives that break the game's emotional monotone.
-
-**いたい — pain:**
-
-1. **けん** (after PE or during break, rubbing his leg): 「いたい！足がいたい！」 — "Ow! My foot hurts!" *(けん, the first character to be in pain. Physical pain, trivially caused — he kicked something, tripped, ran too hard. いたい is deployed casually, comically. Pain exists, but it's not tragic. It's けん being けん.)*
-
-This sets the tone: いたい is physical first. It can be emotional later (心がいたい — "my heart hurts" — but 心 isn't taught yet). For now, pain is a body thing. Feet hurt. That's enough.
-
-**かなしい — sadness:**
-
-This one is subtler. No character cries on Day 18. Nobody has a reason to be sad in the immediate narrative. But the word arrives, and it quietly changes the emotional possibilities.
-
-**ゆき** (optional, river encounter):
-
-1. **ゆき:** 「花が少なくなりましたね。少しかなしいです。」 — "The flowers have gotten fewer. I'm a little sad." *(少なくなりました — have become fewer. かなしい — sad. ゆき connects to the natural world through the new emotional vocabulary. The flowers from Day 11 are fading — it's mid-May, cherry blossom season is ending. ゆき feels their loss. She's the game's first character to express sadness, and she expresses it about nature, not people. This is perfectly in character: ゆき's emotional life is tied to the environment, not to social situations. She feels what the world feels.)*
-
-**こわい — fear:**
-
-1. **けん** (telling a story during break): 「昨日、こわい話を聞いたよ。夜、学校に...」 — "Yesterday, I heard a scary story. At night, at the school..." *(こわい話 — scary story. けん starts a ghost story about the school at night. He trails off — not because the vocabulary runs out, but because すずき interrupts him (「けんさん！」). The ghost story is never finished. But the seed is planted: the school at night is potentially scary. In N4, this becomes relevant — nighttime school exploration is a potential quest.)*
+いたい (painful), かなしい (sad), こわい (scary). Three adjectives that break the game's emotional monotone. And on the final N5 day, all three arrive through characters who *need* them — not as vocabulary exercises, but as truths these people have been carrying without words.
 
 **Design note — emotional adjectives as world-expansion:** These three adjectives don't create physical things (no new buildings, no new NPCs). They create *possible states of being*. The world before Day 18 was pleasant — things were interesting, beautiful, delicious. The world after Day 18 can also be painful, sad, and scary. This isn't a tonal shift — the game doesn't suddenly become dark. But the palette widens. Characters can now have bad days. Things can go wrong. Stories can have tension. The emotional vocabulary is the final piece of the N5 foundation.
+
+---
+
+### After School — やまかわ (かなしい)
+
+やまかわ has always been the game's most unexplained character. Present at the コンビニ every day since Day 3. Not a student. Not exactly a part-timer. Now joined by レン (Day 17), whose existence as an actual アルバイト makes やまかわ's non-role even stranger. Today, on the final N5 day, やまかわ explains himself. Not fully — but enough.
+
+1. **やまかわ** (at the コンビニ, quieter than usual): 「りきぞ... わたしは少しかなしいです。」 — "Rikizo... I'm a little sad." *(かなしい. The first time any character has directly said they are sad. Not about flowers or weather — about themselves. やまかわ speaks slowly. This is not casual conversation.)*
+
+2. **やまかわ:** 「りきぞは学校に行きますね。高校... わたしは行きません。」 — "You go to school, right. High school... I don't go." *(高校 — high school. He doesn't use the full word for "can't" because the potential form doesn't exist yet. He says it simply: I don't go. The verb 行く does the work. The grammar is N5-level but the weight is real. やまかわ names his situation without self-pity. He states a fact.)*
+
+3. **やまかわ:** 「お父さんは会社がありません。だから... アルバイトです。」 — "My dad doesn't have a company (job). So... part-time work." *(会社がありません — his father has no company/employment. The ある/ない existence pattern applied to a job. だから — "so." やまかわ connects cause and effect. His dad doesn't work, so やまかわ does. He doesn't explain further. The structure is simple: no job → I work. The player fills in the rest.)*
+
+4. **やまかわ:** 「でも、りきぞのともだちです。それはいいです。」 — "But I'm Rikizo's friend. That's good." *(He recovers. The sadness is real but it doesn't consume him. He finds one positive thing — the friendship — and holds onto it. This is the most emotionally complex moment in N5. A character reveals hardship, vulnerability, and resilience in four sentences using nothing beyond N5 vocabulary.)*
+
+**Design note — やまかわ's revelation:** This scene answers the longest-running "why" in the game (why is やまかわ always at the コンビニ?) without resolving the deeper mystery (is やまかわ what he seems?). His dad's unemployment explains the part-time work. His sadness about missing high school with Rikizo explains his attachment to the player. But the player who has been tracking ゆき's observations — the town's newness, the inconsistencies — might wonder: is this backstory real, or is やまかわ remembering something that didn't happen the way he thinks? The answer is deferred to N4. For now, it's simply sad. かなしい.
+
+**Design note — vocabulary verification:** 高校 (こうこう, high school) — check: is this in the glossary? If not, やまかわ can say 「学校に行きません」 without specifying high school. The emotional beat works either way. 会社がありません uses 会社 (N5.17) + ある/ない (N5.5/N5.9). だから is available from N5.9 particles. All other words are basic N5.
+
+---
+
+### After School — リーの道場 (いたい)
+
+リー has been at the dojo every afternoon since Day 17. Silent. Determined. Responding to nothing with 「...」. Today, pain breaks the silence.
+
+1. The player visits the dojo after school. リー is there, as expected. But today she's sitting down, not standing in the corner. She's holding her right foot.
+
+2. **リー:** 「...いたい。」 — "...ow." *(The first word リー has spoken at the dojo. It's not a greeting. It's not an explanation. It's an involuntary expression of pain. いたい — the simplest, most physical use of the word. She hurt herself.)*
+
+3. **リー:** 「足がいたいです。空手は... 足です。」 — "My foot hurts. Karate is... feet." *(She states the obvious with the economy of someone who doesn't usually explain herself. 空手は足です — karate is feet. She's been trying to practice kicks, alone, without a teacher (からて先生 still can't teach — 教える is N4.24), and she hurt her foot. The sentence is almost comically simple — "karate is feet" — but it carries the weight of someone who has been silently pushing herself for two days.)*
+
+4. **からて先生** (concerned, but still unable to help): 「大丈夫ですか？空手は... また今度！」 — "Are you okay? Karate is... next time!" *(The sensei's eternal deferral takes on a different color now. He's not just being evasive — he genuinely can't teach, and リー is hurting herself because of it. The comedy of the deferral meets the reality of the injury. また今度 hits differently when someone is sitting on the floor holding their foot.)*
+
+5. After this exchange, リー returns to 「...」 for the rest of the visit. The pain was involuntary — a crack in the silence, not the end of it. Tomorrow she'll be standing in the corner again. The foot will be fine. But the player now knows: リー isn't just *at* the dojo. She's *training* at the dojo. Alone. Without instruction. And it's costing her.
+
+**Design note — いたい deployed with weight:** けん would have made いたい comedy (「いたい！足がいたい！」 after tripping on nothing). リー makes it real. The same adjective, two completely different emotional registers. Pain is physical first (the foot), but the context makes it about dedication, isolation, and the limits of what you can learn without a teacher. This is Day 18's version of showing that new vocabulary doesn't just mean new words — it means new ways for characters to express who they already are.
+
+---
+
+### After School — ゆき (こわい)
+
+ゆき, the game's quiet observer, deploys the third and final emotional adjective. Not about herself — about something she saw.
+
+1. **ゆき** (finding Rikizo after school, near the river — her usual spot): 「りきぞ... 北のほうに、こわいものを見ました。」 — "Rikizo... to the north, I saw something scary." *(北のほう — "in the direction of north." こわいもの — "a scary thing." 見ました — "I saw." ゆき uses every new vocabulary tool from Day 18 in one sentence: a direction, an emotional adjective, a perception verb. But this isn't a vocabulary exercise. She's shaken.)*
+
+2. **ゆき:** 「何ですか... わかりません。でも、こわいです。」 — "What is it... I don't know. But it's scary." *(She can't name what she saw. わかりません — she doesn't understand. The limits of vocabulary are the limits of comprehension. She saw something, she felt fear, she cannot explain it. This is ゆき's pattern — she notices things before they can be named.)*
+
+3. **Rikizo's phone buzzes.** A new point appears on the map — far north, past the edge of the known town. No label. Just a marker. ゆき points north and says nothing else.
+
+**Map unlock:** The player's phone map now shows a new marker north of town, beyond any previously explorable area. It has no name. Tapping it shows only: 「？？？」
+
+**Design note — ゆき as mystery catalyst:** Every major mystery thread in the game passes through ゆき. She noticed the school was new (Day 11). She noticed the flowers fading. She noticed the writing on something that shouldn't have writing. Now she's seen something こわい to the north and doesn't know what it is. ゆき doesn't create the mysteries — she *perceives* them. The player who follows ゆき's observations is the player who finds the deeper game.
+
+---
+
+### The White Field (North — New Location)
+
+If the player follows the new map marker north, past the edge of the familiar town:
+
+**Transition:** The background fades. The town's colors drain. Buildings, trees, the path itself — all dissolve into white. Not a fog. Not snow. White. A flat, empty, bright-white field that extends in all directions.
+
+**What's here:** One thing. A signpost. Wooden, simple, the same kind you see at crossroads in town. It bears a single kanji:
+
+## 忘
+
+Not clickable. Not tappable. No furigana. No translation. No glossary entry exists for this character (忘 is not taught in N5 or N4). The player cannot look it up within the game. It simply exists — a mark that means something, in a place that is nothing.
+
+**If the player tries to interact:** Nothing happens. The signpost does not respond. Walking past it leads to more white. There are no other objects, no NPCs, no sound effects. The phone map shows Rikizo's position at the marker. There is no path back visible — the player must use the map to return to town.
+
+**If the player returns to ゆき:** She says 「...見ましたか？」 — "...did you see it?" Nothing else. The conversation does not continue.
+
+**Design note — 忘 (wasureru — to forget):** The kanji means "forget." The player cannot know this. They are looking at the concept of forgetting, rendered as a character they cannot read, in a place that has no features to remember. This is the first hard hint at the game's deeper mystery: something has been forgotten. The white field is the *shape* of forgetting — an absence so complete that even the landscape is gone. It is the negative space of the game world, the place where things that were erased went.
+
+This signpost becomes important in N4. For now, it is a question mark that the player can't even formulate as a question. They don't know what 忘 means. They don't know why the field is white. They don't know why ゆき saw it. All they know is: something is north, it's こわい, and it can't be explained with any words they've learned.
+
+**Design note — no resolution in N5:** This location has no quest attached to it. No NPC appears here. Nothing changes if the player visits it. It exists purely as an anomaly — a place in the game world that defies the rules of the game world. The player can visit it, leave, and never return. Or they can visit it every day. Nothing changes. The field is patient. It was here before Rikizo arrived in town, and it will be here long after.
 
 ---
 
@@ -5508,12 +5568,13 @@ This one is subtler. No character cries on Day 18. Nobody has a reason to be sad
 
 新聞 (newspaper). 新 (new, Day 10) + 聞 (hear, today). Literally: "new hearings." A newspaper.
 
-**Dad reads the newspaper.** This is a new evening interaction. Dad, home from 会社, sits with a 新聞. He reads it (読む, Day 13). He's quiet. The newspaper is the first informational object in the game — it contains knowledge about the world outside the town. What does it say? The player can't read most of it (untaught kanji), but the fact that Dad reads a newspaper implies a world of events beyond what the player can see.
+Dad is at 会社 and doesn't come home during N5 playable hours (since Day 17). But the 新聞 arrives at the house every morning — it sits on the kitchen table, unread. Mom doesn't touch it. It's Dad's thing. The player can examine it: mostly untaught kanji, unreadable. But the object itself — the first informational artifact in the game — implies a world of events beyond what the player can see.
 
-1. **Rikizo:** 「お父さん、何を読んでいますか？」 — "Dad, what are you reading?"
-2. **Dad:** 「新聞だ。社会のことだ。」 — "The newspaper. About society." *(社会 — from yesterday. Dad reads about society. The newspaper connects yesterday's abstract word to today's concrete object. 社会 exists because people write about it and other people read about it.)*
+**If the player visits Dad at the ビル (3F):** He has a 新聞 on his desk. 「社会のことだ。」 — "It's about society." *(社会 — from yesterday. The newspaper connects yesterday's abstract word to today's concrete object.)*
 
-**Design note — the newspaper as a mystery vehicle:** In N4, the 新聞 becomes a source of plot information. Headlines about strange events in the town, historical anniversaries that don't match the timeline, weather patterns that don't make sense. Dad reads the newspaper and occasionally mentions headlines. The player can check the newspaper themselves (if they walk to the コンビニ and find one) and discover articles that seed the larger mystery. The newspaper is a window into the world's inconsistencies, delivered in a format that requires 読む to access.
+**At the コンビニ:** A stack of 新聞 by the register. やまかわ doesn't read them. レン arranges them neatly. The player can examine but not buy (no purchase mechanic for newspapers). The headlines are squiggles — untaught kanji — but the object is recognizable now.
+
+**Design note — the newspaper as a mystery vehicle:** In N4, the 新聞 becomes a source of plot information. Headlines about strange events in the town, historical anniversaries that don't match the timeline, weather patterns that don't make sense. Dad reads the newspaper at home once evening mechanics arrive. The player can check the コンビニ copy and discover articles that seed the larger mystery. The newspaper is a window into the world's inconsistencies, delivered in a format that requires 読む to access.
 
 ---
 
@@ -5532,7 +5593,7 @@ Day 18 is the final N5 lesson. The player has learned all 90 N5 kanji. Every N5 
 - Emotions ranging from happy/interested/delicious to painful/sad/scary
 - An economy (money, shopping, food)
 - An outside (foreign countries, languages, nationalities)
-- A mystery thread (ゆき's observations, ミキ's reading, the town's inconsistencies)
+- A mystery thread (ゆき's observations, ミキ's reading, the town's inconsistencies, the white field, 忘)
 
 This is the complete N5 game world. Everything from this point forward (N4) is expansion, complication, and deepening. The foundation is built.
 
@@ -5545,11 +5606,13 @@ This is the complete N5 game world. Everything from this point forward (N4) is e
 | Moment | What Happens | What the Player Should Feel |
 |---|---|---|
 | Mom notices Rikizo's eyes | 目 as the first body-part observation | My character has a body now |
+| Anatomy mannequin in classroom | Interactable body-part map with kanji tags | Tactile learning — I can explore the vocabulary physically |
 | すずき's body-sense list | Eyes see, ears hear, hands write, feet walk | The organism is complete — every part has a function |
-| けん says いたい | First pain in the game | Lightness — pain is comic here, not tragic |
-| ゆき is sad about flowers | かなしい — the first sadness | Tenderness. The world can feel loss. |
-| けん's unfinished ghost story | こわい — the school at night... | Intrigue. What was he going to say? |
-| Dad reads the newspaper | 新聞 — information about 社会 | The world is bigger than what we can see |
+| やまかわ says かなしい | Reveals he can't go to high school, dad has no job | Weight. The コンビニ kid has a real story. |
+| リー says いたい at the dojo | Breaks two days of silence — hurt foot from solo karate practice | She's been *training*. Alone. Without a teacher. |
+| ゆき says こわい about the north | Saw something scary, new map point unlocks | What did she see? I have to go look. |
+| The white field | Empty white space, signpost with 忘, no interaction | Unease. What is this place? What does that character mean? |
+| 新聞 appears in the world | Newspapers at home and コンビニ — unreadable headlines | The world is bigger than what we can see |
 | Day ends normally | No fanfare. N5 is complete. | Wait... is that it? (Yes. That's the point.) |
 
 ---
@@ -5561,12 +5624,14 @@ This is the complete N5 game world. Everything from this point forward (N4) is e
 3. **ミキ's Book** — Rotating titles. Now into Day 6 of the readable-title mechanic. She's reading something about nature (Day 18 theme).
 4. **Station Master** — Still waiting. No trains. The station has 出口 and 入り口 signs now. The exits lead to the same place. The entrances lead to the same place. The station master guards a loop.
 5. **Yamakawa's Existence** — Not a part-timer. Not a student. Just... present. At the コンビニ. Every day. Now with レン working next to him. The contrast is deafening.
-6. **What Yuki Notices** — She noticed the school was new. She noticed the flowers fading. She notices everything nobody else does. The data accumulates.
-6b. **からて先生の「また今度」** — Six days of deferrals and counting (Day 13 → Day 18). He still can't teach. 教える doesn't arrive until N4.24. The sensei remains the game's most enthusiastic non-teacher. The dojo is a beautiful room where nothing happens.
-6c. **リーの道場** — Three days of silence (Day 17 → Day 18). リー stands in the corner of the dojo every afternoon. 「...」. She doesn't train (no one can). She doesn't explain. She just goes. The walk-home リー from Days 13–16 is gone. The player who tracked her after-school patterns notices her absence; the player who visits the dojo finds her there. Both wonder why.
+6. **What Yuki Notices** — She noticed the school was new. She noticed the flowers fading. She notices everything nobody else does. Now she's seen something こわい to the north. The data accumulates — and now it points somewhere.
+6b. **からて先生の「また今度」** — Six days of deferrals and counting (Day 13 → Day 18). He still can't teach. 教える doesn't arrive until N4.24. On Day 18 his deferral meets リー's injury — 「大丈夫ですか？空手は... また今度！」 hits different when someone is holding their foot. The comedy is intact but the stakes are real now.
+6c. **リーの道場** — Three days of silence (Day 17 → Day 18), broken by a single involuntary 「いたい」. リー has been *training* at the dojo — practicing kicks alone, without instruction. She hurt her foot. Pain cracked the silence for one moment, then the silence returned. The walk-home リー from Days 13–16 is gone. The dojo リー trains, hurts, and says nothing.
 7. **Dad's Absence** — He goes to 会社. He does NOT come home during N5 playable hours. The car is gone. The chair is empty. Mom says 「会社ですよ」 and nothing else. Dad exists as an absence now. He reads the 新聞 when evening mechanics arrive in N4. If the player visits the ビル 3F in the morning, Dad is at his desk. In the afternoon, the desk is empty. Where he goes between afternoon and the next morning is undefined.
 8. **Dad's Gold — ESCALATION** — Day 17 is the first time Dad isn't home to yell 「金！だめ！」. If the player tries: Mom calls from ten feet away. If they persist: the front door locks. If they try AGAIN: Mom is standing behind them. She was not there before. The gold is protected by forces beyond mortal understanding. Dad's sixth sense was always Mom's sixth sense.
 9. **レン's Jobs** — NEW. レン works at the ビル (mornings) and the コンビニ (afternoons). He will accumulate more jobs across N4. His job count is a running number. He never complains. He never rests. He greets everyone with store-appropriate phrases regardless of context.
+10. **やまかわ's Backstory** — NEW. Day 18 reveal: かなしい. Can't go to high school. Dad has no job. Works at the コンビニ because he has to. This is the first real explanation for his perpetual presence — but it raises as many questions as it answers. Is this backstory real? Does やまかわ remember correctly? ゆき noticed the school was new. やまかわ is sad about not attending it. The timelines are interesting.
+11. **The White Field** — NEW. North of town. All white. One signpost: 忘. Not clickable, not readable, not explainable. ゆき led the player here. Nothing happens. The field is patient.
 
 **Quest log state (end of Day 18 / end of N5):**
 > 📋 Quest Log
@@ -5588,7 +5653,7 @@ Two open quests carry into N4. Everything else is resolved. The foundation suppo
 
 | Category | State |
 |---|---|
-| **Locations** | House (all rooms), コンビニ, デパート, 駅 (empty), 学校 (weekdays), river, park, けん's house, hotel, ビル (lobby + 3F), 道場 |
+| **Locations** | House (all rooms), コンビニ, デパート, 駅 (empty), 学校 (weekdays), river, park, けん's house, hotel, ビル (lobby + 3F), 道場, **The White Field (north, unlocked Day 18)** |
 | **Named NPCs** | Mom, Dad, Yamakawa, ゆき, すずき先生, けん, リー, ミキ, レン, からて先生, station master, hotel clerk, 校長 |
 | **Economy** | Wallet active. Shopping at コンビニ and デパート. No income system yet. |
 | **Time system** | Calendar (dates), day-of-week, 午前/午後 split, weekday/weekend rhythm |
@@ -5597,14 +5662,15 @@ Two open quests carry into N4. Everything else is resolved. The foundation suppo
 | **Communication** | Phone (email + text), writing (書く), reading (読む), speech verbs (話す/言う) |
 | **Perception** | 見る/見える/見せる, 聞く. Body parts: 目/耳/手/足/口 |
 | **Emotions** | Positive: おもしろい, きれい, おいしい, たのしい, うれしい. Negative: いたい, かなしい, こわい |
-| **Mystery threads** | ゆき's observations (school new, flowers fading, writing remains). ミキ's reading. Station with no trains. Yamakawa's non-employment. |
+| **Mystery threads** | ゆき's observations (school new, flowers fading, something こわい to the north). ミキ's reading. Station with no trains. Yamakawa's backstory (dad unemployed — but is it real?). The White Field (north, 忘 signpost). |
 | **Relationship max** | Most NPCs at 10–15 range depending on player engagement |
 
 **Hidden stats (approximate end-of-N5 ranges):**
 ```
-paranoia:       3–8 (depending on ゆき interactions)
-curiosity:      5–12 (depending on exploration)
+paranoia:       3–12 (visiting the white field is a significant bump; ゆき's こわい adds 1–2)
+curiosity:      5–15 (the white field and 忘 signpost are major curiosity drivers)
 dad_annoyance:  0–3 (mostly cooled by daily decay)
+empathy:        0–5 (new: やまかわ's backstory +2, リー's injury +1, ゆき's fear +1)
 ```
 
 ---
@@ -5613,11 +5679,20 @@ dad_annoyance:  0–3 (mostly cooled by daily decay)
 
 | Asset | Type | Priority | Notes |
 |---|---|---|---|
+| Chibi anatomy mannequin | Prop / interactable | High | Classroom prop with labeled body parts (目, 耳, 口, 手, 足). Stays permanently. Tappable tags. |
 | Dad with newspaper | Sprite variant | Medium | **Deferred to N4 evening mechanics.** Dad doesn't come home during N5 playable hours (from Day 17 onward). This sprite is needed when evening scenes arrive in N4 — Dad seated, holding 新聞. |
-| けん rubbing leg | Sprite variant | Medium | いたい expression — comedic pain, not serious injury |
-| Fading flowers (river) | BG variant | Medium | Cherry blossoms thinning compared to Day 11. Seasonal progression. ゆき notices. |
+| やまかわ sad expression | Sprite variant | High | やまかわ with downcast eyes, quieter posture. Used during the かなしい revelation scene. First time he's not smiling. |
+| リー sitting/holding foot | Sprite variant | High | リー seated on dojo floor, holding right foot. Pain expression. Contrast with her usual standing posture. |
+| The White Field | Background | High | All-white environment. No features except the signpost. Stark, bright, empty. Not fog — pure white. Unsettling. |
+| 忘 signpost | Prop | High | Simple wooden crossroads signpost bearing a single kanji: 忘. Not interactable. Weathered wood, like it's been here longer than the town. |
+| Fading flowers (river) | BG variant | Medium | Cherry blossoms thinning compared to Day 11. Seasonal progression. |
+| 新聞 (newspaper) | Prop | Low | Newspaper on kitchen table and at コンビニ register. Mostly unreadable (untaught kanji). |
 
-Light asset day — the final N5 lesson adds emotional range, not physical locations.
+**Flags added:**
+- `white_field_unlocked` — set when ゆき reveals the northern location
+- `white_field_visited` — set on first visit to the white field
+- `yamakawa_backstory` — set after やまかわ's かなしい conversation
+- `lee_injured` — set after リー's いたい scene at the dojo
 
 ---
 
@@ -5625,10 +5700,14 @@ Light asset day — the final N5 lesson adds emotional range, not physical locat
 
 1. **聞こえる (to be audible) availability** — Is 聞こえる in the N5 glossary alongside 聞く? If yes, it mirrors the 見る/見える pair. If not, Day 18 only has active perception (聞く = choose to listen), not passive (聞こえる = sounds reach you). Check before implementation.
 
-2. **けん's ghost story** — How much of the story does he tell before すずき interrupts? Recommendation: enough to establish "school at night is scary" as a concept, not enough to tell a complete narrative. The interruption IS the point — the story is unfinished, creating anticipation. In N4, けん can tell the full version during a nighttime school event (cultural festival preparation, etc.).
+2. **高校 (high school) availability** — Does やまかわ's scene need this word? If 高校 is not in the N5.18 glossary, his line becomes 「学校に行きません」 without specifying high school. The emotional beat works either way, but 高校 adds precision to the sadness (he's not just missing *school* — he's missing the specific school Rikizo attends).
 
-3. **N5 → N4 transition** — Is there any in-game marker? Recommendation: no explicit marker. Day 19 simply starts with new kanji and the lesson counter reads N4.1. The player might notice the level change in the app UI (lesson selection screen) but the game world is continuous. Maybe すずき says 「新しい本がありますよ」— same phrase as Day 12, but this time it's the N4 textbook. A quiet callback.
+3. **N5 → N4 transition** — Is there any in-game marker? Recommendation: no explicit marker. Day 19 simply starts with new kanji and the lesson counter reads N4.1. The game world is continuous. Maybe すずき says 「新しい本がありますよ」— same phrase as Day 12, but this time it's the N4 textbook. A quiet callback.
 
-4. **Seasonal progression** — ゆき notices flowers fading. Should the game track real seasonal changes? Recommendation: yes, subtly. Cherry blossoms fade through mid-May. By June (N4 mid-range), rainy season begins. The background art and ゆき's commentary shift with the calendar. Weather affects NPC placement: rainy days move outdoor NPCs indoors or under awnings. This is a significant system investment but massively atmospheric.
+4. **Seasonal progression** — ゆき notices flowers fading. Should the game track real seasonal changes? Recommendation: yes, subtly. Cherry blossoms fade through mid-May. By June (N4 mid-range), rainy season begins. The background art and ゆき's commentary shift with the calendar.
+
+5. **The White Field — sound design** — Should the white field have ambient audio? Recommendation: silence. Complete silence. The rest of the game has ambient sound (birds, wind, footsteps, shop bells). The white field has nothing. The absence of sound is itself the sound design. If the platform supports it, even the UI sounds (tap feedback, menu) could be muted here.
+
+6. **やまかわ's backstory and the mystery** — How much should the player be able to trust やまかわ's story? For N5, take it at face value. But the player who has been following ゆき's observations might notice: ゆき said the school looked *new*. やまかわ is sad about not attending it. If the school is new, when would やまかわ have attended? This contradiction is planted but not surfaced until N4.
 
 ---
