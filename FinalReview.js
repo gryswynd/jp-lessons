@@ -913,13 +913,14 @@ window.FinalReviewModule = (function () {
       const dataUrl = getUrl(frEntry.file);
 
       // Load data files in parallel
-      const [data, conjData, ctrData, glossN5Raw, glossN4Raw, particlesRaw] = await Promise.all([
+      const [data, conjData, ctrData, glossN5Raw, glossN4Raw, particlesRaw, characterDataRaw] = await Promise.all([
         window.JPShared.assets.fetchJSON(dataUrl),
         window.JPShared.assets.fetchJSON(getUrl(manifest.globalFiles.conjugationRules)),
         window.JPShared.assets.fetchJSON(getUrl(manifest.globalFiles.counterRules)),
         window.JPShared.assets.fetchJSON(getUrl(manifest.data.N5.glossary)),
         window.JPShared.assets.fetchJSON(getUrl(manifest.data.N4.glossary)),
-        window.JPShared.assets.fetchJSON(getUrl(manifest.shared.particles))
+        window.JPShared.assets.fetchJSON(getUrl(manifest.shared.particles)),
+        window.JPShared.assets.fetchJSON(getUrl(manifest.shared.characters))
       ]);
 
       reviewData = data;
@@ -943,6 +944,10 @@ window.FinalReviewModule = (function () {
           // Normalize particle fields to match glossary term shape expected by term-modal
           termMap[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle' };
         }
+      });
+      const characters = Array.isArray(characterDataRaw) ? characterDataRaw : (characterDataRaw && characterDataRaw.characters ? characterDataRaw.characters : []);
+      characters.forEach(c => {
+        if (c.id) termMap[c.id] = Object.assign({}, c, { portraitUrl: getUrl(c.portrait) });
       });
 
       // Wire up term modal so tapping vocab shows meaning popup

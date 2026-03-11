@@ -7,7 +7,14 @@
     "lesson_number": 8,
     "focus": "Shopping adjectives 古い / 新しい / 高い / 長い and the verb 買う used in department store and gift-buying contexts",
     "estimated_minutes": 50,
-    "kanji": ["古", "新", "買", "長", "高", "安"]
+    "kanji": [
+      "古",
+      "新",
+      "買",
+      "長",
+      "高",
+      "安"
+    ]
   },
   "newKanji": [
     {
@@ -65,10 +72,16 @@
           "terms": [
             "v_koohii",
             "p_wo",
-            { "id": "v_nomu", "form": "te_form" },
+            {
+              "id": "v_nomu",
+              "form": "te_form"
+            },
             "v_resutoran",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -77,7 +90,10 @@
           "terms": [
             "v_pan",
             "p_wo",
-            { "id": "v_taberu", "form": "te_form" },
+            {
+              "id": "v_taberu",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
@@ -89,7 +105,10 @@
             "p_wa",
             "v_resutoran",
             "p_e",
-            { "id": "v_iku", "form": "polite_past_negative" }
+            {
+              "id": "v_iku",
+              "form": "polite_past_negative"
+            }
           ]
         },
         {
@@ -98,7 +117,10 @@
           "terms": [
             "v_karee",
             "p_wa",
-            { "id": "v_ookii", "form": "polite_adj" },
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         }
@@ -113,42 +135,54 @@
           "on": "こ",
           "kun": "ふる",
           "meaning": "old",
-          "terms": ["k_furu"]
+          "terms": [
+            "k_furu"
+          ]
         },
         {
           "kanji": "新",
           "on": "しん",
           "kun": "あたら",
           "meaning": "new",
-          "terms": ["k_atara"]
+          "terms": [
+            "k_atara"
+          ]
         },
         {
           "kanji": "買",
           "on": "ばい",
           "kun": "か",
           "meaning": "buy",
-          "terms": ["k_ka_2"]
+          "terms": [
+            "k_ka_2"
+          ]
         },
         {
           "kanji": "長",
           "on": "ちょう",
           "kun": "なが",
           "meaning": "long",
-          "terms": ["k_naga"]
+          "terms": [
+            "k_naga"
+          ]
         },
         {
           "kanji": "高",
           "on": "こう",
           "kun": "たか",
           "meaning": "high / tall / expensive",
-          "terms": ["k_taka"]
+          "terms": [
+            "k_taka"
+          ]
         },
         {
           "kanji": "安",
           "on": "あん",
           "kun": "やす",
           "meaning": "cheap / safe",
-          "terms": ["v_yasu"]
+          "terms": [
+            "v_yasu"
+          ]
         }
       ]
     },
@@ -158,31 +192,59 @@
       "groups": [
         {
           "label": "New Kanji",
-          "items": ["k_furu", "k_atara", "k_ka_2", "k_naga", "k_taka", "v_yasu"]
+          "items": [
+            "k_furu",
+            "k_atara",
+            "k_ka_2",
+            "k_naga",
+            "k_taka",
+            "v_yasu"
+          ]
         },
         {
           "label": "Adjectives",
-          "items": ["v_furui", "v_atarashii", "v_nagai", "v_takai", "v_yasui", "v_oishii", "v_hoshii", "v_sugoi"]
+          "items": [
+            "v_furui",
+            "v_atarashii",
+            "v_nagai",
+            "v_takai",
+            "v_yasui",
+            "v_oishii",
+            "v_hoshii",
+            "v_sugoi"
+          ]
         },
         {
           "label": "Verbs",
-          "items": ["v_kau"]
+          "items": [
+            "v_kau"
+          ]
         },
         {
           "label": "Places",
-          "items": ["v_depaato"]
+          "items": [
+            "v_depaato"
+          ]
         },
         {
           "label": "People",
-          "items": ["v_ekichou"]
+          "items": [
+            "v_ekichou"
+          ]
         },
         {
           "label": "Adverbs",
-          "items": ["v_amari", "v_mada", "v_mou"]
+          "items": [
+            "v_amari",
+            "v_mada",
+            "v_mou"
+          ]
         },
         {
           "label": "Other",
-          "items": ["v_purezento"]
+          "items": [
+            "v_purezento"
+          ]
         }
       ]
     },
@@ -196,11 +258,15 @@
           "jp": "やまかわさん、今日 デパートへ 行きますか。",
           "en": "Yamakawa-san, are you going to the department store today?",
           "terms": [
+            "char_yamakawa",
             "v_san",
             "v_kyou",
             "v_depaato",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -210,12 +276,18 @@
           "en": "Yes, I will go. I am going to buy a gift for a friend.",
           "terms": [
             "p_hai",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "v_tomodachi",
             "p_no",
             "v_purezento",
             "p_wo",
-            { "id": "v_kau", "form": "polite_masu" }
+            {
+              "id": "v_kau",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -224,7 +296,10 @@
           "en": "Let's go together.",
           "terms": [
             "v_issho",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -232,12 +307,21 @@
           "jp": "いいですね。デパートへ 行って、買います。",
           "en": "That sounds great. I will go to the department store and buy it.",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_depaato",
             "p_e",
-            { "id": "v_iku", "form": "te_form" },
-            { "id": "v_kau", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kau",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -247,7 +331,10 @@
           "terms": [
             "v_purezento",
             "p_wa",
-            { "id": "v_takai", "form": "polite_adj" },
+            {
+              "id": "v_takai",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -256,10 +343,16 @@
           "jp": "安いですよ。とても すごいですよ。",
           "en": "It is cheap, you know. It is really amazing, you know.",
           "terms": [
-            { "id": "v_yasui", "form": "polite_adj" },
+            {
+              "id": "v_yasui",
+              "form": "polite_adj"
+            },
             "p_yo",
             "v_totemo",
-            { "id": "v_sugoi", "form": "polite_adj" },
+            {
+              "id": "v_sugoi",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         }
@@ -277,7 +370,10 @@
           "terms": [
             "v_kore",
             "p_wa",
-            { "id": "v_atarashii", "form": "polite_adj" },
+            {
+              "id": "v_atarashii",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -287,10 +383,16 @@
           "en": "Yes, it is new. This one is old.",
           "terms": [
             "p_hai",
-            { "id": "v_atarashii", "form": "polite_adj" },
+            {
+              "id": "v_atarashii",
+              "form": "polite_adj"
+            },
             "v_kore",
             "p_wa",
-            { "id": "v_furui", "form": "polite_adj" }
+            {
+              "id": "v_furui",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -300,7 +402,10 @@
           "terms": [
             "v_sore",
             "p_wa",
-            { "id": "v_takai", "form": "polite_adj" },
+            {
+              "id": "v_takai",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -310,11 +415,17 @@
           "en": "Yes, it is expensive. This one is not very expensive.",
           "terms": [
             "p_hai",
-            { "id": "v_takai", "form": "polite_adj" },
+            {
+              "id": "v_takai",
+              "form": "polite_adj"
+            },
             "v_kore",
             "p_wa",
             "v_amari",
-            { "id": "v_takai", "form": "polite_negative" }
+            {
+              "id": "v_takai",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -346,7 +457,10 @@
           "terms": [
             "v_dore",
             "p_ga",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -357,8 +471,14 @@
           "terms": [
             "v_kore",
             "p_ga",
-            { "id": "v_ii", "form": "polite_adj" },
-            { "id": "v_nagai", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
+            {
+              "id": "v_nagai",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         }
@@ -378,7 +498,10 @@
             "v_san",
             "v_nani",
             "p_ga",
-            { "id": "v_hoshii", "form": "polite_adj" },
+            {
+              "id": "v_hoshii",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -389,8 +512,14 @@
           "terms": [
             "v_purezento",
             "p_ga",
-            { "id": "v_hoshii", "form": "polite_adj" },
-            { "id": "v_atarashii", "form": "polite_adj" },
+            {
+              "id": "v_hoshii",
+              "form": "polite_adj"
+            },
+            {
+              "id": "v_atarashii",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         },
@@ -399,7 +528,10 @@
           "jp": "高いですか。",
           "en": "Is it expensive?",
           "terms": [
-            { "id": "v_takai", "form": "polite_adj" },
+            {
+              "id": "v_takai",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -409,8 +541,14 @@
           "en": "Yes, it is expensive. I want to buy it.",
           "terms": [
             "p_hai",
-            { "id": "v_takai", "form": "polite_adj" },
-            { "id": "v_kau", "form": "desire_tai" }
+            {
+              "id": "v_takai",
+              "form": "polite_adj"
+            },
+            {
+              "id": "v_kau",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -422,7 +560,10 @@
             "p_ne",
             "v_watashi",
             "p_mo",
-            { "id": "v_kau", "form": "desire_tai" }
+            {
+              "id": "v_kau",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -432,7 +573,10 @@
           "terms": [
             "v_depaato",
             "p_e",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -451,7 +595,10 @@
             "v_san",
             "v_purezento",
             "p_wo",
-            { "id": "v_kau", "form": "polite_mashita" },
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -461,10 +608,16 @@
           "en": "Yes, I bought one. The gift is new.",
           "terms": [
             "p_hai",
-            { "id": "v_kau", "form": "polite_mashita" },
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            },
             "v_purezento",
             "p_wa",
-            { "id": "v_atarashii", "form": "polite_adj" }
+            {
+              "id": "v_atarashii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -472,7 +625,10 @@
           "jp": "高いですか。",
           "en": "Is it expensive?",
           "terms": [
-            { "id": "v_takai", "form": "polite_adj" },
+            {
+              "id": "v_takai",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -482,9 +638,15 @@
           "en": "It is not very expensive. I already bought it, you know.",
           "terms": [
             "v_amari",
-            { "id": "v_takai", "form": "polite_negative" },
+            {
+              "id": "v_takai",
+              "form": "polite_negative"
+            },
             "v_mou",
-            { "id": "v_kau", "form": "polite_mashita" },
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            },
             "p_yo"
           ]
         },
@@ -498,7 +660,10 @@
             "p_mo",
             "v_depaato",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -510,12 +675,18 @@
             "p_hai",
             "v_raishuu",
             "p_mo",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "v_tomodachi",
             "p_no",
             "v_purezento",
             "p_mo",
-            { "id": "v_kau", "form": "polite_masu" }
+            {
+              "id": "v_kau",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -528,13 +699,17 @@
           "jp": "今日、りきぞと やまかわは デパートへ 行きました。",
           "en": "Today, Rikizo and Yamakawa went to the department store.",
           "terms": [
+            "char_yamakawa",
             "v_kyou",
             "char_rikizo",
             "p_to",
             "p_wa",
             "v_depaato",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -545,7 +720,10 @@
             "p_de",
             "v_purezento",
             "p_wo",
-            { "id": "v_kau", "form": "polite_mashita" }
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -556,17 +734,24 @@
             "p_no",
             "v_purezento",
             "p_wa",
-            { "id": "v_atarashii", "form": "polite_adj" }
+            {
+              "id": "v_atarashii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
           "jp": "やまかわの プレゼントは 長いです。",
           "en": "Yamakawa's gift is long.",
           "terms": [
+            "char_yamakawa",
             "p_no",
             "v_purezento",
             "p_wa",
-            { "id": "v_nagai", "form": "polite_adj" }
+            {
+              "id": "v_nagai",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -576,8 +761,14 @@
             "v_purezento",
             "p_wa",
             "v_amari",
-            { "id": "v_takai", "form": "polite_negative" },
-            { "id": "v_sugoi", "form": "polite_adj" },
+            {
+              "id": "v_takai",
+              "form": "polite_negative"
+            },
+            {
+              "id": "v_sugoi",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         },
@@ -587,7 +778,10 @@
           "terms": [
             "v_depaato",
             "p_wa",
-            { "id": "v_atarashii", "form": "polite_adj" },
+            {
+              "id": "v_atarashii",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         }
@@ -601,7 +795,10 @@
             "p_wa",
             "v_doko",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" },
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "v_depaato"
           ]
@@ -612,7 +809,10 @@
           "terms": [
             "v_nani",
             "p_wo",
-            { "id": "v_kau", "form": "polite_mashita" },
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "v_purezento"
           ]
@@ -627,7 +827,10 @@
             "v_dou",
             "g_desu",
             "p_ka",
-            { "id": "v_atarashii", "form": "polite_adj" }
+            {
+              "id": "v_atarashii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -636,10 +839,16 @@
           "terms": [
             "v_purezento",
             "p_wa",
-            { "id": "v_takai", "form": "polite_adj" },
+            {
+              "id": "v_takai",
+              "form": "polite_adj"
+            },
             "p_ka",
             "v_amari",
-            { "id": "v_takai", "form": "polite_negative" }
+            {
+              "id": "v_takai",
+              "form": "polite_negative"
+            }
           ]
         }
       ]
@@ -657,7 +866,10 @@
             "v_kyou",
             "v_depaato",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -668,7 +880,10 @@
             "p_no",
             "v_purezento",
             "p_wo",
-            { "id": "v_kau", "form": "desire_tai" }
+            {
+              "id": "v_kau",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -677,8 +892,14 @@
           "terms": [
             "v_depaato",
             "p_wa",
-            { "id": "v_ookii", "form": "polite_adj" },
-            { "id": "v_atarashii", "form": "polite_adj" },
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            },
+            {
+              "id": "v_atarashii",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         },
@@ -689,7 +910,10 @@
             "v_nagai",
             "v_purezento",
             "p_ga",
-            { "id": "v_hoshii", "form": "polite_adj" }
+            {
+              "id": "v_hoshii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -701,9 +925,15 @@
             "v_takai",
             "v_purezento",
             "p_wa",
-            { "id": "v_kau", "form": "polite_negative" },
+            {
+              "id": "v_kau",
+              "form": "polite_negative"
+            },
             "v_amari",
-            { "id": "v_takai", "form": "polite_negative" }
+            {
+              "id": "v_takai",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -714,8 +944,14 @@
             "p_wa",
             "v_purezento",
             "p_wo",
-            { "id": "v_kau", "form": "polite_mashita" },
-            { "id": "v_sugoi", "form": "polite_adj" },
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            },
+            {
+              "id": "v_sugoi",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         }
@@ -729,7 +965,10 @@
             "p_wa",
             "v_doko",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" },
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "v_depaato"
           ]
@@ -740,7 +979,10 @@
           "terms": [
             "v_nani",
             "p_ga",
-            { "id": "v_hoshii", "form": "polite_adj" },
+            {
+              "id": "v_hoshii",
+              "form": "polite_adj"
+            },
             "p_ka",
             "v_nagai",
             "v_purezento"
@@ -756,7 +998,10 @@
             "g_desu",
             "p_ka",
             "v_amari",
-            { "id": "v_takai", "form": "polite_negative" }
+            {
+              "id": "v_takai",
+              "form": "polite_negative"
+            }
           ]
         }
       ]
@@ -769,31 +1014,56 @@
         {
           "kind": "mcq",
           "q": "[新] の よみかたは？",
-          "choices": ["あたら", "ふる", "か", "なが"],
+          "choices": [
+            "あたら",
+            "ふる",
+            "か",
+            "なが"
+          ],
           "answer": "あたら"
         },
         {
           "kind": "mcq",
           "q": "[古] の よみかたは？",
-          "choices": ["ふる", "あたら", "こう", "やす"],
+          "choices": [
+            "ふる",
+            "あたら",
+            "こう",
+            "やす"
+          ],
           "answer": "ふる"
         },
         {
           "kind": "mcq",
           "q": "[買] の よみかたは？",
-          "choices": ["か", "なが", "ばい", "たか"],
+          "choices": [
+            "か",
+            "なが",
+            "ばい",
+            "たか"
+          ],
           "answer": "か"
         },
         {
           "kind": "mcq",
           "q": "[長] の よみかたは？",
-          "choices": ["なが", "ちょう", "か", "ふる"],
+          "choices": [
+            "なが",
+            "ちょう",
+            "か",
+            "ふる"
+          ],
           "answer": "なが"
         },
         {
           "kind": "mcq",
           "q": "[高い] の よみかたは？",
-          "choices": ["たかい", "やすい", "ながい", "ふるい"],
+          "choices": [
+            "たかい",
+            "やすい",
+            "ながい",
+            "ふるい"
+          ],
           "answer": "たかい"
         }
       ]
@@ -806,94 +1076,161 @@
         {
           "kind": "mcq",
           "q": "プレゼント _______ 買います。",
-          "choices": ["を", "は", "が", "に"],
+          "choices": [
+            "を",
+            "は",
+            "が",
+            "に"
+          ],
           "answer": "を",
           "terms": [
             "v_purezento",
             "p_wo",
-            { "id": "v_kau", "form": "polite_masu" }
+            {
+              "id": "v_kau",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "これは 新しいです。あれは _______。",
-          "choices": ["古いです", "新しいです", "高いです", "長いです"],
+          "choices": [
+            "古いです",
+            "新しいです",
+            "高いです",
+            "長いです"
+          ],
           "answer": "古いです",
           "terms": [
             "v_kore",
             "p_wa",
-            { "id": "v_atarashii", "form": "polite_adj" },
+            {
+              "id": "v_atarashii",
+              "form": "polite_adj"
+            },
             "v_are",
-            { "id": "v_furui", "form": "polite_adj" }
+            {
+              "id": "v_furui",
+              "form": "polite_adj"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "あまり _______ です。",
-          "choices": ["高くない", "高い", "新しい", "古い"],
+          "choices": [
+            "高くない",
+            "高い",
+            "新しい",
+            "古い"
+          ],
           "answer": "高くない",
           "terms": [
             "v_amari",
-            { "id": "v_takai", "form": "polite_negative" }
+            {
+              "id": "v_takai",
+              "form": "polite_negative"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "デパートで プレゼントを _______。",
-          "choices": ["買います", "食べます", "飲みます", "行きます"],
+          "choices": [
+            "買います",
+            "食べます",
+            "飲みます",
+            "行きます"
+          ],
           "answer": "買います",
           "terms": [
             "v_depaato",
             "p_de",
             "v_purezento",
             "p_wo",
-            { "id": "v_kau", "form": "polite_masu" }
+            {
+              "id": "v_kau",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "_______ 買いましたか。",
-          "choices": ["もう", "まだ", "あまり", "とても"],
+          "choices": [
+            "もう",
+            "まだ",
+            "あまり",
+            "とても"
+          ],
           "answer": "もう",
           "terms": [
             "v_mou",
-            { "id": "v_kau", "form": "polite_mashita" },
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
         {
           "kind": "mcq",
           "q": "今日 デパートへ _______。",
-          "choices": ["行きました", "行きます", "来ました", "来ます"],
+          "choices": [
+            "行きました",
+            "行きます",
+            "来ました",
+            "来ます"
+          ],
           "answer": "行きました",
           "terms": [
             "v_kyou",
             "v_depaato",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "プレゼントは _______ です。",
-          "choices": ["新しい", "古い", "大きい", "小さい"],
+          "choices": [
+            "新しい",
+            "古い",
+            "大きい",
+            "小さい"
+          ],
           "answer": "新しい",
           "terms": [
             "v_purezento",
             "p_wa",
-            { "id": "v_atarashii", "form": "polite_adj" }
+            {
+              "id": "v_atarashii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "先週 プレゼントを _______。",
-          "choices": ["買いました", "買います", "買いません", "飲みました"],
+          "choices": [
+            "買いました",
+            "買います",
+            "買いません",
+            "飲みました"
+          ],
           "answer": "買いました",
           "terms": [
             "v_senshuu",
             "v_purezento",
             "p_wo",
-            { "id": "v_kau", "form": "polite_mashita" }
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -906,101 +1243,174 @@
         {
           "kind": "mcq",
           "q": "デパート _______ 行きます。",
-          "choices": ["へ", "で", "に", "は"],
+          "choices": [
+            "へ",
+            "で",
+            "に",
+            "は"
+          ],
           "answer": "へ",
           "terms": [
             "v_depaato",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "デパート _______ プレゼントを 買います。",
-          "choices": ["で", "へ", "に", "と"],
+          "choices": [
+            "で",
+            "へ",
+            "に",
+            "と"
+          ],
           "answer": "で",
           "terms": [
             "v_depaato",
             "p_de",
             "v_purezento",
             "p_wo",
-            { "id": "v_kau", "form": "polite_masu" }
+            {
+              "id": "v_kau",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "これは 新しいです。それは _______。",
-          "choices": ["古いです", "新しいです", "長いです", "高いです"],
+          "choices": [
+            "古いです",
+            "新しいです",
+            "長いです",
+            "高いです"
+          ],
           "answer": "古いです",
           "terms": [
             "v_kore",
             "p_wa",
-            { "id": "v_atarashii", "form": "polite_adj" },
+            {
+              "id": "v_atarashii",
+              "form": "polite_adj"
+            },
             "v_sore",
-            { "id": "v_furui", "form": "polite_adj" }
+            {
+              "id": "v_furui",
+              "form": "polite_adj"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "これは あまり _______ です。",
-          "choices": ["高くない", "高い", "長い", "新しい"],
+          "choices": [
+            "高くない",
+            "高い",
+            "長い",
+            "新しい"
+          ],
           "answer": "高くない",
           "terms": [
             "v_kore",
             "p_wa",
             "v_amari",
-            { "id": "v_takai", "form": "polite_negative" }
+            {
+              "id": "v_takai",
+              "form": "polite_negative"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "いっしょに プレゼントを _______。",
-          "choices": ["買いましょう", "買います", "買いました", "買いません"],
+          "choices": [
+            "買いましょう",
+            "買います",
+            "買いました",
+            "買いません"
+          ],
           "answer": "買いましょう",
           "terms": [
             "v_issho",
             "v_purezento",
             "p_wo",
-            { "id": "v_kau", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_kau",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "友だち _______ いっしょに 行きました。",
-          "choices": ["と", "を", "に", "が"],
+          "choices": [
+            "と",
+            "を",
+            "に",
+            "が"
+          ],
           "answer": "と",
           "terms": [
             "v_tomodachi",
             "p_to",
             "v_issho",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "プレゼントは 高いです。あれは _______。",
-          "choices": ["高くないです", "高いです", "長いです", "新しいです"],
+          "choices": [
+            "高くないです",
+            "高いです",
+            "長いです",
+            "新しいです"
+          ],
           "answer": "高くないです",
           "terms": [
             "v_purezento",
             "p_wa",
-            { "id": "v_takai", "form": "polite_adj" },
+            {
+              "id": "v_takai",
+              "form": "polite_adj"
+            },
             "v_are",
-            { "id": "v_takai", "form": "polite_negative" }
+            {
+              "id": "v_takai",
+              "form": "polite_negative"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "デパートへ 行って、プレゼントを _______。",
-          "choices": ["買いました", "買います", "飲みました", "食べました"],
+          "choices": [
+            "買いました",
+            "買います",
+            "飲みました",
+            "食べました"
+          ],
           "answer": "買いました",
           "terms": [
             "v_depaato",
             "p_e",
-            { "id": "v_iku", "form": "te_form" },
+            {
+              "id": "v_iku",
+              "form": "te_form"
+            },
             "v_purezento",
             "p_wo",
-            { "id": "v_kau", "form": "polite_mashita" }
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
