@@ -78,7 +78,7 @@
           "terms": [
             "v_yoku",
             "v_kangaeru",
-            "k_hito",
+            "v_hito",
             "v_suki"
           ]
         },
@@ -262,7 +262,7 @@
           "en": "It is with a strong person. The match is difficult.",
           "terms": [
             "v_tsuyoi",
-            "k_hito",
+            "v_hito",
             "v_shiai",
             "v_muzukashii"
           ]
@@ -450,7 +450,10 @@
           "en": "Doing many things at once is difficult.",
           "terms": [
             "v_ichidoni",
-            { "id": "v_ooi", "form": "adverbial" },
+            {
+              "id": "v_ooi",
+              "form": "adverbial"
+            },
             "v_koto",
             "v_suru",
             "v_muzukashii"
