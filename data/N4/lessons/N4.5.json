@@ -6,16 +6,66 @@
     "phase": 4,
     "lesson": 5,
     "focus": "Food and ingredient vocabulary (食べ物, 飲み物, 野菜, 牛肉, 料理, 買い物); 物 compounds; manner expression よう.",
-    "kanji": ["物", "野", "菜", "料", "理", "牛", "肉"]
+    "kanji": [
+      "物",
+      "野",
+      "菜",
+      "料",
+      "理",
+      "牛",
+      "肉"
+    ]
   },
   "newKanji": [
-    { "kanji": "物", "on": "ぶつ / もつ", "kun": "もの", "meaning": "Thing", "termId": "k_mono" },
-    { "kanji": "野", "on": "や",          "kun": "の",   "meaning": "Field",           "termId": "k_no_3" },
-    { "kanji": "菜", "on": "さい",        "kun": "な",   "meaning": "Vegetable",       "termId": "k_na_2" },
-    { "kanji": "料", "on": "りょう",      "kun": "",     "meaning": "Fee / Material",  "termId": "k_u6599" },
-    { "kanji": "理", "on": "り",          "kun": "",     "meaning": "Reason / Logic",  "termId": "k_u7406" },
-    { "kanji": "牛", "on": "ぎゅう",      "kun": "うし", "meaning": "Cow",             "termId": "k_ushi" },
-    { "kanji": "肉", "on": "にく",        "kun": "",     "meaning": "Meat",            "termId": "k_u8089" }
+    {
+      "kanji": "物",
+      "on": "ぶつ / もつ",
+      "kun": "もの",
+      "meaning": "Thing",
+      "termId": "k_mono"
+    },
+    {
+      "kanji": "野",
+      "on": "や",
+      "kun": "の",
+      "meaning": "Field",
+      "termId": "k_no_3"
+    },
+    {
+      "kanji": "菜",
+      "on": "さい",
+      "kun": "な",
+      "meaning": "Vegetable",
+      "termId": "k_na_2"
+    },
+    {
+      "kanji": "料",
+      "on": "りょう",
+      "kun": "",
+      "meaning": "Fee / Material",
+      "termId": "k_u6599"
+    },
+    {
+      "kanji": "理",
+      "on": "り",
+      "kun": "",
+      "meaning": "Reason / Logic",
+      "termId": "k_u7406"
+    },
+    {
+      "kanji": "牛",
+      "on": "ぎゅう",
+      "kun": "うし",
+      "meaning": "Cow",
+      "termId": "k_ushi"
+    },
+    {
+      "kanji": "肉",
+      "on": "にく",
+      "kun": "",
+      "meaning": "Meat",
+      "termId": "k_u8089"
+    }
   ],
   "sections": [
     {
@@ -34,8 +84,14 @@
             "p_no",
             "v_shatsu",
             "p_wo",
-            { "id": "v_kiru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_kiru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -45,11 +101,17 @@
           "terms": [
             "v_asagohan",
             "p_wo",
-            { "id": "v_taberu", "form": "te_form" },
+            {
+              "id": "v_taberu",
+              "form": "te_form"
+            },
             "p_kara",
             "v_gakkou",
             "p_ni",
-            { "id": "v_kuru", "form": "polite_potential" },
+            {
+              "id": "v_kuru",
+              "form": "polite_potential"
+            },
             "p_ka"
           ]
         },
@@ -60,8 +122,14 @@
             "v_mainichi",
             "v_ocha",
             "p_wo",
-            { "id": "v_nomu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_nomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -74,7 +142,10 @@
             "v_donna",
             "v_iro",
             "p_ga",
-            { "id": "v_suki", "form": "polite_adj" },
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         }
@@ -89,49 +160,73 @@
           "on": "ぶつ / もつ",
           "kun": "もの",
           "meaning": "Thing",
-          "terms": ["k_mono", "v_tabemono", "v_nomimono", "v_kaimono", "v_monogatari"]
+          "terms": [
+            "k_mono",
+            "v_tabemono",
+            "v_nomimono",
+            "v_kaimono",
+            "v_monogatari"
+          ]
         },
         {
           "kanji": "野",
           "on": "や",
           "kun": "の",
           "meaning": "Field",
-          "terms": ["k_no_3", "v_yasai"]
+          "terms": [
+            "k_no_3",
+            "v_yasai"
+          ]
         },
         {
           "kanji": "菜",
           "on": "さい",
           "kun": "な",
           "meaning": "Vegetable",
-          "terms": ["k_na_2", "v_yasai"]
+          "terms": [
+            "k_na_2",
+            "v_yasai"
+          ]
         },
         {
           "kanji": "料",
           "on": "りょう",
           "kun": "",
           "meaning": "Fee / Material",
-          "terms": ["k_u6599", "v_ryouri"]
+          "terms": [
+            "k_u6599",
+            "v_ryouri"
+          ]
         },
         {
           "kanji": "理",
           "on": "り",
           "kun": "",
           "meaning": "Reason / Logic",
-          "terms": ["k_u7406", "v_ryouri"]
+          "terms": [
+            "k_u7406",
+            "v_ryouri"
+          ]
         },
         {
           "kanji": "牛",
           "on": "ぎゅう",
           "kun": "うし",
           "meaning": "Cow",
-          "terms": ["k_ushi", "v_gyuuniku"]
+          "terms": [
+            "k_ushi",
+            "v_gyuuniku"
+          ]
         },
         {
           "kanji": "肉",
           "on": "にく",
           "kun": "",
           "meaning": "Meat",
-          "terms": ["k_u8089", "v_gyuuniku"]
+          "terms": [
+            "k_u8089",
+            "v_gyuuniku"
+          ]
         }
       ]
     },
@@ -141,15 +236,26 @@
       "groups": [
         {
           "label": "Food & Ingredients",
-          "items": ["v_tabemono", "v_nomimono", "v_yasai", "v_gyuuniku", "v_ryouri"]
+          "items": [
+            "v_tabemono",
+            "v_nomimono",
+            "v_yasai",
+            "v_gyuuniku",
+            "v_ryouri"
+          ]
         },
         {
           "label": "Compounds with 物",
-          "items": ["v_kaimono", "v_monogatari"]
+          "items": [
+            "v_kaimono",
+            "v_monogatari"
+          ]
         },
         {
           "label": "Pattern Word",
-          "items": ["v_you_manner"]
+          "items": [
+            "v_you_manner"
+          ]
         }
       ]
     },
@@ -168,7 +274,10 @@
             "p_wa",
             "v_doko",
             "p_ni",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -181,12 +290,21 @@
             "p_wa",
             "v_asoko",
             "p_ni",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "v_gyuuniku",
             "p_mo",
-            { "id": "v_chikai", "form": "adverbial" },
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            },
             "p_ni",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_yo"
           ]
         },
@@ -203,7 +321,10 @@
             "v_gyuuniku",
             "p_wo",
             "v_yoku",
-            { "id": "v_tsukau", "form": "polite_masu" },
+            {
+              "id": "v_tsukau",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -217,11 +338,17 @@
             "p_no",
             "v_ryouri",
             "p_ga",
-            { "id": "v_daisuki", "form": "polite_adj" },
+            {
+              "id": "v_daisuki",
+              "form": "polite_adj"
+            },
             "v_oishii",
             "v_tabemono",
             "p_ga",
-            { "id": "v_tsukuru", "form": "polite_potential" },
+            {
+              "id": "v_tsukuru",
+              "form": "polite_potential"
+            },
             "p_yo"
           ]
         }
@@ -245,7 +372,10 @@
             "p_no",
             "v_ryouri",
             "p_wo",
-            { "id": "v_tsukuru", "form": "polite_masu" },
+            {
+              "id": "v_tsukuru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -260,12 +390,21 @@
             "p_no",
             "v_ryouri",
             "p_wo",
-            { "id": "v_tsukuru", "form": "desire_tai" },
+            {
+              "id": "v_tsukuru",
+              "form": "desire_tai"
+            },
             "v_tabemono",
             "p_wo",
             "v_takusan",
-            { "id": "v_kau", "form": "te_form" },
-            { "id": "v_kuru", "form": "polite_mashita" }
+            {
+              "id": "v_kau",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -273,14 +412,23 @@
           "jp": "いいですね。牛肉も 買いましたから、いっしょに 使いましょう。",
           "en": "Sounds great. Since you bought beef too, let's use them together.",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_gyuuniku",
             "p_mo",
-            { "id": "v_kau", "form": "polite_mashita" },
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            },
             "p_kara_because",
             "v_issho",
-            { "id": "v_tsukau", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_tsukau",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -290,7 +438,10 @@
           "terms": [
             "v_nomimono",
             "p_mo",
-            { "id": "v_tsukuru", "form": "polite_potential" },
+            {
+              "id": "v_tsukuru",
+              "form": "polite_potential"
+            },
             "p_ka"
           ]
         },
@@ -300,7 +451,10 @@
           "en": "Yes, I can. Beef and vegetable dishes are delicious.",
           "terms": [
             "p_hai",
-            { "id": "v_tsukuru", "form": "polite_potential" },
+            {
+              "id": "v_tsukuru",
+              "form": "polite_potential"
+            },
             "p_yo",
             "v_gyuuniku",
             "p_to",
@@ -308,7 +462,10 @@
             "p_no",
             "v_ryouri",
             "p_wa",
-            { "id": "v_oishii", "form": "polite_adj" },
+            {
+              "id": "v_oishii",
+              "form": "polite_adj"
+            },
             "p_ne"
           ]
         }
@@ -316,26 +473,30 @@
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 3（会話）: Cooking at Home (Casual)",
-      "context": "Close friends Ken and Rikizo are at home deciding what to cook for dinner together.",
+      "title": "Conversation Practice 3（会話）: Cooking at Home",
+      "context": "Ken and Rikizo decide together what to cook for dinner.",
       "lines": [
         {
           "spk": "A",
-          "jp": "けん、今日は 何を 作る？",
+          "jp": "けんさん、今日は 何を 作りますか。",
           "en": "Ken, what are we making today?",
           "terms": [
             "char_ken",
+            "v_san",
             "v_kyou",
             "p_wa",
             "v_nani",
             "p_wo",
-            { "id": "v_tsukuru", "form": null }
+            {
+              "id": "v_tsukuru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "spk": "B",
-          "jp": "野菜と 牛肉の 料理を 作りたい。スーパーで たくさん 買ってきたよ。",
-          "en": "I want to make a beef and vegetable dish. I bought lots of stuff at the supermarket.",
+          "jp": "野菜と 牛肉の 料理を 作りたいです。スーパーで たくさん 買ってきました。",
+          "en": "I want to make a beef and vegetable dish. I bought a lot at the supermarket.",
           "terms": [
             "v_yasai",
             "p_to",
@@ -343,40 +504,63 @@
             "p_no",
             "v_ryouri",
             "p_wo",
-            { "id": "v_tsukuru", "form": "plain_desire_tai" },
+            {
+              "id": "v_tsukuru",
+              "form": "desire_tai"
+            },
             "v_suupaa",
             "p_de",
             "v_takusan",
-            { "id": "v_kau", "form": "te_form" },
-            { "id": "v_kuru", "form": "plain_past" },
-            "p_yo"
+            {
+              "id": "v_kau",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "spk": "A",
-          "jp": "いいね！飲み物も 買った？",
-          "en": "Nice! Did you get drinks too?",
+          "jp": "いいですね！飲み物も 買いましたか。",
+          "en": "Nice! Did you buy drinks too?",
           "terms": [
-            { "id": "v_ii", "form": null },
-            "p_ne",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "v_nomimono",
             "p_mo",
-            { "id": "v_kau", "form": "plain_past" }
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "spk": "B",
-          "jp": "うん、お茶を 買った。おいしく 作ってみようよ！",
-          "en": "Yeah, I bought tea. Let's try to make it delicious!",
+          "jp": "はい、お茶を 買いました。おいしく 作ってみましょう！",
+          "en": "Yes, I bought tea. Let's try to make it delicious!",
           "terms": [
-            "v_un",
             "v_ocha",
             "p_wo",
-            { "id": "v_kau", "form": "plain_past" },
-            { "id": "v_oishii", "form": "adverbial" },
-            { "id": "v_tsukuru", "form": "te_form" },
-            { "id": "v_miru", "form": "plain_volitional" },
-            "p_yo"
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            },
+            {
+              "id": "v_oishii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_tsukuru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_miru",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -396,7 +580,10 @@
             "p_wa",
             "v_nani",
             "p_ga",
-            { "id": "v_taberu", "form": "plain_desire_tai" }
+            {
+              "id": "v_taberu",
+              "form": "plain_desire_tai"
+            }
           ]
         },
         {
@@ -410,10 +597,16 @@
             "p_no",
             "v_ryouri",
             "p_ga",
-            { "id": "v_taberu", "form": "plain_desire_tai" },
+            {
+              "id": "v_taberu",
+              "form": "plain_desire_tai"
+            },
             "v_issho",
             "v_kaimono",
-            { "id": "v_suru", "form": "plain_volitional" },
+            {
+              "id": "v_suru",
+              "form": "plain_volitional"
+            },
             "p_yo"
           ]
         },
@@ -425,7 +618,10 @@
             "v_donna",
             "v_tabemono",
             "p_wo",
-            { "id": "v_kau", "form": null }
+            {
+              "id": "v_kau",
+              "form": null
+            }
           ]
         },
         {
@@ -438,11 +634,17 @@
             "p_to",
             "v_gyuuniku",
             "p_wo",
-            { "id": "v_kau", "form": "plain_desire_tai" },
+            {
+              "id": "v_kau",
+              "form": "plain_desire_tai"
+            },
             "p_yo",
             "v_ryouri",
             "p_ni",
-            { "id": "v_tsukau", "form": "plain_desire_tai" },
+            {
+              "id": "v_tsukau",
+              "form": "plain_desire_tai"
+            },
             "p_kara_because"
           ]
         }
@@ -461,10 +663,16 @@
             "v_kyou",
             "v_suupaa",
             "p_ni",
-            { "id": "v_iku", "form": "te_form" },
+            {
+              "id": "v_iku",
+              "form": "te_form"
+            },
             "v_tabemono",
             "p_wo",
-            { "id": "v_kau", "form": "polite_mashita" }
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -476,10 +684,16 @@
             "v_gyuuniku",
             "p_wo",
             "v_takusan",
-            { "id": "v_kau", "form": "polite_mashita" },
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            },
             "v_ryouri",
             "p_ga",
-            { "id": "v_daisuki", "form": "polite_adj" },
+            {
+              "id": "v_daisuki",
+              "form": "polite_adj"
+            },
             "p_kara_because"
           ]
         },
@@ -489,7 +703,10 @@
           "terms": [
             "v_ie",
             "p_ni",
-            { "id": "v_kaeru", "form": "te_form" },
+            {
+              "id": "v_kaeru",
+              "form": "te_form"
+            },
             "p_kara",
             "v_gyuuniku",
             "p_to",
@@ -497,7 +714,10 @@
             "p_no",
             "v_ryouri",
             "p_wo",
-            { "id": "v_tsukuru", "form": "polite_mashita" }
+            {
+              "id": "v_tsukuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -508,7 +728,10 @@
             "v_ryouri",
             "p_wa",
             "v_totemo",
-            { "id": "v_oishii", "form": "polite_past_adj" }
+            {
+              "id": "v_oishii",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
@@ -517,9 +740,18 @@
           "terms": [
             "v_nomimono",
             "p_mo",
-            { "id": "v_tsukuru", "form": "te_form" },
-            { "id": "v_oishii", "form": "adverbial" },
-            { "id": "v_taberu", "form": "polite_mashita" }
+            {
+              "id": "v_tsukuru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_oishii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         }
       ],
@@ -533,7 +765,10 @@
             "v_kyou",
             "v_doko",
             "p_ni",
-            { "id": "v_iku", "form": "polite_mashita" },
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "v_suupaa"
           ]
@@ -546,7 +781,10 @@
             "p_wa",
             "v_nani",
             "p_wo",
-            { "id": "v_tsukuru", "form": "polite_mashita" },
+            {
+              "id": "v_tsukuru",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "v_gyuuniku",
             "p_to",
@@ -562,7 +800,10 @@
             "v_sono",
             "v_ryouri",
             "p_wa",
-            { "id": "v_oishii", "form": "polite_past_adj" },
+            {
+              "id": "v_oishii",
+              "form": "polite_past_adj"
+            },
             "p_ka",
             "p_hai",
             "v_totemo"
@@ -584,7 +825,10 @@
             "v_ryouri",
             "p_ga",
             "v_totemo",
-            { "id": "v_jouzu", "form": "polite_adj" }
+            {
+              "id": "v_jouzu",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -596,25 +840,43 @@
             "p_to",
             "v_gyuuniku",
             "p_wo",
-            { "id": "v_tsukau", "form": "te_form" },
+            {
+              "id": "v_tsukau",
+              "form": "te_form"
+            },
             "v_oishii",
             "v_ryouri",
             "p_wo",
-            { "id": "v_tsukuru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_tsukuru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "jp": "色々な 食べ物や 飲み物を 上手に 作れます。",
           "en": "He can skillfully make various foods and drinks.",
           "terms": [
-            { "id": "v_iroiro", "form": "attributive_na" },
+            {
+              "id": "v_iroiro",
+              "form": "attributive_na"
+            },
             "v_tabemono",
             "p_ya",
             "v_nomimono",
             "p_wo",
-            { "id": "v_jouzu", "form": "adverbial" },
-            { "id": "v_tsukuru", "form": "polite_potential" }
+            {
+              "id": "v_jouzu",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_tsukuru",
+              "form": "polite_potential"
+            }
           ]
         },
         {
@@ -627,10 +889,16 @@
             "v_san",
             "p_no",
             "v_you_manner",
-            { "id": "v_jouzu", "form": "adverbial" },
+            {
+              "id": "v_jouzu",
+              "form": "adverbial"
+            },
             "v_ryouri",
             "p_wo",
-            { "id": "v_tsukuru", "form": "desire_tai" }
+            {
+              "id": "v_tsukuru",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -639,8 +907,14 @@
           "terms": [
             "v_kaimono",
             "p_mo",
-            { "id": "v_jouzu", "form": "adverbial" },
-            { "id": "v_naru", "form": "desire_tai" }
+            {
+              "id": "v_jouzu",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "desire_tai"
+            }
           ]
         }
       ],
@@ -654,7 +928,10 @@
             "p_wa",
             "v_ryouri",
             "p_ga",
-            { "id": "v_jouzu", "form": "polite_adj" },
+            {
+              "id": "v_jouzu",
+              "form": "polite_adj"
+            },
             "p_ka",
             "p_hai",
             "v_totemo"
@@ -669,9 +946,15 @@
             "p_wa",
             "v_nani",
             "p_wo",
-            { "id": "v_tsukuru", "form": "polite_potential" },
+            {
+              "id": "v_tsukuru",
+              "form": "polite_potential"
+            },
             "p_ka",
-            { "id": "v_iroiro", "form": "attributive_na" },
+            {
+              "id": "v_iroiro",
+              "form": "attributive_na"
+            },
             "v_tabemono",
             "p_ya",
             "v_nomimono"
@@ -688,7 +971,10 @@
             "v_you_manner",
             "v_ryouri",
             "p_ga",
-            { "id": "v_tsukuru", "form": "desire_tai" },
+            {
+              "id": "v_tsukuru",
+              "form": "desire_tai"
+            },
             "p_ka",
             "char_yamakawa",
             "v_san"
@@ -704,28 +990,48 @@
         {
           "kind": "mcq",
           "q": "野菜 [やさい]",
-          "choices": ["vegetable", "beef", "food", "drink"],
+          "choices": [
+            "vegetable",
+            "beef",
+            "food",
+            "drink"
+          ],
           "answer": "vegetable",
           "terms": []
         },
         {
           "kind": "mcq",
           "q": "牛肉 [ぎゅうにく]",
-          "choices": ["beef", "chicken", "fish", "bread"],
+          "choices": [
+            "beef",
+            "chicken",
+            "fish",
+            "bread"
+          ],
           "answer": "beef",
           "terms": []
         },
         {
           "kind": "mcq",
           "q": "料理 [りょうり]",
-          "choices": ["cuisine / cooking", "shopping", "story", "vegetable"],
+          "choices": [
+            "cuisine / cooking",
+            "shopping",
+            "story",
+            "vegetable"
+          ],
           "answer": "cuisine / cooking",
           "terms": []
         },
         {
           "kind": "mcq",
           "q": "食べ物 [たべもの]",
-          "choices": ["food", "drink", "story", "thing"],
+          "choices": [
+            "food",
+            "drink",
+            "story",
+            "thing"
+          ],
           "answer": "food",
           "terms": []
         }
@@ -739,7 +1045,12 @@
         {
           "kind": "mcq",
           "q": "この 店では おいしい 料理が ______。",
-          "choices": ["作れます", "作ります", "作られます", "作りましょう"],
+          "choices": [
+            "作れます",
+            "作ります",
+            "作られます",
+            "作りましょう"
+          ],
           "answer": "作れます",
           "terms": [
             "v_kono",
@@ -748,13 +1059,21 @@
             "v_oishii",
             "v_ryouri",
             "p_ga",
-            { "id": "v_tsukuru", "form": "polite_potential" }
+            {
+              "id": "v_tsukuru",
+              "form": "polite_potential"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "スーパーで 野菜と 牛肉を 買って、______。",
-          "choices": ["料理を 作りました", "買い物しました", "飲み物でした", "スーパーに 行きました"],
+          "choices": [
+            "料理を 作りました",
+            "買い物しました",
+            "飲み物でした",
+            "スーパーに 行きました"
+          ],
           "answer": "料理を 作りました",
           "terms": [
             "v_suupaa",
@@ -763,30 +1082,52 @@
             "p_to",
             "v_gyuuniku",
             "p_wo",
-            { "id": "v_kau", "form": "te_form" },
+            {
+              "id": "v_kau",
+              "form": "te_form"
+            },
             "v_ryouri",
-            { "id": "v_tsukuru", "form": "polite_mashita" }
+            {
+              "id": "v_tsukuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "やまかわさんの ______ 上手に 料理を 作りたいです。",
-          "choices": ["ように", "ような", "ようが", "ようと"],
+          "choices": [
+            "ように",
+            "ような",
+            "ようが",
+            "ようと"
+          ],
           "answer": "ように",
           "terms": [
             "v_san",
             "p_no",
             "v_you_manner",
-            { "id": "v_jouzu", "form": "adverbial" },
+            {
+              "id": "v_jouzu",
+              "form": "adverbial"
+            },
             "v_ryouri",
             "p_wo",
-            { "id": "v_tsukuru", "form": "desire_tai" }
+            {
+              "id": "v_tsukuru",
+              "form": "desire_tai"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "スーパーで 飲み物と ______ を 買いました。",
-          "choices": ["食べ物", "物語", "料理", "買い物"],
+          "choices": [
+            "食べ物",
+            "物語",
+            "料理",
+            "買い物"
+          ],
           "answer": "食べ物",
           "terms": [
             "v_suupaa",
@@ -794,7 +1135,10 @@
             "v_nomimono",
             "p_to",
             "p_wo",
-            { "id": "v_kau", "form": "polite_mashita" }
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
