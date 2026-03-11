@@ -7,7 +7,13 @@
     "lesson_number": 5,
     "focus": "Motion verbs 行く and 来る with destination particles に and へ, means particle で, and polite verb conjugation forms ます/ました/ません/ませんでした",
     "estimated_minutes": 55,
-    "kanji": ["行", "来", "店", "駅", "家"]
+    "kanji": [
+      "行",
+      "来",
+      "店",
+      "駅",
+      "家"
+    ]
   },
   "newKanji": [
     {
@@ -60,7 +66,10 @@
             "p_wa",
             "v_nanyoubi",
             "p_ni",
-            { "id": "v_iru", "form": "polite_mashita" },
+            {
+              "id": "v_iru",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -71,7 +80,10 @@
             "v_konshuu",
             "p_wa",
             "v_mainichi",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -82,7 +94,10 @@
             "v_kinou",
             "v_tomodachi",
             "p_wa",
-            { "id": "v_iru", "form": "polite_mashita" },
+            {
+              "id": "v_iru",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -93,7 +108,10 @@
             "v_tomodachi",
             "p_wa",
             "v_kyou",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         }
@@ -108,35 +126,45 @@
           "on": "こう/ぎょう",
           "kun": "い/こ",
           "meaning": "go",
-          "terms": ["k_i"]
+          "terms": [
+            "k_i"
+          ]
         },
         {
           "kanji": "来",
           "on": "らい",
           "kun": "く/き/こ",
           "meaning": "come",
-          "terms": ["k_ku"]
+          "terms": [
+            "k_ku"
+          ]
         },
         {
           "kanji": "店",
           "on": "てん",
           "kun": "みせ",
           "meaning": "shop / store",
-          "terms": ["k_mise"]
+          "terms": [
+            "k_mise"
+          ]
         },
         {
           "kanji": "駅",
           "on": "えき",
           "kun": "",
           "meaning": "station",
-          "terms": ["k_u99c5"]
+          "terms": [
+            "k_u99c5"
+          ]
         },
         {
           "kanji": "家",
           "on": "か",
           "kun": "いえ/や/うち",
           "meaning": "house / home",
-          "terms": ["k_ie"]
+          "terms": [
+            "k_ie"
+          ]
         }
       ]
     },
@@ -146,39 +174,75 @@
       "groups": [
         {
           "label": "New Kanji",
-          "items": ["k_i", "k_ku", "k_mise", "k_u99c5", "k_ie"]
+          "items": [
+            "k_i",
+            "k_ku",
+            "k_mise",
+            "k_u99c5",
+            "k_ie"
+          ]
         },
         {
           "label": "Motion Verbs",
-          "items": ["v_iku", "v_kuru"]
+          "items": [
+            "v_iku",
+            "v_kuru"
+          ]
         },
         {
           "label": "Places",
-          "items": ["v_eki", "v_ie", "v_uchi", "v_mise", "v_konbini", "v_suupaa"]
+          "items": [
+            "v_eki",
+            "v_ie",
+            "v_uchi",
+            "v_mise",
+            "v_konbini",
+            "v_suupaa"
+          ]
         },
         {
           "label": "Transport",
-          "items": ["v_basu", "v_takushii"]
+          "items": [
+            "v_basu",
+            "v_takushii"
+          ]
         },
         {
           "label": "Place Pronouns",
-          "items": ["v_koko", "v_soko", "v_asoko", "v_doko"]
+          "items": [
+            "v_koko",
+            "v_soko",
+            "v_asoko",
+            "v_doko"
+          ]
         },
         {
           "label": "Future Time",
-          "items": ["v_raishuu", "v_raigetsu", "v_rainen"]
+          "items": [
+            "v_raishuu",
+            "v_raigetsu",
+            "v_rainen"
+          ]
         },
         {
           "label": "Family",
-          "items": ["v_kazoku"]
+          "items": [
+            "v_kazoku"
+          ]
         },
         {
           "label": "Expressions",
-          "items": ["v_dame", "v_mata"]
+          "items": [
+            "v_dame",
+            "v_mata"
+          ]
         },
         {
           "label": "New Particles",
-          "items": ["p_de", "p_e"]
+          "items": [
+            "p_de",
+            "p_e"
+          ]
         }
       ]
     },
@@ -197,7 +261,10 @@
             "v_kyou",
             "v_doko",
             "p_ni",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -208,7 +275,10 @@
           "terms": [
             "v_eki",
             "p_ni",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -218,7 +288,10 @@
           "terms": [
             "v_basu",
             "p_de",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -231,7 +304,10 @@
             "v_mainichi",
             "v_basu",
             "p_de",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -243,7 +319,10 @@
             "p_mo",
             "v_eki",
             "p_ni",
-            { "id": "v_iku", "form": "polite_mashita" },
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -258,7 +337,10 @@
             "v_mise",
             "p_ni",
             "p_mo",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -278,7 +360,10 @@
             "v_kyou",
             "v_konbini",
             "p_ni",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -290,12 +375,18 @@
             "p_hai",
             "v_konbini",
             "p_ni",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "v_sensei",
             "p_mo",
             "v_koko",
             "p_ni",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -306,11 +397,17 @@
           "terms": [
             "p_hai",
             "v_maishuu",
-            { "id": "v_kuru", "form": "polite_masu" },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
             "v_suupaa",
             "p_ni",
             "p_mo",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -323,7 +420,10 @@
             "v_raishuu",
             "v_suupaa",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -331,11 +431,17 @@
           "jp": "いいですね。バスで 行きますか。",
           "en": "That's nice. Are you going by bus?",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_basu",
             "p_de",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -347,7 +453,10 @@
             "p_hai",
             "v_basu",
             "p_de",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -362,11 +471,15 @@
           "jp": "やまかわさん、毎日 バスで 来ますか。",
           "en": "Yamakawa-san, do you come by bus every day?",
           "terms": [
+            "char_yamakawa",
             "v_san",
             "v_mainichi",
             "v_basu",
             "p_de",
-            { "id": "v_kuru", "form": "polite_masu" },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -379,10 +492,16 @@
             "v_mainichi",
             "v_basu",
             "p_de",
-            { "id": "v_kuru", "form": "polite_masu" },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
             "v_uchi",
             "p_kara",
-            { "id": "v_kuru", "form": "polite_masu" }
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -392,7 +511,10 @@
           "terms": [
             "v_takushii",
             "p_de",
-            { "id": "v_kuru", "form": "polite_negative" },
+            {
+              "id": "v_kuru",
+              "form": "polite_negative"
+            },
             "p_ka"
           ]
         },
@@ -404,10 +526,16 @@
             "v_takushii",
             "p_de",
             "p_wa",
-            { "id": "v_kuru", "form": "polite_negative" },
+            {
+              "id": "v_kuru",
+              "form": "polite_negative"
+            },
             "v_basu",
             "p_wa",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         },
@@ -420,7 +548,10 @@
             "p_mo",
             "v_basu",
             "p_de",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -434,12 +565,18 @@
             "p_mo",
             "v_basu",
             "p_de",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "v_raishuu",
             "p_mo",
             "v_basu",
             "p_de",
-            { "id": "v_kuru", "form": "polite_masu" }
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -459,7 +596,10 @@
             "v_raishuu",
             "v_doko",
             "p_ni",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -472,10 +612,16 @@
             "p_wa",
             "v_suupaa",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "v_tomodachi",
             "p_to",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -483,7 +629,10 @@
           "jp": "いいですね。どこの スーパーですか。",
           "en": "That's nice. Which supermarket is it?",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_doko",
             "p_no",
@@ -510,7 +659,10 @@
           "terms": [
             "v_raigetsu",
             "p_mo",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -522,10 +674,16 @@
             "p_hai",
             "v_raigetsu",
             "p_mo",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "v_rainen",
             "p_mo",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -543,7 +701,10 @@
             "v_mainichi",
             "v_basu",
             "p_de",
-            { "id": "v_kuru", "form": "polite_masu" }
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -556,7 +717,10 @@
             "p_to",
             "v_suiyoubi",
             "p_ni",
-            { "id": "v_kuru", "form": "polite_mashita" }
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -566,7 +730,10 @@
             "v_kinou",
             "v_konbini",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -576,7 +743,10 @@
             "v_suupaa",
             "p_ni",
             "p_mo",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -587,7 +757,10 @@
             "p_wa",
             "v_eki",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -598,7 +771,10 @@
             "p_wa",
             "v_tomodachi",
             "p_to",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -611,7 +787,10 @@
             "p_wa",
             "v_nanyoubi",
             "p_ni",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "v_getsuyoubi",
             "p_to",
@@ -625,7 +804,10 @@
             "v_kinou",
             "v_doko",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" },
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "v_konbini"
           ]
@@ -638,7 +820,10 @@
             "p_wa",
             "v_doko",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka",
             "v_eki"
           ]
@@ -651,7 +836,10 @@
             "p_wa",
             "v_dare",
             "p_to",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka",
             "v_tomodachi"
           ]
@@ -666,11 +854,15 @@
           "jp": "やまかわは 先週 店へ 行きました。",
           "en": "Yamakawa went to the store last week.",
           "terms": [
+            "char_yamakawa",
             "p_wa",
             "v_senshuu",
             "v_mise",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -681,7 +873,10 @@
             "p_kara",
             "v_basu",
             "p_de",
-            { "id": "v_kuru", "form": "polite_mashita" }
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -690,11 +885,17 @@
           "terms": [
             "v_eki",
             "p_e",
-            { "id": "v_iku", "form": "te_form" },
+            {
+              "id": "v_iku",
+              "form": "te_form"
+            },
             "v_konbini",
             "p_ni",
             "p_mo",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -705,7 +906,10 @@
             "p_wa",
             "v_suupaa",
             "p_e",
-            { "id": "v_kuru", "form": "polite_past_negative" }
+            {
+              "id": "v_kuru",
+              "form": "polite_past_negative"
+            }
           ]
         },
         {
@@ -716,7 +920,10 @@
             "p_wa",
             "v_suupaa",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -725,7 +932,10 @@
           "terms": [
             "v_raigetsu",
             "p_mo",
-            { "id": "v_kuru", "form": "polite_masu" }
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -738,7 +948,10 @@
             "v_senshuu",
             "v_doko",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" },
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "v_mise"
           ]
@@ -749,7 +962,10 @@
           "terms": [
             "v_basu",
             "p_de",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "p_hai"
           ]
@@ -761,10 +977,16 @@
             "v_senshuu",
             "v_suupaa",
             "p_e",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "v_iie",
-            { "id": "v_kuru", "form": "polite_past_negative" }
+            {
+              "id": "v_kuru",
+              "form": "polite_past_negative"
+            }
           ]
         },
         {
@@ -775,7 +997,10 @@
             "p_wa",
             "v_doko",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka",
             "v_suupaa"
           ]
@@ -790,37 +1015,67 @@
         {
           "kind": "mcq",
           "q": "[行] の よみかたは？",
-          "choices": ["い", "くる", "みせ", "えき"],
+          "choices": [
+            "い",
+            "くる",
+            "みせ",
+            "えき"
+          ],
           "answer": "い"
         },
         {
           "kind": "mcq",
           "q": "[来] の よみかたは？",
-          "choices": ["く", "いく", "てん", "うち"],
+          "choices": [
+            "く",
+            "いく",
+            "てん",
+            "うち"
+          ],
           "answer": "く"
         },
         {
           "kind": "mcq",
           "q": "[店] の よみかたは？",
-          "choices": ["みせ", "えき", "いえ", "てん"],
+          "choices": [
+            "みせ",
+            "えき",
+            "いえ",
+            "てん"
+          ],
           "answer": "みせ"
         },
         {
           "kind": "mcq",
           "q": "[駅] の よみかたは？",
-          "choices": ["えき", "てん", "いく", "でん"],
+          "choices": [
+            "えき",
+            "てん",
+            "いく",
+            "でん"
+          ],
           "answer": "えき"
         },
         {
           "kind": "mcq",
           "q": "[家] の よみかたは？",
-          "choices": ["いえ", "か", "こ", "い"],
+          "choices": [
+            "いえ",
+            "か",
+            "こ",
+            "い"
+          ],
           "answer": "いえ"
         },
         {
           "kind": "mcq",
           "q": "[来週] の よみかたは？",
-          "choices": ["らいしゅう", "こんしゅう", "せんしゅう", "まいしゅう"],
+          "choices": [
+            "らいしゅう",
+            "こんしゅう",
+            "せんしゅう",
+            "まいしゅう"
+          ],
           "answer": "らいしゅう"
         }
       ]
@@ -833,56 +1088,93 @@
         {
           "kind": "mcq",
           "q": "毎日 _______ に 行きます。",
-          "choices": ["駅", "今日", "来年", "バス"],
+          "choices": [
+            "駅",
+            "今日",
+            "来年",
+            "バス"
+          ],
           "answer": "駅",
           "terms": [
             "v_mainichi",
             "v_eki",
             "p_ni",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "きのう コンビニに _______。",
-          "choices": ["行きました", "行きます", "来ません", "います"],
+          "choices": [
+            "行きました",
+            "行きます",
+            "来ません",
+            "います"
+          ],
           "answer": "行きました",
           "terms": [
             "v_kinou",
             "v_konbini",
             "p_ni",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "_______ で 来ますか。",
-          "choices": ["バス", "駅", "うち", "来週"],
+          "choices": [
+            "バス",
+            "駅",
+            "うち",
+            "来週"
+          ],
           "answer": "バス",
           "terms": [
             "v_basu",
             "p_de",
-            { "id": "v_kuru", "form": "polite_masu" },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
         {
           "kind": "mcq",
           "q": "来週は _______ へ 行きます。",
-          "choices": ["スーパー", "バス", "どこ", "毎日"],
+          "choices": [
+            "スーパー",
+            "バス",
+            "どこ",
+            "毎日"
+          ],
           "answer": "スーパー",
           "terms": [
             "v_raishuu",
             "p_wa",
             "v_suupaa",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "うちから 駅 _______ バスで 行きます。",
-          "choices": ["まで", "に", "の", "を"],
+          "choices": [
+            "まで",
+            "に",
+            "の",
+            "を"
+          ],
           "answer": "まで",
           "terms": [
             "v_uchi",
@@ -891,43 +1183,70 @@
             "p_made",
             "v_basu",
             "p_de",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "友だち _______ 行きます。",
-          "choices": ["と", "を", "は", "に"],
+          "choices": [
+            "と",
+            "を",
+            "は",
+            "に"
+          ],
           "answer": "と",
           "terms": [
             "v_tomodachi",
             "p_to",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "先週は スーパーへ _______。",
-          "choices": ["来ませんでした", "行きます", "来ます", "います"],
+          "choices": [
+            "来ませんでした",
+            "行きます",
+            "来ます",
+            "います"
+          ],
           "answer": "来ませんでした",
           "terms": [
             "v_senshuu",
             "p_wa",
             "v_suupaa",
             "p_e",
-            { "id": "v_kuru", "form": "polite_past_negative" }
+            {
+              "id": "v_kuru",
+              "form": "polite_past_negative"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "来週 どこ _______ 行きますか。",
-          "choices": ["に", "は", "が", "を"],
+          "choices": [
+            "に",
+            "は",
+            "が",
+            "を"
+          ],
           "answer": "に",
           "terms": [
             "v_raishuu",
             "v_doko",
             "p_ni",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         }
@@ -941,18 +1260,31 @@
         {
           "kind": "mcq",
           "q": "バス _______ 来ます。",
-          "choices": ["で", "に", "の", "は"],
+          "choices": [
+            "で",
+            "に",
+            "の",
+            "は"
+          ],
           "answer": "で",
           "terms": [
             "v_basu",
             "p_de",
-            { "id": "v_kuru", "form": "polite_masu" }
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "うち _______ 駅まで バスで 行きます。",
-          "choices": ["から", "まで", "に", "は"],
+          "choices": [
+            "から",
+            "まで",
+            "に",
+            "は"
+          ],
           "answer": "から",
           "terms": [
             "v_uchi",
@@ -961,13 +1293,21 @@
             "p_made",
             "v_basu",
             "p_de",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "来週 友だち _______ スーパーへ 行きます。",
-          "choices": ["と", "に", "の", "を"],
+          "choices": [
+            "と",
+            "に",
+            "の",
+            "を"
+          ],
           "answer": "と",
           "terms": [
             "v_raishuu",
@@ -975,70 +1315,113 @@
             "p_to",
             "v_suupaa",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "駅 _______ タクシーで 来ました。",
-          "choices": ["から", "に", "の", "で"],
+          "choices": [
+            "から",
+            "に",
+            "の",
+            "で"
+          ],
           "answer": "から",
           "terms": [
             "v_eki",
             "p_kara",
             "v_takushii",
             "p_de",
-            { "id": "v_kuru", "form": "polite_mashita" }
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "先週は 店 _______ 行きました。",
-          "choices": ["へ", "の", "と", "は"],
+          "choices": [
+            "へ",
+            "の",
+            "と",
+            "は"
+          ],
           "answer": "へ",
           "terms": [
             "v_senshuu",
             "p_wa",
             "v_mise",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "毎日 コンビニ _______ 来ますか。",
-          "choices": ["に", "は", "が", "の"],
+          "choices": [
+            "に",
+            "は",
+            "が",
+            "の"
+          ],
           "answer": "に",
           "terms": [
             "v_mainichi",
             "v_konbini",
             "p_ni",
-            { "id": "v_kuru", "form": "polite_masu" },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
         {
           "kind": "mcq",
           "q": "来月 _______ 行きますか。",
-          "choices": ["も", "は", "の", "を"],
+          "choices": [
+            "も",
+            "は",
+            "の",
+            "を"
+          ],
           "answer": "も",
           "terms": [
             "v_raigetsu",
             "p_mo",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
         {
           "kind": "mcq",
           "q": "きのう スーパー _______ 行きましたか。",
-          "choices": ["に", "は", "の", "と"],
+          "choices": [
+            "に",
+            "は",
+            "の",
+            "と"
+          ],
           "answer": "に",
           "terms": [
             "v_kinou",
             "v_suupaa",
             "p_ni",
-            { "id": "v_iku", "form": "polite_mashita" },
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         }

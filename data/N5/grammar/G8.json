@@ -9,7 +9,12 @@
     "focus": "Three high-frequency grammar patterns: ている for ongoing actions and states, たいです for expressing desire, and ましょう for polite invitations",
     "estimatedMinutes": 35,
     "particles": [],
-    "grammarForms": ["te_form", "desire_tai", "desire_tai_negative", "polite_volitional_mashou"],
+    "grammarForms": [
+      "te_form",
+      "desire_tai",
+      "desire_tai_negative",
+      "polite_volitional_mashou"
+    ],
     "icon": "🎯"
   },
   "sections": [
@@ -29,9 +34,21 @@
       "type": "grammarRule",
       "id": "rule_teiru",
       "pattern": [
-        { "label": "VERB", "color": "verb", "text": "食べる" },
-        { "label": "て-FORM", "color": "modifier", "text": "→ 食べて" },
-        { "label": "+ います", "color": "predicate", "text": "= 食べています" }
+        {
+          "label": "VERB",
+          "color": "verb",
+          "text": "食べる"
+        },
+        {
+          "label": "て-FORM",
+          "color": "modifier",
+          "text": "→ 食べて"
+        },
+        {
+          "label": "+ います",
+          "color": "predicate",
+          "text": "= 食べています"
+        }
       ],
       "meaning": "ている / ています — 'is doing' (ongoing action) or 'has done and is in that state'",
       "explanation": "The ている pattern combines the て-form of a verb with いる (います in polite speech). It has two main uses:\n\n1. **Progressive** — describes an action currently in progress: 食べています = 'is eating' (right now)\n2. **Resultant state** — describes the state that results from a completed action. Some verbs describe entry into a state rather than ongoing activity: 知っています = 'knows' (literally: has come to know and is in that state).\n\nThe key question is: can the action literally be ongoing? Eating can be ongoing → progressive. 'Knowing' is a state, not a repeatable action → resultant state.",
@@ -45,29 +62,73 @@
       "examples": [
         {
           "parts": [
-            { "text": "食べ", "role": "verb", "gloss": "eat(て-form)-" },
-            { "text": "て", "role": "predicate", "gloss": "connector" },
-            { "text": "います", "role": "predicate", "gloss": "is (polite)" }
+            {
+              "text": "食べ",
+              "role": "verb",
+              "gloss": "eat(て-form)-"
+            },
+            {
+              "text": "て",
+              "role": "predicate",
+              "gloss": "connector"
+            },
+            {
+              "text": "います",
+              "role": "predicate",
+              "gloss": "is (polite)"
+            }
           ],
           "en": "is eating (right now)",
           "breakdown": "食べる (ichidan): drop る → 食べ + て = 食べて. Then + います."
         },
         {
           "parts": [
-            { "text": "飲ん", "role": "verb", "gloss": "drink(て-form)-" },
-            { "text": "で", "role": "predicate", "gloss": "connector (voiced)" },
-            { "text": "います", "role": "predicate", "gloss": "is (polite)" }
+            {
+              "text": "飲ん",
+              "role": "verb",
+              "gloss": "drink(て-form)-"
+            },
+            {
+              "text": "で",
+              "role": "predicate",
+              "gloss": "connector (voiced)"
+            },
+            {
+              "text": "います",
+              "role": "predicate",
+              "gloss": "is (polite)"
+            }
           ],
           "en": "is drinking (right now)",
           "breakdown": "飲む (godan む): む→んで. 飲む → 飲んで + います = 飲んでいます."
         },
         {
           "parts": [
-            { "text": "カレーを", "role": "topic", "gloss": "curry (object)" },
-            { "text": "食べ", "role": "verb", "gloss": "eat(て)-" },
-            { "text": "て", "role": "predicate", "gloss": "connector" },
-            { "text": "います", "role": "predicate", "gloss": "is" },
-            { "text": "か。", "role": "modifier", "gloss": "?" }
+            {
+              "text": "カレーを",
+              "role": "topic",
+              "gloss": "curry (object)"
+            },
+            {
+              "text": "食べ",
+              "role": "verb",
+              "gloss": "eat(て)-"
+            },
+            {
+              "text": "て",
+              "role": "predicate",
+              "gloss": "connector"
+            },
+            {
+              "text": "います",
+              "role": "predicate",
+              "gloss": "is"
+            },
+            {
+              "text": "か。",
+              "role": "modifier",
+              "gloss": "?"
+            }
           ],
           "en": "Are you eating curry (right now)?",
           "breakdown": "食べています in a question — same formation, add か at the end."
@@ -78,9 +139,21 @@
       "type": "grammarRule",
       "id": "rule_tai",
       "pattern": [
-        { "label": "VERB", "color": "verb", "text": "買う" },
-        { "label": "ます-STEM", "color": "modifier", "text": "→ 買い" },
-        { "label": "+ たいです", "color": "predicate", "text": "= 買いたいです" }
+        {
+          "label": "VERB",
+          "color": "verb",
+          "text": "買う"
+        },
+        {
+          "label": "ます-STEM",
+          "color": "modifier",
+          "text": "→ 買い"
+        },
+        {
+          "label": "+ たいです",
+          "color": "predicate",
+          "text": "= 買いたいです"
+        }
       ],
       "meaning": "たいです / たくないです — 'want to do' / 'don't want to do'",
       "explanation": "To express a desire to do something, take the ます-stem (the stem you already know from making ます-form: the verb with ます removed) and add たいです.\n\nたいです conjugates like an い-adjective for further forms:\n- Negative: たくないです (don't want to)\n- Past: たかったです (wanted to)\n\nImportant: たいです usually expresses the speaker's own desire. When asking about someone else's desire, use たいですか or phrases like 〜ほしいですか.",
@@ -95,28 +168,68 @@
       "examples": [
         {
           "parts": [
-            { "text": "プレゼントを", "role": "topic", "gloss": "gift (object)" },
-            { "text": "買い", "role": "verb", "gloss": "buy(stem)-" },
-            { "text": "たいです。", "role": "predicate", "gloss": "want to" }
+            {
+              "text": "プレゼントを",
+              "role": "topic",
+              "gloss": "gift (object)"
+            },
+            {
+              "text": "買い",
+              "role": "verb",
+              "gloss": "buy(stem)-"
+            },
+            {
+              "text": "たいです。",
+              "role": "predicate",
+              "gloss": "want to"
+            }
           ],
           "en": "I want to buy a gift.",
           "breakdown": "買う → 買い (ます-stem) + たいです. を marks the object even with たいです."
         },
         {
           "parts": [
-            { "text": "デパートへ", "role": "topic", "gloss": "to the dept. store" },
-            { "text": "行き", "role": "verb", "gloss": "go(stem)-" },
-            { "text": "たく", "role": "modifier", "gloss": "want(neg stem)-" },
-            { "text": "ないです。", "role": "predicate", "gloss": "not" }
+            {
+              "text": "デパートへ",
+              "role": "topic",
+              "gloss": "to the dept. store"
+            },
+            {
+              "text": "行き",
+              "role": "verb",
+              "gloss": "go(stem)-"
+            },
+            {
+              "text": "たく",
+              "role": "modifier",
+              "gloss": "want(neg stem)-"
+            },
+            {
+              "text": "ないです。",
+              "role": "predicate",
+              "gloss": "not"
+            }
           ],
           "en": "I don't want to go to the department store.",
           "breakdown": "行く → 行き (stem) + たくないです. Negative of たい = たくない (like an i-adj: たい→たく + ない)."
         },
         {
           "parts": [
-            { "text": "何を", "role": "topic", "gloss": "what (object)" },
-            { "text": "食べ", "role": "verb", "gloss": "eat(stem)-" },
-            { "text": "たいですか。", "role": "predicate", "gloss": "want to?" }
+            {
+              "text": "何を",
+              "role": "topic",
+              "gloss": "what (object)"
+            },
+            {
+              "text": "食べ",
+              "role": "verb",
+              "gloss": "eat(stem)-"
+            },
+            {
+              "text": "たいですか。",
+              "role": "predicate",
+              "gloss": "want to?"
+            }
           ],
           "en": "What do you want to eat?",
           "breakdown": "Asking about desire with たいですか. 食べる → 食べ (stem) + たいですか."
@@ -127,9 +240,21 @@
       "type": "grammarRule",
       "id": "rule_mashou",
       "pattern": [
-        { "label": "VERB", "color": "verb", "text": "食べる" },
-        { "label": "ます-STEM", "color": "modifier", "text": "→ 食べ" },
-        { "label": "+ ましょう", "color": "predicate", "text": "= 食べましょう" }
+        {
+          "label": "VERB",
+          "color": "verb",
+          "text": "食べる"
+        },
+        {
+          "label": "ます-STEM",
+          "color": "modifier",
+          "text": "→ 食べ"
+        },
+        {
+          "label": "+ ましょう",
+          "color": "predicate",
+          "text": "= 食べましょう"
+        }
       ],
       "meaning": "ましょう — 'let's do' / 'shall we' (polite invitation or suggestion)",
       "explanation": "ましょう replaces ます on the ます-stem to make a polite volitional form. It invites the listener to do something together, or proposes a shared plan.\n\nましょうか (with か added) makes it a softer question: 'Shall we...?' — slightly more deferential than ましょう alone.\n\nましょう is always polite and positive — it cannot be negated. To say 'let's not', use a different construction (taught later).",
@@ -145,27 +270,63 @@
       "examples": [
         {
           "parts": [
-            { "text": "いっしょに", "role": "modifier", "gloss": "together" },
-            { "text": "食べ", "role": "verb", "gloss": "eat(stem)-" },
-            { "text": "ましょう。", "role": "predicate", "gloss": "let's" }
+            {
+              "text": "いっしょに",
+              "role": "modifier",
+              "gloss": "together"
+            },
+            {
+              "text": "食べ",
+              "role": "verb",
+              "gloss": "eat(stem)-"
+            },
+            {
+              "text": "ましょう。",
+              "role": "predicate",
+              "gloss": "let's"
+            }
           ],
           "en": "Let's eat together.",
           "breakdown": "食べる → 食べ (stem) + ましょう. いっしょに adds 'together'."
         },
         {
           "parts": [
-            { "text": "デパートへ", "role": "topic", "gloss": "to the dept. store" },
-            { "text": "行き", "role": "verb", "gloss": "go(stem)-" },
-            { "text": "ましょうか。", "role": "predicate", "gloss": "shall we?" }
+            {
+              "text": "デパートへ",
+              "role": "topic",
+              "gloss": "to the dept. store"
+            },
+            {
+              "text": "行き",
+              "role": "verb",
+              "gloss": "go(stem)-"
+            },
+            {
+              "text": "ましょうか。",
+              "role": "predicate",
+              "gloss": "shall we?"
+            }
           ],
           "en": "Shall we go to the department store?",
           "breakdown": "行く → 行き + ましょうか. か softens the invitation into a question."
         },
         {
           "parts": [
-            { "text": "友だちと", "role": "topic", "gloss": "with friend" },
-            { "text": "買い", "role": "verb", "gloss": "buy(stem)-" },
-            { "text": "ましょう。", "role": "predicate", "gloss": "let's" }
+            {
+              "text": "友だちと",
+              "role": "topic",
+              "gloss": "with friend"
+            },
+            {
+              "text": "買い",
+              "role": "verb",
+              "gloss": "buy(stem)-"
+            },
+            {
+              "text": "ましょう。",
+              "role": "predicate",
+              "gloss": "let's"
+            }
           ],
           "en": "Let's buy it with a friend.",
           "breakdown": "買う → 買い + ましょう. と means 'with someone'."
@@ -176,8 +337,16 @@
       "type": "grammarRule",
       "id": "rule_deshou",
       "pattern": [
-        { "label": "PLAIN FORM", "color": "modifier", "text": "高い / 行く / プレゼント" },
-        { "label": "+ でしょう", "color": "predicate", "text": "= 高いでしょう / 行くでしょう / プレゼントでしょう" }
+        {
+          "label": "PLAIN FORM",
+          "color": "modifier",
+          "text": "高い / 行く / プレゼント"
+        },
+        {
+          "label": "+ でしょう",
+          "color": "predicate",
+          "text": "= 高いでしょう / 行くでしょう / プレゼントでしょう"
+        }
       ],
       "meaning": "でしょう / だろう — 'probably' / 'I think...' (conjecture about something uncertain)",
       "explanation": "でしょう is used when the speaker guesses or assumes something is likely but is not certain. It attaches to plain forms — the same base forms used in casual speech.\n\n- Noun: プレゼントでしょう = 'It's probably a gift'\n- い-adjective: 高いでしょう = 'It's probably expensive'\n- Verb (plain/dictionary form): 行くでしょう = 'They'll probably go'\n\nでしょう is **polite register** — safe to use in all situations.\nだろう is the **plain/casual** equivalent — same meaning, used in casual conversation or writing.\n\n⚠️ **Do NOT confuse でしょう with ましょう:**\n- ましょう = 'Let's do [action together]' (volitional — an invitation)\n- でしょう = 'It is probably...' (conjecture — a guess, not an invitation)",
@@ -191,25 +360,53 @@
       "examples": [
         {
           "parts": [
-            { "text": "プレゼント", "role": "topic", "gloss": "gift" },
-            { "text": "でしょう。", "role": "predicate", "gloss": "probably is" }
+            {
+              "text": "プレゼント",
+              "role": "topic",
+              "gloss": "gift"
+            },
+            {
+              "text": "でしょう。",
+              "role": "predicate",
+              "gloss": "probably is"
+            }
           ],
           "en": "It's probably a gift.",
           "breakdown": "Noun + でしょう directly. No だ inserted between noun and でしょう."
         },
         {
           "parts": [
-            { "text": "高い", "role": "modifier", "gloss": "expensive (plain form)" },
-            { "text": "でしょう。", "role": "predicate", "gloss": "probably" }
+            {
+              "text": "高い",
+              "role": "modifier",
+              "gloss": "expensive (plain form)"
+            },
+            {
+              "text": "でしょう。",
+              "role": "predicate",
+              "gloss": "probably"
+            }
           ],
           "en": "It's probably expensive.",
           "breakdown": "い-adjective plain form (= dictionary form) + でしょう. 高い stays unchanged."
         },
         {
           "parts": [
-            { "text": "デパートへ", "role": "modifier", "gloss": "to dept. store" },
-            { "text": "行く", "role": "verb", "gloss": "go (plain/dictionary form)" },
-            { "text": "でしょう。", "role": "predicate", "gloss": "probably" }
+            {
+              "text": "デパートへ",
+              "role": "modifier",
+              "gloss": "to dept. store"
+            },
+            {
+              "text": "行く",
+              "role": "verb",
+              "gloss": "go (plain/dictionary form)"
+            },
+            {
+              "text": "でしょう。",
+              "role": "predicate",
+              "gloss": "probably"
+            }
           ],
           "en": "They will probably go to the department store.",
           "breakdown": "Verb dictionary form + でしょう. 行く stays as dictionary form (not 行きます)."
@@ -231,8 +428,16 @@
           ],
           "example": {
             "parts": [
-              { "text": "高い", "role": "modifier", "gloss": "expensive" },
-              { "text": "でしょう。", "role": "predicate", "gloss": "probably" }
+              {
+                "text": "高い",
+                "role": "modifier",
+                "gloss": "expensive"
+              },
+              {
+                "text": "でしょう。",
+                "role": "predicate",
+                "gloss": "probably"
+              }
             ],
             "en": "It's probably expensive."
           }
@@ -248,8 +453,16 @@
           ],
           "example": {
             "parts": [
-              { "text": "高い", "role": "modifier", "gloss": "expensive" },
-              { "text": "だろう。", "role": "predicate", "gloss": "probably (casual)" }
+              {
+                "text": "高い",
+                "role": "modifier",
+                "gloss": "expensive"
+              },
+              {
+                "text": "だろう。",
+                "role": "predicate",
+                "gloss": "probably (casual)"
+              }
             ],
             "en": "Probably expensive. (casual)"
           }
@@ -261,36 +474,65 @@
       "title": "ている / たいです / ましょう — All Three Forms at a Glance",
       "description": "Using 行く (godan) and 食べる (ichidan) as examples. All three patterns use the same foundation: the て-form (for ている) or ます-stem (for たいです and ましょう).",
       "tableType": "comparison",
-      "headers": ["Pattern", "行く (godan)", "食べる (ichidan)", "Meaning"],
+      "headers": [
+        "Pattern",
+        "行く (godan)",
+        "食べる (ichidan)",
+        "Meaning"
+      ],
       "rows": [
         {
           "label": "ている (polite)",
-          "cells": ["行っています", "食べています", "is going / is eating"],
+          "cells": [
+            "行っています",
+            "食べています",
+            "is going / is eating"
+          ],
           "meaning": "Ongoing action or resultant state"
         },
         {
           "label": "ていません (polite neg)",
-          "cells": ["行っていません", "食べていません", "is not going / is not eating"],
+          "cells": [
+            "行っていません",
+            "食べていません",
+            "is not going / is not eating"
+          ],
           "meaning": "Negation of ている"
         },
         {
           "label": "たいです",
-          "cells": ["行きたいです", "食べたいです", "want to go / want to eat"],
+          "cells": [
+            "行きたいです",
+            "食べたいです",
+            "want to go / want to eat"
+          ],
           "meaning": "Desire to perform the action"
         },
         {
           "label": "たくないです",
-          "cells": ["行きたくないです", "食べたくないです", "don't want to go / don't want to eat"],
+          "cells": [
+            "行きたくないです",
+            "食べたくないです",
+            "don't want to go / don't want to eat"
+          ],
           "meaning": "Negative desire"
         },
         {
           "label": "ましょう",
-          "cells": ["行きましょう", "食べましょう", "let's go / let's eat"],
+          "cells": [
+            "行きましょう",
+            "食べましょう",
+            "let's go / let's eat"
+          ],
           "meaning": "Polite invitation or suggestion"
         },
         {
           "label": "ましょうか",
-          "cells": ["行きましょうか", "食べましょうか", "shall we go? / shall we eat?"],
+          "cells": [
+            "行きましょうか",
+            "食べましょうか",
+            "shall we go? / shall we eat?"
+          ],
           "meaning": "Gentle question-invitation"
         }
       ],
@@ -308,12 +550,36 @@
         {
           "context": "Progressive ている — describing what is happening right now",
           "parts": [
-            { "text": "やまかわさんは", "role": "topic", "gloss": "Yamakawa (topic)" },
-            { "text": "今", "role": "modifier", "gloss": "now" },
-            { "text": "カレーを", "role": "modifier", "gloss": "curry (object)" },
-            { "text": "食べ", "role": "verb", "gloss": "eat(て)-" },
-            { "text": "て", "role": "predicate", "gloss": "connector" },
-            { "text": "います。", "role": "predicate", "gloss": "is" }
+            {
+              "text": "やまかわさんは",
+              "role": "topic",
+              "gloss": "Yamakawa (topic)"
+            },
+            {
+              "text": "今",
+              "role": "modifier",
+              "gloss": "now"
+            },
+            {
+              "text": "カレーを",
+              "role": "modifier",
+              "gloss": "curry (object)"
+            },
+            {
+              "text": "食べ",
+              "role": "verb",
+              "gloss": "eat(て)-"
+            },
+            {
+              "text": "て",
+              "role": "predicate",
+              "gloss": "connector"
+            },
+            {
+              "text": "います。",
+              "role": "predicate",
+              "gloss": "is"
+            }
           ],
           "en": "Yamakawa-san is eating curry right now.",
           "note": "食べる → 食べて + います. を marks the object even in ている sentences."
@@ -321,9 +587,21 @@
         {
           "context": "Desire たいです — expressing what you want to do",
           "parts": [
-            { "text": "プレゼントを", "role": "topic", "gloss": "gift (object)" },
-            { "text": "買い", "role": "verb", "gloss": "buy(stem)-" },
-            { "text": "たいです。", "role": "predicate", "gloss": "want to" }
+            {
+              "text": "プレゼントを",
+              "role": "topic",
+              "gloss": "gift (object)"
+            },
+            {
+              "text": "買い",
+              "role": "verb",
+              "gloss": "buy(stem)-"
+            },
+            {
+              "text": "たいです。",
+              "role": "predicate",
+              "gloss": "want to"
+            }
           ],
           "en": "I want to buy a gift.",
           "note": "買う → 買い (stem) + たいです. を still marks the object."
@@ -331,10 +609,26 @@
         {
           "context": "Volitional ましょう — inviting someone to do something together",
           "parts": [
-            { "text": "いっしょに", "role": "modifier", "gloss": "together" },
-            { "text": "デパートへ", "role": "modifier", "gloss": "to dept. store" },
-            { "text": "行き", "role": "verb", "gloss": "go(stem)-" },
-            { "text": "ましょう。", "role": "predicate", "gloss": "let's" }
+            {
+              "text": "いっしょに",
+              "role": "modifier",
+              "gloss": "together"
+            },
+            {
+              "text": "デパートへ",
+              "role": "modifier",
+              "gloss": "to dept. store"
+            },
+            {
+              "text": "行き",
+              "role": "verb",
+              "gloss": "go(stem)-"
+            },
+            {
+              "text": "ましょう。",
+              "role": "predicate",
+              "gloss": "let's"
+            }
           ],
           "en": "Let's go to the department store together.",
           "note": "行く → 行き (stem) + ましょう. A natural invitation to go somewhere together."
@@ -342,10 +636,26 @@
         {
           "context": "Negative desire たくないです",
           "parts": [
-            { "text": "コーヒーは", "role": "topic", "gloss": "coffee (topic)" },
-            { "text": "飲み", "role": "verb", "gloss": "drink(stem)-" },
-            { "text": "たく", "role": "modifier", "gloss": "want(neg)-" },
-            { "text": "ないです。", "role": "predicate", "gloss": "not" }
+            {
+              "text": "コーヒーは",
+              "role": "topic",
+              "gloss": "coffee (topic)"
+            },
+            {
+              "text": "飲み",
+              "role": "verb",
+              "gloss": "drink(stem)-"
+            },
+            {
+              "text": "たく",
+              "role": "modifier",
+              "gloss": "want(neg)-"
+            },
+            {
+              "text": "ないです。",
+              "role": "predicate",
+              "gloss": "not"
+            }
           ],
           "en": "I don't want to drink coffee.",
           "note": "飲む → 飲み (stem) + たくないです. たい conjugates like an い-adjective: たい→たくない."
@@ -353,9 +663,21 @@
         {
           "context": "Conjecture でしょう — guessing about something uncertain",
           "parts": [
-            { "text": "プレゼントは", "role": "topic", "gloss": "gift (topic)" },
-            { "text": "高い", "role": "modifier", "gloss": "expensive (plain)" },
-            { "text": "でしょう。", "role": "predicate", "gloss": "probably" }
+            {
+              "text": "プレゼントは",
+              "role": "topic",
+              "gloss": "gift (topic)"
+            },
+            {
+              "text": "高い",
+              "role": "modifier",
+              "gloss": "expensive (plain)"
+            },
+            {
+              "text": "でしょう。",
+              "role": "predicate",
+              "gloss": "probably"
+            }
           ],
           "en": "The gift is probably expensive.",
           "note": "い-adjective plain form + でしょう. Compare: 高いです (certainty) vs 高いでしょう (conjecture/guess)."
@@ -372,10 +694,14 @@
           "jp": "やまかわさん、何を 買いたいですか。",
           "en": "Yamakawa-san, what do you want to buy?",
           "terms": [
+            "char_yamakawa",
             "v_san",
             "v_nani",
             "p_wo",
-            { "id": "v_kau", "form": "desire_tai" },
+            {
+              "id": "v_kau",
+              "form": "desire_tai"
+            },
             "p_ka"
           ]
         },
@@ -386,10 +712,19 @@
           "terms": [
             "v_purezento",
             "p_wo",
-            { "id": "v_kau", "form": "desire_tai" },
+            {
+              "id": "v_kau",
+              "form": "desire_tai"
+            },
             "v_mou",
-            { "id": "v_kau", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_kau",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -407,8 +742,14 @@
           "en": "It is not very expensive. It is new, you know.",
           "terms": [
             "v_amari",
-            { "id": "v_takai", "form": "polite_negative" },
-            { "id": "v_atarashii", "form": "polite_adj" },
+            {
+              "id": "v_takai",
+              "form": "polite_negative"
+            },
+            {
+              "id": "v_atarashii",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         },
@@ -420,7 +761,10 @@
             "p_soudesuka",
             "v_watashi",
             "p_mo",
-            { "id": "v_kau", "form": "desire_tai" }
+            {
+              "id": "v_kau",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -429,7 +773,10 @@
           "en": "Let's buy one together.",
           "terms": [
             "v_issho",
-            { "id": "v_kau", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_kau",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -447,7 +794,10 @@
             "v_kyou",
             "v_resutoran",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -457,7 +807,10 @@
           "en": "Yes, I want to go.",
           "terms": [
             "p_hai",
-            { "id": "v_iku", "form": "desire_tai" }
+            {
+              "id": "v_iku",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -466,10 +819,16 @@
           "en": "Let's go together. Let's eat curry.",
           "terms": [
             "v_issho",
-            { "id": "v_iku", "form": "polite_volitional_mashou" },
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            },
             "v_karee",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_taberu",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -477,11 +836,17 @@
           "jp": "いいですね。コーヒーも 飲みたいです。",
           "en": "That sounds great. I also want to drink coffee.",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_koohii",
             "p_mo",
-            { "id": "v_nomu", "form": "desire_tai" }
+            {
+              "id": "v_nomu",
+              "form": "desire_tai"
+            }
           ]
         },
         {
@@ -491,7 +856,10 @@
           "terms": [
             "p_soudesu",
             "p_ne",
-            { "id": "v_nomu", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_nomu",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -499,11 +867,20 @@
           "jp": "食べて、飲んで、デパートへ 行きましょう。",
           "en": "Let's eat, drink, and then go to the department store.",
           "terms": [
-            { "id": "v_taberu", "form": "te_form" },
-            { "id": "v_nomu", "form": "te_form" },
+            {
+              "id": "v_taberu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_nomu",
+              "form": "te_form"
+            },
             "v_depaato",
             "p_e",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -516,11 +893,22 @@
         {
           "kind": "mcq",
           "q": "What does「食べています」mean?",
-          "choices": ["I am eating", "I ate", "Let's eat", "I want to eat"],
+          "choices": [
+            "I am eating",
+            "I ate",
+            "Let's eat",
+            "I want to eat"
+          ],
           "answer": "I am eating",
           "terms": [
-            { "id": "v_taberu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_taberu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ],
           "explanation": "ている = て-form + います. Expresses an ongoing action: 食べて + います = 'is eating'. The て-form connects to いる which carries the tense."
         },
@@ -537,7 +925,10 @@
           "terms": [
             "v_purezento",
             "p_wo",
-            { "id": "v_kau", "form": "desire_tai" }
+            {
+              "id": "v_kau",
+              "form": "desire_tai"
+            }
           ],
           "explanation": "たいです attaches to the ます-stem (い-row). 買う → 買い (stem) + たいです = 買いたいです. It replaces ます, not adds to it."
         },
@@ -554,7 +945,10 @@
           "terms": [
             "v_resutoran",
             "p_de",
-            { "id": "v_taberu", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_taberu",
+              "form": "polite_volitional_mashou"
+            }
           ],
           "explanation": "ましょう attaches to the ます-stem. 食べる → 食べ (stem) + ましょう = 食べましょう. It expresses 'let's eat' — a polite invitation to share the action."
         },
@@ -571,18 +965,32 @@
           "terms": [
             "v_koohii",
             "p_wo",
-            { "id": "v_nomu", "form": "desire_tai_negative" }
+            {
+              "id": "v_nomu",
+              "form": "desire_tai_negative"
+            }
           ],
           "explanation": "たくないです is the negative of たいです. 飲む → 飲み (stem) + たくないです. たい conjugates like an い-adjective: たい → たく + ない = たくない."
         },
         {
           "kind": "mcq",
           "q": "What is the correct ている form of「行く」?",
-          "choices": ["行っています", "行いています", "行きています", "行くています"],
+          "choices": [
+            "行っています",
+            "行いています",
+            "行きています",
+            "行くています"
+          ],
           "answer": "行っています",
           "terms": [
-            { "id": "v_iku", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ],
           "explanation": "行く is the famous て-form exception: 行く → 行って (not 行いて!). Then + います = 行っています. The 行く exception from G7 applies here too."
         },
@@ -600,7 +1008,10 @@
             "v_tomodachi",
             "p_to",
             "v_issho",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ],
           "explanation": "ましょう makes a polite suggestion or invitation: 'Let's go together with a friend.' It proposes a shared action. Adding か (行きましょうか) makes it a softer question: 'Shall we go?'"
         },

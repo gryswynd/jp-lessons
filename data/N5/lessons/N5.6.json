@@ -7,7 +7,12 @@
     "lesson_number": 6,
     "focus": "Landscape vocabulary (mountain, river, road) and vehicles (car) with location particles に, から, まで and transportation particle で",
     "estimated_minutes": 50,
-    "kanji": ["山", "川", "道", "車"]
+    "kanji": [
+      "山",
+      "川",
+      "道",
+      "車"
+    ]
   },
   "newKanji": [
     {
@@ -52,7 +57,10 @@
             "v_mainichi",
             "v_basu",
             "p_de",
-            { "id": "v_kuru", "form": "polite_masu" },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -63,7 +71,10 @@
             "v_senshuu",
             "v_eki",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" },
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -77,7 +88,10 @@
             "p_e",
             "v_basu",
             "p_de",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -88,7 +102,10 @@
             "v_senshuu",
             "v_eki",
             "p_e",
-            { "id": "v_iku", "form": "polite_past_negative" },
+            {
+              "id": "v_iku",
+              "form": "polite_past_negative"
+            },
             "p_ka"
           ]
         }
@@ -103,28 +120,36 @@
           "on": "さん",
           "kun": "やま",
           "meaning": "mountain",
-          "terms": ["k_yama"]
+          "terms": [
+            "k_yama"
+          ]
         },
         {
           "kanji": "川",
           "on": "せん",
           "kun": "かわ/がわ",
           "meaning": "river",
-          "terms": ["k_kawa"]
+          "terms": [
+            "k_kawa"
+          ]
         },
         {
           "kanji": "道",
           "on": "どう",
           "kun": "みち",
           "meaning": "road / street",
-          "terms": ["k_michi"]
+          "terms": [
+            "k_michi"
+          ]
         },
         {
           "kanji": "車",
           "on": "しゃ",
           "kun": "くるま",
           "meaning": "car / vehicle",
-          "terms": ["k_kuruma"]
+          "terms": [
+            "k_kuruma"
+          ]
         }
       ]
     },
@@ -134,19 +159,33 @@
       "groups": [
         {
           "label": "New Kanji",
-          "items": ["k_yama", "k_kawa", "k_michi", "k_kuruma"]
+          "items": [
+            "k_yama",
+            "k_kawa",
+            "k_michi",
+            "k_kuruma"
+          ]
         },
         {
           "label": "Landscape",
-          "items": ["v_yama", "v_kawa", "v_michi", "v_kazan"]
+          "items": [
+            "v_yama",
+            "v_kawa",
+            "v_michi",
+            "v_kazan"
+          ]
         },
         {
           "label": "Vehicles",
-          "items": ["v_kuruma"]
+          "items": [
+            "v_kuruma"
+          ]
         },
         {
           "label": "Communication",
-          "items": ["v_meeru"]
+          "items": [
+            "v_meeru"
+          ]
         }
       ]
     },
@@ -160,11 +199,15 @@
           "jp": "やまかわさん、今日 どこへ 行きますか。",
           "en": "Yamakawa-san, where are you going today?",
           "terms": [
+            "char_yamakawa",
             "v_san",
             "v_kyou",
             "v_doko",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -175,7 +218,10 @@
           "terms": [
             "v_yama",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -185,7 +231,10 @@
           "terms": [
             "v_basu",
             "p_de",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -198,15 +247,24 @@
             "v_basu",
             "p_de",
             "p_wa",
-            { "id": "v_iku", "form": "polite_negative" },
+            {
+              "id": "v_iku",
+              "form": "polite_negative"
+            },
             "v_kuruma",
             "p_de",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "v_yama",
             "p_no",
             "v_michi",
             "p_wa",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         },
@@ -219,7 +277,10 @@
             "p_ni",
             "v_kawa",
             "p_mo",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -233,9 +294,15 @@
             "p_ni",
             "v_kawa",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "v_totemo",
-            { "id": "v_ii", "form": "polite_adj" }
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         }
       ]
@@ -255,7 +322,10 @@
             "v_senshuu",
             "v_yama",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" },
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -267,7 +337,10 @@
             "p_hai",
             "v_kuruma",
             "p_de",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -290,10 +363,16 @@
           "en": "It is very nice. There is a river.",
           "terms": [
             "v_totemo",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "v_kawa",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -305,7 +384,10 @@
             "p_de",
             "v_kawa",
             "p_made",
-            { "id": "v_iku", "form": "polite_mashita" },
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -321,7 +403,10 @@
             "p_made",
             "v_kuruma",
             "p_de",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -340,7 +425,10 @@
             "v_san",
             "v_meeru",
             "p_ga",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -350,7 +438,10 @@
           "en": "Yes, it arrived. It is an email about the volcano, right?",
           "terms": [
             "p_hai",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "v_kazan",
             "p_no",
             "v_meeru",
@@ -366,7 +457,10 @@
             "p_soudesu",
             "v_kazan",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -379,12 +473,18 @@
             "v_raishuu",
             "v_kuruma",
             "p_de",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "v_yama",
             "p_ni",
             "v_kazan",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -398,13 +498,22 @@
             "p_ni",
             "v_kazan",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "v_michi",
             "p_wa",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_yo",
             "v_issho",
-            { "id": "v_kuru", "form": "te_form" },
+            {
+              "id": "v_kuru",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
@@ -414,10 +523,16 @@
           "en": "Yes, I will go. Is there a river too?",
           "terms": [
             "p_hai",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "v_kawa",
             "p_mo",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         }
@@ -438,7 +553,10 @@
             "v_raishuu",
             "v_doko",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -451,7 +569,10 @@
             "p_to",
             "v_kawa",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -461,7 +582,10 @@
           "terms": [
             "v_kuruma",
             "p_de",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -473,10 +597,16 @@
             "p_hai",
             "v_kuruma",
             "p_de",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "v_michi",
             "p_wa",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -490,11 +620,17 @@
             "v_michi",
             "p_wa",
             "v_totemo",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_yo",
             "v_eki",
             "p_kara",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -510,8 +646,14 @@
             "p_de",
             "v_yama",
             "p_e",
-            { "id": "v_iku", "form": "te_form" },
-            { "id": "v_kuru", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -524,13 +666,17 @@
           "jp": "やまかわは 毎週 車で 山へ 行きます。",
           "en": "Yamakawa goes to the mountain by car every week.",
           "terms": [
+            "char_yamakawa",
             "p_wa",
             "v_maishuu",
             "v_kuruma",
             "p_de",
             "v_yama",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -540,7 +686,10 @@
             "v_basu",
             "p_de",
             "p_wa",
-            { "id": "v_iku", "form": "polite_negative" }
+            {
+              "id": "v_iku",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -551,7 +700,10 @@
             "p_ni",
             "v_kawa",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -563,7 +715,10 @@
             "v_michi",
             "p_wa",
             "v_totemo",
-            { "id": "v_ii", "form": "polite_adj" }
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -574,7 +729,10 @@
             "v_kazan",
             "p_e",
             "p_mo",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -585,7 +743,10 @@
             "p_mo",
             "v_yama",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -596,7 +757,10 @@
             "p_to",
             "v_kuruma",
             "p_de",
-            { "id": "v_kuru", "form": "polite_masu" }
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -611,7 +775,10 @@
             "p_de",
             "v_yama",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka",
             "v_kuruma"
           ]
@@ -624,7 +791,10 @@
             "p_ni",
             "v_nani",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_ka",
             "v_kawa"
           ]
@@ -636,7 +806,10 @@
             "v_senshuu",
             "v_doko",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" },
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "v_kazan"
           ]
@@ -648,7 +821,10 @@
             "v_raishuu",
             "v_dare",
             "p_to",
-            { "id": "v_kuru", "form": "polite_masu" },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
             "p_ka",
             "v_tomodachi"
           ]
@@ -667,15 +843,22 @@
             "p_ni",
             "v_meeru",
             "p_ga",
-            { "id": "v_kuru", "form": "polite_mashita" }
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "jp": "やまかわから 来ました。",
           "en": "It came from Yamakawa.",
           "terms": [
+            "char_yamakawa",
             "p_kara",
-            { "id": "v_kuru", "form": "polite_mashita" }
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -699,7 +882,10 @@
             "p_de",
             "v_yama",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -709,7 +895,10 @@
             "v_kazan",
             "p_ni",
             "p_mo",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -720,7 +909,10 @@
             "p_no",
             "v_michi",
             "p_wa",
-            { "id": "v_ii", "form": "polite_adj" }
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         }
       ],
@@ -734,7 +926,10 @@
             "p_kara",
             "v_meeru",
             "p_ga",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -747,7 +942,10 @@
             "p_de",
             "v_yama",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka",
             "v_kuruma"
           ]
@@ -759,7 +957,10 @@
             "v_kazan",
             "p_ni",
             "p_mo",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka",
             "p_hai"
           ]
@@ -774,31 +975,56 @@
         {
           "kind": "mcq",
           "q": "[山] の よみかたは？",
-          "choices": ["やま", "かわ", "みち", "くるま"],
+          "choices": [
+            "やま",
+            "かわ",
+            "みち",
+            "くるま"
+          ],
           "answer": "やま"
         },
         {
           "kind": "mcq",
           "q": "[川] の よみかたは？",
-          "choices": ["かわ", "やま", "どう", "みち"],
+          "choices": [
+            "かわ",
+            "やま",
+            "どう",
+            "みち"
+          ],
           "answer": "かわ"
         },
         {
           "kind": "mcq",
           "q": "[道] の よみかたは？",
-          "choices": ["みち", "くるま", "かわ", "やま"],
+          "choices": [
+            "みち",
+            "くるま",
+            "かわ",
+            "やま"
+          ],
           "answer": "みち"
         },
         {
           "kind": "mcq",
           "q": "[車] の よみかたは？",
-          "choices": ["くるま", "みち", "かわ", "やま"],
+          "choices": [
+            "くるま",
+            "みち",
+            "かわ",
+            "やま"
+          ],
           "answer": "くるま"
         },
         {
           "kind": "mcq",
           "q": "[火山] の よみかたは？",
-          "choices": ["かざん", "ひやま", "やまかわ", "かさん"],
+          "choices": [
+            "かざん",
+            "ひやま",
+            "やまかわ",
+            "かさん"
+          ],
           "answer": "かざん"
         }
       ]
@@ -811,59 +1037,96 @@
         {
           "kind": "mcq",
           "q": "今日 山 _______ 行きますか。",
-          "choices": ["へ", "で", "は", "に"],
+          "choices": [
+            "へ",
+            "で",
+            "は",
+            "に"
+          ],
           "answer": "へ",
           "terms": [
             "v_kyou",
             "v_yama",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
         {
           "kind": "mcq",
           "q": "山に 川が _______。",
-          "choices": ["あります", "います", "行きます", "来ます"],
+          "choices": [
+            "あります",
+            "います",
+            "行きます",
+            "来ます"
+          ],
           "answer": "あります",
           "terms": [
             "v_yama",
             "p_ni",
             "v_kawa",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "_______ で 山へ 行きます。",
-          "choices": ["車", "山", "川", "道"],
+          "choices": [
+            "車",
+            "山",
+            "川",
+            "道"
+          ],
           "answer": "車",
           "terms": [
             "v_kuruma",
             "p_de",
             "v_yama",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "りきぞさんに メールが _______。",
-          "choices": ["来ました", "行きました", "あります", "います"],
+          "choices": [
+            "来ました",
+            "行きました",
+            "あります",
+            "います"
+          ],
           "answer": "来ました",
           "terms": [
             "v_san",
             "p_ni",
             "v_meeru",
             "p_ga",
-            { "id": "v_kuru", "form": "polite_mashita" }
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "山の 道は とても _______。",
-          "choices": ["いいです", "来ます", "行きます", "あります"],
+          "choices": [
+            "いいです",
+            "来ます",
+            "行きます",
+            "あります"
+          ],
           "answer": "いいです",
           "terms": [
             "v_yama",
@@ -871,25 +1134,41 @@
             "v_michi",
             "p_wa",
             "v_totemo",
-            { "id": "v_ii", "form": "polite_adj" }
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "先週 火山へ _______。",
-          "choices": ["行きました", "行きます", "来ます", "あります"],
+          "choices": [
+            "行きました",
+            "行きます",
+            "来ます",
+            "あります"
+          ],
           "answer": "行きました",
           "terms": [
             "v_senshuu",
             "v_kazan",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "山から 川 _______ 車で 行きます。",
-          "choices": ["まで", "から", "に", "を"],
+          "choices": [
+            "まで",
+            "から",
+            "に",
+            "を"
+          ],
           "answer": "まで",
           "terms": [
             "v_yama",
@@ -898,20 +1177,31 @@
             "p_made",
             "v_kuruma",
             "p_de",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "来週も 山 _______ 来ますか。",
-          "choices": ["へ", "は", "の", "が"],
+          "choices": [
+            "へ",
+            "は",
+            "の",
+            "が"
+          ],
           "answer": "へ",
           "terms": [
             "v_raishuu",
             "p_mo",
             "v_yama",
             "p_e",
-            { "id": "v_kuru", "form": "polite_masu" },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         }
@@ -925,34 +1215,55 @@
         {
           "kind": "mcq",
           "q": "車 _______ 山へ 行きますか。",
-          "choices": ["で", "に", "の", "は"],
+          "choices": [
+            "で",
+            "に",
+            "の",
+            "は"
+          ],
           "answer": "で",
           "terms": [
             "v_kuruma",
             "p_de",
             "v_yama",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
         {
           "kind": "mcq",
           "q": "山 _______ 川が あります。",
-          "choices": ["に", "を", "が", "は"],
+          "choices": [
+            "に",
+            "を",
+            "が",
+            "は"
+          ],
           "answer": "に",
           "terms": [
             "v_yama",
             "p_ni",
             "v_kawa",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "駅 _______ 山まで 車で 行きます。",
-          "choices": ["から", "まで", "に", "は"],
+          "choices": [
+            "から",
+            "まで",
+            "に",
+            "は"
+          ],
           "answer": "から",
           "terms": [
             "v_eki",
@@ -961,65 +1272,105 @@
             "p_made",
             "v_kuruma",
             "p_de",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "山や 川 _______ 行きます。",
-          "choices": ["に", "が", "の", "は"],
+          "choices": [
+            "に",
+            "が",
+            "の",
+            "は"
+          ],
           "answer": "に",
           "terms": [
             "v_yama",
             "p_ya",
             "v_kawa",
             "p_ni",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "先週は 火山 _______ 行きませんでした。",
-          "choices": ["へ", "の", "が", "に"],
+          "choices": [
+            "へ",
+            "の",
+            "が",
+            "に"
+          ],
           "answer": "へ",
           "terms": [
             "v_senshuu",
             "p_wa",
             "v_kazan",
             "p_e",
-            { "id": "v_iku", "form": "polite_past_negative" }
+            {
+              "id": "v_iku",
+              "form": "polite_past_negative"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "今日 バス _______ 来ましたか。",
-          "choices": ["で", "に", "は", "を"],
+          "choices": [
+            "で",
+            "に",
+            "は",
+            "を"
+          ],
           "answer": "で",
           "terms": [
             "v_kyou",
             "v_basu",
             "p_de",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
         {
           "kind": "mcq",
           "q": "友だち _______ 山へ 行きます。",
-          "choices": ["と", "が", "を", "に"],
+          "choices": [
+            "と",
+            "が",
+            "を",
+            "に"
+          ],
           "answer": "と",
           "terms": [
             "v_tomodachi",
             "p_to",
             "v_yama",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "山の 道 _______ とても いいですよ。",
-          "choices": ["は", "に", "が", "を"],
+          "choices": [
+            "は",
+            "に",
+            "が",
+            "を"
+          ],
           "answer": "は",
           "terms": [
             "v_yama",
@@ -1027,7 +1378,10 @@
             "v_michi",
             "p_wa",
             "v_totemo",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         }
