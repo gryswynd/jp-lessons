@@ -248,7 +248,7 @@
             "v_san",
             "v_nihongo",
             "p_ga",
-            { "id": "v_hanasu", "form": "potential" },
+            { "id": "v_hanasu", "form": "polite_potential" },
             "p_ka"
           ]
         },
@@ -258,10 +258,10 @@
           "en": "Yes, I can speak a little. I can read books too.",
           "terms": [
             "v_sukoshi",
-            { "id": "v_hanasu", "form": "potential" },
+            { "id": "v_hanasu", "form": "polite_potential" },
             "v_hon",
             "p_mo",
-            { "id": "v_yomu", "form": "potential" },
+            { "id": "v_yomu", "form": "polite_potential" },
             "p_yo"
           ]
         },
@@ -272,7 +272,7 @@
           "terms": [
             { "id": "v_jouzu", "form": "polite_adj" },
             "p_ne",
-            { "id": "v_kaku", "form": "potential" },
+            { "id": "v_kaku", "form": "polite_potential" },
             "p_ka"
           ]
         },
@@ -283,7 +283,7 @@
           "terms": [
             "v_sukoshi",
             "p_wa",
-            { "id": "v_kaku", "form": "potential" },
+            { "id": "v_kaku", "form": "polite_potential" },
             "p_ga_but",
             "v_mada",
             { "id": "v_jouzu", "form": "adverbial" },
@@ -305,7 +305,7 @@
           "jp": "はい、読めますよ！",
           "en": "Yes, I can read!",
           "terms": [
-            { "id": "v_yomu", "form": "potential" },
+            { "id": "v_yomu", "form": "polite_potential" },
             "p_yo"
           ]
         }

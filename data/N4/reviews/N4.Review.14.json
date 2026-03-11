@@ -49,7 +49,7 @@
               "jp": "はい。台所に 水と 電池が あります。",
               "terms": [
                 "v_daidokoro",
-                "k_mizu",
+                "v_mizu",
                 "v_denchi",
                 {
                   "id": "v_aru",
@@ -61,7 +61,7 @@
               "spk": "A",
               "jp": "外に 出ないで ください。",
               "terms": [
-                "k_soto",
+                "v_soto",
                 {
                   "id": "v_deru",
                   "form": "polite_negative_te"
@@ -76,8 +76,8 @@
                   "id": "v_wakaru",
                   "form": "polite_mashita"
                 },
-                "k_ie",
-                "k_moto",
+                "v_ie",
+                "v_hon",
                 {
                   "id": "v_yomu",
                   "form": "polite_masu"
@@ -120,7 +120,7 @@
               "jp": "はい。いい 所ですよ。",
               "terms": [
                 "v_ii",
-                "k_tokoro"
+                "v_tokoro"
               ]
             },
             {
@@ -169,7 +169,7 @@
               "terms": [
                 "v_tokei",
                 "v_ichiman",
-                "k_en",
+                "v_en",
                 "v_ijou"
               ]
             },
@@ -178,7 +178,7 @@
               "jp": "いいえ、五千円 以下です。古い 時計ですから。",
               "terms": [
                 "v_gosen",
-                "k_en",
+                "v_en",
                 "v_ika",
                 "v_furui",
                 "v_tokei"
@@ -289,7 +289,7 @@
           "jp": "私の 村は 山村です。",
           "en": "My village is a mountain village.",
           "terms": [
-            "k_watashi",
+            "v_watashi",
             "v_mura",
             "v_sanson"
           ]
@@ -308,7 +308,7 @@
           "en": "There is an old gate inside the grove.",
           "terms": [
             "v_hayashi",
-            "k_naka",
+            "v_naka",
             "v_furui",
             "v_mon",
             {
@@ -321,7 +321,7 @@
           "jp": "私は 毎日 そこで 時間を 計ります。",
           "en": "Every day I measure the time there.",
           "terms": [
-            "k_watashi",
+            "v_watashi",
             "v_mainichi",
             "v_jikan",
             {
@@ -370,7 +370,7 @@
           ],
           "terms": [
             "v_hayashi",
-            "k_naka",
+            "v_naka",
             "v_nani",
             "v_furui",
             "v_mon"
