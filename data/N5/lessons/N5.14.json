@@ -7,7 +7,12 @@
     "lesson_number": 14,
     "focus": "Describing quantities (多い/少ない/少し), the color white (白い), time (時間), and frequency adverbs (たいてい/ぜんぜん/多分) in everyday school and outdoor contexts",
     "estimated_minutes": 30,
-    "kanji": ["少", "多", "白", "間"]
+    "kanji": [
+      "少",
+      "多",
+      "白",
+      "間"
+    ]
   },
   "newKanji": [
     {
@@ -53,7 +58,10 @@
             "p_no",
             "v_hon",
             "p_wa",
-            { "id": "v_omoshiroi", "form": "appearance_sou" },
+            {
+              "id": "v_omoshiroi",
+              "form": "appearance_sou"
+            },
             "p_ne"
           ]
         },
@@ -65,7 +73,10 @@
             "p_no",
             "v_tesuto",
             "p_wa",
-            { "id": "v_nagai", "form": "polite_past_adj" }
+            {
+              "id": "v_nagai",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
@@ -75,7 +86,10 @@
             "v_nihongo",
             "p_wo",
             "v_yukkuri",
-            { "id": "v_hanasu", "form": "te_form" },
+            {
+              "id": "v_hanasu",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
@@ -85,7 +99,10 @@
           "terms": [
             "v_gakkou",
             "p_ni",
-            { "id": "v_iku", "form": "desire_tai_negative" },
+            {
+              "id": "v_iku",
+              "form": "desire_tai_negative"
+            },
             "g_desu"
           ]
         }
@@ -100,28 +117,36 @@
           "on": "しょう",
           "kun": "すこ/すく",
           "meaning": "a little / scarce",
-          "terms": ["k_suko"]
+          "terms": [
+            "k_suko"
+          ]
         },
         {
           "kanji": "多",
           "on": "た",
           "kun": "おお",
           "meaning": "many",
-          "terms": ["k_oo"]
+          "terms": [
+            "k_oo"
+          ]
         },
         {
           "kanji": "白",
           "on": "はく",
           "kun": "しろ",
           "meaning": "white",
-          "terms": ["k_shiro"]
+          "terms": [
+            "k_shiro"
+          ]
         },
         {
           "kanji": "間",
           "on": "かん/けん",
           "kun": "あいだ/ま",
           "meaning": "between, space",
-          "terms": ["k_aida"]
+          "terms": [
+            "k_aida"
+          ]
         }
       ]
     },
@@ -131,27 +156,48 @@
       "groups": [
         {
           "label": "Quantity Adjectives",
-          "items": ["v_ooi", "v_sukunai", "v_sukoshi", "v_tabun"]
+          "items": [
+            "v_ooi",
+            "v_sukunai",
+            "v_sukoshi",
+            "v_tabun"
+          ]
         },
         {
           "label": "Frequency Adverbs",
-          "items": ["v_taitei", "v_zenzen"]
+          "items": [
+            "v_taitei",
+            "v_zenzen"
+          ]
         },
         {
           "label": "Color",
-          "items": ["v_shiroi", "v_hakujin"]
+          "items": [
+            "v_shiroi",
+            "v_hakujin"
+          ]
         },
         {
           "label": "People",
-          "items": ["v_shoujo", "v_shounen"]
+          "items": [
+            "v_shoujo",
+            "v_shounen"
+          ]
         },
         {
           "label": "Time",
-          "items": ["v_jikan"]
+          "items": [
+            "v_jikan"
+          ]
         },
         {
           "label": "Kanji",
-          "items": ["k_suko", "k_oo", "k_shiro", "k_aida"]
+          "items": [
+            "k_suko",
+            "k_oo",
+            "k_shiro",
+            "k_aida"
+          ]
         }
       ]
     },
@@ -171,7 +217,10 @@
             "p_no",
             "v_hon",
             "p_ga",
-            { "id": "v_ooi", "form": "polite_adj" },
+            {
+              "id": "v_ooi",
+              "form": "polite_adj"
+            },
             "p_ne"
           ]
         },
@@ -187,8 +236,14 @@
             "v_shounen",
             "p_mo",
             "v_takusan",
-            { "id": "v_yomu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -199,10 +254,16 @@
             "v_watashi",
             "p_mo",
             "v_sukoshi",
-            { "id": "v_yomu", "form": "desire_tai" },
+            {
+              "id": "v_yomu",
+              "form": "desire_tai"
+            },
             "v_jikan",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -215,9 +276,15 @@
             "v_kyou",
             "p_wa",
             "v_sukoshi",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "v_issho",
-            { "id": "v_yomu", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_yomu",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -228,7 +295,10 @@
             "v_taitei",
             "v_gakkou",
             "p_de",
-            { "id": "v_yomu", "form": "polite_masu" },
+            {
+              "id": "v_yomu",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -238,12 +308,18 @@
           "en": "I usually read. Last week I had no time.",
           "terms": [
             "v_taitei",
-            { "id": "v_yomu", "form": "polite_masu" },
+            {
+              "id": "v_yomu",
+              "form": "polite_masu"
+            },
             "v_senshuu",
             "p_wa",
             "v_jikan",
             "p_ga",
-            { "id": "v_aru", "form": "polite_past_negative" }
+            {
+              "id": "v_aru",
+              "form": "polite_past_negative"
+            }
           ]
         }
       ]
@@ -262,12 +338,18 @@
             "p_wa",
             "v_tenki",
             "p_ga",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_shiroi",
             "v_hana",
             "p_ga",
-            { "id": "v_ooi", "form": "polite_adj" }
+            {
+              "id": "v_ooi",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -281,7 +363,10 @@
             "v_hana",
             "p_wa",
             "v_totemo",
-            { "id": "v_kirei", "form": "polite_adj" }
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -293,10 +378,16 @@
             "p_wa",
             "v_hito",
             "p_ga",
-            { "id": "v_sukunai", "form": "polite_adj" },
+            {
+              "id": "v_sukunai",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_taitei",
-            { "id": "v_ooi", "form": "polite_adj" },
+            {
+              "id": "v_ooi",
+              "form": "polite_adj"
+            },
             "p_ga_but"
           ]
         },
@@ -310,7 +401,10 @@
             "p_wa",
             "v_gakkou",
             "p_ni",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -321,11 +415,17 @@
             "v_sukoshi",
             "v_koko",
             "p_ni",
-            { "id": "v_iru", "form": "desire_tai" },
+            {
+              "id": "v_iru",
+              "form": "desire_tai"
+            },
             "p_ga_but",
             "v_jikan",
             "p_ga",
-            { "id": "v_aru", "form": "polite_negative" }
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -336,9 +436,15 @@
             "p_soudesu",
             "p_ne",
             "v_mata",
-            { "id": "v_kuru", "form": "polite_volitional_mashou" },
+            {
+              "id": "v_kuru",
+              "form": "polite_volitional_mashou"
+            },
             "v_maishuu",
-            { "id": "v_kuru", "form": "desire_tai" },
+            {
+              "id": "v_kuru",
+              "form": "desire_tai"
+            },
             "p_ne"
           ]
         }
@@ -360,7 +466,10 @@
             "v_taitei",
             "v_nihongo",
             "p_wo",
-            { "id": "v_hanasu", "form": "polite_masu" },
+            {
+              "id": "v_hanasu",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -371,10 +480,16 @@
           "terms": [
             "p_hai",
             "v_taitei",
-            { "id": "v_hanasu", "form": "polite_masu" },
+            {
+              "id": "v_hanasu",
+              "form": "polite_masu"
+            },
             "v_mainichi",
             "v_sukoshi",
-            { "id": "v_hanasu", "form": "polite_masu" }
+            {
+              "id": "v_hanasu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -384,7 +499,10 @@
           "terms": [
             "v_jikan",
             "p_ga",
-            { "id": "v_ooi", "form": "polite_adj" },
+            {
+              "id": "v_ooi",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -394,14 +512,20 @@
           "en": "It is a little scarce, but I have time to speak Japanese.",
           "terms": [
             "v_sukoshi",
-            { "id": "v_sukunai", "form": "polite_adj" },
+            {
+              "id": "v_sukunai",
+              "form": "polite_adj"
+            },
             "p_ga_but",
             "v_nihongo",
             "p_wo",
             "v_hanasu",
             "v_jikan",
             "p_wa",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -410,10 +534,16 @@
           "en": "Are there times when you don't speak at all?",
           "terms": [
             "v_zenzen",
-            { "id": "v_hanasu", "form": "plain_negative" },
+            {
+              "id": "v_hanasu",
+              "form": "plain_negative"
+            },
             "v_toki",
             "p_wa",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -423,13 +553,22 @@
           "en": "There are no times when I don't speak at all. I want to speak a little every day.",
           "terms": [
             "v_zenzen",
-            { "id": "v_hanasu", "form": "plain_negative" },
+            {
+              "id": "v_hanasu",
+              "form": "plain_negative"
+            },
             "v_toki",
             "p_wa",
-            { "id": "v_aru", "form": "polite_negative" },
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            },
             "v_mainichi",
             "v_sukoshi",
-            { "id": "v_hanasu", "form": "desire_tai" }
+            {
+              "id": "v_hanasu",
+              "form": "desire_tai"
+            }
           ]
         }
       ]
@@ -463,7 +602,10 @@
             "v_issho",
             "v_doko",
             "p_ka",
-            { "id": "v_iku", "form": "plain_negative" }
+            {
+              "id": "v_iku",
+              "form": "plain_negative"
+            }
           ]
         },
         {
@@ -475,7 +617,10 @@
             "p_ne",
             "v_soto",
             "p_ni",
-            { "id": "v_iku", "form": "plain_volitional" },
+            {
+              "id": "v_iku",
+              "form": "plain_volitional"
+            },
             "v_tabun",
             "v_shiroi",
             "v_hana",
@@ -512,7 +657,10 @@
             "v_jikan",
             "v_aru",
             "p_kara_because",
-            { "id": "v_iku", "form": "plain_volitional" }
+            {
+              "id": "v_iku",
+              "form": "plain_volitional"
+            }
           ]
         },
         {
@@ -520,8 +668,14 @@
           "jp": "わかった！行こう！",
           "en": "Got it! Let's go!",
           "terms": [
-            { "id": "v_wakaru", "form": "plain_past" },
-            { "id": "v_iku", "form": "plain_volitional" }
+            {
+              "id": "v_wakaru",
+              "form": "plain_past"
+            },
+            {
+              "id": "v_iku",
+              "form": "plain_volitional"
+            }
           ]
         }
       ]
@@ -540,11 +694,17 @@
             "p_no",
             "v_soto",
             "p_ni",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "v_shiroi",
             "v_hana",
             "p_ga",
-            { "id": "v_ooi", "form": "polite_adj" }
+            {
+              "id": "v_ooi",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -556,10 +716,16 @@
             "v_hana",
             "p_wa",
             "v_totemo",
-            { "id": "v_kirei", "form": "polite_adj" },
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            },
             "v_hito",
             "p_ga",
-            { "id": "v_sukunai", "form": "polite_adj" }
+            {
+              "id": "v_sukunai",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -569,13 +735,19 @@
             "v_taitei",
             "v_doyoubi",
             "p_ni",
-            { "id": "v_kuru", "form": "polite_masu" },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
             "v_kyou",
             "p_wa",
             "v_sukoshi",
             "v_jikan",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -588,11 +760,17 @@
             "p_ga",
             "v_soto",
             "p_ni",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "v_shiroi",
             "v_hana",
             "p_ga",
-            { "id": "v_ooi", "form": "polite_adj" },
+            {
+              "id": "v_ooi",
+              "form": "polite_adj"
+            },
             "p_ne"
           ]
         },
@@ -602,9 +780,15 @@
           "terms": [
             "v_tabun",
             "v_mata",
-            { "id": "v_kuru", "form": "polite_masu" },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
             "v_maishuu",
-            { "id": "v_kuru", "form": "desire_tai" }
+            {
+              "id": "v_kuru",
+              "form": "desire_tai"
+            }
           ]
         }
       ],
@@ -622,7 +806,10 @@
             "v_hana",
             "p_wa",
             "v_totemo",
-            { "id": "v_kirei", "form": "polite_adj" }
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -638,7 +825,10 @@
             "v_taitei",
             "v_doyoubi",
             "p_ni",
-            { "id": "v_kuru", "form": "polite_masu" }
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -652,7 +842,10 @@
           ],
           "terms": [
             "v_maishuu",
-            { "id": "v_kuru", "form": "desire_tai" }
+            {
+              "id": "v_kuru",
+              "form": "desire_tai"
+            }
           ]
         }
       ]
@@ -665,11 +858,15 @@
           "jp": "学校に 少年が います。名前は ケンです。",
           "en": "There is a boy at school. His name is Ken.",
           "terms": [
+            "char_ken",
             "v_gakkou",
             "p_ni",
             "v_shounen",
             "p_ga",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "v_namae",
             "p_wa",
             "g_desu"
@@ -681,7 +878,10 @@
           "terms": [
             "v_shoujo",
             "p_mo",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "v_namae",
             "p_wa",
             "g_desu"
@@ -697,8 +897,14 @@
             "p_no",
             "v_hon",
             "p_wo",
-            { "id": "v_ooi", "form": "adverbial" },
-            { "id": "v_yomu", "form": "polite_masu" }
+            {
+              "id": "v_ooi",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_yomu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -711,12 +917,24 @@
             "v_taitei",
             "v_jikan",
             "p_ga",
-            { "id": "v_ooi", "form": "polite_adj" },
-            { "id": "v_ii", "form": "adverbial" },
+            {
+              "id": "v_ooi",
+              "form": "polite_adj"
+            },
+            {
+              "id": "v_ii",
+              "form": "adverbial"
+            },
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -729,10 +947,19 @@
             "v_shiroi",
             "v_nooto",
             "p_ni",
-            { "id": "v_kaku", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_kaku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "v_zenzen",
-            { "id": "v_yasumu", "form": "polite_negative" }
+            {
+              "id": "v_yasumu",
+              "form": "polite_negative"
+            }
           ]
         }
       ],
@@ -751,7 +978,10 @@
             "p_no",
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -767,8 +997,14 @@
             "v_shiroi",
             "v_nooto",
             "p_ni",
-            { "id": "v_kaku", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_kaku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -784,7 +1020,10 @@
             "v_taitei",
             "v_jikan",
             "p_ga",
-            { "id": "v_ooi", "form": "polite_adj" }
+            {
+              "id": "v_ooi",
+              "form": "polite_adj"
+            }
           ]
         }
       ]
@@ -797,37 +1036,67 @@
         {
           "kind": "mcq",
           "q": "多い",
-          "choices": ["many / a lot", "a little", "scarce / few", "white"],
+          "choices": [
+            "many / a lot",
+            "a little",
+            "scarce / few",
+            "white"
+          ],
           "answer": "many / a lot"
         },
         {
           "kind": "mcq",
           "q": "少ない",
-          "choices": ["scarce / few", "many / a lot", "white", "beautiful"],
+          "choices": [
+            "scarce / few",
+            "many / a lot",
+            "white",
+            "beautiful"
+          ],
           "answer": "scarce / few"
         },
         {
           "kind": "mcq",
           "q": "白い",
-          "choices": ["white", "clean", "scarce", "many"],
+          "choices": [
+            "white",
+            "clean",
+            "scarce",
+            "many"
+          ],
           "answer": "white"
         },
         {
           "kind": "mcq",
           "q": "時間",
-          "choices": ["time", "space", "between", "week"],
+          "choices": [
+            "time",
+            "space",
+            "between",
+            "week"
+          ],
           "answer": "time"
         },
         {
           "kind": "mcq",
           "q": "たいてい",
-          "choices": ["usually / mostly", "probably", "not at all", "a little"],
+          "choices": [
+            "usually / mostly",
+            "probably",
+            "not at all",
+            "a little"
+          ],
           "answer": "usually / mostly"
         },
         {
           "kind": "mcq",
           "q": "ぜんぜん",
-          "choices": ["not at all", "usually", "probably", "a little"],
+          "choices": [
+            "not at all",
+            "usually",
+            "probably",
+            "a little"
+          ],
           "answer": "not at all"
         }
       ]
@@ -840,7 +1109,12 @@
         {
           "kind": "mcq",
           "q": "学校に 日本語の 本が ___ですね。（There are many Japanese books at school.）",
-          "choices": ["多い", "少ない", "白い", "少し"],
+          "choices": [
+            "多い",
+            "少ない",
+            "白い",
+            "少し"
+          ],
           "answer": "多い",
           "terms": [
             "v_gakkou",
@@ -849,7 +1123,10 @@
             "p_no",
             "v_hon",
             "p_ga",
-            { "id": "v_ooi", "form": "polite_adj" },
+            {
+              "id": "v_ooi",
+              "form": "polite_adj"
+            },
             "g_desu",
             "p_ne"
           ]
@@ -857,38 +1134,62 @@
         {
           "kind": "mcq",
           "q": "今日は 人が ___です。（There are few people today.）",
-          "choices": ["少ない", "多い", "白い", "たいてい"],
+          "choices": [
+            "少ない",
+            "多い",
+            "白い",
+            "たいてい"
+          ],
           "answer": "少ない",
           "terms": [
             "v_kyou",
             "p_wa",
             "v_hito",
             "p_ga",
-            { "id": "v_sukunai", "form": "polite_adj" },
+            {
+              "id": "v_sukunai",
+              "form": "polite_adj"
+            },
             "g_desu"
           ]
         },
         {
           "kind": "mcq",
           "q": "___、学校で 読みますか。（Do you usually read at school?）",
-          "choices": ["たいてい", "ぜんぜん", "多分", "少し"],
+          "choices": [
+            "たいてい",
+            "ぜんぜん",
+            "多分",
+            "少し"
+          ],
           "answer": "たいてい",
           "terms": [
             "v_taitei",
             "v_gakkou",
             "p_de",
-            { "id": "v_yomu", "form": "polite_masu" },
+            {
+              "id": "v_yomu",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
         {
           "kind": "mcq",
           "q": "___、話しません。（I don't speak at all.）",
-          "choices": ["ぜんぜん", "たいてい", "少し", "多分"],
+          "choices": [
+            "ぜんぜん",
+            "たいてい",
+            "少し",
+            "多分"
+          ],
           "answer": "ぜんぜん",
           "terms": [
             "v_zenzen",
-            { "id": "v_hanasu", "form": "polite_negative" }
+            {
+              "id": "v_hanasu",
+              "form": "polite_negative"
+            }
           ]
         }
       ]
@@ -901,21 +1202,37 @@
         {
           "kind": "mcq",
           "q": "外に 花が 多く___。（There are many flowers outside.）",
-          "choices": ["あります", "います", "ありません", "いません"],
+          "choices": [
+            "あります",
+            "います",
+            "ありません",
+            "いません"
+          ],
           "answer": "あります",
           "terms": [
             "v_soto",
             "p_ni",
             "v_hana",
             "p_ga",
-            { "id": "v_ooi", "form": "adverbial" },
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_ooi",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "白い 花が 多い 学校の 外に___。（I came outside the school where there are many white flowers.）",
-          "choices": ["来ました", "行きました", "います", "ありました"],
+          "choices": [
+            "来ました",
+            "行きました",
+            "います",
+            "ありました"
+          ],
           "answer": "来ました",
           "terms": [
             "v_shiroi",
@@ -926,30 +1243,52 @@
             "p_no",
             "v_soto",
             "p_ni",
-            { "id": "v_kuru", "form": "polite_mashita" }
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "また___。（I want to come again.）",
-          "choices": ["来たいです", "来ます", "来ました", "来ません"],
+          "choices": [
+            "来たいです",
+            "来ます",
+            "来ました",
+            "来ません"
+          ],
           "answer": "来たいです",
           "terms": [
             "v_mata",
-            { "id": "v_kuru", "form": "desire_tai" }
+            {
+              "id": "v_kuru",
+              "form": "desire_tai"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "ぜんぜん___とき は ありません。（There are no times when I don't speak at all.）",
-          "choices": ["話さない", "話します", "話して", "話した"],
+          "choices": [
+            "話さない",
+            "話します",
+            "話して",
+            "話した"
+          ],
           "answer": "話さない",
           "terms": [
             "v_zenzen",
-            { "id": "v_hanasu", "form": "plain_negative" },
+            {
+              "id": "v_hanasu",
+              "form": "plain_negative"
+            },
             "v_toki",
             "p_wa",
-            { "id": "v_aru", "form": "polite_negative" }
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            }
           ]
         }
       ]
