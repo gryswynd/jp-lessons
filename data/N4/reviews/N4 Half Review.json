@@ -297,19 +297,16 @@
         },
         {
           "title": "Lesson N4.3: Time",
-          "context": "Focus: Morning, Evening, Bright",
+          "context": "Focus: Morning, Evening, Weekend, Bright",
           "lines": [
             {
               "spk": "A",
-              "jp": "明日の 朝、何を しますか。",
+              "jp": "週まつは 何時に 起きますか。",
               "terms": [
-                "v_ashita",
-                "p_no",
-                "v_asa",
-                "v_nan",
-                "p_wo",
+                "v_shuumatsu",
+                "v_nanji",
                 {
-                  "id": "v_suru",
+                  "id": "v_okiru",
                   "form": "polite_masu"
                 },
                 "p_ka"
@@ -317,11 +314,11 @@
             },
             {
               "spk": "B",
-              "jp": "早起きして、朝ご飯を 食べます。",
+              "jp": "週まつは 八時に 起きて、朝ごはんを 食べます。",
               "terms": [
-                "v_hayaoki",
+                "v_shuumatsu",
                 {
-                  "id": "v_suru",
+                  "id": "v_okiru",
                   "form": "te_form"
                 },
                 "v_asagohan",
