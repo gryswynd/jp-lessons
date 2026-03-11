@@ -1090,7 +1090,7 @@
       "notes": ""
     },
     {
-      "id": "k_nashi",
+      "id": "k_zoku",
       "lesson": "N4.7",
       "type": "kanji",
       "surface": "族",
@@ -1177,10 +1177,51 @@
       "surface": "親切",
       "meaning": "kind",
       "type": "vocab",
-      "gtype": "noun",
-      "notes": "",
+      "gtype": "na_adj",
+      "notes": "Na-adjective. 親切な人 (kind person); 親切です (is kind). Taught as 親切 (shinsetsu).",
       "lesson_ids": "N4.7",
       "reading": "しんせつ"
+    },
+    {
+      "id": "v_shuumatsu",
+      "surface": "週末",
+      "meaning": "weekend",
+      "type": "vocab",
+      "gtype": "noun",
+      "notes": "末 kanji is not introduced in any lesson; always write as 週まつ in content.",
+      "lesson_ids": "N4.7",
+      "reading": "しゅうまつ",
+      "matches": ["週まつ"]
+    },
+    {
+      "id": "v_oya",
+      "surface": "親",
+      "meaning": "parent(s)",
+      "type": "vocab",
+      "gtype": "noun",
+      "notes": "Refers to one's own parent(s). Plain/informal. Polite forms: お父さん, お母さん.",
+      "lesson_ids": "N4.7",
+      "reading": "おや"
+    },
+    {
+      "id": "v_imouto",
+      "surface": "妹",
+      "meaning": "younger sister (own)",
+      "type": "vocab",
+      "gtype": "noun",
+      "notes": "Used when referring to one's own younger sister. Polite/referring to others' younger sister: 妹さん.",
+      "lesson_ids": "N4.7",
+      "reading": "いもうと"
+    },
+    {
+      "id": "v_otouto",
+      "surface": "弟",
+      "meaning": "younger brother (own)",
+      "type": "vocab",
+      "gtype": "noun",
+      "notes": "Used when referring to one's own younger brother. Polite/referring to others' younger brother: 弟さん.",
+      "lesson_ids": "N4.7",
+      "reading": "おとうと"
     },
     {
       "id": "k_aki",
