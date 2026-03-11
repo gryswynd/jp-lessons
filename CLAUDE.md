@@ -1785,8 +1785,9 @@ This ensures students engage with new grammar patterns using familiar words, red
 | N5.1–N5.9 | 0 | 100% polite | G9 not yet available. All conversations use です/ます register. |
 | N5.10–N5.13 | 1 | ~75% polite, ~25% casual | First casual conversations. Keep them simple — friends/family contexts. |
 | N5.14–N5.18 | 1–2 | ~60% polite, ~40% casual | Expand casual contexts: classmates, siblings, close colleagues. |
-| N4.1–N4.18 | 2 | ~50% polite, ~50% casual | Balanced exposure. Casual in personal contexts, polite in service/formal contexts. |
-| N4.19–N4.36 | 2–3 | ~50% polite, ~50% casual | Same balance. Context drives register, not a fixed ratio. |
+| N4.1–N4.12 | 1 | ~75% polite, ~25% casual | Early N4 grammar (potential, passive, conditionals) is cognitively demanding — keep casual light so new forms are modeled in polite register first. |
+| N4.13–N4.24 | 1–2 | ~60% polite, ~40% casual | Grammar becoming familiar; ramp casual gradually. Context drives register. |
+| N4.25–N4.36 | 2 | ~50% polite, ~50% casual | Balanced exposure by late N4. Casual in personal contexts, polite in service/formal contexts. |
 
 ### Casual conversation rules
 
