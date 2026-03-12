@@ -160,6 +160,177 @@
       "verb_class": "na_adj",
       "lesson_ids": "N3.1",
       "notes": "念 (N3.1) + 入 (N5.5). 念入りに準備する = to prepare carefully."
+    },
+    {
+      "id": "k_tashika",
+      "lesson": "N3.2",
+      "type": "kanji",
+      "surface": "確",
+      "on": "かく",
+      "kun": "たしか/たしかめる",
+      "reading": "たしか",
+      "meaning": "certain / confirm",
+      "notes": ""
+    },
+    {
+      "id": "k_mitomeru",
+      "lesson": "N3.2",
+      "type": "kanji",
+      "surface": "認",
+      "on": "にん",
+      "kun": "みとめる",
+      "reading": "みとめる",
+      "meaning": "recognize / acknowledge",
+      "notes": ""
+    },
+    {
+      "id": "k_shiraberu",
+      "lesson": "N3.2",
+      "type": "kanji",
+      "surface": "調",
+      "on": "ちょう",
+      "kun": "しらべる/ととのえる",
+      "reading": "しらべる",
+      "meaning": "investigate / tune / adjust",
+      "notes": ""
+    },
+    {
+      "id": "k_ayamaru",
+      "lesson": "N3.2",
+      "type": "kanji",
+      "surface": "誤",
+      "on": "ご",
+      "kun": "あやまる",
+      "reading": "あやまる",
+      "meaning": "mistake / error",
+      "notes": ""
+    },
+    {
+      "id": "v_shiraberu",
+      "surface": "調べる",
+      "reading": "しらべる",
+      "meaning": "to investigate / to look up / to examine",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.2",
+      "notes": "調べる is one of the most common verbs for research/checking. インターネットで調べる = look it up online."
+    },
+    {
+      "id": "v_mitomeru",
+      "surface": "認める",
+      "reading": "みとめる",
+      "meaning": "to recognize / to acknowledge / to admit",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.2",
+      "notes": "間違いを認める = to admit a mistake."
+    },
+    {
+      "id": "v_tashikameru",
+      "surface": "確かめる",
+      "reading": "たしかめる",
+      "meaning": "to make sure / to verify / to confirm",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.2",
+      "notes": "もう一度確かめる = to check one more time."
+    },
+    {
+      "id": "v_ayamaru_err",
+      "surface": "誤る",
+      "reading": "あやまる",
+      "meaning": "to make a mistake / to err",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.2",
+      "notes": "Not to be confused with 謝る (あやまる, to apologize). 判断を誤る = to misjudge."
+    },
+    {
+      "id": "v_tashika",
+      "surface": "確か",
+      "reading": "たしか",
+      "meaning": "certain / sure / if I remember correctly",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.2",
+      "notes": "確かに = certainly/indeed. Also used sentence-initially as 'if I'm not mistaken': 確か、明日は休みだ。"
+    },
+    {
+      "id": "v_ayamari",
+      "surface": "誤り",
+      "reading": "あやまり",
+      "meaning": "error / mistake",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.2",
+      "notes": "Formal/written alternative to 間違い. 誤りを正す = to correct an error."
+    },
+    {
+      "id": "v_kakunin",
+      "surface": "確認",
+      "reading": "かくにん",
+      "meaning": "confirmation / verification",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.2",
+      "notes": "確 (N3.2) + 認 (N3.2). する verb: 確認する = to confirm/verify. Very common in business and daily life."
+    },
+    {
+      "id": "v_choushi",
+      "surface": "調子",
+      "reading": "ちょうし",
+      "meaning": "condition / state / tune",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.2",
+      "notes": "調 (N3.2) + 子 (N5.1). 調子がいい = in good shape/working well. 調子が悪い = not feeling well / out of order."
+    },
+    {
+      "id": "v_seikaku",
+      "surface": "正確",
+      "reading": "せいかく",
+      "meaning": "accurate / precise / exact",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.2",
+      "notes": "正 (N4.26) + 確 (N3.2). 正確な時間 = the exact time. 正確に答える = to answer accurately."
+    },
+    {
+      "id": "v_meikaku",
+      "surface": "明確",
+      "reading": "めいかく",
+      "meaning": "clear / definite / explicit",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.2",
+      "notes": "明 (N4.3) + 確 (N3.2). 明確な答え = a clear answer."
+    },
+    {
+      "id": "v_kyouchou",
+      "surface": "強調",
+      "reading": "きょうちょう",
+      "meaning": "emphasis / stress",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.2",
+      "notes": "強 (N4.18) + 調 (N3.2). する verb: 強調する = to emphasize."
+    },
+    {
+      "id": "v_goji",
+      "surface": "誤字",
+      "reading": "ごじ",
+      "meaning": "typo / wrong character",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.2",
+      "notes": "誤 (N3.2) + 字 (N4.22). 誤字がある = there's a typo."
     }
   ]
 }
