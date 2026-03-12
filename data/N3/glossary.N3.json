@@ -1,0 +1,165 @@
+{
+  "contentVersion": "1.0.0",
+  "entries": [
+    {
+      "id": "k_wasureru",
+      "lesson": "N3.1",
+      "type": "kanji",
+      "surface": "忘",
+      "on": "ぼう",
+      "kun": "わすれる",
+      "reading": "わすれる",
+      "meaning": "forget",
+      "notes": ""
+    },
+    {
+      "id": "k_oboeru",
+      "lesson": "N3.1",
+      "type": "kanji",
+      "surface": "覚",
+      "on": "かく",
+      "kun": "おぼえる/さめる/さます",
+      "reading": "おぼえる",
+      "meaning": "memorize / awake",
+      "notes": "Three kun-readings: おぼえる (memorize), さめる (wake up intransitive), さます (wake up transitive)."
+    },
+    {
+      "id": "k_nen",
+      "lesson": "N3.1",
+      "type": "kanji",
+      "surface": "念",
+      "on": "ねん",
+      "kun": "",
+      "reading": "ねん",
+      "meaning": "thought / sense / feeling",
+      "notes": "Primarily used in compounds: 念入り (careful), 記念 (memorial), 残念 (regrettable)."
+    },
+    {
+      "id": "k_nareru",
+      "lesson": "N3.1",
+      "type": "kanji",
+      "surface": "慣",
+      "on": "かん",
+      "kun": "なれる/ならす",
+      "reading": "なれる",
+      "meaning": "accustomed",
+      "notes": ""
+    },
+    {
+      "id": "v_wasureru",
+      "surface": "忘れる",
+      "reading": "わすれる",
+      "meaning": "to forget",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.1",
+      "notes": ""
+    },
+    {
+      "id": "v_oboeru",
+      "surface": "覚える",
+      "reading": "おぼえる",
+      "meaning": "to memorize / to remember",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.1",
+      "notes": "覚える = commit to memory (learning). Contrast with 思い出す = recall from memory."
+    },
+    {
+      "id": "v_sameru",
+      "surface": "覚める",
+      "reading": "さめる",
+      "meaning": "to wake up / to come to one's senses",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.1",
+      "notes": "Intransitive — the subject wakes up on their own. 目が覚める (eyes open / wake up). Contrast with 覚ます (transitive)."
+    },
+    {
+      "id": "v_samasu",
+      "surface": "覚ます",
+      "reading": "さます",
+      "meaning": "to wake someone up / to bring to one's senses",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.1",
+      "notes": "Transitive — someone wakes another person/thing. 目を覚ます (wake someone up). Contrast with 覚める (intransitive)."
+    },
+    {
+      "id": "v_nareru",
+      "surface": "慣れる",
+      "reading": "なれる",
+      "meaning": "to get used to / to grow accustomed to",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.1",
+      "notes": "Takes に: 日本の生活に慣れる (get used to life in Japan)."
+    },
+    {
+      "id": "v_wasuremono",
+      "surface": "忘れ物",
+      "reading": "わすれもの",
+      "meaning": "forgotten item / lost property",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.1",
+      "notes": "忘 (N3.1) + 物 (N4.5). Common at train stations and schools."
+    },
+    {
+      "id": "v_bounenkai",
+      "surface": "忘年会",
+      "reading": "ぼうねんかい",
+      "meaning": "year-end party / end-of-year gathering",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.1",
+      "notes": "忘 (N3.1) + 年 (N5.4) + 会 (N5.17). Lit. forget-year-gathering. A major social tradition in Japanese workplaces and friend groups."
+    },
+    {
+      "id": "v_shuukan",
+      "surface": "習慣",
+      "reading": "しゅうかん",
+      "meaning": "habit / custom",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.1",
+      "notes": "習 (N4.32) + 慣 (N3.1). 生活習慣 = lifestyle habits."
+    },
+    {
+      "id": "v_jikaku",
+      "surface": "自覚",
+      "reading": "じかく",
+      "meaning": "self-awareness / consciousness",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.1",
+      "notes": "自 (N4.11) + 覚 (N3.1). 自覚がある = to be self-aware."
+    },
+    {
+      "id": "v_mezamashi",
+      "surface": "目覚まし",
+      "reading": "めざまし",
+      "meaning": "alarm clock",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.1",
+      "notes": "目 (N5.18) + 覚ます (N3.1). Lit. eye-opener. Short for 目覚まし時計."
+    },
+    {
+      "id": "v_neniri",
+      "surface": "念入り",
+      "reading": "ねんいり",
+      "meaning": "careful / thorough / meticulous",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.1",
+      "notes": "念 (N3.1) + 入 (N5.5). 念入りに準備する = to prepare carefully."
+    }
+  ]
+}
