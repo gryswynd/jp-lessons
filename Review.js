@@ -768,7 +768,7 @@
 
       // Conversation Render
       if (q.type === 'conversation_quiz') {
-        var convLines = q.lines.map(l => l.jp);
+        var convLines = q.lines.map(l => ({ jp: l.jp, terms: l.terms }));
         html += `<button class="jp-speak-all-btn" data-tts-play-all="conversation">\uD83D\uDD0A Play Conversation</button>`;
         this._ttsLines = convLines;
         html += `<div class="jp-passage">`;
@@ -786,7 +786,7 @@
       }
       // Reading Passage Render
       else if (q.type === 'reading_mcq') {
-        var passageLines = q.passage.map(p => p.jp);
+        var passageLines = q.passage.map(p => ({ jp: p.jp, terms: p.terms }));
         html += `<button class="jp-speak-all-btn" data-tts-play-all="passage">\uD83D\uDD0A Play Passage</button>`;
         this._ttsLines = passageLines;
         html += `<div class="jp-passage">`;
@@ -813,11 +813,16 @@
       stage.innerHTML = html;
 
       // Wire up sentence-level TTS buttons
+      var reviewTermMap = this.state.termMap;
       stage.querySelectorAll('.jp-speak-sentence[data-tts-idx]').forEach(btn => {
         btn.onclick = () => {
           var idx = parseInt(btn.getAttribute('data-tts-idx'), 10);
-          if (this._ttsLines && this._ttsLines[idx]) {
-            window.JPShared.tts.speak(this._ttsLines[idx]);
+          var entry = this._ttsLines && this._ttsLines[idx];
+          if (!entry) return;
+          if (typeof entry === 'string') {
+            window.JPShared.tts.speak(entry);
+          } else {
+            window.JPShared.tts.speak(entry.jp, { terms: entry.terms, termMap: reviewTermMap });
           }
         };
       });
@@ -838,7 +843,7 @@
             setPlaying(false);
           } else {
             setPlaying(true);
-            window.JPShared.tts.speakLines(self._ttsLines, { onFinish: function() { setPlaying(false); } });
+            window.JPShared.tts.speakLines(self._ttsLines, { termMap: reviewTermMap, onFinish: function() { setPlaying(false); } });
           }
         };
       }

@@ -10,6 +10,10 @@
  *   - Mobile-optimized with retry logic and timeout protection
  *   - Pronunciation preprocessing for common TTS edge cases
  *   - onFinish callback for play/stop button integration
+ *   - Reading resolver: fixes kanji-compound mispronunciations via a two-tier
+ *     system — (1) terms-aware pass using glossary reading fields when terms
+ *     context is available, (2) static override map for 50+ commonly misread
+ *     compounds (何時→なんじ, 今日→きょう, etc.) applied unconditionally
  *
  * Load this file before any feature module scripts.
  */
@@ -119,26 +123,206 @@
     [/名まえ/g, 'なまえ']
   ];
 
+  // --- Static reading overrides ---
+  // Kanji compounds whose correct reading TTS engines frequently get wrong.
+  // Applied before the は-particle fix. Entries are sorted longest-first so
+  // that longer compounds (e.g. 二十日) are replaced before their substrings
+  // (e.g. 十日, 日) can be touched.
+  //
+  // Key rule: only include words where the TTS default reading is wrong for
+  // JLPT lesson content. Do NOT add entries that TTS already reads correctly.
+  var staticOverrides = [
+    // --- Time questions (most critical: 何時 is read as いつ "when" by default) ---
+    ['何時間', 'なんじかん'],   // how many hours  — longer compound first
+    ['何時ごろ', 'なんじごろ'], // what time (around)
+    ['何時', 'なんじ'],         // what time  ← the confirmed bug trigger
+    ['何分', 'なんぷん'],       // what minute / how many minutes
+    ['何日', 'なんにち'],       // what day / how many days
+    ['何人', 'なんにん'],       // how many people
+    ['何回', 'なんかい'],       // how many times
+    ['何本', 'なんぼん'],       // how many (long objects)
+    ['何枚', 'なんまい'],       // how many (flat objects)
+    ['何冊', 'なんさつ'],       // how many (books)
+    ['何匹', 'なんびき'],       // how many (small animals)
+    ['何杯', 'なんばい'],       // how many cups/glasses
+    ['何台', 'なんだい'],       // how many (machines/vehicles)
+    ['何歳', 'なんさい'],       // how old
+    // --- Calendar dates: ordinal date readings that TTS often mispronounces ---
+    ['二十日', 'はつか'],       // 20th / 20 days
+    ['十四日', 'じゅうよっか'], // 14th
+    ['二十四日', 'にじゅうよっか'], // 24th
+    ['十日', 'とおか'],         // 10th / 10 days
+    ['三日', 'みっか'],         // 3rd / 3 days
+    ['四日', 'よっか'],         // 4th / 4 days
+    ['八日', 'ようか'],         // 8th / 8 days
+    ['九日', 'ここのか'],       // 9th / 9 days
+    ['七日', 'なのか'],         // 7th / 7 days  (vs しちにち)
+    ['六日', 'むいか'],         // 6th / 6 days
+    ['五日', 'いつか'],         // 5th / 5 days
+    ['二日', 'ふつか'],         // 2nd / 2 days
+    ['一日', 'いちにち'],       // one day       (ついたち for 1st of month is rare in lessons)
+    // --- Time/calendar words with notoriously wrong TTS defaults ---
+    ['今日', 'きょう'],         // today    (TTS may say こんにち)
+    ['明日', 'あした'],         // tomorrow (TTS may say あす or みょうにち)
+    ['昨日', 'きのう'],         // yesterday (TTS may say さくじつ)
+    ['今朝', 'けさ'],           // this morning
+    ['今年', 'ことし'],         // this year (TTS may say こんねん)
+    ['去年', 'きょねん'],       // last year (TTS may say こぞ)
+    ['今夜', 'こんや'],         // tonight
+    ['今晩', 'こんばん'],       // this evening
+    // --- Counting people ---
+    ['二人', 'ふたり'],         // two people (vs ににん)
+    ['一人', 'ひとり'],         // one person (vs いちにん)
+    // --- Skill/ability nouns ---
+    ['上手', 'じょうず'],       // good at (vs うわて)
+    ['下手', 'へた'],           // bad at  (vs したて)
+    // --- Common nouns ---
+    ['大人', 'おとな'],         // adult (vs だいじん)
+    ['今週', 'こんしゅう'],     // this week
+    ['先週', 'せんしゅう'],     // last week
+    ['来週', 'らいしゅう'],     // next week
+    ['先月', 'せんげつ'],       // last month
+    ['来月', 'らいげつ'],       // next month
+    ['来年', 'らいねん'],       // next year
+    ['毎日', 'まいにち'],       // every day
+    ['毎週', 'まいしゅう'],     // every week
+    ['毎月', 'まいつき'],       // every month  (vs まいげつ)
+    ['毎年', 'まいとし'],       // every year   (vs まいねん)
+    ['毎朝', 'まいあさ'],       // every morning
+    ['毎晩', 'まいばん'],       // every evening
+    ['今月', 'こんげつ']        // this month
+  ];
+
+  // Build sorted-longest-first replacement pairs once at module load.
+  // We use literal string matching (not regex) for the override map so that
+  // special-regex characters in surface forms are never a problem.
+  var _overridePairs = (function () {
+    var pairs = staticOverrides.slice();
+    pairs.sort(function (a, b) { return b[0].length - a[0].length; });
+    return pairs;
+  }());
+
+  /**
+   * Apply static override map to text.
+   * Scans left-to-right, replacing the longest matching surface first.
+   * Characters already replaced are not re-examined.
+   */
+  function applyStaticOverrides(text) {
+    // Simple left-to-right scan with longest-match.
+    // Build a result array of characters/substitutions.
+    var out = '';
+    var i = 0;
+    var len = text.length;
+    outer: while (i < len) {
+      for (var p = 0; p < _overridePairs.length; p++) {
+        var surface = _overridePairs[p][0];
+        var reading = _overridePairs[p][1];
+        if (text.substr(i, surface.length) === surface) {
+          out += reading;
+          i += surface.length;
+          continue outer;
+        }
+      }
+      out += text[i];
+      i++;
+    }
+    return out;
+  }
+
+  /**
+   * Build a surface→reading map from a terms array + termMap.
+   * Only entries that have both surface and reading fields are included.
+   * Longer surfaces are placed first so applyReadingsMap does longest-match.
+   *
+   * @param {Array} terms   - Line's terms array (strings or {id,form} objects)
+   * @param {Object} termMap - The app's shared termMap (id → term entry)
+   * @returns {Array} Array of [surface, reading] pairs sorted longest-first
+   */
+  function buildReadingsFromTerms(terms, termMap) {
+    if (!terms || !termMap) return [];
+    var pairs = [];
+    var seen = {};
+    for (var i = 0; i < terms.length; i++) {
+      var t = terms[i];
+      var id = (typeof t === 'string') ? t : (t && t.id);
+      if (!id || seen[id]) continue;
+      seen[id] = true;
+      var entry = termMap[id];
+      if (!entry || !entry.surface || !entry.reading) continue;
+      // Only override if surface contains kanji (kana-only entries read fine)
+      if (!/[\u4E00-\u9FFF]/.test(entry.surface)) continue;
+      // Don't add if surface === reading (already kana)
+      if (entry.surface === entry.reading) continue;
+      pairs.push([entry.surface, entry.reading]);
+    }
+    pairs.sort(function (a, b) { return b[0].length - a[0].length; });
+    return pairs;
+  }
+
+  /**
+   * Apply a surface→reading pairs array to text, longest-match-first.
+   * Same algorithm as applyStaticOverrides but takes a dynamic pairs array.
+   *
+   * @param {string} text
+   * @param {Array}  pairs - [[surface, reading], ...] sorted longest-first
+   * @returns {string}
+   */
+  function applyReadingsMap(text, pairs) {
+    if (!pairs || pairs.length === 0) return text;
+    var out = '';
+    var i = 0;
+    var len = text.length;
+    outer: while (i < len) {
+      for (var p = 0; p < pairs.length; p++) {
+        var surface = pairs[p][0];
+        var reading = pairs[p][1];
+        if (text.substr(i, surface.length) === surface) {
+          out += reading;
+          i += surface.length;
+          continue outer;
+        }
+      }
+      out += text[i];
+      i++;
+    }
+    return out;
+  }
+
   // Words where は is NOT a particle (must not be converted to わ)
   // Includes common words starting with は and words containing は mid-word
   var haWordPatterns = /^(は[いじめなしか]|はし|はこ|はたらく|はたち|はる|はれ|はん|はなし|はなす|はや|はず|はっきり|はんぶん)|こんにちは$|こんばんは$|では|には|ごはん|おはよう/;
 
-  function preprocessForTTS(text) {
+  /**
+   * Preprocess text for TTS. Applies fixes in this order:
+   *   1. Per-line terms-aware readings (most precise — uses glossary reading field)
+   *   2. Static reading overrides (kanji compounds with wrong TTS defaults)
+   *   3. Partial-kanji readingFixes (day-of-week, etc.)
+   *   4. は particle pronunciation correction
+   *
+   * @param {string} text
+   * @param {Array}  [termPairs] - Optional [[surface, reading], ...] from buildReadingsFromTerms()
+   * @returns {string}
+   */
+  function preprocessForTTS(text, termPairs) {
     if (!text) return text;
 
-    // Apply known reading fixes for partial-kanji words
+    // 1. Terms-aware substitution (highest priority — comes from lesson data)
+    if (termPairs && termPairs.length > 0) {
+      text = applyReadingsMap(text, termPairs);
+    }
+
+    // 2. Static overrides for commonly mispronounced kanji compounds
+    text = applyStaticOverrides(text);
+
+    // 3. Apply known reading fixes for partial-kanji words
     for (var i = 0; i < readingFixes.length; i++) {
       text = text.replace(readingFixes[i][0], readingFixes[i][1]);
     }
 
-    // Fix は particle pronunciation: replace は with わ when it's a particle
+    // 4. Fix は particle pronunciation: replace は with わ when it's a particle
     // Strategy: split on は, check context to decide particle vs word-internal
     text = text.replace(/([\u4E00-\u9FFF\u30A0-\u30FF\u3040-\u309Fー])は(?=[\u4E00-\u9FFF\u30A0-\u30FF\u3040-\u309Fー、。！？\s]|$)/g,
       function(match, preceding) {
-        // Check if this は is part of a known word ending
-        // Get some context: look at what precedes
-        // こんにちは、こんばんは — these end in は pronounced "ha"
-        // We handle these in a second pass below
         return preceding + 'わ';
       }
     );
@@ -163,8 +347,8 @@
       return;
     }
 
-    // Preprocess for pronunciation
-    var processed = preprocessForTTS(text);
+    // Preprocess for pronunciation (opts.termPairs carries terms-aware readings)
+    var processed = preprocessForTTS(text, opts.termPairs);
     var token = cancelToken;
 
     try {
@@ -252,7 +436,20 @@
     }
     var token = cancelToken;
     var chunk = chunkQueue.shift();
-    speakOne(chunk, options, function () {
+
+    // chunk is either a plain string or a {text, termPairs} object
+    var chunkText, chunkOpts;
+    if (typeof chunk === 'string') {
+      chunkText = chunk;
+      chunkOpts = options;
+    } else {
+      chunkText = chunk.text;
+      chunkOpts = chunk.termPairs
+        ? Object.assign({}, options, { termPairs: chunk.termPairs })
+        : options;
+    }
+
+    speakOne(chunkText, chunkOpts, function () {
       // Bail out if cancelled during playback
       if (token !== cancelToken) return;
       // Small pause between sentences for natural rhythm
@@ -270,11 +467,19 @@
      * Speak a Japanese string. For short text (single words/sentences),
      * plays directly. For long text, automatically chunks on sentence boundaries.
      *
+     * Pronunciation resolution order (highest → lowest priority):
+     *   1. options.terms + options.termMap → reading field from the app's glossary
+     *   2. Built-in static overrides for commonly mispronounced kanji compounds
+     *   3. Partial-kanji readingFixes (day names, etc.)
+     *   4. は particle correction
+     *
      * @param {string} text
      * @param {Object} [options]
      * @param {string} [options.lang='ja-JP']
-     * @param {number} [options.rate]   - Overrides user preference if set
+     * @param {number} [options.rate]     - Overrides user preference if set
      * @param {number} [options.volume=1.0]
+     * @param {Array}  [options.terms]    - Line's terms array (ids or {id,form} objects)
+     * @param {Object} [options.termMap]  - App's shared termMap (id → glossary entry)
      */
     speak: function (text, options) {
       // Cancel any ongoing speech/chunking
@@ -282,16 +487,23 @@
 
       if (!text || !text.trim()) return;
 
+      var opts = options || {};
       var trimmed = text.trim();
+
+      // Build terms-aware reading pairs if caller provided terms context
+      var termPairs = (opts.terms && opts.termMap)
+        ? buildReadingsFromTerms(opts.terms, opts.termMap)
+        : null;
+      var speakOpts = termPairs ? Object.assign({}, opts, { termPairs: termPairs }) : opts;
 
       // If text is short enough, speak directly
       if (trimmed.length <= 200) {
-        speakOne(trimmed, options);
+        speakOne(trimmed, speakOpts);
       } else {
         // Chunk and play sequentially
         chunkQueue = splitIntoChunks(trimmed);
         isChunking = true;
-        playChunkQueue(options);
+        playChunkQueue(speakOpts);
       }
     },
 
@@ -299,9 +511,17 @@
      * Speak multiple lines sequentially (for conversations).
      * Each line is spoken one after another with a pause between.
      *
-     * @param {string[]} lines - Array of Japanese text strings
+     * Supports two input formats:
+     *   - Simple: string[] — each element is plain Japanese text
+     *   - Rich:   {jp, terms}[] — each element carries jp text + its terms array
+     *
+     * When the rich format is used and options.termMap is provided, each line's
+     * terms array is resolved against the glossary for accurate pronunciation.
+     *
+     * @param {string[]|{jp:string, terms:Array}[]} lines
      * @param {Object} [options]
-     * @param {Function} [options.onFinish] - Called when all lines finish or playback is stopped
+     * @param {Function} [options.onFinish]  - Called when all lines finish or stopped
+     * @param {Object}   [options.termMap]   - App's shared termMap for rich format
      */
     speakLines: function (lines, options) {
       this.cancel();
@@ -313,7 +533,28 @@
         onFinishCallback = opts.onFinish;
       }
 
-      chunkQueue = lines.filter(function (l) { return l && l.trim(); });
+      var hasTermMap = !!(opts.termMap);
+
+      // Normalize to [{text, termPairs}] entries for the chunk queue
+      chunkQueue = [];
+      for (var i = 0; i < lines.length; i++) {
+        var line = lines[i];
+        var jp, termPairs;
+        if (typeof line === 'string') {
+          jp = line;
+          termPairs = null;
+        } else if (line && line.jp) {
+          jp = line.jp;
+          termPairs = (hasTermMap && line.terms)
+            ? buildReadingsFromTerms(line.terms, opts.termMap)
+            : null;
+        } else {
+          continue;
+        }
+        if (!jp || !jp.trim()) continue;
+        chunkQueue.push(termPairs ? { text: jp, termPairs: termPairs } : jp);
+      }
+
       isChunking = true;
       playChunkQueue(opts);
     },
@@ -395,9 +636,20 @@
     /**
      * Preprocess text for TTS (exposed for testing/debugging).
      * @param {string} text
+     * @param {Array}  [termPairs] - Optional [[surface, reading], ...] pairs
      * @returns {string}
      */
-    preprocess: preprocessForTTS
+    preprocess: preprocessForTTS,
+
+    /**
+     * Build a surface→reading pairs array from a terms array + termMap.
+     * Exposed so callers can pre-compute pairs once and reuse them.
+     *
+     * @param {Array}  terms   - Line's terms array (strings or {id,form} objects)
+     * @param {Object} termMap - The app's shared termMap (id → glossary entry)
+     * @returns {Array} [[surface, reading], ...] sorted longest-first
+     */
+    buildReadings: buildReadingsFromTerms
 
   };
 

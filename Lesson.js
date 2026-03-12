@@ -299,16 +299,16 @@ window.LessonModule = {
 
     function renderConversation(sec) {
         const div = el("div", ""); div.appendChild(createToggle());
-        const allJp = [];
+        const allLines = [];
         // Play/Stop toggle button
         const playAllBtn = el("button", "jp-speak-all-btn", "\uD83D\uDD0A Play Conversation");
         div.appendChild(playAllBtn);
         (sec.lines || []).forEach(line => {
-          allJp.push(line.jp);
+          allLines.push({ jp: line.jp, terms: line.terms });
           const row = el("div", "jp-row");
           row.innerHTML = `<div class="jp-speaker-bubble" translate="no">${line.spk}</div><div style="flex:1;display:flex;align-items:flex-start;"><div style="flex:1"><div class="jp-jp">${window.JPShared.textProcessor.processText(line.jp, line.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(line.en)}</div></div><button class="jp-speak-sentence" title="Listen">\uD83D\uDD0A</button></div>`;
           const speakBtn = row.querySelector('.jp-speak-sentence');
-          speakBtn.onclick = () => window.JPShared.tts.speak(line.jp);
+          speakBtn.onclick = () => window.JPShared.tts.speak(line.jp, { terms: line.terms, termMap: termMapData });
           div.appendChild(row);
         });
         function setPlaying(playing) {
@@ -321,7 +321,7 @@ window.LessonModule = {
             setPlaying(false);
           } else {
             setPlaying(true);
-            window.JPShared.tts.speakLines(allJp, { onFinish: () => setPlaying(false) });
+            window.JPShared.tts.speakLines(allLines, { termMap: termMapData, onFinish: () => setPlaying(false) });
           }
         };
         return div;
@@ -332,7 +332,7 @@ window.LessonModule = {
         (sec.items || []).forEach((item, idx) => {
             const row = el("div", "jp-row");
             row.innerHTML = `<div class="jp-speaker-bubble" translate="no">${idx+1}</div><div style="flex:1;display:flex;align-items:flex-start;"><div style="flex:1"><div class="jp-jp">${window.JPShared.textProcessor.processText(item.jp, item.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(item.en)}</div></div><button class="jp-speak-sentence" title="Listen">\uD83D\uDD0A</button></div>`;
-            row.querySelector('.jp-speak-sentence').onclick = () => window.JPShared.tts.speak(item.jp);
+            row.querySelector('.jp-speak-sentence').onclick = () => window.JPShared.tts.speak(item.jp, { terms: item.terms, termMap: termMapData });
             div.appendChild(row);
         });
         return div;
@@ -423,7 +423,7 @@ window.LessonModule = {
 
     function renderReading(sec) {
         const div = el("div", ""); div.appendChild(createToggle());
-        const allJp = (sec.passage || []).map(p => p.jp);
+        const allPassageLines = (sec.passage || []).map(p => ({ jp: p.jp, terms: p.terms }));
         // Play/Stop toggle button
         const playAllBtn = el("button", "jp-speak-all-btn", "\uD83D\uDD0A Play Passage");
         function setPlaying(playing) {
@@ -436,7 +436,7 @@ window.LessonModule = {
             setPlaying(false);
           } else {
             setPlaying(true);
-            window.JPShared.tts.speakLines(allJp, { onFinish: () => setPlaying(false) });
+            window.JPShared.tts.speakLines(allPassageLines, { termMap: termMapData, onFinish: () => setPlaying(false) });
           }
         };
         div.appendChild(playAllBtn);
@@ -444,7 +444,7 @@ window.LessonModule = {
         (sec.passage || []).forEach(p => {
             const pDiv = el("div", "");
             pDiv.innerHTML = `<div style="display:flex;align-items:flex-start;"><div style="flex:1"><div class="jp-jp" style="margin-bottom:8px;">${window.JPShared.textProcessor.processText(p.jp, p.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">${esc(p.en)}</div></div><button class="jp-speak-sentence" title="Listen">\uD83D\uDD0A</button></div>`;
-            pDiv.querySelector('.jp-speak-sentence').onclick = () => window.JPShared.tts.speak(p.jp);
+            pDiv.querySelector('.jp-speak-sentence').onclick = () => window.JPShared.tts.speak(p.jp, { terms: p.terms, termMap: termMapData });
             pCard.appendChild(pDiv);
         });
         div.appendChild(pCard);
