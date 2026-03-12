@@ -142,7 +142,7 @@ Rewrite notes: [empty on first pass; filled by Agent 4 feedback]
 
 ### Sentence Token Scan Protocol
 
-**Definition:** The Sentence Token Scan Protocol (STSP) is a mandatory left-to-right audit of every `jp` or `passage` string. It must be applied to **every** jp field in every section — conversations, readings, warmup items, drills, and reading questions — without exception.
+**Definition:** The Sentence Token Scan Protocol (STSP) is a mandatory left-to-right audit of every `jp` or `passage` string. It must be applied to **every** jp field in every section — conversations, readings, warmup items, drills, and reading questions — without exception. This includes **reviews** (conversation lines, reading passages, question answers, scramble segments) and the **conversation and reading sections of Final Interactive Reviews** (game days). It does **not** apply to Grammar JSON (grammar garden) — grammar lessons use `parts[]` with `text`/`role`/`gloss` fields, not a `jp` + `terms[]` tagging system, and are covered by the Grammar Accuracy Audit instead.
 
 **Procedure (apply to each `jp` string individually):**
 
@@ -1644,7 +1644,7 @@ When the user requests a rewrite of an existing lesson (rather than creating new
 
 **Agent 1 scoping step for refreshes:** After reading the original lesson, run a targeted Grep for every vocab ID used in the original against the glossary. Flag any ID that either (a) doesn't exist in the glossary, or (b) has `lesson_ids` later than the current lesson. List these as "out-of-scope replacements needed" in the Content Brief, along with candidate replacement vocabulary from within scope.
 
-**Sentence Token Scan Protocol applies to all rewrites.** When Agent 2 builds the refreshed content, the STSP must be applied to every jp/passage field — including fields carried forward from the original file unchanged. Treat every jp string in the original as unaudited; the previous version may predate current tagging standards. Agent 3 must perform the STSP during QA of all refreshed content and may not give the original a "previously passing" exemption.
+**Sentence Token Scan Protocol applies to all rewrites.** When Agent 2 builds the refreshed content, the STSP must be applied to every jp/passage field — including fields carried forward from the original file unchanged. Treat every jp string in the original as unaudited; the previous version may predate current tagging standards. Agent 3 must perform the STSP during QA of all refreshed content and may not give the original a "previously passing" exemption. This applies equally to lesson, review, and game day (Final Interactive Review) rewrites — anywhere jp + terms[] tagging is used. Grammar garden rewrites are governed by the Grammar Accuracy Audit, not the STSP.
 
 ---
 
