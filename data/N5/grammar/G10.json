@@ -2,514 +2,739 @@
   "contentVersion": "1.0.0",
   "id": "G10",
   "type": "grammar",
-  "title": "i-Adjective Conjugation",
+  "title": "Plain Forms & Basic Connectors",
   "meta": {
     "level": "N5",
-    "unlocksAfter": "N5.10",
-    "focus": "Full i-adjective conjugation paradigm: past tense (-かった), negative (-くない), te-form (-くて), adverb (-く), and the ～すぎる 'too much' form — all derived from the い-stem. Plus the critical irregular: いい changes to よ- in all conjugated forms.",
-    "estimatedMinutes": 25,
-    "particles": [],
-    "grammarForms": ["polite_adj", "polite_past_adj", "plain_negative", "plain_past", "plain_past_negative", "te_form", "adverbial", "conditional_ba"],
-    "icon": "🎨"
+    "unlocksAfter": "N5.9",
+    "focus": "The pivotal transition to plain-form speech: forming plain negative and past-negative, connecting clauses with が/けど (but) and から/ので (because), plain commands, and the なんです explanatory form.",
+    "estimatedMinutes": 30,
+    "particles": ["p_ga_but", "p_kara_because", "p_kedo"],
+    "grammarForms": ["plain_past", "plain_negative", "plain_past_negative"],
+    "icon": "👋"
   },
   "sections": [
     {
       "type": "grammarIntro",
-      "title": "The i-Adjective System — One Stem, Many Forms",
-      "icon": "🎨",
-      "summary": "You have already used い-adjectives in their basic polite form: 高いです (is expensive), 大きいです (is big). But い-adjectives have a rich conjugation system built on one simple operation: remove い and attach a new ending. Every form you will learn in this lesson — past, negative, te-form, adverb — follows this rule.",
-      "whyItMatters": "Describing the world in Japanese requires you to move beyond present tense. Was something expensive? Was the weather good yesterday? Is something too big? All of these require conjugated adjective forms. Without them, you are limited to describing only the present state of things. With them, you can narrate past events, connect descriptions into flowing sentences, and express nuanced judgements.",
+      "title": "From Polite to Real Japanese — Plain Forms Unlocked",
+      "icon": "👋",
+      "summary": "So far you have used polite verb endings: ます, ました, ません. These are correct and respectful — but they are not the only forms Japanese uses. Real conversation, subordinate clauses, connectors, and most writing all rely on plain forms. This lesson unlocks the full plain-form system.",
+      "whyItMatters": "Plain forms are not 'casual slang' — they are the grammatical foundation of Japanese. Relative clauses (the food I ate), reported speech (she said she went), conditionals, and reason clauses all require plain form, even in polite contexts. Mastering plain forms is the single most important step toward fluency after the polite basics.",
       "youWillLearn": [
-        "Past tense: 高かったです (was expensive) — remove い, add かったです",
-        "Negative: 高くない / 高くないです (is not expensive) — remove い, add くない",
-        "Past negative: 高くなかったです (was not expensive) — remove い, add くなかったです",
-        "て-form connector: 高くて (is expensive and…) — remove い, add くて",
-        "Adverb form: 高く (expensively / at a high level) — remove い, add く",
-        "Too much: 高すぎる (too expensive) — remove い, add すぎる",
-        "Conditional: 高ければ (if expensive) — remove い, add ければ",
-        "⚠ CRITICAL EXCEPTION: いい → よ- stem. よかった (was good), NOT いかった"
+        "Plain negative: 食べない, 飲まない, しない, こない — how to say 'don't do' in plain speech",
+        "Plain past negative: 食べなかった — how to say 'didn't do' in plain speech",
+        "が and けど — formal and casual ways to say 'but' and link contrasting clauses",
+        "から and ので — two ways to say 'because', each with different nuance and formality",
+        "Plain commands (～ろ/～え) and plain prohibition (～な) — with strong register warnings",
+        "なんです/のです — the explanatory form that softens statements and invites understanding"
       ]
     },
     {
       "type": "grammarTable",
-      "title": "i-Adjective Conjugation Chart",
-      "description": "Every form uses the same stem operation: remove the final い, then attach the ending. The only exception is いい (good), which uses the よ- stem for all conjugated forms.",
+      "title": "The Four Plain Forms — Complete Verb Chart",
+      "description": "Every Japanese verb has four plain forms. You already know the plain present (dictionary form) and plain past (た-form from G7). This lesson adds the plain negative (ない) and plain past negative (なかった).",
       "tableType": "conjugation",
-      "headers": ["Form", "⚠ いい → よ- stem!", "高い (takai)", "大きい (ookii)"],
+      "headers": ["Form", "食べる (RU-verb)", "飲む (U-verb)", "する (irregular)", "くる (irregular)"],
       "rows": [
         {
-          "label": "Plain (dictionary)",
-          "cells": ["いい", "高い", "大きい"],
-          "meaning": "is ~"
+          "label": "Plain Present (dictionary)",
+          "cells": ["食べる", "飲む", "する", "くる"],
+          "meaning": "do / will do"
         },
         {
-          "label": "Polite present",
-          "cells": ["いいです", "高いです", "大きいです"],
-          "meaning": "is ~ (polite)"
+          "label": "Plain Past (G7 た-form)",
+          "cells": ["食べた", "飲んだ", "した", "きた"],
+          "meaning": "did"
         },
         {
-          "label": "★ Polite past",
-          "cells": ["よかったです", "高かったです", "大きかったです"],
-          "meaning": "was ~"
+          "label": "★ Plain Negative (ない)",
+          "cells": ["食べない", "飲まない", "しない", "こない"],
+          "meaning": "don't do"
         },
         {
-          "label": "Plain negative",
-          "cells": ["よくない", "高くない", "大きくない"],
-          "meaning": "is not ~"
-        },
-        {
-          "label": "Polite negative",
-          "cells": ["よくないです", "高くないです", "大きくないです"],
-          "meaning": "is not ~ (polite)"
-        },
-        {
-          "label": "Past negative",
-          "cells": ["よくなかったです", "高くなかったです", "大きくなかったです"],
-          "meaning": "was not ~"
-        },
-        {
-          "label": "て-form (connector)",
-          "cells": ["よくて", "高くて", "大きくて"],
-          "meaning": "is ~ and…"
-        },
-        {
-          "label": "★ Adverb form",
-          "cells": ["よく", "高く", "大きく"],
-          "meaning": "in a ~ way / ~ly"
-        },
-        {
-          "label": "★ Too much (すぎる)",
-          "cells": ["よすぎる", "高すぎる", "大きすぎる"],
-          "meaning": "too ~"
-        },
-        {
-          "label": "Conditional (ければ)",
-          "cells": ["よければ", "高ければ", "大きければ"],
-          "meaning": "if ~ / as long as ~"
+          "label": "★ Plain Past Negative (なかった)",
+          "cells": ["食べなかった", "飲まなかった", "しなかった", "こなかった"],
+          "meaning": "didn't do"
         }
       ],
       "notes": [
-        "The stem operation is always: remove い → attach ending. 高い → 高(stem) → 高かった / 高く / 高くて etc.",
-        "いい is the only irregular い-adjective. Its stem is よ-, not い-. NEVER write いかった, いくない, いくて. Always: よかった, よくない, よくて.",
-        "Polite forms add です to the plain conjugated form: 高かった + です = 高かったです.",
-        "The て-form connects adjectives: 天気が よくて、気分が いいです (The weather is nice and my mood is good).",
-        "すぎる attaches to the stem directly (same as く): 高すぎる = too expensive. This form is itself a verb (る-verb) and can be conjugated: 高すぎます (polite), 高すぎました (past polite)."
+        "Polite equivalents: 食べます / 食べました / 食べません / 食べませんでした. Plain forms are shorter and used in casual speech and subordinate clauses.",
+        "来る (くる) is fully irregular: present くる, past きた, negative こない, past-neg こなかった.",
+        "ある has a special irregular plain negative: ない (not あらない). ある → ない is the most important exception to memorize.",
+        "Plain forms are required: (1) in casual speech with friends/family, (2) inside subordinate clauses, (3) before connectors like けど, から, ので, and conditional forms."
       ]
     },
     {
       "type": "grammarRule",
-      "id": "rule_ii_exception",
+      "id": "rule_plain_negative",
       "pattern": [
-        { "label": "DICTIONARY", "color": "verb", "text": "いい" },
-        { "label": "⚠ STEM → よ-", "color": "predicate", "text": "いい → よ-" },
-        { "label": "✓ PAST", "color": "predicate", "text": "よかったです ✓" },
-        { "label": "✗ WRONG", "color": "modifier", "text": "いかったです ✗ (NEVER)" }
+        { "label": "RU-VERB", "color": "verb", "text": "食べる → 食べない" },
+        { "label": "U-VERB", "color": "modifier", "text": "飲む → 飲まない" },
+        { "label": "SPECIAL U", "color": "modifier", "text": "買う → 買わない" },
+        { "label": "IRREGULAR", "color": "predicate", "text": "する→しない / くる→こない / ある→ない" }
       ],
-      "meaning": "いい → よ- stem exception — the most important rule in this lesson",
-      "explanation": "いい (good) is the only irregular い-adjective. In its dictionary form it looks like a normal い-adjective, but when you remove い to conjugate it, you do NOT get い- as the stem. Instead, the stem is **よ-**.\n\n**The rule: いい → よ (for all conjugated forms)**\n\n| Form | いい (CORRECT) | いい (WRONG) |\n|---|---|---|\n| Past | **よかったです** | ~~いかったです~~ |\n| Negative | **よくない** | ~~いくない~~ |\n| Past negative | **よくなかったです** | ~~いくなかったです~~ |\n| て-form | **よくて** | ~~いくて~~ |\n| Adverb | **よく** | ~~いく~~ (sounds like 行く!) |\n| Too much | **よすぎる** | ~~いすぎる~~ |\n| Conditional | **よければ** | ~~いければ~~ |\n\n**Why does this happen?** いい is actually a contracted form of the older adjective よい (also meaning good/nice). All conjugated forms derive from よい, not from いい. In modern Japanese, よい still exists and is used in formal writing — but in everyday speech, the plain form いい is standard. The key takeaway: dictionary form = いい; everything else = よ- stem.",
+      "meaning": "Plain negative — 'don't do / is not'",
+      "explanation": "Plain negative formation follows three rules depending on verb type:\n\n**RU-verbs (ichidan):** Drop る, add ない.\n食べる → 食べない. 来る (ichidan) → actually irregular: こない.\n\n**U-verbs (godan):** Shift the final sound to the あ-column of its row, then add ない.\n飲む → 飲ま+ない = 飲まない (む→ま is the あ-column of む's row)\n行く → 行か+ない = 行かない (く→か)\n\n⚠️ **Special exception — う → わ + ない:**\nGodan verbs ending in vowel+う shift to わ (NOT to あ).\n買う → 買わない (not 買あない). 言う → 言わない.\n\n**Irregulars (memorize):**\nする → しない\nくる → こない\nある → ない ⚠ The plain negative of ある is simply ない — not あらない.",
       "notes": [
-        "よい (formal) and いい (standard) both mean 'good'. In plain speech and writing, よい sounds formal and stiff. In everyday conversation, always use いい for the dictionary form.",
-        "In polite speech, よかったです (great/it was good!) is one of the most frequently used expressions. Memorize it as a whole phrase first.",
-        "よく (adverb 'well / often') is the adverb of いい. It does NOT sound like the verb 行く (to go) in context: よく行きます = 'I often go', よく食べました = 'I ate well'.",
-        "There are no other irregular い-adjectives. ALL other い-adjectives follow the regular pattern. If you see a new い-adjective, you can always conjugate it regularly."
+        "あ-column shifts for godan: く→か, ぐ→が, す→さ, つ→た, ぬ→な, ぶ→ば, む→ま, る→ら. Each is the 'a' vowel of that consonant's row.",
+        "The う→わ exception: 買う→買わない, 言う→言わない. Any godan verb ending in う after a consonant follows this rule.",
+        "ある→ない is the most common exception. ある means 'there is'; ない means 'there is not / does not exist'.",
+        "Plain past negative: take the plain negative, remove い, add かった. 食べない → 食べなかった. This follows い-adjective past conjugation rules."
       ],
       "examples": [
         {
           "parts": [
-            { "text": "今日の 天気は", "role": "topic", "gloss": "today's weather (topic)" },
-            { "text": "よかったです。", "role": "predicate", "gloss": "was good (よ-stem + かったです)" }
+            { "text": "コーヒーを", "role": "modifier", "gloss": "coffee (object)" },
+            { "text": "飲ま", "role": "verb", "gloss": "drink (あ-col shift)—" },
+            { "text": "ない。", "role": "predicate", "gloss": "don't" }
           ],
-          "en": "Today's weather was good.",
-          "breakdown": "いい → よ- stem + かったです = よかったです. Common spoken expression of relief or satisfaction."
+          "en": "I don't drink coffee.",
+          "breakdown": "飲む (godan む): む → ま (あ-column) + ない = 飲まない."
         },
         {
           "parts": [
-            { "text": "電気が", "role": "topic", "gloss": "electricity (subject)" },
-            { "text": "あって", "role": "modifier", "gloss": "there is and… (te-form of ある)" },
-            { "text": "よかったです。", "role": "predicate", "gloss": "was good — it's great that…" }
+            { "text": "カレーを", "role": "modifier", "gloss": "curry (object)" },
+            { "text": "買わ", "role": "verb", "gloss": "buy (special う)—" },
+            { "text": "ない。", "role": "predicate", "gloss": "don't" }
           ],
-          "en": "It's great that there's electricity.",
-          "breakdown": "よかったです expresses relief or gladness: 'it was good that X happened'. One of the most natural uses of いい past tense."
+          "en": "I don't buy curry.",
+          "breakdown": "買う (godan う): う → わ (special exception) + ない = 買わない. Never 買あない."
         },
         {
           "parts": [
-            { "text": "あの 電車は", "role": "topic", "gloss": "that train (topic)" },
-            { "text": "よく", "role": "modifier", "gloss": "well / often (adverb form of いい)" },
-            { "text": "来ます。", "role": "predicate", "gloss": "comes (polite)" }
+            { "text": "コンビニに", "role": "modifier", "gloss": "at the convenience store" },
+            { "text": "カレーが", "role": "topic", "gloss": "curry (subject)" },
+            { "text": "ない。", "role": "predicate", "gloss": "does not exist" }
           ],
-          "en": "That train comes often.",
-          "breakdown": "よく is the adverb form of いい — meaning 'well' or 'often'. 高い→高く (expensively), 大きい→大きく (largely), いい→よく (often/well)."
+          "en": "There is no curry at the convenience store.",
+          "breakdown": "ある → ない (fully irregular). The negative of ある (there is) is just ない (there isn't) — not あらない."
+        }
+      ]
+    },
+    {
+      "type": "grammarComparison",
+      "title": "Polite Forms vs. Plain Forms — When to Use Each",
+      "items": [
+        {
+          "label": "Polite (ます/ません/ませんでした)",
+          "color": "predicate",
+          "points": [
+            "Used with strangers, teachers, in shops, at school — any non-intimate context",
+            "Ends in ます (present), ました (past), ません (negative), ませんでした (past neg)",
+            "Always appropriate — the safe default for learners",
+            "Cannot be used inside subordinate clauses (relative clauses, conditionals, etc.)"
+          ],
+          "example": {
+            "parts": [
+              { "text": "食べ", "role": "verb", "gloss": "eat—" },
+              { "text": "ません", "role": "predicate", "gloss": "polite negative" },
+              { "text": " → food は 食べません", "role": "modifier", "gloss": "formal: I don't eat..." }
+            ],
+            "en": "食べません (polite) — I don't eat."
+          }
+        },
+        {
+          "label": "Plain (dictionary / ない / なかった)",
+          "color": "modifier",
+          "points": [
+            "Used with close friends and family, in writing, in subordinate clauses",
+            "Ends in dictionary form (present), た (past), ない (negative), なかった (past neg)",
+            "The grammatical base — all other forms derive from it",
+            "Required in subordinate clauses even in otherwise polite sentences"
+          ],
+          "example": {
+            "parts": [
+              { "text": "食べ", "role": "verb", "gloss": "eat—" },
+              { "text": "ない", "role": "predicate", "gloss": "plain negative" },
+              { "text": " / 食べ", "role": "verb", "gloss": "eat—" },
+              { "text": "なかった", "role": "predicate", "gloss": "plain past neg" }
+            ],
+            "en": "食べない (plain) / 食べなかった (plain past neg)"
+          }
         }
       ]
     },
     {
       "type": "grammarRule",
-      "id": "rule_adverb_sugiru",
+      "id": "rule_ga_kedo",
       "pattern": [
-        { "label": "STEM", "color": "verb", "text": "高い → 高(stem)" },
-        { "label": "+ く → ADVERB", "color": "modifier", "text": "高く (at a high level)" },
-        { "label": "+ すぎる → TOO MUCH", "color": "predicate", "text": "高すぎる (too expensive)" }
+        { "label": "CLAUSE A", "color": "modifier", "text": "行きたいです" },
+        { "label": "+ が (formal)", "color": "predicate", "text": "行きたいですが、…" },
+        { "label": "+ けど (casual)", "color": "modifier", "text": "行きたいけど、…" }
       ],
-      "meaning": "Adverb form ～く and 'too much' ～すぎる",
-      "explanation": "The い-stem (remove い) has two additional useful functions beyond conjugation: creating adverbs and expressing excess.\n\n**Adverb form (～く):**\nRemove い, add く. The adjective becomes an adverb that modifies a verb:\n- 高い → 高く: 高く 売っています (selling expensively)\n- 大きい → 大きく: 大きく 書いてください (please write it large)\n- いい → よく: よく 来ます (comes often)\n\nAdverbs modify verbs and come directly before them.\n\n**Too much (～すぎる):**\nRemove い, add すぎる. Expresses that something exceeds a comfortable or acceptable limit:\n- 高い → 高すぎる: これは 高すぎます (this is too expensive)\n- 大きい → 大きすぎる: 大きすぎます (it's too big)\n- いい → よすぎる: よすぎる ことは ない (there's no such thing as too good)\n\nすぎる is itself a ru-verb (一段動詞), so it conjugates further:\n- 高すぎる → 高すぎます (polite) / 高すぎました (past polite) / 高すぎない (plain negative)\n\n⚠️ **Note on すぎる spelling:** There is no space between the adjective stem and すぎる. Write 高すぎる, not 高く すぎる.",
+      "meaning": "が / けど — 'but / however' (clause connector)",
+      "explanation": "が and けど both mean 'but' when connecting two clauses with a contrasting or softening relationship. They differ in register:\n\n**が (formal/neutral):** Attaches directly to the end of a clause in polite or plain form. Common in formal speech, writing, and polite conversation.\n行きたいですが、お金がありません。(I want to go, but I have no money.)\n\n**けど / けれど (casual/softer):** The informal equivalent of が. Attaches to plain form. Common in conversation with friends and family. けれど is slightly more formal than けど.\n行きたいけど、お金がない。(I want to go but I have no money.) — casual\n\n⚠️ **Important: do not confuse clause-linking が with subject-marker が (G2).** They use the same particle but have completely different functions.\n- Subject marker: カレーが おいしい (curry is delicious) — が marks the subject\n- Clause connector: 行きたいですが、… (I want to go, but…) — が links two clauses mid-sentence",
       "notes": [
-        "Adverb form (く): modifies verbs. 高く 買いました (I bought it at a high price). Placed directly before the verb it modifies.",
-        "すぎる conjugates as a regular ru-verb. In polite speech: 高すぎます. In past: 高すぎました. The base form 高すぎる is the plain (dictionary) form.",
-        "す ぎる can also attach to verbs and noun/adjective stems: 食べすぎる (eat too much), 元気すぎる (too energetic).",
-        "て-form of い-adjectives (高くて) is extremely useful for connecting two descriptions: 電車は 長くて、高いです (the train is long and expensive). The て-form takes all the conjugation burden — the second adjective stays in its base or polite form."
+        "が as clause connector attaches mid-sentence. It does NOT start a new sentence. 行きたいですが、… is one sentence.",
+        "Both が and けど can soften a statement by leaving the second clause implicit: 行きたいですが… (I want to go, but [implied: I can't]). Trailing が/けど is very common in polite requests.",
+        "けど is grammatically correct in all casual contexts — not slang. けれど is its more literary/formal written form.",
+        "Register guide: 行きたいですが (formal) > 行きたいですけど (semi-formal) > 行きたいけど (casual) > 行きたいけどさ (very casual)."
       ],
       "examples": [
         {
           "parts": [
-            { "text": "この 電車は", "role": "topic", "gloss": "this train (topic)" },
-            { "text": "高くて、", "role": "modifier", "gloss": "expensive and… (て-form connector)" },
-            { "text": "長いです。", "role": "predicate", "gloss": "long (polite)" }
+            { "text": "カレーは", "role": "topic", "gloss": "curry (topic)" },
+            { "text": "おいしいですが、", "role": "modifier", "gloss": "is delicious but" },
+            { "text": "高いです。", "role": "predicate", "gloss": "is expensive" }
           ],
-          "en": "This train is expensive and long.",
-          "breakdown": "高い → 高くて (て-form) connects to the next description. 長いです ends the sentence in polite form. Only the last adjective needs the polite ending."
+          "en": "Curry is delicious, but it is expensive.",
+          "breakdown": "Polite form + が: おいしいです + が + 高いです. Formal register — appropriate with teachers, in shops, etc."
         },
         {
           "parts": [
-            { "text": "電気代が", "role": "topic", "gloss": "the electricity bill (subject)" },
-            { "text": "高すぎます。", "role": "predicate", "gloss": "too expensive (polite sugiru)" }
+            { "text": "カレーは", "role": "topic", "gloss": "curry (topic)" },
+            { "text": "おいしいけど、", "role": "modifier", "gloss": "delicious but" },
+            { "text": "高い。", "role": "predicate", "gloss": "expensive" }
           ],
-          "en": "The electricity bill is too expensive.",
-          "breakdown": "高い → 高(stem) + すぎる = 高すぎる (plain). Polite: 高すぎます. Expresses that the expense exceeds what is comfortable."
-        },
-        {
-          "parts": [
-            { "text": "天気が", "role": "topic", "gloss": "weather (subject)" },
-            { "text": "よくて、", "role": "modifier", "gloss": "good and… (て-form of いい)" },
-            { "text": "気分が", "role": "topic", "gloss": "mood (subject)" },
-            { "text": "いいです。", "role": "predicate", "gloss": "good (polite present)" }
-          ],
-          "en": "The weather is nice and my mood is good.",
-          "breakdown": "いい → よ(stem) + くて = よくて. The connector て-form links two i-adjective descriptions naturally."
+          "en": "Curry is delicious, but it's expensive. (casual)",
+          "breakdown": "Plain form + けど: おいしい (plain) + けど + 高い (plain). Casual register — appropriate with friends."
         }
       ]
     },
     {
-      "type": "annotatedExample",
-      "title": "Adjectives in Context — Reading a Sentence",
+      "type": "grammarRule",
+      "id": "rule_kara_node",
+      "pattern": [
+        { "label": "REASON CLAUSE", "color": "modifier", "text": "おいしいから / おいしいので" },
+        { "label": "+ MAIN CLAUSE", "color": "predicate", "text": "よく 食べます。" }
+      ],
+      "meaning": "から / ので — 'because / since' (reason connector)",
+      "explanation": "Both から and ので mean 'because' and connect a reason clause to a main clause. In Japanese, the reason clause comes FIRST.\n\n**から (direct/personal):** Attaches to plain or polite form. Common in both casual and polite speech. Presents the reason as the speaker's personal interpretation.\nカレーが おいしいから、よく 食べます。(Because curry is delicious, I often eat it.)\nカレーが おいしいですから、よく 食べます。(polite form + から)\n\n**ので (soft/objective):** Attaches to plain form before ので. For nouns and な-adjectives, insert な before ので. More formal, objective, and indirect than から. Preferred in writing and polite speech when the reason is a shared/natural fact.\nカレーが おいしいので、よく 食べます。(same meaning, softer tone)\n\n⚠️ **Note on から:** You already know から as a starting-point particle (G3): 東京から = 'from Tokyo'. This is a different usage — the same particle word, but working as a clause connector meaning 'because'. Context always makes the meaning clear.",
+      "notes": [
+        "Word order: [REASON] + から/ので + [RESULT]. Opposite of English! 'Because A, B' = AだからB / AなのでB.",
+        "Plain form + から: most natural in casual speech. Polite form + から: appropriate in polite speech.",
+        "ので + na-adjective / noun: noun + な + ので (e.g. 先生なので = because [he] is a teacher).",
+        "ので is softer and implies the reason is obvious or shared — slightly less assertive than から.",
+        "から as connector vs から as 'from': 駅から = 'from the station' (location); 高いから = 'because it is expensive' (reason). Both are grammatically correct uses of から."
+      ],
       "examples": [
         {
-          "context": "Past polite + contrast が — 長かったですが",
           "parts": [
-            { "text": "電車は", "role": "topic", "gloss": "train (topic: は)" },
-            { "text": "長かったですが、", "role": "predicate", "gloss": "was long — but (長い → 長かったです, polite past; が = contrast connector)" }
+            { "text": "カレーが", "role": "topic", "gloss": "curry (subject)" },
+            { "text": "おいしいから、", "role": "modifier", "gloss": "because delicious" },
+            { "text": "よく", "role": "modifier", "gloss": "often" },
+            { "text": "食べます。", "role": "predicate", "gloss": "eat (polite)" }
           ],
-          "en": "The train was long, but…",
-          "note": "い-adj past polite: drop い → add かったです. 長い → 長かったです. The clause-final が connects to the next clause with a 'but' nuance."
+          "en": "Because curry is delicious, I often eat it.",
+          "breakdown": "Plain adj (おいしい) + から + main clause. Reason comes first. から is direct and natural."
         },
         {
-          "context": "て-form connector — よくて (irregular いい → よ- stem)",
           "parts": [
-            { "text": "山の", "role": "modifier", "gloss": "mountain's (possessive: の)" },
-            { "text": "天気が", "role": "subject", "gloss": "weather (subject: が)" },
-            { "text": "よくて", "role": "connector", "gloss": "good and… (いい → te-form: よ + くて — irregular stem よ-)" }
+            { "text": "コンビニが", "role": "topic", "gloss": "convenience store (subject)" },
+            { "text": "ありますので、", "role": "modifier", "gloss": "because there is one (formal)" },
+            { "text": "大丈夫です。", "role": "predicate", "gloss": "it's fine" }
           ],
-          "en": "…the mountain weather was nice and…",
-          "note": "いい is irregular — its stem is よ- in all conjugated forms. Te-form: いい → よくて. Compare regular い-adj: 長い → 長くて."
+          "en": "Since there is a convenience store, it is fine.",
+          "breakdown": "Polite form (あります) + ので. Softer and more formal than から. Used when the reason is a natural/given fact."
+        }
+      ]
+    },
+    {
+      "type": "grammarComparison",
+      "title": "から vs ので — Same Meaning, Different Nuance",
+      "items": [
+        {
+          "label": "から — Direct / Personal",
+          "color": "predicate",
+          "points": [
+            "More direct and assertive — the speaker takes ownership of the reason",
+            "Natural in both casual and polite speech",
+            "Can attach to plain form (casual) or polite form",
+            "Common when explaining your own decisions or feelings"
+          ],
+          "example": {
+            "parts": [
+              { "text": "高いから、", "role": "modifier", "gloss": "because it's expensive" },
+              { "text": "買いません。", "role": "predicate", "gloss": "won't buy (polite)" }
+            ],
+            "en": "Because it's expensive, I won't buy it."
+          }
         },
         {
-          "context": "Past polite — よかったです (irregular いい → よ- stem)",
-          "parts": [
-            { "text": "気分が", "role": "subject", "gloss": "mood / feeling (subject: が)" },
-            { "text": "よかったです。", "role": "predicate", "gloss": "was good (いい → past polite: よ + かったです)" }
+          "label": "ので — Soft / Objective",
+          "color": "modifier",
+          "points": [
+            "Softer and more indirect — the reason feels like a natural, shared fact",
+            "Preferred in formal writing, business contexts, and polite requests",
+            "Attaches to plain form (or noun/na-adj + な + ので)",
+            "Gives the impression of stating an obvious or common-sense reason"
           ],
-          "en": "…my mood was good.",
-          "note": "Past polite: いい → よかったです. ⚠ Never いかったです — all conjugated forms of いい use the よ- stem."
+          "example": {
+            "parts": [
+              { "text": "高いので、", "role": "modifier", "gloss": "since it is expensive (soft)" },
+              { "text": "買いません。", "role": "predicate", "gloss": "won't buy (polite)" }
+            ],
+            "en": "Since it's expensive, I won't buy it. (softer)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_commands",
+      "pattern": [
+        { "label": "RU-VERB COMMAND", "color": "verb", "text": "食べろ！ (Eat!)" },
+        { "label": "U-VERB COMMAND", "color": "verb", "text": "行け！ (Go!)" },
+        { "label": "PROHIBITION", "color": "predicate", "text": "食べるな！ (Don't eat!)" }
+      ],
+      "meaning": "Plain command (～ろ/～え) and plain prohibition (～な) — blunt register",
+      "explanation": "Japanese has a plain imperative form for strong, direct commands. These are grammatically correct but extremely blunt and potentially rude.\n\n**Plain commands (～ろ/～え):**\n- RU-verbs (ichidan): drop る, add ろ → 食べる → 食べろ ('Eat!')\n- U-verbs (godan): shift to え-column → 行く → 行け ('Go!'), 飲む → 飲め ('Drink!')\n- する → しろ. くる → こい (unique irregular form).\n\n**Plain prohibition (dictionary form + な):**\n- Any verb + な = blunt prohibition: 食べるな ('Don't eat!'), 行くな ('Don't go!')\n- ⚠️ This な is different from the sentence-final な expressing mild prohibition; this one is very forceful.\n\n⚠️ **REGISTER WARNING — These forms sound harsh or rude in most situations.** Use them only:\n- In emergencies ('Stop!' 止まれ！)\n- In anime/manga or between very close friends joking\n- When imitating a drill sergeant or authority figure\n- In set expressions (e.g., 気をつけろ = 'Be careful!')\n\n**Polite equivalents:** Use ～てください (G7) for requests, and ～ないでください (G7) for prohibitions in everyday speech.",
+      "notes": [
+        "え-column shifts for U-verb commands: く→け, ぐ→げ, す→せ, つ→て, ぬ→ね, ぶ→べ, む→め, る→れ. Remember: the 'e' vowel of each row.",
+        "来い (こい) is the irregular command form of 来る. It is the only command form that does not follow the て or え pattern.",
+        "Plain prohibition: DICTIONARY FORM + な. 食べるな (don't eat). Compare: 食べるな (blunt) vs 食べないでください (polite request).",
+        "Do NOT confuse command 食べろ with volitional 食べよう ('let's eat') — they look similar but mean very different things."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "早く", "role": "modifier", "gloss": "quickly" },
+            { "text": "食べろ！", "role": "predicate", "gloss": "Eat! (blunt command)" }
+          ],
+          "en": "Eat quickly! (blunt — e.g., shouted in an anime scene)",
+          "breakdown": "食べる (ichidan): drop る → 食べ + ろ = 食べろ. Extremely direct — only use in appropriate contexts."
+        },
+        {
+          "parts": [
+            { "text": "走るな！", "role": "predicate", "gloss": "Don't run! (blunt prohibition)" }
+          ],
+          "en": "Don't run! (blunt — e.g., emergency warning)",
+          "breakdown": "走る (dictionary form) + な = prohibition. Much stronger than 走らないでください."
+        }
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_ndesu",
+      "pattern": [
+        { "label": "PLAIN FORM", "color": "modifier", "text": "おいしい / 行く / 先生だ" },
+        { "label": "+ のです", "color": "predicate", "text": "おいしいんです / 行くんです / 先生なんです" }
+      ],
+      "meaning": "のです / なんです — the explanatory / emphasis form",
+      "explanation": "のです (spoken/casual: んです) adds an explanatory or emphatic nuance. It signals that the speaker is providing a reason, explanation, or context — or asking for one.\n\n**Formation:**\n- Verb (plain form) + のです → 行くのです / 行くんです (I'm going, you see)\n- い-adjective (plain form) + のです → おいしいんです (It's delicious — that's why!)\n- Noun / な-adjective: insert な before のです → 先生なんです (The thing is, he's a teacher)\n\n**Contracted form:** のです → んです (common in speech). のです is more formal/written.\n\n**Uses:**\n1. **Explaining a reason:** どうして 外食を しませんか。— お金が ないんです。(Why won't you eat out? — The thing is, I have no money.)\n2. **Seeking an explanation (question):** どうして 行かないんですか。(Why is it that you're not going?)\n3. **Emphasizing a fact:** 本当においしいんです！(It really is delicious, I'm telling you!)\n4. **Softening a request:** 行きたいんですが、いいですか。(The thing is, I'd like to go — is that okay?)",
+      "notes": [
+        "な before のです is only required for nouns and な-adjectives. 先生 (noun) → 先生なんです. い-adjectives and verbs attach directly.",
+        "Negative form: ～ないんです or ～くないんです. 行かないんです = 'The thing is, I'm not going'.",
+        "んですが (trailing) is one of the most natural ways to make a request or introduce a topic politely: 外食を したいんですが、いっしょに 行きませんか。",
+        "だ (casual copula, G1) changes to な before の/ん: 学生だ → 学生なんだ (casual) / 学生なんです (polite)."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "お金が", "role": "topic", "gloss": "money (subject)" },
+            { "text": "ないんです。", "role": "predicate", "gloss": "don't have (explanatory)" }
+          ],
+          "en": "The thing is, I don't have money.",
+          "breakdown": "ない (plain negative of ある) + んです. This explains WHY something is happening or not happening."
+        },
+        {
+          "parts": [
+            { "text": "外食を", "role": "modifier", "gloss": "eating out (object)" },
+            { "text": "したいんですが、", "role": "modifier", "gloss": "I want to do but (explanatory)" },
+            { "text": "いっしょに 行きませんか。", "role": "predicate", "gloss": "shall we go together?" }
+          ],
+          "en": "The thing is, I want to eat out — shall we go together?",
+          "breakdown": "たいんですが trails off, inviting the listener to respond. A very natural way to make a polite suggestion or request."
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "かいわ: 天気と 気分 (Weather and Mood)",
-      "context": "Miki and Ren discuss yesterday's day trip to the mountains, reviewing their experience with adjective forms.",
+      "title": "かいわ 1: 外食しませんか — Formal Register (が/から)",
+      "context": "りきぞ and やまかわ are at school planning lunch. They use polite forms throughout, with が (but) and から (because) as natural connectors.",
       "lines": [
         {
-          "spk": "ミキ",
-          "jp": "きのうの 天気は よかったですね。",
-          "en": "Yesterday's weather was good, wasn't it.",
+          "spk": "やまかわ",
+          "jp": "今日は いっしょに 外食を しませんか。",
+          "en": "Today, shall we eat out together?",
           "terms": [
-            "v_kinou",
-            "p_no",
-            "v_tenki",
+            "v_kyou",
             "p_wa",
-            { "id": "v_ii", "form": "polite_past_adj" },
+            "v_issho",
+            "v_gaishoku",
+            "p_wo",
+            { "id": "v_suru", "form": "polite_negative" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "行きたいですが、お金が ありません。",
+          "en": "I want to go, but I have no money.",
+          "terms": [
+            { "id": "v_iku", "form": "desire_tai" },
+            "p_ga_but",
+            "v_okane",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_negative" }
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "コンビニへ 行きませんか。カレーも ありますよ。",
+          "en": "Shall we go to the convenience store? There is curry there too.",
+          "terms": [
+            "v_konbini",
+            "p_e",
+            { "id": "v_iku", "form": "polite_negative" },
+            "p_ka",
+            "v_karee",
+            "p_mo",
+            { "id": "v_aru", "form": "polite_masu" },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "カレーは おいしいですから、コンビニが いいですね。",
+          "en": "Since curry is delicious, the convenience store is a good idea.",
+          "terms": [
+            "v_karee",
+            "p_wa",
+            { "id": "v_oishii", "form": "polite_adj" },
+            "p_kara_because",
+            "v_konbini",
+            "p_ga",
+            { "id": "v_ii", "form": "polite_adj" },
             "p_ne"
           ]
         },
         {
-          "spk": "レン",
-          "jp": "ええ、山の 天気が よくて、気分も よかったです。",
-          "en": "Yes, the mountain weather was nice and my mood was also good.",
-          "terms": [
-            "v_yama",
-            "p_no",
-            "v_tenki",
-            "p_ga",
-            { "id": "v_ii", "form": "te_form" },
-            "v_kibun",
-            "p_mo",
-            { "id": "v_ii", "form": "polite_past_adj" }
-          ]
-        },
-        {
-          "spk": "ミキ",
-          "jp": "電車は 長かったですが、高くなかったです。",
-          "en": "The train was long, but it wasn't expensive.",
-          "terms": [
-            "v_densha",
-            "p_wa",
-            { "id": "v_nagai", "form": "polite_past_adj" },
-            "p_ga_but",
-            { "id": "v_takai", "form": "polite_past_adj" }
-          ]
-        },
-        {
-          "spk": "レン",
-          "jp": "そうですね。古いホテルも よかったですよ。",
-          "en": "Yes. The old hotel was also nice.",
+          "spk": "やまかわ",
+          "jp": "そうですね。いっしょに 行きましょう。",
+          "en": "Indeed. Let's go together.",
           "terms": [
             "p_soudesu",
             "p_ne",
-            "v_furui",
-            "v_hoteru",
-            "p_mo",
-            { "id": "v_ii", "form": "polite_past_adj" },
-            "p_yo"
+            "v_issho",
+            { "id": "v_iku", "form": "polite_volitional_mashou" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "かいわ 2: 外食しない？ — Casual Register (けど/plain forms)",
+      "context": "The same situation, now between close friends. They use plain verb forms and けど (but) instead of formal が. Notice how the register shifts while the topic stays the same.",
+      "lines": [
+        {
+          "spk": "やまかわ",
+          "jp": "今日、外食、しない？",
+          "en": "Today — going out to eat, right? (casual invitation)",
+          "terms": [
+            "v_kyou",
+            "v_gaishoku",
+            { "id": "v_suru", "form": "plain_negative" }
           ]
         },
         {
-          "spk": "ミキ",
-          "jp": "天気が よければ、また 行きたいです。",
-          "en": "If the weather is good, I want to go again.",
+          "spk": "りきぞ",
+          "jp": "行きたいですけど、お金が ない。",
+          "en": "I want to go, but I have no money.",
           "terms": [
-            "v_tenki",
+            { "id": "v_iku", "form": "desire_tai" },
+            "p_kedo",
+            "v_okane",
             "p_ga",
-            { "id": "v_ii", "form": "conditional_ba" },
-            "v_mata",
-            { "id": "v_iku", "form": "desire_tai" }
+            { "id": "v_aru", "form": "plain_negative" }
           ]
         },
         {
-          "spk": "レン",
-          "jp": "来週は どうですか。天気が よすぎると、人気が 高すぎますよ。",
-          "en": "How about next week? If the weather is too good, the popularity is too high.",
+          "spk": "やまかわ",
+          "jp": "コンビニに 行かない？",
+          "en": "How about going to the convenience store?",
           "terms": [
-            "v_raishuu",
+            "v_konbini",
+            "p_ni",
+            { "id": "v_iku", "form": "plain_negative" }
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "コンビニの カレーは おいしいよ。",
+          "en": "The convenience store curry is delicious, you know.",
+          "terms": [
+            "v_konbini",
+            "p_no",
+            "v_karee",
             "p_wa",
-            "v_dou",
-            "g_desu",
-            "p_ka",
-            "v_tenki",
-            "p_ga",
-            { "id": "v_ii", "form": "sugiru_form" },
-            "v_ninki",
-            "p_ga",
-            { "id": "v_takai", "form": "sugiru_form" },
+            "v_oishii",
             "p_yo"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "おいしいから、行きましょう。",
+          "en": "Since it's delicious, let's go.",
+          "terms": [
+            "v_oishii",
+            "p_kara_because",
+            { "id": "v_iku", "form": "polite_volitional_mashou" }
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "行く！",
+          "en": "Let's go! (casual affirmative)",
+          "terms": [
+            "v_iku"
           ]
         }
       ]
     },
     {
       "type": "conjugationDrill",
-      "title": "i-Adjective Conjugation Practice",
-      "instructions": "Convert each adjective to the target form. Pay careful attention to いい (irregular).",
+      "title": "Plain Negative Practice — Dictionary Form → ない",
+      "instructions": "Convert each verb to its plain negative form.",
       "items": [
         {
-          "verb": "いい",
-          "type": "irr_ii",
-          "reading": "いい",
-          "targetForm": "polite_past_adj",
-          "answer": "よかったです",
-          "answerReading": "よかったです",
-          "hint": "いい is irregular: stem is よ-, NOT い-. よ + かったです = よかったです",
-          "choices": ["よかったです", "いかったです", "いいでした", "よいでした"]
-        },
-        {
-          "verb": "高い",
-          "type": "i_adj",
-          "reading": "たかい",
-          "targetForm": "polite_past_adj",
-          "answer": "高かったです",
-          "answerReading": "たかかったです",
-          "hint": "Regular い-adj: remove い → 高(stem) + かったです = 高かったです",
-          "choices": ["高かったです", "高いでした", "高くなかったです", "高いです"]
-        },
-        {
-          "verb": "大きい",
-          "type": "i_adj",
-          "reading": "おおきい",
-          "targetForm": "te_form",
-          "answer": "大きくて",
-          "answerReading": "おおきくて",
-          "hint": "te-form of い-adj: remove い → 大き(stem) + くて = 大きくて",
-          "choices": ["大きくて", "大きいて", "大きくで", "大きかって"]
-        },
-        {
-          "verb": "長い",
-          "type": "i_adj",
-          "reading": "ながい",
+          "verb": "食べる",
+          "type": "ru",
+          "reading": "たべる",
           "targetForm": "plain_negative",
-          "answer": "長くない",
-          "answerReading": "ながくない",
-          "hint": "Plain negative: remove い → 長(stem) + くない = 長くない",
-          "choices": ["長くない", "長いない", "長かない", "長くありません"]
+          "answer": "食べない",
+          "answerReading": "たべない",
+          "hint": "RU-verb: drop る, add ない → 食べ + ない",
+          "choices": ["食べない", "食べます", "食べて", "食べた"]
         },
         {
-          "verb": "古い",
-          "type": "i_adj",
-          "reading": "ふるい",
-          "targetForm": "adverbial",
-          "answer": "古く",
-          "answerReading": "ふるく",
-          "hint": "Adverb form: remove い → 古(stem) + く = 古く",
-          "choices": ["古く", "古い", "古くて", "古かった"]
+          "verb": "飲む",
+          "type": "u",
+          "reading": "のむ",
+          "targetForm": "plain_negative",
+          "answer": "飲まない",
+          "answerReading": "のまない",
+          "hint": "U-verb む: shift to あ-column (む→ま), add ない → 飲ま + ない",
+          "choices": ["飲まない", "飲みない", "飲んない", "飲むない"]
         },
         {
-          "verb": "おいしい",
-          "type": "i_adj",
-          "reading": "おいしい",
-          "targetForm": "sugiru_form",
-          "answer": "おいしすぎる",
-          "answerReading": "おいしすぎる",
-          "hint": "Too much: remove い → おいし(stem) + すぎる = おいしすぎる",
-          "choices": ["おいしすぎる", "おいしいすぎる", "おいしくすぎる", "おいしすぎます"]
+          "verb": "行く",
+          "type": "u",
+          "reading": "いく",
+          "targetForm": "plain_negative",
+          "answer": "行かない",
+          "answerReading": "いかない",
+          "hint": "U-verb く: shift to あ-column (く→か), add ない → 行か + ない",
+          "choices": ["行かない", "行きない", "行いて", "行くない"]
         },
         {
-          "verb": "いい",
-          "type": "irr_ii",
-          "reading": "いい",
-          "targetForm": "conditional_ba",
-          "answer": "よければ",
-          "answerReading": "よければ",
-          "hint": "いい conditional: stem よ- + ければ = よければ. NOT いければ!",
-          "choices": ["よければ", "いければ", "いいば", "よいば"]
+          "verb": "買う",
+          "type": "u",
+          "reading": "かう",
+          "targetForm": "plain_negative",
+          "answer": "買わない",
+          "answerReading": "かわない",
+          "hint": "U-verb う (special): う → わ + ない. Never 買あない!",
+          "choices": ["買わない", "買いない", "買うない", "買あない"]
         },
         {
-          "verb": "新しい",
-          "type": "i_adj",
-          "reading": "あたらしい",
-          "targetForm": "polite_past_adj",
-          "answer": "新しかったです",
-          "answerReading": "あたらしかったです",
-          "hint": "Regular い-adj: remove い → 新し(stem) + かったです = 新しかったです",
-          "choices": ["新しかったです", "新しいでした", "新しくなかったです", "あたらしかったです"]
+          "verb": "する",
+          "type": "irregular",
+          "reading": "する",
+          "targetForm": "plain_negative",
+          "answer": "しない",
+          "answerReading": "しない",
+          "hint": "する is irregular: する → しない (memorize)",
+          "choices": ["しない", "すない", "せない", "するない"]
+        },
+        {
+          "verb": "くる",
+          "type": "irregular",
+          "reading": "くる",
+          "targetForm": "plain_negative",
+          "answer": "こない",
+          "answerReading": "こない",
+          "hint": "くる is irregular: くる → こない (memorize)",
+          "choices": ["こない", "くない", "きない", "くるない"]
+        },
+        {
+          "verb": "ある",
+          "type": "irregular",
+          "reading": "ある",
+          "targetForm": "plain_negative",
+          "answer": "ない",
+          "answerReading": "ない",
+          "hint": "ある is fully irregular: ある → ない (not あらない!)",
+          "choices": ["ない", "あらない", "ありない", "あらなかった"]
         }
       ]
     },
     {
       "type": "sentenceTransform",
-      "title": "Adjective Form Conversion",
-      "instructions": "Transform the given adjective expression to the target form shown.",
+      "title": "Polite to Plain — Register Conversion",
+      "instructions": "Transform each polite form into its plain equivalent, or combine two clauses using the connector shown.",
       "items": [
         {
-          "given": "いいです",
-          "givenLabel": "Polite present",
-          "targetLabel": "Polite past",
-          "answer": "よかったです",
-          "choices": ["よかったです", "いかったです", "いいでした", "よいでした"]
+          "given": "食べます",
+          "givenLabel": "Polite Present",
+          "targetLabel": "Plain Present (dictionary form)",
+          "answer": "食べる",
+          "choices": ["食べる", "食べない", "食べた", "食べます"]
         },
         {
-          "given": "高いです",
-          "givenLabel": "Polite present",
-          "targetLabel": "Polite negative",
-          "answer": "高くないです",
-          "choices": ["高くないです", "高いないです", "高くありません", "高くなかったです"]
+          "given": "行きません",
+          "givenLabel": "Polite Negative",
+          "targetLabel": "Plain Negative",
+          "answer": "行かない",
+          "choices": ["行かない", "行きません", "行かなかった", "行かれない"]
         },
         {
-          "given": "大きいです",
-          "givenLabel": "Polite present",
-          "targetLabel": "Polite past negative",
-          "answer": "大きくなかったです",
-          "choices": ["大きくなかったです", "大きいなかったです", "大きくありませんでした", "大きかったないです"]
+          "given": "来ました",
+          "givenLabel": "Polite Past",
+          "targetLabel": "Plain Past",
+          "answer": "来た",
+          "choices": ["来た", "来ます", "来なかった", "来て"]
         },
         {
-          "given": "天気が いいです。気分が いいです。",
-          "givenLabel": "Two separate sentences",
-          "targetLabel": "Combine into one sentence using the て-form connector",
-          "answer": "天気が よくて、気分が いいです。",
+          "given": "カレーは おいしいです。高いです。",
+          "givenLabel": "Two separate polite sentences",
+          "targetLabel": "Combine with が (formal 'but')",
+          "answer": "カレーは おいしいですが、高いです。",
           "choices": [
-            "天気が よくて、気分が いいです。",
-            "天気が いいて、気分が いいです。",
-            "天気が よかって、気分が いいです。",
-            "天気が いいけど、気分が いいです。"
-          ]
-        },
-        {
-          "given": "電車が 高いです。",
-          "givenLabel": "Polite present",
-          "targetLabel": "Express 'too expensive' (polite)",
-          "answer": "電車が 高すぎます。",
-          "choices": [
-            "電車が 高すぎます。",
-            "電車が 高くすぎます。",
-            "電車が 高いすぎます。",
-            "電車が 高すぎる。"
+            "カレーは おいしいですが、高いです。",
+            "カレーは おいしいから、高いです。",
+            "カレーは おいしいので、高いです。",
+            "カレーは おいしいけど、高い。"
           ]
         }
       ]
     },
     {
+      "type": "fillSlot",
+      "title": "Which Connector Fits? — が / けど / から / ので",
+      "items": [
+        {
+          "before": "行きたいです",
+          "slot": true,
+          "after": "、お金が ありません。",
+          "choices": ["が", "けど", "から", "ので"],
+          "answer": "が",
+          "explanation": "Polite form + が = formal 'but'. The sentence ends in ですが to contrast two polite clauses. けど also means 'but' but is casual. から/ので mean 'because', not 'but'."
+        },
+        {
+          "before": "カレーが おいしい",
+          "slot": true,
+          "after": "、よく 食べます。",
+          "choices": ["から", "が", "ので", "けど"],
+          "answer": "から",
+          "explanation": "Plain adjective (おいしい) + から = 'because it's delicious'. The reason clause comes FIRST in Japanese. から is direct and natural in personal contexts. ので is also 'because' but more formal/objective."
+        },
+        {
+          "before": "コンビニへ 行きたい",
+          "slot": true,
+          "after": "、お金が ない。",
+          "choices": ["けど", "が", "から", "ので"],
+          "answer": "けど",
+          "explanation": "Plain form (行きたい) + けど = casual 'but'. The plain form ending signals casual register — use けど, not formal が. が requires polite forms. から/ので = because."
+        },
+        {
+          "before": "コーヒーが すきです",
+          "slot": true,
+          "after": "、よく 飲みます。",
+          "choices": ["から", "が", "けど", "ので"],
+          "answer": "から",
+          "explanation": "Polite form + から = polite 'because'. The reason (liking coffee) comes before the result (often drinking it). Japanese reason-result order is the reverse of English."
+        },
+        {
+          "before": "明日 テストが あります",
+          "slot": true,
+          "after": "、今日は 外食を しません。",
+          "choices": ["ので", "から", "が", "けど"],
+          "answer": "ので",
+          "explanation": "Polite form + ので = formal/objective 'because'. ので is preferred when the reason is a natural, shared-understanding fact (having a test is an objective situation). から is also correct but sounds more personal."
+        },
+        {
+          "before": "レストランの カレーは おいしいけど",
+          "slot": true,
+          "after": "、高い。",
+          "choices": ["、", "から", "ので", "が"],
+          "answer": "、",
+          "explanation": "けど already contains the 'but' connector. Nothing additional is needed — just a comma before the contrasting clause. The sentence ends in plain form (高い) confirming casual register throughout."
+        }
+      ]
+    },
+    {
       "type": "drills",
-      "title": "G10 Practice — i-Adjective Forms",
+      "title": "G10 れんしゅう — Plain Forms & Connectors",
       "instructions": "Choose the correct answer for each question.",
       "items": [
         {
           "kind": "mcq",
-          "q": "What is the past polite form of いい?",
-          "choices": ["よかったです", "いかったです", "いいでした", "よかってです"],
-          "answer": "よかったです",
-          "terms": [{ "id": "v_ii", "form": "polite_past_adj" }],
-          "explanation": "いい is irregular — its stem is よ-, not い-. よ + かったです = よかったです. The form いかったです does NOT exist. Think of it as よい (formal good) → よかった."
-        },
-        {
-          "kind": "mcq",
-          "q": "How do you say 'the train was long' (polite)?",
-          "choices": ["電車は 長かったです", "電車は 長いでした", "電車は 長くです", "電車は 長くなかったです"],
-          "answer": "電車は 長かったです",
-          "terms": ["v_densha", "p_wa", { "id": "v_nagai", "form": "polite_past_adj" }],
-          "explanation": "Regular い-adjective past: remove い → 長(stem) + かったです = 長かったです. 長いでした is a common error — do not add でした directly to the plain adjective. 長くなかったです is the past negative (was not long)."
-        },
-        {
-          "kind": "mcq",
-          "q": "Which sentence correctly uses the て-form of an い-adjective?",
-          "choices": [
-            "天気が よくて、気分が いいです。",
-            "天気が いいて、気分が いいです。",
-            "天気が よかって、気分が いいです。",
-            "天気が よくで、気分が いいです。"
+          "q": "What is the plain negative of 飲む?",
+          "choices": ["飲まない", "飲みない", "飲んない", "飲みません"],
+          "answer": "飲まない",
+          "terms": [
+            { "id": "v_nomu", "form": "plain_negative" }
           ],
-          "answer": "天気が よくて、気分が いいです。",
-          "terms": ["v_tenki", "p_ga", { "id": "v_ii", "form": "te_form" }, "v_kibun", "p_ga", { "id": "v_ii", "form": "polite_adj" }],
-          "explanation": "て-form of い-adjective: remove い → stem + くて. いい → よ(stem) + くて = よくて. The connector よくて links two descriptions: 'The weather is nice AND my mood is good.' いいて, よかって, and よくで are all incorrect forms."
+          "explanation": "飲む is a godan (U) verb ending in む. あ-column shift: む → ま + ない = 飲まない. Polite negative is 飲みません (ます-stem + ません), not the same as plain negative."
         },
         {
           "kind": "mcq",
-          "q": "What does 高すぎます mean?",
-          "choices": ["It is too expensive", "It was expensive", "It is expensive", "It is not expensive"],
-          "answer": "It is too expensive",
-          "terms": [{ "id": "v_takai", "form": "sugiru_form" }],
-          "explanation": "～すぎる means 'too ~' (exceeds a comfortable limit). 高い → 高(stem) + すぎる = 高すぎる. Polite form: 高すぎます. This is different from 高いです (is expensive) or 高かったです (was expensive)."
+          "q": "What is the plain negative of ある?",
+          "choices": ["ない", "あらない", "ありない", "ありません"],
+          "answer": "ない",
+          "terms": [
+            { "id": "v_aru", "form": "plain_negative" }
+          ],
+          "explanation": "ある is fully irregular. Its plain negative is ない (there isn't / does not exist). Never あらない — that form does not exist. ありません is the polite negative (not plain)."
         },
         {
           "kind": "mcq",
-          "q": "How do you form the adverb from いい?",
-          "choices": ["よく", "いく", "いいく", "よい"],
-          "answer": "よく",
-          "terms": [{ "id": "v_ii", "form": "adverbial" }],
-          "explanation": "Adverb form of い-adjective: remove い → stem + く. いい → よ(stem) + く = よく. This means 'well / often'. いく would mean 'to go' (行く) — a completely different word. いく/いいく don't exist as adverb forms of いい."
+          "q": "Which sentence correctly uses が as 'but'?",
+          "choices": [
+            "行きたいですが、お金が ありません。",
+            "行きたいますが、お金が ありません。",
+            "行きたいですが お金が ありません",
+            "行きたいが、ですがお金が ありません。"
+          ],
+          "answer": "行きたいですが、お金が ありません。",
+          "terms": [
+            { "id": "v_iku", "form": "desire_tai" },
+            "p_ga_but",
+            "v_okane",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_negative" }
+          ],
+          "explanation": "が attaches directly to the end of the first clause: 行きたいですが. There must be a comma before the second clause. The first clause uses polite form (たいです) — this is the formal register for が."
         },
         {
           "kind": "mcq",
-          "q": "天気が ___ ば、外に 行きましょう。(If the weather is good, let's go outside.)",
-          "choices": ["よけれ", "いけれ", "よかっ", "よく"],
-          "answer": "よけれ",
-          "terms": ["v_tenki", "p_ga", { "id": "v_ii", "form": "conditional_ba" }, "v_soto", "p_ni", { "id": "v_iku", "form": "polite_volitional_mashou" }],
-          "explanation": "Conditional ～ければ: remove い → stem + ければ. いい → よ(stem) + ければ = よければ. The question shows 天気が よけれ_ば, so the answer is よけれ (completing よければ). いければ would be wrong (wrong stem). よかった is past, よく is adverb."
+          "q": "In Japanese, where does the reason clause go when using から?",
+          "choices": [
+            "Before the main clause (reason + から + result)",
+            "After the main clause (result + から + reason)",
+            "から always begins the sentence",
+            "から always ends the sentence"
+          ],
+          "answer": "Before the main clause (reason + から + result)",
+          "terms": [],
+          "explanation": "Japanese word order for reason expressions is the REVERSE of English. In Japanese: [REASON] + から + [RESULT]. Example: カレーが おいしいから、よく 食べます。('Because curry is delicious, I often eat it.') The reason clause comes before the main clause."
+        },
+        {
+          "kind": "mcq",
+          "q": "Which is the blunt plain command form of 行く (Go!)?",
+          "choices": ["行け！", "行きろ！", "行こう！", "行かない！"],
+          "answer": "行け！",
+          "terms": [
+            "v_iku"
+          ],
+          "explanation": "行く (godan く): え-column shift: く → け = 行け. This is the plain imperative — blunt and potentially rude. 行こう = 'let's go' (volitional, not a command). 行かない = plain negative. 行きろ does not exist."
+        },
+        {
+          "kind": "mcq",
+          "q": "Which sentence correctly uses なんです to explain a reason?",
+          "choices": [
+            "お金が ないんです。",
+            "お金が ないをんです。",
+            "お金がんです ない。",
+            "お金が ないのがです。"
+          ],
+          "answer": "お金が ないんです。",
+          "terms": [
+            "v_okane",
+            "p_ga",
+            { "id": "v_aru", "form": "plain_negative" }
+          ],
+          "explanation": "Plain form (ない) + んです = explanatory/emphasis. お金が ないんです = 'The thing is, I have no money.' The plain negative of ある (ない) connects directly to んです without any additional particles."
         }
       ]
     }

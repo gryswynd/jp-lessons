@@ -211,7 +211,7 @@
   "plain_past_adj": {
     "label": "Plain Past Adjective",
     "description": "Plain past affirmative for adjectives. i-adjectives: い→かった. na-adjectives: +だった. Used in casual speech and subordinate clauses.",
-    "introducedIn": "G9",
+    "introducedIn": "G10",
     "rules": {
       "i_adj": {
         "type": "suffix",
@@ -656,7 +656,7 @@
   "plain_desire_tai": {
     "label": "Desire (Tai) — Plain",
     "description": "Plain desire form (I want to...). Uses ます-stem + たい. Used in casual speech and subordinate clauses.",
-    "introducedIn": "G9",
+    "introducedIn": "G10",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -724,7 +724,7 @@
   "plain_appearance_sou": {
     "label": "Appearance (Sou) — Plain",
     "description": "Plain form expressing that something looks like or appears to be a certain way. Uses ～そうだ in casual speech.",
-    "introducedIn": "G9",
+    "introducedIn": "G10",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -765,7 +765,7 @@
   "plain_volitional": {
     "label": "Let's (Plain Volitional)",
     "description": "Plain volitional form expressing a casual suggestion or intention. Godan verbs shift the final u-column kana to the o-column and add う. Ichidan verbs replace る with よう.",
-    "introducedIn": "G9",
+    "introducedIn": "G10",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -819,7 +819,7 @@
   "conditional_ba": {
     "label": "Conditional (Ba)",
     "description": "Expresses a condition (if/provided that). Covers both verb ～ば and i-adjective ～ければ — all taught together in G20.",
-    "introducedIn": "G20",
+    "introducedIn": "G21",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -999,7 +999,7 @@
   "plain_desire_tai_past": {
     "label": "Plain Past Desire (Takatta)",
     "description": "Plain past desire form (I wanted to...). Uses the ます-stem + たかった. Used in casual speech. Available from G9.",
-    "introducedIn": "G9",
+    "introducedIn": "G10",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -1026,7 +1026,7 @@
   "sugiru_form": {
     "label": "Excessive Degree (Sugiru)",
     "description": "Expresses 'too much' or 'excessively'. Verbs use the ます-stem + すぎる; i-adjectives drop い + すぎる; na-adjectives add すぎる directly. Taught alongside comparison and degree expressions in G14.",
-    "introducedIn": "G14",
+    "introducedIn": "G15",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -1067,7 +1067,7 @@
   "polite_sugiru_form": {
     "label": "Polite Excessive Degree (Sugimasu)",
     "description": "Polite form expressing 'too much' or 'excessively'. Verbs use the ます-stem + すぎます; i-adjectives drop い + すぎます; na-adjectives add すぎます directly.",
-    "introducedIn": "G14",
+    "introducedIn": "G15",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -1450,7 +1450,7 @@
   "sugiru_past": {
     "label": "Excessive Degree Past (Sugita)",
     "description": "Plain past form expressing 'too much/excessively'. すぎる is ichidan-patterned, so past = remove る + た applied to the すぎ stem.",
-    "introducedIn": "G14",
+    "introducedIn": "G15",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -1491,7 +1491,7 @@
   "polite_sugiru_past": {
     "label": "Polite Excessive Degree Past (Sugimashita)",
     "description": "Polite past form expressing 'too much/excessively'.",
-    "introducedIn": "G14",
+    "introducedIn": "G15",
     "rules": {
       "godan": {
         "type": "godan_change",

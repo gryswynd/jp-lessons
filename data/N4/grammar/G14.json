@@ -2,613 +2,646 @@
   "contentVersion": "1.0.0",
   "id": "G14",
   "type": "grammar",
-  "title": "Comparison & Degree — より / ほう / ほど / くらい / すぎる",
+  "title": "Give & Receive — あげる / もらう / くれる",
   "meta": {
     "level": "N4",
     "unlocksAfter": "N4.5",
-    "focus": "Expressing comparisons (より, ほうが), degree and negative comparison (ほど), approximation (くらい/ぐらい), excessive degree (すぎる), and abstract quality nouns (～さ). All patterns are essential for describing preferences, quantities, and relative qualities in daily Japanese.",
+    "focus": "The three directional giving verbs あげる (give outward), くれる (give to me/in-group), and もらう (receive), plus te-form extensions for expressing favors. Includes honorific/humble variants さしあげる, いただく, くださる as reference.",
     "estimatedMinutes": 25,
-    "particles": ["p_yori", "p_hodo", "p_kurai"],
-    "grammarForms": ["sugiru_form"],
-    "icon": "⚖️"
+    "particles": [],
+    "grammarForms": ["te_form"],
+    "icon": "🎁"
   },
   "sections": [
     {
       "type": "grammarIntro",
-      "title": "Measuring and Comparing in Japanese",
-      "icon": "⚖️",
-      "summary": "In English, you say 'A is bigger than B' or 'A is not as big as B.' Japanese uses specific particles and structures for each kind of comparison. より marks the lesser element ('than'), ほうが marks the preferred/greater side, ほど measures degree in negative comparisons ('not as ... as'), くらい gives approximate quantities ('about'), and すぎる adds 'too much' to any adjective or verb. Together, these patterns let you talk about preferences, prices, distances, quantities, and qualities with precision.",
-      "whyItMatters": "Comparison is one of the most frequent conversational tasks: comparing food, places, prices, distances, and preferences. Without these patterns, you can only say things are 'big' or 'good' — you cannot say 'bigger than,' 'not as good as,' or 'too expensive.' すぎる in particular comes up constantly: 食べすぎた (I ate too much), 高すぎる (too expensive). These forms are essential for natural, nuanced Japanese.",
+      "title": "The Japanese Gift Economy of Verbs",
+      "icon": "🎁",
+      "summary": "In English, 'give' and 'receive' cover most situations. In Japanese, the verb you choose depends entirely on who is giving to whom — and whether you are the giver, the receiver, or an observer. The three core verbs are あげる (I give to someone), くれる (someone gives to me), and もらう (I receive from someone). They describe the same physical act of transferring something, but each verb takes a different perspective on that transfer. Getting them right is essential for natural Japanese.",
+      "whyItMatters": "Choosing the wrong giving verb is one of the most noticeable mistakes in Japanese. Saying 「友だちはわたしにあげました」 when you mean 「友だちはわたしにくれました」 (my friend gave it to me) sounds unnatural and confusing. These verbs also extend to actions: saying てあげる (do something as a favour for someone), てもらう (have someone do something for you), and てくれる (someone kindly does something for me) are essential in daily life — for asking for help, expressing gratitude, and describing kindnesses received.",
       "youWillLearn": [
-        "ほうが — the preferred/greater element: このほうがおいしい (This one is more delicious)",
-        "より — marks the lesser element: AよりBのほうが好きです (I prefer B over A)",
-        "ほど — degree/negative comparison: AはBほど大きくない (A isn't as big as B)",
-        "くらい/ぐらい — approximation: 三時間くらい (about three hours), これくらい大きい (about this big)",
-        "すぎる — excessive degree: 食べすぎる (eat too much), 高すぎる (too expensive)",
-        "～さ — abstract quality noun: 大きさ (size), 高さ (height), 長さ (length) — used when the quality itself is the topic"
+        "あげる — give (speaker/in-group gives OUT to someone else): 友だちにプレゼントをあげました (I gave a present to my friend)",
+        "くれる — give (someone gives IN to me/in-group): 友だちがわたしにプレゼントをくれました (My friend gave me a present)",
+        "もらう — receive (I receive FROM someone): 友だちにプレゼントをもらいました (I received a present from my friend)",
+        "Key rule: The same gift event seen from three angles — あげる is the giver's outward action; くれる is the receiver's inward perspective (benefiting me); もらう is the receiver actively acquiring something",
+        "Te-form extensions for favors: てあげる (I do X for you), てくれる (you/they do X for me), てもらう (I have someone do X for me)",
+        "Honorific/humble reference: さしあげる (humble あげる), いただく (humble もらう), くださる → ください (honorific くれる — already known from G7)"
       ]
     },
     {
       "type": "grammarRule",
-      "id": "rule_hou_ga",
+      "id": "rule_ageru",
       "pattern": [
         {
-          "label": "A のほうが",
+          "label": "Giver (は/が)",
           "color": "topic",
-          "text": "このほうが"
+          "text": "わたしは"
         },
         {
-          "label": "Adjective",
-          "color": "predicate",
-          "text": "おいしい。"
-        }
-      ],
-      "meaning": "ほうが — marks the preferred or greater element in a comparison",
-      "explanation": "ほう (方) means 'side' or 'direction.' ほうが introduces the element being praised or preferred — it marks the 'winning side' of a comparison.\n\n**Pattern with nouns:** [Noun の] ほうが [adjective / verb]\n- このほうがおいしい。(This one is more delicious.)\n- 野菜のほうが体にいいです。(Vegetables are better for your body.)\n\n**Pattern with two explicit items:** A より B のほうが [adjective]\n- 肉より野菜のほうが好きです。(I prefer vegetables over meat.)\n- 川より山のほうが大きいです。(The mountain is bigger than the river.)\n\n**Without より:** When the comparison is implied or already known, より can be omitted:\n- Aのほうがいい。(A is better [than whatever was mentioned].)\n\n**Question form:** どちらのほうが～？ (Which one is more...?)\n- 川と山、どちらのほうが好きですか。(Between the river and the mountain, which do you prefer?)",
-      "notes": [
-        "ほう is written 方 — the kanji for 'direction / side / way.' In comparisons, ほうが always picks a side.",
-        "You can use ほうが without a preceding より: 「駅のほうが近い」 = 'The station is closer [of the two].' The comparison partner is understood from context.",
-        "The adjective after ほうが is in its plain/dictionary form — not です. The sentence ends: ～のほうが [adjective] です (polite) or ～のほうが [adjective] (casual)."
-      ],
-      "examples": [
-        {
-          "parts": [
-            { "text": "野菜の", "role": "topic", "gloss": "vegetables (の = possessive/classifier)" },
-            { "text": "ほうが", "role": "subject", "gloss": "the side of / more (comparison marker)" },
-            { "text": "おいしいです。", "role": "predicate", "gloss": "is delicious (polite)" }
-          ],
-          "en": "Vegetables are more delicious.",
-          "breakdown": "野菜のほうが = 'the vegetable side is' → picks vegetables as the preferred/greater element."
-        },
-        {
-          "parts": [
-            { "text": "肉より", "role": "object", "gloss": "than meat (より = than — the lesser)" },
-            { "text": "野菜の", "role": "topic", "gloss": "vegetables (の)" },
-            { "text": "ほうが", "role": "subject", "gloss": "the side of (comparison marker)" },
-            { "text": "好きです。", "role": "predicate", "gloss": "I like (polite な-adj predicate)" }
-          ],
-          "en": "I like vegetables more than meat.",
-          "breakdown": "肉より = marks meat as the lesser (than meat). 野菜のほうが = picks vegetables as the preferred side. より + ほうが together make a full explicit comparison."
-        }
-      ]
-    },
-    {
-      "type": "grammarRule",
-      "id": "rule_yori",
-      "pattern": [
-        {
-          "label": "Noun より",
+          "label": "Recipient (に)",
           "color": "object",
-          "text": "肉より"
+          "text": "友だちに"
         },
         {
-          "label": "Noun のほうが",
-          "color": "topic",
-          "text": "野菜のほうが"
+          "label": "Gift (を)",
+          "color": "subject",
+          "text": "プレゼントを"
         },
         {
-          "label": "Adjective",
+          "label": "あげる",
           "color": "predicate",
-          "text": "安いです。"
+          "text": "あげます。"
         }
       ],
-      "meaning": "より — marks the lesser element ('than') in a comparison",
-      "explanation": "より is a particle meaning 'than.' It marks the item that is being compared against — the standard or the 'lesser' side.\n\n**Position:** より always follows the noun it marks: [Noun]より\n\n**Full comparison pattern:** [A] より [B] のほうが [adjective/predicate]\n- 肉より野菜のほうが安いです。(Vegetables are cheaper than meat.)\n- 駅より店のほうが近いです。(The store is closer than the station.)\n\n**Comparing activities (with verbs):** Use [verb-plain form] + より\n- 肉を食べるより野菜を食べるほうが好きです。(I prefer eating vegetables to eating meat.)\n\n**Important notes:**\n- より and ほうが are often used together, but each can appear alone when context is clear\n- より can also be used without ほうが in written/formal Japanese: 東京より大きい (bigger than Tokyo) — but in spoken Japanese the ほうが + より pair is more natural\n- **Not a particle for 'from'** — don't confuse with から (from). より in comparisons means 'than,' not 'from.'",
+      "meaning": "あげる — give OUT (speaker or in-group gives to someone else)",
+      "explanation": "あげる is used when the speaker (or someone in the speaker's in-group) gives something **to** another person. The direction is **outward** — away from the speaker toward the recipient.\n\n**Pattern:** [Giver は/が] [Recipient に] [Gift を] あげる\n\n**Examples:**\n- わたしは友だちにプレゼントをあげました。(I gave a present to my friend.)\n- お母さんは先生に花をあげます。(Mom gives flowers to the teacher.)\n- 兄は妹にケーキをあげました。(My older brother gave cake to his younger sister.)\n\n**When to use あげる:**\n- The giver is the speaker (わたし)\n- The giver is someone in your in-group (family, close group) giving to an outsider\n- You are narrating a scene where someone gives to a third party\n\n**Who is NOT the recipient:** You (the speaker) or your in-group. If the speaker receives something, use くれる or もらう instead.\n\n**Verb class:** ichidan (RU-verb). あげ→あげます / あげた / あげて",
       "notes": [
-        "In casual speech, より alone (without ほうが) is often used in short comparisons: 「昨日より寒い」(colder than yesterday). The full A-より-B-のほうが pattern is always correct; the short form is also natural.",
-        "より can also follow adjective phrases: 思ったより大きい (bigger than I thought). Focus on noun + より patterns at this level."
+        "に marks the recipient in this pattern — the person who receives the gift. This is the same に you know from 'going to a place' (行きます) but here it marks the target person.",
+        "The giver は/が and recipient に can swap positions in a sentence, but both must be present: 友だちにわたしはプレゼントをあげました is grammatical (though は-initial is more natural).",
+        "あげる can also be used between third parties: すずきさんはやまかわさんにペンをあげました (Suzuki gave a pen to Yamakawa)."
       ],
       "examples": [
         {
           "parts": [
-            { "text": "駅より", "role": "object", "gloss": "than the station (より marks the lesser element)" },
-            { "text": "店のほうが", "role": "topic", "gloss": "the store side (ほうが marks the greater)" },
-            { "text": "近いです。", "role": "predicate", "gloss": "is closer (polite)" }
+            { "text": "わたしは", "role": "topic", "gloss": "I (topic: は)" },
+            { "text": "友だちに", "role": "object", "gloss": "to my friend (recipient: に)" },
+            { "text": "プレゼントを", "role": "object", "gloss": "a present (direct object: を)" },
+            { "text": "あげました。", "role": "predicate", "gloss": "gave (あげる → あげました, polite past)" }
           ],
-          "en": "The store is closer than the station.",
-          "breakdown": "駅より = the station is the standard ('than the station'). 店のほうが = the store is the preferred side. 近い = close/near."
+          "en": "I gave a present to my friend.",
+          "breakdown": "Speaker gives outward to another person → あげる. The gift (プレゼント) is marked with を; the recipient (友だち) is marked with に."
+        },
+        {
+          "parts": [
+            { "text": "お母さんは", "role": "topic", "gloss": "Mom (topic: は)" },
+            { "text": "先生に", "role": "object", "gloss": "to the teacher (recipient: に)" },
+            { "text": "花を", "role": "object", "gloss": "flowers (object: を)" },
+            { "text": "あげます。", "role": "predicate", "gloss": "gives (あげる, polite present — in-group giving to outsider)" }
+          ],
+          "en": "Mom gives flowers to the teacher.",
+          "breakdown": "Mom is part of the speaker's in-group; the teacher is an outsider → あげる. Same outward direction."
         }
       ]
     },
     {
       "type": "grammarRule",
-      "id": "rule_hodo",
+      "id": "rule_kureru",
       "pattern": [
         {
-          "label": "A は B ほど",
-          "color": "topic",
-          "text": "この本はあの本ほど"
+          "label": "Giver (は/が)",
+          "color": "subject",
+          "text": "友だちが"
         },
         {
-          "label": "Adj + くない",
-          "color": "predicate",
-          "text": "おもしろくないです。"
-        }
-      ],
-      "meaning": "ほど — degree / negative comparison ('not as ... as')",
-      "explanation": "ほど measures degree and is used in negative comparisons meaning 'not as ... as.' It sets the standard that the subject falls short of.\n\n**Pattern:** A は B ほど [adjective negative form] ない\n- この本はあの本ほどおもしろくないです。(This book is not as interesting as that book.)\n- 駅はこの店ほど遠くないです。(The station is not as far as this store.)\n\n**The negative is required:** ほど in comparisons ALWAYS uses a negative adjective or negative verb. It cannot be used to say 'as good as' — only 'not as good as.' The positive comparison uses より/ほうが.\n\n**Distinction from より:** より picks the winner (A より B のほうが = B is better than A). ほど marks the standard that is NOT reached (A は B ほど ～ない = A does not reach B's level). They describe the same relationship from different angles.",
-      "notes": [
-        "Negative adjective forms: い-adjective removes い and adds くない (大きい → 大きくない). な-adjective adds じゃない or ではない (好き → 好きじゃない). The くない/じゃない form must follow ほど in standard negative comparisons.",
-        "ほど can follow numbers and quantities to express extent: 三時間ほど = about three hours (similar to くらい, but ほど has a more emphatic 'to that extent' nuance).",
-        "Do NOT confuse: AよりBのほうが大きい (B is bigger than A — positive) vs. AはBほど大きくない (A is not as big as B — negative). Both say the same thing about B being bigger, but the structure is completely different."
-      ],
-      "examples": [
+          "label": "Recipient (に)",
+          "color": "topic",
+          "text": "わたしに"
+        },
         {
-          "parts": [
-            { "text": "この本は", "role": "topic", "gloss": "this book (topic: は)" },
-            { "text": "あの本ほど", "role": "object", "gloss": "as much as that book (ほど = to that degree)" },
-            { "text": "おもしろくないです。", "role": "predicate", "gloss": "is not interesting (negative polite: おもしろい → おもしろくない)" }
-          ],
-          "en": "This book is not as interesting as that book.",
-          "breakdown": "A (この本) は B (あの本) ほど [adjective negative]. A does not reach B's level of interestingness."
-        }
-      ]
-    },
-    {
-      "type": "grammarRule",
-      "id": "rule_kurai",
-      "pattern": [
-        {
-          "label": "Amount + くらい",
+          "label": "Gift (を)",
           "color": "object",
-          "text": "三時間くらい"
+          "text": "プレゼントを"
         },
         {
-          "label": "Verb",
+          "label": "くれる",
           "color": "predicate",
-          "text": "働きました。"
+          "text": "くれました。"
         }
       ],
-      "meaning": "くらい / ぐらい — approximately / about",
-      "explanation": "くらい (also written ぐらい — they are interchangeable) means 'about' or 'approximately.' It follows quantities, times, and amounts to express rough estimates.\n\n**After numbers and time expressions:**\n- 三時間くらい働きました。(I worked for about three hours.)\n- 三つくらい食べました。(I ate about three [of them].)\n\n**After demonstratives to indicate scale:**\n- これくらい大きいです。(It's about this big.)\n- そのくらい高いです。(It's about that expensive.)\n\n**In questions:** どのくらい (how much / how many / to what extent)\n- どのくらい食べましたか。(How much did you eat?)\n\n**くらい vs ほど:** Both can follow amounts to mean 'about,' but くらい/ぐらい is the neutral everyday choice for approximation; ほど implies 'to the extent of' with a slightly more emphatic or formal nuance.",
+      "meaning": "くれる — give IN (someone gives to me / in-group — benefiting the speaker)",
+      "explanation": "くれる is used when someone gives something **to the speaker** (わたし) or to a member of the speaker's in-group. The direction is **inward** — toward the speaker. The key feeling is that the speaker is the beneficiary.\n\n**Pattern:** [Giver は/が] [Recipient に (= わたし or in-group)] [Gift を] くれる\n\n**Examples:**\n- 友だちがわたしにプレゼントをくれました。(My friend gave me a present.)\n- 先生がわたしに本をくれました。(The teacher gave me a book.)\n- お父さんが妹にお小遣いをくれました。(Dad gave my little sister some pocket money.)\n\n**When to use くれる:**\n- Someone else gives to YOU (the speaker)\n- Someone gives to a member of your in-group (family, close people)\n- The speaker is the beneficiary — even indirectly\n\n**Important:** The recipient に is often omitted when it is obvious (the speaker). 「友だちがプレゼントをくれました」is natural — わたしに is understood.\n\n**Verb class:** ichidan (RU-verb). くれ→くれます / くれた / くれて",
       "notes": [
-        "くらい and ぐらい are the same word — ぐらい is the slightly softer-sounding variant. Both are correct everywhere.",
-        "どのくらい is the most common question form for quantities and distances. It can replace どれくらい (same meaning, more casual)."
+        "The biggest confusion point: あげる and くれる describe the SAME physical transfer but from different perspectives. 「友だちにプレゼントをあげた」= I gave my friend a present (my action). 「友だちがプレゼントをくれた」= My friend gave me a present (their kindness).",
+        "You CANNOT say ×わたしはあなたにプレゼントをくれました (using くれる with わたし as the subject). くれる always has someone OTHER than the speaker as the giver. The speaker receives but does not くれる.",
+        "くれる is related to ください (please give me) — ください is actually the request form of くださる, the honorific of くれる. You already know this form from G7."
       ],
       "examples": [
         {
           "parts": [
-            { "text": "三時間", "role": "object", "gloss": "three hours" },
-            { "text": "くらい", "role": "modifier", "gloss": "about / approximately" },
-            { "text": "働きました。", "role": "predicate", "gloss": "worked (働く, polite past)" }
+            { "text": "友だちが", "role": "subject", "gloss": "my friend (subject: が — the giver)" },
+            { "text": "わたしに", "role": "object", "gloss": "to me (recipient: に — the speaker receives)" },
+            { "text": "プレゼントを", "role": "object", "gloss": "a present (object: を)" },
+            { "text": "くれました。", "role": "predicate", "gloss": "gave (to me) — くれる, polite past" }
           ],
-          "en": "I worked for about three hours.",
-          "breakdown": "三時間くらい = about three hours (rough duration estimate). The くらい follows the number + counter directly."
-        }
-      ]
-    },
-    {
-      "type": "grammarRule",
-      "id": "rule_sugiru",
-      "pattern": [
-        {
-          "label": "Verb ます-stem",
-          "color": "connector",
-          "text": "食べ"
-        },
-        {
-          "label": "+ すぎる",
-          "color": "predicate",
-          "text": "すぎます。"
-        }
-      ],
-      "meaning": "すぎる — excessive degree (too much / too ～)",
-      "explanation": "すぎる attaches to verbs and adjectives to mean 'too much' or 'excessively.' It expresses that something has gone beyond a reasonable or desirable limit.\n\n**With verbs (ます-stem + すぎる):**\n- 食べすぎます / 食べすぎた。(eat too much)\n- 飲みすぎます / 飲みすぎた。(drink too much)\n- 働きすぎます / 働きすぎた。(work too much)\n\n**With い-adjectives (drop い + すぎる):**\n- 高い → 高すぎる。(too expensive)\n- 大きい → 大きすぎる。(too big)\n- 長い → 長すぎる。(too long)\n\n**With な-adjectives (add すぎる directly after stem):**\n- 好きすぎる。(like too much)\n\n**すぎる is itself an ichidan verb** — it conjugates normally:\n- 食べすぎます (polite), 食べすぎた (plain past), 食べすぎない (negative), 食べすぎて (te-form)\n\n**Important:** すぎる always implies a negative outcome or an excess that is problematic or noteworthy.",
-      "notes": [
-        "The te-form of すぎる — すぎて — connects to consequences: 食べすぎて、気分が悪いです。(I ate too much, so I feel sick.)",
-        "For irregular adjective いい/よい: よい → よすぎる (too good). Note: いい uses よ-stem before すぎる, exactly as in other conjugations.",
-        "すぎる can be used positively in emotion: やさしすぎる！(You're too kind!) — the grammatical meaning remains 'excessive' even when emotionally positive."
-      ],
-      "examples": [
-        {
-          "parts": [
-            { "text": "食べ", "role": "connector", "gloss": "eat — ます-stem of 食べる (ichidan verb)" },
-            { "text": "すぎました。", "role": "predicate", "gloss": "too much (すぎる → すぎました, polite past)" }
-          ],
-          "en": "I ate too much.",
-          "breakdown": "食べる (ichidan) → ます-stem 食べ + すぎる = 食べすぎる (to eat too much). Polite past: すぎました."
+          "en": "My friend gave me a present.",
+          "breakdown": "The speaker (わたし) receives from someone else → くれる. Compare with あげる: 友だちにプレゼントをあげた (I gave my friend a present) — entirely different roles."
         },
         {
           "parts": [
-            { "text": "この料理は", "role": "topic", "gloss": "this dish (topic: は)" },
-            { "text": "高", "role": "connector", "gloss": "expensive — い-adjective stem (高い → drop い → 高)" },
-            { "text": "すぎます。", "role": "predicate", "gloss": "too (much) — すぎる, polite" }
+            { "text": "先生が", "role": "subject", "gloss": "the teacher (subject: が — giver)" },
+            { "text": "わたしに", "role": "object", "gloss": "to me (recipient: に)" },
+            { "text": "本を", "role": "object", "gloss": "a book (object: を)" },
+            { "text": "くれました。", "role": "predicate", "gloss": "gave (to me) — polite past of くれる" }
           ],
-          "en": "This dish is too expensive.",
-          "breakdown": "高い (expensive) → drop い → 高 + すぎる = 高すぎる (too expensive). The い must be dropped before すぎる."
-        }
-      ]
-    },
-    {
-      "type": "grammarRule",
-      "id": "rule_sa",
-      "pattern": [
-        {
-          "label": "Adj stem",
-          "color": "connector",
-          "text": "大き"
-        },
-        {
-          "label": "+ さ",
-          "color": "predicate",
-          "text": "さ"
-        }
-      ],
-      "meaning": "～さ — noun form of adjectives (abstract quality)",
-      "explanation": "The suffix ～さ turns an adjective into a noun representing the abstract quality itself. Use it when the quality — not the thing having the quality — is the subject of discussion.\n\n**Formation:**\n- い-adjectives: drop い + さ → 大きい → 大きさ (size), 高い → 高さ (height/price level), 長い → 長さ (length)\n- な-adjectives: drop な/だ + さ → 好きだ → 好きさ (degree of liking, informal)\n\n**When to use ～さ:**\n- When comparing the abstract quality directly: 川の長さを知りたいです (I want to know the length of the river)\n- When the quality is a subject or object: 山の大きさが好きです (I like the size of the mountain)\n- Naturally arises with どのくらいの大きさ (about what size?)\n\n**Note:** ～さ is a productive word-formation suffix, not a conjugation. Common ～さ forms: 大きさ (size), 長さ (length), 高さ (height).",
-      "notes": [
-        "～さ gives you a noun you can attach の to: 川の長さ (the length of the river), 山の高さ (the height of the mountain).",
-        "Not all adjectives form natural ～さ words. The most reliable ones at N4 are size/measurement adjectives: 大きさ, 長さ, 高さ."
-      ],
-      "examples": [
-        {
-          "parts": [
-            { "text": "山の", "role": "topic", "gloss": "the mountain's (の = possessive)" },
-            { "text": "高さは", "role": "subject", "gloss": "height (高い → drop い + さ = 高さ; は = topic marker)" },
-            { "text": "どのくらい", "role": "object", "gloss": "about how much / to what extent" },
-            { "text": "ですか。", "role": "predicate", "gloss": "is it? (polite question)" }
-          ],
-          "en": "About how tall is the mountain?",
-          "breakdown": "山の高さ = the mountain's height (高さ is a noun formed from 高い). どのくらい = 'about how much' — a natural colocation with ～さ nouns."
+          "en": "The teacher gave me a book.",
+          "breakdown": "Teacher gives → speaker receives → くれる. The speaker is the beneficiary."
         }
       ]
     },
     {
       "type": "grammarComparison",
-      "title": "より vs ほど — Same Fact, Two Structures",
+      "title": "あげる vs くれる — Same Gift, Two Perspectives",
       "items": [
         {
-          "label": "より + ほうが (positive)",
+          "label": "あげる",
           "color": "verb",
           "points": [
-            "より marks the lesser element (vegetables — the cheaper one)",
-            "ほうが marks the greater/preferred side (meat — the more expensive)",
-            "The adjective is POSITIVE (高い — expensive)",
-            "Use より + ほうが to say 'B is more ～ than A'"
+            "The speaker (I) is the GIVER",
+            "Direction: outward — away from speaker",
+            "Focus: the speaker's action of giving",
+            "Used when the gift goes from me/in-group → to someone else"
           ],
           "example": {
             "parts": [
-              { "text": "野菜より", "role": "object", "gloss": "than vegetables (より = than — lesser element)" },
-              { "text": "肉の", "role": "topic", "gloss": "meat (の = classifier)" },
-              { "text": "ほうが", "role": "subject", "gloss": "the side of (ほうが marks the greater element)" },
-              { "text": "高いです。", "role": "predicate", "gloss": "is expensive (高い, polite — POSITIVE adjective)" }
+              { "text": "わたしは", "role": "topic", "gloss": "I (topic: は — the giver)" },
+              { "text": "友だちに", "role": "object", "gloss": "to my friend (recipient: に)" },
+              { "text": "プレゼントを", "role": "object", "gloss": "a present (object: を)" },
+              { "text": "あげた。", "role": "predicate", "gloss": "gave (あげる, plain past — outward direction)" }
             ],
-            "en": "Meat is more expensive than vegetables."
+            "en": "I gave a present to my friend."
           }
         },
         {
-          "label": "ほど + negative",
+          "label": "くれる",
           "color": "modifier",
           "points": [
-            "は marks the subject (vegetables — the one falling short)",
-            "ほど marks the standard not reached (meat — the benchmark)",
-            "The adjective is NEGATIVE (高くない — not expensive)",
-            "Use ほど with negative adjective to say 'A is not as ～ as B'"
+            "The speaker (I) is the RECEIVER",
+            "Direction: inward — toward speaker",
+            "Focus: the other person's kindness toward me",
+            "Used when someone gives to me/in-group"
           ],
           "example": {
             "parts": [
-              { "text": "野菜は", "role": "topic", "gloss": "vegetables (topic: は — the one falling short)" },
-              { "text": "肉ほど", "role": "object", "gloss": "as much as meat (ほど = to that degree — sets the benchmark)" },
-              { "text": "高くないです。", "role": "predicate", "gloss": "is not expensive (高い → 高くない — NEGATIVE adjective required)" }
+              { "text": "友だちが", "role": "subject", "gloss": "my friend (subject: が — the giver)" },
+              { "text": "わたしに", "role": "object", "gloss": "to me (recipient: に)" },
+              { "text": "プレゼントを", "role": "object", "gloss": "a present (object: を)" },
+              { "text": "くれた。", "role": "predicate", "gloss": "gave (to me) — くれる, plain past — inward direction" }
             ],
-            "en": "Vegetables are not as expensive as meat."
+            "en": "My friend gave me a present."
           }
         }
       ],
-      "tip": "より + ほうが says 'B is MORE ～ than A' (positive claim about B). ほど + negative says 'A is NOT AS ～ as B' (negative claim about A). Both sentences express the same fact — meat is expensive relative to vegetables — but emphasize different things. ⚠ ほど must always be followed by a NEGATIVE form."
+      "tip": "Both sentences describe the exact same gift-giving event. あげる tells it from the giver's side ('I gave'). くれる tells it from the receiver's side ('they gave to me'). Japanese forces you to choose the perspective that matches your role in the exchange."
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_morau",
+      "pattern": [
+        {
+          "label": "Receiver (は/が)",
+          "color": "topic",
+          "text": "わたしは"
+        },
+        {
+          "label": "Giver (に / から)",
+          "color": "subject",
+          "text": "友だちに"
+        },
+        {
+          "label": "Gift (を)",
+          "color": "object",
+          "text": "プレゼントを"
+        },
+        {
+          "label": "もらう",
+          "color": "predicate",
+          "text": "もらいました。"
+        }
+      ],
+      "meaning": "もらう — receive (speaker actively gets something from someone)",
+      "explanation": "もらう is used when the speaker (or their in-group) **receives** something from another person. Unlike くれる (which focuses on the giver's kindness), もらう focuses on the **receiver's active acquisition** — the speaker is getting something.\n\n**Pattern:** [Receiver は/が] [Giver に or から] [Gift を] もらう\n\n**Examples:**\n- わたしは友だちにプレゼントをもらいました。(I received a present from my friend.)\n- りきぞは先生に本をもらいました。(Rikizo received a book from the teacher.)\n- お母さんにセーターをもらいました。(I received a sweater from my mom.)\n\n**に vs から with もらう:**\n- に marks the source person when there is a close relationship or direct transfer: 友だちにもらった\n- から marks the source with more distance, formality, or abstract source: 会社からもらった (received from the company)\n- Both are correct; に is more common in daily speech\n\n**Verb class:** godan (U-verb). もらい→もらいます / もらった / もらって\n\n**The three-verb summary:**\n| Verb | Who gives | Who receives | Focus |\n|---|---|---|---|\n| あげる | Speaker / in-group | Outside | Giver's action |\n| くれる | Outside | Speaker / in-group | Giver's kindness |\n| もらう | Outside | Speaker / in-group | Receiver's acquisition |",
+      "notes": [
+        "もらう can also be used between third parties: すずきさんはやまかわさんにプレゼントをもらった (Suzuki received a present from Yamakawa). The receiver is the subject.",
+        "The difference between くれる and もらう: くれた emphasizes the giver's act ('they gave me'); もらった emphasizes the receiver's acquisition ('I got'). Both are correct for the same situation. Japanese speakers choose based on what they want to highlight.",
+        "もらう can also express having someone do something for you — see the te-form extensions in the next section."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "わたしは", "role": "topic", "gloss": "I (topic: は — the receiver)" },
+            { "text": "友だちに", "role": "subject", "gloss": "from my friend (source: に)" },
+            { "text": "プレゼントを", "role": "object", "gloss": "a present (object: を)" },
+            { "text": "もらいました。", "role": "predicate", "gloss": "received (もらう → もらいました, polite past)" }
+          ],
+          "en": "I received a present from my friend.",
+          "breakdown": "Speaker is the receiver → もらう. Compare with くれる: 友だちがプレゼントをくれた (friend gave me) — same event but もらう focuses on the speaker's receiving."
+        },
+        {
+          "parts": [
+            { "text": "りきぞは", "role": "topic", "gloss": "Rikizo (topic: は — receiver)" },
+            { "text": "先生に", "role": "subject", "gloss": "from the teacher (source: に)" },
+            { "text": "本を", "role": "object", "gloss": "a book (object: を)" },
+            { "text": "もらいました。", "role": "predicate", "gloss": "received — polite past of もらう" }
+          ],
+          "en": "Rikizo received a book from the teacher.",
+          "breakdown": "Rikizo is the receiver; the teacher is the source marked by に → もらう."
+        }
+      ]
+    },
+    {
+      "type": "grammarTable",
+      "title": "Give & Receive — Complete Reference Chart",
+      "description": "The three core verbs plus their honorific and humble variants. Focus on the top three rows for daily use; the bottom three are reference for recognition.",
+      "tableType": "reference",
+      "headers": ["Verb", "Direction", "Who uses it", "Polite form", "Casual past"],
+      "rows": [
+        {
+          "label": "★ あげる",
+          "cells": ["outward →", "Speaker/in-group gives to outsider", "あげます", "あげた"],
+          "meaning": "give (to someone else)"
+        },
+        {
+          "label": "★ くれる",
+          "cells": ["inward ←", "Someone gives to speaker/in-group", "くれます", "くれた"],
+          "meaning": "give (to me/in-group)"
+        },
+        {
+          "label": "★ もらう",
+          "cells": ["receiver's view", "Speaker receives from someone", "もらいます", "もらった"],
+          "meaning": "receive (from someone)"
+        },
+        {
+          "label": "さしあげる",
+          "cells": ["outward → (humble)", "Speaker humbly gives to a superior", "さしあげます", "さしあげた"],
+          "meaning": "give (humble あげる — N3+)"
+        },
+        {
+          "label": "いただく",
+          "cells": ["receiver's (humble)", "Speaker humbly receives from a superior", "いただきます", "いただいた"],
+          "meaning": "receive (humble もらう — N3+); also said before eating"
+        },
+        {
+          "label": "くださる",
+          "cells": ["inward ← (honorific)", "Superior gives to speaker/in-group", "くださいます / ください", "くださった"],
+          "meaning": "give (honorific くれる); ください = please give me (already known from G7)"
+        }
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_teform_giving",
+      "pattern": [
+        {
+          "label": "Verb て-form",
+          "color": "connector",
+          "text": "書いて"
+        },
+        {
+          "label": "+ あげる / くれる / もらう",
+          "color": "predicate",
+          "text": "あげます / くれます / もらいます"
+        }
+      ],
+      "meaning": "Te-form + あげる/くれる/もらう — doing something as a favor",
+      "explanation": "Just as you can give an object, you can give an **action** — doing something for someone's benefit. Attach the て-form of any verb to あげる, くれる, or もらう to express favors and received kindnesses.\n\n**The three patterns:**\n\n**1. て + あげる** — I do X for you/them (I give the action outward)\n- 本を読んであげます。(I'll read the book for you [as a favor].)\n- かばんを持ってあげました。(I carried the bag for him/her.)\n- Direction: my action benefits someone else\n\n**2. て + くれる** — You/they do X for me (they give the action to me)\n- 友だちが本を読んでくれました。(My friend read the book for me [for my benefit].)\n- 先生が日本語を話してくれました。(The teacher spoke Japanese for me.)\n- Direction: their action benefits the speaker\n\n**3. て + もらう** — I have someone do X for me (I receive the action)\n- 先生に日本語を話してもらいました。(I had the teacher speak Japanese for me.)\n- 友だちに本を読んでもらいました。(I had my friend read the book for me.)\n- Direction: the speaker is the beneficiary; emphasis on receiving the favor\n\n**The key difference between てくれた and てもらった:**\n- てくれた emphasizes the other person's kindness: 「先生が話してくれた」= The teacher spoke for me (how kind!)\n- てもらった emphasizes what the speaker received: 「先生に話してもらった」= I got the teacher to speak for me (I obtained the favor)",
+      "notes": [
+        "てあげる can sometimes sound condescending — like you're doing someone a favour they didn't ask for. Use it carefully in polite contexts. Between friends it's natural; with superiors, てさしあげます is more appropriate.",
+        "The te-form of くれる for requests is already part of your vocabulary: 書いてください (please write). This is the request form of 書いてくださる. G13 shows you where ください actually comes from.",
+        "てもらえますか / てもらえませんか — potential + もらう — is a very polite request pattern: 書いてもらえますか (could you write it for me?). This combines potential form (G12) with てもらう."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "本を", "role": "object", "gloss": "the book (object: を)" },
+            { "text": "読んで", "role": "connector", "gloss": "read — て-form of 読む (godan: む → んで)" },
+            { "text": "あげます。", "role": "predicate", "gloss": "will give (= I'll read it for you)" }
+          ],
+          "en": "I'll read the book for you.",
+          "breakdown": "読む (read) → 読んで (te-form) + あげます = I give the action of reading outward, benefiting the listener."
+        },
+        {
+          "parts": [
+            { "text": "友だちが", "role": "subject", "gloss": "my friend (subject: が — the giver of the action)" },
+            { "text": "本を", "role": "object", "gloss": "a book (object: を)" },
+            { "text": "読んで", "role": "connector", "gloss": "read — te-form of 読む" },
+            { "text": "くれました。", "role": "predicate", "gloss": "gave to me (くれる, polite past) — friend's kindness benefits speaker" }
+          ],
+          "en": "My friend read the book for me.",
+          "breakdown": "Friend's action benefits the speaker → てくれました. The speaker is the beneficiary."
+        },
+        {
+          "parts": [
+            { "text": "友だちに", "role": "object", "gloss": "from my friend (source: に)" },
+            { "text": "本を", "role": "object", "gloss": "a book (object: を)" },
+            { "text": "読んで", "role": "connector", "gloss": "read — te-form" },
+            { "text": "もらいました。", "role": "predicate", "gloss": "received (もらう, polite past) — speaker received the favor" }
+          ],
+          "en": "I had my friend read the book for me.",
+          "breakdown": "Speaker receives the favor of reading → てもらいました. Compare with てくれました: same event, but focus shifts from friend's kindness to speaker's acquisition."
+        }
+      ]
     },
     {
       "type": "annotatedExample",
-      "title": "Comparing Foods — Degree and Preference",
+      "title": "Give & Receive in Context — Birthday Gifts",
       "examples": [
         {
-          "context": "より + ほうが — preference comparison (positive adjective)",
+          "context": "あげる — Rikizo gives outward (speaker's in-group → outsider)",
           "parts": [
-            { "text": "野菜より", "role": "object", "gloss": "than vegetables (より = than — marks the lesser element)" },
-            { "text": "魚の", "role": "topic", "gloss": "fish (の = classifier)" },
-            { "text": "ほうが", "role": "subject", "gloss": "the side of (ほうが marks the preferred/greater element)" },
-            { "text": "好きです。", "role": "predicate", "gloss": "I like / prefer (好き, polite — POSITIVE predicate)" }
+            { "text": "りきぞは", "role": "topic", "gloss": "Rikizo (topic: は — the giver)" },
+            { "text": "友だちに", "role": "object", "gloss": "to his friend (recipient: に)" },
+            { "text": "花を", "role": "object", "gloss": "flowers (object: を)" },
+            { "text": "あげました。", "role": "predicate", "gloss": "gave (あげる, polite past) — Rikizo's action, directed outward" }
           ],
-          "en": "I prefer fish over vegetables.",
-          "note": "Pattern: [lesser element]より [preferred element]のほうが [positive adjective/predicate]。より = 'than'; ほうが = 'the side of'."
+          "en": "Rikizo gave flowers to his friend.",
+          "note": "あげる: the giver is the topic. Direction is outward — away from the speaker's in-group toward someone else."
         },
         {
-          "context": "すぎる — excessive degree (too much)",
+          "context": "くれる — friend gives inward (outsider → Rikizo's in-group)",
           "parts": [
-            { "text": "この魚は", "role": "topic", "gloss": "this fish (topic: は)" },
-            { "text": "高", "role": "connector", "gloss": "expensive — い-adjective stem (高い → drop い before すぎる)" },
-            { "text": "すぎます。", "role": "predicate", "gloss": "too (much) — すぎる, polite present" }
+            { "text": "友だちも", "role": "subject", "gloss": "his friend also (も = also — the giver)" },
+            { "text": "りきぞに", "role": "object", "gloss": "to Rikizo (recipient: に — in-group)" },
+            { "text": "本を", "role": "object", "gloss": "a book (object: を)" },
+            { "text": "くれました。", "role": "predicate", "gloss": "gave (to him) — くれる, polite past — outsider gives to in-group" }
           ],
-          "en": "This fish is too expensive.",
-          "note": "い-adj: drop い and add すぎる. 高い → 高 + すぎる = 高すぎる. すぎる itself conjugates: すぎます / すぎました / すぎません."
+          "en": "His friend also gave Rikizo a book.",
+          "note": "くれる: someone outside gives TO the in-group. Direction is inward — the in-group (Rikizo) is the beneficiary."
         },
         {
-          "context": "ほど + negative — negative comparison (not as ～ as)",
+          "context": "もらう — same event, Rikizo as the active receiver",
           "parts": [
-            { "text": "あの店の魚は", "role": "topic", "gloss": "the fish at that store (の = possessive; は = topic)" },
-            { "text": "この店ほど", "role": "object", "gloss": "as much as this store (ほど = to that degree — sets the benchmark)" },
-            { "text": "高くないです。", "role": "predicate", "gloss": "is not expensive (高い → 高くない — NEGATIVE adjective required with ほど)" }
+            { "text": "りきぞは", "role": "topic", "gloss": "Rikizo (topic: は — now the active receiver)" },
+            { "text": "友だちから", "role": "subject", "gloss": "from his friend (source: から — slightly more distance than に)" },
+            { "text": "本を", "role": "object", "gloss": "a book (object: を)" },
+            { "text": "もらいました。", "role": "predicate", "gloss": "received (もらう, polite past) — Rikizo actively acquired it" }
           ],
-          "en": "The fish at that store is not as expensive as this store.",
-          "note": "Pattern: [subject]は [standard]ほど [NEGATIVE adjective]。ほど always requires a negative — ×高いです is wrong here."
+          "en": "Rikizo received a book from his friend.",
+          "note": "もらう: same event as くれました above, but focus shifts from the friend's kindness to Rikizo's acquisition."
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "かいわ 1: 好きな料理 — Favourite Dishes",
-      "context": "りきぞ and ミキ are at school talking about their food preferences.",
+      "title": "かいわ 1: たんじょうびのプレゼント — Birthday Present",
+      "context": "りきぞ and けん are talking at school. けん gave Rikizo a gift for his birthday.",
       "lines": [
         {
-          "spk": "ミキ",
-          "jp": "りきぞさん、野菜と魚、どちらのほうが好きですか。",
-          "en": "Rikizo, which do you prefer — vegetables or fish?",
+          "spk": "けん",
+          "jp": "りきぞさん、これ、どうぞ。たんじょうびのプレゼントです。",
+          "en": "Rikizo, here you go. It's a birthday present.",
           "terms": [
             "char_rikizo",
             "v_san",
-            "v_yasai",
-            "p_to",
-            "v_sakana",
-            "v_dochira",
+            "v_kore",
+            "p_douzo",
+            "v_tanjoubi",
             "p_no",
-            { "id": "v_suki", "form": "polite_adj" },
+            "v_purezento",
+            "g_desu"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "わあ！ありがとうございます。けんさんがくれましたか。",
+          "en": "Wow! Thank you so much. Did you give this to me, Ken?",
+          "terms": [
+            "p_arigatou_gozaimasu",
+            "char_ken",
+            "v_san",
+            "p_ga",
+            { "id": "v_kureru", "form": "polite_mashita" },
             "p_ka"
           ]
         },
         {
-          "spk": "りきぞ",
-          "jp": "野菜より魚のほうが好きです。この店の魚は少し高すぎます。",
-          "en": "I prefer fish over vegetables. The fish at this store is a bit too expensive.",
+          "spk": "けん",
+          "jp": "はい！りきぞさんにあげたいです。",
+          "en": "Yes! I want to give it to you, Rikizo.",
           "terms": [
-            "v_yasai",
-            "p_yori",
-            "v_sakana",
-            "p_no",
-            { "id": "v_suki", "form": "polite_adj" },
-            "v_kono",
-            "v_mise",
-            "p_no",
-            "v_sakana",
-            "p_wa",
-            "v_sukoshi",
-            { "id": "v_takai", "form": "sugiru_form" }
-          ]
-        },
-        {
-          "spk": "ミキ",
-          "jp": "そうですね。駅のほうが安いですよ。",
-          "en": "I see. The station area is cheaper.",
-          "terms": [
-            "p_soudesu",
-            "p_ne",
-            "v_eki",
-            "p_no",
-            { "id": "v_yasui", "form": "polite_adj" },
-            "p_yo"
+            "p_hai",
+            "char_rikizo",
+            "v_san",
+            "p_ni",
+            { "id": "v_ageru", "form": "desire_tai" }
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "あの店は駅ほど近くないです。料理はいちばんおいしいですが。",
-          "en": "That store is not as close as the station. Though its food is the most delicious.",
+          "jp": "うれしいです！本をもらいました。毎日読みます。",
+          "en": "I'm so happy! I received a book. I'll read it every day.",
           "terms": [
-            "v_ano",
-            "v_mise",
-            "p_wa",
-            "v_eki",
-            "p_hodo",
-            { "id": "v_chikai", "form": "plain_negative" },
-            "v_ryouri",
-            "p_wa",
-            "v_ichiban",
-            { "id": "v_oishii", "form": "polite_adj" },
-            "p_ga_but"
+            { "id": "v_ureshii", "form": "polite_adj" },
+            "v_hon",
+            "p_wo",
+            { "id": "v_morau", "form": "polite_mashita" },
+            "v_mainichi",
+            { "id": "v_yomu", "form": "polite_masu" }
           ]
         },
         {
-          "spk": "ミキ",
-          "jp": "いいですね！またいっしょに行きましょう。",
-          "en": "That sounds great! Let's go there together again.",
+          "spk": "けん",
+          "jp": "よかった！読んでくれてありがとう。",
+          "en": "Great! Thanks for reading it.",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
-            "p_ne",
-            "v_mata",
-            "v_issho",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            { "id": "v_ii", "form": "plain_past_adj" },
+            { "id": "v_yomu", "form": "te_form" },
+            { "id": "v_kureru", "form": "te_form" },
+            "p_arigatou"
           ]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "かいわ 2: 本を比べる — Comparing Books (Casual)",
-      "context": "りきぞ and やまかわ are at home comparing two books they are reading. They speak casually as close friends.",
+      "title": "かいわ 2: 本を読んで — Reading a Book Together (Casual)",
+      "context": "やまかわ and りきぞ are at home. They speak casually as close friends.",
       "lines": [
         {
           "spk": "やまかわ",
-          "jp": "りきぞ、その本、おもしろい？",
-          "en": "Rikizo, is that book interesting?",
+          "jp": "りきぞ、この本、読める？",
+          "en": "Rikizo, can you read this book?",
           "terms": [
             "char_rikizo",
-            "v_sono",
+            "v_kono",
             "v_hon",
-            "v_omoshiroi"
+            { "id": "v_yomu", "form": "potential" }
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "うん、おもしろいよ。この本よりおもしろい。",
-          "en": "Yeah, it's interesting. More interesting than this book.",
+          "jp": "うん、読めるよ。読んであげようか？",
+          "en": "Yeah, I can. Want me to read it for you?",
           "terms": [
             "v_un",
-            "v_omoshiroi",
+            { "id": "v_yomu", "form": "potential" },
             "p_yo",
-            "v_kono",
-            "v_hon",
-            "p_yori",
-            "v_omoshiroi"
+            { "id": "v_yomu", "form": "te_form" },
+            { "id": "v_ageru", "form": "plain_volitional" },
+            "p_ka"
           ]
         },
         {
           "spk": "やまかわ",
-          "jp": "え、そうなの？その本はこの本ほど長くない？",
-          "en": "Oh really? Is that book not as long as this one?",
+          "jp": "ありがとう！読んでくれてよかった。",
+          "en": "Thanks! I'm glad you read it for me.",
           "terms": [
-            "v_e_exclaim",
-            "p_sounano",
-            "v_sono",
-            "v_hon",
-            "p_wa",
-            "v_kono",
-            "v_hon",
-            "p_hodo",
-            { "id": "v_nagai", "form": "plain_negative" }
+            "p_arigatou",
+            { "id": "v_yomu", "form": "te_form" },
+            { "id": "v_kureru", "form": "te_form" },
+            { "id": "v_ii", "form": "plain_past_adj" }
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "そうだね。三時間くらいで読めるよ。",
-          "en": "Yeah. You can read it in about three hours.",
+          "jp": "いいよ。先生にも読んでもらおうか。",
+          "en": "Sure. Should we also have the teacher read it?",
           "terms": [
-            "p_soudane",
-            "v_jikan",
-            "p_kurai",
-            "p_de",
-            { "id": "v_yomu", "form": "potential" },
-            "p_yo"
+            "v_ii",
+            "p_yo",
+            "v_sensei",
+            "p_ni",
+            "p_mo",
+            { "id": "v_yomu", "form": "te_form" },
+            { "id": "v_morau", "form": "plain_volitional" },
+            "p_ka"
           ]
         },
         {
           "spk": "やまかわ",
-          "jp": "いいね！食べすぎたよ。読めなかった。",
-          "en": "Nice! I ate too much though. I couldn't read it.",
+          "jp": "いいね。先生に読んでもらいたい。",
+          "en": "Sounds good. I want the teacher to read it for us.",
           "terms": [
             "v_ii",
             "p_ne",
-            { "id": "v_taberu", "form": "sugiru_form" },
-            "p_yo",
-            { "id": "v_yomu", "form": "plain_potential_negative" }
+            "v_sensei",
+            "p_ni",
+            { "id": "v_yomu", "form": "te_form" },
+            { "id": "v_morau", "form": "plain_desire_tai" }
           ]
         }
       ]
     },
     {
       "type": "fillSlot",
-      "title": "Fill in the Blank — より / ほう / ほど / くらい / すぎる",
-      "instructions": "Choose the correct word or pattern to complete each sentence naturally.",
+      "title": "Fill in the Blank — あげる / くれる / もらう",
+      "instructions": "Choose the correct giving or receiving verb to complete each sentence naturally.",
       "items": [
         {
-          "before": "野菜",
-          "after": "魚のほうが好きです。",
-          "translation": "I prefer fish over vegetables.",
-          "choices": ["より", "ほど", "くらい", "すぎる"],
-          "answer": "より",
-          "explanation": "より marks the lesser element in a comparison: 野菜より = 'than vegetables.' The preferred side (魚) is marked by ほうが."
+          "sentence": "わたしは母に花を___。",
+          "translation": "I gave flowers to my mother.",
+          "choices": ["あげました", "くれました", "もらいました", "くれてあげました"],
+          "answer": "あげました",
+          "explanation": "The speaker (わたし) gives outward to someone else (母) → あげる. The recipient に marks お母さん as the receiver."
         },
         {
-          "before": "この本はあの本",
-          "after": "おもしろくないです。",
-          "translation": "This book is not as interesting as that book.",
-          "choices": ["より", "ほど", "くらい", "のほうが"],
-          "answer": "ほど",
-          "explanation": "ほど is used in NEGATIVE comparisons: AはBほど～ない (A is not as ～ as B). ほど follows the standard/benchmark (あの本ほど = not to the level of that book)."
+          "sentence": "先生がわたしに本を___。",
+          "translation": "The teacher gave me a book.",
+          "choices": ["あげました", "くれました", "もらいました", "あげてもらいました"],
+          "answer": "くれました",
+          "explanation": "Someone else (先生) gives to the speaker (わたし) → くれる. The teacher is the subject (が), the speaker receives."
         },
         {
-          "before": "三時間",
-          "after": "働きました。",
-          "translation": "I worked for about three hours.",
-          "choices": ["より", "ほど", "くらい", "のほうが"],
-          "answer": "くらい",
-          "explanation": "くらい/ぐらい follows quantities to mean 'about / approximately.' 三時間くらい = about three hours. It gives a rough, non-exact duration."
+          "sentence": "わたしは友だちにプレゼントを___。",
+          "translation": "I received a present from my friend.",
+          "choices": ["あげました", "くれました", "もらいました", "くれてもらいました"],
+          "answer": "もらいました",
+          "explanation": "The speaker (わたし) is the receiver; the friend is the source (に) → もらう. Focus is on the speaker getting something."
         },
         {
-          "before": "食べ",
-          "after": "て、気分が悪いです。",
-          "translation": "I ate too much and feel sick.",
-          "choices": ["すぎ", "より", "ほど", "くらい"],
-          "answer": "すぎ",
-          "explanation": "すぎる attaches to the ます-stem of verbs: 食べる → ます-stem 食べ + すぎる = 食べすぎる (eat too much). The て-form is 食べすぎて. The blank needs the すぎ stem before て."
+          "sentence": "りきぞさんが本を___くれました。",
+          "translation": "Rikizo read the book for me.",
+          "choices": ["読んで", "読みて", "読くて", "読けて"],
+          "answer": "読んで",
+          "explanation": "読む (read) is a godan verb. む → んで (te-form: 読んで). The full pattern is 読んでくれました = read (it) for me — someone's kind action benefiting the speaker."
         },
         {
-          "before": "この料理は高",
-          "after": "すぎます。",
-          "translation": "This dish is too expensive.",
-          "choices": ["さ", "く", "（なし）", "い"],
-          "answer": "（なし）",
-          "explanation": "For い-adjectives, drop the final い and add すぎる directly: 高い → 高 + すぎる = 高すぎます. Nothing goes between 高 and すぎます — the い must be dropped completely."
+          "sentence": "友だちに本を___もらいました。",
+          "translation": "I had my friend read the book for me.",
+          "choices": ["読んで", "読みて", "読くて", "読けて"],
+          "answer": "読んで",
+          "explanation": "読んでもらいました = 'I received the favor of reading' = 'I had someone read it for me'. The te-form 読んで connects to もらいました. に marks the source person (friend)."
         }
       ]
     },
     {
       "type": "drills",
-      "title": "G14 Practice — Comparison & Degree",
+      "title": "G14 Practice — Give & Receive",
       "instructions": "Choose the correct answer for each question.",
       "items": [
         {
           "kind": "mcq",
-          "q": "Which sentence correctly says 'B is bigger than A'?",
+          "q": "Which verb means 'I give something to my friend' (outward, from speaker)?",
           "choices": [
-            "AよりBのほうが大きいです。",
-            "AはBほど大きくないです。",
-            "AくらいBのほうが大きいです。",
-            "AほどBより大きいです。"
+            "あげる",
+            "くれる",
+            "もらう",
+            "くださる"
           ],
-          "answer": "AよりBのほうが大きいです。",
-          "explanation": "より + ほうが makes a positive comparison: [lesser]より[greater]のほうが[adjective]. AよりBのほうが大きい = B is bigger than A (A is the lesser, B is the greater)."
-        },
-        {
-          "kind": "mcq",
-          "q": "Which sentence correctly says 'A is not as expensive as B'?",
-          "choices": [
-            "AはBほど高くないです。",
-            "AよりBのほうが高くないです。",
-            "BはAより高くないです。",
-            "AはBくらい高いです。"
-          ],
-          "answer": "AはBほど高くないです。",
-          "explanation": "ほど is used in NEGATIVE comparisons: A は B ほど [adj-negative]. AはBほど高くない = A does not reach B's level of expensiveness → A is not as expensive as B."
-        },
-        {
-          "kind": "mcq",
-          "q": "How do you say 'I ate too much' in Japanese?",
-          "choices": [
-            "食べすぎました。",
-            "食べよりました。",
-            "食べほどました。",
-            "食べくらいました。"
-          ],
-          "answer": "食べすぎました。",
+          "answer": "あげる",
           "terms": [
-            { "id": "v_taberu", "form": "sugiru_form" }
+            { "id": "v_ageru", "form": "polite_masu" }
           ],
-          "explanation": "すぎる attaches to the ます-stem of verbs: 食べる → 食べ + すぎる = 食べすぎる. Polite past: 食べすぎました."
+          "explanation": "あげる is used when the SPEAKER gives to someone else — action goes outward from the speaker/in-group. くれる = someone gives TO me. もらう = I receive. くださる = honorific くれる (a superior gives to me)."
         },
         {
           "kind": "mcq",
-          "q": "What does 「三時間くらい」mean?",
+          "q": "Friend gives me a gift. Which sentence is most natural?",
           "choices": [
-            "about three hours",
-            "more than three hours",
-            "less than three hours",
-            "exactly three hours"
+            "友だちがわたしにプレゼントをくれました。",
+            "友だちがわたしにプレゼントをあげました。",
+            "わたしが友だちにプレゼントをもらいました。",
+            "友だちがわたしにプレゼントをもらいました。"
           ],
-          "answer": "about three hours",
+          "answer": "友だちがわたしにプレゼントをくれました。",
           "terms": [
-            "p_kurai"
+            "v_tomodachi",
+            "p_ga",
+            "v_purezento",
+            { "id": "v_kureru", "form": "polite_mashita" }
           ],
-          "explanation": "くらい (also ぐらい) means 'about' or 'approximately' when following a number or quantity. 三時間くらい = about three hours — a rough estimate, not exact."
+          "explanation": "When someone gives TO you (the speaker), use くれる. The friend (subject: が) gives to me (に) → くれました. あげました would mean the friend gave to a third party, not you."
         },
         {
           "kind": "mcq",
-          "q": "What does 「大きさ」mean?",
+          "q": "What does 「友だちに本を読んでもらいました」mean?",
           "choices": [
-            "size (abstract quality noun from 大きい)",
-            "too big (すぎる form of 大きい)",
-            "not big (negative form of 大きい)",
-            "bigger than (comparative with より)"
+            "I had my friend read the book for me.",
+            "My friend gave me a book.",
+            "I read the book for my friend.",
+            "My friend received a book."
           ],
-          "answer": "size (abstract quality noun from 大きい)",
-          "explanation": "～さ is a suffix that turns an adjective into an abstract quality noun. 大きい (big) → drop い + さ → 大きさ (size). It is used when the quality itself is the subject: この山の大きさ (the size of this mountain)."
+          "answer": "I had my friend read the book for me.",
+          "terms": [
+            "v_tomodachi",
+            "p_ni",
+            "v_hon",
+            { "id": "v_yomu", "form": "te_form" },
+            { "id": "v_morau", "form": "polite_mashita" }
+          ],
+          "explanation": "読む → て-form 読んで + もらいました = 'I received the favor of reading' = 'I had (someone) read it for me'. に marks the source (the friend). This is the てもらう pattern — I am the beneficiary."
+        },
+        {
+          "kind": "mcq",
+          "q": "Which pattern means 'I'll do X for you (as a favour)'?",
+          "choices": [
+            "Verb て-form + あげる",
+            "Verb て-form + くれる",
+            "Verb て-form + もらう",
+            "Verb て-form + くださる"
+          ],
+          "answer": "Verb て-form + あげる",
+          "terms": [
+            { "id": "v_ageru", "form": "te_form" }
+          ],
+          "explanation": "てあげる = I give the action (as a favour) to you/them — outward direction from speaker. てくれる = someone gives the action to me. てもらう = I receive the action from someone. All three use te-form + a giving/receiving verb."
+        },
+        {
+          "kind": "mcq",
+          "q": "What is the difference between 「先生が書いてくれた」 and 「先生に書いてもらった」?",
+          "choices": [
+            "Both mean the same thing: the teacher wrote it for me. くれた focuses on the teacher's kindness; もらった focuses on receiving the favor.",
+            "くれた means the teacher wrote; もらった means I wrote.",
+            "くれた is polite; もらった is rude.",
+            "くれた uses the teacher as subject; もらった means the teacher refused."
+          ],
+          "answer": "Both mean the same thing: the teacher wrote it for me. くれた focuses on the teacher's kindness; もらった focuses on receiving the favor.",
+          "terms": [
+            "v_sensei",
+            { "id": "v_kaku", "form": "te_form" },
+            { "id": "v_kureru", "form": "plain_past" },
+            { "id": "v_morau", "form": "plain_past" }
+          ],
+          "explanation": "Both sentences describe the same event: the teacher wrote something for the speaker. 書いてくれた (teacher gave the action of writing to me) emphasizes the teacher's kindness. 書いてもらった (I received the favor of writing) emphasizes the speaker's acquisition. Both are natural and correct."
         }
       ]
     }
