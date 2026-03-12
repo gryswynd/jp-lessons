@@ -1177,7 +1177,8 @@
       "surface": "親切",
       "meaning": "kind",
       "type": "vocab",
-      "gtype": "na_adj",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
       "notes": "Na-adjective. 親切な人 (kind person); 親切です (is kind). Taught as 親切 (shinsetsu).",
       "lesson_ids": "N4.7",
       "reading": "しんせつ"
@@ -3080,6 +3081,16 @@
       "reading": "やけん"
     },
     {
+      "id": "v_omoide",
+      "surface": "思い出",
+      "reading": "おもいで",
+      "meaning": "memory / recollection / remembrance",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N4.16",
+      "notes": "思 (N4.26) + 出 (N5.6). Noun form of 思い出す (to recall). いい思い出 = good memory. Note: 思 kanji taught later in N4.26; write as おもい出 until N4.26."
+    },
+    {
       "id": "k_kai",
       "lesson": "N4.17",
       "type": "kanji",
@@ -3687,7 +3698,8 @@
       "surface": "地味",
       "meaning": "plain / simple / somber",
       "type": "vocab",
-      "gtype": "na_adj",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
       "notes": "",
       "lesson_ids": "N4.19",
       "reading": "じみ"
