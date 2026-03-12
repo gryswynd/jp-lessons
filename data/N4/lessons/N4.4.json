@@ -912,7 +912,58 @@
     },
     {
       "type": "drills",
-      "title": "Drill 1: Vocabulary Reading",
+      "title": "Drill 1: Kanji Readings",
+      "instructions": "Choose the correct reading for the kanji word shown.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "[赤い] の よみかたは？",
+          "choices": [
+            "あかい",
+            "あおい",
+            "くろい",
+            "しろい"
+          ],
+          "answer": "あかい"
+        },
+        {
+          "kind": "mcq",
+          "q": "[黒い] の よみかたは？",
+          "choices": [
+            "くろい",
+            "あかい",
+            "あおい",
+            "きいろい"
+          ],
+          "answer": "くろい"
+        },
+        {
+          "kind": "mcq",
+          "q": "[茶色い] の よみかたは？",
+          "choices": [
+            "ちゃいろい",
+            "くろい",
+            "あかい",
+            "みどりい"
+          ],
+          "answer": "ちゃいろい"
+        },
+        {
+          "kind": "mcq",
+          "q": "[色々] の よみかたは？",
+          "choices": [
+            "いろいろ",
+            "しきしき",
+            "いろな",
+            "さまざま"
+          ],
+          "answer": "いろいろ"
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Vocabulary",
       "instructions": "Select the correct meaning for the word shown.",
       "items": [
         {
@@ -967,7 +1018,7 @@
     },
     {
       "type": "drills",
-      "title": "Drill 2: Grammar & Context",
+      "title": "Drill 3: Grammar & Forms",
       "instructions": "Choose the correct form to complete each sentence.",
       "items": [
         {
