@@ -966,7 +966,58 @@
     },
     {
       "type": "drills",
-      "title": "Drill 1: Vocabulary Reading",
+      "title": "Drill 1: Kanji Readings",
+      "instructions": "Choose the correct reading for the kanji word shown.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "[鳥肉] の よみかたは？",
+          "choices": [
+            "とりにく",
+            "ぎゅうにく",
+            "やさい",
+            "うなぎ"
+          ],
+          "answer": "とりにく"
+        },
+        {
+          "kind": "mcq",
+          "q": "[昼ご飯] の よみかたは？",
+          "choices": [
+            "ひるごはん",
+            "あさごはん",
+            "ばんごはん",
+            "ちゅうごはん"
+          ],
+          "answer": "ひるごはん"
+        },
+        {
+          "kind": "mcq",
+          "q": "[暗い] の よみかたは？",
+          "choices": [
+            "くらい",
+            "あかるい",
+            "ひろい",
+            "ちかい"
+          ],
+          "answer": "くらい"
+        },
+        {
+          "kind": "mcq",
+          "q": "[同じ] の よみかたは？",
+          "choices": [
+            "おなじ",
+            "おんじ",
+            "どうじ",
+            "おじな"
+          ],
+          "answer": "おなじ"
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Vocabulary",
       "instructions": "Select the correct meaning for the word shown.",
       "items": [
         {
@@ -1021,7 +1072,7 @@
     },
     {
       "type": "drills",
-      "title": "Drill 2: Grammar & Context",
+      "title": "Drill 3: Grammar & Forms",
       "instructions": "Choose the correct word or phrase to complete each sentence.",
       "items": [
         {

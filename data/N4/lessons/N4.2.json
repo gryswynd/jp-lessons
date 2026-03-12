@@ -838,8 +838,59 @@
     },
     {
       "type": "drills",
-      "title": "Drill 1: Vocabulary Reading",
-      "instructions": "Select the correct meaning for the kanji word shown.",
+      "title": "Drill 1: Kanji Readings",
+      "instructions": "Choose the correct reading for the kanji word shown.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "[乗る] の よみかたは？",
+          "choices": [
+            "のる",
+            "あるく",
+            "つく",
+            "かえる"
+          ],
+          "answer": "のる"
+        },
+        {
+          "kind": "mcq",
+          "q": "[歩く] の よみかたは？",
+          "choices": [
+            "あるく",
+            "のる",
+            "はしる",
+            "とぶ"
+          ],
+          "answer": "あるく"
+        },
+        {
+          "kind": "mcq",
+          "q": "[近い] の よみかたは？",
+          "choices": [
+            "ちかい",
+            "とおい",
+            "ひくい",
+            "おおい"
+          ],
+          "answer": "ちかい"
+        },
+        {
+          "kind": "mcq",
+          "q": "[遠足] の よみかたは？",
+          "choices": [
+            "えんそく",
+            "とおあし",
+            "えんり",
+            "とおく"
+          ],
+          "answer": "えんそく"
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Vocabulary",
+      "instructions": "Select the correct meaning for the word shown.",
       "items": [
         {
           "kind": "mcq",
@@ -893,7 +944,7 @@
     },
     {
       "type": "drills",
-      "title": "Drill 2: Grammar & Context",
+      "title": "Drill 3: Grammar & Forms",
       "instructions": "Choose the correct verb or adjective form to complete each sentence.",
       "items": [
         {

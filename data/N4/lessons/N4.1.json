@@ -853,8 +853,59 @@
     },
     {
       "type": "drills",
-      "title": "Drill 1: Vocabulary Reading",
-      "instructions": "Select the correct meaning for the kanji word shown.",
+      "title": "Drill 1: Kanji Readings",
+      "instructions": "Choose the correct reading for the kanji word shown.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "[帰る] の よみかたは？",
+          "choices": [
+            "かえる",
+            "つくる",
+            "おくる",
+            "かりる"
+          ],
+          "answer": "かえる"
+        },
+        {
+          "kind": "mcq",
+          "q": "[働く] の よみかたは？",
+          "choices": [
+            "はたらく",
+            "きる",
+            "つかう",
+            "おくる"
+          ],
+          "answer": "はたらく"
+        },
+        {
+          "kind": "mcq",
+          "q": "[切手] の よみかたは？",
+          "choices": [
+            "きって",
+            "きれ",
+            "きっと",
+            "きもの"
+          ],
+          "answer": "きって"
+        },
+        {
+          "kind": "mcq",
+          "q": "[起きる] の よみかたは？",
+          "choices": [
+            "おきる",
+            "つく",
+            "おくる",
+            "かりる"
+          ],
+          "answer": "おきる"
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Vocabulary",
+      "instructions": "Select the correct meaning for the word shown.",
       "items": [
         {
           "kind": "mcq",
@@ -908,7 +959,7 @@
     },
     {
       "type": "drills",
-      "title": "Drill 2: Grammar & Context",
+      "title": "Drill 3: Grammar & Forms",
       "instructions": "Choose the correct verb form to complete each sentence.",
       "items": [
         {
