@@ -1577,6 +1577,7 @@ These words may be written in hiragana and used in content **from the listed les
 | `v_tsugi` | つぎ | N5.4 | 次 | (not taught) | "Next" — needed for sequencing and time expressions. 次 kanji is not formally introduced in any lesson; always write in hiragana. |
 | `v_koto` | こと | N5.9 | 事 | N4.14 | Nominalizer "thing/fact" — needed for ～ことがある, ～ことにする patterns. Write as こと before N4.14. |
 | `v_kinou` | きのう | N5.4 | 昨日 | (not taught) | "Yesterday" — essential time word paired with きょう. 昨 kanji is not formally introduced in any lesson; always write in hiragana. |
+| `v_namae` | 名まえ | N5.1 | 名前 | N5.9 | Essential noun for introductions ("what is your name?"). 名 is N5.1 kanji; 前 is N5.9. Write as 名まえ until N5.9, then 名前. |
 
 **Example usage in N5.1 content:**
 ```json
@@ -1598,7 +1599,6 @@ Unlike early-use vocabulary, these words are available at their `lesson_ids` les
 | ID | Partial form | Use from | Full kanji form | Full kanji available |
 |---|---|---|---|---|
 | `v_daisuki` | 大すき | N5.7 | 大好き | N4.4 |
-| `v_namae` | 名まえ | N5.1¹ | 名前 | N5.9 |
 | `v_asagohan` | 朝ごはん | N4.3 | 朝ご飯 | N4.6 |
 | `v_bangohan` | 晩ごはん | N4.3 | 晩ご飯 | N4.6 |
 | `v_nichiyoubi` | 日ようび | N5.2 | 日曜日 | N4.14 |
@@ -1609,8 +1609,6 @@ Unlike early-use vocabulary, these words are available at their `lesson_ids` les
 | `v_kinyoubi` | 金ようび | N5.2 | 金曜日 | N4.14 |
 | `v_doyoubi` | 土ようび | N5.2 | 土曜日 | N4.14 |
 | `v_nanyoubi` | 何よう日 | N5.2 | 何曜日 | N4.14 |
-
-¹ `v_namae` has `lesson_ids=N5.9`. It is not on the early-use list — agents may only use it from N5.9 onward, at which point both kanji (名 and 前) are taught and the full form 名前 should be used.
 
 **Writing form decision rule:** For any word with a `matches` field, check whether ALL kanji in the surface are in the taught-kanji set for the current lesson. If yes, use the full kanji surface. If no, use the partial-kanji or hiragana form from `matches` that matches the available kanji.
 
