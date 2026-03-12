@@ -5,15 +5,9 @@
   "meta": {
     "phase": 4,
     "lesson": 9,
-    "focus": "Discussing your town, your health, and past timeframes.",
-    "kanji": [
-      "住",
-      "所",
-      "町",
-      "元",
-      "去",
-      "別"
-    ]
+    "focus": "Describing where you live, your neighbourhood, and reflecting on the past.",
+    "estimated_minutes": 45,
+    "kanji": ["住", "所", "町", "元", "去", "別"]
   },
   "newKanji": [
     {
@@ -21,7 +15,7 @@
       "on": "じゅう",
       "kun": "す(む)",
       "meaning": "to live / dwell",
-      "termId": "k_sumu"
+      "termId": "k_su_2"
     },
     {
       "kanji": "所",
@@ -42,48 +36,48 @@
       "on": "げん / がん",
       "kun": "もと",
       "meaning": "origin / foundation",
-      "termId": "k_moto"
+      "termId": "k_moto_2"
     },
     {
       "kanji": "去",
       "on": "きょ / こ",
       "kun": "さ(る)",
       "meaning": "past / to leave",
-      "termId": "k_saru"
+      "termId": "k_sa"
     },
     {
       "kanji": "別",
       "on": "べつ",
       "kun": "わか(れる)",
       "meaning": "separate / another",
-      "termId": "k_betsu"
+      "termId": "k_waka"
     }
   ],
   "sections": [
     {
       "type": "warmup",
       "title": "Warm-Up Review（ウォームアップ）",
-      "instructions": "Ask your partner these questions (using previously learned words):",
+      "instructions": "Ask your partner these questions using previously learned words:",
       "items": [
         {
-          "jp": "きのう、何を 食べましたか。",
-          "en": "What did you eat yesterday?",
-          "terms": []
+          "jp": "朝、何を 食べますか。",
+          "en": "What do you eat in the morning?",
+          "terms": ["v_asa", "v_nani", {"id": "v_taberu", "form": "polite_masu"}]
         },
         {
-          "jp": "あなたの 家は 新しいですか。",
-          "en": "Is your house new?",
-          "terms": []
+          "jp": "どんな 食べ物が 好きですか。",
+          "en": "What kind of food do you like?",
+          "terms": ["v_donna", "v_tabemono", {"id": "v_suki", "form": "polite_adj"}]
         },
         {
-          "jp": "どんな ところ が 好きですか。",
-          "en": "What kind of places do you like?",
-          "terms": []
+          "jp": "今年の 夏は 暑かったですか。",
+          "en": "Was this summer hot?",
+          "terms": ["v_kotoshi", "v_natsu", {"id": "v_atsui", "form": "polite_past_adj"}]
         },
         {
-          "jp": "冬と 夏、どちらが 好きですか。",
-          "en": "Do you like winter or summer?",
-          "terms": []
+          "jp": "春と 秋、どちらが 好きですか。",
+          "en": "Which do you prefer, spring or autumn?",
+          "terms": ["v_haru", "v_aki", "v_dochira", {"id": "v_suki", "form": "polite_adj"}]
         }
       ]
     },
@@ -96,60 +90,42 @@
           "on": "じゅう",
           "kun": "す(む)",
           "meaning": "to live / dwell",
-          "terms": [
-            "k_sumu",
-            "v_sumu"
-          ]
+          "terms": ["k_su_2", "v_sumu"]
         },
         {
           "kanji": "所",
           "on": "しょ",
           "kun": "ところ",
           "meaning": "place",
-          "terms": [
-            "k_tokoro",
-            "v_tokoro"
-          ]
+          "terms": ["k_tokoro", "v_tokoro"]
         },
         {
           "kanji": "町",
           "on": "ちょう",
           "kun": "まち",
           "meaning": "town",
-          "terms": [
-            "k_machi",
-            "v_machi"
-          ]
+          "terms": ["k_machi", "v_machi"]
         },
         {
           "kanji": "元",
           "on": "げん / がん",
           "kun": "もと",
           "meaning": "origin / foundation",
-          "terms": [
-            "k_moto",
-            "v_genki"
-          ]
+          "terms": ["k_moto_2", "v_genki"]
         },
         {
           "kanji": "去",
           "on": "きょ / こ",
           "kun": "さ(る)",
           "meaning": "past / to leave",
-          "terms": [
-            "k_saru",
-            "v_kyonen"
-          ]
+          "terms": ["k_sa", "v_kyonen"]
         },
         {
           "kanji": "別",
           "on": "べつ",
           "kun": "わか(れる)",
           "meaning": "separate / another",
-          "terms": [
-            "k_betsu",
-            "v_wakareru"
-          ]
+          "terms": ["k_waka", "v_wakareru"]
         }
       ]
     },
@@ -159,173 +135,143 @@
       "groups": [
         {
           "label": "Living & Places",
-          "items": [
-            "v_sumu",
-            "v_juusho",
-            "v_tokoro",
-            "v_kinjo",
-            "v_machi"
-          ]
+          "items": ["v_sumu", "v_juusho", "v_tokoro", "v_kinjo", "v_machi", "v_kouen"]
         },
         {
-          "label": "Time & Condition",
-          "items": [
-            "v_genki",
-            "v_kyonen"
-          ]
+          "label": "Time & Health",
+          "items": ["v_genki", "v_kyonen"]
+        },
+        {
+          "label": "Activities",
+          "items": ["v_sanpo", "v_ohanami"]
         },
         {
           "label": "Separation & Difference",
-          "items": [
-            "v_wakareru",
-            "v_betsuni",
-            "v_betsuno"
-          ]
+          "items": ["v_wakareru", "v_betsu", "v_betsuni"]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 1（会話）: Residence",
-      "context": "Asking where someone lives.",
+      "title": "Conversation Practice 1（会話）: A New Address",
+      "context": "A classmate asks りきぞ for his new address.",
       "lines": [
         {
           "spk": "A",
-          "jp": "山下さんは どこに 住んで いますか。",
-          "en": "Mr. Yamashita, where do you live?",
-          "terms": [
-            "v_sumu"
-          ]
+          "jp": "りきぞさん、新しい 住所を 教えて ください。",
+          "en": "Rikizo, please tell me your new address.",
+          "terms": ["char_rikizo", "v_san", "v_atarashii", "v_juusho", {"id": "v_oshieru", "form": "te_form"}]
         },
         {
           "spk": "B",
-          "jp": "町 の 中に 住んで います。",
-          "en": "I live inside the town.",
-          "terms": [
-            "k_machi",
-            "v_sumu"
-          ]
+          "jp": "はい。今は 大きい まちに 住んで います。",
+          "en": "Sure. Right now I live in a big town.",
+          "terms": ["p_hai", "v_ima", "v_ookii", "v_machi", {"id": "v_sumu", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}]
         },
         {
           "spk": "A",
           "jp": "しずかな 所 ですか。",
           "en": "Is it a quiet place?",
-          "terms": [
-            "v_tokoro"
-          ]
+          "terms": [{"id": "v_shizuka", "form": "attributive_na"}, "v_tokoro", "p_ka"]
         },
         {
           "spk": "B",
-          "jp": "はい。とても しずかで いい 所 です。",
-          "en": "Yes. It is very quiet and a good place.",
-          "terms": [
-            "v_tokoro"
-          ]
+          "jp": "はい。しずかで いい 所 です。",
+          "en": "Yes. It's a quiet, nice place.",
+          "terms": ["p_hai", {"id": "v_shizuka", "form": null}, "v_ii", "v_tokoro"]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 2（会話）: Health",
-      "context": "Asking about family well-being.",
+      "title": "Conversation Practice 2（会話）: Neighbourhood Walk",
+      "context": "りきぞ talks with his father about their neighbourhood.",
       "lines": [
         {
           "spk": "A",
-          "jp": "お母さんは 元気 ですか。",
-          "en": "Is your mother healthy?",
-          "terms": [
-            "v_genki"
-          ]
+          "jp": "お父さん、この 近所は どんな 所 ですか。",
+          "en": "Father, what kind of place is this neighbourhood?",
+          "terms": ["v_otousan", "v_kinjo", "v_donna", "v_tokoro", "p_ka"]
         },
         {
           "spk": "B",
-          "jp": "はい、とても 元気 です。",
-          "en": "Yes, she is very healthy.",
-          "terms": [
-            "v_genki"
-          ]
+          "jp": "しずかで いい まちですよ。毎日 さん歩 して います。",
+          "en": "It's a quiet, nice town. I walk every day.",
+          "terms": [{"id": "v_shizuka", "form": null}, "v_ii", "v_machi", "p_yo", "v_mainichi", "v_sanpo", {"id": "v_suru", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}]
         },
         {
           "spk": "A",
-          "jp": "お父さんは?",
-          "en": "How about your father?",
-          "terms": []
+          "jp": "近所に いい 公園は ありますか。",
+          "en": "Is there a nice park in the neighbourhood?",
+          "terms": ["v_kinjo", "v_ii", "v_kouen", {"id": "v_aru", "form": "polite_masu"}, "p_ka"]
         },
         {
           "spk": "B",
-          "jp": "父も 元気 です。毎日 さん歩 します。",
-          "en": "My father is also healthy. He walks every day.",
-          "terms": [
-            "v_genki"
-          ]
+          "jp": "あります。とても きれいな 所 ですよ。いっしょに 行きましょう。",
+          "en": "There is. It's a very beautiful place. Let's go together.",
+          "terms": [{"id": "v_aru", "form": "polite_masu"}, "v_totemo", {"id": "v_kirei", "form": "attributive_na"}, "v_tokoro", "p_yo", "v_issho", {"id": "v_iku", "form": "polite_volitional_mashou"}]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 3（会話）: Past Events",
-      "context": "Talking about last year.",
+      "title": "Conversation Practice 3（会話）: Last Year's Trip",
+      "context": "りきぞ asks やまかわ about last year's summer trip.",
       "lines": [
         {
           "spk": "A",
-          "jp": "去年、日本へ 行きましたか。",
-          "en": "Did you go to Japan last year?",
-          "terms": [
-            "v_kyonen"
-          ]
+          "jp": "やまかわさん、去年の 夏は どこに 行きましたか。",
+          "en": "Yamakawa, where did you go last summer?",
+          "terms": ["char_yamakawa", "v_san", "v_kyonen", "v_natsu", "v_doko", {"id": "v_iku", "form": "polite_mashita"}, "p_ka"]
         },
         {
           "spk": "B",
-          "jp": "はい。おおさか へ 行きました。",
-          "en": "Yes. I went to Osaka.",
-          "terms": []
+          "jp": "友だちと 海に 行きましたが、駅で 別れました。",
+          "en": "I went to the sea with a friend, but we separated at the station.",
+          "terms": ["v_tomodachi", "v_umi", {"id": "v_iku", "form": "polite_mashita"}, "p_ga_but", "v_eki", {"id": "v_wakareru", "form": "polite_mashita"}]
         },
         {
           "spk": "A",
-          "jp": "だれと 行きましたか。",
-          "en": "Who did you go with?",
-          "terms": []
+          "jp": "来年も また 行けますか。",
+          "en": "Can you go again next year?",
+          "terms": ["v_rainen", "v_mata", {"id": "v_iku", "form": "polite_potential"}, "p_ka"]
         },
         {
           "spk": "B",
-          "jp": "友だちと 行きましたが、駅で 別れました。",
-          "en": "I went with a friend, but we separated at the station.",
-          "terms": [
-            "v_wakareru"
-          ]
+          "jp": "行けると 思います。来年は 別の 所にも 行きたいですよ。",
+          "en": "I think I can. Next year I also want to go to a different place.",
+          "terms": [{"id": "v_iku", "form": "potential"}, "p_to_quote", {"id": "v_omou", "form": "polite_masu"}, "v_rainen", {"id": "v_betsu", "form": null}, "v_tokoro", {"id": "v_iku", "form": "desire_tai"}, "p_yo"]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 4（会話）: Shopping",
-      "context": "Looking for a different item.",
+      "title": "Conversation Practice 4（会話）: Town Life (Casual)",
+      "context": "りきぞ and やまかわ chat casually about where they live.",
       "lines": [
         {
           "spk": "A",
-          "jp": "この 赤い シャツを ください。",
-          "en": "Please give me this red shirt.",
-          "terms": []
+          "jp": "りきぞ、今の 所は 好き？",
+          "en": "Rikizo, do you like your current place?",
+          "terms": ["char_rikizo", "v_ima", "v_tokoro", {"id": "v_suki", "form": null}]
         },
         {
           "spk": "B",
-          "jp": "すみません。赤い シャツは ありません。",
-          "en": "I'm sorry. We don't have red shirts.",
-          "terms": []
+          "jp": "しずかで いいけど、ちょっと 遠いよ。",
+          "en": "It's quiet and nice, but a bit far.",
+          "terms": [{"id": "v_shizuka", "form": null}, "v_ii", "p_kedo", "v_chotto", {"id": "v_tooi", "form": null}, "p_yo"]
         },
         {
           "spk": "A",
-          "jp": "じゃあ、別の 色は ありますか。",
-          "en": "Well then, do you have another color?",
-          "terms": [
-            "v_betsuno"
-          ]
+          "jp": "別の まちに 住みたいと 思わない？",
+          "en": "Don't you want to live in a different town?",
+          "terms": [{"id": "v_betsu", "form": null}, "v_machi", {"id": "v_sumu", "form": "plain_desire_tai"}, "p_to_quote", {"id": "v_omou", "form": "plain_negative"}]
         },
         {
           "spk": "B",
-          "jp": "はい。青い シャツが あります。",
-          "en": "Yes. We have blue shirts.",
-          "terms": []
+          "jp": "住みたいけど、まだ お金が ない。",
+          "en": "I want to, but I still don't have money.",
+          "terms": [{"id": "v_sumu", "form": "plain_desire_tai"}, "p_kedo", "v_mada", "v_okane", {"id": "v_aru", "form": "plain_negative"}]
         }
       ]
     },
@@ -334,196 +280,205 @@
       "title": "Reading Practice 1: 私の 町（My Town）",
       "passage": [
         {
-          "jp": "私は 小さい 町 に 住んで います。",
+          "jp": "私は 小さい まちに 住んで います。",
           "en": "I live in a small town.",
-          "terms": [
-            "k_machi",
-            "v_sumu"
-          ]
+          "terms": ["v_watashi", "v_chiisai", "v_machi", {"id": "v_sumu", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}]
         },
         {
-          "jp": "私の 家の 近所 には、きれいな こうえん が あります。",
-          "en": "In my neighborhood, there is a beautiful park.",
-          "terms": [
-            "v_kinjo"
-          ]
+          "jp": "私の 家の 近所に、きれいな 公園が あります。",
+          "en": "In my neighbourhood, there is a beautiful park.",
+          "terms": ["v_watashi", "v_ie", "v_kinjo", {"id": "v_kirei", "form": "attributive_na"}, "v_kouen", {"id": "v_aru", "form": "polite_masu"}]
         },
         {
-          "jp": "その こうえん は とても ゆう名 な 所 です。",
-          "en": "That park is a very famous place.",
-          "terms": [
-            "v_tokoro"
-          ]
+          "jp": "その 公園は まちで いちばん きれいな 所 です。",
+          "en": "That park is the most beautiful place in the town.",
+          "terms": ["v_sono", "v_kouen", "v_machi", "v_ichiban", {"id": "v_kirei", "form": "attributive_na"}, "v_tokoro"]
         },
         {
-          "jp": "去年 の 春、そこで お花見 を しました。",
+          "jp": "去年の 春、そこで お花見を しました。",
           "en": "Last spring, I did hanami there.",
-          "terms": [
-            "v_kyonen"
-          ]
+          "terms": ["v_kyonen", "v_haru", "v_soko", "v_ohanami", {"id": "v_suru", "form": "polite_mashita"}]
         },
         {
           "jp": "たくさんの 人が いました。",
           "en": "There were many people.",
-          "terms": []
+          "terms": ["v_takusan", "v_hito", {"id": "v_iru", "form": "polite_mashita"}]
         }
       ],
       "questions": [
         {
-          "q": "私は どんな 町 に 住んで いますか。",
-          "a": "小さい 町 です。",
-          "terms": [
-            "k_machi",
-            "v_sumu"
-          ]
+          "q": "私は どんな まちに 住んで いますか。",
+          "a": "小さい まちです。",
+          "terms": ["v_donna", "v_machi", {"id": "v_sumu", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}]
         },
         {
-          "q": "家の 近くに 何が ありますか。",
-          "a": "きれいな こうえん が あります。",
-          "terms": [
-            "v_kinjo"
-          ]
+          "q": "家の 近所に 何が ありますか。",
+          "a": "きれいな 公園が あります。",
+          "terms": ["v_ie", "v_kinjo", "v_nani", {"id": "v_aru", "form": "polite_masu"}]
         },
         {
-          "q": "去年 の 春、何を しましたか。",
+          "q": "去年の 春、何を しましたか。",
           "a": "お花見を しました。",
-          "terms": [
-            "v_kyonen"
-          ]
+          "terms": ["v_kyonen", "v_haru", "v_nani", {"id": "v_suru", "form": "polite_mashita"}]
         },
         {
-          "q": "こうえん には 人が 少なかったですか。",
-          "a": "いいえ、たくさんの 人が いました。",
-          "terms": []
+          "q": "公園には 人が 多かったですか。",
+          "a": "はい、たくさんの 人が いました。",
+          "terms": ["v_kouen", "v_hito", {"id": "v_ooi", "form": "polite_past_adj"}]
         }
       ]
     },
     {
       "type": "reading",
-      "title": "Reading Practice 2: A Letter to a Friend",
+      "title": "Reading Practice 2: 友だちへの てがみ（A Letter to a Friend）",
       "passage": [
         {
-          "jp": "中川（なかがわ）さんへ、お元気 ですか。私は 元気 です。",
-          "en": "To Mr. Nakagawa, are you well? I am well.",
-          "terms": [
-            "v_genki"
-          ]
+          "jp": "やまかわさんへ、お元気 ですか。私は 元気 です。",
+          "en": "To Yamakawa, are you well? I am well.",
+          "terms": ["char_yamakawa", "v_san", {"id": "v_genki", "form": "polite_adj"}, "v_watashi", {"id": "v_genki", "form": "polite_adj"}]
         },
         {
-          "jp": "私は 先月、東京で 友だちと 会いました。",
-          "en": "Last month, I met a friend in Tokyo.",
-          "terms": []
+          "jp": "私は 先月、友だちと 会いました。",
+          "en": "Last month, I met a friend.",
+          "terms": ["v_watashi", "v_sengetsu", "v_tomodachi", {"id": "v_au", "form": "polite_mashita"}]
         },
         {
-          "jp": "友だちは 遠い 所 に 住んで いますから、私たちは 久しぶりに 会いました。",
-          "en": "Because my friend lives in a far place, we met after a long time.",
-          "terms": [
-            "v_tokoro",
-            "v_sumu"
-          ]
+          "jp": "友だちは 遠い 所に 住んで いますから、あまり 会えません。",
+          "en": "Because my friend lives far away, we cannot meet often.",
+          "terms": ["v_tomodachi", "v_tooi", "v_tokoro", {"id": "v_sumu", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}, "p_kara_because", "v_amari", {"id": "v_au", "form": "potential_negative"}]
         },
         {
-          "jp": "レストランで 晩ごはんを 食べて、晩の 九時に 駅で 別れました。",
-          "en": "We ate dinner at a restaurant, and separated at the station at 9 PM.",
-          "terms": [
-            "v_wakareru"
-          ]
+          "jp": "先月、レストランで 晩ご飯を 食べて、夜の 九時に 駅で 別れました。",
+          "en": "Last month, we ate dinner at a restaurant and separated at the station at 9 PM.",
+          "terms": ["v_sengetsu", "v_resutoran", "v_bangohan", {"id": "v_taberu", "form": "te_form"}, "v_yoru", {"counter": "ji", "n": 9}, "v_eki", {"id": "v_wakareru", "form": "polite_mashita"}]
         },
         {
           "jp": "また 会いたいです。",
           "en": "I want to meet again.",
-          "terms": []
+          "terms": ["v_mata", {"id": "v_au", "form": "desire_tai"}]
         }
       ],
       "questions": [
         {
           "q": "私と 友だちは 先月 会いましたか。",
           "a": "はい、会いました。",
-          "terms": []
+          "terms": ["v_watashi", "v_tomodachi", "v_sengetsu", {"id": "v_au", "form": "polite_mashita"}]
         },
         {
-          "q": "友だちは 近くに 住んで いますか。",
-          "a": "いいえ、遠い 所 に 住んで います。",
-          "terms": [
-            "v_sumu",
-            "v_tokoro"
-          ]
+          "q": "友だちは どこに 住んで いますか。",
+          "a": "遠い 所に 住んで います。",
+          "terms": ["v_tomodachi", "v_doko", {"id": "v_sumu", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}]
         },
         {
-          "q": "どこで 晩ごはんを 食べましたか。",
+          "q": "どこで 晩ご飯を 食べましたか。",
           "a": "レストランで 食べました。",
-          "terms": []
+          "terms": ["v_doko", "v_bangohan", {"id": "v_taberu", "form": "polite_mashita"}]
         },
         {
-          "q": "何時に 別れました か。",
-          "a": "晩の 九時に 別れました。",
-          "terms": [
-            "v_wakareru"
-          ]
+          "q": "何時に 別れましたか。",
+          "a": "夜の 九時に 別れました。",
+          "terms": ["v_nanji", {"id": "v_wakareru", "form": "polite_mashita"}]
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Fill in the Blanks Drills",
-      "instructions": "Tap the correct answer.",
+      "title": "ドリル 1: かんじの よみかた",
+      "instructions": "Tap the correct reading for each kanji word.",
       "items": [
         {
           "kind": "mcq",
-          "q": "私は 今、おおさか ______ 住んで います。",
-          "choices": [
-            "を",
-            "に",
-            "で",
-            "が"
-          ],
-          "answer": "に",
-          "terms": [
-            "v_sumu"
-          ]
+          "q": "[住所] の よみかたは？",
+          "choices": ["じゅうしょ", "じゅうかん", "すまい", "じゅうたく"],
+          "answer": "じゅうしょ"
         },
         {
           "kind": "mcq",
-          "q": "弟は とても ______ です。毎日 はしります。",
-          "choices": [
-            "元気",
-            "びょう気",
-            "天気",
-            "空気"
-          ],
+          "q": "[近所] の よみかたは？",
+          "choices": ["きんじょ", "きんいん", "ちかば", "えんきん"],
+          "answer": "きんじょ"
+        },
+        {
+          "kind": "mcq",
+          "q": "[去年] の よみかたは？",
+          "choices": ["きょねん", "さるねん", "こうねん", "かねん"],
+          "answer": "きょねん"
+        },
+        {
+          "kind": "mcq",
+          "q": "[元気] の よみかたは？",
+          "choices": ["げんき", "もとき", "がんき", "げんいき"],
+          "answer": "げんき"
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "ドリル 2: ことばを えらぶ",
+      "instructions": "Choose the word that best completes each sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "父は とても ______ です。毎日 さん歩 します。",
+          "choices": ["元気", "びょう気", "天気", "空気"],
           "answer": "元気",
-          "terms": [
-            "v_genki"
-          ]
+          "terms": ["v_chichi", "v_totemo", {"id": "v_genki", "form": "polite_adj"}, "v_mainichi", "v_sanpo", {"id": "v_suru", "form": "polite_masu"}]
         },
         {
           "kind": "mcq",
           "q": "______ は 2024年 でした。",
-          "choices": [
-            "来年",
-            "今年",
-            "去年",
-            "毎日"
-          ],
+          "choices": ["去年", "来年", "今年", "毎日"],
           "answer": "去年",
-          "terms": [
-            "v_kyonen"
-          ]
+          "terms": ["v_kyonen"]
         },
         {
           "kind": "mcq",
           "q": "きれいな ______ に 住みたい です。",
-          "choices": [
-            "町",
-            "万",
-            "半",
-            "少"
-          ],
+          "choices": ["町", "万", "半", "少"],
           "answer": "町",
-          "terms": [
-            "k_machi",
-            "v_sumu"
-          ]
+          "terms": [{"id": "v_kirei", "form": "attributive_na"}, "v_machi", {"id": "v_sumu", "form": "desire_tai"}]
+        },
+        {
+          "kind": "mcq",
+          "q": "駅で 友だちと ______。",
+          "choices": ["別れました", "住みました", "去りました", "近所しました"],
+          "answer": "別れました",
+          "terms": ["v_eki", "v_tomodachi", {"id": "v_wakareru", "form": "polite_mashita"}]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "ドリル 3: ぶんを つくる",
+      "instructions": "Choose the correct particle or verb form.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "私は 今、大きい まち ______ 住んで います。",
+          "choices": ["を", "に", "で", "が"],
+          "answer": "に",
+          "terms": ["v_watashi", "v_ima", "v_ookii", "v_machi", {"id": "v_sumu", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}]
+        },
+        {
+          "kind": "mcq",
+          "q": "友だちと 駅 ______ 別れました。",
+          "choices": ["に", "で", "を", "が"],
+          "answer": "で",
+          "terms": ["v_tomodachi", "v_eki", {"id": "v_wakareru", "form": "polite_mashita"}]
+        },
+        {
+          "kind": "mcq",
+          "q": "いっしょに 歩き ______。",
+          "choices": ["ましょう", "ました", "ます", "ません"],
+          "answer": "ましょう",
+          "terms": ["v_issho", {"id": "v_aruku", "form": null}]
+        },
+        {
+          "kind": "mcq",
+          "q": "この まちは しずかですから、______ です。",
+          "choices": ["好き", "元気", "遠い", "別"],
+          "answer": "好き",
+          "terms": ["v_machi", {"id": "v_shizuka", "form": "polite_adj"}, "p_kara_because", {"id": "v_suki", "form": "polite_adj"}]
         }
       ]
     }
