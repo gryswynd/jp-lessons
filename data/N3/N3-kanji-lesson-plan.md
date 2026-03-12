@@ -1,9 +1,11 @@
 # JLPT N3 Kanji Lesson Plan
 
 > **Status:** Planning draft — pending review
-> **Total new kanji:** 343 (excluding 27 already taught in N5+N4)
-> **Lessons:** 86 (85 × 4 kanji + 1 × 3 kanji)
-> **Source:** Composite of [JLPTsensei](https://jlptsensei.com/jlpt-n3-kanji-list/), [Nihongo-Career](https://nihongo-career.com/tips/2025/10/15/jlpt-n3-kanji-complete-list-and-learning-methods/), [JLPT Samurai](https://jlptsamurai.com/2025/03/08/jlpt-n3-kanji-list-380-essential-characters-master-the-key-kanji-for-n3-success/)
+> **Total new kanji:** 346 (excluding 27 already taught in N5+N4)
+> **Lessons:** 86 (82 × 4 kanji + 3 × 5 kanji + 1 × 3 kanji)
+> **Source:** Composite of [JLPTsensei](https://jlptsensei.com/jlpt-n3-kanji-list/), [Nihongo-Career](https://nihongo-career.com/tips/2025/10/15/jlpt-n3-kanji-complete-list-and-learning-methods/), [JLPT Samurai](https://jlptsamurai.com/2025/03/08/jlpt-n3-kanji-list-380-essential-characters-master-the-key-kanji-for-n3-success/), [Kanshudo](https://www.kanshudo.com/collections/jlpt_kanji), [Nihongo-Pro](https://www.nihongo-pro.com/kanji-pal/list/jlpt)
+>
+> **Cross-reference note:** 3 kanji (的, 無, 公) are classified as N4 by Kanshudo/Nihongo-Pro but are not in our N5/N4 curriculum. They are included here to ensure complete coverage.
 
 ---
 
@@ -107,9 +109,9 @@ These N3 kanji are used in vocabulary words that students already encounter in h
 |--------|-------|-------|----------------|
 | **N3.37** | **守 盗 殺 犯** | **Law & Crime** | 守る(protect), 盗む(steal), 殺す(kill), 犯人(criminal) |
 | **N3.38** | **警 罪 判 治** | **Justice & Order** | 警察(police), 犯罪(crime), 判断(judgment), 政治(politics) |
-| **N3.39** | **政 官 権 制** | **Government & Authority** | 政治(politics), 官僚(bureaucrat), 権利(rights), 制度(system) |
+| **N3.39** | **政 官 権 制 公** | **Government & Authority** | 政治(politics), 官僚(bureaucrat), 権利(rights), 制度(system), 公園(park)/公共(public) |
 | **N3.40** | **法 戦 選 参** | **Law & Elections** | 法律(law), 戦争(war), 選挙(election), 参加(participation) |
-| **N3.41** | **反 否 非 対** | **Opposition & Denial** | 反対(oppose), 否定(deny), 非常(emergency), 対する(face/oppose) |
+| **N3.41** | **反 否 非 対 無** | **Opposition & Denial** | 反対(oppose), 否定(deny), 非常(emergency), 対する(face/oppose), 無理(impossible)/無料(free) |
 | **N3.42** | **断 決 定 規** | **Decisions & Rules** | 判断(decide), 決める(determine), 決定(decision), 規則(rule) |
 
 ### Block 8: Life & Achievement (N3.43–N3.45)
@@ -137,7 +139,7 @@ These N3 kanji are used in vocabulary words that students already encounter in h
 | **N3.51** | **破 置 積 直** | **Arranging & Fixing** | 破る(tear), 置く(place), 積む(pile up), 直す(fix)/直接(directly) |
 | **N3.52** | **留 申 由 号** | **Applications & Identity** | 留学(study abroad), 申す(say-humble), 理由(reason)/自由(freedom), 番号(number) |
 | **N3.53** | **向 横 面 形** | **Direction & Shape** | 向こう(opposite side), 横(beside), 面(surface/face), 形(shape) |
-| **N3.54** | **様 状 式 格** | **Style & Status** | 様(Mr./manner), 状態(condition), 形式(format), 性格(personality) |
+| **N3.54** | **様 状 式 格 的** | **Style & Status** | 様(Mr./manner), 状態(condition), 形式(format), 性格(personality), 目的(purpose)/具体的(concrete) |
 | **N3.55** | **構 機 段 程** | **Structure & Process** | 構成(composition), 機会(opportunity)/機械(machine), 段階(stage), 程度(degree) |
 
 ### Block 11: Arts & Systems (N3.56–N3.58)
@@ -202,14 +204,16 @@ These N3 kanji are used in vocabulary words that students already encounter in h
 
 | Metric | Value |
 |--------|-------|
-| Total new N3 kanji | 343 |
+| Total new N3 kanji | 346 |
 | Overlap with N5+N4 (excluded) | 27 |
-| Lessons with 4 kanji | 85 |
+| Lessons with 5 kanji | 3 (N3.39, N3.41, N3.54) |
+| Lessons with 4 kanji | 82 |
 | Lessons with 3 kanji | 1 (N3.86) |
 | Total lessons | 86 |
 | Thematic blocks | 15 |
+| Kanshudo N4 gap fills | 3 (的, 無, 公) |
 
-## Complete N3 Kanji List (343 characters, in lesson order)
+## Complete N3 Kanji List (346 characters, in lesson order)
 
 ```
 N3.1:  忘 覚 念 慣    N3.2:  確 認 調 誤    N3.3:  記 表 解 観
@@ -224,12 +228,12 @@ N3.25: 泳 流 浮 深    N3.26: 熱 煙 冷 消    N3.27: 港 渡 済 満
 N3.28: 登 落 越 降    N3.29: 追 逃 退 返    N3.30: 込 過 遅 速
 N3.31: 連 達 違 適    N3.32: 遊 途 路 散    N3.33: 打 折 抜 押
 N3.34: 投 抱 捕 掛    N3.35: 指 探 支 放    N3.36: 吸 吹 払 閉
-N3.37: 守 盗 殺 犯    N3.38: 警 罪 判 治    N3.39: 政 官 権 制
-N3.40: 法 戦 選 参    N3.41: 反 否 非 対    N3.42: 断 決 定 規
+N3.37: 守 盗 殺 犯    N3.38: 警 罪 判 治    N3.39: 政 官 権 制 公
+N3.40: 法 戦 選 参    N3.41: 反 否 非 対 無    N3.42: 断 決 定 規
 N3.43: 命 亡 危 険    N3.44: 失 敗 負 害    N3.45: 勝 努 成 得
 N3.46: 昔 昨 初 次    N3.47: 期 更 最 未    N3.48: 末 歳 暮 残
 N3.49: 続 予 束 緒    N3.50: 争 戻 倒 突    N3.51: 破 置 積 直
-N3.52: 留 申 由 号    N3.53: 向 横 面 形    N3.54: 様 状 式 格
+N3.52: 留 申 由 号    N3.53: 向 横 面 形    N3.54: 様 状 式 格 的
 N3.55: 構 機 段 程    N3.56: 活 演 術 舞    N3.57: 曲 絵 科 精
 N3.58: 経 組 約 給    N3.59: 交 互 係 任    N3.60: 供 共 与 受
 N3.61: 他 似 偶 類    N3.62: 例 候 件 因    N3.63: 役 御 身 辞
