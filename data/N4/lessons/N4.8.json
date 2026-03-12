@@ -296,6 +296,9 @@
           "jp": "そうですね。私は 秋が 好きです。秋の 木の 色が 赤や 茶色に なります。",
           "en": "I see. I like autumn. In autumn, the colours of the trees turn red and brown.",
           "terms": [
+            "v_sou",
+            "g_desu",
+            "p_ne",
             "v_watashi",
             "p_wa",
             "v_aki",
@@ -656,7 +659,8 @@
             {
               "id": "v_suki",
               "form": null
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -930,12 +934,18 @@
           "q": "この 人は どの きせつが いちばん 好きですか。",
           "a": "春が いちばん 好きです。",
           "terms": [
+            "v_kono",
+            "v_hito",
+            "p_wa",
+            "v_dono",
             "v_kisetsu",
+            "p_ga",
             "v_ichiban",
             {
               "id": "v_suki",
               "form": "polite_adj"
             },
+            "p_ka",
             "v_haru"
           ]
         },
@@ -944,13 +954,15 @@
           "a": "春が 夏より すずしいです。",
           "terms": [
             "v_haru",
+            "p_to",
             "v_natsu",
             "v_dochira",
+            "p_ga",
             {
               "id": "v_suzushii",
               "form": "polite_adj"
             },
-            "v_haru",
+            "p_ka",
             "p_yori"
           ]
         },
@@ -960,12 +972,18 @@
           "terms": [
             "v_aki",
             "v_ki",
+            "p_no",
             "v_iro",
+            "p_wa",
+            "v_nani",
+            "p_ni",
             {
               "id": "v_naru",
               "form": "polite_masu"
             },
+            "p_ka",
             "v_akai",
+            "p_ya",
             "v_chairo"
           ]
         }
