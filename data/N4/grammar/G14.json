@@ -332,6 +332,60 @@
       ]
     },
     {
+      "type": "grammarRule",
+      "id": "rule_tehoshii",
+      "pattern": [
+        {
+          "label": "Verb て-form",
+          "color": "connector",
+          "text": "教えて"
+        },
+        {
+          "label": "+ ほしい",
+          "color": "predicate",
+          "text": "= 教えてほしい"
+        }
+      ],
+      "meaning": "てほしい — 'I want someone (else) to do ~'",
+      "explanation": "てほしい expresses the speaker's desire for **someone else** to perform an action. It combines the て-form of the verb with ほしい (want).\n\n**Key contrast with たい:**\n- たい = I want to do something myself (食べたい = I want to eat)\n- てほしい = I want SOMEONE ELSE to do something (食べてほしい = I want you/them to eat)\n\n**Pattern:** [Person に] Verb て-form + ほしい\n\nThe person you want to act is marked with に:\n- 先生に教えてほしい (I want the teacher to teach me)\n- 友だちに来てほしい (I want my friend to come)\n\n**Forms:**\n- Plain: てほしい (食べてほしい — I want you to eat)\n- Polite: てほしいです (食べてほしいです)\n- Negative: てほしくない (食べてほしくない — I don't want you to eat)\n- Polite request softener: てほしいんですが... (I'd like you to... [trailing off politely])\n\n**Progression from てもらう:**\n- てもらった = I received the favor (past — it happened)\n- てほしい = I want the favor (desire — it hasn't happened yet)\n\nThis forms a natural pair: てほしい is the 'wanting' stage, てもらう is the 'receiving' stage of the same favor.",
+      "notes": [
+        "ほしい conjugates as an い-adjective: ほしい → ほしくない (negative) → ほしかった (past) → ほしくなかった (past negative).",
+        "てほしい is more direct than てもらえますか (could you do ~ for me?). Use てほしいです in semi-formal contexts; use てほしいんですが... for polite requests.",
+        "You can also use てほしくない to express 'I don't want someone to do that': 行ってほしくない (I don't want you to go).",
+        "In casual speech, てほしい is natural between friends: 来てほしいんだけど (I want you to come, but...). The んだけど adds a softening nuance.",
+        "Do NOT confuse ほしい (want an object/action) with たい (want to do). ほしい takes が: 本がほしい (I want a book). てほしい takes a verb: 読んでほしい (I want someone to read it)."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "先生に", "role": "object", "gloss": "the teacher (に — the person I want to act)" },
+            { "text": "教えて", "role": "connector", "gloss": "teach — て-form of 教える" },
+            { "text": "ほしいです。", "role": "predicate", "gloss": "want (someone to do) — polite" }
+          ],
+          "en": "I want the teacher to teach me.",
+          "breakdown": "教える → 教えて (て-form) + ほしいです. に marks the person the speaker wants to perform the action."
+        },
+        {
+          "parts": [
+            { "text": "友だちに", "role": "object", "gloss": "my friend (に — desired actor)" },
+            { "text": "来て", "role": "connector", "gloss": "come — て-form of 来る (irregular: きて)" },
+            { "text": "ほしい。", "role": "predicate", "gloss": "want (someone to do) — plain" }
+          ],
+          "en": "I want my friend to come.",
+          "breakdown": "来る → 来て (きて, て-form) + ほしい (plain). Casual/direct expression of desire for someone else's action."
+        },
+        {
+          "parts": [
+            { "text": "そこに", "role": "modifier", "gloss": "there (location)" },
+            { "text": "行って", "role": "connector", "gloss": "go — て-form of 行く (行って)" },
+            { "text": "ほしくない。", "role": "predicate", "gloss": "don't want (someone to do)" }
+          ],
+          "en": "I don't want you to go there.",
+          "breakdown": "行く → 行って + ほしくない (negative of ほしい — い-adjective conjugation: ほしい → ほしくない)."
+        }
+      ]
+    },
+    {
       "type": "annotatedExample",
       "title": "Give & Receive in Context — Birthday Gifts",
       "examples": [

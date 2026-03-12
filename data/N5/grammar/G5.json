@@ -264,6 +264,104 @@
       "tip": "Both に and へ are often used interchangeably for simple 'going to a place' sentences. The key difference: に can mark existence locations, time points, and indirect objects — へ cannot. When in doubt, に is the safer, more versatile choice."
     },
     {
+      "type": "grammarRule",
+      "id": "rule_aru_iru",
+      "pattern": [
+        { "label": "ANIMATE", "color": "verb", "text": "猫がいる" },
+        { "label": "INANIMATE", "color": "modifier", "text": "本がある" }
+      ],
+      "meaning": "いる vs ある — two existence verbs for two kinds of things",
+      "explanation": "Japanese has two verbs meaning 'to exist' or 'to be (somewhere)'. The choice depends on whether the thing that exists is **animate** (living, self-moving) or **inanimate** (non-living, stationary).\n\n**いる** — for animate beings: people, animals, insects — anything that can move on its own.\n- 先生がいます。(The teacher is here.)\n- 猫がいます。(There is a cat.)\n- だれがいますか。(Who is there?)\n\n**ある** — for inanimate objects: things, places, abstract concepts.\n- 本があります。(There is a book.)\n- 時間があります。(There is time.)\n- 何がありますか。(What is there?)\n\nBoth verbs pair with に to mark WHERE something exists: 部屋に猫がいます (The cat is in the room). 部屋に本があります (There is a book in the room).",
+      "notes": [
+        "Quick test: Can it move on its own? → いる. Otherwise → ある.",
+        "いる is an ichidan (RU-verb): いる → います / いた / いて / いない.",
+        "ある is a godan (U-verb) but has an irregular negative: ある → あります / あった / あって. Negative: ない (NOT あらない).",
+        "Question patterns: だれがいますか (who is there? — animate) vs 何がありますか (what is there? — inanimate).",
+        "Plants are treated as inanimate — 木があります (there is a tree), not いる. They don't move on their own.",
+        "The 'animated vehicle' nuance: taxis and buses occasionally use いる when viewed as having agency (タクシーがいる = 'there's a taxi [available/waiting]'), but this is casual usage. Default to ある for vehicles."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "部屋", "role": "topic", "gloss": "room" },
+            { "text": "に", "role": "modifier", "gloss": "in (existence location)" },
+            { "text": "猫", "role": "subject", "gloss": "cat" },
+            { "text": "が", "role": "modifier", "gloss": "(subject)" },
+            { "text": "います。", "role": "predicate", "gloss": "exists (animate)" }
+          ],
+          "en": "There is a cat in the room.",
+          "breakdown": "Cat = animate → いる. に marks the location of existence."
+        },
+        {
+          "parts": [
+            { "text": "部屋", "role": "topic", "gloss": "room" },
+            { "text": "に", "role": "modifier", "gloss": "in (existence location)" },
+            { "text": "本", "role": "subject", "gloss": "book" },
+            { "text": "が", "role": "modifier", "gloss": "(subject)" },
+            { "text": "あります。", "role": "predicate", "gloss": "exists (inanimate)" }
+          ],
+          "en": "There is a book in the room.",
+          "breakdown": "Book = inanimate → ある. Same location (部屋に), different existence verb."
+        },
+        {
+          "parts": [
+            { "text": "先生", "role": "subject", "gloss": "teacher" },
+            { "text": "が", "role": "modifier", "gloss": "(subject)" },
+            { "text": "いません。", "role": "predicate", "gloss": "is not here (animate negative)" }
+          ],
+          "en": "The teacher is not here.",
+          "breakdown": "Teacher = animate → いる. Polite negative: いません."
+        }
+      ]
+    },
+    {
+      "type": "grammarComparison",
+      "title": "いる vs ある — Animate vs Inanimate Existence",
+      "items": [
+        {
+          "label": "いる — animate (people, animals)",
+          "color": "verb",
+          "points": [
+            "Used for people, animals, insects — anything that moves on its own",
+            "部屋に猫がいます (There is a cat in the room)",
+            "先生がいません (The teacher is not here)",
+            "だれがいますか？ (Who is there?)",
+            "Negative: いません / いない"
+          ],
+          "example": {
+            "parts": [
+              { "text": "友だち", "role": "subject", "gloss": "friend" },
+              { "text": "が", "role": "modifier", "gloss": "(subject)" },
+              { "text": "うちに", "role": "topic", "gloss": "at home" },
+              { "text": "います。", "role": "predicate", "gloss": "is (animate)" }
+            ],
+            "en": "My friend is at home."
+          }
+        },
+        {
+          "label": "ある — inanimate (things, concepts)",
+          "color": "modifier",
+          "points": [
+            "Used for objects, places, abstract things — anything that does NOT move on its own",
+            "部屋に本があります (There is a book in the room)",
+            "時間がありません (There is no time)",
+            "何がありますか？ (What is there?)",
+            "Negative: ありません / ない (irregular — NOT あらない)"
+          ],
+          "example": {
+            "parts": [
+              { "text": "本", "role": "subject", "gloss": "book" },
+              { "text": "が", "role": "modifier", "gloss": "(subject)" },
+              { "text": "部屋に", "role": "topic", "gloss": "in the room" },
+              { "text": "あります。", "role": "predicate", "gloss": "exists (inanimate)" }
+            ],
+            "en": "There is a book in the room."
+          }
+        }
+      ],
+      "tip": "Can it move on its own? → いる. Otherwise → ある. This rule covers almost every case. The only grey area is vehicles (タクシーがいる is sometimes heard casually), but default to ある for non-living things."
+    },
+    {
       "type": "annotatedExample",
       "title": "に, で, and へ Together in Natural Sentences",
       "examples": [
