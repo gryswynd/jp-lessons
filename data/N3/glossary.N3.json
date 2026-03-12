@@ -453,6 +453,135 @@
       "gtype": "adverb",
       "lesson_ids": "N3.3",
       "notes": "次々と問題が起きた = problems arose one after another. Emphasizes rapid succession."
+    },
+    {
+      "id": "k_tsuzuku",
+      "lesson": "N3.4",
+      "type": "kanji",
+      "surface": "続",
+      "on": "ぞく",
+      "kun": "つづく/つづける",
+      "reading": "つづく",
+      "meaning": "continue / follow",
+      "notes": "Kun: つづく (to continue, intrans), つづける (to continue, trans). On: ぞく in 連続(れんぞく, consecutive), 手続き(てつづき, procedure)."
+    },
+    {
+      "id": "k_yo",
+      "lesson": "N3.4",
+      "type": "kanji",
+      "surface": "予",
+      "on": "よ",
+      "kun": "",
+      "reading": "よ",
+      "meaning": "in advance / beforehand",
+      "notes": "On-reading only: よ in 予定(よてい, plan), 予約(よやく, reservation), 予想(よそう, prediction). Always appears in compounds."
+    },
+    {
+      "id": "k_taba",
+      "lesson": "N3.4",
+      "type": "kanji",
+      "surface": "束",
+      "on": "そく",
+      "kun": "たば",
+      "reading": "たば",
+      "meaning": "bundle / bunch / bind",
+      "notes": "Kun: たば (bundle, bunch — 花束 はなたば). On: そく in 約束(やくそく, promise). 束ねる(たばねる) = to bundle/tie together."
+    },
+    {
+      "id": "k_sho_ogre",
+      "lesson": "N3.4",
+      "type": "kanji",
+      "surface": "緒",
+      "on": "しょ/ちょ",
+      "kun": "お",
+      "reading": "お",
+      "meaning": "thread / beginning / together",
+      "notes": "Most common in 一緒(いっしょ, together). On: しょ in 一緒. Rare kun: お (cord/string). Not commonly used alone."
+    },
+    {
+      "id": "v_tsuzukeru",
+      "surface": "続ける",
+      "reading": "つづける",
+      "meaning": "to continue (something) / to keep doing",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.4",
+      "notes": "Transitive — you continue something: 勉強を続ける = to continue studying. Often follows te-form: 走り続ける = to keep running."
+    },
+    {
+      "id": "v_tsuzuku",
+      "surface": "続く",
+      "reading": "つづく",
+      "meaning": "to continue / to last / to follow",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.4",
+      "notes": "Intransitive — something continues on its own: 雨が続く = the rain continues. 道が続く = the road goes on. Pair with 続ける (transitive)."
+    },
+    {
+      "id": "v_tetsuzuki",
+      "surface": "手続き",
+      "reading": "てつづき",
+      "meaning": "procedure / process / paperwork",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.4",
+      "notes": "手 (N5.1) + 続 (N3.4). 入学の手続き = enrollment procedure. 手続きをする = to complete paperwork/formalities."
+    },
+    {
+      "id": "v_yotei",
+      "surface": "予定",
+      "reading": "よてい",
+      "meaning": "plan / schedule / arrangement",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.4",
+      "matches": ["予てい"],
+      "notes": "予 (N3.4) + 定 (N3.16). Write as 予てい until N3.16. 予定がある = to have plans. 予定を立てる = to make plans. 〜する予定です = planning to do ~."
+    },
+    {
+      "id": "v_yoyaku",
+      "surface": "予約",
+      "reading": "よやく",
+      "meaning": "reservation / booking / appointment",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.4",
+      "matches": ["予やく"],
+      "notes": "予 (N3.4) + 約 (N3.66). Write as 予やく until N3.66. 予約する = to make a reservation. ホテルの予約 = hotel reservation."
+    },
+    {
+      "id": "v_yakusoku",
+      "surface": "約束",
+      "reading": "やくそく",
+      "meaning": "promise / appointment / arrangement",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.4",
+      "matches": ["やくそく"],
+      "notes": "約 (N3.66) + 束 (N3.4). Write as やくそく until N3.66 when 約 is taught. 約束する = to promise. 約束を守る = to keep a promise."
+    },
+    {
+      "id": "v_hanataba",
+      "surface": "花束",
+      "reading": "はなたば",
+      "meaning": "bouquet / bunch of flowers",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.4",
+      "notes": "花 (N4.7) + 束 (N3.4). 花束をもらう = to receive a bouquet. A common gift for ceremonies and celebrations."
+    },
+    {
+      "id": "v_renzoku",
+      "surface": "連続",
+      "reading": "れんぞく",
+      "meaning": "consecutive / continuous / serial",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.4",
+      "notes": "連 (N3.2) + 続 (N3.4). 連続ドラマ = serial drama. 三日連続 = three days in a row. 連続する = to be continuous."
     }
   ]
 }
