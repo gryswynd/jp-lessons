@@ -135,15 +135,11 @@
       "groups": [
         {
           "label": "Living & Places",
-          "items": ["v_sumu", "v_juusho", "v_tokoro", "v_kinjo", "v_machi", "v_kouen"]
+          "items": ["v_sumu", "v_juusho", "v_tokoro", "v_kinjo", "v_machi"]
         },
         {
           "label": "Time & Health",
-          "items": ["v_genki", "v_kyonen"]
-        },
-        {
-          "label": "Activities",
-          "items": ["v_sanpo", "v_ohanami"]
+          "items": ["v_genki", "v_kyonen", "v_ohanami"]
         },
         {
           "label": "Separation & Difference",
@@ -195,15 +191,15 @@
         },
         {
           "spk": "B",
-          "jp": "しずかで いい まちですよ。毎日 さん歩 して います。",
-          "en": "It's a quiet, nice town. I walk every day.",
-          "terms": [{"id": "v_shizuka", "form": null}, "v_ii", "v_machi", "p_yo", "v_mainichi", "v_sanpo", {"id": "v_suru", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}]
+          "jp": "しずかで いい まちですよ。毎日 川を 歩いて います。",
+          "en": "It's a quiet, nice town. I walk along the river every day.",
+          "terms": [{"id": "v_shizuka", "form": null}, "v_ii", "v_machi", "p_yo", "v_mainichi", "v_kawa", {"id": "v_aruku", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}]
         },
         {
           "spk": "A",
-          "jp": "近所に いい 公園は ありますか。",
-          "en": "Is there a nice park in the neighbourhood?",
-          "terms": ["v_kinjo", "v_ii", "v_kouen", {"id": "v_aru", "form": "polite_masu"}, "p_ka"]
+          "jp": "近所に きれいな 川は ありますか。",
+          "en": "Is there a nice river in the neighbourhood?",
+          "terms": ["v_kinjo", {"id": "v_kirei", "form": "attributive_na"}, "v_kawa", {"id": "v_aru", "form": "polite_masu"}, "p_ka"]
         },
         {
           "spk": "B",
@@ -285,14 +281,14 @@
           "terms": ["v_watashi", "v_chiisai", "v_machi", {"id": "v_sumu", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}]
         },
         {
-          "jp": "私の 家の 近所に、きれいな 公園が あります。",
-          "en": "In my neighbourhood, there is a beautiful park.",
-          "terms": ["v_watashi", "v_ie", "v_kinjo", {"id": "v_kirei", "form": "attributive_na"}, "v_kouen", {"id": "v_aru", "form": "polite_masu"}]
+          "jp": "私の 家の 近所に、きれいな 川が あります。",
+          "en": "In my neighbourhood, there is a beautiful river.",
+          "terms": ["v_watashi", "v_ie", "v_kinjo", {"id": "v_kirei", "form": "attributive_na"}, "v_kawa", {"id": "v_aru", "form": "polite_masu"}]
         },
         {
-          "jp": "その 公園は まちで いちばん きれいな 所 です。",
-          "en": "That park is the most beautiful place in the town.",
-          "terms": ["v_sono", "v_kouen", "v_machi", "v_ichiban", {"id": "v_kirei", "form": "attributive_na"}, "v_tokoro"]
+          "jp": "その 川は まちで いちばん きれいな 所 です。",
+          "en": "That river is the most beautiful spot in the town.",
+          "terms": ["v_sono", "v_kawa", "v_machi", "v_ichiban", {"id": "v_kirei", "form": "attributive_na"}, "v_tokoro"]
         },
         {
           "jp": "去年の 春、そこで お花見を しました。",
@@ -313,7 +309,7 @@
         },
         {
           "q": "家の 近所に 何が ありますか。",
-          "a": "きれいな 公園が あります。",
+          "a": "きれいな 川が あります。",
           "terms": ["v_ie", "v_kinjo", "v_nani", {"id": "v_aru", "form": "polite_masu"}]
         },
         {
@@ -322,9 +318,9 @@
           "terms": ["v_kyonen", "v_haru", "v_nani", {"id": "v_suru", "form": "polite_mashita"}]
         },
         {
-          "q": "公園には 人が 多かったですか。",
+          "q": "川には 人が 多かったですか。",
           "a": "はい、たくさんの 人が いました。",
-          "terms": ["v_kouen", "v_hito", {"id": "v_ooi", "form": "polite_past_adj"}]
+          "terms": ["v_kawa", "v_hito", {"id": "v_ooi", "form": "polite_past_adj"}]
         }
       ]
     },
@@ -419,10 +415,10 @@
       "items": [
         {
           "kind": "mcq",
-          "q": "父は とても ______ です。毎日 さん歩 します。",
+          "q": "父は とても ______ です。毎日 山に 行きます。",
           "choices": ["元気", "びょう気", "天気", "空気"],
           "answer": "元気",
-          "terms": ["v_chichi", "v_totemo", {"id": "v_genki", "form": "polite_adj"}, "v_mainichi", "v_sanpo", {"id": "v_suru", "form": "polite_masu"}]
+          "terms": ["v_chichi", "v_totemo", {"id": "v_genki", "form": "polite_adj"}, "v_mainichi", "v_yama", {"id": "v_iku", "form": "polite_masu"}]
         },
         {
           "kind": "mcq",
