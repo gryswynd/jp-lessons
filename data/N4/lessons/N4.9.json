@@ -62,22 +62,22 @@
         {
           "jp": "朝、何を 食べますか。",
           "en": "What do you eat in the morning?",
-          "terms": ["v_asa", "v_nani", {"id": "v_taberu", "form": "polite_masu"}]
+          "terms": ["v_asa", "v_nani", "p_wo", {"id": "v_taberu", "form": "polite_masu"}, "p_ka"]
         },
         {
           "jp": "どんな 食べ物が 好きですか。",
           "en": "What kind of food do you like?",
-          "terms": ["v_donna", "v_tabemono", {"id": "v_suki", "form": "polite_adj"}]
+          "terms": ["v_donna", "v_tabemono", "p_ga", {"id": "v_suki", "form": "polite_adj"}, "p_ka"]
         },
         {
           "jp": "今年の 夏は 暑かったですか。",
           "en": "Was this summer hot?",
-          "terms": ["v_kotoshi", "v_natsu", {"id": "v_atsui", "form": "polite_past_adj"}]
+          "terms": ["v_kotoshi", "p_no", "v_natsu", "p_wa", {"id": "v_atsui", "form": "polite_past_adj"}, "p_ka"]
         },
         {
           "jp": "春と 秋、どちらが 好きですか。",
           "en": "Which do you prefer, spring or autumn?",
-          "terms": ["v_haru", "v_aki", "v_dochira", {"id": "v_suki", "form": "polite_adj"}]
+          "terms": ["v_haru", "p_to", "v_aki", "v_dochira", "p_ga", {"id": "v_suki", "form": "polite_adj"}, "p_ka"]
         }
       ]
     },
@@ -156,13 +156,13 @@
           "spk": "A",
           "jp": "りきぞさん、新しい 住所を 教えて ください。",
           "en": "Rikizo, please tell me your new address.",
-          "terms": ["char_rikizo", "v_san", "v_atarashii", "v_juusho", {"id": "v_oshieru", "form": "te_form"}]
+          "terms": ["char_rikizo", "v_san", "v_atarashii", "v_juusho", "p_wo", {"id": "v_oshieru", "form": "te_form"}]
         },
         {
           "spk": "B",
           "jp": "はい。今は 大きい まちに 住んで います。",
           "en": "Sure. Right now I live in a big town.",
-          "terms": ["p_hai", "v_ima", "v_ookii", "v_machi", {"id": "v_sumu", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}]
+          "terms": ["p_hai", "v_ima", "p_wa", "v_ookii", "v_machi", "p_ni", {"id": "v_sumu", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}]
         },
         {
           "spk": "A",
@@ -187,7 +187,7 @@
           "spk": "A",
           "jp": "お父さん、この 近所は どんな 所 ですか。",
           "en": "Father, what kind of place is this neighbourhood?",
-          "terms": ["v_otousan", "v_kinjo", "v_donna", "v_tokoro", "p_ka"]
+          "terms": ["v_otousan", "v_kono", "v_kinjo", "p_wa", "v_donna", "v_tokoro", "p_ka"]
         },
         {
           "spk": "B",
@@ -218,25 +218,25 @@
           "spk": "A",
           "jp": "やまかわさん、去年の 夏は どこに 行きましたか。",
           "en": "Yamakawa, where did you go last summer?",
-          "terms": ["char_yamakawa", "v_san", "v_kyonen", "v_natsu", "v_doko", {"id": "v_iku", "form": "polite_mashita"}, "p_ka"]
+          "terms": ["char_yamakawa", "v_san", "v_kyonen", "p_no", "v_natsu", "p_wa", "v_doko", "p_ni", {"id": "v_iku", "form": "polite_mashita"}, "p_ka"]
         },
         {
           "spk": "B",
           "jp": "友だちと 海に 行きましたが、駅で 別れました。",
           "en": "I went to the sea with a friend, but we separated at the station.",
-          "terms": ["v_tomodachi", "v_umi", {"id": "v_iku", "form": "polite_mashita"}, "p_ga_but", "v_eki", {"id": "v_wakareru", "form": "polite_mashita"}]
+          "terms": ["v_tomodachi", "p_to", "v_umi", "p_ni", {"id": "v_iku", "form": "polite_mashita"}, "p_ga_but", "v_eki", "p_de", {"id": "v_wakareru", "form": "polite_mashita"}]
         },
         {
           "spk": "A",
           "jp": "来年も また 行けますか。",
           "en": "Can you go again next year?",
-          "terms": ["v_rainen", "v_mata", {"id": "v_iku", "form": "polite_potential"}, "p_ka"]
+          "terms": ["v_rainen", "p_mo", "v_mata", {"id": "v_iku", "form": "polite_potential"}, "p_ka"]
         },
         {
           "spk": "B",
           "jp": "行けると 思います。来年は 別の 所にも 行きたいですよ。",
           "en": "I think I can. Next year I also want to go to a different place.",
-          "terms": [{"id": "v_iku", "form": "potential"}, "p_to_quote", {"id": "v_omou", "form": "polite_masu"}, "v_rainen", {"id": "v_betsu", "form": null}, "p_no", "v_tokoro", {"id": "v_iku", "form": "desire_tai"}, "p_yo"]
+          "terms": [{"id": "v_iku", "form": "potential"}, "p_to_quote", {"id": "v_omou", "form": "polite_masu"}, "v_rainen", "p_wa", {"id": "v_betsu", "form": null}, "p_no", "v_tokoro", "p_ni", "p_mo", {"id": "v_iku", "form": "desire_tai"}, "p_yo"]
         }
       ]
     },
@@ -249,7 +249,7 @@
           "spk": "A",
           "jp": "りきぞ、今の 所は 好き？",
           "en": "Rikizo, do you like your current place?",
-          "terms": ["char_rikizo", "v_ima", "v_tokoro", {"id": "v_suki", "form": null}]
+          "terms": ["char_rikizo", "v_ima", "p_no", "v_tokoro", "p_wa", {"id": "v_suki", "form": null}, "p_ka"]
         },
         {
           "spk": "B",
@@ -261,7 +261,7 @@
           "spk": "A",
           "jp": "別の まちに 住みたいと 思わない？",
           "en": "Don't you want to live in a different town?",
-          "terms": [{"id": "v_betsu", "form": null}, "p_no", "v_machi", {"id": "v_sumu", "form": "plain_desire_tai"}, "p_to_quote", {"id": "v_omou", "form": "plain_negative"}]
+          "terms": [{"id": "v_betsu", "form": null}, "p_no", "v_machi", "p_ni", {"id": "v_sumu", "form": "plain_desire_tai"}, "p_to_quote", {"id": "v_omou", "form": "plain_negative"}, "p_ka"]
         },
         {
           "spk": "B",
@@ -278,49 +278,49 @@
         {
           "jp": "私は 小さい まちに 住んで います。",
           "en": "I live in a small town.",
-          "terms": ["v_watashi", "v_chiisai", "v_machi", {"id": "v_sumu", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}]
+          "terms": ["v_watashi", "p_wa", "v_chiisai", "v_machi", "p_ni", {"id": "v_sumu", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}]
         },
         {
           "jp": "私の 家の 近所に、きれいな 川が あります。",
           "en": "In my neighbourhood, there is a beautiful river.",
-          "terms": ["v_watashi", "v_ie", "v_kinjo", {"id": "v_kirei", "form": "attributive_na"}, "v_kawa", {"id": "v_aru", "form": "polite_masu"}]
+          "terms": ["v_watashi", "p_no", "v_ie", "p_no", "v_kinjo", "p_ni", {"id": "v_kirei", "form": "attributive_na"}, "v_kawa", "p_ga", {"id": "v_aru", "form": "polite_masu"}]
         },
         {
           "jp": "その 川は まちで いちばん きれいな 所 です。",
           "en": "That river is the most beautiful spot in the town.",
-          "terms": ["v_sono", "v_kawa", "v_machi", "v_ichiban", {"id": "v_kirei", "form": "attributive_na"}, "v_tokoro"]
+          "terms": ["v_sono", "v_kawa", "p_wa", "v_machi", "p_de", "v_ichiban", {"id": "v_kirei", "form": "attributive_na"}, "v_tokoro"]
         },
         {
           "jp": "去年の 春、そこで お花見を しました。",
           "en": "Last spring, I did hanami there.",
-          "terms": ["v_kyonen", "v_haru", "v_soko", "v_ohanami", {"id": "v_suru", "form": "polite_mashita"}]
+          "terms": ["v_kyonen", "p_no", "v_haru", "v_soko", "p_de", "v_ohanami", "p_wo", {"id": "v_suru", "form": "polite_mashita"}]
         },
         {
           "jp": "たくさんの 人が いました。",
           "en": "There were many people.",
-          "terms": ["v_takusan", "v_hito", {"id": "v_iru", "form": "polite_mashita"}]
+          "terms": ["v_takusan", "p_no", "v_hito", "p_ga", {"id": "v_iru", "form": "polite_mashita"}]
         }
       ],
       "questions": [
         {
           "q": "私は どんな まちに 住んで いますか。",
           "a": "小さい まちです。",
-          "terms": ["v_donna", "v_machi", {"id": "v_sumu", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}]
+          "terms": ["v_watashi", "p_wa", "v_donna", "v_machi", "p_ni", {"id": "v_sumu", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}, "p_ka", "v_chiisai"]
         },
         {
           "q": "家の 近所に 何が ありますか。",
           "a": "きれいな 川が あります。",
-          "terms": ["v_ie", "v_kinjo", "v_nani", {"id": "v_aru", "form": "polite_masu"}]
+          "terms": ["v_ie", "p_no", "v_kinjo", "p_ni", "v_nani", "p_ga", {"id": "v_aru", "form": "polite_masu"}, "p_ka", {"id": "v_kirei", "form": "attributive_na"}, "v_kawa"]
         },
         {
           "q": "去年の 春、何を しましたか。",
           "a": "お花見を しました。",
-          "terms": ["v_kyonen", "v_haru", "v_nani", {"id": "v_suru", "form": "polite_mashita"}]
+          "terms": ["v_kyonen", "p_no", "v_haru", "v_nani", "p_wo", {"id": "v_suru", "form": "polite_mashita"}, "p_ka", "v_ohanami"]
         },
         {
           "q": "川には 人が 多かったですか。",
           "a": "はい、たくさんの 人が いました。",
-          "terms": ["v_kawa", "v_hito", {"id": "v_ooi", "form": "polite_past_adj"}]
+          "terms": ["v_kawa", "p_ni", "p_wa", "v_hito", "p_ga", {"id": "v_ooi", "form": "polite_past_adj"}, "p_ka", "p_hai", "v_takusan", "p_no", {"id": "v_iru", "form": "polite_mashita"}]
         }
       ]
     },
@@ -331,22 +331,22 @@
         {
           "jp": "やまかわさんへ、お元気 ですか。私は 元気 です。",
           "en": "To Yamakawa, are you well? I am well.",
-          "terms": ["char_yamakawa", "v_san", {"id": "v_genki", "form": "polite_adj"}, "v_watashi", {"id": "v_genki", "form": "polite_adj"}]
+          "terms": ["char_yamakawa", "v_san", "p_he", {"id": "v_genki", "form": "polite_adj"}, "p_ka", "v_watashi", "p_wa", {"id": "v_genki", "form": "polite_adj"}]
         },
         {
           "jp": "私は 先月、友だちと 会いました。",
           "en": "Last month, I met a friend.",
-          "terms": ["v_watashi", "v_sengetsu", "v_tomodachi", {"id": "v_au", "form": "polite_mashita"}]
+          "terms": ["v_watashi", "p_wa", "v_sengetsu", "v_tomodachi", "p_to", {"id": "v_au", "form": "polite_mashita"}]
         },
         {
           "jp": "友だちは 遠い 所に 住んで いますから、あまり 会えません。",
           "en": "Because my friend lives far away, we cannot meet often.",
-          "terms": ["v_tomodachi", "v_tooi", "v_tokoro", {"id": "v_sumu", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}, "p_kara_because", "v_amari", {"id": "v_au", "form": "potential_negative"}]
+          "terms": ["v_tomodachi", "p_wa", "v_tooi", "v_tokoro", "p_ni", {"id": "v_sumu", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}, "p_kara_because", "v_amari", {"id": "v_au", "form": "potential_negative"}]
         },
         {
           "jp": "先月、レストランで 晩ご飯を 食べて、夜の 九時に 駅で 別れました。",
           "en": "Last month, we ate dinner at a restaurant and separated at the station at 9 PM.",
-          "terms": ["v_sengetsu", "v_resutoran", "v_bangohan", {"id": "v_taberu", "form": "te_form"}, "v_yoru", {"counter": "ji", "n": 9}, "v_eki", {"id": "v_wakareru", "form": "polite_mashita"}]
+          "terms": ["v_sengetsu", "v_resutoran", "p_de", "v_bangohan", "p_wo", {"id": "v_taberu", "form": "te_form"}, "v_yoru", "p_no", {"counter": "ji", "n": 9}, "p_ni", "v_eki", "p_de", {"id": "v_wakareru", "form": "polite_mashita"}]
         },
         {
           "jp": "また 会いたいです。",
@@ -358,22 +358,22 @@
         {
           "q": "私と 友だちは 先月 会いましたか。",
           "a": "はい、会いました。",
-          "terms": ["v_watashi", "v_tomodachi", "v_sengetsu", {"id": "v_au", "form": "polite_mashita"}]
+          "terms": ["v_watashi", "p_to", "v_tomodachi", "p_wa", "v_sengetsu", {"id": "v_au", "form": "polite_mashita"}, "p_ka", "p_hai"]
         },
         {
           "q": "友だちは どこに 住んで いますか。",
           "a": "遠い 所に 住んで います。",
-          "terms": ["v_tomodachi", "v_doko", {"id": "v_sumu", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}]
+          "terms": ["v_tomodachi", "p_wa", "v_doko", "p_ni", {"id": "v_sumu", "form": "te_form"}, {"id": "v_iru", "form": "polite_masu"}, "p_ka", "v_tooi", "v_tokoro"]
         },
         {
           "q": "どこで 晩ご飯を 食べましたか。",
           "a": "レストランで 食べました。",
-          "terms": ["v_doko", "v_bangohan", {"id": "v_taberu", "form": "polite_mashita"}]
+          "terms": ["v_doko", "p_de", "v_bangohan", "p_wo", {"id": "v_taberu", "form": "polite_mashita"}, "p_ka", "v_resutoran"]
         },
         {
           "q": "何時に 別れましたか。",
           "a": "夜の 九時に 別れました。",
-          "terms": ["v_nanji", {"id": "v_wakareru", "form": "polite_mashita"}]
+          "terms": ["v_nanji", "p_ni", {"id": "v_wakareru", "form": "polite_mashita"}, "p_ka", "v_yoru", "p_no", {"counter": "ji", "n": 9}]
         }
       ]
     },

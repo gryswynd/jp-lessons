@@ -136,6 +136,30 @@ Rewrite notes: [empty on first pass; filled by Agent 4 feedback]
 - **Use recently unlocked grammar actively.** Consult the Content Brief's "Grammar reinforcement" targets. Meet the minimum usage counts for forms in their active reinforcement window. Vary verb forms across conversations — do not default every verb to ます/ました when negative, te-form, and other unlocked forms would be natural. If a minimum count cannot be met without forcing awkward sentences, flag this in the CB Checklist and explain why.
 - Output the draft as a single JSON (or MD + JSON pair for stories) in a clearly labelled code block.
 - Attach a **CB Checklist** at the end of the output (see below).
+- **Apply the Sentence Token Scan Protocol to every jp/passage field before submitting.** See the protocol definition immediately below. This step is not optional and is not skipped for warmup items, drills, or reading questions.
+
+---
+
+### Sentence Token Scan Protocol
+
+**Definition:** The Sentence Token Scan Protocol (STSP) is a mandatory left-to-right audit of every `jp` or `passage` string. It must be applied to **every** jp field in every section — conversations, readings, warmup items, drills, and reading questions — without exception.
+
+**Procedure (apply to each `jp` string individually):**
+
+1. Read the Japanese sentence from left to right, mentally segmenting it into tokens: nouns, verbs, adjectives, adverbs, particles, conjunctions, copulas, sentence-final markers.
+2. For each token, ask: **"Is this tagged in the `terms` array?"**
+3. If the token is a particle or sentence-final marker, check `shared/particles.json` for its `p_*` ID — even if it "looks obvious." The following must always be tagged when present:
+   - Mid-sentence particles: は (`p_wa`), が (`p_ga`/`p_ga_but`), を (`p_wo`), の (`p_no`), に (`p_ni`), で (`p_de`), も (`p_mo`), と (`p_to`/`p_to_quote`), へ (`p_he`), や (`p_ya`), より (`p_yori`), から (`p_kara`/`p_kara_because`), まで (`p_made`), けど (`p_kedo`)
+   - Sentence-final particles: か (`p_ka`) — **required even in casual questions where the particle is written as ？ without explicit か**; ね (`p_ne`); よ (`p_yo`)
+   - Copulas: です (`g_desu`), だ (`g_da`)
+4. If the token is a lexical word (noun, verb, adjective, adverb — including kana-only words like `どこ`, `いつも`, `もう`, `まだ`), verify its ID in the glossary and add it to `terms`.
+5. If any token has no glossary/particles.json entry, list it in the "Unregistered words" section of the CB Checklist for Agent 3 to escalate.
+
+**Warmup items are NOT exempt.** Warmup `jp` fields require exactly the same completeness as conversation lines. A warmup sentence like 「朝、何を食べますか。」needs `p_wo` and `p_ka` just as much as a conversation line does.
+
+**The STSP applies to rewrites and refreshes too.** When rewriting existing content, every jp/passage field in the original — even those being carried forward unchanged — must be put through the STSP. Treat every original jp field as unaudited; the previous version may predate current tagging standards.
+
+---
 
 **CB Checklist (Agent 2 self-check before passing to Agent 3):**
 
@@ -150,6 +174,9 @@ CB CHECKLIST
 [ ] Every content word in every jp/passage field has a corresponding terms entry
 [ ] Every pure-kana lexical word (interjections, casual words, expressions not in particles.json) has a verified glossary entry — any that do not are listed in the CB Checklist under "Unregistered words" for Agent 3 to escalate
 [ ] Question words and kana-only adverbs explicitly checked: for every jp field, scan for どう, どこ, どれ, どちら, いつ, なぜ, いくら, いくつ, いつも, もう, まだ, よく, たいてい, ぜんぜん, and any similar kana-only vocab — these have registered IDs and must appear in terms even though they look like plain kana
+[ ] SENTENCE TOKEN SCAN completed for every jp/passage field: scanned left to right, token by token, using the Sentence Token Scan Protocol defined above — particles, sentence-final markers, and lexical words all verified
+[ ] Particles tagged in warmup items: warmup jp fields have exactly the same particle completeness as conversations (は, が, を, の, に, で, も, と, etc. are all tagged where present)
+[ ] Sentence-final か tagged as p_ka in every question sentence — applies to polite and casual questions equally; a sentence ending with ？ in casual speech still requires p_ka in terms
 [ ] For every い-adjective in jp text: verify position — bare string if attributive (precedes a noun); { "id": "...", "form": "polite_adj" } only if predicate (sentence-final before です/でした). Never use polite_adj for an attributive adjective.
 [ ] For every な-adjective in jp text: { "form": "attributive_na" } if it precedes a noun (大切な こと); { "form": "polite_adj" } if sentence-final predicate (大切です)
 [ ] For every desire expression (〜たい): desire_tai only when the sentence actually ends with です (〜たいです polite); plain_desire_tai when the sentence is plain/casual (〜たい、〜たいから、〜たいよ, etc.)
@@ -217,7 +244,7 @@ CB CHECKLIST
 
 **Responsibilities:**
 - Perform a systematic line-by-line audit. Do **not** skim.
-- For every `jp` or passage sentence: tokenize the **full surface string** — not just kanji-containing words. For every lexical token (noun, verb, adjective, adverb, particle, conjunction, copula, sentence-final particle), verify it is either (a) tagged in `terms` with a matching ID, or (b) a permissible untagged pure-kana function word that has **no glossary entry**. Kana-only connectors and particles (e.g. でも, だから, だって, よ, ね, か) must be verified against `shared/particles.json` for their `introducedIn` lesson — do **not** assume they are permissible just because they are written in kana.
+- **Apply the Sentence Token Scan Protocol (STSP) to every `jp` or passage field.** Read each sentence left to right, token by token. For every token (noun, verb, adjective, adverb, particle, conjunction, copula, sentence-final particle), verify it is either (a) tagged in `terms` with a matching ID, or (b) a permissible untagged pure-kana function word that has **no glossary entry**. Kana-only connectors and particles (e.g. でも, だから, だって, よ, ね, か) must be verified against `shared/particles.json` for their `introducedIn` lesson — do **not** assume they are permissible just because they are written in kana. The STSP applies equally to warmup items, reading questions, and drills — no section is exempt. During rewrites and refreshes, apply the STSP to every jp field including those carried forward from the original; no field gets a "previously passing" exemption.
 - For every `terms` entry: verify the ID exists in the glossary (cross-reference the glossary file). Then verify the **surface form** of that glossary entry matches (or inflects from) the actual token in the `jp` field. A surface mismatch — e.g. tagging `だ` with `g_desu` whose glossary surface is `です` — is a **hard fail** even if the ID exists.
 - For every verb/adjective term entry: verify the `form` string is a valid key in `conjugation_rules.json`.
 - Verify all kanji in `jp` fields appear in the taught-kanji set (from `manifest.json`).
@@ -1571,6 +1598,8 @@ When the user requests a rewrite of an existing lesson (rather than creating new
 
 **Agent 1 scoping step for refreshes:** After reading the original lesson, run a targeted Grep for every vocab ID used in the original against the glossary. Flag any ID that either (a) doesn't exist in the glossary, or (b) has `lesson_ids` later than the current lesson. List these as "out-of-scope replacements needed" in the Content Brief, along with candidate replacement vocabulary from within scope.
 
+**Sentence Token Scan Protocol applies to all rewrites.** When Agent 2 builds the refreshed content, the STSP must be applied to every jp/passage field — including fields carried forward from the original file unchanged. Treat every jp string in the original as unaudited; the previous version may predate current tagging standards. Agent 3 must perform the STSP during QA of all refreshed content and may not give the original a "previously passing" exemption.
+
 ---
 
 ## Early-Use Vocabulary Rules
@@ -2132,6 +2161,10 @@ These are the most frequent errors. All agents should be alert to them.
 50b. **Adding glossary entries to accommodate a lesson refresh** — when rewriting an existing lesson, the agent finds that the original content uses vocabulary with no glossary entry (e.g. 公園, さん歩) and responds by creating new glossary entries to make the IDs valid. This is wrong: the absence of a glossary entry during a refresh proves the word has not been introduced in the curriculum. Adding it would be expanding the curriculum disguised as a bug fix. During refreshes, **absent glossary entry = out-of-scope = remove and replace with available vocab**. The Unregistered Word Report escalation path is for new content creation only — it does not apply to refreshes. See [Lesson Refresh / Rewrite Guidelines](#lesson-refresh--rewrite-guidelines).
 51. **(Grammar) Wrong field names on `annotatedExample` or `grammarComparison`** — these sections silently render empty when the wrong field names are used. There is no error message; the section simply shows nothing. The renderer ignores unrecognised fields. **`annotatedExample` must use `examples[]`** (array of `{context?, parts[], en, note?}` objects) — never `sentence`, `translation`, or a top-level `parts[]`. **`grammarComparison` must use `items[]`** (array of `{label, color, points[], example?}`) — never `itemA`/`itemB`. Agent 2 must verify these field names against the Grammar JSON schema in the Content Types section before submitting. Agent 3 must check that `annotatedExample` sections have an `examples` array (not a `parts` array) and that `grammarComparison` sections have an `items` array (not `itemA`/`itemB`). A section with the wrong schema is a **hard fail** equivalent to a missing required field.
 52. **(Grammar) `fillSlot` items using `sentence` instead of `before`/`after`** — the `fillSlot` renderer splits the sentence display using `item.before` and `item.after` strings. Using a `sentence` field with `___` as the blank placeholder is the wrong schema — the renderer will render `before` as undefined (empty) and ignore the rest. **Always pre-split each item into `before` (text before the blank) and `after` (text after the blank).** Example: `"sentence": "野菜___が好きです"` must become `"before": "野菜"` and `"after": "が好きです"`. This is the same class of silent-failure as wrong `annotatedExample` field names — no error, just empty/broken UI.
+
+53. **Warmup particle omission** — systematically skipping は、が、を、の、に、で、も and other particles from warmup `terms` arrays under the false assumption that warmup items need less precision or that particles are "obvious." Warmup items require exactly the same completeness as conversation lines. A warmup sentence like 「朝、何を 食べますか。」 needs `p_wo` (を) and `p_ka` (か) just as much as a conversation line does. This is currently the single most common tagging failure across lessons N4.8–N4.10. Agent 2 must apply the STSP to every warmup jp field. Agent 3 must specifically check warmup sections during QA.
+
+54. **Casual question without `p_ka`** — writing a casual question ending with `？` and omitting `p_ka` from `terms`. In casual spoken Japanese, the question particle is sometimes not pronounced and rising intonation is used instead — but `p_ka` must still be tagged in the written content so students can tap the sentence-final region and learn the grammatical function. Any sentence that is a question (whether polite with か or casual with ？) requires `p_ka` in `terms`. Example failure: `"jp": "映画、何時に 始まる？"` with no `p_ka` in terms. Example fix: add `"p_ka"` to the terms array.
 
 ### Agent 3 failures (caught by Agent 4)
 

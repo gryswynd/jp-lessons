@@ -64,8 +64,11 @@
           "en": "Where were you living last year?",
           "terms": [
             "v_kyonen",
+            "v_doko",
+            "p_ni",
             { "id": "v_sumu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_mashita" }
+            { "id": "v_iru", "form": "polite_mashita" },
+            "p_ka"
           ]
         },
         {
@@ -73,9 +76,12 @@
           "en": "What kind of places are in your neighbourhood?",
           "terms": [
             "v_kinjo",
+            "p_ni",
             "v_donna",
             "v_tokoro",
-            { "id": "v_aru", "form": "polite_masu" }
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" },
+            "p_ka"
           ]
         },
         {
@@ -83,8 +89,11 @@
           "en": "What are you studying every day?",
           "terms": [
             "v_mainichi",
+            "v_nani",
+            "p_wo",
             { "id": "v_manabu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            { "id": "v_iru", "form": "polite_masu" },
+            "p_ka"
           ]
         },
         {
@@ -92,7 +101,9 @@
           "en": "Can you speak Japanese?",
           "terms": [
             "v_nihongo",
-            { "id": "v_hanasu", "form": "polite_potential" }
+            "p_ga",
+            { "id": "v_hanasu", "form": "polite_potential" },
+            "p_ka"
           ]
         }
       ]
@@ -179,11 +190,15 @@
           "terms": [
             "char_yamamoto",
             "v_kyou",
+            "p_kara",
             "v_eigo",
+            "p_no",
             "v_kurasu",
+            "p_ga",
             { "id": "v_hajimaru", "form": "polite_masu" },
             "char_joel",
-            "v_sensei"
+            "v_sensei",
+            "g_desu"
           ]
         },
         {
@@ -193,7 +208,8 @@
           "terms": [
             "char_joel",
             "v_eigo",
-            "v_daisuki",
+            "p_ga",
+            { "id": "v_daisuki", "form": "polite_adj" },
             "p_yoroshiku"
           ]
         },
@@ -205,7 +221,9 @@
             "char_rikizo",
             "v_sensei",
             "v_doko",
-            { "id": "v_kuru", "form": "polite_mashita" }
+            "p_kara",
+            { "id": "v_kuru", "form": "polite_mashita" },
+            "p_ka"
           ]
         },
         {
@@ -214,11 +232,16 @@
           "en": "I came from America, but I have been to England too!",
           "terms": [
             "char_joel",
+            "p_kara",
             { "id": "v_kuru", "form": "polite_mashita" },
             "p_ga_but",
+            "p_ni",
+            "p_mo",
             { "id": "v_iku", "form": "plain_past" },
             "v_koto",
-            { "id": "v_aru", "form": "polite_masu" }
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" },
+            "p_yo"
           ]
         },
         {
@@ -228,10 +251,14 @@
           "terms": [
             "char_yamamoto",
             "char_conor",
+            "p_mo",
             "v_kurasu",
+            "p_ni",
             { "id": "v_kuru", "form": "polite_masu" },
+            "p_kara",
             { "id": "v_kuru", "form": "plain_past" },
-            "v_gakusei"
+            "v_gakusei",
+            "g_desu"
           ]
         },
         {
@@ -240,10 +267,13 @@
           "en": "Nice to meet you. I'm Conor. My Japanese isn't great yet, but please take care of me.",
           "terms": [
             "char_conor",
+            "g_desu",
             "v_nihongo",
+            "p_wa",
             "v_mada",
             "v_amari",
             "v_jouzu",
+            "p_dewa",
             "p_ga_but",
             "p_yoroshiku"
           ]
@@ -263,8 +293,11 @@
             "char_rikizo",
             "char_conor",
             "v_issho",
+            "p_ni",
             "v_eiga",
-            { "id": "v_miru", "form": "polite_negative" }
+            "p_wo",
+            { "id": "v_miru", "form": "polite_negative" },
+            "p_ka"
           ]
         },
         {
@@ -275,8 +308,11 @@
             "char_conor",
             { "id": "v_iku", "form": "desire_tai" },
             "v_eiga",
+            "p_wa",
             "v_nanji",
-            { "id": "v_hajimaru", "form": "polite_masu" }
+            "p_ni",
+            { "id": "v_hajimaru", "form": "polite_masu" },
+            "p_ka"
           ]
         },
         {
@@ -287,10 +323,14 @@
             "char_rikizo",
             "v_gogo",
             { "counter": "ji", "n": 3 },
+            "p_ni",
             { "id": "v_hajimaru", "form": "polite_masu" },
             "v_eki",
+            "p_kara",
             "v_chikai",
-            "v_eigakan"
+            "v_eigakan",
+            "g_desu",
+            "p_yo"
           ]
         },
         {
@@ -299,8 +339,12 @@
           "en": "About what time does the movie end?",
           "terms": [
             "char_conor",
+            "v_eiga",
+            "p_wa",
             "v_nanji",
-            { "id": "v_owaru", "form": "polite_masu" }
+            "p_ni",
+            { "id": "v_owaru", "form": "polite_masu" },
+            "p_ka"
           ]
         },
         {
@@ -310,8 +354,11 @@
           "terms": [
             "char_rikizo",
             { "counter": "ji", "n": 5 },
+            "p_ni",
             { "id": "v_owaru", "form": "polite_masu" },
-            "v_daijoubu"
+            "v_daijoubu",
+            "g_desu",
+            "p_yo"
           ]
         }
       ]
@@ -328,8 +375,11 @@
           "terms": [
             "char_rikizo",
             "v_sensei",
+            "p_wa",
             "v_eiga",
-            "v_suki"
+            "p_ga",
+            { "id": "v_suki", "form": "polite_adj" },
+            "p_ka"
           ]
         },
         {
@@ -338,11 +388,15 @@
           "en": "I love them. I enjoy watching movies while eating.",
           "terms": [
             "char_joel",
-            "v_daisuki",
+            { "id": "v_daisuki", "form": "polite_adj" },
             { "id": "v_taberu", "form": "nagara_form" },
             "v_eiga",
+            "p_wo",
             { "id": "v_miru", "form": null },
-            "v_suki"
+            "p_no",
+            "p_ga",
+            { "id": "v_suki", "form": "polite_adj" },
+            "p_yo"
           ]
         },
         {
@@ -352,10 +406,15 @@
           "terms": [
             "char_rikizo",
             "v_watashi",
+            "p_mo",
             "v_eiga",
-            "v_suki",
+            "p_ga",
+            { "id": "v_suki", "form": "polite_adj" },
+            "v_eiga",
+            "p_wo",
             { "id": "v_miru", "form": "tari_form" },
             "v_eigo",
+            "p_wo",
             { "id": "v_manabu", "form": "tari_form" },
             { "id": "v_suru", "form": "polite_masu" }
           ]
@@ -366,11 +425,20 @@
           "en": "That's great. You can learn English through movies! Movies about painters are great too.",
           "terms": [
             "char_joel",
+            { "id": "v_ii", "form": "polite_adj" },
+            "p_ne",
             "v_eiga",
+            "p_de",
             "v_eigo",
+            "p_ga",
             { "id": "v_manabu", "form": "polite_potential" },
+            "p_yo",
             "v_gaka",
-            "v_eiga"
+            "p_no",
+            "v_eiga",
+            "p_mo",
+            { "id": "v_ii", "form": "polite_adj" },
+            "p_yo"
           ]
         },
         {
@@ -380,9 +448,13 @@
           "terms": [
             "char_rikizo",
             "v_gaka",
+            "p_no",
             "v_eiga",
-            "v_omoshiroi",
+            "p_ka",
+            { "id": "v_omoshiroi", "form": "polite_adj" },
+            "p_ne",
             "v_eigo",
+            "p_de",
             { "id": "v_miru", "form": "desire_tai" }
           ]
         },
@@ -393,11 +465,15 @@
           "terms": [
             "char_joel",
             "v_eigo",
+            "p_de",
             { "id": "v_miru", "form": "nagara_form" },
             "v_eigo",
+            "p_ga",
             { "id": "v_manabu", "form": "polite_potential" },
             "p_kara_because",
-            "v_totemo"
+            "v_totemo",
+            { "id": "v_ii", "form": "polite_adj" },
+            "p_yo"
           ]
         }
       ]
@@ -415,7 +491,9 @@
             "char_yamakawa",
             "v_eiga",
             "v_nanji",
-            { "id": "v_hajimaru", "form": null }
+            "p_ni",
+            { "id": "v_hajimaru", "form": null },
+            "p_ka"
           ]
         },
         {
@@ -425,9 +503,13 @@
           "terms": [
             "char_rikizo",
             { "counter": "ji", "n": 3 },
+            "p_ni",
             { "id": "v_hajimaru", "form": null },
+            "p_yo",
             "v_mou",
-            "v_sugu"
+            "v_sugu",
+            "g_da",
+            "p_ne"
           ]
         },
         {
@@ -437,10 +519,12 @@
           "terms": [
             "char_yamakawa",
             "v_eiga",
+            "p_ga",
             { "id": "v_owaru", "form": "plain_past" },
             "v_ato",
             "v_nani",
-            { "id": "v_suru", "form": null }
+            { "id": "v_suru", "form": null },
+            "p_ka"
           ]
         },
         {
@@ -450,10 +534,13 @@
           "terms": [
             "char_rikizo",
             "v_eigo",
+            "p_wo",
             { "id": "v_manabu", "form": "tari_form" },
             { "id": "v_aruku", "form": "tari_form" },
             { "id": "v_suru", "form": "plain_desire_tai" },
-            "char_conor"
+            "char_conor",
+            "p_wa",
+            "v_dou"
           ]
         },
         {
@@ -464,8 +551,11 @@
             "char_yamakawa",
             "char_conor",
             "v_nihongo",
-            "v_jouzu",
-            { "id": "v_naru", "form": "plain_past" }
+            { "id": "v_jouzu", "form": "adverbial" },
+            "p_ni",
+            { "id": "v_naru", "form": "plain_past" },
+            "p_yo",
+            "p_ne"
           ]
         },
         {
@@ -477,11 +567,14 @@
             "v_un",
             "v_mainichi",
             "v_eigo",
+            "p_wo",
             { "id": "v_manabu", "form": "tari_form" },
             "v_eiga",
+            "p_wo",
             { "id": "v_miru", "form": "tari_form" },
             { "id": "v_suru", "form": null },
-            "p_kara_because"
+            "p_kara_because",
+            "p_ne"
           ]
         }
       ]
@@ -495,8 +588,10 @@
           "en": "Conor loves movies.",
           "terms": [
             "char_conor",
+            "p_wa",
             "v_eiga",
-            "v_daisuki"
+            "p_ga",
+            { "id": "v_daisuki", "form": "polite_adj" }
           ]
         },
         {
@@ -505,8 +600,11 @@
           "terms": [
             "v_kyou",
             "char_rikizo",
+            "p_to",
             "v_issho",
+            "p_ni",
             "v_eigakan",
+            "p_he",
             { "id": "v_iku", "form": "polite_mashita" }
           ]
         },
@@ -515,10 +613,13 @@
           "en": "The movie started at 3 PM and ended at 5.",
           "terms": [
             "v_eiga",
+            "p_wa",
             "v_gogo",
             { "counter": "ji", "n": 3 },
+            "p_ni",
             { "id": "v_hajimaru", "form": "te_form" },
             { "counter": "ji", "n": 5 },
+            "p_ni",
             { "id": "v_owaru", "form": "polite_mashita" }
           ]
         },
@@ -527,10 +628,14 @@
           "en": "Conor wrote English notes while watching the movie.",
           "terms": [
             "char_conor",
+            "p_wa",
             "v_eiga",
+            "p_wo",
             { "id": "v_miru", "form": "nagara_form" },
             "v_eigo",
+            "p_no",
             "v_memo",
+            "p_wo",
             { "id": "v_kaku", "form": "polite_mashita" }
           ]
         },
@@ -539,10 +644,13 @@
           "en": "Because he loves movies, he loves learning English.",
           "terms": [
             "v_eiga",
+            "p_ga",
             { "id": "v_suki", "form": null },
             "p_node",
             "v_eigo",
+            "p_wo",
             { "id": "v_manabu", "form": null },
+            "p_ga",
             { "id": "v_suki", "form": "polite_adj" }
           ]
         },
@@ -551,9 +659,14 @@
           "en": "Conor does things like watch movies and read English books.",
           "terms": [
             "char_conor",
+            "p_wa",
             "v_eiga",
+            "p_wo",
             { "id": "v_miru", "form": "tari_form" },
             "v_eigo",
+            "p_no",
+            "v_hon",
+            "p_wo",
             { "id": "v_yomu", "form": "tari_form" },
             { "id": "v_suru", "form": "polite_masu" }
           ]
@@ -565,7 +678,9 @@
           "a": "りきぞと いっしょに 行きました。",
           "terms": [
             "char_rikizo",
+            "p_to",
             "v_issho",
+            "p_ni",
             { "id": "v_iku", "form": "polite_mashita" }
           ]
         },
@@ -575,6 +690,7 @@
           "terms": [
             "v_gogo",
             { "counter": "ji", "n": 3 },
+            "p_ni",
             { "id": "v_hajimaru", "form": "polite_mashita" }
           ]
         },
@@ -583,7 +699,9 @@
           "a": "英語の メモを 書きました。",
           "terms": [
             "v_eigo",
+            "p_no",
             "v_memo",
+            "p_wo",
             { "id": "v_kaku", "form": "polite_mashita" }
           ]
         }
@@ -598,19 +716,27 @@
           "en": "Joel Sensei is an English teacher who came from America.",
           "terms": [
             "char_joel",
+            "p_wa",
+            "p_kara",
             { "id": "v_kuru", "form": "plain_past" },
             "v_eigo",
-            "v_sensei"
+            "p_no",
+            "v_sensei",
+            "g_desu"
           ]
         },
         {
           "jp": "アメリカから 来ましたが、イギリスにも 行った ことが あります。",
           "en": "He came from America, but has also been to England.",
           "terms": [
+            "p_kara",
             { "id": "v_kuru", "form": "polite_mashita" },
             "p_ga_but",
+            "p_ni",
+            "p_mo",
             { "id": "v_iku", "form": "plain_past" },
             "v_koto",
+            "p_ga",
             { "id": "v_aru", "form": "polite_masu" }
           ]
         },
@@ -620,8 +746,10 @@
           "terms": [
             "v_mainichi",
             "v_kurasu",
+            "p_de",
             { "id": "v_genki", "form": "adverbial" },
             "v_eigo",
+            "p_wo",
             { "id": "v_hanasu", "form": "te_form" },
             { "id": "v_iru", "form": "polite_masu" }
           ]
@@ -631,10 +759,13 @@
           "en": "He loves movies, and loves movies about painters too.",
           "terms": [
             "v_eiga",
+            "p_ga",
             { "id": "v_daisuki", "form": null },
             "v_gaka",
+            "p_no",
             "v_eiga",
-            "v_daisuki"
+            "p_mo",
+            { "id": "v_daisuki", "form": "polite_adj" }
           ]
         },
         {
@@ -642,8 +773,12 @@
           "en": "He does things like watch movies and read English books.",
           "terms": [
             "v_eiga",
+            "p_wo",
             { "id": "v_miru", "form": "tari_form" },
             "v_eigo",
+            "p_no",
+            "v_hon",
+            "p_wo",
             { "id": "v_yomu", "form": "tari_form" },
             { "id": "v_suru", "form": "polite_masu" }
           ]
@@ -655,8 +790,11 @@
             "v_itsumo",
             { "id": "v_genki", "form": null },
             "v_eigo",
+            "p_mo",
             "v_nihongo",
-            "v_jouzu"
+            "p_mo",
+            { "id": "v_jouzu", "form": "polite_adj" },
+            "g_desu"
           ]
         }
       ],
@@ -665,6 +803,7 @@
           "q": "Where did Joel Sensei come from?",
           "a": "アメリカから 来ました。",
           "terms": [
+            "p_kara",
             { "id": "v_kuru", "form": "polite_mashita" }
           ]
         },
@@ -674,6 +813,7 @@
           "terms": [
             { "id": "v_genki", "form": "adverbial" },
             "v_eigo",
+            "p_wo",
             { "id": "v_hanasu", "form": "te_form" },
             { "id": "v_iru", "form": "polite_masu" }
           ]
@@ -683,8 +823,12 @@
           "a": "映画を 見たり、英語の 本を 読んだりします。",
           "terms": [
             "v_eiga",
+            "p_wo",
             { "id": "v_miru", "form": "tari_form" },
             "v_eigo",
+            "p_no",
+            "v_hon",
+            "p_wo",
             { "id": "v_yomu", "form": "tari_form" },
             { "id": "v_suru", "form": "polite_masu" }
           ]
