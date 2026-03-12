@@ -238,6 +238,169 @@
     },
     {
       "type": "grammarRule",
+      "id": "rule_tagaru",
+      "pattern": [
+        {
+          "label": "VERB",
+          "color": "verb",
+          "text": "食べる"
+        },
+        {
+          "label": "ます-STEM",
+          "color": "modifier",
+          "text": "→ 食べ"
+        },
+        {
+          "label": "+ たがる",
+          "color": "predicate",
+          "text": "= 食べたがる"
+        }
+      ],
+      "meaning": "たがる / がる — expressing someone ELSE's desire or feeling (observable behavior)",
+      "explanation": "たい expresses the speaker's own desire ('I want to eat'). But in Japanese, you cannot directly state another person's inner feelings — saying ×弟は食べたいです sounds unnatural because you are claiming to know what's inside someone else's mind.\n\nInstead, use たがる to describe desires you can **observe** in someone else's behavior:\n\n**Verb stem + たがる:**\n- 食べたがる (shows signs of wanting to eat)\n- 行きたがる (shows signs of wanting to go)\n- 買いたがる (shows signs of wanting to buy)\n\n**Adjective stem + がる** (for feelings/emotions):\n- こわがる (acts scared — from こわい, scary)\n- いやがる (shows dislike — from いや, unpleasant)\n- ほしがる (shows wanting — from ほしい, wanted)\n\nたがる conjugates as a **godan (U-verb)**: たがる → たがります / たがっている / たがらない.\n\nThe most common form in everyday speech is the progressive: 食べたがっている (is showing signs of wanting to eat — right now, observably).",
+      "notes": [
+        "Key rule: たい = speaker's own desire ONLY. たがる = observable desire/feeling in OTHERS.",
+        "You CAN use たい when asking someone about their desire: 食べたいですか？ (Do you want to eat?) is natural.",
+        "たがる often appears in progressive form (たがっている): 弟は食べたがっています (My brother is showing he wants to eat).",
+        "がる for adjectives works the same way: こわい (I'm scared) → 子どもがこわがっている (The child is acting scared).",
+        "In casual speech, you may hear たい used for others (弟も食べたいみたい — seems like my brother also wants to eat). This uses みたい to soften the claim."
+      ],
+      "examples": [
+        {
+          "parts": [
+            {
+              "text": "弟は",
+              "role": "topic",
+              "gloss": "my younger brother (topic)"
+            },
+            {
+              "text": "カレーを",
+              "role": "object",
+              "gloss": "curry (object)"
+            },
+            {
+              "text": "食べ",
+              "role": "verb",
+              "gloss": "eat(stem)-"
+            },
+            {
+              "text": "たがっています。",
+              "role": "predicate",
+              "gloss": "is showing desire to (たがる progressive)"
+            }
+          ],
+          "en": "My younger brother is showing he wants to eat curry.",
+          "breakdown": "食べる → 食べ (stem) + たがる → たがっている (progressive: currently showing the desire). Speaker describes observed behavior, not their own desire."
+        },
+        {
+          "parts": [
+            {
+              "text": "友だちは",
+              "role": "topic",
+              "gloss": "my friend (topic)"
+            },
+            {
+              "text": "デパートへ",
+              "role": "modifier",
+              "gloss": "to the dept. store"
+            },
+            {
+              "text": "行き",
+              "role": "verb",
+              "gloss": "go(stem)-"
+            },
+            {
+              "text": "たがっています。",
+              "role": "predicate",
+              "gloss": "is showing desire to"
+            }
+          ],
+          "en": "My friend is showing he wants to go to the department store.",
+          "breakdown": "行く → 行き (stem) + たがっています. The friend's desire is observed from outside."
+        }
+      ]
+    },
+    {
+      "type": "grammarComparison",
+      "title": "たい vs たがる — My Desire vs Someone Else's",
+      "items": [
+        {
+          "label": "たい — Speaker's Own Desire",
+          "color": "verb",
+          "points": [
+            "Used when the speaker expresses their OWN feelings",
+            "ます-stem + たいです (polite) or たい (casual)",
+            "Conjugates like an い-adjective (たくない, たかった)",
+            "食べたいです = 'I want to eat' — my inner feeling",
+            "Also OK in questions: 食べたいですか？ = 'Do you want to eat?'"
+          ],
+          "example": {
+            "parts": [
+              {
+                "text": "わたしは",
+                "role": "topic",
+                "gloss": "I (topic)"
+              },
+              {
+                "text": "カレーを",
+                "role": "object",
+                "gloss": "curry (object)"
+              },
+              {
+                "text": "食べ",
+                "role": "verb",
+                "gloss": "eat(stem)-"
+              },
+              {
+                "text": "たいです。",
+                "role": "predicate",
+                "gloss": "want to"
+              }
+            ],
+            "en": "I want to eat curry."
+          }
+        },
+        {
+          "label": "たがる — Others' Observable Desire",
+          "color": "modifier",
+          "points": [
+            "Used when describing someone ELSE's desire you can observe",
+            "ます-stem + たがる (conjugates as a godan U-verb)",
+            "Most commonly used in progressive: たがっている",
+            "食べたがっている = 'is showing he wants to eat' — observed behavior",
+            "Cannot claim to know others' inner feelings → use たがる instead"
+          ],
+          "example": {
+            "parts": [
+              {
+                "text": "弟は",
+                "role": "topic",
+                "gloss": "younger brother (topic)"
+              },
+              {
+                "text": "カレーを",
+                "role": "object",
+                "gloss": "curry (object)"
+              },
+              {
+                "text": "食べ",
+                "role": "verb",
+                "gloss": "eat(stem)-"
+              },
+              {
+                "text": "たがっています。",
+                "role": "predicate",
+                "gloss": "is showing desire to"
+              }
+            ],
+            "en": "My younger brother is showing he wants to eat curry."
+          }
+        }
+      ],
+      "tip": "Think of it this way: たい = 'I feel it inside'. たがる = 'I can see it from outside'. Japanese grammar respects the boundary between your own feelings and what you observe in others."
+    },
+    {
+      "type": "grammarRule",
       "id": "rule_mashou",
       "pattern": [
         {

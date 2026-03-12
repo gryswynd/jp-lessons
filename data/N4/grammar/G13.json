@@ -216,6 +216,108 @@
       ]
     },
     {
+      "type": "grammarRule",
+      "id": "rule_koto_ga_dekiru",
+      "pattern": [
+        {
+          "label": "VERB (plain form)",
+          "color": "verb",
+          "text": "話す"
+        },
+        {
+          "label": "+ ことができる",
+          "color": "predicate",
+          "text": "話すことができます"
+        }
+      ],
+      "meaning": "ことができる — formal potential ('is able to do' / 'it is possible to do')",
+      "explanation": "ことができる is a more formal way to express ability or possibility. It uses the **plain (dictionary) form** of the verb plus こと (which turns the verb into a noun — 'the act of ~') plus ができる (can do).\n\n**Pattern:** Verb (dictionary form) + ことができる\n\n**Examples:**\n- 日本語を話すことができます。(I am able to speak Japanese. — formal)\n- ここで食べることができます。(It is possible to eat here. — announcement-style)\n- 電車に乗ることができません。(It is not possible to board the train. — formal negative)\n\n**When to use ことができる vs the conjugated potential:**\n- **Conjugated potential (話せる):** Natural in everyday conversation. Shorter, more casual, and more common in speech.\n- **ことができる (話すことができる):** More formal, written, and official. Used in announcements, signs, rules, and polite business contexts.\n\n**Negative:** ことができない / ことができません\n\n**Important:** The verb before こと must be in **plain (dictionary) form** — not ます-form. ×話しますことができる is wrong.",
+      "notes": [
+        "する → することができる (can do — formal). Compare: できる (can do — casual/normal).",
+        "来る → 来ることができる (can come — formal). Compare: 来られる (can come — conversational).",
+        "You will see ことができる on signs, in announcements, and in written rules: 「ここで写真を撮ることができます」(You may take photos here.)",
+        "In conversation, the conjugated potential is almost always preferred. ことができる sounds overly formal in casual speech.",
+        "ことができる works with ALL verbs — even those that already have a potential form. It is always available as a formal alternative."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "日本語を", "role": "object", "gloss": "Japanese (object: を)" },
+            { "text": "話す", "role": "verb", "gloss": "speak (dictionary form)" },
+            { "text": "ことが", "role": "connector", "gloss": "the act of ~ (nominalizer + subject marker)" },
+            { "text": "できます。", "role": "predicate", "gloss": "can do (polite — formal potential)" }
+          ],
+          "en": "I am able to speak Japanese. (formal)",
+          "breakdown": "話す (dictionary form) + こと (nominalizer) + が + できます. Compare conversational: 日本語が話せます."
+        },
+        {
+          "parts": [
+            { "text": "ここで", "role": "modifier", "gloss": "here (location of action: で)" },
+            { "text": "食べる", "role": "verb", "gloss": "eat (dictionary form)" },
+            { "text": "ことが", "role": "connector", "gloss": "the act of ~ (nominalizer + subject)" },
+            { "text": "できます。", "role": "predicate", "gloss": "can do (polite)" }
+          ],
+          "en": "It is possible to eat here. (e.g. a sign or announcement)",
+          "breakdown": "食べる + ことができます. This style is typical of public announcements and signs."
+        },
+        {
+          "parts": [
+            { "text": "電車に", "role": "object", "gloss": "the train (target: に)" },
+            { "text": "乗る", "role": "verb", "gloss": "board/ride (dictionary form)" },
+            { "text": "ことが", "role": "connector", "gloss": "the act of ~" },
+            { "text": "できません。", "role": "predicate", "gloss": "cannot (polite negative)" }
+          ],
+          "en": "It is not possible to board the train. (formal negative)",
+          "breakdown": "乗る + ことができません. Negative: できる → できません."
+        }
+      ]
+    },
+    {
+      "type": "grammarComparison",
+      "title": "Potential Form vs ことができる — Conversational vs Formal",
+      "items": [
+        {
+          "label": "Conjugated potential (話せる)",
+          "color": "verb",
+          "points": [
+            "Natural in everyday conversation — shorter and more common in speech",
+            "RU-verbs: 食べられる. U-verbs: 話せる. する → できる.",
+            "日本語が話せます = 'I can speak Japanese' (conversational)",
+            "Particle shift を → が applies naturally",
+            "Preferred in all casual and semi-formal spoken contexts"
+          ],
+          "example": {
+            "parts": [
+              { "text": "日本語が", "role": "subject", "gloss": "Japanese (が — potential object)" },
+              { "text": "話せます。", "role": "predicate", "gloss": "can speak (conjugated potential)" }
+            ],
+            "en": "I can speak Japanese. (conversational)"
+          }
+        },
+        {
+          "label": "ことができる (formal potential)",
+          "color": "modifier",
+          "points": [
+            "More formal, written, and official — used in announcements, signs, and polite business speech",
+            "Dictionary form + ことができる — works with ALL verb types",
+            "日本語を話すことができます = 'I am able to speak Japanese' (formal/written)",
+            "Keeps を (no particle shift) since the verb is in dictionary form",
+            "Preferred in written rules, public signs, and formal announcements"
+          ],
+          "example": {
+            "parts": [
+              { "text": "日本語を", "role": "object", "gloss": "Japanese (を — stays as を)" },
+              { "text": "話す", "role": "verb", "gloss": "speak (dictionary form)" },
+              { "text": "ことが", "role": "connector", "gloss": "the act of ~" },
+              { "text": "できます。", "role": "predicate", "gloss": "can do" }
+            ],
+            "en": "I am able to speak Japanese. (formal)"
+          }
+        }
+      ],
+      "tip": "Speaking with a friend? → 話せます (potential form). Writing a sign or making an announcement? → 話すことができます (formal). Both mean the same thing — the difference is register and context."
+    },
+    {
       "type": "annotatedExample",
       "title": "Potential Form in Context — Reading a Sentence",
       "examples": [
