@@ -41,7 +41,7 @@
           "id": "N5.2",
           "title": "Days of the Week",
           "file": "data/N5/lessons/N5.2.json",
-          "unlocksAfter": "G2",
+          "unlocksAfter": "G3",
           "kanji": [
             "日",
             "月",
@@ -107,7 +107,7 @@
           "id": "N5.6",
           "title": "Landscape & Vehicles",
           "file": "data/N5/lessons/N5.6.json",
-          "unlocksAfter": "G7",
+          "unlocksAfter": "G8",
           "kanji": [
             "山",
             "川",
@@ -145,7 +145,7 @@
           "id": "N5.9",
           "title": "Relative Position",
           "file": "data/N5/lessons/N5.9.json",
-          "unlocksAfter": "G8",
+          "unlocksAfter": "G9",
           "kanji": [
             "前",
             "後",
@@ -157,7 +157,7 @@
           "id": "N5.10",
           "title": "Weather & Energy",
           "file": "data/N5/lessons/N5.10.json",
-          "unlocksAfter": "G9",
+          "unlocksAfter": "G10",
           "kanji": [
             "天",
             "電",
@@ -181,7 +181,7 @@
           "id": "N5.12",
           "title": "Study & Country",
           "file": "data/N5/lessons/N5.12.json",
-          "unlocksAfter": "G11",
+          "unlocksAfter": "G12",
           "kanji": [
             "本",
             "語",
@@ -278,73 +278,81 @@
         },
         {
           "id": "G2",
-          "title": "Core Particles I: は, が, の, か, を",
+          "title": "Ko-so-a-do Demonstratives",
           "file": "data/N5/grammar/G2.json",
+          "unlocksAfter": "N5.1",
+          "icon": "👉",
+          "estimatedMinutes": 25
+        },
+        {
+          "id": "G3",
+          "title": "Core Particles I: は, が, の, か, を",
+          "file": "data/N5/grammar/G3.json",
           "unlocksAfter": "G1",
           "icon": "📌"
         },
         {
-          "id": "G3",
+          "id": "G4",
           "title": "Core Particles II: も, と, や, から, まで",
-          "file": "data/N5/grammar/G3.json",
+          "file": "data/N5/grammar/G4.json",
           "unlocksAfter": "N5.2",
           "icon": "📌"
         },
         {
-          "id": "G4",
+          "id": "G5",
           "title": "Core Particles III: に, で, へ",
-          "file": "data/N5/grammar/G4.json",
+          "file": "data/N5/grammar/G5.json",
           "unlocksAfter": "N5.5",
           "icon": "📌"
         },
         {
-          "id": "G5",
+          "id": "G6",
           "title": "Verb Types — RU-Verbs vs U-Verbs vs Irregulars",
-          "file": "data/N5/grammar/G5.json",
-          "unlocksAfter": "G4",
+          "file": "data/N5/grammar/G6.json",
+          "unlocksAfter": "G5",
           "icon": "⚙️"
         },
         {
-          "id": "G6",
+          "id": "G7",
           "title": "Polite Verb Forms — ます形",
-          "file": "data/N5/grammar/G6.json",
-          "unlocksAfter": "G5",
+          "file": "data/N5/grammar/G7.json",
+          "unlocksAfter": "G6",
           "icon": "🔤"
         },
         {
-          "id": "G7",
+          "id": "G8",
           "title": "て-form — Connecting Actions",
-          "file": "data/N5/grammar/G7.json",
-          "unlocksAfter": "G6",
+          "file": "data/N5/grammar/G8.json",
+          "unlocksAfter": "G7",
           "icon": "🔗"
         },
         {
-          "id": "G8",
+          "id": "G9",
           "title": "ている・たいです・ましょう — Progressive, Desire & Invitation",
-          "file": "data/N5/grammar/G8.json",
+          "file": "data/N5/grammar/G9.json",
           "unlocksAfter": "N5.Review.4",
           "icon": "🎯"
         },
         {
-          "id": "G9",
+          "id": "G10",
           "title": "Plain Forms & Basic Connectors",
-          "file": "data/N5/grammar/G9.json",
+          "file": "data/N5/grammar/G10.json",
           "unlocksAfter": "N5.9",
           "icon": "👋",
           "estimatedMinutes": 30
         },
         {
-          "id": "G10",
+          "id": "G11",
           "title": "i-Adjective Conjugation",
-          "file": "data/N5/grammar/G10.json",
+          "file": "data/N5/grammar/G11.json",
           "unlocksAfter": "N5.10",
           "icon": "🎨",
           "estimatedMinutes": 25
         },
         {
-          "id": "G11",
+          "id": "G12",
           "title": "na-Adjective Conjugation",
-          "file": "data/N5/grammar/G11.json",
+          "file": "data/N5/grammar/G12.json",
           "unlocksAfter": "N5.11",
           "icon": "🎨",
           "estimatedMinutes": 20
@@ -355,7 +363,7 @@
           "id": "N5.Review.1",
           "title": "People, Family & Days of the Week",
           "file": "data/N5/reviews/N5.Review.1.json",
-          "unlocksAfter": "G3"
+          "unlocksAfter": "G4"
         },
         {
           "id": "N5.Review.2",
@@ -379,7 +387,7 @@
           "id": "N5.Review.5",
           "title": "Relative Position, Weather & Energy",
           "file": "data/N5/reviews/N5.Review.5.json",
-          "unlocksAfter": "G10"
+          "unlocksAfter": "G11"
         },
         {
           "id": "N5.Review.6",
@@ -511,7 +519,7 @@
           "title": "My Family",
           "titleJp": "わたしのかぞく",
           "dir": "data/N5/stories/my-family",
-          "unlocksAfter": "G3"
+          "unlocksAfter": "G4"
         },
         {
           "id": "tanjoubi-no-keeki",
@@ -1199,35 +1207,131 @@
       "game": [],
       "grammar": [
         {
-          "id": "G12",
+          "id": "G13",
           "title": "Potential Form — Can / Able to",
-          "file": "data/N4/grammar/G12.json",
+          "file": "data/N4/grammar/G13.json",
           "unlocksAfter": "N4.3",
           "icon": "💪",
           "estimatedMinutes": 25
         },
         {
-          "id": "G13",
+          "id": "G14",
           "title": "Give & Receive — あげる / もらう / くれる",
-          "file": "data/N4/grammar/G13.json",
+          "file": "data/N4/grammar/G14.json",
           "unlocksAfter": "N4.5",
           "icon": "🎁",
           "estimatedMinutes": 25
         },
         {
-          "id": "G14",
+          "id": "G15",
           "title": "Comparison & Degree — より / ほう / ほど / くらい / すぎる",
-          "file": "data/N4/grammar/G14.json",
+          "file": "data/N4/grammar/G15.json",
           "unlocksAfter": "N4.5",
           "icon": "⚖️",
           "estimatedMinutes": 25
         },
         {
-          "id": "G15",
+          "id": "G16",
           "title": "Limiting Particles — だけ / しか / ばかり / でも",
-          "file": "data/N4/grammar/G15.json",
+          "file": "data/N4/grammar/G16.json",
           "unlocksAfter": "N4.13",
           "icon": "🔒",
+          "estimatedMinutes": 20
+        },
+        {
+          "id": "G17",
+          "title": "Transitive & Intransitive Verb Pairs",
+          "file": "data/N4/grammar/G17.json",
+          "unlocksAfter": "N4.10",
+          "icon": "🔀",
+          "estimatedMinutes": 25
+        },
+        {
+          "id": "G18",
+          "title": "Connecting Actions — てから / まえに / ながら / ために / ～たり",
+          "file": "data/N4/grammar/G18.json",
+          "unlocksAfter": "N4.10",
+          "icon": "⛓️",
+          "estimatedMinutes": 25
+        },
+        {
+          "id": "G19",
+          "title": "Contrast, Concession & Listing Reasons — のに / ても / し",
+          "file": "data/N4/grammar/G19.json",
+          "unlocksAfter": "N4.14",
+          "icon": "🌀",
+          "estimatedMinutes": 20
+        },
+        {
+          "id": "G20",
+          "title": "Permissions & Prohibitions — てもいい / てはいけない / なくてもいい",
+          "file": "data/N4/grammar/G20.json",
+          "unlocksAfter": "N4.21",
+          "icon": "🚦",
+          "estimatedMinutes": 20
+        },
+        {
+          "id": "G21",
+          "title": "Obligations & Conditionals — なければ / ば / たら / なら / と",
+          "file": "data/N4/grammar/G21.json",
+          "unlocksAfter": "N4.25",
+          "icon": "🔀",
+          "estimatedMinutes": 30
+        },
+        {
+          "id": "G22",
+          "title": "Passive Form",
+          "file": "data/N4/grammar/G22.json",
+          "unlocksAfter": "N4.31",
+          "icon": "🔄",
+          "estimatedMinutes": 25
+        },
+        {
+          "id": "G23",
+          "title": "Causative Form",
+          "file": "data/N4/grammar/G23.json",
+          "unlocksAfter": "N4.31",
+          "icon": "🎭",
+          "estimatedMinutes": 25
+        },
+        {
+          "id": "G24",
+          "title": "Advanced Verb Usages — てみる / ておく / てしまう / すぎる / とする",
+          "file": "data/N4/grammar/G24.json",
+          "unlocksAfter": "N4.34",
+          "icon": "🧩",
+          "estimatedMinutes": 30
+        },
+        {
+          "id": "G25",
+          "title": "Expressing Thoughts & Experience — と思う / たことがある",
+          "file": "data/N4/grammar/G25.json",
+          "unlocksAfter": "N4.10",
+          "icon": "💭",
+          "estimatedMinutes": 25
+        },
+        {
+          "id": "G26",
+          "title": "そうだ: Appearance & Hearsay",
+          "file": "data/N4/grammar/G26.json",
+          "unlocksAfter": "N4.14",
+          "icon": "👀",
+          "estimatedMinutes": 25
+        },
+        {
+          "id": "G27",
+          "title": "Directional & Resultant て-Form — てくる / ていく / てある",
+          "file": "data/N4/grammar/G27.json",
+          "unlocksAfter": "N4.21",
+          "icon": "↔️",
+          "estimatedMinutes": 25
+        },
+        {
+          "id": "G28",
+          "title": "ように Patterns — ようにする / ようになる",
+          "file": "data/N4/grammar/G28.json",
+          "unlocksAfter": "N4.25",
+          "icon": "🎯",
           "estimatedMinutes": 20
         }
       ]

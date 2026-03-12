@@ -2,780 +2,978 @@
   "contentVersion": "1.0.0",
   "id": "G8",
   "type": "grammar",
-  "title": "ている・たいです・ましょう — Progressive, Desire & Invitation",
+  "title": "て-form — Connecting, Requesting & Commanding",
   "meta": {
     "level": "N5",
-    "unlocksAfter": "N5.8",
-    "focus": "Three high-frequency grammar patterns: ている for ongoing actions and states, たいです for expressing desire, and ましょう for polite invitations",
+    "unlocksAfter": "N5.5",
+    "focus": "Forming the て-form and た-form of all verb types; chaining sequential actions; making polite requests with てください; negative requests with ないでください; firm commands with なさい",
     "estimatedMinutes": 35,
     "particles": [],
     "grammarForms": [
       "te_form",
-      "desire_tai",
-      "desire_tai_negative",
-      "polite_volitional_mashou"
+      "plain_past"
     ],
-    "icon": "🎯"
+    "icon": "🔗"
   },
   "sections": [
     {
       "type": "grammarIntro",
-      "title": "Three Powerful Patterns — ている・たいです・ましょう",
-      "icon": "🎯",
-      "summary": "Now that you know the て-form, you can unlock three of the most useful patterns in everyday Japanese. This lesson teaches you how to say 'is doing', 'wants to do', and 'let's do' — patterns you will use in almost every conversation.",
-      "whyItMatters": "These three patterns transform your Japanese from basic statements into expressive, natural communication. Instead of only describing what happened (食べました), you can now say what's happening right now (食べています), what you want (食べたいです), and invite others to join you (食べましょう).",
+      "title": "て-form — Connecting, Requesting & Commanding",
+      "icon": "🔗",
+      "summary": "The て-form (te-form) is one of the most important forms in Japanese. It connects two actions in sequence, forms polite requests, and underlies many patterns you'll use every day.",
+      "whyItMatters": "With only ます and ました, you can describe only one action per sentence. The て-form unlocks chaining (行って来ました — went and came back), polite requests (書いてください — please write), negative requests (行かないでください — please don't go), and firm commands (書きなさい — write!). These patterns appear in every conversation from this point forward.",
       "youWillLearn": [
-        "ている / ています: express an ongoing action ('is eating') or a resultant state ('knows' — from having learned)",
-        "たいです / たくないです: express desire to do ('want to eat') or not do ('don't want to eat')",
-        "ましょう: make polite invitations and suggestions ('let's eat', 'shall we go?')"
+        "Ichidan て-form: drop る, add て",
+        "Godan て-form: euphonic change rules by verb ending (including the 行く exception!)",
+        "Irregular て-form: 来る → 来て (きて), する → して",
+        "た-form: identical sound-change rules to て-form, ending in た/だ instead of て/で",
+        "Using て to connect sequential actions (AてB = 'did A, then B')",
+        "Polite requests: [て-form] + ください — 'please do'",
+        "Negative requests: [negative stem] + ないでください — 'please don't'",
+        "Firm commands: [ます-stem] + なさい — used by teachers and parents"
       ]
     },
     {
       "type": "grammarRule",
-      "id": "rule_teiru",
+      "id": "rule_te_ichidan",
       "pattern": [
         {
           "label": "VERB",
           "color": "verb",
-          "text": "食べる"
+          "text": "いる"
         },
         {
-          "label": "て-FORM",
+          "label": "DROP る",
           "color": "modifier",
-          "text": "→ 食べて"
+          "text": "→ い"
         },
         {
-          "label": "+ います",
+          "label": "ADD て",
           "color": "predicate",
-          "text": "= 食べています"
+          "text": "+ て = いて"
         }
       ],
-      "meaning": "ている / ています — 'is doing' (ongoing action) or 'has done and is in that state'",
-      "explanation": "The ている pattern combines the て-form of a verb with いる (います in polite speech). It has two main uses:\n\n1. **Progressive** — describes an action currently in progress: 食べています = 'is eating' (right now)\n2. **Resultant state** — describes the state that results from a completed action. Some verbs describe entry into a state rather than ongoing activity: 知っています = 'knows' (literally: has come to know and is in that state).\n\nThe key question is: can the action literally be ongoing? Eating can be ongoing → progressive. 'Knowing' is a state, not a repeatable action → resultant state.",
+      "meaning": "Ichidan て-form: drop る and add て",
+      "explanation": "Ichidan (RU-verb) て-form follows the same pattern as all other ichidan conjugations: simply remove the final る from the dictionary form, then attach て. If you know the ichidan ます stem, you already know the て stem — they are identical.",
       "notes": [
-        "Formation: て-form of verb + いる (plain) / います (polite).",
-        "Progressive examples: 食べています (is eating), 飲んでいます (is drinking), 買っています (is buying).",
-        "Resultant state examples: 知っています (knows), 住んでいます (lives — is in the state of having settled somewhere).",
-        "The て-form rules from G7 apply exactly: 食べる→食べて (ichidan), 飲む→飲んで (godan む→んで), 行く→行って (exception!).",
-        "Negative: 食べていません = 'is not eating'. Plain negative: 食べていない."
+        "The rule: [stem] + て — where the stem is the dictionary form minus る.",
+        "いる → い + て = いて ('being here, and then...')",
+        "The て-form alone is incomplete — it connects to a following action or clause.",
+        "Ichidan verbs always produce a て-form ending in て (not で). Godan verbs may end in either て or で depending on their final syllable."
       ],
       "examples": [
         {
           "parts": [
             {
-              "text": "食べ",
+              "text": "いる",
               "role": "verb",
-              "gloss": "eat(て-form)-"
+              "gloss": "dictionary form"
+            },
+            {
+              "text": "→ い",
+              "role": "modifier",
+              "gloss": "drop る"
+            },
+            {
+              "text": "+ て = いて",
+              "role": "predicate",
+              "gloss": "て-form"
+            }
+          ],
+          "en": "to be here → being here (and then...)",
+          "breakdown": "Ichidan: drop る from いる → い + て = いて"
+        },
+        {
+          "parts": [
+            {
+              "text": "友だち",
+              "role": "subject",
+              "gloss": "friend"
+            },
+            {
+              "text": "が",
+              "role": "particle"
+            },
+            {
+              "text": "ここ",
+              "role": "modifier",
+              "gloss": "here"
+            },
+            {
+              "text": "に",
+              "role": "particle"
+            },
+            {
+              "text": "い",
+              "role": "verb",
+              "gloss": "be-"
             },
             {
               "text": "て",
               "role": "predicate",
-              "gloss": "connector"
+              "gloss": "て connector"
             },
             {
-              "text": "います",
-              "role": "predicate",
-              "gloss": "is (polite)"
-            }
-          ],
-          "en": "is eating (right now)",
-          "breakdown": "食べる (ichidan): drop る → 食べ + て = 食べて. Then + います."
-        },
-        {
-          "parts": [
-            {
-              "text": "飲ん",
-              "role": "verb",
-              "gloss": "drink(て-form)-"
-            },
-            {
-              "text": "で",
-              "role": "predicate",
-              "gloss": "connector (voiced)"
-            },
-            {
-              "text": "います",
-              "role": "predicate",
-              "gloss": "is (polite)"
-            }
-          ],
-          "en": "is drinking (right now)",
-          "breakdown": "飲む (godan む): む→んで. 飲む → 飲んで + います = 飲んでいます."
-        },
-        {
-          "parts": [
-            {
-              "text": "カレーを",
-              "role": "topic",
-              "gloss": "curry (object)"
-            },
-            {
-              "text": "食べ",
-              "role": "verb",
-              "gloss": "eat(て)-"
-            },
-            {
-              "text": "て",
-              "role": "predicate",
-              "gloss": "connector"
-            },
-            {
-              "text": "います",
-              "role": "predicate",
-              "gloss": "is"
-            },
-            {
-              "text": "か。",
+              "text": "…",
               "role": "modifier",
-              "gloss": "?"
+              "gloss": "next action"
             }
           ],
-          "en": "Are you eating curry (right now)?",
-          "breakdown": "食べています in a question — same formation, add か at the end."
+          "en": "My friend is here, and then... (connects to next clause)",
+          "breakdown": "いる → いて (ichidan). て connects to what happens next."
         }
       ]
     },
     {
       "type": "grammarRule",
-      "id": "rule_tai",
+      "id": "rule_te_godan",
       "pattern": [
         {
           "label": "VERB",
           "color": "verb",
-          "text": "買う"
+          "text": "行く"
         },
         {
-          "label": "ます-STEM",
+          "label": "EXCEPTION!",
           "color": "modifier",
-          "text": "→ 買い"
+          "text": "行く → 行って"
         },
         {
-          "label": "+ たいです",
+          "label": "NOT",
           "color": "predicate",
-          "text": "= 買いたいです"
+          "text": "行いて ✗"
         }
       ],
-      "meaning": "たいです / たくないです — 'want to do' / 'don't want to do'",
-      "explanation": "To express a desire to do something, take the ます-stem (the stem you already know from making ます-form: the verb with ます removed) and add たいです.\n\nたいです conjugates like an い-adjective for further forms:\n- Negative: たくないです (don't want to)\n- Past: たかったです (wanted to)\n\nImportant: たいです usually expresses the speaker's own desire. When asking about someone else's desire, use たいですか or phrases like 〜ほしいですか.",
+      "meaning": "Godan て-form: euphonic change rules — the ending determines the て-form",
+      "explanation": "Godan (U-verb) て-forms are more complex than ichidan. The final syllable of the dictionary form determines which て-form rule applies. These are called 'euphonic changes' — the sounds shift to make pronunciation easier and more natural.",
       "notes": [
-        "Formation: ます-stem + たいです. The ます-stem is the same stem used to make the ます-form — just remove ます.",
-        "行く → 行き (stem) + たいです = 行きたいです (want to go).",
-        "食べる → 食べ (stem) + たいです = 食べたいです (want to eat).",
-        "買う → 買い (stem) + たいです = 買いたいです (want to buy).",
-        "Negative: replace たいです with たくないです. 行きたくないです = 'don't want to go'.",
-        "たいです is an i-adjective in disguise — it follows i-adjective conjugation rules for past, negative, etc."
+        "く → いて: 書く → 書いて (write). BUT: 行く → 行って is a FAMOUS EXCEPTION — not 行いて!",
+        "ぐ → いで: 泳ぐ → 泳いで (swim).",
+        "む / ぬ / ぶ → んで: 飲む → 飲んで (drink); 死ぬ → 死んで (die); 遊ぶ → 遊んで (play).",
+        "つ / る / う → って: 持つ → 持って (hold); 分かる → 分かって (understand); 言う → 言って (say).",
+        "す → して: 話す → 話して (speak).",
+        "Memory tip: 行く is the only く-verb that breaks the く→いて rule. Memorise it separately."
       ],
       "examples": [
         {
           "parts": [
-            {
-              "text": "プレゼントを",
-              "role": "topic",
-              "gloss": "gift (object)"
-            },
-            {
-              "text": "買い",
-              "role": "verb",
-              "gloss": "buy(stem)-"
-            },
-            {
-              "text": "たいです。",
-              "role": "predicate",
-              "gloss": "want to"
-            }
-          ],
-          "en": "I want to buy a gift.",
-          "breakdown": "買う → 買い (ます-stem) + たいです. を marks the object even with たいです."
-        },
-        {
-          "parts": [
-            {
-              "text": "デパートへ",
-              "role": "topic",
-              "gloss": "to the dept. store"
-            },
-            {
-              "text": "行き",
-              "role": "verb",
-              "gloss": "go(stem)-"
-            },
-            {
-              "text": "たく",
-              "role": "modifier",
-              "gloss": "want(neg stem)-"
-            },
-            {
-              "text": "ないです。",
-              "role": "predicate",
-              "gloss": "not"
-            }
-          ],
-          "en": "I don't want to go to the department store.",
-          "breakdown": "行く → 行き (stem) + たくないです. Negative of たい = たくない (like an i-adj: たい→たく + ない)."
-        },
-        {
-          "parts": [
-            {
-              "text": "何を",
-              "role": "topic",
-              "gloss": "what (object)"
-            },
-            {
-              "text": "食べ",
-              "role": "verb",
-              "gloss": "eat(stem)-"
-            },
-            {
-              "text": "たいですか。",
-              "role": "predicate",
-              "gloss": "want to?"
-            }
-          ],
-          "en": "What do you want to eat?",
-          "breakdown": "Asking about desire with たいですか. 食べる → 食べ (stem) + たいですか."
-        }
-      ]
-    },
-    {
-      "type": "grammarRule",
-      "id": "rule_mashou",
-      "pattern": [
-        {
-          "label": "VERB",
-          "color": "verb",
-          "text": "食べる"
-        },
-        {
-          "label": "ます-STEM",
-          "color": "modifier",
-          "text": "→ 食べ"
-        },
-        {
-          "label": "+ ましょう",
-          "color": "predicate",
-          "text": "= 食べましょう"
-        }
-      ],
-      "meaning": "ましょう — 'let's do' / 'shall we' (polite invitation or suggestion)",
-      "explanation": "ましょう replaces ます on the ます-stem to make a polite volitional form. It invites the listener to do something together, or proposes a shared plan.\n\nましょうか (with か added) makes it a softer question: 'Shall we...?' — slightly more deferential than ましょう alone.\n\nましょう is always polite and positive — it cannot be negated. To say 'let's not', use a different construction (taught later).",
-      "notes": [
-        "Formation: ます-stem + ましょう. Same stem as ます-form — just replace ます with ましょう.",
-        "行く → 行き + ましょう = 行きましょう (let's go).",
-        "食べる → 食べ + ましょう = 食べましょう (let's eat).",
-        "飲む → 飲み + ましょう = 飲みましょう (let's drink).",
-        "買う → 買い + ましょう = 買いましょう (let's buy).",
-        "Adding か: 行きましょうか = 'Shall we go?' — a gentle suggestion awaiting the listener's agreement.",
-        "Use with いっしょに (together) for natural-sounding invitations: いっしょに 行きましょう = 'Let's go together'."
-      ],
-      "examples": [
-        {
-          "parts": [
-            {
-              "text": "いっしょに",
-              "role": "modifier",
-              "gloss": "together"
-            },
-            {
-              "text": "食べ",
-              "role": "verb",
-              "gloss": "eat(stem)-"
-            },
-            {
-              "text": "ましょう。",
-              "role": "predicate",
-              "gloss": "let's"
-            }
-          ],
-          "en": "Let's eat together.",
-          "breakdown": "食べる → 食べ (stem) + ましょう. いっしょに adds 'together'."
-        },
-        {
-          "parts": [
-            {
-              "text": "デパートへ",
-              "role": "topic",
-              "gloss": "to the dept. store"
-            },
-            {
-              "text": "行き",
-              "role": "verb",
-              "gloss": "go(stem)-"
-            },
-            {
-              "text": "ましょうか。",
-              "role": "predicate",
-              "gloss": "shall we?"
-            }
-          ],
-          "en": "Shall we go to the department store?",
-          "breakdown": "行く → 行き + ましょうか. か softens the invitation into a question."
-        },
-        {
-          "parts": [
-            {
-              "text": "友だちと",
-              "role": "topic",
-              "gloss": "with friend"
-            },
-            {
-              "text": "買い",
-              "role": "verb",
-              "gloss": "buy(stem)-"
-            },
-            {
-              "text": "ましょう。",
-              "role": "predicate",
-              "gloss": "let's"
-            }
-          ],
-          "en": "Let's buy it with a friend.",
-          "breakdown": "買う → 買い + ましょう. と means 'with someone'."
-        }
-      ]
-    },
-    {
-      "type": "grammarRule",
-      "id": "rule_deshou",
-      "pattern": [
-        {
-          "label": "PLAIN FORM",
-          "color": "modifier",
-          "text": "高い / 行く / プレゼント"
-        },
-        {
-          "label": "+ でしょう",
-          "color": "predicate",
-          "text": "= 高いでしょう / 行くでしょう / プレゼントでしょう"
-        }
-      ],
-      "meaning": "でしょう / だろう — 'probably' / 'I think...' (conjecture about something uncertain)",
-      "explanation": "でしょう is used when the speaker guesses or assumes something is likely but is not certain. It attaches to plain forms — the same base forms used in casual speech.\n\n- Noun: プレゼントでしょう = 'It's probably a gift'\n- い-adjective: 高いでしょう = 'It's probably expensive'\n- Verb (plain/dictionary form): 行くでしょう = 'They'll probably go'\n\nでしょう is **polite register** — safe to use in all situations.\nだろう is the **plain/casual** equivalent — same meaning, used in casual conversation or writing.\n\n⚠️ **Do NOT confuse でしょう with ましょう:**\n- ましょう = 'Let's do [action together]' (volitional — an invitation)\n- でしょう = 'It is probably...' (conjecture — a guess, not an invitation)",
-      "notes": [
-        "Attaches to plain forms: い-adjective as-is (高いでしょう), verb dictionary form (行くでしょう), noun directly (プレゼントでしょう).",
-        "For nouns and な-adjectives: do NOT insert だ before でしょう. ✗ プレゼントだでしょう → ✓ プレゼントでしょう.",
-        "Rising intonation でしょう↑: turns the conjecture into a tag question — 'It's probably expensive, right?'",
-        "だろう: plain/casual equivalent of でしょう. 行くだろう = 'probably going' (same meaning, more casual/direct).",
-        "Common pattern: 来週 行くでしょう (They will probably go next week)."
-      ],
-      "examples": [
-        {
-          "parts": [
-            {
-              "text": "プレゼント",
-              "role": "topic",
-              "gloss": "gift"
-            },
-            {
-              "text": "でしょう。",
-              "role": "predicate",
-              "gloss": "probably is"
-            }
-          ],
-          "en": "It's probably a gift.",
-          "breakdown": "Noun + でしょう directly. No だ inserted between noun and でしょう."
-        },
-        {
-          "parts": [
-            {
-              "text": "高い",
-              "role": "modifier",
-              "gloss": "expensive (plain form)"
-            },
-            {
-              "text": "でしょう。",
-              "role": "predicate",
-              "gloss": "probably"
-            }
-          ],
-          "en": "It's probably expensive.",
-          "breakdown": "い-adjective plain form (= dictionary form) + でしょう. 高い stays unchanged."
-        },
-        {
-          "parts": [
-            {
-              "text": "デパートへ",
-              "role": "modifier",
-              "gloss": "to dept. store"
-            },
             {
               "text": "行く",
               "role": "verb",
-              "gloss": "go (plain/dictionary form)"
+              "gloss": "dictionary form (to go)"
             },
             {
-              "text": "でしょう。",
+              "text": "→ 行って",
               "role": "predicate",
-              "gloss": "probably"
+              "gloss": "EXCEPTION: not 行いて!"
             }
           ],
-          "en": "They will probably go to the department store.",
-          "breakdown": "Verb dictionary form + でしょう. 行く stays as dictionary form (not 行きます)."
+          "en": "to go → going (and then...) — famous irregular て-form!",
+          "breakdown": "行く: normally く→いて, but 行く is a special exception → 行って (not 行いて)"
+        },
+        {
+          "parts": [
+            {
+              "text": "分かる",
+              "role": "verb",
+              "gloss": "dictionary form (to understand)"
+            },
+            {
+              "text": "→ 分かって",
+              "role": "predicate",
+              "gloss": "る→って (godan る-verb)"
+            }
+          ],
+          "en": "to understand → understanding (and then...)",
+          "breakdown": "分かる is godan (か = あ-row before る). Godan る → って: 分かって"
+        },
+        {
+          "parts": [
+            {
+              "text": "駅",
+              "role": "topic",
+              "gloss": "station"
+            },
+            {
+              "text": "に",
+              "role": "particle"
+            },
+            {
+              "text": "行っ",
+              "role": "verb",
+              "gloss": "go(て-form)-"
+            },
+            {
+              "text": "て",
+              "role": "predicate",
+              "gloss": "connector"
+            },
+            {
+              "text": "来",
+              "role": "verb",
+              "gloss": "come"
+            },
+            {
+              "text": "ました",
+              "role": "predicate"
+            }
+          ],
+          "en": "I went to the station and then came (back).",
+          "breakdown": "行く → 行って (godan て exception); connects to 来ました"
         }
       ]
     },
     {
-      "type": "grammarComparison",
-      "title": "でしょう vs だろう — Same Meaning, Different Register",
-      "items": [
+      "type": "grammarRule",
+      "id": "rule_te_sequential",
+      "pattern": [
         {
-          "label": "でしょう — Polite Conjecture",
-          "color": "predicate",
-          "points": [
-            "Polite register — appropriate in all social situations",
-            "Attaches to: plain verb (行くでしょう), い-adj (高いでしょう), noun (プレゼントでしょう)",
-            "Rising intonation でしょう↑ = tag question seeking agreement ('right? / isn't it?')",
-            "Use when guessing or expressing uncertainty in polite speech"
-          ],
-          "example": {
-            "parts": [
-              {
-                "text": "高い",
-                "role": "modifier",
-                "gloss": "expensive"
-              },
-              {
-                "text": "でしょう。",
-                "role": "predicate",
-                "gloss": "probably"
-              }
-            ],
-            "en": "It's probably expensive."
-          }
+          "label": "ACTION A",
+          "color": "verb",
+          "text": "行って"
         },
         {
-          "label": "だろう — Plain/Casual Conjecture",
-          "color": "modifier",
-          "points": [
-            "Plain register — casual speech, internal thought, or written narration",
-            "Same meaning as でしょう, but more direct or informal",
-            "Same structure: plain form + だろう",
-            "Often used in narration or when thinking aloud"
+          "label": "CONNECTOR",
+          "color": "particle",
+          "text": "→"
+        },
+        {
+          "label": "ACTION B",
+          "color": "predicate",
+          "text": "来ました"
+        }
+      ],
+      "meaning": "AてB — 'did A, and then B' (sequential actions)",
+      "explanation": "The て-form's core use is connecting two actions by the same subject in sequence. The first verb takes the て-form, and the second verb carries the tense for the whole sentence. Both actions happened (or will happen) in order.",
+      "notes": [
+        "Tense is determined only by the FINAL verb. て-form itself is tenseless.",
+        "駅へ行って、コンビニに来ました = Went to the station, then came to the convenience store (both past).",
+        "The subject is shared: you cannot use AてB if A and B have different subjects.",
+        "You can chain more than two actions: AてBてC = 'did A, then B, then C'.",
+        "て-form also underlies other patterns (～てください, ～ています) taught in later lessons."
+      ],
+      "examples": [
+        {
+          "parts": [
+            {
+              "text": "駅",
+              "role": "topic",
+              "gloss": "station"
+            },
+            {
+              "text": "へ",
+              "role": "particle"
+            },
+            {
+              "text": "行っ",
+              "role": "verb",
+              "gloss": "go(て)-"
+            },
+            {
+              "text": "て、",
+              "role": "predicate",
+              "gloss": "connector"
+            },
+            {
+              "text": "コンビニ",
+              "role": "topic",
+              "gloss": "convenience store"
+            },
+            {
+              "text": "に",
+              "role": "particle"
+            },
+            {
+              "text": "来",
+              "role": "verb",
+              "gloss": "come"
+            },
+            {
+              "text": "ました",
+              "role": "predicate"
+            }
           ],
-          "example": {
-            "parts": [
-              {
-                "text": "高い",
-                "role": "modifier",
-                "gloss": "expensive"
-              },
-              {
-                "text": "だろう。",
-                "role": "predicate",
-                "gloss": "probably (casual)"
-              }
-            ],
-            "en": "Probably expensive. (casual)"
-          }
+          "en": "I went to the station and then came to the convenience store.",
+          "breakdown": "行く→行って (て-form, exception); 来ました sets past tense for both actions"
+        },
+        {
+          "parts": [
+            {
+              "text": "うち",
+              "role": "topic",
+              "gloss": "home"
+            },
+            {
+              "text": "に",
+              "role": "particle"
+            },
+            {
+              "text": "い",
+              "role": "verb",
+              "gloss": "be(て)-"
+            },
+            {
+              "text": "て、",
+              "role": "predicate",
+              "gloss": "connector"
+            },
+            {
+              "text": "友だち",
+              "role": "subject",
+              "gloss": "friend"
+            },
+            {
+              "text": "が",
+              "role": "particle"
+            },
+            {
+              "text": "来",
+              "role": "verb",
+              "gloss": "come"
+            },
+            {
+              "text": "ました",
+              "role": "predicate"
+            }
+          ],
+          "en": "I was at home, and then my friend came.",
+          "breakdown": "いる→いて (ichidan); connects to 来ました"
+        },
+        {
+          "parts": [
+            {
+              "text": "駅",
+              "role": "topic",
+              "gloss": "station"
+            },
+            {
+              "text": "に",
+              "role": "particle"
+            },
+            {
+              "text": "行っ",
+              "role": "verb",
+              "gloss": "go(て)-"
+            },
+            {
+              "text": "て",
+              "role": "predicate",
+              "gloss": "connector"
+            },
+            {
+              "text": "また",
+              "role": "modifier",
+              "gloss": "again"
+            },
+            {
+              "text": "来",
+              "role": "verb",
+              "gloss": "come"
+            },
+            {
+              "text": "ます",
+              "role": "predicate"
+            }
+          ],
+          "en": "I will go to the station and come again.",
+          "breakdown": "て-form is tenseless; 来ます (present) sets future tense for both"
+        }
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_tekudasai",
+      "pattern": [
+        {
+          "label": "て-FORM",
+          "color": "verb",
+          "text": "書いて"
+        },
+        {
+          "label": "REQUEST",
+          "color": "predicate",
+          "text": "+ ください"
+        },
+        {
+          "label": "= PLEASE WRITE",
+          "color": "modifier",
+          "text": "書いてください"
+        }
+      ],
+      "meaning": "てください — polite request: 'please do [verb]'",
+      "explanation": "Attach ください directly to the て-form to make a polite request. This is one of the highest-frequency patterns in everyday Japanese — used for directions, instructions, shopping, and any situation where you want someone to do something.",
+      "notes": [
+        "Formation: [て-form] + ください (no space, no particle between them).",
+        "書いてください — Please write. 来てください — Please come. 話してください — Please speak.",
+        "Negative request (please don't): [negative ない-stem] + ないでください.",
+        "行かないでください — Please don't go. (行く: godan → あ-shift → 行か + ないでください)",
+        "話さないでください — Please don't speak. (話す: godan → あ-shift → 話さ + ないでください)",
+        "ないでください attaches to the plain negative stem (あ-column for godan, drop る for ichidan), NOT to the て-form.",
+        "てください is polite but direct. Adding お願いします at the end makes it warmer: 来てください、お願いします."
+      ],
+      "examples": [
+        {
+          "parts": [
+            {
+              "text": "ここ",
+              "role": "topic",
+              "gloss": "here"
+            },
+            {
+              "text": "に",
+              "role": "particle"
+            },
+            {
+              "text": "来",
+              "role": "verb",
+              "gloss": "come(て)-"
+            },
+            {
+              "text": "て",
+              "role": "predicate",
+              "gloss": "て-form"
+            },
+            {
+              "text": "ください",
+              "role": "predicate",
+              "gloss": "please"
+            }
+          ],
+          "en": "Please come here.",
+          "breakdown": "来る → 来て (irregular). 来て + ください = polite request."
+        },
+        {
+          "parts": [
+            {
+              "text": "書い",
+              "role": "verb",
+              "gloss": "write(て)-"
+            },
+            {
+              "text": "て",
+              "role": "predicate",
+              "gloss": "て-form"
+            },
+            {
+              "text": "ください",
+              "role": "predicate",
+              "gloss": "please"
+            }
+          ],
+          "en": "Please write.",
+          "breakdown": "書く (godan く) → 書いて + ください = 書いてください."
+        },
+        {
+          "parts": [
+            {
+              "text": "コンビニ",
+              "role": "topic",
+              "gloss": "convenience store"
+            },
+            {
+              "text": "に",
+              "role": "particle"
+            },
+            {
+              "text": "行か",
+              "role": "verb",
+              "gloss": "go(negative stem)"
+            },
+            {
+              "text": "ないで",
+              "role": "predicate",
+              "gloss": "please don't"
+            },
+            {
+              "text": "ください",
+              "role": "predicate",
+              "gloss": "please"
+            }
+          ],
+          "en": "Please don't go to the convenience store.",
+          "breakdown": "Negative request: 行く → あ-shift → 行か + ないでください."
+        }
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_nasai",
+      "pattern": [
+        {
+          "label": "ます-STEM",
+          "color": "verb",
+          "text": "書き"
+        },
+        {
+          "label": "COMMAND",
+          "color": "predicate",
+          "text": "+ なさい"
+        },
+        {
+          "label": "= WRITE!",
+          "color": "modifier",
+          "text": "書きなさい"
+        }
+      ],
+      "meaning": "～なさい — firm polite command using the ます-stem",
+      "explanation": "なさい attaches to the verb ます-stem (the same stem used to form ます). It is firmer and more directive than てください, but gentler than blunt plain commands. Teachers use it with students, parents with children — it carries authority without rudeness.",
+      "notes": [
+        "Attaches to the ます-stem (NOT the て-form): 食べる → 食べ + なさい = 食べなさい.",
+        "Ichidan: 食べる → 食べ + なさい = 食べなさい (eat!).",
+        "Godan: 書く → 書き + なさい = 書きなさい (write!); 話す → 話し + なさい = 話しなさい (speak!).",
+        "Irregular: する → し + なさい = しなさい (do it!); 来る → き + なさい = きなさい (come here!).",
+        "No standard negative なさい form. Use ないでください for 'please don't'.",
+        "Context: teachers giving instructions, parents directing children. NOT used between peers or from junior to senior — that would be very rude.",
+        "Contrast: てください = polite request (anyone can use). なさい = firm instruction (authority → subordinate)."
+      ],
+      "examples": [
+        {
+          "parts": [
+            {
+              "text": "食べ",
+              "role": "verb",
+              "gloss": "eat(ます-stem)"
+            },
+            {
+              "text": "なさい",
+              "role": "predicate",
+              "gloss": "firm command"
+            }
+          ],
+          "en": "Eat! (parent to child)",
+          "breakdown": "食べる (ichidan): drop る → 食べ + なさい = 食べなさい."
+        },
+        {
+          "parts": [
+            {
+              "text": "書き",
+              "role": "verb",
+              "gloss": "write(ます-stem)"
+            },
+            {
+              "text": "なさい",
+              "role": "predicate",
+              "gloss": "firm command"
+            }
+          ],
+          "en": "Write! (teacher to student)",
+          "breakdown": "書く (godan く): ます-stem = 書き + なさい = 書きなさい."
+        },
+        {
+          "parts": [
+            {
+              "text": "き",
+              "role": "verb",
+              "gloss": "come(ます-stem: きます)"
+            },
+            {
+              "text": "なさい",
+              "role": "predicate",
+              "gloss": "firm command"
+            }
+          ],
+          "en": "Come here! (teacher calling a student)",
+          "breakdown": "来る (irregular): ます-stem = き + なさい = きなさい."
         }
       ]
     },
     {
       "type": "grammarTable",
-      "title": "ている / たいです / ましょう — All Three Forms at a Glance",
-      "description": "Using 行く (godan) and 食べる (ichidan) as examples. All three patterns use the same foundation: the て-form (for ている) or ます-stem (for たいです and ましょう).",
-      "tableType": "comparison",
+      "title": "て-form and た-form Conjugation Table",
+      "description": "て-form and た-form follow identical sound-change rules — only the final sound differs (て/で vs た/だ). Note the famous 行く exception.",
+      "tableType": "conjugation",
       "headers": [
-        "Pattern",
-        "行く (godan)",
-        "食べる (ichidan)",
-        "Meaning"
+        "Verb type",
+        "Dictionary form",
+        "て-form",
+        "た-form",
+        "Rule"
       ],
       "rows": [
         {
-          "label": "ている (polite)",
+          "label": "Ichidan",
           "cells": [
-            "行っています",
-            "食べています",
-            "is going / is eating"
+            "いる",
+            "いて",
+            "いた",
+            "Drop る, add て / た"
           ],
-          "meaning": "Ongoing action or resultant state"
+          "meaning": "to be/exist → being (and then...) / was"
         },
         {
-          "label": "ていません (polite neg)",
+          "label": "Godan く (EXCEPTION!)",
           "cells": [
-            "行っていません",
-            "食べていません",
-            "is not going / is not eating"
+            "行く",
+            "行って",
+            "行った",
+            "く → って / った (行く only — not 行いて!)"
           ],
-          "meaning": "Negation of ている"
+          "meaning": "to go → going (and then...) / went"
         },
         {
-          "label": "たいです",
+          "label": "Godan る (→ って/った)",
           "cells": [
-            "行きたいです",
-            "食べたいです",
-            "want to go / want to eat"
+            "分かる",
+            "分かって",
+            "分かった",
+            "る → って / った"
           ],
-          "meaning": "Desire to perform the action"
+          "meaning": "to understand → understanding (and then...) / understood"
         },
         {
-          "label": "たくないです",
+          "label": "Irregular 来る",
           "cells": [
-            "行きたくないです",
-            "食べたくないです",
-            "don't want to go / don't want to eat"
+            "来る",
+            "来て (きて)",
+            "来た (きた)",
+            "Irregular — memorise"
           ],
-          "meaning": "Negative desire"
-        },
-        {
-          "label": "ましょう",
-          "cells": [
-            "行きましょう",
-            "食べましょう",
-            "let's go / let's eat"
-          ],
-          "meaning": "Polite invitation or suggestion"
-        },
-        {
-          "label": "ましょうか",
-          "cells": [
-            "行きましょうか",
-            "食べましょうか",
-            "shall we go? / shall we eat?"
-          ],
-          "meaning": "Gentle question-invitation"
+          "meaning": "to come → coming (and then...) / came"
         }
       ],
       "notes": [
-        "ている uses the て-form (G7 rules apply: 行く→行って, 食べる→食べて). Then add います.",
-        "たいです and ましょう both use the ます-stem (same stem as ます-form minus ます): 行き, 食べ, 飲み, 買い.",
-        "来る (irregular): 来ています (きています), 来たいです (きたいです), 来ましょう (きましょう).",
-        "する (irregular): しています, したいです, しましょう."
+        "行く is the only common N5 verb with a く ending that breaks the く→いて rule. All other く verbs follow く→いて / く→いた.",
+        "Godan る verbs (like 分かる where the vowel before る is not い/え) always follow る→って/った.",
+        "来る is fully irregular — て-form is 来て (きて), た-form is 来た (きた).",
+        "ある (irregular) て-form: あって, た-form: あった.",
+        "The た-form (plain past) is covered in depth in G9. Here, learn the sound-change rules — they are identical to て-form."
       ]
     },
     {
       "type": "annotatedExample",
-      "title": "All Three Patterns in Natural Sentences",
+      "title": "て-form in Sequential, Request, and Command Contexts",
       "examples": [
         {
-          "context": "Progressive ている — describing what is happening right now",
+          "context": "Two past actions in sequence",
           "parts": [
             {
-              "text": "やまかわさんは",
+              "text": "きのう",
+              "role": "modifier",
+              "gloss": "yesterday"
+            },
+            {
+              "text": "駅",
               "role": "topic",
-              "gloss": "Yamakawa (topic)"
+              "gloss": "station"
             },
             {
-              "text": "今",
-              "role": "modifier",
-              "gloss": "now"
+              "text": "に",
+              "role": "particle"
             },
             {
-              "text": "カレーを",
-              "role": "modifier",
-              "gloss": "curry (object)"
-            },
-            {
-              "text": "食べ",
+              "text": "行っ",
               "role": "verb",
-              "gloss": "eat(て)-"
+              "gloss": "go(て)-"
             },
             {
-              "text": "て",
+              "text": "て、",
               "role": "predicate",
               "gloss": "connector"
             },
             {
-              "text": "います。",
-              "role": "predicate",
-              "gloss": "is"
-            }
-          ],
-          "en": "Yamakawa-san is eating curry right now.",
-          "note": "食べる → 食べて + います. を marks the object even in ている sentences."
-        },
-        {
-          "context": "Desire たいです — expressing what you want to do",
-          "parts": [
-            {
-              "text": "プレゼントを",
+              "text": "コンビニ",
               "role": "topic",
-              "gloss": "gift (object)"
+              "gloss": "convenience store"
             },
             {
-              "text": "買い",
+              "text": "に",
+              "role": "particle"
+            },
+            {
+              "text": "来",
               "role": "verb",
-              "gloss": "buy(stem)-"
+              "gloss": "come"
             },
             {
-              "text": "たいです。",
-              "role": "predicate",
-              "gloss": "want to"
+              "text": "ました",
+              "role": "predicate"
             }
           ],
-          "en": "I want to buy a gift.",
-          "note": "買う → 買い (stem) + たいです. を still marks the object."
+          "en": "Yesterday I went to the station and then came to the convenience store.",
+          "note": "行く→行って (exception!). ました on the final verb sets the past tense for both actions."
         },
         {
-          "context": "Volitional ましょう — inviting someone to do something together",
+          "context": "Two future actions planned in sequence",
           "parts": [
             {
-              "text": "いっしょに",
+              "text": "来週",
               "role": "modifier",
-              "gloss": "together"
+              "gloss": "next week"
             },
             {
-              "text": "デパートへ",
-              "role": "modifier",
-              "gloss": "to dept. store"
-            },
-            {
-              "text": "行き",
-              "role": "verb",
-              "gloss": "go(stem)-"
-            },
-            {
-              "text": "ましょう。",
-              "role": "predicate",
-              "gloss": "let's"
-            }
-          ],
-          "en": "Let's go to the department store together.",
-          "note": "行く → 行き (stem) + ましょう. A natural invitation to go somewhere together."
-        },
-        {
-          "context": "Negative desire たくないです",
-          "parts": [
-            {
-              "text": "コーヒーは",
+              "text": "コンビニ",
               "role": "topic",
-              "gloss": "coffee (topic)"
+              "gloss": "convenience store"
             },
             {
-              "text": "飲み",
+              "text": "に",
+              "role": "particle"
+            },
+            {
+              "text": "行っ",
               "role": "verb",
-              "gloss": "drink(stem)-"
+              "gloss": "go(て)-"
             },
             {
-              "text": "たく",
-              "role": "modifier",
-              "gloss": "want(neg)-"
-            },
-            {
-              "text": "ないです。",
+              "text": "て、",
               "role": "predicate",
-              "gloss": "not"
+              "gloss": "connector"
+            },
+            {
+              "text": "スーパー",
+              "role": "topic",
+              "gloss": "supermarket"
+            },
+            {
+              "text": "に",
+              "role": "particle"
+            },
+            {
+              "text": "来",
+              "role": "verb",
+              "gloss": "come"
+            },
+            {
+              "text": "ます",
+              "role": "predicate"
             }
           ],
-          "en": "I don't want to drink coffee.",
-          "note": "飲む → 飲み (stem) + たくないです. たい conjugates like an い-adjective: たい→たくない."
+          "en": "Next week I will go to the convenience store and then come to the supermarket.",
+          "note": "来ます (present/future form) shows this hasn't happened yet. The て-form itself has no tense."
         },
         {
-          "context": "Conjecture でしょう — guessing about something uncertain",
+          "context": "Ichidan て-form in a sequence",
           "parts": [
             {
-              "text": "プレゼントは",
+              "text": "うち",
               "role": "topic",
-              "gloss": "gift (topic)"
+              "gloss": "home"
             },
             {
-              "text": "高い",
-              "role": "modifier",
-              "gloss": "expensive (plain)"
+              "text": "に",
+              "role": "particle"
             },
             {
-              "text": "でしょう。",
+              "text": "い",
+              "role": "verb",
+              "gloss": "be(て)-"
+            },
+            {
+              "text": "て、",
               "role": "predicate",
-              "gloss": "probably"
+              "gloss": "connector"
+            },
+            {
+              "text": "毎日",
+              "role": "modifier",
+              "gloss": "every day"
+            },
+            {
+              "text": "来",
+              "role": "verb",
+              "gloss": "come"
+            },
+            {
+              "text": "ます",
+              "role": "predicate"
             }
           ],
-          "en": "The gift is probably expensive.",
-          "note": "い-adjective plain form + でしょう. Compare: 高いです (certainty) vs 高いでしょう (conjecture/guess)."
+          "en": "Being at home, and coming every day.",
+          "note": "いる→いて (ichidan): drop る, add て."
+        },
+        {
+          "context": "Polite request with てください",
+          "parts": [
+            {
+              "text": "ここ",
+              "role": "topic",
+              "gloss": "here"
+            },
+            {
+              "text": "に",
+              "role": "particle"
+            },
+            {
+              "text": "来",
+              "role": "verb",
+              "gloss": "come(て)-"
+            },
+            {
+              "text": "て",
+              "role": "predicate",
+              "gloss": "て-form"
+            },
+            {
+              "text": "ください",
+              "role": "predicate",
+              "gloss": "please"
+            }
+          ],
+          "en": "Please come here.",
+          "note": "て-form + ください = polite request. 来る → 来て (irregular te-form). The most common way to make a polite request."
+        },
+        {
+          "context": "Negative request with ないでください",
+          "parts": [
+            {
+              "text": "コンビニ",
+              "role": "topic",
+              "gloss": "convenience store"
+            },
+            {
+              "text": "に",
+              "role": "particle"
+            },
+            {
+              "text": "行か",
+              "role": "verb",
+              "gloss": "go(negative stem)"
+            },
+            {
+              "text": "ないで",
+              "role": "predicate",
+              "gloss": "please don't—"
+            },
+            {
+              "text": "ください",
+              "role": "predicate",
+              "gloss": "please"
+            }
+          ],
+          "en": "Please don't go to the convenience store.",
+          "note": "Negative request: 行く → あ-column shift → 行か + ないでください. Note: attaches to negative stem, NOT the て-form."
+        },
+        {
+          "context": "Firm command with なさい (teacher to student)",
+          "parts": [
+            {
+              "text": "書き",
+              "role": "verb",
+              "gloss": "write(ます-stem)"
+            },
+            {
+              "text": "なさい",
+              "role": "predicate",
+              "gloss": "command suffix"
+            }
+          ],
+          "en": "Write! (firm instruction)",
+          "note": "なさい uses the ます-stem: 書く → 書き + なさい = 書きなさい. Firmer than てください — used by teachers and parents giving instructions."
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "かいわ 1: 今 何を していますか（What Are You Doing Now?）",
-      "context": "Rikizo and Yamakawa meet at the department store. Yamakawa is already shopping.",
+      "title": "かいわ 1: きのう どこに 行きましたか（Where Did You Go Yesterday?）",
+      "context": "Yamakawa tells Rikizo about his outing yesterday, using て-form to chain the actions.",
       "lines": [
         {
           "spk": "りきぞ",
-          "jp": "やまかわさん、何を 買いたいですか。",
-          "en": "Yamakawa-san, what do you want to buy?",
+          "jp": "やまかわさん、きのう どこに 行きましたか。",
+          "en": "Yamakawa-san, where did you go yesterday?",
           "terms": [
             "char_yamakawa",
             "v_san",
-            "v_nani",
-            "p_wo",
+            "v_kinou",
+            "v_doko",
+            "p_ni",
             {
-              "id": "v_kau",
-              "form": "desire_tai"
+              "id": "v_iku",
+              "form": "polite_mashita"
             },
             "p_ka"
           ]
         },
         {
           "spk": "やまかわ",
-          "jp": "プレゼントを 買いたいです。もう 買っています。",
-          "en": "I want to buy a gift. I am already buying one.",
+          "jp": "駅に 行って、コンビニに 来ました。",
+          "en": "I went to the station and then came to the convenience store.",
           "terms": [
-            "v_purezento",
-            "p_wo",
+            "v_eki",
+            "p_ni",
             {
-              "id": "v_kau",
-              "form": "desire_tai"
-            },
-            "v_mou",
-            {
-              "id": "v_kau",
+              "id": "v_iku",
               "form": "te_form"
             },
+            "v_konbini",
+            "p_ni",
             {
-              "id": "v_iru",
-              "form": "polite_masu"
+              "id": "v_kuru",
+              "form": "polite_mashita"
             }
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "高いでしょう？",
-          "en": "It's probably expensive, right?",
-          "terms": [
-            "v_takai",
-            "g_deshou"
-          ]
-        },
-        {
-          "spk": "やまかわ",
-          "jp": "あまり 高くないです。新しいですよ。",
-          "en": "It is not very expensive. It is new, you know.",
-          "terms": [
-            "v_amari",
-            {
-              "id": "v_takai",
-              "form": "polite_negative"
-            },
-            {
-              "id": "v_atarashii",
-              "form": "polite_adj"
-            },
-            "p_yo"
-          ]
-        },
-        {
-          "spk": "りきぞ",
-          "jp": "そうですか。わたしも 買いたいです。",
-          "en": "Is that so. I also want to buy one.",
+          "jp": "そうですか。バスで 行きましたか。",
+          "en": "Is that so. Did you go by bus?",
           "terms": [
             "p_soudesuka",
-            "v_watashi",
-            "p_mo",
+            "v_basu",
+            "p_de",
             {
-              "id": "v_kau",
-              "form": "desire_tai"
-            }
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
+            "p_ka"
           ]
         },
         {
           "spk": "やまかわ",
-          "jp": "いっしょに 買いましょう。",
-          "en": "Let's buy one together.",
+          "jp": "はい、バスで 行って、駅に 来ました。",
+          "en": "Yes, I went by bus and came to the station.",
           "terms": [
-            "v_issho",
+            "p_hai",
+            "v_basu",
+            "p_de",
             {
-              "id": "v_kau",
-              "form": "polite_volitional_mashou"
+              "id": "v_iku",
+              "form": "te_form"
+            },
+            "v_eki",
+            "p_ni",
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "友だちも 来ましたか。",
+          "en": "Did your friend also come?",
+          "terms": [
+            "v_tomodachi",
+            "p_mo",
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "はい、友だちが 来て、コンビニに 行きました。とても いいです。",
+          "en": "Yes, my friend came and then we went to the convenience store. It's really great.",
+          "terms": [
+            "p_hai",
+            "v_tomodachi",
+            "p_ga",
+            {
+              "id": "v_kuru",
+              "form": "te_form"
+            },
+            "v_konbini",
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
+            "v_totemo",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
             }
           ]
         }
@@ -783,103 +981,106 @@
     },
     {
       "type": "conversation",
-      "title": "かいわ 2: 食べましょう（Let's Eat）",
-      "context": "Rikizo and the teacher make plans for lunch, using all three new patterns naturally.",
+      "title": "かいわ 2: 先生のしじ（Teacher's Instructions）",
+      "context": "The teacher uses てください requests to guide Rikizo through classroom tasks, and demonstrates ないでください for a negative instruction.",
       "lines": [
         {
           "spk": "先生",
-          "jp": "今日 レストランへ 行きますか。",
-          "en": "Are you going to the restaurant today?",
+          "jp": "りきぞさん、ここに 来てください。",
+          "en": "Rikizo, please come here.",
           "terms": [
-            "v_kyou",
-            "v_resutoran",
-            "p_e",
+            "char_rikizo",
+            "v_san",
             {
-              "id": "v_iku",
-              "form": "polite_masu"
+              "id": "v_kuru",
+              "form": "te_form"
             },
-            "p_ka"
+            "v_kudasai"
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "はい、行きたいです。",
-          "en": "Yes, I want to go.",
+          "jp": "はい、先生。",
+          "en": "Yes, teacher.",
           "terms": [
             "p_hai",
-            {
-              "id": "v_iku",
-              "form": "desire_tai"
-            }
+            "v_sensei"
           ]
         },
         {
           "spk": "先生",
-          "jp": "いっしょに 行きましょう。カレーを 食べましょう。",
-          "en": "Let's go together. Let's eat curry.",
+          "jp": "聞いてください。駅に 行って、コンビニに 来ました。",
+          "en": "Please listen. I went to the station and then came to the convenience store.",
           "terms": [
-            "v_issho",
+            {
+              "id": "v_kiku",
+              "form": "te_form"
+            },
+            "v_kudasai",
+            "v_eki",
+            "p_ni",
             {
               "id": "v_iku",
-              "form": "polite_volitional_mashou"
+              "form": "te_form"
             },
-            "v_karee",
-            "p_wo",
+            "v_konbini",
+            "p_ni",
             {
-              "id": "v_taberu",
-              "form": "polite_volitional_mashou"
+              "id": "v_kuru",
+              "form": "polite_mashita"
             }
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "いいですね。コーヒーも 飲みたいです。",
-          "en": "That sounds great. I also want to drink coffee.",
+          "jp": "分かりました。書きます。",
+          "en": "Understood. I will write it.",
           "terms": [
             {
-              "id": "v_ii",
-              "form": "polite_adj"
+              "id": "v_wakaru",
+              "form": "polite_mashita"
             },
-            "p_ne",
-            "v_koohii",
-            "p_mo",
             {
-              "id": "v_nomu",
-              "form": "desire_tai"
+              "id": "v_kaku",
+              "form": "polite_masu"
             }
           ]
         },
         {
           "spk": "先生",
-          "jp": "そうですね。飲みましょう。",
-          "en": "Indeed. Let's drink.",
+          "jp": "それから、友だちと 話してください。コンビニには 行かないでください。",
+          "en": "After that, please speak with your friend. Please do not go to the convenience store.",
           "terms": [
-            "p_soudesu",
-            "p_ne",
+            "v_sorekara",
+            "v_tomodachi",
+            "p_to",
             {
-              "id": "v_nomu",
-              "form": "polite_volitional_mashou"
-            }
+              "id": "v_hanasu",
+              "form": "te_form"
+            },
+            "v_kudasai",
+            "v_konbini",
+            "p_ni",
+            "p_wa",
+            {
+              "id": "v_iku",
+              "form": "polite_negative_te"
+            },
+            "v_kudasai"
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "食べて、飲んで、デパートへ 行きましょう。",
-          "en": "Let's eat, drink, and then go to the department store.",
+          "jp": "分かりました。行きません。",
+          "en": "Understood. I won't go.",
           "terms": [
             {
-              "id": "v_taberu",
-              "form": "te_form"
+              "id": "v_wakaru",
+              "form": "polite_mashita"
             },
-            {
-              "id": "v_nomu",
-              "form": "te_form"
-            },
-            "v_depaato",
-            "p_e",
             {
               "id": "v_iku",
-              "form": "polite_volitional_mashou"
+              "form": "polite_negative"
             }
           ]
         }
@@ -887,165 +1088,172 @@
     },
     {
       "type": "drills",
-      "title": "G8 れんしゅう（G8 Practice）",
-      "instructions": "Choose the correct answer to complete each sentence or question.",
+      "title": "て-form Practice",
+      "instructions": "Choose the correct て-form, request form, or correctly formed sentence.",
       "items": [
         {
           "kind": "mcq",
-          "q": "What does「食べています」mean?",
+          "q": "What is the て-form of「行く」?",
           "choices": [
-            "I am eating",
-            "I ate",
-            "Let's eat",
-            "I want to eat"
+            "行って",
+            "行いて",
+            "行きて",
+            "行くて"
           ],
-          "answer": "I am eating",
-          "terms": [
-            {
-              "id": "v_taberu",
-              "form": "te_form"
-            },
-            {
-              "id": "v_iru",
-              "form": "polite_masu"
-            }
-          ],
-          "explanation": "ている = て-form + います. Expresses an ongoing action: 食べて + います = 'is eating'. The て-form connects to いる which carries the tense."
-        },
-        {
-          "kind": "mcq",
-          "q": "Which sentence correctly means 'I want to buy a gift'?",
-          "choices": [
-            "プレゼントを 買いたいです。",
-            "プレゼントを 買いたいますです。",
-            "プレゼントたいを 買います。",
-            "プレゼントを 買います たい。"
-          ],
-          "answer": "プレゼントを 買いたいです。",
-          "terms": [
-            "v_purezento",
-            "p_wo",
-            {
-              "id": "v_kau",
-              "form": "desire_tai"
-            }
-          ],
-          "explanation": "たいです attaches to the ます-stem (い-row). 買う → 買い (stem) + たいです = 買いたいです. It replaces ます, not adds to it."
-        },
-        {
-          "kind": "mcq",
-          "q": "How do you say 'Let's eat at the restaurant'?",
-          "choices": [
-            "レストランで 食べましょう。",
-            "レストランで 食べます。",
-            "レストランで 食べたいです。",
-            "レストランで 食べています。"
-          ],
-          "answer": "レストランで 食べましょう。",
-          "terms": [
-            "v_resutoran",
-            "p_de",
-            {
-              "id": "v_taberu",
-              "form": "polite_volitional_mashou"
-            }
-          ],
-          "explanation": "ましょう attaches to the ます-stem. 食べる → 食べ (stem) + ましょう = 食べましょう. It expresses 'let's eat' — a polite invitation to share the action."
-        },
-        {
-          "kind": "mcq",
-          "q": "What does「コーヒーを 飲みたくないです」mean?",
-          "choices": [
-            "I don't want to drink coffee.",
-            "I am not drinking coffee.",
-            "I did not drink coffee.",
-            "Let's not drink coffee."
-          ],
-          "answer": "I don't want to drink coffee.",
-          "terms": [
-            "v_koohii",
-            "p_wo",
-            {
-              "id": "v_nomu",
-              "form": "desire_tai_negative"
-            }
-          ],
-          "explanation": "たくないです is the negative of たいです. 飲む → 飲み (stem) + たくないです. たい conjugates like an い-adjective: たい → たく + ない = たくない."
-        },
-        {
-          "kind": "mcq",
-          "q": "What is the correct ている form of「行く」?",
-          "choices": [
-            "行っています",
-            "行いています",
-            "行きています",
-            "行くています"
-          ],
-          "answer": "行っています",
+          "answer": "行って",
           "terms": [
             {
               "id": "v_iku",
               "form": "te_form"
-            },
-            {
-              "id": "v_iru",
-              "form": "polite_masu"
             }
           ],
-          "explanation": "行く is the famous て-form exception: 行く → 行って (not 行いて!). Then + います = 行っています. The 行く exception from G7 applies here too."
+          "explanation": "行く is the famous exception to the godan く→いて rule. Instead of 行いて, the correct て-form is 行って. This must be memorised — it is one of the most common verbs in Japanese."
         },
         {
           "kind": "mcq",
-          "q": "In「友だちと いっしょに 行きましょう」, what does ましょう express?",
+          "q": "What is the て-form of「いる」(to be/exist)?",
           "choices": [
-            "A polite suggestion or invitation to go together",
-            "A past action of going",
-            "A desire to go alone",
-            "An ongoing action of going"
+            "いて",
+            "います",
+            "いって",
+            "いりて"
           ],
-          "answer": "A polite suggestion or invitation to go together",
+          "answer": "いて",
           "terms": [
+            {
+              "id": "v_iru",
+              "form": "te_form"
+            }
+          ],
+          "explanation": "いる is ichidan (い is in the い-row before る). Ichidan て-form: drop る, add て → い + て = いて."
+        },
+        {
+          "kind": "mcq",
+          "q": "What is the て-form of「来る」?",
+          "choices": [
+            "来て (きて)",
+            "来って",
+            "くて",
+            "きりて"
+          ],
+          "answer": "来て (きて)",
+          "terms": [
+            {
+              "id": "v_kuru",
+              "form": "te_form"
+            }
+          ],
+          "explanation": "来る is an irregular verb. Its て-form is 来て (reading: きて). This cannot be derived from a rule — it must be memorised."
+        },
+        {
+          "kind": "mcq",
+          "q": "Which sentence correctly means 'I went to the station and then came to the store'?",
+          "choices": [
+            "駅に 行って、店に 来ました。",
+            "駅に 行きました、店に 来ました。",
+            "駅に 行いて、店に 来ました。",
+            "駅に 行って、店に 来て。"
+          ],
+          "answer": "駅に 行って、店に 来ました。",
+          "terms": [
+            "v_eki",
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "te_form"
+            },
+            "v_mise",
+            "p_ni",
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
+          ],
+          "explanation": "て-form connects sequential actions: 行って (go + connector). The final verb 来ました carries the past tense for both. 行いて is wrong (行く exception). Ending with 来て would leave the sentence unfinished."
+        },
+        {
+          "kind": "mcq",
+          "q": "What is the て-form of「分かる」(to understand)?",
+          "choices": [
+            "分かって",
+            "分かいて",
+            "分かりて",
+            "分かて"
+          ],
+          "answer": "分かって",
+          "terms": [
+            {
+              "id": "v_wakaru",
+              "form": "te_form"
+            }
+          ],
+          "explanation": "分かる is godan (か = あ-row before る → る-trap). Godan る → って: 分かる → 分かって. (This follows the る/つ/う → って rule, NOT the く→いて rule.)"
+        },
+        {
+          "kind": "mcq",
+          "q": "In the sentence「コンビニに 行って、友だちが 来ます。」what tense does the whole sentence describe?",
+          "choices": [
+            "Future (both actions will happen)",
+            "Past (both actions happened)",
+            "Present (both actions happen now)",
+            "The て-form makes the first action past and the second future"
+          ],
+          "answer": "Future (both actions will happen)",
+          "terms": [
+            "v_konbini",
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "te_form"
+            },
             "v_tomodachi",
-            "p_to",
-            "v_issho",
+            "p_ga",
             {
-              "id": "v_iku",
-              "form": "polite_volitional_mashou"
+              "id": "v_kuru",
+              "form": "polite_masu"
             }
           ],
-          "explanation": "ましょう makes a polite suggestion or invitation: 'Let's go together with a friend.' It proposes a shared action. Adding か (行きましょうか) makes it a softer question: 'Shall we go?'"
+          "explanation": "The て-form has no tense of its own. Tense is determined entirely by the final verb: 来ます is polite present/future, so the whole sequence (going to the convenience store, then friend coming) describes a planned future sequence."
         },
         {
           "kind": "mcq",
-          "q": "What does「プレゼントでしょう」mean?",
+          "q": "Which sentence correctly means 'Please speak'?",
           "choices": [
-            "It's probably a gift.",
-            "Let's buy a gift.",
-            "I want a gift.",
-            "Is it a gift?"
+            "話してください",
+            "話しますください",
+            "話さないでください",
+            "話してます"
           ],
-          "answer": "It's probably a gift.",
+          "answer": "話してください",
           "terms": [
-            "v_purezento",
-            "g_deshou"
+            {
+              "id": "v_hanasu",
+              "form": "te_form"
+            },
+            "v_kudasai"
           ],
-          "explanation": "でしょう attaches to a noun directly (no だ before it) to express polite conjecture: 'probably is'. プレゼント + でしょう = 'It's probably a gift.' Compare: プレゼントです (certain) vs プレゼントでしょう (guessing)."
+          "explanation": "てください = [て-form] + ください. 話す (godan す) → 話して + ください = 話してください. 話しますください is wrong — you cannot attach ください to the ます form. 話さないでください means 'please don't speak' — the opposite request."
         },
         {
           "kind": "mcq",
-          "q": "Which sentence correctly uses でしょう to say 'They will probably go'?",
+          "q": "Which sentence correctly means 'Please don't go to the convenience store'?",
           "choices": [
-            "行くでしょう。",
-            "行きましょう。",
-            "行きますでしょう。",
-            "行くだです。"
+            "コンビニに 行かないでください。",
+            "コンビニに 行ってください。",
+            "コンビニに 行かないください。",
+            "コンビニに 行きません。"
           ],
-          "answer": "行くでしょう。",
+          "answer": "コンビニに 行かないでください。",
           "terms": [
-            "v_iku",
-            "g_deshou"
+            "v_konbini",
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "polite_negative_te"
+            },
+            "v_kudasai"
           ],
-          "explanation": "でしょう attaches to the PLAIN (dictionary) form of the verb. 行く is the plain form of 行きます. 行く + でしょう = 行くでしょう. ✗ 行きますでしょう is wrong — never attach でしょう to the ます-form."
+          "explanation": "Negative request = [negative ない-stem] + ないでください. 行く (godan): shift く→か (あ-column) → 行か + ないでください. 行ってください means 'please go' — the opposite. 行かないください is missing the で and is ungrammatical. 行きません is a simple negative statement, not a request."
         }
       ]
     }

@@ -28,7 +28,7 @@
       "meaning": "probably / I think (polite conjecture)",
       "type": "grammar",
       "gtype": "grammar",
-      "lesson_ids": "G8",
+      "lesson_ids": "G9",
       "notes": "Polite conjectural auxiliary. Expresses probability or an educated guess. Attaches to: plain (dictionary) form of verbs (行くでしょう), plain い-adjectives (高いでしょう), and nouns directly — do NOT insert だ before でしょう (✓ プレゼントでしょう, ✗ プレゼントだでしょう). Rising intonation でしょう↑ turns it into a tag question ('right?'). Plain/casual equivalent: だろう."
     },
     {
@@ -475,6 +475,36 @@
       "notes": ""
     },
     {
+      "id": "v_konna",
+      "surface": "こんな",
+      "reading": "こんな",
+      "meaning": "this kind of",
+      "type": "vocab",
+      "gtype": "adnominal",
+      "lesson_ids": "N5.4",
+      "notes": "Ko-so-a-do modifier: near speaker. Counterpart of そんな (near listener) and あんな (far from both)."
+    },
+    {
+      "id": "v_sonna",
+      "surface": "そんな",
+      "reading": "そんな",
+      "meaning": "that kind of",
+      "type": "vocab",
+      "gtype": "adnominal",
+      "lesson_ids": "N5.4",
+      "notes": "Ko-so-a-do modifier: near listener or just mentioned. Counterpart of こんな and あんな."
+    },
+    {
+      "id": "v_anna",
+      "surface": "あんな",
+      "reading": "あんな",
+      "meaning": "that kind of (over there)",
+      "type": "vocab",
+      "gtype": "adnominal",
+      "lesson_ids": "N5.4",
+      "notes": "Ko-so-a-do modifier: far from both speaker and listener. Counterpart of こんな and そんな."
+    },
+    {
       "id": "v_dou",
       "surface": "どう",
       "reading": "どう",
@@ -483,6 +513,36 @@
       "gtype": "adverb",
       "lesson_ids": "N5.1",
       "notes": ""
+    },
+    {
+      "id": "v_kou",
+      "surface": "こう",
+      "reading": "こう",
+      "meaning": "like this / in this way",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N5.3",
+      "notes": "Ko-so-a-do manner adverb: near speaker. Counterpart of そう (like that) and ああ (like that, far)."
+    },
+    {
+      "id": "v_sou",
+      "surface": "そう",
+      "reading": "そう",
+      "meaning": "like that / in that way",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N5.3",
+      "notes": "Ko-so-a-do manner adverb: near listener or just mentioned. Distinct from そうです (set phrase, 'that's right')."
+    },
+    {
+      "id": "v_aa",
+      "surface": "ああ",
+      "reading": "ああ",
+      "meaning": "like that (over there) / in that way",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N5.3",
+      "notes": "Ko-so-a-do manner adverb: far from both speaker and listener. Counterpart of こう and そう."
     },
     {
       "id": "v_fubo",

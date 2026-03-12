@@ -2,97 +2,273 @@
   "contentVersion": "1.0.0",
   "id": "G5",
   "type": "grammar",
-  "title": "Verb Types — RU-Verbs vs U-Verbs vs Irregulars",
+  "title": "Core Particles III — に, で, へ",
   "meta": {
     "level": "N5",
     "unlocksAfter": "N5.5",
-    "focus": "Identifying ichidan (RU-verb), godan (U-verb), and irregular verb classes to predict conjugation",
+    "focus": "Location and movement particles: destination, action location, means, and direction",
     "estimatedMinutes": 25,
-    "particles": [],
-    "grammarForms": ["polite_masu"],
-    "icon": "⚙️"
+    "particles": ["に", "で", "へ"],
+    "grammarForms": [],
+    "icon": "📌"
   },
   "sections": [
     {
       "type": "grammarIntro",
-      "title": "Verb Types — RU-Verbs vs U-Verbs vs Irregulars",
-      "icon": "⚙️",
-      "summary": "Every Japanese verb belongs to one of three classes: ichidan (RU-verbs), godan (U-verbs), or irregular. Knowing a verb's class tells you exactly how to conjugate it into any form — ます, ました, ません, て-form, and all future forms.",
-      "whyItMatters": "You have already practised conjugating 行く, いる, and 来る in G5. But the same logic applies to every verb you will ever learn. Once you know the class of a verb, its conjugation is completely predictable. Getting this wrong means making systematic mistakes across every sentence you produce.",
+      "title": "Where, How, and Which Way",
+      "icon": "📌",
+      "summary": "Three particles — に, で, and へ — let you say where things exist, where actions happen, how you travel, and which direction you are heading. Each has a distinct job.",
+      "whyItMatters": "Without these particles you can say what you do, but not where or how you do it. に, で, and へ are the core tools for talking about movement through the world — going to the station, arriving by bus, studying at school.",
       "youWillLearn": [
-        "Ichidan (RU-verbs): how to recognise them and form the stem by dropping る",
-        "Godan (U-verbs): how to recognise them and form the stem by shifting to the い-row",
-        "The る-trap: why some verbs ending in る are actually godan (the vowel test)",
-        "Irregular verbs: 来る and ある, which must be memorised"
+        "に — marking a destination with motion verbs (going TO a place)",
+        "に — marking an existence location (something is AT a place)",
+        "に — marking a specific time point (ON Monday, AT 3 o'clock)",
+        "で — marking the location where an action takes place (studying AT school)",
+        "で — marking the means or method used (travelling BY bus)",
+        "へ — marking the direction of movement TOWARD a destination"
       ]
     },
     {
       "type": "grammarRule",
-      "id": "rule_ichidan",
+      "id": "rule_ni",
       "pattern": [
-        { "label": "VERB", "color": "verb", "text": "いる" },
-        { "label": "DROP", "color": "modifier", "text": "→ い" },
-        { "label": "ADD", "color": "predicate", "text": "+ ます" }
+        { "label": "PLACE", "color": "topic", "text": "駅" },
+        { "label": "PARTICLE", "color": "particle", "text": "に" },
+        { "label": "VERB", "color": "verb", "text": "行きます" }
       ],
-      "meaning": "Ichidan (RU-verbs): drop る, then add the ending",
-      "explanation": "Ichidan verbs always end in る in dictionary form, AND the vowel sound immediately before る is always in the い-row (i) or え-row (e). The conjugation rule is the simplest possible: remove る, then attach the ending directly. The stem never changes.",
+      "meaning": "に — destination / existence location / specific time",
+      "explanation": "に is the most versatile of the three particles. It has three main uses taught here: (1) with motion verbs it marks the destination — the place you arrive at; (2) with existence verbs (います / あります) it marks the location where something is; (3) with calendar times it marks a fixed, specific point — the same 'pinpoint' idea taught in G3.",
       "notes": [
-        "The dictionary form always ends in る, and the preceding vowel is い/え: い-ru, き-ru (wait), み-ru (see), お-ki-ru (wake up), た-べ-ru (eat).",
-        "To form the ます stem: drop the final る. That's it.",
-        "いる → い (stem) → います / いました / いません / いませんでした.",
-        "The stem い is very short — just one sound — but it always works the same way.",
-        "Caution: not every verb ending in る is ichidan! See the る-trap in the comparison section."
+        "Destination (motion): 駅に行きます — going TO the station. に marks the endpoint.",
+        "Existence location: ここにいます — I am HERE (at this spot). に marks where the person is.",
+        "Time point: 月曜日に来ます — coming ON Monday. に pins the event to a calendar point.",
+        "に does NOT mark relative time words (毎日, 今日, 今週). Those float without a particle.",
+        "に has further uses not taught here (indirect object: 'giving TO someone'). They share the same 'arrival at a point' logic."
       ],
       "examples": [
         {
           "parts": [
-            { "text": "いる", "role": "verb", "gloss": "dictionary form (to be/exist)" },
-            { "text": "→ い", "role": "modifier", "gloss": "drop る → stem" },
-            { "text": "→ います", "role": "predicate", "gloss": "add ます" }
+            { "text": "駅", "role": "topic", "gloss": "station" },
+            { "text": "に", "role": "particle" },
+            { "text": "行き", "role": "verb", "gloss": "go-" },
+            { "text": "ます", "role": "predicate" }
           ],
-          "en": "to be here → is here (polite present)",
-          "breakdown": "Ichidan: い (い-row before る) → drop る → い + ます = います"
+          "en": "I go to the station.",
+          "breakdown": "に marks the destination — the place the motion arrives at"
         },
         {
           "parts": [
-            { "text": "友だち", "role": "topic", "gloss": "friend" },
-            { "text": "が", "role": "particle" },
-            { "text": "い", "role": "verb", "gloss": "be-" },
+            { "text": "ここ", "role": "topic", "gloss": "here" },
+            { "text": "に", "role": "particle" },
+            { "text": "い", "role": "verb", "gloss": "be" },
             { "text": "ます", "role": "predicate" }
           ],
-          "en": "My friend is here.",
-          "breakdown": "いる (ichidan): stem = い → います"
+          "en": "I am here (at this spot).",
+          "breakdown": "に marks the location of existence — where the person is"
+        },
+        {
+          "parts": [
+            { "text": "来週", "role": "modifier", "gloss": "next week" },
+            { "text": "来", "role": "verb", "gloss": "come" },
+            { "text": "ます", "role": "predicate" }
+          ],
+          "en": "I will come next week. (no に — floating time word)",
+          "breakdown": "来週 is a relative time word — no に needed"
         }
       ]
     },
     {
       "type": "grammarRule",
-      "id": "rule_godan",
+      "id": "rule_de",
       "pattern": [
-        { "label": "VERB", "color": "verb", "text": "行く" },
-        { "label": "SHIFT", "color": "modifier", "text": "く → き" },
-        { "label": "ADD", "color": "predicate", "text": "+ ます" }
+        { "label": "PLACE / MEANS", "color": "topic", "text": "バス" },
+        { "label": "PARTICLE", "color": "particle", "text": "で" },
+        { "label": "VERB", "color": "verb", "text": "来ます" }
       ],
-      "meaning": "Godan (U-verbs): shift the final syllable to the い-row, then add the ending",
-      "explanation": "Godan verbs end in any う-row syllable in dictionary form: く, ぐ, む, ぬ, ぶ, う, つ, す — or る when the vowel before it is NOT in the い/え-row. To form the polite stem, shift that final syllable one column to the left in the hiragana chart (to the い-row): く→き, ぐ→ぎ, む→み, ぬ→に, ぶ→び, う→い, つ→ち, す→し, る→り. Then add ます.",
+      "meaning": "で — location of action / means or method",
+      "explanation": "で marks two related ideas: (1) the place where an action actively occurs — not just where something exists, but where you do something; (2) the means, tool, or method by which an action is performed. Both uses answer the question 'how / in what context is this action happening?'",
       "notes": [
-        "Full い-row shift map: く→き, ぐ→ぎ, む→み, ぬ→に, ぶ→び, う→い, つ→ち, す→し, る→り.",
-        "行く → 行き (く→き shift) → 行きます / 行きました / 行きません.",
-        "分かる → 分かり (る→り shift) → 分かります. Note: 分かる looks like ichidan but is godan! (See る-trap below.)",
-        "The stem changes every time you change the form — the final syllable always shifts.",
-        "All verbs NOT ending in る are definitely godan. Verbs ending in る may be either class."
+        "Action location: コンビニで — doing something AT the convenience store (an active event at a place).",
+        "Means / method: バスで来ます — coming BY bus. タクシーで行きます — going BY taxi.",
+        "Key contrast with に: に marks where something EXISTS or ARRIVES; で marks where an action HAPPENS.",
+        "Example: うちにいます (I am at home — existence). Action-at-location uses of で (e.g. doing something at a place) will be reinforced in later lessons when more action verbs are available.",
+        "で is introduced in N5.5 — it only appears in content from this point onward."
       ],
       "examples": [
         {
           "parts": [
-            { "text": "行く", "role": "verb", "gloss": "dictionary form (to go)" },
-            { "text": "→ 行き", "role": "modifier", "gloss": "く→き (い-row shift)" },
-            { "text": "→ 行きます", "role": "predicate", "gloss": "add ます" }
+            { "text": "バス", "role": "topic", "gloss": "bus" },
+            { "text": "で", "role": "particle" },
+            { "text": "来", "role": "verb", "gloss": "come" },
+            { "text": "ます", "role": "predicate" }
           ],
-          "en": "to go → go (polite present)",
-          "breakdown": "Godan: く is in う-row → shift to き → 行き + ます = 行きます"
+          "en": "I come by bus.",
+          "breakdown": "で marks the means of transport — the method of coming"
         },
         {
+          "parts": [
+            { "text": "タクシー", "role": "topic", "gloss": "taxi" },
+            { "text": "で", "role": "particle" },
+            { "text": "行き", "role": "verb", "gloss": "go-" },
+            { "text": "ました", "role": "predicate" }
+          ],
+          "en": "I went by taxi.",
+          "breakdown": "で marks the means — travelling by taxi"
+        },
+        {
+          "parts": [
+            { "text": "バス", "role": "topic", "gloss": "bus" },
+            { "text": "で", "role": "particle" },
+            { "text": "駅", "role": "topic", "gloss": "station" },
+            { "text": "に", "role": "particle" },
+            { "text": "来", "role": "verb", "gloss": "come" },
+            { "text": "ました", "role": "predicate" }
+          ],
+          "en": "I came to the station by bus.",
+          "breakdown": "で marks the means (by bus); に marks the destination. Both particles in one sentence."
+        }
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_e",
+      "pattern": [
+        { "label": "DESTINATION", "color": "topic", "text": "駅" },
+        { "label": "PARTICLE", "color": "particle", "text": "へ" },
+        { "label": "VERB", "color": "verb", "text": "行きます" }
+      ],
+      "meaning": "へ — direction of movement (toward a destination)",
+      "explanation": "へ (pronounced 'e' as a particle) marks the direction of movement — the way you are heading. It emphasises that you are oriented toward the destination rather than focusing on your arrival at it. Like に for motion verbs, へ is used with verbs of movement (行く, 来る). However, へ highlights the journey's direction, while に highlights the endpoint.",
+      "notes": [
+        "へ is used only with motion verbs. It cannot mark existence locations or time.",
+        "駅へ行きます = going in the direction of the station (emphasis on heading that way).",
+        "駅に行きます = going to the station (emphasis on arriving there).",
+        "In everyday conversation both are often interchangeable for simple destinations. See the comparison section for the key distinction.",
+        "へ cannot replace に for time expressions or existence: 月曜日へ is NOT correct."
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "駅", "role": "topic", "gloss": "station" },
+            { "text": "へ", "role": "particle" },
+            { "text": "行き", "role": "verb", "gloss": "go-" },
+            { "text": "ます", "role": "predicate" }
+          ],
+          "en": "I am heading to (toward) the station.",
+          "breakdown": "へ marks direction — oriented toward the station"
+        },
+        {
+          "parts": [
+            { "text": "うち", "role": "topic", "gloss": "home" },
+            { "text": "へ", "role": "particle" },
+            { "text": "来", "role": "verb", "gloss": "come" },
+            { "text": "ます", "role": "predicate" }
+          ],
+          "en": "I am coming toward home.",
+          "breakdown": "へ with 来る — heading in the direction of home"
+        }
+      ]
+    },
+    {
+      "type": "grammarComparison",
+      "title": "に vs で — Existence & Arrival vs Action & Means",
+      "items": [
+        {
+          "label": "に — where something EXISTS or ARRIVES",
+          "color": "particle",
+          "points": [
+            "With existence verbs (います / あります): marks WHERE something IS",
+            "With motion verbs (行く / 来る): marks the DESTINATION — the endpoint of movement",
+            "に pins the sentence to a specific place-point — static presence or arrival",
+            "家にいます → someone IS at home (existence)",
+            "駅に行きます → going TO the station (arrival at endpoint)"
+          ],
+          "example": {
+            "parts": [
+              { "text": "友だち", "role": "subject", "gloss": "friend" },
+              { "text": "が", "role": "particle" },
+              { "text": "家", "role": "topic", "gloss": "home" },
+              { "text": "に", "role": "particle" },
+              { "text": "い", "role": "verb", "gloss": "be" },
+              { "text": "ます", "role": "predicate" }
+            ],
+            "en": "My friend is at home. (existence location)"
+          }
+        },
+        {
+          "label": "で — where an action HAPPENS or HOW it's done",
+          "color": "verb",
+          "points": [
+            "Action location: marks the place where an action actively takes place (NOT just where something is)",
+            "Means / method: marks the tool, vehicle, or method used for an action",
+            "で answers 'In what context or by what means is this action performed?'",
+            "家で生まれました → was born AT home (action location — the birth happened there)",
+            "Key contrast: 家にいます (someone IS at home) vs 家で生まれました (something HAPPENED at home)"
+          ],
+          "example": {
+            "parts": [
+              { "text": "家", "role": "topic", "gloss": "home" },
+              { "text": "で", "role": "particle" },
+              { "text": "生まれ", "role": "verb", "gloss": "was born" },
+              { "text": "ました", "role": "predicate" }
+            ],
+            "en": "I was born at home. (action location — the event happened there)"
+          }
+        }
+      ],
+      "tip": "Quick test: 'Am I saying where something IS, or where/how an action HAPPENS?' Existence or arrival → に. Action location or method → で. Both often appear together: バスで（by bus）駅に（to the station）来ます."
+    },
+    {
+      "type": "grammarComparison",
+      "title": "に vs へ for Motion Verbs — Arrival vs Direction",
+      "items": [
+        {
+          "label": "に — arrival at a point",
+          "color": "particle",
+          "points": [
+            "Emphasises the ENDPOINT — where you arrive",
+            "Used with motion verbs: 行く, 来る",
+            "Also used for existence (います/あります) and time — へ cannot do this",
+            "に has many uses; motion destination is just one of them"
+          ],
+          "example": {
+            "parts": [
+              { "text": "駅", "role": "topic", "gloss": "station" },
+              { "text": "に", "role": "particle" },
+              { "text": "行き", "role": "verb", "gloss": "go-" },
+              { "text": "ます", "role": "predicate" }
+            ],
+            "en": "I go to the station. (arriving there)"
+          }
+        },
+        {
+          "label": "へ — direction / orientation",
+          "color": "particle",
+          "points": [
+            "Emphasises the DIRECTION — the way you are heading",
+            "Used ONLY with motion verbs — cannot mark existence or time",
+            "Implies movement in progress, not necessarily arrival",
+            "へ and に overlap for simple destination sentences, but に is broader"
+          ],
+          "example": {
+            "parts": [
+              { "text": "駅", "role": "topic", "gloss": "station" },
+              { "text": "へ", "role": "particle" },
+              { "text": "行き", "role": "verb", "gloss": "go-" },
+              { "text": "ます", "role": "predicate" }
+            ],
+            "en": "I head toward the station. (moving in that direction)"
+          }
+        }
+      ],
+      "tip": "Both に and へ are often used interchangeably for simple 'going to a place' sentences. The key difference: に can mark existence locations, time points, and indirect objects — へ cannot. When in doubt, に is the safer, more versatile choice."
+    },
+    {
+      "type": "annotatedExample",
+      "title": "に, で, and へ Together in Natural Sentences",
+      "examples": [
+        {
+          "context": "に — destination with motion verb",
           "parts": [
             { "text": "毎日", "role": "modifier", "gloss": "every day" },
             { "text": "駅", "role": "topic", "gloss": "station" },
@@ -101,404 +277,367 @@
             { "text": "ます", "role": "predicate" }
           ],
           "en": "I go to the station every day.",
-          "breakdown": "行く (godan): く→き → 行きます"
+          "note": "に marks the destination. 毎日 is a floating time word — no particle needed."
         },
         {
+          "context": "に — existence location",
           "parts": [
-            { "text": "分かり", "role": "verb", "gloss": "understand-" },
-            { "text": "ます", "role": "predicate" }
-          ],
-          "en": "I understand. (polite present)",
-          "breakdown": "分かる (godan る-verb): る→り → 分かります. Looks like ichidan but is NOT."
-        }
-      ]
-    },
-    {
-      "type": "grammarRule",
-      "id": "rule_irregular",
-      "pattern": [
-        { "label": "IRREGULAR", "color": "predicate", "text": "来る / ある" },
-        { "label": "RESULT", "color": "modifier", "text": "→ 来ます / あります" }
-      ],
-      "meaning": "Irregular verbs: memorise these — they follow neither ichidan nor godan patterns",
-      "explanation": "Two verbs are irregular in Japanese N5: 来る (to come) and ある (to exist — for inanimate things). Their polite forms do not follow the ichidan or godan rules and must be memorised individually.",
-      "notes": [
-        "来る (to come) is fully irregular. Its polite forms: 来ます (きます) / 来ました (きました) / 来ません (きません) / 来ませんでした (きませんでした). The kanji 来 stays but the reading changes completely to き.",
-        "ある (to exist, for things) is a special irregular. Its polite present is あります. Unlike regular godan verbs, its negative is ありません (not ありません — which looks the same but is formed as an irregular, not a godan shift). The past negative is ありませんでした.",
-        "These two verbs appear constantly in Japanese — you will use them every day.",
-        "There is no other way to learn them except memorisation.",
-        "Later you will meet する (to do) which is also irregular. It is introduced in a future lesson."
-      ],
-      "examples": [
-        {
-          "parts": [
-            { "text": "来る", "role": "verb", "gloss": "dictionary (to come)" },
-            { "text": "→ 来ます", "role": "predicate", "gloss": "reading: きます (irregular)" }
-          ],
-          "en": "to come → comes (polite present) — reading changes to き",
-          "breakdown": "Irregular 来る: cannot be predicted from the kanji reading くる → becomes きます"
-        },
-        {
-          "parts": [
-            { "text": "コンビニ", "role": "topic", "gloss": "convenience store" },
+            { "text": "今", "role": "modifier", "gloss": "now" },
+            { "text": "うち", "role": "topic", "gloss": "home" },
             { "text": "に", "role": "particle" },
-            { "text": "あり", "role": "verb", "gloss": "exist-" },
-            { "text": "ます", "role": "predicate" }
-          ],
-          "en": "There is a convenience store (over there).",
-          "breakdown": "ある (irregular): あります — inanimate existence"
-        },
-        {
-          "parts": [
             { "text": "友だち", "role": "subject", "gloss": "friend" },
             { "text": "が", "role": "particle" },
-            { "text": "来", "role": "verb", "gloss": "come" },
-            { "text": "ました", "role": "predicate" }
-          ],
-          "en": "My friend came.",
-          "breakdown": "Irregular 来る past: 来ました (reading: きました)"
-        }
-      ]
-    },
-    {
-      "type": "grammarTable",
-      "title": "Verb Type Comparison — Identifying and Conjugating",
-      "description": "Three verb types, one rule each. Use this table to identify any verb and predict its ます form.",
-      "tableType": "conjugation",
-      "headers": ["", "Ichidan (RU-verb)", "Godan (U-verb)", "Irregular"],
-      "rows": [
-        {
-          "label": "Dictionary form",
-          "cells": ["いる", "行く", "来る"],
-          "meaning": "The form found in the dictionary"
-        },
-        {
-          "label": "Identifies as",
-          "cells": ["Ends in る; vowel before る is い (い-row) → ichidan", "Ends in く (う-row syllable) → godan", "Must memorise — neither pattern applies"],
-          "meaning": "How to classify the verb"
-        },
-        {
-          "label": "Stem formation",
-          "cells": ["Drop る → い", "Shift く→き (い-row) → 行き", "Irregular: き (complete reading change)"],
-          "meaning": "How to form the polite stem"
-        },
-        {
-          "label": "ます form",
-          "cells": ["います", "行きます", "来ます (reading: きます)"],
-          "meaning": "Polite present / future"
-        }
-      ],
-      "notes": [
-        "The る-trap: 分かる ends in る, but the vowel before る is か (あ-row, not い/え-row) → godan, not ichidan. Its stem is 分かり (る→り shift).",
-        "When a verb ends in る and you are unsure of its class, check the vowel before る: い/え-row = ichidan; any other row = godan.",
-        "ある follows a pattern similar to godan but with an irregular negative (ありません). It is best memorised as a separate entry."
-      ]
-    },
-    {
-      "type": "grammarComparison",
-      "title": "The る-Trap: いる (Ichidan) vs 分かる (Godan)",
-      "items": [
-        {
-          "label": "いる — Ichidan (RU-verb)",
-          "color": "predicate",
-          "points": [
-            "Dictionary form: いる",
-            "Vowel before る: い — this is the い-row ✓",
-            "Classification: ichidan",
-            "Stem: drop る → い",
-            "Polite form: います (not いります)"
-          ],
-          "example": {
-            "parts": [
-              { "text": "いる", "role": "verb", "gloss": "い (い-row) + る" },
-              { "text": "→ い", "role": "modifier", "gloss": "drop る" },
-              { "text": "→ います", "role": "predicate", "gloss": "ichidan ✓" }
-            ],
-            "en": "to be here → is here (ichidan)"
-          }
-        },
-        {
-          "label": "分かる — Godan (U-verb, る-trap!)",
-          "color": "verb",
-          "points": [
-            "Dictionary form: 分かる",
-            "Vowel before る: か — this is the あ-row, NOT い/え-row",
-            "Classification: GODAN despite ending in る",
-            "Stem: shift る→り → 分かり",
-            "Polite form: 分かります (NOT 分かます — that would be wrong!)"
-          ],
-          "example": {
-            "parts": [
-              { "text": "分かる", "role": "verb", "gloss": "か (あ-row) + る" },
-              { "text": "→ 分かり", "role": "modifier", "gloss": "る→り (godan shift)" },
-              { "text": "→ 分かります", "role": "predicate", "gloss": "godan ✓" }
-            ],
-            "en": "to understand → understands (godan, not ichidan!)"
-          }
-        }
-      ],
-      "tip": "When you see a verb ending in る, immediately ask: 'What is the vowel before る?' If it is い or え → ichidan (drop る). If it is any other vowel (あ, う, お) → godan (shift る to り). This test catches the る-trap every time."
-    },
-    {
-      "type": "annotatedExample",
-      "title": "Identifying Verb Types in Natural Sentences",
-      "examples": [
-        {
-          "context": "Ichidan: いる (い before る)",
-          "parts": [
-            { "text": "友だち", "role": "subject", "gloss": "friend" },
-            { "text": "が", "role": "particle" },
-            { "text": "ここ", "role": "modifier", "gloss": "here" },
-            { "text": "に", "role": "particle" },
-            { "text": "い", "role": "verb", "gloss": "be-" },
+            { "text": "い", "role": "verb", "gloss": "be" },
             { "text": "ます", "role": "predicate" }
           ],
-          "en": "My friend is here.",
-          "note": "いる: い-row before る → ichidan → drop る → い + ます = います"
+          "en": "My friend is at home right now.",
+          "note": "に marks the existence location — where the friend is."
         },
         {
-          "context": "Godan: 行く (ends in く, not る — clearly godan)",
+          "context": "で — means of transport",
           "parts": [
-            { "text": "今日", "role": "modifier", "gloss": "today" },
+            { "text": "バス", "role": "topic", "gloss": "bus" },
+            { "text": "で", "role": "particle" },
             { "text": "駅", "role": "topic", "gloss": "station" },
             { "text": "に", "role": "particle" },
             { "text": "行き", "role": "verb", "gloss": "go-" },
             { "text": "ます", "role": "predicate" }
           ],
-          "en": "I go to the station today.",
-          "note": "行く: ends in く (う-row) → godan → く→き → 行きます"
+          "en": "I go to the station by bus.",
+          "note": "で marks the method (by bus); に marks the destination. Both appear in one sentence."
         },
         {
-          "context": "Godan る-trap: 分かる (か before る = あ-row → godan!)",
+          "context": "へ — direction of travel",
           "parts": [
-            { "text": "分かり", "role": "verb", "gloss": "understand-" },
-            { "text": "ます", "role": "predicate" }
+            { "text": "先週", "role": "modifier", "gloss": "last week" },
+            { "text": "コンビニ", "role": "topic", "gloss": "convenience store" },
+            { "text": "へ", "role": "particle" },
+            { "text": "行き", "role": "verb", "gloss": "go-" },
+            { "text": "ました", "role": "predicate" }
           ],
-          "en": "I understand.",
-          "note": "分かる ends in る but か is あ-row → godan → る→り → 分かります"
+          "en": "Last week I headed to the convenience store.",
+          "note": "へ shows direction of the journey; ました shows the past tense."
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "かいわ 1: どのどうしですか（Which Kind of Verb Is It?）",
-      "context": "The teacher is explaining verb types to Yamakawa and Rikizo during class.",
-      "lines": [
-        {
-          "spk": "先生",
-          "jp": "「行く」は どんな どうしですか。",
-          "en": "What kind of verb is 'iku' (go)?",
-          "terms": [
-            "v_iku",
-            "p_wa",
-            "v_donna",
-            "g_desu",
-            "p_ka"
-          ]
-        },
-        {
-          "spk": "りきぞ",
-          "jp": "「行く」は ごだんどうしです。「く」で おわりますから。",
-          "en": "'Iku' is a godan verb. Because it ends in 'ku'.",
-          "terms": [
-            "v_iku",
-            "p_wa",
-            "g_desu",
-            "p_de",
-            "p_kara"
-          ]
-        },
-        {
-          "spk": "先生",
-          "jp": "そうです。分かりましたね。では「いる」は どうですか。",
-          "en": "That's right. You understood. Then what about 'iru' (be)?",
-          "terms": [
-            "g_desu",
-            { "id": "v_wakaru", "form": "polite_mashita" },
-            "p_ne",
-            "p_dewa",
-            "v_iru",
-            "p_wa",
-            "v_dou",
-            "g_desu",
-            "p_ka"
-          ]
-        },
-        {
-          "spk": "やまかわ",
-          "jp": "「いる」は いちだんどうしです。「い」は い-れつです。",
-          "en": "'Iru' is an ichidan verb. 'I' is in the i-column.",
-          "terms": [
-            "v_iru",
-            "p_wa",
-            "g_desu"
-          ]
-        },
-        {
-          "spk": "先生",
-          "jp": "はい、そうです。では「分かる」は いちだんですか、ごだんですか。",
-          "en": "Yes, that's right. Then is 'wakaru' (understand) ichidan or godan?",
-          "terms": [
-            "p_hai",
-            "g_desu",
-            "p_dewa",
-            "v_wakaru",
-            "p_wa",
-            "g_desu",
-            "p_ka"
-          ]
-        },
-        {
-          "spk": "りきぞ",
-          "jp": "「分かる」は ごだんです！「か」は あ-れつですから。",
-          "en": "'Wakaru' is godan! Because 'ka' is in the a-column.",
-          "terms": [
-            "v_wakaru",
-            "p_wa",
-            "g_desu",
-            "p_kara"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "かいわ 2: どうしの かたちを たしかめましょう（Let's Confirm Verb Forms）",
-      "context": "Rikizo and Yamakawa quiz each other on verb conjugation after class.",
+      "title": "かいわ 1: 今日 どこに 行きましたか（Where Did You Go Today?）",
+      "context": "Yamakawa asks Rikizo about his day. They talk about where he went and how he got there.",
       "lines": [
         {
           "spk": "やまかわ",
-          "jp": "りきぞさん、「来る」の ますかたちは 何ですか。",
-          "en": "Rikizo-san, what is the masu form of 'kuru' (come)?",
+          "jp": "りきぞさん、今日 どこに 行きましたか。",
+          "en": "Rikizo-san, where did you go today?",
           "terms": [
             "char_rikizo",
             "v_san",
-            "v_kuru",
-            "p_no",
-            "p_wa",
-            "v_nan",
-            "g_desu",
+            "v_kyou",
+            "v_doko",
+            "p_ni",
+            { "id": "v_iku", "form": "polite_mashita" },
             "p_ka"
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "「来ます」です。よみかたは「きます」です。",
-          "en": "It's 'kimasu'. The reading is 'kimasu'.",
+          "jp": "コンビニに 行きました。バスで 行きましたよ。",
+          "en": "I went to the convenience store. I went by bus.",
           "terms": [
-            { "id": "v_kuru", "form": "polite_masu" },
-            "g_desu",
-            "p_wa",
-            "g_desu"
-          ]
-        },
-        {
-          "spk": "やまかわ",
-          "jp": "そうです！「来る」は ふきそくどうしですね。",
-          "en": "That's right! 'Kuru' is an irregular verb, isn't it.",
-          "terms": [
-            "g_desu",
-            "v_kuru",
-            "p_wa",
-            "g_desu",
-            "p_ne"
-          ]
-        },
-        {
-          "spk": "りきぞ",
-          "jp": "はい。では「ある」は どうですか。",
-          "en": "Yes. Then what about 'aru' (exist)?",
-          "terms": [
-            "p_hai",
-            "p_dewa",
-            "v_aru",
-            "p_wa",
-            "v_dou",
-            "g_desu",
-            "p_ka"
-          ]
-        },
-        {
-          "spk": "やまかわ",
-          "jp": "「ある」は「あります」ですね。コンビニに あります。",
-          "en": "'Aru' becomes 'arimasu'. There is a convenience store.",
-          "terms": [
-            "v_aru",
-            "p_wa",
-            { "id": "v_aru", "form": "polite_masu" },
-            "g_desu",
-            "p_ne",
             "v_konbini",
+            "p_ni",
+            { "id": "v_iku", "form": "polite_mashita" },
+            "v_basu",
+            "p_de",
+            { "id": "v_iku", "form": "polite_mashita" },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "そうですか。友だちも コンビニに いましたか。",
+          "en": "Is that so. Was your friend also at the convenience store?",
+          "terms": [
+            "p_soudesuka",
+            "v_tomodachi",
+            "p_mo",
+            "v_konbini",
+            "p_ni",
+            { "id": "v_iru", "form": "polite_mashita" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "いいえ、友だちは スーパーに いました。",
+          "en": "No, my friend was at the supermarket.",
+          "terms": [
+            "v_iie",
+            "v_tomodachi",
+            "p_wa",
+            "v_suupaa",
+            "p_ni",
+            { "id": "v_iru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "スーパーは どこに ありますか。",
+          "en": "Where is the supermarket?",
+          "terms": [
+            "v_suupaa",
+            "p_wa",
+            "v_doko",
+            "p_ni",
+            { "id": "v_aru", "form": "polite_masu" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "駅の そこに あります。",
+          "en": "It's near the station, over there.",
+          "terms": [
+            "v_eki",
+            "p_no",
+            "v_soko",
             "p_ni",
             { "id": "v_aru", "form": "polite_masu" }
           ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "かいわ 2: 来週 どこへ 行きますか（Where Are You Heading Next Week?）",
+      "context": "The teacher asks students about their plans for next week and how they intend to travel.",
+      "lines": [
+        {
+          "spk": "先生",
+          "jp": "来週 どこへ 行きますか。",
+          "en": "Where are you heading next week?",
+          "terms": [
+            "v_raishuu",
+            "v_doko",
+            "p_e",
+            { "id": "v_iku", "form": "polite_masu" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "来週 駅へ 行きます。先生も 駅に 来ますか。",
+          "en": "Next week I am heading to the station. Will you also come to the station, sensei?",
+          "terms": [
+            "v_raishuu",
+            "v_eki",
+            "p_e",
+            { "id": "v_iku", "form": "polite_masu" },
+            "v_sensei",
+            "p_mo",
+            "v_eki",
+            "p_ni",
+            { "id": "v_kuru", "form": "polite_masu" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "先生",
+          "jp": "はい、来ます。バスで 来ます。",
+          "en": "Yes, I will come. I will come by bus.",
+          "terms": [
+            "p_hai",
+            { "id": "v_kuru", "form": "polite_masu" },
+            "v_basu",
+            "p_de",
+            { "id": "v_kuru", "form": "polite_masu" }
+          ]
         },
         {
           "spk": "りきぞ",
-          "jp": "いいですね。毎日 分かります！",
-          "en": "That's great. I understand it every day!",
+          "jp": "わたしは タクシーで 行きます。バスでは 来ません。",
+          "en": "I will go by taxi. I won't come by bus.",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
-            "p_ne",
-            "v_mainichi",
-            { "id": "v_wakaru", "form": "polite_masu" }
+            "v_watashi",
+            "p_wa",
+            "v_takushii",
+            "p_de",
+            { "id": "v_iku", "form": "polite_masu" },
+            "v_basu",
+            "p_de",
+            "p_wa",
+            { "id": "v_kuru", "form": "polite_negative" }
+          ]
+        },
+        {
+          "spk": "先生",
+          "jp": "そうですか。友だちも 来ますか。",
+          "en": "Is that so. Will your friends also come?",
+          "terms": [
+            "p_soudesuka",
+            "v_tomodachi",
+            "p_mo",
+            { "id": "v_kuru", "form": "polite_masu" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "はい、友だちが 来ます。友だちは うちから 来ます。",
+          "en": "Yes, my friend will come. My friend will come from home.",
+          "terms": [
+            "p_hai",
+            "v_tomodachi",
+            "p_ga",
+            { "id": "v_kuru", "form": "polite_masu" },
+            "v_tomodachi",
+            "p_wa",
+            "v_uchi",
+            "p_kara",
+            { "id": "v_kuru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sentenceTransform",
+      "title": "Switch the Particle",
+      "instructions": "Each sentence uses one particle. Choose the version with the particle changed as directed.",
+      "items": [
+        {
+          "given": "駅に 行きます。",
+          "givenLabel": "に (destination)",
+          "targetLabel": "Change to へ (direction)",
+          "answer": "駅へ 行きます。",
+          "choices": [
+            "駅へ 行きます。",
+            "駅で 行きます。",
+            "駅が 行きます。",
+            "駅から 行きます。"
+          ]
+        },
+        {
+          "given": "バスで 来ました。",
+          "givenLabel": "で (means)",
+          "targetLabel": "Change the means to タクシー",
+          "answer": "タクシーで 来ました。",
+          "choices": [
+            "タクシーに 来ました。",
+            "タクシーへ 来ました。",
+            "タクシーで 来ました。",
+            "タクシーから 来ました。"
+          ]
+        },
+        {
+          "given": "うちに います。",
+          "givenLabel": "に (existence location)",
+          "targetLabel": "Change location to コンビニ",
+          "answer": "コンビニに います。",
+          "choices": [
+            "コンビニで います。",
+            "コンビニへ います。",
+            "コンビニに います。",
+            "コンビニが います。"
+          ]
+        },
+        {
+          "given": "スーパーへ 行きます。",
+          "givenLabel": "へ (direction)",
+          "targetLabel": "Change to に (destination/arrival)",
+          "answer": "スーパーに 行きます。",
+          "choices": [
+            "スーパーで 行きます。",
+            "スーパーに 行きます。",
+            "スーパーから 行きます。",
+            "スーパーを 行きます。"
+          ]
+        },
+        {
+          "given": "友だちが 駅に います。",
+          "givenLabel": "に (existence location)",
+          "targetLabel": "Change location: friend is now at home",
+          "answer": "友だちが うちに います。",
+          "choices": [
+            "友だちが うちに います。",
+            "友だちが うちで います。",
+            "友だちが うちへ います。",
+            "友だちが うちから います。"
+          ]
+        },
+        {
+          "given": "来週 来ます。",
+          "givenLabel": "No particle (floating time)",
+          "targetLabel": "Specify: coming next week TO the station",
+          "answer": "来週 駅に 来ます。",
+          "choices": [
+            "来週 駅で 来ます。",
+            "来週 駅が 来ます。",
+            "来週 駅に 来ます。",
+            "来週 駅から 来ます。"
           ]
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Verb Type Challenge",
-      "instructions": "Identify verb types and choose the correct polite form.",
+      "title": "Particle Challenge",
+      "instructions": "Choose the correct particle for each sentence.",
       "items": [
         {
           "kind": "mcq",
-          "q": "「いる」(to be/exist) — which verb class is this?",
-          "choices": ["Ichidan (RU-verb)", "Godan (U-verb)", "Irregular", "It depends on context"],
-          "answer": "Ichidan (RU-verb)",
-          "explanation": "いる ends in る, and the vowel before る is い — the い-row. This confirms ichidan. Stem = い (drop る) → います / いました / いません."
+          "q": "毎日 駅 ______ 行きます。(I go TO the station every day.)",
+          "choices": ["に", "で", "へ", "が"],
+          "answer": "に",
+          "terms": ["v_mainichi", "v_eki", { "id": "v_iku", "form": "polite_masu" }],
+          "explanation": "に marks the destination of a motion verb — the endpoint where you arrive. 'Going to the station' is a destination → に ✓."
         },
         {
           "kind": "mcq",
-          "q": "「分かる」(to understand) — which verb class is this?",
-          "choices": ["Godan (U-verb)", "Ichidan (RU-verb)", "Irregular", "Cannot be determined"],
-          "answer": "Godan (U-verb)",
-          "explanation": "分かる ends in る, but the vowel before る is か — the あ-row. This is the る-trap! あ-row before る → godan. Stem = 分かり (る→り shift) → 分かります."
+          "q": "バス ______ 来ました。(I came BY bus.)",
+          "choices": ["で", "に", "へ", "から"],
+          "answer": "で",
+          "terms": ["v_basu", { "id": "v_kuru", "form": "polite_mashita" }],
+          "explanation": "で marks the means or method — the tool or vehicle used for an action. 'Came by bus' = method → で ✓."
         },
         {
           "kind": "mcq",
-          "q": "What is the correct polite present form of「行く」?",
-          "choices": ["行きます", "行ります", "行ます", "行くです"],
-          "answer": "行きます",
-          "terms": [{ "id": "v_iku", "form": "polite_masu" }],
-          "explanation": "行く is godan (ends in く). Godan stem rule: shift く to the い-row → き. Then add ます: 行き + ます = 行きます."
+          "q": "友だちは スーパー ______ います。(My friend is AT the supermarket.)",
+          "choices": ["に", "で", "へ", "も"],
+          "answer": "に",
+          "terms": ["v_tomodachi", "p_wa", "v_suupaa", { "id": "v_iru", "form": "polite_masu" }],
+          "explanation": "に marks existence location — where someone IS (います/あります). The friend is existing at the supermarket → に ✓. で would imply an action happening there, not mere presence."
         },
         {
           "kind": "mcq",
-          "q": "What is the correct polite present form of「来る」?",
-          "choices": ["来ます (reading: きます)", "来ります", "来くます", "くます"],
-          "answer": "来ます (reading: きます)",
-          "terms": [{ "id": "v_kuru", "form": "polite_masu" }],
-          "explanation": "来る is an irregular verb. Its polite forms cannot be predicted — the reading changes completely from くる to き. 来ます is read as きます. Memorise this form."
-        },
-        {
-          "kind": "mcq",
-          "q": "A new verb「起きる (おきる — to wake up)」ends in る. The vowel before る is き (き is in the い-row). What class is it?",
-          "choices": ["Ichidan (RU-verb)", "Godan (U-verb)", "Irregular", "It looks like godan because of き"],
-          "answer": "Ichidan (RU-verb)",
-          "explanation": "Apply the vowel test: the vowel before る is き — and き is in the い-row. い/え-row before る → ichidan. Stem = おき (drop る) → おきます."
-        },
-        {
-          "kind": "mcq",
-          "q": "Which statement about verb classes is TRUE?",
+          "q": "Which sentence is grammatically WRONG?",
           "choices": [
-            "All verbs ending in る are ichidan (RU-verbs)",
-            "Verbs ending in る are ichidan ONLY IF the vowel before る is in the い/え-row",
-            "Godan verbs always end in く",
-            "Irregular verbs follow the godan stem rule with a special reading"
+            "月曜日に 来ます。",
+            "バスで 来ます。",
+            "月曜日へ 来ます。",
+            "駅に います。"
           ],
-          "answer": "Verbs ending in る are ichidan ONLY IF the vowel before る is in the い/え-row",
-          "explanation": "The る-trap: some verbs ending in る are actually godan. The vowel test: if the sound before る is in the い/え-row → ichidan. If it is any other row (あ, う, お) → godan. Example: 分かる (か = あ-row) is godan, NOT ichidan."
+          "answer": "月曜日へ 来ます。",
+          "explanation": "へ cannot mark time expressions — it is only for direction of movement toward a physical place. 月曜日へ is incorrect. The correct form for a specific day is 月曜日に (pin a calendar point)."
+        },
+        {
+          "kind": "mcq",
+          "q": "コンビニ ______ 行きます。(I am heading TOWARD the convenience store.)",
+          "choices": ["へ", "に", "で", "から"],
+          "answer": "へ",
+          "terms": ["v_konbini", { "id": "v_iku", "form": "polite_masu" }],
+          "explanation": "Both へ and に work here for a simple destination, but this question asks for the particle that specifically emphasises direction/orientation. That is へ."
+        },
+        {
+          "kind": "mcq",
+          "q": "What is the key difference between に and へ for motion verbs?",
+          "choices": [
+            "に emphasises arrival at the endpoint; へ emphasises direction toward the destination",
+            "に is only for buses; へ is only for taxis",
+            "に is past tense; へ is present tense",
+            "They have completely different meanings and cannot be used with the same verbs"
+          ],
+          "answer": "に emphasises arrival at the endpoint; へ emphasises direction toward the destination",
+          "explanation": "For motion verbs, に focuses on the endpoint (arriving there); へ focuses on the direction (heading that way). They often overlap for simple destination sentences, but に is broader — it also works for time and existence, which へ cannot."
         }
       ]
     }

@@ -2,416 +2,514 @@
   "contentVersion": "1.0.0",
   "id": "G11",
   "type": "grammar",
-  "title": "na-Adjective Conjugation",
+  "title": "i-Adjective Conjugation",
   "meta": {
     "level": "N5",
-    "unlocksAfter": "N5.11",
-    "focus": "Full na-adjective conjugation paradigm: before nouns (～な), adverb form (～に), te-form connector (～で), and polite conjugations. Plus easily confused words that look like i-adjectives but are actually na-adjectives (きれい, 有名, 嫌い).",
-    "estimatedMinutes": 20,
+    "unlocksAfter": "N5.10",
+    "focus": "Full i-adjective conjugation paradigm: past tense (-かった), negative (-くない), te-form (-くて), adverb (-く), and the ～すぎる 'too much' form — all derived from the い-stem. Plus the critical irregular: いい changes to よ- in all conjugated forms.",
+    "estimatedMinutes": 25,
     "particles": [],
-    "grammarForms": ["polite_adj", "plain_negative", "te_form", "adverbial"],
+    "grammarForms": ["polite_adj", "polite_past_adj", "plain_negative", "plain_past", "plain_past_negative", "te_form", "adverbial", "conditional_ba"],
     "icon": "🎨"
   },
   "sections": [
     {
       "type": "grammarIntro",
-      "title": "na-Adjectives — A Different Kind of Adjective",
+      "title": "The i-Adjective System — One Stem, Many Forms",
       "icon": "🎨",
-      "summary": "Japanese has two types of adjectives: い-adjectives (which end in い and conjugate by modifying the stem) and な-adjectives (which behave more like nouns and use different endings). You have already used きれいです in the lesson — this lesson shows you the full range of な-adjective forms.",
-      "whyItMatters": "な-adjectives are extremely common in everyday Japanese. Words like きれい (beautiful), 有名 (famous), and 嫌い (disliked) are na-adjectives. Without knowing how to conjugate them, you cannot say things like 'it became beautiful', 'it isn't clean', or 'the beautiful flowers'. Once you know the pattern, all na-adjectives follow it — making this one of the most efficient grammar rules to learn.",
+      "summary": "You have already used い-adjectives in their basic polite form: 高いです (is expensive), 大きいです (is big). But い-adjectives have a rich conjugation system built on one simple operation: remove い and attach a new ending. Every form you will learn in this lesson — past, negative, te-form, adverb — follows this rule.",
+      "whyItMatters": "Describing the world in Japanese requires you to move beyond present tense. Was something expensive? Was the weather good yesterday? Is something too big? All of these require conjugated adjective forms. Without them, you are limited to describing only the present state of things. With them, you can narrate past events, connect descriptions into flowing sentences, and express nuanced judgements.",
       "youWillLearn": [
-        "Before nouns: きれいな 花 (beautiful flower) — add な before the noun",
-        "Polite present: きれいです (is beautiful)",
-        "Polite past: きれいでした (was beautiful)",
-        "Polite negative: きれいじゃないです / きれいではありません (is not beautiful)",
-        "Polite past negative: きれいじゃなかったです (was not beautiful)",
-        "て-form connector: きれいで (beautiful and…) — use で to chain adjectives",
-        "Adverb form: きれいに (beautifully / in a clean way) — modifies verbs",
-        "⚠ Watch out: きれい, 有名, 嫌い LOOK like i-adjectives but are NOT. Never say きれいい or きれいくない!"
+        "Past tense: 高かったです (was expensive) — remove い, add かったです",
+        "Negative: 高くない / 高くないです (is not expensive) — remove い, add くない",
+        "Past negative: 高くなかったです (was not expensive) — remove い, add くなかったです",
+        "て-form connector: 高くて (is expensive and…) — remove い, add くて",
+        "Adverb form: 高く (expensively / at a high level) — remove い, add く",
+        "Too much: 高すぎる (too expensive) — remove い, add すぎる",
+        "Conditional: 高ければ (if expensive) — remove い, add ければ",
+        "⚠ CRITICAL EXCEPTION: いい → よ- stem. よかった (was good), NOT いかった"
       ]
     },
     {
       "type": "grammarTable",
-      "title": "na-Adjective Conjugation Chart",
-      "description": "な-adjectives conjugate by adding endings after the base form (the word itself, without な). The key connector is で — used for the past tense of the copula and the て-form connector.",
+      "title": "i-Adjective Conjugation Chart",
+      "description": "Every form uses the same stem operation: remove the final い, then attach the ending. The only exception is いい (good), which uses the よ- stem for all conjugated forms.",
       "tableType": "conjugation",
-      "headers": ["Form", "きれい (beautiful)", "ゆうめい (famous)", "きらい (disliked)"],
+      "headers": ["Form", "⚠ いい → よ- stem!", "高い (takai)", "大きい (ookii)"],
       "rows": [
         {
-          "label": "Before noun",
-          "cells": ["きれいな 花", "ゆうめいな 店", "きらいな たべもの"],
-          "meaning": "~ noun"
-        },
-        {
-          "label": "Polite present",
-          "cells": ["きれいです", "ゆうめいです", "きらいです"],
+          "label": "Plain (dictionary)",
+          "cells": ["いい", "高い", "大きい"],
           "meaning": "is ~"
         },
         {
+          "label": "Polite present",
+          "cells": ["いいです", "高いです", "大きいです"],
+          "meaning": "is ~ (polite)"
+        },
+        {
           "label": "★ Polite past",
-          "cells": ["きれいでした", "ゆうめいでした", "きらいでした"],
+          "cells": ["よかったです", "高かったです", "大きかったです"],
           "meaning": "was ~"
         },
         {
-          "label": "Polite negative",
-          "cells": ["きれいじゃないです", "ゆうめいじゃないです", "きらいじゃないです"],
+          "label": "Plain negative",
+          "cells": ["よくない", "高くない", "大きくない"],
           "meaning": "is not ~"
         },
         {
-          "label": "Polite past negative",
-          "cells": ["きれいじゃなかったです", "ゆうめいじゃなかったです", "きらいじゃなかったです"],
+          "label": "Polite negative",
+          "cells": ["よくないです", "高くないです", "大きくないです"],
+          "meaning": "is not ~ (polite)"
+        },
+        {
+          "label": "Past negative",
+          "cells": ["よくなかったです", "高くなかったです", "大きくなかったです"],
           "meaning": "was not ~"
         },
         {
-          "label": "★ て-form connector",
-          "cells": ["きれいで", "ゆうめいで", "きらいで"],
+          "label": "て-form (connector)",
+          "cells": ["よくて", "高くて", "大きくて"],
           "meaning": "is ~ and…"
         },
         {
           "label": "★ Adverb form",
-          "cells": ["きれいに", "ゆうめいに", "きらいに"],
-          "meaning": "~ly / in a ~ way"
+          "cells": ["よく", "高く", "大きく"],
+          "meaning": "in a ~ way / ~ly"
         },
         {
-          "label": "Plain negative",
-          "cells": ["きれいじゃない", "ゆうめいじゃない", "きらいじゃない"],
-          "meaning": "is not ~ (plain)"
+          "label": "★ Too much (すぎる)",
+          "cells": ["よすぎる", "高すぎる", "大きすぎる"],
+          "meaning": "too ~"
+        },
+        {
+          "label": "Conditional (ければ)",
+          "cells": ["よければ", "高ければ", "大きければ"],
+          "meaning": "if ~ / as long as ~"
         }
       ],
       "notes": [
-        "The base form of a na-adjective is the word itself (きれい, 有名, 嫌い). Add endings after the base.",
-        "Before nouns: always add な. きれい + な + 花 = きれいな 花. Forgetting な is one of the most common errors.",
-        "The te-form is で, not くて. This is the key difference from i-adjectives: 高い → 高くて (i-adj), きれい → きれいで (na-adj).",
-        "The adverb form is に, not く. This is also different from i-adjectives: 大きく 書く (write largely), きれいに 書く (write neatly).",
-        "Polite negative: きれいじゃないです and きれいではありません are both correct. じゃない is the spoken/casual form; ではない is more formal/written. Both are standard."
+        "The stem operation is always: remove い → attach ending. 高い → 高(stem) → 高かった / 高く / 高くて etc.",
+        "いい is the only irregular い-adjective. Its stem is よ-, not い-. NEVER write いかった, いくない, いくて. Always: よかった, よくない, よくて.",
+        "Polite forms add です to the plain conjugated form: 高かった + です = 高かったです.",
+        "The て-form connects adjectives: 天気が よくて、気分が いいです (The weather is nice and my mood is good).",
+        "すぎる attaches to the stem directly (same as く): 高すぎる = too expensive. This form is itself a verb (る-verb) and can be conjugated: 高すぎます (polite), 高すぎました (past polite)."
       ]
     },
     {
       "type": "grammarRule",
-      "id": "rule_na_adj_trap",
+      "id": "rule_ii_exception",
       "pattern": [
-        { "label": "LOOKS LIKE い-adj", "color": "modifier", "text": "きれい / ゆうめい / きらい" },
-        { "label": "⚠ ARE NOT い-adj", "color": "predicate", "text": "These are な-adj!" },
-        { "label": "✓ CORRECT past", "color": "predicate", "text": "きれいでした ✓" },
-        { "label": "✗ WRONG past", "color": "modifier", "text": "きれいかったです ✗ (NEVER)" }
+        { "label": "DICTIONARY", "color": "verb", "text": "いい" },
+        { "label": "⚠ STEM → よ-", "color": "predicate", "text": "いい → よ-" },
+        { "label": "✓ PAST", "color": "predicate", "text": "よかったです ✓" },
+        { "label": "✗ WRONG", "color": "modifier", "text": "いかったです ✗ (NEVER)" }
       ],
-      "meaning": "Easily confused na-adjectives — they look like i-adjectives but are not",
-      "explanation": "Some of the most common Japanese adjectives look like い-adjectives because their base form ends in い — but they are actually な-adjectives. This means they conjugate completely differently.\n\n**The three most common traps:**\n\n| Word | Meaning | Type | Correct past | ✗ Wrong past |\n|---|---|---|---|---|\n| きれい | beautiful / clean | **na-adj** | きれいでした | ~~きれいかったです~~ |\n| ゆうめい | famous (有名) | **na-adj** | ゆうめいでした | ~~ゆうめいかったです~~ |\n| きらい | disliked (嫌い) | **na-adj** | きらいでした | ~~きらいかったです~~ |\n\n**How to spot a na-adjective:**\n- Before a noun, it uses な: きれいな 花 (beautiful flower), 有名な 人 (famous person)\n- An i-adjective uses nothing before a noun: 大きい 花 (big flower), 新しい 人 (new person)\n- If you need to add な before a noun, it's a na-adjective!\n\n**The かわいい trap:** かわいい (cute) ends in い but IS a genuine い-adjective. So: かわいかったです (was cute) is correct. Do not confuse it with きれい.\n\n**The ～そうです trap:** きれい + そうです = きれいそうです (looks beautiful) ✓. But かわいい + そうです = かわいそうです — and this is a completely different word meaning 'pitiable / poor thing'! So avoid 「かわいそうです」 to mean 'looks cute'.",
+      "meaning": "いい → よ- stem exception — the most important rule in this lesson",
+      "explanation": "いい (good) is the only irregular い-adjective. In its dictionary form it looks like a normal い-adjective, but when you remove い to conjugate it, you do NOT get い- as the stem. Instead, the stem is **よ-**.\n\n**The rule: いい → よ (for all conjugated forms)**\n\n| Form | いい (CORRECT) | いい (WRONG) |\n|---|---|---|\n| Past | **よかったです** | ~~いかったです~~ |\n| Negative | **よくない** | ~~いくない~~ |\n| Past negative | **よくなかったです** | ~~いくなかったです~~ |\n| て-form | **よくて** | ~~いくて~~ |\n| Adverb | **よく** | ~~いく~~ (sounds like 行く!) |\n| Too much | **よすぎる** | ~~いすぎる~~ |\n| Conditional | **よければ** | ~~いければ~~ |\n\n**Why does this happen?** いい is actually a contracted form of the older adjective よい (also meaning good/nice). All conjugated forms derive from よい, not from いい. In modern Japanese, よい still exists and is used in formal writing — but in everyday speech, the plain form いい is standard. The key takeaway: dictionary form = いい; everything else = よ- stem.",
       "notes": [
-        "Memory trick: if the adjective can take な before a noun (きれいな, 有名な, 嫌いな), it's a na-adjective and uses で/でした/じゃない for conjugation.",
-        "きれい is unusual because it is a na-adjective even though it ends in い. It was originally a noun-like word (清い = clean/pure), not a true い-adjective.",
-        "有名 (ゆうめい) is a compound of 有 (exist) + 名 (name), meaning literally 'having a name' — names make you famous. This compound structure explains why it behaves like a noun/na-adj rather than an i-adj.",
-        "The かわいそう trap is important for natural Japanese. If you want to say 'that puppy looks cute', say 「あの 子犬は かわいいですね」or avoid the そうです form entirely with かわいい."
+        "よい (formal) and いい (standard) both mean 'good'. In plain speech and writing, よい sounds formal and stiff. In everyday conversation, always use いい for the dictionary form.",
+        "In polite speech, よかったです (great/it was good!) is one of the most frequently used expressions. Memorize it as a whole phrase first.",
+        "よく (adverb 'well / often') is the adverb of いい. It does NOT sound like the verb 行く (to go) in context: よく行きます = 'I often go', よく食べました = 'I ate well'.",
+        "There are no other irregular い-adjectives. ALL other い-adjectives follow the regular pattern. If you see a new い-adjective, you can always conjugate it regularly."
       ],
       "examples": [
         {
           "parts": [
-            { "text": "今日の 花火は", "role": "topic", "gloss": "today's fireworks (topic)" },
-            { "text": "きれいでした。", "role": "predicate", "gloss": "was beautiful (na-adj past: きれい + でした)" }
+            { "text": "今日の 天気は", "role": "topic", "gloss": "today's weather (topic)" },
+            { "text": "よかったです。", "role": "predicate", "gloss": "was good (よ-stem + かったです)" }
           ],
-          "en": "Today's fireworks were beautiful.",
-          "breakdown": "きれい (na-adj) + でした = きれいでした. NOT きれいかったです — that would be an i-adjective form and is wrong."
+          "en": "Today's weather was good.",
+          "breakdown": "いい → よ- stem + かったです = よかったです. Common spoken expression of relief or satisfaction."
         },
         {
           "parts": [
-            { "text": "この 川は", "role": "topic", "gloss": "this river (topic)" },
-            { "text": "ゆうめいじゃないです。", "role": "predicate", "gloss": "is not famous (polite negative: ゆうめい + じゃないです)" }
+            { "text": "電気が", "role": "topic", "gloss": "electricity (subject)" },
+            { "text": "あって", "role": "modifier", "gloss": "there is and… (te-form of ある)" },
+            { "text": "よかったです。", "role": "predicate", "gloss": "was good — it's great that…" }
           ],
-          "en": "This river is not famous.",
-          "breakdown": "ゆうめい (na-adj, written ゆうめい until kanji are taught) negative: ゆうめい + じゃないです = ゆうめいじゃないです. Compare with i-adj: 大きい → 大きくない (not big). Na-adj uses じゃない, i-adj uses くない."
+          "en": "It's great that there's electricity.",
+          "breakdown": "よかったです expresses relief or gladness: 'it was good that X happened'. One of the most natural uses of いい past tense."
+        },
+        {
+          "parts": [
+            { "text": "あの 電車は", "role": "topic", "gloss": "that train (topic)" },
+            { "text": "よく", "role": "modifier", "gloss": "well / often (adverb form of いい)" },
+            { "text": "来ます。", "role": "predicate", "gloss": "comes (polite)" }
+          ],
+          "en": "That train comes often.",
+          "breakdown": "よく is the adverb form of いい — meaning 'well' or 'often'. 高い→高く (expensively), 大きい→大きく (largely), いい→よく (often/well)."
         }
       ]
     },
     {
       "type": "grammarRule",
-      "id": "rule_chaining_adjectives",
+      "id": "rule_adverb_sugiru",
       "pattern": [
-        { "label": "i-adj て-form", "color": "verb", "text": "大き + くて" },
-        { "label": "na-adj て-form", "color": "modifier", "text": "きれい + で" },
-        { "label": "CHAIN", "color": "predicate", "text": "大きくて、きれいです" }
+        { "label": "STEM", "color": "verb", "text": "高い → 高(stem)" },
+        { "label": "+ く → ADVERB", "color": "modifier", "text": "高く (at a high level)" },
+        { "label": "+ すぎる → TOO MUCH", "color": "predicate", "text": "高すぎる (too expensive)" }
       ],
-      "meaning": "Chaining adjectives — くて (i-adj) and で (na-adj)",
-      "explanation": "When you want to describe something with two or more adjectives ('the flowers are beautiful and cute'), you connect them using the て-form. The te-form depends on the adjective type:\n\n| Adjective type | て-form | Example |\n|---|---|---|\n| い-adjective | stem + くて | 大きい → 大きくて (big and…) |\n| な-adjective | base + で | きれい → きれいで (beautiful and…) |\n| い-adjective irregular | よく + て | いい → よくて (good and…) |\n\n**Pattern for chaining:**\n[First adj — te-form] + [Second adj — final form]\n\n```\n花は きれいで、かわいいです。\n(The flowers are beautiful and cute.)\n\n魚は 大きくて、おいしそうです。\n(The fish is big and looks delicious.)\n\n空気が よくて、気分が いいです。\n(The air is nice and I feel good.)\n```\n\nOnly the **last** adjective carries the full ending (です or ない). All adjectives before it use their て-form.",
+      "meaning": "Adverb form ～く and 'too much' ～すぎる",
+      "explanation": "The い-stem (remove い) has two additional useful functions beyond conjugation: creating adverbs and expressing excess.\n\n**Adverb form (～く):**\nRemove い, add く. The adjective becomes an adverb that modifies a verb:\n- 高い → 高く: 高く 売っています (selling expensively)\n- 大きい → 大きく: 大きく 書いてください (please write it large)\n- いい → よく: よく 来ます (comes often)\n\nAdverbs modify verbs and come directly before them.\n\n**Too much (～すぎる):**\nRemove い, add すぎる. Expresses that something exceeds a comfortable or acceptable limit:\n- 高い → 高すぎる: これは 高すぎます (this is too expensive)\n- 大きい → 大きすぎる: 大きすぎます (it's too big)\n- いい → よすぎる: よすぎる ことは ない (there's no such thing as too good)\n\nすぎる is itself a ru-verb (一段動詞), so it conjugates further:\n- 高すぎる → 高すぎます (polite) / 高すぎました (past polite) / 高すぎない (plain negative)\n\n⚠️ **Note on すぎる spelling:** There is no space between the adjective stem and すぎる. Write 高すぎる, not 高く すぎる.",
       "notes": [
-        "You can chain more than two adjectives: きれいで、かわいくて、小さい 花 (beautiful, cute, and small flower). The last adjective takes the final form; all others use て-form.",
-        "If you mix i-adj and na-adj in a chain, remember: i-adj uses くて, na-adj uses で. Example: 大きくて、きれいな 川 (a big and beautiful river).",
-        "The て-form connector means 'and' in a neutral, non-contrasting sense. For contrast ('but'), use が after the full form: きれいですが、小さいです (it's beautiful, but small).",
-        "When the te-form connector appears before a noun phrase (not a copula), the last modifier needs な: きれいで、かわいい 花 (works) vs きれいで、かわいい (predicate, also works)."
+        "Adverb form (く): modifies verbs. 高く 買いました (I bought it at a high price). Placed directly before the verb it modifies.",
+        "すぎる conjugates as a regular ru-verb. In polite speech: 高すぎます. In past: 高すぎました. The base form 高すぎる is the plain (dictionary) form.",
+        "す ぎる can also attach to verbs and noun/adjective stems: 食べすぎる (eat too much), 元気すぎる (too energetic).",
+        "て-form of い-adjectives (高くて) is extremely useful for connecting two descriptions: 電車は 長くて、高いです (the train is long and expensive). The て-form takes all the conjugation burden — the second adjective stays in its base or polite form."
       ],
       "examples": [
         {
           "parts": [
-            { "text": "金魚は", "role": "topic", "gloss": "goldfish (topic)" },
-            { "text": "きれいで、", "role": "modifier", "gloss": "beautiful and… (na-adj te-form: きれい + で)" },
-            { "text": "かわいいです。", "role": "predicate", "gloss": "cute (i-adj polite)" }
+            { "text": "この 電車は", "role": "topic", "gloss": "this train (topic)" },
+            { "text": "高くて、", "role": "modifier", "gloss": "expensive and… (て-form connector)" },
+            { "text": "長いです。", "role": "predicate", "gloss": "long (polite)" }
           ],
-          "en": "Goldfish are beautiful and cute.",
-          "breakdown": "きれい (na-adj) → きれいで (te-form) + かわいい (i-adj) → かわいいです (polite final form). The first adjective takes the te-form, the last takes the full ending."
+          "en": "This train is expensive and long.",
+          "breakdown": "高い → 高くて (て-form) connects to the next description. 長いです ends the sentence in polite form. Only the last adjective needs the polite ending."
         },
         {
           "parts": [
-            { "text": "花火は", "role": "topic", "gloss": "fireworks (topic)" },
-            { "text": "大きくて、", "role": "modifier", "gloss": "big and… (i-adj te-form: 大き + くて)" },
-            { "text": "きれいです。", "role": "predicate", "gloss": "beautiful (na-adj polite)" }
+            { "text": "電気代が", "role": "topic", "gloss": "the electricity bill (subject)" },
+            { "text": "高すぎます。", "role": "predicate", "gloss": "too expensive (polite sugiru)" }
           ],
-          "en": "The fireworks are big and beautiful.",
-          "breakdown": "大きい (i-adj) → 大きくて (te-form) + きれい (na-adj) → きれいです (polite). Mixed i-adj + na-adj chain: first uses くて, second uses full form."
+          "en": "The electricity bill is too expensive.",
+          "breakdown": "高い → 高(stem) + すぎる = 高すぎる (plain). Polite: 高すぎます. Expresses that the expense exceeds what is comfortable."
         },
         {
           "parts": [
-            { "text": "空気が", "role": "topic", "gloss": "air (subject)" },
-            { "text": "よくて、", "role": "modifier", "gloss": "nice and… (いい irregular te-form: よ + くて)" },
+            { "text": "天気が", "role": "topic", "gloss": "weather (subject)" },
+            { "text": "よくて、", "role": "modifier", "gloss": "good and… (て-form of いい)" },
             { "text": "気分が", "role": "topic", "gloss": "mood (subject)" },
-            { "text": "いいです。", "role": "predicate", "gloss": "good (polite)" }
+            { "text": "いいです。", "role": "predicate", "gloss": "good (polite present)" }
           ],
-          "en": "The air is nice and my mood is good.",
-          "breakdown": "いい (irregular i-adj) → よくて (て-form, よ- stem). This links two independent clauses through the te-form connector. The pattern 「AがBくて/でCがDです」 is extremely natural in Japanese."
+          "en": "The weather is nice and my mood is good.",
+          "breakdown": "いい → よ(stem) + くて = よくて. The connector て-form links two i-adjective descriptions naturally."
         }
       ]
     },
     {
       "type": "annotatedExample",
-      "title": "na-Adjectives in Context — Reading a Sentence",
+      "title": "Adjectives in Context — Reading a Sentence",
       "examples": [
         {
-          "context": "な-adj て-form connector — きれいで",
+          "context": "Past polite + contrast が — 長かったですが",
           "parts": [
-            { "text": "花は", "role": "topic", "gloss": "flowers (topic: は)" },
-            { "text": "きれいで、", "role": "connector", "gloss": "beautiful and… (na-adj て-form: きれい + で)" }
+            { "text": "電車は", "role": "topic", "gloss": "train (topic: は)" },
+            { "text": "長かったですが、", "role": "predicate", "gloss": "was long — but (長い → 長かったです, polite past; が = contrast connector)" }
           ],
-          "en": "The flowers are beautiful and…",
-          "note": "な-adj て-form: base + で. きれい → きれいで. Compare with い-adj: かわいい → かわいくて. The te-form connects to the next adjective or clause."
+          "en": "The train was long, but…",
+          "note": "い-adj past polite: drop い → add かったです. 長い → 長かったです. The clause-final が connects to the next clause with a 'but' nuance."
         },
         {
-          "context": "い-adj て-form in the same chain — かわいくて",
+          "context": "て-form connector — よくて (irregular いい → よ- stem)",
           "parts": [
-            { "text": "かわいくて、", "role": "connector", "gloss": "cute and… (i-adj て-form: かわいい → かわい + くて)" }
+            { "text": "山の", "role": "modifier", "gloss": "mountain's (possessive: の)" },
+            { "text": "天気が", "role": "subject", "gloss": "weather (subject: が)" },
+            { "text": "よくて", "role": "connector", "gloss": "good and… (いい → te-form: よ + くて — irregular stem よ-)" }
           ],
-          "en": "…cute and…",
-          "note": "い-adj て-form: drop い → add くて. かわいい → かわいくて. The chain continues: na-adj uses で, i-adj uses くて — different connectors depending on adjective type."
+          "en": "…the mountain weather was nice and…",
+          "note": "いい is irregular — its stem is よ- in all conjugated forms. Te-form: いい → よくて. Compare regular い-adj: 長い → 長くて."
         },
         {
-          "context": "な-adj adverb form — きれいに + なる",
+          "context": "Past polite — よかったです (irregular いい → よ- stem)",
           "parts": [
-            { "text": "空気も", "role": "topic", "gloss": "air also (topic: も = also)" },
-            { "text": "きれいに", "role": "adverb", "gloss": "cleanly (na-adj adverb form: きれい + に)" },
-            { "text": "なりました。", "role": "predicate", "gloss": "became (なる, polite past — 'became clean')" }
+            { "text": "気分が", "role": "subject", "gloss": "mood / feeling (subject: が)" },
+            { "text": "よかったです。", "role": "predicate", "gloss": "was good (いい → past polite: よ + かったです)" }
           ],
-          "en": "…and the air also became clean.",
-          "note": "な-adj adverb: base + に. きれい → きれいに modifies the verb なる ('become'). Compare い-adj adverb: 大きい → 大きく. Adverbs modify verbs, not nouns."
+          "en": "…my mood was good.",
+          "note": "Past polite: いい → よかったです. ⚠ Never いかったです — all conjugated forms of いい use the よ- stem."
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "かいわ: きれいな 空と 花 (The Beautiful Sky and Flowers)",
-      "context": "Miki and Ren discuss the flowers and goldfish they see near the river after the rain.",
+      "title": "かいわ: 天気と 気分 (Weather and Mood)",
+      "context": "Miki and Ren discuss yesterday's day trip to the mountains, reviewing their experience with adjective forms.",
       "lines": [
         {
           "spk": "ミキ",
-          "jp": "雨の 後、空が きれいに なりましたね。",
-          "en": "After the rain, the sky became beautiful, didn't it.",
+          "jp": "きのうの 天気は よかったですね。",
+          "en": "Yesterday's weather was good, wasn't it.",
           "terms": [
-            "v_ame",
+            "v_kinou",
             "p_no",
-            "v_ato",
-            "v_sora",
-            "p_ga",
-            { "id": "v_kirei", "form": "adverbial" },
-            { "id": "v_naru", "form": "polite_mashita" },
+            "v_tenki",
+            "p_wa",
+            { "id": "v_ii", "form": "polite_past_adj" },
             "p_ne"
           ]
         },
         {
           "spk": "レン",
-          "jp": "ええ。空気も きれいで、気分が いいですね。",
-          "en": "Yes. The air is also clean and I feel good, don't I.",
+          "jp": "ええ、山の 天気が よくて、気分も よかったです。",
+          "en": "Yes, the mountain weather was nice and my mood was also good.",
           "terms": [
-            "v_kuuki",
-            "p_mo",
-            { "id": "v_kirei", "form": "te_form" },
+            "v_yama",
+            "p_no",
+            "v_tenki",
+            "p_ga",
+            { "id": "v_ii", "form": "te_form" },
             "v_kibun",
-            "p_ga",
-            { "id": "v_ii", "form": "polite_adj" },
-            "p_ne"
-          ]
-        },
-        {
-          "spk": "ミキ",
-          "jp": "川に きれいな 花が あります。",
-          "en": "There are beautiful flowers by the river.",
-          "terms": [
-            "v_kawa",
-            "p_ni",
-            "v_kirei",
-            "v_hana",
-            "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
-          ]
-        },
-        {
-          "spk": "レン",
-          "jp": "金魚も います。きれいで、かわいいですね。",
-          "en": "There are also goldfish. They're beautiful and cute, aren't they.",
-          "terms": [
-            "v_kingyo",
             "p_mo",
-            { "id": "v_iru", "form": "polite_masu" },
-            { "id": "v_kirei", "form": "te_form" },
-            { "id": "v_kawaii", "form": "polite_adj" },
-            "p_ne"
+            { "id": "v_ii", "form": "polite_past_adj" }
           ]
         },
         {
           "spk": "ミキ",
-          "jp": "あの 花火は きれいそうですね。大きくて、きれいです。",
-          "en": "Those fireworks look beautiful. They're big and beautiful.",
+          "jp": "電車は 長かったですが、高くなかったです。",
+          "en": "The train was long, but it wasn't expensive.",
           "terms": [
-            "v_ano",
-            "v_hanabi",
+            "v_densha",
             "p_wa",
-            { "id": "v_kirei", "form": "appearance_sou" },
-            "p_ne",
-            { "id": "v_ookii", "form": "te_form" },
-            { "id": "v_kirei", "form": "polite_adj" }
+            { "id": "v_nagai", "form": "polite_past_adj" },
+            "p_ga_but",
+            { "id": "v_takai", "form": "polite_past_adj" }
           ]
         },
         {
           "spk": "レン",
-          "jp": "ええ！今日は きれいな 日ですね。また 来たいです。",
-          "en": "Yes! Today is a beautiful day, isn't it. I want to come again.",
+          "jp": "そうですね。古いホテルも よかったですよ。",
+          "en": "Yes. The old hotel was also nice.",
           "terms": [
-            "v_kyou",
-            "p_wa",
-            "v_kirei",
-            "v_hi",
-            "g_desu",
+            "p_soudesu",
             "p_ne",
+            "v_furui",
+            "v_hoteru",
+            "p_mo",
+            { "id": "v_ii", "form": "polite_past_adj" },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "天気が よければ、また 行きたいです。",
+          "en": "If the weather is good, I want to go again.",
+          "terms": [
+            "v_tenki",
+            "p_ga",
+            { "id": "v_ii", "form": "conditional_ba" },
             "v_mata",
-            { "id": "v_kuru", "form": "desire_tai" }
+            { "id": "v_iku", "form": "desire_tai" }
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "来週は どうですか。天気が よすぎると、人気が 高すぎますよ。",
+          "en": "How about next week? If the weather is too good, the popularity is too high.",
+          "terms": [
+            "v_raishuu",
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka",
+            "v_tenki",
+            "p_ga",
+            { "id": "v_ii", "form": "sugiru_form" },
+            "v_ninki",
+            "p_ga",
+            { "id": "v_takai", "form": "sugiru_form" },
+            "p_yo"
           ]
         }
       ]
     },
     {
       "type": "conjugationDrill",
-      "title": "na-Adjective Conjugation Practice",
-      "instructions": "Convert each adjective to the target form. Watch out for な-adjective vs い-adjective differences.",
+      "title": "i-Adjective Conjugation Practice",
+      "instructions": "Convert each adjective to the target form. Pay careful attention to いい (irregular).",
       "items": [
         {
-          "verb": "きれい",
-          "type": "na_adj",
-          "reading": "きれい",
-          "targetForm": "polite_adj",
-          "answer": "きれいです",
-          "answerReading": "きれいです",
-          "hint": "na-adj polite: base + です = きれいです",
-          "choices": ["きれいです", "きれいいです", "きれいくです", "きれいなです"]
+          "verb": "いい",
+          "type": "irr_ii",
+          "reading": "いい",
+          "targetForm": "polite_past_adj",
+          "answer": "よかったです",
+          "answerReading": "よかったです",
+          "hint": "いい is irregular: stem is よ-, NOT い-. よ + かったです = よかったです",
+          "choices": ["よかったです", "いかったです", "いいでした", "よいでした"]
         },
         {
-          "verb": "きれい",
-          "type": "na_adj",
-          "reading": "きれい",
+          "verb": "高い",
+          "type": "i_adj",
+          "reading": "たかい",
+          "targetForm": "polite_past_adj",
+          "answer": "高かったです",
+          "answerReading": "たかかったです",
+          "hint": "Regular い-adj: remove い → 高(stem) + かったです = 高かったです",
+          "choices": ["高かったです", "高いでした", "高くなかったです", "高いです"]
+        },
+        {
+          "verb": "大きい",
+          "type": "i_adj",
+          "reading": "おおきい",
           "targetForm": "te_form",
-          "answer": "きれいで",
-          "answerReading": "きれいで",
-          "hint": "na-adj て-form: base + で = きれいで. NOT くて — that's for い-adj!",
-          "choices": ["きれいで", "きれいくて", "きれいにて", "きれいて"]
+          "answer": "大きくて",
+          "answerReading": "おおきくて",
+          "hint": "te-form of い-adj: remove い → 大き(stem) + くて = 大きくて",
+          "choices": ["大きくて", "大きいて", "大きくで", "大きかって"]
         },
         {
-          "verb": "きれい",
-          "type": "na_adj",
-          "reading": "きれい",
+          "verb": "長い",
+          "type": "i_adj",
+          "reading": "ながい",
           "targetForm": "plain_negative",
-          "answer": "きれいじゃない",
-          "answerReading": "きれいじゃない",
-          "hint": "na-adj plain negative: base + じゃない = きれいじゃない. NOT きれいくない!",
-          "choices": ["きれいじゃない", "きれいくない", "きれいいじゃない", "きれいなくない"]
+          "answer": "長くない",
+          "answerReading": "ながくない",
+          "hint": "Plain negative: remove い → 長(stem) + くない = 長くない",
+          "choices": ["長くない", "長いない", "長かない", "長くありません"]
         },
         {
-          "verb": "きれい",
-          "type": "na_adj",
-          "reading": "きれい",
+          "verb": "古い",
+          "type": "i_adj",
+          "reading": "ふるい",
           "targetForm": "adverbial",
-          "answer": "きれいに",
-          "answerReading": "きれいに",
-          "hint": "na-adj adverb: base + に = きれいに. NOT きれいく — that's for い-adj!",
-          "choices": ["きれいに", "きれいく", "きれいで", "きれいな"]
+          "answer": "古く",
+          "answerReading": "ふるく",
+          "hint": "Adverb form: remove い → 古(stem) + く = 古く",
+          "choices": ["古く", "古い", "古くて", "古かった"]
         },
         {
-          "verb": "かわいい",
+          "verb": "おいしい",
           "type": "i_adj",
-          "reading": "かわいい",
-          "targetForm": "te_form",
-          "answer": "かわいくて",
-          "answerReading": "かわいくて",
-          "hint": "かわいい is a GENUINE い-adj! Remove い → かわい(stem) + くて = かわいくて",
-          "choices": ["かわいくて", "かわいで", "かわいいで", "かわいにて"]
+          "reading": "おいしい",
+          "targetForm": "sugiru_form",
+          "answer": "おいしすぎる",
+          "answerReading": "おいしすぎる",
+          "hint": "Too much: remove い → おいし(stem) + すぎる = おいしすぎる",
+          "choices": ["おいしすぎる", "おいしいすぎる", "おいしくすぎる", "おいしすぎます"]
         },
         {
-          "verb": "かわいい",
+          "verb": "いい",
+          "type": "irr_ii",
+          "reading": "いい",
+          "targetForm": "conditional_ba",
+          "answer": "よければ",
+          "answerReading": "よければ",
+          "hint": "いい conditional: stem よ- + ければ = よければ. NOT いければ!",
+          "choices": ["よければ", "いければ", "いいば", "よいば"]
+        },
+        {
+          "verb": "新しい",
           "type": "i_adj",
-          "reading": "かわいい",
-          "targetForm": "plain_negative",
-          "answer": "かわいくない",
-          "answerReading": "かわいくない",
-          "hint": "かわいい is an い-adj: remove い → かわい(stem) + くない = かわいくない",
-          "choices": ["かわいくない", "かわいじゃない", "かわいいじゃない", "かわいなくない"]
+          "reading": "あたらしい",
+          "targetForm": "polite_past_adj",
+          "answer": "新しかったです",
+          "answerReading": "あたらしかったです",
+          "hint": "Regular い-adj: remove い → 新し(stem) + かったです = 新しかったです",
+          "choices": ["新しかったです", "新しいでした", "新しくなかったです", "あたらしかったです"]
+        }
+      ]
+    },
+    {
+      "type": "sentenceTransform",
+      "title": "Adjective Form Conversion",
+      "instructions": "Transform the given adjective expression to the target form shown.",
+      "items": [
+        {
+          "given": "いいです",
+          "givenLabel": "Polite present",
+          "targetLabel": "Polite past",
+          "answer": "よかったです",
+          "choices": ["よかったです", "いかったです", "いいでした", "よいでした"]
+        },
+        {
+          "given": "高いです",
+          "givenLabel": "Polite present",
+          "targetLabel": "Polite negative",
+          "answer": "高くないです",
+          "choices": ["高くないです", "高いないです", "高くありません", "高くなかったです"]
+        },
+        {
+          "given": "大きいです",
+          "givenLabel": "Polite present",
+          "targetLabel": "Polite past negative",
+          "answer": "大きくなかったです",
+          "choices": ["大きくなかったです", "大きいなかったです", "大きくありませんでした", "大きかったないです"]
+        },
+        {
+          "given": "天気が いいです。気分が いいです。",
+          "givenLabel": "Two separate sentences",
+          "targetLabel": "Combine into one sentence using the て-form connector",
+          "answer": "天気が よくて、気分が いいです。",
+          "choices": [
+            "天気が よくて、気分が いいです。",
+            "天気が いいて、気分が いいです。",
+            "天気が よかって、気分が いいです。",
+            "天気が いいけど、気分が いいです。"
+          ]
+        },
+        {
+          "given": "電車が 高いです。",
+          "givenLabel": "Polite present",
+          "targetLabel": "Express 'too expensive' (polite)",
+          "answer": "電車が 高すぎます。",
+          "choices": [
+            "電車が 高すぎます。",
+            "電車が 高くすぎます。",
+            "電車が 高いすぎます。",
+            "電車が 高すぎる。"
+          ]
         }
       ]
     },
     {
       "type": "drills",
-      "title": "G11 Practice — na-Adjective Forms",
+      "title": "G11 Practice — i-Adjective Forms",
       "instructions": "Choose the correct answer for each question.",
       "items": [
         {
           "kind": "mcq",
-          "q": "Which of the following is a な-adjective (not an い-adjective)?",
-          "choices": ["きれい", "かわいい", "大きい", "長い"],
-          "answer": "きれい",
-          "terms": [{ "id": "v_kirei", "form": "polite_adj" }],
-          "explanation": "きれい is a な-adjective. Despite ending in い, it uses な before nouns (きれいな 花) and で for the て-form (きれいで). かわいい, 大きい, and 長い are genuine い-adjectives that conjugate with -く endings."
+          "q": "What is the past polite form of いい?",
+          "choices": ["よかったです", "いかったです", "いいでした", "よかってです"],
+          "answer": "よかったです",
+          "terms": [{ "id": "v_ii", "form": "polite_past_adj" }],
+          "explanation": "いい is irregular — its stem is よ-, not い-. よ + かったです = よかったです. The form いかったです does NOT exist. Think of it as よい (formal good) → よかった."
         },
         {
           "kind": "mcq",
-          "q": "How do you say 'beautiful flowers' in Japanese (adjective before noun)?",
-          "choices": ["きれいな 花", "きれい 花", "きれいい 花", "きれいく 花"],
-          "answer": "きれいな 花",
-          "terms": ["v_kirei", "v_hana"],
-          "explanation": "な-adjectives add な before a noun: きれい + な + 花 = きれいな 花. Forgetting な is the most common error. い-adjectives don't need anything: 大きい 花 (big flower), no の or な needed."
+          "q": "How do you say 'the train was long' (polite)?",
+          "choices": ["電車は 長かったです", "電車は 長いでした", "電車は 長くです", "電車は 長くなかったです"],
+          "answer": "電車は 長かったです",
+          "terms": ["v_densha", "p_wa", { "id": "v_nagai", "form": "polite_past_adj" }],
+          "explanation": "Regular い-adjective past: remove い → 長(stem) + かったです = 長かったです. 長いでした is a common error — do not add でした directly to the plain adjective. 長くなかったです is the past negative (was not long)."
         },
         {
           "kind": "mcq",
-          "q": "How do you connect two adjectives: 'beautiful and cute' — きれい and かわいい?",
-          "choices": ["きれいで、かわいいです。", "きれいくて、かわいいです。", "きれいにて、かわいいです。", "きれいて、かわいいです。"],
-          "answer": "きれいで、かわいいです。",
-          "terms": [{ "id": "v_kirei", "form": "te_form" }, { "id": "v_kawaii", "form": "polite_adj" }],
-          "explanation": "な-adjective て-form is で: きれいで. い-adjective て-form is くて: かわいくて. Since きれい is a な-adj, the connector is きれいで. Then かわいいです as the final form (い-adj)."
+          "q": "Which sentence correctly uses the て-form of an い-adjective?",
+          "choices": [
+            "天気が よくて、気分が いいです。",
+            "天気が いいて、気分が いいです。",
+            "天気が よかって、気分が いいです。",
+            "天気が よくで、気分が いいです。"
+          ],
+          "answer": "天気が よくて、気分が いいです。",
+          "terms": ["v_tenki", "p_ga", { "id": "v_ii", "form": "te_form" }, "v_kibun", "p_ga", { "id": "v_ii", "form": "polite_adj" }],
+          "explanation": "て-form of い-adjective: remove い → stem + くて. いい → よ(stem) + くて = よくて. The connector よくて links two descriptions: 'The weather is nice AND my mood is good.' いいて, よかって, and よくで are all incorrect forms."
         },
         {
           "kind": "mcq",
-          "q": "How do you say 'the flowers became beautiful'? （花が きれい___ なりました）",
-          "choices": ["きれいに", "きれいく", "きれいで", "きれいな"],
-          "answer": "きれいに",
-          "terms": [{ "id": "v_kirei", "form": "adverbial" }, { "id": "v_naru", "form": "polite_mashita" }],
-          "explanation": "な-adjective adverb form: base + に. きれい + に + なりました = 'became beautiful'. Compare i-adj: 大きく なりました = 'became big' (く). The pattern Xになる means 'to become X'."
+          "q": "What does 高すぎます mean?",
+          "choices": ["It is too expensive", "It was expensive", "It is expensive", "It is not expensive"],
+          "answer": "It is too expensive",
+          "terms": [{ "id": "v_takai", "form": "sugiru_form" }],
+          "explanation": "～すぎる means 'too ~' (exceeds a comfortable limit). 高い → 高(stem) + すぎる = 高すぎる. Polite form: 高すぎます. This is different from 高いです (is expensive) or 高かったです (was expensive)."
         },
         {
           "kind": "mcq",
-          "q": "What is the polite past tense of きれい (was beautiful)?",
-          "choices": ["きれいでした", "きれいかったです", "きれいでした", "きれいくなかったです"],
-          "answer": "きれいでした",
-          "terms": [{ "id": "v_kirei", "form": "polite_adj" }],
-          "explanation": "な-adjective polite past: base + でした = きれいでした. NEVER きれいかったです — that would be an い-adjective past and is wrong. The copula でした is used for both nouns and な-adjectives in the past tense."
+          "q": "How do you form the adverb from いい?",
+          "choices": ["よく", "いく", "いいく", "よい"],
+          "answer": "よく",
+          "terms": [{ "id": "v_ii", "form": "adverbial" }],
+          "explanation": "Adverb form of い-adjective: remove い → stem + く. いい → よ(stem) + く = よく. This means 'well / often'. いく would mean 'to go' (行く) — a completely different word. いく/いいく don't exist as adverb forms of いい."
         },
         {
           "kind": "mcq",
-          "q": "Which sentence is WRONG?",
-          "choices": ["きれいかったです", "きれいでした", "きれいじゃなかったです", "きれいに なりました"],
-          "answer": "きれいかったです",
-          "terms": [{ "id": "v_kirei", "form": "polite_adj" }],
-          "explanation": "きれいかったです is WRONG — きれい is a な-adjective, not an い-adjective. The correct past tense is きれいでした. The other three forms are all correct: でした (past), じゃなかったです (past negative), に なりました (became, adverb + naru)."
+          "q": "天気が ___ ば、外に 行きましょう。(If the weather is good, let's go outside.)",
+          "choices": ["よけれ", "いけれ", "よかっ", "よく"],
+          "answer": "よけれ",
+          "terms": ["v_tenki", "p_ga", { "id": "v_ii", "form": "conditional_ba" }, "v_soto", "p_ni", { "id": "v_iku", "form": "polite_volitional_mashou" }],
+          "explanation": "Conditional ～ければ: remove い → stem + ければ. いい → よ(stem) + ければ = よければ. The question shows 天気が よけれ_ば, so the answer is よけれ (completing よければ). いければ would be wrong (wrong stem). よかった is past, よく is adverb."
         }
       ]
     }
