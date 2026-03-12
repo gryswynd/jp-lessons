@@ -319,6 +319,140 @@
       "verb_class": "godan",
       "lesson_ids": "N3.2",
       "notes": "糸が絡む = thread gets tangled. 話に絡む = to get involved in a conversation. Can also mean to pester/accost someone."
+    },
+    {
+      "id": "k_mukashi",
+      "lesson": "N3.3",
+      "type": "kanji",
+      "surface": "昔",
+      "on": "せき/しゃく",
+      "kun": "むかし",
+      "reading": "むかし",
+      "meaning": "long ago / former times",
+      "notes": "Kun: むかし (long ago). On: せき in 昔日 (old days, literary). Almost always read むかし."
+    },
+    {
+      "id": "k_saku",
+      "lesson": "N3.3",
+      "type": "kanji",
+      "surface": "昨",
+      "on": "さく",
+      "kun": "",
+      "reading": "さく",
+      "meaning": "yesterday / previous",
+      "notes": "On-reading only: さく in 昨日(きのう, irregular), 昨年(さくねん), 昨夜(さくや). 昨日 has the irregular kun-reading きのう."
+    },
+    {
+      "id": "k_hatsu",
+      "lesson": "N3.3",
+      "type": "kanji",
+      "surface": "初",
+      "on": "しょ",
+      "kun": "はじめ/はじめて/はつ/うい",
+      "reading": "はじめ",
+      "meaning": "first / beginning",
+      "notes": "Kun: はじめ (beginning), はじめて (first time), はつ (first~). On: しょ in 初日(しょにち). Not to be confused with 始 (はじめる, to start)."
+    },
+    {
+      "id": "k_tsugi",
+      "lesson": "N3.3",
+      "type": "kanji",
+      "surface": "次",
+      "on": "じ",
+      "kun": "つぎ/つぐ",
+      "reading": "つぎ",
+      "meaning": "next / following",
+      "notes": "Kun: つぎ (next). On: じ in 次回(じかい), 次第(しだい). Also つぐ = to succeed/follow."
+    },
+    {
+      "id": "v_mukashi",
+      "surface": "昔",
+      "reading": "むかし",
+      "meaning": "long ago / in the old days",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.3",
+      "notes": "昔は〜 = in the old days... 昔の友達 = an old friend (from the past)."
+    },
+    {
+      "id": "v_mukashibanashi",
+      "surface": "昔話",
+      "reading": "むかしばなし",
+      "meaning": "folk tale / old story",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.3",
+      "notes": "昔 (N3.3) + 話 (N5.9). 日本の昔話 = Japanese folk tales. 桃太郎 is a famous 昔話."
+    },
+    {
+      "id": "v_sakunen",
+      "surface": "昨年",
+      "reading": "さくねん",
+      "meaning": "last year",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.3",
+      "notes": "昨 (N3.3) + 年 (N5.4). More formal than 去年(きょねん). Common in news and business."
+    },
+    {
+      "id": "v_sakuya",
+      "surface": "昨夜",
+      "reading": "さくや",
+      "meaning": "last night",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.3",
+      "notes": "昨 (N3.3) + 夜 (N4.3). Also read ゆうべ in casual speech. 昨夜は寝られなかった = I couldn't sleep last night."
+    },
+    {
+      "id": "v_hajimete",
+      "surface": "初めて",
+      "reading": "はじめて",
+      "meaning": "for the first time",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N3.3",
+      "notes": "初めて日本に行った = I went to Japan for the first time. Not to be confused with 始めて (starting to do)."
+    },
+    {
+      "id": "v_hajime",
+      "surface": "初め",
+      "reading": "はじめ",
+      "meaning": "beginning / start",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.3",
+      "notes": "初めに = at first / to begin with. 初めから = from the beginning. Contrast: 始め(はじめ) = the start of an action."
+    },
+    {
+      "id": "v_shonichi",
+      "surface": "初日",
+      "reading": "しょにち",
+      "meaning": "first day / opening day",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.3",
+      "notes": "初 (N3.3) + 日 (N5.2). 仕事の初日 = first day of work. 映画の初日 = opening day of a movie."
+    },
+    {
+      "id": "v_jikai",
+      "surface": "次回",
+      "reading": "じかい",
+      "meaning": "next time / next installment",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.3",
+      "notes": "次 (N3.3) + 回 (N4.14). 次回の授業 = the next class. 次回も楽しみにしています = looking forward to next time."
+    },
+    {
+      "id": "v_tsugitsugi",
+      "surface": "次々",
+      "reading": "つぎつぎ",
+      "meaning": "one after another / in succession",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N3.3",
+      "notes": "次々と問題が起きた = problems arose one after another. Emphasizes rapid succession."
     }
   ]
 }
