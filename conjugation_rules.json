@@ -1,5 +1,17 @@
 {
   "contentVersion": "1.0.0",
+  "copula_past": {
+    "label": "Polite Past Copula (Deshita)",
+    "description": "Past tense of the polite copula です → でした.",
+    "introducedIn": "N5.1",
+    "rules": {
+      "copula": {
+        "type": "replace",
+        "surface": "でした",
+        "reading": "でした"
+      }
+    }
+  },
   "polite_masu": {
     "label": "Polite (Masu-Form)",
     "description": "Standard polite present/future affirmative.",

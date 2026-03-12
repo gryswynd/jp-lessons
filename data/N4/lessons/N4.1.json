@@ -327,7 +327,10 @@
             },
             "v_nagai",
             "v_ichinichi",
-            "g_desu"
+            {
+              "id": "g_desu",
+              "form": "copula_past"
+            }
           ]
         },
         {
@@ -347,7 +350,7 @@
           "jp": "はい。今から 電車で 帰ります。駅まで 行きます。",
           "en": "Yes. I'll go home by train now. I'll head to the station.",
           "terms": [
-            "v_hai",
+            "p_hai",
             "v_ima",
             "p_kara",
             "v_densha",
@@ -392,7 +395,7 @@
           "jp": "はい。大きく 切りますか。",
           "en": "Sure. Should I cut it into large pieces?",
           "terms": [
-            "v_hai",
+            "p_hai",
             {
               "id": "v_ookii",
               "form": "adverbial"
@@ -531,6 +534,7 @@
               "id": "v_okuru",
               "form": "desire_tai"
             },
+            "g_desu",
             "p_kara_because",
             "v_kaeri",
             "p_ni",
@@ -582,14 +586,17 @@
         },
         {
           "spk": "A",
-          "jp": "五万円。働かないと。",
-          "en": "50,000 yen. I've got to work.",
+          "jp": "五万円か。たくさん 働くよ！",
+          "en": "50,000 yen? I'd better work a lot!",
           "terms": [
             { "counter": "en", "n": 50000 },
+            "p_ka",
+            "v_takusan",
             {
               "id": "v_hataraku",
-              "form": "plain_negative"
-            }
+              "form": null
+            },
+            "p_yo"
           ]
         },
         {
@@ -866,7 +873,8 @@
             {
               "id": "v_okuru",
               "form": "desire_tai"
-            }
+            },
+            "g_desu"
           ]
         },
         {
@@ -879,6 +887,7 @@
               "id": "v_kau",
               "form": null
             },
+            "p_ni",
             "v_eki",
             "p_e",
             {
@@ -963,13 +972,15 @@
               "id": "v_okuru",
               "form": "desire_tai"
             },
+            "g_desu",
             "p_ka",
             "v_hon",
             "p_wo",
             {
               "id": "v_okuru",
               "form": "desire_tai"
-            }
+            },
+            "g_desu"
           ]
         },
         {
@@ -984,6 +995,7 @@
               "id": "v_kau",
               "form": null
             },
+            "p_ni",
             {
               "id": "v_iku",
               "form": "polite_masu"
