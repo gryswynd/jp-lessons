@@ -16,13 +16,14 @@ This file governs how Claude Code creates all lesson content for this repository
 6. [Character Name Tagging](#character-name-tagging)
 7. [Kanji Prerequisite Rules](#kanji-prerequisite-rules)
 8. [Approved Vocabulary Rules](#approved-vocabulary-rules)
-9. [Early-Use Vocabulary Rules](#early-use-vocabulary-rules)
-10. [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules)
-11. [Grammar Reinforcement Requirements](#grammar-reinforcement-requirements)
-12. [Register Requirements (Polite vs Casual)](#register-requirements-polite-vs-casual)
-13. [Quality Gates (Pass/Fail Criteria)](#quality-gates-passfail-criteria)
-14. [File & Structure Reference](#file--structure-reference)
-15. [Common Failure Modes](#common-failure-modes)
+9. [Lesson Refresh / Rewrite Guidelines](#lesson-refresh--rewrite-guidelines)
+10. [Early-Use Vocabulary Rules](#early-use-vocabulary-rules)
+11. [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules)
+12. [Grammar Reinforcement Requirements](#grammar-reinforcement-requirements)
+13. [Register Requirements (Polite vs Casual)](#register-requirements-polite-vs-casual)
+14. [Quality Gates (Pass/Fail Criteria)](#quality-gates-passfail-criteria)
+15. [File & Structure Reference](#file--structure-reference)
+16. [Common Failure Modes](#common-failure-modes)
 
 ---
 
@@ -1556,6 +1557,22 @@ Grammar patterns (particles, sentence-final forms, conjunctions like ～て) are
 
 ---
 
+## Lesson Refresh / Rewrite Guidelines
+
+When the user requests a rewrite of an existing lesson (rather than creating new content from scratch), the pipeline runs identically — but Agent 1 must apply this additional rule during scoping:
+
+**Treat every vocabulary item in the original lesson as unverified.** Do not assume that because a word appeared in an old lesson it is in scope. The original content may have been written before the current glossary discipline existed.
+
+**Absent glossary entry = out-of-scope.** If the old lesson uses a vocab ID (e.g. `v_kouen`, `v_sanpo`) and that ID has no entry in the glossary, the word has not been introduced in the curriculum. The correct action is to remove the word and restructure the content to use available vocabulary. **Never add a new glossary entry to accommodate old lesson content.** Refreshes are not an opportunity to expand the curriculum.
+
+**Glossary entry with wrong `lesson_ids` = still out-of-scope.** If an ID exists in the glossary but its `lesson_ids` is later than the current lesson, it is out-of-scope and must be removed. The presence of a glossary entry does not make the word available.
+
+**The Unregistered Word Report path does not apply during refreshes.** That escalation is for new content creation where a genuinely natural word might warrant a new glossary entry at an appropriate lesson. During a refresh, all vocabulary must already exist in the glossary at or before the current lesson — no exceptions, no escalations.
+
+**Agent 1 scoping step for refreshes:** After reading the original lesson, run a targeted Grep for every vocab ID used in the original against the glossary. Flag any ID that either (a) doesn't exist in the glossary, or (b) has `lesson_ids` later than the current lesson. List these as "out-of-scope replacements needed" in the Content Brief, along with candidate replacement vocabulary from within scope.
+
+---
+
 ## Early-Use Vocabulary Rules
 
 ### The problem
@@ -2112,6 +2129,7 @@ These are the most frequent errors. All agents should be alert to them.
 48. **desire_tai / plain_desire_tai conflation** — using `desire_tai` (which represents `〜たいです`, polite) for a casual/plain sentence that ends `〜たい` without です. Example: a casual conversation line `友だちに 送りたいから` is plain desire — the form is `plain_desire_tai`, not `desire_tai`. The test is simple: does the sentence actually end with `です`? If not, the form must be `plain_desire_tai`. This error is almost always found in casual conversations where the agent reached for the more familiar form string without reading the sentence ending.
 49. **Purpose construction tagged as polite_masu** — the masu-stem + に construction (買いに, 食べに, 借りに) has no form string in `conjugation_rules.json`. It must be tagged `form: null`. Tagging it as `polite_masu` is wrong — that form string means the verb IS the sentence predicate in ます form (食べます), not a purpose-direction construction (食べに行く). Agent 3 must recognize masu-stem forms used with に as purpose markers and verify they are tagged `form: null`.
 50. **Vocabulary used before glossary entry exists** — Agent 2 writes sentences using words (e.g. シャツ, 帰り, 今) and tags them with IDs without first Grep-verifying those IDs exist in the glossary. The draft then passes Agent 2's self-check ("no invented IDs" was interpreted as "no obviously fake IDs") but Agent 3 finds the IDs are missing. The correct process is: identify every content word needed for the lesson, Grep-verify each ID exists, and add any missing entries to the glossary **before** writing content that uses them. If Agent 2 discovers a missing entry mid-draft, it must stop, flag the gap in the CB Checklist, and either add the entry or restructure the sentence — never proceed with an unverified ID.
+50b. **Adding glossary entries to accommodate a lesson refresh** — when rewriting an existing lesson, the agent finds that the original content uses vocabulary with no glossary entry (e.g. 公園, さん歩) and responds by creating new glossary entries to make the IDs valid. This is wrong: the absence of a glossary entry during a refresh proves the word has not been introduced in the curriculum. Adding it would be expanding the curriculum disguised as a bug fix. During refreshes, **absent glossary entry = out-of-scope = remove and replace with available vocab**. The Unregistered Word Report escalation path is for new content creation only — it does not apply to refreshes. See [Lesson Refresh / Rewrite Guidelines](#lesson-refresh--rewrite-guidelines).
 51. **(Grammar) Wrong field names on `annotatedExample` or `grammarComparison`** — these sections silently render empty when the wrong field names are used. There is no error message; the section simply shows nothing. The renderer ignores unrecognised fields. **`annotatedExample` must use `examples[]`** (array of `{context?, parts[], en, note?}` objects) — never `sentence`, `translation`, or a top-level `parts[]`. **`grammarComparison` must use `items[]`** (array of `{label, color, points[], example?}`) — never `itemA`/`itemB`. Agent 2 must verify these field names against the Grammar JSON schema in the Content Types section before submitting. Agent 3 must check that `annotatedExample` sections have an `examples` array (not a `parts` array) and that `grammarComparison` sections have an `items` array (not `itemA`/`itemB`). A section with the wrong schema is a **hard fail** equivalent to a missing required field.
 52. **(Grammar) `fillSlot` items using `sentence` instead of `before`/`after`** — the `fillSlot` renderer splits the sentence display using `item.before` and `item.after` strings. Using a `sentence` field with `___` as the blank placeholder is the wrong schema — the renderer will render `before` as undefined (empty) and ignore the rest. **Always pre-split each item into `before` (text before the blank) and `after` (text after the blank).** Example: `"sentence": "野菜___が好きです"` must become `"before": "野菜"` and `"after": "が好きです"`. This is the same class of silent-failure as wrong `annotatedExample` field names — no error, just empty/broken UI.
 
