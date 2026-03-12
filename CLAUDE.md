@@ -164,8 +164,8 @@ CB CHECKLIST
 [ ] と after a closing 」or after a plain-form clause with 思う/知る is tagged p_to_quote, not p_to (N5.13+)
 [ ] VocabList covers every glossary+particles.json entry with lesson_ids = this lesson
 [ ] Counter references use { "counter": "...", "n": N } format
-[ ] (N4 lessons) Exactly 3 drill sections present: Drill 1 Kanji Readings (no terms), Drill 2 Vocabulary, Drill 3 Grammar & Forms
-[ ] (N4 lessons) Drill 1 items use `[漢字] の よみかたは？` format with 4 reading choices and NO terms array
+[ ] (N4+ lessons) Exactly 3 drill sections present: Drill 1 Kanji Readings (no terms), Drill 2 Vocabulary, Drill 3 Grammar & Forms
+[ ] (N4+ lessons) Drill 1 items use `[漢字] の よみかたは？` format with 4 reading choices and NO terms array
 [ ] Drill 1 (vocab MCQ) has NO terms array on items
 [ ] Drill 2+ fill-in-the-blank / particle / conjugation items DO have terms arrays
 [ ] Answer fields in reading questions match the passage text exactly
@@ -603,7 +603,7 @@ Never silently forward content without the accompanying documents. If an agent d
 
 **Drill types:** `mcq` and `scramble`. For MCQ: choices array must have exactly 4 options; the `answer` string must exactly match one of the `choices` strings. For scramble: see [Scramble Drill Items](#scramble-drill-items) in the Review section — scramble drills appear in reviews only, not in lessons.
 
-**Three-drill structure (N4 lessons).** Every N4 lesson must contain exactly **3 drill sections** in the following order:
+**Three-drill structure (N4 and beyond).** Every lesson at N4 level and above (N4, N3, N2, N1) must contain exactly **3 drill sections** in the following order:
 
 | Drill | Focus | Title convention | Terms on items |
 |---|---|---|---|
@@ -611,7 +611,7 @@ Never silently forward content without the accompanying documents. If an agent d
 | Drill 2 | **Vocabulary** — show a word (with reading) and ask for its meaning, or fill-in-the-blank meaning | `"Drill 2: Vocabulary"` | Required on all items |
 | Drill 3 | **Grammar & Forms** — conjugation choice, particle selection, or contextual grammar | `"Drill 3: Grammar & Forms"` | Required on all items |
 
-Drill 1 items use the format: `"[漢字の言葉] の よみかたは？"` with 4 reading choices. Use vocabulary introduced in the current lesson. Distractors should be plausible readings (similar kana patterns or readings from other lesson words — not random kana). Exactly 4 items per Drill 1. This structure mirrors N5.1–N5.9 (which also follow Kanji Readings → Vocabulary → Grammar) and is consistent with the polished N4.33–N4.36 lessons.
+Drill 1 items use the format: `"[漢字の言葉] の よみかたは？"` with 4 reading choices. Use vocabulary introduced in the current lesson. Distractors should be plausible readings (similar kana patterns or readings from other lesson words — not random kana). Exactly 4 items per Drill 1. This structure mirrors N5.1–N5.9 (which also follow Kanji Readings → Vocabulary → Grammar) and is consistent with the polished N4.33–N4.36 lessons. It applies equally to all future levels.
 
 **N5 drill structure.** N5.1–N5.9 follow the same 3-drill pattern (Kanji Readings → Vocabulary → Sentence Building). N5.10–N5.18 lessons shift to a different 3-section structure driven by the grammar milestone being reinforced — the grammar topic replaces the kanji reading drill as the primary focus. See the reference template for the exact pattern.
 
@@ -1887,8 +1887,8 @@ All of the following must be TRUE for a QA pass:
 - [ ] Every `form` value in `terms` has `introducedIn` ≤ current lesson in `conjugation_rules.json` (see [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules))
 - [ ] No structural grammar pattern (～ている, ～てください, ～たり～たりする, ～ましょう, etc.) appears in `jp` text before its constituent form is available
 - [ ] Active-window grammar reinforcement minimum counts are met (count tagged forms across conversations + readings; see [Grammar Reinforcement Requirements](#grammar-reinforcement-requirements))
-- [ ] (N4 lessons) Exactly 3 drill sections are present in order: Drill 1 Kanji Readings, Drill 2 Vocabulary, Drill 3 Grammar & Forms
-- [ ] (N4 lessons) Drill 1 items use `[漢字] の よみかたは？` format with no `terms` array
+- [ ] (N4+ lessons) Exactly 3 drill sections are present in order: Drill 1 Kanji Readings, Drill 2 Vocabulary, Drill 3 Grammar & Forms
+- [ ] (N4+ lessons) Drill 1 items use `[漢字] の よみかたは？` format with no `terms` array
 - [ ] Drill 1 MCQ items have no `terms` array; all other drills do
 - [ ] Answer fields exactly match one of the choices strings
 - [ ] The JSON validates (no syntax errors)
@@ -2067,7 +2067,7 @@ These are the most frequent errors. All agents should be alert to them.
 9. **Warmup items using new-lesson vocabulary or kanji** — warmup must reinforce prior lessons only. Any item whose `jp` field contains a new-lesson kanji, or whose `terms` reference a new-lesson vocab ID, is invalid and must be rewritten using N5.1 (or earlier) material.
 9b. **Wrong warmup item count** — warmup sections must have exactly 4 items, no more and no fewer. Agent 3 must reject any warmup with fewer than 4 items as a hard fail.
 10. **Too few conversations** — conversation count must match the reference template lesson (highest-numbered existing lesson of same type/level). Fewer than the template is a hard fail that Agent 3 must catch.
-10b. **Missing or wrong drill structure (N4 lessons)** — N4 lessons must have exactly 3 drill sections: Drill 1 (Kanji Readings, no terms, `[漢字] の よみかたは？` format), Drill 2 (Vocabulary), Drill 3 (Grammar & Forms). Omitting Drill 1 is the most common failure — content from N4.1 onward must include a dedicated kanji reading drill, not merge it into a vocabulary drill or omit it entirely.
+10b. **Missing or wrong drill structure (N4+ lessons)** — All lessons at N4 level and above must have exactly 3 drill sections: Drill 1 (Kanji Readings, no terms, `[漢字] の よみかたは？` format), Drill 2 (Vocabulary), Drill 3 (Grammar & Forms). Omitting Drill 1 is the most common failure — content from N4 onward (including future N3, N2, N1 levels) must include a dedicated kanji reading drill, not merge it into a vocabulary drill or omit it entirely.
 11. **Missing standalone noun v_* entry for a newly taught kanji** — if a kanji is to be used as a standalone noun in lesson content (e.g. 水 for water, 木 for tree), verify that a `type: "vocab"` entry with a matching `lesson_ids` exists before using it in a `jp` field. If it does not exist, create it and add it to the vocabList before building the content.
 12. **Missing meta.kanji array** — the lesson `meta` object must include `"kanji": [...]` listing the characters introduced in this lesson.
 13. **Missing scramble alts for flexible word order** — when a scramble sentence contains a time expression (毎日, 今日, 昨日, etc.) or frequency adverb (いつも, よく, etc.) that can naturally appear sentence-initially or after the topic, an `alts` array must be provided. Omitting alts means a valid student answer is marked wrong.
