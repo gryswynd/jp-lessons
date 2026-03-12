@@ -5,91 +5,95 @@
   "meta": {
     "phase": 4,
     "lesson": 10,
-    "focus": "Talking about movies, schedules (start/end), and English.",
-    "kanji": [
-      "始",
-      "終",
-      "映",
-      "画",
-      "館",
-      "英"
-    ]
+    "focus": "Talking about movies, start and end times, and English — with two new American friends.",
+    "estimated_minutes": 35,
+    "kanji": ["始", "終", "映", "画", "館", "英"]
   },
   "newKanji": [
     {
       "kanji": "始",
       "on": "し",
-      "kun": "はじ(める)",
+      "kun": "はじ(める / まる)",
       "meaning": "begin / start",
-      "termId": "k_hajimeru"
+      "termId": "k_haji"
     },
     {
       "kanji": "終",
       "on": "しゅう",
       "kun": "お(わる)",
       "meaning": "end / finish",
-      "termId": "k_owaru"
+      "termId": "k_o_2"
     },
     {
       "kanji": "映",
       "on": "えい",
       "kun": "うつ(る)",
-      "meaning": "reflect / projection",
-      "termId": "k_ei"
+      "meaning": "reflect / project",
+      "termId": "k_utsu"
     },
     {
       "kanji": "画",
       "on": "が / かく",
       "kun": "(なし)",
       "meaning": "picture / stroke",
-      "termId": "k_ga"
+      "termId": "k_nashi_2"
     },
     {
       "kanji": "館",
       "on": "かん",
       "kun": "(なし)",
       "meaning": "building / hall",
-      "termId": "k_kan"
+      "termId": "k_nashi_3"
     },
     {
       "kanji": "英",
       "on": "えい",
       "kun": "(なし)",
-      "meaning": "England / excellent",
-      "termId": "k_ei_english"
+      "meaning": "England / English / excellent",
+      "termId": "k_nashi_4"
     }
   ],
   "sections": [
     {
       "type": "warmup",
       "title": "Warm-Up Review（ウォームアップ）",
-      "instructions": "Ask your partner these questions (using previously learned words):",
+      "instructions": "Use words you already know to answer these questions with a partner.",
       "items": [
         {
-          "jp": "きのうの 晩、何を しましたか。",
-          "en": "What did you do last night?",
-          "terms": []
-        },
-        {
-          "jp": "あなたの 町は どんな 所 ですか。",
-          "en": "What kind of place is your town?",
-          "terms": [
-            "k_machi",
-            "k_tokoro"
-          ]
-        },
-        {
-          "jp": "去年の 冬、どこへ 行きましたか。",
-          "en": "Where did you go last winter?",
+          "jp": "去年 どこに 住んで いましたか。",
+          "en": "Where were you living last year?",
           "terms": [
             "v_kyonen",
-            "v_fuyu"
+            { "id": "v_sumu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_mashita" }
           ]
         },
         {
-          "jp": "毎日、何時に しごとを しますか。",
-          "en": "What time do you work every day?",
-          "terms": []
+          "jp": "近所に どんな 所が ありますか。",
+          "en": "What kind of places are in your neighbourhood?",
+          "terms": [
+            "v_kinjo",
+            "v_donna",
+            "v_tokoro",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "毎日 何を 学んで いますか。",
+          "en": "What are you studying every day?",
+          "terms": [
+            "v_mainichi",
+            { "id": "v_manabu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "日本語が 話せますか。",
+          "en": "Can you speak Japanese?",
+          "terms": [
+            "v_nihongo",
+            { "id": "v_hanasu", "form": "polite_potential" }
+          ]
         }
       ]
     },
@@ -100,564 +104,730 @@
         {
           "kanji": "始",
           "on": "し",
-          "kun": "はじ(める)",
+          "kun": "はじ(める / まる)",
           "meaning": "begin / start",
-          "terms": [
-            "k_hajimeru",
-            "v_hajimeru"
-          ]
+          "terms": ["k_haji", "v_hajimaru", "v_hajimeru"]
         },
         {
           "kanji": "終",
           "on": "しゅう",
           "kun": "お(わる)",
           "meaning": "end / finish",
-          "terms": [
-            "k_owaru",
-            "v_owaru"
-          ]
+          "terms": ["k_o_2", "v_owaru"]
         },
         {
           "kanji": "映",
           "on": "えい",
           "kun": "うつ(る)",
-          "meaning": "reflect / projection",
-          "terms": [
-            "k_ei",
-            "v_eiga"
-          ]
+          "meaning": "reflect / project",
+          "terms": ["k_utsu", "v_eiga"]
         },
         {
           "kanji": "画",
           "on": "が / かく",
           "kun": "(なし)",
           "meaning": "picture / stroke",
-          "terms": [
-            "k_ga",
-            "v_eiga"
-          ]
+          "terms": ["k_nashi_2", "v_eiga", "v_gaka"]
         },
         {
           "kanji": "館",
           "on": "かん",
           "kun": "(なし)",
           "meaning": "building / hall",
-          "terms": [
-            "k_kan",
-            "v_eigakan"
-          ]
+          "terms": ["k_nashi_3", "v_eigakan"]
         },
         {
           "kanji": "英",
           "on": "えい",
           "kun": "(なし)",
-          "meaning": "England / excellent",
-          "terms": [
-            "k_ei_english",
-            "v_eigo"
-          ]
+          "meaning": "England / English / excellent",
+          "terms": ["k_nashi_4", "v_eigo", "v_ei"]
         }
       ]
     },
     {
       "type": "vocabList",
-      "title": "Vocabulary & Compounds（ことば）",
+      "title": "Vocabulary（ことば）",
       "groups": [
         {
           "label": "Movies & Arts",
-          "items": [
-            "v_eiga",
-            "v_eigakan",
-            "v_gaka"
-          ]
+          "items": ["v_eiga", "v_eigakan", "v_gaka"]
         },
         {
-          "label": "Time & Action",
-          "items": [
-            "v_hajimeru",
-            "v_hajimaru",
-            "v_owaru",
-            "v_manabu"
-          ]
+          "label": "Start & End",
+          "items": ["v_hajimaru", "v_hajimeru", "v_owaru"]
         },
         {
-          "label": "Language & World",
-          "items": [
-            "v_eigo",
-            "v_eikoku"
-          ]
+          "label": "Language & Britain",
+          "items": ["v_eigo", "v_ei", "v_memo"]
+        },
+        {
+          "label": "New Patterns",
+          "items": ["p_node", "p_nagara"]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 1（会話）: At the Cinema",
-      "context": "Deciding to watch a movie.",
+      "title": "Conversation 1（会話）: First Day of English Class",
+      "context": "It's the first day of English class. Yamamoto-sensei introduces Joel Sensei — a tall, easy-going American teacher who always seems to be smiling. He also announces that an American exchange student named Conor will be joining the class.",
       "lines": [
         {
-          "spk": "A",
-          "jp": "映画を 見ましょう。",
-          "en": "Let's watch a movie.",
-          "terms": [
-            "v_eiga"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "いいですね。町の 映画館へ 行きましょう。",
-          "en": "Good idea. Let's go to the movie theater in town.",
-          "terms": [
-            "v_eigakan",
-            "k_machi"
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "映画は 何時に 始まりますか。",
-          "en": "What time does the movie start?",
-          "terms": [
-            "v_eiga",
-            "v_nanji",
-            "v_hajimaru_masu",
-            "k_hajimeru"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "午後の 二時に 始まります。",
-          "en": "It starts at 2 PM.",
-          "terms": [
-            "v_gogo",
-            {
-              "counter": "ji",
-              "n": 2
-            },
-            "v_hajimaru_masu",
-            "k_hajimeru"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 2（会話）: Language Study",
-      "context": "Talking about studying English.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "山本（やまもと）さんは 英語を 学びますか。",
-          "en": "Mr. Yamamoto, do you learn English?",
+          "spk": "やまもと",
+          "jp": "みなさん、今日から 英語の クラスが 始まります。ジョエル先生 です。",
+          "en": "Everyone, English class starts today. This is Joel Sensei.",
           "terms": [
             "char_yamamoto",
+            "v_kyou",
             "v_eigo",
-            "v_manabu_masu",
-            "k_manabu"
+            "v_kurasu",
+            { "id": "v_hajimaru", "form": "polite_masu" },
+            "char_joel",
+            "v_sensei"
           ]
         },
         {
-          "spk": "B",
-          "jp": "はい。毎日 学んで います。",
-          "en": "Yes. I am learning every day.",
+          "spk": "ジョエル",
+          "jp": "はじめまして。英語が 大好きです。みなさん、よろしく おねがいします。",
+          "en": "Nice to meet you all. I love English. I look forward to working with you.",
           "terms": [
-            "v_manande",
-            "k_manabu"
+            "char_joel",
+            "v_eigo",
+            "v_daisuki",
+            "p_yoroshiku"
           ]
         },
         {
-          "spk": "A",
-          "jp": "英語は むずかしい ですか。",
-          "en": "Is English difficult?",
+          "spk": "りきぞ",
+          "jp": "先生、どこから 来ましたか。",
+          "en": "Sensei, where did you come from?",
           "terms": [
-            "v_eigo"
+            "char_rikizo",
+            "v_sensei",
+            "v_doko",
+            { "id": "v_kuru", "form": "polite_mashita" }
           ]
         },
         {
-          "spk": "B",
-          "jp": "いいえ、おもしろい です。",
-          "en": "No, it is interesting.",
-          "terms": []
+          "spk": "ジョエル",
+          "jp": "アメリカから 来ましたが、イギリスにも 行った ことが あります よ。",
+          "en": "I came from America, but I have been to England too!",
+          "terms": [
+            "char_joel",
+            { "id": "v_kuru", "form": "polite_mashita" },
+            "p_ga_but",
+            { "id": "v_iku", "form": "plain_past" },
+            "v_koto",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "やまもと",
+          "jp": "それから、コナーさんも クラスに 来ます。アメリカから 来た 学生 です。",
+          "en": "Also, Conor will be joining the class. He is a student from America.",
+          "terms": [
+            "char_yamamoto",
+            "char_conor",
+            "v_kurasu",
+            { "id": "v_kuru", "form": "polite_masu" },
+            { "id": "v_kuru", "form": "plain_past" },
+            "v_gakusei"
+          ]
+        },
+        {
+          "spk": "コナー",
+          "jp": "はじめまして。コナー です。日本語は まだ あまり 上手では ありませんが、よろしく おねがいします。",
+          "en": "Nice to meet you. I'm Conor. My Japanese isn't great yet, but please take care of me.",
+          "terms": [
+            "char_conor",
+            "v_nihongo",
+            "v_mada",
+            "v_amari",
+            "v_jouzu",
+            "p_ga_but",
+            "p_yoroshiku"
+          ]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 3（会話）: Work Schedule",
-      "context": "Discussing work hours.",
+      "title": "Conversation 2（会話）: Planning to See a Movie",
+      "context": "After class, Rikizo invites Conor to the movie theater. Conor is keen but unsure about the schedule — he speaks politely and carefully.",
       "lines": [
         {
-          "spk": "A",
-          "jp": "しごとは 何時に 終わりますか。",
-          "en": "What time does work end?",
+          "spk": "りきぞ",
+          "jp": "コナーさん、いっしょに 映画を 見ませんか。",
+          "en": "Conor, would you like to watch a movie together?",
           "terms": [
-            "v_nanji",
-            "v_owaru_masu",
-            "k_owaru"
+            "char_rikizo",
+            "char_conor",
+            "v_issho",
+            "v_eiga",
+            { "id": "v_miru", "form": "polite_negative" }
           ]
         },
         {
-          "spk": "B",
-          "jp": "六時に 終わります。それから 映画館へ 行きます。",
-          "en": "It ends at 6. After that, I will go to the movie theater.",
+          "spk": "コナー",
+          "jp": "はい、行きたいです。映画は 何時に 始まりますか。",
+          "en": "Yes, I'd love to go. What time does the movie start?",
           "terms": [
-            {
-              "counter": "ji",
-              "n": 6
-            },
-            "v_owaru_masu",
-            "k_owaru",
+            "char_conor",
+            { "id": "v_iku", "form": "desire_tai" },
+            "v_eiga",
+            "v_nanji",
+            { "id": "v_hajimaru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "午後 三時に 始まります。駅から 近い 映画館 ですよ。",
+          "en": "It starts at 3 PM. It's a movie theater close to the station.",
+          "terms": [
+            "char_rikizo",
+            "v_gogo",
+            { "counter": "ji", "n": 3 },
+            { "id": "v_hajimaru", "form": "polite_masu" },
+            "v_eki",
+            "v_chikai",
             "v_eigakan"
           ]
         },
         {
-          "spk": "A",
-          "jp": "はやい ですね。しごとは 何時に 始まりますか。",
-          "en": "That's early. What time does work start?",
+          "spk": "コナー",
+          "jp": "映画は 何時ごろに 終わりますか。",
+          "en": "About what time does the movie end?",
           "terms": [
+            "char_conor",
             "v_nanji",
-            "v_hajimaru_masu",
-            "k_hajimeru"
+            { "id": "v_owaru", "form": "polite_masu" }
           ]
         },
         {
-          "spk": "B",
-          "jp": "朝の 七時に 始まります。",
-          "en": "It starts at 7 in the morning.",
+          "spk": "りきぞ",
+          "jp": "五時ごろに 終わります。だいじょうぶ ですよ。",
+          "en": "It ends around 5. You'll be fine!",
           "terms": [
-            {
-              "counter": "ji",
-              "n": 7
-            },
-            "v_hajimaru_masu",
-            "k_hajimeru"
+            "char_rikizo",
+            { "counter": "ji", "n": 5 },
+            { "id": "v_owaru", "form": "polite_masu" },
+            "v_daijoubu"
           ]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 4（会話）: Past Travel",
-      "context": "Talking about a trip to the UK (reinforcing previous lessons).",
+      "title": "Conversation 3（会話）: Movies, English, and Art",
+      "context": "After school, Rikizo stays to chat with Joel Sensei about movies and English. Joel is relaxed, warm, and always has a calm smile on his face.",
       "lines": [
         {
-          "spk": "A",
-          "jp": "去年の 冬、英国へ 行きました。",
-          "en": "Last winter, I went to the UK.",
+          "spk": "りきぞ",
+          "jp": "先生は 映画が 好きですか。",
+          "en": "Do you like movies, Sensei?",
           "terms": [
-            "v_kyonen",
-            "v_fuyu",
-            "v_eikoku"
+            "char_rikizo",
+            "v_sensei",
+            "v_eiga",
+            "v_suki"
           ]
         },
         {
-          "spk": "B",
-          "jp": "寒かった ですか。",
-          "en": "Was it cold?",
+          "spk": "ジョエル",
+          "jp": "大好きです。食べながら 映画を 見るのが 好きです よ。",
+          "en": "I love them. I enjoy watching movies while eating.",
           "terms": [
-            "k_samu"
+            "char_joel",
+            "v_daisuki",
+            { "id": "v_taberu", "form": "nagara_form" },
+            "v_eiga",
+            { "id": "v_miru", "form": null },
+            "v_suki"
           ]
         },
         {
-          "spk": "A",
-          "jp": "はい、寒かったです。でも、きれいな 所 でした。",
-          "en": "Yes, it was cold. But it was a beautiful place.",
+          "spk": "りきぞ",
+          "jp": "私も 映画が 好きです。映画を 見たり、英語を 学んだり します。",
+          "en": "I love movies too. I do things like watch movies and study English.",
           "terms": [
-            "k_tokoro"
+            "char_rikizo",
+            "v_watashi",
+            "v_eiga",
+            "v_suki",
+            { "id": "v_miru", "form": "tari_form" },
+            "v_eigo",
+            { "id": "v_manabu", "form": "tari_form" },
+            { "id": "v_suru", "form": "polite_masu" }
           ]
         },
         {
-          "spk": "B",
-          "jp": "英語を たくさん 話しましたか。",
-          "en": "Did you speak a lot of English?",
+          "spk": "ジョエル",
+          "jp": "いいですね。映画で 英語が 学べます よ。画家の 映画も いいですよ。",
+          "en": "That's great. You can learn English through movies! Movies about painters are great too.",
           "terms": [
-            "v_eigo"
+            "char_joel",
+            "v_eiga",
+            "v_eigo",
+            { "id": "v_manabu", "form": "polite_potential" },
+            "v_gaka",
+            "v_eiga"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "画家の 映画ですか。おもしろいですね。英語で 見たいです。",
+          "en": "Movies about painters? That sounds interesting. I want to watch them in English.",
+          "terms": [
+            "char_rikizo",
+            "v_gaka",
+            "v_eiga",
+            "v_omoshiroi",
+            "v_eigo",
+            { "id": "v_miru", "form": "desire_tai" }
+          ]
+        },
+        {
+          "spk": "ジョエル",
+          "jp": "はい。英語で 見ながら 英語が 学べます から、とても いいですよ。",
+          "en": "Yes! Because you can learn English while watching in English, it's great.",
+          "terms": [
+            "char_joel",
+            "v_eigo",
+            { "id": "v_miru", "form": "nagara_form" },
+            "v_eigo",
+            { "id": "v_manabu", "form": "polite_potential" },
+            "p_kara_because",
+            "v_totemo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation 4: At the Cinema (Casual)",
+      "context": "Rikizo and Yamakawa arrive early at the movie theater and chat casually while waiting for the movie to start.",
+      "lines": [
+        {
+          "spk": "やまかわ",
+          "jp": "映画、何時に 始まる？",
+          "en": "What time does the movie start?",
+          "terms": [
+            "char_yamakawa",
+            "v_eiga",
+            "v_nanji",
+            { "id": "v_hajimaru", "form": null }
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "三時に 始まるよ。もう すぐ だね。",
+          "en": "It starts at three. It's almost time.",
+          "terms": [
+            "char_rikizo",
+            { "counter": "ji", "n": 3 },
+            { "id": "v_hajimaru", "form": null },
+            "v_mou",
+            "v_sugu"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "映画が 終わった 後、何 する？",
+          "en": "What are you doing after the movie ends?",
+          "terms": [
+            "char_yamakawa",
+            "v_eiga",
+            { "id": "v_owaru", "form": "plain_past" },
+            "v_ato",
+            "v_nani",
+            { "id": "v_suru", "form": null }
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "英語を 学んだり、歩いたり したいな。コナーさんは どうかな。",
+          "en": "I want to do things like study English and walk around. I wonder about Conor.",
+          "terms": [
+            "char_rikizo",
+            "v_eigo",
+            { "id": "v_manabu", "form": "tari_form" },
+            { "id": "v_aruku", "form": "tari_form" },
+            { "id": "v_suru", "form": "plain_desire_tai" },
+            "char_conor"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "コナーさん、日本語 上手に なった よね。",
+          "en": "Conor's Japanese has gotten really good, hasn't it.",
+          "terms": [
+            "char_yamakawa",
+            "char_conor",
+            "v_nihongo",
+            "v_jouzu",
+            { "id": "v_naru", "form": "plain_past" }
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "うん。毎日 英語を 学んだり、映画を 見たりするから ね。",
+          "en": "Yeah. Because he does things like studying English and watching movies every day.",
+          "terms": [
+            "char_rikizo",
+            "v_un",
+            "v_mainichi",
+            "v_eigo",
+            { "id": "v_manabu", "form": "tari_form" },
+            "v_eiga",
+            { "id": "v_miru", "form": "tari_form" },
+            { "id": "v_suru", "form": null },
+            "p_kara_because"
           ]
         }
       ]
     },
     {
       "type": "reading",
-      "title": "Reading Practice 1: Movie Day",
+      "title": "Reading 1: A Movie Day with Conor",
       "passage": [
         {
-          "jp": "私は 映画が 大好きです。",
-          "en": "I love movies.",
+          "jp": "コナーさんは 映画が 大好きです。",
+          "en": "Conor loves movies.",
           "terms": [
-            "v_eiga"
+            "char_conor",
+            "v_eiga",
+            "v_daisuki"
           ]
         },
         {
-          "jp": "毎週 土曜日に 友だちと 映画館へ 行きます。",
-          "en": "Every Saturday I go to the movie theater with a friend.",
+          "jp": "今日、りきぞと いっしょに 映画館へ 行きました。",
+          "en": "Today he went to the movie theater together with Rikizo.",
           "terms": [
-            "v_eigakan"
+            "v_kyou",
+            "char_rikizo",
+            "v_issho",
+            "v_eigakan",
+            { "id": "v_iku", "form": "polite_mashita" }
           ]
         },
         {
-          "jp": "先週は 古い 映画を 見ました。",
-          "en": "Last week we watched an old movie.",
-          "terms": [
-            "v_eiga"
-          ]
-        },
-        {
-          "jp": "映画は 二時に 始まって、四時に 終わりました。",
-          "en": "The movie started at 2 and ended at 4.",
+          "jp": "映画は 午後 三時に 始まって、五時に 終わりました。",
+          "en": "The movie started at 3 PM and ended at 5.",
           "terms": [
             "v_eiga",
-            {
-              "counter": "ji",
-              "n": 2
-            },
-            {
-              "counter": "ji",
-              "n": 4
-            },
-            "v_hajimatte",
-            "k_hajimeru",
-            "v_owarimashita",
-            "k_owaru"
+            "v_gogo",
+            { "counter": "ji", "n": 3 },
+            { "id": "v_hajimaru", "form": "te_form" },
+            { "counter": "ji", "n": 5 },
+            { "id": "v_owaru", "form": "polite_mashita" }
           ]
         },
         {
-          "jp": "とても おもしろい 映画でした。",
-          "en": "It was a very interesting movie.",
+          "jp": "コナーさんは 映画を 見ながら、英語の メモを 書きました。",
+          "en": "Conor wrote English notes while watching the movie.",
           "terms": [
-            "v_eiga"
+            "char_conor",
+            "v_eiga",
+            { "id": "v_miru", "form": "nagara_form" },
+            "v_eigo",
+            "v_memo",
+            { "id": "v_kaku", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "映画が 好きなので、英語を 学ぶのが 好きです。",
+          "en": "Because he loves movies, he loves learning English.",
+          "terms": [
+            "v_eiga",
+            { "id": "v_suki", "form": null },
+            "p_node",
+            "v_eigo",
+            { "id": "v_manabu", "form": null },
+            { "id": "v_suki", "form": "polite_adj" }
+          ]
+        },
+        {
+          "jp": "コナーさんは 映画を 見たり、英語の 本を 読んだり します。",
+          "en": "Conor does things like watch movies and read English books.",
+          "terms": [
+            "char_conor",
+            "v_eiga",
+            { "id": "v_miru", "form": "tari_form" },
+            "v_eigo",
+            { "id": "v_yomu", "form": "tari_form" },
+            { "id": "v_suru", "form": "polite_masu" }
           ]
         }
       ],
       "questions": [
         {
-          "q": "私は 何が 好きですか。",
-          "a": "映画が 好きです。",
+          "q": "Conor went to the movie theater with whom?",
+          "a": "りきぞと いっしょに 行きました。",
           "terms": [
-            "v_eiga"
+            "char_rikizo",
+            "v_issho",
+            { "id": "v_iku", "form": "polite_mashita" }
           ]
         },
         {
-          "q": "毎週 どこへ 行きますか。",
-          "a": "映画館へ 行きます。",
+          "q": "What time did the movie start?",
+          "a": "午後 三時に 始まりました。",
           "terms": [
-            "v_eigakan"
+            "v_gogo",
+            { "counter": "ji", "n": 3 },
+            { "id": "v_hajimaru", "form": "polite_mashita" }
           ]
         },
         {
-          "q": "映画は 何時に 始まりましたか。",
-          "a": "二時に 始まりました。",
+          "q": "What did Conor do while watching the movie?",
+          "a": "英語の メモを 書きました。",
           "terms": [
-            "v_hajimaru",
-            "k_hajimeru"
+            "v_eigo",
+            "v_memo",
+            { "id": "v_kaku", "form": "polite_mashita" }
           ]
-        },
-        {
-          "q": "映画は おもしろかったですか。",
-          "a": "はい、とても おもしろかったです。",
-          "terms": []
         }
       ]
     },
     {
       "type": "reading",
-      "title": "Reading Practice 2: The Painter",
+      "title": "Reading 2: Joel Sensei",
       "passage": [
         {
-          "jp": "父は 画家 です。画を かくのが 好きです。",
-          "en": "My father is a painter. He likes to draw pictures.",
+          "jp": "ジョエル先生は アメリカから 来た 英語の 先生 です。",
+          "en": "Joel Sensei is an English teacher who came from America.",
           "terms": [
-            "v_gaka",
-            "k_ga"
-          ]
-        },
-        {
-          "jp": "わかい 時、英国に 住んでいました。",
-          "en": "When he was young, he lived in the UK.",
-          "terms": [
-            "v_eikoku",
-            "k_sumu"
-          ]
-        },
-        {
-          "jp": "そこで 英語を 学びました。",
-          "en": "He learned English there.",
-          "terms": [
+            "char_joel",
+            { "id": "v_kuru", "form": "plain_past" },
             "v_eigo",
-            "v_manabu_masu_past",
-            "k_manabu"
+            "v_sensei"
           ]
         },
         {
-          "jp": "父は 英国の 古い 町が 大好きです。",
-          "en": "Father loves the old towns of the UK.",
+          "jp": "アメリカから 来ましたが、イギリスにも 行った ことが あります。",
+          "en": "He came from America, but has also been to England.",
           "terms": [
-            "v_eikoku",
-            "k_machi"
+            { "id": "v_kuru", "form": "polite_mashita" },
+            "p_ga_but",
+            { "id": "v_iku", "form": "plain_past" },
+            "v_koto",
+            { "id": "v_aru", "form": "polite_masu" }
           ]
         },
         {
-          "jp": "今も 英語の 本を よく 読みます。",
-          "en": "Even now, he often reads English books.",
+          "jp": "毎日、クラスで 元気に 英語を 話して います。",
+          "en": "Every day he speaks English energetically in class.",
           "terms": [
-            "v_eigo"
+            "v_mainichi",
+            "v_kurasu",
+            { "id": "v_genki", "form": "adverbial" },
+            "v_eigo",
+            { "id": "v_hanasu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "映画が 大好きで、画家の 映画も 大好きです。",
+          "en": "He loves movies, and loves movies about painters too.",
+          "terms": [
+            "v_eiga",
+            { "id": "v_daisuki", "form": null },
+            "v_gaka",
+            "v_eiga",
+            "v_daisuki"
+          ]
+        },
+        {
+          "jp": "映画を 見たり、英語の 本を 読んだり します。",
+          "en": "He does things like watch movies and read English books.",
+          "terms": [
+            "v_eiga",
+            { "id": "v_miru", "form": "tari_form" },
+            "v_eigo",
+            { "id": "v_yomu", "form": "tari_form" },
+            { "id": "v_suru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "いつも 元気で、英語も 日本語も 上手 です。",
+          "en": "He is always energetic, and is skilled in both English and Japanese.",
+          "terms": [
+            "v_itsumo",
+            { "id": "v_genki", "form": null },
+            "v_eigo",
+            "v_nihongo",
+            "v_jouzu"
           ]
         }
       ],
       "questions": [
         {
-          "q": "父の 仕事は 何ですか。",
-          "a": "画家 です。",
+          "q": "Where did Joel Sensei come from?",
+          "a": "アメリカから 来ました。",
           "terms": [
-            "v_gaka"
+            { "id": "v_kuru", "form": "polite_mashita" }
           ]
         },
         {
-          "q": "父は 昔 どこに 住んでいましたか。",
-          "a": "英国に 住んでいました。",
+          "q": "What does Joel Sensei do every day in class?",
+          "a": "元気に 英語を 話して います。",
           "terms": [
-            "v_eikoku",
-            "k_sumu"
-          ]
-        },
-        {
-          "q": "父は そこで 何を しましたか。",
-          "a": "英語を 学びました。",
-          "terms": [
+            { "id": "v_genki", "form": "adverbial" },
             "v_eigo",
-            "v_manabu_masu_past",
-            "k_manabu"
+            { "id": "v_hanasu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
           ]
         },
         {
-          "q": "今、父は 何を 読みますか。",
-          "a": "英語の 本を 読みます。",
+          "q": "What kinds of things does Joel Sensei do?",
+          "a": "映画を 見たり、英語の 本を 読んだりします。",
           "terms": [
-            "v_eigo"
+            "v_eiga",
+            { "id": "v_miru", "form": "tari_form" },
+            "v_eigo",
+            { "id": "v_yomu", "form": "tari_form" },
+            { "id": "v_suru", "form": "polite_masu" }
           ]
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Drill 1: Particles & Grammar",
-      "instructions": "Select the correct option to complete the sentence.",
+      "title": "Drill 1: Kanji Readings",
+      "instructions": "Choose the correct reading for each word.",
       "items": [
         {
           "kind": "mcq",
-          "q": "映画は 三時 ______ 終わります。",
-          "choices": [
-            "に",
-            "を",
-            "が",
-            "で"
-          ],
-          "answer": "に",
-          "terms": [
-            "v_owaru_masu"
-          ]
+          "q": "[始まる] の よみかたは？",
+          "choices": ["はじまる", "おわる", "うつる", "えいが"],
+          "answer": "はじまる"
         },
         {
           "kind": "mcq",
-          "q": "毎日、英語 ______ 学びます。",
-          "choices": [
-            "を",
-            "に",
-            "へ",
-            "と"
-          ],
-          "answer": "を",
-          "terms": [
-            "v_eigo",
-            "v_manabu_masu"
-          ]
+          "q": "[映画] の よみかたは？",
+          "choices": ["えいが", "えいご", "えいかん", "がか"],
+          "answer": "えいが"
         },
         {
           "kind": "mcq",
-          "q": "クラスは 九時に ______。",
-          "choices": [
-            "始まります",
-            "始めます",
-            "行きます",
-            "飲みます"
-          ],
-          "answer": "始まります",
-          "terms": [
-            "v_hajimaru_masu"
-          ]
+          "q": "[終わる] の よみかたは？",
+          "choices": ["おわる", "はじまる", "えいが", "えいご"],
+          "answer": "おわる"
         },
         {
           "kind": "mcq",
-          "q": "きのう、英国 ______ 行きました。",
-          "choices": [
-            "へ",
-            "を",
-            "が",
-            "と"
-          ],
-          "answer": "へ",
-          "terms": [
-            "v_eikoku"
-          ]
+          "q": "[英語] の よみかたは？",
+          "choices": ["えいご", "えいが", "えいかん", "えいこく"],
+          "answer": "えいご"
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Drill 2: Vocabulary & Context",
-      "instructions": "Select the correct word for the context.",
+      "title": "Drill 2: Vocabulary",
+      "instructions": "Choose the correct word or meaning for each question.",
       "items": [
         {
           "kind": "mcq",
-          "q": "母は 絵 (pictures) が 好きです。______ です。",
-          "choices": [
-            "画家",
-            "映画",
-            "英国",
-            "家族"
-          ],
-          "answer": "画家",
-          "terms": [
-            "v_gaka"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "町で 新しい ______ を 見ました。",
-          "choices": [
-            "映画",
-            "英語",
-            "英国",
-            "元気"
-          ],
-          "answer": "映画",
-          "terms": [
-            "v_eiga"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "______ で 映画を 見ます。",
-          "choices": [
-            "映画館",
-            "図書館",
-            "外国",
-            "学校"
-          ],
+          "q": "映画を 見る 所は？",
+          "choices": ["映画館", "英語", "画家", "英国"],
           "answer": "映画館",
           "terms": [
+            "v_eiga",
+            { "id": "v_miru", "form": null },
+            "v_tokoro",
             "v_eigakan"
           ]
         },
         {
           "kind": "mcq",
-          "q": "私は ______ に 行きたいです。",
-          "choices": [
-            "英国",
-            "英語",
-            "画家",
-            "映画"
-          ],
-          "answer": "英国",
+          "q": "えを かく 人の 名前は？",
+          "choices": ["画家", "映画", "英語", "映画館"],
+          "answer": "画家",
           "terms": [
-            "v_eikoku"
+            { "id": "v_kaku", "form": null },
+            "v_gaka"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "What does 「映画が 始まりました」mean?",
+          "choices": [
+            "The movie started.",
+            "The movie ended.",
+            "The movie is interesting.",
+            "Let's watch a movie."
+          ],
+          "answer": "The movie started.",
+          "terms": [
+            "v_eiga",
+            { "id": "v_hajimaru", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "アメリカや イギリスで 使う 言語は？",
+          "choices": ["英語", "日本語", "中国語", "フランス語"],
+          "answer": "英語",
+          "terms": [
+            "v_eigo",
+            "v_nihongo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 3: Grammar & Forms",
+      "instructions": "Choose the correct grammar form or particle to complete each sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "映画が 好きな____、毎週 映画館に 行きます。",
+          "choices": ["ので", "が", "けど", "を"],
+          "answer": "ので",
+          "terms": [
+            "v_eiga",
+            "v_suki",
+            "p_node",
+            "v_mainichi",
+            "v_eigakan",
+            { "id": "v_iku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "食べ____ 映画を 見ます。(while eating)",
+          "choices": ["ながら", "てから", "ので", "たり"],
+          "answer": "ながら",
+          "terms": [
+            { "id": "v_taberu", "form": "nagara_form" },
+            "v_eiga",
+            { "id": "v_miru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "映画を 見____、英語を 学んだり します。(listing actions)",
+          "choices": ["たり", "ながら", "ので", "けど"],
+          "answer": "たり",
+          "terms": [
+            "v_eiga",
+            { "id": "v_miru", "form": "tari_form" },
+            "v_eigo",
+            { "id": "v_manabu", "form": "tari_form" },
+            { "id": "v_suru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "映画は 何時に ______？ (When does the movie start?)",
+          "choices": ["始まりますか", "終わりますか", "行きますか", "学びますか"],
+          "answer": "始まりますか",
+          "terms": [
+            "v_eiga",
+            "v_nanji",
+            { "id": "v_hajimaru", "form": "polite_masu" }
           ]
         }
       ]
