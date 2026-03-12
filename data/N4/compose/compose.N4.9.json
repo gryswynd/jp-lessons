@@ -37,9 +37,9 @@
       "targets": [
         { "id": "v_tokoro", "count": 1 }
       ],
-      "model": "近所に きれいな 公園が あります。とても いい 所 です。",
+      "model": "近所に きれいな 川が あります。とても いい 所 です。",
       "vocabPool": [
-        "v_tokoro", "v_kinjo", "v_kouen", "v_aru", "v_kirei",
+        "v_tokoro", "v_kinjo", "v_kawa", "v_aru", "v_kirei",
         "v_totemo", "v_ii", "v_gakkou", "v_eki", "v_machi", "g_desu"
       ]
     },
@@ -48,10 +48,10 @@
       "targets": [
         { "id": "v_genki", "count": 1 }
       ],
-      "model": "私は 毎日 元気 です。毎日 さん歩 して います。",
+      "model": "私は 毎日 元気 です。毎日 川を 歩いて います。",
       "vocabPool": [
-        "v_genki", "v_mainichi", "v_sanpo", "v_suru", "v_iru",
-        "v_watashi", "v_asa", "v_aruku", "v_ii", "g_desu"
+        "v_genki", "v_mainichi", "v_kawa", "v_aruku", "v_suru", "v_iru",
+        "v_watashi", "v_asa", "v_ii", "g_desu"
       ]
     },
     {
@@ -59,10 +59,10 @@
       "targets": [
         { "id": "v_kyonen", "count": 1 }
       ],
-      "model": "去年の 春、近所の 公園で お花見を しました。",
+      "model": "去年の 春、近所の 川で お花見を しました。",
       "vocabPool": [
         "v_kyonen", "v_haru", "v_natsu", "v_aki",
-        "v_kouen", "v_ohanami", "v_suru", "v_iku",
+        "v_kawa", "v_ohanami", "v_suru", "v_iku",
         "v_kinjo", "v_umi", "v_yama", "v_totemo"
       ]
     },
@@ -127,7 +127,7 @@
     {
       "pattern": "[verb-て] + います",
       "meaning": "currently living / doing (progressive state)",
-      "examples": ["住んで います", "さん歩 して います"]
+      "examples": ["住んで います", "川を 歩いて います"]
     },
     {
       "pattern": "[noun / な-adj] + です",
