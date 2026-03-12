@@ -1413,20 +1413,66 @@ All character entries live in `shared/characters.json`. This file is loaded by e
 
 ### ID convention
 
+This table is the authoritative list of every registered character. It must stay in sync with `shared/characters.json`. **Never use a `char_*` ID that does not appear in both this table and the JSON file.**
+
 | Character | ID | Surface | Matches |
 |---|---|---|---|
 | Rikizo | `char_rikizo` | `りきぞ` | `["りきぞう"]` |
 | Yamakawa | `char_yamakawa` | `やまかわ` | `[]` |
+| Suzuki-sensei | `char_suzuki` | `すずき` | `["すずきせんせい"]` |
 | Yamamoto-sensei | `char_yamamoto` | `やまもと` | `["やまもとせんせい"]` |
-| Ken | `char_ken` | `けん` | `[]` |
+| Ken | `char_ken` | `けん` | `["ケン"]` |
 | Yuki | `char_yuki` | `ゆき` | `[]` |
-| Miku | `char_miku` | `ミク` | `[]` |
-| Riku | `char_riku` | `リク` | `[]` |
 | Lee | `char_lee` | `リー` | `["リーさん"]` |
 | Taro | `char_taro` | `たろう` | `[]` |
 | Sakura | `char_sakura` | `さくら` | `[]` |
+| Miki | `char_miki` | `ミキ` | `[]` |
+| Nana | `char_nana` | `ナナ` | `[]` |
+| Ren | `char_ren` | `レン` | `[]` |
+| Joel | `char_joel` | `ジョエル` | `["ジョエルせんせい", "ジョエル先生"]` |
+| Conor | `char_conor` | `コナー` | `["コナーさん"]` |
 
-**Adding a new character:** Add the entry to `shared/characters.json` and register it in this table. Do not invent a `char_*` ID that is not in this table — the ID must match the registry.
+### Adding a new character — required steps
+
+When a new recurring character is introduced in a lesson, story, or grammar file, the following steps are **all mandatory** before Agent 2 writes any content that references the character. Skipping any step means the character's name will silently render as plain text with no pink highlight or popup.
+
+**Step 1 — Add to `shared/characters.json`**
+
+Append a new entry to the `"characters"` array:
+
+```json
+{
+  "id": "char_newname",
+  "type": "character",
+  "surface": "にゅーねーむ",
+  "reading": "にゅーねーむ",
+  "meaning": "New Name",
+  "description": "One-sentence description of the character's role in the story world.",
+  "portrait": "",
+  "matches": ["にゅーねーむさん"]
+}
+```
+
+Rules for each field:
+- `id`: Always `char_` + romanized lowercase name. No spaces or special characters.
+- `surface`: The primary hiragana/katakana form as it will appear in `jp` fields. This is what the text processor matches.
+- `reading`: The hiragana reading, shown under the portrait in the popup. If `surface` is already hiragana, `reading` equals `surface`.
+- `meaning`: The romanized display name — shown in the popup header.
+- `description`: One sentence. Describes who this person is in Rikizo's world.
+- `portrait`: Set to `""` if no sprite asset exists yet. The popup renders gracefully without an image.
+- `matches`: Any alternate spellings that appear in content — e.g. the name followed by さん, or a katakana variant. The text processor checks these alongside `surface`. **Omit name + title combos that use kanji** (e.g. `"先生"`) unless that kanji has been taught — the text processor is surface-literal.
+
+**Step 2 — Add to the ID convention table in this file**
+
+Add a row to the table above. If this step is skipped, future agents will see the table is out of sync with `shared/characters.json` and may treat the ID as unregistered.
+
+**Step 3 — Tag the name in all lesson content**
+
+In every `jp` field that contains the new character's name, add the `char_*` ID to the `terms` array. See [Tagging in lesson/review/grammar/game content](#tagging-in-lessonreviewgrammargame-content) below.
+
+**Step 4 (stories only) — Add a surface key to `terms.json`**
+
+Add the name as a key in the story's `terms.json`, pointing to `{ "id": "char_newname", "form": null }`. If the story uses multiple spellings, add one key per spelling.
 
 ### Tagging in lesson/review/grammar/game content
 
