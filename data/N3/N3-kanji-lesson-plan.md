@@ -91,7 +91,7 @@ These N3 kanji are used in vocabulary words that students already encounter in h
 | **N3.28** | **登 落 越 降** | **Ascending & Descending** | 登る(climb), 落ちる(fall)/落とす(drop), 越える(cross over), 降りる(get off) |
 | **N3.29** | **追 逃 退 返** | **Chase & Retreat** | 追う(chase), 逃げる(escape), 退院(leave hospital), 返す(return-object) |
 | **N3.30** | **込 過 遅 速** | **Speed & Flow** | 込む(be crowded), 過ぎる(pass by), 遅い(late/slow), 速い(fast) |
-| **N3.31** | **連 達 違 適** | **Connections & Suitability** | 連絡(contact), 友達(friend), 違う(differ), 適当(suitable) |
+| **N3.31** | **連 達 違 絡** | **Connections & Differences** | 連絡(contact), 友達(friend), 違う(differ), 絡む(get tangled/involved) |
 | **N3.32** | **遊 途 路 散** | **Leisure & Paths** | 遊ぶ(play), 途中(midway), 道路(road), 散歩(walk)/散る(scatter) |
 
 ### Block 6: Physical Actions (N3.33–N3.36)
@@ -190,7 +190,7 @@ These N3 kanji are used in vocabulary words that students already encounter in h
 
 | Lesson | Kanji | Theme | Key vocabulary |
 |--------|-------|-------|----------------|
-| **N3.80** | **原 果 当 処** | **Cause & Handling** | 原因(cause), 結果(result), 当たる(hit/be right), 処理(processing) |
+| **N3.80** | **原 果 当 処 適** | **Cause, Handling & Suitability** | 原因(cause), 結果(result), 当たる(hit/be right), 処理(processing), 適当(suitable)/適切(appropriate) |
 | **N3.81** | **関 際 除 阪** | **Relations & Places** | 関係(relation)/関心(interest), 国際(international), 除く(exclude), 大阪(Osaka) |
 | **N3.82** | **両 付 到 刻** | **Both & Arrival** | 両方(both), 付く(attach)/気付く(notice), 到着(arrival), 時刻(time)/刻む(carve) |
 | **N3.83** | **寄 察 局 頂** | **Observation & Institutions** | 寄る(approach), 警察(police)/察する(sense), 郵便局(post office), 頂く(receive-humble) |
@@ -206,7 +206,7 @@ These N3 kanji are used in vocabulary words that students already encounter in h
 |--------|-------|
 | Total new N3 kanji | 346 |
 | Overlap with N5+N4 (excluded) | 27 |
-| Lessons with 5 kanji | 3 (N3.39, N3.41, N3.54) |
+| Lessons with 5 kanji | 4 (N3.39, N3.41, N3.54, N3.80) |
 | Lessons with 4 kanji | 82 |
 | Lessons with 3 kanji | 1 (N3.86) |
 | Total lessons | 86 |
@@ -226,7 +226,7 @@ N3.19: 育 能 才 笑    N3.20: 宅 庭 居 宿    N3.21: 園 窓 座 席
 N3.22: 草 葉 石 種    N3.23: 猫 馬 鳴 飛    N3.24: 晴 雪 景 陽
 N3.25: 泳 流 浮 深    N3.26: 熱 煙 冷 消    N3.27: 港 渡 済 満
 N3.28: 登 落 越 降    N3.29: 追 逃 退 返    N3.30: 込 過 遅 速
-N3.31: 連 達 違 適    N3.32: 遊 途 路 散    N3.33: 打 折 抜 押
+N3.31: 連 達 違 絡    N3.32: 遊 途 路 散    N3.33: 打 折 抜 押
 N3.34: 投 抱 捕 掛    N3.35: 指 探 支 放    N3.36: 吸 吹 払 閉
 N3.37: 守 盗 殺 犯    N3.38: 警 罪 判 治    N3.39: 政 官 権 制 公
 N3.40: 法 戦 選 参    N3.41: 反 否 非 対 無    N3.42: 断 決 定 規
@@ -242,7 +242,7 @@ N3.67: 利 収 値 取    N3.68: 加 助 備 完    N3.69: 王 神 福 信
 N3.70: 全 部 内 側    N3.71: 数 幾 割 等    N3.72: 余 差 位 列
 N3.73: 単 易 難 雑    N3.74: 必 要 可 限    N3.75: 増 変 化 現
 N3.76: 実 存 在 然    N3.77: 常 平 静 和    N3.78: 点 球 相 配
-N3.79: 容 寝 具 箱    N3.80: 原 果 当 処    N3.81: 関 際 除 阪
+N3.79: 容 寝 具 箱    N3.80: 原 果 当 処 適    N3.81: 関 際 除 阪
 N3.82: 両 付 到 刻    N3.83: 寄 察 局 頂    N3.84: 性 求 責 欠
 N3.85: 番 米 酒 杯    N3.86: 絶 船 良
 ```

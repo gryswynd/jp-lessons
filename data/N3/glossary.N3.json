@@ -160,6 +160,165 @@
       "verb_class": "na_adj",
       "lesson_ids": "N3.1",
       "notes": "念 (N3.1) + 入 (N5.5). 念入りに準備する = to prepare carefully."
+    },
+    {
+      "id": "k_ren",
+      "lesson": "N3.2",
+      "type": "kanji",
+      "surface": "連",
+      "on": "れん",
+      "kun": "つれる/つらなる",
+      "reading": "つれる",
+      "meaning": "connect / link / take along",
+      "notes": "Kun: つれる (take along), つらなる (line up). On: れん in compounds like 連絡, 連休."
+    },
+    {
+      "id": "k_tatsu",
+      "lesson": "N3.2",
+      "type": "kanji",
+      "surface": "達",
+      "on": "たつ",
+      "kun": "",
+      "reading": "たつ",
+      "meaning": "reach / attain / plural suffix",
+      "notes": "On: たつ in 上達, 達人. Also read たち/だち as a plural/group suffix: 友達, 私たち."
+    },
+    {
+      "id": "k_chigau",
+      "lesson": "N3.2",
+      "type": "kanji",
+      "surface": "違",
+      "on": "い",
+      "kun": "ちがう/ちがえる",
+      "reading": "ちがう",
+      "meaning": "differ / wrong / violate",
+      "notes": "Kun: ちがう (be different/wrong), ちがえる (mistake). On: い in 違反 (violation)."
+    },
+    {
+      "id": "k_karamu",
+      "lesson": "N3.2",
+      "type": "kanji",
+      "surface": "絡",
+      "on": "らく",
+      "kun": "からむ/からまる",
+      "reading": "からむ",
+      "meaning": "entangle / get involved",
+      "notes": "Kun: からむ (get tangled/involved). On: らく in 連絡 (contact)."
+    },
+    {
+      "id": "v_chigau",
+      "surface": "違う",
+      "reading": "ちがう",
+      "meaning": "to be different / to be wrong",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.2",
+      "notes": "それは違う = that's wrong. 意見が違う = opinions differ. One of the most common verbs in daily conversation."
+    },
+    {
+      "id": "v_chigai",
+      "surface": "違い",
+      "reading": "ちがい",
+      "meaning": "difference",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.2",
+      "notes": "文化の違い = cultural difference. AとBの違い = the difference between A and B."
+    },
+    {
+      "id": "v_machigaeru",
+      "surface": "間違える",
+      "reading": "まちがえる",
+      "meaning": "to make a mistake / to mix up",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.2",
+      "notes": "間 (N5.14) + 違 (N3.2). Transitive: 道を間違えた (took the wrong road). AをBと間違える = to mistake A for B."
+    },
+    {
+      "id": "v_machigau",
+      "surface": "間違う",
+      "reading": "まちがう",
+      "meaning": "to be wrong / to be mistaken",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.2",
+      "notes": "間 (N5.14) + 違 (N3.2). Intransitive: 答えが間違っている (the answer is wrong). Often used in ている form to describe a state."
+    },
+    {
+      "id": "v_machigai",
+      "surface": "間違い",
+      "reading": "まちがい",
+      "meaning": "mistake / error",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.2",
+      "notes": "間 (N5.14) + 違 (N3.2). 間違いなく = without a doubt. 間違いがある = there is a mistake."
+    },
+    {
+      "id": "v_tsureru",
+      "surface": "連れる",
+      "reading": "つれる",
+      "meaning": "to take someone along / to bring someone",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.2",
+      "notes": "子どもを連れて行く = to take a child along. 連れて来る = to bring someone."
+    },
+    {
+      "id": "v_renkyuu",
+      "surface": "連休",
+      "reading": "れんきゅう",
+      "meaning": "consecutive holidays / long weekend",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.2",
+      "notes": "連 (N3.2) + 休 (N5.6). ゴールデンウィークは大型連休 = Golden Week is a major holiday stretch."
+    },
+    {
+      "id": "v_renraku",
+      "surface": "連絡",
+      "reading": "れんらく",
+      "meaning": "contact / communication",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.2",
+      "notes": "連 (N3.2) + 絡 (N3.2). する verb: 連絡する = to contact/get in touch. 連絡先 = contact information."
+    },
+    {
+      "id": "v_joutatsu",
+      "surface": "上達",
+      "reading": "じょうたつ",
+      "meaning": "improvement / progress (in a skill)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.2",
+      "notes": "上 (N5.3) + 達 (N3.2). する verb: 上達する = to improve/get better at. 日本語が上達した = my Japanese has improved."
+    },
+    {
+      "id": "v_tatsujin",
+      "surface": "達人",
+      "reading": "たつじん",
+      "meaning": "expert / master",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.2",
+      "notes": "達 (N3.2) + 人 (N5.1). 料理の達人 = a cooking master."
+    },
+    {
+      "id": "v_karamu",
+      "surface": "絡む",
+      "reading": "からむ",
+      "meaning": "to get tangled / to get involved / to pick a fight",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.2",
+      "notes": "糸が絡む = thread gets tangled. 話に絡む = to get involved in a conversation. Can also mean to pester/accost someone."
     }
   ]
 }
