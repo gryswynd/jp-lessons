@@ -73,36 +73,35 @@ Wave 2 splits into three tiers:
 | N3.29 | 老 若 美 皆 | 老人[FREE], 若い, 美しい, 皆 | Thematic (OK) |
 | N3.30 | 王 神 福 信 | 幸福(幸 W1), 神社[FREE], 信じる | W1 link (OK) |
 | N3.31 | 猫 馬 鳴 飛 | 飛行機[FREE], animal cluster | Thematic (OK) |
-| N3.32 | 争 戻 倒 突 | 戻る, 倒れる, 突然(然 W3) | Thematic (OK) |
 | N3.33 | 打 折 抜 押 | Hand-action verbs (all standalone) | Thematic (OK) |
 | N3.34 | 投 抱 捕 掛 | Hand-action verbs (all standalone) | Thematic (OK) |
 | N3.35 | 指 探 支 放 | 指す, 探す, 支える, 放す (standalone verbs) + 放送[FREE] | Thematic (OK) |
 | N3.36 | 吸 吹 払 閉 | Breath/closing verbs + 呼吸(呼 N3.41 adjacent!) | Thematic (OK) |
-| N3.37 | 確 認 調 誤 | **確認** intra-pair + 調べる + 誤解(解 N3.38 adjacent) | STRONG |
 | N3.38 | 記 表 解 観 | 記録[FREE], 表す, 理解[FREE], 観光[FREE] | FREE-heavy (OK) |
-| N3.39 | 伝 告 報 示 | **報告** intra-pair + 伝える + 指示(指 N3.35) | STRONG |
 | N3.40 | 談 論 議 識 | **議論** intra-pair + 知識[FREE] + 認識(認 N3.37) | STRONG |
 
 ### Proposed changes
 
 | Lesson | Old | New | Rationale |
 |--------|-----|-----|-----------|
-| N3.21 | 困 迷 疑 苦 | **困 苦 迷 規** | Add orphaned 規 from Wave 1. 規 gets 規則[FREE], 正規[FREE], 新規[FREE]. 疑 moves out — it's the most independent kanji (疑う standalone, 疑問(問 FREE) works anywhere). |
-| N3.23 | 眠 疲 痛 靴 | **眠 疲 痛 疑** | 靴 is the oddball (shoes in a health lesson). Replace with 疑 — 疑問[FREE] fits "difficulty" theme near N3.21. 靴 moves to fill a gap elsewhere. |
+| N3.32 | 争 戻 倒 突 | **争 戻 倒 規** | Place orphaned 規 from Wave 1. 規 gets 正規[FREE], 新規[FREE], **定規**(定 W1). 突 orphaned → moves to Wave 3 near 然 for 突然. |
+| N3.37 | 確 認 調 誤 | **確 認 調 示** | Swap 示↔誤 with N3.39. 指示(指 N3.35) unlocks 2 lessons sooner. 表示(表 N3.38) unlocks 1 lesson sooner. **確認** intra-pair preserved. |
+| N3.39 | 伝 告 報 示 | **伝 告 報 誤** | 誤 moves here. **報告** intra-pair preserved. 誤解(解 N3.38) still gap=1. Zero loss. |
 
 ### Orphaned kanji from Wave 2
 
 | Kanji | Removed from | Best future pairing | Notes |
 |-------|-------------|--------------------|----|
-| 靴 | N3.23 | Standalone noun (shoes). No key compounds. | Very independent — can go into any lesson with a daily-life theme, or absorb into N3.86 (currently only 3 kanji) |
+| 突 | N3.32 | **突然**(然 → N3.80 per W3 changes). Best home: N3.43 or nearby. | See Wave 3 Change 3a below. |
 
 ### Wave 2 cross-lesson highlights (compounds unlocked within 1-3 lessons)
 
 - 確信 (conviction): 確 N3.37 + 信 N3.30 = gap 7
-- 指示 (instruction): 指 N3.35 + 示 N3.39 = gap 4
+- **指示** (instruction): 指 N3.35 + 示 **N3.37** = gap **2** (was 4, improved by swap)
+- **表示** (display): 表 N3.38 + 示 **N3.37** = gap **1** (was 1, same or better)
 - 認識 (recognition): 認 N3.37 + 識 N3.40 = gap 3
 - 呼吸 (breathing): 吸 N3.36 + 呼 N3.41 = gap 5 (crosses into W3)
-- 誤解 (misunderstanding): 誤 N3.37 + 解 N3.38 = gap 1
+- 誤解 (misunderstanding): 誤 **N3.39** + 解 N3.38 = gap 1 (unchanged)
 
 ---
 
@@ -159,14 +158,18 @@ Full compound analysis completed for all ~184 kanji. Key findings:
 | N3.48 | 留 申 由 号 | **留 申 番 号** | 番号 unlocks immediately. 留学[FREE], 申す standalone. |
 | N3.85 | 番 米 酒 杯 | **由 米 酒 杯** | 由 is very portable: 自由[FREE], 理由[FREE], 由来[FREE] — all use FREE kanji. 酒+杯 still pair (一杯[FREE], お酒). |
 
-**Change 3: Fix 当然 (gap 37 → 0)**
+**Change 3: Fix 当然 (gap 37 → 0) + place orphaned 突 + bonus 処置**
+
+This is a 4-lesson chain that fixes 当然, places the Wave 2 orphan 突, and creates a bonus intra-lesson pair 処置:
 
 | Lesson | Old | New | Rationale |
 |--------|-----|-----|-----------|
-| N3.43 | 実 存 在 然 | **実 存 在 処** | 存在 preserved (perfect pair). 処理[FREE], 処分[FREE] give 処 good FREE links. |
-| N3.80 | 原 果 当 処 適 | **原 果 当 然 適** | 当然 + 適当 both unlock immediately. 自然[FREE] still available (just at N3.80 instead of N3.43). 5-kanji lesson preserved. |
+| N3.43 | 実 存 在 然 | **実 存 在 突** | 存在 preserved (perfect pair). 突 arrives from W2 orphan pool. 突く (poke) works standalone immediately. |
+| N3.47 | 破 置 積 直 | **処 置 積 直** | **処置** (しょち — measure/treatment) = new intra-pair! Plus 処理[FREE], 処分[FREE]. 破 moved to N3.86. |
+| N3.80 | 原 果 当 処 適 | **原 果 当 然 適** | **当然** + **適当** both unlock immediately. Also unlocks 自然[FREE], 全然(全 W1), 突然(突 N3.43). 5-kanji lesson preserved. |
+| N3.86 | 絶 船 良 | **絶 船 良 破** | 破 fills the 3→4 kanji gap. 破産[FREE], 破る standalone. |
 
-Trade-off: 自然 deferred from N3.43 to N3.80 (37 lessons later). But 当然 (even higher frequency) gained. 全然 also becomes available at N3.80 (全 is W1). Net positive.
+Trade-off: 自然 deferred from N3.43 to N3.80 (37 lessons). But 当然, 全然, 突然 (all higher frequency) gained. 処置 = bonus intra-pair. Net strongly positive.
 
 **Change 4: Fix 性格 (gap 34 → 0)**
 
@@ -182,19 +185,13 @@ Trade-off: 自然 deferred from N3.43 to N3.80 (37 lessons later). But 当然 (e
 | N3.67 | 交 互 係 任 | **交 関 係 任** | 関係 unlocks immediately. 交通[FREE], 関心[FREE]. Interaction & Relations theme. |
 | N3.81 | 関 際 除 阪 | **互 際 除 阪** | 互 is portable: お互い standalone, 相互(相 N3.79 nearby). 国際[FREE], 大阪[FREE]. |
 
-**Change 6: Absorb 靴 into N3.86 (3→4 kanji)**
-
-| Lesson | Old | New | Rationale |
-|--------|-----|-----|-----------|
-| N3.86 | 絶 船 良 | **絶 船 良 靴** | N3.86 was the only 3-kanji lesson. 靴 (shoes) is fully standalone with no compound dependencies. Fills the gap cleanly. |
-
 ### Changes NOT proposed (and why)
 
 | Compound | Gap | Why not fixed |
 |----------|-----|---------------|
 | **絶対** (ぜったい) | 40 | 対 is anchored in N3.46 by 反対 (gap 0). Moving 対 would break 反対. 絶 in N3.86 is the final lesson — students encounter 絶対 via 対(N3.46) long before 絶(N3.86). Acceptable: 対 is learned first, 絶 completes the compound later. |
 | **実際** (じっさい) | 38 | 実 is anchored in N3.43 by 存在. 際 is anchored in N3.81 by 国際[FREE]. Moving either breaks a good grouping. 実 is learned at N3.43, students encounter it early; 際 completes at N3.81. Manageable gap. |
-| **位置** (いち) | 30 | 位 anchored in N3.77 (余差位列 — degree/rank theme). 置 anchored in N3.47 by 直す/置く (physical actions). Moving either disrupts theme. Position vocab (位置) can use hiragana いち until both kanji are taught. |
+| **位置** (いち) | 30 | 位 anchored in N3.77 (余差位列 — degree/rank theme). 置 anchored in N3.47 by 処置 intra-pair + 直す/置く. Moving either disrupts theme. Position vocab (位置) can use hiragana いち until both kanji are taught. |
 | **居酒屋** (いざかや) | 28 | 居 anchored in N3.57 (home/lodging: 居間[FREE], 居る). 酒 anchored in N3.85 (beverages: 酒+杯). A 3-kanji compound crossing two strong thematic clusters — not worth disrupting both. 居酒屋 unlocks at N3.85. |
 | **責任** (せきにん) | 17 | 責 in N3.84, 任 in N3.67. Gap of 17 is moderate. Both kanji are well-placed in their current lessons (責+求+欠 in demands/character; 任 with 関係 in interaction/duty). Not worth disrupting for a moderate gap. |
 
@@ -202,21 +199,23 @@ Trade-off: 自然 deferred from N3.43 to N3.80 (37 lessons later). But 当然 (e
 
 | # | Lesson | Old kanji | New kanji | Key compound unlocked | Gap fixed |
 |---|--------|-----------|-----------|----------------------|-----------|
-| W2-1 | N3.21 | 困 迷 疑 苦 | **困 苦 迷 規** | 規則[FREE], 正規[FREE] | Orphan placed |
-| W2-2 | N3.23 | 眠 疲 痛 靴 | **眠 疲 痛 疑** | 疑問[FREE] | — |
+| W2-1 | N3.32 | 争 戻 倒 突 | **争 戻 倒 規** | 定規, 正規[FREE], 新規[FREE] | W1 orphan placed |
+| W2-2 | N3.37 | 確 認 調 誤 | **確 認 調 示** | 指示(gap 4→2), 表示(gap improved) | — |
+| W2-3 | N3.39 | 伝 告 報 示 | **伝 告 報 誤** | 誤解(gap=1 unchanged) | — |
 | W3-1 | N3.44 | 警 罪 判 治 | **警 察 罪 判** | **警察** | 39 → 0 |
 | W3-2 | N3.83 | 寄 察 局 頂 | **寄 治 局 頂** | 政治(N3.45 adj) | — |
 | W3-3 | N3.48 | 留 申 由 号 | **留 申 番 号** | **番号** | 37 → 0 |
 | W3-4 | N3.85 | 番 米 酒 杯 | **由 米 酒 杯** | 自由[FREE], 理由[FREE] | — |
-| W3-5 | N3.43 | 実 存 在 然 | **実 存 在 処** | 処理[FREE] | — |
-| W3-6 | N3.80 | 原 果 当 処 適 | **原 果 当 然 適** | **当然**, 全然, 自然 | 37 → 0 |
-| W3-7 | N3.50 | 様 状 式 格 的 | **様 状 式 格 性** | **性格** | 34 → 0 |
-| W3-8 | N3.84 | 性 求 責 欠 | **的 求 責 欠** | 目的[FREE] | — |
-| W3-9 | N3.67 | 交 互 係 任 | **交 関 係 任** | **関係** | 14 → 0 |
-| W3-10 | N3.81 | 関 際 除 阪 | **互 際 除 阪** | 相互(相 N3.79) | — |
-| W3-11 | N3.86 | 絶 船 良 | **絶 船 良 靴** | — | 3→4 kanji |
+| W3-5 | N3.43 | 実 存 在 然 | **実 存 在 突** | 突然(然 → N3.80) | W2 orphan placed |
+| W3-6 | N3.47 | 破 置 積 直 | **処 置 積 直** | **処置** (bonus intra-pair) | New pair |
+| W3-7 | N3.80 | 原 果 当 処 適 | **原 果 当 然 適** | **当然**, 全然, 自然, 突然 | 37 → 0 |
+| W3-8 | N3.86 | 絶 船 良 | **絶 船 良 破** | 破産[FREE] | 3→4 kanji |
+| W3-9 | N3.50 | 様 状 式 格 的 | **様 状 式 格 性** | **性格** | 34 → 0 |
+| W3-10 | N3.84 | 性 求 責 欠 | **的 求 責 欠** | 目的[FREE] | — |
+| W3-11 | N3.67 | 交 互 係 任 | **交 関 係 任** | **関係** | 14 → 0 |
+| W3-12 | N3.81 | 関 際 除 阪 | **互 際 除 阪** | 相互(相 N3.79) | — |
 
-**Net result: 5 high-frequency compounds now unlock immediately (警察, 番号, 当然, 性格, 関係) instead of waiting 14–39 lessons.**
+**Net result: 5 high-frequency compounds now unlock immediately (警察, 番号, 当然, 性格, 関係) + 1 bonus intra-pair (処置) instead of waiting 14–39 lessons.**
 
 ### Unchanged lessons (Waves 3+4)
 
@@ -228,7 +227,6 @@ These lessons have good intra-lesson synergy or strong thematic grouping and sho
 | N3.42 | 礼 訪 招 迎 | Hospitality theme. 失礼(失 W1), 招待[FREE], 訪問[FREE] |
 | N3.45 | 政 官 権 制 公 | Government (5-kanji). 政治(治 now in N3.83), 制度[FREE], 権利(利 W2) |
 | N3.46 | 反 否 非 対 無 | Opposition (5-kanji). **反対** intra-pair, 否定(定 W1), 無理[FREE] |
-| N3.47 | 破 置 積 直 | Physical actions. 直す, 置く, 破る standalone verbs. 正直[FREE] |
 | N3.49 | 向 横 面 形 | Direction/shape. 方向[FREE], 面白い, 形 standalone |
 | N3.51 | 構 機 段 程 | Structure. **機構** intra-pair, 値段(値 W2), 程度[FREE] |
 | N3.52 | 常 平 静 和 | Peace/harmony. **平和** intra-pair, 日常[FREE], 静か |
