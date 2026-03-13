@@ -1,5 +1,33 @@
 {
   "contentVersion": "1.0.0",
+  "plain_form": {
+    "label": "Plain Form (Dictionary)",
+    "description": "Verb in its base dictionary form. Used as plain present affirmative predicate and in nominalised constructions (のは、のが).",
+    "introducedIn": "G9",
+    "rules": {
+      "godan": {
+        "type": "identity"
+      },
+      "ichidan": {
+        "type": "identity"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "する",
+        "reading": "する"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来る",
+        "reading": "くる"
+      },
+      "irr_aru": {
+        "type": "replace",
+        "surface": "ある",
+        "reading": "ある"
+      }
+    }
+  },
   "copula_past": {
     "label": "Polite Past Copula (Deshita)",
     "description": "Past tense of the polite copula です → でした.",
