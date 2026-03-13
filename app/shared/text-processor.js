@@ -27,6 +27,7 @@
     u_to_i: { 'う': 'い', 'く': 'き', 'ぐ': 'ぎ', 'す': 'し', 'つ': 'ち', 'ぬ': 'に', 'ぶ': 'び', 'む': 'み', 'る': 'り' },
     u_to_a: { 'う': 'わ', 'く': 'か', 'ぐ': 'が', 'す': 'さ', 'つ': 'た', 'ぬ': 'な', 'ぶ': 'ば', 'む': 'ま', 'る': 'ら' },
     u_to_e: { 'う': 'え', 'く': 'け', 'ぐ': 'げ', 'す': 'せ', 'つ': 'て', 'ぬ': 'ね', 'ぶ': 'べ', 'む': 'め', 'る': 'れ' },
+    u_to_o: { 'う': 'お', 'く': 'こ', 'ぐ': 'ご', 'す': 'そ', 'つ': 'と', 'ぬ': 'の', 'ぶ': 'ぼ', 'む': 'も', 'る': 'ろ' },
     ta_form: { 'う': 'った', 'つ': 'った', 'る': 'った', 'む': 'んだ', 'ぶ': 'んだ', 'ぬ': 'んだ', 'く': 'いた', 'ぐ': 'いだ', 'す': 'した' },
     te_form: { 'う': 'って', 'つ': 'って', 'る': 'って', 'む': 'んで', 'ぶ': 'んで', 'ぬ': 'んで', 'く': 'いて', 'ぐ': 'いで', 'す': 'して' }
   };
@@ -236,10 +237,12 @@
         if (typeof ref === 'string') {
           return termMap[ref] || null;
         }
-        if (typeof ref === 'object' && ref.id && ref.form) {
+        if (typeof ref === 'object' && ref.id && (ref.form || ref.form === null)) {
           var rootTerm = termMap[ref.id];
           if (!rootTerm) return null;
-          var conjugated = self.conjugate(rootTerm, ref.form, conjugationRules);
+          // form: null = purpose construction (masu-stem + に); fall back to masu_stem rule
+          var ruleKey = ref.form !== null ? ref.form : 'masu_stem';
+          var conjugated = self.conjugate(rootTerm, ruleKey, conjugationRules);
           if (conjugated) termMap[conjugated.id] = conjugated; // cache for openTerm()
           return conjugated;
         }

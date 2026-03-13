@@ -28,6 +28,38 @@
       }
     }
   },
+  "masu_stem": {
+    "label": "Verb Stem (Purpose Construction)",
+    "description": "The ます-stem form of a verb used in purpose constructions (verb + に) and compound verbs. Equivalent to the polite present without the ます suffix.",
+    "introducedIn": "N5.5",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": ""
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": ""
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "し",
+        "reading": "し"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来",
+        "reading": "き"
+      },
+      "irr_aru": {
+        "type": "replace",
+        "surface": "あり",
+        "reading": "あり"
+      }
+    }
+  },
   "copula_past": {
     "label": "Polite Past Copula (Deshita)",
     "description": "Past tense of the polite copula です → でした.",
