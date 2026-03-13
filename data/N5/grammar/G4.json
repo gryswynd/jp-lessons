@@ -727,7 +727,7 @@
     {
       "type": "conversation",
       "title": "Planning the Week",
-      "context": "Rikizo and Yamakawa discuss when their teacher is available during the week.",
+      "context": "Rikizo asks Yamakawa which days their teacher is available.",
       "lines": [
         {
           "spk": "A",
@@ -739,48 +739,37 @@
             "p_wa",
             "v_nanyoubi",
             "p_ni",
-            {
-              "id": "v_iru",
-              "form": "polite_masu"
-            },
+            { "id": "v_iru", "form": "polite_masu" },
             "p_ka"
           ]
         },
         {
           "spk": "B",
-          "jp": "月よう日と 水よう日と 金よう日に います。",
-          "en": "She is here on Monday, Wednesday, and Friday.",
+          "jp": "月よう日と 水よう日に います。",
+          "en": "She is here on Monday and Wednesday.",
           "terms": [
             "v_getsuyoubi",
             "p_to",
             "v_suiyoubi",
-            "p_to",
-            "v_kinyoubi",
             "p_ni",
-            {
-              "id": "v_iru",
-              "form": "polite_masu"
-            }
+            { "id": "v_iru", "form": "polite_masu" }
           ]
         },
         {
           "spk": "A",
-          "jp": "土よう日も いますか。",
-          "en": "Is she also here on Saturday?",
+          "jp": "金よう日も いますか。",
+          "en": "Is she also here on Friday?",
           "terms": [
-            "v_doyoubi",
+            "v_kinyoubi",
             "p_mo",
-            {
-              "id": "v_iru",
-              "form": "polite_masu"
-            },
+            { "id": "v_iru", "form": "polite_masu" },
             "p_ka"
           ]
         },
         {
           "spk": "B",
           "jp": "いいえ。月よう日から 金よう日まで です。毎日は いません。",
-          "en": "No. It's from Monday to Friday. She's not here every day.",
+          "en": "No. It's Monday to Friday. She is not here every day.",
           "terms": [
             "v_getsuyoubi",
             "p_kara",
@@ -789,46 +778,20 @@
             "g_desu",
             "v_mainichi",
             "p_wa",
-            {
-              "id": "v_iru",
-              "form": "polite_negative"
-            }
+            { "id": "v_iru", "form": "polite_negative" }
           ]
         },
         {
           "spk": "A",
-          "jp": "そうですか。わたしの 母も 先生です。毎日 います。",
-          "en": "I see. My mother is also a teacher. She is here every day.",
+          "jp": "先生や お母さんは 毎日 います。",
+          "en": "Teachers and mothers are here every day.",
           "terms": [
-            "v_sou",
-            "g_desu",
-            "p_ka",
-            "v_watashi",
-            "p_no",
-            "v_haha",
-            "p_mo",
-            "v_sensei",
-            "g_desu",
-            "v_mainichi",
-            {
-              "id": "v_iru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "毎日ですか！先生や お母さんは たいへんですね。",
-          "en": "Every day! Teachers, mothers, and the like sure have it tough.",
-          "terms": [
-            "v_mainichi",
-            "g_desu",
-            "p_ka",
             "v_sensei",
             "p_ya",
             "v_okaasan",
             "p_wa",
-            "p_ne"
+            "v_mainichi",
+            { "id": "v_iru", "form": "polite_masu" }
           ]
         }
       ]
@@ -1008,7 +971,6 @@
           "answer": "や",
           "terms": [
             "v_sensei",
-            "v_gakusei",
             "v_takusan"
           ],
           "explanation": "や gives a sample list — teachers and students are examples, and others are implied."
