@@ -84,7 +84,7 @@ User Request
 - **Reference template rule.** Before building the Content Brief, identify the highest-numbered existing lesson file of the same content type and level (e.g. for a new N5 lesson, find the highest N5.X.json that exists). Use that file as the structural template — its section counts, conversation count, vocabulary density, and tone represent the current standard. Include it in the Dependencies field of the Content Brief. Earlier lessons may use outdated structures; always defer to the latest. If the curriculum spans multiple levels (e.g. N5 and N4 both exist), the highest-numbered lesson across the highest level is the most authoritative template.
 - **Compound discovery.** When scoping vocabulary for a new lesson, search the glossary for compounds that can be formed from the taught-kanji set. For each newly introduced kanji character, Grep for that character in the glossary's `"surface"` fields to discover existing compound words whose constituent kanji are all now taught. Flag any such compounds to the user as candidates for inclusion. This step ensures the lesson maximises use of newly-unlocked vocabulary.
 - **Scope review gate.** Before dispatching to Agent 2, audit the proposed vocabulary list for cohesion. Ask: do these items naturally belong together in one lesson? If a cluster of time-expression words (e.g. 今朝/今晩/先月) or compound vocab is only partially introduced, either include the full cluster or defer all of it to a later lesson. Never split a natural vocabulary group across lessons unless there is a clear pedagogical reason. Note any deferred items in the Content Brief's Rewrite Notes field.
-- **Grammar lesson scoping (GRAMMAR_CONTENT.md required).** For any grammar lesson (G1–G23), Agent 1 must read the relevant entry in `GRAMMAR_CONTENT.md` before building the Content Brief. The "What to teach" and "Recommended sections" fields in that entry define the locked scope. Do **not** infer grammar points from the lesson title or general knowledge — the spec is the only authoritative source. Missing a grammar point from the spec (as happened with でしょう in G8 and てください/なさい in G7) is a scope failure that all four agents will propagate unchecked.
+- **Grammar lesson scoping (GRAMMAR_CONTENT.md required).** For any grammar lesson (G1–G29), Agent 1 must read the relevant entry in `GRAMMAR_CONTENT.md` before building the Content Brief. The "What to teach" and "Recommended sections" fields in that entry define the locked scope. Do **not** infer grammar points from the lesson title or general knowledge — the spec is the only authoritative source. Missing a grammar point from the spec (as happened with でしょう in G8 and てください/なさい in G7) is a scope failure that all four agents will propagate unchecked.
 - **Grammar scope lock.** For grammar lessons, the Content Brief's "Grammar points" list is a **locked scope**. Agent 2 may not add, remove, or substitute grammar points. If Agent 2 encounters a problem building content for a listed grammar point (e.g., the available vocabulary cannot support good examples), Agent 2 must flag this in the CB Checklist and return to Agent 1 for a scope adjustment — not silently swap in a different grammar point. Agent 1 documents any scope changes in the "Rewrite notes" field before redispatching.
 - **Grammar conjugation form audit.** For any grammar lesson, Agent 1 must enumerate every **new conjugation form** the lesson teaches (e.g. G18 teaches `tari_form` and `nagara_form`; G12 teaches `potential`; G21 teaches `passive`). For each form, Grep `conjugation_rules.json` to verify: (a) the form ID exists as a top-level key, and (b) its `introducedIn` field matches this grammar lesson's ID or its `unlocksAfter` content lesson. If a form entry is missing entirely, it must be added to `conjugation_rules.json` — including the correct godan, ichidan, and irregular rules — before Agent 2 can use that form string in any `terms` array. If `introducedIn` is wrong (e.g. set to a later or earlier lesson), correct it. List the verified form IDs in the Content Brief under "New conjugation forms". Without this step, Agent 2 will use form strings that either don't exist (causing a silent render failure) or have the wrong prerequisite gate (causing content to appear out of scope in all future checks).
 - **Grammar connector entry audit.** For any grammar lesson, Agent 1 must enumerate every new **connector word** the lesson introduces (e.g. ために → ため, まえに → 前, あとで → 後, のに, ながら, ～たり). For each connector, Grep `glossary.N4.json`, `glossary.N5.json`, and `shared/particles.json` to verify a tappable `v_*` or `p_*` ID exists. If an entry is missing, add it to the correct file before dispatching to Agent 2 — never defer this to a later pipeline stage. Also determine the correct writing form for each connector noun: check whether its kanji is in the taught-kanji set at `unlocksAfter`; include both the ID and the correct writing form in the Content Brief so Agent 2 knows what to write in `jp` fields.
@@ -488,7 +488,7 @@ For **every** draft — not just grammar lessons — Agent 4 must perform a **Gr
    | `potential`, `polite_potential`, `potential_negative`, `plain_potential_negative`, `polite_potential_past`, `plain_potential_past` | N4.3 | N4.3+ |
    | `tari_form`, `nagara_form` | N4.10 | N4.10+ |
    | `sugiru_form`, `polite_sugiru_form`, `sugiru_past`, `polite_sugiru_past` | G14 | N4.5+ |
-   | `conditional_ba` | G20 | N4.25+ |
+   | `conditional_ba` | G21 | N4.25+ |
    | `conditional_tara` | N4.25 | N4.25+ |
    | `passive`, `polite_passive`, `polite_passive_past`, `plain_passive_past`, `causative`, `polite_causative`, `polite_causative_past`, `plain_causative_past`, `causative_passive`, `polite_causative_passive` | N4.31 | N4.31+ |
 
@@ -501,7 +501,7 @@ For **every** draft — not just grammar lessons — Agent 4 must perform a **Gr
    | ～たり～たりする | `tari_form` (N4.10+) | Using ～たりします in N4.8 content |
    | ～ながら | `nagara_form` (N4.10+) | Using ～ながら in N4.5 content |
    | ～たら | `conditional_tara` (N4.25+) | Using ～たら in N4.20 content |
-   | ～ば / ～ければ | `conditional_ba` (G20 / N4.25+) | Using ～ば in N4.20 content |
+   | ～ば / ～ければ | `conditional_ba` (G21 / N4.25+) | Using ～ば in N4.20 content |
    | ～すぎる | `sugiru_form` (G14 / N4.5+) | Using ～すぎます in N4.3 content |
    | ～られる (passive) | `passive` (N4.31+) | Using ～られます in N4.25 content |
    | ～させる (causative) | `causative` (N4.31+) | Using ～させます in N4.25 content |
@@ -663,7 +663,7 @@ Drill 1 items use the format: `"[漢字の言葉] の よみかたは？"` with 
 
 ---
 
-### Grammar JSON (`data/N5/grammar/G1.json` … `data/N4/grammar/G23.json`)
+### Grammar JSON (`data/N5/grammar/G1.json` … `data/N4/grammar/G29.json`)
 
 Grammar lesson files use `"type": "grammar"` at the top level and are rendered by `Grammar.js`. Each section type has a specific field schema — **using the wrong field names causes the section to render empty without throwing an error.** Agent 2 must use the exact field names below.
 
@@ -1377,7 +1377,7 @@ This same principle applies to all `たい` family forms: `desire_tai_negative` 
 | Context | Role | Tag | Available from |
 |---|---|---|---|
 | After a noun ("even X") or in compounds (何でも, いつでも) | Inclusive particle "even / any~" | `p_demo` | N4.14 |
-| At the start of a sentence ("But..." / "However...") | Conjunction "but" | `p_demo_but` | G18 |
+| At the start of a sentence ("But..." / "However...") | Conjunction "but" | `p_demo_but` | G19 |
 
 **Disambiguation rule — position determines role:**
 
@@ -1392,16 +1392,16 @@ This same principle applies to all `たい` family forms: `desire_tai_negative` 
 |---|---|---|---|
 | Between nouns (A and B) or with action verbs (do X with Y) | Connective "and / with" | `p_to` | N5.2 |
 | After quoted speech or thought content (「...」と) | Quotation marker | `p_to_quote` | N5.13 |
-| After a plain-form verb/adjective expressing automatic result (AとB) | Conditional "if/when → natural result" | `p_to_conditional` | G20 (N4.25+) |
+| After a plain-form verb/adjective expressing automatic result (AとB) | Conditional "if/when → natural result" | `p_to_conditional` | G21 (N4.25+) |
 
 **Disambiguation rule — what precedes と determines role:**
 
 - **と between/after nouns** → `p_to` (レンとミキ = "Ren and Miki")
 - **と after a closing 」quotation mark** → `p_to_quote` (「おいしい」と言いました = said "it's delicious")
 - **と after a plain-form clause with 思う/知る** → `p_to_quote` (いいと思います = "I think it's good")
-- **と after a plain-form clause expressing automatic/natural result** → `p_to_conditional` (ボタンを押すと開く = "push the button and it opens") — **hard blocker before G20**
+- **と after a plain-form clause expressing automatic/natural result** → `p_to_conditional` (ボタンを押すと開く = "push the button and it opens") — **hard blocker before G21**
 
-Before N5.13, と appears only as `p_to`. From N5.13, `p_to` and `p_to_quote` are both in scope. `p_to_conditional` is not available until G20 (N4.25+) — any sentence using the AとB natural-result pattern (including wishful expressions like あるといいね) before G20 is an out-of-scope grammar violation and must be rewritten. Tagging quotation と as `p_to` displays "and / with" when the student taps it, which is actively misleading.
+Before N5.13, と appears only as `p_to`. From N5.13, `p_to` and `p_to_quote` are both in scope. `p_to_conditional` is not available until G21 (N4.25+) — any sentence using the AとB natural-result pattern (including wishful expressions like あるといいね) before G21 is an out-of-scope grammar violation and must be rewritten. Tagging quotation と as `p_to` displays "and / with" when the student taps it, which is actively misleading.
 
 ### Counter references
 
@@ -1806,7 +1806,7 @@ Each conjugation form in `conjugation_rules.json` has an `introducedIn` field sp
 | N4.3 | `potential`, `polite_potential`, `potential_negative`, `plain_potential_negative`, `polite_potential_past`, `plain_potential_past` |
 | N4.10 | `tari_form`, `nagara_form` |
 | G14 (~N4.5) | `sugiru_form`, `polite_sugiru_form`, `sugiru_past`, `polite_sugiru_past` |
-| G20 (~N4.25) | `conditional_ba` |
+| G21 (~N4.25) | `conditional_ba` |
 | N4.25 | `conditional_tara` |
 | N4.31 | `passive`, `polite_passive`, `polite_passive_past`, `plain_passive_past`, `causative`, `polite_causative`, `polite_causative_past`, `plain_causative_past`, `causative_passive`, `polite_causative_passive` |
 
@@ -1826,7 +1826,7 @@ The prerequisite rules above define when a grammar form **may** be used (the cei
 
 Each milestone groups forms that unlock together. The **active reinforcement window** is the 2–3 lessons immediately after unlock, where minimum usage counts apply. After the window, forms enter **sustained use** where complete absence is flagged.
 
-**Important — grammar lessons vs content lessons.** Grammar lessons (G1–G23) teach concepts and unlock after specific content lessons. The reinforcement schedule must respect this: a form may be *mechanically available* (its `introducedIn` lesson has passed) before the grammar lesson that *formally teaches the concept* has unlocked. For example, `te_form` is available from N5.5, and G7 (て-form mechanics + てください preview) unlocks after N5.5, but G8 (ている progressive, たいです, ましょう) doesn't unlock until after N5.8. The schedule below groups milestones by the grammar lesson that teaches them, not just the conjugation form availability.
+**Important — grammar lessons vs content lessons.** Grammar lessons (G1–G29) teach concepts and unlock after specific content lessons. The reinforcement schedule must respect this: a form may be *mechanically available* (its `introducedIn` lesson has passed) before the grammar lesson that *formally teaches the concept* has unlocked. For example, `te_form` is available from N5.5, and G7 (て-form mechanics + てください preview) unlocks after N5.5, but G8 (ている progressive, たいです, ましょう) doesn't unlock until after N5.8. The schedule below groups milestones by the grammar lesson that teaches them, not just the conjugation form availability.
 
 | Milestone | Available from | Active window | Required patterns (per lesson, across convs + readings) | Sustained use (after window) |
 |---|---|---|---|---|
@@ -1838,13 +1838,13 @@ Each milestone groups forms that unlock together. The **active reinforcement win
 | **Appearance** (G11) | N5.11 | N5.12–N5.13 | ≥1 `～そうです` appearance pattern | Appears where observations or impressions are natural |
 | **Potential** (G12) | N4.3 | N4.4–N4.6 | ≥1 potential form (affirmative or negative) | Ability/possibility expressions used where natural |
 | **Comparison + degree** (G14) | N4.5 | N4.6–N4.8 | ≥1 `より` comparison, ≥1 `いちばん` superlative or `ほど` degree pattern | Comparison/degree expressions appear where natural (describing preferences, rankings, qualities) |
-| **Tari + nagara** (G17) | N4.10 | N4.11–N4.13 | ≥1 `～たり～たりする` listing, ≥1 `～ながら` simultaneous action | Both patterns appear where natural |
+| **Tari + nagara** (G18) | N4.10 | N4.11–N4.13 | ≥1 `～たり～たりする` listing, ≥1 `～ながら` simultaneous action | Both patterns appear where natural |
 | **Excessive degree + noun form** (G14) | N4.5 | N4.6–N4.8 | ≥1 `～すぎる` excessive expression | ～すぎる appears where overabundance or excess is natural (eating too much, too expensive, too noisy) |
 | **Limiting particles** (G15) | N4.14 | N4.15–N4.17 | ≥1 `だけ` or `しか～ない` limiting expression | Limiting particles appear where context calls for restriction or exclusion |
-| **Permission + prohibition** (G19) | N4.20 | N4.21–N4.23 | ≥1 `てもいい` permission or ≥1 `てはいけない` prohibition | Both patterns appear where rules, permissions, or social norms are discussed |
-| **Conditionals** (G20) | N4.25 | N4.26–N4.28 | ≥1 `～たら` or `～ば` conditional in conversation or reading | At least one conditional form (たら or ば) appears where natural |
-| **Passive + causative** (G21/G22) | N4.31 | N4.32–N4.34 | ≥1 passive, ≥1 causative across the lesson | Both voice patterns appear where natural |
-| **Auxiliary compounds** (G23) | N4.34 | N4.35–N4.36 | ≥1 `てみる` (try) or `ておく` (prepare) or `てしまう` (complete/regret) | Auxiliary verb compounds appear where experimentation, preparation, or completion is discussed |
+| **Permission + prohibition** (G20) | N4.20 | N4.21–N4.23 | ≥1 `てもいい` permission or ≥1 `てはいけない` prohibition | Both patterns appear where rules, permissions, or social norms are discussed |
+| **Conditionals** (G21) | N4.25 | N4.26–N4.28 | ≥1 `～たら` or `～ば` conditional in conversation or reading | At least one conditional form (たら or ば) appears where natural |
+| **Passive + causative** (G22/G23) | N4.31 | N4.32–N4.34 | ≥1 passive, ≥1 causative across the lesson | Both voice patterns appear where natural |
+| **Auxiliary compounds** (G24) | N4.34 | N4.35–N4.36 | ≥1 `てみる` (try) or `ておく` (prepare) or `てしまう` (complete/regret) | Auxiliary verb compounds appear where experimentation, preparation, or completion is discussed |
 
 ### How to read the schedule
 
@@ -1869,16 +1869,16 @@ Beyond individual conjugation forms, these **structural patterns** combine forms
 | `Verb-ている/ています` (progressive/state) | G8 | N5.9+ | Use in at least 1 conversation or reading per lesson. Natural contexts: describing ongoing actions, states (住んでいます, 知っています). **Note:** te_form is mechanically available from N5.5, but ている as a *concept* is taught in G8 (unlocks after N5.8). Do not require ている in N5.6–N5.8 content. |
 | `Verb-たいです` (desire) | G8 | N5.9+ | Use in at least 1 conversation per lesson. Natural contexts: discussing plans, preferences, wishes. |
 | `Verb-ましょう` (let's/shall we) | G8 | N5.9+ | Use in at least 1 conversation per lesson. Natural contexts: making plans together, suggestions, invitations. |
-| `Verb-たり Verb-たりする` (listing actions) | G17 | N4.11+ | Use in at least 1 conversation or reading per lesson. Natural contexts: describing weekends, hobbies, routines. |
-| `Verb-ながら` (while doing) | G17 | N4.11+ | Use occasionally. Natural contexts: multitasking descriptions, daily routines. |
+| `Verb-たり Verb-たりする` (listing actions) | G18 | N4.11+ | Use in at least 1 conversation or reading per lesson. Natural contexts: describing weekends, hobbies, routines. |
+| `Verb-ながら` (while doing) | G18 | N4.11+ | Use occasionally. Natural contexts: multitasking descriptions, daily routines. |
 | `～すぎる` (excessive degree) | G14 | N4.6+ | Use occasionally. Natural contexts: eating too much, too expensive, too loud, overwork. |
-| `～ば / ～ければ` (ba conditional) | G20 | N4.26+ | Use occasionally. Natural contexts: general conditions, advice, logical consequences. |
-| `～たら` (if/when conditional) | G20 | N4.26+ | Use in at least 1 context per lesson. Natural contexts: plans, hypotheticals, advice. |
-| `Verb-てもいい` (permission) | G19 | N4.21+ | Use occasionally. Natural contexts: asking permission, stating what's allowed. |
-| `Verb-てはいけない` (prohibition) | G19 | N4.21+ | Use occasionally. Natural contexts: rules, warnings, social norms. |
-| `Verb-てみる` (try doing) | G23 | N4.35+ | Use occasionally. Natural contexts: trying new foods, experiences, suggestions. |
-| `Verb-ておく` (prepare/do in advance) | G23 | N4.35+ | Use occasionally. Natural contexts: planning ahead, preparations. |
-| `Verb-てしまう` (completion/regret) | G23 | N4.35+ | Use occasionally. Natural contexts: accidents, finishing something, unintended results. |
+| `～ば / ～ければ` (ba conditional) | G21 | N4.26+ | Use occasionally. Natural contexts: general conditions, advice, logical consequences. |
+| `～たら` (if/when conditional) | G21 | N4.26+ | Use in at least 1 context per lesson. Natural contexts: plans, hypotheticals, advice. |
+| `Verb-てもいい` (permission) | G20 | N4.21+ | Use occasionally. Natural contexts: asking permission, stating what's allowed. |
+| `Verb-てはいけない` (prohibition) | G20 | N4.21+ | Use occasionally. Natural contexts: rules, warnings, social norms. |
+| `Verb-てみる` (try doing) | G24 | N4.35+ | Use occasionally. Natural contexts: trying new foods, experiences, suggestions. |
+| `Verb-ておく` (prepare/do in advance) | G24 | N4.35+ | Use occasionally. Natural contexts: planning ahead, preparations. |
+| `Verb-てしまう` (completion/regret) | G24 | N4.35+ | Use occasionally. Natural contexts: accidents, finishing something, unintended results. |
 
 **Non-conjugation patterns (particle-based and structural grammar):**
 
@@ -1889,7 +1889,7 @@ Beyond individual conjugation forms, these **structural patterns** combine forms
 | `X は Y ほど ～ない` (negative degree) | G14 | `p_hodo` | N4.6+ | Use occasionally. Natural contexts: "X is not as ～ as Y". |
 | `～だけ` (only/just) | G15 | `p_dake` | N4.15+ | Use occasionally. Natural contexts: limitations, quantities. |
 | `～しか～ない` (nothing but) | G15 | `p_shika` | N4.15+ | Use occasionally. Natural contexts: scarcity, emphasis on limits. |
-| `～ので` (because — polite) | G17 | `p_node` | N4.11+ | Use occasionally as an alternative to から. Natural contexts: giving reasons in polite speech. |
+| `～ので` (because — polite) | G18 | `p_node` | N4.11+ | Use occasionally as an alternative to から. Natural contexts: giving reasons in polite speech. |
 
 ### Reinforcement in warmups
 
@@ -2241,7 +2241,7 @@ These are the most frequent errors. All agents should be alert to them.
 36. **後 tagged as v_ushiro regardless of meaning** — 後 has two completely distinct words: **後ろ** (`v_ushiro`, うしろ, spatial "behind") and **後** (`v_ato`, あと, temporal "after/later"). Unlike 何, the written form alone disambiguates them — no context rules needed. **Rule:** Token `後ろ` (with ろ) → `v_ushiro`. Token `後` standalone (no ろ) → `v_ato`. Using `v_ushiro` for temporal 後 is semantically wrong (it displays the wrong reading and meaning to the student). Never use `k_ushiro` in conversation, reading, or drill `terms` — it is only for the kanjiGrid. For 後で ("later"), tag as `v_ato` + `p_de`. Compounds using the on-reading (午後, 後半, etc.) have their own dedicated IDs.
 37. **が tagged as p_ga regardless of role** — が has two completely distinct grammatical roles: subject marker (`p_ga`, N5.1) and clause connector "but" (`p_ga_but`, G9). They can appear in the same sentence: 「行きたいですが、お金がありません。」 — first が is "but" (`p_ga_but`), second が is subject marker (`p_ga`). Tagging the conjunctive が as `p_ga` displays "Subject marker" when the student taps it, which is actively misleading. **Rule:** が after a clause-final form (ます/です/plain form) → `p_ga_but`. が after a noun/pronoun → `p_ga`. See [が disambiguation](#が-ga--subject-marker-vs-clause-connector-disambiguation).
 38. **から tagged as p_kara regardless of role** — から has two distinct roles: starting point "from" (`p_kara`, G3) and reason "because" (`p_kara_because`, G9). 「東京から来ました」uses p_kara (from). 「おいしいから食べます」uses p_kara_because (because). **Rule:** から after a noun → `p_kara`. から after a verb/adjective/です → `p_kara_because`. Tagging reason-から as p_kara displays "Starting-point marker" which is wrong. See [から disambiguation](#から-kara--from-vs-because-disambiguation).
-39. **でも tagged as p_demo regardless of position** — でも has two roles: inclusive particle "even/any~" (`p_demo`, N4.14) and sentence-initial conjunction "but" (`p_demo_but`, G18). 「子どもでもわかる」= p_demo (even a child). 「でも、行きます」= p_demo_but (but I'll go). Tagging sentence-initial でも as p_demo displays "even / any~" which confuses the student. See [でも disambiguation](#でも-demo--evenany-vs-sentence-initial-but).
+39. **でも tagged as p_demo regardless of position** — でも has two roles: inclusive particle "even/any~" (`p_demo`, N4.14) and sentence-initial conjunction "but" (`p_demo_but`, G19). 「子どもでもわかる」= p_demo (even a child). 「でも、行きます」= p_demo_but (but I'll go). Tagging sentence-initial でも as p_demo displays "even / any~" which confuses the student. See [でも disambiguation](#でも-demo--evenany-vs-sentence-initial-but).
 40. **と tagged as p_to regardless of role** — と has two completely distinct grammatical roles: connective "and/with" (`p_to`, N5.2) and quotation marker (`p_to_quote`, N5.13). 「レンとミキ」= p_to (and). 「おいしい」と言いました = p_to_quote (quotation). Before N5.13, と is always p_to. From N5.13, check what precedes と: after a 」closing mark or after a plain-form clause with 思う/知る → p_to_quote; between/after nouns → p_to. Tagging quotation と as p_to displays "and / with" when the student taps it, which is wrong. See [と disambiguation](#と-to--connective-vs-quotation-disambiguation).
 30. **Grammar under-reinforcement (ます/ました monotony)** — all verbs in conversations and readings default to `polite_masu` or `polite_mashita` when negative forms, te-form, desire, and volitional forms are all available. This is the grammar equivalent of writing with a limited vocabulary — technically correct but failing to exercise the student's growing skillset. Example: an N5.7 lesson has 5 conversations with 20 tagged verbs, but 18 are ます/ました, zero are てください or ています despite te-form being available since N5.5. Agent 2 must consult the Grammar Reinforcement Requirements and vary verb forms intentionally.
 31. **Missing structural patterns in active reinforcement window** — a lesson falls within a grammar milestone's active reinforcement window but none of the required structural patterns (てください, ています, たいです, ましょう, etc.) appear anywhere. This means the student has gone 2+ lessons since learning these patterns without encountering them in natural content. Agent 2 must include at least the minimum count of each pattern required by the reinforcement schedule.
