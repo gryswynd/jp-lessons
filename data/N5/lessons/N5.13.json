@@ -7,7 +7,13 @@
     "lesson_number": 13,
     "focus": "Speaking, reading, and writing — compounds unlocked by 手・言・読・書・話, plus 電話 and 空手, and the adverb ゆっくり",
     "estimated_minutes": 30,
-    "kanji": ["手", "言", "読", "書", "話"]
+    "kanji": [
+      "手",
+      "言",
+      "読",
+      "書",
+      "話"
+    ]
   },
   "newKanji": [
     {
@@ -60,7 +66,10 @@
             "p_no",
             "v_hon",
             "p_wa",
-            { "id": "v_omoshiroi", "form": "appearance_sou" },
+            {
+              "id": "v_omoshiroi",
+              "form": "appearance_sou"
+            },
             "p_ne"
           ]
         },
@@ -72,7 +81,10 @@
             "p_no",
             "v_tesuto",
             "p_wa",
-            { "id": "v_nagai", "form": "polite_past_adj" }
+            {
+              "id": "v_nagai",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
@@ -84,8 +96,14 @@
             "p_de",
             "v_nihongo",
             "p_wo",
-            { "id": "v_manabu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_manabu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -95,7 +113,10 @@
             "v_atarashii",
             "v_hon",
             "p_wo",
-            { "id": "v_kau", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_kau",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -109,35 +130,45 @@
           "on": "しゅ",
           "kun": "て",
           "meaning": "hand",
-          "terms": ["k_te"]
+          "terms": [
+            "k_te"
+          ]
         },
         {
           "kanji": "言",
           "on": "げん",
           "kun": "い",
           "meaning": "say",
-          "terms": ["k_i_2"]
+          "terms": [
+            "k_i_2"
+          ]
         },
         {
           "kanji": "読",
           "on": "どく",
           "kun": "よ",
           "meaning": "read",
-          "terms": ["k_yo"]
+          "terms": [
+            "k_yo"
+          ]
         },
         {
           "kanji": "書",
           "on": "しょ",
           "kun": "か",
           "meaning": "write",
-          "terms": ["k_ka"]
+          "terms": [
+            "k_ka"
+          ]
         },
         {
           "kanji": "話",
           "on": "わ",
           "kun": "はな",
           "meaning": "speak",
-          "terms": ["k_hana_2"]
+          "terms": [
+            "k_hana_2"
+          ]
         }
       ]
     },
@@ -147,19 +178,36 @@
       "groups": [
         {
           "label": "Communication Verbs",
-          "items": ["v_hanasu", "v_iu", "v_kaku", "v_yomu"]
+          "items": [
+            "v_hanasu",
+            "v_iu",
+            "v_kaku",
+            "v_yomu"
+          ]
         },
         {
           "label": "Objects & Adverbs",
-          "items": ["v_te", "v_denwa", "v_yukkuri"]
+          "items": [
+            "v_te",
+            "v_denwa",
+            "v_yukkuri"
+          ]
         },
         {
           "label": "Compound Words",
-          "items": ["v_karate"]
+          "items": [
+            "v_karate"
+          ]
         },
         {
           "label": "Kanji",
-          "items": ["k_te", "k_i_2", "k_yo", "k_ka", "k_hana_2"]
+          "items": [
+            "k_te",
+            "k_i_2",
+            "k_yo",
+            "k_ka",
+            "k_hana_2"
+          ]
         }
       ]
     },
@@ -177,10 +225,16 @@
             "p_wa",
             "v_nihongo",
             "p_de",
-            { "id": "v_hanasu", "form": "polite_volitional_mashou" },
+            {
+              "id": "v_hanasu",
+              "form": "polite_volitional_mashou"
+            },
             "v_nihongo",
             "p_de",
-            { "id": "v_iu", "form": "te_form" }
+            {
+              "id": "v_iu",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -190,7 +244,10 @@
           "terms": [
             "v_sensei",
             "v_yukkuri",
-            { "id": "v_hanasu", "form": "te_form" }
+            {
+              "id": "v_hanasu",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -198,9 +255,15 @@
           "jp": "分かりました。ゆっくり 話します。",
           "en": "Understood. I will speak slowly.",
           "terms": [
-            { "id": "v_wakaru", "form": "polite_mashita" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            },
             "v_yukkuri",
-            { "id": "v_hanasu", "form": "polite_masu" }
+            {
+              "id": "v_hanasu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -211,9 +274,16 @@
             "v_nihongo",
             "p_wa",
             "v_totemo",
-            { "id": "v_omoshiroi", "form": "polite_adj" },
+            {
+              "id": "v_omoshiroi",
+              "form": "polite_adj"
+            },
             "v_mainichi",
-            { "id": "v_hanasu", "form": "desire_tai" }
+            {
+              "id": "v_hanasu",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         },
         {
@@ -221,13 +291,22 @@
           "jp": "いいですね。毎日 本を 読んで、書いてください。",
           "en": "That's great. Please read and write books every day.",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_mainichi",
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "te_form" },
-            { "id": "v_kaku", "form": "te_form" }
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kaku",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -237,8 +316,14 @@
           "terms": [
             "p_hai",
             "v_mainichi",
-            { "id": "v_yomu", "form": "te_form" },
-            { "id": "v_kaku", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kaku",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -257,7 +342,10 @@
             "v_san",
             "v_denwa",
             "p_de",
-            { "id": "v_hanasu", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_hanasu",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -266,14 +354,23 @@
           "en": "Yes, let's talk. Are you reading a Japanese book today?",
           "terms": [
             "p_hai",
-            { "id": "v_hanasu", "form": "polite_volitional_mashou" },
+            {
+              "id": "v_hanasu",
+              "form": "polite_volitional_mashou"
+            },
             "v_kyou",
             "v_nihongo",
             "p_no",
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -283,13 +380,22 @@
           "en": "Yes, I'm reading one. Japanese books are interesting, aren't they.",
           "terms": [
             "p_hai",
-            { "id": "v_yomu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "v_nihongo",
             "p_no",
             "v_hon",
             "p_wa",
-            { "id": "v_omoshiroi", "form": "polite_adj" },
+            {
+              "id": "v_omoshiroi",
+              "form": "polite_adj"
+            },
             "p_ne"
           ]
         },
@@ -302,7 +408,11 @@
             "p_ne",
             "v_watashi",
             "p_mo",
-            { "id": "v_yomu", "form": "desire_tai" },
+            {
+              "id": "v_yomu",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
             "v_donna",
             "v_hon",
             "g_desu",
@@ -317,7 +427,10 @@
             "v_sono",
             "v_hon",
             "p_wa",
-            { "id": "v_omoshiroi", "form": "appearance_sou" },
+            {
+              "id": "v_omoshiroi",
+              "form": "appearance_sou"
+            },
             "p_yo",
             "v_nihongo",
             "p_no",
@@ -330,15 +443,24 @@
           "jp": "いいですね。学校で 読みましょう。電話で も 話しましょう。",
           "en": "Sounds good. Let's read at school. Let's also talk on the phone.",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_gakkou",
             "p_de",
-            { "id": "v_yomu", "form": "polite_volitional_mashou" },
+            {
+              "id": "v_yomu",
+              "form": "polite_volitional_mashou"
+            },
             "v_denwa",
             "p_de",
             "p_mo",
-            { "id": "v_hanasu", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_hanasu",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -359,8 +481,14 @@
             "v_mainichi",
             "v_nihongo",
             "p_wo",
-            { "id": "v_yomu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -373,13 +501,22 @@
             "v_mainichi",
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "v_nihongo",
             "p_no",
             "v_hon",
             "p_wa",
-            { "id": "v_omoshiroi", "form": "polite_adj" },
+            {
+              "id": "v_omoshiroi",
+              "form": "polite_adj"
+            },
             "p_ne"
           ]
         },
@@ -392,10 +529,19 @@
             "p_ne",
             "v_watashi",
             "p_mo",
-            { "id": "v_kaku", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_kaku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "v_yukkuri",
-            { "id": "v_kaku", "form": "polite_masu" }
+            {
+              "id": "v_kaku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -406,9 +552,15 @@
             "v_sono",
             "v_hon",
             "p_wa",
-            { "id": "v_omoshiroi", "form": "appearance_sou" },
+            {
+              "id": "v_omoshiroi",
+              "form": "appearance_sou"
+            },
             "p_yo",
-            { "id": "v_yomu", "form": "te_form" }
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -417,11 +569,18 @@
           "en": "Yes, I'll read it. I want to talk on the phone too.",
           "terms": [
             "p_hai",
-            { "id": "v_yomu", "form": "polite_masu" },
+            {
+              "id": "v_yomu",
+              "form": "polite_masu"
+            },
             "v_denwa",
             "p_de",
             "p_mo",
-            { "id": "v_hanasu", "form": "desire_tai" }
+            {
+              "id": "v_hanasu",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         },
         {
@@ -429,12 +588,18 @@
           "jp": "いいですね。毎日 日本語で 話しましょう。",
           "en": "Wonderful. Let's speak Japanese every day.",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_mainichi",
             "v_nihongo",
             "p_de",
-            { "id": "v_hanasu", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_hanasu",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -468,7 +633,10 @@
             "p_no",
             "v_hon",
             "p_mo",
-            { "id": "v_yomu", "form": "plain_past" },
+            {
+              "id": "v_yomu",
+              "form": "plain_past"
+            },
             "p_yo"
           ]
         },
@@ -479,7 +647,10 @@
           "terms": [
             "v_donna",
             "v_hon",
-            { "id": "v_omoshiroi", "form": "plain_past_adj" }
+            {
+              "id": "v_omoshiroi",
+              "form": "plain_past_adj"
+            }
           ]
         },
         {
@@ -488,11 +659,17 @@
           "en": "Yeah, it was interesting. I want to do karate.",
           "terms": [
             "v_un",
-            { "id": "v_omoshiroi", "form": "plain_past_adj" },
+            {
+              "id": "v_omoshiroi",
+              "form": "plain_past_adj"
+            },
             "p_yo",
             "v_karate",
             "p_wo",
-            { "id": "v_suru", "form": "plain_desire_tai" }
+            {
+              "id": "v_suru",
+              "form": "plain_desire_tai"
+            }
           ]
         },
         {
@@ -503,11 +680,17 @@
             "p_ja",
             "v_denwa",
             "p_de",
-            { "id": "v_hanasu", "form": "plain_volitional" },
+            {
+              "id": "v_hanasu",
+              "form": "plain_volitional"
+            },
             "p_yo",
             "v_karate",
             "p_wo",
-            { "id": "v_suru", "form": "plain_volitional" }
+            {
+              "id": "v_suru",
+              "form": "plain_volitional"
+            }
           ]
         },
         {
@@ -517,11 +700,17 @@
           "terms": [
             "v_un",
             "v_mainichi",
-            { "id": "v_hanasu", "form": "plain_volitional" },
+            {
+              "id": "v_hanasu",
+              "form": "plain_volitional"
+            },
             "p_yo",
             "v_hon",
             "p_mo",
-            { "id": "v_yomu", "form": "plain_volitional" }
+            {
+              "id": "v_yomu",
+              "form": "plain_volitional"
+            }
           ]
         }
       ]
@@ -539,9 +728,18 @@
             "v_mainichi",
             "v_nihongo",
             "p_wo",
-            { "id": "v_yomu", "form": "te_form" },
-            { "id": "v_kaku", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kaku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -552,11 +750,17 @@
             "p_no",
             "v_hon",
             "p_wa",
-            { "id": "v_omoshiroi", "form": "polite_adj" },
+            {
+              "id": "v_omoshiroi",
+              "form": "polite_adj"
+            },
             "v_mainichi",
             "v_gakkou",
             "p_de",
-            { "id": "v_yomu", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -566,11 +770,20 @@
             "v_sensei",
             "p_wa",
             "v_yukkuri",
-            { "id": "v_hanasu", "form": "polite_masu" },
+            {
+              "id": "v_hanasu",
+              "form": "polite_masu"
+            },
             "v_watashi",
             "p_wa",
-            { "id": "v_ii", "form": "adverbial" },
-            { "id": "v_wakaru", "form": "polite_masu" }
+            {
+              "id": "v_ii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_wakaru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -582,7 +795,10 @@
             "p_de",
             "v_tomodachi",
             "p_to",
-            { "id": "v_hanasu", "form": "polite_masu" }
+            {
+              "id": "v_hanasu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -591,12 +807,22 @@
           "terms": [
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "te_form" },
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
             "v_nooto",
             "p_ni",
-            { "id": "v_kaku", "form": "polite_masu" },
+            {
+              "id": "v_kaku",
+              "form": "polite_masu"
+            },
             "v_mainichi",
-            { "id": "v_hanasu", "form": "desire_tai" }
+            {
+              "id": "v_hanasu",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         }
       ],
@@ -612,8 +838,14 @@
           ],
           "terms": [
             "v_nihongo",
-            { "id": "v_yomu", "form": "te_form" },
-            { "id": "v_kaku", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kaku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -628,7 +860,10 @@
           "terms": [
             "v_denwa",
             "v_tomodachi",
-            { "id": "v_hanasu", "form": "polite_masu" }
+            {
+              "id": "v_hanasu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -642,7 +877,11 @@
           ],
           "terms": [
             "v_mainichi",
-            { "id": "v_hanasu", "form": "desire_tai" }
+            {
+              "id": "v_hanasu",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         }
       ]
@@ -661,10 +900,16 @@
             "v_mainichi",
             "v_denwa",
             "p_de",
-            { "id": "v_hanasu", "form": "polite_masu" },
+            {
+              "id": "v_hanasu",
+              "form": "polite_masu"
+            },
             "v_nihongo",
             "p_de",
-            { "id": "v_hanasu", "form": "polite_masu" }
+            {
+              "id": "v_hanasu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -675,12 +920,21 @@
             "p_no",
             "v_hon",
             "p_wa",
-            { "id": "v_omoshiroi", "form": "appearance_sou" },
+            {
+              "id": "v_omoshiroi",
+              "form": "appearance_sou"
+            },
             "char_ren",
             "v_san",
             "p_wa",
-            { "id": "v_ii", "form": "adverbial" },
-            { "id": "v_yomu", "form": "polite_masu" }
+            {
+              "id": "v_ii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_yomu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -692,11 +946,17 @@
             "p_wa",
             "v_nooto",
             "p_ni",
-            { "id": "v_kaku", "form": "polite_masu" },
+            {
+              "id": "v_kaku",
+              "form": "polite_masu"
+            },
             "v_te",
             "p_de",
             "v_yukkuri",
-            { "id": "v_kaku", "form": "polite_masu" }
+            {
+              "id": "v_kaku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -707,10 +967,16 @@
             "p_ni",
             "v_denwa",
             "p_de",
-            { "id": "v_hanasu", "form": "te_form" },
+            {
+              "id": "v_hanasu",
+              "form": "te_form"
+            },
             "v_nihongo",
             "p_wo",
-            { "id": "v_iu", "form": "polite_masu" }
+            {
+              "id": "v_iu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -724,10 +990,16 @@
             "p_no",
             "v_hon",
             "p_mo",
-            { "id": "v_yomu", "form": "polite_masu" },
+            {
+              "id": "v_yomu",
+              "form": "polite_masu"
+            },
             "v_karate",
             "p_wa",
-            { "id": "v_omoshiroi", "form": "polite_adj" }
+            {
+              "id": "v_omoshiroi",
+              "form": "polite_adj"
+            }
           ]
         }
       ],
@@ -744,7 +1016,10 @@
           "terms": [
             "v_nihongo",
             "p_de",
-            { "id": "v_hanasu", "form": "polite_masu" }
+            {
+              "id": "v_hanasu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -758,7 +1033,10 @@
           ],
           "terms": [
             "v_hon",
-            { "id": "v_omoshiroi", "form": "appearance_sou" }
+            {
+              "id": "v_omoshiroi",
+              "form": "appearance_sou"
+            }
           ]
         },
         {
@@ -786,37 +1064,67 @@
         {
           "kind": "mcq",
           "q": "話す",
-          "choices": ["to speak", "to read", "to write", "to listen"],
+          "choices": [
+            "to speak",
+            "to read",
+            "to write",
+            "to listen"
+          ],
           "answer": "to speak"
         },
         {
           "kind": "mcq",
           "q": "読む",
-          "choices": ["to read", "to write", "to speak", "to say"],
+          "choices": [
+            "to read",
+            "to write",
+            "to speak",
+            "to say"
+          ],
           "answer": "to read"
         },
         {
           "kind": "mcq",
           "q": "書く",
-          "choices": ["to write", "to read", "to say", "to call"],
+          "choices": [
+            "to write",
+            "to read",
+            "to say",
+            "to call"
+          ],
           "answer": "to write"
         },
         {
           "kind": "mcq",
           "q": "電話",
-          "choices": ["telephone", "hand", "karate", "slowly"],
+          "choices": [
+            "telephone",
+            "hand",
+            "karate",
+            "slowly"
+          ],
           "answer": "telephone"
         },
         {
           "kind": "mcq",
           "q": "ゆっくり",
-          "choices": ["slowly", "very", "often", "a little"],
+          "choices": [
+            "slowly",
+            "very",
+            "often",
+            "a little"
+          ],
           "answer": "slowly"
         },
         {
           "kind": "mcq",
           "q": "空手",
-          "choices": ["karate", "hand", "telephone", "book"],
+          "choices": [
+            "karate",
+            "hand",
+            "telephone",
+            "book"
+          ],
           "answer": "karate"
         }
       ]
@@ -829,20 +1137,33 @@
         {
           "kind": "mcq",
           "q": "先生に 日本語で ___。（I say it to the teacher in Japanese.）",
-          "choices": ["言います", "読みます", "書きます", "電話します"],
+          "choices": [
+            "言います",
+            "読みます",
+            "書きます",
+            "電話します"
+          ],
           "answer": "言います",
           "terms": [
             "v_sensei",
             "p_ni",
             "v_nihongo",
             "p_de",
-            { "id": "v_iu", "form": "polite_masu" }
+            {
+              "id": "v_iu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "毎日 日本語の 本を ___。（I read a Japanese book every day.）",
-          "choices": ["読みます", "書きます", "話します", "言います"],
+          "choices": [
+            "読みます",
+            "書きます",
+            "話します",
+            "言います"
+          ],
           "answer": "読みます",
           "terms": [
             "v_mainichi",
@@ -850,31 +1171,50 @@
             "p_no",
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "友だちに 電話で ___。（I speak with friends on the phone.）",
-          "choices": ["話します", "読みます", "書きます", "行きます"],
+          "choices": [
+            "話します",
+            "読みます",
+            "書きます",
+            "行きます"
+          ],
           "answer": "話します",
           "terms": [
             "v_tomodachi",
             "p_ni",
             "v_denwa",
             "p_de",
-            { "id": "v_hanasu", "form": "polite_masu" }
+            {
+              "id": "v_hanasu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "ノートに ___。（I write in my notebook.）",
-          "choices": ["書きます", "読みます", "話します", "言います"],
+          "choices": [
+            "書きます",
+            "読みます",
+            "話します",
+            "言います"
+          ],
           "answer": "書きます",
           "terms": [
             "v_nooto",
             "p_ni",
-            { "id": "v_kaku", "form": "polite_masu" }
+            {
+              "id": "v_kaku",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -887,52 +1227,88 @@
         {
           "kind": "mcq",
           "q": "日本語の 本を 読んで___。（I am reading a Japanese book.）",
-          "choices": ["います", "ください", "いました", "ありません"],
+          "choices": [
+            "います",
+            "ください",
+            "いました",
+            "ありません"
+          ],
           "answer": "います",
           "terms": [
             "v_nihongo",
             "p_no",
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "日本語を ゆっくり 話し___。（Please speak Japanese slowly.）",
-          "choices": ["てください", "ましょう", "ています", "ませんでした"],
+          "choices": [
+            "てください",
+            "ましょう",
+            "ています",
+            "ませんでした"
+          ],
           "answer": "てください",
           "terms": [
             "v_nihongo",
             "p_wo",
             "v_yukkuri",
-            { "id": "v_hanasu", "form": "te_form" }
+            {
+              "id": "v_hanasu",
+              "form": "te_form"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "この 本は おもしろ___。（This book looks interesting.）",
-          "choices": ["そうです", "かったです", "くないです", "くなりました"],
+          "choices": [
+            "そうです",
+            "かったです",
+            "くないです",
+            "くなりました"
+          ],
           "answer": "そうです",
           "terms": [
             "v_kono",
             "v_hon",
             "p_wa",
-            { "id": "v_omoshiroi", "form": "appearance_sou" }
+            {
+              "id": "v_omoshiroi",
+              "form": "appearance_sou"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "日本語の 本を 読み___です。（I want to read a Japanese book.）",
-          "choices": ["たい", "ます", "まし", "なく"],
+          "choices": [
+            "たい",
+            "ます",
+            "まし",
+            "なく"
+          ],
           "answer": "たい",
           "terms": [
             "v_nihongo",
             "p_no",
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "desire_tai" }
+            {
+              "id": "v_yomu",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         }
       ]
