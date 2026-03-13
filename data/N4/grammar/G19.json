@@ -8,7 +8,7 @@
     "unlocksAfter": "N4.14",
     "focus": "Express 'even though', 'even if', and list multiple reasons with のに, ても, and し.",
     "estimatedMinutes": 20,
-    "particles": ["p_noni", "p_demo_but", "p_shi"],
+    "particles": ["のに", "でも", "し"],
     "grammarForms": ["te_form", "plain_form", "plain_past"],
     "icon": "🌀"
   },
@@ -31,9 +31,9 @@
       "type": "grammarRule",
       "id": "rule_noni",
       "pattern": [
-        { "text": "[plain form]", "color": "predicate" },
-        { "text": "のに", "color": "connector" },
-        { "text": "[contrasting result]", "color": "modifier" }
+        { "label": "PLAIN FORM", "color": "predicate", "text": "[plain form]" },
+        { "label": "のに", "color": "connector", "text": "のに" },
+        { "label": "CONTRAST", "color": "modifier", "text": "[contrasting result]" }
       ],
       "meaning": "even though ~ / despite ~",
       "explanation": "のに follows a plain-form clause to express that what happened (or didn't happen) was surprising, disappointing, or contrary to expectations. It carries a tone of complaint, frustration, or regret — the speaker felt the outcome was unfair or unexpected.",
@@ -80,9 +80,9 @@
       "type": "grammarRule",
       "id": "rule_temo",
       "pattern": [
-        { "text": "[te-form]", "color": "predicate" },
-        { "text": "も", "color": "connector" },
-        { "text": "[outcome holds regardless]", "color": "modifier" }
+        { "label": "VERB", "color": "predicate", "text": "[te-form]" },
+        { "label": "も", "color": "connector", "text": "も" },
+        { "label": "OUTCOME", "color": "modifier", "text": "[outcome holds regardless]" }
       ],
       "meaning": "even if ~ / even though ~",
       "explanation": "ても (te-form + も) expresses that the outcome holds regardless of the action or state. Unlike のに, ても is neutral — it doesn't carry a tone of complaint. It sets up a condition and states that the result is unaffected by it.",
@@ -129,11 +129,11 @@
       "type": "grammarRule",
       "id": "rule_shi",
       "pattern": [
-        { "text": "[clause A]", "color": "predicate" },
-        { "text": "し、", "color": "connector" },
-        { "text": "[clause B]", "color": "predicate" },
-        { "text": "し、", "color": "connector" },
-        { "text": "[conclusion]", "color": "modifier" }
+        { "label": "CLAUSE A", "color": "predicate", "text": "[clause A]" },
+        { "label": "し", "color": "connector", "text": "し、" },
+        { "label": "CLAUSE B", "color": "predicate", "text": "[clause B]" },
+        { "label": "し", "color": "connector", "text": "し、" },
+        { "label": "RESULT", "color": "modifier", "text": "[conclusion]" }
       ],
       "meaning": "and also ~ / not only X but also Y (listing reasons)",
       "explanation": "し attaches to the end of a clause to list multiple reasons or qualities that all contribute to an overall conclusion. Each し-clause adds to the list, and the final clause states the conclusion or result.",
