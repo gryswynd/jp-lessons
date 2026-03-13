@@ -1,8 +1,8 @@
 # JLPT N3 Kanji Lesson Plan
 
 > **Status:** Planning draft — pending review
-> **Total new kanji:** 347 (excluding 27 already taught in N5+N4)
-> **Lessons:** 86 (81 × 4 kanji + 4 × 5 kanji + 1 × 3 kanji)
+> **Total new kanji:** 348 (excluding 27 already taught in N5+N4)
+> **Lessons:** 86 (80 × 4 kanji + 5 × 5 kanji + 1 × 3 kanji)
 > **Source:** Composite of [JLPTsensei](https://jlptsensei.com/jlpt-n3-kanji-list/), [Nihongo-Career](https://nihongo-career.com/tips/2025/10/15/jlpt-n3-kanji-complete-list-and-learning-methods/), [JLPT Samurai](https://jlptsamurai.com/2025/03/08/jlpt-n3-kanji-list-380-essential-characters-master-the-key-kanji-for-n3-success/), [Kanshudo](https://www.kanshudo.com/collections/jlpt_kanji), [Nihongo-Pro](https://www.nihongo-pro.com/kanji-pal/list/jlpt)
 >
 > **Cross-reference note:** 3 kanji (的, 無, 公) are classified as N4 by Kanshudo/Nihongo-Pro but are not in our N5/N4 curriculum. They are included here to ensure complete coverage.
@@ -33,7 +33,7 @@ These N3 kanji are used in vocabulary words that students already encounter in h
 | 昨 | N3.3 | v_kinou (昨日) | きのう | Always hiragana until N3.3 |
 | 次 | N3.3 | v_tsugi (次) | つぎ | Always hiragana until N3.3 |
 | 末 | N3.5 | v_shuumatsu (週末) | 週まつ | Partial kanji until N3.5 |
-| 誰 | — | v_dare (だれ) | だれ | 誰 not on standard N3 list; remains hiragana |
+| 誰 | N3.6 | v_dare (誰) | だれ → 誰 at N3.6 | Added to N3.6 (People & Generations) for pronoun coverage |
 
 ---
 
@@ -48,7 +48,7 @@ These N3 kanji are used in vocabulary words that students already encounter in h
 | **N3.3** | **昔 昨 初 次** | **Past & Sequence** | 昔(long ago), 昨日(yesterday), 初めて(first time), 次(next) |
 | **N3.4** | **続 緒 慣 末** | **Habits & Routine** | 続ける(continue), 一緒(together), 慣れる(get used to)/習慣(habit), 週末(weekend) |
 | **N3.5** | **歳 暮 約 束** | **Promises & Time** | 歳(age-counter), 暮らす(live/reside), 約束(promise)/予約(reservation), 束(bundle) |
-| **N3.6** | **彼 君 娘 祖** | **People & Generations** | 彼(he)/彼女(she), 君(you-informal), 娘(daughter), 祖父/祖母(grandparents) |
+| **N3.6** | **彼 君 娘 祖 誰** | **People & Generations** | 彼(he)/彼女(she), 君(you-informal), 娘(daughter), 祖父/祖母(grandparents), 誰(who) |
 | **N3.7** | **全 部 内 側** | **Whole & Parts** | 全部(all), 部分(part)/部屋(room), 内(inside), 側(side) |
 | **N3.8** | **必 要 可 限** | **Necessity & Limits** | 必要(necessary), 重要(important), 可能(possible), 限り(limit) |
 | **N3.9** | **命 亡 危 険** | **Life & Danger** | 命(life), 死亡(death), 危ない(dangerous), 危険(danger) |
@@ -166,7 +166,7 @@ These N3 kanji are used in vocabulary words that students already encounter in h
 | N3.3 | N3.46 | 昔 昨 初 次 | A |
 | N3.4 | N3.49 | 続 緒 慣 末 | A |
 | N3.5 | N3.48 | 歳 暮 約 束 | A |
-| N3.6 | N3.14 | 彼 君 娘 祖 | A |
+| N3.6 | N3.14 | 彼 君 娘 祖 誰 | A |
 | N3.7 | N3.70 | 全 部 内 側 | A |
 | N3.8 | N3.74 | 必 要 可 限 | A |
 | N3.9 | N3.43 | 命 亡 危 険 | A |
@@ -254,20 +254,20 @@ These N3 kanji are used in vocabulary words that students already encounter in h
 
 | Metric | Value |
 |--------|-------|
-| Total new N3 kanji | 347 |
+| Total new N3 kanji | 348 |
 | Overlap with N5+N4 (excluded) | 27 |
-| Lessons with 5 kanji | 4 (N3.45, N3.46, N3.50, N3.80) |
-| Lessons with 4 kanji | 81 |
+| Lessons with 5 kanji | 5 (N3.6, N3.45, N3.46, N3.50, N3.80) |
+| Lessons with 4 kanji | 80 |
 | Lessons with 3 kanji | 1 (N3.66) |
 | Total lessons | 86 |
 | Phases | 6 (A: Foundation, B: Actions/Emotions, C: Body/Nature, D: Mind/Social, E: People/Home, F: Abstract/Commerce) |
 | Kanshudo N4 gap fills | 3 (的, 無, 公) |
 
-## Complete N3 Kanji List (347 characters, in lesson order)
+## Complete N3 Kanji List (348 characters, in lesson order)
 
 ```
 N3.1:  忘 覚 残 念    N3.2:  連 達 違 絡    N3.3:  昔 昨 初 次
-N3.4:  続 緒 慣 末    N3.5:  歳 暮 約 束    N3.6:  彼 君 娘 祖
+N3.4:  続 緒 慣 末    N3.5:  歳 暮 約 束    N3.6:  彼 君 娘 祖 誰
 N3.7:  全 部 内 側    N3.8:  必 要 可 限    N3.9:  命 亡 危 険
 N3.10: 法 戦 選 参    N3.11: 守 盗 殺 犯    N3.12: 勝 努 成 得
 N3.13: 失 敗 負 害    N3.14: 追 逃 退 返    N3.15: 容 寝 具 箱
@@ -303,7 +303,7 @@ N3.85: 由 米 酒 杯    N3.86: 絶 船 良 破
 
 2. **Early-use vocabulary unlocks:** N3.3 (昨/次) unlocks the kanji forms of きのう and つぎ. N3.5 (末) unlocks 週まつ → 週末. N3.4 (緒) unlocks いっしょ → 一緒. These are among the most-used words that have been stuck in hiragana.
 
-3. **Pronoun upgrade:** N3.6 (彼/君) gives students 彼 and 彼女 — the most common third-person pronouns, previously unavailable. Moved early from original slot 14 because pronouns are high-frequency from day one.
+3. **Pronoun upgrade:** N3.6 (彼/君/誰) gives students 彼 and 彼女 — the most common third-person pronouns, previously unavailable — plus 誰 (who), the fundamental question-word pronoun that has been stuck in hiragana since N5. Moved early from original slot 14 because pronouns are high-frequency from day one.
 
 4. **Game-relevant cluster:** N3.9–N3.11 (命亡危険 → 法戦選参 → 守盗殺犯) forms a tight game-vocabulary cluster — life/death, battle/choice, protect/steal. Essential for RPG-style story content.
 
@@ -313,4 +313,4 @@ N3.85: 由 米 酒 杯    N3.86: 絶 船 良 破
 
 7. **Grammar lessons:** N3 will need its own grammar lesson series (G24+). These should be planned separately after the kanji/vocabulary scope is finalized.
 
-8. **Glossary:** A `glossary.N3.json` is being built incrementally as lessons are scoped. Entries for all vocabulary using these 346 kanji, plus compound words that combine N3 kanji with previously taught N5/N4 kanji.
+8. **Glossary:** A `glossary.N3.json` is being built incrementally as lessons are scoped. Entries for all vocabulary using these 348 kanji, plus compound words that combine N3 kanji with previously taught N5/N4 kanji.
