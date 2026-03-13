@@ -89,6 +89,7 @@ User Request
 - **Grammar conjugation form audit.** For any grammar lesson, Agent 1 must enumerate every **new conjugation form** the lesson teaches (e.g. G18 teaches `tari_form` and `nagara_form`; G12 teaches `potential`; G21 teaches `passive`). For each form, Grep `conjugation_rules.json` to verify: (a) the form ID exists as a top-level key, and (b) its `introducedIn` field matches this grammar lesson's ID or its `unlocksAfter` content lesson. If a form entry is missing entirely, it must be added to `conjugation_rules.json` — including the correct godan, ichidan, and irregular rules — before Agent 2 can use that form string in any `terms` array. If `introducedIn` is wrong (e.g. set to a later or earlier lesson), correct it. List the verified form IDs in the Content Brief under "New conjugation forms". Without this step, Agent 2 will use form strings that either don't exist (causing a silent render failure) or have the wrong prerequisite gate (causing content to appear out of scope in all future checks).
 - **Grammar connector entry audit.** For any grammar lesson, Agent 1 must enumerate every new **connector word** the lesson introduces (e.g. ために → ため, まえに → 前, あとで → 後, のに, ながら, ～たり). For each connector, Grep `glossary.N4.json`, `glossary.N5.json`, and `shared/particles.json` to verify a tappable `v_*` or `p_*` ID exists. If an entry is missing, add it to the correct file before dispatching to Agent 2 — never defer this to a later pipeline stage. Also determine the correct writing form for each connector noun: check whether its kanji is in the taught-kanji set at `unlocksAfter`; include both the ID and the correct writing form in the Content Brief so Agent 2 knows what to write in `jp` fields.
 - **Grammar prerequisite validation.** Before finalizing the Content Brief, Agent 1 must verify that every grammar point listed can be taught given the `unlocksAfter` lesson. Ask: "Has the student been exposed to the concepts needed to understand this grammar point?" If not, defer the point to a later grammar lesson and note the deferral in the brief. Consult the prerequisite table in Agent 4's Grammar Scope Enforcement section.
+- **Conjugation form pre-check.** Before dispatching to Agent 2, verify that every form string the lesson will need exists in `conjugation_rules.json`. This includes copula forms (でした, だった, じゃない), plain forms, and any new pattern introduced by the lesson's grammar focus. If a form is absent, create it in `conjugation_rules.json` before Agent 2 begins — just as a missing glossary entry must be created before content can reference it. Never allow Agent 2 to use `form: null` as a substitute for a missing form string.
 - **Grammar reinforcement planning.** Before finalizing the Content Brief, Agent 1 must consult the [Grammar Reinforcement Requirements](#grammar-reinforcement-requirements) schedule and identify: (a) which grammar milestones are in their **active reinforcement window** for this lesson, and (b) which milestones are in **sustained use**. List the specific reinforcement targets in the Content Brief. Plan at least 1 warmup item that exercises the most recently unlocked grammar using prior-lesson vocabulary. If the lesson's theme naturally supports certain grammar patterns (e.g. a travel theme supports ～たいです for desires, ～てください for requests), note these opportunities in the brief.
 - **Register planning.** Before finalizing the Content Brief, Agent 1 must consult the [Register Requirements](#register-requirements-polite-vs-casual) schedule and determine how many casual conversations the lesson needs. For N5.10+ lessons, plan which conversations will be casual by assigning informal contexts (friends, family, close peers). For lessons before N5.10, confirm register = 100% polite. Include the register plan in the Content Brief.
 
@@ -181,10 +182,15 @@ CB CHECKLIST
 [ ] SENTENCE TOKEN SCAN completed for every jp/passage field: scanned left to right, token by token, using the Sentence Token Scan Protocol defined above — particles, sentence-final markers, and lexical words all verified
 [ ] Particles tagged in warmup items: warmup jp fields have exactly the same particle completeness as conversations (は, が, を, の, に, で, も, と, etc. are all tagged where present)
 [ ] Sentence-final か tagged as p_ka in every question sentence — applies to polite and casual questions equally; a sentence ending with ？ in casual speech still requires p_ka in terms
+[ ] Adjacent single-char kana terms ordered correctly: wherever two single-char kana particles/copulas appear consecutively in jp text (e.g. だね, のは, かな, よね), the rightmost one is listed FIRST in the terms array — so it is wrapped in a <span> before the leftmost is processed, allowing the single-char lookahead regex to pass. Example: jp="ことだね" → put p_ne before g_da; jp="借りるのは" → put p_wa before p_no
 [ ] For every い-adjective in jp text: verify position — bare string if attributive (precedes a noun); { "id": "...", "form": "polite_adj" } only if predicate (sentence-final before です/でした). Never use polite_adj for an attributive adjective.
 [ ] For every な-adjective in jp text: { "form": "attributive_na" } if it precedes a noun (大切な こと); { "form": "polite_adj" } if sentence-final predicate (大切です)
-[ ] For every desire expression (〜たい): desire_tai only when the sentence actually ends with です (〜たいです polite); plain_desire_tai when the sentence is plain/casual (〜たい、〜たいから、〜たいよ, etc.)
-[ ] For every verb in purpose-construction masu-stem + に (e.g. 買いに, 食べに, 借りに): use { "form": null } — no form string exists for this construction
+[ ] For every desire expression (〜たい): ALWAYS use plain_desire_tai + g_desu (two chips) — desire_tai is deprecated. plain_desire_tai alone when the sentence is plain/casual (〜たい、〜たいから、〜たいよ)
+[ ] For every verb in purpose-construction masu-stem + に (e.g. 買いに, 食べに, 借りに): use { "form": null } — this is the ONLY valid use of form: null on verbs in lesson content
+[ ] Every { "form": null } verified as a genuine purpose construction: the verb is followed immediately by に in the jp text. Any form: null not meeting this test is a hard fail
+[ ] If a needed form string does not exist in conjugation_rules.json: flag to Agent 1 to create the entry — never substitute form: null
+[ ] Every form string used in terms verified to exist in conjugation_rules.json before use
+[ ] For every な-adjective glossary entry used: verified the entry has BOTH gtype: "na-adjective" AND verb_class: "na_adj" — either field alone is insufficient for attributive_na to work
 [ ] Verbs/adjectives use { "id": "...", "form": "..." } objects, never bare strings
 [ ] No invented IDs — every ID was verified against the glossary or particles.json
 [ ] Every vocab word used in jp text was Grep-verified to exist in the glossary BEFORE being written into the content — if a word lacks a glossary entry, it must be added (or flagged to Agent 1) before proceeding, never used speculatively
@@ -241,6 +247,11 @@ CB CHECKLIST
 [ ] (Grammar) Every new conjugation form this lesson teaches has a verified entry in conjugation_rules.json — Grep-confirmed the form ID exists as a top-level key, its introducedIn value matches this lesson, and godan/ichidan/irregular rules are defined; if missing, flagged to Agent 1 before any terms array uses that form string
 [ ] (Grammar) Every new connector word introduced by this lesson has a tappable glossary or particles.json entry — for each connector (e.g. ために, まえに, あとで, のに), Grep-verified that a v_* or p_* ID exists; if missing, flagged to Agent 1 BEFORE writing conversation content that uses it
 [ ] (Grammar) Connector nouns written in correct form for the lesson tier — ため always hiragana (為 never taught); 前/後/事 etc. in hiragana if their kanji is not in the taught set at unlocksAfter, in kanji if it is
+[ ] (Grammar) Every `grammarRule.pattern[]` chip uses `label`, `color`, and `text` fields — NOT `role`/`gloss` (those belong to example `parts[]` only). Missing `color` → chip renders grey. Missing `label` → chip shows no text. Verify each chip in every pattern array.
+[ ] (Grammar) Every `meta.particles[]` entry is a **character string** (e.g. `"のに"`, `"から"`) — NOT a particle ID (e.g. `"p_noni"`, `"p_kara"`). IDs never match `span.textContent` of Japanese text, so particle highlighting is silently broken when IDs are used.
+[ ] (Grammar) Every `sentenceTransform` item has a `choices[]` array with 4 strings (correct answer + 3 plausible distractors). Missing `choices` crashes the renderer and leaves the entire screen blank.
+[ ] (Grammar) Conversation `jp` fields are tagged via `terms[]` using the same rules as lesson content (every lexical token, particle, and copula must be tagged). Terms generate tappable `.jp-term` spans; without tags, the text is unclickable (no visual highlight, no modal).
+[ ] (Grammar) `meta.grammarForms[]` lists the conjugation form strings this lesson introduces or exercises — used to power the unlock display on lesson completion.
 ```
 
 ---
@@ -468,8 +479,8 @@ For **every** draft — not just grammar lessons — Agent 4 must perform a **Gr
    | `polite_masu`, `polite_mashita`, `polite_negative`, `polite_past_negative` | N5.5 | N5.5+ |
    | `te_form`, `polite_negative_te` | N5.5 | N5.5+ |
    | `plain_past` | N5.5 | N5.5+ |
-   | `desire_tai`, `desire_tai_negative`, `polite_desire_tai_negative`, `polite_volitional_mashou` | N5.8 | N5.8+ |
-   | `plain_volitional` | G9 | N5.10+ |
+   | `desire_tai_negative`, `polite_desire_tai_negative`, `polite_volitional_mashou` | N5.8 | N5.8+ |
+   | `plain_volitional`, `plain_form` | G9 | N5.10+ |
    | `plain_negative`, `plain_past_negative` | N5.9 | N5.9+ |
    | `polite_past_adj`, `adverbial`, `desire_tai_past` | N5.10 | N5.10+ |
    | `plain_past_adj`, `plain_desire_tai`, `plain_appearance_sou`, `plain_desire_tai_past` | G9 | N5.10+ |
@@ -682,13 +693,13 @@ Grammar lesson files use `"type": "grammar"` at the top level and are rendered b
 | Section type | Required fields | Notes |
 |---|---|---|
 | `grammarIntro` | `type`, `title`, `icon`, `summary`, `whyItMatters`, `youWillLearn[]` | Always the first section. |
-| `grammarRule` | `type`, `id`, `pattern[]`, `meaning`, `explanation`, `notes[]`, `examples[]` | Core teaching unit. Each `example` has `parts[]`, `en`, `breakdown`. Each `part` has `text`, `role`, `gloss`. |
+| `grammarRule` | `type`, `id`, `pattern[]`, `meaning`, `explanation`, `notes[]`, `examples[]` | Core teaching unit. Each `example` has `parts[]`, `en`, `breakdown`. Each `part` has `text`, `role`, `gloss`. **Pattern chips** (the colored formula at the top) use a DIFFERENT schema: each chip requires `label` (short uppercase descriptor shown small at top of chip), `color` (must be a valid GRAMMAR_COLORS key — see valid values below), and `text` (larger text shown in chip body). **Never use `role`/`gloss` on pattern chips** — those fields are for example `parts[]` only. Missing `label` → empty chip text. Wrong/missing `color` → grey chip. |
 | `grammarTable` | `type`, `title`, `description`, `tableType`, `headers[]`, `rows[]` | Each row has `label`, `cells[]`, `meaning`. Optional `notes[]`. |
 | `grammarComparison` | `type`, `title`, `items[]`, optional `tip` | **`items[]` — NOT `itemA`/`itemB`.** Each item: `label`, `color`, `points[]`, optional `example`. |
 | `annotatedExample` | `type`, `title`, `examples[]` | **`examples[]` — NOT `sentence`/`parts[]`.** Each example: `parts[]`, `en`, optional `context`, optional `note`. Each `part`: `text`, `role`, `gloss`. |
 | `conjugationDrill` | `type`, `title`, `instructions`, `items[]` | Each item: `verb`, `type`, `reading`, `targetForm`, `answer`, `answerReading`, `hint`, `choices[]`. |
 | `patternMatch` | `type`, `title`, `instructions`, `items[]` | Each item: `sentence`, `answer` (bool), `explanation`. |
-| `sentenceTransform` | `type`, `title`, `instructions`, `items[]` | Each item: `given`, `givenReading`, `targetLabel`, `answer`, `answerReading`, `hint`. |
+| `sentenceTransform` | `type`, `title`, `instructions`, `items[]` | Each item: `given`, `givenReading`, `targetLabel`, `answer`, `answerReading`, `hint`, **`choices[]`** (required — 4 strings; the renderer crashes and leaves the screen blank if `choices` is missing). |
 | `fillSlot` | `type`, `title`, `instructions`, `items[]` | Each item: `before`, `after`, `translation`, `choices[]`, `answer`, `explanation`. **Never use `sentence` with a `___` placeholder** — the renderer requires pre-split `before`/`after` strings. |
 | `conversation` | `type`, `title`, `context`, `lines[]` | Same as lesson conversations. Each line: `spk`, `jp`, `en`, `terms[]`. |
 | `drills` | `type`, `title`, `instructions`, `items[]` | Same as lesson drills. Every item **must** have `explanation`. |
@@ -1195,6 +1206,7 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 | `plain_appearance_sou` | ～そうだ (plain appearance — casual speech) |
 | `polite_volitional_mashou` | ～ましょう |
 | `plain_volitional` | ～おう / ～よう (plain "let's" / intention) |
+| `plain_form` | verb in dictionary/base form — plain present affirmative predicate and nominalisations (のは/のが) |
 | `conditional_ba` | ～ば / ～ければ |
 | `tari_form` | ～たり (listing representative actions: ～たり～たりする) |
 | `polite_negative_te` | ～ないで (negative te-form: "without doing"; ないでください = "please don't") |
@@ -1251,16 +1263,32 @@ The masu-stem + に construction expresses purpose ("in order to ~"). Examples: 
 
 Do not use `polite_masu` (which implies the verb is the sentence predicate in ます form) or `te_form` (which implies a て-connector or request). The `form: null` tag makes the verb chip tappable with its dictionary-form gloss, which is correct for this construction.
 
-### desire_tai vs plain_desire_tai — register disambiguation
+**`form: null` is only valid for purpose construction and story `terms.json` keys.** For all other verbs, a form string is required. If a plain dictionary-form verb appears as a predicate or in a nominalisation (のは/のが), use `plain_form`. If the required form string does not exist in `conjugation_rules.json`, flag it to Agent 1 to create the entry — never fall back to `form: null` as a substitute.
 
-Both forms express "want to ~" but differ by register. The surface text alone determines which to use:
+### desire_tai — deprecated; always use plain_desire_tai + g_desu
 
-| Surface text | Sentence ending | Form | Example |
-|---|---|---|---|
-| 〜たいです | ends with です | `desire_tai` | 食べたいです — polite desire |
-| 〜たい (no です) | plain ending | `plain_desire_tai` | 食べたい — casual desire, or subordinate clause |
+**`desire_tai` is deprecated.** Do not use it. It was designed with `たいです` as the chip suffix, making it a single monolithic chip — the `です` is not separately tappable. This conflicts with the architecture principle that `g_desu` should always be independently tappable.
 
-**Rule:** Look at the actual sentence ending before choosing. In a casual conversation where a line ends with `〜たいから` or `〜たいよ` (no です), use `plain_desire_tai`. In a polite context where the line ends `〜たいです`, use `desire_tai`. This distinction applies to all `〜たい` forms including `desire_tai_negative` (〜たくないです) vs `plain_desire_tai` (〜たくない).
+**Always use `plain_desire_tai` + `g_desu` for polite 〜たいです sentences:**
+
+```json
+{ "jp": "日本に 行きたいです。", "terms": [
+  "v_nihon",
+  "p_ni",
+  { "id": "v_iku", "form": "plain_desire_tai" },
+  "g_desu"
+]}
+```
+
+The `plain_desire_tai` chip surface covers `行きたい`; the `g_desu` chip separately covers `です`. Both are independently tappable.
+
+| Sentence ending | Form | Chip pattern |
+|---|---|---|
+| 〜たいです (polite) | `plain_desire_tai` + `g_desu` | two tappable chips |
+| 〜たい (plain/casual, subordinate clause) | `plain_desire_tai` alone | one chip |
+| 〜たいですか (polite question) | `plain_desire_tai` + `g_desu` + `p_ka` | three chips |
+
+This same principle applies to all `たい` family forms: `desire_tai_negative` (〜たくないです) and `desire_tai_past` (〜たかったです) also bundle their `です` — always split them into the plain form + `g_desu` pattern.
 
 ### 何 (nani/nan) pronunciation tagging
 
@@ -1982,8 +2010,12 @@ All of the following must be TRUE for a QA pass:
 - [ ] Every kana-only word in a `jp` field that is NOT tagged in `terms` has been verified to have no glossary entry (i.e. it is truly an untaggable function word, not a tagged-but-out-of-scope one)
 - [ ] Every term ID in every `terms` array exists in the glossary
 - [ ] Every term ID's `surface` field matches (or inflects from) the token it tags in the `jp` field — ID existence alone is not sufficient; a surface mismatch (e.g. tagging `だ` with `g_desu` whose surface is `です`) is a hard fail
+- [ ] Glossary surface sanity check: for every verb or adjective entry used, Grep the full entry and confirm the `surface` field is a valid Japanese word — correct length, no spurious inserted kana (e.g. `"送る"` not `"送くる"`), and matching verb class (godan ends in a う-column kana, ichidan ends in る). A corrupted surface silently breaks all conjugated forms of that word, teaching students a word that does not exist
 - [ ] Every verb/adjective `terms` entry uses `{ "id": "...", "form": "..." }` with a valid form string
 - [ ] Every `form` value in `terms` has `introducedIn` ≤ current lesson in `conjugation_rules.json` (see [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules))
+- [ ] Every `form: null` in lesson/review `terms` arrays verified as a genuine purpose construction: the verb must be followed by に in the `jp` text. Any `form: null` not meeting this test is a **hard fail** — the form string is missing and must be created
+- [ ] No `desire_tai` form used anywhere — deprecated; hard fail if present. Use `plain_desire_tai` + `g_desu` instead
+- [ ] Every な-adjective glossary entry used with `attributive_na` or `polite_adj` has BOTH `gtype: "na-adjective"` AND `verb_class: "na_adj"` — either field alone is insufficient
 - [ ] No structural grammar pattern (～ている, ～てください, ～たり～たりする, ～ましょう, etc.) appears in `jp` text before its constituent form is available
 - [ ] Active-window grammar reinforcement minimum counts are met (count tagged forms across conversations + readings; see [Grammar Reinforcement Requirements](#grammar-reinforcement-requirements))
 - [ ] (N4+ lessons) Exactly 3 drill sections are present in order: Drill 1 Kanji Readings, Drill 2 Vocabulary, Drill 3 Grammar & Forms
@@ -2131,6 +2163,23 @@ Verb classes: `godan`, `ichidan`, `irr_suru`, `irr_kuru`
 
 Adjective gtypes: `i_adj`, `na_adj`
 
+**na-adjective entries require TWO fields — both are mandatory:**
+
+```json
+{
+  "id": "v_kirei",
+  "surface": "きれい",
+  "meaning": "pretty / clean",
+  "type": "vocab",
+  "gtype": "na-adjective",
+  "verb_class": "na_adj",
+  "lesson_ids": "N5.3",
+  "reading": "きれい"
+}
+```
+
+`gtype: "na-adjective"` controls display and classification. `verb_class: "na_adj"` is the key that activates the `attributive_na` and `polite_adj` conjugation rules. **Either field alone is insufficient.** An entry with only `gtype: "na-adjective"` (no `verb_class`) will silently fail to produce a 〜な chip. Verify both fields whenever adding or editing a な-adjective entry.
+
 ### Output file paths
 
 | Content type | Path pattern |
@@ -2210,6 +2259,12 @@ These are the most frequent errors. All agents should be alert to them.
 47. **い-adjective attributive vs predicate form confusion** — using `polite_adj` for an い-adjective that appears before a noun (attributive position). `polite_adj` means `〜いです` (the adjective IS the predicate). An adjective modifying a noun (長い 一日, 大きい 魚) is in attributive position and takes a **bare string**. The error typically happens when the sentence is polite overall: 「長い 一日でした」→ Agent 2 sees polite Japanese and reaches for `polite_adj`, but `長い` modifies 一日, not the sentence predicate. Same error for な-adjectives: 「大切な こと」requires `attributive_na`, not a bare string. Agent 3 must check whether the adjective precedes a noun or is sentence-final before accepting the form.
 48. **desire_tai / plain_desire_tai conflation** — using `desire_tai` (which represents `〜たいです`, polite) for a casual/plain sentence that ends `〜たい` without です. Example: a casual conversation line `友だちに 送りたいから` is plain desire — the form is `plain_desire_tai`, not `desire_tai`. The test is simple: does the sentence actually end with `です`? If not, the form must be `plain_desire_tai`. This error is almost always found in casual conversations where the agent reached for the more familiar form string without reading the sentence ending.
 49. **Purpose construction tagged as polite_masu** — the masu-stem + に construction (買いに, 食べに, 借りに) has no form string in `conjugation_rules.json`. It must be tagged `form: null`. Tagging it as `polite_masu` is wrong — that form string means the verb IS the sentence predicate in ます form (食べます), not a purpose-direction construction (食べに行く). Agent 3 must recognize masu-stem forms used with に as purpose markers and verify they are tagged `form: null`.
+
+49b. **`form: null` used as a fallback for unknown/missing form strings** — when a plain-form verb appears as a predicate (借金がある) or in a nominalisation (借りるのは), agents fall back to `form: null` because no purpose construction is involved and the needed form string doesn't exist yet in `conjugation_rules.json`. This is wrong: `form: null` is only valid for purpose construction. The correct response is to (a) identify what form string is needed (e.g. `plain_form` for dictionary-form predicates), (b) create that entry in `conjugation_rules.json` if it does not exist, (c) use the proper form string. Agent 3 must reject any `form: null` that is not a purpose construction (verb followed immediately by に).
+
+49c. **`desire_tai` used instead of `plain_desire_tai` + `g_desu`** — `desire_tai` is deprecated. It bundles `たいです` into the chip suffix, making `です` non-tappable as a separate chip. This was an original design error (polite vs plain was the intended distinction, but chip surface scope is the real concern). Always use `plain_desire_tai` + `g_desu` for polite 〜たいです sentences so both chips are independently tappable. Agent 3 must hard-fail any draft containing `"form": "desire_tai"`.
+
+49d. **na-adjective glossary entry missing `verb_class: "na_adj"`** — a な-adjective entry in the glossary has `gtype: "na-adjective"` but no `verb_class: "na_adj"`, or has `gtype: "noun"` entirely. The `attributive_na` conjugation rule only fires for entries with `verb_class: "na_adj"`. Without it, 〜な chips silently fail to render — the word appears as plain text with no chip. The fix is always in the glossary entry itself, not in the content. Verify both `gtype` and `verb_class` for every な-adjective entry.
 50. **Vocabulary used before glossary entry exists** — Agent 2 writes sentences using words (e.g. シャツ, 帰り, 今) and tags them with IDs without first Grep-verifying those IDs exist in the glossary. The draft then passes Agent 2's self-check ("no invented IDs" was interpreted as "no obviously fake IDs") but Agent 3 finds the IDs are missing. The correct process is: identify every content word needed for the lesson, Grep-verify each ID exists, and add any missing entries to the glossary **before** writing content that uses them. If Agent 2 discovers a missing entry mid-draft, it must stop, flag the gap in the CB Checklist, and either add the entry or restructure the sentence — never proceed with an unverified ID.
 50b. **Adding glossary entries to accommodate a lesson refresh** — when rewriting an existing lesson, the agent finds that the original content uses vocabulary with no glossary entry (e.g. 公園, さん歩) and responds by creating new glossary entries to make the IDs valid. This is wrong: the absence of a glossary entry during a refresh proves the word has not been introduced in the curriculum. Adding it would be expanding the curriculum disguised as a bug fix. During refreshes, **absent glossary entry = out-of-scope = remove and replace with available vocab**. The Unregistered Word Report escalation path is for new content creation only — it does not apply to refreshes. See [Lesson Refresh / Rewrite Guidelines](#lesson-refresh--rewrite-guidelines).
 51. **(Grammar) New conjugation form has no `conjugation_rules.json` entry** — A grammar lesson teaches a new form (e.g. `potential`, `passive`, `conditional_tara`) but the form string has no top-level key in `conjugation_rules.json`. Agent 2 cannot use it in `terms` arrays (no valid form string exists), and if it guesses a string anyway it will silently fail — Agent 3's "valid key in conjugation_rules.json" check will reject it. The form must be added to `conjugation_rules.json` with complete godan, ichidan, and irregular rules, and the correct `introducedIn` field, before Agent 2 can proceed. This is an Agent 1 scoping failure: the conjugation form audit step must catch it before the brief reaches Agent 2.
@@ -2219,9 +2274,21 @@ These are the most frequent errors. All agents should be alert to them.
 52. **(Grammar) Wrong field names on `annotatedExample` or `grammarComparison`** — these sections silently render empty when the wrong field names are used. There is no error message; the section simply shows nothing. The renderer ignores unrecognised fields. **`annotatedExample` must use `examples[]`** (array of `{context?, parts[], en, note?}` objects) — never `sentence`, `translation`, or a top-level `parts[]`. **`grammarComparison` must use `items[]`** (array of `{label, color, points[], example?}`) — never `itemA`/`itemB`. Agent 2 must verify these field names against the Grammar JSON schema in the Content Types section before submitting. Agent 3 must check that `annotatedExample` sections have an `examples` array (not a `parts` array) and that `grammarComparison` sections have an `items` array (not `itemA`/`itemB`). A section with the wrong schema is a **hard fail** equivalent to a missing required field.
 52. **(Grammar) `fillSlot` items using `sentence` instead of `before`/`after`** — the `fillSlot` renderer splits the sentence display using `item.before` and `item.after` strings. Using a `sentence` field with `___` as the blank placeholder is the wrong schema — the renderer will render `before` as undefined (empty) and ignore the rest. **Always pre-split each item into `before` (text before the blank) and `after` (text after the blank).** Example: `"sentence": "野菜___が好きです"` must become `"before": "野菜"` and `"after": "が好きです"`. This is the same class of silent-failure as wrong `annotatedExample` field names — no error, just empty/broken UI.
 
+52b. **(Grammar) `grammarRule.pattern[]` chips using `role`/`gloss` instead of `color`/`label`** — pattern chips (the colored formula bar at the top of a grammarRule section) require `color` and `label` fields. The fields `role` and `gloss` belong to example `parts[]` only. Using `role` instead of `color` means `GRAMMAR_COLORS[undefined]` returns `undefined`, which falls back to `'#888'` grey — every chip renders grey regardless of intended color. Using `gloss` instead of `label` means `esc(chip.label)` is called on `undefined`, producing an empty string — every chip shows no text label. The rendered result is a row of identically-grey silent chips. This is a **hard fail** — it makes the entire lesson's grammar formula visually useless. Agent 2 must use `color`/`label`/`text` on every pattern chip. Agent 3 must verify that no pattern chip has a `role` or `gloss` field.
+
+52c. **(Grammar) `meta.particles[]` using particle IDs instead of character strings** — `meta.particles` controls which terms get yellow/gold particle-focus highlighting in conversation lines. The renderer compares `span.textContent === p` for each entry `p` in the array. If the entry is `"p_noni"` (an ID string), it will never equal the actual Japanese text `"のに"` in a span — zero particles are highlighted, the yellow overlay never appears. **All `meta.particles` entries must be the actual Japanese character strings** (e.g. `["のに", "でも", "し"]`, not `["p_noni", "p_demo_but", "p_shi"]`). To find the correct character string for a particle ID, look it up in `shared/particles.json` — the `particle` field contains the character string. This failure is silent: no error, just no highlighting, making it hard to diagnose. Agent 2 must write character strings. Agent 3 must verify each `meta.particles` entry is Japanese text, not an ID.
+
+52d. **(Grammar) `sentenceTransform` items missing `choices[]` — blank screen crash** — `renderSentenceTransform()` calls `[...item.choices].sort(...)` to build the multiple-choice UI. If `choices` is absent, this throws a TypeError (`Cannot spread non-iterable undefined`). The renderer clears the body element BEFORE rendering, so the crash leaves a completely blank screen — the user sees nothing and cannot navigate forward. Navigation button click handlers are not wrapped in try-catch, so the error propagates silently. **Every `sentenceTransform` item must have a `choices[]` array with 4 strings: the correct `answer` plus 3 plausible distractors.** Good distractors use a different connector (てから vs まえに), a wrong verb form (dictionary form instead of て-form), or a correct answer for a different transformation type. Agent 3 must verify every sentenceTransform item has a 4-element `choices` array.
+
+52e. **(Grammar) Grammar conversation `terms[]` not tagged — no visible highlights or click behavior** — grammar lesson conversations go through the same `processText()` function as lesson content. This generates `.jp-term` (blue, clickable) and `.jp-term-name` (pink, clickable) spans. If `terms[]` is missing, sparse, or entirely empty, the Japanese text renders as plain unformatted text with no visual indication of interactivity. **Grammar `conversation` sections require full `terms[]` tagging using the same rules as lesson JSON** — every kanji-containing word, kana-only vocab word, particle, and copula must be tagged. The fact that content is in a grammar file does not exempt it from the Sentence Token Scan Protocol. Agent 2 must apply the STSP to every grammar conversation `jp` field. Agent 3 must audit grammar conversation terms exactly as it audits lesson conversation terms.
+
 53. **Warmup particle omission** — systematically skipping は、が、を、の、に、で、も and other particles from warmup `terms` arrays under the false assumption that warmup items need less precision or that particles are "obvious." Warmup items require exactly the same completeness as conversation lines. A warmup sentence like 「朝、何を 食べますか。」 needs `p_wo` (を) and `p_ka` (か) just as much as a conversation line does. This is currently the single most common tagging failure across lessons N4.8–N4.10. Agent 2 must apply the STSP to every warmup jp field. Agent 3 must specifically check warmup sections during QA.
 
 54. **Casual question without `p_ka`** — writing a casual question ending with `？` and omitting `p_ka` from `terms`. In casual spoken Japanese, the question particle is sometimes not pronounced and rising intonation is used instead — but `p_ka` must still be tagged in the written content so students can tap the sentence-final region and learn the grammatical function. Any sentence that is a question (whether polite with か or casual with ？) requires `p_ka` in `terms`. Example failure: `"jp": "映画、何時に 始まる？"` with no `p_ka` in terms. Example fix: add `"p_ka"` to the terms array.
+
+55. **Adjacent single-char kana blocking** — when `jp` text contains two consecutive single-char kana terms that are both tagged (e.g. `ことだね` with `g_da` + `p_ne`, or `借りるのは` with `p_no` + `p_wa`), the single-char lookahead regex `(?![\\u3040-\\u30FF])` blocks the leftmost term from matching while the rightmost is still unwrapped hiragana. Fix: list the rightmost single-char kana term **first** in the `terms` array so it is wrapped in a `<span>` before the leftmost is processed. The following character then becomes `<` (not hiragana), which passes the lookahead. Examples: `ことだね` → put `p_ne` before `g_da`; `借りるのは` → put `p_wa` before `p_no`. Agent 2 must scan every `jp` string for adjacent single-char kana pairs and check their order. Agent 3 must flag any adjacent pair where the order is wrong.
+
+56. **Corrupted glossary surface breaking all conjugations** — a glossary entry with a typo in its `surface` field (e.g. `"送くる"` instead of `"送る"`) silently breaks every conjugated form of that verb in the rendered app. The conjugation engine replaces the final kana of `surface` to produce chips like `送りたい` — but if `surface` is `送くる`, the output is `送くりたい`, which does not exist in the `jp` text and produces no chip. Students see a broken interaction and may internalise a word that does not exist. Agent 3 must Grep the full glossary entry for every verb and adjective used in a lesson, read the `surface` field, and confirm it is a valid Japanese word: correct length, no spurious inserted kana, ending in a う-column kana (godan) or る (ichidan). This check is distinct from the ID-existence check — an entry can exist with a valid ID and still have a corrupted surface.
 
 ### Agent 3 failures (caught by Agent 4)
 

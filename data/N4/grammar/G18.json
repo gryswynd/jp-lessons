@@ -8,7 +8,7 @@
     "unlocksAfter": "N4.10",
     "focus": "Linking actions in time, purpose, and sequence using てから, まえに, ながら, ために, and ～たり～たりする",
     "estimatedMinutes": 25,
-    "particles": ["p_kara", "p_nagara"],
+    "particles": ["から", "ながら"],
     "grammarForms": ["te_form", "tari_form", "nagara_form"],
     "icon": "⛓️"
   },
@@ -31,10 +31,9 @@
       "type": "grammarRule",
       "id": "rule_tekara",
       "pattern": [
-        { "text": "[Verb て-form]", "role": "predicate", "gloss": "te-form" },
-        { "text": "から", "role": "connector", "gloss": "from / after" },
-        { "text": "～", "role": "connector", "gloss": "" },
-        { "text": "[Main action]", "role": "predicate", "gloss": "main action" }
+        { "label": "VERB", "color": "predicate", "text": "[Verb て-form]" },
+        { "label": "てから", "color": "connector", "text": "てから" },
+        { "label": "MAIN ACTION", "color": "predicate", "text": "[Main action]" }
       ],
       "meaning": "After doing X, [do Y]",
       "explanation": "てから attaches to the て-form of a verb and means 'after having done X, [Y happens]'. The first action must be fully completed before the second begins. An alternative is [plain past] + あとで, which is slightly more casual and focuses on the elapsed time after the first action. Both patterns appear in the examples below.",
@@ -68,9 +67,9 @@
       "type": "grammarRule",
       "id": "rule_maeni",
       "pattern": [
-        { "text": "[Verb dictionary form]", "role": "predicate", "gloss": "plain (dictionary) form — ALWAYS" },
-        { "text": "まえに", "role": "connector", "gloss": "before" },
-        { "text": "[Main action]", "role": "predicate", "gloss": "" }
+        { "label": "VERB", "color": "predicate", "text": "[Verb dictionary form]" },
+        { "label": "まえに", "color": "connector", "text": "まえに" },
+        { "label": "MAIN ACTION", "color": "predicate", "text": "[Main action]" }
       ],
       "meaning": "Before doing X",
       "explanation": "まえに (前に) means 'before'. When it follows a VERB, the verb ALWAYS stays in the plain (dictionary) form—regardless of the tense of the main sentence. This is the most common error: students want to use て-form or plain past, but まえに always takes the dictionary form. After a NOUN, add の: 食事のまえに (before the meal).",
@@ -103,9 +102,9 @@
       "type": "grammarRule",
       "id": "rule_tame",
       "pattern": [
-        { "text": "[Verb plain form / Noun + の]", "role": "predicate", "gloss": "plain form (verb) OR Noun + の" },
-        { "text": "ために", "role": "connector", "gloss": "in order to / for the purpose of" },
-        { "text": "[Main action]", "role": "predicate", "gloss": "" }
+        { "label": "VERB / NOUN", "color": "predicate", "text": "[Verb plain form / Noun + の]" },
+        { "label": "ために", "color": "connector", "text": "ために" },
+        { "label": "MAIN ACTION", "color": "predicate", "text": "[Main action]" }
       ],
       "meaning": "In order to X / For the purpose of X",
       "explanation": "ために (ため + に) expresses deliberate purpose. After a VERB, use the plain (dictionary) form: 勉強するために (in order to study). After a NOUN, use の: 健康のために (for the sake of health). ために is more formal and explicit than just using the purpose-direction construction (～に行く) — it stresses that the entire main action exists solely for the stated goal.",
@@ -140,9 +139,9 @@
       "type": "grammarRule",
       "id": "rule_nagara",
       "pattern": [
-        { "text": "[Verb ます-stem]", "role": "predicate", "gloss": "ます-stem (い-row form)" },
-        { "text": "ながら", "role": "connector", "gloss": "while doing" },
-        { "text": "[Main action]", "role": "predicate", "gloss": "primary / main action" }
+        { "label": "VERB", "color": "predicate", "text": "[Verb ます-stem]" },
+        { "label": "ながら", "color": "connector", "text": "ながら" },
+        { "label": "MAIN ACTION", "color": "predicate", "text": "[Main action]" }
       ],
       "meaning": "While doing X, [do Y]",
       "explanation": "ながら expresses two actions happening simultaneously by the SAME subject. Attach ながら to the ます-stem (the い-row form before ます) of the SECONDARY (background) action. The main (primary) action comes in the main clause at the end. Formation: godan verbs shift the final う to the い-row; ichidan verbs drop る only.",
@@ -175,11 +174,11 @@
       "type": "grammarRule",
       "id": "rule_tari",
       "pattern": [
-        { "text": "[Verb plain past]", "role": "predicate", "gloss": "plain past (た / だ form)" },
-        { "text": "り", "role": "connector", "gloss": "+り → たり / だり" },
-        { "text": "[Verb plain past]", "role": "predicate", "gloss": "plain past" },
-        { "text": "り", "role": "connector", "gloss": "+り" },
-        { "text": "する", "role": "predicate", "gloss": "する (plain) / します (polite) / した (past)" }
+        { "label": "VERB", "color": "predicate", "text": "[Verb plain past]" },
+        { "label": "+り", "color": "connector", "text": "たり" },
+        { "label": "VERB", "color": "predicate", "text": "[Verb plain past]" },
+        { "label": "+り", "color": "connector", "text": "たり" },
+        { "label": "する", "color": "predicate", "text": "する" }
       ],
       "meaning": "Do things like X and Y (non-exhaustive list)",
       "explanation": "～たり～たりする lists a SAMPLE of actions among several — the list is intentionally incomplete. Formation is identical to the plain past (た-form) but replace た/だ with たり/だり. The same godan euphonic sound changes apply (く→いた→いたり, ぬ→んだ→んだり, etc.). The pattern closes with する (plain) or します / しました (polite present / past).",
@@ -365,7 +364,13 @@
           "targetLabel": "てから",
           "answer": "ご飯を食べてから出かけました。",
           "answerReading": "ごはんをたべてからでかけました。",
-          "hint": "食べる → te-form: 食べて → 食べてから"
+          "hint": "食べる → te-form: 食べて → 食べてから",
+          "choices": [
+            "ご飯を食べてから出かけました。",
+            "ご飯を食べるまえに出かけました。",
+            "ご飯を食べながら出かけました。",
+            "ご飯を食べて、出かけました。"
+          ]
         },
         {
           "given": "家に帰ります。その前に電話します。",
@@ -373,7 +378,13 @@
           "targetLabel": "まえに",
           "answer": "家に帰るまえに電話します。",
           "answerReading": "いえにかえるまえにでんわします。",
-          "hint": "帰る stays in dictionary form before まえに — NOT 帰って or 帰った."
+          "hint": "帰る stays in dictionary form before まえに — NOT 帰って or 帰った.",
+          "choices": [
+            "家に帰るまえに電話します。",
+            "家に帰ってから電話します。",
+            "家に帰ったまえに電話します。",
+            "家に帰りながら電話します。"
+          ]
         },
         {
           "given": "音楽を聞きます。同時に勉強します。",
@@ -381,7 +392,13 @@
           "targetLabel": "ながら",
           "answer": "音楽を聞きながら勉強します。",
           "answerReading": "おんがくをききながらべんきょうします。",
-          "hint": "聞く → masu-stem 聞き + ながら → 聞きながら"
+          "hint": "聞く → masu-stem 聞き + ながら → 聞きながら",
+          "choices": [
+            "音楽を聞きながら勉強します。",
+            "音楽を聞いてから勉強します。",
+            "音楽を聞いてながら勉強します。",
+            "音楽を聞くまえに勉強します。"
+          ]
         },
         {
           "given": "日本語が上手になりたい。だから毎日練習します。",
@@ -389,7 +406,13 @@
           "targetLabel": "ために",
           "answer": "日本語が上手になるために毎日練習します。",
           "answerReading": "にほんごがじょうずになるためにまいにちれんしゅうします。",
-          "hint": "なる stays in plain (dictionary) form before ために."
+          "hint": "なる stays in plain (dictionary) form before ために.",
+          "choices": [
+            "日本語が上手になるために毎日練習します。",
+            "日本語が上手になってから毎日練習します。",
+            "日本語が上手になったために毎日練習します。",
+            "日本語が上手になるまえに毎日練習します。"
+          ]
         },
         {
           "given": "週末は映画を見ます。本も読みます。",
@@ -397,7 +420,13 @@
           "targetLabel": "～たり～たりする",
           "answer": "週末は映画を見たり、本を読んだりします。",
           "answerReading": "しゅうまつはえいがをみたり、ほんをよんだりします。",
-          "hint": "見る → plain past 見た → 見たり ／ 読む → 読んだ → 読んだり ／ closes with します"
+          "hint": "見る → plain past 見た → 見たり ／ 読む → 読んだ → 読んだり ／ closes with します",
+          "choices": [
+            "週末は映画を見たり、本を読んだりします。",
+            "週末は映画を見てから、本を読みます。",
+            "週末は映画を見ながら、本を読みます。",
+            "週末は映画を見たり、本を読みます。"
+          ]
         }
       ]
     },

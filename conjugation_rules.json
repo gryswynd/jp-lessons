@@ -1,5 +1,137 @@
 {
   "contentVersion": "1.0.0",
+  "plain_form": {
+    "label": "Plain Form (Dictionary)",
+    "description": "Verb in its base dictionary form. Used as plain present affirmative predicate and in nominalised constructions (のは、のが).",
+    "introducedIn": "G9",
+    "rules": {
+      "godan": {
+        "type": "identity"
+      },
+      "ichidan": {
+        "type": "identity"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "する",
+        "reading": "する"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来る",
+        "reading": "くる"
+      },
+      "irr_aru": {
+        "type": "replace",
+        "surface": "ある",
+        "reading": "ある"
+      }
+    }
+  },
+  "masu_stem": {
+    "label": "Verb Stem (Purpose Construction)",
+    "description": "The ます-stem form of a verb used in purpose constructions (verb + に) and compound verbs. Equivalent to the polite present without the ます suffix.",
+    "introducedIn": "N5.5",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": ""
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": ""
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "し",
+        "reading": "し"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来",
+        "reading": "き"
+      },
+      "irr_aru": {
+        "type": "replace",
+        "surface": "あり",
+        "reading": "あり"
+      }
+    }
+  },
+  "copula_past": {
+    "label": "Polite Past Copula (Deshita)",
+    "description": "Past tense of the polite copula です → でした.",
+    "introducedIn": "N5.1",
+    "rules": {
+      "copula": {
+        "type": "replace",
+        "surface": "でした",
+        "reading": "でした"
+      }
+    }
+  },
+  "copula_negative": {
+    "label": "Polite Negative Copula (Ja/Dewa arimasen)",
+    "description": "Negative form of the polite copula です → じゃありません / ではありません.",
+    "introducedIn": "N5.1",
+    "rules": {
+      "copula": {
+        "type": "replace",
+        "surface": "じゃありません",
+        "reading": "じゃありません"
+      }
+    }
+  },
+  "copula_past_negative": {
+    "label": "Polite Past Negative Copula (Ja/Dewa arimasen deshita)",
+    "description": "Past negative form of the polite copula です → じゃありませんでした.",
+    "introducedIn": "N5.1",
+    "rules": {
+      "copula": {
+        "type": "replace",
+        "surface": "じゃありませんでした",
+        "reading": "じゃありませんでした"
+      }
+    }
+  },
+  "da_past": {
+    "label": "Plain Past Copula (Datta)",
+    "description": "Past tense of the plain copula だ → だった.",
+    "introducedIn": "G9",
+    "rules": {
+      "copula": {
+        "type": "replace",
+        "surface": "だった",
+        "reading": "だった"
+      }
+    }
+  },
+  "da_negative": {
+    "label": "Plain Negative Copula (Ja nai)",
+    "description": "Negative form of the plain copula だ → じゃない / ではない.",
+    "introducedIn": "G9",
+    "rules": {
+      "copula": {
+        "type": "replace",
+        "surface": "じゃない",
+        "reading": "じゃない"
+      }
+    }
+  },
+  "da_past_negative": {
+    "label": "Plain Past Negative Copula (Ja nakatta)",
+    "description": "Past negative form of the plain copula だ → じゃなかった / ではなかった.",
+    "introducedIn": "G9",
+    "rules": {
+      "copula": {
+        "type": "replace",
+        "surface": "じゃなかった",
+        "reading": "じゃなかった"
+      }
+    }
+  },
   "polite_masu": {
     "label": "Polite (Masu-Form)",
     "description": "Standard polite present/future affirmative.",

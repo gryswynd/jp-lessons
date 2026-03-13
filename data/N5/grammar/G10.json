@@ -8,8 +8,16 @@
     "unlocksAfter": "N5.9",
     "focus": "The pivotal transition to plain-form speech: forming plain negative and past-negative, connecting clauses with が/けど (but) and から/ので (because), plain commands, and the なんです explanatory form.",
     "estimatedMinutes": 30,
-    "particles": ["p_ga_but", "p_kara_because", "p_kedo"],
-    "grammarForms": ["plain_past", "plain_negative", "plain_past_negative"],
+    "particles": [
+      "が",
+      "から",
+      "けど"
+    ],
+    "grammarForms": [
+      "plain_past",
+      "plain_negative",
+      "plain_past_negative"
+    ],
     "icon": "👋"
   },
   "sections": [
@@ -33,26 +41,52 @@
       "title": "The Four Plain Forms — Complete Verb Chart",
       "description": "Every Japanese verb has four plain forms. You already know the plain present (dictionary form) and plain past (た-form from G7). This lesson adds the plain negative (ない) and plain past negative (なかった).",
       "tableType": "conjugation",
-      "headers": ["Form", "食べる (RU-verb)", "飲む (U-verb)", "する (irregular)", "くる (irregular)"],
+      "headers": [
+        "Form",
+        "食べる (RU-verb)",
+        "飲む (U-verb)",
+        "する (irregular)",
+        "くる (irregular)"
+      ],
       "rows": [
         {
           "label": "Plain Present (dictionary)",
-          "cells": ["食べる", "飲む", "する", "くる"],
+          "cells": [
+            "食べる",
+            "飲む",
+            "する",
+            "くる"
+          ],
           "meaning": "do / will do"
         },
         {
           "label": "Plain Past (G7 た-form)",
-          "cells": ["食べた", "飲んだ", "した", "きた"],
+          "cells": [
+            "食べた",
+            "飲んだ",
+            "した",
+            "きた"
+          ],
           "meaning": "did"
         },
         {
           "label": "★ Plain Negative (ない)",
-          "cells": ["食べない", "飲まない", "しない", "こない"],
+          "cells": [
+            "食べない",
+            "飲まない",
+            "しない",
+            "こない"
+          ],
           "meaning": "don't do"
         },
         {
           "label": "★ Plain Past Negative (なかった)",
-          "cells": ["食べなかった", "飲まなかった", "しなかった", "こなかった"],
+          "cells": [
+            "食べなかった",
+            "飲まなかった",
+            "しなかった",
+            "こなかった"
+          ],
           "meaning": "didn't do"
         }
       ],
@@ -67,10 +101,26 @@
       "type": "grammarRule",
       "id": "rule_plain_negative",
       "pattern": [
-        { "label": "RU-VERB", "color": "verb", "text": "食べる → 食べない" },
-        { "label": "U-VERB", "color": "modifier", "text": "飲む → 飲まない" },
-        { "label": "SPECIAL U", "color": "modifier", "text": "買う → 買わない" },
-        { "label": "IRREGULAR", "color": "predicate", "text": "する→しない / くる→こない / ある→ない" }
+        {
+          "label": "RU-VERB",
+          "color": "verb",
+          "text": "食べる → 食べない"
+        },
+        {
+          "label": "U-VERB",
+          "color": "modifier",
+          "text": "飲む → 飲まない"
+        },
+        {
+          "label": "SPECIAL U",
+          "color": "modifier",
+          "text": "買う → 買わない"
+        },
+        {
+          "label": "IRREGULAR",
+          "color": "predicate",
+          "text": "する→しない / くる→こない / ある→ない"
+        }
       ],
       "meaning": "Plain negative — 'don't do / is not'",
       "explanation": "Plain negative formation follows three rules depending on verb type:\n\n**RU-verbs (ichidan):** Drop る, add ない.\n食べる → 食べない. 来る (ichidan) → actually irregular: こない.\n\n**U-verbs (godan):** Shift the final sound to the あ-column of its row, then add ない.\n飲む → 飲ま+ない = 飲まない (む→ま is the あ-column of む's row)\n行く → 行か+ない = 行かない (く→か)\n\n⚠️ **Special exception — う → わ + ない:**\nGodan verbs ending in vowel+う shift to わ (NOT to あ).\n買う → 買わない (not 買あない). 言う → 言わない.\n\n**Irregulars (memorize):**\nする → しない\nくる → こない\nある → ない ⚠ The plain negative of ある is simply ない — not あらない.",
@@ -83,27 +133,63 @@
       "examples": [
         {
           "parts": [
-            { "text": "コーヒーを", "role": "modifier", "gloss": "coffee (object)" },
-            { "text": "飲ま", "role": "verb", "gloss": "drink (あ-col shift)—" },
-            { "text": "ない。", "role": "predicate", "gloss": "don't" }
+            {
+              "text": "コーヒーを",
+              "role": "modifier",
+              "gloss": "coffee (object)"
+            },
+            {
+              "text": "飲ま",
+              "role": "verb",
+              "gloss": "drink (あ-col shift)—"
+            },
+            {
+              "text": "ない。",
+              "role": "predicate",
+              "gloss": "don't"
+            }
           ],
           "en": "I don't drink coffee.",
           "breakdown": "飲む (godan む): む → ま (あ-column) + ない = 飲まない."
         },
         {
           "parts": [
-            { "text": "カレーを", "role": "modifier", "gloss": "curry (object)" },
-            { "text": "買わ", "role": "verb", "gloss": "buy (special う)—" },
-            { "text": "ない。", "role": "predicate", "gloss": "don't" }
+            {
+              "text": "カレーを",
+              "role": "modifier",
+              "gloss": "curry (object)"
+            },
+            {
+              "text": "買わ",
+              "role": "verb",
+              "gloss": "buy (special う)—"
+            },
+            {
+              "text": "ない。",
+              "role": "predicate",
+              "gloss": "don't"
+            }
           ],
           "en": "I don't buy curry.",
           "breakdown": "買う (godan う): う → わ (special exception) + ない = 買わない. Never 買あない."
         },
         {
           "parts": [
-            { "text": "コンビニに", "role": "modifier", "gloss": "at the convenience store" },
-            { "text": "カレーが", "role": "topic", "gloss": "curry (subject)" },
-            { "text": "ない。", "role": "predicate", "gloss": "does not exist" }
+            {
+              "text": "コンビニに",
+              "role": "modifier",
+              "gloss": "at the convenience store"
+            },
+            {
+              "text": "カレーが",
+              "role": "topic",
+              "gloss": "curry (subject)"
+            },
+            {
+              "text": "ない。",
+              "role": "predicate",
+              "gloss": "does not exist"
+            }
           ],
           "en": "There is no curry at the convenience store.",
           "breakdown": "ある → ない (fully irregular). The negative of ある (there is) is just ない (there isn't) — not あらない."
@@ -125,9 +211,21 @@
           ],
           "example": {
             "parts": [
-              { "text": "食べ", "role": "verb", "gloss": "eat—" },
-              { "text": "ません", "role": "predicate", "gloss": "polite negative" },
-              { "text": " → food は 食べません", "role": "modifier", "gloss": "formal: I don't eat..." }
+              {
+                "text": "食べ",
+                "role": "verb",
+                "gloss": "eat—"
+              },
+              {
+                "text": "ません",
+                "role": "predicate",
+                "gloss": "polite negative"
+              },
+              {
+                "text": " → food は 食べません",
+                "role": "modifier",
+                "gloss": "formal: I don't eat..."
+              }
             ],
             "en": "食べません (polite) — I don't eat."
           }
@@ -143,10 +241,26 @@
           ],
           "example": {
             "parts": [
-              { "text": "食べ", "role": "verb", "gloss": "eat—" },
-              { "text": "ない", "role": "predicate", "gloss": "plain negative" },
-              { "text": " / 食べ", "role": "verb", "gloss": "eat—" },
-              { "text": "なかった", "role": "predicate", "gloss": "plain past neg" }
+              {
+                "text": "食べ",
+                "role": "verb",
+                "gloss": "eat—"
+              },
+              {
+                "text": "ない",
+                "role": "predicate",
+                "gloss": "plain negative"
+              },
+              {
+                "text": " / 食べ",
+                "role": "verb",
+                "gloss": "eat—"
+              },
+              {
+                "text": "なかった",
+                "role": "predicate",
+                "gloss": "plain past neg"
+              }
             ],
             "en": "食べない (plain) / 食べなかった (plain past neg)"
           }
@@ -157,9 +271,21 @@
       "type": "grammarRule",
       "id": "rule_ga_kedo",
       "pattern": [
-        { "label": "CLAUSE A", "color": "modifier", "text": "行きたいです" },
-        { "label": "+ が (formal)", "color": "predicate", "text": "行きたいですが、…" },
-        { "label": "+ けど (casual)", "color": "modifier", "text": "行きたいけど、…" }
+        {
+          "label": "CLAUSE A",
+          "color": "modifier",
+          "text": "行きたいです"
+        },
+        {
+          "label": "+ が (formal)",
+          "color": "predicate",
+          "text": "行きたいですが、…"
+        },
+        {
+          "label": "+ けど (casual)",
+          "color": "modifier",
+          "text": "行きたいけど、…"
+        }
       ],
       "meaning": "が / けど — 'but / however' (clause connector)",
       "explanation": "が and けど both mean 'but' when connecting two clauses with a contrasting or softening relationship. They differ in register:\n\n**が (formal/neutral):** Attaches directly to the end of a clause in polite or plain form. Common in formal speech, writing, and polite conversation.\n行きたいですが、お金がありません。(I want to go, but I have no money.)\n\n**けど / けれど (casual/softer):** The informal equivalent of が. Attaches to plain form. Common in conversation with friends and family. けれど is slightly more formal than けど.\n行きたいけど、お金がない。(I want to go but I have no money.) — casual\n\n⚠️ **Important: do not confuse clause-linking が with subject-marker が (G2).** They use the same particle but have completely different functions.\n- Subject marker: カレーが おいしい (curry is delicious) — が marks the subject\n- Clause connector: 行きたいですが、… (I want to go, but…) — が links two clauses mid-sentence",
@@ -172,18 +298,42 @@
       "examples": [
         {
           "parts": [
-            { "text": "カレーは", "role": "topic", "gloss": "curry (topic)" },
-            { "text": "おいしいですが、", "role": "modifier", "gloss": "is delicious but" },
-            { "text": "高いです。", "role": "predicate", "gloss": "is expensive" }
+            {
+              "text": "カレーは",
+              "role": "topic",
+              "gloss": "curry (topic)"
+            },
+            {
+              "text": "おいしいですが、",
+              "role": "modifier",
+              "gloss": "is delicious but"
+            },
+            {
+              "text": "高いです。",
+              "role": "predicate",
+              "gloss": "is expensive"
+            }
           ],
           "en": "Curry is delicious, but it is expensive.",
           "breakdown": "Polite form + が: おいしいです + が + 高いです. Formal register — appropriate with teachers, in shops, etc."
         },
         {
           "parts": [
-            { "text": "カレーは", "role": "topic", "gloss": "curry (topic)" },
-            { "text": "おいしいけど、", "role": "modifier", "gloss": "delicious but" },
-            { "text": "高い。", "role": "predicate", "gloss": "expensive" }
+            {
+              "text": "カレーは",
+              "role": "topic",
+              "gloss": "curry (topic)"
+            },
+            {
+              "text": "おいしいけど、",
+              "role": "modifier",
+              "gloss": "delicious but"
+            },
+            {
+              "text": "高い。",
+              "role": "predicate",
+              "gloss": "expensive"
+            }
           ],
           "en": "Curry is delicious, but it's expensive. (casual)",
           "breakdown": "Plain form + けど: おいしい (plain) + けど + 高い (plain). Casual register — appropriate with friends."
@@ -194,8 +344,16 @@
       "type": "grammarRule",
       "id": "rule_kara_node",
       "pattern": [
-        { "label": "REASON CLAUSE", "color": "modifier", "text": "おいしいから / おいしいので" },
-        { "label": "+ MAIN CLAUSE", "color": "predicate", "text": "よく 食べます。" }
+        {
+          "label": "REASON CLAUSE",
+          "color": "modifier",
+          "text": "おいしいから / おいしいので"
+        },
+        {
+          "label": "+ MAIN CLAUSE",
+          "color": "predicate",
+          "text": "よく 食べます。"
+        }
       ],
       "meaning": "から / ので — 'because / since' (reason connector)",
       "explanation": "Both から and ので mean 'because' and connect a reason clause to a main clause. In Japanese, the reason clause comes FIRST.\n\n**から (direct/personal):** Attaches to plain or polite form. Common in both casual and polite speech. Presents the reason as the speaker's personal interpretation.\nカレーが おいしいから、よく 食べます。(Because curry is delicious, I often eat it.)\nカレーが おいしいですから、よく 食べます。(polite form + から)\n\n**ので (soft/objective):** Attaches to plain form before ので. For nouns and な-adjectives, insert な before ので. More formal, objective, and indirect than から. Preferred in writing and polite speech when the reason is a shared/natural fact.\nカレーが おいしいので、よく 食べます。(same meaning, softer tone)\n\n⚠️ **Note on から:** You already know から as a starting-point particle (G3): 東京から = 'from Tokyo'. This is a different usage — the same particle word, but working as a clause connector meaning 'because'. Context always makes the meaning clear.",
@@ -209,19 +367,47 @@
       "examples": [
         {
           "parts": [
-            { "text": "カレーが", "role": "topic", "gloss": "curry (subject)" },
-            { "text": "おいしいから、", "role": "modifier", "gloss": "because delicious" },
-            { "text": "よく", "role": "modifier", "gloss": "often" },
-            { "text": "食べます。", "role": "predicate", "gloss": "eat (polite)" }
+            {
+              "text": "カレーが",
+              "role": "topic",
+              "gloss": "curry (subject)"
+            },
+            {
+              "text": "おいしいから、",
+              "role": "modifier",
+              "gloss": "because delicious"
+            },
+            {
+              "text": "よく",
+              "role": "modifier",
+              "gloss": "often"
+            },
+            {
+              "text": "食べます。",
+              "role": "predicate",
+              "gloss": "eat (polite)"
+            }
           ],
           "en": "Because curry is delicious, I often eat it.",
           "breakdown": "Plain adj (おいしい) + から + main clause. Reason comes first. から is direct and natural."
         },
         {
           "parts": [
-            { "text": "コンビニが", "role": "topic", "gloss": "convenience store (subject)" },
-            { "text": "ありますので、", "role": "modifier", "gloss": "because there is one (formal)" },
-            { "text": "大丈夫です。", "role": "predicate", "gloss": "it's fine" }
+            {
+              "text": "コンビニが",
+              "role": "topic",
+              "gloss": "convenience store (subject)"
+            },
+            {
+              "text": "ありますので、",
+              "role": "modifier",
+              "gloss": "because there is one (formal)"
+            },
+            {
+              "text": "大丈夫です。",
+              "role": "predicate",
+              "gloss": "it's fine"
+            }
           ],
           "en": "Since there is a convenience store, it is fine.",
           "breakdown": "Polite form (あります) + ので. Softer and more formal than から. Used when the reason is a natural/given fact."
@@ -243,8 +429,16 @@
           ],
           "example": {
             "parts": [
-              { "text": "高いから、", "role": "modifier", "gloss": "because it's expensive" },
-              { "text": "買いません。", "role": "predicate", "gloss": "won't buy (polite)" }
+              {
+                "text": "高いから、",
+                "role": "modifier",
+                "gloss": "because it's expensive"
+              },
+              {
+                "text": "買いません。",
+                "role": "predicate",
+                "gloss": "won't buy (polite)"
+              }
             ],
             "en": "Because it's expensive, I won't buy it."
           }
@@ -260,8 +454,16 @@
           ],
           "example": {
             "parts": [
-              { "text": "高いので、", "role": "modifier", "gloss": "since it is expensive (soft)" },
-              { "text": "買いません。", "role": "predicate", "gloss": "won't buy (polite)" }
+              {
+                "text": "高いので、",
+                "role": "modifier",
+                "gloss": "since it is expensive (soft)"
+              },
+              {
+                "text": "買いません。",
+                "role": "predicate",
+                "gloss": "won't buy (polite)"
+              }
             ],
             "en": "Since it's expensive, I won't buy it. (softer)"
           }
@@ -272,9 +474,21 @@
       "type": "grammarRule",
       "id": "rule_commands",
       "pattern": [
-        { "label": "RU-VERB COMMAND", "color": "verb", "text": "食べろ！ (Eat!)" },
-        { "label": "U-VERB COMMAND", "color": "verb", "text": "行け！ (Go!)" },
-        { "label": "PROHIBITION", "color": "predicate", "text": "食べるな！ (Don't eat!)" }
+        {
+          "label": "RU-VERB COMMAND",
+          "color": "verb",
+          "text": "食べろ！ (Eat!)"
+        },
+        {
+          "label": "U-VERB COMMAND",
+          "color": "verb",
+          "text": "行け！ (Go!)"
+        },
+        {
+          "label": "PROHIBITION",
+          "color": "predicate",
+          "text": "食べるな！ (Don't eat!)"
+        }
       ],
       "meaning": "Plain command (～ろ/～え) and plain prohibition (～な) — blunt register",
       "explanation": "Japanese has a plain imperative form for strong, direct commands. These are grammatically correct but extremely blunt and potentially rude.\n\n**Plain commands (～ろ/～え):**\n- RU-verbs (ichidan): drop る, add ろ → 食べる → 食べろ ('Eat!')\n- U-verbs (godan): shift to え-column → 行く → 行け ('Go!'), 飲む → 飲め ('Drink!')\n- する → しろ. くる → こい (unique irregular form).\n\n**Plain prohibition (dictionary form + な):**\n- Any verb + な = blunt prohibition: 食べるな ('Don't eat!'), 行くな ('Don't go!')\n- ⚠️ This な is different from the sentence-final な expressing mild prohibition; this one is very forceful.\n\n⚠️ **REGISTER WARNING — These forms sound harsh or rude in most situations.** Use them only:\n- In emergencies ('Stop!' 止まれ！)\n- In anime/manga or between very close friends joking\n- When imitating a drill sergeant or authority figure\n- In set expressions (e.g., 気をつけろ = 'Be careful!')\n\n**Polite equivalents:** Use ～てください (G7) for requests, and ～ないでください (G7) for prohibitions in everyday speech.",
@@ -287,15 +501,27 @@
       "examples": [
         {
           "parts": [
-            { "text": "早く", "role": "modifier", "gloss": "quickly" },
-            { "text": "食べろ！", "role": "predicate", "gloss": "Eat! (blunt command)" }
+            {
+              "text": "早く",
+              "role": "modifier",
+              "gloss": "quickly"
+            },
+            {
+              "text": "食べろ！",
+              "role": "predicate",
+              "gloss": "Eat! (blunt command)"
+            }
           ],
           "en": "Eat quickly! (blunt — e.g., shouted in an anime scene)",
           "breakdown": "食べる (ichidan): drop る → 食べ + ろ = 食べろ. Extremely direct — only use in appropriate contexts."
         },
         {
           "parts": [
-            { "text": "走るな！", "role": "predicate", "gloss": "Don't run! (blunt prohibition)" }
+            {
+              "text": "走るな！",
+              "role": "predicate",
+              "gloss": "Don't run! (blunt prohibition)"
+            }
           ],
           "en": "Don't run! (blunt — e.g., emergency warning)",
           "breakdown": "走る (dictionary form) + な = prohibition. Much stronger than 走らないでください."
@@ -306,8 +532,16 @@
       "type": "grammarRule",
       "id": "rule_ndesu",
       "pattern": [
-        { "label": "PLAIN FORM", "color": "modifier", "text": "おいしい / 行く / 先生だ" },
-        { "label": "+ のです", "color": "predicate", "text": "おいしいんです / 行くんです / 先生なんです" }
+        {
+          "label": "PLAIN FORM",
+          "color": "modifier",
+          "text": "おいしい / 行く / 先生だ"
+        },
+        {
+          "label": "+ のです",
+          "color": "predicate",
+          "text": "おいしいんです / 行くんです / 先生なんです"
+        }
       ],
       "meaning": "のです / なんです — the explanatory / emphasis form",
       "explanation": "のです (spoken/casual: んです) adds an explanatory or emphatic nuance. It signals that the speaker is providing a reason, explanation, or context — or asking for one.\n\n**Formation:**\n- Verb (plain form) + のです → 行くのです / 行くんです (I'm going, you see)\n- い-adjective (plain form) + のです → おいしいんです (It's delicious — that's why!)\n- Noun / な-adjective: insert な before のです → 先生なんです (The thing is, he's a teacher)\n\n**Contracted form:** のです → んです (common in speech). のです is more formal/written.\n\n**Uses:**\n1. **Explaining a reason:** どうして 外食を しませんか。— お金が ないんです。(Why won't you eat out? — The thing is, I have no money.)\n2. **Seeking an explanation (question):** どうして 行かないんですか。(Why is it that you're not going?)\n3. **Emphasizing a fact:** 本当においしいんです！(It really is delicious, I'm telling you!)\n4. **Softening a request:** 行きたいんですが、いいですか。(The thing is, I'd like to go — is that okay?)",
@@ -320,17 +554,37 @@
       "examples": [
         {
           "parts": [
-            { "text": "お金が", "role": "topic", "gloss": "money (subject)" },
-            { "text": "ないんです。", "role": "predicate", "gloss": "don't have (explanatory)" }
+            {
+              "text": "お金が",
+              "role": "topic",
+              "gloss": "money (subject)"
+            },
+            {
+              "text": "ないんです。",
+              "role": "predicate",
+              "gloss": "don't have (explanatory)"
+            }
           ],
           "en": "The thing is, I don't have money.",
           "breakdown": "ない (plain negative of ある) + んです. This explains WHY something is happening or not happening."
         },
         {
           "parts": [
-            { "text": "外食を", "role": "modifier", "gloss": "eating out (object)" },
-            { "text": "したいんですが、", "role": "modifier", "gloss": "I want to do but (explanatory)" },
-            { "text": "いっしょに 行きませんか。", "role": "predicate", "gloss": "shall we go together?" }
+            {
+              "text": "外食を",
+              "role": "modifier",
+              "gloss": "eating out (object)"
+            },
+            {
+              "text": "したいんですが、",
+              "role": "modifier",
+              "gloss": "I want to do but (explanatory)"
+            },
+            {
+              "text": "いっしょに 行きませんか。",
+              "role": "predicate",
+              "gloss": "shall we go together?"
+            }
           ],
           "en": "The thing is, I want to eat out — shall we go together?",
           "breakdown": "たいんですが trails off, inviting the listener to respond. A very natural way to make a polite suggestion or request."
@@ -352,7 +606,10 @@
             "v_issho",
             "v_gaishoku",
             "p_wo",
-            { "id": "v_suru", "form": "polite_negative" },
+            {
+              "id": "v_suru",
+              "form": "polite_negative"
+            },
             "p_ka"
           ]
         },
@@ -361,11 +618,18 @@
           "jp": "行きたいですが、お金が ありません。",
           "en": "I want to go, but I have no money.",
           "terms": [
-            { "id": "v_iku", "form": "desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
             "p_ga_but",
             "v_okane",
             "p_ga",
-            { "id": "v_aru", "form": "polite_negative" }
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -375,11 +639,17 @@
           "terms": [
             "v_konbini",
             "p_e",
-            { "id": "v_iku", "form": "polite_negative" },
+            {
+              "id": "v_iku",
+              "form": "polite_negative"
+            },
             "p_ka",
             "v_karee",
             "p_mo",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_yo"
           ]
         },
@@ -390,11 +660,17 @@
           "terms": [
             "v_karee",
             "p_wa",
-            { "id": "v_oishii", "form": "polite_adj" },
+            {
+              "id": "v_oishii",
+              "form": "polite_adj"
+            },
             "p_kara_because",
             "v_konbini",
             "p_ga",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne"
           ]
         },
@@ -406,7 +682,10 @@
             "p_soudesu",
             "p_ne",
             "v_issho",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -423,7 +702,10 @@
           "terms": [
             "v_kyou",
             "v_gaishoku",
-            { "id": "v_suru", "form": "plain_negative" }
+            {
+              "id": "v_suru",
+              "form": "plain_negative"
+            }
           ]
         },
         {
@@ -431,11 +713,18 @@
           "jp": "行きたいですけど、お金が ない。",
           "en": "I want to go, but I have no money.",
           "terms": [
-            { "id": "v_iku", "form": "desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
             "p_kedo",
             "v_okane",
             "p_ga",
-            { "id": "v_aru", "form": "plain_negative" }
+            {
+              "id": "v_aru",
+              "form": "plain_negative"
+            }
           ]
         },
         {
@@ -445,7 +734,10 @@
           "terms": [
             "v_konbini",
             "p_ni",
-            { "id": "v_iku", "form": "plain_negative" }
+            {
+              "id": "v_iku",
+              "form": "plain_negative"
+            }
           ]
         },
         {
@@ -468,7 +760,10 @@
           "terms": [
             "v_oishii",
             "p_kara_because",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -494,7 +789,12 @@
           "answer": "食べない",
           "answerReading": "たべない",
           "hint": "RU-verb: drop る, add ない → 食べ + ない",
-          "choices": ["食べない", "食べます", "食べて", "食べた"]
+          "choices": [
+            "食べない",
+            "食べます",
+            "食べて",
+            "食べた"
+          ]
         },
         {
           "verb": "飲む",
@@ -504,7 +804,12 @@
           "answer": "飲まない",
           "answerReading": "のまない",
           "hint": "U-verb む: shift to あ-column (む→ま), add ない → 飲ま + ない",
-          "choices": ["飲まない", "飲みない", "飲んない", "飲むない"]
+          "choices": [
+            "飲まない",
+            "飲みない",
+            "飲んない",
+            "飲むない"
+          ]
         },
         {
           "verb": "行く",
@@ -514,7 +819,12 @@
           "answer": "行かない",
           "answerReading": "いかない",
           "hint": "U-verb く: shift to あ-column (く→か), add ない → 行か + ない",
-          "choices": ["行かない", "行きない", "行いて", "行くない"]
+          "choices": [
+            "行かない",
+            "行きない",
+            "行いて",
+            "行くない"
+          ]
         },
         {
           "verb": "買う",
@@ -524,7 +834,12 @@
           "answer": "買わない",
           "answerReading": "かわない",
           "hint": "U-verb う (special): う → わ + ない. Never 買あない!",
-          "choices": ["買わない", "買いない", "買うない", "買あない"]
+          "choices": [
+            "買わない",
+            "買いない",
+            "買うない",
+            "買あない"
+          ]
         },
         {
           "verb": "する",
@@ -534,7 +849,12 @@
           "answer": "しない",
           "answerReading": "しない",
           "hint": "する is irregular: する → しない (memorize)",
-          "choices": ["しない", "すない", "せない", "するない"]
+          "choices": [
+            "しない",
+            "すない",
+            "せない",
+            "するない"
+          ]
         },
         {
           "verb": "くる",
@@ -544,7 +864,12 @@
           "answer": "こない",
           "answerReading": "こない",
           "hint": "くる is irregular: くる → こない (memorize)",
-          "choices": ["こない", "くない", "きない", "くるない"]
+          "choices": [
+            "こない",
+            "くない",
+            "きない",
+            "くるない"
+          ]
         },
         {
           "verb": "ある",
@@ -554,7 +879,12 @@
           "answer": "ない",
           "answerReading": "ない",
           "hint": "ある is fully irregular: ある → ない (not あらない!)",
-          "choices": ["ない", "あらない", "ありない", "あらなかった"]
+          "choices": [
+            "ない",
+            "あらない",
+            "ありない",
+            "あらなかった"
+          ]
         }
       ]
     },
@@ -568,21 +898,36 @@
           "givenLabel": "Polite Present",
           "targetLabel": "Plain Present (dictionary form)",
           "answer": "食べる",
-          "choices": ["食べる", "食べない", "食べた", "食べます"]
+          "choices": [
+            "食べる",
+            "食べない",
+            "食べた",
+            "食べます"
+          ]
         },
         {
           "given": "行きません",
           "givenLabel": "Polite Negative",
           "targetLabel": "Plain Negative",
           "answer": "行かない",
-          "choices": ["行かない", "行きません", "行かなかった", "行かれない"]
+          "choices": [
+            "行かない",
+            "行きません",
+            "行かなかった",
+            "行かれない"
+          ]
         },
         {
           "given": "来ました",
           "givenLabel": "Polite Past",
           "targetLabel": "Plain Past",
           "answer": "来た",
-          "choices": ["来た", "来ます", "来なかった", "来て"]
+          "choices": [
+            "来た",
+            "来ます",
+            "来なかった",
+            "来て"
+          ]
         },
         {
           "given": "カレーは おいしいです。高いです。",
@@ -606,7 +951,12 @@
           "before": "行きたいです",
           "slot": true,
           "after": "、お金が ありません。",
-          "choices": ["が", "けど", "から", "ので"],
+          "choices": [
+            "が",
+            "けど",
+            "から",
+            "ので"
+          ],
           "answer": "が",
           "explanation": "Polite form + が = formal 'but'. The sentence ends in ですが to contrast two polite clauses. けど also means 'but' but is casual. から/ので mean 'because', not 'but'."
         },
@@ -614,7 +964,12 @@
           "before": "カレーが おいしい",
           "slot": true,
           "after": "、よく 食べます。",
-          "choices": ["から", "が", "ので", "けど"],
+          "choices": [
+            "から",
+            "が",
+            "ので",
+            "けど"
+          ],
           "answer": "から",
           "explanation": "Plain adjective (おいしい) + から = 'because it's delicious'. The reason clause comes FIRST in Japanese. から is direct and natural in personal contexts. ので is also 'because' but more formal/objective."
         },
@@ -622,7 +977,12 @@
           "before": "コンビニへ 行きたい",
           "slot": true,
           "after": "、お金が ない。",
-          "choices": ["けど", "が", "から", "ので"],
+          "choices": [
+            "けど",
+            "が",
+            "から",
+            "ので"
+          ],
           "answer": "けど",
           "explanation": "Plain form (行きたい) + けど = casual 'but'. The plain form ending signals casual register — use けど, not formal が. が requires polite forms. から/ので = because."
         },
@@ -630,7 +990,12 @@
           "before": "コーヒーが すきです",
           "slot": true,
           "after": "、よく 飲みます。",
-          "choices": ["から", "が", "けど", "ので"],
+          "choices": [
+            "から",
+            "が",
+            "けど",
+            "ので"
+          ],
           "answer": "から",
           "explanation": "Polite form + から = polite 'because'. The reason (liking coffee) comes before the result (often drinking it). Japanese reason-result order is the reverse of English."
         },
@@ -638,7 +1003,12 @@
           "before": "明日 テストが あります",
           "slot": true,
           "after": "、今日は 外食を しません。",
-          "choices": ["ので", "から", "が", "けど"],
+          "choices": [
+            "ので",
+            "から",
+            "が",
+            "けど"
+          ],
           "answer": "ので",
           "explanation": "Polite form + ので = formal/objective 'because'. ので is preferred when the reason is a natural, shared-understanding fact (having a test is an objective situation). から is also correct but sounds more personal."
         },
@@ -646,7 +1016,12 @@
           "before": "レストランの カレーは おいしいけど",
           "slot": true,
           "after": "、高い。",
-          "choices": ["、", "から", "ので", "が"],
+          "choices": [
+            "、",
+            "から",
+            "ので",
+            "が"
+          ],
           "answer": "、",
           "explanation": "けど already contains the 'but' connector. Nothing additional is needed — just a comma before the contrasting clause. The sentence ends in plain form (高い) confirming casual register throughout."
         }
@@ -660,20 +1035,36 @@
         {
           "kind": "mcq",
           "q": "What is the plain negative of 飲む?",
-          "choices": ["飲まない", "飲みない", "飲んない", "飲みません"],
+          "choices": [
+            "飲まない",
+            "飲みない",
+            "飲んない",
+            "飲みません"
+          ],
           "answer": "飲まない",
           "terms": [
-            { "id": "v_nomu", "form": "plain_negative" }
+            {
+              "id": "v_nomu",
+              "form": "plain_negative"
+            }
           ],
           "explanation": "飲む is a godan (U) verb ending in む. あ-column shift: む → ま + ない = 飲まない. Polite negative is 飲みません (ます-stem + ません), not the same as plain negative."
         },
         {
           "kind": "mcq",
           "q": "What is the plain negative of ある?",
-          "choices": ["ない", "あらない", "ありない", "ありません"],
+          "choices": [
+            "ない",
+            "あらない",
+            "ありない",
+            "ありません"
+          ],
           "answer": "ない",
           "terms": [
-            { "id": "v_aru", "form": "plain_negative" }
+            {
+              "id": "v_aru",
+              "form": "plain_negative"
+            }
           ],
           "explanation": "ある is fully irregular. Its plain negative is ない (there isn't / does not exist). Never あらない — that form does not exist. ありません is the polite negative (not plain)."
         },
@@ -688,11 +1079,18 @@
           ],
           "answer": "行きたいですが、お金が ありません。",
           "terms": [
-            { "id": "v_iku", "form": "desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
             "p_ga_but",
             "v_okane",
             "p_ga",
-            { "id": "v_aru", "form": "polite_negative" }
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            }
           ],
           "explanation": "が attaches directly to the end of the first clause: 行きたいですが. There must be a comma before the second clause. The first clause uses polite form (たいです) — this is the formal register for が."
         },
@@ -712,7 +1110,12 @@
         {
           "kind": "mcq",
           "q": "Which is the blunt plain command form of 行く (Go!)?",
-          "choices": ["行け！", "行きろ！", "行こう！", "行かない！"],
+          "choices": [
+            "行け！",
+            "行きろ！",
+            "行こう！",
+            "行かない！"
+          ],
           "answer": "行け！",
           "terms": [
             "v_iku"
@@ -732,7 +1135,10 @@
           "terms": [
             "v_okane",
             "p_ga",
-            { "id": "v_aru", "form": "plain_negative" }
+            {
+              "id": "v_aru",
+              "form": "plain_negative"
+            }
           ],
           "explanation": "Plain form (ない) + んです = explanatory/emphasis. お金が ないんです = 'The thing is, I have no money.' The plain negative of ある (ない) connects directly to んです without any additional particles."
         }

@@ -8,6 +8,7 @@
       "meaning": "is / am / are (plain copula)",
       "type": "grammar",
       "gtype": "grammar",
+      "verb_class": "copula",
       "lesson_ids": "N5.1",
       "notes": "Plain (informal) copula. Attaches to nouns and な-adjectives in casual speech. Do NOT use after い-adjectives — い-adjectives stand alone in plain speech. Use だ with friends and family; use です in formal situations."
     },
@@ -18,6 +19,7 @@
       "meaning": "is / am / are (polite copula)",
       "type": "grammar",
       "gtype": "grammar",
+      "verb_class": "copula",
       "lesson_ids": "N5.1",
       "notes": "Polite copula. Attaches to nouns and な-adjectives to form polite statements. E.g. がくせいです (I am a student). Question form: ですか."
     },
@@ -1261,6 +1263,16 @@
       "notes": "",
       "lesson_ids": "N5.2",
       "reading": "なんにん"
+    },
+    {
+      "id": "v_nanpun",
+      "surface": "何分",
+      "meaning": "how many minutes",
+      "type": "vocab",
+      "gtype": "noun",
+      "notes": "Question word asking for a duration in minutes. 何 (nan) + 分 (pun/fun). Answer uses the 分 counter.",
+      "lesson_ids": "N4.2",
+      "reading": "なんぷん"
     },
     {
       "id": "v_nanyoubi",
@@ -4742,7 +4754,8 @@
       "surface": "大切",
       "meaning": "important",
       "type": "vocab",
-      "gtype": "noun",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
       "notes": "",
       "lesson_ids": "N4.1",
       "reading": "たいせつ"

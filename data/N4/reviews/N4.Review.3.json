@@ -6,7 +6,21 @@
     "phase": 4,
     "type": "assessment",
     "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 5–6.",
-    "kanji": ["物", "野", "菜", "料", "理", "牛", "肉", "鳥", "同", "味", "暗", "飯", "昼"]
+    "kanji": [
+      "物",
+      "野",
+      "菜",
+      "料",
+      "理",
+      "牛",
+      "肉",
+      "鳥",
+      "同",
+      "味",
+      "暗",
+      "飯",
+      "昼"
+    ]
   },
   "sections": [
     {
@@ -25,7 +39,10 @@
                 "p_sumimasen",
                 "v_yasai",
                 "v_gyuuniku",
-                { "id": "v_aru", "form": "polite_masu" }
+                {
+                  "id": "v_aru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -34,7 +51,10 @@
               "terms": [
                 "v_yasai",
                 "v_soko",
-                { "id": "v_aru", "form": "polite_masu" },
+                {
+                  "id": "v_aru",
+                  "form": "polite_masu"
+                },
                 "v_gyuuniku",
                 "v_asoko"
               ]
@@ -48,18 +68,28 @@
                 "v_gyuuniku",
                 "v_yasai",
                 "v_ryouri",
-                { "id": "v_tsukuru", "form": "desire_tai" }
+                {
+                  "id": "v_tsukuru",
+                  "form": "plain_desire_tai"
+                },
+                "g_desu"
               ]
             },
             {
               "spk": "B",
               "jp": "いい ですね。ここの 食べ物は とても おいしいですよ。どうぞ。",
               "terms": [
-                { "id": "v_ii", "form": "polite_adj" },
+                {
+                  "id": "v_ii",
+                  "form": "polite_adj"
+                },
                 "v_koko",
                 "v_tabemono",
                 "v_totemo",
-                { "id": "v_oishii", "form": "polite_adj" },
+                {
+                  "id": "v_oishii",
+                  "form": "polite_adj"
+                },
                 "p_douzo"
               ]
             }
@@ -87,19 +117,32 @@
                 "v_hiruyasumi",
                 "v_issho",
                 "v_hirugohan",
-                { "id": "v_taberu", "form": null },
-                { "id": "v_iku", "form": "polite_volitional_mashou" }
+                {
+                  "id": "v_taberu",
+                  "form": null
+                },
+                {
+                  "id": "v_iku",
+                  "form": "polite_volitional_mashou"
+                }
               ]
             },
             {
               "spk": "B",
               "jp": "いい ですね。今日は 鳥肉の 料理が 食べたいです。",
               "terms": [
-                { "id": "v_ii", "form": "polite_adj" },
+                {
+                  "id": "v_ii",
+                  "form": "polite_adj"
+                },
                 "v_kyou",
                 "v_toriniku",
                 "v_ryouri",
-                { "id": "v_taberu", "form": "desire_tai" }
+                {
+                  "id": "v_taberu",
+                  "form": "plain_desire_tai"
+                },
+                "g_desu"
               ]
             },
             {
@@ -113,18 +156,27 @@
                 "p_yori",
                 "v_toriniku",
                 "v_aji",
-                { "id": "v_oishii", "form": "polite_adj" }
+                {
+                  "id": "v_oishii",
+                  "form": "polite_adj"
+                }
               ]
             },
             {
               "spk": "B",
               "jp": "わかりました。そのレストランで 昼ご飯を 食べましょう。",
               "terms": [
-                { "id": "v_wakaru", "form": "polite_mashita" },
+                {
+                  "id": "v_wakaru",
+                  "form": "polite_mashita"
+                },
                 "v_sono",
                 "v_resutoran",
                 "v_hirugohan",
-                { "id": "v_taberu", "form": "polite_volitional_mashou" }
+                {
+                  "id": "v_taberu",
+                  "form": "polite_volitional_mashou"
+                }
               ]
             }
           ],
@@ -148,7 +200,10 @@
               "terms": [
                 "v_kyou",
                 "v_hirugohan",
-                { "id": "v_oishii", "form": "plain_past_adj" }
+                {
+                  "id": "v_oishii",
+                  "form": "plain_past_adj"
+                }
               ]
             },
             {
@@ -159,7 +214,10 @@
                 "v_toriniku",
                 "v_ryouri",
                 "v_totemo",
-                { "id": "v_oishii", "form": "plain_past_adj" },
+                {
+                  "id": "v_oishii",
+                  "form": "plain_past_adj"
+                },
                 "p_yo"
               ]
             },
@@ -185,7 +243,10 @@
                 "p_ne",
                 "v_tsugi",
                 "v_issho",
-                { "id": "v_taberu", "form": "plain_volitional" }
+                {
+                  "id": "v_taberu",
+                  "form": "plain_volitional"
+                }
               ]
             }
           ],
@@ -209,39 +270,99 @@
         {
           "kind": "scramble",
           "q": "Tonight Rikizo wants to make a beef and vegetable dish.",
-          "segments": ["りきぞ", "は", "今晩", "牛肉と", "野菜で", "料理を", "作りたいです"],
-          "distractors": ["が", "の", "食べたいです"],
+          "segments": [
+            "りきぞ",
+            "は",
+            "今晩",
+            "牛肉と",
+            "野菜で",
+            "料理を",
+            "作りたいです"
+          ],
+          "distractors": [
+            "が",
+            "の",
+            "食べたいです"
+          ],
           "alts": [
-            ["今晩", "りきぞ", "は", "牛肉と", "野菜で", "料理を", "作りたいです"]
+            [
+              "今晩",
+              "りきぞ",
+              "は",
+              "牛肉と",
+              "野菜で",
+              "料理を",
+              "作りたいです"
+            ]
           ],
           "explanation": "りきぞ + は (topic) + 今晩 + 牛肉と (beef and ~) + 野菜で (using vegetables — <b>で</b> marks the ingredient or means) + 料理を (cuisine as object) + 作りたいです (want to make). 今晩 (tonight) can naturally float sentence-initially. が marks a subject with contrast, not a topic. の links nouns but cannot connect to で here. 食べたいです means 'want to eat,' not 'want to make.'"
         },
         {
           "kind": "scramble",
           "q": "Chicken is more delicious than beef.",
-          "segments": ["鳥肉", "は", "牛肉", "より", "おいしいです"],
-          "distractors": ["が", "まで", "ほど"],
+          "segments": [
+            "鳥肉",
+            "は",
+            "牛肉",
+            "より",
+            "おいしいです"
+          ],
+          "distractors": [
+            "が",
+            "まで",
+            "ほど"
+          ],
           "explanation": "鳥肉 + は (topic) + 牛肉 + より (than — comparison particle marking the lesser item) + おいしいです. The pattern 'A は B より adjective' means 'A is more adjective than B.' <b>より</b> attaches to B, the standard of comparison. まで means 'until/as far as.' ほど is used in the reverse pattern: B ほど adjective ない = 'not as adjective as B.'"
         },
         {
           "kind": "scramble",
           "q": "During the lunch break I ate lunch with Yamakawa.",
-          "segments": ["昼休みに", "やまかわ", "と", "昼ご飯を", "食べました"],
-          "distractors": ["が", "で", "飲みました"],
+          "segments": [
+            "昼休みに",
+            "やまかわ",
+            "と",
+            "昼ご飯を",
+            "食べました"
+          ],
+          "distractors": [
+            "が",
+            "で",
+            "飲みました"
+          ],
           "explanation": "昼休みに (during the lunch break — <b>に</b> marks the time period) + やまかわ + と (together with — と marks a companion for shared actions) + 昼ご飯を (lunch as object) + 食べました. で after a person is wrong — と is the companion particle. が marks やまかわ as the subject, not a companion. 飲みました means 'drank' — you eat (食べる) a meal, not drink it."
         },
         {
           "kind": "scramble",
           "q": "This food and that drink have the same taste.",
-          "segments": ["この", "食べ物と", "その", "飲み物は", "同じ", "味です"],
-          "distractors": ["が", "別の", "買い物は"],
+          "segments": [
+            "この",
+            "食べ物と",
+            "その",
+            "飲み物は",
+            "同じ",
+            "味です"
+          ],
+          "distractors": [
+            "が",
+            "別の",
+            "買い物は"
+          ],
           "explanation": "この (this) + 食べ物と (food and ~) + その (that) + 飲み物は (drink as topic) + 同じ (same — directly precedes nouns WITHOUT な) + 味です. 同じ is the main exception among na-adjectives: you say 同じ味, not 同じな味. 別の means 'another/different' — the opposite of same. 買い物は (shopping as topic) doesn't fit the food-taste context."
         },
         {
           "kind": "scramble",
           "q": "I want to buy food and drinks at the store.",
-          "segments": ["店で", "食べ物と", "飲み物を", "買いたいです"],
-          "distractors": ["に", "から", "作りたいです"],
+          "segments": [
+            "店で",
+            "食べ物と",
+            "飲み物を",
+            "買いたいです"
+          ],
+          "distractors": [
+            "に",
+            "から",
+            "作りたいです"
+          ],
           "explanation": "店で (at the store — <b>で</b> marks location of an action) + 食べ物と (food and ~) + 飲み物を (drinks as object) + 買いたいです (want to buy). に after 店 marks it as a destination of movement (行く, 来る) not a place of action. から means 'from.' 作りたいです means 'want to make,' not 'want to buy.'"
         }
       ]
@@ -259,7 +380,10 @@
             "v_mainichi",
             "v_suupaa",
             "v_kaimono",
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -269,7 +393,10 @@
             "v_kinou",
             "v_yasai",
             "v_gyuuniku",
-            { "id": "v_kau", "form": "polite_mashita" }
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -280,7 +407,10 @@
             "v_gyuuniku",
             "v_yasai",
             "v_ryouri",
-            { "id": "v_tsukuru", "form": "polite_mashita" }
+            {
+              "id": "v_tsukuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -290,7 +420,10 @@
             "v_ryouri",
             "v_aji",
             "v_totemo",
-            { "id": "v_ii", "form": "polite_past_adj" }
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
@@ -301,7 +434,10 @@
             "v_hiruyasumi",
             "v_toriniku",
             "v_ryouri",
-            { "id": "v_taberu", "form": "polite_mashita" }
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -312,7 +448,10 @@
             "v_ryouri",
             "v_gyuuniku",
             "p_yori",
-            { "id": "v_oishii", "form": "polite_past_adj" }
+            {
+              "id": "v_oishii",
+              "form": "polite_past_adj"
+            }
           ]
         }
       ],
@@ -320,12 +459,20 @@
         {
           "q": "私は きのう 何を 買いましたか。",
           "a": "野菜と 牛肉",
-          "choices": ["野菜と 牛肉", "鳥肉と 料理", "買い物と 飲み物", "野菜と 飲み物"],
+          "choices": [
+            "野菜と 牛肉",
+            "鳥肉と 料理",
+            "買い物と 飲み物",
+            "野菜と 飲み物"
+          ],
           "terms": [
             "v_watashi",
             "v_kinou",
             "v_nani",
-            { "id": "v_kau", "form": "polite_mashita" }
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            }
           ],
           "explanation": "私はきのう野菜と牛肉を買いました — 'Yesterday I bought vegetables and beef.' The answer is stated directly in sentence 2 of the passage."
         },
@@ -359,7 +506,10 @@
             "v_ryouri",
             "v_gyuuniku",
             "v_dochira",
-            { "id": "v_oishii", "form": "polite_past_adj" }
+            {
+              "id": "v_oishii",
+              "form": "polite_past_adj"
+            }
           ],
           "explanation": "鳥肉の料理は牛肉よりおいしかったです — 'The chicken dish was more delicious than beef.' より marks 牛肉 as the lesser comparison point, so 鳥肉の料理 is the more delicious option."
         }
@@ -373,56 +523,96 @@
         {
           "kind": "mcq",
           "q": "[牛肉]で 料理を 作ります。",
-          "choices": ["ぎゅうにく", "とりにく", "ぎゅうか", "うしにく"],
+          "choices": [
+            "ぎゅうにく",
+            "とりにく",
+            "ぎゅうか",
+            "うしにく"
+          ],
           "answer": "ぎゅうにく",
           "explanation": "牛肉 (beef) is read as <b>gyuuniku</b>. 牛 (N4.5, cow) on-reading ぎゅう + 肉 (N4.5, meat) reading にく = ぎゅうにく. Contrast with 鳥肉 (とりにく, chicken)."
         },
         {
           "kind": "mcq",
           "q": "[野菜]と 牛肉で 料理を 作ります。",
-          "choices": ["やさい", "のな", "やかい", "えんさい"],
+          "choices": [
+            "やさい",
+            "のな",
+            "やかい",
+            "えんさい"
+          ],
           "answer": "やさい",
           "explanation": "野菜 (vegetables) is read as <b>yasai</b>. 野 (N4.5, field/plains) on-reading や + 菜 (N4.5, vegetable/greens) reading さい = yasai. 野菜 refers to vegetables as a category."
         },
         {
           "kind": "mcq",
           "q": "この [料理]は とても おいしいですよ。",
-          "choices": ["りょうり", "しょうり", "ざいりょう", "りょうか"],
+          "choices": [
+            "りょうり",
+            "しょうり",
+            "ざいりょう",
+            "りょうか"
+          ],
           "answer": "りょうり",
           "explanation": "料理 (cooking / dish) is read as <b>ryouri</b>. 料 (N4.5, materials/fee) on-reading りょう + 理 (N4.5, reason/logic) on-reading り = ryouri. 料理 means a cooked dish or the act of cooking."
         },
         {
           "kind": "mcq",
           "q": "この [物語]が 大好きです。",
-          "choices": ["ものがたり", "ぶつご", "ものかたり", "もつわ"],
+          "choices": [
+            "ものがたり",
+            "ぶつご",
+            "ものかたり",
+            "もつわ"
+          ],
           "answer": "ものがたり",
           "explanation": "物語 (story / tale) is read as <b>monogatari</b>. 物 (N4.5, thing) reads もの + 語 (N5.12, word/language) reads がたり (compound sound change). 物語 literally means 'telling of things' — a story or tale."
         },
         {
           "kind": "mcq",
           "q": "今日は [鳥肉]の 料理が 食べたいです。",
-          "choices": ["とりにく", "ぎゅうにく", "とりこ", "とりがら"],
+          "choices": [
+            "とりにく",
+            "ぎゅうにく",
+            "とりこ",
+            "とりがら"
+          ],
           "answer": "とりにく",
           "explanation": "鳥肉 (chicken meat) is read as <b>toriniku</b>. 鳥 (N4.6, bird) on-reading ちょう / kun-reading とり + 肉 (N4.5, meat) = とりにく. 鳥 alone means a bird; combined with 肉 it specifically refers to chicken as a food ingredient."
         },
         {
           "kind": "mcq",
           "q": "この 料理の [味]は どうですか。",
-          "choices": ["あじ", "み", "ちょうみ", "さじ"],
+          "choices": [
+            "あじ",
+            "み",
+            "ちょうみ",
+            "さじ"
+          ],
           "answer": "あじ",
           "explanation": "味 (taste / flavor) is read as <b>aji</b> in its kun-reading. The on-reading み appears in compounds like 調味 (seasoning). Alone, 味 refers to the flavor of food. 味 (N4.6)."
         },
         {
           "kind": "mcq",
           "q": "[昼ご飯]を 食べましょう。",
-          "choices": ["ひるごはん", "あさごはん", "ひるやすみ", "ばんごはん"],
+          "choices": [
+            "ひるごはん",
+            "あさごはん",
+            "ひるやすみ",
+            "ばんごはん"
+          ],
           "answer": "ひるごはん",
           "explanation": "昼ご飯 (lunch) is read as <b>hirugohan</b>. 昼 (N4.6, noon) + ご飯 (N4.6, rice/meal). Contrast: 朝ご飯 (あさごはん, breakfast) and 晩ご飯 (ばんごはん, dinner). 昼休み (ひるやすみ, lunch break) is a common distractor."
         },
         {
           "kind": "mcq",
           "q": "今朝は [暗い]ですね。",
-          "choices": ["くらい", "あかるい", "くるしい", "くさい"],
+          "choices": [
+            "くらい",
+            "あかるい",
+            "くるしい",
+            "くさい"
+          ],
           "answer": "くらい",
           "explanation": "暗い (dark) is read as <b>kurai</b>. 暗 (N4.6, dark/gloomy) + い (い-adjective marker). Contrast with 明るい (あかるい, bright) from N4.3. Note: くらい as a standalone hiragana word means 'about/approximately' — a different word."
         }
@@ -436,7 +626,12 @@
         {
           "kind": "mcq",
           "q": "昼休みに、友だちと ______を 食べました。",
-          "choices": ["昼ご飯", "晩ご飯", "飲み物", "買い物"],
+          "choices": [
+            "昼ご飯",
+            "晩ご飯",
+            "飲み物",
+            "買い物"
+          ],
           "answer": "昼ご飯",
           "explanation": "昼ご飯 (lunch) fits: eating lunch during the lunch break with a friend is natural. 晩ご飯 is dinner — an evening meal, not appropriate for a midday break. 飲み物 is a drink — you drink (飲む) it, not eat (食べる) it. 買い物 is shopping — you do (する) shopping, you don't eat it.",
           "terms": [
@@ -446,13 +641,21 @@
             "v_bangohan",
             "v_nomimono",
             "v_kaimono",
-            { "id": "v_taberu", "form": "polite_mashita" }
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "この 料理には 野菜と ______が 入っています。",
-          "choices": ["牛肉", "買い物", "昼休み", "物語"],
+          "choices": [
+            "牛肉",
+            "買い物",
+            "昼休み",
+            "物語"
+          ],
           "answer": "牛肉",
           "explanation": "牛肉 (beef) fits: beef and vegetables going into a dish is a natural cooking combination. 買い物 is shopping (an activity, not an ingredient). 昼休み is the lunch break (a time period). 物語 is a story (nothing to do with cooking). 入っています = 'is contained in / is included in' (te-form progressive).",
           "terms": [
@@ -462,14 +665,25 @@
             "v_kaimono",
             "v_hiruyasumi",
             "v_monogatari",
-            { "id": "v_hairu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_hairu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "この 料理は ______が とても いいですよ。おいしいです。",
-          "choices": ["味", "買い物", "物語", "飲み物"],
+          "choices": [
+            "味",
+            "買い物",
+            "物語",
+            "飲み物"
+          ],
           "answer": "味",
           "explanation": "味 (taste/flavor) fits: a dish with very good flavor is delicious. 買い物 is shopping. 物語 is a story. 飲み物 is a drink — but the sentence is about 料理 (a cooked dish), not a beverage. 味がいい = 'has a good taste.'",
           "terms": [
@@ -478,14 +692,25 @@
             "v_kaimono",
             "v_monogatari",
             "v_nomimono",
-            { "id": "v_ii", "form": "polite_adj" },
-            { "id": "v_oishii", "form": "polite_adj" }
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
+            {
+              "id": "v_oishii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "______で、野菜と 牛肉と 飲み物を 買いました。",
-          "choices": ["スーパー", "レストラン", "会社", "昼休み"],
+          "choices": [
+            "スーパー",
+            "レストラン",
+            "会社",
+            "昼休み"
+          ],
           "answer": "スーパー",
           "explanation": "スーパー (supermarket) fits: buying vegetables, beef, and drinks at a supermarket is natural everyday shopping. レストラン is a restaurant where you eat — not where you buy raw ingredients. 会社 is a company/office. 昼休み is the lunch break — a time period, not a place.",
           "terms": [
@@ -496,7 +721,10 @@
             "v_yasai",
             "v_gyuuniku",
             "v_nomimono",
-            { "id": "v_kau", "form": "polite_mashita" }
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -509,34 +737,58 @@
         {
           "kind": "mcq",
           "q": "鳥肉は 牛肉 ______ おいしいですよ。",
-          "choices": ["より", "まで", "から", "ごろ"],
+          "choices": [
+            "より",
+            "まで",
+            "から",
+            "ごろ"
+          ],
           "answer": "より",
           "explanation": "Use <b>より</b> (comparison particle, N4.5) to mark the lesser item in a comparison: 牛肉より = 'more than beef.' The pattern 'A は B より adjective' states A is more adjective than B. まで means 'until/as far as.' から after a noun means 'from.' ごろ means 'around/approximately' (used for approximate times).",
           "terms": [
             "v_toriniku",
             "v_gyuuniku",
             "p_yori",
-            { "id": "v_oishii", "form": "polite_adj" }
+            {
+              "id": "v_oishii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "友だちと 昼休みに いっしょに 食べに ______。",
-          "choices": ["行きましょう", "行きたいです", "行きます", "行きました"],
+          "choices": [
+            "行きましょう",
+            "行きたいです",
+            "行きます",
+            "行きました"
+          ],
           "answer": "行きましょう",
           "explanation": "<b>行きましょう</b> (let's go — polite volitional form of 行く) fits: the speaker is extending an invitation to go together. 行きたいです means 'I want to go' — personal desire, not an invitation to another person. 行きます is plain present/future 'will go.' 行きました is past 'went.' いっしょに食べに行きましょう = 'Let's go eat together.'",
           "terms": [
             "v_tomodachi",
             "v_hiruyasumi",
             "v_issho",
-            { "id": "v_taberu", "form": null },
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_taberu",
+              "form": null
+            },
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "この 食べ物と その 飲み物は ______ 味ですか。",
-          "choices": ["同じ", "同じな", "同じの", "同じく"],
+          "choices": [
+            "同じ",
+            "同じな",
+            "同じの",
+            "同じく"
+          ],
           "answer": "同じ",
           "explanation": "<b>同じ</b> is unique among na-adjectives: it directly precedes nouns WITHOUT な. 同じ味 (the same taste) — NOT 同じな味. Most na-adjectives require な before a noun (e.g. 好きな料理, 大切なもの), but 同じ is the main exception. 同じの makes it possessive ('of the same kind'). 同じく is the adverbial form (similarly/likewise).",
           "terms": [
@@ -549,15 +801,26 @@
         {
           "kind": "mcq",
           "q": "この 料理には 牛肉 ______ 野菜が 入っています。",
-          "choices": ["と", "が", "を", "に"],
+          "choices": [
+            "と",
+            "が",
+            "を",
+            "に"
+          ],
           "answer": "と",
           "explanation": "Use <b>と</b> (connective particle) to list 牛肉 and 野菜 as a pair: 'beef and vegetables.' と links two or more nouns as a complete list (A と B = A and B). が marks a subject — 牛肉が alone would make only beef the subject. を marks a direct object. に marks direction or location. The full pattern: 料理には〜が入っています = 'the dish contains ~.'",
           "terms": [
             "v_ryouri",
             "v_gyuuniku",
             "v_yasai",
-            { "id": "v_hairu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_hairu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]

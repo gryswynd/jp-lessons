@@ -54,11 +54,14 @@
           "en": "What time did you wake up today?",
           "terms": [
             "v_kyou",
+            "p_wa",
             "v_nanji",
+            "p_ni",
             {
               "id": "v_okiru",
               "form": "polite_mashita"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -67,6 +70,7 @@
           "terms": [
             "v_ima",
             "v_nani",
+            "p_wo",
             {
               "id": "v_tsukau",
               "form": "te_form"
@@ -74,7 +78,8 @@
             {
               "id": "v_iru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -82,16 +87,21 @@
           "en": "Do you go to work by train or by bus?",
           "terms": [
             "v_kaisha",
+            "p_made",
             "v_densha",
+            "p_de",
             {
               "id": "v_iku",
               "form": "polite_masu"
             },
+            "p_ka",
             "v_basu",
+            "p_de",
             {
               "id": "v_iku",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -99,10 +109,12 @@
           "en": "Would you like to go home together?",
           "terms": [
             "v_issho",
+            "p_ni",
             {
               "id": "v_kaeru",
               "form": "polite_negative"
-            }
+            },
+            "p_ka"
           ]
         }
       ]
@@ -177,6 +189,12 @@
           "items": [
             "v_ensoku"
           ]
+        },
+        {
+          "label": "Question Words",
+          "items": [
+            "v_nanpun"
+          ]
         }
       ]
     },
@@ -191,12 +209,16 @@
           "en": "Do you ride the train every day, Rikizo?",
           "terms": [
             "char_rikizo",
+            "v_san",
+            "p_wa",
             "v_mainichi",
             "v_densha",
+            "p_ni",
             {
               "id": "v_noru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -204,12 +226,15 @@
           "jp": "はい、乗ります。駅から 学校まで 少し 歩きます。近いですよ。",
           "en": "Yes, I do. I walk a little from the station to school. It's close!",
           "terms": [
+            "p_hai",
             {
               "id": "v_noru",
               "form": "polite_masu"
             },
             "v_eki",
+            "p_kara",
             "v_gakkou",
+            "p_made",
             "v_sukoshi",
             {
               "id": "v_aruku",
@@ -218,7 +243,8 @@
             {
               "id": "v_chikai",
               "form": "polite_adj"
-            }
+            },
+            "p_yo"
           ]
         },
         {
@@ -226,13 +252,23 @@
           "jp": "いいですね。わたしの 家は 少し 遠いですから、バスに 乗ります。",
           "en": "Nice! My house is a bit far, so I take the bus.",
           "terms": [
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
+            "p_ne",
+            "v_watashi",
+            "p_no",
             "v_ie",
+            "p_wa",
             "v_sukoshi",
             {
               "id": "v_tooi",
               "form": "polite_adj"
             },
+            "p_kara_because",
             "v_basu",
+            "p_ni",
             {
               "id": "v_noru",
               "form": "polite_masu"
@@ -245,11 +281,19 @@
           "en": "That's nice too. Where do you board?",
           "terms": [
             "v_basu",
+            "p_mo",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
+            "p_ne",
             "v_doko",
+            "p_kara",
             {
               "id": "v_noru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         }
       ]
@@ -265,14 +309,18 @@
           "en": "Today's excursion is a bit far from school. We'll go by train.",
           "terms": [
             "v_kyou",
+            "p_no",
             "v_ensoku",
+            "p_wa",
             "v_gakkou",
+            "p_kara",
             "v_sukoshi",
             {
               "id": "v_tooi",
               "form": "polite_adj"
             },
             "v_densha",
+            "p_ni",
             {
               "id": "v_noru",
               "form": "te_form"
@@ -290,11 +338,14 @@
           "terms": [
             "v_sensei",
             "v_eki",
+            "p_wa",
             "v_gakkou",
+            "p_kara",
             {
               "id": "v_chikai",
               "form": "polite_adj"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -302,11 +353,13 @@
           "jp": "はい、近いです。駅まで 歩いて 行きましょう。",
           "en": "Yes, it's close. Let's walk to the station.",
           "terms": [
+            "p_hai",
             {
               "id": "v_chikai",
               "form": "polite_adj"
             },
             "v_eki",
+            "p_made",
             {
               "id": "v_aruku",
               "form": "te_form"
@@ -327,6 +380,7 @@
               "form": "polite_mashita"
             },
             "v_densha",
+            "p_ni",
             {
               "id": "v_noru",
               "form": "polite_volitional_mashou"
@@ -347,13 +401,17 @@
           "terms": [
             "char_ken",
             "v_san",
+            "p_wa",
             "v_mainichi",
             "v_nan",
+            "p_de",
             "v_gakkou",
+            "p_ni",
             {
               "id": "v_kuru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -370,7 +428,9 @@
               "form": "polite_masu"
             },
             "v_ie",
+            "p_ga",
             "v_gakkou",
+            "p_ni",
             {
               "id": "v_chikai",
               "form": "polite_adj"
@@ -380,21 +440,25 @@
         },
         {
           "spk": "A",
-          "jp": "いいですね。私の 家は 少し 遠いです。電車に 乗って 来ます。",
+          "jp": "いいですね。わたしの 家は 少し 遠いです。電車に 乗って 来ます。",
           "en": "Nice. My house is a bit far. I come by riding the train.",
           "terms": [
             {
               "id": "v_ii",
               "form": "polite_adj"
             },
+            "p_ne",
             "v_watashi",
+            "p_no",
             "v_ie",
+            "p_wa",
             "v_sukoshi",
             {
               "id": "v_tooi",
               "form": "polite_adj"
             },
             "v_densha",
+            "p_ni",
             {
               "id": "v_noru",
               "form": "te_form"
@@ -407,19 +471,23 @@
         },
         {
           "spk": "B",
-          "jp": "電車に 乗りますか。私も 乗りたいです。",
+          "jp": "電車に 乗りますか。わたしも 乗りたいです。",
           "en": "You ride the train? I want to ride too.",
           "terms": [
             "v_densha",
+            "p_ni",
             {
               "id": "v_noru",
               "form": "polite_masu"
             },
+            "p_ka",
             "v_watashi",
+            "p_mo",
             {
               "id": "v_noru",
-              "form": "desire_tai"
-            }
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         }
       ]
@@ -435,12 +503,16 @@
           "en": "Want to go on a hike together with me, Yuki?",
           "terms": [
             "char_yuki",
+            "p_to",
             "v_issho",
+            "p_ni",
             "v_ensoku",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "plain_negative"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -448,15 +520,15 @@
           "jp": "いいよ！どこに 行く？",
           "en": "Sounds good! Where are we going?",
           "terms": [
-            {
-              "id": "v_ii",
-              "form": null
-            },
+            "v_ii",
+            "p_yo",
             "v_doko",
+            "p_ni",
             {
               "id": "v_iku",
-              "form": null
-            }
+              "form": "plain_form"
+            },
+            "p_ka"
           ]
         },
         {
@@ -465,20 +537,24 @@
           "en": "I want to go to the mountain by train. We'll walk a bit from there.",
           "terms": [
             "v_densha",
+            "p_ni",
             {
               "id": "v_noru",
               "form": "te_form"
             },
             "v_yama",
+            "p_made",
             {
               "id": "v_iku",
               "form": "plain_desire_tai"
             },
+            "p_yo",
             "v_soko",
+            "p_kara",
             "v_sukoshi",
             {
               "id": "v_aruku",
-              "form": null
+              "form": "plain_form"
             }
           ]
         },
@@ -488,15 +564,17 @@
           "en": "Is the mountain far? Will we take a bus too?",
           "terms": [
             "v_yama",
-            {
-              "id": "v_tooi",
-              "form": null
-            },
+            "p_wa",
+            "v_tooi",
+            "p_ka",
             "v_basu",
+            "p_mo",
+            "p_ni",
             {
               "id": "v_noru",
-              "form": null
-            }
+              "form": "plain_form"
+            },
+            "p_ka"
           ]
         }
       ]
@@ -510,13 +588,16 @@
           "en": "Rikizo rides the train to school every day.",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_mainichi",
             "v_densha",
+            "p_ni",
             {
               "id": "v_noru",
               "form": "te_form"
             },
             "v_gakkou",
+            "p_e",
             {
               "id": "v_iku",
               "form": "polite_masu"
@@ -528,12 +609,15 @@
           "en": "He walks a little from home to the station, but it is close.",
           "terms": [
             "v_ie",
+            "p_kara",
             "v_eki",
+            "p_made",
             "v_sukoshi",
             {
               "id": "v_aruku",
               "form": "polite_masu"
             },
+            "p_ga_but",
             {
               "id": "v_chikai",
               "form": "polite_adj"
@@ -545,7 +629,10 @@
           "en": "He rides the train for thirty minutes to school.",
           "terms": [
             "v_densha",
+            "p_de",
             "v_gakkou",
+            "p_made",
+            { "counter": "fun", "n": 30 },
             {
               "id": "v_noru",
               "form": "polite_masu"
@@ -557,7 +644,9 @@
           "en": "He arrives at the school's station and walks a little.",
           "terms": [
             "v_gakkou",
+            "p_no",
             "v_eki",
+            "p_ni",
             {
               "id": "v_tsuku",
               "form": "te_form"
@@ -574,13 +663,16 @@
           "en": "School is a bit far, but he goes by riding the train every day.",
           "terms": [
             "v_gakkou",
+            "p_wa",
             "v_sukoshi",
             {
               "id": "v_tooi",
               "form": "polite_adj"
             },
+            "p_ga_but",
             "v_mainichi",
             "v_densha",
+            "p_ni",
             {
               "id": "v_noru",
               "form": "te_form"
@@ -598,9 +690,17 @@
           "a": "学校へ 行きます。",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_mainichi",
             "v_doko",
+            "p_e",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
+            "p_ka",
             "v_gakkou",
+            "p_e",
             {
               "id": "v_iku",
               "form": "polite_masu"
@@ -612,15 +712,19 @@
           "a": "近いです。",
           "terms": [
             "v_eki",
+            "p_wa",
             "v_ie",
+            "p_kara",
             {
               "id": "v_chikai",
               "form": "polite_adj"
             },
+            "p_ka",
             {
               "id": "v_tooi",
               "form": "polite_adj"
             },
+            "p_ka",
             {
               "id": "v_chikai",
               "form": "polite_adj"
@@ -632,12 +736,16 @@
           "a": "三十分 乗ります。",
           "terms": [
             "v_densha",
+            "p_de",
             "v_gakkou",
-            "v_nan",
+            "p_made",
+            "v_nanpun",
             {
               "id": "v_noru",
               "form": "polite_masu"
             },
+            "p_ka",
+            { "counter": "fun", "n": 30 },
             {
               "id": "v_noru",
               "form": "polite_masu"
@@ -649,14 +757,20 @@
           "a": "はい、電車に 乗って 行きます。",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_mainichi",
             "v_densha",
+            "p_de",
             "v_gakkou",
+            "p_e",
             {
               "id": "v_iku",
               "form": "polite_masu"
             },
+            "p_ka",
+            "p_hai",
             "v_densha",
+            "p_ni",
             {
               "id": "v_noru",
               "form": "te_form"
@@ -678,10 +792,15 @@
           "en": "Today is the class excursion. We go by riding the train from school.",
           "terms": [
             "v_kyou",
+            "p_wa",
             "v_kurasu",
+            "p_no",
             "v_ensoku",
+            "g_desu",
             "v_gakkou",
+            "p_kara",
             "v_densha",
+            "p_ni",
             {
               "id": "v_noru",
               "form": "te_form"
@@ -697,13 +816,17 @@
           "en": "We walk from school to the station. The station is close to school.",
           "terms": [
             "v_gakkou",
+            "p_kara",
             "v_eki",
+            "p_made",
             {
               "id": "v_aruku",
               "form": "polite_masu"
             },
             "v_eki",
+            "p_wa",
             "v_gakkou",
+            "p_kara",
             {
               "id": "v_chikai",
               "form": "polite_adj"
@@ -715,16 +838,21 @@
           "en": "We rode the train for one hour. The mountain was far, but we went by train.",
           "terms": [
             "v_densha",
+            "p_de",
+            "v_jikan",
             {
               "id": "v_noru",
               "form": "polite_mashita"
             },
             "v_yama",
+            "p_wa",
             {
               "id": "v_tooi",
               "form": "polite_past_adj"
             },
+            "p_ga_but",
             "v_densha",
+            "p_de",
             {
               "id": "v_iku",
               "form": "polite_mashita"
@@ -736,12 +864,15 @@
           "en": "We arrived at the mountain and walked the mountain path for a long way. It was a good excursion.",
           "terms": [
             "v_yama",
+            "p_ni",
             {
               "id": "v_tsuku",
               "form": "te_form"
             },
             "v_yama",
+            "p_no",
             "v_michi",
+            "p_wo",
             {
               "id": "v_nagai",
               "form": "adverbial"
@@ -751,7 +882,11 @@
               "form": "polite_mashita"
             },
             "v_ii",
-            "v_ensoku"
+            "v_ensoku",
+            {
+              "id": "g_desu",
+              "form": "copula_past"
+            }
           ]
         },
         {
@@ -759,12 +894,17 @@
           "en": "We returned to school. It was a good day.",
           "terms": [
             "v_gakkou",
+            "p_ni",
             {
               "id": "v_kaeru",
               "form": "polite_mashita"
             },
             "v_ii",
-            "v_ichinichi"
+            "v_ichinichi",
+            {
+              "id": "g_desu",
+              "form": "copula_past"
+            }
           ]
         }
       ],
@@ -774,9 +914,14 @@
           "a": "クラスの 遠足です。",
           "terms": [
             "v_kyou",
+            "p_wa",
             "v_nan",
+            "g_desu",
+            "p_ka",
             "v_kurasu",
-            "v_ensoku"
+            "p_no",
+            "v_ensoku",
+            "g_desu"
           ]
         },
         {
@@ -784,11 +929,15 @@
           "a": "はい、歩きます。",
           "terms": [
             "v_gakkou",
+            "p_kara",
             "v_eki",
+            "p_made",
             {
               "id": "v_aruku",
               "form": "polite_masu"
             },
+            "p_ka",
+            "p_hai",
             {
               "id": "v_aruku",
               "form": "polite_masu"
@@ -800,16 +949,22 @@
           "a": "はい、遠かったですが、電車で 行きました。",
           "terms": [
             "v_yama",
+            "p_wa",
             "v_gakkou",
+            "p_kara",
             {
               "id": "v_tooi",
               "form": "polite_past_adj"
             },
+            "p_ka",
+            "p_hai",
             {
               "id": "v_tooi",
               "form": "polite_past_adj"
             },
+            "p_ga_but",
             "v_densha",
+            "p_de",
             {
               "id": "v_iku",
               "form": "polite_mashita"
@@ -821,13 +976,18 @@
           "a": "山の 道を 歩きました。",
           "terms": [
             "v_yama",
+            "p_de",
             "v_nani",
+            "p_wo",
             {
               "id": "v_suru",
               "form": "polite_mashita"
             },
+            "p_ka",
             "v_yama",
+            "p_no",
             "v_michi",
+            "p_wo",
             {
               "id": "v_aruku",
               "form": "polite_mashita"
@@ -960,7 +1120,9 @@
           "terms": [
             "v_mainichi",
             "v_densha",
+            "p_ni",
             "v_gakkou",
+            "p_e",
             {
               "id": "v_noru",
               "form": "te_form"
@@ -983,7 +1145,11 @@
           "answer": "着きます",
           "terms": [
             "v_ie",
+            "p_kara",
             "v_eki",
+            "p_made",
+            { "counter": "fun", "n": 5 },
+            "p_de",
             {
               "id": "v_tsuku",
               "form": "polite_masu"
@@ -1002,11 +1168,14 @@
           "answer": "乗ります",
           "terms": [
             "v_gakkou",
+            "p_wa",
             {
               "id": "v_tooi",
               "form": "polite_adj"
             },
+            "p_kara_because",
             "v_basu",
+            "p_ni",
             {
               "id": "v_noru",
               "form": "polite_masu"
@@ -1025,10 +1194,12 @@
           "answer": "たいです",
           "terms": [
             "v_yama",
+            "p_made",
             {
               "id": "v_aruku",
-              "form": "desire_tai"
-            }
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         }
       ]

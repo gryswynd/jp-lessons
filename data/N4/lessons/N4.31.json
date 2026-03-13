@@ -68,8 +68,9 @@
             "k_yama",
             {
               "id": "v_iku",
-              "form": "desire_tai"
-            }
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         },
         {
@@ -343,7 +344,10 @@
           "jp": "十二時に 開けます。",
           "en": "They open it at 12 o'clock.",
           "terms": [
-            { "counter": "ji", "n": 12 },
+            {
+              "counter": "ji",
+              "n": 12
+            },
             {
               "id": "v_akeru",
               "form": "polite_masu"
@@ -529,7 +533,10 @@
           "terms": [
             "v_kaishi",
             "v_gogo",
-            { "counter": "ji", "n": 1 }
+            {
+              "counter": "ji",
+              "n": 1
+            }
           ]
         },
         {

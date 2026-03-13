@@ -11,7 +11,7 @@
     "particles": [],
     "grammarForms": [
       "te_form",
-      "desire_tai",
+      "plain_desire_tai",
       "desire_tai_negative",
       "polite_volitional_mashou"
     ],
@@ -863,8 +863,9 @@
             "p_wo",
             {
               "id": "v_kau",
-              "form": "desire_tai"
+              "form": "plain_desire_tai"
             },
+            "g_desu",
             "p_ka"
           ]
         },
@@ -877,8 +878,9 @@
             "p_wo",
             {
               "id": "v_kau",
-              "form": "desire_tai"
+              "form": "plain_desire_tai"
             },
+            "g_desu",
             "v_mou",
             {
               "id": "v_kau",
@@ -926,8 +928,9 @@
             "p_mo",
             {
               "id": "v_kau",
-              "form": "desire_tai"
-            }
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         },
         {
@@ -972,8 +975,9 @@
             "p_hai",
             {
               "id": "v_iku",
-              "form": "desire_tai"
-            }
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         },
         {
@@ -1008,8 +1012,9 @@
             "p_mo",
             {
               "id": "v_nomu",
-              "form": "desire_tai"
-            }
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         },
         {
@@ -1090,8 +1095,9 @@
             "p_wo",
             {
               "id": "v_kau",
-              "form": "desire_tai"
-            }
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ],
           "explanation": "たいです attaches to the ます-stem (い-row). 買う → 買い (stem) + たいです = 買いたいです. It replaces ます, not adds to it."
         },
