@@ -1,6 +1,6 @@
 # GRAMMAR_CONTENT.md — Grammar Lesson Content Creation Guide
 
-> **Purpose:** This document tells the CLAUDE.md multi-agent pipeline everything it needs to create grammar lesson JSON files (G1–G46). Feed this to Claude Code **after** the Grammar.js module has been built. The Project Manager agent (Agent 1) should read this document before scoping any grammar lesson.
+> **Purpose:** This document tells the CLAUDE.md multi-agent pipeline everything it needs to create grammar lesson JSON files (G1–G47). Feed this to Claude Code **after** the Grammar.js module has been built. The Project Manager agent (Agent 1) should read this document before scoping any grammar lesson.
 
 ---
 
@@ -13,8 +13,8 @@
 5. [Lesson Flow Convention](#lesson-flow-convention)
 6. [Term Tagging in Grammar Lessons](#term-tagging-in-grammar-lessons)
 7. [Full Lesson Map: N5 Grammar (G1–G12)](#full-lesson-map-n5-grammar-g1g12)
-8. [Full Lesson Map: N4 Grammar (G13–G28)](#full-lesson-map-n4-grammar-g13g28)
-9. [Full Lesson Map: N3 Grammar (G29–G46)](#full-lesson-map-n3-grammar-g29g46)
+8. [Full Lesson Map: N4 Grammar (G13–G29)](#full-lesson-map-n4-grammar-g13g29)
+9. [Full Lesson Map: N3 Grammar (G30–G47)](#full-lesson-map-n3-grammar-g30g47)
 10. [Content Brief Template for Grammar](#content-brief-template-for-grammar)
 11. [Quality Gates for Grammar Content](#quality-gates-for-grammar-content)
 12. [Common Failure Modes for Grammar Content](#common-failure-modes-for-grammar-content)
@@ -27,7 +27,7 @@ Grammar lessons use a different module (`Grammar.js`) with its own section types
 
 | Aspect | Kanji Lessons | Grammar Lessons |
 |---|---|---|
-| ID format | `N5.1`, `N4.7` | `G1`, `G2`, ... `G46` |
+| ID format | `N5.1`, `N4.7` | `G1`, `G2`, ... `G47` |
 | File path | `data/N5/lessons/N5.X.json` | `data/N5/grammar/G1.json` or `data/N4/grammar/G13.json` |
 | Type field | `"type"` not present (implied) | `"type": "grammar"` required |
 | Section types | warmup, kanjiGrid, vocabList, conversation, reading, drills | grammarIntro, grammarRule, grammarTable, grammarComparison, annotatedExample, conjugationDrill, patternMatch, sentenceTransform, fillSlot, conversation, drills |
@@ -84,7 +84,7 @@ If a concept genuinely requires a word not in the glossary, write the word in **
 | Field | Type | Required | Notes |
 |---|---|---|---|
 | `contentVersion` | string | ✅ | Always `"1.0.0"` |
-| `id` | string | ✅ | `G1` through `G46` |
+| `id` | string | ✅ | `G1` through `G47` |
 | `type` | string | ✅ | Always `"grammar"` |
 | `title` | string | ✅ | Display title |
 | `meta.level` | string | ✅ | `"N5"`, `"N4"`, or `"N3"` |
@@ -1097,7 +1097,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
   - Note: から was taught in G4 as a starting-point particle ("from"). This is a different role — teach the distinction explicitly.
 - ので — "because" (softer, more objective): 暑いので、冷たい水を飲みます
   - More formal and indirect than から; often preferred in writing and polite speech
-  - のに distinction preview: ので explains reason; のに (G19) expresses "even though"
+  - のに distinction preview: ので explains reason; のに (G20) expresses "even though"
   - Uses plain form + ので (but na-adjective/noun + な + ので)
 
 *Plain commands:*
@@ -1158,7 +1158,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
   - Past negative: ～くなかった
 - Polite forms: add です (高いです, 高かったです, 高くないです, 高くなかったです)
 - **いい → よい exception:** いい conjugates as よい (よかった, よくない, よくて, etc.) — NEVER いかった, いくない
-- **Not taught here:** ～ければ conditional (G21), ～すぎる excessive (G15), ～さ noun form (G15)
+- **Not taught here:** ～ければ conditional (G22), ～すぎる excessive (G15), ～さ noun form (G15)
 
 **Recommended sections:**
 1. `grammarIntro`
@@ -1221,7 +1221,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-## Full Lesson Map: N4 Grammar (G13–G28)
+## Full Lesson Map: N4 Grammar (G13–G29)
 
 > **Note:** The exact `unlocksAfter` lesson for N4 grammar should be determined when the N4 lessons are being built. The values below are approximate placements. The user will set final values.
 
@@ -1378,11 +1378,77 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-### G16 — Limiting Particles (だけ, しか, ばかり, でも)
+### G16 — Manner & Similarity (のように / のような / みたいに / みたいな)
 
 | Field | Value |
 |---|---|
 | **ID** | `G16` |
+| **Level** | N4 |
+| **Unlocks after** | N4.6 |
+| **Icon** | 🪞 |
+| **Estimated minutes** | 20 |
+| **Particles** | `p_no`, `p_ni` |
+| **Grammar forms** | none (よう is a formal noun; みたい is an auxiliary adjective — neither requires a conjugation form entry) |
+
+**What to teach:**
+
+- **Noun + のように + verb/adjective** — adverbial manner, formal: "like X / in the manner of X"
+  - やまかわさんのように料理する (cook like Yamakawa)
+  - 鳥のように空を飛びたい (want to fly through the sky like a bird)
+  - よう is a formal noun (形式名詞); の connects it to the preceding noun; に is the adverbial particle
+  - Students have already seen this pattern in N4.5 — this lesson gives it formal explanation
+
+- **Noun + のような + Noun** — attributive similarity, formal: "an X-like noun / a noun like X"
+  - やまかわさんのような料理人 (a chef like Yamakawa)
+  - 猫のような目 (cat-like eyes)
+  - な is the attributive ending (よう behaves like a na-adjective in this position)
+
+- **Noun + みたいに + verb/adjective** — adverbial manner, casual: same meaning as のように
+  - 犬みたいに走る (run like a dog)
+  - みたい attaches directly to nouns — no の needed
+  - Use with friends, family, casual contexts; のように in formal/written contexts
+
+- **Noun + みたいな + Noun** — attributive similarity, casual: same meaning as のような
+  - 猫みたいな目 (cat-like eyes)
+  - みたい is an auxiliary adjective; みたいな is its attributive form
+
+- **Key distinction — adverbial (に) vs attributive (な):**
+  - Both のよう and みたい follow the same pattern: add に to modify a verb/adjective; add な to modify a noun
+  - This mirrors the きれいに (adverbial) vs きれいな (attributive) pattern already known
+
+- **Formal vs casual register summary:**
+  - のように / のような = formal/written (safe in all contexts)
+  - みたいに / みたいな = casual/spoken (friends, family, relaxed settings)
+  - Same meaning — choose based on register
+
+- **Do NOT teach in this lesson:**
+  - のようだ / みたいだ as conjecture ("it seems like / appears that") — the sentence-final inference meaning is G33
+  - ようにする / ようになる (deliberate effort / gradual change) — G29
+  - Briefly flag to students: "You'll see ように and みたい again in different roles — keep this comparison pattern separate from those."
+
+- **Tagging notes for content agents:**
+  - のように: tag の as `p_no`, よう as `v_you_manner` (bare noun, existing entry), に as `p_ni` separately
+  - のような: tag の as `p_no`, よう as `v_you_manner`; な here is the attributive particle — verify if `p_na_attr` exists in particles.json, otherwise leave untagged
+  - みたいに / みたいな: a `v_mitai` glossary entry (gtype: na-adjective, verb_class: na_adj) must be created before any content uses this word; みたいに uses `adverbial` form; みたいな uses `attributive_na` form
+
+**Recommended sections:**
+1. `grammarIntro`
+2. `grammarRule` — Noun + のように / みたいに (adverbial manner, formal + casual) with 3 examples each
+3. `grammarRule` — Noun + のような / みたいな + Noun (attributive, formal + casual) with 3 examples each
+4. `grammarComparison` — のように vs みたいに (same meaning, formal vs casual register)
+5. `grammarComparison` — のように (adverbial) vs のような (attributive): に vs な changes the syntactic role
+6. `annotatedExample` — daily comparison contexts using N4.1–N4.6 vocabulary: people, animals, foods, styles
+7. `conversation` — characters comparing styles, skills, or appearances naturally (mix of polite and casual lines)
+8. `fillSlot` — choose のように / みたいに / のような / みたいな given sentence context (blank before verb vs before noun; formal vs casual cue in context field)
+9. `drills` — MCQ: 4 items on のよう vs みたい register; 4 items on に vs な position
+
+---
+
+### G17 — Limiting Particles (だけ, しか, ばかり, でも)
+
+| Field | Value |
+|---|---|
+| **ID** | `G17` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.7 (TBD) |
 | **Icon** | 🔒 |
@@ -1409,11 +1475,11 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-### G17 — Transitive & Intransitive Verb Pairs (自動詞・他動詞)
+### G18 — Transitive & Intransitive Verb Pairs (自動詞・他動詞)
 
 | Field | Value |
 |---|---|
-| **ID** | `G17` |
+| **ID** | `G18` |
 | **Level** | N4 |
 | **Unlocks after** | N4.10 |
 | **Icon** | 🔀 |
@@ -1471,11 +1537,11 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-### G18 — Connecting Actions (てから, まえに, ながら, ために, ～たり)
+### G19 — Connecting Actions (てから, まえに, ながら, ために, ～たり)
 
 | Field | Value |
 |---|---|
-| **ID** | `G18` |
+| **ID** | `G19` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.10 (TBD) |
 | **Icon** | ⛓️ |
@@ -1495,7 +1561,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
   - Commonly used to describe a typical day or weekend activities
   - Formation: same sound-change rules as た-form (G8); just add り instead of nothing
 
-**Note:** から and ので (because) were taught as basic connectors in G10. G18 focuses on sequential, simultaneous, purposive, and non-exhaustive action patterns. Do not re-teach から/ので here — reinforce them through example sentences where appropriate.
+**Note:** から and ので (because) were taught as basic connectors in G10. G19 focuses on sequential, simultaneous, purposive, and non-exhaustive action patterns. Do not re-teach から/ので here — reinforce them through example sentences where appropriate.
 
 **Recommended sections:**
 1. `grammarIntro`
@@ -1511,11 +1577,11 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-### G19 — Contrast, Concession & Listing Reasons (のに / ても / し)
+### G20 — Contrast, Concession & Listing Reasons (のに / ても / し)
 
 | Field | Value |
 |---|---|
-| **ID** | `G19` |
+| **ID** | `G20` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.14 (TBD) |
 | **Icon** | 🌀 |
@@ -1536,7 +1602,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
   - Expresses that the outcome holds regardless of the action
   - たとえ～ても reinforces: たとえ難しくても (even if it's difficult)
   - For nouns/na-adjectives: でも (雨でも行く — even if it rains, I'll go)
-  - Note: ても is the concessive "even if"; てもいい (G20) is a separate construction meaning "it's okay to" — teach the distinction explicitly to prevent confusion
+  - Note: ても is the concessive "even if"; てもいい (G21) is a separate construction meaning "it's okay to" — teach the distinction explicitly to prevent confusion
 
 - し — listing multiple reasons/qualities:
   - Clause + し, clause + し, (conclusion): 安いし、おいしいし、この店が好きです
@@ -1566,11 +1632,11 @@ This is the pivotal lesson where students transition from polite-only speech to 
 
 ---
 
-### G20 — Permissions & Prohibitions (てもいい, てはいけない)
+### G21 — Permissions & Prohibitions (てもいい, てはいけない)
 
 | Field | Value |
 |---|---|
-| **ID** | `G20` |
+| **ID** | `G21` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.21 (TBD) |
 | **Icon** | 🚦 |
@@ -1590,7 +1656,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
 | | Positive | Negative |
 |---|---|---|
 | **Permission** | てもいい (may do) | なくてもいい (don't have to) |
-| **Prohibition/Obligation** | なければいけない (must do — cross-ref G21) | てはいけない (must not do) |
+| **Prohibition/Obligation** | なければいけない (must do — cross-ref G22) | てはいけない (must not do) |
 
 Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なくてもいい. May I? → てもいい. Must I not? → てはいけない."
 
@@ -1608,11 +1674,11 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 
 ---
 
-### G21 — Obligations & Conditionals (なければ, ば, たら, なら, と)
+### G22 — Obligations & Conditionals (なければ, ば, たら, なら, と)
 
 | Field | Value |
 |---|---|
-| **ID** | `G21` |
+| **ID** | `G22` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.25 (TBD) |
 | **Icon** | 🔀 |
@@ -1651,11 +1717,11 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 
 ---
 
-### G22 — Passive Form
+### G23 — Passive Form
 
 | Field | Value |
 |---|---|
-| **ID** | `G22` |
+| **ID** | `G23` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.31 (TBD) |
 | **Icon** | 🔄 |
@@ -1688,11 +1754,11 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 
 ---
 
-### G23 — Causative Form
+### G24 — Causative Form
 
 | Field | Value |
 |---|---|
-| **ID** | `G23` |
+| **ID** | `G24` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.31 (TBD) |
 | **Icon** | 🎭 |
@@ -1726,11 +1792,11 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 
 ---
 
-### G24 — Advanced Verb Usages (てみる, ておく, てしまう, すぎる, とする)
+### G25 — Advanced Verb Usages (てみる, ておく, てしまう, すぎる, とする)
 
 | Field | Value |
 |---|---|
-| **ID** | `G24` |
+| **ID** | `G25` |
 | **Level** | N4 |
 | **Unlocks after** | ~N4.34 (TBD) |
 | **Icon** | 🧩 |
@@ -1746,7 +1812,7 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
   - Often paired with ～としたとき (just as [one] was about to ~): 出かけようとしたとき、電話がなった
   - "Let's assume" usage: 先生だとすると (assuming [they] are a teacher...)
   - Contrast with てみる: てみる = actually try and see; とする = attempt/be on the verge of (often interrupted or theoretical)
-- Supplementary connectors (absorbed from dissolved G21):
+- Supplementary connectors (absorbed from dissolved G22):
   - かどうか — whether or not: 行くかどうかわからない (I don't know whether to go or not); embeds a yes/no question in a sentence
   - について — about / regarding: 日本語について話す (talk about Japanese); marks a topic of discussion
 
@@ -1766,11 +1832,11 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 
 ---
 
-### G25 — Expressing Thoughts & Experience
+### G26 — Expressing Thoughts & Experience
 
 | Field | Value |
 |---|---|
-| **ID** | `G25` |
+| **ID** | `G26` |
 | **Level** | N4 |
 | **Unlocks after** | N4.10 |
 | **Icon** | 💭 |
@@ -1811,11 +1877,11 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 
 ---
 
-### G26 — そうだ: Appearance & Hearsay
+### G27 — そうだ: Appearance & Hearsay
 
 | Field | Value |
 |---|---|
-| **ID** | `G26` |
+| **ID** | `G27` |
 | **Level** | N4 |
 | **Unlocks after** | N4.14 |
 | **Icon** | 👀 |
@@ -1854,11 +1920,11 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 
 ---
 
-### G27 — Directional & Resultant て-Form (てくる / ていく / てある)
+### G28 — Directional & Resultant て-Form (てくる / ていく / てある)
 
 | Field | Value |
 |---|---|
-| **ID** | `G27` |
+| **ID** | `G28` |
 | **Level** | N4 |
 | **Unlocks after** | N4.21 |
 | **Icon** | ↔️ |
@@ -1900,11 +1966,11 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 
 ---
 
-### G28 — ように Patterns
+### G29 — ように Patterns
 
 | Field | Value |
 |---|---|
-| **ID** | `G28` |
+| **ID** | `G29` |
 | **Level** | N4 |
 | **Unlocks after** | N4.25 |
 | **Icon** | 🎯 |
@@ -1944,17 +2010,17 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 
 ---
 
-## Full Lesson Map: N3 Grammar (G29–G46)
+## Full Lesson Map: N3 Grammar (G30–G47)
 
 > **Note:** N3 grammar lessons are planned but N3 content lessons do not yet exist. The `unlocksAfter` values below reference future N3 lessons. JSON stub files will be created but should NOT be added to `manifest.json` until the N3 content infrastructure is in place.
 
 ---
 
-### G29 — Relative Clauses & Noun Modification
+### G30 — Relative Clauses & Noun Modification
 
 | Field | Value |
 |---|---|
-| **ID** | `G29` |
+| **ID** | `G30` |
 | **Level** | N3 |
 | **Unlocks after** | N3.2 |
 | **Icon** | 🔍 |
@@ -1981,11 +2047,11 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 
 ---
 
-### G30 — Nominalizers: の and こと
+### G31 — Nominalizers: の and こと
 
 | Field | Value |
 |---|---|
-| **ID** | `G30` |
+| **ID** | `G31` |
 | **Level** | N3 |
 | **Unlocks after** | N3.4 |
 | **Icon** | 📦 |
@@ -1996,7 +2062,7 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 - When to use の vs こと:
   - の — direct/sensory, perception verbs (見る, 聞く, 感じる): 彼が歌うのを聞いた (I heard him singing)
   - こと — abstract facts, rules, experiences: 約束を守ることは大切です (keeping promises is important)
-  - Some verbs require こと: ことがある (G25), ことができる (G13)
+  - Some verbs require こと: ことがある (G26), ことができる (G13)
   - Some verbs require の: のを見る, のを手伝う
   - Many accept both: 食べるのが好き ≈ 食べることが好き
 - ことにする — decide to do: 日本に行くことにした (I decided to go to Japan)
@@ -2019,11 +2085,11 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 
 ---
 
-### G31 — Volitional Form & Intentions
+### G32 — Volitional Form & Intentions
 
 | Field | Value |
 |---|---|
-| **ID** | `G31` |
+| **ID** | `G32` |
 | **Level** | N3 |
 | **Unlocks after** | N3.6 |
 | **Icon** | 🚀 |
@@ -2038,7 +2104,7 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 - Volitional + とする — attempt / be about to:
   - 食べようとした (tried to eat / was about to eat)
   - Often with とした時/ところ: 出かけようとしたとき、電話がなった (just as I was about to leave, the phone rang)
-  - Expands G24's とする with the volitional form specifically
+  - Expands G25's とする with the volitional form specifically
 - Volitional + と思う — I think I'll / I'm planning to:
   - 明日行こうと思います (I think I'll go tomorrow / I'm thinking of going)
   - Softer than つもり — more tentative
@@ -2063,58 +2129,60 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 
 ---
 
-### G32 — Inference & Comparison (ようだ / みたいだ / らしい)
+### G33 — Conjecture & Inference (ようだ / みたいだ / らしい)
 
 | Field | Value |
 |---|---|
-| **ID** | `G32` |
+| **ID** | `G33` |
 | **Level** | N3 |
 | **Unlocks after** | N3.10 |
 | **Icon** | 🔮 |
 | **Estimated minutes** | 30 |
 
+**Scope note:** The resemblance/manner usage of のよう and みたい ("like X / in the manner of X") was taught in G16. This lesson covers the **conjecture and inference** usage — where ようだ and みたいだ express "it seems / appears to be" based on observed evidence. These are meaningfully different: G16 compares to a noun benchmark (犬のように走る); G33 infers a state from indirect evidence (疲れているようだ). Make the distinction explicit at the start.
+
 **What to teach:**
-- ようだ — inference based on evidence the speaker has observed:
+- ようだ — inference based on evidence the speaker has directly observed:
   - Plain form + ようだ: 雨が降るようだ (it seems like it will rain — I see dark clouds)
-  - Noun + の + ようだ: 夢のようだ (it's like a dream)
-  - na-adj + な + ようだ: 静かなようだ
-  - Simile use: まるで～のようだ (just like ~)
+  - na-adj + な + ようだ: 静かなようだ (it seems quiet)
   - Polite: ようです
-- みたいだ — casual equivalent of ようだ:
-  - Same meaning as ようだ but informal
-  - Attaches directly: 雨みたいだ, 夢みたいだ
-  - Can also be used as simile: 子どもみたいだ (like a child)
+  - Note: the resemblance/simile use (夢のようだ, まるで～のようだ) was introduced in G16 — remind students, don't re-teach it
+- みたいだ — casual equivalent of ようだ for conjecture:
+  - Same inference meaning as ようだ but informal register
+  - Attaches directly without の: 雨みたいだ (looks like rain), 疲れているみたいだ (seems tired)
+  - Note: resemblance use (子どもみたいだ = like a child) was introduced in G16 — this lesson focuses on the inference/conjecture meaning
 - らしい — typicality / hearsay from indirect evidence:
   - Hearsay: 彼は来ないらしい (apparently he's not coming — I heard indirectly)
   - Typicality: 男らしい (manly / like a man should be), 春らしい天気 (spring-like weather)
   - Attaches to plain form directly (no な/の needed)
+  - Key contrast with ようだ: らしい signals indirect/secondhand evidence; ようだ signals direct observation
 - **THE 4-WAY COMPARISON** — this is the critical N3 test topic:
-  - そうだ (appearance, G26): looks like ~ (visual/gut) — おいしそう
-  - そうだ (hearsay, G26): I heard that ~ (reported) — おいしいそうだ
-  - ようだ/みたいだ: it seems like ~ (inference from evidence) — おいしいようだ
-  - らしい: apparently ~ (indirect evidence/typicality) — おいしいらしい
-  - Each has a different evidence source and different attachment rules
+  - そうだ (appearance, G27): looks like ~ (immediate visual impression) — おいしそう
+  - そうだ (hearsay, G27): I heard that ~ (reported speech) — おいしいそうだ
+  - ようだ / みたいだ: it seems like ~ (inference from observed evidence) — おいしいようだ
+  - らしい: apparently ~ (indirect evidence / typicality) — おいしいらしい
+  - Each has a different evidence source and different attachment rules — this chart is the core of the lesson
 
 **Recommended sections:**
-1. `grammarIntro` — the "evidence hierarchy" in Japanese
-2. `grammarRule` — ようだ (evidence-based inference + simile)
-3. `grammarRule` — みたいだ (casual inference + simile)
-4. `grammarComparison` — ようだ vs みたいだ (same meaning, different register)
-5. `grammarRule` — らしい (hearsay + typicality dual use)
-6. `grammarTable` — THE 4-WAY CHART: そうだ(app) / そうだ(hear) / ようだ / らしい with attachment rules, evidence source, meaning, and examples
-7. `annotatedExample` — all four in parallel situations (weather, food, people)
-8. `patternMatch` — identify which inference type is being used
+1. `grammarIntro` — the "evidence hierarchy" in Japanese; brief callback to G16 resemblance vs this lesson's inference focus
+2. `grammarRule` — ようだ (evidence-based inference; attachment rules; polite ようです)
+3. `grammarRule` — みたいだ (casual inference equivalent; direct attachment; no の)
+4. `grammarComparison` — ようだ vs みたいだ (same inference meaning, formal vs casual register)
+5. `grammarRule` — らしい (hearsay + typicality dual use; attachment rules; contrast with ようだ evidence source)
+6. `grammarTable` — THE 4-WAY CHART: そうだ(appearance) / そうだ(hearsay) / ようだ / らしい — attachment rules, evidence source, meaning, and examples in one table
+7. `annotatedExample` — all four patterns in parallel situations (weather, food, people)
+8. `patternMatch` — identify which inference type is being used given the evidence context
 9. `conversation` — dialogue using all four naturally
 10. `fillSlot` — choose the right inference form given context clues about evidence source
 11. `drills` — mixed MCQ heavily testing the 4-way distinction
 
 ---
 
-### G33 — Expectation & Reasoning (はずだ / わけだ)
+### G34 — Expectation & Reasoning (はずだ / わけだ)
 
 | Field | Value |
 |---|---|
-| **ID** | `G33` |
+| **ID** | `G34` |
 | **Level** | N3 |
 | **Unlocks after** | N3.14 |
 | **Icon** | 🧠 |
@@ -2151,11 +2219,11 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 
 ---
 
-### G34 — Aspect & Temporal States (ところだ / たばかり)
+### G35 — Aspect & Temporal States (ところだ / たばかり)
 
 | Field | Value |
 |---|---|
-| **ID** | `G34` |
+| **ID** | `G35` |
 | **Level** | N3 |
 | **Unlocks after** | N3.18 |
 | **Icon** | ⏱️ |
@@ -2170,7 +2238,7 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 - たばかり — just did (relatively recent):
   - た-form + ばかり: 来たばかりだ (just arrived — could be minutes or days ago)
   - More flexible timeframe than たところだ
-  - Expanding G16's ばかり from "nothing but" to temporal use
+  - Expanding G17's ばかり from "nothing but" to temporal use
 - Comparison: たところだ vs たばかりだ:
   - たところだ = just this moment (very recent, almost immediate)
   - たばかりだ = recently (broader — could be hours, days, even weeks depending on context)
@@ -2187,11 +2255,11 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 
 ---
 
-### G35 — Sentence-Ending Particles & Register
+### G36 — Sentence-Ending Particles & Register
 
 | Field | Value |
 |---|---|
-| **ID** | `G35` |
+| **ID** | `G36` |
 | **Level** | N3 |
 | **Unlocks after** | N3.22 |
 | **Icon** | 💬 |
@@ -2223,11 +2291,11 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 
 ---
 
-### G36 — Adverbs of Degree
+### G37 — Adverbs of Degree
 
 | Field | Value |
 |---|---|
-| **ID** | `G36` |
+| **ID** | `G37` |
 | **Level** | N3 |
 | **Unlocks after** | N3.26 |
 | **Icon** | 📊 |
@@ -2262,11 +2330,11 @@ The full degree scale, organized into tiers:
 
 ---
 
-### G37 — Honorific & Humble Speech (敬語 Introduction)
+### G38 — Honorific & Humble Speech (敬語 Introduction)
 
 | Field | Value |
 |---|---|
-| **ID** | `G37` |
+| **ID** | `G38` |
 | **Level** | N3 |
 | **Unlocks after** | N3.34 |
 | **Icon** | 🎩 |
@@ -2315,11 +2383,11 @@ The full degree scale, organized into tiers:
 
 ---
 
-### G38 — Time Clauses (間 / うちに / 以来 / とたん)
+### G39 — Time Clauses (間 / うちに / 以来 / とたん)
 
 | Field | Value |
 |---|---|
-| **ID** | `G38` |
+| **ID** | `G39` |
 | **Level** | N3 |
 | **Unlocks after** | N3.38 |
 | **Icon** | ⏰ |
@@ -2358,11 +2426,11 @@ The full degree scale, organized into tiers:
 
 ---
 
-### G39 — Perspective & Relation Particles
+### G40 — Perspective & Relation Particles
 
 | Field | Value |
 |---|---|
-| **ID** | `G39` |
+| **ID** | `G40` |
 | **Level** | N3 |
 | **Unlocks after** | N3.42 |
 | **Icon** | 🔗 |
@@ -2377,7 +2445,7 @@ The full degree scale, organized into tiers:
   - Contrast use: 兄はスポーツが好きだ。それに対して弟は読書が好きだ (older brother likes sports; in contrast, younger brother likes reading)
 - について — about / regarding:
   - 日本の文化について話す (talk about Japanese culture)
-  - Expanding G24's brief mention to full treatment
+  - Expanding G25's brief mention to full treatment
 - として — in the capacity of / as:
   - 教師として働く (work as a teacher)
   - 友だちとして言う (say this as a friend)
@@ -2399,11 +2467,11 @@ The full degree scale, organized into tiers:
 
 ---
 
-### G40 — Causative-Passive & Advanced Voice
+### G41 — Causative-Passive & Advanced Voice
 
 | Field | Value |
 |---|---|
-| **ID** | `G40` |
+| **ID** | `G41` |
 | **Level** | N3 |
 | **Unlocks after** | N3.46 |
 | **Icon** | 🔄 |
@@ -2442,11 +2510,11 @@ The full degree scale, organized into tiers:
 
 ---
 
-### G41 — Suffixes & Word Formation (っぽい / がち / 気味 / ～やか)
+### G42 — Suffixes & Word Formation (っぽい / がち / 気味 / ～やか)
 
 | Field | Value |
 |---|---|
-| **ID** | `G41` |
+| **ID** | `G42` |
 | **Level** | N3 |
 | **Unlocks after** | N3.50 |
 | **Icon** | 🧩 |
@@ -2483,11 +2551,11 @@ The full degree scale, organized into tiers:
 
 ---
 
-### G42 — Advanced Conditionals & Wishes
+### G43 — Advanced Conditionals & Wishes
 
 | Field | Value |
 |---|---|
-| **ID** | `G42` |
+| **ID** | `G43` |
 | **Level** | N3 |
 | **Unlocks after** | N3.54 |
 | **Icon** | 💫 |
@@ -2524,11 +2592,11 @@ The full degree scale, organized into tiers:
 
 ---
 
-### G43 — Quoting & Indirect Speech
+### G44 — Quoting & Indirect Speech
 
 | Field | Value |
 |---|---|
-| **ID** | `G43` |
+| **ID** | `G44` |
 | **Level** | N3 |
 | **Unlocks after** | N3.58 |
 | **Icon** | 🗣️ |
@@ -2551,7 +2619,7 @@ The full degree scale, organized into tiers:
 - Embedded questions with か and かどうか:
   - 何時に来るか知っていますか (do you know what time they're coming?)
   - 行くかどうか決めていない (I haven't decided whether to go or not)
-  - Expanding G24's brief mention of かどうか
+  - Expanding G25's brief mention of かどうか
 
 **Recommended sections:**
 1. `grammarIntro` — the richness of Japanese quotation and embedding
@@ -2567,11 +2635,11 @@ The full degree scale, organized into tiers:
 
 ---
 
-### G44 — Compound Expressions & Set Patterns
+### G45 — Compound Expressions & Set Patterns
 
 | Field | Value |
 |---|---|
-| **ID** | `G44` |
+| **ID** | `G45` |
 | **Level** | N3 |
 | **Unlocks after** | N3.64 |
 | **Icon** | 🧱 |
@@ -2584,18 +2652,18 @@ The full degree scale, organized into tiers:
   - する → せずに (irregular)
 - ことはない — there's no need to:
   - 心配することはない (there's no need to worry)
-  - Reinforces G30's こと patterns
+  - Reinforces G31's こと patterns
 - しかない / ほかない — have no choice but to:
   - 歩くしかない (have no choice but to walk)
   - 待つほかない (nothing to do but wait)
-  - Casual/everyday equivalent of ざるを得ない (G40)
+  - Casual/everyday equivalent of ざるを得ない (G41)
 - てはいられない — can't keep doing / can't afford to stay in a state:
   - 待ってはいられない (can't keep waiting)
   - こんなことで泣いてはいられない (can't keep crying about something like this)
 - にちがいない — must be / no doubt:
   - 犯人にちがいない (must be the culprit)
   - Plain form + にちがいない: 来るにちがいない (no doubt they'll come)
-  - Stronger certainty than はず (G33)
+  - Stronger certainty than はず (G34)
 - もう/まだ grammar patterns:
   - もう + past: もう食べました (already ate)
   - まだ + ていない: まだ食べていません (haven't eaten yet)
@@ -2617,11 +2685,11 @@ The full degree scale, organized into tiers:
 
 ---
 
-### G45 — Advanced Connectors
+### G46 — Advanced Connectors
 
 | Field | Value |
 |---|---|
-| **ID** | `G45` |
+| **ID** | `G46` |
 | **Level** | N3 |
 | **Unlocks after** | N3.72 |
 | **Icon** | 🔀 |
@@ -2662,11 +2730,11 @@ The full degree scale, organized into tiers:
 
 ---
 
-### G46 — N3 Grammar Capstone Review
+### G47 — N3 Grammar Capstone Review
 
 | Field | Value |
 |---|---|
-| **ID** | `G46` |
+| **ID** | `G47` |
 | **Level** | N3 |
 | **Unlocks after** | N3.84 |
 | **Icon** | 🏆 |
@@ -2692,7 +2760,7 @@ This is a mixed review lesson, not new grammar. Focus on the highest-confusion a
 5. `fillSlot` — mixed particles and expressions across 8-10 items
 6. `sentenceTransform` — voice conversions (active → passive, active → causative-passive)
 7. `conjugationDrill` — mixed conjugation across all N3 forms
-8. `drills` — comprehensive MCQ covering all G29–G45 grammar points, 10-12 items minimum
+8. `drills` — comprehensive MCQ covering all G30–G46 grammar points, 10-12 items minimum
 
 ---
 
