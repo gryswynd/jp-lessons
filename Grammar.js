@@ -985,6 +985,7 @@ window.GrammarModule = {
           textNodes.forEach(textNode => {
             if (!textNode.parentNode) return;
             particles.forEach(p => {
+              if (!textNode.parentNode) return; // re-check: prior particle may have detached this node
               if (!textNode.textContent.includes(p)) return;
               const parts = textNode.textContent.split(p);
               const frag = document.createDocumentFragment();
@@ -1124,20 +1125,26 @@ window.GrammarModule = {
       const isInteractive = sec.type === 'fillSlot' || sec.type === 'sentenceTransform' || sec.type === 'conjugationDrill';
       const stepIdx = currentStep;
       if (isInteractive && !completedSteps.has(stepIdx)) nextBtn.disabled = true;
+      else if (!isInteractive) nextBtn.disabled = false; // reset if navigating back from an interactive step
       const enableNext = isInteractive ? () => { completedSteps.add(stepIdx); nextBtn.disabled = false; } : null;
 
-      if      (sec.type === 'grammarIntro')      content = renderGrammarIntro(sec);
-      else if (sec.type === 'grammarRule')        content = renderGrammarRule(sec);
-      else if (sec.type === 'grammarTable')       content = renderGrammarTable(sec);
-      else if (sec.type === 'grammarComparison')  content = renderGrammarComparison(sec);
-      else if (sec.type === 'annotatedExample')   content = renderAnnotatedExample(sec);
-      else if (sec.type === 'conjugationDrill')   content = renderConjugationDrill(sec, enableNext);
-      else if (sec.type === 'patternMatch')        content = renderPatternMatch(sec);
-      else if (sec.type === 'sentenceTransform')  content = renderSentenceTransform(sec, enableNext);
-      else if (sec.type === 'fillSlot')           content = renderFillSlot(sec, enableNext);
-      else if (sec.type === 'conversation')       content = renderConversation(sec);
-      else if (sec.type === 'drills')             content = renderDrills(sec);
-      else content = el('div', 'gr-card', '<em>Unknown section type: ' + esc(sec.type) + '</em>');
+      try {
+        if      (sec.type === 'grammarIntro')      content = renderGrammarIntro(sec);
+        else if (sec.type === 'grammarRule')        content = renderGrammarRule(sec);
+        else if (sec.type === 'grammarTable')       content = renderGrammarTable(sec);
+        else if (sec.type === 'grammarComparison')  content = renderGrammarComparison(sec);
+        else if (sec.type === 'annotatedExample')   content = renderAnnotatedExample(sec);
+        else if (sec.type === 'conjugationDrill')   content = renderConjugationDrill(sec, enableNext);
+        else if (sec.type === 'patternMatch')        content = renderPatternMatch(sec);
+        else if (sec.type === 'sentenceTransform')  content = renderSentenceTransform(sec, enableNext);
+        else if (sec.type === 'fillSlot')           content = renderFillSlot(sec, enableNext);
+        else if (sec.type === 'conversation')       content = renderConversation(sec);
+        else if (sec.type === 'drills')             content = renderDrills(sec);
+        else content = el('div', 'gr-card', '<em>Unknown section type: ' + esc(sec.type) + '</em>');
+      } catch (renderErr) {
+        console.error('renderCurrentStep error at step', currentStep, '(', sec.type, '):', renderErr);
+        content = el('div', 'gr-card', '<em style="color:red;">Error rendering section "' + esc(sec.title || sec.type) + '": ' + esc(renderErr.message) + '</em>');
+      }
 
       if (content) wrap.appendChild(content);
       body.appendChild(wrap);
