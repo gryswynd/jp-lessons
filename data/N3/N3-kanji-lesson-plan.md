@@ -47,7 +47,7 @@ These N3 kanji are used in vocabulary words that students already encounter in h
 | **N3.2** | **連 達 違 絡** | **Connections & Differences** | 連絡(contact), 友達(friend), 違う(differ), 絡む(get tangled/involved) |
 | **N3.3** | **昔 昨 初 次** | **Past & Sequence** | 昔(long ago), 昨日(yesterday), 初めて(first time), 次(next) |
 | **N3.4** | **続 緒 慣 末** | **Habits & Routine** | 続ける(continue), 一緒(together), 慣れる(get used to)/習慣(habit), 週末(weekend) |
-| **N3.5** | **歳 暮 束** | **Time & Promises** | 歳(age-counter), 暮らす(live/reside), 束(bundle) — 約束 unlocks at N3.66 when 約 is taught |
+| **N3.5** | **歳 暮 約 束** | **Promises & Time** | 歳(age-counter), 暮らす(live/reside), 約束(promise)/予約(reservation), 束(bundle) |
 | **N3.6** | **彼 君 娘 祖** | **People & Generations** | 彼(he)/彼女(she), 君(you-informal), 娘(daughter), 祖父/祖母(grandparents) |
 | **N3.7** | **全 部 内 側** | **Whole & Parts** | 全部(all), 部分(part)/部屋(room), 内(inside), 側(side) |
 | **N3.8** | **必 要 可 限** | **Necessity & Limits** | 必要(necessary), 重要(important), 可能(possible), 限り(limit) |
@@ -128,7 +128,7 @@ These N3 kanji are used in vocabulary words that students already encounter in h
 | **N3.63** | **期 更 最 未** | **Periods & Extremes** | 期間(period), 変更(change), 最近(recently)/最も(most), 未来(future) |
 | **N3.64** | **活 演 術 舞** | **Life & Performance** | 生活(lifestyle), 演技(performance), 技術(technique), 舞台(stage) |
 | **N3.65** | **曲 絵 科 精** | **Art & Science** | 曲(song/curve), 絵(painting), 科学(science), 精神(spirit) |
-| **N3.66** | **経 組 約 給** | **Organization & Supply** | 経験(experience), 組(group)/組む(assemble), 約(approximately)/約束(promise, 束 N3.5), 給料(salary) |
+| **N3.66** | **経 組 給** | **Organization & Supply** | 経験(experience), 組(group)/組む(assemble), 給料(salary) |
 | **N3.67** | **交 関 係 任** | **Interaction & Relations** | 交通(traffic)/交換(exchange), 関係(relation)/関心(interest), 責任(responsibility) |
 | **N3.68** | **供 共 与 受** | **Giving & Receiving** | 提供(provide), 共通(common), 与える(give), 受ける(receive) |
 
@@ -165,7 +165,7 @@ These N3 kanji are used in vocabulary words that students already encounter in h
 | N3.2 | N3.31 | 連 達 違 絡 | A |
 | N3.3 | N3.46 | 昔 昨 初 次 | A |
 | N3.4 | N3.49 | 続 緒 慣 末 | A |
-| N3.5 | N3.48 | 歳 暮 束 | A |
+| N3.5 | N3.48 | 歳 暮 約 束 | A |
 | N3.6 | N3.14 | 彼 君 娘 祖 | A |
 | N3.7 | N3.70 | 全 部 内 側 | A |
 | N3.8 | N3.74 | 必 要 可 限 | A |
@@ -226,7 +226,7 @@ These N3 kanji are used in vocabulary words that students already encounter in h
 | N3.63 | N3.47 | 期 更 最 未 | E |
 | N3.64 | N3.56 | 活 演 術 舞 | E |
 | N3.65 | N3.57 | 曲 絵 科 精 | E |
-| N3.66 | N3.58 | 経 組 約 給 | E |
+| N3.66 | N3.58 | 経 組 給 | E |
 | N3.67 | N3.59 | 交 関 係 任 | E |
 | N3.68 | N3.60 | 供 共 与 受 | E |
 | N3.69 | N3.61 | 他 似 偶 類 | F |
@@ -258,7 +258,7 @@ These N3 kanji are used in vocabulary words that students already encounter in h
 | Overlap with N5+N4 (excluded) | 27 |
 | Lessons with 5 kanji | 4 (N3.45, N3.46, N3.50, N3.80) |
 | Lessons with 4 kanji | 81 |
-| Lessons with 3 kanji | 1 (N3.5) |
+| Lessons with 3 kanji | 1 (N3.66) |
 | Total lessons | 86 |
 | Phases | 6 (A: Foundation, B: Actions/Emotions, C: Body/Nature, D: Mind/Social, E: People/Home, F: Abstract/Commerce) |
 | Kanshudo N4 gap fills | 3 (的, 無, 公) |
@@ -267,7 +267,7 @@ These N3 kanji are used in vocabulary words that students already encounter in h
 
 ```
 N3.1:  忘 覚 残 念    N3.2:  連 達 違 絡    N3.3:  昔 昨 初 次
-N3.4:  続 緒 慣 末    N3.5:  歳 暮 束        N3.6:  彼 君 娘 祖
+N3.4:  続 緒 慣 末    N3.5:  歳 暮 約 束    N3.6:  彼 君 娘 祖
 N3.7:  全 部 内 側    N3.8:  必 要 可 限    N3.9:  命 亡 危 険
 N3.10: 法 戦 選 参    N3.11: 守 盗 殺 犯    N3.12: 勝 努 成 得
 N3.13: 失 敗 負 害    N3.14: 追 逃 退 返    N3.15: 容 寝 具 箱
@@ -287,7 +287,7 @@ N3.52: 常 平 静 和    N3.53: 夫 妻 婚 婦    N3.54: 師 徒 優 偉
 N3.55: 髪 歯 背 腹    N3.56: 育 能 才 笑    N3.57: 宅 庭 居 宿
 N3.58: 園 窓 座 席    N3.59: 草 葉 石 種    N3.60: 晴 雪 景 陽
 N3.61: 泳 流 浮 深    N3.62: 港 渡 済 満    N3.63: 期 更 最 未
-N3.64: 活 演 術 舞    N3.65: 曲 絵 科 精    N3.66: 経 組 約 給
+N3.64: 活 演 術 舞    N3.65: 曲 絵 科 精    N3.66: 経 組 給
 N3.67: 交 関 係 任    N3.68: 供 共 与 受    N3.69: 他 似 偶 類
 N3.70: 例 候 件 因    N3.71: 役 御 身 辞    N3.72: 労 務 勤 職
 N3.73: 商 客 賛 財    N3.74: 費 資 貧 富    N3.75: 加 助 備 完
