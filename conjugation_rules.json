@@ -40,6 +40,66 @@
       }
     }
   },
+  "copula_negative": {
+    "label": "Polite Negative Copula (Ja/Dewa arimasen)",
+    "description": "Negative form of the polite copula です → じゃありません / ではありません.",
+    "introducedIn": "N5.1",
+    "rules": {
+      "copula": {
+        "type": "replace",
+        "surface": "じゃありません",
+        "reading": "じゃありません"
+      }
+    }
+  },
+  "copula_past_negative": {
+    "label": "Polite Past Negative Copula (Ja/Dewa arimasen deshita)",
+    "description": "Past negative form of the polite copula です → じゃありませんでした.",
+    "introducedIn": "N5.1",
+    "rules": {
+      "copula": {
+        "type": "replace",
+        "surface": "じゃありませんでした",
+        "reading": "じゃありませんでした"
+      }
+    }
+  },
+  "da_past": {
+    "label": "Plain Past Copula (Datta)",
+    "description": "Past tense of the plain copula だ → だった.",
+    "introducedIn": "G9",
+    "rules": {
+      "copula": {
+        "type": "replace",
+        "surface": "だった",
+        "reading": "だった"
+      }
+    }
+  },
+  "da_negative": {
+    "label": "Plain Negative Copula (Ja nai)",
+    "description": "Negative form of the plain copula だ → じゃない / ではない.",
+    "introducedIn": "G9",
+    "rules": {
+      "copula": {
+        "type": "replace",
+        "surface": "じゃない",
+        "reading": "じゃない"
+      }
+    }
+  },
+  "da_past_negative": {
+    "label": "Plain Past Negative Copula (Ja nakatta)",
+    "description": "Past negative form of the plain copula だ → じゃなかった / ではなかった.",
+    "introducedIn": "G9",
+    "rules": {
+      "copula": {
+        "type": "replace",
+        "surface": "じゃなかった",
+        "reading": "じゃなかった"
+      }
+    }
+  },
   "polite_masu": {
     "label": "Polite (Masu-Form)",
     "description": "Standard polite present/future affirmative.",
