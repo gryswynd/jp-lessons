@@ -7,7 +7,14 @@
     "lesson_number": 17,
     "focus": "Vocabulary for company life — entrances and exits (入り口・出口), morning and afternoon (午前・午後), meetings, conversation, and part-time work (アルバイト)",
     "estimated_minutes": 30,
-    "kanji": ["午", "口", "出", "入", "会", "社"]
+    "kanji": [
+      "午",
+      "口",
+      "出",
+      "入",
+      "会",
+      "社"
+    ]
   },
   "newKanji": [
     {
@@ -66,8 +73,14 @@
             "v_mainichi",
             "v_nihongo",
             "p_wo",
-            { "id": "v_yomu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -76,7 +89,10 @@
           "terms": [
             "v_yama",
             "p_ga",
-            { "id": "v_ookii", "form": "appearance_sou" }
+            {
+              "id": "v_ookii",
+              "form": "appearance_sou"
+            }
           ]
         },
         {
@@ -87,7 +103,11 @@
             "p_to",
             "v_eki",
             "p_ni",
-            { "id": "v_iku", "form": "desire_tai" }
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         },
         {
@@ -98,7 +118,10 @@
             "p_no",
             "v_michi",
             "p_wa",
-            { "id": "v_nagai", "form": "polite_past_adj" }
+            {
+              "id": "v_nagai",
+              "form": "polite_past_adj"
+            }
           ]
         }
       ]
@@ -112,42 +135,54 @@
           "on": "ご",
           "kun": "",
           "meaning": "noon",
-          "terms": ["k_u5348"]
+          "terms": [
+            "k_u5348"
+          ]
         },
         {
           "kanji": "口",
           "on": "こう",
           "kun": "くち",
           "meaning": "mouth / opening",
-          "terms": ["k_kuchi"]
+          "terms": [
+            "k_kuchi"
+          ]
         },
         {
           "kanji": "出",
           "on": "しゅつ",
           "kun": "で / だ",
           "meaning": "exit / take out",
-          "terms": ["k_de"]
+          "terms": [
+            "k_de"
+          ]
         },
         {
           "kanji": "入",
           "on": "にゅう",
           "kun": "い / はい",
           "meaning": "enter / put in",
-          "terms": ["k_i_3"]
+          "terms": [
+            "k_i_3"
+          ]
         },
         {
           "kanji": "会",
           "on": "かい",
           "kun": "あ",
           "meaning": "meet",
-          "terms": ["k_a"]
+          "terms": [
+            "k_a"
+          ]
         },
         {
           "kanji": "社",
           "on": "しゃ",
           "kun": "",
           "meaning": "company / society",
-          "terms": ["k_u793e"]
+          "terms": [
+            "k_u793e"
+          ]
         }
       ]
     },
@@ -157,27 +192,53 @@
       "groups": [
         {
           "label": "Time of Day",
-          "items": ["v_gozen", "v_gogo"]
+          "items": [
+            "v_gozen",
+            "v_gogo"
+          ]
         },
         {
           "label": "Entrance & Exit",
-          "items": ["v_iriguchi", "v_deguchi"]
+          "items": [
+            "v_iriguchi",
+            "v_deguchi"
+          ]
         },
         {
           "label": "Company & Society",
-          "items": ["v_kaisha", "v_shachou", "v_shakai", "v_kaiwa"]
+          "items": [
+            "v_kaisha",
+            "v_shachou",
+            "v_shakai",
+            "v_kaiwa"
+          ]
         },
         {
           "label": "Work Verbs",
-          "items": ["v_hairu", "v_deru", "v_dasu", "v_ireru", "v_au"]
+          "items": [
+            "v_hairu",
+            "v_deru",
+            "v_dasu",
+            "v_ireru",
+            "v_au"
+          ]
         },
         {
           "label": "Work & Part-time",
-          "items": ["v_arubaito"]
+          "items": [
+            "v_arubaito"
+          ]
         },
         {
           "label": "Kanji",
-          "items": ["k_u5348", "k_kuchi", "k_de", "k_i_3", "k_a", "k_u793e"]
+          "items": [
+            "k_u5348",
+            "k_kuchi",
+            "k_de",
+            "k_i_3",
+            "k_a",
+            "k_u793e"
+          ]
         }
       ]
     },
@@ -208,10 +269,16 @@
           "terms": [
             "v_migi",
             "p_ni",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "v_iriguchi",
             "p_kara",
-            { "id": "v_hairu", "form": "te_form" },
+            {
+              "id": "v_hairu",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
@@ -225,7 +292,10 @@
             "p_mo",
             "v_migi",
             "p_ni",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -239,7 +309,10 @@
             "p_wa",
             "v_hidari",
             "p_ni",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -247,17 +320,26 @@
           "jp": "分かりました。右の 入り口から 入って、左の 出口から 出ます。",
           "en": "I understand. I will enter from the right entrance and exit through the left exit.",
           "terms": [
-            { "id": "v_wakaru", "form": "polite_mashita" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            },
             "v_migi",
             "p_no",
             "v_iriguchi",
             "p_kara",
-            { "id": "v_hairu", "form": "te_form" },
+            {
+              "id": "v_hairu",
+              "form": "te_form"
+            },
             "v_hidari",
             "p_no",
             "v_deguchi",
             "p_kara",
-            { "id": "v_deru", "form": "polite_masu" }
+            {
+              "id": "v_deru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -270,12 +352,18 @@
             "p_wa",
             "v_shachou",
             "p_to",
-            { "id": "v_au", "form": "polite_masu" },
+            {
+              "id": "v_au",
+              "form": "polite_masu"
+            },
             "v_gogo",
             "p_ni",
             "v_deguchi",
             "p_kara",
-            { "id": "v_deru", "form": "te_form" },
+            {
+              "id": "v_deru",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         }
@@ -298,7 +386,10 @@
             "p_ni",
             "v_shachou",
             "p_to",
-            { "id": "v_au", "form": "polite_masu" }
+            {
+              "id": "v_au",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -311,7 +402,10 @@
             "p_to",
             "v_nihongo",
             "p_de",
-            { "id": "v_hanasu", "form": "polite_masu" },
+            {
+              "id": "v_hanasu",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -329,7 +423,10 @@
             "g_desu",
             "char_rikizo",
             "v_san",
-            { "id": "v_hanasu", "form": "te_form" },
+            {
+              "id": "v_hanasu",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
@@ -338,17 +435,29 @@
           "jp": "分かりました。日本語の 会話は まだ 下手ですが、毎日 話しています。",
           "en": "I understand. My Japanese conversation is still poor, but I speak every day.",
           "terms": [
-            { "id": "v_wakaru", "form": "polite_mashita" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            },
             "v_nihongo",
             "p_no",
             "v_kaiwa",
             "p_wa",
             "v_mada",
-            { "id": "v_heta", "form": "polite_adj" },
+            {
+              "id": "v_heta",
+              "form": "polite_adj"
+            },
             "p_ga_but",
             "v_mainichi",
-            { "id": "v_hanasu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_hanasu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -360,15 +469,27 @@
             "v_san",
             "p_wa",
             "v_mainichi",
-            { "id": "v_jouzu", "form": "adverbial" },
-            { "id": "v_naru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_jouzu",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_yo",
             "v_issho",
             "p_ni",
             "v_shachou",
             "p_ni",
-            { "id": "v_au", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_au",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -387,12 +508,18 @@
             "p_no",
             "v_kaiwa",
             "p_wa",
-            { "id": "v_nagai", "form": "polite_past_adj" },
+            {
+              "id": "v_nagai",
+              "form": "polite_past_adj"
+            },
             "p_ne",
             "v_shachou",
             "p_wa",
             "v_totemo",
-            { "id": "v_jouzu", "form": "polite_past_adj" }
+            {
+              "id": "v_jouzu",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
@@ -406,7 +533,10 @@
             "v_koto",
             "p_wo",
             "v_takusan",
-            { "id": "v_hanasu", "form": "polite_mashita" }
+            {
+              "id": "v_hanasu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -416,11 +546,17 @@
           "terms": [
             "v_hon",
             "p_wo",
-            { "id": "v_dasu", "form": "te_form" },
+            {
+              "id": "v_dasu",
+              "form": "te_form"
+            },
             "v_kudasai",
             "v_naka",
             "p_ni",
-            { "id": "v_ireru", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_ireru",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -431,10 +567,16 @@
             "p_hai",
             "v_hon",
             "p_wo",
-            { "id": "v_dasu", "form": "te_form" },
+            {
+              "id": "v_dasu",
+              "form": "te_form"
+            },
             "v_naka",
             "p_ni",
-            { "id": "v_ireru", "form": "polite_mashita" }
+            {
+              "id": "v_ireru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -447,7 +589,10 @@
             "p_no",
             "v_deguchi",
             "p_kara",
-            { "id": "v_deru", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_deru",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -458,12 +603,18 @@
             "p_hai",
             "v_deguchi",
             "p_kara",
-            { "id": "v_deru", "form": "te_form" },
+            {
+              "id": "v_deru",
+              "form": "te_form"
+            },
             "v_kaisha",
             "p_no",
             "v_soto",
             "p_de",
-            { "id": "v_au", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_au",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -481,7 +632,10 @@
             "char_rikizo",
             "v_arubaito",
             "p_ni",
-            { "id": "v_hairu", "form": "plain_past" },
+            {
+              "id": "v_hairu",
+              "form": "plain_past"
+            },
             "p_ne"
           ]
         },
@@ -523,7 +677,10 @@
             "p_no",
             "v_iriguchi",
             "p_kara",
-            { "id": "v_hairu", "form": "te_form" },
+            {
+              "id": "v_hairu",
+              "form": "te_form"
+            },
             "v_hidari",
             "p_no",
             "v_deguchi",
@@ -543,7 +700,10 @@
             "p_mo",
             "v_arubaito",
             "p_ni",
-            { "id": "v_hairu", "form": "plain_desire_tai" }
+            {
+              "id": "v_hairu",
+              "form": "plain_desire_tai"
+            }
           ]
         }
       ]
@@ -562,12 +722,18 @@
             "p_wa",
             "v_kaisha",
             "p_ni",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "v_iriguchi",
             "p_wa",
             "v_migi",
             "p_ni",
-            { "id": "v_aru", "form": "polite_mashita" }
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -578,7 +744,10 @@
             "p_ni",
             "v_shachou",
             "p_to",
-            { "id": "v_au", "form": "polite_mashita" },
+            {
+              "id": "v_au",
+              "form": "polite_mashita"
+            },
             "v_kaisha",
             "p_no",
             "v_naka",
@@ -587,7 +756,10 @@
             "p_no",
             "v_kaiwa",
             "p_wo",
-            { "id": "v_suru", "form": "polite_mashita" }
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -601,13 +773,19 @@
             "v_koto",
             "p_wo",
             "v_takusan",
-            { "id": "v_hanasu", "form": "polite_mashita" },
+            {
+              "id": "v_hanasu",
+              "form": "polite_mashita"
+            },
             "v_shachou",
             "p_no",
             "v_nihongo",
             "p_wa",
             "v_totemo",
-            { "id": "v_jouzu", "form": "polite_past_adj" }
+            {
+              "id": "v_jouzu",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
@@ -621,16 +799,26 @@
             "p_no",
             "v_deguchi",
             "p_kara",
-            { "id": "v_deru", "form": "polite_mashita" },
+            {
+              "id": "v_deru",
+              "form": "polite_mashita"
+            },
             "v_kaisha",
             "p_no",
             "v_soto",
             "p_wa",
-            { "id": "v_kirei", "form": "polite_past_adj" },
+            {
+              "id": "v_kirei",
+              "form": "polite_past_adj"
+            },
             "v_mata",
             "v_kaisha",
             "p_ni",
-            { "id": "v_kuru", "form": "desire_tai" }
+            {
+              "id": "v_kuru",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         }
       ],
@@ -649,7 +837,10 @@
             "p_wa",
             "v_migi",
             "p_ni",
-            { "id": "v_aru", "form": "polite_mashita" }
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -666,7 +857,10 @@
             "p_ni",
             "v_shachou",
             "p_to",
-            { "id": "v_au", "form": "polite_mashita" }
+            {
+              "id": "v_au",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -682,7 +876,11 @@
             "v_mata",
             "v_kaisha",
             "p_ni",
-            { "id": "v_kuru", "form": "desire_tai" }
+            {
+              "id": "v_kuru",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         }
       ]
@@ -701,14 +899,20 @@
             "p_no",
             "v_naka",
             "p_ni",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "v_nihon",
             "p_ni",
             "v_ookii",
             "v_kaisha",
             "p_ga",
             "v_takusan",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -721,7 +925,10 @@
             "p_to",
             "v_deguchi",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "v_gozen",
             "p_kara",
             "v_gogo",
@@ -729,7 +936,10 @@
             "v_hito",
             "p_ga",
             "v_takusan",
-            { "id": "v_hairu", "form": "polite_masu" }
+            {
+              "id": "v_hairu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -742,14 +952,20 @@
             "p_no",
             "v_naka",
             "p_ni",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "v_gozen",
             "p_ni",
             "v_takusan",
             "p_no",
             "v_hito",
             "p_to",
-            { "id": "v_au", "form": "polite_masu" },
+            {
+              "id": "v_au",
+              "form": "polite_masu"
+            },
             "v_kaiwa",
             "p_wa",
             "v_nihongo",
@@ -762,15 +978,27 @@
           "terms": [
             "v_shakai",
             "p_ni",
-            { "id": "v_deru", "form": "te_form" },
+            {
+              "id": "v_deru",
+              "form": "te_form"
+            },
             "v_kaisha",
             "p_ni",
-            { "id": "v_hairu", "form": "te_form" },
+            {
+              "id": "v_hairu",
+              "form": "te_form"
+            },
             "v_takusan",
-            { "id": "v_hanasu", "form": "polite_volitional_mashou" },
+            {
+              "id": "v_hanasu",
+              "form": "polite_volitional_mashou"
+            },
             "v_arubaito",
             "p_mo",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         }
@@ -792,7 +1020,10 @@
             "p_no",
             "v_naka",
             "p_ni",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -811,7 +1042,10 @@
             "p_ni",
             "v_hito",
             "p_to",
-            { "id": "v_au", "form": "polite_masu" }
+            {
+              "id": "v_au",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -826,7 +1060,10 @@
           "terms": [
             "v_arubaito",
             "p_mo",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         }
@@ -840,37 +1077,67 @@
         {
           "kind": "mcq",
           "q": "入り口",
-          "choices": ["entrance", "exit", "company", "conversation"],
+          "choices": [
+            "entrance",
+            "exit",
+            "company",
+            "conversation"
+          ],
           "answer": "entrance"
         },
         {
           "kind": "mcq",
           "q": "出口",
-          "choices": ["exit", "entrance", "society", "noon"],
+          "choices": [
+            "exit",
+            "entrance",
+            "society",
+            "noon"
+          ],
           "answer": "exit"
         },
         {
           "kind": "mcq",
           "q": "午前",
-          "choices": ["morning", "afternoon", "entrance", "company"],
+          "choices": [
+            "morning",
+            "afternoon",
+            "entrance",
+            "company"
+          ],
           "answer": "morning"
         },
         {
           "kind": "mcq",
           "q": "午後",
-          "choices": ["afternoon", "morning", "exit", "society"],
+          "choices": [
+            "afternoon",
+            "morning",
+            "exit",
+            "society"
+          ],
           "answer": "afternoon"
         },
         {
           "kind": "mcq",
           "q": "会社",
-          "choices": ["company", "society", "morning", "company president"],
+          "choices": [
+            "company",
+            "society",
+            "morning",
+            "company president"
+          ],
           "answer": "company"
         },
         {
           "kind": "mcq",
           "q": "社長",
-          "choices": ["company president", "society", "part-time job", "afternoon"],
+          "choices": [
+            "company president",
+            "society",
+            "part-time job",
+            "afternoon"
+          ],
           "answer": "company president"
         }
       ]
@@ -883,53 +1150,88 @@
         {
           "kind": "mcq",
           "q": "入り口から ___ ください。（Please enter from the entrance.）",
-          "choices": ["入って", "出て", "会って", "出して"],
+          "choices": [
+            "入って",
+            "出て",
+            "会って",
+            "出して"
+          ],
           "answer": "入って",
           "terms": [
             "v_iriguchi",
             "p_kara",
-            { "id": "v_hairu", "form": "te_form" },
+            {
+              "id": "v_hairu",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
         {
           "kind": "mcq",
           "q": "___ に 社長と 会います。（We will meet the company president in the morning.）",
-          "choices": ["午前", "午後", "会社", "社会"],
+          "choices": [
+            "午前",
+            "午後",
+            "会社",
+            "社会"
+          ],
           "answer": "午前",
           "terms": [
             "v_gozen",
             "p_ni",
             "v_shachou",
             "p_to",
-            { "id": "v_au", "form": "polite_masu" }
+            {
+              "id": "v_au",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "出口は 左に ___ 。（The exit is to the left.）",
-          "choices": ["あります", "います", "入ります", "出ます"],
+          "choices": [
+            "あります",
+            "います",
+            "入ります",
+            "出ます"
+          ],
           "answer": "あります",
           "terms": [
             "v_deguchi",
             "p_wa",
             "v_hidari",
             "p_ni",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "本を ___ 、中に 入れました。（I took out the books and put them inside.）",
-          "choices": ["出して", "入れて", "出て", "入って"],
+          "choices": [
+            "出して",
+            "入れて",
+            "出て",
+            "入って"
+          ],
           "answer": "出して",
           "terms": [
             "v_hon",
             "p_wo",
-            { "id": "v_dasu", "form": "te_form" },
+            {
+              "id": "v_dasu",
+              "form": "te_form"
+            },
             "v_naka",
             "p_ni",
-            { "id": "v_ireru", "form": "polite_mashita" }
+            {
+              "id": "v_ireru",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -942,51 +1244,89 @@
         {
           "kind": "mcq",
           "q": "午前に 社長と ___ 。（I met the company president in the morning.）",
-          "choices": ["会いました", "入りました", "出ました", "出しました"],
+          "choices": [
+            "会いました",
+            "入りました",
+            "出ました",
+            "出しました"
+          ],
           "answer": "会いました",
           "terms": [
             "v_gozen",
             "p_ni",
             "v_shachou",
             "p_to",
-            { "id": "v_au", "form": "polite_mashita" }
+            {
+              "id": "v_au",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "社長は とても ___ 。（The company president was very skilled.）",
-          "choices": ["上手でした", "上手です", "上手に なりました", "下手でした"],
+          "choices": [
+            "上手でした",
+            "上手です",
+            "上手に なりました",
+            "下手でした"
+          ],
           "answer": "上手でした",
           "terms": [
             "v_shachou",
             "p_wa",
             "v_totemo",
-            { "id": "v_jouzu", "form": "polite_past_adj" }
+            {
+              "id": "v_jouzu",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "毎日 上手に ___ 。（I am getting better every day.）",
-          "choices": ["なっています", "なりたいです", "なります", "ありません"],
+          "choices": [
+            "なっています",
+            "なりたいです",
+            "なります",
+            "ありません"
+          ],
           "answer": "なっています",
           "terms": [
             "v_mainichi",
-            { "id": "v_jouzu", "form": "adverbial" },
-            { "id": "v_naru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_jouzu",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "午後の 会話は ___ 。（The afternoon conversation was long.）",
-          "choices": ["長かったです", "長いです", "長くなります", "長そうです"],
+          "choices": [
+            "長かったです",
+            "長いです",
+            "長くなります",
+            "長そうです"
+          ],
           "answer": "長かったです",
           "terms": [
             "v_gogo",
             "p_no",
             "v_kaiwa",
             "p_wa",
-            { "id": "v_nagai", "form": "polite_past_adj" }
+            {
+              "id": "v_nagai",
+              "form": "polite_past_adj"
+            }
           ]
         }
       ]

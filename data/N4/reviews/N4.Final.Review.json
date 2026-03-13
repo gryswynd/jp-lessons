@@ -628,8 +628,9 @@
                 "v_eigakan",
                 {
                   "id": "v_iku",
-                  "form": "desire_tai"
+                  "form": "plain_desire_tai"
                 },
+                "g_desu",
                 "p_ga_but",
                 {
                   "id": "v_chikai",
@@ -682,7 +683,7 @@
                 "p_wo",
                 {
                   "id": "v_kau",
-                  "form": "desire_tai"
+                  "form": "plain_desire_tai"
                 },
                 "g_desu",
                 "p_ka"
@@ -698,7 +699,7 @@
                 "p_wo",
                 {
                   "id": "v_kau",
-                  "form": "desire_tai"
+                  "form": "plain_desire_tai"
                 },
                 "g_desu",
                 "v_shiken",
@@ -829,8 +830,9 @@
                 "v_raishuu",
                 {
                   "id": "v_iku",
-                  "form": "desire_tai"
+                  "form": "plain_desire_tai"
                 },
+                "g_desu",
                 {
                   "id": "v_omou",
                   "form": "polite_masu"
@@ -1032,52 +1034,154 @@
       "items": [
         {
           "q": "Leg 1: Last week, I went to the sea with a friend.",
-          "segments": ["先週", "友だち", "と", "海", "に", "行きました"],
-          "distractors": ["で", "を", "行って"],
-          "alts": [["友だち", "と", "先週", "海", "に", "行きました"]],
+          "segments": [
+            "先週",
+            "友だち",
+            "と",
+            "海",
+            "に",
+            "行きました"
+          ],
+          "distractors": [
+            "で",
+            "を",
+            "行って"
+          ],
+          "alts": [
+            [
+              "友だち",
+              "と",
+              "先週",
+              "海",
+              "に",
+              "行きました"
+            ]
+          ],
           "explanation": "と marks the companion ('with a friend'). に marks the destination. 先週 (last week) can float before or after the topic."
         },
         {
           "q": "Leg 2: I wanted to eat delicious fish there.",
-          "segments": ["そこ", "で", "おいしい", "魚", "を", "食べたかった", "です"],
-          "distractors": ["に", "食べたい", "食べて"],
+          "segments": [
+            "そこ",
+            "で",
+            "おいしい",
+            "魚",
+            "を",
+            "食べたかった",
+            "です"
+          ],
+          "distractors": [
+            "に",
+            "食べたい",
+            "食べて"
+          ],
           "explanation": "〜たかったです is the past form of 〜たいです (desire). で marks the location of the action. おいしい directly modifies 魚 as an attributive adjective."
         },
         {
           "q": "Leg 3: We walked on the beach, sang songs, and did other things.",
-          "segments": ["歩いたり", "歌ったり", "しました"],
-          "distractors": ["歩いて", "歌って", "します"],
+          "segments": [
+            "歩いたり",
+            "歌ったり",
+            "しました"
+          ],
+          "distractors": [
+            "歩いて",
+            "歌って",
+            "します"
+          ],
           "explanation": "〜たり〜たりする lists representative actions ('did things like ~'). 歩く (godan) → 歩いたり, 歌う (godan) → 歌ったり. しました closes the pattern. Distractors 歩いて / 歌って are て-form connectors — similar but wrong pattern."
         },
         {
           "q": "Leg 4: From the sea, we could see a beautiful mountain.",
-          "segments": ["海", "から", "きれいな", "山", "が", "見えました"],
-          "distractors": ["を", "に", "見ました"],
+          "segments": [
+            "海",
+            "から",
+            "きれいな",
+            "山",
+            "が",
+            "見えました"
+          ],
+          "distractors": [
+            "を",
+            "に",
+            "見ました"
+          ],
           "explanation": "見える (to be visible) is an intransitive potential — the mountain is visible, not 'I saw it'. が marks the subject of visibility. きれいな is a な-adjective modifying 山. The distractor 見ました (saw) would need を, not が."
         },
         {
           "q": "Leg 5: If the weather is good tomorrow, let's go again.",
-          "segments": ["明日", "天気", "が", "よかったら", "また", "行きましょう"],
-          "distractors": ["は", "よければ", "行きたい"],
-          "alts": [["天気", "が", "よかったら", "明日", "また", "行きましょう"]],
+          "segments": [
+            "明日",
+            "天気",
+            "が",
+            "よかったら",
+            "また",
+            "行きましょう"
+          ],
+          "distractors": [
+            "は",
+            "よければ",
+            "行きたい"
+          ],
+          "alts": [
+            [
+              "天気",
+              "が",
+              "よかったら",
+              "明日",
+              "また",
+              "行きましょう"
+            ]
+          ],
           "explanation": "〜たら is a conditional ('if'). いい → よかったら (irregular: よい stem + かったら). 〜ましょう is a volitional invitation ('let's'). 明日 can appear before or after the conditional. Distractor よければ is the 〜ば conditional — also valid Japanese, but doesn't match the target."
         },
         {
           "q": "Leg 6: I walked home while listening to music.",
-          "segments": ["音楽", "を", "聞きながら", "歩いて", "帰りました"],
-          "distractors": ["聞いて", "に", "帰って"],
+          "segments": [
+            "音楽",
+            "を",
+            "聞きながら",
+            "歩いて",
+            "帰りました"
+          ],
+          "distractors": [
+            "聞いて",
+            "に",
+            "帰って"
+          ],
           "explanation": "〜ながら means 'while doing'. 聞く → 聞きながら (ます-stem + ながら). 歩いて帰りました uses て-form to connect 'walked' and 'went home'. Distractor 聞いて would make it sequential ('listened, then walked') instead of simultaneous."
         },
         {
           "q": "Leg 7: Even though I was tired, I had too much fun and couldn't go home.",
-          "segments": ["つかれた", "のに", "楽しすぎて", "帰れませんでした"],
-          "distractors": ["ので", "楽しくて", "帰りませんでした"],
+          "segments": [
+            "つかれた",
+            "のに",
+            "楽しすぎて",
+            "帰れませんでした"
+          ],
+          "distractors": [
+            "ので",
+            "楽しくて",
+            "帰りませんでした"
+          ],
           "explanation": "のに means 'even though' (concessive). 楽しい → 楽し + すぎる (too much) → 楽しすぎて (te-form giving reason = 'it was too fun so...'). 帰る → 帰れる (potential) → 帰れませんでした (past negative potential = 'couldn't go home'). Distractor ので ('because') reverses the logic. Distractor 帰りませんでした ('didn't go home') loses the nuance of inability."
         },
         {
           "q": "Leg 8: My mother made me write a letter to my friend.",
-          "segments": ["母", "に", "友だち", "へ", "手紙", "を", "書かせられました"],
-          "distractors": ["が", "書きました", "書かれました"],
+          "segments": [
+            "母",
+            "に",
+            "友だち",
+            "へ",
+            "手紙",
+            "を",
+            "書かせられました"
+          ],
+          "distractors": [
+            "が",
+            "書きました",
+            "書かれました"
+          ],
           "explanation": "書かせられました is the causative-passive of 書く: 書か (あ-stem) + せ (causative) + られ (passive) + ました. 母に marks who caused the action. へ marks the recipient direction. Distractor 書かれました is plain passive ('was written by'); distractor 書きました is just polite past ('wrote'). This is the hardest pattern in N4 — you made it to the finish line! 🎉"
         }
       ]

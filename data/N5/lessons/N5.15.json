@@ -7,7 +7,12 @@
     "lesson_number": 15,
     "focus": "Cardinal directions (北/南/東/西) and intercardinal directions (北東/北西/南東/南西) used to describe locations, give directions, and discuss Japan's regions",
     "estimated_minutes": 30,
-    "kanji": ["北", "南", "東", "西"]
+    "kanji": [
+      "北",
+      "南",
+      "東",
+      "西"
+    ]
   },
   "newKanji": [
     {
@@ -55,8 +60,14 @@
             "p_de",
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -68,7 +79,10 @@
             "v_tesuto",
             "p_wa",
             "v_sukoshi",
-            { "id": "v_nagai", "form": "polite_past_adj" }
+            {
+              "id": "v_nagai",
+              "form": "polite_past_adj"
+            }
           ]
         },
         {
@@ -79,7 +93,10 @@
             "p_ni",
             "v_namae",
             "p_wo",
-            { "id": "v_kaku", "form": "te_form" },
+            {
+              "id": "v_kaku",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
@@ -90,7 +107,10 @@
             "v_issho",
             "v_gakkou",
             "p_ni",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -104,28 +124,36 @@
           "on": "ほく",
           "kun": "きた",
           "meaning": "north",
-          "terms": ["k_kita"]
+          "terms": [
+            "k_kita"
+          ]
         },
         {
           "kanji": "南",
           "on": "なん",
           "kun": "みなみ",
           "meaning": "south",
-          "terms": ["k_minami"]
+          "terms": [
+            "k_minami"
+          ]
         },
         {
           "kanji": "東",
           "on": "とう",
           "kun": "ひがし",
           "meaning": "east",
-          "terms": ["k_higashi"]
+          "terms": [
+            "k_higashi"
+          ]
         },
         {
           "kanji": "西",
           "on": "せい",
           "kun": "にし",
           "meaning": "west",
-          "terms": ["k_nishi"]
+          "terms": [
+            "k_nishi"
+          ]
         }
       ]
     },
@@ -135,15 +163,30 @@
       "groups": [
         {
           "label": "Cardinal Directions",
-          "items": ["v_kita", "v_minami", "v_higashi", "v_nishi"]
+          "items": [
+            "v_kita",
+            "v_minami",
+            "v_higashi",
+            "v_nishi"
+          ]
         },
         {
           "label": "Intercardinal Directions",
-          "items": ["v_hokutou", "v_hokusei", "v_nantou", "v_nansei"]
+          "items": [
+            "v_hokutou",
+            "v_hokusei",
+            "v_nantou",
+            "v_nansei"
+          ]
         },
         {
           "label": "Kanji",
-          "items": ["k_kita", "k_minami", "k_higashi", "k_nishi"]
+          "items": [
+            "k_kita",
+            "k_minami",
+            "k_higashi",
+            "k_nishi"
+          ]
         }
       ]
     },
@@ -176,7 +219,10 @@
             "p_no",
             "v_kita",
             "p_ni",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -192,8 +238,14 @@
             "p_wo",
             "v_kita",
             "p_ni",
-            { "id": "v_iku", "form": "polite_masu" },
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -205,12 +257,18 @@
             "p_hai",
             "v_kita",
             "p_ni",
-            { "id": "v_iku", "form": "te_form" },
+            {
+              "id": "v_iku",
+              "form": "te_form"
+            },
             "v_kudasai",
             "v_higashi",
             "p_ni",
             "p_wa",
-            { "id": "v_aru", "form": "polite_negative" }
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -224,7 +282,10 @@
             "v_nishi",
             "p_ni",
             "p_mo",
-            { "id": "v_aru", "form": "polite_negative" },
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            },
             "p_ka"
           ]
         },
@@ -240,12 +301,18 @@
             "v_nishi",
             "p_ni",
             "p_mo",
-            { "id": "v_aru", "form": "polite_negative" },
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            },
             "v_gakkou",
             "p_wa",
             "v_kita",
             "p_ni",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -281,7 +348,10 @@
             "p_no",
             "v_kita",
             "p_ni",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "char_miki",
             "v_san",
             "p_wa"
@@ -300,7 +370,10 @@
             "p_no",
             "v_minami",
             "p_ni",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -318,7 +391,10 @@
             "p_kara",
             "v_kita",
             "p_ni",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -331,13 +407,22 @@
             "v_mainichi",
             "v_minami",
             "p_ni",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "v_watashi",
             "p_wa",
             "v_minami",
             "p_kara",
-            { "id": "v_kuru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_kuru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -350,13 +435,25 @@
             "v_mainichi",
             "v_kita",
             "p_kara",
-            { "id": "v_kuru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_kuru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "v_michi",
             "p_wa",
-            { "id": "v_nagai", "form": "polite_adj" },
+            {
+              "id": "v_nagai",
+              "form": "polite_adj"
+            },
             "p_ga_but",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         }
@@ -376,7 +473,11 @@
             "p_no",
             "v_yama",
             "p_ni",
-            { "id": "v_iku", "form": "desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
             "char_ken",
             "v_san",
             "p_wa"
@@ -391,14 +492,21 @@
             "p_mo",
             "v_higashi",
             "p_ni",
-            { "id": "v_iku", "form": "desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
             "p_yo",
             "v_hokutou",
             "p_ni",
             "p_mo",
             "v_yama",
             "p_ga",
-            { "id": "v_ooi", "form": "polite_adj" }
+            {
+              "id": "v_ooi",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -410,11 +518,17 @@
             "p_no",
             "v_yama",
             "p_wa",
-            { "id": "v_ookii", "form": "polite_adj" },
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            },
             "p_ka",
             "v_kawa",
             "p_mo",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -425,13 +539,22 @@
           "terms": [
             "p_hai",
             "v_totemo",
-            { "id": "v_ookii", "form": "polite_adj" },
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            },
             "v_kawa",
             "p_mo",
-            { "id": "v_ooi", "form": "polite_adj" },
+            {
+              "id": "v_ooi",
+              "form": "polite_adj"
+            },
             "p_yo",
             "v_issho",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -439,16 +562,25 @@
           "jp": "いいですね。北東から 南東まで 行きます。道は 長いですか。",
           "en": "Sounds great. We'll go from northeast to southeast. Is the road long?",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_hokutou",
             "p_kara",
             "v_nantou",
             "p_made",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "v_michi",
             "p_wa",
-            { "id": "v_nagai", "form": "polite_adj" },
+            {
+              "id": "v_nagai",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -458,15 +590,24 @@
           "en": "It is a little long, but that's fine. The mountains in the east are beautiful.",
           "terms": [
             "v_sukoshi",
-            { "id": "v_nagai", "form": "polite_adj" },
+            {
+              "id": "v_nagai",
+              "form": "polite_adj"
+            },
             "p_ga_but",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_yo",
             "v_higashi",
             "p_no",
             "v_yama",
             "p_wa",
-            { "id": "v_kirei", "form": "polite_adj" },
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         }
@@ -485,7 +626,10 @@
             "v_konshuu",
             "v_minami",
             "p_ni",
-            { "id": "v_iku", "form": "plain_negative" }
+            {
+              "id": "v_iku",
+              "form": "plain_negative"
+            }
           ]
         },
         {
@@ -515,7 +659,10 @@
             "p_ga",
             "v_aru",
             "p_yo",
-            { "id": "v_iku", "form": "plain_desire_tai" }
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            }
           ]
         },
         {
@@ -564,7 +711,10 @@
             "p_ne",
             "v_nansei",
             "p_ni",
-            { "id": "v_iku", "form": "plain_volitional" }
+            {
+              "id": "v_iku",
+              "form": "plain_volitional"
+            }
           ]
         }
       ]
@@ -585,7 +735,10 @@
             "v_yama",
             "p_ga",
             "v_takusan",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "v_hokutou",
             "p_to",
             "v_hokusei",
@@ -593,7 +746,10 @@
             "p_mo",
             "v_yama",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -606,14 +762,20 @@
             "v_ookii",
             "v_kawa",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "v_kita",
             "p_kara",
             "v_higashi",
             "p_made",
             "v_kawa",
             "p_ga",
-            { "id": "v_ooi", "form": "polite_adj" }
+            {
+              "id": "v_ooi",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -624,7 +786,10 @@
             "p_no",
             "v_tenki",
             "p_wa",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "v_nansei",
             "p_ni",
             "p_mo",
@@ -634,7 +799,10 @@
             "v_shiroi",
             "v_hana",
             "p_ga",
-            { "id": "v_ooi", "form": "polite_adj" }
+            {
+              "id": "v_ooi",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -645,7 +813,11 @@
             "p_kara",
             "v_minami",
             "p_made",
-            { "id": "v_iku", "form": "desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
             "v_higashi",
             "p_no",
             "v_yama",
@@ -654,7 +826,10 @@
             "p_no",
             "v_michi",
             "p_mo",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         }
@@ -676,7 +851,10 @@
             "p_ni",
             "v_yama",
             "p_ga",
-            { "id": "v_ooi", "form": "polite_adj" }
+            {
+              "id": "v_ooi",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -693,7 +871,10 @@
             "p_no",
             "v_tenki",
             "p_wa",
-            { "id": "v_ii", "form": "polite_adj" }
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -710,7 +891,11 @@
             "p_kara",
             "v_minami",
             "p_made",
-            { "id": "v_iku", "form": "desire_tai" }
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         }
       ]
@@ -730,13 +915,20 @@
             "p_no",
             "v_yama",
             "p_ni",
-            { "id": "v_iku", "form": "desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
             "v_konshuu",
             "v_tomodachi",
             "p_to",
             "v_hokutou",
             "p_ni",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -752,12 +944,18 @@
             "v_nagai",
             "v_kawa",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "v_minami",
             "p_no",
             "v_hana",
             "p_mo",
-            { "id": "v_kirei", "form": "polite_adj" }
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -768,11 +966,17 @@
             "p_de",
             "v_hokutou",
             "p_ni",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "v_michi",
             "p_wa",
             "v_sukoshi",
-            { "id": "v_nagai", "form": "polite_adj" }
+            {
+              "id": "v_nagai",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -786,13 +990,20 @@
             "v_nansei",
             "p_ni",
             "p_mo",
-            { "id": "v_iku", "form": "desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
             "v_nansei",
             "p_no",
             "v_hana",
             "p_wa",
             "v_totemo",
-            { "id": "v_kirei", "form": "polite_adj" },
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         }
@@ -815,7 +1026,11 @@
             "p_no",
             "v_yama",
             "p_ni",
-            { "id": "v_iku", "form": "desire_tai" }
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         },
         {
@@ -836,7 +1051,10 @@
             "v_nagai",
             "v_kawa",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -853,7 +1071,10 @@
             "p_de",
             "v_hokutou",
             "p_ni",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -866,37 +1087,67 @@
         {
           "kind": "mcq",
           "q": "北",
-          "choices": ["north", "south", "east", "west"],
+          "choices": [
+            "north",
+            "south",
+            "east",
+            "west"
+          ],
           "answer": "north"
         },
         {
           "kind": "mcq",
           "q": "南",
-          "choices": ["south", "north", "east", "west"],
+          "choices": [
+            "south",
+            "north",
+            "east",
+            "west"
+          ],
           "answer": "south"
         },
         {
           "kind": "mcq",
           "q": "東",
-          "choices": ["east", "west", "north", "south"],
+          "choices": [
+            "east",
+            "west",
+            "north",
+            "south"
+          ],
           "answer": "east"
         },
         {
           "kind": "mcq",
           "q": "西",
-          "choices": ["west", "east", "south", "north"],
+          "choices": [
+            "west",
+            "east",
+            "south",
+            "north"
+          ],
           "answer": "west"
         },
         {
           "kind": "mcq",
           "q": "北東",
-          "choices": ["northeast", "northwest", "southeast", "southwest"],
+          "choices": [
+            "northeast",
+            "northwest",
+            "southeast",
+            "southwest"
+          ],
           "answer": "northeast"
         },
         {
           "kind": "mcq",
           "q": "南西",
-          "choices": ["southwest", "southeast", "northwest", "northeast"],
+          "choices": [
+            "southwest",
+            "southeast",
+            "northwest",
+            "northeast"
+          ],
           "answer": "southwest"
         }
       ]
@@ -909,7 +1160,12 @@
         {
           "kind": "mcq",
           "q": "学校は 駅の ___ に あります。（The school is to the north of the station.）",
-          "choices": ["北", "南", "高い", "前"],
+          "choices": [
+            "北",
+            "南",
+            "高い",
+            "前"
+          ],
           "answer": "北",
           "terms": [
             "v_gakkou",
@@ -918,13 +1174,21 @@
             "p_no",
             "v_kita",
             "p_ni",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "___ には 大きい 山が あります。（There are large mountains in the northeast.）",
-          "choices": ["北東", "南西", "多い", "少ない"],
+          "choices": [
+            "北東",
+            "南西",
+            "多い",
+            "少ない"
+          ],
           "answer": "北東",
           "terms": [
             "v_hokutou",
@@ -933,27 +1197,43 @@
             "v_ookii",
             "v_yama",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "南の 天気は ___ ですよ。（The weather in the south is nice.）",
-          "choices": ["いい", "長い", "多い", "少ない"],
+          "choices": [
+            "いい",
+            "長い",
+            "多い",
+            "少ない"
+          ],
           "answer": "いい",
           "terms": [
             "v_minami",
             "p_no",
             "v_tenki",
             "p_wa",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         },
         {
           "kind": "mcq",
           "q": "北から ___ まで 道が あります。（There is a road from north to east.）",
-          "choices": ["東", "古い", "毎日", "いい"],
+          "choices": [
+            "東",
+            "古い",
+            "毎日",
+            "いい"
+          ],
           "answer": "東",
           "terms": [
             "v_kita",
@@ -962,7 +1242,10 @@
             "p_made",
             "v_michi",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -975,45 +1258,75 @@
         {
           "kind": "mcq",
           "q": "北に ___。（Please go north.）",
-          "choices": ["行ってください", "行きます", "行きました", "行かない"],
+          "choices": [
+            "行ってください",
+            "行きます",
+            "行きました",
+            "行かない"
+          ],
           "answer": "行ってください",
           "terms": [
             "v_kita",
             "p_ni",
-            { "id": "v_iku", "form": "te_form" },
+            {
+              "id": "v_iku",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
         {
           "kind": "mcq",
           "q": "東の 山は ___。（The mountains in the east are large.）",
-          "choices": ["大きいです", "大きかったです", "大きくないです", "大きそうです"],
+          "choices": [
+            "大きいです",
+            "大きかったです",
+            "大きくないです",
+            "大きそうです"
+          ],
           "answer": "大きいです",
           "terms": [
             "v_higashi",
             "p_no",
             "v_yama",
             "p_wa",
-            { "id": "v_ookii", "form": "polite_adj" }
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "わたしは 南西に ___。（I want to go to the southwest.）",
-          "choices": ["行きたいです", "行きます", "行きましょう", "行かない"],
+          "choices": [
+            "行きたいです",
+            "行きます",
+            "行きましょう",
+            "行かない"
+          ],
           "answer": "行きたいです",
           "terms": [
             "v_watashi",
             "p_wa",
             "v_nansei",
             "p_ni",
-            { "id": "v_iku", "form": "desire_tai" }
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         },
         {
           "kind": "mcq",
           "q": "友だちと いっしょに 北東に ___。（Let's go to the northeast together with friends.）",
-          "choices": ["行きましょう", "行きます", "行かない", "行きたい"],
+          "choices": [
+            "行きましょう",
+            "行きます",
+            "行かない",
+            "行きたい"
+          ],
           "answer": "行きましょう",
           "terms": [
             "v_tomodachi",
@@ -1021,7 +1334,10 @@
             "v_issho",
             "v_hokutou",
             "p_ni",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
