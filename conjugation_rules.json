@@ -812,6 +812,47 @@
       }
     }
   },
+  "appearance_sou_stem": {
+    "label": "Appearance (Sou) — Stem",
+    "description": "Stem form of the appearance/sou pattern, without copula. Pairs with です (g_desu) to form the polite appearance expression. i-adj: remove い, add そう. na-adj: add そう. Verbs: masu-stem + そう.",
+    "introducedIn": "N5.11",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "そう"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "そう"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しそう",
+        "reading": "しそう"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来そう",
+        "reading": "きそう"
+      },
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "そう"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "そう"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よさそう",
+        "reading": "よさそう"
+      }
+    }
+  },
   "appearance_sou": {
     "label": "Appearance (Sou) — Polite",
     "description": "Polite form expressing that something looks like or appears to be a certain way.",
