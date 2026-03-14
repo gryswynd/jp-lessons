@@ -70,11 +70,14 @@
           "en": "What time did you wake up this morning?",
           "terms": [
             "v_kesa",
+            "p_wa",
             "v_nanji",
+            "p_ni",
             {
               "id": "v_okiru",
               "form": "polite_mashita"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -83,15 +86,19 @@
           "terms": [
             "v_maiasa",
             "v_asagohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "te_form"
             },
+            "p_kara_because",
             "v_gakkou",
+            "p_ni",
             {
               "id": "v_kuru",
               "form": "polite_potential"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -99,16 +106,20 @@
           "en": "Did you come to school by train today?",
           "terms": [
             "v_kyou",
+            "p_wa",
             "v_densha",
+            "p_ni",
             {
               "id": "v_noru",
               "form": "te_form"
             },
             "v_gakkou",
+            "p_ni",
             {
               "id": "v_kuru",
               "form": "polite_mashita"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -116,11 +127,14 @@
           "en": "Can you come to school tomorrow too?",
           "terms": [
             "v_ashita",
+            "p_mo",
             "v_gakkou",
+            "p_ni",
             {
               "id": "v_kuru",
               "form": "polite_potential"
-            }
+            },
+            "p_ka"
           ]
         }
       ]
@@ -170,6 +184,7 @@
           "meaning": "Red",
           "terms": [
             "k_aka_2",
+            "v_aka",
             "v_akai"
           ]
         },
@@ -213,6 +228,7 @@
         {
           "label": "Color Nouns",
           "items": [
+            "v_aka",
             "v_ao",
             "v_kuro",
             "v_chairo",
@@ -242,11 +258,14 @@
           "terms": [
             "v_nan",
             "v_iro",
+            "p_no",
             "v_shatsu",
+            "p_ga",
             {
               "id": "v_suki",
               "form": "polite_adj"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -256,12 +275,14 @@
           "terms": [
             "v_aoi",
             "v_shatsu",
+            "p_ga",
             {
               "id": "v_suki",
               "form": "polite_adj"
             },
             "v_akai",
             "v_shatsu",
+            "p_mo",
             {
               "id": "v_miru",
               "form": "plain_desire_tai"
@@ -277,12 +298,16 @@
             "v_kono",
             "v_aoi",
             "v_shatsu",
+            "p_wa",
             "v_dou",
+            "g_desu",
+            "p_ka",
             {
               "id": "v_iroiro",
               "form": "attributive_na"
             },
             "v_iro",
+            "p_ga",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -302,10 +327,12 @@
             "v_kono",
             "v_aoi",
             "v_shatsu",
+            "p_wo",
             {
               "id": "v_kiru",
               "form": "polite_potential"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -313,7 +340,9 @@
           "jp": "はい。あちらで 着てみてください。",
           "en": "Yes. Please try it on over there.",
           "terms": [
+            "p_hai",
             "v_achira",
+            "p_de",
             {
               "id": "v_kiru",
               "form": "te_form"
@@ -338,11 +367,14 @@
           "en": "Rikizo, what will you drink?",
           "terms": [
             "char_rikizo",
+            "v_san",
             "v_nani",
+            "p_wo",
             {
               "id": "v_nomu",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -351,8 +383,11 @@
           "en": "I love green tea. I want to drink green tea.",
           "terms": [
             "v_ocha",
+            "p_ga",
             "v_daisuki",
+            "g_desu",
             "v_ocha",
+            "p_wo",
             {
               "id": "v_nomu",
               "form": "plain_desire_tai"
@@ -366,7 +401,9 @@
           "en": "I like green tea too. Let's drink together.",
           "terms": [
             "v_watashi",
+            "p_mo",
             "v_ocha",
+            "p_ga",
             {
               "id": "v_suki",
               "form": "polite_adj"
@@ -384,13 +421,18 @@
           "en": "Yamakawa, what color shirt do you like?",
           "terms": [
             "char_yamakawa",
+            "v_san",
+            "p_wa",
             "v_nan",
             "v_iro",
+            "p_no",
             "v_shatsu",
+            "p_ga",
             {
               "id": "v_suki",
               "form": "polite_adj"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -400,12 +442,14 @@
           "terms": [
             "v_kuroi",
             "v_shatsu",
+            "p_ga",
             {
               "id": "v_suki",
               "form": "polite_adj"
             },
             "v_chairoi",
             "v_shatsu",
+            "p_mo",
             {
               "id": "v_ii",
               "form": "polite_adj"
@@ -429,30 +473,36 @@
             "v_san",
             "v_donna",
             "v_iro",
+            "p_ga",
             {
               "id": "v_suki",
               "form": "polite_adj"
-            }
+            },
+            "p_ka"
           ]
         },
         {
           "spk": "B",
-          "jp": "青が 大好きです！黒も 好きですが、赤は あまり 好きでは ありません。",
+          "jp": "青が 大好きです！黒も 好きですが、赤は あまり 好きじゃありません。",
           "en": "I love blue! I like black too, but I don't really like red.",
           "terms": [
             "v_ao",
+            "p_ga",
             "v_daisuki",
+            "g_desu",
             "v_kuro",
+            "p_mo",
             {
               "id": "v_suki",
               "form": "polite_adj"
             },
             "p_ga_but",
-            "v_akai",
+            "v_aka",
+            "p_wa",
             "v_amari",
             {
               "id": "v_suki",
-              "form": "plain_negative"
+              "form": "polite_negative"
             }
           ]
         },
@@ -462,8 +512,11 @@
           "en": "I love red. Because it's cute.",
           "terms": [
             "v_watashi",
-            "v_akai",
+            "p_wa",
+            "v_aka",
+            "p_ga",
             "v_daisuki",
+            "g_desu",
             {
               "id": "v_kawaii",
               "form": "polite_adj"
@@ -479,15 +532,18 @@
             "v_ano",
             "v_chairoi",
             "v_shatsu",
+            "p_mo",
             {
               "id": "v_ii",
               "form": "polite_adj"
             },
+            "p_ne",
             {
               "id": "v_iroiro",
               "form": "attributive_na"
             },
             "v_iro",
+            "p_ga",
             {
               "id": "v_aru",
               "form": "te_form"
@@ -495,7 +551,8 @@
             {
               "id": "v_ii",
               "form": "polite_adj"
-            }
+            },
+            "p_ne"
           ]
         }
       ]
@@ -514,10 +571,7 @@
             "v_sono",
             "v_kuroi",
             "v_shatsu",
-            {
-              "id": "v_kirei",
-              "form": null
-            },
+            "v_kirei",
             "g_da",
             "p_ne"
           ]
@@ -539,16 +593,15 @@
             "p_yo",
             "v_akai",
             "v_shatsu",
+            "p_mo",
             {
               "id": "v_kiru",
-              "form": "polite_potential"
+              "form": "potential"
             },
             "p_kedo",
             "v_kuro",
-            {
-              "id": "v_suki",
-              "form": null
-            },
+            "p_ga",
+            "v_suki",
             "g_da",
             "p_kara_because"
           ]
@@ -559,12 +612,11 @@
           "en": "I like blue shirts. The shirt I'm wearing today is blue too.",
           "terms": [
             "v_watashi",
+            "p_wa",
             "v_aoi",
             "v_shatsu",
-            {
-              "id": "v_suki",
-              "form": null
-            },
+            "p_ga",
+            "v_suki",
             "g_da",
             "v_kyou",
             {
@@ -573,32 +625,33 @@
             },
             {
               "id": "v_iru",
-              "form": null
+              "form": "plain_form"
             },
             "v_shatsu",
+            "p_mo",
             "v_aoi",
             "p_yo"
           ]
         },
         {
           "spk": "B",
-          "jp": "うん、青も いい色だよ。お茶でも 飲まない？",
-          "en": "Yeah, blue is also a nice color. Want to grab some tea?",
+          "jp": "うん、青も いい色だよ。お茶を 飲まない？",
+          "en": "Yeah, blue is also a nice color. Want some tea?",
           "terms": [
             "v_un",
             "v_ao",
+            "p_mo",
+            "v_ii",
             "v_iro",
-            {
-              "id": "v_ii",
-              "form": null
-            },
             "g_da",
             "p_yo",
             "v_ocha",
+            "p_wo",
             {
               "id": "v_nomu",
               "form": "plain_negative"
-            }
+            },
+            "p_ka"
           ]
         }
       ]
@@ -612,8 +665,10 @@
           "en": "Rikizo went to the store today.",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_kyou",
             "v_mise",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "polite_mashita"
@@ -625,9 +680,12 @@
           "en": "Rikizo loves blue shirts.",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_aoi",
             "v_shatsu",
-            "v_daisuki"
+            "p_ga",
+            "v_daisuki",
+            "g_desu"
           ]
         },
         {
@@ -635,12 +693,16 @@
           "en": "The store has various colors of shirts. There are red shirts, black shirts, and brown shirts too.",
           "terms": [
             "v_mise",
+            "p_ni",
+            "p_wa",
             {
               "id": "v_iroiro",
               "form": "attributive_na"
             },
             "v_iro",
+            "p_no",
             "v_shatsu",
+            "p_ga",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -651,6 +713,7 @@
             "v_shatsu",
             "v_chairoi",
             "v_shatsu",
+            "p_mo",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -662,8 +725,10 @@
           "en": "Rikizo tried on a blue shirt. He likes it very much.",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_aoi",
             "v_shatsu",
+            "p_wo",
             {
               "id": "v_kiru",
               "form": "te_form"
@@ -687,11 +752,13 @@
               "id": "v_kau",
               "form": "te_form"
             },
+            "p_kara_because",
             {
               "id": "v_kaeru",
               "form": "te_form"
             },
             "v_ocha",
+            "p_wo",
             {
               "id": "v_nomu",
               "form": "polite_mashita"
@@ -705,13 +772,17 @@
           "a": "店に 行きました。",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_kyou",
             "v_doko",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "polite_mashita"
             },
+            "p_ka",
             "v_mise",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "polite_mashita"
@@ -723,13 +794,20 @@
           "a": "青い シャツが 大好きです。",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_nan",
             "v_iro",
+            "p_no",
             "v_shatsu",
+            "p_ga",
             "v_daisuki",
+            "g_desu",
+            "p_ka",
             "v_aoi",
             "v_shatsu",
-            "v_daisuki"
+            "p_ga",
+            "v_daisuki",
+            "g_desu"
           ]
         },
         {
@@ -737,7 +815,9 @@
           "a": "青い シャツを 着てみました。",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_nani",
+            "p_wo",
             {
               "id": "v_kiru",
               "form": "te_form"
@@ -746,8 +826,10 @@
               "id": "v_miru",
               "form": "polite_mashita"
             },
+            "p_ka",
             "v_aoi",
             "v_shatsu",
+            "p_wo",
             {
               "id": "v_kiru",
               "form": "te_form"
@@ -769,8 +851,11 @@
           "en": "Miki loves colors.",
           "terms": [
             "char_miki",
+            "p_wa",
             "v_iro",
-            "v_daisuki"
+            "p_ga",
+            "v_daisuki",
+            "g_desu"
           ]
         },
         {
@@ -779,6 +864,7 @@
           "terms": [
             "v_akai",
             "v_iro",
+            "p_ga",
             "v_ichiban",
             {
               "id": "v_suki",
@@ -796,6 +882,7 @@
             "p_ya",
             "v_aoi",
             "v_shatsu",
+            "p_wo",
             {
               "id": "v_kiru",
               "form": "te_form"
@@ -812,6 +899,7 @@
           "terms": [
             "v_kuroi",
             "v_shatsu",
+            "p_wa",
             "v_amari",
             {
               "id": "v_suki",
@@ -824,13 +912,17 @@
           "en": "This morning she put on her red shirt and was able to come to school.",
           "terms": [
             "v_kesa",
+            "p_wa",
             "v_akai",
             "v_shatsu",
+            "p_wo",
             {
               "id": "v_kiru",
               "form": "te_form"
             },
+            "p_kara_because",
             "v_gakkou",
+            "p_ni",
             {
               "id": "v_kuru",
               "form": "polite_potential_past"
@@ -844,15 +936,19 @@
           "a": "赤い 色が いちばん 好きです。",
           "terms": [
             "char_miki",
+            "p_wa",
             "v_nan",
             "v_iro",
+            "p_ga",
             "v_ichiban",
             {
               "id": "v_suki",
               "form": "polite_adj"
             },
+            "p_ka",
             "v_akai",
             "v_iro",
+            "p_ga",
             "v_ichiban",
             {
               "id": "v_suki",
@@ -865,8 +961,10 @@
           "a": "赤い シャツや 青い シャツを 着ています。",
           "terms": [
             "char_miki",
+            "p_wa",
             "v_mainichi",
             "v_nani",
+            "p_wo",
             {
               "id": "v_kiru",
               "form": "te_form"
@@ -875,11 +973,13 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
+            "p_ka",
             "v_akai",
             "v_shatsu",
             "p_ya",
             "v_aoi",
             "v_shatsu",
+            "p_wo",
             {
               "id": "v_kiru",
               "form": "te_form"
@@ -895,14 +995,18 @@
           "a": "黒い シャツは あまり 好きじゃありません。",
           "terms": [
             "char_miki",
+            "p_wa",
             "v_kuroi",
             "v_shatsu",
+            "p_ga",
             {
               "id": "v_suki",
               "form": "polite_adj"
             },
+            "p_ka",
             "v_kuroi",
             "v_shatsu",
+            "p_wa",
             "v_amari",
             {
               "id": "v_suki",
@@ -1036,6 +1140,7 @@
           "terms": [
             "v_aoi",
             "v_shatsu",
+            "p_wo",
             {
               "id": "v_kiru",
               "form": "polite_potential"
@@ -1054,7 +1159,9 @@
           "answer": "大好きです",
           "terms": [
             "v_ocha",
+            "p_ga",
             "v_daisuki",
+            "g_desu",
             "v_mainichi",
             {
               "id": "v_nomu",
@@ -1079,13 +1186,17 @@
           "terms": [
             "v_kuroi",
             "v_shatsu",
+            "p_to",
             "v_aoi",
             "v_shatsu",
+            "p_to",
             "v_dochira",
+            "p_ga",
             {
               "id": "v_suki",
               "form": "polite_adj"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -1104,7 +1215,9 @@
               "form": "attributive_na"
             },
             "v_iro",
+            "p_no",
             "v_shatsu",
+            "p_ga",
             {
               "id": "v_aru",
               "form": "polite_masu"
