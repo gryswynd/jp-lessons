@@ -75,7 +75,10 @@
             "p_wa",
             "v_gyuuniku",
             "p_yori",
-            "v_oishii",
+            {
+              "id": "v_oishii",
+              "form": "polite_adj"
+            },
             "g_desu",
             "p_ka"
           ]
@@ -250,6 +253,7 @@
           "en": "It's lunch break, isn't it. What will you have for lunch today?",
           "terms": [
             "v_hiruyasumi",
+            "g_desu",
             "p_ne",
             "v_kyou",
             "p_no",
@@ -299,13 +303,19 @@
             "v_ryouri",
             "p_ga",
             "v_ichiban",
-            "v_oishii",
+            {
+              "id": "v_oishii",
+              "form": "polite_adj"
+            },
             "g_desu",
             "p_yo",
             "v_aji",
             "p_mo",
             "v_totemo",
-            "v_ii",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "g_desu"
           ]
         },
@@ -314,6 +324,7 @@
           "jp": "では、いっしょに 同じ 料理に しましょう。ありがとうございます。",
           "en": "Then let's both have the same dish. Thank you very much.",
           "terms": [
+            "p_dewa",
             "v_issho",
             "v_onaji",
             "v_ryouri",
@@ -390,7 +401,10 @@
             "v_aji",
             "p_wa",
             "v_totemo",
-            "v_ii",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "g_desu",
             "p_yo"
           ]
@@ -428,6 +442,7 @@
             "char_rikizo",
             "v_san",
             "v_hiruyasumi",
+            "g_desu",
             "p_ne",
             "v_hirugohan",
             "p_wa",
@@ -436,7 +451,8 @@
             {
               "id": "v_suru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -459,7 +475,10 @@
             "p_no",
             "v_aji",
             "p_ga",
-            "v_suki",
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            },
             "g_desu",
             "p_kara_because"
           ]
@@ -469,8 +488,12 @@
           "jp": "いいですね！私も 同じ 料理に します。",
           "en": "Nice! I'll have the same dish too.",
           "terms": [
-            "v_ii",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "g_desu",
+            "p_ne",
             "v_watashi",
             "p_mo",
             "v_onaji",
@@ -493,7 +516,10 @@
             "v_aji",
             "p_wa",
             "v_ichiban",
-            "v_ii",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "g_desu",
             "p_yo",
             "v_mainichi",
@@ -520,20 +546,14 @@
             "v_resutoran",
             "p_wa",
             "v_sukoshi",
-            {
-              "id": "v_kurai",
-              "form": null
-            },
+            "v_kurai",
             "p_kedo",
             "v_ryouri",
             "p_no",
             "v_aji",
             "p_ga",
             "v_totemo",
-            {
-              "id": "v_ii",
-              "form": null
-            },
+            "v_ii",
             "p_ne"
           ]
         },
@@ -543,10 +563,7 @@
           "en": "Yeah. It's dark, but I wanted to eat chicken dishes.",
           "terms": [
             "v_un",
-            {
-              "id": "v_kurai",
-              "form": null
-            },
+            "v_kurai",
             "p_kedo",
             "v_toriniku",
             "p_no",
@@ -569,10 +586,7 @@
             "p_wa",
             "v_gyuuniku",
             "p_yori",
-            {
-              "id": "v_oishii",
-              "form": null
-            },
+            "v_oishii",
             "p_yo"
           ]
         },
@@ -676,13 +690,19 @@
             "v_aji",
             "p_ga",
             "v_totemo",
-            "v_suki",
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            },
             "g_desu",
             "v_kono",
             "v_ryouri",
             "p_wa",
             "v_ichiban",
-            "v_oishii",
+            {
+              "id": "v_oishii",
+              "form": "polite_adj"
+            },
             "g_desu"
           ]
         },
@@ -753,7 +773,10 @@
             "v_donna",
             "v_aji",
             "p_ga",
-            "v_suki",
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            },
             "g_desu",
             "p_ka",
             "v_toriniku",
@@ -807,7 +830,10 @@
             "p_no",
             "v_aji",
             "p_ga",
-            "v_suki",
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            },
             "g_desu"
           ]
         },
@@ -849,7 +875,10 @@
             "v_aji",
             "p_ga",
             "v_totemo",
-            "v_ii",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "g_desu"
           ]
         },
@@ -875,7 +904,10 @@
             "v_ryouri",
             "p_ga",
             "v_ichiban",
-            "v_suki",
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            },
             "g_desu"
           ]
         }
@@ -1073,7 +1105,10 @@
             "p_wa",
             "v_gyuuniku",
             "p_yori",
-            "v_oishii",
+            {
+              "id": "v_oishii",
+              "form": "polite_adj"
+            },
             "g_desu"
           ]
         },
