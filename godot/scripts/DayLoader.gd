@@ -136,13 +136,13 @@ func _on_player_interact() -> void:
 	var best_target = null
 	var best_dist := 100.0
 
-	var facing_point := player.get_facing_point()
+	var facing_point: Vector2 = player.get_facing_point()
 
 	# Check NPCs
 	for npc in npcs_container.get_children():
 		if not (npc is Area2D):
 			continue
-		var dist := player.global_position.distance_to(npc.global_position)
+		var dist: float = player.global_position.distance_to(npc.global_position)
 		if dist < best_dist:
 			best_dist = dist
 			best_target = npc
@@ -151,7 +151,7 @@ func _on_player_interact() -> void:
 	for obj in objects_container.get_children():
 		if not (obj is Area2D):
 			continue
-		var dist := facing_point.distance_to(obj.global_position)
+		var dist: float = facing_point.distance_to(obj.global_position)
 		if dist < best_dist:
 			best_dist = dist
 			best_target = obj
