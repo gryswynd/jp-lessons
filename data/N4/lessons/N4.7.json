@@ -218,6 +218,12 @@
           "items": [
             "v_shinsetsu"
           ]
+        },
+        {
+          "label": "Expressions",
+          "items": [
+            "v_yatta"
+          ]
         }
       ]
     },
@@ -243,7 +249,9 @@
           "jp": "4人 家族です。親と 兄が います。",
           "en": "We're a family of four. I have parents and an older brother.",
           "terms": [
+            { "counter": "nin", "n": 4 },
             "v_kazoku",
+            "g_desu",
             "v_oya",
             "p_to",
             "v_ani",
@@ -262,6 +270,8 @@
             "v_oniisan",
             "p_wa",
             "v_donna",
+            "v_hito",
+            "g_desu",
             "p_ka"
           ]
         },
@@ -292,9 +302,13 @@
           "jp": "そうですか。私の 家族は 5人です。親と 姉と 弟が います。",
           "en": "I see. My family has five people. I have parents, an older sister, and a younger brother.",
           "terms": [
+            "p_soudesuka",
             "v_watashi",
             "p_no",
             "v_kazoku",
+            "p_wa",
+            { "counter": "nin", "n": 5 },
+            "g_desu",
             "v_oya",
             "p_to",
             "v_ane",
@@ -337,6 +351,8 @@
             "p_to",
             "v_oniisan",
             "p_to",
+            "v_dochira",
+            "p_ga",
             "v_shinsetsu",
             "g_desu",
             "p_ka"
@@ -387,6 +403,7 @@
             "v_hito",
             "p_wa",
             "v_dare",
+            "g_desu",
             "p_ka"
           ]
         },
@@ -400,7 +417,6 @@
             "v_ichiban",
             "v_jouzu",
             "g_desu",
-            "v_ane",
             "p_no",
             "v_ryouri",
             "p_wa",
@@ -415,7 +431,11 @@
           "jp": "いいですね。妹や 弟は いますか。",
           "en": "That's nice. Do you have any younger siblings?",
           "terms": [
+            "v_ii",
+            "g_desu",
+            "p_ne",
             "v_imouto",
+            "p_ya",
             "v_otouto",
             "p_ga",
             {
@@ -464,7 +484,9 @@
             "v_oniisan",
             "p_wa",
             "v_donna",
-            "v_hito"
+            "v_hito",
+            "g_desu",
+            "p_ka"
           ]
         },
         {
@@ -498,10 +520,12 @@
           "terms": [
             "v_ii",
             "g_desu",
+            "p_ne",
             "v_watashi",
             "p_no",
             "v_ani",
             "p_wa",
+            "v_amari",
             "v_ie",
             "p_ni",
             {
@@ -515,6 +539,7 @@
           "jp": "そうですか。会社で 毎日 働いて いますか。",
           "en": "Really? Does he work at a company every day?",
           "terms": [
+            "p_soudesuka",
             "v_kaisha",
             "p_de",
             "v_mainichi",
@@ -525,7 +550,8 @@
             {
               "id": "v_iru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -533,6 +559,7 @@
           "jp": "はい。兄と いっしょに ご飯を 食べたいです。",
           "en": "Yes. I want to eat together with my brother.",
           "terms": [
+            "p_hai",
             "v_ani",
             "p_to",
             "v_issho",
@@ -557,12 +584,13 @@
             "p_wo",
             {
               "id": "v_taberu",
-              "form": null
+              "form": "plain_form"
             },
             "p_no",
             "p_wa",
             "v_ii",
-            "g_desu"
+            "g_desu",
+            "p_ne"
           ]
         }
       ]
@@ -584,7 +612,8 @@
             {
               "id": "v_taberu",
               "form": "plain_desire_tai"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -597,10 +626,7 @@
             "v_karee",
             "p_ga",
             "v_ichiban",
-            {
-              "id": "v_suki",
-              "form": null
-            }
+            "v_suki"
           ]
         },
         {
@@ -622,19 +648,14 @@
           "jp": "やった！お姉さんの 料理、いちばん おいしいから 好き。",
           "en": "Yes! I love your cooking because it's the most delicious.",
           "terms": [
+            "v_yatta",
             "v_oneesan",
             "p_no",
             "v_ryouri",
             "v_ichiban",
-            {
-              "id": "v_oishii",
-              "form": null
-            },
+            "v_oishii",
             "p_kara_because",
-            {
-              "id": "v_suki",
-              "form": null
-            }
+            "v_suki"
           ]
         },
         {
@@ -643,10 +664,7 @@
           "en": "Goodness, I'm so happy!",
           "terms": [
             "v_mou",
-            {
-              "id": "v_ureshii",
-              "form": null
-            },
+            "v_ureshii",
             "p_yo"
           ]
         },
@@ -656,10 +674,7 @@
           "en": "Because it's always delicious!",
           "terms": [
             "v_itsumo",
-            {
-              "id": "v_oishii",
-              "form": null
-            },
+            "v_oishii",
             "p_kara_because"
           ]
         }
@@ -676,13 +691,18 @@
             "v_watashi",
             "p_no",
             "v_kazoku",
+            "p_wa",
+            { "counter": "nin", "n": 5 },
+            "g_desu",
             "v_oya",
             "p_to",
             "v_ani",
             "p_to",
             "v_ane",
             "p_to",
-            "v_imouto"
+            "v_imouto",
+            "p_to",
+            "g_desu"
           ]
         },
         {
@@ -707,6 +727,7 @@
             "v_oya",
             "p_wa",
             "v_ie",
+            "p_ni",
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -735,8 +756,8 @@
           ]
         },
         {
-          "jp": "妹は まだ 小さいですが、とても かわいくて 元気です。",
-          "en": "My younger sister is still small, but she is very cute and energetic.",
+          "jp": "妹は まだ 小さいですが、とても かわいいです。",
+          "en": "My younger sister is still small, but she is very cute.",
           "terms": [
             "v_imouto",
             "p_wa",
@@ -745,10 +766,8 @@
             "g_desu",
             "p_ga_but",
             "v_totemo",
-            {
-              "id": "v_kawaii",
-              "form": "te_form"
-            }
+            "v_kawaii",
+            "g_desu"
           ]
         },
         {
@@ -757,6 +776,8 @@
           "terms": [
             "v_shuumatsu",
             "p_wa",
+            "v_minna",
+            "p_de",
             {
               "id": "v_au",
               "form": "te_form"
@@ -778,18 +799,26 @@
           "a": "5人です。",
           "terms": [
             "v_kazoku",
-            "v_nannin"
+            "p_wa",
+            "v_nannin",
+            "g_desu",
+            "p_ka",
+            { "counter": "nin", "n": 5 }
           ]
         },
         {
           "q": "姉と 兄と どちらが 料理が 上手ですか。",
-          "a": "姉の 方が 上手です。",
+          "a": "姉が 上手です。",
           "terms": [
             "v_ane",
+            "p_to",
             "v_ani",
+            "v_dochira",
+            "p_ga",
             "v_ryouri",
             "v_jouzu",
-            "g_desu"
+            "g_desu",
+            "p_ka"
           ]
         },
         {
@@ -798,6 +827,22 @@
           "terms": [
             "v_shuumatsu",
             "v_kazoku",
+            "p_wa",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
+            "p_ka",
+            "v_minna",
+            "p_de",
+            {
+              "id": "v_au",
+              "form": "te_form"
+            },
+            "v_issho",
+            "p_ni",
             "v_gohan",
             {
               "id": "v_taberu",
@@ -820,12 +865,11 @@
             "v_ane",
             "p_wa",
             "v_totemo",
-            {
-              "id": "v_shinsetsu",
-              "form": null
-            },
+            "v_shinsetsu",
+            "p_de",
             "v_yasashii",
-            "v_hito"
+            "v_hito",
+            "g_desu"
           ]
         },
         {
@@ -839,7 +883,6 @@
             "v_ryouri",
             "p_ga",
             "v_jouzu",
-            "g_desu",
             "p_de",
             "v_tokidoki",
             "v_karee",
@@ -888,7 +931,7 @@
             "p_to",
             {
               "id": "v_hanasu",
-              "form": null
+              "form": "plain_form"
             },
             "p_no",
             "p_ga",
@@ -907,6 +950,10 @@
               "id": "v_kaeru",
               "form": "te_form"
             },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
             "v_issho",
             "p_ni",
             "v_kaimono",
@@ -921,13 +968,18 @@
       ],
       "questions": [
         {
-          "q": "姉は 何が 得意ですか。",
-          "a": "料理が 上手です。",
+          "q": "姉は 料理が 上手ですか。",
+          "a": "はい、とても 上手です。",
           "terms": [
             "v_ane",
+            "p_wa",
             "v_ryouri",
+            "p_ga",
             "v_jouzu",
-            "g_desu"
+            "g_desu",
+            "p_ka",
+            "p_hai",
+            "v_totemo"
           ]
         },
         {
@@ -935,14 +987,24 @@
           "a": "会社で 働いて います。",
           "terms": [
             "v_ane",
-            "v_kaisha",
+            "p_wa",
+            "v_ima",
+            "v_nani",
+            "p_wo",
             {
-              "id": "v_hataraku",
+              "id": "v_suru",
               "form": "te_form"
             },
             {
               "id": "v_iru",
               "form": "polite_masu"
+            },
+            "p_ka",
+            "v_kaisha",
+            "p_de",
+            {
+              "id": "v_hataraku",
+              "form": "te_form"
             }
           ]
         },
@@ -951,25 +1013,34 @@
           "a": "いっしょに 買い物に 行きたいです。",
           "terms": [
             "v_raishuu",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
+            "p_ka",
             "v_issho",
+            "p_ni",
             "v_kaimono",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "plain_desire_tai"
-            },
-            "g_desu"
+            }
           ]
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Drills — Set 1 (Kanji Reading)",
-      "instructions": "Choose the correct reading for the underlined kanji.",
+      "title": "Drills — Set 1 (Kanji Readings)",
+      "instructions": "Choose the correct reading for the kanji word.",
       "items": [
         {
           "kind": "mcq",
-          "q": "私の【兄】は 会社で 働いて います。",
+          "q": "[兄] の よみかたは？",
           "choices": [
             "あに",
             "おとうと",
@@ -980,7 +1051,7 @@
         },
         {
           "kind": "mcq",
-          "q": "【妹】は まだ 小学生です。",
+          "q": "[妹] の よみかたは？",
           "choices": [
             "いもうと",
             "おとうと",
@@ -991,7 +1062,7 @@
         },
         {
           "kind": "mcq",
-          "q": "【親切】な 人ですね。",
+          "q": "[親切] の よみかたは？",
           "choices": [
             "しんせつ",
             "おやせつ",
@@ -1002,7 +1073,7 @@
         },
         {
           "kind": "mcq",
-          "q": "【兄弟】は 何人 いますか。",
+          "q": "[兄弟] の よみかたは？",
           "choices": [
             "きょうだい",
             "あにおとうと",
