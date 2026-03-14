@@ -2,482 +2,775 @@
   "contentVersion": "1.0.0",
   "id": "G18",
   "type": "grammar",
-  "title": "Connecting Actions — てから, まえに, ながら, ために, ～たり",
+  "title": "Transitive & Intransitive Verb Pairs — 自動詞・他動詞",
   "meta": {
     "level": "N4",
     "unlocksAfter": "N4.10",
-    "focus": "Linking actions in time, purpose, and sequence using てから, まえに, ながら, ために, and ～たり～たりする",
+    "focus": "Japanese verbs come in transitive/intransitive pairs: 他動詞 (transitive) takes を and has an agent acting on an object; 自動詞 (intransitive) takes が and describes something happening on its own — no external agent needed.",
     "estimatedMinutes": 25,
-    "particles": ["p_kara", "p_nagara"],
-    "grammarForms": ["te_form", "tari_form", "nagara_form"],
-    "icon": "⛓️"
+    "particles": [
+      "p_ga",
+      "p_wo",
+      "p_ni"
+    ],
+    "grammarForms": [
+      "polite_masu",
+      "polite_mashita",
+      "te_form",
+      "polite_volitional_mashou"
+    ],
+    "icon": "🔀"
   },
   "sections": [
     {
       "type": "grammarIntro",
-      "title": "Connecting Actions",
-      "icon": "⛓️",
-      "summary": "Japanese has several connector words that link actions in time—expressing sequences (first…then…), simultaneous events (while…), purpose (in order to…), and non-exhaustive lists (things like… and…).",
-      "whyItMatters": "Once you know these connectors, you can describe multi-step routines and plans naturally, rather than stringing together choppy individual sentences.",
+      "title": "One Kanji, Two Verbs",
+      "icon": "🔀",
+      "summary": "Many Japanese verbs come in pairs that share the same kanji but have different endings. One verb is transitive (他動詞 — someone does something TO something) and the other is intransitive (自動詞 — something happens ON ITS OWN). English often uses the same word for both: 'I start the movie' / 'The movie starts'. Japanese uses two different verbs — and two different particles: を for transitive objects, が for intransitive subjects.",
+      "whyItMatters": "You already know 出る, 出す, 入る, 入れる, 始まる, and 始める — but did you notice they come in pairs? Understanding WHY each pair exists and which particle to use stops the most common mistake: using the wrong verb or wrong particle. Once you see the transitive/intransitive pattern, you can predict which verb to use even for pairs you haven't studied yet.",
       "youWillLearn": [
-        "てから — 'after doing X, do Y': signals the first action is fully complete before the second starts",
-        "まえに — 'before doing X': the verb before まえに always stays in plain (dictionary) form",
-        "ために — 'in order to / for the purpose of': expresses a deliberate goal",
-        "ながら — 'while doing': both actions happen simultaneously, done by the same subject",
-        "～たり～たりする — 'do things like X and Y': lists a non-exhaustive sample of actions"
+        "他動詞 (transitive verbs): [Agent] が [Object] を [Verb] — someone acts on something",
+        "自動詞 (intransitive verbs): [Subject] が [Verb] — something happens on its own",
+        "The particle difference: を = transitive object; が = intransitive subject",
+        "Three complete verb pairs: 出る/出す, 入る/入れる, 始まる/始める",
+        "Morphological clues: ～える/ける endings → often transitive; ～まる endings → often intransitive; ～す → almost always transitive",
+        "Why 映画が始まる is correct but 映画が始める is wrong"
       ]
     },
     {
       "type": "grammarRule",
-      "id": "rule_tekara",
+      "id": "rule_transitive",
       "pattern": [
-        { "text": "[Verb て-form]", "role": "predicate", "gloss": "te-form" },
-        { "text": "から", "role": "connector", "gloss": "from / after" },
-        { "text": "～", "role": "connector", "gloss": "" },
-        { "text": "[Main action]", "role": "predicate", "gloss": "main action" }
+        {
+          "label": "[Agent]",
+          "color": "subject",
+          "text": "りきぞが"
+        },
+        {
+          "label": "[Object]",
+          "color": "object",
+          "text": "メモを"
+        },
+        {
+          "label": "[Transitive Verb]",
+          "color": "verb",
+          "text": "出した"
+        }
       ],
-      "meaning": "After doing X, [do Y]",
-      "explanation": "てから attaches to the て-form of a verb and means 'after having done X, [Y happens]'. The first action must be fully completed before the second begins. An alternative is [plain past] + あとで, which is slightly more casual and focuses on the elapsed time after the first action. Both patterns appear in the examples below.",
+      "meaning": "Transitive verb (他動詞) — someone acts on something",
+      "explanation": "A transitive verb (他動詞) requires an agent — someone or something performing the action — and a direct object — the thing being acted upon. The object is always marked with を. Think of transitive verbs as 'I [verb] [the thing]': I take out the notes, I put things in the bag, I start the movie. The key question is: Is someone DOING this TO something else? If yes, use the transitive form.",
       "notes": [
-        "てから emphasizes COMPLETION of the first action. 食べてから出かける means the speaker finishes eating entirely, then goes out — stronger than the simple て-connector.",
-        "あとで can stand alone as an adverb meaning 'later': あとで話しましょう (Let's talk later).",
-        "Do NOT confuse this から with causal から ('because'). In てから the から follows a て-form, not a clause-final plain or polite form."
+        "他動詞 = transitive verb. 他 means 'other' — a transitive verb acts on something OTHER than the subject.",
+        "を always marks the direct object: メモを出す (take out the notes), 映画を始める (start the movie), 水を入れる (pour in water).",
+        "Transitive verbs need an agent. You cannot say ×映画が始める — the movie cannot 'start itself' with a transitive verb. The agent (the one doing the starting) is missing."
       ],
       "examples": [
         {
           "parts": [
-            { "text": "ご飯を", "role": "object", "gloss": "meal (object: を)" },
-            { "text": "食べてから、", "role": "connector", "gloss": "after eating (食べる → て-form 食べて + から)" },
-            { "text": "出かけます。", "role": "predicate", "gloss": "will go out (polite)" }
+            {
+              "text": "りきぞさんが",
+              "role": "subject",
+              "gloss": "Rikizo (が = agent — the one taking out)"
+            },
+            {
+              "text": "メモを",
+              "role": "object",
+              "gloss": "notes (を = direct object — what is being taken out)"
+            },
+            {
+              "text": "出しました。",
+              "role": "predicate",
+              "gloss": "took out (出す — transitive, polite past)"
+            }
           ],
-          "en": "I'll go out after eating.",
-          "breakdown": "食べる → te-form 食べて + から → 食べてから"
+          "en": "Rikizo took out his notes.",
+          "breakdown": "Agent (りきぞさんが) + Object (メモを) + Transitive verb (出す). Someone is acting on the notes. を = direct object signal for a transitive verb."
         },
         {
           "parts": [
-            { "text": "宿題をしたあとで、", "role": "connector", "gloss": "after doing homework (した = plain past of する + あとで)" },
-            { "text": "テレビを", "role": "object", "gloss": "TV (object: を)" },
-            { "text": "見ます。", "role": "predicate", "gloss": "will watch (polite)" }
+            {
+              "text": "映画館の人が",
+              "role": "subject",
+              "gloss": "theater staff (が = agent doing the starting)"
+            },
+            {
+              "text": "映画を",
+              "role": "object",
+              "gloss": "movie (を = direct object — what is being started)"
+            },
+            {
+              "text": "始めました。",
+              "role": "predicate",
+              "gloss": "started (始める — transitive, polite past)"
+            }
           ],
-          "en": "I'll watch TV after doing my homework.",
-          "breakdown": "する → plain past した + あとで → したあとで"
+          "en": "The theater staff started the movie.",
+          "breakdown": "Agent (映画館の人が) + Object (映画を) + Transitive verb (始める). を before the verb confirms this is transitive — someone is acting on the movie."
         }
       ]
     },
     {
       "type": "grammarRule",
-      "id": "rule_maeni",
+      "id": "rule_intransitive",
       "pattern": [
-        { "text": "[Verb dictionary form]", "role": "predicate", "gloss": "plain (dictionary) form — ALWAYS" },
-        { "text": "まえに", "role": "connector", "gloss": "before" },
-        { "text": "[Main action]", "role": "predicate", "gloss": "" }
+        {
+          "label": "[Subject that changes]",
+          "color": "subject",
+          "text": "映画が"
+        },
+        {
+          "label": "[Intransitive Verb]",
+          "color": "verb",
+          "text": "始まった"
+        }
       ],
-      "meaning": "Before doing X",
-      "explanation": "まえに (前に) means 'before'. When it follows a VERB, the verb ALWAYS stays in the plain (dictionary) form—regardless of the tense of the main sentence. This is the most common error: students want to use て-form or plain past, but まえに always takes the dictionary form. After a NOUN, add の: 食事のまえに (before the meal).",
+      "meaning": "Intransitive verb (自動詞) — something happens on its own",
+      "explanation": "An intransitive verb (自動詞) describes a change of state or movement that happens WITHOUT an external agent. No one is 'doing it' — it just happens. The subject that undergoes the change is marked with が. Think of intransitive verbs as 'something [verb]s': the movie starts, people enter, the notes come out. The key question is: Is this happening by itself, with no one forcing it? If yes, use the intransitive form.",
       "notes": [
-        "ALWAYS dictionary form before まえに: 食べるまえに — NOT 食べてまえに, NOT 食べたまえに.",
-        "After a noun: [Noun] の まえに → 試験のまえに (before the exam).",
-        "Compare てから vs まえに: 食べてから (after eating) uses て-form; 食べるまえに (before eating) uses dictionary form."
+        "自動詞 = intransitive verb. 自 means 'self' — a self-moving, self-changing verb.",
+        "が marks the subject that undergoes the change: 映画が始まる (the movie begins — on its own), 人が入る (people enter — on their own).",
+        "Intransitive verbs have no direct object — there is no を. If you see を with an intransitive verb, something is wrong.",
+        "For movement into a location, に marks the destination (not を): 映画館に入る = enter the theater (destination with に, not object with を)."
       ],
       "examples": [
         {
           "parts": [
-            { "text": "寝るまえに、", "role": "connector", "gloss": "before sleeping (寝る = dictionary form + まえに)" },
-            { "text": "歯をみがきます。", "role": "predicate", "gloss": "brush (my) teeth (polite)" }
+            {
+              "text": "映画が",
+              "role": "subject",
+              "gloss": "movie (が = subject — begins on its own)"
+            },
+            {
+              "text": "始まりました。",
+              "role": "predicate",
+              "gloss": "started/began (始まる — intransitive, polite past)"
+            }
           ],
-          "en": "I brush my teeth before going to sleep.",
-          "breakdown": "寝る (dictionary form — NOT 寝て, NOT 寝た) + まえに → 寝るまえに"
+          "en": "The movie started.",
+          "breakdown": "Subject (映画が) + Intransitive verb (始まる). The movie started by itself — no one 'started it'. が marks the subject that changed state. No を because there is no object."
         },
         {
           "parts": [
-            { "text": "日本に", "role": "object", "gloss": "to Japan (direction: に)" },
-            { "text": "来るまえに、", "role": "connector", "gloss": "before coming (来る = dictionary form + まえに)" },
-            { "text": "少し日本語を勉強しました。", "role": "predicate", "gloss": "studied a little Japanese (polite past)" }
+            {
+              "text": "たくさんの人が",
+              "role": "subject",
+              "gloss": "many people (が = subject entering on their own)"
+            },
+            {
+              "text": "映画館に",
+              "role": "modifier",
+              "gloss": "into the movie theater (に = destination)"
+            },
+            {
+              "text": "入りました。",
+              "role": "predicate",
+              "gloss": "entered (入る — intransitive, polite past)"
+            }
           ],
-          "en": "Before coming to Japan, I studied a little Japanese.",
-          "breakdown": "来る (dictionary form) + まえに → 来るまえに"
+          "en": "Many people entered the movie theater.",
+          "breakdown": "Subject (たくさんの人が) + Destination (映画館に) + Intransitive verb (入る). People entered on their own. 映画館に (destination に), not 映画館を — there is no direct object."
         }
       ]
     },
     {
-      "type": "grammarRule",
-      "id": "rule_tame",
-      "pattern": [
-        { "text": "[Verb plain form / Noun + の]", "role": "predicate", "gloss": "plain form (verb) OR Noun + の" },
-        { "text": "ために", "role": "connector", "gloss": "in order to / for the purpose of" },
-        { "text": "[Main action]", "role": "predicate", "gloss": "" }
+      "type": "grammarTable",
+      "title": "Verb Pairs at a Glance",
+      "description": "Three transitive/intransitive pairs you already know. Notice how the verb ending and the particle both change.",
+      "tableType": "verb_pairs",
+      "headers": [
+        "自動詞 — Intransitive",
+        "Particle",
+        "他動詞 — Transitive",
+        "Particle"
       ],
-      "meaning": "In order to X / For the purpose of X",
-      "explanation": "ために (ため + に) expresses deliberate purpose. After a VERB, use the plain (dictionary) form: 勉強するために (in order to study). After a NOUN, use の: 健康のために (for the sake of health). ために is more formal and explicit than just using the purpose-direction construction (～に行く) — it stresses that the entire main action exists solely for the stated goal.",
-      "notes": [
-        "Verb before ために: always plain (dictionary) form — 話すために (NOT 話してために, NOT 話したために).",
-        "Noun before ために: [Noun] の ために → 家族のために (for the sake of the family).",
-        "Do NOT use ために with stative verbs that cannot be intentional (わかる, ある, いる). ために requires a deliberate, volitional goal."
-      ],
-      "examples": [
+      "rows": [
         {
-          "parts": [
-            { "text": "日本語を", "role": "object", "gloss": "Japanese (object: を)" },
-            { "text": "勉強するために、", "role": "connector", "gloss": "in order to study (勉強する = plain form + ために)" },
-            { "text": "日本に", "role": "object", "gloss": "to Japan (direction: に)" },
-            { "text": "来ました。", "role": "predicate", "gloss": "came (polite past)" }
+          "label": "exit / take out",
+          "cells": [
+            "出る (でる) — to exit, come out",
+            "が / から",
+            "出す (だす) — to take out",
+            "を"
           ],
-          "en": "I came to Japan in order to study Japanese.",
-          "breakdown": "勉強する (plain form) + ために → 勉強するために"
+          "meaning": "出る / 出す"
         },
         {
-          "parts": [
-            { "text": "健康のために、", "role": "connector", "gloss": "for the sake of health (健康 = noun + の + ために)" },
-            { "text": "毎日", "role": "time", "gloss": "every day" },
-            { "text": "歩きます。", "role": "predicate", "gloss": "walk (polite)" }
+          "label": "enter / put in",
+          "cells": [
+            "入る (はいる) — to enter",
+            "が / に",
+            "入れる (いれる) — to put in",
+            "を"
           ],
-          "en": "I walk every day for the sake of my health.",
-          "breakdown": "健康 (noun) + の + ために → 健康のために"
+          "meaning": "入る / 入れる"
+        },
+        {
+          "label": "begin / start",
+          "cells": [
+            "始まる (はじまる) — to begin",
+            "が",
+            "始める (はじめる) — to start (something)",
+            "を"
+          ],
+          "meaning": "始まる / 始める"
         }
+      ],
+      "notes": [
+        "Intransitive verbs take が for their subject (the thing that changes state) and often に or から for location or source.",
+        "Transitive verbs take を for their direct object (the thing being acted upon).",
+        "The same kanji appears in both forms — only the verb ending and the particle change.",
+        "More pairs unlock later: 集まる/集める (N4.30), 開く/開ける (N4.31), 止まる/止める (N4.35)."
       ]
     },
     {
       "type": "grammarRule",
-      "id": "rule_nagara",
+      "id": "rule_morphological_clues",
       "pattern": [
-        { "text": "[Verb ます-stem]", "role": "predicate", "gloss": "ます-stem (い-row form)" },
-        { "text": "ながら", "role": "connector", "gloss": "while doing" },
-        { "text": "[Main action]", "role": "predicate", "gloss": "primary / main action" }
+        {
+          "label": "～える / ～ける",
+          "color": "verb",
+          "text": "始める / 入れる"
+        },
+        {
+          "label": "→ often TRANSITIVE",
+          "color": "predicate",
+          "text": "他動詞"
+        }
       ],
-      "meaning": "While doing X, [do Y]",
-      "explanation": "ながら expresses two actions happening simultaneously by the SAME subject. Attach ながら to the ます-stem (the い-row form before ます) of the SECONDARY (background) action. The main (primary) action comes in the main clause at the end. Formation: godan verbs shift the final う to the い-row; ichidan verbs drop る only.",
+      "meaning": "Verb endings that hint at transitive vs intransitive",
+      "explanation": "Japanese has useful morphological patterns that often (but not always) predict whether a verb is transitive or intransitive. Learning these patterns lets you make educated guesses about new verb pairs you haven't studied yet. Think of these as strong tendencies, not absolute rules — Japanese has exceptions — but they are reliable enough to be very helpful.",
       "notes": [
-        "The MAIN action comes LAST in the sentence. ながら marks the background / secondary action.",
-        "Both actions must have the SAME subject. ながら cannot be used when different people perform the two actions.",
-        "Common mistake: using て-form instead of ます-stem. 聞きながら (correct) vs. 聞いてながら (wrong)."
+        "～える / ～ける endings → often TRANSITIVE (他動詞): 始める (start), 入れる (put in). These ichidan verbs tend to have an agent acting on an object.",
+        "～まる / ～ある endings → often INTRANSITIVE (自動詞): 始まる (begin), 集まる (gather), 決まる (be decided). These godan verbs tend to describe self-contained changes of state.",
+        "～す endings → almost always TRANSITIVE (他動詞): 出す (take out), 直す (fix), 消す (erase). The ～す ending is one of the most reliable transitive signals in Japanese.",
+        "～れる endings → often INTRANSITIVE: 壊れる (break/get broken), 離れる (separate). Compare 壊す (to break something) — transitive.",
+        "The ichidan/godan pair pattern: ichidan (～える) = transitive, godan (～まる) = intransitive is very common. You will see this again with 集める/集まる (N4.30), 開ける/開く (N4.31), and 止める/止まる (N4.35)."
       ],
       "examples": [
         {
+          "context": "～す ending → transitive (highly reliable)",
           "parts": [
-            { "text": "音楽を", "role": "object", "gloss": "music (object: を)" },
-            { "text": "聞きながら", "role": "connector", "gloss": "while listening (聞く → masu-stem 聞き + ながら)" },
-            { "text": "勉強します。", "role": "predicate", "gloss": "study (polite)" }
+            {
+              "text": "りきぞさんが",
+              "role": "subject",
+              "gloss": "Rikizo (agent)"
+            },
+            {
+              "text": "メモを",
+              "role": "object",
+              "gloss": "notes (を = direct object — the thing being taken out)"
+            },
+            {
+              "text": "出した。",
+              "role": "predicate",
+              "gloss": "took out (出す — ～す ending, almost always transitive, plain past)"
+            }
           ],
-          "en": "I study while listening to music.",
-          "breakdown": "聞く → masu-stem 聞き + ながら → 聞きながら"
+          "en": "Rikizo took out his notes.",
+          "breakdown": "出す ends in ～す → almost always transitive. The object (メモを) confirms this — someone acted on the notes."
         },
         {
+          "context": "～まる ending → intransitive (reliable tendency)",
           "parts": [
-            { "text": "歩きながら", "role": "connector", "gloss": "while walking (歩く → masu-stem 歩き + ながら)" },
-            { "text": "話しましょう。", "role": "predicate", "gloss": "let's talk (polite volitional)" }
+            {
+              "text": "映画が",
+              "role": "subject",
+              "gloss": "movie (が = subject that begins on its own)"
+            },
+            {
+              "text": "始まった。",
+              "role": "predicate",
+              "gloss": "started (始まる — ～まる ending, typically intransitive, plain past)"
+            }
           ],
-          "en": "Let's talk while walking.",
-          "breakdown": "歩く → masu-stem 歩き + ながら → 歩きながら"
+          "en": "The movie started.",
+          "breakdown": "始まる ends in ～まる → typically intransitive. No agent, no を — the movie begins by itself."
         }
       ]
     },
     {
-      "type": "grammarRule",
-      "id": "rule_tari",
-      "pattern": [
-        { "text": "[Verb plain past]", "role": "predicate", "gloss": "plain past (た / だ form)" },
-        { "text": "り", "role": "connector", "gloss": "+り → たり / だり" },
-        { "text": "[Verb plain past]", "role": "predicate", "gloss": "plain past" },
-        { "text": "り", "role": "connector", "gloss": "+り" },
-        { "text": "する", "role": "predicate", "gloss": "する (plain) / します (polite) / した (past)" }
-      ],
-      "meaning": "Do things like X and Y (non-exhaustive list)",
-      "explanation": "～たり～たりする lists a SAMPLE of actions among several — the list is intentionally incomplete. Formation is identical to the plain past (た-form) but replace た/だ with たり/だり. The same godan euphonic sound changes apply (く→いた→いたり, ぬ→んだ→んだり, etc.). The pattern closes with する (plain) or します / しました (polite present / past).",
-      "notes": [
-        "The sound changes are EXACTLY the same as for plain past — the only difference is the ending: た→たり, だ→だり.",
-        "～たりする implies the list is NOT complete: テレビを見たり、本を読んだりします implies 'among other things'.",
-        "You can list a single action for 'occasionally doing X': 時々、映画を見たりします (I occasionally do things like watch movies — implying other activities too)."
-      ],
-      "examples": [
+      "type": "grammarComparison",
+      "title": "始める vs 始まる — Same Kanji, Different Role",
+      "items": [
         {
-          "parts": [
-            { "text": "週末は", "role": "topic", "gloss": "on weekends (topic: は)" },
-            { "text": "映画を見たり、", "role": "predicate", "gloss": "watch movies (見る → plain past 見た → 見たり)" },
-            { "text": "本を読んだりします。", "role": "predicate", "gloss": "read books (読む → 読んだ → 読んだり) + します" }
+          "label": "始まる — Intransitive (自動詞)",
+          "color": "subject",
+          "points": [
+            "Something BEGINS on its own — no external agent required",
+            "The subject is what changes state: 映画が (the movie begins)",
+            "Particle: が marks the subject that starts",
+            "No direct object — no を in the sentence"
           ],
-          "en": "On weekends, I do things like watch movies and read books.",
-          "breakdown": "見る → plain past 見た → 見たり ／ 読む → 読んだ → 読んだり ／ closes with します"
+          "example": {
+            "parts": [
+              {
+                "text": "映画が",
+                "role": "subject",
+                "gloss": "movie (が = subject — starts on its own)"
+              },
+              {
+                "text": "始まりました。",
+                "role": "predicate",
+                "gloss": "started (始まる — intransitive, polite past)"
+              }
+            ],
+            "en": "The movie started. (on its own)"
+          }
         },
         {
-          "parts": [
-            { "text": "友だちと", "role": "topic", "gloss": "with friends (と = with)" },
-            { "text": "話したり、", "role": "predicate", "gloss": "talk (話す → 話した → 話したり)" },
-            { "text": "食べたりしました。", "role": "predicate", "gloss": "eat (食べる → 食べた → 食べたり) + しました (polite past)" }
+          "label": "始める — Transitive (他動詞)",
+          "color": "verb",
+          "points": [
+            "An AGENT starts something — external action required",
+            "The object is what gets started: 映画を (the movie, as the object)",
+            "Particle: を marks the direct object being started",
+            "Needs an agent (someone doing the starting)"
           ],
-          "en": "I did things like chatted and ate with my friends.",
-          "breakdown": "話す → 話した → 話したり ／ 食べる → 食べた → 食べたり ／ closes with しました"
+          "example": {
+            "parts": [
+              {
+                "text": "映画館の人が",
+                "role": "subject",
+                "gloss": "theater staff (が = agent doing the starting)"
+              },
+              {
+                "text": "映画を",
+                "role": "object",
+                "gloss": "movie (を = direct object — what is being started)"
+              },
+              {
+                "text": "始めました。",
+                "role": "predicate",
+                "gloss": "started (始める — transitive, polite past)"
+              }
+            ],
+            "en": "The theater staff started the movie. (they did it)"
+          }
         }
-      ]
+      ],
+      "tip": "Same kanji 始, different endings: ～まる = intransitive (it starts by itself), ～める = transitive (someone starts it). When you see を before the verb, you need transitive 始める. When the subject is what begins and there is no を, use intransitive 始まる."
     },
     {
       "type": "annotatedExample",
-      "title": "Daily Routine — All Five Connectors in Context",
+      "title": "All Three Pairs in Context",
       "examples": [
         {
-          "context": "Morning before work — てから",
+          "context": "始まる (intransitive) — English class begins on its own",
           "parts": [
-            { "text": "朝ご飯を", "role": "object", "gloss": "breakfast (object: を)" },
-            { "text": "食べてから、", "role": "connector", "gloss": "after eating (食べる → て-form + から)" },
-            { "text": "家を", "role": "object", "gloss": "house (object: を)" },
-            { "text": "出ます。", "role": "predicate", "gloss": "leave (polite)" }
+            {
+              "text": "英語の授業が",
+              "role": "subject",
+              "gloss": "English class (が = subject — begins on its own)"
+            },
+            {
+              "text": "もうすぐ",
+              "role": "adverb",
+              "gloss": "soon / shortly"
+            },
+            {
+              "text": "始まります。",
+              "role": "predicate",
+              "gloss": "will begin (始まる — intransitive, polite present)"
+            }
           ],
-          "en": "After eating breakfast, I leave home.",
-          "note": "てから emphasizes the first action is fully done before the second starts."
+          "en": "English class will start soon.",
+          "note": "が marks English class as the subject that begins. No agent, no を — it begins by itself."
         },
         {
-          "context": "Before a test — まえに",
+          "context": "始める (transitive) — teacher starts the class",
           "parts": [
-            { "text": "試験のまえに、", "role": "connector", "gloss": "before the exam (試験 = noun + の + まえに)" },
-            { "text": "よく", "role": "adverb", "gloss": "well / thoroughly" },
-            { "text": "準備します。", "role": "predicate", "gloss": "prepare (polite)" }
+            {
+              "text": "先生が",
+              "role": "subject",
+              "gloss": "teacher (が = agent doing the starting)"
+            },
+            {
+              "text": "英語の授業を",
+              "role": "object",
+              "gloss": "English class (を = direct object — what the teacher starts)"
+            },
+            {
+              "text": "始めました。",
+              "role": "predicate",
+              "gloss": "started (始める — transitive, polite past)"
+            }
           ],
-          "en": "I prepare well before the exam.",
-          "note": "After a noun, add の: 試験のまえに. No verb is needed before まえに when using a noun."
+          "en": "The teacher started English class.",
+          "note": "を marks English class as the direct object. The teacher (agent) is acting on the class. Compare: 授業が始まった (class started on its own)."
         },
         {
-          "context": "Studying Japanese — ために",
+          "context": "入る (intransitive) — people enter on their own",
           "parts": [
-            { "text": "日本語を", "role": "object", "gloss": "Japanese (object: を)" },
-            { "text": "上手に話すために、", "role": "connector", "gloss": "in order to speak skillfully (話す = plain form + ために)" },
-            { "text": "毎日", "role": "time", "gloss": "every day" },
-            { "text": "練習します。", "role": "predicate", "gloss": "practice (polite)" }
+            {
+              "text": "たくさんの人が",
+              "role": "subject",
+              "gloss": "many people (が = subject entering)"
+            },
+            {
+              "text": "映画館に",
+              "role": "modifier",
+              "gloss": "into the theater (に = destination)"
+            },
+            {
+              "text": "入りました。",
+              "role": "predicate",
+              "gloss": "entered (入る — intransitive, polite past)"
+            }
           ],
-          "en": "I practice every day in order to speak Japanese well.",
-          "note": "The verb before ために is always plain (dictionary) form: 話す, not 話して or 話した."
+          "en": "Many people entered the movie theater.",
+          "note": "No agent is forcing people to enter — they enter on their own. に marks the destination; no を because there is no direct object."
         },
         {
-          "context": "Commuting — ながら",
+          "context": "入れる (transitive) — putting something inside",
           "parts": [
-            { "text": "電車に", "role": "object", "gloss": "on the train (に = on/in)" },
-            { "text": "乗りながら、", "role": "connector", "gloss": "while riding (乗る → masu-stem 乗り + ながら)" },
-            { "text": "ポッドキャストを", "role": "object", "gloss": "podcast (object: を)" },
-            { "text": "聞きます。", "role": "predicate", "gloss": "listen to (polite)" }
+            {
+              "text": "りきぞさんが",
+              "role": "subject",
+              "gloss": "Rikizo (agent — doing the putting)"
+            },
+            {
+              "text": "メモを",
+              "role": "object",
+              "gloss": "notes (を = direct object — what is being put in)"
+            },
+            {
+              "text": "ポケットに",
+              "role": "modifier",
+              "gloss": "into the pocket (に = destination)"
+            },
+            {
+              "text": "入れました。",
+              "role": "predicate",
+              "gloss": "put in (入れる — transitive, polite past)"
+            }
           ],
-          "en": "I listen to podcasts while riding the train.",
-          "note": "ながら attaches to the ます-stem (乗り, not 乗って). Both actions happen simultaneously by the same person."
+          "en": "Rikizo put his notes in his pocket.",
+          "note": "を marks the notes as the direct object. Rikizo is the agent placing something somewhere — transitive 入れる."
         },
         {
-          "context": "Weekend routine — ～たり",
+          "context": "出る (intransitive) — exiting on one's own",
           "parts": [
-            { "text": "休みの日は", "role": "topic", "gloss": "on days off (topic: は)" },
-            { "text": "買い物をしたり、", "role": "predicate", "gloss": "shop (買い物をする → した → したり)" },
-            { "text": "公園を歩いたりします。", "role": "predicate", "gloss": "walk in the park (歩く → 歩いた → 歩いたり) + します" }
+            {
+              "text": "りきぞさんが",
+              "role": "subject",
+              "gloss": "Rikizo (subject — exits on his own)"
+            },
+            {
+              "text": "映画館から",
+              "role": "modifier",
+              "gloss": "from the movie theater (から = source / starting point)"
+            },
+            {
+              "text": "出ました。",
+              "role": "predicate",
+              "gloss": "exited (出る — intransitive, polite past)"
+            }
           ],
-          "en": "On days off, I do things like shop and walk in the park.",
-          "note": "～たりする implies there are other activities too — the list is intentionally not exhaustive."
+          "en": "Rikizo left the movie theater.",
+          "note": "No one is 'sending' Rikizo out — he exits on his own. から marks where he exits from. No を because there is no direct object."
+        },
+        {
+          "context": "出す (transitive) — taking something out",
+          "parts": [
+            {
+              "text": "りきぞさんが",
+              "role": "subject",
+              "gloss": "Rikizo (agent — doing the taking out)"
+            },
+            {
+              "text": "ポケットから",
+              "role": "modifier",
+              "gloss": "from the pocket (から = source)"
+            },
+            {
+              "text": "メモを",
+              "role": "object",
+              "gloss": "notes (を = direct object — what is taken out)"
+            },
+            {
+              "text": "出しました。",
+              "role": "predicate",
+              "gloss": "took out (出す — transitive, polite past)"
+            }
+          ],
+          "en": "Rikizo took his notes out of his pocket.",
+          "note": "を marks the notes as the object being taken out. Rikizo is acting on the notes — transitive 出す."
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Planning the Day",
-      "context": "りきぞ and けん are in the lobby of a movie theater, planning their afternoon.",
+      "title": "映画館で (At the Movie Theater)",
+      "context": "ゆき and りきぞ are at a movie theater before the film starts.",
       "lines": [
         {
-          "spk": "りきぞ",
-          "jp": "映画を見てから、店に食べに行きましょう。",
-          "en": "After watching the movie, let's go eat at a restaurant.",
+          "spk": "ゆき",
+          "jp": "映画がすぐ始まりますよ。",
+          "en": "The movie will start soon!",
           "terms": [
-            "char_rikizo",
             "v_eiga",
-            "p_wo",
-            { "id": "v_miru", "form": "te_form" },
-            "p_kara",
-            "v_mise",
-            "p_ni",
-            { "id": "v_taberu", "form": null },
-            "p_ni",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            "p_ga",
+            "v_sugu",
+            {
+              "id": "v_hajimaru",
+              "form": "polite_masu"
+            },
+            "p_yo"
           ]
         },
         {
-          "spk": "けん",
-          "jp": "いいですね。映画が始まるまえに、飲みに行きませんか。",
-          "en": "Sounds great. Before the movie starts, shall we go for a drink?",
+          "spk": "りきぞ",
+          "jp": "そうですね。まだ人が映画館に入っていますね。",
+          "en": "Right. People are still entering the theater.",
           "terms": [
-            "char_ken",
-            { "id": "v_ii", "form": "polite_adj" },
+            "v_sou",
             "g_desu",
             "p_ne",
-            "v_eiga",
+            "v_mada",
+            "v_hito",
             "p_ga",
-            { "id": "v_hajimaru", "form": null },
-            { "id": "v_nomu", "form": null },
+            "v_eigakan",
             "p_ni",
-            { "id": "v_iku", "form": "polite_negative" },
+            {
+              "id": "v_hairu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ne"
+          ]
+        },
+        {
+          "spk": "ゆき",
+          "jp": "りきぞさんはメモを出しましたか。",
+          "en": "Rikizo, did you take out your notes?",
+          "terms": [
+            "char_rikizo",
+            "v_san",
+            "p_wa",
+            "v_memo",
+            "p_wo",
+            {
+              "id": "v_dasu",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "歩きながら話しましょう！",
-          "en": "Let's talk while walking!",
+          "jp": "まだです。今出します。",
+          "en": "Not yet. I'll take them out now.",
           "terms": [
-            "char_rikizo",
-            { "id": "v_aruku", "form": "nagara_form" },
-            "p_nagara",
-            { "id": "v_hanasu", "form": "polite_volitional_mashou" }
+            "v_mada",
+            "g_desu",
+            "v_ima",
+            {
+              "id": "v_dasu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
-          "spk": "けん",
-          "jp": "私はよく映画を見たり、本を読んだりします。",
-          "en": "I often do things like watch movies and read books.",
+          "spk": "ゆき",
+          "jp": "映画館の人が映画を始めましたよ！",
+          "en": "The theater staff has started the movie!",
           "terms": [
-            "char_ken",
-            "v_watashi",
-            "p_wa",
-            "v_yoku",
+            "v_eigakan",
+            "p_no",
+            "v_hito",
+            "p_ga",
             "v_eiga",
             "p_wo",
-            { "id": "v_miru", "form": "tari_form" },
-            "v_hon",
-            "p_wo",
-            { "id": "v_yomu", "form": "tari_form" },
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_hajimeru",
+              "form": "polite_mashita"
+            },
+            "p_yo"
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "私も！映画を見てから、帰りましょう。",
-          "en": "Me too! After watching the movie, let's head home.",
+          "jp": "映画が終わりました。外に出ましょう。",
+          "en": "The movie ended. Let's go outside.",
           "terms": [
-            "char_rikizo",
-            "v_watashi",
-            "p_mo",
             "v_eiga",
+            "p_ga",
+            {
+              "id": "v_owaru",
+              "form": "polite_mashita"
+            },
+            "v_soto",
+            "p_ni",
+            {
+              "id": "v_deru",
+              "form": "polite_volitional_mashou"
+            }
+          ]
+        },
+        {
+          "spk": "ゆき",
+          "jp": "分かりました。メモを中に入れて、出ましょう！",
+          "en": "Got it. Let me put my notes inside, and let's go!",
+          "terms": [
+            {
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            },
+            "v_memo",
             "p_wo",
-            { "id": "v_miru", "form": "te_form" },
-            "p_kara",
-            { "id": "v_kaeru", "form": "polite_volitional_mashou" }
+            "v_naka",
+            "p_ni",
+            {
+              "id": "v_ireru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_deru",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
     },
     {
-      "type": "sentenceTransform",
-      "title": "Transform — Connect the Actions",
-      "instructions": "Combine the two sentences into one using the connector shown in brackets. Type the combined Japanese sentence.",
+      "type": "fillSlot",
+      "title": "Choose the Correct Verb",
+      "instructions": "Fill in the blank with the correct verb form. Use the particle clue (が vs を) and the context to decide between the transitive and intransitive pair.",
       "items": [
         {
-          "given": "ご飯を食べました。それから出かけました。",
-          "givenReading": "ごはんをたべました。それからでかけました。",
-          "targetLabel": "てから",
-          "answer": "ご飯を食べてから出かけました。",
-          "answerReading": "ごはんをたべてからでかけました。",
-          "hint": "食べる → te-form: 食べて → 食べてから"
+          "before": "映画が",
+          "after": "。",
+          "translation": "The movie starts.",
+          "choices": [
+            "始まります",
+            "始めます",
+            "始まりました",
+            "始めました"
+          ],
+          "answer": "始まります",
+          "explanation": "映画が = the movie (が = subject marker). The movie starts on its own — no external agent. Use the INTRANSITIVE 始まる. 始める (transitive) would be wrong: ×映画が始めます is ungrammatical — 映画 cannot be the agent of a transitive verb acting on itself."
         },
         {
-          "given": "家に帰ります。その前に電話します。",
-          "givenReading": "いえにかえります。そのまえにでんわします。",
-          "targetLabel": "まえに",
-          "answer": "家に帰るまえに電話します。",
-          "answerReading": "いえにかえるまえにでんわします。",
-          "hint": "帰る stays in dictionary form before まえに — NOT 帰って or 帰った."
+          "before": "映画館の人が映画を",
+          "after": "。",
+          "translation": "The theater staff started the movie.",
+          "choices": [
+            "始まりました",
+            "始めました",
+            "始まります",
+            "始めます"
+          ],
+          "answer": "始めました",
+          "explanation": "映画を = the movie (を = direct object). There is an agent (映画館の人) acting on an object (映画). Use the TRANSITIVE 始める (polite past: 始めました). 始まりました is intransitive and cannot take を: ×映画館の人が映画を始まりました is ungrammatical."
         },
         {
-          "given": "音楽を聞きます。同時に勉強します。",
-          "givenReading": "おんがくをききます。どうじにべんきょうします。",
-          "targetLabel": "ながら",
-          "answer": "音楽を聞きながら勉強します。",
-          "answerReading": "おんがくをききながらべんきょうします。",
-          "hint": "聞く → masu-stem 聞き + ながら → 聞きながら"
+          "before": "りきぞさんが外に",
+          "after": "。",
+          "translation": "Rikizo goes outside.",
+          "choices": [
+            "出ます",
+            "出します",
+            "入ります",
+            "入れます"
+          ],
+          "answer": "出ます",
+          "explanation": "外に = outside (に = direction). Rikizo is exiting on his own — no direct object (を) is present. Use the INTRANSITIVE 出る (polite present: 出ます). 出す (transitive) would need an object: りきぞさんが何かを出す. Without を marking an object, 出す does not fit."
         },
         {
-          "given": "日本語が上手になりたい。だから毎日練習します。",
-          "givenReading": "にほんごがじょうずになりたい。だからまいにちれんしゅうします。",
-          "targetLabel": "ために",
-          "answer": "日本語が上手になるために毎日練習します。",
-          "answerReading": "にほんごがじょうずになるためにまいにちれんしゅうします。",
-          "hint": "なる stays in plain (dictionary) form before ために."
+          "before": "りきぞさんがメモを中に",
+          "after": "。",
+          "translation": "Rikizo puts the notes inside.",
+          "choices": [
+            "入ります",
+            "入れます",
+            "出ます",
+            "出します"
+          ],
+          "answer": "入れます",
+          "explanation": "メモを = the notes (を = direct object marker). Rikizo is putting something somewhere — he is the agent, and the notes are the object. Use the TRANSITIVE 入れる (polite present: 入れます). 入る (intransitive) cannot take を: ×りきぞさんがメモを中に入ります is ungrammatical."
         },
         {
-          "given": "週末は映画を見ます。本も読みます。",
-          "givenReading": "しゅうまつはえいがをみます。ほんもよみます。",
-          "targetLabel": "～たり～たりする",
-          "answer": "週末は映画を見たり、本を読んだりします。",
-          "answerReading": "しゅうまつはえいがをみたり、ほんをよんだりします。",
-          "hint": "見る → plain past 見た → 見たり ／ 読む → 読んだ → 読んだり ／ closes with します"
+          "before": "りきぞさんがメモを",
+          "after": "。",
+          "translation": "Rikizo takes out the notes.",
+          "choices": [
+            "出ます",
+            "出します",
+            "入ります",
+            "入れます"
+          ],
+          "answer": "出します",
+          "explanation": "メモを = the notes (を = direct object). Rikizo is taking the notes out — he is acting ON the notes. Use the TRANSITIVE 出す (polite present: 出します). 出る (intransitive) means 'to exit/come out' and cannot take an object with を. Only the transitive 出す can have を with something being taken out."
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Practice Drills",
+      "title": "Transitive & Intransitive Practice",
       "instructions": "Choose the best answer for each question.",
       "items": [
         {
           "kind": "mcq",
-          "q": "映画を（　　）から、食べに行きましょう。(After watching the movie, let's go eat.)",
-          "choices": ["見て", "見る", "見た", "見ながら"],
-          "answer": "見て",
-          "terms": [
-            "v_eiga",
-            "p_wo",
-            "p_kara",
-            { "id": "v_taberu", "form": null },
-            "p_ni",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+          "q": "Which sentence is grammatically correct?",
+          "choices": [
+            "映画が始める。",
+            "映画が始まる。",
+            "映画を始まる。",
+            "映画に始める。"
           ],
-          "explanation": "てから uses the <b>て-form</b>. 見る → て-form <b>見て</b> + から → 見てから. The other options use the dictionary form (見る), plain past (見た), or ながら (simultaneous action — wrong meaning here)."
+          "answer": "映画が始まる。",
+          "explanation": "映画が始まる is correct. 映画が = the movie (が = subject). 始まる is intransitive — something begins on its own. '映画が始める' is wrong: 始める is transitive and needs a human agent acting on an object, not 映画 as the subject. '映画を始まる' is wrong: intransitive 始まる cannot take を. '映画に始める' is wrong on both particle and transitivity."
         },
         {
           "kind": "mcq",
-          "q": "映画が始まる（　　）に、飲みに行きましょう。(Before the movie starts, let's go for a drink.)",
-          "choices": ["まえ", "あと", "から", "ため"],
-          "answer": "まえ",
-          "terms": [
-            "v_eiga",
-            "p_ga",
-            { "id": "v_hajimaru", "form": null },
-            "p_ni",
-            { "id": "v_nomu", "form": null },
-            "p_ni",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+          "q": "Which particle should fill the blank? りきぞさんがメモ___入れました。",
+          "choices": [
+            "を",
+            "が",
+            "に",
+            "から"
           ],
-          "explanation": "<b>まえに</b> means 'before'. The verb 始まる stays in <b>dictionary form</b> before まえに — this is the key rule. あとで means 'after', から can mean 'because/from', ため means 'purpose'."
+          "answer": "を",
+          "explanation": "入れる is a transitive verb (他動詞) — it takes を for its direct object. メモを入れました = put the notes in. が marks the subject (not the object here), に marks the destination (where something is put — also used, but comes AFTER を in this sentence), から marks the source. を directly before the verb is the key signal that 入れる is transitive."
         },
         {
           "kind": "mcq",
-          "q": "歩き（　　）話しましょう。(Let's talk while walking.)",
-          "choices": ["ながら", "てから", "まえに", "ために"],
-          "answer": "ながら",
-          "terms": [
-            { "id": "v_aruku", "form": "nagara_form" },
-            { "id": "v_hanasu", "form": "polite_volitional_mashou" }
+          "q": "Which verb ending is almost always a signal that the verb is TRANSITIVE?",
+          "choices": [
+            "～まる (e.g. 始まる, 集まる)",
+            "～れる (e.g. 壊れる, 離れる)",
+            "～す (e.g. 出す, 直す)",
+            "～く (e.g. 開く, 歩く)"
           ],
-          "explanation": "<b>ながら</b> attaches to the ます-stem to express simultaneous actions. 歩く → masu-stem <b>歩き</b> + ながら → 歩きながら. The other connectors express time sequence or purpose, not simultaneity."
+          "answer": "～す (e.g. 出す, 直す)",
+          "explanation": "～す endings are almost always TRANSITIVE (他動詞): 出す (take out), 直す (fix), 消す (erase), 話す (speak). The intransitive counterpart often ends in ～れる (壊す/壊れる) or ～まる (始める/始まる). ～まる endings are typically INTRANSITIVE. ～れる endings are typically intransitive (potential or passive-like). ～く covers various verb types with no reliable rule."
         },
         {
           "kind": "mcq",
-          "q": "日本語のために映画を見ています。What does ために express here?",
-          "choices": ["purpose / for the sake of", "sequence / after doing", "simultaneous / while", "before doing"],
-          "answer": "purpose / for the sake of",
-          "terms": [
-            "v_nihongo",
-            "p_no",
-            "v_eiga",
-            "p_wo",
-            { "id": "v_miru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+          "q": "映画館の人が映画を___。 Which form correctly completes this sentence?",
+          "choices": [
+            "始まりました",
+            "始めました",
+            "入りました",
+            "入れました"
           ],
-          "explanation": "<b>ために</b> expresses deliberate <b>purpose</b>: 'for the sake of' or 'in order to'. Here: 日本語のために = 'for the sake of (my) Japanese / in order to improve my Japanese'. Contrast with てから (after), まえに (before), and ながら (while)."
+          "answer": "始めました",
+          "explanation": "映画を = the movie (を = direct object). There is an agent (映画館の人) acting on the movie — use TRANSITIVE 始める (polite past: 始めました). 始まりました is intransitive and cannot take を. 入りました/入れました relate to 入る/入れる (enter/put in), which don't fit the meaning 'start the movie'."
         },
         {
           "kind": "mcq",
-          "q": "映画を見たり、本を読んだり（　　）。(I do things like watch movies and read books.)",
-          "choices": ["します", "ながら", "てから", "まえに"],
-          "answer": "します",
-          "terms": [
-            "v_eiga",
-            "p_wo",
-            { "id": "v_miru", "form": "tari_form" },
-            "v_hon",
-            "p_wo",
-            { "id": "v_yomu", "form": "tari_form" },
-            { "id": "v_suru", "form": "polite_masu" }
+          "q": "Which Japanese sentence best translates 'The movie ended'?",
+          "choices": [
+            "映画が終わりました。",
+            "映画を終わりました。",
+            "映画に終わりました。",
+            "映画で終わりました。"
           ],
-          "explanation": "～たり～たりする closes with <b>する</b> (or <b>します</b> in polite speech). The full pattern is [verb-たり] [verb-たり] <b>します</b>. Using ながら, てから, or まえに at the end breaks the grammatical pattern entirely."
+          "answer": "映画が終わりました。",
+          "explanation": "映画が終わりました = the movie ended (on its own). 終わる is intransitive — the movie ends by itself, with no agent. が marks the subject that changes state. 映画を終わりました is wrong: を marks a direct object, but intransitive 終わる does not take を. The transitive counterpart 終える (to finish something) takes を — but 終わる does not."
         }
       ]
     }
