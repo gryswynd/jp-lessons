@@ -457,7 +457,7 @@
             "p_no",
             "v_ryouri",
             "p_wa",
-            "v_oishii",
+            { "id": "v_oishii", "form": "polite_adj" },
             "g_desu",
             "p_ne"
           ]
@@ -483,7 +483,8 @@
             {
               "id": "v_tsukuru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -522,12 +523,14 @@
           "terms": [
             "v_ii",
             "g_desu",
+            "p_ne",
             "v_nomimono",
             "p_mo",
             {
               "id": "v_kau",
               "form": "polite_mashita"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -535,6 +538,7 @@
           "jp": "はい、お茶を 買いました。おいしく 作ってみましょう！",
           "en": "Yes, I bought tea. Let's try to make it delicious!",
           "terms": [
+            "p_hai",
             "v_ocha",
             "p_wo",
             {
@@ -575,7 +579,8 @@
             {
               "id": "v_taberu",
               "form": "plain_desire_tai"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -612,8 +617,9 @@
             "p_wo",
             {
               "id": "v_kau",
-              "form": null
-            }
+              "form": "plain_form"
+            },
+            "p_ka"
           ]
         },
         {
@@ -817,7 +823,7 @@
             "v_ryouri",
             "p_ga",
             "v_totemo",
-            "v_jouzu",
+            { "id": "v_jouzu", "form": "polite_adj" },
             "g_desu"
           ]
         },
@@ -920,7 +926,7 @@
             "p_wa",
             "v_ryouri",
             "p_ga",
-            "v_jouzu",
+            { "id": "v_jouzu", "form": "polite_adj" },
             "g_desu",
             "p_ka",
             "p_hai",
