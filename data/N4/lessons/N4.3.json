@@ -55,10 +55,12 @@
           "terms": [
             "v_mainichi",
             "v_nanji",
+            "p_ni",
             {
               "id": "v_okiru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -69,11 +71,14 @@
               "id": "v_kaeru",
               "form": "te_form"
             },
+            "p_kara",
             "v_nani",
+            "p_wo",
             {
               "id": "v_suru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -81,15 +86,18 @@
           "en": "Do you come to school by riding the train?",
           "terms": [
             "v_densha",
+            "p_ni",
             {
               "id": "v_noru",
               "form": "te_form"
             },
             "v_gakkou",
+            "p_ni",
             {
               "id": "v_kuru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -97,7 +105,9 @@
           "en": "Did you walk to work today?",
           "terms": [
             "v_kyou",
+            "p_wa",
             "v_kaisha",
+            "p_made",
             {
               "id": "v_aruku",
               "form": "te_form"
@@ -105,7 +115,8 @@
             {
               "id": "v_iku",
               "form": "polite_mashita"
-            }
+            },
+            "p_ka"
           ]
         }
       ]
@@ -213,12 +224,16 @@
           "en": "Yamakawa, what time did you wake up this morning?",
           "terms": [
             "char_yamakawa",
+            "v_san",
             "v_kesa",
+            "p_wa",
             "v_nanji",
+            "p_ni",
             {
               "id": "v_okiru",
               "form": "polite_mashita"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -226,17 +241,22 @@
           "jp": "六時に 起きました。毎朝 朝ごはんを 食べてから 学校に 来ます。",
           "en": "I woke up at six. Every morning I come to school after eating breakfast.",
           "terms": [
+            { "counter": "ji", "n": 6 },
+            "p_ni",
             {
               "id": "v_okiru",
               "form": "polite_mashita"
             },
             "v_maiasa",
             "v_asagohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "te_form"
             },
+            "p_kara",
             "v_gakkou",
+            "p_ni",
             {
               "id": "v_kuru",
               "form": "polite_masu"
@@ -249,15 +269,20 @@
           "en": "I eat breakfast every morning too. It's a bright morning today, isn't it.",
           "terms": [
             "v_watashi",
+            "p_mo",
             "v_maiasa",
             "v_asagohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "polite_masu"
             },
             "v_kesa",
+            "p_wa",
             "v_akarui",
-            "v_asa"
+            "v_asa",
+            "g_desu",
+            "p_ne"
           ]
         },
         {
@@ -265,12 +290,18 @@
           "jp": "そうですね。明日 も 学校に 来られますか。",
           "en": "You're right. Can you come to school tomorrow too?",
           "terms": [
+            "v_sou",
+            "g_desu",
+            "p_ne",
             "v_ashita",
+            "p_mo",
             "v_gakkou",
+            "p_ni",
             {
               "id": "v_kuru",
               "form": "polite_potential"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -279,15 +310,18 @@
           "en": "Yes, I can come tomorrow too. I'll come after eating breakfast.",
           "terms": [
             "v_ashita",
+            "p_mo",
             {
               "id": "v_kuru",
               "form": "polite_potential"
             },
             "v_asagohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "te_form"
             },
+            "p_kara",
             {
               "id": "v_kuru",
               "form": "polite_masu"
@@ -307,11 +341,14 @@
           "en": "What are you doing this evening?",
           "terms": [
             "v_konban",
+            "p_wa",
             "v_nani",
+            "p_wo",
             {
               "id": "v_suru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -320,13 +357,17 @@
           "en": "I'll eat dinner at home tonight. My mother will make it for me.",
           "terms": [
             "v_konban",
+            "p_wa",
             "v_ie",
+            "p_de",
             "v_bangohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "polite_masu"
             },
             "v_haha",
+            "p_ga",
             {
               "id": "v_tsukuru",
               "form": "te_form"
@@ -346,10 +387,15 @@
               "id": "v_ii",
               "form": "polite_adj"
             },
+            "p_ne",
             "v_watashi",
+            "p_mo",
             "v_konban",
+            "p_wa",
             "v_ie",
+            "p_de",
             "v_bangohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "plain_desire_tai"
@@ -363,11 +409,14 @@
           "en": "Can you come tomorrow morning too?",
           "terms": [
             "v_ashita",
+            "p_no",
             "v_asa",
+            "p_mo",
             {
               "id": "v_kuru",
               "form": "polite_potential"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -376,20 +425,26 @@
           "en": "Yes, I can come at seven tomorrow. I come every morning after eating breakfast.",
           "terms": [
             "v_ashita",
+            "p_wa",
+            { "counter": "ji", "n": 7 },
+            "p_ni",
             {
               "id": "v_kuru",
               "form": "polite_potential"
             },
             "v_maiasa",
             "v_asagohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "te_form"
             },
+            "p_kara",
             {
               "id": "v_kuru",
               "form": "polite_masu"
-            }
+            },
+            "p_yo"
           ]
         }
       ]
@@ -404,15 +459,17 @@
           "jp": "今晩、家に 来ませんか。いっしょに 晩ごはんを 食べましょう。",
           "en": "Would you like to come to my house tonight? Let's eat dinner together.",
           "terms": [
-            "char_yuki",
             "v_konban",
             "v_ie",
+            "p_ni",
             {
               "id": "v_kuru",
               "form": "polite_negative"
             },
+            "p_ka",
             "v_issho",
             "v_bangohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "polite_volitional_mashou"
@@ -428,7 +485,11 @@
               "id": "v_ii",
               "form": "polite_adj"
             },
-            "v_nanji"
+            "p_ne",
+            "v_nanji",
+            "p_kara",
+            "g_desu",
+            "p_ka"
           ]
         },
         {
@@ -436,8 +497,13 @@
           "jp": "六時からです。母が 晩ごはんを 作って くれます。",
           "en": "From six. My mother will make dinner for us.",
           "terms": [
+            { "counter": "ji", "n": 6 },
+            "p_kara",
+            "g_desu",
             "v_haha",
+            "p_ga",
             "v_bangohan",
+            "p_wo",
             {
               "id": "v_tsukuru",
               "form": "te_form"
@@ -453,6 +519,8 @@
           "jp": "はい、六時に 行けます。",
           "en": "Yes, I can make it at six.",
           "terms": [
+            { "counter": "ji", "n": 6 },
+            "p_ni",
             {
               "id": "v_iku",
               "form": "polite_potential"
@@ -465,10 +533,12 @@
           "en": "Would you like to come on the weekend too?",
           "terms": [
             "v_shuumatsu",
+            "p_mo",
             {
               "id": "v_kuru",
               "form": "polite_negative"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -477,6 +547,7 @@
           "en": "Yes, I can come on the weekend too.",
           "terms": [
             "v_shuumatsu",
+            "p_mo",
             {
               "id": "v_iku",
               "form": "polite_potential"
@@ -496,12 +567,15 @@
           "en": "What time are you getting up tomorrow morning?",
           "terms": [
             "v_ashita",
+            "p_no",
             "v_asa",
             "v_nanji",
+            "p_ni",
             {
               "id": "v_okiru",
-              "form": null
-            }
+              "form": "plain_form"
+            },
+            "p_ka"
           ]
         },
         {
@@ -509,11 +583,17 @@
           "jp": "六時に 起きるよ。今朝 も 六時に 起きた。",
           "en": "I'm getting up at six. This morning I got up at six too.",
           "terms": [
+            { "counter": "ji", "n": 6 },
+            "p_ni",
             {
               "id": "v_okiru",
-              "form": null
+              "form": "plain_form"
             },
+            "p_yo",
             "v_kesa",
+            "p_mo",
+            { "counter": "ji", "n": 6 },
+            "p_ni",
             {
               "id": "v_okiru",
               "form": "plain_past"
@@ -526,10 +606,15 @@
           "en": "Whoa, I don't want to wake up at six.",
           "terms": [
             "v_watashi",
+            "p_wa",
+            { "counter": "ji", "n": 6 },
+            "p_wa",
+            "p_ni",
             {
               "id": "v_okiru",
               "form": "desire_tai_negative"
-            }
+            },
+            "p_yo"
           ]
         },
         {
@@ -538,14 +623,17 @@
           "en": "Because I want to eat breakfast, I can get up!",
           "terms": [
             "v_asagohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "plain_desire_tai"
             },
+            "p_kara_because",
             {
               "id": "v_okiru",
               "form": "potential"
-            }
+            },
+            "p_yo"
           ]
         }
       ]
@@ -559,7 +647,10 @@
           "en": "Rikizo wakes up every morning at six.",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_maiasa",
+            { "counter": "ji", "n": 6 },
+            "p_ni",
             {
               "id": "v_okiru",
               "form": "polite_masu"
@@ -574,7 +665,9 @@
               "id": "v_okiru",
               "form": "te_form"
             },
+            "p_kara",
             "v_asagohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "polite_masu"
@@ -586,9 +679,13 @@
           "en": "This morning, Rikizo's mother made breakfast for him.",
           "terms": [
             "v_kesa",
+            "p_wa",
             "char_rikizo",
+            "p_no",
             "v_haha",
+            "p_ga",
             "v_asagohan",
+            "p_wo",
             {
               "id": "v_tsukuru",
               "form": "te_form"
@@ -604,9 +701,12 @@
           "en": "Today the weather has been bright since morning.",
           "terms": [
             "v_kyou",
+            "p_wa",
             "v_asa",
+            "p_kara",
             "v_akarui",
-            "v_tenki"
+            "v_tenki",
+            "g_desu"
           ]
         },
         {
@@ -614,13 +714,17 @@
           "en": "Rikizo can come to school every morning after eating breakfast.",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_maiasa",
             "v_asagohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "te_form"
             },
+            "p_kara",
             "v_gakkou",
+            "p_ni",
             {
               "id": "v_kuru",
               "form": "polite_potential"
@@ -634,16 +738,16 @@
           "a": "六時に 起きます。",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_maiasa",
             "v_nanji",
+            "p_ni",
             {
               "id": "v_okiru",
               "form": "polite_masu"
             },
-            {
-              "id": "v_okiru",
-              "form": "polite_masu"
-            }
+            "p_ka",
+            { "counter": "ji", "n": 6 }
           ]
         },
         {
@@ -651,13 +755,18 @@
           "a": "りきぞ の 母 が 作って くれました。",
           "terms": [
             "v_kesa",
+            "p_wa",
             "v_dare",
+            "p_ga",
             "v_asagohan",
+            "p_wo",
             {
               "id": "v_tsukuru",
               "form": "polite_mashita"
             },
+            "p_ka",
             "char_rikizo",
+            "p_no",
             "v_haha",
             {
               "id": "v_tsukuru",
@@ -674,11 +783,15 @@
           "a": "朝 から 明るい 天気 です。",
           "terms": [
             "v_kyou",
+            "p_no",
             "v_tenki",
+            "p_wa",
             "v_dou",
+            "g_desu",
+            "p_ka",
             "v_asa",
-            "v_akarui",
-            "v_tenki"
+            "p_kara",
+            "v_akarui"
           ]
         },
         {
@@ -686,22 +799,27 @@
           "a": "朝ごはんを 食べてから 来ます。",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_gakkou",
+            "p_ni",
             {
               "id": "v_kuru",
-              "form": null
+              "form": "plain_form"
             },
             "v_mae",
             "v_nani",
+            "p_wo",
             {
               "id": "v_suru",
               "form": "polite_masu"
             },
+            "p_ka",
             "v_asagohan",
             {
               "id": "v_taberu",
               "form": "te_form"
             },
+            "p_kara",
             {
               "id": "v_kuru",
               "form": "polite_masu"
@@ -719,9 +837,13 @@
           "en": "Tonight we eat dinner at Yuki's house.",
           "terms": [
             "v_konban",
+            "p_wa",
             "char_yuki",
+            "p_no",
             "v_ie",
+            "p_de",
             "v_bangohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "polite_masu"
@@ -733,8 +855,11 @@
           "en": "Yuki's mother makes dinner for us.",
           "terms": [
             "char_yuki",
+            "p_no",
             "v_haha",
+            "p_ga",
             "v_bangohan",
+            "p_wo",
             {
               "id": "v_tsukuru",
               "form": "te_form"
@@ -751,8 +876,11 @@
           "terms": [
             "v_maiban",
             "char_yuki",
+            "p_no",
             "v_ie",
+            "p_de",
             "v_bangohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "plain_desire_tai"
@@ -765,7 +893,11 @@
           "en": "Tonight I can go to Yuki's house at six.",
           "terms": [
             "v_konban",
+            "p_wa",
+            { "counter": "ji", "n": 6 },
+            "p_ni",
             "char_yuki",
+            "p_no",
             "v_ie",
             {
               "id": "v_iku",
@@ -778,10 +910,12 @@
           "en": "After eating dinner, we all go home together.",
           "terms": [
             "v_bangohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "te_form"
             },
+            "p_kara",
             "v_issho",
             {
               "id": "v_kaeru",
@@ -796,18 +930,19 @@
           "a": "ゆき の 家で 食べます。",
           "terms": [
             "v_konban",
+            "p_wa",
             "v_doko",
+            "p_de",
             "v_bangohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "polite_masu"
             },
+            "p_ka",
             "char_yuki",
-            "v_ie",
-            {
-              "id": "v_taberu",
-              "form": "polite_masu"
-            }
+            "p_no",
+            "v_ie"
           ]
         },
         {
@@ -815,12 +950,16 @@
           "a": "ゆき の 母 が 作って くれます。",
           "terms": [
             "v_dare",
+            "p_ga",
             "v_bangohan",
+            "p_wo",
             {
               "id": "v_tsukuru",
               "form": "polite_masu"
             },
+            "p_ka",
             "char_yuki",
+            "p_no",
             "v_haha",
             {
               "id": "v_tsukuru",
@@ -838,20 +977,18 @@
           "terms": [
             "v_maiban",
             "v_doko",
+            "p_de",
             "v_bangohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "plain_desire_tai"
             },
             "g_desu",
-            "v_maiban",
+            "p_ka",
             "char_yuki",
-            "v_ie",
-            {
-              "id": "v_taberu",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
+            "p_no",
+            "v_ie"
           ]
         },
         {
@@ -859,15 +996,15 @@
           "a": "六時に 行けます。",
           "terms": [
             "v_konban",
+            "p_wa",
             "v_nanji",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "polite_potential"
             },
-            {
-              "id": "v_iku",
-              "form": "polite_potential"
-            }
+            "p_ka",
+            { "counter": "ji", "n": 6 }
           ]
         }
       ]
@@ -938,7 +1075,7 @@
             "this evening"
           ],
           "answer": "this morning",
-          "terms": []
+          "terms": ["v_kesa"]
         },
         {
           "kind": "mcq",
@@ -950,7 +1087,7 @@
             "a snack"
           ],
           "answer": "dinner",
-          "terms": []
+          "terms": ["v_bangohan"]
         },
         {
           "kind": "mcq",
@@ -962,7 +1099,7 @@
             "wide"
           ],
           "answer": "bright",
-          "terms": []
+          "terms": ["v_akarui"]
         },
         {
           "kind": "mcq",
@@ -974,7 +1111,7 @@
             "to lend"
           ],
           "answer": "to give (to me/us)",
-          "terms": []
+          "terms": [{ "id": "v_kureru", "form": "plain_form" }]
         }
       ]
     },
@@ -995,11 +1132,14 @@
           "answer": "来られます",
           "terms": [
             "v_ashita",
+            "p_no",
             "v_asa",
+            "p_mo",
             {
               "id": "v_kuru",
               "form": "polite_potential"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -1014,7 +1154,9 @@
           "answer": "くれます",
           "terms": [
             "v_haha",
+            "p_ga",
             "v_bangohan",
+            "p_wo",
             {
               "id": "v_tsukuru",
               "form": "te_form"
@@ -1037,8 +1179,11 @@
           "answer": "食べたいです",
           "terms": [
             "v_konban",
+            "p_wa",
             "v_ie",
+            "p_de",
             "v_bangohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "plain_desire_tai"
@@ -1058,11 +1203,13 @@
           "answer": "食べてから",
           "terms": [
             "v_asagohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "te_form"
             },
             "v_gakkou",
+            "p_ni",
             {
               "id": "v_kuru",
               "form": "polite_masu"
