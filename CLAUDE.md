@@ -157,7 +157,7 @@ Rewrite notes: [empty on first pass; filled by Agent 4 feedback]
    - Mid-sentence particles: は (`p_wa`), が (`p_ga`/`p_ga_but`), を (`p_wo`), の (`p_no`), に (`p_ni`), で (`p_de`), も (`p_mo`), と (`p_to`/`p_to_quote`), へ (`p_he`), や (`p_ya`), より (`p_yori`), から (`p_kara`/`p_kara_because`), まで (`p_made`), けど (`p_kedo`)
    - Sentence-final particles: か (`p_ka`) — **required even in casual questions where the particle is written as ？ without explicit か**; ね (`p_ne`); よ (`p_yo`)
    - Copulas: です (`g_desu`), だ (`g_da`)
-4. If the token is a lexical word (noun, verb, adjective, adverb — including kana-only words like `どこ`, `いつも`, `もう`, `まだ`), verify its ID in the glossary and add it to `terms`.
+4. If the token is a lexical word (noun, verb, adjective, adverb — including kana-only words like `どこ`, `いつも`, `もう`, `まだ`), verify its ID in the glossary and add it to `terms`. **Search all ID prefixes — `v_*`, `p_*`, and `g_*` — not just `v_*`.** Set-phrases and interjections (e.g. はい, えっ, ただいま) are registered under `p_*` IDs in the glossary even though they are not particles; searching only for `v_*` will miss them. When a kana-only token is not found under `v_*`, re-run the lookup for `p_*` and `g_*` before concluding it is unregistered.
 5. If any token has no glossary/particles.json entry, list it in the "Unregistered words" section of the CB Checklist for Agent 3 to escalate.
 
 **Warmup items are NOT exempt.** Warmup `jp` fields require exactly the same completeness as conversation lines. A warmup sentence like 「朝、何を食べますか。」needs `p_wo` and `p_ka` just as much as a conversation line does.
@@ -177,7 +177,7 @@ CB CHECKLIST
 [ ] Every kanji used is in the taught-kanji set
 [ ] For every word with a `matches` field in the glossary: verified the jp text uses the correct writing form for the current lesson tier — if any kanji in the glossary `surface` is untaught, the hiragana/partial-kanji form from `matches` was used instead (e.g. いっしょに not 一緒に, だいじょうぶ not 大丈夫, until their kanji are taught)
 [ ] Every content word in every jp/passage field has a corresponding terms entry
-[ ] Every pure-kana lexical word (interjections, casual words, expressions not in particles.json) has a verified glossary entry — any that do not are listed in the CB Checklist under "Unregistered words" for Agent 3 to escalate
+[ ] Every pure-kana lexical word (interjections, casual words, expressions not in particles.json) has a verified glossary entry — any that do not are listed in the CB Checklist under "Unregistered words" for Agent 3 to escalate. Search **all ID prefixes** (`v_*`, `p_*`, `g_*`) — set-phrases like はい (`p_hai`) are registered under `p_*` in the glossary, not `v_*`; searching only `v_*` will silently miss them
 [ ] Question words and kana-only adverbs explicitly checked: for every jp field, scan for どう, どこ, どれ, どちら, いつ, なぜ, いくら, いくつ, いつも, もう, まだ, よく, たいてい, ぜんぜん, and any similar kana-only vocab — these have registered IDs and must appear in terms even though they look like plain kana
 [ ] SENTENCE TOKEN SCAN completed for every jp/passage field: scanned left to right, token by token, using the Sentence Token Scan Protocol defined above — particles, sentence-final markers, and lexical words all verified
 [ ] Particles tagged in warmup items: warmup jp fields have exactly the same particle completeness as conversations (は, が, を, の, に, で, も, と, etc. are all tagged where present)
