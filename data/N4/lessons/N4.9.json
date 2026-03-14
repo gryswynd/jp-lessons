@@ -87,10 +87,8 @@
             "v_donna",
             "v_tabemono",
             "p_ga",
-            {
-              "id": "v_suki",
-              "form": "polite_adj"
-            },
+            "v_suki",
+            "g_desu",
             "p_ka"
           ]
         },
@@ -104,8 +102,9 @@
             "p_wa",
             {
               "id": "v_atsui",
-              "form": "polite_past_adj"
+              "form": "plain_past_adj"
             },
+            "g_desu",
             "p_ka"
           ]
         },
@@ -118,10 +117,8 @@
             "v_aki",
             "v_dochira",
             "p_ga",
-            {
-              "id": "v_suki",
-              "form": "polite_adj"
-            },
+            "v_suki",
+            "g_desu",
             "p_ka"
           ]
         }
@@ -729,8 +726,9 @@
             "p_ga",
             {
               "id": "v_ooi",
-              "form": "polite_past_adj"
+              "form": "plain_past_adj"
             },
+            "g_desu",
             "p_ka",
             "p_hai",
             "v_takusan",
@@ -754,17 +752,13 @@
             "char_yamakawa",
             "v_san",
             "p_he",
-            {
-              "id": "v_genki",
-              "form": "polite_adj"
-            },
+            "v_genki",
+            "g_desu",
             "p_ka",
             "v_watashi",
             "p_wa",
-            {
-              "id": "v_genki",
-              "form": "polite_adj"
-            }
+            "v_genki",
+            "g_desu"
           ]
         },
         {
@@ -993,10 +987,8 @@
           "terms": [
             "v_chichi",
             "v_totemo",
-            {
-              "id": "v_genki",
-              "form": "polite_adj"
-            },
+            "v_genki",
+            "g_desu",
             "v_mainichi",
             "v_yama",
             {
@@ -1142,15 +1134,11 @@
           "answer": "好き",
           "terms": [
             "v_machi",
-            {
-              "id": "v_shizuka",
-              "form": "polite_adj"
-            },
+            "v_shizuka",
+            "g_desu",
             "p_kara_because",
-            {
-              "id": "v_suki",
-              "form": "polite_adj"
-            }
+            "v_suki",
+            "g_desu"
           ]
         }
       ]

@@ -81,15 +81,11 @@
                 "p_no",
                 "v_naka",
                 "p_wa",
-                {
-                  "id": "v_atarashii",
-                  "form": "polite_adj"
-                },
+                "v_atarashii",
+                "g_desu",
                 "p_yo",
-                {
-                  "id": "v_yasui",
-                  "form": "polite_adj"
-                },
+                "v_yasui",
+                "g_desu",
                 "p_yo"
               ]
             }
@@ -134,8 +130,9 @@
                 "p_yo",
                 {
                   "id": "v_ii",
-                  "form": "polite_past_adj"
+                  "form": "plain_past_adj"
                 },
+                "g_desu",
                 "p_ne"
               ]
             },
@@ -164,17 +161,13 @@
               "spk": "レン",
               "jp": "いいですね。ホテルは 古いですが、人気が ありますよ。",
               "terms": [
-                {
-                  "id": "v_ii",
-                  "form": "polite_adj"
-                },
+                "v_ii",
+                "g_desu",
                 "p_ne",
                 "v_hoteru",
                 "p_wa",
-                {
-                  "id": "v_furui",
-                  "form": "polite_adj"
-                },
+                "v_furui",
+                "g_desu",
                 "p_ga_but",
                 "v_ninki",
                 "p_ga",
@@ -227,10 +220,8 @@
                 "g_desu",
                 "v_doko",
                 "p_ga",
-                {
-                  "id": "v_ii",
-                  "form": "polite_adj"
-                },
+                "v_ii",
+                "g_desu",
                 "p_ka"
               ]
             },
@@ -263,10 +254,8 @@
               "terms": [
                 "v_kibun",
                 "p_ga",
-                {
-                  "id": "v_ii",
-                  "form": "polite_adj"
-                },
+                "v_ii",
+                "g_desu",
                 "p_kara_because",
                 "v_sochira",
                 "p_e",
@@ -458,8 +447,9 @@
             "p_ga",
             {
               "id": "v_ii",
-              "form": "polite_past_adj"
-            }
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ]
         },
         {
@@ -490,10 +480,8 @@
             "p_no",
             "v_naka",
             "p_wa",
-            {
-              "id": "v_atarashii",
-              "form": "polite_adj"
-            },
+            "v_atarashii",
+            "g_desu",
             "v_soto",
             "p_de",
             "v_tomodachi",
@@ -530,8 +518,9 @@
             "p_ga",
             {
               "id": "v_ii",
-              "form": "polite_past_adj"
-            }
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ]
         },
         {
@@ -543,8 +532,9 @@
             "v_totemo",
             {
               "id": "v_ii",
-              "form": "polite_past_adj"
+              "form": "plain_past_adj"
             },
+            "g_desu",
             "v_raishuu",
             "p_mo",
             "v_mata",
@@ -802,15 +792,14 @@
             "p_ga",
             {
               "id": "v_ii",
-              "form": "polite_past_adj"
+              "form": "plain_past_adj"
             },
+            "g_desu",
             "p_kara_because",
             "v_kibun",
             "p_ga",
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            }
+            "v_ii",
+            "g_desu"
           ],
           "explanation": "気分 (きぶん = mood/feeling) completes the sentence: 天気がよかったから、気分がいいです = 'Because the weather was good, my mood is great.' から here follows a past-adjective clause (よかった + から) expressing reason = p_kara_because (G9, available from N5.9). 気分がいい is a set expression meaning 'to feel good.' 人気 (popularity), 電気 (electricity), and 休日 (holiday) don't fit as natural internal reactions to good weather."
         },
@@ -929,8 +918,9 @@
             "p_ga",
             {
               "id": "v_ii",
-              "form": "polite_past_adj"
+              "form": "plain_past_adj"
             },
+            "g_desu",
             "p_ne"
           ],
           "explanation": "よかった is the correct past stem of いい: いい → stem よ + かった = よかった + です = よかったです (was good, N5.10). いかった is the most common error — the い stem is wrong. The past of いい is ALWAYS よかった, never いかった. This irregular stem (い → よ) must be memorized. よく is the adverbial form (よく = well/often). よい is the literary base form that does not produce a natural modern past."

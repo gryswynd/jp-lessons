@@ -60,8 +60,9 @@
             "p_wa",
             {
               "id": "v_omoshiroi",
-              "form": "appearance_sou"
+              "form": "appearance_sou_stem"
             },
+            "g_desu",
             "p_ne"
           ]
         },
@@ -75,8 +76,9 @@
             "p_wa",
             {
               "id": "v_nagai",
-              "form": "polite_past_adj"
-            }
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ]
         },
         {
@@ -217,10 +219,8 @@
             "p_no",
             "v_hon",
             "p_ga",
-            {
-              "id": "v_ooi",
-              "form": "polite_adj"
-            },
+            "v_ooi",
+            "g_desu",
             "p_ne"
           ]
         },
@@ -339,18 +339,14 @@
             "p_wa",
             "v_tenki",
             "p_ga",
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "p_ne",
             "v_shiroi",
             "v_hana",
             "p_ga",
-            {
-              "id": "v_ooi",
-              "form": "polite_adj"
-            }
+            "v_ooi",
+            "g_desu"
           ]
         },
         {
@@ -364,10 +360,8 @@
             "v_hana",
             "p_wa",
             "v_totemo",
-            {
-              "id": "v_kirei",
-              "form": "polite_adj"
-            }
+            "v_kirei",
+            "g_desu"
           ]
         },
         {
@@ -379,16 +373,12 @@
             "p_wa",
             "v_hito",
             "p_ga",
-            {
-              "id": "v_sukunai",
-              "form": "polite_adj"
-            },
+            "v_sukunai",
+            "g_desu",
             "p_ne",
             "v_taitei",
-            {
-              "id": "v_ooi",
-              "form": "polite_adj"
-            },
+            "v_ooi",
+            "g_desu",
             "p_ga_but"
           ]
         },
@@ -502,10 +492,8 @@
           "terms": [
             "v_jikan",
             "p_ga",
-            {
-              "id": "v_ooi",
-              "form": "polite_adj"
-            },
+            "v_ooi",
+            "g_desu",
             "p_ka"
           ]
         },
@@ -515,10 +503,8 @@
           "en": "It is a little scarce, but I have time to speak Japanese.",
           "terms": [
             "v_sukoshi",
-            {
-              "id": "v_sukunai",
-              "form": "polite_adj"
-            },
+            "v_sukunai",
+            "g_desu",
             "p_ga_but",
             "v_nihongo",
             "p_wo",
@@ -705,10 +691,8 @@
             "v_shiroi",
             "v_hana",
             "p_ga",
-            {
-              "id": "v_ooi",
-              "form": "polite_adj"
-            }
+            "v_ooi",
+            "g_desu"
           ]
         },
         {
@@ -720,16 +704,12 @@
             "v_hana",
             "p_wa",
             "v_totemo",
-            {
-              "id": "v_kirei",
-              "form": "polite_adj"
-            },
+            "v_kirei",
+            "g_desu",
             "v_hito",
             "p_ga",
-            {
-              "id": "v_sukunai",
-              "form": "polite_adj"
-            }
+            "v_sukunai",
+            "g_desu"
           ]
         },
         {
@@ -771,10 +751,8 @@
             "v_shiroi",
             "v_hana",
             "p_ga",
-            {
-              "id": "v_ooi",
-              "form": "polite_adj"
-            },
+            "v_ooi",
+            "g_desu",
             "p_ne"
           ]
         },
@@ -811,10 +789,8 @@
             "v_hana",
             "p_wa",
             "v_totemo",
-            {
-              "id": "v_kirei",
-              "form": "polite_adj"
-            }
+            "v_kirei",
+            "g_desu"
           ]
         },
         {
@@ -924,10 +900,8 @@
             "v_taitei",
             "v_jikan",
             "p_ga",
-            {
-              "id": "v_ooi",
-              "form": "polite_adj"
-            },
+            "v_ooi",
+            "g_desu",
             {
               "id": "v_ii",
               "form": "adverbial"
@@ -1027,10 +1001,8 @@
             "v_taitei",
             "v_jikan",
             "p_ga",
-            {
-              "id": "v_ooi",
-              "form": "polite_adj"
-            }
+            "v_ooi",
+            "g_desu"
           ]
         }
       ]
@@ -1130,10 +1102,8 @@
             "p_no",
             "v_hon",
             "p_ga",
-            {
-              "id": "v_ooi",
-              "form": "polite_adj"
-            },
+            "v_ooi",
+            "g_desu",
             "g_desu",
             "p_ne"
           ]
@@ -1153,10 +1123,8 @@
             "p_wa",
             "v_hito",
             "p_ga",
-            {
-              "id": "v_sukunai",
-              "form": "polite_adj"
-            },
+            "v_sukunai",
+            "g_desu",
             "g_desu"
           ]
         },

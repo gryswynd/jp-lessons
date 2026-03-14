@@ -68,8 +68,9 @@
             "p_wa",
             {
               "id": "v_oishii",
-              "form": "appearance_sou"
+              "form": "appearance_sou_stem"
             },
+            "g_desu",
             "p_ne"
           ]
         },
@@ -84,8 +85,9 @@
             "v_totemo",
             {
               "id": "v_ookii",
-              "form": "polite_past_adj"
-            }
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ]
         },
         {
@@ -285,15 +287,11 @@
           "terms": [
             "v_tesuto",
             "p_wa",
-            {
-              "id": "v_omoshiroi",
-              "form": "polite_adj"
-            },
+            "v_omoshiroi",
+            "g_desu",
             "p_ka",
-            {
-              "id": "v_tsumaranai",
-              "form": "polite_adj"
-            },
+            "v_tsumaranai",
+            "g_desu",
             "p_ka"
           ]
         },
@@ -302,10 +300,8 @@
           "jp": "つまらないですが、よく 学んでください。大学に 行きたいですか。",
           "en": "It's boring, but please study well. Do you want to go to university?",
           "terms": [
-            {
-              "id": "v_tsumaranai",
-              "form": "polite_adj"
-            },
+            "v_tsumaranai",
+            "g_desu",
             "p_ga_but",
             {
               "id": "v_ii",
@@ -361,8 +357,9 @@
             "p_wa",
             {
               "id": "v_omoshiroi",
-              "form": "appearance_sou"
+              "form": "appearance_sou_stem"
             },
+            "g_desu",
             "p_ne"
           ]
         },
@@ -391,10 +388,8 @@
             },
             "g_desu",
             "p_yo",
-            {
-              "id": "v_yasui",
-              "form": "polite_adj"
-            },
+            "v_yasui",
+            "g_desu",
             "v_hon",
             "g_desu",
             "p_yo"
@@ -408,10 +403,8 @@
             "v_kono",
             "v_nooto",
             "p_mo",
-            {
-              "id": "v_yasui",
-              "form": "polite_adj"
-            },
+            "v_yasui",
+            "g_desu",
             "p_ka"
           ]
         },
@@ -424,10 +417,8 @@
               "id": "v_yasui",
               "form": "te_form"
             },
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "p_yo",
             "v_pen",
             "p_mo",
@@ -442,10 +433,8 @@
           "jp": "いいですね。日本語の 本と ノートと ペンを 買いましょう。",
           "en": "That's great. Let's buy the Japanese book, notebook, and pen.",
           "terms": [
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "p_ne",
             "v_nihongo",
             "p_no",
@@ -519,10 +508,8 @@
             },
             "v_nihongo",
             "p_wa",
-            {
-              "id": "v_omoshiroi",
-              "form": "polite_adj"
-            },
+            "v_omoshiroi",
+            "g_desu",
             "p_ne"
           ]
         },
@@ -535,10 +522,8 @@
             "p_no",
             "v_kurasu",
             "p_wa",
-            {
-              "id": "v_omoshiroi",
-              "form": "polite_adj"
-            },
+            "v_omoshiroi",
+            "g_desu",
             "p_ka"
           ]
         },
@@ -552,16 +537,12 @@
               "id": "v_omoshiroi",
               "form": "te_form"
             },
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "v_sensei",
             "p_mo",
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "v_sensei",
             "g_desu",
             "p_yo"
@@ -574,8 +555,9 @@
           "terms": [
             {
               "id": "v_ii",
-              "form": "polite_past_adj"
+              "form": "plain_past_adj"
             },
+            "g_desu",
             "p_ne",
             "v_gakkou",
             "p_de",
@@ -720,10 +702,8 @@
               "id": "v_ookii",
               "form": "te_form"
             },
-            {
-              "id": "v_atarashii",
-              "form": "polite_adj"
-            },
+            "v_atarashii",
+            "g_desu",
             "v_nihongo",
             "p_no",
             "v_kurasu",
@@ -775,13 +755,15 @@
             "p_wa",
             {
               "id": "v_nagai",
-              "form": "polite_past_adj"
+              "form": "plain_past_adj"
             },
+            "g_desu",
             "p_ga_but",
             {
               "id": "v_omoshiroi",
-              "form": "polite_past_adj"
-            }
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ]
         },
         {
@@ -817,10 +799,8 @@
               "id": "v_ookii",
               "form": "te_form"
             },
-            {
-              "id": "v_atarashii",
-              "form": "polite_adj"
-            }
+            "v_atarashii",
+            "g_desu"
           ]
         },
         {
@@ -836,12 +816,14 @@
             "v_tesuto",
             {
               "id": "v_nagai",
-              "form": "polite_past_adj"
+              "form": "plain_past_adj"
             },
+            "g_desu",
             {
               "id": "v_omoshiroi",
-              "form": "polite_past_adj"
-            }
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ]
         },
         {
@@ -875,10 +857,8 @@
           "terms": [
             "v_nihongo",
             "p_wa",
-            {
-              "id": "v_omoshiroi",
-              "form": "polite_adj"
-            },
+            "v_omoshiroi",
+            "g_desu",
             "v_watashi",
             "p_wa",
             "v_mainichi",
@@ -902,15 +882,11 @@
             "p_no",
             "v_hon",
             "p_wa",
-            {
-              "id": "v_takai",
-              "form": "polite_adj"
-            },
+            "v_takai",
+            "g_desu",
             "p_ga_but",
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "v_hon",
             "g_desu"
           ]
@@ -1024,14 +1000,10 @@
           ],
           "terms": [
             "v_hon",
-            {
-              "id": "v_takai",
-              "form": "polite_adj"
-            },
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            }
+            "v_takai",
+            "g_desu",
+            "v_ii",
+            "g_desu"
           ]
         },
         {
@@ -1222,10 +1194,8 @@
           ],
           "answer": "おもしろい",
           "terms": [
-            {
-              "id": "v_omoshiroi",
-              "form": "polite_adj"
-            }
+            "v_omoshiroi",
+            "g_desu"
           ]
         },
         {
@@ -1260,10 +1230,8 @@
               "id": "v_nagai",
               "form": "te_form"
             },
-            {
-              "id": "v_tsumaranai",
-              "form": "polite_adj"
-            }
+            "v_tsumaranai",
+            "g_desu"
           ]
         },
         {

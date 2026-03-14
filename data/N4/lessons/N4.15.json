@@ -70,10 +70,8 @@
           "en": "Does your head hurt?",
           "terms": [
             "k_atama",
-            {
-              "id": "v_itai",
-              "form": "polite_adj"
-            }
+            "v_itai",
+            "g_desu"
           ]
         },
         {
@@ -92,10 +90,8 @@
           "jp": "あの 人は 有名ですか。",
           "en": "Is that person famous?",
           "terms": [
-            {
-              "id": "v_yuumei",
-              "form": "polite_adj"
-            },
+            "v_yuumei",
+            "g_desu",
             "v_hito"
           ]
         },
@@ -104,10 +100,8 @@
           "en": "Is your body healthy/energetic?",
           "terms": [
             "k_karada",
-            {
-              "id": "v_genki",
-              "form": "polite_adj"
-            }
+            "v_genki",
+            "g_desu"
           ]
         }
       ]
@@ -240,15 +234,11 @@
           "terms": [
             "v_sensei",
             "k_atama",
-            {
-              "id": "v_itai",
-              "form": "polite_adj"
-            },
+            "v_itai",
+            "g_desu",
             "v_kibun",
-            {
-              "id": "v_warui",
-              "form": "polite_adj"
-            }
+            "v_warui",
+            "g_desu"
           ]
         },
         {
@@ -256,10 +246,8 @@
           "jp": "病気ですね。この 薬を 飲んで ください。",
           "en": "It is an illness. Please drink this medicine.",
           "terms": [
-            {
-              "id": "v_byouki",
-              "form": "polite_adj"
-            },
+            "v_byouki",
+            "g_desu",
             "v_kusuri",
             {
               "id": "v_nomu",
@@ -361,10 +349,8 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            {
-              "id": "v_itai",
-              "form": "polite_adj"
-            }
+            "v_itai",
+            "g_desu"
           ]
         },
         {
@@ -372,10 +358,8 @@
           "jp": "いいえ、いたくありません。でも、赤いです。",
           "en": "No, they do not hurt. But, they are red.",
           "terms": [
-            {
-              "id": "v_akai",
-              "form": "polite_adj"
-            }
+            "v_akai",
+            "g_desu"
           ]
         },
         {
@@ -402,10 +386,8 @@
           "en": "Is your goldfish healthy?",
           "terms": [
             "v_kingyo",
-            {
-              "id": "v_genki",
-              "form": "polite_adj"
-            }
+            "v_genki",
+            "g_desu"
           ]
         },
         {
@@ -424,9 +406,10 @@
           "jp": "えっ、病気でしたか。",
           "en": "Eh? Was it sick?",
           "terms": [
+            "v_byouki",
             {
-              "id": "v_byouki",
-              "form": "polite_past_adj"
+              "id": "g_desu",
+              "form": "polite_past_copula"
             }
           ]
         },
@@ -616,10 +599,8 @@
           "terms": [
             "k_ani",
             "v_shigoto",
-            {
-              "id": "v_isha",
-              "form": "polite_adj"
-            }
+            "v_isha",
+            "g_desu"
           ]
         },
         {

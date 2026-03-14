@@ -166,10 +166,8 @@
               "spk": "先生",
               "jp": "いいですね。毎日 新聞を 読みましょう。",
               "terms": [
-                {
-                  "id": "v_ii",
-                  "form": "polite_adj"
-                },
+                "v_ii",
+                "g_desu",
                 "p_ne",
                 "v_mainichi",
                 "v_shinbun",
@@ -190,10 +188,8 @@
                 "v_kiku",
                 "v_koto",
                 "p_mo",
-                {
-                  "id": "v_suki",
-                  "form": "polite_adj"
-                },
+                "v_suki",
+                "g_desu",
                 "p_ga_but",
                 "v_me",
                 "p_de",
@@ -201,10 +197,8 @@
                 "v_koto",
                 "p_ga",
                 "v_ichiban",
-                {
-                  "id": "v_suki",
-                  "form": "polite_adj"
-                }
+                "v_suki",
+                "g_desu"
               ]
             }
           ],
@@ -544,10 +538,8 @@
             "v_kiku",
             "p_no",
             "p_ga",
-            {
-              "id": "v_suki",
-              "form": "polite_adj"
-            }
+            "v_suki",
+            "g_desu"
           ]
         },
         {
@@ -559,8 +551,9 @@
             "p_ga",
             {
               "id": "v_itai",
-              "form": "polite_past_adj"
+              "form": "plain_past_adj"
             },
+            "g_desu",
             "p_ga_but",
             "v_shakai",
             "p_ni",
@@ -628,10 +621,8 @@
           "terms": [
             "v_nani",
             "p_ga",
-            {
-              "id": "v_suki",
-              "form": "polite_adj"
-            },
+            "v_suki",
+            "g_desu",
             "p_ka"
           ],
           "explanation": "Sentence 4 states 目で見て、耳で聞くのがすきです — 'I like looking with my eyes and listening with my ears.' の nominalizes the verb phrase 見て、耳で聞く (the act of seeing and listening) — it becomes a noun phrase as the subject of すきです, marked by が. 目 (N5.18, め = eye) and 耳 (N5.18, みみ = ear) are the two sense-organ kanji from Lesson 18. The other choices describe activities from other sentences (アルバイト, 入り口, 社長に会う) but none are explicitly stated as the narrator's favourite."
@@ -951,10 +942,8 @@
           "terms": [
             "v_ashi",
             "p_ga",
-            {
-              "id": "v_itai",
-              "form": "polite_adj"
-            },
+            "v_itai",
+            "g_desu",
             "p_ga_but",
             "v_kaisha",
             "p_ni",

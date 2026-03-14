@@ -100,10 +100,6 @@
       "id": "v_totemo",
       "form": null
     },
-    "きれいです": {
-      "id": "v_kirei",
-      "form": "polite_adj"
-    },
     "空気": {
       "id": "v_kuuki",
       "form": null
@@ -111,10 +107,6 @@
     "も": {
       "id": "p_mo",
       "form": null
-    },
-    "いいです": {
-      "id": "v_ii",
-      "form": "polite_adj"
     },
     "ね": {
       "id": "p_ne",
@@ -132,10 +124,6 @@
     "います": {
       "id": "v_iru",
       "form": "polite_masu"
-    },
-    "かわいいです": {
-      "id": "v_kawaii",
-      "form": "polite_adj"
     },
     "クラス": {
       "id": "v_kurasu",
@@ -210,10 +198,6 @@
       "id": "v_suru",
       "form": "polite_volitional_mashou"
     },
-    "つまらないです": {
-      "id": "v_tsumaranai",
-      "form": "polite_adj"
-    },
     "か": {
       "id": "p_ka",
       "form": null
@@ -222,17 +206,9 @@
       "id": "v_iie",
       "form": null
     },
-    "おもしろいです": {
-      "id": "v_omoshiroi",
-      "form": "polite_adj"
-    },
     "よ": {
       "id": "p_yo",
       "form": null
-    },
-    "おもしろそうです": {
-      "id": "v_omoshiroi",
-      "form": "appearance_sou"
     },
     "校長": {
       "id": "v_kouchou",
@@ -303,10 +279,6 @@
       "id": "v_taberu",
       "form": "polite_mashita"
     },
-    "おいしかったです": {
-      "id": "v_oishii",
-      "form": "polite_past_adj"
-    },
     "花火": {
       "id": "v_hanabi",
       "form": null
@@ -314,14 +286,6 @@
     "ありました": {
       "id": "v_aru",
       "form": "polite_mashita"
-    },
-    "きれいでした": {
-      "id": "v_kirei",
-      "form": "polite_past_adj"
-    },
-    "よかったです": {
-      "id": "v_ii",
-      "form": "polite_past_adj"
     },
     "また": {
       "id": "v_mata",
@@ -334,6 +298,42 @@
     "リーさん": {
       "id": "char_lee",
       "form": null
+    },
+    "きれい": {
+      "id": "v_kirei",
+      "form": null
+    },
+    "いい": {
+      "id": "v_ii",
+      "form": null
+    },
+    "かわいい": {
+      "id": "v_kawaii",
+      "form": null
+    },
+    "つまらない": {
+      "id": "v_tsumaranai",
+      "form": null
+    },
+    "おもしろい": {
+      "id": "v_omoshiroi",
+      "form": null
+    },
+    "おもしろそう": {
+      "id": "v_omoshiroi",
+      "form": "appearance_sou_stem"
+    },
+    "おいしかった": {
+      "id": "v_oishii",
+      "form": "plain_past_adj"
+    },
+    "でした": {
+      "id": "g_desu",
+      "form": "polite_past_copula"
+    },
+    "よかった": {
+      "id": "v_ii",
+      "form": "plain_past_adj"
     }
   }
 }

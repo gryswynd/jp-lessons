@@ -48,15 +48,7 @@
       "id": "v_iku",
       "form": "polite_mashita"
     },
-    "新しいです": {
-      "id": "v_atarashii",
-      "form": "polite_adj"
-    },
     "新しい": "v_atarashii",
-    "大きいです": {
-      "id": "v_ookii",
-      "form": "polite_adj"
-    },
     "大きい": "v_ookii",
     "よ": {
       "id": "p_yo",
@@ -77,10 +69,6 @@
     "食べました": {
       "id": "v_taberu",
       "form": "polite_mashita"
-    },
-    "おいしいです": {
-      "id": "v_oishii",
-      "form": "polite_adj"
     },
     "パン": {
       "id": "v_pan",
@@ -114,10 +102,6 @@
       "id": "v_nomu",
       "form": "polite_mashita"
     },
-    "小さいです": {
-      "id": "v_chiisai",
-      "form": "polite_adj"
-    },
     "ね": {
       "id": "p_ne",
       "form": null
@@ -142,10 +126,6 @@
       "id": "p_ga",
       "form": null
     },
-    "ほしいです": {
-      "id": "v_hoshii",
-      "form": "polite_adj"
-    },
     "行って": {
       "id": "v_iku",
       "form": "te_form"
@@ -158,18 +138,6 @@
       "id": "p_no",
       "form": null
     },
-    "長いです": {
-      "id": "v_nagai",
-      "form": "polite_adj"
-    },
-    "安いです": {
-      "id": "v_yasui",
-      "form": "polite_adj"
-    },
-    "すごいです": {
-      "id": "v_sugoi",
-      "form": "polite_adj"
-    },
     "買いたいです": {
       "id": "v_kau",
       "form": "plain_desire_tai"
@@ -179,12 +147,36 @@
       "id": "v_hoshii",
       "form": "polite_negative"
     },
-    "いいです": {
-      "id": "v_ii",
-      "form": "polite_adj"
-    },
     "やまかわ": {
       "id": "char_yamakawa",
+      "form": null
+    },
+    "おいしい": {
+      "id": "v_oishii",
+      "form": null
+    },
+    "小さい": {
+      "id": "v_chiisai",
+      "form": null
+    },
+    "ほしい": {
+      "id": "v_hoshii",
+      "form": null
+    },
+    "長い": {
+      "id": "v_nagai",
+      "form": null
+    },
+    "安い": {
+      "id": "v_yasui",
+      "form": null
+    },
+    "すごい": {
+      "id": "v_sugoi",
+      "form": null
+    },
+    "いい": {
+      "id": "v_ii",
       "form": null
     }
   }

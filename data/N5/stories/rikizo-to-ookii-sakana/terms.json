@@ -348,10 +348,6 @@
       "id": "v_ookii",
       "form": null
     },
-    "大きかったです": {
-      "id": "v_ookii",
-      "form": "polite_past_adj"
-    },
     "大きく": {
       "id": "v_ookii",
       "form": "adverbial"
@@ -367,10 +363,6 @@
     "長い": {
       "id": "v_nagai",
       "form": null
-    },
-    "長かったです": {
-      "id": "v_nagai",
-      "form": "polite_past_adj"
     },
     "白い": {
       "id": "v_shiroi",
@@ -391,14 +383,6 @@
     "おいしい": {
       "id": "v_oishii",
       "form": null
-    },
-    "うれしかったです": {
-      "id": "v_ureshii",
-      "form": "polite_past_adj"
-    },
-    "うれしそうでした": {
-      "id": "v_ureshii",
-      "form": "appearance_sou"
     },
     "すごい": {
       "id": "v_sugoi",
@@ -539,6 +523,22 @@
     "しましょう": {
       "id": "v_suru",
       "form": "polite_volitional_mashou"
+    },
+    "大きかった": {
+      "id": "v_ookii",
+      "form": "plain_past_adj"
+    },
+    "長かった": {
+      "id": "v_nagai",
+      "form": "plain_past_adj"
+    },
+    "うれしかった": {
+      "id": "v_ureshii",
+      "form": "plain_past_adj"
+    },
+    "うれしそう": {
+      "id": "v_ureshii",
+      "form": "appearance_sou_stem"
     }
   }
 }

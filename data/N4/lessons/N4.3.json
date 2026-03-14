@@ -241,7 +241,10 @@
           "jp": "六時に 起きました。毎朝 朝ごはんを 食べてから 学校に 来ます。",
           "en": "I woke up at six. Every morning I come to school after eating breakfast.",
           "terms": [
-            { "counter": "ji", "n": 6 },
+            {
+              "counter": "ji",
+              "n": 6
+            },
             "p_ni",
             {
               "id": "v_okiru",
@@ -384,10 +387,8 @@
           "jp": "いいですね。私 も 今晩 は 家で 晩ごはんを 食べたいです。",
           "en": "How nice. I also want to eat dinner at home tonight.",
           "terms": [
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "p_ne",
             "v_watashi",
             "p_mo",
@@ -428,7 +429,10 @@
             "p_hai",
             "v_ashita",
             "p_wa",
-            { "counter": "ji", "n": 7 },
+            {
+              "counter": "ji",
+              "n": 7
+            },
             "p_ni",
             {
               "id": "v_kuru",
@@ -483,10 +487,8 @@
           "jp": "いいですね。何時からですか。",
           "en": "That sounds nice. From what time?",
           "terms": [
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "p_ne",
             "v_nanji",
             "p_kara",
@@ -499,7 +501,10 @@
           "jp": "六時からです。母が 晩ごはんを 作って くれます。",
           "en": "From six. My mother will make dinner for us.",
           "terms": [
-            { "counter": "ji", "n": 6 },
+            {
+              "counter": "ji",
+              "n": 6
+            },
             "p_kara",
             "g_desu",
             "v_haha",
@@ -522,7 +527,10 @@
           "en": "Yes, I can make it at six.",
           "terms": [
             "p_hai",
-            { "counter": "ji", "n": 6 },
+            {
+              "counter": "ji",
+              "n": 6
+            },
             "p_ni",
             {
               "id": "v_iku",
@@ -587,7 +595,10 @@
           "jp": "六時に 起きるよ。今朝 も 六時に 起きた。",
           "en": "I'm getting up at six. This morning I got up at six too.",
           "terms": [
-            { "counter": "ji", "n": 6 },
+            {
+              "counter": "ji",
+              "n": 6
+            },
             "p_ni",
             {
               "id": "v_okiru",
@@ -596,7 +607,10 @@
             "p_yo",
             "v_kesa",
             "p_mo",
-            { "counter": "ji", "n": 6 },
+            {
+              "counter": "ji",
+              "n": 6
+            },
             "p_ni",
             {
               "id": "v_okiru",
@@ -612,7 +626,10 @@
             "v_e",
             "v_watashi",
             "p_wa",
-            { "counter": "ji", "n": 6 },
+            {
+              "counter": "ji",
+              "n": 6
+            },
             "p_wa",
             "p_ni",
             {
@@ -654,7 +671,10 @@
             "char_rikizo",
             "p_wa",
             "v_maiasa",
-            { "counter": "ji", "n": 6 },
+            {
+              "counter": "ji",
+              "n": 6
+            },
             "p_ni",
             {
               "id": "v_okiru",
@@ -752,7 +772,10 @@
               "form": "polite_masu"
             },
             "p_ka",
-            { "counter": "ji", "n": 6 }
+            {
+              "counter": "ji",
+              "n": 6
+            }
           ]
         },
         {
@@ -899,7 +922,10 @@
           "terms": [
             "v_konban",
             "p_wa",
-            { "counter": "ji", "n": 6 },
+            {
+              "counter": "ji",
+              "n": 6
+            },
             "p_ni",
             "char_yuki",
             "p_no",
@@ -1009,7 +1035,10 @@
               "form": "polite_potential"
             },
             "p_ka",
-            { "counter": "ji", "n": 6 }
+            {
+              "counter": "ji",
+              "n": 6
+            }
           ]
         }
       ]
@@ -1080,7 +1109,9 @@
             "this evening"
           ],
           "answer": "this morning",
-          "terms": ["v_kesa"]
+          "terms": [
+            "v_kesa"
+          ]
         },
         {
           "kind": "mcq",
@@ -1092,7 +1123,9 @@
             "a snack"
           ],
           "answer": "dinner",
-          "terms": ["v_bangohan"]
+          "terms": [
+            "v_bangohan"
+          ]
         },
         {
           "kind": "mcq",
@@ -1104,7 +1137,9 @@
             "wide"
           ],
           "answer": "bright",
-          "terms": ["v_akarui"]
+          "terms": [
+            "v_akarui"
+          ]
         },
         {
           "kind": "mcq",
@@ -1116,7 +1151,12 @@
             "to lend"
           ],
           "answer": "to give (to me/us)",
-          "terms": [{ "id": "v_kureru", "form": "plain_form" }]
+          "terms": [
+            {
+              "id": "v_kureru",
+              "form": "plain_form"
+            }
+          ]
         }
       ]
     },

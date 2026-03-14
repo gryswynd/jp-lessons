@@ -108,10 +108,6 @@
       "id": "v_ookii",
       "form": "te_form"
     },
-    "古いです": {
-      "id": "v_furui",
-      "form": "polite_adj"
-    },
     "古い": {
       "id": "v_furui",
       "form": null
@@ -147,10 +143,6 @@
     "いいえ": {
       "id": "v_iie",
       "form": null
-    },
-    "いいです": {
-      "id": "v_ii",
-      "form": "polite_adj"
     },
     "いい": {
       "id": "v_ii",
@@ -212,14 +204,6 @@
       "id": "v_jouzu",
       "form": null
     },
-    "うれしかったです": {
-      "id": "v_ureshii",
-      "form": "polite_past_adj"
-    },
-    "うれしそうでした": {
-      "id": "v_ureshii",
-      "form": "appearance_sou"
-    },
     "それから": {
       "id": "v_sorekara",
       "form": null
@@ -268,10 +252,6 @@
       "id": "v_kiku",
       "form": "polite_mashita"
     },
-    "すごいです": {
-      "id": "v_sugoi",
-      "form": "polite_adj"
-    },
     "なりました": {
       "id": "v_naru",
       "form": "polite_mashita"
@@ -291,10 +271,6 @@
     "少し": {
       "id": "v_sukoshi",
       "form": null
-    },
-    "痛いです": {
-      "id": "v_itai",
-      "form": "polite_adj"
     },
     "痛い": {
       "id": "v_itai",
@@ -331,6 +307,18 @@
     "また": {
       "id": "v_mata",
       "form": null
+    },
+    "うれしかった": {
+      "id": "v_ureshii",
+      "form": "plain_past_adj"
+    },
+    "すごい": {
+      "id": "v_sugoi",
+      "form": null
+    },
+    "うれしそう": {
+      "id": "v_ureshii",
+      "form": "appearance_sou_stem"
     }
   }
 }

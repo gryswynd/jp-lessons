@@ -32,10 +32,6 @@
       "id": "v_tenki",
       "form": null
     },
-    "いいです": {
-      "id": "v_ii",
-      "form": "polite_adj"
-    },
     "よ": {
       "id": "p_yo",
       "form": null
@@ -92,10 +88,6 @@
       "id": "v_kuru",
       "form": "polite_mashita"
     },
-    "よかったです": {
-      "id": "v_ii",
-      "form": "polite_past_adj"
-    },
     "の": {
       "id": "p_no",
       "form": null
@@ -103,10 +95,6 @@
     "中": {
       "id": "v_naka",
       "form": null
-    },
-    "大きいです": {
-      "id": "v_ookii",
-      "form": "polite_adj"
     },
     "新しい": "v_atarashii",
     "に": {
@@ -230,14 +218,6 @@
       "id": "v_nomu",
       "form": "polite_mashita"
     },
-    "おいしかったです": {
-      "id": "v_oishii",
-      "form": "polite_past_adj"
-    },
-    "安かったです": {
-      "id": "v_yasui",
-      "form": "polite_past_adj"
-    },
     "ごちそうさまでした": {
       "id": "p_gochisousama",
       "form": null
@@ -277,6 +257,22 @@
     "やまかわ": {
       "id": "char_yamakawa",
       "form": null
+    },
+    "よかった": {
+      "id": "v_ii",
+      "form": "plain_past_adj"
+    },
+    "大きい": {
+      "id": "v_ookii",
+      "form": null
+    },
+    "おいしかった": {
+      "id": "v_oishii",
+      "form": "plain_past_adj"
+    },
+    "安かった": {
+      "id": "v_yasui",
+      "form": "plain_past_adj"
     }
   }
 }

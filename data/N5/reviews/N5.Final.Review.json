@@ -400,10 +400,8 @@
               "spk": "R",
               "jp": "いいですね。今日は電車で行きますか。",
               "terms": [
-                {
-                  "id": "v_ii",
-                  "form": "polite_adj"
-                },
+                "v_ii",
+                "g_desu",
                 "p_ne",
                 "v_kyou",
                 "p_wa",
@@ -425,10 +423,8 @@
                 "p_wa",
                 "v_basu",
                 "p_yori",
-                {
-                  "id": "v_ii",
-                  "form": "polite_adj"
-                },
+                "v_ii",
+                "g_desu",
                 "p_yo"
               ]
             },
@@ -501,10 +497,8 @@
               "spk": "Y",
               "jp": "いいですね。わたしは本を書くのが大すきです。",
               "terms": [
-                {
-                  "id": "v_ii",
-                  "form": "polite_adj"
-                },
+                "v_ii",
+                "g_desu",
                 "p_ne",
                 "v_watashi",
                 "p_wa",
@@ -513,10 +507,8 @@
                 "v_kaku",
                 "p_no",
                 "p_ga",
-                {
-                  "id": "v_daisuki",
-                  "form": "polite_adj"
-                }
+                "v_daisuki",
+                "g_desu"
               ]
             },
             {
@@ -529,10 +521,8 @@
                 "v_hanasu",
                 "p_no",
                 "p_ga",
-                {
-                  "id": "v_suki",
-                  "form": "polite_adj"
-                }
+                "v_suki",
+                "g_desu"
               ]
             }
           ],
@@ -565,8 +555,9 @@
                 "p_ga",
                 {
                   "id": "v_kuru",
-                  "form": "appearance_sou"
+                  "form": "appearance_sou_stem"
                 },
+                "g_desu",
                 "p_ne"
               ]
             },

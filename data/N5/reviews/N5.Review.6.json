@@ -37,10 +37,8 @@
                 "v_sora",
                 "p_wa",
                 "v_totemo",
-                {
-                  "id": "v_kirei",
-                  "form": "polite_adj"
-                },
+                "v_kirei",
+                "g_desu",
                 "p_ne"
               ]
             },
@@ -61,8 +59,9 @@
                 },
                 {
                   "id": "v_kirei",
-                  "form": "appearance_sou"
+                  "form": "appearance_sou_stem"
                 },
+                "g_desu",
                 "p_ne"
               ]
             },
@@ -74,10 +73,8 @@
                 "p_no",
                 "v_kingyo",
                 "p_mo",
-                {
-                  "id": "v_kawaii",
-                  "form": "polite_adj"
-                },
+                "v_kawaii",
+                "g_desu",
                 "p_ne",
                 "v_ookii",
                 "v_sakana",
@@ -109,10 +106,8 @@
                 "p_yo",
                 "v_kuuki",
                 "p_mo",
-                {
-                  "id": "v_ii",
-                  "form": "polite_adj"
-                },
+                "v_ii",
+                "g_desu",
                 "p_ne"
               ]
             }
@@ -178,10 +173,8 @@
                 },
                 "v_nihongo",
                 "p_wa",
-                {
-                  "id": "v_omoshiroi",
-                  "form": "polite_adj"
-                },
+                "v_omoshiroi",
+                "g_desu",
                 "p_yo"
               ]
             },
@@ -514,10 +507,8 @@
               "id": "v_ookii",
               "form": "te_form"
             },
-            {
-              "id": "v_atarashii",
-              "form": "polite_adj"
-            },
+            "v_atarashii",
+            "g_desu",
             "v_gaikoku",
             "p_kara",
             {
@@ -540,10 +531,8 @@
             "p_no",
             "v_kurasu",
             "p_wa",
-            {
-              "id": "v_omoshiroi",
-              "form": "polite_adj"
-            },
+            "v_omoshiroi",
+            "g_desu",
             "v_sensei",
             "p_mo",
             "v_ii",
@@ -572,8 +561,9 @@
             "p_wa",
             {
               "id": "v_kirei",
-              "form": "appearance_sou"
+              "form": "appearance_sou_stem"
             },
+            "g_desu",
             "p_yo"
           ]
         },
@@ -645,10 +635,8 @@
               "id": "v_ookii",
               "form": "te_form"
             },
-            {
-              "id": "v_atarashii",
-              "form": "polite_adj"
-            }
+            "v_atarashii",
+            "g_desu"
           ],
           "explanation": "The passage says 学校は大きくて、新しいです — 'The school is big and new.' 大きくて is the て-form (te_form) of the い-adjective 大きい: drop い + くて = 大きくて, used as a connector 'big AND.' 新しいです is the polite predicative form of 新しい. The other choices use 小さい (small, antonym of 大きい), 古い (old, antonym of 新しい), 高い (expensive/tall), and 安い (cheap) — none match the passage."
         },
@@ -801,10 +789,8 @@
             "v_kingyo",
             "p_wa",
             "v_totemo",
-            {
-              "id": "v_kawaii",
-              "form": "polite_adj"
-            },
+            "v_kawaii",
+            "g_desu",
             "p_yo"
           ],
           "explanation": "かわいい (cute) fits naturally with 金魚 (goldfish): 川の金魚はとてもかわいいですよ = 'The goldfish in the river is very cute.' かわいい is an い-adjective introduced in N5.11 for small, adorable things like goldfish. つまらない (boring) describes activities and lessons, not animals. おもしろい (interesting) is possible but less natural for goldfish than かわいい. 長い (long) describes shape or duration, not animals."
@@ -878,10 +864,8 @@
             "p_no",
             "v_kurasu",
             "p_wa",
-            {
-              "id": "v_omoshiroi",
-              "form": "polite_adj"
-            }
+            "v_omoshiroi",
+            "g_desu"
           ],
           "explanation": "おもしろい (interesting) is the i-adjective that naturally describes a class: 日本語のクラスはおもしろいです = 'Japanese class is interesting.' 空 (sky), 国 (country), and 雨 (rain) are nouns — they cannot function as predicative adjectives in this sentence pattern without the copula. The sentence structure is [topic] + は + [adjective] + です, requiring an adjective. The antonym is つまらない (boring) — also an adjective. おもしろい is introduced in N5.12 as a key i-adjective for school and study contexts."
         }
@@ -961,13 +945,15 @@
             "p_wa",
             {
               "id": "v_nagai",
-              "form": "polite_past_adj"
+              "form": "plain_past_adj"
             },
+            "g_desu",
             "p_ga_but",
             {
               "id": "v_omoshiroi",
-              "form": "polite_past_adj"
-            }
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ],
           "explanation": "が (p_ga_but) is the clause-connecting conjunction 'but' (G9) used after a polite form (長かったです). It contrasts two clauses within one sentence. でも is a sentence-starting conjunction ('But...') — it cannot connect clauses within a sentence. けど (p_kedo, G9) is a casual equivalent of が — while grammatical, it creates slightly casual tone inconsistent with the polite ～です ending. から after 長かったです would express reason ('because it was long'), changing the meaning entirely."
         },
@@ -1011,10 +997,8 @@
             "v_kono",
             "v_hon",
             "p_wa",
-            {
-              "id": "v_omoshiroi",
-              "form": "polite_adj"
-            }
+            "v_omoshiroi",
+            "g_desu"
           ],
           "explanation": "おもしろい + です (polite predicate for i-adjectives) = おもしろいです. For i-adjectives: [dictionary form] + です in polite predicate — keep the final い and add です. く is the adverbial form: おもしろく + なる = 'become interesting.' で is the na-adjective te-form connector — i-adjectives use くて for te-form (おもしろくて), not で. に creates [adverb] + になる. The polite predicate of i-adjectives is simply base form + です: おもしろいです. The antonym: つまらないです."
         }

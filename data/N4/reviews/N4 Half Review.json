@@ -164,10 +164,8 @@
               "spk": "A",
               "jp": "いいですね。今日、仕事を しますか。",
               "terms": [
-                {
-                  "id": "v_ii",
-                  "form": "polite_adj"
-                },
+                "v_ii",
+                "g_desu",
                 "p_ne",
                 "v_kyou",
                 "v_shigoto",
@@ -233,10 +231,8 @@
                 "v_iie",
                 "v_eki",
                 "p_wa",
-                {
-                  "id": "v_tooi",
-                  "form": "polite_adj"
-                },
+                "v_tooi",
+                "g_desu",
                 "p_kara_because",
                 "v_basu",
                 "p_ni",
@@ -269,10 +265,8 @@
               "jp": "はい、近いです。毎日 歩いて 行きます。",
               "terms": [
                 "p_hai",
-                {
-                  "id": "v_chikai",
-                  "form": "polite_adj"
-                },
+                "v_chikai",
+                "g_desu",
                 "v_mainichi",
                 {
                   "id": "v_aruku",
@@ -337,10 +331,8 @@
                 "p_no",
                 "v_uchi",
                 "p_wa",
-                {
-                  "id": "v_akarui",
-                  "form": "polite_adj"
-                },
+                "v_akarui",
+                "g_desu",
                 "p_ne"
               ]
             },
@@ -351,10 +343,8 @@
                 "p_hai",
                 "v_ban",
                 "p_wa",
-                {
-                  "id": "v_kurai",
-                  "form": "polite_adj"
-                }
+                "v_kurai",
+                "g_desu"
               ]
             }
           ],
@@ -379,10 +369,8 @@
                 "v_donna",
                 "v_iro",
                 "p_ga",
-                {
-                  "id": "v_suki",
-                  "form": "polite_adj"
-                },
+                "v_suki",
+                "g_desu",
                 "p_ka"
               ]
             },
@@ -394,10 +382,8 @@
                 "p_to",
                 "v_kuro",
                 "p_ga",
-                {
-                  "id": "v_suki",
-                  "form": "polite_adj"
-                },
+                "v_suki",
+                "g_desu",
                 "v_tanaka",
                 "p_wa"
               ]
@@ -411,20 +397,16 @@
                 "v_akai",
                 "v_kuruma",
                 "p_ga",
-                {
-                  "id": "v_suki",
-                  "form": "polite_adj"
-                }
+                "v_suki",
+                "g_desu"
               ]
             },
             {
               "spk": "B",
               "jp": "いいですね。お茶を 飲みませんか。",
               "terms": [
-                {
-                  "id": "v_ii",
-                  "form": "polite_adj"
-                },
+                "v_ii",
+                "g_desu",
                 "p_ne",
                 "v_ocha",
                 "p_wo",
@@ -555,8 +537,9 @@
                 "p_mo",
                 {
                   "id": "v_ii",
-                  "form": "polite_past_adj"
-                }
+                  "form": "plain_past_adj"
+                },
+                "g_desu"
               ]
             },
             {
@@ -584,15 +567,11 @@
                 "v_naka",
                 "p_wa",
                 "v_sukoshi",
-                {
-                  "id": "v_kurai",
-                  "form": "polite_adj"
-                },
+                "v_kurai",
+                "g_desu",
                 "p_ga",
-                {
-                  "id": "v_oishii",
-                  "form": "polite_adj"
-                },
+                "v_oishii",
+                "g_desu",
                 "p_yo"
               ]
             }
@@ -661,10 +640,8 @@
               "jp": "とても 親切です。よく 話してくれました。",
               "terms": [
                 "v_totemo",
-                {
-                  "id": "v_shinsetsu",
-                  "form": "polite_adj"
-                },
+                "v_shinsetsu",
+                "g_desu",
                 "v_yoku",
                 {
                   "id": "v_hanasu",
@@ -699,10 +676,8 @@
                 "p_no",
                 "v_natsu",
                 "p_wa",
-                {
-                  "id": "v_atsui",
-                  "form": "polite_adj"
-                },
+                "v_atsui",
+                "g_desu",
                 "p_ka"
               ]
             },
@@ -712,16 +687,12 @@
               "terms": [
                 "p_hai",
                 "v_totemo",
-                {
-                  "id": "v_atsui",
-                  "form": "polite_adj"
-                },
+                "v_atsui",
+                "g_desu",
                 "v_fuyu",
                 "p_wa",
-                {
-                  "id": "v_samui",
-                  "form": "polite_adj"
-                }
+                "v_samui",
+                "g_desu"
               ]
             },
             {
@@ -732,10 +703,8 @@
                 "p_to",
                 "v_aki",
                 "p_ga",
-                {
-                  "id": "v_suki",
-                  "form": "polite_adj"
-                },
+                "v_suki",
+                "g_desu",
                 "p_ka"
               ]
             },
@@ -749,10 +718,8 @@
                 "p_to",
                 "v_aki",
                 "p_ga",
-                {
-                  "id": "v_suki",
-                  "form": "polite_adj"
-                }
+                "v_suki",
+                "g_desu"
               ]
             }
           ],
@@ -835,10 +802,8 @@
                 "v_tokoro",
                 "g_desu",
                 "p_ga",
-                {
-                  "id": "v_ii",
-                  "form": "polite_adj"
-                },
+                "v_ii",
+                "g_desu",
                 "p_ka"
               ]
             }
@@ -983,10 +948,8 @@
                 "p_no",
                 "v_tabi",
                 "p_wa",
-                {
-                  "id": "v_tanoshii",
-                  "form": "polite_adj"
-                },
+                "v_tanoshii",
+                "g_desu",
                 "p_ka"
               ]
             },
@@ -1048,10 +1011,8 @@
                 "p_to",
                 "v_kubi",
                 "p_ga",
-                {
-                  "id": "v_itai",
-                  "form": "polite_adj"
-                }
+                "v_itai",
+                "g_desu"
               ]
             },
             {
@@ -1064,10 +1025,8 @@
                   "id": "v_yasumu",
                   "form": "plain_past"
                 },
-                {
-                  "id": "v_ii",
-                  "form": "polite_adj"
-                },
+                "v_ii",
+                "g_desu",
                 "p_yo"
               ]
             },
@@ -1122,10 +1081,8 @@
                 "p_wa",
                 "v_koe",
                 "p_ga",
-                {
-                  "id": "v_kirei",
-                  "form": "polite_adj"
-                }
+                "v_kirei",
+                "g_desu"
               ]
             },
             {
@@ -1152,10 +1109,8 @@
                 "v_hikui",
                 "v_oto",
                 "p_ga",
-                {
-                  "id": "v_heta",
-                  "form": "polite_adj"
-                },
+                "v_heta",
+                "g_desu",
                 "p_kara_because"
               ]
             }
@@ -1182,10 +1137,8 @@
                 "p_no",
                 "v_shigoto",
                 "p_wa",
-                {
-                  "id": "v_isogashii",
-                  "form": "polite_adj"
-                },
+                "v_isogashii",
+                "g_desu",
                 "p_ka"
               ]
             },
@@ -1374,10 +1327,8 @@
               "terms": [
                 "v_doubutsu",
                 "p_ga",
-                {
-                  "id": "v_suki",
-                  "form": "polite_adj"
-                },
+                "v_suki",
+                "g_desu",
                 "p_ne",
                 "v_watashi",
                 "p_mo",
@@ -1480,10 +1431,8 @@
                 "p_wa",
                 "v_kaze",
                 "p_ga",
-                {
-                  "id": "v_tsuyoi",
-                  "form": "polite_adj"
-                },
+                "v_tsuyoi",
+                "g_desu",
                 "p_ne"
               ]
             },
@@ -1494,10 +1443,8 @@
                 "p_hai",
                 "v_gekkou",
                 "p_ga",
-                {
-                  "id": "v_kirei",
-                  "form": "polite_adj"
-                },
+                "v_kirei",
+                "g_desu",
                 "p_kara_because",
                 "v_soto",
                 "p_de",
@@ -1513,10 +1460,8 @@
               "terms": [
                 "v_kaze",
                 "p_ga",
-                {
-                  "id": "v_tsuyoi",
-                  "form": "polite_adj"
-                },
+                "v_tsuyoi",
+                "g_desu",
                 "p_ga",
                 "v_daijoubu",
                 "g_desu",
@@ -1532,10 +1477,8 @@
                 "g_desu",
                 "v_gekkou",
                 "p_ga",
-                {
-                  "id": "v_kirei",
-                  "form": "polite_adj"
-                },
+                "v_kirei",
+                "g_desu",
                 "p_kara_because"
               ]
             }

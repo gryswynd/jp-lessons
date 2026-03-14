@@ -134,10 +134,8 @@
                 "v_ie",
                 "v_gakkou",
                 "v_sukoshi",
-                {
-                  "id": "v_tooi",
-                  "form": "polite_adj"
-                }
+                "v_tooi",
+                "g_desu"
               ]
             },
             {
@@ -146,20 +144,16 @@
               "terms": [
                 "v_eki",
                 "v_ie",
-                {
-                  "id": "v_chikai",
-                  "form": "polite_adj"
-                }
+                "v_chikai",
+                "g_desu"
               ]
             },
             {
               "spk": "B",
               "jp": "はい、近いです。駅まで 歩いて、電車に 乗ります。",
               "terms": [
-                {
-                  "id": "v_chikai",
-                  "form": "polite_adj"
-                },
+                "v_chikai",
+                "g_desu",
                 "v_eki",
                 {
                   "id": "v_aruku",
@@ -441,10 +435,8 @@
             "v_kaisha",
             "v_eki",
             "v_sukoshi",
-            {
-              "id": "v_tooi",
-              "form": "polite_adj"
-            },
+            "v_tooi",
+            "g_desu",
             "p_ga_but",
             "v_mainichi",
             {
@@ -748,10 +740,8 @@
             "v_ensoku",
             "v_gakkou",
             "v_sukoshi",
-            {
-              "id": "v_tooi",
-              "form": "polite_adj"
-            },
+            "v_tooi",
+            "g_desu",
             "v_densha",
             {
               "id": "v_noru",
@@ -857,10 +847,8 @@
           "explanation": "から after a predicate (遠いですから) expresses reason or cause: 'because it is far'. けど means 'but', suggesting a contrast rather than a reason. まで means 'until / as far as'. より means 'more than' (for comparisons).",
           "terms": [
             "v_gakkou",
-            {
-              "id": "v_tooi",
-              "form": "polite_adj"
-            },
+            "v_tooi",
+            "g_desu",
             "v_mainichi",
             "v_densha",
             {
