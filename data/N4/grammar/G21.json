@@ -620,33 +620,34 @@
     },
     {
       "type": "patternMatch",
-      "title": "Permission or Prohibition?",
-      "instructions": "Read each sentence carefully. Decide if the sentence expresses PERMISSION (てもいい — the action is okay) or NOT (either prohibition or no-obligation). Select true if the sentence expresses permission.",
+      "title": "Spot the Permission Pattern",
+      "pattern": "てもいい / ていい",
+      "instructions": "Does the sentence use てもいい or ていい (permission)? Click ✓ if yes, ✗ if no.",
       "items": [
         {
           "sentence": "ここで食べてもいいです。",
-          "answer": true,
-          "explanation": "てもいい expresses permission — 'it is okay to eat here.' This is a permission sentence."
+          "correct": true,
+          "explanation": "てもいいです — permission. 'It is okay to eat here.' The てもいい pattern grants permission."
         },
         {
           "sentence": "走ってはいけません。",
-          "answer": false,
-          "explanation": "てはいけない expresses prohibition — 'you must not run.' This is a prohibition, not permission."
+          "correct": false,
+          "explanation": "てはいけない — prohibition. 'You must not run.' This uses てはいけない, not てもいい."
         },
         {
           "sentence": "今日は来なくてもいいですよ。",
-          "answer": false,
-          "explanation": "なくてもいい removes an obligation — 'you don't have to come today.' This is a no-obligation statement, not a permission grant."
+          "correct": false,
+          "explanation": "なくてもいい — no obligation. 'You don't have to come today.' This uses なくてもいい (not required), not てもいい (permitted)."
         },
         {
           "sentence": "写真をとってもいいですか。",
-          "answer": true,
-          "explanation": "てもいいですか is a permission question — 'may I take a photo?' The speaker is asking if the action is permitted."
+          "correct": true,
+          "explanation": "てもいいですか — asking for permission. 'May I take a photo?' This is てもいい in question form."
         },
         {
           "sentence": "このへやに入ってはいけません。",
-          "answer": false,
-          "explanation": "てはいけない expresses prohibition — 'you must not enter this room.' The は after て marks the action as the topic of the prohibition."
+          "correct": false,
+          "explanation": "てはいけない — prohibition. 'You must not enter this room.' The は after て signals prohibition, not permission."
         }
       ]
     },
