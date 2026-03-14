@@ -10,7 +10,7 @@ extends CanvasLayer
 
 var conversation: Array = []
 var conversation_index: int = 0
-var portrait_map: Dictionary = {}  # speaker name → Texture2D
+var portrait_map: Dictionary = {}
 
 
 func _ready() -> void:
@@ -20,7 +20,6 @@ func _ready() -> void:
 
 
 func set_portrait_map(map: Dictionary) -> void:
-	## Set the speaker → portrait texture mapping.
 	portrait_map = map
 
 
@@ -43,28 +42,28 @@ func _display_line() -> void:
 		return
 
 	var line: Dictionary = conversation[conversation_index]
-	var jp := line.get("jp", line.get("text", ""))
-	var en := line.get("en", "")
-	var speaker := line.get("speaker", "")
+	var jp: String = str(line.get("jp", line.get("text", "")))
+	var en: String = str(line.get("en", ""))
+	var speaker: String = str(line.get("speaker", ""))
 
 	# Process text through term tagger for tappable vocab
-	var tagged_jp := TermProcessor.process_text(jp)
+	var index := GameManager.get_surface_index()
+	var tagged_jp := TermProcessor.process_text(jp, index, GameManager.term_map)
 	speech_text.clear()
 	speech_text.append_text(tagged_jp)
 
 	en_text.text = en
 
 	# Set portrait
-	var portrait_tex: Texture2D = portrait_map.get(speaker)
-	if portrait_tex:
-		portrait.texture = portrait_tex
+	var portrait_val = portrait_map.get(speaker)
+	if portrait_val is Texture2D:
+		portrait.texture = portrait_val as Texture2D
 		portrait.visible = true
 	else:
 		portrait.visible = false
 
 
 func advance() -> void:
-	## Advance to the next conversation line.
 	conversation_index += 1
 	_display_line()
 
