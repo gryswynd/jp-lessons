@@ -31,36 +31,41 @@ This file governs how Claude Code creates all lesson content for this repository
 
 Content creation always runs through **four sequential agents**. Each agent has a single, well-defined job. No content may skip a stage.
 
+**Agents 2, 3, and 4 run as genuinely independent subprocesses** spawned via the `Agent` tool. Each subagent receives only what is explicitly passed in its prompt — it has no access to the main conversation history, the previous agent's reasoning, or any context beyond its assigned inputs. Agent 1 runs in the main context and acts as coordinator throughout.
+
+This independence is not cosmetic. It prevents the authorial bias that occurs when the same context writes and then reviews content. Agent 3 in particular approaches the draft cold, with no memory of having written any of it — which is the prerequisite for reliable mechanical checks like the kanji scope audit.
+
 ```
 User Request
      │
      ▼
-┌─────────────────────────────┐
-│  AGENT 1: Project Manager   │ ◄──── Receives rewrite requests from Agent 4
-│  Scopes, plans, delegates   │
-└────────────┬────────────────┘
-             │ Brief + Scope Doc
+┌─────────────────────────────────────────────┐
+│  AGENT 1: Project Manager  [main context]   │ ◄──── Receives rewrite requests from Agent 4
+│  Scopes, plans, spawns subagents            │
+└────────────┬────────────────────────────────┘
+             │ Spawns Agent 2 via Agent tool
+             │ (passes: Content Brief + file paths)
              ▼
-┌─────────────────────────────┐
-│  AGENT 2: Content Builder   │ ◄──── Receives fix requests from Agent 3
-│  Writes the actual JSON/MD  │
-└────────────┬────────────────┘
-             │ Draft content
+┌─────────────────────────────────────────────┐
+│  AGENT 2: Content Builder  [subagent]       │ ◄──── Re-spawned with QA failure report
+│  Writes the actual JSON/MD                  │
+└────────────┬────────────────────────────────┘
+             │ Returns draft to Agent 1
              ▼
-┌─────────────────────────────┐
-│  AGENT 3: QA Reviewer       │
-│  Vocab, tagging, structure  │──── FAIL → back to Agent 2 with annotated diff
-└────────────┬────────────────┘
-             │ QA-approved draft
+┌─────────────────────────────────────────────┐
+│  AGENT 3: QA Reviewer      [subagent]       │
+│  Vocab, tagging, structure                  │──── FAIL → Agent 1 re-spawns Agent 2
+└────────────┬────────────────────────────────┘
+             │ Returns QA-PASS to Agent 1
              ▼
-┌─────────────────────────────┐
-│  AGENT 4: Consistency Check │
-│  Natural language, scope,   │──── FAIL → back to Agent 1 with rewrite notes
-│  skill progression          │
-└────────────┬────────────────┘
-             │ Final approved content
+┌─────────────────────────────────────────────┐
+│  AGENT 4: Consistency Check [subagent]      │
+│  Natural language, scope,                   │──── FAIL → Agent 1 updates brief, re-spawns Agent 2
+│  skill progression                          │
+└────────────┬────────────────────────────────┘
+             │ Returns approval to Agent 1
              ▼
-        Write to repo
+        Agent 1 writes to repo
 ```
 
 ---
@@ -92,6 +97,35 @@ User Request
 - **Conjugation form pre-check.** Before dispatching to Agent 2, verify that every form string the lesson will need exists in `conjugation_rules.json`. This includes copula forms (でした, だった, じゃない), plain forms, and any new pattern introduced by the lesson's grammar focus. If a form is absent, create it in `conjugation_rules.json` before Agent 2 begins — just as a missing glossary entry must be created before content can reference it. Never allow Agent 2 to use `form: null` as a substitute for a missing form string.
 - **Grammar reinforcement planning.** Before finalizing the Content Brief, Agent 1 must consult the [Grammar Reinforcement Requirements](#grammar-reinforcement-requirements) schedule and identify: (a) which grammar milestones are in their **active reinforcement window** for this lesson, and (b) which milestones are in **sustained use**. List the specific reinforcement targets in the Content Brief. Plan at least 1 warmup item that exercises the most recently unlocked grammar using prior-lesson vocabulary. If the lesson's theme naturally supports certain grammar patterns (e.g. a travel theme supports ～たいです for desires, ～てください for requests), note these opportunities in the brief.
 - **Register planning.** Before finalizing the Content Brief, Agent 1 must consult the [Register Requirements](#register-requirements-polite-vs-casual) schedule and determine how many casual conversations the lesson needs. For N5.10+ lessons, plan which conversations will be casual by assigning informal contexts (friends, family, close peers). For lessons before N5.10, confirm register = 100% polite. Include the register plan in the Content Brief.
+
+**Spawning Agents 2, 3, and 4 via the Agent tool:**
+
+Agent 1 spawns each downstream agent as an independent subprocess. Each agent receives only what is explicitly included in its prompt — it cannot read the main conversation history.
+
+**What to include in the Agent 2 prompt:**
+- The complete Content Brief
+- Paths to any dependency files listed in the brief (reference template, prior lesson files) — Agent 2 must read these itself via its tools
+- The instruction: *"You are Agent 2 (Content Builder). Read CLAUDE.md for your full responsibilities. Build the draft JSON according to the Content Brief above, then return the complete draft and your CB Checklist."*
+- If this is a revision pass: include the QA Failure Report from Agent 3 and instruct Agent 2 to fix every listed issue
+
+**What to include in the Agent 3 prompt:**
+- The complete Content Brief (including the taught-kanji set Agent 1 computed)
+- The full draft JSON returned by Agent 2
+- The instruction: *"You are Agent 3 (QA Reviewer). Read CLAUDE.md for your full responsibilities. Your first task is the mechanical kanji scope audit described in your Responsibilities section — complete that before any other check. Return a QA-PASS stamp or a QA Failure Report."*
+
+**What to include in the Agent 4 prompt:**
+- The complete Content Brief
+- The QA-approved draft JSON
+- Paths to the 1–2 most recent same-type lesson files for comparison (Agent 4 must read these itself)
+- The instruction: *"You are Agent 4 (Consistency Reviewer). Read CLAUDE.md for your full responsibilities. Return either a CR approval or a Consistency Note with a rewrite directive."*
+
+**Handling returns:**
+- Agent 2 returns a draft → Agent 1 spawns Agent 3 with it
+- Agent 3 returns FAIL → Agent 1 re-spawns Agent 2 with the failure report
+- Agent 3 returns ESCALATE (unregistered words) → Agent 1 presents words to user, then re-spawns Agent 2
+- Agent 3 returns PASS → Agent 1 spawns Agent 4 with the approved draft
+- Agent 4 returns FAIL → Agent 1 updates the Content Brief and re-spawns Agent 2
+- Agent 4 returns PASS → Agent 1 writes the file to the repo and updates `manifest.json`
 
 **Content Brief format (internal working document):**
 
@@ -127,7 +161,7 @@ Rewrite notes: [empty on first pass; filled by Agent 4 feedback]
 
 ### AGENT 2 — Content Builder (CB)
 
-**Trigger:** Receives a Content Brief from Agent 1.
+**Trigger:** Spawned by Agent 1 via the Agent tool. Receives a Content Brief and file paths. Has no access to Agent 1's conversation history or reasoning — only what was explicitly included in the spawn prompt.
 
 **Responsibilities:**
 - **Do not read the glossary in full.** Use targeted Grep queries only (see [Glossary Access Pattern](#glossary-access-pattern)). Reading the full file will exceed the 32k output token limit.
@@ -258,9 +292,16 @@ CB CHECKLIST
 
 ### AGENT 3 — QA Reviewer (QA)
 
-**Trigger:** Receives draft output from Agent 2 (plus the original Content Brief).
+**Trigger:** Spawned by Agent 1 via the Agent tool. Receives the draft JSON and the Content Brief. Has no access to Agent 2's reasoning or the prior conversation — it approaches the draft cold, with no memory of having written any of it.
 
 **Responsibilities:**
+- **FIRST: Mechanical kanji scope audit.** Before any other check, perform this mandatory step:
+  1. Read `manifest.json`.
+  2. Compute the taught-kanji set: collect the `kanji` arrays from all N5 lessons + all lessons in the current level at or below the target lesson number. Flatten to a single character set.
+  3. Extract every CJK character (Unicode range U+4E00–U+9FFF) from every `jp`, `passage`, `q`, `a`, and `answer` field in the draft.
+  4. For each extracted character: if it is not in the taught-kanji set, it is an **immediate hard fail**. Record the character, the lesson it is introduced in (search `manifest.json`), the field it appeared in, and the full sentence.
+  5. Report all kanji violations in the QA Failure Report before checking anything else.
+  This check must use `manifest.json` as the sole source of truth. Do not rely on memory or glossary lookup to determine whether a kanji has been taught.
 - Perform a systematic line-by-line audit. Do **not** skim.
 - **Apply the Sentence Token Scan Protocol (STSP) to every `jp` or passage field.** Read each sentence left to right, token by token. For every token (noun, verb, adjective, adverb, particle, conjunction, copula, sentence-final particle), verify it is either (a) tagged in `terms` with a matching ID, or (b) a permissible untagged pure-kana function word that has **no glossary entry**. Kana-only connectors and particles (e.g. でも, だから, だって, よ, ね, か) must be verified against `shared/particles.json` for their `introducedIn` lesson — do **not** assume they are permissible just because they are written in kana. The STSP applies equally to warmup items, reading questions, and drills — no section is exempt. During rewrites and refreshes, apply the STSP to every jp field including those carried forward from the original; no field gets a "previously passing" exemption.
 - For every `terms` entry: verify the ID exists in the glossary (cross-reference the glossary file). Then verify the **surface form** of that glossary entry matches (or inflects from) the actual token in the `jp` field. A surface mismatch — e.g. tagging `だ` with `g_desu` whose glossary surface is `です` — is a **hard fail** even if the ID exists.
@@ -380,7 +421,7 @@ Line/Section | Issue Type            | Detail
 
 ### AGENT 4 — Consistency Reviewer (CR)
 
-**Trigger:** Receives QA-approved draft from Agent 3.
+**Trigger:** Spawned by Agent 1 via the Agent tool. Receives the QA-approved draft and the Content Brief. Has no access to Agent 3's reasoning or the prior conversation.
 
 **Responsibilities:**
 - **Use the latest content as the reference standard.** Read the highest-numbered existing lesson file of the same content type and level — this represents the current structural standard. Optionally read one additional earlier file for comparison. When conventions differ between older and newer files, the newest file always takes precedence.
@@ -2349,26 +2390,51 @@ These failures span multiple agents and are the most damaging because they may n
 
 ## Quick Start Prompt for Claude Code
 
-When the user says something like *"Create a lesson for N5.3"* or *"Add a new compose prompt for N5.6"* or *"Write a story for N4 lessons 7–9"*, begin with:
+When the user says something like *"Create a lesson for N5.3"* or *"Add a new compose prompt for N5.6"* or *"Write a story for N4 lessons 7–9"*, Agent 1 runs in the main context. Agents 2, 3, and 4 are spawned as independent subprocesses via the `Agent` tool.
+
+**Agent 1 (main context) — always announce what you're doing:**
 
 ```
 === AGENT 1: PROJECT MANAGER ===
 Reading manifest.json and glossary to build Content Brief...
+[Content Brief here]
+Spawning Agent 2...
 ```
 
-Then proceed through each agent stage explicitly, labelling each transition:
+**Spawning Agent 2:**
+Use the `Agent` tool with a prompt that includes the Content Brief, dependency file paths, and the instruction to read CLAUDE.md. Do not include the full conversation history — only what Agent 2 needs. Label the spawn clearly:
 
 ```
-=== AGENT 2: CONTENT BUILDER ===
-=== AGENT 3: QA REVIEWER ===
-=== AGENT 4: CONSISTENCY REVIEWER ===
-=== AGENT 1: FINAL — Writing to repo ===
+=== SPAWNING AGENT 2: CONTENT BUILDER ===
 ```
 
-If any agent issues a FAIL, restart from the appropriate stage and label the retry clearly:
+**When Agent 2 returns, announce receipt and spawn Agent 3:**
 
 ```
-=== AGENT 2: CONTENT BUILDER (Revision 2 — addressing QA issues) ===
+=== AGENT 2 RETURNED — spawning Agent 3: QA REVIEWER ===
 ```
 
-Do not summarise or condense agent outputs. Show the full checklist, report, or note so that the review trail is visible and the user can see exactly what was checked.
+Pass Agent 2's draft + the Content Brief to Agent 3. Do not include Agent 2's reasoning — only the draft JSON and the brief.
+
+**When Agent 3 returns:**
+- PASS → announce and spawn Agent 4:
+  ```
+  === AGENT 3: QA-PASS — spawning Agent 4: CONSISTENCY REVIEWER ===
+  ```
+- FAIL → show the full QA Failure Report, then re-spawn Agent 2 with it:
+  ```
+  === AGENT 3: QA-FAIL — re-spawning Agent 2 (Revision N) ===
+  ```
+- ESCALATE → present the Unregistered Word Report to the user, then re-spawn Agent 2 with the resolution
+
+**When Agent 4 returns:**
+- PASS → Agent 1 writes the file to the repo
+  ```
+  === AGENT 4: CR-PASS — Agent 1 writing to repo ===
+  ```
+- FAIL → show the full Consistency Note, update the Content Brief, re-spawn Agent 2
+  ```
+  === AGENT 4: CR-FAIL — Agent 1 updating brief, re-spawning Agent 2 (Revision N) ===
+  ```
+
+**Show all agent outputs in full.** Do not summarise or condense the CB Checklist, QA Failure Report, or Consistency Note. The full trail must be visible so the user can see exactly what each independent agent checked and found.
