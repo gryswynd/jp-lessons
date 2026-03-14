@@ -36,11 +36,11 @@
       "prompt": "Describe how you take photos while traveling. Use 写す and ながら to show two things happening at once.",
       "targets": [
         { "id": "v_shashin", "count": 1 },
-        { "id": "v_utsusu", "count": 1 }
+        { "id": "v_toru", "count": 1 }
       ],
-      "model": "旅先を 歩きながら、写真を うつします。山の 真ん中では 必ず うつします。",
+      "model": "旅先を 歩きながら、写真を とります。山の 真ん中では 必ず とります。",
       "vocabPool": [
-        "v_shashin", "v_utsusu", "v_aruku", "v_tabisaki", "v_ryokou",
+        "v_shashin", "v_toru", "v_aruku", "v_tabisaki", "v_ryokou",
         "v_tabi", "v_mannaka", "v_yama", "v_ii", "v_totemo"
       ]
     },
@@ -48,11 +48,11 @@
       "prompt": "List two or three activities you enjoy doing on trips. Use たり to show a non-exhaustive list of things you typically do.",
       "targets": [
         { "id": "v_ryokou", "count": 1 },
-        { "id": "v_utsusu", "count": 1 }
+        { "id": "v_toru", "count": 1 }
       ],
-      "model": "旅行中は、写真を うつしたり、まちを 歩いたり します。",
+      "model": "旅行中は、写真を とったり、まちを 歩いたり します。",
       "vocabPool": [
-        "v_ryokou", "v_utsusu", "v_shashin", "v_aruku", "v_miru",
+        "v_ryokou", "v_toru", "v_shashin", "v_aruku", "v_miru",
         "v_taberu", "v_yomu", "v_tabi", "v_tabisaki", "v_eiga"
       ]
     },
@@ -86,10 +86,10 @@
         { "id": "v_jibun", "count": 1 },
         { "id": "v_tabibito", "count": 1 }
       ],
-      "model": "自分は 旅人です。旅先で いつも 写真を うつします。",
+      "model": "自分は 旅人です。旅先で いつも 写真を とります。",
       "vocabPool": [
         "v_jibun", "v_tabibito", "v_tabi", "v_tabisaki", "v_shashin",
-        "v_utsusu", "v_ii", "v_suki", "v_watashi", "v_iku"
+        "v_toru", "v_ii", "v_suki", "v_watashi", "v_iku"
       ]
     },
     {
@@ -112,9 +112,9 @@
         { "id": "v_shashin", "count": 1 },
         { "id": "v_tabisaki", "count": 1 }
       ],
-      "model": "旅先で うつした 写真が あります。山の 真ん中で、ゆきが 真っ白でした。とても きれいな 写真です。",
+      "model": "旅先で とった 写真が あります。山の 真ん中で、ゆきが 真っ白でした。とても きれいな 写真です。",
       "vocabPool": [
-        "v_shashin", "v_tabisaki", "v_utsusu", "v_mannaka", "v_masshiro",
+        "v_shashin", "v_tabisaki", "v_toru", "v_mannaka", "v_masshiro",
         "v_yuki", "v_yama", "v_kirei", "v_tabi", "v_ii"
       ]
     }
@@ -129,12 +129,12 @@
     {
       "pattern": "verb-ます / verb-ました",
       "meaning": "do / did (polite present / past)",
-      "examples": ["旅行します", "歩きました", "うつしました", "行きました"]
+      "examples": ["旅行します", "歩きました", "とりました", "行きました"]
     },
     {
       "pattern": "verb-ません / verb-ませんでした",
       "meaning": "do not / did not (polite negative / past negative)",
-      "examples": ["行きません", "うつしませんでした"]
+      "examples": ["行きません", "とりませんでした"]
     },
     {
       "pattern": "verb-て + います",
@@ -144,7 +144,7 @@
     {
       "pattern": "verb-たいです / verb-たくないです",
       "meaning": "want to / don't want to (polite desire)",
-      "examples": ["旅行したいです", "行きたいです", "うつしたくないです"]
+      "examples": ["旅行したいです", "行きたいです", "とりたくないです"]
     },
     {
       "pattern": "verb-られます / verb-えます",
@@ -154,17 +154,17 @@
     {
       "pattern": "verb masu-stem + ながら",
       "meaning": "while doing (simultaneous actions)",
-      "examples": ["歩きながら うつします", "旅行しながら 学びます"]
+      "examples": ["歩きながら とります", "旅行しながら 学びます"]
     },
     {
       "pattern": "verb-たり + verb-たりします",
       "meaning": "do things like X and Y (non-exhaustive list)",
-      "examples": ["旅行したり、写真を うつしたりします", "歩いたり、食べたりします"]
+      "examples": ["旅行したり、写真を とったりします", "歩いたり、食べたりします"]
     },
     {
       "pattern": "[cause] + ので / から",
       "meaning": "because / since (reason)",
-      "examples": ["旅行が 好きなので 行きます", "きれいだから うつします"]
+      "examples": ["旅行が 好きなので 行きます", "きれいだから とります"]
     },
     {
       "pattern": "い-adj + かったです / くないです",
