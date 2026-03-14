@@ -170,7 +170,7 @@
         },
         {
           "label": "World & Photography",
-          "items": ["v_shashin", "v_sekai", "v_sekaijuu", "v_jibun", "v_mannaka", "v_masshiro", "v_utsusu"]
+          "items": ["v_shashin", "v_sekai", "v_sekaijuu", "v_jibun", "v_mannaka", "v_masshiro", "v_utsusu", "v_toru"]
         }
       ]
     },
@@ -209,20 +209,20 @@
         },
         {
           "spk": "A",
-          "jp": "旅先で 写真も うつしますか。",
+          "jp": "旅先で 写真も とりますか。",
           "en": "Do you also take photos at your travel destinations?",
           "terms": [
             "v_tabisaki",
             "p_de",
             "v_shashin",
             "p_mo",
-            { "id": "v_utsusu", "form": "polite_masu" },
+            { "id": "v_toru", "form":"polite_masu" },
             "p_ka"
           ]
         },
         {
           "spk": "B",
-          "jp": "はい！旅先では いつも 写真を たくさん うつします。旅人に なりたいです。",
+          "jp": "はい！旅先では いつも 写真を たくさん とります。旅人に なりたいです。",
           "en": "Yes! At travel destinations I always take lots of photos. I want to become a world traveler.",
           "terms": [
             "p_hai",
@@ -233,7 +233,7 @@
             "v_shashin",
             "p_wo",
             "v_takusan",
-            { "id": "v_utsusu", "form": "polite_masu" },
+            { "id": "v_toru", "form":"polite_masu" },
             "v_tabibito",
             "p_ni",
             { "id": "v_naru", "form": "plain_desire_tai" },
@@ -249,7 +249,7 @@
       "lines": [
         {
           "spk": "A",
-          "jp": "けんさん、これを 見てください。旅先で うつした 写真です。",
+          "jp": "けんさん、これを 見てください。旅先で とった 写真です。",
           "en": "Ken, please look at this. It's a photo I took at my travel destination.",
           "terms": [
             "char_ken",
@@ -260,14 +260,14 @@
             "v_kudasai",
             "v_tabisaki",
             "p_de",
-            { "id": "v_utsusu", "form": "plain_past" },
+            { "id": "v_toru", "form":"plain_past" },
             "v_shashin",
             "g_desu"
           ]
         },
         {
           "spk": "B",
-          "jp": "わあ、ゆきが 真っ白ですね。どこで うつしましたか。",
+          "jp": "わあ、ゆきが 真っ白ですね。どこで とりましたか。",
           "en": "Wow, the snow is pure white! Where did you take it?",
           "terms": [
             "v_yuki",
@@ -276,13 +276,13 @@
             "p_ne",
             "v_doko",
             "p_de",
-            { "id": "v_utsusu", "form": "polite_mashita" },
+            { "id": "v_toru", "form":"polite_mashita" },
             "p_ka"
           ]
         },
         {
           "spk": "A",
-          "jp": "山の 真ん中です。山を 歩きながら、写真を うつしました。",
+          "jp": "山の 真ん中です。山を 歩きながら、写真を とりました。",
           "en": "In the middle of the mountains. I took photos while walking through the mountains.",
           "terms": [
             "v_yama",
@@ -294,7 +294,7 @@
             { "id": "v_aruku", "form": "nagara_form" },
             "v_shashin",
             "p_wo",
-            { "id": "v_utsusu", "form": "polite_mashita" }
+            { "id": "v_toru", "form":"polite_mashita" }
           ]
         },
         {
@@ -336,7 +336,7 @@
         },
         {
           "spk": "B",
-          "jp": "世界中を 旅行したり、外国で 写真を うつしたり したいです。",
+          "jp": "世界中を 旅行したり、外国で 写真を とったり したいです。",
           "en": "I want to do things like traveling all over the world and taking photos in foreign countries.",
           "terms": [
             "v_sekaijuu",
@@ -347,7 +347,7 @@
             "p_de",
             "v_shashin",
             "p_wo",
-            { "id": "v_utsusu", "form": "tari_form" },
+            { "id": "v_toru", "form":"tari_form" },
             { "id": "v_suru", "form": "plain_desire_tai" },
             "g_desu"
           ]
@@ -366,7 +366,7 @@
         },
         {
           "spk": "B",
-          "jp": "はい！世界中の 旅先で、自分で 写真を うつしたいです。",
+          "jp": "はい！世界中の 旅先で、自分で 写真を とりたいです。",
           "en": "Yes! I want to take photos on my own at travel destinations all around the world.",
           "terms": [
             "p_hai",
@@ -378,7 +378,7 @@
             "p_de",
             "v_shashin",
             "p_wo",
-            { "id": "v_utsusu", "form": "plain_desire_tai" },
+            { "id": "v_toru", "form":"plain_desire_tai" },
             "g_desu"
           ]
         }
@@ -407,7 +407,7 @@
         },
         {
           "spk": "B",
-          "jp": "外国の 旅館へ 行くよ。写真も たくさん うつすよ。",
+          "jp": "外国の 旅館へ 行くよ。写真も たくさん とるよ。",
           "en": "I'm going to a ryokan abroad. I'll also take lots of photos.",
           "terms": [
             "v_gaikoku",
@@ -419,7 +419,7 @@
             "v_shashin",
             "p_mo",
             "v_takusan",
-            { "id": "v_utsusu", "form": "plain_form" },
+            { "id": "v_toru", "form":"plain_form" },
             "p_yo"
           ]
         },
@@ -468,7 +468,7 @@
           ]
         },
         {
-          "jp": "旅先では いつも 写真を うつします。",
+          "jp": "旅先では いつも 写真を とります。",
           "en": "At travel destinations, he always takes photos.",
           "terms": [
             "v_tabisaki",
@@ -477,7 +477,7 @@
             "v_itsumo",
             "v_shashin",
             "p_wo",
-            { "id": "v_utsusu", "form": "polite_masu" }
+            { "id": "v_toru", "form":"polite_masu" }
           ]
         },
         {
@@ -494,7 +494,7 @@
           ]
         },
         {
-          "jp": "山を 歩きながら、たくさん 写真を うつしました。",
+          "jp": "山を 歩きながら、たくさん 写真を とりました。",
           "en": "While walking in the mountains, he took lots of photos.",
           "terms": [
             "v_yama",
@@ -503,11 +503,11 @@
             "v_takusan",
             "v_shashin",
             "p_wo",
-            { "id": "v_utsusu", "form": "polite_mashita" }
+            { "id": "v_toru", "form":"polite_mashita" }
           ]
         },
         {
-          "jp": "また 旅先へ 行って、自分で 写真を うつしたいです。",
+          "jp": "また 旅先へ 行って、自分で 写真を とりたいです。",
           "en": "He wants to go to a travel destination again and take photos on his own.",
           "terms": [
             "v_mata",
@@ -518,7 +518,7 @@
             "p_de",
             "v_shashin",
             "p_wo",
-            { "id": "v_utsusu", "form": "plain_desire_tai" },
+            { "id": "v_toru", "form":"plain_desire_tai" },
             "g_desu"
           ]
         }
@@ -526,7 +526,7 @@
       "questions": [
         {
           "q": "りきぞは 旅先で 何を しますか。",
-          "a": "写真を うつします。",
+          "a": "写真を とります。",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -538,7 +538,7 @@
             "p_ka",
             "v_shashin",
             "p_wo",
-            { "id": "v_utsusu", "form": "polite_masu" }
+            { "id": "v_toru", "form":"polite_masu" }
           ]
         },
         {
@@ -627,7 +627,7 @@
           ]
         },
         {
-          "jp": "父は 旅先を 歩きながら、写真を うつすのが 好きです。",
+          "jp": "父は 旅先を 歩きながら、写真を とるのが 好きです。",
           "en": "My father loves taking photos while walking through travel destinations.",
           "terms": [
             "v_chichi",
@@ -637,7 +637,7 @@
             { "id": "v_aruku", "form": "nagara_form" },
             "v_shashin",
             "p_wo",
-            { "id": "v_utsusu", "form": "plain_form" },
+            { "id": "v_toru", "form":"plain_form" },
             "p_no",
             "p_ga",
             { "id": "v_suki", "form": "polite_adj" }
@@ -759,7 +759,7 @@
       "items": [
         {
           "kind": "mcq",
-          "q": "旅先の ______ を うつしました。",
+          "q": "旅先の ______ を とりました。",
           "choices": ["写真", "旅館", "世界", "自分"],
           "answer": "写真",
           "terms": [
@@ -767,7 +767,7 @@
             "p_no",
             "v_shashin",
             "p_wo",
-            { "id": "v_utsusu", "form": "polite_mashita" }
+            { "id": "v_toru", "form":"polite_mashita" }
           ]
         },
         {
@@ -801,7 +801,7 @@
         },
         {
           "kind": "mcq",
-          "q": "山の ______ で 写真を うつしました。",
+          "q": "山の ______ で 写真を とりました。",
           "choices": ["真ん中", "世界中", "旅先", "旅人"],
           "answer": "真ん中",
           "terms": [
@@ -811,7 +811,7 @@
             "p_de",
             "v_shashin",
             "p_wo",
-            { "id": "v_utsusu", "form": "polite_mashita" }
+            { "id": "v_toru", "form":"polite_mashita" }
           ]
         }
       ]
@@ -823,7 +823,7 @@
       "items": [
         {
           "kind": "mcq",
-          "q": "山を 歩き______ 、写真を うつしました。",
+          "q": "山を 歩き______ 、写真を とりました。",
           "choices": ["ながら", "たり", "ために", "から"],
           "answer": "ながら",
           "terms": [
@@ -832,7 +832,7 @@
             { "id": "v_aruku", "form": "nagara_form" },
             "v_shashin",
             "p_wo",
-            { "id": "v_utsusu", "form": "polite_mashita" }
+            { "id": "v_toru", "form":"polite_mashita" }
           ]
         },
         {
@@ -852,7 +852,7 @@
         },
         {
           "kind": "mcq",
-          "q": "旅先 ______ 写真を うつしました。",
+          "q": "旅先 ______ 写真を とりました。",
           "choices": ["で", "に", "を", "へ"],
           "answer": "で",
           "terms": [
@@ -860,7 +860,7 @@
             "p_de",
             "v_shashin",
             "p_wo",
-            { "id": "v_utsusu", "form": "polite_mashita" }
+            { "id": "v_toru", "form":"polite_mashita" }
           ]
         },
         {
