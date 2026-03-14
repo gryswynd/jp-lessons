@@ -155,6 +155,10 @@
       if (vClass === 'ru')   vClass = 'ichidan';
       if (vClass === 'verb') vClass = 'godan';
       if (!vClass)           vClass = 'godan';
+      // irr_iku: uses godan rules for most forms; conjugation_rules.json
+      // provides replace overrides for the four euphonic forms (te/ta/tari/tara)
+      // where 行く → 行って (not 行いて) is the standard irregular pattern.
+      if (vClass === 'irr_iku' && !formDef.rules['irr_iku']) vClass = 'godan';
 
       var rule = formDef.rules[vClass];
       if (!rule) return term;
