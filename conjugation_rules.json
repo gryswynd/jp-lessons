@@ -812,6 +812,18 @@
       }
     }
   },
+  "polite_past_copula": {
+    "label": "Polite Past Copula (Deshita)",
+    "description": "Polite past form of the copula (でした = was / were). Applied to g_desu to produce the でした chip, keeping です as the registered entry while allowing the conjugation engine to generate its past form.",
+    "introducedIn": "N5.5",
+    "rules": {
+      "copula": {
+        "type": "replace",
+        "surface": "でした",
+        "reading": "でした"
+      }
+    }
+  },
   "appearance_sou_stem": {
     "label": "Appearance (Sou) — Stem",
     "description": "Stem form of the appearance/sou pattern, without copula. Pairs with です (g_desu) to form the polite appearance expression. i-adj: remove い, add そう. na-adj: add そう. Verbs: masu-stem + そう.",

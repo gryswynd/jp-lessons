@@ -142,10 +142,8 @@
             "v_donna",
             "v_iro",
             "p_ga",
-            {
-              "id": "v_suki",
-              "form": "polite_adj"
-            },
+            "v_suki",
+            "g_desu",
             "p_ka"
           ]
         }
@@ -338,10 +336,8 @@
             "p_no",
             "v_ryouri",
             "p_ga",
-            {
-              "id": "v_daisuki",
-              "form": "polite_adj"
-            },
+            "v_daisuki",
+            "g_desu",
             "v_oishii",
             "v_tabemono",
             "p_ga",
@@ -413,10 +409,8 @@
           "jp": "いいですね。牛肉も 買いましたから、いっしょに 使いましょう。",
           "en": "Sounds great. Since you bought beef too, let's use them together.",
           "terms": [
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "p_ne",
             "v_gyuuniku",
             "p_mo",
@@ -463,10 +457,8 @@
             "p_no",
             "v_ryouri",
             "p_wa",
-            {
-              "id": "v_oishii",
-              "form": "polite_adj"
-            },
+            "v_oishii",
+            "g_desu",
             "p_ne"
           ]
         }
@@ -528,10 +520,8 @@
           "jp": "いいですね！飲み物も 買いましたか。",
           "en": "Nice! Did you buy drinks too?",
           "terms": [
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "v_nomimono",
             "p_mo",
             {
@@ -692,10 +682,8 @@
             },
             "v_ryouri",
             "p_ga",
-            {
-              "id": "v_daisuki",
-              "form": "polite_adj"
-            },
+            "v_daisuki",
+            "g_desu",
             "p_kara_because"
           ]
         },
@@ -732,8 +720,9 @@
             "v_totemo",
             {
               "id": "v_oishii",
-              "form": "polite_past_adj"
-            }
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ]
         },
         {
@@ -804,8 +793,9 @@
             "p_wa",
             {
               "id": "v_oishii",
-              "form": "polite_past_adj"
+              "form": "plain_past_adj"
             },
+            "g_desu",
             "p_ka",
             "p_hai",
             "v_totemo"
@@ -827,10 +817,8 @@
             "v_ryouri",
             "p_ga",
             "v_totemo",
-            {
-              "id": "v_jouzu",
-              "form": "polite_adj"
-            }
+            "v_jouzu",
+            "g_desu"
           ]
         },
         {
@@ -932,10 +920,8 @@
             "p_wa",
             "v_ryouri",
             "p_ga",
-            {
-              "id": "v_jouzu",
-              "form": "polite_adj"
-            },
+            "v_jouzu",
+            "g_desu",
             "p_ka",
             "p_hai",
             "v_totemo"

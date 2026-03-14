@@ -28,10 +28,6 @@
       "id": "p_ga",
       "form": null
     },
-    "多いです": {
-      "id": "v_ooi",
-      "form": "polite_adj"
-    },
     "りきぞ": {
       "id": "char_rikizo",
       "form": null
@@ -140,14 +136,6 @@
       "id": "v_totemo",
       "form": null
     },
-    "おもしろいです": {
-      "id": "v_omoshiroi",
-      "form": "polite_adj"
-    },
-    "よかったです": {
-      "id": "v_ii",
-      "form": "polite_past_adj"
-    },
     "ね": {
       "id": "p_ne",
       "form": null
@@ -176,14 +164,6 @@
       "id": "v_wakaru",
       "form": "polite_negative"
     },
-    "すきです": {
-      "id": "v_suki",
-      "form": "polite_adj"
-    },
-    "おもしろそうです": {
-      "id": "v_omoshiroi",
-      "form": "appearance_sou"
-    },
     "毎日": {
       "id": "v_mainichi",
       "form": null
@@ -191,10 +171,6 @@
     "読みたいです": {
       "id": "v_yomu",
       "form": "plain_desire_tai"
-    },
-    "少ないです": {
-      "id": "v_sukunai",
-      "form": "polite_adj"
     },
     "少し": {
       "id": "v_sukoshi",
@@ -227,10 +203,6 @@
     "花": {
       "id": "v_hana",
       "form": null
-    },
-    "きれいです": {
-      "id": "v_kirei",
-      "form": "polite_adj"
     },
     "から": {
       "id": "p_kara",
@@ -284,9 +256,37 @@
       "id": "v_zenzen",
       "form": null
     },
-    "つまらないです": {
+    "多い": {
+      "id": "v_ooi",
+      "form": null
+    },
+    "おもしろい": {
+      "id": "v_omoshiroi",
+      "form": null
+    },
+    "よかった": {
+      "id": "v_ii",
+      "form": "plain_past_adj"
+    },
+    "すき": {
+      "id": "v_suki",
+      "form": null
+    },
+    "おもしろそう": {
+      "id": "v_omoshiroi",
+      "form": "appearance_sou_stem"
+    },
+    "少ない": {
+      "id": "v_sukunai",
+      "form": null
+    },
+    "きれい": {
+      "id": "v_kirei",
+      "form": null
+    },
+    "つまらない": {
       "id": "v_tsumaranai",
-      "form": "polite_adj"
+      "form": null
     }
   }
 }

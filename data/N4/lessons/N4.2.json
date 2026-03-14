@@ -240,10 +240,8 @@
               "id": "v_aruku",
               "form": "polite_masu"
             },
-            {
-              "id": "v_chikai",
-              "form": "polite_adj"
-            },
+            "v_chikai",
+            "g_desu",
             "p_yo"
           ]
         },
@@ -252,20 +250,16 @@
           "jp": "いいですね。わたしの 家は 少し 遠いですから、バスに 乗ります。",
           "en": "Nice! My house is a bit far, so I take the bus.",
           "terms": [
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "p_ne",
             "v_watashi",
             "p_no",
             "v_ie",
             "p_wa",
             "v_sukoshi",
-            {
-              "id": "v_tooi",
-              "form": "polite_adj"
-            },
+            "v_tooi",
+            "g_desu",
             "p_kara_because",
             "v_basu",
             "p_ni",
@@ -282,10 +276,8 @@
           "terms": [
             "v_basu",
             "p_mo",
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "p_ne",
             "v_doko",
             "p_kara",
@@ -315,10 +307,8 @@
             "v_gakkou",
             "p_kara",
             "v_sukoshi",
-            {
-              "id": "v_tooi",
-              "form": "polite_adj"
-            },
+            "v_tooi",
+            "g_desu",
             "v_densha",
             "p_ni",
             {
@@ -341,10 +331,8 @@
             "p_wa",
             "v_gakkou",
             "p_kara",
-            {
-              "id": "v_chikai",
-              "form": "polite_adj"
-            },
+            "v_chikai",
+            "g_desu",
             "p_ka"
           ]
         },
@@ -354,10 +342,8 @@
           "en": "Yes, it's close. Let's walk to the station.",
           "terms": [
             "p_hai",
-            {
-              "id": "v_chikai",
-              "form": "polite_adj"
-            },
+            "v_chikai",
+            "g_desu",
             "v_eki",
             "p_made",
             {
@@ -431,10 +417,8 @@
             "p_ga",
             "v_gakkou",
             "p_ni",
-            {
-              "id": "v_chikai",
-              "form": "polite_adj"
-            },
+            "v_chikai",
+            "g_desu",
             "p_kara_because"
           ]
         },
@@ -443,20 +427,16 @@
           "jp": "いいですね。わたしの 家は 少し 遠いです。電車に 乗って 来ます。",
           "en": "Nice. My house is a bit far. I come by riding the train.",
           "terms": [
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "p_ne",
             "v_watashi",
             "p_no",
             "v_ie",
             "p_wa",
             "v_sukoshi",
-            {
-              "id": "v_tooi",
-              "form": "polite_adj"
-            },
+            "v_tooi",
+            "g_desu",
             "v_densha",
             "p_ni",
             {
@@ -618,10 +598,8 @@
               "form": "polite_masu"
             },
             "p_ga_but",
-            {
-              "id": "v_chikai",
-              "form": "polite_adj"
-            }
+            "v_chikai",
+            "g_desu"
           ]
         },
         {
@@ -632,7 +610,10 @@
             "p_de",
             "v_gakkou",
             "p_made",
-            { "counter": "fun", "n": 30 },
+            {
+              "counter": "fun",
+              "n": 30
+            },
             {
               "id": "v_noru",
               "form": "polite_masu"
@@ -665,10 +646,8 @@
             "v_gakkou",
             "p_wa",
             "v_sukoshi",
-            {
-              "id": "v_tooi",
-              "form": "polite_adj"
-            },
+            "v_tooi",
+            "g_desu",
             "p_ga_but",
             "v_mainichi",
             "v_densha",
@@ -715,20 +694,14 @@
             "p_wa",
             "v_ie",
             "p_kara",
-            {
-              "id": "v_chikai",
-              "form": "polite_adj"
-            },
+            "v_chikai",
+            "g_desu",
             "p_ka",
-            {
-              "id": "v_tooi",
-              "form": "polite_adj"
-            },
+            "v_tooi",
+            "g_desu",
             "p_ka",
-            {
-              "id": "v_chikai",
-              "form": "polite_adj"
-            }
+            "v_chikai",
+            "g_desu"
           ]
         },
         {
@@ -745,7 +718,10 @@
               "form": "polite_masu"
             },
             "p_ka",
-            { "counter": "fun", "n": 30 },
+            {
+              "counter": "fun",
+              "n": 30
+            },
             {
               "id": "v_noru",
               "form": "polite_masu"
@@ -827,10 +803,8 @@
             "p_wa",
             "v_gakkou",
             "p_kara",
-            {
-              "id": "v_chikai",
-              "form": "polite_adj"
-            }
+            "v_chikai",
+            "g_desu"
           ]
         },
         {
@@ -848,8 +822,9 @@
             "p_wa",
             {
               "id": "v_tooi",
-              "form": "polite_past_adj"
+              "form": "plain_past_adj"
             },
+            "g_desu",
             "p_ga_but",
             "v_densha",
             "p_de",
@@ -954,14 +929,16 @@
             "p_kara",
             {
               "id": "v_tooi",
-              "form": "polite_past_adj"
+              "form": "plain_past_adj"
             },
+            "g_desu",
             "p_ka",
             "p_hai",
             {
               "id": "v_tooi",
-              "form": "polite_past_adj"
+              "form": "plain_past_adj"
             },
+            "g_desu",
             "p_ga_but",
             "v_densha",
             "p_de",
@@ -1148,7 +1125,10 @@
             "p_kara",
             "v_eki",
             "p_made",
-            { "counter": "fun", "n": 5 },
+            {
+              "counter": "fun",
+              "n": 5
+            },
             "p_de",
             {
               "id": "v_tsuku",
@@ -1169,10 +1149,8 @@
           "terms": [
             "v_gakkou",
             "p_wa",
-            {
-              "id": "v_tooi",
-              "form": "polite_adj"
-            },
+            "v_tooi",
+            "g_desu",
             "p_kara_because",
             "v_basu",
             "p_ni",

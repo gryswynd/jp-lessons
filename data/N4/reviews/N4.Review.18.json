@@ -6,7 +6,16 @@
     "phase": 4,
     "type": "assessment",
     "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 35–36.",
-    "kanji": ["主", "止", "民", "洗", "不", "便", "業", "産"]
+    "kanji": [
+      "主",
+      "止",
+      "民",
+      "洗",
+      "不",
+      "便",
+      "業",
+      "産"
+    ]
   },
   "sections": [
     {
@@ -31,10 +40,19 @@
               "jp": "はい。水が 止まって います。業者が 来て います。",
               "terms": [
                 "v_mizu",
-                { "id": "v_tomaru", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_masu" },
+                {
+                  "id": "v_tomaru",
+                  "form": "te_form"
+                },
+                {
+                  "id": "v_iru",
+                  "form": "polite_masu"
+                },
                 "v_gyousha",
-                { "id": "v_kuru", "form": "te_form" }
+                {
+                  "id": "v_kuru",
+                  "form": "te_form"
+                }
               ]
             },
             {
@@ -52,9 +70,15 @@
               "jp": "水を 止めて くれます。少し 待って ください。",
               "terms": [
                 "v_mizu",
-                { "id": "v_tomeru", "form": "te_form" },
+                {
+                  "id": "v_tomeru",
+                  "form": "te_form"
+                },
                 "v_sukoshi",
-                { "id": "v_matsu", "form": "te_form" }
+                {
+                  "id": "v_matsu",
+                  "form": "te_form"
+                }
               ]
             }
           ],
@@ -77,7 +101,8 @@
               "jp": "バスの 便は 不便ですね。",
               "terms": [
                 "v_bin",
-                { "id": "v_fuben", "form": "polite_adj" }
+                "v_fuben",
+                "g_desu"
               ]
             },
             {
@@ -86,8 +111,14 @@
               "terms": [
                 "v_omoni",
                 "v_yuugata",
-                { "id": "v_ugoku", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_masu" }
+                {
+                  "id": "v_ugoku",
+                  "form": "te_form"
+                },
+                {
+                  "id": "v_iru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -103,7 +134,10 @@
               "jp": "産業も 少なく なりました。不運ですね。",
               "terms": [
                 "v_sangyou",
-                { "id": "v_sukunai", "form": "adverbial" },
+                {
+                  "id": "v_sukunai",
+                  "form": "adverbial"
+                },
                 "v_fuun"
               ]
             }
@@ -139,8 +173,14 @@
                 "v_kougyou",
                 "v_gyousha",
                 "v_sanbutsu",
-                { "id": "v_tsukuru", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_masu" }
+                {
+                  "id": "v_tsukuru",
+                  "form": "te_form"
+                },
+                {
+                  "id": "v_iru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -157,8 +197,14 @@
                 "v_kokumin",
                 "v_sangyou",
                 "v_taisetsu",
-                { "id": "v_suru", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_masu" }
+                {
+                  "id": "v_suru",
+                  "form": "te_form"
+                },
+                {
+                  "id": "v_iru",
+                  "form": "polite_masu"
+                }
               ]
             }
           ],
@@ -212,7 +258,14 @@
             "洗います"
           ],
           "alts": [
-            ["毎日", "国民", "は", "車", "を", "洗います"]
+            [
+              "毎日",
+              "国民",
+              "は",
+              "車",
+              "を",
+              "洗います"
+            ]
           ],
           "distractors": [
             "に",
@@ -295,8 +348,14 @@
             "v_watashi",
             "v_kougyou",
             "v_chiku",
-            { "id": "v_sumu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -307,7 +366,10 @@
             "v_sensha",
             "v_sangyou",
             "v_shigoto",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -317,7 +379,10 @@
             "v_minka",
             "v_shujin",
             "v_gyousha",
-            { "id": "v_kuru", "form": "te_form" }
+            {
+              "id": "v_kuru",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -326,9 +391,15 @@
           "terms": [
             "v_gyousha",
             "v_mizu",
-            { "id": "v_tomeru", "form": "te_form" },
+            {
+              "id": "v_tomeru",
+              "form": "te_form"
+            },
             "v_sensha",
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -336,12 +407,21 @@
           "en": "There are inconvenient things too, but citizens value the industry.",
           "terms": [
             "v_fuben",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "v_kokumin",
             "v_sangyou",
             "v_taisetsu",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -377,7 +457,10 @@
             "v_suru",
             "v_sensha",
             "v_mizu",
-            { "id": "v_tomeru", "form": "polite_masu" }
+            {
+              "id": "v_tomeru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -393,8 +476,14 @@
             "v_kokumin",
             "v_sangyou",
             "v_taisetsu",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]

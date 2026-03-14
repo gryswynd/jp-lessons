@@ -60,8 +60,9 @@
             "p_wa",
             {
               "id": "v_ookii",
-              "form": "appearance_sou"
-            }
+              "form": "appearance_sou_stem"
+            },
+            "g_desu"
           ]
         },
         {
@@ -93,8 +94,9 @@
             "p_wa",
             {
               "id": "v_ii",
-              "form": "polite_past_adj"
-            }
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ]
         },
         {
@@ -300,8 +302,9 @@
             "p_wa",
             {
               "id": "v_ookii",
-              "form": "appearance_sou"
+              "form": "appearance_sou_stem"
             },
+            "g_desu",
             "p_yo",
             "v_mata",
             {
@@ -432,10 +435,8 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            {
-              "id": "v_nagai",
-              "form": "polite_adj"
-            },
+            "v_nagai",
+            "g_desu",
             "v_michi",
             "g_desu",
             "p_ne"
@@ -454,10 +455,8 @@
             "p_no",
             "v_michi",
             "p_mo",
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "p_ne",
             "v_hokutou",
             "p_ni",
@@ -487,10 +486,8 @@
             "p_no",
             "v_nihongo",
             "p_wa",
-            {
-              "id": "v_jouzu",
-              "form": "polite_adj"
-            },
+            "v_jouzu",
+            "g_desu",
             "p_yo"
           ]
         },
@@ -501,10 +498,8 @@
           "terms": [
             "p_arigatou",
             "v_mada",
-            {
-              "id": "v_jouzu",
-              "form": "polite_adj"
-            },
+            "v_jouzu",
+            "g_desu",
             "p_dewa",
             {
               "id": "v_aru",
@@ -547,10 +542,8 @@
               "form": "polite_masu"
             },
             "v_mada",
-            {
-              "id": "v_heta",
-              "form": "polite_adj"
-            }
+            "v_heta",
+            "g_desu"
           ]
         },
         {
@@ -788,10 +781,8 @@
               "id": "v_nagai",
               "form": "te_form"
             },
-            {
-              "id": "v_kirei",
-              "form": "polite_adj"
-            }
+            "v_kirei",
+            "g_desu"
           ]
         },
         {
@@ -802,10 +793,8 @@
             "p_no",
             "v_michi",
             "p_wa",
-            {
-              "id": "v_furui",
-              "form": "polite_adj"
-            },
+            "v_furui",
+            "g_desu",
             "p_ga_but",
             "v_mainichi",
             "v_densha",
@@ -842,10 +831,8 @@
               "id": "v_ookii",
               "form": "te_form"
             },
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "p_yo",
             "v_tomodachi",
             "p_to",
@@ -960,10 +947,8 @@
               "form": "polite_masu"
             },
             "v_mada",
-            {
-              "id": "v_heta",
-              "form": "polite_adj"
-            },
+            "v_heta",
+            "g_desu",
             "p_ga_but",
             {
               "id": "v_jouzu",
@@ -983,10 +968,8 @@
             "char_yamakawa",
             "v_san",
             "p_wa",
-            {
-              "id": "v_jouzu",
-              "form": "polite_adj"
-            },
+            "v_jouzu",
+            "g_desu",
             "p_yo",
             "p_to_quote",
             {
@@ -999,8 +982,9 @@
             "v_totemo",
             {
               "id": "v_ureshii",
-              "form": "polite_past_adj"
-            }
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ]
         },
         {
@@ -1105,10 +1089,8 @@
             "char_yamakawa",
             "v_san",
             "p_wa",
-            {
-              "id": "v_jouzu",
-              "form": "polite_adj"
-            },
+            "v_jouzu",
+            "g_desu",
             "p_yo",
             "p_to_quote",
             {
@@ -1334,10 +1316,8 @@
           "terms": [
             "v_nihongo",
             "p_ga",
-            {
-              "id": "v_jouzu",
-              "form": "polite_adj"
-            }
+            "v_jouzu",
+            "g_desu"
           ]
         },
         {
@@ -1381,8 +1361,9 @@
             "p_wa",
             {
               "id": "v_ookii",
-              "form": "polite_past_adj"
-            }
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ]
         },
         {

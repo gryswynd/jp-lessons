@@ -94,9 +94,10 @@
           "en": "Was the doctor kind?",
           "terms": [
             "v_isha",
+            "v_shinsetsu",
             {
-              "id": "v_shinsetsu",
-              "form": "polite_past_adj"
+              "id": "g_desu",
+              "form": "polite_past_copula"
             }
           ]
         },
@@ -248,10 +249,8 @@
           "en": "Is the bank far?",
           "terms": [
             "v_ginkou",
-            {
-              "id": "v_tooi",
-              "form": "polite_adj"
-            }
+            "v_tooi",
+            "g_desu"
           ]
         },
         {
@@ -382,8 +381,9 @@
           "terms": [
             {
               "id": "v_takai",
-              "form": "appearance_sou"
-            }
+              "form": "appearance_sou_stem"
+            },
+            "g_desu"
           ]
         }
       ]

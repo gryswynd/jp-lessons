@@ -6,7 +6,20 @@
     "phase": 4,
     "type": "assessment",
     "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 7–8.",
-    "kanji": ["族", "親", "兄", "姉", "妹", "弟", "冬", "寒", "春", "暑", "夏", "秋"]
+    "kanji": [
+      "族",
+      "親",
+      "兄",
+      "姉",
+      "妹",
+      "弟",
+      "冬",
+      "寒",
+      "春",
+      "暑",
+      "夏",
+      "秋"
+    ]
   },
   "sections": [
     {
@@ -26,7 +39,10 @@
                 "p_wa",
                 "v_kyoudai",
                 "p_ga",
-                { "id": "v_iru", "form": "polite_masu" },
+                {
+                  "id": "v_iru",
+                  "form": "polite_masu"
+                },
                 "p_ka"
               ]
             },
@@ -36,12 +52,21 @@
               "terms": [
                 "v_ani",
                 "p_ga",
-                { "id": "v_iru", "form": "polite_masu" },
+                {
+                  "id": "v_iru",
+                  "form": "polite_masu"
+                },
                 "v_kaisha",
                 "p_de",
                 "v_mainichi",
-                { "id": "v_hataraku", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_masu" }
+                {
+                  "id": "v_hataraku",
+                  "form": "te_form"
+                },
+                {
+                  "id": "v_iru",
+                  "form": "polite_masu"
+                }
               ]
             },
             {
@@ -66,7 +91,8 @@
                 "v_naka",
                 "p_de",
                 "v_ichiban",
-                { "id": "v_shinsetsu", "form": "polite_adj" }
+                "v_shinsetsu",
+                "g_desu"
               ]
             }
           ],
@@ -94,7 +120,8 @@
                 "p_to",
                 "v_dochira",
                 "p_ga",
-                { "id": "v_suki", "form": "polite_adj" },
+                "v_suki",
+                "g_desu",
                 "p_ka"
               ]
             },
@@ -104,13 +131,15 @@
               "terms": [
                 "v_aki",
                 "p_ga",
-                { "id": "v_suki", "form": "polite_adj" },
+                "v_suki",
+                "g_desu",
                 "v_ki",
                 "p_no",
                 "v_iro",
                 "p_ga",
                 "v_totemo",
-                { "id": "v_kirei", "form": "polite_adj" },
+                "v_kirei",
+                "g_desu",
                 "p_kara_because"
               ]
             },
@@ -130,12 +159,17 @@
               "terms": [
                 "v_natsu",
                 "p_wa",
-                { "id": "v_atsui", "form": "polite_adj" },
+                "v_atsui",
+                "g_desu",
                 "p_ga_but",
                 "v_natsuyasumi",
                 "p_ga",
-                { "id": "v_aru", "form": "te_form" },
-                { "id": "v_ii", "form": "polite_adj" },
+                {
+                  "id": "v_aru",
+                  "form": "te_form"
+                },
+                "v_ii",
+                "g_desu",
                 "p_ne"
               ]
             }
@@ -159,7 +193,10 @@
               "jp": "今日 寒いね。もう 冬だ。",
               "terms": [
                 "v_kyou",
-                { "id": "v_samui", "form": null },
+                {
+                  "id": "v_samui",
+                  "form": null
+                },
                 "p_ne",
                 "v_mou",
                 "v_fuyu",
@@ -173,14 +210,23 @@
                 "v_un",
                 "v_fuyu",
                 "p_wa",
-                { "id": "v_samui", "form": null },
+                {
+                  "id": "v_samui",
+                  "form": null
+                },
                 "p_kedo",
                 "v_yuki",
                 "p_ga",
-                { "id": "v_kirei", "form": null },
+                {
+                  "id": "v_kirei",
+                  "form": null
+                },
                 "g_da",
                 "p_kara_because",
-                { "id": "v_suki", "form": null }
+                {
+                  "id": "v_suki",
+                  "form": null
+                }
               ]
             },
             {
@@ -195,19 +241,28 @@
                 "p_no",
                 "v_yuki",
                 "p_wo",
-                { "id": "v_miru", "form": "plain_desire_tai" }
+                {
+                  "id": "v_miru",
+                  "form": "plain_desire_tai"
+                }
               ]
             },
             {
               "spk": "B",
               "jp": "いいね！お姉さんは とても 親切だよ。",
               "terms": [
-                { "id": "v_ii", "form": null },
+                {
+                  "id": "v_ii",
+                  "form": null
+                },
                 "p_ne",
                 "v_oneesan",
                 "p_wa",
                 "v_totemo",
-                { "id": "v_shinsetsu", "form": null },
+                {
+                  "id": "v_shinsetsu",
+                  "form": null
+                },
                 "g_da",
                 "p_yo"
               ]
@@ -233,39 +288,109 @@
         {
           "kind": "scramble",
           "q": "My older sister is better at cooking than my older brother.",
-          "segments": ["姉", "は", "兄", "より", "料理", "が", "上手です"],
-          "distractors": ["を", "弟", "下手です"],
+          "segments": [
+            "姉",
+            "は",
+            "兄",
+            "より",
+            "料理",
+            "が",
+            "上手です"
+          ],
+          "distractors": [
+            "を",
+            "弟",
+            "下手です"
+          ],
           "explanation": "姉 + は (topic) + 兄 + より (than) + 料理 + が (subject of predicate) + 上手です. Use より to express 'more than' in a comparison. を marks a direct object, not relevant here. 弟 (younger brother) is a distractor person; 下手です (bad at) reverses the meaning."
         },
         {
           "kind": "scramble",
           "q": "My family likes autumn the most.",
-          "segments": ["私", "の", "家族", "は", "秋", "が", "いちばん", "好きです"],
-          "distractors": ["より", "春", "嫌いです"],
+          "segments": [
+            "私",
+            "の",
+            "家族",
+            "は",
+            "秋",
+            "が",
+            "いちばん",
+            "好きです"
+          ],
+          "distractors": [
+            "より",
+            "春",
+            "嫌いです"
+          ],
           "explanation": "私の + 家族 + は (topic) + 秋 + が (subject) + いちばん (most) + 好きです. Use いちばん for superlative meaning 'the most'. より is used for comparison between two things, not for superlative. 春 (spring) is a distractor season."
         },
         {
           "kind": "scramble",
           "q": "My older brother works at a company every day.",
-          "segments": ["兄", "は", "毎日", "会社", "で", "働いて", "います"],
-          "alts": [
-            ["毎日", "兄", "は", "会社", "で", "働いて", "います"]
+          "segments": [
+            "兄",
+            "は",
+            "毎日",
+            "会社",
+            "で",
+            "働いて",
+            "います"
           ],
-          "distractors": ["を", "姉", "働きます"],
+          "alts": [
+            [
+              "毎日",
+              "兄",
+              "は",
+              "会社",
+              "で",
+              "働いて",
+              "います"
+            ]
+          ],
+          "distractors": [
+            "を",
+            "姉",
+            "働きます"
+          ],
           "explanation": "兄 + は (topic) + 毎日 + 会社 + で (location of action) + 働いて (te-form) + います (progressive). で marks the place of action. を marks a direct object, which doesn't apply here. 働きます is the simple polite form, not the progressive ています pattern. Time words like 毎日 can also go sentence-initially: 毎日 + 兄は + 会社で + 働いています."
         },
         {
           "kind": "scramble",
           "q": "Winter is cold, but the snow is very beautiful.",
-          "segments": ["冬", "は", "寒いですが", "ゆき", "が", "とても", "きれいです"],
-          "distractors": ["を", "暑いですが", "きれいじゃない"],
+          "segments": [
+            "冬",
+            "は",
+            "寒いですが",
+            "ゆき",
+            "が",
+            "とても",
+            "きれいです"
+          ],
+          "distractors": [
+            "を",
+            "暑いですが",
+            "きれいじゃない"
+          ],
           "explanation": "冬 + は (topic) + 寒いですが (cold, but — contrast connector) + ゆき + が (subject) + とても + きれいです. が in 寒いですが connects contrasting clauses. を marks a direct object. 暑いですが reverses the season's temperature. きれいじゃない negates the beauty."
         },
         {
           "kind": "scramble",
           "q": "My older sister is kind and the most liked in the family.",
-          "segments": ["姉", "は", "親切で", "家族", "の", "中で", "いちばん", "好きです"],
-          "distractors": ["を", "兄弟", "嫌いです"],
+          "segments": [
+            "姉",
+            "は",
+            "親切で",
+            "家族",
+            "の",
+            "中で",
+            "いちばん",
+            "好きです"
+          ],
+          "distractors": [
+            "を",
+            "兄弟",
+            "嫌いです"
+          ],
           "explanation": "姉 + は (topic) + 親切で (kind — connective て-form of な-adjective 親切) + 家族の中で (among the family) + いちばん (most) + 好きです. 親切で connects two descriptions with the conjunctive な-adjective form. を marks a direct object and does not fit here."
         }
       ]
@@ -282,7 +407,10 @@
             "p_no",
             "v_kazoku",
             "p_wa",
-            { "counter": "nin", "n": 5 },
+            {
+              "counter": "nin",
+              "n": 5
+            },
             "v_oya",
             "p_to",
             "v_ani",
@@ -291,7 +419,10 @@
             "p_to",
             "v_otouto",
             "p_ga",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -305,8 +436,14 @@
             "v_ima",
             "v_kaisha",
             "p_de",
-            { "id": "v_hataraku", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_hataraku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -320,12 +457,21 @@
             "v_naka",
             "p_de",
             "v_ichiban",
-            { "id": "v_shinsetsu", "form": null },
+            {
+              "id": "v_shinsetsu",
+              "form": null
+            },
             "v_mainichi",
             "v_ryouri",
             "p_wo",
-            { "id": "v_tsukuru", "form": "te_form" },
-            { "id": "v_kureru", "form": "polite_masu" }
+            {
+              "id": "v_tsukuru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kureru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -338,12 +484,16 @@
             "p_wa",
             "v_aki",
             "p_ga",
-            { "id": "v_suki", "form": "polite_adj" },
+            "v_suki",
+            "g_desu",
             "v_aki",
             "p_wa",
             "v_natsu",
             "p_yori",
-            { "id": "v_suzushii", "form": "te_form" },
+            {
+              "id": "v_suzushii",
+              "form": "te_form"
+            },
             "v_ki",
             "p_no",
             "v_iro",
@@ -352,7 +502,10 @@
             "p_ya",
             "v_chairo",
             "p_ni",
-            { "id": "v_naru", "form": "polite_masu" }
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -361,16 +514,21 @@
           "terms": [
             "v_fuyu",
             "p_wa",
-            { "id": "v_samui", "form": "polite_adj" },
+            "v_samui",
+            "g_desu",
             "p_ga_but",
             "v_kazoku",
             "p_de",
             "v_yuki",
             "p_wo",
-            { "id": "v_miru", "form": null },
+            {
+              "id": "v_miru",
+              "form": null
+            },
             "p_no",
             "p_ga",
-            { "id": "v_suki", "form": "polite_adj" }
+            "v_suki",
+            "g_desu"
           ]
         }
       ],
@@ -403,7 +561,8 @@
             "v_kazoku",
             "v_naka",
             "v_ichiban",
-            { "id": "v_shinsetsu", "form": "polite_adj" }
+            "v_shinsetsu",
+            "g_desu"
           ],
           "explanation": "Sentence 3 says 姉は家族の中でいちばん親切で (my older sister is the kindest in the family)."
         },
@@ -421,7 +580,10 @@
             "v_kazoku",
             "v_nani",
             "v_yuki",
-            { "id": "v_miru", "form": "polite_masu" }
+            {
+              "id": "v_miru",
+              "form": "polite_masu"
+            }
           ],
           "explanation": "Sentence 5 says 家族でゆきを見るのが好きです (the family likes watching snow together)."
         }

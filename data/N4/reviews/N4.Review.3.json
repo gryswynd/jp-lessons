@@ -79,17 +79,13 @@
               "spk": "B",
               "jp": "いい ですね。ここの 食べ物は とても おいしいですよ。どうぞ。",
               "terms": [
-                {
-                  "id": "v_ii",
-                  "form": "polite_adj"
-                },
+                "v_ii",
+                "g_desu",
                 "v_koko",
                 "v_tabemono",
                 "v_totemo",
-                {
-                  "id": "v_oishii",
-                  "form": "polite_adj"
-                },
+                "v_oishii",
+                "g_desu",
                 "p_douzo"
               ]
             }
@@ -131,10 +127,8 @@
               "spk": "B",
               "jp": "いい ですね。今日は 鳥肉の 料理が 食べたいです。",
               "terms": [
-                {
-                  "id": "v_ii",
-                  "form": "polite_adj"
-                },
+                "v_ii",
+                "g_desu",
                 "v_kyou",
                 "v_toriniku",
                 "v_ryouri",
@@ -156,10 +150,8 @@
                 "p_yori",
                 "v_toriniku",
                 "v_aji",
-                {
-                  "id": "v_oishii",
-                  "form": "polite_adj"
-                }
+                "v_oishii",
+                "g_desu"
               ]
             },
             {
@@ -422,8 +414,9 @@
             "v_totemo",
             {
               "id": "v_ii",
-              "form": "polite_past_adj"
-            }
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ]
         },
         {
@@ -450,8 +443,9 @@
             "p_yori",
             {
               "id": "v_oishii",
-              "form": "polite_past_adj"
-            }
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ]
         }
       ],
@@ -508,8 +502,9 @@
             "v_dochira",
             {
               "id": "v_oishii",
-              "form": "polite_past_adj"
-            }
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ],
           "explanation": "鳥肉の料理は牛肉よりおいしかったです — 'The chicken dish was more delicious than beef.' より marks 牛肉 as the lesser comparison point, so 鳥肉の料理 is the more delicious option."
         }
@@ -692,14 +687,10 @@
             "v_kaimono",
             "v_monogatari",
             "v_nomimono",
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
-            {
-              "id": "v_oishii",
-              "form": "polite_adj"
-            }
+            "v_ii",
+            "g_desu",
+            "v_oishii",
+            "g_desu"
           ]
         },
         {
@@ -749,10 +740,8 @@
             "v_toriniku",
             "v_gyuuniku",
             "p_yori",
-            {
-              "id": "v_oishii",
-              "form": "polite_adj"
-            }
+            "v_oishii",
+            "g_desu"
           ]
         },
         {

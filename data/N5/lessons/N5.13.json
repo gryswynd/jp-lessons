@@ -68,8 +68,9 @@
             "p_wa",
             {
               "id": "v_omoshiroi",
-              "form": "appearance_sou"
+              "form": "appearance_sou_stem"
             },
+            "g_desu",
             "p_ne"
           ]
         },
@@ -83,8 +84,9 @@
             "p_wa",
             {
               "id": "v_nagai",
-              "form": "polite_past_adj"
-            }
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ]
         },
         {
@@ -274,10 +276,8 @@
             "v_nihongo",
             "p_wa",
             "v_totemo",
-            {
-              "id": "v_omoshiroi",
-              "form": "polite_adj"
-            },
+            "v_omoshiroi",
+            "g_desu",
             "v_mainichi",
             {
               "id": "v_hanasu",
@@ -291,10 +291,8 @@
           "jp": "いいですね。毎日 本を 読んで、書いてください。",
           "en": "That's great. Please read and write books every day.",
           "terms": [
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "p_ne",
             "v_mainichi",
             "v_hon",
@@ -392,10 +390,8 @@
             "p_no",
             "v_hon",
             "p_wa",
-            {
-              "id": "v_omoshiroi",
-              "form": "polite_adj"
-            },
+            "v_omoshiroi",
+            "g_desu",
             "p_ne"
           ]
         },
@@ -429,8 +425,9 @@
             "p_wa",
             {
               "id": "v_omoshiroi",
-              "form": "appearance_sou"
+              "form": "appearance_sou_stem"
             },
+            "g_desu",
             "p_yo",
             "v_nihongo",
             "p_no",
@@ -443,10 +440,8 @@
           "jp": "いいですね。学校で 読みましょう。電話で も 話しましょう。",
           "en": "Sounds good. Let's read at school. Let's also talk on the phone.",
           "terms": [
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "p_ne",
             "v_gakkou",
             "p_de",
@@ -513,10 +508,8 @@
             "p_no",
             "v_hon",
             "p_wa",
-            {
-              "id": "v_omoshiroi",
-              "form": "polite_adj"
-            },
+            "v_omoshiroi",
+            "g_desu",
             "p_ne"
           ]
         },
@@ -554,8 +547,9 @@
             "p_wa",
             {
               "id": "v_omoshiroi",
-              "form": "appearance_sou"
+              "form": "appearance_sou_stem"
             },
+            "g_desu",
             "p_yo",
             {
               "id": "v_yomu",
@@ -588,10 +582,8 @@
           "jp": "いいですね。毎日 日本語で 話しましょう。",
           "en": "Wonderful. Let's speak Japanese every day.",
           "terms": [
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "p_ne",
             "v_mainichi",
             "v_nihongo",
@@ -750,10 +742,8 @@
             "p_no",
             "v_hon",
             "p_wa",
-            {
-              "id": "v_omoshiroi",
-              "form": "polite_adj"
-            },
+            "v_omoshiroi",
+            "g_desu",
             "v_mainichi",
             "v_gakkou",
             "p_de",
@@ -922,8 +912,9 @@
             "p_wa",
             {
               "id": "v_omoshiroi",
-              "form": "appearance_sou"
+              "form": "appearance_sou_stem"
             },
+            "g_desu",
             "char_ren",
             "v_san",
             "p_wa",
@@ -996,10 +987,8 @@
             },
             "v_karate",
             "p_wa",
-            {
-              "id": "v_omoshiroi",
-              "form": "polite_adj"
-            }
+            "v_omoshiroi",
+            "g_desu"
           ]
         }
       ],
@@ -1035,8 +1024,9 @@
             "v_hon",
             {
               "id": "v_omoshiroi",
-              "form": "appearance_sou"
-            }
+              "form": "appearance_sou_stem"
+            },
+            "g_desu"
           ]
         },
         {
@@ -1285,8 +1275,9 @@
             "p_wa",
             {
               "id": "v_omoshiroi",
-              "form": "appearance_sou"
-            }
+              "form": "appearance_sou_stem"
+            },
+            "g_desu"
           ]
         },
         {

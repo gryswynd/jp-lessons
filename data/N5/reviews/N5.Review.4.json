@@ -54,10 +54,8 @@
                 },
                 "v_karee",
                 "p_wa",
-                {
-                  "id": "v_ookii",
-                  "form": "polite_adj"
-                },
+                "v_ookii",
+                "g_desu",
                 "p_yo"
               ]
             },
@@ -141,15 +139,11 @@
               "spk": "A",
               "jp": "新しいですか、古いですか。",
               "terms": [
-                {
-                  "id": "v_atarashii",
-                  "form": "polite_adj"
-                },
+                "v_atarashii",
+                "g_desu",
                 "p_ka",
-                {
-                  "id": "v_furui",
-                  "form": "polite_adj"
-                },
+                "v_furui",
+                "g_desu",
                 "p_ka"
               ]
             },
@@ -157,19 +151,13 @@
               "spk": "B",
               "jp": "新しいです。長いですよ。安いですよ。",
               "terms": [
-                {
-                  "id": "v_atarashii",
-                  "form": "polite_adj"
-                },
-                {
-                  "id": "v_nagai",
-                  "form": "polite_adj"
-                },
+                "v_atarashii",
+                "g_desu",
+                "v_nagai",
+                "g_desu",
                 "p_yo",
-                {
-                  "id": "v_yasui",
-                  "form": "polite_adj"
-                },
+                "v_yasui",
+                "g_desu",
                 "p_yo"
               ]
             }
@@ -222,10 +210,8 @@
               "spk": "A",
               "jp": "おいしいですか。",
               "terms": [
-                {
-                  "id": "v_oishii",
-                  "form": "polite_adj"
-                },
+                "v_oishii",
+                "g_desu",
                 "p_ka"
               ]
             },
@@ -235,10 +221,8 @@
               "terms": [
                 "p_hai",
                 "v_totemo",
-                {
-                  "id": "v_oishii",
-                  "form": "polite_adj"
-                },
+                "v_oishii",
+                "g_desu",
                 "v_issho",
                 "v_depaato",
                 "p_e",
@@ -449,15 +433,11 @@
           "terms": [
             "v_karee",
             "p_wa",
-            {
-              "id": "v_ookii",
-              "form": "polite_adj"
-            },
+            "v_ookii",
+            "g_desu",
             "v_totemo",
-            {
-              "id": "v_oishii",
-              "form": "polite_adj"
-            },
+            "v_oishii",
+            "g_desu",
             "p_yo"
           ]
         },
@@ -490,14 +470,10 @@
             },
             "v_purezento",
             "p_wa",
-            {
-              "id": "v_atarashii",
-              "form": "polite_adj"
-            },
-            {
-              "id": "v_yasui",
-              "form": "polite_adj"
-            },
+            "v_atarashii",
+            "g_desu",
+            "v_yasui",
+            "g_desu",
             "p_yo"
           ]
         }
@@ -565,10 +541,8 @@
             "v_dou",
             "g_desu",
             "p_ka",
-            {
-              "id": "v_atarashii",
-              "form": "polite_adj"
-            }
+            "v_atarashii",
+            "g_desu"
           ],
           "explanation": "The passage says プレゼントは新しいです。安いですよ — 'The present is new. It is cheap, you know.' 新しいです (new) is confirmed. The other choices contradict the passage: 古いです (old) is the antonym of 新しい. 高いです (expensive) contradicts 安いです (cheap). 小さいです is never mentioned."
         }
@@ -737,15 +711,11 @@
           "terms": [
             "v_kore",
             "p_wa",
-            {
-              "id": "v_atarashii",
-              "form": "polite_adj"
-            },
+            "v_atarashii",
+            "g_desu",
             "v_are",
-            {
-              "id": "v_furui",
-              "form": "polite_adj"
-            }
+            "v_furui",
+            "g_desu"
           ],
           "explanation": "古いです (is old, N5.8) is the natural antonym of 新しい (new). The sentence contrasts これ (this) being new with あれ (that thing over there) being its opposite. 新しいです repeats the same meaning. おいしいです and ほしいです introduce unrelated concepts not supported by the context."
         },
@@ -832,10 +802,8 @@
             "p_no",
             "v_purezento",
             "p_wa",
-            {
-              "id": "v_takai",
-              "form": "polite_adj"
-            }
+            "v_takai",
+            "g_desu"
           ],
           "explanation": "の marks possession or attribution between two nouns: 友だちのプレゼント = 'a friend's present.' の connects 友だち and プレゼント — the first noun modifies the second. に marks an indirect object or time point. を marks a direct object (プレゼントは is the topic here, not the object). が marks the subject, not possession."
         },
@@ -872,10 +840,8 @@
           "terms": [
             "v_purezento",
             "p_ga",
-            {
-              "id": "v_hoshii",
-              "form": "polite_adj"
-            }
+            "v_hoshii",
+            "g_desu"
           ],
           "explanation": "ほしい (wanted/desired, N5.8) is an adjective — its desired object takes が: プレゼントがほしいです = 'I want a present.' This is a key N5.8 pattern: noun + が + ほしいです. Compare: verb-stem + たいです for wanting to do actions (買いたいです = 'want to buy'). を is for verb objects (食べる, 飲む, 買う) — not for the adjective ほしい."
         }

@@ -75,10 +75,8 @@
             "p_wa",
             "v_gyuuniku",
             "p_yori",
-            {
-              "id": "v_oishii",
-              "form": "polite_adj"
-            },
+            "v_oishii",
+            "g_desu",
             "p_ka"
           ]
         },
@@ -284,8 +282,9 @@
             "p_yori",
             {
               "id": "v_oishii",
-              "form": "appearance_sou"
+              "form": "appearance_sou_stem"
             },
+            "g_desu",
             "p_kara_because"
           ]
         },
@@ -300,18 +299,14 @@
             "v_ryouri",
             "p_ga",
             "v_ichiban",
-            {
-              "id": "v_oishii",
-              "form": "polite_adj"
-            },
+            "v_oishii",
+            "g_desu",
             "p_yo",
             "v_aji",
             "p_mo",
             "v_totemo",
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            }
+            "v_ii",
+            "g_desu"
           ]
         },
         {
@@ -395,10 +390,8 @@
             "v_aji",
             "p_wa",
             "v_totemo",
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "p_yo"
           ]
         },
@@ -466,10 +459,8 @@
             "p_no",
             "v_aji",
             "p_ga",
-            {
-              "id": "v_suki",
-              "form": "polite_adj"
-            },
+            "v_suki",
+            "g_desu",
             "p_kara_because"
           ]
         },
@@ -478,10 +469,8 @@
           "jp": "いいですね！私も 同じ 料理に します。",
           "en": "Nice! I'll have the same dish too.",
           "terms": [
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "v_watashi",
             "p_mo",
             "v_onaji",
@@ -504,10 +493,8 @@
             "v_aji",
             "p_wa",
             "v_ichiban",
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
+            "g_desu",
             "p_yo",
             "v_mainichi",
             {
@@ -649,8 +636,9 @@
             "p_yori",
             {
               "id": "v_oishii",
-              "form": "polite_past_adj"
-            }
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ]
         },
         {
@@ -688,18 +676,14 @@
             "v_aji",
             "p_ga",
             "v_totemo",
-            {
-              "id": "v_suki",
-              "form": "polite_adj"
-            },
+            "v_suki",
+            "g_desu",
             "v_kono",
             "v_ryouri",
             "p_wa",
             "v_ichiban",
-            {
-              "id": "v_oishii",
-              "form": "polite_adj"
-            }
+            "v_oishii",
+            "g_desu"
           ]
         },
         {
@@ -769,10 +753,8 @@
             "v_donna",
             "v_aji",
             "p_ga",
-            {
-              "id": "v_suki",
-              "form": "polite_adj"
-            },
+            "v_suki",
+            "g_desu",
             "p_ka",
             "v_toriniku",
             "p_no",
@@ -825,10 +807,8 @@
             "p_no",
             "v_aji",
             "p_ga",
-            {
-              "id": "v_suki",
-              "form": "polite_adj"
-            }
+            "v_suki",
+            "g_desu"
           ]
         },
         {
@@ -869,10 +849,8 @@
             "v_aji",
             "p_ga",
             "v_totemo",
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            }
+            "v_ii",
+            "g_desu"
           ]
         },
         {
@@ -897,10 +875,8 @@
             "v_ryouri",
             "p_ga",
             "v_ichiban",
-            {
-              "id": "v_suki",
-              "form": "polite_adj"
-            }
+            "v_suki",
+            "g_desu"
           ]
         }
       ],
@@ -1097,10 +1073,8 @@
             "p_wa",
             "v_gyuuniku",
             "p_yori",
-            {
-              "id": "v_oishii",
-              "form": "polite_adj"
-            }
+            "v_oishii",
+            "g_desu"
           ]
         },
         {
@@ -1181,8 +1155,9 @@
             "v_totemo",
             {
               "id": "v_ii",
-              "form": "polite_past_adj"
-            }
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ]
         }
       ]

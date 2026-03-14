@@ -264,10 +264,8 @@
                 "p_wa",
                 "v_shinamono",
                 "p_ga",
-                {
-                  "id": "v_sukunai",
-                  "form": "polite_adj"
-                }
+                "v_sukunai",
+                "g_desu"
               ]
             },
             {
@@ -287,10 +285,8 @@
               "spk": "B",
               "jp": "いいですよ。明日 持って 来ます。",
               "terms": [
-                {
-                  "id": "v_ii",
-                  "form": "polite_adj"
-                },
+                "v_ii",
+                "g_desu",
                 "v_ashita",
                 {
                   "id": "v_motsu",
@@ -439,10 +435,8 @@
               "terms": [
                 "v_mijikai",
                 "v_jikan",
-                {
-                  "id": "v_ii",
-                  "form": "polite_adj"
-                },
+                "v_ii",
+                "g_desu",
                 "p_ka"
               ]
             },
@@ -457,10 +451,8 @@
                   "id": "v_suru",
                   "form": "conditional_ba"
                 },
-                {
-                  "id": "v_ii",
-                  "form": "polite_adj"
-                }
+                "v_ii",
+                "g_desu"
               ]
             }
           ],
@@ -548,10 +540,8 @@
                   "form": "polite_masu"
                 },
                 "v_mainichi",
-                {
-                  "id": "v_tanoshii",
-                  "form": "polite_adj"
-                }
+                "v_tanoshii",
+                "g_desu"
               ]
             }
           ],
@@ -656,10 +646,8 @@
               "terms": [
                 "v_kotae",
                 "p_wa",
-                {
-                  "id": "v_tadashii",
-                  "form": "polite_adj"
-                },
+                "v_tadashii",
+                "g_desu",
                 "p_ka"
               ]
             },
@@ -670,10 +658,8 @@
                 "v_iie",
                 "v_kotae",
                 "p_wa",
-                {
-                  "id": "v_warui",
-                  "form": "polite_adj"
-                },
+                "v_warui",
+                "g_desu",
                 "v_yoku",
                 {
                   "id": "v_kangaeru",
@@ -688,10 +674,8 @@
               "terms": [
                 "v_doko",
                 "p_ga",
-                {
-                  "id": "v_warui",
-                  "form": "polite_adj"
-                },
+                "v_warui",
+                "g_desu",
                 "p_ka"
               ]
             },
@@ -701,10 +685,8 @@
               "terms": [
                 "v_koko",
                 "p_ga",
-                {
-                  "id": "v_warui",
-                  "form": "polite_adj"
-                },
+                "v_warui",
+                "g_desu",
                 {
                   "id": "v_tadashii",
                   "form": "adverbial"
@@ -832,10 +814,8 @@
                 },
                 "v_mura",
                 "p_kara",
-                {
-                  "id": "v_chikai",
-                  "form": "polite_adj"
-                }
+                "v_chikai",
+                "g_desu"
               ]
             },
             {
@@ -846,10 +826,8 @@
                 "p_no",
                 "v_mon",
                 "p_wa",
-                {
-                  "id": "v_ookii",
-                  "form": "polite_adj"
-                },
+                "v_ookii",
+                "g_desu",
                 "p_ka"
               ]
             },
@@ -861,10 +839,8 @@
                 "v_seimon",
                 "p_wa",
                 "v_totemo",
-                {
-                  "id": "v_ookii",
-                  "form": "polite_adj"
-                }
+                "v_ookii",
+                "g_desu"
               ]
             }
           ],
@@ -1022,8 +998,9 @@
                 "p_ga",
                 {
                   "id": "v_ooi",
-                  "form": "polite_past_adj"
+                  "form": "plain_past_adj"
                 },
+                "g_desu",
                 "p_ka"
               ]
             },
@@ -1037,13 +1014,15 @@
                 "p_ga",
                 {
                   "id": "v_ooi",
-                  "form": "polite_past_adj"
+                  "form": "plain_past_adj"
                 },
+                "g_desu",
                 "v_totemo",
                 {
                   "id": "v_omoshiroi",
-                  "form": "polite_past_adj"
-                }
+                  "form": "plain_past_adj"
+                },
+                "g_desu"
               ]
             }
           ],
@@ -1183,10 +1162,8 @@
                 "p_no",
                 "v_chuushin",
                 "p_wa",
-                {
-                  "id": "v_hiroi",
-                  "form": "polite_adj"
-                },
+                "v_hiroi",
+                "g_desu",
                 "p_ka"
               ]
             },
@@ -1200,16 +1177,12 @@
                 "v_chuushin",
                 "p_wa",
                 "v_totemo",
-                {
-                  "id": "v_hiroi",
-                  "form": "polite_adj"
-                },
+                "v_hiroi",
+                "g_desu",
                 "v_hito",
                 "p_ga",
-                {
-                  "id": "v_ooi",
-                  "form": "polite_adj"
-                }
+                "v_ooi",
+                "g_desu"
               ]
             }
           ],
@@ -1485,10 +1458,8 @@
               "terms": [
                 "v_chiku",
                 "p_wa",
-                {
-                  "id": "v_fuben",
-                  "form": "polite_adj"
-                },
+                "v_fuben",
+                "g_desu",
                 "p_ka"
               ]
             },
@@ -1499,14 +1470,10 @@
                 "p_hai",
                 "v_basu",
                 "p_ga",
-                {
-                  "id": "v_sukunai",
-                  "form": "polite_adj"
-                },
-                {
-                  "id": "v_fuben",
-                  "form": "polite_adj"
-                }
+                "v_sukunai",
+                "g_desu",
+                "v_fuben",
+                "g_desu"
               ]
             },
             {
@@ -1536,10 +1503,8 @@
                 },
                 "v_sangyo",
                 "p_mo",
-                {
-                  "id": "v_taisetsu",
-                  "form": "polite_adj"
-                }
+                "v_taisetsu",
+                "g_desu"
               ]
             }
           ],
@@ -2370,10 +2335,8 @@
           "answer": "ひろい",
           "explanation": "広い (wide/spacious) is read as <b>hiroi</b>.",
           "terms": [
-            {
-              "id": "v_hiroi",
-              "form": "polite_adj"
-            }
+            "v_hiroi",
+            "g_desu"
           ]
         },
         {
@@ -2557,10 +2520,8 @@
           "answer": "不便",
           "explanation": "When there are few buses, the area is <b>fuben</b> (inconvenient).",
           "terms": [
-            {
-              "id": "v_fuben",
-              "form": "polite_adj"
-            }
+            "v_fuben",
+            "g_desu"
           ]
         },
         {
