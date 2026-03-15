@@ -350,6 +350,13 @@
         (characterData.characters || []).forEach(c => {
             this.state.termMap[c.id] = Object.assign({}, c, { portraitUrl: this.getUrl(c.portrait) });
         });
+        // Preload portrait images in the background so they appear instantly on first tap
+        if (window.JPShared && window.JPShared.assets && window.JPShared.assets.preloadImages) {
+            const getUrl = this.getUrl.bind(this);
+            window.JPShared.assets.preloadImages(
+                (characterData.characters || []).map(c => getUrl(c.portrait)).filter(Boolean)
+            );
+        }
 
         // 3. Inject Styles & Modal
         console.log('[Review] Injecting styles...');

@@ -1207,6 +1207,12 @@ window.GameModule = (function() {
           (characterData.characters || []).forEach(c => {
             termMap[c.id] = Object.assign({}, c, { portraitUrl: getSharedAssetUrl(c.portrait) });
           });
+          // Preload portrait images in the background so they appear instantly on first tap
+          if (window.JPShared && window.JPShared.assets && window.JPShared.assets.preloadImages) {
+            window.JPShared.assets.preloadImages(
+              (characterData.characters || []).map(c => getSharedAssetUrl(c.portrait)).filter(Boolean)
+            );
+          }
           conjugationRules = conj;
           counterRules = counter;
           return day;

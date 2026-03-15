@@ -453,6 +453,12 @@ window.StoryModule = (function() {
       (characterData.characters || []).forEach(c => {
         termMapData[c.id] = Object.assign({}, c, { portraitUrl: getCdnUrl(c.portrait) });
       });
+      // Preload portrait images in the background so they appear instantly on first tap
+      if (window.JPShared && window.JPShared.assets && window.JPShared.assets.preloadImages) {
+        window.JPShared.assets.preloadImages(
+          (characterData.characters || []).map(c => getCdnUrl(c.portrait)).filter(Boolean)
+        );
+      }
 
       CONJUGATION_RULES = conjugationRules;
 

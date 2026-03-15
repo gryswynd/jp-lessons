@@ -215,6 +215,12 @@ window.LessonModule = {
         (characterData.characters || []).forEach(c => {
             map[c.id] = Object.assign({}, c, { portraitUrl: getCdnUrl(c.portrait) });
         });
+        // Preload portrait images in the background so they appear instantly on first tap
+        if (window.JPShared && window.JPShared.assets && window.JPShared.assets.preloadImages) {
+            window.JPShared.assets.preloadImages(
+                (characterData.characters || []).map(c => getCdnUrl(c.portrait)).filter(Boolean)
+            );
+        }
         return { map, conj, counter };
     }
 
