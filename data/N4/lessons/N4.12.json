@@ -3,73 +3,18 @@
   "id": "N4.12",
   "title": "Phase 4 Lesson 12: Body & Existence",
   "meta": {
-    "level": "N4",
-    "lesson_number": 12,
+    "phase": 4,
+    "lesson": 12,
     "focus": "Body parts, physical descriptions, and fame",
-    "estimated_minutes": 35,
     "kanji": ["首", "顔", "体", "頭", "心", "有"]
   },
   "newKanji": [
-    {
-      "id": "k_kubi",
-      "lesson": "N4.12",
-      "type": "kanji",
-      "surface": "首",
-      "on": "シュ",
-      "kun": "くび",
-      "reading": "くび",
-      "meaning": "neck"
-    },
-    {
-      "id": "k_kao",
-      "lesson": "N4.12",
-      "type": "kanji",
-      "surface": "顔",
-      "on": "ガン",
-      "kun": "かお",
-      "reading": "かお",
-      "meaning": "face"
-    },
-    {
-      "id": "k_karada",
-      "lesson": "N4.12",
-      "type": "kanji",
-      "surface": "体",
-      "on": "タイ",
-      "kun": "からだ",
-      "reading": "からだ",
-      "meaning": "body"
-    },
-    {
-      "id": "k_atama",
-      "lesson": "N4.12",
-      "type": "kanji",
-      "surface": "頭",
-      "on": "トウ",
-      "kun": "あたま",
-      "reading": "あたま",
-      "meaning": "head"
-    },
-    {
-      "id": "k_kokoro",
-      "lesson": "N4.12",
-      "type": "kanji",
-      "surface": "心",
-      "on": "シン",
-      "kun": "こころ",
-      "reading": "こころ",
-      "meaning": "heart / mind"
-    },
-    {
-      "id": "k_yuu",
-      "lesson": "N4.12",
-      "type": "kanji",
-      "surface": "有",
-      "on": "ユウ",
-      "kun": "あ（る）",
-      "reading": "ゆう",
-      "meaning": "to have / exist"
-    }
+    { "kanji": "首", "on": "シュ", "kun": "くび", "meaning": "neck", "termId": "k_kubi" },
+    { "kanji": "顔", "on": "ガン", "kun": "かお", "meaning": "face", "termId": "k_kao" },
+    { "kanji": "体", "on": "タイ", "kun": "からだ", "meaning": "body", "termId": "k_karada" },
+    { "kanji": "頭", "on": "トウ / ズ", "kun": "あたま", "meaning": "head", "termId": "k_atama" },
+    { "kanji": "心", "on": "シン", "kun": "こころ", "meaning": "heart / mind", "termId": "k_kokoro" },
+    { "kanji": "有", "on": "ユウ", "kun": "あ（る）", "meaning": "to have / exist", "termId": "k_yuu" }
   ],
   "sections": [
     {
@@ -102,19 +47,15 @@
           ]
         },
         {
-          "jp": "休みの 日は、写真を とったり 旅行を したり します。",
-          "en": "On days off, I do things like take photos and travel.",
+          "jp": "本を 読んだり、テレビを 見たり します。",
+          "en": "I sometimes read books and watch TV.",
           "terms": [
-            "v_yasumi",
-            "p_no",
-            "v_hi",
-            "p_wa",
-            "v_shashin",
+            "v_hon",
             "p_wo",
-            { "id": "v_toru", "form": "tari_form" },
-            "v_ryokou",
+            { "id": "v_yomu", "form": "tari_form" },
+            "v_terebi",
             "p_wo",
-            { "id": "v_suru", "form": "tari_form" },
+            { "id": "v_miru", "form": "tari_form" },
             { "id": "v_suru", "form": "polite_masu" }
           ]
         },
@@ -126,7 +67,8 @@
             "p_ni",
             "v_namae",
             "p_wo",
-            { "id": "v_kaku", "form": "te_form" }
+            { "id": "v_kaku", "form": "te_form" },
+            "v_kudasai"
           ]
         }
       ]
@@ -204,10 +146,9 @@
       "lines": [
         {
           "spk": "りきぞ",
-          "jp": "やまかわさん、昨日 テレビで 有名人を 見ました。",
+          "jp": "やまかわさん、きのう テレビで 有名人を 見ました。",
           "en": "Yamakawa-san, I saw a celebrity on TV yesterday.",
           "terms": [
-            "char_rikizo",
             "char_yamakawa",
             "v_san",
             "v_kinou",
@@ -223,7 +164,6 @@
           "jp": "どんな 人ですか。",
           "en": "What kind of person are they?",
           "terms": [
-            "char_yamakawa",
             "v_donna",
             "v_hito",
             "g_desu",
@@ -242,14 +182,12 @@
             "v_kao",
             "p_ga",
             { "id": "v_kirei", "form": "polite_adj" },
-            "g_desu",
             "v_karada",
             "p_mo",
             { "id": "v_ookii", "form": "te_form" },
             "v_atama",
             "p_mo",
-            { "id": "v_ii", "form": "polite_adj" },
-            "g_desu"
+            { "id": "v_ii", "form": "polite_adj" }
           ]
         },
         {
@@ -257,14 +195,12 @@
           "jp": "その 人は 世界で 有名ですか。",
           "en": "Is that person famous around the world?",
           "terms": [
-            "char_yamakawa",
             "v_sono",
             "v_hito",
             "p_wa",
             "v_sekai",
             "p_de",
             { "id": "v_yuumei", "form": "polite_adj" },
-            "g_desu",
             "p_ka"
           ]
         },
@@ -273,7 +209,6 @@
           "jp": "はい、世界中で 人気が あります。",
           "en": "Yes, they are popular all over the world.",
           "terms": [
-            "char_rikizo",
             "p_hai",
             "v_sekaijuu",
             "p_de",
@@ -287,27 +222,25 @@
     {
       "type": "conversation",
       "title": "会話 2: 保健室で",
-      "context": "Rikizo comes to the school health room. Yamakawa-sensei checks on him.",
+      "context": "Rikizo comes to the school health room. Yamamoto-sensei checks on him.",
       "lines": [
         {
           "spk": "りきぞ",
-          "jp": "やまかわ先生、頭が いたいです。",
-          "en": "Yamakawa-sensei, my head hurts.",
+          "jp": "やまもと先生、頭が いたいです。",
+          "en": "Yamamoto-sensei, my head hurts.",
           "terms": [
-            "char_yamakawa",
+            "char_yamamoto",
             "v_sensei",
             "v_atama",
             "p_ga",
-            { "id": "v_itai", "form": "polite_adj" },
-            "g_desu"
+            { "id": "v_itai", "form": "polite_adj" }
           ]
         },
         {
-          "spk": "やまかわ",
+          "spk": "やまもと",
           "jp": "だいじょうぶですか。顔色が よくないですね。",
           "en": "Are you okay? Your complexion doesn't look good.",
           "terms": [
-            "char_yamakawa",
             "v_daijoubu",
             "g_desu",
             "p_ka",
@@ -319,7 +252,7 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "今朝 から 気分が よくありません。",
+          "jp": "今朝 から 気分が よくないです。",
           "en": "I haven't been feeling well since this morning.",
           "terms": [
             "v_kesa",
@@ -330,16 +263,16 @@
           ]
         },
         {
-          "spk": "やまかわ",
-          "jp": "体を 休めながら、お茶を 飲んでください。",
-          "en": "Please rest your body while drinking some tea.",
+          "spk": "やまもと",
+          "jp": "ゆっくり 休みながら、お茶を 飲んでください。",
+          "en": "Please rest slowly while drinking some tea.",
           "terms": [
-            "v_karada",
-            "p_wo",
+            "v_yukkuri",
             { "id": "v_yasumu", "form": "nagara_form" },
             "v_ocha",
             "p_wo",
-            { "id": "v_nomu", "form": "te_form" }
+            { "id": "v_nomu", "form": "te_form" },
+            "v_kudasai"
           ]
         },
         {
@@ -347,7 +280,6 @@
           "jp": "ありがとうございます。",
           "en": "Thank you very much.",
           "terms": [
-            "char_rikizo",
             "p_arigatou_gozaimasu"
           ]
         }
@@ -363,7 +295,6 @@
           "jp": "ゆき、あの 画家の 写真を 見た？",
           "en": "Yuki, did you see the photo of that painter?",
           "terms": [
-            "char_ken",
             "char_yuki",
             "v_ano",
             "v_gaka",
@@ -379,14 +310,13 @@
           "jp": "うん、見た。とても 有名な 人だね。",
           "en": "Yeah, I saw it. They're a very famous person, aren't they.",
           "terms": [
-            "char_yuki",
             "v_un",
             { "id": "v_miru", "form": "plain_past" },
             "v_totemo",
             { "id": "v_yuumei", "form": "attributive_na" },
             "v_hito",
-            "g_da",
-            "p_ne"
+            "p_ne",
+            "g_da"
           ]
         },
         {
@@ -420,10 +350,10 @@
         },
         {
           "spk": "けん",
-          "jp": "手首が 上手で、世界中で 有名だね。",
-          "en": "Their wrists are skillful, and they're famous all over the world.",
+          "jp": "えが 上手で、世界中で 有名だね。",
+          "en": "They are skillful at painting, and they're famous all over the world.",
           "terms": [
-            "v_tekubi",
+            "v_e",
             "p_ga",
             { "id": "v_jouzu", "form": "te_form" },
             "v_sekaijuu",
@@ -464,19 +394,18 @@
             { "id": "v_ookii", "form": "te_form" },
             "v_kao",
             "p_mo",
-            { "id": "v_ii", "form": "plain_form" },
+            "v_ii",
             "p_ne"
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "頭が いいし、心も 大切にしてるよ。",
+          "jp": "頭が よくて、心も 大切にしているよ。",
           "en": "They're smart, and they also value their heart.",
           "terms": [
             "v_atama",
             "p_ga",
-            { "id": "v_ii", "form": "plain_form" },
-            "p_shi",
+            { "id": "v_ii", "form": "te_form" },
             "v_kokoro",
             "p_mo",
             "v_taisetsu",
@@ -558,7 +487,7 @@
           "terms": [
             "char_rikizo",
             "p_wa",
-            { "id": "v_atamagaii", "form": "plain_form" },
+            "v_atamagaii",
             "p_node",
             "v_ryokou",
             "p_ga",
@@ -617,7 +546,7 @@
             "v_sugu",
             { "id": "v_suru", "form": "polite_potential" },
             "p_ka",
-            { "id": "v_atamagaii", "form": "plain_form" },
+            "v_atamagaii",
             "p_kara_because",
             "g_desu"
           ]
@@ -626,19 +555,19 @@
     },
     {
       "type": "reading",
-      "title": "読み物 2: 有名な 画家",
+      "title": "読み物 2: 世界の 画家",
+      "context": "A short passage about a world-famous painter.",
       "passage": [
         {
-          "jp": "やまかわさんは 世界で 有名な 画家です。",
-          "en": "Yamakawa-san is a world-famous painter.",
+          "jp": "この 画家は 世界で 有名です。",
+          "en": "This painter is famous around the world.",
           "terms": [
-            "char_yamakawa",
+            "v_kono",
+            "v_gaka",
             "p_wa",
             "v_sekai",
             "p_de",
-            { "id": "v_yuumei", "form": "attributive_na" },
-            "v_gaka",
-            "g_desu"
+            { "id": "v_yuumei", "form": "polite_adj" }
           ]
         },
         {
@@ -654,15 +583,14 @@
             "v_kaoiro",
             "p_ga",
             "v_itsumo",
-            { "id": "v_akarui", "form": "polite_adj" },
-            "g_desu"
+            { "id": "v_akarui", "form": "polite_adj" }
           ]
         },
         {
-          "jp": "手首が 上手で、写真も たくさん とったり 書いたり しました。",
-          "en": "Their wrists were skillful and they did many things like taking photos and writing.",
+          "jp": "えが 上手で、写真も たくさん とったり 書いたり しました。",
+          "en": "They were skillful at painting and did many things like taking photos and writing.",
           "terms": [
-            "v_tekubi",
+            "v_e",
             "p_ga",
             { "id": "v_jouzu", "form": "te_form" },
             "v_shashin",
@@ -695,10 +623,11 @@
       ],
       "questions": [
         {
-          "q": "やまかわさんは どんな 人ですか。",
+          "q": "この 画家は どんな 人ですか。",
           "a": "世界で 有名な 画家です。",
           "terms": [
-            "char_yamakawa",
+            "v_kono",
+            "v_gaka",
             "p_wa",
             "v_donna",
             "v_hito",
@@ -712,10 +641,11 @@
           ]
         },
         {
-          "q": "やまかわさんは どうして 世界中で 人気が ありますか。",
-          "a": "頭が よくて、手首が 上手だからです。",
+          "q": "この 画家は どうして 世界中で 人気が ありますか。",
+          "a": "頭が よくて、えが 上手だからです。",
           "terms": [
-            "char_yamakawa",
+            "v_kono",
+            "v_gaka",
             "p_wa",
             "v_doushite",
             "v_sekaijuu",
@@ -724,8 +654,10 @@
             "p_ga",
             { "id": "v_aru", "form": "polite_masu" },
             "p_ka",
+            "v_atama",
+            "p_ga",
             { "id": "v_ii", "form": "te_form" },
-            "v_tekubi",
+            "v_e",
             "p_ga",
             "v_jouzu",
             "g_da",
@@ -861,7 +793,7 @@
           "terms": [
             "char_rikizo",
             "p_wa",
-            { "id": "v_atamagaii", "form": "plain_form" },
+            "v_atamagaii",
             "p_node",
             "v_ryokou",
             "p_ga",
@@ -871,7 +803,7 @@
         },
         {
           "kind": "mcq",
-          "q": "体を 休め＿＿＿、お茶を 飲んでください。",
+          "q": "体を 休み＿＿＿、お茶を 飲んでください。",
           "choices": ["ながら", "たり", "て", "から"],
           "answer": "ながら",
           "terms": [
@@ -880,7 +812,8 @@
             { "id": "v_yasumu", "form": "nagara_form" },
             "v_ocha",
             "p_wo",
-            { "id": "v_nomu", "form": "te_form" }
+            { "id": "v_nomu", "form": "te_form" },
+            "v_kudasai"
           ]
         }
       ]
