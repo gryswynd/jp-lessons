@@ -482,14 +482,12 @@
           ]
         },
         {
-          "jp": "りきぞは 頭が いいので、旅行が すぐ できます。",
+          "jp": "りきぞは 頭がいいので、旅行が すぐ できます。",
           "en": "Because Rikizo is smart, he can travel right away.",
           "terms": [
             "char_rikizo",
             "p_wa",
-            "v_atama",
-            "p_ga",
-            { "id": "v_ii", "form": "plain_form" },
+            { "id": "v_atamagaii", "form": "plain_form" },
             "p_node",
             "v_ryokou",
             "p_ga",
@@ -538,7 +536,7 @@
         },
         {
           "q": "りきぞは どうして 旅行が すぐ できますか。",
-          "a": "頭が いいからです。",
+          "a": "頭がいいからです。",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -548,9 +546,7 @@
             "v_sugu",
             { "id": "v_suru", "form": "polite_potential" },
             "p_ka",
-            "v_atama",
-            "p_ga",
-            { "id": "v_ii", "form": "plain_form" },
+            { "id": "v_atamagaii", "form": "plain_form" },
             "p_kara_because",
             "g_desu"
           ]
