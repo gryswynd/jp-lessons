@@ -394,7 +394,7 @@
             { "id": "v_ookii", "form": "te_form" },
             "v_kao",
             "p_mo",
-            "v_ii",
+            { "id": "v_ii", "form": "plain_form" },
             "p_ne"
           ]
         },
@@ -487,7 +487,9 @@
           "terms": [
             "char_rikizo",
             "p_wa",
-            "v_atamagaii",
+            "v_atama",
+            "p_ga",
+            { "id": "v_ii", "form": "plain_form" },
             "p_node",
             "v_ryokou",
             "p_ga",
@@ -546,7 +548,9 @@
             "v_sugu",
             { "id": "v_suru", "form": "polite_potential" },
             "p_ka",
-            "v_atamagaii",
+            "v_atama",
+            "p_ga",
+            { "id": "v_ii", "form": "plain_form" },
             "p_kara_because",
             "g_desu"
           ]
