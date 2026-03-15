@@ -9,6 +9,9 @@ window.GameModule = (function() {
   let dayData = null;
 
   function getDayAssetUrl(filename) {
+    if (filename.startsWith('assets/') || filename.startsWith('shared/')) {
+      return window.getAssetUrl(config, filename);
+    }
     return window.getAssetUrl(config, dayDir + '/' + filename);
   }
 
@@ -1175,7 +1178,7 @@ window.GameModule = (function() {
 
     // Fetch manifest → day.json + glossary + conj rules → then load images
     const cacheBust = '?t=' + Date.now();
-    let playerSpritePath = 'shared/sprites/me_sheet.png';
+    let playerSpritePath = 'assets/characters/rikizo/rikizo_sheet.png';
 
     window.getManifest(config)
       .then(manifest => {
