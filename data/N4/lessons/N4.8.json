@@ -76,8 +76,7 @@
             "p_to",
             "v_dochira",
             "p_ga",
-            "v_suki",
-            "g_desu",
+            { "id": "v_suki", "form": "polite_adj" },
             "p_ka"
           ]
         },
@@ -103,6 +102,7 @@
           "jp": "日本料理を 一人で 作れますか。",
           "en": "Can you cook Japanese food by yourself?",
           "terms": [
+            "v_nihon",
             "v_ryouri",
             "p_wo",
             "v_hitori",
@@ -127,6 +127,7 @@
             "v_ryouri",
             "p_wa",
             "v_nan",
+            "g_desu",
             "p_ka"
           ]
         }
@@ -259,8 +260,7 @@
             "v_kisetsu",
             "p_ga",
             "v_ichiban",
-            "v_suki",
-            "g_desu",
+            { "id": "v_suki", "form": "polite_adj" },
             "p_ka"
           ]
         },
@@ -274,12 +274,10 @@
             "v_haru",
             "p_ga",
             "v_ichiban",
-            "v_suki",
-            "g_desu",
+            { "id": "v_suki", "form": "polite_adj" },
             "v_hana",
             "p_ga",
-            "v_kirei",
-            "g_desu",
+            { "id": "v_kirei", "form": "polite_adj" },
             "p_kara_because"
           ]
         },
@@ -295,8 +293,7 @@
             "p_wa",
             "v_aki",
             "p_ga",
-            "v_suki",
-            "g_desu",
+            { "id": "v_suki", "form": "polite_adj" },
             "v_aki",
             "p_no",
             "v_ki",
@@ -326,8 +323,7 @@
             "p_no",
             "v_yama",
             "p_yori",
-            "v_kirei",
-            "g_desu",
+            { "id": "v_kirei", "form": "polite_adj" },
             "p_yo"
           ]
         },
@@ -367,8 +363,7 @@
             "p_to",
             "v_dochira",
             "p_ga",
-            "v_suki",
-            "g_desu",
+            { "id": "v_suki", "form": "polite_adj" },
             "p_ka"
           ]
         },
@@ -379,14 +374,12 @@
           "terms": [
             "v_natsuyasumi",
             "p_ga",
-            "v_suki",
-            "g_desu",
+            { "id": "v_suki", "form": "polite_adj" },
             "v_natsuyasumi",
             "p_wa",
             "v_fuyuyasumi",
             "p_yori",
-            "v_nagai",
-            "g_desu",
+            { "id": "v_nagai", "form": "polite_adj" },
             "p_kara_because"
           ]
         },
@@ -397,8 +390,7 @@
           "terms": [
             "v_natsu",
             "p_wa",
-            "v_atsui",
-            "g_desu",
+            { "id": "v_atsui", "form": "polite_adj" },
             "p_ga_but",
             "v_natsuyasumi",
             "p_ga",
@@ -408,13 +400,11 @@
             },
             "v_fuyu",
             "p_wa",
-            "v_samui",
-            "g_desu",
+            { "id": "v_samui", "form": "polite_adj" },
             "p_ga_but",
             "v_yuki",
             "p_ga",
-            "v_kirei",
-            "g_desu"
+            { "id": "v_kirei", "form": "polite_adj" }
           ]
         },
         {
@@ -436,8 +426,7 @@
           "jp": "寒いですが、北では ゆきが あります。白くて とても きれいです。",
           "en": "It is cold, but in the north there is snow. It's white and very beautiful.",
           "terms": [
-            "v_samui",
-            "g_desu",
+            { "id": "v_samui", "form": "polite_adj" },
             "p_ga_but",
             "v_kita",
             "p_dewa",
@@ -452,8 +441,7 @@
               "form": "te_form"
             },
             "v_totemo",
-            "v_kirei",
-            "g_desu"
+            { "id": "v_kirei", "form": "polite_adj" }
           ]
         }
       ]
@@ -475,6 +463,7 @@
               "counter": "tsu",
               "n": 4
             },
+            "p_no",
             "v_kisetsu",
             "p_ga",
             {
@@ -489,10 +478,16 @@
           "jp": "はい。春、夏、秋、冬の 四つです。これを「春夏秋冬」と 言います。",
           "en": "Yes. There are four: spring, summer, autumn, and winter. They are called shunkashuutou.",
           "terms": [
+            "p_hai",
             "v_haru",
             "v_natsu",
             "v_aki",
             "v_fuyu",
+            "p_no",
+            { "counter": "tsu", "n": 4 },
+            "g_desu",
+            "v_kore",
+            "p_wo",
             "v_shunkashuutou",
             "p_to_quote",
             {
@@ -510,8 +505,7 @@
             "v_kisetsu",
             "p_ga",
             "v_ichiban",
-            "v_kirei",
-            "g_desu",
+            { "id": "v_kirei", "form": "polite_adj" },
             "p_ka"
           ]
         },
@@ -523,8 +517,7 @@
             "v_aki",
             "p_ga",
             "v_ichiban",
-            "v_kirei",
-            "g_desu",
+            { "id": "v_kirei", "form": "polite_adj" },
             "v_ki",
             "p_no",
             "v_iro",
@@ -559,8 +552,7 @@
             "v_natsu",
             "p_wa",
             "v_totemo",
-            "v_atsui",
-            "g_desu",
+            { "id": "v_atsui", "form": "polite_adj" },
             "v_natsuyasumi",
             "p_ga",
             {
@@ -569,8 +561,7 @@
             },
             "p_kara_because",
             "v_mainen",
-            "v_ureshii",
-            "g_desu"
+            { "id": "v_ureshii", "form": "polite_adj" }
           ]
         },
         {
@@ -580,8 +571,7 @@
           "terms": [
             "v_fuyu",
             "p_wa",
-            "v_samui",
-            "g_desu",
+            { "id": "v_samui", "form": "polite_adj" },
             "p_ga_but",
             "v_kita",
             "p_dewa",
@@ -596,8 +586,7 @@
               "form": "te_form"
             },
             "v_totemo",
-            "v_kirei",
-            "g_desu"
+            { "id": "v_kirei", "form": "polite_adj" }
           ]
         }
       ]
@@ -612,15 +601,13 @@
           "jp": "ねえ、夏と 冬、どちらが 好き？",
           "en": "Hey, which do you like more — summer or winter?",
           "terms": [
+            "p_nee",
             "v_natsu",
             "p_to",
             "v_fuyu",
             "v_dochira",
             "p_ga",
-            {
-              "id": "v_suki",
-              "form": null
-            },
+            { "id": "v_suki", "form": "plain_adj" },
             "p_ka"
           ]
         },
@@ -631,11 +618,12 @@
           "terms": [
             "v_natsu",
             "g_da",
+            "p_na",
             "v_natsuyasumi",
             "p_ga",
             {
               "id": "v_aru",
-              "form": null
+              "form": "plain_form"
             },
             "p_kara_because"
           ]
@@ -647,17 +635,14 @@
           "terms": [
             {
               "id": "v_wakaru",
-              "form": null
+              "form": "plain_form"
             },
             "p_kedo",
             "v_natsu",
             "p_wa",
-            {
-              "id": "v_atsui",
-              "form": null
-            },
-            "p_yo",
-            "p_ne"
+            { "id": "v_atsui", "form": "plain_adj" },
+            "p_ne",
+            "p_yo"
           ]
         },
         {
@@ -670,15 +655,9 @@
             "p_wa",
             "v_fuyuyasumi",
             "p_yori",
-            {
-              "id": "v_nagai",
-              "form": null
-            },
+            { "id": "v_nagai", "form": "plain_adj" },
             "p_kara_because",
-            {
-              "id": "v_suki",
-              "form": null
-            }
+            { "id": "v_suki", "form": "plain_adj" }
           ]
         },
         {
@@ -691,20 +670,14 @@
             "v_aki",
             "p_ga",
             "v_ichiban",
-            {
-              "id": "v_suki",
-              "form": null
-            },
+            { "id": "v_suki", "form": "plain_adj" },
             {
               "id": "v_suzushii",
               "form": "te_form"
             },
             "v_sora",
             "p_ga",
-            {
-              "id": "v_kirei",
-              "form": null
-            },
+            { "id": "v_kirei", "form": "plain_adj" },
             "g_da",
             "p_kara_because"
           ]
@@ -721,12 +694,9 @@
             "p_wa",
             "v_natsu",
             "p_yori",
-            {
-              "id": "v_kirei",
-              "form": null
-            },
-            "g_da",
-            "p_ne"
+            { "id": "v_kirei", "form": "plain_adj" },
+            "p_ne",
+            "g_da"
           ]
         }
       ]
@@ -744,8 +714,7 @@
             "v_haru",
             "p_ga",
             "v_ichiban",
-            "v_suki",
-            "g_desu"
+            { "id": "v_suki", "form": "polite_adj" }
           ]
         },
         {
@@ -775,8 +744,7 @@
             "p_wa",
             "v_natsu",
             "p_yori",
-            "v_suzushii",
-            "g_desu",
+            { "id": "v_suzushii", "form": "polite_adj" },
             "p_kara_because",
             "v_soto",
             "p_ni",
@@ -792,8 +760,7 @@
           "terms": [
             "v_natsu",
             "p_wa",
-            "v_atsui",
-            "g_desu",
+            { "id": "v_atsui", "form": "polite_adj" },
             "p_ga_but",
             "v_natsuyasumi",
             "p_ga",
@@ -811,12 +778,11 @@
             "p_wo",
             {
               "id": "v_miru",
-              "form": null
+              "form": "plain_form"
             },
             "p_no",
             "p_ga",
-            "v_suki",
-            "g_desu"
+            { "id": "v_suki", "form": "polite_adj" }
           ]
         },
         {
@@ -845,8 +811,7 @@
             "p_no",
             "v_yama",
             "p_yori",
-            "v_kirei",
-            "g_desu"
+            { "id": "v_kirei", "form": "polite_adj" }
           ]
         },
         {
@@ -855,8 +820,7 @@
           "terms": [
             "v_fuyu",
             "p_wa",
-            "v_samui",
-            "g_desu",
+            { "id": "v_samui", "form": "polite_adj" },
             "p_ga_but",
             "v_kita",
             "p_dewa",
@@ -871,8 +835,7 @@
               "form": "te_form"
             },
             "v_totemo",
-            "v_kirei",
-            "g_desu"
+            { "id": "v_kirei", "form": "polite_adj" }
           ]
         }
       ],
@@ -888,8 +851,7 @@
             "v_kisetsu",
             "p_ga",
             "v_ichiban",
-            "v_suki",
-            "g_desu",
+            { "id": "v_suki", "form": "polite_adj" },
             "p_ka",
             "v_haru"
           ]
@@ -901,10 +863,10 @@
             "v_haru",
             "p_to",
             "v_natsu",
+            "p_to",
             "v_dochira",
             "p_ga",
-            "v_suzushii",
-            "g_desu",
+            { "id": "v_suzushii", "form": "polite_adj" },
             "p_ka",
             "p_yori"
           ]
@@ -947,15 +909,17 @@
             "v_natsu",
             "v_aki",
             "v_fuyu",
-            {
-              "counter": "tsu",
-              "n": 4
-            },
+            "p_no",
+            { "counter": "tsu", "n": 4 },
+            "p_no",
             "v_kisetsu",
+            "p_ga",
             {
               "id": "v_aru",
               "form": "polite_masu"
             },
+            "v_kore",
+            "p_wo",
             "v_shunkashuutou",
             "p_to_quote",
             {
@@ -973,6 +937,7 @@
             "v_sangatsu",
             "p_kara",
             "v_gogatsu",
+            "g_desu",
             "v_hana",
             "p_ga",
             "v_takusan",
@@ -981,8 +946,7 @@
               "form": "te_form"
             },
             "v_totemo",
-            "v_kirei",
-            "g_desu"
+            { "id": "v_kirei", "form": "polite_adj" }
           ]
         },
         {
@@ -1061,8 +1025,16 @@
           "a": "3月から 5月です。",
           "terms": [
             "v_haru",
+            "p_wa",
+            "v_nan",
+            "p_kara",
+            "v_nan",
+            "g_desu",
+            "p_ka",
             "v_sangatsu",
-            "v_gogatsu"
+            "p_kara",
+            "v_gogatsu",
+            "g_desu"
           ]
         },
         {
@@ -1070,8 +1042,16 @@
           "a": "9月から 11月です。",
           "terms": [
             "v_aki",
+            "p_wa",
+            "v_nan",
+            "p_kara",
+            "v_nan",
+            "g_desu",
+            "p_ka",
             "v_kugatsu",
-            "v_juuichigatsu"
+            "p_kara",
+            "v_juuichigatsu",
+            "g_desu"
           ]
         },
         {
@@ -1079,8 +1059,16 @@
           "a": "12月から 2月です。",
           "terms": [
             "v_fuyu",
+            "p_wa",
+            "v_nan",
+            "p_kara",
+            "v_nan",
+            "g_desu",
+            "p_ka",
             "v_juunigatsu",
-            "v_nigatsu"
+            "p_kara",
+            "v_nigatsu",
+            "g_desu"
           ]
         }
       ]
@@ -1209,6 +1197,7 @@
           "answer": "暑い",
           "terms": [
             "v_natsu",
+            "p_wa",
             "v_atsui",
             "g_desu",
             "v_samui",
@@ -1231,6 +1220,7 @@
           "answer": "寒い",
           "terms": [
             "v_fuyu",
+            "p_wa",
             "v_samui",
             "g_desu",
             "v_atsui",
@@ -1258,10 +1248,10 @@
           "answer": "より",
           "terms": [
             "v_haru",
+            "p_wa",
             "v_natsu",
             "p_yori",
-            "v_suzushii",
-            "g_desu"
+            { "id": "v_suzushii", "form": "polite_adj" }
           ]
         },
         {
@@ -1276,11 +1266,11 @@
           "answer": "が",
           "terms": [
             "v_watashi",
+            "p_wa",
             "v_haru",
             "p_ga",
             "v_ichiban",
-            "v_suki",
-            "g_desu"
+            { "id": "v_suki", "form": "polite_adj" }
           ]
         },
         {
@@ -1294,8 +1284,13 @@
           ],
           "answer": "寒かったです",
           "terms": [
+            "v_kinou",
+            "p_no",
             "v_fuyu",
+            "p_no",
             "v_asa",
+            "p_wa",
+            "v_totemo",
             {
               "id": "v_samui",
               "form": "plain_past_adj"
@@ -1315,10 +1310,15 @@
           "answer": "なります",
           "terms": [
             "v_aki",
+            "p_wa",
             "v_ki",
+            "p_no",
             "v_iro",
+            "p_ga",
             "v_akai",
+            "p_ya",
             "v_chairo",
+            "p_ni",
             {
               "id": "v_naru",
               "form": "polite_masu"

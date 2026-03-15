@@ -308,6 +308,24 @@
       }
     }
   },
+  "plain_adj": {
+    "label": "Plain Adjective (Bare Form)",
+    "description": "Plain (non-polite) present affirmative for adjectives. i-adjectives: used as-is without です (e.g. 暑い, 長い) as predicate in casual speech and subordinate clauses. na-adjectives: stem without です or だ (e.g. 好き, きれい) as bare predicate — the copula だ, if present, is tagged separately as g_da.",
+    "introducedIn": "G9",
+    "rules": {
+      "i_adj": {
+        "type": "identity"
+      },
+      "na_adj": {
+        "type": "identity"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "いい",
+        "reading": "いい"
+      }
+    }
+  },
   "attributive_na": {
     "label": "Attributive Na-Form",
     "description": "Attributive form of na-adjectives. Adds な to connect the adjective to a following noun (e.g. きれいな花 = beautiful flower).",
