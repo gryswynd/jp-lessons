@@ -883,8 +883,8 @@ window.FinalReviewModule = (function () {
     maxPossible = 0;
     sectionIdx = 0;
     sectionScores = [];
-    RIKIZO_STAMP = getUrl('references/pixel_characters/rikizo_head.png');
-    RIKIZO_SPRITE = getUrl('references/pixel_characters/mesprite.png');
+    RIKIZO_STAMP = getUrl('assets/characters/rikizo/rikizo_head.png');
+    RIKIZO_SPRITE = getUrl('assets/characters/rikizo/rikizo_sprite.png');
     injectStyles();
     loadData();
   }

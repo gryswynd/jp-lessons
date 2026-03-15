@@ -1499,7 +1499,7 @@ All character entries live in `shared/characters.json`. This file is loaded by e
   "reading": "りきぞ",
   "meaning": "Rikizo",
   "description": "The protagonist — a cheerful, curious learner navigating everyday life in Japan.",
-  "portrait": "references/pixel_characters/rikizo_head.png",
+  "portrait": "assets/characters/rikizo/rikizo_head.png",
   "matches": ["りきぞう"]
 }
 ```
