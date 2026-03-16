@@ -227,7 +227,9 @@
           "items": [
             "v_eigo",
             "v_ei",
-            "v_memo"
+            "v_memo",
+            "v_america",
+            "v_igirisu"
           ]
         },
         {
@@ -250,6 +252,7 @@
           "en": "Everyone, English class starts today. This is Joel Sensei.",
           "terms": [
             "char_yamamoto",
+            "v_minasan",
             "v_kyou",
             "p_kara",
             "v_eigo",
@@ -271,10 +274,12 @@
           "en": "Nice to meet you all. I love English. I look forward to working with you.",
           "terms": [
             "char_joel",
+            "p_hajimemashite",
             "v_eigo",
             "p_ga",
             "v_daisuki",
             "g_desu",
+            "v_minasan",
             "p_yoroshiku"
           ]
         },
@@ -300,12 +305,14 @@
           "en": "I came from America, but I have been to England too!",
           "terms": [
             "char_joel",
+            "v_america",
             "p_kara",
             {
               "id": "v_kuru",
               "form": "polite_mashita"
             },
             "p_ga_but",
+            "v_igirisu",
             "p_ni",
             "p_mo",
             {
@@ -327,6 +334,7 @@
           "en": "Also, Conor will be joining the class. He is a student from America.",
           "terms": [
             "char_yamamoto",
+            "v_sorekara",
             "char_conor",
             "p_mo",
             "v_kurasu",
@@ -335,6 +343,7 @@
               "id": "v_kuru",
               "form": "polite_masu"
             },
+            "v_america",
             "p_kara",
             {
               "id": "v_kuru",
@@ -350,6 +359,7 @@
           "en": "Nice to meet you. I'm Conor. My Japanese isn't great yet, but please take care of me.",
           "terms": [
             "char_conor",
+            "p_hajimemashite",
             "g_desu",
             "v_nihongo",
             "p_wa",
@@ -357,6 +367,10 @@
             "v_amari",
             "v_jouzu",
             "p_dewa",
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            },
             "p_ga_but",
             "p_yoroshiku"
           ]
@@ -392,6 +406,7 @@
           "en": "Yes, I'd love to go. What time does the movie start?",
           "terms": [
             "char_conor",
+            "p_hai",
             {
               "id": "v_iku",
               "form": "plain_desire_tai"
@@ -441,6 +456,7 @@
             "v_eiga",
             "p_wa",
             "v_nanji",
+            "p_goro",
             "p_ni",
             {
               "id": "v_owaru",
@@ -459,6 +475,7 @@
               "counter": "ji",
               "n": 5
             },
+            "p_goro",
             "p_ni",
             {
               "id": "v_owaru",
@@ -507,7 +524,7 @@
             "p_wo",
             {
               "id": "v_miru",
-              "form": null
+              "form": "plain_form"
             },
             "p_no",
             "p_ga",
@@ -582,6 +599,7 @@
             "v_gaka",
             "p_no",
             "v_eiga",
+            "g_desu",
             "p_ka",
             "v_omoshiroi",
             "g_desu",
@@ -601,6 +619,7 @@
           "en": "Yes! Because you can learn English while watching in English, it's great.",
           "terms": [
             "char_joel",
+            "p_hai",
             "v_eigo",
             "p_de",
             {
@@ -638,7 +657,7 @@
             "p_ni",
             {
               "id": "v_hajimaru",
-              "form": null
+              "form": "plain_form"
             },
             "p_ka"
           ]
@@ -656,13 +675,13 @@
             "p_ni",
             {
               "id": "v_hajimaru",
-              "form": null
+              "form": "plain_form"
             },
             "p_yo",
             "v_mou",
             "v_sugu",
-            "g_da",
-            "p_ne"
+            "p_ne",
+            "g_da"
           ]
         },
         {
@@ -681,7 +700,7 @@
             "v_nani",
             {
               "id": "v_suru",
-              "form": null
+              "form": "plain_form"
             },
             "p_ka"
           ]
@@ -706,9 +725,12 @@
               "id": "v_suru",
               "form": "plain_desire_tai"
             },
+            "p_na",
             "char_conor",
             "p_wa",
-            "v_dou"
+            "v_dou",
+            "p_na",
+            "p_ka"
           ]
         },
         {
@@ -728,8 +750,8 @@
               "id": "v_naru",
               "form": "plain_past"
             },
-            "p_yo",
-            "p_ne"
+            "p_ne",
+            "p_yo"
           ]
         },
         {
@@ -754,7 +776,7 @@
             },
             {
               "id": "v_suru",
-              "form": null
+              "form": "plain_form"
             },
             "p_kara_because",
             "p_ne"
@@ -852,15 +874,16 @@
             "p_ga",
             {
               "id": "v_suki",
-              "form": null
+              "form": "attributive_na"
             },
             "p_node",
             "v_eigo",
             "p_wo",
             {
               "id": "v_manabu",
-              "form": null
+              "form": "plain_form"
             },
+            "p_no",
             "p_ga",
             "v_suki",
             "g_desu"
@@ -950,6 +973,7 @@
           "terms": [
             "char_joel",
             "p_wa",
+            "v_america",
             "p_kara",
             {
               "id": "v_kuru",
@@ -965,12 +989,14 @@
           "jp": "アメリカから 来ましたが、イギリスにも 行った ことが あります。",
           "en": "He came from America, but has also been to England.",
           "terms": [
+            "v_america",
             "p_kara",
             {
               "id": "v_kuru",
               "form": "polite_mashita"
             },
             "p_ga_but",
+            "v_igirisu",
             "p_ni",
             "p_mo",
             {
@@ -1016,7 +1042,7 @@
             "p_ga",
             {
               "id": "v_daisuki",
-              "form": null
+              "form": "te_form"
             },
             "v_gaka",
             "p_no",
@@ -1057,14 +1083,16 @@
             "v_itsumo",
             {
               "id": "v_genki",
-              "form": null
+              "form": "te_form"
             },
             "v_eigo",
             "p_mo",
             "v_nihongo",
             "p_mo",
-            "v_jouzu",
-            "g_desu",
+            {
+              "id": "v_jouzu",
+              "form": "polite_adj"
+            },
             "g_desu"
           ]
         }
@@ -1074,6 +1102,7 @@
           "q": "Where did Joel Sensei come from?",
           "a": "アメリカから 来ました。",
           "terms": [
+            "v_america",
             "p_kara",
             {
               "id": "v_kuru",
@@ -1195,11 +1224,13 @@
           "answer": "映画館",
           "terms": [
             "v_eiga",
+            "p_wo",
             {
               "id": "v_miru",
-              "form": null
+              "form": "plain_form"
             },
             "v_tokoro",
+            "p_wa",
             "v_eigakan"
           ]
         },
@@ -1214,10 +1245,16 @@
           ],
           "answer": "画家",
           "terms": [
+            "v_e",
+            "p_wo",
             {
               "id": "v_kaku",
-              "form": null
+              "form": "plain_form"
             },
+            "v_hito",
+            "p_no",
+            "v_namae",
+            "p_wa",
             "v_gaka"
           ]
         },
@@ -1241,17 +1278,24 @@
         },
         {
           "kind": "mcq",
-          "q": "アメリカや イギリスで 使う 言語は？",
+          "q": "ジョエル先生は どこから 来ましたか。",
           "choices": [
-            "英語",
-            "日本語",
-            "中国語",
-            "フランス語"
+            "アメリカ",
+            "イギリス",
+            "日本",
+            "フランス"
           ],
-          "answer": "英語",
+          "answer": "アメリカ",
           "terms": [
-            "v_eigo",
-            "v_nihongo"
+            "char_joel",
+            "v_sensei",
+            "v_doko",
+            "p_kara",
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
           ]
         }
       ]
