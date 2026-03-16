@@ -684,6 +684,50 @@
       "notes": "Kun: がわ as suffix — 右側(みぎがわ, right side), 左側(ひだりがわ, left side), 内側(うちがわ, inner side), 外側(そとがわ, outer side). On: そく in formal compounds. 両側(りょうがわ) = both sides (両 not in curriculum)."
     },
     {
+      "id": "k_kanarazu",
+      "lesson": "N3.8",
+      "type": "kanji",
+      "surface": "必",
+      "on": "ひつ",
+      "kun": "かならず",
+      "reading": "かならず",
+      "meaning": "certainly / must / inevitable",
+      "notes": "Kun: かならず (certainly, without fail — 必ず). On: ひつ in 必要(ひつよう, necessary), 必死(ひっし, desperate), 必勝(ひっしょう — 勝 not in curriculum). Always implies inevitability or obligation."
+    },
+    {
+      "id": "k_you",
+      "lesson": "N3.8",
+      "type": "kanji",
+      "surface": "要",
+      "on": "よう",
+      "kun": "い(る)/かなめ",
+      "reading": "よう",
+      "meaning": "need / require / essential / key point",
+      "notes": "On: よう in 必要(ひつよう, necessary), 重要(じゅうよう, important), 主要(しゅよう, main). Kun: いる (to need — 要る), かなめ (keystone, crux — 要の人物). 要求(ようきゅう, demand) unlocks at N3.25 when 求 is taught."
+    },
+    {
+      "id": "k_ka",
+      "lesson": "N3.8",
+      "type": "kanji",
+      "surface": "可",
+      "on": "か",
+      "kun": "",
+      "reading": "か",
+      "meaning": "can / possible / acceptable / pass",
+      "notes": "On-reading only: か. In 可能(かのう, possible — unlocks N3.23 when 能 is taught), 不可(ふか, not permitted). Also used as a grade: 可 = passing/acceptable (below 良). 許可(きょか, permission — 許 not in curriculum)."
+    },
+    {
+      "id": "k_kagiru",
+      "lesson": "N3.8",
+      "type": "kanji",
+      "surface": "限",
+      "on": "げん",
+      "kun": "かぎ(る)",
+      "reading": "かぎる",
+      "meaning": "limit / restrict / confine",
+      "notes": "Kun: かぎる (to limit — 限る), かぎり (limit, as far as — 限り). On: げん in 限界(げんかい, boundary/limit), 限定(げんてい, limited — unlocks N3.29 when 定 is taught), 制限(せいげん — 制 not in curriculum until N3.56)."
+    },
+    {
       "id": "k_sho_ogre",
       "lesson": "N3.4",
       "type": "kanji",
@@ -1120,6 +1164,123 @@
       "gtype": "noun",
       "lesson_ids": "N3.7",
       "notes": "外 (N5.9) + 側 (N3.7). 建物の外側 = the outside of the building. 外側から見る = to look from the outside. Contrast: 内側(うちがわ, inner side)."
+    },
+    {
+      "id": "v_kanarazu",
+      "surface": "必ず",
+      "reading": "かならず",
+      "meaning": "certainly / without fail / always",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N3.8",
+      "notes": "必 (N3.8). 必ず来てください = please be sure to come. 必ずしも～ない = not necessarily. Stronger than きっと (probably) — implies near-certainty or obligation."
+    },
+    {
+      "id": "v_hitsuyou",
+      "surface": "必要",
+      "reading": "ひつよう",
+      "meaning": "necessary / needed / essential",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.8",
+      "notes": "必 (N3.8) + 要 (N3.8). 必要がある = there is a need to. 必要以上に = more than necessary. 必要性(ひつようせい, necessity — 性 not in curriculum). Used both as na-adj (必要な書類) and noun (必要はない)."
+    },
+    {
+      "id": "v_hisshi",
+      "surface": "必死",
+      "reading": "ひっし",
+      "meaning": "desperate / frantic / with all one's might",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.8",
+      "notes": "必 (N3.8) + 死 (N4.15). Lit. 'certain death' → desperate/frantic effort. 必死に勉強する = to study frantically. 必死の形相 = desperate expression. Often used adverbially: 必死になって = desperately."
+    },
+    {
+      "id": "v_juuyou",
+      "surface": "重要",
+      "reading": "じゅうよう",
+      "meaning": "important / significant / crucial",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.8",
+      "notes": "重 (N4.23) + 要 (N3.8). 重要な問題 = an important issue. 重要視する = to regard as important. More formal/serious than 大事(だいじ) or 大切(たいせつ). Common in official, academic, and business contexts."
+    },
+    {
+      "id": "v_shuyou",
+      "surface": "主要",
+      "reading": "しゅよう",
+      "meaning": "main / principal / major",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.8",
+      "notes": "主 (N4.35) + 要 (N3.8). 主要な原因 = the main cause. 主要国 = major nations. More formal than メイン or 主な(おもな). Often used in analytical or journalistic writing."
+    },
+    {
+      "id": "v_iru_need",
+      "surface": "要る",
+      "reading": "いる",
+      "meaning": "to need / to require",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.8",
+      "notes": "要 (N3.8). Godan verb (ending in る — irregular godan). お金が要る = money is needed. 要らない = not needed/unnecessary. Distinct from 居る(いる, to exist/be — ichidan). In casual speech often written in hiragana: いる/いらない."
+    },
+    {
+      "id": "v_fuyou",
+      "surface": "不要",
+      "reading": "ふよう",
+      "meaning": "unnecessary / unneeded / not required",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.8",
+      "notes": "不 (N4.36) + 要 (N3.8). 不要な物を捨てる = to throw away unnecessary things. 不要不急(ふようふきゅう) = non-essential and non-urgent. Formal/written register; in speech, いらない is more common."
+    },
+    {
+      "id": "v_fuka",
+      "surface": "不可",
+      "reading": "ふか",
+      "meaning": "not acceptable / not permitted / impossible",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.8",
+      "notes": "不 (N4.36) + 可 (N3.8). 入場不可 = entry not permitted. 不可欠(ふかけつ, indispensable — 欠 N3.25). Also used as a grade: 不可 = fail/unacceptable. Contrast: 可(か, passing) and 不可能(ふかのう, impossible — unlocks N3.23)."
+    },
+    {
+      "id": "v_kagiru",
+      "surface": "限る",
+      "reading": "かぎる",
+      "meaning": "to limit / to restrict / to be limited to",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.8",
+      "notes": "限 (N3.8). 参加者を10人に限る = to limit participants to 10. ～とは限らない = it is not necessarily the case that~. ～に限らず = not limited to~. Key grammar pattern for expressing limitations and exceptions."
+    },
+    {
+      "id": "v_kagiri",
+      "surface": "限り",
+      "reading": "かぎり",
+      "meaning": "limit / as far as / as long as",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.8",
+      "notes": "限 (N3.8). Noun form of 限る. 力の限り = to the best of one's ability. ～する限り = as long as one does~. 今日限り = as of today (final). 限りなく = limitlessly. Key grammar item for N3 grammar patterns."
+    },
+    {
+      "id": "v_genkai",
+      "surface": "限界",
+      "reading": "げんかい",
+      "meaning": "limit / boundary / the end of one's rope",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.8",
+      "notes": "限 (N3.8) + 界 (N4.11). 限界に達する = to reach one's limit. もう限界だ = I've hit my limit. 限界を超える = to exceed the limit. 可能性の限界 = the limits of possibility."
     },
     {
       "id": "v_getsumatsu",
