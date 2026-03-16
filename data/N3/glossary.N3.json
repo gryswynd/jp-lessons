@@ -789,7 +789,9 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N3.29",
-      "matches": ["予てい"],
+      "matches": [
+        "予てい"
+      ],
       "notes": "予 (N3.29) + 定 (N3.16). Write as 予てい until N3.29. 予定がある = to have plans. 予定を立てる = to make plans. 〜する予定です = planning to do ~."
     },
     {
@@ -800,7 +802,9 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N3.29",
-      "matches": ["予やく"],
+      "matches": [
+        "予やく"
+      ],
       "notes": "予 (N3.29) + 約 (N3.66). Write as 予やく until N3.66. 予約する = to make a reservation. ホテルの予約 = hotel reservation."
     },
     {
@@ -1466,6 +1470,172 @@
       "gtype": "i_adj",
       "lesson_ids": "N3.9",
       "notes": "険 (N3.9). い-adjective. 険しい山道 = steep mountain path. 険しい表情 = stern/grim expression. 険しい状況 = harsh/severe situation. Describes both physical terrain (steep) and emotional/situational severity (grim)."
+    },
+    {
+      "id": "k_hou_2",
+      "lesson": "N3.10",
+      "type": "kanji",
+      "surface": "法",
+      "on": "ほう",
+      "kun": "のり",
+      "reading": "ほう",
+      "meaning": "law / method / rule",
+      "notes": "Compounds at N3.10: 方法(ほうほう, method), 文法(ぶんぽう, grammar), 合法(ごうほう, legal), 違法(いほう, illegal). Deferred: 法律(ほうりつ, law) — 律 not in curriculum; 憲法(けんぽう, constitution) — 憲 not in curriculum."
+    },
+    {
+      "id": "k_sen",
+      "lesson": "N3.10",
+      "type": "kanji",
+      "surface": "戦",
+      "on": "せん",
+      "kun": "たたか(う)/いくさ",
+      "reading": "たたかう",
+      "meaning": "war / battle / fight",
+      "notes": "Compounds at N3.10: 戦う(たたかう, to fight), 作戦(さくせん, strategy), 戦後(せんご, post-war), 内戦(ないせん, civil war). Deferred: 戦争(せんそう, war) — 争 N3.45; 決戦(けっせん, decisive battle) — 決 N3.29."
+    },
+    {
+      "id": "k_sen_2",
+      "lesson": "N3.10",
+      "type": "kanji",
+      "surface": "選",
+      "on": "せん",
+      "kun": "えら(ぶ)",
+      "reading": "えらぶ",
+      "meaning": "choose / select / elect",
+      "notes": "Compounds at N3.10: 選ぶ(えらぶ, to choose), 選手(せんしゅ, athlete/player), 当選(とうせん, being elected/winning), 選考(せんこう, selection/screening). Deferred: 選挙(せんきょ, election) — 挙 not in curriculum; 選択(せんたく, choice) — 択 not in curriculum; 落選(らくせん, losing election) — 落 N3.38."
+    },
+    {
+      "id": "k_san_2",
+      "lesson": "N3.10",
+      "type": "kanji",
+      "surface": "参",
+      "on": "さん",
+      "kun": "まい(る)",
+      "reading": "まいる",
+      "meaning": "participate / visit humbly / come (humble)",
+      "notes": "Compounds at N3.10: 参考(さんこう, reference), お参り(おまいり, shrine/temple visit). Deferred: 参加(さんか, participation) — 加 N3.17; 参拝(さんぱい, formal shrine visit) — 拝 not in curriculum."
+    },
+    {
+      "id": "v_houhou",
+      "surface": "方法",
+      "reading": "ほうほう",
+      "meaning": "method / way (of doing)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "方 (N5.3) + 法 (N3.10). 方法を考える = to think of a method. 解決方法 = solution method. 方法がない = there is no way. 勉強の方法 = study method."
+    },
+    {
+      "id": "v_bunpou",
+      "surface": "文法",
+      "reading": "ぶんぽう",
+      "meaning": "grammar",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "文 (N4.5) + 法 (N3.10). 文法を勉強する = to study grammar. 英語の文法 = English grammar. Note: ぽう is rendaku of ほう."
+    },
+    {
+      "id": "v_gouhou",
+      "surface": "合法",
+      "reading": "ごうほう",
+      "meaning": "legal / lawful",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "合 (N4.6) + 法 (N3.10). 合法的 = legal (adjectival form). 合法的な方法 = legal method. Contrast with 違法(いほう, illegal). 合法化する = to legalize."
+    },
+    {
+      "id": "v_ihou",
+      "surface": "違法",
+      "reading": "いほう",
+      "meaning": "illegal / unlawful",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "違 (N3.2) + 法 (N3.10). 違法行為 = illegal act. 違法な方法 = unlawful method. 違法だ = it is illegal. Contrast with 合法(ごうほう, legal)."
+    },
+    {
+      "id": "v_tatakau",
+      "surface": "戦う",
+      "reading": "たたかう",
+      "meaning": "to fight / to battle / to compete",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.10",
+      "notes": "戦 (N3.10). Godan verb ending in う. Used for physical combat, competitive matches, and figurative struggle. 困難と戦う = to fight against difficulty. 試合で戦う = to compete in a match. 戦い = battle/fight (noun form)."
+    },
+    {
+      "id": "v_sakusen",
+      "surface": "作戦",
+      "reading": "さくせん",
+      "meaning": "strategy / operation / plan (tactical)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "作 (N4.3) + 戦 (N3.10). 作戦を立てる = to draw up a strategy. 作戦会議 = strategy meeting. 作戦通りに行く = to go according to plan. Used in military, sports, and game contexts."
+    },
+    {
+      "id": "v_naisen",
+      "surface": "内戦",
+      "reading": "ないせん",
+      "meaning": "civil war",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "内 (N3.7) + 戦 (N3.10). 内戦が起きる = civil war breaks out. 内戦中 = during the civil war. 内戦の歴史 = history of civil war. Refers specifically to war within a country."
+    },
+    {
+      "id": "v_sengo",
+      "surface": "戦後",
+      "reading": "せんご",
+      "meaning": "post-war / after the war",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "戦 (N3.10) + 後 (N5.9). Both kanji available at N3.10. 戦後の日本 = post-war Japan. 戦後社会 = post-war society. Often refers specifically to post-World War II in Japanese context."
+    },
+    {
+      "id": "v_erabu",
+      "surface": "選ぶ",
+      "reading": "えらぶ",
+      "meaning": "to choose / to select / to elect",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.10",
+      "notes": "選 (N3.10). Godan verb ending in ぶ. 自分で選ぶ = to choose for oneself. 代表を選ぶ = to elect a representative. 方法を選ぶ = to choose a method. 選ばれる (passive) = to be chosen/selected."
+    },
+    {
+      "id": "v_senshu",
+      "surface": "選手",
+      "reading": "せんしゅ",
+      "meaning": "athlete / player / competitor",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "選 (N3.10) + 手 (N5.3). オリンピック選手 = Olympic athlete. 選手を選ぶ = to select players. サッカー選手 = soccer player. Note: distinct from v_senshuu (先週, last week)."
+    },
+    {
+      "id": "v_tousen",
+      "surface": "当選",
+      "reading": "とうせん",
+      "meaning": "winning an election / being selected / being drawn (lottery)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "当 (N4.23) + 選 (N3.10). 当選する = to win an election / to be selected. 当選者 = winner / elected person. 宝くじに当選する = to win the lottery."
+    },
+    {
+      "id": "v_sankou",
+      "surface": "参考",
+      "reading": "さんこう",
+      "meaning": "reference / consultation",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "参 (N3.10) + 考 (N4.7). 参考にする = to use as a reference. 参考書(さんこうしょ) = reference book (書 N5.11). 参考になる = to be useful/helpful as a reference."
     }
   ]
 }
