@@ -1311,6 +1311,161 @@
       "gtype": "noun",
       "lesson_ids": "N3.4",
       "notes": "連 (N3.2) + 続 (N3.4). 連続ドラマ = serial drama. 三日連続 = three days in a row. 連続する = to be continuous."
+    },
+    {
+      "id": "k_mei",
+      "lesson": "N3.9",
+      "type": "kanji",
+      "surface": "命",
+      "on": "めい",
+      "kun": "いのち",
+      "reading": "いのち",
+      "meaning": "life / soul / command",
+      "notes": "Compounds at N3.9: 命(いのち, life), 運命(うんめい, fate), 使命(しめい, mission), 生命(せいめい, life-formal). Deferred: 命令(めいれい, order) — 令 not in curriculum."
+    },
+    {
+      "id": "k_bou",
+      "lesson": "N3.9",
+      "type": "kanji",
+      "surface": "亡",
+      "on": "ぼう",
+      "kun": "なく(なる)",
+      "reading": "なくなる",
+      "meaning": "death / perish / deceased",
+      "notes": "Compounds at N3.9: 死亡(しぼう, death), 亡くなる(なくなる, to pass away), 亡命(ぼうめい, exile)."
+    },
+    {
+      "id": "k_ki_5",
+      "lesson": "N3.9",
+      "type": "kanji",
+      "surface": "危",
+      "on": "き",
+      "kun": "あぶ(ない)/あや(うい)",
+      "reading": "あぶない",
+      "meaning": "danger / hazardous",
+      "notes": "Compounds at N3.9: 危険(きけん, danger), 危ない(あぶない, dangerous), 危機(きき, crisis). Deferred: 危害(きがい, harm) — 害 N3.13."
+    },
+    {
+      "id": "k_ken_3",
+      "lesson": "N3.9",
+      "type": "kanji",
+      "surface": "険",
+      "on": "けん",
+      "kun": "けわ(しい)",
+      "reading": "けわしい",
+      "meaning": "steep / harsh / risky",
+      "notes": "Compounds at N3.9: 危険(きけん, danger), 険しい(けわしい, steep/harsh). Deferred: 冒険(ぼうけん, adventure) — 冒 not in curriculum; 保険(ほけん, insurance) — 保 N3.47."
+    },
+    {
+      "id": "v_inochi",
+      "surface": "命",
+      "reading": "いのち",
+      "meaning": "life / soul / existence",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.9",
+      "notes": "命 (N3.9). The individual's life force or soul. 命がけ = risking one's life. 命を救う = to save a life. 命令(めいれい, order/command) uses the めい reading — 令 not in curriculum."
+    },
+    {
+      "id": "v_unmei",
+      "surface": "運命",
+      "reading": "うんめい",
+      "meaning": "fate / destiny",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.9",
+      "notes": "運 (N4.16) + 命 (N3.9). 運命的な出会い = fateful encounter. 運命を受け入れる = to accept one's fate."
+    },
+    {
+      "id": "v_shimei",
+      "surface": "使命",
+      "reading": "しめい",
+      "meaning": "mission / duty / calling",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.9",
+      "notes": "使 (N4.14) + 命 (N3.9). 使命感 = sense of mission. 使命を果たす = to fulfill one's mission."
+    },
+    {
+      "id": "v_seimei",
+      "surface": "生命",
+      "reading": "せいめい",
+      "meaning": "life (biological / formal)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.9",
+      "notes": "生 (N5.7) + 命 (N3.9). More formal/scientific than 命(いのち). 生命保険 = life insurance (保険 available N3.47). 地球上の生命 = life on Earth."
+    },
+    {
+      "id": "v_shibou",
+      "surface": "死亡",
+      "reading": "しぼう",
+      "meaning": "death (formal / official)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.9",
+      "notes": "死 (N4.15) + 亡 (N3.9). Used in news, medical, and legal contexts. 死亡する = to die. 死亡率 = mortality rate. In everyday speech, prefer 亡くなる or 死ぬ."
+    },
+    {
+      "id": "v_nakunaru",
+      "surface": "亡くなる",
+      "reading": "なくなる",
+      "meaning": "to pass away / to die (polite)",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.9",
+      "notes": "亡 (N3.9). The respectful way to say someone has died — used when referring to others. 祖父が亡くなりました = My grandfather passed away. Do not use of oneself. Contrast with 死ぬ (plain) and 死亡する (formal/official)."
+    },
+    {
+      "id": "v_boumei",
+      "surface": "亡命",
+      "reading": "ぼうめい",
+      "meaning": "exile / defection / seeking asylum",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.9",
+      "notes": "亡 (N3.9) + 命 (N3.9). Both kanji unlock at N3.9. 亡命する = to defect/flee into exile. 亡命者 = political exile/defector. 亡命を求める = to seek asylum."
+    },
+    {
+      "id": "v_kiken",
+      "surface": "危険",
+      "reading": "きけん",
+      "meaning": "danger / hazard / risk",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.9",
+      "notes": "危 (N3.9) + 険 (N3.9). Both kanji unlock at N3.9. 危険な場所 = dangerous place (な-adj use). 危険を冒す = to take a risk. 危険性 = dangerousness. Also functions as な-adjective: 危険だ / 危険な。"
+    },
+    {
+      "id": "v_abunai",
+      "surface": "危ない",
+      "reading": "あぶない",
+      "meaning": "dangerous / risky / unsafe",
+      "type": "vocab",
+      "gtype": "i_adj",
+      "lesson_ids": "N3.9",
+      "notes": "危 (N3.9). い-adjective. Colloquial/everyday danger. 危ない！= Watch out! 危ない道 = dangerous road. あぶなかった！= That was close! More casual than 危険な; often used as a warning exclamation."
+    },
+    {
+      "id": "v_kiki",
+      "surface": "危機",
+      "reading": "きき",
+      "meaning": "crisis / critical moment",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.9",
+      "notes": "危 (N3.9) + 機 (N4.25). 危機に陥る = to fall into crisis. 危機感 = sense of crisis. 経済危機 = economic crisis. 危機を乗り越える = to overcome a crisis."
+    },
+    {
+      "id": "v_kewashii",
+      "surface": "険しい",
+      "reading": "けわしい",
+      "meaning": "steep / severe / harsh / grim",
+      "type": "vocab",
+      "gtype": "i_adj",
+      "lesson_ids": "N3.9",
+      "notes": "険 (N3.9). い-adjective. 険しい山道 = steep mountain path. 険しい表情 = stern/grim expression. 険しい状況 = harsh/severe situation. Describes both physical terrain (steep) and emotional/situational severity (grim)."
     }
   ]
 }
