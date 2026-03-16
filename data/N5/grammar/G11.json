@@ -6,7 +6,7 @@
   "meta": {
     "level": "N5",
     "unlocksAfter": "N5.10",
-    "focus": "Full i-adjective conjugation paradigm: past tense (-かった), negative (-くない), te-form (-くて), adverb (-く), and the ～すぎる 'too much' form — all derived from the い-stem. Plus the critical irregular: いい changes to よ- in all conjugated forms.",
+    "focus": "Full i-adjective conjugation paradigm: past tense (-かった), negative (-くない), te-form (-くて), and adverb (-く) — all derived from the い-stem. Plus the critical irregular: いい changes to よ- in all conjugated forms.",
     "estimatedMinutes": 25,
     "particles": [],
     "grammarForms": [
@@ -16,8 +16,7 @@
       "plain_past",
       "plain_past_negative",
       "te_form",
-      "adverbial",
-      "conditional_ba"
+      "adverbial"
     ],
     "icon": "🎨"
   },
@@ -34,8 +33,6 @@
         "Past negative: 高くなかったです (was not expensive) — remove い, add くなかったです",
         "て-form connector: 高くて (is expensive and…) — remove い, add くて",
         "Adverb form: 高く (expensively / at a high level) — remove い, add く",
-        "Too much: 高すぎる (too expensive) — remove い, add すぎる",
-        "Conditional: 高ければ (if expensive) — remove い, add ければ",
         "⚠ CRITICAL EXCEPTION: いい → よ- stem. よかった (was good), NOT いかった"
       ]
     },
@@ -122,32 +119,13 @@
             "大きく"
           ],
           "meaning": "in a ~ way / ~ly"
-        },
-        {
-          "label": "★ Too much (すぎる)",
-          "cells": [
-            "よすぎる",
-            "高すぎる",
-            "大きすぎる"
-          ],
-          "meaning": "too ~"
-        },
-        {
-          "label": "Conditional (ければ)",
-          "cells": [
-            "よければ",
-            "高ければ",
-            "大きければ"
-          ],
-          "meaning": "if ~ / as long as ~"
         }
       ],
       "notes": [
         "The stem operation is always: remove い → attach ending. 高い → 高(stem) → 高かった / 高く / 高くて etc.",
         "いい is the only irregular い-adjective. Its stem is よ-, not い-. NEVER write いかった, いくない, いくて. Always: よかった, よくない, よくて.",
         "Polite forms add です to the plain conjugated form: 高かった + です = 高かったです.",
-        "The て-form connects adjectives: 天気が よくて、気分が いいです (The weather is nice and my mood is good).",
-        "すぎる attaches to the stem directly (same as く): 高すぎる = too expensive. This form is itself a verb (る-verb) and can be conjugated: 高すぎます (polite), 高すぎました (past polite)."
+        "The て-form connects adjectives: 天気が よくて、気分が いいです (The weather is nice and my mood is good)."
       ]
     },
     {
@@ -176,7 +154,7 @@
         }
       ],
       "meaning": "いい → よ- stem exception — the most important rule in this lesson",
-      "explanation": "いい (good) is the only irregular い-adjective. In its dictionary form it looks like a normal い-adjective, but when you remove い to conjugate it, you do NOT get い- as the stem. Instead, the stem is **よ-**.\n\n**The rule: いい → よ (for all conjugated forms)**\n\n| Form | いい (CORRECT) | いい (WRONG) |\n|---|---|---|\n| Past | **よかったです** | ~~いかったです~~ |\n| Negative | **よくない** | ~~いくない~~ |\n| Past negative | **よくなかったです** | ~~いくなかったです~~ |\n| て-form | **よくて** | ~~いくて~~ |\n| Adverb | **よく** | ~~いく~~ (sounds like 行く!) |\n| Too much | **よすぎる** | ~~いすぎる~~ |\n| Conditional | **よければ** | ~~いければ~~ |\n\n**Why does this happen?** いい is actually a contracted form of the older adjective よい (also meaning good/nice). All conjugated forms derive from よい, not from いい. In modern Japanese, よい still exists and is used in formal writing — but in everyday speech, the plain form いい is standard. The key takeaway: dictionary form = いい; everything else = よ- stem.",
+      "explanation": "いい (good) is the only irregular い-adjective. In its dictionary form it looks like a normal い-adjective, but when you remove い to conjugate it, you do NOT get い- as the stem. Instead, the stem is **よ-**.\n\n**The rule: いい → よ (for all conjugated forms)**\n\n| Form | いい (CORRECT) | いい (WRONG) |\n|---|---|---|\n| Past | **よかったです** | ~~いかったです~~ |\n| Negative | **よくない** | ~~いくない~~ |\n| Past negative | **よくなかったです** | ~~いくなかったです~~ |\n| て-form | **よくて** | ~~いくて~~ |\n| Adverb | **よく** | ~~いく~~ (sounds like 行く!) |\n\n**Why does this happen?** いい is actually a contracted form of the older adjective よい (also meaning good/nice). All conjugated forms derive from よい, not from いい. In modern Japanese, よい still exists and is used in formal writing — but in everyday speech, the plain form いい is standard. The key takeaway: dictionary form = いい; everything else = よ- stem.",
       "notes": [
         "よい (formal) and いい (standard) both mean 'good'. In plain speech and writing, よい sounds formal and stiff. In everyday conversation, always use いい for the dictionary form.",
         "In polite speech, よかったです (great/it was good!) is one of the most frequently used expressions. Memorize it as a whole phrase first.",
@@ -246,7 +224,7 @@
     },
     {
       "type": "grammarRule",
-      "id": "rule_adverb_sugiru",
+      "id": "rule_adverb",
       "pattern": [
         {
           "label": "STEM",
@@ -257,19 +235,13 @@
           "label": "+ く → ADVERB",
           "color": "modifier",
           "text": "高く (at a high level)"
-        },
-        {
-          "label": "+ すぎる → TOO MUCH",
-          "color": "predicate",
-          "text": "高すぎる (too expensive)"
         }
       ],
-      "meaning": "Adverb form ～く and 'too much' ～すぎる",
-      "explanation": "The い-stem (remove い) has two additional useful functions beyond conjugation: creating adverbs and expressing excess.\n\n**Adverb form (～く):**\nRemove い, add く. The adjective becomes an adverb that modifies a verb:\n- 高い → 高く: 高く 売っています (selling expensively)\n- 大きい → 大きく: 大きく 書いてください (please write it large)\n- いい → よく: よく 来ます (comes often)\n\nAdverbs modify verbs and come directly before them.\n\n**Too much (～すぎる):**\nRemove い, add すぎる. Expresses that something exceeds a comfortable or acceptable limit:\n- 高い → 高すぎる: これは 高すぎます (this is too expensive)\n- 大きい → 大きすぎる: 大きすぎます (it's too big)\n- いい → よすぎる: よすぎる ことは ない (there's no such thing as too good)\n\nすぎる is itself a ru-verb (一段動詞), so it conjugates further:\n- 高すぎる → 高すぎます (polite) / 高すぎました (past polite) / 高すぎない (plain negative)\n\n⚠️ **Note on すぎる spelling:** There is no space between the adjective stem and すぎる. Write 高すぎる, not 高く すぎる.",
+      "meaning": "Adverb form ～く — adjectives that modify verbs",
+      "explanation": "The い-stem (remove い) has one more function beyond conjugation: creating adverbs.\n\n**Adverb form (～く):**\nRemove い, add く. The adjective becomes an adverb that modifies a verb:\n- 高い → 高く: 高く 売っています (selling expensively)\n- 大きい → 大きく: 大きく 書いてください (please write it large)\n- 長い → 長く: 長く 話しました (spoke for a long time)\n- いい → よく: よく 来ます (comes often)\n\nAdverbs modify verbs and come directly before them. Unlike adjectives (which can stand before nouns or at the end of a sentence), adverbs attach to the verb action.\n\n**て-form as a connector:**\nThe て-form (～くて) connects two adjective descriptions in sequence. Only the final adjective in the chain needs the polite ending:\n- 電車は 長くて、高いです (the train is long AND expensive)\n- 天気が よくて、気分が いいです (the weather is nice AND my mood is good)",
       "notes": [
         "Adverb form (く): modifies verbs. 高く 買いました (I bought it at a high price). Placed directly before the verb it modifies.",
-        "すぎる conjugates as a regular ru-verb. In polite speech: 高すぎます. In past: 高すぎました. The base form 高すぎる is the plain (dictionary) form.",
-        "す ぎる can also attach to verbs and noun/adjective stems: 食べすぎる (eat too much), 元気すぎる (too energetic).",
+        "いい → よく (adverb 'well / often'). This does NOT sound like the verb 行く in context: よく 行きます = 'I often go'.",
         "て-form of い-adjectives (高くて) is extremely useful for connecting two descriptions: 電車は 長くて、高いです (the train is long and expensive). The て-form takes all the conjugation burden — the second adjective stays in its base or polite form."
       ],
       "examples": [
@@ -293,22 +265,6 @@
           ],
           "en": "This train is expensive and long.",
           "breakdown": "高い → 高くて (て-form) connects to the next description. 長いです ends the sentence in polite form. Only the last adjective needs the polite ending."
-        },
-        {
-          "parts": [
-            {
-              "text": "電気代が",
-              "role": "topic",
-              "gloss": "the electricity bill (subject)"
-            },
-            {
-              "text": "高すぎます。",
-              "role": "predicate",
-              "gloss": "too expensive (polite sugiru)"
-            }
-          ],
-          "en": "The electricity bill is too expensive.",
-          "breakdown": "高い → 高(stem) + すぎる = 高すぎる (plain). Polite: 高すぎます. Expresses that the expense exceeds what is comfortable."
         },
         {
           "parts": [
@@ -479,46 +435,37 @@
         },
         {
           "spk": "ミキ",
-          "jp": "天気が よければ、また 行きたいです。",
-          "en": "If the weather is good, I want to go again.",
+          "jp": "山は とても よかったです。また 行きたいですね。",
+          "en": "The mountains were really nice. I want to go again, don't you?",
           "terms": [
-            "v_tenki",
-            "p_ga",
+            "v_yama",
+            "p_wa",
+            "v_totemo",
             {
               "id": "v_ii",
-              "form": "conditional_ba"
+              "form": "polite_past_adj"
             },
             "v_mata",
             {
               "id": "v_iku",
               "form": "plain_desire_tai"
             },
-            "g_desu"
+            "g_desu",
+            "p_ne"
           ]
         },
         {
           "spk": "レン",
-          "jp": "来週は どうですか。天気が よすぎると、人気が 高すぎますよ。",
-          "en": "How about next week? If the weather is too good, the popularity is too high.",
+          "jp": "そうですね。また 行きましょう！",
+          "en": "Yes. Let's go again!",
           "terms": [
-            "v_raishuu",
-            "p_wa",
-            "v_dou",
-            "g_desu",
-            "p_ka",
-            "v_tenki",
-            "p_ga",
+            "p_soudesu",
+            "p_ne",
+            "v_mata",
             {
-              "id": "v_ii",
-              "form": "sugiru_form"
-            },
-            "v_ninki",
-            "p_ga",
-            {
-              "id": "v_takai",
-              "form": "sugiru_form"
-            },
-            "p_yo"
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -604,36 +551,6 @@
           ]
         },
         {
-          "verb": "おいしい",
-          "type": "i_adj",
-          "reading": "おいしい",
-          "targetForm": "sugiru_form",
-          "answer": "おいしすぎる",
-          "answerReading": "おいしすぎる",
-          "hint": "Too much: remove い → おいし(stem) + すぎる = おいしすぎる",
-          "choices": [
-            "おいしすぎる",
-            "おいしいすぎる",
-            "おいしくすぎる",
-            "おいしすぎます"
-          ]
-        },
-        {
-          "verb": "いい",
-          "type": "irr_ii",
-          "reading": "いい",
-          "targetForm": "conditional_ba",
-          "answer": "よければ",
-          "answerReading": "よければ",
-          "hint": "いい conditional: stem よ- + ければ = よければ. NOT いければ!",
-          "choices": [
-            "よければ",
-            "いければ",
-            "いいば",
-            "よいば"
-          ]
-        },
-        {
           "verb": "新しい",
           "type": "i_adj",
           "reading": "あたらしい",
@@ -704,15 +621,16 @@
           ]
         },
         {
-          "given": "電車が 高いです。",
+          "given": "いいです",
           "givenLabel": "Polite present",
-          "targetLabel": "Express 'too expensive' (polite)",
-          "answer": "電車が 高すぎます。",
+          "targetLabel": "Adverb form",
+          "answer": "よく",
+          "answerReading": "よく",
           "choices": [
-            "電車が 高すぎます。",
-            "電車が 高くすぎます。",
-            "電車が 高いすぎます。",
-            "電車が 高すぎる。"
+            "よく",
+            "いく",
+            "いいく",
+            "よくて"
           ]
         }
       ]
@@ -788,24 +706,6 @@
         },
         {
           "kind": "mcq",
-          "q": "What does 高すぎます mean?",
-          "choices": [
-            "It is too expensive",
-            "It was expensive",
-            "It is expensive",
-            "It is not expensive"
-          ],
-          "answer": "It is too expensive",
-          "terms": [
-            {
-              "id": "v_takai",
-              "form": "sugiru_form"
-            }
-          ],
-          "explanation": "～すぎる means 'too ~' (exceeds a comfortable limit). 高い → 高(stem) + すぎる = 高すぎる. Polite form: 高すぎます. This is different from 高いです (is expensive) or 高かったです (was expensive)."
-        },
-        {
-          "kind": "mcq",
           "q": "How do you form the adverb from いい?",
           "choices": [
             "よく",
@@ -824,29 +724,21 @@
         },
         {
           "kind": "mcq",
-          "q": "天気が ___ ば、外に 行きましょう。(If the weather is good, let's go outside.)",
+          "q": "Which sentence correctly uses an い-adjective as an adverb?",
           "choices": [
-            "よけれ",
-            "いけれ",
-            "よかっ",
-            "よく"
+            "大きく 書いてください。",
+            "大きいく 書いてください。",
+            "大きくて 書いてください。",
+            "大きかった 書いてください。"
           ],
-          "answer": "よけれ",
+          "answer": "大きく 書いてください。",
           "terms": [
-            "v_tenki",
-            "p_ga",
             {
-              "id": "v_ii",
-              "form": "conditional_ba"
-            },
-            "v_soto",
-            "p_ni",
-            {
-              "id": "v_iku",
-              "form": "polite_volitional_mashou"
+              "id": "v_ookii",
+              "form": "adverbial"
             }
           ],
-          "explanation": "Conditional ～ければ: remove い → stem + ければ. いい → よ(stem) + ければ = よければ. The question shows 天気が よけれ_ば, so the answer is よけれ (completing よければ). いければ would be wrong (wrong stem). よかった is past, よく is adverb."
+          "explanation": "Adverb form: remove い → stem + く. 大きい → 大きく (largely / in a big way). 大きいく does not exist. 大きくて is the て-form connector (used between two adjectives), not an adverb before a verb. 大きかった is the past tense form."
         }
       ]
     }
