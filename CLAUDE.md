@@ -1759,9 +1759,9 @@ These words may be written in hiragana and used in content **from the listed les
 | `v_nan` | なん | N5.1 | 何 | N5.2 | Question word (before です/の/counters/d-n-t sounds) |
 | `v_kazoku` | かぞく | N5.1 | 家族 | N4.7 | Essential for family-themed content from lesson 1 |
 | `v_suki` | すき | N5.7 | 好き | N4.4 | Na-adjective "like" — needed for food/preference conversations |
-| `v_tsugi` | つぎ | N5.4 | 次 | (not taught) | "Next" — needed for sequencing and time expressions. 次 kanji is not formally introduced in any lesson; always write in hiragana. |
+| `v_tsugi` | つぎ | N5.4 | 次 | N3.3 | "Next" — needed for sequencing and time expressions. Write as つぎ (hiragana) until N3.3. |
 | `v_koto` | こと | N5.9 | 事 | N4.14 | Nominalizer "thing/fact" — needed for ～ことがある, ～ことにする patterns. Write as こと before N4.14. |
-| `v_kinou` | きのう | N5.4 | 昨日 | (not taught) | "Yesterday" — essential time word paired with きょう. 昨 kanji is not formally introduced in any lesson; always write in hiragana. |
+| `v_kinou` | きのう | N5.4 | 昨日 | N3.3 | "Yesterday" — essential time word paired with きょう. Write as きのう (hiragana) until N3.3. |
 | `v_namae` | 名まえ | N5.1 | 名前 | N5.9 | Essential noun for introductions ("what is your name?"). 名 is N5.1 kanji; 前 is N5.9. Write as 名まえ until N5.9, then 名前. |
 
 **Example usage in N5.1 content:**
