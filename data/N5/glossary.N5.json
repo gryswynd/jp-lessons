@@ -416,6 +416,38 @@
       "notes": "Exclamation of wonder, delight, or excitement. Casual register."
     },
     {
+      "id": "v_eto",
+      "surface": "えーと",
+      "reading": "えーと",
+      "meaning": "um / uh / let me see (floor-holding hesitation)",
+      "type": "vocab",
+      "gtype": "interjection",
+      "lesson_ids": "N5.10",
+      "notes": "The primary floor-holding hesitation in Japanese. Signals the speaker is still thinking and has not yielded the floor. Shorter casual form: えっと. Longer elongated form: えーっと. Appropriate in most registers; えーと is neutral, えっと is slightly more casual.",
+      "matches": ["えっと", "えーっと"]
+    },
+    {
+      "id": "v_anou",
+      "surface": "あのう",
+      "reading": "あのう",
+      "meaning": "um / excuse me / well (soft hesitation or attention-getter)",
+      "type": "vocab",
+      "gtype": "interjection",
+      "lesson_ids": "N5.10",
+      "notes": "Softer and more polished than えーと. Used sentence-initially to hold the floor while gathering thoughts, or to gently get someone's attention (あのう、すみません). Often shortened to あの in casual speech — but note that あの also functions as the demonstrative 'that over there' (v_ano); context disambiguates. Preferred in formal or polite contexts over えーと.",
+      "matches": ["あの"]
+    },
+    {
+      "id": "v_saa",
+      "surface": "さあ",
+      "reading": "さあ",
+      "meaning": "well... / hmm, I wonder / right then! (uncertainty or commencement)",
+      "type": "vocab",
+      "gtype": "interjection",
+      "lesson_ids": "N5.10",
+      "notes": "Has two distinct uses. (1) Uncertainty: signals genuine not-knowing — さあ、わかりません (Well... I'm not sure). Unlike えーと, this does NOT mean the speaker is retrieving an answer — it means they may not have one. (2) Commencement: さあ、行こう！(Right then, let's go!) / さあ、始めましょう (Alright, let's start). Context determines which reading."
+    },
+    {
       "id": "v_anata",
       "surface": "あなた",
       "reading": "あなた",
