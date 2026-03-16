@@ -585,6 +585,61 @@
       "notes": "On-reading only: やく. In 約束(やくそく, promise), 約〜(やく, approximately), 予約(よやく, reservation). 予約 now fully writable once both 予(N3.29) and 約(N3.5) are taught — but 予 comes later, so 予約 unlocks at N3.29."
     },
     {
+      "id": "k_kare",
+      "lesson": "N3.6",
+      "type": "kanji",
+      "surface": "彼",
+      "on": "ひ",
+      "kun": "かれ/かの",
+      "reading": "かれ",
+      "meaning": "he / that (over there)",
+      "notes": "Kun: かれ (he/him — 彼は, also informal 'boyfriend'). かの in 彼女(かのじょ, she/girlfriend). On: ひ in literary compounds. 彼ら(かれら) = they (mixed/male group)."
+    },
+    {
+      "id": "k_kimi",
+      "lesson": "N3.6",
+      "type": "kanji",
+      "surface": "君",
+      "on": "くん",
+      "kun": "きみ",
+      "reading": "きみ",
+      "meaning": "you (informal) / lord / ruler",
+      "notes": "Kun: きみ (you — informal, mainly male speech). On: くん in 〜君(くん) name suffix (used for males, younger people). 君主(くんしゅ) = monarch/ruler."
+    },
+    {
+      "id": "k_musume",
+      "lesson": "N3.6",
+      "type": "kanji",
+      "surface": "娘",
+      "on": "じょう",
+      "kun": "むすめ",
+      "reading": "むすめ",
+      "meaning": "daughter / young woman",
+      "notes": "Kun: むすめ (daughter; young woman). On: じょう in お嬢さん(おじょうさん, young lady/someone's daughter — polite). 一人娘(ひとりむすめ) = only daughter."
+    },
+    {
+      "id": "k_so",
+      "lesson": "N3.6",
+      "type": "kanji",
+      "surface": "祖",
+      "on": "そ",
+      "kun": "",
+      "reading": "そ",
+      "meaning": "ancestor / grandparent",
+      "notes": "On-reading only: そ. In 祖父(そふ, grandfather), 祖母(そぼ, grandmother), 祖先(そせん, ancestor). Never appears alone. 元祖(がんそ) = originator/founder."
+    },
+    {
+      "id": "k_dare",
+      "lesson": "N3.6",
+      "type": "kanji",
+      "surface": "誰",
+      "on": "",
+      "kun": "だれ/たれ",
+      "reading": "だれ",
+      "meaning": "who",
+      "notes": "Kun: だれ (who). Polite/literary variant: どなた. 誰か(だれか) = someone. 誰でも(だれでも) = anyone/everyone. 誰も(だれも) + negative = nobody. たれ is literary/archaic."
+    },
+    {
       "id": "k_sho_ogre",
       "lesson": "N3.4",
       "type": "kanji",
@@ -761,6 +816,96 @@
       "gtype": "counter",
       "lesson_ids": "N3.5",
       "notes": "歳 (N3.5). Counter for age: 二十歳(にじゅっさい, 20 years old). Special: 二十歳(はたち, 20 years old) is an irregular reading. 何歳(なんさい) = how old? See also: v_hatachi."
+    },
+    {
+      "id": "v_kare",
+      "surface": "彼",
+      "reading": "かれ",
+      "meaning": "he / him / boyfriend (informal)",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N3.6",
+      "notes": "彼 (N3.6). Third-person pronoun for males. In modern casual speech also means 'boyfriend': 彼ができた = I got a boyfriend. 彼ら(かれら) = they (male/mixed group)."
+    },
+    {
+      "id": "v_kanojo",
+      "surface": "彼女",
+      "reading": "かのじょ",
+      "meaning": "she / her / girlfriend",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N3.6",
+      "notes": "彼 (N3.6) + 女 (N5.1). Third-person pronoun for females. Also commonly means 'girlfriend': 彼女がいる = to have a girlfriend. 彼女たち = they (female group)."
+    },
+    {
+      "id": "v_kimi",
+      "surface": "君",
+      "reading": "きみ",
+      "meaning": "you (informal)",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N3.6",
+      "notes": "君 (N3.6). Informal second-person pronoun, used mainly by males toward peers or juniors. More intimate than あなた but can sound condescending in some contexts. Common in song lyrics and literature."
+    },
+    {
+      "id": "v_musume",
+      "surface": "娘",
+      "reading": "むすめ",
+      "meaning": "daughter / young woman",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.6",
+      "notes": "娘 (N3.6). Own daughter (humble/plain): うちの娘 = my daughter. Also used generally for 'young woman'. 一人娘(ひとりむすめ) = only daughter. Contrast: 息子(むすこ, son)."
+    },
+    {
+      "id": "v_sofu",
+      "surface": "祖父",
+      "reading": "そふ",
+      "meaning": "grandfather (formal/own)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.6",
+      "notes": "祖 (N3.6) + 父 (N5.1). Formal/humble term for one's own grandfather. Use おじいさん when referring to someone else's grandfather or speaking informally. 祖父母(そふぼ) = grandparents."
+    },
+    {
+      "id": "v_sobo",
+      "surface": "祖母",
+      "reading": "そぼ",
+      "meaning": "grandmother (formal/own)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.6",
+      "notes": "祖 (N3.6) + 母 (N5.1). Formal/humble term for one's own grandmother. Use おばあさん when referring to someone else's grandmother or speaking informally. 祖父母(そふぼ) = grandparents."
+    },
+    {
+      "id": "v_sosen",
+      "surface": "祖先",
+      "reading": "そせん",
+      "meaning": "ancestor(s) / forebear(s)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.6",
+      "notes": "祖 (N3.6) + 先 (N5.1). 祖先を敬う = to respect one's ancestors. お盆 is the Buddhist festival for honoring 祖先. Contrast: 子孫(しそん, descendant)."
+    },
+    {
+      "id": "v_ojiisan",
+      "surface": "おじいさん",
+      "reading": "おじいさん",
+      "meaning": "grandfather / old man (informal)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.6",
+      "notes": "Pure kana. Informal/spoken term for grandfather or an elderly man in general. Use 祖父(そふ) when speaking humbly about your own grandfather. Double い: おじいさん (grandfather) vs おじさん (uncle/middle-aged man)."
+    },
+    {
+      "id": "v_obaasan",
+      "surface": "おばあさん",
+      "reading": "おばあさん",
+      "meaning": "grandmother / old woman (informal)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.6",
+      "notes": "Pure kana. Informal/spoken term for grandmother or an elderly woman in general. Use 祖母(そぼ) when speaking humbly about your own grandmother. Double あ: おばあさん (grandmother) vs おばさん (aunt/middle-aged woman)."
     },
     {
       "id": "v_getsumatsu",
