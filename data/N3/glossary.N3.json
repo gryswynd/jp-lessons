@@ -35,8 +35,19 @@
       "notes": "Primarily used in compounds: 念入り (careful), 記念 (memorial), 残念 (regrettable)."
     },
     {
-      "id": "k_nareru",
+      "id": "k_nokoru",
       "lesson": "N3.1",
+      "type": "kanji",
+      "surface": "残",
+      "on": "ざん",
+      "kun": "のこる/のこす",
+      "reading": "のこる",
+      "meaning": "remain / leftover / regrettable",
+      "notes": "Kun: のこる (to remain, intrans), のこす (to leave behind, trans). On: ざん in 残念(ざんねん, regrettable/unfortunate), 残業(ざんぎょう, overtime)."
+    },
+    {
+      "id": "k_nareru",
+      "lesson": "N3.4",
       "type": "kanji",
       "surface": "慣",
       "on": "かん",
@@ -97,7 +108,7 @@
       "type": "vocab",
       "gtype": "verb",
       "verb_class": "ichidan",
-      "lesson_ids": "N3.1",
+      "lesson_ids": "N3.4",
       "notes": "Takes に: 日本の生活に慣れる (get used to life in Japan)."
     },
     {
@@ -121,14 +132,68 @@
       "notes": "忘 (N3.1) + 年 (N5.4) + 会 (N5.17). Lit. forget-year-gathering. A major social tradition in Japanese workplaces and friend groups."
     },
     {
+      "id": "v_zannen",
+      "surface": "残念",
+      "reading": "ざんねん",
+      "meaning": "regrettable / disappointing / what a shame",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.1",
+      "notes": "残 (N3.1) + 念 (N3.1). 残念ながら = unfortunately / regrettably. 残念に思う = to feel disappointed. 残念だった = it was a shame."
+    },
+    {
+      "id": "v_nokoru",
+      "surface": "残る",
+      "reading": "のこる",
+      "meaning": "to remain / to be left / to survive",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.1",
+      "notes": "Intransitive — something remains on its own: お金が残る = money is left over. 記憶に残る = to stick in one's memory. Contrast with 残す (transitive)."
+    },
+    {
+      "id": "v_nokosu",
+      "surface": "残す",
+      "reading": "のこす",
+      "meaning": "to leave (something) behind / to save / to preserve",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.1",
+      "notes": "Transitive — you leave something intentionally: 食べ物を残す = to leave food uneaten. 名前を残す = to leave one's name for posterity. Contrast with 残る (intransitive)."
+    },
+    {
+      "id": "v_nokori",
+      "surface": "残り",
+      "reading": "のこり",
+      "meaning": "the rest / remainder / what is left",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.1",
+      "notes": "Noun form of 残る. 残りの時間 = the remaining time. 残り物 = leftovers / what's left over. 残り少ない = running low."
+    },
+    {
+      "id": "v_zangyou",
+      "surface": "残業",
+      "reading": "ざんぎょう",
+      "meaning": "overtime work / working late",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.1",
+      "matches": ["残ぎょう"],
+      "notes": "残 (N3.1) + 業 (N3.77). Write as 残ぎょう until N3.77 when 業 is taught. 残業する = to work overtime. 残業代 = overtime pay."
+    },
+    {
       "id": "v_shuukan",
       "surface": "習慣",
       "reading": "しゅうかん",
       "meaning": "habit / custom",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N3.1",
-      "notes": "習 (N4.32) + 慣 (N3.1). 生活習慣 = lifestyle habits."
+      "lesson_ids": "N3.4",
+      "notes": "習 (N4.32) + 慣 (N3.4). 生活習慣 = lifestyle habits."
     },
     {
       "id": "v_jikaku",
