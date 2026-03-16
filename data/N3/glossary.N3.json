@@ -552,6 +552,39 @@
       "notes": "Kun: たば (bundle, bunch — 花束 はなたば). On: そく in 約束(やくそく, promise). 束ねる(たばねる) = to bundle/tie together."
     },
     {
+      "id": "k_sai",
+      "lesson": "N3.5",
+      "type": "kanji",
+      "surface": "歳",
+      "on": "さい/せい",
+      "kun": "とし",
+      "reading": "さい",
+      "meaning": "years old / age",
+      "notes": "On: さい in 〜歳 (age counter — 二十歳 にじゅっさい). Special reading: 二十歳(はたち, 20 years old). Also お歳暮(おせいぼ, year-end gift). Kun: とし (year/age, literary)."
+    },
+    {
+      "id": "k_kure",
+      "lesson": "N3.5",
+      "type": "kanji",
+      "surface": "暮",
+      "on": "ぼ",
+      "kun": "くれる/くらす",
+      "reading": "くれる",
+      "meaning": "livelihood / twilight / end of year",
+      "notes": "Kun: くらす (to live/make a living — 暮らす), くれる (to grow dark/set — 日が暮れる). On: ぼ in お歳暮(おせいぼ). 夕暮れ(ゆうぐれ) = dusk/twilight."
+    },
+    {
+      "id": "k_yaku",
+      "lesson": "N3.5",
+      "type": "kanji",
+      "surface": "約",
+      "on": "やく",
+      "kun": "",
+      "reading": "やく",
+      "meaning": "approximately / promise / agreement",
+      "notes": "On-reading only: やく. In 約束(やくそく, promise), 約〜(やく, approximately), 予約(よやく, reservation). 予約 now fully writable once both 予(N3.29) and 約(N3.5) are taught — but 予 comes later, so 予約 unlocks at N3.29."
+    },
+    {
       "id": "k_sho_ogre",
       "lesson": "N3.4",
       "type": "kanji",
@@ -634,9 +667,8 @@
       "meaning": "promise / appointment / arrangement",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N3.66",
-      "matches": ["やくそく"],
-      "notes": "約 (N3.66) + 束 (N3.5). Write as やくそく until N3.66 when 約 is taught. 約束する = to promise. 約束を守る = to keep a promise."
+      "lesson_ids": "N3.5",
+      "notes": "約 (N3.5) + 束 (N3.5). 約束する = to promise. 約束を守る = to keep a promise. 約束を破る = to break a promise."
     },
     {
       "id": "v_hanataba",
@@ -647,6 +679,88 @@
       "gtype": "noun",
       "lesson_ids": "N3.5",
       "notes": "花 (N4.7) + 束 (N3.5). 花束をもらう = to receive a bouquet. A common gift for ceremonies and celebrations."
+    },
+    {
+      "id": "v_taba",
+      "surface": "束",
+      "reading": "たば",
+      "meaning": "bundle / bunch / sheaf",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.5",
+      "notes": "束 (N3.5). 一束(ひとたば, one bundle). 束にする = to bundle. Used for flowers, documents, cash, etc."
+    },
+    {
+      "id": "v_tabane",
+      "surface": "束ねる",
+      "reading": "たばねる",
+      "meaning": "to bundle / to tie together / to bind",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.5",
+      "notes": "束 (N3.5). 束ねる = to tie into a bundle. 髪を束ねる = to tie up one's hair. Also metaphorical: 部下を束ねる = to manage subordinates."
+    },
+    {
+      "id": "v_kurasu",
+      "surface": "暮らす",
+      "reading": "くらす",
+      "meaning": "to live / to get by / to make a living",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.5",
+      "notes": "暮 (N3.5). 日本で暮らす = to live in Japan. 一人で暮らす = to live alone. Focuses on daily life/livelihood rather than mere existence (住む)."
+    },
+    {
+      "id": "v_kurashi",
+      "surface": "暮らし",
+      "reading": "くらし",
+      "meaning": "livelihood / daily life / living",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.5",
+      "notes": "暮 (N3.5). Noun form of 暮らす. 暮らしが楽になる = life becomes easier. 田舎の暮らし = rural life."
+    },
+    {
+      "id": "v_yuugure",
+      "surface": "夕暮れ",
+      "reading": "ゆうぐれ",
+      "meaning": "dusk / twilight / evening",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.5",
+      "notes": "夕 (N4.3) + 暮 (N3.5). 夕暮れ時(ゆうぐれどき) = dusk, the twilight hour. Literary/poetic nuance compared to 夕方(ゆうがた)."
+    },
+    {
+      "id": "v_oseibo",
+      "surface": "お歳暮",
+      "reading": "おせいぼ",
+      "meaning": "year-end gift / year-end present",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.5",
+      "notes": "歳 (N3.5) + 暮 (N3.5). One of Japan's two major gift-giving seasons (summer: お中元; winter: お歳暮). Typically given in December to those who have helped you during the year."
+    },
+    {
+      "id": "v_yaku",
+      "surface": "約〜",
+      "reading": "やく",
+      "meaning": "approximately / about",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N3.5",
+      "notes": "約 (N3.5). Prefix/adverb used before numbers: 約100人(やく100にん, approximately 100 people). More formal than だいたい or ごろ."
+    },
+    {
+      "id": "v_sai",
+      "surface": "〜歳",
+      "reading": "さい",
+      "meaning": "years old (age counter)",
+      "type": "vocab",
+      "gtype": "counter",
+      "lesson_ids": "N3.5",
+      "notes": "歳 (N3.5). Counter for age: 二十歳(にじゅっさい, 20 years old). Special: 二十歳(はたち, 20 years old) is an irregular reading. 何歳(なんさい) = how old? See also: v_hatachi."
     },
     {
       "id": "v_getsumatsu",
