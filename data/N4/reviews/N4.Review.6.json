@@ -288,33 +288,39 @@
             },
             {
               "spk": "けん",
-              "jp": "心も とても きれいな 人だよ。",
+              "jp": "写真も すごく きれいだよ。旅行しながら とるから。",
               "terms": [
-                "v_kokoro",
+                "v_shashin",
                 "p_mo",
-                "v_totemo",
+                {
+                  "id": "v_sugoi",
+                  "form": "adverbial"
+                },
                 {
                   "id": "v_kirei",
-                  "form": "attributive_na"
+                  "form": "plain_adj"
                 },
-                "v_hito",
                 "p_yo",
-                "g_da"
+                "g_da",
+                "v_ryokou",
+                {
+                  "id": "v_suru",
+                  "form": "nagara_form"
+                },
+                {
+                  "id": "v_toru",
+                  "form": "plain_form"
+                },
+                "p_kara_because"
               ]
             },
             {
               "spk": "ゆき",
-              "jp": "そうだね。写真を とりながら 旅行する 人は 心も きれいだよ。",
+              "jp": "そうだね。旅行する 人は 心も きれいだよ。",
               "terms": [
                 "v_sou",
                 "p_ne",
                 "g_da",
-                "v_shashin",
-                "p_wo",
-                {
-                  "id": "v_toru",
-                  "form": "nagara_form"
-                },
                 "v_ryokou",
                 {
                   "id": "v_suru",
