@@ -37,6 +37,8 @@
               "terms": [
                 "char_yamakawa",
                 "v_san",
+                "v_kore",
+                "p_wa",
                 "v_doko",
                 "p_de",
                 {
@@ -82,8 +84,10 @@
                   "id": "v_sugoi",
                   "form": "polite_adj"
                 },
+                "p_ne",
                 "v_ryokou",
                 "p_wa",
+                "v_itsu",
                 {
                   "id": "v_iku",
                   "form": "polite_mashita"
@@ -101,8 +105,9 @@
                 "p_ni",
                 {
                   "id": "v_iku",
-                  "form": "desire_tai_past"
+                  "form": "plain_desire_tai_past"
                 },
+                "g_desu",
                 "p_ga_but",
                 "v_jikan",
                 "p_ga",
@@ -143,7 +148,7 @@
             },
             {
               "spk": "やまもと",
-              "jp": "そうですか。顔色が よくないですね。体は 大丈夫ですか。",
+              "jp": "そうですか。顔色が よくないですね。体は だいじょうぶですか。",
               "terms": [
                 "v_sou",
                 "g_desu",
@@ -166,7 +171,7 @@
             },
             {
               "spk": "りきぞ",
-              "jp": "体は 大丈夫ですが、頭が 痛くて 気分も よくないです。",
+              "jp": "体は だいじょうぶですが、頭が 痛くて 気分も よくないです。",
               "terms": [
                 "v_karada",
                 "p_wa",
@@ -204,7 +209,8 @@
                 {
                   "id": "v_yasumu",
                   "form": "te_form"
-                }
+                },
+                "v_kudasai"
               ]
             }
           ],
@@ -240,8 +246,8 @@
                 "v_sekaijuu",
                 "p_de",
                 "v_ninki",
-                "g_da",
-                "p_yo"
+                "p_yo",
+                "g_da"
               ]
             },
             {
@@ -262,7 +268,7 @@
                 },
                 {
                   "id": "v_atamagaii",
-                  "form": "plain_form"
+                  "form": "plain_adj"
                 },
                 "v_kubi",
                 "p_mo",
@@ -276,8 +282,8 @@
                   "id": "v_kirei",
                   "form": "plain_adj"
                 },
-                "g_da",
-                "p_yo"
+                "p_yo",
+                "g_da"
               ]
             },
             {
@@ -292,8 +298,8 @@
                   "form": "attributive_na"
                 },
                 "v_hito",
-                "g_da",
-                "p_yo"
+                "p_yo",
+                "g_da"
               ]
             },
             {
@@ -301,8 +307,8 @@
               "jp": "そうだね。写真を とりながら 旅行する 人は 心も きれいだよ。",
               "terms": [
                 "v_sou",
-                "g_da",
                 "p_ne",
+                "g_da",
                 "v_shashin",
                 "p_wo",
                 {
@@ -322,8 +328,8 @@
                   "id": "v_kirei",
                   "form": "plain_adj"
                 },
-                "g_da",
-                "p_yo"
+                "p_yo",
+                "g_da"
               ]
             }
           ],
@@ -408,7 +414,7 @@
           "distractors": [
             "体に",
             "心も",
-            "大丈夫ですが"
+            "だいじょうぶですが"
           ],
           "explanation": "頭が (head — が marks subject) + 痛くて (hurts — te-form of the い-adjective 痛い: removes い, adds くて, connecting two clauses) + 顔色が (complexion — が marks subject) + よくないです (is not good — irregular negative of いい: よくない + です). The te-form of い-adjectives (〜くて) is used to connect two descriptions."
         },
@@ -614,7 +620,7 @@
       "items": [
         {
           "kind": "mcq",
-          "q": "彼女は [旅行] が 好きです。",
+          "q": "やまかわさんは [旅行] が 好きです。",
           "choices": [
             "りょこう",
             "りょうこう",
@@ -698,7 +704,7 @@
         },
         {
           "kind": "mcq",
-          "q": "東京は 日本の [中心] です。",
+          "q": "旅先の [中心] で 写真を とりました。",
           "choices": [
             "ちゅうしん",
             "なかこころ",
@@ -848,7 +854,7 @@
         },
         {
           "kind": "mcq",
-          "q": "やまかわさんは 顔色が ______ ですね。大丈夫ですか。",
+          "q": "やまかわさんは 顔色が ______ ですね。だいじょうぶですか。",
           "choices": [
             "よくない",
             "よくて",
