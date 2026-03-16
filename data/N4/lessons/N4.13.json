@@ -1,61 +1,54 @@
 {
   "contentVersion": "1.0.0",
   "id": "N4.13",
-  "title": "Phase 4 Lesson 13: Music, Sound & Characteristics",
+  "title": "Phase 4 Lesson 13: Music, Voice & Sound",
   "meta": {
     "phase": 4,
     "lesson": 13,
-    "focus": "Music, singing, voice descriptions, and physical characteristics (light/low).",
-    "kanji": [
-      "音",
-      "楽",
-      "歌",
-      "声",
-      "低",
-      "軽"
-    ]
+    "focus": "Music, singing, voice, sound quality, and the mood/weight of experiences.",
+    "kanji": ["音", "楽", "歌", "声", "低", "軽"]
   },
   "newKanji": [
     {
       "kanji": "音",
       "on": "おん / いん",
       "kun": "おと / ね",
-      "meaning": "sound",
+      "meaning": "Sound",
       "termId": "k_oto"
     },
     {
       "kanji": "楽",
       "on": "がく / らく",
       "kun": "たの(しい)",
-      "meaning": "comfort / music / fun",
+      "meaning": "Comfort / Music / Fun",
       "termId": "k_gaku"
     },
     {
       "kanji": "歌",
       "on": "か",
       "kun": "うた / うた(う)",
-      "meaning": "song / sing",
+      "meaning": "Song / Sing",
       "termId": "k_uta"
     },
     {
       "kanji": "声",
       "on": "せい / しょう",
       "kun": "こえ",
-      "meaning": "voice",
+      "meaning": "Voice",
       "termId": "k_koe"
     },
     {
       "kanji": "低",
       "on": "てい",
       "kun": "ひく(い)",
-      "meaning": "low",
+      "meaning": "Low",
       "termId": "k_tei"
     },
     {
       "kanji": "軽",
       "on": "けい",
       "kun": "かる(い)",
-      "meaning": "light (weight)",
+      "meaning": "Light (weight)",
       "termId": "k_kei"
     }
   ],
@@ -63,41 +56,64 @@
     {
       "type": "warmup",
       "title": "Warm-Up Review（ウォームアップ）",
-      "instructions": "Ask your partner these questions (using previously learned words):",
+      "instructions": "Answer these questions using words you already know:",
       "items": [
         {
-          "jp": "先週、映画を 見ましたか。",
-          "en": "Did you watch a movie last week?",
+          "jp": "どんな 映画が 好きですか。",
+          "en": "What kind of movies do you like?",
           "terms": [
-            "v_senshuu",
+            "v_donna",
             "v_eiga",
-            "v_miru"
+            "p_ga",
+            { "id": "v_suki", "form": "polite_adj" },
+            "g_desu",
+            "p_ka"
           ]
         },
         {
-          "jp": "どんな 食べ物が 好きですか。",
-          "en": "What kind of food do you like?",
+          "jp": "テレビを 見ながら お茶を 飲みますか。",
+          "en": "Do you drink tea while watching TV?",
           "terms": [
-            "v_tabemono",
-            "v_suki"
+            "v_terebi",
+            "p_wo",
+            { "id": "v_miru", "form": "nagara_form" },
+            "v_ocha",
+            "p_wo",
+            { "id": "v_nomu", "form": "polite_masu" },
+            "p_ka"
           ]
         },
         {
-          "jp": "あなたの 家は 駅の 近くですか。",
-          "en": "Is your house near the station?",
+          "jp": "休みの 日は、写真を とったり 旅行を したり しますか。",
+          "en": "On your days off, do you do things like take photos and travel?",
           "terms": [
-            "k_ie",
-            "k_eki",
-            "v_chikai"
+            "v_yasumi",
+            "p_no",
+            "v_hi",
+            "p_wa",
+            "v_shashin",
+            "p_wo",
+            { "id": "v_toru", "form": "tari_form" },
+            "v_ryokou",
+            "p_wo",
+            { "id": "v_suru", "form": "tari_form" },
+            { "id": "v_suru", "form": "polite_masu" },
+            "p_ka"
           ]
         },
         {
-          "jp": "毎日、何時に 起きますか。",
-          "en": "What time do you wake up every day?",
+          "jp": "体が 元気なので、毎日 外を 歩いています。",
+          "en": "Because I am healthy, I walk outside every day.",
           "terms": [
+            "v_karada",
+            "p_ga",
+            { "id": "v_genki", "form": "attributive_na" },
+            "p_node",
             "v_mainichi",
-            "v_nanji",
-            "v_okiru"
+            "v_soto",
+            "p_wo",
+            { "id": "v_aruku", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
           ]
         }
       ]
@@ -108,64 +124,77 @@
       "items": [
         {
           "kanji": "音",
-          "on": "おん",
-          "kun": "おと",
-          "meaning": "sound",
+          "on": "おん / いん",
+          "kun": "おと / ね",
+          "meaning": "Sound",
           "terms": [
             "k_oto",
+            "v_oto",
+            "v_ongaku",
             "v_teion"
           ]
         },
         {
           "kanji": "楽",
-          "on": "がく",
+          "on": "がく / らく",
           "kun": "たの(しい)",
-          "meaning": "music/fun",
+          "meaning": "Comfort / Music / Fun",
           "terms": [
             "k_gaku",
             "v_ongaku",
+            "v_keiongaku",
+            "v_seigaku",
             "v_tanoshii"
           ]
         },
         {
           "kanji": "歌",
           "on": "か",
-          "kun": "うた",
-          "meaning": "song",
+          "kun": "うた / うた(う)",
+          "meaning": "Song / Sing",
           "terms": [
             "k_uta",
-            "v_utau"
+            "v_uta",
+            "v_utau",
+            "v_kashu"
           ]
         },
         {
           "kanji": "声",
-          "on": "せい",
+          "on": "せい / しょう",
           "kun": "こえ",
-          "meaning": "voice",
+          "meaning": "Voice",
           "terms": [
             "k_koe",
-            "v_kogoe"
+            "v_koe",
+            "v_hanashigoe",
+            "v_kogoe",
+            "v_seigaku"
           ]
         },
         {
           "kanji": "低",
           "on": "てい",
           "kun": "ひく(い)",
-          "meaning": "low",
+          "meaning": "Low",
           "terms": [
             "k_tei",
-            "v_hikui"
+            "v_hikui",
+            "v_teion"
           ]
         },
         {
           "kanji": "軽",
           "on": "けい",
           "kun": "かる(い)",
-          "meaning": "light",
+          "meaning": "Light (weight)",
           "terms": [
             "k_kei",
             "v_karui",
-            "v_tegaru"
+            "v_kigaru",
+            "v_tegaru",
+            "v_keiongaku",
+            "v_karukuchi"
           ]
         }
       ]
@@ -175,508 +204,830 @@
       "title": "Vocabulary & Compounds（ことば）",
       "groups": [
         {
-          "label": "Music & Voice",
+          "label": "Sound & Music 音・楽",
           "items": [
+            "v_oto",
             "v_ongaku",
-            "v_uta",
-            "v_utau",
-            "v_koe",
-            "v_hanashigoe",
-            "v_kogoe",
-            "v_seigaku",
             "v_keiongaku",
-            "v_teion",
-            "v_kashu"
-          ]
-        },
-        {
-          "label": "Characteristics",
-          "items": [
-            "v_tanoshii",
-            "v_hikui",
-            "v_karui",
-            "v_tegaru",
-            "v_kigaru"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 1（会話）: Karaoke Night",
-      "context": "Talking about singing.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "歌を 歌うのが 好きですか。",
-          "en": "Do you like singing songs?",
-          "terms": [
-            "v_uta",
-            "v_utau",
-            "v_suki"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "はい、大好きです。とても 楽しいですよ。",
-          "en": "Yes, I love it. It is very fun.",
-          "terms": [
-            "v_daisuki",
+            "v_seigaku",
             "v_tanoshii"
           ]
         },
         {
-          "spk": "A",
-          "jp": "私は 歌が 下手ですから、歌いません。",
-          "en": "I am bad at singing, so I will not sing.",
-          "terms": [
+          "label": "Song & Voice 歌・声",
+          "items": [
             "v_uta",
-            "v_heta",
-            "v_utau"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "気軽に 歌って ください。上手じゃなくても いいです。",
-          "en": "Please sing lightheartedly. It's okay even if you aren't skilled.",
-          "terms": [
-            "v_kigaru",
             "v_utau",
-            "v_jouzu"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 2（会話）: Music Preferences",
-      "context": "Discussing music genres.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "どんな 音楽が 好きですか。",
-          "en": "What kind of music do you like?",
-          "terms": [
-            "v_ongaku",
-            "v_suki"
+            "v_kashu",
+            "v_koe",
+            "v_hanashigoe",
+            "v_kogoe"
           ]
         },
         {
-          "spk": "B",
-          "jp": "軽音楽が 好きです。明るいですから。",
-          "en": "I like light music. Because it is bright/cheerful.",
-          "terms": [
-            "v_keiongaku",
-            "v_suki",
-            "v_akarui"
+          "label": "Light & Easy 軽",
+          "items": [
+            "v_karui",
+            "v_kigaru",
+            "v_tegaru",
+            "v_karukuchi"
           ]
         },
         {
-          "spk": "A",
-          "jp": "私は ロックが 好きです。低音が かっこいいです。",
-          "en": "I like rock. The bass (low tones) are cool.",
-          "terms": [
-            "v_suki",
+          "label": "Low 低",
+          "items": [
+            "v_hikui",
             "v_teion"
           ]
         },
         {
-          "spk": "B",
-          "jp": "ロックは 音が 大きいですね。",
-          "en": "Rock has loud sounds, doesn't it?",
-          "terms": [
+          "label": "Kanji This Lesson",
+          "items": [
             "k_oto",
-            "v_ookii"
+            "k_gaku",
+            "k_uta",
+            "k_koe",
+            "k_tei",
+            "k_kei"
           ]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 3（会話）: Be Quiet",
-      "context": "Speaking quietly in a room.",
+      "title": "Conversation 1: りきぞ と 音楽",
+      "context": "Rikizo and Yamakawa chat after class about music.",
       "lines": [
         {
-          "spk": "A",
-          "jp": "すみませんが、小声で 話して ください。",
-          "en": "Excuse me, but please speak in a small voice.",
+          "spk": "やまかわ",
+          "jp": "りきぞさん、音楽が 好きですか。",
+          "en": "Rikizo-san, do you like music?",
           "terms": [
-            "v_kogoe",
-            "v_hanasu"
+            "char_rikizo",
+            "v_san",
+            "v_ongaku",
+            "p_ga",
+            { "id": "v_suki", "form": "polite_adj" },
+            "g_desu",
+            "p_ka"
           ]
         },
         {
-          "spk": "B",
-          "jp": "すみません。話し声が 大きかった ですか。",
-          "en": "I'm sorry. Was my talking voice big/loud?",
+          "spk": "りきぞ",
+          "jp": "はい、大好きです。よく 音楽を 聞きながら 本を 読みます。",
+          "en": "Yes, I love it. I often read while listening to music.",
+          "terms": [
+            "p_hai",
+            "v_daisuki",
+            "g_desu",
+            "v_yoku",
+            "v_ongaku",
+            "p_wo",
+            { "id": "v_kiku", "form": "nagara_form" },
+            "v_hon",
+            "p_wo",
+            { "id": "v_yomu", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "どんな 音楽が 好きですか。",
+          "en": "What kind of music do you like?",
+          "terms": [
+            "v_donna",
+            "v_ongaku",
+            "p_ga",
+            { "id": "v_suki", "form": "polite_adj" },
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "声楽より 軽音楽が 好きです。音が 楽しいですね。",
+          "en": "I like light music more than vocal music. The sound is fun, isn't it.",
+          "terms": [
+            "v_seigaku",
+            "p_yori",
+            "v_keiongaku",
+            "p_ga",
+            { "id": "v_suki", "form": "polite_adj" },
+            "v_oto",
+            "p_ga",
+            { "id": "v_tanoshii", "form": "polite_adj" },
+            "p_ne"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation 2: 有名な 歌手",
+      "context": "Rikizo and Yamakawa talk about a famous singer they both admire.",
+      "lines": [
+        {
+          "spk": "りきぞ",
+          "jp": "やまかわさん、あの 歌手の 音楽を 聞きましたか。",
+          "en": "Yamakawa-san, have you listened to that singer's music?",
+          "terms": [
+            "char_yamakawa",
+            "v_san",
+            "v_ano",
+            "v_kashu",
+            "p_no",
+            "v_ongaku",
+            "p_wo",
+            { "id": "v_kiku", "form": "polite_mashita" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "はい。声が 低くて、とても きれいですね。",
+          "en": "Yes. Their voice is low and very beautiful, isn't it.",
+          "terms": [
+            "p_hai",
+            "v_koe",
+            "p_ga",
+            { "id": "v_hikui", "form": "te_form" },
+            "v_totemo",
+            { "id": "v_kirei", "form": "polite_adj" },
+            "p_ne"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "低音が すごいので、声楽の クラスを 始めたいです。",
+          "en": "The bass is amazing, so I want to start a vocal music class.",
+          "terms": [
+            "v_teion",
+            "p_ga",
+            { "id": "v_sugoi", "form": "plain_form" },
+            "p_node",
+            "v_seigaku",
+            "p_no",
+            "v_kurasu",
+            "p_wo",
+            { "id": "v_hajimeru", "form": "plain_desire_tai" },
+            "g_desu"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "話し声も 軽くて、とても 気軽な 人ですね。",
+          "en": "Their speaking voice is also light, and they are a very easygoing person, aren't they.",
           "terms": [
             "v_hanashigoe",
-            "v_ookii"
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "はい、少し。ほかの 人が 本を 読んでいます。",
-          "en": "Yes, a little. Other people are reading books.",
-          "terms": [
-            "v_sukoshi",
-            "v_hitobito",
-            "k_hon",
-            "v_yomu"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "分かりました。小声で 話します。",
-          "en": "I understand. I will speak in a small voice.",
-          "terms": [
-            "v_wakaru",
-            "v_kogoe",
-            "v_hanasu"
+            "p_mo",
+            { "id": "v_karui", "form": "te_form" },
+            "v_totemo",
+            { "id": "v_kigaru", "form": "attributive_na" },
+            "v_hito",
+            "g_desu",
+            "p_ne"
           ]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 4（会話）: Easy Cooking",
-      "context": "Cooking a simple meal.",
+      "title": "Conversation 3: 声楽の クラス",
+      "context": "Rikizo asks Miki about starting vocal music classes.",
       "lines": [
         {
-          "spk": "A",
-          "jp": "今日は 料理を 作りますか。",
-          "en": "Will you cook today?",
+          "spk": "ミキ",
+          "jp": "りきぞさん、声楽を 始めたいですか。",
+          "en": "Rikizo-san, do you want to start vocal music?",
           "terms": [
-            "v_kyou",
-            "v_ryouri",
-            "v_tsukuru"
+            "char_rikizo",
+            "v_san",
+            "v_seigaku",
+            "p_wo",
+            { "id": "v_hajimeru", "form": "plain_desire_tai" },
+            "g_desu",
+            "p_ka"
           ]
         },
         {
-          "spk": "B",
-          "jp": "はい。でも、時間が ありません。",
-          "en": "Yes. But I have no time.",
+          "spk": "りきぞ",
+          "jp": "はい。でも、声が 低いので、手軽に 歌えますか。",
+          "en": "Yes. But because my voice is low, can I sing easily?",
           "terms": [
-            "v_jikan"
+            "p_hai",
+            "p_demo_but",
+            "v_koe",
+            "p_ga",
+            { "id": "v_hikui", "form": "plain_form" },
+            "p_node",
+            { "id": "v_tegaru", "form": "adverbial" },
+            { "id": "v_utau", "form": "polite_potential" },
+            "p_ka"
           ]
         },
         {
-          "spk": "A",
-          "jp": "じゃあ、手軽な 料理を 作りましょう。",
-          "en": "Well then, let's make an easy/simple dish.",
+          "spk": "ミキ",
+          "jp": "手軽に 始められる クラスが あります。小声で だいじょうぶですよ。",
+          "en": "There are classes you can start easily. A quiet voice is fine.",
           "terms": [
-            "v_tegaru",
-            "v_ryouri",
-            "v_tsukuru"
+            { "id": "v_tegaru", "form": "adverbial" },
+            { "id": "v_hajimeru", "form": "potential" },
+            "v_kurasu",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" },
+            "v_kogoe",
+            "p_de",
+            { "id": "v_daijoubu", "form": "polite_adj" },
+            "p_yo"
           ]
         },
         {
-          "spk": "B",
-          "jp": "いいですね。野菜は 軽いです。",
-          "en": "That's good. Vegetables are light.",
+          "spk": "りきぞ",
+          "jp": "音楽は 楽しいので、毎日 歌いたいです。",
+          "en": "Because music is fun, I want to sing every day.",
           "terms": [
-            "v_yasai",
-            "v_karui"
+            "v_ongaku",
+            "p_wa",
+            { "id": "v_tanoshii", "form": "plain_form" },
+            "p_node",
+            "v_mainichi",
+            { "id": "v_utau", "form": "plain_desire_tai" },
+            "g_desu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation 4: 音楽の 話（Casual）",
+      "context": "Ken and Yuki talk about music preferences after school.",
+      "lines": [
+        {
+          "spk": "けん",
+          "jp": "ゆき、どんな 音楽が 好き？",
+          "en": "Yuki, what kind of music do you like?",
+          "terms": [
+            "char_yuki",
+            "v_donna",
+            "v_ongaku",
+            "p_ga",
+            { "id": "v_suki", "form": "plain_adj" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "ゆき",
+          "jp": "軽音楽が 好きだよ。よく 聞きながら 旅行する。",
+          "en": "I like light music. I often travel while listening to it.",
+          "terms": [
+            "v_keiongaku",
+            "p_ga",
+            { "id": "v_suki", "form": "plain_adj" },
+            "p_yo",
+            "g_da",
+            "v_yoku",
+            { "id": "v_kiku", "form": "nagara_form" },
+            "v_ryokou",
+            { "id": "v_suru", "form": "plain_form" }
+          ]
+        },
+        {
+          "spk": "けん",
+          "jp": "声楽は？ 歌が 上手な 人は すごいね。",
+          "en": "What about vocal music? People who are skilled at singing are amazing, aren't they.",
+          "terms": [
+            "v_seigaku",
+            "p_wa",
+            "p_ka",
+            "v_uta",
+            "p_ga",
+            { "id": "v_jouzu", "form": "attributive_na" },
+            "v_hito",
+            "p_wa",
+            { "id": "v_sugoi", "form": "plain_form" },
+            "p_ne"
+          ]
+        },
+        {
+          "spk": "ゆき",
+          "jp": "そうだね。私も 声が 低いから、軽音楽が 好きだよ。",
+          "en": "You're right. I also have a low voice, so I like light music.",
+          "terms": [
+            "v_sou",
+            "p_ne",
+            "g_da",
+            "v_watashi",
+            "p_mo",
+            "v_koe",
+            "p_ga",
+            { "id": "v_hikui", "form": "plain_form" },
+            "p_kara_because",
+            "v_keiongaku",
+            "p_ga",
+            { "id": "v_suki", "form": "plain_adj" },
+            "p_yo",
+            "g_da"
+          ]
+        },
+        {
+          "spk": "けん",
+          "jp": "歌ったり 聞いたり するの、楽しいね！",
+          "en": "Singing and listening and stuff — it's fun, isn't it!",
+          "terms": [
+            { "id": "v_utau", "form": "tari_form" },
+            { "id": "v_kiku", "form": "tari_form" },
+            { "id": "v_suru", "form": "plain_form" },
+            "p_no",
+            { "id": "v_tanoshii", "form": "plain_form" },
+            "p_ne"
           ]
         }
       ]
     },
     {
       "type": "reading",
-      "title": "Reading Practice 1: The Concert",
+      "title": "Reading Practice 1: りきぞと 音楽",
       "passage": [
         {
-          "jp": "先週 音楽の コンサートに 行きました。",
-          "en": "Last week I went to a music concert.",
+          "jp": "りきぞは 音楽が 大好きです。",
+          "en": "Rikizo loves music.",
           "terms": [
-            "v_senshuu",
+            "char_rikizo",
+            "p_wa",
             "v_ongaku",
-            "v_iku"
+            "p_ga",
+            "v_daisuki",
+            "g_desu"
           ]
         },
         {
-          "jp": "有名な 歌手が 歌を 歌いました。",
-          "en": "A famous singer sang songs.",
+          "jp": "毎朝、音楽を 聞きながら 朝ご飯を 食べます。",
+          "en": "Every morning, he eats breakfast while listening to music.",
           "terms": [
-            "v_yuumei",
-            "v_kashu",
+            "v_maiasa",
+            "v_ongaku",
+            "p_wo",
+            { "id": "v_kiku", "form": "nagara_form" },
+            "v_asagohan",
+            "p_wo",
+            { "id": "v_taberu", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "休みの 日は、歌を 歌ったり 写真を とったり します。",
+          "en": "On days off, he does things like sing songs and take photos.",
+          "terms": [
+            "v_yasumi",
+            "p_no",
+            "v_hi",
+            "p_wa",
             "v_uta",
-            "v_utau"
+            "p_wo",
+            { "id": "v_utau", "form": "tari_form" },
+            "v_shashin",
+            "p_wo",
+            { "id": "v_toru", "form": "tari_form" },
+            { "id": "v_suru", "form": "polite_masu" }
           ]
         },
         {
-          "jp": "歌手の 声は とても 大きくて、きれいでした。",
-          "en": "The singer's voice was very big and beautiful.",
+          "jp": "りきぞの 声は 少し 低いですが、歌が 上手です。",
+          "en": "Rikizo's voice is a little low, but he is good at singing.",
           "terms": [
-            "v_kashu",
+            "char_rikizo",
+            "p_no",
             "v_koe",
-            "v_ookii"
+            "p_wa",
+            "v_sukoshi",
+            { "id": "v_hikui", "form": "polite_adj" },
+            "p_ga_but",
+            "v_uta",
+            "p_ga",
+            { "id": "v_jouzu", "form": "polite_adj" }
           ]
         },
         {
-          "jp": "低い 音も 高い 音も 上手でした。",
-          "en": "Low sounds and high sounds were both skillful.",
+          "jp": "音楽が 楽しいので、毎日 とても 元気です。",
+          "en": "Because music is fun, he is very cheerful every day.",
           "terms": [
-            "v_hikui",
-            "k_oto",
-            "v_takai",
-            "v_jouzu"
-          ]
-        },
-        {
-          "jp": "とても 楽しい 時間 でした。",
-          "en": "It was a very fun time.",
-          "terms": [
-            "v_tanoshii",
-            "v_jikan"
+            "v_ongaku",
+            "p_ga",
+            { "id": "v_tanoshii", "form": "plain_form" },
+            "p_node",
+            "v_mainichi",
+            "v_totemo",
+            { "id": "v_genki", "form": "polite_adj" }
           ]
         }
       ],
       "questions": [
         {
-          "q": "どこに 行きましたか。",
-          "a": "音楽の コンサートに 行きました。",
+          "q": "りきぞは 毎朝 何を しながら 朝ご飯を 食べますか。",
+          "a": "音楽を 聞きながら 食べます。",
           "terms": [
+            "char_rikizo",
+            "p_wa",
+            "v_maiasa",
+            "v_nani",
+            "p_wo",
+            { "id": "v_suru", "form": "nagara_form" },
+            "v_asagohan",
+            "p_wo",
+            { "id": "v_taberu", "form": "polite_masu" },
+            "p_ka",
             "v_ongaku",
-            "v_iku"
+            "p_wo",
+            { "id": "v_kiku", "form": "nagara_form" },
+            { "id": "v_taberu", "form": "polite_masu" }
           ]
         },
         {
-          "q": "誰が 歌を 歌いましたか。",
-          "a": "有名な 歌手が 歌いました。",
+          "q": "りきぞの 声は どうですか。",
+          "a": "少し 低いです。",
           "terms": [
-            "v_yuumei",
-            "v_kashu",
-            "v_uta",
-            "v_utau"
-          ]
-        },
-        {
-          "q": "声は どうでしたか。",
-          "a": "大きくて、きれいで、上手でした。",
-          "terms": [
+            "char_rikizo",
+            "p_no",
             "v_koe",
-            "v_ookii",
-            "v_jouzu"
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka",
+            "v_sukoshi",
+            { "id": "v_hikui", "form": "polite_adj" }
           ]
         },
         {
-          "q": "楽しかったですか。",
-          "a": "はい、とても 楽しかったです。",
+          "q": "りきぞは どうして 毎日 元気ですか。",
+          "a": "音楽が 楽しいからです。",
           "terms": [
-            "v_tanoshii"
+            "char_rikizo",
+            "p_wa",
+            "v_doushite",
+            "v_mainichi",
+            { "id": "v_genki", "form": "polite_adj" },
+            "p_ka",
+            "v_ongaku",
+            "p_ga",
+            { "id": "v_tanoshii", "form": "plain_form" },
+            "p_kara_because",
+            "g_desu"
           ]
         }
       ]
     },
     {
       "type": "reading",
-      "title": "Reading Practice 2: A Lighthearted Trip",
+      "title": "Reading Practice 2: 有名な 歌手",
       "passage": [
         {
-          "jp": "来週、友だちと 山へ 行きます。",
-          "en": "Next week, I will go to the mountain with a friend.",
+          "jp": "日本に 有名な 歌手が います。",
+          "en": "There is a famous singer in Japan.",
           "terms": [
-            "v_raishuu",
-            "v_tomodachi",
-            "k_yama",
-            "v_iku"
+            "v_nihon",
+            "p_ni",
+            { "id": "v_yuumei", "form": "attributive_na" },
+            "v_kashu",
+            "p_ga",
+            { "id": "v_iru", "form": "polite_masu" }
           ]
         },
         {
-          "jp": "気軽な 旅行 です。",
-          "en": "It is a carefree trip.",
+          "jp": "その 歌手の 声は 低くて、とても きれいです。",
+          "en": "That singer's voice is low and very beautiful.",
           "terms": [
-            "v_kigaru",
-            "v_ryokou"
-          ]
-        },
-        {
-          "jp": "私の カバンは 小さくて、軽いです。",
-          "en": "My bag is small and light.",
-          "terms": [
-            "v_chiisai",
-            "v_karui"
-          ]
-        },
-        {
-          "jp": "山で 鳥の 声を 聞きます。",
-          "en": "In the mountain, we will hear the voices of birds.",
-          "terms": [
-            "k_yama",
-            "k_tori",
+            "v_sono",
+            "v_kashu",
+            "p_no",
             "v_koe",
-            "v_kiku"
+            "p_wa",
+            { "id": "v_hikui", "form": "te_form" },
+            "v_totemo",
+            { "id": "v_kirei", "form": "polite_adj" }
           ]
         },
         {
-          "jp": "そして、晩は みんなで 歌を 歌います。",
-          "en": "And in the evening, everyone will sing songs.",
+          "jp": "低音が すごいので、声楽を よく 歌います。",
+          "en": "Because the bass is amazing, she often sings vocal music.",
           "terms": [
-            "v_ban",
-            "v_uta",
-            "v_utau"
+            "v_teion",
+            "p_ga",
+            { "id": "v_sugoi", "form": "plain_form" },
+            "p_node",
+            "v_seigaku",
+            "p_wo",
+            "v_yoku",
+            { "id": "v_utau", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "軽音楽より 声楽が 好きで、毎日 歌って います。",
+          "en": "She likes vocal music more than light music, and sings every day.",
+          "terms": [
+            "v_keiongaku",
+            "p_yori",
+            "v_seigaku",
+            "p_ga",
+            { "id": "v_suki", "form": "te_form" },
+            "v_mainichi",
+            { "id": "v_utau", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "この 歌手は 気軽な 話し声も 有名です。",
+          "en": "This singer is also known for her easygoing speaking voice.",
+          "terms": [
+            "v_kono",
+            "v_kashu",
+            "p_wa",
+            { "id": "v_kigaru", "form": "attributive_na" },
+            "v_hanashigoe",
+            "p_mo",
+            { "id": "v_yuumei", "form": "polite_adj" }
           ]
         }
       ],
       "questions": [
         {
-          "q": "どんな 旅行ですか。",
-          "a": "気軽な 旅行です。",
+          "q": "その 歌手の 声は どんな 声ですか。",
+          "a": "低くて、きれいな 声です。",
           "terms": [
-            "v_kigaru",
-            "v_ryokou"
-          ]
-        },
-        {
-          "q": "カバンは 軽いですか。",
-          "a": "はい、軽いです。",
-          "terms": [
-            "v_karui"
-          ]
-        },
-        {
-          "q": "山で 何を 聞きますか。",
-          "a": "鳥の 声を 聞きます。",
-          "terms": [
-            "k_tori",
+            "v_sono",
+            "v_kashu",
+            "p_no",
             "v_koe",
-            "v_kiku"
+            "p_wa",
+            "v_donna",
+            "v_koe",
+            "g_desu",
+            "p_ka",
+            { "id": "v_hikui", "form": "te_form" },
+            { "id": "v_kirei", "form": "attributive_na" },
+            "v_koe",
+            "g_desu"
           ]
         },
         {
-          "q": "晩、何を しますか。",
-          "a": "歌を 歌います。",
+          "q": "この 歌手は どんな 音楽が 好きですか。",
+          "a": "声楽が 好きです。",
           "terms": [
-            "v_ban",
-            "v_uta",
-            "v_utau"
+            "v_kono",
+            "v_kashu",
+            "p_wa",
+            "v_donna",
+            "v_ongaku",
+            "p_ga",
+            { "id": "v_suki", "form": "polite_adj" },
+            "p_ka",
+            "v_seigaku",
+            "p_ga",
+            { "id": "v_suki", "form": "polite_adj" }
+          ]
+        },
+        {
+          "q": "この 歌手は 話し声も 有名ですか。",
+          "a": "はい、気軽な 話し声も 有名です。",
+          "terms": [
+            "v_kono",
+            "v_kashu",
+            "p_wa",
+            "v_hanashigoe",
+            "p_mo",
+            { "id": "v_yuumei", "form": "polite_adj" },
+            "p_ka",
+            "p_hai",
+            { "id": "v_kigaru", "form": "attributive_na" },
+            "v_hanashigoe",
+            "p_mo",
+            { "id": "v_yuumei", "form": "polite_adj" }
           ]
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Drill 1: Vocabulary",
-      "instructions": "Select the correct Kanji for the meaning.",
+      "title": "ドリル 1: かんじの よみかた（Kanji Readings）",
+      "instructions": "Choose the correct reading.",
       "items": [
         {
           "kind": "mcq",
-          "q": "[Music] is fun.",
-          "choices": [
-            "音楽",
-            "音学",
-            "楽音",
-            "音歌"
-          ],
-          "answer": "音楽",
-          "terms": [
-            "v_ongaku"
-          ]
+          "q": "[音楽] の よみかたは？",
+          "choices": ["おんがく", "おとがく", "いんがく", "おんらく"],
+          "answer": "おんがく"
         },
         {
           "kind": "mcq",
-          "q": "A [low] voice.",
-          "choices": [
-            "低い",
-            "軽い",
-            "暗い",
-            "近い"
-          ],
-          "answer": "低い",
-          "terms": [
-            "v_hikui"
-          ]
+          "q": "[歌手] の よみかたは？",
+          "choices": ["かしゅ", "うたて", "うたしゅ", "かて"],
+          "answer": "かしゅ"
         },
         {
           "kind": "mcq",
-          "q": "Sing a [song].",
-          "choices": [
-            "歌",
-            "音",
-            "声",
-            "言"
-          ],
-          "answer": "歌",
-          "terms": [
-            "v_uta"
-          ]
+          "q": "[声楽] の よみかたは？",
+          "choices": ["せいがく", "こえがく", "しょうがく", "せいらく"],
+          "answer": "せいがく"
         },
         {
           "kind": "mcq",
-          "q": "A [light] bag.",
-          "choices": [
-            "軽い",
-            "明るい",
-            "古い",
-            "白い"
-          ],
-          "answer": "軽い",
-          "terms": [
-            "v_karui"
-          ]
+          "q": "[軽音楽] の よみかたは？",
+          "choices": ["けいおんがく", "かるおんがく", "けいいんがく", "かるがく"],
+          "answer": "けいおんがく"
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Drill 2: Grammar & Context",
-      "instructions": "Fill in the blank.",
+      "title": "ドリル 2: ことばを えらぶ（Vocabulary）",
+      "instructions": "Choose the correct word to complete the sentence.",
       "items": [
         {
           "kind": "mcq",
-          "q": "鳥の ______ が 聞こえます。",
-          "choices": [
-            "声",
-            "歌",
-            "音",
-            "語"
-          ],
+          "q": "あの 歌手の ______ は 低くて きれいです。",
+          "choices": ["声", "音楽", "歌", "低音"],
           "answer": "声",
           "terms": [
-            "v_koe"
+            "v_ano",
+            "v_kashu",
+            "p_no",
+            "v_koe",
+            "p_wa",
+            { "id": "v_hikui", "form": "te_form" },
+            { "id": "v_kirei", "form": "polite_adj" }
           ]
         },
         {
           "kind": "mcq",
-          "q": "毎日 ピアノを 弾いて、______ です。",
-          "choices": [
-            "楽しい",
-            "軽い",
-            "低い",
-            "新しい"
-          ],
+          "q": "毎朝、音楽を _______ 朝ご飯を 食べます。",
+          "choices": ["聞きながら", "聞いたり", "聞いて", "聞きますから"],
+          "answer": "聞きながら",
+          "terms": [
+            "v_maiasa",
+            "v_ongaku",
+            "p_wo",
+            { "id": "v_kiku", "form": "nagara_form" },
+            "v_asagohan",
+            "p_wo",
+            { "id": "v_taberu", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "この 音楽は ______ ので、毎日 聞いて います。",
+          "choices": ["楽しい", "低い", "軽い", "小さい"],
           "answer": "楽しい",
           "terms": [
-            "v_tanoshii"
+            "v_kono",
+            "v_ongaku",
+            "p_wa",
+            { "id": "v_tanoshii", "form": "plain_form" },
+            "p_node",
+            "v_mainichi",
+            { "id": "v_kiku", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
           ]
         },
         {
           "kind": "mcq",
-          "q": "______ 料理を 作りましょう。",
-          "choices": [
-            "手軽な",
-            "手軽の",
-            "手軽",
-            "手軽に"
-          ],
-          "answer": "手軽な",
+          "q": "歌が 上手な ______ は 日本で 有名です。",
+          "choices": ["歌手", "声楽", "音楽", "低音"],
+          "answer": "歌手",
           "terms": [
-            "v_tegaru"
+            "v_uta",
+            "p_ga",
+            { "id": "v_jouzu", "form": "attributive_na" },
+            "v_kashu",
+            "p_wa",
+            "v_nihon",
+            "p_de",
+            { "id": "v_yuumei", "form": "polite_adj" }
           ]
         },
         {
           "kind": "mcq",
-          "q": "______ で 話してください。",
-          "choices": [
-            "小声",
-            "少声",
-            "小音",
-            "少音"
-          ],
-          "answer": "小声",
+          "q": "______ に 音楽が 聞けます。",
+          "choices": ["気軽", "声楽", "低音", "小声"],
+          "answer": "気軽",
           "terms": [
-            "v_kogoe"
+            { "id": "v_kigaru", "form": "adverbial" },
+            "v_ongaku",
+            "p_ga",
+            { "id": "v_kiku", "form": "polite_potential" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "休みの 日は、歌を 歌ったり 写真を _______ します。",
+          "choices": ["とったり", "とりながら", "とって", "とります"],
+          "answer": "とったり",
+          "terms": [
+            "v_yasumi",
+            "p_no",
+            "v_hi",
+            "p_wa",
+            "v_uta",
+            "p_wo",
+            { "id": "v_utau", "form": "tari_form" },
+            "v_shashin",
+            "p_wo",
+            { "id": "v_toru", "form": "tari_form" },
+            { "id": "v_suru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "ドリル 3: ぶんを つくる（Sentence Building）",
+      "instructions": "Choose the best particle or form to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "あの 歌手の 声は 低い ______ 、とても きれいです。",
+          "choices": ["ですが", "ですから", "ですので", "ですたり"],
+          "answer": "ですが",
+          "terms": [
+            "v_ano",
+            "v_kashu",
+            "p_no",
+            "v_koe",
+            "p_wa",
+            { "id": "v_hikui", "form": "polite_adj" },
+            "p_ga_but",
+            "v_totemo",
+            { "id": "v_kirei", "form": "polite_adj" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "音楽が 楽しい ______ 、毎日 聞いて います。",
+          "choices": ["ので", "ながら", "たり", "けど"],
+          "answer": "ので",
+          "terms": [
+            "v_ongaku",
+            "p_ga",
+            { "id": "v_tanoshii", "form": "plain_form" },
+            "p_node",
+            "v_mainichi",
+            { "id": "v_kiku", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "声楽より 軽音楽 ______ 好きです。",
+          "choices": ["が", "に", "を", "は"],
+          "answer": "が",
+          "terms": [
+            "v_seigaku",
+            "p_yori",
+            "v_keiongaku",
+            "p_ga",
+            { "id": "v_suki", "form": "polite_adj" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "この 歌手は 声楽が 上手な ______ 、日本で 有名です。",
+          "choices": ["ので", "ながら", "たり", "けど"],
+          "answer": "ので",
+          "terms": [
+            "v_kono",
+            "v_kashu",
+            "p_wa",
+            "v_seigaku",
+            "p_ga",
+            { "id": "v_jouzu", "form": "attributive_na" },
+            "p_node",
+            "v_nihon",
+            "p_de",
+            { "id": "v_yuumei", "form": "polite_adj" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "音楽を 聞き ______ 旅行します。",
+          "choices": ["ながら", "たり", "て", "から"],
+          "answer": "ながら",
+          "terms": [
+            "v_ongaku",
+            "p_wo",
+            { "id": "v_kiku", "form": "nagara_form" },
+            "v_ryokou",
+            { "id": "v_suru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "気軽 ______ 始められる 声楽の クラスが あります。",
+          "choices": ["に", "が", "の", "を"],
+          "answer": "に",
+          "terms": [
+            { "id": "v_kigaru", "form": "adverbial" },
+            { "id": "v_hajimeru", "form": "potential" },
+            "v_seigaku",
+            "p_no",
+            "v_kurasu",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" }
           ]
         }
       ]
