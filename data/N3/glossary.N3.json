@@ -531,7 +531,7 @@
     },
     {
       "id": "k_yo",
-      "lesson": "N3.4",
+      "lesson": "N3.29",
       "type": "kanji",
       "surface": "予",
       "on": "よ",
@@ -542,7 +542,7 @@
     },
     {
       "id": "k_taba",
-      "lesson": "N3.4",
+      "lesson": "N3.5",
       "type": "kanji",
       "surface": "束",
       "on": "そく",
@@ -561,6 +561,17 @@
       "reading": "お",
       "meaning": "thread / beginning / together",
       "notes": "Most common in 一緒(いっしょ, together). On: しょ in 一緒. Rare kun: お (cord/string). Not commonly used alone."
+    },
+    {
+      "id": "k_matsu",
+      "lesson": "N3.4",
+      "type": "kanji",
+      "surface": "末",
+      "on": "まつ/ばつ",
+      "kun": "すえ",
+      "reading": "まつ",
+      "meaning": "end / tip / tail",
+      "notes": "On: まつ in 週末(しゅうまつ, weekend), 月末(げつまつ, end of month), 年末(ねんまつ, year-end). Kun: すえ (the end/future — 末っ子 = youngest child)."
     },
     {
       "id": "v_tsuzukeru",
@@ -601,9 +612,9 @@
       "meaning": "plan / schedule / arrangement",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N3.4",
+      "lesson_ids": "N3.29",
       "matches": ["予てい"],
-      "notes": "予 (N3.4) + 定 (N3.16). Write as 予てい until N3.16. 予定がある = to have plans. 予定を立てる = to make plans. 〜する予定です = planning to do ~."
+      "notes": "予 (N3.29) + 定 (N3.16). Write as 予てい until N3.29. 予定がある = to have plans. 予定を立てる = to make plans. 〜する予定です = planning to do ~."
     },
     {
       "id": "v_yoyaku",
@@ -612,9 +623,9 @@
       "meaning": "reservation / booking / appointment",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N3.4",
+      "lesson_ids": "N3.29",
       "matches": ["予やく"],
-      "notes": "予 (N3.4) + 約 (N3.66). Write as 予やく until N3.66. 予約する = to make a reservation. ホテルの予約 = hotel reservation."
+      "notes": "予 (N3.29) + 約 (N3.66). Write as 予やく until N3.66. 予約する = to make a reservation. ホテルの予約 = hotel reservation."
     },
     {
       "id": "v_yakusoku",
@@ -623,9 +634,9 @@
       "meaning": "promise / appointment / arrangement",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N3.4",
+      "lesson_ids": "N3.66",
       "matches": ["やくそく"],
-      "notes": "約 (N3.66) + 束 (N3.4). Write as やくそく until N3.66 when 約 is taught. 約束する = to promise. 約束を守る = to keep a promise."
+      "notes": "約 (N3.66) + 束 (N3.5). Write as やくそく until N3.66 when 約 is taught. 約束する = to promise. 約束を守る = to keep a promise."
     },
     {
       "id": "v_hanataba",
@@ -634,8 +645,28 @@
       "meaning": "bouquet / bunch of flowers",
       "type": "vocab",
       "gtype": "noun",
+      "lesson_ids": "N3.5",
+      "notes": "花 (N4.7) + 束 (N3.5). 花束をもらう = to receive a bouquet. A common gift for ceremonies and celebrations."
+    },
+    {
+      "id": "v_getsumatsu",
+      "surface": "月末",
+      "reading": "げつまつ",
+      "meaning": "end of the month",
+      "type": "vocab",
+      "gtype": "noun",
       "lesson_ids": "N3.4",
-      "notes": "花 (N4.7) + 束 (N3.4). 花束をもらう = to receive a bouquet. A common gift for ceremonies and celebrations."
+      "notes": "月 (N5.2) + 末 (N3.4). 月末に払う = to pay at end of month. Contrast with 月初め(つきはじめ, beginning of month)."
+    },
+    {
+      "id": "v_nenmatsu",
+      "surface": "年末",
+      "reading": "ねんまつ",
+      "meaning": "year-end / end of the year",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.4",
+      "notes": "年 (N5.4) + 末 (N3.4). 年末年始 = year-end and New Year holidays. 年末に = at year-end."
     },
     {
       "id": "v_renzoku",
