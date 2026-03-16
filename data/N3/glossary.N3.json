@@ -640,6 +640,50 @@
       "notes": "Kun: だれ (who). Polite/literary variant: どなた. 誰か(だれか) = someone. 誰でも(だれでも) = anyone/everyone. 誰も(だれも) + negative = nobody. たれ is literary/archaic."
     },
     {
+      "id": "k_zen",
+      "lesson": "N3.7",
+      "type": "kanji",
+      "surface": "全",
+      "on": "ぜん",
+      "kun": "すべて/まったく",
+      "reading": "ぜん",
+      "meaning": "whole / all / complete",
+      "notes": "On: ぜん in 全部(ぜんぶ, all), 全体(ぜんたい, whole), 全国(ぜんこく, nationwide), 全員(ぜんいん, all members), 全力(ぜんりょく, full effort). Kun: すべて (all/everything), まったく (completely/utterly)."
+    },
+    {
+      "id": "k_bu",
+      "lesson": "N3.7",
+      "type": "kanji",
+      "surface": "部",
+      "on": "ぶ",
+      "kun": "",
+      "reading": "ぶ",
+      "meaning": "part / section / department / club",
+      "notes": "On: ぶ in 全部(ぜんぶ, all), 部分(ぶぶん, part), 一部(いちぶ, a portion), 内部(ないぶ, interior), 部屋(へや, room — irregular reading). Also used for school clubs: 野球部(やきゅうぶ, baseball club)."
+    },
+    {
+      "id": "k_nai",
+      "lesson": "N3.7",
+      "type": "kanji",
+      "surface": "内",
+      "on": "ない/うち",
+      "kun": "うち",
+      "reading": "ない",
+      "meaning": "inside / within / internal",
+      "notes": "On: ない in 内部(ないぶ, interior), 国内(こくない, domestic), 以内(いない, within). Kun: うち (inside/home — often kept in hiragana in casual use). 内側(うちがわ) = inner side."
+    },
+    {
+      "id": "k_gawa",
+      "lesson": "N3.7",
+      "type": "kanji",
+      "surface": "側",
+      "on": "そく",
+      "kun": "がわ/かわ",
+      "reading": "がわ",
+      "meaning": "side / flank",
+      "notes": "Kun: がわ as suffix — 右側(みぎがわ, right side), 左側(ひだりがわ, left side), 内側(うちがわ, inner side), 外側(そとがわ, outer side). On: そく in formal compounds. 両側(りょうがわ) = both sides (両 not in curriculum)."
+    },
+    {
       "id": "k_sho_ogre",
       "lesson": "N3.4",
       "type": "kanji",
@@ -906,6 +950,176 @@
       "gtype": "noun",
       "lesson_ids": "N3.6",
       "notes": "Pure kana. Informal/spoken term for grandmother or an elderly woman in general. Use 祖母(そぼ) when speaking humbly about your own grandmother. Double あ: おばあさん (grandmother) vs おばさん (aunt/middle-aged woman)."
+    },
+    {
+      "id": "v_sofubo",
+      "surface": "祖父母",
+      "reading": "そふぼ",
+      "meaning": "grandparents",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.6",
+      "notes": "祖 (N3.6) + 父 (N5.1) + 母 (N5.1). Collective term for both grandparents. 祖父母の家 = grandparents' house. Contrast individual terms: 祖父(そふ) and 祖母(そぼ)."
+    },
+    {
+      "id": "v_zenbu",
+      "surface": "全部",
+      "reading": "ぜんぶ",
+      "meaning": "all / everything / the whole lot",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "全 (N3.7) + 部 (N3.7). 全部で = in total. 全部食べた = ate everything. More colloquial than 全て(すべて). Often used as an adverb: 全部わかった = I understood everything."
+    },
+    {
+      "id": "v_subete",
+      "surface": "全て",
+      "reading": "すべて",
+      "meaning": "all / everything / entirely",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N3.7",
+      "notes": "全 (N3.7). Kun-reading of 全. More formal/literary than 全部(ぜんぶ). 全ての人 = all people. 全てにおいて = in every respect. Often written in hiragana: すべて."
+    },
+    {
+      "id": "v_zenkoku",
+      "surface": "全国",
+      "reading": "ぜんこく",
+      "meaning": "the whole country / nationwide",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "全 (N3.7) + 国 (N5.9). 全国大会(ぜんこくたいかい) = national competition. 全国的に(ぜんこくてきに) = nationwide. Often used as a modifier: 全国ネット = national network."
+    },
+    {
+      "id": "v_zentai",
+      "surface": "全体",
+      "reading": "ぜんたい",
+      "meaning": "the whole / entirety / overall",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "全 (N3.7) + 体 (N4.12). 全体的に = overall / on the whole. 全体像(ぜんたいぞう) = the big picture. 全体会議 = plenary meeting. Contrasts with 部分(ぶぶん, part)."
+    },
+    {
+      "id": "v_zenin",
+      "surface": "全員",
+      "reading": "ぜんいん",
+      "meaning": "all members / everyone (in a group)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "全 (N3.7) + 員 (N4.14). 全員集合 = everyone assemble. 全員参加 = full participation. Refers specifically to all members of a defined group, not 'everyone' in general (みんな)."
+    },
+    {
+      "id": "v_zenryoku",
+      "surface": "全力",
+      "reading": "ぜんりょく",
+      "meaning": "full effort / with all one's strength",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "全 (N3.7) + 力 (N4.18). 全力を尽くす = to do one's utmost. 全力で走る = to run with all one's might. 全力投球(ぜんりょくとうきゅう) = giving it everything (lit. full-power pitch)."
+    },
+    {
+      "id": "v_bubun",
+      "surface": "部分",
+      "reading": "ぶぶん",
+      "meaning": "part / portion / section",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "部 (N3.7) + 分 (N5.5). 一部分(いちぶぶん) = one part. この部分が難しい = this part is difficult. Contrast: 全体(ぜんたい, whole) and 一部(いちぶ, a portion)."
+    },
+    {
+      "id": "v_ichibu",
+      "surface": "一部",
+      "reading": "いちぶ",
+      "meaning": "a part / some / a portion",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "一 (N5.1) + 部 (N3.7). 一部の人 = some people / a portion of people. 一部始終(いちぶしじゅう) = the whole story from start to finish. Also means 'one copy' (of a document): 一部ください = one copy please."
+    },
+    {
+      "id": "v_heya",
+      "surface": "部屋",
+      "reading": "へや",
+      "meaning": "room",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "部 (N3.7) + 屋 (N4.20). Irregular reading: へや (not ぶや). 自分の部屋 = one's own room. 部屋を片付ける = to tidy up a room. 一人部屋 = single room."
+    },
+    {
+      "id": "v_naibu",
+      "surface": "内部",
+      "reading": "ないぶ",
+      "meaning": "interior / inside / internal",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "内 (N3.7) + 部 (N3.7). 内部情報(ないぶじょうほう) = inside information. 内部告発(ないぶこくはつ) = whistleblowing. More formal/structural than 中(なか) for describing interiors of organisations or structures."
+    },
+    {
+      "id": "v_kokunai",
+      "surface": "国内",
+      "reading": "こくない",
+      "meaning": "domestic / within the country / inland",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "国 (N5.9) + 内 (N3.7). 国内旅行 = domestic travel. 国内外(こくないがい) = at home and abroad. Contrast: 海外(かいがい, overseas/foreign)."
+    },
+    {
+      "id": "v_inai",
+      "surface": "以内",
+      "reading": "いない",
+      "meaning": "within / not exceeding / inside of",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "以 (N4.29) + 内 (N3.7). Used after a quantity/time: 一週間以内に = within one week. 予算以内 = within budget. Contrast: 以上(いじょう, more than/above) and 以下(いか, less than/below)."
+    },
+    {
+      "id": "v_uchigawa",
+      "surface": "内側",
+      "reading": "うちがわ",
+      "meaning": "inner side / inside surface",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "内 (N3.7) + 側 (N3.7). 内側から鍵をかける = to lock from the inside. 袋の内側 = the inside of the bag. Contrast: 外側(そとがわ, outer side)."
+    },
+    {
+      "id": "v_migigawa",
+      "surface": "右側",
+      "reading": "みぎがわ",
+      "meaning": "right side / right-hand side",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "右 (N5.16) + 側 (N3.7). 右側を歩いてください = please walk on the right side. 道の右側 = the right side of the road. Contrast: 左側(ひだりがわ)."
+    },
+    {
+      "id": "v_hidarigawa",
+      "surface": "左側",
+      "reading": "ひだりがわ",
+      "meaning": "left side / left-hand side",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "左 (N5.16) + 側 (N3.7). 左側通行(ひだりがわつうこう) = keep left (traffic rule). 左側の棚 = the shelf on the left side. Contrast: 右側(みぎがわ)."
+    },
+    {
+      "id": "v_sotogawa",
+      "surface": "外側",
+      "reading": "そとがわ",
+      "meaning": "outer side / outside surface / exterior",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "外 (N5.9) + 側 (N3.7). 建物の外側 = the outside of the building. 外側から見る = to look from the outside. Contrast: 内側(うちがわ, inner side)."
     },
     {
       "id": "v_getsumatsu",
