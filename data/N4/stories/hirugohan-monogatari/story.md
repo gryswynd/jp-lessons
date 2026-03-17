@@ -30,7 +30,7 @@
 
 「魚の料理も？食べたい！」けんが言いました。
 
-けんは帰りました。外が少し暗くなっていました。りきぞは飲み物を飲みました。今日はよい気分でした。
+けんは帰りました。外が少し暗くなっていました。りきぞは飲み物を飲みました。今日はいい気分でした。
 
 「また買い物に行って、また料理を作ろう！」
 
@@ -68,7 +68,7 @@ Rikizo was very happy. "I'll make it again! Next time I can make a fish dish too
 
 "A fish dish too? I want to eat it!" said Ken.
 
-Ken went home. Outside had gotten a little dark. Rikizo drank his drink. Today was a good day.
+Ken went home. Outside had gotten a little dark. Rikizo drank his drink. Today was a great mood.
 
 "I'll go shopping again and cook more food!"
 
