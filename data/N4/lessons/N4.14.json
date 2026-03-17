@@ -240,7 +240,8 @@
           "items": [
             "p_dake",
             "p_shika",
-            "p_demo"
+            "p_demo",
+            "p_bakari"
           ]
         },
         {
@@ -322,7 +323,7 @@
             "v_hayaoki",
             "p_wo",
             { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            { "id": "v_iru", "form": "plain_form" },
             "p_node",
             { "id": "v_isogashii", "form": "te_form" },
             "p_mo",
@@ -354,46 +355,42 @@
         },
         {
           "spk": "駅員",
-          "jp": "この 駅では、急行だけ 乗れません。各駅停車しか 止まりませんよ。",
-          "en": "At this station, only the express cannot be boarded. Only the local train stops here.",
+          "jp": "いいえ、乗れません。急行は つぎの 駅にしか 来ませんよ。",
+          "en": "No, you cannot. The express only comes to the next station.",
           "terms": [
-            "v_kono",
-            "v_eki",
-            "p_de",
-            "p_wa",
-            "v_kyuukou",
-            "p_dake",
+            "v_iie",
             { "id": "v_noru", "form": "polite_potential_negative" },
-            "v_kakueki",
+            "v_kyuukou",
+            "p_wa",
+            "v_tsugi",
+            "p_no",
+            "v_eki",
+            "p_ni",
             "p_shika",
-            { "id": "v_isogu", "form": "polite_negative" },
+            { "id": "v_kuru", "form": "polite_negative" },
             "p_yo"
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "そうですか。急行に 乗りたいです。どの 駅に 行けば いいですか。",
-          "en": "Is that so? I want to ride the express. Which station should I go to?",
+          "jp": "急行に 乗りたいです。つぎの 駅は 遠いですか。",
+          "en": "I want to ride the express. Is the next station far?",
           "terms": [
-            "v_sou",
-            "g_desu",
-            "p_ka",
             "v_kyuukou",
             "p_ni",
             { "id": "v_noru", "form": "plain_desire_tai" },
             "g_desu",
-            "v_dono",
+            "v_tsugi",
+            "p_no",
             "v_eki",
-            "p_ni",
-            { "id": "v_iku", "form": "conditional_ba" },
-            { "id": "v_ii", "form": "polite_adj" },
-            "g_desu",
+            "p_wa",
+            { "id": "v_tooi", "form": "polite_adj" },
             "p_ka"
           ]
         },
         {
           "spk": "駅員",
-          "jp": "次の 駅まで 歩いて 五分です。急行は 早いので、仕事に 早く 着きますよ。",
+          "jp": "つぎの 駅まで 歩いて 五分です。急行は 早いので、仕事に 早く 着きますよ。",
           "en": "It's a five-minute walk to the next station. The express is fast, so you will arrive at work quickly.",
           "terms": [
             "v_tsugi",
@@ -419,7 +416,7 @@
     {
       "type": "conversation",
       "title": "Conversation 3: 日曜日の 予定",
-      "context": "Rikizo asks Miki about her Sunday plans; Miki mentions she only has an hour.",
+      "context": "Rikizo asks Miki about her Sunday plans; Miki mentions she only has a little time.",
       "lines": [
         {
           "spk": "りきぞ",
@@ -438,8 +435,8 @@
         },
         {
           "spk": "ミキ",
-          "jp": "はい、学校の 行事が あります。でも、一時間しか 時間が ありません。",
-          "en": "Yes, there is a school event. But I only have one hour.",
+          "jp": "はい、学校の 行事が あります。でも、時間が 少ししか ありません。",
+          "en": "Yes, there is a school event. But I only have a little time.",
           "terms": [
             "p_hai",
             "v_gakkou",
@@ -448,10 +445,10 @@
             "p_ga",
             { "id": "v_aru", "form": "polite_masu" },
             "p_demo_but",
-            { "counter": "jikan", "n": 1 },
-            "p_shika",
             "v_jikan",
             "p_ga",
+            "v_sukoshi",
+            "p_shika",
             { "id": "v_aru", "form": "polite_negative" }
           ]
         },
@@ -476,12 +473,12 @@
         },
         {
           "spk": "ミキ",
-          "jp": "いいですね。食事の こと は 何でも 大切ですよ。楽しみにしています。",
-          "en": "Sounds good. Everything about food is important! I'm looking forward to it.",
+          "jp": "いいですね。仕事の こと は 何でも 大切ですよ。いっしょに 行きましょう。",
+          "en": "That sounds good. Everything about work is important! Let's go together.",
           "terms": [
             { "id": "v_ii", "form": "polite_adj" },
             "p_ne",
-            "v_shokuji",
+            "v_shigoto",
             "p_no",
             "v_koto",
             "p_wa",
@@ -489,8 +486,8 @@
             "p_demo",
             { "id": "v_taisetsu", "form": "polite_adj" },
             "p_yo",
-            { "id": "v_tanoshimu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            "v_issho",
+            { "id": "v_iku", "form": "polite_volitional_mashou" }
           ]
         }
       ]
@@ -553,13 +550,11 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "早起きが 大変だけど、仕事が 楽しいから いいよ。",
-          "en": "Early rising is tough, but since work is fun, it's fine.",
+          "jp": "毎日 いそがしいけど、仕事が 楽しいから いいよ。",
+          "en": "I'm busy every day, but since work is fun, it's fine.",
           "terms": [
-            "v_hayaoki",
-            "p_ga",
-            "v_taihen",
-            "g_da",
+            "v_mainichi",
+            { "id": "v_isogashii", "form": "plain_form" },
             "p_kedo",
             "v_shigoto",
             "p_ga",
@@ -747,17 +742,15 @@
           ]
         },
         {
-          "jp": "けんは 早口なので、駅員でも 話が わかります。",
-          "en": "Since Ken speaks fast, even station attendants can understand what he says.",
+          "jp": "けんは 早口ですが、よく わかります。",
+          "en": "Ken speaks fast, but anyone can understand him well.",
           "terms": [
             "char_ken",
             "p_wa",
-            { "id": "v_hayakuchi", "form": "attributive_na" },
-            "p_node",
-            "v_ekiin",
-            "p_demo",
-            "v_hanashi",
-            "p_ga",
+            "v_hayakuchi",
+            "g_desu",
+            "p_ga_but",
+            "v_yoku",
             { "id": "v_wakaru", "form": "polite_masu" }
           ]
         },
@@ -984,14 +977,16 @@
       "items": [
         {
           "kind": "mcq",
-          "q": "一時間 ______ 時間が ありません。",
+          "q": "今日は 時間が 少し ______ ありません。",
           "choices": ["しか", "だけ", "でも", "より"],
           "answer": "しか",
           "terms": [
-            { "counter": "jikan", "n": 1 },
-            "p_shika",
+            "v_kyou",
+            "p_wa",
             "v_jikan",
             "p_ga",
+            "v_sukoshi",
+            "p_shika",
             { "id": "v_aru", "form": "polite_negative" }
           ]
         },
