@@ -23,7 +23,7 @@
         "Ichidan (RU-verbs): how to recognise them and form the stem by dropping る",
         "Godan (U-verbs): how to recognise them and form the stem by shifting to the い-row",
         "The る-trap: why some verbs ending in る are actually godan (the vowel test)",
-        "Irregular verbs: 来る and ある, which must be memorised"
+        "Irregular verbs: 来る, する, and ある — each must be memorised"
       ]
     },
     {
@@ -37,7 +37,7 @@
       "meaning": "Ichidan (RU-verbs): drop る, then add the ending",
       "explanation": "Ichidan verbs always end in る in dictionary form, AND the vowel sound immediately before る is always in the い-row (i) or え-row (e). The conjugation rule is the simplest possible: remove る, then attach the ending directly. The stem never changes.",
       "notes": [
-        "The dictionary form always ends in る, and the preceding vowel is い/え: い-ru, き-ru (wait), み-ru (see), お-ki-ru (wake up), た-べ-ru (eat).",
+        "The dictionary form always ends in る, and the preceding vowel is い/え: い-ru (be/exist), き-ru (wear), み-ru (see), お-ki-ru (wake up), た-べ-ru (eat).",
         "To form the ます stem: drop the final る. That's it.",
         "いる → い (stem) → います / いました / いません / いませんでした.",
         "The stem い is very short — just one sound — but it always works the same way.",
@@ -117,17 +117,17 @@
       "type": "grammarRule",
       "id": "rule_irregular",
       "pattern": [
-        { "label": "IRREGULAR", "color": "predicate", "text": "来る / ある" },
-        { "label": "RESULT", "color": "modifier", "text": "→ 来ます / あります" }
+        { "label": "IRREGULAR", "color": "predicate", "text": "来る / する / ある" },
+        { "label": "RESULT", "color": "modifier", "text": "→ 来ます / します / あります" }
       ],
-      "meaning": "Irregular verbs: memorise these — they follow neither ichidan nor godan patterns",
-      "explanation": "Two verbs are irregular in Japanese N5: 来る (to come) and ある (to exist — for inanimate things). Their polite forms do not follow the ichidan or godan rules and must be memorised individually.",
+      "meaning": "Irregular verbs: memorise these — they do not follow standard ichidan or godan patterns",
+      "explanation": "Three verbs are irregular in Japanese N5. 来る (to come) is fully irregular: its reading changes completely in every conjugation (くる → きます). する (to do) is also fully irregular: it becomes します, not すります. ある (to exist — for inanimate things) looks regular in polite forms (あります follows the godan る→り pattern), but its plain negative is ない — not あらない — which is why it is classified as irregular.",
       "notes": [
         "来る (to come) is fully irregular. Its polite forms: 来ます (きます) / 来ました (きました) / 来ません (きません) / 来ませんでした (きませんでした). The kanji 来 stays but the reading changes completely to き.",
-        "ある (to exist, for things) is a special irregular. Its polite present is あります. Unlike regular godan verbs, its negative is ありません (not ありません — which looks the same but is formed as an irregular, not a godan shift). The past negative is ありませんでした.",
-        "These two verbs appear constantly in Japanese — you will use them every day.",
-        "There is no other way to learn them except memorisation.",
-        "Later you will meet する (to do) which is also irregular. It is introduced in a future lesson."
+        "する (to do) is fully irregular. Its polite forms: します / しました / しません / しませんでした. The stem し cannot be predicted from any rule — it must be memorised. する compounds (べんきょうする, etc.) follow the same pattern: べんきょうします.",
+        "ある (to exist, for things) conjugates regularly in polite forms: あります / ありました / ありません / ありませんでした — these all follow the standard godan る→り shift. Its irregularity appears in the plain negative: ない (not あらない, which the godan rule would predict). You will encounter this plain form in a later grammar lesson.",
+        "These three verbs appear constantly in Japanese — you will use them every day.",
+        "There is no other way to learn them except memorisation."
       ],
       "examples": [
         {
@@ -140,13 +140,21 @@
         },
         {
           "parts": [
+            { "text": "する", "role": "verb", "gloss": "dictionary (to do)" },
+            { "text": "→ します", "role": "predicate", "gloss": "irregular stem: し" }
+          ],
+          "en": "to do → does (polite present) — stem し cannot be predicted",
+          "breakdown": "Irregular する: no godan/ichidan rule applies → し + ます = します"
+        },
+        {
+          "parts": [
             { "text": "コンビニ", "role": "topic", "gloss": "convenience store" },
             { "text": "に", "role": "particle" },
             { "text": "あり", "role": "verb", "gloss": "exist-" },
             { "text": "ます", "role": "predicate" }
           ],
           "en": "There is a convenience store (over there).",
-          "breakdown": "ある (irregular): あります — inanimate existence"
+          "breakdown": "ある: あります — polite forms follow godan る→り, but plain negative is irregular (ない)"
         },
         {
           "parts": [
@@ -169,7 +177,7 @@
       "rows": [
         {
           "label": "Dictionary form",
-          "cells": ["いる", "行く", "来る"],
+          "cells": ["いる", "行く", "来る / する / ある"],
           "meaning": "The form found in the dictionary"
         },
         {
@@ -179,19 +187,19 @@
         },
         {
           "label": "Stem formation",
-          "cells": ["Drop る → い", "Shift く→き (い-row) → 行き", "Irregular: き (complete reading change)"],
+          "cells": ["Drop る → い", "Shift く→き (い-row) → 行き", "来る→き / する→し / ある→あり"],
           "meaning": "How to form the polite stem"
         },
         {
           "label": "ます form",
-          "cells": ["います", "行きます", "来ます (reading: きます)"],
+          "cells": ["います", "行きます", "来ます (きます) / します / あります"],
           "meaning": "Polite present / future"
         }
       ],
       "notes": [
         "The る-trap: 分かる ends in る, but the vowel before る is か (あ-row, not い/え-row) → godan, not ichidan. Its stem is 分かり (る→り shift).",
         "When a verb ends in る and you are unsure of its class, check the vowel before る: い/え-row = ichidan; any other row = godan.",
-        "ある follows a pattern similar to godan but with an irregular negative (ありません). It is best memorised as a separate entry."
+        "ある's polite forms look regular (あり + ます follows godan る→り), but its plain negative is irregular: ない, not あらない. It is best memorised as a special case."
       ]
     },
     {
@@ -298,14 +306,14 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "「行く」は ごだんどうしです。「く」で おわりますから。",
-          "en": "'Iku' is a godan verb. Because it ends in 'ku'.",
+          "jp": "「行く」は ごだんどうしです。さいごは「く」です。",
+          "en": "'Iku' is a godan verb. The last sound is 'ku'.",
           "terms": [
             "v_iku",
             "p_wa",
             "g_desu",
-            "p_de",
-            "p_kara"
+            "p_wa",
+            "g_desu"
           ]
         },
         {
@@ -313,10 +321,11 @@
           "jp": "そうです。分かりましたね。では「いる」は どうですか。",
           "en": "That's right. You understood. Then what about 'iru' (be)?",
           "terms": [
+            "v_sou",
             "g_desu",
             { "id": "v_wakaru", "form": "polite_mashita" },
             "p_ne",
-            "p_dewa",
+            "p_dewa_then",
             "v_iru",
             "p_wa",
             "v_dou",
@@ -331,6 +340,8 @@
           "terms": [
             "v_iru",
             "p_wa",
+            "g_desu",
+            "p_wa",
             "g_desu"
           ]
         },
@@ -340,30 +351,34 @@
           "en": "Yes, that's right. Then is 'wakaru' (understand) ichidan or godan?",
           "terms": [
             "p_hai",
+            "v_sou",
             "g_desu",
-            "p_dewa",
+            "p_dewa_then",
             "v_wakaru",
             "p_wa",
+            "g_desu",
+            "p_ka",
             "g_desu",
             "p_ka"
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "「分かる」は ごだんです！「か」は あ-れつですから。",
-          "en": "'Wakaru' is godan! Because 'ka' is in the a-column.",
+          "jp": "「分かる」は ごだんです！「か」は あ-れつです。",
+          "en": "'Wakaru' is godan! 'Ka' is in the a-column.",
           "terms": [
             "v_wakaru",
             "p_wa",
             "g_desu",
-            "p_kara"
+            "p_wa",
+            "g_desu"
           ]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "かいわ 2: どうしの かたちを たしかめましょう（Let's Confirm Verb Forms）",
+      "title": "かいわ 2: どうしの かたちを たしかめます（Confirming Verb Forms）",
       "context": "Rikizo and Yamakawa quiz each other on verb conjugation after class.",
       "lines": [
         {
@@ -397,6 +412,7 @@
           "jp": "そうです！「来る」は ふきそくどうしですね。",
           "en": "That's right! 'Kuru' is an irregular verb, isn't it.",
           "terms": [
+            "v_sou",
             "g_desu",
             "v_kuru",
             "p_wa",
@@ -410,7 +426,7 @@
           "en": "Yes. Then what about 'aru' (exist)?",
           "terms": [
             "p_hai",
-            "p_dewa",
+            "p_dewa_then",
             "v_aru",
             "p_wa",
             "v_dou",

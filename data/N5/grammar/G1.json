@@ -513,7 +513,7 @@
             }
           ],
           "en": "The TV is good.",
-          "note": "です works the same way with loanwords. The pattern stays: Topic は Predicate です."
+          "note": "い-adjectives take です directly in polite speech — no だ. The pattern: Topic は い-adjective です."
         },
         {
           "context": "Exclamation (casual — dropping the copula after い-adjective)",
@@ -639,15 +639,24 @@
             "p_no",
             "v_okaasan",
             "p_mo",
-            "v_sensei"
+            "v_sensei",
+            {
+              "id": "g_da",
+              "form": "da_past"
+            },
+            "p_ka"
           ]
         },
         {
           "spk": "ゆき",
-          "jp": "うん、先生だったよ。お父さんは先生ではなかったよ。",
-          "en": "Yeah, she was a teacher. Her father was not a teacher.",
+          "jp": "先生だったよ。お父さんは先生ではなかったよ。",
+          "en": "She was a teacher. Her father was not a teacher.",
           "terms": [
             "v_sensei",
+            {
+              "id": "g_da",
+              "form": "da_past"
+            },
             "p_yo",
             "v_otousan",
             "p_wa",
@@ -662,17 +671,14 @@
         },
         {
           "spk": "けん",
-          "jp": "そうですか。やまもと先生はいいですね。",
-          "en": "Is that so. Teacher Yamamoto seems great.",
+          "jp": "え、やまもと先生はいいね。",
+          "en": "Oh, Teacher Yamamoto seems great.",
           "terms": [
+            "v_e_exclaim",
             "char_yamamoto",
-            "p_soudesuka",
             "v_sensei",
             "p_wa",
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
+            "v_ii",
             "p_ne"
           ]
         }
@@ -839,7 +845,7 @@
               "form": "polite_adj"
             }
           ],
-          "explanation": "For い-adjectives in polite present tense, add です to the plain form: やさしいです. Never say やさしいでした for the present — that is a very common learner error."
+          "explanation": "For い-adjectives in polite speech, add です to the plain form: やさしいです. For past tense, conjugate the adjective itself: やさしかったです (not やさしいでした — the adjective changes, not です)."
         },
         {
           "kind": "mcq",
