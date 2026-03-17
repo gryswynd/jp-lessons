@@ -454,7 +454,7 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "そうですか。行事の あとで、いっしょに 食事を しませんか。",
+          "jp": "そうですか。行事の 後で、いっしょに 食事を しませんか。",
           "en": "Is that so? After the event, won't you have a meal together with me?",
           "terms": [
             "v_sou",
@@ -512,7 +512,7 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "うん、毎日 いそがしいよ。朝だけ 少し 時間が あるけど、あとは 仕事ばかりだ。",
+          "jp": "うん、毎日 いそがしいよ。朝だけ 少し 時間が あるけど、後は 仕事ばかりだ。",
           "en": "Yeah, I'm busy every day. I only have a little time in the morning, but after that it's nothing but work.",
           "terms": [
             "v_un",
@@ -649,13 +649,14 @@
       ],
       "questions": [
         {
-          "q": "りきぞは 毎朝 どうやって 会社に 行きますか。",
+          "q": "りきぞは 毎朝 何で 会社に 行きますか。",
           "a": "急行で 行きます。",
           "terms": [
             "char_rikizo",
             "p_wa",
             "v_maiasa",
-            "v_dou",
+            "v_nan",
+            "p_de",
             "v_kaisha",
             "p_ni",
             { "id": "v_iku", "form": "polite_masu" },
@@ -742,20 +743,18 @@
           ]
         },
         {
-          "jp": "けんは 早口ですが、よく わかります。",
-          "en": "Ken speaks fast, but anyone can understand him well.",
+          "jp": "けんは 早口ですが、わかります。",
+          "en": "Ken speaks fast, but people can understand him.",
           "terms": [
             "char_ken",
             "p_wa",
-            "v_hayakuchi",
-            "g_desu",
+            { "id": "v_hayakuchi", "form": "polite_adj" },
             "p_ga_but",
-            "v_yoku",
             { "id": "v_wakaru", "form": "polite_masu" }
           ]
         },
         {
-          "jp": "仕事の あとで、りきぞと 食事を したり 音楽を 聞いたり します。",
+          "jp": "仕事の 後で、りきぞと 食事を したり 音楽を 聞いたり します。",
           "en": "After work, he does things like have a meal and listen to music with Rikizo.",
           "terms": [
             "v_shigoto",
@@ -813,7 +812,7 @@
           ]
         },
         {
-          "q": "けんは 仕事の あとで 何を しますか。",
+          "q": "けんは 仕事の 後で 何を しますか。",
           "a": "りきぞと 食事を したり 音楽を 聞いたり します。",
           "terms": [
             "char_ken",
