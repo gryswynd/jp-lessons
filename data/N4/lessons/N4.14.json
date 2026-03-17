@@ -238,10 +238,10 @@
         {
           "label": "Particles This Lesson",
           "items": [
-            "p_dake",
             "p_shika",
             "p_demo",
-            "p_bakari"
+            "p_bakari",
+            "p_dake"
           ]
         },
         {
@@ -473,19 +473,13 @@
         },
         {
           "spk": "ミキ",
-          "jp": "いいですね。仕事の こと は 何でも 大切ですよ。いっしょに 行きましょう。",
-          "en": "That sounds good. Everything about work is important! Let's go together.",
+          "jp": "何でも 食べられますから、いっしょに 行きましょう！",
+          "en": "I can eat anything, so let's go together!",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
-            "p_ne",
-            "v_shigoto",
-            "p_no",
-            "v_koto",
-            "p_wa",
             "v_nani",
             "p_demo",
-            { "id": "v_taisetsu", "form": "polite_adj" },
-            "p_yo",
+            { "id": "v_taberu", "form": "polite_potential" },
+            "p_kara_because",
             "v_issho",
             { "id": "v_iku", "form": "polite_volitional_mashou" }
           ]
@@ -586,29 +580,33 @@
           ]
         },
         {
-          "jp": "毎朝 早く 起きて、急行で 会社に 行きます。",
-          "en": "Every morning, he wakes up early and goes to the company by express.",
+          "jp": "月曜日から 土曜日まで、毎朝 急行に 乗って 会社に 行きます。",
+          "en": "From Monday to Saturday, every morning he rides the express to the company.",
           "terms": [
+            "v_getsuyoubi",
+            "p_kara",
+            "v_doyoubi",
+            "p_made",
             "v_maiasa",
-            { "id": "v_hayai", "form": "adverbial" },
-            { "id": "v_okiru", "form": "te_form" },
             "v_kyuukou",
-            "p_de",
+            "p_ni",
+            { "id": "v_noru", "form": "te_form" },
             "v_kaisha",
             "p_ni",
             { "id": "v_iku", "form": "polite_masu" }
           ]
         },
         {
-          "jp": "急行は 早いので、仕事に 早く 着きます。",
-          "en": "Because the express is fast, he arrives at work quickly.",
+          "jp": "仕事は 九時から 始まります。毎朝 少し 早く 着きます。",
+          "en": "Work starts from nine o'clock. Every morning he arrives a little early.",
           "terms": [
-            "v_kyuukou",
-            "p_wa",
-            { "id": "v_hayai", "form": "plain_form" },
-            "p_node",
             "v_shigoto",
-            "p_ni",
+            "p_wa",
+            { "counter": "ji", "n": 9 },
+            "p_kara",
+            { "id": "v_hajimaru", "form": "polite_masu" },
+            "v_maiasa",
+            "v_sukoshi",
             { "id": "v_hayai", "form": "adverbial" },
             { "id": "v_tsuku", "form": "polite_masu" }
           ]
