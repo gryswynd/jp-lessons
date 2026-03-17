@@ -479,7 +479,7 @@
         {
           "label": "SPECIFIC TIME",
           "color": "time",
-          "text": "月曜日"
+          "text": "月よう日"
         },
         {
           "label": "PARTICLE",
@@ -745,22 +745,24 @@
         },
         {
           "spk": "B",
-          "jp": "月よう日と 水よう日に います。",
-          "en": "She is here on Monday and Wednesday.",
+          "jp": "月よう日から 金よう日まで います。",
+          "en": "She is here Monday through Friday.",
           "terms": [
             "v_getsuyoubi",
-            "p_to",
-            "v_suiyoubi",
-            "p_ni",
+            "p_kara",
+            "v_kinyoubi",
+            "p_made",
             { "id": "v_iru", "form": "polite_masu" }
           ]
         },
         {
           "spk": "A",
-          "jp": "金よう日も いますか。",
-          "en": "Is she also here on Friday?",
+          "jp": "土よう日と 日よう日も いますか。",
+          "en": "Is she also here Saturday and Sunday?",
           "terms": [
-            "v_kinyoubi",
+            "v_doyoubi",
+            "p_to",
+            "v_nichiyoubi",
             "p_mo",
             { "id": "v_iru", "form": "polite_masu" },
             "p_ka"
@@ -768,30 +770,17 @@
         },
         {
           "spk": "B",
-          "jp": "いいえ。月よう日から 金よう日まで です。毎日は いません。",
-          "en": "No. It's Monday to Friday. She is not here every day.",
+          "jp": "いいえ。先生や 友だちは 毎日は いません。",
+          "en": "No. People like teachers and friends are not here every day.",
           "terms": [
-            "v_getsuyoubi",
-            "p_kara",
-            "v_kinyoubi",
-            "p_made",
-            "g_desu",
+            "v_iie",
+            "v_sensei",
+            "p_ya",
+            "v_tomodachi",
+            "p_wa",
             "v_mainichi",
             "p_wa",
             { "id": "v_iru", "form": "polite_negative" }
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "先生や お母さんは 毎日 います。",
-          "en": "Teachers and mothers are here every day.",
-          "terms": [
-            "v_sensei",
-            "p_ya",
-            "v_okaasan",
-            "p_wa",
-            "v_mainichi",
-            { "id": "v_iru", "form": "polite_masu" }
           ]
         }
       ]
