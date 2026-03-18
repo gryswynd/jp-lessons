@@ -164,13 +164,16 @@
             },
             {
               "spk": "りきぞ",
-              "jp": "駅員さんは どこに いますか。",
+              "jp": "どこで 仕事を して いますか。",
               "terms": [
-                "v_ekiin",
-                "v_san",
-                "p_wa",
                 "v_doko",
-                "p_ni",
+                "p_de",
+                "v_shigoto",
+                "p_wo",
+                {
+                  "id": "v_suru",
+                  "form": "te_form"
+                },
                 {
                   "id": "v_iru",
                   "form": "polite_masu"
@@ -479,7 +482,7 @@
         },
         {
           "jp": "仕事を する 時も 音楽を 聞きます。声が 低い 歌手の 歌だけを 聞きます。",
-          "en": "When working, Yamakawa also listens to music. Only songs by singers with low voices are listened to.",
+          "en": "When working, Yamakawa also listens to music. Yamakawa listens only to songs by singers with low voices.",
           "terms": [
             "v_shigoto",
             "p_wo",
