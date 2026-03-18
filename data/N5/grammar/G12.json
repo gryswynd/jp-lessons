@@ -154,12 +154,12 @@
         }
       ],
       "meaning": "Easily confused na-adjectives — they look like i-adjectives but are not",
-      "explanation": "Some of the most common Japanese adjectives look like い-adjectives because their base form ends in い — but they are actually な-adjectives. This means they conjugate completely differently.\n\n**The three most common traps:**\n\n| Word | Meaning | Type | Correct past | ✗ Wrong past |\n|---|---|---|---|---|\n| きれい | beautiful / clean | **na-adj** | きれいでした | ~~きれいかったです~~ |\n| ゆうめい | famous (有名) | **na-adj** | ゆうめいでした | ~~ゆうめいかったです~~ |\n| きらい | disliked (嫌い) | **na-adj** | きらいでした | ~~きらいかったです~~ |\n\n**How to spot a na-adjective:**\n- Before a noun, it uses な: きれいな 花 (beautiful flower), 有名な 人 (famous person)\n- An i-adjective uses nothing before a noun: 大きい 花 (big flower), 新しい 人 (new person)\n- If you need to add な before a noun, it's a na-adjective!\n\n**The かわいい trap:** かわいい (cute) ends in い but IS a genuine い-adjective. So: かわいかったです (was cute) is correct. Do not confuse it with きれい.\n\n**The ～そうです trap:** きれい + そうです = きれいそうです (looks beautiful) ✓. But かわいい + そうです = かわいそうです — and this is a completely different word meaning 'pitiable / poor thing'! So avoid 「かわいそうです」 to mean 'looks cute'.",
+      "explanation": "Some of the most common Japanese adjectives look like い-adjectives because their base form ends in い — but they are actually な-adjectives. This means they conjugate completely differently.\n\n**The three most common traps:**\n\n| Word | Meaning | Type | Correct past | ✗ Wrong past |\n|---|---|---|---|---|\n| きれい | beautiful / clean | **na-adj** | きれいでした | ~~きれいかったです~~ |\n| ゆうめい | famous (有名) | **na-adj** | ゆうめいでした | ~~ゆうめいかったです~~ |\n| きらい | disliked (嫌い) | **na-adj** | きらいでした | ~~きらいかったです~~ |\n\n**How to spot a na-adjective:**\n- Before a noun, it uses な: きれいな 花 (beautiful flower), 有名な 人 (famous person)\n- An i-adjective uses nothing before a noun: 大きい 花 (big flower), 新しい 人 (new person)\n- If you need to add な before a noun, it's a na-adjective!\n\n**The かわいい trap:** かわいい (cute) ends in い but IS a genuine い-adjective. So: かわいかったです (was cute) is correct. Do not confuse it with きれい.",
       "notes": [
         "Memory trick: if the adjective can take な before a noun (きれいな, 有名な, 嫌いな), it's a na-adjective and uses で/でした/じゃない for conjugation.",
         "きれい is unusual because it is a na-adjective even though it ends in い. It comes from the two-kanji compound 綺麗 — like other 漢語 compounds (有名, 嫌い), it behaves grammatically like a noun, not a true い-adjective.",
         "有名 (ゆうめい) is a compound of 有 (exist) + 名 (name), meaning literally 'having a name' — names make you famous. This compound structure explains why it behaves like a noun/na-adj rather than an i-adj.",
-        "The かわいそう trap is important for natural Japanese. If you want to say 'that puppy looks cute', say 「あの 子犬は かわいいですね」or avoid the そうです form entirely with かわいい."
+        "Memory trick for the fake い-adjectives: try saying 'きれいな 花' — if な fits naturally before the noun, it's a な-adjective. 'かわいい花' has no な, confirming かわいい is a genuine い-adjective."
       ],
       "examples": [
         {
@@ -222,7 +222,7 @@
         "You can chain more than two adjectives: きれいで、かわいくて、小さい 花 (beautiful, cute, and small flower). The last adjective takes the final form; all others use て-form.",
         "If you mix i-adj and na-adj in a chain, remember: i-adj uses くて, na-adj uses で. Example: 大きくて、きれいな 川 (a big and beautiful river).",
         "The て-form connector means 'and' in a neutral, non-contrasting sense. For contrast ('but'), use が after the full form: きれいですが、小さいです (it's beautiful, but small).",
-        "When the te-form connector appears before a noun phrase (not a copula), the last modifier needs な: きれいで、かわいい 花 (works) vs きれいで、かわいい (predicate, also works)."
+        "You can chain na-adj て-form and い-adj て-form together before a final noun: きれいで、大きい 花 (a beautiful and big flower). Each adjective uses its own て-form type — な-adj uses で, い-adj uses くて — and the last one stays in its plain/dictionary form before the noun."
       ],
       "examples": [
         {
@@ -438,25 +438,22 @@
         },
         {
           "spk": "ミキ",
-          "jp": "あの 花火は きれいそうですね。大きくて、きれいです。",
-          "en": "Those fireworks look beautiful. They're big and beautiful.",
+          "jp": "あの 花火は 大きくて、とても きれいですね。",
+          "en": "Those fireworks are big and really beautiful, aren't they.",
           "terms": [
             "v_ano",
             "v_hanabi",
             "p_wa",
             {
-              "id": "v_kirei",
-              "form": "appearance_sou"
-            },
-            "p_ne",
-            {
               "id": "v_ookii",
               "form": "te_form"
             },
+            "v_totemo",
             {
               "id": "v_kirei",
               "form": "polite_adj"
-            }
+            },
+            "p_ne"
           ]
         },
         {
