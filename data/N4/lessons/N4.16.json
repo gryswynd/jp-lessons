@@ -1,61 +1,55 @@
 {
   "contentVersion": "1.0.0",
   "id": "N4.16",
-  "title": "Phase 4 Lesson 16: Movement & Action",
+  "title": "Phase 4 Lesson 16: Movement, Dogs, and Banking",
   "meta": {
-    "phase": 4,
-    "lesson": 16,
-    "focus": "Movement, animals, banking, and physical actions.",
-    "kanji": [
-      "動",
-      "犬",
-      "銀",
-      "去",
-      "走",
-      "運"
-    ]
+    "level": "N4",
+    "lesson_number": 16,
+    "focus": "Movement, running, animals, and banking — introducing ポチ the shiba-inu.",
+    "estimated_minutes": 30,
+    "kanji": ["動", "犬", "銀", "去", "走", "運"]
   },
   "newKanji": [
     {
       "kanji": "動",
       "on": "どう",
       "kun": "うご(く)",
-      "meaning": "move / motion",
+      "meaning": "Move / Motion",
       "termId": "k_dou"
     },
     {
       "kanji": "犬",
       "on": "けん",
       "kun": "いぬ",
-      "meaning": "dog",
+      "meaning": "Dog",
       "termId": "k_inu"
     },
     {
       "kanji": "銀",
       "on": "ぎん",
       "kun": "(なし)",
-      "meaning": "silver",
+      "meaning": "Silver",
       "termId": "k_gin"
     },
     {
       "kanji": "去",
       "on": "きょ / こ",
       "kun": "さ(る)",
-      "meaning": "past / leave",
+      "meaning": "Past / Leave",
       "termId": "k_kyo"
     },
     {
       "kanji": "走",
       "on": "そう",
       "kun": "はし(る)",
-      "meaning": "run",
+      "meaning": "Run",
       "termId": "k_hashiru"
     },
     {
       "kanji": "運",
       "on": "うん",
       "kun": "はこ(ぶ)",
-      "meaning": "luck / carry",
+      "meaning": "Luck / Carry",
       "termId": "k_un"
     }
   ],
@@ -63,54 +57,62 @@
     {
       "type": "warmup",
       "title": "Warm-Up Review（ウォームアップ）",
-      "instructions": "Ask your partner these questions using previously learned words:",
+      "instructions": "Ask your partner these questions using words you already know:",
       "items": [
         {
-          "jp": "きのう、病院へ 行きましたか。",
-          "en": "Did you go to the hospital yesterday?",
-          "terms": [
-            "v_kinou",
-            "v_byouin",
-            {
-              "id": "v_iku",
-              "form": "polite_mashita"
-            }
-          ]
-        },
-        {
-          "jp": "毎日 薬を 飲みますか。",
-          "en": "Do you take medicine every day?",
+          "jp": "毎朝 歩いて いますか。",
+          "en": "Do you walk every morning?",
           "terms": [
             "v_mainichi",
-            "v_kusuri",
-            {
-              "id": "v_nomu",
-              "form": "polite_masu"
-            }
+            "v_asa",
+            { "id": "v_aruku", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" },
+            "p_ka"
           ]
         },
         {
-          "jp": "医者は 親切でしたか。",
-          "en": "Was the doctor kind?",
+          "jp": "近所を 音楽を 聞きながら 歩きましたか。",
+          "en": "Did you walk around the neighborhood while listening to music?",
           "terms": [
-            "v_isha",
-            "v_shinsetsu",
-            {
-              "id": "g_desu",
-              "form": "polite_past_copula"
-            }
+            "v_kinjo",
+            "p_wo",
+            "v_ongaku",
+            "p_wo",
+            { "id": "v_kiku", "form": "nagara_form" },
+            { "id": "v_aruku", "form": "polite_mashita" },
+            "p_ka"
           ]
         },
         {
-          "jp": "休日に 何を しますか。",
-          "en": "What do you do on your holiday?",
+          "jp": "写真を 撮ったり、友だちと 話したり しますか。",
+          "en": "Do you do things like take photos and talk with friends?",
           "terms": [
-            "v_kyuujitsu",
-            "v_nani",
-            {
-              "id": "v_suru",
-              "form": "polite_masu"
-            }
+            "v_shashin",
+            "p_wo",
+            { "id": "v_toru", "form": "tari_form" },
+            "v_tomodachi",
+            "p_to",
+            { "id": "v_hanasu", "form": "tari_form" },
+            { "id": "v_suru", "form": "polite_masu" },
+            "p_ka"
+          ]
+        },
+        {
+          "jp": "休みの 日は 音楽を 聞いたり、映画を 見たり しますか。",
+          "en": "On days off, do you do things like listen to music and watch movies?",
+          "terms": [
+            "v_yasumi",
+            "p_no",
+            "v_hi",
+            "p_wa",
+            "v_ongaku",
+            "p_wo",
+            { "id": "v_kiku", "form": "tari_form" },
+            "v_eiga",
+            "p_wo",
+            { "id": "v_miru", "form": "tari_form" },
+            { "id": "v_suru", "form": "polite_masu" },
+            "p_ka"
           ]
         }
       ]
@@ -122,20 +124,22 @@
         {
           "kanji": "動",
           "on": "どう",
-          "kun": "うご",
-          "meaning": "move",
+          "kun": "うご(く)",
+          "meaning": "Move / Motion",
           "terms": [
             "k_dou",
-            "v_doubutsu",
+            "v_ugoku",
             "v_undou",
-            "v_jidou"
+            "v_doubutsu",
+            "v_jidou",
+            "v_shudou"
           ]
         },
         {
           "kanji": "犬",
           "on": "けん",
           "kun": "いぬ",
-          "meaning": "dog",
+          "meaning": "Dog",
           "terms": [
             "k_inu",
             "v_inu",
@@ -146,7 +150,7 @@
           "kanji": "銀",
           "on": "ぎん",
           "kun": "(なし)",
-          "meaning": "silver",
+          "meaning": "Silver",
           "terms": [
             "k_gin",
             "v_ginkou",
@@ -157,19 +161,21 @@
         {
           "kanji": "去",
           "on": "きょ / こ",
-          "kun": "さ",
-          "meaning": "past / leave",
+          "kun": "さ(る)",
+          "meaning": "Past / Leave",
           "terms": [
             "k_kyo",
+            "v_saru",
             "v_kyonen",
+            "v_kyorai",
             "v_shikyo"
           ]
         },
         {
           "kanji": "走",
           "on": "そう",
-          "kun": "はし",
-          "meaning": "run",
+          "kun": "はし(る)",
+          "meaning": "Run",
           "terms": [
             "k_hashiru",
             "v_hashiru"
@@ -178,13 +184,13 @@
         {
           "kanji": "運",
           "on": "うん",
-          "kun": "はこ",
-          "meaning": "luck / carry",
+          "kun": "はこ(ぶ)",
+          "meaning": "Luck / Carry",
           "terms": [
             "k_un",
-            "v_un_ga_ii",
+            "v_hakobu",
             "v_undou",
-            "v_hakobu"
+            "v_un_ga_ii"
           ]
         }
       ]
@@ -194,569 +200,874 @@
       "title": "Vocabulary & Compounds（ことば）",
       "groups": [
         {
-          "label": "Action & Movement",
-          "items": [
-            "v_doubutsu",
-            "v_jidou",
-            "v_shudou",
-            "v_undou",
-            "v_hashiru",
-            "v_hakobu"
-          ]
-        },
-        {
-          "label": "Nouns & Attributes",
+          "label": "Animals & Movement（動物と 動き）",
           "items": [
             "v_inu",
             "v_yaken",
+            "v_doubutsu",
+            "v_ugoku",
+            "v_hashiru",
+            "v_undou"
+          ]
+        },
+        {
+          "label": "Banking & Luck（銀行と 運）",
+          "items": [
             "v_ginkou",
             "v_giniro",
             "v_suigin",
+            "v_hakobu",
             "v_un_ga_ii"
           ]
         },
         {
-          "label": "Time & Past",
+          "label": "Past & Memories（去ること・おもい出）",
           "items": [
             "v_kyonen",
-            "v_shikyo",
+            "v_saru",
             "v_kyorai",
-            "v_saru"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 1（会話）: At the Bank",
-      "context": "Visiting the bank.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "これから 銀行に 行きます。",
-          "en": "I am going to the bank now.",
-          "terms": [
-            "v_ginkou",
-            {
-              "id": "v_iku",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "銀行は 遠いですか。",
-          "en": "Is the bank far?",
-          "terms": [
-            "v_ginkou",
-            "v_tooi",
-            "g_desu"
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "いいえ、近いです。でも、時間がないですから、走ります。",
-          "en": "No, it is near. But, I don't have time, so I will run.",
-          "terms": [
-            "v_chikai",
-            "v_jikan",
-            {
-              "id": "v_hashiru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "気をつけて くださいね。",
-          "en": "Please be careful.",
-          "terms": [
-            "k_u6c17",
-            {
-              "id": "v_kiotsukeru",
-              "form": "te_form"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 2（会話）: Healthy Lifestyle",
-      "context": "Talking about exercise.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "たなかさんは 毎日 運動しますか。",
-          "en": "Mr. Tanaka, do you exercise every day?",
-          "terms": [
-            "v_mainichi",
-            {
-              "id": "v_undou",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "はい。犬と こうえんを 走ります。",
-          "en": "Yes. I run in the park with my dog.",
-          "terms": [
-            "v_inu",
-            "v_kouen",
-            {
-              "id": "v_hashiru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "いいですね。動物は 好きですか。",
-          "en": "That's good. Do you like animals?",
-          "terms": [
-            "v_doubutsu",
-            "v_suki"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "大好きです。運動も 好きです。",
-          "en": "I love them. I also like exercise.",
-          "terms": [
-            "v_daisuki",
-            "v_undou",
-            "v_suki"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 3（会話）: The Heavy Box",
-      "context": "Moving an object.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "この はこは おもいですね。運んで ください。",
-          "en": "This box is heavy. Please carry it.",
-          "terms": [
-            "v_omoi",
-            {
-              "id": "v_hakobu",
-              "form": "te_form"
-            }
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "はい。中には 何が ありますか。",
-          "en": "Okay. What is inside?",
-          "terms": [
-            "k_naka",
-            "v_nani",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "銀色の とけいが あります。",
-          "en": "There is a silver watch.",
-          "terms": [
-            "v_giniro",
-            "v_tokei",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "高そうですね。",
-          "en": "It looks expensive.",
-          "terms": [
-            {
-              "id": "v_takai",
-              "form": "appearance_sou_stem"
-            },
-            "g_desu"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 4（会話）: Changes",
-      "context": "Talking about the past.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "去年の 冬、日本へ 行きました。",
-          "en": "Last winter, I went to Japan.",
-          "terms": [
-            "v_kyonen",
-            "k_fuyu",
-            "v_nihon",
-            {
-              "id": "v_iku",
-              "form": "polite_mashita"
-            }
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "どうでしたか。",
-          "en": "How was it?",
-          "terms": [
-            "v_dou"
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "楽しかったです。自動の ドアが たくさん ありました。",
-          "en": "It was fun. There were many automatic doors.",
-          "terms": [
-            {
-              "id": "v_tanoshii",
-              "form": "plain_past"
-            },
+            "v_shikyo",
             "v_jidou",
-            {
-              "id": "v_aru",
-              "form": "polite_mashita"
-            }
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "日本は べんりですね。",
-          "en": "Japan is convenient, isn't it?",
-          "terms": [
-            "v_nihon",
-            "v_benri"
+            "v_shudou",
+            "v_omoide"
           ]
         }
       ]
     },
     {
-      "type": "reading",
-      "title": "Reading Practice 1: My Lucky Day",
-      "passage": [
+      "type": "conversation",
+      "title": "Conversation 1（会話）: Morning Run with Pochi",
+      "context": "Rikizo tells his neighbor about his morning routine with his dog Pochi.",
+      "lines": [
         {
-          "jp": "今日は 運がいい 日です。",
-          "en": "Today is a lucky day.",
+          "spk": "りきぞ",
+          "jp": "毎朝 ポチと 近所を 走って います。",
+          "en": "Every morning I run around the neighborhood with Pochi.",
+          "terms": [
+            "char_rikizo",
+            "v_mainichi",
+            "v_asa",
+            "char_pochi",
+            "p_to",
+            "v_kinjo",
+            "p_wo",
+            { "id": "v_hashiru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "ポチは どんな 犬ですか。",
+          "en": "What kind of dog is Pochi?",
+          "terms": [
+            "char_pochi",
+            "p_wa",
+            "v_donna",
+            "v_inu",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "小さくて かわいい 動物です。走るのが 大好きです。",
+          "en": "She is a small, cute animal. She loves running.",
+          "terms": [
+            "char_rikizo",
+            { "id": "v_chiisai", "form": "te_form" },
+            "v_kawaii",
+            "v_doubutsu",
+            "g_desu",
+            { "id": "v_hashiru", "form": "plain_form" },
+            "p_no",
+            "p_ga",
+            "v_daisuki",
+            "g_desu"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "それは いいですね。運動に なりますね。",
+          "en": "That's nice. It becomes exercise, doesn't it.",
+          "terms": [
+            "v_undou",
+            "p_ni",
+            { "id": "v_naru", "form": "polite_masu" },
+            "p_ne"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation 2（会話）: Going to the Bank",
+      "context": "Rikizo goes to the bank to take out money and asks a staff member for help.",
+      "lines": [
+        {
+          "spk": "りきぞ",
+          "jp": "すみません。お金を 出したいですが、どこに 行きますか。",
+          "en": "Excuse me. I want to take out money — where do I go?",
+          "terms": [
+            "char_rikizo",
+            "v_okane",
+            "p_wo",
+            { "id": "v_dasu", "form": "plain_desire_tai" },
+            "g_desu",
+            "p_ga_but",
+            "v_doko",
+            "p_ni",
+            { "id": "v_iku", "form": "polite_masu" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "銀行の 入口に 自動の ATM が ありますよ。",
+          "en": "There is an automatic ATM at the bank entrance.",
+          "terms": [
+            "v_ginkou",
+            "p_no",
+            "v_iriguchi",
+            "p_ni",
+            "v_jidou",
+            "p_no",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "ATM が 動かない 時は どう しますか。",
+          "en": "What do you do when the ATM doesn't move?",
+          "terms": [
+            "char_rikizo",
+            "p_ga",
+            { "id": "v_ugoku", "form": "plain_negative" },
+            "p_wa",
+            "v_dou",
+            { "id": "v_suru", "form": "polite_masu" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "手動で お金を 運びますよ。ゆっくり して ください。",
+          "en": "We carry the money manually. Please take your time.",
+          "terms": [
+            "v_shudou",
+            "p_de",
+            "v_okane",
+            "p_wo",
+            { "id": "v_hakobu", "form": "polite_masu" },
+            "p_yo",
+            "v_yukkuri",
+            { "id": "v_suru", "form": "te_form" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation 3（会話）: A Stray Dog in Town",
+      "context": "Rikizo and a neighbor talk about a stray dog they saw in the neighborhood.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "今日 町で 野犬を 見ましたよ。",
+          "en": "Today I saw a stray dog in town.",
           "terms": [
             "v_kyou",
-            "v_un_ga_ii",
-            "k_hi"
-          ]
-        },
-        {
-          "jp": "朝、銀行へ 行く とき、お金を ひろいました。",
-          "en": "In the morning, when I went to the bank, I found money.",
-          "terms": [
-            "k_asa",
-            "v_ginkou",
-            "v_iku",
-            "k_kane",
-            {
-              "id": "v_hirou",
-              "form": "polite_mashita"
-            }
-          ]
-        },
-        {
-          "jp": "銀行の ドアは 自動でした。",
-          "en": "The bank's door was automatic.",
-          "terms": [
-            "v_ginkou",
-            "v_doa",
-            "v_jidou"
-          ]
-        },
-        {
-          "jp": "帰り道で、かわいい 犬に 会いました。",
-          "en": "On the way home, I met a cute dog.",
-          "terms": [
-            "v_kaerimichi",
-            "v_kawaii",
-            "v_inu",
-            {
-              "id": "v_au",
-              "form": "polite_mashita"
-            }
-          ]
-        },
-        {
-          "jp": "野犬でしたが、とても おとなしい 犬でした。",
-          "en": "It was a stray dog, but it was a very gentle dog.",
-          "terms": [
+            "v_machi",
+            "p_de",
             "v_yaken",
-            "v_otonashii",
-            "v_inu"
+            "p_wo",
+            { "id": "v_miru", "form": "polite_mashita" },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "野犬は 動物の 中で いちばん こわい ですね。",
+          "en": "Among animals, stray dogs are the scariest.",
+          "terms": [
+            "char_rikizo",
+            "v_yaken",
+            "p_wa",
+            "v_doubutsu",
+            "p_no",
+            "v_naka",
+            "p_de",
+            "v_ichiban",
+            { "id": "v_kowai", "form": "polite_adj" },
+            "p_ne"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "ポチは 野犬では ないですよね。いつも 近くに いますから。",
+          "en": "Pochi is not a stray dog, right. She's always nearby.",
+          "terms": [
+            "char_pochi",
+            "p_wa",
+            "v_yaken",
+            "v_itsumo",
+            "v_chikai",
+            "p_ni",
+            { "id": "v_iru", "form": "polite_masu" },
+            "p_kara_because"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "そうです。ポチは 運が いい 犬ですよ。",
+          "en": "That's right. Pochi is a lucky dog.",
+          "terms": [
+            "char_rikizo",
+            "v_sou",
+            "g_desu",
+            "char_pochi",
+            "p_wa",
+            "v_un_ga_ii",
+            "v_inu",
+            "g_desu",
+            "p_yo"
           ]
         }
-      ],
-      "questions": [
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation 4（会話）: Last Year's Memories (Casual)",
+      "context": "Rikizo and Yamakawa sit at Rikizo's home, talking about Pochi and memories from last year.",
+      "lines": [
         {
-          "q": "今日は どんな 日ですか。",
-          "a": "運がいい 日です。",
+          "spk": "やまかわ",
+          "jp": "去年、ポチは もっと 小さかったね。",
+          "en": "Last year, Pochi was even smaller, wasn't she.",
           "terms": [
-            "v_un_ga_ii",
-            "v_hi"
+            "char_yamakawa",
+            "v_kyonen",
+            "char_pochi",
+            "p_wa",
+            { "id": "v_chiisai", "form": "plain_past_adj" },
+            "p_ne"
           ]
         },
         {
-          "q": "どこへ 行きましたか。",
-          "a": "銀行へ 行きました。",
+          "spk": "りきぞ",
+          "jp": "そうだね。去年は あまり 走らなかったけど、今は 毎日 走るよ。",
+          "en": "Yeah. Last year she didn't run much, but now she runs every day.",
           "terms": [
-            "v_ginkou",
-            {
-              "id": "v_iku",
-              "form": "polite_mashita"
-            }
+            "char_rikizo",
+            "v_sou",
+            "p_ne",
+            "g_da",
+            "v_kyonen",
+            "p_wa",
+            "v_amari",
+            { "id": "v_hashiru", "form": "plain_past_negative" },
+            "p_kedo",
+            "v_ima",
+            "p_wa",
+            "v_mainichi",
+            { "id": "v_hashiru", "form": "plain_form" },
+            "p_yo"
           ]
         },
         {
-          "q": "どんな 犬に 会いましたか。",
-          "a": "かわいい 野犬に 会いました。",
+          "spk": "やまかわ",
+          "jp": "ポチと 外を 走ったり、歩いたり したの？",
+          "en": "Did you do things like run and walk outside with Pochi?",
           "terms": [
-            "v_kawaii",
-            "v_yaken",
-            {
-              "id": "v_au",
-              "form": "polite_mashita"
-            }
+            "char_yamakawa",
+            "char_pochi",
+            "p_to",
+            "v_soto",
+            "p_wo",
+            { "id": "v_hashiru", "form": "tari_form" },
+            { "id": "v_aruku", "form": "tari_form" },
+            { "id": "v_suru", "form": "plain_past" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "そう。いい おもい出だから、写真も たくさん 撮った。",
+          "en": "Yeah. Because they're good memories, I took lots of photos too.",
+          "terms": [
+            "char_rikizo",
+            "v_sou",
+            "v_ii",
+            "v_omoide",
+            "g_da",
+            "p_kara_because",
+            "v_shashin",
+            "p_mo",
+            { "id": "v_toru", "form": "plain_past" }
           ]
         }
       ]
     },
     {
       "type": "reading",
-      "title": "Reading Practice 2: Grandfather's Memories",
+      "title": "Reading Practice 1: A Day with Pochi",
       "passage": [
         {
-          "jp": "そふは 去年 死去しました。",
-          "en": "My grandfather passed away last year.",
+          "jp": "りきぞは 毎朝 ポチと いっしょに 近所を 走って います。",
+          "en": "Rikizo runs around the neighborhood together with Pochi every morning.",
           "terms": [
-            "v_sofu",
-            "v_kyonen",
-            {
-              "id": "v_shikyo",
-              "form": "polite_mashita"
-            }
-          ]
-        },
-        {
-          "jp": "そふは 動物が 大好きでした。",
-          "en": "Grandfather loved animals.",
-          "terms": [
-            "v_sofu",
-            "v_doubutsu",
-            "v_daisuki"
-          ]
-        },
-        {
-          "jp": "毎日、こうえんで 運動しました。",
-          "en": "Every day, he exercised in the park.",
-          "terms": [
+            "char_rikizo",
+            "p_wa",
             "v_mainichi",
-            "v_kouen",
-            {
-              "id": "v_undou",
-              "form": "polite_mashita"
-            }
+            "v_asa",
+            "char_pochi",
+            "p_to",
+            "v_issho",
+            "p_ni",
+            "v_kinjo",
+            "p_wo",
+            { "id": "v_hashiru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
           ]
         },
         {
-          "jp": "銀色の カメラで 写真を たくさん とりました。",
-          "en": "He took many photos with a silver camera.",
+          "jp": "ポチは 小さい 犬ですが、走るのが 早くて 元気です。",
+          "en": "Pochi is a small dog, but she is fast at running and energetic.",
           "terms": [
-            "v_giniro",
-            "v_kamera",
-            "v_shashin",
-            {
-              "id": "v_toru",
-              "form": "polite_mashita"
-            }
+            "char_pochi",
+            "p_wa",
+            "v_chiisai",
+            "v_inu",
+            "g_desu",
+            "p_ga_but",
+            { "id": "v_hashiru", "form": "plain_form" },
+            "p_no",
+            "p_ga",
+            { "id": "v_hayai", "form": "te_form" },
+            { "id": "v_genki", "form": "polite_adj" }
           ]
         },
         {
-          "jp": "去来する おもい出は うつくしいです。",
-          "en": "The recurring memories are beautiful.",
+          "jp": "走った 後で、りきぞは 銀行に 行って お金を 出します。",
+          "en": "After running, Rikizo goes to the bank and takes out money.",
           "terms": [
-            "v_kyorai",
-            "v_omoide",
-            "v_utsukushii"
+            { "id": "v_hashiru", "form": "plain_past" },
+            "v_ato",
+            "p_de",
+            "char_rikizo",
+            "p_wa",
+            "v_ginkou",
+            "p_ni",
+            { "id": "v_iku", "form": "te_form" },
+            "v_okane",
+            "p_wo",
+            { "id": "v_dasu", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "お金を 運ぶ 仕事は いそがしいですが、運が いい 日は 早く 終わります。",
+          "en": "The work of carrying money is busy, but on lucky days it finishes quickly.",
+          "terms": [
+            "v_okane",
+            "p_wo",
+            { "id": "v_hakobu", "form": "plain_form" },
+            "v_shigoto",
+            "p_wa",
+            { "id": "v_isogashii", "form": "polite_adj" },
+            "p_ga_but",
+            "v_un_ga_ii",
+            "v_hi",
+            "p_wa",
+            { "id": "v_hayai", "form": "adverbial" },
+            { "id": "v_owaru", "form": "polite_masu" }
           ]
         }
       ],
       "questions": [
         {
-          "q": "そふは いつ 死去しましたか。",
-          "a": "去年 死去しました。",
+          "q": "りきぞは 毎朝 ポチと 何を して いますか。",
+          "a": "一緒に 近所を 走って います。",
+          "terms": [
+            "char_rikizo",
+            "p_wa",
+            "v_mainichi",
+            "v_asa",
+            "char_pochi",
+            "p_to",
+            "v_nani",
+            "p_wo",
+            "v_issho",
+            "p_ni",
+            "v_kinjo",
+            "p_wo",
+            { "id": "v_hashiru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "q": "ポチは どんな 犬ですか。",
+          "a": "小さくて 元気な 犬です。",
+          "terms": [
+            "char_pochi",
+            "p_wa",
+            "v_donna",
+            "v_inu",
+            "g_desu",
+            "p_ka",
+            { "id": "v_chiisai", "form": "te_form" },
+            { "id": "v_genki", "form": "attributive_na" },
+            "v_inu",
+            "g_desu"
+          ]
+        },
+        {
+          "q": "銀行で 何を しますか。",
+          "a": "お金を 出します。",
+          "terms": [
+            "v_ginkou",
+            "p_de",
+            "v_nani",
+            "p_wo",
+            "v_okane",
+            "p_wo",
+            { "id": "v_dasu", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: Memories of Last Year",
+      "passage": [
+        {
+          "jp": "去年は りきぞに とって いい 時間でした。",
+          "en": "Last year was a good time for Rikizo.",
           "terms": [
             "v_kyonen",
-            {
-              "id": "v_shikyo",
-              "form": "polite_mashita"
-            }
+            "p_wa",
+            "char_rikizo",
+            "p_ni",
+            "v_ii",
+            "v_jikan",
+            "g_desu"
           ]
         },
         {
-          "q": "そふは 何が 好きでしたか。",
-          "a": "動物が 好きでした。",
+          "jp": "ポチが 家に 来て、毎日 いっしょに 外を 歩きました。",
+          "en": "Pochi came to the house, and every day they walked outside together.",
           "terms": [
-            "v_doubutsu",
-            "v_suki"
+            "char_pochi",
+            "p_ga",
+            "v_uchi",
+            "p_ni",
+            { "id": "v_kuru", "form": "te_form" },
+            "v_mainichi",
+            "v_issho",
+            "p_ni",
+            "v_soto",
+            "p_wo",
+            { "id": "v_aruku", "form": "polite_mashita" }
           ]
         },
         {
-          "q": "どこで 運動しましたか。",
-          "a": "こうえんで 運動しました。",
+          "jp": "楽しい ことや いい おもい出が 去来します。",
+          "en": "Fun things and good memories come and go.",
           "terms": [
-            "v_kouen",
-            {
-              "id": "v_undou",
-              "form": "polite_mashita"
-            }
+            "v_tanoshii",
+            "v_koto",
+            "p_ya",
+            "v_ii",
+            "v_omoide",
+            "p_ga",
+            "v_kyorai",
+            { "id": "v_suru", "form": "polite_masu" }
           ]
         },
         {
-          "q": "カメラの 色は 何色でしたか。",
-          "a": "銀色でした。",
+          "jp": "去年 去った 夏も、今は いい おもい出に なりました。",
+          "en": "Even the summer that passed last year has now become a good memory.",
           "terms": [
-            "v_giniro"
+            "v_kyonen",
+            { "id": "v_saru", "form": "plain_past" },
+            "v_natsu",
+            "p_mo",
+            "v_ima",
+            "p_wa",
+            "v_ii",
+            "v_omoide",
+            "p_ni",
+            { "id": "v_naru", "form": "polite_mashita" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "去年 りきぞは 毎日 何を しましたか。",
+          "a": "ポチと 一緒に 外を 歩きました。",
+          "terms": [
+            "v_kyonen",
+            "char_rikizo",
+            "p_wa",
+            "v_mainichi",
+            "v_nani",
+            "p_wo",
+            "char_pochi",
+            "p_to",
+            "v_issho",
+            "p_ni",
+            "v_soto",
+            "p_wo",
+            { "id": "v_aruku", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "q": "去来する ものは 何ですか。",
+          "a": "楽しい ことや いい おもい出。",
+          "terms": [
+            "v_kyorai",
+            { "id": "v_suru", "form": "plain_form" },
+            "v_nan",
+            "g_desu",
+            "p_ka",
+            "v_tanoshii",
+            "v_koto",
+            "p_ya",
+            "v_ii",
+            "v_omoide"
+          ]
+        },
+        {
+          "q": "去年の 夏は 今 どう なりましたか。",
+          "a": "いい おもい出に なりました。",
+          "terms": [
+            "v_kyonen",
+            "p_no",
+            "v_natsu",
+            "p_wa",
+            "v_ima",
+            "v_dou",
+            { "id": "v_naru", "form": "polite_mashita" },
+            "p_ka",
+            "v_ii",
+            "v_omoide",
+            "p_ni",
+            { "id": "v_naru", "form": "polite_mashita" }
           ]
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Drill 1: Vocabulary",
-      "instructions": "Select the correct Kanji for the meaning.",
+      "title": "ドリル 1: かんじの よみかた（Kanji Readings）",
+      "instructions": "Choose the correct reading for each kanji word.",
       "items": [
         {
           "kind": "mcq",
-          "q": "To [move].",
+          "q": "[動物] の よみかたは？",
           "choices": [
-            "動く",
-            "働く",
-            "重く",
-            "行く"
+            "どうぶつ",
+            "うごもの",
+            "そうぶつ",
+            "はたらもの"
           ],
-          "answer": "動く",
+          "answer": "どうぶつ"
+        },
+        {
+          "kind": "mcq",
+          "q": "[犬] の よみかたは？",
+          "choices": [
+            "いぬ",
+            "けん",
+            "ねこ",
+            "うし"
+          ],
+          "answer": "いぬ"
+        },
+        {
+          "kind": "mcq",
+          "q": "[銀行] の よみかたは？",
+          "choices": [
+            "ぎんこう",
+            "かねゆき",
+            "しろこう",
+            "ぎんぎょう"
+          ],
+          "answer": "ぎんこう"
+        },
+        {
+          "kind": "mcq",
+          "q": "[去年] の よみかたは？",
+          "choices": [
+            "きょねん",
+            "さくねん",
+            "こどし",
+            "きょとし"
+          ],
+          "answer": "きょねん"
+        },
+        {
+          "kind": "mcq",
+          "q": "[走る] の よみかたは？",
+          "choices": [
+            "はしる",
+            "そうる",
+            "あるく",
+            "うごく"
+          ],
+          "answer": "はしる"
+        },
+        {
+          "kind": "mcq",
+          "q": "[運動] の よみかたは？",
+          "choices": [
+            "うんどう",
+            "はこびどう",
+            "うんどく",
+            "うごきどう"
+          ],
+          "answer": "うんどう"
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "ドリル 2: ことばを えらぶ（Vocabulary）",
+      "instructions": "Choose the correct word to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "ポチは 毎朝 近所を ______ います。",
+          "choices": [
+            "走って",
+            "聞いて",
+            "書いて",
+            "読んで"
+          ],
+          "answer": "走って",
           "terms": [
-            "v_ugoku"
+            "char_pochi",
+            "p_wa",
+            "v_mainichi",
+            "v_asa",
+            "v_kinjo",
+            "p_wo",
+            { "id": "v_hashiru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
           ]
         },
         {
           "kind": "mcq",
-          "q": "A [bank].",
+          "q": "お金を 出しに ______ へ 行きました。",
           "choices": [
             "銀行",
-            "銀去",
-            "良行",
-            "金行"
+            "駅",
+            "病院",
+            "学校"
           ],
           "answer": "銀行",
           "terms": [
-            "v_ginkou"
+            "v_okane",
+            "p_wo",
+            { "id": "v_dasu", "form": null },
+            "p_ni",
+            "v_ginkou",
+            { "id": "v_iku", "form": "polite_mashita" }
           ]
         },
         {
           "kind": "mcq",
-          "q": "[Last year].",
+          "q": "去年の ことは いい ______ です。",
           "choices": [
-            "去年",
-            "去来",
-            "過去",
-            "来年"
+            "おもい出",
+            "銀色",
+            "銀行",
+            "野犬"
           ],
-          "answer": "去年",
+          "answer": "おもい出",
           "terms": [
-            "v_kyonen"
+            "v_kyonen",
+            "p_no",
+            "v_koto",
+            "p_wa",
+            "v_ii",
+            "v_omoide",
+            "g_desu"
           ]
         },
         {
           "kind": "mcq",
-          "q": "[Exercise].",
+          "q": "ポチは とても 元気な ______ です。",
           "choices": [
-            "運動",
-            "活動",
-            "運送",
-            "自動車"
+            "動物",
+            "銀色",
+            "銀行",
+            "野犬"
           ],
-          "answer": "運動",
+          "answer": "動物",
           "terms": [
-            "v_undou"
+            "char_pochi",
+            "p_wa",
+            "v_totemo",
+            { "id": "v_genki", "form": "attributive_na" },
+            "v_doubutsu",
+            "g_desu"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "この ATM は ______ で 動きます。",
+          "choices": [
+            "自動",
+            "手動",
+            "銀色",
+            "野犬"
+          ],
+          "answer": "自動",
+          "terms": [
+            "v_jidou",
+            "p_de",
+            { "id": "v_ugoku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "ATM が 動かない 時は、______ で 運びます。",
+          "choices": [
+            "手動",
+            "自動",
+            "銀色",
+            "運動"
+          ],
+          "answer": "手動",
+          "terms": [
+            "p_ga",
+            { "id": "v_ugoku", "form": "plain_negative" },
+            "p_wa",
+            "v_shudou",
+            "p_de",
+            { "id": "v_hakobu", "form": "polite_masu" }
           ]
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Drill 2: Grammar & Context",
-      "instructions": "Fill in the blank.",
+      "title": "ドリル 3: ぶんを つくる（Grammar & Forms）",
+      "instructions": "Choose the correct form or particle to complete the sentence.",
       "items": [
         {
           "kind": "mcq",
-          "q": "この ドアは ______ ですから、手で 開けません。",
+          "q": "ポチと 走り ______ 音楽を 聞きます。",
           "choices": [
-            "自動",
-            "手動",
-            "運動",
-            "動物"
+            "ながら",
+            "ために",
+            "てから",
+            "ように"
           ],
-          "answer": "自動",
+          "answer": "ながら",
           "terms": [
-            "v_jidou"
+            "char_pochi",
+            "p_to",
+            { "id": "v_hashiru", "form": "nagara_form" },
+            "v_ongaku",
+            "p_wo",
+            { "id": "v_kiku", "form": "polite_masu" }
           ]
         },
         {
           "kind": "mcq",
-          "q": "こうえんで ______ が 走っています。",
+          "q": "去年は あまり 走ら ______。",
           "choices": [
-            "犬",
-            "太",
-            "大",
-            "天"
+            "なかった",
+            "ました",
+            "ません",
+            "ている"
           ],
-          "answer": "犬",
+          "answer": "なかった",
           "terms": [
-            "v_inu"
+            "v_kyonen",
+            "p_wa",
+            "v_amari",
+            { "id": "v_hashiru", "form": "plain_past_negative" }
           ]
         },
         {
           "kind": "mcq",
-          "q": "宝くじが 当たりました。私は ______ です。",
+          "q": "毎朝 ポチと 走ったり、歩いたり ______。",
           "choices": [
-            "運がいい",
-            "運が悪い",
-            "頭がいい",
-            "気がいい"
+            "します",
+            "しない",
+            "した",
+            "して"
           ],
-          "answer": "運がいい",
+          "answer": "します",
           "terms": [
-            "v_un_ga_ii"
+            "v_mainichi",
+            "v_asa",
+            "char_pochi",
+            "p_to",
+            { "id": "v_hashiru", "form": "tari_form" },
+            { "id": "v_aruku", "form": "tari_form" },
+            { "id": "v_suru", "form": "polite_masu" }
           ]
         },
         {
           "kind": "mcq",
-          "q": "荷物を ______ ください。",
+          "q": "銀行に 行った 後 ______ お金を 出しました。",
           "choices": [
-            "運んで",
-            "運動して",
-            "込んで",
-            "遊んで"
+            "で",
+            "に",
+            "を",
+            "が"
           ],
-          "answer": "運んで",
+          "answer": "で",
           "terms": [
-            "v_hakobu"
+            "v_ginkou",
+            "p_ni",
+            { "id": "v_iku", "form": "plain_past" },
+            "v_ato",
+            "p_de",
+            "v_okane",
+            "p_wo",
+            { "id": "v_dasu", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "ポチは 運 ______ いい 犬です。",
+          "choices": [
+            "が",
+            "を",
+            "に",
+            "で"
+          ],
+          "answer": "が",
+          "terms": [
+            "char_pochi",
+            "p_wa",
+            "v_un_ga_ii",
+            "v_inu",
+            "g_desu"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "去年の おもい出 ______ 去来します。",
+          "choices": [
+            "が",
+            "は",
+            "を",
+            "で"
+          ],
+          "answer": "が",
+          "terms": [
+            "v_kyonen",
+            "p_no",
+            "v_omoide",
+            "p_ga",
+            "v_kyorai",
+            { "id": "v_suru", "form": "polite_masu" }
           ]
         }
       ]
