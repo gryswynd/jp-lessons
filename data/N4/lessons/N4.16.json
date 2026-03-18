@@ -341,30 +341,33 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "ATM が 動かない 時は どう しますか。",
-          "en": "What do you do when the ATM doesn't move?",
+          "jp": "ATM が 動かない 時は、どこで お金を 出せますか。",
+          "en": "When the ATM isn't working, where can I take out money?",
           "terms": [
             "char_rikizo",
             "p_ga",
             { "id": "v_ugoku", "form": "plain_negative" },
             "v_toki",
             "p_wa",
-            "v_dou",
-            { "id": "v_suru", "form": "polite_masu" },
+            "v_doko",
+            "p_de",
+            "v_okane",
+            "p_wo",
+            { "id": "v_dasu", "form": "polite_potential" },
             "p_ka"
           ]
         },
         {
           "spk": "B",
-          "jp": "手動で お金を 運びますよ。ゆっくり して ください。",
-          "en": "We carry the money manually. Please take your time.",
+          "jp": "手動で お金を 運びますので、ゆっくり して ください。",
+          "en": "We move the money manually, so please take your time.",
           "terms": [
             "v_shudou",
             "p_de",
             "v_okane",
             "p_wo",
             { "id": "v_hakobu", "form": "polite_masu" },
-            "p_yo",
+            "p_node",
             "v_yukkuri",
             { "id": "v_suru", "form": "te_form" },
             "v_kudasai"
@@ -579,7 +582,7 @@
           ]
         },
         {
-          "jp": "りきぞは ポチの ごはんを 家まで 運びます。今日も 運がいい 日です。",
+          "jp": "りきぞは ポチの ご飯を 家まで 運びます。今日も 運がいい 日です。",
           "en": "Rikizo carries Pochi's food all the way home. Today is also a lucky day.",
           "terms": [
             "char_rikizo",
@@ -709,19 +712,20 @@
           ]
         },
         {
-          "jp": "去年 去った 夏も、今は いい おもい出に なりました。",
-          "en": "Even the summer that passed last year has now become a good memory.",
+          "jp": "今年も ポチと 走って、また いい おもい出を 作りたいです。",
+          "en": "This year too, he wants to run with Pochi and make more good memories.",
           "terms": [
-            "v_kyonen",
-            { "id": "v_saru", "form": "plain_past" },
-            "v_natsu",
+            "v_kotoshi",
             "p_mo",
-            "v_ima",
-            "p_wa",
+            "char_pochi",
+            "p_to",
+            { "id": "v_hashiru", "form": "te_form" },
+            "v_mata",
             "v_ii",
             "v_omoide",
-            "p_ni",
-            { "id": "v_naru", "form": "polite_mashita" }
+            "p_wo",
+            { "id": "v_tsukuru", "form": "plain_desire_tai" },
+            "g_desu"
           ]
         }
       ],
@@ -767,21 +771,25 @@
           ]
         },
         {
-          "q": "去年の 夏は 今 どう なりましたか。",
-          "a": "いい おもい出に なりました。",
+          "q": "りきぞは 今年 ポチと 何を したいですか。",
+          "a": "また いい おもい出を 作りたいです。",
           "terms": [
-            "v_kyonen",
-            "p_no",
-            "v_natsu",
+            "char_rikizo",
             "p_wa",
-            "v_ima",
-            "v_dou",
-            { "id": "v_naru", "form": "polite_mashita" },
+            "v_kotoshi",
+            "char_pochi",
+            "p_to",
+            "v_nani",
+            "p_wo",
+            { "id": "v_suru", "form": "plain_desire_tai" },
+            "g_desu",
             "p_ka",
+            "v_mata",
             "v_ii",
             "v_omoide",
-            "p_ni",
-            { "id": "v_naru", "form": "polite_mashita" }
+            "p_wo",
+            { "id": "v_tsukuru", "form": "plain_desire_tai" },
+            "g_desu"
           ]
         }
       ]
