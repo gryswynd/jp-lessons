@@ -80,15 +80,15 @@
       ]
     },
     {
-      "prompt": "Reflect on a memory from last year with Pochi. What did they do together last summer? Use 去年 and おもい出.",
+      "prompt": "Reflect on last year with Pochi. How much time has passed since they first started running together? Use 去年 and 去る.",
       "targets": [
         { "id": "v_kyonen", "count": 1 },
-        { "id": "v_omoide", "count": 1 }
+        { "id": "v_saru", "count": 1 }
       ],
-      "model": "去年の 夏、ポチと いっしょに 写真を とりました。大切な おもい出です。",
+      "model": "去年の 夏から、ポチと いっしょに 走っています。楽しい 時間が 去って いきました。",
       "vocabPool": [
-        "v_kyonen", "v_omoide", "v_natsu", "v_shashin", "v_issho",
-        "v_saru", "v_tanoshii", "v_amari", "p_no", "g_desu"
+        "v_kyonen", "v_saru", "v_natsu", "v_shashin", "v_issho",
+        "v_hashiru", "v_tanoshii", "v_amari", "p_no", "g_desu"
       ]
     },
     {
@@ -97,9 +97,9 @@
         { "id": "v_kotoshi", "count": 1 },
         { "id": "v_tsukuru", "count": 1 }
       ],
-      "model": "今年も ポチと いっしょに たくさん おもい出を 作りたいです。",
+      "model": "今年も ポチと いっしょに たくさん 運動を 作りたいです。毎朝 走り 続けます。",
       "vocabPool": [
-        "v_kotoshi", "v_tsukuru", "v_omoide", "v_issho", "v_mata",
+        "v_kotoshi", "v_tsukuru", "v_undou", "v_issho", "v_mata",
         "v_hashiru", "v_tanoshii", "v_mainichi", "g_desu", "p_mo"
       ]
     }
@@ -144,7 +144,7 @@
     {
       "pattern": "verb-たいです / verb-たくないです",
       "meaning": "want to / don't want to (polite desire)",
-      "examples": ["走りたいです", "おもい出を 作りたいです", "また 行きたいです"]
+      "examples": ["走りたいです", "また 一緒に 行きたいです", "また 行きたいです"]
     },
     {
       "pattern": "verb-られます / verb-えます",
