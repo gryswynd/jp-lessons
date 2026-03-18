@@ -923,7 +923,8 @@
       "instructions": "Choose the correct giving or receiving verb to complete each sentence naturally.",
       "items": [
         {
-          "sentence": "わたしは母に花を___。",
+          "before": "わたしは母に花を",
+          "after": "。",
           "translation": "I gave flowers to my mother.",
           "choices": [
             "あげました",
@@ -935,7 +936,8 @@
           "explanation": "The speaker (わたし) gives outward to someone else (母) → あげる. The recipient に marks お母さん as the receiver."
         },
         {
-          "sentence": "先生がわたしに本を___。",
+          "before": "先生がわたしに本を",
+          "after": "。",
           "translation": "The teacher gave me a book.",
           "choices": [
             "あげました",
@@ -947,7 +949,8 @@
           "explanation": "Someone else (先生) gives to the speaker (わたし) → くれる. The teacher is the subject (が), the speaker receives."
         },
         {
-          "sentence": "わたしは友だちにプレゼントを___。",
+          "before": "わたしは友だちにプレゼントを",
+          "after": "。",
           "translation": "I received a present from my friend.",
           "choices": [
             "あげました",
@@ -959,7 +962,8 @@
           "explanation": "The speaker (わたし) is the receiver; the friend is the source (に) → もらう. Focus is on the speaker getting something."
         },
         {
-          "sentence": "りきぞさんが本を___くれました。",
+          "before": "りきぞさんが本を",
+          "after": "くれました。",
           "translation": "Rikizo read the book for me.",
           "choices": [
             "読んで",
@@ -971,7 +975,8 @@
           "explanation": "読む (read) is a godan verb. む → んで (te-form: 読んで). The full pattern is 読んでくれました = read (it) for me — someone's kind action benefiting the speaker."
         },
         {
-          "sentence": "友だちに本を___もらいました。",
+          "before": "友だちに本を",
+          "after": "もらいました。",
           "translation": "I had my friend read the book for me.",
           "choices": [
             "読んで",
