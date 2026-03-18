@@ -21,15 +21,15 @@
       ]
     },
     {
-      "prompt": "Describe Pochi. What kind of animal is Pochi? Use 犬 and 動物.",
+      "prompt": "Describe Pochi. What kind of animal is Pochi? Mention what Pochi looks like. Use 犬 and 動物.",
       "targets": [
         { "id": "v_inu", "count": 1 },
         { "id": "v_doubutsu", "count": 1 }
       ],
-      "model": "ポチは 犬です。りきぞの 大切な 動物です。",
+      "model": "ポチは 銀色の かわいい 犬です。りきぞの 大切な 動物です。",
       "vocabPool": [
         "v_inu", "v_doubutsu", "v_kawaii", "v_chiisai", "v_taisetsu",
-        "v_genki", "v_watashi", "v_giniro", "g_desu", "p_wa"
+        "v_genki", "v_giniro", "g_desu", "p_wa"
       ]
     },
     {
@@ -57,25 +57,25 @@
       ]
     },
     {
-      "prompt": "Write about visiting the bank. What did Rikizo need to do there? Use 銀行 and お金.",
+      "prompt": "Write about visiting the bank. Did you use the 自動 ATM or a manual window? Use 銀行 and お金.",
       "targets": [
         { "id": "v_ginkou", "count": 1 },
         { "id": "v_okane", "count": 1 }
       ],
-      "model": "走った あとで、銀行に 行きました。お金を 出しました。",
+      "model": "走った あとで、銀行に 行きました。自動の ATMで お金を 出しました。",
       "vocabPool": [
         "v_ginkou", "v_okane", "v_dasu", "v_iku", "v_hashiru",
-        "v_jidou", "v_shudou", "v_jikan", "p_ni", "p_wo"
+        "v_jidou", "v_shudou", "v_hakobu", "p_ni", "p_wo"
       ]
     },
     {
-      "prompt": "Describe a lucky or fortunate thing that happened that day. Use 運がいい.",
+      "prompt": "Something lucky happened on the way home from the bank. Describe the lucky moment. Use 運がいい.",
       "targets": [
         { "id": "v_un_ga_ii", "count": 1 }
       ],
-      "model": "今日は 銀行で お金を 出しました。ポチも いっしょに いて、運がいい 一日でした。",
+      "model": "帰り道に 古い 友だちに 会いました。ポチも いっしょに いて、運がいい 一日でした。",
       "vocabPool": [
-        "v_un_ga_ii", "v_ginkou", "v_giniro", "v_okane", "v_morau",
+        "v_un_ga_ii", "v_tomodachi", "v_okane", "v_morau",
         "v_tanoshii", "v_totemo", "v_ii", "g_desu", "p_de"
       ]
     },
@@ -88,7 +88,7 @@
       "model": "去年の 夏、ポチと いっしょに 写真を とりました。大切な おもい出です。",
       "vocabPool": [
         "v_kyonen", "v_omoide", "v_natsu", "v_shashin", "v_issho",
-        "v_taisetsu", "v_tanoshii", "v_amari", "p_no", "g_desu"
+        "v_saru", "v_tanoshii", "v_amari", "p_no", "g_desu"
       ]
     },
     {
@@ -111,7 +111,7 @@
         { "id": "v_yaken", "count": 1 },
         { "id": "v_un_ga_ii", "count": 1 }
       ],
-      "model": "近所で 野犬を 見ました。ポチより 大きくて、あまり 元気そうでは ありませんでした。ポチは かわいくて 元気です。私は 運がいいです。",
+      "model": "近所で 野犬を 見ました。ポチより 大きくて、あまり 元気では ありませんでした。ポチは かわいくて 元気です。私は 運がいいです。",
       "vocabPool": [
         "v_yaken", "v_un_ga_ii", "v_inu", "v_doubutsu", "v_kinjo",
         "v_kawaii", "v_genki", "v_chiisai", "v_amari", "p_yori"
@@ -149,7 +149,7 @@
     {
       "pattern": "verb-られます / verb-えます",
       "meaning": "can [verb] (polite potential)",
-      "examples": ["走れます", "運べます", "動けます", "銀行に 行けます"]
+      "examples": ["走れます", "運べます", "動けます", "食べられます"]
     },
     {
       "pattern": "verb-たり + verb-たりします",
