@@ -63,8 +63,7 @@
           "jp": "毎朝 歩いて いますか。",
           "en": "Do you walk every morning?",
           "terms": [
-            "v_mainichi",
-            "v_asa",
+            "v_maiasa",
             { "id": "v_aruku", "form": "te_form" },
             { "id": "v_iru", "form": "polite_masu" },
             "p_ka"
@@ -84,7 +83,7 @@
           ]
         },
         {
-          "jp": "写真を 撮ったり、友だちと 話したり しますか。",
+          "jp": "写真を とったり、友だちと 話したり しますか。",
           "en": "Do you do things like take photos and talk with friends?",
           "terms": [
             "v_shashin",
@@ -245,8 +244,7 @@
           "en": "Every morning I run around the neighborhood with Pochi.",
           "terms": [
             "char_rikizo",
-            "v_mainichi",
-            "v_asa",
+            "v_maiasa",
             "char_pochi",
             "p_to",
             "v_kinjo",
@@ -290,6 +288,10 @@
           "jp": "それは いいですね。運動に なりますね。",
           "en": "That's nice. It becomes exercise, doesn't it.",
           "terms": [
+            "v_sore",
+            "p_wa",
+            { "id": "v_ii", "form": "polite_adj" },
+            "p_ne",
             "v_undou",
             "p_ni",
             { "id": "v_naru", "form": "polite_masu" },
@@ -308,6 +310,7 @@
           "jp": "すみません。お金を 出したいですが、どこに 行きますか。",
           "en": "Excuse me. I want to take out money — where do I go?",
           "terms": [
+            "p_sumimasen",
             "char_rikizo",
             "v_okane",
             "p_wo",
@@ -322,7 +325,7 @@
         },
         {
           "spk": "B",
-          "jp": "銀行の 入口に 自動の ATM が ありますよ。",
+          "jp": "銀行の 入り口に 自動の ATM が ありますよ。",
           "en": "There is an automatic ATM at the bank entrance.",
           "terms": [
             "v_ginkou",
@@ -362,7 +365,8 @@
             { "id": "v_hakobu", "form": "polite_masu" },
             "p_yo",
             "v_yukkuri",
-            { "id": "v_suru", "form": "te_form" }
+            { "id": "v_suru", "form": "te_form" },
+            "v_kudasai"
           ]
         }
       ]
@@ -405,14 +409,18 @@
         },
         {
           "spk": "A",
-          "jp": "ポチは 野犬では ないですよね。いつも 近くに いますから。",
+          "jp": "ポチは 野犬では ありませんよね。いつも 近くに いますから。",
           "en": "Pochi is not a stray dog, right. She's always nearby.",
           "terms": [
             "char_pochi",
             "p_wa",
             "v_yaken",
+            "p_dewa",
+            { "id": "v_aru", "form": "polite_negative" },
+            "p_ne",
+            "p_yo",
             "v_itsumo",
-            "v_chikai",
+            { "id": "v_chikai", "form": "adverbial" },
             "p_ni",
             { "id": "v_iru", "form": "polite_masu" },
             "p_kara_because"
@@ -420,7 +428,7 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "そうです。ポチは 運が いい 犬ですよ。",
+          "jp": "そうです。ポチは 運がいい 犬ですよ。",
           "en": "That's right. Pochi is a lucky dog.",
           "terms": [
             "char_rikizo",
@@ -443,13 +451,14 @@
       "lines": [
         {
           "spk": "やまかわ",
-          "jp": "去年、ポチは もっと 小さかったね。",
-          "en": "Last year, Pochi was even smaller, wasn't she.",
+          "jp": "去年、ポチは とても 小さかったね。",
+          "en": "Last year, Pochi was very small, wasn't she.",
           "terms": [
             "char_yamakawa",
             "v_kyonen",
             "char_pochi",
             "p_wa",
+            "v_totemo",
             { "id": "v_chiisai", "form": "plain_past_adj" },
             "p_ne"
           ]
@@ -488,12 +497,12 @@
             { "id": "v_hashiru", "form": "tari_form" },
             { "id": "v_aruku", "form": "tari_form" },
             { "id": "v_suru", "form": "plain_past" },
-            "p_ka"
+            "p_no"
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "そう。いい おもい出だから、写真も たくさん 撮った。",
+          "jp": "そう。いい おもい出だから、写真も たくさん とった。",
           "en": "Yeah. Because they're good memories, I took lots of photos too.",
           "terms": [
             "char_rikizo",
@@ -504,6 +513,7 @@
             "p_kara_because",
             "v_shashin",
             "p_mo",
+            "v_takusan",
             { "id": "v_toru", "form": "plain_past" }
           ]
         }
@@ -519,8 +529,7 @@
           "terms": [
             "char_rikizo",
             "p_wa",
-            "v_mainichi",
-            "v_asa",
+            "v_maiasa",
             "char_pochi",
             "p_to",
             "v_issho",
@@ -566,7 +575,7 @@
           ]
         },
         {
-          "jp": "お金を 運ぶ 仕事は いそがしいですが、運が いい 日は 早く 終わります。",
+          "jp": "お金を 運ぶ 仕事は いそがしいですが、運がいい 日は 早く 終わります。",
           "en": "The work of carrying money is busy, but on lucky days it finishes quickly.",
           "terms": [
             "v_okane",
@@ -587,16 +596,18 @@
       "questions": [
         {
           "q": "りきぞは 毎朝 ポチと 何を して いますか。",
-          "a": "一緒に 近所を 走って います。",
+          "a": "いっしょに 近所を 走って います。",
           "terms": [
             "char_rikizo",
             "p_wa",
-            "v_mainichi",
-            "v_asa",
+            "v_maiasa",
             "char_pochi",
             "p_to",
             "v_nani",
             "p_wo",
+            { "id": "v_suru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" },
+            "p_ka",
             "v_issho",
             "p_ni",
             "v_kinjo",
@@ -641,16 +652,17 @@
       "title": "Reading Practice 2: Memories of Last Year",
       "passage": [
         {
-          "jp": "去年は りきぞに とって いい 時間でした。",
-          "en": "Last year was a good time for Rikizo.",
+          "jp": "去年は りきぞの とても いい 時間でした。",
+          "en": "Last year was a very good time for Rikizo.",
           "terms": [
             "v_kyonen",
             "p_wa",
             "char_rikizo",
-            "p_ni",
+            "p_no",
+            "v_totemo",
             "v_ii",
             "v_jikan",
-            "g_desu"
+            { "id": "g_desu", "form": "polite_past_copula" }
           ]
         },
         {
@@ -659,7 +671,7 @@
           "terms": [
             "char_pochi",
             "p_ga",
-            "v_uchi",
+            "v_ie",
             "p_ni",
             { "id": "v_kuru", "form": "te_form" },
             "v_mainichi",
@@ -704,7 +716,7 @@
       "questions": [
         {
           "q": "去年 りきぞは 毎日 何を しましたか。",
-          "a": "ポチと 一緒に 外を 歩きました。",
+          "a": "ポチと いっしょに 外を 歩きました。",
           "terms": [
             "v_kyonen",
             "char_rikizo",
@@ -712,6 +724,8 @@
             "v_mainichi",
             "v_nani",
             "p_wo",
+            { "id": "v_suru", "form": "polite_mashita" },
+            "p_ka",
             "char_pochi",
             "p_to",
             "v_issho",
@@ -727,6 +741,8 @@
           "terms": [
             "v_kyorai",
             { "id": "v_suru", "form": "plain_form" },
+            "v_mono",
+            "p_wa",
             "v_nan",
             "g_desu",
             "p_ka",
@@ -848,8 +864,7 @@
           "terms": [
             "char_pochi",
             "p_wa",
-            "v_mainichi",
-            "v_asa",
+            "v_maiasa",
             "v_kinjo",
             "p_wo",
             { "id": "v_hashiru", "form": "te_form" },
@@ -872,6 +887,7 @@
             { "id": "v_dasu", "form": null },
             "p_ni",
             "v_ginkou",
+            "p_e",
             { "id": "v_iku", "form": "polite_mashita" }
           ]
         },
@@ -1003,8 +1019,7 @@
           ],
           "answer": "します",
           "terms": [
-            "v_mainichi",
-            "v_asa",
+            "v_maiasa",
             "char_pochi",
             "p_to",
             { "id": "v_hashiru", "form": "tari_form" },
