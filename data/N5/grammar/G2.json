@@ -262,7 +262,7 @@
         }
       ],
       "meaning": "'This way / That way / Over that way is Y' (polite / formal)",
-      "explanation": "こちら, そちら, あちら, and どちら are polite forms of ここ/そこ/あそこ/どこ. They are used in shops, at work, and when introducing people. こちら also means 'this person' in introductions.",
+      "explanation": "こちら, そちら, あちら, and どちら indicate direction or side — 'this way / that way / which way'. They are used in shops, at work, and when introducing people. こちら also means 'this person' in introductions, and どちら means 'which of the two' when choosing between options.",
       "notes": [
         "こちらは田中さんです — 'This is Mr. Tanaka' (polite introduction of a person near you)",
         "トイレはあちらです — 'The toilet is that way' (polite direction in a store or restaurant)",
@@ -472,7 +472,7 @@
           "label": "これ — Standalone Pronoun",
           "color": "subject",
           "points": [
-            "Replaces the noun entirely — no noun follows",
+            "Stands alone — no noun follows it",
             "Use when pointing at something without naming it",
             "Works like English 'this (one)' or 'this thing'"
           ],
@@ -517,8 +517,8 @@
           "parts": [
             { "text": "これ", "role": "subject", "gloss": "this" },
             { "text": "は", "role": "connector" },
-            { "text": "いい", "role": "predicate", "gloss": "good" },
-            { "text": "パソコン", "role": "object", "gloss": "computer" },
+            { "text": "いい", "role": "modifier", "gloss": "good" },
+            { "text": "パソコン", "role": "predicate", "gloss": "computer" },
             { "text": "です。", "role": "verb" }
           ],
           "en": "This is a good computer.",
@@ -930,7 +930,7 @@
             "これ = place, この = thing"
           ],
           "answer": "これ = standalone, この = needs a noun after it",
-          "explanation": "これ replaces the noun ('this thing'). この modifies a noun that follows ('this ~'). Same distance (near speaker), different grammar function."
+          "explanation": "これ stands alone as a noun ('this thing'). この modifies a noun that follows ('this ~'). Same distance (near speaker), different grammar function."
         },
         {
           "kind": "mcq",
