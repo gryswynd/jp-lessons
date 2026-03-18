@@ -24,6 +24,8 @@
         "この / その / あの / どの + noun — words that attach to a noun: 'this person / that person / which person'",
         "ここ / そこ / あそこ / どこ — place words: 'here / there / over there / where'",
         "こちら / そちら / あちら / どちら — polite direction words used in shops and formal situations",
+        "こんな / そんな / あんな / どんな + noun — 'this kind of / that kind of / what kind of' (describing type, not pointing at a specific thing)",
+        "こう / そう / ああ / どう — manner adverbs: 'like this / like that / how?' (standalone — no noun follows)",
         "The difference between これ (standalone) and この (must attach to a noun)"
       ]
     },
@@ -235,6 +237,185 @@
       ]
     },
     {
+      "type": "grammarRule",
+      "id": "rule_kochira_sochira",
+      "pattern": [
+        {
+          "label": "POLITE DIRECTION",
+          "color": "topic",
+          "text": "こちら / そちら / あちら"
+        },
+        {
+          "label": "PARTICLE",
+          "color": "connector",
+          "text": "は"
+        },
+        {
+          "label": "PREDICATE",
+          "color": "predicate",
+          "text": "Y"
+        },
+        {
+          "label": "COPULA",
+          "color": "verb",
+          "text": "です"
+        }
+      ],
+      "meaning": "'This way / That way / Over that way is Y' (polite / formal)",
+      "explanation": "こちら, そちら, あちら, and どちら are polite forms of ここ/そこ/あそこ/どこ. They are used in shops, at work, and when introducing people. こちら also means 'this person' in introductions.",
+      "notes": [
+        "こちらは田中さんです — 'This is Mr. Tanaka' (polite introduction of a person near you)",
+        "トイレはあちらです — 'The toilet is that way' (polite direction in a store or restaurant)",
+        "どちらがいいですか — 'Which one is good?' (polite, when choosing between two)",
+        "In shops, staff often say こちらです ('It's this way / Here it is') to guide you"
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "こちら", "role": "topic", "gloss": "this person (polite)" },
+            { "text": "は", "role": "connector" },
+            { "text": "やまもと", "role": "predicate", "gloss": "Yamamoto" },
+            { "text": "先生", "role": "predicate", "gloss": "teacher" },
+            { "text": "です。", "role": "verb" }
+          ],
+          "en": "This is Teacher Yamamoto. (polite introduction)",
+          "breakdown": "こちら is the polite way to introduce someone standing near you."
+        },
+        {
+          "parts": [
+            { "text": "トイレ", "role": "topic", "gloss": "toilet" },
+            { "text": "は", "role": "connector" },
+            { "text": "あちら", "role": "predicate", "gloss": "that way (polite)" },
+            { "text": "です。", "role": "verb" }
+          ],
+          "en": "The toilet is that way.",
+          "breakdown": "あちら is the polite version of あそこ — common in stores and public places."
+        },
+        {
+          "parts": [
+            { "text": "どちら", "role": "subject", "gloss": "which (polite)" },
+            { "text": "が", "role": "connector" },
+            { "text": "いい", "role": "predicate", "gloss": "good" },
+            { "text": "ですか。", "role": "verb" }
+          ],
+          "en": "Which one would you prefer?",
+          "breakdown": "どちら is the polite version of どれ, especially when choosing between two options."
+        }
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_konna_sonna",
+      "pattern": [
+        {
+          "label": "KIND MODIFIER",
+          "color": "modifier",
+          "text": "こんな / そんな / あんな"
+        },
+        {
+          "label": "NOUN",
+          "color": "object",
+          "text": "NOUN"
+        }
+      ],
+      "meaning": "'This kind of / That kind of / That kind of (shared) NOUN'",
+      "explanation": "こんな/そんな/あんな describe the TYPE or QUALITY of a noun — not which specific one, but what kind. どんな is the question form. Like この/その/あの, these must always be followed by a noun.",
+      "notes": [
+        "こんな + noun — this kind of (noun): こんな先生 = a teacher like this",
+        "そんな + noun — that kind of (noun, near listener)",
+        "あんな + noun — that kind of (noun, distant/shared memory)",
+        "どんな + noun — what kind of (noun)? [question]",
+        "Key difference from この/その/あの: この先生 = 'this (specific) teacher'; こんな先生 = 'a teacher like this' (describing type/character)"
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "どんな", "role": "modifier", "gloss": "what kind of" },
+            { "text": "人", "role": "object", "gloss": "person" },
+            { "text": "ですか。", "role": "verb" }
+          ],
+          "en": "What kind of person is (he/she)?",
+          "breakdown": "どんな asks about type/character. Common in everyday conversation."
+        },
+        {
+          "parts": [
+            { "text": "こんな", "role": "modifier", "gloss": "this kind of" },
+            { "text": "先生", "role": "object", "gloss": "teacher" },
+            { "text": "は", "role": "connector" },
+            { "text": "いい", "role": "predicate", "gloss": "great / good" },
+            { "text": "です。", "role": "verb" }
+          ],
+          "en": "A teacher like this is great.",
+          "breakdown": "こんな describes the type of teacher, not pointing at a specific one."
+        },
+        {
+          "parts": [
+            { "text": "そんな", "role": "modifier", "gloss": "that kind of" },
+            { "text": "人", "role": "object", "gloss": "person" },
+            { "text": "は", "role": "connector" },
+            { "text": "先生", "role": "predicate", "gloss": "teacher" },
+            { "text": "では", "role": "connector" },
+            { "text": "ありません。", "role": "predicate" }
+          ],
+          "en": "That kind of person is not a teacher.",
+          "breakdown": "そんな describes the type being referred to (near listener's context)."
+        }
+      ]
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_kou_sou",
+      "pattern": [
+        {
+          "label": "MANNER",
+          "color": "adverb",
+          "text": "こう / そう / ああ"
+        },
+        {
+          "label": "VERB/ADJ",
+          "color": "predicate",
+          "text": "VERB / ADJ"
+        }
+      ],
+      "meaning": "'Like this / Like that / Like that (over there)'",
+      "explanation": "こう/そう/ああ/どう are adverbs describing HOW something is done or is. Unlike other ko-so-a-do words, these are standalone adverbs — no noun follows them.",
+      "notes": [
+        "こう — like this / in this way (demonstrating an action or state)",
+        "そう — like that / in that way (near listener); also: 'That's right / I see'",
+        "ああ — like that (distant/shared knowledge); often expresses recognition: 'Oh, I see'",
+        "どう — how? / in what way? [question]",
+        "そうです is one of the most useful phrases: 'That's right / Yes, exactly'"
+      ],
+      "examples": [
+        {
+          "parts": [
+            { "text": "こう", "role": "adverb", "gloss": "like this / this way" },
+            { "text": "ですか。", "role": "verb" }
+          ],
+          "en": "Like this? / Is it this way?",
+          "breakdown": "こうですか asks for confirmation you're doing something the right way."
+        },
+        {
+          "parts": [
+            { "text": "そう", "role": "adverb", "gloss": "that's right / like that" },
+            { "text": "です。", "role": "verb" }
+          ],
+          "en": "That's right. / Yes, exactly.",
+          "breakdown": "そうです is one of the most common responses in Japanese."
+        },
+        {
+          "parts": [
+            { "text": "テレビ", "role": "topic", "gloss": "TV" },
+            { "text": "は", "role": "connector" },
+            { "text": "どう", "role": "adverb", "gloss": "how / what do you think" },
+            { "text": "ですか。", "role": "verb" }
+          ],
+          "en": "How is the TV? / What do you think of the TV?",
+          "breakdown": "どうですか asks for opinion or status — very common in daily conversation."
+        }
+      ]
+    },
+    {
       "type": "grammarTable",
       "title": "The Ko-so-a-do Chart",
       "description": "All Japanese demonstratives follow the same four-way pattern. The こ row is near the speaker, そ is near the listener, あ is far from both, and ど is the question word.",
@@ -326,73 +507,6 @@
         }
       ],
       "tip": "If you can replace it with 'this thing' → use これ. If you need to say 'this [specific noun]' → use この + noun."
-    },
-    {
-      "type": "grammarRule",
-      "id": "rule_kochira_sochira",
-      "pattern": [
-        {
-          "label": "POLITE DIRECTION",
-          "color": "topic",
-          "text": "こちら / そちら / あちら"
-        },
-        {
-          "label": "PARTICLE",
-          "color": "connector",
-          "text": "は"
-        },
-        {
-          "label": "PREDICATE",
-          "color": "predicate",
-          "text": "Y"
-        },
-        {
-          "label": "COPULA",
-          "color": "verb",
-          "text": "です"
-        }
-      ],
-      "meaning": "'This way / That way / Over that way is Y' (polite / formal)",
-      "explanation": "こちら, そちら, あちら, and どちら are polite forms of ここ/そこ/あそこ/どこ. They are used in shops, at work, and when introducing people. こちら also means 'this person' in introductions.",
-      "notes": [
-        "こちらは田中さんです — 'This is Mr. Tanaka' (polite introduction of a person near you)",
-        "トイレはあちらです — 'The toilet is that way' (polite direction in a store or restaurant)",
-        "どちらがいいですか — 'Which one is good?' (polite, when choosing between two)",
-        "In shops, staff often say こちらです ('It's this way / Here it is') to guide you"
-      ],
-      "examples": [
-        {
-          "parts": [
-            { "text": "こちら", "role": "topic", "gloss": "this person (polite)" },
-            { "text": "は", "role": "connector" },
-            { "text": "やまもと", "role": "predicate", "gloss": "Yamamoto" },
-            { "text": "先生", "role": "predicate", "gloss": "teacher" },
-            { "text": "です。", "role": "verb" }
-          ],
-          "en": "This is Teacher Yamamoto. (polite introduction)",
-          "breakdown": "こちら is the polite way to introduce someone standing near you."
-        },
-        {
-          "parts": [
-            { "text": "トイレ", "role": "topic", "gloss": "toilet" },
-            { "text": "は", "role": "connector" },
-            { "text": "あちら", "role": "predicate", "gloss": "that way (polite)" },
-            { "text": "です。", "role": "verb" }
-          ],
-          "en": "The toilet is that way.",
-          "breakdown": "あちら is the polite version of あそこ — common in stores and public places."
-        },
-        {
-          "parts": [
-            { "text": "どちら", "role": "subject", "gloss": "which (polite)" },
-            { "text": "が", "role": "connector" },
-            { "text": "いい", "role": "predicate", "gloss": "good" },
-            { "text": "ですか。", "role": "verb" }
-          ],
-          "en": "Which one would you prefer?",
-          "breakdown": "どちら is the polite version of どれ, especially when choosing between two options."
-        }
-      ]
     },
     {
       "type": "annotatedExample",
@@ -719,6 +833,22 @@
           "choices": ["どの", "どれ", "どこ", "どちら"],
           "answer": "どの",
           "explanation": "A noun (パソコン) follows, so use the modifier どの. どれ stands alone without a noun."
+        },
+        {
+          "before": "",
+          "after": "先生はいいです。(describing what kind of teacher they are, not pointing at a specific one)",
+          "translation": "A teacher like this is great.",
+          "choices": ["こんな", "この", "ここ", "こちら"],
+          "answer": "こんな",
+          "explanation": "こんな describes the TYPE or character of the teacher. この先生 would point at a specific teacher — こんな先生 means 'a teacher of this kind.'"
+        },
+        {
+          "before": "テレビは",
+          "after": "ですか。(asking for an opinion)",
+          "translation": "How is the TV?",
+          "choices": ["どう", "どこ", "どれ", "どんな"],
+          "answer": "どう",
+          "explanation": "どう asks HOW something is — for opinions or status. どこ asks WHERE. どれ asks WHICH. どんな must be followed by a noun."
         }
       ]
     },
@@ -821,6 +951,30 @@
             "p_ka"
           ],
           "explanation": "あの indicates something or someone far from both the speaker and the listener. It is the 'a-series' demonstrative for distance."
+        },
+        {
+          "kind": "mcq",
+          "q": "What is the difference between この先生 and こんな先生?",
+          "choices": [
+            "この = 'this teacher' (specific); こんな = 'a teacher like this' (type/quality)",
+            "この = near; こんな = far",
+            "この = polite; こんな = casual",
+            "They mean the same thing"
+          ],
+          "answer": "この = 'this teacher' (specific); こんな = 'a teacher like this' (type/quality)",
+          "explanation": "この + noun identifies WHICH one. こんな + noun describes WHAT KIND. Both must attach to a noun, but they answer different questions: 'which?' vs 'what kind of?'"
+        },
+        {
+          "kind": "mcq",
+          "q": "Someone replies そうです to your question. What does it mean?",
+          "choices": [
+            "That's right. / Yes, exactly.",
+            "Like this.",
+            "Over there.",
+            "What kind?"
+          ],
+          "answer": "That's right. / Yes, exactly.",
+          "explanation": "そうです is the manner word そう + です. It confirms what the other person said. It is one of the most common conversational responses in Japanese."
         }
       ]
     }
