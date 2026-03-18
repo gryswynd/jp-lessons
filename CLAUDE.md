@@ -1540,6 +1540,7 @@ This table is the authoritative list of every registered character. It must stay
 | Ren | `char_ren` | `レン` | `[]` |
 | Joel | `char_joel` | `ジョエル` | `["ジョエルせんせい", "ジョエル先生"]` |
 | Conor | `char_conor` | `コナー` | `["コナーさん"]` |
+| Pochi | `char_pochi` | `ポチ` | `[]` |
 
 ### Adding a new character — required steps
 
