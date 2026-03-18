@@ -347,6 +347,7 @@
             "char_rikizo",
             "p_ga",
             { "id": "v_ugoku", "form": "plain_negative" },
+            "v_toki",
             "p_wa",
             "v_dou",
             { "id": "v_suru", "form": "polite_masu" },
@@ -497,7 +498,8 @@
             { "id": "v_hashiru", "form": "tari_form" },
             { "id": "v_aruku", "form": "tari_form" },
             { "id": "v_suru", "form": "plain_past" },
-            "p_no"
+            "p_no",
+            "p_ka"
           ]
         },
         {
@@ -640,6 +642,8 @@
             "p_de",
             "v_nani",
             "p_wo",
+            { "id": "v_suru", "form": "polite_masu" },
+            "p_ka",
             "v_okane",
             "p_wo",
             { "id": "v_dasu", "form": "polite_masu" }
@@ -941,6 +945,8 @@
           ],
           "answer": "自動",
           "terms": [
+            "v_kono",
+            "p_wa",
             "v_jidou",
             "p_de",
             { "id": "v_ugoku", "form": "polite_masu" }
@@ -959,6 +965,7 @@
           "terms": [
             "p_ga",
             { "id": "v_ugoku", "form": "plain_negative" },
+            "v_toki",
             "p_wa",
             "v_shudou",
             "p_de",
