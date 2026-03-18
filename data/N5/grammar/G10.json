@@ -471,6 +471,67 @@
       ]
     },
     {
+      "type": "grammarTable",
+      "title": "The え-Row Shift — Plain Command Stem Map",
+      "description": "Plain commands for godan (U) verbs are formed by shifting the final syllable to the え-row. You already know the い-row (ます stem) and the あ-row (ない stem from G8). The え-row is the third and final shift pattern — learn all three and you can conjugate any godan verb.",
+      "tableType": "conjugation",
+      "headers": ["Dictionary ending (う-row)", "ます stem (い-row)", "ない stem (あ-row)", "Command stem (え-row)", "Command example"],
+      "rows": [
+        {
+          "label": "く",
+          "cells": ["き", "か", "け", "書く → 書け！"],
+          "meaning": "Write!"
+        },
+        {
+          "label": "ぐ",
+          "cells": ["ぎ", "が", "げ", "およぐ → およげ！"],
+          "meaning": "Swim!"
+        },
+        {
+          "label": "す",
+          "cells": ["し", "さ", "せ", "はなす → はなせ！"],
+          "meaning": "Speak!"
+        },
+        {
+          "label": "つ",
+          "cells": ["ち", "た", "て", "もつ → もて！"],
+          "meaning": "Hold!"
+        },
+        {
+          "label": "ぬ",
+          "cells": ["に", "な", "ね", "しぬ → しね！"],
+          "meaning": "Die! (only in fiction — extremely harsh)"
+        },
+        {
+          "label": "ぶ",
+          "cells": ["び", "ば", "べ", "よぶ → よべ！"],
+          "meaning": "Call!"
+        },
+        {
+          "label": "む",
+          "cells": ["み", "ま", "め", "のむ → のめ！"],
+          "meaning": "Drink!"
+        },
+        {
+          "label": "る (godan)",
+          "cells": ["り", "ら", "れ", "走る → 走れ！"],
+          "meaning": "Run!"
+        },
+        {
+          "label": "う",
+          "cells": ["い", "わ ⚠️", "え", "買う → 買え！"],
+          "meaning": "Buy!"
+        }
+      ],
+      "notes": [
+        "Three row shifts for godan verbs — compare across columns: い-row (polite ます), あ-row (negative ない), え-row (command). Once you know any one shift, the others follow the same logic on the hiragana chart.",
+        "⚠️ The う→わ exception only applies to the あ-row (ない stem). For the え-row (commands), う shifts normally to え: 買う → 買え (not 買われ). No exception needed here!",
+        "RU-verbs (ichidan) do NOT use the え-row. Their command form is: drop る, add ろ. 食べる → 食べろ. いる → いろ.",
+        "Irregular commands: する → しろ (not せろ). くる → こい (unique form — the only verb whose command is not る→ろ or え-row).",
+        "⚠️ REGISTER WARNING: All plain commands are blunt and potentially rude. Preferred polite alternatives: てください (G8) for requests, なさい (G8) for firm instructions from teachers/parents."
+      ]
+    },
+    {
       "type": "grammarRule",
       "id": "rule_commands",
       "pattern": [
@@ -538,13 +599,18 @@
           "text": "おいしい / 行く / 先生だ"
         },
         {
-          "label": "+ のです",
+          "label": "+ のです (full)",
           "color": "predicate",
+          "text": "おいしいのです / 行くのです / 先生なのです"
+        },
+        {
+          "label": "= んです (spoken)",
+          "color": "verb",
           "text": "おいしいんです / 行くんです / 先生なんです"
         }
       ],
       "meaning": "のです / なんです — the explanatory / emphasis form",
-      "explanation": "のです (spoken/casual: んです) adds an explanatory or emphatic nuance. It signals that the speaker is providing a reason, explanation, or context — or asking for one.\n\n**Formation:**\n- Verb (plain form) + のです → 行くのです / 行くんです (I'm going, you see)\n- い-adjective (plain form) + のです → おいしいんです (It's delicious — that's why!)\n- Noun / な-adjective: insert な before のです → 先生なんです (The thing is, he's a teacher)\n\n**Contracted form:** のです → んです (common in speech). のです is more formal/written.\n\n**Uses:**\n1. **Explaining a reason:** どうして 外食を しませんか。— お金が ないんです。(Why won't you eat out? — The thing is, I have no money.)\n2. **Seeking an explanation (question):** どうして 行かないんですか。(Why is it that you're not going?)\n3. **Emphasizing a fact:** 本当においしいんです！(It really is delicious, I'm telling you!)\n4. **Softening a request:** 行きたいんですが、いいですか。(The thing is, I'd like to go — is that okay?)",
+      "explanation": "のです adds an explanatory or emphatic nuance. It signals that the speaker is providing a reason, explanation, or context — or asking for one. In speech, のです contracts to んです — both mean the same thing.\n\n**Formation (showing both forms):**\n- Verb (plain form) + のです → 行くのです (written/formal) → 行くんです (spoken)\n- い-adjective (plain form) + のです → おいしいのです (written) → おいしいんです (spoken)\n- Noun / な-adjective: insert な before のです → 先生なのです (written) → 先生なんです (spoken)\n\n**のです vs んです:** のです is the full, uncontracted form — used in writing, formal speech, and textbooks. んです is the spoken contraction — far more common in conversation. Both are grammatically correct and mean the same thing. When speaking, use んです. When writing formally, use のです.\n\n**Uses:**\n1. **Explaining a reason:** どうして 外食を しませんか。— お金が ないのです。/ お金が ないんです。(Why won't you eat out? — The thing is, I have no money.)\n2. **Seeking an explanation (question):** どうして 行かないのですか。/ 行かないんですか。(Why is it that you're not going?)\n3. **Emphasizing a fact:** 本当においしいんです！(It really is delicious, I'm telling you!)\n4. **Softening a request:** 行きたいんですが、いいですか。(The thing is, I'd like to go — is that okay?)",
       "notes": [
         "な before のです is only required for nouns and な-adjectives. 先生 (noun) → 先生なんです. い-adjectives and verbs attach directly.",
         "Negative form: ～ないんです or ～くないんです. 行かないんです = 'The thing is, I'm not going'.",
@@ -553,6 +619,7 @@
       ],
       "examples": [
         {
+          "context": "Full form のです — formal/written",
           "parts": [
             {
               "text": "お金が",
@@ -560,15 +627,43 @@
               "gloss": "money (subject)"
             },
             {
-              "text": "ないんです。",
+              "text": "ない",
+              "role": "verb",
+              "gloss": "don't have (plain neg)"
+            },
+            {
+              "text": "のです。",
               "role": "predicate",
-              "gloss": "don't have (explanatory)"
+              "gloss": "it is that... (explanatory — full form)"
             }
           ],
-          "en": "The thing is, I don't have money.",
-          "breakdown": "ない (plain negative of ある) + んです. This explains WHY something is happening or not happening."
+          "en": "The thing is, I don't have money. (formal/written tone)",
+          "breakdown": "ない (plain negative of ある) + のです (full form). のです is the uncontracted form — you see it in writing, formal speech, and textbooks. It explains WHY something is happening."
         },
         {
+          "context": "Contracted form んです — natural spoken Japanese",
+          "parts": [
+            {
+              "text": "お金が",
+              "role": "topic",
+              "gloss": "money (subject)"
+            },
+            {
+              "text": "ない",
+              "role": "verb",
+              "gloss": "don't have (plain neg)"
+            },
+            {
+              "text": "んです。",
+              "role": "predicate",
+              "gloss": "it is that... (explanatory — spoken contraction)"
+            }
+          ],
+          "en": "The thing is, I don't have money. (natural spoken tone)",
+          "breakdown": "Same meaning as ないのです above, but contracted: の → ん. In conversation, んです is far more common. のです sounds bookish when spoken aloud."
+        },
+        {
+          "context": "んですが trailing off — polite request/suggestion",
           "parts": [
             {
               "text": "外食を",
@@ -576,9 +671,14 @@
               "gloss": "eating out (object)"
             },
             {
-              "text": "したいんですが、",
-              "role": "modifier",
-              "gloss": "I want to do but (explanatory)"
+              "text": "したい",
+              "role": "verb",
+              "gloss": "want to do (plain desire)"
+            },
+            {
+              "text": "んですが、",
+              "role": "predicate",
+              "gloss": "it is that... but (trailing — invites response)"
             },
             {
               "text": "いっしょに 行きませんか。",
@@ -587,7 +687,7 @@
             }
           ],
           "en": "The thing is, I want to eat out — shall we go together?",
-          "breakdown": "たいんですが trails off, inviting the listener to respond. A very natural way to make a polite suggestion or request."
+          "breakdown": "したい + んですが trails off with が ('but...'), inviting the listener to respond. This is one of the most natural ways to make a polite suggestion. The んです softens the desire expression — without it, したいですが would sound more direct."
         }
       ]
     },
