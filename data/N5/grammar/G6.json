@@ -55,15 +55,13 @@
         },
         {
           "parts": [
-            { "text": "友だち", "role": "subject", "gloss": "friend" },
-            { "text": "が", "role": "connector", "gloss": "subject marker — marks WHO is here (new information)" },
-            { "text": "ここ", "role": "modifier", "gloss": "here" },
-            { "text": "に", "role": "connector", "gloss": "location of existence — marks WHERE the subject exists (G5)" },
-            { "text": "い", "role": "verb", "gloss": "be / exist (animate)" },
-            { "text": "ます", "role": "predicate", "gloss": "polite ending" }
+            { "text": "友だち", "role": "topic", "gloss": "friend" },
+            { "text": "が", "role": "particle" },
+            { "text": "い", "role": "verb", "gloss": "be-" },
+            { "text": "ます", "role": "predicate" }
           ],
           "en": "My friend is here.",
-          "breakdown": "いる (ichidan): stem = い → います. Particles: が marks 友だち as the subject (who exists here). に marks ここ as the place of existence — with いる/ある, に always marks WHERE something is (G5)."
+          "breakdown": "いる (ichidan): stem = い → います"
         }
       ]
     },
@@ -96,14 +94,14 @@
         },
         {
           "parts": [
-            { "text": "毎日", "role": "time", "gloss": "every day (no particle needed — relative time)" },
-            { "text": "駅", "role": "object", "gloss": "station" },
-            { "text": "に", "role": "connector", "gloss": "destination — marks WHERE I am going (G5)" },
+            { "text": "毎日", "role": "modifier", "gloss": "every day" },
+            { "text": "駅", "role": "topic", "gloss": "station" },
+            { "text": "に", "role": "particle" },
             { "text": "行き", "role": "verb", "gloss": "go-" },
-            { "text": "ます", "role": "predicate", "gloss": "polite ending" }
+            { "text": "ます", "role": "predicate" }
           ],
           "en": "I go to the station every day.",
-          "breakdown": "行く (godan): く→き → 行きます. Particles: に marks 駅 as the destination (where I am heading). You could also say 駅へ行きます — へ emphasises the direction of travel, に emphasises arrival at the destination. Both are correct (G5). 毎日 is a relative time word, so it needs no particle."
+          "breakdown": "行く (godan): く→き → 行きます"
         },
         {
           "parts": [
@@ -113,67 +111,6 @@
           "en": "I understand. (polite present)",
           "breakdown": "分かる (godan る-verb): る→り → 分かります. Looks like ichidan but is NOT."
         }
-      ]
-    },
-    {
-      "type": "grammarTable",
-      "title": "The Godan Shift Map — Beyond ます",
-      "description": "A godan verb's final syllable shifts to different rows of the hiragana chart depending on the form you are building. You just learned the い-row shift (for ます). Here is the full map, including the あ-row shift for the negative form ない, which you will encounter soon. Study the pattern — and watch out for the one exception.",
-      "tableType": "conjugation",
-      "headers": ["Dictionary ending (う-row)", "ます stem (い-row)", "ない stem (あ-row)", "Example verb"],
-      "rows": [
-        {
-          "label": "く",
-          "cells": ["き", "か", "行く → 行きます / 行かない"],
-          "meaning": "く shifts predictably to both rows"
-        },
-        {
-          "label": "ぐ",
-          "cells": ["ぎ", "が", "およぐ → およぎます / およがない"],
-          "meaning": "ぐ shifts predictably (voiced partner of く)"
-        },
-        {
-          "label": "す",
-          "cells": ["し", "さ", "はなす → はなします / はなさない"],
-          "meaning": "す shifts predictably"
-        },
-        {
-          "label": "つ",
-          "cells": ["ち", "た", "もつ → もちます / もたない"],
-          "meaning": "つ shifts predictably"
-        },
-        {
-          "label": "ぬ",
-          "cells": ["に", "な", "しぬ → しにます / しなない"],
-          "meaning": "ぬ shifts predictably"
-        },
-        {
-          "label": "ぶ",
-          "cells": ["び", "ば", "よぶ → よびます / よばない"],
-          "meaning": "ぶ shifts predictably"
-        },
-        {
-          "label": "む",
-          "cells": ["み", "ま", "のむ → のみます / のまない"],
-          "meaning": "む shifts predictably"
-        },
-        {
-          "label": "る (godan)",
-          "cells": ["り", "ら", "分かる → 分かります / 分からない"],
-          "meaning": "る shifts predictably (godan る only, not ichidan)"
-        },
-        {
-          "label": "う ⚠️",
-          "cells": ["い", "わ (NOT あ!)", "かう → かいます / かわない"],
-          "meaning": "EXCEPTION: う uses わ in the あ-row, not あ"
-        }
-      ],
-      "notes": [
-        "Column 2 (い-row) is what you practised in the godan rule above — this is the ます stem. You already know this shift.",
-        "Column 3 (あ-row) is the stem for ない — the plain negative. You will formally learn to conjugate with ない in a later grammar lesson, but seeing the full map now means you will recognise the pattern when it arrives.",
-        "⚠️ THE EXCEPTION: verbs ending in う shift to わ in the あ-row, NOT to あ. This is a fixed historical rule that applies to every う-ending godan verb. Examples: かう (buy) → かわない, いう (say) → いわない, あう (meet) → あわない. If you wrote かあない or いあない, it would be wrong — always use わ.",
-        "Why does う→わ instead of う→あ? In Old Japanese, the あ-row character for the う-column was actually わ. Modern Japanese kept this one irregularity. It is the ONLY exception in the entire shift system — every other ending shifts exactly as the hiragana chart predicts.",
-        "The same logic — find the ending syllable, move it to the target row — applies to every godan conjugation form you will ever learn. Master this chart and no godan verb will surprise you."
       ]
     },
     {
@@ -211,23 +148,23 @@
         },
         {
           "parts": [
-            { "text": "コンビニ", "role": "subject", "gloss": "convenience store" },
-            { "text": "に", "role": "connector", "gloss": "location of existence — marks WHERE something exists (G5)" },
-            { "text": "あり", "role": "verb", "gloss": "exist (inanimate)" },
-            { "text": "ます", "role": "predicate", "gloss": "polite ending" }
+            { "text": "コンビニ", "role": "topic", "gloss": "convenience store" },
+            { "text": "に", "role": "particle" },
+            { "text": "あり", "role": "verb", "gloss": "exist-" },
+            { "text": "ます", "role": "predicate" }
           ],
           "en": "There is a convenience store (over there).",
-          "breakdown": "ある: あります — polite forms follow godan る→り, but plain negative is irregular (ない). Particles: に marks the location where the convenience store exists. With ある (things) and いる (people/animals), に always marks the place of existence (G5)."
+          "breakdown": "ある: あります — polite forms follow godan る→り, but plain negative is irregular (ない)"
         },
         {
           "parts": [
             { "text": "友だち", "role": "subject", "gloss": "friend" },
-            { "text": "が", "role": "connector", "gloss": "subject marker — marks WHO came (new information)" },
+            { "text": "が", "role": "particle" },
             { "text": "来", "role": "verb", "gloss": "come" },
-            { "text": "ました", "role": "predicate", "gloss": "polite past" }
+            { "text": "ました", "role": "predicate" }
           ],
           "en": "My friend came.",
-          "breakdown": "Irregular 来る past: 来ました (reading: きました). Particles: が marks 友だち as the subject — it tells us WHO came. が introduces new information (G3). Compare with は: 友だちは来ました would mean 'as for my friend, they came' (topic, with implication of contrast)."
+          "breakdown": "Irregular 来る past: 来ました (reading: きました)"
         }
       ]
     },
@@ -315,29 +252,29 @@
       "title": "Identifying Verb Types in Natural Sentences",
       "examples": [
         {
-          "context": "Ichidan: いる (い before る) — with が (subject) and に (existence location)",
+          "context": "Ichidan: いる (い before る)",
           "parts": [
             { "text": "友だち", "role": "subject", "gloss": "friend" },
-            { "text": "が", "role": "connector", "gloss": "subject marker — WHO is here" },
+            { "text": "が", "role": "particle" },
             { "text": "ここ", "role": "modifier", "gloss": "here" },
-            { "text": "に", "role": "connector", "gloss": "existence location — WHERE they are" },
-            { "text": "い", "role": "verb", "gloss": "be / exist (animate)" },
-            { "text": "ます", "role": "predicate", "gloss": "polite" }
+            { "text": "に", "role": "particle" },
+            { "text": "い", "role": "verb", "gloss": "be-" },
+            { "text": "ます", "role": "predicate" }
           ],
           "en": "My friend is here.",
-          "note": "Verb: いる — い-row before る → ichidan → drop る → い + ます = います. Particles: が marks the subject (who is here — new information, G3). に marks the place of existence (where they are — G5 taught that に marks location with いる/ある)."
+          "note": "いる: い-row before る → ichidan → drop る → い + ます = います"
         },
         {
-          "context": "Godan: 行く (ends in く, not る — clearly godan) — with に (destination)",
+          "context": "Godan: 行く (ends in く, not る — clearly godan)",
           "parts": [
-            { "text": "今日", "role": "time", "gloss": "today (relative time — no particle needed)" },
-            { "text": "駅", "role": "object", "gloss": "station" },
-            { "text": "に", "role": "connector", "gloss": "destination — WHERE I am going" },
+            { "text": "今日", "role": "modifier", "gloss": "today" },
+            { "text": "駅", "role": "topic", "gloss": "station" },
+            { "text": "に", "role": "particle" },
             { "text": "行き", "role": "verb", "gloss": "go-" },
-            { "text": "ます", "role": "predicate", "gloss": "polite" }
+            { "text": "ます", "role": "predicate" }
           ],
           "en": "I go to the station today.",
-          "note": "Verb: 行く — ends in く (う-row) → godan → く→き → 行きます. Particles: に marks the destination (where I am heading). You could also write 駅へ行きます — へ emphasises the direction of travel, while に emphasises arriving there. Both are correct (G5). 今日 is a relative time word and takes no particle (G4)."
+          "note": "行く: ends in く (う-row) → godan → く→き → 行きます"
         },
         {
           "context": "Godan る-trap: 分かる (か before る = あ-row → godan!)",
