@@ -114,6 +114,66 @@
       ]
     },
     {
+      "type": "grammarTable",
+      "title": "The い-Row Shift — Godan ます Stem Map",
+      "description": "Godan verbs form the ます stem by shifting the final syllable from the う-row to the い-row on the hiragana chart. This is your first row shift — the same logic appears later for negative forms (あ-row) and other patterns. Master this table and every godan verb's polite form is instant.",
+      "tableType": "conjugation",
+      "headers": ["Dictionary ending (う-row)", "ます stem (い-row)", "ます form example"],
+      "rows": [
+        {
+          "label": "く",
+          "cells": ["き", "書く → 書きます"],
+          "meaning": "to write → writes (polite)"
+        },
+        {
+          "label": "ぐ",
+          "cells": ["ぎ", "およぐ → およぎます"],
+          "meaning": "to swim → swims (polite)"
+        },
+        {
+          "label": "す",
+          "cells": ["し", "はなす → はなします"],
+          "meaning": "to speak → speaks (polite)"
+        },
+        {
+          "label": "つ",
+          "cells": ["ち", "もつ → もちます"],
+          "meaning": "to hold → holds (polite)"
+        },
+        {
+          "label": "ぬ",
+          "cells": ["に", "しぬ → しにます"],
+          "meaning": "to die → dies (polite)"
+        },
+        {
+          "label": "ぶ",
+          "cells": ["び", "よぶ → よびます"],
+          "meaning": "to call → calls (polite)"
+        },
+        {
+          "label": "む",
+          "cells": ["み", "のむ → のみます"],
+          "meaning": "to drink → drinks (polite)"
+        },
+        {
+          "label": "る (godan)",
+          "cells": ["り", "分かる → 分かります"],
+          "meaning": "to understand → understands (polite)"
+        },
+        {
+          "label": "う",
+          "cells": ["い", "買う → 買います"],
+          "meaning": "to buy → buys (polite)"
+        }
+      ],
+      "notes": [
+        "Every ending shifts to the same consonant row, just with an い vowel. Think of the hiragana chart: く and き share the k-row; む and み share the m-row; す and し share the s-row.",
+        "The う ending shifts to い: 買う → 買います. No exception here — the い-row shift is perfectly regular for all 9 endings.",
+        "Ichidan (RU) verbs do NOT use this table. Their stem is formed by simply dropping る: 食べる → 食べ + ます.",
+        "This same row-shift logic will appear again in later grammar lessons for different rows (あ-row for negative forms, and others). Once you understand the hiragana chart pattern, each new shift is just a different target row."
+      ]
+    },
+    {
       "type": "grammarRule",
       "id": "rule_irregular",
       "pattern": [
