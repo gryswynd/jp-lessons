@@ -559,14 +559,17 @@
           ]
         },
         {
-          "jp": "走った 後で、りきぞは 銀行に 行って お金を 出します。",
-          "en": "After running, Rikizo goes to the bank and takes out money.",
+          "jp": "走った 後で、りきぞは 音楽を 聞きながら 銀行に 行って お金を 出します。",
+          "en": "After running, Rikizo goes to the bank while listening to music and takes out money.",
           "terms": [
             { "id": "v_hashiru", "form": "plain_past" },
             "v_ato",
             "p_de",
             "char_rikizo",
             "p_wa",
+            "v_ongaku",
+            "p_wo",
+            { "id": "v_kiku", "form": "nagara_form" },
             "v_ginkou",
             "p_ni",
             { "id": "v_iku", "form": "te_form" },
@@ -576,21 +579,23 @@
           ]
         },
         {
-          "jp": "お金を 運ぶ 仕事は いそがしいですが、運がいい 日は 早く 終わります。",
-          "en": "The work of carrying money is busy, but on lucky days it finishes quickly.",
+          "jp": "りきぞは ポチの ごはんを 家まで 運びます。今日も 運がいい 日です。",
+          "en": "Rikizo carries Pochi's food all the way home. Today is also a lucky day.",
           "terms": [
-            "v_okane",
-            "p_wo",
-            { "id": "v_hakobu", "form": "plain_form" },
-            "v_shigoto",
+            "char_rikizo",
             "p_wa",
-            { "id": "v_isogashii", "form": "polite_adj" },
-            "p_ga_but",
+            "char_pochi",
+            "p_no",
+            "v_gohan",
+            "p_wo",
+            "v_ie",
+            "p_made",
+            { "id": "v_hakobu", "form": "polite_masu" },
+            "v_kyou",
+            "p_mo",
             "v_un_ga_ii",
             "v_hi",
-            "p_wa",
-            { "id": "v_hayai", "form": "adverbial" },
-            { "id": "v_owaru", "form": "polite_masu" }
+            "g_desu"
           ]
         }
       ],
@@ -684,17 +689,23 @@
           ]
         },
         {
-          "jp": "楽しい ことや いい おもい出が 去来します。",
-          "en": "Fun things and good memories come and go.",
+          "jp": "去年の 楽しい 日は 去りましたが、ポチと いっしょに 走った おもい出が あります。",
+          "en": "Last year's fun days have passed, but there are memories of running together with Pochi.",
           "terms": [
+            "v_kyonen",
+            "p_no",
             "v_tanoshii",
-            "v_koto",
-            "p_ya",
-            "v_ii",
+            "v_hi",
+            "p_wa",
+            { "id": "v_saru", "form": "polite_mashita" },
+            "p_ga_but",
+            "char_pochi",
+            "p_to",
+            "v_issho",
+            { "id": "v_hashiru", "form": "plain_past" },
             "v_omoide",
             "p_ga",
-            "v_kyorai",
-            { "id": "v_suru", "form": "polite_masu" }
+            { "id": "v_aru", "form": "polite_masu" }
           ]
         },
         {
@@ -736,21 +747,23 @@
           ]
         },
         {
-          "q": "去来する ものは 何ですか。",
-          "a": "楽しい ことや いい おもい出。",
+          "q": "りきぞは ポチと どんな おもい出が ありますか。",
+          "a": "いっしょに 走った おもい出が あります。",
           "terms": [
-            "v_kyorai",
-            { "id": "v_suru", "form": "plain_form" },
-            "v_mono",
+            "char_rikizo",
             "p_wa",
-            "v_nan",
-            "g_desu",
+            "char_pochi",
+            "p_to",
+            "v_donna",
+            "v_omoide",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" },
             "p_ka",
-            "v_tanoshii",
-            "v_koto",
-            "p_ya",
-            "v_ii",
-            "v_omoide"
+            "v_issho",
+            { "id": "v_hashiru", "form": "plain_past" },
+            "v_omoide",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" }
           ]
         },
         {
