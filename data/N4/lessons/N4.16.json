@@ -449,8 +449,8 @@
     },
     {
       "type": "conversation",
-      "title": "Conversation 4（会話）: Last Year's Memories (Casual)",
-      "context": "Rikizo and Yamakawa sit at Rikizo's home, talking about Pochi and memories from last year.",
+      "title": "Conversation 4（会話）: Last Year with Pochi (Casual)",
+      "context": "Rikizo and Yamakawa sit at Rikizo's home, talking about Pochi and the past year.",
       "lines": [
         {
           "spk": "やまかわ",
@@ -506,19 +506,18 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "そう。いい おもい出だから、写真も たくさん とった。",
-          "en": "Yeah. Because they're good memories, I took lots of photos too.",
+          "jp": "そう。よく 外で 写真を とったよ。",
+          "en": "Yeah. We often took photos outside.",
           "terms": [
             "char_rikizo",
             "v_sou",
-            "v_ii",
-            "v_omoide",
-            "g_da",
-            "p_kara_because",
+            "v_yoku",
+            "v_soto",
+            "p_de",
             "v_shashin",
-            "p_mo",
-            "v_takusan",
-            { "id": "v_toru", "form": "plain_past" }
+            "p_wo",
+            { "id": "v_toru", "form": "plain_past" },
+            "p_yo"
           ]
         }
       ]
@@ -658,7 +657,7 @@
     },
     {
       "type": "reading",
-      "title": "Reading Practice 2: Memories of Last Year",
+      "title": "Reading Practice 2: Pochi's First Year",
       "passage": [
         {
           "jp": "去年は りきぞの とても いい 時間でした。",
@@ -691,8 +690,8 @@
           ]
         },
         {
-          "jp": "去年の 楽しい 日は 去りましたが、ポチと いっしょに 走った おもい出が あります。",
-          "en": "Last year's fun days have passed, but there are memories of running together with Pochi.",
+          "jp": "去年の 楽しい 日は 去りましたが、ポチは とても 元気に なりました。",
+          "en": "Last year's fun days have passed, but Pochi became very energetic.",
           "terms": [
             "v_kyonen",
             "p_no",
@@ -702,17 +701,15 @@
             { "id": "v_saru", "form": "polite_mashita" },
             "p_ga_but",
             "char_pochi",
-            "p_to",
-            "v_issho",
-            { "id": "v_hashiru", "form": "plain_past" },
-            "v_omoide",
-            "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            "p_wa",
+            "v_totemo",
+            { "id": "v_genki", "form": "adverbial" },
+            { "id": "v_naru", "form": "polite_mashita" }
           ]
         },
         {
-          "jp": "今年も ポチと 走って、また いい おもい出を 作りたいです。",
-          "en": "This year too, he wants to run with Pochi and make more good memories.",
+          "jp": "今年も ポチと 走って、また いい 時間を 作りたいです。",
+          "en": "This year too, he wants to run with Pochi and make more good time.",
           "terms": [
             "v_kotoshi",
             "p_mo",
@@ -721,7 +718,7 @@
             { "id": "v_hashiru", "form": "te_form" },
             "v_mata",
             "v_ii",
-            "v_omoide",
+            "v_jikan",
             "p_wo",
             { "id": "v_tsukuru", "form": "plain_desire_tai" },
             "g_desu"
@@ -750,28 +747,22 @@
           ]
         },
         {
-          "q": "りきぞは ポチと どんな おもい出が ありますか。",
-          "a": "いっしょに 走った おもい出が あります。",
+          "q": "ポチは どう なりましたか。",
+          "a": "とても 元気に なりました。",
           "terms": [
-            "char_rikizo",
-            "p_wa",
             "char_pochi",
-            "p_to",
-            "v_donna",
-            "v_omoide",
-            "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            "p_wa",
+            "v_dou",
+            { "id": "v_naru", "form": "polite_mashita" },
             "p_ka",
-            "v_issho",
-            { "id": "v_hashiru", "form": "plain_past" },
-            "v_omoide",
-            "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            "v_totemo",
+            { "id": "v_genki", "form": "adverbial" },
+            { "id": "v_naru", "form": "polite_mashita" }
           ]
         },
         {
           "q": "りきぞは 今年 ポチと 何を したいですか。",
-          "a": "また いい おもい出を 作りたいです。",
+          "a": "また いい 時間を 作りたいです。",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -785,7 +776,7 @@
             "p_ka",
             "v_mata",
             "v_ii",
-            "v_omoide",
+            "v_jikan",
             "p_wo",
             { "id": "v_tsukuru", "form": "plain_desire_tai" },
             "g_desu"
@@ -913,21 +904,21 @@
         },
         {
           "kind": "mcq",
-          "q": "去年の ことは いい ______ です。",
+          "q": "このお金の 色は ______ です。",
           "choices": [
-            "おもい出",
             "銀色",
             "銀行",
-            "野犬"
+            "野犬",
+            "手動"
           ],
-          "answer": "おもい出",
+          "answer": "銀色",
           "terms": [
-            "v_kyonen",
+            "v_kono",
+            "v_okane",
             "p_no",
-            "v_koto",
+            "v_iro",
             "p_wa",
-            "v_ii",
-            "v_omoide",
+            "v_giniro",
             "g_desu"
           ]
         },
@@ -1091,21 +1082,23 @@
         },
         {
           "kind": "mcq",
-          "q": "去年の おもい出 ______ 去来します。",
+          "q": "ポチと 走りたい ______ 今日は 雨です。",
           "choices": [
-            "が",
-            "は",
-            "を",
-            "で"
+            "けど",
+            "から",
+            "ながら",
+            "ために"
           ],
-          "answer": "が",
+          "answer": "けど",
           "terms": [
-            "v_kyonen",
-            "p_no",
-            "v_omoide",
-            "p_ga",
-            "v_kyorai",
-            { "id": "v_suru", "form": "polite_masu" }
+            "char_pochi",
+            "p_to",
+            { "id": "v_hashiru", "form": "plain_desire_tai" },
+            "p_kedo",
+            "v_kyou",
+            "p_wa",
+            "v_ame",
+            "g_desu"
           ]
         }
       ]
