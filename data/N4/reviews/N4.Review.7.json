@@ -64,19 +64,17 @@
             },
             {
               "spk": "りきぞ",
-              "jp": "そうですか。りきぞも 音楽が 好きです。歌ったり 聞いたり します。",
+              "jp": "そうですか。わたしも 音楽が 好きで、歌ったり 聞いたり します。",
               "terms": [
                 "v_sou",
                 "g_desu",
                 "p_ka",
-                "char_rikizo",
+                "v_watashi",
                 "p_mo",
                 "v_ongaku",
                 "p_ga",
-                {
-                  "id": "v_suki",
-                  "form": "polite_adj"
-                },
+                "v_suki",
+                "p_de",
                 {
                   "id": "v_utau",
                   "form": "tari_form"
@@ -380,20 +378,18 @@
         },
         {
           "kind": "scramble",
-          "q": "Sunday is the only day off.",
+          "q": "My only day off is Sunday.",
           "segments": [
-            "日曜日だけが",
-            "休みです"
+            "わたしの",
+            "休みは",
+            "日曜日だけです"
           ],
           "distractors": [
             "月曜日から",
-            "曜日しか",
-            "仕事ばかり"
+            "仕事ばかり",
+            "曜日しか"
           ],
-          "alts": [
-            ["休みは", "日曜日だけです"]
-          ],
-          "explanation": "だけ = 'only / just'. 日曜日だけが休みです (Sunday is the only day off) — だけ follows the noun it restricts (日曜日 = Sunday), and が marks it as the subject. Alternatively: 休みは日曜日だけです (as for days off, it's only Sunday). Both are natural. 日曜日 can now be written in full kanji because 曜 was taught in N4.14."
+          "explanation": "だけ = 'only / just'. わたしの (my — possession) + 休みは (days off — topic) + 日曜日だけです (it's only Sunday). だけ directly follows the noun it restricts. 日曜日 can now be written in full kanji because 曜 was taught in N4.14."
         },
         {
           "kind": "scramble",
@@ -414,17 +410,15 @@
     },
     {
       "type": "reading",
-      "title": "Part 3: Reading — 音楽が 好きな 会社員",
+      "title": "Part 3: Reading — 音楽が 好きな やまかわさん",
       "passage": [
         {
-          "jp": "やまかわさんは 会社員で、毎日 仕事を して います。",
-          "en": "Yamakawa-san is a company employee and works every day.",
+          "jp": "やまかわさんは 毎日 仕事を して、とても いそがしいです。",
+          "en": "Yamakawa-san works every day and is very busy.",
           "terms": [
             "char_yamakawa",
             "v_san",
             "p_wa",
-            "v_kaishain",
-            "p_de",
             "v_mainichi",
             "v_shigoto",
             "p_wo",
@@ -432,9 +426,10 @@
               "id": "v_suru",
               "form": "te_form"
             },
+            "v_totemo",
             {
-              "id": "v_iru",
-              "form": "polite_masu"
+              "id": "v_isogashii",
+              "form": "polite_adj"
             }
           ]
         },
@@ -483,16 +478,18 @@
           ]
         },
         {
-          "jp": "仕事を しながら 軽音楽を 聞きます。声が 低い 歌手の 歌だけを 聞きます。",
-          "en": "While working, Yamakawa listens to light music. Only songs by singers with low voices are listened to.",
+          "jp": "仕事を する 時も 音楽を 聞きます。声が 低い 歌手の 歌だけを 聞きます。",
+          "en": "When working, Yamakawa also listens to music. Only songs by singers with low voices are listened to.",
           "terms": [
             "v_shigoto",
             "p_wo",
             {
               "id": "v_suru",
-              "form": "nagara_form"
+              "form": "plain_form"
             },
-            "v_keiongaku",
+            "v_toki",
+            "p_mo",
+            "v_ongaku",
             "p_wo",
             {
               "id": "v_kiku",
@@ -715,21 +712,23 @@
         },
         {
           "kind": "mcq",
-          "q": "あの 歌手は ______ が 低くて、とても いい 声ですね。",
+          "q": "あの 歌手の ______ は とても きれいですね。",
           "choices": [
             "低音",
             "音楽",
-            "軽口",
-            "声楽"
+            "声楽",
+            "軽口"
           ],
           "answer": "低音",
           "terms": [
             "v_kashu",
             "v_teion",
-            "v_hikui",
-            "v_koe"
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            }
           ],
-          "explanation": "低音 (low tone / bass) fits here — the singer whose low tone is appealing has a good voice. 低音が低い is natural for describing a deep voice quality. 音楽 (music) and 声楽 (vocal music) do not fit as the subject of 低くて. 軽口 (witty remark) does not relate to voice quality."
+          "explanation": "低音 (low tone / bass) fits — あの歌手の低音はとてもきれいですね = 'That singer's bass tone is very beautiful'. きれい is a な-adjective meaning 'beautiful / clean'. 音楽 (music) and 声楽 (vocal music) are genres, not specific voice qualities belonging to the singer. 軽口 (witty remark) is unrelated to voice."
         },
         {
           "kind": "mcq",
@@ -842,6 +841,27 @@
             "v_ongaku"
           ],
           "explanation": "どこでも = 'anywhere / everywhere'. でも after a question word (どこ, 何, いつ, だれ) creates an 'any~' inclusive meaning: どこでも (anywhere), 何でも (anything), いつでも (anytime). どこでも聞けるから = 'because you can listen anywhere'. どれでも (any one of those) and どのでも are not natural here; どうでも (doesn't matter) has a different nuance."
+        },
+        {
+          "kind": "mcq",
+          "q": "今週は 仕事 ______ で、いそがしかったです。",
+          "choices": [
+            "ばかり",
+            "しか",
+            "だけ",
+            "でも"
+          ],
+          "answer": "ばかり",
+          "terms": [
+            "v_konshuu",
+            "v_shigoto",
+            "p_bakari",
+            {
+              "id": "v_isogashii",
+              "form": "polite_past_adj"
+            }
+          ],
+          "explanation": "ばかり after a noun = 'nothing but / all I do is ~' — with a nuance of excess or weariness. 仕事ばかりで = 'nothing but work' (implying overwork or complaint). しか requires a negative predicate (しか + ません). だけ is neutral restriction without the complaint nuance. でも = 'even / any~'. When expressing that something is too much or exhausting, ばかり is the natural choice."
         }
       ]
     }
