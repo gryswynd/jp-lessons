@@ -215,7 +215,7 @@
         { "id": "v_daiku", "count": 1 },
         { "id": "v_tateru", "count": 1, "matches": ["建て", "たて"] }
       ],
-      "helpers": ["v_tatsu", "v_hiromeru", "v_hiroi", "v_koudai"]
+      "helpers": ["v_tatsu_build", "v_hiromeru", "v_hiroi", "v_koudai"]
     },
     {
       "id": "new-city-project",
@@ -235,7 +235,7 @@
         { "id": "v_basho", "count": 1 },
         { "id": "v_hiku", "count": 1, "matches": ["引", "ひい", "ひき"] }
       ],
-      "helpers": ["v_hikidasu", "v_narau", "v_minarau", "v_tatsu", "v_hiromeru", "v_koudai"]
+      "helpers": ["v_hikidasu", "v_narau", "v_minarau", "v_tatsu_build", "v_hiromeru", "v_koudai"]
     },
     {
       "id": "first-train",
