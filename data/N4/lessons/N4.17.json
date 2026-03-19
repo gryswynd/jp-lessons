@@ -3,17 +3,11 @@
   "id": "N4.17",
   "title": "Phase 4 Lesson 17: Travel & Transport",
   "meta": {
-    "phase": 4,
-    "lesson": 17,
-    "focus": "Travel destinations, driving, cycling, and frequency.",
-    "kanji": [
-      "京",
-      "都",
-      "転",
-      "回",
-      "田",
-      "海"
-    ]
+    "level": "N4",
+    "lesson_number": 17,
+    "focus": "Travel destinations (Tokyo, Kyoto, Hokkaido), driving and cycling, the sea, rice fields, and frequency expressions.",
+    "estimated_minutes": 30,
+    "kanji": ["京", "都", "転", "回", "田", "海"]
   },
   "newKanji": [
     {
@@ -63,50 +57,57 @@
     {
       "type": "warmup",
       "title": "Warm-Up Review（ウォームアップ）",
-      "instructions": "Ask your partner these questions using previously learned words:",
+      "instructions": "Ask your partner these questions using words you already know:",
       "items": [
         {
-          "jp": "きのう、どこかへ 行きましたか。",
-          "en": "Did you go anywhere yesterday?",
+          "jp": "写真を とりながら 旅行しますか。",
+          "en": "Do you travel while taking photos?",
           "terms": [
-            "v_kinou",
-            {
-              "id": "v_iku",
-              "form": "polite_mashita"
-            }
+            "v_shashin",
+            "p_wo",
+            { "id": "v_toru", "form": "nagara_form" },
+            { "id": "v_ryokou", "form": "polite_masu" },
+            "p_ka"
           ]
         },
         {
-          "jp": "毎日、運動しますか。",
-          "en": "Do you exercise every day?",
+          "jp": "旅行に 行きたいですか。どこへ 行きたいですか。",
+          "en": "Do you want to go on a trip? Where do you want to go?",
           "terms": [
-            "v_mainichi",
-            {
-              "id": "v_undou",
-              "form": "polite_masu"
-            }
+            "v_ryokou",
+            "p_ni",
+            { "id": "v_iku", "form": "plain_desire_tai" },
+            "g_desu",
+            "p_ka",
+            "v_doko",
+            "p_e",
+            { "id": "v_iku", "form": "plain_desire_tai" },
+            "g_desu",
+            "p_ka"
           ]
         },
         {
-          "jp": "電車と バスと、どちらが 好きですか。",
-          "en": "Which do you like better, trains or buses?",
+          "jp": "音楽を 聞きながら 歩きますか。",
+          "en": "Do you walk while listening to music?",
           "terms": [
-            "v_densha",
-            "v_basu",
-            "v_suki"
+            "v_ongaku",
+            "p_wo",
+            { "id": "v_kiku", "form": "nagara_form" },
+            { "id": "v_aruku", "form": "polite_masu" },
+            "p_ka"
           ]
         },
         {
           "jp": "去年の 夏は 暑かったですか。",
-          "en": "Was it hot last summer?",
+          "en": "Was last summer hot?",
           "terms": [
             "v_kyonen",
-            "k_natsu",
-            {
-              "id": "v_atsui",
-              "form": "plain_past_adj"
-            },
-            "g_desu"
+            "p_no",
+            "v_natsu",
+            "p_wa",
+            { "id": "v_atsui", "form": "plain_past_adj" },
+            "g_desu",
+            "p_ka"
           ]
         }
       ]
@@ -117,7 +118,7 @@
       "items": [
         {
           "kanji": "京",
-          "on": "きょう",
+          "on": "きょう / けい",
           "kun": "(なし)",
           "meaning": "Capital",
           "terms": [
@@ -130,9 +131,10 @@
           "kanji": "都",
           "on": "と",
           "kun": "みやこ",
-          "meaning": "Metropolis",
+          "meaning": "Metropolis / Capital",
           "terms": [
             "k_to",
+            "v_miyako",
             "v_toukyou",
             "v_kyouto"
           ]
@@ -140,7 +142,7 @@
         {
           "kanji": "転",
           "on": "てん",
-          "kun": "ころ",
+          "kun": "ころ(ぶ)",
           "meaning": "Revolve / Fall",
           "terms": [
             "k_ten",
@@ -152,13 +154,16 @@
         {
           "kanji": "回",
           "on": "かい",
-          "kun": "まわ",
+          "kun": "まわ(る)",
           "meaning": "Times / Turn",
           "terms": [
             "k_kai",
+            "v_mawaru",
             "v_nankai",
+            "v_ikkai",
+            "v_nikai",
             "v_norimawasu",
-            "v_ikkai"
+            "v_konkai"
           ]
         },
         {
@@ -168,18 +173,20 @@
           "meaning": "Rice Field",
           "terms": [
             "k_ta",
+            "v_ta",
+            "v_suiden",
             "v_tanaka",
-            "v_yamada",
-            "v_suiden"
+            "v_yamada"
           ]
         },
         {
           "kanji": "海",
           "on": "かい",
           "kun": "うみ",
-          "meaning": "Sea",
+          "meaning": "Sea / Ocean",
           "terms": [
             "k_umi",
+            "v_umi",
             "v_kaigai",
             "v_hokkaidou"
           ]
@@ -191,107 +198,128 @@
       "title": "Vocabulary & Compounds（ことば）",
       "groups": [
         {
-          "label": "Places",
+          "label": "Places & Destinations（場所と 目的地）",
           "items": [
             "v_toukyou",
             "v_kyouto",
             "v_hokkaidou",
             "v_kaigai",
+            "v_miyako",
             "v_umi",
-            "v_ta"
+            "v_ta",
+            "v_suiden"
           ]
         },
         {
-          "label": "Transport & Action",
+          "label": "Transport & Action（交通と 動き）",
           "items": [
             "v_jitensha",
             "v_unten",
             "v_norimawasu",
+            "v_mawaru",
             "v_korobu",
-            "v_mawaru"
+            "v_tanoshimu"
           ]
         },
         {
-          "label": "Counting & People",
+          "label": "Frequency & Counting（回数）",
           "items": [
             "v_nankai",
             "v_ikkai",
             "v_nikai",
-            "v_tanaka",
-            "v_yamada"
+            "v_konkai",
+            "v_yoku"
           ]
         },
         {
-          "label": "Time & Other",
+          "label": "Surnames & Vocabulary（名字と ことば）",
           "items": [
-            "v_konkai"
+            "v_tanaka",
+            "v_yamada",
+            "v_muzukashii",
+            "v_otera"
           ]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 1（会話）: Travel Plans",
-      "context": "Discussing vacation spots.",
+      "title": "Conversation 1（会話）: Travel Plans",
+      "context": "Rikizo speaks with Yamakawa about upcoming travel plans.",
       "lines": [
         {
-          "spk": "A",
-          "jp": "来週、京都へ 行きます。",
-          "en": "I am going to Kyoto next week.",
+          "spk": "やまかわ",
+          "jp": "来週、京都へ 行きますか。",
+          "en": "Are you going to Kyoto next week?",
           "terms": [
+            "char_yamakawa",
             "v_raishuu",
             "v_kyouto",
-            {
-              "id": "v_iku",
-              "form": "polite_masu"
-            }
+            "p_e",
+            { "id": "v_iku", "form": "polite_masu" },
+            "p_ka"
           ]
         },
         {
-          "spk": "B",
-          "jp": "いいですね。東京には 行きませんか。",
-          "en": "That's nice. Won't you go to Tokyo?",
-          "terms": [
-            "v_toukyou",
-            {
-              "id": "v_iku",
-              "form": "polite_negative"
-            }
-          ]
-        },
-        {
-          "spk": "A",
+          "spk": "りきぞ",
           "jp": "はい。今回は 京都だけです。古い おてらを 見たいですから。",
           "en": "Yes. Only Kyoto this time. Because I want to see old temples.",
           "terms": [
+            "char_rikizo",
+            "p_hai",
             "v_konkai",
+            "p_wa",
             "v_kyouto",
+            "p_dake",
+            "g_desu",
             "v_furui",
             "v_otera",
-            {
-              "id": "v_miru",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
+            "p_wo",
+            { "id": "v_miru", "form": "plain_desire_tai" },
+            "g_desu",
+            "p_kara_because"
           ]
         },
         {
-          "spk": "B",
-          "jp": "そうですか。楽しんでください。",
-          "en": "I see. Please enjoy it.",
+          "spk": "やまかわ",
+          "jp": "東京には 行きませんか。",
+          "en": "Won't you go to Tokyo?",
           "terms": [
-            {
-              "id": "v_tanoshimu",
-              "form": "te_form"
-            }
+            "char_yamakawa",
+            "v_toukyou",
+            "p_ni",
+            "p_wa",
+            { "id": "v_iku", "form": "polite_negative" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "今回は むずかしいです。でも、来年は 東京と 海外に 行きたいです。",
+          "en": "It's difficult this time. But next year I want to go to both Tokyo and overseas.",
+          "terms": [
+            "char_rikizo",
+            "v_konkai",
+            "p_wa",
+            { "id": "v_muzukashii", "form": "polite_adj" },
+            "g_desu",
+            "p_demo_but",
+            "v_rainen",
+            "p_wa",
+            "v_toukyou",
+            "p_to",
+            "v_kaigai",
+            "p_ni",
+            { "id": "v_iku", "form": "plain_desire_tai" },
+            "g_desu"
           ]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 2（会話）: Driving",
-      "context": "Talking about cars and bikes.",
+      "title": "Conversation 2（会話）: Cycling and Driving",
+      "context": "Rikizo meets Tanaka at school and they talk about getting around.",
       "lines": [
         {
           "spk": "A",
@@ -299,12 +327,14 @@
           "en": "Mr. Tanaka, can you drive a car?",
           "terms": [
             "v_tanaka",
-            "k_kuruma",
+            "v_san",
+            "p_wa",
+            "v_kuruma",
+            "p_no",
             "v_unten",
-            {
-              "id": "v_dekiru",
-              "form": "polite_masu"
-            }
+            "p_ga",
+            { "id": "v_dekiru", "form": "polite_masu" },
+            "p_ka"
           ]
         },
         {
@@ -312,42 +342,55 @@
           "jp": "いいえ、できません。いつも 自転車に 乗ります。",
           "en": "No, I cannot. I always ride a bicycle.",
           "terms": [
+            "v_iie",
+            { "id": "v_dekiru", "form": "polite_negative" },
             "v_itsumo",
             "v_jitensha",
-            {
-              "id": "v_noru",
-              "form": "polite_masu"
-            }
+            "p_ni",
+            { "id": "v_noru", "form": "polite_masu" }
           ]
         },
         {
           "spk": "A",
-          "jp": "自転車は 楽しいですね。",
-          "en": "Bicycles are fun, aren't they?",
+          "jp": "自転車は 楽しいですね。転んだことが ありますか。",
+          "en": "Bicycles are fun, aren't they. Have you ever fallen?",
           "terms": [
             "v_jitensha",
-            "v_tanoshii"
+            "p_wa",
+            { "id": "v_tanoshii", "form": "polite_adj" },
+            "p_ne",
+            { "id": "v_korobu", "form": "plain_past" },
+            "v_koto",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" },
+            "p_ka"
           ]
         },
         {
           "spk": "B",
-          "jp": "はい。でも、先週 雨で 転びました。",
-          "en": "Yes. But last week I fell because of the rain.",
+          "jp": "先週 雨で 一回 転びました。自転車で 乗り回すのは むずかしいです。",
+          "en": "I fell once last week because of the rain. Riding around on a bicycle is difficult.",
           "terms": [
             "v_senshuu",
-            "k_ame",
-            {
-              "id": "v_korobu",
-              "form": "polite_mashita"
-            }
+            "v_ame",
+            "p_de",
+            "v_ikkai",
+            { "id": "v_korobu", "form": "polite_mashita" },
+            "v_jitensha",
+            "p_de",
+            { "id": "v_norimawasu", "form": "plain_form" },
+            "p_no",
+            "p_wa",
+            { "id": "v_muzukashii", "form": "polite_adj" },
+            "g_desu"
           ]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 3（会話）: Overseas Travel",
-      "context": "Talking about past experiences.",
+      "title": "Conversation 3（会話）: An Overseas Trip",
+      "context": "A student describes a past trip to a classmate.",
       "lines": [
         {
           "spk": "A",
@@ -355,104 +398,128 @@
           "en": "Have you ever been overseas?",
           "terms": [
             "v_kaigai",
-            {
-              "id": "v_iku",
-              "form": "plain_past"
-            }
+            "p_e",
+            { "id": "v_iku", "form": "plain_past" },
+            "v_koto",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" },
+            "p_ka"
           ]
         },
         {
           "spk": "B",
-          "jp": "はい。二回 あります。",
-          "en": "Yes. I have twice.",
+          "jp": "はい。二回 あります。先月は 北海道に 行きました。",
+          "en": "Yes. I have twice. Last month I went to Hokkaido.",
           "terms": [
+            "p_hai",
             "v_nikai",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            }
+            { "id": "v_aru", "form": "polite_masu" },
+            "v_sengetsu",
+            "p_wa",
+            "v_hokkaidou",
+            "p_ni",
+            { "id": "v_iku", "form": "polite_mashita" }
           ]
         },
         {
           "spk": "A",
-          "jp": "どこへ 行きましたか。",
-          "en": "Where did you go?",
+          "jp": "北海道の 海は きれいでしたか。",
+          "en": "Was the sea in Hokkaido beautiful?",
           "terms": [
-            {
-              "id": "v_iku",
-              "form": "polite_mashita"
-            }
+            "v_hokkaidou",
+            "p_no",
+            "v_umi",
+            "p_wa",
+            { "id": "v_kirei", "form": "polite_past_adj" },
+            "p_ka"
           ]
         },
         {
           "spk": "B",
-          "jp": "ハワイです。海が とても きれいでした。",
-          "en": "Hawaii. The sea was very beautiful.",
+          "jp": "はい、とても きれいでした。海を 歩いたり、写真を とったり しました。",
+          "en": "Yes, it was very beautiful. I did things like walk along the sea and take photos.",
           "terms": [
+            "p_hai",
+            "v_totemo",
+            { "id": "v_kirei", "form": "polite_past_adj" },
             "v_umi",
-            "v_kirei",
-            {
-              "id": "g_desu",
-              "form": "polite_past_copula"
-            }
+            "p_wo",
+            { "id": "v_aruku", "form": "tari_form" },
+            "v_shashin",
+            "p_wo",
+            { "id": "v_toru", "form": "tari_form" },
+            { "id": "v_suru", "form": "polite_mashita" }
           ]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 4（会話）: Hokkaido Trip",
-      "context": "Looking at photos.",
+      "title": "Conversation 4（会話）: Hokkaido Memories (Casual)",
+      "context": "Rikizo and Yamakawa sit at Rikizo's home after a bike ride, talking about their Hokkaido trip.",
       "lines": [
         {
-          "spk": "A",
-          "jp": "これは 北海道の 写真ですか。",
-          "en": "Is this a photo of Hokkaido?",
+          "spk": "りきぞ",
+          "jp": "北海道の 旅行、楽しかったね。",
+          "en": "The Hokkaido trip was fun, wasn't it.",
           "terms": [
+            "char_rikizo",
             "v_hokkaidou",
-            "v_shashin"
+            "p_no",
+            "v_ryokou",
+            { "id": "v_tanoshii", "form": "plain_past_adj" },
+            "p_ne"
           ]
         },
         {
-          "spk": "B",
-          "jp": "はい。ひろい 田が ありました。",
-          "en": "Yes. There were wide rice fields.",
+          "spk": "やまかわ",
+          "jp": "そうだね。大きい 田が たくさん あったよ。",
+          "en": "Yeah. There were lots of big rice fields.",
           "terms": [
-            "v_hiroi",
+            "char_yamakawa",
+            "v_sou",
+            "p_ne",
+            "g_da",
+            "v_ookii",
             "v_ta",
-            {
-              "id": "v_aru",
-              "form": "polite_mashita"
-            }
+            "p_ga",
+            "v_takusan",
+            { "id": "v_aru", "form": "plain_past" },
+            "p_yo"
           ]
         },
         {
-          "spk": "A",
-          "jp": "何を しましたか。",
-          "en": "What did you do?",
+          "spk": "りきぞ",
+          "jp": "車を 借りて、友だちと 乗り回したけど、運転は むずかしかった。",
+          "en": "We rented a car and drove around with friends, but the driving was difficult.",
           "terms": [
-            "v_nani",
-            {
-              "id": "v_suru",
-              "form": "polite_mashita"
-            }
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "車を 借りて、友だちと 乗り回しました。",
-          "en": "We rented a car and drove around with friends.",
-          "terms": [
-            "k_kuruma",
-            {
-              "id": "v_kariru",
-              "form": "te_form"
-            },
+            "char_rikizo",
+            "v_kuruma",
+            "p_wo",
+            { "id": "v_kariru", "form": "te_form" },
             "v_tomodachi",
-            {
-              "id": "v_norimawasu",
-              "form": "polite_mashita"
-            }
+            "p_to",
+            { "id": "v_norimawasu", "form": "plain_past" },
+            "p_kedo",
+            "v_unten",
+            "p_wa",
+            { "id": "v_muzukashii", "form": "plain_past_adj" }
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "また 行きたいな。来年は 海も 見たい。",
+          "en": "I want to go again. Next year I also want to see the sea.",
+          "terms": [
+            "char_yamakawa",
+            "v_mata",
+            { "id": "v_iku", "form": "plain_desire_tai" },
+            "p_na",
+            "v_rainen",
+            "p_wa",
+            "v_umi",
+            "p_mo",
+            { "id": "v_miru", "form": "plain_desire_tai" }
           ]
         }
       ]
@@ -467,11 +534,10 @@
           "terms": [
             "v_sengetsu",
             "v_hokkaidou",
+            "p_kara",
             "v_toukyou",
-            {
-              "id": "v_iku",
-              "form": "polite_mashita"
-            }
+            "p_e",
+            { "id": "v_iku", "form": "polite_mashita" }
           ]
         },
         {
@@ -479,24 +545,31 @@
           "en": "Because there are many people in Tokyo, driving a car is difficult.",
           "terms": [
             "v_toukyou",
+            "p_wa",
             "v_hito",
-            "v_ooi",
-            "k_kuruma",
+            "p_ga",
+            { "id": "v_ooi", "form": "polite_adj" },
+            "g_desu",
+            "p_kara_because",
+            "v_kuruma",
+            "p_no",
             "v_unten",
-            "v_muzukashii"
+            "p_wa",
+            { "id": "v_muzukashii", "form": "polite_adj" },
+            "g_desu"
           ]
         },
         {
-          "jp": "私は 電車に 何回も 乗りました。",
+          "jp": "わたしは 電車に 何回も 乗りました。",
           "en": "I rode the train many times.",
           "terms": [
-            "k_watashi",
+            "v_watashi",
+            "p_wa",
             "v_densha",
+            "p_ni",
             "v_nankai",
-            {
-              "id": "v_noru",
-              "form": "polite_mashita"
-            }
+            "p_mo",
+            { "id": "v_noru", "form": "polite_mashita" }
           ]
         },
         {
@@ -504,11 +577,10 @@
           "en": "Tokyo's food was delicious.",
           "terms": [
             "v_toukyou",
+            "p_no",
             "v_ryouri",
-            {
-              "id": "v_oishii",
-              "form": "plain_past_adj"
-            },
+            "p_wa",
+            { "id": "v_oishii", "form": "plain_past_adj" },
             "g_desu"
           ]
         },
@@ -517,11 +589,10 @@
           "en": "Next year, I want to go overseas.",
           "terms": [
             "v_rainen",
+            "p_wa",
             "v_kaigai",
-            {
-              "id": "v_iku",
-              "form": "plain_desire_tai"
-            },
+            "p_e",
+            { "id": "v_iku", "form": "plain_desire_tai" },
             "g_desu"
           ]
         }
@@ -531,253 +602,444 @@
           "q": "どこから 東京へ 行きましたか。",
           "a": "北海道から 行きました。",
           "terms": [
+            "v_doko",
+            "p_kara",
+            "v_toukyou",
+            "p_e",
+            { "id": "v_iku", "form": "polite_mashita" },
+            "p_ka",
             "v_hokkaidou",
-            "v_toukyou"
+            "p_kara",
+            { "id": "v_iku", "form": "polite_mashita" }
           ]
         },
         {
-          "q": "東京で 車の 運転を しましたか。",
-          "a": "いいえ、電車に 乗りました。",
+          "q": "東京で 電車に 何回 乗りましたか。",
+          "a": "何回も 乗りました。",
           "terms": [
-            "v_unten",
+            "v_toukyou",
+            "p_de",
             "v_densha",
-            "v_noru"
-          ]
-        },
-        {
-          "q": "どうして 運転は むずかしいですか。",
-          "a": "人が 多いですから。",
-          "terms": [
-            "v_hito",
-            "v_ooi"
+            "p_ni",
+            "v_nankai",
+            { "id": "v_noru", "form": "polite_mashita" },
+            "p_ka",
+            "v_nankai",
+            "p_mo",
+            { "id": "v_noru", "form": "polite_mashita" }
           ]
         },
         {
           "q": "来年、どこへ 行きたいですか。",
           "a": "海外へ 行きたいです。",
           "terms": [
-            "v_kaigai"
+            "v_rainen",
+            "v_doko",
+            "p_e",
+            { "id": "v_iku", "form": "plain_desire_tai" },
+            "g_desu",
+            "p_ka",
+            "v_kaigai",
+            "p_e",
+            { "id": "v_iku", "form": "plain_desire_tai" },
+            "g_desu"
           ]
         }
       ]
     },
     {
       "type": "reading",
-      "title": "Reading Practice 2: My Hometown",
+      "title": "Reading Practice 2: My Hometown Kyoto",
       "passage": [
         {
-          "jp": "私の 家は 京都に あります。",
+          "jp": "わたしの 家は 京都に あります。",
           "en": "My house is in Kyoto.",
           "terms": [
-            "k_watashi",
-            "k_ie",
-            "v_kyouto"
+            "v_watashi",
+            "p_no",
+            "v_ie",
+            "p_wa",
+            "v_kyouto",
+            "p_ni",
+            { "id": "v_aru", "form": "polite_masu" }
           ]
         },
         {
-          "jp": "京都は 古い 都です。",
-          "en": "Kyoto is an old capital.",
+          "jp": "京都は 日本の 古い 都です。",
+          "en": "Kyoto is Japan's old capital.",
           "terms": [
             "v_kyouto",
+            "p_wa",
+            "v_nihon",
+            "p_no",
             "v_furui",
-            "v_miyako"
+            "v_miyako",
+            "g_desu"
           ]
         },
         {
           "jp": "家の 近くに 海は ありませんが、きれいな 山と 田が あります。",
           "en": "There is no sea near my house, but there are beautiful mountains and rice fields.",
           "terms": [
-            "k_ie",
-            {
-              "id": "v_chikai",
-              "form": "adverbial"
-            },
+            "v_ie",
+            "p_no",
+            { "id": "v_chikai", "form": "adverbial" },
+            "p_ni",
             "v_umi",
-            "v_kirei",
-            "k_yama",
-            "v_ta"
+            "p_wa",
+            { "id": "v_aru", "form": "polite_negative" },
+            "p_ga_but",
+            { "id": "v_kirei", "form": "attributive_na" },
+            "v_yama",
+            "p_to",
+            "v_ta",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" }
           ]
         },
         {
-          "jp": "私は よく 自転車で 山へ 行きます。",
+          "jp": "わたしは よく 自転車で 山へ 行きます。",
           "en": "I often go to the mountains by bicycle.",
           "terms": [
-            "k_watashi",
+            "v_watashi",
+            "p_wa",
             "v_yoku",
             "v_jitensha",
-            "k_yama",
-            {
-              "id": "v_iku",
-              "form": "polite_masu"
-            }
+            "p_de",
+            "v_yama",
+            "p_e",
+            { "id": "v_iku", "form": "polite_masu" }
           ]
         },
         {
-          "jp": "山の上から 見る まちは きれいです。",
+          "jp": "山の 上から 見る 町は きれいです。",
           "en": "The town seen from the top of the mountain is beautiful.",
           "terms": [
-            "k_yama",
-            "k_ue",
-            "v_miru",
-            "k_machi",
-            "v_kirei"
+            "v_yama",
+            "p_no",
+            "v_ue",
+            "p_kara",
+            { "id": "v_miru", "form": "plain_form" },
+            "v_machi",
+            "p_wa",
+            { "id": "v_kirei", "form": "polite_adj" }
           ]
         }
       ],
       "questions": [
         {
-          "q": "私の 家は どこに ありますか。",
+          "q": "この 人の 家は どこに ありますか。",
           "a": "京都に あります。",
           "terms": [
-            "v_kyouto"
+            "v_kono",
+            "v_hito",
+            "p_no",
+            "v_ie",
+            "p_wa",
+            "v_doko",
+            "p_ni",
+            { "id": "v_aru", "form": "polite_masu" },
+            "p_ka",
+            "v_kyouto",
+            "p_ni",
+            { "id": "v_aru", "form": "polite_masu" }
           ]
         },
         {
           "q": "家の 近くに 何が ありますか。",
-          "a": "山と 田が あります。",
+          "a": "きれいな 山と 田が あります。",
           "terms": [
-            "k_yama",
-            "v_ta"
-          ]
-        },
-        {
-          "q": "海が ありますか。",
-          "a": "いいえ、ありません。",
-          "terms": [
-            "v_umi"
+            "v_ie",
+            "p_no",
+            { "id": "v_chikai", "form": "adverbial" },
+            "p_ni",
+            "v_nani",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" },
+            "p_ka",
+            { "id": "v_kirei", "form": "attributive_na" },
+            "v_yama",
+            "p_to",
+            "v_ta",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" }
           ]
         },
         {
           "q": "何で 山へ 行きますか。",
           "a": "自転車で 行きます。",
           "terms": [
-            "v_jitensha"
+            "v_nan",
+            "p_de",
+            "v_yama",
+            "p_e",
+            { "id": "v_iku", "form": "polite_masu" },
+            "p_ka",
+            "v_jitensha",
+            "p_de",
+            { "id": "v_iku", "form": "polite_masu" }
           ]
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Drill 1: Vocabulary",
-      "instructions": "Select the correct Kanji for the meaning.",
+      "title": "ドリル 1: かんじの よみかた（Kanji Readings）",
+      "instructions": "Choose the correct reading for each kanji word.",
       "items": [
         {
           "kind": "mcq",
-          "q": "[Tokyo] is big.",
+          "q": "[東京] の よみかたは？",
           "choices": [
-            "東京",
-            "西京",
-            "東都",
-            "京東"
+            "とうきょう",
+            "ひがしきょう",
+            "とうと",
+            "きょうと"
           ],
-          "answer": "東京",
-          "terms": [
-            "v_toukyou"
-          ]
+          "answer": "とうきょう"
         },
         {
           "kind": "mcq",
-          "q": "I like the [sea].",
+          "q": "[京都] の よみかたは？",
           "choices": [
-            "海",
-            "池",
-            "田",
-            "毎"
+            "きょうと",
+            "とうきょう",
+            "みやこと",
+            "きょうつ"
           ],
-          "answer": "海",
-          "terms": [
-            "k_umi"
-          ]
+          "answer": "きょうと"
         },
         {
           "kind": "mcq",
-          "q": "[Bicycle]",
+          "q": "[自転車] の よみかたは？",
           "choices": [
-            "自転車",
-            "自分",
-            "自動車",
-            "回転"
+            "じてんしゃ",
+            "じどうしゃ",
+            "じてんき",
+            "てんしゃ"
           ],
-          "answer": "自転車",
-          "terms": [
-            "v_jitensha"
-          ]
+          "answer": "じてんしゃ"
         },
         {
           "kind": "mcq",
-          "q": "How many [times]?",
+          "q": "[海外] の よみかたは？",
           "choices": [
-            "回",
-            "周",
-            "何",
-            "同"
+            "かいがい",
+            "うみそと",
+            "かいそと",
+            "かいわ"
           ],
-          "answer": "回",
-          "terms": [
-            "k_kai"
-          ]
+          "answer": "かいがい"
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Drill 2: Grammar & Context",
-      "instructions": "Fill in the blank.",
+      "title": "ドリル 2: ことばを えらぶ（Vocabulary）",
+      "instructions": "Choose the correct word to complete the sentence.",
       "items": [
         {
           "kind": "mcq",
-          "q": "父は 車を ______ します。",
+          "q": "今回は 京都 ______ です。東京には 行きません。",
           "choices": [
-            "運転",
-            "自転車",
-            "回転",
-            "運動"
+            "だけ",
+            "だから",
+            "しか",
+            "ながら"
           ],
-          "answer": "運転",
+          "answer": "だけ",
           "terms": [
-            "v_unten"
+            "v_konkai",
+            "p_wa",
+            "v_kyouto",
+            "p_dake",
+            "g_desu",
+            "v_toukyou",
+            "p_ni",
+            "p_wa",
+            { "id": "v_iku", "form": "polite_negative" }
           ]
         },
         {
           "kind": "mcq",
-          "q": "日本の 古い ______ は 京都です。",
+          "q": "先月、北海道から 東京 ______ 行きました。",
           "choices": [
-            "都",
-            "京",
-            "市",
-            "町"
+            "へ",
+            "に",
+            "で",
+            "を"
           ],
-          "answer": "都",
+          "answer": "へ",
           "terms": [
-            "v_miyako"
+            "v_sengetsu",
+            "v_hokkaidou",
+            "p_kara",
+            "v_toukyou",
+            "p_e",
+            { "id": "v_iku", "form": "polite_mashita" }
           ]
         },
         {
           "kind": "mcq",
-          "q": "夏休みに ______ へ 行きました。",
+          "q": "自転車で 道を ______。",
           "choices": [
-            "北海道",
-            "北海田",
-            "北海都",
-            "北海"
-          ],
-          "answer": "北海道",
-          "terms": [
-            "v_hokkaidou"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "新しい 自転車を ______。",
-          "choices": [
-            "乗り回す",
-            "乗り回します",
-            "乗り回して",
-            "乗り回しました"
+            "乗り回しました",
+            "転びました",
+            "乗りました",
+            "回りました"
           ],
           "answer": "乗り回しました",
           "terms": [
-            "v_norimawasu"
+            "v_jitensha",
+            "p_de",
+            "v_michi",
+            "p_wo",
+            { "id": "v_norimawasu", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "北海道の ______ は とても きれいでした。",
+          "choices": [
+            "海",
+            "田",
+            "都",
+            "転"
+          ],
+          "answer": "海",
+          "terms": [
+            "v_hokkaidou",
+            "p_no",
+            "v_umi",
+            "p_wa",
+            "v_totemo",
+            { "id": "v_kirei", "form": "polite_past_adj" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "海外へ 行ったことが ______。",
+          "choices": [
+            "あります",
+            "います",
+            "できます",
+            "なります"
+          ],
+          "answer": "あります",
+          "terms": [
+            "v_kaigai",
+            "p_e",
+            { "id": "v_iku", "form": "plain_past" },
+            "v_koto",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "ドリル 3: ぶんを つくる（Grammar & Forms）",
+      "instructions": "Choose the correct form or particle to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "自転車に 乗ったり、写真を とったり ______。",
+          "choices": [
+            "します",
+            "しない",
+            "してください",
+            "しながら"
+          ],
+          "answer": "します",
+          "terms": [
+            "v_jitensha",
+            "p_ni",
+            { "id": "v_noru", "form": "tari_form" },
+            "v_shashin",
+            "p_wo",
+            { "id": "v_toru", "form": "tari_form" },
+            { "id": "v_suru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "写真を とり ______ 旅行しました。",
+          "choices": [
+            "ながら",
+            "ために",
+            "てから",
+            "ように"
+          ],
+          "answer": "ながら",
+          "terms": [
+            "v_shashin",
+            "p_wo",
+            { "id": "v_toru", "form": "nagara_form" },
+            { "id": "v_ryokou", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "来年は 海外へ 行き ______。",
+          "choices": [
+            "たいです",
+            "たくないです",
+            "ましょう",
+            "ません"
+          ],
+          "answer": "たいです",
+          "terms": [
+            "v_rainen",
+            "p_wa",
+            "v_kaigai",
+            "p_e",
+            { "id": "v_iku", "form": "plain_desire_tai" },
+            "g_desu"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "車の 運転が ______ ので、いつも 電車に 乗ります。",
+          "choices": [
+            "できない",
+            "できます",
+            "できました",
+            "できて"
+          ],
+          "answer": "できない",
+          "terms": [
+            "v_kuruma",
+            "p_no",
+            "v_unten",
+            "p_ga",
+            { "id": "v_dekiru", "form": "plain_negative" },
+            "p_node",
+            "v_itsumo",
+            "v_densha",
+            "p_ni",
+            { "id": "v_noru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "北海道の 旅行、楽しかった ______、また 行きたいです。",
+          "choices": [
+            "から",
+            "ために",
+            "ながら",
+            "ように"
+          ],
+          "answer": "から",
+          "terms": [
+            "v_hokkaidou",
+            "p_no",
+            "v_ryokou",
+            { "id": "v_tanoshii", "form": "plain_past_adj" },
+            "p_kara_because",
+            "v_mata",
+            { "id": "v_iku", "form": "plain_desire_tai" },
+            "g_desu"
           ]
         }
       ]
