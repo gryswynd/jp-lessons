@@ -1846,23 +1846,55 @@ Each conjugation form in `conjugation_rules.json` has an `introducedIn` field sp
 
 ### Quick reference: form availability by lesson
 
-| Lesson | Newly available forms |
-|---|---|
-| N5.1 | `polite_adj` |
-| N5.5 | `polite_masu`, `polite_mashita`, `polite_negative`, `polite_past_negative`, `te_form`, `polite_negative_te`, `plain_past` |
-| N5.8 | `plain_desire_tai`, `desire_tai_negative`, `polite_desire_tai_negative`, `polite_volitional_mashou` |
-| N5.9 | `plain_negative`, `plain_past_negative` |
-| G9 (N5.9+) | `plain_volitional`, `plain_past_adj`, `plain_appearance_sou`, `plain_desire_tai_past` |
-| N5.10 | `polite_past_adj`, `adverbial`, `desire_tai_past` |
-| N5.11 | `appearance_sou` |
-| N4.3 | `potential`, `polite_potential`, `potential_negative`, `plain_potential_negative`, `polite_potential_past`, `plain_potential_past` |
-| N4.10 | `tari_form`, `nagara_form` |
-| G25 (~N4.34) | `sugiru_form`, `polite_sugiru_form`, `sugiru_past`, `polite_sugiru_past` |
-| G22 (~N4.25) | `conditional_ba` |
-| N4.25 | `conditional_tara` |
-| N4.31 | `passive`, `polite_passive`, `polite_passive_past`, `plain_passive_past`, `causative`, `polite_causative`, `polite_causative_past`, `plain_causative_past`, `causative_passive`, `polite_causative_passive` |
+This table lists **everything** that unlocks at each point — conjugation forms, particles, grammar patterns, copula forms, and grammar-specific vocabulary. Use it as a single lookup to determine what you can and cannot use at any given lesson.
 
-Before N5.5, only `polite_adj` and dictionary forms are available. This means N5.1–N5.4 content is limited to noun-です sentences, い-adjective+です sentences, and verbs in dictionary form. Plan sentences accordingly.
+#### N5 unlocks
+
+| Lesson / Grammar | Conjugation forms | Particles | Patterns, copulas & grammar vocab |
+|---|---|---|---|
+| G1 (after N5.1) | `polite_adj` | — | `g_desu` (です), `g_da` (だ), `g_deshou` (でしょう); copula system: です/だ, でした/だった, ではありません/じゃない |
+| G2 (after N5.1) | — | — | Ko-so-a-do demonstratives (これ/それ/あれ/どれ, この/その/あの/どの, etc.) |
+| G3 (after G1) | — | `p_wa` (は), `p_ga` (が), `p_no` (の), `p_ka` (か), `p_ka_or` (か "or"), `p_wo` (を), `p_yo` (よ), `p_ne` (ね), `p_ja` (じゃ), `p_dewa` (では) | — |
+| G4 (after N5.2) | — | `p_mo` (も), `p_to` (と "and/with"), `p_ya` (や), `p_kara` (から "from"), `p_made` (まで), `p_made_ni` (までに), `p_ni` (に — time) | — |
+| N5.4 | — | `p_goro` (ごろ) | — |
+| G5 (after N5.5) | — | `p_de` (で — location/means), `p_e` (へ) | に extended to destination + existence location; いる vs ある distinction |
+| G6 (after G5) | — | `p_dewa_then` (では "well then") | Verb type identification (godan/ichidan/irregular) — no new forms, but prerequisite knowledge for all subsequent verb conjugation |
+| G7 (after G6) | `polite_masu`, `polite_mashita`, `polite_negative`, `polite_past_negative` | — | — |
+| G8 (after G7) | `te_form`, `plain_past`, `polite_negative_te` | — | Structural patterns: てください (request), ないでください (negative request), なさい (firm command) |
+| G9 (after N5.Review.4) | `plain_desire_tai`, `desire_tai_negative`, `polite_desire_tai_negative`, `polite_volitional_mashou`, `plain_volitional`, `plain_past_adj`, `plain_appearance_sou`, `plain_desire_tai_past` | `p_na` (な — sentence-final) | Structural patterns: ている/ています (progressive + state), ～たいです (desire), ～ましょう (suggestion), ～でしょう (conjecture); たがる (others' desire) |
+| G10 (after N5.9) | `plain_negative`, `plain_past_negative` | `p_ga_but` (が "but"), `p_kara_because` (から "because"), `p_kedo` (けど), `p_node` (ので) | Structural patterns: のです/なんです (explanatory); plain commands ～ろ/～え; plain prohibition ～な; casual speech register unlocked |
+| G11 (after N5.10) | `polite_past_adj`, `plain_past_adj` (reinforced), `adverbial`, `desire_tai_past`, `plain_desire_tai_past` (reinforced) | — | い-adjective full conjugation: ～くて (te-form), ～く (adverbial), ～かった (past), ～くない (negative); exception: いい→よ- stem |
+| G12 (after N5.11) | `appearance_sou`, `attributive_na` | — | な-adjective full conjugation: ～な (attributive), ～に (adverbial), ～で (te-form), ～でした (past polite), ～ではない (negative) |
+| N5.13 | — | `p_to_quote` (と — quotation) | と after 「...」or with 思う/知る = quotation marker (distinct from と "and/with") |
+
+#### N4 unlocks
+
+| Lesson / Grammar | Conjugation forms | Particles | Patterns, copulas & grammar vocab |
+|---|---|---|---|
+| G13 (after N4.3) | `potential`, `polite_potential`, `potential_negative`, `plain_potential_negative`, `polite_potential_past`, `plain_potential_past` | — | を→が shift with potential verbs; ことができる (formal potential); colloquial ら-dropping |
+| G14 (after N4.5) | — | — | **Give/receive system:** `v_ageru` (あげる), `v_morau` (もらう) — both lesson_ids G14; `v_kureru` (くれる) available from N4.3; structural patterns: てあげる, てくれる, てもらう; `v_hoshii` (ほしい) from N5.8; てほしい (want someone to do) |
+| G15 (after N4.5) | — | `p_yori` (より), `p_hodo` (ほど), `p_kurai` (くらい/ぐらい) | **Comparison patterns:** `v_hou` (ほう) from N4.5; `v_ichiban` (いちばん) from N5.1; AよりBのほうが～ (comparison); Aはbほど～ない (negative degree); ～さ (adjective→noun: 高さ, 大きさ) |
+| G16 (after N4.6) | — | — | **Manner/similarity:** `v_mitai` (みたい) from N4.6; のように/のような (formal), みたいに/みたいな (casual) |
+| G18 (after N4.10) | — | — | **Transitive/intransitive pairs** (出す/出る, 入れる/入る, 始める/始まる, etc.); を = transitive, が = intransitive |
+| G19 (after N4.10) | `tari_form`, `nagara_form` | `p_nagara` (ながら), `p_noni` (のに), `p_demo_but` (でも "but" — sentence-initial) | **Sequential/concurrent actions:** てから (after doing), あとで (after), まえに (before), `v_tame` (ため) from N4.10 → ために (in order to); ～たり～たりする (listing); ～ながら (while doing) |
+| G17 (after N4.13) | — | `p_dake` (だけ), `p_shika` (しか), `p_bakari` (ばかり), `p_demo` (でも "even/any~") | **Limiting expressions:** だけ (just/only); しか＋negative (nothing but); ばかり (nothing but / just did) |
+| G20 (after N4.14) | — | `p_shi` (し) | **Contrast/concession:** のに (despite — uses `p_noni` from G19), ても (even if), し (and what's more / listing reasons) |
+| G28 (after N4.14) | — | — | **Conversation mechanics:** Fillers (えーと, あのう, うーん), 相槌 (そうですね, なるほど, へえ), discourse markers (実は, つまり) |
+| G29 (after N4.14) | — | — | **Appearance/hearsay:** stem＋そうだ (looks like), plain form＋そうだ (I heard); exception: いい→よさそう |
+| G21 (after N4.21) | — | — | **Permission/prohibition:** てもいい (may), てはいけない (must not), なくてもいい (don't have to) |
+| G30 (after N4.21) | — | — | **Directional て-form:** てくる (toward speaker/present), ていく (away/into future), てある (resultant state from intentional action) |
+| G22 (after N4.25) | `conditional_ba`, `conditional_tara` | `p_to_conditional` (と — automatic result) | **Conditional system:** ～ば (general/logical), ～たら (temporal/sequential), ～なら (contextual), ～と (automatic/natural); なければいけない (must); ～ば～ほど (the more… the more…) |
+| G31 (after N4.25) | — | — | **ように patterns:** ようにする (make effort to), ようになる (come to be able to), ように (purpose "so that"); `v_you` (よう) from N4.32 |
+| G27 (after N4.30) | — | — | **Thoughts/experience:** と思う (I think), と思っている (ongoing belief), たことがある (have experienced); negation goes inside quoted clause |
+| G23 (after N4.31) | `passive`, `polite_passive`, `polite_passive_past`, `plain_passive_past` | — | **Passive voice:** direct passive, adversative "suffering" passive (雨に降られた), impersonal passive; を→が shift |
+| G24 (after N4.31) | `causative`, `polite_causative`, `polite_causative_past`, `plain_causative_past`, `causative_passive`, `polite_causative_passive` | — | **Causative voice:** ～させる (make/let do); causative-passive ～させられる (made to do against will) |
+| G25 (after N4.34) | `sugiru_form`, `polite_sugiru_form`, `sugiru_past`, `polite_sugiru_past` | — | **Advanced verb compounds:** てみる (try doing), ておく (do in advance), てしまう (complete/regret); ～すぎる (too much); ～とする (attempt) |
+| G26 (after N4.34) | — | — | **Advanced adjective patterns:** ～くなる/～になる (become), ～くする/～にする (make/cause), ～くても/～でも (even if), ～くなければ/～でなければ (must be) |
+| N4.36 | — | `p_kadouka` (かどうか "whether or not"), `p_ni_tsuite` (について "about/regarding") | — |
+
+#### Summary: what's available before key milestones
+
+Before N5.5, only `polite_adj`, dictionary forms, copulas (です/だ), and particles from G3–G4 are available. This means N5.1–N5.4 content is limited to noun-です sentences, い-adjective+です sentences, and verbs in dictionary form. Plan sentences accordingly.
 
 **Desire expressions (N5.8+).** `plain_desire_tai` is available from N5.8. For polite desire sentences (〜たいです), use `plain_desire_tai` + `g_desu` (two chips). For plain/casual desire (〜たい without です), use `plain_desire_tai` alone. The deprecated `desire_tai` form must never be used — see [desire_tai — deprecated](#desire_tai--deprecated-always-use-plain_desire_tai--g_desu). The reinforcement schedule expects desire expressions from N5.9 onward (G9 active window); N5.8 content may use `plain_desire_tai` but is not required to meet reinforcement minimums for it.
 
