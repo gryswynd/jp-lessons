@@ -1766,7 +1766,6 @@ These words may be written in hiragana and used in content **from the listed les
 | `v_suki` | すき | N5.7 | 好き | N4.4 | Na-adjective "like" — needed for food/preference conversations |
 | `v_tsugi` | つぎ | N5.4 | 次 | (not taught) | "Next" — needed for sequencing and time expressions. 次 kanji is not formally introduced in any lesson; always write in hiragana. |
 | `v_koto` | こと | N5.9 | 事 | N4.14 | Nominalizer "thing/fact" — needed for ～ことがある, ～ことにする patterns. Write as こと before N4.14. |
-| `v_omou` | おもう | N4.11 | 思う | N4.30 | Core thought verb — essential for と思う (G27, unlocks after N4.10). 思 kanji not taught until N4.30; write as おもう for all content from N4.11 through N4.29. |
 | `v_kinou` | きのう | N5.4 | 昨日 | (not taught) | "Yesterday" — essential time word paired with きょう. 昨 kanji is not formally introduced in any lesson; always write in hiragana. |
 | `v_namae` | 名まえ | N5.1 | 名前 | N5.9 | Essential noun for introductions ("what is your name?"). 名 is N5.1 kanji; 前 is N5.9. Write as 名まえ until N5.9, then 名前. |
 
@@ -1896,7 +1895,6 @@ Each milestone groups forms that unlock together. The **active reinforcement win
 | **Comparison + degree** (G15) | N4.5 | N4.6–N4.8 | ≥1 `より` comparison, ≥1 `いちばん` superlative or `ほど` degree pattern | Comparison/degree expressions appear where natural (describing preferences, rankings, qualities) |
 | **Manner & similarity** (G16) | N4.6 | N4.7–N4.9 | ≥1 `ように` or `みたいに` manner/similarity expression | Manner expressions appear where actions are described by how they resemble something else |
 | **Transitive & intransitive pairs** (G18) | N4.10 | N4.11–N4.13 | ≥1 transitive/intransitive pair used contrastively (e.g. 開ける vs 開く) | Transitive/intransitive verbs selected correctly for the subject/object role in each sentence |
-| **Thoughts & experience** (G27) | N4.10 | N4.11–N4.13 | ≥1 `と思う` (I think / I thought), ≥1 `たことがある` (have done) | Both patterns appear where expressing opinion or past experience is natural |
 | **Tari + nagara** (G19) | N4.10 | N4.11–N4.13 | ≥1 `～たり～たりする` listing, ≥1 `～ながら` simultaneous action | Both patterns appear where natural |
 | **Contrast, concession & listing** (G20) | N4.14 | N4.15–N4.17 | ≥1 `のに` (despite/unexpectedly), ≥1 `ても` (even if/even though), ≥1 `し` (and what's more) | All three patterns appear where contrast, concession, or additive reasoning is natural |
 | **Conversation mechanics** (G28) | N4.14 | N4.15–N4.17 | ≥1 floor-holding or hesitation filler (あのう, ええと, そうですね), ≥1 back-channel response (あいづち: そうですか, なるほど, へえ) | Conversation fillers and responses appear in casual or semi-formal dialogue naturally; not every conversation needs them, but prolonged absence across multiple lessons is a gap |
@@ -1907,6 +1905,7 @@ Each milestone groups forms that unlock together. The **active reinforcement win
 | **Conditionals** (G22) | N4.25 | N4.26–N4.28 | ≥1 `～たら` or `～ば` conditional in conversation or reading | At least one conditional form (たら or ば) appears where natural |
 | **ように patterns** (G31) | N4.25 | N4.26–N4.28 | ≥1 `ようにする` (make effort to) or `ようになる` (come to be able to / come to do) | Both patterns appear where expressing goal-oriented effort or gradual change is natural |
 | **Passive + causative** (G23/G24) | N4.31 | N4.32–N4.34 | ≥1 passive, ≥1 causative across the lesson | Both voice patterns appear where natural |
+| **Thoughts & experience** (G27) | N4.30 | N4.31–N4.33 | ≥1 `と思う` (I think / I thought), ≥1 `たことがある` (have done) | Both patterns appear where expressing opinion or past experience is natural |
 | **Auxiliary compounds** (G25) | N4.34 | N4.35–N4.36 | ≥1 `てみる` (try) or `ておく` (prepare) or `てしまう` (complete/regret) | Auxiliary verb compounds appear where experimentation, preparation, or completion is discussed |
 | **Excessive degree** (G25) | N4.34 | N4.35–N4.36 | ≥1 `～すぎる` excessive expression | ～すぎる appears where overabundance or excess is natural (eating too much, too expensive, too noisy) |
 
@@ -1937,8 +1936,8 @@ Beyond individual conjugation forms, these **structural patterns** combine forms
 | `ように / みたいに` (manner, similarity) | G16 | N4.7+ | Use occasionally. Natural contexts: describing how someone acts, what something resembles, role-modelling behaviour. |
 | `Verb-てくる / ていく` (directional te-form) | G30 | N4.22+ | Use in at least 1 conversation or reading per lesson. Natural contexts: arriving with something, gradual change over time, continuing a habit going forward. |
 | `ようにする / ようになる` (goal/change) | G31 | N4.26+ | Use occasionally. Natural contexts: habit-forming, improvement goals, gradual ability gain. |
-| `と思う` (I think / thought) | G27 | N4.11+ | Use in at least 1 conversation per lesson. Natural contexts: expressing opinions, hedging a statement, reporting someone's thought. |
-| `たことがある` (have done / experience) | G27 | N4.11+ | Use occasionally. Natural contexts: discussing past experiences, travel, food, activities. |
+| `と思う` (I think / thought) | G27 | N4.31+ | Use in at least 1 conversation per lesson. Natural contexts: expressing opinions, hedging a statement, reporting someone's thought. |
+| `たことがある` (have done / experience) | G27 | N4.31+ | Use occasionally. Natural contexts: discussing past experiences, travel, food, activities. |
 | `Verb-たり Verb-たりする` (listing actions) | G19 | N4.11+ | Use in at least 1 conversation or reading per lesson. Natural contexts: describing weekends, hobbies, routines. |
 | `Verb-ながら` (while doing) | G19 | N4.11+ | Use occasionally. Natural contexts: multitasking descriptions, daily routines. |
 | `～すぎる` (excessive degree) | G25 | N4.35+ | Use occasionally. Natural contexts: eating too much, too expensive, too loud, overwork. |
@@ -1975,10 +1974,11 @@ Warmup items are an ideal place to reinforce recently-unlocked grammar because t
 - N4.4–N4.6 warmups should include at least 1 item exercising potential form (できる or verb potential) with prior vocabulary
 - N4.6–N4.8 warmups should include at least 1 item using give/receive (あげる/もらう/くれる) and 1 item using comparison patterns (より, いちばん) with prior vocabulary
 - N4.7–N4.9 warmups should include at least 1 item using ように/みたいに manner expression with prior vocabulary
-- N4.11–N4.13 warmups should include at least 1 item using たり pattern or と思う with prior vocabulary
+- N4.11–N4.13 warmups should include at least 1 item using たり pattern or ながら with prior vocabulary
 - N4.15–N4.17 warmups should include at least 1 item using のに/ても/し contrast-concession or そうだ with prior vocabulary
 - N4.22–N4.24 warmups should include at least 1 item using てくる/ていく directional pattern with prior vocabulary
 - N4.26–N4.28 warmups should include at least 1 item using ようにする/ようになる or a conditional (たら/ば) with prior vocabulary
+- N4.31–N4.33 warmups should include at least 1 item using と思う or たことがある with prior vocabulary
 
 This ensures students engage with new grammar patterns using familiar words, reducing cognitive load.
 

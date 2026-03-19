@@ -1904,7 +1904,7 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 |---|---|
 | **ID** | `G27` |
 | **Level** | N4 |
-| **Unlocks after** | N4.10 |
+| **Unlocks after** | N4.30 |
 | **Icon** | 💭 |
 | **Estimated minutes** | 25 |
 | **Grammar forms** | `plain_past` |
