@@ -229,6 +229,107 @@
     },
     {
       "type": "grammarRule",
+      "id": "rule_te_irregular",
+      "pattern": [
+        {
+          "label": "する",
+          "color": "verb",
+          "text": "する → して"
+        },
+        {
+          "label": "来る",
+          "color": "verb",
+          "text": "来る → 来て (きて)"
+        }
+      ],
+      "meaning": "Irregular て-form: する → して, 来る → 来て (きて)",
+      "explanation": "Japanese has two fully irregular verbs: する (to do) and 来る (to come). Their て-forms cannot be derived from any rule — they must be memorised. Fortunately, you already know them: する → して is the same stem used in します, and 来る → 来て (きて) has the same reading as きます. The kanji 来 keeps its written form in both.",
+      "notes": [
+        "する → して. (Not すて, not すって.) The reading changes completely: す → し.",
+        "来る → 来て (read as きて). The kanji 来 stays, but the reading shifts from く to き.",
+        "Both forms are identical to the ます-stem: する → し (します / して), 来る → き (きます / 来て).",
+        "Memory hook: if you know します and きます, you already know して and 来て — same stem, different ending.",
+        "These two verbs are also irregular in their negative stem: する → し + ないでください; 来る → こ + ないでください (reading changes again! こ, not き).",
+        "Negative reminder: する → しない, 来る → こない — completely different stems from the て-form."
+      ],
+      "examples": [
+        {
+          "parts": [
+            {
+              "text": "する",
+              "role": "verb",
+              "gloss": "dictionary form (to do)"
+            },
+            {
+              "text": "→ して",
+              "role": "predicate",
+              "gloss": "irregular て-form"
+            }
+          ],
+          "en": "to do → doing (and then...)",
+          "breakdown": "する is fully irregular. て-form = して. (ます-stem し + て = して)"
+        },
+        {
+          "parts": [
+            {
+              "text": "来る",
+              "role": "verb",
+              "gloss": "dictionary form (to come) — read くる"
+            },
+            {
+              "text": "→ 来て",
+              "role": "predicate",
+              "gloss": "irregular て-form — read きて"
+            }
+          ],
+          "en": "to come → coming (and then...)",
+          "breakdown": "来る is fully irregular. て-form = 来て (きて). The kanji stays but the reading changes: く→き."
+        },
+        {
+          "parts": [
+            {
+              "text": "勉強",
+              "role": "object",
+              "gloss": "studying"
+            },
+            {
+              "text": "し",
+              "role": "verb",
+              "gloss": "do(て)-"
+            },
+            {
+              "text": "て、",
+              "role": "predicate",
+              "gloss": "connector — links to next action"
+            },
+            {
+              "text": "駅",
+              "role": "object",
+              "gloss": "station"
+            },
+            {
+              "text": "に",
+              "role": "connector",
+              "gloss": "destination — WHERE I came (G5)"
+            },
+            {
+              "text": "来",
+              "role": "verb",
+              "gloss": "come"
+            },
+            {
+              "text": "ました",
+              "role": "predicate",
+              "gloss": "polite past — sets tense for both"
+            }
+          ],
+          "en": "I studied and then came to the station.",
+          "breakdown": "する → して (irregular); connects to 来ました (also irregular). Both irregulars in one sentence! Particle: に marks 駅 as the destination (G5)."
+        }
+      ]
+    },
+    {
+      "type": "grammarRule",
       "id": "rule_te_sequential",
       "pattern": [
         {
