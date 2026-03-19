@@ -352,14 +352,13 @@
         },
         {
           "spk": "A",
-          "jp": "自転車は 楽しいですね。何回 転んだことが ありますか。",
-          "en": "Bicycles are fun, aren't they. How many times have you fallen?",
+          "jp": "自転車は 楽しいですね。転んだことが ありますか。",
+          "en": "Bicycles are fun, aren't they. Have you ever fallen?",
           "terms": [
             "v_jitensha",
             "p_wa",
             { "id": "v_tanoshii", "form": "polite_adj" },
             "p_ne",
-            "v_nankai",
             { "id": "v_korobu", "form": "plain_past" },
             "v_koto",
             "p_ga",
@@ -831,7 +830,7 @@
             "かいわ"
           ],
           "answer": "かいがい"
-        },
+        }
       ]
     },
     {
