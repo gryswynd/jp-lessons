@@ -1233,7 +1233,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
 |---|---|
 | **ID** | `G13` |
 | **Level** | N4 |
-| **Unlocks after** | ~N4.3 (TBD by user) |
+| **Unlocks after** | N4.3 |
 | **Icon** | 💪 |
 | **Estimated minutes** | 25 |
 | **Grammar forms** | `potential`, `potential_negative` |
@@ -1275,7 +1275,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
 |---|---|
 | **ID** | `G14` |
 | **Level** | N4 |
-| **Unlocks after** | ~N4.5 (TBD) |
+| **Unlocks after** | N4.5 |
 | **Icon** | 🎁 |
 | **Estimated minutes** | 25 |
 | **Grammar forms** | `te_form` |
@@ -1338,7 +1338,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
 |---|---|
 | **ID** | `G15` |
 | **Level** | N4 |
-| **Unlocks after** | ~N4.5 (TBD) |
+| **Unlocks after** | N4.5 |
 | **Icon** | ⚖️ |
 | **Estimated minutes** | 25 |
 | **Particles** | `より`, `ほう`, `ほど`, `くらい`/`ぐらい` |
@@ -1450,7 +1450,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
 |---|---|
 | **ID** | `G17` |
 | **Level** | N4 |
-| **Unlocks after** | ~N4.7 (TBD) |
+| **Unlocks after** | N4.13 |
 | **Icon** | 🔒 |
 | **Estimated minutes** | 20 |
 | **Particles** | `だけ`, `しか`, `ばかり`, `でも` |
@@ -1543,7 +1543,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
 |---|---|
 | **ID** | `G19` |
 | **Level** | N4 |
-| **Unlocks after** | ~N4.10 (TBD) |
+| **Unlocks after** | N4.10 |
 | **Icon** | ⛓️ |
 | **Estimated minutes** | 25 |
 | **Grammar forms** | `te_form`, `tari_form` |
@@ -1583,7 +1583,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
 |---|---|
 | **ID** | `G20` |
 | **Level** | N4 |
-| **Unlocks after** | ~N4.14 (TBD) |
+| **Unlocks after** | N4.14 |
 | **Icon** | 🌀 |
 | **Estimated minutes** | 20 |
 | **Grammar forms** | `te_form` |
@@ -1638,7 +1638,7 @@ This is the pivotal lesson where students transition from polite-only speech to 
 |---|---|
 | **ID** | `G21` |
 | **Level** | N4 |
-| **Unlocks after** | ~N4.21 (TBD) |
+| **Unlocks after** | N4.21 |
 | **Icon** | 🚦 |
 | **Estimated minutes** | 20 |
 
@@ -1680,7 +1680,7 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 |---|---|
 | **ID** | `G22` |
 | **Level** | N4 |
-| **Unlocks after** | ~N4.25 (TBD) |
+| **Unlocks after** | N4.25 |
 | **Icon** | 🔀 |
 | **Estimated minutes** | 30 |
 | **Grammar forms** | `conditional_ba` |
@@ -1723,7 +1723,7 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 |---|---|
 | **ID** | `G23` |
 | **Level** | N4 |
-| **Unlocks after** | ~N4.31 (TBD) |
+| **Unlocks after** | N4.31 |
 | **Icon** | 🔄 |
 | **Estimated minutes** | 25 |
 | **Grammar forms** | `passive` |
@@ -1760,7 +1760,7 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 |---|---|
 | **ID** | `G24` |
 | **Level** | N4 |
-| **Unlocks after** | ~N4.31 (TBD) |
+| **Unlocks after** | N4.31 |
 | **Icon** | 🎭 |
 | **Estimated minutes** | 25 |
 | **Grammar forms** | `causative` |
@@ -1798,7 +1798,7 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
 |---|---|
 | **ID** | `G25` |
 | **Level** | N4 |
-| **Unlocks after** | ~N4.34 (TBD) |
+| **Unlocks after** | N4.34 |
 | **Icon** | 🧩 |
 | **Estimated minutes** | 30 |
 
@@ -2299,8 +2299,8 @@ Tip: "Do I HAVE to? → なければいけない. Do I NOT have to? → なく�
   - Attaches to plain form directly (no な/の needed)
   - Key contrast with ようだ: らしい signals indirect/secondhand evidence; ようだ signals direct observation
 - **THE 4-WAY COMPARISON** — this is the critical N3 test topic:
-  - そうだ (appearance, G27): looks like ~ (immediate visual impression) — おいしそう
-  - そうだ (hearsay, G27): I heard that ~ (reported speech) — おいしいそうだ
+  - そうだ (appearance, G29): looks like ~ (immediate visual impression) — おいしそう
+  - そうだ (hearsay, G29): I heard that ~ (reported speech) — おいしいそうだ
   - ようだ / みたいだ: it seems like ~ (inference from observed evidence) — おいしいようだ
   - らしい: apparently ~ (indirect evidence / typicality) — おいしいらしい
   - Each has a different evidence source and different attachment rules — this chart is the core of the lesson
