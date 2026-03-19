@@ -328,6 +328,30 @@
       "role": "about / regarding",
       "explanation": "Compound postposition に+ついて meaning 'about', 'regarding', or 'concerning'. Follows a noun. 日本語について話す = talk about the Japanese language. More formal than the English 'about'; common in academic and written contexts.",
       "introducedIn": "N4.36"
+    },
+    {
+      "id": "p_temo",
+      "particle": "ても",
+      "reading": "ても",
+      "role": "even if / even though",
+      "explanation": "Concessive conditional particle meaning 'even if' or 'even though'. Attaches to te-form of verbs (食べても = even if I eat), adjectives (高くても = even if it's expensive), or nouns+でも (学生でも = even if you're a student). The conclusion holds regardless of the conceded condition. 雨が降っても行きます = Even if it rains, I'll go.",
+      "introducedIn": "G20"
+    },
+    {
+      "id": "p_sou_da",
+      "particle": "そうだ",
+      "reading": "そうだ",
+      "role": "looks like / appears to be (appearance)",
+      "explanation": "Appearance-based conjecture suffix meaning 'looks like' or 'seems'. Attaches to verb ます-stem (降りそうだ = looks like it'll rain), i-adjective stem without い (おいしそうだ = looks delicious), or na-adjective stem (元気そうだ = looks healthy). Exception: いい → よさそうだ (NOT いそうだ). Negative: なさそうだ. Based on direct observation or visual impression.",
+      "introducedIn": "G29"
+    },
+    {
+      "id": "p_sou_da_hearsay",
+      "particle": "そうだ",
+      "reading": "そうだ",
+      "role": "I heard that / reportedly (hearsay)",
+      "explanation": "Hearsay suffix meaning 'I heard that' or 'reportedly'. Attaches to the PLAIN FORM of verbs (行くそうだ = I heard they're going), adjectives (おいしいそうだ = I heard it's delicious), or nouns+だ (学生だそうだ = I heard they're a student). Negative: ないそうだ. Based on reported information, not personal observation. Distinct from appearance そうだ which attaches to stems, not plain forms.",
+      "introducedIn": "G29"
     }
   ]
 }

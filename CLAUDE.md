@@ -1878,9 +1878,9 @@ This table lists **everything** that unlocks at each point — conjugation forms
 | G18 (after N4.10) | — | — | **Transitive/intransitive pairs** (出す/出る, 入れる/入る, 始める/始まる, etc.); を = transitive, が = intransitive |
 | G19 (after N4.10) | `tari_form`, `nagara_form` | `p_nagara` (ながら), `p_noni` (のに), `p_demo_but` (でも "but" — sentence-initial) | **Sequential/concurrent actions:** てから (after doing), あとで (after), まえに (before), `v_tame` (ため) from N4.10 → ために (in order to); ～たり～たりする (listing); ～ながら (while doing) |
 | G17 (after N4.13) | — | `p_dake` (だけ), `p_shika` (しか), `p_bakari` (ばかり), `p_demo` (でも "even/any~") | **Limiting expressions:** だけ (just/only); しか＋negative (nothing but); ばかり (nothing but / just did) |
-| G20 (after N4.14) | — | `p_shi` (し) | **Contrast/concession:** のに (despite — uses `p_noni` from G19), ても (even if), し (and what's more / listing reasons) |
+| G20 (after N4.14) | — | `p_shi` (し), `p_temo` (ても) | **Contrast/concession:** のに (despite — uses `p_noni` from G19), ても (even if), し (and what's more / listing reasons) |
 | G28 (after N4.14) | — | — | **Conversation mechanics:** Fillers (えーと, あのう, うーん), 相槌 (そうですね, なるほど, へえ), discourse markers (実は, つまり) |
-| G29 (after N4.14) | — | — | **Appearance/hearsay:** stem＋そうだ (looks like), plain form＋そうだ (I heard); exception: いい→よさそう |
+| G29 (after N4.14) | — | `p_sou_da` (そうだ — appearance), `p_sou_da_hearsay` (そうだ — hearsay) | **Appearance/hearsay:** stem＋そうだ (looks like), plain form＋そうだ (I heard); exception: いい→よさそう |
 | G21 (after N4.21) | — | — | **Permission/prohibition:** てもいい (may), てはいけない (must not), なくてもいい (don't have to) |
 | G30 (after N4.21) | — | — | **Directional て-form:** てくる (toward speaker/present), ていく (away/into future), てある (resultant state from intentional action) |
 | G22 (after N4.25) | `conditional_ba`, `conditional_tara` | `p_to_conditional` (と — automatic result) | **Conditional system:** ～ば (general/logical), ～たら (temporal/sequential), ～なら (contextual), ～と (automatic/natural); なければいけない (must); ～ば～ほど (the more… the more…) |
