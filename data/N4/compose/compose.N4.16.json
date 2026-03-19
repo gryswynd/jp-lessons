@@ -9,7 +9,7 @@
   "theme": "Write about a day with Rikizo and Pochi — describe their morning run, visit to the bank, and a nostalgic memory from last year.",
   "prompts": [
     {
-      "prompt": "Open by introducing Rikizo's morning routine with Pochi. What do they do every morning together? Use 走る and 毎朝.",
+      "prompt": "Open by describing Rikizo and Pochi's daily morning routine. What do they do together every morning? Use 走る and 毎朝.",
       "targets": [
         { "id": "v_hashiru", "count": 1 },
         { "id": "v_maiasa", "count": 1 }
@@ -21,7 +21,7 @@
       ]
     },
     {
-      "prompt": "Describe Pochi. What kind of animal is Pochi? Mention what Pochi looks like. Use 犬 and 動物.",
+      "prompt": "Introduce Pochi to the reader. What kind of animal is he, and what is he like? Use 犬 and 動物.",
       "targets": [
         { "id": "v_inu", "count": 1 },
         { "id": "v_doubutsu", "count": 1 }
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "prompt": "Describe their route through the neighborhood. Where do they run? Use 近所 and 運動.",
+      "prompt": "Describe today's running route. Where do they go, and why is running together good for Rikizo? Use 近所 and 運動.",
       "targets": [
         { "id": "v_kinjo", "count": 1 },
         { "id": "v_undou", "count": 1 }
@@ -45,7 +45,7 @@
       ]
     },
     {
-      "prompt": "Describe listening to music while running. What does Rikizo listen to during the run? Use 音楽 and ながら.",
+      "prompt": "Describe what Rikizo listens to while running. What makes the run more enjoyable? Use 音楽 and 走る.",
       "targets": [
         { "id": "v_ongaku", "count": 1 },
         { "id": "v_hashiru", "count": 1 }
@@ -57,19 +57,19 @@
       ]
     },
     {
-      "prompt": "Write about visiting the bank. Did you use the 自動 ATM or a manual window? Use 銀行 and お金.",
+      "prompt": "After today's run, Rikizo and Pochi have an errand. They need to go to the bank. Describe the visit. Use 銀行 and お金.",
       "targets": [
         { "id": "v_ginkou", "count": 1 },
         { "id": "v_okane", "count": 1 }
       ],
-      "model": "走った あとで、銀行に 行きました。自動の ATMで お金を 出しました。",
+      "model": "走った あとで、銀行に 行きました。ATMで お金を 出しました。",
       "vocabPool": [
         "v_ginkou", "v_okane", "v_dasu", "v_iku", "v_hashiru",
         "v_jidou", "v_shudou", "v_hakobu", "p_ni", "p_wo"
       ]
     },
     {
-      "prompt": "Something lucky happened on the way home from the bank. Describe the lucky moment. Use 運がいい.",
+      "prompt": "On the way home from the bank, something lucky happened. Describe the unexpected moment. Use 運がいい.",
       "targets": [
         { "id": "v_un_ga_ii", "count": 1 }
       ],
@@ -80,24 +80,24 @@
       ]
     },
     {
-      "prompt": "Reflect on last year with Pochi. How much time has passed since they first started running together? Use 去年 and 去る.",
+      "prompt": "That lucky encounter made Rikizo think back. How has the past year with Pochi gone by? Use 去年 and 去る.",
       "targets": [
         { "id": "v_kyonen", "count": 1 },
         { "id": "v_saru", "count": 1 }
       ],
       "model": "去年の 夏から、ポチと いっしょに 走っています。楽しい 時間が 去って いきました。",
       "vocabPool": [
-        "v_kyonen", "v_saru", "v_natsu", "v_shashin", "v_issho",
+        "v_kyonen", "v_saru", "v_natsu", "v_issho",
         "v_hashiru", "v_tanoshii", "v_amari", "p_no", "g_desu"
       ]
     },
     {
-      "prompt": "Close by expressing what Rikizo wants to do this year with Pochi. Use 今年 and 作る.",
+      "prompt": "Inspired by today's run and the lucky encounter, what does Rikizo want to make this year with Pochi? Use 今年 and 作る.",
       "targets": [
         { "id": "v_kotoshi", "count": 1 },
         { "id": "v_tsukuru", "count": 1 }
       ],
-      "model": "今年も ポチと いっしょに たくさん 運動を 作りたいです。毎朝 走り 続けます。",
+      "model": "今年も ポチと いっしょに いい 思い出を 作りたいです。毎朝 走り 続けます。",
       "vocabPool": [
         "v_kotoshi", "v_tsukuru", "v_undou", "v_issho", "v_mata",
         "v_hashiru", "v_tanoshii", "v_mainichi", "g_desu", "p_mo"
@@ -106,7 +106,7 @@
   ],
   "challengePrompts": [
     {
-      "prompt": "Write about finding a stray dog in the neighborhood while running. Compare it to Pochi, and explain what makes Pochi special. Use 野犬 and 運がいい.",
+      "prompt": "During one of their morning runs, Rikizo and Pochi spotted a stray dog in the neighborhood. Compare it to Pochi, and explain what makes Pochi special. Use 野犬 and 運がいい.",
       "targets": [
         { "id": "v_yaken", "count": 1 },
         { "id": "v_un_ga_ii", "count": 1 }
@@ -144,7 +144,7 @@
     {
       "pattern": "verb-たいです / verb-たくないです",
       "meaning": "want to / don't want to (polite desire)",
-      "examples": ["走りたいです", "また 一緒に 行きたいです", "また 行きたいです"]
+      "examples": ["走りたいです", "また 一緒に 行きたいです", "思い出を 作りたいです"]
     },
     {
       "pattern": "verb-られます / verb-えます",
