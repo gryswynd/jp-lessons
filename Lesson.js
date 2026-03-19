@@ -83,7 +83,7 @@ window.LessonModule = {
 
           .jp-exit-btn { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); color: white; padding: 5px 12px; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 0.8rem; }
           .jp-back-btn { background: transparent; color: rgba(255,255,255,0.8); border: none; cursor: pointer; font-weight: bold; font-size: 0.9rem; margin-right: 10px; }
-          .jp-back-btn:hover { color: white; }
+          @media (hover: hover) { .jp-back-btn:hover { color: white; } }
 
           /* Menu & Cards */
           .jp-menu-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
@@ -93,7 +93,7 @@ window.LessonModule = {
               border: 1px solid rgba(0,0,0,0.02); text-align: left;
               display: flex; justify-content: space-between; align-items: center;
           }
-          .jp-menu-item:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(78,84,200,0.15); border-color: var(--primary); }
+          @media (hover: hover) { .jp-menu-item:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(78,84,200,0.15); border-color: var(--primary); } }
           .jp-menu-id { font-weight: 900; color: var(--primary); font-size: 1.1rem; }
           .jp-menu-name { font-size: 0.85rem; color: #a4b0be; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
 
@@ -102,7 +102,7 @@ window.LessonModule = {
             box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s;
             border: 1px solid rgba(0,0,0,0.02); text-align: center;
           }
-          .jp-level-card:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(78,84,200,0.15); border-color: var(--primary); }
+          @media (hover: hover) { .jp-level-card:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(78,84,200,0.15); border-color: var(--primary); } }
           .jp-level-name { font-weight: 900; font-size: 1.4rem; color: var(--primary); margin-bottom: 6px; }
           .jp-level-count { font-size: 0.85rem; color: #a4b0be; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
 
@@ -119,7 +119,7 @@ window.LessonModule = {
           .jp-jp { font-size: 1.15rem; line-height: 1.6; font-family: 'Noto Sans JP', sans-serif; color: #2f3542; }
           .jp-en { font-size: 0.9rem; color: #747d8c; margin-top: 6px; display: none; padding-left: 2px; }
           .jp-term { color: var(--primary); font-weight: 700; cursor: pointer; margin-right: 1px; border-bottom: 2px solid rgba(78,84,200,0.1); transition: 0.2s; }
-          .jp-term:hover { background: rgba(78,84,200,0.05); border-bottom-color: var(--primary); }
+          @media (hover: hover) { .jp-term:hover { background: rgba(78,84,200,0.05); border-bottom-color: var(--primary); } }
 
           .jp-toggle-en { font-size: 0.75rem; font-weight: 700; color: #747d8c; background: #fff; border: 2px solid #f1f2f6; padding: 8px 16px; border-radius: 20px; cursor: pointer; margin-bottom: 20px; width: 100%; }
 
@@ -134,7 +134,7 @@ window.LessonModule = {
           .jp-k-meaning { font-size: 0.9rem; font-weight: 800; color: var(--primary); margin-top: 5px;}
 
           .jp-mcq-opt { display: block; width: 100%; text-align: left; padding: 15px; margin-bottom: 10px; background: #fff; border: 2px solid #eee; border-radius: 12px; cursor: pointer; font-weight: 600; font-size: 1rem; color: #2f3542; transition: 0.2s; }
-          .jp-mcq-opt:hover { border-color: var(--primary); background: #f8f9fa; }
+          @media (hover: hover) { .jp-mcq-opt:hover { border-color: var(--primary); background: #f8f9fa; } }
           .jp-mcq-opt.correct { background: #d4edda; border-color: #c3e6cb; color: #155724; }
           .jp-mcq-opt.wrong { background: #f8d7da; border-color: #f5c6cb; color: #721c24; }
 
@@ -170,7 +170,7 @@ window.LessonModule = {
 
           /* LOCKED LESSON ITEMS */
           .jp-menu-item--locked { opacity: 0.5; cursor: default; }
-          .jp-menu-item--locked:hover { transform: none; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border-color: transparent; }
+          @media (hover: hover) { .jp-menu-item--locked:hover { transform: none; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border-color: transparent; } }
 
         `;
         document.head.appendChild(style);

@@ -66,9 +66,7 @@ window.GameModule = (function() {
           font-weight: 600;
           transition: background 0.2s;
         }
-        .jp-game-back-btn:hover {
-          background: rgba(255,255,255,0.2);
-        }
+        @media (hover: hover) { .jp-game-back-btn:hover { background: rgba(255,255,255,0.2); } }
         .jp-game-canvas-wrapper {
           position: relative;
           background: #000;
@@ -105,9 +103,11 @@ window.GameModule = (function() {
           margin-right: 1px;
           transition: background 0.15s, border-color 0.15s;
         }
-        .jp-term:hover {
-          background: rgba(78,84,200,0.08);
-          border-bottom-color: #4e54c8;
+        @media (hover: hover) {
+          .jp-term:hover {
+            background: rgba(78,84,200,0.08);
+            border-bottom-color: #4e54c8;
+          }
         }
         .jp-conversation-overlay {
           position: absolute;

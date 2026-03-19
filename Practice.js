@@ -70,14 +70,14 @@ window.PracticeModule = {
             .k-tbl th { padding: 8px; color: #a4b0be; font-weight: 600; font-size: 0.75rem; width: 30%; border-bottom: 1px solid #f1f2f6; text-transform: uppercase; }
 
             .k-opt { background: white; border: 2px solid #dfe4ea; padding: 16px; border-radius: 12px; text-align: center; margin-bottom: 10px; cursor: pointer; font-weight: 600; font-size: 1.1rem; transition: 0.15s; }
-            .k-opt:hover { border-color: var(--primary); color: var(--primary); background: #f8f9fe; }
+            @media (hover: hover) { .k-opt:hover { border-color: var(--primary); color: var(--primary); background: #f8f9fe; } }
             .k-opt.correct { background: var(--success); border-color: var(--success); color: white; }
             .k-opt.wrong { background: var(--error); border-color: var(--error); color: white; }
 
             /* LESSON SELECTOR STYLES */
             .k-lvl-group { margin-bottom: 10px; background: white; border-radius: 12px; border: 1px solid #dfe4ea; overflow: hidden; }
             .k-lvl-header { padding: 12px 15px; background: #f8f9fa; display: flex; align-items: center; cursor: pointer; }
-            .k-lvl-header:hover { background: #f1f2f6; }
+            @media (hover: hover) { .k-lvl-header:hover { background: #f1f2f6; } }
             .k-lvl-title { flex: 1; font-weight: 700; color: var(--text-main); font-size: 1.1rem; margin-left: 10px; }
             .k-lvl-arrow { transition: transform 0.3s; color: #a4b0be; font-size: 0.8rem; }
             .k-lvl-header.open .k-lvl-arrow { transform: rotate(180deg); }

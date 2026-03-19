@@ -56,7 +56,7 @@ window.ComposeModule = {
 
             /* MENU — LESSON CARDS */
             .c-menu-card { background: white; border-radius: 14px; padding: 1.2rem; margin-bottom: 12px; border: 2px solid #e0f2f1; text-align: left; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 14px; }
-            .c-menu-card:hover { border-color: var(--c-primary); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 137, 123, 0.1); }
+            @media (hover: hover) { .c-menu-card:hover { border-color: var(--c-primary); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 137, 123, 0.1); } }
             .c-menu-emoji { font-size: 2rem; flex-shrink: 0; }
             .c-menu-info { flex: 1; min-width: 0; }
             .c-menu-title { font-weight: 800; font-size: 1rem; color: var(--c-primary-dark); }
@@ -75,11 +75,11 @@ window.ComposeModule = {
                 box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s;
                 border: 2px solid #e0f2f1; text-align: center;
             }
-            .c-level-card:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(0,137,123,0.15); border-color: var(--c-primary); }
+            @media (hover: hover) { .c-level-card:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(0,137,123,0.15); border-color: var(--c-primary); } }
             .c-level-name { font-weight: 900; font-size: 1.4rem; color: var(--c-primary); margin-bottom: 6px; }
             .c-level-count { font-size: 0.85rem; color: #a4b0be; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
             .c-level-back-btn { background: transparent; border: none; color: var(--c-primary); font-weight: 700; cursor: pointer; padding: 0 0 12px 0; font-size: 0.9rem; display: block; font-family: inherit; }
-            .c-level-back-btn:hover { text-decoration: underline; }
+            @media (hover: hover) { .c-level-back-btn:hover { text-decoration: underline; } }
             .c-menu-empty { padding: 20px; text-align: center; color: #a4b0be; font-weight: 600; font-size: 0.9rem; }
 
             /* COMPOSE HEADER */
@@ -112,7 +112,7 @@ window.ComposeModule = {
 
             /* MODEL SENTENCE */
             .c-model-toggle { font-size: 0.8rem; color: var(--c-primary); cursor: pointer; font-weight: 700; margin-top: 8px; user-select: none; display: inline-block; }
-            .c-model-toggle:hover { text-decoration: underline; }
+            @media (hover: hover) { .c-model-toggle:hover { text-decoration: underline; } }
             .c-model-sentence { font-family: 'Noto Sans JP', sans-serif; font-size: 0.95rem; color: #546E7A; background: rgba(255,255,255,0.6); padding: 8px 12px; border-radius: 8px; margin-top: 6px; line-height: 1.6; display: none; }
             .c-model-sentence.visible { display: block; }
 
@@ -135,7 +135,7 @@ window.ComposeModule = {
             .c-target-check { width: 22px; height: 22px; border-radius: 50%; border: 2px solid #dfe4ea; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem; flex-shrink: 0; transition: all 0.3s; }
             .c-target-item.done .c-target-check { background: var(--c-success); border-color: var(--c-success); color: white; }
             .c-target-surface { font-family: 'Noto Sans JP', sans-serif; font-size: 1.1rem; font-weight: 700; margin-right: 6px; cursor: pointer; }
-            .c-target-surface:hover { color: var(--c-primary); }
+            @media (hover: hover) { .c-target-surface:hover { color: var(--c-primary); } }
             .c-target-reading { font-size: 0.85rem; color: #78909C; margin-right: 8px; }
             .c-target-meaning { font-size: 0.82rem; color: var(--c-text-sub); flex: 1; }
             .c-target-count { font-size: 0.75rem; font-weight: 800; padding: 2px 8px; border-radius: 10px; background: #f5f5f5; color: #78909C; min-width: 36px; text-align: center; }
@@ -144,7 +144,7 @@ window.ComposeModule = {
             /* ACCORDION SECTIONS */
             .c-section { margin-bottom: 8px; border-radius: 10px; overflow: hidden; border: 1px solid #e0e0e0; }
             .c-section-hdr { padding: 10px 14px; background: #fafafa; cursor: pointer; display: flex; align-items: center; justify-content: space-between; user-select: none; }
-            .c-section-hdr:hover { background: #f5f5f5; }
+            @media (hover: hover) { .c-section-hdr:hover { background: #f5f5f5; } }
             .c-section-title { font-weight: 700; font-size: 0.88rem; color: var(--c-text-main); }
             .c-section-arrow { font-size: 0.75rem; color: #a4b0be; transition: transform 0.3s; }
             .c-section-hdr.open .c-section-arrow { transform: rotate(180deg); }
@@ -154,7 +154,7 @@ window.ComposeModule = {
             /* WORD CHIPS */
             .c-chip-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
             .c-chip { display: inline-flex; align-items: center; gap: 4px; padding: 5px 10px; border-radius: 8px; font-size: 0.82rem; cursor: pointer; transition: all 0.15s; border: 1px solid #e0e0e0; background: white; user-select: none; }
-            .c-chip:hover { background: var(--c-primary-light); border-color: var(--c-primary); }
+            @media (hover: hover) { .c-chip:hover { background: var(--c-primary-light); border-color: var(--c-primary); } }
             .c-chip:active { transform: scale(0.95); }
             .c-chip-jp { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 0.9rem; }
             .c-chip-reading { color: #78909C; font-size: 0.75rem; font-family: 'Noto Sans JP', sans-serif; }
@@ -163,7 +163,7 @@ window.ComposeModule = {
             /* PARTICLE & CONJUGATION REFERENCE */
             .c-ref-list { text-align: left; padding: 4px 0; }
             .c-ref-item { display: inline-flex; align-items: center; gap: 4px; font-size: 0.82rem; background: #f5f5f5; padding: 4px 10px; border-radius: 6px; margin: 3px; font-weight: 600; cursor: pointer; transition: background 0.15s; }
-            .c-ref-item:hover { background: var(--c-primary-light); }
+            @media (hover: hover) { .c-ref-item:hover { background: var(--c-primary-light); } }
             .c-ref-item .c-ref-jp { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 0.88rem; }
             .c-ref-item .c-ref-role { color: #78909C; font-size: 0.75rem; }
             .c-conj-item { display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; border-bottom: 1px solid #f1f2f6; font-size: 0.85rem; }
@@ -176,11 +176,11 @@ window.ComposeModule = {
             .c-conj-meaning { font-size: 0.78rem; color: var(--c-text-sub); margin-top: 2px; }
             .c-conj-examples { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
             .c-conj-example { font-family: 'Noto Sans JP', sans-serif; font-size: 0.88rem; font-weight: 600; background: #f5f5f5; padding: 3px 10px; border-radius: 6px; color: var(--c-text-main); cursor: pointer; transition: background 0.15s; }
-            .c-conj-example:hover { background: var(--c-primary-light); }
+            @media (hover: hover) { .c-conj-example:hover { background: var(--c-primary-light); } }
 
             /* NEXT PROMPT BUTTON */
             .c-next-prompt-btn { background: linear-gradient(135deg, var(--c-success), #20bf6b); color: white; border: none; padding: 12px 20px; border-radius: 12px; font-size: 1rem; font-weight: 800; width: 100%; margin: 10px 0; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(46, 213, 115, 0.3); animation: c-celebrate 0.4s ease; }
-            .c-next-prompt-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(46, 213, 115, 0.4); }
+            @media (hover: hover) { .c-next-prompt-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(46, 213, 115, 0.4); } }
             .c-next-prompt-btn:active { transform: scale(0.98); }
 
             /* COMPLETE BANNER */

@@ -472,7 +472,7 @@
                 font-family: inherit;
                 margin: 5px;
             }
-            .jp-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+            @media (hover: hover) { .jp-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); } }
             .jp-btn:active { transform: scale(0.98); }
             .jp-btn-main {
                 background: var(--jp-primary);
@@ -563,7 +563,7 @@
                 transition: all 0.2s;
                 font-weight: 600;
             }
-            .jp-chip:hover { border-color: var(--jp-primary); transform: translateY(-2px); }
+            @media (hover: hover) { .jp-chip:hover { border-color: var(--jp-primary); transform: translateY(-2px); } }
             .jp-chip.used { opacity: 0.3; pointer-events: none; }
             .jp-scramble-placeholder { color: #aaa; font-style: italic; }
             .jp-scramble-submit { margin-top: 12px; }
@@ -580,7 +580,7 @@
                 cursor: pointer;
                 transition: all 0.2s;
             }
-            .jp-clear-btn:hover { border-color: #aaa; color: #666; }
+            @media (hover: hover) { .jp-clear-btn:hover { border-color: #aaa; color: #666; } }
             .jp-pts-badge {
                 display: inline-block;
                 font-size: 0.85rem;
@@ -610,7 +610,7 @@
 
             /* Term Styling */
             .jp-term { color: #4e54c8; font-weight: 700; cursor: pointer; margin-right: 1px; border-bottom: 2px solid rgba(78,84,200,0.1); transition: 0.2s; }
-            .jp-term:hover { background: rgba(78,84,200,0.05); border-bottom-color: #4e54c8; }
+            @media (hover: hover) { .jp-term:hover { background: rgba(78,84,200,0.05); border-bottom-color: #4e54c8; } }
 
             /* Animations */
             @keyframes jpFadeIn {
@@ -642,11 +642,11 @@
                 font-weight: 700;
                 cursor: pointer;
             }
-            .jp-exit-link:hover { color: var(--jp-primary); }
+            @media (hover: hover) { .jp-exit-link:hover { color: var(--jp-primary); } }
 
             /* Exit in header (for list screen) */
             .jp-exit-link-header { cursor: pointer; }
-            .jp-exit-link-header:hover { background: rgba(255,255,255,0.35); }
+            @media (hover: hover) { .jp-exit-link-header:hover { background: rgba(255,255,255,0.35); } }
 
             /* Back Button in Quiz Header */
             .jp-review-back-btn {
@@ -655,7 +655,7 @@
                 font-size: 0.9rem; margin-right: 10px; padding: 4px 8px;
                 border-radius: 6px;
             }
-            .jp-review-back-btn:hover { color: white; background: rgba(255,255,255,0.1); }
+            @media (hover: hover) { .jp-review-back-btn:hover { color: white; background: rgba(255,255,255,0.1); } }
 
             /* Level Picker */
             .jp-review-level-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 8px; }
@@ -664,11 +664,11 @@
                 box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s;
                 border: 1px solid rgba(0,0,0,0.02); text-align: center;
             }
-            .jp-review-level-card:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(78,84,200,0.15); border-color: var(--jp-primary); }
+            @media (hover: hover) { .jp-review-level-card:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(78,84,200,0.15); border-color: var(--jp-primary); } }
             .jp-review-level-name { font-weight: 900; font-size: 1.4rem; color: var(--jp-primary); margin-bottom: 6px; }
             .jp-review-level-count { font-size: 0.85rem; color: #a4b0be; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
             .jp-review-level-back-btn { background: transparent; border: none; color: var(--jp-primary); font-weight: 700; cursor: pointer; padding: 0 0 12px 0; font-size: 0.9rem; display: block; font-family: inherit; }
-            .jp-review-level-back-btn:hover { text-decoration: underline; }
+            @media (hover: hover) { .jp-review-level-back-btn:hover { text-decoration: underline; } }
 
             /* Review Menu Grid */
             .jp-review-menu-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
@@ -678,7 +678,7 @@
                 border: 1px solid rgba(0,0,0,0.02); text-align: left;
                 display: flex; justify-content: space-between; align-items: center;
             }
-            .jp-review-menu-item:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(78,84,200,0.15); border-color: var(--jp-primary); }
+            @media (hover: hover) { .jp-review-menu-item:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(78,84,200,0.15); border-color: var(--jp-primary); } }
             .jp-review-menu-id { font-weight: 900; color: var(--jp-primary); font-size: 1.1rem; }
             .jp-review-score { font-size: 0.85rem; color: var(--jp-success); font-weight: 700; }
             .jp-review-score.jp-no-score { color: #b2bec3; }

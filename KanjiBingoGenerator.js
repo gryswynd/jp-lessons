@@ -86,7 +86,7 @@ window.KanjiBingoGeneratorModule = (function () {
         border-radius: 8px;
         transition: background 0.2s;
       }
-      .kbg-back-btn:hover { background: rgba(255,255,255,0.1); }
+      @media (hover: hover) { .kbg-back-btn:hover { background: rgba(255,255,255,0.1); } }
       .kbg-title {
         font-size: 1.3rem;
         font-weight: 900;
@@ -122,7 +122,7 @@ window.KanjiBingoGeneratorModule = (function () {
         cursor: pointer;
         transition: all 0.2s;
       }
-      .kbg-level-btn:hover { border-color: var(--kbg-primary); }
+      @media (hover: hover) { .kbg-level-btn:hover { border-color: var(--kbg-primary); } }
       .kbg-level-btn.active {
         background: var(--kbg-primary);
         border-color: var(--kbg-primary);
@@ -252,7 +252,7 @@ window.KanjiBingoGeneratorModule = (function () {
         letter-spacing: 1px;
         box-shadow: 0 4px 15px rgba(233,30,99,0.4);
       }
-      .kbg-roll-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(233,30,99,0.5); }
+      @media (hover: hover) { .kbg-roll-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(233,30,99,0.5); } }
       .kbg-roll-btn:active { transform: scale(0.97); }
       .kbg-roll-btn:disabled {
         opacity: 0.5;
@@ -344,7 +344,7 @@ window.KanjiBingoGeneratorModule = (function () {
         cursor: pointer;
         transition: all 0.2s;
       }
-      .kbg-reset-btn:hover { border-color: var(--kbg-primary); color: var(--kbg-text); }
+      @media (hover: hover) { .kbg-reset-btn:hover { border-color: var(--kbg-primary); color: var(--kbg-text); } }
 
       /* ── Responsive ── */
       @media (max-width: 600px) {
