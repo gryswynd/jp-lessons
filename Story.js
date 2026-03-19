@@ -71,8 +71,10 @@ window.StoryModule = (function() {
           transition: background 0.2s;
           font-size: 14px;
         }
-        .jp-story-nav-btn:hover, .jp-story-back-btn:hover {
-          background: rgba(255,255,255,0.2);
+        @media (hover: hover) {
+          .jp-story-nav-btn:hover, .jp-story-back-btn:hover {
+            background: rgba(255,255,255,0.2);
+          }
         }
         .jp-story-nav-btn:disabled {
           opacity: 0.3;
@@ -165,9 +167,11 @@ window.StoryModule = (function() {
           margin-right: 1px;
           transition: 0.2s;
         }
-        .jp-term:hover {
-          background: rgba(78,84,200,0.08);
-          border-bottom-color: #4e54c8;
+        @media (hover: hover) {
+          .jp-term:hover {
+            background: rgba(78,84,200,0.08);
+            border-bottom-color: #4e54c8;
+          }
         }
         .jp-story-loading {
           text-align: center;
@@ -232,10 +236,12 @@ window.StoryModule = (function() {
           border: 2px solid transparent;
           text-align: center;
         }
-        .jp-story-level-card:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-          border-color: #D97706;
+        @media (hover: hover) {
+          .jp-story-level-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border-color: #D97706;
+          }
         }
         .jp-story-level-name {
           font-size: 1.4rem;
@@ -261,7 +267,7 @@ window.StoryModule = (function() {
           display: block;
           font-family: inherit;
         }
-        .jp-story-level-back-btn:hover { text-decoration: underline; }
+        @media (hover: hover) { .jp-story-level-back-btn:hover { text-decoration: underline; } }
         .jp-story-card {
           background: linear-gradient(135deg, #FFFBEB 0%, #FDE68A 100%);
           border-radius: 12px;
@@ -271,10 +277,12 @@ window.StoryModule = (function() {
           border: 2px solid transparent;
           text-align: center;
         }
-        .jp-story-card:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-          border-color: #D97706;
+        @media (hover: hover) {
+          .jp-story-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border-color: #D97706;
+          }
         }
         .jp-story-level-badge {
           display: inline-block;
@@ -311,8 +319,10 @@ window.StoryModule = (function() {
           pointer-events: none;
           transition: background 0.2s;
         }
-        .jp-story-card:hover .jp-story-card-read-btn {
-          background: #C27205;
+        @media (hover: hover) {
+          .jp-story-card:hover .jp-story-card-read-btn {
+            background: #C27205;
+          }
         }
         @media (max-width: 600px) {
           .jp-story-content {

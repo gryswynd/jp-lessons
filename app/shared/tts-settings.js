@@ -58,7 +58,7 @@
         display: flex; align-items: center; justify-content: center;
         transition: background 0.2s;
       }
-      .jp-tts-close:hover { background: rgba(255,255,255,0.35); }
+      @media (hover: hover) { .jp-tts-close:hover { background: rgba(255,255,255,0.35); } }
 
       .jp-tts-body { padding: 20px; }
 
@@ -116,7 +116,7 @@
         cursor: pointer;
         transition: opacity 0.2s;
       }
-      .jp-tts-test-btn:hover { opacity: 0.9; }
+      @media (hover: hover) { .jp-tts-test-btn:hover { opacity: 0.9; } }
       .jp-tts-test-btn:active { transform: scale(0.98); }
 
       /* No voices message */
@@ -144,7 +144,7 @@
         padding: 0;
         flex-shrink: 0;
       }
-      .jp-settings-gear:hover { background: rgba(255,255,255,0.35); }
+      @media (hover: hover) { .jp-settings-gear:hover { background: rgba(255,255,255,0.35); } }
 
       /* Sentence-level speaker button (inline with jp text) */
       .jp-speak-sentence {
@@ -159,7 +159,7 @@
         vertical-align: middle;
         flex-shrink: 0;
       }
-      .jp-speak-sentence:hover { opacity: 0.85; }
+      @media (hover: hover) { .jp-speak-sentence:hover { opacity: 0.85; } }
       .jp-speak-sentence:active { transform: scale(0.9); }
 
       /* Play-all button for reading passages and conversations */
@@ -178,9 +178,11 @@
         gap: 5px;
         margin-bottom: 10px;
       }
-      .jp-speak-all-btn:hover {
-        background: rgba(78,84,200,0.15);
-        border-color: rgba(78,84,200,0.4);
+      @media (hover: hover) {
+        .jp-speak-all-btn:hover {
+          background: rgba(78,84,200,0.15);
+          border-color: rgba(78,84,200,0.4);
+        }
       }
       .jp-speak-all-btn:active { transform: scale(0.97); }
       .jp-speak-all-btn.jp-speak-all-active {
@@ -188,9 +190,11 @@
         border-color: rgba(220,53,69,0.3);
         color: #dc3545;
       }
-      .jp-speak-all-btn.jp-speak-all-active:hover {
-        background: rgba(220,53,69,0.18);
-        border-color: rgba(220,53,69,0.5);
+      @media (hover: hover) {
+        .jp-speak-all-btn.jp-speak-all-active:hover {
+          background: rgba(220,53,69,0.18);
+          border-color: rgba(220,53,69,0.5);
+        }
       }
 
       /* Menu gear — dark version for white background */
@@ -208,7 +212,7 @@
         position: absolute;
         top: 15px; right: 15px;
       }
-      .jp-settings-gear-menu:hover { background: rgba(0,0,0,0.12); color: #4e54c8; }
+      @media (hover: hover) { .jp-settings-gear-menu:hover { background: rgba(0,0,0,0.12); color: #4e54c8; } }
     `;
     var el = document.createElement('style');
     el.textContent = css;

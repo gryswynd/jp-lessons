@@ -82,7 +82,7 @@
           '.jp-term-name {',
           '  color: #d45d8a; border-bottom: 2px solid #f4a7c0; cursor: pointer;',
           '}',
-          '.jp-term-name:hover { color: #b8446e; }',
+          '@media (hover: hover) { .jp-term-name:hover { color: #b8446e; } }',
           '/* Character card modal variant */',
           '.jp-modal.jp-modal-character {',
           '  max-width: 280px; padding: 24px 24px 20px;',

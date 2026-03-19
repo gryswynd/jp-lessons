@@ -252,9 +252,11 @@ window.FinalReviewModule = (function () {
         border-bottom: 2px solid rgba(78,84,200,0.1);
         transition: 0.2s;
       }
-      .jp-term:hover {
-        background: rgba(78,84,200,0.05);
-        border-bottom-color: #4e54c8;
+      @media (hover: hover) {
+        .jp-term:hover {
+          background: rgba(78,84,200,0.05);
+          border-bottom-color: #4e54c8;
+        }
       }
 
       /* ── Grammar Roulette ── */

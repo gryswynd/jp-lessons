@@ -95,7 +95,7 @@ window.GrammarModule = {
         .gr-nav-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
         .gr-exit-btn { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); color: white; padding: 5px 12px; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 0.8rem; }
         .gr-back-btn { background: transparent; color: rgba(255,255,255,0.8); border: none; cursor: pointer; font-weight: bold; font-size: 0.9rem; margin-right: 10px; }
-        .gr-back-btn:hover { color: white; }
+        @media (hover: hover) { .gr-back-btn:hover { color: white; } }
 
         .gr-card { background: #F0FDF4; border-radius: 16px; padding: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 20px; border: 1px solid rgba(22,163,74,0.08); }
         .gr-card-white { background: #fff; border-radius: 16px; padding: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 20px; border: 1px solid rgba(0,0,0,0.02); }
@@ -108,9 +108,9 @@ window.GrammarModule = {
           border: 1px solid rgba(0,0,0,0.02); text-align: left;
           display: flex; justify-content: space-between; align-items: center;
         }
-        .gr-menu-item:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(22,163,74,0.15); border-color: var(--gr-primary); }
+        @media (hover: hover) { .gr-menu-item:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(22,163,74,0.15); border-color: var(--gr-primary); } }
         .gr-menu-item.locked { opacity: 0.55; cursor: default; }
-        .gr-menu-item.locked:hover { transform: none; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border-color: transparent; }
+        @media (hover: hover) { .gr-menu-item.locked:hover { transform: none; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border-color: transparent; } }
         .gr-menu-icon { font-size: 1.5rem; margin-right: 12px; }
         .gr-menu-id { font-weight: 900; color: #16A34A; font-size: 1rem; }
         .gr-menu-name { font-size: 0.8rem; color: #a4b0be; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
@@ -154,15 +154,17 @@ window.GrammarModule = {
         .gr-breakdown-toggle { font-size: 0.75rem; color: #aaa; cursor: pointer; border: none; background: none; padding: 0; text-decoration: underline; }
         .gr-breakdown-text { font-size: 0.8rem; color: #888; margin-top: 4px; font-style: italic; }
         .gr-tts-btn { font-size: 0.8rem; background: none; border: 1px solid #ddd; border-radius: 6px; padding: 3px 8px; cursor: pointer; color: #888; margin-top: 4px; }
-        .gr-tts-btn:hover { background: #f8f9fa; }
+        @media (hover: hover) { .gr-tts-btn:hover { background: #f8f9fa; } }
 
         /* Part spans */
         .gr-part { border-radius: 3px; padding: 1px 3px; cursor: default; position: relative; font-family: 'Noto Sans JP', sans-serif; }
-        .gr-part[data-gloss]:hover::after {
-          content: attr(data-gloss);
-          position: absolute; bottom: calc(100% + 4px); left: 50%; transform: translateX(-50%);
-          background: #333; color: white; font-size: 0.72rem; padding: 3px 7px; border-radius: 5px;
-          white-space: nowrap; pointer-events: none; font-family: 'Poppins', sans-serif; z-index: 100;
+        @media (hover: hover) {
+          .gr-part[data-gloss]:hover::after {
+            content: attr(data-gloss);
+            position: absolute; bottom: calc(100% + 4px); left: 50%; transform: translateX(-50%);
+            background: #333; color: white; font-size: 0.72rem; padding: 3px 7px; border-radius: 5px;
+            white-space: nowrap; pointer-events: none; font-family: 'Poppins', sans-serif; z-index: 100;
+          }
         }
 
         /* Table */
@@ -171,7 +173,7 @@ window.GrammarModule = {
         .gr-table th { background: #DCFCE7; color: #16A34A; font-weight: 700; padding: 10px 12px; text-align: left; border-bottom: 2px solid #16A34A; white-space: nowrap; }
         .gr-table td { padding: 9px 12px; border-bottom: 1px solid #f1f2f6; vertical-align: top; font-family: 'Noto Sans JP', sans-serif; }
         .gr-table tr:last-child td { border-bottom: none; }
-        .gr-table tr:hover td { background: #F0FDF4; }
+        @media (hover: hover) { .gr-table tr:hover td { background: #F0FDF4; } }
         .gr-table-label { font-family: 'Poppins', sans-serif; font-weight: 600; color: #555; white-space: nowrap; }
         .gr-table-meaning { font-family: 'Poppins', sans-serif; color: #888; font-style: italic; }
         .gr-cell-stem { background: rgba(0,184,148,0.2); border-radius: 2px; }
@@ -197,7 +199,7 @@ window.GrammarModule = {
         .gr-drill-card { background: #fff; border-radius: 16px; padding: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 20px; border: 1px solid rgba(0,0,0,0.02); }
         .gr-drill-q { font-size: 1.05rem; line-height: 1.6; font-family: 'Noto Sans JP', sans-serif; font-weight: bold; margin-bottom: 15px; color: #2f3542; }
         .gr-mcq-opt { display: block; width: 100%; text-align: left; padding: 12px 15px; margin-bottom: 8px; background: #fff; border: 2px solid #eee; border-radius: 12px; cursor: pointer; font-weight: 600; font-size: 0.95rem; color: #2f3542; transition: 0.2s; }
-        .gr-mcq-opt:hover { border-color: #16A34A; background: #F0FDF4; }
+        @media (hover: hover) { .gr-mcq-opt:hover { border-color: #16A34A; background: #F0FDF4; } }
         .gr-mcq-opt.correct { background: #d4edda; border-color: #c3e6cb; color: #155724; }
         .gr-mcq-opt.wrong { background: #f8d7da; border-color: #f5c6cb; color: #721c24; }
         .gr-explanation { font-size: 0.82rem; color: #666; margin-top: 8px; padding: 8px 12px; background: #f8f9fa; border-radius: 8px; display: none; }
@@ -224,7 +226,7 @@ window.GrammarModule = {
           cursor: pointer; font-family: 'Noto Sans JP', sans-serif; font-size: 1rem; font-weight: 600;
           text-align: center; transition: 0.18s; color: #2f3542;
         }
-        .gr-choice-chip:hover { border-color: #16A34A; background: #F0FDF4; }
+        @media (hover: hover) { .gr-choice-chip:hover { border-color: #16A34A; background: #F0FDF4; } }
         .gr-choice-chip.correct { background: #d4edda; border-color: #c3e6cb; color: #155724; }
         .gr-choice-chip.wrong { background: #f8d7da; border-color: #f5c6cb; color: #721c24; }
         .gr-hint-text { font-size: 0.82rem; color: #666; margin-top: 10px; padding: 8px 12px; background: #f8f9fa; border-radius: 8px; }
@@ -236,9 +238,9 @@ window.GrammarModule = {
         .gr-slot-blank.filled-wrong { border-color: #D63031; background: #f8d7da; color: #721c24; }
         .gr-slot-choices { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 8px; }
         .gr-slot-chip { padding: 8px 18px; border-radius: 20px; border: 2px solid #eee; background: white; cursor: pointer; font-family: 'Noto Sans JP', sans-serif; font-size: 1rem; font-weight: 700; transition: 0.18s; }
-        .gr-slot-chip:hover { border-color: #FDCB6E; background: #FFFDE7; }
+        @media (hover: hover) { .gr-slot-chip:hover { border-color: #FDCB6E; background: #FFFDE7; } }
         .gr-slot-next { display: block; margin: 16px auto 0; padding: 10px 28px; border-radius: 20px; border: none; background: #6C5CE7; color: white; font-size: 1rem; font-weight: 700; cursor: pointer; transition: 0.18s; }
-        .gr-slot-next:hover { background: #5a4bd1; }
+        @media (hover: hover) { .gr-slot-next:hover { background: #5a4bd1; } }
 
         /* Pattern match */
         .gr-pm-card { background: white; border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; border: 2px solid #eee; cursor: pointer; transition: 0.2s; }
@@ -265,14 +267,14 @@ window.GrammarModule = {
         .gr-jp { font-size: 1.15rem; line-height: 1.6; font-family: 'Noto Sans JP', sans-serif; color: #2f3542; }
         .gr-en { font-size: 0.9rem; color: #747d8c; margin-top: 6px; }
         .gr-term { color: #16A34A; font-weight: 700; cursor: pointer; margin-right: 1px; border-bottom: 2px solid rgba(22,163,74,0.2); transition: 0.2s; }
-        .gr-term:hover { background: rgba(22,163,74,0.06); border-bottom-color: #16A34A; }
+        @media (hover: hover) { .gr-term:hover { background: rgba(22,163,74,0.06); border-bottom-color: #16A34A; } }
 
         /* Clickable term spans generated by processText() */
         .jp-term { color: #4e54c8; font-weight: 700; cursor: pointer; margin-right: 1px; border-bottom: 2px solid rgba(78,84,200,0.1); transition: 0.2s; }
-        .jp-term:hover { background: rgba(78,84,200,0.05); border-bottom-color: #4e54c8; }
+        @media (hover: hover) { .jp-term:hover { background: rgba(78,84,200,0.05); border-bottom-color: #4e54c8; } }
         /* Character name spans (hanabi pink) */
         .jp-term-name { color: #d45d8a; border-bottom: 2px solid #f4a7c0; }
-        .jp-term-name:hover { color: #b8446e; }
+        @media (hover: hover) { .jp-term-name:hover { color: #b8446e; } }
 
         /* Markdown rendered in explanation fields */
         .gr-rule-explanation p { margin: 0 0 8px; }
