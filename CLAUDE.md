@@ -2272,7 +2272,9 @@ Adjective gtypes: `i_adj`, `na_adj`
 | Story markdown | `data/N5/stories/[slug]/story.md` |
 | Story terms | `data/N5/stories/[slug]/terms.json` |
 
-After writing new files, `manifest.json` must be updated. Lessons get an entry under `data.N5.lessons` or `data.N4.lessons`. Stories get an entry under `data.N5.stories` or `data.N4.stories`. Reviews get an entry under `data.N4.reviews`. Compose files get an entry in the `compose` array: `{ "lesson": "N5.X", "file": "data/N5/compose/compose.N5.X.json" }`.
+After writing new files, `manifest.json` must be updated. Lessons get an entry under `data.N5.lessons` or `data.N4.lessons`. Stories get an entry under `data.N5.stories` or `data.N4.stories`. Reviews get an entry under `data.N4.reviews`. Compose files get an entry in the `compose` array: `{ "lesson": "N5.X", "file": "data/N5/compose/compose.N5.X.json" }`. Grammar lessons get an entry in the appropriate `grammar` array (under `data.N5.grammar` or `data.N4.grammar`) with `id`, `title`, `file`, `unlocksAfter`, `icon`, and `estimatedMinutes` fields — the `unlocksAfter` value must exactly match GRAMMAR_CONTENT.md.
+
+**Grammar `unlocksAfter` must be consistent across three files.** Whenever a grammar lesson's unlock point is set or changed, update it in all three places: (1) GRAMMAR_CONTENT.md (the spec), (2) `manifest.json` (the runtime gate), and (3) the grammar lesson JSON's `meta.unlocksAfter` field (once the file is built). All three must agree — a mismatch between any two causes either a content-scope violation or a lesson that is gated at the wrong point in the app.
 
 Story entries in `manifest.json` must include an `unlocksAfter` field set to the last lesson whose content is required by the story. This controls both the unlock gate (the student must pass that lesson before the story appears) and the story's content scope (all kanji, vocab, and grammar in the story must be available at that lesson). The story picker lists stories in `unlocksAfter` order. New stories must always have this field.
 
