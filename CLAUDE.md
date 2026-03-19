@@ -1885,7 +1885,7 @@ Each milestone groups forms that unlock together. The **active reinforcement win
 | Milestone | Available from | Active window | Required patterns (per lesson, across convs + readings) | Sustained use (after window) |
 |---|---|---|---|---|
 | **Polite verbs** (G7) | N5.5 | N5.6–N5.7 | ≥3 `polite_masu`, ≥2 `polite_mashita`, ≥1 `polite_negative` or `polite_past_negative` | All four polite verb forms appear regularly; no lesson should use only ます/ました |
-| **Te-form as connector + requests** (G8) | N5.5 | N5.6–N5.7 | ≥1 `てください` request, ≥1 te-form sequential connector (AてB) | てください appears naturally where context calls for requests; て as connector used in multi-action sentences |
+| **Te-form as connector + requests** (G8) | N5.5 | N5.6–N5.7 | ≥1 `てください` request, ≥2 te-form sequential connectors (AてB) | てください appears naturally where context calls for requests; て as connector used in multi-action sentences |
 | **Progressive + desire + volitional** (G9) | N5.9 | N5.9–N5.10 | ≥1 `ている/ています` progressive or state, ≥1 `～たいです` desire expression, ≥1 `～ましょう` suggestion/invitation | All three patterns appear where thematically appropriate |
 | **Plain negative** (G10) | N5.9 | N5.10–N5.11 | ≥1 `～ない` or `～なかった` in context (reading, drill, or natural dialogue) | Plain negatives appear in varied contexts; not limited to drills |
 | **Adj past + adverbial** (G11) | N5.10 | N5.11–N5.12 | ≥1 past-tense adjective (`polite_past_adj`), ≥1 adverbial form (`adverbial`) | Both used naturally in descriptions and narratives |
@@ -1927,7 +1927,7 @@ Beyond individual conjugation forms, these **structural patterns** combine forms
 | Pattern | Taught in | Reinforce from | How to reinforce |
 |---|---|---|---|
 | `Verb-てください` (polite request) | G8 | N5.6+ | Use in at least 1 conversation per lesson. Natural contexts: giving directions, asking for help, making requests. |
-| `Verb-て Verb` (sequential connector) | G8 | N5.6+ | Use in at least 1 multi-action sentence per lesson. Natural contexts: describing routines, narrating sequences. |
+| `Verb-て Verb` (sequential connector) | G8 | N5.6+ | Use in at least 2 multi-action sentences per lesson during active window (N5.6–N5.7); at least 1 per lesson after. Natural contexts: describing routines, narrating sequences. |
 | `Verb-ないでください` (negative request) | G8 | N5.6+ | Use occasionally. Natural contexts: classroom rules, polite prohibitions. Should not be absent across 3+ consecutive lessons. |
 | `Verb-ている/ています` (progressive/state) | G9 | N5.9+ | Use in at least 1 conversation or reading per lesson. Natural contexts: describing ongoing actions, states (住んでいます, 知っています). **Note:** te_form is mechanically available from N5.5, but ている as a *concept* is taught in G9 (unlocks after N5.8). Do not require ている in N5.6–N5.8 content. |
 | `Verb-たいです` (desire) | G9 | N5.9+ | Use in at least 1 conversation per lesson. Natural contexts: discussing plans, preferences, wishes. |
