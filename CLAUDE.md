@@ -1891,14 +1891,23 @@ Each milestone groups forms that unlock together. The **active reinforcement win
 | **Adj past + adverbial** (G11) | N5.10 | N5.11–N5.12 | ≥1 past-tense adjective (`polite_past_adj`), ≥1 adverbial form (`adverbial`) | Both used naturally in descriptions and narratives |
 | **Appearance** (N5.11) | N5.11 | N5.12–N5.13 | ≥1 `～そうです` appearance pattern | Appears where observations or impressions are natural |
 | **Potential** (G13) | N4.3 | N4.4–N4.6 | ≥1 potential form (affirmative or negative) | Ability/possibility expressions used where natural |
+| **Give & receive** (G14) | N4.5 | N4.6–N4.8 | ≥1 `あげる`, `もらう`, or `くれる` in a natural exchange | All three verbs appear regularly; distinguish direction of giving/receiving in varied scenes |
 | **Comparison + degree** (G15) | N4.5 | N4.6–N4.8 | ≥1 `より` comparison, ≥1 `いちばん` superlative or `ほど` degree pattern | Comparison/degree expressions appear where natural (describing preferences, rankings, qualities) |
+| **Manner & similarity** (G16) | N4.6 | N4.7–N4.9 | ≥1 `ように` or `みたいに` manner/similarity expression | Manner expressions appear where actions are described by how they resemble something else |
+| **Transitive & intransitive pairs** (G18) | N4.10 | N4.11–N4.13 | ≥1 transitive/intransitive pair used contrastively (e.g. 開ける vs 開く) | Transitive/intransitive verbs selected correctly for the subject/object role in each sentence |
 | **Tari + nagara** (G19) | N4.10 | N4.11–N4.13 | ≥1 `～たり～たりする` listing, ≥1 `～ながら` simultaneous action | Both patterns appear where natural |
-| **Excessive degree** (G25) | N4.34 | N4.35–N4.36 | ≥1 `～すぎる` excessive expression | ～すぎる appears where overabundance or excess is natural (eating too much, too expensive, too noisy) |
+| **Contrast, concession & listing** (G20) | N4.14 | N4.15–N4.17 | ≥1 `のに` (despite/unexpectedly), ≥1 `ても` (even if/even though), ≥1 `し` (and what's more) | All three patterns appear where contrast, concession, or additive reasoning is natural |
+| **Conversation mechanics** (G28) | N4.14 | N4.15–N4.17 | ≥1 floor-holding or hesitation filler (あのう, ええと, そうですね), ≥1 back-channel response (あいづち: そうですか, なるほど, へえ) | Conversation fillers and responses appear in casual or semi-formal dialogue naturally; not every conversation needs them, but prolonged absence across multiple lessons is a gap |
+| **Appearance & hearsay** (G29) | N4.14 | N4.15–N4.17 | ≥1 `～そうだ` appearance (looks like) or `～そうだ` hearsay (I heard that) | Both usages appear where observation or reported information is natural; distinguish the two by context |
 | **Limiting particles** (G17) | N4.14 | N4.15–N4.17 | ≥1 `だけ` or `しか～ない` limiting expression | Limiting particles appear where context calls for restriction or exclusion |
 | **Permission + prohibition** (G21) | N4.20 | N4.21–N4.23 | ≥1 `てもいい` permission or ≥1 `てはいけない` prohibition | Both patterns appear where rules, permissions, or social norms are discussed |
+| **Directional て-form** (G30) | N4.21 | N4.22–N4.24 | ≥1 `てくる` (coming toward/change toward speaker), ≥1 `ていく` (going away/continuing change) | Both directions appear; distinguish movement toward vs away, and resultant-state usage (てある) where natural |
 | **Conditionals** (G22) | N4.25 | N4.26–N4.28 | ≥1 `～たら` or `～ば` conditional in conversation or reading | At least one conditional form (たら or ば) appears where natural |
+| **ように patterns** (G31) | N4.25 | N4.26–N4.28 | ≥1 `ようにする` (make effort to) or `ようになる` (come to be able to / come to do) | Both patterns appear where expressing goal-oriented effort or gradual change is natural |
 | **Passive + causative** (G23/G24) | N4.31 | N4.32–N4.34 | ≥1 passive, ≥1 causative across the lesson | Both voice patterns appear where natural |
+| **Thoughts & experience** (G27) | N4.30 | N4.31–N4.33 | ≥1 `と思う` (I think / I thought), ≥1 `たことがある` (have done) | Both patterns appear where expressing opinion or past experience is natural |
 | **Auxiliary compounds** (G25) | N4.34 | N4.35–N4.36 | ≥1 `てみる` (try) or `ておく` (prepare) or `てしまう` (complete/regret) | Auxiliary verb compounds appear where experimentation, preparation, or completion is discussed |
+| **Excessive degree** (G25) | N4.34 | N4.35–N4.36 | ≥1 `～すぎる` excessive expression | ～すぎる appears where overabundance or excess is natural (eating too much, too expensive, too noisy) |
 
 ### How to read the schedule
 
@@ -1923,6 +1932,12 @@ Beyond individual conjugation forms, these **structural patterns** combine forms
 | `Verb-ている/ています` (progressive/state) | G9 | N5.9+ | Use in at least 1 conversation or reading per lesson. Natural contexts: describing ongoing actions, states (住んでいます, 知っています). **Note:** te_form is mechanically available from N5.5, but ている as a *concept* is taught in G9 (unlocks after N5.8). Do not require ている in N5.6–N5.8 content. |
 | `Verb-たいです` (desire) | G9 | N5.9+ | Use in at least 1 conversation per lesson. Natural contexts: discussing plans, preferences, wishes. |
 | `Verb-ましょう` (let's/shall we) | G9 | N5.9+ | Use in at least 1 conversation per lesson. Natural contexts: making plans together, suggestions, invitations. |
+| `あげる / もらう / くれる` (give & receive) | G14 | N4.6+ | Use in at least 1 exchange per lesson. Natural contexts: gifts, favours, teaching, lending. Vary which verb is used — don't default to あげる every time. |
+| `ように / みたいに` (manner, similarity) | G16 | N4.7+ | Use occasionally. Natural contexts: describing how someone acts, what something resembles, role-modelling behaviour. |
+| `Verb-てくる / ていく` (directional te-form) | G30 | N4.22+ | Use in at least 1 conversation or reading per lesson. Natural contexts: arriving with something, gradual change over time, continuing a habit going forward. |
+| `ようにする / ようになる` (goal/change) | G31 | N4.26+ | Use occasionally. Natural contexts: habit-forming, improvement goals, gradual ability gain. |
+| `と思う` (I think / thought) | G27 | N4.31+ | Use in at least 1 conversation per lesson. Natural contexts: expressing opinions, hedging a statement, reporting someone's thought. |
+| `たことがある` (have done / experience) | G27 | N4.31+ | Use occasionally. Natural contexts: discussing past experiences, travel, food, activities. |
 | `Verb-たり Verb-たりする` (listing actions) | G19 | N4.11+ | Use in at least 1 conversation or reading per lesson. Natural contexts: describing weekends, hobbies, routines. |
 | `Verb-ながら` (while doing) | G19 | N4.11+ | Use occasionally. Natural contexts: multitasking descriptions, daily routines. |
 | `～すぎる` (excessive degree) | G25 | N4.35+ | Use occasionally. Natural contexts: eating too much, too expensive, too loud, overwork. |
@@ -1941,9 +1956,13 @@ Beyond individual conjugation forms, these **structural patterns** combine forms
 | `X の方が Y より ～` (comparison) | G15 | `p_yori` | N4.6+ | Use in at least 1 context per lesson. Natural contexts: comparing food, places, seasons, preferences. |
 | `X で いちばん ～` (superlative) | G15 | `v_ichiban` (vocab) | N4.6+ | Use occasionally alongside comparison. Natural contexts: "the most ～ in ～". |
 | `X は Y ほど ～ない` (negative degree) | G15 | `p_hodo` | N4.6+ | Use occasionally. Natural contexts: "X is not as ～ as Y". |
-| `～だけ` (only/just) | G15 | `p_dake` | N4.15+ | Use occasionally. Natural contexts: limitations, quantities. |
-| `～しか～ない` (nothing but) | G15 | `p_shika` | N4.15+ | Use occasionally. Natural contexts: scarcity, emphasis on limits. |
+| `～だけ` (only/just) | G17 | `p_dake` | N4.15+ | Use occasionally. Natural contexts: limitations, quantities. |
+| `～しか～ない` (nothing but) | G17 | `p_shika` | N4.15+ | Use occasionally. Natural contexts: scarcity, emphasis on limits. |
 | `～ので` (because — polite) | G10 | `p_node` | N4.11+ | Use occasionally as an alternative to から. Natural contexts: giving reasons in polite speech. |
+| `のに` (despite / unexpectedly) | G20 | `p_noni` | N4.15+ | Use occasionally. Natural contexts: expressing surprise or frustration that a result contradicts an expectation. |
+| `ても` (even if / even though) | G20 | `p_temo` | N4.15+ | Use occasionally. Natural contexts: conceding a condition while maintaining the conclusion ("even if it rains, we'll go"). |
+| `し` (and what's more / listing reasons) | G20 | `p_shi` | N4.15+ | Use occasionally. Natural contexts: listing supporting reasons for a conclusion or opinion. |
+| `～そうだ` appearance / hearsay | G29 | `p_sou_da` (appearance) / `p_sou_da_hearsay` | N4.15+ | Use occasionally. Natural contexts: commenting on how something looks (appearance そうだ) or reporting something heard (hearsay そうだ). Distinguish the two by context. |
 
 ### Reinforcement in warmups
 
@@ -1952,7 +1971,14 @@ Warmup items are an ideal place to reinforce recently-unlocked grammar because t
 - N5.6–N5.7 warmups should include at least 1 item using G8 patterns (てください requests, て-connector sequences) with N5.1–N5.5 vocabulary
 - N5.9–N5.10 warmups should include at least 1 item using G9 patterns (ています, ～たいです, or ～ましょう) with prior vocabulary
 - N5.10–N5.11 warmups should include at least 1 item using plain negative forms with prior vocabulary
-- N4.6–N4.8 warmups should include at least 1 item using comparison patterns (より, いちばん) with prior vocabulary
+- N4.4–N4.6 warmups should include at least 1 item exercising potential form (できる or verb potential) with prior vocabulary
+- N4.6–N4.8 warmups should include at least 1 item using give/receive (あげる/もらう/くれる) and 1 item using comparison patterns (より, いちばん) with prior vocabulary
+- N4.7–N4.9 warmups should include at least 1 item using ように/みたいに manner expression with prior vocabulary
+- N4.11–N4.13 warmups should include at least 1 item using たり pattern or ながら with prior vocabulary
+- N4.15–N4.17 warmups should include at least 1 item using のに/ても/し contrast-concession or そうだ with prior vocabulary
+- N4.22–N4.24 warmups should include at least 1 item using てくる/ていく directional pattern with prior vocabulary
+- N4.26–N4.28 warmups should include at least 1 item using ようにする/ようになる or a conditional (たら/ば) with prior vocabulary
+- N4.31–N4.33 warmups should include at least 1 item using と思う or たことがある with prior vocabulary
 
 This ensures students engage with new grammar patterns using familiar words, reducing cognitive load.
 
@@ -2246,7 +2272,9 @@ Adjective gtypes: `i_adj`, `na_adj`
 | Story markdown | `data/N5/stories/[slug]/story.md` |
 | Story terms | `data/N5/stories/[slug]/terms.json` |
 
-After writing new files, `manifest.json` must be updated. Lessons get an entry under `data.N5.lessons` or `data.N4.lessons`. Stories get an entry under `data.N5.stories` or `data.N4.stories`. Reviews get an entry under `data.N4.reviews`. Compose files get an entry in the `compose` array: `{ "lesson": "N5.X", "file": "data/N5/compose/compose.N5.X.json" }`.
+After writing new files, `manifest.json` must be updated. Lessons get an entry under `data.N5.lessons` or `data.N4.lessons`. Stories get an entry under `data.N5.stories` or `data.N4.stories`. Reviews get an entry under `data.N4.reviews`. Compose files get an entry in the `compose` array: `{ "lesson": "N5.X", "file": "data/N5/compose/compose.N5.X.json" }`. Grammar lessons get an entry in the appropriate `grammar` array (under `data.N5.grammar` or `data.N4.grammar`) with `id`, `title`, `file`, `unlocksAfter`, `icon`, and `estimatedMinutes` fields — the `unlocksAfter` value must exactly match GRAMMAR_CONTENT.md.
+
+**Grammar `unlocksAfter` must be consistent across three files.** Whenever a grammar lesson's unlock point is set or changed, update it in all three places: (1) GRAMMAR_CONTENT.md (the spec), (2) `manifest.json` (the runtime gate), and (3) the grammar lesson JSON's `meta.unlocksAfter` field (once the file is built). All three must agree — a mismatch between any two causes either a content-scope violation or a lesson that is gated at the wrong point in the app.
 
 Story entries in `manifest.json` must include an `unlocksAfter` field set to the last lesson whose content is required by the story. This controls both the unlock gate (the student must pass that lesson before the story appears) and the story's content scope (all kanji, vocab, and grammar in the story must be available at that lesson). The story picker lists stories in `unlocksAfter` order. New stories must always have this field.
 
