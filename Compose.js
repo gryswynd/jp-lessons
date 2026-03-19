@@ -282,16 +282,35 @@ window.ComposeModule = {
         return div.innerHTML;
     }
 
+    // For verb targets, return the invariant kanji root (surface minus trailing hiragana).
+    // e.g. 走る → 走, 食べる → 食べ, 作る → 作. This root appears in all conjugated
+    // forms so students get credit whether they write 走る, 走ります, 走った, etc.
+    // Returns null if the stripped root would be too short to be useful (≤1 kana char).
+    function getVerbRoot(entry) {
+        if (!entry || entry.gtype !== 'verb') return null;
+        const surface = entry.surface || '';
+        let end = surface.length;
+        while (end > 0 && surface.charCodeAt(end - 1) >= 0x3040 && surface.charCodeAt(end - 1) <= 0x309F) {
+            end--;
+        }
+        const root = surface.slice(0, end);
+        // Must have stripped at least one hiragana and the root must be non-empty
+        return (root.length >= 1 && root.length < surface.length) ? root : null;
+    }
+
     function resolveTargets(targets) {
         return (targets || []).map(t => {
             const entry = t.id ? vocabById.get(t.id) : null;
+            const baseMatches = entry ? [entry.surface || entry.particle, entry.reading].filter(Boolean) : [];
+            const root = getVerbRoot(entry);
+            if (root && !baseMatches.includes(root)) baseMatches.push(root);
             return {
                 id: t.id,
                 surface: (entry && (entry.surface || entry.particle)) || '',
                 reading: (entry && entry.reading) || '',
                 meaning: (entry && (entry.meaning || entry.role)) || '',
                 count: t.count || 1,
-                matches: t.matches || (entry ? [entry.surface || entry.particle, entry.reading].filter(Boolean) : [])
+                matches: t.matches || baseMatches
             };
         });
     }
