@@ -724,7 +724,6 @@ window.GrammarModule = {
               hint.style.display = 'block';
               scoreText.textContent = answered + ' / ' + items.length;
               barFill.style.width = (answered / items.length * 100) + '%';
-              speakText(item.answer);
               setTimeout(() => { idx++; renderItem(); }, 1400);
             } else {
               btn.classList.add('wrong');
