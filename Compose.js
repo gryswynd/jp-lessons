@@ -953,9 +953,7 @@ window.ComposeModule = {
 
         let vocabScore = 0;
         if (totalTargets > 0) {
-            const targetScore = Math.round((targetsMet / totalTargets) * 20);
-            const additionalScore = Math.round((Math.min(additionalVocabUsed, totalTargets) / totalTargets) * 20);
-            vocabScore = targetScore + additionalScore;
+            vocabScore = Math.round((targetsMet / totalTargets) * 40);
         }
 
         // 2. Length Score (0-30)
