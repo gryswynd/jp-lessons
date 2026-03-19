@@ -222,7 +222,7 @@
       this.container.innerHTML = `
         <div id="jp-test-wrapper">
             <div id="jp-test-embed">
-              <div class="jp-header">
+              <div class="jp-header" id="jp-quiz-header">
                 <div style="display:flex; align-items:center;">
                   <button class="jp-review-back-btn" id="jp-back-to-list">← List</button>
                   <div class="jp-title" id="jp-header-title">Loading...</div>
@@ -233,6 +233,7 @@
               <div class="jp-progress-track">
                 <div class="jp-progress-fill" id="jp-progress"></div>
               </div>
+              <div id="jp-teacher-bar-slot"></div>
 
               <div id="jp-stage">
                 <div class="jp-intro">
@@ -259,6 +260,21 @@
 
       // Attach start button handler (will be enabled after data loads)
       document.getElementById('jp-start-btn').onclick = () => this.startQuiz();
+
+      // Triple-tap header to toggle teacher mode
+      let tapCount = 0, tapTimer = null;
+      const quizHeader = document.getElementById('jp-quiz-header');
+      quizHeader.addEventListener('click', () => {
+        tapCount++;
+        clearTimeout(tapTimer);
+        tapTimer = setTimeout(() => { tapCount = 0; }, 500);
+        if (tapCount >= 3) {
+          tapCount = 0;
+          this.teacherMode = !this.teacherMode;
+          quizHeader.classList.toggle('teacher-active', this.teacherMode);
+          this.renderTeacherBar();
+        }
+      });
     },
 
     // REPO CONFIG
@@ -683,6 +699,14 @@
             .jp-review-score { font-size: 0.85rem; color: var(--jp-success); font-weight: 700; }
             .jp-review-score.jp-no-score { color: #b2bec3; }
             .jp-review-menu-arrow { font-size: 0.8rem; color: #a4b0be; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+            /* Teacher Mode */
+            .jp-teacher-bar { display:flex; flex-wrap:wrap; gap:6px; align-items:center; padding:8px 16px; background:#1e1e2e; border-bottom:2px solid #e94560; }
+            .jp-tb-label { font-size:0.7rem; font-weight:900; letter-spacing:2px; color:#e94560; text-transform:uppercase; margin-right:4px; flex-shrink:0; }
+            .jp-teacher-bar button { background:#2a2a40; color:#fff; border:none; border-radius:6px; padding:5px 10px; cursor:pointer; font-size:0.8rem; font-family:inherit; transition:background 0.15s; }
+            .jp-teacher-bar button:hover { background:#e94560; }
+            .jp-teacher-bar button.active { background:#e94560; font-weight:900; }
+            .jp-header.teacher-active { border-bottom:2px solid #e94560; }
         `;
         document.head.appendChild(style);
     },
@@ -719,7 +743,9 @@
       }
 
       this.state.questions = [];
+      this.state.sectionMap = [];
       data.sections.forEach(sec => {
+        const startIdx = this.state.questions.length;
         if (sec.type === 'drills') {
           sec.items.forEach(item => this.state.questions.push({
             ...item, type: item.kind, section: sec.title, isScorable: true
@@ -750,6 +776,9 @@
               });
            });
         }
+        if (this.state.questions.length > startIdx) {
+          this.state.sectionMap.push({ title: sec.title, startIdx });
+        }
       });
     },
 
@@ -758,6 +787,10 @@
       this.state.idx = 0;
       this.state.score = 0;
       this.state.maxScore = this.state.questions.reduce((sum, q) => sum + 1, 0);
+      this.teacherMode = false;
+      const header = document.getElementById('jp-quiz-header');
+      if (header) header.classList.remove('teacher-active');
+      this.renderTeacherBar();
       this.updateUI();
       this.renderQ();
     },
@@ -1193,6 +1226,73 @@
 
     updateUI: function() {
       this.el('jp-score').innerText = this.state.score;
+    },
+
+    renderTeacherBar: function() {
+      const slot = document.getElementById('jp-teacher-bar-slot');
+      if (!slot) return;
+      if (!this.teacherMode || !this.state.sectionMap || this.state.sectionMap.length === 0) {
+        slot.innerHTML = '';
+        return;
+      }
+      const total = this.state.questions.length;
+      let btns = '';
+      this.state.sectionMap.forEach((sec, i) => {
+        const isCurrent = this.state.idx >= sec.startIdx &&
+          (i === this.state.sectionMap.length - 1 || this.state.idx < this.state.sectionMap[i + 1].startIdx);
+        btns += '<button class="' + (isCurrent ? 'active' : '') + '" data-t-sec="' + i + '" title="' + sec.title + '">' + (i + 1) + '</button>';
+      });
+      btns += '<button data-t-sec="end" title="Results">🏆</button>';
+      slot.innerHTML = `
+        <div class="jp-teacher-bar">
+          <span class="jp-tb-label">TEACHER</span>
+          <button data-t-nav="prev">◀ Prev</button>
+          ${btns}
+          <button data-t-nav="next">Next ▶</button>
+        </div>
+      `;
+      slot.querySelectorAll('button[data-t-sec]').forEach(btn => {
+        btn.onclick = () => {
+          const sec = btn.dataset.tSec;
+          if (sec === 'end') {
+            this.teacherJump(total);
+          } else {
+            this.teacherJump(this.state.sectionMap[parseInt(sec)].startIdx);
+          }
+        };
+      });
+      slot.querySelector('[data-t-nav="prev"]').onclick = () => {
+        // Jump to start of previous section
+        const cur = this.state.sectionMap.findIndex((s, i) => {
+          const next = this.state.sectionMap[i + 1];
+          return this.state.idx >= s.startIdx && (!next || this.state.idx < next.startIdx);
+        });
+        if (cur > 0) this.teacherJump(this.state.sectionMap[cur - 1].startIdx);
+      };
+      slot.querySelector('[data-t-nav="next"]').onclick = () => {
+        const cur = this.state.sectionMap.findIndex((s, i) => {
+          const next = this.state.sectionMap[i + 1];
+          return this.state.idx >= s.startIdx && (!next || this.state.idx < next.startIdx);
+        });
+        if (cur < this.state.sectionMap.length - 1) {
+          this.teacherJump(this.state.sectionMap[cur + 1].startIdx);
+        } else {
+          this.teacherJump(total);
+        }
+      };
+    },
+
+    teacherJump: function(idx) {
+      this.state.idx = idx;
+      const pct = (idx / this.state.questions.length) * 100;
+      const bar = this.el('jp-progress');
+      if (bar) bar.style.width = Math.min(pct, 100) + '%';
+      this.renderTeacherBar();
+      if (idx >= this.state.questions.length) {
+        this.renderEnd();
+      } else {
+        this.renderQ();
+      }
     }
   };
 })();
