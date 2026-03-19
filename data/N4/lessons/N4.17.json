@@ -87,14 +87,13 @@
           ]
         },
         {
-          "jp": "自転車に 乗ったり、歩いたり しますか。",
-          "en": "Do you do things like ride a bicycle and walk?",
+          "jp": "音楽を 聞きながら 歩きますか。",
+          "en": "Do you walk while listening to music?",
           "terms": [
-            "v_jitensha",
-            "p_ni",
-            { "id": "v_noru", "form": "tari_form" },
-            { "id": "v_aruku", "form": "tari_form" },
-            { "id": "v_suru", "form": "polite_masu" },
+            "v_ongaku",
+            "p_wo",
+            { "id": "v_kiku", "form": "nagara_form" },
+            { "id": "v_aruku", "form": "polite_masu" },
             "p_ka"
           ]
         },
@@ -302,7 +301,7 @@
             "char_rikizo",
             "v_konkai",
             "p_wa",
-            "v_muzukashii",
+            { "id": "v_muzukashii", "form": "polite_adj" },
             "g_desu",
             "p_demo_but",
             "v_rainen",
@@ -328,6 +327,7 @@
           "en": "Mr. Tanaka, can you drive a car?",
           "terms": [
             "v_tanaka",
+            "v_san",
             "p_wa",
             "v_kuruma",
             "p_no",
@@ -342,6 +342,8 @@
           "jp": "いいえ、できません。いつも 自転車に 乗ります。",
           "en": "No, I cannot. I always ride a bicycle.",
           "terms": [
+            "v_iie",
+            { "id": "v_dekiru", "form": "polite_negative" },
             "v_itsumo",
             "v_jitensha",
             "p_ni",
@@ -380,7 +382,7 @@
             { "id": "v_norimawasu", "form": "plain_form" },
             "p_no",
             "p_wa",
-            "v_muzukashii",
+            { "id": "v_muzukashii", "form": "polite_adj" },
             "g_desu"
           ]
         }
@@ -477,8 +479,8 @@
           "terms": [
             "char_yamakawa",
             "v_sou",
-            "g_da",
             "p_ne",
+            "g_da",
             "v_ookii",
             "v_ta",
             "p_ga",
@@ -547,14 +549,14 @@
             "p_wa",
             "v_hito",
             "p_ga",
-            "v_ooi",
+            { "id": "v_ooi", "form": "polite_adj" },
             "g_desu",
             "p_kara_because",
             "v_kuruma",
             "p_no",
             "v_unten",
             "p_wa",
-            "v_muzukashii",
+            { "id": "v_muzukashii", "form": "polite_adj" },
             "g_desu"
           ]
         },
@@ -830,28 +832,6 @@
           ],
           "answer": "かいがい"
         },
-        {
-          "kind": "mcq",
-          "q": "[水田] の よみかたは？",
-          "choices": [
-            "すいでん",
-            "みずた",
-            "すいた",
-            "みずでん"
-          ],
-          "answer": "すいでん"
-        },
-        {
-          "kind": "mcq",
-          "q": "[今回] の よみかたは？",
-          "choices": [
-            "こんかい",
-            "いまかい",
-            "こんまわ",
-            "いままわ"
-          ],
-          "answer": "こんかい"
-        }
       ]
     },
     {
