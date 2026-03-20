@@ -1,31 +1,14 @@
-# 図書館の本 (としょかんのほん)
-## The Library Book
+# 図書館の本
 
----
+りきぞは地図を見ながら、図書館へ歩きました。中に入ってから、古い小説を見ました。その小説はとてもおもしろそうでした。
 
-### Story Text (Japanese)
+りきぞは小説を読み始めました。少しむずかしかったですが、ゆっくり読むことができました。質問があったので、図書館の人に聞きました。その人はやさしく説明してくれました。「この小説には大切な問題があります。今も多くの人が読んでいるんですよ。」「そうですか！」とりきぞは言いました。りきぞはその小説が好きになりました。
 
-ある日、田中さんは図書館へ行きました。田中さんは文学が好きでした。
+夜、けんがりきぞに電話しました。「今夜、料理屋に行かない？洋食が食べたいんだ。」「いいよ、行こう！」と、りきぞは言いました。
 
-図書館で、田中さんは古い本を見つけました。その本の名前は「心の教え」でした。
+料理屋では洋食を食べながら、二人で話しました。店の近くに洋服の店もあって、外国にいるみたいな気分でした。食べ物はどれもおいしかったです。
 
-本を読みました。とてもおもしろかったです。毎日、学校の後で図書館へ行って、その本を読みました。
-
-ある時、先生が教室で言いました。「来週、試験があります。注意してください。」
-
-田中さんは頭がいい学生でしたが、試験はむずかしそうでした。でも、図書館の本で勉強しました。
-
-試験の日が来ました。田中さんは試験を書きました。一ばんむずかしい質問がありました。でも、図書館の本で読んだことについて考えました。
-
-試験を書くことができました！
-
-今度の日、先生が言いました。「田中さん、よくできました！百パーセントです！」
-
-田中さんはうれしかったです。図書館へ行って、その本に「ありがとう」と言いました。
-
-本を読むことは大切だと思いました。今も毎日、図書館で本を読んでいます。
-
-**おわり**
+帰り道に、夜空を見ました。夜空がきれいで、りきぞはうれしかったです。「今夜もいい日だったね」と、けんが言いました。「うん、また来よう」と、りきぞも言いました。
 
 ---
 
@@ -33,66 +16,12 @@
 
 **The Library Book**
 
-One day, Tanaka-san went to the library. He liked literature.
+Rikizo walked to the library while looking at the map. After going inside, he spotted an old novel. The novel looked very interesting.
 
-At the library, Tanaka-san found an old book. The book's name was "Teachings of the Heart."
+Rikizo started reading the novel. It was a little difficult, but he was able to read it slowly. He had a question, so he asked someone at the library. The person kindly gave him an explanation. "This novel contains important problems. Even now, many people are reading it, you see." "Is that so!" said Rikizo. Rikizo came to love that novel.
 
-He read the book. It was very interesting. Every day, after school, he went to the library and read that book.
+That evening, Ken called Rikizo. "Want to go to a restaurant tonight? I want to eat Western food." "Sure, let's go!" said Rikizo.
 
-One time, the teacher said in the classroom, "Next week, there will be an exam. Please be careful."
+At the restaurant, the two of them ate Western food and talked. There was also a Western clothes shop near the restaurant, and it felt like being in a foreign country. All the food was delicious.
 
-Tanaka-san was a smart student, but the exam looked difficult. However, he studied with the library book.
-
-The day of the exam came. Tanaka-san took the exam. There was one very difficult question. But he thought about what he had read in the library book.
-
-He was able to write the exam!
-
-The next day, the teacher said, "Tanaka-san, well done! One hundred points!"
-
-Tanaka-san was happy. He went to the library and said "thank you" to the book.
-
-He thought that reading books is important. Even now, every day, he reads books at the library.
-
-**The End**
-
----
-
-### Vocabulary Used (from glossary)
-
-- 日 (ひ) - day
-- 図書館 (としょかん) - library
-- 行く (いく) - to go
-- 本 (ほん) - book
-- 文学 (ぶんがく) - literature
-- 好き (すき) - like
-- 古い (ふるい) - old
-- 名前 (なまえ) - name
-- 心 (こころ) - heart/mind
-- 教え (おしえ) - teaching
-- 読む (よむ) - to read
-- 毎日 (まいにち) - every day
-- 学校 (がっこう) - school
-- 後 (あと) - after
-- 時 (とき) - time
-- 先生 (せんせい) - teacher
-- 教室 (きょうしつ) - classroom
-- 言う (いう) - to say
-- 来週 (らいしゅう) - next week
-- 試験 (しけん) - exam
-- 注意 (ちゅうい) - attention/care
-- 頭がいい (あたまがいい) - smart
-- 学生 (がくせい) - student
-- 勉強 (べんきょう) - study
-- 来る (くる) - to come
-- 書く (かく) - to write
-- 質問 (しつもん) - question
-- 大切 (たいせつ) - important
-- 今 (いま) - now
-
-### Grammar Points Used
-
-- Past tense (ました、でした)
-- Te-form (行って、読んで)
-- Adjectives (おもしろかった、むずかしい、うれしい)
-- Potential form (できました)
-- Present progressive (読んでいます)
+On the way home, they looked at the night sky. The night sky was beautiful, and Rikizo felt happy. "Tonight was a good day, wasn't it," said Ken. "Yeah, let's come again," said Rikizo.
