@@ -79,7 +79,7 @@
       "reading": "と",
       "role": "conditional / automatic result",
       "explanation": "Expresses an automatic or natural result: 'if/when A, then B always follows.' Used after plain-form verbs or adjectives. Unlike たら/ば, the と conditional implies the result is inevitable or habitual, not hypothetical. Example: ボタンを押すと、ドアが開く (push the button and the door opens).",
-      "introducedIn": "G22"
+      "introducedIn": "G25"
     },
     {
       "id": "p_kara",
@@ -344,6 +344,22 @@
       "role": "about / regarding",
       "explanation": "Compound postposition に+ついて meaning 'about', 'regarding', or 'concerning'. Follows a noun. 日本語について話す = talk about the Japanese language. More formal than the English 'about'; common in academic and written contexts.",
       "introducedIn": "N4.36"
+    },
+    {
+      "id": "p_sou_da",
+      "particle": "そうだ",
+      "reading": "そうだ",
+      "role": "appearance",
+      "explanation": "Appearance そうだ — attaches to the ます-stem of verbs and the stem of adjectives (drop い for i-adj; bare stem for na-adj) to express that something looks like or seems a certain way, based on the speaker's own visual or sensory observation. Distinct from hearsay そうだ (p_sou_da_hearsay), which attaches to the plain form. Polite: そうです. Plain/casual: そうだ. Irregular: いい → よさそう.",
+      "introducedIn": "G22"
+    },
+    {
+      "id": "p_sou_da_hearsay",
+      "particle": "そうだ",
+      "reading": "そうだ",
+      "role": "hearsay",
+      "explanation": "Hearsay そうだ — attaches to the plain form of verbs and adjectives to report information the speaker heard from another source. Translates as 'I heard that ~' or 'apparently ~'. Distinct from appearance そうだ (p_sou_da), which attaches to the stem. Polite: そうです. Plain/casual: そうだ. Negation is inside the reported clause: おいしくないそうだ = 'I heard it's not delicious'.",
+      "introducedIn": "G22"
     }
   ]
 }
