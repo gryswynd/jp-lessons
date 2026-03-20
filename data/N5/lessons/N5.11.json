@@ -258,6 +258,7 @@
           "jp": "ええ、花は きれいで、かわいいです。",
           "en": "Yes, the flowers are beautiful and cute.",
           "terms": [
+            "p_ee",
             "v_hana",
             "p_wa",
             {
@@ -341,6 +342,7 @@
           "jp": "ええ！毎年、花火は 大きくて、きれいですよ。",
           "en": "Yes! Every year the fireworks are big and beautiful.",
           "terms": [
+            "p_ee",
             "v_mainen",
             "v_hanabi",
             "p_wa",
@@ -377,7 +379,6 @@
             "g_desu",
             "p_yo",
             "v_yasui",
-            "g_desu",
             "v_hanabi",
             "g_desu",
             "p_yo"
@@ -487,7 +488,8 @@
             {
               "id": "v_iku",
               "form": "desire_tai_negative"
-            }
+            },
+            "g_desu"
           ]
         },
         {
@@ -569,7 +571,7 @@
             "v_ookii",
             "v_sakana",
             "p_ga",
-            "v_iru",
+            { "id": "v_iru", "form": "plain_form" },
             "p_yo",
             "v_kawaii",
             "p_ne"
@@ -597,6 +599,7 @@
           "jp": "え！魚を 食べたいの。",
           "en": "What! You want to eat fish?",
           "terms": [
+            "v_e_exclaim",
             "v_sakana",
             "p_wo",
             {
@@ -633,7 +636,7 @@
           "terms": [
             "v_kingyo",
             "p_mo",
-            "v_iru",
+            { "id": "v_iru", "form": "plain_form" },
             "p_yo",
             "v_kawaii",
             "p_ne"
@@ -652,8 +655,8 @@
               "form": "te_form"
             },
             "v_kawaii",
-            "p_yo",
-            "p_ne"
+            "p_ne",
+            "p_yo"
           ]
         }
       ]
@@ -758,7 +761,7 @@
               "form": "attributive_na"
             },
             "v_hi",
-            "g_desu",
+            { "id": "g_desu", "form": "polite_past_copula" },
             "v_mata",
             {
               "id": "v_kuru",
