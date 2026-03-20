@@ -59,7 +59,7 @@ User Request
 **Responsibilities:**
 - Read the user's request and identify: content type, target lesson(s), level (N5/N4), and any special focus.
 - Read `manifest.json` to understand what already exists and where new content fits.
-- **Do not read the glossary in full.** The glossary files are large and will exceed output token limits. Instead use targeted Grep queries: search by `lesson_ids` to enumerate vocab for the target lesson, and search by `"id": "v_foo"` to verify individual IDs. See [Glossary Access Pattern](#glossary-access-pattern) below.
+- **Do not read the glossary in full.** The glossary files are large and will exceed output token limits. Instead use targeted Grep queries: search by `lesson_ids` to enumerate vocab for the target lesson, and search by `"id": "v_foo"` to verify individual IDs. See Glossary Access Pattern in `skills/quality-gates.md`.
 - Build a **Content Brief** (see format below) and pass it to Agent 2.
 - If Agent 4 returns a rewrite note, analyse the feedback, update the brief, and re-dispatch to Agent 2. Log what changed.
 - If Agent 3 returns an Unregistered Word Report (not a FAIL), present the word list to the user using the escalation format. For each word the user approves, add the entry to the correct glossary file before re-dispatching to Agent 2. For each word the user rejects, instruct Agent 2 to remove or replace it. Log all additions and rejections in the Rewrite Notes field.
@@ -74,8 +74,8 @@ User Request
 - **Grammar prerequisite validation.** Before finalizing the Content Brief, Agent 1 must verify that every grammar point listed can be taught given the `unlocksAfter` lesson. Ask: "Has the student been exposed to the concepts needed to understand this grammar point?" If not, defer the point to a later grammar lesson and note the deferral in the brief. Consult the prerequisite table in Agent 4's Grammar Scope Enforcement section.
 - **Conjugation form pre-check.** Before dispatching to Agent 2, verify that every form string the lesson will need exists in `conjugation_rules.json`. This includes copula forms (でした, だった, じゃない), plain forms, and any new pattern introduced by the lesson's grammar focus. If a form is absent, create it in `conjugation_rules.json` before Agent 2 begins — just as a missing glossary entry must be created before content can reference it. Never allow Agent 2 to use `form: null` as a substitute for a missing form string.
 - **godan_euphonic engine map check.** For every form in `conjugation_rules.json` that uses `"type": "godan_euphonic"` with a `"map"` key (e.g. `"map": "tari_form"`, `"map": "tara_form"`), Grep `app/shared/text-processor.js` for that map name inside `GODAN_MAPS`. If the key is absent, the conjugation silently fails at runtime — godan verbs stay in dictionary form in the chip with no error. Add the missing map entry to `GODAN_MAPS` before dispatching to Agent 2. The map values follow the same euphonic pattern as `ta_form` but with the appropriate suffix (たり/だり for tari_form; たら/だら for tara_form). This check applies to all lessons using tari_form, tara_form, or any future godan_euphonic map.
-- **Grammar reinforcement planning.** Before finalizing the Content Brief, Agent 1 must consult the [Grammar Reinforcement Requirements](#grammar-reinforcement-requirements) schedule and identify: (a) which grammar milestones are in their **active reinforcement window** for this lesson, and (b) which milestones are in **sustained use**. List the specific reinforcement targets in the Content Brief. Plan at least 1 warmup item that exercises the most recently unlocked grammar using prior-lesson vocabulary. If the lesson's theme naturally supports certain grammar patterns (e.g. a travel theme supports ～たいです for desires, ～てください for requests), note these opportunities in the brief.
-- **Register planning.** Before finalizing the Content Brief, Agent 1 must consult the [Register Requirements](#register-requirements-polite-vs-casual) schedule and determine how many casual conversations the lesson needs. For N5.10+ lessons, plan which conversations will be casual by assigning informal contexts (friends, family, close peers). For lessons before N5.10, confirm register = 100% polite. Include the register plan in the Content Brief.
+- **Grammar reinforcement planning.** Before finalizing the Content Brief, Agent 1 must consult the Grammar Reinforcement Requirements in `skills/grammar-rules.md` schedule and identify: (a) which grammar milestones are in their **active reinforcement window** for this lesson, and (b) which milestones are in **sustained use**. List the specific reinforcement targets in the Content Brief. Plan at least 1 warmup item that exercises the most recently unlocked grammar using prior-lesson vocabulary. If the lesson's theme naturally supports certain grammar patterns (e.g. a travel theme supports ～たいです for desires, ～てください for requests), note these opportunities in the brief.
+- **Register planning.** Before finalizing the Content Brief, Agent 1 must consult the Register Requirements in `skills/grammar-rules.md` schedule and determine how many casual conversations the lesson needs. For N5.10+ lessons, plan which conversations will be casual by assigning informal contexts (friends, family, close peers). For lessons before N5.10, confirm register = 100% polite. Include the register plan in the Content Brief.
 
 **Spawning Agents 2, 3, and 4 via the Agent tool:**
 
@@ -84,19 +84,19 @@ Agent 1 spawns each downstream agent as an independent subprocess. Each agent re
 **What to include in the Agent 2 prompt:**
 - The complete Content Brief
 - Paths to any dependency files listed in the brief (reference template, prior lesson files) — Agent 2 must read these itself via its tools
-- The instruction: *"You are Agent 2 (Content Builder). Read CLAUDE.md for your full responsibilities. Build the draft JSON according to the Content Brief above, then return the complete draft and your CB Checklist."*
+- The instruction: *"You are Agent 2 (Content Builder). Read the following skill files for your full responsibilities: skills/pipeline.md, skills/content-schemas.md, skills/term-tagging.md, skills/grammar-rules.md. Build the draft JSON according to the Content Brief above, then return the complete draft and your CB Checklist."*
 - If this is a revision pass: include the QA Failure Report from Agent 3 and instruct Agent 2 to fix every listed issue
 
 **What to include in the Agent 3 prompt:**
 - The complete Content Brief (including the taught-kanji set Agent 1 computed)
 - The full draft JSON returned by Agent 2
-- The instruction: *"You are Agent 3 (QA Reviewer). Read CLAUDE.md for your full responsibilities. Your first task is the mechanical kanji scope audit described in your Responsibilities section — complete that before any other check. Return a QA-PASS stamp or a QA Failure Report."*
+- The instruction: *"You are Agent 3 (QA Reviewer). Read the following skill files for your full responsibilities: skills/pipeline.md, skills/quality-gates.md, skills/term-tagging.md, skills/grammar-rules.md. Your first task is the mechanical kanji scope audit described in your Responsibilities section — complete that before any other check. Return a QA-PASS stamp or a QA Failure Report."*
 
 **What to include in the Agent 4 prompt:**
 - The complete Content Brief
 - The QA-approved draft JSON
 - Paths to the 1–2 most recent same-type lesson files for comparison (Agent 4 must read these itself)
-- The instruction: *"You are Agent 4 (Consistency Reviewer). Read CLAUDE.md for your full responsibilities. Return either a CR approval or a Consistency Note with a rewrite directive."*
+- The instruction: *"You are Agent 4 (Consistency Reviewer). Read the following skill files for your full responsibilities: skills/pipeline.md, skills/quality-gates.md, skills/grammar-rules.md. Return either a CR approval or a Consistency Note with a rewrite directive."*
 
 **Handling returns:**
 - Agent 2 returns a draft → Agent 1 spawns Agent 3 with it
@@ -143,14 +143,14 @@ Rewrite notes: [empty on first pass; filled by Agent 4 feedback]
 **Trigger:** Spawned by Agent 1 via the Agent tool. Receives a Content Brief and file paths. Has no access to Agent 1's conversation history or reasoning — only what was explicitly included in the spawn prompt.
 
 **Responsibilities:**
-- **Do not read the glossary in full.** Use targeted Grep queries only (see [Glossary Access Pattern](#glossary-access-pattern)). Reading the full file will exceed the 32k output token limit.
+- **Do not read the glossary in full.** Use targeted Grep queries only (see Glossary Access Pattern in `skills/quality-gates.md`). Reading the full file will exceed the 32k output token limit.
 - Read any existing lesson or review JSON files listed in `Dependencies`.
-- Write all JSON/MD content strictly according to the schemas defined in [Content Types & Their Rules](#content-types--their-rules).
+- Write all JSON/MD content strictly according to the schemas defined in Content Types in `skills/content-schemas.md`.
 - Every Japanese surface form that is used in `jp` fields, passages, or conversation lines **must** either be tagged in the `terms` array of that item, or be fully hiragana/katakana with no kanji content (pure kana items for basic particles/common function words may be untagged when they are not in the glossary).
 - Do **not** invent vocabulary. Use only IDs that exist in the glossary.
-- Do **not** use kanji that have not been introduced by the current lesson or earlier. See [Kanji Prerequisite Rules](#kanji-prerequisite-rules).
-- Do **not** use conjugation forms whose `introducedIn` lesson (in `conjugation_rules.json`) is later than the current lesson. For example, `te_form` has `introducedIn: "N5.5"` — a lesson targeting N5.3 must not contain any て-form usage. If a sentence requires a form that is not yet available, restructure the sentence to use only available forms. See [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules).
-- When a verb or adjective appears in a conjugated form, tag it with the correct `form` string. See [Term Tagging Reference](#term-tagging-reference).
+- Do **not** use kanji that have not been introduced by the current lesson or earlier. See Kanji Prerequisite Rules in `skills/grammar-rules.md`.
+- Do **not** use conjugation forms whose `introducedIn` lesson (in `conjugation_rules.json`) is later than the current lesson. For example, `te_form` has `introducedIn: "N5.5"` — a lesson targeting N5.3 must not contain any て-form usage. If a sentence requires a form that is not yet available, restructure the sentence to use only available forms. See Grammar Usage Prerequisite Rules in `skills/grammar-rules.md`.
+- When a verb or adjective appears in a conjugated form, tag it with the correct `form` string. See Term Tagging Reference in `skills/term-tagging.md`.
 - **Use recently unlocked grammar actively.** Consult the Content Brief's "Grammar reinforcement" targets. Meet the minimum usage counts for forms in their active reinforcement window. Vary verb forms across conversations — do not default every verb to ます/ました when negative, te-form, and other unlocked forms would be natural. If a minimum count cannot be met without forcing awkward sentences, flag this in the CB Checklist and explain why.
 - Output the draft as a single JSON (or MD + JSON pair for stories) in a clearly labelled code block.
 - Attach a **CB Checklist** at the end of the output (see below).
@@ -293,7 +293,7 @@ CB CHECKLIST
 - Verify all kanji in `jp` fields appear in the taught-kanji set (from `manifest.json`).
 - **Compound surface spacing check.** For every `terms` entry whose glossary `surface` contains an internal particle or spans multiple morphemes (identifiable by a particle like が/の/を embedded in the middle of the surface string — e.g. `v_atamagaii` surface `"頭がいい"`), verify the jp text contains that surface as a **contiguous substring with no inserted spaces**. A space anywhere inside the compound (e.g. `頭が いい` vs surface `頭がいい`) breaks the text-processor match silently — no chip appears, no error is thrown. This is a **hard fail**: instruct Agent 2 to remove the space from the jp text. Do not accept a split into constituent terms as the fix — that changes the semantic unit.
 - **Glossary-surface writing-form check.** For every word used in `jp` text, look up its glossary entry and check whether its `surface` field contains any kanji that are **not** in the taught-kanji set. If so, the word must appear in the hiragana/partial-kanji form from its `matches` field — never in the full-kanji `surface` form. This check catches cases like 一緒に (surface) written in jp text when the glossary's `matches` form is いっしょに and 緒 is not yet taught, or 大丈夫 written when だいじょうぶ is the required form. Grep the glossary for the word's ID, read both `surface` and `matches`, then verify the jp text uses the form consistent with the current taught-kanji set. Any mismatch is a **hard fail**.
-- **New glossary entry kanji gate.** For any glossary entry created during this content-creation cycle (i.e. an entry that did not exist before Agent 1 began scoping), verify: (a) every kanji in the `surface` field is in the taught-kanji set at `lesson_ids`; (b) if the surface contains an untaught kanji, the entry must be on the approved partial-kanji list in CLAUDE.md (permanent-hybrid case) — not an ad-hoc hybrid invented to work around a deferred compound. A new entry whose surface contains a kanji not taught until a later lesson, and which is not on the partial-kanji list, is a **hard fail**: flag it to Agent 1 with the lesson where the last required kanji unlocks.
+- **New glossary entry kanji gate.** For any glossary entry created during this content-creation cycle (i.e. an entry that did not exist before Agent 1 began scoping), verify: (a) every kanji in the `surface` field is in the taught-kanji set at `lesson_ids`; (b) if the surface contains an untaught kanji, the entry must be on the approved partial-kanji list in skills/grammar-rules.md (permanent-hybrid case) — not an ad-hoc hybrid invented to work around a deferred compound. A new entry whose surface contains a kanji not taught until a later lesson, and which is not on the partial-kanji list, is a **hard fail**: flag it to Agent 1 with the lesson where the last required kanji unlocks.
 - **Unregistered kana lexical word check.** For every pure-kana token in `jp` text that is a lexical word (not a particle or copula — use judgement: interjections like うん, confirmations like そう, casual words like だよ/だね count as lexical), verify it has an entry in `glossary.N5.json` or `glossary.N4.json`. If it does not, do **not** issue a standard FAIL — instead, produce an **Unregistered Word Report** (see below) and return it to Agent 1. Agent 1 presents the list to the user and asks whether to add each word to the glossary. This is not a content error by Agent 2 — it is a gap between natural conversational Japanese and the current glossary coverage.
 - Verify the JSON schema matches the content type schema exactly (no extra/missing required fields).
 - Verify answer fields match the correct answer choices.
@@ -413,7 +413,7 @@ Line/Section | Issue Type            | Detail
 - **Use the latest content as the reference standard.** Read the highest-numbered existing lesson file of the same content type and level — this represents the current structural standard. Optionally read one additional earlier file for comparison. When conventions differ between older and newer files, the newest file always takes precedence.
 - Assess: **Natural language quality** — do conversations sound like real Japanese, not textbook recitations? Are the situations culturally plausible?
 - Assess: **Redundancy** — read each scene as a sequence, not sentence by sentence. Flag any cluster of 2+ consecutive sentences that convey essentially the same information through different grammar. This pattern is the primary symptom of forced vocabulary insertion: Agent 2 added sentences not because the story needed them, but to check off a required vocab ID. Each sentence must add new information or advance the scene — restating the same fact in different words is a hard fail regardless of whether each sentence is individually grammatical. Example: "やまかわさんもいます。こちらはやまかわさんです。名前はやまかわです。" — three consecutive sentences that all communicate "this person is Yamakawa." Any one of them is fine; all three together is a redundancy fail.
-- Assess: **Skill progression** — does difficulty increase appropriately from the previous lesson? Are new grammar points used naturally rather than force-fed? Are conjugation forms and grammar patterns appropriate for the lesson tier? See [Agent 4 — Grammar Usage Validation](#agent-4--grammar-usage-validation-all-content-types).
+- Assess: **Skill progression** — does difficulty increase appropriately from the previous lesson? Are new grammar points used naturally rather than force-fed? Are conjugation forms and grammar patterns appropriate for the lesson tier? See Agent 4 — Grammar Usage Validation (below).
 - Assess: **Vocabulary density** — are too few or too many new vocab items packed into a single section?
 - Assess: **Consistency** — character names, setting details, and vocabulary choices consistent with the rest of the series?
 - Assess: **Scenario variety** — does this prompt/story/review cover scenarios not already covered by recent content?
@@ -565,7 +565,7 @@ For **every** draft, Agent 4 must perform a **Grammar Reinforcement Audit** to v
 
 1. **Identify the reinforcement context.** Read the Content Brief's "Grammar reinforcement" field. Identify which milestones are in the active window and which are in sustained use for this lesson.
 
-2. **Count active-window forms.** For each milestone in the active reinforcement window, count the occurrences of its required patterns across all conversation and reading sections (excluding drills). Compare against the minimum counts in the [Grammar Reinforcement Schedule](#grammar-milestones-and-reinforcement-schedule).
+2. **Count active-window forms.** For each milestone in the active reinforcement window, count the occurrences of its required patterns across all conversation and reading sections (excluding drills). Compare against the minimum counts in the Grammar Reinforcement Schedule in `skills/grammar-rules.md`.
 
    - **Hard fail:** An active-window minimum count is not met AND there are conversations/readings where the form could have been used naturally. Example: N5.7 lesson has 5 conversations and 2 readings, all verbs are in ます or ました, zero てください or ています — despite te-form being in the active window.
    - **Soft fail:** The count falls short by 1, and the lesson's theme makes it genuinely difficult to use the form naturally. Flag with a specific suggestion for where the form could be inserted.
@@ -640,7 +640,7 @@ Spawning Agent 2...
 ```
 
 **Spawning Agent 2:**
-Use the `Agent` tool with a prompt that includes the Content Brief, dependency file paths, and the instruction to read CLAUDE.md. Do not include the full conversation history — only what Agent 2 needs. Label the spawn clearly:
+Use the `Agent` tool with a prompt that includes the Content Brief, dependency file paths, and the instruction to read the relevant skill files. Do not include the full conversation history — only what Agent 2 needs. Label the spawn clearly:
 
 ```
 === SPAWNING AGENT 2: CONTENT BUILDER ===

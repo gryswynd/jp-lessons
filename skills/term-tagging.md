@@ -376,7 +376,7 @@ Add a row to the table above. If this step is skipped, future agents will see th
 
 **Step 3 — Tag the name in all lesson content**
 
-In every `jp` field that contains the new character's name, add the `char_*` ID to the `terms` array. See [Tagging in lesson/review/grammar/game content](#tagging-in-lessonreviewgrammargame-content) below.
+In every `jp` field that contains the new character's name, add the `char_*` ID to the `terms` array. See Tagging in lesson/review/grammar/game content (below) below.
 
 **Step 4 (stories only) — Add a surface key to `terms.json`**
 

@@ -53,7 +53,7 @@ For a lesson or compose prompt targeting lesson `N5.X`, only terms with `lesson`
 
 ### Grammar patterns
 
-Grammar patterns (particles, sentence-final forms, conjunctions like ～て) are governed by what has been taught, but they do not need to be explicitly listed in the glossary. Each conjugation form has an `introducedIn` field in `conjugation_rules.json` and each particle has an `introducedIn` field in `shared/particles.json` — these are the source of truth for when a grammar pattern becomes available. A form or particle whose `introducedIn` is later than the current lesson is **not permitted**, even if the result would be natural Japanese. See [Grammar Usage Prerequisite Rules](#grammar-usage-prerequisite-rules) for enforcement details.
+Grammar patterns (particles, sentence-final forms, conjunctions like ～て) are governed by what has been taught, but they do not need to be explicitly listed in the glossary. Each conjugation form has an `introducedIn` field in `conjugation_rules.json` and each particle has an `introducedIn` field in `shared/particles.json` — these are the source of truth for when a grammar pattern becomes available. A form or particle whose `introducedIn` is later than the current lesson is **not permitted**, even if the result would be natural Japanese. See Grammar Usage Prerequisite Rules (below) for enforcement details.
 
 ---
 
@@ -207,7 +207,7 @@ Each conjugation form in `conjugation_rules.json` has an `introducedIn` field sp
 
 Before N5.5, only `polite_adj` and dictionary forms are available. This means N5.1–N5.4 content is limited to noun-です sentences, い-adjective+です sentences, and verbs in dictionary form. Plan sentences accordingly.
 
-**Desire expressions (N5.8+).** `plain_desire_tai` is available from N5.8. For polite desire sentences (〜たいです), use `plain_desire_tai` + `g_desu` (two chips). For plain/casual desire (〜たい without です), use `plain_desire_tai` alone. The deprecated `desire_tai` form must never be used — see [desire_tai — deprecated](#desire_tai--deprecated-always-use-plain_desire_tai--g_desu). The reinforcement schedule expects desire expressions from N5.9 onward (G9 active window); N5.8 content may use `plain_desire_tai` but is not required to meet reinforcement minimums for it.
+**Desire expressions (N5.8+).** `plain_desire_tai` is available from N5.8. For polite desire sentences (〜たいです), use `plain_desire_tai` + `g_desu` (two chips). For plain/casual desire (〜たい without です), use `plain_desire_tai` alone. The deprecated `desire_tai` form must never be used — see desire_tai — deprecated in `skills/term-tagging.md`. The reinforcement schedule expects desire expressions from N5.9 onward (G9 active window); N5.8 content may use `plain_desire_tai` but is not required to meet reinforcement minimums for it.
 
 ---
 
@@ -400,7 +400,7 @@ This ensures students engage with new grammar patterns using familiar words, red
 
 5. **Casual conversations should not be the hardest conversation in the lesson.** The new grammar being practiced is the plain forms themselves, so the casual conversations should feel accessible and natural — not packed with advanced vocabulary.
 
-6. **Tag plain forms correctly.** In casual conversations, verbs will use `plain_negative`, `plain_past`, `plain_past_negative`, and dictionary form (no form tag needed). Do not tag casual speech verbs with polite form tags. The copula だ should be tagged as `g_da` (not `g_desu`). See [Term Tagging Reference](#term-tagging-reference) for all valid form strings.
+6. **Tag plain forms correctly.** In casual conversations, verbs will use `plain_negative`, `plain_past`, `plain_past_negative`, and dictionary form (no form tag needed). Do not tag casual speech verbs with polite form tags. The copula だ should be tagged as `g_da` (not `g_desu`). See Term Tagging Reference in `skills/term-tagging.md` for all valid form strings.
 
 ### What to prioritize in early casual conversations (N5.10–N5.11)
 
