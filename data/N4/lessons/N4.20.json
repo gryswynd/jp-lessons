@@ -456,6 +456,7 @@
           "en": "Every evening after finishing work, Rikizo goes to the bars in town.",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_maiban",
             "v_shigoto",
             "p_ga",
@@ -473,8 +474,8 @@
           "en": "In town there are many small restaurants and bars.",
           "terms": [
             "v_machi",
-            "p_ni",
             "p_wa",
+            "p_ni",
             "v_chiisai",
             "v_ryouriya",
             "p_ya",
@@ -528,15 +529,19 @@
           "a": "町の 飲み屋に 行きます。",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_maiban",
             "v_shigoto",
+            "p_no",
             "v_ato",
             "v_doko",
             "p_ni",
             { "id": "v_iku", "form": "polite_masu" },
+            "p_ka",
             "v_machi",
             "p_no",
-            "v_nomiya"
+            "v_nomiya",
+            "p_ni"
           ]
         },
         {
@@ -548,16 +553,19 @@
             "v_yoku",
             { "id": "v_iku", "form": "plain_form" },
             "v_ryouriya",
+            "p_wa",
             "v_donna",
             "v_mise",
             "g_desu",
+            "p_ka",
             "v_youfuu",
             "p_de",
             "v_yoru",
             "p_mo",
             { "id": "v_akarui", "form": "te_form" },
-            { "id": "v_tanoshii", "form": "polite_adj" },
-            "v_mise"
+            "v_tanoshii",
+            "v_mise",
+            "g_desu"
           ]
         },
         {
@@ -565,6 +573,7 @@
           "a": "屋上に 行って、夜空を 見ます。",
           "terms": [
             "v_shokuji",
+            "p_no",
             "v_ato",
             "char_rikizo",
             "p_wa",
@@ -572,6 +581,7 @@
             "v_nani",
             "p_wo",
             { "id": "v_suru", "form": "polite_masu" },
+            "p_ka",
             "v_okujou",
             "p_ni",
             { "id": "v_iku", "form": "te_form" },
@@ -680,11 +690,15 @@
             "p_ni",
             { "id": "v_aru", "form": "plain_form" },
             "v_koya",
+            "p_wa",
             "v_dare",
             "p_no",
+            "g_desu",
+            "p_ka",
             "char_rikizo",
             "p_no",
             "v_chichi",
+            "p_no",
             "v_koya",
             "g_desu"
           ]
@@ -701,6 +715,7 @@
             "v_nani",
             "p_wo",
             { "id": "v_suru", "form": "polite_masu" },
+            "p_ka",
             "v_kaiyou",
             "p_no",
             "v_oto",
@@ -723,6 +738,7 @@
             "v_nani",
             "p_wo",
             { "id": "v_morau", "form": "polite_mashita" },
+            "p_ka",
             "v_youfuku",
             "p_wo",
             { "id": "v_morau", "form": "polite_mashita" }
@@ -785,6 +801,7 @@
           "answer": "洋服",
           "terms": [
             "v_kono",
+            "p_wa",
             "v_youfuu",
             "p_de",
             "v_totemo",
@@ -797,6 +814,7 @@
           "choices": ["屋上", "小屋", "料理屋", "飲み屋"],
           "answer": "屋上",
           "terms": [
+            "p_kara",
             "v_yozora",
             "p_ga",
             "v_yoku",
