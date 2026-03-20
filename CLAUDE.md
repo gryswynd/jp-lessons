@@ -603,9 +603,11 @@ For **every** draft, Agent 4 must perform a **Grammar Reinforcement Audit** to v
    **Conjugation-based patterns:**
    - N5.6+: Is there a てください somewhere? Is there a て-connector (AてB) somewhere?
    - N5.9+: Is there a ています somewhere? Is there a たいです somewhere? Is there a ましょう somewhere?
-   - N5.10+: Is there a ない/なかった somewhere?
-   - N4.11+: Is there a たり pattern somewhere?
+   - N5.10+: Is there a ない/なかった somewhere? Is there a のです/なんです (or casual んだ) somewhere?
+   - N4.11+: Is there a たり pattern somewhere? Is there a てから, まえに, or ために somewhere?
    - N4.21+: Is there a てもいい or てはいけない somewhere?
+   - N4.26+: Is there a なければいけない or ないといけない somewhere? Is there at least one of ～なら or ～と conditional somewhere?
+   - N4.35+: Is there a くなる/になる or くする/にする somewhere?
 
    **Non-conjugation patterns (particle-based):**
    - N4.6+: Is there a より comparison or いちばん superlative somewhere?
@@ -1893,7 +1895,7 @@ Each milestone groups forms that unlock together. The **active reinforcement win
 | **Polite verbs** (G7) | N5.5 | N5.6–N5.7 | ≥3 `polite_masu`, ≥2 `polite_mashita`, ≥1 `polite_negative` or `polite_past_negative` | All four polite verb forms appear regularly; no lesson should use only ます/ました |
 | **Te-form as connector + requests** (G8) | N5.5 | N5.6–N5.7 | ≥1 `てください` request, ≥2 te-form sequential connectors (AてB) | てください appears naturally where context calls for requests; て as connector used in multi-action sentences |
 | **Progressive + desire + volitional** (G9) | N5.9 | N5.9–N5.10 | ≥1 `ている/ています` progressive or state, ≥1 `～たいです` desire expression, ≥1 `～ましょう` suggestion/invitation | All three patterns appear where thematically appropriate |
-| **Plain negative** (G10) | N5.9 | N5.10–N5.11 | ≥1 `～ない` or `～なかった` in context (reading, drill, or natural dialogue) | Plain negatives appear in varied contexts; not limited to drills |
+| **Plain forms & connectors** (G10) | N5.9 | N5.10–N5.11 | ≥1 `～ない` or `～なかった` in context; ≥1 `のです/なんです` explanatory form; ≥1 `けど` or clause-final `から`/`ので` connector | Plain negatives, explanatory のです, and clause connectors (が/けど/から/ので) all appear in varied natural contexts; not limited to drills |
 | **Adj past + adverbial** (G11) | N5.10 | N5.11–N5.12 | ≥1 past-tense adjective (`polite_past_adj`), ≥1 adverbial form (`adverbial`) | Both used naturally in descriptions and narratives |
 | **Appearance** (N5.11) | N5.11 | N5.12–N5.13 | ≥1 `～そうです` appearance pattern | Appears where observations or impressions are natural |
 | **Potential** (G13) | N4.3 | N4.4–N4.6 | ≥1 potential form (affirmative or negative) | Ability/possibility expressions used where natural |
@@ -1901,19 +1903,32 @@ Each milestone groups forms that unlock together. The **active reinforcement win
 | **Comparison + degree** (G15) | N4.5 | N4.6–N4.8 | ≥1 `より` comparison, ≥1 `いちばん` superlative or `ほど` degree pattern | Comparison/degree expressions appear where natural (describing preferences, rankings, qualities) |
 | **Manner & similarity** (G16) | N4.6 | N4.7–N4.9 | ≥1 `ように` or `みたいに` manner/similarity expression | Manner expressions appear where actions are described by how they resemble something else |
 | **Transitive & intransitive pairs** (G18) | N4.10 | N4.11–N4.13 | ≥1 transitive/intransitive pair used contrastively (e.g. 開ける vs 開く) | Transitive/intransitive verbs selected correctly for the subject/object role in each sentence |
-| **Tari + nagara** (G19) | N4.10 | N4.11–N4.13 | ≥1 `～たり～たりする` listing, ≥1 `～ながら` simultaneous action | Both patterns appear where natural |
+| **Action connectors** (G19) | N4.10 | N4.11–N4.13 | ≥1 `てから` sequential (after doing), ≥1 `まえに` anticipatory (before doing), ≥1 `ために` purposive (in order to), ≥1 `～たり～たりする` listing, ≥1 `～ながら` simultaneous action | All five connector patterns appear where natural; てから/まえに/ために are high-frequency in daily narration and should not be absent for more than 2 consecutive lessons |
 | **Contrast, concession & listing** (G20) | N4.14 | N4.15–N4.17 | ≥1 `のに` (despite/unexpectedly), ≥1 `ても` (even if/even though), ≥1 `し` (and what's more) | All three patterns appear where contrast, concession, or additive reasoning is natural |
 | **Conversation mechanics** (G28) | N4.14 | N4.15–N4.17 | ≥1 floor-holding or hesitation filler (あのう, ええと, そうですね), ≥1 back-channel response (あいづち: そうですか, なるほど, へえ) | Conversation fillers and responses appear in casual or semi-formal dialogue naturally; not every conversation needs them, but prolonged absence across multiple lessons is a gap |
 | **Appearance & hearsay** (G29) | N4.14 | N4.15–N4.17 | ≥1 `～そうだ` appearance (looks like) or `～そうだ` hearsay (I heard that) | Both usages appear where observation or reported information is natural; distinguish the two by context |
 | **Limiting particles** (G17) | N4.14 | N4.15–N4.17 | ≥1 `だけ` or `しか～ない` limiting expression | Limiting particles appear where context calls for restriction or exclusion |
 | **Permission + prohibition** (G21) | N4.20 | N4.21–N4.23 | ≥1 `てもいい` permission or ≥1 `てはいけない` prohibition | Both patterns appear where rules, permissions, or social norms are discussed |
 | **Directional て-form** (G30) | N4.21 | N4.22–N4.24 | ≥1 `てくる` (coming toward/change toward speaker), ≥1 `ていく` (going away/continuing change) | Both directions appear; distinguish movement toward vs away, and resultant-state usage (てある) where natural |
-| **Conditionals** (G22) | N4.25 | N4.26–N4.28 | ≥1 `～たら` or `～ば` conditional in conversation or reading | At least one conditional form (たら or ば) appears where natural |
+| **Obligation & conditionals** (G22) | N4.25 | N4.26–N4.28 | ≥1 `なければいけない` or `ないといけない` obligation; ≥1 `～たら` or `～ば` conditional; ≥1 `～なら` contextual conditional or `～と` natural-result conditional | Obligation form appears where necessity is expressed; all four conditional types used across lessons — avoid defaulting exclusively to たら; ～と natural-result is especially useful in instructions and routines |
 | **ように patterns** (G31) | N4.25 | N4.26–N4.28 | ≥1 `ようにする` (make effort to) or `ようになる` (come to be able to / come to do) | Both patterns appear where expressing goal-oriented effort or gradual change is natural |
 | **Passive + causative** (G23/G24) | N4.31 | N4.32–N4.34 | ≥1 passive, ≥1 causative across the lesson | Both voice patterns appear where natural |
 | **Thoughts & experience** (G27) | N4.30 | N4.31–N4.33 | ≥1 `と思う` (I think / I thought), ≥1 `たことがある` (have done) | Both patterns appear where expressing opinion or past experience is natural |
 | **Auxiliary compounds** (G25) | N4.34 | N4.35–N4.36 | ≥1 `てみる` (try) or `ておく` (prepare) or `てしまう` (complete/regret) | Auxiliary verb compounds appear where experimentation, preparation, or completion is discussed |
 | **Excessive degree** (G25) | N4.34 | N4.35–N4.36 | ≥1 `～すぎる` excessive expression | ～すぎる appears where overabundance or excess is natural (eating too much, too expensive, too noisy) |
+| **Adjective change** (G26) | N4.34 | N4.35–N4.36 | ≥1 `～くなる/～になる` spontaneous state change, ≥1 `～くする/～にする` deliberate state change | Both patterns appear where describing changes of state or making deliberate adjustments is natural (seasons changing, improving skills, making a room quieter) |
+
+**N3 milestones (planned — activate when N3 content lessons are built):**
+
+The following grammar lessons unlock after N3 content lessons that do not yet exist. These milestone rows are documented here so they are in place when N3 content creation begins. They follow the same schedule format but are not enforced until the corresponding N3 lessons exist.
+
+| Milestone | Available from | Active window | Required patterns (per lesson, across convs + readings) | Sustained use (after window) |
+|---|---|---|---|---|
+| **Relative clauses** (G32) | N3.2 | N3.3–N3.6 | ≥2 plain-form relative clause modifying a noun (e.g. 昨日買った本, 行ったことがある場所) | Relative clauses appear consistently — this is a core structural pattern in natural Japanese and should be present in nearly every lesson after N3.2 |
+| **Nominalizers** (G33) | N3.4 | N3.5–N3.8 | ≥1 `〜のが好き/得意/下手` or `〜のは〜だ` nominalization; ≥1 `〜ことができる/〜ことがある` こと nominalization | Both の and こと nominalizations appear; distinguish contexts where each is required (の for perceptions/preferences, こと for facts/ability) |
+| **Plain volitional & intentions** (G34) | N3.6 | N3.7–N3.10 | ≥1 `〜うとする/〜ようとする` (try to / attempt), ≥1 `〜うと思う/〜ようと思う` (intend to) | Plain volitional in intention contexts; distinguish from ましょう (suggestion) and たい (desire) |
+| **Conjecture & inference** (G35) | N3.10 | N3.11–N3.14 | ≥1 `ようだ/ようです` (it seems — evidence-based), ≥1 `みたいだ/みたいです` (looks like — casual), ≥1 `らしい/らしいです` (apparently — hearsay) | All three inference patterns appear and are distinguished by their evidence source; do not use interchangeably |
+| **Expectation & reasoning** (G36) | N3.14 | N3.15–N3.18 | ≥1 `はずだ/はずです` (should be / expected to be), ≥1 `わけだ/わけです` (that's why / it means that) | Both patterns appear where expectations or logical reasoning are expressed; distinguish はずだ (expected state) from わけだ (logical conclusion) |
 
 ### How to read the schedule
 
@@ -1954,6 +1969,15 @@ Beyond individual conjugation forms, these **structural patterns** combine forms
 | `Verb-てみる` (try doing) | G25 | N4.35+ | Use occasionally. Natural contexts: trying new foods, experiences, suggestions. |
 | `Verb-ておく` (prepare/do in advance) | G25 | N4.35+ | Use occasionally. Natural contexts: planning ahead, preparations. |
 | `Verb-てしまう` (completion/regret) | G25 | N4.35+ | Use occasionally. Natural contexts: accidents, finishing something, unintended results. |
+| `Verb-てから` (after doing) | G19 | N4.11+ | Use occasionally. Natural contexts: sequencing daily activities, describing order of events ("I'll eat and then go out"). Pair with まえに in the same lesson to contrast both directions. |
+| `まえに` (before doing) | G19 | N4.11+ | Use occasionally. Natural contexts: preparation steps, warnings, sequences. Pair with てから to practice both sequential patterns. |
+| `ために` (in order to) | G19 | N4.11+ | Use occasionally. Natural contexts: explaining purpose or motivation ("studying in order to pass"), goals, self-improvement. |
+| `のです / なんです` (explanatory) | G10 | N5.10+ | Use in at least 1 conversation per lesson. Natural contexts: explaining a situation, providing context for a request, softening a statement. Casual form んだ/んだけど appears in casual conversations. |
+| `なければいけない / ないといけない` (must) | G22 | N4.26+ | Use occasionally. Natural contexts: obligations, rules, deadlines, necessity. Distinguish なきゃ as its casual spoken contraction. |
+| `～なら` (contextual conditional) | G22 | N4.26+ | Use occasionally. Natural contexts: responding to what someone has said ("if that's the case"), giving advice based on stated plans ("if you're going to Tokyo…"). |
+| `～と` (natural-result conditional) | G22 | N4.26+ | Use occasionally. Natural contexts: instructions ("if you press this, it opens"), directions, recipes, natural sequences. Distinguished from たら by its automatic/non-volitional result. |
+| `Adj-くなる / になる` (become ~) | G26 | N4.35+ | Use occasionally. Natural contexts: seasonal change, skill improvement, changing situations. Contrast with くする/にする — なる is spontaneous, する is deliberate. |
+| `Adj-くする / にする` (make ~ / cause to be ~) | G26 | N4.35+ | Use occasionally. Natural contexts: requests to change conditions (静かにしてください), decisions, improvements. |
 
 **Non-conjugation patterns (particle-based and structural grammar):**
 
@@ -1969,6 +1993,7 @@ Beyond individual conjugation forms, these **structural patterns** combine forms
 | `ても` (even if / even though) | G20 | `p_temo` | N4.15+ | Use occasionally. Natural contexts: conceding a condition while maintaining the conclusion ("even if it rains, we'll go"). |
 | `し` (and what's more / listing reasons) | G20 | `p_shi` | N4.15+ | Use occasionally. Natural contexts: listing supporting reasons for a conclusion or opinion. |
 | `～そうだ` appearance / hearsay | G29 | `p_sou_da` (appearance) / `p_sou_da_hearsay` | N4.15+ | Use occasionally. Natural contexts: commenting on how something looks (appearance そうだ) or reporting something heard (hearsay そうだ). Distinguish the two by context. |
+| `～んです / のです` (explanatory) | G10 | `p_ndesu` (or tagged via `g_da` + nominalizer) | N5.10+ | Use in at least 1 conversation per lesson. Natural contexts: explaining reasons, providing background context, softening requests. The casual んだ/んだけど form should appear in casual conversations. Prolonged absence across 3+ consecutive lessons after N5.10 is a reinforcement gap. |
 
 ### Reinforcement in warmups
 
@@ -1976,15 +2001,16 @@ Warmup items are an ideal place to reinforce recently-unlocked grammar because t
 
 - N5.6–N5.7 warmups should include at least 1 item using G8 patterns (てください requests, て-connector sequences) with N5.1–N5.5 vocabulary
 - N5.9–N5.10 warmups should include at least 1 item using G9 patterns (ています, ～たいです, or ～ましょう) with prior vocabulary
-- N5.10–N5.11 warmups should include at least 1 item using plain negative forms with prior vocabulary
+- N5.10–N5.11 warmups should include at least 1 item using plain negative forms with prior vocabulary, and at least 1 item using のです/なんです explanatory form to provide context for a simple statement
 - N4.4–N4.6 warmups should include at least 1 item exercising potential form (できる or verb potential) with prior vocabulary
 - N4.6–N4.8 warmups should include at least 1 item using give/receive (あげる/もらう/くれる) and 1 item using comparison patterns (より, いちばん) with prior vocabulary
 - N4.7–N4.9 warmups should include at least 1 item using ように/みたいに manner expression with prior vocabulary
-- N4.11–N4.13 warmups should include at least 1 item using たり pattern or ながら with prior vocabulary
+- N4.11–N4.13 warmups should include at least 1 item using たり pattern or ながら with prior vocabulary, and at least 1 item using てから, まえに, or ために to sequence two actions
 - N4.15–N4.17 warmups should include at least 1 item using のに/ても/し contrast-concession or そうだ with prior vocabulary
 - N4.22–N4.24 warmups should include at least 1 item using てくる/ていく directional pattern with prior vocabulary
-- N4.26–N4.28 warmups should include at least 1 item using ようにする/ようになる or a conditional (たら/ば) with prior vocabulary
+- N4.26–N4.28 warmups should include at least 1 item using ようにする/ようになる or a conditional (たら/ば/なら) with prior vocabulary, and at least 1 item using なければいけない obligation in a natural necessity context
 - N4.31–N4.33 warmups should include at least 1 item using と思う or たことがある with prior vocabulary
+- N4.35–N4.36 warmups should include at least 1 item using ～くなる/～になる or ～くする/～にする with prior vocabulary (e.g. describing a season changing or making a room quieter)
 
 This ensures students engage with new grammar patterns using familiar words, reducing cognitive load.
 
