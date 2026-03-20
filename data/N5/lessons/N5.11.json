@@ -716,8 +716,8 @@
           ]
         },
         {
-          "jp": "川に 大きい 魚も います。魚は おいしそうですね。",
-          "en": "There are also big fish in the river. The fish looks delicious, doesn't it.",
+          "jp": "川に 大きい 魚も います。魚を 見ています。おいしそうですね。",
+          "en": "There are also big fish in the river. We are watching the fish. They look delicious, don't they.",
           "terms": [
             "v_kawa",
             "p_ni",
@@ -729,7 +729,15 @@
               "form": "polite_masu"
             },
             "v_sakana",
-            "p_wa",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             {
               "id": "v_oishii",
               "form": "appearance_sou_stem"
