@@ -1,5 +1,34 @@
 {
   "env": {
     "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "64000"
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "command": "FILE=\"$CLAUDE_FILE\"; if [[ \"$FILE\" =~ \\.json$ ]] && [[ ! \"$FILE\" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]]; then bash hooks/validate-json.sh \"$FILE\" 2>&1; fi",
+        "description": "Validate JSON syntax on every content file edit"
+      },
+      {
+        "matcher": "Edit|Write",
+        "command": "FILE=\"$CLAUDE_FILE\"; if [[ \"$FILE\" =~ \\.json$ ]] && [[ ! \"$FILE\" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]]; then REPO_ROOT=\"$(pwd)\" bash hooks/validate-term-ids.sh \"$FILE\" 2>&1; fi",
+        "description": "Validate all term IDs exist in glossary/particles on content file edit"
+      },
+      {
+        "matcher": "Edit|Write",
+        "command": "FILE=\"$CLAUDE_FILE\"; if [[ \"$FILE\" =~ \\.json$ ]] && [[ ! \"$FILE\" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]]; then bash hooks/validate-deprecated-forms.sh \"$FILE\" 2>&1; fi",
+        "description": "Check for deprecated forms and anti-patterns on content file edit"
+      },
+      {
+        "matcher": "Edit|Write",
+        "command": "FILE=\"$CLAUDE_FILE\"; if [[ \"$FILE\" =~ \\.json$ ]] && [[ ! \"$FILE\" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]]; then REPO_ROOT=\"$(pwd)\" bash hooks/validate-kanji-scope.sh \"$FILE\" 2>&1; fi",
+        "description": "Validate all kanji are in taught set on content file edit"
+      },
+      {
+        "matcher": "Edit|Write",
+        "command": "FILE=\"$CLAUDE_FILE\"; if [[ \"$FILE\" =~ \\.json$ ]] && [[ ! \"$FILE\" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]]; then REPO_ROOT=\"$(pwd)\" bash hooks/validate-form-scope.sh \"$FILE\" 2>&1; fi",
+        "description": "Validate conjugation forms are in scope for the lesson tier"
+      }
+    ]
   }
 }
