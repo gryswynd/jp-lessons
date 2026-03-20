@@ -1,17 +1,13 @@
 {
   "contentVersion": "1.0.0",
   "id": "N4.20",
-  "title": "Phase 4 Lesson 20: Night & Lifestyle",
+  "title": "Phase 4 Lesson 20: Night, Western Style & Shops",
   "meta": {
-    "phase": 4,
-    "lesson": 20,
-    "focus": "Nighttime activities, Western influence, Clothing, and Types of shops/buildings.",
-    "kanji": [
-      "夜",
-      "洋",
-      "服",
-      "屋"
-    ]
+    "level": "N4",
+    "lesson_number": 20,
+    "focus": "Nighttime activities, Western-style food and fashion, and types of shops and buildings.",
+    "estimated_minutes": 35,
+    "kanji": ["夜", "洋", "服", "屋"]
   },
   "newKanji": [
     {
@@ -47,655 +43,904 @@
     {
       "type": "warmup",
       "title": "Warm-Up Review（ウォームアップ）",
-      "instructions": "Ask your partner these questions using words you already know:",
+      "instructions": "Practice with these questions using vocabulary you already know.",
       "items": [
         {
-          "jp": "毎晩、何を しますか。",
-          "en": "What do you do every night?",
+          "jp": "毎晩、映画を 見たり 音楽を 聞いたり しますか。",
+          "en": "Do you watch movies or listen to music in the evenings?",
           "terms": [
             "v_maiban",
-            "v_nani",
-            {
-              "id": "v_suru",
-              "form": "polite_masu"
-            }
+            "v_eiga",
+            "p_wo",
+            { "id": "v_miru", "form": "tari_form" },
+            "v_ongaku",
+            "p_wo",
+            { "id": "v_kiku", "form": "tari_form" },
+            { "id": "v_suru", "form": "polite_masu" },
+            "p_ka"
+          ]
+        },
+        {
+          "jp": "仕事を してから、どこに 行きますか。",
+          "en": "After finishing work, where do you go?",
+          "terms": [
+            "v_shigoto",
+            "p_wo",
+            { "id": "v_suru", "form": "te_form" },
+            "p_kara",
+            "v_doko",
+            "p_ni",
+            { "id": "v_iku", "form": "polite_masu" },
+            "p_ka"
+          ]
+        },
+        {
+          "jp": "旅行も 好きですし、映画も 好きです。あなたは？",
+          "en": "I like traveling, and I like movies too. What about you?",
+          "terms": [
+            "v_ryokou",
+            "p_mo",
+            { "id": "v_suki", "form": "polite_adj" },
+            "p_shi",
+            "v_eiga",
+            "p_mo",
+            { "id": "v_suki", "form": "polite_adj" },
+            "v_anata",
+            "p_wa",
+            "p_ka"
           ]
         },
         {
           "jp": "どんな 料理が 好きですか。",
-          "en": "What kind of cuisine do you like?",
+          "en": "What kind of food do you like?",
           "terms": [
             "v_donna",
             "v_ryouri",
-            "v_suki"
-          ]
-        },
-        {
-          "jp": "よく 買い物を しますか。",
-          "en": "Do you shop often?",
-          "terms": [
-            "v_yoku",
-            "v_kaimono",
-            {
-              "id": "v_suru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "jp": "山と 海と、どちらが 好きですか。",
-          "en": "Which do you like, mountains or the sea?",
-          "terms": [
-            "k_yama",
-            "k_umi",
-            "v_suki"
+            "p_ga",
+            { "id": "v_suki", "form": "polite_adj" },
+            "p_ka"
           ]
         }
       ]
     },
     {
       "type": "kanjiGrid",
-      "title": "New Kanji（新しい 漢字）",
+      "title": "New Kanji（新しい漢字）",
       "items": [
         {
           "kanji": "夜",
           "on": "や",
           "kun": "よる",
           "meaning": "Night",
-          "terms": [
-            "k_yoru",
-            "v_konya",
-            "v_yozora"
-          ]
+          "terms": ["v_yoru", "v_konya", "v_yozora"]
         },
         {
           "kanji": "洋",
           "on": "よう",
           "kun": "(なし)",
           "meaning": "Ocean / Western",
-          "terms": [
-            "k_you_west",
-            "v_seiyou",
-            "v_youshoku",
-            "v_youfuku",
-            "v_kaiyou"
-          ]
+          "terms": ["v_youshoku", "v_youfuku", "v_youfuu", "v_seiyou", "v_kaiyou"]
         },
         {
           "kanji": "服",
           "on": "ふく",
           "kun": "(なし)",
           "meaning": "Clothes",
-          "terms": [
-            "k_fuku",
-            "v_youfuku"
-          ]
+          "terms": ["v_youfuku"]
         },
         {
           "kanji": "屋",
           "on": "おく",
           "kun": "や",
-          "meaning": "Shop / Roof",
-          "terms": [
-            "k_ya",
-            "v_koya",
-            "v_okujou",
-            "v_ryouriya",
-            "v_nomiya"
-          ]
+          "meaning": "Shop / Roof / House",
+          "terms": ["v_ryouriya", "v_nomiya", "v_okujou", "v_koya"]
         }
       ]
     },
     {
       "type": "vocabList",
-      "title": "Vocabulary & Compounds（ことば）",
+      "title": "New Vocabulary（新しい言葉）",
       "groups": [
         {
-          "label": "Night & Nature",
-          "items": [
-            "v_konya",
-            "v_yozora",
-            "v_kaiyou"
+          "label": "🌙 Night",
+          "items": ["v_yoru", "v_konya", "v_yozora"]
+        },
+        {
+          "label": "🌍 Western Style",
+          "items": ["v_seiyou", "v_youfuu", "v_youshoku", "v_youfuku", "v_kaiyou"]
+        },
+        {
+          "label": "🏪 Shops & Places",
+          "items": ["v_ryouriya", "v_nomiya", "v_okujou", "v_koya"]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation 1: Western Clothes Shopping",
+      "context": "Rikizo and Yamakawa are at a clothing shop looking at Western-style clothes.",
+      "lines": [
+        {
+          "spk": "やまかわ",
+          "jp": "この 洋服、どう ですか。",
+          "en": "What do you think of these Western clothes?",
+          "terms": [
+            "v_kono",
+            "v_youfuku",
+            "v_dou",
+            "g_desu",
+            "p_ka"
           ]
         },
         {
-          "label": "Western Style",
-          "items": [
-            "v_seiyou",
+          "spk": "りきぞ",
+          "jp": "色が きれいですね。洋風の 洋服が 好きです。",
+          "en": "The colour is beautiful. I like Western-style clothes.",
+          "terms": [
+            "v_iro",
+            "p_ga",
+            { "id": "v_kirei", "form": "polite_adj" },
+            "p_ne",
             "v_youfuu",
-            "v_youshoku",
-            "v_youfuku"
+            "p_no",
+            "v_youfuku",
+            "p_ga",
+            { "id": "v_suki", "form": "polite_adj" }
           ]
         },
         {
-          "label": "Buildings & Shops",
-          "items": [
-            "v_koya",
-            "v_okujou",
-            "v_ryouriya",
-            "v_nomiya"
+          "spk": "やまかわ",
+          "jp": "西洋の 映画に 出て来る 洋服に 見えますね。",
+          "en": "It looks like the clothes that appear in Western movies, doesn't it.",
+          "terms": [
+            "v_seiyou",
+            "p_no",
+            "v_eiga",
+            "p_ni",
+            { "id": "v_deru", "form": "te_form" },
+            { "id": "v_kuru", "form": "plain_form" },
+            "v_youfuku",
+            "p_ni",
+            { "id": "v_mieru", "form": "polite_masu" },
+            "p_ne"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "そうですね。買って みたいです。",
+          "en": "You're right. I want to try buying it.",
+          "terms": [
+            "v_sou",
+            "g_desu",
+            "p_ne",
+            { "id": "v_kau", "form": "te_form" },
+            { "id": "v_miru", "form": "plain_desire_tai" },
+            "g_desu"
           ]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 1（会話）: Dinner Plans",
-      "context": "Deciding where to eat.",
+      "title": "Conversation 2: Where to Have Dinner",
+      "context": "Rikizo and his younger sister are deciding where to eat dinner.",
       "lines": [
         {
-          "spk": "A",
-          "jp": "今夜は 何を 食べたいですか。",
-          "en": "What do you want to eat tonight?",
+          "spk": "妹",
+          "jp": "今夜は 洋食を 食べたいです。料理屋より レストランが いいです。",
+          "en": "Tonight I want to eat Western food. A restaurant is better than a traditional eatery.",
           "terms": [
             "v_konya",
-            "v_nani",
-            {
-              "id": "v_taberu",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "洋食が 食べたいです。いい 料理屋が ありますか。",
-          "en": "I want to eat Western food. Is there a good restaurant?",
-          "terms": [
+            "p_wa",
             "v_youshoku",
-            {
-              "id": "v_taberu",
-              "form": "plain_desire_tai"
-            },
+            "p_wo",
+            { "id": "v_taberu", "form": "plain_desire_tai" },
             "g_desu",
             "v_ryouriya",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            }
+            "p_yori",
+            "v_resutoran",
+            "p_ga",
+            { "id": "v_ii", "form": "polite_adj" }
           ]
         },
         {
-          "spk": "A",
-          "jp": "はい。駅の 近くに 新しい 店が あります。",
-          "en": "Yes. There is a new shop near the station.",
+          "spk": "りきぞ",
+          "jp": "駅の 近くに 洋食の 料理屋が ありますよ。",
+          "en": "There's a Western-food restaurant near the station.",
           "terms": [
-            "k_u99c5",
-            {
-              "id": "v_chikai",
-              "form": "adverbial"
-            },
-            "v_atarashii",
-            "k_mise",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "じゃあ、そこへ 行きましょう。",
-          "en": "Well then, let's go there.",
-          "terms": [
-            {
-              "id": "v_iku",
-              "form": "polite_volitional_mashou"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 2（会話）: Shopping for Clothes",
-      "context": "Looking at clothes in a shop.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "この 洋服は どうですか。",
-          "en": "How is this Western clothing?",
-          "terms": [
-            "v_youfuku",
-            "v_dou"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "きれいですが、少し 高いです。",
-          "en": "It's pretty, but a little expensive.",
-          "terms": [
-            "v_kirei",
-            "v_sukoshi",
-            "v_takai"
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "あの 店の 服は 高くないですよ。",
-          "en": "That shop's clothes are not expensive.",
-          "terms": [
-            "k_mise",
-            "k_fuku",
-            {
-              "id": "v_takai",
-              "form": "plain_negative"
-            }
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "そうですか。見に 行きましょう。",
-          "en": "Is that so? Let's go see.",
-          "terms": [
-            "k_mi_2",
-            {
-              "id": "v_iku",
-              "form": "polite_volitional_mashou"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 3（会話）: The Rooftop",
-      "context": "Enjoying the view.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "この 屋上は 大きいですね。",
-          "en": "This rooftop is big, isn't it?",
-          "terms": [
-            "v_okujou",
-            "v_ookii"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "はい。夜空が きれいです。月が 明るいですね。",
-          "en": "Yes. The night sky is beautiful. The moon is bright.",
-          "terms": [
-            "v_yozora",
-            "v_kirei",
-            "k_tsuki",
-            "v_akarui"
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "あそこで 何か 飲みませんか。",
-          "en": "Won't you drink something over there?",
-          "terms": [
-            "v_nani",
-            {
-              "id": "v_nomu",
-              "form": "polite_negative"
-            }
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "いいですね。洋風の 飲み屋も ありますよ。",
-          "en": "That's nice. There is also a Western-style bar.",
-          "terms": [
-            "v_youfuu",
-            "v_nomiya",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 4（会話）: Travel Dreams",
-      "context": "Talking about travel.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "西洋へ 旅行したいです。",
-          "en": "I want to travel to the West.",
-          "terms": [
-            "v_seiyou",
-            "v_ryokou",
-            {
-              "id": "v_suru",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "西洋は 遠いですね。",
-          "en": "The West is far, isn't it?",
-          "terms": [
-            "v_seiyou",
-            "v_tooi"
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "はい。でも、西洋の 海洋が 見たいです。",
-          "en": "Yes. But I want to see the Western ocean.",
-          "terms": [
-            "v_seiyou",
-            "v_kaiyou",
-            {
-              "id": "v_miru",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "私は 山の 小屋で 休日を 楽しみます。",
-          "en": "I will enjoy the holiday at a mountain hut.",
-          "terms": [
-            "k_watashi",
-            "k_yama",
-            "v_koya",
-            "v_kyuujitsu",
-            {
-              "id": "v_tanoshimu",
-              "form": "polite_masu"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "reading",
-      "title": "Reading Practice 1: My Lifestyle",
-      "passage": [
-        {
-          "jp": "私は 洋食が 好きです。",
-          "en": "I like Western food.",
-          "terms": [
-            "k_watashi",
+            "v_eki",
+            "p_no",
+            { "id": "v_chikai", "form": "adverbial" },
+            "p_ni",
             "v_youshoku",
-            "v_suki"
-          ]
-        },
-        {
-          "jp": "時々 家族と 料理屋で 食べます。",
-          "en": "Sometimes I eat at a restaurant with my family.",
-          "terms": [
-            "v_tokidoki",
-            "v_kazoku",
+            "p_no",
             "v_ryouriya",
-            {
-              "id": "v_taberu",
-              "form": "polite_masu"
-            }
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" },
+            "p_yo"
           ]
         },
         {
-          "jp": "父は 飲み屋で 飲むのが 好きです。",
-          "en": "My father likes drinking at a bar.",
+          "spk": "妹",
+          "jp": "洋食の 料理屋も いいですね。いっしょに 行きましょう。",
+          "en": "A Western-food restaurant sounds good too. Let's go together.",
           "terms": [
-            "k_chichi",
-            "v_nomiya",
-            "v_nomu",
-            "v_suki"
+            "v_youshoku",
+            "p_no",
+            "v_ryouriya",
+            "p_mo",
+            { "id": "v_ii", "form": "polite_adj" },
+            "p_ne",
+            "v_issho",
+            { "id": "v_iku", "form": "polite_volitional_mashou" }
           ]
         },
         {
-          "jp": "妹は 洋服が 大好きで、よく デパートで 買います。",
-          "en": "My younger sister loves Western clothes and often buys them at the department store.",
+          "spk": "りきぞ",
+          "jp": "食事を してから、屋上に 行って 夜空を 見ませんか。",
+          "en": "After eating, shall we go to the rooftop and look at the night sky?",
           "terms": [
-            "k_imouto",
-            "v_youfuku",
-            "v_daisuki",
-            "v_yoku",
-            {
-              "id": "v_kau",
-              "form": "polite_masu"
-            }
+            "v_shokuji",
+            "p_wo",
+            { "id": "v_suru", "form": "te_form" },
+            "p_kara",
+            "v_okujou",
+            "p_ni",
+            { "id": "v_iku", "form": "te_form" },
+            "v_yozora",
+            "p_wo",
+            { "id": "v_miru", "form": "polite_negative" },
+            "p_ka"
           ]
         }
-      ],
-      "questions": [
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation 3: On the Rooftop",
+      "context": "Rikizo and his sister are on the rooftop after dinner, enjoying the night view.",
+      "lines": [
         {
-          "q": "私は 何が 好きですか。",
-          "a": "洋食が 好きです。",
+          "spk": "妹",
+          "jp": "わあ、夜空が とても きれいですね。",
+          "en": "Wow, the night sky is so beautiful!",
           "terms": [
-            "k_watashi",
-            "v_nani",
-            "v_youshoku",
-            "v_suki"
+            "v_waa",
+            "v_yozora",
+            "p_ga",
+            "v_totemo",
+            { "id": "v_kirei", "form": "polite_adj" },
+            "p_ne"
           ]
         },
         {
-          "q": "父は どこで 飲みますか。",
-          "a": "飲み屋で 飲みます。",
+          "spk": "りきぞ",
+          "jp": "夜の 海も 見えますよ。父も よく この 屋上で 海の 音を 聞いています。",
+          "en": "You can also see the night sea. Father also often listens to the sound of the sea on this rooftop.",
           "terms": [
-            "v-k_chichi",
+            "v_yoru",
+            "p_no",
+            "v_umi",
+            "p_mo",
+            { "id": "v_mieru", "form": "polite_masu" },
+            "p_yo",
+            "v_chichi",
+            "p_mo",
+            "v_yoku",
+            "v_kono",
+            "v_okujou",
+            "p_de",
+            "v_umi",
+            "p_no",
+            "v_oto",
+            "p_wo",
+            { "id": "v_kiku", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "spk": "妹",
+          "jp": "そうですか。今夜は 父は 来ませんでしたか。",
+          "en": "I see. Didn't father come tonight?",
+          "terms": [
+            "v_sou",
+            "g_desu",
+            "p_ka",
+            "v_konya",
+            "p_wa",
+            "v_chichi",
+            "p_wa",
+            { "id": "v_kuru", "form": "polite_past_negative" },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "夜空が 好きなので、よく 屋上に 来ます。",
+          "en": "Because I like the night sky, I often come to the rooftop.",
+          "terms": [
+            "v_yozora",
+            "p_ga",
+            { "id": "v_suki", "form": "attributive_na" },
+            "p_node",
+            "v_yoku",
+            "v_okujou",
+            "p_ni",
+            { "id": "v_kuru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation 4: Friends at a Bar (Casual)",
+      "context": "Rikizo and his friend Ken are relaxing at a local bar after work.",
+      "lines": [
+        {
+          "spk": "けん",
+          "jp": "この 飲み屋、安いし、料理も おいしいよ。",
+          "en": "This bar is cheap, and the food is tasty too.",
+          "terms": [
+            "v_kono",
             "v_nomiya",
-            {
-              "id": "v_nomu",
-              "form": "polite_masu"
-            }
+            "v_yasui",
+            "p_shi",
+            "v_ryouri",
+            "p_mo",
+            "v_oishii",
+            "p_yo"
           ]
         },
         {
-          "q": "妹は 何が 大好きですか。",
-          "a": "洋服が 大好きです。",
+          "spk": "りきぞ",
+          "jp": "そうだね。今夜は 仕事で つかれたから、ゆっくり 飲みたい。",
+          "en": "Yeah, you're right. Tonight I got tired from work, so I want to drink slowly.",
           "terms": [
-            "k_imouto",
-            "v_nani",
-            "v_youfuku",
-            "v_daisuki"
+            "v_sou",
+            "p_ne",
+            "g_da",
+            "v_konya",
+            "p_wa",
+            "v_shigoto",
+            "p_de",
+            { "id": "v_tsukareru", "form": "plain_past" },
+            "p_kara_because",
+            "v_yukkuri",
+            { "id": "v_nomu", "form": "plain_desire_tai" }
+          ]
+        },
+        {
+          "spk": "けん",
+          "jp": "洋食も 食べたけど、料理屋の 食事より この 飲み屋の ほうが 好きだ。",
+          "en": "I ate Western food too, but I prefer this bar over the restaurant.",
+          "terms": [
+            "v_youshoku",
+            "p_mo",
+            { "id": "v_taberu", "form": "plain_past" },
+            "p_kedo",
+            "v_ryouriya",
+            "p_no",
+            "v_shokuji",
+            "p_yori",
+            "v_kono",
+            "v_nomiya",
+            "p_no",
+            "v_hou",
+            "p_ga",
+            "v_suki",
+            "g_da"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "わかった。つぎも この 飲み屋に 来よう。",
+          "en": "Got it. Let's come to this bar next time too.",
+          "terms": [
+            { "id": "v_wakaru", "form": "plain_past" },
+            "v_tsugi",
+            "p_mo",
+            "v_kono",
+            "v_nomiya",
+            "p_ni",
+            { "id": "v_kuru", "form": "plain_volitional" }
           ]
         }
       ]
     },
     {
       "type": "reading",
-      "title": "Reading Practice 2: The Night Sky",
+      "title": "Reading 1: A Night Out in the City",
       "passage": [
         {
-          "jp": "今夜は 天気が いいです。",
-          "en": "The weather is good tonight.",
+          "jp": "りきぞは 毎晩 仕事が 終わってから、町の 飲み屋に 行きます。",
+          "en": "Every evening after finishing work, Rikizo goes to the bars in town.",
           "terms": [
-            "v_konya",
-            "v_tenki"
+            "char_rikizo",
+            "v_maiban",
+            "v_shigoto",
+            "p_ga",
+            { "id": "v_owaru", "form": "te_form" },
+            "p_kara",
+            "v_machi",
+            "p_no",
+            "v_nomiya",
+            "p_ni",
+            { "id": "v_iku", "form": "polite_masu" }
           ]
         },
         {
-          "jp": "屋上に 行けば、きれいな 夜空が 見えます。",
-          "en": "If you go to the rooftop, you can see the beautiful night sky.",
+          "jp": "町には 小さい 料理屋や 飲み屋が たくさん あります。",
+          "en": "In town there are many small restaurants and bars.",
           "terms": [
-            "v_okujou",
-            {
-              "id": "v_iku",
-              "form": "conditional_ba"
-            },
-            "v_kirei",
-            "v_yozora",
-            {
-              "id": "v_mieru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "jp": "月が 明るいです。",
-          "en": "The moon is bright.",
-          "terms": [
-            "k_tsuki",
-            "v_akarui"
-          ]
-        },
-        {
-          "jp": "山に 小さな 小屋が あります。",
-          "en": "There is a small hut on the mountain.",
-          "terms": [
-            "k_yama",
+            "v_machi",
+            "p_ni",
+            "p_wa",
             "v_chiisai",
-            "v_koya",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            }
+            "v_ryouriya",
+            "p_ya",
+            "v_nomiya",
+            "p_ga",
+            "v_takusan",
+            { "id": "v_aru", "form": "polite_masu" }
           ]
         },
         {
-          "jp": "そこで 山の 夜を 楽しみます。",
-          "en": "I enjoy the mountain night there.",
+          "jp": "りきぞが よく 行く 料理屋は 洋風で、夜も 明るくて 楽しいです。",
+          "en": "The restaurant Rikizo often goes to has a Western style, and it's bright and lively even at night.",
           "terms": [
-            "k_yama",
-            "k_yoru",
-            {
-              "id": "v_tanoshimu",
-              "form": "polite_masu"
-            }
+            "char_rikizo",
+            "p_ga",
+            "v_yoku",
+            { "id": "v_iku", "form": "plain_form" },
+            "v_ryouriya",
+            "p_wa",
+            "v_youfuu",
+            "p_de",
+            "v_yoru",
+            "p_mo",
+            { "id": "v_akarui", "form": "te_form" },
+            { "id": "v_tanoshii", "form": "polite_adj" }
+          ]
+        },
+        {
+          "jp": "食事が 終わった あと、りきぞは よく 屋上に 行って、夜空を 見ます。",
+          "en": "After finishing his meal, Rikizo often goes up to the rooftop and looks at the night sky.",
+          "terms": [
+            "v_shokuji",
+            "p_ga",
+            { "id": "v_owaru", "form": "plain_past" },
+            "v_ato",
+            "char_rikizo",
+            "p_wa",
+            "v_yoku",
+            "v_okujou",
+            "p_ni",
+            { "id": "v_iku", "form": "te_form" },
+            "v_yozora",
+            "p_wo",
+            { "id": "v_miru", "form": "polite_masu" }
           ]
         }
       ],
       "questions": [
         {
-          "q": "屋上で 何が 見えますか。",
-          "a": "きれいな 夜空が 見えます。",
+          "q": "りきぞは 毎晩 仕事の あと、どこに 行きますか。",
+          "a": "町の 飲み屋に 行きます。",
           "terms": [
-            "v_okujou",
-            "v_yozora",
-            {
-              "id": "v_mieru",
-              "form": "polite_masu"
-            }
+            "char_rikizo",
+            "v_maiban",
+            "v_shigoto",
+            "v_ato",
+            "v_doko",
+            "p_ni",
+            { "id": "v_iku", "form": "polite_masu" },
+            "v_machi",
+            "p_no",
+            "v_nomiya"
           ]
         },
         {
-          "q": "今夜の 天気は どうですか。",
-          "a": "天気が いいです。",
+          "q": "りきぞが よく 行く 料理屋は どんな 店ですか。",
+          "a": "洋風で、夜も 明るくて 楽しい 店です。",
+          "terms": [
+            "char_rikizo",
+            "p_ga",
+            "v_yoku",
+            { "id": "v_iku", "form": "plain_form" },
+            "v_ryouriya",
+            "v_donna",
+            "v_mise",
+            "g_desu",
+            "v_youfuu",
+            "p_de",
+            "v_yoru",
+            "p_mo",
+            { "id": "v_akarui", "form": "te_form" },
+            { "id": "v_tanoshii", "form": "polite_adj" },
+            "v_mise"
+          ]
+        },
+        {
+          "q": "食事の あと、りきぞは よく 何を しますか。",
+          "a": "屋上に 行って、夜空を 見ます。",
+          "terms": [
+            "v_shokuji",
+            "v_ato",
+            "char_rikizo",
+            "p_wa",
+            "v_yoku",
+            "v_nani",
+            "p_wo",
+            { "id": "v_suru", "form": "polite_masu" },
+            "v_okujou",
+            "p_ni",
+            { "id": "v_iku", "form": "te_form" },
+            "v_yozora",
+            "p_wo",
+            { "id": "v_miru", "form": "polite_masu" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading 2: The Small Hut by the Sea",
+      "passage": [
+        {
+          "jp": "海の 近くに 古い 小屋が あります。りきぞの 父が 使っている 小屋です。",
+          "en": "Near the sea, there is an old hut. It is a hut that Rikizo's father uses.",
+          "terms": [
+            "v_umi",
+            "p_no",
+            { "id": "v_chikai", "form": "adverbial" },
+            "p_ni",
+            "v_furui",
+            "v_koya",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" },
+            "char_rikizo",
+            "p_no",
+            "v_chichi",
+            "p_ga",
+            { "id": "v_tsukau", "form": "te_form" },
+            { "id": "v_iru", "form": "plain_form" },
+            "v_koya",
+            "g_desu"
+          ]
+        },
+        {
+          "jp": "夜、その 小屋から 海洋が 見えて、とても きれいです。",
+          "en": "At night, from the hut you can see the ocean and it is very beautiful.",
+          "terms": [
+            "v_yoru",
+            "v_sono",
+            "v_koya",
+            "p_kara",
+            "v_kaiyou",
+            "p_ga",
+            { "id": "v_mieru", "form": "te_form" },
+            "v_totemo",
+            { "id": "v_kirei", "form": "polite_adj" }
+          ]
+        },
+        {
+          "jp": "父は 夜空が 大好きで、いつも この 小屋で 海洋の 音を 聞きながら 空を 見ています。",
+          "en": "Father loves the night sky, so he always listens to the sound of the ocean while gazing at the sky at this hut.",
+          "terms": [
+            "v_chichi",
+            "p_wa",
+            "v_yozora",
+            "p_ga",
+            "v_daisuki",
+            "p_de",
+            "v_itsumo",
+            "v_kono",
+            "v_koya",
+            "p_de",
+            "v_kaiyou",
+            "p_no",
+            "v_oto",
+            "p_wo",
+            { "id": "v_kiku", "form": "nagara_form" },
+            "v_sora",
+            "p_wo",
+            { "id": "v_miru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "りきぞも 父に もらった 洋服を 着て、いっしょに 夜の 海を 楽しみます。",
+          "en": "Rikizo also wears the Western clothes he received from his father and enjoys the night sea together.",
+          "terms": [
+            "char_rikizo",
+            "p_mo",
+            "v_chichi",
+            "p_ni",
+            { "id": "v_morau", "form": "plain_past" },
+            "v_youfuku",
+            "p_wo",
+            { "id": "v_kiru", "form": "te_form" },
+            "v_issho",
+            "v_yoru",
+            "p_no",
+            "v_umi",
+            "p_wo",
+            { "id": "v_tanoshimu", "form": "polite_masu" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "海の 近くに ある 小屋は だれの ですか。",
+          "a": "りきぞの 父の 小屋です。",
+          "terms": [
+            "v_umi",
+            "p_no",
+            { "id": "v_chikai", "form": "adverbial" },
+            "p_ni",
+            { "id": "v_aru", "form": "plain_form" },
+            "v_koya",
+            "v_dare",
+            "p_no",
+            "char_rikizo",
+            "p_no",
+            "v_chichi",
+            "v_koya",
+            "g_desu"
+          ]
+        },
+        {
+          "q": "父は 夜、小屋で 何を しますか。",
+          "a": "海洋の 音を 聞きながら、空を 見ています。",
+          "terms": [
+            "v_chichi",
+            "p_wa",
+            "v_yoru",
+            "v_koya",
+            "p_de",
+            "v_nani",
+            "p_wo",
+            { "id": "v_suru", "form": "polite_masu" },
+            "v_kaiyou",
+            "p_no",
+            "v_oto",
+            "p_wo",
+            { "id": "v_kiku", "form": "nagara_form" },
+            "v_sora",
+            "p_wo",
+            { "id": "v_miru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "q": "りきぞは 父に 何を もらいましたか。",
+          "a": "洋服を もらいました。",
+          "terms": [
+            "char_rikizo",
+            "p_wa",
+            "v_chichi",
+            "p_ni",
+            "v_nani",
+            "p_wo",
+            { "id": "v_morau", "form": "polite_mashita" },
+            "v_youfuku",
+            "p_wo",
+            { "id": "v_morau", "form": "polite_mashita" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "ドリル 1: かんじの よみかた",
+      "instructions": "Choose the correct reading for each kanji word.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "[夜空] の よみかたは？",
+          "choices": ["よぞら", "よそら", "やぞら", "やそら"],
+          "answer": "よぞら"
+        },
+        {
+          "kind": "mcq",
+          "q": "[洋食] の よみかたは？",
+          "choices": ["ようしょく", "ようそく", "よしょく", "やしょく"],
+          "answer": "ようしょく"
+        },
+        {
+          "kind": "mcq",
+          "q": "[洋服] の よみかたは？",
+          "choices": ["ようふく", "ようぶく", "よふく", "やふく"],
+          "answer": "ようふく"
+        },
+        {
+          "kind": "mcq",
+          "q": "[料理屋] の よみかたは？",
+          "choices": ["りょうりや", "りょりや", "りょうりあ", "らいりや"],
+          "answer": "りょうりや"
+        },
+        {
+          "kind": "mcq",
+          "q": "[屋上] の よみかたは？",
+          "choices": ["おくじょう", "やじょう", "おくうえ", "やうえ"],
+          "answer": "おくじょう"
+        },
+        {
+          "kind": "mcq",
+          "q": "[今夜] の よみかたは？",
+          "choices": ["こんや", "きょや", "いまよる", "こんよる"],
+          "answer": "こんや"
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "ドリル 2: ことばを えらぶ",
+      "instructions": "Choose the word that best completes each sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "この（　）は 洋風で、とても きれいです。",
+          "choices": ["洋服", "海洋", "小屋", "屋上"],
+          "answer": "洋服",
+          "terms": [
+            "v_kono",
+            "v_youfuu",
+            "p_de",
+            "v_totemo",
+            { "id": "v_kirei", "form": "polite_adj" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "（　）から、夜空が よく 見えます。",
+          "choices": ["屋上", "小屋", "料理屋", "飲み屋"],
+          "answer": "屋上",
+          "terms": [
+            "v_yozora",
+            "p_ga",
+            "v_yoku",
+            { "id": "v_mieru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "今夜は（　）を 食べたいので、洋食の 料理屋に 行きました。",
+          "choices": ["洋食", "洋服", "夜空", "洋風"],
+          "answer": "洋食",
           "terms": [
             "v_konya",
-            "v_tenki"
+            "p_wa",
+            "p_wo",
+            { "id": "v_taberu", "form": "plain_desire_tai" },
+            "p_node",
+            "v_youshoku",
+            "p_no",
+            "v_ryouriya",
+            "p_ni",
+            { "id": "v_iku", "form": "polite_mashita" }
           ]
         },
         {
-          "q": "山に 何が ありますか。",
-          "a": "小さな 小屋が あります。",
+          "kind": "mcq",
+          "q": "海の 近くに 古い（　）が あります。",
+          "choices": ["小屋", "屋上", "料理屋", "飲み屋"],
+          "answer": "小屋",
           "terms": [
-            "k_yama",
-            "v_chiisai",
-            "v_koya"
+            "v_umi",
+            "p_no",
+            { "id": "v_chikai", "form": "adverbial" },
+            "p_ni",
+            "v_furui",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "父は（　）の 音楽や 映画が 好きです。",
+          "choices": ["西洋", "夜空", "屋上", "小屋"],
+          "answer": "西洋",
+          "terms": [
+            "v_chichi",
+            "p_wa",
+            "v_seiyou",
+            "p_no",
+            "v_ongaku",
+            "p_ya",
+            "v_eiga",
+            "p_ga",
+            { "id": "v_suki", "form": "polite_adj" }
           ]
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Drill 1: Vocabulary",
-      "instructions": "Select the correct meaning for the word.",
+      "title": "ドリル 3: ぶんを つくる",
+      "instructions": "Choose the correct particle or grammar to complete each sentence.",
       "items": [
         {
           "kind": "mcq",
-          "q": "今夜 [konya]",
-          "choices": [
-            "Tonight",
-            "Morning",
-            "Afternoon",
-            "Tomorrow"
-          ],
-          "answer": "Tonight",
-          "terms": []
+          "q": "夜空（　）見ながら、海の 音を 聞きます。",
+          "choices": ["を", "が", "に", "で"],
+          "answer": "を",
+          "terms": [
+            "v_yozora",
+            "p_wo",
+            { "id": "v_miru", "form": "nagara_form" },
+            "v_umi",
+            "p_no",
+            "v_oto",
+            "p_wo",
+            { "id": "v_kiku", "form": "polite_masu" }
+          ]
         },
         {
           "kind": "mcq",
-          "q": "洋服 [youfuku]",
-          "choices": [
-            "Western clothes",
-            "Japanese clothes",
-            "Shoes",
-            "Hat"
-          ],
-          "answer": "Western clothes",
-          "terms": []
+          "q": "この 料理屋は 安い（　）、洋食も おいしいです。",
+          "choices": ["し", "のに", "でも", "から"],
+          "answer": "し",
+          "terms": [
+            "v_kono",
+            "v_ryouriya",
+            "p_wa",
+            "v_yasui",
+            "p_shi",
+            "v_youshoku",
+            "p_mo",
+            { "id": "v_oishii", "form": "polite_adj" }
+          ]
         },
         {
           "kind": "mcq",
-          "q": "屋上 [okujou]",
-          "choices": [
-            "Rooftop",
-            "Basement",
-            "Shop",
-            "Ocean"
-          ],
-          "answer": "Rooftop",
-          "terms": []
+          "q": "仕事が 終わって（　）、飲み屋に 行きます。",
+          "choices": ["から", "ながら", "のに", "より"],
+          "answer": "から",
+          "terms": [
+            "v_shigoto",
+            "p_ga",
+            { "id": "v_owaru", "form": "te_form" },
+            "p_kara",
+            "v_nomiya",
+            "p_ni",
+            { "id": "v_iku", "form": "polite_masu" }
+          ]
         },
         {
           "kind": "mcq",
-          "q": "海洋 [kaiyou]",
-          "choices": [
-            "Ocean",
-            "River",
-            "Mountain",
-            "Sky"
-          ],
-          "answer": "Ocean",
-          "terms": []
-        }
-      ]
-    },
-    {
-      "type": "drills",
-      "title": "Drill 2: Grammar & Context",
-      "instructions": "Fill in the blank.",
-      "items": [
-        {
-          "kind": "mcq",
-          "q": "______ で 飲みます。",
-          "choices": [
-            "飲み屋",
-            "屋上",
-            "夜空",
-            "西洋"
-          ],
-          "answer": "飲み屋",
-          "terms": []
+          "q": "洋服を 買いに 行った（　）、いい 洋服が ありませんでした。",
+          "choices": ["のに", "から", "ので", "し"],
+          "answer": "のに",
+          "terms": [
+            "v_youfuku",
+            "p_wo",
+            { "id": "v_kau", "form": null },
+            "p_ni",
+            { "id": "v_iku", "form": "plain_past" },
+            "p_noni",
+            "v_ii",
+            "v_youfuku",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_past_negative" }
+          ]
         },
         {
           "kind": "mcq",
-          "q": "______ 料理が 好きです。",
-          "choices": [
-            "洋風",
-            "夜",
-            "服",
-            "屋"
-          ],
-          "answer": "洋風",
-          "terms": []
-        },
-        {
-          "kind": "mcq",
-          "q": "きれいな ______ ですね。",
-          "choices": [
-            "夜空",
-            "今夜",
-            "洋食",
-            "小屋"
-          ],
-          "answer": "夜空",
-          "terms": []
-        },
-        {
-          "kind": "mcq",
-          "q": "デパートで ______ を 買いました。",
-          "choices": [
-            "洋服",
-            "海洋",
-            "料理屋",
-            "屋上"
-          ],
-          "answer": "洋服",
-          "terms": []
+          "q": "料理屋（　）飲み屋の ほうが、夜は 楽しいです。",
+          "choices": ["より", "ほど", "しか", "だけ"],
+          "answer": "より",
+          "terms": [
+            "v_ryouriya",
+            "p_yori",
+            "v_nomiya",
+            "p_no",
+            "v_hou",
+            "p_ga",
+            "v_yoru",
+            "p_wa",
+            { "id": "v_tanoshii", "form": "polite_adj" }
+          ]
         }
       ]
     }
