@@ -52,15 +52,22 @@ When spawning subagents, include in the prompt: *"Read the following skill files
 
 Automated hooks in `hooks/` enforce rules that the environment should catch, not instructions:
 
-| Hook | What it catches | Replaces |
+| Hook | What it catches | Failure Modes covered |
 |---|---|---|
-| `hooks/validate-json.sh` | Invalid JSON syntax | CB Checklist "JSON is valid" |
-| `hooks/validate-kanji-scope.sh` | Untaught kanji in jp fields | Kanji Prerequisite Rules, Failure Mode #1 |
-| `hooks/validate-term-ids.sh` | Fabricated IDs, k_* in conversations, invalid form strings | Failure Modes #4, #5, #7 |
-| `hooks/validate-deprecated-forms.sh` | desire_tai, k_* outside kanjiGrid | Failure Mode #53c |
-| `hooks/validate-form-scope.sh` | Conjugation forms used before introducedIn lesson | Failure Mode #30, Grammar Usage Prerequisites |
+| `validate-json.sh` | Invalid JSON syntax (trailing commas, unclosed brackets) | CB Checklist |
+| `validate-kanji-scope.sh` | Untaught kanji in jp/passage fields | FM #1 |
+| `validate-term-ids.sh` | Fabricated IDs, k_* in conversations, invalid form strings | FM #4, #5, #7 |
+| `validate-deprecated-forms.sh` | desire_tai (deprecated), k_* outside kanjiGrid | FM #53c |
+| `validate-form-scope.sh` | Conjugation forms used before introducedIn lesson | FM #30 |
+| `validate-particle-context.sh` | Particle disambiguation: が (p_ga vs p_ga_but), から (p_kara vs p_kara_because), でも (p_demo vs p_demo_but), と (p_to vs p_to_quote), missing p_ka on questions | FM #34, #35, #36, #37, #58 |
+| `validate-grammar-schema.sh` | Grammar section silent failures: wrong field names (annotatedExample→examples[], grammarComparison→items[], fillSlot→before/after), pattern chip color/label, sentenceTransform choices, meta.particles strings vs IDs | FM #56, #56b–f |
+| `validate-structure.sh` | Warmup count (must be 4), N4+ 3-drill structure, Drill 1 no terms, meta.kanji required, answer/choices mismatch, review instructions/explanation/distractors | FM #6, #9b, #10b, #12, #14, #15, #16, #17, #33 |
+| `validate-surface-match.sh` | Term ID surface doesn't match jp text token (vocab showing wrong thing), na-adjective missing verb_class | FM #18, #53d, #60 |
+| `validate-writing-forms.sh` | Early-use words in kanji before taught, hiragana after taught, partial-kanji form enforcement | FM #41, #42, #43 |
+| `validate-register.sh` | Casual speech before N5.10, missing casual after N5.10, register mixing within conversations | FM #44, #45, #46 |
+| `validate-compose.sh` | Ungated particles, non-kanji targets, "close/wrap up" wording before challengePrompts | FM #20, #24, #25c |
 
-Hooks run automatically on content file edits. They catch the 5 most common failure categories mechanically — before Agent 3 even sees the draft.
+12 hooks covering 35+ failure modes. They run automatically on every content file edit — errors surface on the edit that introduces them, not 20 edits later during review.
 
 ## Campaign Files
 

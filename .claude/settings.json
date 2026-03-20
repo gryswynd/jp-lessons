@@ -28,6 +28,41 @@
         "matcher": "Edit|Write",
         "command": "FILE=\"$CLAUDE_FILE\"; if [[ \"$FILE\" =~ \\.json$ ]] && [[ ! \"$FILE\" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]]; then REPO_ROOT=\"$(pwd)\" bash hooks/validate-form-scope.sh \"$FILE\" 2>&1; fi",
         "description": "Validate conjugation forms are in scope for the lesson tier"
+      },
+      {
+        "matcher": "Edit|Write",
+        "command": "FILE=\"$CLAUDE_FILE\"; if [[ \"$FILE\" =~ \\.json$ ]] && [[ ! \"$FILE\" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]]; then REPO_ROOT=\"$(pwd)\" bash hooks/validate-particle-context.sh \"$FILE\" 2>&1; fi",
+        "description": "Validate particle disambiguation (が/から/でも/と context rules)"
+      },
+      {
+        "matcher": "Edit|Write",
+        "command": "FILE=\"$CLAUDE_FILE\"; if [[ \"$FILE\" =~ \\.json$ ]] && [[ ! \"$FILE\" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]]; then bash hooks/validate-grammar-schema.sh \"$FILE\" 2>&1; fi",
+        "description": "Validate grammar section field names (catches silent render failures)"
+      },
+      {
+        "matcher": "Edit|Write",
+        "command": "FILE=\"$CLAUDE_FILE\"; if [[ \"$FILE\" =~ \\.json$ ]] && [[ ! \"$FILE\" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]]; then bash hooks/validate-structure.sh \"$FILE\" 2>&1; fi",
+        "description": "Validate structural requirements (warmup count, drill structure, meta.kanji)"
+      },
+      {
+        "matcher": "Edit|Write",
+        "command": "FILE=\"$CLAUDE_FILE\"; if [[ \"$FILE\" =~ \\.json$ ]] && [[ ! \"$FILE\" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]]; then REPO_ROOT=\"$(pwd)\" bash hooks/validate-surface-match.sh \"$FILE\" 2>&1; fi",
+        "description": "Validate term ID surfaces match jp text (catches vocab display mismatches)"
+      },
+      {
+        "matcher": "Edit|Write",
+        "command": "FILE=\"$CLAUDE_FILE\"; if [[ \"$FILE\" =~ \\.json$ ]] && [[ ! \"$FILE\" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]]; then REPO_ROOT=\"$(pwd)\" bash hooks/validate-writing-forms.sh \"$FILE\" 2>&1; fi",
+        "description": "Validate early-use and partial-kanji writing form rules"
+      },
+      {
+        "matcher": "Edit|Write",
+        "command": "FILE=\"$CLAUDE_FILE\"; if [[ \"$FILE\" =~ \\.json$ ]] && [[ ! \"$FILE\" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]]; then REPO_ROOT=\"$(pwd)\" bash hooks/validate-register.sh \"$FILE\" 2>&1; fi",
+        "description": "Validate polite/casual register rules by lesson range"
+      },
+      {
+        "matcher": "Edit|Write",
+        "command": "FILE=\"$CLAUDE_FILE\"; if [[ \"$FILE\" =~ compose ]] && [[ \"$FILE\" =~ \\.json$ ]]; then REPO_ROOT=\"$(pwd)\" bash hooks/validate-compose.sh \"$FILE\" 2>&1; fi",
+        "description": "Validate compose-specific rules (particle gating, kanji targets, close wording)"
       }
     ]
   }
