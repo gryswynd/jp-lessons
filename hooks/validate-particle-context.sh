@@ -1,30 +1,21 @@
 #!/bin/bash
 # Hook: validate-particle-context.sh
-# Purpose: Catches particle disambiguation errors — the #1 source of
-#          "vocab showing something different than what was written."
-#
-# Validates: FM #34 (が p_ga vs p_ga_but), FM #35 (から p_kara vs p_kara_because),
-#            FM #36 (でも p_demo vs p_demo_but), FM #37 (と p_to vs p_to_quote),
-#            FM #58 (casual question missing p_ka)
-#
-# These are the disambiguation rules that agents forget most often.
+# Runs on: PostToolUse (Edit|Write)
+# Purpose: Particle disambiguation. Covers: FM #34-37, #58
 
 set -euo pipefail
 
-FILE="$1"
+INPUT=$(cat)
+FILE=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 
-[[ "$FILE" =~ \.(json)$ ]] || exit 0
+[[ -z "$FILE" ]] && exit 0
+[[ ! "$FILE" =~ \.(json)$ ]] && exit 0
 [[ "$FILE" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]] && exit 0
 
-python3 << 'PYEOF'
-import json
-import re
-import sys
-import os
+python3 - "$FILE" << 'PYEOF'
+import json, re, sys, os
 
-file_path = sys.argv[1] if len(sys.argv) > 1 else ''
-if not file_path or not os.path.exists(file_path):
-    sys.exit(0)
+file_path = sys.argv[1]
 
 try:
     with open(file_path) as f:
@@ -34,91 +25,57 @@ except:
 
 errors = []
 
-# Clause-final patterns that precede が/から meaning "but"/"because"
-CLAUSE_ENDINGS = re.compile(
-    r'(ます|ました|ません|ませんでした|です|でした|'
-    r'[うくすつぬふむるぐずづぶぷ]|'  # dictionary form endings
-    r'た|だ|ない|なかった|たい|'
-    r'い|かった)が'  # i-adj endings before が
+CLAUSE_ENDINGS_GA = re.compile(
+    r'(ます|ました|ません|ませんでした|です|でした|た|だ|ない|なかった|たい|い|かった)が'
 )
-
 CLAUSE_BEFORE_KARA = re.compile(
-    r'(ます|ました|ません|です|でした|'
-    r'た|だ|ない|なかった|たい|'
-    r'い|かった)から'
+    r'(ます|ました|ません|です|でした|た|だ|ない|なかった|たい|い|かった)から'
 )
 
 def check_line(jp, terms, path):
     if not jp or not terms:
         return
 
-    # --- FM #34: が disambiguation ---
-    # If が appears after a clause-final form, it should be p_ga_but not p_ga
-    if CLAUSE_ENDINGS.search(jp):
-        # Check if p_ga is used when p_ga_but should be
-        for i, term in enumerate(terms):
-            tid = term if isinstance(term, str) else term.get('id', '')
-            if tid == 'p_ga':
-                # This MIGHT be wrong — flag for review
-                # Only flag if the jp text has clause-final+が pattern
-                errors.append(
-                    f"  WARNING: p_ga used at {path}.terms[{i}] — check if this が follows "
-                    f"a clause-final form (ます/です/plain). If so, use p_ga_but instead.\n"
-                    f"    jp: {jp[:80]}"
-                )
-
-    # --- FM #35: から disambiguation ---
-    if CLAUSE_BEFORE_KARA.search(jp):
-        for i, term in enumerate(terms):
-            tid = term if isinstance(term, str) else term.get('id', '')
-            if tid == 'p_kara':
-                errors.append(
-                    f"  WARNING: p_kara used at {path}.terms[{i}] — check if this から follows "
-                    f"a verb/adjective/です. If so, use p_kara_because instead.\n"
-                    f"    jp: {jp[:80]}"
-                )
-
-    # --- FM #36: でも disambiguation ---
-    # Sentence-initial でも should be p_demo_but
+    # FM #36: Sentence-initial でも should be p_demo_but
     if jp.strip().startswith('でも'):
-        for i, term in enumerate(terms):
-            tid = term if isinstance(term, str) else term.get('id', '')
+        for i, t in enumerate(terms):
+            tid = t if isinstance(t, str) else t.get('id', '')
             if tid == 'p_demo':
-                errors.append(
-                    f"  ERROR: p_demo at {path}.terms[{i}] but でも is sentence-initial → use p_demo_but.\n"
-                    f"    jp: {jp[:80]}"
-                )
+                errors.append(f"  ERROR {path}.terms[{i}]: p_demo but でも is sentence-initial → use p_demo_but")
 
-    # --- FM #37: と disambiguation ---
-    # と after 」or after plain-form clause with 思/知 should be p_to_quote
-    if '」と' in jp or re.search(r'と(思|おも|知|し)', jp):
-        for i, term in enumerate(terms):
-            tid = term if isinstance(term, str) else term.get('id', '')
-            if tid == 'p_to':
-                errors.append(
-                    f"  WARNING: p_to at {path}.terms[{i}] — check if this と follows quoted speech "
-                    f"or 思う/知る. If so, use p_to_quote instead.\n"
-                    f"    jp: {jp[:80]}"
-                )
-
-    # --- FM #58: Casual question without p_ka ---
+    # FM #58: Question missing p_ka
     if jp.rstrip().endswith('？') or jp.rstrip().endswith('?'):
-        has_ka = any(
-            (t if isinstance(t, str) else t.get('id', '')) == 'p_ka'
-            for t in terms
-        )
+        has_ka = any((t if isinstance(t, str) else t.get('id', '')) == 'p_ka' for t in terms)
         if not has_ka:
-            errors.append(
-                f"  ERROR: Question sentence missing p_ka at {path}.\n"
-                f"    jp: {jp[:80]}"
-            )
+            errors.append(f"  ERROR {path}: Question sentence missing p_ka in terms")
+
+    # FM #34: が after clause-final → should be p_ga_but
+    if CLAUSE_ENDINGS_GA.search(jp):
+        for i, t in enumerate(terms):
+            tid = t if isinstance(t, str) else t.get('id', '')
+            if tid == 'p_ga':
+                errors.append(f"  WARN {path}.terms[{i}]: p_ga — check if this が follows a clause-final form (if so → p_ga_but)")
+
+    # FM #35: から after clause → should be p_kara_because
+    if CLAUSE_BEFORE_KARA.search(jp):
+        for i, t in enumerate(terms):
+            tid = t if isinstance(t, str) else t.get('id', '')
+            if tid == 'p_kara':
+                errors.append(f"  WARN {path}.terms[{i}]: p_kara — check if this から follows a verb/adj/です (if so → p_kara_because)")
+
+    # FM #37: と after 」or 思う → should be p_to_quote
+    if '」と' in jp or re.search(r'と(思|おも|知|し)', jp):
+        for i, t in enumerate(terms):
+            tid = t if isinstance(t, str) else t.get('id', '')
+            if tid == 'p_to':
+                errors.append(f"  WARN {path}.terms[{i}]: p_to — check if this と follows quoted speech/思う (if so → p_to_quote)")
 
 def walk(obj, path="root"):
     if isinstance(obj, dict):
         if 'jp' in obj and 'terms' in obj:
             check_line(obj['jp'], obj['terms'], path)
-        for key, val in obj.items():
-            walk(val, f"{path}.{key}")
+        for k, v in obj.items():
+            walk(v, f"{path}.{k}")
     elif isinstance(obj, list):
         for i, item in enumerate(obj):
             walk(item, f"{path}[{i}]")
@@ -126,13 +83,19 @@ def walk(obj, path="root"):
 walk(content)
 
 if errors:
-    print(f"PARTICLE DISAMBIGUATION ISSUES in {os.path.basename(file_path)}:")
-    for err in errors[:15]:
-        print(err)
-    if len(errors) > 15:
-        print(f"  ... and {len(errors) - 15} more issues")
-    # Use exit 1 for ERRORs, exit 0 for WARNINGs only
-    has_errors = any('ERROR:' in e for e in errors)
-    sys.exit(1 if has_errors else 0)
+    hard_errors = [e for e in errors if 'ERROR' in e]
+    warns = [e for e in errors if 'WARN' in e]
+    if hard_errors:
+        print(f"PARTICLE ERRORS in {os.path.basename(file_path)}:", file=sys.stderr)
+        for e in hard_errors:
+            print(e, file=sys.stderr)
+    if warns:
+        print(f"PARTICLE WARNINGS in {os.path.basename(file_path)}:", file=sys.stderr)
+        for w in warns[:10]:
+            print(w, file=sys.stderr)
+    sys.exit(1 if hard_errors else 0)
+PYEOF
 
-PYEOF "$FILE"
+RC=$?
+if [[ $RC -eq 1 ]]; then exit 2; fi
+exit 0

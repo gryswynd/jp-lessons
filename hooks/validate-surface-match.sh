@@ -1,31 +1,24 @@
 #!/bin/bash
 # Hook: validate-surface-match.sh
-# Purpose: Catches the "vocab showing something different than what was written"
-#          problem — when a term ID exists but its glossary surface doesn't match
-#          the actual token in the jp text.
-#
-# Validates: FM #18 (ID surface mismatch — e.g. tagging だ with g_desu),
-#            FM #60 (corrupted glossary surface — e.g. "送くる" instead of "送る"),
-#            compound spacing (FM #12 in quality gates — space inside compound breaks chip)
+# Runs on: PostToolUse (Edit|Write)
+# Purpose: Catches vocab showing wrong thing. Covers: FM #18, #53d, #60
 
 set -euo pipefail
 
-FILE="$1"
-REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+INPUT=$(cat)
+FILE=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 
-[[ "$FILE" =~ \.(json)$ ]] || exit 0
+[[ -z "$FILE" ]] && exit 0
+[[ ! "$FILE" =~ \.(json)$ ]] && exit 0
 [[ "$FILE" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]] && exit 0
 
-python3 << 'PYEOF'
-import json
-import re
-import sys
-import os
+REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
-repo_root = os.environ.get('REPO_ROOT', '.')
-file_path = sys.argv[1] if len(sys.argv) > 1 else ''
-if not file_path or not os.path.exists(file_path):
-    sys.exit(0)
+python3 - "$FILE" "$REPO_ROOT" << 'PYEOF'
+import json, sys, os, glob
+
+file_path = sys.argv[1]
+repo_root = sys.argv[2]
 
 try:
     with open(file_path) as f:
@@ -33,87 +26,61 @@ try:
 except:
     sys.exit(0)
 
-# Build ID → surface map from glossaries
-id_surface = {}
-import glob
+# Build ID → surface map
+id_info = {}
 for gpath in glob.glob(os.path.join(repo_root, 'data/*/glossary.*.json')):
     try:
         with open(gpath) as f:
-            for entry in json.load(f):
+            data_g = json.load(f); entries = data_g.get("entries", data_g) if isinstance(data_g, dict) else data_g
+            for entry in (entries if isinstance(entries, list) else []):
                 eid = entry.get('id', '')
-                surface = entry.get('surface', '')
-                matches = entry.get('matches', [])
-                if eid and surface:
-                    id_surface[eid] = {
-                        'surface': surface,
-                        'matches': matches if isinstance(matches, list) else [],
-                        'reading': entry.get('reading', ''),
+                if eid:
+                    id_info[eid] = {
+                        'surface': entry.get('surface', ''),
+                        'matches': entry.get('matches', []) if isinstance(entry.get('matches'), list) else [],
+                        'gtype': entry.get('gtype', ''),
                         'verb_class': entry.get('verb_class', ''),
-                        'gtype': entry.get('gtype', '')
                     }
     except:
         pass
 
-# Load particles
 particles_path = os.path.join(repo_root, 'shared/particles.json')
 if os.path.exists(particles_path):
     try:
         with open(particles_path) as f:
-            data = json.load(f)
-            for entry in data.get('particles', []):
+            for entry in json.load(f).get('particles', []):
                 eid = entry.get('id', '')
-                surface = entry.get('particle', '')
-                if eid and surface:
-                    id_surface[eid] = {
-                        'surface': surface,
-                        'matches': [],
-                        'reading': entry.get('reading', ''),
-                        'verb_class': '',
-                        'gtype': 'particle'
-                    }
+                if eid:
+                    id_info[eid] = {'surface': entry.get('particle', ''), 'matches': [], 'gtype': 'particle', 'verb_class': ''}
     except:
         pass
 
-# Add grammar IDs
-id_surface['g_desu'] = {'surface': 'です', 'matches': [], 'reading': 'です', 'verb_class': '', 'gtype': 'copula'}
-id_surface['g_da'] = {'surface': 'だ', 'matches': ['だった'], 'reading': 'だ', 'verb_class': '', 'gtype': 'copula'}
-
-# Load characters
 chars_path = os.path.join(repo_root, 'shared/characters.json')
 if os.path.exists(chars_path):
     try:
         with open(chars_path) as f:
             data = json.load(f)
-            items = data if isinstance(data, list) else data.get('characters', [])
-            for entry in items:
+            for entry in (data if isinstance(data, list) else data.get('characters', [])):
                 eid = entry.get('id', '')
-                surface = entry.get('surface', '')
-                if eid and surface:
-                    id_surface[eid] = {
-                        'surface': surface,
-                        'matches': entry.get('matches', []),
-                        'reading': entry.get('reading', ''),
-                        'verb_class': '',
-                        'gtype': 'character'
-                    }
+                if eid:
+                    id_info[eid] = {'surface': entry.get('surface', ''), 'matches': entry.get('matches', []), 'gtype': 'character', 'verb_class': ''}
     except:
         pass
+
+id_info['g_desu'] = {'surface': 'です', 'matches': [], 'gtype': 'copula', 'verb_class': ''}
+id_info['g_da'] = {'surface': 'だ', 'matches': ['だった'], 'gtype': 'copula', 'verb_class': ''}
 
 errors = []
 
 def check_surface(jp, terms, path):
-    """Check that term IDs' surfaces appear in the jp text."""
     if not jp or not terms:
         return
-
-    # Remove spaces for matching (jp text has readability spaces)
-    jp_no_space = jp.replace(' ', '').replace('　', '')
+    jp_clean = jp.replace(' ', '').replace('\u3000', '')
 
     for i, term in enumerate(terms):
         if isinstance(term, dict):
             tid = term.get('id', '')
             form = term.get('form')
-            # Skip counter objects
             if 'counter' in term:
                 continue
         elif isinstance(term, str):
@@ -122,60 +89,35 @@ def check_surface(jp, terms, path):
         else:
             continue
 
-        if not tid or tid not in id_surface:
+        if not tid or tid not in id_info:
             continue
 
-        info = id_surface[tid]
-        surface = info['surface']
-        matches = info['matches']
+        info = id_info[tid]
 
-        # For verbs/adjectives with a form, the surface will be conjugated —
-        # we can't easily check the conjugated form, so only check base forms
+        # Skip conjugated forms (surface changes)
         if form is not None:
+            # But check na-adj verb_class (FM #53d)
+            if form in ('attributive_na', 'polite_adj') and info['gtype'] in ('na-adjective', 'na_adj'):
+                if info['verb_class'] != 'na_adj':
+                    errors.append(f"  {path}.terms[{i}]: '{tid}' used with '{form}' but missing verb_class:'na_adj' in glossary")
             continue
 
-        # Check if surface or any match appears in the jp text
-        all_forms = [surface] + matches
-        found = any(f in jp_no_space for f in all_forms)
+        # Skip single-char particles (too many false positives)
+        if info['gtype'] == 'particle' and len(info['surface']) <= 1:
+            continue
+        if tid in ('g_desu', 'g_da'):
+            continue
 
-        if not found:
-            # Special case: particles are single characters, high false positive rate
-            if info['gtype'] == 'particle' and len(surface) <= 1:
-                continue
-            # Special case: copulas
-            if tid in ('g_desu', 'g_da'):
-                if surface in jp_no_space:
-                    continue
-                # g_desu might not appear if it's part of でした etc
-                continue
-
-            errors.append(
-                f"  {path}.terms[{i}]: ID '{tid}' (surface: '{surface}') "
-                f"not found in jp text.\n"
-                f"    jp: {jp[:80]}\n"
-                f"    Expected one of: {all_forms}"
-            )
-
-    # --- FM #53d: na-adjective missing verb_class ---
-    for i, term in enumerate(terms):
-        if isinstance(term, dict):
-            tid = term.get('id', '')
-            form = term.get('form', '')
-            if form in ('attributive_na', 'polite_adj') and tid in id_surface:
-                info = id_surface[tid]
-                if info['gtype'] == 'na-adjective' and info['verb_class'] != 'na_adj':
-                    errors.append(
-                        f"  {path}.terms[{i}]: '{tid}' used with form '{form}' "
-                        f"but glossary entry missing verb_class:'na_adj' — "
-                        f"attributive_na/polite_adj will silently fail."
-                    )
+        all_forms = [info['surface']] + info['matches']
+        if not any(f in jp_clean for f in all_forms):
+            errors.append(f"  {path}.terms[{i}]: '{tid}' (surface: '{info['surface']}') not found in jp text")
 
 def walk(obj, path="root"):
     if isinstance(obj, dict):
         if 'jp' in obj and 'terms' in obj:
             check_surface(obj['jp'], obj['terms'], path)
-        for key, val in obj.items():
-            walk(val, f"{path}.{key}")
+        for k, v in obj.items():
+            walk(v, f"{path}.{k}")
     elif isinstance(obj, list):
         for i, item in enumerate(obj):
             walk(item, f"{path}[{i}]")
@@ -183,11 +125,10 @@ def walk(obj, path="root"):
 walk(content)
 
 if errors:
-    print(f"SURFACE MATCH ISSUES in {os.path.basename(file_path)}:")
+    print(f"SURFACE MATCH ISSUES in {os.path.basename(file_path)}:", file=sys.stderr)
     for err in errors[:15]:
-        print(err)
-    if len(errors) > 15:
-        print(f"  ... and {len(errors) - 15} more issues")
+        print(err, file=sys.stderr)
     sys.exit(1)
+PYEOF
 
-PYEOF "$FILE"
+if [[ $? -ne 0 ]]; then exit 2; fi

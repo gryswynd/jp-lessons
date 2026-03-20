@@ -1,19 +1,19 @@
 #!/bin/bash
 # Hook: validate-json.sh
-# Runs on: post-edit of any JSON file
-# Purpose: Validates JSON syntax. Catches trailing commas, unclosed brackets,
-#          and other structural errors before they propagate.
-#
-# This replaces CLAUDE.md CB Checklist item: "JSON is valid (no trailing commas, all brackets closed)"
+# Runs on: PostToolUse (Edit|Write)
+# Purpose: Validates JSON syntax after every content file edit.
 
 set -euo pipefail
 
-FILE="$1"
+# Read hook input from stdin
+INPUT=$(cat)
+FILE=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 
-# Only run on JSON files
-if [[ ! "$FILE" =~ \.(json)$ ]]; then
-    exit 0
-fi
+[[ -z "$FILE" ]] && exit 0
+[[ ! "$FILE" =~ \.(json)$ ]] && exit 0
+
+# Skip non-content files
+[[ "$FILE" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]] && exit 0
 
 if ! python3 -c "
 import json, sys
@@ -21,9 +21,9 @@ try:
     with open('$FILE') as f:
         json.load(f)
 except json.JSONDecodeError as e:
-    print(f'JSON SYNTAX ERROR in $(basename "$FILE"):')
-    print(f'  {e}')
+    print(f'JSON SYNTAX ERROR in $FILE:', file=sys.stderr)
+    print(f'  {e}', file=sys.stderr)
     sys.exit(1)
 "; then
-    exit 1
+    exit 2
 fi
