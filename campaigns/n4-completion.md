@@ -15,7 +15,7 @@ Complete the entire N4 level: refresh the back half of lessons (N4.21–N4.36), 
 | Content type | Exists | Needed | Gap |
 |---|---|---|---|
 | Lessons (N4.1–N4.36) | 36/36 | All | N4.21–N4.36 need **full refresh** to current standards |
-| Grammar (G13–G31) | 9 (G13–G21) | 19 | **G22–G31 missing** (10 lessons) |
+| Grammar (G13–G31) | 9 (G13–G20, G23) | 19 | **G21–G22, G24–G31 missing** (11 lessons) |
 | Reviews | 18 numbered + 2 half + 1 final | — | N4.Review.11–18 need QA; **Finale may need refresh** |
 | Compose | 21 files | 36 | **compose.N4.21–N4.36 missing** (16 files) |
 | Stories | 13 | — | Need stories covering N4.21+ vocabulary |
@@ -47,30 +47,31 @@ These lessons exist but predate current quality standards (term tagging, grammar
 - [ ] N4.35
 - [ ] N4.36 — final N4 lesson
 
-## Phase 2: Grammar Lessons (G22–G31)
+## Phase 2: Grammar Lessons (G21–G31, minus G23)
 
-10 grammar lessons need to be built from GRAMMAR_CONTENT.md spec:
+11 grammar lessons need to be built from GRAMMAR_CONTENT.md spec (G23 already exists):
 
 | ID | Topic | unlocksAfter | Status |
 |---|---|---|---|
-| G22 | Obligations & Conditionals (なければ, ば, たら, なら, と) | N4.25 | **Not built** |
-| G23 | Passive Form | N4.31 | **Not built** |
-| G24 | Causative Form | N4.31 | **Not built** |
-| G25 | Advanced Verb Usages (てみる, ておく, てしまう, すぎる) | N4.34 | **Not built** |
-| G26 | Advanced Adjective Patterns (くなる/になる, くする/にする) | N4.34 | **Not built** |
-| G27 | Expressing Thoughts & Experience | N4.30 | **Not built** |
-| G28 | Conversation Mechanics (相槌, hesitation) | N4.14 | **Not built** |
-| G29 | そうだ: Appearance & Hearsay | N4.14 | **Not built** |
-| G30 | Directional て-Form (てくる/ていく/てある) | N4.21 | **Not built** |
-| G31 | ように Patterns | N4.25 | **Not built** |
+| G21 | Conversation Mechanics (相槌, hesitation) | N4.16 | **Not built** |
+| G22 | そうだ: Appearance & Hearsay | N4.18 | **Not built** |
+| G23 | Permissions & Prohibitions (てもいい, てはいけない, なくてもいい) | N4.21 | **Built** (was G21) |
+| G24 | Directional て-Form (てくる/ていく/てある) | N4.23 | **Not built** |
+| G25 | Obligations & Conditionals (なければ, ば, たら, なら, と) | N4.25 | **Not built** |
+| G26 | ように Patterns (ようにする / ようになる) | N4.27 | **Not built** |
+| G27 | Expressing Thoughts & Experience (と思う / たことがある) | N4.30 | **Not built** |
+| G28 | Passive Form | N4.31 | **Not built** |
+| G29 | Causative Form | N4.31 | **Not built** |
+| G30 | Advanced Verb Usages (てみる, ておく, てしまう, すぎる, とする) | N4.34 | **Not built** |
+| G31 | Advanced Adjective Patterns (くなる/になる, くする/にする) | N4.34 | **Not built** |
 
 **Recommended build order** (by unlocksAfter, earliest first):
-1. G28, G29 (unlock after N4.14 — earliest)
-2. G30 (unlock after N4.21)
-3. G22, G31 (unlock after N4.25)
+1. G21, G22 (unlock after N4.16/N4.18 — earliest)
+2. G24 (unlock after N4.23)
+3. G25, G26 (unlock after N4.25/N4.27)
 4. G27 (unlock after N4.30)
-5. G23, G24 (unlock after N4.31)
-6. G25, G26 (unlock after N4.34)
+5. G28, G29 (unlock after N4.31)
+6. G30, G31 (unlock after N4.34)
 
 ## Phase 3: Reviews
 
@@ -103,8 +104,8 @@ Current N4 stories (13 total):
 ## Phase 6: QA All Grammar Lessons (G13–G31)
 
 Once all grammar lessons exist, run the full set through validation:
-- [ ] G13–G21 (existing) — run through validate-grammar-schema and fix issues
-- [ ] G22–G31 (newly built) — should pass hooks from creation, but verify
+- [ ] G13–G20, G23 (existing) — run through validate-grammar-schema and fix issues
+- [ ] G21–G22, G24–G31 (newly built) — should pass hooks from creation, but verify
 
 ## Phase 7: Game Day Planning
 
@@ -115,11 +116,11 @@ No N4 game days exist yet. Planning needed:
 
 ## Priority Order
 
-1. **G28, G29** → earliest unlock, most students will hit these first
-2. **N4.21–N4.27 refresh** → unlocks G22, G30, G31
-3. **G22, G30, G31** → build after lessons they depend on are refreshed
+1. **G21, G22** → earliest unlock (N4.16/N4.18), most students will hit these first
+2. **N4.21–N4.27 refresh** → unlocks G24, G25, G26
+3. **G24, G25, G26** → build after lessons they depend on are refreshed
 4. **N4.28–N4.36 refresh** → unlocks remaining grammar
-5. **G23–G27** → build after their lesson prerequisites are refreshed
+5. **G27–G31** → build after their lesson prerequisites are refreshed
 6. **compose.N4.21–N4.36** → can be built in parallel with lesson refreshes
 7. **Stories** → after lessons are stable
 8. **Reviews QA** → after all content is stable
