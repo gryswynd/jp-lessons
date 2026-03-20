@@ -255,30 +255,33 @@
         },
         {
           "spk": "レン",
-          "jp": "ええ、花は きれいで、かわいいです。",
-          "en": "Yes, the flowers are beautiful and cute.",
+          "jp": "川の 中に 小さい 魚も いますよ。",
+          "en": "There are also small fish in the river.",
           "terms": [
-            "p_ee",
-            "v_hana",
-            "p_wa",
+            "v_kawa",
+            "p_no",
+            "v_naka",
+            "p_ni",
+            "v_chiisai",
+            "v_sakana",
+            "p_mo",
             {
-              "id": "v_kirei",
-              "form": "te_form"
+              "id": "v_iru",
+              "form": "polite_masu"
             },
-            "v_kawaii",
-            "g_desu"
+            "p_yo"
           ]
         },
         {
           "spk": "ミキ",
-          "jp": "きれいな 花ですね。毎年、花火も ありますよ。",
-          "en": "They're beautiful flowers. Every year there are also fireworks.",
+          "jp": "きれいな 川ですね。毎年、花火も ありますよ。",
+          "en": "It's a beautiful river. Every year there are also fireworks.",
           "terms": [
             {
               "id": "v_kirei",
               "form": "attributive_na"
             },
-            "v_hana",
+            "v_kawa",
             "g_desu",
             "p_ne",
             "v_mainen",
@@ -322,36 +325,43 @@
       "lines": [
         {
           "spk": "ミキ",
-          "jp": "今日の 花火は きれいそうですね。",
-          "en": "Today's fireworks look like they'll be beautiful.",
+          "jp": "花火の 前に、どこで 食べましょうか。",
+          "en": "Where shall we eat before the fireworks?",
           "terms": [
-            "v_kyou",
-            "p_no",
             "v_hanabi",
-            "p_wa",
+            "p_no",
+            "v_mae",
+            "p_ni",
+            "v_doko",
+            "p_de",
             {
-              "id": "v_kirei",
-              "form": "appearance_sou_stem"
+              "id": "v_taberu",
+              "form": "polite_volitional_mashou"
             },
-            "g_desu",
-            "p_ne"
+            "p_ka"
           ]
         },
         {
           "spk": "レン",
-          "jp": "ええ！毎年、花火は 大きくて、きれいですよ。",
-          "en": "Yes! Every year the fireworks are big and beautiful.",
+          "jp": "駅の 前の 店で 食べましょう。カレーが ありますよ。",
+          "en": "Let's eat at the shop in front of the station. They have curry.",
           "terms": [
-            "p_ee",
-            "v_mainen",
-            "v_hanabi",
-            "p_wa",
+            "v_eki",
+            "p_no",
+            "v_mae",
+            "p_no",
+            "v_mise",
+            "p_de",
             {
-              "id": "v_ookii",
-              "form": "te_form"
+              "id": "v_taberu",
+              "form": "polite_volitional_mashou"
             },
-            "v_kirei",
-            "g_desu",
+            "v_karee",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_yo"
           ]
         },
