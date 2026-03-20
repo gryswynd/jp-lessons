@@ -200,7 +200,7 @@ window.PracticeModule = {
                     <div class="k-construction-sticker"><span>🚧 Under Construction</span></div>
                 </div>
                 <div class="k-construction-wrap">
-                    <button class="k-btn" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">🔗 Connections</button>
+                    <button class="k-btn" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">🔗 Link Up</button>
                     <div class="k-construction-sticker"><span>🚧 Under Construction</span></div>
                 </div>
             </div>
