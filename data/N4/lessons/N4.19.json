@@ -401,20 +401,15 @@
         },
         {
           "spk": "A",
-          "jp": "先生に 質問しても いいですか。",
-          "en": "Is it okay to ask the teacher a question?",
+          "jp": "先生に 質問できますか。",
+          "en": "Can I ask the teacher a question?",
           "terms": [
             "v_sensei",
             "p_ni",
             "v_shitsumon",
             {
-              "id": "v_suru",
-              "form": "te_form"
-            },
-            "p_mo",
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
+              "id": "v_dekiru",
+              "form": "polite_masu"
             },
             "p_ka"
           ]
@@ -501,17 +496,27 @@
         },
         {
           "spk": "B",
-          "jp": "私も 同じです。いっしょに 図書館へ 行きましょう。",
-          "en": "Me too. Let's go to the library together.",
+          "jp": "私も 同じです。本を 読んだり、地図を 見たりしましょう。",
+          "en": "Me too. Let's read books and look at maps.",
           "terms": [
             "v_watashi",
             "p_mo",
             "v_onaji",
             "g_desu",
-            "v_toshokan",
-            "p_e",
+            "v_hon",
+            "p_wo",
             {
-              "id": "v_iku",
+              "id": "v_yomu",
+              "form": "tari_form"
+            },
+            "v_chizu",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
               "form": "polite_volitional_mashou"
             }
           ]
@@ -799,18 +804,21 @@
           ]
         },
         {
-          "jp": "その 先生は 水質の 学説を 作って います。",
-          "en": "That teacher is developing an academic theory about water quality.",
+          "jp": "その 先生は 水質の 問題を 学生に 説明して います。",
+          "en": "That teacher is explaining water quality problems to students.",
           "terms": [
             "v_sono",
             "v_sensei",
             "p_wa",
             "v_suishitsu",
             "p_no",
-            "v_gakusetsu",
+            "v_mondai",
             "p_wo",
+            "v_gakusei",
+            "p_ni",
+            "v_setsumei",
             {
-              "id": "v_tsukuru",
+              "id": "v_suru",
               "form": "te_form"
             },
             {
