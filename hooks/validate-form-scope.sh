@@ -16,6 +16,7 @@ REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
 python3 - "$FILE" "$REPO_ROOT" << 'PYEOF'
 import json, re, sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else '.')))
 
 file_path = sys.argv[1]
 repo_root = sys.argv[2]
@@ -39,24 +40,11 @@ if not os.path.exists(conj_path) or not os.path.exists(manifest_path):
 
 with open(conj_path) as f:
     conj_rules = json.load(f)
-with open(manifest_path) as f:
-    manifest = json.load(f)
 
-# Build lesson ordering
-lesson_order = {}
-ordinal = 0
-for level_key in ['N5', 'N4', 'N3', 'N2', 'N1']:
-    level_data = manifest.get('data', {}).get(level_key, {})
-    for lesson in level_data.get('lessons', []):
-        lid = lesson.get('id', '')
-        if lid:
-            lesson_order[lid] = ordinal
-            ordinal += 1
-    for grammar in level_data.get('grammar', []):
-        gid = grammar.get('id', '')
-        unlocks = grammar.get('unlocksAfter', '')
-        if gid:
-            lesson_order[gid] = lesson_order.get(unlocks, ordinal) + 0.5
+# Use shared lesson ordering
+sys.path.insert(0, os.path.join(repo_root, 'hooks'))
+from lib_lesson_order import build_lesson_order
+lesson_order = build_lesson_order(manifest_path)
 
 errors = []
 
