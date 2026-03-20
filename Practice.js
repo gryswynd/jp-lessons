@@ -103,6 +103,22 @@ window.PracticeModule = {
             #k-fc-card-obj { transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1), box-shadow 0.5s ease; }
 
             .k-flag-stamp { position: absolute; top: 15px; right: 15px; color: #ff4757; border: 3px solid #ff4757; padding: 5px 12px; border-radius: 8px; font-weight: 900; text-transform: uppercase; transform: rotate(15deg); font-size: 1rem; letter-spacing: 0.1em; opacity: 0.8; z-index: 5; }
+
+            /* Under Construction Sticker */
+            .k-construction-wrap { position: relative; width: 100%; }
+            .k-construction-wrap .k-btn { pointer-events: none; opacity: 0.45; filter: grayscale(0.3); }
+            .k-construction-sticker {
+                position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-8deg);
+                background: repeating-linear-gradient(45deg, #f59e0b, #f59e0b 10px, #1a1a1a 10px, #1a1a1a 20px);
+                color: white; font-weight: 900; font-size: 0.7rem; letter-spacing: 0.15em;
+                text-transform: uppercase; padding: 6px 18px; border-radius: 6px; z-index: 10;
+                white-space: nowrap; pointer-events: none;
+                text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+                box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+            }
+            .k-construction-sticker span {
+                background: #1a1a1a; padding: 3px 10px; border-radius: 4px; display: inline-block;
+            }
         `;
         document.head.appendChild(style);
     }
@@ -169,8 +185,24 @@ window.PracticeModule = {
                 <button class="k-btn" style="background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);" onclick="KanjiApp.start('mixed', 'flag-review')">🚩 Review Flagged</button>
 
                 <div class="k-lbl" style="margin-top:2rem; color:#8e44ad;">VERB PRACTICE</div>
-                <button class="k-btn" style="background: linear-gradient(135deg, #8e44ad 0%, #6c3483 100%);" onclick="KanjiApp.start('verb', 'flash')">🏃 Verb Flashcards</button>
-                <button class="k-btn" style="background: linear-gradient(135deg, #8e44ad 0%, #6c3483 100%);" onclick="KanjiApp.start('verb', 'quiz-conj')">⚡ Conjugation Quiz</button>
+                <div class="k-construction-wrap">
+                    <button class="k-btn" style="background: linear-gradient(135deg, #8e44ad 0%, #6c3483 100%);">🏃 Verb Flashcards</button>
+                    <div class="k-construction-sticker"><span>🚧 Under Construction</span></div>
+                </div>
+                <div class="k-construction-wrap">
+                    <button class="k-btn" style="background: linear-gradient(135deg, #8e44ad 0%, #6c3483 100%);">⚡ Conjugation Quiz</button>
+                    <div class="k-construction-sticker"><span>🚧 Under Construction</span></div>
+                </div>
+
+                <div class="k-lbl" style="margin-top:2rem; color:#e74c3c;">SENTENCE PRACTICE</div>
+                <div class="k-construction-wrap">
+                    <button class="k-btn" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">🔀 Scramble Practice</button>
+                    <div class="k-construction-sticker"><span>🚧 Under Construction</span></div>
+                </div>
+                <div class="k-construction-wrap">
+                    <button class="k-btn" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">🔗 Link Up</button>
+                    <div class="k-construction-sticker"><span>🚧 Under Construction</span></div>
+                </div>
             </div>
 
             <div id="k-view-flash" class="k-hidden" style="width:100%">
