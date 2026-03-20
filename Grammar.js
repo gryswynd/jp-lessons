@@ -1061,7 +1061,6 @@ window.GrammarModule = {
             };
             optsDiv.appendChild(btn);
           });
-          drillTotal++;
           card.appendChild(optsDiv);
           card.appendChild(expEl);
           div.appendChild(card);
@@ -1185,7 +1184,9 @@ window.GrammarModule = {
         const [gRes, resources] = await Promise.all([fetch(url), loadResources()]);
         grammarData = await gRes.json();
         grammarId = id;
-        drillCorrect = 0; drillTotal = 0; drillAnswered.clear(); completedSteps.clear();
+        drillCorrect = 0; drillAnswered.clear(); completedSteps.clear();
+        drillTotal = (grammarData.sections || []).reduce((sum, sec) =>
+          sec.type === 'drills' ? sum + (sec.items || []).filter(i => i.kind === 'mcq').length : sum, 0);
         termMapData = resources.map;
         CONJUGATION_RULES = resources.conj;
         COUNTER_RULES = resources.counter;
