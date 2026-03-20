@@ -1,7 +1,7 @@
 /**
  * app/shared/tts-settings.js
  * TTS voice settings modal — lets users pick a Japanese voice, adjust speed,
- * and preview the result.
+ * and preview the result. Includes platform-detected "Get Better Voices" guide.
  *
  * Depends on: tts.js (window.JPShared.tts)
  * Load this file after tts.js and before feature modules.
@@ -36,8 +36,9 @@
         background: white;
         border-radius: 16px;
         width: 90%; max-width: 420px;
+        max-height: 90vh;
+        overflow-y: auto;
         box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        overflow: hidden;
         font-family: "Poppins", system-ui, sans-serif;
       }
       .jp-tts-header {
@@ -45,6 +46,8 @@
         color: white;
         padding: 18px 20px;
         display: flex; align-items: center; justify-content: space-between;
+        position: sticky; top: 0; z-index: 1;
+        border-radius: 16px 16px 0 0;
       }
       .jp-tts-header h3 {
         margin: 0; font-size: 1.05rem; font-weight: 800;
@@ -128,6 +131,97 @@
         font-size: 0.85rem;
         color: #e65100;
         line-height: 1.5;
+        margin-top: 8px;
+      }
+
+      /* Voice quality badges */
+      .jp-tts-quality-badge {
+        display: inline-block;
+        font-size: 0.65rem;
+        font-weight: 700;
+        padding: 1px 5px;
+        border-radius: 4px;
+        margin-left: 5px;
+        vertical-align: middle;
+        letter-spacing: 0.3px;
+      }
+      .jp-tts-quality-premium { background: #fff3cd; color: #856404; }
+      .jp-tts-quality-enhanced { background: #d1e7dd; color: #155724; }
+      .jp-tts-quality-compact  { background: #f0e6ff; color: #6f42c1; }
+
+      /* Get Better Voices section */
+      .jp-tts-more-voices {
+        background: #f8f9ff;
+        border: 1.5px solid #e0e3ff;
+        border-radius: 12px;
+        padding: 14px 16px;
+      }
+      .jp-tts-installed-list {
+        font-size: 0.82rem;
+        color: #444;
+        margin-bottom: 10px;
+        line-height: 1.7;
+      }
+      .jp-tts-installed-list strong {
+        display: block;
+        color: #333;
+        margin-bottom: 2px;
+      }
+      .jp-tts-missing-note {
+        font-size: 0.82rem;
+        padding: 7px 10px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        line-height: 1.5;
+      }
+      .jp-tts-missing-note.has-missing {
+        background: #eef0ff;
+        color: #4e54c8;
+      }
+      .jp-tts-missing-note.all-good {
+        background: #d1e7dd;
+        color: #155724;
+      }
+      .jp-tts-instructions {
+        font-size: 0.82rem;
+        color: #444;
+        line-height: 1.5;
+      }
+      .jp-tts-instructions strong {
+        display: block;
+        margin-bottom: 6px;
+        color: #333;
+      }
+      .jp-tts-instructions ol {
+        margin: 0 0 10px 18px;
+        padding: 0;
+      }
+      .jp-tts-instructions li {
+        margin-bottom: 4px;
+      }
+      .jp-tts-open-settings-btn {
+        width: 100%;
+        padding: 9px 12px;
+        background: white;
+        color: #4e54c8;
+        border: 2px solid #4e54c8;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        margin-top: 4px;
+      }
+      @media (hover: hover) {
+        .jp-tts-open-settings-btn:hover { background: #4e54c8; color: white; }
+      }
+      .jp-tts-open-settings-btn:active { transform: scale(0.98); }
+
+      /* Divider */
+      .jp-tts-divider {
+        border: none;
+        border-top: 1px solid #eee;
+        margin: 0 0 20px;
       }
 
       /* Gear button styles (shared across modules) */
@@ -219,23 +313,186 @@
     document.head.appendChild(el);
   }
 
+  // --- Platform detection ---
+  function detectPlatform() {
+    var ua = navigator.userAgent;
+    if (/iPhone|iPad|iPod/.test(ua)) return 'ios';
+    if (/Android/.test(ua)) return 'android';
+    if (/Macintosh|Mac OS X/.test(ua) && !('ontouchend' in document)) return 'mac';
+    if (/Windows/.test(ua)) return 'windows';
+    return 'other';
+  }
+
+  // --- Voice quality tier from name ---
+  function getVoiceQuality(voice) {
+    var name = voice.name.toLowerCase();
+    if (name.includes('premium')) return 'premium';
+    if (name.includes('enhanced')) return 'enhanced';
+    if (name.includes('compact')) return 'compact';
+    return 'standard';
+  }
+
+  // Quality badge HTML (for installed voice list)
+  function qualityBadge(q) {
+    if (q === 'premium')  return '<span class="jp-tts-quality-badge jp-tts-quality-premium">Premium</span>';
+    if (q === 'enhanced') return '<span class="jp-tts-quality-badge jp-tts-quality-enhanced">Enhanced</span>';
+    if (q === 'compact')  return '<span class="jp-tts-quality-badge jp-tts-quality-compact">Compact</span>';
+    return '';
+  }
+
+  // Quality suffix for dropdown option text (badges can't go in <option>)
+  function qualitySuffix(q) {
+    if (q === 'premium')  return ' [Premium]';
+    if (q === 'enhanced') return ' [Enhanced]';
+    if (q === 'compact')  return ' [Compact]';
+    return '';
+  }
+
+  // Known good Japanese voices per platform (names to look for)
+  var KNOWN_VOICES = {
+    ios:     ['Kyoko', 'Otoya', 'O-ren'],
+    mac:     ['Kyoko', 'Otoya', 'O-ren'],
+    android: ['Google 日本語'],
+    windows: ['Haruka', 'Ayumi', 'Ichiro'],
+    other:   []
+  };
+
+  // --- Build the "Get Better Voices" section HTML ---
+  function buildGetMoreVoices(voices, platform) {
+    var known = KNOWN_VOICES[platform] || [];
+
+    // Which known voices are NOT installed
+    var missing = known.filter(function (name) {
+      return !voices.some(function (v) {
+        return v.name.toLowerCase().includes(name.toLowerCase());
+      });
+    });
+
+    // Installed voices summary
+    var installedHtml = '';
+    if (voices.length === 0) {
+      installedHtml = '<div class="jp-tts-installed-list" style="color:#e65100">No Japanese voices detected.</div>';
+    } else {
+      var items = voices.map(function (v) {
+        var q = getVoiceQuality(v);
+        return v.name + qualityBadge(q);
+      }).join('<br>');
+      installedHtml = '<div class="jp-tts-installed-list"><strong>Installed:</strong>' + items + '</div>';
+    }
+
+    // Missing / all-good note
+    var noteHtml = '';
+    if (missing.length > 0) {
+      noteHtml = '<div class="jp-tts-missing-note has-missing">' +
+        '⬇️ <strong>Available to download:</strong> ' + missing.join(', ') +
+        '</div>';
+    } else if (voices.length > 0) {
+      var hasHighQuality = voices.some(function (v) {
+        var q = getVoiceQuality(v);
+        return q === 'enhanced' || q === 'premium';
+      });
+      if (hasHighQuality) {
+        noteHtml = '<div class="jp-tts-missing-note all-good">✓ You have a high-quality voice installed.</div>';
+      }
+    }
+
+    // Platform-specific step-by-step instructions
+    var instructionsHtml = '';
+    var deepLinkHtml = '';
+
+    if (platform === 'ios') {
+      instructionsHtml =
+        '<div class="jp-tts-instructions">' +
+        '<strong>To download better voices on iPhone / iPad:</strong>' +
+        '<ol>' +
+        '<li>Open the <strong>Settings</strong> app</li>' +
+        '<li>Tap <strong>Accessibility</strong></li>' +
+        '<li>Tap <strong>Spoken Content</strong></li>' +
+        '<li>Tap <strong>Voices</strong></li>' +
+        '<li>Tap <strong>Japanese</strong></li>' +
+        '<li>Tap a voice name to download ⬇️</li>' +
+        '</ol>' +
+        '<em style="font-size:0.78rem;color:#888">Tip: Kyoko and Otoya Enhanced sound the most natural.</em>' +
+        '</div>';
+      // iOS deep-link from web Safari is blocked — skip the button
+
+    } else if (platform === 'android') {
+      instructionsHtml =
+        '<div class="jp-tts-instructions">' +
+        '<strong>To download better voices on Android:</strong>' +
+        '<ol>' +
+        '<li>Open <strong>Settings</strong></li>' +
+        '<li>Tap <strong>Accessibility</strong></li>' +
+        '<li>Tap <strong>Text-to-Speech Output</strong></li>' +
+        '<li>Tap ⚙️ next to <strong>Google Text-to-Speech</strong></li>' +
+        '<li>Tap <strong>Install voice data</strong></li>' +
+        '<li>Find <strong>Japanese</strong> and download</li>' +
+        '</ol>' +
+        '</div>';
+      // Android deep-link from web is also unreliable — skip the button
+
+    } else if (platform === 'mac') {
+      instructionsHtml =
+        '<div class="jp-tts-instructions">' +
+        '<strong>To download better voices on Mac:</strong>' +
+        '<ol>' +
+        '<li>Open <strong>System Settings</strong></li>' +
+        '<li>Click <strong>Accessibility</strong></li>' +
+        '<li>Click <strong>Spoken Content</strong></li>' +
+        '<li>Click <strong>Manage Voices…</strong></li>' +
+        '<li>Find Japanese voices and click ⬇️</li>' +
+        '</ol>' +
+        '</div>';
+      // Mac deep-link works from Safari
+      deepLinkHtml = '<button class="jp-tts-open-settings-btn" id="jp-tts-open-settings">Open System Settings →</button>';
+
+    } else if (platform === 'windows') {
+      instructionsHtml =
+        '<div class="jp-tts-instructions">' +
+        '<strong>To add Japanese voices on Windows:</strong>' +
+        '<ol>' +
+        '<li>Open <strong>Settings</strong></li>' +
+        '<li>Click <strong>Time &amp; Language</strong></li>' +
+        '<li>Click <strong>Language &amp; Region</strong></li>' +
+        '<li>Add <strong>Japanese</strong> with speech/TTS support</li>' +
+        '</ol>' +
+        '</div>';
+    }
+
+    // If we have nothing useful to show (unknown platform), bail
+    if (!instructionsHtml) return '';
+
+    return (
+      '<hr class="jp-tts-divider">' +
+      '<div class="jp-tts-field">' +
+        '<label>🎙️ Get Better Voices</label>' +
+        '<div class="jp-tts-more-voices">' +
+          installedHtml +
+          noteHtml +
+          instructionsHtml +
+          deepLinkHtml +
+        '</div>' +
+      '</div>'
+    );
+  }
+
   function buildModal() {
     var tts = window.JPShared.tts;
     var voices = tts.getVoices();
     var current = tts.getSelectedVoice();
     var currentURI = current ? current.voiceURI : '';
     var rate = tts.getRate();
+    var platform = detectPlatform();
 
-    // Build voice options
+    // Build voice options — include quality suffix since <option> can't use HTML
     var voiceOptions = '';
     if (voices.length === 0) {
       voiceOptions = '<option value="">No Japanese voices found</option>';
     } else {
       voices.forEach(function (v) {
-        var label = v.name;
-        // Clean up verbose voice names
-        if (v.localService) label += ' (local)';
-        else label += ' (online)';
+        var q = getVoiceQuality(v);
+        var label = v.name + qualitySuffix(q);
+        label += v.localService ? ' (local)' : ' (online)';
         var sel = (v.voiceURI === currentURI) ? ' selected' : '';
         voiceOptions += '<option value="' + v.voiceURI.replace(/"/g, '&quot;') + '"' + sel + '>' +
                         label.replace(/</g, '&lt;') + '</option>';
@@ -244,14 +501,15 @@
 
     var noVoicesMsg = voices.length === 0
       ? '<div class="jp-tts-no-voices">No Japanese voices detected on this device. ' +
-        'On Mac, go to System Settings → Accessibility → Spoken Content → Manage Voices and download a Japanese voice. ' +
-        'On iOS/Android, Japanese voices are usually pre-installed.</div>'
+        'See the <strong>Get Better Voices</strong> section below for instructions.</div>'
       : '';
 
-    var html = '' +
+    var getMoreSection = buildGetMoreVoices(voices, platform);
+
+    var html =
       '<div class="jp-tts-modal">' +
         '<div class="jp-tts-header">' +
-          '<h3>\u{1F50A} Voice Settings</h3>' +
+          '<h3>\uD83D\uDD0A Voice Settings</h3>' +
           '<button class="jp-tts-close" id="jp-tts-close">\u2715</button>' +
         '</div>' +
         '<div class="jp-tts-body">' +
@@ -270,9 +528,10 @@
           '</div>' +
           '<div class="jp-tts-field">' +
             '<button class="jp-tts-test-btn" id="jp-tts-test">' +
-              '\u{1F50A} Test Voice — \u300C\u3053\u3093\u306B\u3061\u306F\u3001\u5143\u6C17\u3067\u3059\u304B\u3002\u300D' +
+              '\uD83D\uDD0A Test Voice \u2014 \u300C\u3053\u3093\u306B\u3061\u306F\u3001\u5143\u6C17\u3067\u3059\u304B\u3002\u300D' +
             '</button>' +
           '</div>' +
+          getMoreSection +
         '</div>' +
       '</div>';
 
@@ -317,6 +576,15 @@
       window.JPShared.tts.speak('\u3053\u3093\u306B\u3061\u306F\u3001\u5143\u6C17\u3067\u3059\u304B\u3002\u4ECA\u65E5\u306F\u3044\u3044\u5929\u6C17\u3067\u3059\u306D\u3002');
     });
 
+    // Mac "Open System Settings" deep-link
+    var openSettingsBtn = document.getElementById('jp-tts-open-settings');
+    if (openSettingsBtn) {
+      openSettingsBtn.addEventListener('click', function () {
+        // Works in Safari on macOS — opens System Settings > Accessibility
+        window.location.href = 'x-apple.systempreferences:com.apple.Accessibility-Settings.extension';
+      });
+    }
+
     // Refresh voices if Chrome loads them late
     if (window.speechSynthesis) {
       var refresh = function () {
@@ -329,13 +597,25 @@
           voices.forEach(function (v) {
             var opt = document.createElement('option');
             opt.value = v.voiceURI;
-            opt.textContent = v.name + (v.localService ? ' (local)' : ' (online)');
+            var q = getVoiceQuality(v);
+            opt.textContent = v.name + qualitySuffix(q) + (v.localService ? ' (local)' : ' (online)');
             if (v.voiceURI === currentURI) opt.selected = true;
             voiceSelect.appendChild(opt);
           });
           // Remove no-voices warning if present
           var warn = overlay.querySelector('.jp-tts-no-voices');
           if (warn) warn.remove();
+          // Rebuild the Get Better Voices section with actual voice data
+          var moreSection = overlay.querySelector('.jp-tts-field:last-child');
+          if (moreSection) {
+            var newHtml = buildGetMoreVoices(voices, detectPlatform());
+            if (newHtml) {
+              var tmp = document.createElement('div');
+              tmp.innerHTML = newHtml;
+              moreSection.parentNode.insertBefore(tmp.firstChild, moreSection.nextSibling);
+              // Remove the old empty section if it was the no-voices placeholder
+            }
+          }
         }
       };
       window.speechSynthesis.onvoiceschanged = refresh;
