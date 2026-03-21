@@ -1,0 +1,64 @@
+{
+  "puzzles": [
+    {
+      "id": "n4-conn-1",
+      "requires": ["N4.3", "N4.4", "N4.8"],
+      "groups": [
+        { "label": "Four Seasons", "words": ["はる", "なつ", "あき", "ふゆ"] },
+        { "label": "Color Adjectives", "words": ["あかい", "あおい", "くろい", "ちゃいろい"] },
+        { "label": "Morning Words", "words": ["あさ", "あさごはん", "けさ", "まいあさ"] },
+        { "label": "Evening Words", "words": ["ばん", "ばんごはん", "こんばん", "まいばん"] }
+      ]
+    },
+    {
+      "id": "n4-conn-2",
+      "requires": ["N4.1", "N4.2", "N4.5", "N4.7"],
+      "groups": [
+        { "label": "Siblings", "words": ["あに", "あね", "いもうと", "おとうと"] },
+        { "label": "Ingredients", "words": ["やさい", "ぎゅうにく", "とりにく", "りょうり"] },
+        { "label": "Daily Actions", "words": ["はたらく", "おきる", "あるく", "かえる"] },
+        { "label": "___もの Compounds", "words": ["たべもの", "のみもの", "かいもの", "ものがたり"] }
+      ]
+    },
+    {
+      "id": "n4-conn-3",
+      "requires": ["N4.11", "N4.12", "N4.13"],
+      "groups": [
+        { "label": "Travel 旅", "words": ["旅", "旅行", "旅人", "旅館"] },
+        { "label": "Body Parts", "words": ["頭", "顔", "体", "首"] },
+        { "label": "Music & Song", "words": ["音楽", "歌", "歌手", "声楽"] },
+        { "label": "Voice 声", "words": ["声", "話し声", "小声", "歌う"] }
+      ]
+    },
+    {
+      "id": "n4-conn-4",
+      "requires": ["N4.14", "N4.15"],
+      "groups": [
+        { "label": "事 Compounds", "words": ["仕事", "食事", "行事", "事"] },
+        { "label": "Illness 病", "words": ["病院", "病気", "入院", "病死"] },
+        { "label": "Workers & Roles", "words": ["会社員", "駅員", "店員", "医者"] },
+        { "label": "学 Compounds", "words": ["学者", "学院", "大学院", "医学"] }
+      ]
+    },
+    {
+      "id": "n4-conn-5",
+      "requires": ["N4.17"],
+      "groups": [
+        { "label": "Filler Words", "words": ["なるほど", "へえ", "そうそう", "まあ"] },
+        { "label": "Counting ___回", "words": ["何回", "一回", "二回", "今回"] },
+        { "label": "Places in Japan", "words": ["東京", "京都", "北海道", "お寺"] },
+        { "label": "Contains 田", "words": ["田", "水田", "田中", "山田"] }
+      ]
+    },
+    {
+      "id": "n4-conn-6",
+      "requires": ["N4.18", "N4.19"],
+      "groups": [
+        { "label": "Light 光", "words": ["光", "日光", "月光", "電光"] },
+        { "label": "Strong vs Weak", "words": ["強い", "弱い", "強気", "弱気"] },
+        { "label": "Ground 地", "words": ["地上", "地下", "地図", "地味"] },
+        { "label": "Questions & Texts", "words": ["質問", "問題", "説明", "小説"] }
+      ]
+    }
+  ]
+}
