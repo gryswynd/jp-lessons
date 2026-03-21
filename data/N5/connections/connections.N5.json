@@ -2,38 +2,38 @@
   "puzzles": [
     {
       "id": "n5-conn-1",
-      "requires": ["N5.1", "N5.3", "N5.4"],
+      "requires": ["N5.5", "N5.7", "N5.8"],
       "groups": [
-        { "label": "👨‍👩‍👧 Family", "words": ["父", "母", "友", "先生"] },
-        { "label": "💴 Money", "words": ["百", "千", "万", "円"] },
-        { "label": "⏰ Recurring Time", "words": ["毎日", "毎月", "毎週", "今年"] }
+        { "label": "🍽️ Food & Drink", "words": ["パン", "カレー", "コーヒー", "ジュース"] },
+        { "label": "🏬 Shops & Stations", "words": ["駅", "コンビニ", "レストラン", "デパート"] },
+        { "label": "📏 Size & Price", "words": ["大きい", "小さい", "高い", "安い"] }
       ]
     },
     {
       "id": "n5-conn-2",
-      "requires": ["N5.1", "N5.2", "N5.5", "N5.6"],
+      "requires": ["N5.1", "N5.6", "N5.10"],
       "groups": [
-        { "label": "👤 People", "words": ["男", "女", "子", "人"] },
-        { "label": "🏠 Places", "words": ["家", "店", "駅", "道"] },
-        { "label": "🌿 Nature", "words": ["山", "川", "木", "水"] }
+        { "label": "🚗 Vehicles", "words": ["電車", "車", "バス", "タクシー"] },
+        { "label": "🌿 Nature", "words": ["山", "川", "木", "水"] },
+        { "label": "🏠 At Home", "words": ["家", "テレビ", "パソコン", "ベッド"] }
       ]
     },
     {
       "id": "n5-conn-3",
-      "requires": ["N5.5", "N5.7", "N5.8", "N5.9"],
+      "requires": ["N5.11", "N5.12"],
       "groups": [
-        { "label": "📏 Size & Value", "words": ["大", "小", "高", "安"] },
-        { "label": "📍 Position", "words": ["前", "中", "外", "後"] },
-        { "label": "🛒 Shopping", "words": ["店", "買", "新", "古"] }
+        { "label": "🌸 Sky & Nature", "words": ["空", "雨", "花", "魚"] },
+        { "label": "🏫 Types of School", "words": ["学校", "小学校", "中学校", "大学"] },
+        { "label": "✏️ Study Supplies", "words": ["本", "ノート", "ペン", "テスト"] }
       ]
     },
     {
       "id": "n5-conn-4",
-      "requires": ["N5.2", "N5.5", "N5.6", "N5.10", "N5.11"],
+      "requires": ["N5.1", "N5.12", "N5.13", "N5.14"],
       "groups": [
-        { "label": "🌿 Nature", "words": ["山", "川", "花", "魚"] },
-        { "label": "☀️ Sky & Weather", "words": ["天気", "雨", "空", "日"] },
-        { "label": "🚃 Transport", "words": ["電車", "道", "車", "駅"] }
+        { "label": "💬 Communication", "words": ["話す", "言う", "書く", "読む"] },
+        { "label": "📊 Amount", "words": ["多い", "少ない", "少し", "たくさん"] },
+        { "label": "🎓 School People", "words": ["学生", "先生", "校長", "友だち"] }
       ]
     },
     {
@@ -41,35 +41,26 @@
       "requires": ["N5.9", "N5.15", "N5.16"],
       "groups": [
         { "label": "🧭 Compass", "words": ["北", "南", "東", "西"] },
-        { "label": "↔️ Relative Direction", "words": ["左", "右", "上", "下"] },
-        { "label": "📍 Position", "words": ["前", "中", "外", "後"] }
+        { "label": "↔️ Left / Right / Up / Down", "words": ["右", "左", "上", "下"] },
+        { "label": "📍 Position", "words": ["前", "後", "中", "外"] }
       ]
     },
     {
       "id": "n5-conn-6",
-      "requires": ["N5.2", "N5.7", "N5.13", "N5.18"],
+      "requires": ["N5.1", "N5.10", "N5.13", "N5.18"],
       "groups": [
         { "label": "👁️ Body Parts", "words": ["目", "耳", "手", "足"] },
-        { "label": "🍽️ Food & Drink", "words": ["パン", "コーヒー", "ジュース", "水"] },
-        { "label": "💬 Communication", "words": ["話", "言", "書", "読"] }
+        { "label": "📺 Electronics", "words": ["テレビ", "パソコン", "電話", "電気"] },
+        { "label": "😌 Feelings", "words": ["うれしい", "かなしい", "こわい", "いたい"] }
       ]
     },
     {
       "id": "n5-conn-7",
-      "requires": ["N5.1", "N5.3", "N5.7", "N5.14"],
+      "requires": ["N5.7", "N5.8", "N5.17"],
       "groups": [
-        { "label": "👤 People", "words": ["父", "母", "男", "女"] },
-        { "label": "🔢 Numbers", "words": ["一", "二", "三", "四"] },
-        { "label": "📊 Size & Amount", "words": ["大", "小", "多", "少"] }
-      ]
-    },
-    {
-      "id": "n5-conn-8",
-      "requires": ["N5.2", "N5.3", "N5.4"],
-      "groups": [
-        { "label": "🗓️ Days of the Week", "words": ["月", "火", "水", "金"] },
-        { "label": "💴 Money & Counting", "words": ["百", "千", "万", "円"] },
-        { "label": "⏰ Time Units", "words": ["時", "年", "分", "半"] }
+        { "label": "🚪 In & Out", "words": ["入り口", "出口", "入る", "出る"] },
+        { "label": "🏢 Work Life", "words": ["会社", "社長", "アルバイト", "会う"] },
+        { "label": "🍽️ Dining", "words": ["食べる", "飲む", "おいしい", "レストラン"] }
       ]
     }
   ]

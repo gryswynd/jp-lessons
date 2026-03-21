@@ -535,7 +535,7 @@ window.PracticeModule = {
         );
 
         if (available.length === 0) {
-            alert('Select more lessons to unlock Link Up puzzles! The first puzzles unlock around N5.1–N5.4.');
+            alert('Select more lessons to unlock Link Up puzzles! The first puzzles unlock around N5.5–N5.8.');
             return;
         }
 
