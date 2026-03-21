@@ -13,6 +13,7 @@ extends Area2D
 var player_nearby := false
 var obj_width: float = 0
 var obj_height: float = 0
+var door_sprite: Sprite2D = null
 
 
 func _ready() -> void:
@@ -48,6 +49,7 @@ func setup(data: Dictionary) -> void:
 	if is_door:
 		# Doors need a blocking body that toggles
 		_setup_door_blocker()
+		_setup_door_sprite()
 
 
 func interact() -> void:
@@ -80,11 +82,33 @@ func _setup_door_blocker() -> void:
 	blocker.position = Vector2.ZERO
 
 
+func _setup_door_sprite() -> void:
+	## Create a Sprite2D showing the door asset. Visible = closed, hidden = open.
+	var tex_path := "res://assets/sprites/door.png"
+	if not ResourceLoader.exists(tex_path):
+		return
+	var tex := load(tex_path) as Texture2D
+	door_sprite = Sprite2D.new()
+	door_sprite.texture = tex
+	door_sprite.centered = true
+	# Scale the door texture to fit this object's dimensions
+	var sx := obj_width / tex.get_width()
+	var sy := obj_height / tex.get_height()
+	door_sprite.scale = Vector2(sx, sy)
+	add_child(door_sprite)
+	door_sprite.position = Vector2.ZERO
+	# Start visible (closed) unless already open
+	door_sprite.visible = not GameManager.is_door_open(object_name)
+
+
 func _update_door_blocker() -> void:
+	var is_open := GameManager.is_door_open(object_name)
 	var blocker := get_node_or_null("DoorBlocker")
 	if blocker:
 		# Disable collision when door is open
-		blocker.get_child(0).disabled = GameManager.is_door_open(object_name)
+		blocker.get_child(0).disabled = is_open
+	if door_sprite:
+		door_sprite.visible = not is_open
 
 
 func _on_body_entered(body: Node2D) -> void:
