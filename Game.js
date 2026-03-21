@@ -936,6 +936,22 @@ window.GameModule = (function() {
           game.doors[doorObj.name].open = !game.doors[doorObj.name].open;
           const status = game.doors[doorObj.name].open ? 'opened' : 'closed';
           showMessage(`${doorObj.name} ${status}.`);
+
+          // Push player out if they're inside a door that just closed
+          if (!game.doors[doorObj.name].open) {
+            const px = game.player.x;
+            const py = game.player.y;
+            if (px + 12 > doorObj.x && px - 12 < doorObj.x + doorObj.width &&
+                py + 10 > doorObj.y && py - 20 < doorObj.y + doorObj.height) {
+              // Move player to the side they're closest to
+              const doorCenterY = doorObj.y + doorObj.height / 2;
+              if (py < doorCenterY) {
+                game.player.y = doorObj.y - 21;
+              } else {
+                game.player.y = doorObj.y + doorObj.height + 11;
+              }
+            }
+          }
         }
       }
 
@@ -1030,12 +1046,13 @@ window.GameModule = (function() {
           game.player.moving = true;
         }
 
-        // Check collision with doors
+        // Check collision with doors (use same small offsets as wall collision)
         let canMove = true;
+        const doorPad = 12;
         for (let obj of game.interactiveObjects) {
           if (obj.isDoor && !game.doors[obj.name].open) {
-            if (newX >= obj.x - game.player.width/2 && newX <= obj.x + obj.width + game.player.width/2 &&
-                newY >= obj.y - game.player.height/2 && newY <= obj.y + obj.height + game.player.height/2) {
+            if (newX + doorPad > obj.x && newX - doorPad < obj.x + obj.width &&
+                newY + 10 > obj.y && newY - 20 < obj.y + obj.height) {
               canMove = false;
               break;
             }
