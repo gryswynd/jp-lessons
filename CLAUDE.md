@@ -46,7 +46,9 @@ Detailed rules live in modular skill files under `skills/`. Load only what's nee
 - Agent 3: Read `skills/quality-gates.md` + `skills/term-tagging.md` + `skills/grammar-rules.md`
 - Agent 4: Read `skills/quality-gates.md` + `skills/grammar-rules.md`
 
-When spawning subagents, include in the prompt: *"Read the following skill files for your full responsibilities: [list paths]."*
+> **⚠️ SKILL FILE SIZE WARNING:** Skill files exceed the 10,000-token Read tool limit. Always use `offset` + `limit` parameters when reading them. Read in 200-line chunks (e.g. `offset: 1, limit: 200`, then `offset: 201, limit: 200`, etc.) until the full file is covered. Never attempt to read a skill file without pagination — it will fail with a token limit error.
+
+When spawning subagents, include in the prompt: *"Read the following skill files for your full responsibilities: [list paths]. Each skill file exceeds 10,000 tokens — read them in 200-line chunks using offset/limit parameters."*
 
 ## Validation Hooks
 
