@@ -8,6 +8,9 @@
     "りきぞ": { "id": "char_rikizo", "form": null },
     "けん": { "id": "char_ken", "form": null },
 
+    "いい": { "id": "v_ii", "form": null },
+    "いけない": { "id": "v_ikeru", "form": "plain_negative" },
+
     "は": { "id": "p_wa", "form": null },
     "が": { "id": "p_ga", "form": null },
     "ですが": { "id": "p_ga_but", "form": null },
@@ -24,6 +27,13 @@
 
     "です": { "id": "g_desu", "form": null },
     "でした": { "id": "g_desu", "form": null },
+
+    "フリーマーケット": { "id": "v_furi_maaketto", "form": null },
+    "おきゃくさん": { "id": "v_okyakusan", "form": null },
+    "ペン": { "id": "v_pen", "form": null },
+    "少し": { "id": "v_sukoshi", "form": null },
+    "いくつか": { "id": "v_ikutsu", "form": null },
+    "一つ": { "id": "v_hitotsu", "form": null },
 
     "日ようび": { "id": "v_nichiyoubi", "form": null },
     "朝": { "id": "v_asa", "form": null },
@@ -77,6 +87,8 @@
     "持ち出しました": { "id": "v_mochidasu", "form": "polite_mashita" },
     "売り出す": { "id": "v_uridasu", "form": null },
     "出ました": { "id": "v_deru", "form": "polite_mashita" },
+    "出しました": { "id": "v_dasu", "form": "polite_mashita" },
+    "ありました": { "id": "v_aru", "form": "polite_mashita" },
     "来ました": { "id": "v_kuru", "form": "polite_mashita" },
     "売る": { "id": "v_uru", "form": "plain_form" },
     "売りたい": { "id": "v_uru", "form": "plain_desire_tai" },
@@ -87,7 +99,6 @@
     "している": { "id": "v_iru", "form": "plain_form" },
     "います": { "id": "v_iru", "form": "polite_masu" },
     "いました": { "id": "v_iru", "form": "polite_mashita" },
-    "入れて": { "id": "v_ireru", "form": "te_form" },
     "なりました": { "id": "v_naru", "form": "polite_mashita" },
     "聞きました": { "id": "v_kiku", "form": "polite_mashita" },
     "買いました": { "id": "v_kau", "form": "polite_mashita" },
