@@ -898,6 +898,9 @@ window.GameModule = (function() {
         if (game.player.direction === 'right') checkX += interactDistance;
 
         for (let obj of game.interactiveObjects) {
+          // Skip disabled doors (e.g. front door after void scene)
+          if (obj.isDoor && game.doors[obj.name] && game.doors[obj.name].disabled) continue;
+
           // Calculate distance to nearest edge of object (not center)
           // This allows interaction with tall/wide objects like doors
           const nearestX = Math.max(obj.x, Math.min(checkX, obj.x + obj.width));
@@ -933,6 +936,25 @@ window.GameModule = (function() {
 
       function toggleDoor(doorObj) {
         if (game.doors[doorObj.name]) {
+          // Front door: special void conversation, then lock it
+          if (doorObj.name === 'Front_Door' && !game.doors[doorObj.name].disabled) {
+            game.doors[doorObj.name].disabled = true;
+            startConversation([
+              { speaker: 'りきぞ', jp: 'え…？', en: 'Huh…?' },
+              { speaker: 'りきぞ', jp: 'な…なにもない…！', en: 'Th-there\'s nothing there…!' },
+              { speaker: 'りきぞ', jp: 'なんですか、これ…？！', en: 'What is this…?!' },
+              { speaker: 'りきぞ', jp: '…ドアをしめよう。', en: '…Let\'s close the door.' }
+            ], {
+              background: '#000',
+              onEnd: function() {
+                game.doors[doorObj.name].open = false;
+              }
+            });
+            return;
+          }
+
+          if (game.doors[doorObj.name].disabled) return;
+
           game.doors[doorObj.name].open = !game.doors[doorObj.name].open;
           const status = game.doors[doorObj.name].open ? 'opened' : 'closed';
           showMessage(`${doorObj.name} ${status}.`);
@@ -979,12 +1001,19 @@ window.GameModule = (function() {
         portraitMap['りきぞ'] = game.images.meConvo;
       }
 
-      function startConversation(conversationData) {
+      function startConversation(conversationData, options) {
         game.inConversation = true;
         game.currentConversation = conversationData;
         game.conversationIndex = 0;
+        game.onConversationEnd = (options && options.onEnd) || null;
 
-        convoOverlay.style.backgroundImage = `url(${getDayAssetUrl(dayData.assets.convoBackground)})`;
+        if (options && options.background) {
+          convoOverlay.style.backgroundImage = 'none';
+          convoOverlay.style.backgroundColor = options.background;
+        } else {
+          convoOverlay.style.backgroundImage = `url(${getDayAssetUrl(dayData.assets.convoBackground)})`;
+          convoOverlay.style.backgroundColor = '';
+        }
         convoOverlay.style.display = 'flex';
 
         displayConversationLine();
@@ -1015,6 +1044,12 @@ window.GameModule = (function() {
         game.currentConversation = null;
         game.conversationIndex = 0;
         convoOverlay.style.display = 'none';
+        convoOverlay.style.backgroundColor = '';
+        if (game.onConversationEnd) {
+          const cb = game.onConversationEnd;
+          game.onConversationEnd = null;
+          cb();
+        }
       }
 
       // --- Player Movement ---
