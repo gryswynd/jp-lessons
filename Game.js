@@ -563,6 +563,10 @@ window.GameModule = (function() {
       // Door sprite
       imagesToLoad['door'] = getSharedAssetUrl('door.png');
 
+      // Void background and shocked portrait for front door scene
+      imagesToLoad['voidBackground'] = getDayAssetUrl('assets/backgrounds/convo-bg-void.png');
+      imagesToLoad['meConvoShocked'] = getDayAssetUrl('assets/characters/rikizo/rikizo-convo-shocked.png');
+
       let loadedImages = 0;
       const totalImages = Object.keys(imagesToLoad).length;
 
@@ -944,7 +948,8 @@ window.GameModule = (function() {
               { speaker: 'りきぞ', jp: 'な…なにもない…！', en: 'Th-there\'s nothing there…!' },
               { speaker: 'りきぞ', jp: 'なんですか、これ…？！', en: 'What is this…?!' }
             ], {
-              background: '#000',
+              backgroundImage: game.images.voidBackground,
+              portraitOverride: game.images.meConvoShocked,
               onEnd: function() {
                 game.doors[doorObj.name].open = false;
               }
@@ -1005,13 +1010,12 @@ window.GameModule = (function() {
         game.currentConversation = conversationData;
         game.conversationIndex = 0;
         game.onConversationEnd = (options && options.onEnd) || null;
+        game.conversationPortraitOverride = (options && options.portraitOverride) || null;
 
-        if (options && options.background) {
-          convoOverlay.style.backgroundImage = 'none';
-          convoOverlay.style.backgroundColor = options.background;
+        if (options && options.backgroundImage) {
+          convoOverlay.style.backgroundImage = `url(${options.backgroundImage.src})`;
         } else {
           convoOverlay.style.backgroundImage = `url(${getDayAssetUrl(dayData.assets.convoBackground)})`;
-          convoOverlay.style.backgroundColor = '';
         }
         convoOverlay.style.display = 'flex';
 
@@ -1029,7 +1033,7 @@ window.GameModule = (function() {
         const enHtml = line.en ? `<span class="jp-line-en">${line.en}</span>` : '';
         convoText.innerHTML = jpHtml + enHtml;
 
-        const portrait = portraitMap[line.speaker];
+        const portrait = game.conversationPortraitOverride || portraitMap[line.speaker];
         convoPortrait.src = portrait ? portrait.src : '';
       }
 
@@ -1042,8 +1046,8 @@ window.GameModule = (function() {
         game.inConversation = false;
         game.currentConversation = null;
         game.conversationIndex = 0;
+        game.conversationPortraitOverride = null;
         convoOverlay.style.display = 'none';
-        convoOverlay.style.backgroundColor = '';
         if (game.onConversationEnd) {
           const cb = game.onConversationEnd;
           game.onConversationEnd = null;
