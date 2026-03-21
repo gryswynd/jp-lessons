@@ -1,21 +1,34 @@
-# Rikizo Game — Godot Port (Phase 1)
+# Rikizo Game — Godot Port
 
 ## What this is
 
-A proof-of-concept port of Day 01 (House Adventure) from the browser canvas game to Godot 4. Same art, same data, same gameplay — but running in a real game engine.
+The native Godot 4 version of the Rikizo game day system. Day 01 (House Adventure) is fully ported from the browser canvas game, and future days will be built directly in Godot.
 
-## What works in Phase 1
+## What works
 
 - Rikizo walks around the house with 4-direction animated sprite
 - Pixel-based collision from `collision.png` (red = walls)
 - Camera follows the player with smooth scrolling
 - NPC interaction: walk up to Mom or Dad, press Space/Enter to talk
-- Full conversation overlay with portraits
+- Per-NPC conversation backgrounds (kitchen for Mom, living room for Dad)
+- Portrait overrides per conversation (shocked Rikizo, angry Dad)
+- Full conversation overlay with portraits and background images
 - Vocab term tagging in dialogue (tappable words in BBCode)
 - Interactive objects: beds, doors, kotatsu, laptop, etc.
-- Door open/close with collision toggling
+- Door open/close with collision toggling + push-out on close
 - "???" → name reveal on first inspection
 - All data loaded from the existing `day.json` format
+
+### Scripted events
+- **Front door void scene:** Opening the front door shows a void background with shocked Rikizo. Door locks after.
+- **Post-void parent conversations:** After the void scene, Mom and Dad each have a one-time conversation where Rikizo tries to tell them but they brush him off.
+- **Toilet scene:** Using the toilet with the bathroom door open triggers angry Dad yelling.
+
+### Tracking systems
+- **Paranoia:** Incremented by void scene (+2) and parent brush-offs (+1 each)
+- **Relationships:** Incremented by normal NPC conversations (+1)
+- **Annoyance:** Incremented by toilet scene (+1 to dad)
+- All trackers saved to `user://save_data.json`
 
 ## Quick start
 
@@ -37,7 +50,7 @@ This copies your existing PNGs and JSON data files into `godot/assets/` where Go
 
 - Launch Godot
 - Click **Import** → navigate to `godot/project.godot` → **Import & Edit**
-- Press **F5** (or the Play ▶ button)
+- Press **F5** (or the Play button)
 
 Rikizo should appear in the bedroom. Walk with arrow keys or WASD, interact with Space/Enter.
 
@@ -50,14 +63,15 @@ godot/
 ├── .gitignore             # Ignores .godot/ cache and copied assets/
 │
 ├── scripts/
-│   ├── GameManager.gd     # Autoload singleton — game state, data, term map
+│   ├── GameManager.gd     # Autoload singleton — state, data, trackers, save/load
 │   ├── Player.gd          # CharacterBody2D — movement, animation, interact signal
 │   ├── CollisionMap.gd    # Reads collision.png, generates StaticBody2D walls
-│   ├── NPC.gd             # Area2D — proximity detection, conversation trigger
+│   ├── NPC.gd             # Area2D — proximity detection, conversation data
 │   ├── InteractiveObject.gd  # Area2D — doors, furniture, message popups
-│   ├── DialogueOverlay.gd # CanvasLayer — speech bubble + portrait UI
+│   ├── DialogueOverlay.gd # CanvasLayer — speech bubble + portrait + background
 │   ├── TermProcessor.gd   # BBCode term tagging for RichTextLabel
-│   └── DayLoader.gd       # Main scene script — loads day.json, builds world
+│   └── DayLoader.gd       # Main scene script — loads day.json, builds world,
+│                          #   routes all interactions including scripted events
 │
 ├── scenes/
 │   ├── main.tscn          # Root scene (map, player, NPCs, objects, UI)
@@ -66,7 +80,8 @@ godot/
 │
 └── assets/                # Created by setup_assets.sh (gitignored)
     ├── day-data/          # day.json, map.png, collision.png, sprites/
-    ├── sprites/           # me_sheet.png (player spritesheet)
+    ├── backgrounds/       # Conversation backgrounds (kitchen, living, void)
+    ├── sprites/           # me_sheet.png, door.png
     └── data/              # glossary, particles, characters, rules JSONs
 ```
 
@@ -81,12 +96,15 @@ godot/
 | `game.doors` state | GameManager.doors dictionary |
 | `processGameText()` + surface index | TermProcessor.gd + BBCode `[url]` tags |
 | HTML conversation overlay | CanvasLayer with RichTextLabel + TextureRect |
-| D-pad touch controls | Not yet implemented (Phase 2) |
+| Per-NPC `convoBackground` | GameManager.convo_backgrounds + DialogueOverlay |
+| `portraitOverrides` map | DialogueOverlay.portrait_overrides per conversation |
+| `game.voidSeen` / `voidAsked` | GameManager.void_seen / void_asked |
+| localStorage | `user://save_data.json` via FileAccess |
 
-## What's next (Phase 2)
+## What's next
 
 - Touch controls (D-pad + interact button) for mobile
 - Term modal popup when tapping vocab words
-- Animated door open/close
-- Smoother camera with limits at map edges
-- Web export (.wasm) to run alongside existing curriculum app
+- Day 2+ content built natively in Godot
+- Tracker effects (paranoia thresholds, relationship branching)
+- iOS/Android export

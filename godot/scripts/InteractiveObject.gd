@@ -51,7 +51,9 @@ func setup(data: Dictionary) -> void:
 
 
 func interact() -> void:
-	## Called when the player interacts with this object.
+	## Called by DayLoader when the player interacts with this object.
+	## DayLoader handles all logic (doors, toilet scene, messages).
+	## This is kept for backwards compatibility but DayLoader routes directly.
 	GameManager.inspected[object_name] = true
 
 	if is_door:
@@ -102,6 +104,12 @@ func _on_body_exited(body: Node2D) -> void:
 func _update_label() -> void:
 	if not label:
 		return
+
+	# Hide label for disabled doors
+	if is_door and GameManager.is_door_disabled(object_name):
+		label.visible = false
+		return
+
 	label.visible = player_nearby and not GameManager.in_conversation
 	if player_nearby:
 		if is_door:

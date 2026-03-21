@@ -39,13 +39,6 @@ func setup(data: Dictionary, sprite_tex: Texture2D, portrait_tex: Texture2D) -> 
 	convo_portrait_texture = portrait_tex
 
 
-func interact() -> void:
-	## Called when the player interacts with this NPC.
-	if conversation.size() > 0:
-		GameManager.inspected[npc_name] = true
-		GameManager.start_conversation(conversation)
-
-
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_nearby = true
