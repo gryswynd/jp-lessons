@@ -506,6 +506,8 @@ window.GameModule = (function() {
       npcs: [],
       doors: {},
       inspected: new Set(),
+      voidSeen: false,
+      voidAsked: {},
       inConversation: false,
       currentConversation: null,
       conversationIndex: 0
@@ -847,8 +849,7 @@ window.GameModule = (function() {
             const distance = Math.sqrt(dx * dx + dy * dy);
 
             if (distance < 100) {
-              game.inspected.add(npc.name);
-              startConversation(npc.conversation, { backgroundImage: npc.convoBackground });
+              handleNpcInteraction(npc);
               e.preventDefault();
               return;
             }
@@ -944,13 +945,43 @@ window.GameModule = (function() {
         }
       }
 
+      function handleNpcInteraction(npc) {
+        game.inspected.add(npc.name);
+        var convo = npc.conversation;
+        var opts = { backgroundImage: npc.convoBackground };
+
+        if (game.voidSeen && !game.voidAsked[npc.name]) {
+          game.voidAsked[npc.name] = true;
+          if (npc.name === 'mom') {
+            convo = [
+              { speaker: 'りきぞ', jp: 'お母さん…げんかんの外に…なにもなかった…', en: 'Mom… outside the front door… there was nothing…' },
+              { speaker: 'mom', jp: 'なに？', en: 'What?' },
+              { speaker: 'りきぞ', jp: 'そとに…なにも…', en: 'Outside… nothing…' },
+              { speaker: 'mom', jp: 'りきぞ、いい先生になってね！', en: 'Rikizo, go be a good teacher!' },
+              { speaker: 'りきぞ', jp: '…はい。', en: '…OK.' }
+            ];
+            opts.portraitOverrides = { 'りきぞ': game.images['alt_meShocked'] };
+          } else if (npc.name === 'dad') {
+            convo = [
+              { speaker: 'りきぞ', jp: 'お父さん！外になにもない！', en: 'Dad! There\'s nothing outside!' },
+              { speaker: 'dad', jp: 'ん？', en: 'Hm?' },
+              { speaker: 'りきぞ', jp: 'げんかんをあけたら…なにもなかった…！', en: 'I opened the front door… and there was nothing…!' },
+              { speaker: 'dad', jp: 'りきぞ、先生のしごとがあるでしょう？', en: 'Rikizo, don\'t you have teaching to do?' },
+              { speaker: 'りきぞ', jp: '…はい。', en: '…OK.' }
+            ];
+            opts.portraitOverrides = { 'りきぞ': game.images['alt_meShocked'] };
+          }
+        }
+
+        startConversation(convo, opts);
+      }
+
       function handleInteraction() {
         const nearby = getNearbyInteractable();
         if (!nearby) return;
 
         if (nearby.type === 'npc') {
-          game.inspected.add(nearby.target.name);
-          startConversation(nearby.target.conversation, { backgroundImage: nearby.target.convoBackground });
+          handleNpcInteraction(nearby.target);
         } else if (nearby.type === 'object') {
           handleObjectInteraction(nearby.target);
         }
@@ -970,6 +1001,7 @@ window.GameModule = (function() {
               portraitOverrides: { 'りきぞ': game.images['alt_meShocked'] },
               onEnd: function() {
                 game.doors[doorObj.name].open = false;
+                game.voidSeen = true;
               }
             });
             return;
