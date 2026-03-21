@@ -201,7 +201,7 @@ Each conjugation form in `conjugation_rules.json` has an `introducedIn` field sp
 | N4.3 | `potential`, `polite_potential`, `potential_negative`, `plain_potential_negative`, `polite_potential_past`, `plain_potential_past` |
 | N4.10 | `tari_form`, `nagara_form` |
 | G25 (~N4.34) | `sugiru_form`, `polite_sugiru_form`, `sugiru_past`, `polite_sugiru_past` |
-| G22 (~N4.25) | `conditional_ba` |
+| G25 (~N4.34) | `conditional_ba` |
 | N4.25 | `conditional_tara` |
 | N4.31 | `passive`, `polite_passive`, `polite_passive_past`, `plain_passive_past`, `causative`, `polite_causative`, `polite_causative_past`, `plain_causative_past`, `causative_passive`, `polite_causative_passive` |
 
