@@ -24,6 +24,24 @@ Build the N3 level from the ground up: finalize the vocabulary roadmap, create a
 | Game days | 0 | No game structure |
 | Manifest entries | TBD | N3 lessons not yet in manifest |
 
+## Vocab Debt from N4 Stories (introduce early in N3)
+
+The following words were used as untagged story-context in `furima-no-hi` (N4.21+N4.22) because they had no glossary entries at time of writing. They are common, natural words that came up organically and should be taught **early in N3** (Phase 1 or early Phase 3):
+
+| Word | Reading | Meaning | Notes |
+|---|---|---|---|
+| ならべる | ならべる | to arrange; to line up | Intransitive: ならぶ. Both forms useful. |
+| 見つける | みつける | to find; to discover | Very common narrative verb. |
+| つける | つける | to attach; to put on | Also means "to turn on" (light, etc.) — multiple senses. |
+| しばらく | しばらく | for a while; a little while | Common time expression. |
+| やっぱり | やっぱり | as expected; after all; still | Casual register; formal is やはり. |
+
+Also flag for early N3 vocabulary:
+- `はこ` (box) — used as untagged kana in furima-no-hi because not in N5/N4 glossary; tokenizes incorrectly as `は`+`こ` particle split. Add to N3 early.
+- `として` (as; in the capacity of) — compound particle used in furima-no-hi, no p_* ID exists in particles.json. Add as particle or grammar point.
+
+---
+
 ## Phase 1: Vocabulary Roadmap (BLOCKING — everything depends on this)
 
 The N3 vocabulary roadmap determines which kanji and words go in which lesson, which determines the taught-kanji set for every piece of content.

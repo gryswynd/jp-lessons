@@ -55,6 +55,9 @@ All of the following must be TRUE for a QA pass:
 - [ ] (Stories) Every in-scope particle (p_* with introducedIn ≤ lesson scope) has an entry in terms.json
 - [ ] (Stories) g_desu (です) has an entry in terms.json if the story uses です
 - [ ] (Stories) terms.json keys exactly match the substrings as they appear in story.md
+- [ ] (Stories) **Tokenization conflict check:** For every untagged word in story.md, confirm it cannot be split incorrectly by the text processor. Specifically: any hiragana word that *starts with a character that is also a standalone particle key* (は, が, で, に, を, も, と, の, か, で, や, へ) will be misrendered — the processor will greedily match the particle, leaving the remainder as broken kana. Any such word MUST be either tagged in terms.json (if a glossary entry exists) or rewritten to avoid the conflict. Common problem cases: `はこ` (→ `は`+`こ`), `はい` (→ `は`+`い`), `ほかの` if `ほ` triggers conflict. Check every untagged hiragana word against this rule.
+- [ ] (Stories) **Grammar compound patterns — particle split check:** Grammar constructions that embed standalone particles must be tagged correctly to prevent wrong splits. Critical patterns: `～てはいけない` (contains `は`) — add `いけない` → v_ikeru plain_negative; `～てもいい` (contains `も`) — ensure `いい` → v_ii is tagged; `～ないといけない` (contains `と`) — check component tagging. If these components are missing from terms.json, the pattern silently breaks.
+- [ ] (Stories) **`いい` always tagged:** `いい` (v_ii, N5.1) must have an entry in terms.json for any story. Absence causes tokenization failures when preceded by は, も, or other particle keys.
 - [ ] (Register) Lessons N5.10+ have at least 1 casual conversation (see Register Requirements in `skills/grammar-rules.md`)
 - [ ] (Register) Lessons before N5.10 have zero casual conversations — 100% polite register
 - [ ] (Register) Casual conversations do not mix registers — no ます/です forms in casual dialogue lines, no plain forms in polite dialogue lines
@@ -400,3 +403,22 @@ These failures span multiple agents and are the most damaging because they may n
 11. **godan_euphonic map name referenced in conjugation_rules.json but absent from GODAN_MAPS in text-processor.js** — A form definition in `conjugation_rules.json` specifies `"type": "godan_euphonic"` with `"map": "tari_form"` (or any other map name). The data-layer checks pass: the form key exists, `introducedIn` is correct. But at runtime `GODAN_MAPS[rule.map]` returns `undefined`, the if-branch in the conjugation engine is skipped, and every godan verb tagged with that form silently renders as its dictionary form — no chip transformation, no error. Agent 1 must Grep `app/shared/text-processor.js` for every `map` value used by any form in scope and confirm the key exists in `GODAN_MAPS`. Agent 3 cannot detect this failure — it is invisible to any data-layer check and must be caught before content creation begins.
 
 12. **Compound vocab surface broken by readability spaces in jp text** — A compound entry like `v_atamagaii` (surface `"頭がいい"`) is tagged in `terms`, but the jp field writes `頭が いい` with a space between が and いい for readability. The text processor does exact substring matching; the compound never matches, no chip appears, no error is thrown. The **wrong** fix is to split the compound into constituent terms (`v_atama` + `p_ga` + `v_ii`) — that changes the semantic unit the student sees from "smart / intelligent" to "head / subject marker / good". The **correct** fix is to remove the space from the jp text so it matches the surface exactly (`頭がいい`). Rule: compound surfaces are authoritative; jp text must conform to them. Agent 3 must check every compound-surface term for contiguous match.
+
+13. **Particle-split tokenization corruption in stories** — The text processor uses greedy longest-match. Any hiragana word that is NOT tagged in `terms.json` but *starts with a character that matches a registered particle key* will be silently corrupted: the processor matches the particle, leaving the remaining kana as an untagged fragment. The result is a wrong chip followed by broken kana — students see nonsense. This fails silently; no error is thrown.
+
+   Examples from production: `はこ` (box) → `は`(topic particle) + `こ` (untagged); `はい` (yes) → `は`(topic particle) + `い` (untagged); `いい` (good, v_ii, N5.1) preceding another word causes the processor to match `は` then `いい` as broken text.
+
+   **Rule: every hiragana word in story.md that begins with a character that is also a registered particle key MUST be tagged in terms.json.** If it is not in the glossary, the word must be rewritten or replaced. Common particle-start characters to check: `は`, `が`, `を`, `に`, `で`, `も`, `と`, `の`, `か`, `へ`, `や`.
+
+   **Agent 2 (CB) responsibility:** Before finalising terms.json, scan every untagged kana word in story.md against the above character list. If it starts with any of these characters, it is a mandatory tag or rewrite.
+
+   **Agent 3 (QA) responsibility:** For every word in the Unregistered Word Report, check its first character against the particle key list. A word starting with `は`, `が`, `を`, `に`, `で`, `も`, `と`, `の`, `か`, `へ`, `や` that is NOT tagged is a **hard fail** (not an escalation).
+
+14. **Grammar pattern particle-split: `～てはいけない` and `～てもいい`** — These constructions embed standalone particles (`は` and `も`) mid-pattern. If `いけない` and `いい` are not tagged in terms.json, the processor matches `は`/`も` as particles and leaves `いけない`/`いい` as broken kana.
+
+   Required terms.json entries for stories using these patterns:
+   - `～てはいけない`: add `"いけない": { "id": "v_ikeru", "form": "plain_negative" }` — the `は` key covers the embedded particle
+   - `～てもいい`: add `"いい": { "id": "v_ii", "form": null }` — the `も` key covers the embedded particle
+   - `いい` (v_ii, N5.1) should be in terms.json for **every story** regardless of these patterns — it is too common and too likely to cause corruption when absent.
+
+   **Agent 3 check:** Search story.md for `てはいけない` and `てもいい`. If either appears, verify `いけない` and `いい` are in terms.json. Hard fail if missing.
