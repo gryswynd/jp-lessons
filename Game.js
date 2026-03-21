@@ -954,19 +954,19 @@ window.GameModule = (function() {
           game.voidAsked[npc.name] = true;
           if (npc.name === 'mom') {
             convo = [
-              { speaker: 'りきぞ', jp: 'お母さん…げんかんの外に…なにもなかった…', en: 'Mom… outside the front door… there was nothing…' },
+              { speaker: 'りきぞ', jp: 'お母さん…！', en: 'Mom…!' },
+              { speaker: 'りきぞ', jp: 'そとに…なにも…！', en: 'Outside… nothing…!' },
               { speaker: 'mom', jp: 'なに？', en: 'What?' },
-              { speaker: 'りきぞ', jp: 'そとに…なにも…', en: 'Outside… nothing…' },
-              { speaker: 'mom', jp: 'りきぞ、いい先生になってね！', en: 'Rikizo, go be a good teacher!' },
+              { speaker: 'mom', jp: 'りきぞはいい先生ですよ。', en: 'Rikizo, you\'re a good teacher.' },
               { speaker: 'りきぞ', jp: '…はい。', en: '…OK.' }
             ];
             opts.portraitOverrides = { 'りきぞ': game.images['alt_meShocked'] };
           } else if (npc.name === 'dad') {
             convo = [
-              { speaker: 'りきぞ', jp: 'お父さん！外になにもない！', en: 'Dad! There\'s nothing outside!' },
+              { speaker: 'りきぞ', jp: 'お父さん！', en: 'Dad!' },
+              { speaker: 'りきぞ', jp: 'そとに…なにもない…！', en: 'Outside… there\'s nothing…!' },
               { speaker: 'dad', jp: 'ん？', en: 'Hm?' },
-              { speaker: 'りきぞ', jp: 'げんかんをあけたら…なにもなかった…！', en: 'I opened the front door… and there was nothing…!' },
-              { speaker: 'dad', jp: 'りきぞ、先生のしごとがあるでしょう？', en: 'Rikizo, don\'t you have teaching to do?' },
+              { speaker: 'dad', jp: 'りきぞ、先生ですよ。', en: 'Rikizo, you\'re a teacher.' },
               { speaker: 'りきぞ', jp: '…はい。', en: '…OK.' }
             ];
             opts.portraitOverrides = { 'りきぞ': game.images['alt_meShocked'] };
