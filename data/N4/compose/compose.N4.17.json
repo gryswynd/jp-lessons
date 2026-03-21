@@ -101,6 +101,18 @@
         "v_umi", "v_jitensha", "v_ryokou", "v_noru", "v_miru",
         "v_norimawasu", "v_mawaru", "v_kaigai", "v_toukyou", "v_hokkaidou", "g_desu", "p_de"
       ]
+    },
+    {
+      "prompt": "Imagine greeting a local or a friend when you arrive at your destination. Use at least one conversation expression (なるほど、そうそう、じつは、まあ、etc.) to make the exchange feel natural. Write 2–3 lines.",
+      "targets": [
+        { "id": "v_naruhodo", "count": 1 }
+      ],
+      "model": "じつは、はじめての 京都です。なるほど、古い 都ですね。",
+      "vocabPool": [
+        "v_naruhodo", "v_hee", "v_souso", "v_jitsuwa", "v_tsumari", "v_nanka", "v_maa",
+        "v_kyouto", "v_toukyou", "v_hokkaidou", "v_tomodachi", "v_miyako", "v_furui",
+        "g_desu", "p_wa", "p_ne", "p_yo"
+      ]
     }
   ],
   "challengePrompts": [
