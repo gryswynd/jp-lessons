@@ -942,8 +942,7 @@ window.GameModule = (function() {
             startConversation([
               { speaker: 'りきぞ', jp: 'え…？', en: 'Huh…?' },
               { speaker: 'りきぞ', jp: 'な…なにもない…！', en: 'Th-there\'s nothing there…!' },
-              { speaker: 'りきぞ', jp: 'なんですか、これ…？！', en: 'What is this…?!' },
-              { speaker: 'りきぞ', jp: '…ドアをしめよう。', en: '…Let\'s close the door.' }
+              { speaker: 'りきぞ', jp: 'なんですか、これ…？！', en: 'What is this…?!' }
             ], {
               background: '#000',
               onEnd: function() {
