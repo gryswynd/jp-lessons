@@ -855,22 +855,16 @@ window.GameModule = (function() {
           }
         }
 
-        // Check if tapped on an interactive object
+        // Check if tapped on an interactive object — delegate to handleInteraction
         for (let obj of game.interactiveObjects) {
           if (worldX >= obj.x && worldX <= obj.x + obj.width &&
               worldY >= obj.y && worldY <= obj.y + obj.height) {
-            // Check if player is close enough
             const dx = game.player.x - obj.centerX;
             const dy = game.player.y - obj.centerY;
             const distance = Math.sqrt(dx * dx + dy * dy);
 
             if (distance < 100) {
-              game.inspected.add(obj.name);
-              if (obj.isDoor) {
-                toggleDoor(obj);
-              } else if (obj.message) {
-                showMessage(obj.message);
-              }
+              handleObjectInteraction(obj);
               e.preventDefault();
               return;
             }
@@ -931,29 +925,34 @@ window.GameModule = (function() {
         return null;
       }
 
+      function handleObjectInteraction(obj) {
+        game.inspected.add(obj.name);
+
+        if (obj.isDoor) {
+          toggleDoor(obj);
+        } else if (obj.name === 'Toilet' && game.doors['Bath_Door'] && game.doors['Bath_Door'].open) {
+          // Dad yells if you try to use the toilet with the door open
+          startConversation([
+            { speaker: 'dad', jp: 'おい！ドアをしめて！', en: 'Hey! Close the door!' },
+            { speaker: 'りきぞ', jp: 'す、すみません…！', en: 'S-sorry…!' }
+          ], {
+            backgroundImage: 'living',
+            portraitOverrides: { 'dad': game.images['alt_dadAngry'] }
+          });
+        } else if (obj.message) {
+          showMessage(obj.message);
+        }
+      }
+
       function handleInteraction() {
         const nearby = getNearbyInteractable();
         if (!nearby) return;
 
-        game.inspected.add(nearby.target.name);
-
         if (nearby.type === 'npc') {
+          game.inspected.add(nearby.target.name);
           startConversation(nearby.target.conversation, { backgroundImage: nearby.target.convoBackground });
         } else if (nearby.type === 'object') {
-          if (nearby.target.isDoor) {
-            toggleDoor(nearby.target);
-          } else if (nearby.target.name === 'Toilet' && game.doors['Bath_Door'] && game.doors['Bath_Door'].open) {
-            // Dad yells if you try to use the toilet with the door open
-            startConversation([
-              { speaker: 'dad', jp: 'おい！ドアをしめて！', en: 'Hey! Close the door!' },
-              { speaker: 'りきぞ', jp: 'す、すみません…！', en: 'S-sorry…!' }
-            ], {
-              backgroundImage: 'living',
-              portraitOverrides: { 'dad': game.images['alt_dadAngry'] }
-            });
-          } else if (nearby.target.message) {
-            showMessage(nearby.target.message);
-          }
+          handleObjectInteraction(nearby.target);
         }
       }
 
