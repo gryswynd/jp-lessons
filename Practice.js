@@ -197,6 +197,24 @@ window.PracticeModule = {
             @media (hover: hover) { .k-linkup-btn:hover { border-color: var(--primary); background: #fff8f8; } }
             .k-linkup-btn .icon { font-size: 1.3rem; }
             .k-linkup-btn .info { color: var(--text-sub); font-size: 0.8rem; font-weight: 600; }
+
+            /* Scramble */
+            .k-scr-prompt { font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 16px; text-align: center; line-height: 1.4; }
+            .k-scr-answer { min-height: 56px; border: 2px dashed #dfe4ea; border-radius: 14px; padding: 10px; display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; align-items: center; justify-content: center; transition: border-color 0.2s; }
+            .k-scr-answer.has-chips { border-color: var(--primary); border-style: solid; }
+            .k-scr-answer.correct { border-color: var(--success); background: rgba(46,213,115,0.06); }
+            .k-scr-answer.wrong { border-color: var(--error); background: rgba(255,71,87,0.06); }
+            .k-scr-pool { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 16px; }
+            .k-scr-chip { font-family: 'Noto Sans JP', sans-serif; font-size: 1.15rem; font-weight: 700; padding: 10px 16px; border-radius: 10px; border: 2px solid #dfe4ea; background: white; cursor: pointer; transition: all 0.15s; user-select: none; }
+            @media (hover: hover) { .k-scr-chip:hover { border-color: var(--primary); background: #fff5f5; } }
+            .k-scr-chip.placed { opacity: 0.25; pointer-events: none; }
+            .k-scr-chip.in-answer { border-color: var(--primary); background: #fff5f5; }
+            .k-scr-chip.correct-chip { border-color: var(--success); background: rgba(46,213,115,0.15); }
+            .k-scr-chip.wrong-chip { border-color: var(--error); background: rgba(255,71,87,0.15); }
+            .k-scr-explain { margin-top: 12px; padding: 12px; border-radius: 10px; background: #f8f9fa; font-size: 0.9rem; color: var(--text-sub); line-height: 1.5; display: none; }
+            .k-scr-explain.show { display: block; }
+            .k-scr-hint { color: #a4b0be; font-size: 0.8rem; text-align: center; margin-bottom: 8px; }
+            .k-scr-correct-line { margin-top: 8px; font-family: 'Noto Sans JP', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--success); text-align: center; }
         `;
         document.head.appendChild(style);
     }
@@ -273,10 +291,7 @@ window.PracticeModule = {
                 </div>
 
                 <div class="k-lbl" style="margin-top:2rem; color:#e74c3c;">SENTENCE PRACTICE</div>
-                <div class="k-construction-wrap">
-                    <button class="k-btn" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">🔀 Scramble Practice</button>
-                    <div class="k-construction-sticker"><span>🚧 Under Construction</span></div>
-                </div>
+                <button class="k-btn" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);" onclick="KanjiApp.start('scramble','scramble')">🔀 Scramble Practice</button>
                 <button class="k-btn" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);" onclick="KanjiApp.toggleLinkUpMenu()">🔗 Link Up</button>
                 <div id="k-linkup-submenu" class="k-linkup-menu k-hidden">
                     <div class="k-linkup-btn" onclick="KanjiApp.start('connections','connections')">
@@ -341,6 +356,19 @@ window.PracticeModule = {
                 </div>
             </div>
 
+            <div id="k-view-scr" class="k-hidden" style="width:100%">
+                <div style="display:flex; justify-content:space-between; width:100%; margin-bottom:10px; color:#a4b0be; font-weight:800; font-size:0.9rem;">
+                    <span id="k-scr-progress">1 / 5</span>
+                    <span>🏆 <span id="k-scr-best">0</span></span>
+                    <span style="color:#ffa502">🔥 <span id="k-scr-streak">0</span></span>
+                </div>
+                <div class="k-card" id="k-scr-stage" style="padding:1.5rem;"></div>
+                <div style="display:flex; gap:8px; width:100%; margin-top:10px;">
+                    <button class="k-btn k-btn-sec" style="flex:1" onclick="KanjiApp.scrSkip()">Skip →</button>
+                    <button class="k-btn k-btn-sec" onclick="KanjiApp.showMenu()">Exit</button>
+                </div>
+            </div>
+
             <div id="k-view-quiz" class="k-hidden" style="width:100%; display:flex; flex-direction:column; height:100%">
                 <div style="display:flex; justify-content:space-between; width:100%; margin-bottom:15px; font-weight:800; color:#a4b0be;">
                     <span>🏆 BEST: <span id="k-best">0</span></span>
@@ -383,7 +411,8 @@ window.PracticeModule = {
         vocab: window.JPShared.progress.getBestScore('vocab'),
         verb: window.JPShared.progress.getBestScore('verb'),
         flash: window.JPShared.progress.getBestScore('flash'),
-        connections: window.JPShared.progress.getBestScore('connections')
+        connections: window.JPShared.progress.getBestScore('connections'),
+        scramble: window.JPShared.progress.getBestScore('scramble')
     };
 
     // --- 3. HELPER FUNCTIONS ---
@@ -440,7 +469,7 @@ window.PracticeModule = {
             if (streak >= STREAK_TIERS[i].at) { tier = STREAK_TIERS[i]; break; }
         }
 
-        var targetView = document.getElementById(curMode === 'flash' ? 'k-view-flash' : curMode === 'connections' ? 'k-view-conn' : curMode === 'connections4' ? 'k-view-conn4' : 'k-view-quiz');
+        var targetView = document.getElementById(curMode === 'flash' ? 'k-view-flash' : curMode === 'connections' ? 'k-view-conn' : curMode === 'connections4' ? 'k-view-conn4' : curMode === 'scramble' ? 'k-view-scr' : 'k-view-quiz');
         if (!targetView) return;
         targetView.style.position = 'relative';
 
@@ -503,7 +532,7 @@ window.PracticeModule = {
     // --- 4. EXPOSED FUNCTIONS ---
     KanjiApp.showMenu = function() {
         kUpdateStats();
-        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4'].forEach(i => {
+        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4','k-view-scr'].forEach(i => {
             const el = document.getElementById(i);
             if(el) el.classList.add('k-hidden');
         });
@@ -562,12 +591,15 @@ window.PracticeModule = {
         } else if (type === 'connections4') {
             conn4Start();
             return;
+        } else if (type === 'scramble') {
+            scrStart();
+            return;
         }
 
         if(curSet.length === 0) return alert(mode === 'flag-review' ? "No active flagged items found!" : "Please select at least one lesson.");
         curSet.sort(() => Math.random() - 0.5);
 
-        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4'].forEach(i => {
+        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4','k-view-scr'].forEach(i => {
             const el = document.getElementById(i);
             if(el) el.classList.add('k-hidden');
         });
@@ -618,7 +650,7 @@ window.PracticeModule = {
         connPuzzles = available.sort(() => Math.random() - 0.5);
 
         // Switch views
-        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4'].forEach(i => {
+        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4','k-view-scr'].forEach(i => {
             const el = document.getElementById(i);
             if(el) el.classList.add('k-hidden');
         });
@@ -828,7 +860,7 @@ window.PracticeModule = {
 
         conn4Puzzles = available.sort(() => Math.random() - 0.5);
 
-        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4'].forEach(i => {
+        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4','k-view-scr'].forEach(i => {
             const el = document.getElementById(i);
             if(el) el.classList.add('k-hidden');
         });
@@ -1044,6 +1076,228 @@ window.PracticeModule = {
         conn4Streak = 0;
         setTxt('k-conn4-streak', 0);
         conn4RenderPuzzle();
+    };
+
+    // --- SCRAMBLE PRACTICE ---
+    let scrSets = [], scrSetIdx = 0, scrItemIdx = 0, scrStreak = 0, scrBest = 0, scrScore = 0, scrTotal = 0;
+    let scrDataCache = null;
+
+    async function scrStart() {
+        curMode = 'scramble'; curCategory = 'scramble';
+        scrStreak = 0; scrScore = 0; scrTotal = 0; scrSetIdx = 0; scrItemIdx = 0;
+        scrBest = bestScores.scramble || 0;
+
+        if (!scrDataCache) {
+            try {
+                const url = window.getAssetUrl(REPO_CONFIG, 'data/N5/scramble/scramble.N5.json') + '?t=' + Date.now();
+                const res = await fetch(url);
+                scrDataCache = await res.json();
+            } catch(e) {
+                alert('Could not load Scramble data.');
+                return;
+            }
+        }
+
+        const available = scrDataCache.sets.filter(s =>
+            s.requires.every(req => activeLessons.has(req))
+        );
+
+        if (available.length === 0) {
+            alert('Select more lessons to unlock Scramble sets! The first set unlocks after N5.1 and N5.2.');
+            return;
+        }
+
+        // Flatten all items from available sets, shuffle
+        const allItems = [];
+        available.forEach(s => {
+            s.items.forEach(item => allItems.push({ ...item, setTitle: s.title }));
+        });
+        scrSets = allItems.sort(() => Math.random() - 0.5);
+        scrTotal = scrSets.length;
+
+        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4','k-view-scr'].forEach(i => {
+            const el = document.getElementById(i);
+            if(el) el.classList.add('k-hidden');
+        });
+        const sv = document.getElementById('k-view-scr');
+        if(sv) sv.classList.remove('k-hidden');
+
+        setTxt('k-scr-best', scrBest);
+        setTxt('k-scr-streak', 0);
+        scrItemIdx = 0;
+        scrRenderItem();
+    }
+
+    function scrRenderItem() {
+        if (scrItemIdx >= scrSets.length) {
+            scrShowSummary();
+            return;
+        }
+
+        const item = scrSets[scrItemIdx];
+        const allChips = item.segments.concat(item.distractors).sort(() => Math.random() - 0.5);
+        const answerSlots = [];
+        let answered = false;
+        let firstAttempt = true;
+
+        setTxt('k-scr-progress', `${scrItemIdx + 1} / ${scrTotal}`);
+
+        const stage = document.getElementById('k-scr-stage');
+        stage.innerHTML = `
+            <div class="k-scr-prompt">${item.q}</div>
+            <div class="k-scr-hint">Tap words to build the sentence</div>
+            <div class="k-scr-answer" id="k-scr-answer"></div>
+            <div class="k-scr-pool" id="k-scr-pool">
+                ${allChips.map((c, i) => `<div class="k-scr-chip" data-idx="${i}" data-text="${c}">${c}</div>`).join('')}
+            </div>
+            <div style="display:flex; gap:8px; justify-content:center;">
+                <button class="k-btn" id="k-scr-check" disabled style="opacity:0.4; max-width:200px;">Check</button>
+                <button class="k-btn k-btn-sec" id="k-scr-clear" style="max-width:120px;">Clear</button>
+            </div>
+            <div class="k-scr-explain" id="k-scr-explain"></div>
+        `;
+
+        const pool = document.getElementById('k-scr-pool');
+        const answerBox = document.getElementById('k-scr-answer');
+
+        // Tap chip in pool → move to answer
+        pool.querySelectorAll('.k-scr-chip').forEach(chip => {
+            chip.onclick = () => {
+                if (answered || chip.classList.contains('placed')) return;
+                chip.classList.add('placed');
+                const ansChip = document.createElement('div');
+                ansChip.className = 'k-scr-chip in-answer';
+                ansChip.textContent = chip.dataset.text;
+                ansChip.dataset.poolIdx = chip.dataset.idx;
+                ansChip.onclick = () => {
+                    if (answered) return;
+                    chip.classList.remove('placed');
+                    ansChip.remove();
+                    answerSlots.splice(answerSlots.indexOf(chip.dataset.text), 1);
+                    scrUpdateCheck();
+                };
+                answerBox.appendChild(ansChip);
+                answerSlots.push(chip.dataset.text);
+                scrUpdateCheck();
+            };
+        });
+
+        function scrUpdateCheck() {
+            const needed = item.segments.length;
+            const btn = document.getElementById('k-scr-check');
+            const hasEnough = answerSlots.length === needed;
+            if (btn) { btn.disabled = !hasEnough; btn.style.opacity = hasEnough ? '1' : '0.4'; }
+            const ab = document.getElementById('k-scr-answer');
+            if (ab) ab.classList.toggle('has-chips', answerSlots.length > 0);
+        }
+
+        // Clear button
+        document.getElementById('k-scr-clear').onclick = () => {
+            if (answered) return;
+            answerSlots.length = 0;
+            answerBox.querySelectorAll('.k-scr-chip').forEach(c => c.remove());
+            pool.querySelectorAll('.k-scr-chip').forEach(c => c.classList.remove('placed'));
+            scrUpdateCheck();
+        };
+
+        // Check button
+        document.getElementById('k-scr-check').onclick = () => {
+            if (answered) return;
+
+            // Check if answer matches segments or any alt
+            const userAnswer = answerSlots.join('');
+            const correctAnswer = item.segments.join('');
+            const altAnswers = (item.alts || []).map(a => a.join(''));
+            const isCorrect = userAnswer === correctAnswer || altAnswers.includes(userAnswer);
+
+            answered = true;
+            const ab = document.getElementById('k-scr-answer');
+
+            if (isCorrect) {
+                ab.classList.add('correct');
+                ab.querySelectorAll('.k-scr-chip').forEach(c => c.classList.add('correct-chip'));
+                scrScore++;
+                if (firstAttempt) scrScore++; // bonus point
+                scrStreak++;
+                setTxt('k-scr-streak', scrStreak);
+                if (scrStreak > scrBest) {
+                    scrBest = scrStreak;
+                    bestScores.scramble = scrBest;
+                    window.JPShared.progress.setBestScore('scramble', scrBest);
+                    setTxt('k-scr-best', scrBest);
+                }
+                if (scrStreak >= 5 && scrStreak % 5 === 0) {
+                    const targetView = document.getElementById('k-view-scr');
+                    if (targetView) {
+                        targetView.style.position = 'relative';
+                        const savedMode = curMode;
+                        curMode = 'scramble';
+                        launchHanabi(scrStreak);
+                        curMode = savedMode;
+                    }
+                }
+            } else {
+                ab.classList.add('wrong');
+                ab.querySelectorAll('.k-scr-chip').forEach(c => c.classList.add('wrong-chip'));
+                scrStreak = 0;
+                setTxt('k-scr-streak', 0);
+
+                // Show correct answer
+                const correctLine = document.createElement('div');
+                correctLine.className = 'k-scr-correct-line';
+                correctLine.textContent = item.segments.join('');
+                ab.parentNode.insertBefore(correctLine, ab.nextSibling);
+            }
+
+            // Show explanation
+            const explainEl = document.getElementById('k-scr-explain');
+            if (explainEl) {
+                explainEl.innerHTML = item.explanation;
+                explainEl.classList.add('show');
+            }
+
+            // Replace check button with next
+            const checkBtn = document.getElementById('k-scr-check');
+            if (checkBtn) {
+                checkBtn.textContent = 'Next →';
+                checkBtn.disabled = false;
+                checkBtn.style.opacity = '1';
+                checkBtn.onclick = () => {
+                    scrItemIdx++;
+                    scrRenderItem();
+                };
+            }
+            const clearBtn = document.getElementById('k-scr-clear');
+            if (clearBtn) clearBtn.style.display = 'none';
+        };
+    }
+
+    function scrShowSummary() {
+        const stage = document.getElementById('k-scr-stage');
+        const maxPossible = scrTotal * 2;
+        const pct = maxPossible > 0 ? Math.round(scrScore / maxPossible * 100) : 0;
+        stage.innerHTML = `
+            <div style="text-align:center; padding: 1rem;">
+                <div style="font-size:2.5rem; margin-bottom:10px;">🔀</div>
+                <div style="font-size:1.4rem; font-weight:900; color:var(--primary); margin-bottom:8px;">Scramble Complete!</div>
+                <div style="font-size:3rem; font-weight:900; color:var(--text-main); margin-bottom:5px;">${scrScore} / ${maxPossible}</div>
+                <div style="color:var(--text-sub); font-weight:600; margin-bottom:15px;">${pct}% · ${scrTotal} sentences</div>
+                <div style="display:flex; justify-content:center; gap:20px; margin-bottom:20px;">
+                    <div><div style="font-size:1.5rem; font-weight:900; color:#ffa502;">🔥 ${scrStreak}</div><div class="k-lbl">Final Streak</div></div>
+                    <div><div style="font-size:1.5rem; font-weight:900; color:var(--primary);">🏆 ${scrBest}</div><div class="k-lbl">Best Streak</div></div>
+                </div>
+                <button class="k-btn" onclick="scrStart()" style="max-width:250px; margin:5px auto;">Play Again</button>
+                <button class="k-btn k-btn-sec" onclick="KanjiApp.showMenu()" style="max-width:250px; margin:5px auto;">Back to Menu</button>
+            </div>
+        `;
+        setTxt('k-scr-progress', 'Complete!');
+    }
+
+    KanjiApp.scrSkip = function() {
+        scrItemIdx++;
+        scrStreak = 0;
+        setTxt('k-scr-streak', 0);
+        scrRenderItem();
     };
 
     KanjiApp.flipCard = function() {
