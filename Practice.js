@@ -119,6 +119,34 @@ window.PracticeModule = {
             .k-construction-sticker span {
                 background: #1a1a1a; padding: 3px 10px; border-radius: 4px; display: inline-block;
             }
+
+            /* CONNECTIONS (Link Up) */
+            .k-conn-bank { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 20px; }
+            .k-conn-word {
+                padding: 10px 18px; border-radius: 12px; border: 2px solid #dfe4ea;
+                background: white; cursor: pointer; font-size: 1.15rem; font-weight: 700;
+                font-family: 'Noto Sans JP', sans-serif; transition: all 0.15s; user-select: none;
+            }
+            @media (hover: hover) { .k-conn-word:hover { border-color: var(--primary); } }
+            .k-conn-word.selected { border-color: var(--primary); background: #fff0f0; box-shadow: 0 0 8px rgba(220,38,38,0.15); }
+            .k-conn-word.placed { opacity: 0.3; pointer-events: none; }
+            .k-conn-slots { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+            .k-conn-group {
+                background: white; border-radius: 12px; border: 2px solid #dfe4ea;
+                padding: 10px; text-align: center; min-height: 120px; cursor: pointer; transition: all 0.2s;
+            }
+            @media (hover: hover) { .k-conn-group:hover { border-color: #b2bec3; } }
+            .k-conn-group-title { font-weight: 800; font-size: 0.9rem; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 2px solid #eee; }
+            .k-conn-group.correct { border-color: var(--success); background: #f0fff4; }
+            .k-conn-group.wrong { border-color: var(--error); background: #fff5f5; }
+            .k-conn-placed-word {
+                display: inline-block; padding: 4px 10px; border-radius: 8px; background: #f8f9fa;
+                margin: 3px; font-size: 0.95rem; font-weight: 600; cursor: pointer;
+                font-family: 'Noto Sans JP', sans-serif; border: 1px solid #eee; transition: all 0.15s;
+            }
+            @media (hover: hover) { .k-conn-placed-word:hover { background: #ffe0e0; border-color: var(--error); } }
+            .k-conn-info { text-align: center; font-weight: 700; color: var(--text-sub); margin-bottom: 12px; }
+            @media (max-width: 500px) { .k-conn-slots { grid-template-columns: 1fr; } }
         `;
         document.head.appendChild(style);
     }
@@ -199,10 +227,7 @@ window.PracticeModule = {
                     <button class="k-btn" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">🔀 Scramble Practice</button>
                     <div class="k-construction-sticker"><span>🚧 Under Construction</span></div>
                 </div>
-                <div class="k-construction-wrap">
-                    <button class="k-btn" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">🔗 Link Up</button>
-                    <div class="k-construction-sticker"><span>🚧 Under Construction</span></div>
-                </div>
+                <button class="k-btn" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);" onclick="KanjiApp.start('connections','connections')">🔗 Link Up</button>
             </div>
 
             <div id="k-view-flash" class="k-hidden" style="width:100%">
@@ -228,6 +253,19 @@ window.PracticeModule = {
                    </div>
 
                 <button class="k-btn k-btn-sec" onclick="KanjiApp.showMenu()" style="margin-top:10px; border:none; color:#a4b0be; font-size:0.9rem">Return to Menu</button>
+            </div>
+
+            <div id="k-view-conn" class="k-hidden" style="width:100%">
+                <div style="display:flex; justify-content:space-between; width:100%; margin-bottom:10px; color:#a4b0be; font-weight:800; font-size:0.9rem;">
+                    <span id="k-conn-progress">Puzzle 1 / 1</span>
+                    <span>🏆 <span id="k-conn-best">0</span></span>
+                    <span style="color:#ffa502">🔥 <span id="k-conn-streak">0</span></span>
+                </div>
+                <div class="k-card" id="k-conn-stage" style="padding:1.5rem;"></div>
+                <div style="display:flex; gap:8px; width:100%; margin-top:10px;">
+                    <button class="k-btn k-btn-sec" style="flex:1" onclick="KanjiApp.connSkip()">Skip →</button>
+                    <button class="k-btn k-btn-sec" onclick="KanjiApp.showMenu()">Exit</button>
+                </div>
             </div>
 
             <div id="k-view-quiz" class="k-hidden" style="width:100%; display:flex; flex-direction:column; height:100%">
@@ -271,7 +309,8 @@ window.PracticeModule = {
         reading: window.JPShared.progress.getBestScore('reading'),
         vocab: window.JPShared.progress.getBestScore('vocab'),
         verb: window.JPShared.progress.getBestScore('verb'),
-        flash: window.JPShared.progress.getBestScore('flash')
+        flash: window.JPShared.progress.getBestScore('flash'),
+        connections: window.JPShared.progress.getBestScore('connections')
     };
 
     // --- 3. HELPER FUNCTIONS ---
@@ -328,7 +367,7 @@ window.PracticeModule = {
             if (streak >= STREAK_TIERS[i].at) { tier = STREAK_TIERS[i]; break; }
         }
 
-        var targetView = document.getElementById(curMode === 'flash' ? 'k-view-flash' : 'k-view-quiz');
+        var targetView = document.getElementById(curMode === 'flash' ? 'k-view-flash' : curMode === 'connections' ? 'k-view-conn' : 'k-view-quiz');
         if (!targetView) return;
         targetView.style.position = 'relative';
 
@@ -391,7 +430,7 @@ window.PracticeModule = {
     // --- 4. EXPOSED FUNCTIONS ---
     KanjiApp.showMenu = function() {
         kUpdateStats();
-        ['k-view-menu','k-view-flash','k-view-quiz'].forEach(i => {
+        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn'].forEach(i => {
             const el = document.getElementById(i);
             if(el) el.classList.add('k-hidden');
         });
@@ -444,12 +483,16 @@ window.PracticeModule = {
                     if(item) { curSet.push({...item, _type:'verb'}); return; }
                 }
             });
+        } else if (type === 'connections') {
+            // Connections mode is handled separately — launch async
+            connStart();
+            return;
         }
 
         if(curSet.length === 0) return alert(mode === 'flag-review' ? "No active flagged items found!" : "Please select at least one lesson.");
         curSet.sort(() => Math.random() - 0.5);
 
-        ['k-view-menu','k-view-flash','k-view-quiz'].forEach(i => {
+        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn'].forEach(i => {
             const el = document.getElementById(i);
             if(el) el.classList.add('k-hidden');
         });
@@ -463,6 +506,213 @@ window.PracticeModule = {
             const qv = document.getElementById('k-view-quiz');
             if(qv) qv.classList.remove('k-hidden');
         }
+    };
+
+    // --- CONNECTIONS (LINK UP) ---
+    let connPuzzles = [], connIdx = 0, connScore = 0, connTotal = 0, connStreak = 0, connBest = 0;
+    let connDataCache = null;
+
+    async function connStart() {
+        curMode = 'connections'; curCategory = 'connections';
+        connStreak = 0; connScore = 0; connTotal = 0; connIdx = 0;
+        connBest = bestScores.connections || 0;
+
+        // Load puzzle data (cache after first fetch)
+        if (!connDataCache) {
+            try {
+                const url = window.getAssetUrl(REPO_CONFIG, 'data/N5/connections/connections.N5.json') + '?t=' + Date.now();
+                const res = await fetch(url);
+                connDataCache = await res.json();
+            } catch(e) {
+                alert('Could not load Link Up puzzles.');
+                return;
+            }
+        }
+
+        // Filter puzzles by active lessons
+        const available = connDataCache.puzzles.filter(p =>
+            p.requires.every(req => activeLessons.has(req))
+        );
+
+        if (available.length === 0) {
+            alert('Select more lessons to unlock Link Up puzzles! The first puzzles unlock around N5.1–N5.4.');
+            return;
+        }
+
+        // Shuffle puzzle order
+        connPuzzles = available.sort(() => Math.random() - 0.5);
+
+        // Switch views
+        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn'].forEach(i => {
+            const el = document.getElementById(i);
+            if(el) el.classList.add('k-hidden');
+        });
+        const cv = document.getElementById('k-view-conn');
+        if(cv) cv.classList.remove('k-hidden');
+
+        setTxt('k-conn-best', connBest);
+        setTxt('k-conn-streak', 0);
+        connRenderPuzzle();
+    }
+
+    function connRenderPuzzle() {
+        if (connIdx >= connPuzzles.length) {
+            connShowSummary();
+            return;
+        }
+
+        const puzzle = connPuzzles[connIdx];
+        const allWords = puzzle.groups.flatMap(g => g.words).sort(() => Math.random() - 0.5);
+        const placements = {}; // word -> groupIdx
+        let selected = null;
+
+        connTotal += allWords.length;
+        setTxt('k-conn-progress', `Puzzle ${connIdx + 1} / ${connPuzzles.length}`);
+
+        const stage = document.getElementById('k-conn-stage');
+        stage.innerHTML = `
+            <div class="k-conn-info">Sort these words into the correct categories!</div>
+            <div class="k-conn-bank" id="k-conn-bank">
+                ${allWords.map(w => `<div class="k-conn-word" data-word="${w}">${w}</div>`).join('')}
+            </div>
+            <div class="k-conn-slots" id="k-conn-slots">
+                ${puzzle.groups.map((g, i) => `
+                    <div class="k-conn-group" data-group="${i}" id="k-conng-${i}">
+                        <div class="k-conn-group-title">${g.label}</div>
+                        <div id="k-connplaced-${i}"></div>
+                    </div>
+                `).join('')}
+            </div>
+            <div style="text-align:center;">
+                <button class="k-btn" id="k-conn-check" disabled style="opacity:0.4; max-width:280px;">Check Answers</button>
+            </div>
+        `;
+
+        // Word selection
+        stage.querySelectorAll('.k-conn-word').forEach(word => {
+            word.onclick = () => {
+                if (word.classList.contains('placed')) return;
+                stage.querySelectorAll('.k-conn-word.selected').forEach(w => w.classList.remove('selected'));
+                word.classList.add('selected');
+                selected = word.dataset.word;
+            };
+        });
+
+        // Group clicking to place
+        stage.querySelectorAll('.k-conn-group').forEach(group => {
+            group.onclick = () => {
+                if (!selected) return;
+                const gIdx = parseInt(group.dataset.group);
+                placements[selected] = gIdx;
+
+                const placed = document.getElementById('k-connplaced-' + gIdx);
+                const chip = document.createElement('span');
+                chip.className = 'k-conn-placed-word';
+                chip.textContent = selected;
+                chip.dataset.word = selected;
+                chip.onclick = (e) => {
+                    e.stopPropagation();
+                    delete placements[chip.dataset.word];
+                    chip.remove();
+                    stage.querySelectorAll('.k-conn-word').forEach(w => {
+                        if (w.dataset.word === chip.dataset.word) w.classList.remove('placed');
+                    });
+                    connUpdateCheck();
+                };
+                placed.appendChild(chip);
+
+                stage.querySelectorAll('.k-conn-word').forEach(w => {
+                    if (w.dataset.word === selected) {
+                        w.classList.remove('selected');
+                        w.classList.add('placed');
+                    }
+                });
+                selected = null;
+                connUpdateCheck();
+            };
+        });
+
+        function connUpdateCheck() {
+            const allPlaced = Object.keys(placements).length === allWords.length;
+            const btn = document.getElementById('k-conn-check');
+            if (btn) { btn.disabled = !allPlaced; btn.style.opacity = allPlaced ? '1' : '0.4'; }
+        }
+
+        document.getElementById('k-conn-check').onclick = () => {
+            let roundScore = 0;
+            let allCorrect = true;
+            puzzle.groups.forEach((g, gIdx) => {
+                const groupCorrect = g.words.every(w => placements[w] === gIdx);
+                g.words.forEach(w => { if (placements[w] === gIdx) roundScore++; });
+                const groupEl = document.getElementById('k-conng-' + gIdx);
+                if (groupEl) groupEl.classList.add(groupCorrect ? 'correct' : 'wrong');
+                if (!groupCorrect) allCorrect = false;
+            });
+            connScore += roundScore;
+
+            // Streak: perfect round = +1, any mistake = reset
+            if (allCorrect) {
+                connStreak++;
+                setTxt('k-conn-streak', connStreak);
+                if (connStreak > connBest) {
+                    connBest = connStreak;
+                    bestScores.connections = connBest;
+                    window.JPShared.progress.saveBestScore('connections', connBest);
+                    setTxt('k-conn-best', connBest);
+                }
+                // Fire hanabi at milestones
+                if (connStreak >= 5 && connStreak % 5 === 0) {
+                    const targetView = document.getElementById('k-view-conn');
+                    if (targetView) {
+                        targetView.style.position = 'relative';
+                        // Reuse launchHanabi by temporarily adjusting curMode
+                        const savedMode = curMode;
+                        curMode = 'connections';
+                        launchHanabi(connStreak);
+                        curMode = savedMode;
+                    }
+                }
+            } else {
+                connStreak = 0;
+                setTxt('k-conn-streak', 0);
+            }
+
+            // Disable interaction
+            stage.querySelectorAll('.k-conn-word').forEach(w => w.style.pointerEvents = 'none');
+            stage.querySelectorAll('.k-conn-group').forEach(g => g.style.cursor = 'default');
+            const checkBtn = document.getElementById('k-conn-check');
+            if (checkBtn) checkBtn.style.display = 'none';
+
+            connIdx++;
+            setTimeout(connRenderPuzzle, 1800);
+        };
+    }
+
+    function connShowSummary() {
+        const stage = document.getElementById('k-conn-stage');
+        const pct = connTotal > 0 ? Math.round(connScore / connTotal * 100) : 0;
+        stage.innerHTML = `
+            <div style="text-align:center; padding: 1rem;">
+                <div style="font-size:2.5rem; margin-bottom:10px;">🔗</div>
+                <div style="font-size:1.4rem; font-weight:900; color:var(--primary); margin-bottom:8px;">Link Up Complete!</div>
+                <div style="font-size:3rem; font-weight:900; color:var(--text-main); margin-bottom:5px;">${connScore} / ${connTotal}</div>
+                <div style="color:var(--text-sub); font-weight:600; margin-bottom:15px;">${pct}% correct</div>
+                <div style="display:flex; justify-content:center; gap:20px; margin-bottom:20px;">
+                    <div><div style="font-size:1.5rem; font-weight:900; color:#ffa502;">🔥 ${connStreak}</div><div class="k-lbl">Final Streak</div></div>
+                    <div><div style="font-size:1.5rem; font-weight:900; color:var(--primary);">🏆 ${connBest}</div><div class="k-lbl">Best Streak</div></div>
+                </div>
+                <button class="k-btn" onclick="connStart()" style="max-width:250px; margin:5px auto;">Play Again</button>
+                <button class="k-btn k-btn-sec" onclick="KanjiApp.showMenu()" style="max-width:250px; margin:5px auto;">Back to Menu</button>
+            </div>
+        `;
+        setTxt('k-conn-progress', 'Complete!');
+    }
+
+    KanjiApp.connSkip = function() {
+        connIdx++;
+        connStreak = 0;
+        setTxt('k-conn-streak', 0);
+        connRenderPuzzle();
     };
 
     KanjiApp.flipCard = function() {
