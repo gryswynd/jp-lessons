@@ -8,7 +8,11 @@
   "assets": {
     "map": "map.png",
     "collision": "collision.png",
-    "convoBackground": "assets/backgrounds/convo-bg-living.png"
+    "convoBackgrounds": {
+      "kitchen": "assets/backgrounds/convo-bg-kitchen.png",
+      "living":  "assets/backgrounds/convo-bg-living.png",
+      "void":    "assets/backgrounds/convo-bg-void.png"
+    }
   },
   "playerStart": { "x": 325, "y": 260 },
   "objects": [
@@ -31,6 +35,7 @@
       "y": 330,
       "sprite": "assets/characters/sakura/sakura_sprite.png",
       "convoPortrait": "assets/characters/sakura/sakura_convo.png",
+      "convoBackground": "kitchen",
       "conversation": [
         { "speaker": "mom",     "jp": "おはよう、りきぞ！",               "en": "Good morning, Rikizo!",                       "terms": ["char_rikizo"] },
         { "speaker": "りきぞ", "jp": "おはよう、お母さん。",               "en": "Good morning, Mom.",                          "terms": ["v_okaasan"] },
@@ -46,6 +51,7 @@
       "y": 690,
       "sprite": "assets/characters/taro/taro_sprite.png",
       "convoPortrait": "assets/characters/taro/taro_convo.png",
+      "convoBackground": "living",
       "conversation": [
         { "speaker": "dad",     "jp": "よ、りきぞ！先生ですか？",                   "en": "Hey, Rikizo! Are you a teacher?",              "terms": ["char_rikizo", "v_sensei", "g_desu", "p_ka"] },
         { "speaker": "りきぞ", "jp": "はい！わたしは先生です。",                     "en": "Yes! I am a teacher.",                         "terms": ["p_hai", "v_watashi", "p_wa", "v_sensei", "g_desu"] },
@@ -55,5 +61,9 @@
       ]
     }
   ],
-  "meConvoPortrait": "assets/characters/rikizo/rikizo_convo.png"
+  "meConvoPortrait": "assets/characters/rikizo/rikizo_convo.png",
+  "altPortraits": {
+    "meShocked": "assets/characters/rikizo/rikizo-convo-shocked.png",
+    "dadAngry":  "assets/characters/taro/taro-convo-angry.png"
+  }
 }

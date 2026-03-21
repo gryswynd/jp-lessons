@@ -545,9 +545,15 @@ window.GameModule = (function() {
       const imagesToLoad = {
         map:            getDayAssetUrl(assets.map),
         collision:      getDayAssetUrl(assets.collision),
-        convoBackground: getDayAssetUrl(assets.convoBackground),
         playerSheet:    getSharedAssetUrl(dayData._playerSprite)
       };
+
+      // Load all conversation backgrounds from the convoBackgrounds map
+      if (assets.convoBackgrounds) {
+        Object.entries(assets.convoBackgrounds).forEach(([key, path]) => {
+          imagesToLoad['convoBg_' + key] = getDayAssetUrl(path);
+        });
+      }
 
       // Add per-NPC sprites and conversation portraits
       dayData.npcs.forEach(npc => {
@@ -560,12 +566,15 @@ window.GameModule = (function() {
         imagesToLoad['meConvo'] = getDayAssetUrl(dayData.meConvoPortrait);
       }
 
+      // Load alternate portraits (shocked, angry, etc.)
+      if (dayData.altPortraits) {
+        Object.entries(dayData.altPortraits).forEach(([key, path]) => {
+          imagesToLoad['alt_' + key] = getDayAssetUrl(path);
+        });
+      }
+
       // Door sprite
       imagesToLoad['door'] = getSharedAssetUrl('door.png');
-
-      // Void background and shocked portrait for front door scene
-      imagesToLoad['voidBackground'] = getDayAssetUrl('assets/backgrounds/convo-bg-void.png');
-      imagesToLoad['meConvoShocked'] = getDayAssetUrl('assets/characters/rikizo/rikizo-convo-shocked.png');
 
       let loadedImages = 0;
       const totalImages = Object.keys(imagesToLoad).length;
@@ -726,6 +735,7 @@ window.GameModule = (function() {
           sprite: spriteImg,
           conversation: npc.conversation,
           convoPortrait: game.images['convo_' + npc.name],
+          convoBackground: npc.convoBackground ? game.images['convoBg_' + npc.convoBackground] : null,
           width: width,
           height: height
         };
@@ -838,7 +848,7 @@ window.GameModule = (function() {
 
             if (distance < 100) {
               game.inspected.add(npc.name);
-              startConversation(npc.conversation);
+              startConversation(npc.conversation, { backgroundImage: npc.convoBackground });
               e.preventDefault();
               return;
             }
@@ -928,10 +938,19 @@ window.GameModule = (function() {
         game.inspected.add(nearby.target.name);
 
         if (nearby.type === 'npc') {
-          startConversation(nearby.target.conversation);
+          startConversation(nearby.target.conversation, { backgroundImage: nearby.target.convoBackground });
         } else if (nearby.type === 'object') {
           if (nearby.target.isDoor) {
             toggleDoor(nearby.target);
+          } else if (nearby.target.name === 'Toilet' && game.doors['Bath_Door'] && game.doors['Bath_Door'].open) {
+            // Dad yells if you try to use the toilet with the door open
+            startConversation([
+              { speaker: 'dad', jp: 'おい！ドアをしめて！', en: 'Hey! Close the door!' },
+              { speaker: 'りきぞ', jp: 'す、すみません…！', en: 'S-sorry…!' }
+            ], {
+              backgroundImage: 'living',
+              portraitOverrides: { 'dad': game.images['alt_dadAngry'] }
+            });
           } else if (nearby.target.message) {
             showMessage(nearby.target.message);
           }
@@ -948,8 +967,8 @@ window.GameModule = (function() {
               { speaker: 'りきぞ', jp: 'な…なにもない…！', en: 'Th-there\'s nothing there…!' },
               { speaker: 'りきぞ', jp: 'なんですか、これ…？！', en: 'What is this…?!' }
             ], {
-              backgroundImage: game.images.voidBackground,
-              portraitOverride: game.images.meConvoShocked,
+              backgroundImage: 'void',
+              portraitOverrides: { 'りきぞ': game.images['alt_meShocked'] },
               onEnd: function() {
                 game.doors[doorObj.name].open = false;
               }
@@ -1005,17 +1024,31 @@ window.GameModule = (function() {
         portraitMap['りきぞ'] = game.images.meConvo;
       }
 
+      // Resolve a convoBackground: Image object used directly, string key looked up in convoBackgrounds map
+      function getConvoBackgroundUrl(bg) {
+        if (!bg) return null;
+        if (bg.src) return bg.src; // already a loaded Image
+        // Fallback: look up by key in loaded images
+        var img = game.images['convoBg_' + bg];
+        return img ? img.src : null;
+      }
+
       function startConversation(conversationData, options) {
         game.inConversation = true;
         game.currentConversation = conversationData;
         game.conversationIndex = 0;
         game.onConversationEnd = (options && options.onEnd) || null;
-        game.conversationPortraitOverride = (options && options.portraitOverride) || null;
+        // portraitOverrides: map of speaker name → Image for alternate portraits
+        game.conversationPortraitOverrides = (options && options.portraitOverrides) || null;
 
-        if (options && options.backgroundImage) {
-          convoOverlay.style.backgroundImage = `url(${options.backgroundImage.src})`;
+        var bgUrl = (options && options.backgroundImage) ? getConvoBackgroundUrl(options.backgroundImage) : null;
+        if (bgUrl) {
+          convoOverlay.style.backgroundImage = `url(${bgUrl})`;
         } else {
-          convoOverlay.style.backgroundImage = `url(${getDayAssetUrl(dayData.assets.convoBackground)})`;
+          // Fallback: first available background
+          var keys = Object.keys(dayData.assets.convoBackgrounds || {});
+          var fallbackImg = keys.length ? game.images['convoBg_' + keys[0]] : null;
+          convoOverlay.style.backgroundImage = fallbackImg ? `url(${fallbackImg.src})` : 'none';
         }
         convoOverlay.style.display = 'flex';
 
@@ -1033,7 +1066,8 @@ window.GameModule = (function() {
         const enHtml = line.en ? `<span class="jp-line-en">${line.en}</span>` : '';
         convoText.innerHTML = jpHtml + enHtml;
 
-        const portrait = game.conversationPortraitOverride || portraitMap[line.speaker];
+        const overridePortrait = game.conversationPortraitOverrides && game.conversationPortraitOverrides[line.speaker];
+        const portrait = overridePortrait || portraitMap[line.speaker];
         convoPortrait.src = portrait ? portrait.src : '';
       }
 
@@ -1046,7 +1080,7 @@ window.GameModule = (function() {
         game.inConversation = false;
         game.currentConversation = null;
         game.conversationIndex = 0;
-        game.conversationPortraitOverride = null;
+        game.conversationPortraitOverrides = null;
         convoOverlay.style.display = 'none';
         if (game.onConversationEnd) {
           const cb = game.onConversationEnd;
