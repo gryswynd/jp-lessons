@@ -29,7 +29,8 @@ except:
 lesson_id = content.get('id', '') or content.get('lesson', '')
 if content.get('type') == 'grammar':
     lesson_id = content.get('meta', {}).get('unlocksAfter', lesson_id)
-if not lesson_id:
+is_story_terms = bool(content.get('storyFile') and isinstance(content.get('terms'), dict))
+if not lesson_id and not is_story_terms:
     sys.exit(0)
 
 manifest_path = os.path.join(repo_root, 'manifest.json')
@@ -98,6 +99,67 @@ for path, jp in extract_jp(content):
     for full, partial, avail, full_avail in PARTIAL:
         if full in jp_clean and full_avail and not at_or_after(full_avail, lesson_id):
             errors.append(f"  {path}: '{full}' — kanji not taught until {full_avail}, write as '{partial}'")
+
+# ---- story terms.json: matches-form check ----
+# If a term key is in a glossary entry's `matches` array (valid pre-kanji form)
+# but all kanji in the entry's surface are now taught, the term key must use
+# the surface form instead. This catches e.g. "日ようび" after 曜 is taught.
+if is_story_terms:
+    story_dir = os.path.dirname(os.path.abspath(file_path))
+    story_unlock = None
+    for level_key in ['N5', 'N4', 'N3', 'N2', 'N1']:
+        for story_entry in manifest.get('data', {}).get(level_key, {}).get('stories', []):
+            entry_dir = os.path.normpath(os.path.join(repo_root, story_entry.get('dir', '')))
+            if entry_dir == os.path.normpath(story_dir):
+                story_unlock = story_entry.get('unlocksAfter')
+                break
+        if story_unlock:
+            break
+
+    if story_unlock:
+        unlock_ord = lesson_order.get(story_unlock, 0)
+        taught_kanji = set()
+        for level_key in ['N5', 'N4', 'N3', 'N2', 'N1']:
+            for l in manifest.get('data', {}).get(level_key, {}).get('lessons', []):
+                if l.get('id') and lesson_order.get(l['id'], 9999) <= unlock_ord:
+                    for k in l.get('kanji', []):
+                        taught_kanji.add(k)
+
+        gloss = {}
+        for level_key in ['N5', 'N4', 'N3']:
+            gpath = os.path.join(repo_root, 'data', level_key, f'glossary.{level_key}.json')
+            if os.path.exists(gpath):
+                try:
+                    with open(gpath) as gf:
+                        raw = json.load(gf)
+                        entries = raw.get('entries', raw) if isinstance(raw, dict) else raw
+                        for entry in entries:
+                            if isinstance(entry, dict) and entry.get('id'):
+                                gloss[entry['id']] = entry
+                except Exception:
+                    pass
+
+        for term_key, term_val in content.get('terms', {}).items():
+            if not isinstance(term_val, dict):
+                continue
+            term_id = term_val.get('id', '')
+            g_entry = gloss.get(term_id)
+            if not g_entry:
+                continue
+            surface = g_entry.get('surface', '')
+            matches = g_entry.get('matches', [])
+            if not matches or term_key not in matches:
+                continue
+            kanji_in_surface = [c for c in surface if '\u4e00' <= c <= '\u9fff']
+            if not kanji_in_surface:
+                continue
+            untaught = [k for k in kanji_in_surface if k not in taught_kanji]
+            if untaught:
+                continue
+            errors.append(
+                f'  terms["{term_key}"] (id: {term_id}): 曜 and all kanji in '
+                f'"{surface}" are taught by {story_unlock} — use "{surface}" not "{term_key}"'
+            )
 
 if errors:
     print(f"WRITING FORM ERRORS in {os.path.basename(file_path)}:", file=sys.stderr)
