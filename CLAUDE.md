@@ -34,21 +34,27 @@ Detailed rules live in modular skill files under `skills/`. Load only what's nee
 
 | Skill file | When to load | What it contains |
 |---|---|---|
-| `skills/pipeline.md` | Any content creation task | Full agent responsibilities, Content Brief format, Sentence Token Scan Protocol, CB Checklist, handoff protocol, spawning instructions |
-| `skills/content-schemas.md` | Building any content type | JSON schemas for lessons, grammar, reviews, compose, stories, scramble drills, final interactive reviews |
-| `skills/term-tagging.md` | Any content with jp + terms[] | Term tagging rules, form strings, particle disambiguation (が/から/でも/と), character name tagging, counter format |
-| `skills/grammar-rules.md` | Any content creation task | Kanji prerequisites, vocabulary scope, grammar gating (introducedIn), reinforcement schedule, register requirements (polite vs casual), early-use vocabulary |
-| `skills/quality-gates.md` | Agent 3 and Agent 4 review passes | Pass/fail criteria, file structure reference, glossary access patterns, all 60+ documented failure modes |
+| `skills/pipeline-overview.md` | Any content creation task | Pipeline overview, Agent 1 (PM) & Agent 2 (CB) responsibilities, Sentence Token Scan Protocol, CB Checklist, spawning instructions |
+| `skills/pipeline-reviewers.md` | Agent 3 and Agent 4 review passes | Agent 3 (QA) & Agent 4 (CR) responsibilities, Grammar Accuracy Gate, Grammar Scope Enforcement, Grammar Usage Validation, Grammar Reinforcement Audit |
+| `skills/pipeline-handoff.md` | Any content creation task | Handoff protocol between agents, quick-start prompt template |
+| `skills/content-schemas-core.md` | Building lessons, grammar, or reviews | JSON schemas for Lesson, Grammar, Review, Large Comprehensive Review |
+| `skills/content-schemas-extended.md` | Building final reviews, compose, or stories | JSON schemas for Final Interactive Review, Scramble Drills, Compose, Story |
+| `skills/term-tagging-forms.md` | Any content with jp + terms[] | Term tagging rules, valid form strings, particle disambiguation (が/から/でも/と), counter format |
+| `skills/term-tagging-characters.md` | Content featuring recurring characters | Character name registry, ID conventions, tagging rules for lesson/review/grammar/story content |
+| `skills/grammar-rules-prerequisites.md` | Any content creation task | Kanji prerequisites, vocabulary scope, lesson refresh guidelines, early-use vocabulary, grammar gating (introducedIn) |
+| `skills/grammar-rules-reinforcement.md` | Any content creation task | Grammar reinforcement schedule, structural pattern reinforcement, warmup reinforcement, register requirements (polite vs casual) |
+| `skills/quality-gates-criteria.md` | Agent 3 and Agent 4 review passes | Pass/fail criteria (QA hard gates + CR soft gates), file structure reference, glossary access patterns |
+| `skills/quality-gates-failures.md` | Agent 3 and Agent 4 review passes | All 60+ documented failure modes (Agent 2, 3, 4 failures + cross-agent grammar failures) |
 
 **How agents load skills:**
-- Agent 1: Read `skills/pipeline.md` + `skills/grammar-rules.md` at start of every content task
-- Agent 2: Read `skills/content-schemas.md` + `skills/term-tagging.md` + `skills/grammar-rules.md`
-- Agent 3: Read `skills/quality-gates.md` + `skills/term-tagging.md` + `skills/grammar-rules.md`
-- Agent 4: Read `skills/quality-gates.md` + `skills/grammar-rules.md`
+- Agent 1: Read `skills/pipeline-overview.md` + `skills/pipeline-handoff.md` + `skills/grammar-rules-prerequisites.md` + `skills/grammar-rules-reinforcement.md` at start of every content task
+- Agent 2: Read `skills/pipeline-overview.md` + `skills/content-schemas-core.md` + `skills/content-schemas-extended.md` + `skills/term-tagging-forms.md` + `skills/term-tagging-characters.md` + `skills/grammar-rules-prerequisites.md` + `skills/grammar-rules-reinforcement.md`
+- Agent 3: Read `skills/pipeline-reviewers.md` + `skills/quality-gates-criteria.md` + `skills/quality-gates-failures.md` + `skills/term-tagging-forms.md` + `skills/term-tagging-characters.md` + `skills/grammar-rules-prerequisites.md` + `skills/grammar-rules-reinforcement.md`
+- Agent 4: Read `skills/pipeline-reviewers.md` + `skills/quality-gates-criteria.md` + `skills/quality-gates-failures.md` + `skills/grammar-rules-prerequisites.md` + `skills/grammar-rules-reinforcement.md`
 
-> **⚠️ SKILL FILE SIZE WARNING:** Skill files exceed the 10,000-token Read tool limit. Always use `offset` + `limit` parameters when reading them. Read in 200-line chunks (e.g. `offset: 1, limit: 200`, then `offset: 201, limit: 200`, etc.) until the full file is covered. Never attempt to read a skill file without pagination — it will fail with a token limit error.
+Each skill file is sized to be read in a single Read tool call — no chunking or pagination needed.
 
-When spawning subagents, include in the prompt: *"Read the following skill files for your full responsibilities: [list paths]. Each skill file exceeds 10,000 tokens — read them in 200-line chunks using offset/limit parameters."*
+When spawning subagents, include in the prompt: *"Read the following skill files for your full responsibilities: [list paths]."*
 
 ## Validation Hooks
 

@@ -1,219 +1,11 @@
-# Quality Gates, Reference Data & Failure Modes
+# Quality Gates — Failure Mode Catalog (Part 2)
 
 > **Loaded by:** Agent 3 (QA Reviewer) and Agent 4 (Consistency Reviewer) during review passes.
-> **Purpose:** Defines pass/fail criteria for QA and consistency review, file structure reference, glossary access patterns, and the complete catalog of documented failure modes.
+> **Purpose:** Complete catalog of documented failure modes — Agent 2 failures, Agent 3 failures, Agent 4 failures, and grammar-specific cross-agent failures.
+> **See also:** `skills/quality-gates-criteria.md` (pass/fail criteria + structure reference).
 
 ---
 
-## Quality Gates (Pass/Fail Criteria)
-
-### Agent 3 (QA) — hard pass/fail
-
-All of the following must be TRUE for a QA pass:
-
-- [ ] Every kanji in every `jp`/passage field is in the taught-kanji set
-- [ ] Every character name from the roster (see Character Name Tagging) that appears in a `jp` or passage field has the correct `char_*` ID in the `terms` array
-- [ ] Every `char_*` ID used in `terms` arrays is registered in `shared/characters.json`
-- [ ] (Stories) Every character name in `story.md` has a surface key in `terms.json` pointing to the correct `char_*` ID
-- [ ] Every lexical token in every `jp`/passage field is tagged in the `terms` array — this includes kana-only words (copulas, conjunctions, sentence-final particles, adverbs); not just kanji-containing words
-- [ ] Every kana-only word in a `jp` field that is NOT tagged in `terms` has been verified to have no glossary entry (i.e. it is truly an untaggable function word, not a tagged-but-out-of-scope one)
-- [ ] Every term ID in every `terms` array exists in the glossary
-- [ ] Every term ID's `surface` field matches (or inflects from) the token it tags in the `jp` field — ID existence alone is not sufficient; a surface mismatch (e.g. tagging `だ` with `g_desu` whose surface is `です`) is a hard fail
-- [ ] Glossary surface sanity check: for every verb or adjective entry used, Grep the full entry and confirm the `surface` field is a valid Japanese word — correct length, no spurious inserted kana (e.g. `"送る"` not `"送くる"`), and matching verb class (godan ends in a う-column kana, ichidan ends in る). A corrupted surface silently breaks all conjugated forms of that word, teaching students a word that does not exist
-- [ ] Every verb/adjective `terms` entry uses `{ "id": "...", "form": "..." }` with a valid form string
-- [ ] Every `form` value in `terms` has `introducedIn` ≤ current lesson in `conjugation_rules.json` (see Grammar Usage Prerequisite Rules in `skills/grammar-rules.md`)
-- [ ] Every `form: null` in lesson/review `terms` arrays verified as a genuine purpose construction: the verb must be followed by に in the `jp` text. Any `form: null` not meeting this test is a **hard fail** — the form string is missing and must be created
-- [ ] No `desire_tai` form used anywhere — deprecated; hard fail if present. Use `plain_desire_tai` + `g_desu` instead
-- [ ] Every な-adjective glossary entry used with `attributive_na` or `polite_adj` has BOTH `gtype: "na-adjective"` AND `verb_class: "na_adj"` — either field alone is insufficient
-- [ ] No structural grammar pattern (～ている, ～てください, ～たり～たりする, ～ましょう, etc.) appears in `jp` text before its constituent form is available
-- [ ] Active-window grammar reinforcement minimum counts are met (count tagged forms across conversations + readings; see Grammar Reinforcement Requirements in `skills/grammar-rules.md`)
-- [ ] (N4+ lessons) Exactly 3 drill sections are present in order: Drill 1 Kanji Readings, Drill 2 Vocabulary, Drill 3 Grammar & Forms
-- [ ] (N4+ lessons) Drill 1 items use `[漢字] の よみかたは？` format with no `terms` array
-- [ ] Drill 1 MCQ items have no `terms` array; all other drills do
-- [ ] Answer fields exactly match one of the choices strings
-- [ ] The JSON validates (no syntax errors)
-- [ ] All required fields are present for the section type
-- [ ] No ID appears in terms that was not verified against the glossary file
-- [ ] Early-use vocabulary written in hiragana is on the approved early-use list and the current lesson ≥ the word's "Use from" lesson (see Early-Use Vocabulary Rules in `skills/grammar-rules.md`)
-- [ ] Words with taught kanji are written in kanji, not hiragana — hiragana writing is only permitted for words on the early-use list whose kanji is not yet taught
-- [ ] Partial-kanji words use the correct writing form for the lesson tier (e.g. 大すき not 大好き before N4.4)
-- [ ] Glossary-surface writing-form check: for every word in jp text whose glossary `surface` contains any untaught kanji, the jp text uses the hiragana/partial-kanji `matches` form — not the full-kanji surface (hard fail: 一緒に used in jp text when いっしょに is the glossary matches form and 緒 is not yet taught)
-- [ ] Unregistered kana lexical words are escalated: pure-kana lexical tokens with no glossary entry are listed in an Unregistered Word Report and returned to Agent 1 — they do not produce a standard FAIL
-- [ ] (Reviews) Scramble `segments` use only taught kanji and approved vocabulary
-- [ ] (Reviews) Scramble `distractors` are plausible (wrong particles, transitive/intransitive confusions, similar words)
-- [ ] (Reviews) Scramble sentences with time expressions or adverbs have `alts` if the element can naturally float
-- [ ] (Reviews) Every drill item (MCQ and scramble) has an `explanation` field
-- [ ] (Reviews) Conversation items have `question`, `choices` (4 options), `answer`, and `explanation`
-- [ ] (Compose) Every vocabPool and target ID exists in the glossary or particles.json
-- [ ] (Compose) Model sentences use only taught kanji
-- [ ] (Compose) Every model sentence uses a natural Japanese verb+object collocation — no invented pairings (e.g. 運動を作る fails; 運動をする passes)
-- [ ] (Compose) Particles are gated — every particle ID has `introducedIn` ≤ current lesson
-- [ ] (Compose) Conjugation examples are linguistically correct (especially irregular forms)
-- [ ] (Compose) Conjugations use polite register only (unless lesson teaches casual speech)
-- [ ] (Compose) No regular prompt uses closing language ("close", "wrap up", "conclude") when challengePrompts is non-empty
-- [ ] (Compose) Challenge prompts are framed as a separate optional scenario, not a continuation of the regular narrative
-- [ ] (Stories) Every in-scope particle (p_* with introducedIn ≤ lesson scope) has an entry in terms.json
-- [ ] (Stories) g_desu (です) has an entry in terms.json if the story uses です
-- [ ] (Stories) terms.json keys exactly match the substrings as they appear in story.md
-- [ ] (Stories) **Tokenization conflict check:** For every untagged word in story.md, confirm it cannot be split incorrectly by the text processor. Specifically: any hiragana word that *starts with a character that is also a standalone particle key* (は, が, で, に, を, も, と, の, か, で, や, へ) will be misrendered — the processor will greedily match the particle, leaving the remainder as broken kana. Any such word MUST be either tagged in terms.json (if a glossary entry exists) or rewritten to avoid the conflict. Common problem cases: `はこ` (→ `は`+`こ`), `はい` (→ `は`+`い`), `ほかの` if `ほ` triggers conflict. Check every untagged hiragana word against this rule.
-- [ ] (Stories) **Grammar compound patterns — particle split check:** Grammar constructions that embed standalone particles must be tagged correctly to prevent wrong splits. Critical patterns: `～てはいけない` (contains `は`) — add `いけない` → v_ikeru plain_negative; `～てもいい` (contains `も`) — ensure `いい` → v_ii is tagged; `～ないといけない` (contains `と`) — check component tagging. If these components are missing from terms.json, the pattern silently breaks.
-- [ ] (Stories) **`いい` always tagged:** `いい` (v_ii, N5.1) must have an entry in terms.json for any story. Absence causes tokenization failures when preceded by は, も, or other particle keys.
-- [ ] (Register) Lessons N5.10+ have at least 1 casual conversation (see Register Requirements in `skills/grammar-rules.md`)
-- [ ] (Register) Lessons before N5.10 have zero casual conversations — 100% polite register
-- [ ] (Register) Casual conversations do not mix registers — no ます/です forms in casual dialogue lines, no plain forms in polite dialogue lines
-- [ ] (Register) Plain forms in casual conversations have `introducedIn` ≤ current lesson
-- [ ] (Register) Casual conversation `context` fields describe informal relationships (friends, family, close peers)
-
-### Agent 4 (CR) — soft pass/fail (judgment-based)
-
-All of the following should be TRUE for a CR pass:
-
-- [ ] Conversations sound natural and idiomatic, not like direct grammar exercises
-- [ ] **Redundancy check:** No cluster of 2+ consecutive sentences conveys the same information — each sentence adds something new. Forced vocabulary insertion almost always produces redundant clusters (three ways of introducing a character, two ways of saying someone is tired). Read scenes as sequences, not isolated sentences.
-- [ ] The scenario is culturally plausible and engaging
-- [ ] Grammar complexity matches the target lesson tier — every conjugation form and structural grammar pattern in `jp` text has `introducedIn` ≤ current lesson (hard fail if violated; see Grammar Usage Validation in `skills/pipeline.md`)
-- [ ] No particle in `jp` text has `introducedIn` (in `shared/particles.json`) later than the current lesson
-- [ ] Grammar patterns that are technically available but have not been recently practiced are used sparingly and naturally (soft judgment)
-- [ ] **Grammar reinforcement — active window:** All minimum counts from the Grammar Reinforcement Schedule are met for milestones in the active window (hard fail if not met and natural contexts exist)
-- [ ] **Grammar reinforcement — sustained use:** No sustained-use milestone's forms are completely absent from the lesson (soft fail with explanation if absent)
-- [ ] **Grammar reinforcement — verb diversity:** Verb form distribution is not >80% polite_masu/polite_mashita when other forms are available (soft fail)
-- [ ] **Grammar reinforcement — structural patterns:** Key structural patterns (てください, ています, たいです, ましょう, etc.) appear where available and contextually natural; flagged if absent across 3+ consecutive lessons
-- [ ] **Grammar reinforcement — warmup:** At least 1 warmup item exercises a recently-unlocked grammar pattern with prior-lesson vocabulary
-- [ ] Vocabulary density is appropriate (not overcrowded, not too sparse)
-- [ ] Scenarios are meaningfully different from the 2 most recent same-type files
-- [ ] Character names, places, and recurring details are consistent with the series
-- [ ] The content builds genuine skill progression from the previous lesson
-- [ ] Distractors in drills are plausible but clearly wrong
-- [ ] Reading passages are coherent narratives, not disconnected sentences
-- [ ] **Register — ratio check:** Casual/polite conversation ratio matches the Register Requirements schedule for the lesson range (hard fail if a N5.10+ lesson has zero casual conversations)
-- [ ] **Register — naturalness:** Casual conversations sound like real informal speech, not polite sentences with です replaced by だ. Friends use contractions, sentence-final particles, and casual connectors naturally
-- [ ] **Register — context appropriateness:** No casual register in formal contexts (stores, offices with superiors, strangers). No polite register in explicitly casual contexts (close friends at home)
-- [ ] **Register — command/prohibition usage:** Plain commands (～ろ/～え) and prohibition (～な) appear only in appropriate contexts (signs, sports, close friends). Not overused or forced
-
----
-
-## File & Structure Reference
-
-### Glossary Access Pattern
-
-**Never read the glossary in full.** The files are thousands of lines and will exceed the 32k token output limit in a single response. Use these targeted queries instead:
-
-| Goal | Grep pattern | File |
-|---|---|---|
-| List all vocab introduced in a lesson | `"lesson_ids": "N5.3"` | `glossary.N5.json` |
-| Verify a specific vocab ID exists | `"id": "v_foo"` | `glossary.N5.json` |
-| Verify a particle ID exists | `"id": "p_foo"` | `shared/particles.json` |
-| Find all entries for a kanji lesson | `"lesson": "N5.3"` | `glossary.N5.json` |
-| Check surface / reading / gtype of an entry | `"id": "v_foo"` with context lines | `glossary.N5.json` |
-| Discover compounds for a kanji character | `"surface":` containing the character (e.g. `"surface": ".*水.*"`) | `glossary.N5.json` |
-
-When Agent 1 needs to enumerate the full vocab list for a lesson's Content Brief, run one Grep for `"lesson_ids": "N5.X"` and one for `"lesson": "N5.X"` (kanji entries). That is sufficient — do not read the file beyond those results.
-
-When Agent 3 needs to verify IDs in bulk, run a single Grep per unknown ID rather than reading surrounding sections.
-
-**Compound discovery (Agent 1 scoping phase).** When a new lesson introduces kanji, Agent 1 should search the glossary for each new character to discover compound words that become available once that kanji is taught (i.e. all constituent kanji are now in the taught set). Grep for the character within `"surface"` fields. This broader search is permitted and encouraged — it does not violate the "do not read in full" rule because it is still a targeted query. Flag discovered compounds to the user as candidates for inclusion in the lesson or for addition to the glossary if they don't exist yet.
-
----
-
-### Key files to read before building any content
-
-| File | Purpose |
-|---|---|
-| `manifest.json` | Level/lesson index, kanji arrays per lesson, file paths |
-| `data/N5/glossary.N5.json` | All N5 kanji and vocab entries with IDs |
-| `data/N4/glossary.N4.json` | All N4 kanji and vocab entries with IDs |
-| `shared/particles.json` | Particle and set-phrase entries (`p_*` IDs) |
-| `shared/characters.json` | Character registry (`char_*` IDs) — proper names, portraits, descriptions. Read this when any lesson content features a recurring character. |
-| `conjugation_rules.json` | Valid conjugation form strings |
-| `counter_rules.json` | Valid counter keys and their rules |
-| `Lesson Instructions.md` | Authoritative term tagging and drill authoring rules |
-| `./GRAMMAR_CONTENT.md` | **Grammar lessons only** — authoritative scope for each G-lesson's grammar points, required sections, and vocabulary context. Agent 1 must read the relevant G-lesson entry before building any grammar Content Brief. Do not infer grammar scope from the lesson title alone. |
-
-**Important — particles live in `shared/particles.json`, not the glossary.** Particle entries use the field `particle` for their surface form (not `surface`). Compound particles like `では` also live here as their own entries. When verifying a `p_*` ID, search `shared/particles.json` — not the N5/N4 glossary files. New particles or compound particles must be added to `particles.json`, not to any glossary file.
-
-### Entry type quick reference
-
-**Kanji entry (type: "kanji"):**
-```json
-{
-  "id": "k_haha",
-  "lesson": "N5.1",
-  "type": "kanji",
-  "surface": "母",
-  "on": "ぼ",
-  "kun": "はは",
-  "reading": "はは",
-  "meaning": "mother"
-}
-```
-
-**Vocab entry (type: "vocab"):**
-```json
-{
-  "id": "v_sensei",
-  "surface": "先生",
-  "meaning": "teacher",
-  "type": "vocab",
-  "gtype": "noun",
-  "lesson_ids": "N5.1",
-  "reading": "せんせい"
-}
-```
-
-**Verb vocab entry:**
-```json
-{
-  "id": "v_umareru",
-  "surface": "生まれる",
-  "meaning": "to be born",
-  "type": "vocab",
-  "gtype": "verb",
-  "lesson_ids": "N5.1",
-  "reading": "うまれる",
-  "verb_class": "ichidan"
-}
-```
-
-Verb classes: `godan`, `ichidan`, `irr_suru`, `irr_kuru`
-
-Adjective gtypes: `i_adj`, `na_adj`
-
-**na-adjective entries require TWO fields — both are mandatory:**
-
-```json
-{
-  "id": "v_kirei",
-  "surface": "きれい",
-  "meaning": "pretty / clean",
-  "type": "vocab",
-  "gtype": "na-adjective",
-  "verb_class": "na_adj",
-  "lesson_ids": "N5.3",
-  "reading": "きれい"
-}
-```
-
-`gtype: "na-adjective"` controls display and classification. `verb_class: "na_adj"` is the key that activates the `attributive_na` and `polite_adj` conjugation rules. **Either field alone is insufficient.** An entry with only `gtype: "na-adjective"` (no `verb_class`) will silently fail to produce a 〜な chip. Verify both fields whenever adding or editing a な-adjective entry.
-
-### Output file paths
-
-| Content type | Path pattern |
-|---|---|
-| Lesson | `data/N5/lessons/N5.X.json` |
-| Review | `data/N4/reviews/N4.Review.X.json` |
-| Final Interactive Review | `data/N5/reviews/N5.Final.Review.json` / `data/N4/reviews/N4.Final.Review.json` |
-| N5 Compose | `data/N5/compose/compose.N5.X.json` (one file per lesson) |
-| N4 Compose | `data/N4/compose/compose.N4.X.json` (one file per lesson) |
-| Story markdown | `data/N5/stories/[slug]/story.md` |
-| Story terms | `data/N5/stories/[slug]/terms.json` |
-
-After writing new files, `manifest.json` must be updated. Lessons get an entry under `data.N5.lessons` or `data.N4.lessons`. Stories get an entry under `data.N5.stories` or `data.N4.stories`. Reviews get an entry under `data.N4.reviews`. Compose files get an entry in the `compose` array: `{ "lesson": "N5.X", "file": "data/N5/compose/compose.N5.X.json" }`. Grammar lessons get an entry in the appropriate `grammar` array (under `data.N5.grammar` or `data.N4.grammar`) with `id`, `title`, `file`, `unlocksAfter`, `icon`, and `estimatedMinutes` fields — the `unlocksAfter` value must exactly match GRAMMAR_CONTENT.md.
-
-**Grammar `unlocksAfter` must be consistent across three files.** Whenever a grammar lesson's unlock point is set or changed, update it in all three places: (1) GRAMMAR_CONTENT.md (the spec), (2) `manifest.json` (the runtime gate), and (3) the grammar lesson JSON's `meta.unlocksAfter` field (once the file is built). All three must agree — a mismatch between any two causes either a content-scope violation or a lesson that is gated at the wrong point in the app.
-
-Story entries in `manifest.json` must include an `unlocksAfter` field set to the last lesson whose content is required by the story. This controls both the unlock gate (the student must pass that lesson before the story appears) and the story's content scope (all kanji, vocab, and grammar in the story must be available at that lesson). The story picker lists stories in `unlocksAfter` order. New stories must always have this field.
-
----
 
 ## Common Failure Modes
 
@@ -270,16 +62,16 @@ Items retain their original numbers for backward compatibility with existing QA 
 29. **(Stories) Missing particle/copula tags in terms.json** — particles (は, の, も, と, etc.) and g_desu (です) must be tagged in story terms.json so they are tappable, exactly as in lessons. Omitting them means function words are dead text the student cannot tap to look up. Every particle with a `p_*` entry in `shared/particles.json` whose `introducedIn` is ≤ the story's lesson scope must be included. The `"です"` key covers standalone copula occurrences; い-adjective predicative forms (e.g. `"うれしいです"`) are covered by their own longer key.
 #### Grammar scope & form errors
 
-30. **Out-of-scope conjugation form** — using a conjugation form (e.g. `te_form`, `desire_tai`, `conditional_ba`) before its `introducedIn` lesson. This is the grammar equivalent of using an untaught kanji. Example: writing ～ています in N5.3 content when `te_form` has `introducedIn: "N5.5"`. Check every `form` value in `terms` against `conjugation_rules.json`. See Grammar Usage Prerequisite Rules in `skills/grammar-rules.md`.
+30. **Out-of-scope conjugation form** — using a conjugation form (e.g. `te_form`, `desire_tai`, `conditional_ba`) before its `introducedIn` lesson. This is the grammar equivalent of using an untaught kanji. Example: writing ～ています in N5.3 content when `te_form` has `introducedIn: "N5.5"`. Check every `form` value in `terms` against `conjugation_rules.json`. See Grammar Usage Prerequisite Rules in `skills/grammar-rules-prerequisites.md`.
 31. **Out-of-scope structural grammar pattern** — the `jp` surface text contains a grammar construction (～ている, ～てください, ～ましょう, ～たり～たりする, etc.) before the constituent form is available, even if the individual word tags don't explicitly use that form. The pattern in the surface text is the violation, not just the tags. Agent 2 must scan `jp` strings for these patterns, not rely only on `terms` form checking.
 32. **何 tagged as k_nani or generic v_nani without pronunciation context** — 何 has two pronunciations: **なに** (`v_nani`) and **なん** (`v_nan`). Using `k_nani` (kanji entry) makes 何 non-tappable in conversations and readings. Using only `v_nani` for all contexts gives students the wrong reading when the pronunciation is actually なん. **Rules:** Use `v_nani` when 何 precedes を or が, or stands alone (e.g. 何を食べますか、何がいい). Use `v_nan` when 何 precedes です, の, counters, or words starting with d/n/t sounds (e.g. 何ですか、何の本、何人). Never use `k_nani` in conversation, reading, or drill `terms` — it is only for the kanjiGrid. Compound words like 何人, 何時, 何曜日 have their own dedicated entries (`v_nannin`, `v_nanji`, `v_nanyoubi`) and should use those instead.
 33. **後 tagged as v_ushiro regardless of meaning** — 後 has two completely distinct words: **後ろ** (`v_ushiro`, うしろ, spatial "behind") and **後** (`v_ato`, あと, temporal "after/later"). Unlike 何, the written form alone disambiguates them — no context rules needed. **Rule:** Token `後ろ` (with ろ) → `v_ushiro`. Token `後` standalone (no ろ) → `v_ato`. Using `v_ushiro` for temporal 後 is semantically wrong (it displays the wrong reading and meaning to the student). Never use `k_ushiro` in conversation, reading, or drill `terms` — it is only for the kanjiGrid. For 後で ("later"), tag as `v_ato` + `p_de`. Compounds using the on-reading (午後, 後半, etc.) have their own dedicated IDs.
 #### Particle disambiguation errors
 
-34. **が tagged as p_ga regardless of role** — が after a clause-final form (ます/です/plain form) is `p_ga_but` ("but"), not `p_ga` (subject marker). See が disambiguation in `skills/term-tagging.md` for the full rule and examples.
-35. **から tagged as p_kara regardless of role** — から after a verb/adjective/です is `p_kara_because` ("because"), not `p_kara` ("from"). See から disambiguation in `skills/term-tagging.md` for the full rule and examples.
-36. **でも tagged as p_demo regardless of position** — sentence-initial でも is `p_demo_but` ("but/however"), not `p_demo` ("even/any~"). See でも disambiguation in `skills/term-tagging.md` for the full rule and examples.
-37. **と tagged as p_to regardless of role** — と after quoted speech or thought clauses is `p_to_quote`, not `p_to` ("and/with"). See と disambiguation in `skills/term-tagging.md` for the full rule and examples.
+34. **が tagged as p_ga regardless of role** — が after a clause-final form (ます/です/plain form) is `p_ga_but` ("but"), not `p_ga` (subject marker). See が disambiguation in `skills/term-tagging-forms.md` for the full rule and examples.
+35. **から tagged as p_kara regardless of role** — から after a verb/adjective/です is `p_kara_because` ("because"), not `p_kara` ("from"). See から disambiguation in `skills/term-tagging-forms.md` for the full rule and examples.
+36. **でも tagged as p_demo regardless of position** — sentence-initial でも is `p_demo_but` ("but/however"), not `p_demo` ("even/any~"). See でも disambiguation in `skills/term-tagging-forms.md` for the full rule and examples.
+37. **と tagged as p_to regardless of role** — と after quoted speech or thought clauses is `p_to_quote`, not `p_to` ("and/with"). See と disambiguation in `skills/term-tagging-forms.md` for the full rule and examples.
 #### Grammar reinforcement failures
 
 38. **Grammar under-reinforcement (ます/ました monotony)** — all verbs in conversations and readings default to `polite_masu` or `polite_mashita` when negative forms, te-form, desire, and volitional forms are all available. This is the grammar equivalent of writing with a limited vocabulary — technically correct but failing to exercise the student's growing skillset. Example: an N5.7 lesson has 5 conversations with 20 tagged verbs, but 18 are ます/ました, zero are てください or ています despite te-form being available since N5.5. Agent 2 must consult the Grammar Reinforcement Requirements and vary verb forms intentionally.
@@ -287,7 +79,7 @@ Items retain their original numbers for backward compatibility with existing QA 
 40. **Warmup grammar stagnation** — warmup items continue using only noun-です patterns (「先生です」「大きいです」) long after polite verb forms, te-form, and other grammar have been unlocked. Warmups after N5.5 should exercise recently-unlocked grammar with prior-lesson vocabulary. Example: an N5.8 warmup should include items like 「先生は毎日学校に行きます」(polite_masu) or 「ここに名前を書いてください」(te-form request), not just 「これは本です」.
 #### Early-use vocabulary & writing form errors
 
-41. **Early-use word written in kanji before kanji is taught** — writing 私 in N5.1 content when the kanji 私 is not introduced until N4.3. Early-use words must be written in their hiragana form (わたし) until the kanji lesson. Similarly, partial-kanji words must use their partial form (大すき, not 大好き) until all constituent kanji are taught. See Early-Use Vocabulary Rules in `skills/grammar-rules.md`.
+41. **Early-use word written in kanji before kanji is taught** — writing 私 in N5.1 content when the kanji 私 is not introduced until N4.3. Early-use words must be written in their hiragana form (わたし) until the kanji lesson. Similarly, partial-kanji words must use their partial form (大すき, not 大好き) until all constituent kanji are taught. See Early-Use Vocabulary Rules in `skills/grammar-rules-prerequisites.md`.
 42. **Early-use word written in hiragana after kanji is taught** — writing わたし in N4.5 content when the kanji 私 was introduced in N4.3. Once the kanji is available, the full kanji form must be used. Continuing to write hiragana after the kanji lesson is a missed learning opportunity.
 43. **Using an early-use word before its "Use from" lesson** — using すき in N5.3 content when the early-use list says it is available from N5.7. The "Use from" lesson is a hard gate, not a guideline.
 #### Register errors
@@ -313,7 +105,7 @@ Items retain their original numbers for backward compatibility with existing QA 
 
 53d. **na-adjective glossary entry missing `verb_class: "na_adj"`** — a な-adjective entry in the glossary has `gtype: "na-adjective"` but no `verb_class: "na_adj"`, or has `gtype: "noun"` entirely. The `attributive_na` conjugation rule only fires for entries with `verb_class: "na_adj"`. Without it, 〜な chips silently fail to render — the word appears as plain text with no chip. The fix is always in the glossary entry itself, not in the content. Verify both `gtype` and `verb_class` for every な-adjective entry.
 54. **Vocabulary used before glossary entry exists** — Agent 2 writes sentences using words (e.g. シャツ, 帰り, 今) and tags them with IDs without first Grep-verifying those IDs exist in the glossary. The draft then passes Agent 2's self-check ("no invented IDs" was interpreted as "no obviously fake IDs") but Agent 3 finds the IDs are missing. The correct process is: identify every content word needed for the lesson, Grep-verify each ID exists, and add any missing entries to the glossary **before** writing content that uses them. If Agent 2 discovers a missing entry mid-draft, it must stop, flag the gap in the CB Checklist, and either add the entry or restructure the sentence — never proceed with an unverified ID.
-54b. **Adding glossary entries to accommodate a lesson refresh** — when rewriting an existing lesson, the agent finds that the original content uses vocabulary with no glossary entry (e.g. 公園, さん歩) and responds by creating new glossary entries to make the IDs valid. This is wrong: the absence of a glossary entry during a refresh proves the word has not been introduced in the curriculum. Adding it would be expanding the curriculum disguised as a bug fix. During refreshes, **absent glossary entry = out-of-scope = remove and replace with available vocab**. The Unregistered Word Report escalation path is for new content creation only — it does not apply to refreshes. See Lesson Refresh / Rewrite Guidelines in `skills/grammar-rules.md`.
+54b. **Adding glossary entries to accommodate a lesson refresh** — when rewriting an existing lesson, the agent finds that the original content uses vocabulary with no glossary entry (e.g. 公園, さん歩) and responds by creating new glossary entries to make the IDs valid. This is wrong: the absence of a glossary entry during a refresh proves the word has not been introduced in the curriculum. Adding it would be expanding the curriculum disguised as a bug fix. During refreshes, **absent glossary entry = out-of-scope = remove and replace with available vocab**. The Unregistered Word Report escalation path is for new content creation only — it does not apply to refreshes. See Lesson Refresh / Rewrite Guidelines in `skills/grammar-rules-prerequisites.md`.
 
 54c. **Premature compound introduction via ad-hoc hybrid** — a compound word (e.g. 思い出) whose kanji are all eventually taught is introduced early by substituting hiragana for the not-yet-taught kanji (e.g. `おもい出` at N4.16 when 思 doesn't unlock until N4.30). This is a scope violation disguised as a partial-kanji entry. The partial-kanji mechanism is reserved for compounds where at least one kanji is *never* taught; for compounds where all kanji are eventually taught, the only correct action is deferral. The hybrid form teaches students a writing convention that does not exist in real Japanese and will need to be un-learned. Agent 1's compound discovery step must check whether every kanji in the compound is in the taught set — if not, defer and note the target lesson. Agent 3 must reject any new glossary entry that uses a hybrid form for a compound not on the approved partial-kanji list.
 #### Grammar lesson schema & infrastructure errors
@@ -379,7 +171,7 @@ These failures span multiple agents and are the most damaging because they may n
 
 6. **Out-of-scope grammar usage passing all checks** — A conjugation form or structural pattern is used before its `introducedIn` lesson, but it slips through because: (a) Agent 2 doesn't check `introducedIn` on forms, (b) Agent 3 checks form strings for validity but not their `introducedIn` dates, and (c) Agent 4's "skill progression" check is too vague to catch it. This was the most common grammar-related failure before the Grammar Usage Validation was added. The defense is now distributed: Agent 2 checks `introducedIn` during authoring (CB Checklist), Agent 3 hard-gates every `form` against `conjugation_rules.json`, and Agent 4 performs a structural pattern scan of `jp` surface text. All three layers must be active.
 
-7. **Systematic grammar under-reinforcement across lessons** — The mirror image of failure #6. Grammar forms are correctly gated (never used too early) but also never used *enough* after they're taught. The student learns te-form in G8/N5.5, but N5.6, N5.7, and N5.8 content all default to ます/ました because Agent 2 wasn't prompted to use the new forms, Agent 3 only checked for out-of-scope violations (ceiling), and Agent 4's "skill progression" check was too vague to catch the absence. The defense is now distributed: Agent 1 includes reinforcement targets in the Content Brief, Agent 2 actively varies verb forms and meets minimum counts (CB Checklist), Agent 3 counts tagged forms against the active-window minimums (hard gate), and Agent 4 performs the Grammar Reinforcement Audit checking for under-use, verb form diversity, and structural pattern presence. All four layers must be active. The Grammar Reinforcement Requirements in `skills/grammar-rules.md` section defines the concrete schedule.
+7. **Systematic grammar under-reinforcement across lessons** — The mirror image of failure #6. Grammar forms are correctly gated (never used too early) but also never used *enough* after they're taught. The student learns te-form in G8/N5.5, but N5.6, N5.7, and N5.8 content all default to ます/ました because Agent 2 wasn't prompted to use the new forms, Agent 3 only checked for out-of-scope violations (ceiling), and Agent 4's "skill progression" check was too vague to catch the absence. The defense is now distributed: Agent 1 includes reinforcement targets in the Content Brief, Agent 2 actively varies verb forms and meets minimum counts (CB Checklist), Agent 3 counts tagged forms against the active-window minimums (hard gate), and Agent 4 performs the Grammar Reinforcement Audit checking for under-use, verb form diversity, and structural pattern presence. All four layers must be active. The Grammar Reinforcement Requirements in `skills/grammar-rules-reinforcement.md` section defines the concrete schedule.
 
 8. **Grammar lesson introduces a connector/particle with no glossary or particles.json entry** — When a grammar lesson teaches a new grammatical connector (e.g. ために, まえに, あとで, のに, ～たり), Agent 1 must verify that every content word in that connector has a tappable entry. Specifically:
    - If the connector contains a **lexical noun** (ため, 前, 後, etc.), check whether a `v_*` entry exists in the glossary. If not, add one before content is built. Without it, the word will be permanently dead text in every future `jp` field where it appears.
