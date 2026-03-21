@@ -239,6 +239,10 @@
             "v_muzukashii",
             "v_otera"
           ]
+        },
+        {
+          "label": "Conversation Expressions（会話表現）",
+          "items": ["v_naruhodo", "v_hee", "v_souso", "v_jitsuwa", "v_tsumari", "v_nanka", "v_maa", "p_hontou"]
         }
       ]
     },
@@ -460,26 +464,24 @@
       "lines": [
         {
           "spk": "りきぞ",
-          "jp": "北海道の 旅行、楽しかったね。",
-          "en": "The Hokkaido trip was fun, wasn't it.",
+          "jp": "北海道の 旅行、よかったね。",
+          "en": "The Hokkaido trip was great, wasn't it.",
           "terms": [
             "char_rikizo",
             "v_hokkaidou",
             "p_no",
             "v_ryokou",
-            { "id": "v_tanoshii", "form": "plain_past_adj" },
+            { "id": "v_ii", "form": "plain_past_adj" },
             "p_ne"
           ]
         },
         {
           "spk": "やまかわ",
-          "jp": "そうだね。大きい 田が たくさん あったよ。",
-          "en": "Yeah. There were lots of big rice fields.",
+          "jp": "そうそう。大きい 田が たくさん あったよ。",
+          "en": "Right right. There were lots of big rice fields.",
           "terms": [
             "char_yamakawa",
-            "v_sou",
-            "p_ne",
-            "g_da",
+            "v_souso",
             "v_ookii",
             "v_ta",
             "p_ga",
@@ -490,36 +492,29 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "車を 借りて、友だちと 乗り回したけど、運転は むずかしかった。",
-          "en": "We rented a car and drove around with friends, but the driving was difficult.",
+          "jp": "なんか、運転は むずかしかったけど、楽しかったよ。",
+          "en": "Like, the driving was difficult, but it was fun.",
           "terms": [
             "char_rikizo",
-            "v_kuruma",
-            "p_wo",
-            { "id": "v_kariru", "form": "te_form" },
-            "v_tomodachi",
-            "p_to",
-            { "id": "v_norimawasu", "form": "plain_past" },
-            "p_kedo",
+            "v_nanka",
             "v_unten",
             "p_wa",
-            { "id": "v_muzukashii", "form": "plain_past_adj" }
+            { "id": "v_muzukashii", "form": "plain_past_adj" },
+            "p_kedo",
+            { "id": "v_tanoshii", "form": "plain_past_adj" },
+            "p_yo"
           ]
         },
         {
           "spk": "やまかわ",
-          "jp": "また 行きたいな。来年は 海も 見たい。",
-          "en": "I want to go again. Next year I also want to see the sea.",
+          "jp": "なるほど。また 行きたいな。",
+          "en": "I see. I want to go again.",
           "terms": [
             "char_yamakawa",
+            "v_naruhodo",
             "v_mata",
             { "id": "v_iku", "form": "plain_desire_tai" },
-            "p_na",
-            "v_rainen",
-            "p_wa",
-            "v_umi",
-            "p_mo",
-            { "id": "v_miru", "form": "plain_desire_tai" }
+            "p_na"
           ]
         }
       ]
