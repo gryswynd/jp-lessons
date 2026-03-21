@@ -267,8 +267,10 @@
               "terms": [
                 "v_ii",
                 "p_yo",
-                "v_igai",
-                "p_to",
+                {
+                  "id": "v_igai",
+                  "form": "adverbial"
+                },
                 {
                   "id": "v_muzukashii",
                   "form": "plain_negative"
@@ -328,7 +330,7 @@
         {
           "kind": "scramble",
           "q": "Please lend me this book.",
-          "segments": ["この", "本を", "貸して", "ください"],
+          "segments": ["この", "本", "を", "貸して", "ください"],
           "distractors": ["持ち出して", "いけません", "売り物"],
           "explanation": "Request pattern: <b>て-form + ください</b> — 貸す (lend) → 貸して + ください = Please lend (me). この本を is the direct object."
         }
