@@ -7,16 +7,16 @@
     "level": "N4",
     "unlocksAfter": "N4.16",
     "focus": "Master the sounds that hold the floor (えーと, あのう, うーん), active-listening signals (なるほど, へえ, そうですね), casual fillers (なんか, まあ), and discourse restructuring markers (じつは, つまり).",
-    "estimatedMinutes": 20,
+    "estimatedMinutes": 25,
     "particles": [
-      "なるほど",
-      "へえ",
-      "そうそう",
-      "じつは",
-      "つまり",
-      "なんか",
-      "まあ",
-      "ほんとうに"
+      "v_naruhodo",
+      "v_hee",
+      "v_souso",
+      "v_jitsuwa",
+      "v_tsumari",
+      "v_nanka",
+      "v_maa",
+      "p_hontou"
     ],
     "grammarForms": [],
     "icon": "💬"
@@ -887,7 +887,7 @@
               "id": "v_miru",
               "form": "te_form"
             },
-            "p_kara_because",
+            "p_kara",
             "v_gohan",
             "p_wo",
             {
