@@ -480,7 +480,7 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "少し 進んで きました。でも、むずかしいのに 話したいです。",
+          "jp": "少し 進んで きました。むずかしいのに、話したいです。",
           "en": "I have progressed a little. Even though it is difficult, I want to speak.",
           "terms": [
             "char_rikizo",
@@ -493,7 +493,6 @@
               "id": "v_kuru",
               "form": "polite_mashita"
             },
-            "p_demo_but",
             {
               "id": "v_muzukashii",
               "form": "plain_form"
@@ -561,8 +560,8 @@
         },
         {
           "spk": "すずきせんせい",
-          "jp": "それは 大切ですよ。少しずつ 話して、上手に なって いきますよ。",
-          "en": "That is important. Speaking little by little, you will become more skilled.",
+          "jp": "それは 大切ですよ。また 来て ください。",
+          "en": "That is important. Please come again.",
           "terms": [
             "char_suzuki",
             "v_sore",
@@ -572,25 +571,30 @@
               "form": "polite_adj"
             },
             "p_yo",
-            "v_sukoshi",
-            "p_zutsu",
+            "v_mata",
+            {
+              "id": "v_kuru",
+              "form": "te_form"
+            },
+            "v_kudasai"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "たくさん 話して くれて、ありがとうございます。",
+          "en": "Thank you for talking with me so much.",
+          "terms": [
+            "char_rikizo",
+            "v_takusan",
             {
               "id": "v_hanasu",
               "form": "te_form"
             },
             {
-              "id": "v_jouzu",
-              "form": "adverbial"
-            },
-            {
-              "id": "v_naru",
+              "id": "v_kureru",
               "form": "te_form"
             },
-            {
-              "id": "v_iku",
-              "form": "polite_masu"
-            },
-            "p_yo"
+            "p_arigatou_gozaimasu"
           ]
         }
       ]
@@ -642,7 +646,7 @@
         },
         {
           "spk": "けん",
-          "jp": "そうだな。進歩の ために 毎日 運動した ほうが いいよ。",
+          "jp": "そうだな。進歩の ために 毎日 運動する ほうが いいよ。",
           "en": "That's right. For the sake of progress, it's better to exercise every day.",
           "terms": [
             "char_ken",
@@ -657,7 +661,7 @@
             "v_undou",
             {
               "id": "v_suru",
-              "form": "plain_past"
+              "form": "plain_form"
             },
             "v_hou",
             "p_ga",
@@ -760,16 +764,16 @@
           ]
         },
         {
-          "jp": "朝は 少し 走って、夜は 歩いて います。",
-          "en": "In the morning he runs a little, and in the evening he walks.",
+          "jp": "朝 少し 走って から、夜は 歩いて います。",
+          "en": "After running a little in the morning, he walks in the evening.",
           "terms": [
             "v_asa",
-            "p_wa",
             "v_sukoshi",
             {
               "id": "v_hashiru",
               "form": "te_form"
             },
+            "p_kara",
             "v_yoru",
             "p_wa",
             {
@@ -940,8 +944,8 @@
           ]
         },
         {
-          "jp": "短気に ならないで、少しずつ 進んで いく ことが 大切です。",
-          "en": "Without being short-tempered, advancing little by little is important.",
+          "jp": "短気に ならないで、ゆっくり 進んで いく ことが 大切です。",
+          "en": "Without being short-tempered, advancing slowly is important.",
           "terms": [
             {
               "id": "v_tanki",
@@ -951,8 +955,7 @@
               "id": "v_naru",
               "form": "polite_negative_te"
             },
-            "v_sukoshi",
-            "p_zutsu",
+            "v_yukkuri",
             {
               "id": "v_susumu",
               "form": "te_form"
@@ -970,13 +973,12 @@
           ]
         },
         {
-          "jp": "少しずつ 進む ことで、問題が 小さく なります。",
-          "en": "By advancing little by little, problems become smaller.",
+          "jp": "毎日 重ねる ことで、問題が 小さく なります。",
+          "en": "By building up every day, problems become smaller.",
           "terms": [
-            "v_sukoshi",
-            "p_zutsu",
+            "v_mainichi",
             {
-              "id": "v_susumu",
+              "id": "v_kasaneru",
               "form": "plain_form"
             },
             "v_koto",
@@ -1206,7 +1208,7 @@
         },
         {
           "kind": "mcq",
-          "q": "少しずつ 前に（　）ことが 大切です。",
+          "q": "ゆっくり 前に（　）ことが 大切です。",
           "choices": [
             "進む",
             "太る",
@@ -1215,8 +1217,7 @@
           ],
           "answer": "進む",
           "terms": [
-            "v_sukoshi",
-            "p_zutsu",
+            "v_yukkuri",
             "v_mae",
             "p_ni",
             {
