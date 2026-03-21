@@ -748,9 +748,9 @@ window.GrammarModule = {
 
     function renderPatternMatch(sec) {
       const div = el('div', '');
-      // Pattern formula display
+      // Title and instructions display
       const patternBox = el('div', 'gr-card');
-      patternBox.innerHTML = '<div style="font-size:0.8rem;font-weight:700;color:#888;margin-bottom:8px;text-transform:uppercase;">Pattern</div><div style="font-family:\'Noto Sans JP\',sans-serif;font-size:0.95rem;color:#333;">' + esc(sec.pattern) + '</div>';
+      patternBox.innerHTML = '<div style="font-size:1rem;font-weight:700;color:#333;margin-bottom:8px;">' + esc(sec.title) + '</div><div style="font-size:0.9rem;color:#555;">' + esc(sec.instructions) + '</div>';
       div.appendChild(patternBox);
 
       let correct = 0, total = 0;
@@ -778,7 +778,7 @@ window.GrammarModule = {
             if (answered) return;
             answered = true; total++;
             expEl.style.display = 'block';
-            if (isCorrectChoice === item.correct) {
+            if (isCorrectChoice === item.answer) {
               correct++;
               btn.classList.add('correct-choice');
               card.classList.add('answered-correct');
@@ -786,7 +786,7 @@ window.GrammarModule = {
               btn.classList.add('wrong-choice');
               card.classList.add('answered-wrong');
               btns.querySelectorAll('.gr-pm-btn').forEach(b => {
-                if ((b.textContent === '✓') === item.correct) b.classList.add('correct-choice');
+                if ((b.textContent === '✓') === item.answer) b.classList.add('correct-choice');
               });
             }
             scoreText.textContent = total + ' / ' + (sec.items || []).length;
