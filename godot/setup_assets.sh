@@ -34,10 +34,6 @@ cp "$DAY_SRC/sprites/me-convo.png"  "$ASSETS_DIR/day-data/sprites/me-convo.png"
 echo "  Copying player spritesheet..."
 cp "shared/sprites/me_sheet.png" "$ASSETS_DIR/sprites/me_sheet.png"
 
-# --- Door sprite ---
-echo "  Copying door sprite..."
-cp "door.png" "$ASSETS_DIR/sprites/door.png"
-
 # --- Glossary & data files ---
 echo "  Copying data files..."
 cp "data/N5/glossary.N5.json"   "$ASSETS_DIR/data/glossary.N5.json"
