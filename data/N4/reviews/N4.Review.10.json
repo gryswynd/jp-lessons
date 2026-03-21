@@ -989,6 +989,64 @@
             },
             "g_desu"
           ]
+        },
+        {
+          "kind": "mcq",
+          "q": "この 洋服、______ ですが、とても きれいですね。",
+          "choices": [
+            "高そう",
+            "高いそう",
+            "高くなさそう",
+            "高そうだ"
+          ],
+          "answer": "高そう",
+          "explanation": "Appearance そうだ for い-adjectives: drop the final い and add そう. 高い → drop い → 高 + そう = 高そう. This is the stem form — it pairs with です to become 高そうです (polite) or stands alone as 高そうだ (casual). 高いそう would be hearsay ('I heard it is expensive'), not appearance.",
+          "terms": [
+            "v_kono",
+            "v_youfuku",
+            {
+              "id": "v_takai",
+              "form": "appearance_sou_stem"
+            },
+            "g_desu",
+            "p_ga_but",
+            "v_totemo",
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            },
+            "p_ne"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "友だちから 聞いた んですが、あの 料理屋は ______ そうです。",
+          "choices": [
+            "おいしい",
+            "おいし",
+            "おいしく",
+            "おいしかった"
+          ],
+          "answer": "おいしい",
+          "explanation": "Hearsay そうだ attaches to the full PLAIN FORM — the い stays. おいしい + そうです = おいしいそうです (I heard it's delicious). The stem form おいし + そうです = おいしそうです means APPEARANCE ('it looks delicious'). Hearsay reports what you were told; appearance reports what you observe directly.",
+          "terms": [
+            "v_tomodachi",
+            "p_kara",
+            {
+              "id": "v_kiku",
+              "form": "plain_past"
+            },
+            "p_ndesu",
+            "p_ga_but",
+            "v_ano",
+            "v_ryouriya",
+            "p_wa",
+            {
+              "id": "v_oishii",
+              "form": "plain_form"
+            },
+            "p_sou_da_hearsay"
+          ]
         }
       ]
     }
