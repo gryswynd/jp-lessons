@@ -1,11 +1,12 @@
 {
   "contentVersion": "1.0.0",
   "id": "N4.23",
-  "title": "Phase 4 Lesson 23: Physical Attributes & Progress",
+  "title": "Physical Attributes & Progress",
   "meta": {
-    "phase": 4,
-    "lesson": 23,
-    "focus": "Describing size, weight, length, and movement forward.",
+    "level": "N4",
+    "lesson_number": 23,
+    "focus": "Physical attributes (thick, heavy, short) and personal progress (advance, improve). Kanji: 太, 短, 重, 進.",
+    "estimated_minutes": 35,
     "kanji": [
       "太",
       "短",
@@ -16,9 +17,9 @@
   "newKanji": [
     {
       "kanji": "太",
-      "on": "たい / た",
+      "on": "たい",
       "kun": "ふと",
-      "meaning": "Fat / Thick",
+      "meaning": "Thick / Fat",
       "termId": "k_futo"
     },
     {
@@ -30,7 +31,7 @@
     },
     {
       "kanji": "重",
-      "on": "じゅう / ちょう",
+      "on": "じゅう",
       "kun": "おも / かさ",
       "meaning": "Heavy / Pile up",
       "termId": "k_omo"
@@ -47,64 +48,102 @@
     {
       "type": "warmup",
       "title": "Warm-Up Review（ウォームアップ）",
-      "instructions": "Ask your partner these questions using words you already know:",
+      "instructions": "Practice these sentences using vocabulary you already know.",
       "items": [
         {
-          "jp": "きのう、何を 食べましたか。",
-          "en": "What did you eat yesterday?",
+          "jp": "朝、走って きましたか。",
+          "en": "Did you go running this morning?",
           "terms": [
-            "v_kinou",
-            "v_nani",
+            "v_asa",
             {
-              "id": "v_taberu",
+              "id": "v_hashiru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
               "form": "polite_mashita"
-            }
+            },
+            "p_ka"
           ]
         },
         {
-          "jp": "本は 多いですか。",
-          "en": "Are there many books?",
+          "jp": "この 映画を 見ても いいですか。",
+          "en": "Is it okay to watch this film?",
           "terms": [
-            "k_moto",
-            "v_ooi"
-          ]
-        },
-        {
-          "jp": "漢字を 書くのが 好きですか。",
-          "en": "Do you like writing Kanji?",
-          "terms": [
-            "v_kanji",
-            "v_kaku",
-            "v_suki"
-          ]
-        },
-        {
-          "jp": "毎日 運動しますか。",
-          "en": "Do you exercise every day?",
-          "terms": [
-            "v_mainichi",
+            "v_kono",
+            "v_eiga",
+            "p_wo",
             {
-              "id": "v_undou",
-              "form": "polite_masu"
-            }
+              "id": "v_miru",
+              "form": "te_form"
+            },
+            "p_mo",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "jp": "体が 軽く なりましたね。",
+          "en": "Your body has become lighter, hasn't it.",
+          "terms": [
+            "v_karada",
+            "p_ga",
+            {
+              "id": "v_karui",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            },
+            "p_ne"
+          ]
+        },
+        {
+          "jp": "週まつに 映画を 見たり、音楽を 聞いたり しましたよ。",
+          "en": "On the weekend, I did things like watching films and listening to music.",
+          "terms": [
+            "v_shuumatsu",
+            "p_ni",
+            "v_eiga",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "tari_form"
+            },
+            "v_ongaku",
+            "p_wo",
+            {
+              "id": "v_kiku",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            },
+            "p_yo"
           ]
         }
       ]
     },
     {
       "type": "kanjiGrid",
-      "title": "New Kanji（新しい 漢字）",
+      "title": "New Kanji（新しい漢字）",
       "items": [
         {
           "kanji": "太",
           "on": "たい",
           "kun": "ふと",
-          "meaning": "Thick/Fat",
+          "meaning": "Thick / Fat",
           "terms": [
             "k_futo",
             "v_futoi",
+            "v_futoji",
             "v_futoru",
-            "v_futoji"
+            "v_sakibuto"
           ]
         },
         {
@@ -122,19 +161,20 @@
           "kanji": "重",
           "on": "じゅう",
           "kun": "おも / かさ",
-          "meaning": "Heavy",
+          "meaning": "Heavy / Pile up",
           "terms": [
             "k_omo",
             "v_omoi",
-            "v_taijuu",
-            "v_juudai"
+            "v_omosa",
+            "v_juudai",
+            "v_kasaneru"
           ]
         },
         {
           "kanji": "進",
           "on": "しん",
           "kun": "すす",
-          "meaning": "Advance",
+          "meaning": "Advance / Proceed",
           "terms": [
             "k_susu",
             "v_susumu",
@@ -145,256 +185,273 @@
     },
     {
       "type": "vocabList",
-      "title": "Vocabulary & Compounds（ことば）",
+      "title": "Vocabulary（単語）",
       "groups": [
         {
-          "label": "Attributes",
+          "label": "Weight & Size",
           "items": [
             "v_futoi",
             "v_futoru",
-            "v_mijikai",
             "v_omoi",
             "v_omosa",
-            "v_taijuu"
-          ]
-        },
-        {
-          "label": "Character/State",
-          "items": [
-            "v_tanki",
-            "v_juudai",
-            "v_futoji",
+            "v_mijikai",
             "v_sakibuto"
           ]
         },
         {
-          "label": "Action/Movement",
+          "label": "Character & Meaning",
+          "items": [
+            "v_futoji",
+            "v_juudai",
+            "v_tanki",
+            "v_kasaneru"
+          ]
+        },
+        {
+          "label": "Progress & Movement",
           "items": [
             "v_susumu",
             "v_shinpo",
-            "v_kasaneru"
+            "v_taijuu"
           ]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 1（会話）: Weight",
-      "context": "Discussing health.",
+      "title": "Conversation 1: Health Check",
+      "context": "Rikizo visits Yamamoto-sensei for a health check-up. She reviews his recent condition.",
       "lines": [
         {
-          "spk": "A",
-          "jp": "去年、少し 太りました。",
-          "en": "Last year, I gained a little weight.",
+          "spk": "やまもとせんせい",
+          "jp": "体重が 少し 重く なって きましたよ。",
+          "en": "Your body weight has become a little heavier.",
           "terms": [
-            "v_kyonen",
+            "char_yamamoto",
+            "v_taijuu",
+            "p_ga",
             "v_sukoshi",
             {
-              "id": "v_futoru",
-              "form": "polite_mashita"
-            }
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "そうですか。体が 重いですか。",
-          "en": "Is that so? Is your body heavy?",
-          "terms": [
-            "k_karada",
-            "v_omoi"
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "はい。体重が 重いです。",
-          "en": "Yes. My body weight is heavy.",
-          "terms": [
-            "v_taijuu",
-            "v_omoi"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "毎日、運動しましょう。",
-          "en": "Let's exercise every day.",
-          "terms": [
-            "v_mainichi",
-            {
-              "id": "v_undou",
-              "form": "polite_volitional_mashou"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 2（会話）: Short Temper",
-      "context": "Talking about work.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "社長は 短気ですね。",
-          "en": "The president is short-tempered, isn't he?",
-          "terms": [
-            "v_shachou",
-            "v_tanki"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "はい。時間が 短いですから、急ぎましょう。",
-          "en": "Yes. Because time is short, let's hurry.",
-          "terms": [
-            "v_jikan",
-            "v_mijikai",
-            {
-              "id": "v_isogu",
-              "form": "polite_volitional_mashou"
-            }
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "私は 早く 働きます。",
-          "en": "I will work fast.",
-          "terms": [
-            "k_watashi",
-            {
-              "id": "v_hayai",
+              "id": "v_omoi",
               "form": "adverbial"
             },
             {
-              "id": "v_hataraku",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "それは いいですね。",
-          "en": "That is good.",
-          "terms": [
-            "v_ii"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 3（会話）: Moving Forward",
-      "context": "Walking on a dark road.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "道が 暗いですから、前を よく 見て ください。",
-          "en": "Because the road is dark, please look well at the front.",
-          "terms": [
-            "k_michi",
-            "v_kurai",
-            "k_mae",
-            "v_yoku",
-            {
-              "id": "v_miru",
+              "id": "v_naru",
               "form": "te_form"
-            }
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "はい。少しずつ 進みます。",
-          "en": "Yes. I will advance little by little.",
-          "terms": [
-            "v_sukoshi",
+            },
             {
-              "id": "v_susumu",
-              "form": "polite_masu"
-            }
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
+            "p_yo"
           ]
         },
         {
-          "spk": "A",
-          "jp": "足が 重いですか。",
-          "en": "Are your legs heavy?",
+          "spk": "りきぞ",
+          "jp": "去年より 重く なったんですか。",
+          "en": "Did it become heavier than last year?",
           "terms": [
-            "k_ashi",
-            "v_omoi"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "いいえ、重くないです。山の上は 近いです。",
-          "en": "No, they are not heavy. The top of the mountain is near.",
-          "terms": [
+            "char_rikizo",
+            "v_kyonen",
+            "p_yori",
             {
               "id": "v_omoi",
-              "form": "plain_negative"
+              "form": "adverbial"
             },
-            "k_yama",
-            "k_ue",
-            "v_chikai"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 4（会話）: Writing & Paper",
-      "context": "Preparing a document.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "名前は 太字で 書いて ください。",
-          "en": "Please write the name in bold characters.",
-          "terms": [
-            "v_namae",
-            "v_futoji",
             {
-              "id": "v_kaku",
-              "form": "te_form"
-            }
+              "id": "v_naru",
+              "form": "plain_past"
+            },
+            "p_ndesu",
+            "p_ka"
           ]
         },
         {
-          "spk": "B",
-          "jp": "分かりました。重大な 意味が ありますか。",
-          "en": "Understood. Is there a serious meaning?",
+          "spk": "やまもとせんせい",
+          "jp": "重大な 問題では ありませんよ。毎日 少し 運動して ください。",
+          "en": "It is not a serious problem. Please do a little exercise every day.",
           "terms": [
+            "char_yamamoto",
+            {
+              "id": "v_juudai",
+              "form": "attributive_na"
+            },
+            "v_mondai",
+            "p_dewa",
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            },
+            "p_yo",
+            "v_mainichi",
+            "v_sukoshi",
+            "v_undou",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            "v_kudasai"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "分かりました。毎日 少し 歩いて いきますね。",
+          "en": "I understand. I will keep walking a little every day.",
+          "terms": [
+            "char_rikizo",
             {
               "id": "v_wakaru",
               "form": "polite_mashita"
             },
-            "v_juudai",
-            "v_imi",
+            "v_mainichi",
+            "v_sukoshi",
             {
-              "id": "v_aru",
+              "id": "v_aruku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iku",
               "form": "polite_masu"
+            },
+            "p_ne"
+          ]
+        },
+        {
+          "spk": "やまもとせんせい",
+          "jp": "体が 元気に なって いきますよ。",
+          "en": "Your body will become healthier.",
+          "terms": [
+            "char_yamamoto",
+            "v_karada",
+            "p_ga",
+            {
+              "id": "v_genki",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
+            "p_yo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation 2: Choosing a Pen",
+      "context": "Rikizo and Nana are at a stationery shop. He is looking for a suitable pen.",
+      "lines": [
+        {
+          "spk": "ナナ",
+          "jp": "どんな ペンを 使いたいですか。",
+          "en": "What kind of pen would you like to use?",
+          "terms": [
+            "char_nana",
+            "v_donna",
+            "v_pen",
+            "p_wo",
+            {
+              "id": "v_tsukau",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "太い ペンが いいです。重さも 軽い ほうが いいです。",
+          "en": "I want a thick pen. I also prefer one that is lighter in weight.",
+          "terms": [
+            "char_rikizo",
+            "v_futoi",
+            "v_pen",
+            "p_ga",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
+            "v_omosa",
+            "p_mo",
+            "v_karui",
+            "v_hou",
+            "p_ga",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
             }
           ]
         },
         {
-          "spk": "A",
-          "jp": "はい。大切な 手紙ですから、この 紙に 書きます。",
-          "en": "Yes. Because it is an important letter, I write on this paper.",
+          "spk": "ナナ",
+          "jp": "この ペンは どうですか。先太の 短い ペンですよ。",
+          "en": "How about this pen? It is a thick-tipped, short pen.",
           "terms": [
-            "v_taisetsu",
-            "v_tegami",
-            "v_kami",
+            "char_nana",
+            "v_kono",
+            "v_pen",
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka",
+            "v_sakibuto",
+            "p_no",
+            "v_mijikai",
+            "v_pen",
+            "g_desu",
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "太字も 書いても いいですか。",
+          "en": "Is it also okay to write in bold type?",
+          "terms": [
+            "char_rikizo",
+            "v_futoji",
+            "p_mo",
             {
               "id": "v_kaku",
-              "form": "polite_masu"
-            }
+              "form": "te_form"
+            },
+            "p_mo",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
+            "p_ka"
           ]
         },
         {
-          "spk": "B",
-          "jp": "では、本の 上に 重ねます。",
-          "en": "Then, I will stack it on top of the book.",
+          "spk": "ナナ",
+          "jp": "はい、だいじょうぶですよ。",
+          "en": "Yes, that is fine.",
           "terms": [
-            "k_moto",
-            "k_ue",
+            "char_nana",
+            "p_hai",
             {
-              "id": "v_kasaneru",
+              "id": "v_daijoubu",
+              "form": "polite_adj"
+            },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "ありがとう ございます。これに します。",
+          "en": "Thank you very much. I will take this one.",
+          "terms": [
+            "char_rikizo",
+            "p_arigatou_gozaimasu",
+            "v_kore",
+            "p_ni",
+            {
+              "id": "v_suru",
               "form": "polite_masu"
             }
           ]
@@ -402,55 +459,97 @@
       ]
     },
     {
-      "type": "reading",
-      "title": "Reading Practice 1: My Older Brother",
-      "passage": [
+      "type": "conversation",
+      "title": "Conversation 3: Japanese Progress",
+      "context": "Rikizo talks to Suzuki-sensei about his progress in learning Japanese.",
+      "lines": [
         {
-          "jp": "私の 兄は 体が 大きくて、足が 太いです。",
-          "en": "My older brother has a big body and his legs are thick (sturdy).",
+          "spk": "すずきせんせい",
+          "jp": "日本語の 進歩は どうですか。",
+          "en": "How is your progress in Japanese?",
           "terms": [
-            "k_watashi",
-            "k_ani",
-            "v_karada",
-            {
-              "id": "v_ookii",
-              "form": "te_form"
-            },
-            "k_ashi",
-            "v_futoi"
+            "char_suzuki",
+            "v_nihongo",
+            "p_no",
+            "v_shinpo",
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka"
           ]
         },
         {
-          "jp": "毎日 重い 物を 運びます。",
-          "en": "Every day he carries heavy things.",
+          "spk": "りきぞ",
+          "jp": "少し 進んで きました。むずかしいのに、話したいです。",
+          "en": "I have progressed a little. Even though it is difficult, I want to speak.",
           "terms": [
-            "v_mainichi",
-            "v_omoi",
-            "k_mono",
-            {
-              "id": "v_hakobu",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "jp": "兄は 短気ではありません。とても 親切です。",
-          "en": "My brother is not short-tempered. He is very kind.",
-          "terms": [
-            "k_ani",
-            "v_tanki",
-            "v_shinsetsu"
-          ]
-        },
-        {
-          "jp": "仕事で いつも 先へ 進んで います。",
-          "en": "He is always advancing ahead in his work.",
-          "terms": [
-            "v_shigoto",
-            "v_itsumo",
-            "k_saki",
+            "char_rikizo",
+            "v_sukoshi",
             {
               "id": "v_susumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
+            {
+              "id": "v_muzukashii",
+              "form": "plain_form"
+            },
+            "p_noni",
+            {
+              "id": "v_hanasu",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
+          ]
+        },
+        {
+          "spk": "すずきせんせい",
+          "jp": "少しずつ 重ねて、上手に なって きますよ。",
+          "en": "By stacking up little by little, you will come to be skilled.",
+          "terms": [
+            "char_suzuki",
+            "v_sukoshi",
+            "p_zutsu",
+            {
+              "id": "v_kasaneru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_jouzu",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "短気に ならないように しています。",
+          "en": "I am trying not to be short-tempered.",
+          "terms": [
+            "char_rikizo",
+            {
+              "id": "v_tanki",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "plain_negative"
+            },
+            "v_you_manner",
+            "p_ni",
+            {
+              "id": "v_suru",
               "form": "te_form"
             },
             {
@@ -458,50 +557,251 @@
               "form": "polite_masu"
             }
           ]
+        },
+        {
+          "spk": "すずきせんせい",
+          "jp": "それは 大切ですよ。また 来て ください。",
+          "en": "That is important. Please come again.",
+          "terms": [
+            "char_suzuki",
+            "v_sore",
+            "p_wa",
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            },
+            "p_yo",
+            "v_mata",
+            {
+              "id": "v_kuru",
+              "form": "te_form"
+            },
+            "v_kudasai"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "たくさん 話して くれて、ありがとうございます。",
+          "en": "Thank you for talking with me so much.",
+          "terms": [
+            "char_rikizo",
+            "v_takusan",
+            {
+              "id": "v_hanasu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kureru",
+              "form": "te_form"
+            },
+            "p_arigatou_gozaimasu"
+          ]
         }
-      ],
-      "questions": [
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation 4: Diet Talk (Casual)",
+      "context": "Ken and Rikizo are walking home. Ken brings up the topic of weight and fitness.",
+      "lines": [
         {
-          "q": "兄の 足は どうですか。",
-          "a": "太いです。",
+          "spk": "けん",
+          "jp": "体重、太った？",
+          "en": "Your weight — have you put on weight?",
           "terms": [
-            "k_ani",
-            "k_ashi",
-            "v_futoi"
+            "char_ken",
+            "v_taijuu",
+            {
+              "id": "v_futoru",
+              "form": "plain_past"
+            },
+            "p_ka"
           ]
         },
         {
-          "q": "兄は 短気ですか。",
-          "a": "いいえ、短気ではありません。",
+          "spk": "りきぞ",
+          "jp": "うん、少し 重くなったよ。重大な 問題だけど。",
+          "en": "Yeah, I've become a little heavier. Though it's a serious problem.",
           "terms": [
-            "k_ani",
-            "v_tanki"
+            "char_rikizo",
+            "v_un",
+            "v_sukoshi",
+            {
+              "id": "v_omoi",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "plain_past"
+            },
+            "p_yo",
+            {
+              "id": "v_juudai",
+              "form": "attributive_na"
+            },
+            "v_mondai",
+            "g_da",
+            "p_kedo"
           ]
         },
         {
-          "q": "兄は 毎日 何を しますか。",
-          "a": "重い 物を 運びます。",
+          "spk": "けん",
+          "jp": "そうだな。進歩の ために 毎日 運動する ほうが いいよ。",
+          "en": "That's right. For the sake of progress, it's better to exercise every day.",
           "terms": [
+            "char_ken",
+            "v_sou",
+            "g_da",
+            "p_na",
+            "v_shinpo",
+            "p_no",
+            "v_tame",
+            "p_ni",
             "v_mainichi",
-            "v_omoi",
-            "k_mono",
-            "v_hakobu"
+            "v_undou",
+            {
+              "id": "v_suru",
+              "form": "plain_form"
+            },
+            "v_hou",
+            "p_ga",
+            {
+              "id": "v_ii",
+              "form": "plain_form"
+            },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "分かってる。でも、短気に なりそうだよ。",
+          "en": "I know. But I feel like I'm going to get short-tempered.",
+          "terms": [
+            "char_rikizo",
+            {
+              "id": "v_wakaru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
+            "p_demo_but",
+            {
+              "id": "v_tanki",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "plain_appearance_sou"
+            },
+            "g_da",
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "けん",
+          "jp": "いっしょに 歩いて いこうよ。",
+          "en": "Let's go walking together.",
+          "terms": [
+            "char_ken",
+            "v_issho",
+            "p_ni",
+            {
+              "id": "v_aruku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iku",
+              "form": "plain_volitional"
+            },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "それが いいね。少しずつ 進もう。",
+          "en": "That sounds good. Let's advance little by little.",
+          "terms": [
+            "char_rikizo",
+            "v_sore",
+            "p_ga",
+            {
+              "id": "v_ii",
+              "form": "plain_form"
+            },
+            "p_ne",
+            "v_sukoshi",
+            "p_zutsu",
+            {
+              "id": "v_susumu",
+              "form": "plain_volitional"
+            }
           ]
         }
       ]
     },
     {
       "type": "reading",
-      "title": "Reading Practice 2: The Letter",
+      "title": "Reading 1: りきぞの 運動ルーティン",
       "passage": [
         {
-          "jp": "今日、父から 重い 本が 来ました。",
-          "en": "Today, heavy books came from my father.",
+          "jp": "りきぞは 毎日 運動して います。",
+          "en": "Rikizo exercises every day.",
           "terms": [
-            "v_kyou",
-            "k_chichi",
-            "v_omoi",
-            "k_moto",
+            "char_rikizo",
+            "p_wa",
+            "v_mainichi",
+            "v_undou",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "朝 少し 走って から、夜は 歩いて います。",
+          "en": "After running a little in the morning, he walks in the evening.",
+          "terms": [
+            "v_asa",
+            "v_sukoshi",
+            {
+              "id": "v_hashiru",
+              "form": "te_form"
+            },
+            "p_kara",
+            "v_yoru",
+            "p_wa",
+            {
+              "id": "v_aruku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "体重が 少しずつ 軽く なって きました。",
+          "en": "His body weight has been gradually becoming lighter.",
+          "terms": [
+            "v_taijuu",
+            "p_ga",
+            "v_sukoshi",
+            "p_zutsu",
+            {
+              "id": "v_karui",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "te_form"
+            },
             {
               "id": "v_kuru",
               "form": "polite_mashita"
@@ -509,231 +809,565 @@
           ]
         },
         {
-          "jp": "中に 手紙が 重ねて ありました。",
-          "en": "Inside, a letter was stacked (placed).",
+          "jp": "体が 強く なって きたのが 見えます。",
+          "en": "You can see that his body has been getting stronger.",
           "terms": [
-            "k_naka",
-            "v_tegami",
+            "v_karada",
+            "p_ga",
             {
-              "id": "v_kasaneru",
+              "id": "v_tsuyoi",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
               "form": "te_form"
             },
             {
-              "id": "v_aru",
-              "form": "polite_mashita"
+              "id": "v_kuru",
+              "form": "plain_past"
+            },
+            "p_no",
+            "p_ga",
+            {
+              "id": "v_mieru",
+              "form": "polite_masu"
             }
           ]
         },
         {
-          "jp": "「勉強は 進んで いますか。時間は 大切ですよ」",
-          "en": "'Is your study progressing? Time is important.'",
+          "jp": "進歩して いる りきぞは とても うれしいです。",
+          "en": "Rikizo, who is making progress, is very happy.",
           "terms": [
-            "v_benkyou",
+            "v_shinpo",
             {
-              "id": "v_susumu",
+              "id": "v_suru",
               "form": "te_form"
             },
             {
               "id": "v_iru",
-              "form": "polite_masu"
+              "form": "plain_form"
             },
-            "v_jikan",
-            "v_taisetsu"
-          ]
-        },
-        {
-          "jp": "手紙は 短いですが、楽しかったです。",
-          "en": "The letter was short, but it was fun (enjoyable).",
-          "terms": [
-            "v_tegami",
-            "v_mijikai",
+            "char_rikizo",
+            "p_wa",
+            "v_totemo",
             {
-              "id": "v_tanoshii",
-              "form": "plain_past"
+              "id": "v_ureshii",
+              "form": "polite_adj"
             }
           ]
         }
       ],
       "questions": [
         {
-          "q": "父から 何が 来ましたか。",
-          "a": "重い 本が 来ました。",
+          "q": "りきぞは 朝、何を しますか。",
+          "a": "少し 走ります。",
           "terms": [
-            "k_chichi",
-            "v_omoi",
-            "k_hon",
-            "v_kuru"
-          ]
-        },
-        {
-          "q": "手紙には 何と 書いて ありましたか。",
-          "a": "時間は 大切ですよ。",
-          "terms": [
-            "v_tegami",
-            "v_kaku",
-            "v_jikan",
-            "v_taisetsu"
-          ]
-        },
-        {
-          "q": "手紙は 長かったですか。",
-          "a": "いいえ、短かったです。",
-          "terms": [
-            "v_tegami",
-            "v_nagai",
-            "v_mijikai"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "drills",
-      "title": "Drill 1: Vocabulary",
-      "instructions": "Select the correct reading or meaning.",
-      "items": [
-        {
-          "kind": "mcq",
-          "q": "重い",
-          "choices": [
-            "omoi",
-            "futoi",
-            "warui",
-            "kurai"
-          ],
-          "answer": "omoi",
-          "terms": [
-            "v_omoi"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "短い",
-          "choices": [
-            "takai",
-            "mijikai",
-            "nagai",
-            "hikui"
-          ],
-          "answer": "mijikai",
-          "terms": [
-            "v_mijikai"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "進歩 [shinpo]",
-          "choices": [
-            "Progress",
-            "Walking",
-            "Running",
-            "Stopping"
-          ],
-          "answer": "Progress",
-          "terms": [
-            "v_shinpo"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "体重 [taijuu]",
-          "choices": [
-            "Body weight",
-            "Heavy body",
-            "Physical strength",
-            "Gymnastics"
-          ],
-          "answer": "Body weight",
-          "terms": [
-            "v_taijuu"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "先太 [sakibuto]",
-          "choices": [
-            "Thick at the tip",
-            "Thin at the tip",
-            "Red tip",
-            "Broken tip"
-          ],
-          "answer": "Thick at the tip",
-          "terms": [
-            "v_sakibuto"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "drills",
-      "title": "Drill 2: Fill in the Blank",
-      "instructions": "Select the word that fits.",
-      "items": [
-        {
-          "kind": "mcq",
-          "q": "この 線は ______ 書いて ください。",
-          "choices": [
-            "太く",
-            "短気",
-            "重く",
-            "進んで"
-          ],
-          "answer": "太く",
-          "terms": [
-            "k_sen",
+            "char_rikizo",
+            "p_wa",
+            "v_asa",
+            "v_nani",
+            "p_wo",
             {
-              "id": "v_futoi",
-              "form": "ku_form"
+              "id": "v_suru",
+              "form": "polite_masu"
             },
-            "v_kaku"
+            "p_ka",
+            "v_sukoshi",
+            {
+              "id": "v_hashiru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "q": "体重は どう なって きましたか。",
+          "a": "少しずつ 軽く なって きました。",
+          "terms": [
+            "v_taijuu",
+            "p_wa",
+            "v_dou",
+            {
+              "id": "v_naru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
+            "p_ka",
+            "v_sukoshi",
+            "p_zutsu",
+            {
+              "id": "v_karui",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading 2: 少しずつ 進むこと",
+      "passage": [
+        {
+          "jp": "進歩する ためには 少しずつ 重ねる ことが 大切です。",
+          "en": "In order to make progress, it is important to stack up little by little.",
+          "terms": [
+            "v_shinpo",
+            {
+              "id": "v_suru",
+              "form": "plain_form"
+            },
+            "v_tame",
+            "p_ni",
+            "p_wa",
+            "v_sukoshi",
+            "p_zutsu",
+            {
+              "id": "v_kasaneru",
+              "form": "plain_form"
+            },
+            "v_koto",
+            "p_ga",
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            }
+          ]
+        },
+        {
+          "jp": "短気に ならないで、ゆっくり 進んで いく ことが 大切です。",
+          "en": "Without being short-tempered, advancing slowly is important.",
+          "terms": [
+            {
+              "id": "v_tanki",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_negative_te"
+            },
+            "v_yukkuri",
+            {
+              "id": "v_susumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iku",
+              "form": "plain_form"
+            },
+            "v_koto",
+            "p_ga",
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            }
+          ]
+        },
+        {
+          "jp": "毎日 重ねる ことで、問題が 小さく なります。",
+          "en": "By building up every day, problems become smaller.",
+          "terms": [
+            "v_mainichi",
+            {
+              "id": "v_kasaneru",
+              "form": "plain_form"
+            },
+            "v_koto",
+            "p_de",
+            "v_mondai",
+            "p_ga",
+            {
+              "id": "v_chiisai",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "自分の 進歩を 見て、りきぞは 楽しく なって きました。",
+          "en": "Looking at his own progress, Rikizo has come to feel happy.",
+          "terms": [
+            "v_jibun",
+            "p_no",
+            "v_shinpo",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "te_form"
+            },
+            "char_rikizo",
+            "p_wa",
+            {
+              "id": "v_tanoshii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "進歩する ためには 何が 大切ですか。",
+          "a": "少しずつ 重ねる ことが 大切です。",
+          "terms": [
+            "v_shinpo",
+            {
+              "id": "v_suru",
+              "form": "plain_form"
+            },
+            "v_tame",
+            "p_ni",
+            "p_wa",
+            "v_nani",
+            "p_ga",
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            },
+            "p_ka",
+            "v_sukoshi",
+            "p_zutsu",
+            {
+              "id": "v_kasaneru",
+              "form": "plain_form"
+            },
+            "v_koto",
+            "p_ga",
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            }
+          ]
+        },
+        {
+          "q": "りきぞは どうして 楽しく なって きましたか。",
+          "a": "自分の 進歩を 見た からです。",
+          "terms": [
+            "char_rikizo",
+            "p_wa",
+            "v_doushite",
+            {
+              "id": "v_tanoshii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
+            "p_ka",
+            "v_jibun",
+            "p_no",
+            "v_shinpo",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "plain_past"
+            },
+            "p_kara_because",
+            "g_desu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Kanji Readings",
+      "instructions": "Choose the correct reading for each kanji word.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "[体重] の よみかたは？",
+          "choices": [
+            "たいじゅう",
+            "たいちょう",
+            "からだじゅう",
+            "からだおも"
+          ],
+          "answer": "たいじゅう"
+        },
+        {
+          "kind": "mcq",
+          "q": "[短い] の よみかたは？",
+          "choices": [
+            "みじかい",
+            "ながい",
+            "かたい",
+            "おもい"
+          ],
+          "answer": "みじかい"
+        },
+        {
+          "kind": "mcq",
+          "q": "[進歩] の よみかたは？",
+          "choices": [
+            "しんぽ",
+            "しんぱ",
+            "すすぽ",
+            "すすめ"
+          ],
+          "answer": "しんぽ"
+        },
+        {
+          "kind": "mcq",
+          "q": "[重大] の よみかたは？",
+          "choices": [
+            "じゅうだい",
+            "おもだい",
+            "じゅうたい",
+            "おもたい"
+          ],
+          "answer": "じゅうだい"
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Vocabulary",
+      "instructions": "Choose the word that best completes the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "体重が 重く なることを（　）と 言います。",
+          "choices": [
+            "太る",
+            "進む",
+            "重ねる",
+            "重大な"
+          ],
+          "answer": "太る",
+          "terms": [
+            "v_taijuu",
+            "p_ga",
+            {
+              "id": "v_omoi",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "plain_form"
+            },
+            "v_koto",
+            "p_wo",
+            {
+              "id": "v_futoru",
+              "form": "plain_form"
+            },
+            "p_to_quote",
+            {
+              "id": "v_iu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
-          "q": "彼は ______ ですから、すぐ 怒ります。",
+          "q": "ペンの（　）が 軽い ほうが いいです。",
+          "choices": [
+            "重さ",
+            "進歩",
+            "短気",
+            "太字"
+          ],
+          "answer": "重さ",
+          "terms": [
+            "v_pen",
+            "p_no",
+            "v_omosa",
+            "p_ga",
+            "v_karui",
+            "v_hou",
+            "p_ga",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "ゆっくり 前に（　）ことが 大切です。",
+          "choices": [
+            "進む",
+            "太る",
+            "重ねる",
+            "短い"
+          ],
+          "answer": "進む",
+          "terms": [
+            "v_yukkuri",
+            "v_mae",
+            "p_ni",
+            {
+              "id": "v_susumu",
+              "form": "plain_form"
+            },
+            "v_koto",
+            "p_ga",
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "（　）で、毎日 問題が あります。",
           "choices": [
             "短気",
-            "元気",
-            "病気",
-            "一本気"
+            "先太",
+            "太字",
+            "重大"
           ],
           "answer": "短気",
           "terms": [
             "v_tanki",
-            "v_sugu",
-            "v_okoru"
+            "p_de",
+            "v_mainichi",
+            "v_mondai",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 3: Grammar & Forms",
+      "instructions": "Choose the correct grammar form to complete the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "日本語が 上手に（　）きました。",
+          "choices": [
+            "なって",
+            "なり",
+            "なる",
+            "なった"
+          ],
+          "answer": "なって",
+          "terms": [
+            "v_nihongo",
+            "p_ga",
+            {
+              "id": "v_jouzu",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
-          "q": "これは ______ 問題です。",
+          "q": "むずかしいのに、毎日（　）います。",
           "choices": [
-            "重大な",
-            "太い",
-            "短い",
-            "重い"
+            "勉強して",
+            "勉強した",
+            "勉強する",
+            "勉強しない"
           ],
-          "answer": "重大な",
+          "answer": "勉強して",
           "terms": [
-            "v_juudai",
-            "v_mondai"
+            {
+              "id": "v_muzukashii",
+              "form": "plain_form"
+            },
+            "p_noni",
+            "v_mainichi",
+            "v_benkyou",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
-          "q": "本を たくさん ______ 。",
+          "q": "太字で（　）も いいですか。",
           "choices": [
-            "重ねました",
-            "太りました",
-            "進みました",
-            "重かったです"
+            "書いて",
+            "書いた",
+            "書く",
+            "書き"
           ],
-          "answer": "重ねました",
+          "answer": "書いて",
           "terms": [
-            "k_hon",
-            "v_takusan",
+            "v_futoji",
+            "p_de",
+            {
+              "id": "v_kaku",
+              "form": "te_form"
+            },
+            "p_mo",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "進歩（　）ために、少しずつ 重ねています。",
+          "choices": [
+            "する",
+            "した",
+            "して",
+            "しない"
+          ],
+          "answer": "する",
+          "terms": [
+            "v_shinpo",
+            {
+              "id": "v_suru",
+              "form": "plain_form"
+            },
+            "v_tame",
+            "p_ni",
+            "v_sukoshi",
+            "p_zutsu",
             {
               "id": "v_kasaneru",
-              "form": "polite_mashita"
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
             }
           ]
         }
