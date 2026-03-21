@@ -211,7 +211,8 @@
           "items": [
             "v_shiken",
             "v_shishoku",
-            "v_kokoromi"
+            "v_kokoromi",
+            "v_tamesu"
           ]
         },
         {
@@ -281,8 +282,9 @@
             "v_kyou",
             "p_wa",
             "v_yoku",
+            "v_benkyou",
             {
-              "id": "v_benkyou",
+              "id": "v_suru",
               "form": "te_form"
             },
             {
@@ -300,8 +302,9 @@
             "char_rikizo",
             "p_hai",
             "v_takusan",
+            "v_benkyou",
             {
-              "id": "v_benkyou",
+              "id": "v_suru",
               "form": "polite_mashita"
             },
             "v_ii",
@@ -425,8 +428,9 @@
             "p_ni",
             "v_kyoushitsu",
             "p_de",
+            "v_benkyou",
             {
-              "id": "v_benkyou",
+              "id": "v_suru",
               "form": "polite_volitional_mashou"
             }
           ]
@@ -485,7 +489,7 @@
             },
             "p_yo",
             {
-              "id": "v_suru",
+              "id": "v_tamesu",
               "form": "te_form"
             },
             {
@@ -634,8 +638,9 @@
             "v_chikaishitsu",
             "p_de",
             "v_yoku",
+            "v_benkyou",
             {
-              "id": "v_benkyou",
+              "id": "v_suru",
               "form": "te_form"
             },
             {
@@ -654,8 +659,9 @@
             },
             "p_kara_because",
             "v_yoku",
+            "v_benkyou",
             {
-              "id": "v_benkyou",
+              "id": "v_suru",
               "form": "te_form"
             },
             {
@@ -671,6 +677,10 @@
             "v_shiken",
             "p_wa",
             "v_gozen",
+            {
+              "counter": "ji",
+              "n": 9
+            },
             "p_ni",
             {
               "id": "v_hajimaru",
@@ -709,15 +719,17 @@
             "p_wa",
             "v_doko",
             "p_de",
+            "v_benkyou",
             {
-              "id": "v_benkyou",
+              "id": "v_suru",
               "form": "polite_masu"
             },
             "p_ka",
             "v_chikaishitsu",
             "p_de",
+            "v_benkyou",
             {
-              "id": "v_benkyou",
+              "id": "v_suru",
               "form": "te_form"
             },
             {
@@ -740,6 +752,10 @@
             },
             "p_ka",
             "v_gozen",
+            {
+              "counter": "ji",
+              "n": 9
+            },
             "p_ni"
           ]
         }
@@ -760,8 +776,9 @@
             "p_de",
             "v_eigo",
             "p_wo",
+            "v_benkyou",
             {
-              "id": "v_benkyou",
+              "id": "v_suru",
               "form": "polite_mashita"
             }
           ]
@@ -799,7 +816,10 @@
               "id": "v_suru",
               "form": "polite_mashita"
             },
-            "v_iroiro",
+            {
+              "id": "v_iroiro",
+              "form": "attributive_na"
+            },
             "v_kokoromi",
             "p_wo",
             {
@@ -820,7 +840,10 @@
           "terms": [
             "v_tanoshii",
             "v_taiken",
-            "g_desu",
+            {
+              "id": "g_desu",
+              "form": "polite_past_copula"
+            },
             "v_mata",
             {
               "id": "v_kuru",
@@ -839,8 +862,9 @@
             "p_de",
             "v_eigo",
             "p_wo",
+            "v_benkyou",
             {
-              "id": "v_benkyou",
+              "id": "v_suru",
               "form": "polite_mashita"
             },
             "p_ka",
@@ -1060,8 +1084,9 @@
             "v_tame",
             "p_ni",
             "v_mainichi",
+            "v_benkyou",
             {
-              "id": "v_benkyou",
+              "id": "v_suru",
               "form": "te_form"
             },
             {
