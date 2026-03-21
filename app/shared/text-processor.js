@@ -195,8 +195,8 @@
         var lastReadingChar = newReading.slice(-1);
         var map = GODAN_MAPS[rule.map];
         if (map && map[lastChar]) {
-          newSurface = newSurface.slice(0, -1) + map[lastChar];
-          newReading = newReading.slice(0, -1) + (map[lastReadingChar] || map[lastChar]);
+          newSurface = newSurface.slice(0, -1) + map[lastChar] + (rule.add || '');
+          newReading = newReading.slice(0, -1) + (map[lastReadingChar] || map[lastChar]) + (rule.add || '');
         }
       }
 

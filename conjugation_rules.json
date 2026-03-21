@@ -577,6 +577,38 @@
       }
     }
   },
+  "casual_te_iru": {
+    "label": "Casual Progressive (〜てる)",
+    "description": "Contracted casual form of 〜ている. The い of いる is dropped in fast/casual speech. Expresses ongoing action or resultant state informally. Introduced as a natural variant of ている at G9.",
+    "introducedIn": "G9",
+    "rules": {
+      "godan": {
+        "type": "godan_euphonic",
+        "map": "te_form",
+        "add": "る"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "てる"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "してる",
+        "reading": "してる"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来てる",
+        "reading": "きてる"
+      },
+      "irr_iku": {
+        "type": "replace",
+        "surface": "行ってる",
+        "reading": "いってる"
+      }
+    }
+  },
   "potential": {
     "label": "Potential Form",
     "description": "Expresses ability (can do).",
