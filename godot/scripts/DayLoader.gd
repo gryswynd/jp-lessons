@@ -1,6 +1,6 @@
 extends Node2D
 ## Main scene controller. Loads day.json data, creates map, NPCs, objects,
-## and wires up the player interaction system.
+## and wires up the player interaction system including scripted events.
 
 const NPC_SCENE := preload("res://scenes/npc.tscn")
 const OBJECT_SCENE := preload("res://scenes/interactive_object.tscn")
@@ -22,6 +22,7 @@ const COUNTER_RULES := "res://assets/data/counter_rules.json"
 @onready var message_popup: Label = $MessagePopup
 
 var portrait_map: Dictionary = {}
+var npc_backgrounds: Dictionary = {}  # npc_name → background key
 
 
 func _ready() -> void:
@@ -63,6 +64,20 @@ func _build_world(data: Dictionary) -> void:
 	if ResourceLoader.exists(col_path):
 		var col_tex := load(col_path) as Texture2D
 		collision_map.build_from_texture(col_tex)
+
+	# --- Conversation Backgrounds ---
+	var bg_map: Dictionary = data["assets"].get("convoBackgrounds", {})
+	for bg_key in bg_map:
+		var bg_path := "res://assets/backgrounds/" + str(bg_map[bg_key]).get_file()
+		if ResourceLoader.exists(bg_path):
+			GameManager.convo_backgrounds[bg_key] = load(bg_path) as Texture2D
+
+	# --- Alt Portraits ---
+	var alt_map: Dictionary = data.get("altPortraits", {})
+	for alt_key in alt_map:
+		var alt_path := "res://assets/day-data/sprites/" + str(alt_map[alt_key]).get_file()
+		if ResourceLoader.exists(alt_path):
+			GameManager.alt_portraits[alt_key] = load(alt_path) as Texture2D
 
 	# --- Player Start ---
 	var start_data: Dictionary = data["playerStart"]
@@ -108,6 +123,10 @@ func _build_world(data: Dictionary) -> void:
 			portrait_tex = load(portrait_path) as Texture2D
 			portrait_map[npc_data["name"]] = portrait_tex
 
+		# Store per-NPC background key
+		if npc_data.has("convoBackground"):
+			npc_backgrounds[npc_data["name"]] = npc_data["convoBackground"]
+
 		npc_instance.setup(npc_data, sprite_tex, portrait_tex)
 
 	# --- Interactive Objects ---
@@ -129,12 +148,15 @@ func _build_world(data: Dictionary) -> void:
 	dialogue_overlay.set_portrait_map(portrait_map)
 
 
+# --- Interaction Routing ---
+
 func _on_player_interact() -> void:
 	if GameManager.in_conversation:
 		return
 
 	var best_target = null
 	var best_dist := 100.0
+	var best_type := ""
 
 	var facing_point: Vector2 = player.get_facing_point()
 
@@ -146,18 +168,147 @@ func _on_player_interact() -> void:
 		if dist < best_dist:
 			best_dist = dist
 			best_target = npc
+			best_type = "npc"
 
 	# Check objects (use facing point for directional check)
 	for obj in objects_container.get_children():
 		if not (obj is Area2D):
 			continue
+		# Skip disabled doors
+		if obj.is_door and GameManager.is_door_disabled(obj.object_name):
+			continue
 		var dist: float = facing_point.distance_to(obj.global_position)
 		if dist < best_dist:
 			best_dist = dist
 			best_target = obj
+			best_type = "object"
 
-	if best_target != null and best_target.has_method("interact"):
-		best_target.interact()
+	if best_target == null:
+		return
+
+	if best_type == "npc":
+		_handle_npc_interaction(best_target)
+	elif best_type == "object":
+		_handle_object_interaction(best_target)
+
+
+func _handle_npc_interaction(npc) -> void:
+	GameManager.inspected[npc.npc_name] = true
+	var convo: Array = npc.conversation
+	var bg_key: String = npc_backgrounds.get(npc.npc_name, "")
+	var options := {"background": bg_key}
+
+	# Post-void one-time conversations
+	if GameManager.void_seen and not GameManager.void_asked.has(npc.npc_name):
+		GameManager.void_asked[npc.npc_name] = true
+		var shocked: Texture2D = GameManager.alt_portraits.get("meShocked")
+
+		if npc.npc_name == "mom":
+			convo = [
+				{"speaker": "りきぞ", "jp": "お母さん…！", "en": "Mom…!"},
+				{"speaker": "りきぞ", "jp": "そとに…なにも…！", "en": "Outside… nothing…!"},
+				{"speaker": "mom", "jp": "なに？", "en": "What?"},
+				{"speaker": "mom", "jp": "りきぞはいい先生ですよ。", "en": "Rikizo, you're a good teacher."},
+				{"speaker": "りきぞ", "jp": "…はい。", "en": "…OK."}
+			]
+			if shocked:
+				options["portrait_overrides"] = {"りきぞ": shocked}
+			GameManager.increment_tracker("paranoia", "", 1)
+
+		elif npc.npc_name == "dad":
+			convo = [
+				{"speaker": "りきぞ", "jp": "お父さん！", "en": "Dad!"},
+				{"speaker": "りきぞ", "jp": "そとに…なにもない…！", "en": "Outside… there's nothing…!"},
+				{"speaker": "dad", "jp": "ん？", "en": "Hm?"},
+				{"speaker": "dad", "jp": "りきぞ、先生ですよ。", "en": "Rikizo, you're a teacher."},
+				{"speaker": "りきぞ", "jp": "…はい。", "en": "…OK."}
+			]
+			if shocked:
+				options["portrait_overrides"] = {"りきぞ": shocked}
+			GameManager.increment_tracker("paranoia", "", 1)
+
+		GameManager._save()
+	else:
+		# Normal conversation — increment relationship
+		GameManager.increment_tracker("relationships", npc.npc_name, 1)
+
+	GameManager.start_conversation(convo, options)
+
+
+func _handle_object_interaction(obj) -> void:
+	GameManager.inspected[obj.object_name] = true
+
+	if obj.is_door:
+		_handle_door(obj)
+	elif obj.object_name == "Toilet" and GameManager.is_door_open("Bath_Door"):
+		# Dad yells if you use the toilet with the door open
+		var angry_dad: Texture2D = GameManager.alt_portraits.get("dadAngry")
+		var options := {"background": "living"}
+		if angry_dad:
+			options["portrait_overrides"] = {"dad": angry_dad}
+		GameManager.start_conversation([
+			{"speaker": "dad", "jp": "おい！ドアをしめて！", "en": "Hey! Close the door!"},
+			{"speaker": "りきぞ", "jp": "す、すみません…！", "en": "S-sorry…!"}
+		], options)
+		GameManager.increment_tracker("annoyance", "dad", 1)
+	elif not obj.message_data.is_empty():
+		GameManager.show_message(obj.message_data)
+
+
+func _handle_door(obj) -> void:
+	# Front door: void scene
+	if obj.object_name == "Front_Door" and not GameManager.is_door_disabled("Front_Door"):
+		GameManager.disable_door("Front_Door")
+		var shocked: Texture2D = GameManager.alt_portraits.get("meShocked")
+		var options := {
+			"background": "void",
+			"on_end": func():
+				GameManager.doors["Front_Door"]["open"] = false
+				obj._update_door_blocker()
+				obj._update_label()
+				GameManager.void_seen = true
+				GameManager.increment_tracker("paranoia", "", 2)
+				GameManager._save()
+		}
+		if shocked:
+			options["portrait_overrides"] = {"りきぞ": shocked}
+		GameManager.start_conversation([
+			{"speaker": "りきぞ", "jp": "え…？", "en": "Huh…?"},
+			{"speaker": "りきぞ", "jp": "な…なにもない…！", "en": "Th-there's nothing there…!"},
+			{"speaker": "りきぞ", "jp": "なんですか、これ…？！", "en": "What is this…?!"}
+		], options)
+		return
+
+	# Disabled door — do nothing
+	if GameManager.is_door_disabled(obj.object_name):
+		return
+
+	# Normal door toggle
+	var now_open := GameManager.toggle_door(obj.object_name)
+	var status := "opened" if now_open else "closed"
+	GameManager.show_message("%s %s." % [obj.object_name, status])
+	obj._update_door_blocker()
+	obj._update_label()
+
+	# Push player out if door closed on them
+	if not now_open:
+		_push_player_from_door(obj)
+
+
+func _push_player_from_door(obj) -> void:
+	var door_center := obj.global_position
+	var px := player.global_position.x
+	var py := player.global_position.y
+	var half_w := obj.obj_width * 0.5
+	var half_h := obj.obj_height * 0.5
+
+	if px + 12 > door_center.x - half_w and px - 12 < door_center.x + half_w \
+		and py + 10 > door_center.y - half_h and py - 20 < door_center.y + half_h:
+		# Push to nearest side (above or below)
+		if py < door_center.y:
+			player.global_position.y = door_center.y - half_h - 21
+		else:
+			player.global_position.y = door_center.y + half_h + 11
 
 
 func _on_message_shown(msg) -> void:
