@@ -560,6 +560,9 @@ window.GameModule = (function() {
         imagesToLoad['meConvo'] = getDayAssetUrl(dayData.meConvoPortrait);
       }
 
+      // Door sprite
+      imagesToLoad['door'] = getSharedAssetUrl('door.png');
+
       let loadedImages = 0;
       const totalImages = Object.keys(imagesToLoad).length;
 
@@ -1085,6 +1088,21 @@ window.GameModule = (function() {
         // Draw map
         if (game.images.map) {
           ctx.drawImage(game.images.map, -game.camera.x, -game.camera.y);
+        }
+
+        // Draw closed doors
+        if (game.images.door) {
+          for (let obj of game.interactiveObjects) {
+            if (obj.isDoor && !game.doors[obj.name].open) {
+              ctx.drawImage(
+                game.images.door,
+                obj.x - game.camera.x,
+                obj.y - game.camera.y,
+                obj.width,
+                obj.height
+              );
+            }
+          }
         }
 
         // Draw NPCs
