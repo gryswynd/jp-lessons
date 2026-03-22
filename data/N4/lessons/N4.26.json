@@ -228,7 +228,7 @@
       "context": "りきぞ asks やまもと先生 for advice on how to improve his study methods.",
       "lines": [
         {
-          "speaker": "りきぞ",
+          "spk": "りきぞ",
           "jp": "やまもと先生、正月が 来たら、どんな 考え方で 新しく 始めれば いいですか。",
           "en": "Yamamoto-sensei, when New Year comes, what kind of thinking should I use to start fresh?",
           "terms": [
@@ -260,7 +260,7 @@
           ]
         },
         {
-          "speaker": "やまもと先生",
+          "spk": "やまもと先生",
           "jp": "正しい 考え方で 始めれば、今年が よく 進みますよ。",
           "en": "If you start with the right way of thinking, this year will progress well.",
           "terms": [
@@ -282,23 +282,21 @@
           ]
         },
         {
-          "speaker": "りきぞ",
+          "spk": "りきぞ",
           "jp": "どんな 考えが 正しい ですか。",
           "en": "What kind of thinking is correct?",
           "terms": [
             "v_donna",
             "v_kangae",
             "p_ga",
-            {
-              "id": "v_tadashii",
-              "form": "polite_adj"
-            },
+            "v_tadashii",
+            "g_desu",
             "p_ka",
             "char_rikizo"
           ]
         },
         {
-          "speaker": "やまもと先生",
+          "spk": "やまもと先生",
           "jp": "悪い 考え方を 正して、毎日 少しずつ 進む 考え方が 大切ですよ。",
           "en": "A way of thinking that corrects bad thinking and advances little by little each day is important.",
           "terms": [
@@ -326,7 +324,7 @@
           ]
         },
         {
-          "speaker": "りきぞ",
+          "spk": "りきぞ",
           "jp": "分かりました。正しい 考え方で 進みます。",
           "en": "I understand. I will proceed with the correct way of thinking.",
           "terms": [
@@ -352,7 +350,7 @@
       "context": "りきぞ asks やまかわ whether it is okay to proceed with a questionable approach; やまかわ warns him it is not, and guides him to correct it.",
       "lines": [
         {
-          "speaker": "りきぞ",
+          "spk": "りきぞ",
           "jp": "やまかわさん、この 悪い 考え方が 問題ですか。",
           "en": "Yamakawa-san, is this bad way of thinking a problem?",
           "terms": [
@@ -369,7 +367,7 @@
           ]
         },
         {
-          "speaker": "やまかわ",
+          "spk": "やまかわ",
           "jp": "りきぞさん、悪質な 方は いけませんよ。",
           "en": "Rikizo, a malicious way of doing things is not okay.",
           "terms": [
@@ -390,7 +388,7 @@
           ]
         },
         {
-          "speaker": "りきぞ",
+          "spk": "りきぞ",
           "jp": "すみません。正しい 方で 進みます。",
           "en": "I'm sorry. I will proceed the correct way.",
           "terms": [
@@ -406,7 +404,7 @@
           ]
         },
         {
-          "speaker": "やまかわ",
+          "spk": "やまかわ",
           "jp": "悪い 方で 進むと、もっと 問題が 大きく なりますよ。",
           "en": "If you proceed with the bad way, the problem will become even bigger.",
           "terms": [
@@ -434,7 +432,7 @@
           ]
         },
         {
-          "speaker": "りきぞ",
+          "spk": "りきぞ",
           "jp": "分かりました。もっと 注意して 進みます。",
           "en": "I understand. I will proceed with more care.",
           "terms": [
@@ -463,7 +461,7 @@
       "context": "りきぞ and けん, close friends, chat casually about New Year's resolutions and plans.",
       "lines": [
         {
-          "speaker": "けん",
+          "spk": "けん",
           "jp": "りきぞ、その 見方は ちょっと 悪いんだ よ。",
           "en": "Rikizo, that viewpoint is a bit bad, you know.",
           "terms": [
@@ -482,7 +480,7 @@
           ]
         },
         {
-          "speaker": "りきぞ",
+          "spk": "りきぞ",
           "jp": "私は 正しいと 言ったけど。",
           "en": "I said it was correct though.",
           "terms": [
@@ -499,7 +497,7 @@
           ]
         },
         {
-          "speaker": "けん",
+          "spk": "けん",
           "jp": "考え方を 正さなければ いけないよ。",
           "en": "You have to correct your way of thinking, you know.",
           "terms": [
@@ -518,7 +516,7 @@
           ]
         },
         {
-          "speaker": "りきぞ",
+          "spk": "りきぞ",
           "jp": "なるほど。じゃ、正しい 見方を もっと 考える よ。",
           "en": "I see. Then, I'll think more about the correct viewpoint.",
           "terms": [
@@ -544,7 +542,7 @@
       "context": "りきぞ and コナー, close classmates, casually debate what is right and wrong about a recent situation.",
       "lines": [
         {
-          "speaker": "コナー",
+          "spk": "コナー",
           "jp": "正月に なったら、何を 始める？",
           "en": "When it becomes New Year, what will you start?",
           "terms": [
@@ -565,7 +563,7 @@
           ]
         },
         {
-          "speaker": "りきぞ",
+          "spk": "りきぞ",
           "jp": "悪い 考え方を 正して、もっと 正しい 考えを 持ちたい な。",
           "en": "I want to correct my bad thinking and hold more correct thoughts.",
           "terms": [
@@ -589,8 +587,8 @@
           ]
         },
         {
-          "speaker": "コナー",
-          "jp": "いい 考えだな。私も 正しい 方で 進みたい よ。",
+          "spk": "コナー",
+          "jp": "いい 考え だな。私も 正しい 方で 進みたい よ。",
           "en": "That's a good idea. I also want to advance the right way.",
           "terms": [
             "v_ii",
@@ -611,7 +609,7 @@
           ]
         },
         {
-          "speaker": "りきぞ",
+          "spk": "りきぞ",
           "jp": "二人で 正しい 考え方を 大切に して いこう！",
           "en": "Let's both value correct thinking together!",
           "terms": [
@@ -641,9 +639,11 @@
     {
       "type": "reading",
       "title": "Reading 1: The Correct Way of Thinking（正しい考え方）",
-      "passage": "正しい 考え方は、毎日 とても 大切です。悪い 考えを 持って いると、問題が 大きく なります。正月が 来たら、自分の 考えを 正す ことが 大切です。やまもと先生は「正道を 歩く ことが 大切だ」と 言っています。悪質な 考え方は 正して 行かなければ いけません。正しい 見方で 世界を 見ると、新しい 考えが 生まれます。",
-      "en": "A correct way of thinking is very important every day. If you hold bad thoughts, problems become big. When New Year comes, correcting your own thinking is important. Yamamoto-sensei says, 'Walking the correct path is important.' A malicious way of thinking must be corrected. When you look at the world with the correct viewpoint, new ideas are born.",
-      "terms": [
+      "passage": [
+        {
+          "jp": "正しい 考え方は、毎日 とても 大切です。悪い 考えを 持って いると、問題が 大きく なります。正月が 来たら、自分の 考えを 正す ことが 大切です。やまもと先生は「正道を 歩く ことが 大切だ」と 言っています。悪質な 考え方は 正して 行かなければ いけません。正しい 見方で 世界を 見ると、新しい 考えが 生まれます。",
+          "en": "A correct way of thinking is very important every day. If you hold bad thoughts, problems become big. When New Year comes, correcting your own thinking is important. Yamamoto-sensei says, 'Walking the correct path is important.' A malicious way of thinking must be corrected. When you look at the world with the correct viewpoint, new ideas are born.",
+          "terms": [
         "v_tadashii",
         "v_kangaekata",
         "p_wa",
@@ -756,14 +756,18 @@
           "id": "v_umareru",
           "form": "polite_masu"
         }
+          ]
+        }
       ]
     },
     {
       "type": "reading",
       "title": "Reading 2: Good and Bad Thinking（正しい考えと悪い考え）",
-      "passage": "人は 毎日 たくさんの 考えを 持ちます。正しい 考えを 持つためには、悪質な 考え方に 注意しなければ いけません。考え方が 悪ければ、見方も 悪く なります。やまもと先生は、学生に「悪質な 考えに 注意して ください」と 言いました。りきぞは 先生の 意見を 聞いて、自分の 見方を 正そうと 言いました。正道を 歩く 人は、悪い 考えより 正しい 考えの 方が 大切だと 分かります。毎日 考えを 正したり 意見を 聞いたり する ことが 大切です。",
-      "en": "People hold many thoughts every day. In order to hold correct thinking, you must be careful of malicious ways of thinking. If your way of thinking is bad, your viewpoint will also become bad. Yamamoto-sensei said to the students, 'Be careful of malicious thinking.' Rikizo heard the teacher's opinion and said he would correct his viewpoint. A person who walks the correct path understands that correct thinking is more important than bad thinking. It is important to both correct your thinking and listen to opinions every day.",
-      "terms": [
+      "passage": [
+        {
+          "jp": "人は 毎日 たくさんの 考えを 持ちます。正しい 考えを 持つためには、悪質な 考え方に 注意しなければ いけません。考え方が 悪ければ、見方も 悪く なります。やまもと先生は、学生に「悪質な 考えに 注意して ください」と 言いました。りきぞは 先生の 意見を 聞いて、自分の 見方を 正そうと 言いました。正道を 歩く 人は、悪い 考えより 正しい 考えの 方が 大切だと 分かります。毎日 考えを 正したり 意見を 聞いたり する ことが 大切です。",
+          "en": "People hold many thoughts every day. In order to hold correct thinking, you must be careful of malicious ways of thinking. If your way of thinking is bad, your viewpoint will also become bad. Yamamoto-sensei said to the students, 'Be careful of malicious thinking.' Rikizo heard the teacher's opinion and said he would correct his viewpoint. A person who walks the correct path understands that correct thinking is more important than bad thinking. It is important to both correct your thinking and listen to opinions every day.",
+          "terms": [
         "v_hito",
         "p_wa",
         "v_mainichi",
@@ -911,6 +915,8 @@
           "form": "polite_adj"
         },
         "g_desu"
+          ]
+        }
       ]
     },
     {
