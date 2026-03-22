@@ -458,7 +458,7 @@ window.StoryModule = (function() {
         }
       });
       (particleData.particles || []).forEach(p => {
-        termMapData[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle' };
+        termMapData[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle', matches: p.matches || [] };
       });
       (characterData.characters || []).forEach(c => {
         termMapData[c.id] = Object.assign({}, c, { portraitUrl: getCdnUrl(c.portrait) });

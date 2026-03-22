@@ -210,7 +210,7 @@ window.LessonModule = {
         const map = {};
         glossParts.forEach(g => g.entries.forEach(i => { map[i.id] = i; }));
         (particleData.particles || []).forEach(p => {
-            map[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle' };
+            map[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle', matches: p.matches || [] };
         });
         (characterData.characters || []).forEach(c => {
             map[c.id] = Object.assign({}, c, { portraitUrl: getCdnUrl(c.portrait) });

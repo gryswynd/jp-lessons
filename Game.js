@@ -1340,7 +1340,7 @@ window.GameModule = (function() {
         ]).then(([day, conj, counter, particleData, characterData, ...glossParts]) => {
           glossParts.forEach(g => g.entries.forEach(e => { termMap[e.id] = e; }));
           (particleData.particles || []).forEach(p => {
-            termMap[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle' };
+            termMap[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle', matches: p.matches || [] };
           });
           (characterData.characters || []).forEach(c => {
             termMap[c.id] = Object.assign({}, c, { portraitUrl: getSharedAssetUrl(c.portrait) });

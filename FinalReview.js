@@ -944,7 +944,7 @@ window.FinalReviewModule = (function () {
       (Array.isArray(particles) ? particles : []).forEach(p => {
         if (p.id) {
           // Normalize particle fields to match glossary term shape expected by term-modal
-          termMap[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle' };
+          termMap[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle', matches: p.matches || [] };
         }
       });
       const characters = Array.isArray(characterDataRaw) ? characterDataRaw : (characterDataRaw && characterDataRaw.characters ? characterDataRaw.characters : []);
