@@ -215,7 +215,7 @@
     {
       "type": "conversation",
       "title": "Conversation 1: Meeting a Researcher",
-      "context": "りきぞ meets やまもとせんせい at the university and asks about her research and documents.",
+      "context": "りきぞ meets やまもと先生 at the university and asks about her research and documents.",
       "lines": [
         {
           "spk": "りきぞ",
@@ -240,7 +240,7 @@
           ]
         },
         {
-          "spk": "やまもとせんせい",
+          "spk": "やまもと先生",
           "jp": "日本の 文学を 研究して います。文書を 読んだり、作文を 書いたり して います。",
           "en": "I am researching Japanese literature. I am doing things like reading documents and writing essays.",
           "terms": [
@@ -300,7 +300,7 @@
           ]
         },
         {
-          "spk": "やまもとせんせい",
+          "spk": "やまもと先生",
           "jp": "大学の 図書館に あります。行ったら、注意して 読んで ください。",
           "en": "They are at the university library. When you go, please read them carefully.",
           "terms": [
@@ -375,13 +375,19 @@
         },
         {
           "spk": "としょかんのひと",
-          "jp": "分かりました。この 本は 有名な 文学の 研究者が 書いた そうですよ。注意して 読んで みて ください。",
-          "en": "Understood. I heard a famous literature researcher wrote this book. Please try reading it carefully.",
+          "jp": "分かりました。少し 古そうですが、有名な 文学の 研究者が 書いた そうですよ。注意して 読んで みて ください。",
+          "en": "Understood. It looks a little old, but I heard a famous literature researcher wrote this book. Please try reading it carefully.",
           "terms": [
             {
               "id": "v_wakaru",
               "form": "polite_mashita"
             },
+            "v_sukoshi",
+            {
+              "id": "v_furui",
+              "form": "appearance_sou"
+            },
+            "p_ga_but",
             "v_kono",
             "v_hon",
             "p_wa",
