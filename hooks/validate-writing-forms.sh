@@ -2,6 +2,8 @@
 # Hook: validate-writing-forms.sh
 # Runs on: PostToolUse (Edit|Write)
 # Purpose: Early-use and partial-kanji writing form rules. Covers: FM #41-43
+#          General kanji-form check: noun/na-adj vocab should use kanji form
+#          when all kanji in the surface are in the taught set.
 
 set -euo pipefail
 
@@ -15,7 +17,7 @@ FILE=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
 python3 - "$FILE" "$REPO_ROOT" << 'PYEOF'
-import json, re, sys, os
+import json, re, sys, os, glob
 
 file_path = sys.argv[1]
 repo_root = sys.argv[2]
@@ -86,6 +88,23 @@ def extract_jp(obj, path="root"):
             texts.extend(extract_jp(item, f"{path}[{i}]"))
     return texts
 
+# ---- Build taught_kanji set for the current lesson ----
+level_order_val = {'N5': 0, 'N4': 1, 'N3': 2, 'N2': 3, 'N1': 4}
+taught_kanji = set()
+if lesson_id:
+    lm = re.match(r'(N\d+)\.(\d+)', lesson_id)
+    if lm:
+        tl, tn = lm.group(1), int(lm.group(2))
+        to = level_order_val.get(tl, 0)
+        for lk in ['N5', 'N4', 'N3', 'N2', 'N1']:
+            for l in manifest.get('data', {}).get(lk, {}).get('lessons', []):
+                llm = re.match(r'(N\d+)\.(\d+)', l.get('id', ''))
+                if llm:
+                    ll, ln = llm.group(1), int(llm.group(2))
+                    lo = level_order_val.get(ll, 0)
+                    if lo < to or (lo == to and ln <= tn):
+                        taught_kanji.update(l.get('kanji', []))
+
 for path, jp in extract_jp(content):
     jp_clean = jp.replace(' ', '').replace('\u3000', '')
 
@@ -99,6 +118,61 @@ for path, jp in extract_jp(content):
     for full, partial, avail, full_avail in PARTIAL:
         if full in jp_clean and full_avail and not at_or_after(full_avail, lesson_id):
             errors.append(f"  {path}: '{full}' — kanji not taught until {full_avail}, write as '{partial}'")
+
+# ---- General kanji-form check ----
+# For noun/na-adj vocab: if the hiragana reading appears in jp text as a whole-token
+# suffix (handles embedded name+title like すずきせんせい) and the kanji surface does
+# not appear, AND all kanji in the surface are taught → flag as wrong form.
+# Uses suffix matching to avoid false positives from readings that are prefixes
+# of longer words (e.g. "きょう" inside "きょうしつ").
+NOUN_LIKE_GTYPES = {'noun', 'noun_suru', 'na-adjective', 'na_adj', 'adjective_na', 'pronoun'}
+STRIP_PUNCT = re.compile(r'[。、！？「」…・〜ー…（）【】『』]')
+
+kanji_vocab = []
+if taught_kanji:
+    for gpath in glob.glob(os.path.join(repo_root, 'data/*/glossary.*.json')):
+        try:
+            with open(gpath) as f:
+                data_g = json.load(f)
+                entries = data_g.get('entries', data_g) if isinstance(data_g, dict) else data_g
+                for entry in (entries if isinstance(entries, list) else []):
+                    if entry.get('type') != 'vocab':
+                        continue
+                    if entry.get('gtype') not in NOUN_LIKE_GTYPES:
+                        continue
+                    surface = entry.get('surface', '')
+                    reading = entry.get('reading', '')
+                    if not surface or not reading or surface == reading:
+                        continue
+                    kanji_chars = [c for c in surface if '\u4e00' <= c <= '\u9fff']
+                    # Minimum 3-char reading: 2-char readings like した/まえ/うえ cause
+                    # false positives (した matches past-tense ました endings etc.)
+                    if not kanji_chars or len(reading) < 3:
+                        continue
+                    kanji_vocab.append((surface, reading, kanji_chars))
+        except:
+            pass
+
+if kanji_vocab:
+    for path, jp in extract_jp(content):
+        jp_clean = jp.replace(' ', '').replace('\u3000', '')
+        for surface, reading, kanji_chars in kanji_vocab:
+            # Check if reading appears as a suffix of any space-delimited token
+            matched_token = None
+            for token in jp.split(' '):
+                clean_tok = STRIP_PUNCT.sub('', token)
+                if clean_tok.endswith(reading) and len(clean_tok) >= len(reading):
+                    matched_token = clean_tok
+                    break
+            if not matched_token:
+                continue
+            if surface in jp_clean:
+                continue  # kanji form is present
+            if not all(k in taught_kanji for k in kanji_chars):
+                continue  # not all kanji taught yet
+            errors.append(
+                f"  {path}: '{reading}' (in '{matched_token}') should be '{surface}' — all kanji taught"
+            )
 
 # ---- story terms.json: matches-form check ----
 # If a term key is in a glossary entry's `matches` array (valid pre-kanji form)
