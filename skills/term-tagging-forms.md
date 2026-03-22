@@ -90,9 +90,32 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 
 **Quick test:** "Is this adjective the main predicate before a です/でした?" → `polite_adj`. "Does it appear before a noun?" → bare string.
 
+**`polite_adj` requires `です` attached — no space.** `polite_adj` emits the adjective surface + `です` as a single unbroken chip (e.g. `正しいです`). If the jp text has a space before `です` (e.g. `正しい です`), the chip cannot match either token and will not display. Rule: **only use `polite_adj` when the adjective and `です` are written together with no space.** When jp has `[adj] です` (space-split), tag the adjective as a bare string and add `"g_desu"` as a separate term.
+
+| jp text | Correct tagging |
+|---|---|
+| `正しいです` (no space) | `{ "id": "v_tadashii", "form": "polite_adj" }` |
+| `正しい です` (space before です) | `"v_tadashii"` + `"g_desu"` |
+| `大切です` (no space) | `{ "id": "v_taisetsu", "form": "polite_adj" }` |
+| `大切 です` (space before です) | `"v_taisetsu"` (plain) + `"g_desu"` |
+
 な-adjectives follow the same pattern with a dedicated form string:
 - **Attributive** (before a noun): `{ "id": "v_taisetsu", "form": "attributive_na" }` — e.g. 大切な こと、きれいな 花
 - **Predicate** (sentence-final): `{ "id": "v_taisetsu", "form": "polite_adj" }` — e.g. 大切です、きれいです
+
+### Copula spacing — `g_da` requires a space before it
+
+`g_da` (copula だ) attaches to a noun. The text processor does sub-token matching, but single-character matches on `だ` are unreliable when `だ` is fused to the preceding noun with no space (e.g. `考えだな` — one space-token). The chip may not render.
+
+**Rule: always write a space before `だ` in jp text so it is a matchable unit.**
+
+| jp text | Problem | Fix |
+|---|---|---|
+| `考えだな` | `g_da` buried inside single token — chip may not display | `考え だな` |
+| `悪い考えだよ` | `g_da` buried inside single token | `悪い 考え だよ` |
+| `考え だな` | `考え` and `だな` are separate tokens — `g_da` matches `だ` cleanly | ✓ correct |
+
+This does not apply to particles that are expected to fuse (e.g. `p_nda` on `んだ` within `悪いんだ` — `p_nda` is a two-character particle with its own sub-token matching path).
 
 ### Purpose construction (masu-stem + に)
 

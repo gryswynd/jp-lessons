@@ -69,15 +69,15 @@ Automated hooks in `hooks/` enforce rules that the environment should catch, not
 | `validate-form-scope.sh` | Conjugation forms used before introducedIn lesson | FM #30 |
 | `validate-particle-context.sh` | Particle disambiguation: が (p_ga vs p_ga_but), から (p_kara vs p_kara_because), でも (p_demo vs p_demo_but), と (p_to vs p_to_quote), missing p_ka on questions | FM #34, #35, #36, #37, #58 |
 | `validate-grammar-schema.sh` | Grammar section silent failures: wrong field names (annotatedExample→examples[], grammarComparison→items[], fillSlot→before/after), pattern chip color/label, sentenceTransform choices, meta.particles strings vs IDs | FM #56, #56b–f |
-| `validate-structure.sh` | Warmup count (must be 4), N4+ 3-drill structure, Drill 1 no terms, meta.kanji required, answer/choices mismatch, review instructions/explanation/distractors | FM #6, #9b, #10b, #12, #14, #15, #16, #17, #33 |
-| `validate-surface-match.sh` | Term ID surface doesn't match jp text token (vocab showing wrong thing), na-adjective missing verb_class | FM #18, #53d, #60 |
+| `validate-structure.sh` | Warmup count (must be 4), N4+ 3-drill structure, Drill 1 no terms, meta.kanji required, answer/choices mismatch, review instructions/explanation/distractors, conversation lines use `spk` not `speaker`, reading `passage` is array not string | FM #6, #9b, #10b, #12, #14, #15, #16, #17, #33 |
+| `validate-surface-match.sh` | Term ID surface doesn't match jp text token (vocab showing wrong thing), na-adjective missing verb_class, `polite_adj` used when jp has space-split `adj です` | FM #18, #53d, #60 |
 | `validate-suru-compound.sh` | noun_suru term used with a conjugation form (should be plain noun + {v_suru, form}) | suru compound splitting |
 | `validate-writing-forms.sh` | Early-use words in kanji before taught, hiragana after taught, partial-kanji form enforcement, general noun/na-adj hiragana-when-kanji-available | FM #41, #42, #43 |
 | `validate-register.sh` | Casual speech before N5.10, missing casual after N5.10, register mixing within conversations | FM #44, #45, #46 |
 | `validate-compose.sh` | Ungated particles, non-kanji targets, "close/wrap up" wording before challengePrompts | FM #20, #24, #25c |
 | `validate-chip-order.sh` | Adjacent single-char kana+kana terms sharing a jp token where the rightmost is not listed first in terms[] (causes chip not to display) | FM #59 |
 
-14 hooks covering 37+ failure modes. They run automatically on every content file edit — errors surface on the edit that introduces them, not 20 edits later during review.
+14 hooks covering 39+ failure modes. They run automatically on every content file edit — errors surface on the edit that introduces them, not 20 edits later during review.
 
 ## Campaign Files
 

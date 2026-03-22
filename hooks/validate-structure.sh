@@ -78,6 +78,28 @@ def check_answers(obj, path="root"):
 
 check_answers(content)
 
+# Conversation lines must use 'spk', not 'speaker'
+for i, s in enumerate(sections):
+    if s.get('type') == 'conversation':
+        for j, line in enumerate(s.get('lines', [])):
+            if 'speaker' in line:
+                errors.append(f"  sections[{i}].lines[{j}]: uses 'speaker' — must be 'spk' (renderer reads line.spk; 'speaker' shows undefined)")
+            if 'spk' not in line:
+                errors.append(f"  sections[{i}].lines[{j}]: missing required 'spk' field")
+
+# Reading passage must be an array, not a string
+for i, s in enumerate(sections):
+    if s.get('type') == 'reading':
+        p = s.get('passage')
+        if p is None:
+            errors.append(f"  sections[{i}] (reading): missing 'passage' field")
+        elif isinstance(p, str):
+            errors.append(f"  sections[{i}] (reading): 'passage' is a string — must be an array of {{jp, en, terms}} objects")
+        elif isinstance(p, list):
+            for j, item in enumerate(p):
+                if not isinstance(item, dict) or 'jp' not in item:
+                    errors.append(f"  sections[{i}].passage[{j}]: passage item must be an object with 'jp', 'en', 'terms'")
+
 # Review-specific checks
 if is_review:
     for i, s in enumerate(sections):
