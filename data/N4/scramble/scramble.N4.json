@@ -639,6 +639,324 @@
           "explanation": "試験 + は + 短い (short, N4.23) + けど + 問題 + が + むずかしくて + ゆっくり + 進んでいます (progressing slowly, 進 N4.23). 長い means 'long.'"
         }
       ]
+    },
+    {
+      "id": "n4-mar-13",
+      "title": "Research & Opinions",
+      "requires": ["N4.26"],
+      "warmup": [
+        {
+          "q": "Please write an English sentence.",
+          "segments": ["英文", "を", "書いてください"],
+          "distractors": ["が", "に"],
+          "explanation": "英文 (English text, N4.25) + を + 書いてください (please write)."
+        },
+        {
+          "q": "That person's way of thinking is correct.",
+          "segments": ["あの", "方", "の", "考え方", "は", "正しい", "です"],
+          "distractors": ["悪い", "が"],
+          "explanation": "あの + 方 (person, polite, N4.26) + の + 考え方 (way of thinking, N4.26) + は + 正しい (correct, N4.26) + です. 悪い means 'bad.'"
+        }
+      ],
+      "buildup": [
+        {
+          "q": "If it rains tomorrow, I will study at home.",
+          "segments": ["明日", "雨", "が", "ふったら", "家", "で", "勉強します"],
+          "distractors": ["は", "に", "ふったのに"],
+          "explanation": "明日 + 雨 + が + ふったら (if it rains, たら conditional N4.25) + 家 + で + 勉強します. ふったのに means 'even though it rained.'"
+        },
+        {
+          "q": "I ordered food and paid attention to the caution sign.",
+          "segments": ["注文して", "注意", "の", "サイン", "を", "見ました"],
+          "distractors": ["が", "に", "は"],
+          "explanation": "注文して (ordered, 注 N4.25) + 注意 (caution, N4.25) + の + サイン + を + 見ました."
+        }
+      ],
+      "challenge": [
+        {
+          "q": "If I think about it carefully, that idea is bad.",
+          "segments": ["よく", "考えたら", "その", "考え", "は", "悪い", "です"],
+          "distractors": ["正しい", "が", "を", "に"],
+          "explanation": "よく + 考えたら (if I think carefully, たら conditional + 考 N4.26) + その + 考え (idea, N4.26) + は + 悪い (bad, N4.26) + です."
+        },
+        {
+          "q": "The researcher wrote a composition about literature.",
+          "segments": ["研究者", "が", "文学", "について", "作文", "を", "書きました"],
+          "distractors": ["は", "に", "を", "で"],
+          "explanation": "研究者 (researcher, N4.25) + が + 文学 (literature, N4.25) + について (about) + 作文 (composition, N4.25) + を + 書きました."
+        },
+        {
+          "q": "If my essay is correct, the researcher will notice it.",
+          "segments": ["作文", "が", "正しかったら", "研究者", "が", "注目します"],
+          "distractors": ["は", "に", "正しいのに", "を"],
+          "explanation": "作文 + が + 正しかったら (if correct, たら + 正 N4.26) + 研究者 + が + 注目します (will notice, 注 N4.25). 正しいのに means 'even though correct.'"
+        }
+      ]
+    },
+    {
+      "id": "n4-mar-14",
+      "title": "Evening at the Village",
+      "requires": ["N4.28"],
+      "warmup": [
+        {
+          "q": "Let's wait at the gate.",
+          "segments": ["門", "で", "待ちましょう"],
+          "distractors": ["に", "が"],
+          "explanation": "門 (gate, N4.28) + で (at) + 待ちましょう (let's wait, 待 N4.27)."
+        },
+        {
+          "q": "There is a pond in the village.",
+          "segments": ["村", "に", "池", "が", "あります"],
+          "distractors": ["は", "で"],
+          "explanation": "村 (village, N4.28) + に + 池 (pond, N4.28) + が + あります."
+        }
+      ],
+      "buildup": [
+        {
+          "q": "This time, I will eat dinner in the evening.",
+          "segments": ["今度", "は", "夕方", "に", "夕飯", "を", "食べます"],
+          "distractors": ["が", "で", "朝"],
+          "explanation": "今度 (this time, N4.27) + は + 夕方 (evening, N4.27) + に + 夕飯 (dinner, N4.27) + を + 食べます."
+        },
+        {
+          "q": "The game is at the school gate once more.",
+          "segments": ["試合", "は", "もう", "一度", "校門", "で", "あります"],
+          "distractors": ["に", "が", "何度"],
+          "explanation": "試合 (game, N4.27) + は + もう + 一度 (once more, N4.27) + 校門 (school gate, N4.28) + で + あります."
+        }
+      ],
+      "challenge": [
+        {
+          "q": "I walked through the forest and arrived at the village gate.",
+          "segments": ["林", "を", "歩いて", "村", "の", "門", "に", "着きました"],
+          "distractors": ["が", "で", "から", "は"],
+          "explanation": "林 (grove, N4.28) + を (through) + 歩いて + 村 + の + 門 + に + 着きました (arrived)."
+        },
+        {
+          "q": "I waited many times at the meeting place, but my friend did not come.",
+          "segments": ["何度", "も", "待ち合わせ", "の", "場所", "で", "待ちましたが", "友だち", "は", "来ませんでした"],
+          "distractors": ["に", "一度", "が", "を"],
+          "explanation": "何度も (many times, N4.27) + 待ち合わせ (meeting arrangement, N4.27) + の + 場所 + で + 待ちましたが + 友だち + は + 来ませんでした."
+        },
+        {
+          "q": "The battery died, so I rested by the pond in the evening.",
+          "segments": ["電池", "が", "なくなったので", "夕方", "に", "池", "の", "そば", "で", "休みました"],
+          "distractors": ["は", "を", "朝", "から"],
+          "explanation": "電池 (battery, N4.28) + が + なくなったので (because it ran out) + 夕方 (evening, N4.27) + に + 池 (pond, N4.28) + の + そば + で + 休みました."
+        }
+      ]
+    },
+    {
+      "id": "n4-mar-15",
+      "title": "Gathering Answers",
+      "requires": ["N4.30"],
+      "warmup": [
+        {
+          "q": "I think this answer is correct.",
+          "segments": ["この", "答え", "は", "正しい", "と", "思います"],
+          "distractors": ["が", "悪い"],
+          "explanation": "この + 答え (answer, N4.30) + は + 正しい (correct, N4.26) + と思います (I think, G27). 悪い means 'bad.'"
+        },
+        {
+          "q": "Everyone gathered at the meeting.",
+          "segments": ["みんな", "が", "集会", "に", "集まりました"],
+          "distractors": ["は", "で"],
+          "explanation": "みんな + が + 集会 (meeting, N4.30) + に + 集まりました (gathered, N4.30)."
+        }
+      ],
+      "buildup": [
+        {
+          "q": "I think that limited express train is especially fast.",
+          "segments": ["あの", "特急", "は", "特に", "速い", "と", "思います"],
+          "distractors": ["おそい", "が", "を"],
+          "explanation": "あの + 特急 (limited express, N4.30) + は + 特に (especially, N4.30) + 速い (fast) + と思います (I think, G27). おそい means 'slow.'"
+        },
+        {
+          "q": "I recalled the answer and concentrated.",
+          "segments": ["答え", "を", "思い出して", "集中しました"],
+          "distractors": ["が", "に", "わすれて"],
+          "explanation": "答え + を + 思い出して (recalled, N4.30) + 集中しました (concentrated, N4.30). わすれて means 'forgot.'"
+        }
+      ],
+      "challenge": [
+        {
+          "q": "I collected special writings and made a feature anthology.",
+          "segments": ["特別な", "文", "を", "集めて", "特集", "を", "作りました"],
+          "distractors": ["が", "に", "は", "で"],
+          "explanation": "特別な (special, N4.30) + 文 (writing, N4.25) + を + 集めて (collected, 集 N4.30) + 特集 (feature, N4.30) + を + 作りました."
+        },
+        {
+          "q": "I think the researcher's answer is particularly interesting.",
+          "segments": ["研究者", "の", "答え", "は", "特に", "おもしろい", "と", "思います"],
+          "distractors": ["が", "つまらない", "を", "に"],
+          "explanation": "研究者 (researcher, N4.25) + の + 答え (answer, N4.30) + は + 特に (especially, N4.30) + おもしろいと思います (I think it's interesting, G27)."
+        },
+        {
+          "q": "I thought the answers were bad, but I recalled a good idea.",
+          "segments": ["答え", "が", "悪い", "と", "思いましたが", "いい", "考え", "を", "思い出しました"],
+          "distractors": ["は", "正しい", "に", "で"],
+          "explanation": "答え + が + 悪いと思いましたが (thought they were bad, G27) + いい + 考え (idea, N4.26) + を + 思い出しました (recalled, N4.30)."
+        }
+      ]
+    },
+    {
+      "id": "n4-mar-16",
+      "title": "Opening Day",
+      "requires": ["N4.32"],
+      "warmup": [
+        {
+          "q": "I opened the door of the hall.",
+          "segments": ["堂", "の", "ドア", "を", "開けました"],
+          "distractors": ["が", "に"],
+          "explanation": "堂 (hall, N4.31) + の + ドア + を + 開けました (opened, 開 N4.31)."
+        },
+        {
+          "q": "I have errands in the city.",
+          "segments": ["市", "に", "用事", "が", "あります"],
+          "distractors": ["で", "は"],
+          "explanation": "市 (city, N4.32) + に + 用事 (errands, N4.32) + が + あります."
+        }
+      ],
+      "buildup": [
+        {
+          "q": "I pulled open the drawer and took out the paper.",
+          "segments": ["引き出し", "を", "引いて", "紙", "を", "出しました"],
+          "distractors": ["が", "に", "おして"],
+          "explanation": "引き出し (drawer, N4.32) + を + 引いて (pulled, 引 N4.32) + 紙 (paper, N4.22) + を + 出しました. おして means 'pushed.'"
+        },
+        {
+          "q": "The mayor held the opening ceremony of the shop.",
+          "segments": ["市長", "が", "開店", "の", "セレモニー", "を", "開きました"],
+          "distractors": ["は", "に", "を"],
+          "explanation": "市長 (mayor, N4.32) + が + 開店 (opening of a shop, N4.31) + の + セレモニー + を + 開きました (held, 開 N4.31)."
+        }
+      ],
+      "challenge": [
+        {
+          "q": "I learned calligraphy at the training school in the city.",
+          "segments": ["市", "の", "教習", "で", "習字", "を", "習いました"],
+          "distractors": ["が", "に", "は", "から"],
+          "explanation": "市 (city, N4.32) + の + 教習 (training, N4.32) + で + 習字 (calligraphy, N4.32) + を + 習いました (learned, 習 N4.32)."
+        },
+        {
+          "q": "In this era, the forest was magnificent and wide.",
+          "segments": ["この", "時代", "は", "森", "が", "堂々として", "広かった", "です"],
+          "distractors": ["に", "林", "を", "せまかった"],
+          "explanation": "この + 時代 (era, N4.31) + は + 森 (forest, N4.31) + が + 堂々として (magnificent, N4.31) + 広かった (was wide, 広 N4.33). せまかった means 'was narrow.'"
+        },
+        {
+          "q": "A generation changed and a new dining hall opened in the morning market.",
+          "segments": ["世代", "が", "代わって", "朝市", "に", "新しい", "食堂", "が", "開きました"],
+          "distractors": ["は", "を", "で", "古い"],
+          "explanation": "世代 (generation, N4.31) + が + 代わって (changed, 代 N4.31) + 朝市 (morning market, N4.32) + に + 新しい + 食堂 (dining hall, N4.31) + が + 開きました."
+        }
+      ]
+    },
+    {
+      "id": "n4-mar-17",
+      "title": "Building the City",
+      "requires": ["N4.34"],
+      "warmup": [
+        {
+          "q": "The factory is in a wide place.",
+          "segments": ["工場", "は", "広い", "場所", "に", "あります"],
+          "distractors": ["が", "で"],
+          "explanation": "工場 (factory, N4.33) + は + 広い (wide, N4.33) + 場所 (place, N4.33) + に + あります."
+        },
+        {
+          "q": "I commute to the ward office by train.",
+          "segments": ["電車", "で", "区", "の", "やくしょ", "に", "通います"],
+          "distractors": ["を", "が", "から"],
+          "explanation": "電車 + で + 区 (ward, N4.34) + の + やくしょ (office) + に + 通います (commute, 通 N4.34)."
+        }
+      ],
+      "buildup": [
+        {
+          "q": "They built a big building in the plaza.",
+          "segments": ["広場", "に", "大きい", "建物", "を", "建てました"],
+          "distractors": ["で", "が", "小さい"],
+          "explanation": "広場 (plaza, N4.33) + に + 大きい + 建物 (building, N4.33) + を + 建てました (built, 建 N4.33). 小さい is the opposite."
+        },
+        {
+          "q": "I discovered a new district on the main street.",
+          "segments": ["大通り", "で", "新しい", "地区", "を", "発見しました"],
+          "distractors": ["に", "が", "古い"],
+          "explanation": "大通り (main street, N4.34) + で + 新しい + 地区 (district, N4.34) + を + 発見しました (discovered, 発 N4.34)."
+        }
+      ],
+      "challenge": [
+        {
+          "q": "A carpenter built a wide venue in the case of this prefecture.",
+          "segments": ["この", "県", "の", "場合", "は", "大工", "が", "広い", "会場", "を", "建てました"],
+          "distractors": ["に", "で", "を", "せまい"],
+          "explanation": "この + 県 (prefecture, N4.34) + の + 場合 (in the case of, N4.33) + は + 大工 (carpenter, N4.33) + が + 広い + 会場 (venue, N4.33) + を + 建てました."
+        },
+        {
+          "q": "I departed from the prefecture and passed through the city.",
+          "segments": ["県", "を", "出発して", "市", "を", "通りました"],
+          "distractors": ["に", "が", "から", "で"],
+          "explanation": "県 (prefecture, N4.34) + を + 出発して (departed, 発 N4.34) + 市 (city, N4.32) + を + 通りました (passed through, 通 N4.34)."
+        },
+        {
+          "q": "The factory worker commutes to the factory early and works until the evening.",
+          "segments": ["工員", "は", "早く", "工場", "に", "通って", "夕方", "まで", "はたらきます"],
+          "distractors": ["が", "おそく", "で", "から"],
+          "explanation": "工員 (factory worker, N4.33) + は + 早く + 工場 (factory, N4.33) + に + 通って (commuting, 通 N4.34) + 夕方 (evening, N4.27) + まで + はたらきます."
+        }
+      ]
+    },
+    {
+      "id": "n4-mar-18",
+      "title": "Life & Industry",
+      "requires": ["N4.36"],
+      "warmup": [
+        {
+          "q": "Please stop the car and wash it.",
+          "segments": ["車", "を", "止めて", "洗ってください"],
+          "distractors": ["が", "に"],
+          "explanation": "車 + を + 止めて (stop, 止 N4.35) + 洗ってください (please wash, 洗 N4.35)."
+        },
+        {
+          "q": "This place is inconvenient.",
+          "segments": ["ここ", "は", "不便", "です"],
+          "distractors": ["が", "便利"],
+          "explanation": "ここ + は + 不便 (inconvenient, N4.36) + です. 便利 means 'convenient.'"
+        }
+      ],
+      "buildup": [
+        {
+          "q": "The citizens mainly work in industry.",
+          "segments": ["国民", "は", "主に", "産業", "で", "はたらいています"],
+          "distractors": ["が", "を", "に"],
+          "explanation": "国民 (citizens, N4.35) + は + 主に (mainly, N4.35) + 産業 (industry, N4.36) + で + はたらいています."
+        },
+        {
+          "q": "The event was cancelled and everyone stopped.",
+          "segments": ["イベント", "が", "中止", "に", "なって", "みんな", "が", "止まりました"],
+          "distractors": ["は", "を", "で"],
+          "explanation": "イベント + が + 中止 (cancellation, N4.35) + になって + みんな + が + 止まりました (stopped, 止 N4.35)."
+        }
+      ],
+      "challenge": [
+        {
+          "q": "I washed my hands and went to the owner's private house.",
+          "segments": ["手", "を", "洗って", "主", "の", "民家", "に", "行きました"],
+          "distractors": ["が", "で", "を", "から"],
+          "explanation": "手 + を + 洗って (washed, 洗 N4.35) + 主 (owner, N4.35) + の + 民家 (private house, N4.35) + に + 行きました."
+        },
+        {
+          "q": "It is dishonest, and the product is bad, and it is unlucky.",
+          "segments": ["不正だし", "産物", "も", "悪い", "し", "不運", "です"],
+          "distractors": ["は", "正しい", "が", "を"],
+          "explanation": "不正だし (dishonest, and also, N4.36) + 産物 (product, N4.36) + も + 悪いし (bad, and also, し stacks reasons G20) + 不運 (unlucky, N4.36) + です."
+        },
+        {
+          "q": "The contractor stopped the inconvenient service and the people's lives became better.",
+          "segments": ["業者", "が", "不便な", "便", "を", "止めて", "民", "の", "生活", "が", "よく", "なりました"],
+          "distractors": ["は", "に", "便利な", "悪く"],
+          "explanation": "業者 (contractor, N4.36) + が + 不便な (inconvenient, N4.36) + 便 (service, N4.36) + を + 止めて (stopped, 止 N4.35) + 民 (people, N4.35) + の + 生活 + が + よくなりました."
+        }
+      ]
     }
   ]
 }
