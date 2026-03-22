@@ -90,6 +90,15 @@
         "hooks": [
           {
             "type": "command",
+            "command": "bash hooks/validate-suru-compound.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
             "command": "bash hooks/validate-writing-forms.sh"
           }
         ]
