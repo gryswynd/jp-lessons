@@ -361,7 +361,7 @@
         this.state.termMap = {};
         glossData.entries.forEach(i => { this.state.termMap[i.id] = i; });
         (particleData.particles || []).forEach(p => {
-            this.state.termMap[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle' };
+            this.state.termMap[p.id] = { id: p.id, surface: p.particle, reading: p.reading, meaning: p.role, notes: p.explanation, type: 'particle', matches: p.matches || [] };
         });
         (characterData.characters || []).forEach(c => {
             this.state.termMap[c.id] = Object.assign({}, c, { portraitUrl: this.getUrl(c.portrait) });

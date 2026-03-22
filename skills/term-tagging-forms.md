@@ -244,6 +244,22 @@ The same two-chip principle applies to other `たい` family forms in polite spe
 
 Before N5.13, と appears only as `p_to`. From N5.13, `p_to` and `p_to_quote` are both in scope. `p_to_conditional` is not available until G25 (N4.34+) — any sentence using the AとB natural-result pattern (including wishful expressions like あるといいね) before G25 is an out-of-scope grammar violation and must be rewritten. Tagging quotation と as `p_to` displays "and / with" when the student taps it, which is actively misleading.
 
+### Particle `matches` — polite/plain surface variants
+
+Some particles have a primary `surface` that is the plain/casual form but appear in jp text as a polite form. The text processor falls back to `matches[]` when the primary surface is not found. This handles plain/polite alternation without a separate particle ID.
+
+**Current particles with `matches`:**
+
+| Particle ID | Primary surface | matches | When matches fires |
+|---|---|---|---|
+| `p_sou_da_hearsay` | `そうだ` | `["そうです"]` | Polite-speech lines ending with 〜そうですよ、〜そうですね, etc. |
+
+**Rules for using particles with matches:**
+
+1. **Tag with the single particle ID regardless of register.** Whether the jp text has `そうだ` or `そうです`, always tag `p_sou_da_hearsay`. The text processor picks the right surface automatically.
+2. **Do NOT add a new particle ID for the polite form** (e.g. `p_sou_desu_hearsay`). The matches mechanism exists precisely to avoid this.
+3. **Avoid putting two terms with overlapping match strings in the same jp line.** If `p_sou_da_hearsay` (matches `そうです`) and `{v_someadj, appearance_sou}` (which produces a surface ending in `そうです`) both appear in the same jp string, the text processor's `split/join` replace hits the appearance chip's content first and corrupts it. Solution: put them in different jp lines or sentences.
+
 ### Counter references
 
 When a counter expression appears in a `terms` array:
