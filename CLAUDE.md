@@ -92,6 +92,19 @@ Long-running projects tracked in `campaigns/`:
 
 Campaign files persist across sessions. Read the relevant campaign file when resuming work.
 
+## Writing Large Files — Commit-as-You-Go
+
+**Required for:** full content rewrites, new grammar lessons, new review files, new stories, any file expected to take more than ~3 writing steps.
+
+Write and commit in sections rather than generating the entire file in one pass. Each intermediate state must be valid JSON (or valid markdown). After all sections are done, squash WIP commits into one clean commit before pushing.
+
+**Pattern:**
+1. Write section(s) → commit with `WIP <task>: <what was added>`
+2. Repeat until file is complete
+3. `git reset --soft <last-clean-commit>` → single clean commit → force-push
+
+**When NOT required:** small edits (1–5 field fixes), single-section additions, non-content files.
+
 ## Critical Rules (the 5 things that matter most)
 
 1. **Never read glossary files in full.** Use targeted Grep queries only — they exceed token limits.
