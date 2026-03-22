@@ -243,28 +243,24 @@
       ]
     },
     {
-      "prompt": "Write about continuing to study literature documents carefully going forward. Use 文書 and 注意して and ていきます.",
+      "prompt": "You found a difficult passage in the documents and worked hard to understand its meaning. Use 究明 and ために.",
       "targets": [
         {
-          "id": "v_bunsho",
-          "count": 1
-        },
-        {
-          "id": "v_chuui",
+          "id": "v_kyuumei",
           "count": 1
         }
       ],
-      "model": "これからも 文書を 注意して 読んで いきます。",
+      "model": "大切な 文書の 意味を 究明する ために、注意して 読みました。",
       "vocabPool": [
+        "v_kyuumei",
         "v_bunsho",
-        "v_chuui",
+        "v_imi",
         "v_yomu",
-        "v_iku",
-        "v_suru",
-        "v_bungaku",
-        "v_kenkyuu",
-        "v_mainichi",
+        "v_chuui",
         "v_taisetsu",
+        "v_tame",
+        "v_suru",
+        "v_muzukashii",
         "g_desu"
       ]
     }
@@ -329,7 +325,7 @@
       "examples": [
         "注意して 読んで いきます",
         "勉強して いきます",
-        "研究を 続けて いきます"
+        "毎日 勉強して いきます"
       ]
     },
     {

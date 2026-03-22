@@ -46,22 +46,16 @@
       "instructions": "Practice these sentences using vocabulary you already know.",
       "items": [
         {
-          "jp": "本を 読んだら、先生に 話して ください。",
-          "en": "After you read the book, please tell the teacher.",
+          "jp": "日本語は 英語より むずかしいですか。",
+          "en": "Is Japanese more difficult than English?",
           "terms": [
-            "v_hon",
-            "p_wo",
-            {
-              "id": "v_yomu",
-              "form": "conditional_tara"
-            },
-            "v_sensei",
-            "p_ni",
-            {
-              "id": "v_hanasu",
-              "form": "te_form"
-            },
-            "v_kudasai"
+            "v_nihongo",
+            "p_wa",
+            "v_eigo",
+            "p_yori",
+            "v_muzukashii",
+            "g_desu",
+            "p_ka"
           ]
         },
         {
@@ -247,8 +241,8 @@
         },
         {
           "spk": "やまもとせんせい",
-          "jp": "日本の 文学を 研究して います。今は 古い 文書を 読んで います。",
-          "en": "I am researching Japanese literature. Right now I am reading old documents.",
+          "jp": "日本の 文学を 研究して います。文書を 読んだり、作文を 書いたり して います。",
+          "en": "I am researching Japanese literature. I am doing things like reading documents and writing essays.",
           "terms": [
             "char_yamamoto",
             "v_nihon",
@@ -264,13 +258,20 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "v_ima",
-            "p_wa",
-            "v_furui",
             "v_bunsho",
             "p_wo",
             {
               "id": "v_yomu",
+              "form": "tari_form"
+            },
+            "v_sakubun",
+            "p_wo",
+            {
+              "id": "v_kaku",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
               "form": "te_form"
             },
             {
@@ -281,7 +282,7 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "そうですか。その 文書は どこに ありますか。",
+          "jp": "なるほど。その 文書は どこに ありますか。",
           "en": "I see. Where are those documents?",
           "terms": [
             "char_rikizo",
@@ -555,7 +556,7 @@
         },
         {
           "spk": "けん",
-          "jp": "英語の 文学に 注目してるよ。有名な 文学者に なりたいな。",
+          "jp": "英語の 文学に 注目して いるよ。有名な 文学者に なりたいな。",
           "en": "I am paying attention to English literature. I want to become a famous literary scholar.",
           "terms": [
             "char_ken",
@@ -588,7 +589,7 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "すごいね。研究が 終わったら、わたしにも 話して。",
+          "jp": "すごいね。研究が 終わったら、私にも 話して。",
           "en": "That's amazing. When your research is done, tell me too.",
           "terms": [
             "char_rikizo",
@@ -611,7 +612,7 @@
         },
         {
           "spk": "けん",
-          "jp": "うん、一緒に いい 研究者に なろう。",
+          "jp": "うん、いっしょに いい 研究者に なろう。",
           "en": "Yeah, let's become good researchers together.",
           "terms": [
             "char_ken",
@@ -675,8 +676,8 @@
           ]
         },
         {
-          "jp": "研究が 終わったら、世界の 研究者も 注目すると 思います。",
-          "en": "When the research is finished, I think researchers around the world will also pay attention.",
+          "jp": "研究が 終わったら、世界の 研究者も 注目します。",
+          "en": "When the research is finished, researchers around the world will also pay attention.",
           "terms": [
             "v_kenkyuu",
             "p_ga",
@@ -691,18 +692,13 @@
             "v_chuumoku",
             {
               "id": "v_suru",
-              "form": "plain_form"
-            },
-            "p_to_quote",
-            {
-              "id": "v_omou",
               "form": "polite_masu"
             }
           ]
         },
         {
-          "jp": "わたしも 文学者に なりたいと 思います。",
-          "en": "I too want to become a literary scholar, I think.",
+          "jp": "私も 文学者に なりたいです。",
+          "en": "I too want to become a literary scholar.",
           "terms": [
             "v_watashi",
             "p_mo",
@@ -712,11 +708,7 @@
               "id": "v_naru",
               "form": "plain_desire_tai"
             },
-            "p_to_quote",
-            {
-              "id": "v_omou",
-              "form": "polite_masu"
-            }
+            "g_desu"
           ]
         }
       ],
@@ -770,29 +762,24 @@
           ]
         },
         {
-          "q": "わたしは 何に なりたいと 思って いますか。",
-          "a": "文学者に なりたいと 思います。",
+          "q": "何に なりたいですか。",
+          "a": "文学者に なりたいです。",
           "terms": [
-            "v_watashi",
-            "p_wa",
             "v_nani",
             "p_ni",
             {
               "id": "v_naru",
               "form": "plain_desire_tai"
             },
-            "p_to_quote",
-            {
-              "id": "v_omou",
-              "form": "te_form"
-            },
-            {
-              "id": "v_iru",
-              "form": "polite_masu"
-            },
+            "g_desu",
             "p_ka",
             "v_bungakusha",
-            "p_ni"
+            "p_ni",
+            {
+              "id": "v_naru",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         }
       ]
@@ -1169,29 +1156,30 @@
         },
         {
           "kind": "mcq",
-          "q": "図書館で 本を ______ 、作文を 書きます。",
+          "q": "文書の 意味が ______ 、先生に 話して ください。",
           "choices": [
-            "読んでから",
-            "読みながら",
-            "読んだり",
-            "読むとき"
+            "分かったら",
+            "分かってから",
+            "分かると",
+            "分かるとき"
           ],
-          "answer": "読んでから",
+          "answer": "分かったら",
           "terms": [
-            "v_toshokan",
-            "p_de",
-            "v_hon",
-            "p_wo",
+            "v_bunsho",
+            "p_no",
+            "v_imi",
+            "p_ga",
             {
-              "id": "v_yomu",
+              "id": "v_wakaru",
+              "form": "conditional_tara"
+            },
+            "v_sensei",
+            "p_ni",
+            {
+              "id": "v_hanasu",
               "form": "te_form"
             },
-            "v_sakubun",
-            "p_wo",
-            {
-              "id": "v_kaku",
-              "form": "polite_masu"
-            }
+            "v_kudasai"
           ]
         },
         {
