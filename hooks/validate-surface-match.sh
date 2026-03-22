@@ -100,6 +100,13 @@ def check_surface(jp, terms, path):
             if form in ('attributive_na', 'polite_adj') and info['gtype'] in ('na-adjective', 'na_adj'):
                 if info['verb_class'] != 'na_adj':
                     errors.append(f"  {path}.terms[{i}]: '{tid}' used with '{form}' but missing verb_class:'na_adj' in glossary")
+            # polite_adj emits surface+です as one unbroken token.
+            # If jp has surface + " です" (space before です), the chip will never match.
+            # Correct fix: use plain adj (bare string) + g_desu as separate terms.
+            if form == 'polite_adj':
+                surface = info.get('surface', '')
+                if surface and (surface + 'です') not in jp and (surface + ' です') in jp:
+                    errors.append(f"  {path}.terms[{i}]: '{tid}' polite_adj — jp has '{surface} です' (space-split); use bare '{tid}' + 'g_desu' instead")
             continue
 
         # Skip single-char particles (too many false positives)

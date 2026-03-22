@@ -38,10 +38,28 @@
 | `kanjiGrid` | `type`, `title`, `items[]` (each: `kanji`, `on`, `kun`, `meaning`, `terms`) |
 | `vocabList` | `type`, `title`, `groups[]` (each: `label`, `items[]` of IDs) |
 | `conversation` | `type`, `title`, `context`, `lines[]` (each: `spk`, `jp`, `en`, `terms`) |
-| `reading` | `type`, `title`, `passage[]` (each: `jp`, `en`, `terms`), `questions[]` (each: `q`, `a`, `terms`) |
+| `reading` | `type`, `title`, `passage[]` (each: `jp`, `en`, `terms`), optional `questions[]` (each: `q`, `a`, `terms`) |
 | `drills` | `type`, `title`, `instructions`, `items[]` (each: `kind`, `q`, `choices[]`, `answer`, `terms`\*) |
 
 \*`terms` is **omitted** on Drill 1 (vocabulary MCQ where the tested word is self-evident). All other drill types **must** include `terms`.
+
+**CRITICAL — conversation line field is `spk`, NOT `speaker`:** The renderer reads `line.spk`. Writing `"speaker"` causes every character name to display as `undefined`. There is no fallback.
+
+**CRITICAL — reading `passage` must be an array of objects, NOT a string:** The renderer iterates `passage` as `[{jp, en, terms}, ...]`. A flat string renders nothing — no error, just a blank section. The `en` translation and `terms` array belong inside each passage object, not at the reading section level.
+
+```json
+{
+  "type": "reading",
+  "title": "...",
+  "passage": [
+    {
+      "jp": "正しい 考え方は 大切です。",
+      "en": "Correct thinking is important.",
+      "terms": ["v_tadashii", "v_kangaekata", "p_wa", {"id": "v_taisetsu", "form": "polite_adj"}, "g_desu"]
+    }
+  ]
+}
+```
 
 **Section order convention:** warmup → kanjiGrid → vocabList → conversation(s) → reading(s) → drills
 
