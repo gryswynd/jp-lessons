@@ -1325,7 +1325,7 @@ window.PracticeModule = {
         { difficulty: 2, label: 'Build-up', color: '#ffa502', icon: '🟡' },
         { difficulty: 3, label: 'Challenge', color: '#ff4757', icon: '🔴' }
     ];
-    let marItems = [], marIdx = 0, marStreak = 0, marBest = 0, marScore = 0, marTotal = 0, marCurrentTier = 0;
+    let marItems = [], marIdx = 0, marStreak = 0, marBest = 0, marScore = 0, marTotal = 0, marCurrentTier = 0, marTitle = '';
     let marDataCache = null;
 
     async function marathonStart() {
@@ -1344,31 +1344,27 @@ window.PracticeModule = {
             }
         }
 
-        const available = marDataCache.sets.filter(s =>
-            s.requires.every(req => activeLessons.has(req))
+        const available = marDataCache.marathons.filter(m =>
+            m.requires.every(req => activeLessons.has(req))
         );
 
         if (available.length === 0) {
-            alert('Select N4 lessons to unlock Marathon sets! The first set unlocks after N4.1 and N4.3.');
+            alert('Select N4 lessons to unlock Marathon sets! The first marathon unlocks after N4.2.');
             return;
         }
 
-        // Sort by difficulty, then shuffle within each tier
-        available.sort((a, b) => a.difficulty - b.difficulty);
-        const byTier = {};
-        available.forEach(s => {
-            if (!byTier[s.difficulty]) byTier[s.difficulty] = [];
-            s.items.forEach(item => byTier[s.difficulty].push({ ...item, setTitle: s.title, difficulty: s.difficulty }));
-        });
+        // Pick one marathon at random
+        const marathon = available[Math.floor(Math.random() * available.length)];
+        marTitle = marathon.title;
 
-        // Build ordered list: tier 1 shuffled, then tier 2 shuffled, then tier 3 shuffled
+        // Build items: warmup → buildup → challenge, each shuffled internally
         marItems = [];
-        [1, 2, 3].forEach(d => {
-            if (byTier[d]) {
-                const shuffled = byTier[d].sort(() => Math.random() - 0.5);
-                marItems = marItems.concat(shuffled);
-            }
-        });
+        marathon.warmup.sort(() => Math.random() - 0.5).forEach(item =>
+            marItems.push({ ...item, difficulty: 1 }));
+        marathon.buildup.sort(() => Math.random() - 0.5).forEach(item =>
+            marItems.push({ ...item, difficulty: 2 }));
+        marathon.challenge.sort(() => Math.random() - 0.5).forEach(item =>
+            marItems.push({ ...item, difficulty: 3 }));
         marTotal = marItems.length;
 
         ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4','k-view-scr'].forEach(i => {
@@ -1399,6 +1395,7 @@ window.PracticeModule = {
             const stage = document.getElementById('k-scr-stage');
             stage.innerHTML = `
                 <div style="text-align:center; padding:2rem;">
+                    ${item.difficulty === 1 ? '<div style="font-size:0.85rem; font-weight:800; color:var(--text-sub); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">' + marTitle + '</div>' : ''}
                     <div style="font-size:3rem; margin-bottom:10px;">${tierInfo.icon}</div>
                     <div style="font-size:1.6rem; font-weight:900; color:${tierInfo.color}; margin-bottom:6px;">Round ${item.difficulty}: ${tierInfo.label}</div>
                     <div style="color:var(--text-sub); font-weight:600; font-size:0.95rem;">
@@ -1557,7 +1554,8 @@ window.PracticeModule = {
         stage.innerHTML = `
             <div style="text-align:center; padding: 1rem;">
                 <div style="font-size:2.5rem; margin-bottom:10px;">🏔️</div>
-                <div style="font-size:1.4rem; font-weight:900; color:var(--primary); margin-bottom:8px;">Marathon Complete!</div>
+                <div style="font-size:1.4rem; font-weight:900; color:var(--primary); margin-bottom:4px;">Marathon Complete!</div>
+                <div style="color:var(--text-sub); font-weight:700; font-size:0.9rem; margin-bottom:8px;">${marTitle}</div>
                 <div style="font-size:3rem; font-weight:900; color:var(--text-main); margin-bottom:5px;">${marScore} / ${maxPossible}</div>
                 <div style="color:var(--text-sub); font-weight:600; margin-bottom:15px;">${pct}% · ${marTotal} sentences</div>
                 <div style="display:flex; justify-content:center; gap:12px; margin-bottom:8px; font-size:0.85rem; font-weight:700;">

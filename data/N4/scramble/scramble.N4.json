@@ -1,348 +1,323 @@
 {
   "mode": "progressive",
-  "sets": [
+  "marathons": [
     {
-      "id": "n4-scr-1",
-      "title": "Returning & Colors",
-      "difficulty": 1,
-      "requires": ["N4.1", "N4.3"],
-      "items": [
+      "id": "n4-mar-1",
+      "title": "Morning Commute",
+      "requires": ["N4.2"],
+      "warmup": [
         {
-          "q": "I go home every evening.",
-          "segments": ["毎晩", "帰ります"],
-          "distractors": ["毎朝", "行きます"],
-          "explanation": "毎晩 (every evening) + 帰ります (go home). 帰る means 'to return home.' 毎朝 means 'every morning.'"
-        },
-        {
-          "q": "I make breakfast every morning.",
-          "segments": ["毎朝", "朝ごはん", "を", "作ります"],
-          "distractors": ["に", "晩ごはん"],
-          "explanation": "毎朝 (every morning) + 朝ごはん (breakfast) + を (object) + 作ります (make). 晩ごはん is dinner, not breakfast."
-        },
-        {
-          "q": "I use this every day.",
-          "segments": ["毎日", "これ", "を", "使います"],
-          "distractors": ["が", "に"],
-          "explanation": "毎日 (every day) + これ (this) + を (object marker) + 使います (use). を marks the thing being used.",
-          "alts": [["これ", "を", "毎日", "使います"]]
-        },
-        {
-          "q": "I get up at 6 AM.",
-          "segments": ["午前", "六時", "に", "起きます"],
-          "distractors": ["午後", "で"],
-          "explanation": "午前 (AM) + 六時 (6 o'clock) + に (time marker) + 起きます (get up). 午後 means PM."
+          "q": "I wake up early every day.",
+          "segments": ["毎日", "はやく", "起きます"],
+          "distractors": ["おそく", "行きます"],
+          "explanation": "毎日 + はやく (early) + 起きます (wake up, N4.1). おそく means 'late.'"
         },
         {
           "q": "I walk to the station.",
           "segments": ["駅", "まで", "歩きます"],
           "distractors": ["に", "で"],
-          "explanation": "駅 + まで (up to/as far as) + 歩きます (walk). まで emphasizes the distance walked. に marks destination, but まで + 歩く = 'walk all the way to.'"
+          "explanation": "駅 + まで (as far as) + 歩きます (walk, N4.2). まで emphasizes walking the whole distance."
+        }
+      ],
+      "buildup": [
+        {
+          "q": "The station is near my house.",
+          "segments": ["駅", "は", "家", "の", "近く", "に", "あります"],
+          "distractors": ["遠く", "が", "で"],
+          "explanation": "駅 + は + 家 + の + 近く (near, N4.2) + に + あります. 遠く (far) is the opposite."
+        },
+        {
+          "q": "I ride the train and go to work.",
+          "segments": ["電車", "に", "乗って", "会社", "に", "行きます"],
+          "distractors": ["で", "を", "から"],
+          "explanation": "電車 + に (onto) + 乗って (ride, te-form of 乗る N4.2) + 会社 + に (destination) + 行きます. 乗る takes に."
+        }
+      ],
+      "challenge": [
+        {
+          "q": "Every day I leave the house and walk to the station.",
+          "segments": ["毎日", "家", "を", "出て", "駅", "まで", "歩きます"],
+          "distractors": ["に", "が", "から", "で"],
+          "explanation": "毎日 + 家 + を (place exited) + 出て (te-form of 出る) + 駅 + まで + 歩きます. を marks the place left."
+        },
+        {
+          "q": "The station is far, so I ride the bus every day.",
+          "segments": ["駅", "は", "遠い", "から", "毎日", "バス", "に", "乗ります"],
+          "distractors": ["近い", "で", "を", "が"],
+          "alts": [["駅", "は", "遠い", "から", "バス", "に", "毎日", "乗ります"]],
+          "explanation": "駅 + は + 遠い (far) + から (because) + 毎日 + バス + に + 乗ります. 近い (near) is the opposite."
+        },
+        {
+          "q": "I arrived at the company before eight o'clock.",
+          "segments": ["八時", "前", "に", "会社", "に", "着きました"],
+          "distractors": ["後", "で", "を", "まで"],
+          "explanation": "八時 + 前 (before) + に + 会社 + に + 着きました (arrived, N4.1). 後 means 'after.'"
         }
       ]
     },
     {
-      "id": "n4-scr-2",
-      "title": "Food & Taste",
-      "difficulty": 1,
-      "requires": ["N4.4", "N4.6"],
-      "items": [
+      "id": "n4-mar-2",
+      "title": "Favorite Colors",
+      "requires": ["N4.4"],
+      "warmup": [
         {
-          "q": "I like red.",
-          "segments": ["赤", "が", "好き", "です"],
-          "distractors": ["は", "青"],
-          "explanation": "赤 (red) + が (subject with 好き) + 好き (like) + です. 好き takes が, not は, to mark what is liked. 青 means 'blue.'"
+          "q": "What color do you like?",
+          "segments": ["何色", "が", "好き", "ですか"],
+          "distractors": ["を", "は"],
+          "explanation": "何色 (what color) + が (subject with 好き) + 好き (like, N4.4) + ですか. 好き takes が."
         },
         {
-          "q": "This tea is delicious.",
-          "segments": ["この", "お茶", "は", "おいしい", "です"],
-          "distractors": ["が", "暗い"],
-          "explanation": "この + お茶 (tea) + は (topic) + おいしい (delicious) + です. 暗い means 'dark' — not related to taste."
+          "q": "I like blue the most.",
+          "segments": ["青", "が", "一番", "好き", "です"],
+          "distractors": ["赤", "を"],
+          "explanation": "青 (blue, N4.4) + が + 一番 (most) + 好き + です. 赤 (red) is a different color."
+        }
+      ],
+      "buildup": [
+        {
+          "q": "This morning I wore a red shirt.",
+          "segments": ["今朝", "赤い", "シャツ", "を", "着ました"],
+          "distractors": ["黒い", "に", "が"],
+          "explanation": "今朝 (this morning, 朝 now available N4.3) + 赤い (red) + シャツ + を + 着ました (wore, N4.1). 黒い means 'black.'"
         },
         {
-          "q": "Lunch and dinner are the same.",
-          "segments": ["昼ごはん", "と", "晩ごはん", "は", "同じ", "です"],
+          "q": "I can wear that black jacket.",
+          "segments": ["あの", "黒い", "ジャケット", "を", "着られます"],
+          "distractors": ["白い", "に", "が"],
+          "explanation": "あの + 黒い (black, N4.4) + ジャケット + を + 着られます (can wear, potential G13). 白い means 'white.'"
+        }
+      ],
+      "challenge": [
+        {
+          "q": "I went shopping and bought a new white bag.",
+          "segments": ["買い物", "に", "行って", "新しい", "白い", "かばん", "を", "買いました"],
+          "distractors": ["古い", "で", "が", "黒い"],
+          "explanation": "買い物 + に + 行って (went shopping, te-form chain) + 新しい + 白い + かばん + を + 買いました. 古い means 'old.'"
+        },
+        {
+          "q": "I like brown tea more than green tea.",
+          "segments": ["お茶", "より", "茶色い", "おちゃ", "の", "ほう", "が", "好き", "です"],
+          "distractors": ["を", "青い", "に", "は"],
+          "explanation": "お茶 + より (than, G15) + 茶色い (brown, N4.4) + おちゃ + のほうが + 好き + です. より…のほうが = comparison."
+        },
+        {
+          "q": "The red dress in that shop can be bought cheaply.",
+          "segments": ["あの", "店", "の", "赤い", "ドレス", "は", "安く", "買えます"],
+          "distractors": ["この", "高く", "が", "を"],
+          "explanation": "あの + 店 + の + 赤い (red) + ドレス + は + 安く (cheaply) + 買えます (can buy, potential G13). 高く means 'expensively.'"
+        }
+      ]
+    },
+    {
+      "id": "n4-mar-3",
+      "title": "Cooking Dinner",
+      "requires": ["N4.6"],
+      "warmup": [
+        {
+          "q": "I went to buy vegetables.",
+          "segments": ["野菜", "を", "買いに", "行きました"],
           "distractors": ["が", "に"],
-          "explanation": "昼ごはん (lunch) + と (and) + 晩ごはん (dinner) + は (topic) + 同じ (same) + です."
+          "explanation": "野菜 (vegetables, N4.5) + を + 買いに (to buy, purpose) + 行きました. に marks purpose of movement."
         },
         {
-          "q": "It is dark outside.",
-          "segments": ["外", "は", "暗い", "です"],
+          "q": "Today's dinner is rice and fish.",
+          "segments": ["今日", "の", "晩ごはん", "は", "ご飯", "と", "魚", "です"],
+          "distractors": ["が", "昼ごはん"],
+          "explanation": "今日 + の + 晩ごはん (dinner, 晩 N4.3) + は + ご飯 + と + 魚 + です. 昼ごはん is lunch."
+        }
+      ],
+      "buildup": [
+        {
+          "q": "This beef is tastier than chicken.",
+          "segments": ["この", "牛肉", "は", "鳥", "より", "おいしい", "です"],
+          "distractors": ["が", "まずい", "を"],
+          "explanation": "この + 牛肉 (beef, N4.5) + は + 鳥 (chicken, N4.6) + より (than, G15) + おいしい + です. まずい means 'bad-tasting.'"
+        },
+        {
+          "q": "My mother gave me some vegetables.",
+          "segments": ["母", "が", "野菜", "を", "くれました"],
+          "distractors": ["に", "は", "あげました"],
+          "explanation": "母 + が + 野菜 + を + くれました (gave me, G14). あげました means 'I gave [to someone else]' — wrong direction."
+        }
+      ],
+      "challenge": [
+        {
+          "q": "I received vegetables from my mother and made dinner.",
+          "segments": ["母", "から", "野菜", "を", "もらって", "晩ごはん", "を", "作りました"],
+          "distractors": ["に", "あげて", "が", "で"],
+          "explanation": "母 + から (from) + 野菜 + を + もらって (received, te-form G14) + 晩ごはん + を + 作りました (made, N4.1)."
+        },
+        {
+          "q": "The kitchen was dark so I turned on the light.",
+          "segments": ["キッチン", "が", "暗かった", "ので", "電気", "を", "つけました"],
+          "distractors": ["は", "明るかった", "に", "で"],
+          "explanation": "キッチン + が + 暗かった (was dark, 暗 N4.6) + ので (because) + 電気 + を + つけました. 明るかった means 'was bright.'"
+        },
+        {
+          "q": "It tastes the same as the food my mother makes.",
+          "segments": ["母", "が", "作る", "料理", "と", "同じ", "味", "です"],
+          "distractors": ["の", "を", "に", "ちがう"],
+          "explanation": "母 + が + 作る (makes, relative clause) + 料理 (cooking, N4.5) + と + 同じ (same, N4.6) + 味 (taste, N4.6) + です."
+        }
+      ]
+    },
+    {
+      "id": "n4-mar-4",
+      "title": "Seasons & Family",
+      "requires": ["N4.8"],
+      "warmup": [
+        {
+          "q": "Summer in Japan is hot.",
+          "segments": ["日本", "の", "夏", "は", "暑い", "です"],
+          "distractors": ["が", "寒い"],
+          "explanation": "日本 + の + 夏 (summer, N4.8) + は + 暑い (hot, N4.8) + です. 寒い (cold) is the opposite."
+        },
+        {
+          "q": "My father likes winter.",
+          "segments": ["父", "は", "冬", "が", "好き", "です"],
+          "distractors": ["を", "夏"],
+          "explanation": "父 + は + 冬 (winter, N4.8) + が + 好き + です. 夏 (summer) is a different season."
+        }
+      ],
+      "buildup": [
+        {
+          "q": "My older brother only goes to the mountains in autumn.",
+          "segments": ["兄", "は", "秋", "だけ", "山", "に", "行きます"],
+          "distractors": ["しか", "を", "で"],
+          "explanation": "兄 (older brother, N4.7) + は + 秋 (autumn, N4.8) + だけ (only, G17) + 山 + に + 行きます."
+        },
+        {
+          "q": "My family is talking about a spring trip.",
+          "segments": ["家族", "は", "春", "の", "旅行", "の", "話", "を", "しています"],
+          "distractors": ["冬", "が", "に"],
+          "explanation": "家族 (family, N4.7) + は + 春 (spring, N4.8) + の + 旅行 + の + 話 + を + しています. 冬 is a different season."
+        }
+      ],
+      "challenge": [
+        {
+          "q": "My older sister says she wants to see cherry blossoms this spring.",
+          "segments": ["姉", "は", "今年", "の", "春", "に", "さくら", "を", "見たい", "と", "言っています"],
+          "distractors": ["弟", "が", "で", "秋"],
+          "explanation": "姉 (older sister, N4.7) + は + 今年 + の + 春 + に + さくら + を + 見たい + と + 言っています."
+        },
+        {
+          "q": "In winter it is cold so my mother only stays at home.",
+          "segments": ["冬", "は", "寒い", "ので", "母", "は", "家", "に", "いる", "だけ", "です"],
+          "distractors": ["暑い", "が", "で", "ばかり"],
+          "explanation": "冬 + は + 寒い + ので (because) + 母 + は + 家 + に + いるだけです (only stays). 暑い (hot) is the opposite."
+        },
+        {
+          "q": "This summer my whole family is going to the sea for the first time.",
+          "segments": ["今年", "の", "夏", "家族", "で", "はじめて", "うみ", "に", "行きます"],
+          "distractors": ["冬", "が", "を", "は"],
+          "alts": [["家族", "で", "今年", "の", "夏", "はじめて", "うみ", "に", "行きます"]],
+          "explanation": "今年 + の + 夏 + 家族で (with family) + はじめて (for the first time) + うみ (sea, 海 not yet taught) + に + 行きます."
+        }
+      ]
+    },
+    {
+      "id": "n4-mar-5",
+      "title": "Movie Night",
+      "requires": ["N4.10"],
+      "warmup": [
+        {
+          "q": "The movie starts at seven.",
+          "segments": ["映画", "は", "七時", "に", "始まります"],
+          "distractors": ["が", "終わります"],
+          "explanation": "映画 (movie, N4.10) + は + 七時 + に + 始まります (starts, intransitive N4.10). 終わります means 'ends.'"
+        },
+        {
+          "q": "Let's go to the cinema together.",
+          "segments": ["いっしょに", "映画館", "に", "行きましょう"],
+          "distractors": ["で", "を"],
+          "explanation": "いっしょに (together) + 映画館 (cinema, N4.10) + に + 行きましょう (let's go)."
+        }
+      ],
+      "buildup": [
+        {
+          "q": "After buying tickets, we entered the cinema.",
+          "segments": ["チケット", "を", "買ってから", "映画館", "に", "入りました"],
+          "distractors": ["が", "買う前に", "で"],
+          "explanation": "チケット + を + 買ってから (after buying, G19 てから) + 映画館 + に + 入りました. 前に means 'before.'"
+        },
+        {
+          "q": "The movie ended and everyone stood up.",
+          "segments": ["映画", "が", "終わって", "みんな", "が", "立ちました"],
+          "distractors": ["は", "始まって", "を"],
+          "explanation": "映画 + が + 終わって (ended, te-form N4.10) + みんな + が + 立ちました (stood up). 始まって means 'started.'"
+        }
+      ],
+      "challenge": [
+        {
+          "q": "While watching the movie I ate popcorn.",
+          "segments": ["映画", "を", "見ながら", "ポップコーン", "を", "食べました"],
+          "distractors": ["が", "見てから", "に", "飲みました"],
+          "explanation": "映画 + を + 見ながら (while watching, G19 ながら) + ポップコーン + を + 食べました."
+        },
+        {
+          "q": "Before the movie started, we talked about the story.",
+          "segments": ["映画", "が", "始まる前に", "話", "の", "ことを", "はなしました"],
+          "distractors": ["始まってから", "は", "を", "で"],
+          "explanation": "映画 + が + 始まる前に (before starting, G19 まえに) + 話 + の + ことを + はなしました."
+        },
+        {
+          "q": "On days off we did things like go to the cinema and eat at restaurants.",
+          "segments": ["休み", "の", "日", "に", "映画館", "に", "行ったり", "レストラン", "で", "食べたり", "しました"],
+          "distractors": ["が", "を", "は", "で"],
+          "explanation": "休みの日に + 映画館に + 行ったり + レストランで + 食べたり + しました. たり…たりする = 'do things like X and Y' (G19)."
+        }
+      ]
+    },
+    {
+      "id": "n4-mar-6",
+      "title": "Travel Snapshots",
+      "requires": ["N4.12"],
+      "warmup": [
+        {
+          "q": "I took a photo of the mountain.",
+          "segments": ["山", "の", "写真", "を", "とりました"],
           "distractors": ["が", "に"],
-          "explanation": "外 (outside) + は (topic) + 暗い (dark) + です. 暗い is an i-adjective meaning 'dark.'"
+          "explanation": "山 + の + 写真 (photo, N4.11) + を + とりました (took)."
         },
         {
-          "q": "I do not like the black one.",
-          "segments": ["黒い", "の", "は", "好きではないです"],
-          "distractors": ["が", "を"],
-          "explanation": "黒い (black) + の (nominalizer, 'the one') + は (topic) + 好きではないです (do not like). の after an adjective = 'the [adjective] one.'"
+          "q": "My whole body is tired.",
+          "segments": ["体", "が", "つかれています"],
+          "distractors": ["を", "頭"],
+          "explanation": "体 (body, N4.12) + が + つかれています (is tired). 頭 means 'head.'"
         }
-      ]
-    },
-    {
-      "id": "n4-scr-3",
-      "title": "Family & Living",
-      "difficulty": 1,
-      "requires": ["N4.7", "N4.9"],
-      "items": [
+      ],
+      "buildup": [
         {
-          "q": "My older brother lives in Tokyo.",
-          "segments": ["兄", "は", "東京", "に", "住んでいます"],
-          "distractors": ["で", "弟"],
-          "explanation": "兄 (older brother) + は (topic) + 東京 + に (location with 住む) + 住んでいます (is living). 住む takes に, not で. 弟 means 'younger brother.'"
+          "q": "After taking photos I rested my feet.",
+          "segments": ["写真", "を", "とってから", "足", "を", "休めました"],
+          "distractors": ["が", "とる前に", "に"],
+          "explanation": "写真 + を + とってから (after taking, G19 てから) + 足 (feet) + を + 休めました (rested)."
         },
         {
-          "q": "My younger sister is at school.",
-          "segments": ["妹", "は", "学校", "に", "います"],
-          "distractors": ["で", "姉"],
-          "explanation": "妹 (younger sister) + は + 学校 + に (location of existence) + います. 姉 means 'older sister.'"
-        },
-        {
-          "q": "That town is far.",
-          "segments": ["あの", "町", "は", "遠い", "です"],
-          "distractors": ["近い", "に"],
-          "explanation": "あの + 町 (town) + は (topic) + 遠い (far) + です. 近い (near) is the opposite."
-        },
-        {
-          "q": "Where do you live?",
-          "segments": ["どこ", "に", "住んでいます", "か"],
-          "distractors": ["で", "は"],
-          "explanation": "どこ (where) + に + 住んでいます + か. 住む always takes に for the place of residence."
-        },
-        {
-          "q": "My family is my parents, my older sister, and me.",
-          "segments": ["家族", "は", "親", "と", "姉", "と", "私", "です"],
-          "distractors": ["が", "の"],
-          "explanation": "家族 (family) + は + 親 (parents) + と (and) + 姉 (older sister) + と + 私 (I/me) + です. と lists members exhaustively."
+          "q": "The world is wide so there are many places I want to see.",
+          "segments": ["世界", "は", "広い", "ので", "見たい", "ところ", "が", "たくさん", "あります"],
+          "distractors": ["が", "せまい", "を"],
+          "explanation": "世界 (world, N4.11) + は + 広い (wide) + ので + 見たい + ところ (places) + が + たくさん + あります."
         }
-      ]
-    },
-    {
-      "id": "n4-scr-4",
-      "title": "Movies & Travel",
-      "difficulty": 2,
-      "requires": ["N4.10", "N4.11"],
-      "items": [
+      ],
+      "challenge": [
         {
-          "q": "The movie starts at 7 PM.",
-          "segments": ["映画", "は", "午後", "七時", "に", "始まります"],
-          "distractors": ["で", "終わります", "から"],
-          "explanation": "映画 (movie) + は + 午後 (PM) + 七時 + に (time) + 始まります (starts, intransitive). 終わります means 'ends' — the opposite."
+          "q": "I walked too much and my head hurts.",
+          "segments": ["歩きすぎて", "頭", "が", "いたい", "です"],
+          "distractors": ["歩いてから", "首", "を", "は"],
+          "explanation": "歩きすぎて (walked too much, すぎる G15) + 頭 (head, N4.12) + が + いたい + です. 首 means 'neck.'"
         },
         {
-          "q": "I took a photo of the world map.",
-          "segments": ["世界", "の", "地図", "の", "写真", "を", "とりました"],
-          "distractors": ["が", "に", "で"],
-          "explanation": "世界 (world) + の + 地図 (map) + の + 写真 (photo) + を (object) + とりました (took). Chained の connects: world → map → photo."
+          "q": "In order to see the whole world, I want to travel every year.",
+          "segments": ["世界中", "を", "見るために", "毎年", "旅行したい", "です"],
+          "distractors": ["が", "見てから", "に", "は"],
+          "explanation": "世界中 + を + 見るために (in order to see, G19 ために) + 毎年 + 旅行したいです."
         },
         {
-          "q": "I went on a trip by myself.",
-          "segments": ["自分", "で", "旅行", "に", "行きました"],
-          "distractors": ["を", "は", "が"],
-          "explanation": "自分 (oneself) + で (by means of, 'by myself') + 旅行 (trip) + に (purpose/destination) + 行きました. 自分で = 'by oneself.'"
-        },
-        {
-          "q": "That movie theater is close to the station.",
-          "segments": ["あの", "映画館", "は", "駅", "に", "近い", "です"],
-          "distractors": ["で", "遠い", "が"],
-          "alts": [["あの", "映画館", "は", "駅", "から", "近い", "です"]],
-          "explanation": "あの + 映画館 (movie theater) + は + 駅 + に/から (near to) + 近い + です. Both 駅に近い and 駅から近い are natural. 遠い (far) is the opposite."
-        },
-        {
-          "q": "The English movie ended at 9 PM.",
-          "segments": ["英語", "の", "映画", "は", "午後", "九時", "に", "終わりました"],
-          "distractors": ["で", "始まりました", "が"],
-          "explanation": "英語 (English) + の + 映画 + は + 午後 + 九時 + に (time) + 終わりました (ended). 始まりました means 'started.'"
-        }
-      ]
-    },
-    {
-      "id": "n4-scr-5",
-      "title": "Body & Music",
-      "difficulty": 2,
-      "requires": ["N4.12", "N4.14"],
-      "items": [
-        {
-          "q": "My head hurts since this morning.",
-          "segments": ["今朝", "から", "頭", "が", "いたい", "です"],
-          "distractors": ["は", "に", "を"],
-          "explanation": "今朝 (this morning) + から (since) + 頭 (head) + が (subject) + いたい (hurts) + です. から marks the starting time point."
-        },
-        {
-          "q": "That singer has a good voice.",
-          "segments": ["あの", "歌手", "は", "声", "が", "いい", "です"],
-          "distractors": ["を", "に", "の"],
-          "explanation": "あの + 歌手 (singer) + は (topic) + 声 (voice) + が (subject within topic) + いい (good) + です. Double-は avoidance: は marks the singer, が marks voice within that topic."
-        },
-        {
-          "q": "I listen to music at the company early in the morning.",
-          "segments": ["朝", "早く", "会社", "で", "音楽", "を", "聞きます"],
-          "distractors": ["に", "が", "は"],
-          "alts": [["会社", "で", "朝", "早く", "音楽", "を", "聞きます"]],
-          "explanation": "朝 (morning) + 早く (early, adverbial form of 早い) + 会社 + で (location of action) + 音楽 (music) + を + 聞きます (listen). Time and place phrases can swap."
-        },
-        {
-          "q": "Work ends at 6 PM.",
-          "segments": ["仕事", "は", "午後", "六時", "に", "終わります"],
-          "distractors": ["で", "から", "始まります"],
-          "explanation": "仕事 (work) + は + 午後 + 六時 + に (time) + 終わります (ends). 始まります means 'starts' — wrong verb."
-        },
-        {
-          "q": "I have a strong body and a light heart.",
-          "segments": ["体", "が", "強くて", "心", "が", "軽い", "です"],
-          "distractors": ["は", "を", "弱くて"],
-          "explanation": "体 (body) + が + 強くて (strong + te-form to connect) + 心 (heart/mind) + が + 軽い (light) + です. i-adj te-form: 強い → 強くて. 弱くて means 'weak.'"
-        }
-      ]
-    },
-    {
-      "id": "n4-scr-6",
-      "title": "Health & Geography",
-      "difficulty": 2,
-      "requires": ["N4.15", "N4.19"],
-      "items": [
-        {
-          "q": "Please go to the hospital quickly.",
-          "segments": ["早く", "病院", "に", "行ってください"],
-          "distractors": ["で", "を", "が"],
-          "explanation": "早く (quickly) + 病院 (hospital) + に (destination) + 行ってください (please go). 早く is the adverbial form of 早い."
-        },
-        {
-          "q": "That doctor is famous in this town.",
-          "segments": ["あの", "医者", "は", "この", "町", "で", "有名", "です"],
-          "distractors": ["に", "が", "の"],
-          "explanation": "あの + 医者 (doctor) + は + この + 町 + で (scope/context marker) + 有名 (famous) + です. で marks the scope within which the doctor is famous."
-        },
-        {
-          "q": "Please look at this map and answer the question.",
-          "segments": ["この", "地図", "を", "見て", "質問", "に", "答えてください"],
-          "distractors": ["で", "が", "は"],
-          "explanation": "この + 地図 (map) + を + 見て (te-form of 見る) + 質問 (question) + に (target) + 答えてください (please answer). Te-form connects sequential actions."
-        },
-        {
-          "q": "The problem is not easy to explain.",
-          "segments": ["この", "問題", "は", "説明", "が", "むずかしい", "です"],
-          "distractors": ["を", "に", "の"],
-          "explanation": "この + 問題 (problem) + は + 説明 (explanation) + が (subject within topic) + むずかしい (difficult) + です. The pattern Xは Yが adj = 'as for X, Y is adj.'"
-        },
-        {
-          "q": "The dog is running quickly and strongly.",
-          "segments": ["犬", "が", "早く", "強く", "走っています"],
-          "distractors": ["は", "を", "に"],
-          "explanation": "犬 (dog) + が (subject) + 早く (quickly) + 強く (strongly) + 走っています (is running). Both adverbs modify the running."
-        }
-      ]
-    },
-    {
-      "id": "n4-scr-7",
-      "title": "Commerce & Writing",
-      "difficulty": 3,
-      "requires": ["N4.21", "N4.24"],
-      "items": [
-        {
-          "q": "You may not sell these goods.",
-          "segments": ["この", "品物", "を", "売っては", "いけません"],
-          "distractors": ["が", "に", "もいいです", "で"],
-          "explanation": "この + 品物 (goods) + を + 売っては (selling +は) + いけません (must not). てはいけない = 'must not' (G23). もいいです would mean 'may' — the opposite."
-        },
-        {
-          "q": "You may borrow this pen to write kanji.",
-          "segments": ["漢字", "を", "書くために", "この", "ペン", "を", "借りてもいいです"],
-          "distractors": ["が", "に", "いけません", "で"],
-          "explanation": "漢字 (kanji) + を + 書くために (in order to write) + この + ペン + を + 借りてもいいです (may borrow). ために = 'in order to' (G19). てもいいです = 'it's okay to' (G23)."
-        },
-        {
-          "q": "I tried the difficult test yesterday.",
-          "segments": ["きのう", "むずかしい", "試験", "を", "受けました"],
-          "distractors": ["が", "に", "で", "は"],
-          "explanation": "きのう (yesterday) + むずかしい (difficult) + 試験 (test/exam) + を (object) + 受けました (took/received). 試験を受ける = 'to take a test.'"
-        },
-        {
-          "q": "Please do not carry heavy things.",
-          "segments": ["重い", "物", "を", "持たないでください"],
-          "distractors": ["が", "に", "で", "軽い"],
-          "explanation": "重い (heavy) + 物 (things) + を + 持たないでください (please don't carry). ない + でください = negative request. 軽い (light) is the opposite of 重い."
-        },
-        {
-          "q": "The classroom is on the left side of the entrance.",
-          "segments": ["教室", "は", "入り口", "の", "左", "に", "あります"],
-          "distractors": ["で", "が", "右", "を"],
-          "explanation": "教室 (classroom) + は + 入り口 (entrance) + の + 左 (left) + に + あります. 右 (right) is the opposite direction."
-        }
-      ]
-    },
-    {
-      "id": "n4-scr-8",
-      "title": "Thoughts & Answers",
-      "difficulty": 3,
-      "requires": ["N4.26", "N4.30"],
-      "items": [
-        {
-          "q": "I think that answer is wrong.",
-          "segments": ["あの", "答え", "は", "悪い", "と", "思います"],
-          "distractors": ["が", "に", "正しい", "を"],
-          "explanation": "あの + 答え (answer) + は + 悪い (bad/wrong) + と (quotation) + 思います (I think). と quotes the thought. 正しい means 'correct' — the opposite of 悪い here."
-        },
-        {
-          "q": "I have been to that special place once.",
-          "segments": ["あの", "特別な", "場所", "に", "一度", "行ったことがあります"],
-          "distractors": ["で", "を", "は", "が"],
-          "explanation": "あの + 特別な (special, na-adj) + 場所 (place) + に (destination) + 一度 (once) + 行ったことがあります (have been, experience form G27)."
-        },
-        {
-          "q": "Please think about the correct answer.",
-          "segments": ["正しい", "答え", "を", "考えてください"],
-          "distractors": ["が", "に", "悪い", "は"],
-          "explanation": "正しい (correct) + 答え (answer) + を (object) + 考えてください (please think about). 考える takes を for the object of thought."
-        },
-        {
-          "q": "I think this way of thinking is interesting.",
-          "segments": ["この", "考え方", "は", "おもしろい", "と", "思います"],
-          "distractors": ["が", "を", "に", "で"],
-          "explanation": "この + 考え方 (way of thinking) + は + おもしろい (interesting) + と + 思います. 考え方 = 考え (thought) + 方 (way)."
-        },
-        {
-          "q": "I collected special items and brought them.",
-          "segments": ["特別な", "物", "を", "集めて", "持ってきました"],
-          "distractors": ["が", "に", "は", "で"],
-          "explanation": "特別な + 物 + を + 集めて (te-form of 集める, collect) + 持ってきました (brought, てくる G24). Te-form chains two actions; てくる adds directional meaning ('brought here')."
-        }
-      ]
-    },
-    {
-      "id": "n4-scr-9",
-      "title": "Advanced Grammar",
-      "difficulty": 3,
-      "requires": ["N4.31", "N4.35"],
-      "items": [
-        {
-          "q": "The dog was washed by the owner.",
-          "segments": ["犬", "は", "主人", "に", "洗われました"],
-          "distractors": ["が", "を", "で", "から"],
-          "explanation": "犬 + は (topic) + 主人 (owner) + に (by, passive agent) + 洗われました (was washed, passive of 洗う G28). に marks who performed the action in passive."
-        },
-        {
-          "q": "Please stop here and open the door.",
-          "segments": ["ここ", "で", "止まって", "ドア", "を", "開けてください"],
-          "distractors": ["に", "が", "は", "も"],
-          "explanation": "ここ + で (location of action) + 止まって (te-form of 止まる, stop) + ドア + を + 開けてください (please open). Te-form chains two sequential actions."
-        },
-        {
-          "q": "The forest has become dark.",
-          "segments": ["森", "が", "暗くなりました"],
-          "distractors": ["は", "を", "に", "で"],
-          "explanation": "森 (forest) + が (subject) + 暗くなりました (became dark). i-adj + くなる = 'become [adjective]' (G31). 暗い → 暗く + なる."
-        },
-        {
-          "q": "The citizens were made to walk to the station by the mayor.",
-          "segments": ["市民", "は", "市長", "に", "駅", "まで", "歩かされました"],
-          "distractors": ["が", "を", "で", "から"],
-          "explanation": "市民 (citizens) + は + 市長 (mayor) + に (by) + 駅 + まで (up to) + 歩かされました (were made to walk, causative-passive of 歩く G29). に marks the causer."
-        },
-        {
-          "q": "I think it would be convenient if the bus stop were closer.",
-          "segments": ["バス停", "が", "もっと", "近ければ", "便利だ", "と", "思います"],
-          "distractors": ["は", "に", "不便だ", "を"],
-          "explanation": "バス停 (bus stop) + が + もっと (more) + 近ければ (if close, conditional of 近い G25) + 便利だ (convenient) + と + 思います. 不便 means 'inconvenient' — the opposite."
+          "q": "While taking photos of the scenery, my heart felt at peace.",
+          "segments": ["けしき", "の", "写真", "を", "とりながら", "心", "が", "おちつきました"],
+          "distractors": ["で", "とってから", "顔", "は"],
+          "explanation": "けしき (scenery) + の + 写真 + を + とりながら (while taking, G19 ながら) + 心 (heart, N4.12) + が + おちつきました."
         }
       ]
     }
