@@ -232,14 +232,13 @@
             },
             {
               "spk": "ゆき",
-              "jp": "うん。また 試して 見たいな。",
+              "jp": "うん。また 試したいな。",
               "en": "Yeah. I want to try again.",
               "terms": [
                 "char_yuki",
                 "v_un",
                 "v_mata",
-                { "id": "v_tamesu", "form": "te_form" },
-                { "id": "v_miru", "form": "plain_desire_tai" },
+                { "id": "v_tamesu", "form": "plain_desire_tai" },
                 "p_na"
               ]
             }
@@ -357,14 +356,13 @@
           ]
         },
         {
-          "jp": "体重が 重大な 問題に なって きましたが、運動して いきます。",
-          "en": "My body weight has become a serious issue, but I will keep exercising.",
+          "jp": "体重が 少し 重く なって きましたが、運動して いきます。",
+          "en": "My body weight has become a little heavier, but I will keep exercising.",
           "terms": [
             "v_taijuu",
             "p_ga",
-            { "id": "v_juudai", "form": "attributive_na" },
-            "v_mondai",
-            "p_ni",
+            "v_sukoshi",
+            { "id": "v_omoi", "form": "adverbial" },
             { "id": "v_naru", "form": "te_form" },
             { "id": "v_kuru", "form": "polite_mashita" },
             "p_ga_but",
@@ -446,21 +444,20 @@
         },
         {
           "q": "体重は どう なって きましたか。",
-          "a": "重大な 問題に なって きました",
+          "a": "少し 重く なって きました",
           "choices": [
-            "重大な 問題に なって きました",
+            "少し 重く なって きました",
             "少し 軽く なって きました",
             "進歩して よく なりました",
-            "大切な 体験に なりました"
+            "重大な 問題に なりました"
           ],
           "terms": [
-            { "id": "v_juudai", "form": "attributive_na" },
-            "v_mondai",
-            "p_ni",
+            "v_sukoshi",
+            { "id": "v_omoi", "form": "adverbial" },
             { "id": "v_naru", "form": "te_form" },
             { "id": "v_kuru", "form": "polite_mashita" }
           ],
-          "explanation": "The passage says 体重が重大な問題になってきました — body weight has become a serious issue (てくる = change accumulating toward the present)."
+          "explanation": "The passage says 体重が少し重くなってきました — body weight has become a little heavier (てくる = change accumulating toward the present)."
         }
       ]
     },
@@ -570,19 +567,18 @@
         },
         {
           "kind": "mcq",
-          "q": "新しい 事を ______ 見ました。とても 楽しかったです。",
-          "choices": ["試して", "進んで", "重ねて", "教えて"],
-          "answer": "試して",
+          "q": "新しい 事を ______。とても 楽しかったです。",
+          "choices": ["試しました", "進みました", "重ねました", "教えました"],
+          "answer": "試しました",
           "terms": [
             "v_atarashii",
             "v_koto",
             "p_wo",
-            { "id": "v_tamesu", "form": "te_form" },
-            { "id": "v_miru", "form": "polite_mashita" },
+            { "id": "v_tamesu", "form": "polite_mashita" },
             "v_totemo",
             { "id": "v_tanoshii", "form": "polite_past_adj" }
           ],
-          "explanation": "試してみました (tameshite mimashita) = tried doing (it). てみる = try doing. 試す (tamesu) in te-form = 試して. The pattern 〜てみる expresses trying something new."
+          "explanation": "試しました (tameshimashita) = tried / tested something. 試す (tamesu) = to try or test. 進みました = advanced, 重ねました = accumulated / layered, 教えました = taught."
         }
       ]
     },
@@ -640,20 +636,20 @@
         },
         {
           "kind": "mcq",
-          "q": "試食して ______ から、とても おいしいと 分かりました。",
-          "choices": ["見た", "きた", "いった", "おいた"],
-          "answer": "見た",
+          "q": "音楽を ______ 、試験の 勉強を しました。",
+          "choices": ["聞きながら", "聞いてから", "聞くために", "聞くまで"],
+          "answer": "聞きながら",
           "terms": [
-            "v_shishoku",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_miru", "form": "plain_past" },
-            "p_kara_because",
-            "v_totemo",
-            "v_oishii",
-            "p_to_quote",
-            { "id": "v_wakaru", "form": "polite_mashita" }
+            "v_ongaku",
+            "p_wo",
+            { "id": "v_kiku", "form": "nagara_form" },
+            "v_shiken",
+            "p_no",
+            "v_benkyou",
+            "p_wo",
+            { "id": "v_suru", "form": "polite_mashita" }
           ],
-          "explanation": "<b>〜てみた</b> (te-form + みる in plain past) = tried doing. 試食してみた = tried doing food tasting (and as a result found it delicious). みた is the plain past of みる — use みた, not きた."
+          "explanation": "<b>ながら</b> (nagara) = while doing. 聞きながら勉強しました = studied while listening to music. 聞いてから = after listening (sequence), 聞くために = in order to listen (purpose), 聞くまで = until listening (extent)."
         }
       ]
     }
