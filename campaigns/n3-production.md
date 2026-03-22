@@ -39,6 +39,7 @@ The following words were used as untagged story-context in `furima-no-hi` (N4.21
 Also flag for early N3 vocabulary:
 - `はこ` (box) — used as untagged kana in furima-no-hi because not in N5/N4 glossary; tokenizes incorrectly as `は`+`こ` particle split. Add to N3 early.
 - `として` (as; in the capacity of) — compound particle used in furima-no-hi, no p_* ID exists in particles.json. Add as particle or grammar point.
+- `やる` (to do; to give [to someone of lower status]) — introduce early in N3. Casual alternative to する for "to do"; also used as a giving verb (やる/あげる/くれる set). Foundational for casual speech register.
 
 ---
 
