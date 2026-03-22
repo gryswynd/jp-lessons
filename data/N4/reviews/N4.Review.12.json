@@ -1,761 +1,655 @@
 {
   "contentVersion": "1.0.0",
   "id": "N4.Review.12",
-  "title": "Phase 4 Review: Lifestyle, Trade & Attributes",
+  "title": "Phase 4 Review: Physical Attributes & Education",
   "meta": {
     "phase": 4,
     "type": "assessment",
-    "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 20-23.",
-    "kanji": [
-      "夜",
-      "洋",
-      "服",
-      "屋",
-      "売",
-      "品",
-      "持",
-      "貸",
-      "漢",
-      "字",
-      "紙",
-      "意",
-      "太",
-      "短",
-      "重",
-      "進"
-    ]
+    "focus": "Review of Kanji, Vocabulary, and Grammar from Lessons 23–24.",
+    "kanji": ["太", "短", "重", "進", "教", "室", "試", "験"]
   },
   "sections": [
     {
       "type": "conversation",
       "title": "Part 1: Conversation Check",
-      "instructions": "Read the conversation and select the best summary.",
+      "instructions": "Read each conversation and answer the comprehension question.",
       "items": [
         {
           "title": "Conversation 1",
-          "context": "At a clothing store.",
+          "context": "Rikizo visits Yamamoto-sensei for his regular health check. She comments on his recent progress.",
           "lines": [
             {
-              "spk": "A",
-              "jp": "すみません。この 洋服は 売り物ですか。",
+              "spk": "やまもとせんせい",
+              "jp": "体重が 少し 重く なって きましたね。",
+              "en": "Your body weight has gradually become a little heavier.",
               "terms": [
-                "v_youfuku",
-                "v_urimono"
+                "char_yamamoto",
+                "v_taijuu",
+                "p_ga",
+                "v_sukoshi",
+                { "id": "v_omoi", "form": "adverbial" },
+                { "id": "v_naru", "form": "te_form" },
+                { "id": "v_kuru", "form": "polite_mashita" },
+                "p_ne"
               ]
             },
             {
-              "spk": "B",
-              "jp": "はい。とても 上品な 服ですよ。",
+              "spk": "りきぞ",
+              "jp": "そうなんですか。少し 太りましたか。",
+              "en": "Is that so. Did I gain a little weight?",
               "terms": [
-                "v_jouhin",
-                "k_fuku"
+                "char_rikizo",
+                "v_sou",
+                "p_ndesu",
+                "p_ka",
+                "v_sukoshi",
+                { "id": "v_futoru", "form": "polite_mashita" },
+                "p_ka"
               ]
             },
             {
-              "spk": "A",
-              "jp": "着てみたいですが、お金を 持っていません。",
+              "spk": "やまもとせんせい",
+              "jp": "重大な 問題では ありませんよ。毎日 運動して いきましょう。",
+              "en": "It is not a serious problem. Let's keep exercising every day.",
               "terms": [
-                {
-                  "id": "v_kiru",
-                  "form": "te_form"
-                },
-                {
-                  "id": "v_miru",
-                  "form": "plain_desire_tai"
-                },
-                "g_desu",
-                "v_kane",
-                {
-                  "id": "v_motsu",
-                  "form": "te_form"
-                },
-                {
-                  "id": "v_iru",
-                  "form": "polite_negative"
-                }
+                "char_yamamoto",
+                { "id": "v_juudai", "form": "attributive_na" },
+                "v_mondai",
+                "p_dewa",
+                { "id": "v_aru", "form": "polite_negative" },
+                "p_yo",
+                "v_mainichi",
+                "v_undou",
+                { "id": "v_suru", "form": "te_form" },
+                { "id": "v_iku", "form": "polite_volitional_mashou" }
               ]
             },
             {
-              "spk": "B",
-              "jp": "そうですか。では、また 来て ください。",
+              "spk": "りきぞ",
+              "jp": "分かりました。進歩の ために、毎日 歩いて いきます。",
+              "en": "Understood. In order to make progress, I will keep walking every day.",
               "terms": [
-                {
-                  "id": "v_kuru",
-                  "form": "te_form"
-                }
+                "char_rikizo",
+                { "id": "v_wakaru", "form": "polite_mashita" },
+                "v_shinpo",
+                "p_no",
+                "v_tame",
+                "p_ni",
+                "v_mainichi",
+                { "id": "v_aruku", "form": "te_form" },
+                { "id": "v_iku", "form": "polite_masu" }
               ]
             }
           ],
-          "question": "Why didn't A buy the clothes?",
+          "question": "What does Yamamoto-sensei suggest Rikizo do every day?",
           "choices": [
-            "Because the clothes were not for sale.",
-            "Because A didn't have money.",
-            "Because the clothes were heavy.",
-            "Because the shop was closed."
+            "Study kanji every day.",
+            "Exercise and keep walking every day.",
+            "Eat less food and rest more.",
+            "Go to the classroom every morning."
           ],
-          "answer": "Because A didn't have money.",
-          "explanation": "A says 'I do not have money' (お金を持っていません)."
+          "answer": "Exercise and keep walking every day.",
+          "explanation": "Yamamoto-sensei says 毎日運動していきましょう (let's keep exercising every day), and Rikizo replies he will keep walking every day (毎日歩いていきます) for the sake of progress (進歩のために)."
         },
         {
           "title": "Conversation 2",
-          "context": "Talking about a letter.",
+          "context": "Rikizo asks Suzuki-sensei about the upcoming exam. They discuss what students may and may not bring.",
           "lines": [
             {
-              "spk": "A",
-              "jp": "これは 何ですか。",
+              "spk": "りきぞ",
+              "jp": "すずきせんせい、試験の 教室は どこですか。",
+              "en": "Suzuki-sensei, where is the exam classroom?",
               "terms": [
-                "v_nan"
+                "char_rikizo",
+                "char_suzuki",
+                "v_shiken",
+                "p_no",
+                "v_kyoushitsu",
+                "p_wa",
+                "v_doko",
+                "g_desu",
+                "p_ka"
               ]
             },
             {
-              "spk": "B",
-              "jp": "父からの 手紙です。漢字が 多いですから、意味が 分かりません。",
+              "spk": "すずきせんせい",
+              "jp": "学校の 中に あります。ノートを 持って きても いいですよ。",
+              "en": "It is inside the school. It is okay to bring a notebook.",
               "terms": [
-                "v_chichi",
-                "v_tegami",
-                "v_kanji",
-                "v_ooi",
-                "v_imi",
-                {
-                  "id": "v_wakaru",
-                  "form": "polite_negative"
-                }
+                "char_suzuki",
+                "v_gakkou",
+                "p_no",
+                "v_naka",
+                "p_ni",
+                { "id": "v_aru", "form": "polite_masu" },
+                "v_nooto",
+                "p_wo",
+                { "id": "v_motsu", "form": "te_form" },
+                { "id": "v_kuru", "form": "te_form" },
+                "p_mo",
+                { "id": "v_ii", "form": "polite_adj" },
+                "p_yo"
               ]
             },
             {
-              "spk": "A",
-              "jp": "読みましょうか。貸して ください。",
+              "spk": "りきぞ",
+              "jp": "スマホを 使っても いいですか。",
+              "en": "Is it okay to use a smartphone?",
               "terms": [
-                {
-                  "id": "v_yomu",
-                  "form": "polite_volitional_mashou"
-                },
-                {
-                  "id": "v_kasu",
-                  "form": "te_form"
-                }
+                "char_rikizo",
+                "v_sumaho",
+                "p_wo",
+                { "id": "v_tsukau", "form": "te_form" },
+                "p_mo",
+                { "id": "v_ii", "form": "polite_adj" },
+                "p_ka"
               ]
             },
             {
-              "spk": "B",
-              "jp": "ありがとう ございます。短い 手紙ですが、おねがいします。",
+              "spk": "すずきせんせい",
+              "jp": "いいえ、試験の 時は スマホを 使っては いけません。",
+              "en": "No, you must not use a smartphone during the exam.",
               "terms": [
-                "v_mijikai",
-                "v_tegami",
-                "v_negai"
+                "char_suzuki",
+                "v_iie",
+                "v_shiken",
+                "p_no",
+                "v_toki",
+                "p_wa",
+                "v_sumaho",
+                "p_wo",
+                { "id": "v_tsukau", "form": "te_form" },
+                "p_wa",
+                { "id": "v_ikeru", "form": "polite_negative" }
               ]
             }
           ],
-          "question": "Why can't B read the letter?",
+          "question": "What does Suzuki-sensei say students must not do during the exam?",
           "choices": [
-            "Because it is written in English.",
-            "Because there are many Kanji.",
-            "Because the paper is dirty.",
-            "Because it is too dark."
+            "Bring a notebook.",
+            "Come to the classroom early.",
+            "Use a smartphone.",
+            "Ask questions."
           ],
-          "answer": "Because there are many Kanji.",
-          "explanation": "B says 'Because there are many Kanji' (漢字が多いですから)."
+          "answer": "Use a smartphone.",
+          "explanation": "Suzuki-sensei says スマホを使ってはいけません — you must not use a smartphone during the exam (てはいけない = prohibition)."
         },
         {
-          "title": "Conversation 3",
-          "context": "Moving an item.",
+          "title": "Conversation 3 (Casual)",
+          "context": "Two close friends, Ken and Yuki, chat after school about today's exam.",
           "lines": [
             {
-              "spk": "A",
-              "jp": "これは 重いですね。",
+              "spk": "けん",
+              "jp": "今日の 試験、どうだった？むずかしかった？",
+              "en": "How was today's exam? Was it difficult?",
               "terms": [
-                "v_omoi"
+                "char_ken",
+                "v_kyou",
+                "p_no",
+                "v_shiken",
+                "v_dou",
+                { "id": "g_da", "form": "da_past" },
+                "p_ka",
+                { "id": "v_muzukashii", "form": "plain_past_adj" },
+                "p_ka"
               ]
             },
             {
-              "spk": "B",
-              "jp": "はい。中の 物を 先に 出しましょう。",
+              "spk": "ゆき",
+              "jp": "むずかしかったけど、書けたよ。いい 体験だったね。",
+              "en": "It was difficult, but I was able to write it. It was a good experience.",
               "terms": [
-                "v_naka",
-                "v_mono",
-                "v_saki",
-                {
-                  "id": "v_dasu",
-                  "form": "polite_volitional_mashou"
-                }
+                "char_yuki",
+                { "id": "v_muzukashii", "form": "plain_past_adj" },
+                "p_kedo",
+                { "id": "v_kaku", "form": "plain_potential_past" },
+                "p_yo",
+                "v_ii",
+                "v_taiken",
+                { "id": "g_da", "form": "da_past" },
+                "p_ne"
               ]
             },
             {
-              "spk": "A",
-              "jp": "そうですね。少しずつ 前へ 進みましょう。",
+              "spk": "けん",
+              "jp": "そうだね。先生の 教えが よかったから、進歩したね。",
+              "en": "True. Because the teacher's instruction was good, we made progress.",
               "terms": [
-                "v_sukoshi",
-                "v_mae",
-                {
-                  "id": "v_susumu",
-                  "form": "polite_volitional_mashou"
-                }
+                "char_ken",
+                "v_sou",
+                "p_ne",
+                "g_da",
+                "v_sensei",
+                "p_no",
+                "v_oshie",
+                "p_ga",
+                { "id": "v_ii", "form": "plain_past_adj" },
+                "p_kara_because",
+                "v_shinpo",
+                { "id": "v_suru", "form": "plain_past" },
+                "p_ne"
               ]
             },
             {
-              "spk": "B",
-              "jp": "屋上は 近いですから、がんばりましょう。",
+              "spk": "ゆき",
+              "jp": "うん。また 試したいな。",
+              "en": "Yeah. I want to try again.",
               "terms": [
-                "v_okujou",
-                "v_chikai"
+                "char_yuki",
+                "v_un",
+                "v_mata",
+                { "id": "v_tamesu", "form": "plain_desire_tai" },
+                "p_na"
               ]
             }
           ],
-          "question": "What will they do first?",
+          "question": "What does Yuki think about the exam experience?",
           "choices": [
-            "Go to the rooftop.",
-            "Take out the things inside.",
-            "Buy a new desk.",
-            "Sleep."
+            "She thinks the exam was too difficult to pass.",
+            "She thinks it was a good experience and she wants to try again.",
+            "She thinks the teacher's instruction was not helpful.",
+            "She thinks she should not study for exams."
           ],
-          "answer": "Take out the things inside.",
-          "explanation": "B suggests taking out the things inside first (中の物を先に出しましょう)."
+          "answer": "She thinks it was a good experience and she wants to try again.",
+          "explanation": "Yuki says いい体験だったね (it was a good experience) and また試したいな (she wants to try again). Ken also notes the teacher's instruction was good and they made progress (進歩した)."
         }
       ]
     },
     {
       "type": "drills",
       "title": "Part 2: Grammar Scramble",
-      "instructions": "Construct the sentence by clicking the words in the correct order.",
+      "instructions": "Arrange the word chips into the correct Japanese sentence.",
       "items": [
         {
           "kind": "scramble",
-          "q": "Please lend me a pen.",
-          "segments": [
-            "ペン",
-            "を",
-            "貸して",
-            "ください"
-          ],
-          "explanation": "Object (Pen) + wo + Te-form of Kasu (Lend) + kudasai."
+          "q": "My body weight has gradually been getting heavier.",
+          "segments": ["体重", "が", "少しずつ", "重く", "なって", "きました"],
+          "distractors": ["軽く", "太って", "いきました"],
+          "explanation": "Directional て-form <b>てくる</b> expresses change that has been coming toward the present. 重くなってきました = has gradually become heavier. 重く (adverbial of 重い) + なって (te-form of なる) + きました."
         },
         {
           "kind": "scramble",
-          "q": "The night sky is beautiful.",
-          "segments": [
-            "夜空",
-            "は",
-            "きれい",
-            "です"
+          "q": "You must not use a smartphone during the exam.",
+          "segments": ["試験の", "時は", "スマホを", "使っては", "いけません"],
+          "distractors": ["使っても", "いいです", "教室で"],
+          "alts": [
+            ["スマホを", "試験の", "時は", "使っては", "いけません"]
           ],
-          "explanation": "Topic (Night sky) + wa + Na-adjective (Beautiful) + desu."
+          "explanation": "Prohibition pattern: <b>て-form + は + いけません</b>. 使う → 使って + は + いけません = must not use. 試験の時は = during the exam (during exam time)."
         },
         {
           "kind": "scramble",
-          "q": "I want to eat Western food.",
-          "segments": [
-            "洋食",
-            "が",
-            "食べたい",
-            "です"
-          ],
-          "explanation": "Object (Western food) + ga + Tai-form (Want to eat) + desu."
+          "q": "Is it okay to bring a notebook to the classroom?",
+          "segments": ["教室に", "ノートを", "持って", "きても", "いいですか"],
+          "distractors": ["持ち出しても", "試験を", "いけません"],
+          "explanation": "Permission pattern with directional <b>てくる</b>: 持ってきてもいいですか = is it okay to bring (come carrying)? て-form of 持つ (持って) + きても + いいですか."
         },
         {
           "kind": "scramble",
-          "q": "This bag is heavy.",
-          "segments": [
-            "この",
-            "かばん",
-            "は",
-            "重い",
-            "です"
+          "q": "In order to make progress, I exercise every day.",
+          "segments": ["進歩の", "ために", "毎日", "運動して", "います"],
+          "distractors": ["体重が", "なって", "きました"],
+          "alts": [
+            ["毎日", "進歩の", "ために", "運動して", "います"]
           ],
-          "explanation": "Subject (Bag) + wa + I-adjective (Heavy) + desu."
+          "explanation": "<b>ために</b> (tame ni) expresses purpose: 進歩のために = in order to make progress. 運動しています = is exercising (ongoing habit: て-form of する + います)."
         },
         {
           "kind": "scramble",
-          "q": "Please write in Kanji.",
-          "segments": [
-            "漢字",
-            "で",
-            "書いて",
-            "ください"
-          ],
-          "explanation": "Means (Kanji) + de + Te-form of Kaku (Write) + kudasai."
+          "q": "The teacher's instruction was kind and easy to understand.",
+          "segments": ["先生の", "教えは", "やさしくて", "よく", "分かりました"],
+          "distractors": ["むずかしくて", "試験が", "ありません"],
+          "explanation": "Sequential て-form: <b>やさしくて (was kind, and) + よく分かりました (I understood well)</b>. The て-form of an い-adjective (やさしい → やさしくて) connects two predicates."
         }
       ]
     },
     {
       "type": "reading",
-      "title": "Part 3: Reading - The Antique Shop",
+      "title": "Part 3: Reading — Preparing for the Exam",
+      "instructions": "Read the passage carefully, then answer the questions.",
       "passage": [
         {
-          "jp": "私の 町に 小さな 店が あります。",
-          "en": "There is a small shop in my town.",
+          "jp": "明日は 大切な 試験が あります。",
+          "en": "Tomorrow there is an important exam.",
           "terms": [
-            "v_watashi",
-            "v_machi",
-            "v_chiisai",
-            "v_mise",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            }
+            "v_ashita",
+            "p_wa",
+            { "id": "v_taisetsu", "form": "attributive_na" },
+            "v_shiken",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" }
           ]
         },
         {
-          "jp": "夜に なると、店は 明るく なります。",
-          "en": "When it becomes night, the shop becomes bright.",
+          "jp": "教室は 学校の 中に あります。ノートを 持って きても いいです。",
+          "en": "The classroom is inside the school. You may bring a notebook.",
           "terms": [
-            "v_yoru",
-            "v_naru",
-            "v_mise",
-            {
-              "id": "v_akarui",
-              "form": "adverbial"
-            },
-            {
-              "id": "v_naru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "jp": "店では 古い 洋服や 品物を 売って います。",
-          "en": "At the shop, they are selling old Western clothes and goods.",
-          "terms": [
-            "v_mise",
-            "v_furui",
-            "v_youfuku",
-            "v_shinamono",
-            {
-              "id": "v_uru",
-              "form": "te_form"
-            },
-            {
-              "id": "v_iru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "jp": "店の 人は 「見るのは いいですが、お金は 貸しませんよ」と 言いました。",
-          "en": "The shop person said 'Looking is fine, but I won't lend money'.",
-          "terms": [
-            "v_mise",
-            "v_hito",
-            "v_miru",
-            "v_ii",
-            "v_kane",
-            {
-              "id": "v_kasu",
-              "form": "polite_negative"
-            },
-            {
-              "id": "v_iu",
-              "form": "polite_mashita"
-            }
-          ]
-        },
-        {
-          "jp": "私は きれいな 紙を 買いました。",
-          "en": "I bought beautiful paper.",
-          "terms": [
-            "v_watashi",
-            "v_kirei",
-            "v_kami",
-            {
-              "id": "v_kau",
-              "form": "polite_mashita"
-            }
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "q": "店は いつ 明るく なりますか。",
-          "a": "夜に なると",
-          "choices": [
-            "朝に なると",
-            "夜に なると",
-            "雨が 降ると",
-            "日曜日に"
-          ],
-          "terms": [
-            "v_mise",
-            "v_akarui",
-            "v_naru",
-            "v_yoru"
-          ]
-        },
-        {
-          "q": "店で 何を 売って いますか。",
-          "a": "洋服や 品物",
-          "choices": [
-            "魚と 肉",
-            "洋服や 品物",
-            "車と 自転車",
-            "薬と 水"
-          ],
-          "terms": [
-            "v_mise",
-            "v_uru",
-            "v_youfuku",
-            "v_shinamono"
-          ]
-        },
-        {
-          "q": "店の 人は お金を 貸しますか。",
-          "a": "いいえ、貸しません",
-          "choices": [
-            "はい、貸します",
-            "いいえ、貸しません",
-            "時々 貸します",
-            "少し 貸します"
-          ],
-          "terms": [
-            "v_mise",
-            "v_hito",
-            "v_kane",
-            "v_kasu"
-          ]
-        },
-        {
-          "q": "私は 何を 買いましたか。",
-          "a": "きれいな 紙",
-          "choices": [
-            "洋服",
-            "品物",
-            "きれいな 紙",
-            "古い 本"
-          ],
-          "terms": [
-            "v_watashi",
-            "v_nani",
-            "v_kau",
-            "v_kirei",
-            "v_kami"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "reading",
-      "title": "Part 4: Reading - Kanji Class",
-      "passage": [
-        {
-          "jp": "今日、学校で 漢字の 意味を 勉強しました。",
-          "en": "Today, I studied the meaning of Kanji at school.",
-          "terms": [
-            "v_kyou",
+            "v_kyoushitsu",
+            "p_wa",
             "v_gakkou",
-            "v_kanji",
-            "v_imi",
-            {
-              "id": "v_benkyou",
-              "form": "polite_mashita"
-            }
+            "p_no",
+            "v_naka",
+            "p_ni",
+            { "id": "v_aru", "form": "polite_masu" },
+            "v_nooto",
+            "p_wo",
+            { "id": "v_motsu", "form": "te_form" },
+            { "id": "v_kuru", "form": "te_form" },
+            "p_mo",
+            { "id": "v_ii", "form": "polite_adj" }
           ]
         },
         {
-          "jp": "「太い」と 「短い」は 同じ 意味ではありません。",
-          "en": "'Thick' and 'Short' do not have the same meaning.",
-          "terms": [
-            "v_futoi",
-            "v_mijikai",
-            "v_onaji",
-            "v_imi"
-          ]
-        },
-        {
-          "jp": "先生は 紙に 大きな 字を 書きました。",
-          "en": "The teacher wrote big characters on paper.",
+          "jp": "先生の 教えが 体験に なりましたから、よく 進めます。",
+          "en": "Because the teacher's instruction became experience, I can advance well.",
           "terms": [
             "v_sensei",
-            "v_kami",
-            "v_ookii",
-            "v_ji",
-            {
-              "id": "v_kaku",
-              "form": "polite_mashita"
-            }
+            "p_no",
+            "v_oshie",
+            "p_ga",
+            "v_taiken",
+            "p_ni",
+            { "id": "v_naru", "form": "polite_mashita" },
+            "p_kara_because",
+            "v_yoku",
+            { "id": "v_susumu", "form": "polite_potential" }
           ]
         },
         {
-          "jp": "勉強が 進んで、うれしいです。",
-          "en": "Study is progressing, and I am happy.",
+          "jp": "体重が 少し 重く なって きましたが、運動して いきます。",
+          "en": "My body weight has become a little heavier, but I will keep exercising.",
           "terms": [
-            "v_benkyou",
-            {
-              "id": "v_susumu",
-              "form": "te_form"
-            },
-            "v_ureshii"
+            "v_taijuu",
+            "p_ga",
+            "v_sukoshi",
+            { "id": "v_omoi", "form": "adverbial" },
+            { "id": "v_naru", "form": "te_form" },
+            { "id": "v_kuru", "form": "polite_mashita" },
+            "p_ga_but",
+            "v_undou",
+            { "id": "v_suru", "form": "te_form" },
+            { "id": "v_iku", "form": "polite_masu" }
+          ]
+        },
+        {
+          "jp": "毎日 少しずつ 進歩して いますよ。",
+          "en": "I am making progress little by little every day.",
+          "terms": [
+            "v_mainichi",
+            "v_sukoshi",
+            "p_zutsu",
+            "v_shinpo",
+            { "id": "v_suru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" },
+            "p_yo"
           ]
         }
       ],
       "questions": [
         {
-          "q": "今日、何を 勉強しましたか。",
-          "a": "漢字の 意味",
+          "q": "明日は 何が ありますか。",
+          "a": "大切な 試験が あります",
           "choices": [
-            "ローマ字の 書き方",
-            "漢字の 意味",
-            "英語の 話",
-            "手品の 方法"
+            "大切な 試験が あります",
+            "体験の イベントが あります",
+            "新しい 教室が あります",
+            "運動の 時間が あります"
           ],
           "terms": [
-            "v_kyou",
-            "v_benkyou",
-            "v_kanji",
-            "v_imi"
-          ]
+            { "id": "v_taisetsu", "form": "attributive_na" },
+            "v_shiken",
+            "p_ga",
+            { "id": "v_aru", "form": "polite_masu" }
+          ],
+          "explanation": "The passage says あしたは大切な試験があります — tomorrow there is an important exam."
         },
         {
-          "q": "先生は 何を しましたか。",
-          "a": "字を 書きました",
+          "q": "教室は どこに ありますか。",
+          "a": "学校の 中に あります",
           "choices": [
-            "絵を 書きました",
-            "字を 書きました",
-            "本を 読みました",
-            "歌を 歌いました"
+            "学校の 中に あります",
+            "地下室に あります",
+            "駅の 近くに あります",
+            "学校の 外に あります"
+          ],
+          "terms": [
+            "v_gakkou",
+            "p_no",
+            "v_naka",
+            "p_ni",
+            { "id": "v_aru", "form": "polite_masu" }
+          ],
+          "explanation": "The passage says 教室は学校の中にあります — the classroom is inside the school."
+        },
+        {
+          "q": "どうして よく 進めますか。",
+          "a": "先生の 教えが 体験に なりましたから",
+          "choices": [
+            "先生の 教えが 体験に なりましたから",
+            "ノートを 持って きましたから",
+            "試験が 短かったから",
+            "体重が 軽く なったから"
           ],
           "terms": [
             "v_sensei",
-            "v_ji",
-            "v_kaku"
-          ]
+            "p_no",
+            "v_oshie",
+            "p_ga",
+            "v_taiken",
+            "p_ni",
+            { "id": "v_naru", "form": "polite_mashita" },
+            "p_kara_because"
+          ],
+          "explanation": "The passage says 先生の教えが体験になりましたから、よく進めます — because the teacher's instruction became experience, I can advance well."
         },
         {
-          "q": "私は どうですか。",
-          "a": "うれしいです",
+          "q": "体重は どう なって きましたか。",
+          "a": "少し 重く なって きました",
           "choices": [
-            "悲しいです",
-            "うれしいです",
-            "短気です",
-            "太っています"
+            "少し 重く なって きました",
+            "少し 軽く なって きました",
+            "進歩して よく なりました",
+            "重大な 問題に なりました"
           ],
           "terms": [
-            "v_watashi",
-            "v_dou",
-            "v_ureshii"
-          ]
+            "v_sukoshi",
+            { "id": "v_omoi", "form": "adverbial" },
+            { "id": "v_naru", "form": "te_form" },
+            { "id": "v_kuru", "form": "polite_mashita" }
+          ],
+          "explanation": "The passage says 体重が少し重くなってきました — body weight has become a little heavier (てくる = change accumulating toward the present)."
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Part 5: Kanji Readings",
+      "title": "Part 4: Kanji Readings",
       "instructions": "Select the correct reading for the [bracketed] word.",
       "items": [
         {
           "kind": "mcq",
-          "q": "[今夜]は 月が きれいです。",
-          "choices": [
-            "こんや",
-            "いまよ",
-            "こんよ",
-            "きょうや"
-          ],
-          "answer": "こんや",
-          "explanation": "今夜 (Tonight) is read as <b>konya</b>."
+          "q": "[体重]が 少し 重く なりました。",
+          "choices": ["たいじゅう", "たいおも", "からだじゅう", "たいちょう"],
+          "answer": "たいじゅう",
+          "explanation": "体重 (body weight) is read as <b>taijuu</b>. 体 (たい) + 重 (じゅう)."
         },
         {
           "kind": "mcq",
-          "q": "きれいな [洋服]ですね。",
-          "choices": [
-            "ようふく",
-            "ようぎゅう",
-            "ひろふく",
-            "かみふく"
-          ],
-          "answer": "ようふく",
-          "explanation": "洋服 (Western clothes) is read as <b>youfuku</b>."
+          "q": "[進歩]して います。",
+          "choices": ["しんぽ", "すすみ", "しんぼう", "しんこう"],
+          "answer": "しんぽ",
+          "explanation": "進歩 (progress) is read as <b>shinpo</b>. 進 (しん) + 歩 (ぽ)."
         },
         {
           "kind": "mcq",
-          "q": "[屋上]へ 行きましょう。",
-          "choices": [
-            "おくじょう",
-            "やうえ",
-            "おくうえ",
-            "やじょう"
-          ],
-          "answer": "おくじょう",
-          "explanation": "屋上 (Rooftop) is read as <b>okujou</b>."
+          "q": "[短い] ペンが あります。",
+          "choices": ["みじかい", "ふとい", "おもい", "たんい"],
+          "answer": "みじかい",
+          "explanation": "短い (short) is read as <b>mijikai</b>. 短 (みじか) + い."
         },
         {
           "kind": "mcq",
-          "q": "この [品物]は いくらですか。",
-          "choices": [
-            "しなもの",
-            "ひんぶつ",
-            "しなぶつ",
-            "ひんもの"
-          ],
-          "answer": "しなもの",
-          "explanation": "品物 (Goods) is read as <b>shinamono</b>."
+          "q": "[教室]に 入って ください。",
+          "choices": ["きょうしつ", "きょうじょ", "おしえしつ", "きょうか"],
+          "answer": "きょうしつ",
+          "explanation": "教室 (classroom) is read as <b>kyoushitsu</b>. 教 (きょう) + 室 (しつ)."
         },
         {
           "kind": "mcq",
-          "q": "[漢字]を 書きます。",
-          "choices": [
-            "かんじ",
-            "かんじ",
-            "こうじ",
-            "くにじ"
-          ],
-          "answer": "かんじ",
-          "explanation": "漢字 (Kanji) is read as <b>kanji</b>."
+          "q": "[試験]が あります。",
+          "choices": ["しけん", "こころみ", "たいけん", "じけん"],
+          "answer": "しけん",
+          "explanation": "試験 (exam / test) is read as <b>shiken</b>. 試 (し) + 験 (けん)."
         },
         {
           "kind": "mcq",
-          "q": "[意味]が 分かりますか。",
-          "choices": [
-            "いみ",
-            "いあじ",
-            "おみ",
-            "ごみ"
-          ],
-          "answer": "いみ",
-          "explanation": "意味 (Meaning) is read as <b>imi</b>."
-        },
-        {
-          "kind": "mcq",
-          "q": "足が [太い]です。",
-          "choices": [
-            "ふとい",
-            "おおきい",
-            "おもい",
-            "まるい"
-          ],
-          "answer": "ふとい",
-          "explanation": "太い (Thick/Fat) is read as <b>futoi</b>."
-        },
-        {
-          "kind": "mcq",
-          "q": "体が [重い]です。",
-          "choices": [
-            "おもい",
-            "かたい",
-            "くらい",
-            "とおい"
-          ],
-          "answer": "おもい",
-          "explanation": "重い (Heavy) is read as <b>omoi</b>."
+          "q": "[体験]が 大切です。",
+          "choices": ["たいけん", "たいかん", "だいけん", "たいめん"],
+          "answer": "たいけん",
+          "explanation": "体験 (experience) is read as <b>taiken</b>. 体 (たい) + 験 (けん)."
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Part 6: Context & Vocabulary",
-      "instructions": "Select the best word to complete the sentence.",
+      "title": "Part 5: Context & Vocabulary",
+      "instructions": "Choose the best word to complete each sentence.",
       "items": [
         {
           "kind": "mcq",
-          "q": "店で 本を ______ 。",
-          "choices": [
-            "売ります",
-            "持ちます",
-            "進みます",
-            "短いです"
+          "q": "先生が 日本語を ______。",
+          "choices": ["教えて くれました", "試みました", "太りました", "進歩しました"],
+          "answer": "教えて くれました",
+          "terms": [
+            "v_sensei",
+            "p_ga",
+            "v_nihongo",
+            "p_wo",
+            { "id": "v_oshieru", "form": "te_form" },
+            { "id": "v_kureru", "form": "polite_mashita" }
           ],
-          "answer": "売ります",
-          "explanation": "You sell (売ります) books at a store."
+          "explanation": "教えてくれました (oshiete kuremashita) = the teacher taught me (give-and-receive: くれる means the action was given to the speaker). 先生が〜くれました is the natural pattern for receiving a favour from the teacher."
         },
         {
           "kind": "mcq",
-          "q": "ペンを 友だちに ______ 。",
-          "choices": [
-            "貸しました",
-            "太りました",
-            "着ました",
-            "飲みました"
+          "q": "料理の ______ が できます。どうぞ、食べて ください。",
+          "choices": ["試食", "体験", "試み", "進歩"],
+          "answer": "試食",
+          "terms": [
+            "v_ryouri",
+            "p_no",
+            "v_shishoku",
+            "p_ga",
+            { "id": "v_dekiru", "form": "polite_masu" },
+            "p_douzo",
+            { "id": "v_taberu", "form": "te_form" },
+            "v_kudasai"
           ],
-          "answer": "貸しました",
-          "explanation": "You lend (貸しました) a pen to a friend."
+          "explanation": "試食 (shishoku) = food tasting / sampling. 試食ができます = food tasting is available. 体験 is experience, 試み is attempt, 進歩 is progress."
         },
         {
           "kind": "mcq",
-          "q": "______ で 名前を 書きます。",
-          "choices": [
-            "紙",
-            "屋",
-            "服",
-            "夜"
+          "q": "この 問題は ______ です。すぐ 先生に 聞いて ください。",
+          "choices": ["重大", "短気", "太い", "重い"],
+          "answer": "重大",
+          "terms": [
+            "v_kono",
+            "v_mondai",
+            "p_wa",
+            { "id": "v_juudai", "form": "polite_adj" },
+            "v_sugu",
+            "v_sensei",
+            "p_ni",
+            { "id": "v_kiku", "form": "te_form" },
+            "v_kudasai"
           ],
-          "answer": "紙",
-          "explanation": "You write names on paper (紙)."
+          "explanation": "重大 (juudai) = serious / grave (な-adjective). この問題は重大です = this problem is serious. 短気 is short-tempered, 太い is thick, 重い is heavy."
         },
         {
           "kind": "mcq",
-          "q": "仕事が 早く ______ 。",
-          "choices": [
-            "進みました",
-            "太りました",
-            "重かったです",
-            "品物でした"
+          "q": "新しい ことを ______。とても 楽しかったです。",
+          "choices": ["試しました", "進みました", "重ねました", "教えました"],
+          "answer": "試しました",
+          "terms": [
+            "v_atarashii",
+            "v_koto",
+            "p_wo",
+            { "id": "v_tamesu", "form": "polite_mashita" },
+            "v_totemo",
+            { "id": "v_tanoshii", "form": "polite_past_adj" }
           ],
-          "answer": "進みました",
-          "explanation": "Work progressed/advanced (進みました) quickly."
+          "explanation": "試しました (tameshimashita) = tried / tested something. 試す (tamesu) = to try or test. 進みました = advanced, 重ねました = accumulated / layered, 教えました = taught."
         }
       ]
     },
     {
       "type": "drills",
-      "title": "Part 7: Grammar Check",
-      "instructions": "Choose the correct particle or form to complete the sentence.",
+      "title": "Part 6: Grammar Check",
+      "instructions": "Choose the correct grammar form to complete each sentence.",
       "items": [
         {
           "kind": "mcq",
-          "q": "洋食 ______ 食べたいです。",
-          "choices": [
-            "が",
-            "に",
-            "で",
-            "へ"
+          "q": "教室で 音楽を 聞いて______ いけません。",
+          "choices": ["は", "も", "が", "を"],
+          "answer": "は",
+          "terms": [
+            "v_kyoushitsu",
+            "p_de",
+            "v_ongaku",
+            "p_wo",
+            { "id": "v_kiku", "form": "te_form" },
+            "p_wa",
+            { "id": "v_ikeru", "form": "polite_negative" }
           ],
-          "answer": "が",
-          "explanation": "Desire form (tai) usually takes 'ga' for the object."
+          "explanation": "Prohibition pattern: <b>て-form + は + いけません</b>. は is the required particle — 聞いてはいけません = you must not listen to music in the classroom."
         },
         {
           "kind": "mcq",
-          "q": "お金を ______ ください。",
-          "choices": [
-            "貸して",
-            "貸す",
-            "貸し",
-            "貸せ"
+          "q": "体重が 重く なって ______。",
+          "choices": ["きました", "いきました", "みました", "しました"],
+          "answer": "きました",
+          "terms": [
+            "v_taijuu",
+            "p_ga",
+            { "id": "v_omoi", "form": "adverbial" },
+            { "id": "v_naru", "form": "te_form" },
+            { "id": "v_kuru", "form": "polite_mashita" }
           ],
-          "answer": "貸して",
-          "explanation": "Request form uses Te-form + kudasai."
+          "explanation": "<b>てくる</b> (te-form + くる) expresses a change that has been accumulating toward the present. 重くなってきました = has gradually become heavier. Use きました, not いきました (which expresses change going forward from now)."
         },
         {
           "kind": "mcq",
-          "q": "この 本は ______ ありません。",
-          "choices": [
-            "重く",
-            "重い",
-            "重くて",
-            "重さ"
+          "q": "進歩の ______ 、毎日 勉強して います。",
+          "choices": ["ために", "のに", "ほど", "まで"],
+          "answer": "ために",
+          "terms": [
+            "v_shinpo",
+            "p_no",
+            "v_tame",
+            "p_ni",
+            "v_mainichi",
+            "v_benkyou",
+            { "id": "v_suru", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
           ],
-          "answer": "重く",
-          "explanation": "Negative of i-adjective (omoi) is omoku arimasen."
+          "explanation": "<b>ために</b> (tame ni) = in order to / for the purpose of. 進歩のために = in order to make progress. のに would express surprise or contrast, not purpose."
         },
         {
           "kind": "mcq",
-          "q": "私は ______ 洋服を 買いました。",
-          "choices": [
-            "白い",
-            "白",
-            "白の",
-            "白く"
+          "q": "音楽を ______ 、試験の 勉強を しました。",
+          "choices": ["聞きながら", "聞いてから", "聞くために", "聞くまで"],
+          "answer": "聞きながら",
+          "terms": [
+            "v_ongaku",
+            "p_wo",
+            { "id": "v_kiku", "form": "nagara_form" },
+            "v_shiken",
+            "p_no",
+            "v_benkyou",
+            "p_wo",
+            { "id": "v_suru", "form": "polite_mashita" }
           ],
-          "answer": "白い",
-          "explanation": "I-adjective (shiroi) directly modifies noun (youfuku)."
-        },
-        {
-          "kind": "mcq",
-          "q": "この 品物を ______ ください。",
-          "choices": [
-            "運んで",
-            "転んで",
-            "遊んで",
-            "込んで"
-          ],
-          "answer": "運んで",
-          "explanation": "To carry/transport an item (品物) is Hakobu (運ぶ)."
+          "explanation": "<b>ながら</b> (nagara) = while doing. 聞きながら勉強しました = studied while listening to music. 聞いてから = after listening (sequence), 聞くために = in order to listen (purpose), 聞くまで = until listening (extent)."
         }
       ]
     }
