@@ -142,8 +142,10 @@
           "terms": [
             "v_okaasan",
             "p_wa",
-            "v_yasashii",
-            "g_desu",
+            {
+              "id": "v_yasashii",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         }
@@ -479,8 +481,10 @@
             "v_san",
             "p_wa",
             "v_totemo",
-            "v_yasashii",
-            "g_desu",
+            {
+              "id": "v_yasashii",
+              "form": "polite_adj"
+            },
             "p_ne"
           ]
         }
@@ -526,8 +530,10 @@
           "jp": "いいですね。お母さんは？",
           "en": "That's nice. And your mother?",
           "terms": [
-            "v_ii",
-            "g_desu",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_okaasan",
             "p_wa"
@@ -639,11 +645,14 @@
           "jp": "いいですね。やさしい 先生ですね。",
           "en": "That's nice. She sounds like a kind teacher.",
           "terms": [
-            "v_ii",
-            "g_desu",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_yasashii",
-            "v_sensei"
+            "v_sensei",
+            "g_desu"
           ]
         },
         {
@@ -881,6 +890,7 @@
             "p_wa",
             "v_dare",
             "p_ka",
+            "char_suzuki",
             "g_desu"
           ]
         },
@@ -970,8 +980,10 @@
             "p_no",
             "v_pasokon",
             "p_wa",
-            "v_ii",
-            "g_desu",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "v_terebi",
             "p_ga",
             {
@@ -987,8 +999,10 @@
           "terms": [
             "v_minasan",
             "p_wa",
-            "v_ureshii",
-            "g_desu"
+            {
+              "id": "v_ureshii",
+              "form": "polite_adj"
+            }
           ]
         }
       ],
@@ -1004,6 +1018,7 @@
             "v_nani",
             "g_desu",
             "p_ka",
+            "char_yamamoto",
             "v_san"
           ]
         },
@@ -1027,11 +1042,12 @@
           "terms": [
             "v_minasan",
             "p_wa",
-            "v_ureshii",
-            "g_desu",
+            {
+              "id": "v_ureshii",
+              "form": "polite_adj"
+            },
             "p_ka",
-            "p_hai",
-            "g_desu"
+            "p_hai"
           ]
         },
         {
@@ -1139,9 +1155,10 @@
           "terms": [
             "v_watashi",
             "p_no",
+            "v_namae",
             "p_wa",
-            "g_desu",
-            "v_namae"
+            "char_rikizo",
+            "g_desu"
           ]
         },
         {
@@ -1172,6 +1189,7 @@
           ],
           "answer": "生まれました",
           "terms": [
+            "char_yamamoto",
             "v_sensei",
             "p_wa",
             {
@@ -1213,8 +1231,10 @@
             "p_no",
             "k_otoko",
             "p_wa",
-            "v_yasashii",
-            "g_desu",
+            {
+              "id": "v_yasashii",
+              "form": "polite_adj"
+            },
             "k_ko"
           ]
         },
@@ -1228,6 +1248,7 @@
           ],
           "answer": "先生",
           "terms": [
+            "char_yamamoto",
             "v_san",
             "p_wa",
             "v_totemo",
@@ -1273,6 +1294,7 @@
           ],
           "answer": "は",
           "terms": [
+            "char_yamamoto",
             "v_san",
             "p_wa",
             "k_onna",
@@ -1337,8 +1359,10 @@
             "p_no",
             "v_terebi",
             "p_wa",
-            "v_ii",
-            "g_desu"
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -1356,8 +1380,10 @@
             "p_no",
             "v_pasokon",
             "p_wa",
-            "v_ii",
-            "g_desu"
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         }
       ]
