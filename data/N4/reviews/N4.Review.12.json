@@ -40,6 +40,7 @@
               "terms": [
                 "char_rikizo",
                 "v_sou",
+                "g_da",
                 "p_ndesu",
                 "p_ka",
                 "v_sukoshi",
@@ -218,7 +219,7 @@
                 "char_ken",
                 "v_sou",
                 "p_ne",
-                { "id": "g_da", "form": "plain_form" },
+                "g_da",
                 "v_sensei",
                 "p_no",
                 "v_oshie",
@@ -311,7 +312,7 @@
       "instructions": "Read the passage carefully, then answer the questions.",
       "passage": [
         {
-          "jp": "あしたは 大切な 試験が あります。",
+          "jp": "明日は 大切な 試験が あります。",
           "en": "Tomorrow there is an important exam.",
           "terms": [
             "v_ashita",
@@ -391,7 +392,7 @@
       ],
       "questions": [
         {
-          "q": "あしたは 何が ありますか。",
+          "q": "明日は 何が ありますか。",
           "a": "大切な 試験が あります",
           "choices": [
             "大切な 試験が あります",
@@ -473,7 +474,7 @@
       "items": [
         {
           "kind": "mcq",
-          "q": "[体重]を 量りました。",
+          "q": "[体重]が 少し 重く なりました。",
           "choices": ["たいじゅう", "たいおも", "からだじゅう", "たいちょう"],
           "answer": "たいじゅう",
           "explanation": "体重 (body weight) is read as <b>taijuu</b>. 体 (たい) + 重 (じゅう)."
