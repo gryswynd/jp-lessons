@@ -87,7 +87,7 @@ for i, s in enumerate(sections):
             if 'spk' not in line:
                 errors.append(f"  sections[{i}].lines[{j}]: missing required 'spk' field")
 
-# Reading passage must be an array, not a string
+# Reading passage must be an array, not a string; questions must be present
 for i, s in enumerate(sections):
     if s.get('type') == 'reading':
         p = s.get('passage')
@@ -96,9 +96,20 @@ for i, s in enumerate(sections):
         elif isinstance(p, str):
             errors.append(f"  sections[{i}] (reading): 'passage' is a string — must be an array of {{jp, en, terms}} objects")
         elif isinstance(p, list):
+            if len(p) == 1 and ' ' in (p[0].get('jp', '')):
+                # Single item whose jp contains multiple sentences (wall of text)
+                jp_text = p[0].get('jp', '')
+                sentence_count = jp_text.count('。') + jp_text.count('！') + jp_text.count('？')
+                if sentence_count >= 3:
+                    errors.append(f"  sections[{i}].passage: single item with {sentence_count} sentences — split into one object per sentence")
             for j, item in enumerate(p):
                 if not isinstance(item, dict) or 'jp' not in item:
                     errors.append(f"  sections[{i}].passage[{j}]: passage item must be an object with 'jp', 'en', 'terms'")
+        q = s.get('questions')
+        if q is None:
+            errors.append(f"  sections[{i}] (reading): missing 'questions' field — reading sections must have a questions array with at least 1 item")
+        elif not isinstance(q, list) or len(q) == 0:
+            errors.append(f"  sections[{i}] (reading): 'questions' must be a non-empty array")
 
 # Review-specific checks
 if is_review:
