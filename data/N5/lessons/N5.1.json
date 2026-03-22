@@ -864,20 +864,19 @@
           ]
         },
         {
-          "q": "お父さんは なにを しますか。",
-          "a": "先生です。",
+          "q": "りきぞの お父さんは どんな 先生ですか。",
+          "a": "とても やさしい 先生です。",
           "terms": [
+            "char_rikizo",
+            "p_no",
             "v_otousan",
             "p_wa",
-            "v_nani",
-            "p_wo",
-            {
-              "id": "v_suru",
-              "form": "polite_masu"
-            },
-            "p_ka",
+            "v_donna",
             "v_sensei",
-            "g_desu"
+            "g_desu",
+            "p_ka",
+            "v_totemo",
+            "v_yasashii"
           ]
         },
         {
