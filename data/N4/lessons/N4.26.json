@@ -641,121 +641,153 @@
       "title": "Reading 1: The Correct Way of Thinking（正しい考え方）",
       "passage": [
         {
-          "jp": "正しい 考え方は、毎日 とても 大切です。悪い 考えを 持って いると、問題が 大きく なります。正月が 来たら、自分の 考えを 正す ことが 大切です。やまもと先生は「正道を 歩く ことが 大切だ」と 言っています。悪質な 考え方は 正して 行かなければ いけません。正しい 見方で 世界を 見ると、新しい 考えが 生まれます。",
-          "en": "A correct way of thinking is very important every day. If you hold bad thoughts, problems become big. When New Year comes, correcting your own thinking is important. Yamamoto-sensei says, 'Walking the correct path is important.' A malicious way of thinking must be corrected. When you look at the world with the correct viewpoint, new ideas are born.",
+          "jp": "正しい 考え方は、毎日 とても 大切です。",
+          "en": "A correct way of thinking is very important every day.",
           "terms": [
-        "v_tadashii",
-        "v_kangaekata",
-        "p_wa",
-        "v_mainichi",
-        "v_totemo",
-        {
-          "id": "v_taisetsu",
-          "form": "polite_adj"
-        },
-        "v_warui",
-        "v_kangae",
-        "p_wo",
-        {
-          "id": "v_motsu",
-          "form": "te_form"
+            "v_tadashii",
+            "v_kangaekata",
+            "p_wa",
+            "v_mainichi",
+            "v_totemo",
+            { "id": "v_taisetsu", "form": "polite_adj" }
+          ]
         },
         {
-          "id": "v_iru",
-          "form": "plain_form"
-        },
-        "p_to_conditional",
-        "v_mondai",
-        "p_ga",
-        {
-          "id": "v_ookii",
-          "form": "adverbial"
-        },
-        {
-          "id": "v_naru",
-          "form": "polite_masu"
-        },
-        "v_shougatsu",
-        "p_ga",
-        {
-          "id": "v_kuru",
-          "form": "conditional_tara"
-        },
-        "v_jibun",
-        "p_no",
-        "v_kangae",
-        "p_wo",
-        {
-          "id": "v_tadasu",
-          "form": "plain_form"
-        },
-        "v_koto",
-        "p_ga",
-        {
-          "id": "v_taisetsu",
-          "form": "polite_adj"
-        },
-        "g_desu",
-        "char_yamamoto",
-        "v_sensei",
-        "p_wa",
-        "v_seidou",
-        "p_wo",
-        {
-          "id": "v_aruku",
-          "form": "plain_form"
-        },
-        "v_koto",
-        "p_ga",
-        {
-          "id": "v_taisetsu",
-          "form": "plain_adj"
-        },
-        "g_da",
-        "p_to_quote",
-        {
-          "id": "v_iu",
-          "form": "te_form"
+          "jp": "悪い 考えを 持って いると、問題が 大きく なります。",
+          "en": "If you hold bad thoughts, problems will become big.",
+          "terms": [
+            "v_warui",
+            "v_kangae",
+            "p_wo",
+            { "id": "v_motsu", "form": "te_form" },
+            { "id": "v_iru", "form": "plain_form" },
+            "p_to_conditional",
+            "v_mondai",
+            "p_ga",
+            { "id": "v_ookii", "form": "adverbial" },
+            { "id": "v_naru", "form": "polite_masu" }
+          ]
         },
         {
-          "id": "v_iru",
-          "form": "polite_masu"
+          "jp": "正月が 来たら、自分の 考えを 正す ことが 大切です。",
+          "en": "When New Year comes, correcting your own thinking is important.",
+          "terms": [
+            "v_shougatsu",
+            "p_ga",
+            { "id": "v_kuru", "form": "conditional_tara" },
+            "v_jibun",
+            "p_no",
+            "v_kangae",
+            "p_wo",
+            { "id": "v_tadasu", "form": "plain_form" },
+            "v_koto",
+            "p_ga",
+            { "id": "v_taisetsu", "form": "polite_adj" }
+          ]
         },
         {
-          "id": "v_akushitsu",
-          "form": "attributive_na"
+          "jp": "やまもと先生は「正道を 歩く ことが 大切だ」と 言っています。",
+          "en": "Yamamoto-sensei says, 'Walking the correct path is important.'",
+          "terms": [
+            "char_yamamoto",
+            "p_wa",
+            "v_seidou",
+            "p_wo",
+            { "id": "v_aruku", "form": "plain_form" },
+            "v_koto",
+            "p_ga",
+            { "id": "v_taisetsu", "form": "plain_adj" },
+            "g_da",
+            "p_to_quote",
+            { "id": "v_iu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
+          ]
         },
-        "v_kangaekata",
-        "p_wa",
         {
-          "id": "v_tadasu",
-          "form": "te_form"
+          "jp": "悪質な 考え方は 正して 行かなければ いけません。",
+          "en": "A malicious way of thinking must be corrected.",
+          "terms": [
+            { "id": "v_akushitsu", "form": "attributive_na" },
+            "v_kangaekata",
+            "p_wa",
+            { "id": "v_tadasu", "form": "te_form" },
+            { "id": "v_iku", "form": "nakereba" },
+            { "id": "v_ikeru", "form": "polite_negative" }
+          ]
         },
         {
-          "id": "v_iku",
-          "form": "nakereba"
-        },
-        {
-          "id": "v_ikeru",
-          "form": "polite_negative"
-        },
-        "v_tadashii",
-        "v_mikata",
-        "p_de",
-        "v_sekai",
-        "p_wo",
-        {
-          "id": "v_miru",
-          "form": "plain_form"
-        },
-        "p_to_conditional",
-        "v_atarashii",
-        "v_kangae",
-        "p_ga",
-        {
-          "id": "v_umareru",
-          "form": "polite_masu"
+          "jp": "正しい 見方で 世界を 見ると、新しい 考えが 生まれます。",
+          "en": "When you look at the world with the correct viewpoint, new ideas are born.",
+          "terms": [
+            "v_tadashii",
+            "v_mikata",
+            "p_de",
+            "v_sekai",
+            "p_wo",
+            { "id": "v_miru", "form": "plain_form" },
+            "p_to_conditional",
+            "v_atarashii",
+            "v_kangae",
+            "p_ga",
+            { "id": "v_umareru", "form": "polite_masu" }
+          ]
         }
+      ],
+      "questions": [
+        {
+          "q": "正しい 考え方は 何ですか。",
+          "a": "毎日 とても 大切です。",
+          "terms": [
+            "v_tadashii",
+            "v_kangaekata",
+            "p_wa",
+            "v_nan",
+            "g_desu",
+            "p_ka",
+            "v_mainichi",
+            "v_totemo",
+            { "id": "v_taisetsu", "form": "polite_adj" }
+          ]
+        },
+        {
+          "q": "やまもと先生は 何と 言っていますか。",
+          "a": "正道を 歩く ことが 大切だと 言っています。",
+          "terms": [
+            "char_yamamoto",
+            "p_wa",
+            "v_nan",
+            "p_to_quote",
+            { "id": "v_iu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" },
+            "p_ka",
+            "v_seidou",
+            "p_wo",
+            { "id": "v_aruku", "form": "plain_form" },
+            "v_koto",
+            "p_ga",
+            { "id": "v_taisetsu", "form": "plain_adj" },
+            "g_da",
+            "p_to_quote"
+          ]
+        },
+        {
+          "q": "正しい 見方で 世界を 見ると、どう なりますか。",
+          "a": "新しい 考えが 生まれます。",
+          "terms": [
+            "v_tadashii",
+            "v_mikata",
+            "p_de",
+            "v_sekai",
+            "p_wo",
+            { "id": "v_miru", "form": "plain_form" },
+            "p_to_conditional",
+            "v_dou",
+            { "id": "v_naru", "form": "polite_masu" },
+            "p_ka",
+            "v_atarashii",
+            "v_kangae",
+            "p_ga",
+            { "id": "v_umareru", "form": "polite_masu" }
           ]
         }
       ]
@@ -765,156 +797,165 @@
       "title": "Reading 2: Good and Bad Thinking（正しい考えと悪い考え）",
       "passage": [
         {
-          "jp": "人は 毎日 たくさんの 考えを 持ちます。正しい 考えを 持つためには、悪質な 考え方に 注意しなければ いけません。考え方が 悪ければ、見方も 悪く なります。やまもと先生は、学生に「悪質な 考えに 注意して ください」と 言いました。りきぞは 先生の 意見を 聞いて、自分の 見方を 正そうと 言いました。正道を 歩く 人は、悪い 考えより 正しい 考えの 方が 大切だと 分かります。毎日 考えを 正したり 意見を 聞いたり する ことが 大切です。",
-          "en": "People hold many thoughts every day. In order to hold correct thinking, you must be careful of malicious ways of thinking. If your way of thinking is bad, your viewpoint will also become bad. Yamamoto-sensei said to the students, 'Be careful of malicious thinking.' Rikizo heard the teacher's opinion and said he would correct his viewpoint. A person who walks the correct path understands that correct thinking is more important than bad thinking. It is important to both correct your thinking and listen to opinions every day.",
+          "jp": "人は 毎日 たくさんの 考えを 持ちます。",
+          "en": "People hold many thoughts every day.",
           "terms": [
-        "v_hito",
-        "p_wa",
-        "v_mainichi",
-        "v_takusan",
-        "p_no",
-        "v_kangae",
-        "p_wo",
-        {
-          "id": "v_motsu",
-          "form": "polite_masu"
-        },
-        "v_tadashii",
-        "v_kangae",
-        "p_wo",
-        {
-          "id": "v_motsu",
-          "form": "plain_form"
-        },
-        "v_tame",
-        "p_ni",
-        "p_wa",
-        {
-          "id": "v_akushitsu",
-          "form": "attributive_na"
-        },
-        "v_kangaekata",
-        "p_ni",
-        "v_chuui",
-        {
-          "id": "v_suru",
-          "form": "nakereba"
+            "v_hito",
+            "p_wa",
+            "v_mainichi",
+            "v_takusan",
+            "p_no",
+            "v_kangae",
+            "p_wo",
+            { "id": "v_motsu", "form": "polite_masu" }
+          ]
         },
         {
-          "id": "v_ikeru",
-          "form": "polite_negative"
-        },
-        "v_kangaekata",
-        "p_ga",
-        {
-          "id": "v_warui",
-          "form": "conditional_ba"
-        },
-        "v_mikata",
-        "p_mo",
-        {
-          "id": "v_warui",
-          "form": "adverbial"
-        },
-        {
-          "id": "v_naru",
-          "form": "polite_masu"
-        },
-        "char_yamamoto",
-        "v_sensei",
-        "p_wa",
-        "v_gakusei",
-        "p_ni",
-        {
-          "id": "v_akushitsu",
-          "form": "attributive_na"
-        },
-        "v_kangae",
-        "p_ni",
-        "v_chuui",
-        {
-          "id": "v_suru",
-          "form": "te_form"
-        },
-        "v_kudasai",
-        "p_to_quote",
-        {
-          "id": "v_iu",
-          "form": "polite_mashita"
-        },
-        "char_rikizo",
-        "p_wa",
-        "v_sensei",
-        "p_no",
-        "v_iken",
-        "p_wo",
-        {
-          "id": "v_kiku",
-          "form": "te_form"
-        },
-        "v_jibun",
-        "p_no",
-        "v_mikata",
-        "p_wo",
-        {
-          "id": "v_tadasu",
-          "form": "plain_volitional"
-        },
-        "p_to_quote",
-        {
-          "id": "v_iu",
-          "form": "polite_mashita"
-        },
-        "v_seidou",
-        "p_wo",
-        {
-          "id": "v_aruku",
-          "form": "plain_form"
-        },
-        "v_hito",
-        "p_wa",
-        "v_warui",
-        "v_kangae",
-        "p_yori",
-        "v_tadashii",
-        "v_kangae",
-        "p_no",
-        "v_hou",
-        "p_ga",
-        {
-          "id": "v_taisetsu",
-          "form": "plain_adj"
-        },
-        "g_da",
-        "p_to_quote",
-        {
-          "id": "v_wakaru",
-          "form": "polite_masu"
-        },
-        "v_mainichi",
-        "v_kangae",
-        "p_wo",
-        {
-          "id": "v_tadasu",
-          "form": "tari_form"
-        },
-        "v_iken",
-        "p_wo",
-        {
-          "id": "v_kiku",
-          "form": "tari_form"
+          "jp": "正しい 考えを 持つためには、悪質な 考え方に 注意しなければ いけません。",
+          "en": "In order to hold correct thinking, you must be careful of malicious ways of thinking.",
+          "terms": [
+            "v_tadashii",
+            "v_kangae",
+            "p_wo",
+            { "id": "v_motsu", "form": "plain_form" },
+            "v_tame",
+            "p_ni",
+            "p_wa",
+            { "id": "v_akushitsu", "form": "attributive_na" },
+            "v_kangaekata",
+            "p_ni",
+            "v_chuui",
+            { "id": "v_suru", "form": "nakereba" },
+            { "id": "v_ikeru", "form": "polite_negative" }
+          ]
         },
         {
-          "id": "v_suru",
-          "form": "plain_form"
+          "jp": "考え方が 悪ければ、見方も 悪く なります。",
+          "en": "If your way of thinking is bad, your viewpoint will also become bad.",
+          "terms": [
+            "v_kangaekata",
+            "p_ga",
+            { "id": "v_warui", "form": "conditional_ba" },
+            "v_mikata",
+            "p_mo",
+            { "id": "v_warui", "form": "adverbial" },
+            { "id": "v_naru", "form": "polite_masu" }
+          ]
         },
-        "v_koto",
-        "p_ga",
         {
-          "id": "v_taisetsu",
-          "form": "polite_adj"
+          "jp": "やまもと先生は、学生に「悪質な 考えに 注意して ください」と 言いました。",
+          "en": "Yamamoto-sensei said to the students, 'Be careful of malicious thinking.'",
+          "terms": [
+            "char_yamamoto",
+            "p_wa",
+            "v_gakusei",
+            "p_ni",
+            { "id": "v_akushitsu", "form": "attributive_na" },
+            "v_kangae",
+            "p_ni",
+            "v_chuui",
+            { "id": "v_suru", "form": "te_form" },
+            "v_kudasai",
+            "p_to_quote",
+            { "id": "v_iu", "form": "polite_mashita" }
+          ]
         },
-        "g_desu"
+        {
+          "jp": "りきぞは 先生の 意見を 聞いて、自分の 見方を 正そうと 言いました。",
+          "en": "Rikizo heard the teacher's opinion and said he would correct his viewpoint.",
+          "terms": [
+            "char_rikizo",
+            "p_wa",
+            "v_sensei",
+            "p_no",
+            "v_iken",
+            "p_wo",
+            { "id": "v_kiku", "form": "te_form" },
+            "v_jibun",
+            "p_no",
+            "v_mikata",
+            "p_wo",
+            { "id": "v_tadasu", "form": "plain_volitional" },
+            "p_to_quote",
+            { "id": "v_iu", "form": "polite_mashita" }
+          ]
+        },
+        {
+          "jp": "毎日 考えを 正したり 意見を 聞いたり する ことが 大切です。",
+          "en": "It is important to both correct your thinking and listen to opinions every day.",
+          "terms": [
+            "v_mainichi",
+            "v_kangae",
+            "p_wo",
+            { "id": "v_tadasu", "form": "tari_form" },
+            "v_iken",
+            "p_wo",
+            { "id": "v_kiku", "form": "tari_form" },
+            { "id": "v_suru", "form": "plain_form" },
+            "v_koto",
+            "p_ga",
+            { "id": "v_taisetsu", "form": "polite_adj" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "正しい 考えを 持つためには、何に 注意しなければ いけませんか。",
+          "a": "悪質な 考え方に 注意しなければ いけません。",
+          "terms": [
+            "v_tadashii",
+            "v_kangae",
+            "p_wo",
+            { "id": "v_motsu", "form": "plain_form" },
+            "v_tame",
+            "p_ni",
+            "p_wa",
+            "v_nan",
+            "p_ni",
+            "v_chuui",
+            { "id": "v_suru", "form": "nakereba" },
+            { "id": "v_ikeru", "form": "polite_negative" },
+            "p_ka",
+            { "id": "v_akushitsu", "form": "attributive_na" },
+            "v_kangaekata"
+          ]
+        },
+        {
+          "q": "やまもと先生は 学生に 何と 言いましたか。",
+          "a": "悪質な 考えに 注意して ください と 言いました。",
+          "terms": [
+            "char_yamamoto",
+            "p_wa",
+            "v_gakusei",
+            "p_ni",
+            "v_nan",
+            "p_to_quote",
+            { "id": "v_iu", "form": "polite_mashita" },
+            "p_ka",
+            { "id": "v_akushitsu", "form": "attributive_na" },
+            "v_kangae",
+            "p_ni",
+            "v_chuui",
+            { "id": "v_suru", "form": "te_form" },
+            "v_kudasai"
+          ]
+        },
+        {
+          "q": "毎日 何を する ことが 大切ですか。",
+          "a": "考えを 正したり 意見を 聞いたり する ことが 大切です。",
+          "terms": [
+            "v_mainichi",
+            "v_nani",
+            "p_wo",
+            { "id": "v_suru", "form": "plain_form" },
+            "v_koto",
+            "p_ga",
+            { "id": "v_taisetsu", "form": "polite_adj" },
+            "p_ka",
+            "v_kangae",
+            { "id": "v_tadasu", "form": "tari_form" },
+            "v_iken",
+            { "id": "v_kiku", "form": "tari_form" }
           ]
         }
       ]
