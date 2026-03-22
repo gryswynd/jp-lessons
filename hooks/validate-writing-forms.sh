@@ -221,8 +221,13 @@ if is_story_terms:
             if not g_entry:
                 continue
             surface = g_entry.get('surface', '')
+            reading = g_entry.get('reading', '')
             matches = g_entry.get('matches', [])
-            if not matches or term_key not in matches:
+            if term_key == surface:
+                continue  # already using kanji form — correct
+            # Flag if the key is the hiragana reading or a listed matches form
+            is_kana_form = (term_key in matches) or (reading and term_key == reading and term_key != surface)
+            if not is_kana_form:
                 continue
             kanji_in_surface = [c for c in surface if '\u4e00' <= c <= '\u9fff']
             if not kanji_in_surface:
@@ -231,7 +236,7 @@ if is_story_terms:
             if untaught:
                 continue
             errors.append(
-                f'  terms["{term_key}"] (id: {term_id}): 曜 and all kanji in '
+                f'  terms["{term_key}"] (id: {term_id}): all kanji in '
                 f'"{surface}" are taught by {story_unlock} — use "{surface}" not "{term_key}"'
             )
 
