@@ -45,7 +45,9 @@
 
 **CRITICAL — conversation line field is `spk`, NOT `speaker`:** The renderer reads `line.spk`. Writing `"speaker"` causes every character name to display as `undefined`. There is no fallback.
 
-**CRITICAL — reading `passage` must be an array of objects, NOT a string:** The renderer iterates `passage` as `[{jp, en, terms}, ...]`. A flat string renders nothing — no error, just a blank section. The `en` translation and `terms` array belong inside each passage object, not at the reading section level.
+**CRITICAL — reading `passage` must be an array of objects, NOT a string:** The renderer iterates `passage` as `[{jp, en, terms}, ...]`. A flat string renders nothing — no error, just a blank section. The `en` translation and `terms` array belong inside each passage object, not at the reading section level. Each passage object contains **exactly one sentence**. A wall-of-text object (multiple sentences as one `jp` string) is a structural error — the student cannot tap individual sentence chips. Target 4–6 passage objects per reading section.
+
+**CRITICAL — reading `questions` is required:** Every reading section must have a `questions` array with at least 1 item (standard: 3). Omitting `questions` leaves the reading section non-interactive. Each question has `q` (Japanese), `a` (Japanese), and `terms`.
 
 ```json
 {
@@ -55,7 +57,7 @@
     {
       "jp": "正しい 考え方は 大切です。",
       "en": "Correct thinking is important.",
-      "terms": ["v_tadashii", "v_kangaekata", "p_wa", {"id": "v_taisetsu", "form": "polite_adj"}, "g_desu"]
+      "terms": ["v_tadashii", "v_kangaekata", "p_wa", {"id": "v_taisetsu", "form": "polite_adj"}]
     }
   ]
 }
