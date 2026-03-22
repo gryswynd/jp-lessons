@@ -291,7 +291,17 @@ window.PracticeModule = {
                 </div>
 
                 <div class="k-lbl" style="margin-top:2rem; color:#e74c3c;">SENTENCE PRACTICE</div>
-                <button class="k-btn" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);" onclick="KanjiApp.start('scramble','scramble')">🔀 Scramble Practice</button>
+                <button class="k-btn" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);" onclick="KanjiApp.toggleScrMenu()">🔀 Scramble</button>
+                <div id="k-scr-submenu" class="k-linkup-menu k-hidden">
+                    <div class="k-linkup-btn" onclick="KanjiApp.start('scramble','scramble')">
+                        <span class="icon">🔀</span>
+                        <span><div>Practice</div><div class="info">N5 sentences — shuffled order</div></span>
+                    </div>
+                    <div class="k-linkup-btn" onclick="KanjiApp.start('marathon','marathon')">
+                        <span class="icon">🏔️</span>
+                        <span><div>Marathon</div><div class="info">N4 progressive — warm-up → challenge</div></span>
+                    </div>
+                </div>
                 <button class="k-btn" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);" onclick="KanjiApp.toggleLinkUpMenu()">🔗 Link Up</button>
                 <div id="k-linkup-submenu" class="k-linkup-menu k-hidden">
                     <div class="k-linkup-btn" onclick="KanjiApp.start('connections','connections')">
@@ -412,7 +422,8 @@ window.PracticeModule = {
         verb: window.JPShared.progress.getBestScore('verb'),
         flash: window.JPShared.progress.getBestScore('flash'),
         connections: window.JPShared.progress.getBestScore('connections'),
-        scramble: window.JPShared.progress.getBestScore('scramble')
+        scramble: window.JPShared.progress.getBestScore('scramble'),
+        marathon: window.JPShared.progress.getBestScore('marathon')
     };
 
     // --- 3. HELPER FUNCTIONS ---
@@ -593,6 +604,9 @@ window.PracticeModule = {
             return;
         } else if (type === 'scramble') {
             scrStart();
+            return;
+        } else if (type === 'marathon') {
+            marathonStart();
             return;
         }
 
@@ -1299,6 +1313,266 @@ window.PracticeModule = {
         setTxt('k-scr-streak', 0);
         scrRenderItem();
     };
+
+    KanjiApp.toggleScrMenu = function() {
+        const sub = document.getElementById('k-scr-submenu');
+        if (sub) sub.classList.toggle('k-hidden');
+    };
+
+    // --- SCRAMBLE MARATHON (N4 Progressive) ---
+    const MARATHON_TIERS = [
+        { difficulty: 1, label: 'Warm-up', color: '#2ed573', icon: '🟢' },
+        { difficulty: 2, label: 'Build-up', color: '#ffa502', icon: '🟡' },
+        { difficulty: 3, label: 'Challenge', color: '#ff4757', icon: '🔴' }
+    ];
+    let marItems = [], marIdx = 0, marStreak = 0, marBest = 0, marScore = 0, marTotal = 0, marCurrentTier = 0, marTitle = '';
+    let marDataCache = null;
+
+    async function marathonStart() {
+        curMode = 'scramble'; curCategory = 'scramble';
+        marStreak = 0; marScore = 0; marTotal = 0; marIdx = 0; marCurrentTier = 0;
+        marBest = bestScores.marathon || 0;
+
+        if (!marDataCache) {
+            try {
+                const url = window.getAssetUrl(REPO_CONFIG, 'data/N4/scramble/scramble.N4.json') + '?t=' + Date.now();
+                const res = await fetch(url);
+                marDataCache = await res.json();
+            } catch(e) {
+                alert('Could not load Marathon data.');
+                return;
+            }
+        }
+
+        const available = marDataCache.marathons.filter(m =>
+            m.requires.every(req => activeLessons.has(req))
+        );
+
+        if (available.length === 0) {
+            alert('Select N4 lessons to unlock Marathon sets! The first marathon unlocks after N4.2.');
+            return;
+        }
+
+        // Pick one marathon at random
+        const marathon = available[Math.floor(Math.random() * available.length)];
+        marTitle = marathon.title;
+
+        // Build items: warmup → buildup → challenge, each shuffled internally
+        marItems = [];
+        marathon.warmup.sort(() => Math.random() - 0.5).forEach(item =>
+            marItems.push({ ...item, difficulty: 1 }));
+        marathon.buildup.sort(() => Math.random() - 0.5).forEach(item =>
+            marItems.push({ ...item, difficulty: 2 }));
+        marathon.challenge.sort(() => Math.random() - 0.5).forEach(item =>
+            marItems.push({ ...item, difficulty: 3 }));
+        marTotal = marItems.length;
+
+        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4','k-view-scr'].forEach(i => {
+            const el = document.getElementById(i);
+            if(el) el.classList.add('k-hidden');
+        });
+        const sv = document.getElementById('k-view-scr');
+        if(sv) sv.classList.remove('k-hidden');
+
+        setTxt('k-scr-best', marBest);
+        setTxt('k-scr-streak', 0);
+        marCurrentTier = 0;
+        marRenderItem();
+    }
+
+    function marRenderItem() {
+        if (marIdx >= marItems.length) {
+            marShowSummary();
+            return;
+        }
+
+        const item = marItems[marIdx];
+        const tierInfo = MARATHON_TIERS.find(t => t.difficulty === item.difficulty) || MARATHON_TIERS[0];
+
+        // Show tier transition banner
+        if (item.difficulty !== marCurrentTier) {
+            marCurrentTier = item.difficulty;
+            const stage = document.getElementById('k-scr-stage');
+            stage.innerHTML = `
+                <div style="text-align:center; padding:2rem;">
+                    ${item.difficulty === 1 ? '<div style="font-size:0.85rem; font-weight:800; color:var(--text-sub); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">' + marTitle + '</div>' : ''}
+                    <div style="font-size:3rem; margin-bottom:10px;">${tierInfo.icon}</div>
+                    <div style="font-size:1.6rem; font-weight:900; color:${tierInfo.color}; margin-bottom:6px;">Round ${item.difficulty}: ${tierInfo.label}</div>
+                    <div style="color:var(--text-sub); font-weight:600; font-size:0.95rem;">
+                        ${item.difficulty === 1 ? 'Short sentences, fewer distractors' : item.difficulty === 2 ? 'Longer sentences, more particles' : 'Compound sentences, tricky distractors'}
+                    </div>
+                </div>
+            `;
+            setTxt('k-scr-progress', `${tierInfo.icon} ${marIdx + 1} / ${marTotal}`);
+            setTimeout(() => marRenderScramble(item, tierInfo), 1500);
+            return;
+        }
+
+        marRenderScramble(item, tierInfo);
+    }
+
+    function marRenderScramble(item, tierInfo) {
+        const allChips = item.segments.concat(item.distractors).sort(() => Math.random() - 0.5);
+        const answerSlots = [];
+        let answered = false;
+        let firstAttempt = true;
+
+        setTxt('k-scr-progress', `${tierInfo.icon} ${marIdx + 1} / ${marTotal}`);
+
+        const stage = document.getElementById('k-scr-stage');
+        stage.innerHTML = `
+            <div style="text-align:center; margin-bottom:6px;">
+                <span style="font-size:0.75rem; font-weight:800; color:${tierInfo.color}; text-transform:uppercase; letter-spacing:0.1em;">${tierInfo.icon} ${tierInfo.label}</span>
+            </div>
+            <div class="k-scr-prompt">${item.q}</div>
+            <div class="k-scr-hint">Tap words to build the sentence</div>
+            <div class="k-scr-answer" id="k-scr-answer"></div>
+            <div class="k-scr-pool" id="k-scr-pool">
+                ${allChips.map((c, i) => `<div class="k-scr-chip" data-idx="${i}" data-text="${c}">${c}</div>`).join('')}
+            </div>
+            <div style="display:flex; gap:8px; justify-content:center;">
+                <button class="k-btn" id="k-scr-check" disabled style="opacity:0.4; max-width:200px;">Check</button>
+                <button class="k-btn k-btn-sec" id="k-scr-clear" style="max-width:120px;">Clear</button>
+            </div>
+            <div class="k-scr-explain" id="k-scr-explain"></div>
+        `;
+
+        const pool = document.getElementById('k-scr-pool');
+        const answerBox = document.getElementById('k-scr-answer');
+
+        pool.querySelectorAll('.k-scr-chip').forEach(chip => {
+            chip.onclick = () => {
+                if (answered || chip.classList.contains('placed')) return;
+                chip.classList.add('placed');
+                const ansChip = document.createElement('div');
+                ansChip.className = 'k-scr-chip in-answer';
+                ansChip.textContent = chip.dataset.text;
+                ansChip.dataset.poolIdx = chip.dataset.idx;
+                ansChip.onclick = () => {
+                    if (answered) return;
+                    chip.classList.remove('placed');
+                    ansChip.remove();
+                    answerSlots.splice(answerSlots.indexOf(chip.dataset.text), 1);
+                    marUpdateCheck();
+                };
+                answerBox.appendChild(ansChip);
+                answerSlots.push(chip.dataset.text);
+                marUpdateCheck();
+            };
+        });
+
+        function marUpdateCheck() {
+            const needed = item.segments.length;
+            const btn = document.getElementById('k-scr-check');
+            const hasEnough = answerSlots.length === needed;
+            if (btn) { btn.disabled = !hasEnough; btn.style.opacity = hasEnough ? '1' : '0.4'; }
+            const ab = document.getElementById('k-scr-answer');
+            if (ab) ab.classList.toggle('has-chips', answerSlots.length > 0);
+        }
+
+        document.getElementById('k-scr-clear').onclick = () => {
+            if (answered) return;
+            answerSlots.length = 0;
+            answerBox.querySelectorAll('.k-scr-chip').forEach(c => c.remove());
+            pool.querySelectorAll('.k-scr-chip').forEach(c => c.classList.remove('placed'));
+            marUpdateCheck();
+        };
+
+        document.getElementById('k-scr-check').onclick = () => {
+            if (answered) return;
+
+            const userAnswer = answerSlots.join('');
+            const correctAnswer = item.segments.join('');
+            const altAnswers = (item.alts || []).map(a => a.join(''));
+            const isCorrect = userAnswer === correctAnswer || altAnswers.includes(userAnswer);
+
+            answered = true;
+            const ab = document.getElementById('k-scr-answer');
+
+            if (isCorrect) {
+                ab.classList.add('correct');
+                ab.querySelectorAll('.k-scr-chip').forEach(c => c.classList.add('correct-chip'));
+                marScore++;
+                if (firstAttempt) marScore++;
+                marStreak++;
+                setTxt('k-scr-streak', marStreak);
+                if (marStreak > marBest) {
+                    marBest = marStreak;
+                    bestScores.marathon = marBest;
+                    window.JPShared.progress.setBestScore('marathon', marBest);
+                    setTxt('k-scr-best', marBest);
+                }
+                if (marStreak >= 5 && marStreak % 5 === 0) {
+                    const targetView = document.getElementById('k-view-scr');
+                    if (targetView) {
+                        targetView.style.position = 'relative';
+                        const savedMode = curMode;
+                        curMode = 'scramble';
+                        launchHanabi(marStreak);
+                        curMode = savedMode;
+                    }
+                }
+            } else {
+                ab.classList.add('wrong');
+                ab.querySelectorAll('.k-scr-chip').forEach(c => c.classList.add('wrong-chip'));
+                marStreak = 0;
+                setTxt('k-scr-streak', 0);
+
+                const correctLine = document.createElement('div');
+                correctLine.className = 'k-scr-correct-line';
+                correctLine.textContent = item.segments.join('');
+                ab.parentNode.insertBefore(correctLine, ab.nextSibling);
+            }
+
+            const explainEl = document.getElementById('k-scr-explain');
+            if (explainEl) {
+                explainEl.innerHTML = item.explanation;
+                explainEl.classList.add('show');
+            }
+
+            const checkBtn = document.getElementById('k-scr-check');
+            if (checkBtn) {
+                checkBtn.textContent = 'Next →';
+                checkBtn.disabled = false;
+                checkBtn.style.opacity = '1';
+                checkBtn.onclick = () => {
+                    marIdx++;
+                    marRenderItem();
+                };
+            }
+            const clearBtn = document.getElementById('k-scr-clear');
+            if (clearBtn) clearBtn.style.display = 'none';
+        };
+    }
+
+    function marShowSummary() {
+        const stage = document.getElementById('k-scr-stage');
+        const maxPossible = marTotal * 2;
+        const pct = maxPossible > 0 ? Math.round(marScore / maxPossible * 100) : 0;
+        const tierCounts = {};
+        marItems.forEach(it => { tierCounts[it.difficulty] = (tierCounts[it.difficulty] || 0) + 1; });
+        stage.innerHTML = `
+            <div style="text-align:center; padding: 1rem;">
+                <div style="font-size:2.5rem; margin-bottom:10px;">🏔️</div>
+                <div style="font-size:1.4rem; font-weight:900; color:var(--primary); margin-bottom:4px;">Marathon Complete!</div>
+                <div style="color:var(--text-sub); font-weight:700; font-size:0.9rem; margin-bottom:8px;">${marTitle}</div>
+                <div style="font-size:3rem; font-weight:900; color:var(--text-main); margin-bottom:5px;">${marScore} / ${maxPossible}</div>
+                <div style="color:var(--text-sub); font-weight:600; margin-bottom:15px;">${pct}% · ${marTotal} sentences</div>
+                <div style="display:flex; justify-content:center; gap:12px; margin-bottom:8px; font-size:0.85rem; font-weight:700;">
+                    ${tierCounts[1] ? '<span style="color:#2ed573">🟢 ' + tierCounts[1] + ' warm-up</span>' : ''}
+                    ${tierCounts[2] ? '<span style="color:#ffa502">🟡 ' + tierCounts[2] + ' build-up</span>' : ''}
+                    ${tierCounts[3] ? '<span style="color:#ff4757">🔴 ' + tierCounts[3] + ' challenge</span>' : ''}
+                </div>
+                <div style="display:flex; justify-content:center; gap:20px; margin-bottom:20px;">
+                    <div><div style="font-size:1.5rem; font-weight:900; color:#ffa502;">🔥 ${marStreak}</div><div class="k-lbl">Final Streak</div></div>
+                    <div><div style="font-size:1.5rem; font-weight:900; color:var(--primary);">🏆 ${marBest}</div><div class="k-lbl">Best Streak</div></div>
+                </div>
+                <button class="k-btn" onclick="marathonStart()" style="max-width:250px; margin:5px auto;">Play Again</button>
+                <button class="k-btn k-btn-sec" onclick="KanjiApp.showMenu()" style="max-width:250px; margin:5px auto;">Back to Menu</button>
+            </div>
+        `;
+        setTxt('k-scr-progress', 'Complete!');
+    }
 
     KanjiApp.flipCard = function() {
         const c = document.getElementById('k-fc-card-obj');
