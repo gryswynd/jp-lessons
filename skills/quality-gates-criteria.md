@@ -63,6 +63,7 @@ All of the following must be TRUE for a QA pass:
 - [ ] (Register) Casual conversations do not mix registers — no ます/です forms in casual dialogue lines, no plain forms in polite dialogue lines
 - [ ] (Register) Plain forms in casual conversations have `introducedIn` ≤ current lesson
 - [ ] (Register) Casual conversation `context` fields describe informal relationships (friends, family, close peers)
+- [ ] manifest.json contains an entry for this content file — Grep manifest.json for the content `id` or `dir`/`file` path and confirm the entry is present with correct `id`, `title`, `dir` or `file`, and `unlocksAfter` fields; a missing manifest entry is a hard fail (the content is invisible in the app)
 
 ### Agent 4 (CR) — soft pass/fail (judgment-based)
 
