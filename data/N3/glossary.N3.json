@@ -35,8 +35,19 @@
       "notes": "Primarily used in compounds: 念入り (careful), 記念 (memorial), 残念 (regrettable)."
     },
     {
-      "id": "k_nareru",
+      "id": "k_nokoru",
       "lesson": "N3.1",
+      "type": "kanji",
+      "surface": "残",
+      "on": "ざん",
+      "kun": "のこる/のこす",
+      "reading": "のこる",
+      "meaning": "remain / leftover / regrettable",
+      "notes": "Kun: のこる (to remain, intrans), のこす (to leave behind, trans). On: ざん in 残念(ざんねん, regrettable/unfortunate), 残業(ざんぎょう, overtime)."
+    },
+    {
+      "id": "k_nareru",
+      "lesson": "N3.4",
       "type": "kanji",
       "surface": "慣",
       "on": "かん",
@@ -97,7 +108,7 @@
       "type": "vocab",
       "gtype": "verb",
       "verb_class": "ichidan",
-      "lesson_ids": "N3.1",
+      "lesson_ids": "N3.4",
       "notes": "Takes に: 日本の生活に慣れる (get used to life in Japan)."
     },
     {
@@ -121,14 +132,67 @@
       "notes": "忘 (N3.1) + 年 (N5.4) + 会 (N5.17). Lit. forget-year-gathering. A major social tradition in Japanese workplaces and friend groups."
     },
     {
+      "id": "v_zannen",
+      "surface": "残念",
+      "reading": "ざんねん",
+      "meaning": "regrettable / disappointing / what a shame",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.1",
+      "notes": "残 (N3.1) + 念 (N3.1). 残念ながら = unfortunately / regrettably. 残念に思う = to feel disappointed. 残念だった = it was a shame."
+    },
+    {
+      "id": "v_nokoru",
+      "surface": "残る",
+      "reading": "のこる",
+      "meaning": "to remain / to be left / to survive",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.1",
+      "notes": "Intransitive — something remains on its own: お金が残る = money is left over. 記憶に残る = to stick in one's memory. Contrast with 残す (transitive)."
+    },
+    {
+      "id": "v_nokosu",
+      "surface": "残す",
+      "reading": "のこす",
+      "meaning": "to leave (something) behind / to save / to preserve",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.1",
+      "notes": "Transitive — you leave something intentionally: 食べ物を残す = to leave food uneaten. 名前を残す = to leave one's name for posterity. Contrast with 残る (intransitive)."
+    },
+    {
+      "id": "v_nokori",
+      "surface": "残り",
+      "reading": "のこり",
+      "meaning": "the rest / remainder / what is left",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.1",
+      "notes": "Noun form of 残る. 残りの時間 = the remaining time. 残り物 = leftovers / what's left over. 残り少ない = running low."
+    },
+    {
+      "id": "v_zangyou",
+      "surface": "残業",
+      "reading": "ざんぎょう",
+      "meaning": "overtime work / working late",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.37",
+      "notes": "残 (N3.1) + 業 (N3.77). 残業する = to work overtime. 残業代 = overtime pay."
+    },
+    {
       "id": "v_shuukan",
       "surface": "習慣",
       "reading": "しゅうかん",
       "meaning": "habit / custom",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N3.1",
-      "notes": "習 (N4.32) + 慣 (N3.1). 生活習慣 = lifestyle habits."
+      "lesson_ids": "N3.4",
+      "notes": "習 (N4.32) + 慣 (N3.4). 生活習慣 = lifestyle habits."
     },
     {
       "id": "v_jikaku",
@@ -467,7 +531,7 @@
     },
     {
       "id": "k_yo",
-      "lesson": "N3.4",
+      "lesson": "N3.29",
       "type": "kanji",
       "surface": "予",
       "on": "よ",
@@ -478,7 +542,7 @@
     },
     {
       "id": "k_taba",
-      "lesson": "N3.4",
+      "lesson": "N3.5",
       "type": "kanji",
       "surface": "束",
       "on": "そく",
@@ -486,6 +550,182 @@
       "reading": "たば",
       "meaning": "bundle / bunch / bind",
       "notes": "Kun: たば (bundle, bunch — 花束 はなたば). On: そく in 約束(やくそく, promise). 束ねる(たばねる) = to bundle/tie together."
+    },
+    {
+      "id": "k_sai",
+      "lesson": "N3.5",
+      "type": "kanji",
+      "surface": "歳",
+      "on": "さい/せい",
+      "kun": "とし",
+      "reading": "さい",
+      "meaning": "years old / age",
+      "notes": "On: さい in 〜歳 (age counter — 二十歳 にじゅっさい). Special reading: 二十歳(はたち, 20 years old). Also お歳暮(おせいぼ, year-end gift). Kun: とし (year/age, literary)."
+    },
+    {
+      "id": "k_kure",
+      "lesson": "N3.5",
+      "type": "kanji",
+      "surface": "暮",
+      "on": "ぼ",
+      "kun": "くれる/くらす",
+      "reading": "くれる",
+      "meaning": "livelihood / twilight / end of year",
+      "notes": "Kun: くらす (to live/make a living — 暮らす), くれる (to grow dark/set — 日が暮れる). On: ぼ in お歳暮(おせいぼ). 夕暮れ(ゆうぐれ) = dusk/twilight."
+    },
+    {
+      "id": "k_yaku",
+      "lesson": "N3.5",
+      "type": "kanji",
+      "surface": "約",
+      "on": "やく",
+      "kun": "",
+      "reading": "やく",
+      "meaning": "approximately / promise / agreement",
+      "notes": "On-reading only: やく. In 約束(やくそく, promise), 約〜(やく, approximately), 予約(よやく, reservation). 予約 now fully writable once both 予(N3.29) and 約(N3.5) are taught — but 予 comes later, so 予約 unlocks at N3.29."
+    },
+    {
+      "id": "k_kare",
+      "lesson": "N3.6",
+      "type": "kanji",
+      "surface": "彼",
+      "on": "ひ",
+      "kun": "かれ/かの",
+      "reading": "かれ",
+      "meaning": "he / that (over there)",
+      "notes": "Kun: かれ (he/him — 彼は, also informal 'boyfriend'). かの in 彼女(かのじょ, she/girlfriend). On: ひ in literary compounds. 彼ら(かれら) = they (mixed/male group)."
+    },
+    {
+      "id": "k_kimi",
+      "lesson": "N3.6",
+      "type": "kanji",
+      "surface": "君",
+      "on": "くん",
+      "kun": "きみ",
+      "reading": "きみ",
+      "meaning": "you (informal) / lord / ruler",
+      "notes": "Kun: きみ (you — informal, mainly male speech). On: くん in 〜君(くん) name suffix (used for males, younger people). 君主(くんしゅ) = monarch/ruler."
+    },
+    {
+      "id": "k_musume",
+      "lesson": "N3.6",
+      "type": "kanji",
+      "surface": "娘",
+      "on": "じょう",
+      "kun": "むすめ",
+      "reading": "むすめ",
+      "meaning": "daughter / young woman",
+      "notes": "Kun: むすめ (daughter; young woman). On: じょう in お嬢さん(おじょうさん, young lady/someone's daughter — polite). 一人娘(ひとりむすめ) = only daughter."
+    },
+    {
+      "id": "k_so",
+      "lesson": "N3.6",
+      "type": "kanji",
+      "surface": "祖",
+      "on": "そ",
+      "kun": "",
+      "reading": "そ",
+      "meaning": "ancestor / grandparent",
+      "notes": "On-reading only: そ. In 祖父(そふ, grandfather), 祖母(そぼ, grandmother), 祖先(そせん, ancestor). Never appears alone. 元祖(がんそ) = originator/founder."
+    },
+    {
+      "id": "k_dare",
+      "lesson": "N3.6",
+      "type": "kanji",
+      "surface": "誰",
+      "on": "",
+      "kun": "だれ/たれ",
+      "reading": "だれ",
+      "meaning": "who",
+      "notes": "Kun: だれ (who). Polite/literary variant: どなた. 誰か(だれか) = someone. 誰でも(だれでも) = anyone/everyone. 誰も(だれも) + negative = nobody. たれ is literary/archaic."
+    },
+    {
+      "id": "k_zen",
+      "lesson": "N3.7",
+      "type": "kanji",
+      "surface": "全",
+      "on": "ぜん",
+      "kun": "すべて/まったく",
+      "reading": "ぜん",
+      "meaning": "whole / all / complete",
+      "notes": "On: ぜん in 全部(ぜんぶ, all), 全体(ぜんたい, whole), 全国(ぜんこく, nationwide), 全員(ぜんいん, all members), 全力(ぜんりょく, full effort). Kun: すべて (all/everything), まったく (completely/utterly)."
+    },
+    {
+      "id": "k_bu",
+      "lesson": "N3.7",
+      "type": "kanji",
+      "surface": "部",
+      "on": "ぶ",
+      "kun": "",
+      "reading": "ぶ",
+      "meaning": "part / section / department / club",
+      "notes": "On: ぶ in 全部(ぜんぶ, all), 部分(ぶぶん, part), 一部(いちぶ, a portion), 内部(ないぶ, interior), 部屋(へや, room — irregular reading). Also used for school clubs: 野球部(やきゅうぶ, baseball club)."
+    },
+    {
+      "id": "k_nai",
+      "lesson": "N3.7",
+      "type": "kanji",
+      "surface": "内",
+      "on": "ない/うち",
+      "kun": "うち",
+      "reading": "ない",
+      "meaning": "inside / within / internal",
+      "notes": "On: ない in 内部(ないぶ, interior), 国内(こくない, domestic), 以内(いない, within). Kun: うち (inside/home — often kept in hiragana in casual use). 内側(うちがわ) = inner side."
+    },
+    {
+      "id": "k_gawa",
+      "lesson": "N3.7",
+      "type": "kanji",
+      "surface": "側",
+      "on": "そく",
+      "kun": "がわ/かわ",
+      "reading": "がわ",
+      "meaning": "side / flank",
+      "notes": "Kun: がわ as suffix — 右側(みぎがわ, right side), 左側(ひだりがわ, left side), 内側(うちがわ, inner side), 外側(そとがわ, outer side). On: そく in formal compounds. 両側(りょうがわ) = both sides (両 not in curriculum)."
+    },
+    {
+      "id": "k_kanarazu",
+      "lesson": "N3.8",
+      "type": "kanji",
+      "surface": "必",
+      "on": "ひつ",
+      "kun": "かならず",
+      "reading": "かならず",
+      "meaning": "certainly / must / inevitable",
+      "notes": "Kun: かならず (certainly, without fail — 必ず). On: ひつ in 必要(ひつよう, necessary), 必死(ひっし, desperate), 必勝(ひっしょう — 勝 not in curriculum). Always implies inevitability or obligation."
+    },
+    {
+      "id": "k_you",
+      "lesson": "N3.8",
+      "type": "kanji",
+      "surface": "要",
+      "on": "よう",
+      "kun": "い(る)/かなめ",
+      "reading": "よう",
+      "meaning": "need / require / essential / key point",
+      "notes": "On: よう in 必要(ひつよう, necessary), 重要(じゅうよう, important), 主要(しゅよう, main). Kun: いる (to need — 要る), かなめ (keystone, crux — 要の人物). 要求(ようきゅう, demand) unlocks at N3.25 when 求 is taught."
+    },
+    {
+      "id": "k_ka",
+      "lesson": "N3.8",
+      "type": "kanji",
+      "surface": "可",
+      "on": "か",
+      "kun": "",
+      "reading": "か",
+      "meaning": "can / possible / acceptable / pass",
+      "notes": "On-reading only: か. In 可能(かのう, possible — unlocks N3.23 when 能 is taught), 不可(ふか, not permitted). Also used as a grade: 可 = passing/acceptable (below 良). 許可(きょか, permission — 許 not in curriculum)."
+    },
+    {
+      "id": "k_kagiru",
+      "lesson": "N3.8",
+      "type": "kanji",
+      "surface": "限",
+      "on": "げん",
+      "kun": "かぎ(る)",
+      "reading": "かぎる",
+      "meaning": "limit / restrict / confine",
+      "notes": "Kun: かぎる (to limit — 限る), かぎり (limit, as far as — 限り). On: げん in 限界(げんかい, boundary/limit), 限定(げんてい, limited — unlocks N3.29 when 定 is taught), 制限(せいげん — 制 not in curriculum until N3.56)."
     },
     {
       "id": "k_sho_ogre",
@@ -497,6 +737,17 @@
       "reading": "お",
       "meaning": "thread / beginning / together",
       "notes": "Most common in 一緒(いっしょ, together). On: しょ in 一緒. Rare kun: お (cord/string). Not commonly used alone."
+    },
+    {
+      "id": "k_matsu",
+      "lesson": "N3.4",
+      "type": "kanji",
+      "surface": "末",
+      "on": "まつ/ばつ",
+      "kun": "すえ",
+      "reading": "まつ",
+      "meaning": "end / tip / tail",
+      "notes": "On: まつ in 週末(しゅうまつ, weekend), 月末(げつまつ, end of month), 年末(ねんまつ, year-end). Kun: すえ (the end/future — 末っ子 = youngest child)."
     },
     {
       "id": "v_tsuzukeru",
@@ -537,9 +788,11 @@
       "meaning": "plan / schedule / arrangement",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N3.4",
-      "matches": ["予てい"],
-      "notes": "予 (N3.4) + 定 (N3.16). Write as 予てい until N3.16. 予定がある = to have plans. 予定を立てる = to make plans. 〜する予定です = planning to do ~."
+      "lesson_ids": "N3.29",
+      "matches": [
+        "予てい"
+      ],
+      "notes": "予 (N3.29) + 定 (N3.16). Write as 予てい until N3.29. 予定がある = to have plans. 予定を立てる = to make plans. 〜する予定です = planning to do ~."
     },
     {
       "id": "v_yoyaku",
@@ -548,9 +801,11 @@
       "meaning": "reservation / booking / appointment",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N3.4",
-      "matches": ["予やく"],
-      "notes": "予 (N3.4) + 約 (N3.66). Write as 予やく until N3.66. 予約する = to make a reservation. ホテルの予約 = hotel reservation."
+      "lesson_ids": "N3.29",
+      "matches": [
+        "予やく"
+      ],
+      "notes": "予 (N3.29) + 約 (N3.66). Write as 予やく until N3.66. 予約する = to make a reservation. ホテルの予約 = hotel reservation."
     },
     {
       "id": "v_yakusoku",
@@ -559,9 +814,8 @@
       "meaning": "promise / appointment / arrangement",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N3.4",
-      "matches": ["やくそく"],
-      "notes": "約 (N3.66) + 束 (N3.4). Write as やくそく until N3.66 when 約 is taught. 約束する = to promise. 約束を守る = to keep a promise."
+      "lesson_ids": "N3.5",
+      "notes": "約 (N3.5) + 束 (N3.5). 約束する = to promise. 約束を守る = to keep a promise. 約束を破る = to break a promise."
     },
     {
       "id": "v_hanataba",
@@ -570,8 +824,487 @@
       "meaning": "bouquet / bunch of flowers",
       "type": "vocab",
       "gtype": "noun",
+      "lesson_ids": "N3.5",
+      "notes": "花 (N4.7) + 束 (N3.5). 花束をもらう = to receive a bouquet. A common gift for ceremonies and celebrations."
+    },
+    {
+      "id": "v_taba",
+      "surface": "束",
+      "reading": "たば",
+      "meaning": "bundle / bunch / sheaf",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.5",
+      "notes": "束 (N3.5). 一束(ひとたば, one bundle). 束にする = to bundle. Used for flowers, documents, cash, etc."
+    },
+    {
+      "id": "v_tabane",
+      "surface": "束ねる",
+      "reading": "たばねる",
+      "meaning": "to bundle / to tie together / to bind",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.5",
+      "notes": "束 (N3.5). 束ねる = to tie into a bundle. 髪を束ねる = to tie up one's hair. Also metaphorical: 部下を束ねる = to manage subordinates."
+    },
+    {
+      "id": "v_kurasu",
+      "surface": "暮らす",
+      "reading": "くらす",
+      "meaning": "to live / to get by / to make a living",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.5",
+      "notes": "暮 (N3.5). 日本で暮らす = to live in Japan. 一人で暮らす = to live alone. Focuses on daily life/livelihood rather than mere existence (住む)."
+    },
+    {
+      "id": "v_kurashi",
+      "surface": "暮らし",
+      "reading": "くらし",
+      "meaning": "livelihood / daily life / living",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.5",
+      "notes": "暮 (N3.5). Noun form of 暮らす. 暮らしが楽になる = life becomes easier. 田舎の暮らし = rural life."
+    },
+    {
+      "id": "v_yuugure",
+      "surface": "夕暮れ",
+      "reading": "ゆうぐれ",
+      "meaning": "dusk / twilight / evening",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.5",
+      "notes": "夕 (N4.3) + 暮 (N3.5). 夕暮れ時(ゆうぐれどき) = dusk, the twilight hour. Literary/poetic nuance compared to 夕方(ゆうがた)."
+    },
+    {
+      "id": "v_oseibo",
+      "surface": "お歳暮",
+      "reading": "おせいぼ",
+      "meaning": "year-end gift / year-end present",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.5",
+      "notes": "歳 (N3.5) + 暮 (N3.5). One of Japan's two major gift-giving seasons (summer: お中元; winter: お歳暮). Typically given in December to those who have helped you during the year."
+    },
+    {
+      "id": "v_yaku",
+      "surface": "約〜",
+      "reading": "やく",
+      "meaning": "approximately / about",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N3.5",
+      "notes": "約 (N3.5). Prefix/adverb used before numbers: 約100人(やく100にん, approximately 100 people). More formal than だいたい or ごろ."
+    },
+    {
+      "id": "v_sai",
+      "surface": "〜歳",
+      "reading": "さい",
+      "meaning": "years old (age counter)",
+      "type": "vocab",
+      "gtype": "counter",
+      "lesson_ids": "N3.5",
+      "notes": "歳 (N3.5). Counter for age: 二十歳(にじゅっさい, 20 years old). Special: 二十歳(はたち, 20 years old) is an irregular reading. 何歳(なんさい) = how old? See also: v_hatachi."
+    },
+    {
+      "id": "v_kare",
+      "surface": "彼",
+      "reading": "かれ",
+      "meaning": "he / him / boyfriend (informal)",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N3.6",
+      "notes": "彼 (N3.6). Third-person pronoun for males. In modern casual speech also means 'boyfriend': 彼ができた = I got a boyfriend. 彼ら(かれら) = they (male/mixed group)."
+    },
+    {
+      "id": "v_kanojo",
+      "surface": "彼女",
+      "reading": "かのじょ",
+      "meaning": "she / her / girlfriend",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N3.6",
+      "notes": "彼 (N3.6) + 女 (N5.1). Third-person pronoun for females. Also commonly means 'girlfriend': 彼女がいる = to have a girlfriend. 彼女たち = they (female group)."
+    },
+    {
+      "id": "v_kimi",
+      "surface": "君",
+      "reading": "きみ",
+      "meaning": "you (informal)",
+      "type": "vocab",
+      "gtype": "pronoun",
+      "lesson_ids": "N3.6",
+      "notes": "君 (N3.6). Informal second-person pronoun, used mainly by males toward peers or juniors. More intimate than あなた but can sound condescending in some contexts. Common in song lyrics and literature."
+    },
+    {
+      "id": "v_musume",
+      "surface": "娘",
+      "reading": "むすめ",
+      "meaning": "daughter / young woman",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.6",
+      "notes": "娘 (N3.6). Own daughter (humble/plain): うちの娘 = my daughter. Also used generally for 'young woman'. 一人娘(ひとりむすめ) = only daughter. Contrast: 息子(むすこ, son)."
+    },
+    {
+      "id": "v_sofu",
+      "surface": "祖父",
+      "reading": "そふ",
+      "meaning": "grandfather (formal/own)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.6",
+      "notes": "祖 (N3.6) + 父 (N5.1). Formal/humble term for one's own grandfather. Use おじいさん when referring to someone else's grandfather or speaking informally. 祖父母(そふぼ) = grandparents."
+    },
+    {
+      "id": "v_sobo",
+      "surface": "祖母",
+      "reading": "そぼ",
+      "meaning": "grandmother (formal/own)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.6",
+      "notes": "祖 (N3.6) + 母 (N5.1). Formal/humble term for one's own grandmother. Use おばあさん when referring to someone else's grandmother or speaking informally. 祖父母(そふぼ) = grandparents."
+    },
+    {
+      "id": "v_sosen",
+      "surface": "祖先",
+      "reading": "そせん",
+      "meaning": "ancestor(s) / forebear(s)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.6",
+      "notes": "祖 (N3.6) + 先 (N5.1). 祖先を敬う = to respect one's ancestors. お盆 is the Buddhist festival for honoring 祖先. Contrast: 子孫(しそん, descendant)."
+    },
+    {
+      "id": "v_ojiisan",
+      "surface": "おじいさん",
+      "reading": "おじいさん",
+      "meaning": "grandfather / old man (informal)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.6",
+      "notes": "Pure kana. Informal/spoken term for grandfather or an elderly man in general. Use 祖父(そふ) when speaking humbly about your own grandfather. Double い: おじいさん (grandfather) vs おじさん (uncle/middle-aged man)."
+    },
+    {
+      "id": "v_obaasan",
+      "surface": "おばあさん",
+      "reading": "おばあさん",
+      "meaning": "grandmother / old woman (informal)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.6",
+      "notes": "Pure kana. Informal/spoken term for grandmother or an elderly woman in general. Use 祖母(そぼ) when speaking humbly about your own grandmother. Double あ: おばあさん (grandmother) vs おばさん (aunt/middle-aged woman)."
+    },
+    {
+      "id": "v_sofubo",
+      "surface": "祖父母",
+      "reading": "そふぼ",
+      "meaning": "grandparents",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.6",
+      "notes": "祖 (N3.6) + 父 (N5.1) + 母 (N5.1). Collective term for both grandparents. 祖父母の家 = grandparents' house. Contrast individual terms: 祖父(そふ) and 祖母(そぼ)."
+    },
+    {
+      "id": "v_zenbu",
+      "surface": "全部",
+      "reading": "ぜんぶ",
+      "meaning": "all / everything / the whole lot",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "全 (N3.7) + 部 (N3.7). 全部で = in total. 全部食べた = ate everything. More colloquial than 全て(すべて). Often used as an adverb: 全部わかった = I understood everything."
+    },
+    {
+      "id": "v_subete",
+      "surface": "全て",
+      "reading": "すべて",
+      "meaning": "all / everything / entirely",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N3.7",
+      "notes": "全 (N3.7). Kun-reading of 全. More formal/literary than 全部(ぜんぶ). 全ての人 = all people. 全てにおいて = in every respect. Often written in hiragana: すべて."
+    },
+    {
+      "id": "v_zenkoku",
+      "surface": "全国",
+      "reading": "ぜんこく",
+      "meaning": "the whole country / nationwide",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "全 (N3.7) + 国 (N5.9). 全国大会(ぜんこくたいかい) = national competition. 全国的に(ぜんこくてきに) = nationwide. Often used as a modifier: 全国ネット = national network."
+    },
+    {
+      "id": "v_zentai",
+      "surface": "全体",
+      "reading": "ぜんたい",
+      "meaning": "the whole / entirety / overall",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "全 (N3.7) + 体 (N4.12). 全体的に = overall / on the whole. 全体像(ぜんたいぞう) = the big picture. 全体会議 = plenary meeting. Contrasts with 部分(ぶぶん, part)."
+    },
+    {
+      "id": "v_zenin",
+      "surface": "全員",
+      "reading": "ぜんいん",
+      "meaning": "all members / everyone (in a group)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "全 (N3.7) + 員 (N4.14). 全員集合 = everyone assemble. 全員参加 = full participation. Refers specifically to all members of a defined group, not 'everyone' in general (みんな)."
+    },
+    {
+      "id": "v_zenryoku",
+      "surface": "全力",
+      "reading": "ぜんりょく",
+      "meaning": "full effort / with all one's strength",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "全 (N3.7) + 力 (N4.18). 全力を尽くす = to do one's utmost. 全力で走る = to run with all one's might. 全力投球(ぜんりょくとうきゅう) = giving it everything (lit. full-power pitch)."
+    },
+    {
+      "id": "v_bubun",
+      "surface": "部分",
+      "reading": "ぶぶん",
+      "meaning": "part / portion / section",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "部 (N3.7) + 分 (N5.5). 一部分(いちぶぶん) = one part. この部分が難しい = this part is difficult. Contrast: 全体(ぜんたい, whole) and 一部(いちぶ, a portion)."
+    },
+    {
+      "id": "v_ichibu",
+      "surface": "一部",
+      "reading": "いちぶ",
+      "meaning": "a part / some / a portion",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "一 (N5.1) + 部 (N3.7). 一部の人 = some people / a portion of people. 一部始終(いちぶしじゅう) = the whole story from start to finish. Also means 'one copy' (of a document): 一部ください = one copy please."
+    },
+    {
+      "id": "v_heya",
+      "surface": "部屋",
+      "reading": "へや",
+      "meaning": "room",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "部 (N3.7) + 屋 (N4.20). Irregular reading: へや (not ぶや). 自分の部屋 = one's own room. 部屋を片付ける = to tidy up a room. 一人部屋 = single room."
+    },
+    {
+      "id": "v_naibu",
+      "surface": "内部",
+      "reading": "ないぶ",
+      "meaning": "interior / inside / internal",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "内 (N3.7) + 部 (N3.7). 内部情報(ないぶじょうほう) = inside information. 内部告発(ないぶこくはつ) = whistleblowing. More formal/structural than 中(なか) for describing interiors of organisations or structures."
+    },
+    {
+      "id": "v_kokunai",
+      "surface": "国内",
+      "reading": "こくない",
+      "meaning": "domestic / within the country / inland",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "国 (N5.9) + 内 (N3.7). 国内旅行 = domestic travel. 国内外(こくないがい) = at home and abroad. Contrast: 海外(かいがい, overseas/foreign)."
+    },
+    {
+      "id": "v_inai",
+      "surface": "以内",
+      "reading": "いない",
+      "meaning": "within / not exceeding / inside of",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "以 (N4.29) + 内 (N3.7). Used after a quantity/time: 一週間以内に = within one week. 予算以内 = within budget. Contrast: 以上(いじょう, more than/above) and 以下(いか, less than/below)."
+    },
+    {
+      "id": "v_uchigawa",
+      "surface": "内側",
+      "reading": "うちがわ",
+      "meaning": "inner side / inside surface",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "内 (N3.7) + 側 (N3.7). 内側から鍵をかける = to lock from the inside. 袋の内側 = the inside of the bag. Contrast: 外側(そとがわ, outer side)."
+    },
+    {
+      "id": "v_migigawa",
+      "surface": "右側",
+      "reading": "みぎがわ",
+      "meaning": "right side / right-hand side",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "右 (N5.16) + 側 (N3.7). 右側を歩いてください = please walk on the right side. 道の右側 = the right side of the road. Contrast: 左側(ひだりがわ)."
+    },
+    {
+      "id": "v_hidarigawa",
+      "surface": "左側",
+      "reading": "ひだりがわ",
+      "meaning": "left side / left-hand side",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "左 (N5.16) + 側 (N3.7). 左側通行(ひだりがわつうこう) = keep left (traffic rule). 左側の棚 = the shelf on the left side. Contrast: 右側(みぎがわ)."
+    },
+    {
+      "id": "v_sotogawa",
+      "surface": "外側",
+      "reading": "そとがわ",
+      "meaning": "outer side / outside surface / exterior",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.7",
+      "notes": "外 (N5.9) + 側 (N3.7). 建物の外側 = the outside of the building. 外側から見る = to look from the outside. Contrast: 内側(うちがわ, inner side)."
+    },
+    {
+      "id": "v_kanarazu",
+      "surface": "必ず",
+      "reading": "かならず",
+      "meaning": "certainly / without fail / always",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N3.8",
+      "notes": "必 (N3.8). 必ず来てください = please be sure to come. 必ずしも～ない = not necessarily. Stronger than きっと (probably) — implies near-certainty or obligation."
+    },
+    {
+      "id": "v_hitsuyou",
+      "surface": "必要",
+      "reading": "ひつよう",
+      "meaning": "necessary / needed / essential",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.8",
+      "notes": "必 (N3.8) + 要 (N3.8). 必要がある = there is a need to. 必要以上に = more than necessary. 必要性(ひつようせい, necessity — 性 not in curriculum). Used both as na-adj (必要な書類) and noun (必要はない)."
+    },
+    {
+      "id": "v_hisshi",
+      "surface": "必死",
+      "reading": "ひっし",
+      "meaning": "desperate / frantic / with all one's might",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.8",
+      "notes": "必 (N3.8) + 死 (N4.15). Lit. 'certain death' → desperate/frantic effort. 必死に勉強する = to study frantically. 必死の形相 = desperate expression. Often used adverbially: 必死になって = desperately."
+    },
+    {
+      "id": "v_juuyou",
+      "surface": "重要",
+      "reading": "じゅうよう",
+      "meaning": "important / significant / crucial",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.8",
+      "notes": "重 (N4.23) + 要 (N3.8). 重要な問題 = an important issue. 重要視する = to regard as important. More formal/serious than 大事(だいじ) or 大切(たいせつ). Common in official, academic, and business contexts."
+    },
+    {
+      "id": "v_shuyou",
+      "surface": "主要",
+      "reading": "しゅよう",
+      "meaning": "main / principal / major",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.8",
+      "notes": "主 (N4.35) + 要 (N3.8). 主要な原因 = the main cause. 主要国 = major nations. More formal than メイン or 主な(おもな). Often used in analytical or journalistic writing."
+    },
+    {
+      "id": "v_iru_need",
+      "surface": "要る",
+      "reading": "いる",
+      "meaning": "to need / to require",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.8",
+      "notes": "要 (N3.8). Godan verb (ending in る — irregular godan). お金が要る = money is needed. 要らない = not needed/unnecessary. Distinct from 居る(いる, to exist/be — ichidan). In casual speech often written in hiragana: いる/いらない."
+    },
+    {
+      "id": "v_fuyou",
+      "surface": "不要",
+      "reading": "ふよう",
+      "meaning": "unnecessary / unneeded / not required",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.8",
+      "notes": "不 (N4.36) + 要 (N3.8). 不要な物を捨てる = to throw away unnecessary things. 不要不急(ふようふきゅう) = non-essential and non-urgent. Formal/written register; in speech, いらない is more common."
+    },
+    {
+      "id": "v_fuka",
+      "surface": "不可",
+      "reading": "ふか",
+      "meaning": "not acceptable / not permitted / impossible",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.8",
+      "notes": "不 (N4.36) + 可 (N3.8). 入場不可 = entry not permitted. 不可欠(ふかけつ, indispensable — 欠 N3.25). Also used as a grade: 不可 = fail/unacceptable. Contrast: 可(か, passing) and 不可能(ふかのう, impossible — unlocks N3.23)."
+    },
+    {
+      "id": "v_kagiru",
+      "surface": "限る",
+      "reading": "かぎる",
+      "meaning": "to limit / to restrict / to be limited to",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.8",
+      "notes": "限 (N3.8). 参加者を10人に限る = to limit participants to 10. ～とは限らない = it is not necessarily the case that~. ～に限らず = not limited to~. Key grammar pattern for expressing limitations and exceptions."
+    },
+    {
+      "id": "v_kagiri",
+      "surface": "限り",
+      "reading": "かぎり",
+      "meaning": "limit / as far as / as long as",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.8",
+      "notes": "限 (N3.8). Noun form of 限る. 力の限り = to the best of one's ability. ～する限り = as long as one does~. 今日限り = as of today (final). 限りなく = limitlessly. Key grammar item for N3 grammar patterns."
+    },
+    {
+      "id": "v_genkai",
+      "surface": "限界",
+      "reading": "げんかい",
+      "meaning": "limit / boundary / the end of one's rope",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.8",
+      "notes": "限 (N3.8) + 界 (N4.11). 限界に達する = to reach one's limit. もう限界だ = I've hit my limit. 限界を超える = to exceed the limit. 可能性の限界 = the limits of possibility."
+    },
+    {
+      "id": "v_getsumatsu",
+      "surface": "月末",
+      "reading": "げつまつ",
+      "meaning": "end of the month",
+      "type": "vocab",
+      "gtype": "noun",
       "lesson_ids": "N3.4",
-      "notes": "花 (N4.7) + 束 (N3.4). 花束をもらう = to receive a bouquet. A common gift for ceremonies and celebrations."
+      "notes": "月 (N5.2) + 末 (N3.4). 月末に払う = to pay at end of month. Contrast with 月初め(つきはじめ, beginning of month)."
+    },
+    {
+      "id": "v_nenmatsu",
+      "surface": "年末",
+      "reading": "ねんまつ",
+      "meaning": "year-end / end of the year",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.4",
+      "notes": "年 (N5.4) + 末 (N3.4). 年末年始 = year-end and New Year holidays. 年末に = at year-end."
     },
     {
       "id": "v_renzoku",
@@ -582,6 +1315,327 @@
       "gtype": "noun",
       "lesson_ids": "N3.4",
       "notes": "連 (N3.2) + 続 (N3.4). 連続ドラマ = serial drama. 三日連続 = three days in a row. 連続する = to be continuous."
+    },
+    {
+      "id": "k_mei",
+      "lesson": "N3.9",
+      "type": "kanji",
+      "surface": "命",
+      "on": "めい",
+      "kun": "いのち",
+      "reading": "いのち",
+      "meaning": "life / soul / command",
+      "notes": "Compounds at N3.9: 命(いのち, life), 運命(うんめい, fate), 使命(しめい, mission), 生命(せいめい, life-formal). Deferred: 命令(めいれい, order) — 令 not in curriculum."
+    },
+    {
+      "id": "k_bou",
+      "lesson": "N3.9",
+      "type": "kanji",
+      "surface": "亡",
+      "on": "ぼう",
+      "kun": "なく(なる)",
+      "reading": "なくなる",
+      "meaning": "death / perish / deceased",
+      "notes": "Compounds at N3.9: 死亡(しぼう, death), 亡くなる(なくなる, to pass away), 亡命(ぼうめい, exile)."
+    },
+    {
+      "id": "k_ki_5",
+      "lesson": "N3.9",
+      "type": "kanji",
+      "surface": "危",
+      "on": "き",
+      "kun": "あぶ(ない)/あや(うい)",
+      "reading": "あぶない",
+      "meaning": "danger / hazardous",
+      "notes": "Compounds at N3.9: 危険(きけん, danger), 危ない(あぶない, dangerous), 危機(きき, crisis). Deferred: 危害(きがい, harm) — 害 N3.13."
+    },
+    {
+      "id": "k_ken_3",
+      "lesson": "N3.9",
+      "type": "kanji",
+      "surface": "険",
+      "on": "けん",
+      "kun": "けわ(しい)",
+      "reading": "けわしい",
+      "meaning": "steep / harsh / risky",
+      "notes": "Compounds at N3.9: 危険(きけん, danger), 険しい(けわしい, steep/harsh). Deferred: 冒険(ぼうけん, adventure) — 冒 not in curriculum; 保険(ほけん, insurance) — 保 N3.47."
+    },
+    {
+      "id": "v_inochi",
+      "surface": "命",
+      "reading": "いのち",
+      "meaning": "life / soul / existence",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.9",
+      "notes": "命 (N3.9). The individual's life force or soul. 命がけ = risking one's life. 命を救う = to save a life. 命令(めいれい, order/command) uses the めい reading — 令 not in curriculum."
+    },
+    {
+      "id": "v_unmei",
+      "surface": "運命",
+      "reading": "うんめい",
+      "meaning": "fate / destiny",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.9",
+      "notes": "運 (N4.16) + 命 (N3.9). 運命的な出会い = fateful encounter. 運命を受け入れる = to accept one's fate."
+    },
+    {
+      "id": "v_shimei",
+      "surface": "使命",
+      "reading": "しめい",
+      "meaning": "mission / duty / calling",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.9",
+      "notes": "使 (N4.14) + 命 (N3.9). 使命感 = sense of mission. 使命を果たす = to fulfill one's mission."
+    },
+    {
+      "id": "v_seimei",
+      "surface": "生命",
+      "reading": "せいめい",
+      "meaning": "life (biological / formal)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.9",
+      "notes": "生 (N5.7) + 命 (N3.9). More formal/scientific than 命(いのち). 生命保険 = life insurance (保険 available N3.47). 地球上の生命 = life on Earth."
+    },
+    {
+      "id": "v_shibou",
+      "surface": "死亡",
+      "reading": "しぼう",
+      "meaning": "death (formal / official)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.9",
+      "notes": "死 (N4.15) + 亡 (N3.9). Used in news, medical, and legal contexts. 死亡する = to die. 死亡率 = mortality rate. In everyday speech, prefer 亡くなる or 死ぬ."
+    },
+    {
+      "id": "v_nakunaru",
+      "surface": "亡くなる",
+      "reading": "なくなる",
+      "meaning": "to pass away / to die (polite)",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.9",
+      "notes": "亡 (N3.9). The respectful way to say someone has died — used when referring to others. 祖父が亡くなりました = My grandfather passed away. Do not use of oneself. Contrast with 死ぬ (plain) and 死亡する (formal/official)."
+    },
+    {
+      "id": "v_boumei",
+      "surface": "亡命",
+      "reading": "ぼうめい",
+      "meaning": "exile / defection / seeking asylum",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.9",
+      "notes": "亡 (N3.9) + 命 (N3.9). Both kanji unlock at N3.9. 亡命する = to defect/flee into exile. 亡命者 = political exile/defector. 亡命を求める = to seek asylum."
+    },
+    {
+      "id": "v_kiken",
+      "surface": "危険",
+      "reading": "きけん",
+      "meaning": "danger / hazard / risk",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.9",
+      "notes": "危 (N3.9) + 険 (N3.9). Both kanji unlock at N3.9. 危険な場所 = dangerous place (な-adj use). 危険を冒す = to take a risk. 危険性 = dangerousness. Also functions as な-adjective: 危険だ / 危険な。"
+    },
+    {
+      "id": "v_abunai",
+      "surface": "危ない",
+      "reading": "あぶない",
+      "meaning": "dangerous / risky / unsafe",
+      "type": "vocab",
+      "gtype": "i_adj",
+      "lesson_ids": "N3.9",
+      "notes": "危 (N3.9). い-adjective. Colloquial/everyday danger. 危ない！= Watch out! 危ない道 = dangerous road. あぶなかった！= That was close! More casual than 危険な; often used as a warning exclamation."
+    },
+    {
+      "id": "v_kiki",
+      "surface": "危機",
+      "reading": "きき",
+      "meaning": "crisis / critical moment",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.9",
+      "notes": "危 (N3.9) + 機 (N4.25). 危機に陥る = to fall into crisis. 危機感 = sense of crisis. 経済危機 = economic crisis. 危機を乗り越える = to overcome a crisis."
+    },
+    {
+      "id": "v_kewashii",
+      "surface": "険しい",
+      "reading": "けわしい",
+      "meaning": "steep / severe / harsh / grim",
+      "type": "vocab",
+      "gtype": "i_adj",
+      "lesson_ids": "N3.9",
+      "notes": "険 (N3.9). い-adjective. 険しい山道 = steep mountain path. 険しい表情 = stern/grim expression. 険しい状況 = harsh/severe situation. Describes both physical terrain (steep) and emotional/situational severity (grim)."
+    },
+    {
+      "id": "k_hou_2",
+      "lesson": "N3.10",
+      "type": "kanji",
+      "surface": "法",
+      "on": "ほう",
+      "kun": "のり",
+      "reading": "ほう",
+      "meaning": "law / method / rule",
+      "notes": "Compounds at N3.10: 方法(ほうほう, method), 文法(ぶんぽう, grammar), 合法(ごうほう, legal), 違法(いほう, illegal). Deferred: 法律(ほうりつ, law) — 律 not in curriculum; 憲法(けんぽう, constitution) — 憲 not in curriculum."
+    },
+    {
+      "id": "k_sen",
+      "lesson": "N3.10",
+      "type": "kanji",
+      "surface": "戦",
+      "on": "せん",
+      "kun": "たたか(う)/いくさ",
+      "reading": "たたかう",
+      "meaning": "war / battle / fight",
+      "notes": "Compounds at N3.10: 戦う(たたかう, to fight), 作戦(さくせん, strategy), 戦後(せんご, post-war), 内戦(ないせん, civil war). Deferred: 戦争(せんそう, war) — 争 N3.45; 決戦(けっせん, decisive battle) — 決 N3.29."
+    },
+    {
+      "id": "k_sen_2",
+      "lesson": "N3.10",
+      "type": "kanji",
+      "surface": "選",
+      "on": "せん",
+      "kun": "えら(ぶ)",
+      "reading": "えらぶ",
+      "meaning": "choose / select / elect",
+      "notes": "Compounds at N3.10: 選ぶ(えらぶ, to choose), 選手(せんしゅ, athlete/player), 当選(とうせん, being elected/winning), 選考(せんこう, selection/screening). Deferred: 選挙(せんきょ, election) — 挙 not in curriculum; 選択(せんたく, choice) — 択 not in curriculum; 落選(らくせん, losing election) — 落 N3.38."
+    },
+    {
+      "id": "k_san_2",
+      "lesson": "N3.10",
+      "type": "kanji",
+      "surface": "参",
+      "on": "さん",
+      "kun": "まい(る)",
+      "reading": "まいる",
+      "meaning": "participate / visit humbly / come (humble)",
+      "notes": "Compounds at N3.10: 参考(さんこう, reference), お参り(おまいり, shrine/temple visit). Deferred: 参加(さんか, participation) — 加 N3.17; 参拝(さんぱい, formal shrine visit) — 拝 not in curriculum."
+    },
+    {
+      "id": "v_houhou",
+      "surface": "方法",
+      "reading": "ほうほう",
+      "meaning": "method / way (of doing)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "方 (N5.3) + 法 (N3.10). 方法を考える = to think of a method. 解決方法 = solution method. 方法がない = there is no way. 勉強の方法 = study method."
+    },
+    {
+      "id": "v_bunpou",
+      "surface": "文法",
+      "reading": "ぶんぽう",
+      "meaning": "grammar",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "文 (N4.5) + 法 (N3.10). 文法を勉強する = to study grammar. 英語の文法 = English grammar. Note: ぽう is rendaku of ほう."
+    },
+    {
+      "id": "v_gouhou",
+      "surface": "合法",
+      "reading": "ごうほう",
+      "meaning": "legal / lawful",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "合 (N4.6) + 法 (N3.10). 合法的 = legal (adjectival form). 合法的な方法 = legal method. Contrast with 違法(いほう, illegal). 合法化する = to legalize."
+    },
+    {
+      "id": "v_ihou",
+      "surface": "違法",
+      "reading": "いほう",
+      "meaning": "illegal / unlawful",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "違 (N3.2) + 法 (N3.10). 違法行為 = illegal act. 違法な方法 = unlawful method. 違法だ = it is illegal. Contrast with 合法(ごうほう, legal)."
+    },
+    {
+      "id": "v_tatakau",
+      "surface": "戦う",
+      "reading": "たたかう",
+      "meaning": "to fight / to battle / to compete",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.10",
+      "notes": "戦 (N3.10). Godan verb ending in う. Used for physical combat, competitive matches, and figurative struggle. 困難と戦う = to fight against difficulty. 試合で戦う = to compete in a match. 戦い = battle/fight (noun form)."
+    },
+    {
+      "id": "v_sakusen",
+      "surface": "作戦",
+      "reading": "さくせん",
+      "meaning": "strategy / operation / plan (tactical)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "作 (N4.3) + 戦 (N3.10). 作戦を立てる = to draw up a strategy. 作戦会議 = strategy meeting. 作戦通りに行く = to go according to plan. Used in military, sports, and game contexts."
+    },
+    {
+      "id": "v_naisen",
+      "surface": "内戦",
+      "reading": "ないせん",
+      "meaning": "civil war",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "内 (N3.7) + 戦 (N3.10). 内戦が起きる = civil war breaks out. 内戦中 = during the civil war. 内戦の歴史 = history of civil war. Refers specifically to war within a country."
+    },
+    {
+      "id": "v_sengo",
+      "surface": "戦後",
+      "reading": "せんご",
+      "meaning": "post-war / after the war",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "戦 (N3.10) + 後 (N5.9). Both kanji available at N3.10. 戦後の日本 = post-war Japan. 戦後社会 = post-war society. Often refers specifically to post-World War II in Japanese context."
+    },
+    {
+      "id": "v_erabu",
+      "surface": "選ぶ",
+      "reading": "えらぶ",
+      "meaning": "to choose / to select / to elect",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.10",
+      "notes": "選 (N3.10). Godan verb ending in ぶ. 自分で選ぶ = to choose for oneself. 代表を選ぶ = to elect a representative. 方法を選ぶ = to choose a method. 選ばれる (passive) = to be chosen/selected."
+    },
+    {
+      "id": "v_senshu",
+      "surface": "選手",
+      "reading": "せんしゅ",
+      "meaning": "athlete / player / competitor",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "選 (N3.10) + 手 (N5.3). オリンピック選手 = Olympic athlete. 選手を選ぶ = to select players. サッカー選手 = soccer player. Note: distinct from v_senshuu (先週, last week)."
+    },
+    {
+      "id": "v_tousen",
+      "surface": "当選",
+      "reading": "とうせん",
+      "meaning": "winning an election / being selected / being drawn (lottery)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "当 (N4.23) + 選 (N3.10). 当選する = to win an election / to be selected. 当選者 = winner / elected person. 宝くじに当選する = to win the lottery."
+    },
+    {
+      "id": "v_sankou",
+      "surface": "参考",
+      "reading": "さんこう",
+      "meaning": "reference / consultation",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "参 (N3.10) + 考 (N4.7). 参考にする = to use as a reference. 参考書(さんこうしょ) = reference book (書 N5.11). 参考になる = to be useful/helpful as a reference."
     }
   ]
 }
