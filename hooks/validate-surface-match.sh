@@ -51,7 +51,7 @@ if os.path.exists(particles_path):
             for entry in json.load(f).get('particles', []):
                 eid = entry.get('id', '')
                 if eid:
-                    id_info[eid] = {'surface': entry.get('particle', ''), 'matches': [], 'gtype': 'particle', 'verb_class': ''}
+                    id_info[eid] = {'surface': entry.get('particle', ''), 'matches': entry.get('matches', []), 'gtype': 'particle', 'verb_class': ''}
     except:
         pass
 
