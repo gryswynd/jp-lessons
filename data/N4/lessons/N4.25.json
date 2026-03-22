@@ -219,12 +219,13 @@
       "lines": [
         {
           "spk": "りきぞ",
-          "jp": "あのう、やまもとせんせい。どんな 研究を して いますか。",
+          "jp": "あのう、やまもと先生。どんな 研究を して いますか。",
           "en": "Excuse me, Yamamoto-sensei. What kind of research are you doing?",
           "terms": [
             "char_rikizo",
             "v_anou",
             "char_yamamoto",
+            "v_sensei",
             "v_donna",
             "v_kenkyuu",
             "p_wo",
@@ -388,9 +389,6 @@
               "form": "appearance_sou"
             },
             "p_ga_but",
-            "v_kono",
-            "v_hon",
-            "p_wa",
             {
               "id": "v_yuumei",
               "form": "attributive_na"
