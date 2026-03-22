@@ -36,6 +36,10 @@ Spawning Agent 2...
 **Spawning Agent 2:**
 Use the `Agent` tool with a prompt that includes the Content Brief, dependency file paths, and the instruction to read the relevant skill files. Do not include the full conversation history — only what Agent 2 needs. Label the spawn clearly:
 
+**Always include this commit-as-you-go instruction in every Agent 2 prompt:**
+
+> Write and commit in sections — do not generate the entire file in one pass. After each logical section (e.g. warmup, each drill, grammar block), commit with `WIP <task>: <what was added>`. Each intermediate state must be valid JSON. When the file is complete, squash all WIP commits into one clean commit with `git reset --soft <first-wip-commit>` before finishing.
+
 ```
 === SPAWNING AGENT 2: CONTENT BUILDER ===
 ```
