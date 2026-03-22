@@ -213,8 +213,8 @@
             },
             {
               "spk": "けん",
-              "jp": "そうだね。先生の 教えが よかったから、進歩した と思う。",
-              "en": "True. Because the teacher's instruction was good, I think we made progress.",
+              "jp": "そうだね。先生の 教えが よかったから、進歩したね。",
+              "en": "True. Because the teacher's instruction was good, we made progress.",
               "terms": [
                 "char_ken",
                 "v_sou",
@@ -228,8 +228,7 @@
                 "p_kara_because",
                 "v_shinpo",
                 { "id": "v_suru", "form": "plain_past" },
-                "p_to_quote",
-                { "id": "v_omou", "form": "plain_form" }
+                "p_ne"
               ]
             },
             {
@@ -339,8 +338,7 @@
             { "id": "v_motsu", "form": "te_form" },
             { "id": "v_kuru", "form": "te_form" },
             "p_mo",
-            { "id": "v_ii", "form": "polite_adj" },
-            "g_desu"
+            { "id": "v_ii", "form": "polite_adj" }
           ]
         },
         {
@@ -563,7 +561,9 @@
             "v_mondai",
             "p_wa",
             { "id": "v_juudai", "form": "polite_adj" },
-            "g_desu",
+            "v_sugu",
+            "v_sensei",
+            "p_ni",
             { "id": "v_kiku", "form": "te_form" },
             "v_kudasai"
           ],
@@ -581,8 +581,7 @@
             { "id": "v_tamesu", "form": "te_form" },
             { "id": "v_miru", "form": "polite_mashita" },
             "v_totemo",
-            { "id": "v_tanoshii", "form": "polite_past_adj" },
-            "g_desu"
+            { "id": "v_tanoshii", "form": "polite_past_adj" }
           ],
           "explanation": "試してみました (tameshite mimashita) = tried doing (it). てみる = try doing. 試す (tamesu) in te-form = 試して. The pattern 〜てみる expresses trying something new."
         }
