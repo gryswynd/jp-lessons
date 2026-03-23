@@ -97,6 +97,7 @@
     setConfig: setConfig,
     loadCharacters: loadCharacters,
     getCharactersCache: function () { return charactersCache; },
+    resolveUrl: resolve,
     DEFAULT_CHARACTER: DEFAULT_CHARACTER
   };
 

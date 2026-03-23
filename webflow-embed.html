@@ -182,6 +182,7 @@ window.JPApp = {
     try {
       window.JPShared = window.JPShared || {};
       var savedHtml = this.container.innerHTML;
+      await this.loadModule('app/shared/asset-loader.js');
       await this.loadModule('app/shared/tts.js');
       await this.loadModule('app/shared/stamp-settings.js');
       if (window.JPShared.stampSettings) {
