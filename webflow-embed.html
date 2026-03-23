@@ -184,6 +184,9 @@ window.JPApp = {
       var savedHtml = this.container.innerHTML;
       await this.loadModule('app/shared/tts.js');
       await this.loadModule('app/shared/stamp-settings.js');
+      if (window.JPShared.stampSettings) {
+        window.JPShared.stampSettings.setConfig(this.config);
+      }
       await this.loadModule('app/shared/tts-settings.js');
       // Restore menu if loadModule error-displayed something
       if (!window.JPShared.ttsSettings) {
