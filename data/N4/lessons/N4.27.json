@@ -338,7 +338,8 @@
           "jp": "そうですね。心待ちに して います。",
           "en": "That's right. I'm looking forward to it.",
           "terms": [
-            "p_soudane",
+            "p_soudesu",
+            "p_ne",
             "v_kokoromachi",
             "p_ni",
             { "id": "v_suru", "form": "te_form" },
@@ -368,7 +369,7 @@
         },
         {
           "spk": "B",
-          "jp": "行くよ！ 夕べから 心待ちに して たよ。",
+          "jp": "行くよ！ 夕べから 心待ちに して いたよ。",
           "en": "Yeah, totally! I've been looking forward to it since last night.",
           "terms": [
             { "id": "v_iku", "form": "plain_form" },
@@ -410,7 +411,7 @@
             { "id": "v_miru", "form": "conditional_tara" },
             "v_mata",
             { "id": "v_iku", "form": "plain_desire_tai" },
-            "p_to_quote",
+            "p_tte_quote",
             { "id": "v_naru", "form": "plain_form" },
             "p_yo"
           ]
@@ -449,7 +450,7 @@
           "terms": [
             "v_eki",
             "p_no",
-            "v_kinjo",
+            { "id": "v_chikai", "form": "adverbial" },
             "p_ni",
             "v_resutoran",
             "p_ga",
@@ -465,7 +466,7 @@
         },
         {
           "spk": "A",
-          "jp": "そこは 何度も 行ってる の？",
+          "jp": "そこは 何度も 行って いる の？",
           "en": "Have you been there many times?",
           "terms": [
             "v_soko",
@@ -480,7 +481,7 @@
         },
         {
           "spk": "B",
-          "jp": "うん、度重なる ほど 行ってる よ。一度に 食べられない けど、おいしい し。",
+          "jp": "うん、度重なる ほど 行って いる よ。一度に 食べられない けど、おいしい し。",
           "en": "Yeah, I've been going over and over. You can't eat it all at once, but it's delicious.",
           "terms": [
             "v_un",
@@ -522,7 +523,7 @@
           "terms": [
             "v_kaigou",
             "p_no",
-            "v_tokoro",
+            "v_basho",
             "p_wa",
             "v_eki",
             "p_no",
@@ -585,6 +586,8 @@
             "p_wa",
             "v_doko",
             "p_de",
+            { "id": "v_aru", "form": "polite_masu" },
+            "p_ka",
             "v_eki",
             "p_no",
             "v_machiaishitsu"
@@ -599,6 +602,7 @@
             "v_nanji",
             "p_ni",
             { "id": "v_kuru", "form": "polite_masu" },
+            "p_ka",
             "v_yuugata",
             { "counter": "ji", "n": 5 }
           ]
@@ -612,10 +616,10 @@
             { "id": "v_hanasu", "form": "conditional_ba" },
             "v_nani",
             "p_ga",
+            { "id": "v_dekiru", "form": "polite_masu" },
+            "p_ka",
             "v_ii",
-            "v_kangaekata",
-            "p_ga",
-            { "id": "v_dekiru", "form": "polite_masu" }
+            "v_kangaekata"
           ]
         }
       ]
@@ -708,12 +712,14 @@
           "q": "どんな 運動は しませんか。",
           "a": "強度の 高い 運動は しません。",
           "terms": [
-            "v_kyoudo",
-            "p_no",
-            "v_takai",
+            "v_donna",
             "v_undou",
             "p_wa",
-            { "id": "v_suru", "form": "polite_negative" }
+            { "id": "v_suru", "form": "polite_negative" },
+            "p_ka",
+            "v_kyoudo",
+            "p_no",
+            "v_takai"
           ]
         },
         {
