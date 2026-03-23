@@ -885,7 +885,13 @@ window.FinalReviewModule = (function () {
     maxPossible = 0;
     sectionIdx = 0;
     sectionScores = [];
-    RIKIZO_STAMP = getUrl('assets/characters/rikizo/rikizo_head.png');
+    // Set repo config for stamp settings and resolve stamp URLs
+    if (window.JPShared.stampSettings) {
+      window.JPShared.stampSettings.setConfig(config);
+      RIKIZO_STAMP = window.JPShared.stampSettings.getStampUrl();
+    } else {
+      RIKIZO_STAMP = getUrl('assets/characters/rikizo/rikizo_head.png');
+    }
     RIKIZO_SPRITE = getUrl('assets/characters/rikizo/rikizo_sprite.png');
     injectStyles();
     loadData();

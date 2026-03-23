@@ -215,6 +215,16 @@ window.PracticeModule = {
             .k-scr-explain.show { display: block; }
             .k-scr-hint { color: #a4b0be; font-size: 0.8rem; text-align: center; margin-bottom: 8px; }
             .k-scr-correct-line { margin-top: 8px; font-family: 'Noto Sans JP', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--success); text-align: center; }
+
+            /* Result stamps */
+            .k-result-stamp { display: flex; align-items: center; justify-content: center; margin-top: 10px; }
+            .k-result-stamp img { width: 48px; height: 48px; object-fit: contain; animation: kStampPop 0.35s ease; }
+            @keyframes kStampPop { 0% { transform: scale(2.5) rotate(-15deg); opacity: 0; } 50% { transform: scale(0.85) rotate(5deg); } 100% { transform: scale(1) rotate(0deg); opacity: 1; } }
+
+            /* Conn4 puzzle stamp overlay */
+            .k-conn4-stamp-overlay { display: flex; align-items: center; justify-content: center; margin-top: 12px; gap: 8px; }
+            .k-conn4-stamp-overlay img { width: 56px; height: 56px; object-fit: contain; animation: kStampPop 0.35s ease; }
+            .k-conn4-stamp-label { font-weight: 800; font-size: 0.9rem; }
         `;
         document.head.appendChild(style);
     }
@@ -405,6 +415,11 @@ window.PracticeModule = {
 
     // --- 2. LOGIC ---
     const REPO_CONFIG = sharedConfig;
+
+    // Set repo config for stamp settings
+    if (window.JPShared.stampSettings) {
+      window.JPShared.stampSettings.setConfig(REPO_CONFIG);
+    }
 
     const DB = { kanji: [], verb: [], lessons: [], vocabMap: new Map() };
     const activeLessons = new Set();
@@ -781,6 +796,15 @@ window.PracticeModule = {
                     window.JPShared.progress.setBestScore('connections', connBest);
                     setTxt('k-conn-best', connBest);
                 }
+                // Show character stamp on correct round
+                const connStampApi = window.JPShared.stampSettings;
+                const connStampUrl = connStampApi ? connStampApi.getStampUrl() : '';
+                if (connStampUrl) {
+                    const stampOv = document.createElement('div');
+                    stampOv.className = 'k-conn4-stamp-overlay';
+                    stampOv.innerHTML = '<img src="' + connStampUrl + '" alt="stamp"><span class="k-conn4-stamp-label" style="color:var(--success)">Perfect!</span>';
+                    stage.appendChild(stampOv);
+                }
                 // Fire hanabi at milestones
                 if (connStreak >= 5 && connStreak % 5 === 0) {
                     const targetView = document.getElementById('k-view-conn');
@@ -796,6 +820,16 @@ window.PracticeModule = {
             } else {
                 connStreak = 0;
                 setTxt('k-conn-streak', 0);
+
+                // Show poo stamp on wrong round
+                const connPooApi = window.JPShared.stampSettings;
+                const connPooUrl = connPooApi ? connPooApi.getPooUrl() : '';
+                if (connPooUrl) {
+                    const pooOv = document.createElement('div');
+                    pooOv.className = 'k-conn4-stamp-overlay';
+                    pooOv.innerHTML = '<img src="' + connPooUrl + '" alt="poo"><span class="k-conn4-stamp-label" style="color:var(--error)">Try again!</span>';
+                    stage.appendChild(pooOv);
+                }
             }
 
             // Disable interaction
@@ -996,6 +1030,15 @@ window.PracticeModule = {
                             }
                         }
                         render();
+                        // Show character stamp for completed puzzle
+                        const c4StampApi = window.JPShared.stampSettings;
+                        const c4StampUrl = c4StampApi ? c4StampApi.getStampUrl() : '';
+                        if (c4StampUrl) {
+                            const stampOv = document.createElement('div');
+                            stampOv.className = 'k-conn4-stamp-overlay';
+                            stampOv.innerHTML = '<img src="' + c4StampUrl + '" alt="stamp"><span class="k-conn4-stamp-label" style="color:var(--success)">Complete!</span>';
+                            stage.appendChild(stampOv);
+                        }
                         conn4Idx++;
                         setTimeout(conn4RenderPuzzle, 2000);
                     } else {
@@ -1053,9 +1096,14 @@ window.PracticeModule = {
                 </div>`;
             }).join('');
 
+            const goPooApi = window.JPShared.stampSettings;
+            const goPooUrl = goPooApi ? goPooApi.getPooUrl() : '';
+            const goPooHtml = goPooUrl ? '<div class="k-conn4-stamp-overlay"><img src="' + goPooUrl + '" alt="poo"><span class="k-conn4-stamp-label" style="color:var(--error)">Try again!</span></div>' : '';
+
             stage.innerHTML = `
                 <div class="k-conn-info" style="color:var(--error);">Game Over — no lives remaining</div>
                 ${solvedHtml}
+                ${goPooHtml}
                 <div class="k-conn4-actions" style="margin-top:16px;">
                     <button class="k-btn k-btn-sec" onclick="KanjiApp.conn4Skip()">Next Puzzle →</button>
                 </div>
@@ -1227,6 +1275,11 @@ window.PracticeModule = {
             answered = true;
             const ab = document.getElementById('k-scr-answer');
 
+            // Get stamp URLs
+            const stampApi = window.JPShared.stampSettings;
+            const stampUrl = stampApi ? stampApi.getStampUrl() : '';
+            const pooUrl = stampApi ? stampApi.getPooUrl() : '';
+
             if (isCorrect) {
                 ab.classList.add('correct');
                 ab.querySelectorAll('.k-scr-chip').forEach(c => c.classList.add('correct-chip'));
@@ -1250,11 +1303,26 @@ window.PracticeModule = {
                         curMode = savedMode;
                     }
                 }
+                // Show character stamp
+                if (stampUrl) {
+                    const stampDiv = document.createElement('div');
+                    stampDiv.className = 'k-result-stamp';
+                    stampDiv.innerHTML = '<img src="' + stampUrl + '" alt="stamp">';
+                    ab.parentNode.insertBefore(stampDiv, ab.nextSibling);
+                }
             } else {
                 ab.classList.add('wrong');
                 ab.querySelectorAll('.k-scr-chip').forEach(c => c.classList.add('wrong-chip'));
                 scrStreak = 0;
                 setTxt('k-scr-streak', 0);
+
+                // Show poo stamp
+                if (pooUrl) {
+                    const stampDiv = document.createElement('div');
+                    stampDiv.className = 'k-result-stamp';
+                    stampDiv.innerHTML = '<img src="' + pooUrl + '" alt="poo">';
+                    ab.parentNode.insertBefore(stampDiv, ab.nextSibling);
+                }
 
                 // Show correct answer
                 const correctLine = document.createElement('div');
@@ -1489,6 +1557,11 @@ window.PracticeModule = {
             answered = true;
             const ab = document.getElementById('k-scr-answer');
 
+            // Get stamp URLs
+            const marStampApi = window.JPShared.stampSettings;
+            const marStampUrl = marStampApi ? marStampApi.getStampUrl() : '';
+            const marPooUrl = marStampApi ? marStampApi.getPooUrl() : '';
+
             if (isCorrect) {
                 ab.classList.add('correct');
                 ab.querySelectorAll('.k-scr-chip').forEach(c => c.classList.add('correct-chip'));
@@ -1512,11 +1585,26 @@ window.PracticeModule = {
                         curMode = savedMode;
                     }
                 }
+                // Show character stamp
+                if (marStampUrl) {
+                    const stampDiv = document.createElement('div');
+                    stampDiv.className = 'k-result-stamp';
+                    stampDiv.innerHTML = '<img src="' + marStampUrl + '" alt="stamp">';
+                    ab.parentNode.insertBefore(stampDiv, ab.nextSibling);
+                }
             } else {
                 ab.classList.add('wrong');
                 ab.querySelectorAll('.k-scr-chip').forEach(c => c.classList.add('wrong-chip'));
                 marStreak = 0;
                 setTxt('k-scr-streak', 0);
+
+                // Show poo stamp
+                if (marPooUrl) {
+                    const stampDiv = document.createElement('div');
+                    stampDiv.className = 'k-result-stamp';
+                    stampDiv.innerHTML = '<img src="' + marPooUrl + '" alt="poo">';
+                    ab.parentNode.insertBefore(stampDiv, ab.nextSibling);
+                }
 
                 const correctLine = document.createElement('div');
                 correctLine.className = 'k-scr-correct-line';

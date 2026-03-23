@@ -3,6 +3,7 @@ window.GrammarModule = {
 
     // --- CONFIGURATION ---
     const REPO_CONFIG = sharedConfig;
+    if (window.JPShared.stampSettings) window.JPShared.stampSettings.setConfig(REPO_CONFIG);
 
     // --- Grammar Colors ---
     const GRAMMAR_COLORS = {
