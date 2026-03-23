@@ -190,6 +190,10 @@ window.JPApp = {
         this.container.innerHTML = savedHtml;
         return;
       }
+      // Ensure stamp settings has repo config for URL resolution
+      if (window.JPShared.stampSettings) {
+        window.JPShared.stampSettings.setConfig(this.config);
+      }
       this.container.innerHTML = savedHtml;
       window.JPShared.ttsSettings.open();
     } catch (e) {

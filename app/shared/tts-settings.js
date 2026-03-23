@@ -549,17 +549,18 @@
     if (!characters || characters.length === 0) return '';
     var selectedId = stampApi.getSelected();
 
+    var resolveUrl = stampApi.resolveUrl || function (p) { return p; };
     var grid = characters.filter(function (c) { return c.portrait; }).map(function (c) {
       var sel = c.id === selectedId ? ' selected' : '';
       return '<div class="jp-stamp-option' + sel + '" data-char-id="' + c.id + '" title="' + c.meaning + '">' +
-        '<img src="' + c.portrait + '" alt="' + c.meaning + '">' +
+        '<img src="' + resolveUrl(c.portrait) + '" alt="' + c.meaning + '">' +
         '<div class="jp-stamp-name">' + c.meaning + '</div>' +
       '</div>';
     }).join('');
 
     var selectedChar = characters.find(function (c) { return c.id === selectedId; });
     var previewName = selectedChar ? selectedChar.meaning : 'Rikizo';
-    var previewSrc = selectedChar && selectedChar.portrait ? selectedChar.portrait : 'assets/characters/rikizo/rikizo_head.png';
+    var previewSrc = resolveUrl(selectedChar && selectedChar.portrait ? selectedChar.portrait : 'assets/characters/rikizo/rikizo_head.png');
 
     return (
       '<div class="jp-tts-field">' +
@@ -680,7 +681,8 @@
         var ch = characters.find(function (c) { return c.id === charId; });
         var previewImg = document.getElementById('jp-stamp-preview-img');
         var previewText = document.getElementById('jp-stamp-preview-text');
-        if (ch && previewImg) previewImg.src = ch.portrait;
+        var resolveFn = stampApi.resolveUrl || function (p) { return p; };
+        if (ch && previewImg) previewImg.src = resolveFn(ch.portrait);
         if (ch && previewText) previewText.textContent = ch.meaning + ' is your stamp!';
       });
     }
