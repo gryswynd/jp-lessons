@@ -3,6 +3,7 @@ window.LessonModule = {
 
     // --- CONFIGURATION ---
     const REPO_CONFIG = sharedConfig;
+    if (window.JPShared.stampSettings) window.JPShared.stampSettings.setConfig(REPO_CONFIG);
 
     // --- State ---
     let currentStep = 0;

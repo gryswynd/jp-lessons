@@ -249,6 +249,7 @@ window.ComposeModule = {
 
     // --- DATA ---
     const REPO_CONFIG = sharedConfig;
+    if (window.JPShared.stampSettings) window.JPShared.stampSettings.setConfig(REPO_CONFIG);
 
     let COMPOSE_FILES = [];    // array of loaded compose file data
     let vocabById = new Map(); // all glossary+grammar entries by id

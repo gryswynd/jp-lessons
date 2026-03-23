@@ -11,11 +11,12 @@
   Load order enforced by this loader:
     1. app/shared/asset-loader.js   — URL builder, manifest, fetchJSON
     2. app/shared/tts.js            — Text-to-speech with voice selection
-    3. app/shared/tts-settings.js   — TTS settings modal (voice picker, speed)
-    4. app/shared/progress.js       — localStorage: flags, scores, drafts
-    5. app/shared/unlock.js         — Content gating / progressive unlock engine
-    6. app/shared/text-processor.js — Conjugation engine, processText
-    7. app/shared/term-modal.js     — Shared term modal overlay
+    3. app/shared/stamp-settings.js — Character stamp picker (stamp selection)
+    4. app/shared/tts-settings.js   — Settings modal (stamp picker, voice, speed)
+    5. app/shared/progress.js       — localStorage: flags, scores, drafts
+    6. app/shared/unlock.js         — Content gating / progressive unlock engine
+    7. app/shared/text-processor.js — Conjugation engine, processText
+    8. app/shared/term-modal.js     — Shared term modal overlay
     8. Feature module (on demand)   — Lesson / Practice / Review / Compose / Story / Grammar
   ============================================================ -->
 
@@ -182,6 +183,7 @@ window.JPApp = {
       window.JPShared = window.JPShared || {};
       var savedHtml = this.container.innerHTML;
       await this.loadModule('app/shared/tts.js');
+      await this.loadModule('app/shared/stamp-settings.js');
       await this.loadModule('app/shared/tts-settings.js');
       // Restore menu if loadModule error-displayed something
       if (!window.JPShared.ttsSettings) {
@@ -209,11 +211,12 @@ window.JPApp = {
       var sharedModules = [
         'app/shared/asset-loader.js',   // 1. URL builder, manifest, fetchJSON
         'app/shared/tts.js',            // 2. speak() / cancel() / voice selection
-        'app/shared/tts-settings.js',   // 3. TTS settings modal (depends on 2)
-        'app/shared/progress.js',       // 4. flags, scores, drafts via localStorage
-        'app/shared/unlock.js',         // 5. content gating / progressive unlock
-        'app/shared/text-processor.js', // 6. conjugate(), processText(), getRootTerm()
-        'app/shared/term-modal.js'      // 7. term overlay (depends on 2, 4, 5)
+        'app/shared/stamp-settings.js', // 3. Character stamp picker
+        'app/shared/tts-settings.js',   // 4. Settings modal (depends on 2, 3)
+        'app/shared/progress.js',       // 5. flags, scores, drafts via localStorage
+        'app/shared/unlock.js',         // 6. content gating / progressive unlock
+        'app/shared/text-processor.js', // 7. conjugate(), processText(), getRootTerm()
+        'app/shared/term-modal.js'      // 8. term overlay (depends on 2, 5, 6)
       ];
       for (var i = 0; i < sharedModules.length; i++) {
         var ok = await this.loadModule(sharedModules[i]);
