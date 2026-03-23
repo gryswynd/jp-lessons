@@ -796,6 +796,15 @@ window.PracticeModule = {
                     window.JPShared.progress.setBestScore('connections', connBest);
                     setTxt('k-conn-best', connBest);
                 }
+                // Show character stamp on correct round
+                const connStampApi = window.JPShared.stampSettings;
+                const connStampUrl = connStampApi ? connStampApi.getStampUrl() : '';
+                if (connStampUrl) {
+                    const stampOv = document.createElement('div');
+                    stampOv.className = 'k-conn4-stamp-overlay';
+                    stampOv.innerHTML = '<img src="' + connStampUrl + '" alt="stamp"><span class="k-conn4-stamp-label" style="color:var(--success)">Perfect!</span>';
+                    stage.appendChild(stampOv);
+                }
                 // Fire hanabi at milestones
                 if (connStreak >= 5 && connStreak % 5 === 0) {
                     const targetView = document.getElementById('k-view-conn');
@@ -811,6 +820,16 @@ window.PracticeModule = {
             } else {
                 connStreak = 0;
                 setTxt('k-conn-streak', 0);
+
+                // Show poo stamp on wrong round
+                const connPooApi = window.JPShared.stampSettings;
+                const connPooUrl = connPooApi ? connPooApi.getPooUrl() : '';
+                if (connPooUrl) {
+                    const pooOv = document.createElement('div');
+                    pooOv.className = 'k-conn4-stamp-overlay';
+                    pooOv.innerHTML = '<img src="' + connPooUrl + '" alt="poo"><span class="k-conn4-stamp-label" style="color:var(--error)">Try again!</span>';
+                    stage.appendChild(pooOv);
+                }
             }
 
             // Disable interaction
