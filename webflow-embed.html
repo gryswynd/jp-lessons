@@ -203,6 +203,12 @@ window.JPApp = {
 
     var stage = s.stage;
 
+    var fireSizes = {
+      beginner: '1.0rem', daily: '1.2rem', week: '1.5rem',
+      fortnight: '1.8rem', month: '2.1rem', season: '2.5rem', legend: '3.0rem'
+    };
+    var fireSize = fireSizes[stage.key] || '1.0rem';
+
     var freezeHtml = s.freezes > 0
       ? '<span class="jp-streak-freeze">\u2744\uFE0F ' + s.freezes + '</span>'
       : '';
@@ -211,7 +217,7 @@ window.JPApp = {
 
     return '<div class="jp-streak-bar">' +
       '<div class="jp-streak-count" style="color:' + stage.color + ';">' +
-        '\uD83D\uDD25 ' + s.current +
+        '<span style="font-size:' + fireSize + ';line-height:1;">\uD83D\uDD25</span> ' + s.current +
       '</div>' +
       '<div>' +
         '<div class="jp-streak-label"><strong>' + stage.jp + '</strong> ' + stage.en + freezeHtml + '</div>' +
