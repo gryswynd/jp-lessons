@@ -567,6 +567,8 @@ window.PracticeModule = {
     };
 
     KanjiApp.start = function(type, mode, subMode='normal') {
+        // Record streak activity on practice session start (flash/quiz have no end screen)
+        if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
         curType = type; curMode = mode; curSubMode = subMode; curIdx = 0; curStreak = 0; quizPhase = 1; skipNextStreak = false; resetStreakVisuals();
         setTxt('k-streak', 0); setTxt('k-fc-streak', 0);
 
@@ -844,6 +846,7 @@ window.PracticeModule = {
     }
 
     function connShowSummary() {
+        if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
         const stage = document.getElementById('k-conn-stage');
         const pct = connTotal > 0 ? Math.round(connScore / connTotal * 100) : 0;
         stage.innerHTML = `
@@ -1084,6 +1087,7 @@ window.PracticeModule = {
         }
 
         function gameOver() {
+            if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
             // Reveal all remaining groups
             puzzle.groups.forEach((_, gi) => { if (!solved.includes(gi)) solved.push(gi); });
             conn4Streak = 0;
@@ -1114,6 +1118,7 @@ window.PracticeModule = {
     }
 
     function conn4ShowSummary() {
+        if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
         const stage = document.getElementById('k-conn4-stage');
         const pct = conn4Total > 0 ? Math.round(conn4Score / conn4Total * 100) : 0;
         stage.innerHTML = `
@@ -1355,6 +1360,7 @@ window.PracticeModule = {
     }
 
     function scrShowSummary() {
+        if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
         const stage = document.getElementById('k-scr-stage');
         const maxPossible = scrTotal * 2;
         const pct = maxPossible > 0 ? Math.round(scrScore / maxPossible * 100) : 0;
@@ -1634,6 +1640,7 @@ window.PracticeModule = {
     }
 
     function marShowSummary() {
+        if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
         const stage = document.getElementById('k-scr-stage');
         const maxPossible = marTotal * 2;
         const pct = maxPossible > 0 ? Math.round(marScore / maxPossible * 100) : 0;

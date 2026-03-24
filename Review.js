@@ -1198,6 +1198,9 @@
         window.JPShared.progress.setReviewScore(reviewName, pct);
       }
 
+      // Record streak activity on review completion
+      if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
+
       let bestHtml = '';
       if (isNewBest && prevBest !== undefined) {
         bestHtml = `<div style="color:var(--jp-success); font-weight:700; margin:10px 0;">New Personal Best! (Previous: ${prevBest}%)</div>`;
