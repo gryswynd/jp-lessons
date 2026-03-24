@@ -126,9 +126,11 @@ window.JPApp = {
       'box-shadow:0 2px 10px rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.05);}' +
       '.jp-streak-count{font-size:1.6rem;font-weight:900;}' +
       '.jp-streak-label{font-size:0.85rem;color:#555;line-height:1.2;}' +
-      '.jp-streak-dots{display:flex;gap:4px;margin-top:2px;}' +
-      '.jp-streak-dot{width:10px;height:10px;border-radius:50%;background:#e0e0e0;}' +
-      '.jp-streak-dot.active{background:var(--dot-color,#4CAF50);}' +
+      '.jp-streak-belt{display:inline-block;width:36px;height:10px;border-radius:3px;' +
+      'border:1.5px solid rgba(0,0,0,0.15);position:relative;margin-top:4px;}' +
+      '.jp-streak-belt::after{content:"";position:absolute;left:50%;top:-3px;' +
+      'transform:translateX(-50%);width:8px;height:16px;border-radius:2px;' +
+      'background:inherit;border:1.5px solid rgba(0,0,0,0.15);}' +
       '.jp-streak-freeze{font-size:0.75rem;color:#2196F3;margin-left:6px;}' +
       '.jp-return-overlay{position:fixed;top:0;left:0;right:0;bottom:0;' +
       'background:rgba(0,0,0,0.4);display:flex;align-items:center;justify-content:center;' +
@@ -200,28 +202,26 @@ window.JPApp = {
     if (s.current === 0 && !s.lastActive) return ''; // never used
 
     var stage = s.stage;
-    var dots = '';
-    var today = new Date();
-    for (var i = 6; i >= 0; i--) {
-      var d = new Date(today);
-      d.setDate(d.getDate() - i);
-      var ds = d.toLocaleDateString('en-CA');
-      var active = s.history.indexOf(ds) !== -1;
-      dots += '<div class="jp-streak-dot' + (active ? ' active' : '') +
-        '" style="--dot-color:' + stage.color + '"></div>';
-    }
+
+    var fireSizes = {
+      beginner: '1.0rem', daily: '1.2rem', week: '1.5rem',
+      fortnight: '1.8rem', month: '2.1rem', season: '2.5rem', legend: '3.0rem'
+    };
+    var fireSize = fireSizes[stage.key] || '1.0rem';
 
     var freezeHtml = s.freezes > 0
       ? '<span class="jp-streak-freeze">\u2744\uFE0F ' + s.freezes + '</span>'
       : '';
 
+    var beltHtml = '<div class="jp-streak-belt" style="background:' + stage.color + ';"></div>';
+
     return '<div class="jp-streak-bar">' +
       '<div class="jp-streak-count" style="color:' + stage.color + ';">' +
-        '\uD83D\uDD25 ' + s.current +
+        '<span style="font-size:' + fireSize + ';line-height:1;">\uD83D\uDD25</span> ' + s.current +
       '</div>' +
       '<div>' +
         '<div class="jp-streak-label"><strong>' + stage.jp + '</strong> ' + stage.en + freezeHtml + '</div>' +
-        '<div class="jp-streak-dots">' + dots + '</div>' +
+        beltHtml +
       '</div>' +
     '</div>';
   },

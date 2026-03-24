@@ -1,9 +1,9 @@
 # Engagement Features Campaign — Daily Reminders, Streaks & Widget
 
-> **Status:** Active — Phase 1 (Streak Engine) ready to build, Capacitor wrapper planned
+> **Status:** Active — Phase 1 (Streak Engine) complete, Phase 2 pivoted to email/SMS reminders
 > **Started:** 2026-03-24
 > **Last updated:** 2026-03-24
-> **Decision:** Capacitor native wrapper (Option 2). Client base is primarily iPhone.
+> **Decision:** Capacitor wrapper deferred until game + content are further along. Phase 2 pivoted to lightweight email/SMS reminders via Cloudflare Worker — no app store submission needed.
 
 ---
 
@@ -106,7 +106,54 @@ No infrastructure changes. Works on the current web app immediately. Carries for
 
 ---
 
-### Phase 2: Capacitor Wrapper + Push Notifications
+### Phase 2: Email/SMS Daily Reminders (Lightweight — No App Store)
+
+> **Pivot (2026-03-24):** Client wants to wait for game completion + more content before wrapping for iOS/Android. In the meantime, send reminders via email and/or text to keep students training.
+
+Lightweight server-side reminder system using the existing web app. No Capacitor, no app stores, no native code.
+
+**Architecture:**
+- **Cloudflare Worker + KV** (free tier: 100k requests/day)
+- Web app pings the Worker on each `streak.recordActivity()` call with student identifier + timestamp
+- Daily cron trigger checks each student's last-active date
+- If inactive today → send Rikizo reminder via email and/or SMS
+- Message content from `data/shared/rikizo-messages.json` escalation tiers
+
+**Sending channels:**
+
+| Channel | Service | Cost | Setup |
+|---|---|---|---|
+| Email | Resend or SendGrid | Free ≤100/day | API key, verified sender domain |
+| SMS/Text | Twilio | ~$0.008/text + $1/mo per number | Account + phone number |
+
+**Student registration (two options — TBD based on class size):**
+- **(A) Admin-configured list:** You add students manually (name, email/phone, preferred channel). Good for <20 students. Stored in KV.
+- **(B) Self-service opt-in:** Small form in the web app where students enter their own contact info. Better for growing user base.
+
+**Web app changes:**
+- `streak.recordActivity()` gains a server ping (POST to Worker with student ID + date)
+- Student identifier: simple unique ID or name (no auth system needed for small groups)
+- Optional: settings page for students to manage their reminder preferences
+
+**Waiting on client answers:**
+- [ ] How many students? (determines option A vs B)
+- [ ] Email, text, or let them choose?
+
+**Deliverables:**
+- [ ] Cloudflare Worker: student registry + last-active tracking + daily cron
+- [ ] Email integration (Resend or SendGrid)
+- [ ] SMS integration (Twilio) — if client wants text
+- [ ] Web app: server ping on activity
+- [ ] Student registration flow (admin list or self-service form)
+- [ ] Rikizo message selection logic (reuses `rikizo-messages.json` escalation tiers)
+
+---
+
+### Phase 2b: Capacitor Wrapper + Push Notifications (Deferred)
+
+> **Deferred until:** Game is complete and content library is more mature. All Phase 2 server-side work (Worker, KV, message logic) carries forward — push notifications just become an additional channel alongside email/SMS.
+
+Original Capacitor plan preserved below for when the time comes.
 
 Wrap the existing Webflow web app in a Capacitor native shell for App Store / Play Store distribution.
 
@@ -118,11 +165,8 @@ Wrap the existing Webflow web app in a Capacitor native shell for App Store / Pl
 - `@capacitor/preferences` plugin — native shared storage (UserDefaults / SharedPreferences)
 
 **Push notification backend (serverless):**
-- Cloudflare Worker (or Vercel Edge / AWS Lambda)
-- Stores FCM device tokens + last-active timestamp in Cloudflare KV
-- Daily cron job: checks each user's last-active date, sends Rikizo reminder if inactive today
-- Message content from `data/shared/rikizo-messages.json`
-- Notification includes Rikizo expression icon matching the escalation tier
+- Same Cloudflare Worker from Phase 2, extended with FCM token storage
+- Daily cron adds push as a delivery channel alongside email/SMS
 
 **App-side push flow:**
 1. App registers for push on first launch → gets FCM token
@@ -135,7 +179,7 @@ Wrap the existing Webflow web app in a Capacitor native shell for App Store / Pl
 - [ ] iOS Xcode project configuration (provisioning, signing)
 - [ ] Android Gradle project configuration (keystore)
 - [ ] Push notification plugin integration
-- [ ] Serverless function for daily push cron (Cloudflare Worker + KV)
+- [ ] FCM token registration + storage in existing Worker
 - [ ] JavaScript bridge: streak data → native shared storage
 - [ ] App Store / Play Store developer accounts
 - [ ] App Store / Play Store initial submission
