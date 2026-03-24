@@ -192,6 +192,34 @@
      */
     clearDraft: function (promptId) {
       localStorage.removeItem('compose-draft-' + promptId);
+    },
+
+    // -------------------------------------------------------------------------
+    // Relationships — k-relationships
+    //
+    // Tracks which characters have been "met" in the game.
+    // Value of 0 = not yet met; any positive value = met (relationship exists).
+    // -------------------------------------------------------------------------
+
+    /**
+     * Get the relationship level for a character (0 = not met).
+     * @param {string} charId — e.g. "char_sakura"
+     * @returns {number}
+     */
+    getRelationship: function (charId) {
+      var rel = JSON.parse(localStorage.getItem('k-relationships') || '{}');
+      return rel[charId] || 0;
+    },
+
+    /**
+     * Increment the relationship counter for a character by 1.
+     * Call this when the player completes a conversation with an NPC.
+     * @param {string} charId — e.g. "char_sakura"
+     */
+    bumpRelationship: function (charId) {
+      var rel = JSON.parse(localStorage.getItem('k-relationships') || '{}');
+      rel[charId] = (rel[charId] || 0) + 1;
+      localStorage.setItem('k-relationships', JSON.stringify(rel));
     }
 
   };

@@ -732,6 +732,7 @@ window.GameModule = (function() {
         }
         return {
           name: npc.name,
+          charId: npc.charId || null,
           x: npc.x,
           y: npc.y,
           sprite: spriteImg,
@@ -949,6 +950,15 @@ window.GameModule = (function() {
         game.inspected.add(npc.name);
         var convo = npc.conversation;
         var opts = { backgroundImage: npc.convoBackground };
+
+        // Unlock character stamp on first conversation
+        if (npc.charId && window.JPShared && window.JPShared.progress) {
+          if (window.JPShared.progress.getRelationship(npc.charId) === 0) {
+            opts.onEnd = function () {
+              window.JPShared.progress.bumpRelationship(npc.charId);
+            };
+          }
+        }
 
         if (game.voidSeen && !game.voidAsked[npc.name]) {
           game.voidAsked[npc.name] = true;

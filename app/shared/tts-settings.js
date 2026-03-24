@@ -255,10 +255,23 @@
         box-shadow: 0 0 0 2px rgba(78,84,200,0.25);
         background: #f0f0ff;
       }
-      @media (hover: hover) {
-        .jp-stamp-option:hover { border-color: #8f94fb; transform: scale(1.05); }
+      .jp-stamp-option.locked {
+        opacity: 0.45;
+        cursor: default;
+        filter: grayscale(0.6);
       }
-      .jp-stamp-option:active { transform: scale(0.95); }
+      .jp-stamp-option.locked .jp-stamp-lock {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.1rem;
+        opacity: 0.8;
+        pointer-events: none;
+      }
+      @media (hover: hover) {
+        .jp-stamp-option:not(.locked):hover { border-color: #8f94fb; transform: scale(1.05); }
+      }
+      .jp-stamp-option:not(.locked):active { transform: scale(0.95); }
       .jp-stamp-name {
         position: absolute;
         bottom: 0; left: 0; right: 0;
@@ -550,11 +563,15 @@
     var selectedId = stampApi.getSelected();
 
     var grid = characters.filter(function (c) { return c.portrait; }).map(function (c) {
-      var sel = c.id === selectedId ? ' selected' : '';
+      var unlocked = stampApi.isUnlocked ? stampApi.isUnlocked(c.id) : true;
+      var sel = (c.id === selectedId && unlocked) ? ' selected' : '';
+      var lockedClass = unlocked ? '' : ' locked';
       var src = stampApi.resolveUrl ? stampApi.resolveUrl(c.portrait) : c.portrait;
-      return '<div class="jp-stamp-option' + sel + '" data-char-id="' + c.id + '" title="' + c.meaning + '">' +
+      var lockIcon = unlocked ? '' : '<div class="jp-stamp-lock">🔒</div>';
+      return '<div class="jp-stamp-option' + sel + lockedClass + '" data-char-id="' + c.id + '" data-locked="' + (!unlocked) + '" title="' + (unlocked ? c.meaning : '???') + '">' +
         '<img src="' + src + '" alt="' + c.meaning + '">' +
-        '<div class="jp-stamp-name">' + c.meaning + '</div>' +
+        lockIcon +
+        '<div class="jp-stamp-name">' + (unlocked ? c.meaning : '???') + '</div>' +
       '</div>';
     }).join('');
 
@@ -671,6 +688,7 @@
       stampGrid.addEventListener('click', function (e) {
         var option = e.target.closest('.jp-stamp-option');
         if (!option) return;
+        if (option.dataset.locked === 'true') return;
         var charId = option.dataset.charId;
         stampApi.setSelected(charId);
         // Update selection visual

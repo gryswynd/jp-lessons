@@ -18,8 +18,18 @@
   var charactersCache = null;
   var _repoConfig = null;
 
+  function isUnlocked(charId) {
+    if (charId === DEFAULT_CHARACTER) return true;
+    var progress = window.JPShared && window.JPShared.progress;
+    if (!progress) return false;
+    return progress.getRelationship(charId) > 0;
+  }
+
   function getSelected() {
-    try { return localStorage.getItem(STORAGE_KEY) || DEFAULT_CHARACTER; }
+    try {
+      var id = localStorage.getItem(STORAGE_KEY) || DEFAULT_CHARACTER;
+      return isUnlocked(id) ? id : DEFAULT_CHARACTER;
+    }
     catch(e) { return DEFAULT_CHARACTER; }
   }
 
@@ -92,6 +102,7 @@
   window.JPShared.stampSettings = {
     getSelected: getSelected,
     setSelected: setSelected,
+    isUnlocked: isUnlocked,
     getStampUrl: getStampUrl,
     getPooUrl: getPooUrl,
     setConfig: setConfig,
