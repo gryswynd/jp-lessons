@@ -43,8 +43,10 @@ def check_line(jp, terms, path):
             if tid == 'p_demo':
                 errors.append(f"  ERROR {path}.terms[{i}]: p_demo but でも is sentence-initial → use p_demo_but")
 
-    # FM #58: Question missing p_ka
-    if jp.rstrip().endswith('？') or jp.rstrip().endswith('?'):
+    # FM #58: Question missing p_ka — covers casual (？) and polite (か。 / か！) questions
+    jp_stripped = jp.rstrip()
+    if (jp_stripped.endswith('？') or jp_stripped.endswith('?') or
+            jp_stripped.endswith('か。') or jp_stripped.endswith('か！')):
         has_ka = any((t if isinstance(t, str) else t.get('id', '')) == 'p_ka' for t in terms)
         if not has_ka:
             errors.append(f"  ERROR {path}: Question sentence missing p_ka in terms")
@@ -74,6 +76,9 @@ def walk(obj, path="root"):
     if isinstance(obj, dict):
         if 'jp' in obj and 'terms' in obj:
             check_line(obj['jp'], obj['terms'], path)
+        # Also check Q&A question fields — these have q/a/terms but no jp key
+        if 'q' in obj and 'terms' in obj:
+            check_line(obj['q'], obj['terms'], path + '.q')
         for k, v in obj.items():
             walk(v, f"{path}.{k}")
     elif isinstance(obj, list):

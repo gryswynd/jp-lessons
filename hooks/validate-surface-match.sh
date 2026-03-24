@@ -72,6 +72,30 @@ id_info['g_da'] = {'surface': 'だ', 'matches': ['だった'], 'gtype': 'copula'
 
 errors = []
 
+import re as _re
+
+def is_pure_kanji(s):
+    return bool(s) and all('\u4e00' <= c <= '\u9fff' for c in s)
+
+def surface_found_in_jp(surface, matches, jp_orig, jp_clean):
+    """Check if surface (or any match) appears in jp text.
+    For short pure-kanji surfaces (≤2 chars), uses prefix-token matching to avoid
+    substring false positives like 所 (v_tokoro) appearing inside 場所 (v_basho).
+    Japanese nouns appear at the start of a whitespace- or punctuation-delimited token
+    followed by a particle (場所は), so startswith() catches the noun while rejecting
+    kanji that only appear embedded mid-compound.
+    Splits on both spaces AND after sentence-final punctuation (。！？) to handle
+    multi-sentence jp strings where periods aren't always followed by a space."""
+    all_forms = [surface] + matches
+    if is_pure_kanji(surface) and len(surface) <= 2:
+        # Split on whitespace, then further split on sentence boundaries (after 。！？)
+        rough_tokens = jp_orig.split()
+        tokens = []
+        for tok in rough_tokens:
+            tokens.extend(t for t in _re.split(r'(?<=[。！？])', tok) if t)
+        return any(tok.startswith(f) for tok in tokens for f in all_forms)
+    return any(f in jp_clean for f in all_forms)
+
 def check_surface(jp, terms, path):
     if not jp or not terms:
         return
@@ -109,20 +133,34 @@ def check_surface(jp, terms, path):
                     errors.append(f"  {path}.terms[{i}]: '{tid}' polite_adj — jp has '{surface} です' (space-split); use bare '{tid}' + 'g_desu' instead")
             continue
 
-        # Skip single-char particles (too many false positives)
+        # Special cross-check: p_to_quote (surface と, 1 char — skipped below by single-char guard)
+        # If jp contains って but no standalone と token, CB should use p_tte_quote instead.
+        if tid == 'p_to_quote':
+            jp_nospace = jp.replace(' ', '')
+            has_standalone_to = any(
+                t.strip('。、！？「」〜…') == 'と' for t in jp.split()
+            )
+            if 'って' in jp_nospace and not has_standalone_to:
+                errors.append(
+                    f"  {path}.terms[{i}]: 'p_to_quote' but jp has 'って' not standalone 'と' — use 'p_tte_quote' for casual quote particle"
+                )
+
+        # Skip single-char particles (too many false positives for general surface check)
         if info['gtype'] == 'particle' and len(info['surface']) <= 1:
             continue
         if tid in ('g_desu', 'g_da'):
             continue
 
-        all_forms = [info['surface']] + info['matches']
-        if not any(f in jp_clean for f in all_forms):
+        if not surface_found_in_jp(info['surface'], info['matches'], jp, jp_clean):
             errors.append(f"  {path}.terms[{i}]: '{tid}' (surface: '{info['surface']}') not found in jp text")
 
 def walk(obj, path="root"):
     if isinstance(obj, dict):
         if 'jp' in obj and 'terms' in obj:
             check_surface(obj['jp'], obj['terms'], path)
+        # Also check Q&A question fields — these have q/a/terms but no jp key
+        if 'q' in obj and 'terms' in obj:
+            check_surface(obj['q'], obj['terms'], path + '.q')
         for k, v in obj.items():
             walk(v, f"{path}.{k}")
     elif isinstance(obj, list):

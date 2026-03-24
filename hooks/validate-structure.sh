@@ -15,6 +15,15 @@ FILE=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 python3 - "$FILE" << 'PYEOF'
 import json, re, sys, os
 
+# Te-form + いた/いる contractions (てた, てる, でた, でる after a te-form connector).
+# These must be expanded in jp text: して いた, 行って いる, etc.
+# Pattern covers the most common te-form endings; strips trailing sentence-final
+# particles (よ, ね, ぞ, さ, わ) and punctuation before testing.
+CONTRACTION_RE = re.compile(
+    r'(?:って|んで|して|きて|べて|せて|ねて|けて|めて|れて|えて|みて|にて|りて|ちて|いて|いで|でて|げて|ぎて)[たる][のよねさぞわ]?$'
+)
+STRIP_TAIL_RE = re.compile(r'[よねさぞわ！？。、「」〜ー…]*$')
+
 file_path = sys.argv[1]
 
 try:
@@ -79,6 +88,7 @@ def check_answers(obj, path="root"):
 check_answers(content)
 
 # Conversation lines must use 'spk', not 'speaker'
+# Also check for contracted auxiliary forms (てた/てる) that must be expanded.
 for i, s in enumerate(sections):
     if s.get('type') == 'conversation':
         for j, line in enumerate(s.get('lines', [])):
@@ -86,6 +96,15 @@ for i, s in enumerate(sections):
                 errors.append(f"  sections[{i}].lines[{j}]: uses 'speaker' — must be 'spk' (renderer reads line.spk; 'speaker' shows undefined)")
             if 'spk' not in line:
                 errors.append(f"  sections[{i}].lines[{j}]: missing required 'spk' field")
+            # FM (new): casual contraction check — て+いた/いる must not be contracted
+            jp = line.get('jp', '')
+            for tok in jp.split():
+                tok_stripped = STRIP_TAIL_RE.sub('', tok)
+                if CONTRACTION_RE.search(tok_stripped):
+                    errors.append(
+                        f"  sections[{i}].lines[{j}]: contracted form '{tok_stripped}' in jp — "
+                        f"expand auxiliary: write て いた / て いる not てた/てる (e.g. 'して いた' not 'してた')"
+                    )
 
 # Reading passage must be an array, not a string; questions must be present
 for i, s in enumerate(sections):
