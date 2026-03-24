@@ -265,6 +265,123 @@ Process via `RikizoArtPipeline.md`. The pipeline already has "4 calm + 4-5 inten
 
 ---
 
+## Step-by-Step Setup Guide
+
+These are the steps that require your hands (account creation, credentials, signing, store submission). Claude can scaffold all the code and config, but these steps need a human in the loop.
+
+### Step 1: Developer Accounts (do this first — approval takes time)
+
+**Apple Developer Program:**
+1. Go to https://developer.apple.com/programs/
+2. Sign in with your Apple ID (or create one)
+3. Enroll as an Individual ($99/year) — or Organization if you have a DUNS number
+4. Complete identity verification (Apple may take 24-48 hours to approve)
+5. Once approved, you'll have access to App Store Connect and can create certificates
+
+**Google Play Developer:**
+1. Go to https://play.google.com/console
+2. Sign in with your Google account
+3. Pay the one-time $25 registration fee
+4. Complete identity verification
+5. Immediately available to create app listings
+
+### Step 2: Firebase Project (for push notifications)
+
+1. Go to https://console.firebase.google.com/
+2. Click "Add project" → name it (e.g., "rikizo-japanese")
+3. **iOS setup:**
+   - Go to Project Settings → General → Add App → iOS
+   - Bundle ID: something like `com.rikizo.japanese` (pick this now, it's permanent)
+   - Download `GoogleService-Info.plist` — Claude will place it in the Xcode project
+4. **Android setup:**
+   - Same page → Add App → Android
+   - Package name: same as bundle ID (`com.rikizo.japanese`)
+   - Download `google-services.json` — Claude will place it in the Android project
+5. **Server key (for backend push sends):**
+   - Go to Project Settings → Cloud Messaging
+   - Note the Server Key (or set up a service account JSON for v1 API)
+   - This goes into the Cloudflare Worker as a secret
+
+### Step 3: Apple Push Notification Setup
+
+1. In Apple Developer portal → Certificates, Identifiers & Profiles
+2. **App ID:** Create a new App ID with your bundle ID, enable Push Notifications capability
+3. **Push key (recommended over certificate):**
+   - Go to Keys → Create a new key
+   - Enable "Apple Push Notifications service (APNs)"
+   - Download the `.p8` file (you can only download once — save it!)
+   - Note the Key ID and your Team ID
+   - These go into Firebase Console → Project Settings → Cloud Messaging → APNs auth key
+
+### Step 4: Signing Certificates & Provisioning
+
+**iOS (Xcode handles most of this automatically):**
+1. Open the Capacitor Xcode project (Claude will generate this)
+2. Go to Signing & Capabilities tab
+3. Select your Apple Developer team
+4. Xcode auto-creates the signing certificate and provisioning profile
+5. Add Push Notifications capability (+ button)
+6. Add App Groups capability (for widget shared storage): group ID = `group.com.rikizo.japanese`
+
+**Android (keystore for release builds):**
+1. Claude will provide the `keytool` command to generate a release keystore
+2. You run it and set a password (save this — losing it means you can never update the app)
+3. Claude will configure Gradle to use it for release builds
+
+### Step 5: App Store & Play Store Submission
+
+**Before first submission, prepare these assets (Claude can help spec them):**
+- App name: e.g., "Rikizo Japanese" or "Japanese Master by Rikizo"
+- App icon: 1024×1024 PNG (no transparency, no rounded corners for iOS)
+- Screenshots: at least 2 per device size (iPhone 6.7", 6.5", iPad if applicable)
+- Short description (80 chars) and full description (4000 chars)
+- Privacy policy URL (required by both stores)
+- App category: Education
+- Age rating: probably 4+ / Everyone
+
+**iOS (App Store Connect):**
+1. Go to https://appstoreconnect.apple.com/
+2. My Apps → New App → fill in name, bundle ID, SKU
+3. Upload build from Xcode (Product → Archive → Distribute to App Store)
+4. Fill in app metadata, screenshots, descriptions
+5. Submit for review (typically 1-3 days, first submission may take longer)
+
+**Android (Google Play Console):**
+1. Go to Play Console → Create app
+2. Fill in app details, content rating questionnaire, data safety form
+3. Upload signed AAB (Android App Bundle) — Claude will configure the build
+4. Create a production release
+5. Submit for review (typically a few hours to 1 day)
+
+### Step 6: Cloudflare Worker (push backend)
+
+1. Create a Cloudflare account at https://dash.cloudflare.com/ (free)
+2. Claude will write the Worker code and KV namespace config
+3. You'll run `wrangler deploy` to publish it (Claude provides the commands)
+4. Add Firebase server key as a Worker secret: `wrangler secret put FCM_SERVER_KEY`
+
+### What Claude Builds vs What You Do
+
+| Task | Claude builds | You do |
+|---|---|---|
+| Capacitor project scaffolding | ✅ | |
+| iOS/Android project config | ✅ | |
+| Push notification JS integration | ✅ | |
+| Cloudflare Worker code | ✅ | |
+| Widget extensions (Swift/Kotlin) | ✅ | |
+| Native bridge plugin | ✅ | |
+| Create developer accounts | | ✅ |
+| Create Firebase project | | ✅ (guided) |
+| Download credential files | | ✅ (guided) |
+| Place credentials in project | ✅ (tells you where) | ✅ (copies files) |
+| Generate Android keystore | | ✅ (Claude gives command) |
+| Open Xcode and set signing team | | ✅ (guided) |
+| Prepare app listing assets | ✅ (specs & copy) | ✅ (screenshots) |
+| Submit to stores | | ✅ (guided) |
+| Deploy Cloudflare Worker | | ✅ (Claude gives commands) |
+
+---
+
 ## Dependencies Between Campaigns
 
 | This campaign needs | From campaign | Status |
