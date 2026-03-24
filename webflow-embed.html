@@ -9,16 +9,18 @@
   Default (no config set) = gated.
 
   Load order enforced by this loader:
-    1. app/shared/asset-loader.js   — URL builder, manifest, fetchJSON
-    2. app/shared/tts.js            — Text-to-speech with voice selection
-    3. app/shared/stamp-settings.js — Character stamp picker (stamp selection)
-    4. app/shared/tts-settings.js   — Settings modal (stamp picker, voice, speed)
-    5. app/shared/progress.js       — localStorage: flags, scores, drafts
-    6. app/shared/streak.js         — Streak tracking engine
-    7. app/shared/unlock.js         — Content gating / progressive unlock engine
-    8. app/shared/text-processor.js — Conjugation engine, processText
-    9. app/shared/term-modal.js     — Shared term modal overlay
-   10. Feature module (on demand)   — Lesson / Practice / Review / Compose / Story / Grammar
+    Eager (loaded in init, before menu renders):
+      1. app/shared/asset-loader.js   — URL builder, manifest, fetchJSON
+      2. app/shared/streak.js         — Streak tracking engine (localStorage only)
+    Deferred (loaded on first launch):
+      3. app/shared/tts.js            — Text-to-speech with voice selection
+      4. app/shared/stamp-settings.js — Character stamp picker (stamp selection)
+      5. app/shared/tts-settings.js   — Settings modal (stamp picker, voice, speed)
+      6. app/shared/progress.js       — localStorage: flags, scores, drafts
+      7. app/shared/unlock.js         — Content gating / progressive unlock engine
+      8. app/shared/text-processor.js — Conjugation engine, processText
+      9. app/shared/term-modal.js     — Shared term modal overlay
+     10. Feature module (on demand)   — Lesson / Practice / Review / Compose / Story / Grammar
   ============================================================ -->
 
 <!-- Default serving mode — override on each Webflow page embed before this block -->
@@ -99,7 +101,10 @@ window.JPApp = {
   init: async function() {
     this.container = document.getElementById('app-main-container');
     if (!this.container) return console.error('Container #app-main-container not found');
-    // Load streak.js eagerly so the streak bar renders on first paint
+    // Load lightweight shared modules eagerly so the menu renders fully:
+    //   asset-loader — URL resolution needed by stamp-settings & streak belt images
+    //   streak       — streak bar in the main menu
+    await this.loadModule('app/shared/asset-loader.js');
     await this.loadModule('app/shared/streak.js');
     this.renderMenu();
   },
@@ -326,15 +331,15 @@ window.JPApp = {
       'Fetching latest code from GitHub...</div>';
 
     // ── Step 1: Load shared modules (first launch only, in required order) ──
-    // Guard: asset-loader.js sets window.JPShared.assets when it runs.
-    if (!window.JPShared || !window.JPShared.assets) {
+    // Guard: text-processor.js sets window.JPShared.textProcessor when it runs.
+    // (asset-loader + streak load eagerly in init(), so we guard on a later module.)
+    if (!window.JPShared || !window.JPShared.textProcessor) {
       var sharedModules = [
-        'app/shared/asset-loader.js',   // 1. URL builder, manifest, fetchJSON
+        // asset-loader (1) and streak (6) load eagerly in init()
         'app/shared/tts.js',            // 2. speak() / cancel() / voice selection
         'app/shared/stamp-settings.js', // 3. Character stamp picker
         'app/shared/tts-settings.js',   // 4. Settings modal (depends on 2, 3)
         'app/shared/progress.js',       // 5. flags, scores, drafts via localStorage
-        'app/shared/streak.js',         // 6. streak tracking engine (depends on 5)
         'app/shared/unlock.js',         // 7. content gating / progressive unlock
         'app/shared/text-processor.js', // 8. conjugate(), processText(), getRootTerm()
         'app/shared/term-modal.js'      // 9. term overlay (depends on 2, 5, 7)
@@ -342,6 +347,10 @@ window.JPApp = {
       for (var i = 0; i < sharedModules.length; i++) {
         var ok = await this.loadModule(sharedModules[i]);
         if (!ok) return; // loadModule already showed an error in the container
+      }
+      // Give stamp-settings the repo config for URL resolution
+      if (window.JPShared.stampSettings) {
+        window.JPShared.stampSettings.setConfig(this.config);
       }
     }
 
