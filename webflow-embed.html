@@ -126,11 +126,7 @@ window.JPApp = {
       'box-shadow:0 2px 10px rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.05);}' +
       '.jp-streak-count{font-size:1.6rem;font-weight:900;}' +
       '.jp-streak-label{font-size:0.85rem;color:#555;line-height:1.2;}' +
-      '.jp-streak-belt{display:inline-block;width:36px;height:10px;border-radius:3px;' +
-      'border:1.5px solid rgba(0,0,0,0.15);position:relative;margin-top:4px;}' +
-      '.jp-streak-belt::after{content:"";position:absolute;left:50%;top:-3px;' +
-      'transform:translateX(-50%);width:8px;height:16px;border-radius:2px;' +
-      'background:inherit;border:1.5px solid rgba(0,0,0,0.15);}' +
+      '.jp-streak-belt{display:inline-block;width:36px;height:auto;margin-top:4px;}' +
       '.jp-streak-freeze{font-size:0.75rem;color:#2196F3;margin-left:6px;}' +
       '.jp-return-overlay{position:fixed;top:0;left:0;right:0;bottom:0;' +
       'background:rgba(0,0,0,0.4);display:flex;align-items:center;justify-content:center;' +
@@ -213,7 +209,12 @@ window.JPApp = {
       ? '<span class="jp-streak-freeze">\u2744\uFE0F ' + s.freezes + '</span>'
       : '';
 
-    var beltHtml = '<div class="jp-streak-belt" style="background:' + stage.color + ';"></div>';
+    var beltMap = {
+      beginner: 'belt-white', daily: 'belt-yellow', week: 'belt-green',
+      fortnight: 'belt-blue', month: 'belt-purple', season: 'belt-brown', legend: 'belt-black'
+    };
+    var beltSrc = 'assets/ui/' + (beltMap[stage.key] || 'belt-white') + '.png';
+    var beltHtml = '<img class="jp-streak-belt" src="' + beltSrc + '" alt="' + stage.en + ' belt">';
 
     return '<div class="jp-streak-bar">' +
       '<div class="jp-streak-count" style="color:' + stage.color + ';">' +
