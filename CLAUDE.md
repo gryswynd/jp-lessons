@@ -1,6 +1,6 @@
 # Rikizo Japanese Lessons — Project Instructions
 
-> **⚠️ SCOPE: LESSON & LEARNING CONTENT ONLY.** This file governs educational content creation. For art assets, follow `RikizoArtPipeline.md`. Never mix the two systems.
+> **⚠️ SCOPE: LESSON & LEARNING CONTENT ONLY.** This file governs educational content creation only.
 
 ## Tech Stack & Architecture
 
