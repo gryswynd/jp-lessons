@@ -315,7 +315,7 @@
         {
           "spk": "A",
           "jp": "山村に 住んで いる ように なりたいです。",
-          "en": "I have come to want to live in a mountain village.",
+          "en": "I want to come to live in a mountain village.",
           "terms": [
             "v_sanson",
             "p_ni",
@@ -418,8 +418,7 @@
             "p_wo",
             { "id": "v_yomu", "form": "te_form" },
             { "id": "v_iru", "form": "plain_form" },
-            "p_no",
-            "p_ka"
+            "p_no"
           ]
         },
         {
@@ -476,7 +475,7 @@
       "title": "Reading Practice 1: A Peaceful Mountain Village",
       "passage": [
         {
-          "jp": "小さな 山村に、村人が 住んで います。",
+          "jp": "小さい 山村に、村人が 住んで います。",
           "en": "Villagers live in a small mountain village.",
           "terms": [
             "v_chiisai",
@@ -540,21 +539,21 @@
           ]
         },
         {
-          "jp": "村人は 山林で 働いたり、池の 近くを 歩いたり して います。",
-          "en": "Villagers work in the mountain forest, walk near the pond, and so on.",
+          "jp": "夕方に なると、村人は 家族と 一緒に 夕食を 食べます。",
+          "en": "When evening comes, the villagers eat dinner together with their families.",
           "terms": [
+            "v_yuugata",
+            "p_ni",
+            { "id": "v_naru", "form": "to_conditional" },
             "v_murabito",
             "p_wa",
-            "v_sanrin",
-            "p_de",
-            { "id": "v_hataraku", "form": "tari_form" },
-            "v_ike",
-            "p_no",
-            { "id": "v_chikai", "form": "adverbial" },
+            "v_kazoku",
+            "p_to",
+            "v_issho",
+            "p_ni",
+            "v_yuushoku",
             "p_wo",
-            { "id": "v_aruku", "form": "tari_form" },
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            { "id": "v_taberu", "form": "polite_masu" }
           ]
         }
       ],
@@ -645,15 +644,15 @@
       "title": "Reading Practice 2: The School Gate",
       "passage": [
         {
-          "jp": "学校の 正門は とても 大きいです。",
-          "en": "The school's main gate is very large.",
+          "jp": "学校の 正門は とても 古いです。",
+          "en": "The school's main gate is very old.",
           "terms": [
             "v_gakkou",
             "p_no",
             "v_seimon",
             "p_wa",
             "v_totemo",
-            { "id": "v_ookii", "form": "polite_adj" }
+            { "id": "v_furui", "form": "polite_adj" }
           ]
         },
         {
@@ -671,7 +670,7 @@
           ]
         },
         {
-          "jp": "門の 近くに 小さな 店が あります。",
+          "jp": "門の 近くに 小さい 店が あります。",
           "en": "There is a small shop near the gate.",
           "terms": [
             "v_mon",
@@ -718,10 +717,10 @@
       "questions": [
         {
           "q": "正門は どんな 門ですか。",
-          "a": "とても 大きい 門です。",
+          "a": "とても 古い 門です。",
           "choices": [
-            "とても 大きい 門です。",
-            "小さくて 古い 門です。",
+            "とても 古い 門です。",
+            "小さくて 新しい 門です。",
             "正門は 学校に ありません。",
             "新しくて 高い 門です。"
           ],
@@ -733,7 +732,7 @@
             "g_desu",
             "p_ka",
             "v_totemo",
-            "v_ookii"
+            "v_furui"
           ]
         },
         {
@@ -774,6 +773,7 @@
             "p_to",
             "v_seimon",
             "p_wa",
+            "p_de",
             "v_dochira",
             "p_no",
             "v_hou",

@@ -121,7 +121,7 @@
           "count": 1
         }
       ],
-      "model": "池は とても きれいで、水も きれいでした。",
+      "model": "池は とても きれいで、水も 冷たかったです。",
       "vocabPool": [
         "v_ike",
         "v_mizu",
@@ -213,7 +213,7 @@
       ]
     },
     {
-      "prompt": "Write that every day you make an effort to learn Japanese. Use 入門 and ようにする.",
+      "prompt": "You realize today's visit has inspired you. Write that, since meeting the villager, you have made an effort to read your Japanese introductory book every day. Use 入門 and ようにする.",
       "targets": [
         {
           "id": "v_nyuumon",
@@ -224,19 +224,21 @@
           "count": 1
         }
       ],
-      "model": "毎日、日本語の 入門を 勉強する ように して います。",
+      "model": "村人に 会って から、毎日、日本語の 入門から 勉強する ように して います。",
       "vocabPool": [
         "v_nyuumon",
         "v_you_manner",
         "v_nihongo",
         "v_benkyou",
         "v_mainichi",
+        "v_murabito",
         "v_suru",
         "v_iru",
         "v_yomu",
-        "v_kaku",
+        "v_au",
         "g_desu",
         "p_no",
+        "p_kara",
         "p_wo"
       ]
     },
