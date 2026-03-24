@@ -8,7 +8,7 @@
 
 道を歩いていた時、旅人に会いました。その旅人は世界中を旅した人で、とても頭がいい人でした。「旅先では色々な物が学べますよ。」と、その人は言いました。
 
-晩ご飯の時、旅人はりきぞに旅先でとった写真を見せてくれました。りきぞは写真を見ながら、旅人の旅を聞きました。写真の旅人の顔色はよくて、首も体も元気でした。「旅の中心は心ですよ。」と、旅人が言いました。
+晩ご飯を食べてから、旅人はりきぞに旅先でとった写真を見せてくれました。りきぞは写真を見ながら、旅人の旅を聞きました。写真の旅人の顔色はよくて、首も体も元気でした。「旅の中心は心ですよ。」と、旅人が言いました。
 
 旅行の後で、りきぞは写真を見ました。たくさん歩きましたけど、心はうれしかったです。りきぞの旅はよかったです。
 
@@ -26,7 +26,7 @@ The next morning, Rikizo walked along the mountain road while taking photos, alt
 
 While walking along the road, Rikizo met a traveler. That traveler was someone who had traveled all over the world and was a very smart person. "At travel destinations, you can learn all kinds of things," the person said.
 
-At dinner, the traveler showed Rikizo photos taken at travel destinations. Rikizo listened to the traveler's journeys while looking at the photos. The traveler's complexion in the photos was good, and their neck and body were also healthy. "The heart is at the center of travel," the traveler said.
+After eating dinner, the traveler showed Rikizo photos taken at travel destinations. Rikizo listened to the traveler's journeys while looking at the photos. The traveler's complexion in the photos was good, and their neck and body were also healthy. "The heart is at the center of travel," the traveler said.
 
 After the trip, Rikizo looked at his photos. He walked a lot, but his heart was happy. Rikizo's trip had been very good.
 

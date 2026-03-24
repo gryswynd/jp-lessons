@@ -222,13 +222,22 @@
       "particle": "から",
       "reading": "から",
       "role": "because / since",
-      "explanation": "Causal conjunction meaning 'because' or 'since'. The reason clause comes first: 暑いから、水を飲みます (Because it's hot, I'll drink water). Uses plain form + から in casual speech; polite form + から in polite speech. Not the same as から meaning 'from' (p_kara, G3) — different grammar role.",
+      "explanation": "Causal conjunction meaning 'because' or 'since'. The reason clause comes first: 暑いから、水を飲みます (Because it's hot, I'll drink water). Uses plain form + から in casual speech; polite form + から in polite speech. Not the same as から meaning 'from' (p_kara, G3) or sequential から (p_tekara, G19) — different grammar roles.",
       "introducedIn": "G10"
+    },
+    {
+      "id": "p_tekara",
+      "particle": "から",
+      "reading": "から",
+      "role": "sequential marker (after doing)",
+      "explanation": "Sequential marker attached after the て-form of a verb: [verb-て] + から = 'after doing [verb]'. The first action must be fully complete before the second begins. Example: 食べてから、出かけます = After eating, I'll go out. Do NOT confuse with p_kara ('from') or p_kara_because ('because').",
+      "introducedIn": "G19"
     },
     {
       "id": "p_ndesu",
       "particle": "んです",
       "reading": "んです",
+      "matches": ["のです"],
       "role": "explanatory / emphasis (you see / it's that...)",
       "explanation": "Explanatory form contracting のです. Attaches to plain forms to provide explanation, background context, or emphasis. Polite: んです / のです. Example: 雨なんです = It's raining, you see. Formally taught in G10 alongside plain forms.",
       "introducedIn": "G10"

@@ -7,7 +7,12 @@
     "lesson_number": 27,
     "focus": "Waiting and meeting arrangements, evening time, degree and frequency — using 待, 合, 夕, 度 kanji compounds in daily life and festival contexts.",
     "estimated_minutes": 35,
-    "kanji": ["待", "合", "夕", "度"]
+    "kanji": [
+      "待",
+      "合",
+      "夕",
+      "度"
+    ]
   },
   "newKanji": [
     {
@@ -50,12 +55,24 @@
           "en": "Are you making an effort to wake up early every morning?",
           "terms": [
             "v_maiasa",
-            { "id": "v_hayai", "form": "adverbial" },
-            { "id": "v_okiru", "form": "plain_form" },
+            {
+              "id": "v_hayai",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_okiru",
+              "form": "plain_form"
+            },
             "v_you_manner",
             "p_ni",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -69,8 +86,14 @@
             "p_ni",
             "v_nani",
             "p_wo",
-            { "id": "v_suru", "form": "nakereba" },
-            { "id": "v_ikeru", "form": "polite_negative" },
+            {
+              "id": "v_suru",
+              "form": "nakereba"
+            },
+            {
+              "id": "v_ikeru",
+              "form": "polite_negative"
+            },
             "p_ka"
           ]
         },
@@ -80,10 +103,16 @@
           "terms": [
             "v_tomodachi",
             "p_to",
-            { "id": "v_au", "form": "conditional_tara" },
+            {
+              "id": "v_au",
+              "form": "conditional_tara"
+            },
             "v_doko",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -92,11 +121,17 @@
           "en": "After studying, what do you do?",
           "terms": [
             "v_benkyou",
-            { "id": "v_suru", "form": "te_form" },
-            "p_kara",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            "p_tekara",
             "v_nani",
             "p_wo",
-            { "id": "v_suru", "form": "polite_masu" },
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         }
@@ -224,7 +259,10 @@
             "v_doko",
             "p_de",
             "v_machiawase",
-            { "id": "v_suru", "form": "polite_volitional_mashou" },
+            {
+              "id": "v_suru",
+              "form": "polite_volitional_mashou"
+            },
             "p_ka"
           ]
         },
@@ -237,7 +275,10 @@
             "p_no",
             "v_machiaishitsu",
             "p_de",
-            { "id": "v_matsu", "form": "polite_volitional_mashou" },
+            {
+              "id": "v_matsu",
+              "form": "polite_volitional_mashou"
+            },
             "v_ii",
             "v_tokoro",
             "g_desu",
@@ -249,16 +290,28 @@
           "jp": "分かりました。夕方の 六時に 着いたら、すぐに 電話 します。",
           "en": "Understood. When I arrive at 6 in the evening, I will call right away.",
           "terms": [
-            { "id": "v_wakaru", "form": "polite_mashita" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            },
             "v_yuugata",
             "p_no",
-            { "counter": "ji", "n": 6 },
+            {
+              "counter": "ji",
+              "n": 6
+            },
             "p_ni",
-            { "id": "v_tsuku", "form": "conditional_tara" },
+            {
+              "id": "v_tsuku",
+              "form": "conditional_tara"
+            },
             "v_sugu",
             "p_ni",
             "v_denwa",
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -267,10 +320,16 @@
           "en": "Thank you. Please make an effort to hurry.",
           "terms": [
             "p_arigatou_gozaimasu",
-            { "id": "v_isogu", "form": "plain_form" },
+            {
+              "id": "v_isogu",
+              "form": "plain_form"
+            },
             "v_you_manner",
             "p_ni",
-            { "id": "v_suru", "form": "te_form" },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         }
@@ -292,7 +351,10 @@
             "p_wa",
             "v_doko",
             "p_de",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -303,19 +365,34 @@
           "terms": [
             "v_gakkou",
             "p_de",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "v_kyoudo",
             "p_no",
             "v_takai",
             "v_undou",
             "p_wo",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_kuru", "form": "plain_past" },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
+              "form": "plain_past"
+            },
             "p_node",
             "v_kokoromachi",
             "p_ni",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -326,10 +403,16 @@
             "v_nando",
             "p_mo",
             "v_undou",
-            { "id": "v_suru", "form": "conditional_ba" },
+            {
+              "id": "v_suru",
+              "form": "conditional_ba"
+            },
             "v_jouzu",
             "p_ni",
-            { "id": "v_naru", "form": "polite_masu" },
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            },
             "p_yo"
           ]
         },
@@ -342,8 +425,14 @@
             "p_ne",
             "v_kokoromachi",
             "p_ni",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -363,7 +452,10 @@
             "v_tanabata",
             "p_wa",
             "v_issho",
-            { "id": "v_iku", "form": "plain_negative" },
+            {
+              "id": "v_iku",
+              "form": "plain_negative"
+            },
             "p_ka"
           ]
         },
@@ -372,14 +464,23 @@
           "jp": "行くよ！ 夕べから 心待ちに して いたよ。",
           "en": "Yeah, totally! I've been looking forward to it since last night.",
           "terms": [
-            { "id": "v_iku", "form": "plain_form" },
+            {
+              "id": "v_iku",
+              "form": "plain_form"
+            },
             "p_yo",
             "v_yuube",
             "p_kara",
             "v_kokoromachi",
             "p_ni",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "plain_past" },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_past"
+            },
             "p_yo"
           ]
         },
@@ -391,7 +492,10 @@
             "v_yuugata",
             "p_ni",
             "v_machiawase",
-            { "id": "v_suru", "form": "plain_volitional" },
+            {
+              "id": "v_suru",
+              "form": "plain_volitional"
+            },
             "p_yo",
             "v_eki",
             "p_no",
@@ -408,11 +512,20 @@
             "v_ii",
             "p_ne",
             "v_ichido",
-            { "id": "v_miru", "form": "conditional_tara" },
+            {
+              "id": "v_miru",
+              "form": "conditional_tara"
+            },
             "v_mata",
-            { "id": "v_iku", "form": "plain_desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
             "p_tte_quote",
-            { "id": "v_naru", "form": "plain_form" },
+            {
+              "id": "v_naru",
+              "form": "plain_form"
+            },
             "p_yo"
           ]
         }
@@ -432,11 +545,17 @@
             "p_wa",
             "v_doko",
             "p_de",
-            { "id": "v_taberu", "form": "plain_form" },
+            {
+              "id": "v_taberu",
+              "form": "plain_form"
+            },
             "p_ka",
             "v_kuchi",
             "p_ni",
-            { "id": "v_au_2", "form": "plain_form" },
+            {
+              "id": "v_au_2",
+              "form": "plain_form"
+            },
             "v_mise",
             "p_ga",
             "v_ii",
@@ -450,15 +569,24 @@
           "terms": [
             "v_eki",
             "p_no",
-            { "id": "v_chikai", "form": "adverbial" },
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            },
             "p_ni",
             "v_resutoran",
             "p_ga",
-            { "id": "v_aru", "form": "plain_form" },
+            {
+              "id": "v_aru",
+              "form": "plain_form"
+            },
             "p_yo",
             "v_kuchi",
             "p_ni",
-            { "id": "v_au_2", "form": "plain_form" },
+            {
+              "id": "v_au_2",
+              "form": "plain_form"
+            },
             "p_shi",
             "v_oishii",
             "p_yo"
@@ -473,8 +601,14 @@
             "p_wa",
             "v_nando",
             "p_mo",
-            { "id": "v_iku", "form": "te_form" },
-            { "id": "v_iru", "form": "plain_form" },
+            {
+              "id": "v_iku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
             "p_no",
             "p_ka"
           ]
@@ -487,11 +621,20 @@
             "v_un",
             "v_tabikasanaru",
             "p_hodo",
-            { "id": "v_iku", "form": "te_form" },
-            { "id": "v_iru", "form": "plain_form" },
+            {
+              "id": "v_iku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
             "p_yo",
             "v_ichidoni",
-            { "id": "v_taberu", "form": "plain_potential_negative" },
+            {
+              "id": "v_taberu",
+              "form": "plain_potential_negative"
+            },
             "p_kedo",
             "v_oishii",
             "p_shi"
@@ -514,7 +657,10 @@
             "p_no",
             "v_kaigou",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -529,7 +675,10 @@
             "p_no",
             "v_machiaishitsu",
             "p_ni",
-            { "id": "v_suru", "form": "polite_mashita" }
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -540,9 +689,15 @@
             "p_wa",
             "v_yuugata",
             "p_no",
-            { "counter": "ji", "n": 5 },
+            {
+              "counter": "ji",
+              "n": 5
+            },
             "p_ni",
-            { "id": "v_kuru", "form": "plain_form" },
+            {
+              "id": "v_kuru",
+              "form": "plain_form"
+            },
             "p_sou_da_hearsay",
             "g_desu"
           ]
@@ -555,12 +710,18 @@
             "p_no",
             "v_kangaekata",
             "p_ni",
-            { "id": "v_au_2", "form": "plain_form" },
+            {
+              "id": "v_au_2",
+              "form": "plain_form"
+            },
             "v_you_manner",
             "p_ni",
             "v_minna",
             "p_de",
-            { "id": "v_hanasu", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_hanasu",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -569,11 +730,17 @@
           "terms": [
             "v_nando",
             "p_mo",
-            { "id": "v_hanasu", "form": "conditional_ba" },
+            {
+              "id": "v_hanasu",
+              "form": "conditional_ba"
+            },
             "v_ii",
             "v_kangaekata",
             "p_ga",
-            { "id": "v_dekiru", "form": "polite_masu" }
+            {
+              "id": "v_dekiru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -586,7 +753,10 @@
             "p_wa",
             "v_doko",
             "p_de",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_ka",
             "v_eki",
             "p_no",
@@ -601,10 +771,16 @@
             "p_wa",
             "v_nanji",
             "p_ni",
-            { "id": "v_kuru", "form": "polite_masu" },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
             "p_ka",
             "v_yuugata",
-            { "counter": "ji", "n": 5 }
+            {
+              "counter": "ji",
+              "n": 5
+            }
           ]
         },
         {
@@ -613,10 +789,16 @@
           "terms": [
             "v_nando",
             "p_mo",
-            { "id": "v_hanasu", "form": "conditional_ba" },
+            {
+              "id": "v_hanasu",
+              "form": "conditional_ba"
+            },
             "v_nani",
             "p_ga",
-            { "id": "v_dekiru", "form": "polite_masu" },
+            {
+              "id": "v_dekiru",
+              "form": "polite_masu"
+            },
             "p_ka",
             "v_ii",
             "v_kangaekata"
@@ -634,13 +816,19 @@
           "terms": [
             "v_yuugata",
             "p_ni",
-            { "id": "v_naru", "form": "conditional_tara" },
+            {
+              "id": "v_naru",
+              "form": "conditional_tara"
+            },
             "v_yoku",
             "v_inu",
             "p_to",
             "v_soto",
             "p_wo",
-            { "id": "v_aruku", "form": "polite_masu" }
+            {
+              "id": "v_aruku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -652,15 +840,27 @@
             "v_takai",
             "v_undou",
             "p_wa",
-            { "id": "v_suru", "form": "polite_negative" },
+            {
+              "id": "v_suru",
+              "form": "polite_negative"
+            },
             "p_ga_but",
-            { "id": "v_aruku", "form": "plain_form" },
+            {
+              "id": "v_aruku",
+              "form": "plain_form"
+            },
             "v_koto",
             "p_ga",
             "v_karada",
             "p_ni",
-            { "id": "v_au_2", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_au_2",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -669,11 +869,20 @@
           "terms": [
             "v_yuuhan",
             "p_made_ni",
-            { "id": "v_kaeru", "form": "plain_form" },
+            {
+              "id": "v_kaeru",
+              "form": "plain_form"
+            },
             "v_you_manner",
             "p_ni",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -681,14 +890,23 @@
           "en": "If you walk every day, your physical condition improves.",
           "terms": [
             "v_mainichi",
-            { "id": "v_aruku", "form": "plain_form" },
+            {
+              "id": "v_aruku",
+              "form": "plain_form"
+            },
             "p_to_conditional",
             "v_karada",
             "p_no",
             "v_doai",
             "p_ga",
-            { "id": "v_ii", "form": "adverbial" },
-            { "id": "v_naru", "form": "polite_masu" }
+            {
+              "id": "v_ii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -700,12 +918,21 @@
             "v_itsu",
             "v_soto",
             "p_wo",
-            { "id": "v_aruku", "form": "polite_masu" },
+            {
+              "id": "v_aruku",
+              "form": "polite_masu"
+            },
             "p_ka",
             "v_yuugata",
             "p_ni",
-            { "id": "v_naru", "form": "conditional_tara" },
-            { "id": "v_aruku", "form": "polite_masu" }
+            {
+              "id": "v_naru",
+              "form": "conditional_tara"
+            },
+            {
+              "id": "v_aruku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -715,7 +942,10 @@
             "v_donna",
             "v_undou",
             "p_wa",
-            { "id": "v_suru", "form": "polite_negative" },
+            {
+              "id": "v_suru",
+              "form": "polite_negative"
+            },
             "p_ka",
             "v_kyoudo",
             "p_no",
@@ -727,19 +957,31 @@
           "a": "体の 度合いが よく なります。",
           "terms": [
             "v_mainichi",
-            { "id": "v_aruku", "form": "plain_form" },
+            {
+              "id": "v_aruku",
+              "form": "plain_form"
+            },
             "p_to_conditional",
             "v_karada",
             "p_wa",
             "v_dou",
-            { "id": "v_naru", "form": "polite_masu" },
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            },
             "p_ka",
             "v_karada",
             "p_no",
             "v_doai",
             "p_ga",
-            { "id": "v_ii", "form": "adverbial" },
-            { "id": "v_naru", "form": "polite_masu" }
+            {
+              "id": "v_ii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -752,25 +994,45 @@
         {
           "kind": "mcq",
           "q": "待ち合わせ の よみかたは？",
-          "choices": ["まちあわせ", "たちあわせ", "まちあいせ", "うちあわせ"],
+          "choices": [
+            "まちあわせ",
+            "たちあわせ",
+            "まちあいせ",
+            "うちあわせ"
+          ],
           "answer": "まちあわせ"
         },
         {
           "kind": "mcq",
           "q": "合理 の よみかたは？",
-          "choices": ["ごうり", "かいり", "あいり", "ごうち"],
+          "choices": [
+            "ごうり",
+            "かいり",
+            "あいり",
+            "ごうち"
+          ],
           "answer": "ごうり"
         },
         {
           "kind": "mcq",
           "q": "夕方 の よみかたは？",
-          "choices": ["ゆうがた", "せきほう", "ゆうほう", "せきがた"],
+          "choices": [
+            "ゆうがた",
+            "せきほう",
+            "ゆうほう",
+            "せきがた"
+          ],
           "answer": "ゆうがた"
         },
         {
           "kind": "mcq",
           "q": "何度 の よみかたは？",
-          "choices": ["なんど", "なんたく", "なにど", "いくど"],
+          "choices": [
+            "なんど",
+            "なんたく",
+            "なにど",
+            "いくど"
+          ],
           "answer": "なんど"
         }
       ]
@@ -790,7 +1052,9 @@
             "evening meal"
           ],
           "answer": "meeting arrangement / rendezvous",
-          "terms": ["v_machiawase"]
+          "terms": [
+            "v_machiawase"
+          ]
         },
         {
           "kind": "mcq",
@@ -809,7 +1073,10 @@
             "p_ni",
             "v_machiaishitsu",
             "p_de",
-            { "id": "v_matsu", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_matsu",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -822,7 +1089,9 @@
             "strong will"
           ],
           "answer": "anticipation / looking forward to",
-          "terms": ["v_kokoromachi"]
+          "terms": [
+            "v_kokoromachi"
+          ]
         },
         {
           "kind": "mcq",
@@ -865,9 +1134,15 @@
           "terms": [
             "v_eki",
             "p_ni",
-            { "id": "v_tsuku", "form": "conditional_tara" },
+            {
+              "id": "v_tsuku",
+              "form": "conditional_tara"
+            },
             "v_denwa",
-            { "id": "v_suru", "form": "te_form" },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
@@ -883,11 +1158,20 @@
           "answer": "ように",
           "terms": [
             "v_mainichi",
-            { "id": "v_aruku", "form": "plain_form" },
+            {
+              "id": "v_aruku",
+              "form": "plain_form"
+            },
             "v_you_manner",
             "p_ni",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -904,10 +1188,16 @@
             "v_nando",
             "p_mo",
             "v_undou",
-            { "id": "v_suru", "form": "conditional_ba" },
+            {
+              "id": "v_suru",
+              "form": "conditional_ba"
+            },
             "v_jouzu",
             "p_ni",
-            { "id": "v_naru", "form": "polite_masu" }
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -923,8 +1213,14 @@
           "terms": [
             "v_yuuhan",
             "p_made_ni",
-            { "id": "v_kaeru", "form": "nakereba" },
-            { "id": "v_ikeru", "form": "polite_negative" }
+            {
+              "id": "v_kaeru",
+              "form": "nakereba"
+            },
+            {
+              "id": "v_ikeru",
+              "form": "polite_negative"
+            }
           ]
         }
       ]

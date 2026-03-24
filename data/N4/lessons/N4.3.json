@@ -64,14 +64,13 @@
           ]
         },
         {
-          "jp": "帰ってから 何を しますか。",
-          "en": "What do you do after returning home?",
+          "jp": "帰って 何を しますか。",
+          "en": "What do you do after coming home?",
           "terms": [
             {
               "id": "v_kaeru",
               "form": "te_form"
             },
-            "p_kara",
             "v_nani",
             "p_wo",
             {
@@ -232,8 +231,8 @@
         },
         {
           "spk": "B",
-          "jp": "六時に 起きました。毎朝 朝ごはんを 食べてから 学校に 来ます。",
-          "en": "I woke up at six. Every morning I come to school after eating breakfast.",
+          "jp": "六時に 起きました。毎朝 朝ごはんを 食べて 学校に 来ます。",
+          "en": "I woke up at six. Every morning I eat breakfast and come to school.",
           "terms": [
             {
               "counter": "ji",
@@ -251,7 +250,6 @@
               "id": "v_taberu",
               "form": "te_form"
             },
-            "p_kara",
             "v_gakkou",
             "p_ni",
             {
@@ -303,8 +301,8 @@
         },
         {
           "spk": "A",
-          "jp": "はい、明日 も 来られます。朝ごはんを 食べてから 来ます。",
-          "en": "Yes, I can come tomorrow too. I'll come after eating breakfast.",
+          "jp": "はい、明日 も 来られます。朝ごはんを 食べて 来ます。",
+          "en": "Yes, I can come tomorrow too. I'll eat breakfast and come.",
           "terms": [
             "p_hai",
             "v_ashita",
@@ -319,7 +317,6 @@
               "id": "v_taberu",
               "form": "te_form"
             },
-            "p_kara",
             {
               "id": "v_kuru",
               "form": "polite_masu"
@@ -417,8 +414,8 @@
         },
         {
           "spk": "A",
-          "jp": "はい、明日 は 七時に 来られます。毎朝 朝ごはんを 食べてから 来ますよ。",
-          "en": "Yes, I can come at seven tomorrow. I come every morning after eating breakfast.",
+          "jp": "はい、明日 は 七時に 来られます。毎朝 朝ごはんを 食べて 来ますよ。",
+          "en": "Yes, I can come at seven tomorrow. Every morning I eat breakfast and come.",
           "terms": [
             "p_hai",
             "v_ashita",
@@ -439,7 +436,6 @@
               "id": "v_taberu",
               "form": "te_form"
             },
-            "p_kara",
             {
               "id": "v_kuru",
               "form": "polite_masu"
@@ -677,14 +673,13 @@
           ]
         },
         {
-          "jp": "起きてから、朝ごはんを 食べます。",
-          "en": "After waking up, he eats breakfast.",
+          "jp": "起きて、朝ごはんを 食べます。",
+          "en": "He wakes up and eats breakfast.",
           "terms": [
             {
               "id": "v_okiru",
               "form": "te_form"
             },
-            "p_kara",
             "v_asagohan",
             "p_wo",
             {
@@ -729,8 +724,8 @@
           ]
         },
         {
-          "jp": "りきぞ は 毎朝 朝ごはんを 食べてから 学校に 来られます。",
-          "en": "Rikizo can come to school every morning after eating breakfast.",
+          "jp": "りきぞ は 毎朝 朝ごはんを 食べて 学校に 来られます。",
+          "en": "Rikizo eats breakfast and can come to school every morning.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -741,7 +736,6 @@
               "id": "v_taberu",
               "form": "te_form"
             },
-            "p_kara",
             "v_gakkou",
             "p_ni",
             {
@@ -817,18 +811,12 @@
           ]
         },
         {
-          "q": "りきぞ は 学校に 来る 前に 何を しますか。",
-          "a": "朝ごはんを 食べてから 来ます。",
+          "q": "りきぞ は 毎朝 何を しますか。",
+          "a": "起きて、朝ごはんを 食べます。",
           "terms": [
             "char_rikizo",
             "p_wa",
-            "v_gakkou",
-            "p_ni",
-            {
-              "id": "v_kuru",
-              "form": "plain_form"
-            },
-            "v_mae",
+            "v_maiasa",
             "v_nani",
             "p_wo",
             {
@@ -836,14 +824,14 @@
               "form": "polite_masu"
             },
             "p_ka",
-            "v_asagohan",
             {
-              "id": "v_taberu",
+              "id": "v_okiru",
               "form": "te_form"
             },
-            "p_kara",
+            "v_asagohan",
+            "p_wo",
             {
-              "id": "v_kuru",
+              "id": "v_taberu",
               "form": "polite_masu"
             }
           ]
@@ -931,8 +919,8 @@
           ]
         },
         {
-          "jp": "晩ごはんを 食べてから、いっしょに 帰ります。",
-          "en": "After eating dinner, we all go home together.",
+          "jp": "晩ごはんを 食べて、いっしょに 帰ります。",
+          "en": "We eat dinner and go home together.",
           "terms": [
             "v_bangohan",
             "p_wo",
@@ -940,7 +928,6 @@
               "id": "v_taberu",
               "form": "te_form"
             },
-            "p_kara",
             "v_issho",
             {
               "id": "v_kaeru",
@@ -1232,26 +1219,26 @@
         },
         {
           "kind": "mcq",
-          "q": "朝ごはんを ______ 学校に 来ます。",
+          "q": "母 が 朝ごはんを ______ くれました。",
           "choices": [
-            "食べてから",
-            "食べましたから",
-            "食べたから",
-            "食べているから"
+            "作って",
+            "作る",
+            "作り",
+            "作れて"
           ],
-          "answer": "食べてから",
+          "answer": "作って",
           "terms": [
+            "v_haha",
+            "p_ga",
             "v_asagohan",
             "p_wo",
             {
-              "id": "v_taberu",
+              "id": "v_tsukuru",
               "form": "te_form"
             },
-            "v_gakkou",
-            "p_ni",
             {
-              "id": "v_kuru",
-              "form": "polite_masu"
+              "id": "v_kureru",
+              "form": "polite_mashita"
             }
           ]
         }

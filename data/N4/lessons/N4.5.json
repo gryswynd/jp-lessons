@@ -96,8 +96,8 @@
           ]
         },
         {
-          "jp": "朝ごはんを 食べてから、学校に 来られますか。",
-          "en": "Can you come to school after eating breakfast?",
+          "jp": "朝ごはんを 食べて、学校に 来られますか。",
+          "en": "Can you eat breakfast and come to school?",
           "terms": [
             "v_asagohan",
             "p_wo",
@@ -105,7 +105,6 @@
               "id": "v_taberu",
               "form": "te_form"
             },
-            "p_kara",
             "v_gakkou",
             "p_ni",
             {
@@ -457,7 +456,10 @@
             "p_no",
             "v_ryouri",
             "p_wa",
-            { "id": "v_oishii", "form": "polite_adj" },
+            {
+              "id": "v_oishii",
+              "form": "polite_adj"
+            },
             "g_desu",
             "p_ne"
           ]
@@ -694,8 +696,8 @@
           ]
         },
         {
-          "jp": "家に 帰ってから、牛肉と 野菜の 料理を 作りました。",
-          "en": "After returning home, he made a beef and vegetable dish.",
+          "jp": "家に 帰って、牛肉と 野菜の 料理を 作りました。",
+          "en": "He returned home and made a beef and vegetable dish.",
           "terms": [
             "v_ie",
             "p_ni",
@@ -703,7 +705,6 @@
               "id": "v_kaeru",
               "form": "te_form"
             },
-            "p_kara",
             "v_gyuuniku",
             "p_to",
             "v_yasai",
@@ -823,7 +824,10 @@
             "v_ryouri",
             "p_ga",
             "v_totemo",
-            { "id": "v_jouzu", "form": "polite_adj" },
+            {
+              "id": "v_jouzu",
+              "form": "polite_adj"
+            },
             "g_desu"
           ]
         },
@@ -927,7 +931,10 @@
             "p_wa",
             "v_ryouri",
             "p_ga",
-            { "id": "v_jouzu", "form": "polite_adj" },
+            {
+              "id": "v_jouzu",
+              "form": "polite_adj"
+            },
             "g_desu",
             "p_ka",
             "p_hai",
