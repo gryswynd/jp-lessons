@@ -81,8 +81,8 @@
           ]
         },
         {
-          "jp": "毎朝 朝ごはんを 食べてから 学校に 来られますか。",
-          "en": "Can you come to school every morning after eating breakfast?",
+          "jp": "毎朝 朝ごはんを 食べて 学校に 来られますか。",
+          "en": "Can you eat breakfast and come to school every morning?",
           "terms": [
             "v_maiasa",
             "v_asagohan",
@@ -91,7 +91,6 @@
               "id": "v_taberu",
               "form": "te_form"
             },
-            "p_kara_because",
             "v_gakkou",
             "p_ni",
             {
@@ -720,14 +719,13 @@
           ]
         },
         {
-          "jp": "買ってから 帰って、お茶を 飲みました。",
-          "en": "After buying it, he returned home and drank green tea.",
+          "jp": "買って 帰って、お茶を 飲みました。",
+          "en": "He bought it, returned home, and drank green tea.",
           "terms": [
             {
               "id": "v_kau",
               "form": "te_form"
             },
-            "p_kara_because",
             {
               "id": "v_kaeru",
               "form": "te_form"
@@ -881,7 +879,7 @@
           ]
         },
         {
-          "jp": "今朝 は 赤い シャツを 着てから 学校に 来られました。",
+          "jp": "今朝 は 赤い シャツを 着て 学校に 来られました。",
           "en": "This morning she put on her red shirt and was able to come to school.",
           "terms": [
             "v_kesa",
@@ -893,7 +891,6 @@
               "id": "v_kiru",
               "form": "te_form"
             },
-            "p_kara_because",
             "v_gakkou",
             "p_ni",
             {
