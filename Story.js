@@ -715,6 +715,8 @@ window.StoryModule = (function() {
   }
 
   async function loadStory(storyInfo) {
+    // Record streak activity on story read
+    if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
     const storyContainer = container.querySelector('.jp-story-container');
 
     const contentArea = storyContainer.querySelector('.jp-story-loading') ||

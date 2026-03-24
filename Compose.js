@@ -1069,6 +1069,9 @@ window.ComposeModule = {
             </div>
         `;
         document.getElementById('compose-app-root').appendChild(overlay);
+
+        // Record streak activity on compose completion
+        if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
     };
 
     // --- INIT & DATA FETCH ---

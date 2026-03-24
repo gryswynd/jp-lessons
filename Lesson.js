@@ -529,6 +529,9 @@ window.LessonModule = {
 
         if (drillTotal > 0) launchHanabi(rank, body.querySelector('.jp-summary-score-card'));
 
+        // Record streak activity on lesson completion
+        if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
+
         const unlock = window.JPShared && window.JPShared.unlock;
         if (!unlock || unlock.isFree() || !manifestData || !lessonData || !lessonData.id) {
             nextBtn.innerText = "Finish";
