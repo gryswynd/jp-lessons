@@ -96,9 +96,11 @@ window.JPApp = {
   },
 
   // --- INIT ---
-  init: function() {
+  init: async function() {
     this.container = document.getElementById('app-main-container');
     if (!this.container) return console.error('Container #app-main-container not found');
+    // Load streak.js eagerly so the streak bar renders on first paint
+    await this.loadModule('app/shared/streak.js');
     this.renderMenu();
   },
 
