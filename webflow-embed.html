@@ -175,6 +175,9 @@ window.JPApp = {
   // --- TTS SETTINGS (accessible from main menu before modules load) ---
   openTtsSettings: async function() {
     if (window.JPShared && window.JPShared.ttsSettings) {
+      if (window.JPShared.stampSettings) {
+        window.JPShared.stampSettings.setConfig(this.config);
+      }
       window.JPShared.ttsSettings.open();
       return;
     }

@@ -76,6 +76,7 @@
    */
   async function loadCharacters() {
     if (charactersCache) return charactersCache;
+    if (!_repoConfig) return [];  // not configured yet — don't cache, allow retry
     try {
       var url = resolve('shared/characters.json') + '?t=' + Date.now();
       var res = await fetch(url);
@@ -83,8 +84,7 @@
       charactersCache = data.characters || data;
       return charactersCache;
     } catch(e) {
-      charactersCache = [];
-      return [];
+      return [];  // don't cache failures — allow retry on next open
     }
   }
 
