@@ -213,7 +213,10 @@ window.JPApp = {
       beginner: 'belt-white', daily: 'belt-yellow', week: 'belt-green',
       fortnight: 'belt-blue', month: 'belt-purple', season: 'belt-brown', legend: 'belt-black'
     };
-    var beltSrc = 'assets/ui/' + (beltMap[stage.key] || 'belt-white') + '.png';
+    var beltFile = (beltMap[stage.key] || 'belt-white') + '.png';
+    var beltSrc = 'https://raw.githubusercontent.com/' +
+      this.config.owner + '/' + this.config.repo + '/' +
+      this.config.branch + '/assets/ui/' + beltFile;
     var beltHtml = '<img class="jp-streak-belt" src="' + beltSrc + '" alt="' + stage.en + ' belt">';
 
     return '<div class="jp-streak-bar">' +
