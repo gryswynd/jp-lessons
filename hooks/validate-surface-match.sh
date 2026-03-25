@@ -15,7 +15,7 @@ FILE=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
 python3 - "$FILE" "$REPO_ROOT" << 'PYEOF'
-import json, sys, os, glob
+import json, sys, os, glob, re as _re_top
 
 file_path = sys.argv[1]
 repo_root = sys.argv[2]
@@ -25,6 +25,42 @@ try:
         content = json.load(f)
 except:
     sys.exit(0)
+
+# Build taught-kanji set for this file's lesson scope
+taught_kanji = set()
+manifest_path = os.path.join(repo_root, 'manifest.json')
+lesson_id = content.get('id', '') or content.get('lesson', '')
+if content.get('type') == 'grammar':
+    lesson_id = content.get('meta', {}).get('unlocksAfter', lesson_id)
+
+level_order = {'N5': 0, 'N4': 1, 'N3': 2, 'N2': 3, 'N1': 4}
+level_match = _re_top.match(r'(N\d+)\.(\d+)', lesson_id or '')
+if level_match and os.path.exists(manifest_path):
+    target_level = level_match.group(1)
+    target_num = int(level_match.group(2))
+    target_order = level_order.get(target_level, 0)
+    try:
+        with open(manifest_path) as f:
+            manifest = json.load(f)
+        for lk in ['N5', 'N4', 'N3', 'N2', 'N1']:
+            for lesson in manifest.get('data', {}).get(lk, {}).get('lessons', []):
+                lid = lesson.get('id', '')
+                lm = _re_top.match(r'(N\d+)\.(\d+)', lid)
+                if not lm:
+                    continue
+                ll, ln = lm.group(1), int(lm.group(2))
+                lo = level_order.get(ll, 0)
+                if lo < target_order or (lo == target_order and ln <= target_num):
+                    taught_kanji.update(lesson.get('kanji', []))
+    except:
+        pass
+
+def surface_has_untaught_kanji(surface):
+    """Check if a surface string contains any kanji not yet taught."""
+    for c in surface:
+        if '\u4e00' <= c <= '\u9fff' and c not in taught_kanji:
+            return True
+    return False
 
 # Build ID → surface map
 id_info = {}
@@ -37,6 +73,7 @@ for gpath in glob.glob(os.path.join(repo_root, 'data/*/glossary.*.json')):
                 if eid:
                     id_info[eid] = {
                         'surface': entry.get('surface', ''),
+                        'reading': entry.get('reading', ''),
                         'matches': entry.get('matches', []) if isinstance(entry.get('matches'), list) else [],
                         'gtype': entry.get('gtype', ''),
                         'verb_class': entry.get('verb_class', ''),
@@ -151,8 +188,14 @@ def check_surface(jp, terms, path):
         if tid in ('g_desu', 'g_da'):
             continue
 
-        if not surface_found_in_jp(info['surface'], info['matches'], jp, jp_clean):
-            errors.append(f"  {path}.terms[{i}]: '{tid}' (surface: '{info['surface']}') not found in jp text")
+        surface = info['surface']
+        matches = info['matches']
+        # If surface contains untaught kanji, fall back to reading (hiragana form)
+        if surface_has_untaught_kanji(surface) and info.get('reading'):
+            surface = info['reading']
+            matches = []  # matches are kanji-based, not useful for reading fallback
+        if not surface_found_in_jp(surface, matches, jp, jp_clean):
+            errors.append(f"  {path}.terms[{i}]: '{tid}' (surface: '{info['surface']}', checked: '{surface}') not found in jp text")
 
 def walk(obj, path="root"):
     if isinstance(obj, dict):
