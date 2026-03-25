@@ -76,8 +76,9 @@ Automated hooks in `hooks/` enforce rules that the environment should catch, not
 | `validate-register.sh` | Casual speech before N5.10, missing casual after N5.10, register mixing within conversations | FM #44, #45, #46 |
 | `validate-compose.sh` | Ungated particles, non-kanji targets, "close/wrap up" wording before challengePrompts | FM #20, #24, #25c |
 | `validate-chip-order.sh` | Adjacent single-char kana+kana terms sharing a jp token where the rightmost is not listed first in terms[] (causes chip not to display) | FM #59 |
+| `validate-quiz-answers.sh` | Punctuation-only answers in fillSlot/MCQ, answer text duplicated in `after` field | FM #8 (partial) |
 
-14 hooks covering 39+ failure modes. They run automatically on every content file edit — errors surface on the edit that introduces them, not 20 edits later during review.
+15 hooks covering 40+ failure modes. They run automatically on every content file edit — errors surface on the edit that introduces them, not 20 edits later during review.
 
 ## Campaign Files
 

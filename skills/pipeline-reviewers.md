@@ -308,6 +308,16 @@ For **every** draft, Agent 4 must perform a **Grammar Reinforcement Audit** to v
 
 5. **Warmup reinforcement check.** Verify that at least 1 warmup item exercises a recently-unlocked grammar pattern (from the most recent active-window milestone) using prior-lesson vocabulary. Warmups that only use noun-です patterns after N5.5 are a missed reinforcement opportunity.
 
+### Agent 4 — Content Clarity Audit (all content types)
+
+Three checks that prevent confusing or punishing quiz/drill content:
+
+1. **Quiz/drill answer ambiguity** — Test every MCQ, fillSlot, and drill choice against the question. If more than one choice is grammatically valid and contextually appropriate, the question is ambiguous. Fix options: (a) reword the question so only one answer works, (b) replace the question, or (c) add `also_accept` to give credit for valid alternatives while marking one as primary. The most common failure: connector exercises where から and ので are both valid, or where polite and casual forms are both acceptable.
+
+2. **Explanation/hint redundancy** — Read all `notes` in a grammarRule and all `explanation` fields in a drill section as a set. No two notes should convey the same rule in different words. Each note must add unique pedagogical value (a new example, a new edge case, a contrasting form). Restating the same fact wastes the student's limited attention. Most common: noun/な-adjective attachment rules repeated across multiple notes.
+
+3. **Unsupported claims** — Every grammar assertion in `explanation`, `notes`, or `points` fields must be paired with a concrete example sentence. Bare claims like "required in subordinate clauses" or "cannot be used with X" are a fail — the student reads a rule but cannot picture what it means. Fix: add an example immediately after the claim showing the rule in action. Most common: register restrictions, clause-type requirements, and particle usage rules.
+
 6. **Structural pattern presence.** For lessons after N5.5, verify the following structural patterns appear at least once (where the lesson is past their availability point):
 
    **Conjugation-based patterns:**
