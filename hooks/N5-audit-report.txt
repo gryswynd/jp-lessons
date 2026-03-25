@@ -1,6 +1,6 @@
 ═══════════════════════════════════════════════════════════════
   CONTENT AUDIT REPORT — N5
-  2026-03-25 22:43:05
+  2026-03-25 23:00:25
   Files: 68  |  Hooks: 15
 ═══════════════════════════════════════════════════════════════
 
@@ -10,7 +10,7 @@
 │ chip-order              │    50 │    18 │ ✗
 │ compose                 │    66 │     2 │ ✗
 │ deprecated-forms        │    68 │     0 │
-│ form-scope              │    52 │    16 │ ✗
+│ form-scope              │    59 │     9 │ ✗
 │ grammar-schema          │    64 │     4 │ ✗
 │ json                    │    68 │     0 │
 │ kanji-scope             │    64 │     4 │ ✗
@@ -23,7 +23,7 @@
 │ term-ids                │    50 │    18 │ ✗
 │ writing-forms           │    67 │     1 │ ✗
 ├─────────────────────────┼───────┼───────┤
-│ TOTAL                   │   866 │   154 │
+│ TOTAL                   │   873 │   147 │
 └─────────────────────────┴───────┴───────┘
 
 ═══════════════════════════════════════════════════════════════
@@ -142,15 +142,13 @@
       COMPOSE ERRORS in compose.N5.16.json:
         prompts[4].targets[0]: 'v_naru' has no kanji — scoring is kanji-based
 
-── form-scope (16 failures) ──
+── form-scope (9 failures) ──
   ✗ grammar/G1.json
       GRAMMAR SCOPE VIOLATION in G1.json:
         particle 'p_mo' (introducedIn: N5.2) at root.sections[7].lines[2].terms[4] — out of scope for N5.1
         'da_past' (introducedIn: G9) at root.sections[7].lines[2].terms[6] — out of scope for N5.1
         'da_past' (introducedIn: G9) at root.sections[7].lines[3].terms[1] — out of scope for N5.1
         'plain_past_negative' (introducedIn: N5.9) at root.sections[7].lines[3].terms[7] — out of scope for N5.1
-        'polite_negative' (introducedIn: N5.5) at root.sections[9].items[1].terms[2] — out of scope for N5.1
-        'polite_negative' (introducedIn: N5.5) at root.sections[9].items[5].terms[2] — out of scope for N5.1
   ✗ grammar/G10.json
       GRAMMAR SCOPE VIOLATION in G10.json:
         'plain_desire_tai' (introducedIn: G10) at root.sections[10].lines[1].terms[0] — out of scope for N5.9
@@ -161,19 +159,6 @@
         particle 'p_kara_because' (introducedIn: G10) at root.sections[11].lines[4].terms[1] — out of scope for N5.9
         'plain_desire_tai' (introducedIn: G10) at root.sections[15].items[2].terms[0] — out of scope for N5.9
         particle 'p_ga_but' (introducedIn: G10) at root.sections[15].items[2].terms[2] — out of scope for N5.9
-  ✗ grammar/G2.json
-      GRAMMAR SCOPE VIOLATION in G2.json:
-        'polite_negative' (introducedIn: N5.5) at root.sections[10].lines[3].terms[5] — out of scope for N5.1
-  ✗ grammar/G3.json
-      GRAMMAR SCOPE VIOLATION in G3.json:
-        'polite_masu' (introducedIn: N5.5) at root.sections[10].items[5].terms[1] — out of scope for N5.1
-  ✗ grammar/G4.json
-      GRAMMAR SCOPE VIOLATION in G4.json:
-        'polite_masu' (introducedIn: N5.5) at root.sections[8].lines[0].terms[5] — out of scope for N5.2
-        'polite_masu' (introducedIn: N5.5) at root.sections[8].lines[1].terms[4] — out of scope for N5.2
-        'polite_masu' (introducedIn: N5.5) at root.sections[8].lines[2].terms[4] — out of scope for N5.2
-        'polite_negative' (introducedIn: N5.5) at root.sections[8].lines[3].terms[7] — out of scope for N5.2
-        'polite_masu' (introducedIn: N5.5) at root.sections[10].items[6].terms[2] — out of scope for N5.2
   ✗ grammar/G6.json
       GRAMMAR SCOPE VIOLATION in G6.json:
         particle 'p_dewa_then' (introducedIn: G6) at root.sections[8].lines[2].terms[4] — out of scope for N5.5
@@ -187,54 +172,10 @@
         'plain_desire_tai' (introducedIn: G10) at root.sections[11].lines[1].terms[1] — out of scope for N5.8
         'plain_desire_tai' (introducedIn: G10) at root.sections[11].lines[3].terms[4] — out of scope for N5.8
         'plain_desire_tai' (introducedIn: G10) at root.sections[12].items[1].terms[2] — out of scope for N5.8
-  ✗ lessons/N5.1.json
-      GRAMMAR SCOPE VIOLATION in N5.1.json:
-        'polite_negative' (introducedIn: N5.5) at root.sections[3].lines[3].terms[3] — out of scope for N5.1
-        'polite_masu' (introducedIn: N5.5) at root.sections[4].lines[0].terms[5] — out of scope for N5.1
-        'polite_negative' (introducedIn: N5.5) at root.sections[4].lines[3].terms[4] — out of scope for N5.1
-        'polite_masu' (introducedIn: N5.5) at root.sections[7].passage[1].terms[2] — out of scope for N5.1
-        'polite_masu' (introducedIn: N5.5) at root.sections[7].questions[0].terms[4] — out of scope for N5.1
-        'polite_masu' (introducedIn: N5.5) at root.sections[7].questions[1].terms[4] — out of scope for N5.1
-        'polite_masu' (introducedIn: N5.5) at root.sections[7].questions[3].terms[4] — out of scope for N5.1
-        'polite_masu' (introducedIn: N5.5) at root.sections[8].passage[0].terms[3] — out of scope for N5.1
-        'polite_mashita' (introducedIn: N5.5) at root.sections[8].passage[2].terms[3] — out of scope for N5.1
-        'polite_masu' (introducedIn: N5.5) at root.sections[8].passage[4].terms[8] — out of scope for N5.1
-  ✗ lessons/N5.2.json
-      GRAMMAR SCOPE VIOLATION in N5.2.json:
-        'polite_masu' (introducedIn: N5.5) at root.sections[0].items[0].terms[2] — out of scope for N5.2
-        'polite_masu' (introducedIn: N5.5) at root.sections[3].lines[2].terms[4] — out of scope for N5.2
-        'polite_masu' (introducedIn: N5.5) at root.sections[3].lines[3].terms[6] — out of scope for N5.2
-        'polite_masu' (introducedIn: N5.5) at root.sections[4].lines[0].terms[6] — out of scope for N5.2
-        'polite_masu' (introducedIn: N5.5) at root.sections[4].lines[1].terms[6] — out of scope for N5.2
-        'polite_negative' (introducedIn: N5.5) at root.sections[4].lines[2].terms[4] — out of scope for N5.2
-        'polite_masu' (introducedIn: N5.5) at root.sections[4].lines[3].terms[7] — out of scope for N5.2
-        'polite_masu' (introducedIn: N5.5) at root.sections[4].lines[4].terms[2] — out of scope for N5.2
-        'polite_masu' (introducedIn: N5.5) at root.sections[5].lines[0].terms[5] — out of scope for N5.2
-        'polite_negative' (introducedIn: N5.5) at root.sections[5].lines[1].terms[2] — out of scope for N5.2
-  ✗ lessons/N5.3.json
-      GRAMMAR SCOPE VIOLATION in N5.3.json:
-        'polite_masu' (introducedIn: N5.5) at root.sections[0].items[0].terms[3] — out of scope for N5.3
-        'polite_masu' (introducedIn: N5.5) at root.sections[0].items[3].terms[3] — out of scope for N5.3
-        'polite_masu' (introducedIn: N5.5) at root.sections[3].lines[0].terms[5] — out of scope for N5.3
-        'polite_masu' (introducedIn: N5.5) at root.sections[3].lines[1].terms[1] — out of scope for N5.3
-        'polite_masu' (introducedIn: N5.5) at root.sections[3].lines[2].terms[3] — out of scope for N5.3
-        'polite_masu' (introducedIn: N5.5) at root.sections[3].lines[3].terms[2] — out of scope for N5.3
-        'polite_masu' (introducedIn: N5.5) at root.sections[3].lines[4].terms[2] — out of scope for N5.3
-        'polite_masu' (introducedIn: N5.5) at root.sections[3].lines[5].terms[2] — out of scope for N5.3
-        'polite_masu' (introducedIn: N5.5) at root.sections[4].lines[2].terms[4] — out of scope for N5.3
-        'polite_masu' (introducedIn: N5.5) at root.sections[4].lines[3].terms[1] — out of scope for N5.3
   ✗ lessons/N5.4.json
       GRAMMAR SCOPE VIOLATION in N5.4.json:
-        'polite_masu' (introducedIn: N5.5) at root.sections[0].items[2].terms[3] — out of scope for N5.4
-        'polite_masu' (introducedIn: N5.5) at root.sections[0].items[3].terms[3] — out of scope for N5.4
-        'polite_masu' (introducedIn: N5.5) at root.sections[3].lines[0].terms[5] — out of scope for N5.4
-        'polite_masu' (introducedIn: N5.5) at root.sections[3].lines[1].terms[2] — out of scope for N5.4
-        'polite_masu' (introducedIn: N5.5) at root.sections[3].lines[2].terms[4] — out of scope for N5.4
-        'polite_masu' (introducedIn: N5.5) at root.sections[3].lines[3].terms[4] — out of scope for N5.4
-        'polite_masu' (introducedIn: N5.5) at root.sections[3].lines[5].terms[4] — out of scope for N5.4
-        'polite_masu' (introducedIn: N5.5) at root.sections[4].lines[0].terms[4] — out of scope for N5.4
-        'polite_masu' (introducedIn: N5.5) at root.sections[4].lines[1].terms[4] — out of scope for N5.4
-        'polite_mashita' (introducedIn: N5.5) at root.sections[4].lines[2].terms[3] — out of scope for N5.4
+        'plain_past_adj' (introducedIn: G10) at root.sections[4].lines[5].terms[3] — out of scope for N5.4
+        'plain_past_adj' (introducedIn: G10) at root.sections[5].lines[5].terms[0] — out of scope for N5.4
   ✗ lessons/N5.8.json
       GRAMMAR SCOPE VIOLATION in N5.8.json:
         'plain_desire_tai' (introducedIn: G10) at root.sections[5].lines[3].terms[3] — out of scope for N5.8
@@ -254,18 +195,6 @@
       GRAMMAR SCOPE VIOLATION in N5.Final.Review.json:
         particle 'p_yori' (introducedIn: N4.5) at root.sections[1].items[1].lines[2].terms[4] — out of scope for N5.Final.Review
         particle 'p_demo_but' (introducedIn: G19) at root.sections[4].passages[0].lines[1].terms[0] — out of scope for N5.Final.Review
-  ✗ reviews/N5.Review.2.json
-      GRAMMAR SCOPE VIOLATION in N5.Review.2.json:
-        'polite_masu' (introducedIn: N5.5) at root.sections[0].items[0].lines[2].terms[6] — out of scope for N5.Review.2
-        'polite_masu' (introducedIn: N5.5) at root.sections[0].items[0].lines[3].terms[1] — out of scope for N5.Review.2
-        'polite_masu' (introducedIn: N5.5) at root.sections[0].items[1].lines[0].terms[6] — out of scope for N5.Review.2
-        'polite_masu' (introducedIn: N5.5) at root.sections[0].items[1].lines[1].terms[6] — out of scope for N5.Review.2
-        'polite_mashita' (introducedIn: N5.5) at root.sections[0].items[1].lines[2].terms[4] — out of scope for N5.Review.2
-        'polite_mashita' (introducedIn: N5.5) at root.sections[0].items[1].lines[3].terms[7] — out of scope for N5.Review.2
-        'polite_mashita' (introducedIn: N5.5) at root.sections[0].items[2].lines[1].terms[6] — out of scope for N5.Review.2
-        'polite_masu' (introducedIn: N5.5) at root.sections[0].items[2].lines[2].terms[4] — out of scope for N5.Review.2
-        'polite_masu' (introducedIn: N5.5) at root.sections[0].items[2].lines[3].terms[2] — out of scope for N5.Review.2
-        'polite_masu' (introducedIn: N5.5) at root.sections[2].passage[0].terms[4] — out of scope for N5.Review.2
   ✗ reviews/N5.Review.4.json
       GRAMMAR SCOPE VIOLATION in N5.Review.4.json:
         'plain_desire_tai' (introducedIn: G10) at root.sections[0].items[0].lines[3].terms[5] — out of scope for N5.Review.4
@@ -640,535 +569,587 @@
 ── surface-match (39 failures) ──
   ✗ grammar/G1.json
       SURFACE MATCH ISSUES in G1.json:
-        root.sections[6].lines[1].terms[2]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[7].lines[0].terms[2]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[7].lines[1].terms[1]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[7].lines[2].terms[1]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[7].lines[2].terms[5]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[7].lines[4].terms[2]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[9].items[1].q.terms[0]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[9].items[1].q.terms[1]: 'p_dewa' (surface: 'では') not found in jp text
-        root.sections[9].items[3].q.terms[0]: 'v_haha' (surface: '母') not found in jp text
-        root.sections[9].items[5].q.terms[0]: 'v_toire' (surface: 'トイレ') not found in jp text
-        root.sections[9].items[5].q.terms[1]: 'p_dewa' (surface: 'では') not found in jp text
+        root.sections[6].lines[1].terms[2]: 'v_sensei' (surface: '先生', checked: '先生') not found in jp text
+        root.sections[7].lines[0].terms[2]: 'v_sensei' (surface: '先生', checked: '先生') not found in jp text
+        root.sections[7].lines[1].terms[1]: 'v_sensei' (surface: '先生', checked: '先生') not found in jp text
+        root.sections[7].lines[2].terms[1]: 'v_sensei' (surface: '先生', checked: '先生') not found in jp text
+        root.sections[7].lines[2].terms[5]: 'v_sensei' (surface: '先生', checked: '先生') not found in jp text
+        root.sections[7].lines[4].terms[2]: 'v_sensei' (surface: '先生', checked: '先生') not found in jp text
+        root.sections[9].items[1].q.terms[0]: 'v_sensei' (surface: '先生', checked: '先生') not found in jp text
+        root.sections[9].items[1].q.terms[1]: 'p_dewa' (surface: 'では', checked: 'では') not found in jp text
+        root.sections[9].items[3].q.terms[0]: 'v_haha' (surface: '母', checked: '母') not found in jp text
+        root.sections[9].items[5].q.terms[0]: 'v_toire' (surface: 'トイレ', checked: 'トイレ') not found in jp text
+        root.sections[9].items[5].q.terms[1]: 'p_dewa' (surface: 'では', checked: 'では') not found in jp text
   ✗ grammar/G10.json
       SURFACE MATCH ISSUES in G10.json:
-        root.sections[11].lines[0].terms[1]: 'v_gaishoku' (surface: '外食') not found in jp text
-        root.sections[15].items[2].q.terms[3]: 'v_okane' (surface: 'お金') not found in jp text
-        root.sections[15].items[5].q.terms[0]: 'v_okane' (surface: 'お金') not found in jp text
+        root.sections[11].lines[0].terms[1]: 'v_gaishoku' (surface: '外食', checked: '外食') not found in jp text
+        root.sections[15].items[2].q.terms[3]: 'v_okane' (surface: 'お金', checked: 'お金') not found in jp text
+        root.sections[15].items[5].q.terms[0]: 'v_okane' (surface: 'お金', checked: 'お金') not found in jp text
   ✗ grammar/G11.json
       SURFACE MATCH ISSUES in G11.json:
-        root.sections[5].lines[1].terms[0]: 'v_yama' (surface: '山') not found in jp text
-        root.sections[5].lines[1].terms[5]: 'v_kibun' (surface: '気分') not found in jp text
-        root.sections[8].items[1].q.terms[0]: 'v_densha' (surface: '電車') not found in jp text
-        root.sections[8].items[2].q.terms[0]: 'v_tenki' (surface: '天気') not found in jp text
-        root.sections[8].items[2].q.terms[3]: 'v_kibun' (surface: '気分') not found in jp text
+        root.sections[5].lines[1].terms[0]: 'v_yama' (surface: '山', checked: '山') not found in jp text
+        root.sections[5].lines[1].terms[5]: 'v_kibun' (surface: '気分', checked: '気分') not found in jp text
+        root.sections[8].items[1].q.terms[0]: 'v_densha' (surface: '電車', checked: '電車') not found in jp text
+        root.sections[8].items[2].q.terms[0]: 'v_tenki' (surface: '天気', checked: '天気') not found in jp text
+        root.sections[8].items[2].q.terms[3]: 'v_kibun' (surface: '気分', checked: '気分') not found in jp text
   ✗ grammar/G12.json
       SURFACE MATCH ISSUES in G12.json:
-        root.sections[5].lines[0].terms[3]: 'v_sora' (surface: '空') not found in jp text
-        root.sections[5].lines[1].terms[3]: 'v_kibun' (surface: '気分') not found in jp text
-        root.sections[7].items[1].q.terms[0]: 'v_kirei' (surface: 'きれい') not found in jp text
-        root.sections[7].items[1].q.terms[1]: 'v_hana' (surface: '花') not found in jp text
+        root.sections[5].lines[0].terms[3]: 'v_sora' (surface: '空', checked: '空') not found in jp text
+        root.sections[5].lines[1].terms[3]: 'v_kibun' (surface: '気分', checked: '気分') not found in jp text
+        root.sections[7].items[1].q.terms[0]: 'v_kirei' (surface: 'きれい', checked: 'きれい') not found in jp text
+        root.sections[7].items[1].q.terms[1]: 'v_hana' (surface: '花', checked: '花') not found in jp text
   ✗ grammar/G2.json
       SURFACE MATCH ISSUES in G2.json:
-        root.sections[10].lines[0].terms[0]: 'char_rikizo' (surface: 'りきぞ') not found in jp text
-        root.sections[10].lines[0].terms[4]: 'v_nan' (surface: '何') not found in jp text
-        root.sections[10].lines[2].terms[0]: 'char_rikizo' (surface: 'りきぞ') not found in jp text
-        root.sections[10].lines[4].terms[0]: 'char_rikizo' (surface: 'りきぞ') not found in jp text
-        root.sections[10].lines[4].terms[2]: 'v_hito' (surface: '人') not found in jp text
-        root.sections[10].lines[6].terms[0]: 'char_rikizo' (surface: 'りきぞ') not found in jp text
-        root.sections[10].lines[6].terms[2]: 'v_hito' (surface: '人') not found in jp text
-        root.sections[10].lines[6].terms[4]: 'v_namae' (surface: '名前') not found in jp text
-        root.sections[10].lines[6].terms[6]: 'v_nan' (surface: '何') not found in jp text
-        root.sections[10].lines[7].terms[1]: 'v_hito' (surface: '人') not found in jp text
-        root.sections[11].lines[0].terms[0]: 'char_rikizo' (surface: 'りきぞ') not found in jp text
-        root.sections[11].lines[1].terms[0]: 'char_yamakawa' (surface: 'やまかわ') not found in jp text
-        root.sections[11].lines[2].terms[0]: 'char_rikizo' (surface: 'りきぞ') not found in jp text
-        root.sections[11].lines[2].terms[3]: 'v_hito' (surface: '人') not found in jp text
-        root.sections[11].lines[3].terms[0]: 'char_yamakawa' (surface: 'やまかわ') not found in jp text
+        root.sections[10].lines[0].terms[0]: 'char_rikizo' (surface: 'りきぞ', checked: 'りきぞ') not found in jp text
+        root.sections[10].lines[2].terms[0]: 'char_rikizo' (surface: 'りきぞ', checked: 'りきぞ') not found in jp text
+        root.sections[10].lines[4].terms[0]: 'char_rikizo' (surface: 'りきぞ', checked: 'りきぞ') not found in jp text
+        root.sections[10].lines[4].terms[2]: 'v_hito' (surface: '人', checked: '人') not found in jp text
+        root.sections[10].lines[6].terms[0]: 'char_rikizo' (surface: 'りきぞ', checked: 'りきぞ') not found in jp text
+        root.sections[10].lines[6].terms[2]: 'v_hito' (surface: '人', checked: '人') not found in jp text
+        root.sections[10].lines[6].terms[4]: 'v_namae' (surface: '名前', checked: 'なまえ') not found in jp text
+        root.sections[10].lines[7].terms[1]: 'v_hito' (surface: '人', checked: '人') not found in jp text
+        root.sections[11].lines[0].terms[0]: 'char_rikizo' (surface: 'りきぞ', checked: 'りきぞ') not found in jp text
+        root.sections[11].lines[1].terms[0]: 'char_yamakawa' (surface: 'やまかわ', checked: 'やまかわ') not found in jp text
+        root.sections[11].lines[2].terms[0]: 'char_rikizo' (surface: 'りきぞ', checked: 'りきぞ') not found in jp text
+        root.sections[11].lines[2].terms[3]: 'v_hito' (surface: '人', checked: '人') not found in jp text
+        root.sections[11].lines[3].terms[0]: 'char_yamakawa' (surface: 'やまかわ', checked: 'やまかわ') not found in jp text
+        root.sections[11].lines[3].terms[2]: 'v_hito' (surface: '人', checked: '人') not found in jp text
+        root.sections[11].lines[3].terms[4]: 'v_sensei' (surface: '先生', checked: '先生') not found in jp text
   ✗ grammar/G3.json
       SURFACE MATCH ISSUES in G3.json:
-        root.sections[8].lines[1].terms[0]: 'v_haha' (surface: '母') not found in jp text
-        root.sections[10].items[2].q.terms[0]: 'v_dare' (surface: 'だれ') not found in jp text
-        root.sections[10].items[2].q.terms[1]: 'v_sensei' (surface: '先生') not found in jp text
+        root.sections[8].lines[1].terms[0]: 'v_haha' (surface: '母', checked: '母') not found in jp text
+        root.sections[10].items[2].q.terms[0]: 'v_dare' (surface: 'だれ', checked: 'だれ') not found in jp text
+        root.sections[10].items[2].q.terms[1]: 'v_sensei' (surface: '先生', checked: '先生') not found in jp text
+        root.sections[10].items[3].q.terms[1]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
   ✗ grammar/G4.json
       SURFACE MATCH ISSUES in G4.json:
-        root.sections[8].lines[0].terms[1]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[10].items[2].q.terms[0]: 'v_tomodachi' (surface: '友達') not found in jp text
-        root.sections[10].items[2].q.terms[1]: 'v_yasashii' (surface: 'やさしい') not found in jp text
+        root.sections[8].lines[0].terms[1]: 'v_sensei' (surface: '先生', checked: '先生') not found in jp text
+        root.sections[8].lines[0].terms[3]: 'v_nanyoubi' (surface: '何曜日', checked: 'なんようび') not found in jp text
+        root.sections[8].lines[1].terms[0]: 'v_getsuyoubi' (surface: '月曜日', checked: 'げつようび') not found in jp text
+        root.sections[8].lines[1].terms[2]: 'v_kinyoubi' (surface: '金曜日', checked: 'きんようび') not found in jp text
+        root.sections[8].lines[2].terms[0]: 'v_doyoubi' (surface: '土曜日', checked: 'どようび') not found in jp text
+        root.sections[8].lines[2].terms[2]: 'v_nichiyoubi' (surface: '日曜日', checked: 'にちようび') not found in jp text
+        root.sections[8].lines[3].terms[3]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[10].items[1].q.terms[0]: 'v_getsuyoubi' (surface: '月曜日', checked: 'げつようび') not found in jp text
+        root.sections[10].items[1].q.terms[1]: 'v_kinyoubi' (surface: '金曜日', checked: 'きんようび') not found in jp text
+        root.sections[10].items[2].q.terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[10].items[2].q.terms[1]: 'v_yasashii' (surface: 'やさしい', checked: 'やさしい') not found in jp text
+        root.sections[10].items[6].q.terms[0]: 'v_suiyoubi' (surface: '水曜日', checked: 'すいようび') not found in jp text
   ✗ grammar/G5.json
       SURFACE MATCH ISSUES in G5.json:
-        root.sections[9].lines[0].terms[2]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[9].lines[3].terms[1]: 'v_tomodachi' (surface: '友達') not found in jp text
+        root.sections[9].lines[0].terms[2]: 'v_kyou' (surface: '今日', checked: '今日') not found in jp text
+        root.sections[9].lines[2].terms[1]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[9].lines[3].terms[1]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[10].lines[4].terms[1]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[10].lines[5].terms[1]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[10].lines[5].terms[4]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[12].items[2].q.terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
   ✗ grammar/G7.json
       SURFACE MATCH ISSUES in G7.json:
-        root.sections[8].lines[0].terms[2]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[8].lines[1].terms[1]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[8].lines[3].terms[1]: 'v_kinou' (surface: '昨日') not found in jp text
-        root.sections[9].lines[5].terms[1]: 'v_maishuu' (surface: '毎週') not found in jp text
-        root.sections[11].items[1].q.terms[0]: 'v_senshuu' (surface: '先週') not found in jp text
-        root.sections[11].items[1].q.terms[1]: 'v_basu' (surface: 'バス') not found in jp text
-        root.sections[11].items[5].q.terms[0]: 'v_uchi' (surface: 'うち') not found in jp text
-        root.sections[11].items[5].q.terms[1]: 'p_kara' (surface: 'から') not found in jp text
-        root.sections[11].items[5].q.terms[2]: 'v_basu' (surface: 'バス') not found in jp text
+        root.sections[8].lines[0].terms[2]: 'v_kyou' (surface: '今日', checked: '今日') not found in jp text
+        root.sections[8].lines[1].terms[1]: 'v_kyou' (surface: '今日', checked: '今日') not found in jp text
+        root.sections[9].lines[5].terms[1]: 'v_maishuu' (surface: '毎週', checked: '毎週') not found in jp text
+        root.sections[11].items[1].q.terms[0]: 'v_senshuu' (surface: '先週', checked: '先週') not found in jp text
+        root.sections[11].items[1].q.terms[1]: 'v_basu' (surface: 'バス', checked: 'バス') not found in jp text
+        root.sections[11].items[5].q.terms[0]: 'v_uchi' (surface: 'うち', checked: 'うち') not found in jp text
+        root.sections[11].items[5].q.terms[1]: 'p_kara' (surface: 'から', checked: 'から') not found in jp text
+        root.sections[11].items[5].q.terms[2]: 'v_basu' (surface: 'バス', checked: 'バス') not found in jp text
   ✗ grammar/G8.json
       SURFACE MATCH ISSUES in G8.json:
-        root.sections[10].lines[0].terms[2]: 'v_kinou' (surface: '昨日') not found in jp text
-        root.sections[10].lines[3].terms[4]: 'v_eki' (surface: '駅') not found in jp text
-        root.sections[10].lines[5].terms[1]: 'v_tomodachi' (surface: '友達') not found in jp text
-        root.sections[11].lines[1].terms[1]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[11].lines[4].terms[1]: 'v_tomodachi' (surface: '友達') not found in jp text
-        root.sections[12].items[3].q.terms[0]: 'v_eki' (surface: '駅') not found in jp text
-        root.sections[12].items[3].q.terms[3]: 'v_mise' (surface: '店') not found in jp text
-        root.sections[12].items[5].q.terms[3]: 'v_tomodachi' (surface: '友達') not found in jp text
-        root.sections[12].items[6].q.terms[1]: 'v_kudasai' (surface: 'ください') not found in jp text
-        root.sections[12].items[7].q.terms[0]: 'v_konbini' (surface: 'コンビニ') not found in jp text
-        root.sections[12].items[7].q.terms[3]: 'v_kudasai' (surface: 'ください') not found in jp text
+        root.sections[10].lines[3].terms[4]: 'v_eki' (surface: '駅', checked: '駅') not found in jp text
+        root.sections[10].lines[4].terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[10].lines[5].terms[1]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[11].lines[1].terms[1]: 'v_sensei' (surface: '先生', checked: '先生') not found in jp text
+        root.sections[11].lines[4].terms[1]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[12].items[3].q.terms[0]: 'v_eki' (surface: '駅', checked: '駅') not found in jp text
+        root.sections[12].items[3].q.terms[3]: 'v_mise' (surface: '店', checked: '店') not found in jp text
+        root.sections[12].items[5].q.terms[3]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[12].items[6].q.terms[1]: 'v_kudasai' (surface: 'ください', checked: 'ください') not found in jp text
+        root.sections[12].items[7].q.terms[0]: 'v_konbini' (surface: 'コンビニ', checked: 'コンビニ') not found in jp text
+        root.sections[12].items[7].q.terms[3]: 'v_kudasai' (surface: 'ください', checked: 'ください') not found in jp text
   ✗ grammar/G9.json
       SURFACE MATCH ISSUES in G9.json:
-        root.sections[10].lines[0].terms[2]: 'v_nani' (surface: '何') not found in jp text
-        root.sections[12].items[1].q.terms[0]: 'v_purezento' (surface: 'プレゼント') not found in jp text
-        root.sections[12].items[2].q.terms[0]: 'v_resutoran' (surface: 'レストラン') not found in jp text
-        root.sections[12].items[5].q.terms[0]: 'v_tomodachi' (surface: '友達') not found in jp text
-        root.sections[12].items[7].q.terms[0]: 'v_iku' (surface: '行く') not found in jp text
+        root.sections[10].lines[0].terms[2]: 'v_nani' (surface: '何', checked: '何') not found in jp text
+        root.sections[12].items[1].q.terms[0]: 'v_purezento' (surface: 'プレゼント', checked: 'プレゼント') not found in jp text
+        root.sections[12].items[2].q.terms[0]: 'v_resutoran' (surface: 'レストラン', checked: 'レストラン') not found in jp text
+        root.sections[12].items[5].q.terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[12].items[7].q.terms[0]: 'v_iku' (surface: '行く', checked: '行く') not found in jp text
   ✗ lessons/N5.1.json
       SURFACE MATCH ISSUES in N5.1.json:
-        root.sections[0].items[0].terms[4]: 'v_nani' (surface: '何') not found in jp text
-        root.sections[0].items[2].terms[4]: 'v_nani' (surface: '何') not found in jp text
-        root.sections[3].lines[3].terms[1]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[5].lines[2].terms[2]: 'v_hito' (surface: '人') not found in jp text
-        root.sections[5].lines[2].terms[5]: 'k_onna' (surface: '女') not found in jp text
-        root.sections[5].lines[3].terms[2]: 'v_hito' (surface: '人') not found in jp text
-        root.sections[6].lines[2].terms[2]: 'v_nani' (surface: '何') not found in jp text
-        root.sections[7].passage[5].terms[1]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[7].questions[0].q.terms[6]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[7].questions[1].q.terms[6]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[7].questions[3].q.terms[6]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[8].passage[1].terms[1]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[8].passage[1].terms[5]: 'v_hito' (surface: '人') not found in jp text
-        root.sections[8].passage[2].terms[1]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[8].questions[0].q.terms[4]: 'v_nani' (surface: '何') not found in jp text
+        root.sections[0].items[0].terms[2]: 'v_namae' (surface: '名前', checked: 'なまえ') not found in jp text
+        root.sections[0].items[0].terms[4]: 'v_nani' (surface: '何', checked: 'なに') not found in jp text
+        root.sections[0].items[2].terms[2]: 'v_namae' (surface: '名前', checked: 'なまえ') not found in jp text
+        root.sections[0].items[2].terms[4]: 'v_nani' (surface: '何', checked: 'なに') not found in jp text
+        root.sections[3].lines[0].terms[4]: 'v_namae' (surface: '名前', checked: 'なまえ') not found in jp text
+        root.sections[3].lines[3].terms[1]: 'v_sensei' (surface: '先生', checked: '先生') not found in jp text
+        root.sections[5].lines[1].terms[3]: 'v_namae' (surface: '名前', checked: 'なまえ') not found in jp text
+        root.sections[5].lines[2].terms[2]: 'v_hito' (surface: '人', checked: '人') not found in jp text
+        root.sections[5].lines[2].terms[5]: 'k_onna' (surface: '女', checked: '女') not found in jp text
+        root.sections[5].lines[3].terms[2]: 'v_hito' (surface: '人', checked: '人') not found in jp text
+        root.sections[6].lines[2].terms[0]: 'v_namae' (surface: '名前', checked: 'なまえ') not found in jp text
+        root.sections[6].lines[2].terms[2]: 'v_nani' (surface: '何', checked: 'なに') not found in jp text
+        root.sections[6].lines[5].terms[5]: 'v_namae' (surface: '名前', checked: 'なまえ') not found in jp text
+        root.sections[7].passage[0].terms[2]: 'v_namae' (surface: '名前', checked: 'なまえ') not found in jp text
+        root.sections[7].passage[5].terms[1]: 'v_sensei' (surface: '先生', checked: '先生') not found in jp text
   ✗ lessons/N5.10.json
       SURFACE MATCH ISSUES in N5.10.json:
-        root.sections[4].lines[0].terms[6]: 'v_ninki' (surface: '人気') not found in jp text
-        root.sections[4].lines[2].terms[0]: 'v_yama' (surface: '山') not found in jp text
-        root.sections[6].lines[1].terms[1]: 'v_tenki' (surface: '天気') not found in jp text
-        root.sections[6].lines[2].terms[4]: 'v_yama' (surface: '山') not found in jp text
-        root.sections[7].passage[0].terms[3]: 'v_tenki' (surface: '天気') not found in jp text
-        root.sections[7].passage[2].terms[12]: 'v_ninki' (surface: '人気') not found in jp text
-        root.sections[7].questions[0].q.terms[0]: 'v_densha' (surface: '電車') not found in jp text
-        root.sections[7].questions[1].q.terms[0]: 'v_kibun' (surface: '気分') not found in jp text
-        root.sections[7].questions[2].q.terms[0]: 'v_raishuu' (surface: '来週') not found in jp text
-        root.sections[8].passage[0].terms[1]: 'v_densha' (surface: '電車') not found in jp text
-        root.sections[8].passage[3].terms[1]: 'v_denki' (surface: '電気') not found in jp text
-        root.sections[8].passage[3].terms[5]: 'v_kibun' (surface: '気分') not found in jp text
-        root.sections[8].questions[0].q.terms[0]: 'v_nagai' (surface: '長い') not found in jp text
-        root.sections[8].questions[0].q.terms[1]: 'v_densha' (surface: '電車') not found in jp text
-        root.sections[8].questions[0].q.terms[2]: 'v_ninki' (surface: '人気') not found in jp text
+        root.sections[4].lines[0].terms[6]: 'v_ninki' (surface: '人気', checked: '人気') not found in jp text
+        root.sections[4].lines[2].terms[0]: 'v_yama' (surface: '山', checked: '山') not found in jp text
+        root.sections[6].lines[1].terms[1]: 'v_tenki' (surface: '天気', checked: '天気') not found in jp text
+        root.sections[6].lines[2].terms[4]: 'v_yama' (surface: '山', checked: '山') not found in jp text
+        root.sections[7].passage[0].terms[3]: 'v_tenki' (surface: '天気', checked: '天気') not found in jp text
+        root.sections[7].passage[2].terms[12]: 'v_ninki' (surface: '人気', checked: '人気') not found in jp text
+        root.sections[7].questions[0].q.terms[0]: 'v_densha' (surface: '電車', checked: '電車') not found in jp text
+        root.sections[7].questions[1].q.terms[0]: 'v_kibun' (surface: '気分', checked: '気分') not found in jp text
+        root.sections[7].questions[2].q.terms[0]: 'v_raishuu' (surface: '来週', checked: '来週') not found in jp text
+        root.sections[8].passage[0].terms[1]: 'v_densha' (surface: '電車', checked: '電車') not found in jp text
+        root.sections[8].passage[3].terms[1]: 'v_denki' (surface: '電気', checked: '電気') not found in jp text
+        root.sections[8].passage[3].terms[5]: 'v_kibun' (surface: '気分', checked: '気分') not found in jp text
+        root.sections[8].questions[0].q.terms[0]: 'v_nagai' (surface: '長い', checked: '長い') not found in jp text
+        root.sections[8].questions[0].q.terms[1]: 'v_densha' (surface: '電車', checked: '電車') not found in jp text
+        root.sections[8].questions[0].q.terms[2]: 'v_ninki' (surface: '人気', checked: '人気') not found in jp text
   ✗ lessons/N5.11.json
       SURFACE MATCH ISSUES in N5.11.json:
-        root.sections[3].lines[4].terms[5]: 'v_hanabi' (surface: '花火') not found in jp text
-        root.sections[5].lines[4].terms[5]: 'v_kuuki' (surface: '空気') not found in jp text
-        root.sections[5].lines[5].terms[8]: 'v_hana' (surface: '花') not found in jp text
-        root.sections[6].lines[5].terms[1]: 'v_kingyo' (surface: '金魚') not found in jp text
-        root.sections[7].questions[0].q.terms[0]: 'v_hana' (surface: '花') not found in jp text
-        root.sections[7].questions[0].q.terms[2]: 'v_kawaii' (surface: 'かわいい') not found in jp text
-        root.sections[7].questions[1].q.terms[0]: 'v_sakana' (surface: '魚') not found in jp text
-        root.sections[7].questions[2].q.terms[0]: 'v_mata' (surface: 'また') not found in jp text
-        root.sections[8].passage[2].terms[5]: 'v_ame' (surface: '雨') not found in jp text
-        root.sections[8].passage[3].terms[3]: 'v_hana' (surface: '花') not found in jp text
-        root.sections[8].questions[0].q.terms[0]: 'v_sora' (surface: '空') not found in jp text
-        root.sections[8].questions[0].q.terms[2]: 'v_ame' (surface: '雨') not found in jp text
-        root.sections[8].questions[1].q.terms[0]: 'v_ie' (surface: '家') not found in jp text
-        root.sections[8].questions[2].q.terms[0]: 'v_hana' (surface: '花') not found in jp text
-        root.sections[11].items[0].q.terms[0]: 'v_kirei' (surface: 'きれい') not found in jp text
+        root.sections[3].lines[4].terms[5]: 'v_hanabi' (surface: '花火', checked: '花火') not found in jp text
+        root.sections[5].lines[4].terms[5]: 'v_kuuki' (surface: '空気', checked: '空気') not found in jp text
+        root.sections[5].lines[5].terms[8]: 'v_hana' (surface: '花', checked: '花') not found in jp text
+        root.sections[6].lines[5].terms[1]: 'v_kingyo' (surface: '金魚', checked: '金魚') not found in jp text
+        root.sections[7].questions[0].q.terms[0]: 'v_hana' (surface: '花', checked: '花') not found in jp text
+        root.sections[7].questions[0].q.terms[2]: 'v_kawaii' (surface: 'かわいい', checked: 'かわいい') not found in jp text
+        root.sections[7].questions[1].q.terms[0]: 'v_sakana' (surface: '魚', checked: '魚') not found in jp text
+        root.sections[7].questions[2].q.terms[0]: 'v_mata' (surface: 'また', checked: 'また') not found in jp text
+        root.sections[8].passage[2].terms[5]: 'v_ame' (surface: '雨', checked: '雨') not found in jp text
+        root.sections[8].passage[3].terms[3]: 'v_hana' (surface: '花', checked: '花') not found in jp text
+        root.sections[8].questions[0].q.terms[0]: 'v_sora' (surface: '空', checked: '空') not found in jp text
+        root.sections[8].questions[0].q.terms[2]: 'v_ame' (surface: '雨', checked: '雨') not found in jp text
+        root.sections[8].questions[1].q.terms[0]: 'v_ie' (surface: '家', checked: '家') not found in jp text
+        root.sections[8].questions[2].q.terms[0]: 'v_hana' (surface: '花', checked: '花') not found in jp text
+        root.sections[11].items[0].q.terms[0]: 'v_kirei' (surface: 'きれい', checked: 'きれい') not found in jp text
   ✗ lessons/N5.12.json
       SURFACE MATCH ISSUES in N5.12.json:
-        root.sections[5].lines[2].terms[1]: 'v_chuugoku' (surface: '中国') not found in jp text
-        root.sections[5].lines[3].terms[2]: 'v_kurasu' (surface: '暮らす') not found in jp text
-        root.sections[6].lines[0].terms[4]: 'v_kurasu' (surface: '暮らす') not found in jp text
-        root.sections[7].passage[1].terms[7]: 'v_kurasu' (surface: '暮らす') not found in jp text
-        root.sections[7].passage[2].terms[0]: 'v_kurasu' (surface: '暮らす') not found in jp text
-        root.sections[7].questions[0].q.terms[0]: 'v_gakkou' (surface: '学校') not found in jp text
-        root.sections[7].questions[0].q.terms[2]: 'v_atarashii' (surface: '新しい') not found in jp text
-        root.sections[7].questions[1].q.terms[0]: 'v_tesuto' (surface: 'テスト') not found in jp text
-        root.sections[7].questions[2].q.terms[0]: 'v_nihongo' (surface: '日本語') not found in jp text
-        root.sections[7].questions[2].q.terms[1]: 'v_takusan' (surface: 'たくさん') not found in jp text
-        root.sections[8].passage[2].terms[2]: 'v_kurasu' (surface: '暮らす') not found in jp text
-        root.sections[8].questions[0].q.terms[0]: 'v_nihongo' (surface: '日本語') not found in jp text
-        root.sections[8].questions[1].q.terms[0]: 'v_hon' (surface: '本') not found in jp text
-        root.sections[8].questions[1].q.terms[1]: 'v_takai' (surface: '高い') not found in jp text
-        root.sections[8].questions[1].q.terms[3]: 'v_ii' (surface: 'いい') not found in jp text
+        root.sections[5].lines[2].terms[1]: 'v_chuugoku' (surface: '中国', checked: '中国') not found in jp text
+        root.sections[5].lines[3].terms[2]: 'v_kurasu' (surface: '暮らす', checked: 'くらす') not found in jp text
+        root.sections[6].lines[0].terms[4]: 'v_kurasu' (surface: '暮らす', checked: 'くらす') not found in jp text
+        root.sections[7].passage[1].terms[7]: 'v_kurasu' (surface: '暮らす', checked: 'くらす') not found in jp text
+        root.sections[7].passage[2].terms[0]: 'v_kurasu' (surface: '暮らす', checked: 'くらす') not found in jp text
+        root.sections[7].questions[0].q.terms[0]: 'v_gakkou' (surface: '学校', checked: '学校') not found in jp text
+        root.sections[7].questions[0].q.terms[2]: 'v_atarashii' (surface: '新しい', checked: '新しい') not found in jp text
+        root.sections[7].questions[1].q.terms[0]: 'v_tesuto' (surface: 'テスト', checked: 'テスト') not found in jp text
+        root.sections[7].questions[2].q.terms[0]: 'v_nihongo' (surface: '日本語', checked: '日本語') not found in jp text
+        root.sections[7].questions[2].q.terms[1]: 'v_takusan' (surface: 'たくさん', checked: 'たくさん') not found in jp text
+        root.sections[8].passage[2].terms[2]: 'v_kurasu' (surface: '暮らす', checked: 'くらす') not found in jp text
+        root.sections[8].questions[0].q.terms[0]: 'v_nihongo' (surface: '日本語', checked: '日本語') not found in jp text
+        root.sections[8].questions[1].q.terms[0]: 'v_hon' (surface: '本', checked: '本') not found in jp text
+        root.sections[8].questions[1].q.terms[1]: 'v_takai' (surface: '高い', checked: '高い') not found in jp text
+        root.sections[8].questions[1].q.terms[3]: 'v_ii' (surface: 'いい', checked: 'いい') not found in jp text
   ✗ lessons/N5.13.json
       SURFACE MATCH ISSUES in N5.13.json:
-        root.sections[3].lines[5].terms[1]: 'v_mainichi' (surface: '毎日') not found in jp text
-        root.sections[4].lines[0].terms[2]: 'v_denwa' (surface: '電話') not found in jp text
-        root.sections[5].lines[1].terms[1]: 'v_mainichi' (surface: '毎日') not found in jp text
-        root.sections[6].lines[4].terms[1]: 'v_denwa' (surface: '電話') not found in jp text
-        root.sections[7].questions[0].q.terms[0]: 'v_nihongo' (surface: '日本語') not found in jp text
-        root.sections[7].questions[1].q.terms[0]: 'v_denwa' (surface: '電話') not found in jp text
-        root.sections[7].questions[1].q.terms[1]: 'v_tomodachi' (surface: '友達') not found in jp text
-        root.sections[7].questions[2].q.terms[0]: 'v_mainichi' (surface: '毎日') not found in jp text
-        root.sections[8].questions[0].q.terms[0]: 'v_nihongo' (surface: '日本語') not found in jp text
-        root.sections[8].questions[1].q.terms[0]: 'v_hon' (surface: '本') not found in jp text
-        root.sections[8].questions[2].q.terms[0]: 'v_karate' (surface: '空手') not found in jp text
-        root.sections[8].questions[2].q.terms[2]: 'v_hon' (surface: '本') not found in jp text
+        root.sections[3].lines[5].terms[1]: 'v_mainichi' (surface: '毎日', checked: '毎日') not found in jp text
+        root.sections[4].lines[0].terms[2]: 'v_denwa' (surface: '電話', checked: '電話') not found in jp text
+        root.sections[5].lines[1].terms[1]: 'v_mainichi' (surface: '毎日', checked: '毎日') not found in jp text
+        root.sections[6].lines[4].terms[1]: 'v_denwa' (surface: '電話', checked: '電話') not found in jp text
+        root.sections[7].passage[3].terms[3]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[7].questions[0].q.terms[0]: 'v_nihongo' (surface: '日本語', checked: '日本語') not found in jp text
+        root.sections[7].questions[1].q.terms[0]: 'v_denwa' (surface: '電話', checked: '電話') not found in jp text
+        root.sections[7].questions[1].q.terms[1]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[7].questions[2].q.terms[0]: 'v_mainichi' (surface: '毎日', checked: '毎日') not found in jp text
+        root.sections[8].passage[3].terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[8].questions[0].q.terms[0]: 'v_nihongo' (surface: '日本語', checked: '日本語') not found in jp text
+        root.sections[8].questions[1].q.terms[0]: 'v_hon' (surface: '本', checked: '本') not found in jp text
+        root.sections[8].questions[2].q.terms[0]: 'v_karate' (surface: '空手', checked: '空手') not found in jp text
+        root.sections[8].questions[2].q.terms[2]: 'v_hon' (surface: '本', checked: '本') not found in jp text
+        root.sections[10].items[2].q.terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
   ✗ lessons/N5.14.json
       SURFACE MATCH ISSUES in N5.14.json:
-        root.sections[3].lines[3].terms[1]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[4].lines[4].terms[6]: 'v_jikan' (surface: '時間') not found in jp text
-        root.sections[5].lines[4].terms[2]: 'v_toki' (surface: '時') not found in jp text
-        root.sections[5].lines[5].terms[2]: 'v_toki' (surface: '時') not found in jp text
-        root.sections[6].lines[0].terms[1]: 'v_jikan' (surface: '時間') not found in jp text
-        root.sections[7].questions[0].q.terms[0]: 'v_hana' (surface: '花') not found in jp text
-        root.sections[7].questions[0].q.terms[2]: 'v_totemo' (surface: 'とても') not found in jp text
-        root.sections[7].questions[0].q.terms[3]: 'v_kirei' (surface: 'きれい') not found in jp text
-        root.sections[7].questions[1].q.terms[0]: 'v_taitei' (surface: 'たいてい') not found in jp text
-        root.sections[7].questions[1].q.terms[1]: 'v_doyoubi' (surface: '土曜日') not found in jp text
-        root.sections[7].questions[2].q.terms[0]: 'v_maishuu' (surface: '毎週') not found in jp text
-        root.sections[8].questions[0].q.terms[0]: 'v_nihongo' (surface: '日本語') not found in jp text
-        root.sections[8].questions[0].q.terms[2]: 'v_hon' (surface: '本') not found in jp text
-        root.sections[8].questions[1].q.terms[0]: 'v_shiroi' (surface: '白い') not found in jp text
-        root.sections[8].questions[1].q.terms[1]: 'v_nooto' (surface: 'ノート') not found in jp text
+        root.sections[3].lines[3].terms[1]: 'v_kyou' (surface: '今日', checked: '今日') not found in jp text
+        root.sections[4].lines[4].terms[6]: 'v_jikan' (surface: '時間', checked: '時間') not found in jp text
+        root.sections[5].lines[4].terms[2]: 'v_toki' (surface: '時', checked: '時') not found in jp text
+        root.sections[5].lines[5].terms[2]: 'v_toki' (surface: '時', checked: '時') not found in jp text
+        root.sections[6].lines[0].terms[1]: 'v_jikan' (surface: '時間', checked: '時間') not found in jp text
+        root.sections[6].lines[1].terms[1]: 'v_doyoubi' (surface: '土曜日', checked: 'どようび') not found in jp text
+        root.sections[7].passage[2].terms[1]: 'v_doyoubi' (surface: '土曜日', checked: 'どようび') not found in jp text
+        root.sections[7].questions[0].q.terms[0]: 'v_hana' (surface: '花', checked: '花') not found in jp text
+        root.sections[7].questions[0].q.terms[2]: 'v_totemo' (surface: 'とても', checked: 'とても') not found in jp text
+        root.sections[7].questions[0].q.terms[3]: 'v_kirei' (surface: 'きれい', checked: 'きれい') not found in jp text
+        root.sections[7].questions[1].q.terms[0]: 'v_taitei' (surface: 'たいてい', checked: 'たいてい') not found in jp text
+        root.sections[7].questions[1].q.terms[1]: 'v_doyoubi' (surface: '土曜日', checked: 'どようび') not found in jp text
+        root.sections[7].questions[2].q.terms[0]: 'v_maishuu' (surface: '毎週', checked: '毎週') not found in jp text
+        root.sections[8].questions[0].q.terms[0]: 'v_nihongo' (surface: '日本語', checked: '日本語') not found in jp text
+        root.sections[8].questions[0].q.terms[2]: 'v_hon' (surface: '本', checked: '本') not found in jp text
   ✗ lessons/N5.15.json
       SURFACE MATCH ISSUES in N5.15.json:
-        root.sections[3].lines[3].terms[1]: 'v_kita' (surface: '北') not found in jp text
-        root.sections[4].lines[4].terms[1]: 'v_mainichi' (surface: '毎日') not found in jp text
-        root.sections[6].lines[0].terms[1]: 'v_minami' (surface: '南') not found in jp text
-        root.sections[7].questions[0].q.terms[0]: 'v_kita' (surface: '北') not found in jp text
-        root.sections[7].questions[0].q.terms[1]: 'v_hokutou' (surface: '北東') not found in jp text
-        root.sections[7].questions[0].q.terms[2]: 'v_hokusei' (surface: '北西') not found in jp text
-        root.sections[7].questions[0].q.terms[4]: 'v_yama' (surface: '山') not found in jp text
-        root.sections[7].questions[0].q.terms[6]: 'v_ooi' (surface: '多い') not found in jp text
-        root.sections[7].questions[1].q.terms[0]: 'v_minami' (surface: '南') not found in jp text
-        root.sections[7].questions[1].q.terms[2]: 'v_tenki' (surface: '天気') not found in jp text
-        root.sections[7].questions[1].q.terms[4]: 'v_ii' (surface: 'いい') not found in jp text
-        root.sections[7].questions[2].q.terms[0]: 'v_kita' (surface: '北') not found in jp text
-        root.sections[7].questions[2].q.terms[1]: 'p_kara' (surface: 'から') not found in jp text
-        root.sections[7].questions[2].q.terms[2]: 'v_minami' (surface: '南') not found in jp text
-        root.sections[7].questions[2].q.terms[3]: 'p_made' (surface: 'まで') not found in jp text
+        root.sections[0].items[0].terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[3].lines[3].terms[1]: 'v_kita' (surface: '北', checked: '北') not found in jp text
+        root.sections[4].lines[4].terms[1]: 'v_mainichi' (surface: '毎日', checked: '毎日') not found in jp text
+        root.sections[6].lines[0].terms[1]: 'v_minami' (surface: '南', checked: '南') not found in jp text
+        root.sections[7].questions[0].q.terms[0]: 'v_kita' (surface: '北', checked: '北') not found in jp text
+        root.sections[7].questions[0].q.terms[1]: 'v_hokutou' (surface: '北東', checked: '北東') not found in jp text
+        root.sections[7].questions[0].q.terms[2]: 'v_hokusei' (surface: '北西', checked: '北西') not found in jp text
+        root.sections[7].questions[0].q.terms[4]: 'v_yama' (surface: '山', checked: '山') not found in jp text
+        root.sections[7].questions[0].q.terms[6]: 'v_ooi' (surface: '多い', checked: '多い') not found in jp text
+        root.sections[7].questions[1].q.terms[0]: 'v_minami' (surface: '南', checked: '南') not found in jp text
+        root.sections[7].questions[1].q.terms[2]: 'v_tenki' (surface: '天気', checked: '天気') not found in jp text
+        root.sections[7].questions[1].q.terms[4]: 'v_ii' (surface: 'いい', checked: 'いい') not found in jp text
+        root.sections[7].questions[2].q.terms[0]: 'v_kita' (surface: '北', checked: '北') not found in jp text
+        root.sections[7].questions[2].q.terms[1]: 'p_kara' (surface: 'から', checked: 'から') not found in jp text
+        root.sections[7].questions[2].q.terms[2]: 'v_minami' (surface: '南', checked: '南') not found in jp text
   ✗ lessons/N5.16.json
       SURFACE MATCH ISSUES in N5.16.json:
-        root.sections[0].items[1].terms[1]: 'v_hon' (surface: '本') not found in jp text
-        root.sections[0].items[2].terms[1]: 'v_minami' (surface: '南') not found in jp text
-        root.sections[3].lines[3].terms[1]: 'v_hidari' (surface: '左') not found in jp text
-        root.sections[3].lines[4].terms[3]: 'v_migi' (surface: '右') not found in jp text
-        root.sections[5].lines[3].terms[1]: 'v_mainichi' (surface: '毎日') not found in jp text
-        root.sections[6].lines[0].terms[0]: 'char_ren' (surface: 'レン') not found in jp text
-        root.sections[6].lines[0].terms[1]: 'v_gakkou' (surface: '学校') not found in jp text
-        root.sections[6].lines[0].terms[4]: 'v_migi' (surface: '右') not found in jp text
-        root.sections[6].lines[5].terms[5]: 'v_ue' (surface: '上') not found in jp text
-        root.sections[7].passage[2].terms[7]: 'v_mainichi' (surface: '毎日') not found in jp text
-        root.sections[7].questions[0].q.terms[0]: 'v_eki' (surface: '駅') not found in jp text
-        root.sections[7].questions[0].q.terms[2]: 'v_ue' (surface: '上') not found in jp text
-        root.sections[7].questions[0].q.terms[4]: 'v_ookii' (surface: '大きい') not found in jp text
-        root.sections[7].questions[0].q.terms[5]: 'v_mise' (surface: '店') not found in jp text
-        root.sections[7].questions[1].q.terms[0]: 'v_hidari' (surface: '左') not found in jp text
+        root.sections[0].items[1].terms[1]: 'v_hon' (surface: '本', checked: '本') not found in jp text
+        root.sections[0].items[2].terms[1]: 'v_minami' (surface: '南', checked: '南') not found in jp text
+        root.sections[3].lines[3].terms[1]: 'v_hidari' (surface: '左', checked: '左') not found in jp text
+        root.sections[3].lines[4].terms[3]: 'v_migi' (surface: '右', checked: '右') not found in jp text
+        root.sections[5].lines[3].terms[1]: 'v_mainichi' (surface: '毎日', checked: '毎日') not found in jp text
+        root.sections[6].lines[0].terms[0]: 'char_ren' (surface: 'レン', checked: 'レン') not found in jp text
+        root.sections[6].lines[0].terms[1]: 'v_gakkou' (surface: '学校', checked: '学校') not found in jp text
+        root.sections[6].lines[0].terms[4]: 'v_migi' (surface: '右', checked: '右') not found in jp text
+        root.sections[6].lines[5].terms[5]: 'v_ue' (surface: '上', checked: '上') not found in jp text
+        root.sections[7].passage[2].terms[7]: 'v_mainichi' (surface: '毎日', checked: '毎日') not found in jp text
+        root.sections[7].passage[3].terms[8]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[7].questions[0].q.terms[0]: 'v_eki' (surface: '駅', checked: '駅') not found in jp text
+        root.sections[7].questions[0].q.terms[2]: 'v_ue' (surface: '上', checked: '上') not found in jp text
+        root.sections[7].questions[0].q.terms[4]: 'v_ookii' (surface: '大きい', checked: '大きい') not found in jp text
+        root.sections[7].questions[0].q.terms[5]: 'v_mise' (surface: '店', checked: '店') not found in jp text
   ✗ lessons/N5.17.json
       SURFACE MATCH ISSUES in N5.17.json:
-        root.sections[3].lines[3].terms[1]: 'v_deguchi' (surface: '出口') not found in jp text
-        root.sections[3].lines[4].terms[6]: 'v_hidari' (surface: '左') not found in jp text
-        root.sections[4].lines[3].terms[9]: 'v_mainichi' (surface: '毎日') not found in jp text
-        root.sections[5].lines[3].terms[1]: 'v_hon' (surface: '本') not found in jp text
-        root.sections[5].lines[3].terms[4]: 'v_naka' (surface: '中') not found in jp text
-        root.sections[5].lines[5].terms[1]: 'v_deguchi' (surface: '出口') not found in jp text
-        root.sections[5].lines[5].terms[4]: 'v_kaisha' (surface: '会社') not found in jp text
-        root.sections[6].lines[1].terms[1]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[6].lines[3].terms[8]: 'v_hidari' (surface: '左') not found in jp text
-        root.sections[7].questions[0].q.terms[0]: 'v_iriguchi' (surface: '入り口') not found in jp text
-        root.sections[7].questions[0].q.terms[2]: 'v_migi' (surface: '右') not found in jp text
-        root.sections[7].questions[1].q.terms[0]: 'v_gozen' (surface: '午前') not found in jp text
-        root.sections[7].questions[1].q.terms[2]: 'v_shachou' (surface: '社長') not found in jp text
-        root.sections[7].questions[2].q.terms[0]: 'v_mata' (surface: 'また') not found in jp text
-        root.sections[7].questions[2].q.terms[1]: 'v_kaisha' (surface: '会社') not found in jp text
+        root.sections[0].items[2].terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[3].lines[3].terms[1]: 'v_deguchi' (surface: '出口', checked: '出口') not found in jp text
+        root.sections[3].lines[4].terms[6]: 'v_hidari' (surface: '左', checked: '左') not found in jp text
+        root.sections[4].lines[3].terms[9]: 'v_mainichi' (surface: '毎日', checked: '毎日') not found in jp text
+        root.sections[5].lines[3].terms[1]: 'v_hon' (surface: '本', checked: '本') not found in jp text
+        root.sections[5].lines[3].terms[4]: 'v_naka' (surface: '中', checked: '中') not found in jp text
+        root.sections[5].lines[5].terms[1]: 'v_deguchi' (surface: '出口', checked: '出口') not found in jp text
+        root.sections[5].lines[5].terms[4]: 'v_kaisha' (surface: '会社', checked: '会社') not found in jp text
+        root.sections[6].lines[1].terms[1]: 'v_kyou' (surface: '今日', checked: '今日') not found in jp text
+        root.sections[6].lines[3].terms[8]: 'v_hidari' (surface: '左', checked: '左') not found in jp text
+        root.sections[7].questions[0].q.terms[0]: 'v_iriguchi' (surface: '入り口', checked: '入り口') not found in jp text
+        root.sections[7].questions[0].q.terms[2]: 'v_migi' (surface: '右', checked: '右') not found in jp text
+        root.sections[7].questions[1].q.terms[0]: 'v_gozen' (surface: '午前', checked: '午前') not found in jp text
+        root.sections[7].questions[1].q.terms[2]: 'v_shachou' (surface: '社長', checked: '社長') not found in jp text
+        root.sections[7].questions[2].q.terms[0]: 'v_mata' (surface: 'また', checked: 'また') not found in jp text
   ✗ lessons/N5.18.json
       SURFACE MATCH ISSUES in N5.18.json:
-        root.sections[0].items[0].terms[1]: 'v_hon' (surface: '本') not found in jp text
-        root.sections[3].lines[2].terms[0]: 'char_yamakawa' (surface: 'やまかわ') not found in jp text
-        root.sections[3].lines[4].terms[0]: 'char_yamakawa' (surface: 'やまかわ') not found in jp text
-        root.sections[3].lines[4].terms[2]: 'v_shachou' (surface: '社長') not found in jp text
-        root.sections[4].lines[0].terms[0]: 'char_yamamoto' (surface: 'やまもと') not found in jp text
-        root.sections[4].lines[1].terms[0]: 'char_rikizo' (surface: 'りきぞ') not found in jp text
-        root.sections[4].lines[2].terms[0]: 'char_yamamoto' (surface: 'やまもと') not found in jp text
-        root.sections[4].lines[4].terms[0]: 'char_yamamoto' (surface: 'やまもと') not found in jp text
-        root.sections[5].lines[0].terms[0]: 'char_yuki' (surface: 'ゆき') not found in jp text
-        root.sections[5].lines[2].terms[0]: 'char_yuki' (surface: 'ゆき') not found in jp text
-        root.sections[5].lines[4].terms[0]: 'char_yuki' (surface: 'ゆき') not found in jp text
-        root.sections[6].lines[0].terms[0]: 'char_ken' (surface: 'けん') not found in jp text
-        root.sections[6].lines[0].terms[2]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[6].lines[2].terms[0]: 'char_ken' (surface: 'けん') not found in jp text
-        root.sections[6].lines[4].terms[0]: 'char_ken' (surface: 'けん') not found in jp text
+        root.sections[0].items[0].terms[1]: 'v_hon' (surface: '本', checked: '本') not found in jp text
+        root.sections[3].lines[2].terms[0]: 'char_yamakawa' (surface: 'やまかわ', checked: 'やまかわ') not found in jp text
+        root.sections[3].lines[4].terms[0]: 'char_yamakawa' (surface: 'やまかわ', checked: 'やまかわ') not found in jp text
+        root.sections[3].lines[4].terms[2]: 'v_shachou' (surface: '社長', checked: '社長') not found in jp text
+        root.sections[4].lines[0].terms[0]: 'char_yamamoto' (surface: 'やまもと', checked: 'やまもと') not found in jp text
+        root.sections[4].lines[1].terms[0]: 'char_rikizo' (surface: 'りきぞ', checked: 'りきぞ') not found in jp text
+        root.sections[4].lines[2].terms[0]: 'char_yamamoto' (surface: 'やまもと', checked: 'やまもと') not found in jp text
+        root.sections[4].lines[4].terms[0]: 'char_yamamoto' (surface: 'やまもと', checked: 'やまもと') not found in jp text
+        root.sections[5].lines[0].terms[0]: 'char_yuki' (surface: 'ゆき', checked: 'ゆき') not found in jp text
+        root.sections[5].lines[2].terms[0]: 'char_yuki' (surface: 'ゆき', checked: 'ゆき') not found in jp text
+        root.sections[5].lines[4].terms[0]: 'char_yuki' (surface: 'ゆき', checked: 'ゆき') not found in jp text
+        root.sections[6].lines[0].terms[0]: 'char_ken' (surface: 'けん', checked: 'けん') not found in jp text
+        root.sections[6].lines[0].terms[2]: 'v_kyou' (surface: '今日', checked: '今日') not found in jp text
+        root.sections[6].lines[2].terms[0]: 'char_ken' (surface: 'けん', checked: 'けん') not found in jp text
+        root.sections[6].lines[4].terms[0]: 'char_ken' (surface: 'けん', checked: 'けん') not found in jp text
   ✗ lessons/N5.2.json
       SURFACE MATCH ISSUES in N5.2.json:
-        root.sections[0].items[3].terms[4]: 'v_nani' (surface: '何') not found in jp text
-        root.sections[3].lines[0].terms[0]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[3].lines[2].terms[1]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[5].lines[3].terms[1]: 'v_maigetsu' (surface: '毎月') not found in jp text
-        root.sections[7].passage[1].terms[1]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[7].questions[0].q.terms[0]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[7].questions[0].q.terms[6]: 'v_getsuyoubi' (surface: '月曜日') not found in jp text
-        root.sections[7].questions[0].q.terms[8]: 'v_suiyoubi' (surface: '水曜日') not found in jp text
-        root.sections[7].questions[0].q.terms[9]: 'v_kinyoubi' (surface: '金曜日') not found in jp text
-        root.sections[7].questions[1].q.terms[5]: 'v_mokuyoubi' (surface: '木曜日') not found in jp text
-        root.sections[7].questions[2].q.terms[5]: 'v_totemo' (surface: 'とても') not found in jp text
-        root.sections[7].questions[2].q.terms[6]: 'v_yasashii' (surface: 'やさしい') not found in jp text
-        root.sections[7].questions[3].q.terms[5]: 'p_hai' (surface: 'はい') not found in jp text
-        root.sections[7].questions[3].q.terms[6]: 'v_getsuyoubi' (surface: '月曜日') not found in jp text
-        root.sections[7].questions[3].q.terms[7]: 'p_kara' (surface: 'から') not found in jp text
+        root.sections[0].items[2].terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[0].items[3].terms[2]: 'v_namae' (surface: '名前', checked: 'なまえ') not found in jp text
+        root.sections[0].items[3].terms[4]: 'v_nani' (surface: '何', checked: '何') not found in jp text
+        root.sections[3].lines[0].terms[0]: 'v_kyou' (surface: '今日', checked: '今日') not found in jp text
+        root.sections[3].lines[0].terms[2]: 'v_nanyoubi' (surface: '何曜日', checked: 'なんようび') not found in jp text
+        root.sections[3].lines[1].terms[2]: 'v_mokuyoubi' (surface: '木曜日', checked: 'もくようび') not found in jp text
+        root.sections[3].lines[2].terms[1]: 'v_sensei' (surface: '先生', checked: '先生') not found in jp text
+        root.sections[3].lines[3].terms[1]: 'v_getsuyoubi' (surface: '月曜日', checked: 'げつようび') not found in jp text
+        root.sections[3].lines[3].terms[3]: 'v_suiyoubi' (surface: '水曜日', checked: 'すいようび') not found in jp text
+        root.sections[3].lines[3].terms[4]: 'v_kinyoubi' (surface: '金曜日', checked: 'きんようび') not found in jp text
+        root.sections[4].lines[0].terms[4]: 'v_nanyoubi' (surface: '何曜日', checked: 'なんようび') not found in jp text
+        root.sections[4].lines[1].terms[2]: 'v_getsuyoubi' (surface: '月曜日', checked: 'げつようび') not found in jp text
+        root.sections[4].lines[1].terms[4]: 'v_kinyoubi' (surface: '金曜日', checked: 'きんようび') not found in jp text
+        root.sections[4].lines[2].terms[0]: 'v_doyoubi' (surface: '土曜日', checked: 'どようび') not found in jp text
+        root.sections[4].lines[2].terms[2]: 'v_nichiyoubi' (surface: '日曜日', checked: 'にちようび') not found in jp text
   ✗ lessons/N5.3.json
       SURFACE MATCH ISSUES in N5.3.json:
-        root.sections[3].lines[0].terms[2]: 'v_tomodachi' (surface: '友達') not found in jp text
-        root.sections[3].lines[3].terms[3]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[4].lines[0].terms[2]: 'v_kongetsu' (surface: '今月') not found in jp text
-        root.sections[5].lines[9].terms[1]: 'v_en' (surface: '円') not found in jp text
-        root.sections[7].questions[1].q.terms[7]: 'v_okane' (surface: 'お金') not found in jp text
-        root.sections[7].questions[2].q.terms[4]: 'v_totemo' (surface: 'とても') not found in jp text
-        root.sections[7].questions[2].q.terms[5]: 'v_ureshii' (surface: 'うれしい') not found in jp text
-        root.sections[7].questions[3].q.terms[6]: 'p_hai' (surface: 'はい') not found in jp text
-        root.sections[8].questions[0].q.terms[6]: 'p_hai' (surface: 'はい') not found in jp text
-        root.sections[8].questions[1].q.terms[8]: 'p_soudesu' (surface: 'そうです') not found in jp text
-        root.sections[8].questions[2].q.terms[1]: 'v_nani' (surface: '何') not found in jp text
-        root.sections[8].questions[2].q.terms[5]: 'v_ii' (surface: 'いい') not found in jp text
-        root.sections[8].questions[2].q.terms[7]: 'v_tanjoubi' (surface: 'たんじょうび') not found in jp text
-        root.sections[8].questions[3].q.terms[7]: 'p_hai' (surface: 'はい') not found in jp text
-        root.sections[8].questions[3].q.terms[8]: 'v_tooka' (surface: '十日') not found in jp text
+        root.sections[0].items[0].terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[0].items[1].terms[2]: 'v_nanyoubi' (surface: '何曜日', checked: 'なんようび') not found in jp text
+        root.sections[3].lines[0].terms[2]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[3].lines[3].terms[3]: 'v_sensei' (surface: '先生', checked: '先生') not found in jp text
+        root.sections[4].lines[0].terms[2]: 'v_kongetsu' (surface: '今月', checked: '今月') not found in jp text
+        root.sections[4].lines[2].terms[1]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[5].lines[9].terms[1]: 'v_en' (surface: '円', checked: '円') not found in jp text
+        root.sections[7].passage[1].terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[7].passage[2].terms[3]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[7].passage[3].terms[3]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[7].questions[0].q.terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[7].questions[1].q.terms[7]: 'v_okane' (surface: 'お金', checked: 'お金') not found in jp text
+        root.sections[7].questions[2].q.terms[4]: 'v_totemo' (surface: 'とても', checked: 'とても') not found in jp text
+        root.sections[7].questions[2].q.terms[5]: 'v_ureshii' (surface: 'うれしい', checked: 'うれしい') not found in jp text
+        root.sections[7].questions[3].q.terms[6]: 'p_hai' (surface: 'はい', checked: 'はい') not found in jp text
   ✗ lessons/N5.4.json
       SURFACE MATCH ISSUES in N5.4.json:
-        root.sections[3].lines[0].terms[2]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[3].lines[5].terms[1]: 'v_mainichi' (surface: '毎日') not found in jp text
-        root.sections[4].lines[0].terms[2]: 'v_konshuu' (surface: '今週') not found in jp text
-        root.sections[4].lines[1].terms[1]: 'v_konshuu' (surface: '今週') not found in jp text
-        root.sections[4].lines[3].terms[1]: 'v_senshuu' (surface: '先週') not found in jp text
-        root.sections[4].lines[5].terms[1]: 'v_maishuu' (surface: '毎週') not found in jp text
-        root.sections[5].lines[3].terms[1]: 'v_hanbun' (surface: '半分') not found in jp text
-        root.sections[6].lines[5].terms[1]: 'v_kinou' (surface: '昨日') not found in jp text
-        root.sections[7].passage[3].terms[1]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[7].questions[0].q.terms[4]: 'p_hai' (surface: 'はい') not found in jp text
-        root.sections[7].questions[1].q.terms[6]: 'v_getsuyoubi' (surface: '月曜日') not found in jp text
-        root.sections[7].questions[1].q.terms[8]: 'v_suiyoubi' (surface: '水曜日') not found in jp text
-        root.sections[7].questions[2].q.terms[6]: 'v_getsuyoubi' (surface: '月曜日') not found in jp text
-        root.sections[8].questions[0].q.terms[6]: 'p_hai' (surface: 'はい') not found in jp text
-        root.sections[8].questions[0].q.terms[7]: 'p_soudesu' (surface: 'そうです') not found in jp text
+        root.sections[0].items[0].terms[2]: 'v_nanyoubi' (surface: '何曜日', checked: 'なんようび') not found in jp text
+        root.sections[0].items[2].terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[3].lines[0].terms[2]: 'v_kyou' (surface: '今日', checked: '今日') not found in jp text
+        root.sections[3].lines[5].terms[1]: 'v_mainichi' (surface: '毎日', checked: '毎日') not found in jp text
+        root.sections[4].lines[0].terms[2]: 'v_konshuu' (surface: '今週', checked: '今週') not found in jp text
+        root.sections[4].lines[1].terms[1]: 'v_konshuu' (surface: '今週', checked: '今週') not found in jp text
+        root.sections[4].lines[3].terms[1]: 'v_senshuu' (surface: '先週', checked: '先週') not found in jp text
+        root.sections[4].lines[3].terms[3]: 'v_getsuyoubi' (surface: '月曜日', checked: 'げつようび') not found in jp text
+        root.sections[4].lines[3].terms[5]: 'v_suiyoubi' (surface: '水曜日', checked: 'すいようび') not found in jp text
+        root.sections[4].lines[5].terms[1]: 'v_maishuu' (surface: '毎週', checked: '毎週') not found in jp text
+        root.sections[5].lines[3].terms[1]: 'v_hanbun' (surface: '半分', checked: '半分') not found in jp text
+        root.sections[7].passage[1].terms[2]: 'v_getsuyoubi' (surface: '月曜日', checked: 'げつようび') not found in jp text
+        root.sections[7].passage[1].terms[4]: 'v_suiyoubi' (surface: '水曜日', checked: 'すいようび') not found in jp text
+        root.sections[7].passage[2].terms[2]: 'v_getsuyoubi' (surface: '月曜日', checked: 'げつようび') not found in jp text
+        root.sections[7].passage[3].terms[1]: 'v_sensei' (surface: '先生', checked: '先生') not found in jp text
   ✗ lessons/N5.5.json
       SURFACE MATCH ISSUES in N5.5.json:
-        root.sections[3].lines[0].terms[2]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[3].lines[3].terms[1]: 'v_mainichi' (surface: '毎日') not found in jp text
-        root.sections[3].lines[5].terms[1]: 'v_senshuu' (surface: '先週') not found in jp text
-        root.sections[4].lines[2].terms[1]: 'v_maishuu' (surface: '毎週') not found in jp text
-        root.sections[4].lines[3].terms[1]: 'v_raishuu' (surface: '来週') not found in jp text
-        root.sections[5].lines[0].terms[2]: 'v_mainichi' (surface: '毎日') not found in jp text
-        root.sections[5].lines[1].terms[1]: 'v_mainichi' (surface: '毎日') not found in jp text
-        root.sections[5].lines[5].terms[1]: 'v_senshuu' (surface: '先週') not found in jp text
-        root.sections[6].lines[0].terms[2]: 'v_raishuu' (surface: '来週') not found in jp text
-        root.sections[6].lines[5].terms[1]: 'v_raigetsu' (surface: '来月') not found in jp text
-        root.sections[7].questions[0].q.terms[6]: 'v_getsuyoubi' (surface: '月曜日') not found in jp text
-        root.sections[7].questions[0].q.terms[8]: 'v_suiyoubi' (surface: '水曜日') not found in jp text
-        root.sections[7].questions[1].q.terms[5]: 'v_konbini' (surface: 'コンビニ') not found in jp text
-        root.sections[7].questions[2].q.terms[6]: 'v_eki' (surface: '駅') not found in jp text
-        root.sections[7].questions[3].q.terms[6]: 'v_tomodachi' (surface: '友達') not found in jp text
+        root.sections[0].items[0].terms[2]: 'v_nanyoubi' (surface: '何曜日', checked: 'なんようび') not found in jp text
+        root.sections[0].items[2].terms[1]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[0].items[3].terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[3].lines[0].terms[2]: 'v_kyou' (surface: '今日', checked: '今日') not found in jp text
+        root.sections[3].lines[3].terms[1]: 'v_mainichi' (surface: '毎日', checked: '毎日') not found in jp text
+        root.sections[3].lines[5].terms[1]: 'v_senshuu' (surface: '先週', checked: '先週') not found in jp text
+        root.sections[4].lines[2].terms[1]: 'v_maishuu' (surface: '毎週', checked: '毎週') not found in jp text
+        root.sections[4].lines[3].terms[1]: 'v_raishuu' (surface: '来週', checked: '来週') not found in jp text
+        root.sections[5].lines[0].terms[2]: 'v_mainichi' (surface: '毎日', checked: '毎日') not found in jp text
+        root.sections[5].lines[1].terms[1]: 'v_mainichi' (surface: '毎日', checked: '毎日') not found in jp text
+        root.sections[5].lines[5].terms[1]: 'v_senshuu' (surface: '先週', checked: '先週') not found in jp text
+        root.sections[6].lines[0].terms[2]: 'v_raishuu' (surface: '来週', checked: '来週') not found in jp text
+        root.sections[6].lines[1].terms[5]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[6].lines[5].terms[1]: 'v_raigetsu' (surface: '来月', checked: '来月') not found in jp text
+        root.sections[7].passage[1].terms[2]: 'v_getsuyoubi' (surface: '月曜日', checked: 'げつようび') not found in jp text
   ✗ lessons/N5.6.json
       SURFACE MATCH ISSUES in N5.6.json:
-        root.sections[3].lines[0].terms[2]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[3].lines[5].terms[1]: 'v_yama' (surface: '山') not found in jp text
-        root.sections[4].lines[0].terms[2]: 'v_senshuu' (surface: '先週') not found in jp text
-        root.sections[4].lines[1].terms[1]: 'v_kuruma' (surface: '車') not found in jp text
-        root.sections[4].lines[5].terms[1]: 'v_yama' (surface: '山') not found in jp text
-        root.sections[5].lines[3].terms[1]: 'v_raishuu' (surface: '来週') not found in jp text
-        root.sections[5].lines[4].terms[1]: 'v_yama' (surface: '山') not found in jp text
-        root.sections[6].lines[0].terms[2]: 'v_raishuu' (surface: '来週') not found in jp text
-        root.sections[6].lines[3].terms[1]: 'v_kuruma' (surface: '車') not found in jp text
-        root.sections[6].lines[5].terms[1]: 'v_eki' (surface: '駅') not found in jp text
-        root.sections[7].questions[0].q.terms[8]: 'v_kuruma' (surface: '車') not found in jp text
-        root.sections[7].questions[1].q.terms[6]: 'v_kawa' (surface: '川') not found in jp text
-        root.sections[7].questions[2].q.terms[5]: 'v_kazan' (surface: '火山') not found in jp text
-        root.sections[7].questions[3].q.terms[5]: 'v_tomodachi' (surface: '友達') not found in jp text
-        root.sections[8].questions[1].q.terms[7]: 'v_kuruma' (surface: '車') not found in jp text
+        root.sections[3].lines[0].terms[2]: 'v_kyou' (surface: '今日', checked: '今日') not found in jp text
+        root.sections[3].lines[5].terms[1]: 'v_yama' (surface: '山', checked: '山') not found in jp text
+        root.sections[4].lines[0].terms[2]: 'v_senshuu' (surface: '先週', checked: '先週') not found in jp text
+        root.sections[4].lines[1].terms[1]: 'v_kuruma' (surface: '車', checked: '車') not found in jp text
+        root.sections[4].lines[5].terms[1]: 'v_yama' (surface: '山', checked: '山') not found in jp text
+        root.sections[5].lines[3].terms[1]: 'v_raishuu' (surface: '来週', checked: '来週') not found in jp text
+        root.sections[5].lines[4].terms[1]: 'v_yama' (surface: '山', checked: '山') not found in jp text
+        root.sections[6].lines[0].terms[2]: 'v_raishuu' (surface: '来週', checked: '来週') not found in jp text
+        root.sections[6].lines[3].terms[1]: 'v_kuruma' (surface: '車', checked: '車') not found in jp text
+        root.sections[6].lines[5].terms[1]: 'v_eki' (surface: '駅', checked: '駅') not found in jp text
+        root.sections[7].passage[6].terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[7].questions[0].q.terms[8]: 'v_kuruma' (surface: '車', checked: '車') not found in jp text
+        root.sections[7].questions[1].q.terms[6]: 'v_kawa' (surface: '川', checked: '川') not found in jp text
+        root.sections[7].questions[2].q.terms[5]: 'v_kazan' (surface: '火山', checked: '火山') not found in jp text
+        root.sections[7].questions[3].q.terms[5]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
   ✗ lessons/N5.7.json
       SURFACE MATCH ISSUES in N5.7.json:
-        root.sections[3].lines[0].terms[2]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[4].lines[6].terms[1]: 'v_en' (surface: '円') not found in jp text
-        root.sections[5].lines[0].terms[2]: 'v_nani' (surface: '何') not found in jp text
-        root.sections[7].questions[0].q.terms[5]: 'v_karee' (surface: 'カレー') not found in jp text
-        root.sections[7].questions[1].q.terms[5]: 'v_juusu' (surface: 'ジュース') not found in jp text
-        root.sections[7].questions[2].q.terms[5]: 'v_ookii' (surface: '大きい') not found in jp text
-        root.sections[7].questions[3].q.terms[4]: 'v_resutoran' (surface: 'レストラン') not found in jp text
-        root.sections[8].questions[0].q.terms[6]: 'v_sarada' (surface: 'サラダ') not found in jp text
-        root.sections[8].questions[0].q.terms[8]: 'v_pan' (surface: 'パン') not found in jp text
-        root.sections[8].questions[1].q.terms[4]: 'v_koohii' (surface: 'コーヒー') not found in jp text
-        root.sections[8].questions[2].q.terms[5]: 'v_chiisai' (surface: '小さい') not found in jp text
-        root.sections[10].items[3].q.terms[2]: 'v_ookii' (surface: '大きい') not found in jp text
-        root.sections[10].items[5].q.terms[2]: 'v_chiisai' (surface: '小さい') not found in jp text
-        root.sections[10].items[7].q.terms[6]: 'v_chiisai' (surface: '小さい') not found in jp text
-        root.sections[11].items[6].q.terms[6]: 'v_ookii' (surface: '大きい') not found in jp text
+        root.sections[3].lines[0].terms[2]: 'v_kyou' (surface: '今日', checked: '今日') not found in jp text
+        root.sections[4].lines[6].terms[1]: 'v_en' (surface: '円', checked: '円') not found in jp text
+        root.sections[5].lines[0].terms[2]: 'v_nani' (surface: '何', checked: '何') not found in jp text
+        root.sections[7].questions[0].q.terms[5]: 'v_karee' (surface: 'カレー', checked: 'カレー') not found in jp text
+        root.sections[7].questions[1].q.terms[5]: 'v_juusu' (surface: 'ジュース', checked: 'ジュース') not found in jp text
+        root.sections[7].questions[2].q.terms[5]: 'v_ookii' (surface: '大きい', checked: '大きい') not found in jp text
+        root.sections[7].questions[3].q.terms[4]: 'v_resutoran' (surface: 'レストラン', checked: 'レストラン') not found in jp text
+        root.sections[8].questions[0].q.terms[6]: 'v_sarada' (surface: 'サラダ', checked: 'サラダ') not found in jp text
+        root.sections[8].questions[0].q.terms[8]: 'v_pan' (surface: 'パン', checked: 'パン') not found in jp text
+        root.sections[8].questions[1].q.terms[4]: 'v_koohii' (surface: 'コーヒー', checked: 'コーヒー') not found in jp text
+        root.sections[8].questions[2].q.terms[5]: 'v_chiisai' (surface: '小さい', checked: '小さい') not found in jp text
+        root.sections[10].items[3].q.terms[2]: 'v_ookii' (surface: '大きい', checked: '大きい') not found in jp text
+        root.sections[10].items[5].q.terms[2]: 'v_chiisai' (surface: '小さい', checked: '小さい') not found in jp text
+        root.sections[10].items[7].q.terms[6]: 'v_chiisai' (surface: '小さい', checked: '小さい') not found in jp text
+        root.sections[11].items[6].q.terms[6]: 'v_ookii' (surface: '大きい', checked: '大きい') not found in jp text
   ✗ lessons/N5.8.json
       SURFACE MATCH ISSUES in N5.8.json:
-        root.sections[3].lines[0].terms[2]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[4].lines[5].terms[1]: 'v_en' (surface: '円') not found in jp text
-        root.sections[5].lines[0].terms[2]: 'v_nani' (surface: '何') not found in jp text
-        root.sections[6].lines[5].terms[1]: 'v_raishuu' (surface: '来週') not found in jp text
-        root.sections[7].questions[0].q.terms[6]: 'v_depaato' (surface: 'デパート') not found in jp text
-        root.sections[7].questions[1].q.terms[4]: 'v_purezento' (surface: 'プレゼント') not found in jp text
-        root.sections[7].questions[2].q.terms[6]: 'v_atarashii' (surface: '新しい') not found in jp text
-        root.sections[7].questions[3].q.terms[5]: 'v_amari' (surface: 'あまり') not found in jp text
-        root.sections[8].questions[0].q.terms[6]: 'v_depaato' (surface: 'デパート') not found in jp text
-        root.sections[8].questions[1].q.terms[5]: 'v_nagai' (surface: '長い') not found in jp text
-        root.sections[8].questions[1].q.terms[6]: 'v_purezento' (surface: 'プレゼント') not found in jp text
-        root.sections[8].questions[2].q.terms[5]: 'v_amari' (surface: 'あまり') not found in jp text
-        root.sections[10].items[1].q.terms[5]: 'v_furui' (surface: '古い') not found in jp text
-        root.sections[10].items[4].q.terms[0]: 'v_mou' (surface: 'もう') not found in jp text
-        root.sections[10].items[6].q.terms[2]: 'v_atarashii' (surface: '新しい') not found in jp text
+        root.sections[3].lines[0].terms[2]: 'v_kyou' (surface: '今日', checked: '今日') not found in jp text
+        root.sections[3].lines[1].terms[2]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[4].lines[5].terms[1]: 'v_en' (surface: '円', checked: '円') not found in jp text
+        root.sections[5].lines[0].terms[2]: 'v_nani' (surface: '何', checked: '何') not found in jp text
+        root.sections[6].lines[5].terms[1]: 'v_raishuu' (surface: '来週', checked: '来週') not found in jp text
+        root.sections[6].lines[5].terms[4]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[7].questions[0].q.terms[6]: 'v_depaato' (surface: 'デパート', checked: 'デパート') not found in jp text
+        root.sections[7].questions[1].q.terms[4]: 'v_purezento' (surface: 'プレゼント', checked: 'プレゼント') not found in jp text
+        root.sections[7].questions[2].q.terms[6]: 'v_atarashii' (surface: '新しい', checked: '新しい') not found in jp text
+        root.sections[7].questions[3].q.terms[5]: 'v_amari' (surface: 'あまり', checked: 'あまり') not found in jp text
+        root.sections[8].passage[1].terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[8].questions[0].q.terms[6]: 'v_depaato' (surface: 'デパート', checked: 'デパート') not found in jp text
+        root.sections[8].questions[1].q.terms[5]: 'v_nagai' (surface: '長い', checked: '長い') not found in jp text
+        root.sections[8].questions[1].q.terms[6]: 'v_purezento' (surface: 'プレゼント', checked: 'プレゼント') not found in jp text
+        root.sections[8].questions[2].q.terms[5]: 'v_amari' (surface: 'あまり', checked: 'あまり') not found in jp text
   ✗ lessons/N5.9.json
       SURFACE MATCH ISSUES in N5.9.json:
-        root.sections[3].lines[0].terms[2]: 'v_mise' (surface: '店') not found in jp text
-        root.sections[3].lines[5].terms[1]: 'v_eki' (surface: '駅') not found in jp text
-        root.sections[4].lines[0].terms[2]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[4].lines[3].terms[4]: 'v_soto' (surface: '外') not found in jp text
-        root.sections[4].lines[4].terms[8]: 'v_soto' (surface: '外') not found in jp text
-        root.sections[5].lines[4].terms[0]: 'v_namae' (surface: '名前') not found in jp text
-        root.sections[7].questions[0].q.terms[8]: 'v_ookii' (surface: '大きい') not found in jp text
-        root.sections[7].questions[0].q.terms[9]: 'v_mise' (surface: '店') not found in jp text
-        root.sections[7].questions[1].q.terms[5]: 'v_soto' (surface: '外') not found in jp text
-        root.sections[7].questions[1].q.terms[7]: 'v_koohii' (surface: 'コーヒー') not found in jp text
-        root.sections[7].questions[2].q.terms[6]: 'v_naka' (surface: '中') not found in jp text
-        root.sections[8].questions[0].q.terms[4]: 'v_eki' (surface: '駅') not found in jp text
-        root.sections[8].questions[0].q.terms[6]: 'v_mae' (surface: '前') not found in jp text
-        root.sections[8].questions[0].q.terms[8]: 'v_aru' (surface: 'ある') not found in jp text
-        root.sections[8].questions[0].q.terms[9]: 'v_resutoran' (surface: 'レストラン') not found in jp text
+        root.sections[0].items[2].terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[3].lines[0].terms[2]: 'v_mise' (surface: '店', checked: '店') not found in jp text
+        root.sections[3].lines[5].terms[1]: 'v_eki' (surface: '駅', checked: '駅') not found in jp text
+        root.sections[4].lines[0].terms[2]: 'v_kyou' (surface: '今日', checked: '今日') not found in jp text
+        root.sections[4].lines[3].terms[4]: 'v_soto' (surface: '外', checked: '外') not found in jp text
+        root.sections[4].lines[4].terms[8]: 'v_soto' (surface: '外', checked: '外') not found in jp text
+        root.sections[5].lines[4].terms[0]: 'v_namae' (surface: '名前', checked: '名前') not found in jp text
+        root.sections[6].lines[1].terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[7].passage[3].terms[2]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[7].questions[0].q.terms[8]: 'v_ookii' (surface: '大きい', checked: '大きい') not found in jp text
+        root.sections[7].questions[0].q.terms[9]: 'v_mise' (surface: '店', checked: '店') not found in jp text
+        root.sections[7].questions[1].q.terms[5]: 'v_soto' (surface: '外', checked: '外') not found in jp text
+        root.sections[7].questions[1].q.terms[7]: 'v_koohii' (surface: 'コーヒー', checked: 'コーヒー') not found in jp text
+        root.sections[7].questions[2].q.terms[6]: 'v_naka' (surface: '中', checked: '中') not found in jp text
+        root.sections[8].questions[0].q.terms[4]: 'v_eki' (surface: '駅', checked: '駅') not found in jp text
   ✗ reviews/N5.Final.Review.json
       SURFACE MATCH ISSUES in N5.Final.Review.json:
-        root.sections[1].items[0].lines[0].terms[1]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[1].items[0].lines[0].terms[3]: 'v_nanji' (surface: '何時') not found in jp text
-        root.sections[1].items[0].lines[0].terms[5]: 'v_gakkou' (surface: '学校') not found in jp text
-        root.sections[1].items[1].lines[1].terms[5]: 'v_densha' (surface: '電車') not found in jp text
-        root.sections[1].items[1].lines[2].terms[1]: 'v_densha' (surface: '電車') not found in jp text
-        root.sections[1].items[2].lines[0].terms[3]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[1].items[2].lines[0].terms[6]: 'v_hito' (surface: '人') not found in jp text
-        root.sections[1].items[2].lines[1].terms[2]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[1].items[2].lines[1].terms[6]: 'v_hon' (surface: '本') not found in jp text
-        root.sections[1].items[2].lines[2].terms[5]: 'v_hon' (surface: '本') not found in jp text
-        root.sections[4].passages[0].lines[0].terms[1]: 'v_gogo' (surface: '午後') not found in jp text
-        root.sections[4].passages[0].lines[0].terms[5]: 'v_gakkou' (surface: '学校') not found in jp text
-        root.sections[4].passages[0].lines[1].terms[4]: 'v_hon' (surface: '本') not found in jp text
-        root.sections[4].passages[1].lines[0].terms[2]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[4].passages[1].lines[0].terms[4]: 'v_gozen' (surface: '午前') not found in jp text
+        root.sections[1].items[0].lines[0].terms[1]: 'v_kyou' (surface: '今日', checked: 'きょう') not found in jp text
+        root.sections[1].items[0].lines[0].terms[3]: 'v_nanji' (surface: '何時', checked: 'なんじ') not found in jp text
+        root.sections[1].items[0].lines[0].terms[5]: 'v_gakkou' (surface: '学校', checked: 'がっこう') not found in jp text
+        root.sections[1].items[0].lines[1].terms[2]: 'v_kyou' (surface: '今日', checked: 'きょう') not found in jp text
+        root.sections[1].items[0].lines[3].terms[1]: 'v_okaasan' (surface: 'お母さん', checked: 'おかあさん') not found in jp text
+        root.sections[1].items[1].lines[0].terms[2]: 'v_eki' (surface: '駅', checked: 'えき') not found in jp text
+        root.sections[1].items[1].lines[1].terms[3]: 'v_kyou' (surface: '今日', checked: 'きょう') not found in jp text
+        root.sections[1].items[1].lines[1].terms[5]: 'v_densha' (surface: '電車', checked: 'でんしゃ') not found in jp text
+        root.sections[1].items[1].lines[2].terms[1]: 'v_densha' (surface: '電車', checked: 'でんしゃ') not found in jp text
+        root.sections[1].items[2].lines[0].terms[1]: 'v_nihongo' (surface: '日本語', checked: 'にほんご') not found in jp text
+        root.sections[1].items[2].lines[0].terms[3]: 'v_sensei' (surface: '先生', checked: 'せんせい') not found in jp text
+        root.sections[1].items[2].lines[0].terms[6]: 'v_hito' (surface: '人', checked: 'ひと') not found in jp text
+        root.sections[1].items[2].lines[1].terms[2]: 'v_sensei' (surface: '先生', checked: 'せんせい') not found in jp text
+        root.sections[1].items[2].lines[1].terms[5]: 'v_mainichi' (surface: '毎日', checked: 'まいにち') not found in jp text
+        root.sections[1].items[2].lines[1].terms[6]: 'v_hon' (surface: '本', checked: 'ほん') not found in jp text
   ✗ reviews/N5.Review.1.json
       SURFACE MATCH ISSUES in N5.Review.1.json:
-        root.sections[0].items[0].lines[3].terms[1]: 'v_chichi' (surface: '父') not found in jp text
-        root.sections[0].items[1].lines[0].terms[3]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[0].items[2].lines[1].terms[2]: 'v_chichi' (surface: '父') not found in jp text
-        root.sections[2].questions[0].q.terms[5]: 'v_hito' (surface: '人') not found in jp text
-        root.sections[2].questions[1].q.terms[7]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[2].questions[2].q.terms[7]: 'v_kinyoubi' (surface: '金曜日') not found in jp text
-        root.sections[4].items[0].q.terms[2]: 'v_namae' (surface: '名前') not found in jp text
-        root.sections[4].items[1].q.terms[0]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[4].items[1].q.terms[2]: 'v_getsuyoubi' (surface: '月曜日') not found in jp text
-        root.sections[4].items[1].q.terms[4]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[4].items[2].q.terms[7]: 'v_fubo' (surface: '父母') not found in jp text
-        root.sections[4].items[3].q.terms[3]: 'v_okane' (surface: 'お金') not found in jp text
-        root.sections[4].items[4].q.terms[2]: 'v_itsu' (surface: 'いつ') not found in jp text
-        root.sections[4].items[5].q.terms[1]: 'v_yoku' (surface: 'よく') not found in jp text
-        root.sections[5].items[2].q.terms[1]: 'p_kara' (surface: 'から') not found in jp text
+        root.sections[0].items[0].lines[0].terms[4]: 'v_namae' (surface: '名前', checked: 'なまえ') not found in jp text
+        root.sections[0].items[0].lines[2].terms[3]: 'v_otousan' (surface: 'お父さん', checked: 'おとうさん') not found in jp text
+        root.sections[0].items[0].lines[2].terms[5]: 'v_sensei' (surface: '先生', checked: 'せんせい') not found in jp text
+        root.sections[0].items[0].lines[3].terms[1]: 'v_chichi' (surface: '父', checked: 'ちち') not found in jp text
+        root.sections[0].items[0].lines[3].terms[3]: 'v_sensei' (surface: '先生', checked: 'せんせい') not found in jp text
+        root.sections[0].items[1].lines[0].terms[3]: 'v_sensei' (surface: '先生', checked: 'せんせい') not found in jp text
+        root.sections[0].items[1].lines[1].terms[1]: 'v_getsuyoubi' (surface: '月曜日', checked: 'げつようび') not found in jp text
+        root.sections[0].items[1].lines[1].terms[3]: 'v_suiyoubi' (surface: '水曜日', checked: 'すいようび') not found in jp text
+        root.sections[0].items[1].lines[1].terms[4]: 'v_kinyoubi' (surface: '金曜日', checked: 'きんようび') not found in jp text
+        root.sections[0].items[1].lines[2].terms[0]: 'v_kyou' (surface: '今日', checked: 'きょう') not found in jp text
+        root.sections[0].items[1].lines[2].terms[2]: 'v_nanyoubi' (surface: '何曜日', checked: 'なんようび') not found in jp text
+        root.sections[0].items[1].lines[3].terms[0]: 'v_kyou' (surface: '今日', checked: 'きょう') not found in jp text
+        root.sections[0].items[1].lines[3].terms[2]: 'v_kayoubi' (surface: '火曜日', checked: 'かようび') not found in jp text
+        root.sections[0].items[1].lines[3].terms[4]: 'v_sensei' (surface: '先生', checked: 'せんせい') not found in jp text
+        root.sections[0].items[2].lines[0].terms[1]: 'v_otousan' (surface: 'お父さん', checked: 'おとうさん') not found in jp text
   ✗ reviews/N5.Review.2.json
       SURFACE MATCH ISSUES in N5.Review.2.json:
-        root.sections[0].items[0].lines[0].terms[2]: 'v_kongetsu' (surface: '今月') not found in jp text
-        root.sections[0].items[1].lines[0].terms[2]: 'v_konshuu' (surface: '今週') not found in jp text
-        root.sections[0].items[1].lines[3].terms[1]: 'v_senshuu' (surface: '先週') not found in jp text
-        root.sections[2].questions[0].q.terms[6]: 'v_getsuyoubi' (surface: '月曜日') not found in jp text
-        root.sections[2].questions[0].q.terms[8]: 'v_suiyoubi' (surface: '水曜日') not found in jp text
-        root.sections[4].items[0].q.terms[0]: 'v_sensei' (surface: '先生') not found in jp text
-        root.sections[4].items[1].q.terms[0]: 'v_dono' (surface: 'どの') not found in jp text
-        root.sections[4].items[3].q.terms[1]: 'v_tokidoki' (surface: '時々') not found in jp text
-        root.sections[4].items[4].q.terms[0]: 'v_kore' (surface: 'これ') not found in jp text
+        root.sections[0].items[0].lines[0].terms[2]: 'v_kongetsu' (surface: '今月', checked: 'こんげつ') not found in jp text
+        root.sections[0].items[0].lines[1].terms[2]: 'v_mikka' (surface: '三日', checked: 'みっか') not found in jp text
+        root.sections[0].items[0].lines[2].terms[3]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[0].items[0].lines[2].terms[5]: 'v_nannin' (surface: '何人', checked: 'なんにん') not found in jp text
+        root.sections[0].items[1].lines[0].terms[2]: 'v_konshuu' (surface: '今週', checked: 'こんしゅう') not found in jp text
+        root.sections[0].items[1].lines[0].terms[4]: 'v_nanyoubi' (surface: '何曜日', checked: 'なんようび') not found in jp text
+        root.sections[0].items[1].lines[1].terms[0]: 'v_konshuu' (surface: '今週', checked: 'こんしゅう') not found in jp text
+        root.sections[0].items[1].lines[1].terms[2]: 'v_getsuyoubi' (surface: '月曜日', checked: 'げつようび') not found in jp text
+        root.sections[0].items[1].lines[1].terms[4]: 'v_suiyoubi' (surface: '水曜日', checked: 'すいようび') not found in jp text
+        root.sections[0].items[1].lines[2].terms[0]: 'v_senshuu' (surface: '先週', checked: 'せんしゅう') not found in jp text
+        root.sections[0].items[1].lines[2].terms[2]: 'v_getsuyoubi' (surface: '月曜日', checked: 'げつようび') not found in jp text
+        root.sections[0].items[1].lines[3].terms[1]: 'v_senshuu' (surface: '先週', checked: 'せんしゅう') not found in jp text
+        root.sections[0].items[1].lines[3].terms[3]: 'v_getsuyoubi' (surface: '月曜日', checked: 'げつようび') not found in jp text
+        root.sections[0].items[1].lines[3].terms[5]: 'v_kinyoubi' (surface: '金曜日', checked: 'きんようび') not found in jp text
+        root.sections[0].items[2].lines[2].terms[3]: 'v_hanbun' (surface: '半分', checked: 'はんぶん') not found in jp text
   ✗ reviews/N5.Review.3.json
       SURFACE MATCH ISSUES in N5.Review.3.json:
-        root.sections[0].items[0].lines[0].terms[2]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[0].items[0].lines[3].terms[1]: 'v_mainichi' (surface: '毎日') not found in jp text
-        root.sections[0].items[1].lines[0].terms[2]: 'v_raishuu' (surface: '来週') not found in jp text
-        root.sections[0].items[1].lines[3].terms[1]: 'v_yama' (surface: '山') not found in jp text
-        root.sections[0].items[2].lines[3].terms[1]: 'v_tomodachi' (surface: '友達') not found in jp text
-        root.sections[2].passage[3].terms[7]: 'v_kazan' (surface: '火山') not found in jp text
-        root.sections[2].questions[0].q.terms[1]: 'v_nan' (surface: '何') not found in jp text
-        root.sections[2].questions[0].q.terms[7]: 'v_kuruma' (surface: '車') not found in jp text
-        root.sections[2].questions[1].q.terms[6]: 'v_kawa' (surface: '川') not found in jp text
-        root.sections[2].questions[2].q.terms[6]: 'v_tomodachi' (surface: '友達') not found in jp text
-        root.sections[4].items[0].q.terms[0]: 'v_kuruma' (surface: '車') not found in jp text
-        root.sections[4].items[3].q.terms[3]: 'p_made' (surface: 'まで') not found in jp text
-        root.sections[5].items[2].q.terms[1]: 'p_kara' (surface: 'から') not found in jp text
+        root.sections[0].items[0].lines[0].terms[2]: 'v_kyou' (surface: '今日', checked: 'きょう') not found in jp text
+        root.sections[0].items[0].lines[1].terms[2]: 'v_eki' (surface: '駅', checked: 'えき') not found in jp text
+        root.sections[0].items[0].lines[2].terms[0]: 'v_mainichi' (surface: '毎日', checked: 'まいにち') not found in jp text
+        root.sections[0].items[0].lines[3].terms[1]: 'v_mainichi' (surface: '毎日', checked: 'まいにち') not found in jp text
+        root.sections[0].items[1].lines[0].terms[2]: 'v_raishuu' (surface: '来週', checked: 'らいしゅう') not found in jp text
+        root.sections[0].items[1].lines[1].terms[0]: 'v_yama' (surface: '山', checked: 'やま') not found in jp text
+        root.sections[0].items[1].lines[1].terms[7]: 'v_kuruma' (surface: '車', checked: 'くるま') not found in jp text
+        root.sections[0].items[1].lines[2].terms[0]: 'v_yama' (surface: '山', checked: 'やま') not found in jp text
+        root.sections[0].items[1].lines[2].terms[2]: 'v_kawa' (surface: '川', checked: 'かわ') not found in jp text
+        root.sections[0].items[1].lines[3].terms[1]: 'v_yama' (surface: '山', checked: 'やま') not found in jp text
+        root.sections[0].items[1].lines[3].terms[3]: 'v_kawa' (surface: '川', checked: 'かわ') not found in jp text
+        root.sections[0].items[1].lines[3].terms[6]: 'v_michi' (surface: '道', checked: 'みち') not found in jp text
+        root.sections[0].items[2].lines[1].terms[2]: 'v_yama' (surface: '山', checked: 'やま') not found in jp text
+        root.sections[0].items[2].lines[2].terms[1]: 'v_raishuu' (surface: '来週', checked: 'らいしゅう') not found in jp text
+        root.sections[0].items[2].lines[2].terms[2]: 'v_kuruma' (surface: '車', checked: 'くるま') not found in jp text
   ✗ reviews/N5.Review.4.json
       SURFACE MATCH ISSUES in N5.Review.4.json:
-        root.sections[2].questions[0].q.terms[7]: 'v_karee' (surface: 'カレー') not found in jp text
-        root.sections[2].questions[1].q.terms[6]: 'v_purezento' (surface: 'プレゼント') not found in jp text
-        root.sections[2].questions[2].q.terms[5]: 'v_atarashii' (surface: '新しい') not found in jp text
-        root.sections[4].items[0].q.terms[0]: 'v_koohii' (surface: 'コーヒー') not found in jp text
-        root.sections[4].items[2].q.terms[5]: 'v_furui' (surface: '古い') not found in jp text
+        root.sections[0].items[0].lines[0].terms[0]: 'v_nani' (surface: '何', checked: 'なに') not found in jp text
+        root.sections[0].items[0].lines[1].terms[5]: 'v_ookii' (surface: '大きい', checked: 'おおきい') not found in jp text
+        root.sections[0].items[1].lines[0].terms[2]: 'v_nani' (surface: '何', checked: 'なに') not found in jp text
+        root.sections[0].items[1].lines[1].terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[0].items[1].lines[2].terms[0]: 'v_atarashii' (surface: '新しい', checked: 'あたらしい') not found in jp text
+        root.sections[0].items[1].lines[2].terms[3]: 'v_furui' (surface: '古い', checked: 'ふるい') not found in jp text
+        root.sections[0].items[1].lines[3].terms[0]: 'v_atarashii' (surface: '新しい', checked: 'あたらしい') not found in jp text
+        root.sections[0].items[1].lines[3].terms[2]: 'v_nagai' (surface: '長い', checked: 'ながい') not found in jp text
+        root.sections[0].items[1].lines[3].terms[5]: 'v_yasui' (surface: '安い', checked: 'やすい') not found in jp text
+        root.sections[0].items[2].lines[0].terms[0]: 'v_kyou' (surface: '今日', checked: 'きょう') not found in jp text
+        root.sections[0].items[2].lines[0].terms[1]: 'v_nani' (surface: '何', checked: 'なに') not found in jp text
+        root.sections[2].passage[0].terms[2]: 'v_kyou' (surface: '今日', checked: 'きょう') not found in jp text
+        root.sections[2].passage[0].terms[3]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
+        root.sections[2].passage[2].terms[2]: 'v_ookii' (surface: '大きい', checked: 'おおきい') not found in jp text
+        root.sections[2].passage[4].terms[0]: 'v_tomodachi' (surface: '友達', checked: 'ともだち') not found in jp text
   ✗ reviews/N5.Review.5.json
       SURFACE MATCH ISSUES in N5.Review.5.json:
-        root.sections[0].items[1].lines[3].terms[8]: 'v_ninki' (surface: '人気') not found in jp text
-        root.sections[2].questions[0].q.terms[7]: 'v_densha' (surface: '電車') not found in jp text
-        root.sections[2].questions[1].q.terms[6]: 'v_eki' (surface: '駅') not found in jp text
-        root.sections[2].questions[1].q.terms[8]: 'v_mae' (surface: '前') not found in jp text
-        root.sections[2].questions[2].q.terms[6]: 'p_hai' (surface: 'はい') not found in jp text
-        root.sections[4].items[0].q.terms[2]: 'v_mae' (surface: '前') not found in jp text
-        root.sections[4].items[1].q.terms[2]: 'v_naka' (surface: '中') not found in jp text
-        root.sections[4].items[2].q.terms[5]: 'v_kibun' (surface: '気分') not found in jp text
-        root.sections[4].items[3].q.terms[3]: 'v_ninki' (surface: '人気') not found in jp text
+        root.sections[0].items[0].lines[1].terms[0]: 'v_eki' (surface: '駅', checked: 'えき') not found in jp text
+        root.sections[0].items[0].lines[1].terms[2]: 'v_mae' (surface: '前', checked: 'まえ') not found in jp text
+        root.sections[0].items[0].lines[2].terms[1]: 'v_ookii' (surface: '大きい', checked: 'おおきい') not found in jp text
+        root.sections[0].items[0].lines[2].terms[2]: 'v_mise' (surface: '店', checked: 'みせ') not found in jp text
+        root.sections[0].items[0].lines[3].terms[2]: 'v_mise' (surface: '店', checked: 'みせ') not found in jp text
+        root.sections[0].items[0].lines[3].terms[4]: 'v_naka' (surface: '中', checked: 'なか') not found in jp text
+        root.sections[0].items[0].lines[3].terms[6]: 'v_atarashii' (surface: '新しい', checked: 'あたらしい') not found in jp text
+        root.sections[0].items[0].lines[3].terms[9]: 'v_yasui' (surface: '安い', checked: 'やすい') not found in jp text
+        root.sections[0].items[1].lines[0].terms[0]: 'v_kyou' (surface: '今日', checked: 'きょう') not found in jp text
+        root.sections[0].items[1].lines[0].terms[2]: 'v_kyuujitsu' (surface: '休日', checked: 'きゅうじつ') not found in jp text
+        root.sections[0].items[1].lines[0].terms[5]: 'v_tenki' (surface: '天気', checked: 'てんき') not found in jp text
+        root.sections[0].items[1].lines[1].terms[1]: 'v_tenki' (surface: '天気', checked: 'てんき') not found in jp text
+        root.sections[0].items[1].lines[2].terms[0]: 'v_densha' (surface: '電車', checked: 'でんしゃ') not found in jp text
+        root.sections[0].items[1].lines[2].terms[2]: 'v_yama' (surface: '山', checked: 'やま') not found in jp text
+        root.sections[0].items[1].lines[3].terms[5]: 'v_furui' (surface: '古い', checked: 'ふるい') not found in jp text
   ✗ reviews/N5.Review.6.json
       SURFACE MATCH ISSUES in N5.Review.6.json:
-        root.sections[0].items[0].lines[3].terms[3]: 'v_hana' (surface: '花') not found in jp text
-        root.sections[0].items[1].lines[1].terms[1]: 'v_mainichi' (surface: '毎日') not found in jp text
-        root.sections[2].passage[2].terms[2]: 'v_kurasu' (surface: '暮らす') not found in jp text
-        root.sections[2].questions[1].q.terms[3]: 'v_atarashii' (surface: '新しい') not found in jp text
-        root.sections[4].items[0].q.terms[5]: 'v_kawaii' (surface: 'かわいい') not found in jp text
-        root.sections[4].items[2].q.terms[2]: 'v_ato' (surface: '後') not found in jp text
-        root.sections[4].items[3].q.terms[2]: 'v_kurasu' (surface: '暮らす') not found in jp text
-        root.sections[4].items[3].q.terms[4]: 'v_omoshiroi' (surface: 'おもしろい') not found in jp text
-        root.sections[5].items[0].q.terms[3]: 'v_hana' (surface: '花') not found in jp text
-        root.sections[5].items[3].q.terms[1]: 'p_kara' (surface: 'から') not found in jp text
-        root.sections[5].items[4].q.terms[3]: 'v_omoshiroi' (surface: 'おもしろい') not found in jp text
+        root.sections[0].items[0].lines[0].terms[0]: 'v_kyou' (surface: '今日', checked: 'きょう') not found in jp text
+        root.sections[0].items[0].lines[0].terms[2]: 'v_sora' (surface: '空', checked: 'そら') not found in jp text
+        root.sections[0].items[0].lines[1].terms[2]: 'v_kawa' (surface: '川', checked: 'かわ') not found in jp text
+        root.sections[0].items[0].lines[1].terms[4]: 'v_hana' (surface: '花', checked: 'はな') not found in jp text
+        root.sections[0].items[0].lines[2].terms[2]: 'v_kingyo' (surface: '金魚', checked: 'きんぎょ') not found in jp text
+        root.sections[0].items[0].lines[2].terms[7]: 'v_ookii' (surface: '大きい', checked: 'おおきい') not found in jp text
+        root.sections[0].items[0].lines[2].terms[8]: 'v_sakana' (surface: '魚', checked: 'さかな') not found in jp text
+        root.sections[0].items[0].lines[3].terms[0]: 'v_ame' (surface: '雨', checked: 'あめ') not found in jp text
+        root.sections[0].items[0].lines[3].terms[2]: 'v_ato' (surface: '後', checked: 'あと') not found in jp text
+        root.sections[0].items[0].lines[3].terms[3]: 'v_hana' (surface: '花', checked: 'はな') not found in jp text
+        root.sections[0].items[0].lines[3].terms[8]: 'v_kuuki' (surface: '空気', checked: 'くうき') not found in jp text
+        root.sections[0].items[1].lines[0].terms[3]: 'v_chuugoku' (surface: '中国', checked: 'ちゅうごく') not found in jp text
+        root.sections[0].items[1].lines[0].terms[7]: 'v_gakkou' (surface: '学校', checked: 'がっこう') not found in jp text
+        root.sections[0].items[1].lines[0].terms[9]: 'v_nihongo' (surface: '日本語', checked: 'にほんご') not found in jp text
+        root.sections[0].items[1].lines[1].terms[1]: 'v_mainichi' (surface: '毎日', checked: 'まいにち') not found in jp text
   ✗ reviews/N5.Review.7.json
       SURFACE MATCH ISSUES in N5.Review.7.json:
-        root.sections[0].items[0].lines[1].terms[1]: 'v_mainichi' (surface: '毎日') not found in jp text
-        root.sections[0].items[0].lines[3].terms[6]: 'v_denwa' (surface: '電話') not found in jp text
-        root.sections[0].items[1].lines[0].terms[2]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[0].items[1].lines[1].terms[1]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[0].items[1].lines[2].terms[3]: 'v_watashi' (surface: '私') not found in jp text
-        root.sections[0].items[1].lines[3].terms[11]: 'v_kyou' (surface: '今日') not found in jp text
-        root.sections[2].passage[1].terms[8]: 'v_te' (surface: '手') not found in jp text
-        root.sections[4].items[0].q.terms[0]: 'v_yukkuri' (surface: 'ゆっくり') not found in jp text
-        root.sections[4].items[1].q.terms[2]: 'v_zenzen' (surface: 'ぜんぜん') not found in jp text
-        root.sections[4].items[2].q.terms[2]: 'v_taitei' (surface: 'たいてい') not found in jp text
-        root.sections[4].items[3].q.terms[3]: 'v_denwa' (surface: '電話') not found in jp text
-        root.sections[5].items[0].q.terms[2]: 'v_kudasai' (surface: 'ください') not found in jp text
-        root.sections[5].items[2].q.terms[5]: 'v_denwa' (surface: '電話') not found in jp text
-        root.sections[5].items[3].q.terms[1]: 'p_kara' (surface: 'から') not found in jp text
+        root.sections[0].items[0].lines[0].terms[3]: 'v_mainichi' (surface: '毎日', checked: 'まいにち') not found in jp text
+        root.sections[0].items[0].lines[0].terms[4]: 'v_nihongo' (surface: '日本語', checked: 'にほんご') not found in jp text
+        root.sections[0].items[0].lines[1].terms[1]: 'v_mainichi' (surface: '毎日', checked: 'まいにち') not found in jp text
+        root.sections[0].items[0].lines[1].terms[2]: 'v_sukoshi' (surface: '少し', checked: 'すこし') not found in jp text
+        root.sections[0].items[0].lines[1].terms[6]: 'v_yomu' (surface: '読む', checked: 'よむ') not found in jp text
+        root.sections[0].items[0].lines[2].terms[3]: 'v_mainichi' (surface: '毎日', checked: 'まいにち') not found in jp text
+        root.sections[0].items[0].lines[3].terms[1]: 'v_te' (surface: '手', checked: 'て') not found in jp text
+        root.sections[0].items[0].lines[3].terms[3]: 'v_kaku' (surface: '書く', checked: 'かく') not found in jp text
+        root.sections[0].items[0].lines[3].terms[6]: 'v_denwa' (surface: '電話', checked: 'でんわ') not found in jp text
+        root.sections[0].items[0].lines[3].terms[8]: 'v_hanasu' (surface: '話す', checked: 'はなす') not found in jp text
+        root.sections[0].items[1].lines[0].terms[2]: 'v_kyou' (surface: '今日', checked: 'きょう') not found in jp text
+        root.sections[0].items[1].lines[0].terms[4]: 'v_jikan' (surface: '時間', checked: 'じかん') not found in jp text
+        root.sections[0].items[1].lines[0].terms[6]: 'v_ooi' (surface: '多い', checked: 'おおい') not found in jp text
+        root.sections[0].items[1].lines[1].terms[1]: 'v_kyou' (surface: '今日', checked: 'きょう') not found in jp text
+        root.sections[0].items[1].lines[1].terms[3]: 'v_jikan' (surface: '時間', checked: 'じかん') not found in jp text
   ✗ reviews/N5.Review.8.json
       SURFACE MATCH ISSUES in N5.Review.8.json:
-        root.sections[0].items[0].lines[0].terms[2]: 'v_gakkou' (surface: '学校') not found in jp text
-        root.sections[0].items[2].lines[3].terms[7]: 'v_heta' (surface: '下手') not found in jp text
-        root.sections[4].items[0].q.terms[5]: 'v_jouzu' (surface: '上手') not found in jp text
-        root.sections[4].items[1].q.terms[2]: 'v_higashi' (surface: '東') not found in jp text
-        root.sections[4].items[2].q.terms[0]: 'v_hidari' (surface: '左') not found in jp text
-        root.sections[4].items[3].q.terms[4]: 'v_higashi' (surface: '東') not found in jp text
-        root.sections[5].items[2].q.terms[5]: 'p_kara_because' (surface: 'から') not found in jp text
-        root.sections[5].items[2].q.terms[6]: 'v_minami' (surface: '南') not found in jp text
-        root.sections[5].items[3].q.terms[5]: 'v_kita' (surface: '北') not found in jp text
+        root.sections[0].items[0].lines[0].terms[2]: 'v_gakkou' (surface: '学校', checked: 'がっこう') not found in jp text
+        root.sections[0].items[0].lines[0].terms[4]: 'v_kita' (surface: '北', checked: 'きた') not found in jp text
+        root.sections[0].items[0].lines[0].terms[6]: 'v_nani' (surface: '何', checked: 'なに') not found in jp text
+        root.sections[0].items[0].lines[1].terms[0]: 'v_kita' (surface: '北', checked: 'きた') not found in jp text
+        root.sections[0].items[0].lines[1].terms[2]: 'v_eki' (surface: '駅', checked: 'えき') not found in jp text
+        root.sections[0].items[0].lines[1].terms[5]: 'v_minami' (surface: '南', checked: 'みなみ') not found in jp text
+        root.sections[0].items[0].lines[1].terms[8]: 'v_ookii' (surface: '大きい', checked: 'おおきい') not found in jp text
+        root.sections[0].items[0].lines[1].terms[9]: 'v_mise' (surface: '店', checked: 'みせ') not found in jp text
+        root.sections[0].items[0].lines[2].terms[2]: 'v_higashi' (surface: '東', checked: 'ひがし') not found in jp text
+        root.sections[0].items[0].lines[2].terms[4]: 'v_nishi' (surface: '西', checked: 'にし') not found in jp text
+        root.sections[0].items[0].lines[2].terms[7]: 'v_nani' (surface: '何', checked: 'なに') not found in jp text
+        root.sections[0].items[0].lines[3].terms[0]: 'v_higashi' (surface: '東', checked: 'ひがし') not found in jp text
+        root.sections[0].items[0].lines[3].terms[2]: 'v_takai' (surface: '高い', checked: 'たかい') not found in jp text
+        root.sections[0].items[0].lines[3].terms[3]: 'v_yama' (surface: '山', checked: 'やま') not found in jp text
+        root.sections[0].items[0].lines[3].terms[6]: 'v_nishi' (surface: '西', checked: 'にし') not found in jp text
   ✗ reviews/N5.Review.9.json
       SURFACE MATCH ISSUES in N5.Review.9.json:
-        root.sections[0].items[0].lines[0].terms[7]: 'v_gogo' (surface: '午後') not found in jp text
-        root.sections[0].items[0].lines[1].terms[8]: 'v_shachou' (surface: '社長') not found in jp text
-        root.sections[0].items[0].lines[3].terms[8]: 'v_deguchi' (surface: '出口') not found in jp text
-        root.sections[0].items[1].lines[0].terms[2]: 'v_me' (surface: '目') not found in jp text
-        root.sections[0].items[1].lines[0].terms[5]: 'v_mimi' (surface: '耳') not found in jp text
-        root.sections[0].items[1].lines[1].terms[2]: 'v_shinbun' (surface: '新聞') not found in jp text
-        root.sections[0].items[1].lines[3].terms[9]: 'v_me' (surface: '目') not found in jp text
-        root.sections[2].passage[1].terms[4]: 'v_shachou' (surface: '社長') not found in jp text
-        root.sections[2].passage[3].terms[3]: 'v_mimi' (surface: '耳') not found in jp text
-        root.sections[2].passage[4].terms[6]: 'v_shakai' (surface: '社会') not found in jp text
-        root.sections[2].questions[0].q.terms[5]: 'v_gogo' (surface: '午後') not found in jp text
-        root.sections[4].items[0].q.terms[2]: 'v_iriguchi' (surface: '入り口') not found in jp text
-        root.sections[4].items[0].q.terms[5]: 'v_shachou' (surface: '社長') not found in jp text
-        root.sections[4].items[1].q.terms[2]: 'v_itai' (surface: 'いたい') not found in jp text
-        root.sections[4].items[2].q.terms[4]: 'v_kaiwa' (surface: '会話') not found in jp text
+        root.sections[0].items[0].lines[0].terms[4]: 'v_gozen' (surface: '午前', checked: 'ごぜん') not found in jp text
+        root.sections[0].items[0].lines[0].terms[7]: 'v_gogo' (surface: '午後', checked: 'ごご') not found in jp text
+        root.sections[0].items[0].lines[1].terms[0]: 'v_gogo' (surface: '午後', checked: 'ごご') not found in jp text
+        root.sections[0].items[0].lines[1].terms[2]: 'v_mainichi' (surface: '毎日', checked: 'まいにち') not found in jp text
+        root.sections[0].items[0].lines[1].terms[3]: 'v_kaisha' (surface: '会社', checked: 'かいしゃ') not found in jp text
+        root.sections[0].items[0].lines[1].terms[5]: 'v_iriguchi' (surface: '入り口', checked: 'いりぐち') not found in jp text
+        root.sections[0].items[0].lines[1].terms[8]: 'v_shachou' (surface: '社長', checked: 'しゃちょう') not found in jp text
+        root.sections[0].items[0].lines[2].terms[0]: 'v_shachou' (surface: '社長', checked: 'しゃちょう') not found in jp text
+        root.sections[0].items[0].lines[2].terms[2]: 'v_kaiwa' (surface: '会話', checked: 'かいわ') not found in jp text
+        root.sections[0].items[0].lines[3].terms[1]: 'v_shachou' (surface: '社長', checked: 'しゃちょう') not found in jp text
+        root.sections[0].items[0].lines[3].terms[3]: 'v_nihongo' (surface: '日本語', checked: 'にほんご') not found in jp text
+        root.sections[0].items[0].lines[3].terms[5]: 'v_kaiwa' (surface: '会話', checked: 'かいわ') not found in jp text
+        root.sections[0].items[0].lines[3].terms[8]: 'v_deguchi' (surface: '出口', checked: 'でぐち') not found in jp text
+        root.sections[0].items[1].lines[0].terms[2]: 'v_me' (surface: '目', checked: 'め') not found in jp text
+        root.sections[0].items[1].lines[0].terms[5]: 'v_mimi' (surface: '耳', checked: 'みみ') not found in jp text
 
 ── suru-compound (3 failures) ──
   ✗ lessons/N5.12.json

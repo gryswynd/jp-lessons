@@ -3,7 +3,8 @@
 > **Status:** Ready to start
 > **Started:** —
 > **Last updated:** 2026-03-25
-> **Audit baseline:** 68 files, 154 failures across 11 hooks (run `bash hooks/audit-all.sh N5` to regenerate)
+> **Audit baseline:** 68 files, 147 failures across 12 hooks (run `bash hooks/audit-all.sh N5` to regenerate)
+> **Previous baseline:** 154 failures (pre-fix: polite_masu scope + surface-match reading fallback)
 
 ---
 
@@ -15,29 +16,34 @@ Complete the N5 level: fix all existing content issues, then build the remaining
 
 | Content type | Count | Status |
 |---|---|---|
-| Lessons | 18/18 | Complete — **all 18 have issues** (639 total) |
-| Grammar (G1–G12) | 12/12 | Complete — **all 12 have issues** (296 total) |
-| Reviews | 10 (9 numbered + Final) | Complete — **all 10 have issues** (176 total) |
-| Compose | 18/18 | Complete — **16 clean, 2 have issues** (2 total) |
-| Stories | 10 | Complete — **all 10 have issues** (20 total — all missing meta.kanji) |
+| Lessons | 18/18 | Complete — **all 18 have issues** |
+| Grammar (G1–G12) | 12/12 | Complete — **all 12 have issues** |
+| Reviews | 10 (9 numbered + Final) | Complete — **all 10 have issues** |
+| Compose | 18/18 | Complete — **16 clean, 2 have issues** |
+| Stories | 10 | Complete — **all 10 have issues** (all missing meta.kanji) |
 | Game days | 1/18 (Day 1 only) | **17 game days needed** |
 
 ### Top failure patterns across N5
 
-| Hook | Failures | Files hit | Root cause |
-|---|---|---|---|
-| `surface-match` | 39 files | All lessons, grammar, reviews | Early vocab written in kanji before taught (v_kyou → '今日' but jp has きょう), character names |
-| `particle-context` | 23 files | Lessons N5.10+, all grammar | Missing `p_ka` on question sentences, particle disambiguation |
-| `structure` | 22 files | All grammar, all stories | Grammar Drill 1 has terms (should be terms-free), stories missing meta.kanji |
-| `chip-order` | 18 files | Scattered | Kana pair ordering (には, では, よね, だよ, のが) |
-| `term-ids` | 18 files | All lessons | k_* IDs used outside kanjiGrid (should be v_*) |
-| `form-scope` | 16 files | N5.1–N5.4, grammar G1–G6, reviews | polite_masu before N5.5, plain_desire_tai before G10 |
-| `grammar-schema` | 4 files | G1, G3, G4, G5 | Invalid color 'particle' / 'time' in pattern chips |
-| `kanji-scope` | 4 files | G5, G6, G8, G11 | Untaught kanji in jp text |
-| `register` | 4 files | N5.10, N5.12, N5.17, N5.18 | 0 casual conversations (N5.10+ requires ≥1) |
-| `suru-compound` | 3 files | N5.12, N5.13, Review 6 | v_manabu (noun_suru) used with conjugation form directly |
-| `compose` | 2 files | compose.N5.12, compose.N5.16 | Target vocab has no kanji (scoring is kanji-based) |
-| `writing-forms` | 1 file | N5.16 | いつか should be 五日 (kanji taught) |
+| Hook | Files failing | Root cause |
+|---|---|---|
+| `surface-match` | 39 | Early vocab written in kanji before taught (v_kyou → '今日' but jp has きょう), character names, Q&A question text mismatches |
+| `particle-context` | 23 | Missing `p_ka` on question sentences, particle disambiguation |
+| `structure` | 22 | Grammar Drill 1 has terms (should be terms-free), stories missing meta.kanji |
+| `chip-order` | 18 | Kana pair ordering (には, では, よね, だよ, のが) |
+| `term-ids` | 18 | k_* IDs used outside kanjiGrid (should be v_*) |
+| `form-scope` | 9 | ~~polite_masu before N5.5~~ (FIXED — moved to N5.1), plain_desire_tai before G10, da_past before G9 |
+| `grammar-schema` | 4 | Invalid color 'particle' / 'time' in pattern chips |
+| `kanji-scope` | 4 | Untaught kanji in jp text |
+| `register` | 4 | 0 casual conversations (N5.10+ requires ≥1) |
+| `suru-compound` | 3 | v_manabu (noun_suru) used with conjugation form directly |
+| `compose` | 2 | Target vocab has no kanji (scoring is kanji-based) |
+| `writing-forms` | 1 | いつか should be 五日 (kanji taught) |
+
+### Resolved since initial audit
+
+- **polite_masu scope** (7 files cleared): Moved `introducedIn` for polite_masu/mashita/negative/past_negative from N5.5 → N5.1. Cleared form-scope from N5.1, N5.2, N5.3, G2, G3, G4, N5.Review.2.
+- **surface-match reading fallback**: Hook now checks `reading` (hiragana) when `surface` contains untaught kanji. Reduces individual error count within files but most files still have remaining surface issues (character names, Q&A text mismatches).
 
 ---
 
@@ -47,21 +53,22 @@ Run every existing N5 file through the validation hooks and fix what they catch.
 
 ### 1a. Lessons (N5.1–N5.18) — 639 issues across 18 files
 
-- [ ] **N5.1** — 48 issues [`form-scope`, `particle-context`, `surface-match`, `term-ids`]
-  - `form-scope` (10): polite_negative/polite_masu used before N5.5 introducedIn
+- [ ] **N5.1** — 38 issues [`particle-context`, `surface-match`, `term-ids`]
+  - ~~`form-scope` (10): FIXED — polite_masu moved to N5.1~~
   - `particle-context` (1): Question sentence missing p_ka
-  - `surface-match` (15): v_nani (何) not found in jp (written as なに), plus 13 more
+  - `surface-match` (15): v_namae (名前→なまえ), v_nani (何→なに), v_sensei, v_hito, k_onna
   - `term-ids` (19): k_hito, k_otoko, k_onna + 16 more k_* IDs outside kanjiGrid
-- [ ] **N5.2** — 37 issues [`form-scope`, `surface-match`, `term-ids`]
-  - `form-scope` (10): polite_masu before N5.5
+- [ ] **N5.2** — 27 issues [`surface-match`, `term-ids`]
+  - ~~`form-scope` (10): FIXED — polite_masu moved to N5.1~~
   - `surface-match` (15): v_nani, v_kyou, v_kongetsu not matching jp text
   - `term-ids` (10): k_hi, k_tsuki, k_hi_2 + 7 more k_*
-- [ ] **N5.3** — 41 issues [`form-scope`, `surface-match`, `term-ids`]
-  - `form-scope` (10): polite_masu before N5.5
+- [ ] **N5.3** — 31 issues [`surface-match`, `term-ids`]
+  - ~~`form-scope` (10): FIXED — polite_masu moved to N5.1~~
   - `surface-match` (15): v_tomodachi, v_sensei not matching jp text
   - `term-ids` (14): k_hito_2, k_futa, k_mi + 11 more k_*
-- [ ] **N5.4** — 32 issues [`form-scope`, `surface-match`, `term-ids`]
-  - `form-scope` (10): polite_masu before N5.5
+- [ ] **N5.4** — 24 issues [`form-scope`, `surface-match`, `term-ids`]
+  - ~~`form-scope` (10): polite_masu FIXED~~
+  - `form-scope` (2): plain_past_adj before G10
   - `surface-match` (15): v_kyou, v_mainichi not matching jp text
   - `term-ids` (5): k_toki, k_wa, k_toshi + 2 more k_*
 - [ ] **N5.5** — 26 issues [`chip-order`, `surface-match`, `term-ids`]
@@ -141,23 +148,23 @@ Run every existing N5 file through the validation hooks and fix what they catch.
   - `particle-context` (5): Missing p_ka on drill questions
   - `structure` (5): Drill 1 has terms (must be terms-free)
   - `surface-match` (11): v_sensei not matching jp text
-- [ ] **G2** — 25 issues [`form-scope`, `particle-context`, `structure`, `surface-match`]
-  - `form-scope` (1): polite_negative before N5.5
+- [ ] **G2** — 24 issues [`particle-context`, `structure`, `surface-match`]
+  - ~~`form-scope` (1): FIXED — polite_negative moved to N5.1~~
   - `particle-context` (1): Missing p_ka
   - `structure` (4): Drill 1 has terms
-  - `surface-match` (15): char_rikizo, v_nan not matching jp text
-- [ ] **G3** — 22 issues [`form-scope`, `grammar-schema`, `particle-context`, `structure`, `surface-match`]
-  - `form-scope` (1): polite_masu before N5.5
+  - `surface-match` (15): char_rikizo, v_namae, v_hito not matching jp text
+- [ ] **G3** — 21 issues [`grammar-schema`, `particle-context`, `structure`, `surface-match`]
+  - ~~`form-scope` (1): FIXED — polite_masu moved to N5.1~~
   - `grammar-schema` (5): Invalid color 'particle' in pattern chips
   - `particle-context` (3): Missing p_ka
   - `structure` (6): Drill 1 has terms
-  - `surface-match` (3): v_haha, v_dare not matching jp text
-- [ ] **G4** — 25 issues [`form-scope`, `grammar-schema`, `particle-context`, `structure`, `surface-match`]
-  - `form-scope` (5): polite_masu before N5.5
+  - `surface-match` (4): v_haha, v_dare, v_sensei, v_tomodachi not matching jp text
+- [ ] **G4** — 20 issues [`grammar-schema`, `particle-context`, `structure`, `surface-match`]
+  - ~~`form-scope` (5): FIXED — polite_masu moved to N5.1~~
   - `grammar-schema` (7): Invalid color 'particle' / 'time'
   - `particle-context` (1): Missing p_ka
   - `structure` (5): Drill 1 has terms
-  - `surface-match` (3): v_sensei, v_tomodachi not matching
+  - `surface-match` (12): v_sensei, v_getsuyoubi, v_kinyoubi, v_tomodachi + day-of-week kanji not matching
 - [ ] **G5** — 14 issues [`chip-order`, `grammar-schema`, `kanji-scope`, `structure`, `surface-match`]
   - `chip-order` (1): では pair
   - `grammar-schema` (3): Invalid color 'particle'
@@ -204,8 +211,8 @@ Run every existing N5 file through the validation hooks and fix what they catch.
 
 - [ ] **N5.Review.1** — 16 issues [`surface-match`]
   - `surface-match` (15): v_chichi, v_sensei not matching jp text
-- [ ] **N5.Review.2** — 21 issues [`form-scope`, `surface-match`]
-  - `form-scope` (10): polite_masu before N5.5
+- [ ] **N5.Review.2** — 11 issues [`surface-match`]
+  - ~~`form-scope` (10): FIXED — polite_masu moved to N5.1~~
   - `surface-match` (9): v_kongetsu, v_konshuu not matching
 - [ ] **N5.Review.3** — 16 issues [`chip-order`, `surface-match`]
   - `chip-order` (2): では, にも pairs
@@ -327,5 +334,5 @@ Build the remaining 17 game days following the N5_GAME_ROADMAP.md spec.
 - [ ] Game day JSON schema — does GAME_SYSTEMS.md define the format, or do we need to design it from Day 1's structure?
 - [ ] Art assets — which game days need new backgrounds/sprites? (Coordinate with RikizoArtPipeline.md)
 - [ ] How much narrative scripting per day vs. free exploration?
-- [ ] `form-scope`: polite_masu is flagged in N5.1–N5.4 but those lessons use polite speech — is the introducedIn for polite_masu intentionally set to N5.5, or should it be N5.1? This affects 40+ issues across 6 files.
-- [ ] `surface-match`: ~15 surface mismatches per lesson appear systemic — are these kanji-vs-kana writing form issues (glossary surface has kanji but jp text uses kana)?
+- [x] ~~`form-scope`: polite_masu introducedIn~~ — **RESOLVED**: Moved polite_masu/mashita/negative/past_negative from N5.5 → N5.1. Cleared 7 files.
+- [x] ~~`surface-match`: systemic kanji-vs-kana mismatches~~ — **RESOLVED**: Hook now falls back to glossary `reading` field when `surface` contains untaught kanji. Remaining surface-match failures are genuine content issues (character names in wrong form, Q&A question text not containing tagged terms).
