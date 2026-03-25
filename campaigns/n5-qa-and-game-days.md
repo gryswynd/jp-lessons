@@ -42,6 +42,8 @@ Complete the N5 level: fix all existing content issues, then build the remaining
 
 ### Resolved since initial audit
 
+- **grammar Drill 1 terms** (12 files cleared): Stripped `terms[]` from all Drill 1 items across G1–G12 (FM #6). Drill 1 is free-form production — no chip hints.
+- **grammar-schema colors** (4 files cleared): Remapped `particle→connector`, `time→modifier` in pattern chips for G1, G3, G4, G5.
 - **stories meta.kanji** (10 files cleared): Exempted story `terms.json` files from FM #12 in `validate-structure.sh` — `meta.kanji` has no functional role in stories.
 - **polite_masu scope** (7 files cleared): Moved `introducedIn` for polite_masu/mashita/negative/past_negative from N5.5 → N5.1. Cleared form-scope from N5.1, N5.2, N5.3, G2, G3, G4, N5.Review.2.
 - **surface-match reading fallback**: Hook now checks `reading` (hiragana) when `surface` contains untaught kanji. Reduces individual error count within files but most files still have remaining surface issues (character names, Q&A text mismatches).
