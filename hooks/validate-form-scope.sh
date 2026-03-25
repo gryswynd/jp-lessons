@@ -41,6 +41,16 @@ if not os.path.exists(conj_path) or not os.path.exists(manifest_path):
 with open(conj_path) as f:
     conj_rules = json.load(f)
 
+# Load particle scope gates
+particles_path = os.path.join(repo_root, 'shared', 'particles.json')
+particle_scope = {}
+if os.path.exists(particles_path):
+    with open(particles_path) as f:
+        pdata = json.load(f)
+    for p in pdata.get('particles', []):
+        if p.get('introducedIn'):
+            particle_scope[p['id']] = p['introducedIn']
+
 # Use shared lesson ordering
 sys.path.insert(0, os.path.join(repo_root, 'hooks'))
 from lib_lesson_order import build_lesson_order
@@ -63,7 +73,14 @@ def check_forms(obj, path="root"):
             check_forms(v, f"{path}.{k}")
     elif isinstance(obj, list):
         for i, item in enumerate(obj):
-            check_forms(item, f"{path}[{i}]")
+            if isinstance(item, str) and item in particle_scope:
+                introduced = particle_scope[item]
+                t_ord = lesson_order.get(lesson_id)
+                i_ord = lesson_order.get(introduced)
+                if t_ord is not None and i_ord is not None and i_ord > t_ord:
+                    errors.append(f"  particle '{item}' (introducedIn: {introduced}) at {path}[{i}] — out of scope for {lesson_id}")
+            else:
+                check_forms(item, f"{path}[{i}]")
 
 check_forms(content)
 

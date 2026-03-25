@@ -66,12 +66,16 @@ def check_line(jp, terms, path):
                 errors.append(f"  WARN {path}.terms[{i}]: p_kara — check if this から follows a verb/adj/です (if so → p_kara_because)")
 
     # FM #35b: p_kara used after て-form → should be p_tekara (sequential 'after doing')
+    # FM #35b-ext: てから/でから in jp but p_tekara missing entirely from terms[]
     jp_nospace = jp.replace(' ', '')
     if 'てから' in jp_nospace or 'でから' in jp_nospace:
         for i, t in enumerate(terms):
             tid = t if isinstance(t, str) else t.get('id', '')
             if tid == 'p_kara':
                 errors.append(f"  ERROR {path}.terms[{i}]: p_kara but jp contains てから/でから → use p_tekara (sequential 'after doing', G19)")
+        has_tekara = any((t if isinstance(t, str) else t.get('id', '')) == 'p_tekara' for t in terms)
+        if not has_tekara:
+            errors.append(f"  ERROR {path}: jp has てから/でから but p_tekara missing from terms[] — add p_tekara after the て-form (G19)")
 
     # FM #37: と after 」or 思う → should be p_to_quote
     if '」と' in jp or re.search(r'と(思|おも|知|し)', jp):
