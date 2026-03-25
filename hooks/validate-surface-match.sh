@@ -116,21 +116,16 @@ def is_pure_kanji(s):
 
 def surface_found_in_jp(surface, matches, jp_orig, jp_clean):
     """Check if surface (or any match) appears in jp text.
-    For short pure-kanji surfaces (≤2 chars), uses prefix-token matching to avoid
-    substring false positives like 所 (v_tokoro) appearing inside 場所 (v_basho).
-    Japanese nouns appear at the start of a whitespace- or punctuation-delimited token
-    followed by a particle (場所は), so startswith() catches the noun while rejecting
-    kanji that only appear embedded mid-compound.
-    Splits on both spaces AND after sentence-final punctuation (。！？) to handle
-    multi-sentence jp strings where periods aren't always followed by a space."""
+    For short pure-kanji surfaces (≤2 chars), uses a negative CJK lookbehind to avoid
+    false positives where a kanji appears embedded inside a longer compound
+    (e.g. 所 inside 場所) while still matching when preceded by hiragana, katakana,
+    punctuation, or a name (e.g. 先生 in すずき先生は, 人 in 男の人)."""
     all_forms = [surface] + matches
     if is_pure_kanji(surface) and len(surface) <= 2:
-        # Split on whitespace, then further split on sentence boundaries (after 。！？)
-        rough_tokens = jp_orig.split()
-        tokens = []
-        for tok in rough_tokens:
-            tokens.extend(t for t in _re.split(r'(?<=[。！？])', tok) if t)
-        return any(tok.startswith(f) for tok in tokens for f in all_forms)
+        for f in all_forms:
+            if _re.search(r'(?<![\u4e00-\u9fff])' + _re.escape(f), jp_clean):
+                return True
+        return False
     return any(f in jp_clean for f in all_forms)
 
 def check_surface(jp, terms, path):
@@ -191,9 +186,10 @@ def check_surface(jp, terms, path):
         surface = info['surface']
         matches = info['matches']
         # If surface contains untaught kanji, fall back to reading (hiragana form)
+        # Keep matches that contain only taught kanji (partial-kanji forms like 名まえ)
         if surface_has_untaught_kanji(surface) and info.get('reading'):
             surface = info['reading']
-            matches = []  # matches are kanji-based, not useful for reading fallback
+            matches = [m for m in matches if not surface_has_untaught_kanji(m)]
         if not surface_found_in_jp(surface, matches, jp, jp_clean):
             errors.append(f"  {path}.terms[{i}]: '{tid}' (surface: '{info['surface']}', checked: '{surface}') not found in jp text")
 
@@ -201,9 +197,16 @@ def walk(obj, path="root"):
     if isinstance(obj, dict):
         if 'jp' in obj and 'terms' in obj:
             check_surface(obj['jp'], obj['terms'], path)
-        # Also check Q&A question fields — these have q/a/terms but no jp key
+        # Q&A items: terms span both q and a/answer fields.
+        # Reading questions have q+a; MCQ drills have q+answer where answer fills the blank.
         if 'q' in obj and 'terms' in obj:
-            check_surface(obj['q'], obj['terms'], path + '.q')
+            q_text = obj['q']
+            if 'a' in obj and isinstance(obj['a'], str):
+                q_text = q_text + ' ' + obj['a']
+            elif 'answer' in obj and isinstance(obj['answer'], str):
+                # Substitute answer into blank slot to reconstruct the full sentence
+                q_text = q_text.replace('_______', obj['answer'])
+            check_surface(q_text, obj['terms'], path + '.q')
         for k, v in obj.items():
             walk(v, f"{path}.{k}")
     elif isinstance(obj, list):
