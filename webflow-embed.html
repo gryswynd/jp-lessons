@@ -143,7 +143,26 @@ window.JPApp = {
       'text-align:center;box-shadow:0 10px 40px rgba(0,0,0,0.2);animation:jpFadeIn 0.4s;}' +
       '.jp-return-jp{font-size:1.4rem;font-weight:700;margin-bottom:8px;color:#4e54c8;}' +
       '.jp-return-text{font-size:1rem;color:#555;margin-bottom:16px;}' +
+      '.jp-return-belt{width:100px;height:auto;margin:8px auto 12px;display:block;' +
+      'filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15));}' +
+      '.jp-rankup-card{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);' +
+      'border-radius:20px;padding:30px;max-width:360px;text-align:center;position:relative;' +
+      'box-shadow:0 10px 40px rgba(0,0,0,0.4);animation:jpFadeIn 0.4s;overflow:hidden;}' +
+      '.jp-rankup-rikizo{width:80px;height:80px;border-radius:50%;margin:0 auto 12px;' +
+      'border:3px solid rgba(255,255,255,0.3);animation:jpBounce 0.6s ease 0.3s both;}' +
+      '.jp-rankup-title{font-size:0.85rem;text-transform:uppercase;letter-spacing:2px;' +
+      'color:rgba(255,255,255,0.6);margin-bottom:4px;}' +
+      '.jp-rankup-stage{font-size:1.8rem;font-weight:900;margin-bottom:4px;}' +
+      '.jp-rankup-stage-jp{font-size:1.1rem;color:rgba(255,255,255,0.7);margin-bottom:16px;}' +
+      '.jp-rankup-belt{width:140px;height:auto;margin:0 auto 16px;display:block;' +
+      'filter:drop-shadow(0 4px 12px rgba(0,0,0,0.3));animation:jpScaleIn 0.5s ease 0.2s both;}' +
+      '.jp-rankup-streak{font-size:0.9rem;color:rgba(255,255,255,0.5);margin-bottom:16px;}' +
+      '.jp-rankup-particles{position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;overflow:hidden;}' +
+      '.jp-rankup-particle{position:absolute;border-radius:50%;opacity:0;}' +
       '@keyframes jpFadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}' +
+      '@keyframes jpBounce{0%{transform:scale(0)}60%{transform:scale(1.15)}100%{transform:scale(1)}}' +
+      '@keyframes jpScaleIn{0%{transform:scale(0) rotate(-10deg);opacity:0}' +
+      '60%{transform:scale(1.1) rotate(3deg);opacity:1}100%{transform:scale(1) rotate(0);opacity:1}}' +
       '</style>';
 
     // Helper — build a module button or nothing if gated+locked.
@@ -246,6 +265,14 @@ window.JPApp = {
     var streak = window.JPShared && window.JPShared.streak;
     if (!streak) return;
     var s = streak.getState();
+
+    // Check for pending rank-up first (takes priority over normal return message)
+    var rankUp = streak.consumeRankUp();
+    if (rankUp) {
+      this._showRankUpPopup(rankUp, s);
+      return;
+    }
+
     // Only show if user has been away (daysAway > 0)
     if (s.daysAway === 0) return; // already active today
     if (s.daysAway === -1) return; // brand new user, no message needed
@@ -270,12 +297,26 @@ window.JPApp = {
     if (window._rikizo_return_shown) return;
     window._rikizo_return_shown = true;
 
+    // Belt image for streakAlive popup
+    var beltMap = {
+      beginner: 'belt-white', daily: 'belt-yellow', week: 'belt-green',
+      fortnight: 'belt-blue', month: 'belt-purple', season: 'belt-brown', legend: 'belt-black'
+    };
+    var beltFile = (beltMap[s.stage.key] || 'belt-white') + '.png';
+    var beltSrc = 'https://raw.githubusercontent.com/' +
+      this.config.owner + '/' + this.config.repo + '/' +
+      this.config.branch + '/assets/ui/' + beltFile;
+    var beltHtml = s.current > 0
+      ? '<img class="jp-return-belt" src="' + beltSrc + '" alt="' + s.stage.en + ' belt">'
+      : '';
+
     var overlay = document.createElement('div');
     overlay.className = 'jp-return-overlay';
     overlay.innerHTML =
       '<div class="jp-return-card">' +
         '<div class="jp-return-jp">' + (msg.jp || '') + '</div>' +
         '<div class="jp-return-text">' + msg.text + '</div>' +
+        beltHtml +
         (s.current > 0
           ? '<div style="font-size:0.9rem;color:#888;margin-bottom:12px;">\uD83D\uDD25 ' + s.current + ' day streak</div>'
           : '') +
@@ -291,6 +332,85 @@ window.JPApp = {
     document.body.appendChild(overlay);
     // Auto-dismiss after 5 seconds
     setTimeout(function() { if (overlay.parentNode) overlay.remove(); }, 5000);
+  },
+
+  // --- RANK-UP CELEBRATION POPUP ---
+  _showRankUpPopup: function(stage, streakState) {
+    if (window._rikizo_return_shown) return;
+    window._rikizo_return_shown = true;
+
+    var beltMap = {
+      beginner: 'belt-white', daily: 'belt-yellow', week: 'belt-green',
+      fortnight: 'belt-blue', month: 'belt-purple', season: 'belt-brown', legend: 'belt-black'
+    };
+    var beltFile = (beltMap[stage.key] || 'belt-white') + '.png';
+    var baseUrl = 'https://raw.githubusercontent.com/' +
+      this.config.owner + '/' + this.config.repo + '/' +
+      this.config.branch;
+    var beltSrc = baseUrl + '/assets/ui/' + beltFile;
+    var rikizoSrc = baseUrl + '/assets/characters/rikizo/rikizo_head.png';
+
+    var overlay = document.createElement('div');
+    overlay.className = 'jp-return-overlay';
+    overlay.innerHTML =
+      '<div class="jp-rankup-card">' +
+        '<div class="jp-rankup-particles" id="jp-rankup-particles"></div>' +
+        '<img class="jp-rankup-rikizo" src="' + rikizoSrc + '" alt="Rikizo">' +
+        '<div class="jp-rankup-title">Rank Up!</div>' +
+        '<div class="jp-rankup-stage" style="color:' + stage.color + ';">' + stage.en + '</div>' +
+        '<div class="jp-rankup-stage-jp">' + stage.jp + '</div>' +
+        '<img class="jp-rankup-belt" src="' + beltSrc + '" alt="' + stage.en + ' belt">' +
+        '<div class="jp-rankup-streak">\uD83D\uDD25 ' + streakState.current + ' day streak</div>' +
+        '<button onclick="this.closest(\'.jp-return-overlay\').remove()" ' +
+          'style="background:' + stage.color + ';color:white;border:none;padding:12px 32px;' +
+          'border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;' +
+          'box-shadow:0 4px 15px ' + stage.color + '66;position:relative;z-index:1;">' +
+          'Let\'s Go!' +
+        '</button>' +
+      '</div>';
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) overlay.remove();
+    });
+    document.body.appendChild(overlay);
+
+    // Launch hanabi particles
+    var container = document.getElementById('jp-rankup-particles');
+    if (container) {
+      var colors = [stage.color, '#FFD700', '#FF6B6B', '#4ECDC4', '#A78BFA'];
+      var burstPoints = [
+        { x: 0.2, y: 0.2 }, { x: 0.8, y: 0.2 },
+        { x: 0.5, y: 0.15 }, { x: 0.3, y: 0.8 }, { x: 0.7, y: 0.8 }
+      ];
+      burstPoints.forEach(function(bp, bIdx) {
+        for (var i = 0; i < 8; i++) {
+          var p = document.createElement('div');
+          p.className = 'jp-rankup-particle';
+          var angle = (Math.PI * 2 * i / 8) + (Math.random() * 0.3);
+          var dist = 40 + Math.random() * 80;
+          var color = colors[Math.floor(Math.random() * colors.length)];
+          var size = 4 + Math.random() * 6;
+          var delay = bIdx * 120 + Math.random() * 150;
+          var dx = Math.cos(angle) * dist;
+          var dy = Math.sin(angle) * dist;
+          p.style.cssText = 'left:' + (bp.x * 100) + '%;top:' + (bp.y * 100) + '%;' +
+            'width:' + size + 'px;height:' + size + 'px;background:' + color + ';' +
+            'box-shadow:0 0 ' + (size + 2) + 'px ' + color + ';' +
+            'transition:transform 1s cubic-bezier(0.25,0.46,0.45,0.94),opacity 1s ease-out;' +
+            'transition-delay:' + delay + 'ms;';
+          container.appendChild(p);
+          (function(particle, tdx, tdy) {
+            requestAnimationFrame(function() { requestAnimationFrame(function() {
+              particle.style.opacity = '1';
+              particle.style.transform = 'translate(' + tdx + 'px,' + tdy + 'px)';
+              setTimeout(function() { particle.style.opacity = '0'; }, delay + 400);
+            }); });
+          })(p, dx, dy);
+        }
+      });
+    }
+
+    // Auto-dismiss after 8 seconds (longer for celebration)
+    setTimeout(function() { if (overlay.parentNode) overlay.remove(); }, 8000);
   },
 
   // --- REMINDER SETTINGS (accessible from main menu before modules load) ---
