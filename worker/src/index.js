@@ -15,6 +15,7 @@ import { handleRegister } from './routes/register.js';
 import { handleHeartbeat } from './routes/heartbeat.js';
 import { handleUnsubscribe } from './routes/unsubscribe.js';
 import { handleScheduled } from './cron/daily-check.js';
+import { RIKIZO_HEAD_PNG } from './assets/rikizo-head.js';
 
 function corsHeaders(env) {
   return {
@@ -50,6 +51,17 @@ export default {
         response = await handleHeartbeat(request, env);
       } else if (path === '/unsubscribe' && request.method === 'GET') {
         response = await handleUnsubscribe(request, env);
+      } else if (path === '/assets/rikizo-head.png' && request.method === 'GET') {
+        var imgBytes = Uint8Array.from(atob(RIKIZO_HEAD_PNG), c => c.charCodeAt(0));
+        response = new Response(imgBytes, {
+          status: 200,
+          headers: { 'Content-Type': 'image/png', 'Cache-Control': 'public, max-age=86400' }
+        });
+      } else if (path === '/_test-cron' && request.method === 'POST') {
+        await handleScheduled(env);
+        response = new Response(JSON.stringify({ ok: true, message: 'Cron triggered' }), {
+          status: 200, headers: { 'Content-Type': 'application/json' }
+        });
       } else {
         response = new Response(JSON.stringify({ error: 'Not found' }), { status: 404 });
       }

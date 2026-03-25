@@ -21,7 +21,7 @@ export function buildReminderEmail({ name, message, streakCount, daysAway, appUr
 
     // Header
     '<tr><td style="background:linear-gradient(135deg,#4e54c8,#8f94fb);padding:24px;text-align:center;">' +
-    '<div style="font-size:40px;line-height:1;">🦝</div>' +
+    '<img src="https://rikizo-reminders.gryswynd.workers.dev/assets/rikizo-head.png" alt="Rikizo" width="60" height="60" style="border-radius:50%;border:2px solid white;">' +
     '<h1 style="color:white;margin:8px 0 0;font-size:20px;font-weight:700;">Rikizo says...</h1>' +
     '</td></tr>' +
 
