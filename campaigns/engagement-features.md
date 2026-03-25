@@ -1,9 +1,9 @@
 # Engagement Features Campaign — Daily Reminders, Streaks & Widget
 
-> **Status:** Active — Phase 1 (Streak Engine) complete, Phase 2 pivoted to email/SMS reminders
+> **Status:** Active — Phase 2 (Email Reminders) built, awaiting deployment
 > **Started:** 2026-03-24
-> **Last updated:** 2026-03-24
-> **Decision:** Capacitor wrapper deferred until game + content are further along. Phase 2 pivoted to lightweight email/SMS reminders via Cloudflare Worker — no app store submission needed.
+> **Last updated:** 2026-03-25
+> **Decision:** Email reminders via Resend + Cloudflare Worker. Self-service opt-in. Client will set up Cloudflare + Resend accounts, then deploy.
 
 ---
 
@@ -135,17 +135,22 @@ Lightweight server-side reminder system using the existing web app. No Capacitor
 - Student identifier: simple unique ID or name (no auth system needed for small groups)
 - Optional: settings page for students to manage their reminder preferences
 
-**Waiting on client answers:**
-- [ ] How many students? (determines option A vs B)
-- [ ] Email, text, or let them choose?
+**Client decisions (resolved):**
+- [x] How many students? → Self-service opt-in (students sign up themselves)
+- [x] Email, text, or let them choose? → Email only (stopgap until app notifications)
+- [ ] Sender domain: company domain or rikizo-themed domain (e.g. rikizo.app)?
 
 **Deliverables:**
-- [ ] Cloudflare Worker: student registry + last-active tracking + daily cron
-- [ ] Email integration (Resend or SendGrid)
-- [ ] SMS integration (Twilio) — if client wants text
-- [ ] Web app: server ping on activity
-- [ ] Student registration flow (admin list or self-service form)
-- [ ] Rikizo message selection logic (reuses `rikizo-messages.json` escalation tiers)
+- [x] Cloudflare Worker: student registry + last-active tracking + daily cron (`worker/`)
+- [x] Email integration (Resend API) (`worker/src/email/`)
+- [x] Web app: server ping on activity (`app/shared/streak.js` — `pingServer()`)
+- [x] Student self-service opt-in form (`app/shared/reminder-settings.js`)
+- [x] Menu integration: envelope icon with registration indicator (`webflow-embed.html`)
+- [x] Rikizo message escalation tiers: 7 tiers from streakAlive → streakAbsurd (`rikizo-messages.json`)
+- [ ] **Client:** Create Cloudflare account + deploy Worker
+- [ ] **Client:** Create Resend account + verify sender domain
+- [ ] **Client:** Set Worker secrets (RESEND_API_KEY, HMAC_SECRET, SENDER_EMAIL, CORS_ORIGIN)
+- [ ] Replace placeholder WORKER_URL in `streak.js` and `reminder-settings.js` with deployed URL
 
 ---
 
@@ -302,10 +307,11 @@ Process via `RikizoArtPipeline.md`. The pipeline already has "4 calm + 4-5 inten
 
 | Component | Service | Cost | Phase |
 |---|---|---|---|
-| Push notification backend | Cloudflare Worker + KV | Free tier (100k requests/day) | 2 |
-| Firebase project | Firebase Cloud Messaging | Free (unlimited push) | 2 |
-| Apple Developer account | developer.apple.com | $99/year | 2 |
-| Google Play Developer account | play.google.com/console | $25 one-time | 2 |
+| Reminder backend | Cloudflare Worker + KV | Free tier (100k requests/day) | 2 |
+| Email sending | Resend | Free tier (100 emails/day, 3000/mo) | 2 |
+| Sender domain | Your domain or new rikizo domain | ~$12/year if new | 2 |
+| Apple Developer account | developer.apple.com | $99/year | 2b |
+| Google Play Developer account | play.google.com/console | $25 one-time | 2b |
 
 ---
 

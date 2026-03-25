@@ -1,0 +1,19 @@
+name = "rikizo-reminders"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# KV namespace — create with: wrangler kv namespace create RIKIZO_STUDENTS
+# Then paste the returned id below.
+[[kv_namespaces]]
+binding = "RIKIZO_STUDENTS"
+id = "7779c3201a5945109643dce57a44a92e"
+
+# Daily cron — 00:00 UTC (09:00 JST). Adjust if students are in a different timezone.
+[triggers]
+crons = ["0 0 * * *"]
+
+# Secrets (set via wrangler secret put):
+#   RESEND_API_KEY   — from https://resend.com/api-keys
+#   HMAC_SECRET      — generate with: openssl rand -hex 32
+#   SENDER_EMAIL     — verified sender address (e.g. rikizo@yourdomain.com)
+#   CORS_ORIGIN      — your Webflow domain (e.g. https://yoursite.webflow.io)

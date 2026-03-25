@@ -164,7 +164,10 @@ window.JPApp = {
 
     var html = style +
       '<div class="jp-main-menu" style="position:relative;">' +
-        '<button onclick="JPApp.openTtsSettings()" title="Voice Settings" style="position:absolute;top:15px;right:15px;background:rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.1);color:#666;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1.3rem;display:flex;align-items:center;justify-content:center;padding:0;">\u2699</button>' +
+        '<div style="position:absolute;top:15px;right:15px;display:flex;gap:8px;">' +
+          '<button onclick="JPApp.openReminderSettings()" title="Daily Reminders" style="background:rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.1);color:#666;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1.3rem;display:flex;align-items:center;justify-content:center;padding:0;position:relative;">\u2709\uFE0F' + (localStorage.getItem('k-reminder-student-id') ? '<span style="position:absolute;top:2px;right:2px;width:8px;height:8px;background:#4CAF50;border-radius:50%;border:2px solid white;"></span>' : '') + '</button>' +
+          '<button onclick="JPApp.openTtsSettings()" title="Voice Settings" style="background:rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.1);color:#666;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1.3rem;display:flex;align-items:center;justify-content:center;padding:0;">\u2699</button>' +
+        '</div>' +
         '<h1 style="color:#2f3542;font-weight:900;">\uD83C\uDDEF\uD83C\uDDF5 Japanese Master</h1>' +
         this._buildStreakBar() +
         // Lessons — always visible
@@ -288,6 +291,23 @@ window.JPApp = {
     document.body.appendChild(overlay);
     // Auto-dismiss after 5 seconds
     setTimeout(function() { if (overlay.parentNode) overlay.remove(); }, 5000);
+  },
+
+  // --- REMINDER SETTINGS (accessible from main menu before modules load) ---
+  openReminderSettings: async function() {
+    if (window.JPShared && window.JPShared.reminderSettings) {
+      window.JPShared.reminderSettings.open();
+      return;
+    }
+    try {
+      window.JPShared = window.JPShared || {};
+      await this.loadModule('app/shared/reminder-settings.js');
+      if (window.JPShared.reminderSettings) {
+        window.JPShared.reminderSettings.open();
+      }
+    } catch (e) {
+      console.error('Could not load reminder settings:', e);
+    }
   },
 
   // --- TTS SETTINGS (accessible from main menu before modules load) ---
