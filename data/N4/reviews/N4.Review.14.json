@@ -90,24 +90,23 @@
           "explanation": "B suggests meeting at the station waiting room (駅の待ち合い室)."
         },
         {
-          "title": "Conversation 2",
-          "context": "Two friends discussing what life is like in a mountain village.",
+          "title": "Conversation 2 (Casual)",
+          "context": "Two close friends talking about a mountain village one of them visited.",
           "lines": [
             {
               "spk": "A",
-              "jp": "山村は どんな 所ですか。",
+              "jp": "山村は どんな 所？",
               "terms": [
                 "v_sanson",
                 "p_wa",
                 "v_donna",
                 "v_tokoro",
-                "g_desu",
                 "p_ka"
               ]
             },
             {
               "spk": "B",
-              "jp": "林や 池が あって、とても きれいな 所です。",
+              "jp": "林や 池が あって、とても きれいな 所だよ。",
               "terms": [
                 "v_hayashi",
                 "p_ya",
@@ -117,12 +116,13 @@
                 "v_totemo",
                 { "id": "v_kirei", "form": "attributive_na" },
                 "v_tokoro",
-                "g_desu"
+                "p_yo",
+                "g_da"
               ]
             },
             {
               "spk": "A",
-              "jp": "村人は 毎日 何を して いますか。",
+              "jp": "村人は 毎日 何を して いる？",
               "terms": [
                 "v_murabito",
                 "p_wa",
@@ -130,13 +130,13 @@
                 "v_nani",
                 "p_wo",
                 { "id": "v_suru", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_masu" },
+                { "id": "v_iru", "form": "plain_form" },
                 "p_ka"
               ]
             },
             {
               "spk": "B",
-              "jp": "山林で 仕事を したり 林の 中を 歩いたり して います。",
+              "jp": "山林で 仕事を したり 林の 中を 歩いたり して いるよ。",
               "terms": [
                 "v_sanrin",
                 "p_de",
@@ -149,7 +149,8 @@
                 "p_wo",
                 { "id": "v_aruku", "form": "tari_form" },
                 { "id": "v_suru", "form": "te_form" },
-                { "id": "v_iru", "form": "polite_masu" }
+                { "id": "v_iru", "form": "plain_form" },
+                "p_yo"
               ]
             }
           ],
@@ -324,8 +325,7 @@
             { "counter": "ji", "n": 7 },
             "p_ni",
             { "id": "v_kuru", "form": "plain_form" },
-            "p_sou_da_hearsay",
-            "g_desu"
+            "p_sou_da_hearsay"
           ]
         },
         {
@@ -335,7 +335,7 @@
             "v_yuugata",
             "p_ni",
             { "id": "v_naru", "form": "plain_form" },
-            "p_to",
+            "p_to_conditional",
             "v_sensei",
             "p_ga",
             "v_seimon",
@@ -404,7 +404,7 @@
             "v_yuugata",
             "p_ni",
             { "id": "v_naru", "form": "plain_form" },
-            "p_to",
+            "p_to_conditional",
             "v_sensei",
             "p_wa",
             "v_doko",
