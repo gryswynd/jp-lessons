@@ -170,7 +170,7 @@
         },
         {
           "label": "World & Photography",
-          "items": ["v_shashin", "v_sekai", "v_sekaijuu", "v_jibun", "v_mannaka", "v_masshiro", "v_utsusu", "v_toru"]
+          "items": ["v_shashin", "v_kamera", "v_sekai", "v_sekaijuu", "v_jibun", "v_mannaka", "v_masshiro", "v_utsusu", "v_toru"]
         }
       ]
     },
@@ -209,10 +209,12 @@
         },
         {
           "spk": "A",
-          "jp": "旅先で 写真も とりますか。",
-          "en": "Do you also take photos at your travel destinations?",
+          "jp": "旅先で カメラで 写真も とりますか。",
+          "en": "Do you also take photos with a camera at your travel destinations?",
           "terms": [
             "v_tabisaki",
+            "p_de",
+            "v_kamera",
             "p_de",
             "v_shashin",
             "p_mo",
