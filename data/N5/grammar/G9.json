@@ -1068,16 +1068,7 @@
             "I want to eat"
           ],
           "answer": "I am eating",
-          "terms": [
-            {
-              "id": "v_taberu",
-              "form": "te_form"
-            },
-            {
-              "id": "v_iru",
-              "form": "polite_masu"
-            }
-          ],
+          "terms": [],
           "explanation": "ている = て-form + います. Expresses an ongoing action: 食べて + います = 'is eating'. The て-form connects to いる which carries the tense."
         },
         {
@@ -1090,15 +1081,7 @@
             "プレゼントを 買います たい。"
           ],
           "answer": "プレゼントを 買いたいです。",
-          "terms": [
-            "v_purezento",
-            "p_wo",
-            {
-              "id": "v_kau",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
-          ],
+          "terms": [],
           "explanation": "たいです attaches to the ます-stem (い-row). 買う → 買い (stem) + たいです = 買いたいです. It replaces ます, not adds to it."
         },
         {
@@ -1111,14 +1094,7 @@
             "レストランで 食べています。"
           ],
           "answer": "レストランで 食べましょう。",
-          "terms": [
-            "v_resutoran",
-            "p_de",
-            {
-              "id": "v_taberu",
-              "form": "polite_volitional_mashou"
-            }
-          ],
+          "terms": [],
           "explanation": "ましょう attaches to the ます-stem. 食べる → 食べ (stem) + ましょう = 食べましょう. It expresses 'let's eat' — a polite invitation to share the action."
         },
         {
@@ -1131,14 +1107,7 @@
             "Let's not drink coffee."
           ],
           "answer": "I don't want to drink coffee.",
-          "terms": [
-            "v_koohii",
-            "p_wo",
-            {
-              "id": "v_nomu",
-              "form": "desire_tai_negative"
-            }
-          ],
+          "terms": [],
           "explanation": "たくないです is the negative of たいです. 飲む → 飲み (stem) + たくないです. たい conjugates like an い-adjective: たい → たく + ない = たくない."
         },
         {
@@ -1151,16 +1120,7 @@
             "行くています"
           ],
           "answer": "行っています",
-          "terms": [
-            {
-              "id": "v_iku",
-              "form": "te_form"
-            },
-            {
-              "id": "v_iru",
-              "form": "polite_masu"
-            }
-          ],
+          "terms": [],
           "explanation": "行く is the famous て-form exception: 行く → 行って (not 行いて!). Then + います = 行っています. The 行く exception from G8 applies here too."
         },
         {
@@ -1173,15 +1133,7 @@
             "An ongoing action of going"
           ],
           "answer": "A polite suggestion or invitation to go together",
-          "terms": [
-            "v_tomodachi",
-            "p_to",
-            "v_issho",
-            {
-              "id": "v_iku",
-              "form": "polite_volitional_mashou"
-            }
-          ],
+          "terms": [],
           "explanation": "ましょう makes a polite suggestion or invitation: 'Let's go together with a friend.' It proposes a shared action. Adding か (行きましょうか) makes it a softer question: 'Shall we go?'"
         },
         {
@@ -1194,10 +1146,7 @@
             "Is it a gift?"
           ],
           "answer": "It's probably a gift.",
-          "terms": [
-            "v_purezento",
-            "g_deshou"
-          ],
+          "terms": [],
           "explanation": "でしょう attaches to a noun directly (no だ before it) to express polite conjecture: 'probably is'. プレゼント + でしょう = 'It's probably a gift.' Compare: プレゼントです (certain) vs プレゼントでしょう (guessing)."
         },
         {
@@ -1210,10 +1159,7 @@
             "行くだです。"
           ],
           "answer": "行くでしょう。",
-          "terms": [
-            "v_iku",
-            "g_deshou"
-          ],
+          "terms": [],
           "explanation": "でしょう attaches to the PLAIN (dictionary) form of the verb. 行く is the plain form of 行きます. 行く + でしょう = 行くでしょう. ✗ 行きますでしょう is wrong — never attach でしょう to the ます-form."
         }
       ]

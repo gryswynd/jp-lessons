@@ -650,12 +650,7 @@
             "よかってです"
           ],
           "answer": "よかったです",
-          "terms": [
-            {
-              "id": "v_ii",
-              "form": "polite_past_adj"
-            }
-          ],
+          "terms": [],
           "explanation": "いい is irregular — its stem is よ-, not い-. よ + かったです = よかったです. The form いかったです does NOT exist. Think of it as よい (formal good) → よかった."
         },
         {
@@ -668,14 +663,7 @@
             "電車は 長くなかったです"
           ],
           "answer": "電車は 長かったです",
-          "terms": [
-            "v_densha",
-            "p_wa",
-            {
-              "id": "v_nagai",
-              "form": "polite_past_adj"
-            }
-          ],
+          "terms": [],
           "explanation": "Regular い-adjective past: remove い → 長(stem) + かったです = 長かったです. 長いでした is a common error — do not add でした directly to the plain adjective. 長くなかったです is the past negative (was not long)."
         },
         {
@@ -688,20 +676,7 @@
             "天気が よくで、気分が いいです。"
           ],
           "answer": "天気が よくて、気分が いいです。",
-          "terms": [
-            "v_tenki",
-            "p_ga",
-            {
-              "id": "v_ii",
-              "form": "te_form"
-            },
-            "v_kibun",
-            "p_ga",
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            }
-          ],
+          "terms": [],
           "explanation": "て-form of い-adjective: remove い → stem + くて. いい → よ(stem) + くて = よくて. The connector よくて links two descriptions: 'The weather is nice AND my mood is good.' いいて, よかって, and よくで are all incorrect forms."
         },
         {
@@ -714,12 +689,7 @@
             "よい"
           ],
           "answer": "よく",
-          "terms": [
-            {
-              "id": "v_ii",
-              "form": "adverbial"
-            }
-          ],
+          "terms": [],
           "explanation": "Adverb form of い-adjective: remove い → stem + く. いい → よ(stem) + く = よく. This means 'well / often'. いく would mean 'to go' (行く) — a completely different word. いく/いいく don't exist as adverb forms of いい."
         },
         {
@@ -732,12 +702,7 @@
             "大きかった 書いてください。"
           ],
           "answer": "大きく 書いてください。",
-          "terms": [
-            {
-              "id": "v_ookii",
-              "form": "adverbial"
-            }
-          ],
+          "terms": [],
           "explanation": "Adverb form: remove い → stem + く. 大きい → 大きく (largely / in a big way). 大きいく does not exist. 大きくて is the て-form connector (used between two adjectives), not an adverb before a verb. 大きかった is the past tense form."
         }
       ]
