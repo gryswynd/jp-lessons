@@ -85,6 +85,25 @@
   }
 
   // ---------------------------------------------------------------------------
+  // Server heartbeat (for email reminders)
+  // ---------------------------------------------------------------------------
+
+  /** Fire-and-forget POST to the reminder Worker. Only runs if opted in. */
+  function pingServer(date, streak) {
+    try {
+      var studentId = localStorage.getItem('k-reminder-student-id');
+      if (!studentId) return;
+      var workerUrl = (window.JPShared.reminderSettings && window.JPShared.reminderSettings.WORKER_URL)
+        || 'https://rikizo-reminders.YOURDOMAIN.workers.dev';
+      fetch(workerUrl + '/heartbeat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ studentId: studentId, date: date, streak: streak })
+      }).catch(function () {}); // Silently ignore errors
+    } catch (e) { /* non-critical */ }
+  }
+
+  // ---------------------------------------------------------------------------
   // Public API
   // ---------------------------------------------------------------------------
 
@@ -145,6 +164,9 @@
       localStorage.setItem('k-streak-last-active', today);
       setHistory(history);
       setInt('k-streak-freezes', freezes);
+
+      // Ping reminder server (fire-and-forget, non-critical)
+      pingServer(today, current);
     },
 
     /**
