@@ -301,18 +301,16 @@
           ]
         },
         {
-          "jp": "会合の 場所は 駅の 待ち合い室に なりました。",
-          "en": "The venue for the meeting was set to the station waiting room.",
+          "jp": "会合は 駅の 待ち合い室で あります。",
+          "en": "The meeting is at the station waiting room.",
           "terms": [
             "v_kaigou",
-            "p_no",
-            "v_basho",
             "p_wa",
             "v_eki",
             "p_no",
             "v_machiaishitsu",
-            "p_ni",
-            { "id": "v_naru", "form": "polite_mashita" }
+            "p_de",
+            { "id": "v_aru", "form": "polite_masu" }
           ]
         },
         {
@@ -331,28 +329,28 @@
           ]
         },
         {
-          "jp": "何度も 話せば、いい 考え方が できます。",
-          "en": "If we talk many times, we can come up with a good approach.",
+          "jp": "夕方に なると 先生が 正門で 待って います。",
+          "en": "When evening comes, the teacher waits at the main gate.",
           "terms": [
-            "v_nando",
-            "p_mo",
-            { "id": "v_hanasu", "form": "conditional_ba" },
-            "v_ii",
-            "v_kangaekata",
+            "v_yuugata",
+            "p_ni",
+            { "id": "v_naru", "form": "plain_form" },
+            "p_to",
+            "v_sensei",
             "p_ga",
-            { "id": "v_dekiru", "form": "polite_masu" }
+            "v_seimon",
+            "p_de",
+            { "id": "v_matsu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" }
           ]
         },
         {
-          "jp": "早く 来る ように して ください。",
-          "en": "Please make an effort to come early.",
+          "jp": "早く 来なければ いけません。",
+          "en": "You must come early.",
           "terms": [
             { "id": "v_hayai", "form": "adverbial" },
-            { "id": "v_kuru", "form": "plain_form" },
-            "v_you_manner",
-            "p_ni",
-            { "id": "v_suru", "form": "te_form" },
-            "v_kudasai"
+            { "id": "v_kuru", "form": "nakereba" },
+            { "id": "v_ikeru", "form": "polite_negative" }
           ]
         }
       ],
@@ -394,21 +392,24 @@
           ]
         },
         {
-          "q": "何度も 話せば、何が できますか。",
-          "a": "いい 考え方が できます。",
+          "q": "夕方に なると 先生は どこに いますか。",
+          "a": "正門で 待って います。",
           "choices": [
-            "いい 考え方が できます。",
-            "新しい 学校が できます。",
-            "待ち合わせが できます。",
-            "村人と 話せます。"
+            "正門で 待って います。",
+            "駅で 待って います。",
+            "林の 前に います。",
+            "学校に います。"
           ],
           "terms": [
-            "v_nando",
-            "p_mo",
-            { "id": "v_hanasu", "form": "conditional_ba" },
-            "v_nani",
-            "p_ga",
-            { "id": "v_dekiru", "form": "polite_masu" },
+            "v_yuugata",
+            "p_ni",
+            { "id": "v_naru", "form": "plain_form" },
+            "p_to",
+            "v_sensei",
+            "p_wa",
+            "v_doko",
+            "p_ni",
+            { "id": "v_iru", "form": "polite_masu" },
             "p_ka"
           ]
         }
@@ -652,6 +653,7 @@
           "answer": "電池",
           "explanation": "The camera's battery (電池) is old.",
           "terms": [
+            "p_no",
             "p_ga",
             { "id": "v_furui", "form": "polite_adj" }
           ]
