@@ -1,13 +1,3 @@
-# Environment secrets
-.env
+node_modules/
+package-lock.json
 
-# Python
-__pycache__/
-*.pyc
-
-# Art pipeline WIP (intermediate files, not final output)
-output/_wip/
-
-# OS files
-.DS_Store
-Thumbs.db
