@@ -647,14 +647,20 @@
         },
         {
           "kind": "mcq",
-          "q": "カメラの ______ が 古いです。",
+          "q": "カメラで 写真を とりたいですが、______ が ありません。",
           "choices": ["電池", "村人", "会合", "夕方"],
           "answer": "電池",
-          "explanation": "The camera's battery (電池) is old.",
+          "explanation": "I want to take a photo with my camera, but I have no battery (電池).",
           "terms": [
-            "p_no",
+            "v_kamera",
+            "p_de",
+            "v_shashin",
+            "p_wo",
+            { "id": "v_toru", "form": "plain_desire_tai" },
+            "g_desu",
+            "p_ga_but",
             "p_ga",
-            { "id": "v_furui", "form": "polite_adj" }
+            { "id": "v_aru", "form": "plain_negative" }
           ]
         },
         {
