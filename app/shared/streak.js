@@ -9,6 +9,7 @@
  *   k-streak-last-active  — string   YYYY-MM-DD of last qualifying activity
  *   k-streak-history      — string   JSON array of last 30 active dates
  *   k-streak-freezes      — number   available streak freezes (max 2)
+ *   k-streak-rankup       — string   stage key if a rank-up just occurred (consumed on read)
  *
  * Load this file after progress.js and before unlock.js in webflow-embed.html.
  */
@@ -124,6 +125,8 @@
       var best    = getInt('k-streak-best', 0);
       var freezes = getInt('k-streak-freezes', 0);
 
+      var stageBefore = getStage(current);
+
       if (!lastActive) {
         // First ever activity
         current = 1;
@@ -141,6 +144,12 @@
           // Streak broken — start fresh
           current = 1;
         }
+      }
+
+      // Detect rank-up (stage changed to a higher tier)
+      var stageAfter = getStage(current);
+      if (stageAfter.key !== stageBefore.key && stageAfter.min > stageBefore.min) {
+        localStorage.setItem('k-streak-rankup', stageAfter.key);
       }
 
       // Update best
@@ -201,6 +210,20 @@
      * @returns {{ min: number, key: string, jp: string, en: string, color: string }}
      */
     getStage: getStage,
+
+    /**
+     * Consume and return a pending rank-up, if any.
+     * Returns the new stage object or null. Clears the flag so it only fires once.
+     */
+    consumeRankUp: function () {
+      var key = localStorage.getItem('k-streak-rankup');
+      if (!key) return null;
+      localStorage.removeItem('k-streak-rankup');
+      for (var i = 0; i < STAGES.length; i++) {
+        if (STAGES[i].key === key) return STAGES[i];
+      }
+      return null;
+    },
 
     /**
      * Pick a random return message for the given days-away bracket.
