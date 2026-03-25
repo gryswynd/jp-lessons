@@ -56,11 +56,11 @@ Run every existing N5 file through the validation hooks and fix what they catch.
 
 ### 1a. Lessons (N5.1–N5.18) — 639 issues across 18 files
 
-- [ ] **N5.1** — 38 issues [`particle-context`, `surface-match`, `term-ids`]
+- [x] **N5.1** — CLEAN (was 38 issues — resolved via 3 hook fixes + content edits)
   - ~~`form-scope` (10): FIXED — polite_masu moved to N5.1~~
-  - `particle-context` (1): Question sentence missing p_ka
-  - `surface-match` (15): v_namae (名前→なまえ), v_nani (何→なに), v_sensei, v_hito, k_onna
-  - `term-ids` (19): k_hito, k_otoko, k_onna + 16 more k_* IDs outside kanjiGrid
+  - ~~`particle-context` (1): Added p_ka to sections[4].lines[2]~~
+  - ~~`surface-match` (15): Hook bugs fixed (kanjiGrid false positives, mid-token kanji, q+a split); genuine v_nani→v_nan in 5 なんですか contexts~~
+  - ~~`term-ids` (19): Hook bug fixed (section-type tracking); genuine k_otoko/k_onna/k_ko→v_* in sentence content~~
 - [ ] **N5.2** — 27 issues [`surface-match`, `term-ids`]
   - ~~`form-scope` (10): FIXED — polite_masu moved to N5.1~~
   - `surface-match` (15): v_nani, v_kyou, v_kongetsu not matching jp text
