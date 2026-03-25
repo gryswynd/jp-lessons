@@ -616,57 +616,56 @@
       "title": "The あ-Row Shift — Negative Stem Map",
       "description": "To form ないでください (please don't), you need the negative stem. For godan verbs, this means shifting the final syllable to the あ-row — just as the ます stem uses the い-row. Here is every godan ending and its あ-row shift. Pay special attention to the one exception.",
       "tableType": "conjugation",
-      "headers": ["Dictionary ending (う-row)", "ます stem (い-row)", "ない stem (あ-row)", "ないでください example"],
+      "headers": ["Dictionary ending (う-row)", "ない stem (あ-row)", "ないでください example"],
       "rows": [
         {
           "label": "く",
-          "cells": ["き", "か", "書く → 書かないでください"],
+          "cells": ["か", "書く → 書かないでください"],
           "meaning": "Please don't write"
         },
         {
           "label": "ぐ",
-          "cells": ["ぎ", "が", "およぐ → およがないでください"],
+          "cells": ["が", "およぐ → およがないでください"],
           "meaning": "Please don't swim"
         },
         {
           "label": "す",
-          "cells": ["し", "さ", "はなす → はなさないでください"],
+          "cells": ["さ", "はなす → はなさないでください"],
           "meaning": "Please don't speak"
         },
         {
           "label": "つ",
-          "cells": ["ち", "た", "もつ → もたないでください"],
+          "cells": ["た", "もつ → もたないでください"],
           "meaning": "Please don't hold"
         },
         {
           "label": "ぬ",
-          "cells": ["に", "な", "しぬ → しなないでください"],
+          "cells": ["な", "しぬ → しなないでください"],
           "meaning": "Please don't die"
         },
         {
           "label": "ぶ",
-          "cells": ["び", "ば", "よぶ → よばないでください"],
+          "cells": ["ば", "よぶ → よばないでください"],
           "meaning": "Please don't call"
         },
         {
           "label": "む",
-          "cells": ["み", "ま", "のむ → のまないでください"],
+          "cells": ["ま", "のむ → のまないでください"],
           "meaning": "Please don't drink"
         },
         {
           "label": "る (godan)",
-          "cells": ["り", "ら", "分かる → 分からないでください"],
+          "cells": ["ら", "分かる → 分からないでください"],
           "meaning": "Please don't understand (rare, but shows the pattern)"
         },
         {
           "label": "う ⚠️",
-          "cells": ["い", "わ (NOT あ!)", "かう → かわないでください"],
+          "cells": ["わ (NOT あ!)", "かう → かわないでください"],
           "meaning": "EXCEPTION: please don't buy — う shifts to わ, not あ"
         }
       ],
       "notes": [
-        "The い-row column is the ます stem you already know. The あ-row column is the negative stem used for ないでください.",
-        "The pattern is the same logic: find the ending syllable on the hiragana chart and move it to the target row. You already do this for ます (い-row) — ない just uses a different row (あ-row).",
+        "Same logic as the い-row shift (ます stem, G6) — find the ending on the hiragana chart and move it to the target row. For ない, the target is the あ-row.",
         "⚠️ THE ONE EXCEPTION: verbs ending in う shift to わ, NOT あ. This is a fixed historical rule: かう (buy) → かわない, いう (say) → いわない, あう (meet) → あわない. If you wrote かあない, it would be wrong — always use わ.",
         "Why う → わ? In Old Japanese, the あ-row character for the う-column was わ. Modern Japanese preserved this single irregularity. Every other ending shifts exactly as the hiragana chart predicts.",
         "For ichidan verbs, the negative stem is simpler: just drop る. 食べる → 食べ + ないでください. いる → い + ないでください.",
