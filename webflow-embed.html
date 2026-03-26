@@ -336,8 +336,8 @@ window.JPApp = {
 
   // --- RANK-UP CELEBRATION POPUP ---
   _showRankUpPopup: function(stage, streakState) {
-    if (window._rikizo_return_shown) return;
-    window._rikizo_return_shown = true;
+    // No _rikizo_return_shown guard here — consumeRankUp() already ensures one-shot display.
+    // The normal return message guard must not block the rank-up popup.
 
     var beltMap = {
       beginner: 'belt-white', daily: 'belt-yellow', week: 'belt-green',
