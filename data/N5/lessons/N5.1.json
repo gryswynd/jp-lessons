@@ -840,7 +840,9 @@
       "questions": [
         {
           "q": "お父さんは なにを しますか。",
+          "q_en": "What does your father do?",
           "a": "先生です。",
+          "a_en": "He is a teacher.",
           "terms": [
             "v_otousan",
             "p_wa",
@@ -850,14 +852,18 @@
               "id": "v_suru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_sensei",
             "g_desu"
           ]
         },
         {
           "q": "お父さんは なにを しますか。",
+          "q_en": "What does your father do?",
           "a": "先生です。",
+          "a_en": "He is a teacher.",
           "terms": [
             "v_otousan",
             "p_wa",
@@ -867,27 +873,36 @@
               "id": "v_suru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_sensei",
             "g_desu"
           ]
         },
         {
           "q": "いちばん やさしい 先生は だれですか。",
+          "q_en": "Who is the kindest teacher?",
           "a": "すずき先生です。",
+          "a_en": "It is Suzuki-sensei.",
           "terms": [
             "v_ichiban",
             "v_yasashii",
             "v_sensei",
             "p_wa",
             "v_dare",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_sensei",
             "g_desu"
           ]
         },
         {
           "q": "お母さんは なにを しますか。",
+          "q_en": "What does your mother do?",
           "a": "先生です。",
+          "a_en": "She is a teacher.",
           "terms": [
             "v_okaasan",
             "p_wa",
@@ -897,7 +912,9 @@
               "id": "v_suru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_sensei",
             "g_desu"
           ]
@@ -996,7 +1013,9 @@
       "questions": [
         {
           "q": "先生の 名まえは なんですか。",
+          "q_en": "What is the teacher's name?",
           "a": "やまもとさんです。",
+          "a_en": "It is Yamamoto-san.",
           "terms": [
             "v_sensei",
             "p_no",
@@ -1004,13 +1023,18 @@
             "p_wa",
             "v_nan",
             "g_desu",
-            "p_ka",
-            "v_san"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_san",
+            "g_desu"
           ]
         },
         {
           "q": "先生は 男の人ですか、女の人ですか。",
+          "q_en": "Is the teacher a man or a woman?",
           "a": "女の人です。",
+          "a_en": "She is a woman.",
           "terms": [
             "v_sensei",
             "p_wa",
@@ -1020,31 +1044,47 @@
             "g_desu",
             "p_ka",
             "v_onna"
+          ],
+          "a_terms": [
+            "v_onna",
+            "p_no",
+            "v_hito",
+            "g_desu"
           ]
         },
         {
           "q": "みなさんは うれしいですか。",
+          "q_en": "Is everyone happy?",
           "a": "はい、うれしいです。",
+          "a_en": "Yes, they are happy.",
           "terms": [
             "v_minasan",
             "p_wa",
             "v_ureshii",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "p_hai",
+            "v_ureshii",
             "g_desu"
           ]
         },
         {
           "q": "先生は どんな 人ですか。",
+          "q_en": "What kind of person is the teacher?",
           "a": "やさしい 人です。",
+          "a_en": "She is a kind person.",
           "terms": [
             "v_sensei",
             "p_wa",
             "v_donna",
             "v_hito",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_yasashii",
+            "v_hito",
             "g_desu"
           ]
         }

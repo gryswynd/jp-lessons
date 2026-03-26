@@ -753,7 +753,9 @@
       "questions": [
         {
           "q": "やまかわは 毎週 なにで 山へ 行きますか。",
+          "q_en": "What does Yamakawa use every week to go to the mountains?",
           "a": "車で 行きます。",
+          "a_en": "He goes by car.",
           "terms": [
             "p_wa",
             "v_maishuu",
@@ -765,13 +767,22 @@
               "id": "v_iku",
               "form": "polite_masu"
             },
-            "p_ka",
-            "v_kuruma"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_kuruma",
+            "p_de",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "山に なにが ありますか。",
+          "q_en": "What is there in the mountain?",
           "a": "川が あります。",
+          "a_en": "There is a river.",
           "terms": [
             "v_yama",
             "p_ni",
@@ -781,13 +792,22 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            "p_ka",
-            "v_kawa"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_kawa",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "先週 どこへ 行きましたか。",
+          "q_en": "Where did he go last week?",
           "a": "火山へ 行きました。",
+          "a_en": "He went to the volcano.",
           "terms": [
             "v_senshuu",
             "v_doko",
@@ -796,13 +816,22 @@
               "id": "v_iku",
               "form": "polite_mashita"
             },
-            "p_ka",
-            "v_kazan"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_kazan",
+            "p_e",
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "来週 だれと 来ますか。",
+          "q_en": "Who will come with him next week?",
           "a": "友だちと 来ます。",
+          "a_en": "He will come with his friends.",
           "terms": [
             "v_raishuu",
             "v_dare",
@@ -811,8 +840,15 @@
               "id": "v_kuru",
               "form": "polite_masu"
             },
-            "p_ka",
-            "v_tomodachi"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_tomodachi",
+            "p_to",
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -903,7 +939,9 @@
       "questions": [
         {
           "q": "りきぞに だれから メールが 来ましたか。",
+          "q_en": "Who sent Rikizo an email?",
           "a": "やまかわから 来ました。",
+          "a_en": "It came from Yamakawa.",
           "terms": [
             "p_ni",
             "v_dare",
@@ -915,11 +953,20 @@
               "form": "polite_mashita"
             },
             "p_ka"
+          ],
+          "a_terms": [
+            "p_kara",
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "来週 なにで 山へ 行きますか。",
+          "q_en": "What will he use to go to the mountains next week?",
           "a": "車で 行きます。",
+          "a_en": "He will go by car.",
           "terms": [
             "v_raishuu",
             "v_nani",
@@ -930,13 +977,22 @@
               "id": "v_iku",
               "form": "polite_masu"
             },
-            "p_ka",
-            "v_kuruma"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_kuruma",
+            "p_de",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "火山にも 行きますか。",
+          "q_en": "Will he also go to the volcano?",
           "a": "はい、火山にも 行きます。",
+          "a_en": "Yes, he will also go to the volcano.",
           "terms": [
             "v_kazan",
             "p_ni",
@@ -945,8 +1001,17 @@
               "id": "v_iku",
               "form": "polite_masu"
             },
-            "p_ka",
-            "p_hai"
+            "p_ka"
+          ],
+          "a_terms": [
+            "p_hai",
+            "v_kazan",
+            "p_ni",
+            "p_mo",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
