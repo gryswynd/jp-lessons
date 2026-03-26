@@ -825,63 +825,94 @@
       ],
       "questions": [
         {
-          "q": "What does the narrator do every day?",
-          "a": "Reads and writes Japanese",
-          "choices": [
-            "Reads and writes Japanese",
-            "Reads and writes English",
-            "Speaks and listens to Japanese",
-            "Buys and reads books"
-          ],
+          "q": "毎日 何を 読んで、書いていますか。",
+          "q_en": "What does the narrator read and write every day?",
+          "a": "日本語を 読んで、書いています。",
+          "a_en": "They read and write Japanese every day.",
           "terms": [
-            "v_nihongo",
+            "v_mainichi",
+            "v_nani",
+            "p_wo",
             {
               "id": "v_yomu",
               "form": "te_form"
             },
             {
               "id": "v_kaku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
               "form": "polite_masu"
             },
             "p_ka"
+          ],
+          "a_terms": [
+            "v_nihongo",
+            "p_wo",
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kaku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
-          "q": "Who does the narrator speak with on the phone?",
-          "a": "Friends",
-          "choices": [
-            "Friends",
-            "The teacher",
-            "Family",
-            "A student"
-          ],
+          "q": "毎日 だれと 電話で 話しますか。",
+          "q_en": "Who does the narrator speak with on the phone every day?",
+          "a": "友だちと 話します。",
+          "a_en": "They speak with their friends.",
           "terms": [
+            "v_mainichi",
+            "v_dare",
+            "p_to",
             "v_denwa",
-            "v_tomodachi",
+            "p_de",
             {
               "id": "v_hanasu",
               "form": "polite_masu"
             },
             "p_ka"
+          ],
+          "a_terms": [
+            "v_tomodachi",
+            "p_to",
+            {
+              "id": "v_hanasu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
-          "q": "What does the narrator want to do every day?",
-          "a": "Speak",
-          "choices": [
-            "Speak",
-            "Buy new books",
-            "Read karate books",
-            "Call the teacher"
-          ],
+          "q": "毎日 何を したいですか。",
+          "q_en": "What does the narrator want to do every day?",
+          "a": "毎日 話したいです。",
+          "a_en": "They want to speak every day.",
           "terms": [
+            "v_mainichi",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_mainichi",
             {
               "id": "v_hanasu",
               "form": "plain_desire_tai"
             },
-            "g_desu",
-            "p_ka"
+            "g_desu"
           ]
         }
       ]
@@ -1004,57 +1035,83 @@
       ],
       "questions": [
         {
-          "q": "What language does Ren speak on the phone every day?",
-          "a": "Japanese",
-          "choices": [
-            "Japanese",
-            "Chinese",
-            "English",
-            "Karate"
-          ],
+          "q": "レンさんは 毎日 何で 話しますか。",
+          "q_en": "How does Ren speak every day?",
+          "a": "毎日 電話で 話します。",
+          "a_en": "They speak on the phone every day.",
           "terms": [
-            "v_nihongo",
+            "char_ren",
+            "v_san",
+            "p_wa",
+            "v_mainichi",
+            "v_nani",
             "p_de",
             {
               "id": "v_hanasu",
               "form": "polite_masu"
             },
             "p_ka"
+          ],
+          "a_terms": [
+            "v_mainichi",
+            "v_denwa",
+            "p_de",
+            {
+              "id": "v_hanasu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
-          "q": "How are Japanese books described in the passage?",
-          "a": "They look interesting",
-          "choices": [
-            "They look interesting",
-            "They are cheap",
-            "They are long and boring",
-            "They are old"
-          ],
+          "q": "日本語の 本は どうですか。",
+          "q_en": "What are Japanese books like in the passage?",
+          "a": "おもしろそうです。",
+          "a_en": "They look interesting.",
           "terms": [
+            "v_nihongo",
+            "p_no",
             "v_hon",
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
             {
               "id": "v_omoshiroi",
               "form": "appearance_sou_stem"
             },
-            "g_desu",
-            "p_ka"
+            "g_desu"
           ]
         },
         {
-          "q": "What kind of books does Ren also read?",
-          "a": "Karate books",
-          "choices": [
-            "Karate books",
-            "English books",
-            "School books",
-            "New books"
-          ],
+          "q": "レンさんは 空手の 本も 読みますか。",
+          "q_en": "Does Ren also read karate books?",
+          "a": "空手の 本も 読みます。",
+          "a_en": "Yes, they also read karate books.",
           "terms": [
+            "char_ren",
+            "v_san",
+            "p_wa",
             "v_karate",
             "p_no",
             "v_hon",
+            "p_mo",
+            {
+              "id": "v_yomu",
+              "form": "polite_masu"
+            },
             "p_ka"
+          ],
+          "a_terms": [
+            "v_karate",
+            "p_no",
+            "v_hon",
+            "p_mo",
+            {
+              "id": "v_yomu",
+              "form": "polite_masu"
+            }
           ]
         }
       ]

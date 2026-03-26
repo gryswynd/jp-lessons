@@ -810,55 +810,73 @@
       ],
       "questions": [
         {
-          "q": "Where does the passage say there are many mountains?",
-          "a": "In the north, northeast, and northwest",
-          "choices": [
-            "In the north, northeast, and northwest",
-            "In the south and east only",
-            "In the west only",
-            "In the southeast and southwest"
-          ],
+          "q": "北に 何が たくさん ありますか。",
+          "q_en": "What are there many of in the north?",
+          "a": "山が たくさん あります。",
+          "a_en": "There are many mountains.",
           "terms": [
             "v_kita",
-            "v_hokutou",
-            "v_hokusei",
             "p_ni",
+            "v_nani",
+            "p_ga",
+            "v_takusan",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_yama",
             "p_ga",
-            "v_ooi",
-            "g_desu",
-            "p_ka"
+            "v_takusan",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
-          "q": "What does the passage say about the weather in the south?",
-          "a": "It is nice",
-          "choices": [
-            "It is nice",
-            "It is long",
-            "There are many mountains",
-            "There are rivers"
-          ],
+          "q": "南の 天気は どうですか。",
+          "q_en": "What is the weather like in the south?",
+          "a": "南の 天気は いいです。",
+          "a_en": "The weather in the south is nice.",
           "terms": [
             "v_minami",
-            "p_wa",
-            "v_tenki",
             "p_no",
-            "v_ii",
+            "v_tenki",
+            "p_wa",
+            "v_dou",
             "g_desu",
             "p_ka"
+          ],
+          "a_terms": [
+            "v_minami",
+            "p_no",
+            "v_tenki",
+            "p_wa",
+            "v_ii",
+            "g_desu"
           ]
         },
         {
-          "q": "What does the narrator want to do?",
-          "a": "Go from north to south",
-          "choices": [
-            "Go from north to south",
-            "Go to the northeast",
-            "Stay in the west",
-            "Come from the east"
-          ],
+          "q": "どこから どこまで 行きたいですか。",
+          "q_en": "Where does the narrator want to go from and to?",
+          "a": "北から 南まで 行きたいです。",
+          "a_en": "They want to go from north to south.",
           "terms": [
+            "v_doko",
+            "p_kara",
+            "v_doko",
+            "p_made",
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_kita",
             "p_kara",
             "v_minami",
@@ -867,8 +885,7 @@
               "id": "v_iku",
               "form": "plain_desire_tai"
             },
-            "g_desu",
-            "p_ka"
+            "g_desu"
           ]
         }
       ]
@@ -977,19 +994,15 @@
       ],
       "questions": [
         {
-          "q": "Where does Rikizo want to go?",
-          "a": "To the mountains in the east",
-          "choices": [
-            "To the mountains in the east",
-            "To the rivers in the north",
-            "To the flowers in the west",
-            "To the southwest only"
-          ],
+          "q": "りきぞさんは どこの 山に 行きたいですか。",
+          "q_en": "Where does Rikizo want to go?",
+          "a": "東の 山に 行きたいです。",
+          "a_en": "They want to go to the mountains in the east.",
           "terms": [
             "char_rikizo",
             "v_san",
             "p_wa",
-            "v_higashi",
+            "v_doko",
             "p_no",
             "v_yama",
             "p_ni",
@@ -999,20 +1012,36 @@
             },
             "g_desu",
             "p_ka"
+          ],
+          "a_terms": [
+            "v_higashi",
+            "p_no",
+            "v_yama",
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         },
         {
-          "q": "What does the passage say about the northeast?",
-          "a": "There are large mountains and long rivers",
-          "choices": [
-            "There are large mountains and long rivers",
-            "The weather is good",
-            "There are many white flowers",
-            "The road is short"
-          ],
+          "q": "北東に 何が ありますか。",
+          "q_en": "What is there in the northeast?",
+          "a": "大きい 山と 長い 川が あります。",
+          "a_en": "There are large mountains and long rivers.",
           "terms": [
             "v_hokutou",
             "p_ni",
+            "v_nani",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_ookii",
             "v_yama",
             "p_to",
@@ -1022,21 +1051,16 @@
             {
               "id": "v_aru",
               "form": "polite_masu"
-            },
-            "p_ka"
+            }
           ]
         },
         {
-          "q": "How is Rikizo getting to the northeast?",
-          "a": "By train",
-          "choices": [
-            "By train",
-            "By car",
-            "By road only",
-            "By bus"
-          ],
+          "q": "何で 北東に 行きますか。",
+          "q_en": "How is Rikizo getting to the northeast?",
+          "a": "電車で 行きます。",
+          "a_en": "They are going by train.",
           "terms": [
-            "v_densha",
+            "v_nani",
             "p_de",
             "v_hokutou",
             "p_ni",
@@ -1045,6 +1069,14 @@
               "form": "polite_masu"
             },
             "p_ka"
+          ],
+          "a_terms": [
+            "v_densha",
+            "p_de",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
