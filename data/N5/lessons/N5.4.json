@@ -446,8 +446,8 @@
         },
         {
           "spk": "B",
-          "jp": "はい、毎週 います。よかったですね。",
-          "en": "Yes, I am here every week. That's great, isn't it!",
+          "jp": "はい、毎週 います。いいですね。",
+          "en": "Yes, I am here every week. That's great!",
           "terms": [
             "p_hai",
             "v_maishuu",
@@ -455,10 +455,7 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            {
-              "id": "v_ii",
-              "form": "plain_past_adj"
-            },
+            "v_ii",
             "g_desu",
             "p_ne"
           ]
@@ -545,13 +542,10 @@
         },
         {
           "spk": "B",
-          "jp": "よかったです。毎週 分かります。",
-          "en": "That's wonderful. I understand more every week.",
+          "jp": "いいです。毎週 分かります。",
+          "en": "That's good. I understand more every week.",
           "terms": [
-            {
-              "id": "v_ii",
-              "form": "plain_past_adj"
-            },
+            "v_ii",
             "g_desu",
             "v_maishuu",
             {

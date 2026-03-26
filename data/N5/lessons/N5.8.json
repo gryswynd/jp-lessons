@@ -504,23 +504,22 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "はい、高いです。買いたいです。",
-          "en": "Yes, it is expensive. I want to buy it.",
+          "jp": "はい、高いです。買います。",
+          "en": "Yes, it is expensive. I will buy it.",
           "terms": [
             "p_hai",
             "v_takai",
             "g_desu",
             {
               "id": "v_kau",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "spk": "先生",
-          "jp": "そうですね。わたしも 買いたいです。",
-          "en": "I see. I also want to buy one.",
+          "jp": "そうですね。わたしも 買います。",
+          "en": "I see. I will also buy one.",
           "terms": [
             "p_soudesu",
             "p_ne",
@@ -528,9 +527,8 @@
             "p_mo",
             {
               "id": "v_kau",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -824,8 +822,8 @@
           ]
         },
         {
-          "jp": "友だちの プレゼントを 買いたいです。",
-          "en": "The station master wants to buy a gift for a friend.",
+          "jp": "友だちの プレゼントを 買います。",
+          "en": "The station master buys a gift for a friend.",
           "terms": [
             "v_tomodachi",
             "p_no",
@@ -833,9 +831,8 @@
             "p_wo",
             {
               "id": "v_kau",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
+              "form": "polite_masu"
+            }
           ]
         },
         {

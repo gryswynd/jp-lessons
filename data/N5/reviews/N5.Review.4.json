@@ -74,7 +74,7 @@
             },
             {
               "spk": "B",
-              "jp": "コーヒーは 飲みません。ジュースを 飲みたいです。",
+              "jp": "コーヒーは 飲みません。ジュースを 飲みます。",
               "terms": [
                 "v_koohii",
                 "p_wa",
@@ -86,9 +86,8 @@
                 "p_wo",
                 {
                   "id": "v_nomu",
-                  "form": "plain_desire_tai"
-                },
-                "g_desu"
+                  "form": "polite_masu"
+                }
               ]
             }
           ],

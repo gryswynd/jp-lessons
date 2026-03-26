@@ -415,17 +415,16 @@
             },
             {
               "spk": "K",
-              "jp": "はい、電車はバスよりいいですよ。",
+              "jp": "はい、電車は いいですよ。",
               "terms": [
                 "p_hai",
                 "v_densha",
                 "p_wa",
-                "v_basu",
-                "p_yori",
                 "v_ii",
                 "g_desu",
                 "p_yo"
-              ]
+              ],
+              "en": "Yes, trains are great!"
             },
             {
               "spk": "R",
@@ -946,19 +945,19 @@
               ]
             },
             {
-              "jp": "でも、大きい日本語の本がありませんでした。",
+              "jp": "大きい 日本語の 本が ありませんでした。",
               "terms": [
-                "p_demo_but",
                 "v_ookii",
                 "v_nihongo",
-                "p_ga",
-                "v_hon",
                 "p_no",
+                "v_hon",
+                "p_ga",
                 {
                   "id": "v_aru",
                   "form": "polite_past_negative"
                 }
-              ]
+              ],
+              "en": "There were no large Japanese books."
             }
           ]
         },
