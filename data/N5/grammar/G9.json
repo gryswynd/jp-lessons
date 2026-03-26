@@ -854,8 +854,8 @@
       "lines": [
         {
           "spk": "りきぞ",
-          "jp": "やまかわさん、何を 買いたいですか。",
-          "en": "Yamakawa-san, what do you want to buy?",
+          "jp": "やまかわさん、何を 買いますか。",
+          "en": "What will you buy, Yamakawa-san?",
           "terms": [
             "char_yamakawa",
             "v_san",
@@ -863,23 +863,17 @@
             "p_wo",
             {
               "id": "v_kau",
-              "form": "plain_desire_tai"
+              "form": "polite_masu"
             },
-            "g_desu",
             "p_ka"
           ]
         },
         {
           "spk": "やまかわ",
-          "jp": "プレゼントを 買いたいです。もう 買っています。",
-          "en": "I want to buy a gift. I am already buying one.",
+          "jp": "プレゼントです。もう 買っています。",
+          "en": "A present. I'm already buying one.",
           "terms": [
             "v_purezento",
-            "p_wo",
-            {
-              "id": "v_kau",
-              "form": "plain_desire_tai"
-            },
             "g_desu",
             "v_mou",
             {
@@ -898,7 +892,8 @@
           "en": "It's probably expensive, right?",
           "terms": [
             "v_takai",
-            "g_deshou"
+            "g_deshou",
+            "p_ka"
           ]
         },
         {
@@ -920,17 +915,16 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "そうですか。わたしも 買いたいです。",
-          "en": "Is that so. I also want to buy one.",
+          "jp": "そうですか。わたしも 買います。",
+          "en": "Really? I'll buy one too.",
           "terms": [
             "p_soudesuka",
             "v_watashi",
             "p_mo",
             {
               "id": "v_kau",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -969,15 +963,14 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "はい、行きたいです。",
-          "en": "Yes, I want to go.",
+          "jp": "はい、行きます。",
+          "en": "Yes, I'll go.",
           "terms": [
             "p_hai",
             {
               "id": "v_iku",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -1000,8 +993,8 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "いいですね。コーヒーも 飲みたいです。",
-          "en": "That sounds great. I also want to drink coffee.",
+          "jp": "いいですね。コーヒーも 飲みましょう。",
+          "en": "That sounds nice. Let's have coffee too.",
           "terms": [
             {
               "id": "v_ii",
@@ -1012,9 +1005,8 @@
             "p_mo",
             {
               "id": "v_nomu",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {

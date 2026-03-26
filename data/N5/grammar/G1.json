@@ -615,7 +615,8 @@
             "v_ano",
             "v_sensei",
             "p_wa",
-            "v_dare"
+            "v_dare",
+            "p_ka"
           ]
         },
         {
@@ -625,48 +626,37 @@
           "terms": [
             "char_yamamoto",
             "v_sensei",
-            "g_da",
-            "p_yo"
+            "p_yo",
+            "g_da"
           ]
         },
         {
           "spk": "けん",
-          "jp": "やまもと先生のお母さんも先生だったの？",
-          "en": "Was Teacher Yamamoto's mother also a teacher?",
+          "jp": "やまもと先生のお母さんは 先生？",
+          "en": "Is Yamamoto-sensei's mom a teacher?",
           "terms": [
             "char_yamamoto",
             "v_sensei",
             "p_no",
             "v_okaasan",
-            "p_mo",
+            "p_wa",
             "v_sensei",
-            {
-              "id": "g_da",
-              "form": "da_past"
-            },
             "p_ka"
           ]
         },
         {
           "spk": "ゆき",
-          "jp": "先生だったよ。お父さんは先生ではなかったよ。",
-          "en": "She was a teacher. Her father was not a teacher.",
+          "jp": "やまもと先生のお母さんは 先生だよ。",
+          "en": "Yeah, Yamamoto-sensei's mom is a teacher.",
           "terms": [
+            "char_yamamoto",
             "v_sensei",
-            {
-              "id": "g_da",
-              "form": "da_past"
-            },
-            "p_yo",
-            "v_otousan",
+            "p_no",
+            "v_okaasan",
             "p_wa",
             "v_sensei",
-            "p_dewa",
-            {
-              "id": "v_aru",
-              "form": "plain_past_negative"
-            },
-            "p_yo"
+            "p_yo",
+            "g_da"
           ]
         },
         {

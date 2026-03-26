@@ -1227,7 +1227,7 @@
         },
         {
           "spk": "先生",
-          "jp": "聞いてください。駅に 行って、コンビニに 来ました。",
+          "jp": "きいてください。駅に 行って、コンビニに 来ました。",
           "en": "Please listen. I went to the station and then came to the convenience store.",
           "terms": [
             {
@@ -1251,7 +1251,7 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "分かりました。書きます。",
+          "jp": "分かりました。かきます。",
           "en": "Understood. I will write it.",
           "terms": [
             {
@@ -1266,7 +1266,7 @@
         },
         {
           "spk": "先生",
-          "jp": "それから、友だちと 話してください。コンビニには 行かないでください。",
+          "jp": "それから、友だちと はなしてください。コンビニには 行かないでください。",
           "en": "After that, please speak with your friend. Please do not go to the convenience store.",
           "terms": [
             "v_sorekara",
@@ -1278,8 +1278,8 @@
             },
             "v_kudasai",
             "v_konbini",
-            "p_ni",
             "p_wa",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "polite_negative_te"
@@ -1391,12 +1391,12 @@
           "kind": "mcq",
           "q": "Which sentence correctly means 'Please speak'?",
           "choices": [
-            "話してください",
+            "はなしてください",
             "話しますください",
             "話さないでください",
-            "話してます"
+            "はなしてます"
           ],
-          "answer": "話してください",
+          "answer": "はなしてください",
           "terms": [],
           "explanation": "てください = [て-form] + ください. 話す (godan す) → 話して + ください = 話してください. 話しますください is wrong — you cannot attach ください to the ます form. 話さないでください means 'please don't speak' — the opposite request."
         },

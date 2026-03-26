@@ -793,7 +793,9 @@
             "p_no",
             "v_okaasan",
             "p_wa",
-            "v_sensei"
+            "v_sensei",
+            "g_desu",
+            "p_ka"
           ]
         },
         {
@@ -819,7 +821,12 @@
             "v_otousan",
             "p_wa",
             "v_nani",
-            "p_wo"
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
+            "p_ka"
           ]
         },
         {
