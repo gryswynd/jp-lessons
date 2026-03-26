@@ -852,69 +852,41 @@
       ],
       "questions": [
         {
-          "q": "Where is the large shop?",
-          "a": "Above the station",
-          "choices": [
-            "Above the station",
-            "To the right of the road",
-            "Below the station",
-            "To the left"
-          ],
+          "q": "駅の 上に 何が ありますか。",
+          "q_en": "What is above the station?",
+          "a": "大きい 店が あります。",
+          "a_en": "There is a large shop.",
           "terms": [
             "v_eki",
-            "p_ga",
+            "p_no",
             "v_ue",
             "p_ni",
+            "v_nani",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_ookii",
             "v_mise",
-            "p_no",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            },
-            "p_ka"
-          ]
-        },
-        {
-          "q": "What does the passage say is to the left?",
-          "a": "Beautiful flowers",
-          "choices": [
-            "Beautiful flowers",
-            "A large shop",
-            "A train",
-            "Nothing"
-          ],
-          "terms": [
-            "v_hidari",
             "p_ga",
-            "v_michi",
-            "p_wa",
-            "p_ni",
-            {
-              "id": "v_kirei",
-              "form": "attributive_na"
-            },
-            "v_hana",
-            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
-            },
-            "p_ka"
+            }
           ]
         },
         {
-          "q": "How does the narrator travel every day?",
-          "a": "By train",
-          "choices": [
-            "By train",
-            "By car",
-            "On foot",
-            "By bus"
-          ],
+          "q": "毎日 何で 行っていますか。",
+          "q_en": "How does the narrator travel every day?",
+          "a": "電車で 行っています。",
+          "a_en": "They travel by train.",
           "terms": [
             "v_mainichi",
-            "v_densha",
+            "v_nani",
             "p_de",
             {
               "id": "v_iku",
@@ -925,6 +897,47 @@
               "form": "polite_masu"
             },
             "p_ka"
+          ],
+          "a_terms": [
+            "v_densha",
+            "p_de",
+            {
+              "id": "v_iku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "q": "だれと 上の 店に 行きたいですか。",
+          "q_en": "Who does the narrator want to go to the shop with?",
+          "a": "友だちと 行きたいです。",
+          "a_en": "They want to go with their friends.",
+          "terms": [
+            "v_dare",
+            "p_to",
+            "v_ue",
+            "p_no",
+            "v_mise",
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_tomodachi",
+            "p_to",
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         }
       ]
@@ -1056,20 +1069,16 @@
       ],
       "questions": [
         {
-          "q": "What does Rikizo do every day?",
-          "a": "Read Japanese",
-          "choices": [
-            "Read Japanese",
-            "Buy a book",
-            "Speak Japanese",
-            "Go to the station"
-          ],
+          "q": "りきぞさんは 毎日 何を 読んでいますか。",
+          "q_en": "What does Rikizo read every day?",
+          "a": "日本語を 読んでいます。",
+          "a_en": "They read Japanese every day.",
           "terms": [
             "char_rikizo",
             "v_san",
             "p_wa",
             "v_mainichi",
-            "v_nihongo",
+            "v_nani",
             "p_wo",
             {
               "id": "v_yomu",
@@ -1080,21 +1089,28 @@
               "form": "polite_masu"
             },
             "p_ka"
+          ],
+          "a_terms": [
+            "v_nihongo",
+            "p_wo",
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
-          "q": "Who told Rikizo he was skilled?",
-          "a": "Yamakawa",
-          "choices": [
-            "Yamakawa",
-            "Ken",
-            "Lee",
-            "Miki"
-          ],
+          "q": "だれが「上手ですよ」と 言いましたか。",
+          "q_en": "Who said 'You're skilled!'?",
+          "a": "やまかわさんが 言いました。",
+          "a_en": "Yamakawa said it.",
           "terms": [
-            "char_yamakawa",
-            "v_san",
-            "p_wa",
+            "v_dare",
+            "p_ga",
             "v_jouzu",
             "g_desu",
             "p_yo",
@@ -1104,19 +1120,37 @@
               "form": "polite_mashita"
             },
             "p_ka"
+          ],
+          "a_terms": [
+            "char_yamakawa",
+            "v_san",
+            "p_ga",
+            {
+              "id": "v_iu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
-          "q": "What does the narrator want to do someday?",
-          "a": "Speak Japanese skillfully",
-          "choices": [
-            "Speak Japanese skillfully",
-            "Buy a Japanese book",
-            "Go to the northeast",
-            "Read Japanese every day"
-          ],
+          "q": "りきぞさんは いつか 何を したいですか。",
+          "q_en": "What does Rikizo someday want to do?",
+          "a": "上手に 日本語を 話したいです。",
+          "a_en": "They want to speak Japanese skillfully.",
           "terms": [
+            "char_rikizo",
+            "v_san",
+            "p_wa",
             "v_itsuka",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
             {
               "id": "v_jouzu",
               "form": "adverbial"
@@ -1127,8 +1161,7 @@
               "id": "v_hanasu",
               "form": "plain_desire_tai"
             },
-            "g_desu",
-            "p_ka"
+            "g_desu"
           ]
         }
       ]

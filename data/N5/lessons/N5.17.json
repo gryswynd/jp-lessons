@@ -829,15 +829,22 @@
       ],
       "questions": [
         {
-          "q": "Where was the company entrance?",
-          "a": "To the right",
-          "choices": [
-            "To the right",
-            "To the left",
-            "Above the station",
-            "Outside the company"
-          ],
+          "q": "入り口は どこに ありましたか。",
+          "q_en": "Where was the company entrance?",
+          "a": "入り口は 右に ありました。",
+          "a_en": "The entrance was to the right.",
           "terms": [
+            "v_iriguchi",
+            "p_wa",
+            "v_doko",
+            "p_ni",
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_iriguchi",
             "p_wa",
             "v_migi",
@@ -845,41 +852,51 @@
             {
               "id": "v_aru",
               "form": "polite_mashita"
-            },
-            "p_ka"
+            }
           ]
         },
         {
-          "q": "When did Rikizo meet the company president?",
-          "a": "In the morning",
-          "choices": [
-            "In the morning",
-            "In the afternoon",
-            "In the evening",
-            "After exiting"
-          ],
+          "q": "午前に だれと 会いましたか。",
+          "q_en": "Who did Rikizo meet in the morning?",
+          "a": "社長と 会いました。",
+          "a_en": "They met the company president.",
           "terms": [
             "v_gozen",
             "p_ni",
-            "v_shachou",
+            "v_dare",
             "p_to",
             {
               "id": "v_au",
               "form": "polite_mashita"
             },
             "p_ka"
+          ],
+          "a_terms": [
+            "v_shachou",
+            "p_to",
+            {
+              "id": "v_au",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
-          "q": "What did Rikizo want to do at the end?",
-          "a": "Come to the company again",
-          "choices": [
-            "Come to the company again",
-            "Exit through the right exit",
-            "Speak Japanese in the morning",
-            "Meet the company president outside"
-          ],
+          "q": "また 何を したいですか。",
+          "q_en": "What does Rikizo want to do again?",
+          "a": "また 会社に 来たいです。",
+          "a_en": "They want to come to the company again.",
           "terms": [
+            "v_mata",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_mata",
             "v_kaisha",
             "p_ni",
@@ -887,8 +904,7 @@
               "id": "v_kuru",
               "form": "plain_desire_tai"
             },
-            "g_desu",
-            "p_ka"
+            "g_desu"
           ]
         }
       ]
@@ -1011,17 +1027,24 @@
       ],
       "questions": [
         {
-          "q": "Where do companies exist?",
-          "a": "Within society",
-          "choices": [
-            "Within society",
-            "To the right of the station",
-            "At the exit",
-            "In the morning"
-          ],
+          "q": "会社は 社会の どこに ありますか。",
+          "q_en": "Where do companies exist?",
+          "a": "社会の 中に あります。",
+          "a_en": "They exist within society.",
           "terms": [
             "v_kaisha",
             "p_wa",
+            "v_shakai",
+            "p_no",
+            "v_doko",
+            "p_ni",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_shakai",
             "p_no",
             "v_naka",
@@ -1029,49 +1052,55 @@
             {
               "id": "v_aru",
               "form": "polite_masu"
-            },
-            "p_ka"
+            }
           ]
         },
         {
-          "q": "When does the company president meet people?",
-          "a": "In the morning",
-          "choices": [
-            "In the morning",
-            "In the afternoon",
-            "At night",
-            "At the exit"
-          ],
+          "q": "社長は 午前に 何を しますか。",
+          "q_en": "What does the company president do in the morning?",
+          "a": "たくさんの 人と 会います。",
+          "a_en": "They meet many people.",
           "terms": [
             "v_shachou",
             "p_wa",
             "v_gozen",
             "p_ni",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_takusan",
+            "p_no",
             "v_hito",
             "p_to",
             {
               "id": "v_au",
               "form": "polite_masu"
-            },
-            "p_ka"
+            }
           ]
         },
         {
-          "q": "According to the passage, what is also a good option?",
-          "a": "A part-time job",
-          "choices": [
-            "A part-time job",
-            "Exiting through the right",
-            "Speaking Japanese in the afternoon",
-            "Meeting the president at the entrance"
-          ],
+          "q": "アルバイトは どうですか。",
+          "q_en": "What does the passage say about part-time work?",
+          "a": "アルバイトも いいです。",
+          "a_en": "Part-time work is also good.",
           "terms": [
+            "v_arubaito",
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_arubaito",
             "p_mo",
             "v_ii",
-            "g_desu",
-            "p_yo",
-            "p_ka"
+            "g_desu"
           ]
         }
       ]
