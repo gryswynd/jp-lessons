@@ -35,9 +35,12 @@ if content.get('type') == 'grammar':
 
 level_order = {'N5': 0, 'N4': 1, 'N3': 2, 'N2': 3, 'N1': 4}
 level_match = _re_top.match(r'(N\d+)\.(\d+)', lesson_id or '')
-if level_match and os.path.exists(manifest_path):
-    target_level = level_match.group(1)
-    target_num = int(level_match.group(2))
+level_prefix_match = _re_top.match(r'(N\d+)', lesson_id or '')
+if level_prefix_match and os.path.exists(manifest_path):
+    target_level = level_prefix_match.group(1)
+    # For standard lessons (N5.X), scope to that lesson number.
+    # For reviews/final/game-days (N5.Review.X etc.), include all kanji for the level.
+    target_num = int(level_match.group(2)) if level_match else 9999
     target_order = level_order.get(target_level, 0)
     try:
         with open(manifest_path) as f:
