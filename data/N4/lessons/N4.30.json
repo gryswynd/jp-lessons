@@ -354,7 +354,7 @@
       "lines": [
         {
           "spk": "A",
-          "jp": "クラスの 文集に どんな ことを 書きますか。",
+          "jp": "クラス の 文集に どんな ことを 書きますか。",
           "en": "What kinds of things will you write in the class anthology?",
           "terms": [
             "v_kurasu",
@@ -373,12 +373,11 @@
         },
         {
           "spk": "B",
-          "jp": "先生への 思いを 書きたいと 思います。よく 集中して 書きます。",
-          "en": "I'm thinking I'd like to write my feelings toward my teacher. I'll concentrate and write.",
+          "jp": "先生に 思いを 書きたいと 思います。よく 集中して 書きます。",
+          "en": "I'm thinking I'd like to write my feelings to my teacher. I'll concentrate and write.",
           "terms": [
             "v_sensei",
-            "p_e",
-            "p_no",
+            "p_ni",
             "v_omoi_feel",
             "p_wo",
             {
@@ -510,7 +509,7 @@
         },
         {
           "spk": "A",
-          "jp": "みんなで 集まって、とても 楽しかったよね。この 思い出は 特に 大切だと 思う。",
+          "jp": "みんなで 集まって、とても 楽しかった よ ね。この 思い出は 特に 大切 だ と 思う。",
           "en": "We all gathered and it was so fun. I think this memory is especially precious.",
           "terms": [
             "v_minna",
@@ -524,8 +523,8 @@
               "id": "v_tanoshii",
               "form": "plain_past_adj"
             },
-            "p_ne",
             "p_yo",
+            "p_ne",
             "v_kono",
             "v_omoide",
             "p_wa",
@@ -589,7 +588,7 @@
         },
         {
           "spk": "B",
-          "jp": "前から 集めているよ。特に 古い 切手と 特急の 切手が 好きなんだ。",
+          "jp": "前から 集めているよ。特に 古い 切手と 特急の 切手が 好き なんだ。",
           "en": "I've been collecting for a while. I especially like old stamps and express train stamps.",
           "terms": [
             "v_mae",
@@ -631,7 +630,7 @@
         },
         {
           "spk": "B",
-          "jp": "学校や 図書館に 行ったり、友だちに 聞いたり して、百まい ぐらい 集めてきたよ。",
+          "jp": "学校や 図書館に 行ったり、友だちに 聞いたり して、百 ぐらい 集めてきたよ。",
           "en": "I went to school and libraries, asked friends, and things like that — I've collected about a hundred.",
           "terms": [
             "v_gakkou",
@@ -652,10 +651,7 @@
               "id": "v_suru",
               "form": "te_form"
             },
-            {
-              "counter": "mai",
-              "n": 100
-            },
+            "v_hyaku",
             "p_kurai",
             {
               "id": "v_atsumeru",
@@ -1008,6 +1004,7 @@
             "v_mae",
             "p_ni",
             "v_nani",
+            "p_wo",
             {
               "id": "v_suru",
               "form": "polite_mashita"
