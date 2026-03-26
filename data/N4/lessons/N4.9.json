@@ -657,7 +657,9 @@
       "questions": [
         {
           "q": "私は どんな まちに 住んで いますか。",
+          "q_en": "What kind of town do you live in?",
           "a": "小さい まちです。",
+          "a_en": "A small town.",
           "terms": [
             "v_watashi",
             "p_wa",
@@ -672,13 +674,17 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_chiisai"
           ]
         },
         {
           "q": "家の 近所に 何が ありますか。",
+          "q_en": "What is near your house?",
           "a": "きれいな 川が あります。",
+          "a_en": "There is a beautiful river.",
           "terms": [
             "v_ie",
             "p_no",
@@ -690,7 +696,9 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             {
               "id": "v_kirei",
               "form": "attributive_na"
@@ -700,7 +708,9 @@
         },
         {
           "q": "去年の 春、何を しましたか。",
+          "q_en": "What did you do last spring?",
           "a": "お花見を しました。",
+          "a_en": "I did hanami (flower viewing).",
           "terms": [
             "v_kyonen",
             "p_no",
@@ -711,13 +721,17 @@
               "id": "v_suru",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_ohanami"
           ]
         },
         {
           "q": "川には 人が 多かったですか。",
+          "q_en": "Were there many people at the river?",
           "a": "はい、たくさんの 人が いました。",
+          "a_en": "Yes, there were many people.",
           "terms": [
             "v_kawa",
             "p_ni",
@@ -729,7 +743,9 @@
               "form": "plain_past_adj"
             },
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "p_hai",
             "v_takusan",
             "p_no",
@@ -845,7 +861,9 @@
       "questions": [
         {
           "q": "私と 友だちは 先月 会いましたか。",
+          "q_en": "Did the narrator and their friend meet last month?",
           "a": "はい、会いました。",
+          "a_en": "Yes, they met.",
           "terms": [
             "v_watashi",
             "p_to",
@@ -856,13 +874,17 @@
               "id": "v_au",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "p_hai"
           ]
         },
         {
           "q": "友だちは どこに 住んで いますか。",
+          "q_en": "Where does the friend live?",
           "a": "遠い 所に 住んで います。",
+          "a_en": "They live in a faraway place.",
           "terms": [
             "v_tomodachi",
             "p_wa",
@@ -876,14 +898,18 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_tooi",
             "v_tokoro"
           ]
         },
         {
           "q": "どこで 晩ご飯を 食べましたか。",
+          "q_en": "Where did you eat dinner?",
           "a": "レストランで 食べました。",
+          "a_en": "We ate at a restaurant.",
           "terms": [
             "v_doko",
             "p_de",
@@ -893,13 +919,17 @@
               "id": "v_taberu",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_resutoran"
           ]
         },
         {
           "q": "何時に 別れましたか。",
+          "q_en": "What time did you part ways?",
           "a": "夜の 九時に 別れました。",
+          "a_en": "We parted at nine o'clock at night.",
           "terms": [
             "v_nanji",
             "p_ni",
@@ -907,7 +937,9 @@
               "id": "v_wakareru",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_yoru",
             "p_no",
             {
