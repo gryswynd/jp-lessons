@@ -95,7 +95,7 @@
       var studentId = localStorage.getItem('k-reminder-student-id');
       if (!studentId) return;
       var workerUrl = (window.JPShared.reminderSettings && window.JPShared.reminderSettings.WORKER_URL)
-        || 'https://rikizo-reminders.YOURDOMAIN.workers.dev';
+        || 'https://rikizo-reminders.gryswynd.workers.dev';
       fetch(workerUrl + '/heartbeat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
