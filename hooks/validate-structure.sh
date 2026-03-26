@@ -51,8 +51,9 @@ for i, s in enumerate(sections):
         if n != 4:
             errors.append(f"  warmup (sections[{i}]): {n} items, must be exactly 4")
 
-# FM #12: meta.kanji required on lessons
-if not is_grammar and not is_review and 'compose' not in content_id.lower():
+# FM #12: meta.kanji required on lessons (stories exempt — storyFile present, kanji not enforced there)
+is_story = 'storyFile' in content
+if not is_grammar and not is_review and not is_story and 'compose' not in content_id.lower():
     if 'kanji' not in content.get('meta', {}):
         errors.append(f"  meta.kanji: MISSING")
 

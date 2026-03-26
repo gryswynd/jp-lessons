@@ -106,7 +106,7 @@
             "p_no",
             "v_namae",
             "p_wa",
-            "v_nani",
+            "v_nan",
             "g_desu",
             "p_ka"
           ]
@@ -131,7 +131,7 @@
             "p_no",
             "v_namae",
             "p_wa",
-            "v_nani",
+            "v_nan",
             "g_desu",
             "p_ka"
           ]
@@ -530,7 +530,8 @@
             "g_desu",
             "p_ne",
             "v_okaasan",
-            "p_wa"
+            "p_wa",
+            "p_ka"
           ]
         },
         {
@@ -612,12 +613,12 @@
           "jp": "男の人ですか、女の人ですか。",
           "en": "Is she a man or a woman?",
           "terms": [
-            "k_otoko",
+            "v_otoko",
             "p_no",
             "v_hito",
             "g_desu",
             "p_ka",
-            "k_onna"
+            "v_onna"
           ]
         },
         {
@@ -625,7 +626,7 @@
           "jp": "女の人です。とても いい 先生です。",
           "en": "A woman. She is a really good teacher.",
           "terms": [
-            "k_onna",
+            "v_onna",
             "p_no",
             "v_hito",
             "g_desu",
@@ -709,7 +710,7 @@
           "terms": [
             "v_namae",
             "p_wa",
-            "v_nani",
+            "v_nan",
             "g_desu",
             "p_ka"
           ]
@@ -931,7 +932,7 @@
             "char_yamamoto",
             "v_sensei",
             "p_wa",
-            "k_onna",
+            "v_onna",
             "p_no",
             "v_hito",
             "g_desu"
@@ -1001,7 +1002,7 @@
             "p_no",
             "v_namae",
             "p_wa",
-            "v_nani",
+            "v_nan",
             "g_desu",
             "p_ka",
             "v_san"
@@ -1013,12 +1014,12 @@
           "terms": [
             "v_sensei",
             "p_wa",
-            "k_otoko",
+            "v_otoko",
             "p_no",
             "v_hito",
             "g_desu",
             "p_ka",
-            "k_onna"
+            "v_onna"
           ]
         },
         {
@@ -1211,11 +1212,10 @@
           "terms": [
             "v_watashi",
             "p_no",
-            "k_otoko",
+            "v_otokonoko",
             "p_wa",
             "v_yasashii",
-            "g_desu",
-            "k_ko"
+            "g_desu"
           ]
         },
         {
@@ -1257,7 +1257,7 @@
             "p_no",
             "v_namae",
             "p_wa",
-            "v_nani",
+            "v_nan",
             "g_desu",
             "p_ka"
           ]
@@ -1275,7 +1275,7 @@
           "terms": [
             "v_san",
             "p_wa",
-            "k_onna",
+            "v_onna",
             "p_no",
             "v_hito",
             "g_desu"

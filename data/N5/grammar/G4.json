@@ -46,7 +46,7 @@
         },
         {
           "label": "PARTICLE",
-          "color": "particle",
+          "color": "connector",
           "text": "も"
         },
         {
@@ -383,22 +383,22 @@
       "pattern": [
         {
           "label": "START",
-          "color": "time",
+          "color": "modifier",
           "text": "A"
         },
         {
           "label": "PARTICLE",
-          "color": "particle",
+          "color": "connector",
           "text": "から"
         },
         {
           "label": "END",
-          "color": "time",
+          "color": "modifier",
           "text": "B"
         },
         {
           "label": "PARTICLE",
-          "color": "particle",
+          "color": "connector",
           "text": "まで"
         }
       ],
@@ -478,12 +478,12 @@
       "pattern": [
         {
           "label": "SPECIFIC TIME",
-          "color": "time",
+          "color": "modifier",
           "text": "月よう日"
         },
         {
           "label": "PARTICLE",
-          "color": "particle",
+          "color": "connector",
           "text": "に"
         },
         {
@@ -739,7 +739,10 @@
             "p_wa",
             "v_nanyoubi",
             "p_ni",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -752,7 +755,10 @@
             "p_kara",
             "v_kinyoubi",
             "p_made",
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -764,7 +770,10 @@
             "p_to",
             "v_nichiyoubi",
             "p_mo",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -780,7 +789,10 @@
             "p_wa",
             "v_mainichi",
             "p_wa",
-            { "id": "v_iru", "form": "polite_negative" }
+            {
+              "id": "v_iru",
+              "form": "polite_negative"
+            }
           ]
         }
       ]
@@ -897,11 +909,7 @@
             "から"
           ],
           "answer": "と",
-          "terms": [
-            "v_haha",
-            "v_chichi",
-            "v_yasashii"
-          ],
+          "terms": [],
           "explanation": "と lists items completely — exactly mother and father, no one else implied."
         },
         {
@@ -914,10 +922,7 @@
             "も"
           ],
           "answer": "から",
-          "terms": [
-            "v_getsuyoubi",
-            "v_kinyoubi"
-          ],
+          "terms": [],
           "explanation": "から marks the starting point — 'from Monday to Friday.'"
         },
         {
@@ -930,10 +935,7 @@
             "友だちや やさしいです。"
           ],
           "answer": "友だちも やさしいです。",
-          "terms": [
-            "v_tomodachi",
-            "v_yasashii"
-          ],
+          "terms": [],
           "explanation": "も REPLACES は — you write 友だちも, never 友だちはも."
         },
         {
@@ -958,10 +960,7 @@
             "から"
           ],
           "answer": "や",
-          "terms": [
-            "v_sensei",
-            "v_takusan"
-          ],
+          "terms": [],
           "explanation": "や gives a sample list — teachers and students are examples, and others are implied."
         },
         {
@@ -986,14 +985,7 @@
             "から"
           ],
           "answer": "に",
-          "terms": [
-            "v_suiyoubi",
-            "v_sensei",
-            {
-              "id": "v_iru",
-              "form": "polite_masu"
-            }
-          ],
+          "terms": [],
           "explanation": "水よう日 is a specific day → に marks it as the time of the event. は would make it the topic, not a time marker."
         }
       ]

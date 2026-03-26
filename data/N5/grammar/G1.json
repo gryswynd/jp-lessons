@@ -41,7 +41,7 @@
         },
         {
           "label": "PARTICLE",
-          "color": "particle",
+          "color": "connector",
           "text": "は"
         },
         {
@@ -153,7 +153,7 @@
         },
         {
           "label": "PARTICLE",
-          "color": "particle",
+          "color": "connector",
           "text": "は"
         },
         {
@@ -615,7 +615,8 @@
             "v_ano",
             "v_sensei",
             "p_wa",
-            "v_dare"
+            "v_dare",
+            "p_ka"
           ]
         },
         {
@@ -625,48 +626,37 @@
           "terms": [
             "char_yamamoto",
             "v_sensei",
-            "g_da",
-            "p_yo"
+            "p_yo",
+            "g_da"
           ]
         },
         {
           "spk": "けん",
-          "jp": "やまもと先生のお母さんも先生だったの？",
-          "en": "Was Teacher Yamamoto's mother also a teacher?",
+          "jp": "やまもと先生のお母さんは 先生？",
+          "en": "Is Yamamoto-sensei's mom a teacher?",
           "terms": [
             "char_yamamoto",
             "v_sensei",
             "p_no",
             "v_okaasan",
-            "p_mo",
+            "p_wa",
             "v_sensei",
-            {
-              "id": "g_da",
-              "form": "da_past"
-            },
             "p_ka"
           ]
         },
         {
           "spk": "ゆき",
-          "jp": "先生だったよ。お父さんは先生ではなかったよ。",
-          "en": "She was a teacher. Her father was not a teacher.",
+          "jp": "やまもと先生のお母さんは 先生だよ。",
+          "en": "Yeah, Yamamoto-sensei's mom is a teacher.",
           "terms": [
+            "char_yamamoto",
             "v_sensei",
-            {
-              "id": "g_da",
-              "form": "da_past"
-            },
-            "p_yo",
-            "v_otousan",
+            "p_no",
+            "v_okaasan",
             "p_wa",
             "v_sensei",
-            "p_dewa",
-            {
-              "id": "v_aru",
-              "form": "plain_past_negative"
-            },
-            "p_yo"
+            "p_yo",
+            "g_da"
           ]
         },
         {
@@ -802,14 +792,7 @@
             "先生だった。"
           ],
           "answer": "先生ではありません。",
-          "terms": [
-            "v_sensei",
-            "p_dewa",
-            {
-              "id": "v_aru",
-              "form": "polite_negative"
-            }
-          ],
+          "terms": [],
           "explanation": "ではありません is the formal polite negative copula. ではない and じゃない are plain (informal) negatives."
         },
         {
@@ -822,9 +805,7 @@
             "ではありません"
           ],
           "answer": "だ",
-          "terms": [
-            "g_da"
-          ],
+          "terms": [],
           "explanation": "だ is the plain (informal) present copula. Use it in casual conversation with friends and family."
         },
         {
@@ -837,14 +818,7 @@
             "母はやさしくない。"
           ],
           "answer": "母はやさしいです。",
-          "terms": [
-            "v_haha",
-            "p_wa",
-            {
-              "id": "v_yasashii",
-              "form": "polite_adj"
-            }
-          ],
+          "terms": [],
           "explanation": "For い-adjectives in polite speech, add です to the plain form: やさしいです. For past tense, conjugate the adjective itself: やさしかったです (not やさしいでした — the adjective changes, not です)."
         },
         {
@@ -857,10 +831,7 @@
             "先生だった。"
           ],
           "answer": "先生ではなかった。",
-          "terms": [
-            "v_sensei",
-            "g_desu"
-          ],
+          "terms": [],
           "explanation": "ではなかった is the plain (informal) past negative copula. ではありませんでした is the polite equivalent. ではない is plain present negative."
         },
         {
@@ -873,14 +844,7 @@
             "トイレだ。"
           ],
           "answer": "トイレではありません。",
-          "terms": [
-            "v_toire",
-            "p_dewa",
-            {
-              "id": "v_aru",
-              "form": "polite_negative"
-            }
-          ],
+          "terms": [],
           "explanation": "ではありません is the polite negative copula. じゃない is the plain negative — correct meaning but wrong register for polite speech."
         }
       ]

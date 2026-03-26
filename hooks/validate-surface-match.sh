@@ -178,25 +178,16 @@ def is_pure_kanji(s):
 
 def surface_found_in_jp(surface, matches, jp_orig, jp_clean):
     """Check if surface (or any match) appears in jp text.
-    For short pure-kanji surfaces (≤2 chars), uses prefix-token matching to avoid
-    substring false positives like 所 (v_tokoro) appearing inside 場所 (v_basho).
-    Japanese nouns appear at the start of a whitespace- or punctuation-delimited token
-    followed by a particle (場所は), so startswith() catches the noun while rejecting
-    kanji that only appear embedded mid-compound.
-    Splits on both spaces AND after sentence-final punctuation (。！？) to handle
-    multi-sentence jp strings where periods aren't always followed by a space."""
+    For short pure-kanji surfaces (≤2 chars), uses a negative CJK lookbehind to avoid
+    false positives where a kanji appears embedded inside a longer compound
+    (e.g. 所 inside 場所) while still matching when preceded by hiragana, katakana,
+    punctuation, or a name (e.g. 先生 in すずき先生は, 人 in 男の人)."""
     all_forms = [surface] + matches
     if is_pure_kanji(surface) and len(surface) <= 2:
-        # Split on whitespace, sentence boundaries (。！？), 、, and opening
-        # brackets 「『（( to catch words that appear after punctuation or in
-        # quoted drill items (e.g. 「台風」の いみは？).
-        rough_tokens = jp_orig.split()
-        tokens = []
-        for tok in rough_tokens:
-            for sub in _re.split(r'(?<=[。！？])', tok):
-                for sub2 in sub.split('、'):
-                    tokens.extend(t for t in _re.split(r'^[「『（(【]', sub2) if t)
-        return any(tok.startswith(f) for tok in tokens for f in all_forms)
+        for f in all_forms:
+            if _re.search(r'(?<![\u4e00-\u9fff])' + _re.escape(f), jp_clean):
+                return True
+        return False
     return any(f in jp_clean for f in all_forms)
 
 def check_surface(jp, terms, path):

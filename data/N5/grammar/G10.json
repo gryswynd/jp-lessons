@@ -476,51 +476,82 @@
       "title": "The え-Row Shift — Plain Command Stem Map",
       "description": "Plain commands for godan (U) verbs are formed by shifting the final syllable to the え-row. You already know the い-row (ます stem, G6) and the あ-row (ない stem, G8). The え-row follows the same logic — find the ending on the hiragana chart and move it to the え-row.",
       "tableType": "conjugation",
-      "headers": ["Dictionary ending (う-row)", "Command stem (え-row)", "Command example"],
+      "headers": [
+        "Dictionary ending (う-row)",
+        "Command stem (え-row)",
+        "Command example"
+      ],
       "rows": [
         {
           "label": "く",
-          "cells": ["け", "書く → 書け！"],
+          "cells": [
+            "け",
+            "書く → 書け！"
+          ],
           "meaning": "Write!"
         },
         {
           "label": "ぐ",
-          "cells": ["げ", "およぐ → およげ！"],
+          "cells": [
+            "げ",
+            "およぐ → およげ！"
+          ],
           "meaning": "Swim!"
         },
         {
           "label": "す",
-          "cells": ["せ", "はなす → はなせ！"],
+          "cells": [
+            "せ",
+            "はなす → はなせ！"
+          ],
           "meaning": "Speak!"
         },
         {
           "label": "つ",
-          "cells": ["て", "もつ → もて！"],
+          "cells": [
+            "て",
+            "もつ → もて！"
+          ],
           "meaning": "Hold!"
         },
         {
           "label": "ぬ",
-          "cells": ["ね", "しぬ → しね！"],
+          "cells": [
+            "ね",
+            "しぬ → しね！"
+          ],
           "meaning": "Die! (only in fiction — extremely harsh)"
         },
         {
           "label": "ぶ",
-          "cells": ["べ", "よぶ → よべ！"],
+          "cells": [
+            "べ",
+            "よぶ → よべ！"
+          ],
           "meaning": "Call!"
         },
         {
           "label": "む",
-          "cells": ["め", "のむ → のめ！"],
+          "cells": [
+            "め",
+            "のむ → のめ！"
+          ],
           "meaning": "Drink!"
         },
         {
           "label": "る (godan)",
-          "cells": ["れ", "走る → 走れ！"],
+          "cells": [
+            "れ",
+            "走る → 走れ！"
+          ],
           "meaning": "Run!"
         },
         {
           "label": "う",
-          "cells": ["え", "買う → 買え！"],
+          "cells": [
+            "え",
+            "買う → 買え！"
+          ],
           "meaning": "Buy!"
         }
       ],
@@ -805,7 +836,8 @@
             {
               "id": "v_suru",
               "form": "plain_negative"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -837,7 +869,8 @@
             {
               "id": "v_iku",
               "form": "plain_negative"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -1110,7 +1143,9 @@
             "けど"
           ],
           "answer": "ので",
-          "also_accept": ["から"],
+          "also_accept": [
+            "から"
+          ],
           "explanation": "Both ので and から mean 'because' here — both earn credit. ので is the better fit because 'having a test tomorrow' is an objective, shared-understanding fact — ので presents reasons as natural, impersonal circumstances. から sounds more personal and direct, as if emphasizing your own decision. が/けど = 'but', wrong meaning entirely."
         },
         {
@@ -1143,12 +1178,7 @@
             "飲みません"
           ],
           "answer": "飲まない",
-          "terms": [
-            {
-              "id": "v_nomu",
-              "form": "plain_negative"
-            }
-          ],
+          "terms": [],
           "explanation": "飲む is a godan (U) verb ending in む. あ-column shift: む → ま + ない = 飲まない. Polite negative is 飲みません (ます-stem + ません), not the same as plain negative."
         },
         {
@@ -1161,12 +1191,7 @@
             "ありません"
           ],
           "answer": "ない",
-          "terms": [
-            {
-              "id": "v_aru",
-              "form": "plain_negative"
-            }
-          ],
+          "terms": [],
           "explanation": "ある is fully irregular. Its plain negative is ない (there isn't / does not exist). Never あらない — that form does not exist. ありません is the polite negative (not plain)."
         },
         {
@@ -1179,20 +1204,7 @@
             "行きたいが、ですがお金が ありません。"
           ],
           "answer": "行きたいですが、お金が ありません。",
-          "terms": [
-            {
-              "id": "v_iku",
-              "form": "plain_desire_tai"
-            },
-            "g_desu",
-            "p_ga_but",
-            "v_okane",
-            "p_ga",
-            {
-              "id": "v_aru",
-              "form": "polite_negative"
-            }
-          ],
+          "terms": [],
           "explanation": "が attaches directly to the end of the first clause: 行きたいですが. There must be a comma before the second clause. The first clause uses polite form (たいです) — this is the formal register for が."
         },
         {
@@ -1218,9 +1230,7 @@
             "行かない！"
           ],
           "answer": "行け！",
-          "terms": [
-            "v_iku"
-          ],
+          "terms": [],
           "explanation": "行く (godan く): え-column shift: く → け = 行け. This is the plain imperative — blunt and potentially rude. 行こう = 'let's go' (volitional, not a command). 行かない = plain negative. 行きろ does not exist."
         },
         {
@@ -1233,14 +1243,7 @@
             "お金が ないのがです。"
           ],
           "answer": "お金が ないんです。",
-          "terms": [
-            "v_okane",
-            "p_ga",
-            {
-              "id": "v_aru",
-              "form": "plain_negative"
-            }
-          ],
+          "terms": [],
           "explanation": "Plain form (ない) + んです = explanatory/emphasis. お金が ないんです = 'The thing is, I have no money.' The plain negative of ある (ない) connects directly to んです without any additional particles."
         }
       ]
