@@ -325,14 +325,7 @@ window.PracticeModule = {
                 <button class="k-btn" style="background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);" onclick="KanjiApp.start('mixed', 'flag-review')">🚩 Review Flagged</button>
 
                 <div class="k-lbl" style="margin-top:2rem; color:#8e44ad;">VERB PRACTICE</div>
-                <div class="k-construction-wrap">
-                    <button class="k-btn" style="background: linear-gradient(135deg, #8e44ad 0%, #6c3483 100%);">🏃 Verb Flashcards</button>
-                    <div class="k-construction-sticker"><span>🚧 Under Construction</span></div>
-                </div>
-                <div class="k-construction-wrap">
-                    <button class="k-btn" style="background: linear-gradient(135deg, #8e44ad 0%, #6c3483 100%);">⚡ Conjugation Quiz</button>
-                    <div class="k-construction-sticker"><span>🚧 Under Construction</span></div>
-                </div>
+                <button class="k-btn" style="background: linear-gradient(135deg, #8e44ad 0%, #6c3483 100%);" onclick="KanjiApp.start('dojo','dojo')">⚡ Conjugation Dojo</button>
 
                 <div class="k-lbl" style="margin-top:2rem; color:#e74c3c;">SENTENCE PRACTICE</div>
                 <button class="k-btn" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);" onclick="KanjiApp.toggleScrMenu()">🔀 Scramble</button>
@@ -423,6 +416,16 @@ window.PracticeModule = {
                 </div>
             </div>
 
+            <div id="k-view-dojo" class="k-hidden" style="width:100%">
+                <div style="display:flex; justify-content:space-between; width:100%; margin-bottom:10px; color:#a4b0be; font-weight:800; font-size:0.9rem;">
+                    <span id="k-dojo-progress">0 / 0</span>
+                    <span>🏆 <span id="k-dojo-best">0</span></span>
+                    <span style="color:#ffa502">🔥 <span id="k-dojo-streak">0</span></span>
+                </div>
+                <div id="k-dojo-stage"></div>
+                <button class="k-btn k-btn-sec" onclick="KanjiApp.showMenu()" style="margin-top:10px">Exit Dojo</button>
+            </div>
+
             <div id="k-view-quiz" class="k-hidden" style="width:100%; display:flex; flex-direction:column; height:100%">
                 <div style="display:flex; justify-content:space-between; width:100%; margin-bottom:15px; font-weight:800; color:#a4b0be;">
                     <span>🏆 BEST: <span id="k-best">0</span></span>
@@ -455,7 +458,7 @@ window.PracticeModule = {
       window.JPShared.stampSettings.setConfig(REPO_CONFIG);
     }
 
-    const ALL_VIEWS = ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4','k-view-scr'];
+    const ALL_VIEWS = ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4','k-view-scr','k-view-dojo'];
     const DB = { kanji: [], verb: [], lessons: [], vocabMap: new Map() };
     const activeLessons = new Set();
     let curSet=[], curIdx=0, curStreak=0, curBest=0, curMode='', curAns='', curType='', curSubMode='normal', curQItem=null, curCategory='';
@@ -473,7 +476,8 @@ window.PracticeModule = {
         flash: window.JPShared.progress.getBestScore('flash'),
         connections: window.JPShared.progress.getBestScore('connections'),
         scramble: window.JPShared.progress.getBestScore('scramble'),
-        marathon: window.JPShared.progress.getBestScore('marathon')
+        marathon: window.JPShared.progress.getBestScore('marathon'),
+        dojo: window.JPShared.progress.getBestScore('dojo')
     };
 
     // --- 3. HELPER FUNCTIONS ---
@@ -530,7 +534,7 @@ window.PracticeModule = {
             if (streak >= STREAK_TIERS[i].at) { tier = STREAK_TIERS[i]; break; }
         }
 
-        var targetView = document.getElementById(curMode === 'flash' ? 'k-view-flash' : curMode === 'connections' ? 'k-view-conn' : curMode === 'connections4' ? 'k-view-conn4' : curMode === 'scramble' ? 'k-view-scr' : 'k-view-quiz');
+        var targetView = document.getElementById(curMode === 'flash' ? 'k-view-flash' : curMode === 'connections' ? 'k-view-conn' : curMode === 'connections4' ? 'k-view-conn4' : curMode === 'scramble' ? 'k-view-scr' : curMode === 'dojo' ? 'k-view-dojo' : 'k-view-quiz');
         if (!targetView) return;
         targetView.style.position = 'relative';
 
@@ -664,6 +668,9 @@ window.PracticeModule = {
             return;
         } else if (type === 'marathon') {
             marathonStart();
+            return;
+        } else if (type === 'dojo') {
+            dojoStart();
             return;
         }
 
@@ -1707,6 +1714,68 @@ window.PracticeModule = {
             </div>
         `;
         setTxt('k-scr-progress', 'Complete!');
+    }
+
+    // ---- Conjugation Dojo ----
+    let dojoConjRules = null;
+
+    async function dojoStart() {
+        if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
+
+        // Load conjugation_rules.json once
+        if (!dojoConjRules) {
+            try {
+                const url = window.getAssetUrl(REPO_CONFIG, 'conjugation_rules.json') + '?t=' + Date.now();
+                dojoConjRules = await (await fetch(url)).json();
+            } catch(e) {
+                alert('Could not load conjugation rules.');
+                return;
+            }
+        }
+
+        // Switch views
+        ALL_VIEWS.forEach(i => {
+            const el = document.getElementById(i);
+            if(el) el.classList.add('k-hidden');
+        });
+        const dv = document.getElementById('k-view-dojo');
+        if(dv) dv.classList.remove('k-hidden');
+
+        let dojoStreak = 0;
+        let dojoBest = bestScores.dojo || 0;
+        setTxt('k-dojo-streak', 0);
+        setTxt('k-dojo-best', dojoBest);
+
+        window.JPShared.conjugationDojo.init(document.getElementById('k-dojo-stage'), {
+            activeLessons: activeLessons,
+            vocabMap: DB.vocabMap,
+            conjugationRules: dojoConjRules,
+            textProcessor: window.JPShared.textProcessor,
+            onCorrect: function() {
+                dojoStreak++;
+                if (dojoStreak > dojoBest) {
+                    dojoBest = dojoStreak;
+                    bestScores.dojo = dojoBest;
+                    window.JPShared.progress.setBestScore('dojo', dojoBest);
+                }
+                setTxt('k-dojo-streak', dojoStreak);
+                setTxt('k-dojo-best', dojoBest);
+                if (dojoStreak >= 5 && dojoStreak % 5 === 0) {
+                    var saved = curMode; curMode = 'dojo';
+                    launchHanabi(dojoStreak);
+                    curMode = saved;
+                }
+            },
+            onWrong: function() {
+                dojoStreak = 0;
+                setTxt('k-dojo-streak', 0);
+            },
+            onExit: function() { KanjiApp.showMenu(); },
+            onProgress: function(current, total) {
+                setTxt('k-dojo-progress', current + ' / ' + total);
+            },
+            getStreakInfo: function() { return { streak: dojoStreak, best: dojoBest }; }
+        });
     }
 
     KanjiApp.flipCard = function() {
