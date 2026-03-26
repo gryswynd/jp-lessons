@@ -748,7 +748,9 @@
       "questions": [
         {
           "q": "りきぞ は 毎朝 何時に 起きますか。",
+          "q_en": "What time does Rikizo wake up every morning?",
           "a": "六時に 起きます。",
+          "a_en": "He wakes up at six o'clock.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -759,7 +761,9 @@
               "id": "v_okiru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             {
               "counter": "ji",
               "n": 6
@@ -768,7 +772,9 @@
         },
         {
           "q": "今朝 は だれ が 朝ごはんを 作りましたか。",
+          "q_en": "Who made breakfast this morning?",
           "a": "りきぞ の 母 が 作って くれました。",
+          "a_en": "Rikizo's mother made it for him.",
           "terms": [
             "v_kesa",
             "p_wa",
@@ -780,7 +786,9 @@
               "id": "v_tsukuru",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "char_rikizo",
             "p_no",
             "v_haha",
@@ -796,7 +804,9 @@
         },
         {
           "q": "今日 の 天気 は どうですか。",
+          "q_en": "How is the weather today?",
           "a": "朝 から 明るい 天気 です。",
+          "a_en": "It has been bright since morning.",
           "terms": [
             "v_kyou",
             "p_no",
@@ -804,7 +814,9 @@
             "p_wa",
             "v_dou",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_asa",
             "p_kara",
             "v_akarui"
@@ -812,7 +824,9 @@
         },
         {
           "q": "りきぞ は 毎朝 何を しますか。",
+          "q_en": "What does Rikizo do every morning?",
           "a": "起きて、朝ごはんを 食べます。",
+          "a_en": "He wakes up and eats breakfast.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -823,7 +837,9 @@
               "id": "v_suru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             {
               "id": "v_okiru",
               "form": "te_form"
@@ -939,7 +955,9 @@
       "questions": [
         {
           "q": "今晩 は どこで 晩ごはんを 食べますか。",
+          "q_en": "Where are you eating dinner tonight?",
           "a": "ゆき の 家で 食べます。",
+          "a_en": "At Yuki's house.",
           "terms": [
             "v_konban",
             "p_wa",
@@ -951,7 +969,9 @@
               "id": "v_taberu",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "char_yuki",
             "p_no",
             "v_ie"
@@ -959,7 +979,9 @@
         },
         {
           "q": "だれ が 晩ごはんを 作りますか。",
+          "q_en": "Who is making dinner?",
           "a": "ゆき の 母 が 作って くれます。",
+          "a_en": "Yuki's mother is making it for us.",
           "terms": [
             "v_dare",
             "p_ga",
@@ -969,7 +991,9 @@
               "id": "v_tsukuru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "char_yuki",
             "p_no",
             "v_haha",
@@ -985,7 +1009,9 @@
         },
         {
           "q": "毎晩 どこで 晩ごはんを 食べたいですか。",
+          "q_en": "Where do you want to eat dinner every evening?",
           "a": "毎晩 ゆき の 家で 食べたいです。",
+          "a_en": "Every evening at Yuki's house.",
           "terms": [
             "v_maiban",
             "v_doko",
@@ -997,7 +1023,9 @@
               "form": "plain_desire_tai"
             },
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "char_yuki",
             "p_no",
             "v_ie"
@@ -1005,7 +1033,9 @@
         },
         {
           "q": "今晩 は 何時に 行けますか。",
+          "q_en": "What time can you go tonight?",
           "a": "六時に 行けます。",
+          "a_en": "You can go at six o'clock.",
           "terms": [
             "v_konban",
             "p_wa",
@@ -1015,7 +1045,9 @@
               "id": "v_iku",
               "form": "polite_potential"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             {
               "counter": "ji",
               "n": 6

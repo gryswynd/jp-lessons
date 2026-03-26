@@ -747,7 +747,9 @@
       "questions": [
         {
           "q": "会合は どこで ありますか。",
+          "q_en": "Where is the meeting being held?",
           "a": "駅の 待ち合い室で あります。",
+          "a_en": "At the station waiting room.",
           "terms": [
             "v_kaigou",
             "p_wa",
@@ -757,7 +759,9 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_eki",
             "p_no",
             "v_machiaishitsu"
@@ -765,7 +769,9 @@
         },
         {
           "q": "先生は 何時に 来ますか。",
+          "q_en": "What time will the teacher arrive?",
           "a": "夕方の 五時に 来ます。",
+          "a_en": "At five in the evening.",
           "terms": [
             "v_sensei",
             "p_wa",
@@ -775,7 +781,9 @@
               "id": "v_kuru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_yuugata",
             {
               "counter": "ji",
@@ -785,7 +793,9 @@
         },
         {
           "q": "何度も 話せば、何が できますか。",
+          "q_en": "If you talk many times, what can you achieve?",
           "a": "いい 考え方が できます。",
+          "a_en": "Good thinking can be achieved.",
           "terms": [
             "v_nando",
             "p_mo",
@@ -799,7 +809,9 @@
               "id": "v_dekiru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_ii",
             "v_kangaekata"
           ]
@@ -913,7 +925,9 @@
       "questions": [
         {
           "q": "いつ 外を 歩きますか。",
+          "q_en": "When do you go for a walk outside?",
           "a": "夕方に なったら、歩きます。",
+          "a_en": "When it becomes evening.",
           "terms": [
             "v_itsu",
             "v_soto",
@@ -922,7 +936,9 @@
               "id": "v_aruku",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_yuugata",
             "p_ni",
             {
@@ -937,7 +953,9 @@
         },
         {
           "q": "どんな 運動は しませんか。",
+          "q_en": "What kind of exercise do you not do?",
           "a": "強度の 高い 運動は しません。",
+          "a_en": "High-intensity exercise.",
           "terms": [
             "v_donna",
             "v_undou",
@@ -946,7 +964,9 @@
               "id": "v_suru",
               "form": "polite_negative"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_kyoudo",
             "p_no",
             "v_takai"
@@ -954,7 +974,9 @@
         },
         {
           "q": "毎日 歩くと、体は どう なりますか。",
+          "q_en": "If you walk every day, how does the body change?",
           "a": "体の 度合いが よく なります。",
+          "a_en": "The body's condition improves.",
           "terms": [
             "v_mainichi",
             {
@@ -969,7 +991,9 @@
               "id": "v_naru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_karada",
             "p_no",
             "v_doai",

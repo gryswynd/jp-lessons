@@ -753,7 +753,9 @@
       "questions": [
         {
           "q": "駅の 前に 何が ありますか。",
+          "q_en": "What is in front of the station?",
           "a": "大きい 店が あります。",
+          "a_en": "There is a big shop.",
           "terms": [
             "v_eki",
             "p_no",
@@ -765,14 +767,23 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_ookii",
-            "v_mise"
+            "v_mise",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "りきぞは いま 何を していますか。",
+          "q_en": "What is Rikizo doing now?",
           "a": "外で コーヒーを 飲んでいます。",
+          "a_en": "He is drinking coffee outside.",
           "terms": [
             "v_nani",
             "p_wo",
@@ -784,7 +795,9 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_soto",
             "p_de",
             "v_koohii",
@@ -801,7 +814,9 @@
         },
         {
           "q": "先生は どこに いますか。",
+          "q_en": "Where is the teacher?",
           "a": "中に います。",
+          "a_en": "He is inside.",
           "terms": [
             "v_sensei",
             "p_wa",
@@ -811,7 +826,9 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_naka",
             "p_ni",
             {
@@ -937,7 +954,9 @@
       "questions": [
         {
           "q": "やまかわは どこへ 行きましたか。",
+          "q_en": "Where did Yamakawa go?",
           "a": "駅の 前に ある レストランへ 行きました。",
+          "a_en": "He went to the restaurant in front of the station.",
           "terms": [
             "v_doko",
             "p_e",
@@ -945,18 +964,27 @@
               "id": "v_iku",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_eki",
             "p_no",
             "v_mae",
             "p_ni",
             "v_aru",
-            "v_resutoran"
+            "v_resutoran",
+            "p_e",
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "レストランの 中は どうですか。",
+          "q_en": "How is the inside of the restaurant?",
           "a": "新しいです。",
+          "a_en": "It is new.",
           "terms": [
             "v_resutoran",
             "p_no",
@@ -964,14 +992,18 @@
             "p_wa",
             "v_dou",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_atarashii",
             "g_desu"
           ]
         },
         {
           "q": "やまかわは 来週も 行きますか。",
+          "q_en": "Will Yamakawa go again next week?",
           "a": "はい、来週も 行きます。",
+          "a_en": "Yes, he will go again next week.",
           "terms": [
             "v_raishuu",
             "p_mo",
@@ -979,7 +1011,9 @@
               "id": "v_iku",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "p_hai",
             "v_raishuu",
             "p_mo",

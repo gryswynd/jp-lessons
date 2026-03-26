@@ -756,7 +756,9 @@
       "questions": [
         {
           "q": "りきぞ は 今日 どこに 行きましたか。",
+          "q_en": "Where did Rikizo go today?",
           "a": "スーパーに 行きました。",
+          "a_en": "He went to the supermarket.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -767,13 +769,17 @@
               "id": "v_iku",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_suupaa"
           ]
         },
         {
           "q": "りきぞ は 何を 作りましたか。",
+          "q_en": "What did Rikizo make?",
           "a": "牛肉と 野菜の 料理を 作りました。",
+          "a_en": "He made a dish with beef and vegetables.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -783,7 +789,9 @@
               "id": "v_tsukuru",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_gyuuniku",
             "p_to",
             "v_yasai",
@@ -793,7 +801,9 @@
         },
         {
           "q": "その 料理は おいしかったですか。",
+          "q_en": "Was the dish delicious?",
           "a": "はい、とても おいしかったです。",
+          "a_en": "Yes, it was very delicious.",
           "terms": [
             "v_sono",
             "v_ryouri",
@@ -803,7 +813,9 @@
               "form": "plain_past_adj"
             },
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "p_hai",
             "v_totemo"
           ]
@@ -924,7 +936,9 @@
       "questions": [
         {
           "q": "やまかわさんは 料理が 上手ですか。",
+          "q_en": "Is Yamakawa good at cooking?",
           "a": "はい、とても 上手です。",
+          "a_en": "Yes, he is very good.",
           "terms": [
             "char_yamakawa",
             "v_san",
@@ -936,14 +950,18 @@
               "form": "polite_adj"
             },
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "p_hai",
             "v_totemo"
           ]
         },
         {
           "q": "やまかわさんは 何を 作れますか。",
+          "q_en": "What can Yamakawa make?",
           "a": "色々な 食べ物や 飲み物を 作れます。",
+          "a_en": "He can make various foods and drinks.",
           "terms": [
             "char_yamakawa",
             "v_san",
@@ -954,7 +972,9 @@
               "id": "v_tsukuru",
               "form": "polite_potential"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             {
               "id": "v_iroiro",
               "form": "attributive_na"
@@ -966,7 +986,9 @@
         },
         {
           "q": "りきぞ は だれの ように 料理が 作りたいですか。",
+          "q_en": "Who does Rikizo want to cook like?",
           "a": "やまかわさんの ように 作りたいです。",
+          "a_en": "He wants to cook like Yamakawa-san.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -980,7 +1002,9 @@
               "form": "plain_desire_tai"
             },
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "char_yamakawa",
             "v_san"
           ]

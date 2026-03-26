@@ -249,7 +249,10 @@
           "jp": "四人 家族です。親と 兄が います。",
           "en": "We're a family of four. I have parents and an older brother.",
           "terms": [
-            { "counter": "nin", "n": 4 },
+            {
+              "counter": "nin",
+              "n": 4
+            },
             "v_kazoku",
             "g_desu",
             "v_oya",
@@ -307,7 +310,10 @@
             "p_no",
             "v_kazoku",
             "p_wa",
-            { "counter": "nin", "n": 5 },
+            {
+              "counter": "nin",
+              "n": 5
+            },
             "g_desu",
             "v_oya",
             "p_to",
@@ -692,7 +698,10 @@
             "p_no",
             "v_kazoku",
             "p_wa",
-            { "counter": "nin", "n": 5 },
+            {
+              "counter": "nin",
+              "n": 5
+            },
             "g_desu",
             "v_oya",
             "p_to",
@@ -796,19 +805,28 @@
       "questions": [
         {
           "q": "家族は 何人ですか。",
+          "q_en": "How many people are in the family?",
           "a": "五人です。",
+          "a_en": "There are five people.",
           "terms": [
             "v_kazoku",
             "p_wa",
             "v_nannin",
             "g_desu",
-            "p_ka",
-            { "counter": "nin", "n": 5 }
+            "p_ka"
+          ],
+          "a_terms": [
+            {
+              "counter": "nin",
+              "n": 5
+            }
           ]
         },
         {
           "q": "姉と 兄と どちらが 料理が 上手ですか。",
+          "q_en": "Between older sister and older brother, who is better at cooking?",
           "a": "姉が 上手です。",
+          "a_en": "Older sister is better.",
           "terms": [
             "v_ane",
             "p_to",
@@ -819,11 +837,14 @@
             "v_jouzu",
             "g_desu",
             "p_ka"
-          ]
+          ],
+          "a_terms": []
         },
         {
           "q": "週まつ、家族は 何を しますか。",
+          "q_en": "What does the family do on weekends?",
           "a": "みんなで 会って、いっしょに ご飯を 食べます。",
+          "a_en": "They all meet and eat a meal together.",
           "terms": [
             "v_shuumatsu",
             "v_kazoku",
@@ -834,7 +855,9 @@
               "id": "v_suru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_minna",
             "p_de",
             {
@@ -969,7 +992,9 @@
       "questions": [
         {
           "q": "姉は 料理が 上手ですか。",
+          "q_en": "Is older sister good at cooking?",
           "a": "はい、とても 上手です。",
+          "a_en": "Yes, she is very good.",
           "terms": [
             "v_ane",
             "p_wa",
@@ -977,14 +1002,18 @@
             "p_ga",
             "v_jouzu",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "p_hai",
             "v_totemo"
           ]
         },
         {
           "q": "姉は 今 何を して いますか。",
+          "q_en": "What is older sister doing now?",
           "a": "会社で 働いて います。",
+          "a_en": "She is working at a company.",
           "terms": [
             "v_ane",
             "p_wa",
@@ -999,7 +1028,9 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_kaisha",
             "p_de",
             {
@@ -1010,7 +1041,9 @@
         },
         {
           "q": "来週、何を したいですか。",
+          "q_en": "What do you want to do next week?",
           "a": "いっしょに 買い物に 行きたいです。",
+          "a_en": "I want to go shopping together.",
           "terms": [
             "v_raishuu",
             "v_nani",
@@ -1020,7 +1053,9 @@
               "form": "plain_desire_tai"
             },
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_issho",
             "p_ni",
             "v_kaimono",

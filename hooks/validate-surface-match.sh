@@ -276,15 +276,23 @@ def walk(obj, path="root"):
     if isinstance(obj, dict):
         if 'jp' in obj and 'terms' in obj:
             check_surface(obj['jp'], obj['terms'], path)
-        # Q&A fields: terms cover both q and a text; check against combined string
-        # Also include 'answer' (fill-in-the-blank drills) so surface check covers the answer token
+        # Q&A fields: new format splits terms (q only) and a_terms (a only)
+        # Old format: terms covers combined q+a text
         if 'q' in obj and 'terms' in obj:
-            qa_text = obj['q']
-            if isinstance(obj.get('a'), str):
-                qa_text += ' ' + obj['a']
-            if isinstance(obj.get('answer'), str):
-                qa_text += ' ' + obj['answer']
-            check_surface(qa_text, obj['terms'], path + '.q')
+            if 'a_terms' in obj:
+                # New format: terms covers q only, a_terms covers a only
+                check_surface(obj['q'], obj['terms'], path + '.q')
+                if isinstance(obj.get('a'), str) and obj.get('a_terms'):
+                    check_surface(obj['a'], obj['a_terms'], path + '.a')
+            else:
+                # Old format (backward compat): terms covers combined q+a text
+                # Also include 'answer' (fill-in-the-blank drills) so surface check covers the answer token
+                qa_text = obj['q']
+                if isinstance(obj.get('a'), str):
+                    qa_text += ' ' + obj['a']
+                if isinstance(obj.get('answer'), str):
+                    qa_text += ' ' + obj['answer']
+                check_surface(qa_text, obj['terms'], path + '.q')
         for k, v in obj.items():
             walk(v, f"{path}.{k}")
     elif isinstance(obj, list):

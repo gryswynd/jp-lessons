@@ -856,7 +856,9 @@
       "questions": [
         {
           "q": "りきぞは 朝、何を しますか。",
+          "q_en": "What does Rikizo do in the morning?",
           "a": "少し 走ります。",
+          "a_en": "He runs a little.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -867,7 +869,9 @@
               "id": "v_suru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_sukoshi",
             {
               "id": "v_hashiru",
@@ -877,7 +881,9 @@
         },
         {
           "q": "体重は どう なって きましたか。",
+          "q_en": "How has his body weight changed?",
           "a": "少しずつ 軽く なって きました。",
+          "a_en": "It has gradually become lighter.",
           "terms": [
             "v_taijuu",
             "p_wa",
@@ -890,7 +896,9 @@
               "id": "v_kuru",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_sukoshi",
             "p_zutsu",
             {
@@ -1023,7 +1031,9 @@
       "questions": [
         {
           "q": "進歩する ためには 何が 大切ですか。",
+          "q_en": "What is important for making progress?",
           "a": "少しずつ 重ねる ことが 大切です。",
+          "a_en": "Accumulating things little by little.",
           "terms": [
             "v_shinpo",
             {
@@ -1039,7 +1049,9 @@
               "id": "v_taisetsu",
               "form": "polite_adj"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_sukoshi",
             "p_zutsu",
             {
@@ -1056,7 +1068,9 @@
         },
         {
           "q": "りきぞは どうして 楽しく なって きましたか。",
+          "q_en": "Why has Rikizo started to feel happy?",
           "a": "自分の 進歩を 見た からです。",
+          "a_en": "Because he saw his own progress.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -1073,7 +1087,9 @@
               "id": "v_kuru",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_jibun",
             "p_no",
             "v_shinpo",

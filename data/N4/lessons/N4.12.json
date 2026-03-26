@@ -6,15 +6,58 @@
     "phase": 4,
     "lesson": 12,
     "focus": "Body parts, physical descriptions, and fame",
-    "kanji": ["首", "顔", "体", "頭", "心", "有"]
+    "kanji": [
+      "首",
+      "顔",
+      "体",
+      "頭",
+      "心",
+      "有"
+    ]
   },
   "newKanji": [
-    { "kanji": "首", "on": "シュ", "kun": "くび", "meaning": "neck", "termId": "k_kubi" },
-    { "kanji": "顔", "on": "ガン", "kun": "かお", "meaning": "face", "termId": "k_kao" },
-    { "kanji": "体", "on": "タイ", "kun": "からだ", "meaning": "body", "termId": "k_karada" },
-    { "kanji": "頭", "on": "トウ / ズ", "kun": "あたま", "meaning": "head", "termId": "k_atama" },
-    { "kanji": "心", "on": "シン", "kun": "こころ", "meaning": "heart / mind", "termId": "k_kokoro" },
-    { "kanji": "有", "on": "ユウ", "kun": "あ（る）", "meaning": "to have / exist", "termId": "k_yuu" }
+    {
+      "kanji": "首",
+      "on": "シュ",
+      "kun": "くび",
+      "meaning": "neck",
+      "termId": "k_kubi"
+    },
+    {
+      "kanji": "顔",
+      "on": "ガン",
+      "kun": "かお",
+      "meaning": "face",
+      "termId": "k_kao"
+    },
+    {
+      "kanji": "体",
+      "on": "タイ",
+      "kun": "からだ",
+      "meaning": "body",
+      "termId": "k_karada"
+    },
+    {
+      "kanji": "頭",
+      "on": "トウ / ズ",
+      "kun": "あたま",
+      "meaning": "head",
+      "termId": "k_atama"
+    },
+    {
+      "kanji": "心",
+      "on": "シン",
+      "kun": "こころ",
+      "meaning": "heart / mind",
+      "termId": "k_kokoro"
+    },
+    {
+      "kanji": "有",
+      "on": "ユウ",
+      "kun": "あ（る）",
+      "meaning": "to have / exist",
+      "termId": "k_yuu"
+    }
   ],
   "sections": [
     {
@@ -30,7 +73,10 @@
             "p_yori",
             "v_eiga",
             "p_ga",
-            { "id": "v_suki", "form": "polite_adj" },
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            },
             "g_desu"
           ]
         },
@@ -40,10 +86,16 @@
           "terms": [
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "nagara_form" },
+            {
+              "id": "v_yomu",
+              "form": "nagara_form"
+            },
             "v_ocha",
             "p_wo",
-            { "id": "v_nomu", "form": "polite_masu" }
+            {
+              "id": "v_nomu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -52,11 +104,20 @@
           "terms": [
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "tari_form" },
+            {
+              "id": "v_yomu",
+              "form": "tari_form"
+            },
             "v_terebi",
             "p_wo",
-            { "id": "v_miru", "form": "tari_form" },
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_miru",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -67,7 +128,10 @@
             "p_ni",
             "v_namae",
             "p_wo",
-            { "id": "v_kaku", "form": "te_form" },
+            {
+              "id": "v_kaku",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         }
@@ -82,42 +146,54 @@
           "on": "シュ",
           "kun": "くび",
           "meaning": "neck",
-          "terms": ["k_kubi"]
+          "terms": [
+            "k_kubi"
+          ]
         },
         {
           "kanji": "顔",
           "on": "ガン",
           "kun": "かお",
           "meaning": "face",
-          "terms": ["k_kao"]
+          "terms": [
+            "k_kao"
+          ]
         },
         {
           "kanji": "体",
           "on": "タイ",
           "kun": "からだ",
           "meaning": "body",
-          "terms": ["k_karada"]
+          "terms": [
+            "k_karada"
+          ]
         },
         {
           "kanji": "頭",
           "on": "トウ",
           "kun": "あたま",
           "meaning": "head",
-          "terms": ["k_atama"]
+          "terms": [
+            "k_atama"
+          ]
         },
         {
           "kanji": "心",
           "on": "シン",
           "kun": "こころ",
           "meaning": "heart / mind",
-          "terms": ["k_kokoro"]
+          "terms": [
+            "k_kokoro"
+          ]
         },
         {
           "kanji": "有",
           "on": "ユウ",
           "kun": "あ（る）",
           "meaning": "to have / exist",
-          "terms": ["k_yuu"]
+          "terms": [
+            "k_yuu"
+          ]
         }
       ]
     },
@@ -127,15 +203,35 @@
       "groups": [
         {
           "label": "体の 部分 (Body Parts)",
-          "items": ["v_atama", "v_kao", "v_karada", "v_kubi", "v_tekubi"]
+          "items": [
+            "v_atama",
+            "v_kao",
+            "v_karada",
+            "v_kubi",
+            "v_tekubi"
+          ]
         },
         {
           "label": "特徴と 名声 (Traits & Fame)",
-          "items": ["v_atamagaii", "v_chuushin", "v_kaoiro", "v_kokoro", "v_yuumei", "v_yuumeijin"]
+          "items": [
+            "v_atamagaii",
+            "v_chuushin",
+            "v_kaoiro",
+            "v_kokoro",
+            "v_yuumei",
+            "v_yuumeijin"
+          ]
         },
         {
           "label": "今日の 漢字 (Kanji This Lesson)",
-          "items": ["k_kubi", "k_kao", "k_karada", "k_atama", "k_kokoro", "k_yuu"]
+          "items": [
+            "k_kubi",
+            "k_kao",
+            "k_karada",
+            "k_atama",
+            "k_kokoro",
+            "k_yuu"
+          ]
         }
       ]
     },
@@ -156,7 +252,10 @@
             "p_de",
             "v_yuumeijin",
             "p_wo",
-            { "id": "v_miru", "form": "polite_mashita" }
+            {
+              "id": "v_miru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -176,18 +275,30 @@
           "en": "They are a very famous painter. Their face is beautiful. Their body is large and they are also smart.",
           "terms": [
             "v_totemo",
-            { "id": "v_yuumei", "form": "attributive_na" },
+            {
+              "id": "v_yuumei",
+              "form": "attributive_na"
+            },
             "v_gaka",
             "p_de",
             "v_kao",
             "p_ga",
-            { "id": "v_kirei", "form": "polite_adj" },
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            },
             "v_karada",
             "p_mo",
-            { "id": "v_ookii", "form": "te_form" },
+            {
+              "id": "v_ookii",
+              "form": "te_form"
+            },
             "v_atama",
             "p_mo",
-            { "id": "v_ii", "form": "polite_adj" }
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -200,7 +311,10 @@
             "p_wa",
             "v_sekai",
             "p_de",
-            { "id": "v_yuumei", "form": "polite_adj" },
+            {
+              "id": "v_yuumei",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -214,7 +328,10 @@
             "p_de",
             "v_ninki",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -233,7 +350,10 @@
             "v_sensei",
             "v_atama",
             "p_ga",
-            { "id": "v_itai", "form": "polite_adj" }
+            {
+              "id": "v_itai",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -246,7 +366,10 @@
             "p_ka",
             "v_kaoiro",
             "p_ga",
-            { "id": "v_ii", "form": "polite_negative" },
+            {
+              "id": "v_ii",
+              "form": "polite_negative"
+            },
             "p_ne"
           ]
         },
@@ -259,7 +382,10 @@
             "p_kara",
             "v_kibun",
             "p_ga",
-            { "id": "v_ii", "form": "polite_negative" }
+            {
+              "id": "v_ii",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -268,10 +394,16 @@
           "en": "Please rest slowly while drinking some tea.",
           "terms": [
             "v_yukkuri",
-            { "id": "v_yasumu", "form": "nagara_form" },
+            {
+              "id": "v_yasumu",
+              "form": "nagara_form"
+            },
             "v_ocha",
             "p_wo",
-            { "id": "v_nomu", "form": "te_form" },
+            {
+              "id": "v_nomu",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
@@ -301,7 +433,10 @@
             "p_no",
             "v_shashin",
             "p_wo",
-            { "id": "v_miru", "form": "plain_past" },
+            {
+              "id": "v_miru",
+              "form": "plain_past"
+            },
             "p_ka"
           ]
         },
@@ -311,9 +446,15 @@
           "en": "Yeah, I saw it. They're a very famous person, aren't they.",
           "terms": [
             "v_un",
-            { "id": "v_miru", "form": "plain_past" },
+            {
+              "id": "v_miru",
+              "form": "plain_past"
+            },
             "v_totemo",
-            { "id": "v_yuumei", "form": "attributive_na" },
+            {
+              "id": "v_yuumei",
+              "form": "attributive_na"
+            },
             "v_hito",
             "p_ne",
             "g_da"
@@ -326,7 +467,10 @@
           "terms": [
             "v_karada",
             "p_ga",
-            { "id": "v_ookii", "form": "te_form" },
+            {
+              "id": "v_ookii",
+              "form": "te_form"
+            },
             "v_kubi",
             "p_mo",
             "v_nagai",
@@ -341,10 +485,16 @@
             "v_sou",
             "v_kokoro",
             "p_mo",
-            { "id": "v_kirei", "form": "te_form" },
+            {
+              "id": "v_kirei",
+              "form": "te_form"
+            },
             "v_atama",
             "p_mo",
-            { "id": "v_ii", "form": "plain_past_adj" },
+            {
+              "id": "v_ii",
+              "form": "plain_past_adj"
+            },
             "p_yo"
           ]
         },
@@ -355,7 +505,10 @@
           "terms": [
             "v_e",
             "p_ga",
-            { "id": "v_jouzu", "form": "te_form" },
+            {
+              "id": "v_jouzu",
+              "form": "te_form"
+            },
             "v_sekaijuu",
             "p_de",
             "v_yuumei",
@@ -391,10 +544,16 @@
             "v_hito",
             "v_karada",
             "p_ga",
-            { "id": "v_ookii", "form": "te_form" },
+            {
+              "id": "v_ookii",
+              "form": "te_form"
+            },
             "v_kao",
             "p_mo",
-            { "id": "v_ii", "form": "plain_form" },
+            {
+              "id": "v_ii",
+              "form": "plain_form"
+            },
             "p_ne"
           ]
         },
@@ -405,13 +564,22 @@
           "terms": [
             "v_atama",
             "p_ga",
-            { "id": "v_ii", "form": "te_form" },
+            {
+              "id": "v_ii",
+              "form": "te_form"
+            },
             "v_kokoro",
             "p_mo",
             "v_taisetsu",
             "p_ni",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "plain_form" },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
             "p_yo"
           ]
         },
@@ -422,10 +590,16 @@
           "terms": [
             "v_eiga",
             "p_wo",
-            { "id": "v_miru", "form": "nagara_form" },
+            {
+              "id": "v_miru",
+              "form": "nagara_form"
+            },
             "v_nani",
             "p_ka",
-            { "id": "v_taberu", "form": "plain_desire_tai" }
+            {
+              "id": "v_taberu",
+              "form": "plain_desire_tai"
+            }
           ]
         },
         {
@@ -435,12 +609,24 @@
           "terms": [
             "v_asagohan",
             "p_wo",
-            { "id": "v_taberu", "form": "tari_form" },
+            {
+              "id": "v_taberu",
+              "form": "tari_form"
+            },
             "v_ocha",
             "p_wo",
-            { "id": "v_nomu", "form": "tari_form" },
-            { "id": "v_suru", "form": "nagara_form" },
-            { "id": "v_miru", "form": "plain_volitional" }
+            {
+              "id": "v_nomu",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "nagara_form"
+            },
+            {
+              "id": "v_miru",
+              "form": "plain_volitional"
+            }
           ]
         }
       ]
@@ -458,10 +644,16 @@
             "v_maiasa",
             "v_soto",
             "p_wo",
-            { "id": "v_aruku", "form": "nagara_form" },
+            {
+              "id": "v_aruku",
+              "form": "nagara_form"
+            },
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form": "polite_masu" }
+            {
+              "id": "v_toru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -474,11 +666,20 @@
             "p_wa",
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form": "tari_form" },
+            {
+              "id": "v_toru",
+              "form": "tari_form"
+            },
             "v_ryokou",
             "p_wo",
-            { "id": "v_suru", "form": "tari_form" },
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -487,12 +688,18 @@
           "terms": [
             "char_rikizo",
             "p_wa",
-            { "id": "v_atamagaii", "form": "plain_form" },
+            {
+              "id": "v_atamagaii",
+              "form": "plain_form"
+            },
             "p_node",
             "v_ryokou",
             "p_ga",
             "v_sugu",
-            { "id": "v_suru", "form": "polite_potential" }
+            {
+              "id": "v_suru",
+              "form": "polite_potential"
+            }
           ]
         },
         {
@@ -501,7 +708,10 @@
           "terms": [
             "v_kokoro",
             "p_ga",
-            { "id": "v_taisetsu", "form": "attributive_na" },
+            {
+              "id": "v_taisetsu",
+              "form": "attributive_na"
+            },
             "char_rikizo",
             "p_wa",
             "v_jibun",
@@ -510,33 +720,57 @@
             "p_mo",
             "v_taisetsu",
             "p_ni",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
       "questions": [
         {
           "q": "りきぞは 毎朝 何を しながら 写真を とりますか。",
+          "q_en": "What does Rikizo do while walking every morning?",
           "a": "歩きながら とります。",
+          "a_en": "He takes photos while walking.",
           "terms": [
             "char_rikizo",
             "p_wa",
             "v_maiasa",
             "v_nani",
             "p_wo",
-            { "id": "v_suru", "form": "nagara_form" },
+            {
+              "id": "v_suru",
+              "form": "nagara_form"
+            },
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form": "polite_masu" },
-            "p_ka",
-            { "id": "v_aruku", "form": "nagara_form" },
-            { "id": "v_toru", "form": "polite_masu" }
+            {
+              "id": "v_toru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            {
+              "id": "v_aruku",
+              "form": "nagara_form"
+            },
+            {
+              "id": "v_toru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "りきぞは どうして 旅行が すぐ できますか。",
+          "q_en": "Why can Rikizo travel quickly?",
           "a": "頭がいいからです。",
+          "a_en": "Because he is smart.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -544,9 +778,17 @@
             "v_ryokou",
             "p_ga",
             "v_sugu",
-            { "id": "v_suru", "form": "polite_potential" },
-            "p_ka",
-            { "id": "v_atamagaii", "form": "plain_form" },
+            {
+              "id": "v_suru",
+              "form": "polite_potential"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            {
+              "id": "v_atamagaii",
+              "form": "plain_form"
+            },
             "p_kara_because",
             "g_desu"
           ]
@@ -567,7 +809,10 @@
             "p_wa",
             "v_sekai",
             "p_de",
-            { "id": "v_yuumei", "form": "polite_adj" }
+            {
+              "id": "v_yuumei",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -576,14 +821,23 @@
           "terms": [
             "v_karada",
             "p_ga",
-            { "id": "v_ookii", "form": "te_form" },
+            {
+              "id": "v_ookii",
+              "form": "te_form"
+            },
             "v_kubi",
             "p_ga",
-            { "id": "v_nagai", "form": "adverbial" },
+            {
+              "id": "v_nagai",
+              "form": "adverbial"
+            },
             "v_kaoiro",
             "p_ga",
             "v_itsumo",
-            { "id": "v_akarui", "form": "polite_adj" }
+            {
+              "id": "v_akarui",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -592,13 +846,25 @@
           "terms": [
             "v_e",
             "p_ga",
-            { "id": "v_jouzu", "form": "te_form" },
+            {
+              "id": "v_jouzu",
+              "form": "te_form"
+            },
             "v_shashin",
             "p_mo",
             "v_takusan",
-            { "id": "v_toru", "form": "tari_form" },
-            { "id": "v_kaku", "form": "tari_form" },
-            { "id": "v_suru", "form": "polite_mashita" }
+            {
+              "id": "v_toru",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_kaku",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -607,24 +873,35 @@
           "terms": [
             "v_atama",
             "p_ga",
-            { "id": "v_ii", "form": "te_form" },
+            {
+              "id": "v_ii",
+              "form": "te_form"
+            },
             "v_kokoro",
             "p_ga",
-            { "id": "v_taisetsu", "form": "attributive_na" },
+            {
+              "id": "v_taisetsu",
+              "form": "attributive_na"
+            },
             "v_hito",
             "g_desu",
             "v_sekaijuu",
             "p_de",
             "v_ninki",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
       "questions": [
         {
           "q": "この 画家は どんな 人ですか。",
+          "q_en": "What kind of person is this painter?",
           "a": "世界で 有名な 画家です。",
+          "a_en": "He is a painter famous around the world.",
           "terms": [
             "v_kono",
             "v_gaka",
@@ -632,17 +909,24 @@
             "v_donna",
             "v_hito",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_sekai",
             "p_de",
-            { "id": "v_yuumei", "form": "attributive_na" },
+            {
+              "id": "v_yuumei",
+              "form": "attributive_na"
+            },
             "v_gaka",
             "g_desu"
           ]
         },
         {
           "q": "この 画家は どうして 世界中で 人気が ありますか。",
+          "q_en": "Why is this painter popular around the world?",
           "a": "頭が よくて、えが 上手だからです。",
+          "a_en": "Because he is smart and skilled at drawing.",
           "terms": [
             "v_kono",
             "v_gaka",
@@ -652,11 +936,19 @@
             "p_de",
             "v_ninki",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
-            "p_ka",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_atama",
             "p_ga",
-            { "id": "v_ii", "form": "te_form" },
+            {
+              "id": "v_ii",
+              "form": "te_form"
+            },
             "v_e",
             "p_ga",
             "v_jouzu",
@@ -675,25 +967,45 @@
         {
           "kind": "mcq",
           "q": "[首] の よみかたは？",
-          "choices": ["くび", "かお", "あたま", "からだ"],
+          "choices": [
+            "くび",
+            "かお",
+            "あたま",
+            "からだ"
+          ],
           "answer": "くび"
         },
         {
           "kind": "mcq",
           "q": "[顔色] の よみかたは？",
-          "choices": ["かおいろ", "かおしょく", "がんしょく", "かおかわ"],
+          "choices": [
+            "かおいろ",
+            "かおしょく",
+            "がんしょく",
+            "かおかわ"
+          ],
           "answer": "かおいろ"
         },
         {
           "kind": "mcq",
           "q": "[有名] の よみかたは？",
-          "choices": ["ゆうめい", "ありめい", "ゆうな", "ありな"],
+          "choices": [
+            "ゆうめい",
+            "ありめい",
+            "ゆうな",
+            "ありな"
+          ],
           "answer": "ゆうめい"
         },
         {
           "kind": "mcq",
           "q": "[中心] の よみかたは？",
-          "choices": ["ちゅうしん", "なかしん", "ちゅうがわ", "なかがわ"],
+          "choices": [
+            "ちゅうしん",
+            "なかしん",
+            "ちゅうがわ",
+            "なかがわ"
+          ],
           "answer": "ちゅうしん"
         }
       ]
@@ -706,44 +1018,86 @@
         {
           "kind": "mcq",
           "q": "手首",
-          "choices": ["wrist", "elbow", "shoulder", "ankle"],
+          "choices": [
+            "wrist",
+            "elbow",
+            "shoulder",
+            "ankle"
+          ],
           "answer": "wrist",
-          "terms": ["v_tekubi"]
+          "terms": [
+            "v_tekubi"
+          ]
         },
         {
           "kind": "mcq",
           "q": "有名人",
-          "choices": ["famous person", "teacher", "painter", "athlete"],
+          "choices": [
+            "famous person",
+            "teacher",
+            "painter",
+            "athlete"
+          ],
           "answer": "famous person",
-          "terms": ["v_yuumeijin"]
+          "terms": [
+            "v_yuumeijin"
+          ]
         },
         {
           "kind": "mcq",
           "q": "中心",
-          "choices": ["center / core", "beginning", "outside", "edge"],
+          "choices": [
+            "center / core",
+            "beginning",
+            "outside",
+            "edge"
+          ],
           "answer": "center / core",
-          "terms": ["v_chuushin"]
+          "terms": [
+            "v_chuushin"
+          ]
         },
         {
           "kind": "mcq",
           "q": "顔色",
-          "choices": ["complexion / face color", "personality", "face shape", "eye color"],
+          "choices": [
+            "complexion / face color",
+            "personality",
+            "face shape",
+            "eye color"
+          ],
           "answer": "complexion / face color",
-          "terms": ["v_kaoiro"]
+          "terms": [
+            "v_kaoiro"
+          ]
         },
         {
           "kind": "mcq",
           "q": "頭がいい",
-          "choices": ["intelligent / smart", "has a big head", "feels dizzy", "has a headache"],
+          "choices": [
+            "intelligent / smart",
+            "has a big head",
+            "feels dizzy",
+            "has a headache"
+          ],
           "answer": "intelligent / smart",
-          "terms": ["v_atamagaii"]
+          "terms": [
+            "v_atamagaii"
+          ]
         },
         {
           "kind": "mcq",
           "q": "心",
-          "choices": ["heart / mind", "body", "head", "face"],
+          "choices": [
+            "heart / mind",
+            "body",
+            "head",
+            "face"
+          ],
           "answer": "heart / mind",
-          "terms": ["v_kokoro"]
+          "terms": [
+            "v_kokoro"
+          ]
         }
       ]
     },
@@ -755,21 +1109,37 @@
         {
           "kind": "mcq",
           "q": "本を 読み＿＿＿ お茶を 飲みます。",
-          "choices": ["ながら", "たり", "から", "でも"],
+          "choices": [
+            "ながら",
+            "たり",
+            "から",
+            "でも"
+          ],
           "answer": "ながら",
           "terms": [
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "nagara_form" },
+            {
+              "id": "v_yomu",
+              "form": "nagara_form"
+            },
             "v_ocha",
             "p_wo",
-            { "id": "v_nomu", "form": "polite_masu" }
+            {
+              "id": "v_nomu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "休みの 日は、映画を 見＿＿＿ 旅行を し＿＿＿ します。",
-          "choices": ["たり / たり", "ながら / ながら", "て / て", "で / で"],
+          "choices": [
+            "たり / たり",
+            "ながら / ながら",
+            "て / て",
+            "で / で"
+          ],
           "answer": "たり / たり",
           "terms": [
             "v_yasumi",
@@ -778,17 +1148,31 @@
             "p_wa",
             "v_eiga",
             "p_wo",
-            { "id": "v_miru", "form": "tari_form" },
+            {
+              "id": "v_miru",
+              "form": "tari_form"
+            },
             "v_ryokou",
             "p_wo",
-            { "id": "v_suru", "form": "tari_form" },
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "りきぞは 頭が いい＿＿＿、旅行が すぐ できます。",
-          "choices": ["ので", "でも", "ながら", "たり"],
+          "choices": [
+            "ので",
+            "でも",
+            "ながら",
+            "たり"
+          ],
           "answer": "ので",
           "terms": [
             "char_rikizo",
@@ -798,21 +1182,35 @@
             "v_ryokou",
             "p_ga",
             "v_sugu",
-            { "id": "v_suru", "form": "polite_potential" }
+            {
+              "id": "v_suru",
+              "form": "polite_potential"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "体を 休み＿＿＿、お茶を 飲んでください。",
-          "choices": ["ながら", "たり", "て", "から"],
+          "choices": [
+            "ながら",
+            "たり",
+            "て",
+            "から"
+          ],
           "answer": "ながら",
           "terms": [
             "v_karada",
             "p_wo",
-            { "id": "v_yasumu", "form": "nagara_form" },
+            {
+              "id": "v_yasumu",
+              "form": "nagara_form"
+            },
             "v_ocha",
             "p_wo",
-            { "id": "v_nomu", "form": "te_form" },
+            {
+              "id": "v_nomu",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         }

@@ -708,7 +708,9 @@
       "questions": [
         {
           "q": "りきぞは 毎晩 仕事の あと、どこに 行きますか。",
+          "q_en": "Where does Rikizo go every evening after work?",
           "a": "町の 飲み屋に 行きます。",
+          "a_en": "He goes to a bar in town.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -722,7 +724,9 @@
               "id": "v_iku",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_machi",
             "p_no",
             "v_nomiya",
@@ -731,7 +735,9 @@
         },
         {
           "q": "りきぞが よく 行く 料理屋は どんな 店ですか。",
+          "q_en": "What kind of restaurant does Rikizo often go to?",
           "a": "洋風で、夜も 明るくて 楽しい 店です。",
+          "a_en": "It is a Western-style, bright, and fun restaurant.",
           "terms": [
             "char_rikizo",
             "p_ga",
@@ -745,7 +751,9 @@
             "v_donna",
             "v_mise",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_youfuu",
             "p_de",
             "v_yoru",
@@ -761,7 +769,9 @@
         },
         {
           "q": "食事の あと、りきぞは よく 何を しますか。",
+          "q_en": "What does Rikizo often do after eating?",
           "a": "屋上に 行って、夜空を 見ます。",
+          "a_en": "He goes to the rooftop and looks at the night sky.",
           "terms": [
             "v_shokuji",
             "p_no",
@@ -775,7 +785,9 @@
               "id": "v_suru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_okujou",
             "p_ni",
             {
@@ -918,7 +930,9 @@
       "questions": [
         {
           "q": "海の 近くに ある 小屋は だれの ですか。",
+          "q_en": "Whose hut is it near the sea?",
           "a": "りきぞの 父の 小屋です。",
+          "a_en": "It is Rikizo's father's hut.",
           "terms": [
             "v_umi",
             "p_no",
@@ -936,7 +950,9 @@
             "v_dare",
             "p_no",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "char_rikizo",
             "p_no",
             "v_chichi",
@@ -947,7 +963,9 @@
         },
         {
           "q": "父は 夜、小屋で 何を しますか。",
+          "q_en": "What does the father do in the hut at night?",
           "a": "海洋の 音を 聞きながら、空を 見ています。",
+          "a_en": "He listens to the sound of the ocean while looking at the sky.",
           "terms": [
             "v_chichi",
             "p_wa",
@@ -960,7 +978,9 @@
               "id": "v_suru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_kaiyou",
             "p_no",
             "v_oto",
@@ -983,7 +1003,9 @@
         },
         {
           "q": "りきぞは 父に 何を もらいましたか。",
+          "q_en": "What did Rikizo receive from his father?",
           "a": "洋服を もらいました。",
+          "a_en": "He received Western clothes.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -995,7 +1017,9 @@
               "id": "v_morau",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_youfuku",
             "p_wo",
             {

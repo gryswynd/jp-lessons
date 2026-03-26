@@ -6,7 +6,14 @@
     "phase": 4,
     "lesson": 11,
     "focus": "Travel vocabulary, world exploration, photography, and self-reliance.",
-    "kanji": ["旅", "自", "写", "真", "世", "界"]
+    "kanji": [
+      "旅",
+      "自",
+      "写",
+      "真",
+      "世",
+      "界"
+    ]
   },
   "newKanji": [
     {
@@ -64,10 +71,16 @@
           "terms": [
             "v_gohan",
             "p_wo",
-            { "id": "v_taberu", "form": "nagara_form" },
+            {
+              "id": "v_taberu",
+              "form": "nagara_form"
+            },
             "v_terebi",
             "p_wo",
-            { "id": "v_miru", "form": "polite_masu" }
+            {
+              "id": "v_miru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -76,11 +89,20 @@
           "terms": [
             "v_eiga",
             "p_wo",
-            { "id": "v_miru", "form": "tari_form" },
+            {
+              "id": "v_miru",
+              "form": "tari_form"
+            },
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "tari_form" },
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -93,7 +115,10 @@
             "p_ni",
             "v_eigakan",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -106,7 +131,10 @@
             "v_natsu",
             "v_doko",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" },
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         }
@@ -121,42 +149,69 @@
           "on": "りょ",
           "kun": "たび",
           "meaning": "Travel / Journey",
-          "terms": ["k_tabi", "v_tabi", "v_ryokou", "v_tabibito", "v_tabisaki", "v_ryokan"]
+          "terms": [
+            "k_tabi",
+            "v_tabi",
+            "v_ryokou",
+            "v_tabibito",
+            "v_tabisaki",
+            "v_ryokan"
+          ]
         },
         {
           "kanji": "自",
           "on": "じ / し",
           "kun": "みずから",
           "meaning": "Self / Oneself",
-          "terms": ["k_mizuka", "v_jibun"]
+          "terms": [
+            "k_mizuka",
+            "v_jibun"
+          ]
         },
         {
           "kanji": "写",
           "on": "しゃ",
           "kun": "うつす",
           "meaning": "Copy / Photograph",
-          "terms": ["k_utsu_2", "v_shashin", "v_utsusu"]
+          "terms": [
+            "k_utsu_2",
+            "v_shashin",
+            "v_utsusu"
+          ]
         },
         {
           "kanji": "真",
           "on": "しん / ま",
           "kun": "ま",
           "meaning": "Truth / Reality",
-          "terms": ["k_ma", "v_masshiro", "v_mannaka", "v_shashin"]
+          "terms": [
+            "k_ma",
+            "v_masshiro",
+            "v_mannaka",
+            "v_shashin"
+          ]
         },
         {
           "kanji": "世",
           "on": "せ / せい",
           "kun": "よ",
           "meaning": "World / Era / Age",
-          "terms": ["k_yo_2", "v_sekai", "v_sekaijuu"]
+          "terms": [
+            "k_yo_2",
+            "v_sekai",
+            "v_sekaijuu"
+          ]
         },
         {
           "kanji": "界",
           "on": "かい",
           "kun": "さかい",
           "meaning": "Boundary / World",
-          "terms": ["k_nashi_5", "v_sekai", "v_sekaijuu"]
+          "terms": [
+            "k_nashi_5",
+            "v_sekai",
+            "v_sekaijuu"
+          ]
         }
       ]
     },
@@ -166,11 +221,27 @@
       "groups": [
         {
           "label": "Travel & Destinations",
-          "items": ["v_tabi", "v_ryokou", "v_tabibito", "v_tabisaki", "v_ryokan"]
+          "items": [
+            "v_tabi",
+            "v_ryokou",
+            "v_tabibito",
+            "v_tabisaki",
+            "v_ryokan"
+          ]
         },
         {
           "label": "World & Photography",
-          "items": ["v_shashin", "v_kamera", "v_sekai", "v_sekaijuu", "v_jibun", "v_mannaka", "v_masshiro", "v_utsusu", "v_toru"]
+          "items": [
+            "v_shashin",
+            "v_kamera",
+            "v_sekai",
+            "v_sekaijuu",
+            "v_jibun",
+            "v_mannaka",
+            "v_masshiro",
+            "v_utsusu",
+            "v_toru"
+          ]
         }
       ]
     },
@@ -188,7 +259,10 @@
             "v_san",
             "v_ryokou",
             "p_wa",
-            { "id": "v_suki", "form": "polite_adj" },
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -198,12 +272,18 @@
           "en": "Yes, I love it! I want to go to a ryokan abroad.",
           "terms": [
             "p_hai",
-            { "id": "v_daisuki", "form": "polite_adj" },
+            {
+              "id": "v_daisuki",
+              "form": "polite_adj"
+            },
             "v_gaikoku",
             "p_no",
             "v_ryokan",
             "p_e",
-            { "id": "v_iku", "form": "plain_desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
             "g_desu"
           ]
         },
@@ -218,7 +298,10 @@
             "p_de",
             "v_shashin",
             "p_mo",
-            { "id": "v_toru", "form":"polite_masu" },
+            {
+              "id": "v_toru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -235,10 +318,16 @@
             "v_shashin",
             "p_wo",
             "v_takusan",
-            { "id": "v_toru", "form":"polite_masu" },
+            {
+              "id": "v_toru",
+              "form": "polite_masu"
+            },
             "v_tabibito",
             "p_ni",
-            { "id": "v_naru", "form": "plain_desire_tai" },
+            {
+              "id": "v_naru",
+              "form": "plain_desire_tai"
+            },
             "g_desu"
           ]
         }
@@ -258,11 +347,17 @@
             "v_san",
             "v_kore",
             "p_wo",
-            { "id": "v_miru", "form": "te_form" },
+            {
+              "id": "v_miru",
+              "form": "te_form"
+            },
             "v_kudasai",
             "v_tabisaki",
             "p_de",
-            { "id": "v_toru", "form":"plain_past" },
+            {
+              "id": "v_toru",
+              "form": "plain_past"
+            },
             "v_shashin",
             "g_desu"
           ]
@@ -274,11 +369,17 @@
           "terms": [
             "v_yuki",
             "p_ga",
-            { "id": "v_masshiro", "form": "polite_adj" },
+            {
+              "id": "v_masshiro",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_doko",
             "p_de",
-            { "id": "v_toru", "form":"polite_mashita" },
+            {
+              "id": "v_toru",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -293,10 +394,16 @@
             "g_desu",
             "v_yama",
             "p_wo",
-            { "id": "v_aruku", "form": "nagara_form" },
+            {
+              "id": "v_aruku",
+              "form": "nagara_form"
+            },
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form":"polite_mashita" }
+            {
+              "id": "v_toru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -304,12 +411,18 @@
           "jp": "いいですね。自分でも 行きたいです。",
           "en": "That sounds great. I'd like to go there too.",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_jibun",
             "p_de",
             "p_mo",
-            { "id": "v_iku", "form": "plain_desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
             "g_desu"
           ]
         }
@@ -331,7 +444,10 @@
             "v_donna",
             "v_tabi",
             "p_ga",
-            { "id": "v_suru", "form": "plain_desire_tai" },
+            {
+              "id": "v_suru",
+              "form": "plain_desire_tai"
+            },
             "g_desu",
             "p_ka"
           ]
@@ -344,13 +460,22 @@
             "v_sekaijuu",
             "p_wo",
             "v_ryokou",
-            { "id": "v_suru", "form": "tari_form" },
+            {
+              "id": "v_suru",
+              "form": "tari_form"
+            },
             "v_gaikoku",
             "p_de",
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form":"tari_form" },
-            { "id": "v_suru", "form": "plain_desire_tai" },
+            {
+              "id": "v_toru",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "plain_desire_tai"
+            },
             "g_desu"
           ]
         },
@@ -359,11 +484,17 @@
           "jp": "いいですね。いっしょに 旅行しましょう。",
           "en": "That sounds great. Let's travel together!",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_issho",
             "v_ryokou",
-            { "id": "v_suru", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_suru",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -380,7 +511,10 @@
             "p_de",
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form":"plain_desire_tai" },
+            {
+              "id": "v_toru",
+              "form": "plain_desire_tai"
+            },
             "g_desu"
           ]
         }
@@ -403,7 +537,10 @@
             "p_wa",
             "v_doko",
             "p_e",
-            { "id": "v_iku", "form": "plain_form" },
+            {
+              "id": "v_iku",
+              "form": "plain_form"
+            },
             "p_no"
           ]
         },
@@ -416,12 +553,18 @@
             "p_no",
             "v_ryokan",
             "p_e",
-            { "id": "v_iku", "form": "plain_form" },
+            {
+              "id": "v_iku",
+              "form": "plain_form"
+            },
             "p_yo",
             "v_shashin",
             "p_mo",
             "v_takusan",
-            { "id": "v_toru", "form":"plain_form" },
+            {
+              "id": "v_toru",
+              "form": "plain_form"
+            },
             "p_yo"
           ]
         },
@@ -434,11 +577,17 @@
             "p_ne",
             "v_jibun",
             "p_mo",
-            { "id": "v_iku", "form": "plain_desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
             "p_kedo",
             "v_okane",
             "p_ga",
-            { "id": "v_aru", "form": "plain_negative" }
+            {
+              "id": "v_aru",
+              "form": "plain_negative"
+            }
           ]
         },
         {
@@ -448,7 +597,10 @@
           "terms": [
             "v_mata",
             "v_issho",
-            { "id": "v_iku", "form": "plain_volitional" },
+            {
+              "id": "v_iku",
+              "form": "plain_volitional"
+            },
             "p_yo"
           ]
         }
@@ -466,7 +618,10 @@
             "p_wa",
             "v_ryokou",
             "p_ga",
-            { "id": "v_daisuki", "form": "polite_adj" }
+            {
+              "id": "v_daisuki",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -479,7 +634,10 @@
             "v_itsumo",
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form":"polite_masu" }
+            {
+              "id": "v_toru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -492,7 +650,10 @@
             "p_to",
             "v_ryokan",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -501,11 +662,17 @@
           "terms": [
             "v_ryokan",
             "p_ni",
-            { "id": "v_tsuku", "form": "te_form" },
+            {
+              "id": "v_tsuku",
+              "form": "te_form"
+            },
             "p_tekara",
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form": "polite_mashita" }
+            {
+              "id": "v_toru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -514,11 +681,17 @@
           "terms": [
             "v_yama",
             "p_wo",
-            { "id": "v_aruku", "form": "nagara_form" },
+            {
+              "id": "v_aruku",
+              "form": "nagara_form"
+            },
             "v_takusan",
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form":"polite_mashita" }
+            {
+              "id": "v_toru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -528,12 +701,18 @@
             "v_mata",
             "v_tabisaki",
             "p_e",
-            { "id": "v_iku", "form": "te_form" },
+            {
+              "id": "v_iku",
+              "form": "te_form"
+            },
             "v_jibun",
             "p_de",
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form":"plain_desire_tai" },
+            {
+              "id": "v_toru",
+              "form": "plain_desire_tai"
+            },
             "g_desu"
           ]
         }
@@ -541,7 +720,9 @@
       "questions": [
         {
           "q": "りきぞは 旅先で 何を しますか。",
+          "q_en": "What does Rikizo do at travel destinations?",
           "a": "写真を とります。",
+          "a_en": "He takes photos.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -549,45 +730,73 @@
             "p_de",
             "v_nan",
             "p_wo",
-            { "id": "v_suru", "form": "polite_masu" },
-            "p_ka",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form":"polite_masu" }
+            {
+              "id": "v_toru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "先月、りきぞは どこへ 行きましたか。",
+          "q_en": "Where did Rikizo go last month?",
           "a": "旅館へ 行きました。",
+          "a_en": "He went to a ryokan.",
           "terms": [
             "v_sengetsu",
             "char_rikizo",
             "p_wa",
             "v_doko",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" },
-            "p_ka",
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_ryokan",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "りきぞは また 旅行したいですか。",
+          "q_en": "Does Rikizo want to travel again?",
           "a": "はい、また 旅先へ 行きたいです。",
+          "a_en": "Yes, he wants to go to a travel destination again.",
           "terms": [
             "char_rikizo",
             "p_wa",
             "v_mata",
             "v_ryokou",
-            { "id": "v_suru", "form": "plain_desire_tai" },
+            {
+              "id": "v_suru",
+              "form": "plain_desire_tai"
+            },
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "p_hai",
             "v_mata",
             "v_tabisaki",
             "p_e",
-            { "id": "v_iku", "form": "plain_desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
             "g_desu"
           ]
         }
@@ -608,8 +817,14 @@
             "v_sekaijuu",
             "p_wo",
             "v_ryokou",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -623,22 +838,34 @@
             "v_yoku",
             "v_shashin",
             "p_wo",
-            { "id": "v_okuru", "form": "polite_masu" }
+            {
+              "id": "v_okuru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "jp": "真っ白な ゆきや、きれいな 山の 写真が あります。",
           "en": "There are photos of pure white snow and beautiful mountains.",
           "terms": [
-            { "id": "v_masshiro", "form": "attributive_na" },
+            {
+              "id": "v_masshiro",
+              "form": "attributive_na"
+            },
             "v_yuki",
             "p_ya",
-            { "id": "v_kirei", "form": "attributive_na" },
+            {
+              "id": "v_kirei",
+              "form": "attributive_na"
+            },
             "v_yama",
             "p_no",
             "v_shashin",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -649,13 +876,22 @@
             "p_wa",
             "v_tabisaki",
             "p_wo",
-            { "id": "v_aruku", "form": "nagara_form" },
+            {
+              "id": "v_aruku",
+              "form": "nagara_form"
+            },
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form":"plain_form" },
+            {
+              "id": "v_toru",
+              "form": "plain_form"
+            },
             "p_no",
             "p_ga",
-            { "id": "v_suki", "form": "polite_adj" }
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -666,12 +902,18 @@
             "p_mo",
             "v_tabibito",
             "p_ni",
-            { "id": "v_naru", "form": "plain_desire_tai" },
+            {
+              "id": "v_naru",
+              "form": "plain_desire_tai"
+            },
             "g_desu",
             "v_sekaijuu",
             "p_wo",
             "v_ryokou",
-            { "id": "v_suru", "form": "plain_desire_tai" },
+            {
+              "id": "v_suru",
+              "form": "plain_desire_tai"
+            },
             "g_desu"
           ]
         }
@@ -679,26 +921,44 @@
       "questions": [
         {
           "q": "父は 今 何を して いますか。",
+          "q_en": "What is the father doing now?",
           "a": "世界中を 旅行して います。",
+          "a_en": "He is traveling around the world.",
           "terms": [
             "v_chichi",
             "p_wa",
             "v_ima",
             "v_nan",
             "p_wo",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
-            "p_ka",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_sekaijuu",
             "p_wo",
             "v_ryokou",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "父は 旅先から 何を 送りますか。",
+          "q_en": "What does the father send from travel destinations?",
           "a": "写真を 送ります。",
+          "a_en": "He sends photos.",
           "terms": [
             "v_chichi",
             "p_wa",
@@ -706,27 +966,45 @@
             "p_kara",
             "v_nan",
             "p_wo",
-            { "id": "v_okuru", "form": "polite_masu" },
-            "p_ka",
+            {
+              "id": "v_okuru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_shashin",
             "p_wo",
-            { "id": "v_okuru", "form": "polite_masu" }
+            {
+              "id": "v_okuru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "私は 何に なりたいですか。",
+          "q_en": "What does the narrator want to become?",
           "a": "旅人に なりたいです。",
+          "a_en": "They want to become a traveler.",
           "terms": [
             "v_watashi",
             "p_wa",
             "v_nan",
             "p_ni",
-            { "id": "v_naru", "form": "plain_desire_tai" },
+            {
+              "id": "v_naru",
+              "form": "plain_desire_tai"
+            },
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_tabibito",
             "p_ni",
-            { "id": "v_naru", "form": "plain_desire_tai" },
+            {
+              "id": "v_naru",
+              "form": "plain_desire_tai"
+            },
             "g_desu"
           ]
         }
@@ -740,28 +1018,48 @@
         {
           "kind": "mcq",
           "q": "[旅行] の よみかたは？",
-          "choices": ["りょこう", "たびこう", "りょかん", "りょこ"],
+          "choices": [
+            "りょこう",
+            "たびこう",
+            "りょかん",
+            "りょこ"
+          ],
           "answer": "りょこう",
           "terms": null
         },
         {
           "kind": "mcq",
           "q": "[自分] の よみかたは？",
-          "choices": ["じぶん", "しぶん", "みぶん", "じぼん"],
+          "choices": [
+            "じぶん",
+            "しぶん",
+            "みぶん",
+            "じぼん"
+          ],
           "answer": "じぶん",
           "terms": null
         },
         {
           "kind": "mcq",
           "q": "[写真] の よみかたは？",
-          "choices": ["しゃしん", "うつしん", "そしん", "しゃじん"],
+          "choices": [
+            "しゃしん",
+            "うつしん",
+            "そしん",
+            "しゃじん"
+          ],
           "answer": "しゃしん",
           "terms": null
         },
         {
           "kind": "mcq",
           "q": "[世界] の よみかたは？",
-          "choices": ["せかい", "よかい", "せいかい", "さかい"],
+          "choices": [
+            "せかい",
+            "よかい",
+            "せいかい",
+            "さかい"
+          ],
           "answer": "せかい",
           "terms": null
         }
@@ -775,34 +1073,55 @@
         {
           "kind": "mcq",
           "q": "旅先の ______ を とりました。",
-          "choices": ["写真", "旅館", "世界", "自分"],
+          "choices": [
+            "写真",
+            "旅館",
+            "世界",
+            "自分"
+          ],
           "answer": "写真",
           "terms": [
             "v_tabisaki",
             "p_no",
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form":"polite_mashita" }
+            {
+              "id": "v_toru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "外国の ______ に 行きたいです。",
-          "choices": ["旅館", "旅行", "世界中", "旅先"],
+          "choices": [
+            "旅館",
+            "旅行",
+            "世界中",
+            "旅先"
+          ],
           "answer": "旅館",
           "terms": [
             "v_gaikoku",
             "p_no",
             "v_ryokan",
             "p_ni",
-            { "id": "v_iku", "form": "plain_desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
             "g_desu"
           ]
         },
         {
           "kind": "mcq",
           "q": "父は 世界中を ______ して います。",
-          "choices": ["旅行", "写真", "自分", "旅館"],
+          "choices": [
+            "旅行",
+            "写真",
+            "自分",
+            "旅館"
+          ],
           "answer": "旅行",
           "terms": [
             "v_chichi",
@@ -810,14 +1129,25 @@
             "v_sekaijuu",
             "p_wo",
             "v_ryokou",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "山の ______ で 写真を とりました。",
-          "choices": ["真ん中", "世界中", "旅先", "旅人"],
+          "choices": [
+            "真ん中",
+            "世界中",
+            "旅先",
+            "旅人"
+          ],
           "answer": "真ん中",
           "terms": [
             "v_yama",
@@ -826,7 +1156,10 @@
             "p_de",
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form":"polite_mashita" }
+            {
+              "id": "v_toru",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -839,55 +1172,96 @@
         {
           "kind": "mcq",
           "q": "山を 歩き______ 、写真を とりました。",
-          "choices": ["ながら", "たり", "ために", "から"],
+          "choices": [
+            "ながら",
+            "たり",
+            "ために",
+            "から"
+          ],
           "answer": "ながら",
           "terms": [
             "v_yama",
             "p_wo",
-            { "id": "v_aruku", "form": "nagara_form" },
+            {
+              "id": "v_aruku",
+              "form": "nagara_form"
+            },
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form":"polite_mashita" }
+            {
+              "id": "v_toru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "映画を 見______ 、本を 読んだり します。",
-          "choices": ["たり", "ながら", "て", "から"],
+          "choices": [
+            "たり",
+            "ながら",
+            "て",
+            "から"
+          ],
           "answer": "たり",
           "terms": [
             "v_eiga",
             "p_wo",
-            { "id": "v_miru", "form": "tari_form" },
+            {
+              "id": "v_miru",
+              "form": "tari_form"
+            },
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "tari_form" },
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_yomu",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "旅先 ______ 写真を とりました。",
-          "choices": ["で", "に", "を", "へ"],
+          "choices": [
+            "で",
+            "に",
+            "を",
+            "へ"
+          ],
           "answer": "で",
           "terms": [
             "v_tabisaki",
             "p_de",
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form":"polite_mashita" }
+            {
+              "id": "v_toru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "自分 ______ 旅行したいです。",
-          "choices": ["で", "が", "は", "に"],
+          "choices": [
+            "で",
+            "が",
+            "は",
+            "に"
+          ],
           "answer": "で",
           "terms": [
             "v_jibun",
             "p_de",
             "v_ryokou",
-            { "id": "v_suru", "form": "plain_desire_tai" },
+            {
+              "id": "v_suru",
+              "form": "plain_desire_tai"
+            },
             "g_desu"
           ]
         }

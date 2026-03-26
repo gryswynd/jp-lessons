@@ -467,7 +467,10 @@
             "p_no",
             "v_myouji",
             "p_wa",
-            { "counter": "tsu", "n": 3 },
+            {
+              "counter": "tsu",
+              "n": 3
+            },
             "p_no",
             "v_ji",
             "p_ga",
@@ -817,7 +820,10 @@
               "id": "v_kaku",
               "form": "polite_mashita"
             },
-            { "counter": "tsu", "n": 3 },
+            {
+              "counter": "tsu",
+              "n": 3
+            },
             "p_no",
             "v_ji",
             "g_desu"
@@ -850,7 +856,9 @@
       "questions": [
         {
           "q": "りきぞは だれに 手紙を 書きましたか。",
+          "q_en": "Who did Rikizo write a letter to?",
           "a": "母に 書きました。",
+          "a_en": "He wrote to his mother.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -862,7 +870,9 @@
               "id": "v_kaku",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_haha",
             "p_ni",
             {
@@ -873,7 +883,9 @@
         },
         {
           "q": "どんな 紙に 書きましたか。",
+          "q_en": "What kind of paper did he write on?",
           "a": "白い 紙に 書きました。",
+          "a_en": "He wrote on white paper.",
           "terms": [
             "v_donna",
             "v_kami",
@@ -882,7 +894,9 @@
               "id": "v_kaku",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_shiroi",
             "v_kami",
             "p_ni",
@@ -894,7 +908,9 @@
         },
         {
           "q": "名字は いくつの 字が ありますか。",
+          "q_en": "How many characters is the surname?",
           "a": "三つの 字が あります。",
+          "a_en": "There are three characters.",
           "terms": [
             "v_myouji",
             "p_wa",
@@ -906,8 +922,13 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            "p_ka",
-            { "counter": "tsu", "n": 3 },
+            "p_ka"
+          ],
+          "a_terms": [
+            {
+              "counter": "tsu",
+              "n": 3
+            },
             "p_no",
             "v_ji",
             "p_ga",
@@ -1026,7 +1047,9 @@
       "questions": [
         {
           "q": "漢字の 意味が 分かりますから、どう なりますか。",
+          "q_en": "What happens because you understand kanji meanings?",
           "a": "日本語も よく 分かります。",
+          "a_en": "You also understand Japanese well.",
           "terms": [
             "v_kanji",
             "p_no",
@@ -1042,7 +1065,9 @@
               "id": "v_naru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_nihongo",
             "p_mo",
             "v_yoku",
@@ -1054,7 +1079,9 @@
         },
         {
           "q": "先生の 意見は 何ですか。",
+          "q_en": "What is the teacher's opinion?",
           "a": "漢字も ローマ字も 勉強する ことです。",
+          "a_en": "It is to study both kanji and romaji.",
           "terms": [
             "v_sensei",
             "p_no",
@@ -1062,7 +1089,9 @@
             "p_wa",
             "v_nan",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_kanji",
             "p_mo",
             "v_romaji",
@@ -1078,14 +1107,18 @@
         },
         {
           "q": "ローマ字は どんな ものですか。",
+          "q_en": "What kind of thing is romaji?",
           "a": "意外に いいです。",
+          "a_en": "It is surprisingly good.",
           "terms": [
             "v_romaji",
             "p_wa",
             "v_donna",
             "v_mono",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             {
               "id": "v_igai",
               "form": "adverbial"

@@ -38,7 +38,7 @@
 | `kanjiGrid` | `type`, `title`, `items[]` (each: `kanji`, `on`, `kun`, `meaning`, `terms`) |
 | `vocabList` | `type`, `title`, `groups[]` (each: `label`, `items[]` of IDs) |
 | `conversation` | `type`, `title`, `context`, `lines[]` (each: `spk`, `jp`, `en`, `terms`) |
-| `reading` | `type`, `title`, `passage[]` (each: `jp`, `en`, `terms`), optional `questions[]` (each: `q`, `a`, `terms`) |
+| `reading` | `type`, `title`, `passage[]` (each: `jp`, `en`, `terms`), `questions[]` (each: `q`, `q_en`, `a`, `a_en`, `terms`, `a_terms`) |
 | `drills` | `type`, `title`, `instructions`, `items[]` (each: `kind`, `q`, `choices[]`, `answer`, `terms`\*) |
 
 \*`terms` is **omitted** on Drill 1 (vocabulary MCQ where the tested word is self-evident). All other drill types **must** include `terms`.
@@ -47,7 +47,9 @@
 
 **CRITICAL — reading `passage` must be an array of objects, NOT a string:** The renderer iterates `passage` as `[{jp, en, terms}, ...]`. A flat string renders nothing — no error, just a blank section. The `en` translation and `terms` array belong inside each passage object, not at the reading section level. Each passage object contains **exactly one sentence**. A wall-of-text object (multiple sentences as one `jp` string) is a structural error — the student cannot tap individual sentence chips. Target 4–6 passage objects per reading section.
 
-**CRITICAL — reading `questions` is required:** Every reading section must have a `questions` array with at least 1 item (standard: 3). Omitting `questions` leaves the reading section non-interactive. Each question has `q` (Japanese), `a` (Japanese), and `terms`.
+**CRITICAL — reading `questions` is required:** Every reading section must have a `questions` array with at least 3 items. Omitting `questions` leaves the reading section non-interactive.
+
+Reading comprehension questions (lessons only) must always use Japanese for both question and answer. Questions must be answerable directly from the passage text. Required fields on every question object: `q` (Japanese question), `q_en` (English translation of the question), `a` (Japanese answer, complete sentence), `a_en` (English translation of the answer), `terms` (chips for question text only), `a_terms` (chips for answer text only). The `choices[]` field is **forbidden** on lesson reading questions — it belongs only in drill and review sections.
 
 ```json
 {

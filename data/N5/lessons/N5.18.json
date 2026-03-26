@@ -906,69 +906,77 @@
       ],
       "questions": [
         {
-          "q": "What does Rikizo read every morning?",
-          "a": "The newspaper",
-          "choices": [
-            "The newspaper",
-            "A book",
-            "A company document",
-            "A Japanese magazine"
-          ],
+          "q": "りきぞさんは 毎日 何を 見ますか。",
+          "q_en": "What does Rikizo read every day?",
+          "a": "毎日 新聞を 見ます。",
+          "a_en": "They read the newspaper every day.",
           "terms": [
             "char_rikizo",
             "v_san",
             "p_wa",
             "v_mainichi",
-            "v_shinbun",
+            "v_nani",
             "p_wo",
             {
               "id": "v_miru",
               "form": "polite_masu"
             },
             "p_ka"
+          ],
+          "a_terms": [
+            "v_mainichi",
+            "v_shinbun",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
-          "q": "What is visible outside?",
-          "a": "A large mountain",
-          "choices": [
-            "A large mountain",
-            "The company entrance",
-            "A sad book",
-            "A newspaper"
-          ],
+          "q": "外に 何が 見えますか。",
+          "q_en": "What can be seen outside?",
+          "a": "大きい 山が 見えます。",
+          "a_en": "A large mountain can be seen.",
           "terms": [
             "v_soto",
             "p_ni",
-            "v_ookii",
-            "v_yama",
+            "v_nani",
             "p_ga",
             {
               "id": "v_mieru",
               "form": "polite_masu"
             },
             "p_ka"
+          ],
+          "a_terms": [
+            "v_ookii",
+            "v_yama",
+            "p_ga",
+            {
+              "id": "v_mieru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
-          "q": "How are Rikizo's feet?",
-          "a": "They hurt a little",
-          "choices": [
-            "They hurt a little",
-            "They are fine",
-            "They cannot be seen",
-            "They are very long"
-          ],
+          "q": "足は どうですか。",
+          "q_en": "How are Rikizo's feet?",
+          "a": "足が 少し いたいです。",
+          "a_en": "Their feet hurt a little.",
           "terms": [
-            "char_rikizo",
-            "v_san",
-            "p_no",
             "v_ashi",
             "p_wa",
-            "v_sukoshi",
-            "v_itai",
+            "v_dou",
             "g_desu",
             "p_ka"
+          ],
+          "a_terms": [
+            "v_ashi",
+            "p_ga",
+            "v_sukoshi",
+            "v_itai",
+            "g_desu"
           ]
         }
       ]
@@ -1086,67 +1094,89 @@
       ],
       "questions": [
         {
-          "q": "What do we read with our eyes according to the passage?",
-          "a": "The newspaper",
-          "choices": [
-            "The newspaper",
-            "Mountains and rivers",
-            "Japanese books",
-            "A sad story"
-          ],
+          "q": "目で 何を 見ますか。",
+          "q_en": "What do we see with our eyes?",
+          "a": "新聞を 読んで、山や 川を 見ます。",
+          "a_en": "We read the newspaper and look at mountains and rivers.",
           "terms": [
             "v_me",
             "p_de",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_shinbun",
             "p_wo",
             {
               "id": "v_yomu",
               "form": "te_form"
             },
-            "p_ka"
+            "v_yama",
+            "p_ya",
+            "v_kawa",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
-          "q": "What should we listen to with our ears?",
-          "a": "Japanese",
-          "choices": [
-            "Japanese",
-            "The newspaper",
-            "Mountains",
-            "Feet"
-          ],
+          "q": "耳で 何を 聞きますか。",
+          "q_en": "What should we listen to with our ears?",
+          "a": "耳で 日本語を たくさん 聞きましょう。",
+          "a_en": "Let's listen to a lot of Japanese with our ears.",
           "terms": [
+            "v_mimi",
+            "p_de",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_kiku",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_mimi",
             "p_de",
             "v_nihongo",
             "p_wo",
+            "v_takusan",
             {
               "id": "v_kiku",
               "form": "polite_volitional_mashou"
-            },
-            "p_ka"
+            }
           ]
         },
         {
-          "q": "What should we do even if our feet hurt?",
-          "a": "Let's stand",
-          "choices": [
-            "Let's stand",
-            "Let's listen",
-            "Let's show",
-            "Let's go"
-          ],
+          "q": "足が いたいですが、どうしますか。",
+          "q_en": "Even though feet hurt, what should we do?",
+          "a": "立ちましょう。",
+          "a_en": "Let's stand.",
           "terms": [
             "v_ashi",
             "p_ga",
             "v_itai",
             "g_desu",
             "p_ga_but",
+            "v_dou",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             {
               "id": "v_tatsu",
               "form": "polite_volitional_mashou"
-            },
-            "p_ka"
+            }
           ]
         }
       ]

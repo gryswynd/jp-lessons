@@ -754,7 +754,9 @@
       "questions": [
         {
           "q": "りきぞは 何を 食べましたか。",
+          "q_en": "What did Rikizo eat?",
           "a": "カレーを 食べました。",
+          "a_en": "He ate curry.",
           "terms": [
             "p_wa",
             "v_nani",
@@ -763,13 +765,22 @@
               "id": "v_taberu",
               "form": "polite_mashita"
             },
-            "p_ka",
-            "v_karee"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_karee",
+            "p_wo",
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "やまかわは 何を 飲みましたか。",
+          "q_en": "What did Yamakawa drink?",
           "a": "ジュースを 飲みました。",
+          "a_en": "He drank juice.",
           "terms": [
             "p_wa",
             "v_nani",
@@ -778,26 +789,39 @@
               "id": "v_nomu",
               "form": "polite_mashita"
             },
-            "p_ka",
-            "v_juusu"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_juusu",
+            "p_wo",
+            {
+              "id": "v_nomu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "カレーは どうですか。",
+          "q_en": "How is the curry?",
           "a": "大きいです。",
+          "a_en": "It is big.",
           "terms": [
             "v_karee",
             "p_wa",
             "v_dou",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_ookii",
             "g_desu"
           ]
         },
         {
           "q": "どこで 食べましたか。",
+          "q_en": "Where did they eat?",
           "a": "レストランで 食べました。",
+          "a_en": "They ate at a restaurant.",
           "terms": [
             "v_doko",
             "p_de",
@@ -805,8 +829,15 @@
               "id": "v_taberu",
               "form": "polite_mashita"
             },
-            "p_ka",
-            "v_resutoran"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_resutoran",
+            "p_de",
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -906,7 +937,9 @@
       "questions": [
         {
           "q": "先生は 何を 食べましたか。",
+          "q_en": "What did the teacher eat?",
           "a": "サラダと パンを 食べました。",
+          "a_en": "She ate salad and bread.",
           "terms": [
             "v_sensei",
             "p_wa",
@@ -916,15 +949,24 @@
               "id": "v_taberu",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_sarada",
             "p_to",
-            "v_pan"
+            "v_pan",
+            "p_wo",
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "何を 飲みましたか。",
+          "q_en": "What did she drink?",
           "a": "コーヒーを 飲みました。",
+          "a_en": "She drank coffee.",
           "terms": [
             "v_nani",
             "p_wo",
@@ -932,19 +974,30 @@
               "id": "v_nomu",
               "form": "polite_mashita"
             },
-            "p_ka",
-            "v_koohii"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_koohii",
+            "p_wo",
+            {
+              "id": "v_nomu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "サラダは どうですか。",
+          "q_en": "How is the salad?",
           "a": "小さいです。",
+          "a_en": "It is small.",
           "terms": [
             "v_sarada",
             "p_wa",
             "v_dou",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_chiisai",
             "g_desu"
           ]

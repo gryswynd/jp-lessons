@@ -663,7 +663,9 @@
       "questions": [
         {
           "q": "父は 何を 売って いますか。",
+          "q_en": "What is the father selling?",
           "a": "古い 品物を 売って います。",
+          "a_en": "He is selling old items.",
           "terms": [
             "v_chichi",
             "p_wa",
@@ -677,7 +679,9 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_furui",
             "v_shinamono",
             "p_wo",
@@ -693,7 +697,9 @@
         },
         {
           "q": "店には どんな 品物が ありますか。",
+          "q_en": "What kind of items are in the shop?",
           "a": "上品な 洋服や 外国の 本が あります。",
+          "a_en": "There are refined Western clothes and foreign books.",
           "terms": [
             "v_mise",
             "p_wa",
@@ -705,7 +711,9 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             {
               "id": "v_jouhin",
               "form": "attributive_na"
@@ -724,7 +732,9 @@
         },
         {
           "q": "父は 本を 人に 貸しますか。",
+          "q_en": "Does the father lend books to people?",
           "a": "はい、時々 人に 貸します。",
+          "a_en": "Yes, he sometimes lends them.",
           "terms": [
             "v_chichi",
             "p_wa",
@@ -736,7 +746,9 @@
               "id": "v_kasu",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "p_hai",
             "v_tokidoki",
             "v_hito",
@@ -821,7 +833,9 @@
       "questions": [
         {
           "q": "日曜日に 何を しましたか。",
+          "q_en": "What did you do on Sunday?",
           "a": "手品を 見たり、売り物を 見たり しました。",
+          "a_en": "I watched magic tricks and looked at things for sale.",
           "terms": [
             "v_nichiyoubi",
             "p_ni",
@@ -831,7 +845,9 @@
               "id": "v_suru",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_tejina",
             "p_wo",
             {
@@ -852,12 +868,16 @@
         },
         {
           "q": "どんな 気持ちでしたか。",
+          "q_en": "How did you feel?",
           "a": "とても いい 気持ちでした。",
+          "a_en": "I felt very good.",
           "terms": [
             "v_donna",
             "v_kimochi",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_totemo",
             "v_ii",
             "v_kimochi",
@@ -866,7 +886,9 @@
         },
         {
           "q": "何を 持ち帰りましたか。",
+          "q_en": "What did you bring home?",
           "a": "ケーキを 持ち帰りました。",
+          "a_en": "I brought home a cake.",
           "terms": [
             "v_nani",
             "p_wo",
@@ -874,7 +896,9 @@
               "id": "v_mochikaeru",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_keeki",
             "p_wo",
             {
