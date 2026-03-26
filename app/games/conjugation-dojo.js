@@ -144,13 +144,11 @@
   };
 
   function isFormUnlocked(introducedIn) {
+    // No unlock system or free mode → all forms available
+    if (!cfg.unlock || cfg.unlock.isFree()) return true;
+    // Gated mode → check grammar lesson completion
     var gLesson = INTRO_TO_GRAMMAR[introducedIn] || introducedIn;
-    // Use unlock system if available, else fall back to activeLessons
-    if (cfg.unlock && cfg.unlock.isCompleted) {
-      return cfg.unlock.isCompleted(gLesson);
-    }
-    // Free mode: all forms available
-    return true;
+    return cfg.unlock.isCompleted(gLesson);
   }
 
   var FORM_CATEGORIES = [
