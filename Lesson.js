@@ -11,6 +11,7 @@ window.LessonModule = {
     let lessonData = null;
     let termMapData = {};
     let showEN = false; // Default OFF
+    let showAnswers = false;
     let drillCorrect = 0;
     let drillTotal = 0;
     const drillAnswered = new Set();
@@ -457,11 +458,20 @@ window.LessonModule = {
         div.appendChild(pCard);
 
         if (sec.questions) {
+          const revealBtn = el("button", "jp-toggle-en", showAnswers ? "Hide Answers" : "Reveal Answers");
+          revealBtn.onclick = function() { showAnswers = !showAnswers; renderCurrentStep(); };
+          div.appendChild(revealBtn);
+
           const qCard = el("div", "jp-card");
           qCard.innerHTML = `<div style="font-weight:700; color:#888; margin-bottom:15px;">COMPREHENSION CHECK</div>`;
           sec.questions.forEach((q, i) => {
              const row = el("div", "jp-row");
-             row.innerHTML = `<div class="jp-speaker-bubble" translate="no">Q${i+1}</div><div style="flex:1"><div class="jp-jp" style="font-weight:700;">${window.JPShared.textProcessor.processText(q.q, q.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div><div class="jp-en" style="display:${showEN?'block':'none'}">Ans: ${esc(q.a)}</div></div>`;
+             const ansHtml = q.a_terms
+               ? `<div class="jp-jp" style="display:${showAnswers?'block':'none'};margin-top:6px;">${window.JPShared.textProcessor.processText(q.a, q.a_terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div>`
+               : `<div class="jp-jp" style="display:${showAnswers?'block':'none'};margin-top:6px;">${esc(q.a)}</div>`;
+             const qEnHtml = q.q_en ? `<div class="jp-en" style="display:${showEN?'block':'none'}">${esc(q.q_en)}</div>` : '';
+             const aEnHtml = q.a_en ? `<div class="jp-en" style="display:${showEN?'block':'none'};margin-top:2px;">${esc(q.a_en)}</div>` : '';
+             row.innerHTML = `<div class="jp-speaker-bubble" translate="no">Q${i+1}</div><div style="flex:1"><div class="jp-jp" style="font-weight:700;">${window.JPShared.textProcessor.processText(q.q, q.terms, termMapData, CONJUGATION_RULES, COUNTER_RULES)}</div>${qEnHtml}${ansHtml}${aEnHtml}</div>`;
              qCard.appendChild(row);
           });
           div.appendChild(qCard);
@@ -655,20 +665,20 @@ window.LessonModule = {
           window.JPShared.termModal.setTermMap(termMapData);
 
           lessonData.sections.unshift({ type: 'intro', title: lessonData.title });
-          currentStep = 0; totalSteps = lessonData.sections.length; showEN = false;
+          currentStep = 0; totalSteps = lessonData.sections.length; showEN = false; showAnswers = false;
 
           // NAVIGATION EVENTS
           root.querySelector('.jp-nav-btn.prev').onclick = () => {
               if (currentStep > 0) {
                   currentStep--;
-                  showEN = false; // Reset English to OFF
+                  showEN = false; showAnswers = false; // Reset on navigation
                   renderCurrentStep();
               }
           };
           root.querySelector('.jp-nav-btn.next').onclick = () => {
              if (currentStep < totalSteps) {
                  currentStep++;
-                 showEN = false; // Reset English to OFF
+                 showEN = false; showAnswers = false; // Reset on navigation
                  renderCurrentStep();
              }
              else { renderMenu(currentLevelId, currentLevelLessons); }
