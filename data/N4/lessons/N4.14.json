@@ -6,7 +6,14 @@
     "phase": 4,
     "lesson": 14,
     "focus": "Work, schedules, and urgency; limiting particles だけ, しか, and でも; こと nominalizer; weekday kanji 曜 unlocks full 日曜日/月曜日 writing.",
-    "kanji": ["仕", "事", "曜", "早", "急", "員"]
+    "kanji": [
+      "仕",
+      "事",
+      "曜",
+      "早",
+      "急",
+      "員"
+    ]
   },
   "newKanji": [
     {
@@ -68,11 +75,20 @@
             "p_wa",
             "v_ongaku",
             "p_wo",
-            { "id": "v_kiku", "form": "tari_form" },
+            {
+              "id": "v_kiku",
+              "form": "tari_form"
+            },
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form": "tari_form" },
-            { "id": "v_suru", "form": "polite_masu" },
+            {
+              "id": "v_toru",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -83,10 +99,16 @@
             "v_maiasa",
             "v_ongaku",
             "p_wo",
-            { "id": "v_kiku", "form": "nagara_form" },
+            {
+              "id": "v_kiku",
+              "form": "nagara_form"
+            },
             "v_asagohan",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_masu" },
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -98,7 +120,10 @@
             "p_yori",
             "v_keiongaku",
             "p_ga",
-            { "id": "v_suki", "form": "polite_adj" },
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            },
             "g_desu",
             "p_ka"
           ]
@@ -109,7 +134,10 @@
           "terms": [
             "v_uta",
             "p_wo",
-            { "id": "v_utau", "form": "polite_potential" },
+            {
+              "id": "v_utau",
+              "form": "polite_potential"
+            },
             "p_ka"
           ]
         }
@@ -272,7 +300,10 @@
             "v_ima",
             "v_shigoto",
             "p_wa",
-            { "id": "v_isogashii", "form": "polite_adj" },
+            {
+              "id": "v_isogashii",
+              "form": "polite_adj"
+            },
             "g_desu",
             "p_ka"
           ]
@@ -284,16 +315,28 @@
           "terms": [
             "p_hai",
             "v_totemo",
-            { "id": "v_isogashii", "form": "polite_adj" },
+            {
+              "id": "v_isogashii",
+              "form": "polite_adj"
+            },
             "g_desu",
             "v_maiasa",
-            { "id": "v_hayai", "form": "adverbial" },
-            { "id": "v_okiru", "form": "te_form" },
+            {
+              "id": "v_hayai",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_okiru",
+              "form": "te_form"
+            },
             "v_kyuukou",
             "p_de",
             "v_kaisha",
             "p_ni",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -303,13 +346,19 @@
           "terms": [
             "v_kyuukou",
             "p_wa",
-            { "id": "v_hayai", "form": "polite_adj" },
+            {
+              "id": "v_hayai",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_nanji",
             "p_ni",
             "v_kaisha",
             "p_ga",
-            { "id": "v_hajimaru", "form": "polite_masu" },
+            {
+              "id": "v_hajimaru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -318,16 +367,31 @@
           "jp": "九時です。早起きを しているので、いそがしくても 元気ですよ。",
           "en": "Nine o'clock. Because I am doing early rising, I am energetic even when busy.",
           "terms": [
-            { "counter": "ji", "n": 9 },
+            {
+              "counter": "ji",
+              "n": 9
+            },
             "g_desu",
             "v_hayaoki",
             "p_wo",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "plain_form" },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
             "p_node",
-            { "id": "v_isogashii", "form": "te_form" },
+            {
+              "id": "v_isogashii",
+              "form": "te_form"
+            },
             "p_mo",
-            { "id": "v_genki", "form": "polite_adj" },
+            {
+              "id": "v_genki",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         }
@@ -349,7 +413,10 @@
             "p_kara",
             "v_kyuukou",
             "p_ni",
-            { "id": "v_noru", "form": "polite_potential" },
+            {
+              "id": "v_noru",
+              "form": "polite_potential"
+            },
             "p_ka"
           ]
         },
@@ -359,7 +426,10 @@
           "en": "No, you cannot. The express only comes to the next station.",
           "terms": [
             "v_iie",
-            { "id": "v_noru", "form": "polite_potential_negative" },
+            {
+              "id": "v_noru",
+              "form": "polite_potential_negative"
+            },
             "v_kyuukou",
             "p_wa",
             "v_tsugi",
@@ -367,7 +437,10 @@
             "v_eki",
             "p_ni",
             "p_shika",
-            { "id": "v_kuru", "form": "polite_negative" },
+            {
+              "id": "v_kuru",
+              "form": "polite_negative"
+            },
             "p_yo"
           ]
         },
@@ -378,13 +451,19 @@
           "terms": [
             "v_kyuukou",
             "p_ni",
-            { "id": "v_noru", "form": "plain_desire_tai" },
+            {
+              "id": "v_noru",
+              "form": "plain_desire_tai"
+            },
             "g_desu",
             "v_tsugi",
             "p_no",
             "v_eki",
             "p_wa",
-            { "id": "v_tooi", "form": "polite_adj" },
+            {
+              "id": "v_tooi",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -397,17 +476,32 @@
             "p_no",
             "v_eki",
             "p_made",
-            { "id": "v_aruku", "form": "te_form" },
-            { "counter": "fun", "n": 5 },
+            {
+              "id": "v_aruku",
+              "form": "te_form"
+            },
+            {
+              "counter": "fun",
+              "n": 5
+            },
             "g_desu",
             "v_kyuukou",
             "p_wa",
-            { "id": "v_hayai", "form": "plain_form" },
+            {
+              "id": "v_hayai",
+              "form": "plain_form"
+            },
             "p_node",
             "v_shigoto",
             "p_ni",
-            { "id": "v_hayai", "form": "adverbial" },
-            { "id": "v_tsuku", "form": "polite_masu" },
+            {
+              "id": "v_hayai",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_tsuku",
+              "form": "polite_masu"
+            },
             "p_yo"
           ]
         }
@@ -429,7 +523,10 @@
             "p_ni",
             "v_gyouji",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -443,13 +540,19 @@
             "p_no",
             "v_gyouji",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_demo_but",
             "v_jikan",
             "p_ga",
             "v_sukoshi",
             "p_shika",
-            { "id": "v_aru", "form": "polite_negative" }
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -467,7 +570,10 @@
             "v_issho",
             "v_shokuji",
             "p_wo",
-            { "id": "v_suru", "form": "polite_negative" },
+            {
+              "id": "v_suru",
+              "form": "polite_negative"
+            },
             "p_ka"
           ]
         },
@@ -478,10 +584,16 @@
           "terms": [
             "v_nani",
             "p_demo",
-            { "id": "v_taberu", "form": "polite_potential" },
+            {
+              "id": "v_taberu",
+              "form": "polite_potential"
+            },
             "p_kara_because",
             "v_issho",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -500,7 +612,10 @@
             "v_kyou",
             "v_shigoto",
             "p_wa",
-            { "id": "v_isogashii", "form": "plain_past_adj" },
+            {
+              "id": "v_isogashii",
+              "form": "plain_past_adj"
+            },
             "p_ka"
           ]
         },
@@ -511,14 +626,20 @@
           "terms": [
             "v_un",
             "v_mainichi",
-            { "id": "v_isogashii", "form": "plain_form" },
+            {
+              "id": "v_isogashii",
+              "form": "plain_form"
+            },
             "p_yo",
             "v_asa",
             "p_dake",
             "v_sukoshi",
             "v_jikan",
             "p_ga",
-            { "id": "v_aru", "form": "plain_form" },
+            {
+              "id": "v_aru",
+              "form": "plain_form"
+            },
             "p_kedo",
             "v_ato",
             "p_wa",
@@ -539,7 +660,10 @@
             "p_kara_because",
             "v_shuumatsu",
             "p_shika",
-            { "id": "v_yasumu", "form": "plain_potential_negative" }
+            {
+              "id": "v_yasumu",
+              "form": "plain_potential_negative"
+            }
           ]
         },
         {
@@ -548,13 +672,22 @@
           "en": "I'm busy every day, but since work is fun, it's fine.",
           "terms": [
             "v_mainichi",
-            { "id": "v_isogashii", "form": "plain_form" },
+            {
+              "id": "v_isogashii",
+              "form": "plain_form"
+            },
             "p_kedo",
             "v_shigoto",
             "p_ga",
-            { "id": "v_tanoshii", "form": "plain_form" },
+            {
+              "id": "v_tanoshii",
+              "form": "plain_form"
+            },
             "p_kara_because",
-            { "id": "v_ii", "form": "plain_form" },
+            {
+              "id": "v_ii",
+              "form": "plain_form"
+            },
             "p_yo"
           ]
         }
@@ -575,7 +708,10 @@
             "v_mainichi",
             "v_shigoto",
             "p_ga",
-            { "id": "v_isogashii", "form": "polite_adj" },
+            {
+              "id": "v_isogashii",
+              "form": "polite_adj"
+            },
             "g_desu"
           ]
         },
@@ -590,10 +726,16 @@
             "v_maiasa",
             "v_kyuukou",
             "p_ni",
-            { "id": "v_noru", "form": "te_form" },
+            {
+              "id": "v_noru",
+              "form": "te_form"
+            },
             "v_kaisha",
             "p_ni",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -602,13 +744,25 @@
           "terms": [
             "v_shigoto",
             "p_wa",
-            { "counter": "ji", "n": 9 },
+            {
+              "counter": "ji",
+              "n": 9
+            },
             "p_kara",
-            { "id": "v_hajimaru", "form": "polite_masu" },
+            {
+              "id": "v_hajimaru",
+              "form": "polite_masu"
+            },
             "v_maiasa",
             "v_sukoshi",
-            { "id": "v_hayai", "form": "adverbial" },
-            { "id": "v_tsuku", "form": "polite_masu" }
+            {
+              "id": "v_hayai",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_tsuku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -619,9 +773,18 @@
             "p_no",
             "v_koto",
             "p_wo",
-            { "id": "v_taisetsu", "form": "adverbial" },
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_taisetsu",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -636,19 +799,33 @@
             "p_demo_but",
             "v_shigoto",
             "p_ga",
-            { "id": "v_tanoshii", "form": "plain_form" },
+            {
+              "id": "v_tanoshii",
+              "form": "plain_form"
+            },
             "p_node",
             "v_mainichi",
-            { "id": "v_genki", "form": "adverbial" },
-            { "id": "v_hataraku", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_genki",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_hataraku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
       "questions": [
         {
           "q": "りきぞは 毎朝 何で 会社に 行きますか。",
+          "q_en": "What does Rikizo take to commute every morning?",
           "a": "急行で 行きます。",
+          "a_en": "He takes the express train.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -657,16 +834,26 @@
             "p_de",
             "v_kaisha",
             "p_ni",
-            { "id": "v_iku", "form": "polite_masu" },
-            "p_ka",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_kyuukou",
             "p_de",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "りきぞの 休みは いつですか。",
+          "q_en": "When is Rikizo's day off?",
           "a": "日曜日だけです。",
+          "a_en": "Only on Sundays.",
           "terms": [
             "char_rikizo",
             "p_no",
@@ -674,7 +861,9 @@
             "p_wa",
             "v_itsu",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_nichiyoubi",
             "p_dake",
             "g_desu"
@@ -682,18 +871,28 @@
         },
         {
           "q": "りきぞは どうして 毎日 元気ですか。",
+          "q_en": "Why is Rikizo energetic every day?",
           "a": "仕事が 楽しいからです。",
+          "a_en": "Because work is fun.",
           "terms": [
             "char_rikizo",
             "p_wa",
             "v_doushite",
             "v_mainichi",
-            { "id": "v_genki", "form": "polite_adj" },
+            {
+              "id": "v_genki",
+              "form": "polite_adj"
+            },
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_shigoto",
             "p_ga",
-            { "id": "v_tanoshii", "form": "plain_form" },
+            {
+              "id": "v_tanoshii",
+              "form": "plain_form"
+            },
             "p_kara_because",
             "g_desu"
           ]
@@ -726,7 +925,10 @@
             "p_kara",
             "v_doyoubi",
             "p_made",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -737,7 +939,10 @@
             "p_shika",
             "v_yasumi",
             "p_ga",
-            { "id": "v_aru", "form": "polite_negative" }
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -746,9 +951,15 @@
           "terms": [
             "char_ken",
             "p_wa",
-            { "id": "v_hayakuchi", "form": "polite_adj" },
+            {
+              "id": "v_hayakuchi",
+              "form": "polite_adj"
+            },
             "p_ga_but",
-            { "id": "v_wakaru", "form": "polite_masu" }
+            {
+              "id": "v_wakaru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -763,18 +974,29 @@
             "p_to",
             "v_shokuji",
             "p_wo",
-            { "id": "v_suru", "form": "tari_form" },
+            {
+              "id": "v_suru",
+              "form": "tari_form"
+            },
             "v_ongaku",
             "p_wo",
-            { "id": "v_kiku", "form": "tari_form" },
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_kiku",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
       "questions": [
         {
           "q": "けんは 何の 仕事を していますか。",
+          "q_en": "What is Ken's job?",
           "a": "コンビニの 店員を しています。",
+          "a_en": "He is a convenience store clerk.",
           "terms": [
             "char_ken",
             "p_wa",
@@ -782,20 +1004,36 @@
             "p_no",
             "v_shigoto",
             "p_wo",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
-            "p_ka",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_konbini",
             "p_no",
             "v_tenin",
             "p_wo",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "けんの 休みは いつですか。",
+          "q_en": "When is Ken's day off?",
           "a": "日曜日だけです。",
+          "a_en": "Only on Sundays.",
           "terms": [
             "char_ken",
             "p_no",
@@ -803,7 +1041,9 @@
             "p_wa",
             "v_itsu",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_nichiyoubi",
             "p_dake",
             "g_desu"
@@ -811,7 +1051,9 @@
         },
         {
           "q": "けんは 仕事の 後で 何を しますか。",
+          "q_en": "What does Ken do after work?",
           "a": "りきぞと 食事を したり 音楽を 聞いたり します。",
+          "a_en": "He eats a meal with Rikizo and listens to music.",
           "terms": [
             "char_ken",
             "p_wa",
@@ -821,17 +1063,31 @@
             "p_de",
             "v_nani",
             "p_wo",
-            { "id": "v_suru", "form": "polite_masu" },
-            "p_ka",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "char_rikizo",
             "p_to",
             "v_shokuji",
             "p_wo",
-            { "id": "v_suru", "form": "tari_form" },
+            {
+              "id": "v_suru",
+              "form": "tari_form"
+            },
             "v_ongaku",
             "p_wo",
-            { "id": "v_kiku", "form": "tari_form" },
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_kiku",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -844,25 +1100,45 @@
         {
           "kind": "mcq",
           "q": "[仕事] の よみかたは？",
-          "choices": ["しごと", "しこと", "しきごと", "じごと"],
+          "choices": [
+            "しごと",
+            "しこと",
+            "しきごと",
+            "じごと"
+          ],
           "answer": "しごと"
         },
         {
           "kind": "mcq",
           "q": "[早起き] の よみかたは？",
-          "choices": ["はやおき", "そうおき", "はやき", "そうき"],
+          "choices": [
+            "はやおき",
+            "そうおき",
+            "はやき",
+            "そうき"
+          ],
           "answer": "はやおき"
         },
         {
           "kind": "mcq",
           "q": "[急行] の よみかたは？",
-          "choices": ["きゅうこう", "いそぎこう", "きゅうぎょう", "そうこう"],
+          "choices": [
+            "きゅうこう",
+            "いそぎこう",
+            "きゅうぎょう",
+            "そうこう"
+          ],
           "answer": "きゅうこう"
         },
         {
           "kind": "mcq",
           "q": "[曜日] の よみかたは？",
-          "choices": ["ようび", "よるび", "ようひ", "よびじ"],
+          "choices": [
+            "ようび",
+            "よるび",
+            "ようひ",
+            "よびじ"
+          ],
           "answer": "ようび"
         }
       ]
@@ -875,7 +1151,12 @@
         {
           "kind": "mcq",
           "q": "あの 人は コンビニで 働いている ______です。",
-          "choices": ["店員", "駅員", "会社員", "楽員"],
+          "choices": [
+            "店員",
+            "駅員",
+            "会社員",
+            "楽員"
+          ],
           "answer": "店員",
           "terms": [
             "v_ano",
@@ -883,32 +1164,54 @@
             "p_wa",
             "v_konbini",
             "p_de",
-            { "id": "v_hataraku", "form": "te_form" },
-            { "id": "v_iru", "form": "plain_form" },
+            {
+              "id": "v_hataraku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
             "v_tenin"
           ]
         },
         {
           "kind": "mcq",
           "q": "毎朝 ______ を するので、体が 元気です。",
-          "choices": ["早起き", "早口", "急行", "仕事"],
+          "choices": [
+            "早起き",
+            "早口",
+            "急行",
+            "仕事"
+          ],
           "answer": "早起き",
           "terms": [
             "v_maiasa",
             "v_hayaoki",
             "p_wo",
-            { "id": "v_suru", "form": "plain_form" },
+            {
+              "id": "v_suru",
+              "form": "plain_form"
+            },
             "p_node",
             "v_karada",
             "p_ga",
-            { "id": "v_genki", "form": "polite_adj" },
+            {
+              "id": "v_genki",
+              "form": "polite_adj"
+            },
             "g_desu"
           ]
         },
         {
           "kind": "mcq",
           "q": "日曜日に 学校の ______ が あります。",
-          "choices": ["行事", "食事", "仕事", "早口"],
+          "choices": [
+            "行事",
+            "食事",
+            "仕事",
+            "早口"
+          ],
           "answer": "行事",
           "terms": [
             "v_nichiyoubi",
@@ -917,45 +1220,78 @@
             "p_no",
             "v_gyouji",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "急行は ______ ので、仕事に 早く 着きます。",
-          "choices": ["早い", "楽しい", "元気", "大切"],
+          "choices": [
+            "早い",
+            "楽しい",
+            "元気",
+            "大切"
+          ],
           "answer": "早い",
           "terms": [
             "v_kyuukou",
             "p_wa",
-            { "id": "v_hayai", "form": "plain_form" },
+            {
+              "id": "v_hayai",
+              "form": "plain_form"
+            },
             "p_node",
             "v_shigoto",
             "p_ni",
-            { "id": "v_hayai", "form": "adverbial" },
-            { "id": "v_tsuku", "form": "polite_masu" }
+            {
+              "id": "v_hayai",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_tsuku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "何 ______ 食べられるので、食事が 楽しいです。",
-          "choices": ["でも", "だけ", "しか", "より"],
+          "choices": [
+            "でも",
+            "だけ",
+            "しか",
+            "より"
+          ],
           "answer": "でも",
           "terms": [
             "v_nani",
             "p_demo",
-            { "id": "v_taberu", "form": "polite_potential" },
+            {
+              "id": "v_taberu",
+              "form": "polite_potential"
+            },
             "p_node",
             "v_shokuji",
             "p_ga",
-            { "id": "v_tanoshii", "form": "polite_adj" },
+            {
+              "id": "v_tanoshii",
+              "form": "polite_adj"
+            },
             "g_desu"
           ]
         },
         {
           "kind": "mcq",
           "q": "休みは 日曜日 ______です。",
-          "choices": ["だけ", "でも", "しか", "まで"],
+          "choices": [
+            "だけ",
+            "でも",
+            "しか",
+            "まで"
+          ],
           "answer": "だけ",
           "terms": [
             "v_yasumi",
@@ -975,7 +1311,12 @@
         {
           "kind": "mcq",
           "q": "今日は 時間が 少し ______ ありません。",
-          "choices": ["しか", "だけ", "でも", "より"],
+          "choices": [
+            "しか",
+            "だけ",
+            "でも",
+            "より"
+          ],
           "answer": "しか",
           "terms": [
             "v_kyou",
@@ -984,13 +1325,21 @@
             "p_ga",
             "v_sukoshi",
             "p_shika",
-            { "id": "v_aru", "form": "polite_negative" }
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "仕事の ______ は 何でも 大切です。",
-          "choices": ["こと", "ため", "もの", "ところ"],
+          "choices": [
+            "こと",
+            "ため",
+            "もの",
+            "ところ"
+          ],
           "answer": "こと",
           "terms": [
             "v_shigoto",
@@ -999,51 +1348,93 @@
             "p_wa",
             "v_nani",
             "p_demo",
-            { "id": "v_taisetsu", "form": "polite_adj" },
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            },
             "g_desu"
           ]
         },
         {
           "kind": "mcq",
           "q": "毎朝 早く 起き ______、仕事に 早く 着きます。",
-          "choices": ["ているので", "ましたが", "てしまって", "ていても"],
+          "choices": [
+            "ているので",
+            "ましたが",
+            "てしまって",
+            "ていても"
+          ],
           "answer": "ているので",
           "terms": [
             "v_maiasa",
-            { "id": "v_hayai", "form": "adverbial" },
-            { "id": "v_okiru", "form": "te_form" },
-            { "id": "v_iru", "form": "plain_form" },
+            {
+              "id": "v_hayai",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_okiru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
             "p_node",
             "v_shigoto",
             "p_ni",
-            { "id": "v_hayai", "form": "adverbial" },
-            { "id": "v_tsuku", "form": "polite_masu" }
+            {
+              "id": "v_hayai",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_tsuku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "駅員 ______ 道が わかります。",
-          "choices": ["でも", "だけ", "しか", "より"],
+          "choices": [
+            "でも",
+            "だけ",
+            "しか",
+            "より"
+          ],
           "answer": "でも",
           "terms": [
             "v_ekiin",
             "p_demo",
             "v_michi",
             "p_ga",
-            { "id": "v_wakaru", "form": "polite_masu" }
+            {
+              "id": "v_wakaru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "いそがし ______ 、仕事が 好きです。",
-          "choices": ["くても", "くなって", "くなれば", "くなりました"],
+          "choices": [
+            "くても",
+            "くなって",
+            "くなれば",
+            "くなりました"
+          ],
           "answer": "くても",
           "terms": [
-            { "id": "v_isogashii", "form": "te_form" },
+            {
+              "id": "v_isogashii",
+              "form": "te_form"
+            },
             "p_mo",
             "v_shigoto",
             "p_ga",
-            { "id": "v_suki", "form": "polite_adj" },
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            },
             "g_desu"
           ]
         }
