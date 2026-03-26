@@ -225,6 +225,36 @@ window.PracticeModule = {
             .k-conn4-stamp-overlay { display: flex; align-items: center; justify-content: center; margin-top: 12px; gap: 8px; }
             .k-conn4-stamp-overlay img { width: 56px; height: 56px; object-fit: contain; animation: kStampPop 0.35s ease; }
             .k-conn4-stamp-label { font-weight: 800; font-size: 0.9rem; }
+
+            /* Lesson Picker Overlay */
+            .k-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 100; transition: opacity 0.25s ease; }
+            .k-overlay.k-hidden { opacity: 0; pointer-events: none; }
+            .k-overlay-backdrop { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); }
+            .k-overlay-panel {
+                position: absolute; top: 0; right: 0; width: min(380px, 85vw); height: 100%;
+                background: #fff; box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+                display: flex; flex-direction: column;
+                transform: translateX(0); transition: transform 0.25s ease;
+            }
+            .k-overlay.k-hidden .k-overlay-panel { transform: translateX(100%); }
+            .k-overlay-header {
+                display: flex; justify-content: space-between; align-items: center;
+                padding: 16px 20px; border-bottom: 1px solid #eee; font-weight: 800; font-size: 1.1rem; color: var(--primary);
+            }
+            .k-overlay-close { background: none; border: none; font-size: 1.4rem; cursor: pointer; color: #999; padding: 4px 8px; }
+            .k-overlay-close:hover { color: #333; }
+            .k-overlay-stats {
+                display: flex; justify-content: space-around; padding: 12px 16px;
+                border-bottom: 1px solid #eee; text-align: center;
+            }
+            .k-overlay-stats .k-big { font-size: 1.4rem; font-weight: 800; }
+            .k-overlay-stats .k-lbl { font-size: 0.7rem; text-transform: uppercase; color: #999; font-weight: 700; }
+            .k-overlay-body { flex: 1; overflow-y: auto; padding: 12px 16px; }
+            .k-filter-btn {
+                background: none; border: 1px solid rgba(255,255,255,0.3); border-radius: 8px;
+                padding: 4px 8px; font-size: 1rem; cursor: pointer; color: #fff; transition: background 0.15s;
+            }
+            .k-filter-btn:hover { background: rgba(255,255,255,0.15); }
         `;
         document.head.appendChild(style);
     }
@@ -245,28 +275,32 @@ window.PracticeModule = {
 
         <header>
            <span onclick="KanjiApp.showMenu()">Kanji Master 先生</span>
-           <div style="display:flex;gap:8px;align-items:center;"><button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button><button class="k-exit-btn">Exit</button></div>
+           <div style="display:flex;gap:8px;align-items:center;"><button class="k-filter-btn" onclick="KanjiApp.toggleLessonOverlay()" title="Select Lessons">&#x1F3AF;</button><button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button><button class="k-exit-btn">Exit</button></div>
         </header>
+
+        <div id="k-lesson-overlay" class="k-overlay k-hidden">
+            <div class="k-overlay-backdrop" onclick="KanjiApp.toggleLessonOverlay()"></div>
+            <div class="k-overlay-panel">
+                <div class="k-overlay-header">
+                    <span>Select Lessons</span>
+                    <button class="k-overlay-close" onclick="KanjiApp.toggleLessonOverlay()">\u2715</button>
+                </div>
+                <div class="k-overlay-stats">
+                    <div><div class="k-big" style="color:var(--primary)" id="k-cnt-k">0</div><div class="k-lbl">Kanji</div></div>
+                    <div><div class="k-big" style="color:#16a085" id="k-cnt-vocab">0</div><div class="k-lbl">Vocab</div></div>
+                    <div><div class="k-big" style="color:#8e44ad" id="k-cnt-v">0</div><div class="k-lbl">Verbs</div></div>
+                    <div><div class="k-big" style="color:#f39c12" id="k-cnt-flags">0</div><div class="k-lbl">Flags</div></div>
+                </div>
+                <div class="k-overlay-body">
+                    <div class="k-filters" id="k-lesson-container"></div>
+                </div>
+            </div>
+        </div>
 
         <div id="k-app-container">
             <div id="k-view-menu" style="width:100%">
 
-                <div class="k-card" style="padding: 1.5rem; margin-bottom: 25px;">
-                    <div style="display:flex; justify-content:space-around; align-items:center;">
-                        <div><div class="k-big" style="font-size:1.8rem; color:var(--primary)" id="k-cnt-k">0</div><div class="k-lbl">Kanji</div></div>
-                        <div style="width:1px; height:40px; background:#eee;"></div>
-                        <div><div class="k-big" style="font-size:1.8rem; color:#16a085" id="k-cnt-vocab">0</div><div class="k-lbl">Vocab</div></div>
-                        <div style="width:1px; height:40px; background:#eee;"></div>
-                        <div><div class="k-big" style="font-size:1.8rem; color:#8e44ad" id="k-cnt-v">0</div><div class="k-lbl">Verbs</div></div>
-                        <div style="width:1px; height:40px; background:#eee;"></div>
-                        <div><div class="k-big" style="font-size:1.8rem; color:#f39c12" id="k-cnt-flags">0</div><div class="k-lbl">Flags</div></div>
-                    </div>
-                </div>
-
-                <div class="k-lbl" style="margin-bottom:12px; color: var(--primary);">SELECT LESSONS</div>
-                <div class="k-filters" id="k-lesson-container"></div>
-
-                <div class="k-lbl" style="margin-top:1rem">KANJI PRACTICE</div>
+                <div class="k-lbl" style="margin-top:0.5rem">KANJI PRACTICE</div>
                 <button class="k-btn" onclick="KanjiApp.start('kanji', 'flash')">🎴 Flashcards</button>
 
                 <div class="k-lbl" style="margin-top:8px">MEANING QUIZ</div>
@@ -421,6 +455,7 @@ window.PracticeModule = {
       window.JPShared.stampSettings.setConfig(REPO_CONFIG);
     }
 
+    const ALL_VIEWS = ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4','k-view-scr'];
     const DB = { kanji: [], verb: [], lessons: [], vocabMap: new Map() };
     const activeLessons = new Set();
     let curSet=[], curIdx=0, curStreak=0, curBest=0, curMode='', curAns='', curType='', curSubMode='normal', curQItem=null, curCategory='';
@@ -556,9 +591,14 @@ window.PracticeModule = {
     }
 
     // --- 4. EXPOSED FUNCTIONS ---
+    KanjiApp.toggleLessonOverlay = function() {
+        const overlay = document.getElementById('k-lesson-overlay');
+        if (overlay) overlay.classList.toggle('k-hidden');
+    };
+
     KanjiApp.showMenu = function() {
         kUpdateStats();
-        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4','k-view-scr'].forEach(i => {
+        ALL_VIEWS.forEach(i => {
             const el = document.getElementById(i);
             if(el) el.classList.add('k-hidden');
         });
@@ -630,7 +670,7 @@ window.PracticeModule = {
         if(curSet.length === 0) return alert(mode === 'flag-review' ? "No active flagged items found!" : "Please select at least one lesson.");
         curSet.sort(() => Math.random() - 0.5);
 
-        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4','k-view-scr'].forEach(i => {
+        ALL_VIEWS.forEach(i => {
             const el = document.getElementById(i);
             if(el) el.classList.add('k-hidden');
         });
@@ -681,7 +721,7 @@ window.PracticeModule = {
         connPuzzles = available.sort(() => Math.random() - 0.5);
 
         // Switch views
-        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4','k-view-scr'].forEach(i => {
+        ALL_VIEWS.forEach(i => {
             const el = document.getElementById(i);
             if(el) el.classList.add('k-hidden');
         });
@@ -911,7 +951,7 @@ window.PracticeModule = {
 
         conn4Puzzles = available.sort(() => Math.random() - 0.5);
 
-        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4','k-view-scr'].forEach(i => {
+        ALL_VIEWS.forEach(i => {
             const el = document.getElementById(i);
             if(el) el.classList.add('k-hidden');
         });
@@ -1182,7 +1222,7 @@ window.PracticeModule = {
         scrSets = allItems.sort(() => Math.random() - 0.5);
         scrTotal = scrSets.length;
 
-        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4','k-view-scr'].forEach(i => {
+        ALL_VIEWS.forEach(i => {
             const el = document.getElementById(i);
             if(el) el.classList.add('k-hidden');
         });
@@ -1441,7 +1481,7 @@ window.PracticeModule = {
             marItems.push({ ...item, difficulty: 3 }));
         marTotal = marItems.length;
 
-        ['k-view-menu','k-view-flash','k-view-quiz','k-view-conn','k-view-conn4','k-view-scr'].forEach(i => {
+        ALL_VIEWS.forEach(i => {
             const el = document.getElementById(i);
             if(el) el.classList.add('k-hidden');
         });
