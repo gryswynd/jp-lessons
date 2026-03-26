@@ -128,40 +128,82 @@
   }
 
   // ---- Form gating ----
-  // Map introducedIn content-lesson IDs to the grammar lesson that teaches the form.
-  // Forms already keyed to G-lessons pass through unchanged.
-  var INTRO_TO_GRAMMAR = {
-    'N5.1':  'G7',   // Polite Verb Forms — ます形
-    'N5.5':  'G8',   // て-form — Connecting Actions
-    'N5.8':  'G9',   // ている・たいです・ましょう
-    'N5.9':  'G10',  // Plain Forms & Basic Connectors
-    'N5.10': 'G11',  // i-Adjective Conjugation
-    'N5.11': 'G12',  // na-Adjective Conjugation
-    'N4.3':  'G13',  // Potential Form
-    'N4.10': 'G19',  // Connecting Actions (nagara/tari)
-    'N4.25': 'G25',  // Obligations & Conditionals
-    'N4.31': 'G28'   // Passive & Causative
+  // Map each conjugation form to the grammar lesson that teaches it.
+  // Source: GRAMMAR_CONTENT.md (authoritative grammar scope).
+  var FORM_TO_GRAMMAR = {
+    // G1 — Copula
+    polite_adj: 'G1', copula_negative: 'G1', copula_past: 'G1',
+    copula_past_negative: 'G1', polite_past_copula: 'G1',
+    // G7 — Polite Verb Forms (ます system)
+    polite_masu: 'G7', polite_mashita: 'G7', polite_negative: 'G7',
+    polite_past_negative: 'G7', masu_stem: 'G7',
+    // G8 — て-form & た-form
+    te_form: 'G8', plain_past: 'G8', polite_negative_te: 'G8',
+    // G9 — Progressive, Desire, Suggestions
+    casual_te_iru: 'G9', desire_tai: 'G9', desire_tai_negative: 'G9',
+    polite_desire_tai_negative: 'G9', polite_volitional_mashou: 'G9',
+    da_past: 'G9', da_negative: 'G9', da_past_negative: 'G9', plain_adj: 'G9',
+    // G10 — Plain Forms & Basic Connectors
+    plain_negative: 'G10', plain_past_negative: 'G10', plain_past_adj: 'G10',
+    plain_desire_tai: 'G10', plain_desire_tai_past: 'G10',
+    // G11 — i-Adjective Conjugation
+    polite_past_adj: 'G11', adverbial: 'G11', desire_tai_past: 'G11',
+    // G12 — na-Adjective Conjugation
+    attributive_na: 'G12',
+    // G13 — Potential Form
+    potential: 'G13', polite_potential: 'G13', potential_negative: 'G13',
+    polite_potential_negative: 'G13', plain_potential_negative: 'G13',
+    polite_potential_past: 'G13', plain_potential_past: 'G13',
+    // G15 — Comparison & Degree (sugiru)
+    sugiru_form: 'G15', polite_sugiru_form: 'G15',
+    // G19 — Connecting Actions (nagara, tari)
+    tari_form: 'G19', nagara_form: 'G19',
+    // G22 — Appearance (そうだ)
+    appearance_sou_stem: 'G22', appearance_sou: 'G22', plain_appearance_sou: 'G22',
+    // G25 — Obligations & Conditionals
+    conditional_ba: 'G25', conditional_tara: 'G25', nakereba: 'G25',
+    sugiru_past: 'G25', polite_sugiru_past: 'G25',
+    // G28 — Passive Form
+    passive: 'G28', polite_passive: 'G28', polite_passive_past: 'G28', plain_passive_past: 'G28',
+    // G29 — Causative Form
+    causative: 'G29', polite_causative: 'G29', polite_causative_past: 'G29', plain_causative_past: 'G29',
+    // G34 — Volitional Form & Intentions
+    plain_volitional: 'G34',
+    // G43 — Causative-Passive & Advanced Voice
+    causative_passive: 'G43', polite_causative_passive: 'G43'
   };
 
-  function isFormUnlocked(introducedIn) {
+  function isFormUnlocked(formKey) {
+    var gLesson = FORM_TO_GRAMMAR[formKey];
+    if (!gLesson) return false; // unmapped form = not available
     // No unlock system or free mode → all forms available
     if (!cfg.unlock || cfg.unlock.isFree()) return true;
     // Gated mode → check grammar lesson completion
-    var gLesson = INTRO_TO_GRAMMAR[introducedIn] || introducedIn;
     return cfg.unlock.isCompleted(gLesson);
   }
 
+  function getFormGLesson(formKey) {
+    return FORM_TO_GRAMMAR[formKey] || '?';
+  }
+
+  // Categories ordered by grammar lesson progression
   var FORM_CATEGORIES = [
-    { name: 'Polite Forms', keys: ['polite_masu','polite_mashita','polite_negative','polite_past_negative','polite_adj','polite_past_adj','polite_past_copula'] },
-    { name: 'Te / Ta Forms', keys: ['te_form','plain_past','masu_stem','polite_negative_te'] },
-    { name: 'Desire & Volitional', keys: ['desire_tai','desire_tai_negative','polite_desire_tai_negative','desire_tai_past','polite_volitional_mashou'] },
-    { name: 'Plain Forms', keys: ['plain_negative','plain_past_negative','plain_adj','plain_past_adj','plain_desire_tai','plain_desire_tai_past','plain_volitional','plain_appearance_sou'] },
-    { name: 'Progressive & Appearance', keys: ['casual_te_iru','appearance_sou_stem','appearance_sou','adverbial','attributive_na'] },
-    { name: 'Potential', keys: ['potential','polite_potential','potential_negative','polite_potential_negative','plain_potential_negative','polite_potential_past','plain_potential_past'] },
-    { name: 'Conditional', keys: ['conditional_ba','conditional_tara','nakereba'] },
-    { name: 'Tari & Nagara', keys: ['tari_form','nagara_form'] },
-    { name: 'Causative & Passive', keys: ['passive','causative','polite_passive','polite_passive_past','plain_passive_past','polite_causative','polite_causative_past','plain_causative_past','causative_passive','polite_causative_passive'] },
-    { name: 'Excessive (Sugiru)', keys: ['sugiru_form','polite_sugiru_form','sugiru_past','polite_sugiru_past'] }
+    { name: 'Copula (G1/G9)', keys: ['polite_adj','copula_negative','copula_past','copula_past_negative','polite_past_copula','da_past','da_negative','da_past_negative'] },
+    { name: 'Polite Verb Forms (G7)', keys: ['polite_masu','polite_mashita','polite_negative','polite_past_negative','masu_stem'] },
+    { name: 'Te / Ta Forms (G8)', keys: ['te_form','plain_past','polite_negative_te'] },
+    { name: 'Desire & Suggestions (G9)', keys: ['desire_tai','desire_tai_negative','polite_desire_tai_negative','polite_volitional_mashou','casual_te_iru','plain_adj'] },
+    { name: 'Plain Forms (G10)', keys: ['plain_negative','plain_past_negative','plain_past_adj','plain_desire_tai','plain_desire_tai_past'] },
+    { name: 'i-Adjective (G11)', keys: ['polite_past_adj','adverbial','desire_tai_past'] },
+    { name: 'na-Adjective (G12)', keys: ['attributive_na'] },
+    { name: 'Potential (G13)', keys: ['potential','polite_potential','potential_negative','polite_potential_negative','plain_potential_negative','polite_potential_past','plain_potential_past'] },
+    { name: 'Excessive (G15)', keys: ['sugiru_form','polite_sugiru_form'] },
+    { name: 'Tari & Nagara (G19)', keys: ['tari_form','nagara_form'] },
+    { name: 'Appearance (G22)', keys: ['appearance_sou_stem','appearance_sou','plain_appearance_sou'] },
+    { name: 'Conditionals (G25)', keys: ['conditional_ba','conditional_tara','nakereba','sugiru_past','polite_sugiru_past'] },
+    { name: 'Passive (G28)', keys: ['passive','polite_passive','polite_passive_past','plain_passive_past'] },
+    { name: 'Causative (G29)', keys: ['causative','polite_causative','polite_causative_past','plain_causative_past'] },
+    { name: 'Volitional (G34)', keys: ['plain_volitional'] },
+    { name: 'Causative-Passive (G43)', keys: ['causative_passive','polite_causative_passive'] }
   ];
 
   function getUnlockedForms() {
@@ -169,14 +211,13 @@
     var unlocked = [];
     for (var key in rules) {
       var form = rules[key];
-      if (!form || !form.introducedIn || !form.rules) continue;
+      if (!form || !form.rules) continue;
       if (key === 'plain_form') continue;
-      // Gate by grammar lesson completion, not content lesson selection
-      if (!isFormUnlocked(form.introducedIn)) continue;
+      // Gate by per-form grammar lesson mapping
+      if (!isFormUnlocked(key)) continue;
       var classes = Object.keys(form.rules);
       if (!classes.some(function (c) { return c !== 'copula'; })) continue;
-      var gLesson = INTRO_TO_GRAMMAR[form.introducedIn] || form.introducedIn;
-      unlocked.push({ key: key, label: form.label, introducedIn: form.introducedIn, gLesson: gLesson, rules: form.rules });
+      unlocked.push({ key: key, label: form.label, gLesson: getFormGLesson(key), rules: form.rules });
     }
     return unlocked;
   }
@@ -243,7 +284,7 @@
         html += '<div class="dojo-form-row">' +
           '<input type="checkbox" class="dojo-form-chk" data-key="' + key + '"' + checked + '>' +
           '<span class="dojo-form-label">' + f.label + '</span>' +
-          '<span class="dojo-form-tag">' + (f.gLesson || f.introducedIn) + '</span></div>';
+          '<span class="dojo-form-tag">' + f.gLesson + '</span></div>';
       });
       html += '</div>';
     });
