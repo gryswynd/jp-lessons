@@ -728,7 +728,9 @@
       "questions": [
         {
           "q": "今日 りきぞは 何の 料理を 食べましたか。",
+          "q_en": "What dish did Rikizo eat today?",
           "a": "鳥肉の 料理を 食べました。",
+          "a_en": "He ate a chicken dish.",
           "terms": [
             "v_kyou",
             "char_rikizo",
@@ -741,13 +743,17 @@
               "id": "v_taberu",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_toriniku"
           ]
         },
         {
           "q": "だれが 昼ご飯を りきぞに あげましたか。",
+          "q_en": "Who gave Rikizo lunch?",
           "a": "やまかわさんが あげました。",
+          "a_en": "Yamakawa-san gave it to him.",
           "terms": [
             "v_dare",
             "p_ga",
@@ -759,14 +765,18 @@
               "id": "v_ageru",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "char_yamakawa",
             "v_san"
           ]
         },
         {
           "q": "りきぞは どんな 味が 好きですか。",
+          "q_en": "What flavor does Rikizo like?",
           "a": "鳥肉の 味が とても 好きです。",
+          "a_en": "He likes the flavor of chicken very much.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -778,7 +788,9 @@
               "form": "polite_adj"
             },
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_toriniku",
             "p_no",
             "v_totemo"
@@ -915,7 +927,9 @@
       "questions": [
         {
           "q": "りきぞは 昼ご飯に 何の 料理を 食べますか。",
+          "q_en": "What dish does Rikizo eat for lunch?",
           "a": "いつも 鳥肉の 料理を 食べます。",
+          "a_en": "He always eats a chicken dish.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -929,14 +943,18 @@
               "id": "v_taberu",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_itsumo",
             "v_toriniku"
           ]
         },
         {
           "q": "りきぞは だれから 昼ご飯を もらいますか。",
+          "q_en": "Who does Rikizo receive lunch from?",
           "a": "やまかわさんから もらいます。",
+          "a_en": "He receives it from Yamakawa-san.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -948,14 +966,18 @@
               "id": "v_morau",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "char_yamakawa",
             "v_san"
           ]
         },
         {
           "q": "晩ご飯の 前に 外は どうなりますか。",
+          "q_en": "What happens outside before dinner?",
           "a": "暗く なります。",
+          "a_en": "It gets dark.",
           "terms": [
             "v_bangohan",
             "p_no",
@@ -968,7 +990,9 @@
               "id": "v_naru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             {
               "id": "v_kurai",
               "form": "adverbial"
