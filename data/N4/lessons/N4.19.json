@@ -757,9 +757,16 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            "v_chizu"
+            "p_ka"
           ],
-          "a_terms": []
+          "a_terms": [
+            "v_chizu",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
+          ]
         },
         {
           "q": "地上には 何の 本が ありますか。",
@@ -778,11 +785,20 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_shousetsu",
             "p_to",
-            "v_gakusetsu"
-          ],
-          "a_terms": []
+            "v_gakusetsu",
+            "p_no",
+            "v_hon",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
+          ]
         },
         {
           "q": "地下には どんな 本が 多いですか。",
@@ -948,13 +964,19 @@
             "p_ni",
             "v_nani",
             "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_shitsumon",
             {
               "id": "v_suru",
               "form": "polite_mashita"
             }
-          ],
-          "a_terms": []
+          ]
         },
         {
           "q": "水質の 問題は どうですか。",
