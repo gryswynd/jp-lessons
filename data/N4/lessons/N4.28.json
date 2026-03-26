@@ -7,7 +7,12 @@
     "lesson_number": 28,
     "focus": "Ponds, groves, gates, and villages — exploring natural places and community landmarks using 池, 林, 門, 村 kanji compounds.",
     "estimated_minutes": 35,
-    "kanji": ["池", "林", "門", "村"]
+    "kanji": [
+      "池",
+      "林",
+      "門",
+      "村"
+    ]
   },
   "newKanji": [
     {
@@ -51,11 +56,20 @@
           "terms": [
             "v_mainichi",
             "v_undou",
-            { "id": "v_suru", "form": "plain_form" },
+            {
+              "id": "v_suru",
+              "form": "plain_form"
+            },
             "v_you_manner",
             "p_ni",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -66,8 +80,14 @@
             "p_wa",
             "v_gakkou",
             "p_ni",
-            { "id": "v_iku", "form": "nakereba" },
-            { "id": "v_ikeru", "form": "polite_negative" }
+            {
+              "id": "v_iku",
+              "form": "nakereba"
+            },
+            {
+              "id": "v_ikeru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -76,10 +96,16 @@
           "terms": [
             "v_yuugata",
             "p_ni",
-            { "id": "v_naru", "form": "conditional_tara" },
+            {
+              "id": "v_naru",
+              "form": "conditional_tara"
+            },
             "v_nani",
             "p_wo",
-            { "id": "v_suru", "form": "polite_masu" },
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -89,11 +115,17 @@
           "terms": [
             "v_shigoto",
             "p_ga",
-            { "id": "v_owaru", "form": "te_form" },
+            {
+              "id": "v_owaru",
+              "form": "te_form"
+            },
             "p_tekara",
             "v_ie",
             "p_ni",
-            { "id": "v_kaeru", "form": "polite_masu" }
+            {
+              "id": "v_kaeru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -107,28 +139,47 @@
           "on": "ち",
           "kun": "いけ",
           "meaning": "Pond",
-          "words": ["v_ike", "v_denchi"]
+          "words": [
+            "v_ike",
+            "v_denchi"
+          ]
         },
         {
           "kanji": "林",
           "on": "りん",
           "kun": "はやし",
           "meaning": "Grove / Thicket",
-          "words": ["v_hayashi", "v_sanrin", "v_kobayashi"]
+          "words": [
+            "v_hayashi",
+            "v_sanrin",
+            "v_kobayashi"
+          ]
         },
         {
           "kanji": "門",
           "on": "もん",
           "kun": "かど",
           "meaning": "Gate",
-          "words": ["v_mon", "v_seimon", "v_koumon", "v_nyuumon", "v_monka", "v_mongaikan"]
+          "words": [
+            "v_mon",
+            "v_seimon",
+            "v_koumon",
+            "v_nyuumon",
+            "v_monka",
+            "v_mongaikan"
+          ]
         },
         {
           "kanji": "村",
           "on": "そん",
           "kun": "むら",
           "meaning": "Village",
-          "words": ["v_mura", "v_sanson", "v_murabito", "v_sonchou"]
+          "words": [
+            "v_mura",
+            "v_sanson",
+            "v_murabito",
+            "v_sonchou"
+          ]
         }
       ]
     },
@@ -184,7 +235,10 @@
             "v_mae",
             "p_de",
             "v_machiawase",
-            { "id": "v_suru", "form": "polite_volitional_mashou" },
+            {
+              "id": "v_suru",
+              "form": "polite_volitional_mashou"
+            },
             "p_ka"
           ]
         },
@@ -198,11 +252,20 @@
             "p_ne",
             "v_seimon",
             "p_no",
-            { "id": "v_chikai", "form": "adverbial" },
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            },
             "p_ni",
-            { "id": "v_kuru", "form": "conditional_tara" },
+            {
+              "id": "v_kuru",
+              "form": "conditional_tara"
+            },
             "v_denwa",
-            { "id": "v_suru", "form": "te_form" },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
@@ -211,12 +274,24 @@
           "jp": "分かりました。早く 来る ように して ください。",
           "en": "Understood. Please make an effort to come early.",
           "terms": [
-            { "id": "v_wakaru", "form": "polite_mashita" },
-            { "id": "v_hayai", "form": "adverbial" },
-            { "id": "v_kuru", "form": "plain_form" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            },
+            {
+              "id": "v_hayai",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_kuru",
+              "form": "plain_form"
+            },
             "v_you_manner",
             "p_ni",
-            { "id": "v_suru", "form": "te_form" },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
@@ -226,13 +301,22 @@
           "en": "Yes, understood. I will be waiting in front of the school gate.",
           "terms": [
             "p_hai",
-            { "id": "v_wakaru", "form": "polite_mashita" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            },
             "v_koumon",
             "p_no",
             "v_mae",
             "p_de",
-            { "id": "v_matsu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_matsu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -265,12 +349,18 @@
             "p_no",
             "v_hou",
             "p_ga",
-            { "id": "v_kirei", "form": "polite_adj" },
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            },
             "v_hayashi",
             "p_ya",
             "v_ike",
             "p_ga",
-            { "id": "v_aru", "form": "te_form" },
+            {
+              "id": "v_aru",
+              "form": "te_form"
+            },
             "v_totemo",
             "v_ii",
             "v_tokoro",
@@ -287,8 +377,14 @@
             "v_mainichi",
             "v_nani",
             "p_wo",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "plain_form" },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
             "p_ndesu",
             "p_ka"
           ]
@@ -302,14 +398,29 @@
             "p_de",
             "v_shigoto",
             "p_wo",
-            { "id": "v_suru", "form": "tari_form" },
+            {
+              "id": "v_suru",
+              "form": "tari_form"
+            },
             "v_ike",
             "p_no",
-            { "id": "v_chikai", "form": "adverbial" },
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            },
             "p_wo",
-            { "id": "v_aruku", "form": "tari_form" },
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_aruku",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -319,11 +430,20 @@
           "terms": [
             "v_sanson",
             "p_ni",
-            { "id": "v_sumu", "form": "te_form" },
-            { "id": "v_iru", "form": "plain_form" },
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
             "v_you_manner",
             "p_ni",
-            { "id": "v_naru", "form": "plain_desire_tai" },
+            {
+              "id": "v_naru",
+              "form": "plain_desire_tai"
+            },
             "g_desu"
           ]
         }
@@ -344,7 +464,10 @@
             "p_no",
             "v_naka",
             "p_wo",
-            { "id": "v_aruku", "form": "plain_negative" },
+            {
+              "id": "v_aruku",
+              "form": "plain_negative"
+            },
             "p_ka"
           ]
         },
@@ -357,10 +480,16 @@
             "p_ne",
             "v_hayashi",
             "p_ni",
-            { "id": "v_iku", "form": "conditional_tara" },
+            {
+              "id": "v_iku",
+              "form": "conditional_tara"
+            },
             "v_ike",
             "p_mo",
-            { "id": "v_miru", "form": "potential" },
+            {
+              "id": "v_miru",
+              "form": "potential"
+            },
             "p_kedo"
           ]
         },
@@ -371,10 +500,16 @@
           "terms": [
             "v_denchi",
             "p_ga",
-            { "id": "v_aru", "form": "conditional_tara" },
+            {
+              "id": "v_aru",
+              "form": "conditional_tara"
+            },
             "v_shashin",
             "p_mo",
-            { "id": "v_toru", "form": "potential" },
+            {
+              "id": "v_toru",
+              "form": "potential"
+            },
             "p_ne"
           ]
         },
@@ -387,15 +522,27 @@
             "p_no",
             "v_naka",
             "p_wo",
-            { "id": "v_aruku", "form": "plain_form" },
+            {
+              "id": "v_aruku",
+              "form": "plain_form"
+            },
             "v_you_manner",
             "p_ni",
-            { "id": "v_naru", "form": "te_form" },
+            {
+              "id": "v_naru",
+              "form": "te_form"
+            },
             "p_tekara",
             "v_karada",
             "p_ga",
-            { "id": "v_ii", "form": "adverbial" },
-            { "id": "v_naru", "form": "plain_past" },
+            {
+              "id": "v_ii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "plain_past"
+            },
             "p_yo"
           ]
         }
@@ -416,8 +563,14 @@
             "v_nyuumon",
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "te_form" },
-            { "id": "v_iru", "form": "plain_form" },
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
             "p_no"
           ]
         },
@@ -429,10 +582,22 @@
             "v_un",
             "v_nihongo",
             "p_wo",
-            { "id": "v_yomu", "form": "tari_form" },
-            { "id": "v_kaku", "form": "tari_form" },
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "plain_form" },
+            {
+              "id": "v_yomu",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_kaku",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
             "p_yo"
           ]
         },
@@ -443,10 +608,16 @@
           "terms": [
             "v_nihongo",
             "p_ga",
-            { "id": "v_wakaru", "form": "plain_form" },
+            {
+              "id": "v_wakaru",
+              "form": "plain_form"
+            },
             "v_you_manner",
             "p_ni",
-            { "id": "v_naru", "form": "plain_past" },
+            {
+              "id": "v_naru",
+              "form": "plain_past"
+            },
             "p_ka"
           ]
         },
@@ -457,15 +628,24 @@
           "terms": [
             "v_un",
             "v_sukoshi",
-            { "id": "v_wakaru", "form": "plain_form" },
+            {
+              "id": "v_wakaru",
+              "form": "plain_form"
+            },
             "v_you_manner",
             "p_ni",
-            { "id": "v_naru", "form": "plain_past" },
+            {
+              "id": "v_naru",
+              "form": "plain_past"
+            },
             "p_yo",
             "v_motto",
             "v_jouzu",
             "p_ni",
-            { "id": "v_naru", "form": "plain_desire_tai" }
+            {
+              "id": "v_naru",
+              "form": "plain_desire_tai"
+            }
           ]
         }
       ]
@@ -483,8 +663,14 @@
             "p_ni",
             "v_murabito",
             "p_ga",
-            { "id": "v_sumu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -493,16 +679,25 @@
           "terms": [
             "v_mura",
             "p_no",
-            { "id": "v_chikai", "form": "adverbial" },
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            },
             "p_ni",
             "v_sanrin",
             "p_ga",
-            { "id": "v_aru", "form": "te_form" },
+            {
+              "id": "v_aru",
+              "form": "te_form"
+            },
             "v_hayashi",
             "p_ya",
             "v_ike",
             "p_mo",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -516,11 +711,17 @@
             "p_no",
             "v_naka",
             "p_wo",
-            { "id": "v_aruku", "form": "te_form" },
+            {
+              "id": "v_aruku",
+              "form": "te_form"
+            },
             "p_tekara",
             "v_shigoto",
             "p_wo",
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -531,11 +732,17 @@
             "p_no",
             "v_mizu",
             "p_wa",
-            { "id": "v_kirei", "form": "te_form" },
+            {
+              "id": "v_kirei",
+              "form": "te_form"
+            },
             "v_ki",
             "p_mo",
             "v_takusan",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -544,7 +751,10 @@
           "terms": [
             "v_yuugata",
             "p_ni",
-            { "id": "v_naru", "form": "to_conditional" },
+            {
+              "id": "v_naru",
+              "form": "to_conditional"
+            },
             "v_murabito",
             "p_wa",
             "v_kazoku",
@@ -553,88 +763,130 @@
             "p_ni",
             "v_yuushoku",
             "p_wo",
-            { "id": "v_taberu", "form": "polite_masu" }
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
       "questions": [
         {
           "q": "村の 近くに 何が ありますか。",
+          "q_en": "What is near the village?",
           "a": "山林や 林や 池が あります。",
-          "choices": [
-            "山林や 林や 池が あります。",
-            "学校と 店が あります。",
-            "駅と 町が あります。",
-            "山と 川が あります。"
-          ],
+          "a_en": "There is a mountain forest, a grove, and a pond.",
           "terms": [
             "v_mura",
             "p_no",
-            { "id": "v_chikai", "form": "adverbial" },
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            },
             "p_ni",
             "v_nani",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
-            "p_ka",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_sanrin",
             "p_ya",
             "v_hayashi",
             "p_ya",
-            "v_ike"
+            "v_ike",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "村長は 毎朝 何を しますか。",
+          "q_en": "What does the village chief do every morning?",
           "a": "林の 中を 歩いて から、仕事を します。",
-          "choices": [
-            "林の 中を 歩いて から、仕事を します。",
-            "池で 泳いで から、学校に 行きます。",
-            "山林で 仕事を して から、村に 帰ります。",
-            "毎朝 店で 買い物を します。"
-          ],
+          "a_en": "He walks through the grove and then does work.",
           "terms": [
             "v_sonchou",
             "p_wa",
             "v_maiasa",
             "v_nani",
             "p_wo",
-            { "id": "v_suru", "form": "polite_masu" },
-            "p_ka",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_hayashi",
             "p_no",
             "v_naka",
             "p_wo",
-            { "id": "v_aruku", "form": "te_form" },
+            {
+              "id": "v_aruku",
+              "form": "te_form"
+            },
             "p_tekara",
-            "v_shigoto"
+            "v_shigoto",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "村人は 毎日 何を して いますか。",
+          "q_en": "What are the villagers doing every day?",
           "a": "山林で 働いたり、池の 近くを 歩いたり して います。",
-          "choices": [
-            "山林で 働いたり、池の 近くを 歩いたり して います。",
-            "毎日 学校で 勉強を して います。",
-            "町で 働いて から、家に 帰って います。",
-            "林の 中で 勉強したり、池を 見たり して います。"
-          ],
+          "a_en": "They are working in the mountain forest and walking near the pond.",
           "terms": [
             "v_murabito",
             "p_wa",
             "v_mainichi",
             "v_nani",
             "p_wo",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
-            "p_ka",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_sanrin",
             "p_de",
-            { "id": "v_hataraku", "form": "tari_form" },
+            {
+              "id": "v_hataraku",
+              "form": "tari_form"
+            },
             "v_ike",
             "p_no",
-            { "id": "v_chikai", "form": "adverbial" },
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            },
             "p_wo",
-            { "id": "v_aruku", "form": "tari_form" }
+            {
+              "id": "v_aruku",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -652,7 +904,10 @@
             "v_seimon",
             "p_wa",
             "v_totemo",
-            { "id": "v_furui", "form": "polite_adj" }
+            {
+              "id": "v_furui",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -665,8 +920,14 @@
             "p_ni",
             "v_gakusei",
             "p_ga",
-            { "id": "v_kuru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_kuru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -675,12 +936,18 @@
           "terms": [
             "v_mon",
             "p_no",
-            { "id": "v_chikai", "form": "adverbial" },
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            },
             "p_ni",
             "v_chiisai",
             "v_mise",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -691,11 +958,17 @@
             "p_de",
             "v_denchi",
             "p_wo",
-            { "id": "v_kau", "form": "te_form" },
+            {
+              "id": "v_kau",
+              "form": "te_form"
+            },
             "p_tekara",
             "v_gakkou",
             "p_ni",
-            { "id": "v_hairu", "form": "polite_masu" }
+            {
+              "id": "v_hairu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -710,77 +983,96 @@
             "p_no",
             "v_hou",
             "p_ga",
-            { "id": "v_ookii", "form": "polite_adj" }
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            }
           ]
         }
       ],
       "questions": [
         {
           "q": "正門は どんな 門ですか。",
+          "q_en": "What kind of gate is the main gate?",
           "a": "とても 古い 門です。",
-          "choices": [
-            "とても 古い 門です。",
-            "小さくて 新しい 門です。",
-            "正門は 学校に ありません。",
-            "新しくて 高い 門です。"
-          ],
+          "a_en": "It is a very old gate.",
           "terms": [
             "v_seimon",
             "p_wa",
             "v_donna",
             "v_mon",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_totemo",
-            "v_furui"
+            "v_furui",
+            "v_mon",
+            "g_desu"
           ]
         },
         {
           "q": "どこで 電池を 買いますか。",
+          "q_en": "Where do you buy batteries?",
           "a": "門の 近くの 店で 買います。",
-          "choices": [
-            "門の 近くの 店で 買います。",
-            "学校の 中で 買います。",
-            "駅の 前で 買います。",
-            "村人から 買います。"
-          ],
+          "a_en": "You buy them at the shop near the gate.",
           "terms": [
             "v_doko",
             "p_de",
             "v_denchi",
             "p_wo",
-            { "id": "v_kau", "form": "polite_masu" },
-            "p_ka",
+            {
+              "id": "v_kau",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_mon",
             "p_no",
-            { "id": "v_chikai", "form": "adverbial" },
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            },
             "p_no",
             "v_mise",
-            "p_de"
+            "p_de",
+            {
+              "id": "v_kau",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "校門と 正門では、どちらの 方が 大きいですか。",
+          "q_en": "Between the school gate and the main gate, which is larger?",
           "a": "校門の 方が 大きいです。",
-          "choices": [
-            "校門の 方が 大きいです。",
-            "正門の 方が 大きいです。",
-            "どちらも 同じです。",
-            "正門の 方が 小さいです。"
-          ],
+          "a_en": "The school gate is larger.",
           "terms": [
             "v_koumon",
             "p_to",
             "v_seimon",
-            "p_wa",
             "p_de",
+            "p_wa",
             "v_dochira",
             "p_no",
             "v_hou",
             "p_ga",
-            { "id": "v_ookii", "form": "polite_adj" },
-            "p_ka",
-            "v_koumon"
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_koumon",
+            "p_no",
+            "v_hou",
+            "p_ga",
+            {
+              "id": "v_ookii",
+              "form": "polite_adj"
+            }
           ]
         }
       ]
@@ -793,25 +1085,45 @@
         {
           "kind": "mcq",
           "q": "池 の よみかたは？",
-          "choices": ["いけ", "ちょ", "ため", "うみ"],
+          "choices": [
+            "いけ",
+            "ちょ",
+            "ため",
+            "うみ"
+          ],
           "answer": "いけ"
         },
         {
           "kind": "mcq",
           "q": "林 の よみかたは？",
-          "choices": ["はやし", "もり", "りん", "かわ"],
+          "choices": [
+            "はやし",
+            "もり",
+            "りん",
+            "かわ"
+          ],
           "answer": "はやし"
         },
         {
           "kind": "mcq",
           "q": "門 の よみかたは？",
-          "choices": ["もん", "かど", "まち", "もり"],
+          "choices": [
+            "もん",
+            "かど",
+            "まち",
+            "もり"
+          ],
           "answer": "もん"
         },
         {
           "kind": "mcq",
           "q": "村 の よみかたは？",
-          "choices": ["むら", "まち", "そん", "ちょう"],
+          "choices": [
+            "むら",
+            "まち",
+            "そん",
+            "ちょう"
+          ],
           "answer": "むら"
         }
       ]
@@ -831,7 +1143,9 @@
             "mountain pond"
           ],
           "answer": "mountain village",
-          "terms": ["v_sanson"]
+          "terms": [
+            "v_sanson"
+          ]
         },
         {
           "kind": "mcq",
@@ -843,7 +1157,9 @@
             "entrance"
           ],
           "answer": "school gate",
-          "terms": ["v_koumon"]
+          "terms": [
+            "v_koumon"
+          ]
         },
         {
           "kind": "mcq",
@@ -858,8 +1174,14 @@
           "terms": [
             "v_denchi",
             "p_ni",
-            { "id": "v_hairu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_hairu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -872,7 +1194,9 @@
             "pond"
           ],
           "answer": "mountain forest",
-          "terms": ["v_sanrin"]
+          "terms": [
+            "v_sanrin"
+          ]
         }
       ]
     },
@@ -894,11 +1218,20 @@
           "terms": [
             "v_mainichi",
             "v_undou",
-            { "id": "v_suru", "form": "plain_form" },
+            {
+              "id": "v_suru",
+              "form": "plain_form"
+            },
             "v_you_manner",
             "p_ni",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -916,8 +1249,14 @@
             "p_wa",
             "v_gakkou",
             "p_ni",
-            { "id": "v_iku", "form": "nakereba" },
-            { "id": "v_ikeru", "form": "polite_negative" }
+            {
+              "id": "v_iku",
+              "form": "nakereba"
+            },
+            {
+              "id": "v_ikeru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -933,10 +1272,16 @@
           "terms": [
             "v_yuugata",
             "p_ni",
-            { "id": "v_naru", "form": "conditional_tara" },
+            {
+              "id": "v_naru",
+              "form": "conditional_tara"
+            },
             "v_nani",
             "p_wo",
-            { "id": "v_suru", "form": "polite_masu" },
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -953,11 +1298,17 @@
           "terms": [
             "v_shigoto",
             "p_ga",
-            { "id": "v_owaru", "form": "te_form" },
+            {
+              "id": "v_owaru",
+              "form": "te_form"
+            },
             "p_tekara",
             "v_ie",
             "p_ni",
-            { "id": "v_kaeru", "form": "polite_masu" }
+            {
+              "id": "v_kaeru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
