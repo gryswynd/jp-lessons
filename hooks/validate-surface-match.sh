@@ -185,7 +185,7 @@ def surface_found_in_jp(surface, matches, jp_orig, jp_clean):
     all_forms = [surface] + matches
     if is_pure_kanji(surface) and len(surface) <= 2:
         for f in all_forms:
-            if _re.search(r'(?<![\u4e00-\u9fff])' + _re.escape(f), jp_clean):
+            if _re.search(r'(?<![\u4e00-\u9fff])' + _re.escape(f), jp_orig):
                 return True
         return False
     return any(f in jp_clean for f in all_forms)
