@@ -29,6 +29,7 @@ window.GrammarModule = {
     let drillCorrect = 0;
     let drillTotal = 0;
     const drillAnswered = new Set();
+    const sectionScores = {};
     const completedSteps = new Set();
     let CONJUGATION_RULES = null;
     let COUNTER_RULES = null;
@@ -672,7 +673,7 @@ window.GrammarModule = {
       return div;
     }
 
-    function renderConjugationDrill(sec, onComplete) {
+    function renderConjugationDrill(sec, onComplete, stepIdx) {
       const div = el('div', '');
       const items = sec.items || [];
       let idx = 0, correct = 0, answered = 0;
@@ -694,6 +695,7 @@ window.GrammarModule = {
         if (idx >= items.length) {
           const pct = items.length > 0 ? Math.round(correct / items.length * 100) : 100;
           progressSet('grammar_' + grammarId + '_conj_score', pct);
+          sectionScores[stepIdx] = { title: sec.title, type: sec.type, correct: correct, total: items.length };
           itemDiv.innerHTML = '<div style="text-align:center;padding:20px;"><div style="font-size:1.4rem;font-weight:900;color:#16A34A;">' + pct + '%</div><div style="color:#888;margin-top:8px;">Conjugation complete!</div></div>';
           if (onComplete) onComplete();
           return;
@@ -808,7 +810,7 @@ window.GrammarModule = {
       return div;
     }
 
-    function renderSentenceTransform(sec, onComplete) {
+    function renderSentenceTransform(sec, onComplete, stepIdx) {
       const div = el('div', '');
       const items = sec.items || [];
       let idx = 0, correct = 0, answered = 0;
@@ -829,6 +831,7 @@ window.GrammarModule = {
       function renderItem() {
         if (idx >= items.length) {
           const pct = items.length > 0 ? Math.round(correct / items.length * 100) : 100;
+          sectionScores[stepIdx] = { title: sec.title, type: sec.type, correct: correct, total: items.length };
           itemDiv.innerHTML = '<div style="text-align:center;padding:16px;"><div style="font-size:1.4rem;font-weight:900;color:#16A34A;">' + pct + '%</div><div style="color:#888;margin-top:8px;">Transform practice complete!</div></div>';
           if (onComplete) onComplete();
           return;
@@ -881,7 +884,7 @@ window.GrammarModule = {
       return div;
     }
 
-    function renderFillSlot(sec, onComplete) {
+    function renderFillSlot(sec, onComplete, stepIdx) {
       const div = el('div', '');
       const items = sec.items || [];
       let idx = 0, correct = 0, answered = 0;
@@ -902,6 +905,7 @@ window.GrammarModule = {
       function renderItem() {
         if (idx >= items.length) {
           const pct = items.length > 0 ? Math.round(correct / items.length * 100) : 100;
+          sectionScores[stepIdx] = { title: sec.title, type: sec.type, correct: correct, total: items.length };
           itemDiv.innerHTML = '<div style="text-align:center;padding:16px;"><div style="font-size:1.4rem;font-weight:900;color:#16A34A;">' + pct + '%</div><div style="color:#888;margin-top:8px;">Fill-slot practice complete!</div></div>';
           if (onComplete) onComplete();
           return;
@@ -1024,8 +1028,10 @@ window.GrammarModule = {
       return div;
     }
 
-    function renderDrills(sec) {
+    function renderDrills(sec, stepIdx) {
       const div = el('div', '');
+      const mcqItems = (sec.items || []).filter(i => i.kind === 'mcq');
+      let secCorrect = 0, secAnswered = 0;
       (sec.items || []).forEach((item, itemIdx) => {
         if (item.kind === 'mcq') {
           const card = el('div', 'gr-drill-card');
@@ -1045,7 +1051,7 @@ window.GrammarModule = {
               if (solved) return; solved = true;
               if (choice === item.answer) {
                 btn.classList.add('correct');
-                if (!drillAnswered.has(itemKey)) { drillAnswered.add(itemKey); drillCorrect++; }
+                if (!drillAnswered.has(itemKey)) { drillAnswered.add(itemKey); drillCorrect++; secCorrect++; }
               } else {
                 btn.classList.add('wrong');
                 if (!drillAnswered.has(itemKey)) drillAnswered.add(itemKey);
@@ -1059,6 +1065,8 @@ window.GrammarModule = {
                   });
                 }
               }
+              secAnswered++;
+              sectionScores[stepIdx] = { title: sec.title, type: sec.type, correct: secCorrect, total: mcqItems.length };
               if (expEl.textContent) expEl.classList.add('visible');
             };
             optsDiv.appendChild(btn);
@@ -1087,9 +1095,37 @@ window.GrammarModule = {
 
       if (currentStep >= grammarData.sections.length) {
         title.innerText = 'Complete!';
-        const pct = drillTotal > 0 ? Math.round(drillCorrect / drillTotal * 100) : 100;
+
+        // Compute combined score from all interactive sections.
+        const allScores = Object.values(sectionScores);
+        const combinedCorrect = allScores.reduce((s, e) => s + e.correct, 0);
+        const combinedTotal = allScores.reduce((s, e) => s + e.total, 0);
+        const pct = combinedTotal > 0 ? Math.round(combinedCorrect / combinedTotal * 100) : 100;
         const rank = [...SCORE_RANKS].reverse().find(r => pct >= r.min) || SCORE_RANKS[0];
         markGrammarComplete(grammarId, pct);
+
+        // Build per-section breakdown, sorted worst-first for "needs work" emphasis.
+        const breakdownEntries = allScores
+          .filter(e => e.total > 0)
+          .sort((a, b) => (a.correct / a.total) - (b.correct / b.total));
+        const breakdownHtml = breakdownEntries.length > 1 ? `
+          <div style="margin-top:18px;border-top:1px solid #f0f0f0;padding-top:14px;text-align:left;">
+            <div style="font-size:0.75rem;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;text-align:center;">Breakdown</div>
+            ${breakdownEntries.map(e => {
+              const ePct = Math.round(e.correct / e.total * 100);
+              const barColor = ePct >= 80 ? '#16A34A' : ePct >= 50 ? '#F59E0B' : '#EF4444';
+              const label = e.title || e.type;
+              return `<div style="margin-bottom:10px;">
+                <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px;">
+                  <span style="font-size:0.85rem;font-weight:600;color:#333;">${esc(label)}</span>
+                  <span style="font-size:0.8rem;font-weight:700;color:${barColor};">${e.correct}/${e.total}</span>
+                </div>
+                <div style="height:6px;background:#f0f0f0;border-radius:3px;overflow:hidden;">
+                  <div style="height:100%;width:${ePct}%;background:${barColor};border-radius:3px;transition:width 0.5s;"></div>
+                </div>
+              </div>`;
+            }).join('')}
+          </div>` : '';
 
         // Bridge into the unlock engine so grammar completion gates downstream content.
         const unlockApi = window.JPShared && window.JPShared.unlock;
@@ -1110,17 +1146,18 @@ window.GrammarModule = {
         body.innerHTML = `
           <div class="gr-card" style="text-align:center; position:relative; padding:30px 20px;">
             <h2 style="margin-bottom:15px;">🌿 Grammar Lesson Complete!</h2>
-            ${drillTotal > 0 ? `
+            ${combinedTotal > 0 ? `
             <div style="font-size:0.8rem;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Drill Score</div>
             <div style="font-size:3rem;font-weight:900;color:${rank.colors[0]};line-height:1.1;">${rank.msg}</div>
             <div style="font-size:1rem;color:#747d8c;font-weight:600;margin:6px 0 14px;">${rank.sub}</div>
             <div style="font-size:2.2rem;font-weight:900;color:#16A34A;">${pct}%</div>
-            <div style="font-size:0.9rem;color:#888;margin-top:4px;">${drillCorrect} / ${drillTotal} correct</div>
+            <div style="font-size:0.9rem;color:#888;margin-top:4px;">${combinedCorrect} / ${combinedTotal} correct</div>
+            ${breakdownHtml}
             ` : ''}
             ${unlockHtml}
           </div>`;
         nextBtn.innerText = 'Finish';
-        if (drillTotal > 0) launchHanabi(rank, body.querySelector('.gr-card'));
+        if (combinedTotal > 0) launchHanabi(rank, body.querySelector('.gr-card'));
         return;
       }
 
@@ -1142,12 +1179,12 @@ window.GrammarModule = {
         else if (sec.type === 'grammarTable')       content = renderGrammarTable(sec);
         else if (sec.type === 'grammarComparison')  content = renderGrammarComparison(sec);
         else if (sec.type === 'annotatedExample')   content = renderAnnotatedExample(sec);
-        else if (sec.type === 'conjugationDrill')   content = renderConjugationDrill(sec, enableNext);
+        else if (sec.type === 'conjugationDrill')   content = renderConjugationDrill(sec, enableNext, stepIdx);
         else if (sec.type === 'patternMatch')        content = renderPatternMatch(sec);
-        else if (sec.type === 'sentenceTransform')  content = renderSentenceTransform(sec, enableNext);
-        else if (sec.type === 'fillSlot')           content = renderFillSlot(sec, enableNext);
+        else if (sec.type === 'sentenceTransform')  content = renderSentenceTransform(sec, enableNext, stepIdx);
+        else if (sec.type === 'fillSlot')           content = renderFillSlot(sec, enableNext, stepIdx);
         else if (sec.type === 'conversation')       content = renderConversation(sec);
-        else if (sec.type === 'drills')             content = renderDrills(sec);
+        else if (sec.type === 'drills')             content = renderDrills(sec, stepIdx);
         else content = el('div', 'gr-card', '<em>Unknown section type: ' + esc(sec.type) + '</em>');
       } catch (renderErr) {
         console.error('renderCurrentStep error at step', currentStep, '(', sec.type, '):', renderErr);
@@ -1187,8 +1224,12 @@ window.GrammarModule = {
         grammarData = await gRes.json();
         grammarId = id;
         drillCorrect = 0; drillAnswered.clear(); completedSteps.clear();
-        drillTotal = (grammarData.sections || []).reduce((sum, sec) =>
-          sec.type === 'drills' ? sum + (sec.items || []).filter(i => i.kind === 'mcq').length : sum, 0);
+        Object.keys(sectionScores).forEach(k => delete sectionScores[k]);
+        drillTotal = (grammarData.sections || []).reduce((sum, sec) => {
+          if (sec.type === 'drills') return sum + (sec.items || []).filter(i => i.kind === 'mcq').length;
+          if (sec.type === 'conjugationDrill' || sec.type === 'sentenceTransform' || sec.type === 'fillSlot') return sum + (sec.items || []).length;
+          return sum;
+        }, 0);
         termMapData = resources.map;
         CONJUGATION_RULES = resources.conj;
         COUNTER_RULES = resources.counter;
