@@ -581,7 +581,10 @@
             "v_ookii",
             "v_sakana",
             "p_ga",
-            { "id": "v_iru", "form": "plain_form" },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
             "p_yo",
             "v_kawaii",
             "p_ne"
@@ -646,7 +649,10 @@
           "terms": [
             "v_kingyo",
             "p_mo",
-            { "id": "v_iru", "form": "plain_form" },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
             "p_yo",
             "v_kawaii",
             "p_ne"
@@ -771,7 +777,10 @@
               "form": "attributive_na"
             },
             "v_hi",
-            { "id": "g_desu", "form": "polite_past_copula" },
+            {
+              "id": "g_desu",
+              "form": "polite_past_copula"
+            },
             "v_mata",
             {
               "id": "v_kuru",
@@ -798,7 +807,8 @@
               "form": "te_form"
             },
             "v_kawaii",
-            "g_desu"
+            "g_desu",
+            "p_ka"
           ]
         },
         {
@@ -816,7 +826,8 @@
               "id": "v_oishii",
               "form": "appearance_sou_stem"
             },
-            "g_desu"
+            "g_desu",
+            "p_ka"
           ]
         },
         {
@@ -834,7 +845,8 @@
               "id": "v_kuru",
               "form": "plain_desire_tai"
             },
-            "g_desu"
+            "g_desu",
+            "p_ka"
           ]
         }
       ]
@@ -975,7 +987,8 @@
               "id": "v_kuru",
               "form": "appearance_sou_stem"
             },
-            "g_desu"
+            "g_desu",
+            "p_ka"
           ]
         },
         {
@@ -994,7 +1007,8 @@
               "id": "v_yasumu",
               "form": "plain_desire_tai"
             },
-            "g_desu"
+            "g_desu",
+            "p_ka"
           ]
         },
         {
@@ -1015,7 +1029,8 @@
             {
               "id": "v_naru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         }
       ]

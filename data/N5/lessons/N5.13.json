@@ -63,9 +63,9 @@
           "en": "Japanese books look interesting, don't they.",
           "terms": [
             "v_nihongo",
-            "p_no",
-            "v_hon",
             "p_wa",
+            "v_hon",
+            "p_no",
             {
               "id": "v_omoshiroi",
               "form": "appearance_sou_stem"
@@ -79,9 +79,9 @@
           "en": "Last week's test was long.",
           "terms": [
             "v_senshuu",
-            "p_no",
-            "v_tesuto",
             "p_wa",
+            "v_tesuto",
+            "p_no",
             {
               "id": "v_nagai",
               "form": "plain_past_adj"
@@ -98,8 +98,9 @@
             "p_de",
             "v_nihongo",
             "p_wo",
+            "v_manabu",
             {
-              "id": "v_manabu",
+              "id": "v_suru",
               "form": "te_form"
             },
             {
@@ -393,9 +394,9 @@
               "form": "polite_masu"
             },
             "v_nihongo",
-            "p_no",
-            "v_hon",
             "p_wa",
+            "v_hon",
+            "p_no",
             "v_omoshiroi",
             "g_desu",
             "p_ne"
@@ -511,9 +512,9 @@
               "form": "polite_masu"
             },
             "v_nihongo",
-            "p_no",
-            "v_hon",
             "p_wa",
+            "v_hon",
+            "p_no",
             "v_omoshiroi",
             "g_desu",
             "p_ne"
@@ -615,8 +616,8 @@
             "v_karate",
             "p_wa",
             "v_omoshiroi",
-            "p_yo",
-            "p_ne"
+            "p_ne",
+            "p_yo"
           ]
         },
         {
@@ -628,9 +629,9 @@
             "v_omoshiroi",
             "p_yo",
             "v_karate",
-            "p_no",
-            "v_hon",
             "p_mo",
+            "v_hon",
+            "p_no",
             {
               "id": "v_yomu",
               "form": "plain_past"
@@ -648,7 +649,8 @@
             {
               "id": "v_omoshiroi",
               "form": "plain_past_adj"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -745,9 +747,9 @@
           "en": "Japanese books are interesting. I read them at school every day.",
           "terms": [
             "v_nihongo",
-            "p_no",
-            "v_hon",
             "p_wa",
+            "v_hon",
+            "p_no",
             "v_omoshiroi",
             "g_desu",
             "v_mainichi",
@@ -841,7 +843,8 @@
             {
               "id": "v_kaku",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -859,7 +862,8 @@
             {
               "id": "v_hanasu",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -877,7 +881,8 @@
               "id": "v_hanasu",
               "form": "plain_desire_tai"
             },
-            "g_desu"
+            "g_desu",
+            "p_ka"
           ]
         }
       ]
@@ -913,7 +918,7 @@
           "en": "Japanese books look interesting. Ren reads them often.",
           "terms": [
             "v_nihongo",
-            "p_no",
+            "p_wa",
             "v_hon",
             "p_wa",
             {
@@ -923,7 +928,7 @@
             "g_desu",
             "char_ren",
             "v_san",
-            "p_wa",
+            "p_no",
             {
               "id": "v_ii",
               "form": "adverbial"
@@ -984,7 +989,7 @@
             "v_san",
             "p_wa",
             "v_karate",
-            "p_no",
+            "p_wa",
             "v_hon",
             "p_mo",
             {
@@ -992,7 +997,7 @@
               "form": "polite_masu"
             },
             "v_karate",
-            "p_wa",
+            "p_no",
             "v_omoshiroi",
             "g_desu"
           ]
@@ -1014,7 +1019,8 @@
             {
               "id": "v_hanasu",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -1032,7 +1038,8 @@
               "id": "v_omoshiroi",
               "form": "appearance_sou_stem"
             },
-            "g_desu"
+            "g_desu",
+            "p_ka"
           ]
         },
         {
@@ -1047,7 +1054,8 @@
           "terms": [
             "v_karate",
             "p_no",
-            "v_hon"
+            "v_hon",
+            "p_ka"
           ]
         }
       ]

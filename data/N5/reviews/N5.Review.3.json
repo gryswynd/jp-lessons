@@ -130,8 +130,8 @@
                   "form": "polite_masu"
                 },
                 "v_basu",
-                "p_de",
                 "p_wa",
+                "p_de",
                 {
                   "id": "v_iku",
                   "form": "polite_negative"
@@ -165,7 +165,7 @@
               "terms": [
                 "p_hai",
                 "v_yama",
-                "p_ni",
+                "p_mo",
                 "v_kawa",
                 "p_ga",
                 {
@@ -173,7 +173,7 @@
                   "form": "polite_masu"
                 },
                 "v_michi",
-                "p_mo",
+                "p_ni",
                 "v_ii",
                 "g_desu",
                 "p_yo",
@@ -471,9 +471,9 @@
           "en": "The mountain road is very nice.",
           "terms": [
             "v_yama",
-            "p_no",
-            "v_michi",
             "p_wa",
+            "v_michi",
+            "p_no",
             "v_totemo",
             "v_ii",
             "g_desu"
@@ -488,14 +488,14 @@
             "v_tomodachi",
             "p_to",
             "v_yama",
-            "p_e",
+            "p_mo",
             {
               "id": "v_iku",
               "form": "te_form"
             },
             "v_kazan",
+            "p_e",
             "p_ni",
-            "p_mo",
             {
               "id": "v_iku",
               "form": "polite_mashita"
