@@ -120,6 +120,15 @@
             "command": "bash hooks/validate-compose.sh"
           }
         ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash hooks/validate-story-tokenization.sh"
+          }
+        ]
       }
     ]
   }
