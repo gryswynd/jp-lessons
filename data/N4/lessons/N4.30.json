@@ -7,13 +7,42 @@
     "lesson_number": 30,
     "focus": "Thoughts, memories, and gatherings — expressing opinions with と思う, recalling with 思い出す, collecting or answering in everyday contexts",
     "estimated_minutes": 35,
-    "kanji": ["思", "特", "集", "答"]
+    "kanji": [
+      "思",
+      "特",
+      "集",
+      "答"
+    ]
   },
   "newKanji": [
-    { "kanji": "思", "on": "し", "kun": "おも", "meaning": "Think", "termId": "k_omou" },
-    { "kanji": "特", "on": "とく", "kun": "", "meaning": "Special", "termId": "k_toku" },
-    { "kanji": "集", "on": "しゅう", "kun": "あつ", "meaning": "Gather", "termId": "k_atsumeru" },
-    { "kanji": "答", "on": "とう", "kun": "こた", "meaning": "Answer", "termId": "k_kotaeru" }
+    {
+      "kanji": "思",
+      "on": "し",
+      "kun": "おも",
+      "meaning": "Think",
+      "termId": "k_omou"
+    },
+    {
+      "kanji": "特",
+      "on": "とく",
+      "kun": "",
+      "meaning": "Special",
+      "termId": "k_toku"
+    },
+    {
+      "kanji": "集",
+      "on": "しゅう",
+      "kun": "あつ",
+      "meaning": "Gather",
+      "termId": "k_atsumeru"
+    },
+    {
+      "kanji": "答",
+      "on": "とう",
+      "kun": "こた",
+      "meaning": "Answer",
+      "termId": "k_kotaeru"
+    }
   ],
   "sections": [
     {
@@ -27,13 +56,22 @@
           "terms": [
             "v_mainichi",
             "v_benkyou",
-            { "id": "v_suru", "form": "te_form" },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
             "v_kanji",
             "p_ga",
-            { "id": "v_yomu", "form": "potential" },
+            {
+              "id": "v_yomu",
+              "form": "potential"
+            },
             "v_you_manner",
             "p_ni",
-            { "id": "v_naru", "form": "polite_mashita" }
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -42,11 +80,17 @@
           "terms": [
             "v_shigoto",
             "p_ga",
-            { "id": "v_owaru", "form": "conditional_tara" },
+            {
+              "id": "v_owaru",
+              "form": "conditional_tara"
+            },
             "v_tomodachi",
             "p_ni",
             "v_denwa",
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -57,11 +101,20 @@
             "p_wa",
             "v_ongaku",
             "p_wo",
-            { "id": "v_kiku", "form": "tari_form" },
+            {
+              "id": "v_kiku",
+              "form": "tari_form"
+            },
             "v_eiga",
             "p_wo",
-            { "id": "v_miru", "form": "tari_form" },
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_miru",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -73,8 +126,14 @@
             "v_mae",
             "p_ni",
             "v_yoku",
-            { "id": "v_yomu", "form": "nakereba" },
-            { "id": "v_ikeru", "form": "polite_negative" }
+            {
+              "id": "v_yomu",
+              "form": "nakereba"
+            },
+            {
+              "id": "v_ikeru",
+              "form": "polite_negative"
+            }
           ]
         }
       ]
@@ -88,28 +147,56 @@
           "on": "し",
           "kun": "おも",
           "meaning": "Think",
-          "words": ["k_omou", "v_omou", "v_omoi_feel", "v_omoidasu", "v_omoide", "v_omoiagaru", "v_ishi"]
+          "words": [
+            "k_omou",
+            "v_omou",
+            "v_omoi_feel",
+            "v_omoidasu",
+            "v_omoide",
+            "v_omoiagaru",
+            "v_ishi"
+          ]
         },
         {
           "kanji": "特",
           "on": "とく",
           "kun": "",
           "meaning": "Special",
-          "words": ["k_toku", "v_tokubetsu", "v_tokuni", "v_tokkyuu", "v_tokushuu"]
+          "words": [
+            "k_toku",
+            "v_tokubetsu",
+            "v_tokuni",
+            "v_tokkyuu",
+            "v_tokushuu"
+          ]
         },
         {
           "kanji": "集",
           "on": "しゅう",
           "kun": "あつ",
           "meaning": "Gather",
-          "words": ["k_atsumeru", "v_atsumeru", "v_atsumaru", "v_shuuchuu", "v_shuukai", "v_bunshuu", "v_shuu"]
+          "words": [
+            "k_atsumeru",
+            "v_atsumeru",
+            "v_atsumaru",
+            "v_shuuchuu",
+            "v_shuukai",
+            "v_bunshuu",
+            "v_shuu"
+          ]
         },
         {
           "kanji": "答",
           "on": "とう",
           "kun": "こた",
           "meaning": "Answer",
-          "words": ["k_kotaeru", "v_kotae", "v_kotaeru", "v_mondou", "v_kuchigotae"]
+          "words": [
+            "k_kotaeru",
+            "v_kotae",
+            "v_kotaeru",
+            "v_mondou",
+            "v_kuchigotae"
+          ]
         }
       ]
     },
@@ -119,19 +206,43 @@
       "groups": [
         {
           "label": "Thinking & Feeling",
-          "items": ["v_omou", "v_omoi_feel", "v_omoidasu", "v_omoide", "v_omoiagaru", "v_ishi"]
+          "items": [
+            "v_omou",
+            "v_omoi_feel",
+            "v_omoidasu",
+            "v_omoide",
+            "v_omoiagaru",
+            "v_ishi"
+          ]
         },
         {
           "label": "Special Things",
-          "items": ["v_tokubetsu", "v_tokuni", "v_tokkyuu", "v_tokushuu"]
+          "items": [
+            "v_tokubetsu",
+            "v_tokuni",
+            "v_tokkyuu",
+            "v_tokushuu"
+          ]
         },
         {
           "label": "Gathering & Meeting",
-          "items": ["v_atsumeru", "v_atsumaru", "v_shuuchuu", "v_shuukai", "v_bunshuu", "v_shuu"]
+          "items": [
+            "v_atsumeru",
+            "v_atsumaru",
+            "v_shuuchuu",
+            "v_shuukai",
+            "v_bunshuu",
+            "v_shuu"
+          ]
         },
         {
           "label": "Questions & Answers",
-          "items": ["v_kotae", "v_kotaeru", "v_mondou", "v_kuchigotae"]
+          "items": [
+            "v_kotae",
+            "v_kotaeru",
+            "v_mondou",
+            "v_kuchigotae"
+          ]
         }
       ]
     },
@@ -148,10 +259,16 @@
             "v_raishuu",
             "v_kaisha",
             "p_de",
-            { "id": "v_tokubetsu", "form": "attributive_na" },
+            {
+              "id": "v_tokubetsu",
+              "form": "attributive_na"
+            },
             "v_shuukai",
             "p_ga",
-            { "id": "v_aru", "form": "plain_form" },
+            {
+              "id": "v_aru",
+              "form": "plain_form"
+            },
             "p_ndesu",
             "p_yo"
           ]
@@ -161,10 +278,16 @@
           "jp": "楽しそうですね！みんな 集まりますか。",
           "en": "Sounds wonderful! Will everyone gather?",
           "terms": [
-            { "id": "v_tanoshii", "form": "appearance_sou" },
+            {
+              "id": "v_tanoshii",
+              "form": "appearance_sou"
+            },
             "p_ne",
             "v_minna",
-            { "id": "v_atsumaru", "form": "polite_masu" },
+            {
+              "id": "v_atsumaru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -176,15 +299,30 @@
             "p_hai",
             "v_kyonen",
             "p_yori",
-            { "id": "v_ooi", "form": "adverbial" },
-            { "id": "v_atsumaru", "form": "plain_form" },
+            {
+              "id": "v_ooi",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_atsumaru",
+              "form": "plain_form"
+            },
             "p_to_quote",
-            { "id": "v_omou", "form": "polite_masu" },
+            {
+              "id": "v_omou",
+              "form": "polite_masu"
+            },
             "v_tokuni",
-            { "id": "v_taisetsu", "form": "attributive_na" },
+            {
+              "id": "v_taisetsu",
+              "form": "attributive_na"
+            },
             "v_koto",
             "p_ga",
-            { "id": "v_aru", "form": "plain_form" },
+            {
+              "id": "v_aru",
+              "form": "plain_form"
+            },
             "p_ndesu"
           ]
         },
@@ -195,10 +333,16 @@
           "terms": [
             "v_sore",
             "p_wa",
-            { "id": "v_tanoshii", "form": "polite_adj" },
+            {
+              "id": "v_tanoshii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_issho",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -220,7 +364,10 @@
             "v_donna",
             "v_koto",
             "p_wo",
-            { "id": "v_kaku", "form": "polite_masu" },
+            {
+              "id": "v_kaku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -234,13 +381,25 @@
             "p_no",
             "v_omoi_feel",
             "p_wo",
-            { "id": "v_kaku", "form": "plain_desire_tai" },
+            {
+              "id": "v_kaku",
+              "form": "plain_desire_tai"
+            },
             "p_to_quote",
-            { "id": "v_omou", "form": "polite_masu" },
+            {
+              "id": "v_omou",
+              "form": "polite_masu"
+            },
             "v_yoku",
             "v_shuuchuu",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_kaku", "form": "polite_masu" }
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kaku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -250,18 +409,36 @@
           "terms": [
             "v_kotae",
             "p_wo",
-            { "id": "v_atsumeru", "form": "te_form" },
+            {
+              "id": "v_atsumeru",
+              "form": "te_form"
+            },
             "p_tekara",
-            { "id": "v_kaku", "form": "plain_form" },
+            {
+              "id": "v_kaku",
+              "form": "plain_form"
+            },
             "p_to_conditional",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_yo",
             "v_mondou",
-            { "id": "v_suru", "form": "nagara_form" },
-            { "id": "v_kangaeru", "form": "plain_form" },
+            {
+              "id": "v_suru",
+              "form": "nagara_form"
+            },
+            {
+              "id": "v_kangaeru",
+              "form": "plain_form"
+            },
             "p_to_conditional",
             "v_motto",
-            { "id": "v_ii", "form": "polite_adj" }
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -272,8 +449,14 @@
             "p_soudesu",
             "p_ne",
             "v_shuuchuu",
-            { "id": "v_suru", "form": "nakereba" },
-            { "id": "v_ikeru", "form": "polite_negative" },
+            {
+              "id": "v_suru",
+              "form": "nakereba"
+            },
+            {
+              "id": "v_ikeru",
+              "form": "polite_negative"
+            },
             "p_ne"
           ]
         }
@@ -291,10 +474,16 @@
           "terms": [
             "v_kono",
             "v_shashin",
-            { "id": "v_miru", "form": "plain_past" },
+            {
+              "id": "v_miru",
+              "form": "plain_past"
+            },
             "v_koto",
             "p_ga",
-            { "id": "v_aru", "form": "plain_form" },
+            {
+              "id": "v_aru",
+              "form": "plain_form"
+            },
             "p_ka"
           ]
         },
@@ -304,8 +493,14 @@
           "en": "Yeah, I remembered! It's a photo from a special trip.",
           "terms": [
             "v_un",
-            { "id": "v_omoidasu", "form": "plain_past" },
-            { "id": "v_tokubetsu", "form": "attributive_na" },
+            {
+              "id": "v_omoidasu",
+              "form": "plain_past"
+            },
+            {
+              "id": "v_tokubetsu",
+              "form": "attributive_na"
+            },
             "v_ryokou",
             "p_no",
             "v_shashin",
@@ -320,9 +515,15 @@
           "terms": [
             "v_minna",
             "p_de",
-            { "id": "v_atsumaru", "form": "te_form" },
+            {
+              "id": "v_atsumaru",
+              "form": "te_form"
+            },
             "v_totemo",
-            { "id": "v_tanoshii", "form": "plain_past_adj" },
+            {
+              "id": "v_tanoshii",
+              "form": "plain_past_adj"
+            },
             "p_ne",
             "p_yo",
             "v_kono",
@@ -332,7 +533,10 @@
             "v_taisetsu",
             "g_da",
             "p_to_quote",
-            { "id": "v_omou", "form": "plain_form" }
+            {
+              "id": "v_omou",
+              "form": "plain_form"
+            }
           ]
         },
         {
@@ -344,7 +548,10 @@
             "v_mata",
             "v_minna",
             "p_de",
-            { "id": "v_atsumaru", "form": "plain_desire_tai" },
+            {
+              "id": "v_atsumaru",
+              "form": "plain_desire_tai"
+            },
             "p_na"
           ]
         }
@@ -368,8 +575,14 @@
             "g_da",
             "v_itsu",
             "p_kara",
-            { "id": "v_atsumeru", "form": "te_form" },
-            { "id": "v_iru", "form": "plain_form" },
+            {
+              "id": "v_atsumeru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
             "p_no",
             "p_ka"
           ]
@@ -381,8 +594,14 @@
           "terms": [
             "v_mae",
             "p_kara",
-            { "id": "v_atsumeru", "form": "te_form" },
-            { "id": "v_iru", "form": "plain_form" },
+            {
+              "id": "v_atsumeru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
             "p_yo",
             "v_tokuni",
             "v_furui",
@@ -402,7 +621,10 @@
           "en": "How many have you collected?",
           "terms": [
             "v_ikutsu",
-            { "id": "v_atsumeru", "form": "plain_past" },
+            {
+              "id": "v_atsumeru",
+              "form": "plain_past"
+            },
             "p_no",
             "p_ka"
           ]
@@ -416,15 +638,33 @@
             "p_ya",
             "v_toshokan",
             "p_ni",
-            { "id": "v_iku", "form": "tari_form" },
+            {
+              "id": "v_iku",
+              "form": "tari_form"
+            },
             "v_tomodachi",
             "p_ni",
-            { "id": "v_kiku", "form": "tari_form" },
-            { "id": "v_suru", "form": "te_form" },
-            { "counter": "mai", "n": 100 },
+            {
+              "id": "v_kiku",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "counter": "mai",
+              "n": 100
+            },
             "p_kurai",
-            { "id": "v_atsumeru", "form": "te_form" },
-            { "id": "v_kuru", "form": "plain_past" },
+            {
+              "id": "v_atsumeru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
+              "form": "plain_past"
+            },
             "p_yo"
           ]
         }
@@ -444,10 +684,16 @@
             "p_ni",
             "v_machi",
             "p_de",
-            { "id": "v_tokubetsu", "form": "attributive_na" },
+            {
+              "id": "v_tokubetsu",
+              "form": "attributive_na"
+            },
             "v_shuukai",
             "p_ga",
-            { "id": "v_aru", "form": "polite_mashita" }
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -459,11 +705,20 @@
             "v_kaishain",
             "p_ga",
             "v_takusan",
-            { "id": "v_atsumaru", "form": "te_form" },
-            { "id": "v_taisetsu", "form": "attributive_na" },
+            {
+              "id": "v_atsumaru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_taisetsu",
+              "form": "attributive_na"
+            },
             "v_koto",
             "p_wo",
-            { "id": "v_hanasu", "form": "polite_mashita" }
+            {
+              "id": "v_hanasu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -474,13 +729,22 @@
             "p_mo",
             "v_kotae",
             "p_wo",
-            { "id": "v_atsumeru", "form": "tari_form" },
+            {
+              "id": "v_atsumeru",
+              "form": "tari_form"
+            },
             "v_minna",
             "p_no",
             "v_ishi",
             "p_wo",
-            { "id": "v_kiku", "form": "tari_form" },
-            { "id": "v_suru", "form": "polite_mashita" }
+            {
+              "id": "v_kiku",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -490,12 +754,21 @@
             "v_tokuni",
             "v_kyonen",
             "p_yori",
-            { "id": "v_ooi", "form": "adverbial" },
+            {
+              "id": "v_ooi",
+              "form": "adverbial"
+            },
             "p_no",
             "v_hito",
             "p_ga",
-            { "id": "v_atsumaru", "form": "te_form" },
-            { "id": "v_kuru", "form": "polite_mashita" }
+            {
+              "id": "v_atsumaru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -504,30 +777,37 @@
           "terms": [
             "v_rainen",
             "p_mo",
-            { "id": "v_atsumaru", "form": "potential" },
+            {
+              "id": "v_atsumaru",
+              "form": "potential"
+            },
             "p_to_conditional",
             "v_ii",
             "p_to_quote",
-            { "id": "v_omou", "form": "polite_masu" }
+            {
+              "id": "v_omou",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
       "questions": [
         {
           "q": "集会は いつ ありましたか。",
+          "q_en": "When was the gathering held?",
           "a": "先週の 土曜日に ありました。",
-          "choices": [
-            "先週の 土曜日に ありました。",
-            "来週の 土曜日に あります。",
-            "先月の 日曜日に ありました。",
-            "来月の 土曜日に あります。"
-          ],
+          "a_en": "It was held last Saturday.",
           "terms": [
             "v_shuukai",
             "p_wa",
             "v_itsu",
-            { "id": "v_aru", "form": "polite_mashita" },
-            "p_ka",
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_senshuu",
             "p_no",
             "v_doyoubi",
@@ -536,19 +816,20 @@
         },
         {
           "q": "どんな 人が 集まりましたか。",
+          "q_en": "What kind of people gathered?",
           "a": "学生や 会社員が 集まりました。",
-          "choices": [
-            "学生や 会社員が 集まりました。",
-            "先生と 学生が 集まりました。",
-            "先生と 会社員が 集まりました。",
-            "友だちと 家族が 集まりました。"
-          ],
+          "a_en": "Students and company employees gathered.",
           "terms": [
             "v_donna",
             "v_hito",
             "p_ga",
-            { "id": "v_atsumaru", "form": "polite_mashita" },
-            "p_ka",
+            {
+              "id": "v_atsumaru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_gakusei",
             "p_ya",
             "v_kaishain"
@@ -556,32 +837,48 @@
         },
         {
           "q": "「私」は 来年 どうなると いいと 思っていますか。",
+          "q_en": "What does the narrator think would be good for next year?",
           "a": "また 集まれると いいと 思っています。",
-          "choices": [
-            "また 集まれると いいと 思っています。",
-            "また 集まれないと 思っています。",
-            "来年は 集会が ないと 思っています。",
-            "来年は もっと 小さい 集会が いいと 思っています。"
-          ],
+          "a_en": "They think it would be good if people could gather again.",
           "terms": [
             "v_watashi",
             "p_wa",
             "v_rainen",
             "v_dou",
-            { "id": "v_naru", "form": "plain_form" },
+            {
+              "id": "v_naru",
+              "form": "plain_form"
+            },
             "p_to_conditional",
             "v_ii",
             "p_to_quote",
-            { "id": "v_omou", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
-            "p_ka",
+            {
+              "id": "v_omou",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_mata",
-            { "id": "v_atsumaru", "form": "potential" },
+            {
+              "id": "v_atsumaru",
+              "form": "potential"
+            },
             "p_to_conditional",
             "v_ii",
             "p_to_quote",
-            { "id": "v_omou", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_omou",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -599,7 +896,10 @@
             "p_no",
             "v_shiken",
             "p_ga",
-            { "id": "v_aru", "form": "polite_mashita" }
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -613,9 +913,15 @@
             "v_mae",
             "p_ni",
             "v_shuuchuu",
-            { "id": "v_suru", "form": "te_form" },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
             "v_benkyou",
-            { "id": "v_suru", "form": "polite_mashita" }
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -628,10 +934,16 @@
             "p_no",
             "v_kotae",
             "p_wo",
-            { "id": "v_omoidasu", "form": "plain_form" },
+            {
+              "id": "v_omoidasu",
+              "form": "plain_form"
+            },
             "v_koto",
             "p_ga",
-            { "id": "v_dekiru", "form": "polite_past_negative" }
+            {
+              "id": "v_dekiru",
+              "form": "polite_past_negative"
+            }
           ]
         },
         {
@@ -640,13 +952,22 @@
           "terms": [
             "v_kotae",
             "p_wo",
-            { "id": "v_atsumeru", "form": "te_form" },
+            {
+              "id": "v_atsumeru",
+              "form": "te_form"
+            },
             "p_tekara",
             "v_mata",
-            { "id": "v_kangaeru", "form": "plain_form" },
+            {
+              "id": "v_kangaeru",
+              "form": "plain_form"
+            },
             "v_you_manner",
             "p_ni",
-            { "id": "v_suru", "form": "polite_mashita" }
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -655,25 +976,30 @@
           "terms": [
             "v_gakusei",
             "p_wa",
-            { "id": "v_wakaru", "form": "polite_negative" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_negative"
+            },
             "p_to_quote",
-            { "id": "v_kotaeru", "form": "te_form" },
+            {
+              "id": "v_kotaeru",
+              "form": "te_form"
+            },
             "v_kuchigotae",
             "p_wa",
-            { "id": "v_suru", "form": "polite_past_negative" }
+            {
+              "id": "v_suru",
+              "form": "polite_past_negative"
+            }
           ]
         }
       ],
       "questions": [
         {
           "q": "学生は 試験の 前に 何を しましたか。",
+          "q_en": "What did the student do before the exam?",
           "a": "集中して 勉強しました。",
-          "choices": [
-            "集中して 勉強しました。",
-            "答えを 集めました。",
-            "先生と 問答しました。",
-            "口答えを しました。"
-          ],
+          "a_en": "They concentrated and studied.",
           "terms": [
             "v_gakusei",
             "p_wa",
@@ -682,55 +1008,77 @@
             "v_mae",
             "p_ni",
             "v_nani",
-            { "id": "v_suru", "form": "polite_mashita" },
-            "p_ka",
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_shuuchuu",
-            { "id": "v_suru", "form": "te_form" },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
             "v_benkyou",
-            { "id": "v_suru", "form": "polite_mashita" }
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "学生は 答えを 思い出す ことが できましたか。",
+          "q_en": "Could the student remember the answer?",
           "a": "いいえ、思い出す ことが できませんでした。",
-          "choices": [
-            "いいえ、思い出す ことが できませんでした。",
-            "はい、すぐ 思い出しました。",
-            "はい、すぐ 答えました。",
-            "いいえ、集中しませんでした。"
-          ],
+          "a_en": "No, they could not remember it.",
           "terms": [
             "v_gakusei",
             "p_wa",
             "v_kotae",
             "p_wo",
-            { "id": "v_omoidasu", "form": "plain_form" },
+            {
+              "id": "v_omoidasu",
+              "form": "plain_form"
+            },
             "v_koto",
             "p_ga",
-            { "id": "v_dekiru", "form": "polite_mashita" },
-            "p_ka",
-            { "id": "v_dekiru", "form": "polite_past_negative" }
+            {
+              "id": "v_dekiru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            {
+              "id": "v_dekiru",
+              "form": "polite_past_negative"
+            }
           ]
         },
         {
           "q": "学生は 口答えを しましたか。",
+          "q_en": "Did the student talk back?",
           "a": "いいえ、口答えは しませんでした。",
-          "choices": [
-            "いいえ、口答えは しませんでした。",
-            "はい、口答えを しました。",
-            "はい、先生に 聞きました。",
-            "いいえ、勉強しませんでした。"
-          ],
+          "a_en": "No, they did not talk back.",
           "terms": [
             "v_gakusei",
             "p_wa",
             "v_kuchigotae",
             "p_wo",
-            { "id": "v_suru", "form": "polite_mashita" },
-            "p_ka",
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_kuchigotae",
             "p_wa",
-            { "id": "v_suru", "form": "polite_past_negative" }
+            {
+              "id": "v_suru",
+              "form": "polite_past_negative"
+            }
           ]
         }
       ]
@@ -743,31 +1091,56 @@
         {
           "kind": "mcq",
           "q": "思う の よみかたは？",
-          "choices": ["おもう", "こたえる", "あつめる", "くわえる"],
+          "choices": [
+            "おもう",
+            "こたえる",
+            "あつめる",
+            "くわえる"
+          ],
           "answer": "おもう"
         },
         {
           "kind": "mcq",
           "q": "特別 の よみかたは？",
-          "choices": ["とくべつ", "とくに", "とっきゅう", "とくしゅう"],
+          "choices": [
+            "とくべつ",
+            "とくに",
+            "とっきゅう",
+            "とくしゅう"
+          ],
           "answer": "とくべつ"
         },
         {
           "kind": "mcq",
           "q": "集まる の よみかたは？",
-          "choices": ["あつまる", "あつめる", "はじまる", "すすむ"],
+          "choices": [
+            "あつまる",
+            "あつめる",
+            "はじまる",
+            "すすむ"
+          ],
           "answer": "あつまる"
         },
         {
           "kind": "mcq",
           "q": "答える の よみかたは？",
-          "choices": ["こたえる", "おもいだす", "かんがえる", "おしえる"],
+          "choices": [
+            "こたえる",
+            "おもいだす",
+            "かんがえる",
+            "おしえる"
+          ],
           "answer": "こたえる"
         },
         {
           "kind": "mcq",
           "q": "特急 の よみかたは？",
-          "choices": ["とっきゅう", "とくべつ", "しゅうちゅう", "とくしゅう"],
+          "choices": [
+            "とっきゅう",
+            "とくべつ",
+            "しゅうちゅう",
+            "とくしゅう"
+          ],
           "answer": "とっきゅう"
         }
       ]
@@ -780,45 +1153,77 @@
         {
           "kind": "mcq",
           "q": "テストの ______ を 書いて ください。",
-          "choices": ["答え", "思い", "集中", "特急"],
+          "choices": [
+            "答え",
+            "思い",
+            "集中",
+            "特急"
+          ],
           "answer": "答え",
           "terms": [
             "v_tesuto",
             "p_no",
             "v_kotae",
             "p_wo",
-            { "id": "v_kaku", "form": "te_form" },
+            {
+              "id": "v_kaku",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
         {
           "kind": "mcq",
           "q": "今日は ______ 暑いです。",
-          "choices": ["特に", "特急", "特集", "問答"],
+          "choices": [
+            "特に",
+            "特急",
+            "特集",
+            "問答"
+          ],
           "answer": "特に",
           "terms": [
             "v_kyou",
             "p_wa",
             "v_tokuni",
-            { "id": "v_atsui", "form": "polite_adj" }
+            {
+              "id": "v_atsui",
+              "form": "polite_adj"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "切手を ______ います。",
-          "choices": ["集めて", "答えて", "思って", "集中して"],
+          "choices": [
+            "集めて",
+            "答えて",
+            "思って",
+            "集中して"
+          ],
           "answer": "集めて",
           "terms": [
             "v_kitte",
             "p_wo",
-            { "id": "v_atsumeru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_atsumeru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "先生との ______ を 書きました。",
-          "choices": ["思い出", "思い上がり", "思い", "意思"],
+          "choices": [
+            "思い出",
+            "思い上がり",
+            "思い",
+            "意思"
+          ],
           "answer": "思い出",
           "terms": [
             "v_sensei",
@@ -826,21 +1231,35 @@
             "p_no",
             "v_omoide",
             "p_wo",
-            { "id": "v_kaku", "form": "polite_mashita" }
+            {
+              "id": "v_kaku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "みんなが 集まる ______ が あります。",
-          "choices": ["集会", "文集", "問答", "意思"],
+          "choices": [
+            "集会",
+            "文集",
+            "問答",
+            "意思"
+          ],
           "answer": "集会",
           "terms": [
             "v_minna",
             "p_ga",
-            { "id": "v_atsumaru", "form": "plain_form" },
+            {
+              "id": "v_atsumaru",
+              "form": "plain_form"
+            },
             "v_shuukai",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -853,7 +1272,12 @@
         {
           "kind": "mcq",
           "q": "この 問題は むずかしいと ______。",
-          "choices": ["思います", "集めます", "答えます", "集中します"],
+          "choices": [
+            "思います",
+            "集めます",
+            "答えます",
+            "集中します"
+          ],
           "answer": "思います",
           "terms": [
             "v_kono",
@@ -861,39 +1285,67 @@
             "p_wa",
             "v_muzukashii",
             "p_to_quote",
-            { "id": "v_omou", "form": "polite_masu" }
+            {
+              "id": "v_omou",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "答えを 考えてから、先生に ______。",
-          "choices": ["答えます", "集めます", "思います", "集まります"],
+          "choices": [
+            "答えます",
+            "集めます",
+            "思います",
+            "集まります"
+          ],
           "answer": "答えます",
           "terms": [
             "v_kotae",
             "p_wo",
-            { "id": "v_kangaeru", "form": "te_form" },
+            {
+              "id": "v_kangaeru",
+              "form": "te_form"
+            },
             "p_tekara",
             "v_sensei",
             "p_ni",
-            { "id": "v_kotaeru", "form": "polite_masu" }
+            {
+              "id": "v_kotaeru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "kind": "mcq",
           "q": "もっと 多くの 人が 集まれる ______ なると いいです。",
-          "choices": ["ように", "ために", "ことが", "のに"],
+          "choices": [
+            "ように",
+            "ために",
+            "ことが",
+            "のに"
+          ],
           "answer": "ように",
           "terms": [
             "v_motto",
-            { "id": "v_ooi", "form": "adverbial" },
+            {
+              "id": "v_ooi",
+              "form": "adverbial"
+            },
             "p_no",
             "v_hito",
             "p_ga",
-            { "id": "v_atsumaru", "form": "potential" },
+            {
+              "id": "v_atsumaru",
+              "form": "potential"
+            },
             "v_you_manner",
             "p_ni",
-            { "id": "v_naru", "form": "plain_form" },
+            {
+              "id": "v_naru",
+              "form": "plain_form"
+            },
             "p_to_conditional",
             "v_ii"
           ]
@@ -901,7 +1353,12 @@
         {
           "kind": "mcq",
           "q": "試験の 前に、もっと 集中 ______。",
-          "choices": ["しなければ いけません", "して います", "するように なりました", "してから 行きます"],
+          "choices": [
+            "しなければ いけません",
+            "して います",
+            "するように なりました",
+            "してから 行きます"
+          ],
           "answer": "しなければ いけません",
           "terms": [
             "v_shiken",
@@ -910,8 +1367,14 @@
             "p_ni",
             "v_motto",
             "v_shuuchuu",
-            { "id": "v_suru", "form": "nakereba" },
-            { "id": "v_ikeru", "form": "polite_negative" }
+            {
+              "id": "v_suru",
+              "form": "nakereba"
+            },
+            {
+              "id": "v_ikeru",
+              "form": "polite_negative"
+            }
           ]
         }
       ]
