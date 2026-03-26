@@ -144,68 +144,68 @@ Run every existing N5 file through the validation hooks and fix what they catch.
 
 ### 1b. Grammar (G1–G12) — 296 issues across 12 files
 
-- [ ] **G1** — 34 issues [`chip-order`, `form-scope`, `grammar-schema`, `particle-context`, `structure`, `surface-match`]
+- [x] **G1** — 34 issues [`chip-order`, `form-scope`, `grammar-schema`, `particle-context`, `structure`, `surface-match`]
   - `chip-order` (1): だよ pair
   - `form-scope` (6): p_mo before N5.2, da_past before G9
   - `grammar-schema` (2): Invalid color 'particle' in pattern chips
   - `particle-context` (5): Missing p_ka on drill questions
   - `structure` (5): Drill 1 has terms (must be terms-free)
   - `surface-match` (11): v_sensei not matching jp text
-- [ ] **G2** — 24 issues [`particle-context`, `structure`, `surface-match`]
+- [x] **G2** — 24 issues [`particle-context`, `structure`, `surface-match`]
   - ~~`form-scope` (1): FIXED — polite_negative moved to N5.1~~
   - `particle-context` (1): Missing p_ka
   - `structure` (4): Drill 1 has terms
   - `surface-match` (15): char_rikizo, v_namae, v_hito not matching jp text
-- [ ] **G3** — 21 issues [`grammar-schema`, `particle-context`, `structure`, `surface-match`]
+- [x] **G3** — 21 issues [`grammar-schema`, `particle-context`, `structure`, `surface-match`]
   - ~~`form-scope` (1): FIXED — polite_masu moved to N5.1~~
   - `grammar-schema` (5): Invalid color 'particle' in pattern chips
   - `particle-context` (3): Missing p_ka
   - `structure` (6): Drill 1 has terms
   - `surface-match` (4): v_haha, v_dare, v_sensei, v_tomodachi not matching jp text
-- [ ] **G4** — 20 issues [`grammar-schema`, `particle-context`, `structure`, `surface-match`]
+- [x] **G4** — 20 issues [`grammar-schema`, `particle-context`, `structure`, `surface-match`]
   - ~~`form-scope` (5): FIXED — polite_masu moved to N5.1~~
   - `grammar-schema` (7): Invalid color 'particle' / 'time'
   - `particle-context` (1): Missing p_ka
   - `structure` (5): Drill 1 has terms
   - `surface-match` (12): v_sensei, v_getsuyoubi, v_kinyoubi, v_tomodachi + day-of-week kanji not matching
-- [ ] **G5** — 14 issues [`chip-order`, `grammar-schema`, `kanji-scope`, `structure`, `surface-match`]
+- [x] **G5** — 14 issues [`chip-order`, `grammar-schema`, `kanji-scope`, `structure`, `surface-match`]
   - `chip-order` (1): では pair
   - `grammar-schema` (3): Invalid color 'particle'
   - `kanji-scope` (2): Untaught kanji in jp text
   - `structure` (4): Drill 1 has terms
   - `surface-match` (2): v_kyou, v_tomodachi not matching
-- [ ] **G6** — 12 issues [`form-scope`, `kanji-scope`, `particle-context`, `structure`]
+- [x] **G6** — 12 issues [`form-scope`, `kanji-scope`, `particle-context`, `structure`]
   - `form-scope` (3): p_dewa_then used in same lesson it's introduced (self-reference)
   - `kanji-scope` (2): Untaught kanji
   - `particle-context` (2): Missing p_ka
   - `structure` (2): Drill 1 has terms
-- [ ] **G7** — 20 issues [`chip-order`, `particle-context`, `structure`, `surface-match`]
+- [x] **G7** — 20 issues [`chip-order`, `particle-context`, `structure`, `surface-match`]
   - `chip-order` (1): では pair
   - `particle-context` (3): Missing p_ka
   - `structure` (4): Drill 1 has terms
   - `surface-match` (9): v_kyou not matching jp text
-- [ ] **G8** — 33 issues [`chip-order`, `kanji-scope`, `particle-context`, `structure`, `surface-match`]
+- [x] **G8** — 33 issues [`chip-order`, `kanji-scope`, `particle-context`, `structure`, `surface-match`]
   - `chip-order` (1): には pair
   - `kanji-scope` (2): Untaught kanji
   - `particle-context` (8): Missing p_ka
   - `structure` (8): Drill 1 has terms
   - `surface-match` (11): v_kinou, v_eki not matching
-- [ ] **G9** — 32 issues [`form-scope`, `particle-context`, `structure`, `surface-match`]
+- [x] **G9** — 32 issues [`form-scope`, `particle-context`, `structure`, `surface-match`]
   - `form-scope` (6): plain_desire_tai before G10
   - `particle-context` (9): Missing p_ka
   - `structure` (8): Drill 1 has terms
   - `surface-match` (5): v_nani, v_purezento not matching
-- [ ] **G10** — 29 issues [`form-scope`, `particle-context`, `structure`, `surface-match`]
+- [x] **G10** — 29 issues [`form-scope`, `particle-context`, `structure`, `surface-match`]
   - `form-scope` (8): plain_desire_tai / p_ga_but in same lesson's conversations
   - `particle-context` (9): Missing p_ka
   - `structure` (5): Drill 1 has terms
   - `surface-match` (3): v_gaishoku, v_okane not matching
-- [ ] **G11** — 20 issues [`kanji-scope`, `particle-context`, `structure`, `surface-match`]
+- [x] **G11** — 20 issues [`kanji-scope`, `particle-context`, `structure`, `surface-match`]
   - `kanji-scope` (2): Untaught kanji
   - `particle-context` (5): Missing p_ka
   - `structure` (5): Drill 1 has terms
   - `surface-match` (5): v_yama, v_kibun not matching
-- [ ] **G12** — 18 issues [`particle-context`, `structure`, `surface-match`]
+- [x] **G12** — 18 issues [`particle-context`, `structure`, `surface-match`]
   - `particle-context` (5): Missing p_ka
   - `structure` (6): Drill 1 has terms
   - `surface-match` (4): v_sora, v_kibun not matching
