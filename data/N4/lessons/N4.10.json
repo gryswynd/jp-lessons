@@ -918,9 +918,24 @@
       ],
       "questions": [
         {
-          "q": "Conor went to the movie theater with whom?",
+          "q": "コナーさんは だれと 映画館へ 行きましたか。",
+          "q_en": "Who did Conor go to the movie theater with?",
           "a": "りきぞと いっしょに 行きました。",
+          "a_en": "He went together with Rikizo.",
           "terms": [
+            "char_conor",
+            "p_wa",
+            "v_dare",
+            "p_to",
+            "v_eigakan",
+            "p_e",
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "char_rikizo",
             "p_to",
             "v_issho",
@@ -932,9 +947,22 @@
           ]
         },
         {
-          "q": "What time did the movie start?",
+          "q": "映画は 何時に 始まりましたか。",
+          "q_en": "What time did the movie start?",
           "a": "午後 三時に 始まりました。",
+          "a_en": "The movie started at 3 PM.",
           "terms": [
+            "v_eiga",
+            "p_wa",
+            "v_nanji",
+            "p_ni",
+            {
+              "id": "v_hajimaru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_gogo",
             {
               "counter": "ji",
@@ -948,9 +976,28 @@
           ]
         },
         {
-          "q": "What did Conor do while watching the movie?",
+          "q": "コナーさんは 映画を 見ながら、何を 書きましたか。",
+          "q_en": "What did Conor write while watching the movie?",
           "a": "英語の メモを 書きました。",
+          "a_en": "He wrote English notes.",
           "terms": [
+            "char_conor",
+            "p_wa",
+            "v_eiga",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "nagara_form"
+            },
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_kaku",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_eigo",
             "p_no",
             "v_memo",
@@ -1099,9 +1146,22 @@
       ],
       "questions": [
         {
-          "q": "Where did Joel Sensei come from?",
+          "q": "ジョエル先生は どこから 来ましたか。",
+          "q_en": "Where did Joel Sensei come from?",
           "a": "アメリカから 来ました。",
+          "a_en": "He came from America.",
           "terms": [
+            "char_joel",
+            "p_wa",
+            "v_doko",
+            "p_kara",
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_america",
             "p_kara",
             {
@@ -1111,9 +1171,29 @@
           ]
         },
         {
-          "q": "What does Joel Sensei do every day in class?",
+          "q": "ジョエル先生は 毎日 クラスで 何を 話していますか。",
+          "q_en": "What does Joel Sensei speak every day in class?",
           "a": "元気に 英語を 話して います。",
+          "a_en": "He speaks English energetically.",
           "terms": [
+            "char_joel",
+            "p_wa",
+            "v_mainichi",
+            "v_kurasu",
+            "p_de",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_hanasu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             {
               "id": "v_genki",
               "form": "adverbial"
@@ -1131,9 +1211,23 @@
           ]
         },
         {
-          "q": "What kinds of things does Joel Sensei do?",
+          "q": "ジョエル先生は どんな ことを しますか。",
+          "q_en": "What kinds of things does Joel Sensei do?",
           "a": "映画を 見たり、英語の 本を 読んだりします。",
+          "a_en": "He does things like watch movies and read English books.",
           "terms": [
+            "char_joel",
+            "p_wa",
+            "v_donna",
+            "v_koto",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_eiga",
             "p_wo",
             {
