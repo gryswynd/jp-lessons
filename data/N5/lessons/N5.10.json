@@ -649,17 +649,15 @@
         },
         {
           "spk": "レン",
-          "jp": "この 山は 人気が あるからね。また 行きたいよ。",
-          "en": "This mountain is popular, after all. I want to go again.",
+          "jp": "この 山は 人気だよ。また 行きたいよ。",
+          "en": "This mountain is popular. I want to go again.",
           "terms": [
             "v_kono",
             "v_yama",
             "p_wa",
             "v_ninki",
-            "p_ga",
-            "v_aru",
-            "p_kara_because",
-            "p_ne",
+            "p_yo",
+            "g_da",
             {
               "id": "v_iku",
               "form": "plain_desire_tai"
@@ -1203,7 +1201,7 @@
           "terms": [
             {
               "id": "v_ii",
-              "form": "plain_past_adj"
+              "form": "plain_past_negative"
             },
             "g_desu"
           ]
