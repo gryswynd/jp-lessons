@@ -782,56 +782,81 @@
       ],
       "questions": [
         {
-          "q": "How did the narrator travel to the mountains?",
-          "a": "By train",
-          "choices": [
-            "By train",
-            "By car",
-            "On foot",
-            "By bus"
-          ],
+          "q": "何で 山に 行きましたか。",
+          "q_en": "How did the narrator travel to the mountains?",
+          "a": "電車で 行きました。",
+          "a_en": "They went by train.",
           "terms": [
+            "v_nani",
+            "p_de",
+            "v_yama",
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_densha",
             "p_de",
-            "p_ka"
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
-          "q": "What was the narrator's mood like in the mountains?",
-          "a": "Great / Good",
-          "choices": [
-            "Great / Good",
-            "Not good",
-            "Tired",
-            "Boring"
-          ],
+          "q": "気分は よかったですか。",
+          "q_en": "Was the narrator's mood good?",
+          "a": "気分が よかったです。",
+          "a_en": "Their mood was great.",
           "terms": [
             "v_kibun",
+            "p_wa",
             {
               "id": "v_ii",
               "form": "plain_past_adj"
             },
             "g_desu",
             "p_ka"
+          ],
+          "a_terms": [
+            "v_kibun",
+            "p_ga",
+            {
+              "id": "v_ii",
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ]
         },
         {
-          "q": "What does the narrator want to do next week?",
-          "a": "Come to the mountains again",
-          "choices": [
-            "Come to the mountains again",
-            "Go to a department store",
-            "Rest at home",
-            "Buy a train ticket"
-          ],
+          "q": "来週は また どこに 行きたいですか。",
+          "q_en": "Where does the narrator want to go again next week?",
+          "a": "山に 来たいです。",
+          "a_en": "They want to come to the mountains again.",
           "terms": [
             "v_raishuu",
+            "p_wa",
+            "v_mata",
+            "v_doko",
+            "p_ni",
             {
-              "id": "v_kuru",
+              "id": "v_iku",
               "form": "plain_desire_tai"
             },
             "g_desu",
             "p_ka"
+          ],
+          "a_terms": [
+            "v_yama",
+            "p_ni",
+            {
+              "id": "v_kuru",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         }
       ]
@@ -951,61 +976,84 @@
       ],
       "questions": [
         {
-          "q": "What does the passage say about long trains?",
-          "a": "Long trains are popular",
-          "choices": [
-            "Long trains are popular",
-            "Long trains are expensive",
-            "Long trains are old",
-            "Long trains have no electricity"
-          ],
+          "q": "長い 電車は どうですか。",
+          "q_en": "What are long trains like?",
+          "a": "長い 電車は 人気が あります。",
+          "a_en": "Long trains are popular.",
           "terms": [
             "v_nagai",
             "v_densha",
-            "v_ninki",
+            "p_wa",
+            "v_dou",
+            "g_desu",
             "p_ka"
+          ],
+          "a_terms": [
+            "v_nagai",
+            "v_densha",
+            "p_wa",
+            "v_ninki",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
-          "q": "What happens when there is no electricity?",
-          "a": "Trains won't come",
-          "choices": [
-            "Trains won't come",
-            "Hotels close",
-            "The mood gets good",
-            "You can rest"
-          ],
+          "q": "電気が ありませんから、電車は どうですか。",
+          "q_en": "When there is no electricity, what happens to the trains?",
+          "a": "電車も 来ません。",
+          "a_en": "The trains won't come either.",
           "terms": [
             "v_denki",
+            "p_ga",
             {
               "id": "v_aru",
               "form": "polite_negative"
             },
+            "p_kara_because",
             "v_densha",
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_densha",
+            "p_mo",
             {
               "id": "v_kuru",
               "form": "polite_negative"
-            },
-            "p_ka"
+            }
           ]
         },
         {
-          "q": "Why is the narrator in a good mood every day?",
-          "a": "Because there is electricity",
-          "choices": [
-            "Because there is electricity",
-            "Because the train is long",
-            "Because it is a holiday",
-            "Because the weather is nice"
-          ],
+          "q": "どうして 毎日 気分が いいですか。",
+          "q_en": "Why is the narrator in a good mood every day?",
+          "a": "電気が ありますから、気分が いいです。",
+          "a_en": "Because there is electricity, the mood is good.",
           "terms": [
+            "v_doushite",
             "v_mainichi",
-            "v_denki",
-            "p_kara",
             "v_kibun",
+            "p_ga",
             "v_ii",
             "g_desu",
             "p_ka"
+          ],
+          "a_terms": [
+            "v_denki",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_kara_because",
+            "v_kibun",
+            "p_ga",
+            "v_ii",
+            "g_desu"
           ]
         }
       ]

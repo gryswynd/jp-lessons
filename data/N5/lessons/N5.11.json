@@ -792,61 +792,75 @@
       ],
       "questions": [
         {
-          "q": "What does the narrator say about the flowers?",
-          "a": "They are beautiful and cute",
-          "choices": [
-            "They are beautiful and cute",
-            "They are big and expensive",
-            "They are old and small",
-            "They look delicious"
-          ],
+          "q": "花は どうですか。",
+          "q_en": "What are the flowers like?",
+          "a": "花は きれいで、かわいいです。",
+          "a_en": "The flowers are beautiful and cute.",
           "terms": [
             "v_hana",
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_hana",
+            "p_wa",
             {
               "id": "v_kirei",
               "form": "te_form"
             },
             "v_kawaii",
-            "g_desu",
-            "p_ka"
+            "g_desu"
           ]
         },
         {
-          "q": "What does the narrator think the fish looks like?",
-          "a": "Delicious",
-          "choices": [
-            "Delicious",
-            "Cute",
-            "Beautiful",
-            "Big"
-          ],
+          "q": "魚は どうですか。",
+          "q_en": "What do the fish look like?",
+          "a": "魚は おいしそうです。",
+          "a_en": "The fish looks delicious.",
           "terms": [
             "v_sakana",
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_sakana",
+            "p_wa",
             {
               "id": "v_oishii",
               "form": "appearance_sou_stem"
             },
-            "g_desu",
-            "p_ka"
+            "g_desu"
           ]
         },
         {
-          "q": "What does the narrator want to do?",
-          "a": "Come again",
-          "choices": [
-            "Come again",
-            "Buy fish",
-            "Eat curry",
-            "See the sky"
-          ],
+          "q": "今日は どうでしたか。",
+          "q_en": "How was today for the narrator?",
+          "a": "きれいな 日でした。",
+          "a_en": "It was a beautiful day.",
           "terms": [
-            "v_mata",
+            "v_kyou",
+            "p_wa",
+            "v_dou",
             {
-              "id": "v_kuru",
-              "form": "plain_desire_tai"
+              "id": "g_desu",
+              "form": "polite_past_copula"
             },
-            "g_desu",
             "p_ka"
+          ],
+          "a_terms": [
+            {
+              "id": "v_kirei",
+              "form": "attributive_na"
+            },
+            "v_hi",
+            {
+              "id": "g_desu",
+              "form": "polite_past_copula"
+            }
           ]
         }
       ]
@@ -968,40 +982,42 @@
       ],
       "questions": [
         {
-          "q": "What does the sky look like in the reading?",
-          "a": "It looks like rain is coming",
-          "choices": [
-            "It looks like rain is coming",
-            "It is very beautiful",
-            "It is very big",
-            "It is clear and nice"
-          ],
+          "q": "今日の 空は どうですか。",
+          "q_en": "What is today's sky like?",
+          "a": "今日の 空は きれいじゃないです。",
+          "a_en": "Today's sky is not beautiful.",
           "terms": [
+            "v_kyou",
+            "p_no",
             "v_sora",
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_kyou",
+            "p_no",
+            "v_sora",
+            "p_wa",
             {
               "id": "v_kirei",
               "form": "plain_negative"
             },
-            "v_ame",
-            {
-              "id": "v_kuru",
-              "form": "appearance_sou_stem"
-            },
-            "g_desu",
-            "p_ka"
+            "g_desu"
           ]
         },
         {
-          "q": "What does the narrator want to do on a rainy day?",
-          "a": "Rest at home",
-          "choices": [
-            "Rest at home",
-            "Go to the river",
-            "See the flowers",
-            "Buy fish"
-          ],
+          "q": "雨の 日は どこで 休みたいですか。",
+          "q_en": "Where does the narrator want to rest on a rainy day?",
+          "a": "家で 休みたいです。",
+          "a_en": "They want to rest at home.",
           "terms": [
-            "v_ie",
+            "v_ame",
+            "p_no",
+            "v_hi",
+            "p_wa",
+            "v_doko",
             "p_de",
             {
               "id": "v_yasumu",
@@ -1009,19 +1025,38 @@
             },
             "g_desu",
             "p_ka"
+          ],
+          "a_terms": [
+            "v_ie",
+            "p_de",
+            {
+              "id": "v_yasumu",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         },
         {
-          "q": "What happens to flowers after the rain?",
-          "a": "They become beautiful",
-          "choices": [
-            "They become beautiful",
-            "They become big",
-            "They go away",
-            "They look cute"
-          ],
+          "q": "雨の 後、花は どうなりますか。",
+          "q_en": "What happens to the flowers after the rain?",
+          "a": "花が きれいに なります。",
+          "a_en": "The flowers become beautiful.",
           "terms": [
+            "v_ame",
+            "p_no",
+            "v_ato",
             "v_hana",
+            "p_wa",
+            "v_dou",
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_hana",
+            "p_ga",
             {
               "id": "v_kirei",
               "form": "adverbial"
@@ -1029,8 +1064,7 @@
             {
               "id": "v_naru",
               "form": "polite_masu"
-            },
-            "p_ka"
+            }
           ]
         }
       ]
