@@ -289,7 +289,6 @@
           "jp": "目が いたいですか。社長は まだ 来ません。少し 見てください。",
           "en": "Do your eyes hurt? The company president has not arrived yet. Please look for a bit.",
           "terms": [
-            "char_yamakawa",
             "v_me",
             "p_ga",
             "v_itai",
@@ -341,7 +340,6 @@
           "jp": "はい、社長が 来ます。立ってください。",
           "en": "Yes, the company president is coming. Please stand.",
           "terms": [
-            "char_yamakawa",
             "p_hai",
             "v_shachou",
             "p_ga",
@@ -389,7 +387,6 @@
           "jp": "今日は 外に 出ましょう。山と 川が 見えますよ。",
           "en": "Let's go outside today. You can see the mountains and the river.",
           "terms": [
-            "char_yamamoto",
             "v_kyou",
             "p_wa",
             "v_soto",
@@ -414,7 +411,6 @@
           "jp": "きれいですね！山が よく 見えます。目で たくさん 見たいです。",
           "en": "It is beautiful! The mountains are clearly visible. I want to look at a lot with my eyes.",
           "terms": [
-            "char_rikizo",
             "v_kirei",
             "g_desu",
             "p_ne",
@@ -443,7 +439,6 @@
           "jp": "川の 右に 大きい 山が 見えますね。耳で よく 聞いてください。",
           "en": "To the right of the river, you can see a large mountain. Please listen carefully with your ears.",
           "terms": [
-            "char_yamamoto",
             "v_kawa",
             "p_no",
             "v_migi",
@@ -493,7 +488,6 @@
           "jp": "そうですね。山の 後ろも 見たいですか。",
           "en": "That is right. Do you also want to see behind the mountain?",
           "terms": [
-            "char_yamamoto",
             "v_yama",
             "p_no",
             "v_ushiro",
@@ -545,7 +539,6 @@
           "jp": "りきぞさん、こわい 本が ありますよ。見てください。",
           "en": "Rikizo, there is a scary book. Please look.",
           "terms": [
-            "char_yuki",
             "char_rikizo",
             "v_san",
             "v_kowai",
@@ -585,7 +578,6 @@
           "jp": "はい、見せます。耳で よく 聞いてください。",
           "en": "Yes, I will show you. Please listen carefully with your ears.",
           "terms": [
-            "char_yuki",
             "p_hai",
             {
               "id": "v_miseru",
@@ -627,7 +619,6 @@
           "jp": "かなしい ことも ありました。耳で 聞きましたか。",
           "en": "There were also sad things. Did you hear them?",
           "terms": [
-            "char_yuki",
             "v_kanashii",
             "v_koto",
             "p_mo",
@@ -680,7 +671,6 @@
           "jp": "りきぞ、今日 こわい ことを 聞いた？",
           "en": "Rikizo, did you hear something scary today?",
           "terms": [
-            "char_ken",
             "char_rikizo",
             "v_kyou",
             "v_kowai",
@@ -689,7 +679,8 @@
             {
               "id": "v_kiku",
               "form": "plain_past"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -714,7 +705,6 @@
           "jp": "かなしい ことも あったよ。",
           "en": "There were also sad things.",
           "terms": [
-            "char_ken",
             "v_kanashii",
             "v_koto",
             "p_mo",
@@ -749,7 +739,6 @@
           "jp": "新聞も 見た？足が いたかった？",
           "en": "Did you also see the newspaper? Did your feet hurt?",
           "terms": [
-            "char_ken",
             "v_shinbun",
             "p_mo",
             {
@@ -761,7 +750,8 @@
             {
               "id": "v_itai",
               "form": "plain_past_adj"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -934,7 +924,8 @@
             {
               "id": "v_miru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -955,7 +946,8 @@
             {
               "id": "v_mieru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -975,7 +967,8 @@
             "p_wa",
             "v_sukoshi",
             "v_itai",
-            "g_desu"
+            "g_desu",
+            "p_ka"
           ]
         }
       ]
@@ -1109,7 +1102,8 @@
             {
               "id": "v_yomu",
               "form": "te_form"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -1129,7 +1123,8 @@
             {
               "id": "v_kiku",
               "form": "polite_volitional_mashou"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -1150,7 +1145,8 @@
             {
               "id": "v_tatsu",
               "form": "polite_volitional_mashou"
-            }
+            },
+            "p_ka"
           ]
         }
       ]

@@ -322,13 +322,13 @@
               "spk": "R",
               "jp": "八時半に行きます。今日はテストがあります。",
               "terms": [
-                "p_ni",
+                "p_wa",
                 {
                   "id": "v_iku",
                   "form": "polite_masu"
                 },
                 "v_kyou",
-                "p_wa",
+                "p_ni",
                 "v_tesuto",
                 "p_ga",
                 {
@@ -415,17 +415,16 @@
             },
             {
               "spk": "K",
-              "jp": "はい、電車はバスよりいいですよ。",
+              "jp": "はい、電車は いいですよ。",
               "terms": [
                 "p_hai",
                 "v_densha",
                 "p_wa",
-                "v_basu",
-                "p_yori",
                 "v_ii",
                 "g_desu",
                 "p_yo"
-              ]
+              ],
+              "en": "Yes, trains are great!"
             },
             {
               "spk": "R",
@@ -461,9 +460,9 @@
               "terms": [
                 "char_rikizo",
                 "v_nihongo",
-                "p_no",
-                "v_sensei",
                 "p_wa",
+                "v_sensei",
+                "p_no",
                 "v_donna",
                 "v_hito",
                 "g_desu",
@@ -504,8 +503,8 @@
                 "v_hon",
                 "p_wo",
                 "v_kaku",
-                "p_no",
                 "p_ga",
+                "p_no",
                 "v_daisuki",
                 "g_desu"
               ]
@@ -518,8 +517,8 @@
                 "v_watashi",
                 "p_wa",
                 "v_hanasu",
-                "p_no",
                 "p_ga",
+                "p_no",
                 "v_suki",
                 "g_desu"
               ]
@@ -934,9 +933,9 @@
               "terms": [
                 "v_suiyoubi",
                 "v_gogo",
-                "p_no",
-                "char_rikizo",
                 "p_wa",
+                "char_rikizo",
+                "p_no",
                 "v_gakkou",
                 "p_ni",
                 {
@@ -946,9 +945,8 @@
               ]
             },
             {
-              "jp": "でも、大きい日本語の本がありませんでした。",
+              "jp": "大きい 日本語の 本が ありませんでした。",
               "terms": [
-                "p_demo_but",
                 "v_ookii",
                 "v_nihongo",
                 "p_no",
@@ -958,7 +956,8 @@
                   "id": "v_aru",
                   "form": "polite_past_negative"
                 }
-              ]
+              ],
+              "en": "There were no large Japanese books."
             }
           ]
         },
@@ -1004,7 +1003,7 @@
                 },
                 {
                   "id": "v_iru",
-                  "form": "polite_masu"
+                  "form": "plain_form"
                 },
                 "v_hito",
                 "p_wo",

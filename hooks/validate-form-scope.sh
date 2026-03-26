@@ -31,6 +31,9 @@ content_id = content.get('id', '') or content.get('lesson', '')
 lesson_id = content_id
 if content.get('type') == 'grammar':
     lesson_id = content.get('meta', {}).get('unlocksAfter', lesson_id)
+elif content_id.startswith('compose.') and content.get('lesson'):
+    # Compose files: scope ceiling is the lesson they belong to (e.g. compose.N5.2 → N5.2)
+    lesson_id = content['lesson']
 if not lesson_id:
     sys.exit(0)
 

@@ -2,7 +2,7 @@
 
 > **Status:** Ready to start
 > **Started:** —
-> **Last updated:** 2026-03-25
+> **Last updated:** 2026-03-26
 > **Audit baseline:** 68 files, 147 failures across 12 hooks (run `bash hooks/audit-all.sh N5` to regenerate)
 > **Previous baseline:** 154 failures (pre-fix: polite_masu scope + surface-match reading fallback)
 
@@ -47,6 +47,8 @@ Complete the N5 level: fix all existing content issues, then build the remaining
 - **stories meta.kanji** (10 files cleared): Exempted story `terms.json` files from FM #12 in `validate-structure.sh` — `meta.kanji` has no functional role in stories.
 - **polite_masu scope** (7 files cleared): Moved `introducedIn` for polite_masu/mashita/negative/past_negative from N5.5 → N5.1. Cleared form-scope from N5.1, N5.2, N5.3, G2, G3, G4, N5.Review.2.
 - **surface-match reading fallback**: Hook now checks `reading` (hiragana) when `surface` contains untaught kanji. Reduces individual error count within files but most files still have remaining surface issues (character names, Q&A text mismatches).
+- **surface-match CJK lookbehind on jp_orig**: Hook now runs the negative-CJK lookbehind against `jp_orig` (spaces intact) rather than `jp_clean`. Prevents false positives where a single-char kanji immediately follows a space-separated word ending in kanji (e.g. `毎日 水が` → `毎日水が` after stripping).
+- **surface-match reading as extra match**: Hook always adds `reading` as an extra accepted form, so authors can use hiragana for words whose kanji is technically taught (e.g. もの for 物).
 
 ---
 
@@ -61,10 +63,10 @@ Run every existing N5 file through the validation hooks and fix what they catch.
   - ~~`particle-context` (1): Added p_ka to sections[4].lines[2]~~
   - ~~`surface-match` (15): Hook bugs fixed (kanjiGrid false positives, mid-token kanji, q+a split); genuine v_nani→v_nan in 5 なんですか contexts~~
   - ~~`term-ids` (19): Hook bug fixed (section-type tracking); genuine k_otoko/k_onna/k_ko→v_* in sentence content~~
-- [ ] **N5.2** — 27 issues [`surface-match`, `term-ids`]
+- [x] **N5.2** — CLEAN (was 27 issues — resolved via hook fix + 1 content edit)
   - ~~`form-scope` (10): FIXED — polite_masu moved to N5.1~~
-  - `surface-match` (15): v_nani, v_kyou, v_kongetsu not matching jp text
-  - `term-ids` (10): k_hi, k_tsuki, k_hi_2 + 7 more k_*
+  - ~~`surface-match` (15): Hook fix — lookbehind now uses jp_orig (spaces intact) to avoid false positives at word boundaries (e.g. 毎日 水が); genuine v_nani→v_nan in なんですか~~
+  - ~~`term-ids` (10): Hook fix — kanjiGrid section-type tracking; k_* IDs in kanjiGrid are valid~~
 - [ ] **N5.3** — 31 issues [`surface-match`, `term-ids`]
   - ~~`form-scope` (10): FIXED — polite_masu moved to N5.1~~
   - `surface-match` (15): v_tomodachi, v_sensei not matching jp text

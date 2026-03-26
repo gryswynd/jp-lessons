@@ -74,7 +74,7 @@
             },
             {
               "spk": "B",
-              "jp": "コーヒーは 飲みません。ジュースを 飲みたいです。",
+              "jp": "コーヒーは 飲みません。ジュースを 飲みます。",
               "terms": [
                 "v_koohii",
                 "p_wa",
@@ -86,9 +86,8 @@
                 "p_wo",
                 {
                   "id": "v_nomu",
-                  "form": "plain_desire_tai"
-                },
-                "g_desu"
+                  "form": "polite_masu"
+                }
               ]
             }
           ],
@@ -448,8 +447,8 @@
             "char_yamakawa",
             "p_wa",
             "v_depaato",
-            "p_e",
             "p_mo",
+            "p_e",
             {
               "id": "v_iku",
               "form": "polite_mashita"
@@ -461,7 +460,7 @@
           "en": "He bought a friend's present. The present is new. It is cheap, you know.",
           "terms": [
             "v_tomodachi",
-            "p_no",
+            "p_wa",
             "v_purezento",
             "p_wo",
             {
@@ -469,7 +468,7 @@
               "form": "polite_mashita"
             },
             "v_purezento",
-            "p_wa",
+            "p_no",
             "v_atarashii",
             "g_desu",
             "v_yasui",
@@ -799,9 +798,9 @@
           "answer": "の",
           "terms": [
             "v_tomodachi",
-            "p_no",
-            "v_purezento",
             "p_wa",
+            "v_purezento",
+            "p_no",
             "v_takai",
             "g_desu"
           ],

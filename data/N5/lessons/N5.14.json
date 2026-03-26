@@ -55,9 +55,9 @@
           "en": "The teacher's book looks interesting, doesn't it.",
           "terms": [
             "v_sensei",
-            "p_no",
-            "v_hon",
             "p_wa",
+            "v_hon",
+            "p_no",
             {
               "id": "v_omoshiroi",
               "form": "appearance_sou_stem"
@@ -71,9 +71,9 @@
           "en": "Last week's test was long.",
           "terms": [
             "v_senshuu",
-            "p_no",
-            "v_tesuto",
             "p_wa",
+            "v_tesuto",
+            "p_no",
             {
               "id": "v_nagai",
               "form": "plain_past_adj"
@@ -216,9 +216,9 @@
             "v_gakkou",
             "p_ni",
             "v_nihongo",
-            "p_no",
-            "v_hon",
             "p_ga",
+            "v_hon",
+            "p_no",
             "v_ooi",
             "g_desu",
             "p_ne"
@@ -575,7 +575,8 @@
           "terms": [
             "v_konshuu",
             "v_jikan",
-            "v_aru"
+            "v_aru",
+            "p_ka"
           ]
         },
         {
@@ -627,8 +628,8 @@
             "v_shiroi",
             "v_hana",
             "v_suki",
-            "g_da",
             "p_yo",
+            "g_da",
             "v_jikan",
             "p_ga",
             "v_sukunai",
@@ -641,8 +642,8 @@
           "en": "It's okay. We have a little time so let's go!",
           "terms": [
             "v_daijoubu",
-            "g_da",
             "p_yo",
+            "g_da",
             "v_sukoshi",
             "v_jikan",
             "v_aru",
@@ -681,7 +682,7 @@
             "v_kyou",
             "p_wa",
             "v_gakkou",
-            "p_no",
+            "p_ga",
             "v_soto",
             "p_ni",
             {
@@ -690,7 +691,7 @@
             },
             "v_shiroi",
             "v_hana",
-            "p_ga",
+            "p_no",
             "v_ooi",
             "g_desu"
           ]
@@ -700,14 +701,14 @@
           "en": "The flowers outside are very beautiful. There are few people.",
           "terms": [
             "v_soto",
-            "p_no",
+            "p_ga",
             "v_hana",
             "p_wa",
             "v_totemo",
             "v_kirei",
             "g_desu",
             "v_hito",
-            "p_ga",
+            "p_no",
             "v_sukunai",
             "g_desu"
           ]
@@ -718,13 +719,13 @@
           "terms": [
             "v_taitei",
             "v_doyoubi",
-            "p_ni",
+            "p_wa",
             {
               "id": "v_kuru",
               "form": "polite_masu"
             },
             "v_kyou",
-            "p_wa",
+            "p_ni",
             "v_sukoshi",
             "v_jikan",
             "p_ga",
@@ -790,7 +791,8 @@
             "p_wa",
             "v_totemo",
             "v_kirei",
-            "g_desu"
+            "g_desu",
+            "p_ka"
           ]
         },
         {
@@ -809,7 +811,8 @@
             {
               "id": "v_kuru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -827,7 +830,8 @@
               "id": "v_kuru",
               "form": "plain_desire_tai"
             },
-            "g_desu"
+            "g_desu",
+            "p_ka"
           ]
         }
       ]
@@ -842,7 +846,7 @@
           "terms": [
             "char_ken",
             "v_gakkou",
-            "p_ni",
+            "p_wa",
             "v_shounen",
             "p_ga",
             {
@@ -850,7 +854,7 @@
               "form": "polite_masu"
             },
             "v_namae",
-            "p_wa",
+            "p_ni",
             "g_desu"
           ]
         },
@@ -962,7 +966,8 @@
             {
               "id": "v_yomu",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -985,7 +990,8 @@
             {
               "id": "v_iru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -1002,7 +1008,8 @@
             "v_jikan",
             "p_ga",
             "v_ooi",
-            "g_desu"
+            "g_desu",
+            "p_ka"
           ]
         }
       ]
@@ -1099,9 +1106,9 @@
             "v_gakkou",
             "p_ni",
             "v_nihongo",
-            "p_no",
-            "v_hon",
             "p_ga",
+            "v_hon",
+            "p_no",
             "v_ooi",
             "g_desu",
             "g_desu",

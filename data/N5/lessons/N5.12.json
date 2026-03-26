@@ -63,9 +63,9 @@
           "en": "The river fish looks delicious, doesn't it.",
           "terms": [
             "v_kawa",
-            "p_no",
-            "v_sakana",
             "p_wa",
+            "v_sakana",
+            "p_no",
             {
               "id": "v_oishii",
               "form": "appearance_sou_stem"
@@ -79,9 +79,9 @@
           "en": "Yesterday's fireworks were very big.",
           "terms": [
             "v_kinou",
-            "p_no",
-            "v_hanabi",
             "p_wa",
+            "v_hanabi",
+            "p_no",
             "v_totemo",
             {
               "id": "v_ookii",
@@ -181,7 +181,7 @@
             "v_daigaku",
             "v_kouchou",
             "v_gakusei",
-            "v_kurasu",
+            "v_kurasu_class",
             "v_tesuto"
           ]
         },
@@ -519,9 +519,9 @@
           "en": "Is the Japanese class interesting?",
           "terms": [
             "v_nihongo",
-            "p_no",
-            "v_kurasu",
             "p_wa",
+            "v_kurasu_class",
+            "p_no",
             "v_omoshiroi",
             "g_desu",
             "p_ka"
@@ -580,14 +580,14 @@
           "en": "Today's Japanese class is interesting, right.",
           "terms": [
             "v_kyou",
-            "p_no",
+            "p_wa",
             "v_nihongo",
             "p_no",
-            "v_kurasu",
-            "p_wa",
+            "v_kurasu_class",
+            "p_no",
             "v_omoshiroi",
-            "p_yo",
-            "p_ne"
+            "p_ne",
+            "p_yo"
           ]
         },
         {
@@ -658,7 +658,7 @@
               "id": "v_manabu",
               "form": "plain_desire_tai"
             },
-            "p_yo",
+            "p_ne",
             "v_gakkou",
             "p_de",
             "v_takusan",
@@ -666,7 +666,7 @@
               "id": "v_manabu",
               "form": "plain_desire_tai"
             },
-            "p_ne"
+            "p_yo"
           ]
         }
       ]
@@ -705,9 +705,9 @@
             "v_atarashii",
             "g_desu",
             "v_nihongo",
-            "p_no",
-            "v_kurasu",
             "p_mo",
+            "v_kurasu_class",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -718,12 +718,12 @@
           "jp": "クラスに 外国人の 学生が います。外国から 来ています。",
           "en": "There are foreign students in the class. They have come from foreign countries.",
           "terms": [
-            "v_kurasu",
+            "v_kurasu_class",
             "p_ni",
             "v_gaikokujin",
-            "p_no",
-            "v_gakusei",
             "p_ga",
+            "v_gakusei",
+            "p_no",
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -800,7 +800,8 @@
               "form": "te_form"
             },
             "v_atarashii",
-            "g_desu"
+            "g_desu",
+            "p_ka"
           ]
         },
         {
@@ -823,7 +824,8 @@
               "id": "v_omoshiroi",
               "form": "plain_past_adj"
             },
-            "g_desu"
+            "g_desu",
+            "p_ka"
           ]
         },
         {
@@ -842,7 +844,8 @@
               "id": "v_manabu",
               "form": "plain_desire_tai"
             },
-            "g_desu"
+            "g_desu",
+            "p_ka"
           ]
         }
       ]
@@ -879,9 +882,9 @@
           "en": "Japanese books are expensive, but they are good books.",
           "terms": [
             "v_nihongo",
-            "p_no",
-            "v_hon",
             "p_wa",
+            "v_hon",
+            "p_no",
             "v_takai",
             "g_desu",
             "p_ga_but",
@@ -896,8 +899,8 @@
           "en": "In my class there are Japanese and foreign teachers.",
           "terms": [
             "v_watashi",
-            "p_no",
-            "v_kurasu",
+            "p_ga",
+            "v_kurasu_class",
             "p_ni",
             "v_nihonjin",
             "p_no",
@@ -906,7 +909,7 @@
             "v_gaikokujin",
             "p_no",
             "v_sensei",
-            "p_ga",
+            "p_no",
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -944,9 +947,9 @@
           "en": "I bought a Japanese book before the test. I also have a notebook and pen.",
           "terms": [
             "v_tesuto",
-            "p_no",
+            "p_mo",
             "v_mae",
-            "p_ni",
+            "p_no",
             "v_nihongo",
             "p_no",
             "v_hon",
@@ -958,7 +961,7 @@
             "v_nooto",
             "p_to",
             "v_pen",
-            "p_mo",
+            "p_ni",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -986,7 +989,8 @@
             {
               "id": "v_iru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -1003,7 +1007,8 @@
             "v_takai",
             "g_desu",
             "v_ii",
-            "g_desu"
+            "g_desu",
+            "p_ka"
           ]
         },
         {
@@ -1021,7 +1026,8 @@
             {
               "id": "v_kau",
               "form": "polite_mashita"
-            }
+            },
+            "p_ka"
           ]
         }
       ]
@@ -1164,7 +1170,7 @@
           "terms": [
             "v_nihongo",
             "p_no",
-            "v_kurasu",
+            "v_kurasu_class",
             "p_de",
             {
               "id": "v_manabu",

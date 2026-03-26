@@ -69,17 +69,16 @@
           ]
         },
         {
-          "jp": "今日 デパートへ 行きたいです。",
-          "en": "I want to go to the department store today.",
+          "jp": "今日 デパートへ 行きます。",
+          "en": "I will go to the department store today.",
           "terms": [
             "v_kyou",
             "v_depaato",
             "p_e",
             {
               "id": "v_iku",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -324,8 +323,8 @@
       "lines": [
         {
           "spk": "先生",
-          "jp": "りきぞさん、今日 外食を したいですか。",
-          "en": "Rikizo-san, do you want to eat out today?",
+          "jp": "りきぞさん、今日 外食を しますか。",
+          "en": "Rikizo-san, will you eat out today?",
           "terms": [
             "char_rikizo",
             "v_san",
@@ -334,23 +333,21 @@
             "p_wo",
             {
               "id": "v_suru",
-              "form": "plain_desire_tai"
+              "form": "polite_masu"
             },
-            "g_desu",
             "p_ka"
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "はい、したいです。あの レストランへ 行きましょう。",
-          "en": "Yes, I want to. Let's go to that restaurant.",
+          "jp": "はい、します。あの レストランへ 行きましょう。",
+          "en": "Yes, I will. Let's go to that restaurant.",
           "terms": [
             "p_hai",
             {
               "id": "v_suru",
-              "form": "plain_desire_tai"
+              "form": "polite_masu"
             },
-            "g_desu",
             "v_ano",
             "v_resutoran",
             "p_e",
@@ -640,8 +637,8 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "いいですね。中で 食べたいです。",
-          "en": "That sounds great. I want to eat inside.",
+          "jp": "いいですね。中で 食べましょう。",
+          "en": "That sounds great. Let's eat inside.",
           "terms": [
             "v_ii",
             "g_desu",
@@ -650,9 +647,8 @@
             "p_de",
             {
               "id": "v_taberu",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -920,8 +916,8 @@
           ]
         },
         {
-          "jp": "外食は とても すごいですよ。来週も 行きたいです。",
-          "en": "Eating out is really amazing, you know. I want to go next week too.",
+          "jp": "外食は とても すごいですよ。来週も 行きます。",
+          "en": "Eating out is really amazing, you know. I will go next week too.",
           "terms": [
             "v_gaishoku",
             "p_wa",
@@ -933,9 +929,8 @@
             "p_mo",
             {
               "id": "v_iku",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
+              "form": "polite_masu"
+            }
           ]
         }
       ],
@@ -975,25 +970,23 @@
           ]
         },
         {
-          "q": "やまかわは 来週も 行きたいですか。",
-          "a": "はい、来週も 行きたいです。",
+          "q": "やまかわは 来週も 行きますか。",
+          "a": "はい、来週も 行きます。",
           "terms": [
             "v_raishuu",
             "p_mo",
             {
               "id": "v_iku",
-              "form": "plain_desire_tai"
+              "form": "polite_masu"
             },
-            "g_desu",
             "p_ka",
             "p_hai",
             "v_raishuu",
             "p_mo",
             {
               "id": "v_iku",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -1129,7 +1122,7 @@
         },
         {
           "kind": "mcq",
-          "q": "今日 _______ を したいです。",
+          "q": "今日 _______ を します。",
           "choices": [
             "外食",
             "名前",
@@ -1143,9 +1136,8 @@
             "p_wo",
             {
               "id": "v_suru",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
+              "form": "polite_masu"
+            }
           ]
         },
         {

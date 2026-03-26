@@ -55,9 +55,9 @@
           "en": "The mountains in the north look large.",
           "terms": [
             "v_kita",
-            "p_no",
-            "v_yama",
             "p_wa",
+            "v_yama",
+            "p_no",
             {
               "id": "v_ookii",
               "form": "appearance_sou_stem"
@@ -89,9 +89,9 @@
           "terms": [
             "v_senshuu",
             "v_minami",
-            "p_no",
-            "v_tenki",
             "p_wa",
+            "v_tenki",
+            "p_no",
             {
               "id": "v_ii",
               "form": "plain_past_adj"
@@ -104,12 +104,12 @@
           "en": "There is a long road in front of the school.",
           "terms": [
             "v_gakkou",
-            "p_no",
+            "p_ga",
             "v_mae",
             "p_ni",
             "v_nagai",
             "v_michi",
-            "p_ga",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -231,15 +231,15 @@
           "en": "Above and to the right, I see. It's not to the left or below?",
           "terms": [
             "v_ue",
-            "p_no",
+            "p_wa",
             "v_migi",
             "g_desu",
             "p_ne",
             "v_hidari",
             "p_to",
             "v_shita",
+            "p_no",
             "p_ni",
-            "p_wa",
             {
               "id": "v_aru",
               "form": "polite_negative"
@@ -256,8 +256,8 @@
             "v_hidari",
             "p_to",
             "v_shita",
-            "p_ni",
             "p_wa",
+            "p_ni",
             {
               "id": "v_aru",
               "form": "polite_negative"
@@ -297,9 +297,9 @@
           "en": "The shop to the right looks large. Please come again.",
           "terms": [
             "v_migi",
-            "p_no",
-            "v_mise",
             "p_wa",
+            "v_mise",
+            "p_no",
             {
               "id": "v_ookii",
               "form": "appearance_sou_stem"
@@ -329,15 +329,15 @@
             "v_gakkou",
             "p_wa",
             "v_michi",
-            "p_no",
+            "p_wa",
             "v_migi",
-            "p_ni",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
             },
             "v_eki",
-            "p_wa",
+            "p_ni",
             "v_hidari",
             "p_ni",
             {
@@ -357,8 +357,8 @@
             "g_desu",
             "p_ne",
             "v_ue",
-            "p_ni",
             "p_wa",
+            "p_ni",
             "v_nani",
             "p_ga",
             {
@@ -374,8 +374,8 @@
           "en": "Above, there are mountains. And there's a river to the right of the mountains.",
           "terms": [
             "v_ue",
-            "p_ni",
             "p_wa",
+            "p_mo",
             "v_yama",
             "p_ga",
             {
@@ -387,7 +387,7 @@
             "v_migi",
             "p_ni",
             "v_kawa",
-            "p_mo",
+            "p_ni",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -400,8 +400,8 @@
           "en": "What is below?",
           "terms": [
             "v_shita",
-            "p_ni",
             "p_wa",
+            "p_ni",
             "v_nani",
             "p_ga",
             {
@@ -417,8 +417,8 @@
           "en": "Below, there's a road. There's also a house to the left of the road. It's a long road, isn't it.",
           "terms": [
             "v_shita",
-            "p_ni",
             "p_wa",
+            "p_mo",
             "v_michi",
             "p_ga",
             {
@@ -430,7 +430,7 @@
             "v_hidari",
             "p_ni",
             "v_ie",
-            "p_mo",
+            "p_ni",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -448,21 +448,21 @@
           "en": "Mountains above and roads below are both nice, aren't they. There are also mountains to the northeast.",
           "terms": [
             "v_ue",
-            "p_no",
+            "p_ga",
             "v_yama",
             "p_mo",
             "v_shita",
-            "p_no",
+            "p_mo",
             "v_michi",
             "p_mo",
             "v_ii",
             "g_desu",
             "p_ne",
             "v_hokutou",
+            "p_no",
             "p_ni",
-            "p_mo",
             "v_yama",
-            "p_ga",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -483,9 +483,9 @@
           "terms": [
             "char_rikizo",
             "v_san",
-            "p_no",
-            "v_nihongo",
             "p_wa",
+            "v_nihongo",
+            "p_no",
             "v_jouzu",
             "g_desu",
             "p_yo"
@@ -621,7 +621,8 @@
             {
               "id": "v_iku",
               "form": "plain_negative"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -633,7 +634,8 @@
             "p_yo",
             "v_doko",
             "p_ni",
-            "v_iku"
+            "v_iku",
+            "p_ka"
           ]
         },
         {
@@ -642,14 +644,14 @@
           "en": "There's a big shop above on the right side of the station. I want to go!",
           "terms": [
             "v_eki",
-            "p_no",
+            "p_ga",
             "v_migi",
             "p_no",
             "v_ue",
             "p_ni",
             "v_ookii",
             "v_mise",
-            "p_ga",
+            "p_no",
             "v_aru",
             "p_yo",
             {
@@ -666,12 +668,12 @@
             "v_ii",
             "p_ne",
             "v_hidari",
-            "p_no",
-            "v_shita",
-            "p_ni",
             "p_wa",
-            "v_nani",
+            "v_shita",
             "p_mo",
+            "p_no",
+            "v_nani",
+            "p_ni",
             {
               "id": "v_aru",
               "form": "plain_negative"
@@ -732,9 +734,9 @@
           "en": "Above the station there is a large shop. To the right, there is a long river along the road.",
           "terms": [
             "v_eki",
-            "p_no",
+            "p_ga",
             "v_ue",
-            "p_ni",
+            "p_wa",
             "v_ookii",
             "v_mise",
             "p_ga",
@@ -746,10 +748,10 @@
             "p_no",
             "v_michi",
             "p_ni",
-            "p_wa",
+            "p_ni",
             "v_nagai",
             "v_kawa",
-            "p_ga",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -761,22 +763,22 @@
           "en": "To the left, there are beautiful flowers along the road. The river is long and beautiful.",
           "terms": [
             "v_hidari",
-            "p_no",
+            "p_ga",
             "v_michi",
-            "p_ni",
+            "p_wa",
             "p_wa",
             {
               "id": "v_kirei",
               "form": "attributive_na"
             },
             "v_hana",
-            "p_ga",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
             },
             "v_kawa",
-            "p_wa",
+            "p_ni",
             {
               "id": "v_nagai",
               "form": "te_form"
@@ -790,7 +792,7 @@
           "en": "The road below is old, but I go by train every day. The train goes from right to left.",
           "terms": [
             "v_shita",
-            "p_no",
+            "p_wa",
             "v_michi",
             "p_wa",
             "v_furui",
@@ -798,7 +800,7 @@
             "p_ga_but",
             "v_mainichi",
             "v_densha",
-            "p_de",
+            "p_no",
             {
               "id": "v_iku",
               "form": "te_form"
@@ -808,7 +810,7 @@
               "form": "polite_masu"
             },
             "v_densha",
-            "p_wa",
+            "p_de",
             "v_migi",
             "p_kara",
             "v_hidari",
@@ -824,9 +826,9 @@
           "en": "The shop above is large and nice. I want to go to the shop above with friends.",
           "terms": [
             "v_ue",
-            "p_no",
-            "v_mise",
             "p_wa",
+            "v_mise",
+            "p_no",
             {
               "id": "v_ookii",
               "form": "te_form"
@@ -860,16 +862,17 @@
           ],
           "terms": [
             "v_eki",
-            "p_no",
+            "p_ga",
             "v_ue",
             "p_ni",
             "v_ookii",
             "v_mise",
-            "p_ga",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -883,20 +886,21 @@
           ],
           "terms": [
             "v_hidari",
-            "p_no",
+            "p_ga",
             "v_michi",
-            "p_ni",
             "p_wa",
+            "p_ni",
             {
               "id": "v_kirei",
               "form": "attributive_na"
             },
             "v_hana",
-            "p_ga",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -919,7 +923,8 @@
             {
               "id": "v_iru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         }
       ]
@@ -995,7 +1000,7 @@
             "v_san",
             "p_wa",
             "v_mise",
-            "p_de",
+            "p_wa",
             "v_nihongo",
             "p_no",
             "v_hon",
@@ -1005,7 +1010,7 @@
               "form": "polite_mashita"
             },
             "v_hon",
-            "p_wa",
+            "p_de",
             "v_migi",
             "p_kara",
             "v_hidari",
@@ -1073,7 +1078,8 @@
             {
               "id": "v_iru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -1096,7 +1102,8 @@
             {
               "id": "v_iu",
               "form": "polite_mashita"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -1120,7 +1127,8 @@
               "id": "v_hanasu",
               "form": "plain_desire_tai"
             },
-            "g_desu"
+            "g_desu",
+            "p_ka"
           ]
         }
       ]
@@ -1354,11 +1362,11 @@
           "answer": "大きかったです",
           "terms": [
             "v_migi",
-            "p_no",
+            "p_wa",
             "v_ue",
             "p_no",
             "v_mise",
-            "p_wa",
+            "p_no",
             {
               "id": "v_ookii",
               "form": "plain_past_adj"

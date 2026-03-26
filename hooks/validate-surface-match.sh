@@ -35,9 +35,12 @@ if content.get('type') == 'grammar':
 
 level_order = {'N5': 0, 'N4': 1, 'N3': 2, 'N2': 3, 'N1': 4}
 level_match = _re_top.match(r'(N\d+)\.(\d+)', lesson_id or '')
-if level_match and os.path.exists(manifest_path):
-    target_level = level_match.group(1)
-    target_num = int(level_match.group(2))
+level_prefix_match = _re_top.match(r'(N\d+)', lesson_id or '')
+if level_prefix_match and os.path.exists(manifest_path):
+    target_level = level_prefix_match.group(1)
+    # For standard lessons (N5.X), scope to that lesson number.
+    # For reviews/final/game-days (N5.Review.X etc.), include all kanji for the level.
+    target_num = int(level_match.group(2)) if level_match else 9999
     target_order = level_order.get(target_level, 0)
     try:
         with open(manifest_path) as f:
@@ -185,7 +188,7 @@ def surface_found_in_jp(surface, matches, jp_orig, jp_clean):
     all_forms = [surface] + matches
     if is_pure_kanji(surface) and len(surface) <= 2:
         for f in all_forms:
-            if _re.search(r'(?<![\u4e00-\u9fff])' + _re.escape(f), jp_clean):
+            if _re.search(r'(?<![\u4e00-\u9fff])' + _re.escape(f), jp_orig):
                 return True
         return False
     return any(f in jp_clean for f in all_forms)
@@ -229,7 +232,7 @@ def check_surface(jp, terms, path):
             # Skip when jp contains a fill-in-the-blank marker (conjugated form is in the answer field)
             _vc = info.get('verb_class', '') or info.get('gtype', '')
             _cs, _cr = conjugate_surface(info.get('surface', ''), info.get('reading', ''), _vc, form)
-            if _cs is not None and '______' not in jp:
+            if _cs is not None and '___' not in jp:
                 _jp_clean = jp.replace(' ', '').replace('\u3000', '')
                 if _cs not in _jp_clean and (_cr is None or _cr not in _jp_clean):
                     errors.append(f"  {path}.terms[{i}]: '{tid}' {form} → expected '{_cs}' not found in jp")
@@ -251,6 +254,10 @@ def check_surface(jp, terms, path):
         if info['gtype'] == 'particle' and len(info['surface']) <= 1:
             continue
         if tid in ('g_desu', 'g_da'):
+            continue
+
+        # Skip surface check when jp has a blank marker — compound terms may be split across the blank
+        if '___' in jp:
             continue
 
         surface = info['surface']
