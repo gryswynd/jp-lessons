@@ -88,8 +88,28 @@
       '@keyframes dojoCorrectFlash { 0%{background:#d4edda} 100%{background:transparent} }' +
       '@keyframes dojoWrongShake { 0%,100%{transform:translateX(0)} 20%,60%{transform:translateX(-4px)} 40%,80%{transform:translateX(4px)} }' +
       '.dojo-flash-correct { animation:dojoCorrectFlash 0.6s ease; }' +
-      '.dojo-flash-wrong { animation:dojoWrongShake 0.4s ease; }';
+      '.dojo-flash-wrong { animation:dojoWrongShake 0.4s ease; }' +
+
+      // False ichidan warning
+      '.dojo-warn { display:inline-block; font-size:0.75rem; font-weight:700; padding:3px 10px; border-radius:20px; background:#fff3cd; color:#856404; border:1px solid #ffc107; margin-top:6px; }' +
+      '.dojo-warn-hint { font-size:0.82rem; color:#856404; background:#fff9e6; padding:8px 12px; border-radius:8px; border-left:3px solid #ffc107; margin:8px auto; max-width:320px; text-align:left; }';
     document.head.appendChild(s);
+  }
+
+  // ---- False ichidan registry ----
+  // Godan verbs whose reading ends in いる/える pattern, breaking the ichidan rule.
+  var FALSE_ICHIDAN = {
+    'v_hairu':     { surface: '\u5165\u308B', pair: null,              note: '\u306F\u3044\u308B looks ichidan but conjugates godan: \u5165\u3063\u3066 not \u5165\u3066' },
+    'v_kiru_2':    { surface: '\u5207\u308B', pair: '\u7740\u308B (ichidan, to wear)', note: '\u304D\u308B has a minimal pair: \u5207\u308B (godan, to cut) vs \u7740\u308B (ichidan, to wear)' },
+    'v_kaeru':     { surface: '\u5E30\u308B', pair: null,              note: '\u304B\u3048\u308B looks ichidan but conjugates godan: \u5E30\u3063\u3066 not \u5E30\u3066' },
+    'v_hashiru':   { surface: '\u8D70\u308B', pair: null,              note: '\u306F\u3057\u308B looks ichidan but conjugates godan: \u8D70\u3063\u3066 not \u8D70\u3066' },
+    'v_shiru':     { surface: '\u77E5\u308B', pair: null,              note: '\u3057\u308B looks ichidan but conjugates godan: \u77E5\u3063\u3066 not \u77E5\u3066' },
+    'v_mochikaeru':{ surface: '\u6301\u3061\u5E30\u308B', pair: null,  note: 'Compound of \u5E30\u308B \u2014 also godan' },
+    'v_iru_need':  { surface: '\u8981\u308B', pair: '\u3044\u308B (ichidan, to exist)', note: '\u3044\u308B has a minimal pair: \u8981\u308B (godan, to need) vs \u5C45\u308B (ichidan, to exist)' }
+  };
+
+  function getFalseIchidanInfo(termId) {
+    return FALSE_ICHIDAN[termId] || null;
   }
 
   // ---- State ----
@@ -429,6 +449,10 @@
     html += '<div class="dojo-meaning">' + esc(item.term.meaning) + '</div>';
     html += '<div class="dojo-target">\u2192 ' + esc(item.formLabel) + '</div>';
     html += '<div class="dojo-badge">' + classLabel(item.vc) + '</div>';
+    var falseIchi = getFalseIchidanInfo(item.term.id);
+    if (falseIchi) {
+      html += '<div class="dojo-warn">\u26A0 Exception: Godan verb (looks ichidan!)</div>';
+    }
     html += '</div>';
 
     // Input
@@ -511,6 +535,8 @@
       }).join('') + '</div>';
       h += '<div class="dojo-answer-reveal">\u6B63\u89E3: ' + esc(item.correctSurface) + ' (' + esc(item.correctReading) + ')</div>';
       if (hint) h += '<div class="dojo-hint">' + esc(hint) + '</div>';
+      var falseIchiHint = getFalseIchidanInfo(item.term.id);
+      if (falseIchiHint) h += '<div class="dojo-warn-hint">\u26A0 ' + esc(falseIchiHint.note) + (falseIchiHint.pair ? ' \u2014 Compare: ' + esc(falseIchiHint.pair) : '') + '</div>';
       h += '<button class="dojo-next-btn" id="dojo-next-btn">Next \u27A1</button>';
       if (fb) { fb.innerHTML = h; fb.classList.add('dojo-flash-wrong'); }
       var nextBtn = document.getElementById('dojo-next-btn');
@@ -593,6 +619,14 @@
     // Masu-stem chart
     h += '<tr><td colspan="2" style="font-weight:700;color:#8e44ad;padding-top:10px;">\u307E\u3059-stem (Godan: \u3046\u2192\u3044 row)</td></tr>';
     h += '<tr><td colspan="2" style="color:#555;">Ichidan: drop \u308B</td></tr>';
+    // False ichidan warning section
+    h += '<tr><td colspan="2" style="font-weight:700;color:#856404;padding-top:12px;border-top:1px solid #eee;margin-top:8px;">\u26A0 False Ichidan Verbs</td></tr>';
+    h += '<tr><td colspan="2" style="color:#555;font-size:0.8rem;">These look ichidan (\u3044\u308B/\u3048\u308B ending) but are godan:</td></tr>';
+    h += '<tr><td class="hl">\u5165\u308B (\u306F\u3044\u308B)</td><td style="color:#555">\u2192 \u5165\u3063\u3066</td></tr>';
+    h += '<tr><td class="hl">\u5207\u308B (\u304D\u308B)</td><td style="color:#555">\u2192 \u5207\u3063\u3066 (cf. \u7740\u308B\u2192\u7740\u3066)</td></tr>';
+    h += '<tr><td class="hl">\u5E30\u308B (\u304B\u3048\u308B)</td><td style="color:#555">\u2192 \u5E30\u3063\u3066</td></tr>';
+    h += '<tr><td class="hl">\u8D70\u308B (\u306F\u3057\u308B)</td><td style="color:#555">\u2192 \u8D70\u3063\u3066</td></tr>';
+    h += '<tr><td class="hl">\u77E5\u308B (\u3057\u308B)</td><td style="color:#555">\u2192 \u77E5\u3063\u3066</td></tr>';
     h += '</table></div>';
     return h;
   }
