@@ -86,8 +86,8 @@ Long-running projects tracked in `campaigns/`:
 
 | Campaign | Status | Description |
 |---|---|---|
-| `campaigns/n5-qa-and-game-days.md` | Ready | N5 term QA sweep (lessons, grammar, reviews, compose, stories) + build 17 remaining game days |
-| `campaigns/n4-completion.md` | Ready | Full N4.21–N4.36 refresh, build G22–G31, compose.N4.21–36, stories, review QA, game planning |
+| `campaigns/n5-qa-and-game-days.md` | Phase 1 Complete | N5 QA sweep done (68 files, 0 failures). Phase 2: build 17 remaining game days |
+| `campaigns/n4-completion.md` | Active | N4.29–N4.30 refreshed. Remaining: N4.21–N4.28, N4.31–N4.36 + G21–G31 + compose + stories |
 | `campaigns/n3-production.md` | Planning | Finalize vocab roadmap, QA G32–G49, begin content lesson production |
 | `campaigns/godot-migration.md` | Planning | Migration from web app to Godot 4.x for iOS/Android release |
 
