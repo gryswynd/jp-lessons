@@ -27,9 +27,13 @@ try:
 except:
     sys.exit(0)
 
-lesson_id = content.get('id', '') or content.get('lesson', '')
+content_id = content.get('id', '') or content.get('lesson', '')
+lesson_id = content_id
 if content.get('type') == 'grammar':
     lesson_id = content.get('meta', {}).get('unlocksAfter', lesson_id)
+elif content_id.startswith('compose.') and content.get('lesson'):
+    # Compose files: scope ceiling is the lesson they belong to (e.g. compose.N5.2 → N5.2)
+    lesson_id = content['lesson']
 if not lesson_id:
     sys.exit(0)
 
@@ -41,10 +45,25 @@ if not os.path.exists(conj_path) or not os.path.exists(manifest_path):
 with open(conj_path) as f:
     conj_rules = json.load(f)
 
+# Load particle scope gates
+particles_path = os.path.join(repo_root, 'shared', 'particles.json')
+particle_scope = {}
+if os.path.exists(particles_path):
+    with open(particles_path) as f:
+        pdata = json.load(f)
+    for p in pdata.get('particles', []):
+        if p.get('introducedIn'):
+            particle_scope[p['id']] = p['introducedIn']
+
 # Use shared lesson ordering
 sys.path.insert(0, os.path.join(repo_root, 'hooks'))
 from lib_lesson_order import build_lesson_order
 lesson_order = build_lesson_order(manifest_path)
+
+# For grammar files, also get the file's own order so self-introduced forms
+# (used in the same lesson that introduces them) are not flagged as out of scope.
+file_order = lesson_order.get(content_id)
+scope_ceiling = max(lesson_order.get(lesson_id) or 0, file_order or 0)
 
 errors = []
 
@@ -55,15 +74,20 @@ def check_forms(obj, path="root"):
             if form and form in conj_rules:
                 introduced = conj_rules[form].get('introducedIn', '')
                 if introduced:
-                    t_ord = lesson_order.get(lesson_id)
                     i_ord = lesson_order.get(introduced)
-                    if t_ord is not None and i_ord is not None and i_ord > t_ord:
+                    if i_ord is not None and i_ord > scope_ceiling:
                         errors.append(f"  '{form}' (introducedIn: {introduced}) at {path} — out of scope for {lesson_id}")
         for k, v in obj.items():
             check_forms(v, f"{path}.{k}")
     elif isinstance(obj, list):
         for i, item in enumerate(obj):
-            check_forms(item, f"{path}[{i}]")
+            if isinstance(item, str) and item in particle_scope:
+                introduced = particle_scope[item]
+                i_ord = lesson_order.get(introduced)
+                if i_ord is not None and i_ord > scope_ceiling:
+                    errors.append(f"  particle '{item}' (introducedIn: {introduced}) at {path}[{i}] — out of scope for {lesson_id}")
+            else:
+                check_forms(item, f"{path}[{i}]")
 
 check_forms(content)
 

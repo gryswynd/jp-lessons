@@ -446,8 +446,8 @@
         },
         {
           "spk": "B",
-          "jp": "はい、毎週 います。よかったですね。",
-          "en": "Yes, I am here every week. That's great, isn't it!",
+          "jp": "はい、毎週 います。いいですね。",
+          "en": "Yes, I am here every week. That's great!",
           "terms": [
             "p_hai",
             "v_maishuu",
@@ -455,10 +455,7 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            {
-              "id": "v_ii",
-              "form": "plain_past_adj"
-            },
+            "v_ii",
             "g_desu",
             "p_ne"
           ]
@@ -545,13 +542,10 @@
         },
         {
           "spk": "B",
-          "jp": "よかったです。毎週 分かります。",
-          "en": "That's wonderful. I understand more every week.",
+          "jp": "いいです。毎週 分かります。",
+          "en": "That's good. I understand more every week.",
           "terms": [
-            {
-              "id": "v_ii",
-              "form": "plain_past_adj"
-            },
+            "v_ii",
             "g_desu",
             "v_maishuu",
             {
@@ -758,7 +752,9 @@
       "questions": [
         {
           "q": "やまかわは 今週 いますか。",
+          "q_en": "Is Yamakawa here this week?",
           "a": "はい、います。",
+          "a_en": "Yes, he is here.",
           "terms": [
             "p_wa",
             "v_konshuu",
@@ -766,13 +762,21 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
-            "p_hai"
+            "p_ka"
+          ],
+          "a_terms": [
+            "p_hai",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "今週は 何よう日に いますか。",
+          "q_en": "On which days this week is he here?",
           "a": "月よう日と 水よう日に います。",
+          "a_en": "He is here on Monday and Wednesday.",
           "terms": [
             "v_konshuu",
             "p_wa",
@@ -782,15 +786,24 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_getsuyoubi",
             "p_to",
-            "v_suiyoubi"
+            "v_suiyoubi",
+            "p_ni",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "先週は 何よう日に いましたか。",
+          "q_en": "On which day last week was he here?",
           "a": "月よう日に いました。",
+          "a_en": "He was here on Monday.",
           "terms": [
             "v_senshuu",
             "p_wa",
@@ -800,13 +813,22 @@
               "id": "v_iru",
               "form": "polite_mashita"
             },
-            "p_ka",
-            "v_getsuyoubi"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_getsuyoubi",
+            "p_ni",
+            {
+              "id": "v_iru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "先生は 何時に いますか。",
+          "q_en": "What time is the teacher here?",
           "a": "三時に います。",
+          "a_en": "He is here at three o'clock.",
           "terms": [
             "v_sensei",
             "p_wa",
@@ -816,10 +838,17 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             {
               "counter": "ji",
               "n": 3
+            },
+            "p_ni",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
             }
           ]
         }
@@ -915,7 +944,9 @@
       "questions": [
         {
           "q": "たんじょうびは 三月 三日ですか。",
+          "q_en": "Is the birthday on March 3rd?",
           "a": "はい、そうです。三月 三日です。",
+          "a_en": "Yes, that's right. It is March 3rd.",
           "terms": [
             "v_tanjoubi",
             "p_wa",
@@ -925,14 +956,24 @@
             },
             "v_mikka",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "p_hai",
-            "p_soudesu"
+            "p_soudesu",
+            {
+              "counter": "gatsu",
+              "n": 3
+            },
+            "v_mikka",
+            "g_desu"
           ]
         },
         {
           "q": "きのう 何が ありましたか。",
+          "q_en": "What was there yesterday?",
           "a": "ケーキが ありました。",
+          "a_en": "There was a cake.",
           "terms": [
             "v_kinou",
             "v_nani",
@@ -941,20 +982,31 @@
               "id": "v_aru",
               "form": "polite_mashita"
             },
-            "p_ka",
-            "v_keeki"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_keeki",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "このケーキは どうですか。",
+          "q_en": "How is this cake?",
           "a": "とても いいです。",
+          "a_en": "It is very good.",
           "terms": [
             "v_kono",
             "v_keeki",
             "p_wa",
             "v_dou",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_totemo",
             "v_ii",
             "g_desu"
@@ -962,7 +1014,9 @@
         },
         {
           "q": "友だちは 今週 いますか。",
+          "q_en": "Are your friends here this week?",
           "a": "はい、います。",
+          "a_en": "Yes, they are here.",
           "terms": [
             "v_tomodachi",
             "p_wa",
@@ -971,8 +1025,14 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
-            "p_hai"
+            "p_ka"
+          ],
+          "a_terms": [
+            "p_hai",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]

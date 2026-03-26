@@ -3,6 +3,7 @@ window.GrammarModule = {
 
     // --- CONFIGURATION ---
     const REPO_CONFIG = sharedConfig;
+    if (window.JPShared.stampSettings) window.JPShared.stampSettings.setConfig(REPO_CONFIG);
 
     // --- Grammar Colors ---
     const GRAMMAR_COLORS = {
@@ -932,7 +933,8 @@ window.GrammarModule = {
             solved = true;
             blank.textContent = ch;
             const fullSentence = (item.before || '') + ch + (item.after || '');
-            if (ch === item.answer) {
+            var isCorrect = ch === item.answer || (item.also_accept && item.also_accept.includes(ch));
+            if (isCorrect) {
               correct++; answered++;
               blank.classList.add('filled-correct');
             } else {
@@ -945,7 +947,7 @@ window.GrammarModule = {
             expEl.style.display = 'block';
             scoreText.textContent = answered + ' / ' + items.length;
             barFill.style.width = (answered / items.length * 100) + '%';
-            if (ch === item.answer) {
+            if (isCorrect) {
               const ttsBtn = el('button', 'gr-tts-btn', '🔊');
               ttsBtn.onclick = () => speakText(fullSentence);
               expEl.appendChild(ttsBtn);

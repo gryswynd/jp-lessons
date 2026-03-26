@@ -55,9 +55,9 @@
           "en": "The mountains in the north look large.",
           "terms": [
             "v_kita",
-            "p_no",
-            "v_yama",
             "p_wa",
+            "v_yama",
+            "p_no",
             {
               "id": "v_ookii",
               "form": "appearance_sou_stem"
@@ -89,9 +89,9 @@
           "terms": [
             "v_senshuu",
             "v_minami",
-            "p_no",
-            "v_tenki",
             "p_wa",
+            "v_tenki",
+            "p_no",
             {
               "id": "v_ii",
               "form": "plain_past_adj"
@@ -104,12 +104,12 @@
           "en": "There is a long road in front of the school.",
           "terms": [
             "v_gakkou",
-            "p_no",
+            "p_ga",
             "v_mae",
             "p_ni",
             "v_nagai",
             "v_michi",
-            "p_ga",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -231,15 +231,15 @@
           "en": "Above and to the right, I see. It's not to the left or below?",
           "terms": [
             "v_ue",
-            "p_no",
+            "p_wa",
             "v_migi",
             "g_desu",
             "p_ne",
             "v_hidari",
             "p_to",
             "v_shita",
+            "p_no",
             "p_ni",
-            "p_wa",
             {
               "id": "v_aru",
               "form": "polite_negative"
@@ -256,8 +256,8 @@
             "v_hidari",
             "p_to",
             "v_shita",
-            "p_ni",
             "p_wa",
+            "p_ni",
             {
               "id": "v_aru",
               "form": "polite_negative"
@@ -297,9 +297,9 @@
           "en": "The shop to the right looks large. Please come again.",
           "terms": [
             "v_migi",
-            "p_no",
-            "v_mise",
             "p_wa",
+            "v_mise",
+            "p_no",
             {
               "id": "v_ookii",
               "form": "appearance_sou_stem"
@@ -329,15 +329,15 @@
             "v_gakkou",
             "p_wa",
             "v_michi",
-            "p_no",
+            "p_wa",
             "v_migi",
-            "p_ni",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
             },
             "v_eki",
-            "p_wa",
+            "p_ni",
             "v_hidari",
             "p_ni",
             {
@@ -357,8 +357,8 @@
             "g_desu",
             "p_ne",
             "v_ue",
-            "p_ni",
             "p_wa",
+            "p_ni",
             "v_nani",
             "p_ga",
             {
@@ -374,8 +374,8 @@
           "en": "Above, there are mountains. And there's a river to the right of the mountains.",
           "terms": [
             "v_ue",
-            "p_ni",
             "p_wa",
+            "p_mo",
             "v_yama",
             "p_ga",
             {
@@ -387,7 +387,7 @@
             "v_migi",
             "p_ni",
             "v_kawa",
-            "p_mo",
+            "p_ni",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -400,8 +400,8 @@
           "en": "What is below?",
           "terms": [
             "v_shita",
-            "p_ni",
             "p_wa",
+            "p_ni",
             "v_nani",
             "p_ga",
             {
@@ -417,8 +417,8 @@
           "en": "Below, there's a road. There's also a house to the left of the road. It's a long road, isn't it.",
           "terms": [
             "v_shita",
-            "p_ni",
             "p_wa",
+            "p_mo",
             "v_michi",
             "p_ga",
             {
@@ -430,7 +430,7 @@
             "v_hidari",
             "p_ni",
             "v_ie",
-            "p_mo",
+            "p_ni",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -448,21 +448,21 @@
           "en": "Mountains above and roads below are both nice, aren't they. There are also mountains to the northeast.",
           "terms": [
             "v_ue",
-            "p_no",
+            "p_ga",
             "v_yama",
             "p_mo",
             "v_shita",
-            "p_no",
+            "p_mo",
             "v_michi",
             "p_mo",
             "v_ii",
             "g_desu",
             "p_ne",
             "v_hokutou",
+            "p_no",
             "p_ni",
-            "p_mo",
             "v_yama",
-            "p_ga",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -483,9 +483,9 @@
           "terms": [
             "char_rikizo",
             "v_san",
-            "p_no",
-            "v_nihongo",
             "p_wa",
+            "v_nihongo",
+            "p_no",
             "v_jouzu",
             "g_desu",
             "p_yo"
@@ -621,7 +621,8 @@
             {
               "id": "v_iku",
               "form": "plain_negative"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -633,7 +634,8 @@
             "p_yo",
             "v_doko",
             "p_ni",
-            "v_iku"
+            "v_iku",
+            "p_ka"
           ]
         },
         {
@@ -642,14 +644,14 @@
           "en": "There's a big shop above on the right side of the station. I want to go!",
           "terms": [
             "v_eki",
-            "p_no",
+            "p_ga",
             "v_migi",
             "p_no",
             "v_ue",
             "p_ni",
             "v_ookii",
             "v_mise",
-            "p_ga",
+            "p_no",
             "v_aru",
             "p_yo",
             {
@@ -666,12 +668,12 @@
             "v_ii",
             "p_ne",
             "v_hidari",
-            "p_no",
-            "v_shita",
-            "p_ni",
             "p_wa",
-            "v_nani",
+            "v_shita",
             "p_mo",
+            "p_no",
+            "v_nani",
+            "p_ni",
             {
               "id": "v_aru",
               "form": "plain_negative"
@@ -732,9 +734,9 @@
           "en": "Above the station there is a large shop. To the right, there is a long river along the road.",
           "terms": [
             "v_eki",
-            "p_no",
+            "p_ga",
             "v_ue",
-            "p_ni",
+            "p_wa",
             "v_ookii",
             "v_mise",
             "p_ga",
@@ -746,10 +748,10 @@
             "p_no",
             "v_michi",
             "p_ni",
-            "p_wa",
+            "p_ni",
             "v_nagai",
             "v_kawa",
-            "p_ga",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -761,22 +763,22 @@
           "en": "To the left, there are beautiful flowers along the road. The river is long and beautiful.",
           "terms": [
             "v_hidari",
-            "p_no",
+            "p_ga",
             "v_michi",
-            "p_ni",
+            "p_wa",
             "p_wa",
             {
               "id": "v_kirei",
               "form": "attributive_na"
             },
             "v_hana",
-            "p_ga",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
             },
             "v_kawa",
-            "p_wa",
+            "p_ni",
             {
               "id": "v_nagai",
               "form": "te_form"
@@ -790,7 +792,7 @@
           "en": "The road below is old, but I go by train every day. The train goes from right to left.",
           "terms": [
             "v_shita",
-            "p_no",
+            "p_wa",
             "v_michi",
             "p_wa",
             "v_furui",
@@ -798,7 +800,7 @@
             "p_ga_but",
             "v_mainichi",
             "v_densha",
-            "p_de",
+            "p_no",
             {
               "id": "v_iku",
               "form": "te_form"
@@ -808,7 +810,7 @@
               "form": "polite_masu"
             },
             "v_densha",
-            "p_wa",
+            "p_de",
             "v_migi",
             "p_kara",
             "v_hidari",
@@ -824,9 +826,9 @@
           "en": "The shop above is large and nice. I want to go to the shop above with friends.",
           "terms": [
             "v_ue",
-            "p_no",
-            "v_mise",
             "p_wa",
+            "v_mise",
+            "p_no",
             {
               "id": "v_ookii",
               "form": "te_form"
@@ -850,19 +852,24 @@
       ],
       "questions": [
         {
-          "q": "Where is the large shop?",
-          "a": "Above the station",
-          "choices": [
-            "Above the station",
-            "To the right of the road",
-            "Below the station",
-            "To the left"
-          ],
+          "q": "駅の 上に 何が ありますか。",
+          "q_en": "What is above the station?",
+          "a": "大きい 店が あります。",
+          "a_en": "There is a large shop.",
           "terms": [
             "v_eki",
             "p_no",
             "v_ue",
             "p_ni",
+            "v_nani",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_ookii",
             "v_mise",
             "p_ga",
@@ -873,43 +880,25 @@
           ]
         },
         {
-          "q": "What does the passage say is to the left?",
-          "a": "Beautiful flowers",
-          "choices": [
-            "Beautiful flowers",
-            "A large shop",
-            "A train",
-            "Nothing"
-          ],
-          "terms": [
-            "v_hidari",
-            "p_no",
-            "v_michi",
-            "p_ni",
-            "p_wa",
-            {
-              "id": "v_kirei",
-              "form": "attributive_na"
-            },
-            "v_hana",
-            "p_ga",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "q": "How does the narrator travel every day?",
-          "a": "By train",
-          "choices": [
-            "By train",
-            "By car",
-            "On foot",
-            "By bus"
-          ],
+          "q": "毎日 何で 行っていますか。",
+          "q_en": "How does the narrator travel every day?",
+          "a": "電車で 行っています。",
+          "a_en": "They travel by train.",
           "terms": [
             "v_mainichi",
+            "v_nani",
+            "p_de",
+            {
+              "id": "v_iku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_densha",
             "p_de",
             {
@@ -920,6 +909,35 @@
               "id": "v_iru",
               "form": "polite_masu"
             }
+          ]
+        },
+        {
+          "q": "だれと 上の 店に 行きたいですか。",
+          "q_en": "Who does the narrator want to go to the shop with?",
+          "a": "友だちと 行きたいです。",
+          "a_en": "They want to go with their friends.",
+          "terms": [
+            "v_dare",
+            "p_to",
+            "v_ue",
+            "p_no",
+            "v_mise",
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_tomodachi",
+            "p_to",
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         }
       ]
@@ -995,7 +1013,7 @@
             "v_san",
             "p_wa",
             "v_mise",
-            "p_de",
+            "p_wa",
             "v_nihongo",
             "p_no",
             "v_hon",
@@ -1005,7 +1023,7 @@
               "form": "polite_mashita"
             },
             "v_hon",
-            "p_wa",
+            "p_de",
             "v_migi",
             "p_kara",
             "v_hidari",
@@ -1017,8 +1035,8 @@
           ]
         },
         {
-          "jp": "毎日 少し 上手に なっています。いつか 上手に 日本語を 話したいです。",
-          "en": "I am getting a little better every day. Someday I want to speak Japanese skillfully.",
+          "jp": "毎日 少し 上手に なっています。上手に 日本語を 話したいです。",
+          "en": "I am getting a little better every day. I want to speak Japanese skillfully.",
           "terms": [
             "v_mainichi",
             "v_sukoshi",
@@ -1034,7 +1052,6 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "v_itsuka",
             {
               "id": "v_jouzu",
               "form": "adverbial"
@@ -1051,19 +1068,28 @@
       ],
       "questions": [
         {
-          "q": "What does Rikizo do every day?",
-          "a": "Read Japanese",
-          "choices": [
-            "Read Japanese",
-            "Buy a book",
-            "Speak Japanese",
-            "Go to the station"
-          ],
+          "q": "りきぞさんは 毎日 何を 読んでいますか。",
+          "q_en": "What does Rikizo read every day?",
+          "a": "日本語を 読んでいます。",
+          "a_en": "They read Japanese every day.",
           "terms": [
             "char_rikizo",
             "v_san",
             "p_wa",
             "v_mainichi",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_nihongo",
             "p_wo",
             {
@@ -1077,18 +1103,13 @@
           ]
         },
         {
-          "q": "Who told Rikizo he was skilled?",
-          "a": "Yamakawa",
-          "choices": [
-            "Yamakawa",
-            "Ken",
-            "Lee",
-            "Miki"
-          ],
+          "q": "だれが「上手ですよ」と 言いましたか。",
+          "q_en": "Who said 'You're skilled!'?",
+          "a": "やまかわさんが 言いました。",
+          "a_en": "Yamakawa said it.",
           "terms": [
-            "char_yamakawa",
-            "v_san",
-            "p_wa",
+            "v_dare",
+            "p_ga",
             "v_jouzu",
             "g_desu",
             "p_yo",
@@ -1096,20 +1117,39 @@
             {
               "id": "v_iu",
               "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            "char_yamakawa",
+            "v_san",
+            "p_ga",
+            {
+              "id": "v_iu",
+              "form": "polite_mashita"
             }
           ]
         },
         {
-          "q": "What does the narrator want to do someday?",
-          "a": "Speak Japanese skillfully",
-          "choices": [
-            "Speak Japanese skillfully",
-            "Buy a Japanese book",
-            "Go to the northeast",
-            "Read Japanese every day"
-          ],
+          "q": "りきぞさんは いつか 何を したいですか。",
+          "q_en": "What does Rikizo someday want to do?",
+          "a": "上手に 日本語を 話したいです。",
+          "a_en": "They want to speak Japanese skillfully.",
           "terms": [
+            "char_rikizo",
+            "v_san",
+            "p_wa",
             "v_itsuka",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
             {
               "id": "v_jouzu",
               "form": "adverbial"
@@ -1354,11 +1394,11 @@
           "answer": "大きかったです",
           "terms": [
             "v_migi",
-            "p_no",
+            "p_wa",
             "v_ue",
             "p_no",
             "v_mise",
-            "p_wa",
+            "p_no",
             {
               "id": "v_ookii",
               "form": "plain_past_adj"

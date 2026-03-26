@@ -141,7 +141,7 @@
   "polite_masu": {
     "label": "Polite (Masu-Form)",
     "description": "Standard polite present/future affirmative.",
-    "introducedIn": "N5.5",
+    "introducedIn": "N5.1",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -173,7 +173,7 @@
   "polite_mashita": {
     "label": "Polite Past (Mashita-Form)",
     "description": "Standard polite past affirmative.",
-    "introducedIn": "N5.5",
+    "introducedIn": "N5.1",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -205,7 +205,7 @@
   "polite_negative": {
     "label": "Polite Negative (Masen / Desu)",
     "description": "Standard polite negative.",
-    "introducedIn": "N5.5",
+    "introducedIn": "N5.1",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -251,7 +251,7 @@
   "polite_past_negative": {
     "label": "Polite Past Negative",
     "description": "Standard polite past negative.",
-    "introducedIn": "N5.5",
+    "introducedIn": "N5.1",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -1070,7 +1070,7 @@
   "conditional_ba": {
     "label": "Conditional (Ba)",
     "description": "Expresses a condition (if/provided that). Covers both verb ～ば and i-adjective ～ければ — all taught together in G25.",
-    "introducedIn": "G25",
+    "introducedIn": "N4.25",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -1110,6 +1110,43 @@
         "type": "replace",
         "surface": "あれば",
         "reading": "あれば"
+      }
+    }
+  },
+  "nakereba": {
+    "label": "Nakereba (Obligation Stem)",
+    "description": "Produces the なければ ending used in obligation constructions (なければいけない / なければなりません). Formed identically to plain_negative but with なければ instead of ない. The remaining いけない/なりません is tagged separately as v_ikeru/v_naru in polite_negative.",
+    "introducedIn": "N4.25",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "なければ"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "なければ"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しなければ",
+        "reading": "しなければ"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来なければ",
+        "reading": "こなければ"
+      },
+      "irr_ii": {
+        "type": "replace",
+        "surface": "よくなければ",
+        "reading": "よくなければ"
+      },
+      "irr_aru": {
+        "type": "replace",
+        "surface": "なければ",
+        "reading": "なければ"
       }
     }
   },

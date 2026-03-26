@@ -63,6 +63,7 @@ All of the following must be TRUE for a QA pass:
 - [ ] (Register) Casual conversations do not mix registers — no ます/です forms in casual dialogue lines, no plain forms in polite dialogue lines
 - [ ] (Register) Plain forms in casual conversations have `introducedIn` ≤ current lesson
 - [ ] (Register) Casual conversation `context` fields describe informal relationships (friends, family, close peers)
+- [ ] manifest.json contains an entry for this content file — Grep manifest.json for the content `id` or `dir`/`file` path and confirm the entry is present with correct `id`, `title`, `dir` or `file`, and `unlocksAfter` fields; a missing manifest entry is a hard fail (the content is invisible in the app)
 
 ### Agent 4 (CR) — soft pass/fail (judgment-based)
 
@@ -89,6 +90,9 @@ All of the following should be TRUE for a CR pass:
 - [ ] **Register — naturalness:** Casual conversations sound like real informal speech, not polite sentences with です replaced by だ. Friends use contractions, sentence-final particles, and casual connectors naturally
 - [ ] **Register — context appropriateness:** No casual register in formal contexts (stores, offices with superiors, strangers). No polite register in explicitly casual contexts (close friends at home)
 - [ ] **Register — command/prohibition usage:** Plain commands (～ろ/～え) and prohibition (～な) appear only in appropriate contexts (signs, sports, close friends). Not overused or forced
+- [ ] **Quiz answer ambiguity:** Every MCQ/fillSlot/drill item has exactly one correct answer that is unambiguously the best choice — no alternative answer is grammatically valid and contextually appropriate. If `also_accept` is used, the primary answer must be clearly the best choice and the explanation must state why
+- [ ] **Explanation/hint redundancy:** No `notes` array or `explanation` fields repeat the same rule or information in different words — each entry adds unique pedagogical value
+- [ ] **Unsupported claims:** Every grammar rule or assertion in `explanation`, `notes`, and comparison `points` is paired with a concrete example sentence — no bare claims without demonstration
 
 ---
 

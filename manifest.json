@@ -936,7 +936,7 @@
         },
         {
           "id": "N4.28",
-          "title": "Places & Parts",
+          "title": "Ponds, Groves, Gates, Villages",
           "file": "data/N4/lessons/N4.28.json",
           "kanji": [
             "池",
@@ -947,7 +947,7 @@
         },
         {
           "id": "N4.29",
-          "title": "Measurement & Knowledge",
+          "title": "Typhoons, Clocks, and Knowing",
           "file": "data/N4/lessons/N4.29.json",
           "kanji": [
             "台",
@@ -1114,7 +1114,7 @@
         },
         {
           "id": "N4.Review.13",
-          "title": "Education, Research & Methods",
+          "title": "Phase 4 Review: Research, Literature & Correct Thinking",
           "file": "data/N4/reviews/N4.Review.13.json",
           "unlocksAfter": "N4.26"
         },
@@ -1295,6 +1295,26 @@
           "lesson": "N4.25",
           "file": "data/N4/compose/compose.N4.25.json",
           "unlocksAfter": "N4.25"
+        },
+        {
+          "lesson": "N4.26",
+          "file": "data/N4/compose/compose.N4.26.json",
+          "unlocksAfter": "N4.26"
+        },
+        {
+          "lesson": "N4.27",
+          "file": "data/N4/compose/compose.N4.27.json",
+          "unlocksAfter": "N4.27"
+        },
+        {
+          "lesson": "N4.28",
+          "file": "data/N4/compose/compose.N4.28.json",
+          "unlocksAfter": "N4.28"
+        },
+        {
+          "lesson": "N4.29",
+          "file": "data/N4/compose/compose.N4.29.json",
+          "unlocksAfter": "N4.29"
         }
       ],
       "stories": [
@@ -1395,6 +1415,27 @@
           "titleJp": "工場の主人",
           "dir": "data/N4/stories/factory-owner",
           "unlocksAfter": "N4.36"
+        },
+        {
+          "id": "natsuyasumi-no-taiken",
+          "title": "A Summer Holiday Experience",
+          "titleJp": "夏休みの体験",
+          "dir": "data/N4/stories/natsuyasumi-no-taiken",
+          "unlocksAfter": "N4.24"
+        },
+        {
+          "id": "kenkyuu-to-sakubun",
+          "title": "Research and Composition",
+          "titleJp": "研究と作文",
+          "dir": "data/N4/stories/kenkyuu-to-sakubun",
+          "unlocksAfter": "N4.26"
+        },
+        {
+          "id": "yuugata-no-mura",
+          "title": "Evening in the Village",
+          "titleJp": "夕方の村",
+          "dir": "data/N4/stories/yuugata-no-mura",
+          "unlocksAfter": "N4.28"
         }
       ],
       "game": [],

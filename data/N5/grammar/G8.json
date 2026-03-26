@@ -616,57 +616,87 @@
       "title": "The あ-Row Shift — Negative Stem Map",
       "description": "To form ないでください (please don't), you need the negative stem. For godan verbs, this means shifting the final syllable to the あ-row — just as the ます stem uses the い-row. Here is every godan ending and its あ-row shift. Pay special attention to the one exception.",
       "tableType": "conjugation",
-      "headers": ["Dictionary ending (う-row)", "ます stem (い-row)", "ない stem (あ-row)", "ないでください example"],
+      "headers": [
+        "Dictionary ending (う-row)",
+        "ない stem (あ-row)",
+        "ないでください example"
+      ],
       "rows": [
         {
           "label": "く",
-          "cells": ["き", "か", "書く → 書かないでください"],
+          "cells": [
+            "か",
+            "書く → 書かないでください"
+          ],
           "meaning": "Please don't write"
         },
         {
           "label": "ぐ",
-          "cells": ["ぎ", "が", "およぐ → およがないでください"],
+          "cells": [
+            "が",
+            "およぐ → およがないでください"
+          ],
           "meaning": "Please don't swim"
         },
         {
           "label": "す",
-          "cells": ["し", "さ", "はなす → はなさないでください"],
+          "cells": [
+            "さ",
+            "はなす → はなさないでください"
+          ],
           "meaning": "Please don't speak"
         },
         {
           "label": "つ",
-          "cells": ["ち", "た", "もつ → もたないでください"],
+          "cells": [
+            "た",
+            "もつ → もたないでください"
+          ],
           "meaning": "Please don't hold"
         },
         {
           "label": "ぬ",
-          "cells": ["に", "な", "しぬ → しなないでください"],
+          "cells": [
+            "な",
+            "しぬ → しなないでください"
+          ],
           "meaning": "Please don't die"
         },
         {
           "label": "ぶ",
-          "cells": ["び", "ば", "よぶ → よばないでください"],
+          "cells": [
+            "ば",
+            "よぶ → よばないでください"
+          ],
           "meaning": "Please don't call"
         },
         {
           "label": "む",
-          "cells": ["み", "ま", "のむ → のまないでください"],
+          "cells": [
+            "ま",
+            "のむ → のまないでください"
+          ],
           "meaning": "Please don't drink"
         },
         {
           "label": "る (godan)",
-          "cells": ["り", "ら", "分かる → 分からないでください"],
+          "cells": [
+            "ら",
+            "分かる → 分からないでください"
+          ],
           "meaning": "Please don't understand (rare, but shows the pattern)"
         },
         {
           "label": "う ⚠️",
-          "cells": ["い", "わ (NOT あ!)", "かう → かわないでください"],
+          "cells": [
+            "わ (NOT あ!)",
+            "かう → かわないでください"
+          ],
           "meaning": "EXCEPTION: please don't buy — う shifts to わ, not あ"
         }
       ],
       "notes": [
-        "The い-row column is the ます stem you already know. The あ-row column is the negative stem used for ないでください.",
-        "The pattern is the same logic: find the ending syllable on the hiragana chart and move it to the target row. You already do this for ます (い-row) — ない just uses a different row (あ-row).",
+        "Same logic as the い-row shift (ます stem, G6) — find the ending on the hiragana chart and move it to the target row. For ない, the target is the あ-row.",
         "⚠️ THE ONE EXCEPTION: verbs ending in う shift to わ, NOT あ. This is a fixed historical rule: かう (buy) → かわない, いう (say) → いわない, あう (meet) → あわない. If you wrote かあない, it would be wrong — always use わ.",
         "Why う → わ? In Old Japanese, the あ-row character for the う-column was わ. Modern Japanese preserved this single irregularity. Every other ending shifts exactly as the hiragana chart predicts.",
         "For ichidan verbs, the negative stem is simpler: just drop る. 食べる → 食べ + ないでください. いる → い + ないでください.",
@@ -1197,7 +1227,7 @@
         },
         {
           "spk": "先生",
-          "jp": "聞いてください。駅に 行って、コンビニに 来ました。",
+          "jp": "きいてください。駅に 行って、コンビニに 来ました。",
           "en": "Please listen. I went to the station and then came to the convenience store.",
           "terms": [
             {
@@ -1221,7 +1251,7 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "分かりました。書きます。",
+          "jp": "分かりました。かきます。",
           "en": "Understood. I will write it.",
           "terms": [
             {
@@ -1236,7 +1266,7 @@
         },
         {
           "spk": "先生",
-          "jp": "それから、友だちと 話してください。コンビニには 行かないでください。",
+          "jp": "それから、友だちと はなしてください。コンビニには 行かないでください。",
           "en": "After that, please speak with your friend. Please do not go to the convenience store.",
           "terms": [
             "v_sorekara",
@@ -1248,8 +1278,8 @@
             },
             "v_kudasai",
             "v_konbini",
-            "p_ni",
             "p_wa",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "polite_negative_te"
@@ -1289,12 +1319,7 @@
             "行くて"
           ],
           "answer": "行って",
-          "terms": [
-            {
-              "id": "v_iku",
-              "form": "te_form"
-            }
-          ],
+          "terms": [],
           "explanation": "行く is the famous exception to the godan く→いて rule. Instead of 行いて, the correct て-form is 行って. This must be memorised — it is one of the most common verbs in Japanese."
         },
         {
@@ -1307,12 +1332,7 @@
             "いりて"
           ],
           "answer": "いて",
-          "terms": [
-            {
-              "id": "v_iru",
-              "form": "te_form"
-            }
-          ],
+          "terms": [],
           "explanation": "いる is ichidan (い is in the い-row before る). Ichidan て-form: drop る, add て → い + て = いて."
         },
         {
@@ -1325,12 +1345,7 @@
             "きりて"
           ],
           "answer": "来て (きて)",
-          "terms": [
-            {
-              "id": "v_kuru",
-              "form": "te_form"
-            }
-          ],
+          "terms": [],
           "explanation": "来る is an irregular verb. Its て-form is 来て (reading: きて). This cannot be derived from a rule — it must be memorised."
         },
         {
@@ -1343,20 +1358,7 @@
             "駅に 行って、店に 来て。"
           ],
           "answer": "駅に 行って、店に 来ました。",
-          "terms": [
-            "v_eki",
-            "p_ni",
-            {
-              "id": "v_iku",
-              "form": "te_form"
-            },
-            "v_mise",
-            "p_ni",
-            {
-              "id": "v_kuru",
-              "form": "polite_mashita"
-            }
-          ],
+          "terms": [],
           "explanation": "て-form connects sequential actions: 行って (go + connector). The final verb 来ました carries the past tense for both. 行いて is wrong (行く exception). Ending with 来て would leave the sentence unfinished."
         },
         {
@@ -1369,12 +1371,7 @@
             "分かて"
           ],
           "answer": "分かって",
-          "terms": [
-            {
-              "id": "v_wakaru",
-              "form": "te_form"
-            }
-          ],
+          "terms": [],
           "explanation": "分かる is godan (か = あ-row before る → る-trap). Godan る → って: 分かる → 分かって. (This follows the る/つ/う → って rule, NOT the く→いて rule.)"
         },
         {
@@ -1387,39 +1384,20 @@
             "The て-form makes the first action past and the second future"
           ],
           "answer": "Future (both actions will happen)",
-          "terms": [
-            "v_konbini",
-            "p_ni",
-            {
-              "id": "v_iku",
-              "form": "te_form"
-            },
-            "v_tomodachi",
-            "p_ga",
-            {
-              "id": "v_kuru",
-              "form": "polite_masu"
-            }
-          ],
+          "terms": [],
           "explanation": "The て-form has no tense of its own. Tense is determined entirely by the final verb: 来ます is polite present/future, so the whole sequence (going to the convenience store, then friend coming) describes a planned future sequence."
         },
         {
           "kind": "mcq",
           "q": "Which sentence correctly means 'Please speak'?",
           "choices": [
-            "話してください",
+            "はなしてください",
             "話しますください",
             "話さないでください",
-            "話してます"
+            "はなしてます"
           ],
-          "answer": "話してください",
-          "terms": [
-            {
-              "id": "v_hanasu",
-              "form": "te_form"
-            },
-            "v_kudasai"
-          ],
+          "answer": "はなしてください",
+          "terms": [],
           "explanation": "てください = [て-form] + ください. 話す (godan す) → 話して + ください = 話してください. 話しますください is wrong — you cannot attach ください to the ます form. 話さないでください means 'please don't speak' — the opposite request."
         },
         {
@@ -1432,15 +1410,7 @@
             "コンビニに 行きません。"
           ],
           "answer": "コンビニに 行かないでください。",
-          "terms": [
-            "v_konbini",
-            "p_ni",
-            {
-              "id": "v_iku",
-              "form": "polite_negative_te"
-            },
-            "v_kudasai"
-          ],
+          "terms": [],
           "explanation": "Negative request = [negative ない-stem] + ないでください. 行く (godan): shift く→か (あ-column) → 行か + ないでください. 行ってください means 'please go' — the opposite. 行かないください is missing the で and is ungrammatical. 行きません is a simple negative statement, not a request."
         }
       ]

@@ -666,7 +666,9 @@
       "questions": [
         {
           "q": "りきぞは 毎日 どこへ 行きますか。",
+          "q_en": "Where does Rikizo go every day?",
           "a": "学校へ 行きます。",
+          "a_en": "He goes to school.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -677,7 +679,9 @@
               "id": "v_iku",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_gakkou",
             "p_e",
             {
@@ -688,7 +692,9 @@
         },
         {
           "q": "駅は 家から 近いですか、遠いですか。",
+          "q_en": "Is the station near or far from home?",
           "a": "近いです。",
+          "a_en": "It is close.",
           "terms": [
             "v_eki",
             "p_wa",
@@ -699,14 +705,18 @@
             "p_ka",
             "v_tooi",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_chikai",
             "g_desu"
           ]
         },
         {
           "q": "電車で 学校まで 何分 乗りますか。",
+          "q_en": "How many minutes does it take to ride to school by train?",
           "a": "三十分 乗ります。",
+          "a_en": "He rides for thirty minutes.",
           "terms": [
             "v_densha",
             "p_de",
@@ -717,7 +727,9 @@
               "id": "v_noru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             {
               "counter": "fun",
               "n": 30
@@ -730,7 +742,9 @@
         },
         {
           "q": "りきぞは 毎日 電車で 学校へ 行きますか。",
+          "q_en": "Does Rikizo go to school by train every day?",
           "a": "はい、電車に 乗って 行きます。",
+          "a_en": "Yes, he rides the train to get there.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -743,7 +757,9 @@
               "id": "v_iku",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "p_hai",
             "v_densha",
             "p_ni",
@@ -886,13 +902,17 @@
       "questions": [
         {
           "q": "今日は 何ですか。",
+          "q_en": "What is today?",
           "a": "クラスの 遠足です。",
+          "a_en": "It is the class excursion.",
           "terms": [
             "v_kyou",
             "p_wa",
             "v_nan",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_kurasu",
             "p_no",
             "v_ensoku",
@@ -901,7 +921,9 @@
         },
         {
           "q": "学校から 駅まで 歩きますか。",
+          "q_en": "Do you walk from school to the station?",
           "a": "はい、歩きます。",
+          "a_en": "Yes, we walk.",
           "terms": [
             "v_gakkou",
             "p_kara",
@@ -911,7 +933,9 @@
               "id": "v_aruku",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "p_hai",
             {
               "id": "v_aruku",
@@ -921,7 +945,9 @@
         },
         {
           "q": "山は 学校から 遠かったですか。",
+          "q_en": "Was the mountain far from school?",
           "a": "はい、遠かったですが、電車で 行きました。",
+          "a_en": "Yes, it was far, but we went by train.",
           "terms": [
             "v_yama",
             "p_wa",
@@ -932,7 +958,9 @@
               "form": "plain_past_adj"
             },
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "p_hai",
             {
               "id": "v_tooi",
@@ -950,7 +978,9 @@
         },
         {
           "q": "山で 何を しましたか。",
+          "q_en": "What did you do at the mountain?",
           "a": "山の 道を 歩きました。",
+          "a_en": "We walked along the mountain path.",
           "terms": [
             "v_yama",
             "p_de",
@@ -960,7 +990,9 @@
               "id": "v_suru",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_yama",
             "p_no",
             "v_michi",

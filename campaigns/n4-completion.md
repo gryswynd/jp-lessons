@@ -2,7 +2,7 @@
 
 > **Status:** Ready to start
 > **Started:** —
-> **Last updated:** 2026-03-20
+> **Last updated:** 2026-03-25
 
 ---
 
@@ -36,8 +36,8 @@ These lessons exist but predate current quality standards (term tagging, grammar
 
 **Batch 2: N4.28–N4.32** (Passive, Causative, Thoughts & Experience)
 - [ ] N4.28
-- [ ] N4.29
-- [ ] N4.30
+- [x] N4.29 — Typhoons, Clocks, and Knowing ✓ (lesson + compose.N4.29, 2026-03-25)
+- [x] N4.30 — Thinking, Gathering & Answering ✓ (lesson + compose.N4.30, 2026-03-26)
 - [ ] N4.31 — passive/causative forms introduced — major grammar milestone
 - [ ] N4.32
 

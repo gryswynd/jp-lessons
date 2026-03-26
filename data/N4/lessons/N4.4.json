@@ -81,8 +81,8 @@
           ]
         },
         {
-          "jp": "毎朝 朝ごはんを 食べてから 学校に 来られますか。",
-          "en": "Can you come to school every morning after eating breakfast?",
+          "jp": "毎朝 朝ごはんを 食べて 学校に 来られますか。",
+          "en": "Can you eat breakfast and come to school every morning?",
           "terms": [
             "v_maiasa",
             "v_asagohan",
@@ -91,7 +91,6 @@
               "id": "v_taberu",
               "form": "te_form"
             },
-            "p_kara_because",
             "v_gakkou",
             "p_ni",
             {
@@ -720,14 +719,13 @@
           ]
         },
         {
-          "jp": "買ってから 帰って、お茶を 飲みました。",
-          "en": "After buying it, he returned home and drank green tea.",
+          "jp": "買って 帰って、お茶を 飲みました。",
+          "en": "He bought it, returned home, and drank green tea.",
           "terms": [
             {
               "id": "v_kau",
               "form": "te_form"
             },
-            "p_kara_because",
             {
               "id": "v_kaeru",
               "form": "te_form"
@@ -744,7 +742,9 @@
       "questions": [
         {
           "q": "りきぞ は 今日 どこに 行きましたか。",
+          "q_en": "Where did Rikizo go today?",
           "a": "店に 行きました。",
+          "a_en": "He went to the shop.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -755,7 +755,9 @@
               "id": "v_iku",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_mise",
             "p_ni",
             {
@@ -766,7 +768,9 @@
         },
         {
           "q": "りきぞ は 何色の シャツが 大好きですか。",
+          "q_en": "What color shirt does Rikizo love most?",
           "a": "青い シャツが 大好きです。",
+          "a_en": "He loves blue shirts.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -777,7 +781,9 @@
             "p_ga",
             "v_daisuki",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_aoi",
             "v_shatsu",
             "p_ga",
@@ -787,7 +793,9 @@
         },
         {
           "q": "りきぞ は 何を 着てみましたか。",
+          "q_en": "What did Rikizo try on?",
           "a": "青い シャツを 着てみました。",
+          "a_en": "He tried on a blue shirt.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -801,7 +809,9 @@
               "id": "v_miru",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_aoi",
             "v_shatsu",
             "p_wo",
@@ -881,7 +891,7 @@
           ]
         },
         {
-          "jp": "今朝 は 赤い シャツを 着てから 学校に 来られました。",
+          "jp": "今朝 は 赤い シャツを 着て 学校に 来られました。",
           "en": "This morning she put on her red shirt and was able to come to school.",
           "terms": [
             "v_kesa",
@@ -893,7 +903,6 @@
               "id": "v_kiru",
               "form": "te_form"
             },
-            "p_kara_because",
             "v_gakkou",
             "p_ni",
             {
@@ -906,7 +915,9 @@
       "questions": [
         {
           "q": "ミキ は 何色が いちばん 好きですか。",
+          "q_en": "What color does Miki like best?",
           "a": "赤い 色が いちばん 好きです。",
+          "a_en": "She likes red best.",
           "terms": [
             "char_miki",
             "p_wa",
@@ -916,7 +927,9 @@
             "v_ichiban",
             "v_suki",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_akai",
             "v_iro",
             "p_ga",
@@ -927,7 +940,9 @@
         },
         {
           "q": "ミキ は 毎日 何を 着ていますか。",
+          "q_en": "What does Miki wear every day?",
           "a": "赤い シャツや 青い シャツを 着ています。",
+          "a_en": "She wears red shirts and blue shirts.",
           "terms": [
             "char_miki",
             "p_wa",
@@ -942,7 +957,9 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_akai",
             "v_shatsu",
             "p_ya",
@@ -961,7 +978,9 @@
         },
         {
           "q": "ミキ は 黒い シャツが 好きですか。",
+          "q_en": "Does Miki like black shirts?",
           "a": "黒い シャツは あまり 好きじゃありません。",
+          "a_en": "She does not like black shirts very much.",
           "terms": [
             "char_miki",
             "p_wa",
@@ -970,7 +989,9 @@
             "p_ga",
             "v_suki",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_kuroi",
             "v_shatsu",
             "p_wa",

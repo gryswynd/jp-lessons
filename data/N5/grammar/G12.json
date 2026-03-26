@@ -589,12 +589,7 @@
             "長い"
           ],
           "answer": "きれい",
-          "terms": [
-            {
-              "id": "v_kirei",
-              "form": "polite_adj"
-            }
-          ],
+          "terms": [],
           "explanation": "きれい is a な-adjective. Despite ending in い, it uses な before nouns (きれいな 花) and で for the て-form (きれいで). かわいい, 大きい, and 長い are genuine い-adjectives that conjugate with -く endings."
         },
         {
@@ -607,10 +602,7 @@
             "きれいく 花"
           ],
           "answer": "きれいな 花",
-          "terms": [
-            "v_kirei",
-            "v_hana"
-          ],
+          "terms": [],
           "explanation": "な-adjectives add な before a noun: きれい + な + 花 = きれいな 花. Forgetting な is the most common error. い-adjectives don't need anything: 大きい 花 (big flower), no の or な needed."
         },
         {
@@ -623,16 +615,7 @@
             "きれいて、かわいいです。"
           ],
           "answer": "きれいで、かわいいです。",
-          "terms": [
-            {
-              "id": "v_kirei",
-              "form": "te_form"
-            },
-            {
-              "id": "v_kawaii",
-              "form": "polite_adj"
-            }
-          ],
+          "terms": [],
           "explanation": "な-adjective て-form is で: きれいで. い-adjective て-form is くて: かわいくて. Since きれい is a な-adj, the connector is きれいで. Then かわいいです as the final form (い-adj)."
         },
         {
@@ -645,16 +628,7 @@
             "きれいな"
           ],
           "answer": "きれいに",
-          "terms": [
-            {
-              "id": "v_kirei",
-              "form": "adverbial"
-            },
-            {
-              "id": "v_naru",
-              "form": "polite_mashita"
-            }
-          ],
+          "terms": [],
           "explanation": "な-adjective adverb form: base + に. きれい + に + なりました = 'became beautiful'. Compare i-adj: 大きく なりました = 'became big' (く). The pattern Xになる means 'to become X'."
         },
         {
@@ -667,12 +641,7 @@
             "きれいくなかったです"
           ],
           "answer": "きれいでした",
-          "terms": [
-            {
-              "id": "v_kirei",
-              "form": "polite_adj"
-            }
-          ],
+          "terms": [],
           "explanation": "な-adjective polite past: base + でした = きれいでした. NEVER きれいかったです — that would be an い-adjective past and is wrong. The copula でした is used for both nouns and な-adjectives in the past tense."
         },
         {
@@ -685,12 +654,7 @@
             "きれいに なりました"
           ],
           "answer": "きれいかったです",
-          "terms": [
-            {
-              "id": "v_kirei",
-              "form": "polite_adj"
-            }
-          ],
+          "terms": [],
           "explanation": "きれいかったです is WRONG — きれい is a な-adjective, not an い-adjective. The correct past tense is きれいでした. The other three forms are all correct: でした (past), じゃなかったです (past negative), に なりました (became, adverb + naru)."
         }
       ]

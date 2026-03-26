@@ -224,6 +224,72 @@
         margin: 0 0 20px;
       }
 
+      /* Stamp picker */
+      .jp-stamp-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 8px;
+        margin-top: 8px;
+      }
+      .jp-stamp-option {
+        position: relative;
+        aspect-ratio: 1;
+        border: 3px solid #e0e0e0;
+        border-radius: 12px;
+        cursor: pointer;
+        overflow: hidden;
+        background: #fafafa;
+        transition: border-color 0.2s, transform 0.15s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .jp-stamp-option img {
+        width: 85%;
+        height: 85%;
+        object-fit: contain;
+        pointer-events: none;
+      }
+      .jp-stamp-option.selected {
+        border-color: #4e54c8;
+        box-shadow: 0 0 0 2px rgba(78,84,200,0.25);
+        background: #f0f0ff;
+      }
+      @media (hover: hover) {
+        .jp-stamp-option:hover { border-color: #8f94fb; transform: scale(1.05); }
+      }
+      .jp-stamp-option:active { transform: scale(0.95); }
+      .jp-stamp-name {
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        background: rgba(0,0,0,0.55);
+        color: white;
+        font-size: 0.55rem;
+        font-weight: 700;
+        text-align: center;
+        padding: 2px 0;
+        line-height: 1.2;
+      }
+      .jp-stamp-preview {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        padding: 10px 14px;
+        background: #f8f9ff;
+        border-radius: 10px;
+        border: 1.5px solid #e0e3ff;
+      }
+      .jp-stamp-preview img {
+        width: 40px; height: 40px;
+        object-fit: contain;
+      }
+      .jp-stamp-preview-text {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #4e54c8;
+      }
+
       /* Gear button styles (shared across modules) */
       .jp-settings-gear {
         background: rgba(255,255,255,0.2);
@@ -476,6 +542,39 @@
     );
   }
 
+  function buildStampPicker() {
+    var stampApi = window.JPShared.stampSettings;
+    if (!stampApi) return '';
+    var characters = stampApi.getCharactersCache();
+    if (!characters || characters.length === 0) return '';
+    var selectedId = stampApi.getSelected();
+
+    var resolveUrl = stampApi.resolveUrl || function (p) { return p; };
+    var grid = characters.filter(function (c) { return c.portrait; }).map(function (c) {
+      var sel = c.id === selectedId ? ' selected' : '';
+      return '<div class="jp-stamp-option' + sel + '" data-char-id="' + c.id + '" title="' + c.meaning + '">' +
+        '<img src="' + resolveUrl(c.portrait) + '" alt="' + c.meaning + '">' +
+        '<div class="jp-stamp-name">' + c.meaning + '</div>' +
+      '</div>';
+    }).join('');
+
+    var selectedChar = characters.find(function (c) { return c.id === selectedId; });
+    var previewName = selectedChar ? selectedChar.meaning : 'Rikizo';
+    var previewSrc = resolveUrl(selectedChar && selectedChar.portrait ? selectedChar.portrait : 'assets/characters/rikizo/rikizo_head.png');
+
+    return (
+      '<div class="jp-tts-field">' +
+        '<label>My Stamp</label>' +
+        '<div class="jp-stamp-grid" id="jp-stamp-grid">' + grid + '</div>' +
+        '<div class="jp-stamp-preview" id="jp-stamp-preview">' +
+          '<img src="' + previewSrc + '" id="jp-stamp-preview-img">' +
+          '<span class="jp-stamp-preview-text" id="jp-stamp-preview-text">' + previewName + ' is your stamp!</span>' +
+        '</div>' +
+      '</div>' +
+      '<hr class="jp-tts-divider">'
+    );
+  }
+
   function buildModal() {
     var tts = window.JPShared.tts;
     var voices = tts.getVoices();
@@ -506,13 +605,16 @@
 
     var getMoreSection = buildGetMoreVoices(voices, platform);
 
+    var stampSection = buildStampPicker();
+
     var html =
       '<div class="jp-tts-modal">' +
         '<div class="jp-tts-header">' +
-          '<h3>\uD83D\uDD0A Voice Settings</h3>' +
+          '<h3>\u2699\uFE0F Settings</h3>' +
           '<button class="jp-tts-close" id="jp-tts-close">\u2715</button>' +
         '</div>' +
         '<div class="jp-tts-body">' +
+          stampSection +
           '<div class="jp-tts-field">' +
             '<label>Japanese Voice</label>' +
             '<select id="jp-tts-voice-select">' + voiceOptions + '</select>' +
@@ -538,10 +640,16 @@
     return html;
   }
 
-  function open() {
+  async function open() {
     if (isOpen) return;
     injectStyles();
     isOpen = true;
+
+    // Preload characters for stamp picker
+    var stampApi = window.JPShared.stampSettings;
+    if (stampApi && typeof stampApi.loadCharacters === 'function') {
+      try { await stampApi.loadCharacters(); } catch(e) {}
+    }
 
     overlay = document.createElement('div');
     overlay.className = 'jp-tts-overlay';
@@ -555,6 +663,29 @@
 
     // Close button
     document.getElementById('jp-tts-close').addEventListener('click', close);
+
+    // Stamp picker
+    var stampGrid = document.getElementById('jp-stamp-grid');
+    if (stampGrid && stampApi) {
+      stampGrid.addEventListener('click', function (e) {
+        var option = e.target.closest('.jp-stamp-option');
+        if (!option) return;
+        var charId = option.dataset.charId;
+        stampApi.setSelected(charId);
+        // Update selection visual
+        stampGrid.querySelectorAll('.jp-stamp-option').forEach(function (o) {
+          o.classList.toggle('selected', o.dataset.charId === charId);
+        });
+        // Update preview
+        var characters = stampApi.getCharactersCache() || [];
+        var ch = characters.find(function (c) { return c.id === charId; });
+        var previewImg = document.getElementById('jp-stamp-preview-img');
+        var previewText = document.getElementById('jp-stamp-preview-text');
+        var resolveFn = stampApi.resolveUrl || function (p) { return p; };
+        if (ch && previewImg) previewImg.src = resolveFn(ch.portrait);
+        if (ch && previewText) previewText.textContent = ch.meaning + ' is your stamp!';
+      });
+    }
 
     // Voice selection
     var voiceSelect = document.getElementById('jp-tts-voice-select');

@@ -966,7 +966,9 @@
       "questions": [
         {
           "q": "友だちは 何人 いますか。",
+          "q_en": "How many friends are there?",
           "a": "三人 います。",
+          "a_en": "There are three.",
           "terms": [
             "v_tomodachi",
             "p_wa",
@@ -975,16 +977,24 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             {
               "counter": "nin",
               "n": 3
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
             }
           ]
         },
         {
           "q": "毎月 一日に 何が ありますか。",
+          "q_en": "What is there on the first of every month?",
           "a": "お金が あります。",
+          "a_en": "There is money.",
           "terms": [
             "v_maigetsu",
             "v_ichinichitsuitachi",
@@ -995,18 +1005,29 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            "p_ka",
-            "v_okane"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_okane",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "やまかわは どうですか。",
+          "q_en": "How is Yamakawa?",
           "a": "とても うれしいです。",
+          "a_en": "He is very happy.",
           "terms": [
             "p_wa",
             "v_dou",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_totemo",
             "v_ureshii",
             "g_desu"
@@ -1014,7 +1035,9 @@
         },
         {
           "q": "今月も お金が ありますか。",
+          "q_en": "Is there money this month too?",
           "a": "はい、あります。",
+          "a_en": "Yes, there is.",
           "terms": [
             "v_kongetsu",
             "p_mo",
@@ -1024,8 +1047,14 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            "p_ka",
-            "p_hai"
+            "p_ka"
+          ],
+          "a_terms": [
+            "p_hai",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -1133,7 +1162,9 @@
       "questions": [
         {
           "q": "たんじょうびは 五月 五日ですか。",
+          "q_en": "Is the birthday on May 5th?",
           "a": "はい、五月 五日です。",
+          "a_en": "Yes, it is May 5th.",
           "terms": [
             "v_tanjoubi",
             "p_wa",
@@ -1143,13 +1174,23 @@
             },
             "v_itsuka",
             "g_desu",
-            "p_ka",
-            "p_hai"
+            "p_ka"
+          ],
+          "a_terms": [
+            "p_hai",
+            {
+              "counter": "gatsu",
+              "n": 5
+            },
+            "v_itsuka",
+            "g_desu"
           ]
         },
         {
           "q": "友だちのたんじょうびは 八月 八日ですか。",
+          "q_en": "Is the friend's birthday on August 8th?",
           "a": "そうです。八月 八日です。",
+          "a_en": "That's right. It is August 8th.",
           "terms": [
             "v_tomodachi",
             "p_no",
@@ -1161,13 +1202,23 @@
             },
             "v_youka",
             "g_desu",
-            "p_ka",
-            "p_soudesu"
+            "p_ka"
+          ],
+          "a_terms": [
+            "p_soudesu",
+            {
+              "counter": "gatsu",
+              "n": 8
+            },
+            "v_youka",
+            "g_desu"
           ]
         },
         {
           "q": "毎月、何が ありますか。",
+          "q_en": "What is there every month?",
           "a": "いい たんじょうびが あります。",
+          "a_en": "There are nice birthdays.",
           "terms": [
             "v_maigetsu",
             "v_nani",
@@ -1176,15 +1227,24 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_ii",
             "g_desu",
-            "v_tanjoubi"
+            "v_tanjoubi",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "先生のたんじょうびは 十月ですか。",
+          "q_en": "Is the teacher's birthday in October?",
           "a": "はい、十月 十日です。",
+          "a_en": "Yes, it is October 10th.",
           "terms": [
             "v_sensei",
             "p_no",
@@ -1195,9 +1255,16 @@
               "n": 10
             },
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "p_hai",
-            "v_tooka"
+            {
+              "counter": "gatsu",
+              "n": 10
+            },
+            "v_tooka",
+            "g_desu"
           ]
         }
       ]

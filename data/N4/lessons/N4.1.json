@@ -319,7 +319,10 @@
           "jp": "六時まで 働きました。長い 一日でした。",
           "en": "I worked until 6. It was a long day.",
           "terms": [
-            { "counter": "ji", "n": 6 },
+            {
+              "counter": "ji",
+              "n": 6
+            },
             "p_made",
             {
               "id": "v_hataraku",
@@ -475,7 +478,10 @@
           "jp": "六時半に 起きます。シャツを 着て、電車で 学校へ 行きます。",
           "en": "I wake up at 6:30. I put on a shirt and go to school by train.",
           "terms": [
-            { "counter": "ji", "n": 6 },
+            {
+              "counter": "ji",
+              "n": 6
+            },
             "v_han",
             "p_ni",
             {
@@ -589,7 +595,10 @@
           "jp": "五万円か。たくさん 働くよ！",
           "en": "50,000 yen? I'd better work a lot!",
           "terms": [
-            { "counter": "en", "n": 50000 },
+            {
+              "counter": "en",
+              "n": 50000
+            },
             "p_ka",
             "v_takusan",
             {
@@ -678,7 +687,10 @@
           "jp": "六時に 会社を 出て、電車で 帰ります。",
           "en": "He leaves the company at 6 and goes home by train.",
           "terms": [
-            { "counter": "ji", "n": 6 },
+            {
+              "counter": "ji",
+              "n": 6
+            },
             "p_ni",
             "v_kaisha",
             "p_wo",
@@ -702,7 +714,10 @@
             "p_wa",
             "v_densha",
             "p_de",
-            { "counter": "fun", "n": 30 },
+            {
+              "counter": "fun",
+              "n": 30
+            },
             "g_desu"
           ]
         },
@@ -735,7 +750,9 @@
       "questions": [
         {
           "q": "りきぞは どこで 働いていますか。",
+          "q_en": "Where does Rikizo work?",
           "a": "会社で 働いています。",
+          "a_en": "He works at a company.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -749,7 +766,9 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_kaisha",
             "p_de",
             {
@@ -764,7 +783,9 @@
         },
         {
           "q": "会社で 何を 使いますか。",
+          "q_en": "What does he use at the company?",
           "a": "パソコンを 使います。",
+          "a_en": "He uses a computer.",
           "terms": [
             "v_kaisha",
             "p_de",
@@ -774,7 +795,9 @@
               "id": "v_tsukau",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_pasokon",
             "p_wo",
             {
@@ -785,22 +808,31 @@
         },
         {
           "q": "帰り道は どうですか。",
+          "q_en": "How is the commute home?",
           "a": "電車で 三十分です。",
+          "a_en": "It is thirty minutes by train.",
           "terms": [
             "v_kaerimichi",
             "p_wa",
             "v_dou",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_densha",
             "p_de",
-            { "counter": "fun", "n": 30 },
+            {
+              "counter": "fun",
+              "n": 30
+            },
             "g_desu"
           ]
         },
         {
           "q": "家に 着いて、何を 食べますか。",
+          "q_en": "What does he eat after arriving home?",
           "a": "魚を 食べます。",
+          "a_en": "He eats fish.",
           "terms": [
             "v_ie",
             "p_ni",
@@ -814,7 +846,9 @@
               "id": "v_taberu",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_sakana",
             "p_wo",
             {
@@ -836,7 +870,10 @@
             "v_watashi",
             "p_wa",
             "v_mainichi",
-            { "counter": "ji", "n": 6 },
+            {
+              "counter": "ji",
+              "n": 6
+            },
             "p_ni",
             {
               "id": "v_okiru",
@@ -918,7 +955,9 @@
       "questions": [
         {
           "q": "毎日 何時に 起きますか。",
+          "q_en": "What time do you wake up every day?",
           "a": "六時に 起きます。",
+          "a_en": "I wake up at six o'clock.",
           "terms": [
             "v_mainichi",
             "v_nanji",
@@ -927,8 +966,13 @@
               "id": "v_okiru",
               "form": "polite_masu"
             },
-            "p_ka",
-            { "counter": "ji", "n": 6 },
+            "p_ka"
+          ],
+          "a_terms": [
+            {
+              "counter": "ji",
+              "n": 6
+            },
             "p_ni",
             {
               "id": "v_okiru",
@@ -938,7 +982,9 @@
         },
         {
           "q": "起きて、何を しますか。",
+          "q_en": "What do you do after waking up?",
           "a": "シャツを 着ます。",
+          "a_en": "I put on a shirt.",
           "terms": [
             {
               "id": "v_okiru",
@@ -950,7 +996,9 @@
               "id": "v_suru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_shatsu",
             "p_wo",
             {
@@ -961,7 +1009,9 @@
         },
         {
           "q": "今日、友だちに 何を 送りたいですか。",
+          "q_en": "What do you want to send to your friend today?",
           "a": "本を 送りたいです。",
+          "a_en": "I want to send a book.",
           "terms": [
             "v_kyou",
             "v_tomodachi",
@@ -973,7 +1023,9 @@
               "form": "plain_desire_tai"
             },
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_hon",
             "p_wo",
             {
@@ -985,7 +1037,9 @@
         },
         {
           "q": "どこへ 切手を 買いに 行きますか。",
+          "q_en": "Where do you go to buy stamps?",
           "a": "駅へ 行きます。",
+          "a_en": "I go to the station.",
           "terms": [
             "v_doko",
             "p_e",
@@ -1000,7 +1054,9 @@
               "id": "v_iku",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_eki",
             "p_e",
             {
@@ -1158,7 +1214,10 @@
           "answer": "働きます",
           "terms": [
             "v_mainichi",
-            { "counter": "ji", "n": 6 },
+            {
+              "counter": "ji",
+              "n": 6
+            },
             "p_made",
             "v_kaisha",
             "p_de",

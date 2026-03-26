@@ -208,7 +208,8 @@ func _handle_npc_interaction(npc) -> void:
 				{"speaker": "りきぞ", "jp": "お母さん…！", "en": "Mom…!"},
 				{"speaker": "りきぞ", "jp": "そとに…なにも…！", "en": "Outside… nothing…!"},
 				{"speaker": "mom", "jp": "なに？", "en": "What?"},
-				{"speaker": "mom", "jp": "りきぞはいい先生ですよ。", "en": "Rikizo, you're a good teacher."},
+				{"speaker": "mom", "jp": "パソコンはありますよ。", "en": "You have your persocon, you know."},
+				{"speaker": "mom", "jp": "いい先生ですよ。パソコンでべんきょうしてね。", "en": "You're a good teacher. Go study on your persocon, OK?"},
 				{"speaker": "りきぞ", "jp": "…はい。", "en": "…OK."}
 			]
 			if shocked:
@@ -219,8 +220,10 @@ func _handle_npc_interaction(npc) -> void:
 			convo = [
 				{"speaker": "りきぞ", "jp": "お父さん！", "en": "Dad!"},
 				{"speaker": "りきぞ", "jp": "そとに…なにもない…！", "en": "Outside… there's nothing…!"},
-				{"speaker": "dad", "jp": "ん？", "en": "Hm?"},
-				{"speaker": "dad", "jp": "りきぞ、先生ですよ。", "en": "Rikizo, you're a teacher."},
+				{"speaker": "dad", "jp": "ん？そとですか。", "en": "Hm? Outside?"},
+				{"speaker": "dad", "jp": "パソコンはいいですか？", "en": "Is your persocon working OK?"},
+				{"speaker": "りきぞ", "jp": "え…？パソコン…？", "en": "Huh…? The persocon…?"},
+				{"speaker": "dad", "jp": "先生ですよ。パソコンでがんばってね。", "en": "You're a teacher. Do your best on the persocon, OK?"},
 				{"speaker": "りきぞ", "jp": "…はい。", "en": "…OK."}
 			]
 			if shocked:

@@ -75,7 +75,7 @@ if os.path.exists(conj_path):
 
 errors = []
 
-def check_terms(terms, path):
+def check_terms(terms, path, in_kanji_grid=False):
     if not isinstance(terms, list):
         return
     for i, term in enumerate(terms):
@@ -84,7 +84,7 @@ def check_terms(terms, path):
             if term.startswith(('v_', 'k_', 'p_', 'g_', 'char_')):
                 if term not in valid_ids:
                     errors.append(f"  Unknown ID '{term}' at {tp}")
-                if term.startswith('k_') and 'kanjiGrid' not in path:
+                if term.startswith('k_') and not in_kanji_grid:
                     errors.append(f"  k_* ID '{term}' used outside kanjiGrid at {tp} — use v_*")
         elif isinstance(term, dict):
             tid = term.get('id', '')
@@ -96,15 +96,17 @@ def check_terms(terms, path):
             if form and valid_forms and form not in valid_forms:
                 errors.append(f"  Unknown form '{form}' at {tp}")
 
-def walk(obj, path="root"):
+def walk(obj, path="root", in_kanji_grid=False):
     if isinstance(obj, dict):
+        section_type = obj.get('type', '')
+        is_kanji_grid = in_kanji_grid or section_type == 'kanjiGrid'
         if 'terms' in obj and isinstance(obj['terms'], list):
-            check_terms(obj['terms'], path + '.terms')
+            check_terms(obj['terms'], path + '.terms', is_kanji_grid)
         for k, v in obj.items():
-            walk(v, f"{path}.{k}")
+            walk(v, f"{path}.{k}", is_kanji_grid)
     elif isinstance(obj, list):
         for i, item in enumerate(obj):
-            walk(item, f"{path}[{i}]")
+            walk(item, f"{path}[{i}]", in_kanji_grid)
 
 walk(content)
 

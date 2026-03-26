@@ -63,9 +63,9 @@
           "en": "The river fish looks delicious, doesn't it.",
           "terms": [
             "v_kawa",
-            "p_no",
-            "v_sakana",
             "p_wa",
+            "v_sakana",
+            "p_no",
             {
               "id": "v_oishii",
               "form": "appearance_sou_stem"
@@ -79,9 +79,9 @@
           "en": "Yesterday's fireworks were very big.",
           "terms": [
             "v_kinou",
-            "p_no",
-            "v_hanabi",
             "p_wa",
+            "v_hanabi",
+            "p_no",
             "v_totemo",
             {
               "id": "v_ookii",
@@ -181,7 +181,7 @@
             "v_daigaku",
             "v_kouchou",
             "v_gakusei",
-            "v_kurasu",
+            "v_kurasu_class",
             "v_tesuto"
           ]
         },
@@ -519,9 +519,9 @@
           "en": "Is the Japanese class interesting?",
           "terms": [
             "v_nihongo",
-            "p_no",
-            "v_kurasu",
             "p_wa",
+            "v_kurasu_class",
+            "p_no",
             "v_omoshiroi",
             "g_desu",
             "p_ka"
@@ -580,26 +580,27 @@
           "en": "Today's Japanese class is interesting, right.",
           "terms": [
             "v_kyou",
-            "p_no",
+            "p_wa",
             "v_nihongo",
             "p_no",
-            "v_kurasu",
-            "p_wa",
+            "v_kurasu_class",
+            "p_no",
             "v_omoshiroi",
-            "p_yo",
-            "p_ne"
+            "p_ne",
+            "p_yo"
           ]
         },
         {
           "spk": "レン",
-          "jp": "うん。けど テストも あるよ。",
-          "en": "Yeah. But there's also a test.",
+          "jp": "うん。けど テストが あるんだよ。",
+          "en": "Yeah. But there is a test, you know.",
           "terms": [
             "v_un",
             "p_kedo",
             "v_tesuto",
-            "p_mo",
+            "p_ga",
             "v_aru",
+            "p_nda",
             "p_yo"
           ]
         },
@@ -658,7 +659,7 @@
               "id": "v_manabu",
               "form": "plain_desire_tai"
             },
-            "p_yo",
+            "p_ne",
             "v_gakkou",
             "p_de",
             "v_takusan",
@@ -666,7 +667,7 @@
               "id": "v_manabu",
               "form": "plain_desire_tai"
             },
-            "p_ne"
+            "p_yo"
           ]
         }
       ]
@@ -705,9 +706,9 @@
             "v_atarashii",
             "g_desu",
             "v_nihongo",
-            "p_no",
-            "v_kurasu",
             "p_mo",
+            "v_kurasu_class",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -718,12 +719,12 @@
           "jp": "クラスに 外国人の 学生が います。外国から 来ています。",
           "en": "There are foreign students in the class. They have come from foreign countries.",
           "terms": [
-            "v_kurasu",
+            "v_kurasu_class",
             "p_ni",
             "v_gaikokujin",
-            "p_no",
-            "v_gakusei",
             "p_ga",
+            "v_gakusei",
+            "p_no",
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -785,16 +786,20 @@
       ],
       "questions": [
         {
-          "q": "What does the narrator say about the school?",
-          "a": "It is big and new",
-          "choices": [
-            "It is big and new",
-            "It is old and small",
-            "It is cheap and boring",
-            "It is big and cheap"
-          ],
+          "q": "学校は どうですか。",
+          "q_en": "What is the school like?",
+          "a": "学校は 大きくて、新しいです。",
+          "a_en": "The school is big and new.",
           "terms": [
             "v_gakkou",
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_gakkou",
+            "p_wa",
             {
               "id": "v_ookii",
               "form": "te_form"
@@ -804,21 +809,29 @@
           ]
         },
         {
-          "q": "What does the narrator say about last week's test?",
-          "a": "It was long but interesting",
-          "choices": [
-            "It was long but interesting",
-            "It was short and boring",
-            "It was easy and good",
-            "It was big and expensive"
-          ],
+          "q": "先週の テストは どうでしたか。",
+          "q_en": "How was last week's test?",
+          "a": "長かったですが、おもしろかったです。",
+          "a_en": "It was long but interesting.",
           "terms": [
+            "v_senshuu",
+            "p_no",
             "v_tesuto",
+            "p_wa",
+            "v_dou",
+            {
+              "id": "g_desu",
+              "form": "polite_past_copula"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             {
               "id": "v_nagai",
               "form": "plain_past_adj"
             },
             "g_desu",
+            "p_ga_but",
             {
               "id": "v_omoshiroi",
               "form": "plain_past_adj"
@@ -827,16 +840,24 @@
           ]
         },
         {
-          "q": "What does the narrator want to do?",
-          "a": "Learn a lot of Japanese",
-          "choices": [
-            "Learn a lot of Japanese",
-            "Go to a foreign country",
-            "Buy many books",
-            "Rest at school"
-          ],
+          "q": "何を たくさん 学びたいですか。",
+          "q_en": "What does the narrator want to learn a lot of?",
+          "a": "日本語を たくさん 学びたいです。",
+          "a_en": "They want to learn a lot of Japanese.",
           "terms": [
+            "v_nani",
+            "p_wo",
+            "v_takusan",
+            {
+              "id": "v_manabu",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_nihongo",
+            "p_wo",
             "v_takusan",
             {
               "id": "v_manabu",
@@ -879,9 +900,9 @@
           "en": "Japanese books are expensive, but they are good books.",
           "terms": [
             "v_nihongo",
-            "p_no",
-            "v_hon",
             "p_wa",
+            "v_hon",
+            "p_no",
             "v_takai",
             "g_desu",
             "p_ga_but",
@@ -896,8 +917,8 @@
           "en": "In my class there are Japanese and foreign teachers.",
           "terms": [
             "v_watashi",
-            "p_no",
-            "v_kurasu",
+            "p_ga",
+            "v_kurasu_class",
             "p_ni",
             "v_nihonjin",
             "p_no",
@@ -906,7 +927,7 @@
             "v_gaikokujin",
             "p_no",
             "v_sensei",
-            "p_ga",
+            "p_no",
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -944,9 +965,9 @@
           "en": "I bought a Japanese book before the test. I also have a notebook and pen.",
           "terms": [
             "v_tesuto",
-            "p_no",
+            "p_mo",
             "v_mae",
-            "p_ni",
+            "p_no",
             "v_nihongo",
             "p_no",
             "v_hon",
@@ -958,7 +979,7 @@
             "v_nooto",
             "p_to",
             "v_pen",
-            "p_mo",
+            "p_ni",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -969,16 +990,27 @@
       ],
       "questions": [
         {
-          "q": "What does the narrator study every day?",
-          "a": "Japanese",
-          "choices": [
-            "Japanese",
-            "Chinese",
-            "English",
-            "Math"
-          ],
+          "q": "毎日 何を 学んでいますか。",
+          "q_en": "What does the narrator study every day?",
+          "a": "日本語を 学んでいます。",
+          "a_en": "They are studying Japanese.",
           "terms": [
+            "v_mainichi",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_manabu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_nihongo",
+            "p_wo",
             {
               "id": "v_manabu",
               "form": "te_form"
@@ -990,34 +1022,51 @@
           ]
         },
         {
-          "q": "What does the narrator say about Japanese books?",
-          "a": "They are expensive but good",
-          "choices": [
-            "They are expensive but good",
-            "They are cheap and boring",
-            "They are old and interesting",
-            "They are small and new"
-          ],
+          "q": "日本語の 本は どうですか。",
+          "q_en": "What are Japanese books like?",
+          "a": "高いですが、いい 本です。",
+          "a_en": "They are expensive but good books.",
           "terms": [
+            "v_nihongo",
+            "p_no",
             "v_hon",
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_takai",
             "g_desu",
+            "p_ga_but",
             "v_ii",
+            "v_hon",
             "g_desu"
           ]
         },
         {
-          "q": "What did the narrator buy before the test?",
-          "a": "A Japanese book",
-          "choices": [
-            "A Japanese book",
-            "A notebook",
-            "A pen",
-            "A new book"
-          ],
+          "q": "テストの 前に 何を 買いましたか。",
+          "q_en": "What did the narrator buy before the test?",
+          "a": "日本語の 本を 買いました。",
+          "a_en": "They bought a Japanese book.",
           "terms": [
-            "v_hon",
+            "v_tesuto",
+            "p_no",
+            "v_mae",
+            "p_ni",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_nihongo",
+            "p_no",
+            "v_hon",
+            "p_wo",
             {
               "id": "v_kau",
               "form": "polite_mashita"
@@ -1164,7 +1213,7 @@
           "terms": [
             "v_nihongo",
             "p_no",
-            "v_kurasu",
+            "v_kurasu_class",
             "p_de",
             {
               "id": "v_manabu",

@@ -9,7 +9,12 @@
     "focus": "Conjugating verbs in polite present, past, negative, and past negative forms",
     "estimatedMinutes": 25,
     "particles": [],
-    "grammarForms": ["polite_masu", "polite_mashita", "polite_negative", "polite_past_negative"],
+    "grammarForms": [
+      "polite_masu",
+      "polite_mashita",
+      "polite_negative",
+      "polite_past_negative"
+    ],
     "icon": "🔤"
   },
   "sections": [
@@ -32,8 +37,16 @@
       "type": "grammarRule",
       "id": "rule_masu_present",
       "pattern": [
-        { "label": "VERB STEM", "color": "verb", "text": "行き" },
-        { "label": "ENDING", "color": "predicate", "text": "ます" }
+        {
+          "label": "VERB STEM",
+          "color": "verb",
+          "text": "行き"
+        },
+        {
+          "label": "ENDING",
+          "color": "predicate",
+          "text": "ます"
+        }
       ],
       "meaning": "～ます — polite present / future affirmative",
       "explanation": "ます attaches to the verb stem to create the polite present or future affirmative. For godan (U-type) verbs, shift the final syllable from the う-row to the い-row, then add ます. For ichidan (RU-type) verbs, drop the final る and add ます.",
@@ -48,31 +61,77 @@
       "examples": [
         {
           "parts": [
-            { "text": "毎日", "role": "modifier", "gloss": "every day" },
-            { "text": "駅", "role": "topic", "gloss": "station" },
-            { "text": "に", "role": "particle" },
-            { "text": "行き", "role": "verb", "gloss": "go-" },
-            { "text": "ます", "role": "predicate" }
+            {
+              "text": "毎日",
+              "role": "modifier",
+              "gloss": "every day"
+            },
+            {
+              "text": "駅",
+              "role": "topic",
+              "gloss": "station"
+            },
+            {
+              "text": "に",
+              "role": "particle"
+            },
+            {
+              "text": "行き",
+              "role": "verb",
+              "gloss": "go-"
+            },
+            {
+              "text": "ます",
+              "role": "predicate"
+            }
           ],
           "en": "I go to the station every day.",
           "breakdown": "Godan verb 行く: く→き + ます = 行きます"
         },
         {
           "parts": [
-            { "text": "バス", "role": "topic", "gloss": "bus" },
-            { "text": "で", "role": "particle" },
-            { "text": "来", "role": "verb", "gloss": "come" },
-            { "text": "ます", "role": "predicate" }
+            {
+              "text": "バス",
+              "role": "topic",
+              "gloss": "bus"
+            },
+            {
+              "text": "で",
+              "role": "particle"
+            },
+            {
+              "text": "来",
+              "role": "verb",
+              "gloss": "come"
+            },
+            {
+              "text": "ます",
+              "role": "predicate"
+            }
           ],
           "en": "I come by bus.",
           "breakdown": "Irregular 来る → 来ます (reading: きます)"
         },
         {
           "parts": [
-            { "text": "友だち", "role": "topic", "gloss": "friend" },
-            { "text": "が", "role": "particle" },
-            { "text": "い", "role": "verb", "gloss": "be" },
-            { "text": "ます", "role": "predicate" }
+            {
+              "text": "友だち",
+              "role": "topic",
+              "gloss": "friend"
+            },
+            {
+              "text": "が",
+              "role": "particle"
+            },
+            {
+              "text": "い",
+              "role": "verb",
+              "gloss": "be"
+            },
+            {
+              "text": "ます",
+              "role": "predicate"
+            }
           ],
           "en": "My friend is here.",
           "breakdown": "Ichidan verb いる: drop る + ます = います"
@@ -83,8 +142,16 @@
       "type": "grammarRule",
       "id": "rule_masu_past",
       "pattern": [
-        { "label": "VERB STEM", "color": "verb", "text": "行き" },
-        { "label": "ENDING", "color": "predicate", "text": "ました" }
+        {
+          "label": "VERB STEM",
+          "color": "verb",
+          "text": "行き"
+        },
+        {
+          "label": "ENDING",
+          "color": "predicate",
+          "text": "ました"
+        }
       ],
       "meaning": "～ました — polite past affirmative",
       "explanation": "Replace ます with ました to express a completed action in the polite past. The stem formation is identical to the ます form — only the ending changes.",
@@ -97,22 +164,58 @@
       "examples": [
         {
           "parts": [
-            { "text": "きのう", "role": "modifier", "gloss": "yesterday" },
-            { "text": "店", "role": "topic", "gloss": "store" },
-            { "text": "へ", "role": "particle" },
-            { "text": "行き", "role": "verb", "gloss": "go-" },
-            { "text": "ました", "role": "predicate" }
+            {
+              "text": "きのう",
+              "role": "modifier",
+              "gloss": "yesterday"
+            },
+            {
+              "text": "店",
+              "role": "topic",
+              "gloss": "store"
+            },
+            {
+              "text": "へ",
+              "role": "particle"
+            },
+            {
+              "text": "行き",
+              "role": "verb",
+              "gloss": "go-"
+            },
+            {
+              "text": "ました",
+              "role": "predicate"
+            }
           ],
           "en": "I went to the store yesterday.",
           "breakdown": "行きます → 行きました: swap ます for ました"
         },
         {
           "parts": [
-            { "text": "先週", "role": "modifier", "gloss": "last week" },
-            { "text": "バス", "role": "topic", "gloss": "bus" },
-            { "text": "で", "role": "particle" },
-            { "text": "来", "role": "verb", "gloss": "come" },
-            { "text": "ました", "role": "predicate" }
+            {
+              "text": "先週",
+              "role": "modifier",
+              "gloss": "last week"
+            },
+            {
+              "text": "バス",
+              "role": "topic",
+              "gloss": "bus"
+            },
+            {
+              "text": "で",
+              "role": "particle"
+            },
+            {
+              "text": "来",
+              "role": "verb",
+              "gloss": "come"
+            },
+            {
+              "text": "ました",
+              "role": "predicate"
+            }
           ],
           "en": "Last week I came by bus.",
           "breakdown": "来ます → 来ました (reading: きました)"
@@ -123,8 +226,16 @@
       "type": "grammarRule",
       "id": "rule_masu_negative",
       "pattern": [
-        { "label": "VERB STEM", "color": "verb", "text": "行き" },
-        { "label": "ENDING", "color": "predicate", "text": "ません" }
+        {
+          "label": "VERB STEM",
+          "color": "verb",
+          "text": "行き"
+        },
+        {
+          "label": "ENDING",
+          "color": "predicate",
+          "text": "ません"
+        }
       ],
       "meaning": "～ません — polite present / future negative",
       "explanation": "Replace ます with ません to express that the action does not happen or will not happen. The stem is the same as the ます form.",
@@ -137,21 +248,53 @@
       "examples": [
         {
           "parts": [
-            { "text": "今日", "role": "modifier", "gloss": "today" },
-            { "text": "駅", "role": "topic", "gloss": "station" },
-            { "text": "に", "role": "particle" },
-            { "text": "行き", "role": "verb", "gloss": "go-" },
-            { "text": "ません", "role": "predicate" }
+            {
+              "text": "今日",
+              "role": "modifier",
+              "gloss": "today"
+            },
+            {
+              "text": "駅",
+              "role": "topic",
+              "gloss": "station"
+            },
+            {
+              "text": "に",
+              "role": "particle"
+            },
+            {
+              "text": "行き",
+              "role": "verb",
+              "gloss": "go-"
+            },
+            {
+              "text": "ません",
+              "role": "predicate"
+            }
           ],
           "en": "I am not going to the station today.",
           "breakdown": "行きます → 行きません: swap ます for ません"
         },
         {
           "parts": [
-            { "text": "タクシー", "role": "topic", "gloss": "taxi" },
-            { "text": "で", "role": "particle" },
-            { "text": "来", "role": "verb", "gloss": "come" },
-            { "text": "ません", "role": "predicate" }
+            {
+              "text": "タクシー",
+              "role": "topic",
+              "gloss": "taxi"
+            },
+            {
+              "text": "で",
+              "role": "particle"
+            },
+            {
+              "text": "来",
+              "role": "verb",
+              "gloss": "come"
+            },
+            {
+              "text": "ません",
+              "role": "predicate"
+            }
           ],
           "en": "I don't come by taxi.",
           "breakdown": "来ます → 来ません (reading: きません)"
@@ -162,8 +305,16 @@
       "type": "grammarRule",
       "id": "rule_masu_past_negative",
       "pattern": [
-        { "label": "VERB STEM", "color": "verb", "text": "行き" },
-        { "label": "ENDING", "color": "predicate", "text": "ませんでした" }
+        {
+          "label": "VERB STEM",
+          "color": "verb",
+          "text": "行き"
+        },
+        {
+          "label": "ENDING",
+          "color": "predicate",
+          "text": "ませんでした"
+        }
       ],
       "meaning": "～ませんでした — polite past negative",
       "explanation": "Add でした after ません to express that the action did not happen in the past. This is simply the past tense of the negative.",
@@ -176,21 +327,53 @@
       "examples": [
         {
           "parts": [
-            { "text": "先週", "role": "modifier", "gloss": "last week" },
-            { "text": "スーパー", "role": "topic", "gloss": "supermarket" },
-            { "text": "へ", "role": "particle" },
-            { "text": "行き", "role": "verb", "gloss": "go-" },
-            { "text": "ませんでした", "role": "predicate" }
+            {
+              "text": "先週",
+              "role": "modifier",
+              "gloss": "last week"
+            },
+            {
+              "text": "スーパー",
+              "role": "topic",
+              "gloss": "supermarket"
+            },
+            {
+              "text": "へ",
+              "role": "particle"
+            },
+            {
+              "text": "行き",
+              "role": "verb",
+              "gloss": "go-"
+            },
+            {
+              "text": "ませんでした",
+              "role": "predicate"
+            }
           ],
           "en": "Last week I didn't go to the supermarket.",
           "breakdown": "行きません + でした → 行きませんでした"
         },
         {
           "parts": [
-            { "text": "友だち", "role": "topic", "gloss": "friend" },
-            { "text": "が", "role": "particle" },
-            { "text": "い", "role": "verb", "gloss": "be" },
-            { "text": "ませんでした", "role": "predicate" }
+            {
+              "text": "友だち",
+              "role": "topic",
+              "gloss": "friend"
+            },
+            {
+              "text": "が",
+              "role": "particle"
+            },
+            {
+              "text": "い",
+              "role": "verb",
+              "gloss": "be"
+            },
+            {
+              "text": "ませんでした",
+              "role": "predicate"
+            }
           ],
           "en": "My friend was not here.",
           "breakdown": "います → いません + でした → いませんでした"
@@ -202,26 +385,47 @@
       "title": "All Polite Verb Forms",
       "description": "The four polite verb forms follow a single stem. Master the stem formation once and the endings are always the same. Note how the stem never changes — only the ending swaps.",
       "tableType": "conjugation",
-      "headers": ["Form", "Godan: 行く (go)", "Ichidan: いる (be)", "Irregular: 来る (come)"],
+      "headers": [
+        "Form",
+        "Godan: 行く (go)",
+        "Ichidan: いる (be)",
+        "Irregular: 来る (come)"
+      ],
       "rows": [
         {
           "label": "Present / Future",
-          "cells": ["行きます", "います", "来ます (きます)"],
+          "cells": [
+            "行きます",
+            "います",
+            "来ます (きます)"
+          ],
           "meaning": "go / will go"
         },
         {
           "label": "Past",
-          "cells": ["行きました", "いました", "来ました (きました)"],
+          "cells": [
+            "行きました",
+            "いました",
+            "来ました (きました)"
+          ],
           "meaning": "went / was here"
         },
         {
           "label": "Negative",
-          "cells": ["行きません", "いません", "来ません (きません)"],
+          "cells": [
+            "行きません",
+            "いません",
+            "来ません (きません)"
+          ],
           "meaning": "don't go / not here"
         },
         {
           "label": "Past Negative",
-          "cells": ["行きませんでした", "いませんでした", "来ませんでした (きませんでした)"],
+          "cells": [
+            "行きませんでした",
+            "いませんでした",
+            "来ませんでした (きませんでした)"
+          ],
           "meaning": "didn't go / wasn't here"
         }
       ],
@@ -247,10 +451,24 @@
           ],
           "example": {
             "parts": [
-              { "text": "行く", "role": "verb", "gloss": "dictionary form" },
-              { "text": "→", "role": "modifier" },
-              { "text": "行き", "role": "verb", "gloss": "stem (く→き)" },
-              { "text": "ます", "role": "predicate" }
+              {
+                "text": "行く",
+                "role": "verb",
+                "gloss": "dictionary form"
+              },
+              {
+                "text": "→",
+                "role": "modifier"
+              },
+              {
+                "text": "行き",
+                "role": "verb",
+                "gloss": "stem (く→き)"
+              },
+              {
+                "text": "ます",
+                "role": "predicate"
+              }
             ],
             "en": "go → goes / will go (polite)"
           }
@@ -267,10 +485,24 @@
           ],
           "example": {
             "parts": [
-              { "text": "いる", "role": "verb", "gloss": "dictionary form" },
-              { "text": "→", "role": "modifier" },
-              { "text": "い", "role": "verb", "gloss": "stem (drop る)" },
-              { "text": "ます", "role": "predicate" }
+              {
+                "text": "いる",
+                "role": "verb",
+                "gloss": "dictionary form"
+              },
+              {
+                "text": "→",
+                "role": "modifier"
+              },
+              {
+                "text": "い",
+                "role": "verb",
+                "gloss": "stem (drop る)"
+              },
+              {
+                "text": "ます",
+                "role": "predicate"
+              }
             ],
             "en": "be / exist → is here (polite)"
           }
@@ -285,12 +517,33 @@
         {
           "context": "Asking where someone is going (present / future)",
           "parts": [
-            { "text": "今日", "role": "modifier", "gloss": "today" },
-            { "text": "どこ", "role": "topic", "gloss": "where" },
-            { "text": "に", "role": "particle" },
-            { "text": "行き", "role": "verb", "gloss": "go-" },
-            { "text": "ます", "role": "predicate" },
-            { "text": "か", "role": "particle" }
+            {
+              "text": "今日",
+              "role": "modifier",
+              "gloss": "today"
+            },
+            {
+              "text": "どこ",
+              "role": "topic",
+              "gloss": "where"
+            },
+            {
+              "text": "に",
+              "role": "particle"
+            },
+            {
+              "text": "行き",
+              "role": "verb",
+              "gloss": "go-"
+            },
+            {
+              "text": "ます",
+              "role": "predicate"
+            },
+            {
+              "text": "か",
+              "role": "particle"
+            }
           ],
           "en": "Where are you going today?",
           "note": "行きます + か = yes/no question. どこに = 'to where' — asking about the destination."
@@ -298,11 +551,29 @@
         {
           "context": "Reporting a completed action (past)",
           "parts": [
-            { "text": "きのう", "role": "modifier", "gloss": "yesterday" },
-            { "text": "駅", "role": "topic", "gloss": "station" },
-            { "text": "へ", "role": "particle" },
-            { "text": "行き", "role": "verb", "gloss": "go-" },
-            { "text": "ました", "role": "predicate" }
+            {
+              "text": "きのう",
+              "role": "modifier",
+              "gloss": "yesterday"
+            },
+            {
+              "text": "駅",
+              "role": "topic",
+              "gloss": "station"
+            },
+            {
+              "text": "へ",
+              "role": "particle"
+            },
+            {
+              "text": "行き",
+              "role": "verb",
+              "gloss": "go-"
+            },
+            {
+              "text": "ました",
+              "role": "predicate"
+            }
           ],
           "en": "I went to the station yesterday.",
           "note": "ました marks a completed, past action. へ emphasises direction ('toward the station')."
@@ -310,10 +581,24 @@
         {
           "context": "Saying something doesn't happen (negative)",
           "parts": [
-            { "text": "タクシー", "role": "topic", "gloss": "taxi" },
-            { "text": "で", "role": "particle" },
-            { "text": "来", "role": "verb", "gloss": "come" },
-            { "text": "ません", "role": "predicate" }
+            {
+              "text": "タクシー",
+              "role": "topic",
+              "gloss": "taxi"
+            },
+            {
+              "text": "で",
+              "role": "particle"
+            },
+            {
+              "text": "来",
+              "role": "verb",
+              "gloss": "come"
+            },
+            {
+              "text": "ません",
+              "role": "predicate"
+            }
           ],
           "en": "I don't come by taxi.",
           "note": "ません is the polite negative. で marks the means of transport (by taxi)."
@@ -321,11 +606,29 @@
         {
           "context": "Saying something didn't happen (past negative)",
           "parts": [
-            { "text": "先週", "role": "modifier", "gloss": "last week" },
-            { "text": "スーパー", "role": "topic", "gloss": "supermarket" },
-            { "text": "へ", "role": "particle" },
-            { "text": "来", "role": "verb", "gloss": "come" },
-            { "text": "ませんでした", "role": "predicate" }
+            {
+              "text": "先週",
+              "role": "modifier",
+              "gloss": "last week"
+            },
+            {
+              "text": "スーパー",
+              "role": "topic",
+              "gloss": "supermarket"
+            },
+            {
+              "text": "へ",
+              "role": "particle"
+            },
+            {
+              "text": "来",
+              "role": "verb",
+              "gloss": "come"
+            },
+            {
+              "text": "ませんでした",
+              "role": "predicate"
+            }
           ],
           "en": "Last week I didn't come to the supermarket.",
           "note": "ませんでした = negative past. It is simply ません + でした joined as one ending."
@@ -333,10 +636,24 @@
         {
           "context": "Describing existence (animate beings)",
           "parts": [
-            { "text": "友だち", "role": "topic", "gloss": "friend" },
-            { "text": "が", "role": "particle" },
-            { "text": "い", "role": "verb", "gloss": "be" },
-            { "text": "ます", "role": "predicate" }
+            {
+              "text": "友だち",
+              "role": "topic",
+              "gloss": "friend"
+            },
+            {
+              "text": "が",
+              "role": "particle"
+            },
+            {
+              "text": "い",
+              "role": "verb",
+              "gloss": "be"
+            },
+            {
+              "text": "ます",
+              "role": "predicate"
+            }
           ],
           "en": "My friend is here.",
           "note": "います uses the ichidan stem い + ます. います is for animate beings (people, animals). あります is for inanimate things."
@@ -358,7 +675,10 @@
             "v_kyou",
             "v_konbini",
             "p_ni",
-            { "id": "v_iku", "form": "polite_mashita" },
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -370,7 +690,10 @@
             "v_iie",
             "v_kyou",
             "p_wa",
-            { "id": "v_iku", "form": "polite_past_negative" }
+            {
+              "id": "v_iku",
+              "form": "polite_past_negative"
+            }
           ]
         },
         {
@@ -381,7 +704,10 @@
             "p_soudesuka",
             "v_kinou",
             "p_wa",
-            { "id": "v_iku", "form": "polite_mashita" },
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -396,7 +722,10 @@
             "p_kara",
             "v_konbini",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -406,11 +735,17 @@
           "terms": [
             "v_basu",
             "p_de",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "p_ka",
             "v_takushii",
             "p_de",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -421,11 +756,17 @@
           "terms": [
             "v_basu",
             "p_de",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "v_takushii",
-            "p_de",
             "p_wa",
-            { "id": "v_kuru", "form": "polite_negative" }
+            "p_de",
+            {
+              "id": "v_kuru",
+              "form": "polite_negative"
+            }
           ]
         }
       ]
@@ -443,7 +784,10 @@
             "v_raishuu",
             "v_doko",
             "p_ni",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -458,7 +802,10 @@
             "p_to",
             "v_mise",
             "p_e",
-            { "id": "v_iku", "form": "polite_masu" }
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -468,7 +815,10 @@
           "terms": [
             "v_basu",
             "p_de",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -480,10 +830,16 @@
             "p_hai",
             "v_basu",
             "p_de",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "v_uchi",
             "p_kara",
-            { "id": "v_kuru", "form": "polite_masu" }
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -493,7 +849,10 @@
           "terms": [
             "v_senshuu",
             "p_mo",
-            { "id": "v_kuru", "form": "polite_mashita" },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -504,10 +863,16 @@
           "terms": [
             "p_hai",
             "v_maishuu",
-            { "id": "v_kuru", "form": "polite_masu" },
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
             "v_senshuu",
             "p_mo",
-            { "id": "v_kuru", "form": "polite_mashita" }
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -599,7 +964,12 @@
         {
           "kind": "mcq",
           "q": "行きました",
-          "choices": ["I go", "I went", "I don't go", "I didn't go"],
+          "choices": [
+            "I go",
+            "I went",
+            "I don't go",
+            "I didn't go"
+          ],
           "answer": "I went",
           "explanation": "行きました is the polite past affirmative of 行く. The ます ending swaps for ました to form the past."
         },
@@ -613,7 +983,7 @@
             "先週 バスで 来ます。"
           ],
           "answer": "先週 バスで 来ませんでした。",
-          "terms": ["v_senshuu", "v_basu", "p_de", { "id": "v_kuru", "form": "polite_past_negative" }],
+          "terms": [],
           "explanation": "来ませんでした is the polite past negative of 来る. 先週 (last week) confirms we need the past form, and the action didn't happen so we need the negative."
         },
         {
@@ -638,15 +1008,20 @@
             "来るません"
           ],
           "answer": "来ません",
-          "terms": [{ "id": "v_kuru", "form": "polite_negative" }],
+          "terms": [],
           "explanation": "来る is an irregular verb. Its polite forms are: 来ます / 来ました / 来ません / 来ませんでした. Reading: きません. The kanji stays but the reading changes to き in all polite forms."
         },
         {
           "kind": "mcq",
           "q": "毎日 駅に 行き_______。 (I go to the station every day.)",
-          "choices": ["ます", "ました", "ません", "ませんでした"],
+          "choices": [
+            "ます",
+            "ました",
+            "ません",
+            "ませんでした"
+          ],
           "answer": "ます",
-          "terms": ["v_mainichi", "v_eki", "p_ni", { "id": "v_iku", "form": "polite_masu" }],
+          "terms": [],
           "explanation": "ます is the polite present / future affirmative. The sentence describes a current habit (every day), so the present form ます is correct."
         },
         {
@@ -659,7 +1034,7 @@
             "うちで バスで 来ます。"
           ],
           "answer": "うちから バスで 来ます。",
-          "terms": ["v_uchi", "p_kara", "v_basu", "p_de", { "id": "v_kuru", "form": "polite_masu" }],
+          "terms": [],
           "explanation": "から marks the starting point (from home). で marks the means of transport (by bus). を would be wrong — it marks a direct object, not an origin."
         }
       ]

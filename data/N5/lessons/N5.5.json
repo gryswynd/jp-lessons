@@ -335,8 +335,8 @@
             "v_senshuu",
             "p_wa",
             "v_mise",
-            "p_ni",
             "p_mo",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "polite_mashita"
@@ -402,8 +402,8 @@
               "form": "polite_masu"
             },
             "v_suupaa",
-            "p_ni",
             "p_mo",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "polite_masu"
@@ -522,8 +522,8 @@
           "en": "I don't come by taxi. The bus is good, you know.",
           "terms": [
             "v_takushii",
-            "p_de",
             "p_wa",
+            "p_de",
             {
               "id": "v_kuru",
               "form": "polite_negative"
@@ -735,8 +735,8 @@
           "en": "He also went to the supermarket.",
           "terms": [
             "v_suupaa",
-            "p_ni",
             "p_mo",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "polite_mashita"
@@ -775,7 +775,9 @@
       "questions": [
         {
           "q": "今週は 何よう日に 来ましたか。",
+          "q_en": "On which days this week did you come?",
           "a": "月よう日と 水よう日に 来ました。",
+          "a_en": "I came on Monday and Wednesday.",
           "terms": [
             "v_konshuu",
             "p_wa",
@@ -785,15 +787,24 @@
               "id": "v_kuru",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_getsuyoubi",
             "p_to",
-            "v_suiyoubi"
+            "v_suiyoubi",
+            "p_ni",
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "きのう どこへ 行きましたか。",
+          "q_en": "Where did you go yesterday?",
           "a": "コンビニへ 行きました。",
+          "a_en": "I went to the convenience store.",
           "terms": [
             "v_kinou",
             "v_doko",
@@ -802,13 +813,22 @@
               "id": "v_iku",
               "form": "polite_mashita"
             },
-            "p_ka",
-            "v_konbini"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_konbini",
+            "p_e",
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "来週は どこへ 行きますか。",
+          "q_en": "Where will you go next week?",
           "a": "駅へ 行きます。",
+          "a_en": "I will go to the station.",
           "terms": [
             "v_raishuu",
             "p_wa",
@@ -818,13 +838,22 @@
               "id": "v_iku",
               "form": "polite_masu"
             },
-            "p_ka",
-            "v_eki"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_eki",
+            "p_e",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "来週は だれと 行きますか。",
+          "q_en": "Who will you go with next week?",
           "a": "友だちと 行きます。",
+          "a_en": "I will go with my friends.",
           "terms": [
             "v_raishuu",
             "p_wa",
@@ -834,8 +863,15 @@
               "id": "v_iku",
               "form": "polite_masu"
             },
-            "p_ka",
-            "v_tomodachi"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_tomodachi",
+            "p_to",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -884,8 +920,8 @@
               "form": "te_form"
             },
             "v_konbini",
-            "p_ni",
             "p_mo",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "polite_mashita"
@@ -936,7 +972,9 @@
       "questions": [
         {
           "q": "やまかわは 先週 どこへ 行きましたか。",
+          "q_en": "Where did Yamakawa go last week?",
           "a": "店へ 行きました。",
+          "a_en": "He went to the shop.",
           "terms": [
             "p_wa",
             "v_senshuu",
@@ -946,13 +984,22 @@
               "id": "v_iku",
               "form": "polite_mashita"
             },
-            "p_ka",
-            "v_mise"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_mise",
+            "p_e",
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "バスで 来ましたか。",
+          "q_en": "Did you come by bus?",
           "a": "はい、バスで 来ました。",
+          "a_en": "Yes, I came by bus.",
           "terms": [
             "v_basu",
             "p_de",
@@ -960,13 +1007,23 @@
               "id": "v_kuru",
               "form": "polite_mashita"
             },
-            "p_ka",
-            "p_hai"
+            "p_ka"
+          ],
+          "a_terms": [
+            "p_hai",
+            "v_basu",
+            "p_de",
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "先週 スーパーへ 来ましたか。",
+          "q_en": "Did you come to the supermarket last week?",
           "a": "いいえ、来ませんでした。",
+          "a_en": "No, I did not come.",
           "terms": [
             "v_senshuu",
             "v_suupaa",
@@ -975,7 +1032,9 @@
               "id": "v_kuru",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_iie",
             {
               "id": "v_kuru",
@@ -985,7 +1044,9 @@
         },
         {
           "q": "来週は どこへ 行きますか。",
+          "q_en": "Where will you go next week?",
           "a": "スーパーへ 行きます。",
+          "a_en": "I will go to the supermarket.",
           "terms": [
             "v_raishuu",
             "p_wa",
@@ -995,8 +1056,15 @@
               "id": "v_iku",
               "form": "polite_masu"
             },
-            "p_ka",
-            "v_suupaa"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_suupaa",
+            "p_e",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         }
       ]

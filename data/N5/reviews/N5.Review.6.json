@@ -33,9 +33,9 @@
               "jp": "今日の 空は とても きれいですね。",
               "terms": [
                 "v_kyou",
-                "p_no",
-                "v_sora",
                 "p_wa",
+                "v_sora",
+                "p_no",
                 "v_totemo",
                 "v_kirei",
                 "g_desu",
@@ -70,7 +70,7 @@
               "jp": "川の 金魚も かわいいですね。大きい 魚も いますよ。",
               "terms": [
                 "v_kawa",
-                "p_no",
+                "p_mo",
                 "v_kingyo",
                 "p_mo",
                 "v_kawaii",
@@ -78,7 +78,7 @@
                 "p_ne",
                 "v_ookii",
                 "v_sakana",
-                "p_mo",
+                "p_no",
                 {
                   "id": "v_iru",
                   "form": "polite_masu"
@@ -91,10 +91,10 @@
               "jp": "雨の 後、花は きれいに なりますよ。空気も いいですね。",
               "terms": [
                 "v_ame",
-                "p_no",
+                "p_wa",
                 "v_ato",
                 "v_hana",
-                "p_wa",
+                "p_mo",
                 {
                   "id": "v_kirei",
                   "form": "adverbial"
@@ -103,12 +103,12 @@
                   "id": "v_naru",
                   "form": "polite_masu"
                 },
-                "p_yo",
+                "p_ne",
                 "v_kuuki",
-                "p_mo",
+                "p_no",
                 "v_ii",
                 "g_desu",
-                "p_ne"
+                "p_yo"
               ]
             }
           ],
@@ -162,7 +162,7 @@
                 "p_hai",
                 "v_mainichi",
                 "v_gakkou",
-                "p_de",
+                "p_wa",
                 {
                   "id": "v_manabu",
                   "form": "te_form"
@@ -172,7 +172,7 @@
                   "form": "polite_masu"
                 },
                 "v_nihongo",
-                "p_wa",
+                "p_de",
                 "v_omoshiroi",
                 "g_desu",
                 "p_yo"
@@ -262,8 +262,8 @@
                 "v_nihongo",
                 "p_wa",
                 "v_omoshiroi",
-                "p_yo",
                 "p_ne",
+                "p_yo",
                 "v_mainichi",
                 {
                   "id": "v_manabu",
@@ -277,9 +277,9 @@
               "jp": "川の 花が きれいそうだね。毎年 きれいに なるよ。",
               "terms": [
                 "v_kawa",
-                "p_no",
-                "v_hana",
                 "p_ga",
+                "v_hana",
+                "p_no",
                 {
                   "id": "v_kirei",
                   "form": "plain_appearance_sou"
@@ -301,7 +301,7 @@
                 "v_hanabi",
                 "p_mo",
                 "v_suki",
-                "g_da",
+                "p_yo",
                 "p_yo",
                 "v_kotoshi",
                 "p_mo",
@@ -310,7 +310,7 @@
                   "id": "v_iku",
                   "form": "plain_volitional"
                 },
-                "p_yo"
+                "g_da"
               ]
             }
           ],
@@ -528,13 +528,13 @@
           "en": "The Japanese class is interesting. The teacher is also a good teacher.",
           "terms": [
             "v_nihongo",
-            "p_no",
-            "v_kurasu",
             "p_wa",
+            "v_kurasu_class",
+            "p_mo",
             "v_omoshiroi",
             "g_desu",
             "v_sensei",
-            "p_mo",
+            "p_no",
             "v_ii",
             "v_sensei",
             "g_desu",
@@ -546,11 +546,11 @@
           "en": "There is a river outside the school. The flowers by the river look beautiful.",
           "terms": [
             "v_gakkou",
-            "p_no",
-            "v_soto",
-            "p_ni",
-            "v_kawa",
             "p_ga",
+            "v_soto",
+            "p_wa",
+            "v_kawa",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -558,7 +558,7 @@
             "v_kawa",
             "p_no",
             "v_hana",
-            "p_wa",
+            "p_ni",
             {
               "id": "v_kirei",
               "form": "appearance_sou_stem"
@@ -572,7 +572,7 @@
           "en": "There are goldfish in the river. There are also large fish.",
           "terms": [
             "v_kawa",
-            "p_ni",
+            "p_mo",
             "v_kingyo",
             "p_ga",
             {
@@ -581,7 +581,7 @@
             },
             "v_ookii",
             "v_sakana",
-            "p_mo",
+            "p_ni",
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -636,7 +636,8 @@
               "form": "te_form"
             },
             "v_atarashii",
-            "g_desu"
+            "g_desu",
+            "p_ka"
           ],
           "explanation": "The passage says 学校は大きくて、新しいです — 'The school is big and new.' 大きくて is the て-form (te_form) of the い-adjective 大きい: drop い + くて = 大きくて, used as a connector 'big AND.' 新しいです is the polite predicative form of 新しい. The other choices use 小さい (small, antonym of 大きい), 古い (old, antonym of 新しい), 高い (expensive/tall), and 安い (cheap) — none match the passage."
         },
@@ -785,9 +786,9 @@
           "answer": "かわいい",
           "terms": [
             "v_kawa",
-            "p_no",
-            "v_kingyo",
             "p_wa",
+            "v_kingyo",
+            "p_no",
             "v_totemo",
             "v_kawaii",
             "g_desu",
@@ -833,10 +834,10 @@
           "answer": "後",
           "terms": [
             "v_ame",
-            "p_no",
+            "p_ga",
             "v_ato",
             "v_hana",
-            "p_ga",
+            "p_no",
             {
               "id": "v_kirei",
               "form": "adverbial"
@@ -861,9 +862,9 @@
           "answer": "おもしろい",
           "terms": [
             "v_nihongo",
-            "p_no",
-            "v_kurasu",
             "p_wa",
+            "v_kurasu_class",
+            "p_no",
             "v_omoshiroi",
             "g_desu"
           ],
@@ -888,10 +889,10 @@
           "answer": "に",
           "terms": [
             "v_ame",
-            "p_no",
+            "p_ga",
             "v_ato",
             "v_hana",
-            "p_ga",
+            "p_no",
             {
               "id": "v_kirei",
               "form": "adverbial"

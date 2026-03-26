@@ -678,16 +678,29 @@
       "questions": [
         {
           "q": "日曜日の 天気は どうでしたか。",
+          "q_en": "How was the weather on Sunday?",
           "a": "よかったです。日光が 明るかったです。",
-          "choices": [
-            "よかったです。日光が 明るかったです。",
-            "くもっていました。",
-            "強風でした。",
-            "雨でした。"
-          ],
+          "a_en": "It was good. The sunlight was bright.",
           "terms": [
+            "v_nichiyoubi",
+            "p_no",
             "v_tenki",
+            "p_wa",
+            "v_dou",
+            {
+              "id": "g_desu",
+              "form": "polite_past_copula"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            {
+              "id": "v_ii",
+              "form": "plain_past_adj"
+            },
+            "g_desu",
             "v_nikkou",
+            "p_ga",
             {
               "id": "v_akarui",
               "form": "plain_past_adj"
@@ -697,14 +710,22 @@
         },
         {
           "q": "山の 上は どうでしたか。",
+          "q_en": "How was the mountain top?",
           "a": "風が 強かったです。",
-          "choices": [
-            "風が 強かったです。",
-            "日光が 弱かったです。",
-            "とても 暗かったです。",
-            "月光が きれいでした。"
-          ],
+          "a_en": "The wind was strong.",
           "terms": [
+            "v_yama",
+            "p_no",
+            "v_ue",
+            "p_wa",
+            "v_dou",
+            {
+              "id": "g_desu",
+              "form": "polite_past_copula"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_kaze",
             "p_ga",
             {
@@ -716,14 +737,20 @@
         },
         {
           "q": "どうして 長い 時間 休みましたか。",
+          "q_en": "Why did you rest for a long time?",
           "a": "足が 弱いですから。",
-          "choices": [
-            "足が 弱いですから。",
-            "風が 強かったですから。",
-            "日光が 暗かったですから。",
-            "電力が なかったですから。"
-          ],
+          "a_en": "Because my feet are weak.",
           "terms": [
+            "v_doushite",
+            "v_nagai",
+            "v_jikan",
+            {
+              "id": "v_yasumu",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_ashi",
             "p_ga",
             {
@@ -844,14 +871,19 @@
       "questions": [
         {
           "q": "何が 大切ですか。",
+          "q_en": "What is important?",
           "a": "電力が 大切です。",
-          "choices": [
-            "電力が 大切です。",
-            "月光が 大切です。",
-            "日光が 大切です。",
-            "風が 大切です。"
-          ],
+          "a_en": "Electricity is important.",
           "terms": [
+            "v_nani",
+            "p_ga",
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_denryoku",
             "p_ga",
             {
@@ -862,14 +894,18 @@
         },
         {
           "q": "電力が ない 時、何で 勉強しますか。",
+          "q_en": "When there is no electricity, what do you study with?",
           "a": "月光で 勉強します。",
-          "choices": [
-            "月光で 勉強します。",
-            "日光で 勉強します。",
-            "電光で 勉強します。",
-            "風で 勉強します。"
-          ],
+          "a_en": "You study using moonlight.",
           "terms": [
+            "v_benkyou",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_gekkou",
             "p_de",
             "v_benkyou",
@@ -881,14 +917,20 @@
         },
         {
           "q": "どうして 家の 中が 暗いですか。",
+          "q_en": "Why is the inside of the house dark?",
           "a": "電力が ありませんから。",
-          "choices": [
-            "電力が ありませんから。",
-            "風が 強いですから。",
-            "月光が ないですから。",
-            "晩ではないですから。"
-          ],
+          "a_en": "Because there is no electricity.",
           "terms": [
+            "v_doushite",
+            "v_ie",
+            "p_no",
+            "v_naka",
+            "p_ga",
+            "v_kurai",
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_denryoku",
             "p_ga",
             {

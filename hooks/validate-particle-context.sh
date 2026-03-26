@@ -43,8 +43,10 @@ def check_line(jp, terms, path):
             if tid == 'p_demo':
                 errors.append(f"  ERROR {path}.terms[{i}]: p_demo but でも is sentence-initial → use p_demo_but")
 
-    # FM #58: Question missing p_ka
-    if jp.rstrip().endswith('？') or jp.rstrip().endswith('?'):
+    # FM #58: Question missing p_ka — covers casual (？) and polite (か。 / か！) questions
+    jp_stripped = jp.rstrip()
+    if (jp_stripped.endswith('？') or jp_stripped.endswith('?') or
+            jp_stripped.endswith('か。') or jp_stripped.endswith('か！')):
         has_ka = any((t if isinstance(t, str) else t.get('id', '')) == 'p_ka' for t in terms)
         if not has_ka:
             errors.append(f"  ERROR {path}: Question sentence missing p_ka in terms")
@@ -63,6 +65,18 @@ def check_line(jp, terms, path):
             if tid == 'p_kara':
                 errors.append(f"  WARN {path}.terms[{i}]: p_kara — check if this から follows a verb/adj/です (if so → p_kara_because)")
 
+    # FM #35b: p_kara used after て-form → should be p_tekara (sequential 'after doing')
+    # FM #35b-ext: てから/でから in jp but p_tekara missing entirely from terms[]
+    jp_nospace = jp.replace(' ', '')
+    if 'てから' in jp_nospace or 'でから' in jp_nospace:
+        for i, t in enumerate(terms):
+            tid = t if isinstance(t, str) else t.get('id', '')
+            if tid == 'p_kara':
+                errors.append(f"  ERROR {path}.terms[{i}]: p_kara but jp contains てから/でから → use p_tekara (sequential 'after doing', G19)")
+        has_tekara = any((t if isinstance(t, str) else t.get('id', '')) == 'p_tekara' for t in terms)
+        if not has_tekara:
+            errors.append(f"  ERROR {path}: jp has てから/でから but p_tekara missing from terms[] — add p_tekara after the て-form (G19)")
+
     # FM #37: と after 」or 思う → should be p_to_quote
     if '」と' in jp or re.search(r'と(思|おも|知|し)', jp):
         for i, t in enumerate(terms):
@@ -74,6 +88,9 @@ def walk(obj, path="root"):
     if isinstance(obj, dict):
         if 'jp' in obj and 'terms' in obj:
             check_line(obj['jp'], obj['terms'], path)
+        # Also check Q&A question fields — these have q/a/terms but no jp key
+        if 'q' in obj and 'terms' in obj:
+            check_line(obj['q'], obj['terms'], path + '.q')
         for k, v in obj.items():
             walk(v, f"{path}.{k}")
     elif isinstance(obj, list):

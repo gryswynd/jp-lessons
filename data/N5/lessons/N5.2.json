@@ -142,7 +142,7 @@
             "p_no",
             "v_namae",
             "p_wa",
-            "v_nani",
+            "v_nan",
             "g_desu",
             "p_ka"
           ]
@@ -753,7 +753,9 @@
       "questions": [
         {
           "q": "やまもと先生は 何よう日に いますか。",
+          "q_en": "On which days is Yamamoto-sensei here?",
           "a": "月よう日と 水よう日と 金よう日に います。",
+          "a_en": "She is here on Monday, Wednesday, and Friday.",
           "terms": [
             "v_sensei",
             "p_wa",
@@ -763,34 +765,50 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_getsuyoubi",
             "p_to",
             "v_suiyoubi",
-            "v_kinyoubi"
+            "v_kinyoubi",
+            "p_ni",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "今日は 何よう日ですか。",
+          "q_en": "What day is today?",
           "a": "木よう日です。",
+          "a_en": "It is Thursday.",
           "terms": [
             "v_kyou",
             "p_wa",
             "v_nanyoubi",
             "g_desu",
-            "p_ka",
-            "v_mokuyoubi"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_mokuyoubi",
+            "g_desu"
           ]
         },
         {
           "q": "先生は どうですか。",
+          "q_en": "How is the teacher?",
           "a": "とても やさしいです。",
+          "a_en": "She is very kind.",
           "terms": [
             "v_sensei",
             "p_wa",
             "v_dou",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_totemo",
             "v_yasashii",
             "g_desu"
@@ -798,7 +816,9 @@
         },
         {
           "q": "先生は 毎月 いますか。",
+          "q_en": "Is the teacher here every month?",
           "a": "はい、毎月 月よう日から 金よう日まで います。",
+          "a_en": "Yes, she is here every month from Monday to Friday.",
           "terms": [
             "v_sensei",
             "p_wa",
@@ -807,12 +827,19 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "p_hai",
+            "v_maigetsu",
             "v_getsuyoubi",
             "p_kara",
             "v_kinyoubi",
-            "p_made"
+            "p_made",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -902,7 +929,9 @@
       "questions": [
         {
           "q": "ゲームに 何が ありますか。",
+          "q_en": "What is in the game?",
           "a": "水、木、火、土、金、月、日が あります。",
+          "a_en": "There is water, wood, fire, earth, metal, moon, and sun.",
           "terms": [
             "v_geemu",
             "p_ni",
@@ -912,19 +941,28 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_mizu",
             "v_ki",
             "v_hi_2",
             "v_tsuchi",
             "v_kane",
             "v_tsuki",
-            "v_hi"
+            "v_hi",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "毎日 何が ありますか。",
+          "q_en": "What is there every day?",
           "a": "水が たくさん あります。",
+          "a_en": "There is a lot of water.",
           "terms": [
             "v_mainichi",
             "v_nani",
@@ -933,14 +971,23 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_mizu",
-            "v_takusan"
+            "v_takusan",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "今月 何が ありますか。",
+          "q_en": "What is there this month?",
           "a": "金が あります。",
+          "a_en": "There is metal (gold).",
           "terms": [
             "v_kongetsu",
             "v_nani",
@@ -949,18 +996,29 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            "p_ka",
-            "v_kane"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_kane",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "りきぞは どうですか。",
+          "q_en": "How is Rikizo?",
           "a": "うれしいです。",
+          "a_en": "He is happy.",
           "terms": [
             "p_wa",
             "v_dou",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_ureshii",
             "g_desu"
           ]

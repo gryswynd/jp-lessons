@@ -55,9 +55,9 @@
           "en": "The teacher's book looks interesting, doesn't it.",
           "terms": [
             "v_sensei",
-            "p_no",
-            "v_hon",
             "p_wa",
+            "v_hon",
+            "p_no",
             {
               "id": "v_omoshiroi",
               "form": "appearance_sou_stem"
@@ -71,9 +71,9 @@
           "en": "Last week's test was long.",
           "terms": [
             "v_senshuu",
-            "p_no",
-            "v_tesuto",
             "p_wa",
+            "v_tesuto",
+            "p_no",
             {
               "id": "v_nagai",
               "form": "plain_past_adj"
@@ -216,9 +216,9 @@
             "v_gakkou",
             "p_ni",
             "v_nihongo",
-            "p_no",
-            "v_hon",
             "p_ga",
+            "v_hon",
+            "p_no",
             "v_ooi",
             "g_desu",
             "p_ne"
@@ -575,7 +575,8 @@
           "terms": [
             "v_konshuu",
             "v_jikan",
-            "v_aru"
+            "v_aru",
+            "p_ka"
           ]
         },
         {
@@ -627,8 +628,8 @@
             "v_shiroi",
             "v_hana",
             "v_suki",
-            "g_da",
             "p_yo",
+            "g_da",
             "v_jikan",
             "p_ga",
             "v_sukunai",
@@ -641,8 +642,8 @@
           "en": "It's okay. We have a little time so let's go!",
           "terms": [
             "v_daijoubu",
-            "g_da",
             "p_yo",
+            "g_da",
             "v_sukoshi",
             "v_jikan",
             "v_aru",
@@ -681,7 +682,7 @@
             "v_kyou",
             "p_wa",
             "v_gakkou",
-            "p_no",
+            "p_ga",
             "v_soto",
             "p_ni",
             {
@@ -690,7 +691,7 @@
             },
             "v_shiroi",
             "v_hana",
-            "p_ga",
+            "p_no",
             "v_ooi",
             "g_desu"
           ]
@@ -700,14 +701,14 @@
           "en": "The flowers outside are very beautiful. There are few people.",
           "terms": [
             "v_soto",
-            "p_no",
+            "p_ga",
             "v_hana",
             "p_wa",
             "v_totemo",
             "v_kirei",
             "g_desu",
             "v_hito",
-            "p_ga",
+            "p_no",
             "v_sukunai",
             "g_desu"
           ]
@@ -718,13 +719,13 @@
           "terms": [
             "v_taitei",
             "v_doyoubi",
-            "p_ni",
+            "p_wa",
             {
               "id": "v_kuru",
               "form": "polite_masu"
             },
             "v_kyou",
-            "p_wa",
+            "p_ni",
             "v_sukoshi",
             "v_jikan",
             "p_ga",
@@ -777,15 +778,22 @@
       ],
       "questions": [
         {
-          "q": "What does the narrator say about the flowers outside?",
-          "a": "They are very beautiful",
-          "choices": [
-            "They are very beautiful",
-            "They are few and small",
-            "They are not white",
-            "They are near the school"
-          ],
+          "q": "外の 花は どうですか。",
+          "q_en": "What are the flowers outside like?",
+          "a": "外の 花は とても きれいです。",
+          "a_en": "The flowers outside are very beautiful.",
           "terms": [
+            "v_soto",
+            "p_no",
+            "v_hana",
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_soto",
+            "p_no",
             "v_hana",
             "p_wa",
             "v_totemo",
@@ -794,15 +802,20 @@
           ]
         },
         {
-          "q": "When does the narrator usually come outside?",
-          "a": "On Saturdays",
-          "choices": [
-            "On Saturdays",
-            "Every day",
-            "On Sundays",
-            "Every week"
-          ],
+          "q": "たいてい いつ 来ますか。",
+          "q_en": "When does the narrator usually come?",
+          "a": "たいてい 土ようびに 来ます。",
+          "a_en": "They usually come on Saturdays.",
           "terms": [
+            "v_taitei",
+            "v_itsu",
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_taitei",
             "v_doyoubi",
             "p_ni",
@@ -813,15 +826,22 @@
           ]
         },
         {
-          "q": "What does the narrator want to do?",
-          "a": "Come every week",
-          "choices": [
-            "Come every week",
-            "Read many books",
-            "Speak Japanese",
-            "Come every day"
-          ],
+          "q": "毎週 何を したいですか。",
+          "q_en": "What does the narrator want to do every week?",
+          "a": "毎週 来たいです。",
+          "a_en": "They want to come every week.",
           "terms": [
+            "v_maishuu",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_maishuu",
             {
               "id": "v_kuru",
@@ -842,7 +862,7 @@
           "terms": [
             "char_ken",
             "v_gakkou",
-            "p_ni",
+            "p_wa",
             "v_shounen",
             "p_ga",
             {
@@ -850,7 +870,7 @@
               "form": "polite_masu"
             },
             "v_namae",
-            "p_wa",
+            "p_ni",
             "g_desu"
           ]
         },
@@ -946,35 +966,54 @@
       ],
       "questions": [
         {
-          "q": "What do Ken and Nana both do?",
-          "a": "Read many Japanese books",
-          "choices": [
-            "Read many Japanese books",
-            "Write on white paper",
-            "Speak Japanese every day",
-            "Come to school on Saturdays"
-          ],
+          "q": "学校に だれが いますか。",
+          "q_en": "Who is at the school?",
+          "a": "少年と 少女が います。",
+          "a_en": "A boy and a girl are there.",
           "terms": [
-            "v_nihongo",
-            "p_no",
-            "v_hon",
-            "p_wo",
+            "v_gakkou",
+            "p_ni",
+            "v_dare",
+            "p_ga",
             {
-              "id": "v_yomu",
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_shounen",
+            "p_to",
+            "v_shoujo",
+            "p_ga",
+            {
+              "id": "v_iru",
               "form": "polite_masu"
             }
           ]
         },
         {
-          "q": "What is Nana doing?",
-          "a": "Writing in a white notebook",
-          "choices": [
-            "Writing in a white notebook",
-            "Reading many books",
-            "Talking on the phone",
-            "Coming to school"
-          ],
+          "q": "ナナさんは 何を していますか。",
+          "q_en": "What is Nana doing?",
+          "a": "白い ノートに 書いています。",
+          "a_en": "She is writing in a white notebook.",
           "terms": [
+            "char_nana",
+            "v_san",
+            "p_wa",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_shiroi",
             "v_nooto",
             "p_ni",
@@ -989,16 +1028,22 @@
           ]
         },
         {
-          "q": "What does the passage say about Ken's time?",
-          "a": "He usually has plenty of time",
-          "choices": [
-            "He usually has plenty of time",
-            "He has very little time",
-            "He has no time on Saturdays",
-            "He is probably tired"
-          ],
+          "q": "ケンさんは たいてい 何が 多いですか。",
+          "q_en": "What does Ken usually have plenty of?",
+          "a": "時間が 多いです。",
+          "a_en": "He usually has plenty of time.",
           "terms": [
+            "char_ken",
+            "v_san",
+            "p_wa",
             "v_taitei",
+            "v_nani",
+            "p_ga",
+            "v_ooi",
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_jikan",
             "p_ga",
             "v_ooi",
@@ -1099,9 +1144,9 @@
             "v_gakkou",
             "p_ni",
             "v_nihongo",
-            "p_no",
-            "v_hon",
             "p_ga",
+            "v_hon",
+            "p_no",
             "v_ooi",
             "g_desu",
             "g_desu",

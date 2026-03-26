@@ -15,6 +15,15 @@ FILE=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 python3 - "$FILE" << 'PYEOF'
 import json, re, sys, os
 
+# Te-form + いた/いる contractions (てた, てる, でた, でる after a te-form connector).
+# These must be expanded in jp text: して いた, 行って いる, etc.
+# Pattern covers the most common te-form endings; strips trailing sentence-final
+# particles (よ, ね, ぞ, さ, わ) and punctuation before testing.
+CONTRACTION_RE = re.compile(
+    r'(?:って|んで|して|きて|べて|せて|ねて|けて|めて|れて|えて|みて|にて|りて|ちて|いて|いで|でて|げて|ぎて)[たる][のよねさぞわ]?$'
+)
+STRIP_TAIL_RE = re.compile(r'[よねさぞわ！？。、「」〜ー…]*$')
+
 file_path = sys.argv[1]
 
 try:
@@ -42,8 +51,9 @@ for i, s in enumerate(sections):
         if n != 4:
             errors.append(f"  warmup (sections[{i}]): {n} items, must be exactly 4")
 
-# FM #12: meta.kanji required on lessons
-if not is_grammar and not is_review and 'compose' not in content_id.lower():
+# FM #12: meta.kanji required on lessons (stories exempt — storyFile present, kanji not enforced there)
+is_story = 'storyFile' in content
+if not is_grammar and not is_review and not is_story and 'compose' not in content_id.lower():
     if 'kanji' not in content.get('meta', {}):
         errors.append(f"  meta.kanji: MISSING")
 
@@ -77,6 +87,49 @@ def check_answers(obj, path="root"):
             check_answers(item, f"{path}[{i}]")
 
 check_answers(content)
+
+# Conversation lines must use 'spk', not 'speaker'
+# Also check for contracted auxiliary forms (てた/てる) that must be expanded.
+for i, s in enumerate(sections):
+    if s.get('type') == 'conversation':
+        for j, line in enumerate(s.get('lines', [])):
+            if 'speaker' in line:
+                errors.append(f"  sections[{i}].lines[{j}]: uses 'speaker' — must be 'spk' (renderer reads line.spk; 'speaker' shows undefined)")
+            if 'spk' not in line:
+                errors.append(f"  sections[{i}].lines[{j}]: missing required 'spk' field")
+            # FM (new): casual contraction check — て+いた/いる must not be contracted
+            jp = line.get('jp', '')
+            for tok in jp.split():
+                tok_stripped = STRIP_TAIL_RE.sub('', tok)
+                if CONTRACTION_RE.search(tok_stripped):
+                    errors.append(
+                        f"  sections[{i}].lines[{j}]: contracted form '{tok_stripped}' in jp — "
+                        f"expand auxiliary: write て いた / て いる not てた/てる (e.g. 'して いた' not 'してた')"
+                    )
+
+# Reading passage must be an array, not a string; questions must be present
+for i, s in enumerate(sections):
+    if s.get('type') == 'reading':
+        p = s.get('passage')
+        if p is None:
+            errors.append(f"  sections[{i}] (reading): missing 'passage' field")
+        elif isinstance(p, str):
+            errors.append(f"  sections[{i}] (reading): 'passage' is a string — must be an array of {{jp, en, terms}} objects")
+        elif isinstance(p, list):
+            if len(p) == 1 and ' ' in (p[0].get('jp', '')):
+                # Single item whose jp contains multiple sentences (wall of text)
+                jp_text = p[0].get('jp', '')
+                sentence_count = jp_text.count('。') + jp_text.count('！') + jp_text.count('？')
+                if sentence_count >= 3:
+                    errors.append(f"  sections[{i}].passage: single item with {sentence_count} sentences — split into one object per sentence")
+            for j, item in enumerate(p):
+                if not isinstance(item, dict) or 'jp' not in item:
+                    errors.append(f"  sections[{i}].passage[{j}]: passage item must be an object with 'jp', 'en', 'terms'")
+        q = s.get('questions')
+        if q is None:
+            errors.append(f"  sections[{i}] (reading): missing 'questions' field — reading sections must have a questions array with at least 1 item")
+        elif not isinstance(q, list) or len(q) == 0:
+            errors.append(f"  sections[{i}] (reading): 'questions' must be a non-empty array")
 
 # Review-specific checks
 if is_review:

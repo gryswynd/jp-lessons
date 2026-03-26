@@ -272,6 +272,7 @@ CB CHECKLIST
 [ ] (Grammar) Every `sentenceTransform` item has a `choices[]` array with 4 strings (correct answer + 3 plausible distractors). Missing `choices` crashes the renderer and leaves the entire screen blank.
 [ ] (Grammar) Conversation `jp` fields are tagged via `terms[]` using the same rules as lesson content (every lexical token, particle, and copula must be tagged). Terms generate tappable `.jp-term` spans; without tags, the text is unclickable (no visual highlight, no modal).
 [ ] (Grammar) `meta.grammarForms[]` lists the conjugation form strings this lesson introduces or exercises — used to power the unlock display on lesson completion.
+[ ] manifest.json updated: a new entry for this content has been added to the correct array (lessons / stories / grammar / reviews / compose) with the correct `id`, `title`, `dir` or `file`, and `unlocksAfter` fields — verified by Grep that the entry is present before submitting to Agent 3
 ```
 
 ---

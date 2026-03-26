@@ -434,7 +434,10 @@
       "gtype": "interjection",
       "lesson_ids": "N5.10",
       "notes": "The primary floor-holding hesitation in Japanese. Signals the speaker is still thinking and has not yielded the floor. Shorter casual form: えっと. Longer elongated form: えーっと. Appropriate in most registers; えーと is neutral, えっと is slightly more casual.",
-      "matches": ["えっと", "えーっと"]
+      "matches": [
+        "えっと",
+        "えーっと"
+      ]
     },
     {
       "id": "v_anou",
@@ -445,7 +448,9 @@
       "gtype": "interjection",
       "lesson_ids": "N5.10",
       "notes": "Softer and more polished than えーと. Used sentence-initially to hold the floor while gathering thoughts, or to gently get someone's attention (あのう、すみません). Often shortened to あの in casual speech — but note that あの also functions as the demonstrative 'that over there' (v_ano); context disambiguates. Preferred in formal or polite contexts over えーと.",
-      "matches": ["あの"]
+      "matches": [
+        "あの"
+      ]
     },
     {
       "id": "v_saa",
@@ -697,7 +702,9 @@
       "type": "vocab",
       "gtype": "adverb",
       "lesson_ids": "N5.1",
-      "matches": ["いっしょに"],
+      "matches": [
+        "いっしょに"
+      ],
       "notes": "一 (N5.1) + 緒 (N3.4). Write as いっしょに until N3.4, then 一緒に."
     },
     {
@@ -926,7 +933,9 @@
       "notes": "友 (N5.1) + 達 (N3.2). Written as 友だち before N3.2 (達 not yet taught).",
       "lesson_ids": "N5.1",
       "reading": "ともだち",
-      "matches": ["友だち"]
+      "matches": [
+        "友だち"
+      ]
     },
     {
       "id": "v_totemo",
@@ -1569,7 +1578,16 @@
       "gtype": "noun",
       "notes": "Currency unit. Follows a number: 百円 (100 yen), 千円 (1,000 yen).",
       "lesson_ids": "N5.3",
-      "reading": "えん"
+      "reading": "えん",
+      "matches": [
+        "百円",
+        "千円",
+        "万円",
+        "一円",
+        "五円",
+        "十円",
+        "五十円"
+      ]
     },
     {
       "id": "k_u767e",
@@ -3774,7 +3792,7 @@
       "notes": ""
     },
     {
-      "id": "v_kurasu",
+      "id": "v_kurasu_class",
       "surface": "クラス",
       "reading": "くらす",
       "meaning": "class",
@@ -3788,7 +3806,7 @@
       "surface": "学ぶ",
       "meaning": "learn (polite)",
       "type": "vocab",
-      "gtype": "noun",
+      "gtype": "verb",
       "notes": "",
       "lesson_ids": "N5.12",
       "reading": "まなぶ",

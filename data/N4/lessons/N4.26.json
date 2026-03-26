@@ -1,11 +1,12 @@
 {
   "contentVersion": "1.0.0",
   "id": "N4.26",
-  "title": "Phase 4 Lesson 26: Truth & Thoughts",
+  "title": "Truth & Thoughts",
   "meta": {
-    "phase": 4,
-    "lesson": 26,
-    "focus": "Correctness, thinking processes, methods, and bad qualities.",
+    "level": "N4",
+    "lesson_number": 26,
+    "focus": "Correct thinking, ways of doing things, good vs. bad judgement — using 正, 考, 方, 悪 kanji compounds.",
+    "estimated_minutes": 35,
     "kanji": [
       "正",
       "考",
@@ -17,14 +18,14 @@
     {
       "kanji": "正",
       "on": "せい / しょう",
-      "kun": "ただ",
+      "kun": "ただ(しい)",
       "meaning": "Correct / Justice",
       "termId": "k_sei"
     },
     {
       "kanji": "考",
       "on": "こう",
-      "kun": "かんが",
+      "kun": "かんが(える)",
       "meaning": "Think / Consider",
       "termId": "k_kanga"
     },
@@ -38,7 +39,7 @@
     {
       "kanji": "悪",
       "on": "あく",
-      "kun": "わる",
+      "kun": "わる(い)",
       "meaning": "Bad / Evil",
       "termId": "k_aku"
     }
@@ -47,44 +48,92 @@
     {
       "type": "warmup",
       "title": "Warm-Up Review（ウォームアップ）",
-      "instructions": "Ask your partner these questions using words you already know:",
+      "instructions": "Practice these sentences using vocabulary you already know.",
       "items": [
         {
-          "jp": "天気が いいですか。",
-          "en": "Is the weather good?",
+          "jp": "毎日 勉強すれば、もっと 上手に なりますよ。",
+          "en": "If you study every day, you will become even better at it.",
           "terms": [
-            "v_tenki",
-            "v_ii"
+            "v_mainichi",
+            "v_benkyou",
+            {
+              "id": "v_suru",
+              "form": "conditional_ba"
+            },
+            "v_motto",
+            {
+              "id": "v_jouzu",
+              "form": "adverbial"
+            },
+            "p_ni",
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            },
+            "p_yo"
           ]
         },
         {
-          "jp": "漢字の 意味が 分かりますか。",
-          "en": "Do you understand the meaning of the Kanji?",
+          "jp": "試験まで もっと 勉強しなければ いけませんね。",
+          "en": "I have to study more until the exam, don't I.",
           "terms": [
-            "v_kanji",
+            "v_shiken",
+            "p_made",
+            "v_motto",
+            "v_benkyou",
+            {
+              "id": "v_suru",
+              "form": "nakereba"
+            },
+            {
+              "id": "v_ikeru",
+              "form": "polite_negative"
+            },
+            "p_ne"
+          ]
+        },
+        {
+          "jp": "注意して 読んだら、意味が 分かりました。",
+          "en": "When I read carefully, I understood the meaning.",
+          "terms": [
+            "v_chuui",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_yomu",
+              "form": "conditional_tara"
+            },
             "v_imi",
+            "p_ga",
             {
               "id": "v_wakaru",
-              "form": "polite_masu"
+              "form": "polite_mashita"
             }
           ]
         },
         {
-          "jp": "日本語は むずかしいですか。",
-          "en": "Is Japanese difficult?",
+          "jp": "いい 意見を 聞いて、少し 問題が 分かって きました。",
+          "en": "I listened to a good opinion and gradually came to understand the problem.",
           "terms": [
-            "v_nihongo",
-            "v_muzukashii"
-          ]
-        },
-        {
-          "jp": "何を しましょうか。",
-          "en": "What shall we do?",
-          "terms": [
-            "v_nani",
+            "v_ii",
+            "v_iken",
+            "p_wo",
             {
-              "id": "v_suru",
-              "form": "polite_volitional_mashou"
+              "id": "v_kiku",
+              "form": "te_form"
+            },
+            "v_sukoshi",
+            "v_mondai",
+            "p_ga",
+            {
+              "id": "v_wakaru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
+              "form": "polite_mashita"
             }
           ]
         }
@@ -92,46 +141,51 @@
     },
     {
       "type": "kanjiGrid",
-      "title": "New Kanji（新しい 漢字）",
+      "title": "New Kanji（新しい漢字）",
       "items": [
         {
           "kanji": "正",
           "on": "せい / しょう",
-          "kun": "ただ",
-          "meaning": "Correct",
+          "kun": "ただ(しい)",
+          "meaning": "Correct / Justice",
           "terms": [
             "k_sei",
             "v_tadashii",
-            "v_shougatsu"
+            "v_tadasu",
+            "v_seidou",
+            "v_shougatsu",
+            "v_shoutai"
           ]
         },
         {
           "kanji": "考",
           "on": "こう",
-          "kun": "かんが",
-          "meaning": "Think",
+          "kun": "かんが(える)",
+          "meaning": "Think / Consider",
           "terms": [
             "k_kanga",
             "v_kangaeru",
-            "v_kangae"
+            "v_kangae",
+            "v_kangaekata"
           ]
         },
         {
           "kanji": "方",
           "on": "ほう",
           "kun": "かた",
-          "meaning": "Way/Dir",
+          "meaning": "Direction / Person / Way",
           "terms": [
             "k_hou",
             "v_kata",
-            "v_kangaekata"
+            "v_kangaekata",
+            "v_mikata"
           ]
         },
         {
           "kanji": "悪",
           "on": "あく",
-          "kun": "わる",
-          "meaning": "Bad",
+          "kun": "わる(い)",
+          "meaning": "Bad / Evil",
           "terms": [
             "k_aku",
             "v_warui",
@@ -142,20 +196,20 @@
     },
     {
       "type": "vocabList",
-      "title": "Vocabulary & Compounds（ことば）",
+      "title": "Vocabulary（単語）",
       "groups": [
         {
-          "label": "Correctness & Goodness",
+          "label": "正 — Correct & New Year",
           "items": [
             "v_tadashii",
             "v_tadasu",
-            "v_shougatsu",
             "v_seidou",
+            "v_shougatsu",
             "v_shoutai"
           ]
         },
         {
-          "label": "Thinking & Methods",
+          "label": "考 & 方 — Thinking & Ways",
           "items": [
             "v_kangaeru",
             "v_kangae",
@@ -165,7 +219,7 @@
           ]
         },
         {
-          "label": "Bad Quality",
+          "label": "悪 — Bad & Malicious",
           "items": [
             "v_warui",
             "v_akushitsu"
@@ -175,212 +229,661 @@
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 1（会話）: Correct Answer",
-      "context": "Checking work.",
+      "title": "Conversation 1: Starting the New Year Right（正しい始め方）",
+      "context": "りきぞ asks やまもと先生 for advice on how to improve his study methods.",
       "lines": [
         {
-          "spk": "A",
-          "jp": "この 文は 正しいですか。",
-          "en": "Is this sentence correct?",
+          "spk": "りきぞ",
+          "jp": "やまもと先生、正月が 来たら、どんな 考え方で 新しく 始めれば いいですか。",
+          "en": "Yamamoto-sensei, when New Year comes, what kind of thinking should I use to start fresh?",
           "terms": [
-            "k_bun",
-            "v_tadashii"
+            "char_yamamoto",
+            "v_sensei",
+            "v_shougatsu",
+            "p_ga",
+            {
+              "id": "v_kuru",
+              "form": "conditional_tara"
+            },
+            "v_donna",
+            "v_kangaekata",
+            "p_de",
+            {
+              "id": "v_atarashii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_hajimeru",
+              "form": "conditional_ba"
+            },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
+            "p_ka",
+            "char_rikizo"
           ]
         },
         {
-          "spk": "B",
-          "jp": "いいえ、悪いです。ここを 正して ください。",
-          "en": "No, it is bad. Please correct this part.",
+          "spk": "やまもと先生",
+          "jp": "正しい 考え方で 始めれば、今年が よく 進みますよ。",
+          "en": "If you start with the right way of thinking, this year will progress well.",
+          "terms": [
+            "v_tadashii",
+            "v_kangaekata",
+            "p_de",
+            {
+              "id": "v_hajimeru",
+              "form": "conditional_ba"
+            },
+            "v_kotoshi",
+            "p_ga",
+            "v_yoku",
+            {
+              "id": "v_susumu",
+              "form": "polite_masu"
+            },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "どんな 考えが 正しい ですか。",
+          "en": "What kind of thinking is correct?",
+          "terms": [
+            "v_donna",
+            "v_kangae",
+            "p_ga",
+            "v_tadashii",
+            "g_desu",
+            "p_ka",
+            "char_rikizo"
+          ]
+        },
+        {
+          "spk": "やまもと先生",
+          "jp": "悪い 考え方を 正して、毎日 少しずつ 進む 考え方が 大切ですよ。",
+          "en": "A way of thinking that corrects bad thinking and advances little by little each day is important.",
           "terms": [
             "v_warui",
+            "v_kangaekata",
+            "p_wo",
             {
               "id": "v_tadasu",
               "form": "te_form"
-            }
+            },
+            "v_mainichi",
+            "v_sukoshi",
+            "p_zutsu",
+            {
+              "id": "v_susumu",
+              "form": "plain_form"
+            },
+            "v_kangaekata",
+            "p_ga",
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            },
+            "p_yo"
           ]
         },
         {
-          "spk": "A",
-          "jp": "分かりました。よく 考えます。",
-          "en": "I understand. I will think carefully.",
+          "spk": "りきぞ",
+          "jp": "分かりました。正しい 考え方で 進みます。",
+          "en": "I understand. I will proceed with the correct way of thinking.",
           "terms": [
             {
               "id": "v_wakaru",
               "form": "polite_mashita"
             },
-            "v_yoku",
+            "v_tadashii",
+            "v_kangaekata",
+            "p_de",
             {
-              "id": "v_kangaeru",
+              "id": "v_susumu",
               "form": "polite_masu"
-            }
+            },
+            "char_rikizo"
           ]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 2（会話）: The New Year",
-      "context": "Talking about holidays.",
+      "title": "Conversation 2: Correcting a Bad Way（悪い方を正す）",
+      "context": "りきぞ asks やまかわ whether it is okay to proceed with a questionable approach; やまかわ warns him it is not, and guides him to correct it.",
       "lines": [
         {
-          "spk": "A",
-          "jp": "来月は 正月ですね。",
-          "en": "Next month is New Year, isn't it?",
+          "spk": "りきぞ",
+          "jp": "やまかわさん、この 悪い 考え方が 問題ですか。",
+          "en": "Yamakawa-san, is this bad way of thinking a problem?",
           "terms": [
-            "v_raigetsu",
-            "v_shougatsu"
+            "char_yamakawa",
+            "v_san",
+            "v_kono",
+            "v_warui",
+            "v_kangaekata",
+            "p_ga",
+            "v_mondai",
+            "g_desu",
+            "p_ka",
+            "char_rikizo"
           ]
         },
         {
-          "spk": "B",
-          "jp": "はい。正月の 料理が 好きです。",
-          "en": "Yes. I like New Year's cuisine.",
+          "spk": "やまかわ",
+          "jp": "りきぞさん、悪質な 方は いけませんよ。",
+          "en": "Rikizo, a malicious way of doing things is not okay.",
           "terms": [
-            "v_shougatsu",
-            "v_ryouri",
-            "v_suki"
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "私もです。何を作りますか。",
-          "en": "Me too. What will you make?",
-          "terms": [
-            "k_watashi",
-            "v_nani",
+            "char_rikizo",
+            "v_san",
             {
-              "id": "v_tsukuru",
+              "id": "v_akushitsu",
+              "form": "attributive_na"
+            },
+            "v_kata",
+            "p_wa",
+            {
+              "id": "v_ikeru",
+              "form": "polite_negative"
+            },
+            "p_yo",
+            "char_yamakawa"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "すみません。正しい 方で 進みます。",
+          "en": "I'm sorry. I will proceed the correct way.",
+          "terms": [
+            "p_sumimasen",
+            "v_tadashii",
+            "v_kata",
+            "p_de",
+            {
+              "id": "v_susumu",
               "form": "polite_masu"
-            }
+            },
+            "char_rikizo"
           ]
         },
         {
-          "spk": "B",
-          "jp": "まだ 考えて いません。",
-          "en": "I haven't thought about it yet.",
+          "spk": "やまかわ",
+          "jp": "悪い 方で 進むと、もっと 問題が 大きく なりますよ。",
+          "en": "If you proceed with the bad way, the problem will become even bigger.",
           "terms": [
+            "v_warui",
+            "v_kata",
+            "p_de",
             {
-              "id": "v_kangaeru",
-              "form": "te_form"
+              "id": "v_susumu",
+              "form": "plain_form"
+            },
+            "p_to_conditional",
+            "v_motto",
+            "v_mondai",
+            "p_ga",
+            {
+              "id": "v_ookii",
+              "form": "adverbial"
             },
             {
-              "id": "v_iru",
-              "form": "polite_negative"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 3（会話）: How to Do It",
-      "context": "Learning a method.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "この 漢字の 書き方を 教えて ください。",
-          "en": "Please teach me how to write this Kanji.",
-          "terms": [
-            "v_kanji",
-            "k_ka",
-            "v_kata",
-            {
-              "id": "v_oshieru",
-              "form": "te_form"
-            }
+              "id": "v_naru",
+              "form": "polite_masu"
+            },
+            "p_yo",
+            "char_yamakawa"
           ]
         },
         {
-          "spk": "B",
-          "jp": "いいですよ。書き方を 考えましょう。",
-          "en": "Sure. Let's think about the way of writing.",
+          "spk": "りきぞ",
+          "jp": "分かりました。もっと 注意して 進みます。",
+          "en": "I understand. I will proceed with more care.",
           "terms": [
-            "v_ii",
-            "k_ka",
-            "v_kata",
-            {
-              "id": "v_kangaeru",
-              "form": "polite_volitional_mashou"
-            }
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "先生の 考え方は 楽しいですね。",
-          "en": "Teacher's way of thinking is fun.",
-          "terms": [
-            "v_sensei",
-            "v_kangaekata",
-            "v_tanoshii"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "ありがとう ございます。見方を 正すのは おもしろいですよ。",
-          "en": "Thank you. Correcting one's viewpoint is interesting.",
-          "terms": [
-            "v_mikata",
-            "v_tadasu",
-            "v_omoshiroi"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 4（会話）: The Rumor",
-      "context": "Discussing a person.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "あの 人の 名前は 何ですか。",
-          "en": "What is that person's name?",
-          "terms": [
-            "v_hito",
-            "v_namae",
-            "v_nan"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "正体は 分かりませんが、悪い 人では ありません。",
-          "en": "I don't know their true identity, but they are not a bad person.",
-          "terms": [
-            "v_shoutai",
             {
               "id": "v_wakaru",
-              "form": "polite_negative"
+              "form": "polite_mashita"
             },
-            "v_warui",
-            "v_hito"
+            "v_motto",
+            "v_chuui",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_susumu",
+              "form": "polite_masu"
+            },
+            "char_rikizo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation 3: Talking About Viewpoints（Casual）",
+      "context": "りきぞ and けん, close friends, chat casually about New Year's resolutions and plans.",
+      "lines": [
+        {
+          "spk": "けん",
+          "jp": "りきぞ、その 見方は ちょっと 悪いんだ よ。",
+          "en": "Rikizo, that viewpoint is a bit bad, you know.",
+          "terms": [
+            "char_rikizo",
+            "v_sono",
+            "v_mikata",
+            "p_wa",
+            "v_chotto",
+            {
+              "id": "v_warui",
+              "form": "plain_form"
+            },
+            "p_nda",
+            "p_yo",
+            "char_ken"
           ]
         },
         {
-          "spk": "A",
-          "jp": "そうですか。悪質な 人も いますから、注意して ください。",
-          "en": "Is that so? There are malicious people too, so please be careful.",
+          "spk": "りきぞ",
+          "jp": "私は 正しいと 言ったけど。",
+          "en": "I said it was correct though.",
           "terms": [
-            "v_akushitsu",
-            "v_hito",
+            "v_watashi",
+            "p_wa",
+            "v_tadashii",
+            "p_to_quote",
             {
-              "id": "v_iru",
-              "form": "polite_masu"
+              "id": "v_iu",
+              "form": "plain_past"
+            },
+            "p_kedo",
+            "char_rikizo"
+          ]
+        },
+        {
+          "spk": "けん",
+          "jp": "考え方を 正さなければ いけないよ。",
+          "en": "You have to correct your way of thinking, you know.",
+          "terms": [
+            "v_kangaekata",
+            "p_wo",
+            {
+              "id": "v_tadasu",
+              "form": "nakereba"
             },
             {
-              "id": "v_chuui",
+              "id": "v_ikeru",
+              "form": "plain_negative"
+            },
+            "p_yo",
+            "char_ken"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "なるほど。じゃ、正しい 見方を もっと 考える よ。",
+          "en": "I see. Then, I'll think more about the correct viewpoint.",
+          "terms": [
+            "v_naruhodo",
+            "p_ja",
+            "v_tadashii",
+            "v_mikata",
+            "p_wo",
+            "v_motto",
+            {
+              "id": "v_kangaeru",
+              "form": "plain_form"
+            },
+            "p_yo",
+            "char_rikizo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation 4: New Year Intentions（Casual）",
+      "context": "りきぞ and コナー, close classmates, casually debate what is right and wrong about a recent situation.",
+      "lines": [
+        {
+          "spk": "コナー",
+          "jp": "正月に なったら、何を 始める？",
+          "en": "When it becomes New Year, what will you start?",
+          "terms": [
+            "v_shougatsu",
+            "p_ni",
+            {
+              "id": "v_naru",
+              "form": "conditional_tara"
+            },
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_hajimeru",
+              "form": "plain_form"
+            },
+            "p_ka",
+            "char_conor"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "悪い 考え方を 正して、もっと 正しい 考えを 持ちたい な。",
+          "en": "I want to correct my bad thinking and hold more correct thoughts.",
+          "terms": [
+            "v_warui",
+            "v_kangaekata",
+            "p_wo",
+            {
+              "id": "v_tadasu",
               "form": "te_form"
+            },
+            "v_motto",
+            "v_tadashii",
+            "v_kangae",
+            "p_wo",
+            {
+              "id": "v_motsu",
+              "form": "plain_desire_tai"
+            },
+            "p_na",
+            "char_rikizo"
+          ]
+        },
+        {
+          "spk": "コナー",
+          "jp": "いい 考え だな。私も 正しい 方で 進みたい よ。",
+          "en": "That's a good idea. I also want to advance the right way.",
+          "terms": [
+            "v_ii",
+            "v_kangae",
+            "g_da",
+            "p_na",
+            "v_watashi",
+            "p_mo",
+            "v_tadashii",
+            "v_kata",
+            "p_de",
+            {
+              "id": "v_susumu",
+              "form": "plain_desire_tai"
+            },
+            "p_yo",
+            "char_conor"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "二人で 正しい 考え方を 大切に して いこう！",
+          "en": "Let's both value correct thinking together!",
+          "terms": [
+            "v_futari",
+            "p_de",
+            "v_tadashii",
+            "v_kangaekata",
+            "p_wo",
+            {
+              "id": "v_taisetsu",
+              "form": "adverbial"
+            },
+            "p_ni",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iku",
+              "form": "plain_volitional"
+            },
+            "char_rikizo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading 1: The Correct Way of Thinking（正しい考え方）",
+      "passage": [
+        {
+          "jp": "正しい 考え方は、毎日 とても 大切です。",
+          "en": "A correct way of thinking is very important every day.",
+          "terms": [
+            "v_tadashii",
+            "v_kangaekata",
+            "p_wa",
+            "v_mainichi",
+            "v_totemo",
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
             }
           ]
         },
         {
-          "spk": "B",
-          "jp": "はい。少し 話しましょう。",
-          "en": "Yes. Let's talk a little.",
+          "jp": "悪い 考えを 持って いると、問題が 大きく なります。",
+          "en": "If you hold bad thoughts, problems will become big.",
           "terms": [
-            "v_sukoshi",
+            "v_warui",
+            "v_kangae",
+            "p_wo",
             {
-              "id": "v_hanasu",
-              "form": "polite_volitional_mashou"
+              "id": "v_motsu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
+            "p_to_conditional",
+            "v_mondai",
+            "p_ga",
+            {
+              "id": "v_ookii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "正月が 来たら、自分の 考えを 正す ことが 大切です。",
+          "en": "When New Year comes, correcting your own thinking is important.",
+          "terms": [
+            "v_shougatsu",
+            "p_ga",
+            {
+              "id": "v_kuru",
+              "form": "conditional_tara"
+            },
+            "v_jibun",
+            "p_no",
+            "v_kangae",
+            "p_wo",
+            {
+              "id": "v_tadasu",
+              "form": "plain_form"
+            },
+            "v_koto",
+            "p_ga",
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            }
+          ]
+        },
+        {
+          "jp": "やまもと先生は「正道を 歩く ことが 大切だ」と 言っています。",
+          "en": "Yamamoto-sensei says, 'Walking the correct path is important.'",
+          "terms": [
+            "char_yamamoto",
+            "v_sensei",
+            "p_wa",
+            "v_seidou",
+            "p_wo",
+            {
+              "id": "v_aruku",
+              "form": "plain_form"
+            },
+            "v_koto",
+            "p_ga",
+            {
+              "id": "v_taisetsu",
+              "form": "plain_adj"
+            },
+            "g_da",
+            "p_to_quote",
+            {
+              "id": "v_iu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "悪質な 考え方は 正して 行かなければ いけません。",
+          "en": "A malicious way of thinking must be corrected.",
+          "terms": [
+            {
+              "id": "v_akushitsu",
+              "form": "attributive_na"
+            },
+            "v_kangaekata",
+            "p_wa",
+            {
+              "id": "v_tadasu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iku",
+              "form": "nakereba"
+            },
+            {
+              "id": "v_ikeru",
+              "form": "polite_negative"
+            }
+          ]
+        },
+        {
+          "jp": "正しい 見方で 世界を 見ると、新しい 考えが 生まれます。",
+          "en": "When you look at the world with the correct viewpoint, new ideas are born.",
+          "terms": [
+            "v_tadashii",
+            "v_mikata",
+            "p_de",
+            "v_sekai",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "plain_form"
+            },
+            "p_to_conditional",
+            "v_atarashii",
+            "v_kangae",
+            "p_ga",
+            {
+              "id": "v_umareru",
+              "form": "polite_masu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "正しい 考え方は 何ですか。",
+          "q_en": "What is correct thinking?",
+          "a": "毎日 とても 大切です。",
+          "a_en": "It is very important every day.",
+          "terms": [
+            "v_tadashii",
+            "v_kangaekata",
+            "p_wa",
+            "v_nan",
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_mainichi",
+            "v_totemo",
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            }
+          ]
+        },
+        {
+          "q": "やまもと先生は 何と 言っていますか。",
+          "q_en": "What does Yamamoto-sensei say?",
+          "a": "正道を 歩く ことが 大切だと 言っています。",
+          "a_en": "He says walking the right path is important.",
+          "terms": [
+            "char_yamamoto",
+            "v_sensei",
+            "p_wa",
+            "v_nan",
+            "p_to_quote",
+            {
+              "id": "v_iu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_seidou",
+            "p_wo",
+            {
+              "id": "v_aruku",
+              "form": "plain_form"
+            },
+            "v_koto",
+            "p_ga",
+            {
+              "id": "v_taisetsu",
+              "form": "plain_adj"
+            },
+            "g_da",
+            "p_to_quote"
+          ]
+        },
+        {
+          "q": "正しい 見方で 世界を 見ると、どう なりますか。",
+          "q_en": "If you look at the world with correct perspective, what happens?",
+          "a": "新しい 考えが 生まれます。",
+          "a_en": "New ideas are born.",
+          "terms": [
+            "v_tadashii",
+            "v_mikata",
+            "p_de",
+            "v_sekai",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "plain_form"
+            },
+            "p_to_conditional",
+            "v_dou",
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_atarashii",
+            "v_kangae",
+            "p_ga",
+            {
+              "id": "v_umareru",
+              "form": "polite_masu"
             }
           ]
         }
@@ -388,19 +891,100 @@
     },
     {
       "type": "reading",
-      "title": "Reading Practice 1: My Teacher's Lesson",
+      "title": "Reading 2: Good and Bad Thinking（正しい考えと悪い考え）",
       "passage": [
         {
-          "jp": "先生は 「正しい 考え方を 持ちましょう」と 言いました。",
-          "en": "The teacher said, 'Let's hold a correct way of thinking.'",
+          "jp": "人は 毎日 たくさんの 考えを 持ちます。",
+          "en": "People hold many thoughts every day.",
           "terms": [
-            "v_sensei",
-            "v_tadashii",
-            "v_kangaekata",
+            "v_hito",
+            "p_wa",
+            "v_mainichi",
+            "v_takusan",
+            "p_no",
+            "v_kangae",
+            "p_wo",
             {
               "id": "v_motsu",
-              "form": "polite_volitional_mashou"
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "正しい 考えを 持つためには、悪質な 考え方に 注意しなければ いけません。",
+          "en": "In order to hold correct thinking, you must be careful of malicious ways of thinking.",
+          "terms": [
+            "v_tadashii",
+            "v_kangae",
+            "p_wo",
+            {
+              "id": "v_motsu",
+              "form": "plain_form"
             },
+            "v_tame",
+            "p_ni",
+            "p_wa",
+            {
+              "id": "v_akushitsu",
+              "form": "attributive_na"
+            },
+            "v_kangaekata",
+            "p_ni",
+            "v_chuui",
+            {
+              "id": "v_suru",
+              "form": "nakereba"
+            },
+            {
+              "id": "v_ikeru",
+              "form": "polite_negative"
+            }
+          ]
+        },
+        {
+          "jp": "考え方が 悪ければ、見方も 悪く なります。",
+          "en": "If your way of thinking is bad, your viewpoint will also become bad.",
+          "terms": [
+            "v_kangaekata",
+            "p_ga",
+            {
+              "id": "v_warui",
+              "form": "conditional_ba"
+            },
+            "v_mikata",
+            "p_mo",
+            {
+              "id": "v_warui",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "やまもと先生は、学生に「悪質な 考えに 注意して ください」と 言いました。",
+          "en": "Yamamoto-sensei said to the students, 'Be careful of malicious thinking.'",
+          "terms": [
+            "char_yamamoto",
+            "v_sensei",
+            "p_wa",
+            "v_gakusei",
+            "p_ni",
+            {
+              "id": "v_akushitsu",
+              "form": "attributive_na"
+            },
+            "v_kangae",
+            "p_ni",
+            "v_chuui",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            "v_kudasai",
+            "p_to_quote",
             {
               "id": "v_iu",
               "form": "polite_mashita"
@@ -408,289 +992,505 @@
           ]
         },
         {
-          "jp": "悪い ことを しては いけません。",
-          "en": "You must not do bad things.",
+          "jp": "りきぞは 先生の 意見を 聞いて、自分の 見方を 正そうと 言いました。",
+          "en": "Rikizo heard the teacher's opinion and said he would correct his viewpoint.",
           "terms": [
-            "v_warui",
+            "char_rikizo",
+            "p_wa",
+            "v_sensei",
+            "p_no",
+            "v_iken",
+            "p_wo",
             {
-              "id": "v_suru",
+              "id": "v_kiku",
               "form": "te_form"
+            },
+            "v_jibun",
+            "p_no",
+            "v_mikata",
+            "p_wo",
+            {
+              "id": "v_tadasu",
+              "form": "plain_volitional"
+            },
+            "p_to_quote",
+            {
+              "id": "v_iu",
+              "form": "polite_mashita"
             }
           ]
         },
         {
-          "jp": "正道を 歩くのが 大切です。",
-          "en": "Walking the path of righteousness is important.",
+          "jp": "毎日 考えを 正したり 意見を 聞いたり する ことが 大切です。",
+          "en": "It is important to both correct your thinking and listen to opinions every day.",
           "terms": [
-            "v_seidou",
-            "v_aruku",
-            "v_taisetsu"
+            "v_mainichi",
+            "v_kangae",
+            "p_wo",
+            {
+              "id": "v_tadasu",
+              "form": "tari_form"
+            },
+            "v_iken",
+            "p_wo",
+            {
+              "id": "v_kiku",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "plain_form"
+            },
+            "v_koto",
+            "p_ga",
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "正しい 考えを 持つためには、何に 注意しなければ いけませんか。",
+          "q_en": "What must you be careful of to have correct thinking?",
+          "a": "悪質な 考え方に 注意しなければ いけません。",
+          "a_en": "Bad thinking patterns.",
+          "terms": [
+            "v_tadashii",
+            "v_kangae",
+            "p_wo",
+            {
+              "id": "v_motsu",
+              "form": "plain_form"
+            },
+            "v_tame",
+            "p_ni",
+            "p_wa",
+            "v_nan",
+            "p_ni",
+            "v_chuui",
+            {
+              "id": "v_suru",
+              "form": "nakereba"
+            },
+            {
+              "id": "v_ikeru",
+              "form": "polite_negative"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            {
+              "id": "v_akushitsu",
+              "form": "attributive_na"
+            },
+            "v_kangaekata"
           ]
         },
         {
-          "jp": "私も いい 学生に なります。",
-          "en": "I will also become a good student.",
+          "q": "やまもと先生は 学生に 何と 言いましたか。",
+          "q_en": "What did Yamamoto-sensei say to the students?",
+          "a": "悪質な 考えに 注意して ください と 言いました。",
+          "a_en": "He said to be careful of bad thinking.",
           "terms": [
-            "k_watashi",
-            "v_ii",
+            "char_yamamoto",
+            "v_sensei",
+            "p_wa",
             "v_gakusei",
+            "p_ni",
+            "v_nan",
+            "p_to_quote",
+            {
+              "id": "v_iu",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            {
+              "id": "v_akushitsu",
+              "form": "attributive_na"
+            },
+            "v_kangae",
+            "p_ni",
+            "v_chuui",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            "v_kudasai"
+          ]
+        },
+        {
+          "q": "毎日 何を する ことが 大切ですか。",
+          "q_en": "What is important to do every day?",
+          "a": "考えを 正したり 意見を 聞いたり する ことが 大切です。",
+          "a_en": "Correcting thinking and listening to opinions.",
+          "terms": [
+            "v_mainichi",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "plain_form"
+            },
+            "v_koto",
+            "p_ga",
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_kangae",
+            {
+              "id": "v_tadasu",
+              "form": "tari_form"
+            },
+            "v_iken",
+            {
+              "id": "v_kiku",
+              "form": "tari_form"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Kanji Readings（漢字の読み方）",
+      "instructions": "Choose the correct reading for each kanji word.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "[正しい] の よみかたは？",
+          "answer": "ただしい",
+          "choices": [
+            "ただしい",
+            "せいしい",
+            "まさしい",
+            "しょうしい"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "[考える] の よみかたは？",
+          "answer": "かんがえる",
+          "choices": [
+            "かんがえる",
+            "こうえる",
+            "かんえる",
+            "かえる"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "[悪い] の よみかたは？",
+          "answer": "わるい",
+          "choices": [
+            "わるい",
+            "あくい",
+            "わい",
+            "おそい"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "[正月] の よみかたは？",
+          "answer": "しょうがつ",
+          "choices": [
+            "しょうがつ",
+            "せいがつ",
+            "まさつき",
+            "ただつき"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "[考え方] の よみかたは？",
+          "answer": "かんがえかた",
+          "choices": [
+            "かんがえかた",
+            "こうかた",
+            "かんかた",
+            "かんがいかた"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "[悪質] の よみかたは？",
+          "answer": "あくしつ",
+          "choices": [
+            "あくしつ",
+            "わるしつ",
+            "あくしち",
+            "おわるしつ"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "[正道] の よみかたは？",
+          "answer": "せいどう",
+          "choices": [
+            "せいどう",
+            "ただどう",
+            "しょうどう",
+            "まさどう"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "[見方] の よみかたは？",
+          "answer": "みかた",
+          "choices": [
+            "みかた",
+            "けんかた",
+            "みほう",
+            "みがた"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Vocabulary Practice（語彙の練習）",
+      "items": [
+        {
+          "q": "「正しい」の 意味は 何ですか。",
+          "answer": "correct / right",
+          "choices": [
+            "correct / right",
+            "bad / evil",
+            "to think",
+            "way of doing"
+          ],
+          "terms": [
+            "v_tadashii",
+            "v_imi",
+            "v_nan",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "q": "「悪質な」の 意味は 何ですか。",
+          "answer": "malicious / bad quality",
+          "choices": [
+            "malicious / bad quality",
+            "correct path",
+            "to correct",
+            "viewpoint"
+          ],
+          "terms": [
+            {
+              "id": "v_akushitsu",
+              "form": "attributive_na"
+            },
+            "v_imi",
+            "v_nan",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "q": "「考え方」の 意味は 何ですか。",
+          "answer": "way of thinking",
+          "choices": [
+            "way of thinking",
+            "idea / thought",
+            "to think",
+            "correct path"
+          ],
+          "terms": [
+            "v_kangaekata",
+            "v_imi",
+            "v_nan",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "q": "正月に ______。",
+          "answer": "今年が 始まります",
+          "choices": [
+            "今年が 始まります",
+            "試験が あります",
+            "旅行に 行きます",
+            "文書を 書きます"
+          ],
+          "terms": [
+            "v_shougatsu",
+            "p_ni",
+            "v_kotoshi",
+            "p_ga",
+            {
+              "id": "v_hajimaru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "q": "悪い 考え方を ______。",
+          "answer": "正します",
+          "choices": [
+            "正します",
+            "始めます",
+            "進みます",
+            "聞きます"
+          ],
+          "terms": [
+            "v_warui",
+            "v_kangaekata",
+            "p_wo",
+            {
+              "id": "v_tadasu",
+              "form": "polite_masu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 3: Grammar & Forms（文法の練習）",
+      "items": [
+        {
+          "q": "悪い 考え方で 進む______、もっと 問題が 大きく なります。",
+          "answer": "と",
+          "choices": [
+            "と",
+            "ても",
+            "ば",
+            "たら"
+          ],
+          "terms": [
+            "v_warui",
+            "v_kangaekata",
+            "p_de",
+            {
+              "id": "v_susumu",
+              "form": "plain_form"
+            },
+            "p_to_conditional",
+            "v_motto",
+            "v_mondai",
+            "p_ga",
+            {
+              "id": "v_ookii",
+              "form": "adverbial"
+            },
             {
               "id": "v_naru",
               "form": "polite_masu"
             }
           ]
-        }
-      ],
-      "questions": [
-        {
-          "q": "先生は 何を 言いましたか。",
-          "a": "正しい 考え方を 持ちましょう。",
-          "terms": [
-            "v_sensei",
-            "v_tadashii",
-            "v_kangaekata"
-          ]
         },
         {
-          "q": "どんな ことを しては いけませんか。",
-          "a": "悪い こと。",
+          "q": "正しく 考えれ______、いい 見方が 生まれます。",
+          "answer": "ば",
+          "choices": [
+            "ば",
+            "たら",
+            "なら",
+            "と"
+          ],
           "terms": [
-            "v_warui"
-          ]
-        },
-        {
-          "q": "何を 歩くのが 大切ですか。",
-          "a": "正道を 歩くのが 大切です。",
-          "terms": [
-            "v_seidou",
-            "v_aruku",
-            "v_taisetsu"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "reading",
-      "title": "Reading Practice 2: January",
-      "passage": [
-        {
-          "jp": "一月は 正月が あります。",
-          "en": "In January, there is New Year.",
-          "terms": [
-            "v_ichigatsu",
-            "v_shougatsu",
             {
-              "id": "v_aru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "jp": "家族の 考えを 聞く いい 時です。",
-          "en": "It is a good time to hear the family's thoughts.",
-          "terms": [
-            "v_kazoku",
-            "v_kangae",
-            "v_kiku",
-            "v_ii",
-            "k_toki"
-          ]
-        },
-        {
-          "jp": "今年も 勉強の 仕方や 仕事の 仕方を 考えます。",
-          "en": "This year too, I will think about how to study and how to work.",
-          "terms": [
-            "v_kotoshi",
-            "v_benkyou",
-            "k_shi",
-            "v_kata",
-            "v_shigoto",
-            {
-              "id": "v_kangaeru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "jp": "毎日 楽しく 生きたいです。",
-          "en": "I want to live happily every day.",
-          "terms": [
-            "v_mainichi",
-            {
-              "id": "v_tanoshii",
+              "id": "v_tadashii",
               "form": "adverbial"
             },
             {
-              "id": "v_ikiru",
-              "form": "plain_desire_tai"
+              "id": "v_kangaeru",
+              "form": "conditional_ba"
             },
-            "g_desu"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "q": "一月に 何が ありますか。",
-          "a": "正月が あります。",
-          "terms": [
-            "v_ichigatsu",
-            "v_shougatsu"
+            "v_ii",
+            "v_mikata",
+            "p_ga",
+            {
+              "id": "v_umareru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
-          "q": "誰の 考えを 聞きますか。",
-          "a": "家族の 考え。",
+          "q": "悪質な 考えに 注意しなければ ______。",
+          "answer": "いけません",
+          "choices": [
+            "いけません",
+            "いきません",
+            "あります",
+            "なります"
+          ],
           "terms": [
-            "v_kazoku",
-            "v_kangae"
-          ]
-        },
-        {
-          "q": "何を 考えますか。",
-          "a": "勉強の 仕方や 仕事の 仕方。",
-          "terms": [
-            "v_benkyou",
-            "v_shigoto",
-            "v_kangaeru",
-            "k_shi",
-            "v_kata"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "drills",
-      "title": "Drill 1: Vocabulary",
-      "instructions": "Select the correct reading or meaning.",
-      "items": [
-        {
-          "kind": "mcq",
-          "q": "正しい",
-          "choices": [
-            "tadashii",
-            "tanoshii",
-            "okashii",
-            "yowai"
-          ],
-          "answer": "tadashii",
-          "terms": []
-        },
-        {
-          "kind": "mcq",
-          "q": "正月",
-          "choices": [
-            "shougatsu",
-            "seigatsu",
-            "maigetsu",
-            "kongetsu"
-          ],
-          "answer": "shougatsu",
-          "terms": []
-        },
-        {
-          "kind": "mcq",
-          "q": "考える",
-          "choices": [
-            "kangaeru",
-            "oshieru",
-            "kazoeru",
-            "tataeru"
-          ],
-          "answer": "kangaeru",
-          "terms": []
-        },
-        {
-          "kind": "mcq",
-          "q": "悪質",
-          "choices": [
-            "akushitsu",
-            "warushitsu",
-            "akushita",
-            "warumono"
-          ],
-          "answer": "akushitsu",
-          "terms": []
-        },
-        {
-          "kind": "mcq",
-          "q": "見方",
-          "choices": [
-            "mikata",
-            "mihou",
-            "kenhou",
-            "kenkata"
-          ],
-          "answer": "mikata",
-          "terms": []
-        }
-      ]
-    },
-    {
-      "type": "drills",
-      "title": "Drill 2: Fill in the Blank",
-      "instructions": "Select the word that fits.",
-      "items": [
-        {
-          "kind": "mcq",
-          "q": "その ______ は 正しいです。",
-          "choices": [
-            "考え",
-            "正体",
-            "悪質",
-            "正月"
-          ],
-          "answer": "考え",
-          "terms": [
+            {
+              "id": "v_akushitsu",
+              "form": "attributive_na"
+            },
             "v_kangae",
-            "v_tadashii"
+            "p_ni",
+            "v_chuui",
+            {
+              "id": "v_suru",
+              "form": "nakereba"
+            },
+            {
+              "id": "v_ikeru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
-          "kind": "mcq",
-          "q": "漢字の ______ が 難しいです。",
+          "q": "りきぞは 自分の 見方を 正そうと ______。",
+          "answer": "言いました",
           "choices": [
-            "書き方",
-            "書き者",
-            "書き正",
-            "書き悪"
+            "言いました",
+            "考えました",
+            "始めました",
+            "進みました"
           ],
-          "answer": "書き方",
           "terms": [
-            "v_kanji",
-            "v_kata",
-            "v_muzukashii"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "あの 人は ______ です。",
-          "choices": [
-            "悪い",
-            "正す",
-            "考える",
-            "方"
-          ],
-          "answer": "悪い",
-          "terms": [
-            "v_hito",
-            "v_warui"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "文を ______ ください。",
-          "choices": [
-            "正して",
-            "考えて",
-            "悪くて",
-            "方して"
-          ],
-          "answer": "正して",
-          "terms": [
-            "k_bun",
+            "char_rikizo",
+            "p_wa",
+            "v_jibun",
+            "p_no",
+            "v_mikata",
+            "p_wo",
             {
               "id": "v_tadasu",
-              "form": "te_form"
+              "form": "plain_volitional"
+            },
+            "p_to_quote",
+            {
+              "id": "v_iu",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "q": "正しい 考え方で 始め______、今年が よく 進みます。",
+          "answer": "れば",
+          "choices": [
+            "れば",
+            "ると",
+            "たら",
+            "ても"
+          ],
+          "terms": [
+            "v_tadashii",
+            "v_kangaekata",
+            "p_de",
+            {
+              "id": "v_hajimeru",
+              "form": "conditional_ba"
+            },
+            "v_kotoshi",
+            "p_ga",
+            "v_yoku",
+            {
+              "id": "v_susumu",
+              "form": "polite_masu"
             }
           ]
         }

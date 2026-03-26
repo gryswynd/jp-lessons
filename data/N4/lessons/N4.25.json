@@ -7,7 +7,12 @@
     "lesson_number": 25,
     "focus": "Academic research, literature, documents, and attention — using 文, 注, 研, 究 kanji compounds.",
     "estimated_minutes": 35,
-    "kanji": ["文", "注", "研", "究"]
+    "kanji": [
+      "文",
+      "注",
+      "研",
+      "究"
+    ]
   },
   "newKanji": [
     {
@@ -524,7 +529,7 @@
               "id": "v_yomu",
               "form": "te_form"
             },
-            "p_kara",
+            "p_tekara",
             {
               "id": "v_kaku",
               "form": "plain_form"
@@ -719,7 +724,9 @@
       "questions": [
         {
           "q": "大学に どんな 研究者が いますか。",
+          "q_en": "What kind of researcher is at the university?",
           "a": "有名な 文学の 研究者が います。",
+          "a_en": "A famous literary researcher.",
           "terms": [
             "v_daigaku",
             "p_ni",
@@ -730,7 +737,9 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             {
               "id": "v_yuumei",
               "form": "attributive_na"
@@ -743,7 +752,9 @@
         },
         {
           "q": "その 先生は 何を 研究して いますか。",
+          "q_en": "What is that teacher researching?",
           "a": "古い 文書を 研究して います。",
+          "a_en": "Old documents.",
           "terms": [
             "v_sono",
             "v_sensei",
@@ -759,7 +770,9 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_furui",
             "v_bunsho",
             "p_wo"
@@ -767,7 +780,9 @@
         },
         {
           "q": "何に なりたいですか。",
+          "q_en": "What do you want to become?",
           "a": "文学者に なりたいです。",
+          "a_en": "I want to become a literary scholar.",
           "terms": [
             "v_nani",
             "p_ni",
@@ -776,7 +791,9 @@
               "form": "plain_desire_tai"
             },
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_bungakusha",
             "p_ni",
             {
@@ -892,7 +909,9 @@
       "questions": [
         {
           "q": "今日は どこで 文書を 読みましたか。",
+          "q_en": "Where did you read documents today?",
           "a": "図書館で 読みました。",
+          "a_en": "At the library.",
           "terms": [
             "v_kyou",
             "p_wa",
@@ -904,14 +923,18 @@
               "id": "v_yomu",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_toshokan",
             "p_de"
           ]
         },
         {
           "q": "どうして 注意しながら 読みましたか。",
+          "q_en": "Why did you read carefully?",
           "a": "むずかしい 英文が あったからです。",
+          "a_en": "Because there were difficult English sentences.",
           "terms": [
             "v_doushite",
             "v_chuui",
@@ -923,7 +946,9 @@
               "id": "v_yomu",
               "form": "polite_mashita"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_muzukashii",
             "v_eibun",
             "p_ga",
@@ -937,7 +962,9 @@
         },
         {
           "q": "何の ために 毎日 勉強して いますか。",
+          "q_en": "Why are you studying every day?",
           "a": "研究者に なるために 勉強して います。",
+          "a_en": "In order to become a researcher.",
           "terms": [
             "v_nan",
             "p_no",
@@ -953,7 +980,9 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_kenkyuusha",
             "p_ni",
             {

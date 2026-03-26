@@ -38,10 +38,32 @@
 | `kanjiGrid` | `type`, `title`, `items[]` (each: `kanji`, `on`, `kun`, `meaning`, `terms`) |
 | `vocabList` | `type`, `title`, `groups[]` (each: `label`, `items[]` of IDs) |
 | `conversation` | `type`, `title`, `context`, `lines[]` (each: `spk`, `jp`, `en`, `terms`) |
-| `reading` | `type`, `title`, `passage[]` (each: `jp`, `en`, `terms`), `questions[]` (each: `q`, `a`, `terms`) |
+| `reading` | `type`, `title`, `passage[]` (each: `jp`, `en`, `terms`), `questions[]` (each: `q`, `q_en`, `a`, `a_en`, `terms`, `a_terms`) |
 | `drills` | `type`, `title`, `instructions`, `items[]` (each: `kind`, `q`, `choices[]`, `answer`, `terms`\*) |
 
 \*`terms` is **omitted** on Drill 1 (vocabulary MCQ where the tested word is self-evident). All other drill types **must** include `terms`.
+
+**CRITICAL — conversation line field is `spk`, NOT `speaker`:** The renderer reads `line.spk`. Writing `"speaker"` causes every character name to display as `undefined`. There is no fallback.
+
+**CRITICAL — reading `passage` must be an array of objects, NOT a string:** The renderer iterates `passage` as `[{jp, en, terms}, ...]`. A flat string renders nothing — no error, just a blank section. The `en` translation and `terms` array belong inside each passage object, not at the reading section level. Each passage object contains **exactly one sentence**. A wall-of-text object (multiple sentences as one `jp` string) is a structural error — the student cannot tap individual sentence chips. Target 4–6 passage objects per reading section.
+
+**CRITICAL — reading `questions` is required:** Every reading section must have a `questions` array with at least 3 items. Omitting `questions` leaves the reading section non-interactive.
+
+Reading comprehension questions (lessons only) must always use Japanese for both question and answer. Questions must be answerable directly from the passage text. Required fields on every question object: `q` (Japanese question), `q_en` (English translation of the question), `a` (Japanese answer, complete sentence), `a_en` (English translation of the answer), `terms` (chips for question text only), `a_terms` (chips for answer text only). The `choices[]` field is **forbidden** on lesson reading questions — it belongs only in drill and review sections.
+
+```json
+{
+  "type": "reading",
+  "title": "...",
+  "passage": [
+    {
+      "jp": "正しい 考え方は 大切です。",
+      "en": "Correct thinking is important.",
+      "terms": ["v_tadashii", "v_kangaekata", "p_wa", {"id": "v_taisetsu", "form": "polite_adj"}]
+    }
+  ]
+}
+```
 
 **Section order convention:** warmup → kanjiGrid → vocabList → conversation(s) → reading(s) → drills
 
@@ -110,7 +132,7 @@ Grammar lesson files use `"type": "grammar"` at the top level and are rendered b
 | `conjugationDrill` | `type`, `title`, `instructions`, `items[]` | Each item: `verb`, `type`, `reading`, `targetForm`, `answer`, `answerReading`, `hint`, `choices[]`. |
 | `patternMatch` | `type`, `title`, `instructions`, `items[]` | Each item: `sentence`, `answer` (bool), `explanation`. |
 | `sentenceTransform` | `type`, `title`, `instructions`, `items[]` | Each item: `given`, `givenReading`, `targetLabel`, `answer`, `answerReading`, `hint`, **`choices[]`** (required — 4 strings; the renderer crashes and leaves the screen blank if `choices` is missing). |
-| `fillSlot` | `type`, `title`, `instructions`, `items[]` | Each item: `before`, `after`, `translation`, `choices[]`, `answer`, `explanation`. **Never use `sentence` with a `___` placeholder** — the renderer requires pre-split `before`/`after` strings. |
+| `fillSlot` | `type`, `title`, `instructions`, `items[]` | Each item: `before`, `after`, `translation`, `choices[]`, `answer`, `also_accept[]` (optional — additional valid answers that earn full credit), `explanation`. **Never use `sentence` with a `___` placeholder** — the renderer requires pre-split `before`/`after` strings. |
 | `conversation` | `type`, `title`, `context`, `lines[]` | Same as lesson conversations. Each line: `spk`, `jp`, `en`, `terms[]`. |
 | `drills` | `type`, `title`, `instructions`, `items[]` | Same as lesson drills. Every item **must** have `explanation`. |
 

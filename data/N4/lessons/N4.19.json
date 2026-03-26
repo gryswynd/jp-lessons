@@ -743,7 +743,9 @@
       "questions": [
         {
           "q": "図書館の 入り口に 何が ありますか。",
+          "q_en": "What is at the library entrance?",
           "a": "地図が あります。",
+          "a_en": "There is a map.",
           "terms": [
             "v_toshokan",
             "p_no",
@@ -755,12 +757,22 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            "v_chizu"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_chizu",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "地上には 何の 本が ありますか。",
+          "q_en": "What books are on the ground floor?",
           "a": "小説と 学説の 本が あります。",
+          "a_en": "There are novels and academic theory books.",
           "terms": [
             "v_chijou",
             "p_ni",
@@ -773,14 +785,26 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_shousetsu",
             "p_to",
-            "v_gakusetsu"
+            "v_gakusetsu",
+            "p_no",
+            "v_hon",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "地下には どんな 本が 多いですか。",
+          "q_en": "What kind of books are most common in the basement?",
           "a": "子どもの 本が 多いです。",
+          "a_en": "Children's books are the most common.",
           "terms": [
             "v_chika",
             "p_ni",
@@ -792,7 +816,9 @@
               "id": "v_ooi",
               "form": "polite_adj"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_kodomo",
             "p_no"
           ]
@@ -900,7 +926,9 @@
       "questions": [
         {
           "q": "先生は 何を 勉強して いますか。",
+          "q_en": "What is the teacher studying?",
           "a": "川の 水質の 問題を 勉強して います。",
+          "a_en": "He is studying the problem of river water quality.",
           "terms": [
             "v_sensei",
             "p_wa",
@@ -915,7 +943,9 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_kawa",
             "p_no",
             "v_suishitsu",
@@ -924,7 +954,9 @@
         },
         {
           "q": "学生は 先生に 何を しましたか。",
+          "q_en": "What did the student do with the teacher?",
           "a": "質問しました。",
+          "a_en": "They asked a question.",
           "terms": [
             "v_gakusei",
             "p_wa",
@@ -932,6 +964,13 @@
             "p_ni",
             "v_nani",
             "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_shitsumon",
             {
               "id": "v_suru",
@@ -941,7 +980,9 @@
         },
         {
           "q": "水質の 問題は どうですか。",
+          "q_en": "How is the water quality problem?",
           "a": "まだ むずかしいです。",
+          "a_en": "It is still difficult.",
           "terms": [
             "v_suishitsu",
             "p_no",
@@ -949,7 +990,9 @@
             "p_wa",
             "v_dou",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_mada",
             {
               "id": "v_muzukashii",

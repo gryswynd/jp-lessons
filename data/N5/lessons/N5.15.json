@@ -75,9 +75,9 @@
           "en": "Last week's test was a little long.",
           "terms": [
             "v_senshuu",
-            "p_no",
-            "v_tesuto",
             "p_wa",
+            "v_tesuto",
+            "p_no",
             "v_sukoshi",
             {
               "id": "v_nagai",
@@ -255,7 +255,7 @@
           "terms": [
             "p_hai",
             "v_kita",
-            "p_ni",
+            "p_wa",
             {
               "id": "v_iku",
               "form": "te_form"
@@ -263,7 +263,7 @@
             "v_kudasai",
             "v_higashi",
             "p_ni",
-            "p_wa",
+            "p_ni",
             {
               "id": "v_aru",
               "form": "polite_negative"
@@ -276,11 +276,11 @@
           "en": "It is not to the south or west either?",
           "terms": [
             "v_minami",
-            "p_ni",
+            "p_mo",
             "p_mo",
             "v_nishi",
             "p_ni",
-            "p_mo",
+            "p_ni",
             {
               "id": "v_aru",
               "form": "polite_negative"
@@ -295,17 +295,17 @@
           "terms": [
             "p_soudesu",
             "v_minami",
-            "p_ni",
+            "p_wa",
             "p_mo",
             "v_nishi",
-            "p_ni",
             "p_mo",
+            "p_ni",
             {
               "id": "v_aru",
               "form": "polite_negative"
             },
             "v_gakkou",
-            "p_wa",
+            "p_ni",
             "v_kita",
             "p_ni",
             {
@@ -328,9 +328,9 @@
           "terms": [
             "char_lee",
             "v_san",
-            "p_no",
-            "v_ie",
             "p_wa",
+            "v_ie",
+            "p_no",
             "v_gakkou",
             "p_no",
             "v_dochira",
@@ -344,16 +344,17 @@
           "en": "It is to the north of the school. What about you, Miki?",
           "terms": [
             "v_gakkou",
-            "p_no",
+            "p_wa",
             "v_kita",
-            "p_ni",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
             },
             "char_miki",
             "v_san",
-            "p_wa"
+            "p_ni",
+            "p_ka"
           ]
         },
         {
@@ -362,9 +363,9 @@
           "en": "My home is to the south of the school.",
           "terms": [
             "v_watashi",
-            "p_no",
-            "v_ie",
             "p_wa",
+            "v_ie",
+            "p_no",
             "v_gakkou",
             "p_no",
             "v_minami",
@@ -405,13 +406,13 @@
             "p_hai",
             "v_mainichi",
             "v_minami",
-            "p_ni",
+            "p_wa",
             {
               "id": "v_iku",
               "form": "polite_masu"
             },
             "v_watashi",
-            "p_wa",
+            "p_ni",
             "v_minami",
             "p_kara",
             {
@@ -465,9 +466,9 @@
           "en": "I want to go to the mountains in the east. What about you, Ken?",
           "terms": [
             "v_higashi",
-            "p_no",
+            "p_wa",
             "v_yama",
-            "p_ni",
+            "p_no",
             {
               "id": "v_iku",
               "form": "plain_desire_tai"
@@ -475,7 +476,8 @@
             "g_desu",
             "char_ken",
             "v_san",
-            "p_wa"
+            "p_ni",
+            "p_ka"
           ]
         },
         {
@@ -486,7 +488,7 @@
             "v_watashi",
             "p_mo",
             "v_higashi",
-            "p_ni",
+            "p_mo",
             {
               "id": "v_iku",
               "form": "plain_desire_tai"
@@ -495,7 +497,7 @@
             "p_yo",
             "v_hokutou",
             "p_ni",
-            "p_mo",
+            "p_ni",
             "v_yama",
             "p_ga",
             "v_ooi",
@@ -508,14 +510,14 @@
           "en": "Are the mountains in the northeast large? Are there rivers too?",
           "terms": [
             "v_hokutou",
-            "p_no",
-            "v_yama",
             "p_wa",
+            "v_yama",
+            "p_mo",
             "v_ookii",
             "g_desu",
             "p_ka",
             "v_kawa",
-            "p_mo",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -580,9 +582,9 @@
             "g_desu",
             "p_yo",
             "v_higashi",
-            "p_no",
-            "v_yama",
             "p_wa",
+            "v_yama",
+            "p_no",
             "v_kirei",
             "g_desu",
             "p_yo"
@@ -606,7 +608,8 @@
             {
               "id": "v_iku",
               "form": "plain_negative"
-            }
+            },
+            "p_ka"
           ]
         },
         {
@@ -620,7 +623,8 @@
             "p_no",
             "v_doko",
             "p_ni",
-            "v_iku"
+            "v_iku",
+            "p_ka"
           ]
         },
         {
@@ -648,8 +652,8 @@
           "en": "There are also mountains in the northeast. Which is better, southwest or northeast?",
           "terms": [
             "v_hokutou",
-            "p_ni",
             "p_mo",
+            "p_ni",
             "v_yama",
             "p_ga",
             "v_aru",
@@ -659,7 +663,8 @@
             "v_hokutou",
             "v_dochira",
             "p_ga",
-            "v_ii"
+            "v_ii",
+            "p_ka"
           ]
         },
         {
@@ -672,9 +677,9 @@
             "v_ii",
             "p_yo",
             "v_minami",
-            "p_no",
-            "v_tenki",
             "p_wa",
+            "v_tenki",
+            "p_no",
             "v_ii",
             "p_kara_because"
           ]
@@ -705,10 +710,10 @@
           "en": "There are many mountains in the north of Japan. There are also mountains in the northeast and northwest.",
           "terms": [
             "v_nihon",
-            "p_no",
+            "p_ga",
             "v_kita",
-            "p_ni",
             "p_wa",
+            "p_mo",
             "v_yama",
             "p_ga",
             "v_takusan",
@@ -720,9 +725,9 @@
             "p_to",
             "v_hokusei",
             "p_ni",
-            "p_mo",
+            "p_ni",
             "v_yama",
-            "p_ga",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -734,8 +739,8 @@
           "en": "There are large rivers to the east. From north to east, there are many rivers.",
           "terms": [
             "v_higashi",
-            "p_ni",
             "p_wa",
+            "p_ni",
             "v_ookii",
             "v_kawa",
             "p_ga",
@@ -758,20 +763,20 @@
           "en": "The weather in the south is nice. There are many white flowers in both the southwest and southeast.",
           "terms": [
             "v_minami",
-            "p_no",
+            "p_ga",
             "v_tenki",
             "p_wa",
             "v_ii",
             "g_desu",
             "v_nansei",
-            "p_ni",
+            "p_mo",
             "p_mo",
             "v_nantou",
             "p_ni",
-            "p_mo",
+            "p_ni",
             "v_shiroi",
             "v_hana",
-            "p_ga",
+            "p_no",
             "v_ooi",
             "g_desu"
           ]
@@ -790,13 +795,13 @@
             },
             "g_desu",
             "v_higashi",
-            "p_no",
+            "p_mo",
             "v_yama",
             "p_to",
             "v_nishi",
             "p_no",
             "v_michi",
-            "p_mo",
+            "p_no",
             "v_ii",
             "g_desu",
             "p_yo"
@@ -805,35 +810,47 @@
       ],
       "questions": [
         {
-          "q": "Where does the passage say there are many mountains?",
-          "a": "In the north, northeast, and northwest",
-          "choices": [
-            "In the north, northeast, and northwest",
-            "In the south and east only",
-            "In the west only",
-            "In the southeast and southwest"
-          ],
+          "q": "北に 何が たくさん ありますか。",
+          "q_en": "What are there many of in the north?",
+          "a": "山が たくさん あります。",
+          "a_en": "There are many mountains.",
           "terms": [
             "v_kita",
-            "v_hokutou",
-            "v_hokusei",
             "p_ni",
+            "v_nani",
+            "p_ga",
+            "v_takusan",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_yama",
             "p_ga",
-            "v_ooi",
-            "g_desu"
+            "v_takusan",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
-          "q": "What does the passage say about the weather in the south?",
-          "a": "It is nice",
-          "choices": [
-            "It is nice",
-            "It is long",
-            "There are many mountains",
-            "There are rivers"
-          ],
+          "q": "南の 天気は どうですか。",
+          "q_en": "What is the weather like in the south?",
+          "a": "南の 天気は いいです。",
+          "a_en": "The weather in the south is nice.",
           "terms": [
+            "v_minami",
+            "p_no",
+            "v_tenki",
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_minami",
             "p_no",
             "v_tenki",
@@ -843,15 +860,23 @@
           ]
         },
         {
-          "q": "What does the narrator want to do?",
-          "a": "Go from north to south",
-          "choices": [
-            "Go from north to south",
-            "Go to the northeast",
-            "Stay in the west",
-            "Come from the east"
-          ],
+          "q": "どこから どこまで 行きたいですか。",
+          "q_en": "Where does the narrator want to go from and to?",
+          "a": "北から 南まで 行きたいです。",
+          "a_en": "They want to go from north to south.",
           "terms": [
+            "v_doko",
+            "p_kara",
+            "v_doko",
+            "p_made",
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_kita",
             "p_kara",
             "v_minami",
@@ -901,8 +926,8 @@
           "en": "In the northeast there are large mountains and long rivers. The flowers in the south are also beautiful.",
           "terms": [
             "v_hokutou",
-            "p_ni",
             "p_wa",
+            "p_mo",
             "v_ookii",
             "v_yama",
             "p_to",
@@ -916,7 +941,7 @@
             "v_minami",
             "p_no",
             "v_hana",
-            "p_mo",
+            "p_ni",
             "v_kirei",
             "g_desu"
           ]
@@ -926,15 +951,15 @@
           "en": "They are going to the northeast by train. The road is a little long.",
           "terms": [
             "v_densha",
-            "p_de",
+            "p_wa",
             "v_hokutou",
-            "p_ni",
+            "p_de",
             {
               "id": "v_iku",
               "form": "polite_masu"
             },
             "v_michi",
-            "p_wa",
+            "p_ni",
             "v_sukoshi",
             "v_nagai",
             "g_desu"
@@ -949,7 +974,7 @@
             "p_wa",
             "v_mata",
             "v_nansei",
-            "p_ni",
+            "p_wa",
             "p_mo",
             {
               "id": "v_iku",
@@ -959,7 +984,7 @@
             "v_nansei",
             "p_no",
             "v_hana",
-            "p_wa",
+            "p_ni",
             "v_totemo",
             "v_kirei",
             "g_desu",
@@ -969,18 +994,26 @@
       ],
       "questions": [
         {
-          "q": "Where does Rikizo want to go?",
-          "a": "To the mountains in the east",
-          "choices": [
-            "To the mountains in the east",
-            "To the rivers in the north",
-            "To the flowers in the west",
-            "To the southwest only"
-          ],
+          "q": "りきぞさんは どこの 山に 行きたいですか。",
+          "q_en": "Where does Rikizo want to go?",
+          "a": "東の 山に 行きたいです。",
+          "a_en": "They want to go to the mountains in the east.",
           "terms": [
             "char_rikizo",
             "v_san",
             "p_wa",
+            "v_doko",
+            "p_no",
+            "v_yama",
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_higashi",
             "p_no",
             "v_yama",
@@ -993,17 +1026,22 @@
           ]
         },
         {
-          "q": "What does the passage say about the northeast?",
-          "a": "There are large mountains and long rivers",
-          "choices": [
-            "There are large mountains and long rivers",
-            "The weather is good",
-            "There are many white flowers",
-            "The road is short"
-          ],
+          "q": "北東に 何が ありますか。",
+          "q_en": "What is there in the northeast?",
+          "a": "大きい 山と 長い 川が あります。",
+          "a_en": "There are large mountains and long rivers.",
           "terms": [
             "v_hokutou",
             "p_ni",
+            "v_nani",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_ookii",
             "v_yama",
             "p_to",
@@ -1017,19 +1055,24 @@
           ]
         },
         {
-          "q": "How is Rikizo getting to the northeast?",
-          "a": "By train",
-          "choices": [
-            "By train",
-            "By car",
-            "By road only",
-            "By bus"
-          ],
+          "q": "何で 北東に 行きますか。",
+          "q_en": "How is Rikizo getting to the northeast?",
+          "a": "電車で 行きます。",
+          "a_en": "They are going by train.",
           "terms": [
-            "v_densha",
+            "v_nani",
             "p_de",
             "v_hokutou",
             "p_ni",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_densha",
+            "p_de",
             {
               "id": "v_iku",
               "form": "polite_masu"
@@ -1151,8 +1194,8 @@
           "answer": "北東",
           "terms": [
             "v_hokutou",
-            "p_ni",
             "p_wa",
+            "p_ni",
             "v_ookii",
             "v_yama",
             "p_ga",
@@ -1174,9 +1217,9 @@
           "answer": "いい",
           "terms": [
             "v_minami",
-            "p_no",
-            "v_tenki",
             "p_wa",
+            "v_tenki",
+            "p_no",
             "v_ii",
             "g_desu",
             "p_yo"
@@ -1244,9 +1287,9 @@
           "answer": "大きいです",
           "terms": [
             "v_higashi",
-            "p_no",
-            "v_yama",
             "p_wa",
+            "v_yama",
+            "p_no",
             "v_ookii",
             "g_desu"
           ]

@@ -90,9 +90,32 @@ Use the form that matches the **surface text** of the specific sentence. If the 
 
 **Quick test:** "Is this adjective the main predicate before a です/でした?" → `polite_adj`. "Does it appear before a noun?" → bare string.
 
+**`polite_adj` requires `です` attached — no space.** `polite_adj` emits the adjective surface + `です` as a single unbroken chip (e.g. `正しいです`). If the jp text has a space before `です` (e.g. `正しい です`), the chip cannot match either token and will not display. Rule: **only use `polite_adj` when the adjective and `です` are written together with no space.** When jp has `[adj] です` (space-split), tag the adjective as a bare string and add `"g_desu"` as a separate term.
+
+| jp text | Correct tagging |
+|---|---|
+| `正しいです` (no space) | `{ "id": "v_tadashii", "form": "polite_adj" }` |
+| `正しい です` (space before です) | `"v_tadashii"` + `"g_desu"` |
+| `大切です` (no space) | `{ "id": "v_taisetsu", "form": "polite_adj" }` |
+| `大切 です` (space before です) | `"v_taisetsu"` (plain) + `"g_desu"` |
+
 な-adjectives follow the same pattern with a dedicated form string:
 - **Attributive** (before a noun): `{ "id": "v_taisetsu", "form": "attributive_na" }` — e.g. 大切な こと、きれいな 花
 - **Predicate** (sentence-final): `{ "id": "v_taisetsu", "form": "polite_adj" }` — e.g. 大切です、きれいです
+
+### Copula spacing — `g_da` requires a space before it
+
+`g_da` (copula だ) attaches to a noun. The text processor does sub-token matching, but single-character matches on `だ` are unreliable when `だ` is fused to the preceding noun with no space (e.g. `考えだな` — one space-token). The chip may not render.
+
+**Rule: always write a space before `だ` in jp text so it is a matchable unit.**
+
+| jp text | Problem | Fix |
+|---|---|---|
+| `考えだな` | `g_da` buried inside single token — chip may not display | `考え だな` |
+| `悪い考えだよ` | `g_da` buried inside single token | `悪い 考え だよ` |
+| `考え だな` | `考え` and `だな` are separate tokens — `g_da` matches `だ` cleanly | ✓ correct |
+
+This does not apply to particles that are expected to fuse (e.g. `p_nda` on `んだ` within `悪いんだ` — `p_nda` is a two-character particle with its own sub-token matching path).
 
 ### Purpose construction (masu-stem + に)
 
@@ -233,16 +256,35 @@ The same two-chip principle applies to other `たい` family forms in polite spe
 |---|---|---|---|
 | Between nouns (A and B) or with action verbs (do X with Y) | Connective "and / with" | `p_to` | N5.2 |
 | After quoted speech or thought content (「...」と) | Quotation marker | `p_to_quote` | N5.13 |
+| After a plain-form clause with 思う/知る in casual speech (〜って思う) | Casual quotation marker | `p_tte_quote` | N5.13 |
 | After a plain-form verb/adjective expressing automatic result (AとB) | Conditional "if/when → natural result" | `p_to_conditional` | G25 (N4.34+) |
 
-**Disambiguation rule — what precedes と determines role:**
+**Disambiguation rule — what precedes と/って determines role:**
 
 - **と between/after nouns** → `p_to` (レンとミキ = "Ren and Miki")
 - **と after a closing 」quotation mark** → `p_to_quote` (「おいしい」と言いました = said "it's delicious")
-- **と after a plain-form clause with 思う/知る** → `p_to_quote` (いいと思います = "I think it's good")
+- **と after a plain-form clause with 思う/知る (polite speech)** → `p_to_quote` (いいと思います = "I think it's good")
+- **って after a plain-form clause in casual speech** → `p_tte_quote` (いいって思う, また 行きたい って なるよ)
 - **と after a plain-form clause expressing automatic/natural result** → `p_to_conditional` (ボタンを押すと開く = "push the button and it opens") — **hard blocker before G25**
 
-Before N5.13, と appears only as `p_to`. From N5.13, `p_to` and `p_to_quote` are both in scope. `p_to_conditional` is not available until G25 (N4.34+) — any sentence using the AとB natural-result pattern (including wishful expressions like あるといいね) before G25 is an out-of-scope grammar violation and must be rewritten. Tagging quotation と as `p_to` displays "and / with" when the student taps it, which is actively misleading.
+**`p_to_quote` vs `p_tte_quote`:** These are different particles with different surfaces (`と` vs `って`). Never use `p_to_quote` for `って` text — the chip will either not render or show the wrong gloss. Always verify which surface form appears in the jp text before tagging.
+
+Before N5.13, と appears only as `p_to`. From N5.13, `p_to`, `p_to_quote`, and `p_tte_quote` are all in scope. `p_to_conditional` is not available until G25 (N4.34+) — any sentence using the AとB natural-result pattern (including wishful expressions like あるといいね) before G25 is an out-of-scope grammar violation and must be rewritten. Tagging quotation と as `p_to` displays "and / with" when the student taps it, which is actively misleading.
+
+### Casual speech contractions — expand in jp text
+
+In spoken Japanese, `〜ている` contracts to `〜てる` and `〜ていた` contracts to `〜てた`. These contracted forms **cannot be tagged correctly** by the engine because the auxiliary `v_iru` has surfaces `いる`/`いた` which do not appear in the contracted text.
+
+**Rule: always expand contractions in jp text by inserting a space before the auxiliary.**
+
+| Contracted (❌ do not write) | Expanded (✓ write this) | Terms |
+|---|---|---|
+| `してた` | `して いた` | `{v_suru, te_form}` + `{v_iru, plain_past}` |
+| `行ってた` | `行って いた` | `{v_iku, te_form}` + `{v_iru, plain_past}` |
+| `食べてる` | `食べて いる` | `{v_taberu, te_form}` + `{v_iru, plain_form}` |
+| `飲んでた` | `飲んで いた` | `{v_nomu, te_form}` + `{v_iru, plain_past}` |
+
+This applies to all casual conversation lines. The expanded form with a space is natural in the spaced-token jp format the content uses and still reads correctly when rendered.
 
 ### Particle `matches` — polite/plain surface variants
 

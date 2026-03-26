@@ -74,11 +74,27 @@
       "introducedIn": "N5.13"
     },
     {
+      "id": "p_tte_quote",
+      "particle": "って",
+      "reading": "って",
+      "role": "casual quotation marker",
+      "explanation": "Casual spoken form of the quotation marker と. Marks the content of speech or thought in informal speech. Example: 行きたいってなる (you end up wanting to go).",
+      "introducedIn": "N4.27"
+    },
+    {
       "id": "p_to_conditional",
       "particle": "と",
       "reading": "と",
       "role": "conditional / automatic result",
       "explanation": "Expresses an automatic or natural result: 'if/when A, then B always follows.' Used after plain-form verbs or adjectives. Unlike たら/ば, the と conditional implies the result is inevitable or habitual, not hypothetical. Example: ボタンを押すと、ドアが開く (push the button and the door opens).",
+      "introducedIn": "G25"
+    },
+    {
+      "id": "p_nara",
+      "particle": "なら",
+      "reading": "なら",
+      "role": "contextual conditional",
+      "explanation": "Contextual conditional 'if / in that case'. Unlike ば, たら, and と, なら responds to something already established in context — something the other person said, an assumption, or a plan. Follows plain-form verbs, nouns, and adjectives. Example: 東京に行くなら、渋谷に寄ってみて (if you're going to Tokyo [as you say], try stopping by Shibuya). Cannot be used for new hypotheticals — the condition must be based on something already mentioned.",
       "introducedIn": "G25"
     },
     {
@@ -206,13 +222,22 @@
       "particle": "から",
       "reading": "から",
       "role": "because / since",
-      "explanation": "Causal conjunction meaning 'because' or 'since'. The reason clause comes first: 暑いから、水を飲みます (Because it's hot, I'll drink water). Uses plain form + から in casual speech; polite form + から in polite speech. Not the same as から meaning 'from' (p_kara, G3) — different grammar role.",
+      "explanation": "Causal conjunction meaning 'because' or 'since'. The reason clause comes first: 暑いから、水を飲みます (Because it's hot, I'll drink water). Uses plain form + から in casual speech; polite form + から in polite speech. Not the same as から meaning 'from' (p_kara, G3) or sequential から (p_tekara, G19) — different grammar roles.",
       "introducedIn": "G10"
+    },
+    {
+      "id": "p_tekara",
+      "particle": "から",
+      "reading": "から",
+      "role": "sequential marker (after doing)",
+      "explanation": "Sequential marker attached after the て-form of a verb: [verb-て] + から = 'after doing [verb]'. The first action must be fully complete before the second begins. Example: 食べてから、出かけます = After eating, I'll go out. Do NOT confuse with p_kara ('from') or p_kara_because ('because').",
+      "introducedIn": "G19"
     },
     {
       "id": "p_ndesu",
       "particle": "んです",
       "reading": "んです",
+      "matches": ["のです", "なんです", "なのです"],
       "role": "explanatory / emphasis (you see / it's that...)",
       "explanation": "Explanatory form contracting のです. Attaches to plain forms to provide explanation, background context, or emphasis. Polite: んです / のです. Example: 雨なんです = It's raining, you see. Formally taught in G10 alongside plain forms.",
       "introducedIn": "G10"
@@ -221,6 +246,7 @@
       "id": "p_nda",
       "particle": "んだ",
       "reading": "んだ",
+      "matches": ["なんだ"],
       "role": "explanatory / emphasis — casual (you see / it's that...)",
       "explanation": "Casual plain-form equivalent of んです. Used in informal speech to provide explanation or emphasis. Example: 行くんだ = I'm going (implying explanation or assertion). Often followed by よ or けど.",
       "introducedIn": "G10"

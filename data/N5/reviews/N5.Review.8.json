@@ -34,11 +34,11 @@
                 "char_rikizo",
                 "v_san",
                 "v_gakkou",
-                "p_no",
+                "p_ga",
                 "v_kita",
                 "p_ni",
                 "v_nani",
-                "p_ga",
+                "p_no",
                 {
                   "id": "v_aru",
                   "form": "polite_masu"
@@ -51,7 +51,7 @@
               "jp": "北に 駅が あります。南には 大きい 店も ありますよ。",
               "terms": [
                 "v_kita",
-                "p_ni",
+                "p_wa",
                 "v_eki",
                 "p_ga",
                 {
@@ -59,11 +59,11 @@
                   "form": "polite_masu"
                 },
                 "v_minami",
+                "p_mo",
                 "p_ni",
-                "p_wa",
                 "v_ookii",
                 "v_mise",
-                "p_mo",
+                "p_ni",
                 {
                   "id": "v_aru",
                   "form": "polite_masu"
@@ -80,8 +80,8 @@
                 "v_higashi",
                 "p_to",
                 "v_nishi",
-                "p_ni",
                 "p_wa",
+                "p_ni",
                 "v_nani",
                 "p_ga",
                 {
@@ -96,7 +96,7 @@
               "jp": "東に 高い 山が あります。西には 川が ありますよ。",
               "terms": [
                 "v_higashi",
-                "p_ni",
+                "p_wa",
                 "v_takai",
                 "v_yama",
                 "p_ga",
@@ -106,7 +106,7 @@
                 },
                 "v_nishi",
                 "p_ni",
-                "p_wa",
+                "p_ni",
                 "v_kawa",
                 "p_ga",
                 {
@@ -153,7 +153,7 @@
               "jp": "右に ありますよ。あの 大きい 本は 上に あります。",
               "terms": [
                 "v_migi",
-                "p_ni",
+                "p_wa",
                 {
                   "id": "v_aru",
                   "form": "polite_masu"
@@ -162,7 +162,7 @@
                 "v_ano",
                 "v_ookii",
                 "v_hon",
-                "p_wa",
+                "p_ni",
                 "v_ue",
                 "p_ni",
                 {
@@ -179,10 +179,10 @@
                 "g_desu",
                 "p_ka",
                 "v_hidari",
-                "p_no",
+                "p_wa",
                 "v_chiisai",
                 "v_hon",
-                "p_wa",
+                "p_no",
                 "v_nan",
                 "g_desu",
                 "p_ka"
@@ -195,14 +195,14 @@
                 "v_sore",
                 "p_wa",
                 "v_nihongo",
-                "p_no",
+                "p_ga",
                 "v_hon",
                 "g_desu",
                 "v_shita",
-                "p_ni",
                 "p_mo",
+                "p_ni",
                 "v_hon",
-                "p_ga",
+                "p_no",
                 "v_takusan",
                 {
                   "id": "v_aru",
@@ -233,9 +233,10 @@
                 "char_yamakawa",
                 "v_nihongo",
                 "v_yomu",
-                "p_no",
                 "p_wa",
-                "v_jouzu"
+                "p_no",
+                "v_jouzu",
+                "p_ka"
               ]
             },
             {
@@ -244,15 +245,15 @@
               "terms": [
                 "v_un",
                 "v_yomu",
-                "p_no",
+                "p_wa",
                 "p_wa",
                 "v_jouzu",
-                "g_da",
                 "p_yo",
+                "g_da",
                 "p_kedo",
                 "v_kaku",
                 "p_no",
-                "p_wa",
+                "p_no",
                 "v_heta",
                 "g_da"
               ]
@@ -264,14 +265,14 @@
                 "v_watashi",
                 "p_mo",
                 "v_kaku",
-                "p_no",
+                "p_ga",
                 "p_ga",
                 "v_heta",
-                "g_da",
                 "p_yo",
+                "g_da",
                 "v_yomu",
                 "p_no",
-                "p_ga",
+                "p_no",
                 "v_ichiban",
                 "v_suki",
                 "g_da"
@@ -283,14 +284,14 @@
               "terms": [
                 "v_un",
                 "v_hanasu",
-                "p_no",
                 "p_mo",
+                "p_no",
                 "v_suki",
-                "g_da",
+                "p_yo",
                 "p_kedo",
                 "v_heta",
                 "g_da",
-                "p_yo"
+                "g_da"
               ]
             }
           ],
@@ -465,11 +466,11 @@
           "en": "There is a station to the north of the school. I go from the station to school every day.",
           "terms": [
             "v_gakkou",
-            "p_no",
+            "p_ga",
             "v_kita",
             "p_ni",
             "v_eki",
-            "p_ga",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -544,11 +545,11 @@
           "en": "Inside the store, books are on the right. Flowers are on the left.",
           "terms": [
             "v_mise",
-            "p_no",
+            "p_ga",
             "v_naka",
-            "p_de",
+            "p_wa",
             "v_migi",
-            "p_ni",
+            "p_de",
             "v_hon",
             "p_ga",
             {
@@ -557,9 +558,9 @@
             },
             "v_hidari",
             "p_ni",
-            "p_wa",
+            "p_ni",
             "v_hana",
-            "p_ga",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -579,11 +580,11 @@
           ],
           "terms": [
             "v_gakkou",
-            "p_no",
+            "p_ga",
             "v_higashi",
             "p_ni",
             "v_nani",
-            "p_ga",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -625,11 +626,11 @@
           ],
           "terms": [
             "v_mise",
-            "p_no",
-            "v_naka",
-            "p_de",
-            "v_hon",
             "p_wa",
+            "v_naka",
+            "p_no",
+            "v_hon",
+            "p_de",
             "v_doko",
             "p_ni",
             {
@@ -764,8 +765,8 @@
             "v_nihongo",
             "p_wo",
             "v_kaku",
-            "p_no",
             "p_ga",
+            "p_no",
             "v_jouzu",
             "g_desu"
           ],
@@ -783,11 +784,11 @@
           "answer": "東",
           "terms": [
             "v_gakkou",
-            "p_no",
+            "p_ga",
             "v_higashi",
             "p_ni",
             "v_yama",
-            "p_ga",
+            "p_no",
             {
               "id": "v_aru",
               "form": "polite_masu"

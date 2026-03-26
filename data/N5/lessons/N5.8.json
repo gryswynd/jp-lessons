@@ -504,23 +504,22 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "はい、高いです。買いたいです。",
-          "en": "Yes, it is expensive. I want to buy it.",
+          "jp": "はい、高いです。買います。",
+          "en": "Yes, it is expensive. I will buy it.",
           "terms": [
             "p_hai",
             "v_takai",
             "g_desu",
             {
               "id": "v_kau",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "spk": "先生",
-          "jp": "そうですね。わたしも 買いたいです。",
-          "en": "I see. I also want to buy one.",
+          "jp": "そうですね。わたしも 買います。",
+          "en": "I see. I will also buy one.",
           "terms": [
             "p_soudesu",
             "p_ne",
@@ -528,9 +527,8 @@
             "p_mo",
             {
               "id": "v_kau",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -744,7 +742,9 @@
       "questions": [
         {
           "q": "りきぞと やまかわは どこへ 行きましたか。",
+          "q_en": "Where did Rikizo and Yamakawa go?",
           "a": "デパートへ 行きました。",
+          "a_en": "They went to the department store.",
           "terms": [
             "p_to",
             "p_wa",
@@ -754,13 +754,22 @@
               "id": "v_iku",
               "form": "polite_mashita"
             },
-            "p_ka",
-            "v_depaato"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_depaato",
+            "p_e",
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "何を 買いましたか。",
+          "q_en": "What did they buy?",
           "a": "プレゼントを 買いました。",
+          "a_en": "They bought a present.",
           "terms": [
             "v_nani",
             "p_wo",
@@ -768,33 +777,48 @@
               "id": "v_kau",
               "form": "polite_mashita"
             },
-            "p_ka",
-            "v_purezento"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_purezento",
+            "p_wo",
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "りきぞの プレゼントは どうですか。",
+          "q_en": "How is Rikizo's present?",
           "a": "新しいです。",
+          "a_en": "It is new.",
           "terms": [
             "p_no",
             "v_purezento",
             "p_wa",
             "v_dou",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_atarashii",
             "g_desu"
           ]
         },
         {
           "q": "プレゼントは 高いですか。",
+          "q_en": "Is the present expensive?",
           "a": "あまり 高くないです。",
+          "a_en": "It is not very expensive.",
           "terms": [
             "v_purezento",
             "p_wa",
             "v_takai",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_amari",
             {
               "id": "v_takai",
@@ -824,8 +848,8 @@
           ]
         },
         {
-          "jp": "友だちの プレゼントを 買いたいです。",
-          "en": "The station master wants to buy a gift for a friend.",
+          "jp": "友だちの プレゼントを 買います。",
+          "en": "The station master buys a gift for a friend.",
           "terms": [
             "v_tomodachi",
             "p_no",
@@ -833,9 +857,8 @@
             "p_wo",
             {
               "id": "v_kau",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -903,7 +926,9 @@
       "questions": [
         {
           "q": "駅長は どこへ 行きましたか。",
+          "q_en": "Where did the station master go?",
           "a": "デパートへ 行きました。",
+          "a_en": "He went to the department store.",
           "terms": [
             "v_ekichou",
             "p_wa",
@@ -913,32 +938,50 @@
               "id": "v_iku",
               "form": "polite_mashita"
             },
-            "p_ka",
-            "v_depaato"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_depaato",
+            "p_e",
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "何が ほしいですか。",
+          "q_en": "What does he want?",
           "a": "長い プレゼントが ほしいです。",
+          "a_en": "He wants a long present.",
           "terms": [
             "v_nani",
             "p_ga",
             "v_hoshii",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_nagai",
-            "v_purezento"
+            "v_purezento",
+            "p_ga",
+            "v_hoshii",
+            "g_desu"
           ]
         },
         {
           "q": "プレゼントは どうですか。",
+          "q_en": "How is the present?",
           "a": "あまり 高くないです。",
+          "a_en": "It is not very expensive.",
           "terms": [
             "v_purezento",
             "p_wa",
             "v_dou",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_amari",
             {
               "id": "v_takai",
