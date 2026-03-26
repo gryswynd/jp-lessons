@@ -73,7 +73,7 @@ for gpath in glob.glob(os.path.join(repo_root, 'data/*/glossary.*.json')):
                 if eid:
                     id_info[eid] = {
                         'surface': entry.get('surface', ''),
-                        'reading': entry.get('reading', ''),
+                        'reading': entry.get('reading', entry.get('surface', '')),
                         'matches': entry.get('matches', []) if isinstance(entry.get('matches'), list) else [],
                         'gtype': entry.get('gtype', ''),
                         'verb_class': entry.get('verb_class', ''),
@@ -107,6 +107,68 @@ if os.path.exists(chars_path):
 id_info['g_desu'] = {'surface': 'です', 'matches': [], 'gtype': 'copula', 'verb_class': ''}
 id_info['g_da'] = {'surface': 'だ', 'matches': ['だった'], 'gtype': 'copula', 'verb_class': ''}
 
+# ---------------------------------------------------------------------------
+# Conjugation engine — port of text-processor.js conjugate()
+# ---------------------------------------------------------------------------
+GODAN_MAPS = {
+    'u_to_i':    {'う':'い','く':'き','ぐ':'ぎ','す':'し','つ':'ち','ぬ':'に','ぶ':'び','む':'み','る':'り'},
+    'u_to_a':    {'う':'わ','く':'か','ぐ':'が','す':'さ','つ':'た','ぬ':'な','ぶ':'ば','む':'ま','る':'ら'},
+    'u_to_e':    {'う':'え','く':'け','ぐ':'げ','す':'せ','つ':'て','ぬ':'ね','ぶ':'べ','む':'め','る':'れ'},
+    'u_to_o':    {'う':'お','く':'こ','ぐ':'ご','す':'そ','つ':'と','ぬ':'の','ぶ':'ぼ','む':'も','る':'ろ'},
+    'ta_form':   {'う':'った','つ':'った','る':'った','む':'んだ','ぶ':'んだ','ぬ':'んだ','く':'いた','ぐ':'いだ','す':'した'},
+    'te_form':   {'う':'って','つ':'って','る':'って','む':'んで','ぶ':'んで','ぬ':'んで','く':'いて','ぐ':'いで','す':'して'},
+    'tari_form': {'う':'ったり','つ':'ったり','る':'ったり','む':'んだり','ぶ':'んだり','ぬ':'んだり','く':'いたり','ぐ':'いだり','す':'したり'},
+    'tara_form': {'う':'ったら','つ':'ったら','る':'ったら','む':'んだら','ぶ':'んだら','ぬ':'んだら','く':'いたら','ぐ':'いだら','す':'したら'},
+}
+
+conj_rules = {}
+try:
+    with open(os.path.join(repo_root, 'conjugation_rules.json')) as _f:
+        conj_rules = json.load(_f)
+except Exception:
+    pass
+
+def _apply_rule(surface, reading, rule):
+    """Apply one conjugation rule to (surface, reading). Returns (new_surface, new_reading) or (None, None)."""
+    rtype = rule.get('type')
+    if rtype == 'identity':
+        return surface, reading
+    if rtype == 'replace':
+        return rule.get('surface'), rule.get('reading', rule.get('surface'))
+    if rtype == 'suffix':
+        rm = rule.get('remove', '')
+        add = rule.get('add', '')
+        s = surface[:-len(rm)] if (rm and surface.endswith(rm)) else surface
+        r = reading[:-len(rm)] if (rm and reading.endswith(rm)) else reading
+        return s + add, r + add
+    if rtype in ('godan_change', 'godan_euphonic'):
+        m = GODAN_MAPS.get(rule.get('map', ''), {})
+        sl, rl = (surface[-1] if surface else ''), (reading[-1] if reading else '')
+        ms, mr = m.get(sl), m.get(rl)
+        if ms is None:
+            return None, None
+        add = rule.get('add', '')
+        return surface[:-1] + ms + add, reading[:-1] + (mr or ms) + add
+    return None, None
+
+def conjugate_surface(surface, reading, verb_class, form_key):
+    """Compute (expected_surface, expected_reading) for a conjugated term. Returns (None,None) if unknown."""
+    if not surface or not form_key:
+        return None, None
+    form_def = conj_rules.get(form_key)
+    if not form_def or not isinstance(form_def, dict):
+        return None, None
+    rules = form_def.get('rules', {})
+    # Normalise verb_class labels (mirrors text-processor.js)
+    vc = verb_class or ''
+    if vc in ('u', 'verb'): vc = 'godan'
+    if vc == 'ru': vc = 'ichidan'
+    if vc == 'irr_iku' and 'irr_iku' not in rules: vc = 'godan'
+    rule = rules.get(vc)
+    if not rule:
+        return None, None
+    return _apply_rule(surface, reading or surface, rule)
+
 errors = []
 
 import re as _re
@@ -137,7 +199,9 @@ def check_surface(jp, terms, path):
         if isinstance(term, dict):
             tid = term.get('id', '')
             form = term.get('form')
-            if 'counter' in term:
+            # form: null (JSON null → Python None) is the masu-stem purpose
+            # construction — the chip engine handles matching specially; skip check
+            if 'counter' in term or ('form' in term and term['form'] is None):
                 continue
         elif isinstance(term, str):
             tid = term
@@ -150,19 +214,25 @@ def check_surface(jp, terms, path):
 
         info = id_info[tid]
 
-        # Skip conjugated forms (surface changes)
+        # Conjugated-form checks
         if form is not None:
-            # But check na-adj verb_class (FM #53d)
+            # FM #53d: na-adj verb_class gate
             if form in ('attributive_na', 'polite_adj') and info['gtype'] in ('na-adjective', 'na_adj'):
                 if info['verb_class'] != 'na_adj':
                     errors.append(f"  {path}.terms[{i}]: '{tid}' used with '{form}' but missing verb_class:'na_adj' in glossary")
-            # polite_adj emits surface+です as one unbroken token.
-            # If jp has surface + " です" (space before です), the chip will never match.
-            # Correct fix: use plain adj (bare string) + g_desu as separate terms.
+            # FM #60: polite_adj space-split — chip won't match if jp has "surface です"
             if form == 'polite_adj':
-                surface = info.get('surface', '')
-                if surface and (surface + 'です') not in jp and (surface + ' です') in jp:
-                    errors.append(f"  {path}.terms[{i}]: '{tid}' polite_adj — jp has '{surface} です' (space-split); use bare '{tid}' + 'g_desu' instead")
+                _surf = info.get('surface', '')
+                if _surf and (_surf + 'です') not in jp and (_surf + ' です') in jp:
+                    errors.append(f"  {path}.terms[{i}]: '{tid}' polite_adj — jp has '{_surf} です' (space-split); use bare '{tid}' + 'g_desu' instead")
+            # Conjugated-surface mismatch check — catches wrong verb ID (e.g. v_deru vs v_dasu)
+            # Skip when jp contains a fill-in-the-blank marker (conjugated form is in the answer field)
+            _vc = info.get('verb_class', '') or info.get('gtype', '')
+            _cs, _cr = conjugate_surface(info.get('surface', ''), info.get('reading', ''), _vc, form)
+            if _cs is not None and '______' not in jp:
+                _jp_clean = jp.replace(' ', '').replace('\u3000', '')
+                if _cs not in _jp_clean and (_cr is None or _cr not in _jp_clean):
+                    errors.append(f"  {path}.terms[{i}]: '{tid}' {form} → expected '{_cs}' not found in jp")
             continue
 
         # Special cross-check: p_to_quote (surface と, 1 char — skipped below by single-char guard)
@@ -184,29 +254,30 @@ def check_surface(jp, terms, path):
             continue
 
         surface = info['surface']
-        matches = info['matches']
-        # If surface contains untaught kanji, fall back to reading (hiragana form)
-        # Keep matches that contain only taught kanji (partial-kanji forms like 名まえ)
+        matches = list(info['matches'])  # always keep hand-curated matches (e.g. 友だち)
+        # If surface contains untaught kanji, also accept the reading as primary check
         if surface_has_untaught_kanji(surface) and info.get('reading'):
             surface = info['reading']
-            matches = [m for m in matches if not surface_has_untaught_kanji(m)]
-        if not surface_found_in_jp(surface, matches, jp, jp_clean):
+        # Also accept the reading as a valid match (e.g. もの for 物 in abstract contexts,
+        # or できる for 出来る when author chose hiragana even though kanji is taught)
+        _reading = info.get('reading', '')
+        _extra = [_reading] if _reading and _reading != surface else []
+        if not surface_found_in_jp(surface, matches + _extra, jp, jp_clean):
             errors.append(f"  {path}.terms[{i}]: '{tid}' (surface: '{info['surface']}', checked: '{surface}') not found in jp text")
 
 def walk(obj, path="root"):
     if isinstance(obj, dict):
         if 'jp' in obj and 'terms' in obj:
             check_surface(obj['jp'], obj['terms'], path)
-        # Q&A items: terms span both q and a/answer fields.
-        # Reading questions have q+a; MCQ drills have q+answer where answer fills the blank.
+        # Q&A fields: terms cover both q and a text; check against combined string
+        # Also include 'answer' (fill-in-the-blank drills) so surface check covers the answer token
         if 'q' in obj and 'terms' in obj:
-            q_text = obj['q']
-            if 'a' in obj and isinstance(obj['a'], str):
-                q_text = q_text + ' ' + obj['a']
-            elif 'answer' in obj and isinstance(obj['answer'], str):
-                # Substitute answer into blank slot to reconstruct the full sentence
-                q_text = q_text.replace('_______', obj['answer'])
-            check_surface(q_text, obj['terms'], path + '.q')
+            qa_text = obj['q']
+            if isinstance(obj.get('a'), str):
+                qa_text += ' ' + obj['a']
+            if isinstance(obj.get('answer'), str):
+                qa_text += ' ' + obj['answer']
+            check_surface(qa_text, obj['terms'], path + '.q')
         for k, v in obj.items():
             walk(v, f"{path}.{k}")
     elif isinstance(obj, list):
