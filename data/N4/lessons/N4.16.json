@@ -7,7 +7,14 @@
     "lesson_number": 16,
     "focus": "Movement, running, animals, and banking — introducing ポチ the shiba-inu.",
     "estimated_minutes": 30,
-    "kanji": ["動", "犬", "銀", "去", "走", "運"]
+    "kanji": [
+      "動",
+      "犬",
+      "銀",
+      "去",
+      "走",
+      "運"
+    ]
   },
   "newKanji": [
     {
@@ -64,8 +71,14 @@
           "en": "Do you walk every morning?",
           "terms": [
             "v_maiasa",
-            { "id": "v_aruku", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_aruku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -77,8 +90,14 @@
             "p_wo",
             "v_ongaku",
             "p_wo",
-            { "id": "v_kiku", "form": "nagara_form" },
-            { "id": "v_aruku", "form": "polite_mashita" },
+            {
+              "id": "v_kiku",
+              "form": "nagara_form"
+            },
+            {
+              "id": "v_aruku",
+              "form": "polite_mashita"
+            },
             "p_ka"
           ]
         },
@@ -88,11 +107,20 @@
           "terms": [
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form": "tari_form" },
+            {
+              "id": "v_toru",
+              "form": "tari_form"
+            },
             "v_tomodachi",
             "p_to",
-            { "id": "v_hanasu", "form": "tari_form" },
-            { "id": "v_suru", "form": "polite_masu" },
+            {
+              "id": "v_hanasu",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -106,11 +134,20 @@
             "p_wa",
             "v_ongaku",
             "p_wo",
-            { "id": "v_kiku", "form": "tari_form" },
+            {
+              "id": "v_kiku",
+              "form": "tari_form"
+            },
             "v_eiga",
             "p_wo",
-            { "id": "v_miru", "form": "tari_form" },
-            { "id": "v_suru", "form": "polite_masu" },
+            {
+              "id": "v_miru",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         }
@@ -248,8 +285,14 @@
             "p_to",
             "v_kinjo",
             "p_wo",
-            { "id": "v_hashiru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_hashiru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -271,11 +314,17 @@
           "en": "She is a small, cute animal. She loves running.",
           "terms": [
             "char_rikizo",
-            { "id": "v_chiisai", "form": "te_form" },
+            {
+              "id": "v_chiisai",
+              "form": "te_form"
+            },
             "v_kawaii",
             "v_doubutsu",
             "g_desu",
-            { "id": "v_hashiru", "form": "plain_form" },
+            {
+              "id": "v_hashiru",
+              "form": "plain_form"
+            },
             "p_no",
             "p_ga",
             "v_daisuki",
@@ -289,11 +338,17 @@
           "terms": [
             "v_sore",
             "p_wa",
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_undou",
             "p_ni",
-            { "id": "v_naru", "form": "polite_masu" },
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            },
             "p_ne"
           ]
         }
@@ -313,12 +368,18 @@
             "char_rikizo",
             "v_okane",
             "p_wo",
-            { "id": "v_dasu", "form": "plain_desire_tai" },
+            {
+              "id": "v_dasu",
+              "form": "plain_desire_tai"
+            },
             "g_desu",
             "p_ga_but",
             "v_doko",
             "p_ni",
-            { "id": "v_iku", "form": "polite_masu" },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
@@ -334,7 +395,10 @@
             "v_jidou",
             "p_no",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
             "p_yo"
           ]
         },
@@ -345,14 +409,20 @@
           "terms": [
             "char_rikizo",
             "p_ga",
-            { "id": "v_ugoku", "form": "plain_negative" },
+            {
+              "id": "v_ugoku",
+              "form": "plain_negative"
+            },
             "v_toki",
             "p_wa",
             "v_doko",
             "p_de",
             "v_okane",
             "p_wo",
-            { "id": "v_dasu", "form": "polite_potential" },
+            {
+              "id": "v_dasu",
+              "form": "polite_potential"
+            },
             "p_ka"
           ]
         },
@@ -365,10 +435,16 @@
             "p_de",
             "v_okane",
             "p_wo",
-            { "id": "v_hakobu", "form": "polite_masu" },
+            {
+              "id": "v_hakobu",
+              "form": "polite_masu"
+            },
             "p_node",
             "v_yukkuri",
-            { "id": "v_suru", "form": "te_form" },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         }
@@ -389,7 +465,10 @@
             "p_de",
             "v_yaken",
             "p_wo",
-            { "id": "v_miru", "form": "polite_mashita" },
+            {
+              "id": "v_miru",
+              "form": "polite_mashita"
+            },
             "p_yo"
           ]
         },
@@ -406,7 +485,10 @@
             "v_naka",
             "p_de",
             "v_ichiban",
-            { "id": "v_kowai", "form": "polite_adj" },
+            {
+              "id": "v_kowai",
+              "form": "polite_adj"
+            },
             "p_ne"
           ]
         },
@@ -419,13 +501,22 @@
             "p_wa",
             "v_yaken",
             "p_dewa",
-            { "id": "v_aru", "form": "polite_negative" },
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            },
             "p_ne",
             "p_yo",
             "v_itsumo",
-            { "id": "v_chikai", "form": "adverbial" },
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            },
             "p_ni",
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_kara_because"
           ]
         },
@@ -462,7 +553,10 @@
             "char_pochi",
             "p_wa",
             "v_totemo",
-            { "id": "v_chiisai", "form": "plain_past_adj" },
+            {
+              "id": "v_chiisai",
+              "form": "plain_past_adj"
+            },
             "p_ne"
           ]
         },
@@ -478,12 +572,18 @@
             "v_kyonen",
             "p_wa",
             "v_amari",
-            { "id": "v_hashiru", "form": "plain_past_negative" },
+            {
+              "id": "v_hashiru",
+              "form": "plain_past_negative"
+            },
             "p_kedo",
             "v_ima",
             "p_wa",
             "v_mainichi",
-            { "id": "v_hashiru", "form": "plain_form" },
+            {
+              "id": "v_hashiru",
+              "form": "plain_form"
+            },
             "p_yo"
           ]
         },
@@ -497,9 +597,18 @@
             "p_to",
             "v_soto",
             "p_wo",
-            { "id": "v_hashiru", "form": "tari_form" },
-            { "id": "v_aruku", "form": "tari_form" },
-            { "id": "v_suru", "form": "plain_past" },
+            {
+              "id": "v_hashiru",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_aruku",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "plain_past"
+            },
             "p_no",
             "p_ka"
           ]
@@ -516,7 +625,10 @@
             "p_de",
             "v_shashin",
             "p_wo",
-            { "id": "v_toru", "form": "plain_past" },
+            {
+              "id": "v_toru",
+              "form": "plain_past"
+            },
             "p_yo"
           ]
         }
@@ -538,8 +650,14 @@
             "v_issho",
             "v_kinjo",
             "p_wo",
-            { "id": "v_hashiru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_hashiru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -552,31 +670,52 @@
             "v_inu",
             "g_desu",
             "p_ga_but",
-            { "id": "v_hashiru", "form": "plain_form" },
+            {
+              "id": "v_hashiru",
+              "form": "plain_form"
+            },
             "p_no",
             "p_ga",
-            { "id": "v_hayai", "form": "te_form" },
-            { "id": "v_genki", "form": "polite_adj" }
+            {
+              "id": "v_hayai",
+              "form": "te_form"
+            },
+            {
+              "id": "v_genki",
+              "form": "polite_adj"
+            }
           ]
         },
         {
           "jp": "走った 後で、りきぞは 音楽を 聞きながら 銀行に 行って お金を 出します。",
           "en": "After running, Rikizo goes to the bank while listening to music and takes out money.",
           "terms": [
-            { "id": "v_hashiru", "form": "plain_past" },
+            {
+              "id": "v_hashiru",
+              "form": "plain_past"
+            },
             "v_ato",
             "p_de",
             "char_rikizo",
             "p_wa",
             "v_ongaku",
             "p_wo",
-            { "id": "v_kiku", "form": "nagara_form" },
+            {
+              "id": "v_kiku",
+              "form": "nagara_form"
+            },
             "v_ginkou",
             "p_ni",
-            { "id": "v_iku", "form": "te_form" },
+            {
+              "id": "v_iku",
+              "form": "te_form"
+            },
             "v_okane",
             "p_wo",
-            { "id": "v_dasu", "form": "polite_masu" }
+            {
+              "id": "v_dasu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -591,7 +730,10 @@
             "p_wo",
             "v_ie",
             "p_made",
-            { "id": "v_hakobu", "form": "polite_masu" },
+            {
+              "id": "v_hakobu",
+              "form": "polite_masu"
+            },
             "v_kyou",
             "p_mo",
             "v_un_ga_ii",
@@ -603,7 +745,9 @@
       "questions": [
         {
           "q": "りきぞは 毎朝 ポチと 何を して いますか。",
+          "q_en": "What does Rikizo do with Pochi every morning?",
           "a": "いっしょに 近所を 走って います。",
+          "a_en": "They run around the neighborhood together.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -612,45 +756,79 @@
             "p_to",
             "v_nani",
             "p_wo",
-            { "id": "v_suru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
-            "p_ka",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_issho",
             "v_kinjo",
             "p_wo",
-            { "id": "v_hashiru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_hashiru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "q": "ポチは どんな 犬ですか。",
+          "q_en": "What kind of dog is Pochi?",
           "a": "小さくて 元気な 犬です。",
+          "a_en": "He is a small and energetic dog.",
           "terms": [
             "char_pochi",
             "p_wa",
             "v_donna",
             "v_inu",
             "g_desu",
-            "p_ka",
-            { "id": "v_chiisai", "form": "te_form" },
-            { "id": "v_genki", "form": "attributive_na" },
+            "p_ka"
+          ],
+          "a_terms": [
+            {
+              "id": "v_chiisai",
+              "form": "te_form"
+            },
+            {
+              "id": "v_genki",
+              "form": "attributive_na"
+            },
             "v_inu",
             "g_desu"
           ]
         },
         {
           "q": "銀行で 何を しますか。",
+          "q_en": "What does Rikizo do at the bank?",
           "a": "お金を 出します。",
+          "a_en": "He takes out money.",
           "terms": [
             "v_ginkou",
             "p_de",
             "v_nani",
             "p_wo",
-            { "id": "v_suru", "form": "polite_masu" },
-            "p_ka",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_okane",
             "p_wo",
-            { "id": "v_dasu", "form": "polite_masu" }
+            {
+              "id": "v_dasu",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -670,7 +848,10 @@
             "v_totemo",
             "v_ii",
             "v_jikan",
-            { "id": "g_desu", "form": "polite_past_copula" }
+            {
+              "id": "g_desu",
+              "form": "polite_past_copula"
+            }
           ]
         },
         {
@@ -681,12 +862,18 @@
             "p_ga",
             "v_ie",
             "p_ni",
-            { "id": "v_kuru", "form": "te_form" },
+            {
+              "id": "v_kuru",
+              "form": "te_form"
+            },
             "v_mainichi",
             "v_issho",
             "v_soto",
             "p_wo",
-            { "id": "v_aruku", "form": "polite_mashita" }
+            {
+              "id": "v_aruku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -698,13 +885,22 @@
             "v_tanoshii",
             "v_hi",
             "p_wa",
-            { "id": "v_saru", "form": "polite_mashita" },
+            {
+              "id": "v_saru",
+              "form": "polite_mashita"
+            },
             "p_ga_but",
             "char_pochi",
             "p_wa",
             "v_totemo",
-            { "id": "v_genki", "form": "adverbial" },
-            { "id": "v_naru", "form": "polite_mashita" }
+            {
+              "id": "v_genki",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -715,12 +911,18 @@
             "p_mo",
             "char_pochi",
             "p_to",
-            { "id": "v_hashiru", "form": "te_form" },
+            {
+              "id": "v_hashiru",
+              "form": "te_form"
+            },
             "v_mata",
             "v_ii",
             "v_jikan",
             "p_wo",
-            { "id": "v_tsukuru", "form": "plain_desire_tai" },
+            {
+              "id": "v_tsukuru",
+              "form": "plain_desire_tai"
+            },
             "g_desu"
           ]
         }
@@ -728,7 +930,9 @@
       "questions": [
         {
           "q": "去年 りきぞは 毎日 何を しましたか。",
+          "q_en": "What did Rikizo do every day last year?",
           "a": "ポチと いっしょに 外を 歩きました。",
+          "a_en": "He walked outside together with Pochi.",
           "terms": [
             "v_kyonen",
             "char_rikizo",
@@ -736,33 +940,56 @@
             "v_mainichi",
             "v_nani",
             "p_wo",
-            { "id": "v_suru", "form": "polite_mashita" },
-            "p_ka",
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "char_pochi",
             "p_to",
             "v_issho",
             "v_soto",
             "p_wo",
-            { "id": "v_aruku", "form": "polite_mashita" }
+            {
+              "id": "v_aruku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "ポチは どう なりましたか。",
+          "q_en": "How did Pochi change?",
           "a": "とても 元気に なりました。",
+          "a_en": "He became very energetic.",
           "terms": [
             "char_pochi",
             "p_wa",
             "v_dou",
-            { "id": "v_naru", "form": "polite_mashita" },
-            "p_ka",
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_totemo",
-            { "id": "v_genki", "form": "adverbial" },
-            { "id": "v_naru", "form": "polite_mashita" }
+            {
+              "id": "v_genki",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "りきぞは 今年 ポチと 何を したいですか。",
+          "q_en": "What does Rikizo want to do with Pochi this year?",
           "a": "また いい 時間を 作りたいです。",
+          "a_en": "He wants to make good memories again.",
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -771,14 +998,22 @@
             "p_to",
             "v_nani",
             "p_wo",
-            { "id": "v_suru", "form": "plain_desire_tai" },
+            {
+              "id": "v_suru",
+              "form": "plain_desire_tai"
+            },
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_mata",
             "v_ii",
             "v_jikan",
             "p_wo",
-            { "id": "v_tsukuru", "form": "plain_desire_tai" },
+            {
+              "id": "v_tsukuru",
+              "form": "plain_desire_tai"
+            },
             "g_desu"
           ]
         }
@@ -878,8 +1113,14 @@
             "v_maiasa",
             "v_kinjo",
             "p_wo",
-            { "id": "v_hashiru", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_hashiru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -895,11 +1136,17 @@
           "terms": [
             "v_okane",
             "p_wo",
-            { "id": "v_dasu", "form": null },
+            {
+              "id": "v_dasu",
+              "form": null
+            },
             "p_ni",
             "v_ginkou",
             "p_e",
-            { "id": "v_iku", "form": "polite_mashita" }
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -936,7 +1183,10 @@
             "char_pochi",
             "p_wa",
             "v_totemo",
-            { "id": "v_genki", "form": "attributive_na" },
+            {
+              "id": "v_genki",
+              "form": "attributive_na"
+            },
             "v_doubutsu",
             "g_desu"
           ]
@@ -956,7 +1206,10 @@
             "p_wa",
             "v_jidou",
             "p_de",
-            { "id": "v_ugoku", "form": "polite_masu" }
+            {
+              "id": "v_ugoku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -971,12 +1224,18 @@
           "answer": "手動",
           "terms": [
             "p_ga",
-            { "id": "v_ugoku", "form": "plain_negative" },
+            {
+              "id": "v_ugoku",
+              "form": "plain_negative"
+            },
             "v_toki",
             "p_wa",
             "v_shudou",
             "p_de",
-            { "id": "v_hakobu", "form": "polite_masu" }
+            {
+              "id": "v_hakobu",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -999,10 +1258,16 @@
           "terms": [
             "char_pochi",
             "p_to",
-            { "id": "v_hashiru", "form": "nagara_form" },
+            {
+              "id": "v_hashiru",
+              "form": "nagara_form"
+            },
             "v_ongaku",
             "p_wo",
-            { "id": "v_kiku", "form": "polite_masu" }
+            {
+              "id": "v_kiku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -1019,7 +1284,10 @@
             "v_kyonen",
             "p_wa",
             "v_amari",
-            { "id": "v_hashiru", "form": "plain_past_negative" }
+            {
+              "id": "v_hashiru",
+              "form": "plain_past_negative"
+            }
           ]
         },
         {
@@ -1036,9 +1304,18 @@
             "v_maiasa",
             "char_pochi",
             "p_to",
-            { "id": "v_hashiru", "form": "tari_form" },
-            { "id": "v_aruku", "form": "tari_form" },
-            { "id": "v_suru", "form": "polite_masu" }
+            {
+              "id": "v_hashiru",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_aruku",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -1054,12 +1331,18 @@
           "terms": [
             "v_ginkou",
             "p_ni",
-            { "id": "v_iku", "form": "plain_past" },
+            {
+              "id": "v_iku",
+              "form": "plain_past"
+            },
             "v_ato",
             "p_de",
             "v_okane",
             "p_wo",
-            { "id": "v_dasu", "form": "polite_mashita" }
+            {
+              "id": "v_dasu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -1093,7 +1376,10 @@
           "terms": [
             "char_pochi",
             "p_to",
-            { "id": "v_hashiru", "form": "plain_desire_tai" },
+            {
+              "id": "v_hashiru",
+              "form": "plain_desire_tai"
+            },
             "p_kedo",
             "v_kyou",
             "p_wa",
