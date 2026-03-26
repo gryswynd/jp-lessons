@@ -266,8 +266,9 @@ window.JPApp = {
     if (!streak) return;
     var s = streak.getState();
 
-    // Check for pending rank-up — only show if an activity was completed this session
-    // (prevents the popup from firing on plain login if the flag survived from a previous session)
+    // Fallback: show a pending rank-up if the inline handler didn't fire
+    // (e.g. activity completed in a previous session before the handler was registered).
+    // Only fire if an activity was completed this session to avoid showing on plain login.
     if (window._jp_activity_this_session) {
       var rankUp = streak.consumeRankUp();
       if (rankUp) {
@@ -557,6 +558,16 @@ window.JPApp = {
       if (window.KanjiBingoGeneratorModule) window.KanjiBingoGeneratorModule.start(this.container, this.config, onExit);
     }
   }
+};
+
+// Register rank-up handler so the popup fires immediately on whatever screen the user is on,
+// without requiring a return to the main menu first.
+window.JPShared = window.JPShared || {};
+window.JPShared._rankUpHandler = function(stage) {
+  var streak = window.JPShared && window.JPShared.streak;
+  var s = streak ? streak.getState() : { current: 0 };
+  streak && streak.consumeRankUp(); // consume so the main-menu fallback doesn't double-fire
+  window.JPApp._showRankUpPopup(stage, s);
 };
 
 // Start App
