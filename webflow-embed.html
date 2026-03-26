@@ -266,11 +266,14 @@ window.JPApp = {
     if (!streak) return;
     var s = streak.getState();
 
-    // Check for pending rank-up first (takes priority over normal return message)
-    var rankUp = streak.consumeRankUp();
-    if (rankUp) {
-      this._showRankUpPopup(rankUp, s);
-      return;
+    // Check for pending rank-up — only show if an activity was completed this session
+    // (prevents the popup from firing on plain login if the flag survived from a previous session)
+    if (window._jp_activity_this_session) {
+      var rankUp = streak.consumeRankUp();
+      if (rankUp) {
+        this._showRankUpPopup(rankUp, s);
+        return;
+      }
     }
 
     // Only show if user has been away (daysAway > 0)

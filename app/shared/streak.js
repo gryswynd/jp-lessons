@@ -146,6 +146,9 @@
         }
       }
 
+      // Mark that a qualifying activity was completed this session (used by UI to gate rank-up popup)
+      window._jp_activity_this_session = true;
+
       // Detect rank-up (stage changed to a higher tier)
       var stageAfter = getStage(current);
       if (stageAfter.key !== stageBefore.key && stageAfter.min > stageBefore.min) {
