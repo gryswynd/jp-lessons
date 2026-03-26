@@ -7,7 +7,12 @@
     "lesson_number": 26,
     "focus": "Correct thinking, ways of doing things, good vs. bad judgement — using 正, 考, 方, 悪 kanji compounds.",
     "estimated_minutes": 35,
-    "kanji": ["正", "考", "方", "悪"]
+    "kanji": [
+      "正",
+      "考",
+      "方",
+      "悪"
+    ]
   },
   "newKanji": [
     {
@@ -649,7 +654,10 @@
             "p_wa",
             "v_mainichi",
             "v_totemo",
-            { "id": "v_taisetsu", "form": "polite_adj" }
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -659,13 +667,25 @@
             "v_warui",
             "v_kangae",
             "p_wo",
-            { "id": "v_motsu", "form": "te_form" },
-            { "id": "v_iru", "form": "plain_form" },
+            {
+              "id": "v_motsu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
             "p_to_conditional",
             "v_mondai",
             "p_ga",
-            { "id": "v_ookii", "form": "adverbial" },
-            { "id": "v_naru", "form": "polite_masu" }
+            {
+              "id": "v_ookii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -674,15 +694,24 @@
           "terms": [
             "v_shougatsu",
             "p_ga",
-            { "id": "v_kuru", "form": "conditional_tara" },
+            {
+              "id": "v_kuru",
+              "form": "conditional_tara"
+            },
             "v_jibun",
             "p_no",
             "v_kangae",
             "p_wo",
-            { "id": "v_tadasu", "form": "plain_form" },
+            {
+              "id": "v_tadasu",
+              "form": "plain_form"
+            },
             "v_koto",
             "p_ga",
-            { "id": "v_taisetsu", "form": "polite_adj" }
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -694,26 +723,50 @@
             "p_wa",
             "v_seidou",
             "p_wo",
-            { "id": "v_aruku", "form": "plain_form" },
+            {
+              "id": "v_aruku",
+              "form": "plain_form"
+            },
             "v_koto",
             "p_ga",
-            { "id": "v_taisetsu", "form": "plain_adj" },
+            {
+              "id": "v_taisetsu",
+              "form": "plain_adj"
+            },
             "g_da",
             "p_to_quote",
-            { "id": "v_iu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" }
+            {
+              "id": "v_iu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
           "jp": "悪質な 考え方は 正して 行かなければ いけません。",
           "en": "A malicious way of thinking must be corrected.",
           "terms": [
-            { "id": "v_akushitsu", "form": "attributive_na" },
+            {
+              "id": "v_akushitsu",
+              "form": "attributive_na"
+            },
             "v_kangaekata",
             "p_wa",
-            { "id": "v_tadasu", "form": "te_form" },
-            { "id": "v_iku", "form": "nakereba" },
-            { "id": "v_ikeru", "form": "polite_negative" }
+            {
+              "id": "v_tadasu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iku",
+              "form": "nakereba"
+            },
+            {
+              "id": "v_ikeru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -725,71 +778,113 @@
             "p_de",
             "v_sekai",
             "p_wo",
-            { "id": "v_miru", "form": "plain_form" },
+            {
+              "id": "v_miru",
+              "form": "plain_form"
+            },
             "p_to_conditional",
             "v_atarashii",
             "v_kangae",
             "p_ga",
-            { "id": "v_umareru", "form": "polite_masu" }
+            {
+              "id": "v_umareru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],
       "questions": [
         {
           "q": "正しい 考え方は 何ですか。",
+          "q_en": "What is correct thinking?",
           "a": "毎日 とても 大切です。",
+          "a_en": "It is very important every day.",
           "terms": [
             "v_tadashii",
             "v_kangaekata",
             "p_wa",
             "v_nan",
             "g_desu",
-            "p_ka",
+            "p_ka"
+          ],
+          "a_terms": [
             "v_mainichi",
             "v_totemo",
-            { "id": "v_taisetsu", "form": "polite_adj" }
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            }
           ]
         },
         {
           "q": "やまもと先生は 何と 言っていますか。",
+          "q_en": "What does Yamamoto-sensei say?",
           "a": "正道を 歩く ことが 大切だと 言っています。",
+          "a_en": "He says walking the right path is important.",
           "terms": [
             "char_yamamoto",
             "v_sensei",
             "p_wa",
             "v_nan",
             "p_to_quote",
-            { "id": "v_iu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
-            "p_ka",
+            {
+              "id": "v_iu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_seidou",
             "p_wo",
-            { "id": "v_aruku", "form": "plain_form" },
+            {
+              "id": "v_aruku",
+              "form": "plain_form"
+            },
             "v_koto",
             "p_ga",
-            { "id": "v_taisetsu", "form": "plain_adj" },
+            {
+              "id": "v_taisetsu",
+              "form": "plain_adj"
+            },
             "g_da",
             "p_to_quote"
           ]
         },
         {
           "q": "正しい 見方で 世界を 見ると、どう なりますか。",
+          "q_en": "If you look at the world with correct perspective, what happens?",
           "a": "新しい 考えが 生まれます。",
+          "a_en": "New ideas are born.",
           "terms": [
             "v_tadashii",
             "v_mikata",
             "p_de",
             "v_sekai",
             "p_wo",
-            { "id": "v_miru", "form": "plain_form" },
+            {
+              "id": "v_miru",
+              "form": "plain_form"
+            },
             "p_to_conditional",
             "v_dou",
-            { "id": "v_naru", "form": "polite_masu" },
-            "p_ka",
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_atarashii",
             "v_kangae",
             "p_ga",
-            { "id": "v_umareru", "form": "polite_masu" }
+            {
+              "id": "v_umareru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -809,7 +904,10 @@
             "p_no",
             "v_kangae",
             "p_wo",
-            { "id": "v_motsu", "form": "polite_masu" }
+            {
+              "id": "v_motsu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -819,16 +917,28 @@
             "v_tadashii",
             "v_kangae",
             "p_wo",
-            { "id": "v_motsu", "form": "plain_form" },
+            {
+              "id": "v_motsu",
+              "form": "plain_form"
+            },
             "v_tame",
             "p_ni",
             "p_wa",
-            { "id": "v_akushitsu", "form": "attributive_na" },
+            {
+              "id": "v_akushitsu",
+              "form": "attributive_na"
+            },
             "v_kangaekata",
             "p_ni",
             "v_chuui",
-            { "id": "v_suru", "form": "nakereba" },
-            { "id": "v_ikeru", "form": "polite_negative" }
+            {
+              "id": "v_suru",
+              "form": "nakereba"
+            },
+            {
+              "id": "v_ikeru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -837,11 +947,20 @@
           "terms": [
             "v_kangaekata",
             "p_ga",
-            { "id": "v_warui", "form": "conditional_ba" },
+            {
+              "id": "v_warui",
+              "form": "conditional_ba"
+            },
             "v_mikata",
             "p_mo",
-            { "id": "v_warui", "form": "adverbial" },
-            { "id": "v_naru", "form": "polite_masu" }
+            {
+              "id": "v_warui",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -853,14 +972,23 @@
             "p_wa",
             "v_gakusei",
             "p_ni",
-            { "id": "v_akushitsu", "form": "attributive_na" },
+            {
+              "id": "v_akushitsu",
+              "form": "attributive_na"
+            },
             "v_kangae",
             "p_ni",
             "v_chuui",
-            { "id": "v_suru", "form": "te_form" },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
             "v_kudasai",
             "p_to_quote",
-            { "id": "v_iu", "form": "polite_mashita" }
+            {
+              "id": "v_iu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -873,14 +1001,23 @@
             "p_no",
             "v_iken",
             "p_wo",
-            { "id": "v_kiku", "form": "te_form" },
+            {
+              "id": "v_kiku",
+              "form": "te_form"
+            },
             "v_jibun",
             "p_no",
             "v_mikata",
             "p_wo",
-            { "id": "v_tadasu", "form": "plain_volitional" },
+            {
+              "id": "v_tadasu",
+              "form": "plain_volitional"
+            },
             "p_to_quote",
-            { "id": "v_iu", "form": "polite_mashita" }
+            {
+              "id": "v_iu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -890,42 +1027,72 @@
             "v_mainichi",
             "v_kangae",
             "p_wo",
-            { "id": "v_tadasu", "form": "tari_form" },
+            {
+              "id": "v_tadasu",
+              "form": "tari_form"
+            },
             "v_iken",
             "p_wo",
-            { "id": "v_kiku", "form": "tari_form" },
-            { "id": "v_suru", "form": "plain_form" },
+            {
+              "id": "v_kiku",
+              "form": "tari_form"
+            },
+            {
+              "id": "v_suru",
+              "form": "plain_form"
+            },
             "v_koto",
             "p_ga",
-            { "id": "v_taisetsu", "form": "polite_adj" }
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            }
           ]
         }
       ],
       "questions": [
         {
           "q": "正しい 考えを 持つためには、何に 注意しなければ いけませんか。",
+          "q_en": "What must you be careful of to have correct thinking?",
           "a": "悪質な 考え方に 注意しなければ いけません。",
+          "a_en": "Bad thinking patterns.",
           "terms": [
             "v_tadashii",
             "v_kangae",
             "p_wo",
-            { "id": "v_motsu", "form": "plain_form" },
+            {
+              "id": "v_motsu",
+              "form": "plain_form"
+            },
             "v_tame",
             "p_ni",
             "p_wa",
             "v_nan",
             "p_ni",
             "v_chuui",
-            { "id": "v_suru", "form": "nakereba" },
-            { "id": "v_ikeru", "form": "polite_negative" },
-            "p_ka",
-            { "id": "v_akushitsu", "form": "attributive_na" },
+            {
+              "id": "v_suru",
+              "form": "nakereba"
+            },
+            {
+              "id": "v_ikeru",
+              "form": "polite_negative"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            {
+              "id": "v_akushitsu",
+              "form": "attributive_na"
+            },
             "v_kangaekata"
           ]
         },
         {
           "q": "やまもと先生は 学生に 何と 言いましたか。",
+          "q_en": "What did Yamamoto-sensei say to the students?",
           "a": "悪質な 考えに 注意して ください と 言いました。",
+          "a_en": "He said to be careful of bad thinking.",
           "terms": [
             "char_yamamoto",
             "v_sensei",
@@ -934,32 +1101,59 @@
             "p_ni",
             "v_nan",
             "p_to_quote",
-            { "id": "v_iu", "form": "polite_mashita" },
-            "p_ka",
-            { "id": "v_akushitsu", "form": "attributive_na" },
+            {
+              "id": "v_iu",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            {
+              "id": "v_akushitsu",
+              "form": "attributive_na"
+            },
             "v_kangae",
             "p_ni",
             "v_chuui",
-            { "id": "v_suru", "form": "te_form" },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
         {
           "q": "毎日 何を する ことが 大切ですか。",
+          "q_en": "What is important to do every day?",
           "a": "考えを 正したり 意見を 聞いたり する ことが 大切です。",
+          "a_en": "Correcting thinking and listening to opinions.",
           "terms": [
             "v_mainichi",
             "v_nani",
             "p_wo",
-            { "id": "v_suru", "form": "plain_form" },
+            {
+              "id": "v_suru",
+              "form": "plain_form"
+            },
             "v_koto",
             "p_ga",
-            { "id": "v_taisetsu", "form": "polite_adj" },
-            "p_ka",
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_kangae",
-            { "id": "v_tadasu", "form": "tari_form" },
+            {
+              "id": "v_tadasu",
+              "form": "tari_form"
+            },
             "v_iken",
-            { "id": "v_kiku", "form": "tari_form" }
+            {
+              "id": "v_kiku",
+              "form": "tari_form"
+            }
           ]
         }
       ]
@@ -973,49 +1167,89 @@
           "kind": "mcq",
           "q": "[正しい] の よみかたは？",
           "answer": "ただしい",
-          "choices": ["ただしい", "せいしい", "まさしい", "しょうしい"]
+          "choices": [
+            "ただしい",
+            "せいしい",
+            "まさしい",
+            "しょうしい"
+          ]
         },
         {
           "kind": "mcq",
           "q": "[考える] の よみかたは？",
           "answer": "かんがえる",
-          "choices": ["かんがえる", "こうえる", "かんえる", "かえる"]
+          "choices": [
+            "かんがえる",
+            "こうえる",
+            "かんえる",
+            "かえる"
+          ]
         },
         {
           "kind": "mcq",
           "q": "[悪い] の よみかたは？",
           "answer": "わるい",
-          "choices": ["わるい", "あくい", "わい", "おそい"]
+          "choices": [
+            "わるい",
+            "あくい",
+            "わい",
+            "おそい"
+          ]
         },
         {
           "kind": "mcq",
           "q": "[正月] の よみかたは？",
           "answer": "しょうがつ",
-          "choices": ["しょうがつ", "せいがつ", "まさつき", "ただつき"]
+          "choices": [
+            "しょうがつ",
+            "せいがつ",
+            "まさつき",
+            "ただつき"
+          ]
         },
         {
           "kind": "mcq",
           "q": "[考え方] の よみかたは？",
           "answer": "かんがえかた",
-          "choices": ["かんがえかた", "こうかた", "かんかた", "かんがいかた"]
+          "choices": [
+            "かんがえかた",
+            "こうかた",
+            "かんかた",
+            "かんがいかた"
+          ]
         },
         {
           "kind": "mcq",
           "q": "[悪質] の よみかたは？",
           "answer": "あくしつ",
-          "choices": ["あくしつ", "わるしつ", "あくしち", "おわるしつ"]
+          "choices": [
+            "あくしつ",
+            "わるしつ",
+            "あくしち",
+            "おわるしつ"
+          ]
         },
         {
           "kind": "mcq",
           "q": "[正道] の よみかたは？",
           "answer": "せいどう",
-          "choices": ["せいどう", "ただどう", "しょうどう", "まさどう"]
+          "choices": [
+            "せいどう",
+            "ただどう",
+            "しょうどう",
+            "まさどう"
+          ]
         },
         {
           "kind": "mcq",
           "q": "[見方] の よみかたは？",
           "answer": "みかた",
-          "choices": ["みかた", "けんかた", "みほう", "みがた"]
+          "choices": [
+            "みかた",
+            "けんかた",
+            "みほう",
+            "みがた"
+          ]
         }
       ]
     },
@@ -1026,13 +1260,29 @@
         {
           "q": "「正しい」の 意味は 何ですか。",
           "answer": "correct / right",
-          "choices": ["correct / right", "bad / evil", "to think", "way of doing"],
-          "terms": ["v_tadashii", "v_imi", "v_nan", "g_desu", "p_ka"]
+          "choices": [
+            "correct / right",
+            "bad / evil",
+            "to think",
+            "way of doing"
+          ],
+          "terms": [
+            "v_tadashii",
+            "v_imi",
+            "v_nan",
+            "g_desu",
+            "p_ka"
+          ]
         },
         {
           "q": "「悪質な」の 意味は 何ですか。",
           "answer": "malicious / bad quality",
-          "choices": ["malicious / bad quality", "correct path", "to correct", "viewpoint"],
+          "choices": [
+            "malicious / bad quality",
+            "correct path",
+            "to correct",
+            "viewpoint"
+          ],
           "terms": [
             {
               "id": "v_akushitsu",
@@ -1047,13 +1297,29 @@
         {
           "q": "「考え方」の 意味は 何ですか。",
           "answer": "way of thinking",
-          "choices": ["way of thinking", "idea / thought", "to think", "correct path"],
-          "terms": ["v_kangaekata", "v_imi", "v_nan", "g_desu", "p_ka"]
+          "choices": [
+            "way of thinking",
+            "idea / thought",
+            "to think",
+            "correct path"
+          ],
+          "terms": [
+            "v_kangaekata",
+            "v_imi",
+            "v_nan",
+            "g_desu",
+            "p_ka"
+          ]
         },
         {
           "q": "正月に ______。",
           "answer": "今年が 始まります",
-          "choices": ["今年が 始まります", "試験が あります", "旅行に 行きます", "文書を 書きます"],
+          "choices": [
+            "今年が 始まります",
+            "試験が あります",
+            "旅行に 行きます",
+            "文書を 書きます"
+          ],
           "terms": [
             "v_shougatsu",
             "p_ni",
@@ -1068,7 +1334,12 @@
         {
           "q": "悪い 考え方を ______。",
           "answer": "正します",
-          "choices": ["正します", "始めます", "進みます", "聞きます"],
+          "choices": [
+            "正します",
+            "始めます",
+            "進みます",
+            "聞きます"
+          ],
           "terms": [
             "v_warui",
             "v_kangaekata",
@@ -1088,7 +1359,12 @@
         {
           "q": "悪い 考え方で 進む______、もっと 問題が 大きく なります。",
           "answer": "と",
-          "choices": ["と", "ても", "ば", "たら"],
+          "choices": [
+            "と",
+            "ても",
+            "ば",
+            "たら"
+          ],
           "terms": [
             "v_warui",
             "v_kangaekata",
@@ -1114,7 +1390,12 @@
         {
           "q": "正しく 考えれ______、いい 見方が 生まれます。",
           "answer": "ば",
-          "choices": ["ば", "たら", "なら", "と"],
+          "choices": [
+            "ば",
+            "たら",
+            "なら",
+            "と"
+          ],
           "terms": [
             {
               "id": "v_tadashii",
@@ -1136,7 +1417,12 @@
         {
           "q": "悪質な 考えに 注意しなければ ______。",
           "answer": "いけません",
-          "choices": ["いけません", "いきません", "あります", "なります"],
+          "choices": [
+            "いけません",
+            "いきません",
+            "あります",
+            "なります"
+          ],
           "terms": [
             {
               "id": "v_akushitsu",
@@ -1158,7 +1444,12 @@
         {
           "q": "りきぞは 自分の 見方を 正そうと ______。",
           "answer": "言いました",
-          "choices": ["言いました", "考えました", "始めました", "進みました"],
+          "choices": [
+            "言いました",
+            "考えました",
+            "始めました",
+            "進みました"
+          ],
           "terms": [
             "char_rikizo",
             "p_wa",
@@ -1180,7 +1471,12 @@
         {
           "q": "正しい 考え方で 始め______、今年が よく 進みます。",
           "answer": "れば",
-          "choices": ["れば", "ると", "たら", "ても"],
+          "choices": [
+            "れば",
+            "ると",
+            "たら",
+            "ても"
+          ],
           "terms": [
             "v_tadashii",
             "v_kangaekata",
