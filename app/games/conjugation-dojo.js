@@ -1,13 +1,13 @@
 /**
  * app/games/conjugation-dojo.js
- * Conjugation Dojo — typing-based verb/adjective conjugation drill.
+ * Conjugation Station — typing-based verb/adjective conjugation drill.
  * First game module under the Practice.js plugin architecture.
  *
  * Shell contract (hybrid):
  *   Practice.js owns chrome (streak counter, hanabi, session tracking).
  *   This module owns everything inside its container div.
  *   Shell passes: container, activeLessons, vocabMap, conjugationRules,
- *                 textProcessor, onCorrect, onWrong, onExit, getStreakInfo.
+ *                 textProcessor, unlock, onCorrect, onWrong, onExit, getStreakInfo.
  */
 (function () {
   'use strict';
@@ -128,6 +128,31 @@
   }
 
   // ---- Form gating ----
+  // Map introducedIn content-lesson IDs to the grammar lesson that teaches the form.
+  // Forms already keyed to G-lessons pass through unchanged.
+  var INTRO_TO_GRAMMAR = {
+    'N5.1':  'G7',   // Polite Verb Forms — ます形
+    'N5.5':  'G8',   // て-form — Connecting Actions
+    'N5.8':  'G9',   // ている・たいです・ましょう
+    'N5.9':  'G10',  // Plain Forms & Basic Connectors
+    'N5.10': 'G11',  // i-Adjective Conjugation
+    'N5.11': 'G12',  // na-Adjective Conjugation
+    'N4.3':  'G13',  // Potential Form
+    'N4.10': 'G19',  // Connecting Actions (nagara/tari)
+    'N4.25': 'G25',  // Obligations & Conditionals
+    'N4.31': 'G28'   // Passive & Causative
+  };
+
+  function isFormUnlocked(introducedIn) {
+    var gLesson = INTRO_TO_GRAMMAR[introducedIn] || introducedIn;
+    // Use unlock system if available, else fall back to activeLessons
+    if (cfg.unlock && cfg.unlock.isCompleted) {
+      return cfg.unlock.isCompleted(gLesson);
+    }
+    // Free mode: all forms available
+    return true;
+  }
+
   var FORM_CATEGORIES = [
     { name: 'Polite Forms', keys: ['polite_masu','polite_mashita','polite_negative','polite_past_negative','polite_adj','polite_past_adj','polite_past_copula'] },
     { name: 'Te / Ta Forms', keys: ['te_form','plain_past','masu_stem','polite_negative_te'] },
@@ -148,10 +173,12 @@
       var form = rules[key];
       if (!form || !form.introducedIn || !form.rules) continue;
       if (key === 'plain_form') continue;
-      if (!cfg.activeLessons.has(form.introducedIn)) continue;
+      // Gate by grammar lesson completion, not content lesson selection
+      if (!isFormUnlocked(form.introducedIn)) continue;
       var classes = Object.keys(form.rules);
       if (!classes.some(function (c) { return c !== 'copula'; })) continue;
-      unlocked.push({ key: key, label: form.label, introducedIn: form.introducedIn, rules: form.rules });
+      var gLesson = INTRO_TO_GRAMMAR[form.introducedIn] || form.introducedIn;
+      unlocked.push({ key: key, label: form.label, introducedIn: form.introducedIn, gLesson: gLesson, rules: form.rules });
     }
     return unlocked;
   }
@@ -218,7 +245,7 @@
         html += '<div class="dojo-form-row">' +
           '<input type="checkbox" class="dojo-form-chk" data-key="' + key + '"' + checked + '>' +
           '<span class="dojo-form-label">' + f.label + '</span>' +
-          '<span class="dojo-form-tag">' + f.introducedIn + '</span></div>';
+          '<span class="dojo-form-tag">' + (f.gLesson || f.introducedIn) + '</span></div>';
       });
       html += '</div>';
     });

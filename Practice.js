@@ -1774,6 +1774,7 @@ window.PracticeModule = {
             vocabMap: DB.vocabMap,
             conjugationRules: dojoConjRules,
             textProcessor: window.JPShared.textProcessor,
+            unlock: window.JPShared.unlock || null,
             onCorrect: function() {
                 dojoStreak++;
                 if (dojoStreak > dojoBest) {
