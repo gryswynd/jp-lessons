@@ -325,7 +325,7 @@ window.PracticeModule = {
                 <button class="k-btn" style="background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);" onclick="KanjiApp.start('mixed', 'flag-review')">🚩 Review Flagged</button>
 
                 <div class="k-lbl" style="margin-top:2rem; color:#8e44ad;">VERB PRACTICE</div>
-                <button class="k-btn" style="background: linear-gradient(135deg, #8e44ad 0%, #6c3483 100%);" onclick="KanjiApp.start('dojo','dojo')">⚡ Conjugation Dojo</button>
+                <button class="k-btn" style="background: linear-gradient(135deg, #8e44ad 0%, #6c3483 100%);" onclick="KanjiApp.start('dojo','dojo')">⚡ Conjugation Station</button>
 
                 <div class="k-lbl" style="margin-top:2rem; color:#e74c3c;">SENTENCE PRACTICE</div>
                 <button class="k-btn" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);" onclick="KanjiApp.toggleScrMenu()">🔀 Scramble</button>
@@ -423,7 +423,7 @@ window.PracticeModule = {
                     <span style="color:#ffa502">🔥 <span id="k-dojo-streak">0</span></span>
                 </div>
                 <div id="k-dojo-stage"></div>
-                <button class="k-btn k-btn-sec" onclick="KanjiApp.showMenu()" style="margin-top:10px">Exit Dojo</button>
+                <button class="k-btn k-btn-sec" onclick="KanjiApp.showMenu()" style="margin-top:10px">Exit Station</button>
             </div>
 
             <div id="k-view-quiz" class="k-hidden" style="width:100%; display:flex; flex-direction:column; height:100%">
@@ -1716,11 +1716,34 @@ window.PracticeModule = {
         setTxt('k-scr-progress', 'Complete!');
     }
 
-    // ---- Conjugation Dojo ----
+    // ---- Conjugation Station ----
     let dojoConjRules = null;
+    let dojoScriptLoaded = false;
+
+    async function dojoLoadScript() {
+        if (dojoScriptLoaded) return true;
+        try {
+            const url = window.getAssetUrl(REPO_CONFIG, 'app/games/conjugation-dojo.js') + '?t=' + Date.now();
+            const res = await fetch(url);
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            const code = await res.text();
+            const script = document.createElement('script');
+            script.textContent = code;
+            document.body.appendChild(script);
+            dojoScriptLoaded = true;
+            return true;
+        } catch(e) {
+            console.error('[Practice] Failed to load conjugation-dojo.js:', e);
+            alert('Could not load Conjugation Station.');
+            return false;
+        }
+    }
 
     async function dojoStart() {
         if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
+
+        // Load the dojo game module script
+        if (!await dojoLoadScript()) return;
 
         // Load conjugation_rules.json once
         if (!dojoConjRules) {
