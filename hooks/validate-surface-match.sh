@@ -232,7 +232,7 @@ def check_surface(jp, terms, path):
             # Skip when jp contains a fill-in-the-blank marker (conjugated form is in the answer field)
             _vc = info.get('verb_class', '') or info.get('gtype', '')
             _cs, _cr = conjugate_surface(info.get('surface', ''), info.get('reading', ''), _vc, form)
-            if _cs is not None and '______' not in jp:
+            if _cs is not None and '___' not in jp:
                 _jp_clean = jp.replace(' ', '').replace('\u3000', '')
                 if _cs not in _jp_clean and (_cr is None or _cr not in _jp_clean):
                     errors.append(f"  {path}.terms[{i}]: '{tid}' {form} → expected '{_cs}' not found in jp")
@@ -254,6 +254,10 @@ def check_surface(jp, terms, path):
         if info['gtype'] == 'particle' and len(info['surface']) <= 1:
             continue
         if tid in ('g_desu', 'g_da'):
+            continue
+
+        # Skip surface check when jp has a blank marker — compound terms may be split across the blank
+        if '___' in jp:
             continue
 
         surface = info['surface']

@@ -181,7 +181,7 @@
             "v_daigaku",
             "v_kouchou",
             "v_gakusei",
-            "v_kurasu",
+            "v_kurasu_class",
             "v_tesuto"
           ]
         },
@@ -248,9 +248,8 @@
               "id": "v_ii",
               "form": "adverbial"
             },
-            "v_manabu",
             {
-              "id": "v_suru",
+              "id": "v_manabu",
               "form": "te_form"
             }
           ]
@@ -308,9 +307,8 @@
               "id": "v_ii",
               "form": "adverbial"
             },
-            "v_manabu",
             {
-              "id": "v_suru",
+              "id": "v_manabu",
               "form": "te_form"
             },
             "v_daigaku",
@@ -336,9 +334,8 @@
               "id": "v_ii",
               "form": "adverbial"
             },
-            "v_manabu",
             {
-              "id": "v_suru",
+              "id": "v_manabu",
               "form": "polite_masu"
             }
           ]
@@ -473,9 +470,8 @@
             "g_desu",
             "v_nihongo",
             "p_wo",
-            "v_manabu",
             {
-              "id": "v_suru",
+              "id": "v_manabu",
               "form": "te_form"
             },
             {
@@ -524,7 +520,7 @@
           "terms": [
             "v_nihongo",
             "p_wa",
-            "v_kurasu",
+            "v_kurasu_class",
             "p_no",
             "v_omoshiroi",
             "g_desu",
@@ -565,9 +561,8 @@
             "p_ne",
             "v_gakkou",
             "p_de",
-            "v_manabu",
             {
-              "id": "v_suru",
+              "id": "v_manabu",
               "form": "polite_volitional_mashou"
             }
           ]
@@ -588,7 +583,7 @@
             "p_wa",
             "v_nihongo",
             "p_no",
-            "v_kurasu",
+            "v_kurasu_class",
             "p_no",
             "v_omoshiroi",
             "p_ne",
@@ -646,9 +641,8 @@
             "v_nihongo",
             "p_wo",
             "v_takusan",
-            "v_manabu",
             {
-              "id": "v_suru",
+              "id": "v_manabu",
               "form": "plain_desire_tai"
             }
           ]
@@ -660,18 +654,16 @@
           "terms": [
             "v_watashi",
             "p_mo",
-            "v_manabu",
             {
-              "id": "v_suru",
+              "id": "v_manabu",
               "form": "plain_desire_tai"
             },
             "p_ne",
             "v_gakkou",
             "p_de",
             "v_takusan",
-            "v_manabu",
             {
-              "id": "v_suru",
+              "id": "v_manabu",
               "form": "plain_desire_tai"
             },
             "p_yo"
@@ -714,7 +706,7 @@
             "g_desu",
             "v_nihongo",
             "p_mo",
-            "v_kurasu",
+            "v_kurasu_class",
             "p_no",
             {
               "id": "v_aru",
@@ -726,7 +718,7 @@
           "jp": "クラスに 外国人の 学生が います。外国から 来ています。",
           "en": "There are foreign students in the class. They have come from foreign countries.",
           "terms": [
-            "v_kurasu",
+            "v_kurasu_class",
             "p_ni",
             "v_gaikokujin",
             "p_ga",
@@ -783,9 +775,8 @@
             "v_nihongo",
             "p_wo",
             "v_takusan",
-            "v_manabu",
             {
-              "id": "v_suru",
+              "id": "v_manabu",
               "form": "plain_desire_tai"
             },
             "g_desu"
@@ -849,9 +840,8 @@
           "terms": [
             "v_nihongo",
             "v_takusan",
-            "v_manabu",
             {
-              "id": "v_suru",
+              "id": "v_manabu",
               "form": "plain_desire_tai"
             },
             "g_desu",
@@ -877,9 +867,8 @@
             "v_mainichi",
             "v_nihongo",
             "p_wo",
-            "v_manabu",
             {
-              "id": "v_suru",
+              "id": "v_manabu",
               "form": "te_form"
             },
             {
@@ -911,7 +900,7 @@
           "terms": [
             "v_watashi",
             "p_ga",
-            "v_kurasu",
+            "v_kurasu_class",
             "p_ni",
             "v_nihonjin",
             "p_no",
@@ -943,9 +932,8 @@
               "id": "v_ii",
               "form": "adverbial"
             },
-            "v_manabu",
             {
-              "id": "v_suru",
+              "id": "v_manabu",
               "form": "te_form"
             },
             {
@@ -994,9 +982,8 @@
           ],
           "terms": [
             "v_nihongo",
-            "v_manabu",
             {
-              "id": "v_suru",
+              "id": "v_manabu",
               "form": "te_form"
             },
             {
@@ -1183,11 +1170,10 @@
           "terms": [
             "v_nihongo",
             "p_no",
-            "v_kurasu",
+            "v_kurasu_class",
             "p_de",
-            "v_manabu",
             {
-              "id": "v_suru",
+              "id": "v_manabu",
               "form": "te_form"
             },
             {
