@@ -18,7 +18,7 @@
   window.JPShared = window.JPShared || {};
 
   // ── Worker URL — replace after deploying ──
-  var WORKER_URL = 'https://rikizo-reminders.YOURDOMAIN.workers.dev';
+  var WORKER_URL = 'https://rikizo-reminders.gryswynd.workers.dev';
 
   var overlay = null;
   var isOpen = false;
