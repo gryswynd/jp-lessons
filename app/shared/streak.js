@@ -146,13 +146,18 @@
         }
       }
 
-      // Mark that a qualifying activity was completed this session (used by UI to gate rank-up popup)
-      window._jp_activity_this_session = true;
-
       // Detect rank-up (stage changed to a higher tier)
       var stageAfter = getStage(current);
       if (stageAfter.key !== stageBefore.key && stageAfter.min > stageBefore.min) {
         localStorage.setItem('k-streak-rankup', stageAfter.key);
+        // Fire the UI handler immediately (if registered) so the popup appears on
+        // whatever screen the user is on, without requiring a return to the main menu.
+        var rankUpStage = stageAfter;
+        setTimeout(function() {
+          if (typeof window.JPShared._rankUpHandler === 'function') {
+            window.JPShared._rankUpHandler(rankUpStage);
+          }
+        }, 400);
       }
 
       // Update best
