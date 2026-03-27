@@ -19,13 +19,30 @@ window.PracticeModule = {
         style.id = 'jp-practice-style';
         style.textContent = `
             #kanji-app-root {
-                --primary: #DC2626; --primary-dark: #B91C1C;
-                --bg-grad: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+                --primary: #5C3A21; --primary-dark: #3E2515;
+                --bg-grad: linear-gradient(135deg, #FAF6F0 0%, #EDE4D8 100%);
                 --text-main: #2f3542; --text-sub: #747d8c;
                 --success: #2ed573; --error: #ff4757;
 
                 font-family: 'Poppins', 'Noto Sans JP', sans-serif;
-                background: var(--bg-grad); color: var(--text-main);
+                background:
+                  var(--bg-grad),
+                  repeating-linear-gradient(
+                    0deg,
+                    rgba(92,58,33,0.03) 0px,
+                    rgba(92,58,33,0.03) 1px,
+                    transparent 1px,
+                    transparent 12px
+                  ),
+                  repeating-linear-gradient(
+                    90deg,
+                    rgba(92,58,33,0.02) 0px,
+                    rgba(92,58,33,0.02) 1px,
+                    transparent 1px,
+                    transparent 60px
+                  ),
+                  linear-gradient(180deg, #EDE4D8 0%, #E5D9C9 100%);
+                color: var(--text-main);
                 display: flex; flex-direction: column;
                 width: 100%; max-width: 600px; margin: 0 auto;
                 height: 800px; border-radius: 20px;
@@ -35,17 +52,17 @@ window.PracticeModule = {
             #kanji-app-root * { box-sizing: border-box; }
 
             #kanji-app-root header {
-                background: rgba(220, 38, 38, 0.95); color: white; padding: 1.2rem;
+                background: rgba(92, 58, 33, 0.95); color: white; padding: 1.2rem;
                 text-align: center; font-weight: 900; letter-spacing: 0.05em; font-size: 1.2rem;
                 cursor: pointer; user-select: none; z-index: 10;
-                box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3); backdrop-filter: blur(5px);
+                box-shadow: 0 4px 15px rgba(62, 37, 21, 0.3); backdrop-filter: blur(5px);
                 display: flex; justify-content: space-between; align-items: center;
             }
             .k-exit-btn { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); color: white; padding: 5px 12px; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 0.8rem; }
 
             #k-app-container { flex: 1; overflow-y: auto; padding: 1.5rem; display: flex; flex-direction: column; align-items: center; width: 100%; position: relative; z-index: 1; }
-            .k-card { background: white; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); padding: 2rem; width: 100%; text-align: center; margin-bottom: 1.5rem; border: 1px solid rgba(0,0,0,0.02); }
-            .k-btn { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; border: none; padding: 16px; border-radius: 12px; font-size: 1.1rem; font-weight: 700; width: 100%; margin: 8px 0; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(220, 38, 38, 0.2); }
+            .k-card { background: #FFFCF8; border-radius: 16px; box-shadow: 0 10px 25px rgba(62,37,21,0.08); padding: 2rem; width: 100%; text-align: center; margin-bottom: 1.5rem; border: 1px solid rgba(92,58,33,0.06); }
+            .k-btn { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; border: none; padding: 16px; border-radius: 12px; font-size: 1.1rem; font-weight: 700; width: 100%; margin: 8px 0; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(62, 37, 21, 0.2); }
             .k-btn:active { transform: scale(0.98); }
             .k-btn-sec { background: white; color: var(--text-sub); border: 2px solid #dfe4ea; background: none; box-shadow: none; }
             .k-grid-btns { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin: 8px 0; }
@@ -62,7 +79,7 @@ window.PracticeModule = {
             .k-card-obj.is-flipped { transform: rotateY(180deg); }
             .k-face { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 20px; background: white; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; overflow-y: auto; overflow-x: hidden; }
             .k-face-front { z-index: 2; transform: rotateY(0deg); }
-            .k-face-back { transform: rotateY(180deg); background: #fdfbfb; border: 4px solid var(--primary); justify-content: flex-start; padding-top: 3rem; }
+            .k-face-back { transform: rotateY(180deg); background: #FFFCF8; border: 4px solid var(--primary); justify-content: flex-start; padding-top: 3rem; }
             .k-tap-hint { position: absolute; bottom: 15px; width: 100%; text-align: center; font-size: 0.75rem; color: #b2bec3; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; pointer-events: none; }
 
             .k-tbl { width: 100%; text-align: left; font-size: 0.95rem; margin-top: 1rem; border-collapse: collapse; }
@@ -70,7 +87,7 @@ window.PracticeModule = {
             .k-tbl th { padding: 8px; color: #a4b0be; font-weight: 600; font-size: 0.75rem; width: 30%; border-bottom: 1px solid #f1f2f6; text-transform: uppercase; }
 
             .k-opt { background: white; border: 2px solid #dfe4ea; padding: 16px; border-radius: 12px; text-align: center; margin-bottom: 10px; cursor: pointer; font-weight: 600; font-size: 1.1rem; transition: 0.15s; }
-            @media (hover: hover) { .k-opt:hover { border-color: var(--primary); color: var(--primary); background: #f8f9fe; } }
+            @media (hover: hover) { .k-opt:hover { border-color: var(--primary); color: var(--primary); background: #FFF8F0; } }
             .k-opt.correct { background: var(--success); border-color: var(--success); color: white; }
             .k-opt.wrong { background: var(--error); border-color: var(--error); color: white; }
 
@@ -128,7 +145,7 @@ window.PracticeModule = {
                 font-family: 'Noto Sans JP', sans-serif; transition: all 0.15s; user-select: none;
             }
             @media (hover: hover) { .k-conn-word:hover { border-color: var(--primary); } }
-            .k-conn-word.selected { border-color: var(--primary); background: #fff0f0; box-shadow: 0 0 8px rgba(220,38,38,0.15); }
+            .k-conn-word.selected { border-color: var(--primary); background: #FFF8F0; box-shadow: 0 0 8px rgba(92,58,33,0.15); }
             .k-conn-word.placed { opacity: 0.3; pointer-events: none; }
             .k-conn-slots { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 16px; }
             .k-conn-group {
@@ -161,7 +178,7 @@ window.PracticeModule = {
                 padding: 6px;
             }
             @media (hover: hover) { .k-conn4-tile:hover:not(.solved) { border-color: var(--primary); transform: scale(1.04); } }
-            .k-conn4-tile.selected { border-color: var(--primary); background: #fff0f0; box-shadow: 0 0 10px rgba(220,38,38,0.18); }
+            .k-conn4-tile.selected { border-color: var(--primary); background: #FFF8F0; box-shadow: 0 0 10px rgba(92,58,33,0.18); }
             .k-conn4-tile.solved { pointer-events: none; border-color: transparent; color: white; font-size: 1rem; }
             .k-conn4-tile.shake { animation: conn4shake 0.4s ease; }
             @keyframes conn4shake {
@@ -194,7 +211,7 @@ window.PracticeModule = {
                 background: white; cursor: pointer; font-weight: 700; font-size: 0.95rem;
                 text-align: left; transition: all 0.15s; display: flex; align-items: center; gap: 10px;
             }
-            @media (hover: hover) { .k-linkup-btn:hover { border-color: var(--primary); background: #fff8f8; } }
+            @media (hover: hover) { .k-linkup-btn:hover { border-color: var(--primary); background: #FFF8F0; } }
             .k-linkup-btn .icon { font-size: 1.3rem; }
             .k-linkup-btn .info { color: var(--text-sub); font-size: 0.8rem; font-weight: 600; }
 
@@ -206,9 +223,9 @@ window.PracticeModule = {
             .k-scr-answer.wrong { border-color: var(--error); background: rgba(255,71,87,0.06); }
             .k-scr-pool { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 16px; }
             .k-scr-chip { font-family: 'Noto Sans JP', sans-serif; font-size: 1.15rem; font-weight: 700; padding: 10px 16px; border-radius: 10px; border: 2px solid #dfe4ea; background: white; cursor: pointer; transition: all 0.15s; user-select: none; }
-            @media (hover: hover) { .k-scr-chip:hover { border-color: var(--primary); background: #fff5f5; } }
+            @media (hover: hover) { .k-scr-chip:hover { border-color: var(--primary); background: #FFF8F0; } }
             .k-scr-chip.placed { opacity: 0.25; pointer-events: none; }
-            .k-scr-chip.in-answer { border-color: var(--primary); background: #fff5f5; }
+            .k-scr-chip.in-answer { border-color: var(--primary); background: #FFF8F0; }
             .k-scr-chip.correct-chip { border-color: var(--success); background: rgba(46,213,115,0.15); }
             .k-scr-chip.wrong-chip { border-color: var(--error); background: rgba(255,71,87,0.15); }
             .k-scr-explain { margin-top: 12px; padding: 12px; border-radius: 10px; background: #f8f9fa; font-size: 0.9rem; color: var(--text-sub); line-height: 1.5; display: none; }
@@ -269,7 +286,7 @@ window.PracticeModule = {
     appRoot.innerHTML = `
         <div id="k-loader" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.98); z-index: 50; display: flex; flex-direction: column; align-items: center; justify-content: center;">
             <div style="font-size: 3rem; margin-bottom: 15px;">🇯🇵</div>
-            <div style="font-weight:800; color:#DC2626; font-size:1.2rem">Loading Library...</div>
+            <div style="font-weight:800; color:#5C3A21; font-size:1.2rem">Loading Library...</div>
             <div id="k-error-box" class="k-hidden" style="color:#ff4757; margin-top:10px; padding:10px; max-width:80%; font-size:0.9rem"></div>
         </div>
 
@@ -327,8 +344,8 @@ window.PracticeModule = {
                 <div class="k-lbl" style="margin-top:2rem; color:#8e44ad;">VERB PRACTICE</div>
                 <button class="k-btn" style="background: linear-gradient(135deg, #8e44ad 0%, #6c3483 100%);" onclick="KanjiApp.start('dojo','dojo')">⚡ Conjugation Station</button>
 
-                <div class="k-lbl" style="margin-top:2rem; color:#e74c3c;">SENTENCE PRACTICE</div>
-                <button class="k-btn" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);" onclick="KanjiApp.toggleScrMenu()">🔀 Scramble</button>
+                <div class="k-lbl" style="margin-top:2rem; color:#5C3A21;">SENTENCE PRACTICE</div>
+                <button class="k-btn" style="background: linear-gradient(135deg, #6B4226 0%, #4A2E18 100%);" onclick="KanjiApp.toggleScrMenu()">🔀 Scramble</button>
                 <div id="k-scr-submenu" class="k-linkup-menu k-hidden">
                     <div class="k-linkup-btn" onclick="KanjiApp.start('scramble','scramble')">
                         <span class="icon">🔀</span>
@@ -339,7 +356,7 @@ window.PracticeModule = {
                         <span><div>Marathon</div><div class="info">N4 progressive — warm-up → challenge</div></span>
                     </div>
                 </div>
-                <button class="k-btn" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);" onclick="KanjiApp.toggleLinkUpMenu()">🔗 Link Up</button>
+                <button class="k-btn" style="background: linear-gradient(135deg, #6B4226 0%, #4A2E18 100%);" onclick="KanjiApp.toggleLinkUpMenu()">🔗 Link Up</button>
                 <div id="k-linkup-submenu" class="k-linkup-menu k-hidden">
                     <div class="k-linkup-btn" onclick="KanjiApp.start('connections','connections')">
                         <span class="icon">🔗</span>
