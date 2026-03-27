@@ -710,41 +710,34 @@ window.PracticeModule = {
         }
     };
 
-    // --- CONNECTIONS (LINK UP) ---
-    let connPuzzles = [], connIdx = 0, connScore = 0, connTotal = 0, connStreak = 0, connBest = 0;
-    let connDataCache = null;
+    // --- CONNECTIONS (LINK UP: SORTED) — plugin module ---
+    let connScriptLoaded = false;
+
+    async function connLoadScript() {
+        if (connScriptLoaded) return true;
+        try {
+            const url = window.getAssetUrl(REPO_CONFIG, 'app/games/connections.js') + '?t=' + Date.now();
+            const res = await fetch(url);
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            const code = await res.text();
+            const script = document.createElement('script');
+            script.textContent = code;
+            document.body.appendChild(script);
+            connScriptLoaded = true;
+            return true;
+        } catch(e) {
+            console.error('[Practice] Failed to load connections.js:', e);
+            alert('Could not load Link Up.');
+            return false;
+        }
+    }
 
     async function connStart() {
+        if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
+        if (!await connLoadScript()) return;
+
         curMode = 'connections'; curCategory = 'connections';
-        connStreak = 0; connScore = 0; connTotal = 0; connIdx = 0;
-        connBest = bestScores.connections || 0;
 
-        // Load puzzle data (cache after first fetch)
-        if (!connDataCache) {
-            try {
-                const url = window.getAssetUrl(REPO_CONFIG, 'data/N5/connections/connections.N5.json') + '?t=' + Date.now();
-                const res = await fetch(url);
-                connDataCache = await res.json();
-            } catch(e) {
-                alert('Could not load Link Up puzzles.');
-                return;
-            }
-        }
-
-        // Filter puzzles by active lessons
-        const available = connDataCache.puzzles.filter(p =>
-            p.requires.every(req => activeLessons.has(req))
-        );
-
-        if (available.length === 0) {
-            alert('Select more lessons to unlock Link Up puzzles! The first puzzles unlock around N5.5–N5.8.');
-            return;
-        }
-
-        // Shuffle puzzle order
-        connPuzzles = available.sort(() => Math.random() - 0.5);
-
-        // Switch views
         ALL_VIEWS.forEach(i => {
             const el = document.getElementById(i);
             if(el) el.classList.add('k-hidden');
@@ -752,189 +745,45 @@ window.PracticeModule = {
         const cv = document.getElementById('k-view-conn');
         if(cv) cv.classList.remove('k-hidden');
 
+        let connStreak = 0;
+        let connBest = bestScores.connections || 0;
         setTxt('k-conn-best', connBest);
         setTxt('k-conn-streak', 0);
-        connRenderPuzzle();
-    }
+        setTxt('k-conn-progress', 'Loading…');
 
-    function connRenderPuzzle() {
-        if (connIdx >= connPuzzles.length) {
-            connShowSummary();
-            return;
-        }
-
-        const puzzle = connPuzzles[connIdx];
-        const allWords = puzzle.groups.flatMap(g => g.words).sort(() => Math.random() - 0.5);
-        const placements = {}; // word -> groupIdx
-        let selected = null;
-
-        connTotal += allWords.length;
-        setTxt('k-conn-progress', `Puzzle ${connIdx + 1} / ${connPuzzles.length}`);
-
-        const stage = document.getElementById('k-conn-stage');
-        stage.innerHTML = `
-            <div class="k-conn-info">Sort these words into the correct categories!</div>
-            <div class="k-conn-bank" id="k-conn-bank">
-                ${allWords.map(w => `<div class="k-conn-word" data-word="${w}">${w}</div>`).join('')}
-            </div>
-            <div class="k-conn-slots" id="k-conn-slots">
-                ${puzzle.groups.map((g, i) => `
-                    <div class="k-conn-group" data-group="${i}" id="k-conng-${i}">
-                        <div class="k-conn-group-title">${g.label}</div>
-                        <div id="k-connplaced-${i}"></div>
-                    </div>
-                `).join('')}
-            </div>
-            <div style="text-align:center;">
-                <button class="k-btn" id="k-conn-check" disabled style="opacity:0.4; max-width:280px;">Check Answers</button>
-            </div>
-        `;
-
-        // Word selection
-        stage.querySelectorAll('.k-conn-word').forEach(word => {
-            word.onclick = () => {
-                if (word.classList.contains('placed')) return;
-                stage.querySelectorAll('.k-conn-word.selected').forEach(w => w.classList.remove('selected'));
-                word.classList.add('selected');
-                selected = word.dataset.word;
-            };
-        });
-
-        // Group clicking to place
-        stage.querySelectorAll('.k-conn-group').forEach(group => {
-            group.onclick = () => {
-                if (!selected) return;
-                const gIdx = parseInt(group.dataset.group);
-                placements[selected] = gIdx;
-
-                const placed = document.getElementById('k-connplaced-' + gIdx);
-                const chip = document.createElement('span');
-                chip.className = 'k-conn-placed-word';
-                chip.textContent = selected;
-                chip.dataset.word = selected;
-                chip.onclick = (e) => {
-                    e.stopPropagation();
-                    delete placements[chip.dataset.word];
-                    chip.remove();
-                    stage.querySelectorAll('.k-conn-word').forEach(w => {
-                        if (w.dataset.word === chip.dataset.word) w.classList.remove('placed');
-                    });
-                    connUpdateCheck();
-                };
-                placed.appendChild(chip);
-
-                stage.querySelectorAll('.k-conn-word').forEach(w => {
-                    if (w.dataset.word === selected) {
-                        w.classList.remove('selected');
-                        w.classList.add('placed');
-                    }
-                });
-                selected = null;
-                connUpdateCheck();
-            };
-        });
-
-        function connUpdateCheck() {
-            const allPlaced = Object.keys(placements).length === allWords.length;
-            const btn = document.getElementById('k-conn-check');
-            if (btn) { btn.disabled = !allPlaced; btn.style.opacity = allPlaced ? '1' : '0.4'; }
-        }
-
-        document.getElementById('k-conn-check').onclick = () => {
-            let roundScore = 0;
-            let allCorrect = true;
-            puzzle.groups.forEach((g, gIdx) => {
-                const groupCorrect = g.words.every(w => placements[w] === gIdx);
-                g.words.forEach(w => { if (placements[w] === gIdx) roundScore++; });
-                const groupEl = document.getElementById('k-conng-' + gIdx);
-                if (groupEl) groupEl.classList.add(groupCorrect ? 'correct' : 'wrong');
-                if (!groupCorrect) allCorrect = false;
-            });
-            connScore += roundScore;
-
-            // Streak: perfect round = +1, any mistake = reset
-            if (allCorrect) {
+        window.JPShared.connectionsGame.init(document.getElementById('k-conn-stage'), {
+            level: 'N5',
+            activeLessons: activeLessons,
+            config: REPO_CONFIG,
+            onCorrect: function() {
                 connStreak++;
-                setTxt('k-conn-streak', connStreak);
                 if (connStreak > connBest) {
                     connBest = connStreak;
                     bestScores.connections = connBest;
                     window.JPShared.progress.setBestScore('connections', connBest);
                     setTxt('k-conn-best', connBest);
                 }
-                // Show character stamp on correct round
-                const connStampApi = window.JPShared.stampSettings;
-                const connStampUrl = connStampApi ? connStampApi.getStampUrl() : '';
-                if (connStampUrl) {
-                    const stampOv = document.createElement('div');
-                    stampOv.className = 'k-conn4-stamp-overlay';
-                    stampOv.innerHTML = '<img src="' + connStampUrl + '" alt="stamp"><span class="k-conn4-stamp-label" style="color:var(--success)">Perfect!</span>';
-                    stage.appendChild(stampOv);
-                }
-                // Fire hanabi at milestones
+                setTxt('k-conn-streak', connStreak);
                 if (connStreak >= 5 && connStreak % 5 === 0) {
-                    const targetView = document.getElementById('k-view-conn');
-                    if (targetView) {
-                        targetView.style.position = 'relative';
-                        // Reuse launchHanabi by temporarily adjusting curMode
-                        const savedMode = curMode;
-                        curMode = 'connections';
-                        launchHanabi(connStreak);
-                        curMode = savedMode;
-                    }
+                    const saved = curMode; curMode = 'connections';
+                    launchHanabi(connStreak);
+                    curMode = saved;
                 }
-            } else {
+            },
+            onWrong: function() {
                 connStreak = 0;
                 setTxt('k-conn-streak', 0);
-
-                // Show poo stamp on wrong round
-                const connPooApi = window.JPShared.stampSettings;
-                const connPooUrl = connPooApi ? connPooApi.getPooUrl() : '';
-                if (connPooUrl) {
-                    const pooOv = document.createElement('div');
-                    pooOv.className = 'k-conn4-stamp-overlay';
-                    pooOv.innerHTML = '<img src="' + connPooUrl + '" alt="poo"><span class="k-conn4-stamp-label" style="color:var(--error)">Try again!</span>';
-                    stage.appendChild(pooOv);
-                }
-            }
-
-            // Disable interaction
-            stage.querySelectorAll('.k-conn-word').forEach(w => w.style.pointerEvents = 'none');
-            stage.querySelectorAll('.k-conn-group').forEach(g => g.style.cursor = 'default');
-            const checkBtn = document.getElementById('k-conn-check');
-            if (checkBtn) checkBtn.style.display = 'none';
-
-            connIdx++;
-            setTimeout(connRenderPuzzle, 1800);
-        };
-    }
-
-    function connShowSummary() {
-        if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
-        const stage = document.getElementById('k-conn-stage');
-        const pct = connTotal > 0 ? Math.round(connScore / connTotal * 100) : 0;
-        stage.innerHTML = `
-            <div style="text-align:center; padding: 1rem;">
-                <div style="font-size:2.5rem; margin-bottom:10px;">🔗</div>
-                <div style="font-size:1.4rem; font-weight:900; color:var(--primary); margin-bottom:8px;">Link Up Complete!</div>
-                <div style="font-size:3rem; font-weight:900; color:var(--text-main); margin-bottom:5px;">${connScore} / ${connTotal}</div>
-                <div style="color:var(--text-sub); font-weight:600; margin-bottom:15px;">${pct}% correct</div>
-                <div style="display:flex; justify-content:center; gap:20px; margin-bottom:20px;">
-                    <div><div style="font-size:1.5rem; font-weight:900; color:#ffa502;">🔥 ${connStreak}</div><div class="k-lbl">Final Streak</div></div>
-                    <div><div style="font-size:1.5rem; font-weight:900; color:var(--primary);">🏆 ${connBest}</div><div class="k-lbl">Best Streak</div></div>
-                </div>
-                <button class="k-btn" onclick="connStart()" style="max-width:250px; margin:5px auto;">Play Again</button>
-                <button class="k-btn k-btn-sec" onclick="KanjiApp.showMenu()" style="max-width:250px; margin:5px auto;">Back to Menu</button>
-            </div>
-        `;
-        setTxt('k-conn-progress', 'Complete!');
+            },
+            onExit: function() { KanjiApp.showMenu(); },
+            onProgress: function(current, total) {
+                setTxt('k-conn-progress', current + ' / ' + total);
+            },
+            getStreakInfo: function() { return { streak: connStreak, best: connBest }; }
+        });
     }
 
     KanjiApp.connSkip = function() {
-        connIdx++;
-        connStreak = 0;
-        setTxt('k-conn-streak', 0);
-        connRenderPuzzle();
+        if (window.JPShared.connectionsGame) window.JPShared.connectionsGame.skip();
     };
 
     KanjiApp.toggleLinkUpMenu = function() {
