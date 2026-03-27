@@ -154,12 +154,11 @@
         }
       ],
       "meaning": "Easily confused na-adjectives — they look like i-adjectives but are not",
-      "explanation": "Some of the most common Japanese adjectives look like い-adjectives because their base form ends in い — but they are actually な-adjectives. This means they conjugate completely differently.\n\n**The three most common traps:**\n\n| Word | Meaning | Type | Correct past | ✗ Wrong past |\n|---|---|---|---|---|\n| きれい | beautiful / clean | **na-adj** | きれいでした | ~~きれいかったです~~ |\n| ゆうめい | famous (有名) | **na-adj** | ゆうめいでした | ~~ゆうめいかったです~~ |\n| きらい | disliked (嫌い) | **na-adj** | きらいでした | ~~きらいかったです~~ |\n\n**How to spot a na-adjective:**\n- Before a noun, it uses な: きれいな 花 (beautiful flower), 有名な 人 (famous person)\n- An i-adjective uses nothing before a noun: 大きい 花 (big flower), 新しい 人 (new person)\n- If you need to add な before a noun, it's a na-adjective!\n\n**The かわいい trap:** かわいい (cute) ends in い but IS a genuine い-adjective. So: かわいかったです (was cute) is correct. Do not confuse it with きれい.",
+      "explanation": "Some of the most common Japanese adjectives look like い-adjectives because their base form ends in い — but they are actually な-adjectives. This means they conjugate completely differently.\n\n**The three most common traps:**\n\n| Word | Meaning | Type | Correct past | ✗ Wrong past |\n|---|---|---|---|---|\n| きれい | beautiful / clean | **na-adj** | きれいでした | ~~きれいかったです~~ |\n| ゆうめい | famous (有名) | **na-adj** | ゆうめいでした | ~~ゆうめいかったです~~ |\n| きらい | disliked (嫌い) | **na-adj** | きらいでした | ~~きらいかったです~~ |\n\n**How to spot a na-adjective:**\n\nThere is no trick that works 100% of the time. Here are two reliable clues, and then the honest truth:\n\n**Clue 1 — All kanji, no い:** If a word is written entirely in kanji with no trailing い, it is almost certainly a な-adjective. 有名 (ゆうめい), 便利 (べんり, convenient), 親切 (しんせつ, kind) — these kanji compounds behave like nouns and take な before a noun. This clue catches a large portion of な-adjectives.\n\n**Clue 2 — Ends in い but no kanji ending in い:** Words like きれい (written 綺麗 — the い is not a kanji stem suffix) and 嫌い (きらい — the い is part of the kanji) fall into a grey zone. These look identical to い-adjectives in hiragana but are な-adjectives. There is no reliable visual test here.\n\n**The honest answer:** You basically have to memorize the rest. The な-adjectives that end in い are a short fixed list — きれい, 嫌い, 幸い (さいわい, fortunate), and a handful of others. Outside of those, if a word ends in い, it is most likely a genuine い-adjective.\n\n**The かわいい trap:** かわいい (cute) ends in い and IS a genuine い-adjective. かわいかったです (was cute) is correct. Do not confuse it with きれい.",
       "notes": [
-        "Memory trick: if the adjective can take な before a noun (きれいな, 有名な, 嫌いな), it's a na-adjective and uses で/でした/じゃない for conjugation.",
-        "きれい is unusual because it is a na-adjective even though it ends in い. It comes from the two-kanji compound 綺麗 — like other 漢語 compounds (有名, 嫌い), it behaves grammatically like a noun, not a true い-adjective.",
-        "有名 (ゆうめい) is a compound of 有 (exist) + 名 (name), meaning literally 'having a name' — names make you famous. This compound structure explains why it behaves like a noun/na-adj rather than an i-adj.",
-        "Memory trick for the fake い-adjectives: try saying 'きれいな 花' — if な fits naturally before the noun, it's a な-adjective. 'かわいい花' has no な, confirming かわいい is a genuine い-adjective."
+        "The 'all kanji, no い' rule is your best automatic check for new vocabulary. 有名な, 便利な, 大切な, 親切な — all kanji compounds are な-adjectives.",
+        "きれい is unusual because it ends in い in hiragana but comes from the kanji compound 綺麗 — the い is not a conjugating stem. Same situation with 嫌い (きらい): the い is part of the character 嫌い, not a grammatical ending.",
+        "The short list of い-ending な-adjectives to memorize: きれい (beautiful/clean), きらい (disliked), さいわい (fortunate). Outside this list, assume い-ending words are い-adjectives."
       ],
       "examples": [
         {
@@ -481,6 +480,7 @@
       "type": "conjugationDrill",
       "title": "na-Adjective Conjugation Practice",
       "instructions": "Convert each adjective to the target form. Watch out for な-adjective vs い-adjective differences.",
+      "manualProgression": true,
       "items": [
         {
           "verb": "きれい",

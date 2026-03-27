@@ -232,6 +232,8 @@ window.GrammarModule = {
         .gr-choice-chip.correct { background: #d4edda; border-color: #c3e6cb; color: #155724; }
         .gr-choice-chip.wrong { background: #f8d7da; border-color: #f5c6cb; color: #721c24; }
         .gr-hint-text { font-size: 0.82rem; color: #666; margin-top: 10px; padding: 8px 12px; background: #f8f9fa; border-radius: 8px; }
+        .gr-next-btn { display: block; margin: 14px auto 0; padding: 10px 28px; border-radius: 20px; border: none; background: #16A34A; color: white; font-size: 1rem; font-weight: 700; cursor: pointer; transition: 0.18s; }
+        @media (hover: hover) { .gr-next-btn:hover { background: #15803d; } }
 
         /* Fill slot */
         .gr-slot-sentence { font-size: 1.2rem; font-family: 'Noto Sans JP', sans-serif; line-height: 2; text-align: center; margin: 16px 0; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px; }
@@ -727,7 +729,13 @@ window.GrammarModule = {
               hint.style.display = 'block';
               scoreText.textContent = answered + ' / ' + items.length;
               barFill.style.width = (answered / items.length * 100) + '%';
-              setTimeout(() => { idx++; renderItem(); }, 1400);
+              if (sec.manualProgression) {
+                const nextBtn = el('button', 'gr-next-btn', idx + 1 < items.length ? 'Next →' : 'Done ✓');
+                nextBtn.onclick = () => { idx++; renderItem(); };
+                itemDiv.appendChild(nextBtn);
+              } else {
+                setTimeout(() => { idx++; renderItem(); }, 1400);
+              }
             } else {
               btn.classList.add('wrong');
               if (!solved) { answered++; solved = true; }
@@ -737,7 +745,13 @@ window.GrammarModule = {
               choices.querySelectorAll('.gr-choice-chip').forEach(b => {
                 if (b.textContent === item.answer) b.classList.add('correct');
               });
-              setTimeout(() => { idx++; renderItem(); }, 1400);
+              if (sec.manualProgression) {
+                const nextBtn = el('button', 'gr-next-btn', idx + 1 < items.length ? 'Next →' : 'Done ✓');
+                nextBtn.onclick = () => { idx++; renderItem(); };
+                itemDiv.appendChild(nextBtn);
+              } else {
+                setTimeout(() => { idx++; renderItem(); }, 1400);
+              }
             }
           };
           choices.appendChild(btn);
