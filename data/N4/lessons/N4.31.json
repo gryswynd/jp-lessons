@@ -1,23 +1,19 @@
 {
   "contentVersion": "1.0.0",
   "id": "N4.31",
-  "title": "Phase 4 Lesson 31: Times & Openings",
+  "title": "Times & Openings",
   "meta": {
-    "phase": 4,
-    "lesson": 31,
-    "focus": "Changing times, forests, halls, and opening things.",
-    "kanji": [
-      "代",
-      "森",
-      "堂",
-      "開"
-    ]
+    "level": "N4",
+    "lesson_number": 31,
+    "focus": "Changing eras and generations, forests and halls, and the act of opening — with first exposure to passive and causative verb forms",
+    "estimated_minutes": 35,
+    "kanji": ["代", "森", "堂", "開"]
   },
   "newKanji": [
     {
       "kanji": "代",
       "on": "だい / たい",
-      "kun": "か(わる)",
+      "kun": "か（わる）",
       "meaning": "Substitute / Era",
       "termId": "k_dai_3"
     },
@@ -38,7 +34,7 @@
     {
       "kanji": "開",
       "on": "かい",
-      "kun": "あ(ける) / ひら(く)",
+      "kun": "あ（ける）/ ひら（く）",
       "meaning": "Open",
       "termId": "k_kai_2"
     }
@@ -47,50 +43,87 @@
     {
       "type": "warmup",
       "title": "Warm-Up Review（ウォームアップ）",
-      "instructions": "Ask your partner these questions using words you already know:",
+      "instructions": "Use words you already know to answer these questions:",
       "items": [
         {
-          "jp": "きのう、本を 読みましたか。",
-          "en": "Did you read a book yesterday?",
+          "jp": "仕事が 終わったら、友達に 電話します。",
+          "en": "When work is done, I will call my friend.",
           "terms": [
-            "v_kinou",
-            "k_moto",
+            "v_shigoto",
+            "p_ga",
             {
-              "id": "v_yomu",
-              "form": "polite_mashita"
-            }
-          ]
-        },
-        {
-          "jp": "山へ 行きたいですか。",
-          "en": "Do you want to go to the mountain?",
-          "terms": [
-            "k_yama",
-            {
-              "id": "v_iku",
-              "form": "plain_desire_tai"
+              "id": "v_owaru",
+              "form": "conditional_tara"
             },
-            "g_desu"
-          ]
-        },
-        {
-          "jp": "店で 何を 買いますか。",
-          "en": "What will you buy at the shop?",
-          "terms": [
-            "k_mise",
-            "v_nani",
+            "v_tomodachi",
+            "p_ni",
+            "v_denwa",
             {
-              "id": "v_kau",
+              "id": "v_suru",
               "form": "polite_masu"
             }
           ]
         },
         {
-          "jp": "お寺が 好きですか。",
-          "en": "Do you like temples?",
+          "jp": "日本語を 勉強したことが ありますか。",
+          "en": "Have you ever studied Japanese?",
           "terms": [
-            "v_otera",
-            "v_suki"
+            "v_nihongo",
+            "p_wo",
+            "v_benkyou",
+            {
+              "id": "v_suru",
+              "form": "plain_past"
+            },
+            "v_koto",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "jp": "旅行に 行ったことが あると 思います。",
+          "en": "I think I have been on a trip before.",
+          "terms": [
+            "v_ryokou",
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "plain_past"
+            },
+            "v_koto",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "plain_form"
+            },
+            "p_to_quote",
+            {
+              "id": "v_omou",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "漢字が 読めるように なりましたか。",
+          "en": "Have you come to be able to read kanji?",
+          "terms": [
+            "v_kanji",
+            "p_ga",
+            {
+              "id": "v_yomu",
+              "form": "potential"
+            },
+            "v_you_manner",
+            "p_ni",
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
           ]
         }
       ]
@@ -145,6 +178,7 @@
           "terms": [
             "k_kai_2",
             "v_akeru",
+            "v_aku_2",
             "v_hiraku",
             "v_kaiten",
             "v_kaishi"
@@ -157,7 +191,7 @@
       "title": "Vocabulary & Compounds（ことば）",
       "groups": [
         {
-          "label": "Eras & Substitution",
+          "label": "Eras & Substitution（代）",
           "items": [
             "v_kawaru",
             "v_jidai",
@@ -166,21 +200,27 @@
           ]
         },
         {
-          "label": "Forests & Halls",
+          "label": "Forests（森）",
           "items": [
             "v_mori",
-            "v_shinrin",
-            "v_dou_2",
-            "v_doudou",
-            "v_shokudou",
-            "v_hondou",
-            "v_kaidou"
+            "v_shinrin"
           ]
         },
         {
-          "label": "Opening",
+          "label": "Halls（堂）",
+          "items": [
+            "v_dou_2",
+            "v_shokudou",
+            "v_hondou",
+            "v_kaidou",
+            "v_doudou"
+          ]
+        },
+        {
+          "label": "Opening（開）",
           "items": [
             "v_akeru",
+            "v_aku_2",
             "v_hiraku",
             "v_kaiten",
             "v_kaishi"
@@ -190,41 +230,41 @@
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 1（会話）: Changing Times",
-      "context": "Talking about how things change.",
+      "title": "Conversation 1: A Changing Era",
+      "context": "Two colleagues at work discussing how much has changed over the years.",
       "lines": [
         {
           "spk": "A",
-          "jp": "今の 時代は 早いですね。",
-          "en": "The current era is fast, isn't it?",
+          "jp": "今の 時代は 本当に 代わりましたね。",
+          "en": "The current era has really changed, hasn't it?",
           "terms": [
-            "k_ima",
+            "v_ima",
+            "p_no",
             "v_jidai",
-            "v_hayai"
+            "p_wa",
+            "v_totemo",
+            {
+              "id": "v_kawaru",
+              "form": "polite_mashita"
+            },
+            "p_ne"
           ]
         },
         {
           "spk": "B",
-          "jp": "はい。いろいろな 物が 代わりました。",
-          "en": "Yes. Various things have changed (substituted).",
+          "jp": "そうですね。子どもの 時と 全然 同じじゃ ありません。",
+          "en": "You're right. It's not the same at all as when I was a child.",
           "terms": [
-            "v_hai",
-            "v_iroiro",
-            "k_mono",
-            {
-              "id": "v_kawaru",
-              "form": "polite_mashita"
-            }
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "私の 世代と 同じじゃありません。",
-          "en": "It is not the same as my generation.",
-          "terms": [
-            "k_watashi",
-            "v_sedai",
+            "v_sou",
+            "g_desu",
+            "p_ne",
+            "v_kodomo",
+            "p_no",
+            "v_toki",
+            "p_to",
+            "v_zenzen",
             "v_onaji",
+            "p_ja",
             {
               "id": "v_aru",
               "form": "polite_negative"
@@ -232,142 +272,110 @@
           ]
         },
         {
-          "spk": "B",
-          "jp": "新しい 時代ですね。",
-          "en": "It is a new era, isn't it?",
+          "spk": "A",
+          "jp": "新しい 世代の 人たちは、古い 時代の ことを 知らないと 思います。",
+          "en": "I think people of the new generation don't know about the old era.",
           "terms": [
             "v_atarashii",
-            "v_jidai"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 2（会話）: The Forest",
-      "context": "Looking at a map.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "あの 山に 森が あります。",
-          "en": "There is a forest on that mountain.",
-          "terms": [
-            "k_ano",
-            "k_yama",
-            "v_mori",
+            "v_sedai",
+            "p_no",
+            "v_hito",
+            "p_wa",
+            "v_furui",
+            "v_jidai",
+            "p_no",
+            "v_koto",
+            "p_wo",
             {
-              "id": "v_aru",
+              "id": "v_shiru",
+              "form": "plain_negative"
+            },
+            "p_to_quote",
+            {
+              "id": "v_omou",
               "form": "polite_masu"
             }
           ]
         },
         {
           "spk": "B",
-          "jp": "大きい 森林ですね。",
-          "en": "It is a big forest, isn't it?",
+          "jp": "でも、古い 時代に 大切な ことは 今でも 大切だと 思いますよ。",
+          "en": "But I think what was important in the old era is still important even today.",
           "terms": [
-            "v_ookii",
-            "v_shinrin"
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "はい。中へ 行きましょう。",
-          "en": "Yes. Let's go inside.",
-          "terms": [
-            "k_naka",
+            "p_demo_but",
+            "v_furui",
+            "v_jidai",
+            "p_ni",
+            "v_taisetsu",
+            "p_na",
+            "v_koto",
+            "p_wa",
+            "v_ima",
+            "p_demo",
+            "v_taisetsu",
+            "g_da",
+            "p_to_quote",
             {
-              "id": "v_iku",
-              "form": "polite_volitional_mashou"
-            }
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "鳥が たくさん いますよ。",
-          "en": "There are many birds.",
-          "terms": [
-            "k_tori",
-            "v_takusan",
-            {
-              "id": "v_iru",
+              "id": "v_omou",
               "form": "polite_masu"
-            }
+            },
+            "p_yo"
           ]
         }
       ]
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 3（会話）: The Cafeteria",
-      "context": "Eating lunch.",
+      "title": "Conversation 2: Opening the Hall",
+      "context": "A manager gives instructions to a staff member before a community event at the assembly hall.",
       "lines": [
         {
           "spk": "A",
-          "jp": "昼ご飯は 食堂で 食べましょう。",
-          "en": "Let's eat lunch at the cafeteria.",
+          "jp": "今日の 会合は 会堂で 開かれます。",
+          "en": "Today's meeting will be held at the assembly hall.",
           "terms": [
-            "v_hirugohan",
-            "v_shokudou",
+            "v_kyou",
+            "p_no",
+            "v_kaigou",
+            "p_wa",
+            "v_kaidou",
+            "p_de",
             {
-              "id": "v_taberu",
-              "form": "polite_volitional_mashou"
-            }
+              "id": "v_hiraku",
+              "form": "polite_passive"
+            },
+            "p_yo"
           ]
         },
         {
           "spk": "B",
-          "jp": "いいですね。食堂の 代金は 安いですから。",
-          "en": "That's good. Because the cafeteria prices are cheap.",
+          "jp": "開始は 何時ですか。",
+          "en": "What time does it start?",
           "terms": [
-            "v_ii",
-            "v_shokudou",
-            "v_daikin",
-            "v_yasu"
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "何時に 店を 開けますか。",
-          "en": "What time do they open the shop?",
-          "terms": [
+            "v_kaishi",
+            "p_wa",
             "v_nanji",
-            "k_mise",
-            {
-              "id": "v_akeru",
-              "form": "polite_masu"
-            }
+            "g_desu",
+            "p_ka"
           ]
         },
         {
-          "spk": "B",
-          "jp": "十二時に 開けます。",
-          "en": "They open it at 12 o'clock.",
+          "spk": "A",
+          "jp": "午後 一時に 始まります。入り口を 開けて おいてください。",
+          "en": "It starts at 1 PM. Please open the entrance in advance.",
           "terms": [
+            "v_gogo",
             {
               "counter": "ji",
-              "n": 12
+              "n": 1
             },
+            "p_ni",
             {
-              "id": "v_akeru",
+              "id": "v_hajimaru",
               "form": "polite_masu"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 4（会話）: Opening the Shop",
-      "context": "Trying to enter a shop.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "店の 入り口を 開けて ください。",
-          "en": "Please open the shop entrance.",
-          "terms": [
-            "k_mise",
+            },
             "v_iriguchi",
+            "p_wo",
             {
               "id": "v_akeru",
               "form": "te_form"
@@ -377,50 +385,236 @@
         },
         {
           "spk": "B",
-          "jp": "すみません、開きません。",
-          "en": "Sorry, it won't open.",
+          "jp": "わかりました。代金は いくらですか。",
+          "en": "Understood. How much is the fee?",
           "terms": [
             {
-              "id": "v_aku_2",
-              "form": "polite_negative"
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            },
+            "v_daikin",
+            "p_wa",
+            "v_ikura",
+            "g_desu",
+            "p_ka"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Conversation 3: Into the Forest (Casual)",
+      "context": "Two friends on a hiking trail heading toward a forest temple.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "この 森、すごいね。前に 来たことが ある？",
+          "en": "This forest is amazing, isn't it? Have you been here before?",
+          "terms": [
+            "v_kono",
+            "v_mori",
+            "v_sugoi",
+            "p_ne",
+            "v_mae",
+            "p_ni",
+            {
+              "id": "v_kuru",
+              "form": "plain_past"
+            },
+            "v_koto",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "plain_form"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "うん、一度 来たことが あるよ。森林が とても きれいだった。",
+          "en": "Yeah, I've been here once before. The forest was very beautiful.",
+          "terms": [
+            "v_un",
+            "v_ichido",
+            {
+              "id": "v_kuru",
+              "form": "plain_past"
+            },
+            "v_koto",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "plain_form"
+            },
+            "p_yo",
+            "v_shinrin",
+            "p_ga",
+            "v_totemo",
+            {
+              "id": "v_kirei",
+              "form": "plain_past"
             }
           ]
         },
         {
           "spk": "A",
-          "jp": "私が 開けます。",
-          "en": "I will open it.",
+          "jp": "本堂は どこに ある？地図によると 森の 中だと 思うけど。",
+          "en": "Where is the main hall? According to the map, I think it's inside the forest.",
           "terms": [
-            "k_watashi",
+            "v_hondou",
+            "p_wa",
+            "v_doko",
+            "p_ni",
             {
-              "id": "v_akeru",
-              "form": "polite_masu"
-            }
+              "id": "v_aru",
+              "form": "plain_form"
+            },
+            "p_ka",
+            "v_chizu",
+            "p_ni",
+            "p_yori",
+            "v_mori",
+            "p_no",
+            "v_naka",
+            "g_da",
+            "p_to_quote",
+            {
+              "id": "v_omou",
+              "form": "plain_form"
+            },
+            "p_kedo"
           ]
         },
         {
           "spk": "B",
-          "jp": "お願いします。",
-          "en": "Please (do so).",
+          "jp": "そうだね。行ってみよう。",
+          "en": "You're right. Let's go and see.",
           "terms": [
+            "v_sou",
+            "g_da",
+            "p_ne",
             {
-              "id": "v_suru",
-              "form": "polite_masu"
+              "id": "v_iku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_miru",
+              "form": "plain_volitional"
             }
           ]
         }
       ]
     },
     {
+      "type": "conversation",
+      "title": "Conversation 4: The New Cafeteria (Casual)",
+      "context": "Two friends talking about a new cafeteria opening in their neighbourhood.",
+      "lines": [
+        {
+          "spk": "A",
+          "jp": "あそこの 食堂、来週 開店するって 聞いたよ。",
+          "en": "I heard that cafeteria over there is opening next week.",
+          "terms": [
+            "v_asoko",
+            "p_no",
+            "v_shokudou",
+            "v_raishuu",
+            "v_kaiten",
+            {
+              "id": "v_suru",
+              "form": "plain_form"
+            },
+            "p_tte_quote",
+            {
+              "id": "v_kiku",
+              "form": "plain_past"
+            },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "え、本当に？代金は 高い？",
+          "en": "Really? Is the price expensive?",
+          "terms": [
+            "v_sou",
+            "v_daikin",
+            "p_wa",
+            "v_takai",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "安いと 思うよ。この 世代に いい 店だと 思う。",
+          "en": "I think it's cheap. I think it's a good shop for this generation.",
+          "terms": [
+            "v_yasui",
+            "p_to_quote",
+            {
+              "id": "v_omou",
+              "form": "plain_form"
+            },
+            "p_yo",
+            "v_kono",
+            "v_sedai",
+            "p_ni",
+            "v_ii",
+            "v_mise",
+            "g_da",
+            "p_to_quote",
+            {
+              "id": "v_omou",
+              "form": "plain_form"
+            }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "それは いいね！開いたら 一緒に 行こうよ。",
+          "en": "That's great! When it opens, let's go together.",
+          "terms": [
+            "v_sore",
+            "p_wa",
+            "v_ii",
+            "p_ne",
+            {
+              "id": "v_aku_2",
+              "form": "conditional_tara"
+            },
+            "v_issho",
+            {
+              "id": "v_iku",
+              "form": "plain_volitional"
+            },
+            "p_yo"
+          ]
+        }
+      ]
+    },
+    {
       "type": "reading",
-      "title": "Reading Practice 1: The Main Hall",
+      "title": "Reading Practice 1: The Forest Temple",
       "passage": [
         {
-          "jp": "お寺の 本堂へ 行きました。",
-          "en": "I went to the temple's main hall.",
+          "jp": "秋に、友達と 森の 中に ある お寺へ 行きました。",
+          "en": "In autumn, I went to a temple in the forest with a friend.",
           "terms": [
+            "v_aki",
+            "p_ni",
+            "v_tomodachi",
+            "p_to",
+            "v_mori",
+            "p_no",
+            "v_naka",
+            "p_ni",
+            {
+              "id": "v_aru",
+              "form": "plain_form"
+            },
             "v_otera",
-            "v_hondou",
+            "p_e",
             {
               "id": "v_iku",
               "form": "polite_mashita"
@@ -428,37 +622,270 @@
           ]
         },
         {
-          "jp": "本堂は 森の 中に ありました。",
-          "en": "The main hall was inside the forest.",
+          "jp": "森林の 道は 長くて、鳥の 声が よく 聞こえました。",
+          "en": "The forest path was long, and the birds' calls could be heard clearly.",
           "terms": [
-            "v_hondou",
-            "v_mori",
-            "k_naka",
+            "v_shinrin",
+            "p_no",
+            "v_michi",
+            "p_wa",
             {
-              "id": "v_aru",
+              "id": "v_nagai",
+              "form": "te_form"
+            },
+            "k_tori",
+            "p_no",
+            "v_koe",
+            "p_ga",
+            "v_yoku",
+            {
+              "id": "v_mieru",
               "form": "polite_mashita"
             }
           ]
         },
         {
-          "jp": "とても 大きくて、堂々として いました。",
-          "en": "It was very big and magnificent.",
+          "jp": "森の 中の 本堂は、堂々として 見えました。",
+          "en": "The main hall in the forest looked magnificent.",
           "terms": [
+            "v_mori",
+            "p_no",
+            "v_naka",
+            "p_no",
+            "v_hondou",
+            "p_wa",
+            "v_doudou",
             {
-              "id": "v_ookii",
-              "form": "te_form"
-            },
-            "v_doudou"
+              "id": "v_mieru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
-          "jp": "私は 古いの時代の 力を 思いました。",
-          "en": "I thought of the power of old times.",
+          "jp": "私は 古い 時代の ことを 思いながら、お寺を 見ました。",
+          "en": "While thinking about the old era, I looked at the temple.",
           "terms": [
-            "k_watashi",
-            "v_furu",
+            "v_watashi",
+            "p_wa",
+            "v_furui",
             "v_jidai",
-            "v_chikara",
+            "p_no",
+            "v_koto",
+            "p_wo",
+            {
+              "id": "v_omou",
+              "form": "nagara_form"
+            },
+            "v_otera",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "jp": "今日も 多くの 人が このお寺に 来られています。",
+          "en": "Many people still come to this temple today.",
+          "terms": [
+            "v_kyou",
+            "p_mo",
+            "v_ooi",
+            "p_no",
+            "v_hito",
+            "p_ga",
+            "v_kono",
+            "v_otera",
+            "p_ni",
+            {
+              "id": "v_kuru",
+              "form": "polite_passive"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "いつ、お寺へ 行きましたか。",
+          "q_en": "When did they go to the temple?",
+          "a": "秋に 行きました。",
+          "a_en": "They went in autumn.",
+          "terms": [
+            "v_itsu",
+            "v_otera",
+            "p_e",
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_aki",
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "q": "本堂は どう 見えましたか。",
+          "q_en": "How did the main hall look?",
+          "a": "堂々として 見えました。",
+          "a_en": "It looked magnificent.",
+          "terms": [
+            "v_hondou",
+            "p_wa",
+            "v_dou",
+            {
+              "id": "v_mieru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_doudou",
+            {
+              "id": "v_mieru",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "q": "筆者は 何を 思いながら お寺を 見ましたか。",
+          "q_en": "What was the author thinking about while looking at the temple?",
+          "a": "古い 時代の ことを 思いながら、お寺を 見ました。",
+          "a_en": "They were thinking about the old era while looking at the temple.",
+          "terms": [
+            "v_dare",
+            "p_wa",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_omou",
+              "form": "nagara_form"
+            },
+            "v_otera",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_furui",
+            "v_jidai",
+            "p_no",
+            "v_koto",
+            "p_wo",
+            {
+              "id": "v_omou",
+              "form": "nagara_form"
+            },
+            "v_otera",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "polite_mashita"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 2: The New Generation Event",
+      "passage": [
+        {
+          "jp": "新しい 世代の 人々が 集まる 会合が、会堂で 開かれました。",
+          "en": "A gathering where people of the new generation assembled was held at the assembly hall.",
+          "terms": [
+            "v_atarashii",
+            "v_sedai",
+            "p_no",
+            "v_hitobito",
+            "p_ga",
+            {
+              "id": "v_atsumaru",
+              "form": "plain_form"
+            },
+            "v_kaigou",
+            "p_ga",
+            "v_kaidou",
+            "p_de",
+            {
+              "id": "v_hiraku",
+              "form": "polite_passive_past"
+            }
+          ]
+        },
+        {
+          "jp": "開始の 前に、会堂の 入り口を 開けさせました。",
+          "en": "Before the start, they had the entrance to the hall opened.",
+          "terms": [
+            "v_kaishi",
+            "p_no",
+            "v_mae",
+            "p_ni",
+            "v_kaidou",
+            "p_no",
+            "v_iriguchi",
+            "p_wo",
+            {
+              "id": "v_akeru",
+              "form": "polite_causative_past"
+            }
+          ]
+        },
+        {
+          "jp": "多くの 人が 来て、会合は とても 楽しかったです。",
+          "en": "Many people came, and the gathering was very enjoyable.",
+          "terms": [
+            "v_ooi",
+            "p_no",
+            "v_hito",
+            "p_ga",
+            {
+              "id": "v_kuru",
+              "form": "te_form"
+            },
+            "v_kaigou",
+            "p_wa",
+            "v_totemo",
+            {
+              "id": "v_tanoshii",
+              "form": "polite_past_adj"
+            }
+          ]
+        },
+        {
+          "jp": "時代が 代わっても、人々が 集まる 所は 大切だと 思いました。",
+          "en": "Even as the era changes, I thought the places where people gather are important.",
+          "terms": [
+            "v_jidai",
+            "p_ga",
+            {
+              "id": "v_kawaru",
+              "form": "te_form"
+            },
+            "p_mo",
+            "v_hitobito",
+            "p_ga",
+            {
+              "id": "v_atsumaru",
+              "form": "plain_form"
+            },
+            "v_tokoro",
+            "p_wa",
+            "v_taisetsu",
+            "g_da",
+            "p_to_quote",
             {
               "id": "v_omou",
               "form": "polite_mashita"
@@ -468,258 +895,293 @@
       ],
       "questions": [
         {
-          "q": "本堂は どこに ありましたか。",
-          "a": "森の 中。",
+          "q": "会合は どこで 開かれましたか。",
+          "q_en": "Where was the gathering held?",
+          "a": "会堂で 開かれました。",
+          "a_en": "It was held at the assembly hall.",
           "terms": [
-            "v_hondou",
-            "v_doko",
-            "v_mori",
-            "k_naka"
-          ]
-        },
-        {
-          "q": "本堂は どうでしたか。",
-          "a": "堂々として いました。",
-          "terms": [
-            "v_hondou",
-            "v_dou",
-            "v_doudou"
-          ]
-        },
-        {
-          "q": "何を 思いましたか。",
-          "a": "昔の 力。",
-          "terms": [
-            "v_nani",
-            "v_omou",
-            "v_mukashi",
-            "v_chikara"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "reading",
-      "title": "Reading Practice 2: The Meeting",
-      "passage": [
-        {
-          "jp": "会堂で 会合を 開きます。",
-          "en": "We will hold (open) a meeting at the assembly hall.",
-          "terms": [
-            "v_kaidou",
             "v_kaigou",
+            "p_wa",
+            "v_doko",
+            "p_de",
             {
               "id": "v_hiraku",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "jp": "新しい 世代の 人々が 集まります。",
-          "en": "People of the new generation will gather.",
-          "terms": [
-            "v_atarashii",
-            "v_sedai",
-            "v_hitobito",
+              "form": "polite_passive_past"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_kaidou",
+            "p_de",
             {
-              "id": "v_atsumaru",
-              "form": "polite_masu"
+              "id": "v_hiraku",
+              "form": "polite_passive_past"
             }
           ]
         },
         {
-          "jp": "開始は 午後 一時です。",
-          "en": "The start is at 1:00 PM.",
+          "q": "開始の 前に、何を しましたか。",
+          "q_en": "What was done before the start?",
+          "a": "会堂の 入り口を 開けさせました。",
+          "a_en": "They had the entrance to the hall opened.",
           "terms": [
             "v_kaishi",
-            "v_gogo",
+            "p_no",
+            "v_mae",
+            "p_ni",
+            "v_nani",
+            "p_wo",
             {
-              "counter": "ji",
-              "n": 1
-            }
-          ]
-        },
-        {
-          "jp": "代金は ありません。",
-          "en": "There is no fee.",
-          "terms": [
-            "v_daikin",
-            {
-              "id": "v_aru",
-              "form": "polite_negative"
-            }
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "q": "どこで 会合を 開きますか。",
-          "a": "会堂。",
-          "terms": [
-            "v_doko",
-            "v_kaigou",
-            "v_hiraku",
-            "v_kaidou"
-          ]
-        },
-        {
-          "q": "だれが 集まりますか。",
-          "a": "新しい 世代の 人々。",
-          "terms": [
-            "v_dare",
-            "v_atsumaru",
-            "v_atarashii",
-            "v_sedai",
-            "v_hitobito"
-          ]
-        },
-        {
-          "q": "代金は ありますか。",
-          "a": "いいえ、ありません。",
-          "terms": [
-            "v_daikin",
-            "v_aru"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "drills",
-      "title": "Drill 1: Vocabulary",
-      "instructions": "Select the correct reading or meaning.",
-      "items": [
-        {
-          "kind": "mcq",
-          "q": "時代",
-          "choices": [
-            "jidai",
-            "shidai",
-            "kodai",
-            "jishiro"
+              "id": "v_suru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
           ],
-          "answer": "jidai",
-          "terms": []
-        },
-        {
-          "kind": "mcq",
-          "q": "森林",
-          "choices": [
-            "shinrin",
-            "moririn",
-            "hayashimori",
-            "shinhayashi"
-          ],
-          "answer": "shinrin",
-          "terms": []
-        },
-        {
-          "kind": "mcq",
-          "q": "食堂",
-          "choices": [
-            "shokudou",
-            "jikidou",
-            "shokutou",
-            "tabedou"
-          ],
-          "answer": "shokudou",
-          "terms": []
-        },
-        {
-          "kind": "mcq",
-          "q": "開ける",
-          "choices": [
-            "akeru",
-            "hirakeru",
-            "kakeru",
-            "sakeru"
-          ],
-          "answer": "akeru",
-          "terms": []
-        },
-        {
-          "kind": "mcq",
-          "q": "代わる",
-          "choices": [
-            "kawaru",
-            "kairu",
-            "yowaru",
-            "owaru"
-          ],
-          "answer": "kawaru",
-          "terms": []
-        }
-      ]
-    },
-    {
-      "type": "drills",
-      "title": "Drill 2: Fill in the Blank",
-      "instructions": "Select the word that fits.",
-      "items": [
-        {
-          "kind": "mcq",
-          "q": "入り口を ______ ください。",
-          "choices": [
-            "開けて",
-            "代わって",
-            "集めて",
-            "閉めて"
-          ],
-          "answer": "開けて",
-          "terms": [
+          "a_terms": [
+            "v_kaidou",
+            "p_no",
             "v_iriguchi",
+            "p_wo",
             {
               "id": "v_akeru",
-              "form": "te_form"
-            },
-            "v_kudasai"
+              "form": "polite_causative_past"
+            }
           ]
         },
         {
-          "kind": "mcq",
-          "q": "この 森は ______ です。",
-          "choices": [
-            "静か",
-            "堂々",
-            "便利",
-            "代金"
-          ],
-          "answer": "静か",
+          "q": "筆者は 何が 大切だと 思いましたか。",
+          "q_en": "What did the author think was important?",
+          "a": "人々が 集まる 所が 大切だと 思いました。",
+          "a_en": "They thought the places where people gather are important.",
           "terms": [
-            "k_kono",
-            "v_mori",
-            "v_shizuka"
+            "v_dare",
+            "p_wa",
+            "v_nani",
+            "p_ga",
+            "v_taisetsu",
+            "g_da",
+            "p_to_quote",
+            {
+              "id": "v_omou",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_hitobito",
+            "p_ga",
+            {
+              "id": "v_atsumaru",
+              "form": "plain_form"
+            },
+            "v_tokoro",
+            "p_ga",
+            "v_taisetsu",
+            "g_da",
+            "p_to_quote",
+            {
+              "id": "v_omou",
+              "form": "polite_mashita"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 1: Kanji Readings",
+      "instructions": "Choose the correct reading for each word.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "【時代】の よみかたは？",
+          "choices": ["じだい", "しだい", "こだい", "ちだい"],
+          "answer": "じだい"
+        },
+        {
+          "kind": "mcq",
+          "q": "【森林】の よみかたは？",
+          "choices": ["しんりん", "もりりん", "はやしりん", "しんばやし"],
+          "answer": "しんりん"
+        },
+        {
+          "kind": "mcq",
+          "q": "【食堂】の よみかたは？",
+          "choices": ["しょくどう", "じきどう", "しょくとう", "たべどう"],
+          "answer": "しょくどう"
+        },
+        {
+          "kind": "mcq",
+          "q": "【開店】の よみかたは？",
+          "choices": ["かいてん", "ひらきみせ", "あけみせ", "かいみせ"],
+          "answer": "かいてん"
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 2: Vocabulary",
+      "instructions": "Choose the word that best fits the sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "会合は 会堂で ______。",
+          "choices": ["開かれました", "代わりました", "集めました", "始まりました"],
+          "answer": "開かれました",
+          "terms": [
+            "v_kaigou",
+            "p_wa",
+            "v_kaidou",
+            "p_de",
+            {
+              "id": "v_hiraku",
+              "form": "polite_passive_past"
+            }
           ]
         },
         {
           "kind": "mcq",
-          "q": "レストランで ______ を 払います。",
-          "choices": [
-            "代金",
-            "時代",
-            "世代",
-            "本堂"
-          ],
+          "q": "この お寺の ______ は とても 大きいです。",
+          "choices": ["本堂", "時代", "代金", "開始"],
+          "answer": "本堂",
+          "terms": [
+            "v_kono",
+            "v_otera",
+            "p_no",
+            "v_hondou",
+            "p_wa",
+            "v_totemo",
+            "v_ookii",
+            "g_desu"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "レストランの ______ は 千円です。",
+          "choices": ["代金", "世代", "時代", "開始"],
           "answer": "代金",
           "terms": [
             "v_resutoran",
+            "p_no",
             "v_daikin",
-            "v_harau"
+            "p_wa",
+            {
+              "counter": "en",
+              "n": 1000
+            },
+            "g_desu"
           ]
         },
         {
           "kind": "mcq",
-          "q": "新しい ______ が 始まります。",
-          "choices": [
-            "時代",
-            "会堂",
-            "森林",
-            "開店"
-          ],
-          "answer": "時代",
+          "q": "子どもに 野菜を ______。",
+          "choices": ["食べさせました", "食べられました", "食べました", "食べてきました"],
+          "answer": "食べさせました",
+          "terms": [
+            "v_kodomo",
+            "p_ni",
+            "v_yasai",
+            "p_wo",
+            {
+              "id": "v_taberu",
+              "form": "polite_causative_past"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "drills",
+      "title": "Drill 3: Grammar & Forms",
+      "instructions": "Choose the correct grammar form for each sentence.",
+      "items": [
+        {
+          "kind": "mcq",
+          "q": "この 歌は 世界中の 人に ______。",
+          "choices": ["聞かれています", "聞きます", "聞かせます", "聞いています"],
+          "answer": "聞かれています",
+          "terms": [
+            "v_kono",
+            "v_uta",
+            "p_wa",
+            "v_sekaijuu",
+            "p_no",
+            "v_hito",
+            "p_ni",
+            {
+              "id": "v_kiku",
+              "form": "polite_passive"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "先生は 学生に 作文を ______。",
+          "choices": ["書かせました", "書かれました", "書きました", "書いてきました"],
+          "answer": "書かせました",
+          "terms": [
+            "v_sensei",
+            "p_wa",
+            "v_gakusei",
+            "p_ni",
+            "v_sakubun",
+            "p_wo",
+            {
+              "id": "v_kaku",
+              "form": "polite_causative_past"
+            }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "森の 中に 入ったことが ______ と 思いました。",
+          "choices": ["ある", "あります", "あった", "ありました"],
+          "answer": "ある",
+          "terms": [
+            "v_mori",
+            "p_no",
+            "v_naka",
+            "p_ni",
+            {
+              "id": "v_hairu",
+              "form": "plain_past"
+            },
+            "v_koto",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "plain_form"
+            },
+            "p_to_quote",
+            {
+              "id": "v_omou",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "新しい 時代に ______ ように なりました。",
+          "choices": ["代わる", "代わります", "代わった", "代わって"],
+          "answer": "代わる",
           "terms": [
             "v_atarashii",
             "v_jidai",
-            "v_hajimaru"
+            "p_ni",
+            {
+              "id": "v_kawaru",
+              "form": "plain_form"
+            },
+            "v_you_manner",
+            "p_ni",
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
