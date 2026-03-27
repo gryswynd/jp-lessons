@@ -4,10 +4,10 @@
  * Third game module under the Practice.js plugin architecture.
  *
  * Shell contract:
- *   Practice.js owns chrome (streak counter, hanabi, session tracking).
+ *   Practice.js owns chrome (progress counter, hanabi, session tracking).
  *   This module owns everything inside its container div.
  *   Shell passes: container, level ('N4'), activeLessons, config,
- *                 onCorrect, onWrong, onExit, onProgress, getStreakInfo.
+ *                 onComplete, onExit, onProgress.
  *
  * Data format (connections.N4.json):
  *   { puzzles: [{ id, requires, groups: [{ label, words[] }] }] }
@@ -17,8 +17,8 @@
  *   - 4×4 grid of word tiles; tap to select, submit groups of 4.
  *   - 4 lives (lanterns); lose one per wrong guess.
  *   - "One away" hint when guess overlaps a group by exactly 3.
- *   - Full puzzle solved → onCorrect (shell drives streak + hanabi).
- *   - Out of lives → onWrong (shell resets streak).
+ *   - Full puzzle solved → onComplete (shell triggers hanabi).
+ *   - Out of lives → result screen with Retry + Back to Puzzles.
  */
 (function () {
   'use strict';
@@ -74,7 +74,7 @@
         'transform:scale(0.82);}' +
       '.c4-lives-lbl{font-size:0.78rem;font-weight:700;color:#a89cc8;margin-left:2px;}' +
 
-      // Action buttons
+      // Action buttons (in-game)
       '.c4-actions{display:flex;gap:8px;margin-top:6px;}' +
       '.c4-btn{flex:1;padding:12px;border:none;border-radius:12px;font-weight:700;' +
         'font-size:0.93rem;cursor:pointer;transition:opacity 0.15s,transform 0.1s;}' +
@@ -91,17 +91,36 @@
       '.c4-stamp img{height:68px;display:block;margin:0 auto 4px;}' +
       '.c4-stamp-lbl{font-size:0.85rem;font-weight:700;}' +
 
-      // Summary
-      '.c4-summary{text-align:center;padding:24px 8px;}' +
-      '.c4-summary-icon{font-size:2.4rem;margin-bottom:8px;}' +
-      '.c4-summary-title{font-size:1.3rem;font-weight:900;color:#e67e22;margin-bottom:6px;}' +
-      '.c4-summary-score{font-size:2.6rem;font-weight:900;color:#f0e6ff;line-height:1.1;}' +
-      '.c4-summary-pct{color:#a89cc8;font-weight:600;margin:4px 0 16px;}' +
-      '.c4-summary-stats{display:flex;justify-content:center;gap:32px;margin-bottom:20px;}' +
-      '.c4-stat-val{font-size:1.35rem;font-weight:900;}' +
-      '.c4-stat-lbl{font-size:0.7rem;color:#a89cc8;font-weight:600;' +
-        'text-transform:uppercase;letter-spacing:0.05em;}' +
-      '.c4-btn-col{display:flex;flex-direction:column;gap:8px;}' +
+      // Picker
+      '.c4-pick-hdr{font-size:0.72rem;font-weight:700;text-transform:uppercase;' +
+        'letter-spacing:0.08em;color:#a89cc8;margin-bottom:12px;}' +
+      '.c4-pick-list{display:grid;grid-template-columns:1fr;gap:9px;}' +
+      '.c4-pick-item{display:flex;align-items:center;gap:12px;padding:13px 15px;' +
+        'border-radius:14px;background:#1e1442;border:1.5px solid #3d2f6e;cursor:pointer;' +
+        'transition:transform 0.15s,box-shadow 0.15s,border-color 0.15s;}' +
+      '.c4-pick-item:hover{transform:translateY(-3px);' +
+        'box-shadow:0 8px 20px rgba(230,126,34,0.15);border-color:#e67e22;}' +
+      '.c4-pick-num{font-weight:900;font-size:0.9rem;color:#e67e22;min-width:22px;' +
+        'flex-shrink:0;}' +
+      '.c4-pick-info{flex:1;min-width:0;}' +
+      '.c4-pick-title{font-weight:700;font-size:0.88rem;color:#f0e6ff;}' +
+      '.c4-pick-sub{font-size:0.72rem;color:#a89cc8;margin-top:2px;' +
+        'white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}' +
+      '.c4-pick-badge{width:44px;height:44px;flex-shrink:0;' +
+        'display:flex;align-items:center;justify-content:center;}' +
+      '.c4-pick-badge img{width:100%;height:100%;object-fit:contain;opacity:0.85;}' +
+      '.c4-pick-go{font-size:0.82rem;font-weight:700;color:#5b4a7a;flex-shrink:0;}' +
+      '@keyframes c4PickPop{0%{transform:scale(2) rotate(0deg);opacity:0}' +
+        '60%{transform:scale(0.9)}100%{transform:scale(1);opacity:0.85}}' +
+      '.c4-pick-badge img{animation:c4PickPop 0.3s ease;}' +
+
+      // Shared action buttons (full-width)
+      '.c4-btn-full{display:block;width:100%;padding:12px;border:none;border-radius:12px;' +
+        'font-weight:700;font-size:0.93rem;cursor:pointer;margin-top:8px;}' +
+      '.c4-btn-full-primary{color:#fff;' +
+        'background:linear-gradient(135deg,#e67e22 0%,#c0392b 100%);}' +
+      '.c4-btn-full-sec{color:#c77dff;background:rgba(199,125,255,0.12);' +
+        'border:1.5px solid rgba(199,125,255,0.28);}' +
 
       // Empty / error
       '.c4-empty{text-align:center;padding:40px 16px;}' +
@@ -136,23 +155,41 @@
     return arr;
   }
 
+  // ── Per-puzzle persistence ────────────────────────────────────────
+  var RESULT_KEY = 'k-conn4-';
+
+  function savePuzzleResult(puzzleId, status) {
+    var existing = getPuzzleResult(puzzleId);
+    var tilt = existing && existing.tilt !== undefined
+      ? existing.tilt
+      : (Math.floor(Math.random() * 41) - 20);
+    try {
+      localStorage.setItem(RESULT_KEY + puzzleId,
+        JSON.stringify({ status: status, ts: Date.now(), tilt: tilt }));
+    } catch (e) {}
+  }
+
+  function getPuzzleResult(puzzleId) {
+    try {
+      var raw = localStorage.getItem(RESULT_KEY + puzzleId);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+
   // ── Module-level state ────────────────────────────────────────────
-  var cfg        = {};
-  var container  = null;
-  var puzzles    = [];
-  var puzzleIdx  = 0;
-  var sessionScore = 0;
-  var sessionTotal = 0;
-  var dataCache  = null;      // preserved across init/destroy cycles
+  var cfg          = {};
+  var container    = null;
+  var allAvailable = [];
+  var dataCache    = null;      // preserved across init/destroy cycles
   var advanceTimer = null;
 
-  // Per-puzzle state (reset in renderPuzzle)
-  var puzzle     = null;
-  var remaining  = [];        // shuffled flat word list
-  var solved     = [];        // group indices solved, in discovery order
-  var selected   = [];        // currently highlighted words (max 4)
-  var lives      = 4;
-  var locked     = false;     // blocks interaction during transitions
+  // Per-puzzle state (reset in playSinglePuzzle)
+  var puzzle    = null;
+  var remaining = [];
+  var solved    = [];
+  var selected  = [];
+  var lives     = 4;
+  var locked    = false;
 
   // ── Data loading ──────────────────────────────────────────────────
   function loadData(level, cb) {
@@ -176,10 +213,7 @@
     cfg          = ctx;
     container    = containerEl;
     container.innerHTML = '';
-    puzzles      = [];
-    puzzleIdx    = 0;
-    sessionScore = 0;
-    sessionTotal = 0;
+    allAvailable = [];
     locked       = false;
 
     var level = cfg.level || 'N4';
@@ -194,7 +228,7 @@
           '<div class="c4-empty-icon">⚠️</div>' +
           '<div class="c4-empty-msg">Could not load puzzles.<br>' +
           'Please check your connection.</div>' +
-          '<button class="c4-btn c4-btn-sec" id="c4-err-exit">Exit</button>' +
+          '<button class="c4-btn-full c4-btn-full-sec" id="c4-err-exit">Exit</button>' +
           '</div></div>';
         document.getElementById('c4-err-exit').onclick = function () {
           if (cfg.onExit) cfg.onExit();
@@ -215,7 +249,7 @@
           '<div class="c4-empty-icon">🏮</div>' +
           '<div class="c4-empty-msg">No puzzles unlocked yet!<br>' +
           'Complete more N4 lessons to light up these lanterns.</div>' +
-          '<button class="c4-btn c4-btn-sec" id="c4-nopuz-exit">Back to Menu</button>' +
+          '<button class="c4-btn-full c4-btn-full-sec" id="c4-nopuz-exit">Back to Menu</button>' +
           '</div></div>';
         document.getElementById('c4-nopuz-exit').onclick = function () {
           if (cfg.onExit) cfg.onExit();
@@ -223,30 +257,83 @@
         return;
       }
 
-      puzzles = shuffle(available.slice());
-      renderPuzzle();
+      allAvailable = available.slice();
+      renderPicker();
     });
   }
 
-  // ── Puzzle setup ──────────────────────────────────────────────────
-  function renderPuzzle() {
-    if (puzzleIdx >= puzzles.length) { renderSummary(); return; }
+  // ── Picker ────────────────────────────────────────────────────────
+  function renderPicker() {
+    if (window.JPShared && window.JPShared.streak) {
+      window.JPShared.streak.recordActivity();
+    }
 
-    puzzle   = puzzles[puzzleIdx];
+    var stampApi = window.JPShared && window.JPShared.stampSettings;
+    var stampUrl = stampApi && stampApi.getStampUrl ? stampApi.getStampUrl() : '';
+    var pooUrl   = stampApi && stampApi.getPooUrl   ? stampApi.getPooUrl()   : '';
+
+    var completedCount = 0;
+    allAvailable.forEach(function (p) {
+      var r = getPuzzleResult(p.id);
+      if (r && r.status === 'complete') completedCount++;
+    });
+    if (cfg.onProgress) cfg.onProgress(completedCount, allAvailable.length);
+
+    var html = '<div class="c4-wrap">';
+    html += '<div class="c4-pick-hdr">Select a puzzle</div>';
+    html += '<div class="c4-pick-list">';
+
+    allAvailable.forEach(function (p, i) {
+      var result = getPuzzleResult(p.id);
+      var labels = p.groups.map(function (g) { return g.label; }).join(' · ');
+      var tilt   = result ? result.tilt : 0;
+
+      html += '<div class="c4-pick-item" data-idx="' + i + '">';
+      html += '<div class="c4-pick-num">' + (i + 1) + '</div>';
+      html += '<div class="c4-pick-info">';
+      html += '<div class="c4-pick-title">Puzzle ' + (i + 1) + '</div>';
+      html += '<div class="c4-pick-sub">' + esc(labels) + '</div>';
+      html += '</div>';
+
+      if (result && result.status === 'complete' && stampUrl) {
+        html += '<div class="c4-pick-badge">' +
+          '<img src="' + esc(stampUrl) + '" alt="✓" style="transform:rotate(' + tilt + 'deg);">' +
+          '</div>';
+      } else if (result && result.status === 'failed' && pooUrl) {
+        html += '<div class="c4-pick-badge">' +
+          '<img src="' + esc(pooUrl) + '" alt="✗" style="transform:rotate(' + tilt + 'deg);">' +
+          '</div>';
+      } else {
+        html += '<span class="c4-pick-go">Go →</span>';
+      }
+
+      html += '</div>';
+    });
+
+    html += '</div></div>';
+    container.innerHTML = html;
+
+    container.querySelectorAll('.c4-pick-item').forEach(function (item) {
+      item.addEventListener('click', function () {
+        var idx = parseInt(item.dataset.idx, 10);
+        playSinglePuzzle(allAvailable[idx]);
+      });
+    });
+  }
+
+  // ── Single puzzle play ────────────────────────────────────────────
+  function playSinglePuzzle(p) {
+    puzzle   = p;
     solved   = [];
     selected = [];
     lives    = 4;
     locked   = false;
 
-    // Flatten all words from 4 groups and shuffle
     var allWords = [];
     puzzle.groups.forEach(function (g) {
       g.words.forEach(function (w) { allWords.push(w); });
     });
     remaining = shuffle(allWords);
-
-    sessionTotal += 16;  // 4 groups × 4 words
-    if (cfg.onProgress) cfg.onProgress(puzzleIdx + 1, puzzles.length);
 
     render();
   }
@@ -255,7 +342,6 @@
   function render() {
     var isPuzzleComplete = solved.length === puzzle.groups.length;
 
-    // Solved group banners (in discovery order)
     var solvedHtml = solved.map(function (si) {
       var g   = puzzle.groups[si];
       var bg  = LANTERN_BG[si];
@@ -266,7 +352,6 @@
         '</div>';
     }).join('');
 
-    // Remaining tiles (words not yet solved)
     var unsolvedWords = remaining.filter(function (w) {
       return !solved.some(function (si) {
         return puzzle.groups[si].words.indexOf(w) !== -1;
@@ -282,7 +367,6 @@
       }).join('');
     }
 
-    // Lantern lives
     var livesHtml = '';
     for (var i = 0; i < 4; i++) {
       livesHtml += '<span class="c4-lantern' + (i >= lives ? ' c4-dim' : '') + '">🏮</span>';
@@ -305,27 +389,30 @@
     var disableDesel  = locked || selected.length === 0;
     var disableSubmit = locked || selected.length !== 4 || isPuzzleComplete;
 
-    var html =
-      '<div class="c4-wrap">' +
+    var html = '<div class="c4-wrap">' +
       '<div class="c4-hint" id="c4-hint">' +
         (isPuzzleComplete ? '🎇 Puzzle solved!' : 'Find 4 words that belong together') +
       '</div>' +
-      '<div class="c4-solved-zone">' + solvedHtml + '</div>' +
-      (isPuzzleComplete
-        ? stampHtml
-        : '<div class="c4-grid" id="c4-grid">' + gridHtml + '</div>' +
-          '<div class="c4-lives">' + livesHtml +
-            '<span class="c4-lives-lbl">' + lives + ' left</span>' +
-          '</div>' +
-          '<div class="c4-actions">' +
-            '<button class="c4-btn c4-btn-sec" id="c4-desel"' +
-              (disableDesel ? ' disabled' : '') + '>Clear</button>' +
-            '<button class="c4-btn c4-btn-primary" id="c4-submit"' +
-              (disableSubmit ? ' disabled' : '') + '>Submit</button>' +
-          '</div>'
-      ) +
-      '</div>';
+      '<div class="c4-solved-zone">' + solvedHtml + '</div>';
 
+    if (isPuzzleComplete) {
+      html += stampHtml +
+        '<button class="c4-btn-full c4-btn-full-primary" id="c4-back">Back to Puzzles</button>';
+    } else {
+      html +=
+        '<div class="c4-grid" id="c4-grid">' + gridHtml + '</div>' +
+        '<div class="c4-lives">' + livesHtml +
+          '<span class="c4-lives-lbl">' + lives + ' left</span>' +
+        '</div>' +
+        '<div class="c4-actions">' +
+          '<button class="c4-btn c4-btn-sec" id="c4-desel"' +
+            (disableDesel ? ' disabled' : '') + '>Clear</button>' +
+          '<button class="c4-btn c4-btn-primary" id="c4-submit"' +
+            (disableSubmit ? ' disabled' : '') + '>Submit</button>' +
+        '</div>';
+    }
+
+    html += '</div>';
     container.innerHTML = html;
     wireInteraction();
   }
@@ -358,6 +445,11 @@
     if (subBtn) {
       subBtn.addEventListener('click', function () { trySubmit(); });
     }
+
+    var backBtn = document.getElementById('c4-back');
+    if (backBtn) {
+      backBtn.addEventListener('click', function () { renderPicker(); });
+    }
   }
 
   // ── Submit / guess logic ──────────────────────────────────────────
@@ -367,7 +459,7 @@
 
     var guess = selected.slice();
 
-    // Check for exact match against an unsolved group
+    // Check for exact match
     var correctIdx = -1;
     puzzle.groups.forEach(function (g, gi) {
       if (solved.indexOf(gi) !== -1) return;
@@ -376,21 +468,15 @@
     });
 
     if (correctIdx !== -1) {
-      // ── Correct group ──
       solved.push(correctIdx);
-      sessionScore += 4;
       selected = [];
-      locked = false;
+      locked   = false;
 
       if (solved.length === puzzle.groups.length) {
         // Full puzzle complete
-        render();  // show all solved + stamp
-        if (cfg.onCorrect) cfg.onCorrect();
-        advanceTimer = setTimeout(function () {
-          advanceTimer = null;
-          puzzleIdx++;
-          renderPuzzle();
-        }, 2200);
+        savePuzzleResult(puzzle.id, 'complete');
+        render();
+        if (cfg.onComplete) cfg.onComplete();
       } else {
         render();
         setHint('✓ That group is correct!', 'c4-ok');
@@ -398,7 +484,7 @@
       return;
     }
 
-    // Check for "one away" (3 of 4 overlap with an unsolved group)
+    // Check "one away"
     var oneAway = false;
     puzzle.groups.forEach(function (g, gi) {
       if (solved.indexOf(gi) !== -1) return;
@@ -408,12 +494,10 @@
       if (overlap === 3) oneAway = true;
     });
 
-    // Wrong guess: lose a life
     lives--;
     selected = [];
 
     if (lives <= 0) {
-      // Keep locked to prevent interaction during delay
       render();
       shakeGrid();
       setHint(oneAway ? 'So close — one away! No lanterns left.' : 'No lanterns left!', 'c4-err');
@@ -422,7 +506,8 @@
       locked = false;
       render();
       shakeGrid();
-      setHint(oneAway ? 'So close — one away!' : 'Not quite — try another group', oneAway ? 'c4-one-away' : 'c4-err');
+      setHint(oneAway ? 'So close — one away!' : 'Not quite — try another group',
+        oneAway ? 'c4-one-away' : 'c4-err');
     }
   }
 
@@ -447,7 +532,8 @@
     if (window.JPShared && window.JPShared.streak) {
       window.JPShared.streak.recordActivity();
     }
-    if (cfg.onWrong) cfg.onWrong();
+
+    savePuzzleResult(puzzle.id, 'failed');
 
     // Reveal all unsolved groups in original order
     puzzle.groups.forEach(function (_, gi) {
@@ -477,108 +563,50 @@
       }
     }
 
+    var savedPuzzle = puzzle;   // capture before any re-render
     container.innerHTML =
       '<div class="c4-wrap">' +
       '<div class="c4-hint c4-err">No more lanterns — here\'s the answer</div>' +
       '<div class="c4-solved-zone">' + solvedHtml + '</div>' +
       pooHtml +
-      '<div class="c4-actions" style="margin-top:12px;">' +
-        '<button class="c4-btn c4-btn-sec" id="c4-go-next">Next Puzzle →</button>' +
-      '</div>' +
+      '<button class="c4-btn-full c4-btn-full-primary" id="c4-retry">Try Again</button>' +
+      '<button class="c4-btn-full c4-btn-full-sec" id="c4-back">Back to Puzzles</button>' +
       '</div>';
 
-    document.getElementById('c4-go-next').addEventListener('click', function () {
-      puzzleIdx++;
-      renderPuzzle();
+    document.getElementById('c4-retry').addEventListener('click', function () {
+      playSinglePuzzle(savedPuzzle);
     });
-  }
-
-  // ── Summary ───────────────────────────────────────────────────────
-  function renderSummary() {
-    if (window.JPShared && window.JPShared.streak) {
-      window.JPShared.streak.recordActivity();
-    }
-
-    var pct = sessionTotal > 0
-      ? Math.round(sessionScore / sessionTotal * 100) : 0;
-    var streakInfo = cfg.getStreakInfo
-      ? cfg.getStreakInfo() : { streak: 0, best: 0 };
-
-    container.innerHTML =
-      '<div class="c4-wrap"><div class="c4-summary">' +
-      '<div class="c4-summary-icon">🎇</div>' +
-      '<div class="c4-summary-title">Link Up: Hidden Complete!</div>' +
-      '<div class="c4-summary-score">' + sessionScore + ' / ' + sessionTotal + '</div>' +
-      '<div class="c4-summary-pct">' + pct + '% correct</div>' +
-      '<div class="c4-summary-stats">' +
-        '<div>' +
-          '<div class="c4-stat-val" style="color:#e67e22;">🔥 ' +
-            esc(String(streakInfo.streak)) + '</div>' +
-          '<div class="c4-stat-lbl">Final Streak</div>' +
-        '</div>' +
-        '<div>' +
-          '<div class="c4-stat-val" style="color:#c77dff;">🏆 ' +
-            esc(String(streakInfo.best)) + '</div>' +
-          '<div class="c4-stat-lbl">Best Streak</div>' +
-        '</div>' +
-      '</div>' +
-      '<div class="c4-btn-col">' +
-        '<button class="c4-btn c4-btn-primary" id="c4-again">Play Again</button>' +
-        '<button class="c4-btn c4-btn-sec" id="c4-exit">Back to Menu</button>' +
-      '</div>' +
-      '</div></div>';
-
-    document.getElementById('c4-again').addEventListener('click', function () {
-      puzzles      = shuffle(puzzles.slice());
-      puzzleIdx    = 0;
-      sessionScore = 0;
-      sessionTotal = 0;
-      renderPuzzle();
-    });
-    document.getElementById('c4-exit').addEventListener('click', function () {
-      if (cfg.onExit) cfg.onExit();
+    document.getElementById('c4-back').addEventListener('click', function () {
+      renderPicker();
     });
   }
 
   // ── Public API ────────────────────────────────────────────────────
   window.JPShared.connections4Game = {
     /**
-     * Start (or restart) the game.
+     * Start (or restart) the game; lands on the puzzle picker.
      * @param {HTMLElement} containerEl  Shell-owned stage div to write into.
      * @param {Object}      ctx
      *   ctx.level          - 'N4' (default)
      *   ctx.activeLessons  - Set<string> of completed lesson IDs
      *   ctx.config         - REPO_CONFIG passed to window.getAssetUrl()
-     *   ctx.onCorrect()    - called when a full puzzle is solved without dying
-     *   ctx.onWrong()      - called on game over (all 4 lives lost)
+     *   ctx.onComplete()   - called when a full puzzle is solved
      *   ctx.onExit()       - called when the player exits to menu
-     *   ctx.onProgress(current, total)
-     *   ctx.getStreakInfo() - returns { streak, best }
+     *   ctx.onProgress(completedCount, total)
      */
     init: function (containerEl, ctx) {
       init(containerEl, ctx);
-    },
-
-    /**
-     * Skip the current puzzle; counts as a wrong answer (streak resets).
-     * Safe to call while the advance-delay timer is running.
-     */
-    skip: function () {
-      if (advanceTimer) { clearTimeout(advanceTimer); advanceTimer = null; }
-      if (cfg.onWrong) cfg.onWrong();
-      if (puzzleIdx < puzzles.length) puzzleIdx++;
-      renderPuzzle();
     },
 
     /** Tear down — clean up DOM and any dangling timers. */
     destroy: function () {
       if (advanceTimer) { clearTimeout(advanceTimer); advanceTimer = null; }
       if (container)    { container.innerHTML = ''; }
-      container = null;
-      cfg       = {};
-      puzzles   = [];
-      puzzle    = null;
-      locked    = false;
+      container    = null;
+      cfg          = {};
+      allAvailable = [];
+      puzzle       = null;
+      locked       = false;
       // dataCache intentionally preserved for re-use across init/destroy cycles
     }
   };
