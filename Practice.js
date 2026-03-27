@@ -791,38 +791,33 @@ window.PracticeModule = {
         if (sub) sub.classList.toggle('k-hidden');
     };
 
-    // --- CONNECTIONS N4 (LINK UP: HIDDEN) — NYT-style ---
-    const CONN4_COLORS = ['#f9df6d','#a0c35a','#b0c4ef','#ba81c5'];
-    const CONN4_LABELS = ['yellow','green','blue','purple'];
-    let conn4Puzzles = [], conn4Idx = 0, conn4Score = 0, conn4Total = 0, conn4Streak = 0, conn4Best = 0;
-    let conn4DataCache = null;
+    // --- CONNECTIONS N4 (LINK UP: HIDDEN) — plugin module ---
+    let conn4ScriptLoaded = false;
+
+    async function conn4LoadScript() {
+        if (conn4ScriptLoaded) return true;
+        try {
+            const url = window.getAssetUrl(REPO_CONFIG, 'app/games/connections4.js') + '?t=' + Date.now();
+            const res = await fetch(url);
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            const code = await res.text();
+            const script = document.createElement('script');
+            script.textContent = code;
+            document.body.appendChild(script);
+            conn4ScriptLoaded = true;
+            return true;
+        } catch(e) {
+            console.error('[Practice] Failed to load connections4.js:', e);
+            alert('Could not load Link Up: Hidden.');
+            return false;
+        }
+    }
 
     async function conn4Start() {
+        if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
         curMode = 'connections4'; curCategory = 'connections4';
-        conn4Streak = 0; conn4Score = 0; conn4Total = 0; conn4Idx = 0;
-        conn4Best = bestScores.connections4 || 0;
 
-        if (!conn4DataCache) {
-            try {
-                const url = window.getAssetUrl(REPO_CONFIG, 'data/N4/connections/connections.N4.json') + '?t=' + Date.now();
-                const res = await fetch(url);
-                conn4DataCache = await res.json();
-            } catch(e) {
-                alert('Could not load Link Up: Hidden puzzles.');
-                return;
-            }
-        }
-
-        const available = conn4DataCache.puzzles.filter(p =>
-            p.requires.every(req => activeLessons.has(req))
-        );
-
-        if (available.length === 0) {
-            alert('Select more lessons to unlock Link Up: Hidden! These puzzles use N4 vocabulary.');
-            return;
-        }
-
-        conn4Puzzles = available.sort(() => Math.random() - 0.5);
+        if (!await conn4LoadScript()) return;
 
         ALL_VIEWS.forEach(i => {
             const el = document.getElementById(i);
@@ -831,231 +826,44 @@ window.PracticeModule = {
         const cv = document.getElementById('k-view-conn4');
         if(cv) cv.classList.remove('k-hidden');
 
-        setTxt('k-conn4-best', conn4Best);
+        let conn4Streak = 0;
+        let conn4Best = bestScores.connections4 || 0;
         setTxt('k-conn4-streak', 0);
-        conn4RenderPuzzle();
-    }
+        setTxt('k-conn4-best', conn4Best);
 
-    function conn4RenderPuzzle() {
-        if (conn4Idx >= conn4Puzzles.length) {
-            conn4ShowSummary();
-            return;
-        }
-
-        const puzzle = conn4Puzzles[conn4Idx];
-        const solved = []; // indices of solved groups
-        let lives = 4;
-        let selected = new Set();
-        const remaining = puzzle.groups.flatMap(g => [...g.words]).sort(() => Math.random() - 0.5);
-
-        conn4Total += 16;
-        setTxt('k-conn4-progress', `Puzzle ${conn4Idx + 1} / ${conn4Puzzles.length}`);
-
-        const stage = document.getElementById('k-conn4-stage');
-
-        function render() {
-            const solvedHtml = solved.map(si => {
-                const g = puzzle.groups[si];
-                return `<div class="k-conn4-solved-row" style="background:${CONN4_COLORS[si]}; color:#1a1a1a;">
-                    <div class="label">${g.label}</div>
-                    <div class="words">${g.words.join('  ·  ')}</div>
-                </div>`;
-            }).join('');
-
-            const unsolved = remaining.filter(w => !solved.some(si => puzzle.groups[si].words.includes(w)));
-            const gridHtml = unsolved.map(w =>
-                `<div class="k-conn4-tile${selected.has(w) ? ' selected' : ''}" data-word="${w}">${w}</div>`
-            ).join('');
-
-            const livesHtml = Array.from({length: 4}, (_, i) =>
-                `<div class="k-conn4-life${i >= lives ? ' lost' : ''}"></div>`
-            ).join('');
-
-            stage.innerHTML = `
-                <div class="k-conn-info">Find 4 words that belong together!</div>
-                ${solvedHtml}
-                <div class="k-conn4-grid" id="k-conn4-grid">${gridHtml}</div>
-                <div class="k-conn4-lives">${livesHtml}<span style="margin-left:6px; font-weight:700; font-size:0.85rem; color:var(--text-sub);">${lives} remaining</span></div>
-                <div class="k-conn4-actions">
-                    <button class="k-btn k-btn-sec" id="k-conn4-deselect" style="opacity:0.4" disabled>Deselect All</button>
-                    <button class="k-btn" id="k-conn4-submit" style="opacity:0.4; max-width:160px;" disabled>Submit</button>
-                </div>
-            `;
-
-            // Tile selection
-            stage.querySelectorAll('.k-conn4-tile').forEach(tile => {
-                tile.onclick = () => {
-                    const w = tile.dataset.word;
-                    if (selected.has(w)) {
-                        selected.delete(w);
-                    } else if (selected.size < 4) {
-                        selected.add(w);
-                    }
-                    render();
-                };
-            });
-
-            // Deselect all
-            const deselBtn = document.getElementById('k-conn4-deselect');
-            if (deselBtn) {
-                deselBtn.disabled = selected.size === 0;
-                deselBtn.style.opacity = selected.size === 0 ? '0.4' : '1';
-                deselBtn.onclick = () => { selected.clear(); render(); };
-            }
-
-            // Submit
-            const subBtn = document.getElementById('k-conn4-submit');
-            if (subBtn) {
-                subBtn.disabled = selected.size !== 4;
-                subBtn.style.opacity = selected.size !== 4 ? '0.4' : '1';
-                subBtn.onclick = () => trySubmit();
-            }
-        }
-
-        function trySubmit() {
-            const guess = [...selected];
-
-            // Check each group
-            for (let gi = 0; gi < puzzle.groups.length; gi++) {
-                if (solved.includes(gi)) continue;
-                const groupWords = puzzle.groups[gi].words;
-                if (guess.length === 4 && guess.every(w => groupWords.includes(w)) && groupWords.every(w => guess.includes(w))) {
-                    // Correct!
-                    solved.push(gi);
-                    conn4Score += 4;
-                    selected.clear();
-
-                    if (solved.length === 4) {
-                        // Puzzle complete!
-                        conn4Streak++;
-                        setTxt('k-conn4-streak', conn4Streak);
-                        if (conn4Streak > conn4Best) {
-                            conn4Best = conn4Streak;
-                            bestScores.connections4 = conn4Best;
-                            window.JPShared.progress.setBestScore('connections4', conn4Best);
-                            setTxt('k-conn4-best', conn4Best);
-                        }
-                        if (conn4Streak >= 3 && conn4Streak % 3 === 0) {
-                            const targetView = document.getElementById('k-view-conn4');
-                            if (targetView) {
-                                targetView.style.position = 'relative';
-                                const savedMode = curMode;
-                                curMode = 'connections4';
-                                launchHanabi(conn4Streak);
-                                curMode = savedMode;
-                            }
-                        }
-                        render();
-                        // Show character stamp for completed puzzle
-                        const c4StampApi = window.JPShared.stampSettings;
-                        const c4StampUrl = c4StampApi ? c4StampApi.getStampUrl() : '';
-                        if (c4StampUrl) {
-                            const stampOv = document.createElement('div');
-                            stampOv.className = 'k-conn4-stamp-overlay';
-                            stampOv.innerHTML = '<img src="' + c4StampUrl + '" alt="stamp"><span class="k-conn4-stamp-label" style="color:var(--success)">Complete!</span>';
-                            stage.appendChild(stampOv);
-                        }
-                        conn4Idx++;
-                        setTimeout(conn4RenderPuzzle, 2000);
-                    } else {
-                        render();
-                    }
-                    return;
+        window.JPShared.connections4Game.init(document.getElementById('k-conn4-stage'), {
+            level: 'N4',
+            activeLessons: activeLessons,
+            config: REPO_CONFIG,
+            onCorrect: function() {
+                conn4Streak++;
+                if (conn4Streak > conn4Best) {
+                    conn4Best = conn4Streak;
+                    bestScores.connections4 = conn4Best;
+                    window.JPShared.progress.setBestScore('connections4', conn4Best);
+                    setTxt('k-conn4-best', conn4Best);
                 }
-
-                // Check for "one away" (3 of 4 correct)
-                const overlap = guess.filter(w => groupWords.includes(w)).length;
-                if (overlap === 3) {
-                    shakeTiles();
-                    lives--;
-                    selected.clear();
-                    showOneAway();
-                    if (lives <= 0) { gameOver(); return; }
-                    setTimeout(render, 1200);
-                    return;
+                setTxt('k-conn4-streak', conn4Streak);
+                if (conn4Streak >= 3 && conn4Streak % 3 === 0) {
+                    const saved = curMode; curMode = 'connections4';
+                    launchHanabi(conn4Streak);
+                    curMode = saved;
                 }
-            }
-
-            // Wrong guess
-            shakeTiles();
-            lives--;
-            selected.clear();
-            if (lives <= 0) { gameOver(); return; }
-            setTimeout(render, 600);
-        }
-
-        function shakeTiles() {
-            stage.querySelectorAll('.k-conn4-tile.selected').forEach(t => {
-                t.classList.add('shake');
-            });
-        }
-
-        function showOneAway() {
-            const info = stage.querySelector('.k-conn-info');
-            if (info) {
-                info.textContent = 'One away!';
-                info.style.color = '#e67e22';
-                setTimeout(() => { info.textContent = 'Find 4 words that belong together!'; info.style.color = ''; }, 1200);
-            }
-        }
-
-        function gameOver() {
-            if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
-            // Reveal all remaining groups
-            puzzle.groups.forEach((_, gi) => { if (!solved.includes(gi)) solved.push(gi); });
-            conn4Streak = 0;
-            setTxt('k-conn4-streak', 0);
-
-            const solvedHtml = puzzle.groups.map((g, si) => {
-                return `<div class="k-conn4-solved-row" style="background:${CONN4_COLORS[si]}; color:#1a1a1a;">
-                    <div class="label">${g.label}</div>
-                    <div class="words">${g.words.join('  ·  ')}</div>
-                </div>`;
-            }).join('');
-
-            const goPooApi = window.JPShared.stampSettings;
-            const goPooUrl = goPooApi ? goPooApi.getPooUrl() : '';
-            const goPooHtml = goPooUrl ? '<div class="k-conn4-stamp-overlay"><img src="' + goPooUrl + '" alt="poo"><span class="k-conn4-stamp-label" style="color:var(--error)">Try again!</span></div>' : '';
-
-            stage.innerHTML = `
-                <div class="k-conn-info" style="color:var(--error);">Game Over — no lives remaining</div>
-                ${solvedHtml}
-                ${goPooHtml}
-                <div class="k-conn4-actions" style="margin-top:16px;">
-                    <button class="k-btn k-btn-sec" onclick="KanjiApp.conn4Skip()">Next Puzzle →</button>
-                </div>
-            `;
-        }
-
-        render();
-    }
-
-    function conn4ShowSummary() {
-        if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
-        const stage = document.getElementById('k-conn4-stage');
-        const pct = conn4Total > 0 ? Math.round(conn4Score / conn4Total * 100) : 0;
-        stage.innerHTML = `
-            <div style="text-align:center; padding: 1rem;">
-                <div style="font-size:2.5rem; margin-bottom:10px;">🧩</div>
-                <div style="font-size:1.4rem; font-weight:900; color:var(--primary); margin-bottom:8px;">Link Up: Hidden Complete!</div>
-                <div style="font-size:3rem; font-weight:900; color:var(--text-main); margin-bottom:5px;">${conn4Score} / ${conn4Total}</div>
-                <div style="color:var(--text-sub); font-weight:600; margin-bottom:15px;">${pct}% correct</div>
-                <div style="display:flex; justify-content:center; gap:20px; margin-bottom:20px;">
-                    <div><div style="font-size:1.5rem; font-weight:900; color:#ffa502;">🔥 ${conn4Streak}</div><div class="k-lbl">Final Streak</div></div>
-                    <div><div style="font-size:1.5rem; font-weight:900; color:var(--primary);">🏆 ${conn4Best}</div><div class="k-lbl">Best Streak</div></div>
-                </div>
-                <button class="k-btn" onclick="conn4Start()" style="max-width:250px; margin:5px auto;">Play Again</button>
-                <button class="k-btn k-btn-sec" onclick="KanjiApp.showMenu()" style="max-width:250px; margin:5px auto;">Back to Menu</button>
-            </div>
-        `;
-        setTxt('k-conn4-progress', 'Complete!');
+            },
+            onWrong: function() {
+                conn4Streak = 0;
+                setTxt('k-conn4-streak', 0);
+            },
+            onExit: function() { KanjiApp.showMenu(); },
+            onProgress: function(current, total) {
+                setTxt('k-conn4-progress', `Puzzle ${current} / ${total}`);
+            },
+            getStreakInfo: function() { return { streak: conn4Streak, best: conn4Best }; }
+        });
     }
 
     KanjiApp.conn4Skip = function() {
-        conn4Idx++;
-        conn4Streak = 0;
-        setTxt('k-conn4-streak', 0);
-        conn4RenderPuzzle();
+        if (window.JPShared.connections4Game) window.JPShared.connections4Game.skip();
     };
 
     // --- SCRAMBLE PRACTICE ---
