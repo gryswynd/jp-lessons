@@ -164,3 +164,4 @@ window.JPShared.<gameName> = {
 - Game modules inject their own CSS via `<style>` tags (check for existing ID before injecting)
 - Data files are fetched at runtime via GitHub raw content API (not static script tags)
 - Mobile-first: all games should work well on touch devices
+- `getDynamicCompounds()` helper (added to Practice.js) filters vocab compounds by active kanji progression — only shows compounds where all constituent kanji are from active lessons. Currently used for kanji card backs only. When extracting Flashcards/Quiz modules, apply this same filtering to the vocab quiz mode (currently lines ~649-664 in Practice.js) so vocab quizzes also respect the "all constituent kanji must be known" rule.
