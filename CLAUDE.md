@@ -106,6 +106,10 @@ Write and commit in sections rather than generating the entire file in one pass.
 
 **When NOT required:** small edits (1–5 field fixes), single-section additions, non-content files.
 
+**Agent 1 responsibility:** When spawning Agent 2 for any large file (grammar lesson, review, story), the Content Brief MUST include an explicit chunk plan — e.g. "Chunk 1: sections 1–4, commit WIP. Chunk 2: sections 5–7, commit WIP. Chunk 3: section 8, commit WIP. Then squash." Do not let Agent 2 decide whether to chunk on its own.
+
+**Agent 2 timeout recovery:** If Agent 2 times out, Agent 1 MUST re-spawn Agent 2 with a smaller chunk breakdown — Agent 1 must NEVER attempt to build the content itself. Building content is Agent 2's sole responsibility. Reduce chunk size, include the explicit WIP commit instructions, and re-dispatch.
+
 ## Critical Rules (the 5 things that matter most)
 
 1. **Never read glossary files in full.** Use targeted Grep queries only — they exceed token limits.
