@@ -878,7 +878,13 @@ window.GrammarModule = {
               const tts2 = el('button', 'gr-tts-btn', '🔊'); tts2.onclick = () => speakText(item.answer); toBox.appendChild(tts2);
               scoreText.textContent = answered + ' / ' + items.length;
               barFill.style.width = (answered / items.length * 100) + '%';
-              setTimeout(() => { idx++; renderItem(); }, 1500);
+              if (sec.manualProgression) {
+                const nextBtn = el('button', 'gr-next-btn', idx + 1 < items.length ? 'Next →' : 'Done ✓');
+                nextBtn.onclick = () => { idx++; renderItem(); };
+                itemDiv.appendChild(nextBtn);
+              } else {
+                setTimeout(() => { idx++; renderItem(); }, 1500);
+              }
             } else {
               btn.classList.add('wrong');
               if (!solved) { answered++; solved = true; }
@@ -887,7 +893,13 @@ window.GrammarModule = {
               choices.querySelectorAll('.gr-choice-chip').forEach(b => {
                 if (b.textContent === item.answer) b.classList.add('correct');
               });
-              setTimeout(() => { idx++; renderItem(); }, 1500);
+              if (sec.manualProgression) {
+                const nextBtn = el('button', 'gr-next-btn', idx + 1 < items.length ? 'Next →' : 'Done ✓');
+                nextBtn.onclick = () => { idx++; renderItem(); };
+                itemDiv.appendChild(nextBtn);
+              } else {
+                setTimeout(() => { idx++; renderItem(); }, 1500);
+              }
             }
           };
           choices.appendChild(btn);

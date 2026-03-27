@@ -515,6 +515,7 @@
       "type": "sentenceTransform",
       "title": "Make It 'Can Do' or 'Can't Do'",
       "instructions": "Each sentence is given in polite form. Choose the correctly transformed potential version.",
+      "manualProgression": true,
       "items": [
         {
           "given": "電車に 一人で 乗ります。",
