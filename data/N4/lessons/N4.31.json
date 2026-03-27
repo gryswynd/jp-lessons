@@ -361,8 +361,8 @@
         },
         {
           "spk": "A",
-          "jp": "午後 一時に 始まります。入り口を 開けて おいてください。",
-          "en": "It starts at 1 PM. Please open the entrance in advance.",
+          "jp": "午後 一時に 始まります。入り口を 開けてください。",
+          "en": "It starts at 1 PM. Please open the entrance.",
           "terms": [
             "v_gogo",
             {
@@ -459,8 +459,8 @@
         },
         {
           "spk": "A",
-          "jp": "本堂は どこに ある？地図によると 森の 中だと 思うけど。",
-          "en": "Where is the main hall? According to the map, I think it's inside the forest.",
+          "jp": "本堂は どこに ある？地図では 森の 中だと 思うけど。",
+          "en": "Where is the main hall? On the map, I think it's inside the forest.",
           "terms": [
             "v_hondou",
             "p_wa",
@@ -472,8 +472,8 @@
             },
             "p_ka",
             "v_chizu",
-            "p_ni",
-            "p_yori",
+            "p_de",
+            "p_wa",
             "v_mori",
             "p_no",
             "v_naka",
@@ -623,7 +623,7 @@
           ]
         },
         {
-          "jp": "森林の 道は 長くて、鳥の 声が よく 聞こえました。",
+          "jp": "森林の 道は 長くて、鳥の 声を よく 聞きました。",
           "en": "The forest path was long, and the birds' calls could be heard clearly.",
           "terms": [
             "v_shinrin",
@@ -637,10 +637,10 @@
             "k_tori",
             "p_no",
             "v_koe",
-            "p_ga",
+            "p_wo",
             "v_yoku",
             {
-              "id": "v_mieru",
+              "id": "v_kiku",
               "form": "polite_mashita"
             }
           ]
@@ -656,6 +656,7 @@
             "v_hondou",
             "p_wa",
             "v_doudou",
+            "p_to_quote",
             {
               "id": "v_suru",
               "form": "te_form"
@@ -690,12 +691,15 @@
           ]
         },
         {
-          "jp": "今日も 多くの 人が この おてらに 来られています。",
+          "jp": "今日も 多くの 人が この おてらに 来ています。",
           "en": "Many people still come to this temple today.",
           "terms": [
             "v_kyou",
             "p_mo",
-            "v_ooi",
+            {
+              "id": "v_ooi",
+              "form": "adverbial"
+            },
             "p_no",
             "v_hito",
             "p_ga",
@@ -704,7 +708,7 @@
             "p_ni",
             {
               "id": "v_kuru",
-              "form": "polite_passive"
+              "form": "te_form"
             },
             {
               "id": "v_iru",
@@ -756,6 +760,7 @@
           ],
           "a_terms": [
             "v_doudou",
+            "p_to_quote",
             {
               "id": "v_suru",
               "form": "te_form"
@@ -855,7 +860,10 @@
           "jp": "多くの 人が 来て、会合は とても 楽しかったです。",
           "en": "Many people came, and the gathering was very enjoyable.",
           "terms": [
-            "v_ooi",
+            {
+              "id": "v_ooi",
+              "form": "adverbial"
+            },
             "p_no",
             "v_hito",
             "p_ga",
