@@ -46,7 +46,7 @@
       "instructions": "Use words you already know to answer these questions:",
       "items": [
         {
-          "jp": "仕事が 終わったら、友達に 電話します。",
+          "jp": "仕事が 終わったら、友だちに 電話します。",
           "en": "When work is done, I will call my friend.",
           "terms": [
             "v_shigoto",
@@ -235,14 +235,14 @@
       "lines": [
         {
           "spk": "A",
-          "jp": "今の 時代は 本当に 代わりましたね。",
+          "jp": "今の 時代は ほんとうに 代わりましたね。",
           "en": "The current era has really changed, hasn't it?",
           "terms": [
             "v_ima",
             "p_no",
             "v_jidai",
             "p_wa",
-            "v_totemo",
+            "p_hontou",
             {
               "id": "v_kawaru",
               "form": "polite_mashita"
@@ -252,7 +252,7 @@
         },
         {
           "spk": "B",
-          "jp": "そうですね。子どもの 時と 全然 同じじゃ ありません。",
+          "jp": "そうですね。子どもの 時と ぜんぜん 同じじゃ ありません。",
           "en": "You're right. It's not the same at all as when I was a child.",
           "terms": [
             "v_sou",
@@ -273,13 +273,13 @@
         },
         {
           "spk": "A",
-          "jp": "新しい 世代の 人たちは、古い 時代の ことを 知らないと 思います。",
+          "jp": "新しい 世代の 人々は、古い 時代の ことを 知らないと 思います。",
           "en": "I think people of the new generation don't know about the old era.",
           "terms": [
             "v_atarashii",
             "v_sedai",
             "p_no",
-            "v_hito",
+            "v_hitobito",
             "p_wa",
             "v_furui",
             "v_jidai",
@@ -535,10 +535,11 @@
         },
         {
           "spk": "B",
-          "jp": "え、本当に？代金は 高い？",
+          "jp": "え、ほんとうに？代金は 高い？",
           "en": "Really? Is the price expensive?",
           "terms": [
-            "v_sou",
+            "v_e",
+            "p_hontou",
             "v_daikin",
             "p_wa",
             "v_takai",
@@ -572,7 +573,7 @@
         },
         {
           "spk": "B",
-          "jp": "それは いいね！開いたら 一緒に 行こうよ。",
+          "jp": "それは いいね！開いたら いっしょに 行こうよ。",
           "en": "That's great! When it opens, let's go together.",
           "terms": [
             "v_sore",
@@ -598,7 +599,7 @@
       "title": "Reading Practice 1: The Forest Temple",
       "passage": [
         {
-          "jp": "秋に、友達と 森の 中に ある お寺へ 行きました。",
+          "jp": "秋に、友だちと 森の 中に ある おてらへ 行きました。",
           "en": "In autumn, I went to a temple in the forest with a friend.",
           "terms": [
             "v_aki",
@@ -656,13 +657,17 @@
             "p_wa",
             "v_doudou",
             {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
               "id": "v_mieru",
               "form": "polite_mashita"
             }
           ]
         },
         {
-          "jp": "私は 古い 時代の ことを 思いながら、お寺を 見ました。",
+          "jp": "私は 古い 時代の ことを 思いながら、おてらを 見ました。",
           "en": "While thinking about the old era, I looked at the temple.",
           "terms": [
             "v_watashi",
@@ -685,7 +690,7 @@
           ]
         },
         {
-          "jp": "今日も 多くの 人が このお寺に 来られています。",
+          "jp": "今日も 多くの 人が この おてらに 来られています。",
           "en": "Many people still come to this temple today.",
           "terms": [
             "v_kyou",
@@ -710,7 +715,7 @@
       ],
       "questions": [
         {
-          "q": "いつ、お寺へ 行きましたか。",
+          "q": "いつ、おてらへ 行きましたか。",
           "q_en": "When did they go to the temple?",
           "a": "秋に 行きました。",
           "a_en": "They went in autumn.",
@@ -732,6 +737,7 @@
               "form": "polite_mashita"
             }
           ]
+
         },
         {
           "q": "本堂は どう 見えましたか。",
@@ -751,19 +757,21 @@
           "a_terms": [
             "v_doudou",
             {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
               "id": "v_mieru",
               "form": "polite_mashita"
             }
           ]
         },
         {
-          "q": "筆者は 何を 思いながら お寺を 見ましたか。",
+          "q": "何を 思いながら おてらを 見ましたか。",
           "q_en": "What was the author thinking about while looking at the temple?",
-          "a": "古い 時代の ことを 思いながら、お寺を 見ました。",
+          "a": "古い 時代の ことを 思いながら、おてらを 見ました。",
           "a_en": "They were thinking about the old era while looking at the temple.",
           "terms": [
-            "v_dare",
-            "p_wa",
             "v_nani",
             "p_wo",
             {
@@ -949,13 +957,11 @@
           ]
         },
         {
-          "q": "筆者は 何が 大切だと 思いましたか。",
+          "q": "何が 大切だと 思いましたか。",
           "q_en": "What did the author think was important?",
           "a": "人々が 集まる 所が 大切だと 思いました。",
           "a_en": "They thought the places where people gather are important.",
           "terms": [
-            "v_dare",
-            "p_wa",
             "v_nani",
             "p_ga",
             "v_taisetsu",
@@ -1041,7 +1047,7 @@
         },
         {
           "kind": "mcq",
-          "q": "この お寺の ______ は とても 大きいです。",
+          "q": "この おてらの ______ は とても 大きいです。",
           "choices": ["本堂", "時代", "代金", "開始"],
           "answer": "本堂",
           "terms": [
