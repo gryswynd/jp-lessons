@@ -1757,7 +1757,7 @@ window.PracticeModule = {
                 dynCompounds.slice(0, 5).forEach(v => { h += compoundRow(v); });
                 if (dynCompounds.length > 5) {
                     const extraId = 'k-extra-' + Date.now();
-                    h += `<tr class="k-show-more-row" onclick="this.style.display='none'; document.querySelectorAll('.${extraId}').forEach(r=>r.style.display='')"><td colspan="2" style="text-align:center; color:var(--primary); cursor:pointer; font-size:0.9rem; padding:8px; font-weight:600;">Show ${dynCompounds.length - 5} more</td></tr>`;
+                    h += `<tr class="k-show-more-row" onclick="event.stopPropagation(); this.style.display='none'; document.querySelectorAll('.${extraId}').forEach(r=>r.style.display='')"><td colspan="2" style="text-align:center; color:var(--primary); cursor:pointer; font-size:0.9rem; padding:8px; font-weight:600;">Show ${dynCompounds.length - 5} more</td></tr>`;
                     dynCompounds.slice(5).forEach(v => { h += compoundRow(v, extraId, true); });
                 }
             }
