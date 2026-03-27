@@ -396,26 +396,20 @@ window.PracticeModule = {
 
             <div id="k-view-conn" class="k-hidden" style="width:100%">
                 <div style="display:flex; justify-content:space-between; width:100%; margin-bottom:10px; color:#a4b0be; font-weight:800; font-size:0.9rem;">
-                    <span id="k-conn-progress">Puzzle 1 / 1</span>
-                    <span>🏆 <span id="k-conn-best">0</span></span>
-                    <span style="color:#ffa502">🔥 <span id="k-conn-streak">0</span></span>
+                    <span id="k-conn-progress">0 / 0</span>
                 </div>
                 <div class="k-card" id="k-conn-stage" style="padding:1.5rem;"></div>
                 <div style="display:flex; gap:8px; width:100%; margin-top:10px;">
-                    <button class="k-btn k-btn-sec" style="flex:1" onclick="KanjiApp.connSkip()">Skip →</button>
                     <button class="k-btn k-btn-sec" onclick="KanjiApp.showMenu()">Exit</button>
                 </div>
             </div>
 
             <div id="k-view-conn4" class="k-hidden" style="width:100%">
                 <div style="display:flex; justify-content:space-between; width:100%; margin-bottom:10px; color:#a4b0be; font-weight:800; font-size:0.9rem;">
-                    <span id="k-conn4-progress">Puzzle 1 / 1</span>
-                    <span>🏆 <span id="k-conn4-best">0</span></span>
-                    <span style="color:#ffa502">🔥 <span id="k-conn4-streak">0</span></span>
+                    <span id="k-conn4-progress">0 / 0</span>
                 </div>
                 <div class="k-card" id="k-conn4-stage" style="padding:1.5rem;"></div>
                 <div style="display:flex; gap:8px; width:100%; margin-top:10px;">
-                    <button class="k-btn k-btn-sec" style="flex:1" onclick="KanjiApp.conn4Skip()">Skip →</button>
                     <button class="k-btn k-btn-sec" onclick="KanjiApp.showMenu()">Exit</button>
                 </div>
             </div>
@@ -745,46 +739,21 @@ window.PracticeModule = {
         const cv = document.getElementById('k-view-conn');
         if(cv) cv.classList.remove('k-hidden');
 
-        let connStreak = 0;
-        let connBest = bestScores.connections || 0;
-        setTxt('k-conn-best', connBest);
-        setTxt('k-conn-streak', 0);
-        setTxt('k-conn-progress', 'Loading…');
-
         window.JPShared.connectionsGame.init(document.getElementById('k-conn-stage'), {
             level: 'N5',
             activeLessons: activeLessons,
             config: REPO_CONFIG,
-            onCorrect: function() {
-                connStreak++;
-                if (connStreak > connBest) {
-                    connBest = connStreak;
-                    bestScores.connections = connBest;
-                    window.JPShared.progress.setBestScore('connections', connBest);
-                    setTxt('k-conn-best', connBest);
-                }
-                setTxt('k-conn-streak', connStreak);
-                if (connStreak >= 5 && connStreak % 5 === 0) {
-                    const saved = curMode; curMode = 'connections';
-                    launchHanabi(connStreak);
-                    curMode = saved;
-                }
-            },
-            onWrong: function() {
-                connStreak = 0;
-                setTxt('k-conn-streak', 0);
+            onComplete: function() {
+                const saved = curMode; curMode = 'connections';
+                launchHanabi(1);
+                curMode = saved;
             },
             onExit: function() { KanjiApp.showMenu(); },
-            onProgress: function(current, total) {
-                setTxt('k-conn-progress', current + ' / ' + total);
-            },
-            getStreakInfo: function() { return { streak: connStreak, best: connBest }; }
+            onProgress: function(done, total) {
+                setTxt('k-conn-progress', done + ' / ' + total);
+            }
         });
     }
-
-    KanjiApp.connSkip = function() {
-        if (window.JPShared.connectionsGame) window.JPShared.connectionsGame.skip();
-    };
 
     KanjiApp.toggleLinkUpMenu = function() {
         const sub = document.getElementById('k-linkup-submenu');
@@ -826,45 +795,21 @@ window.PracticeModule = {
         const cv = document.getElementById('k-view-conn4');
         if(cv) cv.classList.remove('k-hidden');
 
-        let conn4Streak = 0;
-        let conn4Best = bestScores.connections4 || 0;
-        setTxt('k-conn4-streak', 0);
-        setTxt('k-conn4-best', conn4Best);
-
         window.JPShared.connections4Game.init(document.getElementById('k-conn4-stage'), {
             level: 'N4',
             activeLessons: activeLessons,
             config: REPO_CONFIG,
-            onCorrect: function() {
-                conn4Streak++;
-                if (conn4Streak > conn4Best) {
-                    conn4Best = conn4Streak;
-                    bestScores.connections4 = conn4Best;
-                    window.JPShared.progress.setBestScore('connections4', conn4Best);
-                    setTxt('k-conn4-best', conn4Best);
-                }
-                setTxt('k-conn4-streak', conn4Streak);
-                if (conn4Streak >= 3 && conn4Streak % 3 === 0) {
-                    const saved = curMode; curMode = 'connections4';
-                    launchHanabi(conn4Streak);
-                    curMode = saved;
-                }
-            },
-            onWrong: function() {
-                conn4Streak = 0;
-                setTxt('k-conn4-streak', 0);
+            onComplete: function() {
+                const saved = curMode; curMode = 'connections4';
+                launchHanabi(1);
+                curMode = saved;
             },
             onExit: function() { KanjiApp.showMenu(); },
-            onProgress: function(current, total) {
-                setTxt('k-conn4-progress', `Puzzle ${current} / ${total}`);
-            },
-            getStreakInfo: function() { return { streak: conn4Streak, best: conn4Best }; }
+            onProgress: function(done, total) {
+                setTxt('k-conn4-progress', done + ' / ' + total);
+            }
         });
     }
-
-    KanjiApp.conn4Skip = function() {
-        if (window.JPShared.connections4Game) window.JPShared.connections4Game.skip();
-    };
 
     // --- SCRAMBLE PRACTICE ---
     let scrSets = [], scrSetIdx = 0, scrItemIdx = 0, scrStreak = 0, scrBest = 0, scrScore = 0, scrTotal = 0;

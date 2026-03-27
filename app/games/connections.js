@@ -4,10 +4,10 @@
  * Second game module under the Practice.js plugin architecture.
  *
  * Shell contract:
- *   Practice.js owns chrome (streak counter, hanabi, session tracking).
+ *   Practice.js owns chrome (progress counter, hanabi, session tracking).
  *   This module owns everything inside its container div.
  *   Shell passes: container, level ('N5'|'N4'), activeLessons, config,
- *                 onCorrect, onWrong, onExit, onProgress, getStreakInfo.
+ *                 onComplete, onExit, onProgress.
  *
  * Data format (connections.N5.json / connections.N4.json):
  *   { puzzles: [{ id, requires, groups: [{ label, words[] }] }] }
@@ -70,7 +70,7 @@
         'touch-action:none;}' +
       '.conn-chip:hover{border-color:#DC2626;box-shadow:0 4px 12px rgba(220,38,38,0.12);}' +
       '.conn-chip.is-dragging{opacity:0.2;}' +
-      '.conn-chip.placed{display:none;}' +  // Hidden in bank once placed in a column
+      '.conn-chip.placed{display:none;}' +
 
       // Floating ghost that follows the pointer during drag
       '.conn-ghost{position:fixed;pointer-events:none;z-index:9999;padding:9px 14px;' +
@@ -89,22 +89,42 @@
       '.conn-check-btn:not(:disabled):hover{box-shadow:0 6px 18px rgba(220,38,38,0.28);}' +
       '.conn-check-btn:not(:disabled):active{transform:scale(0.97);}' +
 
+      // Result panel (shown after checking)
+      '.conn-result{text-align:center;margin-top:16px;padding:12px 0;}' +
+      '.conn-result-msg{font-size:1rem;font-weight:700;margin-bottom:12px;}' +
+      '.conn-result-ok{color:#2ed573;}' +
+      '.conn-result-err{color:#ff4757;}' +
+
       // Animations
       '@keyframes connShake{0%,100%{transform:translateX(0)}' +
         '20%,60%{transform:translateX(-5px)}40%,80%{transform:translateX(5px)}}' +
       '@keyframes connPop{0%{transform:scale(0.75);opacity:0}' +
         '60%{transform:scale(1.06)}100%{transform:scale(1);opacity:1}}' +
 
-      // Summary
-      '.conn-summary{text-align:center;padding:20px 8px;}' +
-      '.conn-summary-icon{font-size:2.4rem;margin-bottom:8px;}' +
-      '.conn-summary-title{font-size:1.35rem;font-weight:900;color:#DC2626;margin-bottom:6px;}' +
-      '.conn-summary-score{font-size:2.8rem;font-weight:900;color:#2f3542;line-height:1.1;}' +
-      '.conn-summary-pct{color:#747d8c;font-weight:600;margin:4px 0 14px;}' +
-      '.conn-summary-stats{display:flex;justify-content:center;gap:28px;margin-bottom:18px;}' +
-      '.conn-stat-val{font-size:1.4rem;font-weight:900;}' +
-      '.conn-stat-lbl{font-size:0.72rem;color:#747d8c;font-weight:600;' +
-        'text-transform:uppercase;letter-spacing:0.04em;}' +
+      // Picker
+      '.conn-pick-hdr{font-size:0.72rem;font-weight:700;text-transform:uppercase;' +
+        'letter-spacing:0.08em;color:#aaa;margin-bottom:12px;}' +
+      '.conn-pick-list{display:grid;grid-template-columns:1fr;gap:9px;}' +
+      '.conn-pick-item{display:flex;align-items:center;gap:12px;padding:13px 15px;' +
+        'border-radius:14px;background:white;border:1.5px solid #e0e0e0;cursor:pointer;' +
+        'transition:transform 0.15s,box-shadow 0.15s,border-color 0.15s;}' +
+      '.conn-pick-item:hover{transform:translateY(-3px);' +
+        'box-shadow:0 8px 20px rgba(220,38,38,0.1);border-color:#DC2626;}' +
+      '.conn-pick-num{font-weight:900;font-size:0.9rem;color:#DC2626;min-width:22px;' +
+        'flex-shrink:0;}' +
+      '.conn-pick-info{flex:1;min-width:0;}' +
+      '.conn-pick-title{font-weight:700;font-size:0.88rem;color:#2f3542;}' +
+      '.conn-pick-sub{font-size:0.72rem;color:#747d8c;margin-top:2px;' +
+        'white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}' +
+      '.conn-pick-badge{width:44px;height:44px;flex-shrink:0;' +
+        'display:flex;align-items:center;justify-content:center;}' +
+      '.conn-pick-badge img{width:100%;height:100%;object-fit:contain;opacity:0.85;}' +
+      '.conn-pick-go{font-size:0.82rem;font-weight:700;color:#bbb;flex-shrink:0;}' +
+      '@keyframes connPickPop{0%{transform:scale(2) rotate(0deg);opacity:0}' +
+        '60%{transform:scale(0.9)}100%{transform:scale(1);opacity:0.85}}' +
+      '.conn-pick-badge img{animation:connPickPop 0.3s ease;}' +
+
+      // Shared action buttons
       '.conn-btn-primary{display:block;width:100%;max-width:240px;margin:6px auto;padding:12px;' +
         'border:none;border-radius:10px;font-weight:700;font-size:0.95rem;cursor:pointer;' +
         'color:#fff;background:linear-gradient(135deg,#DC2626 0%,#B91C1C 100%);}' +
@@ -127,7 +147,6 @@
       .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
-  // Iterate instead of CSS.escape to stay safe with all Unicode words
   function findChip(word) {
     var els = container.querySelectorAll('.conn-chip');
     for (var i = 0; i < els.length; i++) {
@@ -144,25 +163,45 @@
     return null;
   }
 
-  // ── Module-level state ─────────────────────────────────────────────
-  var cfg = {};
-  var container = null;
-  var puzzles = [];
-  var puzzleIdx = 0;
-  var sessionScore = 0;
-  var sessionTotal = 0;
-  var dataCaches = {};    // { 'N5': data, 'N4': data }
+  // ── Per-puzzle persistence ─────────────────────────────────────────
+  var RESULT_KEY = 'k-conn-';
 
-  // Per-puzzle state (reset on each renderPuzzle call)
+  function savePuzzleResult(puzzleId, status) {
+    // status: 'complete' | 'failed'
+    // tilt: random -20..+20 deg, stored once so it's stable on re-render
+    var existing = getPuzzleResult(puzzleId);
+    var tilt = existing && existing.tilt !== undefined
+      ? existing.tilt
+      : (Math.floor(Math.random() * 41) - 20);
+    try {
+      localStorage.setItem(RESULT_KEY + puzzleId,
+        JSON.stringify({ status: status, ts: Date.now(), tilt: tilt }));
+    } catch (e) {}
+  }
+
+  function getPuzzleResult(puzzleId) {
+    try {
+      var raw = localStorage.getItem(RESULT_KEY + puzzleId);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+
+  // ── Module-level state ─────────────────────────────────────────────
+  var cfg         = {};
+  var container   = null;
+  var allAvailable = [];   // all unlocked puzzles (ordered, unshuffled)
+  var dataCaches  = {};    // { 'N5': data, 'N4': data }
+
+  // Per-puzzle state (reset on each playSinglePuzzle call)
   var currentPuzzle = null;
-  var allWords = [];
-  var placements = {};    // word → groupIdx (number)
-  var checking = false;
+  var allWords    = [];
+  var placements  = {};    // word → groupIdx (number)
+  var checking    = false;
   var advanceTimer = null;
 
   // Drag state
   var dragWord = null;
-  var dragFrom = null;    // 'bank'  |  groupIdx (number)
+  var dragFrom = null;
   var ghostEl  = null;
   var sourceEl = null;
 
@@ -185,20 +224,14 @@
 
   // ── Initialization ─────────────────────────────────────────────────
   function init(containerEl, ctx) {
-    // Cancel any in-flight advance from a previous game
     if (advanceTimer) { clearTimeout(advanceTimer); advanceTimer = null; }
-    // Drop any stale ghost (e.g. if destroy() wasn't called)
     if (ghostEl) { ghostEl.remove(); ghostEl = null; }
 
     injectStyles();
-    cfg = ctx;
-    container = containerEl;
+    cfg           = ctx;
+    container     = containerEl;
     container.innerHTML = '';
-
-    puzzles       = [];
-    puzzleIdx     = 0;
-    sessionScore  = 0;
-    sessionTotal  = 0;
+    allAvailable  = [];
     checking      = false;
     dragWord      = null;
     dragFrom      = null;
@@ -222,7 +255,6 @@
         return;
       }
 
-      // Filter puzzles whose required lessons are all active
       var available = (data.puzzles || []).filter(function (p) {
         if (!p.requires || !cfg.activeLessons) return true;
         return p.requires.every(function (req) { return cfg.activeLessons.has(req); });
@@ -233,9 +265,8 @@
         return;
       }
 
-      // Shuffle and kick off
-      puzzles = available.slice().sort(function () { return Math.random() - 0.5; });
-      renderPuzzle();
+      allAvailable = available.slice();
+      renderPicker();
     });
   }
 
@@ -256,36 +287,86 @@
     };
   }
 
-  // ── Puzzle rendering ───────────────────────────────────────────────
-  function renderPuzzle() {
-    if (puzzleIdx >= puzzles.length) { renderSummary(); return; }
+  // ── Picker ─────────────────────────────────────────────────────────
+  function renderPicker() {
+    if (window.JPShared && window.JPShared.streak) {
+      window.JPShared.streak.recordActivity();
+    }
 
-    currentPuzzle = puzzles[puzzleIdx];
+    var stampApi = window.JPShared && window.JPShared.stampSettings;
+    var stampUrl = stampApi && stampApi.getStampUrl ? stampApi.getStampUrl() : '';
+    var pooUrl   = stampApi && stampApi.getPooUrl   ? stampApi.getPooUrl()   : '';
 
-    // Flatten all words and shuffle
+    // Count completions for progress callback
+    var completedCount = 0;
+    allAvailable.forEach(function (p) {
+      var r = getPuzzleResult(p.id);
+      if (r && r.status === 'complete') completedCount++;
+    });
+    if (cfg.onProgress) cfg.onProgress(completedCount, allAvailable.length);
+
+    var html = '<div class="conn-wrap">';
+    html += '<div class="conn-pick-hdr">Select a puzzle</div>';
+    html += '<div class="conn-pick-list">';
+
+    allAvailable.forEach(function (p, i) {
+      var result = getPuzzleResult(p.id);
+      var labels = p.groups.map(function (g) { return g.label; }).join(' · ');
+      var tilt   = result ? result.tilt : 0;
+
+      html += '<div class="conn-pick-item" data-idx="' + i + '">';
+      html += '<div class="conn-pick-num">' + (i + 1) + '</div>';
+      html += '<div class="conn-pick-info">';
+      html += '<div class="conn-pick-title">Puzzle ' + (i + 1) + '</div>';
+      html += '<div class="conn-pick-sub">' + esc(labels) + '</div>';
+      html += '</div>';
+
+      if (result && result.status === 'complete' && stampUrl) {
+        html += '<div class="conn-pick-badge">' +
+          '<img src="' + esc(stampUrl) + '" alt="✓" style="transform:rotate(' + tilt + 'deg);">' +
+          '</div>';
+      } else if (result && result.status === 'failed' && pooUrl) {
+        html += '<div class="conn-pick-badge">' +
+          '<img src="' + esc(pooUrl) + '" alt="✗" style="transform:rotate(' + tilt + 'deg);">' +
+          '</div>';
+      } else {
+        html += '<span class="conn-pick-go">Go →</span>';
+      }
+
+      html += '</div>';
+    });
+
+    html += '</div></div>';
+    container.innerHTML = html;
+
+    container.querySelectorAll('.conn-pick-item').forEach(function (item) {
+      item.addEventListener('click', function () {
+        var idx = parseInt(item.dataset.idx, 10);
+        playSinglePuzzle(allAvailable[idx]);
+      });
+    });
+  }
+
+  function playSinglePuzzle(puzzle) {
+    currentPuzzle = puzzle;
+
     allWords = [];
-    currentPuzzle.groups.forEach(function (g) {
+    puzzle.groups.forEach(function (g) {
       g.words.forEach(function (w) { allWords.push(w); });
     });
     allWords = allWords.slice().sort(function () { return Math.random() - 0.5; });
 
     placements = {};
     checking   = false;
-    sessionTotal += allWords.length;
 
-    if (cfg.onProgress) cfg.onProgress(puzzleIdx + 1, puzzles.length);
-
-    // Grid columns: 3 groups → 3 cols; 4+ groups → 2-col wrap
-    var numGroups = currentPuzzle.groups.length;
-    var colsStyle = (numGroups <= 3)
+    var numGroups  = puzzle.groups.length;
+    var colsStyle  = (numGroups <= 3)
       ? 'grid-template-columns:repeat(' + numGroups + ',1fr)'
       : 'grid-template-columns:1fr 1fr';
 
     var html = '<div class="conn-wrap">';
-
-    // Category columns (drop zones)
     html += '<div class="conn-columns" id="conn-cols" style="' + colsStyle + '">';
-    currentPuzzle.groups.forEach(function (g, i) {
+    puzzle.groups.forEach(function (g, i) {
       html += '<div class="conn-col" id="conn-col-' + i + '" data-group="' + i + '">';
       html += '<div class="conn-col-label">' + esc(g.label) + '</div>';
       html += '<div class="conn-col-body" id="conn-body-' + i + '"></div>';
@@ -293,7 +374,6 @@
     });
     html += '</div>';
 
-    // Word bank
     html += '<div class="conn-bank-hdr">Drag words into the correct category</div>';
     html += '<div class="conn-bank" id="conn-bank">';
     allWords.forEach(function (w) {
@@ -301,14 +381,12 @@
     });
     html += '</div>';
 
-    // Check button
     html += '<div class="conn-check-wrap">';
     html += '<button class="conn-check-btn" id="conn-check-btn" disabled>Check Answers</button>';
     html += '</div>';
-
     html += '</div>';
-    container.innerHTML = html;
 
+    container.innerHTML = html;
     setupInteraction();
   }
 
@@ -328,7 +406,6 @@
     startDrag(e, chip.dataset.word, 'bank', chip);
   }
 
-  // Build a placed-word element and attach drag/remove listeners
   function makePlacedEl(word, gIdx) {
     var el = document.createElement('div');
     el.className = 'conn-placed';
@@ -336,14 +413,12 @@
     el.dataset.group = gIdx;
     el.innerHTML = esc(word) + '<span class="conn-remove" title="Return to bank">✕</span>';
 
-    // Drag the placed chip to another column
     el.addEventListener('pointerdown', function (e) {
       if (checking) return;
-      if (e.target.classList.contains('conn-remove')) return; // handled by click below
+      if (e.target.classList.contains('conn-remove')) return;
       startDrag(e, word, parseInt(el.dataset.group), el);
     });
 
-    // Tap ✕ to return chip to bank
     el.querySelector('.conn-remove').addEventListener('click', function (e) {
       e.stopPropagation();
       if (checking) return;
@@ -353,7 +428,7 @@
     return el;
   }
 
-  // ── Drag & Drop (Pointer Events API — handles mouse and touch) ─────
+  // ── Drag & Drop (Pointer Events API) ──────────────────────────────
   function startDrag(e, word, from, el) {
     e.preventDefault();
     dragWord = word;
@@ -361,9 +436,8 @@
     sourceEl = el;
 
     el.classList.add('is-dragging');
-    try { el.setPointerCapture(e.pointerId); } catch (_) { /* ignore on unsupported */ }
+    try { el.setPointerCapture(e.pointerId); } catch (_) {}
 
-    // Create the ghost chip that follows the pointer
     ghostEl = document.createElement('div');
     ghostEl.className = 'conn-ghost';
     ghostEl.textContent = word;
@@ -381,19 +455,16 @@
     ghostEl.style.left = e.clientX + 'px';
     ghostEl.style.top  = e.clientY + 'px';
 
-    // Temporarily hide ghost so elementFromPoint sees what's underneath
     ghostEl.style.display = 'none';
     var under = document.elementFromPoint(e.clientX, e.clientY);
     ghostEl.style.display = '';
 
-    // Clear previous drag-over highlights
     container.querySelectorAll('.conn-col.drag-over').forEach(function (c) {
       c.classList.remove('drag-over');
     });
     var bankEl = document.getElementById('conn-bank');
     if (bankEl) bankEl.classList.remove('drag-over');
 
-    // Highlight the element currently under the ghost
     if (under) {
       var col  = under.closest('.conn-col');
       var bank = under.closest('#conn-bank');
@@ -405,11 +476,9 @@
   function onPointerUp(e) {
     if (!sourceEl) return;
 
-    // Snapshot before cleanup (cleanup nulls these)
     var word = dragWord;
     var from = dragFrom;
 
-    // Find drop target under the ghost
     ghostEl.style.display = 'none';
     var under = document.elementFromPoint(e.clientX, e.clientY);
     ghostEl.style.display = '';
@@ -420,22 +489,15 @@
     var col = under && under.closest('.conn-col');
     if (col) {
       var gIdx = parseInt(col.dataset.group);
-      if (from !== gIdx) {
-        placeWord(word, from, gIdx);
-      }
-      // same-column drop = no-op (chip stays where it is)
+      if (from !== gIdx) placeWord(word, from, gIdx);
     } else {
-      // Dropped on bank or outside — return to bank if it came from a column
-      if (from !== 'bank') {
-        returnToBank(word, from);
-      }
+      if (from !== 'bank') returnToBank(word, from);
     }
 
     updateCheckBtn();
   }
 
-  function onPointerCancel(e) {
-    // Visual cancel: ghost and dragging class removed; word stays in original location
+  function onPointerCancel() {
     cleanupDragVisuals();
     dragWord = null; dragFrom = null; sourceEl = null;
   }
@@ -457,24 +519,17 @@
 
   // ── Placement logic ────────────────────────────────────────────────
   function placeWord(word, fromSlot, toGroupIdx) {
-    // Remove from previous location
     if (fromSlot === 'bank') {
-      // Keep the bank chip in the DOM but hide it
       var chip = findChip(word);
       if (chip) chip.classList.add('placed');
     } else {
-      // Remove the placed-chip element from the old column
       var oldEl = findPlaced(word);
       if (oldEl) oldEl.remove();
     }
 
-    // Add to new column
     placements[word] = toGroupIdx;
     var body = document.getElementById('conn-body-' + toGroupIdx);
-    if (body) {
-      var placed = makePlacedEl(word, toGroupIdx);
-      body.appendChild(placed);
-    }
+    if (body) body.appendChild(makePlacedEl(word, toGroupIdx));
 
     syncBankEmpty();
   }
@@ -484,7 +539,6 @@
     if (el) el.remove();
     delete placements[word];
 
-    // Un-hide the bank chip
     var chip = findChip(word);
     if (chip) chip.classList.remove('placed');
 
@@ -492,15 +546,14 @@
     updateCheckBtn();
   }
 
-  // Show a placeholder if bank is fully emptied
   function syncBankEmpty() {
     var bank = document.getElementById('conn-bank');
     if (!bank) return;
-    var empty = bank.querySelector('.conn-bank-empty');
+    var empty    = bank.querySelector('.conn-bank-empty');
     var allPlaced = Object.keys(placements).length === allWords.length;
     if (allPlaced && !empty) {
       var d = document.createElement('div');
-      d.className = 'conn-bank-empty';
+      d.className  = 'conn-bank-empty';
       d.textContent = 'All words placed!';
       bank.appendChild(d);
     } else if (!allPlaced && empty) {
@@ -530,8 +583,6 @@
       if (!groupCorrect) allCorrect = false;
     });
 
-    sessionScore += roundScore;
-
     // Freeze all interaction
     container.querySelectorAll('.conn-chip,.conn-placed').forEach(function (el) {
       el.style.pointerEvents = 'none';
@@ -540,85 +591,60 @@
     var btn = document.getElementById('conn-check-btn');
     if (btn) btn.style.display = 'none';
 
-    // Report to shell (drives streak counter and hanabi)
-    if (allCorrect) { if (cfg.onCorrect) cfg.onCorrect(); }
-    else            { if (cfg.onWrong)   cfg.onWrong();   }
+    // Persist result
+    savePuzzleResult(currentPuzzle.id, allCorrect ? 'complete' : 'failed');
 
-    // Advance to next puzzle after a short pause so player can see the result
-    puzzleIdx++;
-    advanceTimer = setTimeout(function () {
-      advanceTimer = null;
-      renderPuzzle();
-    }, 1800);
-  }
+    // Notify shell
+    if (allCorrect && cfg.onComplete) cfg.onComplete();
 
-  // ── Summary screen ─────────────────────────────────────────────────
-  function renderSummary() {
-    if (window.JPShared && window.JPShared.streak) {
-      window.JPShared.streak.recordActivity();
+    // Show result panel with action buttons
+    var wrap = container.querySelector('.conn-wrap');
+    if (wrap) {
+      var panel = document.createElement('div');
+      panel.className = 'conn-result';
+
+      if (allCorrect) {
+        panel.innerHTML =
+          '<div class="conn-result-msg conn-result-ok">🎉 All correct!</div>' +
+          '<button class="conn-btn-primary" id="conn-back">Back to Puzzles</button>';
+      } else {
+        panel.innerHTML =
+          '<div class="conn-result-msg conn-result-err">' +
+            roundScore + ' / ' + allWords.length + ' words in the right place' +
+          '</div>' +
+          '<button class="conn-btn-primary" id="conn-retry">Try Again</button>' +
+          '<button class="conn-btn-secondary" id="conn-back">Back to Puzzles</button>';
+      }
+      wrap.appendChild(panel);
+
+      var retryBtn = document.getElementById('conn-retry');
+      if (retryBtn) {
+        retryBtn.addEventListener('click', function () {
+          playSinglePuzzle(currentPuzzle);
+        });
+      }
+      var backBtn = document.getElementById('conn-back');
+      if (backBtn) {
+        backBtn.addEventListener('click', function () { renderPicker(); });
+      }
     }
-
-    var pct = sessionTotal > 0 ? Math.round(sessionScore / sessionTotal * 100) : 0;
-    var streakInfo = cfg.getStreakInfo ? cfg.getStreakInfo() : { streak: 0, best: 0 };
-
-    var html =
-      '<div class="conn-wrap"><div class="conn-summary">' +
-      '<div class="conn-summary-icon">🔗</div>' +
-      '<div class="conn-summary-title">Link Up Complete!</div>' +
-      '<div class="conn-summary-score">' + sessionScore + ' / ' + sessionTotal + '</div>' +
-      '<div class="conn-summary-pct">' + pct + '% correct</div>' +
-      '<div class="conn-summary-stats">' +
-        '<div><div class="conn-stat-val" style="color:#ffa502;">🔥 ' + esc(String(streakInfo.streak)) + '</div>' +
-          '<div class="conn-stat-lbl">Final Streak</div></div>' +
-        '<div><div class="conn-stat-val" style="color:#DC2626;">🏆 ' + esc(String(streakInfo.best)) + '</div>' +
-          '<div class="conn-stat-lbl">Best Streak</div></div>' +
-      '</div>' +
-      '<button class="conn-btn-primary" id="conn-again">Play Again</button>' +
-      '<button class="conn-btn-secondary" id="conn-exit">Back to Menu</button>' +
-      '</div></div>';
-    container.innerHTML = html;
-
-    document.getElementById('conn-again').onclick = function () {
-      // Re-shuffle the same unlocked puzzles and restart
-      puzzles = puzzles.slice().sort(function () { return Math.random() - 0.5; });
-      puzzleIdx    = 0;
-      sessionScore = 0;
-      sessionTotal = 0;
-      renderPuzzle();
-    };
-    document.getElementById('conn-exit').onclick = function () {
-      if (cfg.onExit) cfg.onExit();
-    };
   }
 
   // ── Public API ─────────────────────────────────────────────────────
   window.JPShared.connectionsGame = {
     /**
-     * Start (or restart) the game.
+     * Start (or restart) the game; lands on the puzzle picker.
      * @param {HTMLElement} containerEl  The shell-owned stage div to write into.
      * @param {Object}      ctx
      *   ctx.level          - 'N5' | 'N4'  (defaults to 'N5')
      *   ctx.activeLessons  - Set<string> of completed lesson IDs
      *   ctx.config         - REPO_CONFIG passed to window.getAssetUrl()
-     *   ctx.onCorrect()    - called on a perfect-round (all words correct)
-     *   ctx.onWrong()      - called when any word is in the wrong column
-     *   ctx.onExit()       - called when the player exits
-     *   ctx.onProgress(current, total) - called at the start of each puzzle
-     *   ctx.getStreakInfo() - returns { streak, best }
+     *   ctx.onComplete()   - called when a puzzle is fully solved
+     *   ctx.onExit()       - called when the player returns to the main menu
+     *   ctx.onProgress(completedCount, total) - called when picker renders
      */
     init: function (containerEl, ctx) {
       init(containerEl, ctx);
-    },
-
-    /**
-     * Skip the current puzzle (streak reset delegated to onWrong callback).
-     * Safe to call during the advance-delay timer.
-     */
-    skip: function () {
-      if (advanceTimer) { clearTimeout(advanceTimer); advanceTimer = null; }
-      if (cfg.onWrong) cfg.onWrong();
-      if (puzzleIdx < puzzles.length) puzzleIdx++;
-      renderPuzzle();
     },
 
     /** Tear down — clean up DOM and any dangling timers. */
@@ -626,12 +652,13 @@
       if (advanceTimer) { clearTimeout(advanceTimer); advanceTimer = null; }
       if (ghostEl)      { ghostEl.remove(); ghostEl = null; }
       if (container)    { container.innerHTML = ''; }
-      container = null;
-      cfg       = {};
-      puzzles   = [];
-      dragWord  = null;
-      dragFrom  = null;
-      sourceEl  = null;
+      container    = null;
+      cfg          = {};
+      allAvailable = [];
+      currentPuzzle = null;
+      dragWord     = null;
+      dragFrom     = null;
+      sourceEl     = null;
       // dataCaches intentionally preserved for re-use across init/destroy cycles
     }
   };
