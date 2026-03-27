@@ -158,14 +158,21 @@
     return arr;
   }
 
+  // ---- Lesson filter — strict: entry must belong to an active lesson ----
+  function isEntryActive(entry) {
+    if (!entry.verb_class || (entry.id && entry.id.includes('__'))) return false;
+    // Entries with no/empty lesson_ids are excluded — every conjugatable word must belong to a lesson
+    if (!entry.lesson_ids) return false;
+    return cfg.activeLessons.has(entry.lesson_ids);
+  }
+
   // ---- Pool scanning — detect what's available from active lessons ----
   function scanPool() {
     var verbCount = 0;
     var adjCount = 0;
     var classesFound = new Set();
     cfg.vocabMap.forEach(function (entry) {
-      if (!entry.verb_class || (entry.id && entry.id.includes('__'))) return;
-      if (entry.lesson_ids && !cfg.activeLessons.has(entry.lesson_ids)) return;
+      if (!isEntryActive(entry)) return;
       var vc = normalizeClass(entry.verb_class);
       classesFound.add(vc);
       if (vc === 'i_adj' || vc === 'na_adj' || vc === 'irr_ii') adjCount++;
@@ -285,8 +292,7 @@
     var rules = cfg.conjugationRules;
     var count = 0;
     cfg.vocabMap.forEach(function (entry) {
-      if (!entry.verb_class || (entry.id && entry.id.includes('__'))) return;
-      if (entry.lesson_ids && !cfg.activeLessons.has(entry.lesson_ids)) return;
+      if (!isEntryActive(entry)) return;
       var vc = normalizeClass(entry.verb_class);
       if (!activeVerbClasses.has(vc)) return;
       activeForms.forEach(function (ruleKey) {
@@ -302,12 +308,67 @@
     return sessionLength > 0 ? Math.min(count, sessionLength) : count;
   }
 
-  // ---- Form picker UI ----
+  // ---- Step 1: Kanji confirmation gate ----
   function renderFormPicker() {
+    var pool = scanPool();
+    var hasVerbs = pool.verbCount > 0;
+    var hasAdjs = pool.adjCount > 0;
+    var totalWords = pool.verbCount + pool.adjCount;
+
+    var html = '<div class="dojo-wrap">';
+
+    // Instructions + pool summary
+    html += '<div style="text-align:center;padding:16px 0 8px;">';
+    html += '<div style="font-weight:800;font-size:1.1rem;color:#2f3542;margin-bottom:8px;">Conjugation Station</div>';
+    html += '<div style="font-size:0.85rem;color:#747d8c;margin-bottom:12px;">Select your kanji sets in the main menu, then load forms here.</div>';
+    html += '</div>';
+
+    // Pool info
+    html += '<div id="dojo-pool-info" style="font-size:0.9rem;background:#f8f9fa;padding:12px 16px;border-radius:10px;text-align:center;margin-bottom:16px;">';
+    html += buildPoolInfoHTML(pool);
+    html += '</div>';
+
+    // Load Forms button
+    html += '<button class="dojo-start-btn" id="dojo-load-btn"' + (totalWords === 0 ? ' disabled' : '') + '>Load Forms</button>';
+
+    // Exit button
+    html += '<button class="dojo-btn-secondary" id="dojo-gate-exit" style="width:100%;padding:12px;margin-top:8px;">Back to Menu</button>';
+
+    html += '</div>';
+    container.innerHTML = html;
+
+    document.getElementById('dojo-load-btn').addEventListener('click', function () {
+      renderFormSelection(pool);
+    });
+    document.getElementById('dojo-gate-exit').addEventListener('click', function () {
+      cfg.onExit && cfg.onExit();
+    });
+  }
+
+  function buildPoolInfoHTML(pool) {
+    var hasVerbs = pool.verbCount > 0;
+    var hasAdjs = pool.adjCount > 0;
+    var h = '';
+    if (hasVerbs || hasAdjs) {
+      h += '<strong>' + pool.verbCount + '</strong> verb' + (pool.verbCount !== 1 ? 's' : '');
+      h += ' &nbsp;&bull;&nbsp; ';
+      h += '<strong>' + pool.adjCount + '</strong> adjective' + (pool.adjCount !== 1 ? 's' : '');
+    } else {
+      h += '<span style="color:#e74c3c;font-weight:600;">No conjugatable words found</span>';
+      h += '<br><span style="font-size:0.8rem;">Select lessons with verbs or adjectives in the main menu</span>';
+    }
+    return h;
+  }
+
+  // ---- Step 2: Form selection (shown after Load Forms) ----
+  function renderFormSelection(pool) {
     var unlocked = getUnlockedForms();
     var unlockedKeys = new Set(unlocked.map(function (f) { return f.key; }));
     var formMap = {};
     unlocked.forEach(function (f) { formMap[f.key] = f; });
+
+    var hasVerbs = pool.verbCount > 0;
+    var hasAdjs = pool.adjCount > 0;
 
     // Restore previous selections (default: all on except excluded)
     activeForms.clear();
@@ -315,46 +376,37 @@
       if (!excludedForms.has(f.key)) activeForms.add(f.key);
     });
 
-    // Scan the vocab pool based on overworld lesson selection
-    var pool = scanPool();
-    var hasVerbs = pool.verbCount > 0;
-    var hasAdjs = pool.adjCount > 0;
-
     var html = '<div class="dojo-wrap">';
 
-    // Pool info banner
+    // Pool info (compact)
     html += '<div style="font-size:0.85rem;color:#747d8c;background:#f8f9fa;padding:8px 12px;border-radius:8px;margin-bottom:12px;text-align:center;">';
-    html += 'From selected lessons: <strong>' + pool.verbCount + '</strong> verb' + (pool.verbCount !== 1 ? 's' : '') + ', <strong>' + pool.adjCount + '</strong> adjective' + (pool.adjCount !== 1 ? 's' : '');
-    if (!hasVerbs && !hasAdjs) html += '<br><span style="color:#e74c3c;">No conjugatable items — select more lessons in the main menu</span>';
+    html += buildPoolInfoHTML(pool);
     html += '</div>';
 
-    // Verb class filter
+    // Word type filter
     html += '<div style="font-weight:700;font-size:0.85rem;color:#555;margin-bottom:4px;">Word Types</div>';
     html += '<div class="dojo-vc-filter">';
     var vcOptions = [
-      { vc: 'godan', lbl: 'Godan', isAdj: false },
-      { vc: 'ichidan', lbl: 'Ichidan', isAdj: false },
-      { vc: 'irr_suru', lbl: 'する', isAdj: false },
-      { vc: 'irr_kuru', lbl: '来る', isAdj: false },
-      { vc: 'irr_iku', lbl: '行く', isAdj: false },
-      { vc: 'i_adj', lbl: 'i-Adj', isAdj: true },
-      { vc: 'na_adj', lbl: 'na-Adj', isAdj: true }
+      { vc: 'godan', lbl: 'Godan' },
+      { vc: 'ichidan', lbl: 'Ichidan' },
+      { vc: 'irr_suru', lbl: 'する' },
+      { vc: 'irr_kuru', lbl: '来る' },
+      { vc: 'irr_iku', lbl: '行く' },
+      { vc: 'i_adj', lbl: 'i-Adj' },
+      { vc: 'na_adj', lbl: 'na-Adj' }
     ];
     vcOptions.forEach(function (opt) {
       var available = pool.classesFound.has(opt.vc);
       var disabled = !available;
       var checked = available && activeVerbClasses.has(opt.vc);
-      // If not available, remove from active set
       if (!available) activeVerbClasses.delete(opt.vc);
       html += '<label style="' + (disabled ? 'opacity:0.4;' : '') + '"><input type="checkbox" class="dojo-vc-chk" data-vc="' + opt.vc + '"' + (checked ? ' checked' : '') + (disabled ? ' disabled' : '') + '> ' + opt.lbl + '</label>';
     });
     html += '</div>';
 
     // Identify which form categories are adjective-only vs verb-only
+    // 'Desire & Suggestions (G9)' and 'Plain Forms (G10)' are mixed, so stay unlocked.
     var ADJ_ONLY_CATS = new Set(['i-Adjective (G11)', 'na-Adjective (G12)']);
-    // Note: 'Desire & Suggestions (G9)' and 'Plain Forms (G10)' contain
-    // mixed verb+adjective forms, so they stay unlocked; unproductive forms
-    // just won't generate queue items.
     var VERB_ONLY_CATS = new Set([
       'Polite Verb Forms (G7)', 'Te / Ta Forms (G8)',
       'Potential (G13)', 'Excessive (G15)',
@@ -367,12 +419,10 @@
       var catForms = cat.keys.filter(function (k) { return unlockedKeys.has(k); });
       if (catForms.length === 0) return;
 
-      // Lock categories when no matching word types in pool
       var catLocked = false;
       if (ADJ_ONLY_CATS.has(cat.name) && !hasAdjs) catLocked = true;
       if (VERB_ONLY_CATS.has(cat.name) && !hasVerbs) catLocked = true;
 
-      // If locked, remove forms from activeForms
       if (catLocked) {
         catForms.forEach(function (k) { activeForms.delete(k); });
       }
@@ -407,6 +457,10 @@
 
     html += '<button class="dojo-start-btn" id="dojo-start-btn">Start Drill</button>';
     html += '<div class="dojo-queue-info" id="dojo-queue-info"></div>';
+
+    // Back to kanji gate
+    html += '<button class="dojo-btn-secondary" id="dojo-back-gate" style="width:100%;padding:10px;margin-top:4px;font-size:0.85rem;">Change Lessons</button>';
+
     html += '</div>';
 
     container.innerHTML = html;
@@ -455,7 +509,6 @@
       btn.addEventListener('click', function () {
         var n = parseInt(btn.dataset.len, 10);
         saveSessionLength(n);
-        // Update button styles
         container.querySelectorAll('.dojo-len-btn').forEach(function (b) {
           var sel = parseInt(b.dataset.len, 10) === n;
           b.style.borderColor = sel ? '#8e44ad' : '#ddd';
@@ -469,6 +522,10 @@
     document.getElementById('dojo-start-btn').addEventListener('click', function () {
       if (activeForms.size === 0) return;
       startDrill();
+    });
+
+    document.getElementById('dojo-back-gate').addEventListener('click', function () {
+      renderFormPicker();
     });
   }
 
@@ -504,8 +561,7 @@
     var tp = cfg.textProcessor;
     var pairs = [];
     cfg.vocabMap.forEach(function (entry) {
-      if (!entry.verb_class || (entry.id && entry.id.includes('__'))) return;
-      if (entry.lesson_ids && !cfg.activeLessons.has(entry.lesson_ids)) return;
+      if (!isEntryActive(entry)) return;
       var vc = normalizeClass(entry.verb_class);
       if (!activeVerbClasses.has(vc)) return;
       activeForms.forEach(function (ruleKey) {
