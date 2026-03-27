@@ -117,7 +117,7 @@
   var container = null;
   var activeForms = new Set();
   var excludedForms = loadExcluded();
-  var activeVerbClasses = new Set(['godan', 'ichidan', 'irr_suru', 'irr_kuru', 'irr_aru', 'irr_iku']);
+  var activeVerbClasses = new Set(['godan', 'ichidan', 'irr_suru', 'irr_kuru', 'irr_aru', 'irr_iku', 'i_adj', 'na_adj']);
   var queue = [];
   var qIdx = 0;
   var sessionCorrect = 0;
@@ -125,6 +125,7 @@
   var mistakes = [];
   var helperVisible = false;
   var isComposing = false;
+  var sessionLength = loadSessionLength();
 
   function loadExcluded() {
     try { return new Set(JSON.parse(localStorage.getItem('k-dojo-excluded') || '[]')); }
@@ -133,6 +134,44 @@
   function saveExcluded() {
     try { localStorage.setItem('k-dojo-excluded', JSON.stringify(Array.from(excludedForms))); }
     catch (e) { /* ignore */ }
+  }
+  function loadSessionLength() {
+    try {
+      var stored = localStorage.getItem('k-dojo-session-len');
+      if (stored === null) return 30;
+      var n = parseInt(stored, 10);
+      return isNaN(n) ? 30 : n;
+    } catch (e) { return 30; }
+  }
+  function saveSessionLength(n) {
+    sessionLength = n;
+    try { localStorage.setItem('k-dojo-session-len', String(n)); }
+    catch (e) { /* ignore */ }
+  }
+
+  // ---- Fisher-Yates shuffle ----
+  function shuffle(arr) {
+    for (var i = arr.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+    }
+    return arr;
+  }
+
+  // ---- Pool scanning — detect what's available from active lessons ----
+  function scanPool() {
+    var verbCount = 0;
+    var adjCount = 0;
+    var classesFound = new Set();
+    cfg.vocabMap.forEach(function (entry) {
+      if (!entry.verb_class || (entry.id && entry.id.includes('__'))) return;
+      if (entry.lesson_ids && !cfg.activeLessons.has(entry.lesson_ids)) return;
+      var vc = normalizeClass(entry.verb_class);
+      classesFound.add(vc);
+      if (vc === 'i_adj' || vc === 'na_adj' || vc === 'irr_ii') adjCount++;
+      else if (vc !== 'copula') verbCount++;
+    });
+    return { verbCount: verbCount, adjCount: adjCount, classesFound: classesFound };
   }
 
   // ---- Verb class helpers ----
@@ -260,7 +299,7 @@
         count++;
       });
     });
-    return Math.min(count, 30);
+    return sessionLength > 0 ? Math.min(count, sessionLength) : count;
   }
 
   // ---- Form picker UI ----
@@ -276,38 +315,95 @@
       if (!excludedForms.has(f.key)) activeForms.add(f.key);
     });
 
+    // Scan the vocab pool based on overworld lesson selection
+    var pool = scanPool();
+    var hasVerbs = pool.verbCount > 0;
+    var hasAdjs = pool.adjCount > 0;
+
     var html = '<div class="dojo-wrap">';
 
+    // Pool info banner
+    html += '<div style="font-size:0.85rem;color:#747d8c;background:#f8f9fa;padding:8px 12px;border-radius:8px;margin-bottom:12px;text-align:center;">';
+    html += 'From selected lessons: <strong>' + pool.verbCount + '</strong> verb' + (pool.verbCount !== 1 ? 's' : '') + ', <strong>' + pool.adjCount + '</strong> adjective' + (pool.adjCount !== 1 ? 's' : '');
+    if (!hasVerbs && !hasAdjs) html += '<br><span style="color:#e74c3c;">No conjugatable items — select more lessons in the main menu</span>';
+    html += '</div>';
+
     // Verb class filter
-    html += '<div style="font-weight:700;font-size:0.85rem;color:#555;margin-bottom:4px;">Verb Types</div>';
+    html += '<div style="font-weight:700;font-size:0.85rem;color:#555;margin-bottom:4px;">Word Types</div>';
     html += '<div class="dojo-vc-filter">';
-    ['godan', 'ichidan', 'irr_suru', 'irr_kuru', 'irr_iku'].forEach(function (vc) {
-      var lbl = vc === 'irr_suru' ? 'する' : vc === 'irr_kuru' ? '来る' : vc === 'irr_iku' ? '行く' : classLabel(vc);
-      html += '<label><input type="checkbox" class="dojo-vc-chk" data-vc="' + vc + '" checked> ' + lbl + '</label>';
+    var vcOptions = [
+      { vc: 'godan', lbl: 'Godan', isAdj: false },
+      { vc: 'ichidan', lbl: 'Ichidan', isAdj: false },
+      { vc: 'irr_suru', lbl: 'する', isAdj: false },
+      { vc: 'irr_kuru', lbl: '来る', isAdj: false },
+      { vc: 'irr_iku', lbl: '行く', isAdj: false },
+      { vc: 'i_adj', lbl: 'i-Adj', isAdj: true },
+      { vc: 'na_adj', lbl: 'na-Adj', isAdj: true }
+    ];
+    vcOptions.forEach(function (opt) {
+      var available = pool.classesFound.has(opt.vc);
+      var disabled = !available;
+      var checked = available && activeVerbClasses.has(opt.vc);
+      // If not available, remove from active set
+      if (!available) activeVerbClasses.delete(opt.vc);
+      html += '<label style="' + (disabled ? 'opacity:0.4;' : '') + '"><input type="checkbox" class="dojo-vc-chk" data-vc="' + opt.vc + '"' + (checked ? ' checked' : '') + (disabled ? ' disabled' : '') + '> ' + opt.lbl + '</label>';
     });
     html += '</div>';
+
+    // Identify which form categories are adjective-only vs verb-only
+    var ADJ_ONLY_CATS = new Set(['i-Adjective (G11)', 'na-Adjective (G12)']);
+    // Note: 'Desire & Suggestions (G9)' and 'Plain Forms (G10)' contain
+    // mixed verb+adjective forms, so they stay unlocked; unproductive forms
+    // just won't generate queue items.
+    var VERB_ONLY_CATS = new Set([
+      'Polite Verb Forms (G7)', 'Te / Ta Forms (G8)',
+      'Potential (G13)', 'Excessive (G15)',
+      'Tari & Nagara (G19)', 'Appearance (G22)', 'Conditionals (G25)',
+      'Passive (G28)', 'Causative (G29)', 'Volitional (G34)', 'Causative-Passive (G43)'
+    ]);
 
     // Form categories
     FORM_CATEGORIES.forEach(function (cat) {
       var catForms = cat.keys.filter(function (k) { return unlockedKeys.has(k); });
       if (catForms.length === 0) return;
 
-      var allOn = catForms.every(function (k) { return activeForms.has(k); });
-      html += '<div class="dojo-section-hdr open" data-cat="' + cat.name + '">' +
+      // Lock categories when no matching word types in pool
+      var catLocked = false;
+      if (ADJ_ONLY_CATS.has(cat.name) && !hasAdjs) catLocked = true;
+      if (VERB_ONLY_CATS.has(cat.name) && !hasVerbs) catLocked = true;
+
+      // If locked, remove forms from activeForms
+      if (catLocked) {
+        catForms.forEach(function (k) { activeForms.delete(k); });
+      }
+
+      var allOn = !catLocked && catForms.every(function (k) { return activeForms.has(k); });
+      html += '<div class="dojo-section-hdr open" data-cat="' + cat.name + '" style="' + (catLocked ? 'opacity:0.4;' : '') + '">' +
         '<span class="arrow">&#9654;</span>' +
-        '<input type="checkbox" class="dojo-cat-chk" data-cat="' + cat.name + '"' + (allOn ? ' checked' : '') + '> ' +
-        cat.name + ' <span style="color:#bbb;font-weight:400;font-size:0.75rem">(' + catForms.length + ')</span></div>';
+        '<input type="checkbox" class="dojo-cat-chk" data-cat="' + cat.name + '"' + (allOn ? ' checked' : '') + (catLocked ? ' disabled' : '') + '> ' +
+        cat.name + (catLocked ? ' <span style="font-size:0.7rem;font-weight:400;color:#e74c3c;">(no matching words)</span>' : '') +
+        ' <span style="color:#bbb;font-weight:400;font-size:0.75rem">(' + catForms.length + ')</span></div>';
       html += '<div class="dojo-form-list" data-cat="' + cat.name + '" style="display:flex;">';
       catForms.forEach(function (key) {
         var f = formMap[key];
-        var checked = activeForms.has(key) ? ' checked' : '';
+        var checked = !catLocked && activeForms.has(key) ? ' checked' : '';
         html += '<div class="dojo-form-row">' +
-          '<input type="checkbox" class="dojo-form-chk" data-key="' + key + '"' + checked + '>' +
+          '<input type="checkbox" class="dojo-form-chk" data-key="' + key + '"' + checked + (catLocked ? ' disabled' : '') + '>' +
           '<span class="dojo-form-label">' + f.label + '</span>' +
           '<span class="dojo-form-tag">' + f.gLesson + '</span></div>';
       });
       html += '</div>';
     });
+
+    // Session length selector
+    html += '<div style="margin-top:16px;display:flex;align-items:center;gap:10px;justify-content:center;">';
+    html += '<span style="font-weight:700;font-size:0.85rem;color:#555;">Session length:</span>';
+    [10, 20, 30, 0].forEach(function (n) {
+      var label = n === 0 ? 'All' : String(n);
+      var selected = sessionLength === n;
+      html += '<button class="dojo-len-btn" data-len="' + n + '" style="padding:6px 14px;border-radius:8px;font-weight:700;font-size:0.85rem;cursor:pointer;border:2px solid ' + (selected ? '#8e44ad' : '#ddd') + ';background:' + (selected ? '#f0e6f6' : '#fff') + ';color:' + (selected ? '#8e44ad' : '#555') + ';">' + label + '</button>';
+    });
+    html += '</div>';
 
     html += '<button class="dojo-start-btn" id="dojo-start-btn">Start Drill</button>';
     html += '<div class="dojo-queue-info" id="dojo-queue-info"></div>';
@@ -351,6 +447,21 @@
       chk.addEventListener('change', function () {
         if (chk.checked) activeVerbClasses.add(chk.dataset.vc);
         else activeVerbClasses.delete(chk.dataset.vc);
+        updateQueueInfo();
+      });
+    });
+
+    container.querySelectorAll('.dojo-len-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var n = parseInt(btn.dataset.len, 10);
+        saveSessionLength(n);
+        // Update button styles
+        container.querySelectorAll('.dojo-len-btn').forEach(function (b) {
+          var sel = parseInt(b.dataset.len, 10) === n;
+          b.style.borderColor = sel ? '#8e44ad' : '#ddd';
+          b.style.background = sel ? '#f0e6f6' : '#fff';
+          b.style.color = sel ? '#8e44ad' : '#555';
+        });
         updateQueueInfo();
       });
     });
@@ -414,8 +525,8 @@
         }
       });
     });
-    pairs.sort(function () { return Math.random() - 0.5; });
-    return pairs.slice(0, 30);
+    shuffle(pairs);
+    return sessionLength > 0 ? pairs.slice(0, sessionLength) : pairs;
   }
 
   // ---- Drill ----
@@ -696,7 +807,7 @@
     if (mistakes.length > 0) {
       document.getElementById('dojo-retry-btn').addEventListener('click', function () {
         var retryQueue = mistakes.map(function (m) { return Object.assign({}, m); });
-        retryQueue.sort(function () { return Math.random() - 0.5; });
+        shuffle(retryQueue);
         startDrillWithQueue(retryQueue);
       });
     }
