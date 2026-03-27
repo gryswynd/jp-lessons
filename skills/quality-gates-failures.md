@@ -217,3 +217,25 @@ These failures span multiple agents and are the most damaging because they may n
    - `いい` (v_ii, N5.1) should be in terms.json for **every story** regardless of these patterns — it is too common and too likely to cause corruption when absent.
 
    **Agent 3 check:** Search story.md for `てはいけない` and `てもいい`. If either appears, verify `いけない` and `いい` are in terms.json. Hard fail if missing.
+
+15. **Circular identification heuristic (GP-11)** — A grammar lesson's `explanation`, `notes`, or `points` fields contain a "how to spot" or "memory trick" rule that requires already knowing the answer in order to apply it. The test is written from the perspective of someone who already knows the grammar, not a learner encountering it for the first time.
+
+   **The key diagnostic question:** Could a student who has just seen this word for the first time, with no prior knowledge of whether it is Type A or Type B, use this test to determine which type it is? If no — the test is circular.
+
+   **Common manifestations:**
+   - "If you need な before a noun → it's a な-adjective" (learner doesn't know whether to use な until they already know it's a な-adjective)
+   - "If it uses で for the past → it's a な-adjective" (learner doesn't know which past form to use until they know the type)
+   - "Try saying [adjective]な before a noun — if it sounds natural, it's a な-adjective" (only sounds natural after memorization)
+
+   **What a usable identification test looks like:**
+   - **Orthographic:** "If it is written entirely in kanji with no trailing い → almost certainly a な-adjective" (observable from the word itself before any conjugation knowledge)
+   - **Morphological:** "If the vowel before the final る is in the い/え row → ichidan (RU-verb)" (observable from the dictionary form alone)
+   - **Semantic:** "Can it move under its own power? → いる. Otherwise → ある" (observable from the real-world referent)
+
+   **When no reliable test exists:** State it explicitly — "this is a short fixed list; you need to memorize which words fall here." That is more useful than a rule that doesn't work.
+
+   **Root cause:** Agent 2 writes from a descriptive-grammar perspective (what is true of the grammar) rather than a learner-facing perspective (what can a student use to identify the grammar). The rule is linguistically accurate but pedagogically circular.
+
+   **Primary defense:** Agent 3's Grammar Accuracy Gate, GP-11 check. Agent 4's Identification Heuristic Soundness check (check #4 in Content Clarity Audit) is a secondary defense for subtler cases.
+
+   **Real example (G12 original content, now fixed):** The "how to spot a な-adjective" section stated "if you need な before a noun → な-adjective" and offered memory tricks based on the same circular reasoning. The actually useful rules — all-kanji compounds are na-adj; the い-ending na-adj exceptions are a short fixed list to memorize — were entirely absent.
