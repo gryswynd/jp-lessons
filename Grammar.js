@@ -220,6 +220,9 @@ window.GrammarModule = {
         .gr-type-ru { background: #d1ecf1; color: #0c5460; }
         .gr-type-u { background: #d4edda; color: #155724; }
         .gr-type-irr { background: #fff3cd; color: #856404; }
+        .gr-type-iadj { background: #fce4ec; color: #880e4f; }
+        .gr-type-naadj { background: #e8eaf6; color: #283593; }
+        .gr-type-copula { background: #f3e5f5; color: #6a1b9a; }
         .gr-transform-arrow { font-size: 1.5rem; color: #16A34A; margin: 10px 0; }
         .gr-target-label { font-size: 0.85rem; font-weight: 700; color: #16A34A; background: #DCFCE7; padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 16px; }
         .gr-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
@@ -704,8 +707,14 @@ window.GrammarModule = {
         }
         const item = items[idx];
         itemDiv.innerHTML = '';
-        const typeCls = item.type === 'ru' ? 'gr-type-ru' : item.type === 'u' ? 'gr-type-u' : 'gr-type-irr';
-        const typeLbl = item.type === 'ru' ? 'RU-verb' : item.type === 'u' ? 'U-verb' : 'Irregular';
+        const typeMap = {
+          ru: ['gr-type-ru', 'RU-verb'], ichidan: ['gr-type-ru', 'RU-verb'],
+          u: ['gr-type-u', 'U-verb'], godan: ['gr-type-u', 'U-verb'],
+          i_adj: ['gr-type-iadj', 'i-Adjective'], irr_ii: ['gr-type-iadj', 'Irregular (いい)'],
+          na_adj: ['gr-type-naadj', 'na-Adjective'],
+          copula: ['gr-type-copula', 'Copula']
+        };
+        const [typeCls, typeLbl] = typeMap[item.type] || ['gr-type-irr', 'Irregular'];
         itemDiv.innerHTML = '<div style="margin-bottom:4px;font-size:0.8rem;color:#aaa;">' + (idx+1) + ' of ' + items.length + '</div>';
         itemDiv.appendChild(el('div', 'gr-verb-display', esc(item.verb)));
         itemDiv.appendChild(el('div', 'gr-verb-reading', esc(item.reading)));
