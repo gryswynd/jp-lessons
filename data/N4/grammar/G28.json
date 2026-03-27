@@ -356,6 +356,7 @@
           "en": "Why? Because it was difficult?",
           "terms": [
             "v_doushite",
+            "p_ka",
             { "id": "v_muzukashii", "form": "plain_past_adj" },
             "p_kara_because"
           ]
@@ -523,13 +524,13 @@
           "kind": "mcq",
           "q": "食べられる can mean 'can eat' OR 'is eaten'. Which context makes it passive?",
           "choices": [
-            "この 魚は 虫に 食べられる。(This fish is eaten by insects.)",
-            "わたしは 野さいが 食べられる。(I can eat vegetables.)",
-            "子どもは 辛いものが 食べられない。(Children can't eat spicy food.)",
-            "りきぞは 朝ごはんを 食べられる。(Rikizo can eat breakfast.)"
+            "この ケーキは 友だちに 食べられた。(This cake was eaten by a friend.)",
+            "わたしは この 魚が 食べられる。(I can eat this fish.)",
+            "子どもは それが 食べられない。(Children can't eat that.)",
+            "りきぞは 朝ご飯を 食べられる。(Rikizo can eat breakfast.)"
           ],
-          "answer": "この 魚は 虫に 食べられる。(This fish is eaten by insects.)",
-          "explanation": "虫に (agent に) + 食べられる = passive reading: the fish is being eaten BY insects. The presence of an agent (に) is the strongest signal that 食べられる is passive, not potential. All other choices show the potential meaning — they have no agent に, and the subject is the one doing the eating (expressing ability).",
+          "answer": "この ケーキは 友だちに 食べられた。(This cake was eaten by a friend.)",
+          "explanation": "友だちに (agent に) + 食べられた = passive reading: the cake was eaten BY a friend. The presence of an agent (に) is the strongest signal that 食べられた is passive, not potential. All other choices show the potential meaning — they have no agent に, and the subject is the one doing the eating (expressing ability).",
           "terms": []
         },
         {
