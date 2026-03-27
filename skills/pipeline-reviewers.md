@@ -11,16 +11,97 @@
 **Trigger:** Spawned by Agent 1 via the Agent tool. Receives the draft JSON and the Content Brief. Has no access to Agent 2's reasoning or the prior conversation — it approaches the draft cold, with no memory of having written any of it.
 
 **Responsibilities:**
-- **FIRST: Mechanical kanji scope audit.** Before any other check, perform this mandatory step:
-  1. Read `manifest.json`.
-  2. Compute the taught-kanji set: collect the `kanji` arrays from all N5 lessons + all lessons in the current level at or below the target lesson number. Flatten to a single character set.
-  3. Extract every CJK character (Unicode range U+4E00–U+9FFF) from every `jp`, `passage`, `q`, `a`, and `answer` field in the draft.
-  4. For each extracted character: if it is not in the taught-kanji set, it is an **immediate hard fail**. Record the character, the lesson it is introduced in (search `manifest.json`), the field it appeared in, and the full sentence.
-  5. Report all kanji violations in the QA Failure Report before checking anything else.
-  This check must use `manifest.json` as the sole source of truth. Do not rely on memory or glossary lookup to determine whether a kanji has been taught.
+- **FIRST: Mechanical kanji scope audit — run the script below via Bash, do not reason about it manually.** Before any other check, execute this exact Python one-liner using the Bash tool. Substitute the actual file path for `FILE`:
+
+  ```bash
+  python3 - FILE manifest.json << 'PYEOF'
+  import json, re, sys
+  file_path, manifest_path = sys.argv[1], sys.argv[2]
+  with open(file_path) as f: content = json.load(f)
+  with open(manifest_path) as f: manifest = json.load(f)
+  lesson_id = content.get('id') or content.get('lesson', '')
+  level_match = re.match(r'(N\d+)\.(\d+)', lesson_id)
+  if not level_match: sys.exit(0)
+  target_level, target_num = level_match.group(1), int(level_match.group(2))
+  level_order = {'N5': 0, 'N4': 1, 'N3': 2, 'N2': 3, 'N1': 4}
+  target_order = level_order.get(target_level, 0)
+  taught = set()
+  for lk in ['N5', 'N4', 'N3', 'N2', 'N1']:
+      for lesson in manifest.get('data', {}).get(lk, {}).get('lessons', []):
+          lid = lesson.get('id', '')
+          lm = re.match(r'(N\d+)\.(\d+)', lid)
+          if not lm: continue
+          lo = level_order.get(lm.group(1), 0)
+          if lo < target_order or (lo == target_order and int(lm.group(2)) <= target_num):
+              taught.update(lesson.get('kanji', []))
+  cjk = re.compile(r'[\u4e00-\u9fff]')
+  def texts(obj, path=''):
+      out = []
+      if isinstance(obj, dict):
+          for k, v in obj.items():
+              if k in ('jp','passage','q','a','answer') and isinstance(v, str): out.append((path+'.'+k, v))
+              else: out.extend(texts(v, path+'.'+k))
+      elif isinstance(obj, list):
+          for i, item in enumerate(obj): out.extend(texts(item, path+f'[{i}]'))
+      return out
+  viols = [(ch, p, t[:60]) for p, t in texts(content) for ch in cjk.findall(t) if ch not in taught]
+  if viols:
+      print(f'KANJI SCOPE FAIL — {len(viols)} violation(s) in {lesson_id}:')
+      for ch, p, ctx in viols: print(f'  UNTAUGHT {ch!r} at {p}: {ctx}')
+      sys.exit(1)
+  else:
+      print(f'Kanji scope OK ({len(taught)} kanji taught through {lesson_id})')
+  PYEOF
+  ```
+
+  Read the script output. Any line beginning with `UNTAUGHT` is an immediate hard fail — record every character, field path, and context sentence. Do not proceed past this step until the output is `Kanji scope OK`. **Do not run hooks directly as shell scripts** (e.g. `bash hooks/validate-kanji-scope.sh FILE`) — hooks require JSON on stdin from the PostToolUse event system and will silently exit 0 when called from the command line, producing false-clean results.
 - Perform a systematic line-by-line audit. Do **not** skim.
 - **Apply the Sentence Token Scan Protocol (STSP) to every `jp`, `passage`, and `q` field.** Read each sentence left to right, token by token. For every token (noun, verb, adjective, adverb, particle, conjunction, copula, sentence-final particle), verify it is either (a) tagged in `terms` with a matching ID, or (b) a permissible untagged pure-kana function word that has **no glossary entry**. Kana-only connectors and particles (e.g. でも, だから, だって, よ, ね, か) must be verified against `shared/particles.json` for their `introducedIn` lesson — do **not** assume they are permissible just because they are written in kana. The STSP applies equally to warmup items, reading passage sentences, reading `q` comprehension questions, and drills — no section or field is exempt. Q&A question fields (`q`) require the same completeness as `jp` fields: every content word must be tagged, and any `q` sentence ending with `か` must have `p_ka` in `terms`. During rewrites and refreshes, apply the STSP to every jp and q field including those carried forward from the original; no field gets a "previously passing" exemption.
-- For every `terms` entry: verify the ID exists in the glossary (cross-reference the glossary file). Then verify the **surface form** of that glossary entry matches (or inflects from) the actual token in the `jp` field. A surface mismatch — e.g. tagging `だ` with `g_desu` whose glossary surface is `です` — is a **hard fail** even if the ID exists.
+- **Surface-match audit — run this script via Bash** to catch term IDs whose glossary surface does not match the jp text. This catches cases like tagging `本当に` with `v_totemo` (surface `とても`) or tagging `え` with `v_sou` (surface `そう`):
+
+  ```bash
+  python3 - FILE manifest.json << 'PYEOF'
+  import json, re, sys
+  file_path = sys.argv[1]
+  with open(file_path) as f: content = json.load(f)
+  level = content.get('id', 'N4.1').split('.')[0]
+  glossary_files = [f'data/{level}/glossary.{level}.json']
+  if level != 'N5': glossary_files.append('data/N5/glossary.N5.json')
+  all_entries = {}
+  for gf in glossary_files:
+      try:
+          with open(gf) as f: g = json.load(f)
+          for e in g.get('entries', []):
+              all_entries[e['id']] = e
+      except: pass
+  fails = []
+  def check_section(obj, path=''):
+      if isinstance(obj, dict):
+          jp = obj.get('jp', '')
+          terms = obj.get('terms', [])
+          for t in terms:
+              tid = t if isinstance(t, str) else t.get('id', '') if isinstance(t, dict) else ''
+              if not tid or tid.startswith('p_') or tid.startswith('g_') or tid.startswith('k_'): continue
+              entry = all_entries.get(tid)
+              if not entry: fails.append(f'  UNKNOWN ID {tid!r} at {path}'); continue
+              surface = entry.get('surface', '')
+              matches = entry.get('matches', [])
+              all_surfaces = [surface] + matches
+              if jp and not any(s in jp for s in all_surfaces if s):
+                  fails.append(f'  SURFACE MISMATCH {tid!r} (surfaces: {all_surfaces}) not found in jp: {jp[:60]}')
+      for v in (obj.values() if isinstance(obj, dict) else obj if isinstance(obj, list) else []):
+          check_section(v, path)
+  check_section(content)
+  if fails:
+      print(f'SURFACE MISMATCH FAIL:')
+      for f in fails: print(f)
+      sys.exit(1)
+  else:
+      print('Surface match OK')
+  PYEOF
+  ```
+
+  Any `SURFACE MISMATCH` or `UNKNOWN ID` line is a hard fail. For every `terms` entry: verify the ID exists in the glossary (cross-reference the glossary file). Then verify the **surface form** of that glossary entry matches (or inflects from) the actual token in the `jp` field. A surface mismatch — e.g. tagging `だ` with `g_desu` whose glossary surface is `です` — is a **hard fail** even if the ID exists.
 - For every verb/adjective term entry: verify the `form` string is a valid key in `conjugation_rules.json`.
 - Verify all kanji in `jp` fields appear in the taught-kanji set (from `manifest.json`).
 - **Compound surface spacing check.** For every `terms` entry whose glossary `surface` contains an internal particle or spans multiple morphemes (identifiable by a particle like が/の/を embedded in the middle of the surface string — e.g. `v_atamagaii` surface `"頭がいい"`), verify the jp text contains that surface as a **contiguous substring with no inserted spaces**. A space anywhere inside the compound (e.g. `頭が いい` vs surface `頭がいい`) breaks the text-processor match silently — no chip appears, no error is thrown. This is a **hard fail**: instruct Agent 2 to remove the space from the jp text. Do not accept a split into constituent terms as the fix — that changes the semantic unit.
