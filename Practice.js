@@ -1748,9 +1748,19 @@ window.PracticeModule = {
                     <div style="background:#f8f9fa; padding:10px; border-radius:8px; text-align:center"><div style="font-size:0.7rem; color:#aaa; font-weight:700;">ON-YOMI</div><div style="font-size:1.2rem; font-weight:600;">${d.on||'-'}</div></div>
                     <div style="background:#f8f9fa; padding:10px; border-radius:8px; text-align:center"><div style="font-size:0.7rem; color:#aaa; font-weight:700;">KUN-YOMI</div><div style="font-size:1.2rem; font-weight:600;">${d.kun||'-'}</div></div>
                   </div>`;
-            h += `<div class="k-lbl" style="text-align:left;margin-top:10px;border-bottom:1px solid #eee;">Compounds</div><table class="k-tbl">`;
-            const cs=(d.compounds||'').split(';'), rs=(d.comp_readings||'').split(';'), ms=(d.comp_meanings||'').split(';');
-            cs.forEach((c,i)=>{ if(c) h+=`<tr><td style="font-weight:bold; font-size:1.2rem">${c}</td><td><div style="font-size:1rem">${rs[i]||''}</div><div style="color:#747d8c; font-size:0.9rem">${ms[i]||''}</div></td></tr>`; });
+            const dynCompounds = getDynamicCompounds(d.kanji);
+            const compoundRow = (v, cls, hide) => `<tr${cls ? ` class="${cls}"` : ''}${hide ? ' style="display:none"' : ''}><td style="font-weight:bold; font-size:1.2rem">${v.surface}</td><td><div style="font-size:1rem">${v.reading||''}</div><div style="color:#747d8c; font-size:0.9rem">${v.meaning||''}</div></td></tr>`;
+            h += `<div class="k-lbl" style="text-align:left;margin-top:10px;border-bottom:1px solid #eee;">Compounds${dynCompounds.length ? ` (${dynCompounds.length})` : ''}</div><table class="k-tbl">`;
+            if (dynCompounds.length === 0) {
+                h += `<tr><td colspan="2" style="color:#aaa; font-size:0.9rem; padding:8px; text-align:center;">No compounds unlocked yet</td></tr>`;
+            } else {
+                dynCompounds.slice(0, 5).forEach(v => { h += compoundRow(v); });
+                if (dynCompounds.length > 5) {
+                    const extraId = 'k-extra-' + Date.now();
+                    h += `<tr class="k-show-more-row" onclick="this.style.display='none'; document.querySelectorAll('.${extraId}').forEach(r=>r.style.display='')"><td colspan="2" style="text-align:center; color:var(--primary); cursor:pointer; font-size:0.9rem; padding:8px; font-weight:600;">Show ${dynCompounds.length - 5} more</td></tr>`;
+                    dynCompounds.slice(5).forEach(v => { h += compoundRow(v, extraId, true); });
+                }
+            }
             if(backEl) backEl.innerHTML = h+'</table>';
 
         } else if(renderType==='vocab') {
@@ -1817,6 +1827,30 @@ window.PracticeModule = {
         setTxt('k-cnt-vocab', uniqueVocab.size);
     }
 
+    function getActiveKanjiSet() {
+        const set = new Set();
+        DB.kanji.forEach(k => {
+            if (activeLessons.has(k.lesson)) set.add(k.kanji);
+        });
+        return set;
+    }
+
+    function getDynamicCompounds(kanjiChar) {
+        const activeKanji = getActiveKanjiSet();
+        const results = [];
+        DB.allVocab.forEach(v => {
+            if (!v.surface.includes(kanjiChar)) return;
+            const allKnown = [...v.surface].every(ch => {
+                if (ch.charCodeAt(0) >= 0x4E00 && ch.charCodeAt(0) <= 0x9FFF) {
+                    return activeKanji.has(ch);
+                }
+                return true;
+            });
+            if (allKnown) results.push(v);
+        });
+        return results;
+    }
+
     // --- 5. INIT & DATA FETCH ---
     (async function() {
         try {
@@ -1836,7 +1870,8 @@ window.PracticeModule = {
             );
             const raw = glossParts.flatMap(g => g.entries);
 
-            const allVocab = raw.filter(i => i.type === 'vocab');
+            DB.allVocab = raw.filter(i => i.type === 'vocab');
+            const allVocab = DB.allVocab;
             allVocab.forEach(v => {
                 DB.vocabMap.set(v.surface, v);
             });
