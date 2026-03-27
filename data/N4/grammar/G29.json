@@ -22,7 +22,7 @@
       "youWillLearn": [
         "How to form the causative for RU-verbs, U-verbs, する, and くる",
         "Make vs let — the same form, two different readings (母は 子どもに 野菜を 食べさせる)",
-        "Causee particle patterns — intransitive verbs take に (子どもに 泣かせる); transitive verbs use に for the causee",
+        "Causee particle patterns — intransitive verbs take に (子どもに 待たせる); transitive verbs use に for the causee",
         "Causative-passive (させられる) — a preview of being made to do something against your will"
       ]
     },
@@ -88,7 +88,7 @@
         "U-verb あ-row shift for causative: く→か、ぐ→が、す→さ、つ→た、ぬ→な、ぶ→ば、む→ま、る→ら. Exception: う→わ (not うあ) — same as the passive.",
         "The causative form ends in a RU-verb suffix (〜させる / 〜せる), so it conjugates further like a RU-verb in all other forms (て-form, polite, past, potential, etc.).",
         "する → させる (not すさせる). くる → こさせる (not くさせる). These two irregular forms must be memorized.",
-        "The polite causative of する (させます) is extremely common: 会議に 参加 させます (have someone attend the meeting)."
+        "The polite causative of する (させます) is extremely common: 先生は 学生に 勉強 させます (have students study)."
       ]
     },
     {
@@ -304,6 +304,8 @@
           "terms": [
             "char_rikizo",
             "v_kyou",
+            "p_wa",
+            "v_kono",
             "v_hon",
             "p_wo",
             { "id": "v_yomu", "form": "polite_causative" },
@@ -319,6 +321,7 @@
           "jp": "はい、分かりました。漢字も 書かせて もらえますか。",
           "en": "Yes, understood. May I also be allowed to write the kanji?",
           "terms": [
+            "p_hai",
             { "id": "v_wakaru", "form": "polite_mashita" },
             "v_kanji",
             "p_mo",
@@ -332,6 +335,8 @@
           "jp": "もちろんです。漢字を 書かせます。大切な 勉強ですから、よく して ください。",
           "en": "Of course. I'll have you write the kanji. It's important study, so please do it well.",
           "terms": [
+            "v_mochiron",
+            "g_desu",
             "v_kanji",
             "p_wo",
             { "id": "v_kaku", "form": "polite_causative" },
@@ -339,6 +344,7 @@
             "v_benkyou",
             "g_desu",
             "p_kara_because",
+            "v_yoku",
             { "id": "v_suru", "form": "te_form" },
             "v_kudasai"
           ]
@@ -350,7 +356,9 @@
           "terms": [
             { "id": "v_wakaru", "form": "polite_mashita" },
             "v_sensei",
+            "v_kono",
             "v_ato",
+            "p_de",
             "v_tomodachi",
             "p_ni",
             "v_kyoushitsu",
@@ -376,7 +384,8 @@
             { "id": "v_miru", "form": "plain_desire_tai" },
             "p_to_quote",
             { "id": "v_omou", "form": "te_form" },
-            { "id": "v_iru", "form": "conditional_tara" },
+            { "id": "v_iru", "form": "plain_form" },
+            "p_nara",
             { "id": "v_miru", "form": "causative" },
             { "id": "v_ageru", "form": "te_form" },
             "v_kudasai"
@@ -395,7 +404,9 @@
             "p_ni",
             "v_benkyou",
             { "id": "v_suru", "form": "causative" },
+            { "id": "v_kudasaru", "form": "plain_form" },
             "p_kara_because",
+            "v_yoku",
             { "id": "v_wakaru", "form": "plain_form" },
             "v_you_manner",
             "p_ni",
@@ -411,7 +422,7 @@
       "lines": [
         {
           "spk": "char_ken",
-          "jp": "りきぞ、子どもの とき、親に いろいろ させられた？",
+          "jp": "りきぞ、子どもの 時、親に 色々 させられた？",
           "en": "Rikizo, when you were a kid, were you made to do all sorts of things by your parents?",
           "terms": [
             "char_rikizo",
@@ -427,7 +438,7 @@
         },
         {
           "spk": "char_rikizo",
-          "jp": "うん。毎日 野菜を 食べさせられたよ。全然 好きじゃなかったけど。",
+          "jp": "うん。毎日 野菜を 食べさせられたよ。ぜんぜん 好きじゃなかったけど。",
           "en": "Yeah. I was made to eat vegetables every day. I didn't like them at all though.",
           "terms": [
             "v_un",
@@ -437,7 +448,7 @@
             { "id": "v_taberu", "form": "causative_passive" },
             "p_yo",
             "v_zenzen",
-            "v_suki",
+            { "id": "v_suki", "form": "da_past_negative" },
             "p_kedo"
           ]
         },
@@ -458,9 +469,10 @@
             "p_yo",
             "p_ne",
             { "id": "v_suki", "form": "attributive_na" },
+            "v_mono",
             "p_mo",
             { "id": "v_taberu", "form": "causative" },
-            { "id": "v_morau", "form": "plain_potential" },
+            { "id": "v_morau", "form": "plain_potential_past" },
             "p_ka"
           ]
         },
@@ -473,6 +485,8 @@
             "v_shokudou",
             "p_de",
             { "id": "v_suki", "form": "attributive_na" },
+            "v_mono",
+            "p_wo",
             { "id": "v_taberu", "form": "causative" },
             { "id": "v_morau", "form": "plain_potential_past" },
             "v_koto",
@@ -488,7 +502,7 @@
           "en": "Lucky. I was made to read books every day. It was difficult, but now I think it was good.",
           "terms": [
             "v_ii",
-            "p_ne",
+            "p_na",
             "v_watashi",
             "p_wa",
             "v_mainichi",
