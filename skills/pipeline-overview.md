@@ -86,6 +86,9 @@ Agent 1 spawns each downstream agent as an independent subprocess. Each agent re
 - Paths to any dependency files listed in the brief (reference template, prior lesson files) — Agent 2 must read these itself via its tools
 - The instruction: *"You are Agent 2 (Content Builder). Read the following skill files for your full responsibilities: skills/pipeline-overview.md, skills/content-schemas-core.md, skills/content-schemas-extended.md, skills/term-tagging-forms.md, skills/term-tagging-characters.md, skills/grammar-rules-prerequisites.md, skills/grammar-rules-reinforcement.md. Build the draft JSON according to the Content Brief above, then return the complete draft and your CB Checklist."*
 - If this is a revision pass: include the QA Failure Report from Agent 3 and instruct Agent 2 to fix every listed issue
+- **For grammar lessons, reviews, stories, or any large file: include an explicit chunk plan.** Example: "Write sections 1–4, commit `WIP <task>: intro and rules`. Then write sections 5–7, commit `WIP <task>: examples and conversation`. Then write sections 8–9, commit `WIP <task>: drills`. Then squash all WIP commits into one clean commit and push." Agent 2 must not decide chunk boundaries on its own.
+
+**Agent 2 timeout recovery:** If Agent 2 times out without producing the file, Agent 1 MUST re-spawn Agent 2 with a reduced chunk size — never attempt to build the content in the main context. Split the chunk plan into smaller pieces (e.g., 2 sections per chunk instead of 4) and re-dispatch. Agent 1's role is coordination, not content building.
 
 **What to include in the Agent 3 prompt:**
 - The complete Content Brief (including the taught-kanji set Agent 1 computed)
