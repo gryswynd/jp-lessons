@@ -93,6 +93,7 @@ All of the following should be TRUE for a CR pass:
 - [ ] **Quiz answer ambiguity:** Every MCQ/fillSlot/drill item has exactly one correct answer that is unambiguously the best choice — no alternative answer is grammatically valid and contextually appropriate. If `also_accept` is used, the primary answer must be clearly the best choice and the explanation must state why
 - [ ] **Explanation/hint redundancy:** No `notes` array or `explanation` fields repeat the same rule or information in different words — each entry adds unique pedagogical value
 - [ ] **Unsupported claims:** Every grammar rule or assertion in `explanation`, `notes`, and comparison `points` is paired with a concrete example sentence — no bare claims without demonstration
+- [ ] **Identification heuristic soundness (grammar lessons):** Any "how to spot," "memory trick," or "quick test" in `explanation`, `notes`, or `points` is verifiably usable by a learner who does not yet know the answer — not circular reasoning (GP-11). When no reliable test exists, the content says so explicitly rather than inventing a non-working trick.
 
 ---
 
