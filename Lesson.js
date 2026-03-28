@@ -96,8 +96,15 @@ window.LessonModule = {
               display: flex; justify-content: space-between; align-items: center;
           }
           @media (hover: hover) { .jp-menu-item:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(78,84,200,0.15); border-color: var(--primary); } }
-          .jp-menu-id { font-weight: 900; color: var(--primary); font-size: 1.1rem; }
-          .jp-menu-name { font-size: 0.85rem; color: #a4b0be; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+          .jp-menu-id { font-weight: 900; color: var(--primary); font-size: 1.1rem; min-width: 50px; flex-shrink: 0; }
+          .jp-menu-name { font-size: 0.85rem; color: #a4b0be; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; flex: 1; text-align: center; }
+          .jp-menu-stamp { width: 38px; height: 38px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+          .jp-menu-stamp img { width: 100%; height: 100%; object-fit: contain; opacity: 0.85; }
+          @keyframes jpStampPop { 0% { transform: scale(2) rotate(0deg); opacity: 0; } 60% { transform: scale(0.9); } 100% { transform: scale(1); opacity: 0.85; } }
+          .jp-menu-stamp img { animation: jpStampPop 0.3s ease; }
+          .jp-menu-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+          .jp-menu-score { font-size: 0.75rem; font-weight: 700; color: var(--primary); }
+          .jp-menu-badge { font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 20px; background: #f1f2f6; color: #999; }
 
           .jp-level-card {
             background: #fff; padding: 28px 24px; border-radius: 20px; cursor: pointer;
@@ -632,9 +639,39 @@ window.LessonModule = {
         const visibleLessons = lessons.filter(l =>
           !unlockApi || unlockApi.isFree() || unlockApi.isLessonUnlocked(l)
         );
+        const stampApi = window.JPShared && window.JPShared.stampSettings;
+        const stampUrl = stampApi && stampApi.getStampUrl ? stampApi.getStampUrl() : '';
+        const pooUrl = stampApi && stampApi.getPooUrl ? stampApi.getPooUrl() : '';
+
         visibleLessons.forEach(lesson => {
           const btn = el("div", "jp-menu-item");
-          btn.innerHTML = `<div class="jp-menu-id">${lesson.id}</div><div class="jp-menu-name">${lesson.title || 'Start'}</div>`;
+          const idEl = el('div', 'jp-menu-id', lesson.id);
+          const nameEl = el('div', 'jp-menu-name', lesson.title || 'Start');
+          btn.appendChild(idEl);
+          btn.appendChild(nameEl);
+
+          const score = unlockApi ? unlockApi.getLessonScore(lesson.id) : 0;
+          const completed = unlockApi && unlockApi.isCompleted(lesson.id);
+
+          if (completed && score > 0 && (stampUrl || pooUrl)) {
+            const passing = score >= 60;
+            const rightWrap = el('div', 'jp-menu-right', '');
+            const scoreEl = el('span', 'jp-menu-score', score + '%');
+            if (!passing) scoreEl.style.color = '#999';
+            rightWrap.appendChild(scoreEl);
+            const tilt = Math.floor(Math.random() * 41) - 20;
+            const stampDiv = el('div', 'jp-menu-stamp', '');
+            const img = document.createElement('img');
+            img.src = passing ? stampUrl : (pooUrl || stampUrl);
+            img.alt = passing ? '✓' : '✗';
+            img.style.transform = 'rotate(' + tilt + 'deg)';
+            stampDiv.appendChild(img);
+            rightWrap.appendChild(stampDiv);
+            btn.appendChild(rightWrap);
+          } else {
+            btn.appendChild(el('span', 'jp-menu-badge', '→'));
+          }
+
           btn.onclick = () => loadLesson(lesson.file);
           menuEl.appendChild(btn);
         });
