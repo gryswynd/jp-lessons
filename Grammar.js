@@ -428,11 +428,11 @@ window.GrammarModule = {
     // --- Celebration ---
     const SCORE_RANKS = [
       { min: 0,   msg: '頑張れ！',     sub: 'Keep Going!',    colors: ['#a4b0be','#747d8c','#57606f'], particles: 8 },
-      { min: 50,  msg: 'いいね！',     sub: 'Nice!',          colors: ['#FFD700','#FFA500','#FFE066'], particles: 15 },
-      { min: 60,  msg: 'すごい！',     sub: 'Amazing!',       colors: ['#FF6B35','#FF4500','#FF8C00'], particles: 24 },
-      { min: 70,  msg: 'さすが！',     sub: 'Impressive!',    colors: ['#FF1493','#FF69B4','#FF85C8'], particles: 35 },
-      { min: 80,  msg: 'すばらしい！', sub: 'Wonderful!',     colors: ['#00E5FF','#00BCD4','#4DD0E1'], particles: 45 },
-      { min: 90,  msg: '天才！',       sub: 'Genius!',        colors: ['#8B5CF6','#A78BFA','#7C3AED'], particles: 55 },
+      { min: 60,  msg: 'いいね！',     sub: 'Nice!',          colors: ['#FFD700','#FFA500','#FFE066'], particles: 15 },
+      { min: 70,  msg: 'すごい！',     sub: 'Amazing!',       colors: ['#FF6B35','#FF4500','#FF8C00'], particles: 24 },
+      { min: 80,  msg: 'さすが！',     sub: 'Impressive!',    colors: ['#FF1493','#FF69B4','#FF85C8'], particles: 35 },
+      { min: 90,  msg: 'すばらしい！', sub: 'Wonderful!',     colors: ['#00E5FF','#00BCD4','#4DD0E1'], particles: 45 },
+      { min: 95,  msg: '天才！',       sub: 'Genius!',        colors: ['#8B5CF6','#A78BFA','#7C3AED'], particles: 55 },
       { min: 100, msg: '神！',         sub: 'Godlike!',       colors: ['#FF1493','#FFD700','#00E5FF','#8B5CF6','#2ED573','#FF6B35'], particles: 70 },
     ];
 
@@ -1364,7 +1364,7 @@ window.GrammarModule = {
         const hasScore = score !== undefined && score !== null;
 
         if (done && hasScore && (stampUrl || pooUrl)) {
-          const passing = score >= 75;
+          const passing = score >= 60;
           const rightWrap = el('div', 'gr-menu-right', '');
           const scoreEl = el('span', 'gr-menu-score', score + '%');
           if (!passing) scoreEl.style.color = '#999';
