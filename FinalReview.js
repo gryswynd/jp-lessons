@@ -1173,7 +1173,7 @@ window.FinalReviewModule = (function () {
     stage.innerHTML = `
       <div class="fr-section-result">
         <div class="fr-section-result-score">${earned} / ${possible}</div>
-        <div style="font-size:1.1rem;color:var(--fr-text-sub);margin:8px 0 20px;">${pct}% — ${pct >= 80 ? 'すばらしい！' : pct >= 60 ? 'いいね！' : '頑張れ！'}</div>
+        <div style="font-size:1.1rem;color:var(--fr-text-sub);margin:8px 0 20px;">${pct}% — ${pct >= 90 ? 'すばらしい！' : pct >= 60 ? 'いいね！' : '頑張れ！'}</div>
         <button class="fr-btn fr-btn-primary" id="fr-next-section">${sectionIdx >= reviewData.sections.length ? 'See Final Results' : 'Next Section →'}</button>
       </div>
     `;
@@ -2067,11 +2067,11 @@ window.FinalReviewModule = (function () {
   // ══════════════════════════════════════════════════════════════
   function getScoreEmoji(pct) {
     if (pct >= 100) return { emoji: '\uD83D\uDC8E', label: 'Diamond' };      // 💎
-    if (pct >= 90) return { emoji: '\u2B50', label: 'Star' };                 // ⭐
-    if (pct >= 80) return { emoji: '\uD83C\uDF1F', label: 'Glowing Star' };   // 🌟
-    if (pct >= 70) return { emoji: '\uD83D\uDD25', label: 'Fire' };           // 🔥
-    if (pct >= 60) return { emoji: '\uD83D\uDC4D', label: 'Thumbs Up' };     // 👍
-    if (pct >= 40) return { emoji: '\uD83D\uDE05', label: 'Sweat Smile' };   // 😅
+    if (pct >= 95) return { emoji: '\u2B50', label: 'Star' };                 // ⭐
+    if (pct >= 90) return { emoji: '\uD83C\uDF1F', label: 'Glowing Star' };   // 🌟
+    if (pct >= 80) return { emoji: '\uD83D\uDD25', label: 'Fire' };           // 🔥
+    if (pct >= 70) return { emoji: '\uD83D\uDC4D', label: 'Thumbs Up' };     // 👍
+    if (pct >= 60) return { emoji: '\uD83D\uDE05', label: 'Sweat Smile' };   // 😅
     return { emoji: '\uD83D\uDCA9', label: 'Poop' };                         // 💩
   }
 

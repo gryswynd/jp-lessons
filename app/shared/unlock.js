@@ -29,7 +29,7 @@
 
   // ── Internal constants ─────────────────────────────────────────────────────
 
-  var PASS_THRESHOLD = 75; // minimum percentage to "pass" a lesson
+  var PASS_THRESHOLD = 60; // minimum percentage to "pass" a lesson
 
   // localStorage key for the explicit N4 unlock (paid gateway placeholder).
   var N4_UNLOCK_KEY = 'k-n4-unlocked';
