@@ -654,12 +654,7 @@
                 : 'scr-wrong';
         t.classList.add(cls);
       });
-      setTimeout(function () {
-        locked = false;
-        tiles.forEach(function (t) {
-          t.classList.remove('scr-correct', 'scr-misplaced', 'scr-wrong');
-        });
-      }, 550);
+      setTimeout(function () { locked = false; }, 550);
     }
   }
 
