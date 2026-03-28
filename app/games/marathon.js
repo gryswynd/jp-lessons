@@ -160,6 +160,7 @@
   var curMarathon = null, flatItems = [], curIdx = 0;
   var slotTiles = [], bankTiles = [], locked = false;
   var drag = null, ghostEl = null;
+  var lastColors = null; // persisted tile colors from last wrong check
 
   // ── Flatten marathon into ordered item list with phase info ───────
   function flattenMarathon(m) {
@@ -281,7 +282,7 @@
 
   function prepareItem() {
     var entry = flatItems[curIdx];
-    locked = false; cleanupDrag();
+    locked = false; lastColors = null; cleanupDrag();
     var allWords = entry.item.segments.concat(entry.item.distractors || []);
     bankTiles = shuffle(allWords.slice());
     slotTiles = [];
@@ -318,7 +319,8 @@
     }
     html += '<div class="mara-slot" id="mara-slot">';
     slotTiles.forEach(function (t, i) {
-      html += '<div class="mara-tile" data-zone="slot" data-idx="' + i + '">' + esc(t) + '</div>';
+      var colorCls = lastColors ? (' mara-' + lastColors[i]) : '';
+      html += '<div class="mara-tile' + colorCls + '" data-zone="slot" data-idx="' + i + '">' + esc(t) + '</div>';
     });
     html += '</div></div>';
 
@@ -415,6 +417,7 @@
       var sr = slotArea ? slotArea.getBoundingClientRect() : { top: 0, bottom: 0, left: 0, right: 0 };
       var inSlot = e.clientY >= sr.top - 30 && e.clientY <= sr.bottom + 30 &&
                    e.clientX >= sr.left - 30 && e.clientX <= sr.right + 30;
+      lastColors = null;
       if (d.zone === 'bank') {
         if (inSlot) { bankTiles.splice(d.idx, 1); slotTiles.splice(getSlotInsertIdx(e.clientX, -1), 0, d.text); }
       } else {
@@ -424,6 +427,7 @@
       }
       renderGame();
     } else {
+      lastColors = null;
       if (d.zone === 'bank') { bankTiles.splice(d.idx, 1); slotTiles.push(d.text); }
       else { slotTiles.splice(d.idx, 1); bankTiles.push(d.text); }
       renderGame();
@@ -462,10 +466,10 @@
       tiles.forEach(function (t) { t.classList.add('mara-correct'); });
       showExplanation(item);
     } else {
-      var colors = getTileColors(slotTiles, item.segments);
+      lastColors = getTileColors(slotTiles, item.segments);
       tiles.forEach(function (t, i) {
-        var cls = colors[i] === 'correct' ? 'mara-correct'
-                : colors[i] === 'misplaced' ? 'mara-misplaced'
+        var cls = lastColors[i] === 'correct' ? 'mara-correct'
+                : lastColors[i] === 'misplaced' ? 'mara-misplaced'
                 : 'mara-wrong';
         t.classList.add(cls);
       });
