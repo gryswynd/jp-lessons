@@ -247,6 +247,7 @@
   var slotTiles    = [];
   var bankTiles    = [];
   var locked       = false;
+  var lastColors   = null; // persisted tile colors from last wrong check
 
   // Drag state
   var drag    = null;
@@ -397,6 +398,7 @@
   function prepareItem() {
     var item     = currentSet.items[currentIndex];
     locked       = false;
+    lastColors   = null;
     cleanupDrag();
 
     var allWords = item.segments.concat(item.distractors || []);
@@ -435,7 +437,8 @@
     }
     html += '<div class="scr-slot" id="scr-slot">';
     slotTiles.forEach(function (t, i) {
-      html += '<div class="scr-tile" data-zone="slot" data-idx="' + i + '">' +
+      var colorCls = lastColors ? (' scr-' + lastColors[i]) : '';
+      html += '<div class="scr-tile' + colorCls + '" data-zone="slot" data-idx="' + i + '">' +
         esc(t) + '</div>';
     });
     html += '</div></div>';
@@ -579,6 +582,7 @@
       var inSlot = e.clientY >= sr.top - 30 && e.clientY <= sr.bottom + 30 &&
                    e.clientX >= sr.left - 30 && e.clientX <= sr.right + 30;
 
+      lastColors = null;
       if (d.zone === 'bank') {
         if (inSlot) {
           bankTiles.splice(d.idx, 1);
@@ -599,6 +603,7 @@
       renderGame();
     } else {
       // Tap: toggle between zones
+      lastColors = null;
       if (d.zone === 'bank') {
         bankTiles.splice(d.idx, 1);
         slotTiles.push(d.text);
@@ -647,10 +652,10 @@
       tiles.forEach(function (t) { t.classList.add('scr-correct'); });
       showExplanation(item);
     } else {
-      var colors = getTileColors(slotTiles, item.segments);
+      lastColors = getTileColors(slotTiles, item.segments);
       tiles.forEach(function (t, i) {
-        var cls = colors[i] === 'correct' ? 'scr-correct'
-                : colors[i] === 'misplaced' ? 'scr-misplaced'
+        var cls = lastColors[i] === 'correct' ? 'scr-correct'
+                : lastColors[i] === 'misplaced' ? 'scr-misplaced'
                 : 'scr-wrong';
         t.classList.add(cls);
       });
