@@ -325,7 +325,7 @@
             { "id": "v_wakaru", "form": "polite_mashita" },
             "v_kanji",
             "p_mo",
-            { "id": "v_kaku", "form": "causative" },
+            { "id": "v_kaku", "form": "causative_te" },
             { "id": "v_morau", "form": "polite_potential" },
             "p_ka"
           ]
@@ -363,7 +363,7 @@
             "p_ni",
             "v_kyoushitsu",
             "p_wo",
-            { "id": "v_miru", "form": "causative" },
+            { "id": "v_miru", "form": "causative_te" },
             { "id": "v_ageru", "form": "te_form" },
             "p_mo",
             "v_ii",
@@ -386,7 +386,7 @@
             { "id": "v_omou", "form": "te_form" },
             { "id": "v_iru", "form": "plain_form" },
             "p_nara",
-            { "id": "v_miru", "form": "causative" },
+            { "id": "v_miru", "form": "causative_te" },
             { "id": "v_ageru", "form": "te_form" },
             "v_kudasai"
           ]
@@ -403,7 +403,7 @@
             "v_minna",
             "p_ni",
             "v_benkyou",
-            { "id": "v_suru", "form": "causative" },
+            { "id": "v_suru", "form": "causative_te" },
             { "id": "v_kudasaru", "form": "plain_form" },
             "p_kara_because",
             "v_yoku",
@@ -432,7 +432,7 @@
             "v_oya",
             "p_ni",
             "v_iroiro",
-            { "id": "v_suru", "form": "causative_passive" },
+            { "id": "v_suru", "form": "plain_causative_passive_past" },
             "p_ka"
           ]
         },
@@ -445,10 +445,10 @@
             "v_mainichi",
             "v_yasai",
             "p_wo",
-            { "id": "v_taberu", "form": "causative_passive" },
+            { "id": "v_taberu", "form": "plain_causative_passive_past" },
             "p_yo",
             "v_zenzen",
-            { "id": "v_suki", "form": "da_past_negative" },
+            { "id": "v_suki", "form": "plain_past_negative" },
             "p_kedo"
           ]
         },
@@ -471,7 +471,7 @@
             { "id": "v_suki", "form": "attributive_na" },
             "v_mono",
             "p_mo",
-            { "id": "v_taberu", "form": "causative" },
+            { "id": "v_taberu", "form": "causative_te" },
             { "id": "v_morau", "form": "plain_potential_past" },
             "p_ka"
           ]
@@ -487,7 +487,7 @@
             { "id": "v_suki", "form": "attributive_na" },
             "v_mono",
             "p_wo",
-            { "id": "v_taberu", "form": "causative" },
+            { "id": "v_taberu", "form": "causative_te" },
             { "id": "v_morau", "form": "plain_potential_past" },
             "v_koto",
             "p_mo",
@@ -498,7 +498,7 @@
         },
         {
           "spk": "char_ken",
-          "jp": "いいな。私は 毎日 本を 読まされたよ。むずかしかったけど、今は 読んで よかったと 思う。",
+          "jp": "いいな。私は 毎日 本を 読ませられたよ。むずかしかったけど、今は 読んで よかったと 思う。",
           "en": "Lucky. I was made to read books every day. It was difficult, but now I think it was good.",
           "terms": [
             "v_ii",
@@ -508,7 +508,7 @@
             "v_mainichi",
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "causative_passive" },
+            { "id": "v_yomu", "form": "plain_causative_passive_past" },
             "p_yo",
             { "id": "v_muzukashii", "form": "plain_past_adj" },
             "p_kedo",
