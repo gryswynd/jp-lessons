@@ -1340,6 +1340,7 @@ window.GrammarModule = {
 
       const stampApi = window.JPShared && window.JPShared.stampSettings;
       const stampUrl = stampApi && stampApi.getStampUrl ? stampApi.getStampUrl() : '';
+      const pooUrl = stampApi && stampApi.getPooUrl ? stampApi.getPooUrl() : '';
 
       let lastLevel = null;
       visibleGrammars.forEach(g => {
@@ -1359,17 +1360,20 @@ window.GrammarModule = {
         left.appendChild(info);
         item.appendChild(left);
 
-        if (done && stampUrl) {
+        if (done && (stampUrl || pooUrl)) {
           const rightWrap = el('div', 'gr-menu-right', '');
           const score = progressGet('grammar_' + g.id + '_drill_score');
+          const passing = score !== undefined && score !== null && score >= 50;
           if (score !== undefined && score !== null) {
-            rightWrap.appendChild(el('span', 'gr-menu-score', score + '%'));
+            const scoreEl = el('span', 'gr-menu-score', score + '%');
+            if (!passing) scoreEl.style.color = '#999';
+            rightWrap.appendChild(scoreEl);
           }
           const tilt = Math.floor(Math.random() * 41) - 20;
           const stampDiv = el('div', 'gr-menu-stamp', '');
           const img = document.createElement('img');
-          img.src = stampUrl;
-          img.alt = '✓';
+          img.src = passing ? stampUrl : (pooUrl || stampUrl);
+          img.alt = passing ? '✓' : '✗';
           img.style.transform = 'rotate(' + tilt + 'deg)';
           stampDiv.appendChild(img);
           rightWrap.appendChild(stampDiv);
