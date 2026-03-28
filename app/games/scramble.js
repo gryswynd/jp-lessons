@@ -246,6 +246,10 @@
     locked    = false;
     cleanupDrag();
 
+    // Ensure character stamps are loaded before picker renders
+    var stampApi = window.JPShared && window.JPShared.stampSettings;
+    if (stampApi && stampApi.loadCharacters) stampApi.loadCharacters();
+
     var level = cfg.level || 'N5';
     container.innerHTML =
       '<div class="scr-wrap" style="text-align:center;padding:32px;' +
