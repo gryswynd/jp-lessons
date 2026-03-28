@@ -1360,15 +1360,15 @@ window.GrammarModule = {
         left.appendChild(info);
         item.appendChild(left);
 
-        if (done && (stampUrl || pooUrl)) {
+        const score = done ? progressGet('grammar_' + g.id + '_drill_score') : null;
+        const hasScore = score !== undefined && score !== null;
+
+        if (done && hasScore && (stampUrl || pooUrl)) {
+          const passing = score >= 75;
           const rightWrap = el('div', 'gr-menu-right', '');
-          const score = progressGet('grammar_' + g.id + '_drill_score');
-          const passing = score !== undefined && score !== null && score >= 50;
-          if (score !== undefined && score !== null) {
-            const scoreEl = el('span', 'gr-menu-score', score + '%');
-            if (!passing) scoreEl.style.color = '#999';
-            rightWrap.appendChild(scoreEl);
-          }
+          const scoreEl = el('span', 'gr-menu-score', score + '%');
+          if (!passing) scoreEl.style.color = '#999';
+          rightWrap.appendChild(scoreEl);
           const tilt = Math.floor(Math.random() * 41) - 20;
           const stampDiv = el('div', 'gr-menu-stamp', '');
           const img = document.createElement('img');
@@ -1378,8 +1378,6 @@ window.GrammarModule = {
           stampDiv.appendChild(img);
           rightWrap.appendChild(stampDiv);
           item.appendChild(rightWrap);
-        } else if (done) {
-          item.appendChild(el('span', 'gr-menu-badge done', '✓ Done'));
         } else {
           item.appendChild(el('span', 'gr-menu-badge lock', '→'));
         }
