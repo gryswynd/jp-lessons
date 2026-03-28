@@ -308,43 +308,6 @@
     return sessionLength > 0 ? Math.min(count, sessionLength) : count;
   }
 
-  // ---- Step 1: Kanji confirmation gate ----
-  function renderFormPicker() {
-    var pool = scanPool();
-    var hasVerbs = pool.verbCount > 0;
-    var hasAdjs = pool.adjCount > 0;
-    var totalWords = pool.verbCount + pool.adjCount;
-
-    var html = '<div class="dojo-wrap">';
-
-    // Instructions + pool summary
-    html += '<div style="text-align:center;padding:16px 0 8px;">';
-    html += '<div style="font-weight:800;font-size:1.1rem;color:#2f3542;margin-bottom:8px;">Conjugation Station</div>';
-    html += '<div style="font-size:0.85rem;color:#747d8c;margin-bottom:12px;">Select your kanji sets in the main menu, then load forms here.</div>';
-    html += '</div>';
-
-    // Pool info
-    html += '<div id="dojo-pool-info" style="font-size:0.9rem;background:#f8f9fa;padding:12px 16px;border-radius:10px;text-align:center;margin-bottom:16px;">';
-    html += buildPoolInfoHTML(pool);
-    html += '</div>';
-
-    // Load Forms button
-    html += '<button class="dojo-start-btn" id="dojo-load-btn"' + (totalWords === 0 ? ' disabled' : '') + '>Load Forms</button>';
-
-    // Exit button
-    html += '<button class="dojo-btn-secondary" id="dojo-gate-exit" style="width:100%;padding:12px;margin-top:8px;">Back to Menu</button>';
-
-    html += '</div>';
-    container.innerHTML = html;
-
-    document.getElementById('dojo-load-btn').addEventListener('click', function () {
-      renderFormSelection(pool);
-    });
-    document.getElementById('dojo-gate-exit').addEventListener('click', function () {
-      cfg.onExit && cfg.onExit();
-    });
-  }
-
   function buildPoolInfoHTML(pool) {
     var hasVerbs = pool.verbCount > 0;
     var hasAdjs = pool.adjCount > 0;
@@ -459,7 +422,7 @@
     html += '<div class="dojo-queue-info" id="dojo-queue-info"></div>';
 
     // Back to kanji gate
-    html += '<button class="dojo-btn-secondary" id="dojo-back-gate" style="width:100%;padding:10px;margin-top:4px;font-size:0.85rem;">Change Lessons</button>';
+    html += '<button class="dojo-btn-secondary" id="dojo-back-gate" style="width:100%;padding:10px;margin-top:4px;font-size:0.85rem;">Back to Menu</button>';
 
     html += '</div>';
 
@@ -525,7 +488,7 @@
     });
 
     document.getElementById('dojo-back-gate').addEventListener('click', function () {
-      renderFormPicker();
+      cfg.onExit && cfg.onExit();
     });
   }
 
@@ -596,7 +559,7 @@
 
   function startDrillWithQueue(q) {
     queue = q;
-    if (queue.length === 0) { renderFormPicker(); return; }
+    if (queue.length === 0) { initFormSelection(); return; }
     qIdx = 0; sessionCorrect = 0; sessionTotal = 0; mistakes = [];
     helperVisible = false;
     renderDrill();
@@ -867,18 +830,41 @@
         startDrillWithQueue(retryQueue);
       });
     }
-    document.getElementById('dojo-new-btn').addEventListener('click', function () { renderFormPicker(); });
+    document.getElementById('dojo-new-btn').addEventListener('click', function () { initFormSelection(); });
     document.getElementById('dojo-exit-btn').addEventListener('click', function () { cfg.onExit && cfg.onExit(); });
   }
 
   // ---- Public API ----
+  function renderEmptyState() {
+    var html = '<div class="dojo-wrap"><div style="text-align:center;padding:32px 16px;">';
+    html += '<div style="font-size:2.4rem;margin-bottom:12px;">\u26A1</div>';
+    html += '<div style="font-weight:800;font-size:1.1rem;color:#2f3542;margin-bottom:8px;">Conjugation Station</div>';
+    html += '<div style="color:#e74c3c;font-weight:600;margin-bottom:8px;">No conjugatable words found</div>';
+    html += '<div style="font-size:0.85rem;color:#747d8c;margin-bottom:20px;">Select lessons with verbs or adjectives on the main page.</div>';
+    html += '<button class="dojo-btn-secondary" id="dojo-empty-exit" style="width:100%;padding:12px;">Back to Menu</button>';
+    html += '</div></div>';
+    container.innerHTML = html;
+    document.getElementById('dojo-empty-exit').addEventListener('click', function () {
+      cfg.onExit && cfg.onExit();
+    });
+  }
+
+  function initFormSelection() {
+    var pool = scanPool();
+    if (pool.verbCount + pool.adjCount === 0) {
+      renderEmptyState();
+    } else {
+      renderFormSelection(pool);
+    }
+  }
+
   window.JPShared.conjugationDojo = {
     init: function (containerEl, ctx) {
       injectStyles();
       cfg = ctx;
       container = containerEl;
       container.innerHTML = '';
-      renderFormPicker();
+      initFormSelection();
     },
     destroy: function () {
       if (container) container.innerHTML = '';
