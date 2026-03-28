@@ -1,12 +1,12 @@
 (function() {
   const SCORE_RANKS = [
       { min: 0,   msg: '頑張れ！',     sub: 'Keep Going!',    colors: ['#a4b0be','#747d8c','#57606f'],                              particles: 8  },
-      { min: 50,  msg: 'いいね！',     sub: 'Nice!',          colors: ['#FFD700','#FFA500','#FFE066'],                              particles: 15 },
-      { min: 60,  msg: 'すごい！',     sub: 'Amazing!',       colors: ['#FF6B35','#FF4500','#FF8C00'],                              particles: 24 },
-      { min: 70,  msg: 'さすが！',     sub: 'Impressive!',    colors: ['#FF1493','#FF69B4','#FF85C8'],                              particles: 35 },
-      { min: 80,  msg: 'すばらしい！', sub: 'Wonderful!',     colors: ['#00E5FF','#00BCD4','#4DD0E1'],                              particles: 45 },
-      { min: 100, msg: '天才！',       sub: 'Genius!',        colors: ['#8B5CF6','#A78BFA','#7C3AED'],                              particles: 55 },
-      { min: 101, msg: '神！',         sub: 'Godlike!',       colors: ['#FF1493','#FFD700','#00E5FF','#8B5CF6','#2ED573','#FF6B35'], particles: 70 },
+      { min: 60,  msg: 'いいね！',     sub: 'Nice!',          colors: ['#FFD700','#FFA500','#FFE066'],                              particles: 15 },
+      { min: 70,  msg: 'すごい！',     sub: 'Amazing!',       colors: ['#FF6B35','#FF4500','#FF8C00'],                              particles: 24 },
+      { min: 80,  msg: 'さすが！',     sub: 'Impressive!',    colors: ['#FF1493','#FF69B4','#FF85C8'],                              particles: 35 },
+      { min: 90,  msg: 'すばらしい！', sub: 'Wonderful!',     colors: ['#00E5FF','#00BCD4','#4DD0E1'],                              particles: 45 },
+      { min: 95,  msg: '天才！',       sub: 'Genius!',        colors: ['#8B5CF6','#A78BFA','#7C3AED'],                              particles: 55 },
+      { min: 100, msg: '神！',         sub: 'Godlike!',       colors: ['#FF1493','#FFD700','#00E5FF','#8B5CF6','#2ED573','#FF6B35'], particles: 70 },
   ];
 
   function launchHanabi(rank, targetEl) {
@@ -168,23 +168,35 @@
         !unlockApi || unlockApi.isFree() || unlockApi.isReviewUnlocked(r)
       );
 
+      const stampApi = window.JPShared && window.JPShared.stampSettings;
+      const stampUrl = stampApi && stampApi.getStampUrl ? stampApi.getStampUrl() : '';
+      const pooUrl = stampApi && stampApi.getPooUrl ? stampApi.getPooUrl() : '';
+
       let html = `<button class="jp-review-level-back-btn" id="jp-back-to-levels">← Levels</button>`;
       html += '<div class="jp-review-menu-grid">';
       visibleReviews.forEach(review => {
         const topScore = window.JPShared.progress.getReviewScore(review.id);
-        const scoreDisplay = topScore !== undefined
-          ? `<div class="jp-review-score">Best: ${topScore}%</div>`
-          : `<div class="jp-review-score jp-no-score">Not attempted</div>`;
+        const hasScore = topScore !== undefined;
+        const passing = hasScore && topScore >= 60;
+        const tilt = Math.floor(Math.random() * 41) - 20;
+
+        let rightHtml;
+        if (hasScore && (stampUrl || pooUrl)) {
+          const scoreColor = passing ? 'var(--jp-primary)' : '#999';
+          const imgSrc = passing ? stampUrl : (pooUrl || stampUrl);
+          rightHtml = `<div class="jp-review-menu-right">` +
+            `<span class="jp-review-menu-score" style="color:${scoreColor}">${topScore}%</span>` +
+            `<div class="jp-review-menu-stamp"><img src="${imgSrc}" alt="${passing ? '✓' : '✗'}" style="transform:rotate(${tilt}deg);"></div>` +
+            `</div>`;
+        } else {
+          rightHtml = `<span class="jp-review-menu-badge">→</span>`;
+        }
 
         html += `
           <div class="jp-review-menu-item" data-file="${review.file}" data-id="${review.id}">
-            <div>
-              <div class="jp-review-menu-id">${review.id}</div>
-            </div>
-            <div style="text-align:right;">
-              ${scoreDisplay}
-              <div class="jp-review-menu-arrow">Start →</div>
-            </div>
+            <div class="jp-review-menu-id">${review.id}</div>
+            <div class="jp-review-menu-title">${review.title || ''}</div>
+            ${rightHtml}
           </div>
         `;
       });
@@ -695,10 +707,15 @@
                 display: flex; justify-content: space-between; align-items: center;
             }
             @media (hover: hover) { .jp-review-menu-item:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(78,84,200,0.15); border-color: var(--jp-primary); } }
-            .jp-review-menu-id { font-weight: 900; color: var(--jp-primary); font-size: 1.1rem; }
-            .jp-review-score { font-size: 0.85rem; color: var(--jp-success); font-weight: 700; }
-            .jp-review-score.jp-no-score { color: #b2bec3; }
-            .jp-review-menu-arrow { font-size: 0.8rem; color: #a4b0be; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+            .jp-review-menu-id { font-weight: 900; color: var(--jp-primary); font-size: 1.1rem; min-width: 50px; flex-shrink: 0; }
+            .jp-review-menu-title { font-size: 0.85rem; color: #a4b0be; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; flex: 1; text-align: center; }
+            .jp-review-menu-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+            .jp-review-menu-score { font-size: 0.75rem; font-weight: 700; color: var(--jp-primary); }
+            .jp-review-menu-stamp { width: 38px; height: 38px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+            .jp-review-menu-stamp img { width: 100%; height: 100%; object-fit: contain; opacity: 0.85; }
+            @keyframes jpRevStampPop { 0% { transform: scale(2) rotate(0deg); opacity: 0; } 60% { transform: scale(0.9); } 100% { transform: scale(1); opacity: 0.85; } }
+            .jp-review-menu-stamp img { animation: jpRevStampPop 0.3s ease; }
+            .jp-review-menu-badge { font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 20px; background: #f1f2f6; color: #999; }
 
             /* Teacher Mode */
             .jp-teacher-bar { display:flex; flex-wrap:wrap; gap:6px; align-items:center; padding:8px 16px; background:#1e1e2e; border-bottom:2px solid #e94560; }
