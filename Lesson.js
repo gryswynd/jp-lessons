@@ -550,13 +550,19 @@ window.LessonModule = {
         if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
 
         const unlock = window.JPShared && window.JPShared.unlock;
-        if (!unlock || unlock.isFree() || !manifestData || !lessonData || !lessonData.id) {
+        if (!unlock || !manifestData || !lessonData || !lessonData.id) {
             nextBtn.innerText = "Finish";
             prevBtn.style.visibility = 'hidden';
             return;
         }
 
         const result = unlock.computeUnlocks(lessonData.id, pct, manifestData);
+
+        if (unlock.isFree()) {
+            nextBtn.innerText = "Finish";
+            prevBtn.style.visibility = 'hidden';
+            return;
+        }
 
         if (result.passed) {
             nextBtn.innerText = "Continue \u2192";
