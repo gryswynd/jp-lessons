@@ -94,18 +94,16 @@
       // Picker
       '.c4-pick-hdr{font-size:0.72rem;font-weight:700;text-transform:uppercase;' +
         'letter-spacing:0.08em;color:#a89cc8;margin-bottom:12px;}' +
-      '.c4-pick-list{display:grid;grid-template-columns:1fr;gap:9px;}' +
-      '.c4-pick-item{display:flex;align-items:center;gap:12px;padding:13px 15px;' +
-        'border-radius:14px;background:#1e1442;border:1.5px solid #3d2f6e;cursor:pointer;' +
+      '.c4-pick-list{display:grid;grid-template-columns:1fr;gap:7px;}' +
+      '.c4-pick-item{display:flex;align-items:center;gap:10px;padding:10px 13px;' +
+        'border-radius:12px;background:#1e1442;border:1.5px solid #3d2f6e;cursor:pointer;' +
         'transition:transform 0.15s,box-shadow 0.15s,border-color 0.15s;}' +
-      '.c4-pick-item:hover{transform:translateY(-3px);' +
-        'box-shadow:0 8px 20px rgba(230,126,34,0.15);border-color:#e67e22;}' +
-      '.c4-pick-num{font-weight:900;font-size:0.9rem;color:#e67e22;min-width:22px;' +
+      '.c4-pick-item:hover{transform:translateY(-2px);' +
+        'box-shadow:0 6px 16px rgba(230,126,34,0.15);border-color:#e67e22;}' +
+      '.c4-pick-num{font-weight:900;font-size:0.88rem;color:#e67e22;min-width:20px;' +
         'flex-shrink:0;}' +
       '.c4-pick-info{flex:1;min-width:0;}' +
       '.c4-pick-title{font-weight:700;font-size:0.88rem;color:#f0e6ff;}' +
-      '.c4-pick-sub{font-size:0.72rem;color:#a89cc8;margin-top:2px;' +
-        'white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}' +
       '.c4-pick-badge{width:44px;height:44px;flex-shrink:0;' +
         'display:flex;align-items:center;justify-content:center;}' +
       '.c4-pick-badge img{width:100%;height:100%;object-fit:contain;opacity:0.85;}' +
@@ -285,14 +283,12 @@
 
     allAvailable.forEach(function (p, i) {
       var result = getPuzzleResult(p.id);
-      var labels = p.groups.map(function (g) { return g.label; }).join(' · ');
       var tilt   = result ? result.tilt : 0;
 
       html += '<div class="c4-pick-item" data-idx="' + i + '">';
       html += '<div class="c4-pick-num">' + (i + 1) + '</div>';
       html += '<div class="c4-pick-info">';
       html += '<div class="c4-pick-title">Puzzle ' + (i + 1) + '</div>';
-      html += '<div class="c4-pick-sub">' + esc(labels) + '</div>';
       html += '</div>';
 
       if (result && result.status === 'complete' && stampUrl) {
