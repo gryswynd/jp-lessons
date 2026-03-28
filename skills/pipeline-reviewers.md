@@ -2,7 +2,7 @@
 
 > **Loaded by:** Agent 3 (QA Reviewer) and Agent 4 (Consistency Reviewer) for review passes.
 > **Purpose:** Defines Agent 3 (QA) and Agent 4 (CR) responsibilities, the Grammar Accuracy Gate, Grammar Scope Enforcement, Grammar Usage Validation, and Grammar Reinforcement Audit.
-> **See also:** `skills/pipeline-overview.md` (Pipeline overview + Agents 1 & 2), `skills/pipeline-handoff.md` (handoff protocol + quick start).
+> **See also:** `skills/pipeline-overview.md` (Pipeline overview + Agent 1), `skills/pipeline-content-builder.md` (Agent 2 + CB Checklist), `skills/pipeline-handoff.md` (handoff protocol + quick start).
 
 ---
 
