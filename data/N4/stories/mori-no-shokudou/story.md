@@ -68,7 +68,7 @@ As the evening came, the two decided to head home. "I want to come again, I thin
 | Pattern | Example from story | Meaning |
 |---|---|---|
 | たことがある (past experience) | そんな食堂に行ったことがなかった | had never been to such a dining hall |
-| と思う (thought/opinion) | ぜひ行きたいと思った | thought he'd really like to go |
+| と思う (thought/opinion) | とても行きたいと思った | thought he'd really like to go |
 | passive (〜られた) | 書き方を教えられ | was taught the way to write |
 | causative-passive (〜わされた) | 書くことを習わされた | was made to practice writing |
 | ～てから (after doing) | 用事を終わらせてから | after finishing errands |
