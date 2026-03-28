@@ -273,8 +273,13 @@
     cfg       = ctx;
     container = containerEl;
     container.innerHTML = '';
-    allSets   = [];
-    locked    = false;
+    allSets      = [];
+    locked       = false;
+    lastColors   = null;
+    slotTiles    = [];
+    bankTiles    = [];
+    currentSet   = null;
+    currentIndex = 0;
     cleanupDrag();
 
     // Ensure character stamps are loaded before picker renders
@@ -437,7 +442,7 @@
     }
     html += '<div class="scr-slot" id="scr-slot">';
     slotTiles.forEach(function (t, i) {
-      var colorCls = lastColors ? (' scr-' + lastColors[i]) : '';
+      var colorCls = (lastColors && lastColors[i]) ? (' scr-' + lastColors[i]) : '';
       html += '<div class="scr-tile' + colorCls + '" data-zone="slot" data-idx="' + i + '">' +
         esc(t) + '</div>';
     });

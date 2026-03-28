@@ -189,6 +189,7 @@
     injectStyles();
     cfg = ctx; container = containerEl;
     container.innerHTML = ''; allMarathons = []; locked = false;
+    lastColors = null; slotTiles = []; bankTiles = []; curMarathon = null; curIdx = 0;
     cleanupDrag();
 
     var stampApi = window.JPShared && window.JPShared.stampSettings;
@@ -319,7 +320,7 @@
     }
     html += '<div class="mara-slot" id="mara-slot">';
     slotTiles.forEach(function (t, i) {
-      var colorCls = lastColors ? (' mara-' + lastColors[i]) : '';
+      var colorCls = (lastColors && lastColors[i]) ? (' mara-' + lastColors[i]) : '';
       html += '<div class="mara-tile' + colorCls + '" data-zone="slot" data-idx="' + i + '">' + esc(t) + '</div>';
     });
     html += '</div></div>';
