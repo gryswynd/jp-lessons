@@ -119,7 +119,7 @@
       '.conn-pick-badge{width:44px;height:44px;flex-shrink:0;' +
         'display:flex;align-items:center;justify-content:center;}' +
       '.conn-pick-badge img{width:100%;height:100%;object-fit:contain;opacity:0.85;}' +
-      '.conn-pick-go{font-size:0.82rem;font-weight:700;color:#bbb;flex-shrink:0;}' +
+      '.conn-pick-go{font-size:0.82rem;font-weight:700;color:#d4729a;flex-shrink:0;}' +
       '@keyframes connPickPop{0%{transform:scale(2) rotate(0deg);opacity:0}' +
         '60%{transform:scale(0.9)}100%{transform:scale(1);opacity:0.85}}' +
       '.conn-pick-badge img{animation:connPickPop 0.3s ease;}' +

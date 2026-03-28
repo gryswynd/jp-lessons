@@ -361,7 +361,7 @@ window.PracticeModule = {
                     </div>
                     <div class="k-linkup-btn" onclick="KanjiApp.start('connections4','connections4')">
                         <span class="icon">🧩</span>
-                        <span><div>Hidden</div><div class="info">NYT-style — guess the groups, 4 lives</div></span>
+                        <span><div>Hidden</div><div class="info">Guess the groups, 4 lives</div></span>
                     </div>
                 </div>
 
