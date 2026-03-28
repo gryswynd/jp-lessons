@@ -34,7 +34,8 @@ Detailed rules live in modular skill files under `skills/`. Load only what's nee
 
 | Skill file | When to load | What it contains |
 |---|---|---|
-| `skills/pipeline-overview.md` | Any content creation task | Pipeline overview, Agent 1 (PM) & Agent 2 (CB) responsibilities, Sentence Token Scan Protocol, CB Checklist, spawning instructions |
+| `skills/pipeline-overview.md` | Any content creation task | Pipeline overview, Agent 1 (PM) responsibilities, spawning instructions |
+| `skills/pipeline-content-builder.md` | Agent 2 content building | Agent 2 (CB) responsibilities, Sentence Token Scan Protocol, CB Checklist |
 | `skills/pipeline-reviewers.md` | Agent 3 and Agent 4 review passes | Agent 3 (QA) & Agent 4 (CR) responsibilities, Grammar Accuracy Gate, Grammar Scope Enforcement, Grammar Usage Validation, Grammar Reinforcement Audit |
 | `skills/pipeline-handoff.md` | Any content creation task | Handoff protocol between agents, quick-start prompt template |
 | `skills/content-schemas-core.md` | Building lessons, grammar, or reviews | JSON schemas for Lesson, Grammar, Review, Large Comprehensive Review |
@@ -48,7 +49,7 @@ Detailed rules live in modular skill files under `skills/`. Load only what's nee
 
 **How agents load skills:**
 - Agent 1: Read `skills/pipeline-overview.md` + `skills/pipeline-handoff.md` + `skills/grammar-rules-prerequisites.md` + `skills/grammar-rules-reinforcement.md` at start of every content task
-- Agent 2: Read `skills/pipeline-overview.md` + `skills/content-schemas-core.md` + `skills/content-schemas-extended.md` + `skills/term-tagging-forms.md` + `skills/term-tagging-characters.md` + `skills/grammar-rules-prerequisites.md` + `skills/grammar-rules-reinforcement.md`
+- Agent 2: Read `skills/pipeline-content-builder.md` + `skills/content-schemas-core.md` + `skills/content-schemas-extended.md` + `skills/term-tagging-forms.md` + `skills/term-tagging-characters.md` + `skills/grammar-rules-prerequisites.md` + `skills/grammar-rules-reinforcement.md`
 - Agent 3: Read `skills/pipeline-reviewers.md` + `skills/quality-gates-criteria.md` + `skills/quality-gates-failures.md` + `skills/term-tagging-forms.md` + `skills/term-tagging-characters.md` + `skills/grammar-rules-prerequisites.md` + `skills/grammar-rules-reinforcement.md`
 - Agent 4: Read `skills/pipeline-reviewers.md` + `skills/quality-gates-criteria.md` + `skills/quality-gates-failures.md` + `skills/grammar-rules-prerequisites.md` + `skills/grammar-rules-reinforcement.md`
 
