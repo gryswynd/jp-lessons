@@ -469,12 +469,7 @@
                 : 'mara-wrong';
         t.classList.add(cls);
       });
-      setTimeout(function () {
-        locked = false;
-        tiles.forEach(function (t) {
-          t.classList.remove('mara-correct', 'mara-misplaced', 'mara-wrong');
-        });
-      }, 550);
+      setTimeout(function () { locked = false; }, 550);
     }
   }
 
