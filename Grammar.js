@@ -117,8 +117,14 @@ window.GrammarModule = {
         .gr-menu-id { font-weight: 900; color: #16A34A; font-size: 1rem; }
         .gr-menu-name { font-size: 0.8rem; color: #a4b0be; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
         .gr-menu-badge { font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 20px; }
-        .gr-menu-badge.done { background: #d4edda; color: #155724; }
         .gr-menu-badge.lock { background: #f1f2f6; color: #999; }
+        .gr-menu-level-header { font-size: 1.1rem; font-weight: 900; color: #16A34A; padding: 8px 0 4px; letter-spacing: 1px; }
+        .gr-menu-stamp { width: 38px; height: 38px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+        .gr-menu-stamp img { width: 100%; height: 100%; object-fit: contain; opacity: 0.85; }
+        @keyframes grStampPop { 0% { transform: scale(2) rotate(0deg); opacity: 0; } 60% { transform: scale(0.9); } 100% { transform: scale(1); opacity: 0.85; } }
+        .gr-menu-stamp img { animation: grStampPop 0.3s ease; }
+        .gr-menu-right { display: flex; align-items: center; gap: 8px; }
+        .gr-menu-score { font-size: 0.75rem; font-weight: 700; color: #16A34A; }
 
         /* Intro section */
         .gr-intro-card { text-align: center; padding: 30px 20px; display: flex; flex-direction: column; align-items: center; }
@@ -1332,7 +1338,16 @@ window.GrammarModule = {
         !unlockApi || unlockApi.isFree() || unlockApi.isGrammarUnlocked(g)
       );
 
+      const stampApi = window.JPShared && window.JPShared.stampSettings;
+      const stampUrl = stampApi && stampApi.getStampUrl ? stampApi.getStampUrl() : '';
+
+      let lastLevel = null;
       visibleGrammars.forEach(g => {
+        if (g.level !== lastLevel) {
+          lastLevel = g.level;
+          menuEl.appendChild(el('div', 'gr-menu-level-header', g.level));
+        }
+
         const done = isGrammarComplete(g.id);
         const item = el('div', 'gr-menu-item' + (false ? ' locked' : ''));
         const left = el('div', '', '');
@@ -1344,8 +1359,26 @@ window.GrammarModule = {
         left.appendChild(info);
         item.appendChild(left);
 
-        const badge = el('span', 'gr-menu-badge ' + (done ? 'done' : 'lock'), done ? '✓ Done' : '→');
-        item.appendChild(badge);
+        if (done && stampUrl) {
+          const rightWrap = el('div', 'gr-menu-right', '');
+          const score = progressGet('grammar_' + g.id + '_drill_score');
+          if (score !== undefined && score !== null) {
+            rightWrap.appendChild(el('span', 'gr-menu-score', score + '%'));
+          }
+          const tilt = Math.floor(Math.random() * 41) - 20;
+          const stampDiv = el('div', 'gr-menu-stamp', '');
+          const img = document.createElement('img');
+          img.src = stampUrl;
+          img.alt = '✓';
+          img.style.transform = 'rotate(' + tilt + 'deg)';
+          stampDiv.appendChild(img);
+          rightWrap.appendChild(stampDiv);
+          item.appendChild(rightWrap);
+        } else if (done) {
+          item.appendChild(el('span', 'gr-menu-badge done', '✓ Done'));
+        } else {
+          item.appendChild(el('span', 'gr-menu-badge lock', '→'));
+        }
 
         item.onclick = () => loadGrammarLesson(g.file, g.id);
         menuEl.appendChild(item);
