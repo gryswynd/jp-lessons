@@ -1691,6 +1691,33 @@
       }
     }
   },
+  "causative_te": {
+    "label": "Causative Te-Form",
+    "description": "Te-form of the causative. Used in causative compound constructions such as させてもらう (be allowed to do), させてあげる (let someone do), させてくださる (be graciously allowed to do). RU-verbs drop る and add させて; U-verbs shift to the あ-row and add せて.",
+    "introducedIn": "N4.31",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "せて"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "させて"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "させて",
+        "reading": "させて"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来させて",
+        "reading": "こさせて"
+      }
+    }
+  },
   "causative_passive": {
     "label": "Causative-Passive Form",
     "description": "Expresses being made to do something (against one's will). The causative base (あ-row + せる/させる) is treated as ichidan and receives the passive suffix られる. Introduced in G22.",
@@ -1742,6 +1769,60 @@
         "type": "replace",
         "surface": "来させられます",
         "reading": "こさせられます"
+      }
+    }
+  },
+  "plain_causative_passive_past": {
+    "label": "Plain Causative-Passive Past",
+    "description": "Plain past form of the causative-passive. Expresses being made to do something in the past (against one's will). RU-verbs drop る and add させられた; U-verbs shift to the あ-row and add せられた.",
+    "introducedIn": "N4.31",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "せられた"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "させられた"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "させられた",
+        "reading": "させられた"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来させられた",
+        "reading": "こさせられた"
+      }
+    }
+  },
+  "polite_causative_passive_past": {
+    "label": "Polite Causative-Passive Past",
+    "description": "Polite past form of the causative-passive. Expresses being made to do something in the past (against one's will) in polite speech.",
+    "introducedIn": "N4.31",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "せられました"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "させられました"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "させられました",
+        "reading": "させられました"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来させられました",
+        "reading": "こさせられました"
       }
     }
   },
