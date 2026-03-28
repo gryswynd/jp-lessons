@@ -25,6 +25,7 @@
         "Ichidan (RU-verbs): how to recognise them and form the stem by dropping る",
         "Godan (U-verbs): how to recognise them and form the stem by shifting to the い-row",
         "The る-trap: why some verbs ending in る are actually godan (the vowel test)",
+        "False ichidan exceptions: a handful of verbs that pass the vowel test but are still godan — these must be memorised",
         "Irregular verbs: 来る, する, and ある — each must be memorised"
       ]
     },
@@ -522,7 +523,104 @@
           }
         }
       ],
-      "tip": "When you see a verb ending in る, immediately ask: 'What is the vowel before る?' If it is い or え → ichidan (drop る). If it is any other vowel (あ, う, お) → godan (shift る to り). This test catches the る-trap every time."
+      "tip": "When you see a verb ending in る, first ask: 'What is the vowel before る?' If it is あ, う, or お → godan (shift る to り). If it is い or え → usually ichidan (drop る) — but beware: a small number of common verbs pass this test yet are still godan. See the next section for the exceptions you need to memorise."
+    },
+    {
+      "type": "grammarRule",
+      "id": "rule_false_ichidan",
+      "pattern": [
+        {
+          "label": "LOOKS ICHIDAN",
+          "color": "verb",
+          "text": "きる (to cut)"
+        },
+        {
+          "label": "BUT",
+          "color": "modifier",
+          "text": "→ きり (godan!)"
+        },
+        {
+          "label": "NOT",
+          "color": "predicate",
+          "text": "→ き (ichidan)"
+        }
+      ],
+      "meaning": "False ichidan — common verbs that pass the vowel test but are still godan",
+      "explanation": "The vowel test works for most verbs, but a small number of everyday verbs end in いる or える — exactly like ichidan verbs — yet conjugate as godan. These are called 'false ichidan' verbs. There is no rule to predict them; you must memorise the list. The good news: the list is short.",
+      "notes": [
+        "きる (to cut) — godan: きります, きって. Compare きる (to wear) — ichidan: きます, きて. Same sound, different verb class!",
+        "はいる (to enter) — godan: はいります, はいって. The いる ending looks ichidan, but it is not.",
+        "かえる (to return home) — godan: かえります, かえって. The える ending looks ichidan, but it is not.",
+        "はしる (to run) — godan: はしります, はしって. Another しる ending that is godan.",
+        "しる (to know) — godan: しります, しって. Often used as しっています (knowing/state of knowing).",
+        "いる (to need) — godan: いります, いって. Compare いる (to exist) — ichidan: います, いて. Same sound, different class — just like the きる pair!",
+        "Strategy: when you learn a new verb ending in いる or える, always check its verb class in the dictionary. Most are ichidan, but these common exceptions are godan."
+      ],
+      "examples": [
+        {
+          "parts": [
+            {
+              "text": "きる",
+              "role": "verb",
+              "gloss": "to cut (godan)"
+            },
+            {
+              "text": "→ きり",
+              "role": "modifier",
+              "gloss": "る→り (godan shift)"
+            },
+            {
+              "text": "→ きります",
+              "role": "predicate",
+              "gloss": "godan ✓"
+            }
+          ],
+          "en": "to cut → cuts (godan: る→り shift, NOT る drop)",
+          "breakdown": "きる (to cut) looks ichidan but is godan: きり + ます = きります"
+        },
+        {
+          "parts": [
+            {
+              "text": "きる",
+              "role": "verb",
+              "gloss": "to wear (ichidan)"
+            },
+            {
+              "text": "→ き",
+              "role": "modifier",
+              "gloss": "drop る"
+            },
+            {
+              "text": "→ きます",
+              "role": "predicate",
+              "gloss": "ichidan ✓"
+            }
+          ],
+          "en": "to wear → wears (ichidan: drop る)",
+          "breakdown": "きる (to wear) IS ichidan: き + ます = きます. Same dictionary sound as 'to cut', different class!"
+        },
+        {
+          "parts": [
+            {
+              "text": "はいる",
+              "role": "verb",
+              "gloss": "to enter (godan)"
+            },
+            {
+              "text": "→ はいり",
+              "role": "modifier",
+              "gloss": "る→り (godan shift)"
+            },
+            {
+              "text": "→ はいります",
+              "role": "predicate",
+              "gloss": "godan ✓"
+            }
+          ],
+          "en": "to enter → enters (godan despite いる ending)",
+          "breakdown": "はいる: the いる ending looks ichidan, but this is godan → はいり + ます = はいります"
+        }
+      ]
     },
     {
       "type": "annotatedExample",
@@ -880,7 +978,31 @@
             "Irregular verbs follow the godan stem rule with a special reading"
           ],
           "answer": "Verbs ending in る are ichidan ONLY IF the vowel before る is in the い/え-row",
-          "explanation": "The る-trap: some verbs ending in る are actually godan. The vowel test: if the sound before る is in the い/え-row → ichidan. If it is any other row (あ, う, お) → godan. Example: 分かる (か = あ-row) is godan, NOT ichidan."
+          "explanation": "The る-trap: some verbs ending in る are actually godan. The vowel test: if the sound before る is in the い/え-row → usually ichidan. If it is any other row (あ, う, お) → godan. Example: 分かる (か = あ-row) is godan, NOT ichidan. Note: a few common exceptions exist — see the next question."
+        },
+        {
+          "kind": "mcq",
+          "q": "「きる」can mean 'to cut' or 'to wear'. The verb 'to cut' is godan. What is its correct polite form?",
+          "choices": [
+            "きります",
+            "きます",
+            "きるます",
+            "きいます"
+          ],
+          "answer": "きります",
+          "explanation": "きる (to cut) is a false ichidan — it ends in いる but conjugates as godan. Godan る→り shift: きり + ます = きります. Compare きる (to wear), which IS ichidan: き + ます = きます."
+        },
+        {
+          "kind": "mcq",
+          "q": "Which of these verbs is godan DESPITE ending in いる or える?",
+          "choices": [
+            "はいる (to enter)",
+            "たべる (to eat)",
+            "みる (to see)",
+            "いる (to exist)"
+          ],
+          "answer": "はいる (to enter)",
+          "explanation": "はいる (to enter) is a false ichidan — it ends in いる but is godan: はいります (not はいます). The others are all true ichidan verbs: たべます, みます, います. False ichidan verbs like はいる, かえる, はしる, and しる must be memorised."
         }
       ]
     }
