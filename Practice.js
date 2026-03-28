@@ -338,17 +338,14 @@ window.PracticeModule = {
                 <button class="k-btn" style="background: linear-gradient(135deg, #16a085 0%, #1abc9c 100%);" onclick="KanjiApp.start('vocab', 'flash')">🗂️ Vocab Flashcards</button>
                 <button class="k-btn" style="background: linear-gradient(135deg, #16a085 0%, #1abc9c 100%);" onclick="KanjiApp.start('vocab', 'quiz-vocab')">📝 Vocab Quiz</button>
 
-                <div class="k-lbl" style="margin-top:2rem; color:#f39c12;">FLAGGED ITEMS</div>
-                <button class="k-btn" style="background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);" onclick="KanjiApp.start('mixed', 'flag-review')">🚩 Review Flagged</button>
-
                 <div class="k-lbl" style="margin-top:2rem; color:#8e44ad;">VERB PRACTICE</div>
                 <button class="k-btn" style="background: linear-gradient(135deg, #8e44ad 0%, #6c3483 100%);" onclick="KanjiApp.start('dojo','dojo')">⚡ Conjugation Station</button>
 
-                <div class="k-lbl" style="margin-top:2rem; color:#5C3A21;">SENTENCE PRACTICE</div>
-                <button class="k-btn" style="background: linear-gradient(135deg, #6B4226 0%, #4A2E18 100%);" onclick="KanjiApp.toggleScrMenu()">🔀 Scramble</button>
+                <div class="k-lbl" style="margin-top:2rem; color:#d4729a;">SENTENCE PRACTICE</div>
+                <button class="k-btn" style="background: linear-gradient(135deg, #d4729a 0%, #b8527e 100%);" onclick="KanjiApp.toggleScrMenu()">🌸 Scramble</button>
                 <div id="k-scr-submenu" class="k-linkup-menu k-hidden">
                     <div class="k-linkup-btn" onclick="KanjiApp.start('scramble','scramble')">
-                        <span class="icon">🔀</span>
+                        <span class="icon">🌸</span>
                         <span><div>Practice</div><div class="info">N5 sentences — shuffled order</div></span>
                     </div>
                     <div class="k-linkup-btn" onclick="KanjiApp.start('marathon','marathon')">
@@ -356,7 +353,7 @@ window.PracticeModule = {
                         <span><div>Marathon</div><div class="info">N4 progressive — warm-up → challenge</div></span>
                     </div>
                 </div>
-                <button class="k-btn" style="background: linear-gradient(135deg, #6B4226 0%, #4A2E18 100%);" onclick="KanjiApp.toggleLinkUpMenu()">🔗 Link Up</button>
+                <button class="k-btn" style="background: linear-gradient(135deg, #d4729a 0%, #b8527e 100%);" onclick="KanjiApp.toggleLinkUpMenu()">🔗 Link Up</button>
                 <div id="k-linkup-submenu" class="k-linkup-menu k-hidden">
                     <div class="k-linkup-btn" onclick="KanjiApp.start('connections','connections')">
                         <span class="icon">🔗</span>
@@ -367,6 +364,9 @@ window.PracticeModule = {
                         <span><div>Hidden</div><div class="info">NYT-style — guess the groups, 4 lives</div></span>
                     </div>
                 </div>
+
+                <div class="k-lbl" style="margin-top:2rem; color:#f39c12;">FLAGGED ITEMS</div>
+                <button class="k-btn" style="background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);" onclick="KanjiApp.start('mixed', 'flag-review')">🚩 Review Flagged</button>
             </div>
 
             <div id="k-view-flash" class="k-hidden" style="width:100%">
