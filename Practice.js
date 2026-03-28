@@ -312,12 +312,12 @@ window.PracticeModule = {
             <div id="k-view-menu" style="width:100%">
 
                 <div onclick="KanjiApp.toggleLessonOverlay()" style="cursor:pointer;display:flex;align-items:center;justify-content:center;gap:14px;padding:8px 0 12px;margin-bottom:0.5rem;" title="Select Lessons">
-                    <span style="font-size:1.6rem;line-height:1;">🎯</span>
+                    <span style="font-size:2rem;line-height:1;">🎯</span>
                     <div style="display:flex;gap:14px;">
-                        <div style="text-align:center"><div style="font-weight:800;font-size:0.95rem;color:var(--primary)" id="k-cnt-k">0</div><div class="k-lbl">Kanji</div></div>
-                        <div style="text-align:center"><div style="font-weight:800;font-size:0.95rem;color:#16a085" id="k-cnt-vocab">0</div><div class="k-lbl">Vocab</div></div>
-                        <div style="text-align:center"><div style="font-weight:800;font-size:0.95rem;color:#8e44ad" id="k-cnt-v">0</div><div class="k-lbl">Verbs</div></div>
-                        <div style="text-align:center"><div style="font-weight:800;font-size:0.95rem;color:#f39c12" id="k-cnt-flags">0</div><div class="k-lbl">Flags</div></div>
+                        <div style="text-align:center"><div style="font-weight:800;font-size:1.15rem;color:var(--primary)" id="k-cnt-k">0</div><div class="k-lbl">Kanji</div></div>
+                        <div style="text-align:center"><div style="font-weight:800;font-size:1.15rem;color:#16a085" id="k-cnt-vocab">0</div><div class="k-lbl">Vocab</div></div>
+                        <div style="text-align:center"><div style="font-weight:800;font-size:1.15rem;color:#8e44ad" id="k-cnt-v">0</div><div class="k-lbl">Verbs</div></div>
+                        <div style="text-align:center"><div style="font-weight:800;font-size:1.15rem;color:#f39c12" id="k-cnt-flags">0</div><div class="k-lbl">Flags</div></div>
                     </div>
                 </div>
 
