@@ -448,10 +448,10 @@
         },
         {
           "spk": "B",
-          "jp": "えっ、ほんとうに？習ったことが ある？",
+          "jp": "え、ほんとうに？習ったことが ある？",
           "en": "Really? Have you learned it before?",
           "terms": [
-            "v_e",
+            "v_e_exclaim",
             "p_hontou",
             {
               "id": "v_narau",
@@ -725,8 +725,8 @@
           ]
         },
         {
-          "jp": "先生を 見習うことで、漢字を 少し おぼえて きました。",
-          "en": "By emulating the teacher, I have gradually come to remember kanji.",
+          "jp": "先生を 見習うことで、漢字が 少し わかって きました。",
+          "en": "By emulating the teacher, I have gradually come to understand kanji.",
           "terms": [
             "v_sensei",
             "p_wo",
@@ -737,10 +737,10 @@
             "v_koto",
             "p_de",
             "v_kanji",
-            "p_wo",
+            "p_ga",
             "v_sukoshi",
             {
-              "id": "v_oboeru",
+              "id": "v_wakaru",
               "form": "te_form"
             },
             {
@@ -806,18 +806,24 @@
           ]
         },
         {
-          "q": "どのように 漢字を おぼえましたか。",
-          "q_en": "How did they come to remember kanji?",
-          "a": "先生を 見習うことで、少し おぼえて きました。",
-          "a_en": "By emulating the teacher, they came to remember a bit.",
+          "q": "どのように 漢字が わかるように なりましたか。",
+          "q_en": "How did they come to understand kanji?",
+          "a": "先生を 見習うことで、少し わかって きました。",
+          "a_en": "By emulating the teacher, they gradually came to understand.",
           "terms": [
             "v_dono",
             "v_you_manner",
             "p_ni",
             "v_kanji",
-            "p_wo",
+            "p_ga",
             {
-              "id": "v_oboeru",
+              "id": "v_wakaru",
+              "form": "plain_form"
+            },
+            "v_you_manner",
+            "p_ni",
+            {
+              "id": "v_naru",
               "form": "polite_mashita"
             },
             "p_ka"
@@ -833,7 +839,7 @@
             "p_de",
             "v_sukoshi",
             {
-              "id": "v_oboeru",
+              "id": "v_wakaru",
               "form": "te_form"
             },
             {
