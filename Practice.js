@@ -292,7 +292,7 @@ window.PracticeModule = {
 
         <header>
            <span onclick="KanjiApp.showMenu()">Kanji Master 先生</span>
-           <div style="display:flex;gap:8px;align-items:center;"><button class="k-filter-btn" onclick="KanjiApp.toggleLessonOverlay()" title="Select Lessons">&#x1F3AF;</button><button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button><button class="k-exit-btn">Exit</button></div>
+           <div style="display:flex;gap:8px;align-items:center;"><button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings">\u2699</button><button class="k-exit-btn">Exit</button></div>
         </header>
 
         <div id="k-lesson-overlay" class="k-overlay k-hidden">
@@ -302,12 +302,6 @@ window.PracticeModule = {
                     <span>Select Lessons</span>
                     <button class="k-overlay-close" onclick="KanjiApp.toggleLessonOverlay()">\u2715</button>
                 </div>
-                <div class="k-overlay-stats">
-                    <div><div class="k-big" style="color:var(--primary)" id="k-cnt-k">0</div><div class="k-lbl">Kanji</div></div>
-                    <div><div class="k-big" style="color:#16a085" id="k-cnt-vocab">0</div><div class="k-lbl">Vocab</div></div>
-                    <div><div class="k-big" style="color:#8e44ad" id="k-cnt-v">0</div><div class="k-lbl">Verbs</div></div>
-                    <div><div class="k-big" style="color:#f39c12" id="k-cnt-flags">0</div><div class="k-lbl">Flags</div></div>
-                </div>
                 <div class="k-overlay-body">
                     <div class="k-filters" id="k-lesson-container"></div>
                 </div>
@@ -316,6 +310,14 @@ window.PracticeModule = {
 
         <div id="k-app-container">
             <div id="k-view-menu" style="width:100%">
+
+                <div style="display:flex;justify-content:center;gap:20px;padding:12px 0 8px;">
+                    <div style="text-align:center"><div class="k-big" style="color:var(--primary)" id="k-cnt-k">0</div><div class="k-lbl">Kanji</div></div>
+                    <div style="text-align:center"><div class="k-big" style="color:#16a085" id="k-cnt-vocab">0</div><div class="k-lbl">Vocab</div></div>
+                    <div style="text-align:center"><div class="k-big" style="color:#8e44ad" id="k-cnt-v">0</div><div class="k-lbl">Verbs</div></div>
+                    <div style="text-align:center"><div class="k-big" style="color:#f39c12" id="k-cnt-flags">0</div><div class="k-lbl">Flags</div></div>
+                </div>
+                <button class="k-btn" style="background:linear-gradient(135deg,#3a3a3a 0%,#555 100%);font-size:1.05rem;margin-bottom:1.5rem;" onclick="KanjiApp.toggleLessonOverlay()">🎯 Select Lessons</button>
 
                 <div class="k-lbl" style="margin-top:0.5rem">KANJI PRACTICE</div>
                 <button class="k-btn" onclick="KanjiApp.start('kanji', 'flash')">🎴 Flashcards</button>

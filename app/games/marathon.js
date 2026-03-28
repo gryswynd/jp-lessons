@@ -160,6 +160,9 @@
     container.innerHTML = ''; allMarathons = []; locked = false;
     cleanupDrag();
 
+    var stampApi = window.JPShared && window.JPShared.stampSettings;
+    if (stampApi && stampApi.loadCharacters) stampApi.loadCharacters();
+
     var level = cfg.level || 'N4';
     container.innerHTML = '<div class="mara-wrap" style="text-align:center;padding:32px;color:#a89cc8;font-size:0.9rem;">Loading\u2026</div>';
 

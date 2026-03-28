@@ -214,6 +214,9 @@
     allAvailable = [];
     locked       = false;
 
+    var stampApi = window.JPShared && window.JPShared.stampSettings;
+    if (stampApi && stampApi.loadCharacters) stampApi.loadCharacters();
+
     var level = cfg.level || 'N4';
     container.innerHTML =
       '<div class="c4-wrap" style="text-align:center;padding:32px;' +

@@ -237,6 +237,9 @@
     dragFrom      = null;
     sourceEl      = null;
 
+    var stampApi = window.JPShared && window.JPShared.stampSettings;
+    if (stampApi && stampApi.loadCharacters) stampApi.loadCharacters();
+
     var level = cfg.level || 'N5';
     container.innerHTML =
       '<div class="conn-wrap" style="text-align:center;padding:32px;color:#aaa;font-size:0.9rem;">Loading…</div>';
