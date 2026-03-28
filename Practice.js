@@ -311,13 +311,15 @@ window.PracticeModule = {
         <div id="k-app-container">
             <div id="k-view-menu" style="width:100%">
 
-                <div style="display:flex;justify-content:center;gap:20px;padding:12px 0 8px;">
-                    <div style="text-align:center"><div class="k-big" style="color:var(--primary)" id="k-cnt-k">0</div><div class="k-lbl">Kanji</div></div>
-                    <div style="text-align:center"><div class="k-big" style="color:#16a085" id="k-cnt-vocab">0</div><div class="k-lbl">Vocab</div></div>
-                    <div style="text-align:center"><div class="k-big" style="color:#8e44ad" id="k-cnt-v">0</div><div class="k-lbl">Verbs</div></div>
-                    <div style="text-align:center"><div class="k-big" style="color:#f39c12" id="k-cnt-flags">0</div><div class="k-lbl">Flags</div></div>
+                <div onclick="KanjiApp.toggleLessonOverlay()" style="cursor:pointer;display:flex;align-items:center;justify-content:center;gap:14px;padding:8px 0 12px;margin-bottom:0.5rem;" title="Select Lessons">
+                    <span style="font-size:1.6rem;line-height:1;">🎯</span>
+                    <div style="display:flex;gap:14px;">
+                        <div style="text-align:center"><div style="font-weight:800;font-size:0.95rem;color:var(--primary)" id="k-cnt-k">0</div><div class="k-lbl">Kanji</div></div>
+                        <div style="text-align:center"><div style="font-weight:800;font-size:0.95rem;color:#16a085" id="k-cnt-vocab">0</div><div class="k-lbl">Vocab</div></div>
+                        <div style="text-align:center"><div style="font-weight:800;font-size:0.95rem;color:#8e44ad" id="k-cnt-v">0</div><div class="k-lbl">Verbs</div></div>
+                        <div style="text-align:center"><div style="font-weight:800;font-size:0.95rem;color:#f39c12" id="k-cnt-flags">0</div><div class="k-lbl">Flags</div></div>
+                    </div>
                 </div>
-                <button class="k-btn" style="background:linear-gradient(135deg,#3a3a3a 0%,#555 100%);font-size:1.05rem;margin-bottom:1.5rem;" onclick="KanjiApp.toggleLessonOverlay()">🎯 Select Lessons</button>
 
                 <div class="k-lbl" style="margin-top:0.5rem">KANJI PRACTICE</div>
                 <button class="k-btn" onclick="KanjiApp.start('kanji', 'flash')">🎴 Flashcards</button>
