@@ -99,6 +99,7 @@
       '.scr-tile:active{cursor:grabbing;}' +
       '.scr-tile.scr-dragging{opacity:0.25;transform:scale(0.95);}' +
       '.scr-tile.scr-correct{border-color:#27ae60;background:#e8f8e8;color:#1a6e3a;}' +
+      '.scr-tile.scr-misplaced{border-color:#e6a817;background:#fff8e0;color:#6b4500;}' +
       '.scr-tile.scr-wrong{border-color:#c0392b;background:#fde8e8;' +
         'animation:scrShake 0.45s ease;}' +
 
@@ -181,6 +182,35 @@
     if (a.length !== b.length) return false;
     for (var i = 0; i < a.length; i++) { if (a[i] !== b[i]) return false; }
     return true;
+  }
+
+  // Returns array of 'correct'|'misplaced'|'wrong' for each placed tile vs the correct answer.
+  function getTileColors(placed, correct) {
+    var colors = [];
+    var correctCopy = correct.slice();
+    var placedUsed = [];
+    var i, j;
+    for (i = 0; i < placed.length; i++) { colors.push('wrong'); placedUsed.push(false); }
+    // Pass 1: exact matches
+    for (i = 0; i < placed.length; i++) {
+      if (i < correctCopy.length && placed[i] === correctCopy[i]) {
+        colors[i] = 'correct';
+        correctCopy[i] = null;
+        placedUsed[i] = true;
+      }
+    }
+    // Pass 2: misplaced (right word, wrong spot)
+    for (i = 0; i < placed.length; i++) {
+      if (placedUsed[i]) continue;
+      for (j = 0; j < correctCopy.length; j++) {
+        if (correctCopy[j] === placed[i]) {
+          colors[i] = 'misplaced';
+          correctCopy[j] = null;
+          break;
+        }
+      }
+    }
+    return colors;
   }
 
   // ── Per-puzzle persistence ────────────────────────────────────────
@@ -617,10 +647,18 @@
       tiles.forEach(function (t) { t.classList.add('scr-correct'); });
       showExplanation(item);
     } else {
-      tiles.forEach(function (t) { t.classList.add('scr-wrong'); });
+      var colors = getTileColors(slotTiles, item.segments);
+      tiles.forEach(function (t, i) {
+        var cls = colors[i] === 'correct' ? 'scr-correct'
+                : colors[i] === 'misplaced' ? 'scr-misplaced'
+                : 'scr-wrong';
+        t.classList.add(cls);
+      });
       setTimeout(function () {
         locked = false;
-        tiles.forEach(function (t) { t.classList.remove('scr-wrong'); });
+        tiles.forEach(function (t) {
+          t.classList.remove('scr-correct', 'scr-misplaced', 'scr-wrong');
+        });
       }, 550);
     }
   }
