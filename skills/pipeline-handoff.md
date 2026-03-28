@@ -2,7 +2,7 @@
 
 > **Loaded by:** Agent 1 (Project Manager) for orchestration reference.
 > **Purpose:** Defines the handoff protocol between agents and the quick-start prompt template for Claude Code.
-> **See also:** `skills/pipeline-overview.md` (Pipeline overview + Agents 1 & 2), `skills/pipeline-reviewers.md` (Agents 3 & 4).
+> **See also:** `skills/pipeline-overview.md` (Pipeline overview + Agent 1), `skills/pipeline-content-builder.md` (Agent 2 + CB Checklist), `skills/pipeline-reviewers.md` (Agents 3 & 4).
 
 ---
 
