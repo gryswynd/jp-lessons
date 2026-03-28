@@ -161,7 +161,7 @@
       ]
     },
     {
-      "prompt": "Write that you think it would be good to study engineering. You have heard there is an artificial river nearby too. Use 工学 and 人工.",
+      "prompt": "Seeing all the construction work around you, write that you think it would be interesting to study engineering. Also mention that you heard there is an artificial river nearby. Use 工学 and 人工.",
       "targets": [
         {
           "id": "v_kougaku",
@@ -254,7 +254,7 @@
           "count": 1
         }
       ],
-      "model": "たくさんの 建物が 建って、新しい 町に なったと 思います。",
+      "model": "建物が たくさん 建って、建国のように 新しい 町が できたと 思います。",
       "vocabPool": [
         "v_kenkoku",
         "v_tatsu_build",
@@ -264,7 +264,7 @@
         "v_machi",
         "v_omou",
         "v_naru",
-        "v_you",
+        "v_you_manner",
         "p_ga",
         "p_no",
         "p_ni",

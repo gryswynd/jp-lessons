@@ -574,8 +574,8 @@
         },
         {
           "spk": "B",
-          "jp": "うん。あの 広い 広場も 作られた みたい だよ。",
-          "en": "Yeah. It looks like that wide square was also made.",
+          "jp": "うん。あの 広い 広場も できた みたいだよ。",
+          "en": "Yeah. It looks like that wide square was also finished.",
           "terms": [
             "v_un",
             "v_ano",
@@ -586,12 +586,12 @@
             "v_hiroba",
             "p_mo",
             {
-              "id": "v_tsukuru",
-              "form": "plain_passive_past"
+              "id": "v_dekiru",
+              "form": "plain_past"
             },
             "v_mitai",
-            "p_yo",
-            "g_da"
+            "g_da",
+            "p_yo"
           ]
         },
         {
@@ -627,9 +627,13 @@
         },
         {
           "spk": "B",
-          "jp": "この 場所が もっと 広く なって いく って 思う。楽しそう だ ね。",
-          "en": "I think this place will get even wider. It sounds exciting.",
+          "jp": "建国のように、この 場所が もっと 広く なって いく って 思う。楽しそうだね。",
+          "en": "Like building a nation, I think this place will keep getting wider. Sounds exciting.",
           "terms": [
+            "v_kenkoku",
+            "p_no",
+            "v_you_manner",
+            "p_ni",
             "v_kono",
             "v_basho",
             "p_ga",
@@ -937,27 +941,28 @@
           ]
         },
         {
-          "jp": "広場の 広さを 広めるために、人々が 来て 使って います。",
-          "en": "In order to make use of the square's wide space, people come and use it.",
+          "jp": "この 広い 場所を 使うために、たくさんの 人々が 集まって います。",
+          "en": "In order to use this wide space, many people gather here.",
           "terms": [
-            "v_hiroba",
-            "p_no",
-            "v_hirosa",
+            "v_kono",
+            {
+              "id": "v_hiroi",
+              "form": "plain_form"
+            },
+            "v_basho",
             "p_wo",
             {
-              "id": "v_hiromeru",
+              "id": "v_tsukau",
               "form": "plain_form"
             },
             "v_tame",
             "p_ni",
+            "v_takusan",
+            "p_no",
             "v_hitobito",
             "p_ga",
             {
-              "id": "v_kuru",
-              "form": "te_form"
-            },
-            {
-              "id": "v_tsukau",
+              "id": "v_atsumaru",
               "form": "te_form"
             },
             {
