@@ -550,15 +550,13 @@ window.LessonModule = {
         if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
 
         const unlock = window.JPShared && window.JPShared.unlock;
-        if (!unlock || !manifestData || !lessonData || !lessonData.id) {
-            nextBtn.innerText = "Finish";
-            prevBtn.style.visibility = 'hidden';
-            return;
+
+        // Always persist score + completion so stamps appear on the menu.
+        if (unlock && manifestData && lessonData && lessonData.id) {
+            unlock.computeUnlocks(lessonData.id, pct, manifestData);
         }
 
-        const result = unlock.computeUnlocks(lessonData.id, pct, manifestData);
-
-        if (unlock.isFree()) {
+        if (!unlock || unlock.isFree() || !manifestData || !lessonData || !lessonData.id) {
             nextBtn.innerText = "Finish";
             prevBtn.style.visibility = 'hidden';
             return;
