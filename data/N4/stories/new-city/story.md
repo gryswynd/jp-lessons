@@ -5,19 +5,13 @@
 
 ### Story Text (Japanese)
 
-ゆきさんは山村から青森県の大きい都市へ来ました。村人だったゆきさんは、「新しい時代が始まった」と思いました。
+ある朝、やまかわはりきぞに「青森県の都市へ行こう。いっしょに始発の電車で行くのはどうだ」と言った。二人はこんな都市に来たことがなかったので、早く出発した。電車の中から大通りが見えてきた時、りきぞは「ここは山村より広大だ」と思った。
 
-都市はとても広大でした。大通りには建物がたくさん建っていました。ゆきさんは毎日、始発の電車に乗って、木工の工場に通いました。工場は広い場所にありました。
+都市に着いたら、二人は木工の工場へ行った。工場で働いているのは大工の小林さん だった。「木工の仕事は、工員に大切にされた」と小林さんが言った。「この工場は何時代も前から建っているんだ」とやまかわが言った。小林さんは二人に木工の物を試させてくれた。やまかわは小林さんの仕事を見習いながら、木工を習った。りきぞは集中して木工を習った。りきぞは木の物を上手に作れるようになりたいと思った。
 
-工場では大工の小林さんが働いていました。小林さんの世代は木工を特別に大切にしていました。工場に30人以上の工員がいました。ゆきさんは小林さんを見習って、木工を習いました。集中して上手になりました。工場の食堂でよく話しました。
+木工を体験してから、二人は工場の近くの古い地区を歩いた。古い門を発見した時、りきぞはとてもうれしかった。門の前には広い森があり、森の中に池があった。池の近くに会堂があったので、二人は中へ入ってみた。会堂を開けたら、古い時計が目に入ってきた。「こんな古い建物がこの地区にあるとは知らなかったんだ」とりきぞが言った。また来るために、この場所をよく知りたいと思った。
 
-ある日、ゆきさんは急用で早く工場に来ました。工場の近くに古い門を発見しました。門の前に大きい森がありました。森の近くに池がありました。森の中に会堂がありました。会堂の入り口を開けました。中に古い時計がありました。
-
-ゆきさんは計画を考えました。「この場所を市長に知らせたい」と思いました。
-
-ある朝、ゆきさんは朝市で市長に会いました。「この地区に古い会堂を発見しました」と言いました。市長は答えを知っていました。「その建物は特別区にある大切な場所です」と言いました。
-
-ゆきさんは特に楽しかったです。山村から都市へ来ましたが、大切な物は同じだと思いました。今も毎日、始発の電車に乗って工場に通っています。
+つぎの朝、二人は朝市へ行った。朝市では食べ物や木工の物を見たり、地区の中を歩いたりした。りきぞは考えながら、この都市のことをもっと知りたいと思った。「山村でも大切な物は同じだ」とやまかわが言った。帰る電車に乗る前に、りきぞはもう一度、会堂の前に立った。「また来たいと思う。この都市には、まだ発見していない場所がたくさんあるんだ」とりきぞが言った。
 
 **おわり**
 
@@ -27,84 +21,33 @@
 
 **In the New City**
 
-Yuki came from a mountain village to a big city in Aomori Prefecture. Yuki, who had been a villager, thought, "A new era has begun."
+One morning, Yamakawa said to Rikizo, "Let's go to a city in Aomori Prefecture. How about going together on the first train?" Since the two of them had never been to a city like this before, they departed early. When the main street came into view from inside the train, Rikizo thought, "This place is more vast than any mountain village."
 
-The city was very vast. Many buildings had been built along the main street. Every day, Yuki took the first train and commuted to a woodworking factory. The factory was in a spacious place.
+When they arrived in the city, the two went to a woodworking workshop. The one working at the workshop was a master carpenter named Kobayashi. "Woodworking has been treasured by the workers," said Kobayashi. "This workshop has been standing here for many eras," said Yamakawa. Kobayashi let the two of them try the woodworking things. Yamakawa learned woodworking by following Kobayashi's example. Rikizo concentrated and practiced woodworking. Rikizo thought he wanted to become able to make wooden things skillfully.
 
-At the factory, a carpenter named Kobayashi worked. Kobayashi's generation held woodworking in special regard. There were more than 30 workers at the factory. Yuki emulated Mr. Kobayashi and learned woodworking. By concentrating, she became skilled. They often talked in the factory's cafeteria.
+After experiencing woodworking, the two walked through an old district near the workshop. When they discovered an old gate, Rikizo was very happy. In front of the gate was a wide forest, and inside the forest was a pond. Since there was an assembly hall near the pond, the two of them stepped inside. When they opened the assembly hall, an old clock came into view. "I didn't know there was such an old building in this district," said Rikizo. In order to come back again, he wanted to get to know this place well.
 
-One day, Yuki came to the factory early on urgent business. She discovered an old gate near the factory. In front of the gate was a large forest. Near the forest was a pond. Inside the forest was an assembly hall. She opened the entrance of the assembly hall. Inside there was an old clock.
-
-Yuki thought about a plan. She thought, "I want to inform the mayor about this place."
-
-One morning, Yuki met the mayor at the morning market. "I discovered an old assembly hall in this district," she said. The mayor already knew the answer. "That building is an important place in the special ward," he said.
-
-Yuki was especially pleased. She came from a mountain village to the city, but she thought the important things are the same. Even now, every day, she takes the first train and commutes to the factory.
+The next morning, the two went to the morning market. At the morning market, they looked at food and wooden items, and walked through the district. As he thought things over, Rikizo thought he wanted to learn more about this city. "The important things are the same even in the mountain village," said Yamakawa. Before boarding the train home, Rikizo stood in front of the assembly hall one more time. "I think I want to come back. There are still so many places in this city that we haven't discovered yet," said Rikizo.
 
 **The End**
 
 ---
 
-### Vocabulary Used (from N4 Lessons 28–34)
-
-**N4.28 – Places & Parts**
-- 山村 (さんそん) - mountain village
-- 村人 (むらびと) - villager
-- 門 (もん) - gate
-- 池 (いけ) - pond
-
-**N4.29 – Measurement & Knowledge**
-- 時計 (とけい) - clock
-- 計画 (けいかく) - plan
-- 以上 (いじょう) - more than
-
-**N4.30 – Thoughts & Special Answers**
-- 思う (おもう) - to think
-- 特別 (とくべつ) - special
-- 集中する (しゅうちゅうする) - to concentrate
-- 答え (こたえ) - answer
-
-**N4.31 – Times & Openings**
-- 時代 (じだい) - era / age
-- 世代 (せだい) - generation
-- 森 (もり) - forest
-- 食堂 (しょくどう) - cafeteria / dining hall
-- 会堂 (かいどう) - assembly hall
-- 開ける (あける) - to open
-
-**N4.32 – Use, Learn, & The City**
-- 都市 (とし) - city / metropolis
-- 市長 (しちょう) - mayor
-- 朝市 (あさいち) - morning market
-- 見習う (みならう) - to emulate
-- 習う (ならう) - to learn
-- 急用 (きゅうよう) - urgent business
-- 楽しい (たのしい) - enjoyable / fun
-
-**N4.33 – Places, Factories, & Buildings**
-- 工場 (こうじょう) - factory
-- 工員 (こういん) - factory worker
-- 大工 (だいく) - carpenter
-- 木工 (もっこう) - woodwork
-- 建物 (たてもの) - building
-- 場所 (ばしょ) - place
-- 広い (ひろい) - spacious / wide
-- 広大 (こうだい) - vast
-- 物 (もの) - thing
-
-**N4.34 – Districts, Departure, & Commuting**
-- 青森県 (あおもりけん) - Aomori Prefecture
-- 始発 (しはつ) - first train
-- 大通り (おおどおり) - main street
-- 発見する (はっけんする) - to discover
-- 地区 (ちく) - district
-- 特別区 (とくべつく) - special ward
-- 通う (かよう) - to commute
-
 ### Grammar Points Used
 
-- Past tense (ました、でした)
-- Plain past (始まった、楽しかった)
-- Te-form (建って、乗って、見習って、集中して)
-- Desire form (~たい: 知らせたい)
-- Te-iru form (通っています、働いていました)
+| Pattern | Example from story | Meaning |
+|---|---|---|
+| たことがある (past experience) | こんな都市に来たことがなかった | had never been to a city like this |
+| と思う (thought/opinion) | また来たいと思う | I think I want to come back |
+| passive (〜された) | 木工の仕事は、工員に大切にされた | woodworking has been treasured by the workers |
+| causative (〜させてくれた) | 小林さんは二人に木工の物を試させてくれた | Kobayashi let the two of them try the woodworking things |
+| ～てから (after doing) | 木工を体験してから | after experiencing woodworking |
+| ～ために (in order to) | また来るために | in order to come back again |
+| ～ながら (while doing) | 小林さんの仕事を見習いながら | while following Kobayashi's example |
+| たり～たりする (listing) | 食べ物を見たり、地区を歩いたりした | looked at food and walked the district (among other things) |
+| てくる directional | 大通りが見えてきた / 時計が目に入ってきた | the street came into view / the clock came into view |
+| たら conditional | 都市に着いたら / 会堂を開けたら | when they arrived / when they opened the assembly hall |
+| potential form (〜られる) | 木の物を上手に作れるようになりたい | wants to become able to make wooden things skillfully |
+| のです/んだ (explanatory) | この工場は何時代も前から建っているんだ | this workshop has been standing here for many eras (explanatory) |
+| ようになる (come to be able to) | 上手に作れるようになりたい | wants to become able to make skillfully |
+| より comparison | 山村より広大だ | more vast than any mountain village |
