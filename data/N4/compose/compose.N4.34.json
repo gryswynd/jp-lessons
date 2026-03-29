@@ -14,7 +14,7 @@
         { "id": "v_ku", "count": 1 },
         { "id": "v_ken", "count": 1 }
       ],
-      "model": "わたしは 新しい 県の 区に 来て、住みました。",
+      "model": "わたしは 新しい 県の 区に 来て、住んでいます。",
       "vocabPool": [
         "v_watashi",
         "v_ku",
@@ -58,7 +58,7 @@
         { "id": "v_tsuugaku", "count": 1 },
         { "id": "v_kayou", "count": 1 }
       ],
-      "model": "今は 毎日 電車で 通学して、学校に 通って います。",
+      "model": "毎日 電車で 通学しています。学校に 通うのは 楽しいです。",
       "vocabPool": [
         "v_tsuugaku",
         "v_kayou",
@@ -68,6 +68,7 @@
         "v_ima",
         "v_suru",
         "v_iru",
+        "v_tanoshii",
         "p_wa",
         "p_de",
         "p_ni",
@@ -164,43 +165,45 @@
       ]
     },
     {
-      "prompt": "Write that you learned this ward is outside the main part of the prefecture (県外), and that it is a special ward (特別区). Use 県外 and 特別区.",
+      "prompt": "Write that many people from outside the prefecture (県外) have come to live in this special ward (特別区). Use 県外 and 特別区.",
       "targets": [
         { "id": "v_kengai", "count": 1 },
         { "id": "v_tokubetsuku", "count": 1 }
       ],
-      "model": "この 区は 県外に あって、特別区と 言われて います。",
+      "model": "県外から 来た 人も この 特別区に 住んでいます。",
       "vocabPool": [
         "v_kengai",
         "v_tokubetsuku",
         "v_ku",
         "v_ken",
-        "v_aru",
+        "v_kuru",
+        "v_sumu",
         "v_iru",
-        "v_kiku",
-        "v_shiru",
-        "p_wa",
+        "v_hito",
+        "v_ooi",
+        "p_kara",
+        "p_mo",
         "p_ni",
-        "p_to",
         "p_ga",
-        "p_no"
+        "p_no",
+        "p_wa"
       ]
     },
     {
-      "prompt": "Write that you gave a speech (発言した) about your new commute experience at school. Use 発言.",
+      "prompt": "Write that you spoke up (発言した) about your commute experience in class. Use 発言.",
       "targets": [
         { "id": "v_hatsugen", "count": 1 }
       ],
-      "model": "学校で、通学に ついて 発言しました。",
+      "model": "学校で、毎日の 通学の ことを 発言しました。",
       "vocabPool": [
         "v_hatsugen",
         "v_suru",
         "v_tsuugaku",
         "v_gakkou",
+        "v_koto",
+        "v_mainichi",
         "v_kiku",
-        "v_oshieru",
         "v_hanasu",
-        "v_benkyou",
         "p_de",
         "p_wo",
         "p_ni",
@@ -294,6 +297,7 @@
     "p_demo_but",
     "p_tte_quote",
     "p_ga_but",
+    "p_kedo",
     "g_desu",
     "g_da"
   ],
@@ -317,7 +321,7 @@
       ]
     },
     {
-      "pattern": "[verb-causative-passive] + させられる / せられる",
+      "pattern": "[verb-causative-passive] + せられる / させられる",
       "meaning": "be made to do / was forced to do (causative-passive)",
       "examples": [
         "毎日 あの 地区を 通って 通学させられた",
