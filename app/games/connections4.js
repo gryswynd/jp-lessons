@@ -534,11 +534,7 @@
 
     savePuzzleResult(puzzle.id, 'failed');
 
-    // Reveal all unsolved groups in original order
-    puzzle.groups.forEach(function (_, gi) {
-      if (solved.indexOf(gi) === -1) solved.push(gi);
-    });
-
+    // Only show groups the player already solved (no solution reveal)
     var solvedHtml = solved.map(function (si) {
       var g   = puzzle.groups[si];
       var bg  = LANTERN_BG[si];
@@ -565,8 +561,8 @@
     var savedPuzzle = puzzle;   // capture before any re-render
     container.innerHTML =
       '<div class="c4-wrap">' +
-      '<div class="c4-hint c4-err">No more lanterns — here\'s the answer</div>' +
-      '<div class="c4-solved-zone">' + solvedHtml + '</div>' +
+      '<div class="c4-hint c4-err">All lanterns out — give it another try!</div>' +
+      (solvedHtml ? '<div class="c4-solved-zone">' + solvedHtml + '</div>' : '') +
       pooHtml +
       '<button class="c4-btn-full c4-btn-full-primary" id="c4-retry">Try Again</button>' +
       '<button class="c4-btn-full c4-btn-full-sec" id="c4-back">Back to Puzzles</button>' +
