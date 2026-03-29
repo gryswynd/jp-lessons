@@ -602,7 +602,7 @@
             "v_motto",
             { "id": "v_jouzu", "form": "adverbial" },
             { "id": "v_naru", "form": "plain_desire_tai" },
-            "p_nda",
+            "p_ndesu",
             "p_ga_but",
             "v_dou",
             { "id": "v_suru", "form": "conditional_ba" },
@@ -725,7 +725,9 @@
             "v_watashi",
             "p_mo",
             { "id": "v_hayai", "form": "adverbial" },
-            { "id": "v_hajimeru", "form": "plain_negative" }
+            { "id": "v_hajimeru", "form": "plain_negative" },
+            "p_to_conditional",
+            "p_na"
           ]
         },
         {
@@ -898,17 +900,17 @@
           "explanation": "上手 is a na-adjective. The pattern is 上手 + に + なる. The と conditional here means 'if/when'. 上手くなる is incorrect — 上手 takes に, not く."
         },
         {
-          "before": "この 部屋を もっと 明る",
+          "before": "この 教室を もっと 明る",
           "after": "もらえますか。",
-          "translation": "Could you make this room brighter?",
+          "translation": "Could you make this classroom brighter?",
           "choices": ["くして", "になって", "くなって", "にして"],
           "answer": "くして",
           "explanation": "明るい is an i-adjective. ～くする (deliberate change) → て-form: くして. The speaker is asking someone to act. ～になる is spontaneous, not deliberate."
         },
         {
-          "before": "値段が 高",
+          "before": "この 本が 高",
           "after": "買います。",
-          "translation": "Even if the price is expensive, I'll buy it.",
+          "translation": "Even if this book is expensive, I'll buy it.",
           "choices": ["くても", "でも", "くなれば", "くなると"],
           "answer": "くても",
           "explanation": "高い is an i-adjective. Concessive form: drop い, add くても. でも would be used for na-adjectives (e.g. 有名でも)."
@@ -931,7 +933,7 @@
         },
         {
           "before": "この 映画は 長す",
-          "after": "、見るのが 大変です。",
+          "after": "、見るのが むずかしいです。",
           "translation": "This movie is too long, and it's hard to watch.",
           "choices": ["ぎて", "くなって", "くなれば", "でも"],
           "answer": "ぎて",
@@ -958,14 +960,14 @@
         },
         {
           "type": "mcq",
-          "question": "The teacher asked the student to make the room brighter. Which sentence fits?",
+          "question": "The teacher asked the student to make the classroom brighter. Which sentence fits?",
           "choices": [
-            "部屋が 明るくなりました。",
-            "部屋を 明るくしてください。",
-            "部屋が 明るくても。",
-            "部屋が 明るくなければ。"
+            "教室が 明るくなりました。",
+            "教室を 明るくしてください。",
+            "教室が 明るくても。",
+            "教室が 明るくなければ。"
           ],
-          "answer": "部屋を 明るくしてください。",
+          "answer": "教室を 明るくしてください。",
           "explanation": "～くしてください = 'please make it ~' (deliberate change by the listener). ～くなりました = it became (spontaneous). The を marks the thing being changed."
         },
         {
@@ -994,15 +996,15 @@
         },
         {
           "type": "mcq",
-          "question": "What is the difference between 部屋が 明るくなった and 部屋を 明るくした?",
+          "question": "What is the difference between 教室が 明るくなった and 教室を 明るくした?",
           "choices": [
-            "Both mean the room became bright naturally.",
+            "Both mean the classroom became bright naturally.",
             "なった = someone made it bright; した = it became bright on its own.",
             "なった = it became bright on its own; した = someone deliberately made it bright.",
             "There is no difference — both are interchangeable."
           ],
           "answer": "なった = it became bright on its own; した = someone deliberately made it bright.",
-          "explanation": "なる = spontaneous change (the subject changes by itself). する = deliberate change (an agent causes it). が marks the subject (room changes on its own); を marks the object of a deliberate action."
+          "explanation": "なる = spontaneous change (the subject changes by itself). する = deliberate change (an agent causes it). が marks the subject (classroom changes on its own); を marks the object of a deliberate action."
         },
         {
           "type": "mcq",
