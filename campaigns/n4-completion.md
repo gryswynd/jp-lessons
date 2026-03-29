@@ -43,7 +43,7 @@ These lessons exist but predate current quality standards (term tagging, grammar
 
 **Batch 3: N4.33–N4.36** (Advanced patterns, Adjective change, Capstone)
 - [ ] N4.33
-- [ ] N4.34 — すぎる, てみる, ておく, てしまう — major grammar milestone
+- [x] N4.34 — Districts, Commuting & Prefectures ✓ (lesson + compose.N4.34, 2026-03-29)
 - [ ] N4.35
 - [ ] N4.36 — final N4 lesson
 
@@ -87,7 +87,9 @@ These lessons exist but predate current quality standards (term tagging, grammar
 
 16 compose files to build — one per lesson:
 
-- [ ] compose.N4.21 through compose.N4.36
+- [ ] compose.N4.21 through compose.N4.33
+- [x] compose.N4.34 ✓ (2026-03-29)
+- [ ] compose.N4.35 through compose.N4.36
 
 Each follows the compose schema with 9-10 prompts per file (late N4 range).
 
