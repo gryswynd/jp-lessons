@@ -46,83 +46,76 @@
       "instructions": "Use words you already know to answer these questions:",
       "items": [
         {
-          "jp": "この 歌は 世界中で 聞かれると 思います。",
-          "en": "I think this song is heard all over the world.",
+          "jp": "あの 広い 工場は 先月 建てられました。",
+          "en": "That wide factory was built last month.",
           "terms": [
-            "v_kono",
-            "v_uta",
+            "v_ano",
+            "v_hiroi",
+            "v_koujou",
             "p_wa",
-            "v_sekaijuu",
-            "p_de",
+            "v_sengetsu",
             {
-              "id": "v_kiku",
-              "form": "passive"
-            },
-            "p_to_quote",
-            {
-              "id": "v_omou",
-              "form": "polite_masu"
+              "id": "v_tateru",
+              "form": "polite_passive_past"
             }
           ]
         },
         {
-          "jp": "先生は 学生に 作文を 書かせました。",
-          "en": "The teacher made the student write a composition.",
+          "jp": "お母さんは 子どもに 野菜を 食べさせました。",
+          "en": "The mother made the child eat vegetables.",
           "terms": [
-            "v_sensei",
+            "v_okaasan",
             "p_wa",
-            "v_gakusei",
+            "v_kodomo",
             "p_ni",
-            "v_sakubun",
+            "v_yasai",
             "p_wo",
             {
-              "id": "v_kaku",
+              "id": "v_taberu",
               "form": "polite_causative_past"
             }
           ]
         },
         {
-          "jp": "週まつは 映画を 見たり、音楽を 聞いたり します。",
-          "en": "On weekends I do things like watch movies and listen to music.",
+          "jp": "先月から、毎日 早く 起きるように なりました。",
+          "en": "Since last month I have come to wake up early every day.",
           "terms": [
-            "v_shuumatsu",
-            "p_wa",
-            "v_eiga",
-            "p_wo",
+            "v_sengetsu",
+            "p_kara",
+            "v_mainichi",
+            "v_hayaku",
             {
-              "id": "v_miru",
-              "form": "tari_form"
+              "id": "v_okiru",
+              "form": "plain_form"
             },
-            "v_ongaku",
-            "p_wo",
+            "v_you_manner",
+            "p_ni",
             {
-              "id": "v_kiku",
-              "form": "tari_form"
-            },
-            {
-              "id": "v_suru",
-              "form": "polite_masu"
+              "id": "v_naru",
+              "form": "polite_mashita"
             }
           ]
         },
         {
-          "jp": "試験の 前に、もっと 勉強しなければ いけません。",
-          "en": "You have to study more before the exam.",
+          "jp": "新しい 建物の 中に 入ったことが ありますか。",
+          "en": "Have you ever been inside a new building?",
           "terms": [
-            "v_shiken",
+            "v_atarashii",
+            "v_tatemono",
             "p_no",
-            "v_mae",
+            "v_naka",
             "p_ni",
-            "v_motto",
-            "v_benkyou",
             {
-              "id": "v_suru",
-              "form": "nakereba"
+              "id": "v_hairu",
+              "form": "plain_past"
             },
+            "v_koto",
+            "p_ga",
             {
-              "id": "v_ikeru",
-              "form": "polite_negative"
-            }
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
           ]
         }
       ]
@@ -323,8 +316,8 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "わたしは 毎日 通学しながら、発言することを 考えて います。",
-          "en": "I think about speaking up while commuting every day.",
+          "jp": "わたしは 毎日 通学しながら、声に 出して 発音する ことを 考えて います。",
+          "en": "While commuting every day, I think about saying things aloud to practice pronunciation.",
           "terms": [
             "char_rikizo",
             "v_watashi",
@@ -335,7 +328,13 @@
               "id": "v_suru",
               "form": "nagara_form"
             },
-            "v_hatsugen",
+            "v_koe",
+            "p_ni",
+            {
+              "id": "v_dasu",
+              "form": "te_form"
+            },
+            "v_hatsuon",
             {
               "id": "v_suru",
               "form": "plain_form"
@@ -741,32 +740,18 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "県知事が 通学する 人の ことを 発見したら いいのにね。",
-          "en": "It would be nice if the governor discovered commuting students.",
+          "jp": "毎日 大変だけど、本当に すごいよ。",
+          "en": "It's tough every day, but that's really impressive.",
           "terms": [
             "char_rikizo",
-            "v_kenchiji",
-            "p_ga",
-            "v_tsuugaku",
-            {
-              "id": "v_suru",
-              "form": "plain_form"
-            },
-            "v_hito",
-            "p_no",
-            "v_koto",
-            "p_wo",
-            "v_hakken",
-            {
-              "id": "v_suru",
-              "form": "conditional_tara"
-            },
-            {
-              "id": "v_ii",
-              "form": "plain_form"
-            },
-            "p_noni",
-            "p_ne"
+            "v_mainichi",
+            "v_taihen",
+            "g_da",
+            "p_kedo",
+            "v_hontou",
+            "p_ni",
+            "v_sugoi",
+            "p_yo"
           ]
         }
       ]
@@ -1007,18 +992,23 @@
           ]
         },
         {
-          "jp": "電車は 長い 大通りを 通って いきます。",
-          "en": "The train passes along a long main street going forward.",
+          "jp": "友だちは 毎日 早く 起きて、始発の 電車で 学校に 行きます。",
+          "en": "My friend wakes up early every day and goes to school on the first train.",
           "terms": [
-            "v_densha",
+            "v_tomodachi",
             "p_wa",
-            "v_nagai",
-            "v_oodoori",
-            "p_wo",
+            "v_mainichi",
+            "v_hayaku",
             {
-              "id": "v_tooru",
+              "id": "v_okiru",
               "form": "te_form"
             },
+            "v_shihatsu",
+            "p_no",
+            "v_densha",
+            "p_de",
+            "v_gakkou",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "polite_masu"
@@ -1026,8 +1016,8 @@
           ]
         },
         {
-          "jp": "友だちは 電車の 中で 本を 読んだり、音楽を 聞いたり しています。",
-          "en": "My friend does things like read books and listen to music on the train.",
+          "jp": "友だちは 電車の 中で 勉強したり、外を 見たり しています。",
+          "en": "My friend does things like study and look outside on the train.",
           "terms": [
             "v_tomodachi",
             "p_wa",
@@ -1035,16 +1025,15 @@
             "p_no",
             "v_naka",
             "p_de",
-            "v_hon",
-            "p_wo",
+            "v_benkyou",
             {
-              "id": "v_yomu",
+              "id": "v_suru",
               "form": "tari_form"
             },
-            "v_ongaku",
+            "v_soto",
             "p_wo",
             {
-              "id": "v_kiku",
+              "id": "v_miru",
               "form": "tari_form"
             },
             {
@@ -1126,27 +1115,32 @@
           ]
         },
         {
-          "q": "電車は どこを 通りますか。",
-          "q_en": "Where does the train pass?",
-          "a": "長い 大通りを 通ります。",
-          "a_en": "It passes along a long main street.",
+          "q": "友だちは 何の 電車で 学校に 行きますか。",
+          "q_en": "What train does the friend take to school?",
+          "a": "始発の 電車で 行きます。",
+          "a_en": "They go on the first train.",
           "terms": [
-            "v_densha",
+            "v_tomodachi",
             "p_wa",
-            "v_doko",
-            "p_wo",
+            "v_nan",
+            "p_no",
+            "v_densha",
+            "p_de",
+            "v_gakkou",
+            "p_ni",
             {
-              "id": "v_tooru",
+              "id": "v_iku",
               "form": "polite_masu"
             },
             "p_ka"
           ],
           "a_terms": [
-            "v_nagai",
-            "v_oodoori",
-            "p_wo",
+            "v_shihatsu",
+            "p_no",
+            "v_densha",
+            "p_de",
             {
-              "id": "v_tooru",
+              "id": "v_iku",
               "form": "polite_masu"
             }
           ]
@@ -1154,8 +1148,8 @@
         {
           "q": "友だちは 電車で 何を しますか。",
           "q_en": "What does the friend do on the train?",
-          "a": "本を 読んだり、音楽を 聞いたり します。",
-          "a_en": "They do things like read books and listen to music.",
+          "a": "勉強したり、外を 見たり します。",
+          "a_en": "They do things like study and look outside.",
           "terms": [
             "v_tomodachi",
             "p_wa",
@@ -1170,16 +1164,15 @@
             "p_ka"
           ],
           "a_terms": [
-            "v_hon",
-            "p_wo",
+            "v_benkyou",
             {
-              "id": "v_yomu",
+              "id": "v_suru",
               "form": "tari_form"
             },
-            "v_ongaku",
+            "v_soto",
             "p_wo",
             {
-              "id": "v_kiku",
+              "id": "v_miru",
               "form": "tari_form"
             },
             {
