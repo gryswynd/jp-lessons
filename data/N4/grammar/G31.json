@@ -553,8 +553,8 @@
           "en": "Yamamoto-sensei, it's been getting cool this autumn, hasn't it?",
           "terms": [
             "char_yamamoto",
-            "v_san",
             "v_kotoshi",
+            "p_no",
             "v_aki",
             "p_wa",
             { "id": "v_suzushii", "form": "adverbial" },
@@ -568,11 +568,14 @@
           "jp": "そうですね。秋に なると、空気が すずしく なります。もうすぐ 寒くなるでしょう。",
           "en": "That's right. When autumn comes, the air gets cool. It'll probably get cold soon.",
           "terms": [
+            "v_sou",
+            "g_desu",
+            "p_ne",
             "v_aki",
             "p_ni",
             { "id": "v_naru", "form": "plain_form" },
             "p_to_conditional",
-            "v_sora",
+            "v_kuuki",
             "p_ga",
             { "id": "v_suzushii", "form": "adverbial" },
             { "id": "v_naru", "form": "polite_masu" },
@@ -585,9 +588,12 @@
         },
         {
           "spk": "char_rikizo",
-          "jp": "そうですね。先生、わたしは 日本語が もっと 上手に なりたいんですが、どうすれば いいですか。",
+          "jp": "そうですね。先生、私は 日本語が もっと 上手に なりたいんですが、どうすれば いいですか。",
           "en": "That's right. Sensei, I want to become better at Japanese — what should I do?",
           "terms": [
+            "v_sou",
+            "g_desu",
+            "p_ne",
             "v_sensei",
             "v_watashi",
             "p_wa",
@@ -601,13 +607,14 @@
             "v_dou",
             { "id": "v_suru", "form": "conditional_ba" },
             "v_ii",
+            "g_desu",
             "p_ka"
           ]
         },
         {
           "spk": "char_yamamoto",
-          "jp": "むずかしくても あきらめずに、毎日 勉強する ことが 大切ですよ。毎日 勉強 すれば、上手に なれますよ。",
-          "en": "Even if it's difficult, without giving up — studying every day is important. If you study every day, you'll be able to become skilled.",
+          "jp": "むずかしくても、毎日 勉強する ことが 大切ですよ。毎日 勉強 すれば、上手に なれますよ。",
+          "en": "Even if it's difficult, studying every day is important. If you study every day, you'll be able to become skilled.",
           "terms": [
             { "id": "v_muzukashii", "form": "adverbial" },
             "p_mo",
@@ -622,13 +629,13 @@
             "v_benkyou",
             { "id": "v_suru", "form": "conditional_ba" },
             { "id": "v_jouzu", "form": "adverbial" },
-            { "id": "v_naru", "form": "potential" },
+            { "id": "v_naru", "form": "polite_potential" },
             "p_yo"
           ]
         },
         {
           "spk": "char_rikizo",
-          "jp": "わかりました。毎日 勉強 するように します。ありがとうございます。",
+          "jp": "分かりました。毎日 勉強 するように します。ありがとうございます。",
           "en": "I understand. I'll make sure to study every day. Thank you.",
           "terms": [
             { "id": "v_wakaru", "form": "polite_mashita" },
@@ -638,7 +645,7 @@
             "v_you_manner",
             "p_ni",
             { "id": "v_suru", "form": "polite_masu" },
-            "p_arigatou"
+            "p_arigatou_gozaimasu"
           ]
         },
         {
@@ -649,10 +656,12 @@
             { "id": "v_genki", "form": "adverbial" },
             { "id": "v_naru", "form": "plain_form" },
             "v_you_manner",
+            "p_ni",
             "v_karada",
             "p_mo",
             { "id": "v_taisetsu", "form": "adverbial" },
             { "id": "v_suru", "form": "te_form" },
+            "v_kudasai",
             "p_ne"
           ]
         }
@@ -672,8 +681,10 @@
           "jp": "ねえ、今度の 試験は むずかしいって 聞いたよ。",
           "en": "Hey, I heard this exam is difficult.",
           "terms": [
+            "p_nee",
             "char_taro",
             "v_kondo",
+            "p_no",
             "v_shiken",
             "p_wa",
             "v_muzukashii",
@@ -687,6 +698,7 @@
           "jp": "うん、でも むずかしくても、毎日 勉強 している よ。",
           "en": "Yeah, but even if it's hard, I study every day.",
           "terms": [
+            "v_un",
             "p_demo_but",
             { "id": "v_muzukashii", "form": "adverbial" },
             "p_mo",
@@ -699,13 +711,16 @@
         },
         {
           "spk": "char_taro",
-          "jp": "すごいね。試験は むずかしくなければ いいけど、わたしも 早く 始めないとな。",
+          "jp": "すごいね。試験は むずかしくなければ いいけど、私も 早く 始めないとな。",
           "en": "That's amazing. I hope the exam isn't too hard, but I'd better start early too.",
           "terms": [
+            "v_sugoi",
+            "p_ne",
             "v_shiken",
             "p_wa",
             { "id": "v_muzukashii", "form": "adverbial" },
-            { "id": "v_naru", "form": "conditional_ba" },
+            "p_nakereba",
+            "v_ii",
             "p_kedo",
             "v_watashi",
             "p_mo",
@@ -715,7 +730,7 @@
         },
         {
           "spk": "char_rikizo",
-          "jp": "たろうは 日本語が 上手 だから、大丈夫 だと 思うよ。でも 試験が 近くなって きたし、早く 始めた 方が いいよ。",
+          "jp": "たろうは 日本語が 上手 だから、だいじょうぶ だと 思うよ。でも 試験が 近くなって きたし、早く 始めた 方が いいよ。",
           "en": "Taro, you're good at Japanese, so I think you'll be fine. But the exam is getting close, so it's better to start early.",
           "terms": [
             "char_taro",
@@ -750,11 +765,15 @@
           "jp": "そうだね。試験が 終わったら、いっしょに ご飯 食べに 行こうか。",
           "en": "You're right. When the exam is over, shall we go eat together?",
           "terms": [
+            "v_sou",
+            "g_da",
+            "p_ne",
             "v_shiken",
             "p_ga",
             { "id": "v_owaru", "form": "conditional_tara" },
             "v_issho",
             "p_ni",
+            "v_gohan",
             { "id": "v_taberu", "form": "te_form" },
             { "id": "v_iku", "form": "plain_volitional" }
           ]
@@ -764,6 +783,7 @@
           "jp": "うん、もちろん 行こう！試験が 終わったら、たくさん 食べたいな。",
           "en": "Yeah, of course! When the exam's done, I want to eat a lot.",
           "terms": [
+            "v_un",
             "v_mochiron",
             { "id": "v_iku", "form": "plain_volitional" },
             "v_shiken",
