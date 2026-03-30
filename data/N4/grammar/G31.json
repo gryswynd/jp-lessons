@@ -544,15 +544,16 @@
       "context": "Rikizo asks Yamamoto-sensei about the weather and then about studying. Polite register.",
       "spk": [
         { "name": "りきぞ", "avatar": "char_rikizo" },
-        { "name": "やまもとせんせい", "avatar": "char_yamamoto" }
+        { "name": "やまもと先生", "avatar": "char_yamamoto" }
       ],
       "lines": [
         {
           "spk": "char_rikizo",
-          "jp": "やまもとせんせい、今年の 秋は すずしく なってきましたね。",
+          "jp": "やまもと先生、今年の 秋は すずしく なってきましたね。",
           "en": "Yamamoto-sensei, it's been getting cool this autumn, hasn't it?",
           "terms": [
             "char_yamamoto",
+            "v_sensei",
             "v_kotoshi",
             "p_no",
             "v_aki",
@@ -616,7 +617,7 @@
           "jp": "むずかしくても、毎日 勉強する ことが 大切ですよ。毎日 勉強 すれば、上手に なれますよ。",
           "en": "Even if it's difficult, studying every day is important. If you study every day, you'll be able to become skilled.",
           "terms": [
-            { "id": "v_muzukashii", "form": "adverbial" },
+            { "id": "v_muzukashii", "form": "te_form" },
             "p_mo",
             "v_mainichi",
             "v_benkyou",
@@ -700,7 +701,7 @@
           "terms": [
             "v_un",
             "p_demo_but",
-            { "id": "v_muzukashii", "form": "adverbial" },
+            { "id": "v_muzukashii", "form": "te_form" },
             "p_mo",
             "v_mainichi",
             "v_benkyou",
@@ -711,7 +712,7 @@
         },
         {
           "spk": "char_taro",
-          "jp": "すごいね。試験は むずかしくなければ いいけど、私も 早く 始めないとな。",
+          "jp": "すごいね。試験は むずかしくなければ いいけど、私も 早く 始めないと な。",
           "en": "That's amazing. I hope the exam isn't too hard, but I'd better start early too.",
           "terms": [
             "v_sugoi",
@@ -732,7 +733,7 @@
         },
         {
           "spk": "char_rikizo",
-          "jp": "たろうは 日本語が 上手 だから、だいじょうぶ だと 思うよ。でも 試験が 近くなって きたし、早く 始めた 方が いいよ。",
+          "jp": "たろうは 日本語が 上手 だから、だいじょうぶ だ と 思うよ。でも 試験が 近くなって きたし、早く 始めた 方が いいよ。",
           "en": "Taro, you're good at Japanese, so I think you'll be fine. But the exam is getting close, so it's better to start early.",
           "terms": [
             "char_taro",
@@ -764,7 +765,7 @@
         },
         {
           "spk": "char_taro",
-          "jp": "そうだね。試験が 終わったら、いっしょに ご飯 食べに 行こうか。",
+          "jp": "そうだ ね。試験が 終わったら、いっしょに ご飯 食べに 行こうか。",
           "en": "You're right. When the exam is over, shall we go eat together?",
           "terms": [
             "v_sou",
@@ -776,8 +777,10 @@
             "v_issho",
             "p_ni",
             "v_gohan",
-            { "id": "v_taberu", "form": "te_form" },
-            { "id": "v_iku", "form": "plain_volitional" }
+            { "id": "v_taberu", "form": null },
+            "p_ni",
+            { "id": "v_iku", "form": "plain_volitional" },
+            "p_ka"
           ]
         },
         {
