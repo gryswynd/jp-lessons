@@ -542,13 +542,9 @@
       "type": "conversation",
       "title": "Conversation 1: The Seasons Are Changing",
       "context": "Rikizo asks Yamamoto-sensei about the weather and then about studying. Polite register.",
-      "spk": [
-        { "name": "りきぞ", "avatar": "char_rikizo" },
-        { "name": "やまもと先生", "avatar": "char_yamamoto" }
-      ],
       "lines": [
         {
-          "spk": "char_rikizo",
+          "spk": "りきぞ",
           "jp": "やまもと先生、今年の 秋は すずしく なってきましたね。",
           "en": "Yamamoto-sensei, it's been getting cool this autumn, hasn't it?",
           "terms": [
@@ -565,7 +561,7 @@
           ]
         },
         {
-          "spk": "char_yamamoto",
+          "spk": "やまもと先生",
           "jp": "そうですね。秋に なると、空気が すずしく なります。もうすぐ 寒くなるでしょう。",
           "en": "That's right. When autumn comes, the air gets cool. It'll probably get cold soon.",
           "terms": [
@@ -588,7 +584,7 @@
           ]
         },
         {
-          "spk": "char_rikizo",
+          "spk": "りきぞ",
           "jp": "そうですね。先生、私は 日本語が もっと 上手に なりたいんですが、どうすれば いいですか。",
           "en": "That's right. Sensei, I want to become better at Japanese — what should I do?",
           "terms": [
@@ -613,7 +609,7 @@
           ]
         },
         {
-          "spk": "char_yamamoto",
+          "spk": "やまもと先生",
           "jp": "むずかしくても、毎日 勉強する ことが 大切ですよ。毎日 勉強 すれば、上手に なれますよ。",
           "en": "Even if it's difficult, studying every day is important. If you study every day, you'll be able to become skilled.",
           "terms": [
@@ -635,7 +631,7 @@
           ]
         },
         {
-          "spk": "char_rikizo",
+          "spk": "りきぞ",
           "jp": "分かりました。毎日 勉強 するように します。ありがとうございます。",
           "en": "I understand. I'll make sure to study every day. Thank you.",
           "terms": [
@@ -650,7 +646,7 @@
           ]
         },
         {
-          "spk": "char_yamamoto",
+          "spk": "やまもと先生",
           "jp": "元気に なるように、体も 大切に して くださいね。",
           "en": "Please take care of your health too, so you can stay well.",
           "terms": [
@@ -672,13 +668,9 @@
       "type": "conversation",
       "title": "Conversation 2: Exam Prep (Casual)",
       "context": "Two college friends, Taro and Rikizo, talk about an upcoming exam. Casual register.",
-      "spk": [
-        { "name": "たろう", "avatar": "char_taro" },
-        { "name": "りきぞ", "avatar": "char_rikizo" }
-      ],
       "lines": [
         {
-          "spk": "char_taro",
+          "spk": "たろう",
           "jp": "ねえ、今度の 試験は むずかしいって 聞いたよ。",
           "en": "Hey, I heard this exam is difficult.",
           "terms": [
@@ -695,7 +687,7 @@
           ]
         },
         {
-          "spk": "char_rikizo",
+          "spk": "りきぞ",
           "jp": "うん、でも むずかしくても、毎日 勉強 している よ。",
           "en": "Yeah, but even if it's hard, I study every day.",
           "terms": [
@@ -711,7 +703,7 @@
           ]
         },
         {
-          "spk": "char_taro",
+          "spk": "たろう",
           "jp": "すごいね。試験は むずかしくなければ いいけど、私も 早く 始めないと な。",
           "en": "That's amazing. I hope the exam isn't too hard, but I'd better start early too.",
           "terms": [
@@ -732,7 +724,7 @@
           ]
         },
         {
-          "spk": "char_rikizo",
+          "spk": "りきぞ",
           "jp": "たろうは 日本語が 上手 だから、だいじょうぶ だ と 思うよ。でも 試験が 近くなって きたし、早く 始めた 方が いいよ。",
           "en": "Taro, you're good at Japanese, so I think you'll be fine. But the exam is getting close, so it's better to start early.",
           "terms": [
@@ -764,7 +756,7 @@
           ]
         },
         {
-          "spk": "char_taro",
+          "spk": "たろう",
           "jp": "そうだ ね。試験が 終わったら、いっしょに ご飯 食べに 行こうか。",
           "en": "You're right. When the exam is over, shall we go eat together?",
           "terms": [
@@ -784,7 +776,7 @@
           ]
         },
         {
-          "spk": "char_rikizo",
+          "spk": "りきぞ",
           "jp": "うん、もちろん 行こう！試験が 終わったら、たくさん 食べたいな。",
           "en": "Yeah, of course! When the exam's done, I want to eat a lot.",
           "terms": [
@@ -809,7 +801,7 @@
       "items": [
         {
           "verb": "高い",
-          "type": "i-adjective",
+          "type": "i_adj",
           "reading": "たかい",
           "targetForm": "～くなる (polite, present)",
           "answer": "高くなります",
@@ -819,7 +811,7 @@
         },
         {
           "verb": "有名",
-          "type": "na-adjective",
+          "type": "na_adj",
           "reading": "ゆうめい",
           "targetForm": "～になる (plain past)",
           "answer": "有名になった",
@@ -829,7 +821,7 @@
         },
         {
           "verb": "安い",
-          "type": "i-adjective",
+          "type": "i_adj",
           "reading": "やすい",
           "targetForm": "～くする (て-form request: ～くしてください)",
           "answer": "安くしてください",
@@ -839,7 +831,7 @@
         },
         {
           "verb": "元気",
-          "type": "na-adjective",
+          "type": "na_adj",
           "reading": "げんき",
           "targetForm": "～にする (te-form request: ～にしてください)",
           "answer": "元気にしてください",
@@ -849,7 +841,7 @@
         },
         {
           "verb": "むずかしい",
-          "type": "i-adjective",
+          "type": "i_adj",
           "reading": "むずかしい",
           "targetForm": "～くても (even if it is ~)",
           "answer": "むずかしくても",
@@ -859,7 +851,7 @@
         },
         {
           "verb": "大切",
-          "type": "na-adjective",
+          "type": "na_adj",
           "reading": "たいせつ",
           "targetForm": "～でも (even if it is ~)",
           "answer": "大切でも",
@@ -869,7 +861,7 @@
         },
         {
           "verb": "大きい",
-          "type": "i-adjective",
+          "type": "i_adj",
           "reading": "おおきい",
           "targetForm": "～くなければ (if not ~ / must be ~)",
           "answer": "大きくなければ",
@@ -879,7 +871,7 @@
         },
         {
           "verb": "高い",
-          "type": "i-adjective",
+          "type": "i_adj",
           "reading": "たかい",
           "targetForm": "～すぎる (plain, excessively ~)",
           "answer": "高すぎる",
