@@ -118,6 +118,10 @@
       var today = todayStr();
       var lastActive = localStorage.getItem('k-streak-last-active');
 
+      // Mark that an activity was attempted this session so the fallback rank-up
+      // popup in _showReturnMessage can fire even if the inline handler missed it.
+      window._jp_activity_this_session = true;
+
       // Already recorded today — nothing to do
       if (lastActive === today) return;
 
