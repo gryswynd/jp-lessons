@@ -1,11 +1,12 @@
 {
   "contentVersion": "1.0.0",
   "id": "N4.35",
-  "title": "Phase 4 Lesson 35: Owners, Stops, People, & Washing",
+  "title": "Owners, Stops, People & Washing",
   "meta": {
-    "phase": 4,
-    "lesson": 35,
-    "focus": "Ownership and main purpose, stopping and cancellation, communities and citizens, washing and cleanliness.",
+    "level": "N4",
+    "lesson_number": 35,
+    "focus": "Ownership and main purpose (主), stopping and cancellation (止), communities and citizens (民), washing and cleanliness (洗)",
+    "estimated_minutes": 35,
     "kanji": [
       "主",
       "止",
@@ -47,67 +48,90 @@
     {
       "type": "warmup",
       "title": "Warm-Up Review（ウォームアップ）",
-      "instructions": "Ask your partner these questions using words you already know:",
+      "instructions": "Use words you already know to answer these questions:",
       "items": [
         {
-          "jp": "毎日、何かを 習って いますか。",
-          "en": "Are you learning something every day?",
+          "jp": "今年に 入って、町が きれいに なりましたか。",
+          "en": "Since the year started, has the town become cleaner?",
           "terms": [
-            "v_mainichi",
-            "v_nani",
+            "v_kotoshi",
+            "p_ni",
             {
-              "id": "v_narau",
+              "id": "v_hairu",
               "form": "te_form"
             },
+            "v_machi",
+            "p_ga",
+            "v_kirei",
+            "p_ni",
             {
-              "id": "v_iru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "jp": "家の 近くに 工場が ありますか。",
-          "en": "Is there a factory near your home?",
-          "terms": [
-            "k_ie",
-            {
-              "id": "v_chikai",
-              "form": "adverbial"
+              "id": "v_naru",
+              "form": "polite_mashita"
             },
-            "v_koujou",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            }
+            "p_ka"
           ]
         },
         {
-          "jp": "学校に 通って いますか。",
-          "en": "Are you commuting to school?",
+          "jp": "この 地区に 住んだことが ありますか。",
+          "en": "Have you ever lived in this district?",
           "terms": [
-            "v_gakkou",
-            {
-              "id": "v_kayou",
-              "form": "te_form"
-            },
-            {
-              "id": "v_iru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "jp": "あなたの 地区には 広い 建物が ありますか。",
-          "en": "Are there large buildings in your district?",
-          "terms": [
-            "k_anata",
             "v_chiku",
-            "v_hiroi",
-            "v_tatemono",
+            "p_ni",
+            {
+              "id": "v_sumu",
+              "form": "plain_past"
+            },
+            "v_koto",
+            "p_ga",
             {
               "id": "v_aru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "jp": "大きい 建物が 建てられた 後で、近所は どう 変わりましたか。",
+          "en": "After the big building was built, how did the neighborhood change?",
+          "terms": [
+            "v_ookii",
+            "v_tatemono",
+            "p_ga",
+            {
+              "id": "v_tateru",
+              "form": "plain_passive_past"
+            },
+            "v_ato",
+            "p_de",
+            "v_kinjo",
+            "p_wa",
+            "v_dou",
+            {
+              "id": "v_kawaru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "jp": "先月から、毎日 早く 起きるように なりましたか。",
+          "en": "Since last month, have you started waking up early every day?",
+          "terms": [
+            "v_sengetsu",
+            "p_kara",
+            "v_mainichi",
+            "v_hayai",
+            {
+              "id": "v_okiru",
+              "form": "plain_form"
+            },
+            "v_you_manner",
+            "p_ni",
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
           ]
         }
       ]
@@ -212,37 +236,39 @@
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 1（会話）: The Shop Owner",
-      "context": "A customer steps into a local shop.",
+      "title": "Conversation 1: The Vegetable Shop Owner",
+      "context": "Rikizo visits a local shop and speaks with the owner about what is mainly sold there.",
       "lines": [
         {
-          "spk": "A",
-          "jp": "この 店の 主人は だれですか。",
+          "spk": "りきぞ",
+          "jp": "この お店の 主人は どちらの 方ですか。",
           "en": "Who is the owner of this shop?",
           "terms": [
+            "char_rikizo",
+            "v_kono",
             "k_mise",
+            "p_no",
             "v_shujin",
-            "v_dare"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "はい、私が 主人です。",
-          "en": "Yes, I am the owner.",
-          "terms": [
-            "v_hai",
-            "k_watashi",
-            "v_shujin"
+            "p_wa",
+            "v_dochira",
+            "p_no",
+            "v_kata",
+            "g_desu",
+            "p_ka"
           ]
         },
         {
           "spk": "A",
-          "jp": "この 店は 主に 何を 売って いますか。",
-          "en": "What does this shop mainly sell?",
+          "jp": "私が 主人です。主に 野菜を 売って います。",
+          "en": "I am the owner. I mainly sell vegetables.",
           "terms": [
-            "k_mise",
+            "v_watashi",
+            "p_ga",
+            "v_shujin",
+            "g_desu",
             "v_omoni",
-            "v_nani",
+            "v_yasai",
+            "p_wo",
             {
               "id": "v_uru",
               "form": "te_form"
@@ -254,18 +280,70 @@
           ]
         },
         {
-          "spk": "B",
-          "jp": "主に 野菜を 売って います。",
-          "en": "We mainly sell vegetables.",
+          "spk": "りきぞ",
+          "jp": "野菜が 安すぎると 思いましたが、大丈夫ですか。",
+          "en": "I thought the vegetables were too cheap — is that okay?",
           "terms": [
-            "v_omoni",
+            "char_rikizo",
             "v_yasai",
+            "p_ga",
             {
-              "id": "v_uru",
+              "id": "v_yasui",
+              "form": "sugiru_form"
+            },
+            "p_to_quote",
+            {
+              "id": "v_omou",
+              "form": "polite_mashita"
+            },
+            "p_ga_but",
+            "v_daijoubu",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "はい、大丈夫です。国民の 皆さんに 良い 野菜を 食べてもらいたい んです。",
+          "en": "Yes, it's fine. I want the citizens to eat good vegetables, you see.",
+          "terms": [
+            "p_hai",
+            "v_daijoubu",
+            "g_desu",
+            "v_kokumin",
+            "p_no",
+            "v_minasan",
+            "p_ni",
+            "v_ii",
+            "v_yasai",
+            "p_wo",
+            {
+              "id": "v_taberu",
               "form": "te_form"
             },
             {
-              "id": "v_iru",
+              "id": "v_morau",
+              "form": "plain_desire_tai"
+            },
+            "p_ndesu"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "良い 主人ですね。少し 買って みます。",
+          "en": "What a good owner. I'll try buying a little.",
+          "terms": [
+            "char_rikizo",
+            "v_ii",
+            "v_shujin",
+            "g_desu",
+            "v_sukoshi",
+            {
+              "id": "v_kau",
+              "form": "te_form"
+            },
+            {
+              "id": "v_miru",
               "form": "polite_masu"
             }
           ]
@@ -274,39 +352,54 @@
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 2（会話）: The Cancellation",
-      "context": "Rain causes outdoor plans to be called off.",
+      "title": "Conversation 2: The Cancelled Match",
+      "context": "Rikizo and Suzuki-sensei discuss a school match being cancelled because of heavy rain.",
       "lines": [
         {
-          "spk": "A",
-          "jp": "今日の 試合は 中止ですか。",
-          "en": "Is today's match cancelled?",
+          "spk": "りきぞ",
+          "jp": "先生、今日の 試合は 中止に なりましたか。",
+          "en": "Sensei, has today's match been cancelled?",
           "terms": [
+            "char_rikizo",
+            "v_sensei",
             "v_kyou",
+            "p_no",
             "v_shiai",
-            "v_chuushi"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "はい、雨で 中止に なりました。",
-          "en": "Yes, it was cancelled because of rain.",
-          "terms": [
-            "v_hai",
-            "k_ame",
+            "p_wa",
             "v_chuushi",
+            "p_ni",
             {
               "id": "v_naru",
               "form": "polite_mashita"
-            }
+            },
+            "p_ka"
           ]
         },
         {
-          "spk": "A",
-          "jp": "バスも 止まって いますか。",
-          "en": "Is the bus also stopped?",
+          "spk": "すずき",
+          "jp": "はい、雨が 多すぎて 中止に なりました。バスも 止まって いますよ。",
+          "en": "Yes, it was cancelled because there was too much rain. The buses are also stopped.",
           "terms": [
+            "char_suzuki",
+            "p_hai",
+            "v_ame",
+            "p_ga",
+            {
+              "id": "v_ooi",
+              "form": "sugiru_form"
+            },
+            {
+              "id": "v_ooi",
+              "form": "te_form"
+            },
+            "v_chuushi",
+            "p_ni",
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            },
             "v_basu",
+            "p_mo",
             {
               "id": "v_tomaru",
               "form": "te_form"
@@ -314,19 +407,86 @@
             {
               "id": "v_iru",
               "form": "polite_masu"
-            }
+            },
+            "p_yo"
           ]
         },
         {
-          "spk": "B",
-          "jp": "はい、バスを 止めました。",
-          "en": "Yes, they stopped the bus.",
+          "spk": "りきぞ",
+          "jp": "電車も 止めましたか。",
+          "en": "Did they stop the trains too?",
           "terms": [
-            "v_hai",
-            "v_basu",
+            "char_rikizo",
+            "v_densha",
+            "p_mo",
             {
               "id": "v_tomeru",
               "form": "polite_mashita"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "すずき",
+          "jp": "電車は 少し 止めたそうです。家に 帰れますか。",
+          "en": "I hear they stopped some trains. Can you get home?",
+          "terms": [
+            "char_suzuki",
+            "v_densha",
+            "p_wa",
+            "v_sukoshi",
+            {
+              "id": "v_tomeru",
+              "form": "plain_past"
+            },
+            "p_sou_da_hearsay",
+            "k_ie",
+            "p_ni",
+            {
+              "id": "v_kaeru",
+              "form": "polite_potential"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "はい、歩いて 帰れると 思います。出発する 前に、天気を もう 一度 見て おきます。",
+          "en": "Yes, I think I can walk home. Before departing I'll take one more look at the weather in advance.",
+          "terms": [
+            "char_rikizo",
+            "p_hai",
+            {
+              "id": "v_aruku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kaeru",
+              "form": "plain_potential"
+            },
+            "p_to_quote",
+            {
+              "id": "v_omou",
+              "form": "polite_masu"
+            },
+            "v_shuppatsu",
+            {
+              "id": "v_suru",
+              "form": "plain_form"
+            },
+            "v_mae",
+            "p_ni",
+            "v_tenki",
+            "p_wo",
+            "v_mou",
+            "v_ichido",
+            {
+              "id": "v_miru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_oku",
+              "form": "polite_masu"
             }
           ]
         }
@@ -334,146 +494,275 @@
     },
     {
       "type": "conversation",
-      "title": "Conversation Practice 3（会話）: The Neighborhood",
-      "context": "Getting to know a new district.",
+      "title": "Conversation 3: Washing Day (Casual)",
+      "context": "Rikizo and Ken are close friends at home, planning to wash the car together.",
       "lines": [
         {
-          "spk": "A",
-          "jp": "この 地区に 民家が 多いですね。",
-          "en": "There are many private houses in this district, aren't there?",
+          "spk": "けん",
+          "jp": "今日、車を 洗おうと 思ってる けど、一緒に しない？",
+          "en": "I'm thinking of washing the car today — want to do it together?",
           "terms": [
-            "v_chiku",
-            "v_minka",
-            "v_ooi"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "はい。いろいろな 民族の 人が 住んで います。",
-          "en": "Yes. People of various ethnic groups live here.",
-          "terms": [
-            "v_hai",
-            "v_iroiro",
-            "v_minzoku",
-            "v_hito",
+            "char_ken",
+            "v_kyou",
+            "k_kuruma",
+            "p_wo",
             {
-              "id": "v_sumu",
+              "id": "v_arau",
+              "form": "plain_volitional"
+            },
+            "p_to_quote",
+            {
+              "id": "v_omou",
               "form": "te_form"
             },
             {
               "id": "v_iru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "いい 地区ですね。",
-          "en": "What a nice district.",
-          "terms": [
-            "v_ii",
-            "v_chiku"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "はい。古い 民家も 新しい 建物も あります。",
-          "en": "Yes. There are both old private houses and new buildings.",
-          "terms": [
-            "v_hai",
-            "v_furui",
-            "v_minka",
-            "v_atarashii",
-            "v_tatemono",
+              "form": "plain_form"
+            },
+            "p_kedo",
+            "v_issho",
+            "p_ni",
             {
-              "id": "v_aru",
-              "form": "polite_masu"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "Conversation Practice 4（会話）: Washing Day",
-      "context": "Planning weekend chores.",
-      "lines": [
-        {
-          "spk": "A",
-          "jp": "今日、車を 洗いましょうか。",
-          "en": "Shall we wash the car today?",
-          "terms": [
-            "v_kyou",
-            "k_kuruma",
-            {
-              "id": "v_arau",
-              "form": "polite_volitional_mashou"
+              "id": "v_suru",
+              "form": "plain_negative"
             }
           ]
         },
         {
-          "spk": "B",
-          "jp": "いいですね。洗車を してから 行きましょう。",
-          "en": "Sounds good. Let's go after washing the car.",
+          "spk": "りきぞ",
+          "jp": "いいよ。先に 手洗いを してから 始めようよ。",
+          "en": "Sure. Let's wash our hands first and then start.",
           "terms": [
+            "char_rikizo",
             "v_ii",
-            "v_sensha",
+            "v_saki",
+            "p_ni",
+            "v_tearai",
+            "p_wo",
             {
               "id": "v_suru",
               "form": "te_form"
             },
             "p_tekara",
             {
-              "id": "v_iku",
-              "form": "polite_volitional_mashou"
-            }
+              "id": "v_hajimeru",
+              "form": "plain_volitional"
+            },
+            "p_yo"
           ]
         },
         {
-          "spk": "A",
-          "jp": "先に 手洗いを したいです。",
-          "en": "I want to wash my hands first.",
+          "spk": "けん",
+          "jp": "洗車が 終わったら、後で きれいに しておこうね。",
+          "en": "When the car wash is done, let's clean up later.",
           "terms": [
-            "k_saki",
-            "v_tearai",
+            "char_ken",
+            "v_sensha",
+            "p_ga",
+            {
+              "id": "v_owaru",
+              "form": "conditional_tara"
+            },
+            "v_ato",
+            "p_de",
+            "v_kirei",
+            "p_ni",
             {
               "id": "v_suru",
-              "form": "plain_desire_tai"
+              "form": "te_form"
             },
-            "g_desu"
+            {
+              "id": "v_oku",
+              "form": "plain_volitional"
+            },
+            "p_ne"
           ]
         },
         {
-          "spk": "B",
-          "jp": "あそこに 手洗いが あります。",
-          "en": "There is a restroom over there.",
+          "spk": "りきぞ",
+          "jp": "あ、水を 使って しまった！もう 少し 買って おこう。",
+          "en": "Oh no, I used up the water! Let's buy a bit more in advance.",
           "terms": [
-            "v_asoko",
-            "v_tearai",
+            "char_rikizo",
+            "v_mizu",
+            "p_wo",
             {
-              "id": "v_aru",
-              "form": "polite_masu"
+              "id": "v_tsukau",
+              "form": "te_form"
+            },
+            {
+              "id": "v_shimau",
+              "form": "plain_past"
+            },
+            "v_mou",
+            "v_sukoshi",
+            {
+              "id": "v_kau",
+              "form": "te_form"
+            },
+            {
+              "id": "v_oku",
+              "form": "plain_volitional"
             }
           ]
         }
       ]
     },
     {
-      "type": "reading",
-      "title": "Reading Practice 1: The Neighborhood Shop",
-      "passage": [
+      "type": "conversation",
+      "title": "Conversation 4: The New District (Casual)",
+      "context": "Rikizo and Yamakawa are close friends catching up. Yamakawa recently moved to a new district with many private houses.",
+      "lines": [
         {
-          "jp": "私の 家の 近くに 小さい 店が あります。",
-          "en": "Near my home there is a small shop.",
+          "spk": "やまかわ",
+          "jp": "新しい 地区に 来たんだ。民家が 多くて、良い 所だよ。",
+          "en": "I came to a new district. There are lots of private houses — it's a nice place.",
           "terms": [
-            "k_watashi",
-            "k_ie",
+            "char_yamakawa",
+            "v_atarashii",
+            "v_chiku",
+            "p_ni",
+            {
+              "id": "v_kuru",
+              "form": "plain_past"
+            },
+            "p_nda",
+            "v_minka",
+            "p_ga",
+            {
+              "id": "v_ooi",
+              "form": "te_form"
+            },
+            "v_ii",
+            "v_tokoro",
+            "g_da",
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "いいな。その 地区は 国民が 多く 住んで いるの？",
+          "en": "Nice. Do a lot of citizens live in that district?",
+          "terms": [
+            "char_rikizo",
+            "v_ii",
+            "v_sono",
+            "v_chiku",
+            "p_wa",
+            "v_kokumin",
+            "p_ga",
+            "v_ooi",
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
+            "p_no",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "うん、いろいろな 民族の 人も いるよ。近所も 良く なってきた し、住んで 良かった。",
+          "en": "Yeah, people from various ethnic groups are there too. The neighborhood has been getting better, and I'm glad I moved there.",
+          "terms": [
+            "char_yamakawa",
+            "v_un",
+            "v_iroiro",
+            "v_minzoku",
+            "p_no",
+            "v_hito",
+            "p_mo",
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
+            "p_yo",
+            "v_kinjo",
+            "p_mo",
+            "v_ii",
+            {
+              "id": "v_naru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kuru",
+              "form": "plain_past"
+            },
+            "p_shi",
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_ii",
+              "form": "plain_past_adj"
+            }
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "近くに バスも 止まるの？",
+          "en": "Does a bus also stop nearby?",
+          "terms": [
+            "char_rikizo",
             {
               "id": "v_chikai",
               "form": "adverbial"
             },
+            "p_ni",
+            "v_basu",
+            "p_mo",
+            {
+              "id": "v_tomaru",
+              "form": "plain_form"
+            },
+            "p_no",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "うん、駅も 近い し、良い 所だよ。",
+          "en": "Yeah, the station is nearby too, so it's a good place.",
+          "terms": [
+            "char_yamakawa",
+            "v_un",
+            "v_eki",
+            "p_mo",
+            "v_chikai",
+            "p_shi",
+            "v_ii",
+            "v_tokoro",
+            "g_da",
+            "p_yo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reading",
+      "title": "Reading Practice 1: The Neighborhood Shop Owner",
+      "passage": [
+        {
+          "jp": "私の 家の 近くに 小さい お店が あります。",
+          "en": "Near my home there is a small shop.",
+          "terms": [
+            "v_watashi",
+            "p_no",
+            "k_ie",
+            "p_no",
+            {
+              "id": "v_chikai",
+              "form": "adverbial"
+            },
+            "p_ni",
             "v_chiisai",
             "k_mise",
+            "p_ga",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -481,12 +770,22 @@
           ]
         },
         {
-          "jp": "主人は 毎日 野菜を 主に 売って います。",
-          "en": "The owner mainly sells vegetables every day.",
+          "jp": "その お店の 主人は 毎朝 早く 来て、野菜を 主に 売って います。",
+          "en": "The owner of that shop comes early every morning and mainly sells vegetables.",
           "terms": [
+            "v_sono",
+            "k_mise",
+            "p_no",
             "v_shujin",
-            "v_mainichi",
+            "p_wa",
+            "v_maiasa",
+            "v_hayai",
+            {
+              "id": "v_kuru",
+              "form": "te_form"
+            },
             "v_yasai",
+            "p_wo",
             "v_omoni",
             {
               "id": "v_uru",
@@ -499,11 +798,125 @@
           ]
         },
         {
-          "jp": "近所の 国民が よく 来ます。",
-          "en": "Local citizens often come.",
+          "jp": "近所の 国民が よく 来て、野菜を 買って いきます。",
+          "en": "Citizens from the neighborhood often come and buy vegetables.",
           "terms": [
             "v_kinjo",
+            "p_no",
             "v_kokumin",
+            "p_ga",
+            "v_yoku",
+            {
+              "id": "v_kuru",
+              "form": "te_form"
+            },
+            "v_yasai",
+            "p_wo",
+            {
+              "id": "v_kau",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "仕事の 後で、主人は 手洗いを してから 帰ります。",
+          "en": "After work, the owner washes their hands and then goes home.",
+          "terms": [
+            "v_shigoto",
+            "p_no",
+            "v_ato",
+            "p_de",
+            "v_shujin",
+            "p_wa",
+            "v_tearai",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            "p_tekara",
+            {
+              "id": "v_kaeru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "良い 主人だと 思います。",
+          "en": "I think they are a good owner.",
+          "terms": [
+            "v_ii",
+            "v_shujin",
+            "g_da",
+            "p_to_quote",
+            {
+              "id": "v_omou",
+              "form": "polite_masu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "q": "主人は 何を 主に 売って いますか。",
+          "q_en": "What does the owner mainly sell?",
+          "a": "野菜を 主に 売って います。",
+          "a_en": "The owner mainly sells vegetables.",
+          "terms": [
+            "v_shujin",
+            "p_wa",
+            "v_nani",
+            "p_wo",
+            "v_omoni",
+            {
+              "id": "v_uru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_yasai",
+            "p_wo",
+            "v_omoni",
+            {
+              "id": "v_uru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "q": "だれが お店に 来ますか。",
+          "q_en": "Who comes to the shop?",
+          "a": "近所の 国民が よく 来ます。",
+          "a_en": "Citizens from the neighborhood often come.",
+          "terms": [
+            "v_dare",
+            "p_ga",
+            "k_mise",
+            "p_ni",
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_kinjo",
+            "p_no",
+            "v_kokumin",
+            "p_ga",
             "v_yoku",
             {
               "id": "v_kuru",
@@ -512,12 +925,26 @@
           ]
         },
         {
-          "jp": "仕事の 後、主人は 手洗いを して から 帰ります。",
-          "en": "After work, the owner washes their hands and then goes home.",
+          "q": "仕事の 後で、主人は 何を しますか。",
+          "q_en": "After work, what does the owner do?",
+          "a": "手洗いを してから 帰ります。",
+          "a_en": "They wash their hands and then go home.",
           "terms": [
             "v_shigoto",
-            "k_ushiro",
+            "p_no",
+            "v_ato",
+            "p_de",
             "v_shujin",
+            "p_wa",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_tearai",
             "p_wo",
             {
@@ -531,68 +958,23 @@
             }
           ]
         }
-      ],
-      "questions": [
-        {
-          "q": "主人は 何を 売って いますか。",
-          "a": "野菜。",
-          "terms": [
-            "v_shujin",
-            "v_nani",
-            {
-              "id": "v_uru",
-              "form": "te_form"
-            },
-            "v_yasai"
-          ]
-        },
-        {
-          "q": "だれが 店に 来ますか。",
-          "a": "近所の 国民。",
-          "terms": [
-            "v_dare",
-            "k_mise",
-            {
-              "id": "v_kuru",
-              "form": "polite_masu"
-            },
-            "v_kinjo",
-            "v_kokumin"
-          ]
-        },
-        {
-          "q": "仕事の 後、主人は 何を しますか。",
-          "a": "手洗いを して から 帰ります。",
-          "terms": [
-            "v_shigoto",
-            "k_ushiro",
-            "v_shujin",
-            "v_nani",
-            "v_tearai",
-            {
-              "id": "v_suru",
-              "form": "te_form"
-            },
-            {
-              "id": "v_kaeru",
-              "form": "polite_masu"
-            }
-          ]
-        }
       ]
     },
     {
       "type": "reading",
-      "title": "Reading Practice 2: Stopping and Washing",
+      "title": "Reading Practice 2: Rain and Cancellation",
       "passage": [
         {
           "jp": "今日、雨で 試合が 中止に なりました。",
           "en": "Today, the match was cancelled because of rain.",
           "terms": [
             "v_kyou",
-            "k_ame",
+            "v_ame",
+            "p_de",
             "v_shiai",
+            "p_ga",
             "v_chuushi",
+            "p_ni",
             {
               "id": "v_naru",
               "form": "polite_mashita"
@@ -604,6 +986,7 @@
           "en": "The bus was also stopped, so I stayed home.",
           "terms": [
             "v_basu",
+            "p_mo",
             {
               "id": "v_tomaru",
               "form": "te_form"
@@ -612,7 +995,9 @@
               "id": "v_iru",
               "form": "plain_past"
             },
+            "p_node",
             "k_ie",
+            "p_ni",
             {
               "id": "v_iru",
               "form": "polite_mashita"
@@ -624,7 +1009,9 @@
           "en": "I washed the car at home.",
           "terms": [
             "k_ie",
+            "p_de",
             "k_kuruma",
+            "p_wo",
             {
               "id": "v_arau",
               "form": "polite_mashita"
@@ -636,41 +1023,90 @@
           "en": "After washing the car, I washed my hands too.",
           "terms": [
             "v_sensha",
-            "k_ushiro",
+            "p_no",
+            "v_ato",
+            "p_de",
             "v_tearai",
+            "p_mo",
             {
               "id": "v_suru",
               "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "jp": "次は いい 天気の 日に 試合を したいと 思います。",
+          "en": "Next time, I think I want to hold the match on a nice weather day.",
+          "terms": [
+            "v_tsugi",
+            "p_wa",
+            "v_ii",
+            "v_tenki",
+            "p_no",
+            "v_hi",
+            "p_ni",
+            "v_shiai",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "plain_desire_tai"
+            },
+            "p_to_quote",
+            {
+              "id": "v_omou",
+              "form": "polite_masu"
             }
           ]
         }
       ],
       "questions": [
         {
-          "q": "なぜ 試合が 中止に なりましたか。",
-          "a": "雨。",
+          "q": "どうして 試合が 中止に なりましたか。",
+          "q_en": "Why was the match cancelled?",
+          "a": "雨で 中止に なりました。",
+          "a_en": "It was cancelled because of rain.",
           "terms": [
-            "v_naze",
+            "v_doushite",
             "v_shiai",
+            "p_ga",
             "v_chuushi",
+            "p_ni",
             {
               "id": "v_naru",
               "form": "polite_mashita"
             },
-            "k_ame"
+            "p_ka"
+          ],
+          "a_terms": [
+            "v_ame",
+            "p_de",
+            "v_chuushi",
+            "p_ni",
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
           "q": "家で 何を しましたか。",
+          "q_en": "What did you do at home?",
           "a": "車を 洗いました。",
+          "a_en": "I washed the car.",
           "terms": [
             "k_ie",
+            "p_de",
             "v_nani",
+            "p_wo",
             {
               "id": "v_suru",
               "form": "polite_mashita"
             },
+            "p_ka"
+          ],
+          "a_terms": [
             "k_kuruma",
+            "p_wo",
             {
               "id": "v_arau",
               "form": "polite_mashita"
@@ -679,12 +1115,25 @@
         },
         {
           "q": "洗車の 後で 何を しましたか。",
-          "a": "手洗いを しました。",
+          "q_en": "What did you do after washing the car?",
+          "a": "手洗いも しました。",
+          "a_en": "I also washed my hands.",
           "terms": [
             "v_sensha",
-            "k_ushiro",
+            "p_no",
+            "v_ato",
+            "p_de",
             "v_nani",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ],
+          "a_terms": [
             "v_tearai",
+            "p_mo",
             {
               "id": "v_suru",
               "form": "polite_mashita"
@@ -696,7 +1145,7 @@
     {
       "type": "drills",
       "title": "ドリル 1: かんじの よみかた（Kanji Readings）",
-      "instructions": "Choose the correct reading.",
+      "instructions": "Choose the correct reading for the underlined word.",
       "items": [
         {
           "kind": "mcq",
@@ -704,8 +1153,8 @@
           "choices": [
             "しゅじん",
             "しゅにん",
-            "ぬしじん",
-            "しゅじょう"
+            "おもじん",
+            "ぬしびと"
           ],
           "answer": "しゅじん"
         },
@@ -714,44 +1163,11 @@
           "q": "[中止] の よみかたは？",
           "choices": [
             "ちゅうし",
-            "ちゅうじ",
-            "なかどまり",
-            "ちゅうり"
+            "なかどめ",
+            "ちゅうしょ",
+            "ちゅうとめ"
           ],
           "answer": "ちゅうし"
-        },
-        {
-          "kind": "mcq",
-          "q": "[民族] の よみかたは？",
-          "choices": [
-            "みんぞく",
-            "たみぞく",
-            "みんぞう",
-            "みんるい"
-          ],
-          "answer": "みんぞく"
-        },
-        {
-          "kind": "mcq",
-          "q": "[洗う] の よみかたは？",
-          "choices": [
-            "あらう",
-            "ぬぐう",
-            "ふく",
-            "そう"
-          ],
-          "answer": "あらう"
-        },
-        {
-          "kind": "mcq",
-          "q": "[止まる] の よみかたは？",
-          "choices": [
-            "とまる",
-            "とめる",
-            "とどむ",
-            "やめる"
-          ],
-          "answer": "とまる"
         },
         {
           "kind": "mcq",
@@ -759,32 +1175,68 @@
           "choices": [
             "こくみん",
             "くにたみ",
-            "こくたみ",
-            "こくにん"
+            "こくじん",
+            "こくびと"
           ],
           "answer": "こくみん"
+        },
+        {
+          "kind": "mcq",
+          "q": "[洗車] の よみかたは？",
+          "choices": [
+            "せんしゃ",
+            "あらいぐるま",
+            "せんしゃく",
+            "あらくるま"
+          ],
+          "answer": "せんしゃ"
         }
       ]
     },
     {
       "type": "drills",
       "title": "ドリル 2: ことばを えらぶ（Vocabulary）",
-      "instructions": "Choose the correct word to complete the sentence.",
+      "instructions": "Choose the correct word to complete each sentence.",
       "items": [
         {
           "kind": "mcq",
-          "q": "雨で 試合が ______。",
+          "q": "この 店の ______は 野菜と 魚です。",
           "choices": [
-            "中止に なりました",
-            "休止して います",
-            "止まりました",
-            "止めました"
+            "主に",
+            "主語",
+            "主人",
+            "民族"
           ],
-          "answer": "中止に なりました",
+          "answer": "主に",
           "terms": [
-            "k_ame",
+            "v_kono",
+            "v_mise",
+            "p_no",
+            "v_omoni",
+            "p_wa",
+            "v_yasai",
+            "p_to",
+            "v_sakana",
+            "g_desu"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "雨で 試合が ______に なりました。",
+          "choices": [
+            "中止",
+            "休止",
+            "主語",
+            "洗車"
+          ],
+          "answer": "中止",
+          "terms": [
+            "v_ame",
+            "p_de",
             "v_shiai",
+            "p_ga",
             "v_chuushi",
+            "p_ni",
             {
               "id": "v_naru",
               "form": "polite_mashita"
@@ -793,93 +1245,70 @@
         },
         {
           "kind": "mcq",
-          "q": "お店の ______ は 親切です。",
+          "q": "食事の 前に 手を ______ください。",
           "choices": [
-            "主人",
-            "主語",
-            "国民",
-            "民家"
+            "洗って",
+            "止めて",
+            "洗わない",
+            "止まって"
           ],
-          "answer": "主人",
+          "answer": "洗って",
           "terms": [
-            "k_mise",
-            "v_shujin",
-            "v_shinsetsu",
-            "g_desu"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "この 地区には ______ が 多い。",
-          "choices": [
-            "民家",
-            "洗車",
-            "休止",
-            "主語"
-          ],
-          "answer": "民家",
-          "terms": [
-            "v_chiku",
-            "v_minka",
-            "v_ooi"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "車を ______。",
-          "choices": [
-            "洗います",
-            "止めます",
-            "止まります",
-            "休止します"
-          ],
-          "answer": "洗います",
-          "terms": [
-            "k_kuruma",
+            "v_shokuji",
+            "p_no",
+            "v_mae",
+            "p_ni",
+            "v_te",
+            "p_wo",
             {
               "id": "v_arau",
-              "form": "polite_masu"
-            }
+              "form": "te_form"
+            },
+            "g_kudasai"
           ]
         },
         {
           "kind": "mcq",
-          "q": "洗車の 後で ______ も しました。",
+          "q": "電車が 駅で ______。",
           "choices": [
-            "手洗い",
-            "洗車",
-            "民家",
-            "国民"
+            "止まりました",
+            "止めました",
+            "中止しました",
+            "洗いました"
           ],
-          "answer": "手洗い",
+          "answer": "止まりました",
           "terms": [
-            "v_sensha",
-            "k_ushiro",
-            "v_tearai",
+            "v_densha",
+            "p_ga",
+            "v_eki",
+            "p_de",
             {
-              "id": "v_suru",
+              "id": "v_tomaru",
               "form": "polite_mashita"
             }
           ]
         },
         {
           "kind": "mcq",
-          "q": "いろいろな ______ の 人が 住んで います。",
+          "q": "日本の ______は 一億 人以上 います。",
           "choices": [
-            "民族",
             "国民",
+            "主人",
             "民家",
             "主語"
           ],
-          "answer": "民族",
+          "answer": "国民",
           "terms": [
-            "v_iroiro",
-            "v_minzoku",
-            "v_hito",
+            "v_nihon",
+            "p_no",
+            "v_kokumin",
+            "p_wa",
             {
-              "id": "v_sumu",
-              "form": "te_form"
+              "counter": "oku",
+              "n": 1
             },
+            "v_hito",
+            "v_ijou",
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -891,126 +1320,136 @@
     {
       "type": "drills",
       "title": "ドリル 3: ぶんを つくる（Sentence Building）",
-      "instructions": "Choose the best particle to complete the sentence.",
+      "instructions": "Choose the correct form or grammar pattern to complete each sentence.",
       "items": [
         {
           "kind": "mcq",
-          "q": "雨 ______ 試合が 中止に なりました。",
+          "q": "このスーパーは 安______、毎日 行きたいです。",
           "choices": [
-            "で",
+            "すぎて",
+            "すぎる",
+            "すぎない",
+            "すぎた"
+          ],
+          "answer": "すぎて",
+          "terms": [
+            "v_kono",
+            "v_suupaa",
+            "p_wa",
+            {
+              "id": "v_yasui",
+              "form": "sugiru_form"
+            },
+            "p_kara",
+            "v_mainichi",
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "新しい 店で 食べ______みました。",
+          "choices": [
+            "て",
             "に",
             "を",
-            "は"
+            "が"
           ],
-          "answer": "で",
+          "answer": "て",
           "terms": [
-            "k_ame",
+            "v_atarashii",
+            "v_mise",
             "p_de",
+            {
+              "id": "v_taberu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_miru",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "kind": "mcq",
+          "q": "試合の 前に ノートを 書いて______ました。",
+          "choices": [
+            "おき",
+            "しまい",
+            "み",
+            "き"
+          ],
+          "answer": "おき",
+          "terms": [
             "v_shiai",
-            "v_chuushi",
+            "p_no",
+            "v_mae",
+            "p_ni",
+            "v_nooto",
+            "p_wo",
             {
-              "id": "v_naru",
+              "id": "v_kaku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_oku",
               "form": "polite_mashita"
             }
           ]
         },
         {
           "kind": "mcq",
-          "q": "バス ______ 止めました。",
+          "q": "面白くて、本を たくさん 読んで ______。",
           "choices": [
-            "を",
-            "が",
-            "に",
-            "で"
+            "しまいました",
+            "おきました",
+            "みました",
+            "なりました"
           ],
-          "answer": "を",
+          "answer": "しまいました",
           "terms": [
-            "v_basu",
+            "v_omoshiroi",
+            "p_kara",
+            "v_hon",
             "p_wo",
+            "v_takusan",
             {
-              "id": "v_tomeru",
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_shimau",
               "form": "polite_mashita"
             }
           ]
         },
         {
           "kind": "mcq",
-          "q": "この 店 ______ 主人は だれですか。",
+          "q": "毎日 勉強して、日本語が 上手______なりました。",
           "choices": [
-            "の",
-            "は",
-            "を",
-            "に"
-          ],
-          "answer": "の",
-          "terms": [
-            "k_mise",
-            "p_no",
-            "v_shujin",
-            "v_dare"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "車 ______ 洗いましょうか。",
-          "choices": [
-            "を",
-            "が",
             "に",
-            "で"
-          ],
-          "answer": "を",
-          "terms": [
-            "k_kuruma",
-            "p_wo",
-            {
-              "id": "v_arau",
-              "form": "polite_volitional_mashou"
-            }
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "近所 ______ 国民が よく 来ます。",
-          "choices": [
-            "の",
-            "は",
-            "を",
-            "で"
-          ],
-          "answer": "の",
-          "terms": [
-            "v_kinjo",
-            "p_no",
-            "v_kokumin",
-            "v_yoku",
-            {
-              "id": "v_kuru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "手洗い ______ して から 帰ります。",
-          "choices": [
-            "を",
-            "の",
+            "く",
             "で",
-            "に"
+            "が"
           ],
-          "answer": "を",
+          "answer": "に",
           "terms": [
-            "v_tearai",
-            "p_wo",
+            "v_mainichi",
+            "v_benkyou",
             {
               "id": "v_suru",
               "form": "te_form"
             },
-            "p_tekara",
+            "v_nihongo",
+            "p_ga",
+            "v_jouzu",
+            "p_ni",
             {
-              "id": "v_kaeru",
-              "form": "polite_masu"
+              "id": "v_naru",
+              "form": "polite_mashita"
             }
           ]
         }
