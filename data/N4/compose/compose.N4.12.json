@@ -48,7 +48,7 @@
     {
       "prompt": "Describe something you are good at with your body — using your hands, wrists, or head. Use 上手 or 頭がいい. What can you do well?",
       "targets": [
-        { "id": "v_atamagaii", "count": 1 },
+        { "id": "v_atamagaii", "count": 1, "matches": ["頭がいい", "頭がよかった", "頭がよく", "あたまがいい", "あたまがよかった"] },
         { "id": "v_tekubi", "count": 1 }
       ],
       "model": "頭がいいので、本を 読むのが 上手です。手首を 使って、よく 書きます。",
