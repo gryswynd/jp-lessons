@@ -90,7 +90,7 @@
       "prompt": "Write a rule from father. Write that goods must not be taken outside the shop, and that people should look at them inside.",
       "targets": [
         { "id": "v_mochidasu", "count": 1 },
-        { "id": "v_ikeru", "count": 1 }
+        { "id": "v_ikeru", "count": 1, "matches": ["いけ"] }
       ],
       "model": "お店の 外へ 品物を 持ち出しては いけません。中で 見て ください。",
       "vocabPool": [

@@ -71,7 +71,7 @@
     {
       "prompt": "On the way home from the bank, something lucky happened. Describe the unexpected moment. Use 運がいい.",
       "targets": [
-        { "id": "v_un_ga_ii", "count": 1 }
+        { "id": "v_un_ga_ii", "count": 1, "matches": ["運がいい", "運がよかった", "運がよく", "うんがいい", "うんがよかった"] }
       ],
       "model": "帰り道に 古い 友だちに 会いました。ポチも いっしょに いて、運がいい 一日でした。",
       "vocabPool": [
@@ -109,7 +109,7 @@
       "prompt": "During one of their morning runs, Rikizo and Pochi spotted a stray dog in the neighborhood. Compare it to Pochi, and explain what makes Pochi special. Use 野犬 and 運がいい.",
       "targets": [
         { "id": "v_yaken", "count": 1 },
-        { "id": "v_un_ga_ii", "count": 1 }
+        { "id": "v_un_ga_ii", "count": 1, "matches": ["運がいい", "運がよかった", "運がよく", "うんがいい", "うんがよかった"] }
       ],
       "model": "近所で 野犬を 見ました。ポチより 大きくて、あまり 元気では ありませんでした。ポチは かわいくて 元気です。私は 運がいいです。",
       "vocabPool": [

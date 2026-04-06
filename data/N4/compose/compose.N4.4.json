@@ -16,7 +16,7 @@
       "model": "私は 青が 大好きです。青い シャツが いちばん 好きです。",
       "vocabPool": [
         "v_suki", "v_daisuki", "v_aoi", "v_akai", "v_kuroi", "v_chairoi",
-        "v_ao", "v_kuro", "v_chairo", "v_iro", "v_watashi",
+        "v_aka", "v_ao", "v_kuro", "v_chairo", "v_iro", "v_watashi",
         "v_ichiban", "v_totemo", "g_desu"
       ]
     },
@@ -28,6 +28,7 @@
       "model": "私は 色々な 色の シャツが 好きです。赤い シャツも 青い シャツも 着ます。",
       "vocabPool": [
         "v_iro", "v_iroiro", "v_suki", "v_akai", "v_aoi", "v_kuroi", "v_chairoi",
+        "v_aka", "v_ao", "v_kuro", "v_chairo",
         "v_shatsu", "v_watashi", "v_mainichi", "v_kiru",
         "v_totemo", "v_amari", "g_desu"
       ]
@@ -39,7 +40,8 @@
       ],
       "model": "赤い 色は あまり 好きじゃありません。赤い シャツは 着られません。",
       "vocabPool": [
-        "v_akai", "v_kuroi", "v_chairoi", "v_suki", "v_daisuki",
+        "v_akai", "v_kuroi", "v_chairoi", "v_aka", "v_kuro", "v_chairo",
+        "v_suki", "v_daisuki",
         "v_shatsu", "v_amari", "v_kiru", "v_watashi",
         "v_totemo", "g_desu"
       ]
@@ -51,7 +53,8 @@
       ],
       "model": "今朝 は 青い シャツを 着ました。新しい シャツを 着てみました。",
       "vocabPool": [
-        "v_aoi", "v_akai", "v_kuroi", "v_chairoi", "v_shatsu",
+        "v_aoi", "v_akai", "v_kuroi", "v_chairoi",
+        "v_aka", "v_ao", "v_kuro", "v_chairo", "v_shatsu",
         "v_kiru", "v_kesa", "v_kyou", "v_atarashii", "v_miru",
         "v_watashi", "g_desu"
       ]
@@ -63,8 +66,8 @@
       ],
       "model": "友だちは 黒い シャツが 好きです。毎日 黒い シャツを 着ています。",
       "vocabPool": [
-        "v_kuroi", "v_aoi", "v_chairoi", "v_suki", "v_daisuki",
-        "v_tomodachi", "v_haha", "v_chichi", "v_shatsu",
+        "v_kuroi", "v_aoi", "v_chairoi", "v_ao", "v_kuro", "v_chairo",
+        "v_suki", "v_daisuki", "v_tomodachi", "v_haha", "v_chichi", "v_shatsu",
         "v_kiru", "v_mainichi", "v_maiasa", "g_desu"
       ]
     },
@@ -75,7 +78,8 @@
       ],
       "model": "つぎは 茶色い シャツを 着てみたいです。店に 行って 買いたいです。",
       "vocabPool": [
-        "v_chairoi", "v_akai", "v_aoi", "v_shatsu", "v_suki",
+        "v_chairoi", "v_akai", "v_aoi", "v_aka", "v_ao", "v_chairo",
+        "v_shatsu", "v_suki",
         "v_kiru", "v_miru", "v_kau", "v_mise", "v_tsugi",
         "v_watashi", "v_iku", "g_desu"
       ]
@@ -88,7 +92,7 @@
       "model": "シャツを 買ってから、お茶を 飲みました。やはり、青が いちばん 好きです。",
       "vocabPool": [
         "v_ocha", "v_suki", "v_daisuki", "v_ao", "v_aoi",
-        "v_nomu", "v_kau", "v_shatsu", "v_ato", "v_iro", "v_ichiban",
+        "v_aka", "v_kuro", "v_chairo", "v_nomu", "v_kau", "v_shatsu", "v_ato", "v_iro", "v_ichiban",
         "v_watashi", "v_totemo", "g_desu"
       ]
     }

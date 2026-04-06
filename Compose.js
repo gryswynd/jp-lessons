@@ -283,12 +283,16 @@ window.ComposeModule = {
         return div.innerHTML;
     }
 
-    // For verb targets, return the invariant kanji root (surface minus trailing hiragana).
-    // e.g. 走る → 走, 食べる → 食べ, 作る → 作. This root appears in all conjugated
-    // forms so students get credit whether they write 走る, 走ります, 走った, etc.
-    // Returns null if the stripped root would be too short to be useful (≤1 kana char).
-    function getVerbRoot(entry) {
-        if (!entry || entry.gtype !== 'verb') return null;
+    // For verb and i-adjective targets, return the invariant kanji root (surface minus
+    // trailing hiragana). e.g. 走る → 走, 食べる → 食べ, 赤い → 赤, 茶色い → 茶色.
+    // This root appears in all conjugated forms so students get credit whether they
+    // write 走る/走ります/走った, 赤い/赤かった/赤くない, etc.
+    // Returns null if the stripped root would be too short or entry is not verb/i-adj.
+    function getKanjiRoot(entry) {
+        if (!entry) return null;
+        const isVerb = entry.gtype === 'verb';
+        const isIAdj = entry.gtype === 'adjective' && entry.verb_class === 'i_adj';
+        if (!isVerb && !isIAdj) return null;
         const surface = entry.surface || '';
         let end = surface.length;
         while (end > 0 && surface.charCodeAt(end - 1) >= 0x3040 && surface.charCodeAt(end - 1) <= 0x309F) {
@@ -303,7 +307,7 @@ window.ComposeModule = {
         return (targets || []).map(t => {
             const entry = t.id ? vocabById.get(t.id) : null;
             const baseMatches = entry ? [entry.surface || entry.particle, entry.reading].filter(Boolean) : [];
-            const root = getVerbRoot(entry);
+            const root = getKanjiRoot(entry);
             if (root && !baseMatches.includes(root)) baseMatches.push(root);
             return {
                 id: t.id,
