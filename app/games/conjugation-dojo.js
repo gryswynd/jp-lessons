@@ -670,7 +670,19 @@
     } else {
       cfg.onWrong && cfg.onWrong();
       mistakes.push(item);
+      // Pick the candidate that shares the longest common prefix with user input,
+      // so kanji input is diffed against the surface form (not the hiragana reading)
+      var candidates = [item.correctSurface, item.correctReading]
+        .concat(item.altSurfaces || [])
+        .concat(item.altReadings || []);
       var expected = item.correctReading;
+      var bestPrefix = -1;
+      candidates.forEach(function (candidate) {
+        if (!candidate) return;
+        var p = 0;
+        while (p < normalized.length && p < candidate.length && normalized[p] === candidate[p]) p++;
+        if (p > bestPrefix) { bestPrefix = p; expected = candidate; }
+      });
       var diff = buildCharDiff(normalized, expected);
       var hint = getGodanHint(item);
       var h = '<div class="dojo-wrong-msg">\u6B8B\u5FF5\uFF01</div>';
