@@ -537,9 +537,21 @@
         var term = { surface: entry.surface, reading: entry.reading, meaning: entry.meaning, verb_class: vc };
         var conjugated = tp.conjugate(term, ruleKey, rules);
         if (conjugated.surface !== entry.surface) {
+          var rule = formDef.rules[effectiveClass];
+          var altSurfaces = [], altReadings = [];
+          if (rule.alternates) {
+            var removeLen = rule.remove ? rule.remove.length : 0;
+            var surfaceStem = removeLen ? entry.surface.slice(0, -removeLen) : entry.surface;
+            var readingStem = removeLen ? entry.reading.slice(0, -removeLen) : entry.reading;
+            rule.alternates.forEach(function (altSuffix) {
+              altSurfaces.push(surfaceStem + altSuffix);
+              altReadings.push(readingStem + altSuffix);
+            });
+          }
           pairs.push({
             term: entry, vc: vc, ruleKey: ruleKey, formLabel: formDef.label,
-            correctSurface: conjugated.surface, correctReading: conjugated.reading
+            correctSurface: conjugated.surface, correctReading: conjugated.reading,
+            altSurfaces: altSurfaces, altReadings: altReadings
           });
         }
       });
@@ -640,7 +652,9 @@
     var normalized = (input || '').trim();
     if (!normalized) return;
     sessionTotal++;
-    var isCorrect = normalized === item.correctSurface || normalized === item.correctReading;
+    var isCorrect = normalized === item.correctSurface || normalized === item.correctReading ||
+      (item.altSurfaces && item.altSurfaces.indexOf(normalized) >= 0) ||
+      (item.altReadings && item.altReadings.indexOf(normalized) >= 0);
     var fb = document.getElementById('dojo-feedback');
     var inp = document.getElementById('dojo-input');
     if (inp) inp.disabled = true;
@@ -676,16 +690,23 @@
 
   function buildCharDiff(userInput, expected) {
     var result = [];
-    var maxLen = Math.max(userInput.length, expected.length);
-    for (var i = 0; i < maxLen; i++) {
-      if (i < userInput.length && i < expected.length) {
-        if (userInput[i] === expected[i]) result.push({ char: userInput[i], status: 'ok' });
-        else result.push({ char: userInput[i], status: 'wrong' });
-      } else if (i >= userInput.length) {
-        result.push({ char: expected[i], status: 'missing' });
-      } else {
-        result.push({ char: userInput[i], status: 'extra' });
-      }
+    // Find common prefix length
+    var prefixLen = 0;
+    while (prefixLen < userInput.length && prefixLen < expected.length &&
+           userInput[prefixLen] === expected[prefixLen]) {
+      prefixLen++;
+    }
+    // Matching prefix — green
+    for (var i = 0; i < prefixLen; i++) {
+      result.push({ char: userInput[i], status: 'ok' });
+    }
+    // User's wrong suffix — red strikethrough
+    for (var i = prefixLen; i < userInput.length; i++) {
+      result.push({ char: userInput[i], status: 'wrong' });
+    }
+    // Full expected correct suffix — yellow (what they should have typed)
+    for (var i = prefixLen; i < expected.length; i++) {
+      result.push({ char: expected[i], status: 'missing' });
     }
     return result;
   }
