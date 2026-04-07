@@ -248,6 +248,26 @@ The same two-chip principle applies to other `たい` family forms in polite spe
 - **でも after a noun** → `p_demo` (子どもでもわかる = "even a child understands")
 - **でも at the start of a sentence/clause** → `p_demo_but` (でも、行きます = "But I'll go")
 
+### の (no) — possessive vs sentence-ending question disambiguation
+
+の has two **completely distinct grammatical roles** that share the same surface form:
+
+| Context | Role | Tag | Available from |
+|---|---|---|---|
+| Between/after nouns (modifier → noun) | Possessive / modifier | `p_no` | N5.1 |
+| At sentence end after plain-form verb/adj | Question / explanation-seeking | `p_no_question` | G10 |
+
+**Disambiguation rule — position determines role:**
+
+- **の between two nouns** → `p_no` (先生の名前 = "teacher's name")
+- **の at the end of a sentence after a plain-form verb or adjective** → `p_no_question` (買ったの？ = "Did you buy it?", 長いの？ = "Is it long?")
+
+**Common error:** Seeing sentence-ending の and tagging it as `p_no` (possessive). When a student taps it, they see "of / possessive" instead of "question / seeking explanation" — this is actively misleading.
+
+**Watch for sentences with BOTH roles:** 「日本語の 入門 本を 読んで いるの？」 — the first の (日本語の) is `p_no` (possessive), the final の is `p_no_question` (question).
+
+**Distinct from `p_nda`/`p_ndesu`:** These cover the explanatory んだ/んです forms. The question particle の stands alone (no ん contraction) and is interrogative. All three are available from G10.
+
 ### と (to) — connective vs quotation disambiguation
 
 と has two **completely distinct grammatical roles** that share the same surface form:
@@ -285,6 +305,27 @@ In spoken Japanese, `〜ている` contracts to `〜てる` and `〜ていた` c
 | `飲んでた` | `飲んで いた` | `{v_nomu, te_form}` + `{v_iru, plain_past}` |
 
 This applies to all casual conversation lines. The expanded form with a space is natural in the spaced-token jp format the content uses and still reads correctly when rendered.
+
+### て-form + auxiliary verb compounds — always split
+
+When a verb in て-form is followed by an auxiliary verb (くる, いく, みる, あげる, もらう, くれる, しまう), **always tag them as separate terms**. Never tag the compound as a single entry — the student needs to see each component's meaning to understand the construction.
+
+**Rule: split every te-form + auxiliary compound into separate terms.**
+
+| Compound (split these) | Terms | Meaning |
+|---|---|---|
+| `買ってきた` | `{v_kau, te_form}` + `{v_kuru, plain_past}` | bought and came (back) |
+| `買ってきてください` | `{v_kau, te_form}` + `{v_kuru, te_form}` + `v_kudasai` | please buy and come (back) |
+| `持っていく` | `{v_motsu, te_form}` + `{v_iku, plain_form}` | take (carry and go) |
+| `食べてみる` | `{v_taberu, te_form}` + `{v_miru, plain_form}` | try eating |
+| `教えてくれた` | `{v_oshieru, te_form}` + `{v_kureru, plain_past}` | taught (for me) |
+| `壊してしまった` | `{v_kowasu, te_form}` + `{v_shimau, plain_past}` | broke (unfortunately) |
+
+**In lesson/review jp text:** insert a space between components so the text processor matches each term: `買って きて ください`.
+
+**In story terms.json:** add each component as a separate key in the terms map. The story renderer uses longest-first substring matching, so each component will be matched individually without needing spaces in the story text.
+
+**Common error:** Tagging `買ってきたよ` as `{ "id": "v_kau", "form": "te_form" }`. This makes the student see "to buy (te-form)" when they tap a compound that actually means "bought and brought back." Splitting into `買って` + `きた` + `よ` gives them three tappable chips with accurate glosses.
 
 ### Particle `matches` — polite/plain surface variants
 

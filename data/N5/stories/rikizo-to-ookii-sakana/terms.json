@@ -44,6 +44,10 @@
       "id": "p_no",
       "form": null
     },
+    "ったの": {
+      "id": "p_no_question",
+      "form": null
+    },
     "も": {
       "id": "p_mo",
       "form": null
@@ -428,7 +432,7 @@
       "id": "v_kuru",
       "form": "polite_mashita"
     },
-    "来てください": {
+    "来て": {
       "id": "v_kuru",
       "form": "te_form"
     },
@@ -448,13 +452,21 @@
       "id": "v_kau",
       "form": "plain_desire_tai"
     },
-    "買ってきてください": {
+    "買って": {
       "id": "v_kau",
       "form": "te_form"
     },
-    "買ってきたよ": {
-      "id": "v_kau",
+    "きて": {
+      "id": "v_kuru",
       "form": "te_form"
+    },
+    "きた": {
+      "id": "v_kuru",
+      "form": "plain_past"
+    },
+    "ください": {
+      "id": "v_kudasai",
+      "form": null
     },
     "買った": {
       "id": "v_kau",
