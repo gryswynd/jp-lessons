@@ -44,6 +44,10 @@
       "id": "p_to",
       "form": null
     },
+    "」と": {
+      "id": "p_to_quote",
+      "form": null
+    },
     "も": {
       "id": "p_mo",
       "form": null
@@ -152,10 +156,6 @@
       "id": "v_aruku",
       "form": "tari_form"
     },
-    "歩いてください": {
-      "id": "v_aruku",
-      "form": "te_form"
-    },
     "仕事": {
       "id": "v_shigoto",
       "form": null
@@ -187,10 +187,6 @@
     "食べたい": {
       "id": "v_taberu",
       "form": "plain_desire_tai"
-    },
-    "食べてください": {
-      "id": "v_taberu",
-      "form": "te_form"
     },
     "食べないでください": {
       "id": "v_taberu",
@@ -412,7 +408,7 @@
       "id": "v_kuru",
       "form": "polite_negative_te"
     },
-    "来てください": {
+    "来て": {
       "id": "v_kuru",
       "form": "te_form"
     },

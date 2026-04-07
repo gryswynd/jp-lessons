@@ -84,6 +84,14 @@ def check_line(jp, terms, path):
             if tid == 'p_to':
                 errors.append(f"  WARN {path}.terms[{i}]: p_to — check if this と follows quoted speech/思う (if so → p_to_quote)")
 
+    # FM #34b: Sentence-ending の after plain form → should be p_no_question, not p_no
+    jp_nospace2 = jp.replace(' ', '')
+    if re.search(r'[たるいなだ]の[？?。！!]?\s*$', jp_nospace2):
+        for i, t in enumerate(terms):
+            tid = t if isinstance(t, str) else t.get('id', '')
+            if tid == 'p_no':
+                errors.append(f"  WARN {path}.terms[{i}]: p_no — check if this の is sentence-ending question/explanation particle (if so → p_no_question)")
+
 def walk(obj, path="root"):
     if isinstance(obj, dict):
         if 'jp' in obj and 'terms' in obj:
