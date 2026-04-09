@@ -1,8 +1,9 @@
 # N4 Campaign: Full Refresh & Completion
 
-> **Status:** Final QA
+> **Status:** QA Sweep — 141 hook failures remaining
 > **Started:** 2026-03-25
 > **Last updated:** 2026-04-09
+> **Audit baseline:** 131 files, 141 failures across 13 hooks (run `bash hooks/audit-all.sh N4` to regenerate)
 
 ---
 
@@ -12,14 +13,14 @@ Complete the entire N4 level: refresh the back half of lessons (N4.21–N4.36), 
 
 ## Current State
 
-| Content type | Exists | Needed | Gap |
+| Content type | Exists | Built | Hook failures |
 |---|---|---|---|
-| Lessons (N4.1–N4.36) | 36/36 | All | **32+ refreshed** to current standards; final QA pass in progress |
-| Grammar (G13–G31) | **19/19** | 19 | **All built** ✓ (G21–G22, G24–G31 completed) |
-| Reviews | 18 numbered + 2 half + 1 final | — | **All QA'd** (Apr 9 pass); N4.Review.16 rewritten for N4.31–32 |
-| Compose | **36/36** | 36 | **All built** ✓ (compose.N4.21–N4.36 completed) |
-| Stories | 14 | — | mori-no-shokudou added (N4.31–32 coverage) |
-| Game days | 0 | TBD | Game day planning needed |
+| Lessons (N4.1–N4.36) | 36/36 | All refreshed | **~25 lessons have failures** (surface-match, particle-context, chip-order, register, kanji-scope, etc.) |
+| Grammar (G13–G31) | 19/19 | All built | **10 grammar files have failures** (grammar-schema, kanji-scope, surface-match, particle-context, structure, writing-forms) |
+| Reviews | 18 + 2 half + 1 final | All exist | **~12 reviews have failures** (structure, particle-context, surface-match, form-scope) |
+| Compose | 36/36 | All built | **17 compose files have failures** (compose hook) |
+| Stories | 14 | All exist | **3 stories have writing-forms failures** |
+| Game days | 0 | — | Game day planning needed (separate phase) |
 
 ## Phase 1: Lesson Refresh (N4.21–N4.36)
 
@@ -59,16 +60,13 @@ All 11 missing grammar lessons have been built:
 | G30 | Advanced Verb Usages (てみる, ておく, てしまう, すぎる, とする) | N4.34 | **Built** ✓ |
 | G31 | Advanced Adjective Patterns (くなる/になる, くする/にする) | N4.34 | **Built** ✓ |
 
-## Phase 3: Reviews — COMPLETE ✓
+## Phase 3: Reviews — Built, needs QA sweep
 
-- [x] N4.Review.11 through N4.Review.18 — QA'd (Apr 9)
-- [x] N4.Review.16 rewritten to cover N4.31–32
-- [x] N4 Half Review 2 — verified
-- [x] N4.Final.Review — reviewed
+All reviews exist. N4.Review.16 rewritten for N4.31–32. Remaining hook failures across ~12 review files (structure, particle-context, surface-match, form-scope).
 
-## Phase 4: Compose Files (compose.N4.21–N4.36) — COMPLETE ✓
+## Phase 4: Compose Files — Built, needs QA sweep
 
-All 16 compose files built. Full set compose.N4.1–N4.36 now exists.
+All 36 compose files exist. 17 have compose hook failures (likely ungated particles or non-kanji targets).
 
 ## Phase 5: Stories
 
@@ -80,9 +78,9 @@ Current N4 stories (14 total):
 - [ ] Plan additional stories if needed
 - [ ] Build new stories with proper terms.json and particle tagging
 
-## Phase 6: QA All Grammar Lessons (G13–G31) — COMPLETE ✓
+## Phase 6: QA All Grammar Lessons (G13–G31)
 
-All 19 grammar lessons pass validation (Apr 9 QA pass). G30 and G31 received final fixes on Apr 9.
+All 19 grammar files exist. 10 have hook failures (G13–G16, G18–G22, G24–G25, G27, G31).
 
 ## Phase 7: Game Day Planning
 
@@ -93,6 +91,36 @@ No N4 game days exist yet. Planning needed:
 
 ## Remaining Work
 
-1. ~~G21–G31~~ ✓ | ~~Lesson refresh~~ ✓ | ~~Compose~~ ✓ | ~~Reviews QA~~ ✓ | ~~Grammar QA~~ ✓
-2. **Stories** — assess N4.21–36 vocabulary coverage, build additional stories if needed
-3. **Game day planning** — define N4 game day structure, create N4_GAME_ROADMAP.md
+### Phase A: QA Sweep (141 failures across 13 hooks)
+
+All content is built. What remains is fixing hook failures — the same sweep N5 went through.
+
+| Hook | Failures | Files affected | Pattern |
+|---|---|---|---|
+| surface-match | 36 | 30 lessons + 6 grammar + 6 reviews | Kanji/kana mismatches, character names, Q&A text |
+| particle-context | 21 | 6 lessons + 4 grammar + 7 reviews | Missing p_ka on question sentences |
+| compose | 17 | 17 compose files | Ungated particles or non-kanji targets |
+| structure | 15 | 4 grammar + 1 lesson + 9 reviews + compose.N4 | Warmup count, Drill 1 terms, review structure |
+| kanji-scope | 11 | 4 grammar + 7 lessons | Untaught kanji in jp text |
+| chip-order | 10 | 9 lessons + 1 review | Kana pair ordering |
+| writing-forms | 7 | 2 grammar + 2 lessons + 3 stories | Kanji/hiragana enforcement |
+| register | 6 | 6 lessons | Missing casual conversations |
+| grammar-schema | 6 | 6 grammar files (G16, G18–G22) | Invalid field names or chip colors |
+| form-scope | 5 | 1 compose + 1 grammar + 3 reviews | Conjugation forms before introducedIn |
+| term-ids | 5 | 5 lessons | k_* IDs outside kanjiGrid |
+| suffix-match | 1 | N4.30 | Term surface is strict suffix of match |
+| suru-compound | 1 | N4.17 | noun_suru with conjugation form |
+
+**Priority order:**
+1. Batch fixes — grammar-schema (6 files), structure/Drill 1 terms, compose ungated particles
+2. surface-match — heaviest count, but many are systematic (same patterns as N5)
+3. particle-context — mostly missing p_ka, mechanical fix
+4. kanji-scope — untaught kanji in jp text
+5. chip-order, register, writing-forms — smaller batches
+6. Remaining edge cases (form-scope, term-ids, suffix-match, suru-compound)
+
+### Phase B: Stories
+
+3 stories have writing-forms failures. Also need to assess N4.21–36 vocabulary coverage.
+
+### Phase C: Game day planning (separate — not blocking QA)
