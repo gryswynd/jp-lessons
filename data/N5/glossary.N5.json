@@ -674,6 +674,18 @@
       "notes": "Common adjective meaning 'good' or 'nice'. Irregular conjugation: stems from よ- (e.g. よくない, よかった), not from い-."
     },
     {
+      "id": "v_yoi",
+      "surface": "良い",
+      "reading": "よい",
+      "meaning": "good / fine (kanji form of いい)",
+      "type": "vocab",
+      "gtype": "i-adjective",
+      "verb_class": "i_adj",
+      "lesson_ids": "N5.1",
+      "matches": ["良く", "良かった", "良くない", "良くなかった"],
+      "notes": "Kanji spelling of いい. Uses regular i-adj conjugation from よい stem: 良く (adverbial), 良かった (past), 良くない (negative)."
+    },
+    {
       "id": "v_iie",
       "surface": "いいえ",
       "reading": "いいえ",
@@ -824,6 +836,7 @@
       "meaning": "everyone",
       "type": "vocab",
       "gtype": "noun",
+      "matches": ["皆さん"],
       "lesson_ids": "N5.1",
       "notes": ""
     },
@@ -1689,7 +1702,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "ごがつ"
+      "reading": "ごがつ",
+      "matches": ["五月", "5月"]
     },
     {
       "id": "v_gonin",
@@ -1709,7 +1723,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "はちがつ"
+      "reading": "はちがつ",
+      "matches": ["八月", "8月"]
     },
     {
       "id": "v_hachinin",
@@ -1749,7 +1764,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "いちがつ"
+      "reading": "いちがつ",
+      "matches": ["一月", "1月"]
     },
     {
       "id": "v_ichinichitsuitachi",
@@ -1799,7 +1815,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "じゅうがつ"
+      "reading": "じゅうがつ",
+      "matches": ["十月", "10月"]
     },
     {
       "id": "v_juuichigatsu",
@@ -1809,7 +1826,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "じゅういちがつ"
+      "reading": "じゅういちがつ",
+      "matches": ["十一月", "11月"]
     },
     {
       "id": "v_juunigatsu",
@@ -1819,7 +1837,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "じゅうにがつ"
+      "reading": "じゅうにがつ",
+      "matches": ["十二月", "12月"]
     },
     {
       "id": "v_juunin",
@@ -1859,7 +1878,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "くがつ"
+      "reading": "くがつ",
+      "matches": ["九月", "9月"]
     },
     {
       "id": "v_kunin",
@@ -1909,7 +1929,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "にがつ"
+      "reading": "にがつ",
+      "matches": ["二月", "2月"]
     },
     {
       "id": "v_rokugatsu",
@@ -1919,7 +1940,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "ろくがつ"
+      "reading": "ろくがつ",
+      "matches": ["六月", "6月"]
     },
     {
       "id": "v_rokunin",
@@ -1939,7 +1961,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "さんがつ"
+      "reading": "さんがつ",
+      "matches": ["三月", "3月"]
     },
     {
       "id": "v_sannin",
@@ -1959,7 +1982,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "しちがつ"
+      "reading": "しちがつ",
+      "matches": ["七月", "7月"]
     },
     {
       "id": "v_shichinin",
@@ -1979,7 +2003,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "しがつ"
+      "reading": "しがつ",
+      "matches": ["四月", "4月"]
     },
     {
       "id": "v_sore",
@@ -2503,6 +2528,16 @@
       "reading": "みせ"
     },
     {
+      "id": "v_omise",
+      "surface": "お店",
+      "meaning": "shop / store (polite)",
+      "type": "vocab",
+      "gtype": "noun",
+      "notes": "Polite form of 店 with honorific お prefix.",
+      "lesson_ids": "N5.5",
+      "reading": "おみせ"
+    },
+    {
       "id": "v_raigetsu",
       "surface": "来月",
       "meaning": "next month",
@@ -2797,7 +2832,8 @@
       "surface": "大好き",
       "meaning": "love",
       "type": "vocab",
-      "gtype": "noun",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
       "notes": "",
       "lesson_ids": "N5.7",
       "reading": "だいすき",
@@ -3212,6 +3248,7 @@
       "type": "vocab",
       "gtype": "na-adjective",
       "verb_class": "na_adj",
+      "matches": ["大丈夫"],
       "lesson_ids": "N5.9"
     },
     {
@@ -3295,6 +3332,21 @@
       "reading": "なまえ",
       "matches": [
         "名まえ"
+      ]
+    },
+    {
+      "id": "v_onamae",
+      "surface": "お名前",
+      "reading": "おなまえ",
+      "meaning": "name (polite)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N5.9",
+      "notes": "Polite form of 名前 with honorific お prefix.",
+      "matches": [
+        "お名前",
+        "おなまえ",
+        "お名まえ"
       ]
     },
     {
@@ -3642,6 +3694,16 @@
       "surface": "きれい",
       "reading": "きれい",
       "meaning": "beautiful / clean",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N5.11"
+    },
+    {
+      "id": "v_shizuka",
+      "surface": "しずか",
+      "reading": "しずか",
+      "meaning": "quiet / peaceful",
       "type": "vocab",
       "gtype": "na-adjective",
       "verb_class": "na_adj",
@@ -4130,6 +4192,7 @@
       "meaning": "many",
       "type": "vocab",
       "gtype": "adjective",
+      "matches": ["多すぎて"],
       "notes": "",
       "lesson_ids": "N5.14",
       "reading": "おおい",

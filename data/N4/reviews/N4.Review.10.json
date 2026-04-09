@@ -292,8 +292,8 @@
               "en": "Yeah, you're right. Tonight I'm tired from work, so I want to drink slowly.",
               "terms": [
                 "v_sou",
-                "g_da",
                 "p_ne",
+                "g_da",
                 "v_konya",
                 "p_wa",
                 "v_shigoto",
@@ -329,8 +329,8 @@
                   "id": "v_kirei",
                   "form": "plain_adj"
                 },
-                "g_da",
-                "p_shi"
+                "p_shi",
+                "g_da"
               ]
             },
             {
@@ -520,8 +520,8 @@
               "form": "polite_masu"
             },
             "v_chika",
-            "p_ni",
             "p_mo",
+            "p_ni",
             "v_hon",
             "p_ga",
             "v_takusan",
@@ -605,10 +605,16 @@
           ],
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_toshokan",
             "p_de",
             "v_nani",
+            "p_wo",
+            {"id": "v_suru", "form": "te_form"},
+            {"id": "v_iru", "form": "polite_masu"},
+            "p_ka",
             "v_shousetsu",
+            "p_wo",
             {
               "id": "v_yomu",
               "form": "te_form"
@@ -630,10 +636,16 @@
           ],
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_sono",
             "v_yoru",
             "v_donna",
+            "v_mise",
+            "p_ni",
+            {"id": "v_iku", "form": "polite_mashita"},
+            "p_ka",
             "v_youshoku",
+            "p_no",
             "v_ryouriya"
           ]
         },
@@ -648,15 +660,22 @@
           ],
           "terms": [
             "v_shokuji",
+            "p_no",
             "v_ato",
             "char_rikizo",
+            "p_wa",
             "v_nani",
+            "p_wo",
+            {"id": "v_suru", "form": "polite_mashita"},
+            "p_ka",
             "v_okujou",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "te_form"
             },
             "v_yozora",
+            "p_wo",
             {
               "id": "v_tanoshimu",
               "form": "polite_mashita"

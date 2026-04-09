@@ -369,7 +369,10 @@
             "v_doko",
             "p_de",
             { "id": "v_aru", "form": "polite_masu" },
-            "p_ka"
+            "p_ka",
+            "v_eki",
+            "p_no",
+            "v_machiaishitsu"
           ]
         },
         {
@@ -387,7 +390,10 @@
             "v_nanji",
             "p_ni",
             { "id": "v_kuru", "form": "polite_masu" },
-            "p_ka"
+            "p_ka",
+            "v_yuugata",
+            "p_no",
+            { "counter": "ji", "n": 7 }
           ]
         },
         {
@@ -409,7 +415,10 @@
             "v_doko",
             "p_ni",
             { "id": "v_iru", "form": "polite_masu" },
-            "p_ka"
+            "p_ka",
+            "v_seimon",
+            "p_de",
+            { "id": "v_matsu", "form": "te_form" }
           ]
         }
       ]
@@ -520,7 +529,11 @@
             "v_nani",
             "p_ga",
             { "id": "v_aru", "form": "polite_masu" },
-            "p_ka"
+            "p_ka",
+            "v_sanrin",
+            "p_ya",
+            "v_hayashi",
+            "v_ike"
           ]
         },
         {
@@ -539,7 +552,14 @@
             "v_nani",
             "p_wo",
             { "id": "v_suru", "form": "polite_masu" },
-            "p_ka"
+            "p_ka",
+            "v_seimon",
+            { "id": "v_deru", "form": "te_form" },
+            "p_tekara",
+            "v_sanrin",
+            "p_no",
+            "v_naka",
+            { "id": "v_aruku", "form": "polite_masu" }
           ]
         },
         {
@@ -557,7 +577,11 @@
             "v_doko",
             "p_de",
             { "id": "v_kau", "form": "polite_masu" },
-            "p_ka"
+            "p_ka",
+            "v_ike",
+            "p_no",
+            { "id": "v_chikai", "form": "adverbial" },
+            "v_mise"
           ]
         }
       ]

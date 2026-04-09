@@ -743,6 +743,7 @@
           "jp": "わあ！ありがとうございます。けんさんがくれましたか。",
           "en": "Wow! Thank you so much. Did you give this to me, Ken?",
           "terms": [
+            "v_waa",
             "p_arigatou_gozaimasu",
             "char_ken",
             "v_san",
@@ -883,8 +884,8 @@
             "v_ii",
             "p_yo",
             "v_sensei",
-            "p_ni",
             "p_mo",
+            "p_ni",
             {
               "id": "v_yomu",
               "form": "te_form"
@@ -1005,10 +1006,7 @@
           ],
           "answer": "あげる",
           "terms": [
-            {
-              "id": "v_ageru",
-              "form": "polite_masu"
-            }
+            "v_ageru"
           ],
           "explanation": "あげる is used when the SPEAKER gives to someone else — action goes outward from the speaker/in-group. くれる = someone gives TO me. もらう = I receive. くださる = honorific くれる (a superior gives to me)."
         },
@@ -1016,16 +1014,19 @@
           "kind": "mcq",
           "q": "Friend gives me a gift. Which sentence is most natural?",
           "choices": [
-            "友だちがわたしにプレゼントをくれました。",
-            "友だちがわたしにプレゼントをあげました。",
-            "わたしが友だちにプレゼントをもらいました。",
-            "友だちがわたしにプレゼントをもらいました。"
+            "友だちが私にプレゼントをくれました。",
+            "友だちが私にプレゼントをあげました。",
+            "私が友だちにプレゼントをもらいました。",
+            "友だちが私にプレゼントをもらいました。"
           ],
-          "answer": "友だちがわたしにプレゼントをくれました。",
+          "answer": "友だちが私にプレゼントをくれました。",
           "terms": [
             "v_tomodachi",
             "p_ga",
+            "v_watashi",
+            "p_ni",
             "v_purezento",
+            "p_wo",
             {
               "id": "v_kureru",
               "form": "polite_mashita"
@@ -1047,6 +1048,7 @@
             "v_tomodachi",
             "p_ni",
             "v_hon",
+            "p_wo",
             {
               "id": "v_yomu",
               "form": "te_form"
@@ -1062,17 +1064,14 @@
           "kind": "mcq",
           "q": "Which pattern means 'I'll do X for you (as a favour)'?",
           "choices": [
-            "Verb て-form + あげる",
-            "Verb て-form + くれる",
-            "Verb て-form + もらう",
-            "Verb て-form + くださる"
+            "Verb te-form + あげる",
+            "Verb te-form + くれる",
+            "Verb te-form + もらう",
+            "Verb te-form + くださる"
           ],
-          "answer": "Verb て-form + あげる",
+          "answer": "Verb te-form + あげる",
           "terms": [
-            {
-              "id": "v_ageru",
-              "form": "te_form"
-            }
+            "v_ageru"
           ],
           "explanation": "てあげる = I give the action (as a favour) to you/them — outward direction from speaker. てくれる = someone gives the action to me. てもらう = I receive the action from someone. All three use te-form + a giving/receiving verb."
         },
@@ -1088,6 +1087,8 @@
           "answer": "Both mean the same thing: the teacher wrote it for me. くれた focuses on the teacher's kindness; もらった focuses on receiving the favor.",
           "terms": [
             "v_sensei",
+            "p_ga",
+            "p_ni",
             {
               "id": "v_kaku",
               "form": "te_form"

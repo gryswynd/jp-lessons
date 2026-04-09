@@ -75,6 +75,7 @@
           "jp": "この 地区に 住んだことが ありますか。",
           "en": "Have you ever lived in this district?",
           "terms": [
+            "v_kono",
             "v_chiku",
             "p_ni",
             {
@@ -107,7 +108,7 @@
             "p_wa",
             "v_dou",
             {
-              "id": "v_kawaru",
+              "id": "v_kawaru_2",
               "form": "polite_mashita"
             },
             "p_ka"
@@ -120,7 +121,10 @@
             "v_sengetsu",
             "p_kara",
             "v_mainichi",
-            "v_hayai",
+            {
+              "id": "v_hayai",
+              "form": "adverbial"
+            },
             {
               "id": "v_okiru",
               "form": "plain_form"
@@ -246,7 +250,7 @@
           "terms": [
             "char_rikizo",
             "v_kono",
-            "k_mise",
+            "v_omise",
             "p_no",
             "v_shujin",
             "p_wa",
@@ -314,7 +318,7 @@
             "p_no",
             "v_minasan",
             "p_ni",
-            "v_ii",
+            "v_yoi",
             "v_yasai",
             "p_wo",
             {
@@ -334,9 +338,10 @@
           "en": "What a good owner. I'll try buying a little.",
           "terms": [
             "char_rikizo",
-            "v_ii",
+            "v_yoi",
             "v_shujin",
             "g_desu",
+            "p_ne",
             "v_sukoshi",
             {
               "id": "v_kau",
@@ -384,14 +389,7 @@
             "p_hai",
             "v_ame",
             "p_ga",
-            {
-              "id": "v_ooi",
-              "form": "sugiru_form"
-            },
-            {
-              "id": "v_ooi",
-              "form": "te_form"
-            },
+            "v_ooi",
             "v_chuushi",
             "p_ni",
             {
@@ -462,7 +460,7 @@
             },
             {
               "id": "v_kaeru",
-              "form": "plain_potential"
+              "form": "potential"
             },
             "p_to_quote",
             {
@@ -499,7 +497,7 @@
       "lines": [
         {
           "spk": "けん",
-          "jp": "今日、車を 洗おうと 思ってる けど、一緒に しない？",
+          "jp": "今日、車を 洗おうと 思っている けど、一緒に しない？",
           "en": "I'm thinking of washing the car today — want to do it together?",
           "terms": [
             "char_ken",
@@ -580,7 +578,7 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "あ、水を 使って しまった！もう 少し 買って おこう。",
+          "jp": "水を 使って しまった！もう 少し 買って おこう。",
           "en": "Oh no, I used up the water! Let's buy a bit more in advance.",
           "terms": [
             "char_rikizo",
@@ -633,10 +631,10 @@
               "id": "v_ooi",
               "form": "te_form"
             },
-            "v_ii",
+            "v_yoi",
             "v_tokoro",
-            "g_da",
-            "p_yo"
+            "p_yo",
+            "g_da"
           ]
         },
         {
@@ -646,12 +644,16 @@
           "terms": [
             "char_rikizo",
             "v_ii",
+            "p_na",
             "v_sono",
             "v_chiku",
             "p_wa",
             "v_kokumin",
             "p_ga",
-            "v_ooi",
+            {
+              "id": "v_ooi",
+              "form": "adverbial"
+            },
             {
               "id": "v_sumu",
               "form": "te_form"
@@ -671,7 +673,10 @@
           "terms": [
             "char_yamakawa",
             "v_un",
-            "v_iroiro",
+            {
+              "id": "v_iroiro",
+              "form": "attributive_na"
+            },
             "v_minzoku",
             "p_no",
             "v_hito",
@@ -683,7 +688,7 @@
             "p_yo",
             "v_kinjo",
             "p_mo",
-            "v_ii",
+            "v_yoi",
             {
               "id": "v_naru",
               "form": "te_form"
@@ -697,10 +702,7 @@
               "id": "v_sumu",
               "form": "te_form"
             },
-            {
-              "id": "v_ii",
-              "form": "plain_past_adj"
-            }
+            "v_yoi"
           ]
         },
         {
@@ -735,10 +737,10 @@
             "p_mo",
             "v_chikai",
             "p_shi",
-            "v_ii",
+            "v_yoi",
             "v_tokoro",
-            "g_da",
-            "p_yo"
+            "p_yo",
+            "g_da"
           ]
         }
       ]
@@ -761,7 +763,7 @@
             },
             "p_ni",
             "v_chiisai",
-            "k_mise",
+            "v_omise",
             "p_ga",
             {
               "id": "v_aru",
@@ -774,12 +776,15 @@
           "en": "The owner of that shop comes early every morning and mainly sells vegetables.",
           "terms": [
             "v_sono",
-            "k_mise",
+            "v_omise",
             "p_no",
             "v_shujin",
             "p_wa",
             "v_maiasa",
-            "v_hayai",
+            {
+              "id": "v_hayai",
+              "form": "adverbial"
+            },
             {
               "id": "v_kuru",
               "form": "te_form"
@@ -849,10 +854,10 @@
           "jp": "良い 主人だと 思います。",
           "en": "I think they are a good owner.",
           "terms": [
-            "v_ii",
+            "v_yoi",
             "v_shujin",
-            "g_da",
             "p_to_quote",
+            "g_da",
             {
               "id": "v_omou",
               "form": "polite_masu"
@@ -904,7 +909,7 @@
           "terms": [
             "v_dare",
             "p_ga",
-            "k_mise",
+            "v_omise",
             "p_ni",
             {
               "id": "v_kuru",

@@ -238,9 +238,11 @@
           "en": "How many people are in your family, Rikizo?",
           "terms": [
             "char_rikizo",
+            "v_san",
             "p_wa",
             "v_nannin",
             "v_kazoku",
+            "g_desu",
             "p_ka"
           ]
         },
@@ -443,7 +445,7 @@
             "v_imouto",
             "p_ya",
             "v_otouto",
-            "p_ga",
+            "p_wa",
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -486,10 +488,7 @@
               "id": "v_tsukuru",
               "form": "te_form"
             },
-            {
-              "id": "v_kudasaru",
-              "form": "polite_masu"
-            }
+            "v_kudasaru"
           ]
         }
       ]
@@ -612,8 +611,8 @@
               "id": "v_taberu",
               "form": "plain_form"
             },
-            "p_no",
             "p_wa",
+            "p_no",
             "v_ii",
             "g_desu",
             "p_ne"
@@ -660,6 +659,7 @@
           "jp": "じゃあ、いっしょに 作ろうか。",
           "en": "Then, shall we make it together?",
           "terms": [
+            "p_dewa_then",
             "v_issho",
             "p_ni",
             {
@@ -839,7 +839,8 @@
             {
               "counter": "nin",
               "n": 5
-            }
+            },
+            "g_desu"
           ]
         },
         {
@@ -858,7 +859,12 @@
             "g_desu",
             "p_ka"
           ],
-          "a_terms": []
+          "a_terms": [
+            "v_ane",
+            "p_ga",
+            "v_jouzu",
+            "g_desu"
+          ]
         },
         {
           "q": "週まつ、家族は 何を しますか。",
@@ -887,6 +893,7 @@
             "v_issho",
             "p_ni",
             "v_gohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "polite_masu"
@@ -976,8 +983,8 @@
               "id": "v_hanasu",
               "form": "plain_form"
             },
-            "p_no",
             "p_ga",
+            "p_no",
             "v_daisuki",
             "g_desu"
           ]
@@ -1026,7 +1033,9 @@
           ],
           "a_terms": [
             "p_hai",
-            "v_totemo"
+            "v_totemo",
+            "v_jouzu",
+            "g_desu"
           ]
         },
         {
@@ -1056,6 +1065,10 @@
             {
               "id": "v_hataraku",
               "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
             }
           ]
         },
@@ -1083,7 +1096,8 @@
             {
               "id": "v_iku",
               "form": "plain_desire_tai"
-            }
+            },
+            "g_desu"
           ]
         }
       ]

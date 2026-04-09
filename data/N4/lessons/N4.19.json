@@ -327,6 +327,7 @@
               "form": "polite_masu"
             },
             "v_chijou",
+            "p_ni",
             "p_mo",
             "v_hon",
             "p_ga",
@@ -338,7 +339,7 @@
         },
         {
           "spk": "A",
-          "jp": "ありがとう ございます。本を 借りに 来ました。",
+          "jp": "ありがとうございます。本を 借りに 来ました。",
           "en": "Thank you very much. I came to borrow a book.",
           "terms": [
             "p_arigatou_gozaimasu",
@@ -348,6 +349,7 @@
               "id": "v_kariru",
               "form": null
             },
+            "p_ni",
             {
               "id": "v_kuru",
               "form": "polite_mashita"
@@ -556,8 +558,8 @@
           "terms": [
             "v_watashi",
             "p_mo",
-            "g_da",
             "p_yo",
+            "g_da",
             "v_setsumei",
             "p_ga",
             {
@@ -703,8 +705,8 @@
           "en": "Underground there are many children's books.",
           "terms": [
             "v_chika",
-            "p_ni",
             "p_wa",
+            "p_ni",
             "v_kodomo",
             "p_no",
             "v_hon",
@@ -775,8 +777,8 @@
           "a_en": "There are novels and academic theory books.",
           "terms": [
             "v_chijou",
-            "p_ni",
             "p_wa",
+            "p_ni",
             "v_nani",
             "p_no",
             "v_hon",
@@ -807,8 +809,8 @@
           "a_en": "Children's books are the most common.",
           "terms": [
             "v_chika",
-            "p_ni",
             "p_wa",
+            "p_ni",
             "v_donna",
             "v_hon",
             "p_ga",
@@ -820,7 +822,13 @@
           ],
           "a_terms": [
             "v_kodomo",
-            "p_no"
+            "p_no",
+            "v_hon",
+            "p_ga",
+            {
+              "id": "v_ooi",
+              "form": "polite_adj"
+            }
           ]
         }
       ]
@@ -833,6 +841,7 @@
           "jp": "ある 先生が 川の 水質の 問題を 勉強して います。",
           "en": "A teacher is studying the problem of river water quality.",
           "terms": [
+            "v_aru",
             "v_sensei",
             "p_ga",
             "v_kawa",
@@ -949,7 +958,18 @@
             "v_kawa",
             "p_no",
             "v_suishitsu",
-            "v_mondai"
+            "p_no",
+            "v_mondai",
+            "p_wo",
+            "v_benkyou",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {

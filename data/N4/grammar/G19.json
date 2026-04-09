@@ -582,8 +582,10 @@
             "p_ga",
             {
               "id": "v_hajimaru",
-              "form": null
+              "form": "plain_form"
             },
+            "v_mae",
+            "p_ni",
             {
               "id": "v_nomu",
               "form": null
@@ -768,6 +770,10 @@
             {
               "id": "v_iku",
               "form": "polite_volitional_mashou"
+            },
+            {
+              "id": "v_miru",
+              "form": "te_form"
             }
           ],
           "explanation": "てから uses the <b>て-form</b>. 見る → て-form <b>見て</b> + から → 見てから. The other options use the dictionary form (見る), plain past (見た), or ながら (simultaneous action — wrong meaning here)."
@@ -787,8 +793,9 @@
             "p_ga",
             {
               "id": "v_hajimaru",
-              "form": null
+              "form": "plain_form"
             },
+            "v_mae",
             "p_ni",
             {
               "id": "v_nomu",
@@ -815,8 +822,9 @@
           "terms": [
             {
               "id": "v_aruku",
-              "form": "nagara_form"
+              "form": null
             },
+            "p_nagara",
             {
               "id": "v_hanasu",
               "form": "polite_volitional_mashou"
@@ -826,7 +834,7 @@
         },
         {
           "kind": "mcq",
-          "q": "日本語のために映画を見ています。What does ために express here?",
+          "q": "日本語の ために 映画を 見ています。What does ために express here?",
           "choices": [
             "purpose / for the sake of",
             "sequence / after doing",
@@ -836,7 +844,9 @@
           "answer": "purpose / for the sake of",
           "terms": [
             "v_nihongo",
+            "v_tame",
             "p_no",
+            "p_ni",
             "v_eiga",
             "p_wo",
             {

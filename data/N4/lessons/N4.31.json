@@ -225,6 +225,12 @@
             "v_kaiten",
             "v_kaishi"
           ]
+        },
+        {
+          "label": "Senses",
+          "items": [
+            "v_kikoeru"
+          ]
         }
       ]
     },
@@ -313,8 +319,8 @@
             "v_ima",
             "p_demo",
             "v_taisetsu",
-            "g_da",
             "p_to_quote",
+            "g_da",
             {
               "id": "v_omou",
               "form": "polite_masu"
@@ -378,6 +384,10 @@
             "p_wo",
             {
               "id": "v_akeru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_oku",
               "form": "te_form"
             },
             "v_kudasai"
@@ -459,8 +469,8 @@
         },
         {
           "spk": "A",
-          "jp": "本堂は どこに ある？地図によると 森の 中だと 思うけど。",
-          "en": "Where is the main hall? According to the map, I think it's inside the forest.",
+          "jp": "本堂は どこに ある？地図を 見ると、森の 中だと 思うけど。",
+          "en": "Where is the main hall? Looking at the map, I think it's inside the forest.",
           "terms": [
             "v_hondou",
             "p_wa",
@@ -472,13 +482,17 @@
             },
             "p_ka",
             "v_chizu",
-            "p_ni",
-            "p_yori",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "plain_form"
+            },
+            "p_to",
             "v_mori",
             "p_no",
             "v_naka",
-            "g_da",
             "p_to_quote",
+            "g_da",
             {
               "id": "v_omou",
               "form": "plain_form"
@@ -492,8 +506,8 @@
           "en": "You're right. Let's go and see.",
           "terms": [
             "v_sou",
-            "g_da",
             "p_ne",
+            "g_da",
             {
               "id": "v_iku",
               "form": "te_form"
@@ -535,7 +549,7 @@
         },
         {
           "spk": "B",
-          "jp": "え、ほんとうに？代金は 高い？",
+          "jp": "えっ、ほんとうに？代金は 高い？",
           "en": "Really? Is the price expensive?",
           "terms": [
             "v_e",
@@ -640,7 +654,7 @@
             "p_ga",
             "v_yoku",
             {
-              "id": "v_mieru",
+              "id": "v_kikoeru",
               "form": "polite_mashita"
             }
           ]
@@ -656,6 +670,7 @@
             "v_hondou",
             "p_wa",
             "v_doudou",
+            "p_to",
             {
               "id": "v_suru",
               "form": "te_form"
@@ -695,7 +710,10 @@
           "terms": [
             "v_kyou",
             "p_mo",
-            "v_ooi",
+            {
+              "id": "v_ooi",
+              "form": "adverbial"
+            },
             "p_no",
             "v_hito",
             "p_ga",
@@ -704,7 +722,7 @@
             "p_ni",
             {
               "id": "v_kuru",
-              "form": "polite_passive"
+              "form": "passive_te"
             },
             {
               "id": "v_iru",
@@ -756,6 +774,7 @@
           ],
           "a_terms": [
             "v_doudou",
+            "p_to",
             {
               "id": "v_suru",
               "form": "te_form"
@@ -855,7 +874,10 @@
           "jp": "多くの 人が 来て、会合は とても 楽しかったです。",
           "en": "Many people came, and the gathering was very enjoyable.",
           "terms": [
-            "v_ooi",
+            {
+              "id": "v_ooi",
+              "form": "adverbial"
+            },
             "p_no",
             "v_hito",
             "p_ga",
@@ -892,8 +914,8 @@
             "v_tokoro",
             "p_wa",
             "v_taisetsu",
-            "g_da",
             "p_to_quote",
+            "g_da",
             {
               "id": "v_omou",
               "form": "polite_mashita"
@@ -965,8 +987,8 @@
             "v_nani",
             "p_ga",
             "v_taisetsu",
-            "g_da",
             "p_to_quote",
+            "g_da",
             {
               "id": "v_omou",
               "form": "polite_mashita"
@@ -983,8 +1005,8 @@
             "v_tokoro",
             "p_ga",
             "v_taisetsu",
-            "g_da",
             "p_to_quote",
+            "g_da",
             {
               "id": "v_omou",
               "form": "polite_mashita"

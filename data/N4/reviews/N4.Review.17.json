@@ -36,7 +36,10 @@
               "jp": "出発は 何時ですか。",
               "terms": [
                 "v_shuppatsu",
-                "v_nanji"
+                "p_wa",
+                "v_nanji",
+                "g_desu",
+                "p_ka"
               ]
             },
             {
@@ -47,7 +50,8 @@
                   "counter": "ji",
                   "n": 8
                 },
-                "v_hatsu"
+                "v_hatsu",
+                "g_desu"
               ]
             },
             {
@@ -55,21 +59,25 @@
               "jp": "電車は この 市を 通りますか。",
               "terms": [
                 "v_densha",
+                "p_wa",
                 "v_kono",
                 "v_shi",
+                "p_wo",
                 {
                   "id": "v_tooru",
                   "form": "polite_masu"
-                }
+                },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "はい。大きい 都市を 通ります。",
               "terms": [
-                "v_hai",
+                "p_hai",
                 "v_ookii",
                 "v_toshi",
+                "p_wo",
                 {
                   "id": "v_tooru",
                   "form": "polite_masu"
@@ -97,17 +105,22 @@
               "terms": [
                 "v_kono",
                 "v_chiku",
+                "p_ni",
                 "v_ookii",
-                "v_koujou"
+                "v_koujou",
+                "p_ga",
+                { "id": "v_aru", "form": "polite_masu" },
+                "p_ne"
               ]
             },
             {
               "spk": "B",
               "jp": "はい。広い 場所に 建って います。",
               "terms": [
-                "v_hai",
+                "p_hai",
                 "v_hiroi",
                 "v_basho",
+                "p_ni",
                 {
                   "id": "v_tatsu_build",
                   "form": "te_form"
@@ -123,16 +136,18 @@
               "jp": "工員は 何人 いますか。",
               "terms": [
                 "v_kouin",
+                "p_wa",
                 "v_nannin",
                 {
                   "id": "v_iru",
                   "form": "polite_masu"
-                }
+                },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
-              "jp": "多く います。区内に 広場も あります。",
+              "jp": "多く います。この 地区に 広場も あります。",
               "terms": [
                 {
                   "id": "v_ooi",
@@ -142,8 +157,11 @@
                   "id": "v_iru",
                   "form": "polite_masu"
                 },
-                "v_ku",
+                "v_kono",
+                "v_chiku",
+                "p_ni",
                 "v_hiroba",
+                "p_mo",
                 {
                   "id": "v_aru",
                   "form": "polite_masu"
@@ -171,6 +189,7 @@
               "terms": [
                 "v_mainichi",
                 "v_doko",
+                "p_e",
                 {
                   "id": "v_kayou",
                   "form": "te_form"
@@ -178,7 +197,8 @@
                 {
                   "id": "v_iru",
                   "form": "polite_masu"
-                }
+                },
+                "p_ka"
               ]
             },
             {
@@ -186,7 +206,9 @@
               "jp": "習字の 教習に 通って います。",
               "terms": [
                 "v_shuuji",
+                "p_no",
                 "v_kyoushuu",
+                "p_ni",
                 {
                   "id": "v_kayou",
                   "form": "te_form"
@@ -202,19 +224,22 @@
               "jp": "先生を 見習いますか。",
               "terms": [
                 "v_sensei",
+                "p_wo",
                 {
                   "id": "v_minarau",
                   "form": "polite_masu"
-                }
+                },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "はい。学習が 楽しいです。",
               "terms": [
-                "v_hai",
+                "p_hai",
                 "v_gakushuu",
-                "v_tanoshii"
+                "p_ga",
+                { "id": "v_tanoshii", "form": "polite_adj" }
               ]
             }
           ],
@@ -343,7 +368,9 @@
           "en": "I live in Aomori Prefecture.",
           "terms": [
             "v_watashi",
+            "p_wa",
             "v_aomoriken",
+            "p_ni",
             {
               "id": "v_sumu",
               "form": "te_form"
@@ -360,7 +387,9 @@
           "terms": [
             "v_mainichi",
             "v_densha",
+            "p_de",
             "v_toshi",
+            "p_ni",
             {
               "id": "v_kayou",
               "form": "polite_masu"
@@ -372,9 +401,12 @@
           "en": "The first train passes through the wide main street.",
           "terms": [
             "v_shihatsu",
+            "p_no",
             "v_densha",
+            "p_wa",
             "v_hiroi",
             "v_oodoori",
+            "p_wo",
             {
               "id": "v_tooru",
               "form": "polite_masu"
@@ -386,9 +418,12 @@
           "en": "There is a big factory in the university district.",
           "terms": [
             "v_daigaku",
+            "p_no",
             "v_chiku",
+            "p_ni",
             "v_ookii",
             "v_koujou",
+            "p_ga",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -400,7 +435,9 @@
           "en": "At university, I am learning engineering.",
           "terms": [
             "v_daigaku",
+            "p_dewa",
             "v_kougaku",
+            "p_wo",
             {
               "id": "v_narau",
               "form": "te_form"
@@ -424,7 +461,10 @@
           ],
           "terms": [
             "v_doko",
-            "v_sumu",
+            "p_ni",
+            { "id": "v_sumu", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" },
+            "p_ka",
             "v_aomoriken"
           ]
         },
@@ -439,9 +479,13 @@
           ],
           "terms": [
             "v_shihatsu",
+            "p_no",
             "v_densha",
+            "p_wa",
             "v_doko",
-            "v_tooru",
+            "p_wo",
+            { "id": "v_tooru", "form": "polite_masu" },
+            "p_ka",
             "v_hiroi",
             "v_oodoori"
           ]
@@ -457,8 +501,12 @@
           ],
           "terms": [
             "v_daigaku",
+            "p_de",
             "v_nani",
-            "v_narau",
+            "p_wo",
+            { "id": "v_narau", "form": "te_form" },
+            { "id": "v_iru", "form": "polite_masu" },
+            "p_ka",
             "v_kougaku"
           ]
         }

@@ -258,11 +258,7 @@
                 "v_mainichi",
                 {
                   "id": "v_kiku",
-                  "form": "te_form"
-                },
-                {
-                  "id": "v_iru",
-                  "form": "plain_form"
+                  "form": "casual_te_iru"
                 }
               ]
             },
@@ -547,9 +543,17 @@
             "朝だけ 音楽を 聞きます。"
           ],
           "terms": [
+            "char_yamakawa",
+            "v_san",
+            "p_wa",
+            "v_donna",
             "v_ongaku",
+            "p_wo",
+            {"id": "v_kiku", "form": "polite_masu"},
+            "p_ka",
             "v_keiongaku",
-            "v_kiku"
+            "p_shika",
+            {"id": "v_kiku", "form": "polite_negative"}
           ],
           "explanation": "Sentence 2 says 軽音楽しか聞きません (only listens to light music). しか + negative form = exclusive 'only / nothing but'. The answer matches the passage exactly."
         },
@@ -563,10 +567,22 @@
             "朝だけ 歌手の 音楽を 聞きます。"
           ],
           "terms": [
+            "char_yamakawa",
+            "v_san",
+            "p_wa",
+            "v_asa",
+            "v_nani",
+            "p_wo",
+            {"id": "v_suru", "form": "polite_masu"},
+            "p_ka",
             "v_hayaoki",
+            {"id": "v_suru", "form": "te_form"},
             "v_asagohan",
+            "p_wo",
+            {"id": "v_taberu", "form": "nagara_form"},
             "v_uta",
-            "v_kiku"
+            "p_wo",
+            {"id": "v_kiku", "form": "polite_masu"}
           ],
           "explanation": "Sentence 3 says 早起きして、朝ご飯を食べながら歌を聞きます (gets up early and listens to songs while eating breakfast). 食べながら uses ながら to express two simultaneous actions. 早起き means 'early rising'."
         },
@@ -580,9 +596,17 @@
             "仕事の 後だけ 休みます。"
           ],
           "terms": [
+            "char_yamakawa",
+            "v_san",
+            "p_no",
             "v_yasumi",
+            "p_wa",
+            "v_itsu",
+            "g_desu",
+            "p_ka",
             "v_nichiyoubi",
-            "v_itsu"
+            "p_dake",
+            "g_desu"
           ],
           "explanation": "Sentence 5 says 休みは日曜日だけ (the day off is only Sunday). だけ = 'only / just', restricting the day off to Sunday alone. 日曜日 can now be written in full kanji because 曜 is taught in N4.14."
         }
@@ -812,7 +836,7 @@
         },
         {
           "kind": "mcq",
-          "q": "急行に 乗れますか。— 「乗れます」は どんな かたちですか。",
+          "q": "急行に 乗れますか。— 「乗れます」は どんな form ですか。",
           "choices": [
             "potential (can do)",
             "te-form (connector)",
@@ -823,7 +847,11 @@
           "terms": [
             "v_kyuukou",
             "p_ni",
-            "v_noru"
+            {"id": "v_noru", "form": "polite_potential"},
+            "p_ka",
+            "p_wa",
+            "v_donna",
+            "g_desu"
           ],
           "explanation": "乗れます is the polite potential form of 乗る (to ride/board): polite_potential. It means 'can ride / am able to board'. The potential form of godan verbs uses the え-column (乗る → 乗れる), then ます suffix. 乗れますか asks 'Can I board this (express)?'"
         },

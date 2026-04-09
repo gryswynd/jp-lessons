@@ -589,7 +589,9 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            "p_ka"
+            "p_ka",
+            "v_takai",
+            "v_yama"
           ],
           "explanation": "Line 3 states 東に高い山があります — 'There is a tall mountain to the east.' 東 (N5.15, ひがし) = east. 高い (N5.8) = tall/high. 川 (river) is to the west (西). 大きい店 (big store) is to the south (南). 駅 (station) is to the north (北). The に marks location of existence."
         },
@@ -611,7 +613,16 @@
               "id": "v_iku",
               "form": "polite_masu"
             },
-            "p_ka"
+            "p_ka",
+            "v_atarashii",
+            "v_hon",
+            "p_wo",
+            {
+              "id": "v_kau",
+              "form": "plain_desire_tai"
+            },
+            "p_kara_because",
+            "g_desu"
           ],
           "explanation": "Line 4 states 新しい本を買いたいですから、よく南に行きます — 'Because I want to buy new books, I often go south.' 買いたいです (desire_tai, G8) = 'want to buy' — 買う (N5.8) in desire form. から (p_kara_because, G9) = 'because' after a verb/adjective. よく (N5.7) = often. 南 (N5.15, みなみ) = south. The other choices incorrectly place the station, mountain, or school to the south."
         },
@@ -637,7 +648,8 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            "p_ka"
+            "p_ka",
+            "v_migi"
           ],
           "explanation": "Line 5 states 店の中で右に本があります — 'Inside the store, books are on the right.' 右 (N5.16, みぎ) = right. 中 (N5.9) = inside. で marks the location of the action/situation. 左 (N5.16, ひだり) = left — that is where the flowers (花, N5.11) are. 上 (N5.16, うえ) and 下 (N5.16, した) are not mentioned for the store interior."
         }

@@ -335,6 +335,7 @@
           "terms": [
             "char_rikizo",
             "char_suzuki",
+            "v_sensei",
             "v_nihongo",
             "p_wo",
             {
@@ -382,6 +383,7 @@
           "en": "I want to become better. What kind of attempts are good?",
           "terms": [
             "char_rikizo",
+            "v_motto",
             "v_jouzu",
             "p_ni",
             {
@@ -401,7 +403,7 @@
         },
         {
           "spk": "すずきせんせい",
-          "jp": "毎日 少しずつ やって いく ことが 大切ですよ。いっしょに 教室で 勉強しましょう。",
+          "jp": "毎日 少しずつ して いく ことが 大切ですよ。いっしょに 教室で 勉強しましょう。",
           "en": "It is important to keep doing it a little every day. Let's study together in the classroom.",
           "terms": [
             "char_suzuki",
@@ -455,7 +457,8 @@
               "id": "v_dekiru",
               "form": "polite_masu"
             },
-            "p_yo"
+            "p_yo",
+            "p_douzo"
           ]
         },
         {
@@ -712,7 +715,11 @@
               "form": "attributive_na"
             },
             "v_shiken",
-            "p_ga"
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -768,7 +775,11 @@
               "counter": "ji",
               "n": 9
             },
-            "p_ni"
+            "p_ni",
+            {
+              "id": "v_hajimaru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -886,7 +897,12 @@
           "a_terms": [
             "v_atarashii",
             "v_kyoushitsu",
-            "p_de"
+            "p_de",
+            "v_benkyou",
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -900,7 +916,10 @@
             "v_oshie",
             "p_wa",
             "v_dou",
-            "g_desu",
+            {
+              "id": "g_desu",
+              "form": "copula_past"
+            },
             "p_ka"
           ],
           "a_terms": [
@@ -935,7 +954,11 @@
           ],
           "a_terms": [
             "v_shishoku",
-            "p_wo"
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]

@@ -516,8 +516,8 @@
         },
         {
           "spk": "B",
-          "jp": "分かりました。これを 使って ください。毎日 三かい 使って ください。",
-          "en": "I understand. Please use this. Please use it three times a day.",
+          "jp": "分かりました。これを 使って ください。毎日 使って ください。",
+          "en": "I understand. Please use this. Please use it every day.",
           "terms": [
             {
               "id": "v_wakaru",
@@ -531,10 +531,6 @@
             },
             "v_kudasai",
             "v_mainichi",
-            {
-              "counter": "kai",
-              "n": 3
-            },
             {
               "id": "v_tsukau",
               "form": "te_form"
@@ -762,11 +758,15 @@
           ]
         },
         {
-          "jp": "病死ではなく、古くて 長い 人生でした。",
-          "en": "It was not death from illness — it was an old and long life.",
+          "jp": "病死では ありませんでした。古くて 長い 人生でした。",
+          "en": "It was not death from illness. It was an old and long life.",
           "terms": [
             "v_byoushi",
             "p_dewa",
+            {
+              "id": "v_aru",
+              "form": "polite_past_negative"
+            },
             {
               "id": "v_furui",
               "form": "te_form"

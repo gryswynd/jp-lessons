@@ -263,7 +263,7 @@
             "p_kara",
             "v_eigo",
             "p_no",
-            "v_kurasu",
+            "v_kurasu_class",
             "p_ga",
             {
               "id": "v_hajimaru",
@@ -319,8 +319,8 @@
             },
             "p_ga_but",
             "v_igirisu",
-            "p_ni",
             "p_mo",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "plain_past"
@@ -342,8 +342,9 @@
             "char_yamamoto",
             "v_sorekara",
             "char_conor",
+            "v_san",
             "p_mo",
-            "v_kurasu",
+            "v_kurasu_class",
             "p_ni",
             {
               "id": "v_kuru",
@@ -395,6 +396,7 @@
           "terms": [
             "char_rikizo",
             "char_conor",
+            "v_san",
             "v_issho",
             "p_ni",
             "v_eiga",
@@ -532,8 +534,8 @@
               "id": "v_miru",
               "form": "plain_form"
             },
-            "p_no",
             "p_ga",
+            "p_no",
             "v_suki",
             "g_desu",
             "p_yo"
@@ -733,6 +735,7 @@
             },
             "p_na",
             "char_conor",
+            "v_san",
             "p_wa",
             "v_dou",
             "p_kana"
@@ -745,6 +748,7 @@
           "terms": [
             "char_yamakawa",
             "char_conor",
+            "v_san",
             "v_nihongo",
             {
               "id": "v_jouzu",
@@ -798,6 +802,7 @@
           "en": "Conor loves movies.",
           "terms": [
             "char_conor",
+            "v_san",
             "p_wa",
             "v_eiga",
             "p_ga",
@@ -815,7 +820,7 @@
             "v_issho",
             "p_ni",
             "v_eigakan",
-            "p_he",
+            "p_e",
             {
               "id": "v_iku",
               "form": "polite_mashita"
@@ -854,6 +859,7 @@
           "en": "Conor wrote English notes while watching the movie.",
           "terms": [
             "char_conor",
+            "v_san",
             "p_wa",
             "v_eiga",
             "p_wo",
@@ -899,6 +905,7 @@
           "en": "Conor does things like watch movies and read English books.",
           "terms": [
             "char_conor",
+            "v_san",
             "p_wa",
             "v_eiga",
             "p_wo",
@@ -929,6 +936,7 @@
           "a_en": "He went together with Rikizo.",
           "terms": [
             "char_conor",
+            "v_san",
             "p_wa",
             "v_dare",
             "p_to",
@@ -987,6 +995,7 @@
           "a_en": "He wrote English notes.",
           "terms": [
             "char_conor",
+            "v_san",
             "p_wa",
             "v_eiga",
             "p_wo",
@@ -1049,8 +1058,8 @@
             },
             "p_ga_but",
             "v_igirisu",
-            "p_ni",
             "p_mo",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "plain_past"
@@ -1068,7 +1077,7 @@
           "en": "Every day he speaks English energetically in class.",
           "terms": [
             "v_mainichi",
-            "v_kurasu",
+            "v_kurasu_class",
             "p_de",
             {
               "id": "v_genki",
@@ -1100,8 +1109,10 @@
             "p_no",
             "v_eiga",
             "p_mo",
-            "v_daisuki",
-            "g_desu"
+            {
+              "id": "v_daisuki",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -1141,10 +1152,7 @@
             "p_mo",
             "v_nihongo",
             "p_mo",
-            {
-              "id": "v_jouzu",
-              "form": "polite_adj"
-            },
+            "v_jouzu",
             "g_desu"
           ]
         }
@@ -1157,6 +1165,7 @@
           "a_en": "He came from America.",
           "terms": [
             "char_joel",
+            "v_sensei",
             "p_wa",
             "v_doko",
             "p_kara",
@@ -1182,9 +1191,10 @@
           "a_en": "He speaks English energetically.",
           "terms": [
             "char_joel",
+            "v_sensei",
             "p_wa",
             "v_mainichi",
-            "v_kurasu",
+            "v_kurasu_class",
             "p_de",
             "v_nani",
             "p_wo",
@@ -1222,6 +1232,7 @@
           "a_en": "He does things like watch movies and read English books.",
           "terms": [
             "char_joel",
+            "v_sensei",
             "p_wa",
             "v_donna",
             "v_koto",
@@ -1344,7 +1355,7 @@
           ],
           "answer": "画家",
           "terms": [
-            "v_e",
+            "v_e_picture",
             "p_wo",
             {
               "id": "v_kaku",
@@ -1369,6 +1380,7 @@
           "answer": "The movie started.",
           "terms": [
             "v_eiga",
+            "p_ga",
             {
               "id": "v_hajimaru",
               "form": "polite_mashita"
@@ -1388,13 +1400,15 @@
           "terms": [
             "char_joel",
             "v_sensei",
+            "p_wa",
             "v_doko",
             "p_kara",
             {
               "id": "v_kuru",
               "form": "polite_mashita"
             },
-            "p_ka"
+            "p_ka",
+            "v_america"
           ]
         }
       ]

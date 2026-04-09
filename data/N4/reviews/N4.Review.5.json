@@ -36,6 +36,7 @@
               "jp": "やまかわさんは どこに 住んで いますか。",
               "terms": [
                 "char_yamakawa",
+                "v_san",
                 "p_wa",
                 "v_doko",
                 "p_ni",
@@ -81,6 +82,7 @@
               "terms": [
                 "v_kyonen",
                 "p_kara",
+                "v_sono",
                 "v_machi",
                 "p_ni",
                 {
@@ -98,6 +100,7 @@
               "spk": "やまかわ",
               "jp": "いいえ、去年は 別の 所に 住んで いました。今年 ここに 来ました。",
               "terms": [
+                "v_iie",
                 "v_kyonen",
                 "p_wa",
                 "v_betsu",
@@ -301,8 +304,8 @@
                   "id": "v_kiku",
                   "form": "plain_form"
                 },
-                "p_no",
                 "p_ga",
+                "p_no",
                 "v_ichiban",
                 {
                   "id": "v_ii",
@@ -316,8 +319,8 @@
               "jp": "そうだね。映画が 終わってから、近所の 店で ご飯を 食べよう。",
               "terms": [
                 "v_sou",
-                "g_da",
                 "p_ne",
+                "g_da",
                 "v_eiga",
                 "p_ga",
                 {
@@ -494,8 +497,9 @@
           "jp": "その 映画館では 日本語の 映画も 英語の 映画も 始まって います。",
           "en": "At that movie theater, both Japanese movies and English movies are showing.",
           "terms": [
+            "v_sono",
             "v_eigakan",
-            "p_de",
+            "p_dewa",
             "v_nihongo",
             "p_no",
             "v_eiga",
@@ -559,8 +563,8 @@
               "id": "v_kaku",
               "form": "plain_form"
             },
-            "p_no",
             "p_ga",
+            "p_no",
             {
               "id": "v_suki",
               "form": "polite_adj"
@@ -615,12 +619,17 @@
           ],
           "terms": [
             "v_eigakan",
-            "v_kyonen"
+            "p_wa",
+            "v_itsu",
+            {"id": "v_dekiru", "form": "polite_mashita"},
+            "p_ka",
+            "v_kyonen",
+            "g_desu"
           ],
           "explanation": "The first sentence says 去年新しい映画館ができました (a new movie theater opened last year)."
         },
         {
-          "q": "私は なぜ 英語の 映画を 見ますか。",
+          "q": "私は どうして 英語の 映画を 見ますか。",
           "a": "英語を 学ぶ ためです。",
           "choices": [
             "英語を 学ぶ ためです。",
@@ -629,9 +638,20 @@
             "ご飯を 食べる ためです。"
           ],
           "terms": [
+            "v_watashi",
+            "p_wa",
+            "v_doushite",
             "v_eigo",
+            "p_no",
             "v_eiga",
-            "v_tame"
+            "p_wo",
+            {"id": "v_miru", "form": "polite_masu"},
+            "p_ka",
+            "v_eigo",
+            "p_wo",
+            {"id": "v_manabu", "form": "plain_form"},
+            "v_tame",
+            "g_desu"
           ],
           "explanation": "Sentence 3 says 英語を学ぶために英語の映画を見ています (I watch English movies in order to learn English). ために marks purpose and follows the plain form."
         },
@@ -646,16 +666,29 @@
           ],
           "terms": [
             "v_eiga",
+            "p_ga",
             {
               "id": "v_owaru",
               "form": "te_form"
             },
             "p_tekara",
+            "v_nani",
+            "p_wo",
+            {"id": "v_suru", "form": "polite_masu"},
+            "p_ka",
             "v_kinjo",
+            "p_no",
             "v_mise",
+            "p_de",
             "v_tomodachi",
+            "p_to",
             "v_gohan",
-            "v_ocha"
+            "p_wo",
+            {"id": "v_taberu", "form": "tari_form"},
+            "v_ocha",
+            "p_wo",
+            {"id": "v_nomu", "form": "tari_form"},
+            {"id": "v_suru", "form": "polite_masu"}
           ],
           "explanation": "The last sentence says 映画が終わってから、近所の店で友だちとご飯を食べたり、お茶を飲んだりします (after the movie ends, things like eating and drinking tea). て + から expresses 'after doing'. ～たり～たりする lists representative actions."
         }

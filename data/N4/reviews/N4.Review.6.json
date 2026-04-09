@@ -171,7 +171,7 @@
             },
             {
               "spk": "りきぞ",
-              "jp": "体は だいじょうぶですが、頭が 痛くて 気分も よくないです。",
+              "jp": "体は だいじょうぶですが、頭が いたくて 気分も よくないです。",
               "terms": [
                 "v_karada",
                 "p_wa",
@@ -476,8 +476,8 @@
           "en": "At her travel destinations, she does things like taking photos and visiting ryokan.",
           "terms": [
             "v_tabisaki",
-            "p_de",
             "p_wa",
+            "p_de",
             "v_shashin",
             "p_wo",
             {
@@ -576,9 +576,20 @@
           ],
           "terms": [
             "v_tabisaki",
+            "p_de",
             "v_tabibito",
+            "p_wa",
+            "v_nani",
+            "p_wo",
+            {"id": "v_suru", "form": "polite_masu"},
+            "p_ka",
             "v_shashin",
-            "v_ryokan"
+            "p_wo",
+            {"id": "v_toru", "form": "tari_form"},
+            "v_ryokan",
+            "p_ni",
+            {"id": "v_iku", "form": "tari_form"},
+            {"id": "v_suru", "form": "polite_masu"}
           ],
           "explanation": "Sentence 2 says 旅先では写真をとったり、旅館に行ったりします (at her destinations, she does things like taking photos and going to ryokan). ～たり～たりする lists representative actions from a set."
         },
@@ -593,10 +604,18 @@
           ],
           "terms": [
             "v_tabibito",
-            "v_karada",
+            "p_no",
             "v_kao",
-            "v_kirei",
-            "v_ookii"
+            "p_to",
+            "v_karada",
+            "p_wa",
+            "v_dou",
+            "g_desu",
+            "p_ka",
+            {"id": "v_kirei", "form": "te_form"},
+            "p_mo",
+            {"id": "v_ookii", "form": "polite_adj"},
+            "g_desu"
           ],
           "explanation": "Sentence 3 says 顔はきれいで、体も大きいです (her face is beautiful and her body is also large). きれいで is the te-connector form of the な-adjective きれい, linking the two descriptions."
         },
@@ -611,9 +630,17 @@
           ],
           "terms": [
             "v_tabibito",
+            "p_wa",
+            "v_nani",
+            "p_wo",
+            {"id": "v_miru", "form": "plain_desire_tai"},
+            "g_desu",
+            "p_ka",
             "v_sekai",
+            "p_no",
             "v_chuushin",
-            "v_miru"
+            "p_wo",
+            "g_desu"
           ],
           "explanation": "Sentence 4 says 世界の中心を見たいです (she wants to see the heart/center of the world). 見たい is formed with the plain desire form (見 + たい): plain_desire_tai of 見る + です."
         }

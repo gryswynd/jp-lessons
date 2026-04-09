@@ -298,7 +298,9 @@
               "jp": "週まつは 何時に 起きますか。",
               "terms": [
                 "v_shuumatsu",
+                "p_wa",
                 "v_nanji",
+                "p_ni",
                 {
                   "id": "v_okiru",
                   "form": "polite_masu"
@@ -311,6 +313,12 @@
               "jp": "週まつは 八時に 起きて、朝ごはんを 食べます。",
               "terms": [
                 "v_shuumatsu",
+                "p_wa",
+                {
+                  "counter": "ji",
+                  "n": 8
+                },
+                "p_ni",
                 {
                   "id": "v_okiru",
                   "form": "te_form"
@@ -341,6 +349,7 @@
               "jp": "はい。でも、晩は 暗いです。",
               "terms": [
                 "p_hai",
+                "p_demo_but",
                 "v_ban",
                 "p_wa",
                 "v_kurai",
@@ -385,6 +394,7 @@
                 "v_suki",
                 "g_desu",
                 "v_tanaka",
+                "v_san",
                 "p_wa"
               ]
             },
@@ -596,10 +606,7 @@
               "terms": [
                 "v_kazoku",
                 "p_wa",
-                {
-                  "counter": "nin",
-                  "n": 0
-                },
+                "v_nannin",
                 "g_desu",
                 "p_ka"
               ]
@@ -996,6 +1003,7 @@
                 },
                 "g_desu",
                 "p_ne",
+                "v_dou",
                 {
                   "id": "v_suru",
                   "form": "polite_mashita"
@@ -1017,7 +1025,7 @@
             },
             {
               "spk": "A",
-              "jp": "体を 休めた ほうが いいですよ。",
+              "jp": "体を 休んだ ほうが いいですよ。",
               "terms": [
                 "v_karada",
                 "p_wo",
@@ -1025,6 +1033,8 @@
                   "id": "v_yasumu",
                   "form": "plain_past"
                 },
+                "v_hou",
+                "p_ga",
                 "v_ii",
                 "g_desu",
                 "p_yo"
@@ -1077,6 +1087,7 @@
               "jp": "はい。あの 歌手は 声が きれいです。",
               "terms": [
                 "p_hai",
+                "v_ano",
                 "v_kashu",
                 "p_wa",
                 "v_koe",
@@ -1231,7 +1242,11 @@
                   "id": "v_au",
                   "form": "polite_mashita"
                 },
-                "v_byouki"
+                "v_byouki",
+                {
+                  "id": "g_desu",
+                  "form": "copula_past"
+                }
               ]
             },
             {
@@ -1315,8 +1330,10 @@
                 "v_inu",
                 "p_to",
                 "v_issho",
+                "p_ni",
+                "v_undou",
                 {
-                  "id": "v_undou",
+                  "id": "v_suru",
                   "form": "polite_masu"
                 }
               ]
@@ -1441,6 +1458,7 @@
               "jp": "はい。でも、月光が きれいですから、外で 勉強します。",
               "terms": [
                 "p_hai",
+                "p_demo_but",
                 "v_gekkou",
                 "p_ga",
                 "v_kirei",
@@ -1448,15 +1466,16 @@
                 "p_kara_because",
                 "v_soto",
                 "p_de",
+                "v_benkyou",
                 {
-                  "id": "v_benkyou",
+                  "id": "v_suru",
                   "form": "polite_masu"
                 }
               ]
             },
             {
               "spk": "A",
-              "jp": "かぜが 強いですが、大丈夫ですか。",
+              "jp": "かぜが 強いですが、だいじょうぶですか。",
               "terms": [
                 "v_kaze",
                 "p_ga",
@@ -1470,7 +1489,7 @@
             },
             {
               "spk": "B",
-              "jp": "はい、大丈夫です。月光が きれいですから。",
+              "jp": "はい、だいじょうぶです。月光が きれいですから。",
               "terms": [
                 "p_hai",
                 "v_daijoubu",
@@ -1512,7 +1531,15 @@
           "answer": "きって",
           "explanation": "切って (to cut) is read as <b>kitte</b>.",
           "terms": [
-            "v_kiru_2"
+            {
+              "id": "v_kiru_2",
+              "form": "te_form"
+            },
+            "v_kudasai",
+            {
+              "id": "v_kiru_2",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -1527,7 +1554,16 @@
           "answer": "きます",
           "explanation": "着ます (to wear) is read as <b>kimasu</b>.",
           "terms": [
-            "v_kiru"
+            "v_shatsu",
+            "p_wo",
+            {
+              "id": "v_kiru",
+              "form": "polite_masu"
+            },
+            {
+              "id": "v_kiru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -1580,7 +1616,20 @@
           "answer": "あるいて",
           "explanation": "歩いて (walking) is read as <b>aruite</b>.",
           "terms": [
-            "v_aruku"
+            "v_gakkou",
+            "p_e",
+            {
+              "id": "v_aruku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
+            {
+              "id": "v_aruku",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -1617,6 +1666,14 @@
           "answer": "あした",
           "explanation": "明日 (tomorrow) is read as <b>ashita</b>.",
           "terms": [
+            "v_ashita",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
+            "p_ka",
             "v_ashita"
           ]
         },
@@ -1668,7 +1725,7 @@
       "items": [
         {
           "kind": "mcq",
-          "q": "[茶色い] カバンです。",
+          "q": "[茶色い] 本です。",
           "choices": [
             "きいろい",
             "ちゃいろい",
@@ -1678,6 +1735,9 @@
           "answer": "ちゃいろい",
           "explanation": "茶色い (brown) is read as <b>chairoi</b>.",
           "terms": [
+            "v_chairoi",
+            "v_hon",
+            "g_desu",
             "v_chairoi"
           ]
         },
@@ -1693,6 +1753,12 @@
           "answer": "あお",
           "explanation": "青 (blue) is read as <b>ao</b>.",
           "terms": [
+            "v_watashi",
+            "p_wa",
+            "v_ao",
+            "p_ga",
+            "v_suki",
+            "g_desu",
             "v_ao"
           ]
         },
@@ -1732,6 +1798,14 @@
           "answer": "やさい",
           "explanation": "野菜 (vegetable) is read as <b>yasai</b>.",
           "terms": [
+            "v_suupaa",
+            "p_de",
+            "v_yasai",
+            "p_wo",
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            },
             "v_yasai"
           ]
         },
@@ -1747,6 +1821,11 @@
           "answer": "ぎゅうにく",
           "explanation": "牛肉 (beef) is read as <b>gyuuniku</b>.",
           "terms": [
+            "v_kore",
+            "p_wa",
+            "v_gyuuniku",
+            "g_desu",
+            "p_ka",
             "v_gyuuniku"
           ]
         },
@@ -1786,6 +1865,13 @@
           "answer": "あじ",
           "explanation": "味 (taste) is read as <b>aji</b>.",
           "terms": [
+            "v_ano",
+            "v_resutoran",
+            "p_wa",
+            "v_aji",
+            "p_ga",
+            "v_ii",
+            "g_desu",
             "v_aji"
           ]
         },
@@ -1840,6 +1926,10 @@
           "answer": "あね",
           "explanation": "姉 (older sister) is read as <b>ane</b>.",
           "terms": [
+            "v_watashi",
+            "p_no",
+            "v_ane",
+            "g_desu",
             "v_ane"
           ]
         },
@@ -1855,6 +1945,11 @@
           "answer": "しんせつ",
           "explanation": "親切 (kind) is read as <b>shinsetsu</b>.",
           "terms": [
+            "v_shinsetsu",
+            "p_na",
+            "v_hito",
+            "g_desu",
+            "p_ne",
             "v_shinsetsu"
           ]
         },
@@ -1892,6 +1987,12 @@
           "answer": "ふゆ",
           "explanation": "冬 (winter) is read as <b>fuyu</b>.",
           "terms": [
+            "v_nihon",
+            "p_no",
+            "v_fuyu",
+            "p_wa",
+            "v_samui",
+            "g_desu",
             "v_fuyu"
           ]
         },
@@ -1947,7 +2048,21 @@
           "answer": "すんで",
           "explanation": "住んで (living) is read as <b>sunde</b>.",
           "terms": [
-            "v_sumu"
+            "v_doko",
+            "p_ni",
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka",
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            }
           ]
         },
         {
@@ -1962,6 +2077,13 @@
           "answer": "じゅうしょ",
           "explanation": "住所 (address) is read as <b>juusho</b>.",
           "terms": [
+            "v_juusho",
+            "p_wo",
+            {
+              "id": "v_oshieru",
+              "form": "te_form"
+            },
+            "v_kudasai",
             "v_juusho"
           ]
         },
@@ -1999,12 +2121,18 @@
           "answer": "えいが",
           "explanation": "映画 (movie) is read as <b>eiga</b>.",
           "terms": [
+            "v_eiga",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "polite_masu"
+            },
             "v_eiga"
           ]
         },
         {
           "kind": "mcq",
-          "q": "コンサートが [始まります]。",
+          "q": "映画が [始まります]。",
           "choices": [
             "おわります",
             "はじまります",
@@ -2014,7 +2142,16 @@
           "answer": "はじまります",
           "explanation": "始まります (starts) is read as <b>hajimarimasu</b>.",
           "terms": [
-            "v_hajimaru"
+            "v_eiga",
+            "p_ga",
+            {
+              "id": "v_hajimaru",
+              "form": "polite_masu"
+            },
+            {
+              "id": "v_hajimaru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -2052,6 +2189,12 @@
           "answer": "しゃしん",
           "explanation": "写真 (photo) is read as <b>shashin</b>.",
           "terms": [
+            "v_shashin",
+            "p_wo",
+            {
+              "id": "v_toru",
+              "form": "polite_volitional_mashou"
+            },
             "v_shashin"
           ]
         },
@@ -2067,6 +2210,13 @@
           "answer": "りょこう",
           "explanation": "旅行 (travel/trip) is read as <b>ryokou</b>.",
           "terms": [
+            "v_kyouto",
+            "p_e",
+            "v_ryokou",
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            },
             "v_ryokou"
           ]
         },
@@ -2104,6 +2254,10 @@
           "answer": "あたま",
           "explanation": "頭 (head) is read as <b>atama</b>.",
           "terms": [
+            "v_atama",
+            "p_ga",
+            "v_itai",
+            "g_desu",
             "v_atama"
           ]
         },
@@ -2119,6 +2273,14 @@
           "answer": "かおいろ",
           "explanation": "顔色 (complexion) is read as <b>kaoiro</b>.",
           "terms": [
+            "v_kaoiro",
+            "p_ga",
+            {
+              "id": "v_ii",
+              "form": "plain_negative"
+            },
+            "g_desu",
+            "p_yo",
             "v_kaoiro"
           ]
         },
@@ -2157,6 +2319,14 @@
           "answer": "うた",
           "explanation": "歌 (song) is read as <b>uta</b>.",
           "terms": [
+            "v_uta",
+            "p_wa",
+            "v_dou",
+            {
+              "id": "v_yomu",
+              "form": "polite_masu"
+            },
+            "p_ka",
             "v_uta"
           ]
         },
@@ -2172,6 +2342,13 @@
           "answer": "こえ",
           "explanation": "声 (voice) is read as <b>koe</b>.",
           "terms": [
+            "v_ano",
+            "v_kashu",
+            "p_wa",
+            "v_koe",
+            "p_ga",
+            "v_ii",
+            "g_desu",
             "v_koe"
           ]
         },
@@ -2209,6 +2386,11 @@
           "answer": "しごと",
           "explanation": "仕事 (job) is read as <b>shigoto</b>.",
           "terms": [
+            "v_shigoto",
+            "p_wa",
+            "v_tanoshii",
+            "g_desu",
+            "p_ka",
             "v_shigoto"
           ]
         },
@@ -2224,7 +2406,16 @@
           "answer": "いそぎます",
           "explanation": "急ぎます (to hurry) is read as <b>isogimasu</b>.",
           "terms": [
-            "v_isogu"
+            "v_eki",
+            "p_e",
+            {
+              "id": "v_isogu",
+              "form": "polite_masu"
+            },
+            {
+              "id": "v_isogu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -2262,6 +2453,12 @@
           "answer": "びょういん",
           "explanation": "病院 (hospital) is read as <b>byouin</b>.",
           "terms": [
+            "v_byouin",
+            "p_e",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "v_byouin"
           ]
         },
@@ -2277,6 +2474,14 @@
           "answer": "くすり",
           "explanation": "薬 (medicine) is read as <b>kusuri</b>.",
           "terms": [
+            "v_isha",
+            "p_ni",
+            "v_kusuri",
+            "p_wo",
+            {
+              "id": "v_morau",
+              "form": "polite_mashita"
+            },
             "v_kusuri"
           ]
         },
@@ -2315,12 +2520,18 @@
           "answer": "ぎんこう",
           "explanation": "銀行 (bank) is read as <b>ginkou</b>.",
           "terms": [
+            "v_ginkou",
+            "p_e",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "v_ginkou"
           ]
         },
         {
           "kind": "mcq",
-          "q": "こうえんで [走ります]。",
+          "q": "駅まで [走ります]。",
           "choices": [
             "はしります",
             "あるきます",
@@ -2330,7 +2541,16 @@
           "answer": "はしります",
           "explanation": "走ります (to run) is read as <b>hashirimasu</b>.",
           "terms": [
-            "v_hashiru"
+            "v_eki",
+            "p_made",
+            {
+              "id": "v_hashiru",
+              "form": "polite_masu"
+            },
+            {
+              "id": "v_hashiru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -2367,6 +2587,16 @@
           "answer": "とうきょう",
           "explanation": "東京 (Tokyo) is read as <b>toukyou</b>.",
           "terms": [
+            "v_toukyou",
+            "p_ni",
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "v_toukyou"
           ]
         },
@@ -2382,6 +2612,12 @@
           "answer": "じてんしゃ",
           "explanation": "自転車 (bicycle) is read as <b>jitensha</b>.",
           "terms": [
+            "v_jitensha",
+            "p_ni",
+            {
+              "id": "v_noru",
+              "form": "polite_masu"
+            },
             "v_jitensha"
           ]
         },
@@ -2421,6 +2657,11 @@
           "answer": "べんきょう",
           "explanation": "勉強 (study) is read as <b>benkyou</b>.",
           "terms": [
+            "v_benkyou",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
             "v_benkyou"
           ]
         },
@@ -2436,6 +2677,10 @@
           "answer": "つよい",
           "explanation": "強い (strong) is read as <b>tsuyoi</b>.",
           "terms": [
+            "v_kaze",
+            "p_ga",
+            "v_tsuyoi",
+            "g_desu",
             "v_tsuyoi"
           ]
         },

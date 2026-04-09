@@ -36,11 +36,14 @@
                 "char_yamakawa",
                 "v_san",
                 "v_kesa",
+                "p_wa",
                 "v_nanji",
+                "p_ni",
                 {
                   "id": "v_okiru",
                   "form": "polite_mashita"
-                }
+                },
+                "p_ka"
               ]
             },
             {
@@ -51,15 +54,18 @@
                   "counter": "ji",
                   "n": 6
                 },
+                "p_ni",
                 {
                   "id": "v_okiru",
                   "form": "polite_mashita"
                 },
                 "v_asagohan",
+                "p_wo",
                 {
                   "id": "v_taberu",
                   "form": "te_form"
                 },
+                "p_kara",
                 {
                   "id": "v_kuru",
                   "form": "polite_mashita"
@@ -71,8 +77,10 @@
               "jp": "私も 毎朝 朝ごはんを 食べます。毎朝 起きられますか。",
               "terms": [
                 "v_watashi",
+                "p_mo",
                 "v_maiasa",
                 "v_asagohan",
+                "p_wo",
                 {
                   "id": "v_taberu",
                   "form": "polite_masu"
@@ -81,7 +89,8 @@
                 {
                   "id": "v_okiru",
                   "form": "polite_potential"
-                }
+                },
+                "p_ka"
               ]
             },
             {
@@ -95,8 +104,10 @@
                 },
                 "v_akarui",
                 "v_asa",
+                "p_ga",
                 "v_suki",
-                "g_desu"
+                "g_desu",
+                "p_yo"
               ]
             }
           ],
@@ -120,12 +131,15 @@
               "terms": [
                 "p_sumimasen",
                 "v_shatsu",
+                "p_wa",
                 "v_nani",
                 "v_iro",
+                "p_ga",
                 {
                   "id": "v_aru",
                   "form": "polite_masu"
-                }
+                },
+                "p_ka"
               ]
             },
             {
@@ -134,19 +148,24 @@
               "terms": [
                 "v_akai",
                 "v_shatsu",
+                "p_to",
                 "v_aoi",
                 "v_shatsu",
+                "p_to",
                 "v_kuroi",
                 "v_shatsu",
+                "p_ga",
                 {
                   "id": "v_aru",
                   "form": "polite_masu"
                 },
                 "v_chairo",
+                "p_mo",
                 {
                   "id": "v_aru",
                   "form": "polite_masu"
-                }
+                },
+                "p_yo"
               ]
             },
             {
@@ -154,16 +173,20 @@
               "jp": "私は 黒が 好きですが、青い シャツも 見られますか。",
               "terms": [
                 "v_watashi",
+                "p_wa",
                 "v_kuro",
+                "p_ga",
                 "v_suki",
                 "g_desu",
                 "p_ga_but",
                 "v_aoi",
                 "v_shatsu",
+                "p_mo",
                 {
                   "id": "v_miru",
                   "form": "polite_potential"
-                }
+                },
+                "p_ka"
               ]
             },
             {
@@ -176,6 +199,7 @@
                   "form": "attributive_na"
                 },
                 "v_iro",
+                "p_ga",
                 {
                   "id": "v_aru",
                   "form": "polite_masu"
@@ -204,6 +228,7 @@
               "terms": [
                 "v_kesa",
                 "v_asagohan",
+                "p_wo",
                 {
                   "id": "v_taberu",
                   "form": "plain_past"
@@ -218,10 +243,11 @@
                   "id": "v_taberu",
                   "form": "plain_past_negative"
                 },
+                "p_yo",
                 "v_maiasa",
                 {
                   "id": "v_okiru",
-                  "form": "potential_negative"
+                  "form": "plain_potential_negative"
                 },
                 "p_kara_because"
               ]
@@ -231,23 +257,25 @@
               "jp": "私は 毎朝 朝ごはんが 食べられるよ。",
               "terms": [
                 "v_watashi",
+                "p_wa",
                 "v_maiasa",
                 "v_asagohan",
+                "p_ga",
                 {
                   "id": "v_taberu",
                   "form": "potential"
-                }
+                },
+                "p_yo"
               ]
             },
             {
               "spk": "B",
               "jp": "いいね。今晩は よく 休もう。",
               "terms": [
-                {
-                  "id": "v_ii",
-                  "form": null
-                },
+                "v_ii",
+                "p_ne",
                 "v_konban",
+                "p_wa",
                 "v_yoku",
                 {
                   "id": "v_yasumu",
@@ -392,11 +420,13 @@
           "en": "I wake up at six every morning.",
           "terms": [
             "v_watashi",
+            "p_wa",
             "v_maiasa",
             {
               "counter": "ji",
               "n": 6
             },
+            "p_ni",
             {
               "id": "v_okiru",
               "form": "polite_masu"
@@ -408,11 +438,14 @@
           "en": "After eating breakfast, I go to work.",
           "terms": [
             "v_asagohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "te_form"
             },
+            "p_kara",
             "v_kaisha",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "polite_masu"
@@ -424,7 +457,10 @@
           "en": "This morning the sky was very bright.",
           "terms": [
             "v_kesa",
+            "p_wa",
             "v_sora",
+            "p_ga",
+            "v_totemo",
             {
               "id": "v_akarui",
               "form": "plain_past_adj"
@@ -437,9 +473,12 @@
           "en": "I love bright mornings.",
           "terms": [
             "v_watashi",
+            "p_wa",
             "v_akarui",
             "v_asa",
-            "v_daisuki"
+            "p_ga",
+            "v_daisuki",
+            "g_desu"
           ]
         },
         {
@@ -448,7 +487,9 @@
           "terms": [
             "v_konban",
             "v_tomodachi",
+            "p_to",
             "v_bangohan",
+            "p_wo",
             {
               "id": "v_taberu",
               "form": "polite_masu"
@@ -460,15 +501,19 @@
           "en": "I like black shirts and blue shirts, but I also want to see red shirts.",
           "terms": [
             "v_watashi",
+            "p_wa",
             "v_kuroi",
             "v_shatsu",
+            "p_to",
             "v_aoi",
             "v_shatsu",
+            "p_ga",
             "v_suki",
             "g_desu",
             "p_ga_but",
             "v_akai",
             "v_shatsu",
+            "p_mo",
             {
               "id": "v_miru",
               "form": "plain_desire_tai"
@@ -489,12 +534,16 @@
           ],
           "terms": [
             "v_watashi",
+            "p_wa",
             "v_maiasa",
             "v_nanji",
+            "p_ni",
             {
               "id": "v_okiru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka",
+            {"counter": "ji", "n": 6}
           ],
           "explanation": "私は毎朝六時に起きます — I wake up at 6 every morning. The answer 六時 (6 o'clock) is stated directly in the first sentence."
         },
@@ -509,8 +558,18 @@
           ],
           "terms": [
             "v_kesa",
+            "p_no",
             "v_sora",
-            "v_dou"
+            "p_wa",
+            "v_dou",
+            {"id": "g_desu", "form": "copula_past"},
+            "p_ka",
+            "v_totemo",
+            {
+              "id": "v_akarui",
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ],
           "explanation": "今朝は空がとても明るかったです — this morning the sky was very bright. 明るかったです is the past polite form of the い-adjective 明るい (bright)."
         },
@@ -525,14 +584,20 @@
           ],
           "terms": [
             "v_watashi",
+            "p_wa",
             "v_dono",
             "v_iro",
+            "p_no",
             "v_shatsu",
+            "p_wo",
             {
               "id": "v_miru",
               "form": "plain_desire_tai"
             },
-            "g_desu"
+            "g_desu",
+            "p_ka",
+            "v_akai",
+            "v_shatsu"
           ],
           "explanation": "赤いシャツも見たいです — I also want to see red shirts. The passage says I already like black and blue shirts (好きです), but want to see (見たい) red ones too."
         }

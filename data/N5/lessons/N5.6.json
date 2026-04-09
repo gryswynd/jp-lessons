@@ -757,6 +757,7 @@
           "a": "車で 行きます。",
           "a_en": "He goes by car.",
           "terms": [
+            "char_yamakawa",
             "p_wa",
             "v_maishuu",
             "v_nani",
@@ -943,6 +944,7 @@
           "a": "やまかわから 来ました。",
           "a_en": "It came from Yamakawa.",
           "terms": [
+            "char_rikizo",
             "p_ni",
             "v_dare",
             "p_kara",
@@ -955,6 +957,7 @@
             "p_ka"
           ],
           "a_terms": [
+            "char_yamakawa",
             "p_kara",
             {
               "id": "v_kuru",
@@ -995,8 +998,8 @@
           "a_en": "Yes, he will also go to the volcano.",
           "terms": [
             "v_kazan",
-            "p_ni",
             "p_mo",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "polite_masu"
@@ -1006,8 +1009,8 @@
           "a_terms": [
             "p_hai",
             "v_kazan",
-            "p_ni",
             "p_mo",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "polite_masu"

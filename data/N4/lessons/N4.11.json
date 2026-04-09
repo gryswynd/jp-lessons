@@ -307,7 +307,7 @@
         },
         {
           "spk": "B",
-          "jp": "はい！旅先では いつも 写真を たくさん とります。旅人に なりたいです。",
+          "jp": "はい！旅先で は いつも 写真を たくさん とります。旅人に なりたいです。",
           "en": "Yes! At travel destinations I always take lots of photos. I want to become a world traveler.",
           "terms": [
             "p_hai",
@@ -367,6 +367,7 @@
           "jp": "わあ、ゆきが 真っ白ですね。どこで とりましたか。",
           "en": "Wow, the snow is pure white! Where did you take it?",
           "terms": [
+            "v_waa",
             "v_yuki",
             "p_ga",
             {
@@ -408,7 +409,7 @@
         },
         {
           "spk": "B",
-          "jp": "いいですね。自分でも 行きたいです。",
+          "jp": "いいですね。自分で も 行きたいです。",
           "en": "That sounds great. I'd like to go there too.",
           "terms": [
             {
@@ -618,14 +619,12 @@
             "p_wa",
             "v_ryokou",
             "p_ga",
-            {
-              "id": "v_daisuki",
-              "form": "polite_adj"
-            }
+            "v_daisuki",
+            "g_desu"
           ]
         },
         {
-          "jp": "旅先では いつも 写真を とります。",
+          "jp": "旅先で は いつも 写真を とります。",
           "en": "At travel destinations, he always takes photos.",
           "terms": [
             "v_tabisaki",
@@ -869,7 +868,7 @@
           ]
         },
         {
-          "jp": "父は 旅先を 歩きながら、写真を とるのが 好きです。",
+          "jp": "父は 旅先を 歩きながら、写真を とるの が 好きです。",
           "en": "My father loves taking photos while walking through travel destinations.",
           "terms": [
             "v_chichi",

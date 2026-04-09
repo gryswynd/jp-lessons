@@ -598,8 +598,8 @@
           "terms": [
             "v_ii",
             "v_kangae",
-            "g_da",
             "p_na",
+            "g_da",
             "v_watashi",
             "p_mo",
             "v_tadashii",
@@ -850,8 +850,10 @@
               "id": "v_taisetsu",
               "form": "plain_adj"
             },
+            "p_to_quote",
             "g_da",
-            "p_to_quote"
+            {"id": "v_iu", "form": "te_form"},
+            {"id": "v_iru", "form": "polite_masu"}
           ]
         },
         {
@@ -1085,7 +1087,11 @@
               "id": "v_akushitsu",
               "form": "attributive_na"
             },
-            "v_kangaekata"
+            "v_kangaekata",
+            "p_ni",
+            "v_chuui",
+            {"id": "v_suru", "form": "nakereba"},
+            {"id": "v_ikeru", "form": "polite_negative"}
           ]
         },
         {
@@ -1119,7 +1125,9 @@
               "id": "v_suru",
               "form": "te_form"
             },
-            "v_kudasai"
+            "v_kudasai",
+            "p_to_quote",
+            {"id": "v_iu", "form": "polite_mashita"}
           ]
         },
         {
@@ -1145,15 +1153,22 @@
           ],
           "a_terms": [
             "v_kangae",
+            "p_wo",
             {
               "id": "v_tadasu",
               "form": "tari_form"
             },
             "v_iken",
+            "p_wo",
             {
               "id": "v_kiku",
               "form": "tari_form"
-            }
+            },
+            {"id": "v_suru", "form": "plain_form"},
+            "v_koto",
+            "p_ga",
+            {"id": "v_taisetsu", "form": "polite_adj"},
+            "g_desu"
           ]
         }
       ]
@@ -1268,7 +1283,9 @@
           ],
           "terms": [
             "v_tadashii",
+            "p_no",
             "v_imi",
+            "p_wa",
             "v_nan",
             "g_desu",
             "p_ka"
@@ -1288,7 +1305,9 @@
               "id": "v_akushitsu",
               "form": "attributive_na"
             },
+            "p_no",
             "v_imi",
+            "p_wa",
             "v_nan",
             "g_desu",
             "p_ka"
@@ -1305,7 +1324,9 @@
           ],
           "terms": [
             "v_kangaekata",
+            "p_no",
             "v_imi",
+            "p_wa",
             "v_nan",
             "g_desu",
             "p_ka"

@@ -83,7 +83,10 @@
             "v_sengetsu",
             "p_kara",
             "v_mainichi",
-            "v_hayaku",
+            {
+              "id": "v_hayai",
+              "form": "adverbial"
+            },
             {
               "id": "v_okiru",
               "form": "plain_form"
@@ -250,6 +253,7 @@
             "v_kyou",
             "p_wa",
             "v_gakusei",
+            "v_tachi",
             "p_ni",
             "v_hatsuon",
             "p_wo",
@@ -306,8 +310,8 @@
               "id": "v_taisetsu",
               "form": "plain_form"
             },
-            "g_da",
             "p_to_quote",
+            "g_da",
             {
               "id": "v_omou",
               "form": "polite_masu"
@@ -396,6 +400,7 @@
             "v_shihatsu",
             "p_wa",
             "v_nanji",
+            "g_desu",
             "p_ka"
           ]
         },
@@ -411,8 +416,8 @@
               "n": 5
             },
             "v_hatsu",
-            "g_da",
             "p_to_quote",
+            "g_da",
             {
               "id": "v_omou",
               "form": "polite_masu"
@@ -544,6 +549,7 @@
           "en": "What? Is that ward close to the station?",
           "terms": [
             "char_rikizo",
+            "v_e",
             "v_sono",
             "v_ku",
             "p_wa",
@@ -609,14 +615,14 @@
           "terms": [
             "char_ken",
             "v_sou",
-            "g_da",
             "p_ne",
+            "g_da",
             "p_demo_but",
             "v_chiku",
             "p_ga",
             {
               "id": "v_kugiru",
-              "form": "plain_passive_past"
+              "form": "passive_te"
             },
             {
               "id": "v_iru",
@@ -670,6 +676,7 @@
           "terms": [
             "char_yamakawa",
             "v_sou",
+            "p_na",
             "p_nda",
             "v_akitaken",
             "p_ni",
@@ -705,8 +712,8 @@
             "p_ka",
             "v_mainichi",
             "v_tooi",
-            "p_yo",
-            "p_ne"
+            "p_ne",
+            "p_yo"
           ]
         },
         {
@@ -740,15 +747,14 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "毎日 大変だけど、本当に すごいよ。",
-          "en": "It's tough every day, but that's really impressive.",
+          "jp": "毎日 むずかしいけど、本当に すごいよ。",
+          "en": "It's difficult every day, but that's really impressive.",
           "terms": [
             "char_rikizo",
             "v_mainichi",
-            "v_taihen",
-            "g_da",
+            "v_muzukashii",
             "p_kedo",
-            "v_hontou",
+            "p_hontou",
             "p_ni",
             "v_sugoi",
             "p_yo"
@@ -826,9 +832,10 @@
           "terms": [
             "v_chiku",
             "p_ga",
+            "v_kubetsu",
             {
-              "id": "v_kubetsu",
-              "form": "plain_passive_past"
+              "id": "v_suru",
+              "form": "passive_te"
             },
             {
               "id": "v_iru",
@@ -998,7 +1005,10 @@
             "v_tomodachi",
             "p_wa",
             "v_mainichi",
-            "v_hayaku",
+            {
+              "id": "v_hayai",
+              "form": "adverbial"
+            },
             {
               "id": "v_okiru",
               "form": "te_form"
@@ -1050,8 +1060,9 @@
           "jp": "区別された 地区を 毎日 通って いくのは 遠いことだと 思います。",
           "en": "I think going through the divided districts every day is a long way to go.",
           "terms": [
+            "v_kubetsu",
             {
-              "id": "v_kubetsu",
+              "id": "v_suru",
               "form": "plain_passive_past"
             },
             "v_chiku",
@@ -1069,8 +1080,8 @@
             "p_no",
             "v_tooi",
             "v_koto",
-            "g_da",
             "p_to_quote",
+            "g_da",
             {
               "id": "v_omou",
               "form": "polite_masu"
