@@ -1,10 +1,10 @@
 # N5 Campaign: Total QA & Game Days
 
-> **Status:** In Progress — Phase 1 near-complete
+> **Status:** Phase 1 COMPLETE — Phase 2 pending
 > **Started:** 2026-03-25
 > **Last updated:** 2026-04-09
-> **Audit baseline:** 68 files, 3 failures across 18 hooks (run `bash hooks/audit-all.sh N5` to regenerate)
-> **Original baseline:** 147 failures (2026-03-25), then 154 → 0 failures (2026-03-26), then tag-coverage pass (2026-04-09)
+> **Audit:** 68 files, 0 failures across 1224 checks (run `bash hooks/audit-all.sh N5` to regenerate)
+> **Original baseline:** 147 failures (2026-03-25) → 0 failures (2026-04-09)
 
 ---
 
@@ -18,20 +18,12 @@ Complete the N5 level: fix all existing content issues, then build the remaining
 |---|---|---|
 | Lessons | 18/18 | **Clean** — all 18 pass audit |
 | Grammar (G1–G12) | 12/12 | **Clean** — all 12 pass audit |
-| Reviews | 10 (9 numbered + Final) | **9/10 clean** — 1 minor failure (Final Review surface-match) |
+| Reviews | 10 (9 numbered + Final) | **Clean** — all 10 pass audit |
 | Compose | 18/18 | **Clean** — all 18 pass audit |
-| Stories | 10 | **8/10 clean** — 2 have fake compound tokenization issues |
+| Stories | 10 | **Clean** — all 10 pass audit |
 | Game days | 1/18 (Day 1 only) | **17 game days needed** |
 
-### Remaining failures (3 edge cases)
-
-| Hook | File | Issue |
-|---|---|---|
-| `story-tokenization` | stories/kita-minami-higashi-nishi/terms.json | Fake compounds (北東, 北西, 南東, 南西) |
-| `story-tokenization` | stories/rikizo-to-ookii-sakana/terms.json | Fake compounds (でも, では, それから) |
-| `surface-match` | N5.Final.Review | 半 term not matching jp text |
-
-### Resolved (all prior failures)
+### All failures resolved
 
 - **All lessons (18/18)**: surface-match, term-ids, particle-context, chip-order, register, form-scope, suru-compound, writing-forms — all resolved
 - **All grammar (12/12)**: structure (Drill 1 terms), grammar-schema colors, form-scope, surface-match — all resolved
@@ -54,9 +46,9 @@ All 18 lessons pass audit as of 2026-04-09. Issues resolved include: surface-mat
 
 All 12 grammar lessons pass audit as of 2026-04-09. Issues resolved include: Drill 1 terms stripped, grammar-schema colors remapped, form-scope fixes (polite_masu, desire_tai, da_past), particle-context (p_ka added), surface-match (kanji/kana + character names), kanji-scope (untaught kanji removed), chip-order (pair ordering), and tag-coverage (100%).
 
-### 1c. Reviews (N5.Review.1–9, N5.Final.Review) — 9/10 CLEAN ✓
+### 1c. Reviews (N5.Review.1–9, N5.Final.Review) — CLEAN ✓
 
-Reviews 1–9 all pass audit. N5.Final.Review has 1 minor surface-match edge case (半 term). All other issues resolved: surface-match, chip-order, particle-context, form-scope, suru-compound, and tag-coverage.
+All 10 reviews pass audit. Issues resolved include: surface-match, chip-order, particle-context, form-scope, suru-compound, and tag-coverage.
 
 ### 1d. Compose (compose.N5.1–compose.N5.18) — CLEAN ✓
 
@@ -79,9 +71,9 @@ All 18 compose files pass audit. Previous kanji-based scoring issues in compose.
 
 ---
 
-## Phase 1 Status: NEAR-COMPLETE ✓
+## Phase 1 Status: COMPLETE ✓
 
-Phase 1 QA sweep reduced failures from 147 → 3. Remaining 3 edge cases are minor (2 story tokenization, 1 Final Review surface-match) and do not block content delivery or Phase 2.
+Phase 1 QA sweep reduced failures from 147 → 0 across 1224 checks. All content passes all 18 hooks.
 
 ---
 
