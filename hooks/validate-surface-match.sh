@@ -179,14 +179,16 @@ import re as _re
 def is_pure_kanji(s):
     return bool(s) and all('\u4e00' <= c <= '\u9fff' for c in s)
 
-def surface_found_in_jp(surface, matches, jp_orig, jp_clean):
+def surface_found_in_jp(surface, matches, jp_orig, jp_clean, after_counter=False):
     """Check if surface (or any match) appears in jp text.
     For short pure-kanji surfaces (≤2 chars), uses a negative CJK lookbehind to avoid
     false positives where a kanji appears embedded inside a longer compound
     (e.g. 所 inside 場所) while still matching when preceded by hiragana, katakana,
-    punctuation, or a name (e.g. 先生 in すずき先生は, 人 in 男の人)."""
+    punctuation, or a name (e.g. 先生 in すずき先生は, 人 in 男の人).
+    When after_counter=True, the term follows a counter (e.g. 半 in 八時半),
+    so the preceding CJK is expected — skip the lookbehind."""
     all_forms = [surface] + matches
-    if is_pure_kanji(surface) and len(surface) <= 2:
+    if is_pure_kanji(surface) and len(surface) <= 2 and not after_counter:
         for f in all_forms:
             if _re.search(r'(?<![\u4e00-\u9fff])' + _re.escape(f), jp_orig):
                 return True
@@ -198,6 +200,7 @@ def check_surface(jp, terms, path):
         return
     jp_clean = jp.replace(' ', '').replace('\u3000', '')
 
+    prev_was_counter = False
     for i, term in enumerate(terms):
         if isinstance(term, dict):
             tid = term.get('id', '')
@@ -205,14 +208,17 @@ def check_surface(jp, terms, path):
             # form: null (JSON null → Python None) is the masu-stem purpose
             # construction — the chip engine handles matching specially; skip check
             if 'counter' in term or ('form' in term and term['form'] is None):
+                prev_was_counter = 'counter' in term
                 continue
         elif isinstance(term, str):
             tid = term
             form = None
         else:
+            prev_was_counter = False
             continue
 
         if not tid or tid not in id_info:
+            prev_was_counter = False
             continue
 
         info = id_info[tid]
@@ -236,6 +242,7 @@ def check_surface(jp, terms, path):
                 _jp_clean = jp.replace(' ', '').replace('\u3000', '')
                 if _cs not in _jp_clean and (_cr is None or _cr not in _jp_clean):
                     errors.append(f"  {path}.terms[{i}]: '{tid}' {form} → expected '{_cs}' not found in jp")
+            prev_was_counter = False
             continue
 
         # Special cross-check: p_to_quote (surface と, 1 char — skipped below by single-char guard)
@@ -269,8 +276,9 @@ def check_surface(jp, terms, path):
         # or できる for 出来る when author chose hiragana even though kanji is taught)
         _reading = info.get('reading', '')
         _extra = [_reading] if _reading and _reading != surface else []
-        if not surface_found_in_jp(surface, matches + _extra, jp, jp_clean):
+        if not surface_found_in_jp(surface, matches + _extra, jp, jp_clean, after_counter=prev_was_counter):
             errors.append(f"  {path}.terms[{i}]: '{tid}' (surface: '{info['surface']}', checked: '{surface}') not found in jp text")
+        prev_was_counter = False
 
 def walk(obj, path="root"):
     if isinstance(obj, dict):
