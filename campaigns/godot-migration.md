@@ -1,8 +1,8 @@
 # Godot Migration Campaign
 
-> **Status:** Planning
+> **Status:** In Progress — Day 1 ported
 > **Started:** 2026-03-20
-> **Last updated:** 2026-03-20
+> **Last updated:** 2026-04-09
 
 ---
 
@@ -33,6 +33,9 @@
 | Separate content rules from engine rules | 2026-03-20 | Content authoring rules (skills/) don't change with engine migration; engine-specific validation hooks will need Godot equivalents |
 
 ## Migration Phases
+
+### Phase 0: Game Day Prototype — DONE ✓
+Day 1 game day fully ported to Godot with playable scenes, collision maps, dialogue overlay, touch controls, and asset loading. Serves as proof-of-concept for the Godot engine. See `godot/` directory for project files, scenes, and GDScript.
 
 ### Phase 1: Core Text Engine (NOT STARTED)
 Port the text-processor.js chip system to GDScript:

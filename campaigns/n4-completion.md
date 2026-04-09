@@ -1,8 +1,8 @@
 # N4 Campaign: Full Refresh & Completion
 
-> **Status:** Ready to start
-> **Started:** —
-> **Last updated:** 2026-03-25
+> **Status:** Final QA
+> **Started:** 2026-03-25
+> **Last updated:** 2026-04-09
 
 ---
 
@@ -14,100 +14,75 @@ Complete the entire N4 level: refresh the back half of lessons (N4.21–N4.36), 
 
 | Content type | Exists | Needed | Gap |
 |---|---|---|---|
-| Lessons (N4.1–N4.36) | 36/36 | All | N4.21–N4.36 need **full refresh** to current standards |
-| Grammar (G13–G31) | 9 (G13–G20, G23) | 19 | **G21–G22, G24–G31 missing** (11 lessons) |
-| Reviews | 18 numbered + 2 half + 1 final | — | N4.Review.11–18 need QA; **Finale may need refresh** |
-| Compose | 21 files | 36 | **compose.N4.21–N4.36 missing** (16 files) |
-| Stories | 13 | — | Need stories covering N4.21+ vocabulary |
+| Lessons (N4.1–N4.36) | 36/36 | All | **32+ refreshed** to current standards; final QA pass in progress |
+| Grammar (G13–G31) | **19/19** | 19 | **All built** ✓ (G21–G22, G24–G31 completed) |
+| Reviews | 18 numbered + 2 half + 1 final | — | **All QA'd** (Apr 9 pass); N4.Review.16 rewritten for N4.31–32 |
+| Compose | **36/36** | 36 | **All built** ✓ (compose.N4.21–N4.36 completed) |
+| Stories | 14 | — | mori-no-shokudou added (N4.31–32 coverage) |
 | Game days | 0 | TBD | Game day planning needed |
 
 ## Phase 1: Lesson Refresh (N4.21–N4.36)
 
 These lessons exist but predate current quality standards (term tagging, grammar reinforcement, register requirements, etc.). Each needs a full refresh through the 4-agent pipeline.
 
-**Batch 1: N4.21–N4.27** (Permissions, Conditionals, ように patterns)
-- [ ] N4.21 — permissions/prohibitions (てもいい, てはいけない)
-- [ ] N4.22
-- [ ] N4.23
-- [ ] N4.24
-- [ ] N4.25 — conditionals (たら, ば, なら, と) — major grammar milestone
-- [ ] N4.26
-- [ ] N4.27
+**Batch 1: N4.21–N4.27** — COMPLETE ✓
+- [x] N4.21–N4.27 — all refreshed (Apr 9)
 
-**Batch 2: N4.28–N4.32** (Passive, Causative, Thoughts & Experience)
-- [ ] N4.28
-- [x] N4.29 — Typhoons, Clocks, and Knowing ✓ (lesson + compose.N4.29, 2026-03-25)
-- [x] N4.30 — Thinking, Gathering & Answering ✓ (lesson + compose.N4.30, 2026-03-26)
-- [ ] N4.31 — passive/causative forms introduced — major grammar milestone
-- [ ] N4.32
+**Batch 2: N4.28–N4.32** — COMPLETE ✓
+- [x] N4.28 — refreshed (Apr 9)
+- [x] N4.29 — Typhoons, Clocks, and Knowing (2026-03-25)
+- [x] N4.30 — Thinking, Gathering & Answering (2026-03-26)
+- [x] N4.31 — passive/causative forms (Apr 9)
+- [x] N4.32 — refreshed (Apr 9)
 
-**Batch 3: N4.33–N4.36** (Advanced patterns, Adjective change, Capstone)
-- [ ] N4.33
-- [x] N4.34 — Districts, Commuting & Prefectures ✓ (lesson + compose.N4.34, 2026-03-29)
-- [ ] N4.35
-- [ ] N4.36 — final N4 lesson
+**Batch 3: N4.33–N4.36** — COMPLETE ✓
+- [x] N4.33 — refreshed (Apr 9)
+- [x] N4.34 — Districts, Commuting & Prefectures (2026-03-29)
+- [x] N4.35 — rewritten (2026-03-29)
+- [x] N4.36 — rewritten (2026-03-30)
 
-## Phase 2: Grammar Lessons (G21–G31, minus G23)
+## Phase 2: Grammar Lessons (G21–G31) — COMPLETE ✓
 
-11 grammar lessons need to be built from GRAMMAR_CONTENT.md spec (G23 already exists):
+All 11 missing grammar lessons have been built:
 
 | ID | Topic | unlocksAfter | Status |
 |---|---|---|---|
-| G21 | Conversation Mechanics (相槌, hesitation) | N4.16 | **Not built** |
-| G22 | そうだ: Appearance & Hearsay | N4.18 | **Not built** |
-| G23 | Permissions & Prohibitions (てもいい, てはいけない, なくてもいい) | N4.21 | **Built** (was G21) |
-| G24 | Directional て-Form (てくる/ていく/てある) | N4.23 | **Not built** |
-| G25 | Obligations & Conditionals (なければ, ば, たら, なら, と) | N4.25 | **Not built** |
-| G26 | ように Patterns (ようにする / ようになる) | N4.27 | **Not built** |
-| G27 | Expressing Thoughts & Experience (と思う / たことがある) | N4.30 | **Not built** |
-| G28 | Passive Form | N4.31 | **Not built** |
-| G29 | Causative Form | N4.31 | **Not built** |
-| G30 | Advanced Verb Usages (てみる, ておく, てしまう, すぎる, とする) | N4.34 | **Not built** |
-| G31 | Advanced Adjective Patterns (くなる/になる, くする/にする) | N4.34 | **Not built** |
+| G21 | Conversation Mechanics (相槌, hesitation) | N4.16 | **Built** ✓ |
+| G22 | そうだ: Appearance & Hearsay | N4.18 | **Built** ✓ |
+| G23 | Permissions & Prohibitions (てもいい, てはいけない, なくてもいい) | N4.21 | **Built** ✓ |
+| G24 | Directional て-Form (てくる/ていく/てある) | N4.23 | **Built** ✓ |
+| G25 | Obligations & Conditionals (なければ, ば, たら, なら, と) | N4.25 | **Built** ✓ |
+| G26 | ように Patterns (ようにする / ようになる) | N4.27 | **Built** ✓ |
+| G27 | Expressing Thoughts & Experience (と思う / たことがある) | N4.30 | **Built** ✓ |
+| G28 | Passive Form | N4.31 | **Built** ✓ |
+| G29 | Causative Form | N4.31 | **Built** ✓ |
+| G30 | Advanced Verb Usages (てみる, ておく, てしまう, すぎる, とする) | N4.34 | **Built** ✓ |
+| G31 | Advanced Adjective Patterns (くなる/になる, くする/にする) | N4.34 | **Built** ✓ |
 
-**Recommended build order** (by unlocksAfter, earliest first):
-1. G21, G22 (unlock after N4.16/N4.18 — earliest)
-2. G24 (unlock after N4.23)
-3. G25, G26 (unlock after N4.25/N4.27)
-4. G27 (unlock after N4.30)
-5. G28, G29 (unlock after N4.31)
-6. G30, G31 (unlock after N4.34)
+## Phase 3: Reviews — COMPLETE ✓
 
-## Phase 3: Reviews
+- [x] N4.Review.11 through N4.Review.18 — QA'd (Apr 9)
+- [x] N4.Review.16 rewritten to cover N4.31–32
+- [x] N4 Half Review 2 — verified
+- [x] N4.Final.Review — reviewed
 
-### Existing reviews to QA
-- [ ] N4.Review.11 through N4.Review.18 — run through hooks, fix issues
-- [ ] N4 Half Review 2 — verify coverage
-- [ ] N4.Final.Review — may need refresh for consistency
+## Phase 4: Compose Files (compose.N4.21–N4.36) — COMPLETE ✓
 
-### Potential new reviews needed
-- Reviews typically cover 2-lesson ranges. With N4.21–N4.36 refreshed, verify coverage is complete.
-
-## Phase 4: Compose Files (compose.N4.21–N4.36)
-
-16 compose files to build — one per lesson:
-
-- [ ] compose.N4.21 through compose.N4.33
-- [x] compose.N4.34 ✓ (2026-03-29)
-- [ ] compose.N4.35 through compose.N4.36
-
-Each follows the compose schema with 9-10 prompts per file (late N4 range).
+All 16 compose files built. Full set compose.N4.1–N4.36 now exists.
 
 ## Phase 5: Stories
 
-Current N4 stories (13 total):
-- factory-owner, field-trip-day, hashiru-asa, hirugohan-monogatari, jitensha-de-kyouto-e, kazoku-no-kisetsu, library-book, machi-no-eigakan, new-city, rikizo-journey, tabisaki-no-shashin, uta-to-shigoto, watashi-no-iro
+Current N4 stories (14 total):
+- factory-owner, field-trip-day, hashiru-asa, hirugohan-monogatari, jitensha-de-kyouto-e, kazoku-no-kisetsu, library-book, machi-no-eigakan, mori-no-shokudou *(new — N4.31–32)*, new-city, rikizo-journey, tabisaki-no-shashin, uta-to-shigoto, watashi-no-iro
 
 ### Stories needed
-- [ ] Assess which stories cover N4.1–N4.20 vocabulary vs N4.21–N4.36
-- [ ] Plan 4–6 new stories for the N4.21–N4.36 range
+- [ ] Assess vocabulary coverage gaps for N4.21–N4.36 range
+- [ ] Plan additional stories if needed
 - [ ] Build new stories with proper terms.json and particle tagging
 
-## Phase 6: QA All Grammar Lessons (G13–G31)
+## Phase 6: QA All Grammar Lessons (G13–G31) — COMPLETE ✓
 
-Once all grammar lessons exist, run the full set through validation:
-- [ ] G13–G20, G23 (existing) — run through validate-grammar-schema and fix issues
-- [ ] G21–G22, G24–G31 (newly built) — should pass hooks from creation, but verify
+All 19 grammar lessons pass validation (Apr 9 QA pass). G30 and G31 received final fixes on Apr 9.
 
 ## Phase 7: Game Day Planning
 
@@ -116,14 +91,8 @@ No N4 game days exist yet. Planning needed:
 - [ ] Decide scope: 36 game days (one per lesson) or condensed format?
 - [ ] Create N4_GAME_ROADMAP.md if proceeding
 
-## Priority Order
+## Remaining Work
 
-1. **G21, G22** → earliest unlock (N4.16/N4.18), most students will hit these first
-2. **N4.21–N4.27 refresh** → unlocks G24, G25, G26
-3. **G24, G25, G26** → build after lessons they depend on are refreshed
-4. **N4.28–N4.36 refresh** → unlocks remaining grammar
-5. **G27–G31** → build after their lesson prerequisites are refreshed
-6. **compose.N4.21–N4.36** → can be built in parallel with lesson refreshes
-7. **Stories** → after lessons are stable
-8. **Reviews QA** → after all content is stable
-9. **Game day planning** → last priority for N4
+1. ~~G21–G31~~ ✓ | ~~Lesson refresh~~ ✓ | ~~Compose~~ ✓ | ~~Reviews QA~~ ✓ | ~~Grammar QA~~ ✓
+2. **Stories** — assess N4.21–36 vocabulary coverage, build additional stories if needed
+3. **Game day planning** — define N4 game day structure, create N4_GAME_ROADMAP.md

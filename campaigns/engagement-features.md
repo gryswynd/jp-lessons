@@ -1,9 +1,9 @@
 # Engagement Features Campaign — Daily Reminders, Streaks & Widget
 
-> **Status:** Active — Phase 2 (Email Reminders) built, awaiting deployment
+> **Status:** Deployed — Phase 2 live
 > **Started:** 2026-03-24
-> **Last updated:** 2026-03-25
-> **Decision:** Email reminders via Resend + Cloudflare Worker. Self-service opt-in. Client will set up Cloudflare + Resend accounts, then deploy.
+> **Last updated:** 2026-04-09
+> **Decision:** Email reminders via Resend + Cloudflare Worker. Self-service opt-in. Worker deployed; streak.js and reminder-settings.js integrated into web app. Client needs to set Cloudflare + Resend credentials.
 
 ---
 
