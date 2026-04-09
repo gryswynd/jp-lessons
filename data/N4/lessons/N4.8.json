@@ -258,6 +258,7 @@
           "en": "Which season do you like best, Rikizo?",
           "terms": [
             "char_rikizo",
+            "v_san",
             "p_wa",
             "v_dono",
             "v_kisetsu",
@@ -315,7 +316,7 @@
             "p_no",
             "v_iro",
             "p_ga",
-            "v_akai",
+            "v_aka",
             "p_ya",
             "v_chairo",
             "p_ni",
@@ -499,8 +500,8 @@
           "en": "Does Japan have four seasons?",
           "terms": [
             "v_nihon",
-            "p_ni",
             "p_wa",
+            "p_ni",
             {
               "counter": "tsu",
               "n": 4
@@ -573,7 +574,7 @@
             "p_no",
             "v_iro",
             "p_ga",
-            "v_akai",
+            "v_aka",
             "p_ya",
             "v_chairo",
             "p_ni",
@@ -592,6 +593,7 @@
             "v_natsu",
             "p_wa",
             "v_dou",
+            "g_desu",
             "p_ka"
           ]
         },
@@ -683,8 +685,8 @@
           "en": "Summer. Because there's summer vacation!",
           "terms": [
             "v_natsu",
-            "g_da",
             "p_na",
+            "g_da",
             "v_natsuyasumi",
             "p_ga",
             {
@@ -891,7 +893,7 @@
             "p_no",
             "v_iro",
             "p_ga",
-            "v_akai",
+            "v_aka",
             "p_ya",
             "v_chairo",
             "p_ni",
@@ -965,7 +967,13 @@
             "p_ka"
           ],
           "a_terms": [
-            "v_haru"
+            "v_haru",
+            "p_ga",
+            "v_ichiban",
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -987,7 +995,14 @@
             "p_ka"
           ],
           "a_terms": [
-            "p_yori"
+            "v_haru",
+            "p_ga",
+            "v_natsu",
+            "p_yori",
+            {
+              "id": "v_suzushii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -1010,9 +1025,14 @@
             "p_ka"
           ],
           "a_terms": [
-            "v_akai",
+            "v_aka",
             "p_ya",
-            "v_chairo"
+            "v_chairo",
+            "p_ni",
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -1026,8 +1046,8 @@
           "en": "Japan has four seasons: spring, summer, autumn, and winter. They are called \"shunkashuutou.\"",
           "terms": [
             "v_nihon",
-            "p_ni",
             "p_wa",
+            "p_ni",
             "v_haru",
             "v_natsu",
             "v_aki",
@@ -1087,6 +1107,7 @@
             "v_rokugatsu",
             "p_kara",
             "v_hachigatsu",
+            "g_desu",
             "v_totemo",
             {
               "id": "v_atsui",
@@ -1107,13 +1128,14 @@
             "v_kugatsu",
             "p_kara",
             "v_juuichigatsu",
+            "g_desu",
             "v_ki",
             "p_no",
             "v_iro",
             "p_ga",
             "v_midori",
             "p_kara",
-            "v_akai",
+            "v_aka",
             "p_ya",
             "v_chairo",
             "p_ni",
@@ -1132,6 +1154,7 @@
             "v_juunigatsu",
             "p_kara",
             "v_nigatsu",
+            "g_desu",
             "v_totemo",
             {
               "id": "v_samui",
@@ -1158,8 +1181,8 @@
             "v_haru",
             "p_wa",
             "v_nan",
+            "v_tsuki",
             "p_kara",
-            "v_nan",
             "g_desu",
             "p_ka"
           ],
@@ -1179,8 +1202,8 @@
             "v_aki",
             "p_wa",
             "v_nan",
+            "v_tsuki",
             "p_kara",
-            "v_nan",
             "g_desu",
             "p_ka"
           ],
@@ -1200,8 +1223,8 @@
             "v_fuyu",
             "p_wa",
             "v_nan",
+            "v_tsuki",
             "p_kara",
-            "v_nan",
             "g_desu",
             "p_ka"
           ],
@@ -1281,6 +1304,9 @@
           ],
           "answer": "春",
           "terms": [
+            "v_sangatsu",
+            "v_shigatsu",
+            "v_gogatsu",
             "v_haru"
           ]
         },
@@ -1295,6 +1321,9 @@
           ],
           "answer": "夏",
           "terms": [
+            "v_rokugatsu",
+            "v_shichigatsu",
+            "v_hachigatsu",
             "v_natsu"
           ]
         },
@@ -1309,6 +1338,9 @@
           ],
           "answer": "秋",
           "terms": [
+            "v_kugatsu",
+            "v_juugatsu",
+            "v_juuichigatsu",
             "v_aki"
           ]
         },
@@ -1323,6 +1355,9 @@
           ],
           "answer": "冬",
           "terms": [
+            "v_juunigatsu",
+            "v_ichigatsu",
+            "v_nigatsu",
             "v_fuyu"
           ]
         },

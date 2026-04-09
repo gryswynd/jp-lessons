@@ -653,7 +653,7 @@
             "v_raishuu",
             "p_wa",
             "v_atarashii",
-            "v_kurasu",
+            "v_kurasu_class",
             "p_no",
             "v_kaigou",
             "p_ga",
@@ -764,7 +764,12 @@
           "a_terms": [
             "v_eki",
             "p_no",
-            "v_machiaishitsu"
+            "v_machiaishitsu",
+            "p_de",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -785,9 +790,15 @@
           ],
           "a_terms": [
             "v_yuugata",
+            "p_no",
             {
               "counter": "ji",
               "n": 5
+            },
+            "p_ni",
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
             }
           ]
         },
@@ -813,7 +824,12 @@
           ],
           "a_terms": [
             "v_ii",
-            "v_kangaekata"
+            "v_kangaekata",
+            "p_ga",
+            {
+              "id": "v_dekiru",
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -969,7 +985,13 @@
           "a_terms": [
             "v_kyoudo",
             "p_no",
-            "v_takai"
+            "v_takai",
+            "v_undou",
+            "p_wa",
+            {
+              "id": "v_suru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -1077,7 +1099,10 @@
           ],
           "answer": "meeting arrangement / rendezvous",
           "terms": [
-            "v_machiawase"
+            "v_machiawase",
+            "p_no",
+            "v_imi",
+            "p_wa"
           ]
         },
         {
@@ -1114,7 +1139,10 @@
           ],
           "answer": "anticipation / looking forward to",
           "terms": [
-            "v_kokoromachi"
+            "v_kokoromachi",
+            "p_no",
+            "v_imi",
+            "p_wa"
           ]
         },
         {

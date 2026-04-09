@@ -416,9 +416,17 @@
             "毎朝 銀行に 行きます。"
           ],
           "terms": [
+            "char_rikizo",
+            "p_wa",
+            "v_maiasa",
+            "v_nani",
+            "p_wo",
+            { "id": "v_suru", "form": "polite_masu" },
+            "p_ka",
             "v_inu",
             "p_to",
             "v_issho",
+            "p_ni",
             { "id": "v_hashiru", "form": "polite_masu" }
           ],
           "explanation": "Sentence 1 says りきぞは毎朝早く起きて、犬といっしょに走ります (Rikizo wakes up early every morning and runs together with his dog). いっしょに means 'together'. と after a noun means 'with'."
@@ -433,6 +441,12 @@
             "医者に なって、薬を 作りました。"
           ],
           "terms": [
+            "v_kyonen",
+            "char_rikizo",
+            "p_wa",
+            "v_dou",
+            { "id": "v_suru", "form": "polite_mashita" },
+            "p_ka",
             "v_byouki",
             "p_ni",
             { "id": "v_naru", "form": "te_form" },
@@ -453,6 +467,13 @@
             "病院で 自分で 買いました。"
           ],
           "terms": [
+            "v_isha",
+            "p_ni",
+            "v_kusuri",
+            "p_wo",
+            "v_dou",
+            { "id": "v_morau", "form": "polite_mashita" },
+            "p_ka",
             "v_nomigusuri",
             "p_shika",
             { "id": "v_morau", "form": "polite_past_negative" }
@@ -720,6 +741,11 @@
             { "id": "v_hashiru", "form": "tari_form" },
             { "id": "v_aruku", "form": "tari_form" },
             { "id": "v_suru", "form": "polite_masu" }
+          ],
+          "a_terms": [
+            { "id": "v_hashiru", "form": "tari_form" },
+            { "id": "v_aruku", "form": "tari_form" },
+            { "id": "v_suru", "form": "plain_form" }
           ],
           "explanation": "走ったり歩いたりします uses the ～たり～たりする pattern. This lists representative actions from a larger set — implying the person does other things too, not just running and walking. The た-form + り suffix is added to each verb. ～ながら (simultaneous) uses the ます-stem, not the た-form."
         },

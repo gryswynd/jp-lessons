@@ -746,7 +746,14 @@
             "p_ka"
           ],
           "a_terms": [
-            "v_toriniku"
+            "v_toriniku",
+            "p_no",
+            "v_ryouri",
+            "p_wo",
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -769,7 +776,12 @@
           ],
           "a_terms": [
             "char_yamakawa",
-            "v_san"
+            "v_san",
+            "p_ga",
+            {
+              "id": "v_ageru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -793,7 +805,13 @@
           "a_terms": [
             "v_toriniku",
             "p_no",
-            "v_totemo"
+            "v_aji",
+            "p_ga",
+            "v_totemo",
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            }
           ]
         }
       ]
@@ -947,7 +965,14 @@
           ],
           "a_terms": [
             "v_itsumo",
-            "v_toriniku"
+            "v_toriniku",
+            "p_no",
+            "v_ryouri",
+            "p_wo",
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -970,7 +995,12 @@
           ],
           "a_terms": [
             "char_yamakawa",
-            "v_san"
+            "v_san",
+            "p_kara",
+            {
+              "id": "v_morau",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -996,6 +1026,10 @@
             {
               "id": "v_kurai",
               "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_masu"
             }
           ]
         }

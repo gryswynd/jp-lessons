@@ -500,10 +500,10 @@
         },
         {
           "spk": "けん",
-          "jp": "えが 上手で、世界中で 有名だね。",
+          "jp": "え が 上手で、世界中で 有名だね。",
           "en": "They are skillful at painting, and they're famous all over the world.",
           "terms": [
-            "v_e",
+            "v_e_picture",
             "p_ga",
             {
               "id": "v_jouzu",
@@ -841,10 +841,10 @@
           ]
         },
         {
-          "jp": "えが 上手で、写真も たくさん とったり 書いたり しました。",
+          "jp": "え が 上手で、写真も たくさん とったり 書いたり しました。",
           "en": "They were skillful at painting and did many things like taking photos and writing.",
           "terms": [
-            "v_e",
+            "v_e_picture",
             "p_ga",
             {
               "id": "v_jouzu",
@@ -925,7 +925,7 @@
         {
           "q": "この 画家は どうして 世界中で 人気が ありますか。",
           "q_en": "Why is this painter popular around the world?",
-          "a": "頭が よくて、えが 上手だからです。",
+          "a": "頭が よくて、え が 上手だからです。",
           "a_en": "Because he is smart and skilled at drawing.",
           "terms": [
             "v_kono",
@@ -949,7 +949,7 @@
               "id": "v_ii",
               "form": "te_form"
             },
-            "v_e",
+            "v_e_picture",
             "p_ga",
             "v_jouzu",
             "g_da",
@@ -1108,7 +1108,7 @@
       "items": [
         {
           "kind": "mcq",
-          "q": "本を 読み＿＿＿ お茶を 飲みます。",
+          "q": "本を 読み___ お茶を 飲みます。",
           "choices": [
             "ながら",
             "たり",
@@ -1133,7 +1133,7 @@
         },
         {
           "kind": "mcq",
-          "q": "休みの 日は、映画を 見＿＿＿ 旅行を し＿＿＿ します。",
+          "q": "休みの 日は、映画を 見___ 旅行を し___ します。",
           "choices": [
             "たり / たり",
             "ながら / ながら",
@@ -1166,7 +1166,7 @@
         },
         {
           "kind": "mcq",
-          "q": "りきぞは 頭が いい＿＿＿、旅行が すぐ できます。",
+          "q": "りきぞは 頭が いい___、旅行が すぐ できます。",
           "choices": [
             "ので",
             "でも",
@@ -1190,7 +1190,7 @@
         },
         {
           "kind": "mcq",
-          "q": "体を 休み＿＿＿、お茶を 飲んでください。",
+          "q": "体を 休み___、お茶を 飲んでください。",
           "choices": [
             "ながら",
             "たり",

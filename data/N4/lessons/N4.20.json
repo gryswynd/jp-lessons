@@ -730,7 +730,11 @@
             "v_machi",
             "p_no",
             "v_nomiya",
-            "p_ni"
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -1120,6 +1124,7 @@
           "answer": "洋服",
           "terms": [
             "v_kono",
+            "v_youfuku",
             "p_wa",
             "v_youfuu",
             "p_de",
@@ -1141,6 +1146,7 @@
           ],
           "answer": "屋上",
           "terms": [
+            "v_okujou",
             "p_kara",
             "v_yozora",
             "p_ga",
@@ -1153,7 +1159,7 @@
         },
         {
           "kind": "mcq",
-          "q": "今夜は（　）を 食べたいので、洋食の 料理屋に 行きました。",
+          "q": "今夜は （　）を 食べたいので、洋食の 料理屋に 行きました。",
           "choices": [
             "洋食",
             "洋服",
@@ -1193,6 +1199,7 @@
           "terms": [
             "v_umi",
             "p_no",
+            "v_koya",
             {
               "id": "v_chikai",
               "form": "adverbial"
@@ -1208,7 +1215,7 @@
         },
         {
           "kind": "mcq",
-          "q": "父は（　）の 音楽や 映画が 好きです。",
+          "q": "父は （　）の 音楽や 映画が 好きです。",
           "choices": [
             "西洋",
             "夜空",

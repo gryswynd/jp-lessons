@@ -37,23 +37,30 @@
               "jp": "今日は 何時に 帰りますか。",
               "terms": [
                 "v_kyou",
+                "p_wa",
                 "v_nanji",
+                "p_ni",
                 {
                   "id": "v_kaeru",
                   "form": "polite_masu"
-                }
+                },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "七時に 帰ります。帰り道に 切手を 買います。",
               "terms": [
+                {"counter": "ji", "n": 7},
+                "p_ni",
                 {
                   "id": "v_kaeru",
                   "form": "polite_masu"
                 },
                 "v_kaerimichi",
+                "p_ni",
                 "v_kitte",
+                "p_wo",
                 {
                   "id": "v_kau",
                   "form": "polite_masu"
@@ -65,19 +72,25 @@
               "jp": "友だちに 本を 送りますか。",
               "terms": [
                 "v_tomodachi",
+                "p_ni",
                 "v_hon",
+                "p_wo",
                 {
                   "id": "v_okuru",
                   "form": "polite_masu"
-                }
+                },
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "はい。友だちに 本を 送りたいです。大切な 友だちです。",
               "terms": [
+                "p_hai",
                 "v_tomodachi",
+                "p_ni",
                 "v_hon",
+                "p_wo",
                 {
                   "id": "v_okuru",
                   "form": "plain_desire_tai"
@@ -87,7 +100,8 @@
                   "id": "v_taisetsu",
                   "form": "attributive_na"
                 },
-                "v_tomodachi"
+                "v_tomodachi",
+                "g_desu"
               ]
             }
           ],
@@ -111,11 +125,14 @@
               "terms": [
                 "v_mainichi",
                 "v_nan",
+                "p_de",
                 "v_gakkou",
+                "p_ni",
                 {
                   "id": "v_kuru",
                   "form": "polite_masu"
-                }
+                },
+                "p_ka"
               ]
             },
             {
@@ -123,6 +140,7 @@
               "jp": "電車に 乗って 来ます。家は 学校から 少し 遠いです。",
               "terms": [
                 "v_densha",
+                "p_ni",
                 {
                   "id": "v_noru",
                   "form": "te_form"
@@ -132,7 +150,9 @@
                   "form": "polite_masu"
                 },
                 "v_ie",
+                "p_wa",
                 "v_gakkou",
+                "p_kara",
                 "v_sukoshi",
                 "v_tooi",
                 "g_desu"
@@ -143,23 +163,29 @@
               "jp": "駅は 家から 近いですか。",
               "terms": [
                 "v_eki",
+                "p_wa",
                 "v_ie",
+                "p_kara",
                 "v_chikai",
-                "g_desu"
+                "g_desu",
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "はい、近いです。駅まで 歩いて、電車に 乗ります。",
               "terms": [
+                "p_hai",
                 "v_chikai",
                 "g_desu",
                 "v_eki",
+                "p_made",
                 {
                   "id": "v_aruku",
                   "form": "te_form"
                 },
                 "v_densha",
+                "p_ni",
                 {
                   "id": "v_noru",
                   "form": "polite_masu"
@@ -187,7 +213,9 @@
               "terms": [
                 "v_kyou",
                 "v_yama",
+                "p_made",
                 "v_densha",
+                "p_ni",
                 {
                   "id": "v_noru",
                   "form": "te_form"
@@ -206,7 +234,9 @@
                   "id": "v_ii",
                   "form": null
                 },
+                "p_yo",
                 "v_yama",
+                "p_wa",
                 {
                   "id": "v_tooi",
                   "form": null
@@ -218,16 +248,12 @@
               "jp": "少し 遠いけど、電車で 行くよ。",
               "terms": [
                 "v_sukoshi",
-                {
-                  "id": "v_tooi",
-                  "form": null
-                },
+                "v_tooi",
                 "p_kedo",
                 "v_densha",
-                {
-                  "id": "v_iku",
-                  "form": null
-                }
+                "p_de",
+                "v_iku",
+                "p_yo"
               ]
             },
             {
@@ -243,7 +269,9 @@
                   "form": "te_form"
                 },
                 "v_yama",
+                "p_no",
                 "v_michi",
+                "p_wo",
                 {
                   "id": "v_aruku",
                   "form": "plain_volitional"
@@ -385,7 +413,10 @@
           "en": "Rikizo wakes up at 6 every day.",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_mainichi",
+            {"counter": "ji", "n": 6},
+            "p_ni",
             {
               "id": "v_okiru",
               "form": "polite_masu"
@@ -401,11 +432,13 @@
               "form": "te_form"
             },
             "v_shatsu",
+            "p_wo",
             {
               "id": "v_kiru",
               "form": "te_form"
             },
             "v_kaisha",
+            "p_e",
             {
               "id": "v_iku",
               "form": "polite_masu"
@@ -417,11 +450,15 @@
           "en": "He rides the train and arrives at the station in thirty minutes.",
           "terms": [
             "v_densha",
+            "p_ni",
             {
               "id": "v_noru",
               "form": "te_form"
             },
+            {"counter": "fun", "n": 30},
+            "p_de",
             "v_eki",
+            "p_ni",
             {
               "id": "v_tsuku",
               "form": "polite_masu"
@@ -433,7 +470,9 @@
           "en": "The company is a little far from the station, but he walks there every day.",
           "terms": [
             "v_kaisha",
+            "p_wa",
             "v_eki",
+            "p_kara",
             "v_sukoshi",
             "v_tooi",
             "g_desu",
@@ -454,7 +493,9 @@
           "en": "At the company he often uses the computer and works hard.",
           "terms": [
             "v_kaisha",
+            "p_de",
             "v_pasokon",
+            "p_wo",
             "v_yoku",
             {
               "id": "v_tsukau",
@@ -472,13 +513,17 @@
           "en": "On the way home he wants to buy stamps and send a book to a friend.",
           "terms": [
             "v_kaerimichi",
+            "p_ni",
             "v_kitte",
+            "p_wo",
             {
               "id": "v_kau",
               "form": "te_form"
             },
             "v_tomodachi",
+            "p_ni",
             "v_hon",
+            "p_wo",
             {
               "id": "v_okuru",
               "form": "plain_desire_tai"
@@ -499,12 +544,16 @@
           ],
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_mainichi",
             "v_nanji",
+            "p_ni",
             {
               "id": "v_okiru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka",
+            {"counter": "ji", "n": 6}
           ],
           "explanation": "りきぞは毎日六時に起きます — Rikizo wakes up at 6 o'clock every day."
         },
@@ -519,8 +568,15 @@
           ],
           "terms": [
             "v_kaisha",
+            "p_wa",
             "v_eki",
-            "v_dou"
+            "p_kara",
+            "v_dou",
+            "g_desu",
+            "p_ka",
+            "v_sukoshi",
+            "v_tooi",
+            "g_desu"
           ],
           "explanation": "会社は駅から少し遠いですが — the company is a little far from the station."
         },
@@ -535,11 +591,28 @@
           ],
           "terms": [
             "v_kaerimichi",
+            "p_ni",
             "v_nani",
+            "p_wo",
             {
               "id": "v_suru",
-              "form": "polite_masu"
-            }
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
+            "p_ka",
+            "v_kitte",
+            "p_wo",
+            {
+              "id": "v_kau",
+              "form": "te_form"
+            },
+            "v_hon",
+            "p_wo",
+            {
+              "id": "v_okuru",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ],
           "explanation": "帰り道に切手を買って、友だちに本を送りたいです — on the way home he wants to buy stamps and send a book to a friend."
         }

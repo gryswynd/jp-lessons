@@ -533,6 +533,7 @@
             "毎日"
           ],
           "terms": [
+            "char_yamakawa",
             "p_wa",
             "v_konshuu",
             "v_nanyoubi",
@@ -566,7 +567,11 @@
               "id": "v_iru",
               "form": "polite_mashita"
             },
-            "p_ka"
+            "p_ka",
+            {
+              "counter": "ji",
+              "n": 3
+            }
           ],
           "explanation": "The passage says 先週も三時にいました — 'Last week too he was here at 3 o'clock.' 三時 uses 三 (three, N5.3) + 時 (hour, N5.4), read as <b>sanji</b>."
         },
@@ -580,12 +585,15 @@
             "十月 十日"
           ],
           "terms": [
+            "char_yamakawa",
             "p_no",
             "v_tanjoubi",
             "p_wa",
             "v_itsu",
             "g_desu",
-            "p_ka"
+            "p_ka",
+            "v_sangatsu",
+            "v_mikka"
           ],
           "explanation": "The passage says やまかわのたんじょうびは三月三日です — 'Yamakawa's birthday is March 3rd.' 三月 = March, 三日 = the 3rd (read as <b>mikka</b>)."
         }

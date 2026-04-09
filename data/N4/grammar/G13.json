@@ -359,6 +359,7 @@
           "jp": "はい、少し話せます。本も読めますよ。",
           "en": "Yes, I can speak a little. I can read books too.",
           "terms": [
+            "p_hai",
             "v_sukoshi",
             { "id": "v_hanasu", "form": "polite_potential" },
             "v_hon",
@@ -407,6 +408,7 @@
           "jp": "はい、読めますよ！",
           "en": "Yes, I can read!",
           "terms": [
+            "p_hai",
             { "id": "v_yomu", "form": "polite_potential" },
             "p_yo"
           ]
@@ -595,6 +597,7 @@
           ],
           "answer": "食べられる",
           "terms": [
+            "v_taberu",
             { "id": "v_taberu", "form": "potential" }
           ],
           "explanation": "食べる is an ichidan (RU-verb). Drop る → 食べ, then add られる → 食べられる. The colloquial shortening 食べれる (dropping ら) is common in casual speech but is not the standard written form."
@@ -610,6 +613,7 @@
           ],
           "answer": "が",
           "terms": [
+            "p_wo",
             "p_ga"
           ],
           "explanation": "With potential verbs, the direct object を often shifts to が. Example: 日本語を話す (speak Japanese) → 日本語が話せる (can speak Japanese). Using を is not wrong, but が is the standard and more natural choice."
@@ -625,6 +629,7 @@
           ],
           "answer": "できる",
           "terms": [
+            "v_suru",
             { "id": "v_suru", "form": "potential" }
           ],
           "explanation": "する is irregular — its potential form is できる, a completely different word. This is NOT formed by any regular rule. できる also functions as a standalone verb meaning 'to be possible' or 'to be completed'."
@@ -640,6 +645,7 @@
           ],
           "answer": "歩ける",
           "terms": [
+            "v_aruku",
             { "id": "v_aruku", "form": "potential" }
           ],
           "explanation": "歩く is a godan U-verb. く (ku) shifts to け (ke) in the え-column, then add る → 歩ける. Polite: 歩けます. 歩かれる would be the passive form, not potential."

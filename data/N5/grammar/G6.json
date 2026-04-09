@@ -710,191 +710,225 @@
     },
     {
       "type": "conversation",
-      "title": "かいわ 1: どのどうしですか（Which Kind of Verb Is It?）",
-      "context": "The teacher is explaining verb types to Yamakawa and Rikizo during class.",
-      "lines": [
-        {
-          "spk": "先生",
-          "jp": "「行く」は どんな どうしですか。",
-          "en": "What kind of verb is 'iku' (go)?",
-          "terms": [
-            "v_iku",
-            "p_wa",
-            "v_donna",
-            "g_desu",
-            "p_ka"
-          ]
-        },
-        {
-          "spk": "りきぞ",
-          "jp": "「行く」は ごだんどうしです。さいごは「く」です。",
-          "en": "'Iku' is a godan verb. The last sound is 'ku'.",
-          "terms": [
-            "v_iku",
-            "p_wa",
-            "g_desu",
-            "p_wa",
-            "g_desu"
-          ]
-        },
-        {
-          "spk": "先生",
-          "jp": "そうです。分かりましたね。では「いる」は どうですか。",
-          "en": "That's right. You understood. Then what about 'iru' (be)?",
-          "terms": [
-            "v_sou",
-            "g_desu",
-            {
-              "id": "v_wakaru",
-              "form": "polite_mashita"
-            },
-            "p_ne",
-            "p_dewa_then",
-            "v_iru",
-            "p_wa",
-            "v_dou",
-            "g_desu",
-            "p_ka"
-          ]
-        },
-        {
-          "spk": "やまかわ",
-          "jp": "「いる」は いちだんどうしです。「い」は い-れつです。",
-          "en": "'Iru' is an ichidan verb. 'I' is in the i-column.",
-          "terms": [
-            "v_iru",
-            "p_wa",
-            "g_desu",
-            "p_wa",
-            "g_desu"
-          ]
-        },
-        {
-          "spk": "先生",
-          "jp": "はい、そうです。では「分かる」は いちだんですか、ごだんですか。",
-          "en": "Yes, that's right. Then is 'wakaru' (understand) ichidan or godan?",
-          "terms": [
-            "p_hai",
-            "v_sou",
-            "g_desu",
-            "p_dewa_then",
-            "v_wakaru",
-            "p_wa",
-            "g_desu",
-            "p_ka",
-            "g_desu",
-            "p_ka"
-          ]
-        },
-        {
-          "spk": "りきぞ",
-          "jp": "「分かる」は ごだんです！「か」は あ-れつです。",
-          "en": "'Wakaru' is godan! 'Ka' is in the a-column.",
-          "terms": [
-            "v_wakaru",
-            "p_wa",
-            "g_desu",
-            "p_wa",
-            "g_desu"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "conversation",
-      "title": "かいわ 2: どうしの かたちを たしかめます（Confirming Verb Forms）",
-      "context": "Rikizo and Yamakawa quiz each other on verb conjugation after class.",
+      "title": "かいわ 1: 毎日 どこ に 行きますか（Where Do You Go Every Day?）",
+      "context": "Yamakawa asks Rikizo about his daily routine. They discover they visit similar places.",
       "lines": [
         {
           "spk": "やまかわ",
-          "jp": "りきぞさん、「来る」の ますかたちは 何ですか。",
-          "en": "Rikizo-san, what is the masu form of 'kuru' (come)?",
+          "jp": "りきぞさん は 毎日 どこ に 行きますか。",
+          "en": "Rikizo-san, where do you go every day?",
           "terms": [
             "char_rikizo",
             "v_san",
-            "v_kuru",
-            "p_no",
             "p_wa",
-            "v_nan",
-            "g_desu",
+            "v_mainichi",
+            "v_doko",
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "「来ます」です。よみかたは「きます」です。",
-          "en": "It's 'kimasu'. The reading is 'kimasu'.",
+          "jp": "いつも 駅 に 行きます。友だち が います よ。",
+          "en": "I always go to the station. My friend is there!",
           "terms": [
+            "v_itsumo",
+            "v_eki",
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
+            "v_tomodachi",
+            "p_ga",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "そうですか。先生 も 来ますか。",
+          "en": "I see. Does the teacher come too?",
+          "terms": [
+            "p_soudesuka",
+            "v_sensei",
+            "p_mo",
             {
               "id": "v_kuru",
               "form": "polite_masu"
             },
-            "g_desu",
-            "p_wa",
-            "g_desu"
-          ]
-        },
-        {
-          "spk": "やまかわ",
-          "jp": "そうです！「来る」は ふきそくどうしですね。",
-          "en": "That's right! 'Kuru' is an irregular verb, isn't it.",
-          "terms": [
-            "v_sou",
-            "g_desu",
-            "v_kuru",
-            "p_wa",
-            "g_desu",
-            "p_ne"
+            "p_ka"
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "はい。では「ある」は どうですか。",
-          "en": "Yes. Then what about 'aru' (exist)?",
+          "jp": "はい、時々 来ます。やまかわさん は どこ に 行きますか。",
+          "en": "Yes, sometimes. Where do you go, Yamakawa-san?",
           "terms": [
             "p_hai",
-            "p_dewa_then",
-            "v_aru",
+            "v_tokidoki",
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
+            "char_yamakawa",
+            "v_san",
             "p_wa",
-            "v_dou",
-            "g_desu",
+            "v_doko",
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
             "p_ka"
           ]
         },
         {
           "spk": "やまかわ",
-          "jp": "「ある」は「あります」ですね。コンビニに あります。",
-          "en": "'Aru' becomes 'arimasu'. There is a convenience store.",
+          "jp": "わたし は コンビニ に 行きます。",
+          "en": "I go to the convenience store.",
           "terms": [
-            "v_aru",
+            "v_watashi",
             "p_wa",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            },
-            "g_desu",
-            "p_ne",
             "v_konbini",
             "p_ni",
             {
-              "id": "v_aru",
+              "id": "v_iku",
               "form": "polite_masu"
             }
           ]
         },
         {
           "spk": "りきぞ",
-          "jp": "いいですね。毎日 分かります！",
-          "en": "That's great. I understand it every day!",
+          "jp": "分かりました。いっしょに 行きます！",
+          "en": "Got it. Let's go together!",
+          "terms": [
+            {
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            },
+            "v_issho",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "かいわ 2: 週まつ に 何 を しますか（What Will You Do on the Weekend?）",
+      "context": "Rikizo and Yamakawa talk about their weekend plans. They mention friends visiting and places to go.",
+      "lines": [
+        {
+          "spk": "りきぞ",
+          "jp": "やまかわさん、週まつ に 何 を しますか。",
+          "en": "Yamakawa-san, what will you do on the weekend?",
+          "terms": [
+            "char_yamakawa",
+            "v_san",
+            "v_shuumatsu",
+            "p_ni",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "友だち が 来ます。いっしょに ゲーム を します。",
+          "en": "My friend is coming. We will play games together.",
+          "terms": [
+            "v_tomodachi",
+            "p_ga",
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            },
+            "v_issho",
+            "v_geemu",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "いいですね！わたし は 店 に 行きます。",
+          "en": "That sounds nice! I am going to the store.",
           "terms": [
             {
               "id": "v_ii",
               "form": "polite_adj"
             },
             "p_ne",
-            "v_mainichi",
+            "v_watashi",
+            "p_wa",
+            "v_mise",
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "そうですか。駅 の 店 ですか。",
+          "en": "I see. The store at the station?",
+          "terms": [
+            "p_soudesuka",
+            "v_eki",
+            "p_no",
+            "v_mise",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "はい、そうです。スーパー も あります よ。",
+          "en": "Yes, that's right. There is a supermarket too.",
+          "terms": [
+            "p_hai",
+            "v_sou",
+            "g_desu",
+            "v_suupaa",
+            "p_mo",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "分かりました。わたし も 行きます！",
+          "en": "Got it. I will go too!",
+          "terms": [
             {
               "id": "v_wakaru",
+              "form": "polite_mashita"
+            },
+            "v_watashi",
+            "p_mo",
+            {
+              "id": "v_iku",
               "form": "polite_masu"
             }
           ]

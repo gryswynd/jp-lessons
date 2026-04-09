@@ -350,7 +350,8 @@
             "p_to",
             "v_sakana",
             "v_dochira",
-            "p_no",
+            "v_hou",
+            "p_ga",
             { "id": "v_suki", "form": "polite_adj" },
             "p_ka"
           ]
@@ -363,7 +364,8 @@
             "v_yasai",
             "p_yori",
             "v_sakana",
-            "p_no",
+            "v_hou",
+            "p_ga",
             { "id": "v_suki", "form": "polite_adj" },
             "v_kono",
             "v_mise",
@@ -371,7 +373,7 @@
             "v_sakana",
             "p_wa",
             "v_sukoshi",
-            { "id": "v_takai", "form": "sugiru_form" }
+            { "id": "v_takai", "form": "polite_sugiru_form" }
           ]
         },
         {
@@ -382,7 +384,8 @@
             "p_soudesu",
             "p_ne",
             "v_eki",
-            "p_no",
+            "v_hou",
+            "p_ga",
             { "id": "v_yasui", "form": "polite_adj" },
             "p_yo"
           ]
@@ -398,6 +401,7 @@
             "v_eki",
             "p_hodo",
             { "id": "v_chikai", "form": "plain_negative" },
+            "g_desu",
             "v_ryouri",
             "p_wa",
             "v_ichiban",
@@ -467,7 +471,7 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "そうだね。三時間くらいで読めるよ。",
+          "jp": "そうだね。3時間くらいで読めるよ。",
           "en": "Yeah. You can read it in about three hours.",
           "terms": [
             "p_soudane",
@@ -480,14 +484,15 @@
         },
         {
           "spk": "やまかわ",
-          "jp": "いいね！食べすぎたよ。読めなかった。",
-          "en": "Nice! I ate too much though. I couldn't read it.",
+          "jp": "いいね！食べすぎたよ。読めないよ。",
+          "en": "Nice! I ate too much though. I can't read it.",
           "terms": [
             "v_ii",
             "p_ne",
-            { "id": "v_taberu", "form": "sugiru_form" },
+            { "id": "v_taberu", "form": "sugiru_past" },
             "p_yo",
-            { "id": "v_yomu", "form": "plain_potential_negative" }
+            { "id": "v_yomu", "form": "plain_potential_negative" },
+            "p_yo"
           ]
         }
       ]
@@ -579,13 +584,13 @@
           ],
           "answer": "食べすぎました。",
           "terms": [
-            { "id": "v_taberu", "form": "sugiru_form" }
+            { "id": "v_taberu", "form": "polite_sugiru_past" }
           ],
           "explanation": "すぎる attaches to the ます-stem of verbs: 食べる → 食べ + すぎる = 食べすぎる. Polite past: 食べすぎました."
         },
         {
           "kind": "mcq",
-          "q": "What does 「三時間くらい」mean?",
+          "q": "What does 「3時間くらい」mean?",
           "choices": [
             "about three hours",
             "more than three hours",
@@ -594,6 +599,7 @@
           ],
           "answer": "about three hours",
           "terms": [
+            "v_jikan",
             "p_kurai"
           ],
           "explanation": "くらい (also ぐらい) means 'about' or 'approximately' when following a number or quantity. 三時間くらい = about three hours — a rough estimate, not exact."

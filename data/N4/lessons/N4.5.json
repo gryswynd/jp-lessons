@@ -772,7 +772,12 @@
             "p_ka"
           ],
           "a_terms": [
-            "v_suupaa"
+            "v_suupaa",
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -796,7 +801,12 @@
             "p_to",
             "v_yasai",
             "p_no",
-            "v_ryouri"
+            "v_ryouri",
+            "p_wo",
+            {
+              "id": "v_tsukuru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -817,7 +827,12 @@
           ],
           "a_terms": [
             "p_hai",
-            "v_totemo"
+            "v_totemo",
+            {
+              "id": "v_oishii",
+              "form": "plain_past_adj"
+            },
+            "g_desu"
           ]
         }
       ]
@@ -954,7 +969,11 @@
           ],
           "a_terms": [
             "p_hai",
-            "v_totemo"
+            "v_totemo",
+            {
+              "id": "v_jouzu",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -981,7 +1000,12 @@
             },
             "v_tabemono",
             "p_ya",
-            "v_nomimono"
+            "v_nomimono",
+            "p_wo",
+            {
+              "id": "v_tsukuru",
+              "form": "polite_potential"
+            }
           ]
         },
         {
@@ -995,6 +1019,7 @@
             "v_dare",
             "p_no",
             "v_you_manner",
+            "p_ni",
             "v_ryouri",
             "p_ga",
             {
@@ -1006,7 +1031,15 @@
           ],
           "a_terms": [
             "char_yamakawa",
-            "v_san"
+            "v_san",
+            "p_no",
+            "v_you_manner",
+            "p_ni",
+            {
+              "id": "v_tsukuru",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         }
       ]

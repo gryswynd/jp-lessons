@@ -383,6 +383,7 @@
           "jp": "ええ。空気も きれいで、気分が いいですね。",
           "en": "Yes. The air is also clean and I feel good, don't I.",
           "terms": [
+            "p_ee",
             "v_kuuki",
             "p_mo",
             {
@@ -405,7 +406,10 @@
           "terms": [
             "v_kawa",
             "p_ni",
-            "v_kirei",
+            {
+              "id": "v_kirei",
+              "form": "attributive_na"
+            },
             "v_hana",
             "p_ga",
             {
@@ -461,9 +465,13 @@
           "jp": "ええ！今日は きれいな 日ですね。また 来たいです。",
           "en": "Yes! Today is a beautiful day, isn't it. I want to come again.",
           "terms": [
+            "p_ee",
             "v_kyou",
             "p_wa",
-            "v_kirei",
+            {
+              "id": "v_kirei",
+              "form": "attributive_na"
+            },
             "v_hi",
             "g_desu",
             "p_ne",

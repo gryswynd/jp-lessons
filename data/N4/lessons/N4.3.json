@@ -767,6 +767,11 @@
             {
               "counter": "ji",
               "n": 6
+            },
+            "p_ni",
+            {
+              "id": "v_okiru",
+              "form": "polite_masu"
             }
           ]
         },
@@ -792,6 +797,7 @@
             "char_rikizo",
             "p_no",
             "v_haha",
+            "p_ga",
             {
               "id": "v_tsukuru",
               "form": "te_form"
@@ -819,7 +825,9 @@
           "a_terms": [
             "v_asa",
             "p_kara",
-            "v_akarui"
+            "v_akarui",
+            "v_tenki",
+            "g_desu"
           ]
         },
         {
@@ -974,7 +982,12 @@
           "a_terms": [
             "char_yuki",
             "p_no",
-            "v_ie"
+            "v_ie",
+            "p_de",
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -997,6 +1010,7 @@
             "char_yuki",
             "p_no",
             "v_haha",
+            "p_ga",
             {
               "id": "v_tsukuru",
               "form": "te_form"
@@ -1026,9 +1040,16 @@
             "p_ka"
           ],
           "a_terms": [
+            "v_maiban",
             "char_yuki",
             "p_no",
-            "v_ie"
+            "v_ie",
+            "p_de",
+            {
+              "id": "v_taberu",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         },
         {
@@ -1051,6 +1072,11 @@
             {
               "counter": "ji",
               "n": 6
+            },
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "polite_potential"
             }
           ]
         }
@@ -1114,7 +1140,7 @@
       "items": [
         {
           "kind": "mcq",
-          "q": "今朝 [けさ]",
+          "q": "今朝",
           "choices": [
             "this morning",
             "every morning",
@@ -1128,7 +1154,7 @@
         },
         {
           "kind": "mcq",
-          "q": "晩ごはん [ばんごはん]",
+          "q": "晩ごはん",
           "choices": [
             "dinner",
             "breakfast",
@@ -1142,7 +1168,7 @@
         },
         {
           "kind": "mcq",
-          "q": "明るい [あかるい]",
+          "q": "明るい",
           "choices": [
             "bright",
             "dark",

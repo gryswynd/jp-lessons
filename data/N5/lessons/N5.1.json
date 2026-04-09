@@ -772,8 +772,8 @@
           ]
         },
         {
-          "jp": "父が います。母が います。さん人です。",
-          "en": "My father is here. My mother is here. There are three of us.",
+          "jp": "父が います。母が います。",
+          "en": "My father is here. My mother is here.",
           "terms": [
             "v_chichi",
             "p_ga",
@@ -781,12 +781,7 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "v_haha",
-            {
-              "counter": "nin",
-              "n": 3
-            },
-            "g_desu"
+            "v_haha"
           ]
         },
         {
@@ -891,9 +886,11 @@
             "v_sensei",
             "p_wa",
             "v_dare",
+            "g_desu",
             "p_ka"
           ],
           "a_terms": [
+            "char_suzuki",
             "v_sensei",
             "g_desu"
           ]
@@ -1026,6 +1023,7 @@
             "p_ka"
           ],
           "a_terms": [
+            "char_yamamoto",
             "v_san",
             "g_desu"
           ]
@@ -1080,6 +1078,7 @@
             "p_wa",
             "v_donna",
             "v_hito",
+            "g_desu",
             "p_ka"
           ],
           "a_terms": [

@@ -747,7 +747,11 @@
             "v_bungaku",
             "p_no",
             "v_kenkyuusha",
-            "p_ga"
+            "p_ga",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -775,7 +779,16 @@
           "a_terms": [
             "v_furui",
             "v_bunsho",
-            "p_wo"
+            "p_wo",
+            "v_kenkyuu",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -927,7 +940,11 @@
           ],
           "a_terms": [
             "v_toshokan",
-            "p_de"
+            "p_de",
+            {
+              "id": "v_yomu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -995,6 +1012,10 @@
             {
               "id": "v_suru",
               "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
             }
           ]
         }

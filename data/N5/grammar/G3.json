@@ -786,9 +786,10 @@
       "lines": [
         {
           "spk": "ゆき",
-          "jp": "けんじさんの お母さんは 先生ですか。",
+          "jp": "けんさんの お母さんは 先生ですか。",
           "en": "Is your mother a teacher, Kenji?",
           "terms": [
+            "char_ken",
             "v_san",
             "p_no",
             "v_okaasan",
@@ -803,10 +804,17 @@
           "jp": "はい、母は 先生です。にほんごを おしえます。",
           "en": "Yes, my mother is a teacher. She teaches Japanese.",
           "terms": [
+            "p_hai",
             "v_haha",
             "p_wa",
             "v_sensei",
-            "p_wo"
+            "g_desu",
+            "v_nihongo",
+            "p_wo",
+            {
+              "id": "v_oshieru",
+              "form": "polite_masu"
+            }
           ]
         },
         {

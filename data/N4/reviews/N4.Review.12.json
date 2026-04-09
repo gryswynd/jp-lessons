@@ -35,12 +35,12 @@
             },
             {
               "spk": "りきぞ",
-              "jp": "そうなんですか。少し 太りましたか。",
+              "jp": "そうですか。少し 太りましたか。",
               "en": "Is that so. Did I gain a little weight?",
               "terms": [
                 "char_rikizo",
                 "v_sou",
-                "p_ndesu",
+                "g_desu",
                 "p_ka",
                 "v_sukoshi",
                 { "id": "v_futoru", "form": "polite_mashita" },
@@ -397,10 +397,14 @@
             "運動の 時間が あります"
           ],
           "terms": [
-            { "id": "v_taisetsu", "form": "attributive_na" },
-            "v_shiken",
+            "v_ashita",
+            "p_wa",
+            "v_nan",
             "p_ga",
-            { "id": "v_aru", "form": "polite_masu" }
+            { "id": "v_aru", "form": "polite_masu" },
+            "p_ka",
+            { "id": "v_taisetsu", "form": "attributive_na" },
+            "v_shiken"
           ],
           "explanation": "The passage says あしたは大切な試験があります — tomorrow there is an important exam."
         },
@@ -414,11 +418,15 @@
             "学校の 外に あります"
           ],
           "terms": [
+            "v_kyoushitsu",
+            "p_wa",
+            "v_doko",
+            "p_ni",
+            { "id": "v_aru", "form": "polite_masu" },
+            "p_ka",
             "v_gakkou",
             "p_no",
-            "v_naka",
-            "p_ni",
-            { "id": "v_aru", "form": "polite_masu" }
+            "v_naka"
           ],
           "explanation": "The passage says 教室は学校の中にあります — the classroom is inside the school."
         },
@@ -432,6 +440,10 @@
             "体重が 軽く なったから"
           ],
           "terms": [
+            "v_doushite",
+            "v_yoku",
+            { "id": "v_susumu", "form": "polite_potential" },
+            "p_ka",
             "v_sensei",
             "p_no",
             "v_oshie",
@@ -453,10 +465,14 @@
             "重大な 問題に なりました"
           ],
           "terms": [
-            "v_sukoshi",
-            { "id": "v_omoi", "form": "adverbial" },
+            "v_taijuu",
+            "p_wa",
+            "v_dou",
             { "id": "v_naru", "form": "te_form" },
-            { "id": "v_kuru", "form": "polite_mashita" }
+            { "id": "v_kuru", "form": "polite_mashita" },
+            "p_ka",
+            "v_sukoshi",
+            { "id": "v_omoi", "form": "adverbial" }
           ],
           "explanation": "The passage says 体重が少し重くなってきました — body weight has become a little heavier (てくる = change accumulating toward the present)."
         }

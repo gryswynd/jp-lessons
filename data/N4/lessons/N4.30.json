@@ -357,7 +357,7 @@
           "jp": "クラス の 文集に どんな ことを 書きますか。",
           "en": "What kinds of things will you write in the class anthology?",
           "terms": [
-            "v_kurasu",
+            "v_kurasu_class",
             "p_no",
             "v_bunshuu",
             "p_ni",
@@ -503,8 +503,8 @@
             "v_ryokou",
             "p_no",
             "v_shashin",
-            "g_da",
-            "p_yo"
+            "p_yo",
+            "g_da"
           ]
         },
         {
@@ -588,7 +588,7 @@
         },
         {
           "spk": "B",
-          "jp": "前から 集めているよ。特に 古い 切手と 特急の 切手が 好き なんだ。",
+          "jp": "前から 集めているよ。特に 古い 切手と 特急の 切手が 好きなんだ。",
           "en": "I've been collecting for a while. I especially like old stamps and express train stamps.",
           "terms": [
             "v_mae",
@@ -610,7 +610,7 @@
             "p_no",
             "v_kitte",
             "p_ga",
-            "v_suki",
+            {"id": "v_suki", "form": "attributive_na"},
             "p_nda"
           ]
         },
@@ -807,7 +807,8 @@
             "v_senshuu",
             "p_no",
             "v_doyoubi",
-            "p_ni"
+            "p_ni",
+            {"id": "v_aru", "form": "polite_mashita"}
           ]
         },
         {
@@ -828,7 +829,9 @@
           "a_terms": [
             "v_gakusei",
             "p_ya",
-            "v_kaishain"
+            "v_kaishain",
+            "p_ga",
+            {"id": "v_atsumaru", "form": "polite_mashita"}
           ]
         },
         {
@@ -1047,6 +1050,13 @@
             "p_ka"
           ],
           "a_terms": [
+            "v_iie",
+            {
+              "id": "v_omoidasu",
+              "form": "plain_form"
+            },
+            "v_koto",
+            "p_ga",
             {
               "id": "v_dekiru",
               "form": "polite_past_negative"
@@ -1070,6 +1080,7 @@
             "p_ka"
           ],
           "a_terms": [
+            "v_iie",
             "v_kuchigotae",
             "p_wa",
             {

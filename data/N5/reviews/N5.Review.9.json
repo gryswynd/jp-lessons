@@ -605,7 +605,10 @@
               "id": "v_suru",
               "form": "polite_masu"
             },
-            "p_ka"
+            "p_ka",
+            "v_nihongo",
+            "p_de",
+            "v_kaiwa"
           ],
           "explanation": "Sentence 3 states 社長と日本語で会話をします — 'I have a conversation with the president in Japanese.' 会話 (N5.17) = conversation: 会 (meet, かい) + 話 (N5.13, speak, わ). と marks 社長 as the conversation partner (p_to, 'with'). Sentence 2 shows the narrator enters and meets (会います) the president; Sentence 3 shows what they do together. 入り口から出ます would mean 'exits through the entrance' — but 入り口 is for entering (the narrator exits through 出口 in the conversations)."
         },
@@ -623,7 +626,16 @@
             "p_ga",
             "v_suki",
             "g_desu",
-            "p_ka"
+            "p_ka",
+            "v_me",
+            "p_de",
+            {
+              "id": "v_miru",
+              "form": "te_form"
+            },
+            "v_mimi",
+            "v_kiku",
+            "p_no"
           ],
           "explanation": "Sentence 4 states 目で見て、耳で聞くのがすきです — 'I like looking with my eyes and listening with my ears.' の nominalizes the verb phrase 見て、耳で聞く (the act of seeing and listening) — it becomes a noun phrase as the subject of すきです, marked by が. 目 (N5.18, め = eye) and 耳 (N5.18, みみ = ear) are the two sense-organ kanji from Lesson 18. The other choices describe activities from other sentences (アルバイト, 入り口, 社長に会う) but none are explicitly stated as the narrator's favourite."
         }

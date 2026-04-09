@@ -32,14 +32,20 @@
               "jp": "洗車が 中止に なりましたね。",
               "terms": [
                 "v_sensha",
-                "v_chuushi"
+                "p_ga",
+                "v_chuushi",
+                "p_ni",
+                { "id": "v_naru", "form": "polite_mashita" },
+                "p_ne"
               ]
             },
             {
               "spk": "B",
               "jp": "はい。水が 止まって います。業者が 来て います。",
               "terms": [
+                "p_hai",
                 "v_mizu",
+                "p_ga",
                 {
                   "id": "v_tomaru",
                   "form": "te_form"
@@ -61,8 +67,14 @@
               "terms": [
                 "v_omoni",
                 "v_sensha",
+                "p_wo",
+                { "id": "v_suru", "form": "plain_form" },
                 "v_gyousha",
-                "v_fuun"
+                "g_desu",
+                "p_kara_because",
+                "v_fuun",
+                "g_desu",
+                "p_ne"
               ]
             },
             {
@@ -70,15 +82,18 @@
               "jp": "水を 止めて くれます。少し 待って ください。",
               "terms": [
                 "v_mizu",
+                "p_wo",
                 {
                   "id": "v_tomeru",
                   "form": "te_form"
                 },
+                { "id": "v_kureru", "form": "polite_masu" },
                 "v_sukoshi",
                 {
                   "id": "v_matsu",
                   "form": "te_form"
-                }
+                },
+                "v_kudasai"
               ]
             }
           ],
@@ -100,17 +115,24 @@
               "spk": "A",
               "jp": "バスの 便は 不便ですね。",
               "terms": [
+                "v_basu",
+                "p_no",
                 "v_bin",
+                "p_wa",
                 "v_fuben",
-                "g_desu"
+                "g_desu",
+                "p_ne"
               ]
             },
             {
               "spk": "B",
               "jp": "そうですね。主に 夕方だけ 動いて います。",
               "terms": [
+                "p_soudesu",
+                "p_ne",
                 "v_omoni",
                 "v_yuugata",
+                "p_dake",
                 {
                   "id": "v_ugoku",
                   "form": "te_form"
@@ -123,10 +145,13 @@
             },
             {
               "spk": "A",
-              "jp": "業者に たのんで、もっと 便を ふやして ほしいですね。",
+              "jp": "もっと 便が ほしいですね。",
               "terms": [
-                "v_gyousha",
-                "v_bin"
+                "v_motto",
+                "v_bin",
+                "p_ga",
+                { "id": "v_hoshii", "form": "polite_adj" },
+                "p_ne"
               ]
             },
             {
@@ -134,11 +159,15 @@
               "jp": "産業も 少なく なりました。不運ですね。",
               "terms": [
                 "v_sangyou",
+                "p_mo",
                 {
                   "id": "v_sukunai",
                   "form": "adverbial"
                 },
-                "v_fuun"
+                { "id": "v_naru", "form": "polite_mashita" },
+                "v_fuun",
+                "g_desu",
+                "p_ne"
               ]
             }
           ],
@@ -160,9 +189,14 @@
               "spk": "A",
               "jp": "この 地区の 産業は 何ですか。",
               "terms": [
+                "v_kono",
                 "v_chiku",
+                "p_no",
                 "v_sangyou",
-                "v_nan"
+                "p_wa",
+                "v_nan",
+                "g_desu",
+                "p_ka"
               ]
             },
             {
@@ -171,8 +205,11 @@
               "terms": [
                 "v_omoni",
                 "v_kougyou",
+                "g_desu",
                 "v_gyousha",
+                "p_ga",
                 "v_sanbutsu",
+                "p_wo",
                 {
                   "id": "v_tsukuru",
                   "form": "te_form"
@@ -187,16 +224,31 @@
               "spk": "A",
               "jp": "不正な ことは ないですか。",
               "terms": [
-                "v_fusei"
+                {
+                  "id": "v_fusei",
+                  "form": "attributive_na"
+                },
+                "v_koto",
+                "p_wa",
+                {
+                  "id": "v_aru",
+                  "form": "plain_negative"
+                },
+                "g_desu",
+                "p_ka"
               ]
             },
             {
               "spk": "B",
               "jp": "いいえ。国民は 産業を 大切に して います。",
               "terms": [
+                "v_iie",
                 "v_kokumin",
+                "p_wa",
                 "v_sangyou",
+                "p_wo",
                 "v_taisetsu",
+                "p_ni",
                 {
                   "id": "v_suru",
                   "form": "te_form"
@@ -346,8 +398,11 @@
           "en": "I live in an industrial district.",
           "terms": [
             "v_watashi",
+            "p_wa",
             "v_kougyou",
+            "p_no",
             "v_chiku",
+            "p_ni",
             {
               "id": "v_sumu",
               "form": "te_form"
@@ -364,8 +419,11 @@
           "terms": [
             "v_omoni",
             "v_sensha",
+            "p_to",
             "v_sangyou",
+            "p_no",
             "v_shigoto",
+            "p_ga",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -377,11 +435,18 @@
           "en": "The owner of the private house has the contractor come.",
           "terms": [
             "v_minka",
+            "p_no",
             "v_shujin",
+            "p_ga",
             "v_gyousha",
+            "p_ni",
             {
               "id": "v_kuru",
               "form": "te_form"
+            },
+            {
+              "id": "v_morau",
+              "form": "polite_masu"
             }
           ]
         },
@@ -390,12 +455,16 @@
           "en": "The contractor stops the water, then does the car wash.",
           "terms": [
             "v_gyousha",
+            "p_wa",
             "v_mizu",
+            "p_wo",
             {
               "id": "v_tomeru",
               "form": "te_form"
             },
+            "p_kara",
             "v_sensha",
+            "p_wo",
             {
               "id": "v_suru",
               "form": "polite_masu"
@@ -406,14 +475,23 @@
           "jp": "不便な ことも ありますが、国民は 産業を 大切に して います。",
           "en": "There are inconvenient things too, but citizens value the industry.",
           "terms": [
-            "v_fuben",
+            {
+              "id": "v_fuben",
+              "form": "attributive_na"
+            },
+            "v_koto",
+            "p_mo",
             {
               "id": "v_aru",
               "form": "polite_masu"
             },
+            "p_ga_but",
             "v_kokumin",
+            "p_wa",
             "v_sangyou",
+            "p_wo",
             "v_taisetsu",
+            "p_ni",
             {
               "id": "v_suru",
               "form": "te_form"
@@ -437,8 +515,18 @@
           ],
           "terms": [
             "v_doko",
-            "v_sumu",
+            "p_ni",
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka",
             "v_kougyou",
+            "p_no",
             "v_chiku"
           ]
         },
@@ -453,10 +541,23 @@
           ],
           "terms": [
             "v_gyousha",
+            "p_wa",
             "v_nani",
-            "v_suru",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            "p_kara",
             "v_sensha",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
+            "p_ka",
             "v_mizu",
+            "p_wo",
             {
               "id": "v_tomeru",
               "form": "polite_masu"
@@ -474,8 +575,21 @@
           ],
           "terms": [
             "v_kokumin",
+            "p_wa",
             "v_sangyou",
+            "p_wo",
+            "v_dou",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka",
             "v_taisetsu",
+            "p_ni",
             {
               "id": "v_suru",
               "form": "te_form"

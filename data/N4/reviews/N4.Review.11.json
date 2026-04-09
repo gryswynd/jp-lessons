@@ -55,7 +55,7 @@
               "terms": [
                 "v_kore",
                 "p_wo",
-                "v_uchi",
+                "v_ie",
                 "p_ni",
                 {
                   "id": "v_mochikaeru",
@@ -130,17 +130,18 @@
             },
             {
               "spk": "B",
-              "jp": "この 字は「意」です。こころや 気持ちの 意味です。",
+              "jp": "この 漢字の 意味は こころや 気持ちの ことです。",
               "terms": [
                 "v_kono",
-                "v_ji",
+                "v_kanji",
+                "p_no",
+                "v_imi",
                 "p_wa",
-                "g_desu",
                 "v_kokoro",
                 "p_ya",
                 "v_kimochi",
                 "p_no",
-                "v_imi",
+                "v_koto",
                 "g_desu"
               ]
             },
@@ -267,10 +268,8 @@
               "terms": [
                 "v_ii",
                 "p_yo",
-                {
-                  "id": "v_igai",
-                  "form": "adverbial"
-                },
+                "v_igai",
+                "p_to",
                 {
                   "id": "v_muzukashii",
                   "form": "plain_negative"
@@ -351,8 +350,9 @@
             "p_no",
             "v_kanji",
             "p_wo",
+            "v_benkyou",
             {
-              "id": "v_benkyou",
+              "id": "v_suru",
               "form": "te_form"
             },
             {
@@ -475,18 +475,21 @@
             "名字を 勉強して います"
           ],
           "terms": [
-            "v_nihongo",
-            "p_no",
-            "v_kanji",
+            "v_nan",
             "p_wo",
+            "v_benkyou",
             {
-              "id": "v_benkyou",
+              "id": "v_suru",
               "form": "te_form"
             },
             {
               "id": "v_iru",
               "form": "polite_masu"
-            }
+            },
+            "p_ka",
+            "v_nihongo",
+            "p_no",
+            "v_kanji"
           ],
           "explanation": "The passage states わたしは日本語の漢字を勉強しています — studying Japanese kanji."
         },
@@ -500,6 +503,15 @@
             "手紙は 書かなくて いいです"
           ],
           "terms": [
+            "v_sensei",
+            "p_wa",
+            "v_nan",
+            "p_to_quote",
+            {
+              "id": "v_iu",
+              "form": "polite_mashita"
+            },
+            "p_ka",
             "v_ji",
             "p_wo",
             {
@@ -530,6 +542,16 @@
             "名字が 分かったから"
           ],
           "terms": [
+            "v_doushite",
+            {
+              "id": "v_tanoshii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            },
+            "p_ka",
             {
               "id": "v_kaku",
               "form": "te_form"
@@ -552,17 +574,24 @@
             "意見を 持ち出して います"
           ],
           "terms": [
-            "v_kami",
-            "p_ni",
-            "v_ji",
+            "v_mainichi",
+            "v_nan",
             "p_wo",
             {
-              "id": "v_kaku",
+              "id": "v_suru",
               "form": "te_form"
             },
             {
               "id": "v_iru",
               "form": "polite_masu"
+            },
+            "p_ka",
+            "v_kami",
+            "p_ni",
+            "v_ji",
+            {
+              "id": "v_kaku",
+              "form": "te_form"
             }
           ],
           "explanation": "The passage says 毎日紙に字を書いています — writing characters on paper every day."

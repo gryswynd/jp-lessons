@@ -38,11 +38,16 @@
               "terms": [
                 "p_sumimasen",
                 "v_yasai",
+                "p_to",
                 "v_gyuuniku",
+                "p_wa",
+                "v_doko",
+                "p_ni",
                 {
                   "id": "v_aru",
                   "form": "polite_masu"
-                }
+                },
+                "p_ka"
               ]
             },
             {
@@ -50,13 +55,17 @@
               "jp": "野菜は そこに あります。牛肉は あそこです。",
               "terms": [
                 "v_yasai",
+                "p_wa",
                 "v_soko",
+                "p_ni",
                 {
                   "id": "v_aru",
                   "form": "polite_masu"
                 },
                 "v_gyuuniku",
-                "v_asoko"
+                "p_wa",
+                "v_asoko",
+                "g_desu"
               ]
             },
             {
@@ -66,8 +75,11 @@
                 "p_arigatou_gozaimasu",
                 "v_konban",
                 "v_gyuuniku",
+                "p_to",
                 "v_yasai",
+                "p_de",
                 "v_ryouri",
+                "p_wo",
                 {
                   "id": "v_tsukuru",
                   "form": "plain_desire_tai"
@@ -81,11 +93,15 @@
               "terms": [
                 "v_ii",
                 "g_desu",
+                "p_ne",
                 "v_koko",
+                "p_no",
                 "v_tabemono",
+                "p_wa",
                 "v_totemo",
                 "v_oishii",
                 "g_desu",
+                "p_yo",
                 "p_douzo"
               ]
             }
@@ -111,12 +127,16 @@
                 "char_rikizo",
                 "v_san",
                 "v_hiruyasumi",
+                "p_ni",
                 "v_issho",
+                "p_ni",
                 "v_hirugohan",
+                "p_wo",
                 {
                   "id": "v_taberu",
                   "form": null
                 },
+                "p_ni",
                 {
                   "id": "v_iku",
                   "form": "polite_volitional_mashou"
@@ -129,9 +149,13 @@
               "terms": [
                 "v_ii",
                 "g_desu",
+                "p_ne",
                 "v_kyou",
+                "p_wa",
                 "v_toriniku",
+                "p_no",
                 "v_ryouri",
+                "p_ga",
                 {
                   "id": "v_taberu",
                   "form": "plain_desire_tai"
@@ -144,14 +168,20 @@
               "jp": "駅の 前の レストランは 牛肉より 鳥肉の 味が おいしいですよ。",
               "terms": [
                 "v_eki",
+                "p_no",
                 "v_mae",
+                "p_no",
                 "v_resutoran",
+                "p_wa",
                 "v_gyuuniku",
                 "p_yori",
                 "v_toriniku",
+                "p_no",
                 "v_aji",
+                "p_ga",
                 "v_oishii",
-                "g_desu"
+                "g_desu",
+                "p_yo"
               ]
             },
             {
@@ -164,7 +194,9 @@
                 },
                 "v_sono",
                 "v_resutoran",
+                "p_de",
                 "v_hirugohan",
+                "p_wo",
                 {
                   "id": "v_taberu",
                   "form": "polite_volitional_mashou"
@@ -191,6 +223,7 @@
               "jp": "今日の 昼ご飯、おいしかった？",
               "terms": [
                 "v_kyou",
+                "p_no",
                 "v_hirugohan",
                 {
                   "id": "v_oishii",
@@ -204,7 +237,9 @@
               "terms": [
                 "v_un",
                 "v_toriniku",
+                "p_no",
                 "v_ryouri",
+                "p_ga",
                 "v_totemo",
                 {
                   "id": "v_oishii",
@@ -215,26 +250,30 @@
             },
             {
               "spk": "A",
-              "jp": "私も 牛肉より 鳥肉が 好きだよ。",
+              "jp": "私も 牛肉より 鳥肉が 好きだ よ。",
               "terms": [
                 "v_watashi",
+                "p_mo",
                 "v_gyuuniku",
                 "p_yori",
                 "v_toriniku",
+                "p_ga",
                 "v_suki",
-                "g_da",
-                "p_yo"
+                "p_yo",
+                "g_da"
               ]
             },
             {
               "spk": "B",
-              "jp": "同じだね。つぎも いっしょに 食べよう。",
+              "jp": "同じだ ね。つぎも いっしょに 食べよう。",
               "terms": [
                 "v_onaji",
-                "g_da",
                 "p_ne",
+                "g_da",
                 "v_tsugi",
+                "p_mo",
                 "v_issho",
+                "p_ni",
                 {
                   "id": "v_taberu",
                   "form": "plain_volitional"
@@ -369,9 +408,12 @@
           "en": "I go shopping at the supermarket every day.",
           "terms": [
             "v_watashi",
+            "p_wa",
             "v_mainichi",
             "v_suupaa",
+            "p_de",
             "v_kaimono",
+            "p_wo",
             {
               "id": "v_suru",
               "form": "polite_masu"
@@ -384,7 +426,9 @@
           "terms": [
             "v_kinou",
             "v_yasai",
+            "p_to",
             "v_gyuuniku",
+            "p_wo",
             {
               "id": "v_kau",
               "form": "polite_mashita"
@@ -396,9 +440,13 @@
           "en": "I made a beef and vegetable dish at home.",
           "terms": [
             "v_ie",
+            "p_de",
             "v_gyuuniku",
+            "p_to",
             "v_yasai",
+            "p_no",
             "v_ryouri",
+            "p_wo",
             {
               "id": "v_tsukuru",
               "form": "polite_mashita"
@@ -410,7 +458,9 @@
           "en": "The taste of the dish was very good.",
           "terms": [
             "v_ryouri",
+            "p_no",
             "v_aji",
+            "p_ga",
             "v_totemo",
             {
               "id": "v_ii",
@@ -424,9 +474,13 @@
           "en": "During today's lunch break, I also ate a chicken dish.",
           "terms": [
             "v_kyou",
+            "p_no",
             "v_hiruyasumi",
+            "p_ni",
             "v_toriniku",
+            "p_no",
             "v_ryouri",
+            "p_mo",
             {
               "id": "v_taberu",
               "form": "polite_mashita"
@@ -438,7 +492,9 @@
           "en": "The chicken dish was more delicious than beef.",
           "terms": [
             "v_toriniku",
+            "p_no",
             "v_ryouri",
+            "p_wa",
             "v_gyuuniku",
             "p_yori",
             {
@@ -461,12 +517,18 @@
           ],
           "terms": [
             "v_watashi",
+            "p_wa",
             "v_kinou",
             "v_nani",
+            "p_wo",
             {
               "id": "v_kau",
               "form": "polite_mashita"
-            }
+            },
+            "p_ka",
+            "v_yasai",
+            "p_to",
+            "v_gyuuniku"
           ],
           "explanation": "私はきのう野菜と牛肉を買いました — 'Yesterday I bought vegetables and beef.' The answer is stated directly in sentence 2 of the passage."
         },
@@ -481,8 +543,15 @@
           ],
           "terms": [
             "v_ryouri",
+            "p_no",
             "v_aji",
-            "v_dou"
+            "p_wa",
+            "v_dou",
+            {"id": "g_desu", "form": "copula_past"},
+            "p_ka",
+            "v_totemo",
+            {"id": "v_ii", "form": "plain_past_adj"},
+            "g_desu"
           ],
           "explanation": "料理の味がとても よかったです — 'The taste of the dish was very good.' よかったです is the past polite form of いい: the irregular い→よ stem change gives よかった + です. Note: いかったです is a common mistake but is incorrect."
         },
@@ -497,14 +566,24 @@
           ],
           "terms": [
             "v_toriniku",
+            "p_no",
             "v_ryouri",
+            "p_to",
             "v_gyuuniku",
+            "p_no",
+            "v_ryouri",
+            "p_dewa",
             "v_dochira",
+            "p_ga",
             {
               "id": "v_oishii",
               "form": "plain_past_adj"
             },
-            "g_desu"
+            "g_desu",
+            "p_ka",
+            "v_toriniku",
+            "p_no",
+            "v_ryouri"
           ],
           "explanation": "鳥肉の料理は牛肉よりおいしかったです — 'The chicken dish was more delicious than beef.' より marks 牛肉 as the lesser comparison point, so 鳥肉の料理 is the more delicious option."
         }

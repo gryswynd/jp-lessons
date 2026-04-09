@@ -72,8 +72,8 @@
                 { "id": "v_atsumaru", "form": "potential" },
                 "v_ii",
                 "v_jidai",
-                "g_da",
                 "p_to_quote",
+                "g_da",
                 { "id": "v_omou", "form": "polite_masu" },
                 "p_ne"
               ]
@@ -421,7 +421,10 @@
             "v_doko",
             "p_ni",
             { "id": "v_aru", "form": "polite_masu" },
-            "p_ka"
+            "p_ka",
+            "v_mori",
+            "p_no",
+            "v_naka"
           ],
           "explanation": "The first sentence of the passage says 森の中に古い食堂があります — the dining hall is inside the forest (森の中)."
         },
@@ -440,7 +443,9 @@
             "v_nani",
             "p_wo",
             { "id": "v_suru", "form": "polite_causative_passive" },
-            "p_ka"
+            "p_ka",
+            "v_namae",
+            { "id": "v_kaku", "form": "polite_causative_passive" }
           ],
           "explanation": "The third sentence says 名前を書かせられます — people who come are made to write (書かせられます, full causative-passive) their name (名前) on the form."
         },
@@ -461,7 +466,10 @@
             "v_hito",
             "p_ni",
             { "id": "v_shiru", "form": "polite_passive_past" },
-            "p_ka"
+            "p_ka",
+            "v_toshi",
+            "p_no",
+            "v_hitobito"
           ],
           "explanation": "The final sentence says 都市の人々に知られるようになりました — the dining hall has come to be known by people in the city (都市の人々)."
         }

@@ -56,6 +56,7 @@
           "terms": [
             "char_yamakawa",
             "v_san",
+            "p_wa",
             "v_koohii",
             "p_wo",
             {
@@ -506,7 +507,7 @@
           "jp": "お名前は？ わたしは 外人です。",
           "en": "What is your name? I am a foreigner.",
           "terms": [
-            "v_namae",
+            "v_onamae",
             "p_wa",
             "v_watashi",
             "p_wa",
@@ -735,6 +736,7 @@
           "en": "Rikizo is drinking coffee outside.",
           "terms": [
             "char_rikizo",
+            "p_wa",
             "v_soto",
             "p_de",
             "v_koohii",
@@ -785,6 +787,9 @@
           "a": "外で コーヒーを 飲んでいます。",
           "a_en": "He is drinking coffee outside.",
           "terms": [
+            "char_rikizo",
+            "p_wa",
+            "v_ima",
             "v_nani",
             "p_wo",
             {
@@ -847,8 +852,9 @@
           "jp": "今日、やまかわは 外食に 行きました。",
           "en": "Today, Yamakawa went out to eat.",
           "terms": [
-            "char_yamakawa",
             "v_kyou",
+            "char_yamakawa",
+            "p_wa",
             "v_gaishoku",
             "p_ni",
             {
@@ -958,6 +964,8 @@
           "a": "駅の 前に ある レストランへ 行きました。",
           "a_en": "He went to the restaurant in front of the station.",
           "terms": [
+            "char_yamakawa",
+            "p_wa",
             "v_doko",
             "p_e",
             {
@@ -1005,6 +1013,8 @@
           "a": "はい、来週も 行きます。",
           "a_en": "Yes, he will go again next week.",
           "terms": [
+            "char_yamakawa",
+            "p_wa",
             "v_raishuu",
             "p_mo",
             {

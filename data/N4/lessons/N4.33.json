@@ -7,7 +7,12 @@
     "lesson_number": 33,
     "focus": "Places, factories, and buildings — factory work, construction, open spaces, and wide structures in daily urban life",
     "estimated_minutes": 35,
-    "kanji": ["場", "工", "広", "建"]
+    "kanji": [
+      "場",
+      "工",
+      "広",
+      "建"
+    ]
   },
   "newKanji": [
     {
@@ -293,6 +298,7 @@
           "en": "The factory workers talk while working.",
           "terms": [
             "v_kouin",
+            "v_tachi",
             "p_wa",
             "v_shigoto",
             "p_wo",
@@ -470,7 +476,10 @@
             "v_un",
             "v_mae",
             "p_ni",
-            {"counter": "kai", "n": 1},
+            {
+              "counter": "kai",
+              "n": 1
+            },
             {
               "id": "v_iku",
               "form": "plain_past"
@@ -590,8 +599,8 @@
               "form": "plain_past"
             },
             "v_mitai",
-            "g_da",
-            "p_yo"
+            "p_yo",
+            "g_da"
           ]
         },
         {
@@ -695,8 +704,12 @@
             "p_no",
             "v_daiku",
             "v_san",
+            "v_tachi",
             "p_ga",
-            {"counter": "nen", "n": 1},
+            {
+              "counter": "nen",
+              "n": 1
+            },
             "p_de",
             {
               "id": "v_tateru",
@@ -730,6 +743,7 @@
           "en": "A woodworking classroom was also created for the children.",
           "terms": [
             "v_kodomo",
+            "v_tachi",
             "p_no",
             "v_tame",
             "p_ni",
@@ -796,6 +810,7 @@
             "p_no",
             "v_daiku",
             "v_san",
+            "v_tachi",
             "p_ga",
             {
               "id": "v_tateru",
@@ -841,6 +856,7 @@
           "a_en": "A woodworking classroom was created.",
           "terms": [
             "v_kodomo",
+            "v_tachi",
             "p_no",
             "v_tame",
             "p_ni",
@@ -927,6 +943,7 @@
               "form": "conditional_tara"
             },
             "v_kodomo",
+            "v_tachi",
             "p_ga",
             "v_hiroba",
             "p_de",
@@ -1052,6 +1069,7 @@
           ],
           "a_terms": [
             "v_kodomo",
+            "v_tachi",
             "p_ga",
             "v_hiroba",
             "p_de",
@@ -1107,25 +1125,45 @@
         {
           "kind": "mcq",
           "q": "[工場] の よみかたは？",
-          "choices": ["こうじょう", "こうば", "たてば", "こうしょう"],
+          "choices": [
+            "こうじょう",
+            "こうば",
+            "たてば",
+            "こうしょう"
+          ],
           "answer": "こうじょう"
         },
         {
           "kind": "mcq",
           "q": "[広場] の よみかたは？",
-          "choices": ["ひろば", "こうじょう", "ひろしょ", "こうば"],
+          "choices": [
+            "ひろば",
+            "こうじょう",
+            "ひろしょ",
+            "こうば"
+          ],
           "answer": "ひろば"
         },
         {
           "kind": "mcq",
           "q": "[建物] の よみかたは？",
-          "choices": ["たてもの", "たてぶつ", "けんぶつ", "けんもの"],
+          "choices": [
+            "たてもの",
+            "たてぶつ",
+            "けんぶつ",
+            "けんもの"
+          ],
           "answer": "たてもの"
         },
         {
           "kind": "mcq",
           "q": "[入場] の よみかたは？",
-          "choices": ["にゅうじょう", "いりば", "はいじょう", "にゅうば"],
+          "choices": [
+            "にゅうじょう",
+            "いりば",
+            "はいじょう",
+            "にゅうば"
+          ],
           "answer": "にゅうじょう"
         }
       ]
@@ -1138,7 +1176,12 @@
         {
           "kind": "mcq",
           "q": "工員（こういん）",
-          "choices": ["factory worker", "carpenter", "engineer", "builder"],
+          "choices": [
+            "factory worker",
+            "carpenter",
+            "engineer",
+            "builder"
+          ],
           "answer": "factory worker",
           "terms": [
             "v_kouin"
@@ -1147,17 +1190,30 @@
         {
           "kind": "mcq",
           "q": "「広める」の 意味は？",
-          "choices": ["to spread / to widen", "to build", "to gather", "to expand outward"],
+          "choices": [
+            "to spread / to widen",
+            "to build",
+            "to gather",
+            "to expand outward"
+          ],
           "answer": "to spread / to widen",
           "terms": [
             "v_hiromeru",
+            "p_no",
+            "v_imi",
+            "p_wa",
             "p_ka"
           ]
         },
         {
           "kind": "mcq",
           "q": "場合（ばあい）",
-          "choices": ["case / situation", "building", "wide space", "entrance"],
+          "choices": [
+            "case / situation",
+            "building",
+            "wide space",
+            "entrance"
+          ],
           "answer": "case / situation",
           "terms": [
             "v_baai"
@@ -1166,10 +1222,18 @@
         {
           "kind": "mcq",
           "q": "「木工」の 意味は？",
-          "choices": ["woodwork / carpentry", "engineering", "carpenter", "factory"],
+          "choices": [
+            "woodwork / carpentry",
+            "engineering",
+            "carpenter",
+            "factory"
+          ],
           "answer": "woodwork / carpentry",
           "terms": [
             "v_mokkou",
+            "p_no",
+            "v_imi",
+            "p_wa",
             "p_ka"
           ]
         }
@@ -1183,7 +1247,12 @@
         {
           "kind": "mcq",
           "q": "工場で 毎日 車が ______。",
-          "choices": ["作られます", "作ります", "作りました", "作られました"],
+          "choices": [
+            "作られます",
+            "作ります",
+            "作りました",
+            "作られました"
+          ],
           "answer": "作られます",
           "terms": [
             "v_koujou",
@@ -1200,7 +1269,12 @@
         {
           "kind": "mcq",
           "q": "先生は 学生に 作文を ______。",
-          "choices": ["書かせました", "書かれました", "書きました", "書けました"],
+          "choices": [
+            "書かせました",
+            "書かれました",
+            "書きました",
+            "書けました"
+          ],
           "answer": "書かせました",
           "terms": [
             "v_sensei",
@@ -1218,7 +1292,12 @@
         {
           "kind": "mcq",
           "q": "その 建物は あの 建物______  広いです。",
-          "choices": ["より", "から", "まで", "だけ"],
+          "choices": [
+            "より",
+            "から",
+            "まで",
+            "だけ"
+          ],
           "answer": "より",
           "terms": [
             "v_sono",
@@ -1236,7 +1315,12 @@
         {
           "kind": "mcq",
           "q": "広場を 広める ______ 計画が 始まりました。",
-          "choices": ["ために", "ながら", "たり", "けど"],
+          "choices": [
+            "ために",
+            "ながら",
+            "たり",
+            "けど"
+          ],
           "answer": "ために",
           "terms": [
             "v_hiroba",

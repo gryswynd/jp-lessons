@@ -240,7 +240,8 @@
             {
               "id": "v_oshieru",
               "form": "te_form"
-            }
+            },
+            "v_kudasai"
           ]
         },
         {
@@ -274,6 +275,7 @@
               "form": "attributive_na"
             },
             "v_tokoro",
+            "g_desu",
             "p_ka"
           ]
         },
@@ -285,10 +287,11 @@
             "p_hai",
             {
               "id": "v_shizuka",
-              "form": null
+              "form": "te_form"
             },
             "v_ii",
-            "v_tokoro"
+            "v_tokoro",
+            "g_desu"
           ]
         }
       ]
@@ -309,6 +312,7 @@
             "p_wa",
             "v_donna",
             "v_tokoro",
+            "g_desu",
             "p_ka"
           ]
         },
@@ -319,13 +323,15 @@
           "terms": [
             {
               "id": "v_shizuka",
-              "form": null
+              "form": "te_form"
             },
             "v_ii",
             "v_machi",
+            "g_desu",
             "p_yo",
             "v_mainichi",
             "v_kawa",
+            "p_wo",
             {
               "id": "v_aruku",
               "form": "te_form"
@@ -342,11 +348,13 @@
           "en": "Is there a nice river in the neighbourhood?",
           "terms": [
             "v_kinjo",
+            "p_ni",
             {
               "id": "v_kirei",
               "form": "attributive_na"
             },
             "v_kawa",
+            "p_wa",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -369,8 +377,10 @@
               "form": "attributive_na"
             },
             "v_tokoro",
+            "g_desu",
             "p_yo",
             "v_issho",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "polite_volitional_mashou"
@@ -463,8 +473,8 @@
             },
             "p_no",
             "v_tokoro",
-            "p_ni",
             "p_mo",
+            "p_ni",
             {
               "id": "v_iku",
               "form": "plain_desire_tai"
@@ -504,7 +514,7 @@
           "terms": [
             {
               "id": "v_shizuka",
-              "form": null
+              "form": "te_form"
             },
             "v_ii",
             "p_kedo",
@@ -552,6 +562,7 @@
             "p_kedo",
             "v_mada",
             "v_okane",
+            "p_ga",
             {
               "id": "v_aru",
               "form": "plain_negative"
@@ -619,7 +630,8 @@
               "id": "v_kirei",
               "form": "attributive_na"
             },
-            "v_tokoro"
+            "v_tokoro",
+            "g_desu"
           ]
         },
         {
@@ -677,7 +689,9 @@
             "p_ka"
           ],
           "a_terms": [
-            "v_chiisai"
+            "v_chiisai",
+            "v_machi",
+            "g_desu"
           ]
         },
         {
@@ -703,7 +717,12 @@
               "id": "v_kirei",
               "form": "attributive_na"
             },
-            "v_kawa"
+            "v_kawa",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -724,7 +743,12 @@
             "p_ka"
           ],
           "a_terms": [
-            "v_ohanami"
+            "v_ohanami",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -734,8 +758,8 @@
           "a_en": "Yes, there were many people.",
           "terms": [
             "v_kawa",
-            "p_ni",
             "p_wa",
+            "p_ni",
             "v_hito",
             "p_ga",
             {
@@ -749,6 +773,8 @@
             "p_hai",
             "v_takusan",
             "p_no",
+            "v_hito",
+            "p_ga",
             {
               "id": "v_iru",
               "form": "polite_mashita"
@@ -767,8 +793,8 @@
           "terms": [
             "char_yamakawa",
             "v_san",
-            "p_he",
-            "v_genki",
+            "p_e",
+            "v_ogenki",
             "g_desu",
             "p_ka",
             "v_watashi",
@@ -877,7 +903,11 @@
             "p_ka"
           ],
           "a_terms": [
-            "p_hai"
+            "p_hai",
+            {
+              "id": "v_au",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -902,7 +932,16 @@
           ],
           "a_terms": [
             "v_tooi",
-            "v_tokoro"
+            "v_tokoro",
+            "p_ni",
+            {
+              "id": "v_sumu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -922,7 +961,12 @@
             "p_ka"
           ],
           "a_terms": [
-            "v_resutoran"
+            "v_resutoran",
+            "p_de",
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -945,6 +989,11 @@
             {
               "counter": "ji",
               "n": 9
+            },
+            "p_ni",
+            {
+              "id": "v_wakareru",
+              "form": "polite_mashita"
             }
           ]
         }

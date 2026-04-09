@@ -36,6 +36,7 @@
               "jp": "りきぞさんは 兄弟が いますか。",
               "terms": [
                 "char_rikizo",
+                "v_san",
                 "p_wa",
                 "v_kyoudai",
                 "p_ga",
@@ -50,6 +51,7 @@
               "spk": "りきぞ",
               "jp": "はい、兄が います。会社で 毎日 働いて います。",
               "terms": [
+                "p_hai",
                 "v_ani",
                 "p_ga",
                 {
@@ -77,6 +79,7 @@
                 "p_wa",
                 "v_donna",
                 "v_hito",
+                "g_desu",
                 "p_ka"
               ]
             },
@@ -150,6 +153,7 @@
                 "v_natsu",
                 "p_wa",
                 "v_dou",
+                "g_desu",
                 "p_ka"
               ]
             },
@@ -251,20 +255,14 @@
               "spk": "B",
               "jp": "いいね！お姉さんは とても 親切だよ。",
               "terms": [
-                {
-                  "id": "v_ii",
-                  "form": null
-                },
+                "v_ii",
                 "p_ne",
                 "v_oneesan",
                 "p_wa",
                 "v_totemo",
-                {
-                  "id": "v_shinsetsu",
-                  "form": null
-                },
-                "g_da",
-                "p_yo"
+                "v_shinsetsu",
+                "p_yo",
+                "g_da"
               ]
             }
           ],
@@ -407,10 +405,8 @@
             "p_no",
             "v_kazoku",
             "p_wa",
-            {
-              "counter": "nin",
-              "n": 5
-            },
+            "v_hito",
+            "g_desu",
             "v_oya",
             "p_to",
             "v_ani",
@@ -498,7 +494,7 @@
             "p_no",
             "v_iro",
             "p_ga",
-            "v_akai",
+            "v_aka",
             "p_ya",
             "v_chairo",
             "p_ni",
@@ -521,10 +517,7 @@
             "p_de",
             "v_yuki",
             "p_wo",
-            {
-              "id": "v_miru",
-              "form": null
-            },
+            "v_miru",
             "p_no",
             "p_ga",
             "v_suki",
@@ -544,7 +537,11 @@
           ],
           "terms": [
             "v_kazoku",
-            "v_nannin"
+            "p_wa",
+            "v_nannin",
+            "g_desu",
+            "p_ka",
+            "v_hito"
           ],
           "explanation": "The first sentence says 私の家族は5人です (there are five people in my family)."
         },
@@ -559,9 +556,16 @@
           ],
           "terms": [
             "v_kazoku",
+            "p_no",
             "v_naka",
+            "p_de",
+            "v_dare",
+            "p_ga",
             "v_ichiban",
             "v_shinsetsu",
+            "g_desu",
+            "p_ka",
+            "v_ane",
             "g_desu"
           ],
           "explanation": "Sentence 3 says 姉は家族の中でいちばん親切で (my older sister is the kindest in the family)."
@@ -577,9 +581,19 @@
           ],
           "terms": [
             "v_fuyu",
+            "p_ni",
             "v_kazoku",
+            "p_de",
             "v_nani",
+            "p_wo",
+            "v_suru",
+            "p_ga",
+            "p_no",
+            "v_suki",
+            "g_desu",
+            "p_ka",
             "v_yuki",
+            "p_wo",
             {
               "id": "v_miru",
               "form": "polite_masu"

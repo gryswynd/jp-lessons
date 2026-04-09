@@ -595,8 +595,10 @@
             "p_no",
             "v_tsuki",
             "p_wa",
+            "v_tsuki",
             "g_desu",
             "v_suiyoubi",
+            "v_mizu",
             "v_mizu"
           ]
         },
@@ -609,6 +611,7 @@
             "p_no",
             "v_ki",
             "p_wa",
+            "v_ki",
             "g_desu",
             "p_ne"
           ]
@@ -623,24 +626,27 @@
             "p_no",
             "v_hi_2",
             "p_wa",
+            "v_hi_2",
             "g_desu",
             "v_doyoubi",
+            "v_tsuchi",
             "v_tsuchi"
           ]
         },
         {
           "spk": "B",
-          "jp": "金よう日の「金」は かねです。日よう日の「日」は ひですね。",
-          "en": "The 金 in Friday means gold. The 日 in Sunday means sun, right?",
+          "jp": "金よう日の「金」は かねです。日よう日の「日」は ひです。",
+          "en": "The 金 in Friday means gold. The 日 in Sunday means sun.",
           "terms": [
             "v_kinyoubi",
             "p_no",
             "v_kane",
             "p_wa",
+            "v_kane",
             "g_desu",
             "v_nichiyoubi",
             "v_hi",
-            "p_ne"
+            "v_hi"
           ]
         },
         {
@@ -757,6 +763,7 @@
           "a": "月よう日と 水よう日と 金よう日に います。",
           "a_en": "She is here on Monday, Wednesday, and Friday.",
           "terms": [
+            "char_yamamoto",
             "v_sensei",
             "p_wa",
             "v_nanyoubi",
@@ -1013,6 +1020,7 @@
           "a": "うれしいです。",
           "a_en": "He is happy.",
           "terms": [
+            "char_rikizo",
             "p_wa",
             "v_dou",
             "g_desu",

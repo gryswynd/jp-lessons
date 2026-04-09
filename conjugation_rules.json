@@ -1503,6 +1503,33 @@
       }
     }
   },
+  "passive_te": {
+    "label": "Passive Te-Form",
+    "description": "Te-form of the passive. Used with いる for ongoing passive states (作られている = is being made). Passive stem + て.",
+    "introducedIn": "N4.31",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "れて"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "られて"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "されて",
+        "reading": "されて"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来られて",
+        "reading": "こられて"
+      }
+    }
+  },
   "causative": {
     "label": "Causative Form",
     "description": "Expresses making or letting someone do an action. RU-verbs drop る and add させる; U-verbs shift to the あ-row and add せる.",

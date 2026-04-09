@@ -340,7 +340,7 @@
           "jp": "ありがとうございます。外へ 持ち出しても いいですか。",
           "en": "Thank you. Is it okay if I take it outside?",
           "terms": [
-            "p_arigatou",
+            "p_arigatou_gozaimasu",
             "v_soto",
             "p_e",
             {
@@ -527,7 +527,7 @@
         },
         {
           "spk": "けん",
-          "jp": "また 来ないかな。売り物も おもしろかったし、気持ちも よかったよ。",
+          "jp": "また こないかな。売り物も おもしろかったし、気持ちも よかったよ。",
           "en": "I wonder if they'll come again. The goods were interesting too, and it felt great.",
           "terms": [
             "v_mata",
@@ -799,7 +799,10 @@
             },
             "v_ii",
             "v_kimochi",
-            "g_desu"
+            {
+              "id": "g_desu",
+              "form": "copula_past"
+            }
           ]
         },
         {
@@ -873,14 +876,20 @@
           "terms": [
             "v_donna",
             "v_kimochi",
-            "g_desu",
+            {
+              "id": "g_desu",
+              "form": "copula_past"
+            },
             "p_ka"
           ],
           "a_terms": [
             "v_totemo",
             "v_ii",
             "v_kimochi",
-            "g_desu"
+            {
+              "id": "g_desu",
+              "form": "copula_past"
+            }
           ]
         },
         {
@@ -976,6 +985,7 @@
           "answer": "品物",
           "terms": [
             "v_kono",
+            "v_shinamono",
             "p_wa",
             "v_gaikoku",
             "p_de",
@@ -1008,6 +1018,7 @@
               "form": "te_form"
             },
             "v_ii",
+            "v_kimochi",
             "p_ni",
             {
               "id": "v_naru",
@@ -1030,8 +1041,12 @@
             "v_hon",
             "p_wo",
             "v_tomodachi",
-            "p_ni",
             "p_mo",
+            "p_ni",
+            {
+              "id": "v_kasu",
+              "form": "te_form"
+            },
             {
               "id": "v_ii",
               "form": "polite_adj"
@@ -1054,8 +1069,12 @@
             "v_ryouri",
             "p_wo",
             "v_ie",
-            "p_ni",
             "p_mo",
+            "p_ni",
+            {
+              "id": "v_mochikaeru",
+              "form": "te_form"
+            },
             {
               "id": "v_ii",
               "form": "polite_adj"
@@ -1072,7 +1091,7 @@
       "items": [
         {
           "kind": "mcq",
-          "q": "外で 食べ（　）いいですか。",
+          "q": "外で 食べ______いいですか。",
           "choices": [
             "ても",
             "ては",
@@ -1097,7 +1116,7 @@
         },
         {
           "kind": "mcq",
-          "q": "学校の 中で 走っ（　）いけません。",
+          "q": "学校の 中で 走っ______いけません。",
           "choices": [
             "ては",
             "ても",

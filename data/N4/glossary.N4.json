@@ -255,6 +255,7 @@
       "meaning": "to make",
       "type": "vocab",
       "gtype": "verb",
+      "matches": ["作られて"],
       "notes": "",
       "lesson_ids": "N4.1",
       "reading": "つくる",
@@ -915,7 +916,7 @@
       "gtype": "noun",
       "notes": "Used in the comparison construction AのほうがBより (A is more ... than B). Indicates one side or option being compared. Written in hiragana (ほう) until 方 kanji is taught (N4.26).",
       "lesson_ids": "N4.5",
-      "reading": "ほう",
+      "reading": "のほう",
       "matches": ["ほう"]
     },
     {
@@ -1264,7 +1265,8 @@
       "gtype": "verb",
       "verb_class": "godan",
       "lesson_ids": "N4.7",
-      "notes": "Honorific counterpart of くれる. Used when a social superior (teacher, senior, boss) does something for you or gives you something. Te-form: くださって. Polite: くださいます (irregular ます-form)."
+      "notes": "Honorific counterpart of くれる. Used when a social superior (teacher, senior, boss) does something for you or gives you something. Te-form: くださって. Polite: くださいます (irregular ます-form).",
+      "matches": ["くださる", "くださいます", "くださいません", "くださいました"]
     },
     {
       "id": "k_aki",
@@ -1573,6 +1575,17 @@
       "verb_class": "na_adj"
     },
     {
+      "id": "v_ogenki",
+      "surface": "お元気",
+      "meaning": "well / in good health (polite)",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "notes": "Polite form of 元気 with honorific お prefix",
+      "lesson_ids": "N4.9",
+      "reading": "おげんき",
+      "verb_class": "na_adj"
+    },
+    {
       "id": "v_juusho",
       "surface": "住所",
       "meaning": "address",
@@ -1618,6 +1631,7 @@
       "meaning": "to live",
       "type": "vocab",
       "gtype": "verb",
+      "matches": ["住みやすく"],
       "notes": "",
       "lesson_ids": "N4.9",
       "reading": "すむ",
@@ -1761,7 +1775,7 @@
       "reading": "えいご"
     },
     {
-      "id": "v_e",
+      "id": "v_e_picture",
       "surface": "絵",
       "meaning": "picture / painting / drawing",
       "type": "vocab",
@@ -3088,6 +3102,7 @@
       "meaning": "to carry / to transport",
       "type": "vocab",
       "gtype": "verb",
+      "matches": ["運ばれて"],
       "notes": "",
       "lesson_ids": "N4.16",
       "reading": "はこぶ",
@@ -3436,6 +3451,8 @@
       "surface": "転ぶ",
       "meaning": "to fall down / to tumble",
       "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
       "notes": "U-verb.",
       "lesson_ids": "N4.17",
       "reading": "ころぶ"
@@ -3502,6 +3519,8 @@
       "surface": "乗り回す",
       "meaning": "to drive around / to ride around",
       "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
       "notes": "U-verb.",
       "lesson_ids": "N4.17",
       "reading": "のりまわす"
@@ -3542,6 +3561,15 @@
       "notes": "Common surname (Lit. 'Inside rice field').",
       "lesson_ids": "N4.17",
       "reading": "たなか"
+    },
+    {
+      "id": "v_ikeda",
+      "surface": "池田",
+      "meaning": "Ikeda",
+      "type": "vocab",
+      "notes": "Common surname (Lit. 'Rice field by the pond').",
+      "lesson_ids": "N4.Final.Review",
+      "reading": "いけだ"
     },
     {
       "id": "v_tanoshimu",
@@ -6268,6 +6296,17 @@
       "notes": "Intransitive."
     },
     {
+      "id": "v_kawaru_2",
+      "surface": "変わる",
+      "reading": "かわる",
+      "meaning": "to change / to be altered",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N4.35",
+      "notes": "Intransitive. 変わる = to change (state), distinct from 代わる = to substitute."
+    },
+    {
       "id": "v_mori",
       "surface": "森",
       "reading": "もり",
@@ -7015,6 +7054,7 @@
       "meaning": "distinction / differentiation",
       "type": "vocab",
       "gtype": "noun_suru",
+      "verb_class": "irr_suru",
       "lesson_ids": "N4.34",
       "notes": "Compounds: 区 (N4.34) + 別 (N4.9)"
     },
@@ -7370,6 +7410,7 @@
       "meaning": "inconvenient / inconvenience",
       "type": "vocab",
       "gtype": "adjective_na",
+      "verb_class": "na_adj",
       "lesson_ids": "N4.36",
       "notes": "Compounds: 不 (N4.36) + 便 (N4.36). Opposite of 便利."
     },
@@ -7380,6 +7421,7 @@
       "meaning": "dishonesty / injustice / illegal",
       "type": "vocab",
       "gtype": "adjective_na",
+      "verb_class": "na_adj",
       "lesson_ids": "N4.36",
       "notes": "Compounds: 不 (N4.36) + 正 (N4.26)."
     },
@@ -7430,6 +7472,8 @@
       "meaning": "bad-tasting / unpleasant / poor",
       "type": "vocab",
       "gtype": "adjective_i",
+      "verb_class": "i_adj",
+      "matches": ["不味すぎた"],
       "lesson_ids": "N4.36",
       "notes": "Compounds: 不 (N4.36) + 味 (N4.6). Also used figuratively for awkward situations."
     },
@@ -7473,6 +7517,50 @@
       "gtype": "set-phrase",
       "lesson_ids": "N4.8",
       "notes": "Casual attention-getter used at the start of a sentence to call someone's attention or invite a response. Common in informal speech among close friends."
+    },
+    {
+      "id": "v_kun",
+      "surface": "くん",
+      "reading": "くん",
+      "meaning": "boy's name suffix (informal)",
+      "type": "vocab",
+      "gtype": "suffix",
+      "lesson_ids": "N4.18",
+      "notes": "Informal name suffix, typically used for boys or younger males. Less formal than さん."
+    },
+    {
+      "id": "v_tachi",
+      "surface": "たち",
+      "reading": "たち",
+      "meaning": "plural suffix (people)",
+      "type": "vocab",
+      "gtype": "suffix",
+      "lesson_ids": "N4.18",
+      "notes": "Attaches to pronouns or names to indicate a group: 私たち (we), 子どもたち (children)."
+    },
+    {
+      "id": "v_kikoeru",
+      "surface": "聞こえる",
+      "reading": "きこえる",
+      "meaning": "to be audible / can hear",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N4.31",
+      "matches": ["聞こえる", "きこえる"],
+      "notes": "Intransitive verb meaning 'to be heard / to be audible'. Unlike 聞く (to listen), 聞こえる describes sounds that reach the listener naturally."
+    },
+    {
+      "id": "v_odoroku",
+      "surface": "おどろく",
+      "reading": "おどろく",
+      "meaning": "to be surprised",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N4.17",
+      "matches": ["おどろく"],
+      "notes": "Godan verb. Kanji 驚く not taught until N1, so written in hiragana."
     }
   ]
 }

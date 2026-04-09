@@ -99,7 +99,8 @@
             {
               "id": "v_nomu",
               "form": "te_form"
-            }
+            },
+            "v_kudasai"
           ]
         },
         {
@@ -251,7 +252,8 @@
             {
               "id": "v_manabu",
               "form": "te_form"
-            }
+            },
+            "v_kudasai"
           ]
         },
         {
@@ -272,6 +274,7 @@
           "jp": "ええ、日本語と 学校の テストです。",
           "en": "Yes, it's a Japanese and school test.",
           "terms": [
+            "p_ee",
             "v_nihongo",
             "p_to",
             "v_gakkou",
@@ -311,6 +314,7 @@
               "id": "v_manabu",
               "form": "te_form"
             },
+            "v_kudasai",
             "v_daigaku",
             "p_ni",
             {
@@ -382,6 +386,7 @@
           "jp": "ええ。高くないですよ。安い 本ですよ。",
           "en": "Yes. It's not expensive. It's a cheap book.",
           "terms": [
+            "p_ee",
             {
               "id": "v_takai",
               "form": "plain_negative"
@@ -413,6 +418,7 @@
           "jp": "ええ、安くて、いいですよ。ペンも あります。",
           "en": "Yes, it's cheap and good. There are also pens.",
           "terms": [
+            "p_ee",
             {
               "id": "v_yasui",
               "form": "te_form"
@@ -485,6 +491,8 @@
           "jp": "そうですか。外国から 来ましたか。",
           "en": "Is that so? Did you come from a foreign country?",
           "terms": [
+            "p_soudesu",
+            "p_ka",
             "v_gaikoku",
             "p_kara",
             {
@@ -645,7 +653,8 @@
             {
               "id": "v_manabu",
               "form": "plain_desire_tai"
-            }
+            },
+            "p_na"
           ]
         },
         {

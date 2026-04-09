@@ -54,15 +54,12 @@
           "jp": "この 地区は、去年より 住みやすく なりましたか。",
           "en": "Has this district become easier to live in compared to last year?",
           "terms": [
+            "v_kono",
             "v_chiku",
             "p_wa",
             "v_kyonen",
             "p_yori",
-            {
-              "id": "v_sumu",
-              "form": "te_form"
-            },
-            "v_you_manner",
+            "v_sumu",
             {
               "id": "v_naru",
               "form": "polite_mashita"
@@ -253,16 +250,17 @@
           "en": "I heard that manufacturing is central to the industry of this district — what kinds of products are made here?",
           "terms": [
             "char_rikizo",
+            "v_kono",
             "v_chiku",
             "p_no",
             "v_sangyou",
-            "p_de",
             "p_wa",
+            "p_de",
             "v_kougyou",
             "p_ga",
             "v_chuushin",
-            "g_da",
             "p_to_quote",
+            "g_da",
             {
               "id": "v_kiku",
               "form": "polite_mashita"
@@ -271,10 +269,7 @@
             "v_donna",
             "v_sanbutsu",
             "p_ga",
-            {
-              "id": "v_tsukuru",
-              "form": "polite_passive"
-            },
+            "v_tsukuru",
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -295,17 +290,13 @@
             "v_sanbutsu",
             "g_desu",
             "v_koujou",
-            "p_de",
-            "p_wa",
+            "p_dewa",
             "v_mainichi",
             "v_takusan",
             "p_no",
             "v_sanbutsu",
             "p_ga",
-            {
-              "id": "v_tsukuru",
-              "form": "polite_passive"
-            },
+            "v_tsukuru",
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -332,8 +323,8 @@
               "id": "v_kuru",
               "form": "plain_past"
             },
-            "p_no",
             "p_wa",
+            "p_no",
             "v_itsu",
             "p_goro",
             "p_kara",
@@ -347,7 +338,7 @@
           "en": "It's been about 30 years. Now there are more factories than before, and the industry has become famous too.",
           "terms": [
             { "counter": "nen", "n": 30 },
-            "v_kurai",
+            "p_hodo",
             "v_mae",
             "p_kara",
             "g_desu",
@@ -433,8 +424,9 @@
             },
             {
               "id": "v_oku",
-              "form": "polite_negative_te"
-            }
+              "form": "te_form"
+            },
+            "v_kudasai"
           ]
         }
       ]
@@ -449,6 +441,7 @@
           "jp": "あの 業者が 不正な 仕事を して しまったのは 不運でしたね。",
           "en": "It was unfortunate that that contractor ended up doing dishonest work.",
           "terms": [
+            "v_ano",
             "v_gyousha",
             "p_ga",
             {
@@ -465,11 +458,12 @@
               "id": "v_shimau",
               "form": "plain_past"
             },
-            "p_no",
             "p_wa",
+            "p_no",
+            "v_fuun",
             {
-              "id": "v_fuun",
-              "form": "polite_past_adj"
+              "id": "g_desu",
+              "form": "polite_past_copula"
             },
             "p_ne"
           ]
@@ -479,6 +473,9 @@
           "jp": "そうですね。もっと 前に よく 見て おけば よかったと 思います。",
           "en": "Indeed. I think we should have looked more carefully beforehand.",
           "terms": [
+            "v_sou",
+            "g_desu",
+            "p_ne",
             "v_motto",
             "v_mae",
             "p_ni",
@@ -520,8 +517,9 @@
             "v_tsugi",
             "p_kara",
             "v_motto",
+            "v_chuui",
             {
-              "id": "v_chuui",
+              "id": "v_suru",
               "form": "te_form"
             },
             {
@@ -553,14 +551,12 @@
               "id": "v_kiku",
               "form": "plain_form"
             },
-            "p_no",
             "p_ga",
+            "p_no",
             "v_ichiban",
-            {
-              "id": "v_taisetsu",
-              "form": "polite_adj"
-            },
-            "p_nda"
+            "v_taisetsu",
+            "p_na",
+            "p_ndesu"
           ]
         },
         {
@@ -623,7 +619,7 @@
             "v_mise",
             {
               "id": "v_mazui",
-              "form": "sugiru_form"
+              "form": "sugiru_past"
             },
             "p_yo"
           ]
@@ -634,6 +630,9 @@
           "en": "Yeah. We ended up eating it, but I'm never going again.",
           "terms": [
             "char_ken",
+            "v_sou",
+            "p_ne",
+            "g_da",
             {
               "id": "v_taberu",
               "form": "te_form"
@@ -764,6 +763,9 @@
           "en": "True. But even though the number of children being born is getting smaller.",
           "terms": [
             "char_yamakawa",
+            "v_sou",
+            "p_ne",
+            "g_da",
             "p_demo_but",
             "v_kodomo",
             "p_ga",
@@ -771,8 +773,8 @@
               "id": "v_umareru",
               "form": "plain_form"
             },
-            "p_no",
             "p_ga",
+            "p_no",
             {
               "id": "v_sukunai",
               "form": "adverbial"
@@ -815,11 +817,11 @@
               "id": "v_naru",
               "form": "plain_form"
             },
-            "p_no",
             "p_wa",
+            "p_no",
             "v_mondai",
-            "g_da",
             "p_to_quote",
+            "g_da",
             {
               "id": "v_omou",
               "form": "plain_form"
@@ -862,11 +864,10 @@
           "en": "It's an unfortunate situation, but we need to think about it more carefully.",
           "terms": [
             "char_rikizo",
-            {
-              "id": "v_fuun",
-              "form": "attributive_na"
-            },
+            "v_fuun",
+            "p_na",
             "v_koto",
+            "g_da",
             "p_kedo",
             "v_motto",
             "v_yoku",
@@ -895,16 +896,12 @@
           "terms": [
             "v_kono",
             "v_chiku",
-            "p_de",
-            "p_wa",
+            "p_dewa",
             "v_iroiro",
             "p_na",
             "v_sanbutsu",
             "p_ga",
-            {
-              "id": "v_tsukuru",
-              "form": "polite_passive"
-            },
+            "v_tsukuru",
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -953,10 +950,7 @@
             "p_ya",
             "v_sekai",
             "p_ni",
-            {
-              "id": "v_hakobu",
-              "form": "polite_passive"
-            },
+            "v_hakobu",
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -982,12 +976,9 @@
             "v_sangyou",
             "p_ga",
             "v_totemo",
-            {
-              "id": "v_taisetsu",
-              "form": "polite_adj"
-            },
-            "g_da",
+            "v_taisetsu",
             "p_to_quote",
+            "g_da",
             {
               "id": "v_wakaru",
               "form": "polite_masu"
@@ -1006,18 +997,15 @@
               "form": "plain_form"
             },
             "v_tame",
-            "p_ni",
             "p_wa",
+            "p_ni",
             "v_gyousha",
             "p_mo",
             "v_gyou",
             "p_mo",
-            {
-              "id": "v_taisetsu",
-              "form": "polite_adj"
-            },
-            "g_da",
+            "v_taisetsu",
             "p_to_quote",
+            "g_da",
             {
               "id": "v_omou",
               "form": "polite_masu"
@@ -1034,14 +1022,10 @@
           "terms": [
             "v_kono",
             "v_chiku",
-            "p_de",
-            "p_wa",
+            "p_dewa",
             "v_nan",
             "p_ga",
-            {
-              "id": "v_tsukuru",
-              "form": "polite_passive"
-            },
+            "v_tsukuru",
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -1053,10 +1037,7 @@
             "p_na",
             "v_sanbutsu",
             "p_ga",
-            {
-              "id": "v_tsukuru",
-              "form": "polite_passive"
-            },
+            "v_tsukuru",
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -1117,10 +1098,7 @@
             "p_wa",
             "v_doko",
             "p_e",
-            {
-              "id": "v_hakobu",
-              "form": "polite_passive"
-            },
+            "v_hakobu",
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -1134,10 +1112,7 @@
             "p_ya",
             "v_sekai",
             "p_ni",
-            {
-              "id": "v_hakobu",
-              "form": "polite_passive"
-            },
+            "v_hakobu",
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -1385,10 +1360,8 @@
             "v_hito",
             "p_ga",
             "v_totemo",
-            {
-              "id": "v_shinsetsu",
-              "form": "te_form"
-            },
+            "v_shinsetsu",
+            "g_da",
             "p_kara_because",
             "g_desu"
           ]

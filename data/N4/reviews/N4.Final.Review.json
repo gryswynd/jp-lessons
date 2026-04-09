@@ -522,7 +522,7 @@
           "lines": [
             {
               "spk": "母",
-              "jp": "りきぞう、朝ごはんを食べましたか。",
+              "jp": "りきぞ、朝ごはんを食べましたか。",
               "terms": [
                 "char_rikizo",
                 "v_asagohan",
@@ -597,6 +597,7 @@
               "spk": "R",
               "jp": "すみません、この電車は東京駅に止まりますか。",
               "terms": [
+                "v_kono",
                 "v_densha",
                 "v_toukyou",
                 "v_eki",
@@ -631,13 +632,12 @@
                   "id": "v_iku",
                   "form": "plain_desire_tai"
                 },
-                "g_desu",
+                "p_ndesu",
                 "p_ga_but",
                 "v_chikai",
                 "g_desu",
                 "p_ka",
                 "p_ni",
-                "g_desu",
                 "p_arigatou_gozaimasu"
               ]
             },
@@ -678,6 +678,7 @@
               "spk": "店",
               "jp": "いらっしゃいませ。何を買いたいですか。",
               "terms": [
+                "p_irasshaimase",
                 "v_nani",
                 "p_wo",
                 {
@@ -719,6 +720,7 @@
               "spk": "店",
               "jp": "この本は特に人気がありますよ。",
               "terms": [
+                "v_kono",
                 "v_hon",
                 "p_wa",
                 "v_tokuni",
@@ -735,7 +737,10 @@
               "spk": "R",
               "jp": "じゃ、それをください。あと、紙も売っていますか。",
               "terms": [
+                "v_sore",
                 "p_wo",
+                "v_kudasai",
+                "v_ato",
                 "v_kami",
                 "p_mo",
                 {
@@ -814,7 +819,10 @@
                 "g_desu",
                 "p_ka",
                 "p_wa",
-                "g_desu",
+                {
+                  "id": "g_desu",
+                  "form": "polite_past_copula"
+                },
                 "v_dou"
               ]
             },
@@ -1201,6 +1209,7 @@
               "terms": [
                 "v_getsuyoubi",
                 "v_asa",
+                "v_tanaka",
                 "v_sensei",
                 "p_wa",
                 "v_kyoushitsu",
@@ -1223,6 +1232,10 @@
             {
               "jp": "三人の学生が早く学校に来ていました。山田さんと森さんと池田さんです。",
               "terms": [
+                {
+                  "counter": "nin",
+                  "n": 3
+                },
                 "v_gakusei",
                 "p_ga",
                 {
@@ -1239,7 +1252,13 @@
                   "id": "v_iru",
                   "form": "polite_mashita"
                 },
+                "v_yamada",
+                "v_san",
                 "p_to",
+                "v_mori",
+                "v_san",
+                "v_ikeda",
+                "v_san",
                 "g_desu",
                 "p_no"
               ]
@@ -1252,6 +1271,8 @@
             {
               "jp": "山田さんは図書館で勉強していたと言いました。",
               "terms": [
+                "v_yamada",
+                "v_san",
                 "p_wa",
                 "v_toshokan",
                 "p_de",
@@ -1274,6 +1295,8 @@
             {
               "jp": "森さんは外で運動していたと言いました。でも、森さんの手に赤い色がありました。",
               "terms": [
+                "v_mori",
+                "v_san",
                 "p_wa",
                 "v_soto",
                 "p_de",
@@ -1307,11 +1330,15 @@
             {
               "jp": "池田さんは教室の近くで友達を待っていたと言いました。",
               "terms": [
+                "v_ikeda",
+                "v_san",
                 "p_wa",
                 "v_kyoushitsu",
                 "p_no",
-                "v_chikai",
-                "g_desu",
+                {
+                  "id": "v_chikai",
+                  "form": "adverbial"
+                },
                 "p_de",
                 "v_tomodachi",
                 "p_wo",
@@ -1338,6 +1365,7 @@
             {
               "jp": "田中先生は答えの紙を見ました。紙にも赤い色がありました。",
               "terms": [
+                "v_tanaka",
                 "v_sensei",
                 "p_wa",
                 "v_kotae",
@@ -1349,8 +1377,8 @@
                   "form": "polite_mashita"
                 },
                 "v_kami",
-                "p_ni",
                 "p_mo",
+                "p_ni",
                 "v_akai",
                 "v_iro",
                 {
@@ -1373,6 +1401,8 @@
                   "id": "v_aru",
                   "form": "polite_mashita"
                 },
+                "v_mori",
+                "v_san",
                 "p_dake",
                 "v_soto",
                 {

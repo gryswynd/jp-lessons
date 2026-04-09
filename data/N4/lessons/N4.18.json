@@ -239,6 +239,13 @@
             "v_denkou",
             "v_denryoku"
           ]
+        },
+        {
+          "label": "Suffixes",
+          "items": [
+            "v_kun",
+            "v_tachi"
+          ]
         }
       ]
     },
@@ -268,6 +275,7 @@
           "jp": "はい。強風ですから、電車が 来ていませんよ。",
           "en": "Yes. Because it is a strong wind, the trains aren't running.",
           "terms": [
+            "p_hai",
             "v_kyoufuu",
             "g_desu",
             "p_kara_because",
@@ -289,6 +297,10 @@
           "jp": "えっ、そうですか。何で 帰りますか。",
           "en": "Eh, is that so? How will you get home?",
           "terms": [
+            "v_e",
+            "v_sou",
+            "g_desu",
+            "p_ka",
             "v_nan",
             "p_de",
             {
@@ -312,7 +324,7 @@
             "v_issho",
             "p_ni",
             {
-              "id": "v_kaeru",
+              "id": "v_noru",
               "form": "polite_negative"
             },
             "p_ka"
@@ -350,6 +362,8 @@
           "jp": "はい。でも、日本語は とても むずかしいですね。",
           "en": "Yes. But Japanese is very difficult.",
           "terms": [
+            "p_hai",
+            "p_demo_but",
             "v_nihongo",
             "p_wa",
             "v_totemo",
@@ -365,6 +379,9 @@
           "jp": "そうですね。私は 少し 弱気ですが、毎日 勉強しています。",
           "en": "That's right. I am a little faint-hearted, but I keep studying every day.",
           "terms": [
+            "v_sou",
+            "g_desu",
+            "p_ne",
             "v_watashi",
             "p_wa",
             "v_sukoshi",
@@ -396,6 +413,7 @@
               "id": "v_dasu",
               "form": "te_form"
             },
+            "v_kudasai",
             "v_issho",
             "p_ni",
             "v_benkyou",
@@ -445,6 +463,7 @@
               "id": "v_miru",
               "form": "te_form"
             },
+            "v_kudasai",
             "v_gekkou",
             "p_ga",
             {
@@ -459,6 +478,9 @@
           "jp": "そうですね。電光より 月光の ほうが 好きです。",
           "en": "That's true. I like moonlight more than electric light.",
           "terms": [
+            "v_sou",
+            "g_desu",
+            "p_ne",
             "v_denkou",
             "p_yori",
             "v_gekkou",
@@ -476,6 +498,7 @@
           "terms": [
             "v_watashi",
             "p_mo",
+            "g_desu",
             "v_gekkou",
             "p_wa",
             {
@@ -487,8 +510,8 @@
               "id": "v_yasashii",
               "form": "polite_adj"
             },
-            "p_yo",
-            "p_ne"
+            "p_ne",
+            "p_yo"
           ]
         }
       ]
@@ -504,6 +527,7 @@
           "en": "Hey Tanaka, are you studying every day?",
           "terms": [
             "v_tanaka",
+            "v_kun",
             "v_mainichi",
             "v_benkyou",
             {
@@ -587,6 +611,7 @@
               "id": "v_chikai",
               "form": "adverbial"
             },
+            "p_no",
             "v_yama",
             "p_e",
             {
@@ -773,6 +798,7 @@
             "v_denryoku",
             "p_wa",
             "v_watashi",
+            "v_tachi",
             "p_ni",
             {
               "id": "v_taisetsu",
@@ -898,6 +924,15 @@
           "a": "月光で 勉強します。",
           "a_en": "You study using moonlight.",
           "terms": [
+            "v_denryoku",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "plain_negative"
+            },
+            "v_toki",
+            "v_nan",
+            "p_de",
             "v_benkyou",
             {
               "id": "v_suru",

@@ -785,7 +785,7 @@
           "terms": [
             "v_kyou",
             "p_wa",
-            "v_kurasu",
+            "v_kurasu_class",
             "p_no",
             "v_ensoku",
             "g_desu",
@@ -824,12 +824,11 @@
           ]
         },
         {
-          "jp": "電車で 一時間 乗りました。山は 遠かったですが、電車で 行きました。",
-          "en": "We rode the train for one hour. The mountain was far, but we went by train.",
+          "jp": "電車で 乗りました。山は 遠かったですが、電車で 行きました。",
+          "en": "We rode the train. The mountain was far, but we went by train.",
           "terms": [
             "v_densha",
             "p_de",
-            "v_jikan",
             {
               "id": "v_noru",
               "form": "polite_mashita"
@@ -913,7 +912,7 @@
             "p_ka"
           ],
           "a_terms": [
-            "v_kurasu",
+            "v_kurasu_class",
             "p_no",
             "v_ensoku",
             "g_desu"

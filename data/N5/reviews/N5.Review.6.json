@@ -258,6 +258,7 @@
               "spk": "レン",
               "jp": "うん、けど 日本語は おもしろいよね。毎日 学びたいよ。",
               "terms": [
+                "v_un",
                 "p_kedo",
                 "v_nihongo",
                 "p_wa",
@@ -298,6 +299,7 @@
               "spk": "レン",
               "jp": "うん！花火も すきだよ。今年も いっしょに 行こうよ。",
               "terms": [
+                "v_un",
                 "v_hanabi",
                 "p_mo",
                 "v_suki",
@@ -615,7 +617,8 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka"
+            "p_ka",
+            "p_hai"
           ],
           "explanation": "The passage says 外国から来た学生もいます — 'There are also students who came from foreign countries.' 外国 (がいこく = foreign country): 外 (outside, N5.9) + 国 (country, N5.12) using on-readings がい + こく. 来た is the plain past of 来る (= came), used attributively: 外国から来た学生 = 'students who came from abroad' (relative clause using plain_past form, N5.5+). いいえ、いません contradicts the passage. 中国の先生 (Chinese teacher) is not mentioned. 外国語のクラス (foreign language class) is not mentioned — the class is 日本語のクラス."
         },
@@ -631,13 +634,15 @@
           "terms": [
             "v_gakkou",
             "p_wa",
+            "v_ookii",
             {
               "id": "v_ookii",
               "form": "te_form"
             },
             "v_atarashii",
             "g_desu",
-            "p_ka"
+            "p_ka",
+            "p_hai"
           ],
           "explanation": "The passage says 学校は大きくて、新しいです — 'The school is big and new.' 大きくて is the て-form (te_form) of the い-adjective 大きい: drop い + くて = 大きくて, used as a connector 'big AND.' 新しいです is the polite predicative form of 新しい. The other choices use 小さい (small, antonym of 大きい), 古い (old, antonym of 新しい), 高い (expensive/tall), and 安い (cheap) — none match the passage."
         },
@@ -660,7 +665,10 @@
               "id": "v_iru",
               "form": "polite_masu"
             },
-            "p_ka"
+            "p_ka",
+            "v_kingyo",
+            "p_to",
+            "v_ookii"
           ],
           "explanation": "The passage says 川に金魚がいます。大きい魚もいますよ — 'There are goldfish in the river. There are also large fish.' 金魚 (きんぎょ = goldfish): 金 (gold, N5.2) + 魚 (fish, N5.11) using on-readings きん + ぎょ. Note: standalone 魚 = さかな (kun-reading), but in compound 金魚, 魚 uses the on-reading ぎょ. 大きい魚 = big fish — 大きい here is attributive (modifying 魚 directly). も = 'also/too' connecting two types of fish. 小さい魚だけ = 'only small fish' — the passage does not restrict size to small. 魚はいません = contradicts the passage directly. きれいな花があります = describes flowers, not fish in the river."
         }

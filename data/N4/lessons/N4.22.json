@@ -313,6 +313,7 @@
             "char_suzuki",
             "v_kami",
             "p_to_quote",
+            "v_iu",
             "v_imi",
             "g_desu",
             "v_kami",
@@ -366,7 +367,8 @@
             "p_yo",
             "v_shitsumon",
             "p_wa",
-            "v_itsumo",
+            "v_itsu",
+            "p_demo",
             "p_douzo"
           ]
         }
@@ -535,8 +537,8 @@
             "char_lee",
             "p_hai",
             "v_chuugoku",
-            "p_de",
             "p_mo",
+            "p_de",
             "v_onaji",
             "v_imi",
             "g_desu"
@@ -594,6 +596,7 @@
           "terms": [
             "char_rikizo",
             "v_onaji",
+            "v_you_manner",
             "p_ni",
             {
               "id": "v_mieru",
@@ -683,8 +686,8 @@
           "terms": [
             "char_ken",
             "v_sou",
-            "g_da",
             "p_yo",
+            "g_da",
             "v_ji",
             "p_ga",
             "v_takusan",
@@ -727,6 +730,7 @@
             "char_ken",
             "v_e_exclaim",
             "v_sou",
+            "p_no",
             "p_na",
             "v_sore",
             "p_wa",
@@ -734,8 +738,8 @@
               "id": "v_igai",
               "form": "plain_adj"
             },
-            "g_da",
-            "p_ne"
+            "p_ne",
+            "g_da"
           ]
         },
         {
@@ -749,8 +753,8 @@
             "v_okane",
             "p_mo",
             "v_akaji",
-            "g_da",
-            "p_yo"
+            "p_yo",
+            "g_da"
           ]
         },
         {
@@ -1220,9 +1224,9 @@
             "v_sensei",
             "p_ni",
             "v_jibun",
+            "p_wo",
             "p_no",
             "v_iken",
-            "p_wo",
             {
               "id": "v_iu",
               "form": "polite_mashita"
@@ -1266,9 +1270,9 @@
           "answer": "手紙",
           "terms": [
             "v_tomodachi",
+            "p_wo",
             "p_ni",
             "v_tegami",
-            "p_wo",
             {
               "id": "v_kaku",
               "form": "polite_mashita"
@@ -1284,7 +1288,7 @@
       "items": [
         {
           "kind": "mcq",
-          "q": "図書館で 食べ（　）いいですか。",
+          "q": "図書館で 食べ______いいですか。",
           "choices": [
             "ても",
             "ては",
@@ -1309,7 +1313,7 @@
         },
         {
           "kind": "mcq",
-          "q": "図書館の 中で 話し（　）いけません。",
+          "q": "図書館の 中で 話し______いけません。",
           "choices": [
             "ては",
             "ても",

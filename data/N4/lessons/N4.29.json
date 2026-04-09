@@ -488,7 +488,7 @@
         },
         {
           "spk": "A",
-          "jp": "この 町に 住んで いる 有名な 画家 なんだよ。 会いに 行かない？",
+          "jp": "この 町に 住んで いる 有名な 画家 な んだよ。 会いに 行かない？",
           "en": "It's a famous painter who lives in this town. Don't you want to go meet them?",
           "terms": [
             "v_kono",
@@ -507,6 +507,7 @@
               "form": "attributive_na"
             },
             "v_gaka",
+            "p_na",
             "p_nda",
             "p_yo",
             {
@@ -1159,7 +1160,10 @@
           ],
           "answer": "typhoon",
           "terms": [
-            "v_taifuu"
+            "v_taifuu",
+            "p_no",
+            "v_imi",
+            "p_wa"
           ]
         },
         {
@@ -1173,7 +1177,10 @@
           ],
           "answer": "plan",
           "terms": [
-            "v_keikaku"
+            "v_keikaku",
+            "p_no",
+            "v_imi",
+            "p_wa"
           ]
         },
         {
@@ -1187,7 +1194,10 @@
           ],
           "answer": "more than / and above",
           "terms": [
-            "v_ijou"
+            "v_ijou",
+            "p_no",
+            "v_imi",
+            "p_wa"
           ]
         },
         {
@@ -1201,7 +1211,10 @@
           ],
           "answer": "shyness toward strangers",
           "terms": [
-            "v_hitomishiri"
+            "v_hitomishiri",
+            "p_no",
+            "v_imi",
+            "p_wa"
           ]
         }
       ]
