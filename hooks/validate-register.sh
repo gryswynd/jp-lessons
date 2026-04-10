@@ -38,7 +38,18 @@ level_num, lesson_num = int(m.group(1)), int(m.group(2))
 casual_available = (level_num == 5 and lesson_num >= 10) or level_num < 5
 
 POLITE = re.compile(r'(ます|ました|ません|ませんでした|です|でした|ましょう|ください)')
-PLAIN = re.compile(r'(だ[。、？\s]|だね|だよ|ない[。、？\s]|なかった|んだ)')
+# Casual markers: plain copula, plain past copula, plain negative, explanatory,
+# plain past + sentence particles (but not polite ました+particle),
+# dictionary form + sentence particles, casual conjecture, casual question
+PLAIN = re.compile(
+    r'(だ[。、？！\s]|だね|だよ|だな[。、？\s]|だった|だろう|だけど'
+    r'|ない[。、？！\s]|なかった|んだ'
+    r'|(?<!まし)たよ|(?<!まし)たね|(?<!まし)たの[。、？！\s]|(?<!まし)た[。？！](?![\s]*で)'
+    r'|るよ[。、？！\s]|るね[。、？！\s]|るの[。？]'
+    r'|じゃない|かな[。、？\s]'
+    r'|(?<!です)たい[。、？！\s]|たいよ|たいから|たいけど'
+    r'|(?<!ましょ)うよ[。、？！\s]|(?<!ましょ)おうか[。、？！\s])'
+)
 
 errors = []
 conversations = [s for s in content.get('sections', []) if s.get('type') == 'conversation']

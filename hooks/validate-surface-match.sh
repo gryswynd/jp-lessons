@@ -179,6 +179,13 @@ import re as _re
 def is_pure_kanji(s):
     return bool(s) and all('\u4e00' <= c <= '\u9fff' for c in s)
 
+# Build set of known glossary surfaces for compound disambiguation
+_known_surfaces = set()
+for _id, _inf in id_info.items():
+    s = _inf.get('surface', '')
+    if s:
+        _known_surfaces.add(s)
+
 def surface_found_in_jp(surface, matches, jp_orig, jp_clean, after_counter=False):
     """Check if surface (or any match) appears in jp text.
     For short pure-kanji surfaces (≤2 chars), uses a negative CJK lookbehind to avoid
@@ -190,12 +197,29 @@ def surface_found_in_jp(surface, matches, jp_orig, jp_clean, after_counter=False
     all_forms = [surface] + matches
     if is_pure_kanji(surface) and len(surface) <= 2 and not after_counter:
         for f in all_forms:
+            # First try strict match with CJK lookbehind
             if _re.search(r'(?<![\u4e00-\u9fff])' + _re.escape(f), jp_orig):
                 return True
+        # Fallback: check without lookbehind, but only allow if the preceding
+        # kanji + surface does NOT form a known glossary compound
+        # (e.g. allow 色 in 何色, 料理 in 鳥肉料理, but block 所 in 場所)
+        jp_nospace = jp_orig.replace(' ', '').replace('\u3000', '')
+        for f in all_forms:
+            for m in _re.finditer(_re.escape(f), jp_nospace):
+                start = m.start()
+                if start == 0:
+                    return True
+                preceding = jp_nospace[start-1]
+                if '\u4e00' <= preceding <= '\u9fff':
+                    compound = preceding + f
+                    if compound not in _known_surfaces:
+                        return True
+                else:
+                    return True
         return False
     return any(f in jp_clean for f in all_forms)
 
-def check_surface(jp, terms, path):
+def check_surface(jp, terms, path, has_spk=False):
     if not jp or not terms:
         return
     jp_clean = jp.replace(' ', '').replace('\u3000', '')
@@ -222,6 +246,10 @@ def check_surface(jp, terms, path):
             continue
 
         info = id_info[tid]
+
+        # Skip character names in conversation lines — they appear in spk field, not jp text
+        if has_spk and tid.startswith('char_'):
+            continue
 
         # Conjugated-form checks
         if form is not None:
@@ -270,7 +298,10 @@ def check_surface(jp, terms, path):
         surface = info['surface']
         matches = list(info['matches'])  # always keep hand-curated matches (e.g. 友だち)
         # If surface contains untaught kanji, also accept the reading as primary check
+        # but keep the original kanji surface as a valid match (content may use kanji
+        # form intentionally, e.g. 一緒に even though 緒 is untaught)
         if surface_has_untaught_kanji(surface) and info.get('reading'):
+            matches.append(surface)  # keep kanji surface as valid match
             surface = info['reading']
         # Also accept the reading as a valid match (e.g. もの for 物 in abstract contexts,
         # or できる for 出来る when author chose hiragana even though kanji is taught)
@@ -283,7 +314,7 @@ def check_surface(jp, terms, path):
 def walk(obj, path="root"):
     if isinstance(obj, dict):
         if 'jp' in obj and 'terms' in obj:
-            check_surface(obj['jp'], obj['terms'], path)
+            check_surface(obj['jp'], obj['terms'], path, has_spk='spk' in obj)
         # Q&A fields: new format splits terms (q only) and a_terms (a only)
         # Old format: terms covers combined q+a text
         if 'q' in obj and 'terms' in obj:

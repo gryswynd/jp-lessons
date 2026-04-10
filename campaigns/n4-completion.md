@@ -1,9 +1,9 @@
 # N4 Campaign: Full Refresh & Completion
 
-> **Status:** QA Sweep — 141 hook failures remaining
+> **Status:** QA Sweep — 106 real failures remaining (down from 141; 35 were hook false positives, now fixed)
 > **Started:** 2026-03-25
-> **Last updated:** 2026-04-09
-> **Audit baseline:** 131 files, 141 failures across 13 hooks (run `bash hooks/audit-all.sh N4` to regenerate)
+> **Last updated:** 2026-04-10
+> **Audit baseline:** 131 files, 106 failures across 11 hooks (run `bash hooks/audit-all.sh N4` to regenerate)
 
 ---
 
@@ -91,36 +91,42 @@ No N4 game days exist yet. Planning needed:
 
 ## Remaining Work
 
-### Phase A: QA Sweep (141 failures across 13 hooks)
+### Phase A: QA Sweep (106 real failures across 11 hooks)
 
-All content is built. What remains is fixing hook failures — the same sweep N5 went through.
+All content is built. Hook false positives fixed (35 eliminated Apr 10). What remains is real content fixes.
 
-| Hook | Failures | Files affected | Pattern |
-|---|---|---|---|
-| surface-match | 36 | 30 lessons + 6 grammar + 6 reviews | Kanji/kana mismatches, character names, Q&A text |
-| particle-context | 21 | 6 lessons + 4 grammar + 7 reviews | Missing p_ka on question sentences |
-| compose | 17 | 17 compose files | Ungated particles or non-kanji targets |
-| structure | 15 | 4 grammar + 1 lesson + 9 reviews + compose.N4 | Warmup count, Drill 1 terms, review structure |
-| kanji-scope | 11 | 4 grammar + 7 lessons | Untaught kanji in jp text |
-| chip-order | 10 | 9 lessons + 1 review | Kana pair ordering |
-| writing-forms | 7 | 2 grammar + 2 lessons + 3 stories | Kanji/hiragana enforcement |
-| register | 6 | 6 lessons | Missing casual conversations |
-| grammar-schema | 6 | 6 grammar files (G16, G18–G22) | Invalid field names or chip colors |
-| form-scope | 5 | 1 compose + 1 grammar + 3 reviews | Conjugation forms before introducedIn |
-| term-ids | 5 | 5 lessons | k_* IDs outside kanjiGrid |
-| suffix-match | 1 | N4.30 | Term surface is strict suffix of match |
-| suru-compound | 1 | N4.17 | noun_suru with conjugation form |
+| Hook | Failures | Pattern |
+|---|---|---|
+| particle-context | 21 | Missing p_ka on question sentences, p_kara→p_tekara |
+| compose | 17 | "Close/wrap up" wording before challengePrompts, non-kanji targets |
+| structure | 15 | Drill 1 terms, missing review instructions, contracted forms |
+| surface-match | 11 | p_to_quote→p_tte_quote (って not と), 2 missing surfaces |
+| kanji-scope | 11 | Untaught kanji in jp text |
+| chip-order | 10 | Kana pair ordering in terms[] |
+| grammar-schema | 6 | meta.particles as IDs not strings, missing pattern labels |
+| writing-forms | 5 | Hiragana forms when kanji taught (あした→明日, できる→出来る) |
+| term-ids | 5 | k_* IDs outside kanjiGrid, unknown forms/IDs |
+| form-scope | 3 | Particles used before introducedIn lesson |
+| suffix-match | 1 | p_nda surface "んだ" leaving "な" untagged in "なんだ" |
+| suru-compound | 1 | noun_suru with conjugation form |
+| ~~register~~ | ~~0~~ | ~~Fixed — hook regex broadened (Apr 10)~~ |
+
+**Hook fixes applied (Apr 10):**
+- surface-match: skip char_* names in spk field; fix kanji fallback to check both reading AND original surface; relax CJK lookbehind for compounds not in glossary (e.g. 何色, 鳥肉料理)
+- register: broaden casual speech regex (added だった, たよ/たね, るよ/るね, plain desire たい, volitional)
+- writing-forms: skip ようか suffix matches (volitional, not 八日)
+- form-scope: fallback scope for review files with non-standard IDs
 
 **Priority order:**
-1. Batch fixes — grammar-schema (6 files), structure/Drill 1 terms, compose ungated particles
-2. surface-match — heaviest count, but many are systematic (same patterns as N5)
-3. particle-context — mostly missing p_ka, mechanical fix
+1. Batch fixes — grammar-schema (6 files), structure (Drill 1 terms + missing instructions), compose wording
+2. particle-context — mostly missing p_ka, mechanical fix
+3. surface-match — all p_to_quote→p_tte_quote, mechanical fix
 4. kanji-scope — untaught kanji in jp text
-5. chip-order, register, writing-forms — smaller batches
-6. Remaining edge cases (form-scope, term-ids, suffix-match, suru-compound)
+5. chip-order, writing-forms, term-ids — smaller batches
+6. Remaining edge cases (form-scope, suffix-match, suru-compound)
 
 ### Phase B: Stories
 
-3 stories have writing-forms failures. Also need to assess N4.21–36 vocabulary coverage.
+3 stories have writing-forms failures (できる→出来る, ところ→所). Also need to assess N4.21–36 vocabulary coverage.
 
 ### Phase C: Game day planning (separate — not blocking QA)

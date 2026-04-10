@@ -89,7 +89,7 @@ Long-running projects tracked in `campaigns/`:
 | Campaign | Status | Description |
 |---|---|---|
 | `campaigns/n5-qa-and-game-days.md` | In Progress | Phase 1 QA complete (0 failures); Phase 2: build 17 game days |
-| `campaigns/n4-completion.md` | QA Sweep | All content built; 141 hook failures across 13 hooks need fixing |
+| `campaigns/n4-completion.md` | QA Sweep | All content built; 106 real failures across 11 hooks (35 hook false positives fixed) |
 | `campaigns/practice-game-extraction.md` | In Progress | 5/7 games rebuilt (Flashcards/Quiz remaining) |
 | `campaigns/engagement-features.md` | Deployed | Phase 2 live (Worker + Resend); Phase 2b (push notifications) deferred |
 | `campaigns/n3-production.md` | Planning | Vocab roadmap blocks; G32–G49 ready for QA |
