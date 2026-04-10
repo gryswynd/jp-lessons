@@ -1,9 +1,9 @@
 # N4 Campaign: Full Refresh & Completion
 
-> **Status:** QA Sweep — 106 real failures remaining (down from 141; 35 were hook false positives, now fixed)
+> **Status:** QA Sweep — 90 real failures remaining (down from 141; 51 were hook false positives, now fixed)
 > **Started:** 2026-03-25
 > **Last updated:** 2026-04-10
-> **Audit baseline:** 131 files, 106 failures across 11 hooks (run `bash hooks/audit-all.sh N4` to regenerate)
+> **Audit baseline:** 131 files, 90 failures across 11 hooks (run `bash hooks/audit-all.sh N4` to regenerate)
 
 ---
 
@@ -91,13 +91,13 @@ No N4 game days exist yet. Planning needed:
 
 ## Remaining Work
 
-### Phase A: QA Sweep (106 real failures across 11 hooks)
+### Phase A: QA Sweep (90 real failures across 11 hooks)
 
 All content is built. Hook false positives fixed (35 eliminated Apr 10). What remains is real content fixes.
 
 | Hook | Failures | Pattern |
 |---|---|---|
-| particle-context | 21 | Missing p_ka on question sentences, p_kara→p_tekara |
+| particle-context | 5 | p_kara→p_tekara, p_demo→p_demo_but |
 | compose | 17 | "Close/wrap up" wording before challengePrompts, non-kanji targets |
 | structure | 15 | Drill 1 terms, missing review instructions, contracted forms |
 | surface-match | 11 | p_to_quote→p_tte_quote (って not と), 2 missing surfaces |
@@ -116,6 +116,7 @@ All content is built. Hook false positives fixed (35 eliminated Apr 10). What re
 - register: broaden casual speech regex (added だった, たよ/たね, るよ/るね, plain desire たい, volitional)
 - writing-forms: skip ようか suffix matches (volitional, not 八日)
 - form-scope: fallback scope for review files with non-standard IDs
+- particle-context: only require p_ka when text actually contains か (not for ？-only questions, English MCQs, or casual は？ quiz questions)
 
 **Priority order:**
 1. Batch fixes — grammar-schema (6 files), structure (Drill 1 terms + missing instructions), compose wording
