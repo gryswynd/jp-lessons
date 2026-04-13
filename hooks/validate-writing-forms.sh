@@ -166,6 +166,10 @@ if kanji_vocab:
                     break
             if not matched_token:
                 continue
+            # Skip suffix matches where the reading is a grammatical homonym
+            # (e.g. ようか = volitional+か as in 食べようか, not 八日)
+            if matched_token != reading and reading in ('ようか',):
+                continue
             if surface in jp_clean:
                 continue  # kanji form is present
             if not all(k in taught_kanji for k in kanji_chars):

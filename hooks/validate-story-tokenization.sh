@@ -31,10 +31,42 @@ FILE=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
 python3 - "$FILE" "$REPO_ROOT" << 'PYEOF'
-import json, sys, os, re
+import json, sys, os, re, glob
 
 file_path = sys.argv[1]
 repo_root = sys.argv[2]
+
+# Load all glossary IDs — a compound whose ID exists in a glossary is a real
+# vocabulary item, not an accidental concatenation.
+glossary_ids = set()
+for gpath in glob.glob(os.path.join(repo_root, 'data/*/glossary.*.json')):
+    try:
+        with open(gpath) as f:
+            data_g = json.load(f)
+            entries = data_g.get('entries', data_g) if isinstance(data_g, dict) else data_g
+            if isinstance(entries, list):
+                for e in entries:
+                    if isinstance(e, dict) and 'id' in e:
+                        glossary_ids.add(e['id'])
+    except Exception:
+        pass
+
+# Particle/grammar IDs from shared data files (particles.json, characters.json, etc.)
+for pattern in ['data/shared/*.json', 'shared/*.json']:
+    for spath in glob.glob(os.path.join(repo_root, pattern)):
+        try:
+            with open(spath) as f:
+                data_s = json.load(f)
+                if isinstance(data_s, dict):
+                    # Try common list keys: entries, particles, characters
+                    for key in ('entries', 'particles', 'characters'):
+                        items = data_s.get(key)
+                        if isinstance(items, list):
+                            for e in items:
+                                if isinstance(e, dict) and 'id' in e:
+                                    glossary_ids.add(e['id'])
+        except Exception:
+            pass
 
 story_dir = os.path.dirname(file_path)
 terms_path = os.path.join(story_dir, 'terms.json')
@@ -86,6 +118,11 @@ for s in all_surfaces:
     if len(s) < 2:
         continue
     sid = surface_to_id[s]
+    # Skip compounds whose ID is a real glossary/particle entry — these are
+    # legitimate vocabulary items (e.g. 北東 = v_hokutou, でも = p_demo_but),
+    # not accidental concatenations of shorter surfaces.
+    if sid in glossary_ids:
+        continue
     # Try every split point
     for split in range(1, len(s)):
         a, b = s[:split], s[split:]

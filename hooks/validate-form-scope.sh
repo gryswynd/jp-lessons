@@ -65,6 +65,18 @@ lesson_order = build_lesson_order(manifest_path)
 file_order = lesson_order.get(content_id)
 scope_ceiling = max(lesson_order.get(lesson_id) or 0, file_order or 0)
 
+# Fallback: if neither content_id nor lesson_id found in lesson_order
+# (e.g. review files with non-standard IDs like N4.Review.Master),
+# scope to end of the level to avoid false positives on basic forms.
+if scope_ceiling == 0:
+    level_match = re.match(r'(N\d+)', content_id or '')
+    if level_match:
+        level_prefix = level_match.group(1)
+        level_ordinals = [v for k, v in lesson_order.items()
+                          if k.startswith(level_prefix)]
+        if level_ordinals:
+            scope_ceiling = max(level_ordinals)
+
 errors = []
 
 def check_forms(obj, path="root"):

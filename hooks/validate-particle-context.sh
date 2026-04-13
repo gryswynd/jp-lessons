@@ -43,13 +43,15 @@ def check_line(jp, terms, path):
             if tid == 'p_demo':
                 errors.append(f"  ERROR {path}.terms[{i}]: p_demo but でも is sentence-initial → use p_demo_but")
 
-    # FM #58: Question missing p_ka — covers casual (？) and polite (か。 / か！) questions
+    # FM #58: Question missing p_ka — only flag when text actually contains か as
+    # question particle. Questions ending with ？ but no か (casual は？, quiz-style,
+    # English MCQs) are legitimate and don't need p_ka.
     jp_stripped = jp.rstrip()
-    if (jp_stripped.endswith('？') or jp_stripped.endswith('?') or
-            jp_stripped.endswith('か。') or jp_stripped.endswith('か！')):
+    jp_nospace_q = jp_stripped.replace(' ', '')
+    if re.search(r'か[。？?！!]*$', jp_nospace_q):
         has_ka = any((t if isinstance(t, str) else t.get('id', '')) == 'p_ka' for t in terms)
         if not has_ka:
-            errors.append(f"  ERROR {path}: Question sentence missing p_ka in terms")
+            errors.append(f"  ERROR {path}: Question sentence has か but missing p_ka in terms")
 
     # FM #34: が after clause-final → should be p_ga_but
     if CLAUSE_ENDINGS_GA.search(jp):

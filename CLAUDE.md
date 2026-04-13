@@ -88,10 +88,12 @@ Long-running projects tracked in `campaigns/`:
 
 | Campaign | Status | Description |
 |---|---|---|
-| `campaigns/n5-qa-and-game-days.md` | Ready | N5 term QA sweep (lessons, grammar, reviews, compose, stories) + build 17 remaining game days |
-| `campaigns/n4-completion.md` | Ready | Full N4.21–N4.36 refresh, build G22–G31, compose.N4.21–36, stories, review QA, game planning |
-| `campaigns/n3-production.md` | Planning | Finalize vocab roadmap, QA G32–G49, begin content lesson production |
-| `campaigns/godot-migration.md` | Planning | Migration from web app to Godot 4.x for iOS/Android release |
+| `campaigns/n5-qa-and-game-days.md` | In Progress | Phase 1 QA complete (0 failures); Phase 2: build 17 game days |
+| `campaigns/n4-completion.md` | QA Sweep | All content built; 90 real failures across 11 hooks (51 hook false positives fixed) |
+| `campaigns/practice-game-extraction.md` | In Progress | 5/7 games rebuilt (Flashcards/Quiz remaining) |
+| `campaigns/engagement-features.md` | Deployed | Phase 2 live (Worker + Resend); Phase 2b (push notifications) deferred |
+| `campaigns/n3-production.md` | Planning | Vocab roadmap blocks; G32–G49 ready for QA |
+| `campaigns/godot-migration.md` | In Progress | Day 1 ported to Godot; Phases 2–5 pending |
 
 Campaign files persist across sessions. Read the relevant campaign file when resuming work.
 

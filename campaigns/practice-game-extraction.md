@@ -1,8 +1,9 @@
 # Campaign: Practice.js Game Module Extraction
 
-> **Status:** In Progress
+> **Status:** In Progress — 5/7 games complete
 > **Branch pattern:** `claude/extract-<game>-<id>`
 > **Started:** 2026-03-26
+> **Last updated:** 2026-04-09
 > **Depends on:** Conjugation Station build (complete — `app/games/conjugation-dojo.js`)
 
 ## Goal
@@ -21,10 +22,10 @@ Practice.js (shell)
 ├── Game loader functions (fetch + script inject)
 │
 ├── app/games/conjugation-dojo.js  ✅ DONE
-├── app/games/connections.js       🔲 TODO
-├── app/games/connections4.js      🔲 TODO
-├── app/games/scramble.js          🔲 TODO
-├── app/games/marathon.js          🔲 TODO
+├── app/games/connections.js       ✅ DONE
+├── app/games/connections4.js      ✅ DONE
+├── app/games/scramble.js          ✅ DONE
+├── app/games/marathon.js          ✅ DONE
 └── app/games/flashcards.js + quiz.js  🔲 TODO (may combine)
 ```
 
@@ -56,7 +57,7 @@ window.JPShared.<gameName> = {
 
 ### 1. Connections — "Link Up: Sorted"
 - **File:** `app/games/connections.js`
-- **Status:** 🔲 TODO
+- **Status:** ✅ DONE
 - **Data:** `connections.N5.json`, `connections.N4.json` via `getAssetUrl()`
 - **Reference:** Practice.js `connStart()` → `connShowSummary()` (~lines 649-876)
 - **Game rules:** Sort vocabulary words into labeled category columns
@@ -69,7 +70,7 @@ window.JPShared.<gameName> = {
 
 ### 2. Connections4 — "Link Up: Hidden"
 - **File:** `app/games/connections4.js`
-- **Status:** 🔲 TODO
+- **Status:** ✅ DONE
 - **Data:** Same as Connections
 - **Reference:** Practice.js `conn4Start()` block (~lines 881-1148)
 - **Game rules:** Guess groups of 4 related words from a 4x4 grid
@@ -83,7 +84,7 @@ window.JPShared.<gameName> = {
 
 ### 3. Scramble — "Sentence Builder"
 - **File:** `app/games/scramble.js`
-- **Status:** 🔲 TODO
+- **Status:** ✅ DONE
 - **Data:** `scramble.N5.json` via `getAssetUrl()`
 - **Reference:** Practice.js `scrStart()` block (~lines 1152-1391)
 - **Game rules:** Arrange shuffled word tiles into correct Japanese sentence order
@@ -97,7 +98,7 @@ window.JPShared.<gameName> = {
 
 ### 4. Marathon — "Sentence Challenge"
 - **File:** `app/games/marathon.js`
-- **Status:** 🔲 TODO
+- **Status:** ✅ DONE
 - **Data:** `scramble.N4.json` via `getAssetUrl()`
 - **Reference:** Practice.js `marathonStart()` block (~lines 1397-1672)
 - **Game rules:** Progressive difficulty sentence scramble (warm-up → challenge)
@@ -148,10 +149,10 @@ window.JPShared.<gameName> = {
 | Game | Module Built | Old Code Removed | Tested | Committed |
 |------|:---:|:---:|:---:|:---:|
 | Conjugation Station | ✅ | ✅ | ✅ | ✅ |
-| Connections | 🔲 | 🔲 | 🔲 | 🔲 |
-| Connections4 | 🔲 | 🔲 | 🔲 | 🔲 |
-| Scramble | 🔲 | 🔲 | 🔲 | 🔲 |
-| Marathon | 🔲 | 🔲 | 🔲 | 🔲 |
+| Connections | ✅ | ✅ | ✅ | ✅ |
+| Connections4 | ✅ | ✅ | ✅ | ✅ |
+| Scramble | ✅ | ✅ | ✅ | ✅ |
+| Marathon | ✅ | ✅ | ✅ | ✅ |
 | Flashcards | 🔲 | 🔲 | 🔲 | 🔲 |
 | Quiz | 🔲 | 🔲 | 🔲 | 🔲 |
 
