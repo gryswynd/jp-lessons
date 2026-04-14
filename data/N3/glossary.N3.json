@@ -181,7 +181,7 @@
       "meaning": "overtime work / working late",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N3.37",
+      "lesson_ids": "N3.77",
       "notes": "残 (N3.1) + 業 (N3.77). 残業する = to work overtime. 残業代 = overtime pay."
     },
     {
@@ -407,7 +407,7 @@
       "notes": "On-reading only: さく in 昨日(きのう, irregular), 昨年(さくねん), 昨夜(さくや). 昨日 has the irregular kun-reading きのう."
     },
     {
-      "id": "k_hatsu",
+      "id": "k_hatsu_2",
       "lesson": "N3.3",
       "type": "kanji",
       "surface": "初",
@@ -530,7 +530,7 @@
       "notes": "Kun: つづく (to continue, intrans), つづける (to continue, trans). On: ぞく in 連続(れんぞく, consecutive), 手続き(てつづき, procedure)."
     },
     {
-      "id": "k_yo",
+      "id": "k_yo_3",
       "lesson": "N3.29",
       "type": "kanji",
       "surface": "予",
@@ -695,7 +695,7 @@
       "notes": "Kun: かならず (certainly, without fail — 必ず). On: ひつ in 必要(ひつよう, necessary), 必死(ひっし, desperate), 必勝(ひっしょう — 勝 not in curriculum). Always implies inevitability or obligation."
     },
     {
-      "id": "k_you",
+      "id": "k_you_2",
       "lesson": "N3.8",
       "type": "kanji",
       "surface": "要",
@@ -706,7 +706,7 @@
       "notes": "On: よう in 必要(ひつよう, necessary), 重要(じゅうよう, important), 主要(しゅよう, main). Kun: いる (to need — 要る), かなめ (keystone, crux — 要の人物). 要求(ようきゅう, demand) unlocks at N3.25 when 求 is taught."
     },
     {
-      "id": "k_ka",
+      "id": "k_ka_4",
       "lesson": "N3.8",
       "type": "kanji",
       "surface": "可",
@@ -789,10 +789,7 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N3.29",
-      "matches": [
-        "予てい"
-      ],
-      "notes": "予 (N3.29) + 定 (N3.16). Write as 予てい until N3.29. 予定がある = to have plans. 予定を立てる = to make plans. 〜する予定です = planning to do ~."
+      "notes": "予 (N3.29) + 定 (N3.29). Both kanji unlock together at N3.29. 予定がある = to have plans. 予定を立てる = to make plans. 〜する予定です = planning to do ~."
     },
     {
       "id": "v_yoyaku",
@@ -802,10 +799,7 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N3.29",
-      "matches": [
-        "予やく"
-      ],
-      "notes": "予 (N3.29) + 約 (N3.66). Write as 予やく until N3.66. 予約する = to make a reservation. ホテルの予約 = hotel reservation."
+      "notes": "予 (N3.29) + 約 (N3.5). 約 is taught earlier; both available at N3.29. 予約する = to make a reservation. ホテルの予約 = hotel reservation."
     },
     {
       "id": "v_yakusoku",
@@ -1636,6 +1630,483 @@
       "gtype": "noun",
       "lesson_ids": "N3.10",
       "notes": "参 (N3.10) + 考 (N4.7). 参考にする = to use as a reference. 参考書(さんこうしょ) = reference book (書 N5.11). 参考になる = to be useful/helpful as a reference."
+    },
+    {
+      "id": "k_mamoru",
+      "lesson": "N3.11",
+      "type": "kanji",
+      "surface": "守",
+      "on": "しゅ/す",
+      "kun": "まも/もり",
+      "reading": "まも",
+      "meaning": "protect / guard / defend / keep",
+      "notes": "Kun: まもる (to protect — 守る), もり (guard, keeper — 留守番 るすばん). On: しゅ in 守備(しゅび, defense), す in 留守(るす, absence — 留 N3.58). お守り(おまもり) = protective charm/amulet."
+    },
+    {
+      "id": "k_nusumu",
+      "lesson": "N3.11",
+      "type": "kanji",
+      "surface": "盗",
+      "on": "とう",
+      "kun": "ぬす",
+      "reading": "ぬす",
+      "meaning": "steal / rob",
+      "notes": "Kun: ぬすむ (to steal — 盗む). On: とう in 強盗(ごうとう, robbery — 強 N4.18), 盗難(とうなん, theft — 難 N3.82), 盗賊(とうぞく, thief/bandit)."
+    },
+    {
+      "id": "k_korosu",
+      "lesson": "N3.11",
+      "type": "kanji",
+      "surface": "殺",
+      "on": "さつ/さい/せつ",
+      "kun": "ころ",
+      "reading": "ころ",
+      "meaning": "kill / murder",
+      "notes": "Kun: ころす (to kill — 殺す). On: さつ in 殺人(さつじん, murder), 自殺(じさつ, suicide — 自 N4.4), 殺害(さつがい, killing — 害 N3.13 next). Also figurative: 時間を殺す = to kill time."
+    },
+    {
+      "id": "k_han",
+      "lesson": "N3.11",
+      "type": "kanji",
+      "surface": "犯",
+      "on": "はん",
+      "kun": "おか",
+      "reading": "はん",
+      "meaning": "crime / offense / violate",
+      "notes": "On: はん in 犯人(はんにん, criminal/culprit), 犯罪(はんざい, crime — 罪 N3.55), 防犯(ぼうはん, crime prevention — 防 not in curriculum). Kun: おかす (to commit, violate — 犯す)."
+    },
+    {
+      "id": "v_mamoru",
+      "surface": "守る",
+      "reading": "まもる",
+      "meaning": "to protect / to defend / to keep (a promise, rule)",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.11",
+      "notes": "守 (N3.11). 家族を守る = to protect one's family. 約束を守る = to keep a promise (約束 N3.5). ルールを守る = to obey rules. Transitive."
+    },
+    {
+      "id": "v_mamori",
+      "surface": "守り",
+      "reading": "まもり",
+      "meaning": "defense / protection / guardianship",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.11",
+      "notes": "守 (N3.11). Noun form of 守る. 守りが固い = the defense is solid. Contrast with 攻め (offense, 攻 not taught)."
+    },
+    {
+      "id": "v_omamori",
+      "surface": "お守り",
+      "reading": "おまもり",
+      "meaning": "protective charm / amulet (from a shrine or temple)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.11",
+      "notes": "お (honorific prefix) + 守 (N3.11). Traditional Japanese good-luck charms sold at shrines. 交通安全のお守り = traffic-safety charm."
+    },
+    {
+      "id": "v_nusumu",
+      "surface": "盗む",
+      "reading": "ぬすむ",
+      "meaning": "to steal / to rob",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.11",
+      "notes": "盗 (N3.11). お金を盗む = to steal money. 心を盗む = to steal someone's heart (figurative). Transitive."
+    },
+    {
+      "id": "v_goutou",
+      "surface": "強盗",
+      "reading": "ごうとう",
+      "meaning": "robbery / robber / burglar",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.11",
+      "notes": "強 (N4.18) + 盗 (N3.11). 強盗事件 = robbery incident. 銀行強盗 = bank robbery. Refers to both the crime and the criminal."
+    },
+    {
+      "id": "v_korosu",
+      "surface": "殺す",
+      "reading": "ころす",
+      "meaning": "to kill / to murder",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.11",
+      "notes": "殺 (N3.11). 時間を殺す = to kill time. 声を殺す = to lower one's voice (lit. kill the voice). Transitive."
+    },
+    {
+      "id": "v_satsujin",
+      "surface": "殺人",
+      "reading": "さつじん",
+      "meaning": "murder / homicide",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.11",
+      "notes": "殺 (N3.11) + 人 (N5.1). 殺人事件 = murder case. 殺人犯 = murderer (using 犯 N3.11)."
+    },
+    {
+      "id": "v_jisatsu",
+      "surface": "自殺",
+      "reading": "じさつ",
+      "meaning": "suicide",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.11",
+      "notes": "自 (N4.4) + 殺 (N3.11). 自殺する = to commit suicide. Sensitive topic — handle carefully in content."
+    },
+    {
+      "id": "v_hannin",
+      "surface": "犯人",
+      "reading": "はんにん",
+      "meaning": "criminal / culprit / perpetrator",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.11",
+      "notes": "犯 (N3.11) + 人 (N5.1). 犯人を捕まえる = to catch the criminal (捕 N3.47). The person who committed a specific crime (vs. 犯罪者 a criminal in general)."
+    },
+    {
+      "id": "v_okasu",
+      "surface": "犯す",
+      "reading": "おかす",
+      "meaning": "to commit (a crime) / to violate",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.11",
+      "notes": "犯 (N3.11). 罪を犯す = to commit a crime (罪 N3.55, write in kana until then). ミスを犯す = to make a mistake. Transitive, formal."
+    },
+    {
+      "id": "k_katsu",
+      "lesson": "N3.12",
+      "type": "kanji",
+      "surface": "勝",
+      "on": "しょう",
+      "kun": "か/まさ",
+      "reading": "か",
+      "meaning": "win / victory / excel",
+      "notes": "Kun: かつ (to win — 勝つ), まさる (to surpass — 勝る). On: しょう in 優勝(ゆうしょう, championship — 優 N3.22), 勝利(しょうり, victory — 利 N3.41). 勝負(しょうぶ, match — 負 N3.13 next). 勝手(かって, selfish/as one pleases — 手 N5.1)."
+    },
+    {
+      "id": "k_tsutomu",
+      "lesson": "N3.12",
+      "type": "kanji",
+      "surface": "努",
+      "on": "ど",
+      "kun": "つと",
+      "reading": "つと",
+      "meaning": "exert effort / strive / endeavor",
+      "notes": "Kun: つとめる (to strive — 努める — distinct from 勤める 'work at' 勤 N3.77 and 務める 'serve as' 務 N3.77). On: ど in 努力(どりょく, effort). 努めて = as much as possible / diligently."
+    },
+    {
+      "id": "k_naru",
+      "lesson": "N3.12",
+      "type": "kanji",
+      "surface": "成",
+      "on": "せい/じょう",
+      "kun": "な",
+      "reading": "な",
+      "meaning": "become / achieve / form / consist of",
+      "notes": "Kun: なる (to become/come to be — 成る, more formal than なる), なす (to achieve — 成す). On: せい in 成長(せいちょう, growth), 成人(せいじん, adult), 完成(かんせい, completion — 完 N3.17), 達成(たっせい, achievement — 達 N3.2). じょう in 成仏(じょうぶつ, not taught)."
+    },
+    {
+      "id": "k_eru",
+      "lesson": "N3.12",
+      "type": "kanji",
+      "surface": "得",
+      "on": "とく",
+      "kun": "え/う",
+      "reading": "え",
+      "meaning": "gain / obtain / acquire / profit",
+      "notes": "Kun: える/うる (to gain — 得る, ichidan, both えru and うru dictionary forms). On: とく in 得意(とくい, good at), 所得(しょとく, income — 所 N4.9), 納得(なっとく, consent — 納 not taught), 損得(そんとく, profit and loss)."
+    },
+    {
+      "id": "v_katsu",
+      "surface": "勝つ",
+      "reading": "かつ",
+      "meaning": "to win / to beat / to prevail",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.12",
+      "notes": "勝 (N3.12). 試合に勝つ = to win a match (試合 N4). 〜に勝つ (particle に marks the opponent). Intransitive."
+    },
+    {
+      "id": "v_kachi",
+      "surface": "勝ち",
+      "reading": "かち",
+      "meaning": "a win / victory",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.12",
+      "notes": "勝 (N3.12). Noun form of 勝つ. 勝ちを収める = to achieve a win. Antonym: 負け (N3.13)."
+    },
+    {
+      "id": "v_katte",
+      "surface": "勝手",
+      "reading": "かって",
+      "meaning": "selfish / arbitrary / as one pleases / convenience",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "lesson_ids": "N3.12",
+      "notes": "勝 (N3.12) + 手 (N5.1). 勝手なことを言う = to say selfish things. 勝手に = without permission / arbitrarily. Also noun: kitchen (archaic)."
+    },
+    {
+      "id": "v_tsutomeru",
+      "surface": "努める",
+      "reading": "つとめる",
+      "meaning": "to strive / to make an effort / to endeavor",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.12",
+      "notes": "努 (N3.12). 改善に努める = to strive to improve. Distinct from 勤める (work at a company, 勤 N3.77) and 務める (serve as a role, 務 N3.77)."
+    },
+    {
+      "id": "v_doryoku",
+      "surface": "努力",
+      "reading": "どりょく",
+      "meaning": "effort / exertion / endeavor",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.12",
+      "notes": "努 (N3.12) + 力 (N5.16). 努力する = to make an effort. 努力家 = hardworking person. Often combined with に for direction: 成功に向けて努力する."
+    },
+    {
+      "id": "v_naru_2",
+      "surface": "成る",
+      "reading": "なる",
+      "meaning": "to become / to be completed / to consist of (formal)",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.12",
+      "notes": "成 (N3.12). Formal/written variant of なる (v_naru, N5). AはBから成る = A consists of B. Usually written in kana in casual text; kanji form is literary/formal."
+    },
+    {
+      "id": "v_seichou",
+      "surface": "成長",
+      "reading": "せいちょう",
+      "meaning": "growth / development",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.12",
+      "notes": "成 (N3.12) + 長 (N4.12). 成長する = to grow. 子供の成長 = a child's growth. Also figurative: economic or personal growth."
+    },
+    {
+      "id": "v_seijin",
+      "surface": "成人",
+      "reading": "せいじん",
+      "meaning": "adult / coming of age",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.12",
+      "notes": "成 (N3.12) + 人 (N5.1). 成人式 = coming-of-age ceremony (式 N3.60). 成人の日 = Coming of Age Day (second Monday of January)."
+    },
+    {
+      "id": "v_tassei",
+      "surface": "達成",
+      "reading": "たっせい",
+      "meaning": "achievement / accomplishment / attainment",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.12",
+      "notes": "達 (N3.2) + 成 (N3.12). 達成する = to achieve. 目標を達成する = to achieve a goal (目標 uses 目 N5 + 標 not taught)."
+    },
+    {
+      "id": "v_eru",
+      "surface": "得る",
+      "reading": "える",
+      "meaning": "to gain / to obtain / to acquire",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.12",
+      "notes": "得 (N3.12). Also read うる in literary/auxiliary usage (〜し得る = can do). 知識を得る = to gain knowledge (知識 N3.53). 経験を得る = to gain experience (経験 N3.73)."
+    },
+    {
+      "id": "v_tokui",
+      "surface": "得意",
+      "reading": "とくい",
+      "meaning": "good at / one's strong point / pride",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "lesson_ids": "N3.12",
+      "notes": "得 (N3.12) + 意 (N4.7). 数学が得意です = I'm good at math. Antonym: 苦手 (にがて, N3.34). Also noun: 得意先 = regular customer (in business)."
+    },
+    {
+      "id": "v_shotoku",
+      "surface": "所得",
+      "reading": "しょとく",
+      "meaning": "income / earnings",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.12",
+      "notes": "所 (N4.9) + 得 (N3.12). 所得税 = income tax (税 not taught). 年間所得 = annual income. More formal than 収入 (しゅうにゅう, N3.41)."
+    },
+    {
+      "id": "k_ushinau",
+      "lesson": "N3.13",
+      "type": "kanji",
+      "surface": "失",
+      "on": "しつ",
+      "kun": "うしな/うせ",
+      "reading": "うしな",
+      "meaning": "lose / miss / error",
+      "notes": "Kun: うしなう (to lose — 失う). On: しつ in 失敗(しっぱい, failure), 失礼(しつれい, rudeness — 礼 N3.54), 失望(しつぼう, disappointment — 望 N3.33), 紛失(ふんしつ — 紛 not taught). Contrast: 負ける (be defeated) vs 失う (lose possession)."
+    },
+    {
+      "id": "k_yabureru",
+      "lesson": "N3.13",
+      "type": "kanji",
+      "surface": "敗",
+      "on": "はい",
+      "kun": "やぶ",
+      "reading": "はい",
+      "meaning": "defeat / failure / be beaten",
+      "notes": "Kun: やぶれる (to be defeated — 敗れる, not to be confused with 破れる 'to tear' — 破 N3.15). On: はい in 失敗(しっぱい, failure), 勝敗(しょうはい, victory or defeat — 勝 N3.12), 敗北(はいぼく, defeat — 北 N5.7)."
+    },
+    {
+      "id": "k_makeru",
+      "lesson": "N3.13",
+      "type": "kanji",
+      "surface": "負",
+      "on": "ふ",
+      "kun": "ま/お",
+      "reading": "ま",
+      "meaning": "lose / defeat / bear / owe",
+      "notes": "Kun: まける (to lose, be defeated — 負ける, ichidan), おう (to carry on one's back, to bear — 負う, godan). On: ふ in 勝負(しょうぶ, match/contest — 勝 N3.12), 負担(ふたん, burden — 担 not taught), 負傷(ふしょう, injury — 傷 not taught)."
+    },
+    {
+      "id": "k_gai",
+      "lesson": "N3.13",
+      "type": "kanji",
+      "surface": "害",
+      "on": "がい",
+      "kun": "",
+      "reading": "がい",
+      "meaning": "harm / damage / injury",
+      "notes": "On-reading only. 殺害(さつがい, killing — 殺 N3.11), 被害(ひがい, damage — 被 not taught, write ひ害), 害虫(がいちゅう, pest — 虫 not taught), 公害(こうがい, pollution — 公 N3.56), 害する (to harm). No common kun."
+    },
+    {
+      "id": "v_ushinau",
+      "surface": "失う",
+      "reading": "うしなう",
+      "meaning": "to lose / to part with",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.13",
+      "notes": "失 (N3.13). 命を失う = to lose one's life (命 N3.9). 自信を失う = to lose confidence (自信 uses 信 N3.43). Transitive. Distinct from 負ける (to be defeated in a contest)."
+    },
+    {
+      "id": "v_shippai",
+      "surface": "失敗",
+      "reading": "しっぱい",
+      "meaning": "failure / mistake / blunder",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.13",
+      "notes": "失 (N3.13) + 敗 (N3.13). 失敗する = to fail, to make a mistake. 失敗作 = a failed work/effort. Antonym: 成功 (せいこう — 功 not in curriculum, use in kana if needed)."
+    },
+    {
+      "id": "v_shitsurei",
+      "surface": "失礼",
+      "reading": "しつれい",
+      "meaning": "rudeness / excuse me / impolite",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "lesson_ids": "N3.13",
+      "matches": [
+        "失れい"
+      ],
+      "notes": "失 (N3.13) + 礼 (N3.54). Write as 失れい until N3.54. 失礼します = Excuse me (entering/leaving a room). 失礼な人 = a rude person. Essential polite expression."
+    },
+    {
+      "id": "v_makeru",
+      "surface": "負ける",
+      "reading": "まける",
+      "meaning": "to lose / to be defeated",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.13",
+      "notes": "負 (N3.13). 試合に負ける = to lose a match. 〜に負ける (に marks the opponent). Antonym: 勝つ (N3.12). Also figurative: 誘惑に負ける = to give in to temptation."
+    },
+    {
+      "id": "v_make",
+      "surface": "負け",
+      "reading": "まけ",
+      "meaning": "a loss / defeat",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.13",
+      "notes": "負 (N3.13). Noun form of 負ける. 負けを認める = to admit defeat (認 N3.50). Antonym: 勝ち (N3.12)."
+    },
+    {
+      "id": "v_ou",
+      "surface": "負う",
+      "reading": "おう",
+      "meaning": "to bear / to carry on one's back / to owe / to be responsible for",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.13",
+      "notes": "負 (N3.13). 責任を負う = to bear responsibility (責任 N3.74). 借金を負う = to owe a debt (借金 N4). Formal/written; rarely used in casual speech."
+    },
+    {
+      "id": "v_shoubu",
+      "surface": "勝負",
+      "reading": "しょうぶ",
+      "meaning": "match / contest / game / showdown",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.13",
+      "notes": "勝 (N3.12) + 負 (N3.13). 勝負する = to have a match / to compete. 真剣勝負 = a serious contest. 勝負がつく = a match is decided."
+    },
+    {
+      "id": "v_shouhai",
+      "surface": "勝敗",
+      "reading": "しょうはい",
+      "meaning": "victory or defeat / the outcome of a contest",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.13",
+      "notes": "勝 (N3.12) + 敗 (N3.13). 勝敗を決める = to decide the outcome. More formal than 勝負, focuses on win/loss outcome."
+    },
+    {
+      "id": "v_haiboku",
+      "surface": "敗北",
+      "reading": "はいぼく",
+      "meaning": "defeat / loss",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.13",
+      "notes": "敗 (N3.13) + 北 (N5.7). 敗北する = to be defeated. Formal/written register. Antonym: 勝利 (しょうり, 勝 N3.12 + 利 N3.41)."
+    },
+    {
+      "id": "v_gaisuru",
+      "surface": "害する",
+      "reading": "がいする",
+      "meaning": "to harm / to injure / to damage",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "irregular",
+      "lesson_ids": "N3.13",
+      "notes": "害 (N3.13). 健康を害する = to damage one's health (健康 N4). 気分を害する = to hurt someone's feelings. Formal; for casual, use 傷つける."
+    },
+    {
+      "id": "v_satsugai",
+      "surface": "殺害",
+      "reading": "さつがい",
+      "meaning": "killing / murder / slaying",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.13",
+      "notes": "殺 (N3.11) + 害 (N3.13). 殺害する = to kill/murder. More formal than 殺す; news/legal register."
     }
   ]
 }
