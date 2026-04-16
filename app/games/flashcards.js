@@ -24,6 +24,34 @@
   var skipNextStreak = false;
   var flagCounts = {};
   var activeFlags = {};
+  var kanjiBySurface = {};
+
+  function injectStyles() {
+    if (document.getElementById('jp-flashcards-style')) return;
+    var s = document.createElement('style');
+    s.id = 'jp-flashcards-style';
+    s.textContent =
+      '.vfc-kanji-meanings { display:flex; justify-content:center; gap:4px; margin-bottom:2px; }' +
+      '.vfc-km { min-width:2.4rem; font-size:0.7rem; color:#888; text-align:center; line-height:1.1; }' +
+      '.vfc-surface { display:flex; justify-content:center; gap:4px; font-family:"Noto Sans JP",sans-serif; font-size:2.4rem; font-weight:800; line-height:1.1; margin-bottom:4px; }' +
+      '.vfc-surface .vfc-ch { min-width:2.4rem; text-align:center; }' +
+      '.vfc-reading { text-align:center; font-size:1.4rem; color:#555; font-family:"Noto Sans JP",sans-serif; margin-bottom:15px; font-weight:600; }' +
+      '.vfc-meaning { text-align:center; font-weight:700; font-size:1.8rem; color:var(--primary); line-height:1.2; margin-bottom:10px; }';
+    document.head.appendChild(s);
+  }
+
+  function isKanjiChar(ch) {
+    if (!ch) return false;
+    var c = ch.charCodeAt(0);
+    return c >= 0x4E00 && c <= 0x9FFF;
+  }
+
+  function getKanjiMeaning(ch) {
+    var k = kanjiBySurface[ch];
+    if (!k || !k.meaning) return '';
+    var first = String(k.meaning).split(/[\/,]/)[0];
+    return first ? first.trim() : '';
+  }
 
   function setTxt(id, txt) {
     var el = document.getElementById(id);
@@ -266,8 +294,29 @@
     attachSpeakBtn('#k-fc-main .jp-speak-btn', speakText);
     setTxt('k-fc-sub', '');
 
-    var h = '<div style="text-align:center; font-weight:700; font-size:2rem; margin-bottom:10px; color:var(--primary); line-height:1.2;">' + esc(d.meaning) + '</div>';
-    h += '<div style="text-align:center; font-size:1.5rem; color:#555; font-family:\'Noto Sans JP\'; margin-bottom:15px;">' + esc(d.reading) + '</div>';
+    var surface = d.word || '';
+    var chars = Array.from(surface);
+    var hasKanji = chars.some(isKanjiChar);
+
+    var h = '';
+    if (hasKanji) {
+      var meaningRow = '<div class="vfc-kanji-meanings">';
+      var surfaceRow = '<div class="vfc-surface">';
+      chars.forEach(function (ch) {
+        if (isKanjiChar(ch)) {
+          meaningRow += '<span class="vfc-km">' + esc(getKanjiMeaning(ch)) + '</span>';
+          surfaceRow += '<span class="vfc-ch">' + esc(ch) + '</span>';
+        } else {
+          meaningRow += '<span class="vfc-km">&nbsp;</span>';
+          surfaceRow += '<span class="vfc-ch">' + esc(ch) + '</span>';
+        }
+      });
+      meaningRow += '</div>';
+      surfaceRow += '</div>';
+      h += meaningRow + surfaceRow;
+    }
+    h += '<div class="vfc-reading">' + esc(d.reading) + '</div>';
+    h += '<div class="vfc-meaning">' + esc(d.meaning) + '</div>';
     if (d.gtype) h += '<div style="display:inline-block; background:#eee; color:#555; font-size:0.8rem; font-weight:700; padding:4px 12px; border-radius:12px; text-transform:uppercase; margin-bottom:15px;">' + esc(d.gtype) + '</div>';
     if (d.notes) h += '<div style="margin-top:10px; padding:12px; background:#fff8e1; border-left:4px solid #ffca28; color:#5d4037; font-size:0.9rem; text-align:left; border-radius:4px; line-height:1.4;"><strong>Note:</strong> ' + esc(d.notes) + '</div>';
     var flags = flagCounts[d.word] || 0;
@@ -371,6 +420,7 @@
   // ---- Public API ----
   window.JPShared.flashcards = {
     init: function (containerEl, ctx) {
+      injectStyles();
       cfg = ctx;
       container = containerEl;
       curType = ctx.type;
@@ -380,6 +430,11 @@
 
       flagCounts = (window.JPShared.progress && window.JPShared.progress.getAllFlags()) || {};
       activeFlags = (window.JPShared.progress && window.JPShared.progress.getAllActiveFlags()) || {};
+
+      kanjiBySurface = {};
+      (cfg.DB.kanji || []).forEach(function (k) {
+        if (k && k.kanji) kanjiBySurface[k.kanji] = k;
+      });
 
       curSet = buildSet(curType, curMode, cfg.activeLessons, cfg.DB);
       if (curSet.length === 0) {
