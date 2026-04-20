@@ -15,7 +15,7 @@ Build the N3 level from the ground up: finalize the vocabulary roadmap, create a
 | Content type | Exists | Notes |
 |---|---|---|
 | Vocabulary roadmap | **Locked** | `N3-kanji-lesson-plan.md` — 86 lessons, 348 kanji |
-| Glossary | **In progress** | `glossary.N3.json` — 512 entries covering N3.1–N3.32. Chunks 1–3 approved, chunk 4a pending review |
+| Glossary | **In progress** | `glossary.N3.json` — 537 entries covering N3.1–N3.32 (incl. 25 fix entries from rescan). Chunks 1–3 approved, chunk 4a pending review |
 | Grammar (G32–G49) | 18/18 JSON files exist | **Empty stubs** (title + meta + sections:[]) — not built, contrary to previous note |
 | Content lessons | 0 | No N3.X lesson files |
 | Reviews | 0 | No review files |
@@ -42,6 +42,8 @@ Chunked into 8 batches with approval gates. See plan: `~/.claude/plans/fuzzy-roa
 | 8 | N3.71–N3.86 | 64 | ~220 est. | Not started |
 
 *N3.29 予 (k_yo_3) already existed from pre-flight — 23 new kanji, not 24.
+
+**Rescan fix entries (25 total):** After user caught 可愛い missing, full rescan of all chunks found 25 missed words. 18 vocab for N3 glossary + v_tairyoku in N4 glossary (体+力 both N4). + 7 RPG/game terms (必殺, 戦い, 戦力, 命中, 最強, 守備, 守備力). Matches[]-only game terms (攻撃, 回復, etc.) rejected by user. 留守 deferred to later lesson per user.
 
 ### Policies established during build-out
 

@@ -1643,6 +1643,16 @@
       "notes": "Kun: まもる (to protect — 守る), もり (guard, keeper — 留守番 るすばん). On: しゅ in 守備(しゅび, defense), す in 留守(るす, absence — 留 N3.58). お守り(おまもり) = protective charm/amulet."
     },
     {
+      "id": "v_meichuu",
+      "surface": "命中",
+      "reading": "めいちゅう",
+      "meaning": "hitting the mark; accuracy (in games)",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.9",
+      "notes": "命 (N3.9) + 中 (N5.2). RPG/game accuracy stat."
+    },
+    {
       "id": "k_nusumu",
       "lesson": "N3.11",
       "type": "kanji",
@@ -1791,6 +1801,26 @@
         "犯ざい"
       ],
       "notes": "犯 (N3.11) + 罪 (N3.55). Write as 犯ざい until N3.55. 犯罪を犯す = to commit a crime. 犯罪者 = criminal (者 N4). 犯罪率 = crime rate."
+    },
+    {
+      "id": "v_tatakai",
+      "surface": "戦い",
+      "reading": "たたかい",
+      "meaning": "battle; fight; struggle",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "Noun form of 戦う (N3.10)."
+    },
+    {
+      "id": "v_senryoku",
+      "surface": "戦力",
+      "reading": "せんりょく",
+      "meaning": "military strength; fighting power",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "戦 (N3.10) + 力 (N4.3). Also used as RPG stat."
     },
     {
       "id": "v_mimamoru",
@@ -1980,6 +2010,16 @@
       "verb_class": "ichidan",
       "lesson_ids": "N3.12",
       "notes": "得 (N3.12). Also read うる in literary/auxiliary usage (〜し得る = can do). 知識を得る = to gain knowledge (知識 N3.53). 経験を得る = to gain experience (経験 N3.73)."
+    },
+    {
+      "id": "v_hissatsu",
+      "surface": "必殺",
+      "reading": "ひっさつ",
+      "meaning": "certain kill; deadly; sure-fire",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.11",
+      "notes": "必 (N3.8) + 殺 (N3.11). Common in game contexts (必殺技)."
     },
     {
       "id": "v_tokui",
@@ -2631,6 +2671,16 @@
       "notes": "破 (N3.15). Intransitive pair of 破る. Distinct from 敗れる (to be defeated, 敗 N3.13) — same reading, different kanji. 紙が破れた = the paper got torn."
     },
     {
+      "id": "v_inshu",
+      "surface": "飲酒",
+      "reading": "いんしゅ",
+      "meaning": "drinking alcohol",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.14",
+      "notes": "飲 (N4.9) + 酒 (N3.14)"
+    },
+    {
       "id": "v_hasan",
       "surface": "破産",
       "reading": "はさん",
@@ -2766,6 +2816,16 @@
       "gtype": "noun",
       "lesson_ids": "N3.16",
       "notes": "更 (N3.16) + 新 (N4.31). 更新する = to renew / update. 記録を更新する = to break a record (記録 N3.51). パスワードを更新 = update password."
+    },
+    {
+      "id": "v_senchou",
+      "surface": "船長",
+      "reading": "せんちょう",
+      "meaning": "captain (of a ship)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.15",
+      "notes": "船 (N3.15) + 長 (N5.15)"
     },
     {
       "id": "v_yofukashi",
@@ -2985,6 +3045,36 @@
       "notes": "助 (N3.17). Transitive. 人を助ける = to help a person. 命を助ける = to save a life (命 N3.9). Antonym: 見殺しにする (let die, 見 N5 + 殺 N3.11)."
     },
     {
+      "id": "v_jiki",
+      "surface": "時期",
+      "reading": "じき",
+      "meaning": "time; period; season",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.16",
+      "notes": "時 (N5.7) + 期 (N3.16)"
+    },
+    {
+      "id": "v_shoki",
+      "surface": "初期",
+      "reading": "しょき",
+      "meaning": "early stage; initial period",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.16",
+      "notes": "初 (N3.3) + 期 (N3.16)"
+    },
+    {
+      "id": "v_saikyou",
+      "surface": "最強",
+      "reading": "さいきょう",
+      "meaning": "strongest; most powerful",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.16",
+      "notes": "最 (N3.16) + 強 (N4.20). RPG/game term."
+    },
+    {
       "id": "v_tasukaru",
       "surface": "助かる",
       "reading": "たすかる",
@@ -3175,6 +3265,26 @@
       "gtype": "noun",
       "lesson_ids": "N3.18",
       "notes": "実 (N3.18) + 行 (N5.6). 実行する = to carry out / execute. 計画を実行する = to execute a plan (計画 N4)."
+    },
+    {
+      "id": "v_shubi",
+      "surface": "守備",
+      "reading": "しゅび",
+      "meaning": "defense; fielding",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.17",
+      "notes": "守 (N3.11) + 備 (N3.17)"
+    },
+    {
+      "id": "v_shubiryoku",
+      "surface": "守備力",
+      "reading": "しゅびりょく",
+      "meaning": "defensive power; defense stat",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.17",
+      "notes": "守 (N3.11) + 備 (N3.17) + 力 (N4.3). RPG/game stat term."
     },
     {
       "id": "v_jikka",
@@ -3812,7 +3922,9 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N3.21",
-      "matches": ["呼きゅう"],
+      "matches": [
+        "呼きゅう"
+      ],
       "notes": "呼 (N3.21) + 吸 (N3.49 gap). 呼吸する = to breathe. 深呼吸 = deep breath."
     },
     {
@@ -4184,6 +4296,16 @@
       "notes": "他 (N3.24) + 人 (N5.1). Implies someone outside one's group. 他人のことを気にする = to worry about what others think."
     },
     {
+      "id": "v_taiiku",
+      "surface": "体育",
+      "reading": "たいいく",
+      "meaning": "physical education; PE; athletics",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.23",
+      "notes": "体 (N4.6) + 育 (N3.23)"
+    },
+    {
       "id": "v_niru",
       "surface": "似る",
       "reading": "にる",
@@ -4223,7 +4345,9 @@
       "type": "vocab",
       "gtype": "adverb",
       "lesson_ids": "N3.24",
-      "matches": ["偶ぜん"],
+      "matches": [
+        "偶ぜん"
+      ],
       "notes": "偶 (N3.24) + 然 (N3.84 gap). 偶然に会った = I ran into them by chance. Also functions as na-adj: 偶然な出来事."
     },
     {
@@ -4244,7 +4368,9 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N3.24",
-      "matches": ["しゅるい"],
+      "matches": [
+        "しゅるい"
+      ],
       "notes": "種 (N3.67 gap) + 類 (N3.24). 種 comes first and is untaught → full kana. 色々な種類 = various types."
     },
     {
@@ -4302,6 +4428,16 @@
       "notes": "目 (N5.18) + 的 (N3.25). 目的を達成する = to achieve a goal. 目的地 = destination."
     },
     {
+      "id": "v_shorui",
+      "surface": "書類",
+      "reading": "しょるい",
+      "meaning": "documents; paperwork",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.24",
+      "notes": "書 (N5.8) + 類 (N3.24)"
+    },
+    {
       "id": "v_gutaiteki",
       "surface": "具体的",
       "reading": "ぐたいてき",
@@ -4310,7 +4446,9 @@
       "gtype": "na-adj",
       "verb_class": "na_adj",
       "lesson_ids": "N3.28",
-      "matches": ["ぐたいてき"],
+      "matches": [
+        "ぐたいてき"
+      ],
       "notes": "具 (N3.28) + 体 (N4.12) + 的 (N3.25). 具 not taught until N3.28; comes first → full kana until then. 具体的な例 = a concrete example."
     },
     {
@@ -4363,7 +4501,9 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N3.25",
-      "matches": ["責にん"],
+      "matches": [
+        "責にん"
+      ],
       "notes": "責 (N3.25) + 任 (N3.74 gap). 責任を取る = to take responsibility. 責任感 = sense of responsibility."
     },
     {
@@ -4395,7 +4535,9 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N3.25",
-      "matches": ["欠てん"],
+      "matches": [
+        "欠てん"
+      ],
       "notes": "欠 (N3.25) + 点 (N3.83 gap). 欠点を認める = to admit one's flaws. Antonym: 長所(ちょうしょ, strong point)."
     },
     {
@@ -4670,6 +4812,28 @@
       "notes": "Kun: しりぞく (to retreat/step back, intrans), しりぞける (to repel, trans). On: タイ in 退院(たいいん, leaving hospital — 院 N4.15 ✓), 退学(たいがく, dropping out — 学 N5.3 ✓)."
     },
     {
+      "id": "v_tsukiau",
+      "surface": "付き合う",
+      "reading": "つきあう",
+      "meaning": "to associate with; to go out with; to keep company",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_u",
+      "lesson_ids": "N3.26",
+      "notes": "付 (N3.26) + 合 (N4.21)"
+    },
+    {
+      "id": "v_mitsukeru",
+      "surface": "見付ける",
+      "reading": "みつける",
+      "meaning": "to find; to discover",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.26",
+      "notes": "見 (N5.12) + 付 (N3.26). Vocab debt from N4 stories (furima-no-hi)."
+    },
+    {
       "id": "k_hen",
       "lesson": "N3.27",
       "type": "kanji",
@@ -4818,6 +4982,16 @@
       "notes": "Kun: ねる (to sleep/go to bed), ねかす (to put to bed). On: シン in 寝室(しんしつ, bedroom — 室 N4.16 ✓). The main everyday kanji for sleeping."
     },
     {
+      "id": "v_intai",
+      "surface": "引退",
+      "reading": "いんたい",
+      "meaning": "retirement (from a position or career)",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.27",
+      "notes": "引 (N4.24) + 退 (N3.27)"
+    },
+    {
       "id": "k_gu",
       "lesson": "N3.28",
       "type": "kanji",
@@ -4899,6 +5073,26 @@
       "gtype": "noun",
       "lesson_ids": "N3.28",
       "notes": "箱 (N3.28). Fills vocab-debt: was used as untagged kana in furima-no-hi (N4 story). 箱を開ける = to open a box. ゴミ箱 = trash can."
+    },
+    {
+      "id": "v_kagu",
+      "surface": "家具",
+      "reading": "かぐ",
+      "meaning": "furniture",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.28",
+      "notes": "家 (N4.12) + 具 (N3.28)"
+    },
+    {
+      "id": "v_hirune",
+      "surface": "昼寝",
+      "reading": "ひるね",
+      "meaning": "nap; afternoon nap",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.28",
+      "notes": "昼 (N4.23) + 寝 (N3.28)"
     },
     {
       "id": "k_dan",
@@ -5016,6 +5210,16 @@
       "gtype": "noun",
       "lesson_ids": "N3.29",
       "notes": "安 (N4.28) + 定 (N3.29). 安定している = is stable. 安定した生活 = a stable life."
+    },
+    {
+      "id": "v_ittei",
+      "surface": "一定",
+      "reading": "いってい",
+      "meaning": "fixed / constant / certain / regular",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.29",
+      "notes": "一 (N5.7) + 定 (N3.29). 一定の条件 = fixed conditions. 一定している = is constant/steady."
     },
     {
       "id": "k_do_2",
@@ -5145,6 +5349,26 @@
       "notes": "怖 (N3.30). Kanji form of こわい. 怖い話 = a scary story. 怖がる = to be scared of."
     },
     {
+      "id": "v_kanashimi",
+      "surface": "悲しみ",
+      "reading": "かなしみ",
+      "meaning": "sadness / sorrow / grief",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.30",
+      "notes": "悲 (N3.30). Noun form of 悲しい. 悲しみに暮れる = to be overcome with grief."
+    },
+    {
+      "id": "v_osore",
+      "surface": "恐れ",
+      "reading": "おそれ",
+      "meaning": "fear / concern / risk / possibility",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.30",
+      "notes": "恐 (N3.30). Noun form of 恐れる. 恐れがある = there is a risk/concern that. 恐れなく = fearlessly."
+    },
+    {
       "id": "k_yorokobu",
       "lesson": "N3.31",
       "type": "kanji",
@@ -5269,7 +5493,27 @@
       "gtype": "na-adj",
       "verb_class": "na_adj",
       "lesson_ids": "N3.31",
-      "notes": "夢 (N3.31) + 中 (N5.6). 夢中になる = to become absorbed. ゲーム���夢中 = crazy about games."
+      "notes": "夢 (N3.31) + 中 (N5.6). 夢中になる = to become absorbed. ゲームに夢中 = crazy about games."
+    },
+    {
+      "id": "v_kawaii_2",
+      "surface": "可愛い",
+      "reading": "かわいい",
+      "meaning": "cute / adorable / lovable",
+      "type": "vocab",
+      "gtype": "i-adj",
+      "lesson_ids": "N3.31",
+      "notes": "可 (N3.8) + 愛 (N3.31). Kanji form of かわいい. Ateji (kanji chosen for sound, not meaning). 可愛い猫 = a cute cat."
+    },
+    {
+      "id": "v_kouun",
+      "surface": "幸運",
+      "reading": "こううん",
+      "meaning": "good luck / good fortune",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.31",
+      "notes": "幸 (N3.31) + 運 (N4.6). 幸運を祈る = to wish good luck. 幸運な人 = a lucky person. Antonym: 不運(ふうん)."
     },
     {
       "id": "k_jou",
@@ -5395,6 +5639,26 @@
       "gtype": "noun",
       "lesson_ids": "N3.32",
       "notes": "恥 (N3.32). 恥をかく = to be put to shame. 恥知らず = shameless."
+    },
+    {
+      "id": "v_kankaku",
+      "surface": "感覚",
+      "reading": "かんかく",
+      "meaning": "sense / feeling / sensation",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.32",
+      "notes": "感 (N3.32) + 覚 (N3.1). 感覚が鈍い = senses are dull. 時間の感覚 = sense of time."
+    },
+    {
+      "id": "v_aijou",
+      "surface": "愛情",
+      "reading": "あいじょう",
+      "meaning": "love / affection / attachment",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.32",
+      "notes": "愛 (N3.31) + 情 (N3.32). 愛情を注ぐ = to pour affection into. 愛情深い = deeply affectionate."
     }
   ]
 }

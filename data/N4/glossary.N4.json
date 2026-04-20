@@ -255,7 +255,9 @@
       "meaning": "to make",
       "type": "vocab",
       "gtype": "verb",
-      "matches": ["作られて"],
+      "matches": [
+        "作られて"
+      ],
       "notes": "",
       "lesson_ids": "N4.1",
       "reading": "つくる",
@@ -917,7 +919,9 @@
       "notes": "Used in the comparison construction AのほうがBより (A is more ... than B). Indicates one side or option being compared. Written in hiragana (ほう) until 方 kanji is taught (N4.26).",
       "lesson_ids": "N4.5",
       "reading": "のほう",
-      "matches": ["ほう"]
+      "matches": [
+        "ほう"
+      ]
     },
     {
       "id": "v_mitai",
@@ -1088,6 +1092,16 @@
       "notes": "",
       "lesson_ids": "N4.6",
       "reading": "とりにく"
+    },
+    {
+      "id": "v_tairyoku",
+      "surface": "体力",
+      "reading": "たいりょく",
+      "meaning": "physical strength; stamina",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N4.6",
+      "notes": "体 (N4.6) + 力 (N4.3). Also used as RPG/game stat."
     },
     {
       "id": "k_ane",
@@ -1266,7 +1280,12 @@
       "verb_class": "godan",
       "lesson_ids": "N4.7",
       "notes": "Honorific counterpart of くれる. Used when a social superior (teacher, senior, boss) does something for you or gives you something. Te-form: くださって. Polite: くださいます (irregular ます-form).",
-      "matches": ["くださる", "くださいます", "くださいません", "くださいました"]
+      "matches": [
+        "くださる",
+        "くださいます",
+        "くださいません",
+        "くださいました"
+      ]
     },
     {
       "id": "k_aki",
@@ -1631,7 +1650,9 @@
       "meaning": "to live",
       "type": "vocab",
       "gtype": "verb",
-      "matches": ["住みやすく"],
+      "matches": [
+        "住みやすく"
+      ],
       "notes": "",
       "lesson_ids": "N4.9",
       "reading": "すむ",
@@ -1783,7 +1804,9 @@
       "notes": "",
       "lesson_ids": "N4.10",
       "reading": "え",
-      "matches": ["え"]
+      "matches": [
+        "え"
+      ]
     },
     {
       "id": "v_gaka",
@@ -1847,7 +1870,9 @@
       "notes": "Used as the noun in ために (in order to / for the sake of). The kanji 為 is not in the taught set; always write in hiragana as ため. In jp fields tag as v_tame when the token ため appears before に as a purpose connector.",
       "lesson_ids": "N4.10",
       "reading": "ため",
-      "matches": ["ため"]
+      "matches": [
+        "ため"
+      ]
     },
     {
       "id": "v_america",
@@ -2077,7 +2102,9 @@
       "lesson_ids": "N4.11",
       "reading": "とる",
       "verb_class": "godan",
-      "matches": ["とる"]
+      "matches": [
+        "とる"
+      ]
     },
     {
       "id": "k_atama",
@@ -2659,7 +2686,9 @@
       "lesson_ids": "N4.14",
       "reading": "おく",
       "verb_class": "godan",
-      "matches": ["置く"]
+      "matches": [
+        "置く"
+      ]
     },
     {
       "id": "v_shimau",
@@ -3103,7 +3132,9 @@
       "meaning": "to carry / to transport",
       "type": "vocab",
       "gtype": "verb",
-      "matches": ["運ばれて"],
+      "matches": [
+        "運ばれて"
+      ],
       "notes": "",
       "lesson_ids": "N4.16",
       "reading": "はこぶ",
@@ -3272,7 +3303,9 @@
       "gtype": "adverb",
       "lesson_ids": "G21",
       "notes": "Discourse restructuring marker. Signals that what follows may contradict expectations or reveal something new. 実 unlocks at N3.18; both じつは and 実は tag to this entry via matches[].",
-      "matches": ["実は"]
+      "matches": [
+        "実は"
+      ]
     },
     {
       "id": "v_tsumari",
@@ -3313,7 +3346,11 @@
       "gtype": "set-phrase",
       "lesson_ids": "G21",
       "notes": "Used as an aizuchi to emphasise that the listener is paying close attention. ほんとうに！ = 'Really!' / ほんとう？ = 'Is that so?' Kanji form 本当に — 当 is not introduced in this curriculum; always write as ほんとうに.",
-      "matches": ["本当に", "ほんとう", "本当"]
+      "matches": [
+        "本当に",
+        "ほんとう",
+        "本当"
+      ]
     },
     {
       "id": "v_omoide",
@@ -3488,7 +3525,9 @@
     {
       "id": "v_muzukashii",
       "surface": "難しい",
-      "matches": ["むずかしい"],
+      "matches": [
+        "むずかしい"
+      ],
       "reading": "むずかしい",
       "meaning": "difficult",
       "type": "vocab",
@@ -7474,7 +7513,9 @@
       "type": "vocab",
       "gtype": "adjective_i",
       "verb_class": "i_adj",
-      "matches": ["不味すぎた"],
+      "matches": [
+        "不味すぎた"
+      ],
       "lesson_ids": "N4.36",
       "notes": "Compounds: 不 (N4.36) + 味 (N4.6). Also used figuratively for awkward situations."
     },
@@ -7548,7 +7589,10 @@
       "gtype": "verb",
       "verb_class": "ichidan",
       "lesson_ids": "N4.31",
-      "matches": ["聞こえる", "きこえる"],
+      "matches": [
+        "聞こえる",
+        "きこえる"
+      ],
       "notes": "Intransitive verb meaning 'to be heard / to be audible'. Unlike 聞く (to listen), 聞こえる describes sounds that reach the listener naturally."
     },
     {
@@ -7560,7 +7604,9 @@
       "gtype": "verb",
       "verb_class": "godan",
       "lesson_ids": "N4.17",
-      "matches": ["おどろく"],
+      "matches": [
+        "おどろく"
+      ],
       "notes": "Godan verb. Kanji 驚く not taught until N1, so written in hiragana."
     }
   ]
