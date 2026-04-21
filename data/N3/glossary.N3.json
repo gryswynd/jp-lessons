@@ -8879,6 +8879,714 @@
         "探けん"
       ],
       "notes": "探 (N3.48) + 検 (not taught). Managed kana gap."
+    },
+    {
+      "id": "k_suu",
+      "lesson": "N3.49",
+      "type": "kanji",
+      "surface": "吸",
+      "on": "キュウ",
+      "kun": "す.う",
+      "reading": "すう",
+      "meaning": "inhale / suck / breathe in",
+      "notes": "吸う (inhale/smoke). Compounds: 呼吸 (breathing), 吸収 (absorption)."
+    },
+    {
+      "id": "k_fuku_3",
+      "lesson": "N3.49",
+      "type": "kanji",
+      "surface": "吹",
+      "on": "スイ",
+      "kun": "ふ.く",
+      "reading": "ふく",
+      "meaning": "blow / play (instrument)",
+      "notes": "吹く (blow), 吹雪 (blizzard). Also: play wind instruments."
+    },
+    {
+      "id": "k_harau",
+      "lesson": "N3.49",
+      "type": "kanji",
+      "surface": "払",
+      "on": "フツ",
+      "kun": "はら.う",
+      "reading": "はらう",
+      "meaning": "pay / sweep away / brush off",
+      "notes": "払う (pay/sweep). Compounds: 支払い (payment)."
+    },
+    {
+      "id": "k_shimeru",
+      "lesson": "N3.49",
+      "type": "kanji",
+      "surface": "閉",
+      "on": "ヘイ",
+      "kun": "し.める・と.じる・し.まる",
+      "reading": "しめる",
+      "meaning": "close / shut",
+      "notes": "閉める (close-transitive), 閉まる (close-intransitive), 閉じる (shut). Compounds: 閉店."
+    },
+    {
+      "id": "v_suu",
+      "surface": "吸う",
+      "reading": "すう",
+      "meaning": "to inhale / to breathe in / to smoke",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_u",
+      "lesson_ids": "N3.49",
+      "notes": "吸 (N3.49). たばこを吸う = to smoke a cigarette."
+    },
+    {
+      "id": "v_kyuushuu",
+      "surface": "吸収",
+      "reading": "きゅうしゅう",
+      "meaning": "absorption / intake",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.49",
+      "notes": "吸 (N3.49) + 収 (N3.41)."
+    },
+    {
+      "id": "v_fuku",
+      "surface": "吹く",
+      "reading": "ふく",
+      "meaning": "to blow / to play (wind instrument)",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ku",
+      "lesson_ids": "N3.49",
+      "notes": "吹 (N3.49). 風が吹く = the wind blows."
+    },
+    {
+      "id": "v_fukidasu",
+      "surface": "吹き出す",
+      "reading": "ふきだす",
+      "meaning": "to burst out (laughing) / to spout",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.49",
+      "notes": "吹 (N3.49) + 出 (N5.15). Compound verb."
+    },
+    {
+      "id": "v_harau",
+      "surface": "払う",
+      "reading": "はらう",
+      "meaning": "to pay / to brush off / to sweep away",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_u",
+      "lesson_ids": "N3.49",
+      "notes": "払 (N3.49). お金を払う = to pay money."
+    },
+    {
+      "id": "v_shimeru",
+      "surface": "閉める",
+      "reading": "しめる",
+      "meaning": "to close / to shut (transitive)",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.49",
+      "notes": "閉 (N3.49). Transitive pair: 閉まる."
+    },
+    {
+      "id": "v_shimaru",
+      "surface": "閉まる",
+      "reading": "しまる",
+      "meaning": "to close / to be shut (intransitive)",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.49",
+      "notes": "閉 (N3.49). Intransitive pair: 閉める."
+    },
+    {
+      "id": "v_tojiru",
+      "surface": "閉じる",
+      "reading": "とじる",
+      "meaning": "to close / to shut (eyes, book, file)",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.49",
+      "notes": "閉 (N3.49). 目を閉じる = to close one's eyes."
+    },
+    {
+      "id": "v_heiten",
+      "surface": "閉店",
+      "reading": "へいてん",
+      "meaning": "shop closing / store closure",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.49",
+      "notes": "閉 (N3.49) + 店 (N5.5)."
+    },
+    {
+      "id": "k_kaku_2",
+      "lesson": "N3.50",
+      "type": "kanji",
+      "surface": "確",
+      "on": "カク",
+      "kun": "たし.か・たし.かめる",
+      "reading": "たしか",
+      "meaning": "certain / sure / confirm",
+      "notes": "確か (certain), 確かめる (verify). Compounds: 確認, 確実, 確信, 正確."
+    },
+    {
+      "id": "k_nin",
+      "lesson": "N3.50",
+      "type": "kanji",
+      "surface": "認",
+      "on": "ニン",
+      "kun": "みと.める",
+      "reading": "みとめる",
+      "meaning": "recognize / acknowledge / approve",
+      "notes": "認める (admit/recognize). Compounds: 確認, 認識."
+    },
+    {
+      "id": "k_chou",
+      "lesson": "N3.50",
+      "type": "kanji",
+      "surface": "調",
+      "on": "チョウ",
+      "kun": "しら.べる・ととの.える",
+      "reading": "しらべる",
+      "meaning": "investigate / check / tune / prepare",
+      "notes": "調べる (investigate), 調子 (condition). Compounds: 強調, 調整."
+    },
+    {
+      "id": "k_shimesu",
+      "lesson": "N3.50",
+      "type": "kanji",
+      "surface": "示",
+      "on": "ジ・シ",
+      "kun": "しめ.す",
+      "reading": "しめす",
+      "meaning": "show / indicate / point out",
+      "notes": "示す (show/indicate). Compounds: 指示 (instruction), 表示 (display)."
+    },
+    {
+      "id": "v_kakunin",
+      "surface": "確認",
+      "reading": "かくにん",
+      "meaning": "confirmation / verification",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.50",
+      "notes": "確 (N3.50) + 認 (N3.50). Intra-lesson pair."
+    },
+    {
+      "id": "v_tashika",
+      "surface": "確か",
+      "reading": "たしか",
+      "meaning": "certain / sure / if I recall correctly",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "lesson_ids": "N3.50",
+      "notes": "確 (N3.50)."
+    },
+    {
+      "id": "v_tashikameru",
+      "surface": "確かめる",
+      "reading": "たしかめる",
+      "meaning": "to make sure / to verify / to confirm",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.50",
+      "notes": "確 (N3.50)."
+    },
+    {
+      "id": "v_kakushin",
+      "surface": "確信",
+      "reading": "かくしん",
+      "meaning": "conviction / firm belief / confidence",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.50",
+      "notes": "確 (N3.50) + 信 (N3.43)."
+    },
+    {
+      "id": "v_kakujitsu",
+      "surface": "確実",
+      "reading": "かくじつ",
+      "meaning": "reliable / definite / certain",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "lesson_ids": "N3.50",
+      "notes": "確 (N3.50) + 実 (N3.18)."
+    },
+    {
+      "id": "v_kakutei",
+      "surface": "確定",
+      "reading": "かくてい",
+      "meaning": "decision / settlement / finalization",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.50",
+      "notes": "確 (N3.50) + 定 (N3.29)."
+    },
+    {
+      "id": "v_seikaku",
+      "surface": "正確",
+      "reading": "せいかく",
+      "meaning": "accurate / precise / exact",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "lesson_ids": "N3.50",
+      "notes": "正 (N4.26) + 確 (N3.50)."
+    },
+    {
+      "id": "v_mitomeru",
+      "surface": "認める",
+      "reading": "みとめる",
+      "meaning": "to recognize / to admit / to approve",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.50",
+      "notes": "認 (N3.50)."
+    },
+    {
+      "id": "v_shiraberu",
+      "surface": "調べる",
+      "reading": "しらべる",
+      "meaning": "to investigate / to examine / to look up",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.50",
+      "notes": "調 (N3.50)."
+    },
+    {
+      "id": "v_choushi",
+      "surface": "調子",
+      "reading": "ちょうし",
+      "meaning": "condition / state / tone / tune",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.50",
+      "notes": "調 (N3.50) + 子 (N5.2)."
+    },
+    {
+      "id": "v_kyouchou",
+      "surface": "強調",
+      "reading": "きょうちょう",
+      "meaning": "emphasis / stress",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.50",
+      "notes": "強 (N4.18) + 調 (N3.50)."
+    },
+    {
+      "id": "v_shimesu",
+      "surface": "示す",
+      "reading": "しめす",
+      "meaning": "to show / to indicate / to demonstrate",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.50",
+      "notes": "示 (N3.50)."
+    },
+    {
+      "id": "v_ppoi",
+      "surface": "っぽい",
+      "reading": "っぽい",
+      "meaning": "-ish / -like / tending to (suffix)",
+      "type": "vocab",
+      "gtype": "suffix",
+      "lesson_ids": "N3.50",
+      "notes": "G44 suffix. Attaches to nouns/verb stems: 忘れっぽい (forgetful), 子供っぽい (childish)."
+    },
+    {
+      "id": "v_gachi",
+      "surface": "がち",
+      "reading": "がち",
+      "meaning": "prone to / apt to / tending to (suffix)",
+      "type": "vocab",
+      "gtype": "suffix",
+      "lesson_ids": "N3.50",
+      "notes": "G44 suffix. Attaches to nouns/verb stems: 休みがち (often absent), 遅れがち (tends to be late)."
+    },
+    {
+      "id": "v_kimi_2",
+      "surface": "気味",
+      "reading": "きみ",
+      "meaning": "touch / tinge / slight tendency (suffix)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.50",
+      "notes": "気 (N5.10) + 味 (N4.6). G44 suffix. 風邪気味 = feeling a bit like a cold."
+    },
+    {
+      "id": "v_yaka",
+      "surface": "やか",
+      "reading": "やか",
+      "meaning": "-ful / -ly / elegant (suffix)",
+      "type": "vocab",
+      "gtype": "suffix",
+      "lesson_ids": "N3.50",
+      "notes": "G44 suffix. Creates na-adjectives: 穏やか (calm), 華やか (gorgeous), 鮮やか (vivid)."
+    },
+    {
+      "id": "k_ki_8",
+      "lesson": "N3.51",
+      "type": "kanji",
+      "surface": "記",
+      "on": "キ",
+      "kun": "しる.す",
+      "reading": "き",
+      "meaning": "record / note / write down",
+      "notes": "記す (write down). Compounds: 記録, 記事, 日記, 記者, 記入."
+    },
+    {
+      "id": "k_hyou",
+      "lesson": "N3.51",
+      "type": "kanji",
+      "surface": "表",
+      "on": "ヒョウ",
+      "kun": "おもて・あらわ.す・あらわ.れる",
+      "reading": "おもて",
+      "meaning": "surface / table / express / represent",
+      "notes": "表(table/surface), 表す(express). Compounds: 表現, 表示, 表情, 発表."
+    },
+    {
+      "id": "k_kai_3",
+      "lesson": "N3.51",
+      "type": "kanji",
+      "surface": "解",
+      "on": "カイ・ゲ",
+      "kun": "と.く・と.ける",
+      "reading": "かい",
+      "meaning": "solve / untie / understand / explain",
+      "notes": "解く(solve), 解ける(come undone). Compounds: 理解, 解決, 誤解, 解放."
+    },
+    {
+      "id": "k_kan_4",
+      "lesson": "N3.51",
+      "type": "kanji",
+      "surface": "観",
+      "on": "カン",
+      "kun": "み.る",
+      "reading": "かん",
+      "meaning": "view / observe / outlook",
+      "notes": "観る(watch-literary). Compounds: 観光(sightseeing), 観客(audience)."
+    },
+    {
+      "id": "v_kiroku",
+      "surface": "記録",
+      "reading": "きろく",
+      "meaning": "record / documentation",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.51",
+      "matches": [
+        "記ろく"
+      ],
+      "notes": "記 (N3.51) + 録 (not taught). Managed kana gap. [FREE] compound."
+    },
+    {
+      "id": "v_kiji",
+      "surface": "記事",
+      "reading": "きじ",
+      "meaning": "article / news story / report",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.51",
+      "notes": "記 (N3.51) + 事 (N4.14)."
+    },
+    {
+      "id": "v_nikki",
+      "surface": "日記",
+      "reading": "にっき",
+      "meaning": "diary / journal",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.51",
+      "notes": "日 (N5.2) + 記 (N3.51)."
+    },
+    {
+      "id": "v_kisha",
+      "surface": "記者",
+      "reading": "きしゃ",
+      "meaning": "journalist / reporter",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.51",
+      "notes": "記 (N3.51) + 者 (N4.15)."
+    },
+    {
+      "id": "v_kinyuu",
+      "surface": "記入",
+      "reading": "きにゅう",
+      "meaning": "entry / filling in (a form)",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.51",
+      "notes": "記 (N3.51) + 入 (N5.17)."
+    },
+    {
+      "id": "v_arawasu_2",
+      "surface": "表す",
+      "reading": "あらわす",
+      "meaning": "to express / to represent / to show",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.51",
+      "notes": "表 (N3.51). Distinct from 現す (k_arawasu, appear)."
+    },
+    {
+      "id": "v_hyougen",
+      "surface": "表現",
+      "reading": "ひょうげん",
+      "meaning": "expression / representation",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.51",
+      "notes": "表 (N3.51) + 現 (N3.35)."
+    },
+    {
+      "id": "v_hyouji",
+      "surface": "表示",
+      "reading": "ひょうじ",
+      "meaning": "display / indication / showing",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.51",
+      "notes": "表 (N3.51) + 示 (N3.50)."
+    },
+    {
+      "id": "v_hyoujou",
+      "surface": "表情",
+      "reading": "ひょうじょう",
+      "meaning": "facial expression / look",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.51",
+      "notes": "表 (N3.51) + 情 (N3.32)."
+    },
+    {
+      "id": "v_happyou",
+      "surface": "発表",
+      "reading": "はっぴょう",
+      "meaning": "announcement / presentation / publication",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.51",
+      "notes": "発 (N4.34) + 表 (N3.51)."
+    },
+    {
+      "id": "v_rikai",
+      "surface": "理解",
+      "reading": "りかい",
+      "meaning": "understanding / comprehension",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.51",
+      "notes": "理 (N4.5) + 解 (N3.51). [FREE] compound."
+    },
+    {
+      "id": "v_kaiketsu",
+      "surface": "解決",
+      "reading": "かいけつ",
+      "meaning": "solution / resolution / settlement",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.51",
+      "notes": "解 (N3.51) + 決 (N3.29)."
+    },
+    {
+      "id": "v_kankou",
+      "surface": "観光",
+      "reading": "かんこう",
+      "meaning": "sightseeing / tourism",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.51",
+      "notes": "観 (N3.51) + 光 (N4.18). [FREE] compound."
+    },
+    {
+      "id": "k_tsutaeru",
+      "lesson": "N3.52",
+      "type": "kanji",
+      "surface": "伝",
+      "on": "デン",
+      "kun": "つた.える・つた.わる",
+      "reading": "つたえる",
+      "meaning": "convey / transmit / tradition",
+      "notes": "伝える(convey), 伝わる(be conveyed). Compounds: 手伝う, 伝言, 伝��."
+    },
+    {
+      "id": "k_tsugeru",
+      "lesson": "N3.52",
+      "type": "kanji",
+      "surface": "告",
+      "on": "コク",
+      "kun": "つ.げる",
+      "reading": "つげる",
+      "meaning": "tell / inform / announce",
+      "notes": "告げる(tell/inform). Compounds: 報告, 広告, 告白."
+    },
+    {
+      "id": "k_hou_3",
+      "lesson": "N3.52",
+      "type": "kanji",
+      "surface": "報",
+      "on": "ホウ",
+      "kun": "むく.いる",
+      "reading": "ほう",
+      "meaning": "report / news / reward",
+      "notes": "Compounds: 報告(report), 情報(information), 報道(news reporting)."
+    },
+    {
+      "id": "k_ayamaru",
+      "lesson": "N3.52",
+      "type": "kanji",
+      "surface": "誤",
+      "on": "ゴ",
+      "kun": "あやま.る",
+      "reading": "あやまる",
+      "meaning": "mistake / err / mislead",
+      "notes": "誤る(to err), 誤り(error). Compounds: 誤解(misunderstanding)."
+    },
+    {
+      "id": "v_tsutaeru",
+      "surface": "伝える",
+      "reading": "つたえる",
+      "meaning": "to convey / to communicate / to tell",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.52",
+      "notes": "伝 (N3.52)."
+    },
+    {
+      "id": "v_tsutawaru",
+      "surface": "伝わる",
+      "reading": "つたわる",
+      "meaning": "to be conveyed / to spread / to be transmitted",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.52",
+      "notes": "伝 (N3.52). Intransitive pair of 伝える."
+    },
+    {
+      "id": "v_tetsudau",
+      "surface": "手伝う",
+      "reading": "てつだう",
+      "meaning": "to help / to assist",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_u",
+      "lesson_ids": "N3.52",
+      "notes": "手 (N5.13) + 伝 (N3.52). Very common compound verb."
+    },
+    {
+      "id": "v_dengon",
+      "surface": "伝言",
+      "reading": "でんごん",
+      "meaning": "message / verbal message",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.52",
+      "notes": "伝 (N3.52) + 言 (N5.13)."
+    },
+    {
+      "id": "v_dentou",
+      "surface": "伝統",
+      "reading": "でんとう",
+      "meaning": "tradition",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.52",
+      "matches": [
+        "���とう"
+      ],
+      "notes": "伝 (N3.52) + 統 (not taught). Managed kana gap."
+    },
+    {
+      "id": "v_tsugeru",
+      "surface": "告げる",
+      "reading": "つげる",
+      "meaning": "to tell / to inform / to announce",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.52",
+      "notes": "告 (N3.52)."
+    },
+    {
+      "id": "v_kokuhaku",
+      "surface": "告白",
+      "reading": "こくはく",
+      "meaning": "confession / avowal",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.52",
+      "notes": "告 (N3.52) + 白 (N5.14)."
+    },
+    {
+      "id": "v_koukoku",
+      "surface": "広告",
+      "reading": "こうこく",
+      "meaning": "advertisement / ad",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.52",
+      "notes": "広 (N4.33) + 告 (N3.52)."
+    },
+    {
+      "id": "v_houkoku",
+      "surface": "報告",
+      "reading": "ほうこく",
+      "meaning": "report / reporting",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.52",
+      "notes": "報 (N3.52) + 告 (N3.52). Intra-lesson pair."
+    },
+    {
+      "id": "v_jouhou",
+      "surface": "情報",
+      "reading": "じょうほう",
+      "meaning": "information / news / intelligence",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.52",
+      "notes": "情 (N3.32) + 報 (N3.52)."
+    },
+    {
+      "id": "v_houdou",
+      "surface": "報道",
+      "reading": "ほうどう",
+      "meaning": "news reporting / press coverage",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.52",
+      "notes": "報 (N3.52) + 道 (N5.6)."
+    },
+    {
+      "id": "v_gokai",
+      "surface": "誤解",
+      "reading": "ごかい",
+      "meaning": "misunderstanding / misconception",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.52",
+      "notes": "誤 (N3.52) + 解 (N3.51)."
+    },
+    {
+      "id": "v_ayamari",
+      "surface": "誤り",
+      "reading": "あやまり",
+      "meaning": "error / mistake / fault",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.52",
+      "notes": "誤 (N3.52). Noun form of 誤る."
     }
   ]
 }
