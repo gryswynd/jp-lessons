@@ -15,7 +15,7 @@ Build the N3 level from the ground up: finalize the vocabulary roadmap, create a
 | Content type | Exists | Notes |
 |---|---|---|
 | Vocabulary roadmap | **Locked** | `N3-kanji-lesson-plan.md` — 86 lessons, 348 kanji |
-| Glossary | **In progress** | `glossary.N3.json` — 695 entries covering N3.1–N3.40. Chunks 1–5a approved |
+| Glossary | **In progress** | `glossary.N3.json` — 767 entries covering N3.1–N3.44. Chunks 1–5b approved |
 | Grammar (G32–G49) | 18/18 JSON files exist | **Empty stubs** (title + meta + sections:[]) — not built, contrary to previous note |
 | Content lessons | 0 | No N3.X lesson files |
 | Reviews | 0 | No review files |
@@ -37,7 +37,7 @@ Chunked into 8 batches with approval gates. See plan: `~/.claude/plans/fuzzy-roa
 | 4a | N3.27–N3.32 | 24* | 87 (24k + 63v) | Approved |
 | 4b | N3.33–N3.36 | 16 | 82 (16k + 66v) | Approved |
 | 5a | N3.37–N3.40 | 16 | 77 (16k + 61v) | Approved |
-| 5b | N3.41–N3.44 | 16 | ~55 est. | Not started |
+| 5b | N3.41–N3.44 | 16 | 72 (16k + 56v) | Approved |
 | 6 | N3.45–N3.55 | 47 | ~165 est. | Not started |
 | 7 | N3.56–N3.70 | 61 | ~210 est. | Not started |
 | 8 | N3.71–N3.86 | 64 | ~220 est. | Not started |
