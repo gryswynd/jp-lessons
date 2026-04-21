@@ -181,7 +181,8 @@
       "gtype": "noun",
       "notes": "先に (さきに) = first, in advance, ahead of time.",
       "lesson_ids": "N5.1",
-      "reading": "さき"
+      "reading": "さき",
+      "readingAlign": "先(さき)"
     },
     {
       "id": "p_hajimemashite",
@@ -511,7 +512,8 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N5.1",
-      "notes": "Refers to the speaker's own father. Contrast with お父さん (polite/others' father)."
+      "notes": "Refers to the speaker's own father. Contrast with お父さん (polite/others' father).",
+      "readingAlign": "父(ちち)"
     },
     {
       "id": "v_danshi",
@@ -521,7 +523,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.1",
-      "reading": "だんし"
+      "reading": "だんし",
+      "readingAlign": "男(だん)子(し)"
     },
     {
       "id": "v_dare",
@@ -621,7 +624,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.1",
-      "reading": "ふぼ"
+      "reading": "ふぼ",
+      "readingAlign": "父(ふ)母(ぼ)"
     },
     {
       "id": "v_haha",
@@ -631,7 +635,8 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N5.1",
-      "notes": "Refers to the speaker's own mother. Contrast with お母さん (polite/others' mother)."
+      "notes": "Refers to the speaker's own mother. Contrast with お母さん (polite/others' mother).",
+      "readingAlign": "母(はは)"
     },
     {
       "id": "v_hito",
@@ -641,7 +646,8 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N5.1",
-      "notes": "Standalone noun use of the kanji 人. Contrast with 人々 (hitobito, people in general)."
+      "notes": "Standalone noun use of the kanji 人. Contrast with 人々 (hitobito, people in general).",
+      "readingAlign": "人(ひと)"
     },
     {
       "id": "v_hitobito",
@@ -651,7 +657,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.1",
-      "reading": "ひとびと"
+      "reading": "ひとびと",
+      "readingAlign": "人(ひと)々(びと)"
     },
     {
       "id": "v_ichiban",
@@ -682,7 +689,12 @@
       "gtype": "i-adjective",
       "verb_class": "i_adj",
       "lesson_ids": "N5.1",
-      "matches": ["良く", "良かった", "良くない", "良くなかった"],
+      "matches": [
+        "良く",
+        "良かった",
+        "良くない",
+        "良くなかった"
+      ],
       "notes": "Kanji spelling of いい. Uses regular i-adj conjugation from よい stem: 良く (adverbial), 良かった (past), 良くない (negative)."
     },
     {
@@ -737,7 +749,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.1",
-      "reading": "じんせい"
+      "reading": "じんせい",
+      "readingAlign": "人(じん)生(せい)"
     },
     {
       "id": "v_joshi",
@@ -747,7 +760,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.1",
-      "reading": "じょし"
+      "reading": "じょし",
+      "readingAlign": "女(じょ)子(し)"
     },
     {
       "id": "v_onna",
@@ -757,7 +771,8 @@
       "gtype": "noun",
       "notes": "Standalone noun form. 女の人 (おんなのひと) is the common polite phrase for 'woman'.",
       "lesson_ids": "N5.1",
-      "reading": "おんな"
+      "reading": "おんな",
+      "readingAlign": "女(おんな)"
     },
     {
       "id": "v_onnanohito",
@@ -767,7 +782,8 @@
       "gtype": "noun",
       "notes": "Common polite phrase for 'woman'. Contrast: 男の人 (man).",
       "lesson_ids": "N5.1",
-      "reading": "おんなのひと"
+      "reading": "おんなのひと",
+      "readingAlign": "女(おんな)の人(ひと)"
     },
     {
       "id": "v_onnanoko",
@@ -777,7 +793,8 @@
       "gtype": "noun",
       "notes": "Girl (child). Contrast: 男の子 (boy). More casual than 女子.",
       "lesson_ids": "N5.1",
-      "reading": "おんなのこ"
+      "reading": "おんなのこ",
+      "readingAlign": "女(おんな)の子(こ)"
     },
     {
       "id": "v_otoko",
@@ -787,7 +804,8 @@
       "gtype": "noun",
       "notes": "Standalone noun form. 男の人 (おとこのひと) is the common polite phrase for 'man'.",
       "lesson_ids": "N5.1",
-      "reading": "おとこ"
+      "reading": "おとこ",
+      "readingAlign": "男(おとこ)"
     },
     {
       "id": "v_otokonohito",
@@ -797,7 +815,8 @@
       "gtype": "noun",
       "notes": "Common polite phrase for 'man'. Contrast: 女の人 (woman).",
       "lesson_ids": "N5.1",
-      "reading": "おとこのひと"
+      "reading": "おとこのひと",
+      "readingAlign": "男(おとこ)の人(ひと)"
     },
     {
       "id": "v_otokonoko",
@@ -807,7 +826,8 @@
       "gtype": "noun",
       "notes": "Boy (child). Contrast: 女の子 (girl). More casual than 男子.",
       "lesson_ids": "N5.1",
-      "reading": "おとこのこ"
+      "reading": "おとこのこ",
+      "readingAlign": "男(おとこ)の子(こ)"
     },
     {
       "id": "v_kodomo",
@@ -817,7 +837,8 @@
       "gtype": "noun",
       "notes": "Also written 子供. Refers to children in general. 子どもたち = children (plural).",
       "lesson_ids": "N5.1",
-      "reading": "こども"
+      "reading": "こども",
+      "readingAlign": "子(こ)ども"
     },
     {
       "id": "v_kudasai",
@@ -836,7 +857,9 @@
       "meaning": "everyone",
       "type": "vocab",
       "gtype": "noun",
-      "matches": ["皆さん"],
+      "matches": [
+        "皆さん"
+      ],
       "lesson_ids": "N5.1",
       "notes": ""
     },
@@ -904,7 +927,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.1",
-      "reading": "せんせい"
+      "reading": "せんせい",
+      "readingAlign": "先(せん)生(せい)"
     },
     {
       "id": "v_suru",
@@ -958,7 +982,8 @@
       "reading": "ともだち",
       "matches": [
         "友だち"
-      ]
+      ],
+      "readingAlign": "友達{ともだち}"
     },
     {
       "id": "v_totemo",
@@ -979,7 +1004,8 @@
       "notes": "",
       "lesson_ids": "N5.1",
       "reading": "うまれる",
-      "verb_class": "ichidan"
+      "verb_class": "ichidan",
+      "readingAlign": "生(う)まれる"
     },
     {
       "id": "v_ureshii",
@@ -1125,7 +1151,8 @@
       "matches": [
         "土ようび",
         "土よう日"
-      ]
+      ],
+      "readingAlign": "土(ど)曜(よう)日(び)"
     },
     {
       "id": "v_geemu",
@@ -1149,7 +1176,8 @@
       "matches": [
         "月ようび",
         "月よう日"
-      ]
+      ],
+      "readingAlign": "月(げつ)曜(よう)日(び)"
     },
     {
       "id": "v_hi",
@@ -1159,7 +1187,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.2",
-      "reading": "ひ"
+      "reading": "ひ",
+      "readingAlign": "日(ひ)"
     },
     {
       "id": "v_hi_2",
@@ -1169,7 +1198,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.2",
-      "reading": "ひ"
+      "reading": "ひ",
+      "readingAlign": "火(ひ)"
     },
     {
       "id": "v_itsu",
@@ -1199,7 +1229,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.2",
-      "reading": "かね"
+      "reading": "かね",
+      "readingAlign": "金(かね)"
     },
     {
       "id": "v_kayoubi",
@@ -1213,7 +1244,8 @@
       "matches": [
         "火ようび",
         "火よう日"
-      ]
+      ],
+      "readingAlign": "火(か)曜(よう)日(び)"
     },
     {
       "id": "v_ki",
@@ -1223,7 +1255,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.2",
-      "reading": "き"
+      "reading": "き",
+      "readingAlign": "木(き)"
     },
     {
       "id": "v_kinyoubi",
@@ -1237,7 +1270,8 @@
       "matches": [
         "金ようび",
         "金よう日"
-      ]
+      ],
+      "readingAlign": "金(きん)曜(よう)日(び)"
     },
     {
       "id": "v_kongetsu",
@@ -1247,7 +1281,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.2",
-      "reading": "こんげつ"
+      "reading": "こんげつ",
+      "readingAlign": "今(こん)月(げつ)"
     },
     {
       "id": "v_kyou",
@@ -1257,7 +1292,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.2",
-      "reading": "きょう"
+      "reading": "きょう",
+      "readingAlign": "今日{きょう}"
     },
     {
       "id": "v_ima",
@@ -1267,7 +1303,8 @@
       "gtype": "adverb",
       "notes": "",
       "lesson_ids": "N5.2",
-      "reading": "いま"
+      "reading": "いま",
+      "readingAlign": "今(いま)"
     },
     {
       "id": "v_maigetsu",
@@ -1277,7 +1314,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.2",
-      "reading": "まいげつ"
+      "reading": "まいげつ",
+      "readingAlign": "毎(まい)月(げつ)"
     },
     {
       "id": "v_mainichi",
@@ -1287,7 +1325,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.2",
-      "reading": "まいにち"
+      "reading": "まいにち",
+      "readingAlign": "毎(まい)日(にち)"
     },
     {
       "id": "v_mizu",
@@ -1297,7 +1336,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.2",
-      "reading": "みず"
+      "reading": "みず",
+      "readingAlign": "水(みず)"
     },
     {
       "id": "v_mokuyoubi",
@@ -1311,7 +1351,8 @@
       "matches": [
         "木ようび",
         "木よう日"
-      ]
+      ],
+      "readingAlign": "木(もく)曜(よう)日(び)"
     },
     {
       "id": "v_nan",
@@ -1324,7 +1365,8 @@
       "matches": [
         "なん"
       ],
-      "notes": "Variant pronunciation of 何 used before です, の, counters, and words starting with d/n/t sounds (e.g. 何ですか、何の本、何人). Use v_nan in these contexts; use v_nani when 何 precedes を, が, or stands alone."
+      "notes": "Variant pronunciation of 何 used before です, の, counters, and words starting with d/n/t sounds (e.g. 何ですか、何の本、何人). Use v_nan in these contexts; use v_nani when 何 precedes を, が, or stands alone.",
+      "readingAlign": "何(なん)"
     },
     {
       "id": "v_nani",
@@ -1337,7 +1379,8 @@
       "matches": [
         "なに"
       ],
-      "notes": "Interrogative pronoun meaning 'what'. Pronounced 'なに' in isolation and before を/が (e.g. 何を食べますか). Use v_nani when 何 precedes を, が, or stands alone. Use v_nan when 何 precedes です, の, counters, or words starting with d/n/t sounds."
+      "notes": "Interrogative pronoun meaning 'what'. Pronounced 'なに' in isolation and before を/が (e.g. 何を食べますか). Use v_nani when 何 precedes を, が, or stands alone. Use v_nan when 何 precedes です, の, counters, or words starting with d/n/t sounds.",
+      "readingAlign": "何(なに)"
     },
     {
       "id": "v_nannin",
@@ -1347,7 +1390,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.2",
-      "reading": "なんにん"
+      "reading": "なんにん",
+      "readingAlign": "何(なん)人(にん)"
     },
     {
       "id": "v_nanpun",
@@ -1357,7 +1401,8 @@
       "gtype": "noun",
       "notes": "Question word asking for a duration in minutes. 何 (nan) + 分 (pun/fun). Answer uses the 分 counter.",
       "lesson_ids": "N4.2",
-      "reading": "なんぷん"
+      "reading": "なんぷん",
+      "readingAlign": "何(なん)分(ぷん)"
     },
     {
       "id": "v_nanyoubi",
@@ -1371,7 +1416,8 @@
       "matches": [
         "何よう日",
         "なんようび"
-      ]
+      ],
+      "readingAlign": "何(なん)曜(よう)日(び)"
     },
     {
       "id": "v_nichiyoubi",
@@ -1385,7 +1431,8 @@
       "matches": [
         "日ようび",
         "日よう日"
-      ]
+      ],
+      "readingAlign": "日(にち)曜(よう)日(び)"
     },
     {
       "id": "v_okane",
@@ -1395,7 +1442,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.2",
-      "reading": "おかね"
+      "reading": "おかね",
+      "readingAlign": "お金(かね)"
     },
     {
       "id": "v_suiyoubi",
@@ -1409,7 +1457,8 @@
       "matches": [
         "水ようび",
         "水よう日"
-      ]
+      ],
+      "readingAlign": "水(すい)曜(よう)日(び)"
     },
     {
       "id": "v_tsuchi",
@@ -1419,7 +1468,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.2",
-      "reading": "つち"
+      "reading": "つち",
+      "readingAlign": "土(つち)"
     },
     {
       "id": "v_tsuki",
@@ -1429,7 +1479,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.2",
-      "reading": "つき"
+      "reading": "つき",
+      "readingAlign": "月(つき)"
     },
     {
       "id": "v_yoku",
@@ -1460,7 +1511,8 @@
       "gtype": "noun",
       "notes": "Number word. Used in counting and currency expressions: 千円 (1,000 yen), 三千 (3,000).",
       "lesson_ids": "N5.3",
-      "reading": "せん"
+      "reading": "せん",
+      "readingAlign": "千(せん)"
     },
     {
       "id": "k_futa",
@@ -1580,7 +1632,8 @@
       "gtype": "noun",
       "notes": "Number word. Used in counting and currency expressions: 一万円 (10,000 yen), 三万 (30,000).",
       "lesson_ids": "N5.3",
-      "reading": "まん"
+      "reading": "まん",
+      "readingAlign": "万(まん)"
     },
     {
       "id": "k_u5186",
@@ -1610,7 +1663,8 @@
         "五円",
         "十円",
         "五十円"
-      ]
+      ],
+      "readingAlign": "円(えん)"
     },
     {
       "id": "k_u767e",
@@ -1631,7 +1685,8 @@
       "gtype": "noun",
       "notes": "Number word. Used in counting and currency expressions: 百円 (100 yen), 三百 (300).",
       "lesson_ids": "N5.3",
-      "reading": "ひゃく"
+      "reading": "ひゃく",
+      "readingAlign": "百(ひゃく)"
     },
     {
       "id": "k_yon",
@@ -1672,7 +1727,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "いちにち"
+      "reading": "いちにち",
+      "readingAlign": "一(いち)日(にち)"
     },
     {
       "id": "v_futari",
@@ -1682,7 +1738,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "ふたり"
+      "reading": "ふたり",
+      "readingAlign": "二人{ふたり}"
     },
     {
       "id": "v_futsuka",
@@ -1692,7 +1749,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "ふつか"
+      "reading": "ふつか",
+      "readingAlign": "二日{ふつか}"
     },
     {
       "id": "v_gogatsu",
@@ -1703,7 +1761,11 @@
       "notes": "",
       "lesson_ids": "N5.3",
       "reading": "ごがつ",
-      "matches": ["五月", "5月"]
+      "matches": [
+        "五月",
+        "5月"
+      ],
+      "readingAlign": "五(ご)月(がつ)"
     },
     {
       "id": "v_gonin",
@@ -1713,7 +1775,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "ごにん"
+      "reading": "ごにん",
+      "readingAlign": "五(ご)人(にん)"
     },
     {
       "id": "v_hachigatsu",
@@ -1724,7 +1787,11 @@
       "notes": "",
       "lesson_ids": "N5.3",
       "reading": "はちがつ",
-      "matches": ["八月", "8月"]
+      "matches": [
+        "八月",
+        "8月"
+      ],
+      "readingAlign": "八(はち)月(がつ)"
     },
     {
       "id": "v_hachinin",
@@ -1734,7 +1801,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "はちにん"
+      "reading": "はちにん",
+      "readingAlign": "八(はち)人(にん)"
     },
     {
       "id": "v_hitori",
@@ -1744,7 +1812,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "ひとり"
+      "reading": "ひとり",
+      "readingAlign": "一人{ひとり}"
     },
     {
       "id": "v_hitotsu",
@@ -1754,7 +1823,8 @@
       "gtype": "noun",
       "notes": "Native Japanese general counter. Part of the native counting series: ひとつ、ふたつ、みっつ…",
       "lesson_ids": "N5.3",
-      "reading": "ひとつ"
+      "reading": "ひとつ",
+      "readingAlign": "一(ひと)つ"
     },
     {
       "id": "v_ichigatsu",
@@ -1765,7 +1835,11 @@
       "notes": "",
       "lesson_ids": "N5.3",
       "reading": "いちがつ",
-      "matches": ["一月", "1月"]
+      "matches": [
+        "一月",
+        "1月"
+      ],
+      "readingAlign": "一(いち)月(がつ)"
     },
     {
       "id": "v_ichinichitsuitachi",
@@ -1775,7 +1849,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "いちにち/ついたち"
+      "reading": "いちにち/ついたち",
+      "readingAlign": "一日{いちにち/ついたち}"
     },
     {
       "id": "v_ikura",
@@ -1805,7 +1880,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "いつか"
+      "reading": "いつか",
+      "readingAlign": "五日{いつか}"
     },
     {
       "id": "v_juugatsu",
@@ -1816,7 +1892,11 @@
       "notes": "",
       "lesson_ids": "N5.3",
       "reading": "じゅうがつ",
-      "matches": ["十月", "10月"]
+      "matches": [
+        "十月",
+        "10月"
+      ],
+      "readingAlign": "十(じゅう)月(がつ)"
     },
     {
       "id": "v_juuichigatsu",
@@ -1827,7 +1907,11 @@
       "notes": "",
       "lesson_ids": "N5.3",
       "reading": "じゅういちがつ",
-      "matches": ["十一月", "11月"]
+      "matches": [
+        "十一月",
+        "11月"
+      ],
+      "readingAlign": "十(じゅう)一(いち)月(がつ)"
     },
     {
       "id": "v_juunigatsu",
@@ -1838,7 +1922,11 @@
       "notes": "",
       "lesson_ids": "N5.3",
       "reading": "じゅうにがつ",
-      "matches": ["十二月", "12月"]
+      "matches": [
+        "十二月",
+        "12月"
+      ],
+      "readingAlign": "十(じゅう)二(に)月(がつ)"
     },
     {
       "id": "v_juunin",
@@ -1848,7 +1936,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "じゅうにん"
+      "reading": "じゅうにん",
+      "readingAlign": "十(じゅう)人(にん)"
     },
     {
       "id": "v_kokonoka",
@@ -1858,7 +1947,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "ここのか"
+      "reading": "ここのか",
+      "readingAlign": "九日{ここのか}"
     },
     {
       "id": "v_kore",
@@ -1879,7 +1969,11 @@
       "notes": "",
       "lesson_ids": "N5.3",
       "reading": "くがつ",
-      "matches": ["九月", "9月"]
+      "matches": [
+        "九月",
+        "9月"
+      ],
+      "readingAlign": "九(く)月(がつ)"
     },
     {
       "id": "v_kunin",
@@ -1889,7 +1983,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "くにん"
+      "reading": "くにん",
+      "readingAlign": "九(く)人(にん)"
     },
     {
       "id": "v_mikka",
@@ -1899,7 +1994,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "みっか"
+      "reading": "みっか",
+      "readingAlign": "三日{みっか}"
     },
     {
       "id": "v_muika",
@@ -1909,7 +2005,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "むいか"
+      "reading": "むいか",
+      "readingAlign": "六日{むいか}"
     },
     {
       "id": "v_nanoka",
@@ -1919,7 +2016,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "なのか"
+      "reading": "なのか",
+      "readingAlign": "七日{なのか}"
     },
     {
       "id": "v_nigatsu",
@@ -1930,7 +2028,11 @@
       "notes": "",
       "lesson_ids": "N5.3",
       "reading": "にがつ",
-      "matches": ["二月", "2月"]
+      "matches": [
+        "二月",
+        "2月"
+      ],
+      "readingAlign": "二(に)月(がつ)"
     },
     {
       "id": "v_rokugatsu",
@@ -1941,7 +2043,11 @@
       "notes": "",
       "lesson_ids": "N5.3",
       "reading": "ろくがつ",
-      "matches": ["六月", "6月"]
+      "matches": [
+        "六月",
+        "6月"
+      ],
+      "readingAlign": "六(ろく)月(がつ)"
     },
     {
       "id": "v_rokunin",
@@ -1951,7 +2057,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "ろくにん"
+      "reading": "ろくにん",
+      "readingAlign": "六(ろく)人(にん)"
     },
     {
       "id": "v_sangatsu",
@@ -1962,7 +2069,11 @@
       "notes": "",
       "lesson_ids": "N5.3",
       "reading": "さんがつ",
-      "matches": ["三月", "3月"]
+      "matches": [
+        "三月",
+        "3月"
+      ],
+      "readingAlign": "三(さん)月(がつ)"
     },
     {
       "id": "v_sannin",
@@ -1972,7 +2083,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "さんにん"
+      "reading": "さんにん",
+      "readingAlign": "三(さん)人(にん)"
     },
     {
       "id": "v_shichigatsu",
@@ -1983,7 +2095,11 @@
       "notes": "",
       "lesson_ids": "N5.3",
       "reading": "しちがつ",
-      "matches": ["七月", "7月"]
+      "matches": [
+        "七月",
+        "7月"
+      ],
+      "readingAlign": "七(しち)月(がつ)"
     },
     {
       "id": "v_shichinin",
@@ -1993,7 +2109,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "しちにん"
+      "reading": "しちにん",
+      "readingAlign": "七(しち)人(にん)"
     },
     {
       "id": "v_shigatsu",
@@ -2004,7 +2121,11 @@
       "notes": "",
       "lesson_ids": "N5.3",
       "reading": "しがつ",
-      "matches": ["四月", "4月"]
+      "matches": [
+        "四月",
+        "4月"
+      ],
+      "readingAlign": "四(し)月(がつ)"
     },
     {
       "id": "v_sore",
@@ -2044,7 +2165,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "とおか"
+      "reading": "とおか",
+      "readingAlign": "十日{とおか}"
     },
     {
       "id": "v_yokka",
@@ -2054,7 +2176,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "よっか"
+      "reading": "よっか",
+      "readingAlign": "四日{よっか}"
     },
     {
       "id": "v_yonin",
@@ -2064,7 +2187,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "よにん"
+      "reading": "よにん",
+      "readingAlign": "四(よ)人(にん)"
     },
     {
       "id": "v_youka",
@@ -2074,7 +2198,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.3",
-      "reading": "ようか"
+      "reading": "ようか",
+      "readingAlign": "八日{ようか}"
     },
     {
       "id": "k_toki",
@@ -2169,7 +2294,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.4",
-      "reading": "はんぶん"
+      "reading": "はんぶん",
+      "readingAlign": "半(はん)分(ぶん)"
     },
     {
       "id": "v_keeki",
@@ -2192,7 +2318,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.4",
-      "reading": "きのう"
+      "reading": "きのう",
+      "readingAlign": "昨日{きのう}"
     },
     {
       "id": "v_han",
@@ -2201,7 +2328,8 @@
       "meaning": "half; half past (in time expressions)",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N5.4"
+      "lesson_ids": "N5.4",
+      "readingAlign": "半(はん)"
     },
     {
       "id": "v_kono",
@@ -2221,7 +2349,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.4",
-      "reading": "こんしゅう"
+      "reading": "こんしゅう",
+      "readingAlign": "今(こん)週(しゅう)"
     },
     {
       "id": "v_kotoshi",
@@ -2231,7 +2360,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.4",
-      "reading": "ことし"
+      "reading": "ことし",
+      "readingAlign": "今(こ)年(とし)"
     },
     {
       "id": "v_mainen",
@@ -2241,7 +2371,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.4",
-      "reading": "まいねん"
+      "reading": "まいねん",
+      "readingAlign": "毎(まい)年(ねん)"
     },
     {
       "id": "v_maishuu",
@@ -2251,7 +2382,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.4",
-      "reading": "まいしゅう"
+      "reading": "まいしゅう",
+      "readingAlign": "毎(まい)週(しゅう)"
     },
     {
       "id": "v_nanji",
@@ -2261,7 +2393,8 @@
       "gtype": "noun",
       "notes": "Retroactive addition.",
       "lesson_ids": "N5.4",
-      "reading": "なんじ"
+      "reading": "なんじ",
+      "readingAlign": "何(なん)時(じ)"
     },
     {
       "id": "v_sengetsu",
@@ -2271,7 +2404,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.4",
-      "reading": "せんげつ"
+      "reading": "せんげつ",
+      "readingAlign": "先(せん)月(げつ)"
     },
     {
       "id": "v_senshuu",
@@ -2281,7 +2415,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.4",
-      "reading": "せんしゅう"
+      "reading": "せんしゅう",
+      "readingAlign": "先(せん)週(しゅう)"
     },
     {
       "id": "v_shuumatsu",
@@ -2294,7 +2429,8 @@
       "reading": "しゅうまつ",
       "matches": [
         "週まつ"
-      ]
+      ],
+      "readingAlign": "週末{しゅうまつ}"
     },
     {
       "id": "v_sono",
@@ -2334,7 +2470,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.4",
-      "reading": "ときどき"
+      "reading": "ときどき",
+      "readingAlign": "時(とき)々(どき)"
     },
     {
       "id": "v_wakaru",
@@ -2345,7 +2482,8 @@
       "notes": "",
       "lesson_ids": "N5.4",
       "reading": "わかる",
-      "verb_class": "godan"
+      "verb_class": "godan",
+      "readingAlign": "分(わ)かる"
     },
     {
       "id": "v_toki",
@@ -2355,7 +2493,8 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N5.4",
-      "notes": "Used as a noun meaning 'time' or as a temporal clause marker meaning 'when'. その時 = at that time. 食べる時 = when eating."
+      "notes": "Used as a noun meaning 'time' or as a temporal clause marker meaning 'when'. その時 = at that time. 食べる時 = when eating.",
+      "readingAlign": "時(とき)"
     },
     {
       "id": "v_tsugi",
@@ -2368,7 +2507,8 @@
       "matches": [
         "つぎ"
       ],
-      "notes": "Used for next in sequence: 次の朝 = the next morning, 次はどこ = where next. Write as つぎ (hiragana) since 次 kanji is not formally taught."
+      "notes": "Used for next in sequence: 次の朝 = the next morning, 次はどこ = where next. Write as つぎ (hiragana) since 次 kanji is not formally taught.",
+      "readingAlign": "次{つぎ}"
     },
     {
       "id": "k_i",
@@ -2463,7 +2603,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.5",
-      "reading": "えき"
+      "reading": "えき",
+      "readingAlign": "駅(えき)"
     },
     {
       "id": "v_ie",
@@ -2473,7 +2614,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.5",
-      "reading": "いえ"
+      "reading": "いえ",
+      "readingAlign": "家(いえ)"
     },
     {
       "id": "v_iku",
@@ -2484,7 +2626,8 @@
       "notes": "",
       "lesson_ids": "N5.5",
       "reading": "いく",
-      "verb_class": "irr_iku"
+      "verb_class": "irr_iku",
+      "readingAlign": "行(い)く"
     },
     {
       "id": "v_koko",
@@ -2515,7 +2658,8 @@
       "notes": "",
       "lesson_ids": "N5.5",
       "reading": "くる",
-      "verb_class": "irr_kuru"
+      "verb_class": "irr_kuru",
+      "readingAlign": "来(く)る"
     },
     {
       "id": "v_mise",
@@ -2525,7 +2669,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.5",
-      "reading": "みせ"
+      "reading": "みせ",
+      "readingAlign": "店(みせ)"
     },
     {
       "id": "v_omise",
@@ -2535,7 +2680,8 @@
       "gtype": "noun",
       "notes": "Polite form of 店 with honorific お prefix.",
       "lesson_ids": "N5.5",
-      "reading": "おみせ"
+      "reading": "おみせ",
+      "readingAlign": "お店(みせ)"
     },
     {
       "id": "v_raigetsu",
@@ -2545,7 +2691,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.5",
-      "reading": "らいげつ"
+      "reading": "らいげつ",
+      "readingAlign": "来(らい)月(げつ)"
     },
     {
       "id": "v_rainen",
@@ -2555,7 +2702,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.5",
-      "reading": "らいねん"
+      "reading": "らいねん",
+      "readingAlign": "来(らい)年(ねん)"
     },
     {
       "id": "v_raishuu",
@@ -2565,7 +2713,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.5",
-      "reading": "らいしゅう"
+      "reading": "らいしゅう",
+      "readingAlign": "来(らい)週(しゅう)"
     },
     {
       "id": "v_soko",
@@ -2700,7 +2849,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.6",
-      "reading": "かわ"
+      "reading": "かわ",
+      "readingAlign": "川(かわ)"
     },
     {
       "id": "v_kazan",
@@ -2710,7 +2860,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.6",
-      "reading": "かざん"
+      "reading": "かざん",
+      "readingAlign": "火(か)山(ざん)"
     },
     {
       "id": "v_kuruma",
@@ -2720,7 +2871,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.6",
-      "reading": "くるま"
+      "reading": "くるま",
+      "readingAlign": "車(くるま)"
     },
     {
       "id": "v_meeru",
@@ -2740,7 +2892,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.6",
-      "reading": "みち"
+      "reading": "みち",
+      "readingAlign": "道(みち)"
     },
     {
       "id": "v_yama",
@@ -2750,7 +2903,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.6",
-      "reading": "やま"
+      "reading": "やま",
+      "readingAlign": "山(やま)"
     },
     {
       "id": "k_chii",
@@ -2825,7 +2979,8 @@
       "notes": "",
       "lesson_ids": "N5.7",
       "reading": "ちいさい",
-      "verb_class": "i_adj"
+      "verb_class": "i_adj",
+      "readingAlign": "小(ちい)さい"
     },
     {
       "id": "v_daisuki",
@@ -2839,7 +2994,8 @@
       "reading": "だいすき",
       "matches": [
         "大すき"
-      ]
+      ],
+      "readingAlign": "大(だい)好(す)き"
     },
     {
       "id": "v_juusu",
@@ -2880,7 +3036,8 @@
       "notes": "",
       "lesson_ids": "N5.7",
       "reading": "のむ",
-      "verb_class": "godan"
+      "verb_class": "godan",
+      "readingAlign": "飲(の)む"
     },
     {
       "id": "v_ookii",
@@ -2891,7 +3048,8 @@
       "notes": "",
       "lesson_ids": "N5.7",
       "reading": "おおきい",
-      "verb_class": "i_adj"
+      "verb_class": "i_adj",
+      "readingAlign": "大(おお)きい"
     },
     {
       "id": "v_pan",
@@ -2932,7 +3090,8 @@
       "notes": "",
       "lesson_ids": "N5.7",
       "reading": "たべる",
-      "verb_class": "ichidan"
+      "verb_class": "ichidan",
+      "readingAlign": "食(た)べる"
     },
     {
       "id": "k_atara",
@@ -3008,7 +3167,8 @@
       "notes": "",
       "lesson_ids": "N5.8",
       "reading": "あたらしい",
-      "verb_class": "i_adj"
+      "verb_class": "i_adj",
+      "readingAlign": "新(あたら)しい"
     },
     {
       "id": "v_depaato",
@@ -3028,7 +3188,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.8",
-      "reading": "えきちょう"
+      "reading": "えきちょう",
+      "readingAlign": "駅(えき)長(ちょう)"
     },
     {
       "id": "v_furui",
@@ -3039,7 +3200,8 @@
       "notes": "",
       "lesson_ids": "N5.8",
       "reading": "ふるい",
-      "verb_class": "i_adj"
+      "verb_class": "i_adj",
+      "readingAlign": "古(ふる)い"
     },
     {
       "id": "v_hoshii",
@@ -3060,7 +3222,8 @@
       "notes": "",
       "lesson_ids": "N5.8",
       "reading": "かう",
-      "verb_class": "godan"
+      "verb_class": "godan",
+      "readingAlign": "買(か)う"
     },
     {
       "id": "v_mada",
@@ -3091,7 +3254,8 @@
       "notes": "",
       "lesson_ids": "N5.8",
       "reading": "ながい",
-      "verb_class": "i_adj"
+      "verb_class": "i_adj",
+      "readingAlign": "長(なが)い"
     },
     {
       "id": "v_oishii",
@@ -3142,7 +3306,8 @@
       "notes": "",
       "lesson_ids": "N5.8",
       "reading": "たかい",
-      "verb_class": "i_adj"
+      "verb_class": "i_adj",
+      "readingAlign": "高(たか)い"
     },
     {
       "id": "v_yasu",
@@ -3164,7 +3329,8 @@
       "notes": "",
       "lesson_ids": "N5.8",
       "reading": "やすい",
-      "verb_class": "i_adj"
+      "verb_class": "i_adj",
+      "readingAlign": "安(やす)い"
     },
     {
       "id": "k_mae",
@@ -3218,7 +3384,8 @@
       "gtype": "noun",
       "notes": "Spatial position word 'behind/in back of'. Always written with ろ (後ろ). Tag as v_ushiro when the token is 後ろ. Contrast with v_ato (後 standalone = temporal 'after/later').",
       "lesson_ids": "N5.9",
-      "reading": "うしろ"
+      "reading": "うしろ",
+      "readingAlign": "後(うし)ろ"
     },
     {
       "id": "v_ato",
@@ -3228,7 +3395,8 @@
       "gtype": "noun",
       "notes": "Temporal word meaning 'after' or 'later'. Written as standalone 後 (no ろ). Tag as v_ato when the token is 後 alone. Contrast with v_ushiro (後ろ = spatial 'behind'). Common usage: 後で (after/later).",
       "lesson_ids": "N5.9",
-      "reading": "あと"
+      "reading": "あと",
+      "readingAlign": "後(あと)"
     },
     {
       "id": "v_achira",
@@ -3248,7 +3416,9 @@
       "type": "vocab",
       "gtype": "na-adjective",
       "verb_class": "na_adj",
-      "matches": ["大丈夫"],
+      "matches": [
+        "大丈夫"
+      ],
       "lesson_ids": "N5.9"
     },
     {
@@ -3279,7 +3449,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.9",
-      "reading": "がいじん"
+      "reading": "がいじん",
+      "readingAlign": "外(がい)人(じん)"
     },
     {
       "id": "v_gaishoku",
@@ -3289,7 +3460,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.9",
-      "reading": "がいしょく"
+      "reading": "がいしょく",
+      "readingAlign": "外(がい)食(しょく)"
     },
     {
       "id": "v_kochira",
@@ -3309,7 +3481,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.9",
-      "reading": "まえ"
+      "reading": "まえ",
+      "readingAlign": "前(まえ)"
     },
     {
       "id": "v_naka",
@@ -3319,7 +3492,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.9",
-      "reading": "なか"
+      "reading": "なか",
+      "readingAlign": "中(なか)"
     },
     {
       "id": "v_namae",
@@ -3332,7 +3506,8 @@
       "reading": "なまえ",
       "matches": [
         "名まえ"
-      ]
+      ],
+      "readingAlign": "名(な)前(まえ)"
     },
     {
       "id": "v_onamae",
@@ -3347,7 +3522,8 @@
         "お名前",
         "おなまえ",
         "お名まえ"
-      ]
+      ],
+      "readingAlign": "お名(な)前(まえ)"
     },
     {
       "id": "v_sochira",
@@ -3367,7 +3543,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.9",
-      "reading": "そと"
+      "reading": "そと",
+      "readingAlign": "外(そと)"
     },
     {
       "id": "v_chokoreeto",
@@ -3481,7 +3658,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.10",
-      "reading": "でんき"
+      "reading": "でんき",
+      "readingAlign": "電(でん)気(き)"
     },
     {
       "id": "v_densha",
@@ -3491,7 +3669,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.10",
-      "reading": "でんしゃ"
+      "reading": "でんしゃ",
+      "readingAlign": "電(でん)車(しゃ)"
     },
     {
       "id": "v_hoteru",
@@ -3511,7 +3690,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.10",
-      "reading": "きぶん"
+      "reading": "きぶん",
+      "readingAlign": "気(き)分(ぶん)"
     },
     {
       "id": "v_kyuujitsu",
@@ -3521,7 +3701,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.10",
-      "reading": "きゅうじつ"
+      "reading": "きゅうじつ",
+      "readingAlign": "休(きゅう)日(じつ)"
     },
     {
       "id": "v_ninki",
@@ -3531,7 +3712,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.10",
-      "reading": "にんき"
+      "reading": "にんき",
+      "readingAlign": "人(にん)気(き)"
     },
     {
       "id": "v_tenki",
@@ -3541,7 +3723,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.10",
-      "reading": "てんき"
+      "reading": "てんき",
+      "readingAlign": "天(てん)気(き)"
     },
     {
       "id": "v_yasumi",
@@ -3551,7 +3734,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.10",
-      "reading": "やすみ"
+      "reading": "やすみ",
+      "readingAlign": "休(やす)み"
     },
     {
       "id": "v_yasumu",
@@ -3562,7 +3746,8 @@
       "notes": "",
       "lesson_ids": "N5.10",
       "reading": "やすむ",
-      "verb_class": "godan"
+      "verb_class": "godan",
+      "readingAlign": "休(やす)む"
     },
     {
       "id": "v_naru",
@@ -3627,7 +3812,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.11",
-      "reading": "そら"
+      "reading": "そら",
+      "readingAlign": "空(そら)"
     },
     {
       "id": "v_ame",
@@ -3637,7 +3823,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.11",
-      "reading": "あめ"
+      "reading": "あめ",
+      "readingAlign": "雨(あめ)"
     },
     {
       "id": "v_hana",
@@ -3647,7 +3834,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.11",
-      "reading": "はな"
+      "reading": "はな",
+      "readingAlign": "花(はな)"
     },
     {
       "id": "v_sakana",
@@ -3657,7 +3845,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.11",
-      "reading": "さかな"
+      "reading": "さかな",
+      "readingAlign": "魚(さかな)"
     },
     {
       "id": "v_hanabi",
@@ -3667,7 +3856,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.11",
-      "reading": "はなび"
+      "reading": "はなび",
+      "readingAlign": "花(はな)火(び)"
     },
     {
       "id": "v_kawaii",
@@ -3687,7 +3877,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.11",
-      "reading": "きんぎょ"
+      "reading": "きんぎょ",
+      "readingAlign": "金(きん)魚(ぎょ)"
     },
     {
       "id": "v_kirei",
@@ -3717,7 +3908,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.11",
-      "reading": "くうき"
+      "reading": "くうき",
+      "readingAlign": "空(くう)気(き)"
     },
     {
       "id": "k_kata",
@@ -3770,7 +3962,8 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N5.12",
-      "reading": "ほん"
+      "reading": "ほん",
+      "readingAlign": "本(ほん)"
     },
     {
       "id": "k_u6821",
@@ -3791,7 +3984,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.12",
-      "reading": "ちゅうがっこう"
+      "reading": "ちゅうがっこう",
+      "readingAlign": "中(ちゅう)学(がっ)校(こう)"
     },
     {
       "id": "v_chuugoku",
@@ -3801,7 +3995,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.12",
-      "reading": "ちゅうごく"
+      "reading": "ちゅうごく",
+      "readingAlign": "中(ちゅう)国(ごく)"
     },
     {
       "id": "v_daigaku",
@@ -3811,7 +4006,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.12",
-      "reading": "だいがく"
+      "reading": "だいがく",
+      "readingAlign": "大(だい)学(がく)"
     },
     {
       "id": "v_gaikoku",
@@ -3821,7 +4017,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.12",
-      "reading": "がいこく"
+      "reading": "がいこく",
+      "readingAlign": "外(がい)国(こく)"
     },
     {
       "id": "v_gaikokujin",
@@ -3831,7 +4028,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.12",
-      "reading": "がいこくじん"
+      "reading": "がいこくじん",
+      "readingAlign": "外(がい)国(こく)人(じん)"
     },
     {
       "id": "v_gakkou",
@@ -3841,7 +4039,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.12",
-      "reading": "がっこう"
+      "reading": "がっこう",
+      "readingAlign": "学(がっ)校(こう)"
     },
     {
       "id": "v_gakusei",
@@ -3851,7 +4050,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.12",
-      "reading": "がくせい"
+      "reading": "がくせい",
+      "readingAlign": "学(がく)生(せい)"
     },
     {
       "id": "v_kouchou",
@@ -3861,7 +4061,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.12",
-      "reading": "こうちょう"
+      "reading": "こうちょう",
+      "readingAlign": "校(こう)長(ちょう)"
     },
     {
       "id": "v_koukou",
@@ -3871,7 +4072,8 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N5.12",
-      "notes": ""
+      "notes": "",
+      "readingAlign": "高(こう)校(こう)"
     },
     {
       "id": "v_kurasu_class",
@@ -3892,7 +4094,8 @@
       "notes": "",
       "lesson_ids": "N5.12",
       "reading": "まなぶ",
-      "verb_class": "godan"
+      "verb_class": "godan",
+      "readingAlign": "学(まな)ぶ"
     },
     {
       "id": "v_nihon",
@@ -3902,7 +4105,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.12",
-      "reading": "にほん"
+      "reading": "にほん",
+      "readingAlign": "日(に)本(ほん)"
     },
     {
       "id": "v_nihongo",
@@ -3912,7 +4116,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.12",
-      "reading": "にほんご"
+      "reading": "にほんご",
+      "readingAlign": "日(に)本(ほん)語(ご)"
     },
     {
       "id": "v_nihonjin",
@@ -3922,7 +4127,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.12",
-      "reading": "にほんじん"
+      "reading": "にほんじん",
+      "readingAlign": "日(に)本(ほん)人(じん)"
     },
     {
       "id": "v_nooto",
@@ -3962,7 +4168,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.12",
-      "reading": "しょうがっこう"
+      "reading": "しょうがっこう",
+      "readingAlign": "小(しょう)学(がっ)校(こう)"
     },
     {
       "id": "v_tesuto",
@@ -4035,7 +4242,8 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N5.13",
-      "reading": "て"
+      "reading": "て",
+      "readingAlign": "手(て)"
     },
     {
       "id": "k_yo",
@@ -4056,7 +4264,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.13",
-      "reading": "でんわ"
+      "reading": "でんわ",
+      "readingAlign": "電(でん)話(わ)"
     },
     {
       "id": "v_hanasu",
@@ -4067,7 +4276,8 @@
       "notes": "",
       "lesson_ids": "N5.13",
       "reading": "はなす",
-      "verb_class": "godan"
+      "verb_class": "godan",
+      "readingAlign": "話(はな)す"
     },
     {
       "id": "v_iu",
@@ -4078,7 +4288,8 @@
       "notes": "",
       "lesson_ids": "N5.13",
       "reading": "いう",
-      "verb_class": "godan"
+      "verb_class": "godan",
+      "readingAlign": "言(い)う"
     },
     {
       "id": "v_kaku",
@@ -4089,7 +4300,8 @@
       "notes": "",
       "lesson_ids": "N5.13",
       "reading": "かく",
-      "verb_class": "godan"
+      "verb_class": "godan",
+      "readingAlign": "書(か)く"
     },
     {
       "id": "v_karate",
@@ -4099,7 +4311,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.13",
-      "reading": "からて"
+      "reading": "からて",
+      "readingAlign": "空手{からて}"
     },
     {
       "id": "v_yomu",
@@ -4110,7 +4323,8 @@
       "notes": "",
       "lesson_ids": "N5.13",
       "reading": "よむ",
-      "verb_class": "godan"
+      "verb_class": "godan",
+      "readingAlign": "読(よ)む"
     },
     {
       "id": "v_yukkuri",
@@ -4174,7 +4388,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.14",
-      "reading": "はくじん"
+      "reading": "はくじん",
+      "readingAlign": "白(はく)人(じん)"
     },
     {
       "id": "v_jikan",
@@ -4184,7 +4399,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.14",
-      "reading": "じかん"
+      "reading": "じかん",
+      "readingAlign": "時(じ)間(かん)"
     },
     {
       "id": "v_ooi",
@@ -4192,11 +4408,14 @@
       "meaning": "many",
       "type": "vocab",
       "gtype": "adjective",
-      "matches": ["多すぎて"],
+      "matches": [
+        "多すぎて"
+      ],
       "notes": "",
       "lesson_ids": "N5.14",
       "reading": "おおい",
-      "verb_class": "i_adj"
+      "verb_class": "i_adj",
+      "readingAlign": "多(おお)い"
     },
     {
       "id": "v_shiroi",
@@ -4207,7 +4426,8 @@
       "notes": "",
       "lesson_ids": "N5.14",
       "reading": "しろい",
-      "verb_class": "i_adj"
+      "verb_class": "i_adj",
+      "readingAlign": "白(しろ)い"
     },
     {
       "id": "v_shoujo",
@@ -4217,7 +4437,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.14",
-      "reading": "しょうじょ"
+      "reading": "しょうじょ",
+      "readingAlign": "少(しょう)女(じょ)"
     },
     {
       "id": "v_shounen",
@@ -4227,7 +4448,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.14",
-      "reading": "しょうねん"
+      "reading": "しょうねん",
+      "readingAlign": "少(しょう)年(ねん)"
     },
     {
       "id": "v_sukoshi",
@@ -4237,7 +4459,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.14",
-      "reading": "すこし"
+      "reading": "すこし",
+      "readingAlign": "少(すこ)し"
     },
     {
       "id": "v_sukunai",
@@ -4248,7 +4471,8 @@
       "notes": "",
       "lesson_ids": "N5.14",
       "reading": "すくない",
-      "verb_class": "i_adj"
+      "verb_class": "i_adj",
+      "readingAlign": "少(すく)ない"
     },
     {
       "id": "v_tabun",
@@ -4258,7 +4482,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.14",
-      "reading": "たぶん"
+      "reading": "たぶん",
+      "readingAlign": "多(た)分(ぶん)"
     },
     {
       "id": "v_taitei",
@@ -4332,7 +4557,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.15",
-      "reading": "ほくせい"
+      "reading": "ほくせい",
+      "readingAlign": "北(ほく)西(せい)"
     },
     {
       "id": "v_hokutou",
@@ -4342,7 +4568,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.15",
-      "reading": "ほくとう"
+      "reading": "ほくとう",
+      "readingAlign": "北(ほく)東(とう)"
     },
     {
       "id": "v_nansei",
@@ -4352,7 +4579,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.15",
-      "reading": "なんせい"
+      "reading": "なんせい",
+      "readingAlign": "南(なん)西(せい)"
     },
     {
       "id": "v_nantou",
@@ -4362,7 +4590,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.15",
-      "reading": "なんとう"
+      "reading": "なんとう",
+      "readingAlign": "南(なん)東(とう)"
     },
     {
       "id": "v_kita",
@@ -4372,7 +4601,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.15",
-      "reading": "きた"
+      "reading": "きた",
+      "readingAlign": "北(きた)"
     },
     {
       "id": "v_minami",
@@ -4382,7 +4612,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.15",
-      "reading": "みなみ"
+      "reading": "みなみ",
+      "readingAlign": "南(みなみ)"
     },
     {
       "id": "v_higashi",
@@ -4392,7 +4623,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.15",
-      "reading": "ひがし"
+      "reading": "ひがし",
+      "readingAlign": "東(ひがし)"
     },
     {
       "id": "v_nishi",
@@ -4402,7 +4634,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.15",
-      "reading": "にし"
+      "reading": "にし",
+      "readingAlign": "西(にし)"
     },
     {
       "id": "k_hidari",
@@ -4423,7 +4656,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.16",
-      "reading": "ひだり"
+      "reading": "ひだり",
+      "readingAlign": "左(ひだり)"
     },
     {
       "id": "k_migi",
@@ -4444,7 +4678,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.16",
-      "reading": "みぎ"
+      "reading": "みぎ",
+      "readingAlign": "右(みぎ)"
     },
     {
       "id": "k_shita",
@@ -4465,7 +4700,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.16",
-      "reading": "した"
+      "reading": "した",
+      "readingAlign": "下(した)"
     },
     {
       "id": "k_ue",
@@ -4486,7 +4722,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.16",
-      "reading": "うえ"
+      "reading": "うえ",
+      "readingAlign": "上(うえ)"
     },
     {
       "id": "v_heta",
@@ -4497,7 +4734,8 @@
       "notes": "",
       "lesson_ids": "N5.16",
       "reading": "へた",
-      "verb_class": "na_adj"
+      "verb_class": "na_adj",
+      "readingAlign": "下手{へた}"
     },
     {
       "id": "v_jouzu",
@@ -4508,7 +4746,8 @@
       "notes": "",
       "lesson_ids": "N5.16",
       "reading": "じょうず",
-      "verb_class": "na_adj"
+      "verb_class": "na_adj",
+      "readingAlign": "上手{じょうず}"
     },
     {
       "id": "k_a",
@@ -4594,7 +4833,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.17",
-      "reading": "くち"
+      "reading": "くち",
+      "readingAlign": "口(くち)"
     },
     {
       "id": "v_au",
@@ -4605,7 +4845,8 @@
       "notes": "",
       "lesson_ids": "N5.17",
       "reading": "あう",
-      "verb_class": "godan"
+      "verb_class": "godan",
+      "readingAlign": "会(あ)う"
     },
     {
       "id": "v_dasu",
@@ -4616,7 +4857,8 @@
       "notes": "Transitive counterpart of 出る.",
       "lesson_ids": "N5.17",
       "reading": "だす",
-      "verb_class": "godan"
+      "verb_class": "godan",
+      "readingAlign": "出(だ)す"
     },
     {
       "id": "v_deguchi",
@@ -4626,7 +4868,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.17",
-      "reading": "でぐち"
+      "reading": "でぐち",
+      "readingAlign": "出(で)口(ぐち)"
     },
     {
       "id": "v_deru",
@@ -4637,7 +4880,8 @@
       "notes": "Intransitive counterpart of 出す.",
       "lesson_ids": "N5.17",
       "reading": "でる",
-      "verb_class": "ichidan"
+      "verb_class": "ichidan",
+      "readingAlign": "出(で)る"
     },
     {
       "id": "v_gogo",
@@ -4647,7 +4891,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.17",
-      "reading": "ごご"
+      "reading": "ごご",
+      "readingAlign": "午(ご)後(ご)"
     },
     {
       "id": "v_gozen",
@@ -4657,7 +4902,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.17",
-      "reading": "ごぜん"
+      "reading": "ごぜん",
+      "readingAlign": "午(ご)前(ぜん)"
     },
     {
       "id": "v_hairu",
@@ -4668,7 +4914,8 @@
       "notes": "Intransitive counterpart of 入れる. ⚠ False ichidan: ends in いる but conjugates as godan (入って not 入て).",
       "lesson_ids": "N5.17",
       "reading": "はいる",
-      "verb_class": "godan"
+      "verb_class": "godan",
+      "readingAlign": "入(はい)る"
     },
     {
       "id": "v_ireru",
@@ -4679,7 +4926,8 @@
       "notes": "Transitive counterpart of 入る.",
       "lesson_ids": "N5.17",
       "reading": "いれる",
-      "verb_class": "ichidan"
+      "verb_class": "ichidan",
+      "readingAlign": "入(い)れる"
     },
     {
       "id": "v_iriguchi",
@@ -4689,7 +4937,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.17",
-      "reading": "いりぐち"
+      "reading": "いりぐち",
+      "readingAlign": "入(い)り口(ぐち)"
     },
     {
       "id": "v_kaisha",
@@ -4699,7 +4948,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.17",
-      "reading": "かいしゃ"
+      "reading": "かいしゃ",
+      "readingAlign": "会(かい)社(しゃ)"
     },
     {
       "id": "v_kaiwa",
@@ -4709,7 +4959,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.17",
-      "reading": "かいわ"
+      "reading": "かいわ",
+      "readingAlign": "会(かい)話(わ)"
     },
     {
       "id": "v_shachou",
@@ -4719,7 +4970,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.17",
-      "reading": "しゃちょう"
+      "reading": "しゃちょう",
+      "readingAlign": "社(しゃ)長(ちょう)"
     },
     {
       "id": "v_shakai",
@@ -4729,7 +4981,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.17",
-      "reading": "しゃかい"
+      "reading": "しゃかい",
+      "readingAlign": "社(しゃ)会(かい)"
     },
     {
       "id": "k_ashi",
@@ -4794,7 +5047,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.18",
-      "reading": "みみ"
+      "reading": "みみ",
+      "readingAlign": "耳(みみ)"
     },
     {
       "id": "k_ta_2",
@@ -4840,7 +5094,8 @@
       "notes": "Two meanings: to hear / listen, or to ask. Context determines which.",
       "lesson_ids": "N5.18",
       "reading": "きく",
-      "verb_class": "godan"
+      "verb_class": "godan",
+      "readingAlign": "聞(き)く"
     },
     {
       "id": "v_kowai",
@@ -4861,7 +5116,8 @@
       "notes": "",
       "lesson_ids": "N5.18",
       "reading": "みえる",
-      "verb_class": "ichidan"
+      "verb_class": "ichidan",
+      "readingAlign": "見(み)える"
     },
     {
       "id": "v_miru",
@@ -4872,7 +5128,8 @@
       "notes": "",
       "lesson_ids": "N5.18",
       "reading": "みる",
-      "verb_class": "ichidan"
+      "verb_class": "ichidan",
+      "readingAlign": "見(み)る"
     },
     {
       "id": "v_miseru",
@@ -4883,7 +5140,8 @@
       "notes": "",
       "lesson_ids": "N5.18",
       "reading": "みせる",
-      "verb_class": "ichidan"
+      "verb_class": "ichidan",
+      "readingAlign": "見(み)せる"
     },
     {
       "id": "v_shinbun",
@@ -4893,7 +5151,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.18",
-      "reading": "しんぶん"
+      "reading": "しんぶん",
+      "readingAlign": "新(しん)聞(ぶん)"
     },
     {
       "id": "v_tatsu",
@@ -4904,7 +5163,8 @@
       "notes": "",
       "lesson_ids": "N5.18",
       "reading": "たつ",
-      "verb_class": "godan"
+      "verb_class": "godan",
+      "readingAlign": "立(た)つ"
     },
     {
       "id": "v_me",
@@ -4914,7 +5174,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.18",
-      "reading": "め"
+      "reading": "め",
+      "readingAlign": "目(め)"
     },
     {
       "id": "v_ashi",
@@ -4924,7 +5185,8 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.18",
-      "reading": "あし"
+      "reading": "あし",
+      "readingAlign": "足(あし)"
     },
     {
       "id": "v_taisetsu",
@@ -4935,7 +5197,8 @@
       "verb_class": "na_adj",
       "notes": "",
       "lesson_ids": "N4.1",
-      "reading": "たいせつ"
+      "reading": "たいせつ",
+      "readingAlign": "大(たい)切(せつ)"
     },
     {
       "id": "v_kazoku",
@@ -4948,7 +5211,8 @@
       "reading": "かぞく",
       "matches": [
         "かぞく"
-      ]
+      ],
+      "readingAlign": "家(か)族(ぞく)"
     }
   ]
 }
