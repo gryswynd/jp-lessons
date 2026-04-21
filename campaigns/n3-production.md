@@ -15,7 +15,7 @@ Build the N3 level from the ground up: finalize the vocabulary roadmap, create a
 | Content type | Exists | Notes |
 |---|---|---|
 | Vocabulary roadmap | **Locked** | `N3-kanji-lesson-plan.md` — 86 lessons, 348 kanji |
-| Glossary | **In progress** | `glossary.N3.json` — 767 entries covering N3.1–N3.44. Chunks 1–5b approved |
+| Glossary | **In progress** | `glossary.N3.json` — 940 entries covering N3.1–N3.55. Chunks 1–6a approved, 6b–6c pending |
 | Grammar (G32–G49) | 18/18 JSON files exist | **Empty stubs** (title + meta + sections:[]) — not built, contrary to previous note |
 | Content lessons | 0 | No N3.X lesson files |
 | Reviews | 0 | No review files |
@@ -38,7 +38,9 @@ Chunked into 8 batches with approval gates. See plan: `~/.claude/plans/fuzzy-roa
 | 4b | N3.33–N3.36 | 16 | 82 (16k + 66v) | Approved |
 | 5a | N3.37–N3.40 | 16 | 77 (16k + 61v) | Approved |
 | 5b | N3.41–N3.44 | 16 | 72 (16k + 56v) | Approved |
-| 6 | N3.45–N3.55 | 47 | ~165 est. | Not started |
+| 6a | N3.45–N3.48 | 16 | 67 (16k + 51v) | Approved |
+| 6b | N3.49–N3.52 | 16 | 67 (16k + 51v) | Pending approval |
+| 6c | N3.53–N3.55 | 12 | 39 (12k + 27v) | Pending approval |
 | 7 | N3.56–N3.70 | 61 | ~210 est. | Not started |
 | 8 | N3.71–N3.86 | 64 | ~220 est. | Not started |
 
@@ -64,7 +66,11 @@ Chunked into 8 batches with approval gates. See plan: `~/.claude/plans/fuzzy-roa
 | G40 (敬語) | N3.34 | いらっしゃる, おっしゃる, めしあがる, なさる, ございます, 伺う, 参る, 申す, 拝見する, ご覧になる | Done (chunk 4b) |
 | G38 (Particles) | N3.22 | → particles.json (not glossary) | Deferred |
 | G41 (Time Clauses) | N3.38 | うち, 以来, とたん | Done (chunk 5a) |
-| G42–G49 | N3.42+ | Various | Not yet |
+| G42 (Perspective Particles) | N3.42 | → particles.json (not glossary) | Deferred |
+| G43 (Causative-Passive) | N3.46 | — (conjugation forms only) | N/A |
+| G44 (Suffixes) | N3.50 | っぽい, がち, 気味, やか | Done (chunk 6b) |
+| G45 (Advanced Conditionals) | N3.54 | — (form-based, no standalone vocab) | N/A |
+| G46–G49 | N3.58+ | Various | Not yet |
 
 ## Vocab Debt from N4 Stories (introduce early in N3)
 
@@ -93,7 +99,7 @@ The N3 vocabulary roadmap determines which kanji and words go in which lesson, w
 - [x] Read `N3-regroup-working.md` — regrouping applied, [FREE] annotations used for compound scan
 - [x] Finalize lesson count — **86 lessons**
 - [x] Finalize kanji allocation per lesson — **locked in N3-kanji-lesson-plan.md**
-- [ ] Update `glossary.N3.json` with all entries — **in progress (N3.1–N3.32 done, N3.33–N3.86 remaining)**
+- [ ] Update `glossary.N3.json` with all entries — **in progress (N3.1–N3.55 done, N3.56–N3.86 remaining)**
 - [ ] Add N3 lesson entries to `manifest.json` with kanji arrays
 
 ### Key decisions made
