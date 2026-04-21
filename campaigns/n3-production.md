@@ -33,8 +33,8 @@ Chunked into 8 batches with approval gates. See plan: `~/.claude/plans/fuzzy-roa
 | Pre-flight | — | — | Fixes only | Done — ID renames (k_yo_3, k_hatsu_2, k_ka_4, k_you_2), lesson_ids fixes (v_zangyou, v_yotei, v_yoyaku) |
 | 1 | N3.11–N3.13 | 12 | 51 (12k + 39v) | Approved |
 | 2 | N3.14–N3.20 | 28 | 140 (28k + 112v) | Approved |
-| 3 | N3.21–N3.26 | 24 | 92 (24k + 68v) | **Pending review** |
-| 4a | N3.27–N3.32 | 23* | 72 (23k + 49v) | **Pending review** |
+| 3 | N3.21–N3.26 | 24 | 95 (24k + 71v) | Approved |
+| 4a | N3.27–N3.32 | 24* | 87 (24k + 63v) | Approved |
 | 4b | N3.33–N3.36 | 16 | ~55 est. | Not started |
 | 5 | N3.37–N3.44 | 32 | ~110 est. | Not started |
 | 6 | N3.45–N3.55 | 47 | ~165 est. | Not started |

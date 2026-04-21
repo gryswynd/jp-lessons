@@ -5659,6 +5659,888 @@
       "gtype": "noun",
       "lesson_ids": "N3.32",
       "notes": "愛 (N3.31) + 情 (N3.32). 愛情を注ぐ = to pour affection into. 愛情深い = deeply affectionate."
+    },
+    {
+      "id": "k_nozomu",
+      "lesson": "N3.33",
+      "type": "kanji",
+      "surface": "望",
+      "on": "ボウ・モウ",
+      "kun": "のぞ.む",
+      "reading": "のぞむ",
+      "meaning": "hope / desire / gaze into distance",
+      "notes": "望む(to hope). Compounds: 希望, 失望, 欲望, 絶望."
+    },
+    {
+      "id": "k_yoku",
+      "lesson": "N3.33",
+      "type": "kanji",
+      "surface": "欲",
+      "on": "ヨク",
+      "kun": "ほ.しい",
+      "reading": "ほしい",
+      "meaning": "desire / greed / want",
+      "notes": "欲しい already taught N5 in kana. N3 teaches the kanji. Compounds: 食欲, 欲望."
+    },
+    {
+      "id": "k_isogashii",
+      "lesson": "N3.33",
+      "type": "kanji",
+      "surface": "忙",
+      "on": "ボウ",
+      "kun": "いそが.しい",
+      "reading": "いそがしい",
+      "meaning": "busy / hectic",
+      "notes": "忙しい already taught N4 in kana. N3 teaches the kanji. Compound: 多忙."
+    },
+    {
+      "id": "k_iki",
+      "lesson": "N3.33",
+      "type": "kanji",
+      "surface": "息",
+      "on": "ソク",
+      "kun": "いき",
+      "reading": "いき",
+      "meaning": "breath / son / rest",
+      "notes": "息(breath), 息子(son). Compounds: 休息, 消息."
+    },
+    {
+      "id": "v_nozomu",
+      "surface": "望む",
+      "reading": "のぞむ",
+      "meaning": "to hope / to desire / to wish for",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_mu",
+      "lesson_ids": "N3.33",
+      "notes": "望 (N3.33)."
+    },
+    {
+      "id": "v_nozomi",
+      "surface": "望み",
+      "reading": "のぞみ",
+      "meaning": "hope / wish / desire / prospect",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.33",
+      "notes": "Noun form of 望む. 望 (N3.33)."
+    },
+    {
+      "id": "v_kibou",
+      "surface": "希望",
+      "reading": "きぼう",
+      "meaning": "hope / wish / aspiration",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.33",
+      "matches": [
+        "き望"
+      ],
+      "notes": "希 (not taught) + 望 (N3.33). Very common — managed kana gap."
+    },
+    {
+      "id": "v_shitsubou",
+      "surface": "失望",
+      "reading": "しつぼう",
+      "meaning": "disappointment / despair",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.33",
+      "notes": "失 (N3.13) + 望 (N3.33)."
+    },
+    {
+      "id": "v_zetsubou",
+      "surface": "絶望",
+      "reading": "ぜつぼう",
+      "meaning": "despair / hopelessness",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.33",
+      "notes": "絶 (N3.15) + 望 (N3.33)."
+    },
+    {
+      "id": "v_yokubou",
+      "surface": "欲望",
+      "reading": "よくぼう",
+      "meaning": "desire / craving / lust",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.33",
+      "notes": "欲 (N3.33) + 望 (N3.33)."
+    },
+    {
+      "id": "v_shokuyoku",
+      "surface": "食欲",
+      "reading": "しょくよく",
+      "meaning": "appetite",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.33",
+      "notes": "食 (N5.10) + 欲 (N3.33)."
+    },
+    {
+      "id": "v_tabou",
+      "surface": "多忙",
+      "reading": "たぼう",
+      "meaning": "very busy / hectic",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.33",
+      "notes": "多 (N5.16) + 忙 (N3.33)."
+    },
+    {
+      "id": "v_iki",
+      "surface": "息",
+      "reading": "いき",
+      "meaning": "breath / breathing",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.33",
+      "notes": "息 (N3.33)."
+    },
+    {
+      "id": "v_musuko",
+      "surface": "息子",
+      "reading": "むすこ",
+      "meaning": "son",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.33",
+      "notes": "息 (N3.33) + 子 (N5.1). [FREE] in regroup."
+    },
+    {
+      "id": "v_kyuusoku",
+      "surface": "休息",
+      "reading": "きゅうそく",
+      "meaning": "rest / repose / taking a break",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.33",
+      "notes": "休 (N5.13) + 息 (N3.33)."
+    },
+    {
+      "id": "k_komaru",
+      "lesson": "N3.34",
+      "type": "kanji",
+      "surface": "困",
+      "on": "コン",
+      "kun": "こま.る",
+      "reading": "こまる",
+      "meaning": "troubled / distressed / at a loss",
+      "notes": "困る(be troubled). Compound: 困難."
+    },
+    {
+      "id": "k_mayou",
+      "lesson": "N3.34",
+      "type": "kanji",
+      "surface": "迷",
+      "on": "メイ",
+      "kun": "まよ.う",
+      "reading": "まよう",
+      "meaning": "get lost / hesitate / be perplexed",
+      "notes": "迷う(get lost/hesitate). Compounds: 迷子, 迷惑."
+    },
+    {
+      "id": "k_utagau",
+      "lesson": "N3.34",
+      "type": "kanji",
+      "surface": "疑",
+      "on": "ギ",
+      "kun": "うたが.う",
+      "reading": "うたがう",
+      "meaning": "doubt / suspect / question",
+      "notes": "疑う(to doubt). Compound: 疑問."
+    },
+    {
+      "id": "k_kurushii",
+      "lesson": "N3.34",
+      "type": "kanji",
+      "surface": "苦",
+      "on": "ク",
+      "kun": "くる.しい・にが.い",
+      "reading": "くるしい",
+      "meaning": "painful / bitter / difficult",
+      "notes": "苦しい(painful), 苦い(bitter). Compounds: 苦手, 苦情, 苦労."
+    },
+    {
+      "id": "v_komaru",
+      "surface": "困る",
+      "reading": "こまる",
+      "meaning": "to be troubled / to be at a loss / to be in difficulty",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.34",
+      "notes": "困 (N3.34)."
+    },
+    {
+      "id": "v_konnan",
+      "surface": "困難",
+      "reading": "こんなん",
+      "meaning": "difficulty / hardship / trouble",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.34",
+      "matches": [
+        "困なん"
+      ],
+      "notes": "困 (N3.34) + 難 (N3.82). Common — managed kana gap."
+    },
+    {
+      "id": "v_mayou",
+      "surface": "迷う",
+      "reading": "まよう",
+      "meaning": "to get lost / to hesitate / to be undecided",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_u",
+      "lesson_ids": "N3.34",
+      "notes": "迷 (N3.34)."
+    },
+    {
+      "id": "v_maigo",
+      "surface": "迷子",
+      "reading": "まいご",
+      "meaning": "lost child / stray",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.34",
+      "notes": "迷 (N3.34) + 子 (N5.1)."
+    },
+    {
+      "id": "v_meiwaku",
+      "surface": "迷惑",
+      "reading": "めいわく",
+      "meaning": "trouble / nuisance / annoyance",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.34",
+      "matches": [
+        "迷わく"
+      ],
+      "notes": "迷 (N3.34) + 惑 (not taught). Very common — managed kana gap."
+    },
+    {
+      "id": "v_utagau",
+      "surface": "疑う",
+      "reading": "うたがう",
+      "meaning": "to doubt / to suspect / to question",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_u",
+      "lesson_ids": "N3.34",
+      "notes": "疑 (N3.34)."
+    },
+    {
+      "id": "v_utagai",
+      "surface": "疑い",
+      "reading": "うたがい",
+      "meaning": "doubt / suspicion",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.34",
+      "notes": "Noun form of 疑う. 疑 (N3.34)."
+    },
+    {
+      "id": "v_gimon",
+      "surface": "疑問",
+      "reading": "ぎもん",
+      "meaning": "question / doubt / problem",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.34",
+      "notes": "疑 (N3.34) + 問 (N4.30)."
+    },
+    {
+      "id": "v_kurushii",
+      "surface": "苦しい",
+      "reading": "くるしい",
+      "meaning": "painful / difficult / distressing",
+      "type": "vocab",
+      "gtype": "i_adj",
+      "verb_class": "i_adj",
+      "lesson_ids": "N3.34",
+      "notes": "苦 (N3.34)."
+    },
+    {
+      "id": "v_kurushimi",
+      "surface": "苦しみ",
+      "reading": "くるしみ",
+      "meaning": "suffering / pain / agony",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.34",
+      "notes": "Noun/stem form of 苦しい. 苦 (N3.34)."
+    },
+    {
+      "id": "v_nigai",
+      "surface": "苦い",
+      "reading": "にがい",
+      "meaning": "bitter (taste) / unpleasant",
+      "type": "vocab",
+      "gtype": "i_adj",
+      "verb_class": "i_adj",
+      "lesson_ids": "N3.34",
+      "notes": "苦 (N3.34). Alternate kun reading にが.い."
+    },
+    {
+      "id": "v_nigate",
+      "surface": "苦手",
+      "reading": "にがて",
+      "meaning": "weak point / not good at / poor at",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.34",
+      "notes": "苦 (N3.34) + 手 (N5.15)."
+    },
+    {
+      "id": "v_kujou",
+      "surface": "苦情",
+      "reading": "くじょう",
+      "meaning": "complaint / grievance",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.34",
+      "notes": "苦 (N3.34) + 情 (N3.32)."
+    },
+    {
+      "id": "v_irassharu",
+      "surface": "いらっしゃる",
+      "reading": "いらっしゃる",
+      "meaning": "(honorific) to be / to go / to come",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.34",
+      "notes": "Honorific (尊敬語) for いる/行く/来る. G40 keigo."
+    },
+    {
+      "id": "v_ossharu",
+      "surface": "おっしゃる",
+      "reading": "おっしゃる",
+      "meaning": "(honorific) to say",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.34",
+      "notes": "Honorific (尊敬語) for 言う. G40 keigo."
+    },
+    {
+      "id": "v_meshiagaru",
+      "surface": "めしあがる",
+      "reading": "めしあがる",
+      "meaning": "(honorific) to eat / to drink",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.34",
+      "notes": "Honorific (尊敬語) for 食べる/飲む. 召し上がる in kanji (召 not taught). G40 keigo."
+    },
+    {
+      "id": "v_nasaru",
+      "surface": "なさる",
+      "reading": "なさる",
+      "meaning": "(honorific) to do",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.34",
+      "notes": "Honorific (尊敬語) for する. G40 keigo."
+    },
+    {
+      "id": "v_gozaimasu",
+      "surface": "ございます",
+      "reading": "ございます",
+      "meaning": "(polite) to be / to exist",
+      "type": "vocab",
+      "gtype": "verb",
+      "lesson_ids": "N3.34",
+      "notes": "Polite (丁寧語) for あります. Fixed ます form. G40 keigo."
+    },
+    {
+      "id": "v_ukagau",
+      "surface": "伺う",
+      "reading": "うかがう",
+      "meaning": "(humble) to visit / to ask / to inquire",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_u",
+      "lesson_ids": "N3.34",
+      "matches": [
+        "うかがう"
+      ],
+      "notes": "Humble (謙譲語) for 行く/聞く/訪ねる. 伺 not taught. G40 keigo."
+    },
+    {
+      "id": "v_mairu",
+      "surface": "参る",
+      "reading": "まいる",
+      "meaning": "(humble) to go / to come",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.34",
+      "notes": "Humble (謙譲語) for 行く/来る. 参 (N3.10). G40 keigo."
+    },
+    {
+      "id": "v_mousu",
+      "surface": "申す",
+      "reading": "もうす",
+      "meaning": "(humble) to say / to be called",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.34",
+      "matches": [
+        "もうす"
+      ],
+      "notes": "Humble (謙譲語) for 言う. 申 (N3.58) not yet taught. G40 keigo."
+    },
+    {
+      "id": "v_haikensuru",
+      "surface": "拝見する",
+      "reading": "はいけんする",
+      "meaning": "(humble) to look / to see",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.34",
+      "matches": [
+        "はいけんする"
+      ],
+      "notes": "Humble (謙譲語) for 見る. 拝+見 — 拝 not taught. G40 keigo."
+    },
+    {
+      "id": "v_gorannninaru",
+      "surface": "ご覧になる",
+      "reading": "ごらんになる",
+      "meaning": "(honorific) to look / to see",
+      "type": "vocab",
+      "gtype": "verb",
+      "lesson_ids": "N3.34",
+      "matches": [
+        "ごらんになる"
+      ],
+      "notes": "Honorific (尊敬語) for 見る. 覧 not taught. G40 keigo."
+    },
+    {
+      "id": "v_kurou",
+      "surface": "苦労",
+      "reading": "くろう",
+      "meaning": "hardship / trouble / difficulty",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.34",
+      "matches": [
+        "苦ろう"
+      ],
+      "notes": "苦 (N3.34) + 労 (N3.77). Common — managed kana gap."
+    },
+    {
+      "id": "k_fueru",
+      "lesson": "N3.35",
+      "type": "kanji",
+      "surface": "増",
+      "on": "ゾウ",
+      "kun": "ふ.える・ま.す",
+      "reading": "ふえる",
+      "meaning": "increase / add / multiply",
+      "notes": "増える(increase, intr.), 増す(increase, somewhat literary). Compound: 増加."
+    },
+    {
+      "id": "k_kawaru",
+      "lesson": "N3.35",
+      "type": "kanji",
+      "surface": "変",
+      "on": "ヘン",
+      "kun": "か.わる・か.える",
+      "reading": "かわる",
+      "meaning": "change / strange / unusual",
+      "notes": "変わる(change, intr.), 変える(change, tr.). Compounds: 変化, 大変."
+    },
+    {
+      "id": "k_bakeru",
+      "lesson": "N3.35",
+      "type": "kanji",
+      "surface": "化",
+      "on": "カ・ケ",
+      "kun": "ば.ける・ば.かす",
+      "reading": "ばける",
+      "meaning": "change into / transform / -ization",
+      "notes": "化 as suffix: 文化, 変化, 強化, 進化. Kun: 化ける(transform, supernatural)."
+    },
+    {
+      "id": "k_arawasu",
+      "lesson": "N3.35",
+      "type": "kanji",
+      "surface": "現",
+      "on": "ゲン",
+      "kun": "あらわ.れる・あらわ.す",
+      "reading": "あらわれる",
+      "meaning": "appear / present / current / reality",
+      "notes": "現れる(appear), 現す(reveal). Compounds: 現在, 現実, 実現, 表現."
+    },
+    {
+      "id": "v_fueru",
+      "surface": "増える",
+      "reading": "ふえる",
+      "meaning": "to increase / to grow (in number)",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.35",
+      "notes": "増 (N3.35). Intransitive."
+    },
+    {
+      "id": "v_fuyasu",
+      "surface": "増やす",
+      "reading": "ふやす",
+      "meaning": "to increase / to add to / to augment",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.35",
+      "notes": "増 (N3.35). Transitive pair of 増える."
+    },
+    {
+      "id": "v_zouka",
+      "surface": "増加",
+      "reading": "ぞうか",
+      "meaning": "increase / growth / rise",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.35",
+      "notes": "増 (N3.35) + 加 (N3.17)."
+    },
+    {
+      "id": "v_kawaru_3",
+      "surface": "変わる",
+      "reading": "かわる",
+      "meaning": "to change / to be altered / to be transformed",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.35",
+      "notes": "変 (N3.35). Intransitive. Distinct from 代わる (N4, to substitute)."
+    },
+    {
+      "id": "v_kaeru_2",
+      "surface": "変える",
+      "reading": "かえる",
+      "meaning": "to change / to alter / to transform",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.35",
+      "notes": "変 (N3.35). Transitive pair of 変わる. Distinct from 帰る (N4, to return)."
+    },
+    {
+      "id": "v_henka",
+      "surface": "変化",
+      "reading": "へんか",
+      "meaning": "change / transformation / variation",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.35",
+      "notes": "変 (N3.35) + 化 (N3.35). Intra-lesson compound."
+    },
+    {
+      "id": "v_taihen",
+      "surface": "大変",
+      "reading": "たいへん",
+      "meaning": "terrible / very / serious / hard",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.35",
+      "notes": "大 (N5.10) + 変 (N3.35). Very common."
+    },
+    {
+      "id": "v_bunka",
+      "surface": "文化",
+      "reading": "ぶんか",
+      "meaning": "culture / civilization",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.35",
+      "notes": "文 (N4.32) + 化 (N3.35). [FREE] in regroup."
+    },
+    {
+      "id": "v_kyouka",
+      "surface": "強化",
+      "reading": "きょうか",
+      "meaning": "strengthening / reinforcement",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.35",
+      "notes": "強 (N4.20) + 化 (N3.35)."
+    },
+    {
+      "id": "v_genzai",
+      "surface": "現在",
+      "reading": "げんざい",
+      "meaning": "the present / currently / now",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.35",
+      "notes": "現 (N3.35) + 在 (N3.18)."
+    },
+    {
+      "id": "v_arawareru",
+      "surface": "現れる",
+      "reading": "あらわれる",
+      "meaning": "to appear / to emerge / to manifest",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.35",
+      "notes": "現 (N3.35)."
+    },
+    {
+      "id": "v_arawasu",
+      "surface": "現す",
+      "reading": "あらわす",
+      "meaning": "to reveal / to show / to display",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.35",
+      "notes": "現 (N3.35). Transitive."
+    },
+    {
+      "id": "v_genjitsu",
+      "surface": "現実",
+      "reading": "げんじつ",
+      "meaning": "reality / actuality",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.35",
+      "notes": "現 (N3.35) + 実 (N3.18)."
+    },
+    {
+      "id": "v_jitsugen",
+      "surface": "実現",
+      "reading": "じつげん",
+      "meaning": "realization / fulfillment / coming true",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.35",
+      "notes": "実 (N3.18) + 現 (N3.35)."
+    },
+    {
+      "id": "v_kagaku",
+      "surface": "化学",
+      "reading": "かがく",
+      "meaning": "chemistry",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.35",
+      "notes": "化 (N3.35) + 学 (N5.14)."
+    },
+    {
+      "id": "v_shinka",
+      "surface": "進化",
+      "reading": "しんか",
+      "meaning": "evolution / progress",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.35",
+      "notes": "進 (N4.29) + 化 (N3.35)."
+    },
+    {
+      "id": "v_akka",
+      "surface": "悪化",
+      "reading": "あっか",
+      "meaning": "deterioration / worsening",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.35",
+      "notes": "悪 (N4.35) + 化 (N3.35)."
+    },
+    {
+      "id": "v_gendai",
+      "surface": "現代",
+      "reading": "げんだい",
+      "meaning": "modern era / present day / contemporary",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.35",
+      "notes": "現 (N3.35) + 代 (N4.33)."
+    },
+    {
+      "id": "k_nemuru",
+      "lesson": "N3.36",
+      "type": "kanji",
+      "surface": "眠",
+      "on": "ミン",
+      "kun": "ねむ.る・ねむ.い",
+      "reading": "ねむる",
+      "meaning": "sleep / sleepy",
+      "notes": "眠る(sleep), 眠い(sleepy). Distinct from 寝る(N3.28, lie down/go to bed). Compound: 睡眠(sleep — 睡 not taught)."
+    },
+    {
+      "id": "k_tsukareru",
+      "lesson": "N3.36",
+      "type": "kanji",
+      "surface": "疲",
+      "on": "ヒ",
+      "kun": "つか.れる",
+      "reading": "つかれる",
+      "meaning": "tired / fatigue / exhaustion",
+      "notes": "疲れる already taught N4 in kana. N3 teaches the kanji. Compound: 疲労(fatigue — 労 N3.77)."
+    },
+    {
+      "id": "k_itamu",
+      "lesson": "N3.36",
+      "type": "kanji",
+      "surface": "痛",
+      "on": "ツウ",
+      "kun": "いた.い・いた.む",
+      "reading": "いたい",
+      "meaning": "pain / ache / hurt",
+      "notes": "痛い already taught N5 in kana. N3 teaches the kanji. Compounds: 頭痛, 腹痛."
+    },
+    {
+      "id": "k_kutsu",
+      "lesson": "N3.36",
+      "type": "kanji",
+      "surface": "靴",
+      "on": "カ",
+      "kun": "くつ",
+      "reading": "くつ",
+      "meaning": "shoes / boots / footwear",
+      "notes": "靴(shoes). Common daily-life kanji. No productive N3-level compounds."
+    },
+    {
+      "id": "v_nemui",
+      "surface": "眠い",
+      "reading": "ねむい",
+      "meaning": "sleepy / drowsy",
+      "type": "vocab",
+      "gtype": "i_adj",
+      "verb_class": "i_adj",
+      "lesson_ids": "N3.36",
+      "notes": "眠 (N3.36)."
+    },
+    {
+      "id": "v_nemuru",
+      "surface": "眠る",
+      "reading": "ねむる",
+      "meaning": "to sleep / to fall asleep",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.36",
+      "notes": "眠 (N3.36). More literary than 寝る; emphasizes the state of sleeping."
+    },
+    {
+      "id": "v_nemuri",
+      "surface": "眠り",
+      "reading": "ねむり",
+      "meaning": "sleep / slumber",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.36",
+      "notes": "Noun form of 眠る. 眠 (N3.36)."
+    },
+    {
+      "id": "v_suimin",
+      "surface": "睡眠",
+      "reading": "すいみん",
+      "meaning": "sleep",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.36",
+      "matches": [
+        "すい眠"
+      ],
+      "notes": "睡 (not taught) + 眠 (N3.36). Common formal/medical term — managed kana gap."
+    },
+    {
+      "id": "v_tsukareru_2",
+      "surface": "疲れる",
+      "reading": "つかれる",
+      "meaning": "to get tired / to become exhausted",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.36",
+      "notes": "疲 (N3.36). Kanji upgrade from N4 kana entry."
+    },
+    {
+      "id": "v_tsukare",
+      "surface": "疲れ",
+      "reading": "つかれ",
+      "meaning": "tiredness / fatigue",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.36",
+      "notes": "Noun form of 疲れる. 疲 (N3.36)."
+    },
+    {
+      "id": "v_itai_2",
+      "surface": "痛い",
+      "reading": "いたい",
+      "meaning": "painful / sore / hurting",
+      "type": "vocab",
+      "gtype": "i_adj",
+      "verb_class": "i_adj",
+      "lesson_ids": "N3.36",
+      "notes": "痛 (N3.36). Kanji upgrade from N5 kana entry."
+    },
+    {
+      "id": "v_itami",
+      "surface": "痛み",
+      "reading": "いたみ",
+      "meaning": "pain / ache / soreness",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.36",
+      "notes": "Noun/stem form of 痛い. 痛 (N3.36)."
+    },
+    {
+      "id": "v_itamu",
+      "surface": "痛む",
+      "reading": "いたむ",
+      "meaning": "to hurt / to ache / to be in pain",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_mu",
+      "lesson_ids": "N3.36",
+      "notes": "痛 (N3.36). Intransitive verb form."
+    },
+    {
+      "id": "v_zutsuu",
+      "surface": "頭痛",
+      "reading": "ずつう",
+      "meaning": "headache",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.36",
+      "notes": "頭 (N4.18) + 痛 (N3.36)."
+    },
+    {
+      "id": "v_kutsu",
+      "surface": "靴",
+      "reading": "くつ",
+      "meaning": "shoes / boots / footwear",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.36",
+      "notes": "靴 (N3.36)."
+    },
+    {
+      "id": "v_kutsushita",
+      "surface": "靴下",
+      "reading": "くつした",
+      "meaning": "socks",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.36",
+      "notes": "靴 (N3.36) + 下 (N5.17)."
     }
   ]
 }
