@@ -6541,6 +6541,835 @@
       "gtype": "noun",
       "lesson_ids": "N3.36",
       "notes": "靴 (N3.36) + 下 (N5.17)."
+    },
+    {
+      "id": "k_komu",
+      "lesson": "N3.37",
+      "type": "kanji",
+      "surface": "込",
+      "on": "—",
+      "kun": "こ.む・こ.める",
+      "reading": "こむ",
+      "meaning": "crowded / put into / be included",
+      "notes": "込む(be crowded), 込める(put into). Extremely productive compound verb suffix: 申し込む, 引っ込む, 思い込む."
+    },
+    {
+      "id": "k_sugiru",
+      "lesson": "N3.37",
+      "type": "kanji",
+      "surface": "過",
+      "on": "カ",
+      "kun": "す.ぎる・す.ごす",
+      "reading": "すぎる",
+      "meaning": "pass / exceed / overdo / past",
+      "notes": "過ぎる(pass/exceed), 過ごす(spend time). Compounds: 過去, 通過."
+    },
+    {
+      "id": "k_osoi",
+      "lesson": "N3.37",
+      "type": "kanji",
+      "surface": "遅",
+      "on": "チ",
+      "kun": "おく.れる・おそ.い",
+      "reading": "おそい",
+      "meaning": "late / slow / delayed",
+      "notes": "遅い(slow/late), 遅れる(be late). Compound: 遅刻. Antonym: 速."
+    },
+    {
+      "id": "k_hayai_2",
+      "lesson": "N3.37",
+      "type": "kanji",
+      "surface": "速",
+      "on": "ソク",
+      "kun": "はや.い",
+      "reading": "はやい",
+      "meaning": "fast / quick / speed",
+      "notes": "速い(fast). Distinct from 早い(early, N4). Compounds: 速度, 加速."
+    },
+    {
+      "id": "v_komu",
+      "surface": "込む",
+      "reading": "こむ",
+      "meaning": "to be crowded / to be packed",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_mu",
+      "lesson_ids": "N3.37",
+      "notes": "込 (N3.37)."
+    },
+    {
+      "id": "v_komeru",
+      "surface": "込める",
+      "reading": "こめる",
+      "meaning": "to put into / to include / to load",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.37",
+      "notes": "込 (N3.37). 気持ちを込める = to put one's feelings into."
+    },
+    {
+      "id": "v_moushikomu",
+      "surface": "申し込む",
+      "reading": "もうしこむ",
+      "meaning": "to apply / to propose / to request",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_mu",
+      "lesson_ids": "N3.37",
+      "matches": [
+        "もうし込む"
+      ],
+      "notes": "申 (N3.58) + 込 (N3.37). Very common — managed kana gap."
+    },
+    {
+      "id": "v_moushikomi",
+      "surface": "申し込み",
+      "reading": "もうしこみ",
+      "meaning": "application / proposal / request",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.37",
+      "matches": [
+        "もうし込み"
+      ],
+      "notes": "Noun form of 申し込む. 申 (N3.58) + 込 (N3.37)."
+    },
+    {
+      "id": "v_hikkomu",
+      "surface": "引っ込む",
+      "reading": "ひっこむ",
+      "meaning": "to withdraw / to draw back / to stay indoors",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_mu",
+      "lesson_ids": "N3.37",
+      "notes": "引 (N4.24) + 込 (N3.37)."
+    },
+    {
+      "id": "v_mikomi",
+      "surface": "見込み",
+      "reading": "みこみ",
+      "meaning": "prospect / expectation / likelihood",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.37",
+      "notes": "見 (N5.12) + 込 (N3.37)."
+    },
+    {
+      "id": "v_omoikomu",
+      "surface": "思い込む",
+      "reading": "おもいこむ",
+      "meaning": "to be convinced / to assume / to jump to conclusions",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_mu",
+      "lesson_ids": "N3.37",
+      "notes": "思 (N4.36) + 込 (N3.37)."
+    },
+    {
+      "id": "v_mochikomu",
+      "surface": "持ち込む",
+      "reading": "もちこむ",
+      "meaning": "to bring in / to carry in",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_mu",
+      "lesson_ids": "N3.37",
+      "notes": "持 (N4.28) + 込 (N3.37)."
+    },
+    {
+      "id": "v_sugiru",
+      "surface": "過ぎる",
+      "reading": "すぎる",
+      "meaning": "to pass / to exceed / to go beyond",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.37",
+      "notes": "過 (N3.37)."
+    },
+    {
+      "id": "v_sugosu",
+      "surface": "過ごす",
+      "reading": "すごす",
+      "meaning": "to spend (time) / to pass (time)",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.37",
+      "notes": "過 (N3.37)."
+    },
+    {
+      "id": "v_kako",
+      "surface": "過去",
+      "reading": "かこ",
+      "meaning": "the past / past tense",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.37",
+      "notes": "過 (N3.37) + 去 (N4.15)."
+    },
+    {
+      "id": "v_tsuuka",
+      "surface": "通過",
+      "reading": "つうか",
+      "meaning": "passing through / transit",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.37",
+      "notes": "通 (N4.26) + 過 (N3.37)."
+    },
+    {
+      "id": "v_osoi",
+      "surface": "遅い",
+      "reading": "おそい",
+      "meaning": "slow / late / behind schedule",
+      "type": "vocab",
+      "gtype": "i_adj",
+      "verb_class": "i_adj",
+      "lesson_ids": "N3.37",
+      "notes": "遅 (N3.37). Antonym of 速い."
+    },
+    {
+      "id": "v_okureru",
+      "surface": "遅れる",
+      "reading": "おくれる",
+      "meaning": "to be late / to be delayed / to fall behind",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.37",
+      "notes": "遅 (N3.37)."
+    },
+    {
+      "id": "v_chikoku",
+      "surface": "遅刻",
+      "reading": "ちこく",
+      "meaning": "being late / tardiness",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.37",
+      "notes": "遅 (N3.37) + 刻 (N3.26)."
+    },
+    {
+      "id": "v_hayai_2",
+      "surface": "速い",
+      "reading": "はやい",
+      "meaning": "fast / quick / rapid",
+      "type": "vocab",
+      "gtype": "i_adj",
+      "verb_class": "i_adj",
+      "lesson_ids": "N3.37",
+      "notes": "速 (N3.37). Speed (not time). Distinct from 早い (N4, early)."
+    },
+    {
+      "id": "v_sokudo",
+      "surface": "速度",
+      "reading": "そくど",
+      "meaning": "speed / velocity",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.37",
+      "notes": "速 (N3.37) + 度 (N4.34)."
+    },
+    {
+      "id": "v_kasoku",
+      "surface": "加速",
+      "reading": "かそく",
+      "meaning": "acceleration / speeding up",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.37",
+      "notes": "加 (N3.17) + 速 (N3.37)."
+    },
+    {
+      "id": "k_noboru",
+      "lesson": "N3.38",
+      "type": "kanji",
+      "surface": "登",
+      "on": "トウ・ト",
+      "kun": "のぼ.る",
+      "reading": "のぼる",
+      "meaning": "climb / ascend / register",
+      "notes": "登る(climb). Compounds: 登山, 登場, 登録."
+    },
+    {
+      "id": "k_ochiru",
+      "lesson": "N3.38",
+      "type": "kanji",
+      "surface": "落",
+      "on": "ラク",
+      "kun": "お.ちる・お.とす",
+      "reading": "おちる",
+      "meaning": "fall / drop / fail (exam)",
+      "notes": "落ちる(fall, intr.), 落とす(drop, tr.). Compounds: 落下, 落書き."
+    },
+    {
+      "id": "k_koeru",
+      "lesson": "N3.38",
+      "type": "kanji",
+      "surface": "越",
+      "on": "エツ",
+      "kun": "こ.える・こ.す",
+      "reading": "こえる",
+      "meaning": "cross over / exceed / surpass",
+      "notes": "越える(cross over), 越す(cross/move). Compound: 引っ越す."
+    },
+    {
+      "id": "k_oriru",
+      "lesson": "N3.38",
+      "type": "kanji",
+      "surface": "降",
+      "on": "コウ",
+      "kun": "お.りる・ふ.る",
+      "reading": "おりる",
+      "meaning": "descend / get off / fall (rain/snow)",
+      "notes": "降りる(get off/descend), 降る(fall — rain/snow). Compounds: 以降, 降参."
+    },
+    {
+      "id": "v_noboru",
+      "surface": "登る",
+      "reading": "のぼる",
+      "meaning": "to climb / to ascend / to go up",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.38",
+      "notes": "登 (N3.38)."
+    },
+    {
+      "id": "v_tozan",
+      "surface": "登山",
+      "reading": "とざん",
+      "meaning": "mountain climbing / mountaineering",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.38",
+      "notes": "登 (N3.38) + 山 (N5.8)."
+    },
+    {
+      "id": "v_toujou",
+      "surface": "登場",
+      "reading": "とうじょう",
+      "meaning": "appearance (on stage) / entry / debut",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.38",
+      "notes": "登 (N3.38) + 場 (N4.31)."
+    },
+    {
+      "id": "v_ochiru",
+      "surface": "落ちる",
+      "reading": "おちる",
+      "meaning": "to fall / to drop / to fail (an exam)",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.38",
+      "notes": "落 (N3.38). Intransitive."
+    },
+    {
+      "id": "v_otosu",
+      "surface": "落とす",
+      "reading": "おとす",
+      "meaning": "to drop / to lose / to let fall",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.38",
+      "notes": "落 (N3.38). Transitive pair of 落ちる."
+    },
+    {
+      "id": "v_rakka",
+      "surface": "落下",
+      "reading": "らっか",
+      "meaning": "falling / dropping / descent",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.38",
+      "notes": "落 (N3.38) + 下 (N5.17)."
+    },
+    {
+      "id": "v_rakugaki",
+      "surface": "落書き",
+      "reading": "らくがき",
+      "meaning": "graffiti / scribble / doodle",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.38",
+      "notes": "落 (N3.38) + 書 (N5.8)."
+    },
+    {
+      "id": "v_koeru",
+      "surface": "越える",
+      "reading": "こえる",
+      "meaning": "to cross over / to exceed / to surpass",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.38",
+      "notes": "越 (N3.38)."
+    },
+    {
+      "id": "v_hikkosu",
+      "surface": "引っ越す",
+      "reading": "ひっこす",
+      "meaning": "to move (house) / to relocate",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.38",
+      "notes": "引 (N4.24) + 越 (N3.38). Very common."
+    },
+    {
+      "id": "v_hikkoshi",
+      "surface": "引っ越し",
+      "reading": "ひっこし",
+      "meaning": "moving (house) / relocation",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.38",
+      "notes": "Noun form of 引っ越す. 引 (N4.24) + 越 (N3.38)."
+    },
+    {
+      "id": "v_oriru",
+      "surface": "降りる",
+      "reading": "おりる",
+      "meaning": "to get off / to descend / to alight",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.38",
+      "notes": "降 (N3.38)."
+    },
+    {
+      "id": "v_furu_2",
+      "surface": "降る",
+      "reading": "ふる",
+      "meaning": "to fall (rain/snow) / to precipitate",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.38",
+      "notes": "降 (N3.38). 雨が降る = it rains."
+    },
+    {
+      "id": "v_ikou",
+      "surface": "以降",
+      "reading": "いこう",
+      "meaning": "from ... onwards / since / after",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.38",
+      "notes": "以 (N4.36) + 降 (N3.38)."
+    },
+    {
+      "id": "v_kousan",
+      "surface": "降参",
+      "reading": "こうさん",
+      "meaning": "surrender / giving up",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.38",
+      "notes": "降 (N3.38) + 参 (N3.10)."
+    },
+    {
+      "id": "v_uchi_2",
+      "surface": "うち",
+      "reading": "うち",
+      "meaning": "while / within / among / before (opportunity passes)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.38",
+      "notes": "G41 grammar-adjacent. Distinct from うち (home, N5). Used in ～ているうちに, ～ないうちに."
+    },
+    {
+      "id": "v_irai",
+      "surface": "以来",
+      "reading": "いらい",
+      "meaning": "since / from ... on",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.38",
+      "notes": "以 (N4.36) + 来 (N5.5). G41 grammar-adjacent."
+    },
+    {
+      "id": "v_totan",
+      "surface": "とたん",
+      "reading": "とたん",
+      "meaning": "the moment / as soon as / just as",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.38",
+      "notes": "途端 in kanji (途 N3.39 + 端 not taught). Written in kana at this level. G41 grammar-adjacent."
+    },
+    {
+      "id": "k_asobu",
+      "lesson": "N3.39",
+      "type": "kanji",
+      "surface": "遊",
+      "on": "ユウ",
+      "kun": "あそ.ぶ",
+      "reading": "あそぶ",
+      "meaning": "play / enjoy / be idle",
+      "notes": "遊ぶ(play). Compounds: 遊園地(園 N3.66, defer)."
+    },
+    {
+      "id": "k_tochu",
+      "lesson": "N3.39",
+      "type": "kanji",
+      "surface": "途",
+      "on": "ト",
+      "kun": "—",
+      "reading": "と",
+      "meaning": "way / route / midway",
+      "notes": "途中(midway). On-reading only kanji."
+    },
+    {
+      "id": "k_michi_3",
+      "lesson": "N3.39",
+      "type": "kanji",
+      "surface": "路",
+      "on": "ロ",
+      "kun": "じ",
+      "reading": "ろ",
+      "meaning": "road / path / route",
+      "notes": "道路(road), 通路(passage). Often in compounds as ロ."
+    },
+    {
+      "id": "k_chiru",
+      "lesson": "N3.39",
+      "type": "kanji",
+      "surface": "散",
+      "on": "サン",
+      "kun": "ち.る・ち.らかる",
+      "reading": "ちる",
+      "meaning": "scatter / disperse / fall (petals)",
+      "notes": "散る(scatter), 散歩(walk). 散らかる/散らかす(be messy/make messy)."
+    },
+    {
+      "id": "v_asobu",
+      "surface": "遊ぶ",
+      "reading": "あそぶ",
+      "meaning": "to play / to have fun / to hang out",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_bu",
+      "lesson_ids": "N3.39",
+      "notes": "遊 (N3.39)."
+    },
+    {
+      "id": "v_asobi",
+      "surface": "遊び",
+      "reading": "あそび",
+      "meaning": "play / game / fun / pastime",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.39",
+      "notes": "Noun form of 遊ぶ. 遊 (N3.39)."
+    },
+    {
+      "id": "v_tochu",
+      "surface": "途中",
+      "reading": "とちゅう",
+      "meaning": "on the way / midway / in the middle of",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.39",
+      "notes": "途 (N3.39) + 中 (N5.2). [FREE] in regroup."
+    },
+    {
+      "id": "v_douro",
+      "surface": "道路",
+      "reading": "どうろ",
+      "meaning": "road / street / highway",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.39",
+      "notes": "道 (N4.7) + 路 (N3.39). [FREE] in regroup."
+    },
+    {
+      "id": "v_tsuuro",
+      "surface": "通路",
+      "reading": "つうろ",
+      "meaning": "passage / aisle / corridor",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.39",
+      "notes": "通 (N4.26) + 路 (N3.39)."
+    },
+    {
+      "id": "v_sanpo",
+      "surface": "散歩",
+      "reading": "さんぽ",
+      "meaning": "walk / stroll",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.39",
+      "notes": "散 (N3.39) + 歩 (N4.4). [FREE] in regroup."
+    },
+    {
+      "id": "v_chiru",
+      "surface": "散る",
+      "reading": "ちる",
+      "meaning": "to scatter / to fall (petals/leaves)",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.39",
+      "notes": "散 (N3.39). 桜が散る = cherry blossoms fall."
+    },
+    {
+      "id": "v_chirakaru",
+      "surface": "散らかる",
+      "reading": "ちらかる",
+      "meaning": "to be in disorder / to be messy",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.39",
+      "notes": "散 (N3.39). Intransitive."
+    },
+    {
+      "id": "v_chirakasu",
+      "surface": "散らかす",
+      "reading": "ちらかす",
+      "meaning": "to scatter / to make a mess",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.39",
+      "notes": "散 (N3.39). Transitive pair of 散らかる."
+    },
+    {
+      "id": "k_atsui_2",
+      "lesson": "N3.40",
+      "type": "kanji",
+      "surface": "熱",
+      "on": "ネツ",
+      "kun": "あつ.い",
+      "reading": "あつい",
+      "meaning": "hot (to touch) / heat / fever / passion",
+      "notes": "熱い(hot), 熱(heat/fever). Distinct from 暑い(N4, hot weather). Compounds: 熱心, 情熱."
+    },
+    {
+      "id": "k_kemuri",
+      "lesson": "N3.40",
+      "type": "kanji",
+      "surface": "煙",
+      "on": "エン",
+      "kun": "けむり・けむ.い",
+      "reading": "けむり",
+      "meaning": "smoke / fumes",
+      "notes": "煙(smoke). Compound: 禁煙."
+    },
+    {
+      "id": "k_tsumetai",
+      "lesson": "N3.40",
+      "type": "kanji",
+      "surface": "冷",
+      "on": "レイ",
+      "kun": "つめ.たい・ひ.える・さ.める",
+      "reading": "つめたい",
+      "meaning": "cold (to touch) / cool / chill",
+      "notes": "冷たい(cold), 冷える(get cold), 冷める(cool down). Compounds: 冷静, 冷蔵庫."
+    },
+    {
+      "id": "k_kieru",
+      "lesson": "N3.40",
+      "type": "kanji",
+      "surface": "消",
+      "on": "ショウ",
+      "kun": "き.える・け.す",
+      "reading": "きえる",
+      "meaning": "erase / extinguish / disappear / turn off",
+      "notes": "消える(disappear), 消す(erase/turn off). Compounds: 消化, 消費."
+    },
+    {
+      "id": "v_atsui_2",
+      "surface": "熱い",
+      "reading": "あつい",
+      "meaning": "hot (to touch) / passionate / enthusiastic",
+      "type": "vocab",
+      "gtype": "i_adj",
+      "verb_class": "i_adj",
+      "lesson_ids": "N3.40",
+      "notes": "熱 (N3.40). Hot to touch. Distinct from 暑い (N4, hot weather)."
+    },
+    {
+      "id": "v_netsu",
+      "surface": "熱",
+      "reading": "ねつ",
+      "meaning": "heat / fever / temperature / passion",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.40",
+      "notes": "熱 (N3.40)."
+    },
+    {
+      "id": "v_nesshin",
+      "surface": "熱心",
+      "reading": "ねっしん",
+      "meaning": "eager / enthusiastic / devoted",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.40",
+      "notes": "熱 (N3.40) + 心 (N4.18)."
+    },
+    {
+      "id": "v_jounetsu",
+      "surface": "情熱",
+      "reading": "じょうねつ",
+      "meaning": "passion / fervor / zeal",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.40",
+      "notes": "情 (N3.32) + 熱 (N3.40)."
+    },
+    {
+      "id": "v_hatsunetsu",
+      "surface": "発熱",
+      "reading": "はつねつ",
+      "meaning": "generating heat / having a fever",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.40",
+      "notes": "発 (N4.34) + 熱 (N3.40)."
+    },
+    {
+      "id": "v_kemuri",
+      "surface": "煙",
+      "reading": "けむり",
+      "meaning": "smoke / fumes",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.40",
+      "notes": "煙 (N3.40)."
+    },
+    {
+      "id": "v_kinen",
+      "surface": "禁煙",
+      "reading": "きんえん",
+      "meaning": "no smoking / smoking ban",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.40",
+      "matches": [
+        "きん煙"
+      ],
+      "notes": "禁 (not taught) + 煙 (N3.40). Common sign — managed kana gap."
+    },
+    {
+      "id": "v_tsumetai",
+      "surface": "冷たい",
+      "reading": "つめたい",
+      "meaning": "cold (to touch) / chilly / cold-hearted",
+      "type": "vocab",
+      "gtype": "i_adj",
+      "verb_class": "i_adj",
+      "lesson_ids": "N3.40",
+      "notes": "冷 (N3.40)."
+    },
+    {
+      "id": "v_hieru",
+      "surface": "冷える",
+      "reading": "ひえる",
+      "meaning": "to get cold / to grow chilly",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.40",
+      "notes": "冷 (N3.40). Intransitive."
+    },
+    {
+      "id": "v_sameru_2",
+      "surface": "冷める",
+      "reading": "さめる",
+      "meaning": "to cool down / to lose interest",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.40",
+      "notes": "冷 (N3.40). Distinct from 覚める (N3.1, to wake up)."
+    },
+    {
+      "id": "v_samasu_2",
+      "surface": "冷ます",
+      "reading": "さます",
+      "meaning": "to cool (something) down / to let cool",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.40",
+      "notes": "冷 (N3.40). Transitive. Distinct from 覚ます (N3.1, to wake someone)."
+    },
+    {
+      "id": "v_reisei",
+      "surface": "冷静",
+      "reading": "れいせい",
+      "meaning": "calm / cool-headed / composed",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.40",
+      "matches": [
+        "冷せい"
+      ],
+      "notes": "冷 (N3.40) + 静 (N3.62). Common — managed kana gap."
+    },
+    {
+      "id": "v_kieru",
+      "surface": "消える",
+      "reading": "きえる",
+      "meaning": "to disappear / to go out / to vanish",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.40",
+      "notes": "消 (N3.40). Intransitive."
+    },
+    {
+      "id": "v_kesu",
+      "surface": "消す",
+      "reading": "けす",
+      "meaning": "to erase / to turn off / to extinguish",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.40",
+      "notes": "消 (N3.40). Transitive pair of 消える."
+    },
+    {
+      "id": "v_shouka",
+      "surface": "消化",
+      "reading": "しょうか",
+      "meaning": "digestion",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.40",
+      "notes": "消 (N3.40) + 化 (N3.35)."
+    },
+    {
+      "id": "v_shibaraku",
+      "surface": "しばらく",
+      "reading": "しばらく",
+      "meaning": "for a while / a moment / it's been a while",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N3.38",
+      "notes": "Kana-only. Vocab debt from N4 stories. Placed with G41 time expressions."
+    },
+    {
+      "id": "v_yappari",
+      "surface": "やっぱり",
+      "reading": "やっぱり",
+      "meaning": "as expected / after all / still / also",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N3.37",
+      "notes": "Kana-only. Vocab debt from N4 stories. Formal form: やはり."
     }
   ]
 }
