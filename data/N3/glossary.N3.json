@@ -9587,6 +9587,425 @@
       "gtype": "noun",
       "lesson_ids": "N3.52",
       "notes": "誤 (N3.52). Noun form of 誤る."
+    },
+    {
+      "id": "k_dan_2",
+      "lesson": "N3.53",
+      "type": "kanji",
+      "surface": "談",
+      "on": "ダン",
+      "kun": "",
+      "reading": "だん",
+      "meaning": "talk / conversation / discuss",
+      "notes": "Primarily compound-use. Compounds: 相談(consult), 談話(talk)."
+    },
+    {
+      "id": "k_ron",
+      "lesson": "N3.53",
+      "type": "kanji",
+      "surface": "論",
+      "on": "ロン",
+      "kun": "",
+      "reading": "ろん",
+      "meaning": "argument / theory / discuss",
+      "notes": "Primarily compound-use. Compounds: 議論(debate), 論文(thesis), 理論(theory), 結論(conclusion)."
+    },
+    {
+      "id": "k_gi",
+      "lesson": "N3.53",
+      "type": "kanji",
+      "surface": "議",
+      "on": "ギ",
+      "kun": "",
+      "reading": "ぎ",
+      "meaning": "deliberation / discussion / council",
+      "notes": "Primarily compound-use. Compounds: 議論(debate), 会議(meeting)."
+    },
+    {
+      "id": "k_shiki",
+      "lesson": "N3.53",
+      "type": "kanji",
+      "surface": "識",
+      "on": "シキ",
+      "kun": "",
+      "reading": "しき",
+      "meaning": "know / knowledge / discern",
+      "notes": "Primarily compound-use. Compounds: 知識(knowledge), 意識(awareness), 認識(recognition)."
+    },
+    {
+      "id": "v_soudan",
+      "surface": "相談",
+      "reading": "そうだん",
+      "meaning": "consultation / discussion / advice",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.53",
+      "matches": [
+        "そう談"
+      ],
+      "notes": "相 (N3.83 gap) + 談 (N3.53). Very common — managed kana gap."
+    },
+    {
+      "id": "v_giron",
+      "surface": "議論",
+      "reading": "ぎろん",
+      "meaning": "debate / discussion / argument",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.53",
+      "notes": "議 (N3.53) + 論 (N3.53). Intra-lesson pair."
+    },
+    {
+      "id": "v_chishiki",
+      "surface": "知識",
+      "reading": "ちしき",
+      "meaning": "knowledge / information",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.53",
+      "notes": "知 (N4.29) + 識 (N3.53). [FREE] compound."
+    },
+    {
+      "id": "v_ishiki",
+      "surface": "意識",
+      "reading": "いしき",
+      "meaning": "consciousness / awareness",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.53",
+      "notes": "意 (N4.22) + 識 (N3.53)."
+    },
+    {
+      "id": "v_ninshiki",
+      "surface": "認識",
+      "reading": "にんしき",
+      "meaning": "recognition / cognition / perception",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.53",
+      "notes": "認 (N3.50) + 識 (N3.53)."
+    },
+    {
+      "id": "v_ronbun",
+      "surface": "論文",
+      "reading": "ろんぶん",
+      "meaning": "thesis / academic paper / essay",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.53",
+      "notes": "論 (N3.53) + 文 (N4.25)."
+    },
+    {
+      "id": "v_kaigi",
+      "surface": "会議",
+      "reading": "かいぎ",
+      "meaning": "meeting / conference",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.53",
+      "notes": "会 (N5.17) + 議 (N3.53)."
+    },
+    {
+      "id": "v_riron",
+      "surface": "理論",
+      "reading": "りろん",
+      "meaning": "theory",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.53",
+      "notes": "理 (N4.5) + 論 (N3.53)."
+    },
+    {
+      "id": "v_ketsuron",
+      "surface": "結論",
+      "reading": "けつろん",
+      "meaning": "conclusion",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.53",
+      "matches": [
+        "けつ論"
+      ],
+      "notes": "結 (not taught) + 論 (N3.53). Common — managed kana gap."
+    },
+    {
+      "id": "k_rei_2",
+      "lesson": "N3.54",
+      "type": "kanji",
+      "surface": "礼",
+      "on": "レイ・ライ",
+      "kun": "",
+      "reading": "れい",
+      "meaning": "courtesy / thanks / bow / manners",
+      "notes": "礼(thanks/bow), お礼(gratitude). Compounds: 失礼(rudeness)."
+    },
+    {
+      "id": "k_otozureru",
+      "lesson": "N3.54",
+      "type": "kanji",
+      "surface": "訪",
+      "on": "ホウ",
+      "kun": "おとず.れる・たず.ねる",
+      "reading": "おとずれる",
+      "meaning": "visit / call on",
+      "notes": "訪れる(visit-place), 訪ねる(visit-person). Compounds: 訪問."
+    },
+    {
+      "id": "k_maneku",
+      "lesson": "N3.54",
+      "type": "kanji",
+      "surface": "招",
+      "on": "ショウ",
+      "kun": "まね.く",
+      "reading": "まねく",
+      "meaning": "invite / beckon / summon",
+      "notes": "招く(invite/beckon). Compounds: 招待(invitation)."
+    },
+    {
+      "id": "k_mukaeru",
+      "lesson": "N3.54",
+      "type": "kanji",
+      "surface": "迎",
+      "on": "ゲイ",
+      "kun": "むか.える",
+      "reading": "むかえる",
+      "meaning": "welcome / greet / meet",
+      "notes": "迎える(welcome/greet). Compounds: 歓迎(welcome), 出迎える(go to meet)."
+    },
+    {
+      "id": "v_rei_2",
+      "surface": "礼",
+      "reading": "れい",
+      "meaning": "courtesy / thanks / bow",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.54",
+      "notes": "礼 (N3.54). お礼 = thanks (polite)."
+    },
+    {
+      "id": "v_orei",
+      "surface": "お礼",
+      "reading": "おれい",
+      "meaning": "thanks / gratitude / gift of thanks",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.54",
+      "notes": "礼 (N3.54). Polite form of 礼."
+    },
+    {
+      "id": "v_houmon",
+      "surface": "訪問",
+      "reading": "ほうもん",
+      "meaning": "visit / call",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.54",
+      "notes": "訪 (N3.54) + 問 (N4.19). [FREE] compound."
+    },
+    {
+      "id": "v_otozureru",
+      "surface": "訪れる",
+      "reading": "おとずれる",
+      "meaning": "to visit / to arrive / to come (season, opportunity)",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.54",
+      "notes": "訪 (N3.54)."
+    },
+    {
+      "id": "v_tazuneru",
+      "surface": "訪ねる",
+      "reading": "たずねる",
+      "meaning": "to visit (a person) / to call on",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.54",
+      "notes": "訪 (N3.54). Distinct from 尋ねる (to ask/inquire)."
+    },
+    {
+      "id": "v_maneku",
+      "surface": "招く",
+      "reading": "まねく",
+      "meaning": "to invite / to beckon / to cause",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ku",
+      "lesson_ids": "N3.54",
+      "notes": "招 (N3.54). 招く = invite or beckon."
+    },
+    {
+      "id": "v_shoutai_2",
+      "surface": "招待",
+      "reading": "しょうたい",
+      "meaning": "invitation",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.54",
+      "notes": "招 (N3.54) + 待 (N4.27). [FREE] compound."
+    },
+    {
+      "id": "v_mukaeru",
+      "surface": "迎える",
+      "reading": "むかえる",
+      "meaning": "to welcome / to greet / to go to meet",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.54",
+      "notes": "迎 (N3.54)."
+    },
+    {
+      "id": "v_kangei",
+      "surface": "歓迎",
+      "reading": "かんげい",
+      "meaning": "welcome / reception",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.54",
+      "matches": [
+        "かん迎"
+      ],
+      "notes": "歓 (not taught) + 迎 (N3.54). Common — managed kana gap."
+    },
+    {
+      "id": "v_demukaeru",
+      "surface": "出迎える",
+      "reading": "でむかえる",
+      "meaning": "to go out to meet / to greet (at arrival)",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.54",
+      "notes": "出 (N5.15) + 迎 (N3.54). Compound verb."
+    },
+    {
+      "id": "k_kei_3",
+      "lesson": "N3.55",
+      "type": "kanji",
+      "surface": "警",
+      "on": "ケイ",
+      "kun": "",
+      "reading": "けい",
+      "meaning": "warn / police / guard",
+      "notes": "Primarily compound-use. Compounds: 警察(police), 警告(warning), 警備(security)."
+    },
+    {
+      "id": "k_satsu",
+      "lesson": "N3.55",
+      "type": "kanji",
+      "surface": "察",
+      "on": "サツ",
+      "kun": "",
+      "reading": "さつ",
+      "meaning": "inspect / observe / guess / sense",
+      "notes": "Primarily compound-use. Compounds: 警察(police), 観察(observation)."
+    },
+    {
+      "id": "k_zai",
+      "lesson": "N3.55",
+      "type": "kanji",
+      "surface": "罪",
+      "on": "ザイ",
+      "kun": "つみ",
+      "reading": "つみ",
+      "meaning": "crime / guilt / sin",
+      "notes": "罪(crime/sin), 犯罪(crime). Also: 無罪(innocent), 有罪(guilty)."
+    },
+    {
+      "id": "k_han_2",
+      "lesson": "N3.55",
+      "type": "kanji",
+      "surface": "判",
+      "on": "ハン・バン",
+      "kun": "",
+      "reading": "はん",
+      "meaning": "judge / decide / stamp / seal",
+      "notes": "Primarily compound-use. Compounds: 判断(judgment), 判決(verdict), 裁判(trial)."
+    },
+    {
+      "id": "v_keisatsu",
+      "surface": "警察",
+      "reading": "けいさつ",
+      "meaning": "police",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.55",
+      "notes": "警 (N3.55) + 察 (N3.55). Intra-lesson pair."
+    },
+    {
+      "id": "v_keikoku",
+      "surface": "警告",
+      "reading": "けいこく",
+      "meaning": "warning / caution",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.55",
+      "notes": "警 (N3.55) + 告 (N3.52)."
+    },
+    {
+      "id": "v_keibi",
+      "surface": "警備",
+      "reading": "けいび",
+      "meaning": "security / guard / defense",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.55",
+      "notes": "警 (N3.55) + 備 (N3.17)."
+    },
+    {
+      "id": "v_kansatsu",
+      "surface": "観察",
+      "reading": "かんさつ",
+      "meaning": "observation / watching closely",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.55",
+      "notes": "観 (N3.51) + 察 (N3.55)."
+    },
+    {
+      "id": "v_tsumi",
+      "surface": "罪",
+      "reading": "つみ",
+      "meaning": "crime / sin / guilt",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.55",
+      "notes": "罪 (N3.55). 罪を犯す = to commit a crime."
+    },
+    {
+      "id": "v_handan",
+      "surface": "判断",
+      "reading": "はんだん",
+      "meaning": "judgment / decision",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.55",
+      "notes": "判 (N3.55) + 断 (N3.29)."
+    },
+    {
+      "id": "v_hanketsu",
+      "surface": "判決",
+      "reading": "はんけつ",
+      "meaning": "verdict / ruling / judgment (legal)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.55",
+      "notes": "判 (N3.55) + 決 (N3.29)."
+    },
+    {
+      "id": "v_saiban",
+      "surface": "裁判",
+      "reading": "さいばん",
+      "meaning": "trial / court case",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.55",
+      "matches": [
+        "さい判"
+      ],
+      "notes": "裁 (not taught) + 判 (N3.55). Common — managed kana gap."
     }
   ]
 }
