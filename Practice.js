@@ -379,22 +379,7 @@ window.PracticeModule = {
                      <span>🏆 <span id="k-fc-best">0</span></span>
                      <span style="color:#ffa502">🔥 <span id="k-fc-streak">0</span></span>
                 </div>
-                <div class="k-scene" onclick="KanjiApp.flipCard()">
-                    <div class="k-card-obj" id="k-fc-card-obj">
-                        <div class="k-face k-face-front">
-                            <div class="k-flag-stamp k-hidden" id="k-fc-flagged-icon">AGAIN</div>
-                            <div class="k-lbl" id="k-fc-lbl" style="color:var(--primary)"></div>
-                            <div class="k-big" id="k-fc-main"></div>
-                            <div class="k-sub" id="k-fc-sub"></div>
-                            <div class="k-tap-hint">Tap to Flip</div>
-                        </div>
-                        <div class="k-face k-face-back" id="k-fc-back-content"></div>
-                    </div>
-                </div>
-
-                <div id="k-fc-nav-container" style="width:100%; margin-top:15px;">
-                   </div>
-
+                <div id="k-fc-stage"></div>
                 <button class="k-btn k-btn-sec" onclick="KanjiApp.showMenu()" style="margin-top:10px; border:none; color:#a4b0be; font-size:0.9rem">Return to Menu</button>
             </div>
 
@@ -485,7 +470,6 @@ window.PracticeModule = {
     const activeLessons = new Set();
     let curSet=[], curIdx=0, curStreak=0, curBest=0, curMode='', curAns='', curType='', curSubMode='normal', curQItem=null, curCategory='';
     let quizPhase = 1;
-    let skipNextStreak = false;
 
     let flagCounts = window.JPShared.progress.getAllFlags();
     let activeFlags = window.JPShared.progress.getAllActiveFlags();
@@ -635,7 +619,7 @@ window.PracticeModule = {
     KanjiApp.start = function(type, mode, subMode='normal') {
         // Record streak activity on practice session start (flash/quiz have no end screen)
         if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
-        curType = type; curMode = mode; curSubMode = subMode; curIdx = 0; curStreak = 0; quizPhase = 1; skipNextStreak = false; resetStreakVisuals();
+        curType = type; curMode = mode; curSubMode = subMode; curIdx = 0; curStreak = 0; quizPhase = 1; resetStreakVisuals();
         setTxt('k-streak', 0); setTxt('k-fc-streak', 0);
 
         if (mode === 'quiz-meaning') curCategory = 'meaning';
@@ -648,6 +632,26 @@ window.PracticeModule = {
         curBest = bestScores[curCategory] || 0;
         setTxt('k-best', curBest);
         setTxt('k-fc-best', curBest);
+
+        if (mode === 'flash' || mode === 'flag-review') {
+            flashcardsStart(type, mode);
+            return;
+        } else if (type === 'connections') {
+            connStart();
+            return;
+        } else if (type === 'connections4') {
+            conn4Start();
+            return;
+        } else if (type === 'scramble') {
+            scrStart();
+            return;
+        } else if (type === 'marathon') {
+            marathonStart();
+            return;
+        } else if (type === 'dojo') {
+            dojoStart();
+            return;
+        }
 
         if(type==='kanji') curSet = DB.kanji.filter(k => activeLessons.has(k.lesson));
         else if(type==='verb') curSet = [...DB.verb];
@@ -667,36 +671,9 @@ window.PracticeModule = {
                 });
             });
             curSet = Array.from(tempMap.values());
-        } else if (type === 'mixed' && mode === 'flag-review') {
-            curSet = [];
-            Object.keys(activeFlags).forEach(key => {
-                if(activeFlags[key]) {
-                    let item = DB.kanji.find(k => k.kanji === key);
-                    if(item) { curSet.push({...item, _type:'kanji'}); return; }
-                    item = DB.vocabMap.get(key);
-                    if(item) { curSet.push({...item, word: item.surface, _type:'vocab'}); return; }
-                    item = DB.verb.find(v => (v.kanji === key || v.dict === key));
-                    if(item) { curSet.push({...item, _type:'verb'}); return; }
-                }
-            });
-        } else if (type === 'connections') {
-            connStart();
-            return;
-        } else if (type === 'connections4') {
-            conn4Start();
-            return;
-        } else if (type === 'scramble') {
-            scrStart();
-            return;
-        } else if (type === 'marathon') {
-            marathonStart();
-            return;
-        } else if (type === 'dojo') {
-            dojoStart();
-            return;
         }
 
-        if(curSet.length === 0) return alert(mode === 'flag-review' ? "No active flagged items found!" : "Please select at least one lesson.");
+        if(curSet.length === 0) return alert("Please select at least one lesson.");
         curSet.sort(() => Math.random() - 0.5);
 
         ALL_VIEWS.forEach(i => {
@@ -704,15 +681,9 @@ window.PracticeModule = {
             if(el) el.classList.add('k-hidden');
         });
 
-        if(mode === 'flash' || mode === 'flag-review') {
-            kRenderFC();
-            const fv = document.getElementById('k-view-flash');
-            if(fv) fv.classList.remove('k-hidden');
-        } else {
-            KanjiApp.nextQ();
-            const qv = document.getElementById('k-view-quiz');
-            if(qv) qv.classList.remove('k-hidden');
-        }
+        KanjiApp.nextQ();
+        const qv = document.getElementById('k-view-quiz');
+        if(qv) qv.classList.remove('k-hidden');
     };
 
     // --- CONNECTIONS (LINK UP: SORTED) — plugin module ---
@@ -1015,84 +986,84 @@ window.PracticeModule = {
         });
     }
 
-    KanjiApp.flipCard = function() {
-        const c = document.getElementById('k-fc-card-obj');
-        if(c) c.classList.toggle('is-flipped');
-    };
+    // ---- Flashcards (plugin module) ----
+    let flashcardsScriptLoaded = false;
 
-    // ANTI-CHEAT MOVE
-    KanjiApp.move = function(n) {
-        const c = document.getElementById('k-fc-card-obj');
-        const wasFlipped = c && c.classList.contains('is-flipped');
+    async function flashcardsLoadScript() {
+        if (flashcardsScriptLoaded) return true;
+        try {
+            const url = window.getAssetUrl(REPO_CONFIG, 'app/games/flashcards.js') + '?t=' + Date.now();
+            const res = await fetch(url);
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            const code = await res.text();
+            const script = document.createElement('script');
+            script.textContent = code;
+            document.body.appendChild(script);
+            flashcardsScriptLoaded = true;
+            return true;
+        } catch(e) {
+            console.error('[Practice] Failed to load flashcards.js:', e);
+            alert('Could not load Flashcards.');
+            return false;
+        }
+    }
 
-        if (curMode === 'flash' && n === 1) {
-            if (skipNextStreak) {
-                skipNextStreak = false;
-            } else {
-                curStreak++;
-                if (curStreak > curBest) {
-                    curBest = curStreak;
-                    bestScores.flash = curBest;
-                    window.JPShared.progress.setBestScore('flash', curBest);
-                    setTxt('k-fc-best', curBest);
+    async function flashcardsStart(type, mode) {
+        if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
+
+        if (!await flashcardsLoadScript()) return;
+
+        ALL_VIEWS.forEach(i => {
+            const el = document.getElementById(i);
+            if(el) el.classList.add('k-hidden');
+        });
+        const fv = document.getElementById('k-view-flash');
+        if(fv) fv.classList.remove('k-hidden');
+
+        let flashStreak = 0;
+        let flashBest = bestScores.flash || 0;
+        setTxt('k-fc-streak', 0);
+        setTxt('k-fc-best', flashBest);
+
+        window.JPShared.flashcards.init(document.getElementById('k-fc-stage'), {
+            type: type,
+            mode: mode,
+            activeLessons: activeLessons,
+            DB: DB,
+            onCorrect: function() {
+                flashStreak++;
+                if (flashStreak > flashBest) {
+                    flashBest = flashStreak;
+                    bestScores.flash = flashBest;
+                    window.JPShared.progress.setBestScore('flash', flashBest);
                 }
-                updateStreakVisuals(curStreak);
-            }
-        }
-
-        if (wasFlipped) {
-            c.classList.remove('is-flipped');
-            // Wait for flip to reach 90deg (hide back) before changing text
-            setTimeout(() => {
-                curIdx = (curIdx+n+curSet.length)%curSet.length;
-                kRenderFC();
-            }, 300);
-        } else {
-            curIdx = (curIdx+n+curSet.length)%curSet.length;
-            kRenderFC();
-        }
-    };
-
-    KanjiApp.flag = function(btn) {
-        const currentItem = curSet[curIdx];
-        const kKey = currentItem.kanji || currentItem.word || currentItem.dict;
-
-        if (curMode === 'flash') { curStreak = 0; skipNextStreak = true; resetStreakVisuals(); }
-
-        flagCounts[kKey] = (flagCounts[kKey] || 0) + 1;
-        activeFlags[kKey] = true;
-        window.JPShared.progress.flagTerm(kKey);
-
-        curSet.push({ ...currentItem, isRequeued: true });
-
-        const originalText = btn.innerText;
-        btn.innerText = "Marked & Re-queued! ↺"; btn.style.backgroundColor = "#fff3cd";
-        setTimeout(() => {
-            btn.innerText = originalText; btn.style.backgroundColor = "";
-            KanjiApp.move(1); // Auto move to next
-        }, 800);
-    };
-
-    KanjiApp.clearFlag = function(btn) {
-        const currentItem = curSet[curIdx];
-        const kKey = currentItem.kanji || currentItem.word || currentItem.dict;
-
-        delete activeFlags[kKey];
-        window.JPShared.progress.clearFlag(kKey);
-
-        btn.innerText = "Cleared! ✨";
-
-        setTimeout(() => {
-            if(curSet.length > 1) {
-                curSet.splice(curIdx, 1);
-                if(curIdx >= curSet.length) curIdx = 0;
-                kRenderFC(); // Render new card
-            } else {
-                alert("All active flags cleared! Returning to menu.");
-                KanjiApp.showMenu();
-            }
-        }, 600);
-    };
+                setTxt('k-fc-streak', flashStreak);
+                setTxt('k-fc-best', flashBest);
+                var card = document.getElementById('k-fc-card-obj');
+                if (card) {
+                    var glow = STREAK_GLOW[0];
+                    for (var i = STREAK_GLOW.length - 1; i >= 0; i--) {
+                        if (flashStreak >= STREAK_GLOW[i].min) { glow = STREAK_GLOW[i]; break; }
+                    }
+                    card.style.boxShadow = '0 0 ' + glow.spread + 'px ' + glow.color + ', 0 15px 35px rgba(0,0,0,0.1)';
+                    card.style.borderColor = glow.color;
+                }
+                if (flashStreak >= 5 && flashStreak % 5 === 0) {
+                    var saved = curMode; curMode = 'flash';
+                    launchHanabi(flashStreak);
+                    curMode = saved;
+                }
+            },
+            onWrong: function() {
+                flashStreak = 0;
+                setTxt('k-fc-streak', 0);
+                var card = document.getElementById('k-fc-card-obj');
+                if (card) { card.style.boxShadow = ''; card.style.borderColor = ''; }
+                document.querySelectorAll('.k-hanabi-container').forEach(function(c) { c.remove(); });
+            },
+            onExit: function() { KanjiApp.showMenu(); }
+        });
+    }
 
     KanjiApp.toggleAccordion = function(h) { h.classList.toggle('open'); h.nextElementSibling.classList.toggle('open'); };
     KanjiApp.toggleAll = function(cls, p) {
@@ -1212,149 +1183,14 @@ window.PracticeModule = {
         });
     }
 
-    // UPDATED kRenderFC with SPEAKER BUTTON
-    function kRenderFC() {
-        const d = curSet[curIdx];
-        setTxt('k-fc-progress', `Card ${curIdx+1} / ${curSet.length}`);
-
-        const cardObj = document.getElementById('k-fc-card-obj');
-        if(cardObj) cardObj.classList.remove('is-flipped');
-
-        const stamp = document.getElementById('k-fc-flagged-icon');
-        if(stamp) {
-            const kKey = d.kanji || d.word || d.dict;
-            if((d.isRequeued || activeFlags[kKey]) && curMode !== 'flag-review') stamp.classList.remove('k-hidden');
-            else stamp.classList.add('k-hidden');
-        }
-
-        const navContainer = document.getElementById('k-fc-nav-container');
-        if (navContainer) {
-            navContainer.innerHTML = ''; // Clear existing
-
-            if(curMode === 'flag-review') {
-                navContainer.innerHTML = `
-                    <div style="display: flex; gap: 10px;">
-                        <div style="flex: 1; display: flex; flex-direction: column; gap: 10px;">
-                            <button class="k-btn k-btn-sec" style="color:#f39c12; border-color:#f39c12; font-weight:900; min-height: 70px; padding: 10px;" onclick="KanjiApp.flag(this)">Keep Flag (+1)</button>
-                            <button class="k-btn k-btn-sec" style="color:#2ed573; border-color:#2ed573; font-weight:900; min-height: 70px; padding: 10px;" onclick="KanjiApp.clearFlag(this)">Clear Flag</button>
-                        </div>
-                        <div style="flex: 1; display: flex; flex-direction: column; gap: 10px;">
-                            <button class="k-btn k-btn-sec" style="min-height: 70px; padding: 10px;" onclick="KanjiApp.move(-1)">Prev</button>
-                            <button class="k-btn k-btn-sec" style="min-height: 70px; padding: 10px;" onclick="KanjiApp.move(1)">Next</button>
-                        </div>
-                    </div>
-                `;
-            } else {
-                navContainer.innerHTML = `
-                    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;">
-                        <button class="k-btn k-btn-sec" onclick="KanjiApp.move(-1)">Prev</button>
-                        <button class="k-btn k-btn-sec" style="color:#f39c12; border-color:#f39c12;" onclick="KanjiApp.flag(this)">Flag 🚩</button>
-                        <button class="k-btn k-btn-sec" onclick="KanjiApp.move(1)">Next</button>
-                    </div>
-                `;
-            }
-        }
-
-        const backEl = document.getElementById('k-fc-back-content');
-
-        let renderType = curType;
-        if(curType === 'mixed' && d._type) renderType = d._type;
-
-        // SPEECH TEXT DETERMINATION - Using data attribute to prevent injection
-        const speakText = d.reading || d.kanji || d.word || d.surface;
-        const escapedText = speakText.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-        const speakBtnHtml = `<span class="jp-speak-btn" data-speak-text="${escapedText}" style="cursor:pointer; font-size:0.6em; margin-left:10px; opacity:0.7;">🔊</span>`;
-
-        if(renderType==='kanji') {
-            setTxt('k-fc-lbl', d.lesson);
-            if(curMode === 'flag-review') setTxt('k-fc-lbl', `🚩 Flags: ${flagCounts[d.kanji]||0}`);
-
-            document.getElementById('k-fc-main').innerHTML = d.kanji + speakBtnHtml;
-            // Attach click handler to speaker button
-            const speakBtn = document.querySelector('#k-fc-main .jp-speak-btn');
-            if (speakBtn) {
-                speakBtn.onclick = function(e) {
-                    e.stopPropagation();
-                    window.JPShared.tts.speak(speakText);
-                };
-            }
-            setTxt('k-fc-sub', "");
-
-            let h = `<div style="text-align:center; font-weight:700; font-size:2rem; margin-bottom:15px; color:var(--primary); line-height:1.2;">${d.meaning}</div>`;
-            const flags = flagCounts[d.kanji] || 0;
-            if(flags > 0) h += `<div style="text-align:center; color:#ff4757; font-weight:700; margin-bottom:15px; font-size:0.8rem;">🚩 Flagged: ${flags} times</div>`;
-            h += `<div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:15px; width:100%">
-                    <div style="background:#f8f9fa; padding:10px; border-radius:8px; text-align:center"><div style="font-size:0.7rem; color:#aaa; font-weight:700;">ON-YOMI</div><div style="font-size:1.2rem; font-weight:600;">${d.on||'-'}</div></div>
-                    <div style="background:#f8f9fa; padding:10px; border-radius:8px; text-align:center"><div style="font-size:0.7rem; color:#aaa; font-weight:700;">KUN-YOMI</div><div style="font-size:1.2rem; font-weight:600;">${d.kun||'-'}</div></div>
-                  </div>`;
-            const dynCompounds = getDynamicCompounds(d.kanji);
-            const compoundRow = (v, cls, hide) => `<tr${cls ? ` class="${cls}"` : ''}${hide ? ' style="display:none"' : ''}><td style="font-weight:bold; font-size:1.2rem">${v.surface}</td><td><div style="font-size:1rem">${v.reading||''}</div><div style="color:#747d8c; font-size:0.9rem">${v.meaning||''}</div></td></tr>`;
-            h += `<div class="k-lbl" style="text-align:left;margin-top:10px;border-bottom:1px solid #eee;">Compounds${dynCompounds.length ? ` (${dynCompounds.length})` : ''}</div><table class="k-tbl">`;
-            if (dynCompounds.length === 0) {
-                h += `<tr><td colspan="2" style="color:#aaa; font-size:0.9rem; padding:8px; text-align:center;">No compounds unlocked yet</td></tr>`;
-            } else {
-                dynCompounds.slice(0, 5).forEach(v => { h += compoundRow(v); });
-                if (dynCompounds.length > 5) {
-                    const extraId = 'k-extra-' + Date.now();
-                    h += `<tr class="k-show-more-row" onclick="this.style.display='none'; document.querySelectorAll('.${extraId}').forEach(r=>r.style.display='')"><td colspan="2" style="text-align:center; color:var(--primary); cursor:pointer; font-size:0.9rem; padding:8px; font-weight:600;">Show ${dynCompounds.length - 5} more</td></tr>`;
-                    dynCompounds.slice(5).forEach(v => { h += compoundRow(v, extraId, true); });
-                }
-            }
-            if(backEl) backEl.innerHTML = h+'</table>';
-
-        } else if(renderType==='vocab') {
-            setTxt('k-fc-lbl', "Vocabulary");
-            if(curMode === 'flag-review') setTxt('k-fc-lbl', `🚩 Flags: ${flagCounts[d.word]||0}`);
-
-            document.getElementById('k-fc-main').innerHTML = d.word + speakBtnHtml;
-            // Attach click handler to speaker button
-            const speakBtn = document.querySelector('#k-fc-main .jp-speak-btn');
-            if (speakBtn) {
-                speakBtn.onclick = function(e) {
-                    e.stopPropagation();
-                    window.JPShared.tts.speak(speakText);
-                };
-            }
-            setTxt('k-fc-sub', "");
-
-            let h = `<div style="text-align:center; font-weight:700; font-size:2rem; margin-bottom:10px; color:var(--primary); line-height:1.2;">${d.meaning}</div>`;
-            h += `<div style="text-align:center; font-size:1.5rem; color:#555; font-family:'Noto Sans JP'; margin-bottom:15px;">${d.reading}</div>`;
-            if(d.gtype) h += `<div style="display:inline-block; background:#eee; color:#555; font-size:0.8rem; font-weight:700; padding:4px 12px; border-radius:12px; text-transform:uppercase; margin-bottom:15px;">${d.gtype}</div>`;
-            if(d.notes) h += `<div style="margin-top:10px; padding:12px; background:#fff8e1; border-left:4px solid #ffca28; color:#5d4037; font-size:0.9rem; text-align:left; border-radius:4px; line-height:1.4;"><strong>Note:</strong> ${d.notes}</div>`;
-            const flags = flagCounts[d.word] || 0;
-            if(flags > 0) h += `<div style="text-align:center; color:#ff4757; font-weight:700; margin-top:15px; font-size:0.8rem;">🚩 Flagged: ${flags} times</div>`;
-            if(backEl) backEl.innerHTML = h;
-
-        } else { // Verb
-            setTxt('k-fc-lbl', 'Verb');
-            if(curMode === 'flag-review') setTxt('k-fc-lbl', `🚩 Flags: ${flagCounts[d.kanji||d.dict]||0}`);
-
-            const vText = d.kanji==='-'?d.dict:d.kanji;
-            document.getElementById('k-fc-main').innerHTML = vText + speakBtnHtml;
-            // Attach click handler to speaker button
-            const speakBtn = document.querySelector('#k-fc-main .jp-speak-btn');
-            if (speakBtn) {
-                speakBtn.onclick = function(e) {
-                    e.stopPropagation();
-                    window.JPShared.tts.speak(speakText);
-                };
-            }
-            setTxt('k-fc-sub', "");
-
-            let h = `<div style="text-align:center; font-weight:700; font-size:2rem; margin-bottom:15px; color:var(--primary);">${d.meaning}</div>`;
-            h += `<div style="text-align:center; margin-bottom:10px; color:#555;">${d.reading}</div>`;
-            h += `<table class="k-tbl"><tr><th>Masu</th><td>${d.masu}</td></tr><tr><th>Te</th><td>${d.te}</td></tr><tr><th>Nai</th><td>${d.nai}</td></tr><tr><th>Ta</th><td>${d.ta}</td></tr><tr><th>Potential</th><td>${d.potential}</td></tr></table>`;
-            if(backEl) backEl.innerHTML = h;
-        }
-    }
-
     function kUpdateStats() {
         setTxt('k-cnt-k', DB.kanji.filter(k => activeLessons.has(k.lesson)).length);
         setTxt('k-cnt-v', DB.verb.length);
         setTxt('k-hs-meaning', bestScores.meaning);
         setTxt('k-hs-reading', bestScores.reading);
         setTxt('k-hs-vocab', bestScores.vocab);
-        setTxt('k-cnt-flags', Object.keys(activeFlags).length);
+        const freshActiveFlags = (window.JPShared.progress && window.JPShared.progress.getAllActiveFlags()) || activeFlags;
+        setTxt('k-cnt-flags', Object.keys(freshActiveFlags).length);
 
         let vocabCount = 0;
         const activeK = DB.kanji.filter(k => activeLessons.has(k.lesson));
@@ -1364,30 +1200,6 @@ window.PracticeModule = {
             cs.forEach(c => { if(c) uniqueVocab.add(c); });
         });
         setTxt('k-cnt-vocab', uniqueVocab.size);
-    }
-
-    function getActiveKanjiSet() {
-        const set = new Set();
-        DB.kanji.forEach(k => {
-            if (activeLessons.has(k.lesson)) set.add(k.kanji);
-        });
-        return set;
-    }
-
-    function getDynamicCompounds(kanjiChar) {
-        const activeKanji = getActiveKanjiSet();
-        const results = [];
-        DB.allVocab.forEach(v => {
-            if (!v.surface.includes(kanjiChar)) return;
-            const allKnown = [...v.surface].every(ch => {
-                if (ch.charCodeAt(0) >= 0x4E00 && ch.charCodeAt(0) <= 0x9FFF) {
-                    return activeKanji.has(ch);
-                }
-                return true;
-            });
-            if (allKnown) results.push(v);
-        });
-        return results;
     }
 
     // --- 5. INIT & DATA FETCH ---
