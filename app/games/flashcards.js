@@ -27,8 +27,10 @@
   var kanjiBySurface = {};
 
   // Color palette for kanji ↔ reading span pairing.  Cycles modulo length
-  // for vocab with more kanji than colors.
-  var COLOR_PALETTE = ['#d32f2f', '#1976d2', '#388e3c', '#7b1fa2', '#f57c00'];
+  // for vocab with more kanji than colors.  Soft pastel backgrounds; the
+  // text itself stays the default dark color so the surface and reading
+  // remain easy to read.
+  var COLOR_PALETTE = ['#ffcdd2', '#bbdefb', '#c8e6c9', '#e1bee7', '#ffe0b2'];
 
   function injectStyles() {
     if (document.getElementById('jp-flashcards-style')) return;
@@ -36,11 +38,12 @@
     s.id = 'jp-flashcards-style';
     s.textContent =
       '.vfc-kanji-meanings { display:flex; justify-content:center; gap:4px; margin-bottom:2px; }' +
-      '.vfc-km { min-width:2.4rem; font-size:0.7rem; color:#888; text-align:center; line-height:1.1; }' +
+      '.vfc-km { min-width:2.4rem; font-size:0.7rem; color:#888; text-align:center; line-height:1.1; padding:0 4px; border-radius:4px; }' +
       '.vfc-surface { display:flex; justify-content:center; gap:4px; font-family:"Noto Sans JP",sans-serif; font-size:2.4rem; font-weight:800; line-height:1.1; margin-bottom:4px; }' +
-      '.vfc-surface .vfc-ch { min-width:2.4rem; text-align:center; }' +
-      '.vfc-reading { text-align:center; font-size:1.4rem; color:#555; font-family:"Noto Sans JP",sans-serif; margin-bottom:15px; font-weight:600; }' +
-      '.vfc-reading .vfc-r { font-weight:700; }' +
+      '.vfc-surface .vfc-ch { min-width:2.4rem; text-align:center; padding:0 4px; border-radius:6px; color:#2f3542; }' +
+      '.vfc-reading { text-align:center; font-size:1.4rem; color:#555; font-family:"Noto Sans JP",sans-serif; margin-bottom:10px; font-weight:600; }' +
+      '.vfc-reading .vfc-r { font-weight:700; padding:0 4px; border-radius:6px; color:#2f3542; }' +
+      '.vfc-juku-note { text-align:center; font-size:0.72rem; color:#8e44ad; font-style:italic; margin-bottom:12px; margin-top:-4px; }' +
       '.vfc-meaning { text-align:center; font-weight:700; font-size:1.8rem; color:var(--primary); line-height:1.2; margin-bottom:10px; }';
     document.head.appendChild(s);
   }
@@ -374,15 +377,18 @@
 
     var h = '';
     if (hasKanji && segments) {
-      // Color-mapped path: surface chars colored by segment membership;
-      // reading rendered inline with matching colors per segment.
+      // Color-mapped path: surface chars highlighted by segment membership;
+      // reading rendered inline with matching highlights per segment.
+      // Text color stays dark; background provides the visual pairing.
       var surfaceColorByIdx = {};
+      var hasJuku = false;
       var charIdx = 0;
       segments.forEach(function (seg) {
         if (seg.type === 'kanji') {
           surfaceColorByIdx[charIdx] = COLOR_PALETTE[seg.colorIdx % COLOR_PALETTE.length];
           charIdx += 1;
         } else if (seg.type === 'juku') {
+          hasJuku = true;
           var runChars = Array.from(seg.surface);
           for (var r = 0; r < runChars.length; r++) {
             surfaceColorByIdx[charIdx + r] = COLOR_PALETTE[seg.colorIdx % COLOR_PALETTE.length];
@@ -400,8 +406,8 @@
         var meaning = resolveKanjiMeaning(resolveD, surfaceChars, i);
         var slot = meaning ? esc(meaning) : '&nbsp;';
         if (color) {
-          meaningRow += '<span class="vfc-km" style="color:' + color + ';">' + slot + '</span>';
-          surfaceRow += '<span class="vfc-ch" style="color:' + color + ';">' + esc(ch) + '</span>';
+          meaningRow += '<span class="vfc-km" style="background:' + color + ';">' + slot + '</span>';
+          surfaceRow += '<span class="vfc-ch" style="background:' + color + ';">' + esc(ch) + '</span>';
         } else {
           meaningRow += '<span class="vfc-km">' + slot + '</span>';
           surfaceRow += '<span class="vfc-ch">' + esc(ch) + '</span>';
@@ -411,7 +417,7 @@
       surfaceRow += '</div>';
       h += meaningRow + surfaceRow;
 
-      // Reading row: walk segments, emitting colored runs for kanji/juku
+      // Reading row: walk segments, emitting highlighted runs for kanji/juku
       // and literal kana between.
       var readingRow = '<div class="vfc-reading">';
       segments.forEach(function (seg) {
@@ -419,11 +425,17 @@
           readingRow += '<span>' + esc(seg.surface) + '</span>';
         } else {
           var color = COLOR_PALETTE[seg.colorIdx % COLOR_PALETTE.length];
-          readingRow += '<span class="vfc-r" style="color:' + color + ';">' + esc(seg.reading) + '</span>';
+          readingRow += '<span class="vfc-r" style="background:' + color + ';">' + esc(seg.reading) + '</span>';
         }
       });
       readingRow += '</div>';
       h += readingRow;
+
+      // Jukujikun annotation: make clear that a highlighted kanji run
+      // reads as a single unit (no per-kanji split).
+      if (hasJuku) {
+        h += '<div class="vfc-juku-note">※ jukujikun — the highlighted kanji read as a single unit</div>';
+      }
     } else if (hasKanji) {
       // Fallback path: no readingAlign (or malformed).  Show per-kanji
       // meaning row and uncolored surface row; plain reading below.
