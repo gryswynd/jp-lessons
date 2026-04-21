@@ -15,7 +15,7 @@ Build the N3 level from the ground up: finalize the vocabulary roadmap, create a
 | Content type | Exists | Notes |
 |---|---|---|
 | Vocabulary roadmap | **Locked** | `N3-kanji-lesson-plan.md` — 86 lessons, 348 kanji |
-| Glossary | **In progress** | `glossary.N3.json` — 537 entries covering N3.1–N3.32 (incl. 25 fix entries from rescan). Chunks 1–3 approved, chunk 4a pending review |
+| Glossary | **In progress** | `glossary.N3.json` — 618 entries covering N3.1–N3.36. Chunks 1–4b approved |
 | Grammar (G32–G49) | 18/18 JSON files exist | **Empty stubs** (title + meta + sections:[]) — not built, contrary to previous note |
 | Content lessons | 0 | No N3.X lesson files |
 | Reviews | 0 | No review files |
@@ -35,7 +35,7 @@ Chunked into 8 batches with approval gates. See plan: `~/.claude/plans/fuzzy-roa
 | 2 | N3.14–N3.20 | 28 | 140 (28k + 112v) | Approved |
 | 3 | N3.21–N3.26 | 24 | 95 (24k + 71v) | Approved |
 | 4a | N3.27–N3.32 | 24* | 87 (24k + 63v) | Approved |
-| 4b | N3.33–N3.36 | 16 | ~55 est. | Not started |
+| 4b | N3.33–N3.36 | 16 | 82 (16k + 66v) | Approved |
 | 5 | N3.37–N3.44 | 32 | ~110 est. | Not started |
 | 6 | N3.45–N3.55 | 47 | ~165 est. | Not started |
 | 7 | N3.56–N3.70 | 61 | ~210 est. | Not started |
@@ -60,7 +60,7 @@ Chunked into 8 batches with approval gates. See plan: `~/.claude/plans/fuzzy-roa
 | G36 (はずだ/わけだ) | N3.14 | はず, わけ | Done (chunk 2) |
 | G37 (ところだ/たばかり) | N3.18 | ところ, ばかり | Done (chunk 2) |
 | G39 (Adverbs of Degree) | N3.26 | かなり, ずいぶん, なかなか, ほとんど, ちっとも, わりに, やや, ほぼ | Done (chunk 3) |
-| G40 (敬語) | N3.34 | いらっしゃる, おっしゃる, etc. | Not yet (chunk 4b) |
+| G40 (敬語) | N3.34 | いらっしゃる, おっしゃる, めしあがる, なさる, ございます, 伺う, 参る, 申す, 拝見する, ご覧になる | Done (chunk 4b) |
 | G38 (Particles) | N3.22 | → particles.json (not glossary) | Deferred |
 | G41–G49 | N3.38+ | Various | Not yet |
 
