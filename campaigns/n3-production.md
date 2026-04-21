@@ -2,7 +2,38 @@
 
 > **Status:** In Progress — Glossary Build-Out
 > **Started:** 2026-04-20
-> **Last updated:** 2026-04-20
+> **Last updated:** 2026-04-21
+
+---
+
+## Session Continuation — Glossary Build-Out
+
+**For the next session:** Read this campaign file + the plan at `~/.claude/plans/fuzzy-roaming-breeze.md`. The plan contains the full Exhaustive Vocab Scan protocol, Grammar→Host-Lesson mapping, ID collision rules, managed kana-gap policies, and per-chunk workflow. Both documents together are the complete spec.
+
+### Where we are
+- **Glossary covers N3.1–N3.55** (947 entries: 221 kanji + 726 vocab)
+- **Chunks 1–6a approved**, chunks 6b–6c pending user approval
+- **Next work: chunk 7 (N3.56–N3.70, ~61 kanji)** then chunk 8 (N3.71–N3.86, ~64 kanji)
+- After all chunks: squash WIP commits → single clean commit → push
+
+### Known issues to fix (minor)
+- `v_shiharai` (支払い, N3.48) — missing `matches: ["支はらい"]` (払 not taught until N3.49)
+- `v_shiji` (指示, N3.48) — missing `matches: ["指じ"]` (示 not taught until N3.50)
+- gtype inconsistency (pre-existing): `i_adj` vs `i-adj`, `na_adj` vs `na-adj` vs `na-adjective`, `verb` vs `godan/ichidan` — defer to separate cleanup
+
+### Grammar-adjacent vocab remaining
+- G46 (Quoting) → N3.58: って (quotative) → particles.json
+- G47 (Set Patterns) → N3.64: にとって, に違いない, わけがない (expressions)
+- G48 (Advanced Connectors) → N3.72: しかも, それに, そのうえ, ところが, なお, むしろ
+- G49 (Capstone) → N3.84: none
+
+### Key rules (quick reference)
+1. Never read glossary files in full — use targeted Grep/jq
+2. Every ID globally unique across N5+N4+N3 — suffix `_2`, `_3` on collision
+3. lesson_ids = earliest lesson where word is writable (full kanji or via matches[])
+4. Run Exhaustive Vocab Scan per kanji (plan has the full 9-point checklist)
+5. Collision check after every chunk: `grep -oE '"id": "(k|v)_[a-z0-9_]+"' data/N{5,4,3}/glossary.N{5,4,3}.json | awk -F'"' '{print $4}' | sort | uniq -d`
+6. Validate after every chunk: `bash hooks/validate-json.sh data/N3/glossary.N3.json`
 
 ---
 
