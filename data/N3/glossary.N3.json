@@ -8331,6 +8331,16 @@
       "notes": "正 (N4.35) + 規 (N3.45). [FREE] in regroup."
     },
     {
+      "id": "v_tousan",
+      "surface": "倒産",
+      "reading": "とうさん",
+      "meaning": "bankruptcy / going out of business",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.45",
+      "notes": "倒 (N3.45) + 産 (N4.27)."
+    },
+    {
       "id": "k_utsu_3",
       "lesson": "N3.46",
       "type": "kanji",
@@ -8650,6 +8660,17 @@
       "notes": "掛 (N3.47). Intransitive pair of 掛ける."
     },
     {
+      "id": "v_mikakeru",
+      "surface": "見掛ける",
+      "reading": "みかける",
+      "meaning": "to catch sight of / to see (by chance)",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.47",
+      "notes": "見 (N5.12) + 掛 (N3.47)."
+    },
+    {
       "id": "k_sasu",
       "lesson": "N3.48",
       "type": "kanji",
@@ -8812,6 +8833,52 @@
       "gtype": "noun_suru",
       "lesson_ids": "N3.48",
       "notes": "開 (N4.28) + 放 (N3.48)."
+    },
+    {
+      "id": "v_shitei",
+      "surface": "指定",
+      "reading": "してい",
+      "meaning": "designation / specification / assignment",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.48",
+      "notes": "指 (N3.48) + 定 (N3.29)."
+    },
+    {
+      "id": "v_shidou",
+      "surface": "指導",
+      "reading": "しどう",
+      "meaning": "guidance / leadership / coaching",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.48",
+      "matches": [
+        "指どう"
+      ],
+      "notes": "指 (N3.48) + 導 (not taught). Common — managed kana gap."
+    },
+    {
+      "id": "v_shiji_2",
+      "surface": "支持",
+      "reading": "しじ",
+      "meaning": "support / endorsement / backing",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.48",
+      "notes": "支 (N3.48) + 持 (N4.28)."
+    },
+    {
+      "id": "v_tanken",
+      "surface": "探検",
+      "reading": "たんけん",
+      "meaning": "exploration / expedition",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.48",
+      "matches": [
+        "探けん"
+      ],
+      "notes": "探 (N3.48) + 検 (not taught). Managed kana gap."
     }
   ]
 }
