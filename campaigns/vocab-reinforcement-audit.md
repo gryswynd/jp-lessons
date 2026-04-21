@@ -74,19 +74,43 @@ All three reinforcement surfaces (review, story, dojo specials) unlock on the sa
 
 ## Phase 1: Establish the Rule
 
-### 1a. Manifest `unlocksAfter` fixes
+### 1a. Manifest `unlocksAfter` fixes — N5 COMPLETE ✓
 
-Four N5 stories currently have `unlocksAfter` values that fire mid-pair, which violates the intended path. Each should fire on the last prerequisite for the NEXT pair (so the story unlocks *after* the pair completes, not within it).
+N5 pair story/review `unlocksAfter` values corrected to fire at the end of each pair's learning path (after the pair's lessons + any pair-end grammar):
 
-- [ ] `tanjoubi-no-keeki`: N5.3 → N5.4 (or the last grammar module between N5.4–N5.5)
-- [ ] `yonde-kaite`: N5.13 → N5.14 (or the last grammar module between N5.14–N5.15)
-- [ ] `kita-minami-higashi-nishi`: N5.15 → N5.16
-- [ ] `kaisha-de-no-arubaito`: N5.17 → N5.18
+- [x] `tanjoubi-no-keeki`: N5.3 → N5.4
+- [x] `restoran-to-kaimono`: N5.8 → G9 (pair-end grammar)
+- [x] `N5.Review.4`: N5.8 → G9 (pair-end grammar)
+- [x] `kyuujitsu-no-rikizo`: N5.10 → G11 (pair-end grammar)
+- [x] `yonde-kaite`: N5.13 → N5.14
+- [x] `kita-minami-higashi-nishi`: N5.15 → N5.16
+- [x] `kaisha-de-no-arubaito`: N5.17 → N5.18
+- [x] `rikizo-to-ookii-sakana` (capstone): N5.18 → N5.Final.Review
+- [x] **Cycle fix:** `G9`: N5.Review.4 → N5.8 (old value created circular dependency once review unlocked after G9)
 
-N4 story `unlocksAfter` values: pending audit — same check applies.
+### 1a-bis. N4 capstone fix — DONE ✓
 
-- [ ] Audit N4 story `unlocksAfter` values
-- [ ] Fix any N4 story that unlocks mid-pair
+- [x] `rikizo-journey` (capstone): N4.33 → N4.Final.Review
+
+### 1a-ter. N4 pair-end grammar — OPEN
+
+N4 has 7 pairs with grammar modules that unlock at the pair's end lesson (analogous to N5's G9 @ N5.8 and G11 @ N5.10). Under the learning-path rule ("review + story unlock after all pair grammar"), these would each require 2 manifest edits:
+
+| Pair | End-lesson | Pair-end grammar | Story | Review |
+|---|---|---|---|---|
+| 3 | N4.6 | G16 | hirugohan-monogatari @ N4.6 → G16 | N4.Review.3 @ N4.6 → G16 |
+| 5 | N4.10 | G18, G19 (latest G19) | machi-no-eigakan @ N4.10 → G19 | N4.Review.5 @ N4.10 → G19 |
+| 7 | N4.14 | G20 | uta-to-shigoto @ N4.14 → G20 | N4.Review.7 @ N4.14 → G20 |
+| 8 | N4.16 | G21 | hashiru-asa @ N4.16 → G21 | N4.Review.8 @ N4.16 → G21 |
+| 9 | N4.18 | G22 | jitensha-de-kyouto-e @ N4.18 → G22 | N4.Review.9 @ N4.18 → G22 |
+| 15 | N4.30 | G27 | taifuu-no-omoide @ N4.30 → G27 | N4.Review.15 @ N4.30 → G27 |
+| 17 | N4.34 | G30, G31 (latest G31) | new-city @ N4.34 → G31 | N4.Review.17 @ N4.34 → G31 |
+
+**14 proposed edits, awaiting user sign-off.** The existing values aren't necessarily broken — they just let the review/story unlock before the pair's final grammar. Whether to tighten is a product decision.
+
+### 1a-quater. Unrelated inconsistency observed
+
+While auditing, noticed `N5.9.unlocksAfter = G9`, but most other N5 lessons that start a new pair unlock after the previous review (`N5.3 → N5.Review.1`, `N5.5 → N5.Review.2`, `N5.7 → N5.Review.3`, `N5.11 → N5.Review.5`). If the intended rule is "next pair's first lesson waits for the previous review", `N5.9` should probably be `N5.Review.4` instead of `G9`. **Out of scope for this campaign unless user confirms.**
 
 ### 1b. Validation hook
 

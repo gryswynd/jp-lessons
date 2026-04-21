@@ -330,7 +330,7 @@
           "id": "G9",
           "title": "ている・たいです・ましょう — Progressive, Desire & Invitation",
           "file": "data/N5/grammar/G9.json",
-          "unlocksAfter": "N5.Review.4",
+          "unlocksAfter": "N5.8",
           "icon": "🎯"
         },
         {
@@ -381,7 +381,7 @@
           "id": "N5.Review.4",
           "title": "Size, Food & Shopping",
           "file": "data/N5/reviews/N5.Review.4.json",
-          "unlocksAfter": "N5.8"
+          "unlocksAfter": "G9"
         },
         {
           "id": "N5.Review.5",
@@ -526,7 +526,7 @@
           "title": "Birthday Cake",
           "titleJp": "たんじょうびのケーキ",
           "dir": "data/N5/stories/tanjoubi-no-keeki",
-          "unlocksAfter": "N5.3"
+          "unlocksAfter": "N5.4"
         },
         {
           "id": "kazoku-ga-kimasu",
@@ -540,14 +540,14 @@
           "title": "Restaurant and Shopping",
           "titleJp": "レストランとかいもの",
           "dir": "data/N5/stories/restoran-to-kaimono",
-          "unlocksAfter": "N5.8"
+          "unlocksAfter": "G9"
         },
         {
           "id": "kyuujitsu-no-rikizo",
           "title": "Rikizo's Holiday",
           "titleJp": "休日のりきぞ",
           "dir": "data/N5/stories/kyuujitsu-no-rikizo",
-          "unlocksAfter": "N5.10"
+          "unlocksAfter": "G11"
         },
         {
           "id": "ame-no-hi-no-gakkou",
@@ -561,28 +561,28 @@
           "title": "Reading and Writing",
           "titleJp": "読んで、書いて",
           "dir": "data/N5/stories/yonde-kaite",
-          "unlocksAfter": "N5.13"
+          "unlocksAfter": "N5.14"
         },
         {
           "id": "kita-minami-higashi-nishi",
           "title": "North, South, East, and West",
           "titleJp": "北と南と東と西",
           "dir": "data/N5/stories/kita-minami-higashi-nishi",
-          "unlocksAfter": "N5.15"
+          "unlocksAfter": "N5.16"
         },
         {
           "id": "kaisha-de-no-arubaito",
           "title": "Part-time Job at the Company",
           "titleJp": "会社でのアルバイト",
           "dir": "data/N5/stories/kaisha-de-no-arubaito",
-          "unlocksAfter": "N5.17"
+          "unlocksAfter": "N5.18"
         },
         {
           "id": "rikizo-to-ookii-sakana",
           "title": "Rikizo and the Big Fish",
           "titleJp": "りきぞと大きい魚",
           "dir": "data/N5/stories/rikizo-to-ookii-sakana",
-          "unlocksAfter": "N5.18"
+          "unlocksAfter": "N5.Final.Review"
         }
       ],
       "game": [
@@ -1430,7 +1430,7 @@
           "title": "Rikizo's Journey",
           "titleJp": "りきぞの旅",
           "dir": "data/N4/stories/rikizo-journey",
-          "unlocksAfter": "N4.33"
+          "unlocksAfter": "N4.Final.Review"
         },
         {
           "id": "factory-owner",
