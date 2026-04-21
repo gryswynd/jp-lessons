@@ -26,6 +26,10 @@
   var activeFlags = {};
   var kanjiBySurface = {};
 
+  // Color palette for kanji ↔ reading span pairing.  Cycles modulo length
+  // for vocab with more kanji than colors.
+  var COLOR_PALETTE = ['#d32f2f', '#1976d2', '#388e3c', '#7b1fa2', '#f57c00'];
+
   function injectStyles() {
     if (document.getElementById('jp-flashcards-style')) return;
     var s = document.createElement('style');
@@ -36,6 +40,7 @@
       '.vfc-surface { display:flex; justify-content:center; gap:4px; font-family:"Noto Sans JP",sans-serif; font-size:2.4rem; font-weight:800; line-height:1.1; margin-bottom:4px; }' +
       '.vfc-surface .vfc-ch { min-width:2.4rem; text-align:center; }' +
       '.vfc-reading { text-align:center; font-size:1.4rem; color:#555; font-family:"Noto Sans JP",sans-serif; margin-bottom:15px; font-weight:600; }' +
+      '.vfc-reading .vfc-r { font-weight:700; }' +
       '.vfc-meaning { text-align:center; font-weight:700; font-size:1.8rem; color:var(--primary); line-height:1.2; margin-bottom:10px; }';
     document.head.appendChild(s);
   }
@@ -51,6 +56,60 @@
     if (!k || !k.meaning) return '';
     var first = String(k.meaning).split(/[\/,]/)[0];
     return first ? first.trim() : '';
+  }
+
+  // ---- readingAlign parser ----
+  // Returns null if input is missing or malformed; otherwise an array of
+  // segments:
+  //   { type: 'kanji', surface: '注', reading: 'ちゅう', colorIdx: 0 }
+  //   { type: 'juku',  surface: '今日', reading: 'きょう',  colorIdx: 0 }
+  //   { type: 'kana',  surface: 'ち' }
+  // Format:
+  //   "X(abc)"   single kanji X with reading abc
+  //   "XYZ{abc}" kanji run XYZ with a single reading abc (jukujikun)
+  //   any other kana char passes through as a kana segment
+  function parseReadingAlign(readingAlign) {
+    if (!readingAlign || typeof readingAlign !== 'string') return null;
+    var chars = Array.from(readingAlign);
+    var segments = [];
+    var colorIdx = 0;
+    var i = 0;
+    while (i < chars.length) {
+      var ch = chars[i];
+      if (isKanjiChar(ch) || ch === '々') {
+        // Gather kanji run
+        var runStart = i;
+        while (i < chars.length && (isKanjiChar(chars[i]) || chars[i] === '々')) i++;
+        var kanjiRun = chars.slice(runStart, i).join('');
+        // Check what follows
+        if (i < chars.length && chars[i] === '(') {
+          var end = -1;
+          for (var j = i + 1; j < chars.length; j++) { if (chars[j] === ')') { end = j; break; } }
+          if (end < 0) return null;
+          var reading = chars.slice(i + 1, end).join('');
+          if (Array.from(kanjiRun).length === 1) {
+            segments.push({ type: 'kanji', surface: kanjiRun, reading: reading, colorIdx: colorIdx++ });
+          } else {
+            segments.push({ type: 'juku', surface: kanjiRun, reading: reading, colorIdx: colorIdx++ });
+          }
+          i = end + 1;
+        } else if (i < chars.length && chars[i] === '{') {
+          var end2 = -1;
+          for (var k = i + 1; k < chars.length; k++) { if (chars[k] === '}') { end2 = k; break; } }
+          if (end2 < 0) return null;
+          var reading2 = chars.slice(i + 1, end2).join('');
+          segments.push({ type: 'juku', surface: kanjiRun, reading: reading2, colorIdx: colorIdx++ });
+          i = end2 + 1;
+        } else {
+          // Kanji run with no reading annotation — malformed.
+          return null;
+        }
+      } else {
+        segments.push({ type: 'kana', surface: ch });
+        i++;
+      }
+    }
+    return segments;
   }
 
   function setTxt(id, txt) {
@@ -89,7 +148,9 @@
               notes: vObj.notes,
               id: vObj.id,
               surface: vObj.surface,
-              lesson_ids: vObj.lesson_ids
+              lesson_ids: vObj.lesson_ids,
+              readingAlign: vObj.readingAlign,
+              kanjiMeanings: vObj.kanjiMeanings
             });
           }
         });
@@ -285,6 +346,14 @@
     }
   }
 
+  function resolveKanjiMeaning(d, surfaceChars, charIdx) {
+    var override = Array.isArray(d.kanjiMeanings) ? d.kanjiMeanings[charIdx] : null;
+    if (override && String(override).trim()) return String(override).trim();
+    var ch = surfaceChars[charIdx];
+    if (!isKanjiChar(ch)) return '';
+    return getKanjiMeaning(ch);
+  }
+
   function renderVocabCard(d, backEl, speakText, speakBtnHtml) {
     setTxt('k-fc-lbl', 'Vocabulary');
     if (curMode === 'flag-review') setTxt('k-fc-lbl', '🚩 Flags: ' + (flagCounts[d.word] || 0));
@@ -295,27 +364,86 @@
     setTxt('k-fc-sub', '');
 
     var surface = d.word || '';
-    var chars = Array.from(surface);
-    var hasKanji = chars.some(isKanjiChar);
+    var surfaceChars = Array.from(surface);
+    var hasKanji = surfaceChars.some(isKanjiChar);
+
+    // readingAlign and kanjiMeanings live directly on the curSet item
+    // (populated from the glossary vocab entry in buildSet).
+    var segments = parseReadingAlign(d.readingAlign);
+    var resolveD = { kanjiMeanings: Array.isArray(d.kanjiMeanings) ? d.kanjiMeanings : null };
 
     var h = '';
-    if (hasKanji) {
+    if (hasKanji && segments) {
+      // Color-mapped path: surface chars colored by segment membership;
+      // reading rendered inline with matching colors per segment.
+      var surfaceColorByIdx = {};
+      var charIdx = 0;
+      segments.forEach(function (seg) {
+        if (seg.type === 'kanji') {
+          surfaceColorByIdx[charIdx] = COLOR_PALETTE[seg.colorIdx % COLOR_PALETTE.length];
+          charIdx += 1;
+        } else if (seg.type === 'juku') {
+          var runChars = Array.from(seg.surface);
+          for (var r = 0; r < runChars.length; r++) {
+            surfaceColorByIdx[charIdx + r] = COLOR_PALETTE[seg.colorIdx % COLOR_PALETTE.length];
+          }
+          charIdx += runChars.length;
+        } else { // kana
+          charIdx += 1;
+        }
+      });
+
       var meaningRow = '<div class="vfc-kanji-meanings">';
       var surfaceRow = '<div class="vfc-surface">';
-      chars.forEach(function (ch) {
-        if (isKanjiChar(ch)) {
-          meaningRow += '<span class="vfc-km">' + esc(getKanjiMeaning(ch)) + '</span>';
-          surfaceRow += '<span class="vfc-ch">' + esc(ch) + '</span>';
+      surfaceChars.forEach(function (ch, i) {
+        var color = surfaceColorByIdx[i];
+        var meaning = resolveKanjiMeaning(resolveD, surfaceChars, i);
+        var slot = meaning ? esc(meaning) : '&nbsp;';
+        if (color) {
+          meaningRow += '<span class="vfc-km" style="color:' + color + ';">' + slot + '</span>';
+          surfaceRow += '<span class="vfc-ch" style="color:' + color + ';">' + esc(ch) + '</span>';
         } else {
-          meaningRow += '<span class="vfc-km">&nbsp;</span>';
+          meaningRow += '<span class="vfc-km">' + slot + '</span>';
           surfaceRow += '<span class="vfc-ch">' + esc(ch) + '</span>';
         }
       });
       meaningRow += '</div>';
       surfaceRow += '</div>';
       h += meaningRow + surfaceRow;
+
+      // Reading row: walk segments, emitting colored runs for kanji/juku
+      // and literal kana between.
+      var readingRow = '<div class="vfc-reading">';
+      segments.forEach(function (seg) {
+        if (seg.type === 'kana') {
+          readingRow += '<span>' + esc(seg.surface) + '</span>';
+        } else {
+          var color = COLOR_PALETTE[seg.colorIdx % COLOR_PALETTE.length];
+          readingRow += '<span class="vfc-r" style="color:' + color + ';">' + esc(seg.reading) + '</span>';
+        }
+      });
+      readingRow += '</div>';
+      h += readingRow;
+    } else if (hasKanji) {
+      // Fallback path: no readingAlign (or malformed).  Show per-kanji
+      // meaning row and uncolored surface row; plain reading below.
+      var meaningRowB = '<div class="vfc-kanji-meanings">';
+      var surfaceRowB = '<div class="vfc-surface">';
+      surfaceChars.forEach(function (ch, i) {
+        var meaning = resolveKanjiMeaning(resolveD, surfaceChars, i);
+        var slot = meaning ? esc(meaning) : '&nbsp;';
+        meaningRowB += '<span class="vfc-km">' + slot + '</span>';
+        surfaceRowB += '<span class="vfc-ch">' + esc(ch) + '</span>';
+      });
+      meaningRowB += '</div>';
+      surfaceRowB += '</div>';
+      h += meaningRowB + surfaceRowB;
+      h += '<div class="vfc-reading">' + esc(d.reading) + '</div>';
+    } else {
+      // Pure kana: no meaning row, reading = surface, centered normally.
+      h += '<div class="vfc-reading">' + esc(d.reading) + '</div>';
     }
-    h += '<div class="vfc-reading">' + esc(d.reading) + '</div>';
+
     h += '<div class="vfc-meaning">' + esc(d.meaning) + '</div>';
     if (d.gtype) h += '<div style="display:inline-block; background:#eee; color:#555; font-size:0.8rem; font-weight:700; padding:4px 12px; border-radius:12px; text-transform:uppercase; margin-bottom:15px;">' + esc(d.gtype) + '</div>';
     if (d.notes) h += '<div style="margin-top:10px; padding:12px; background:#fff8e1; border-left:4px solid #ffca28; color:#5d4037; font-size:0.9rem; text-align:left; border-radius:4px; line-height:1.4;"><strong>Note:</strong> ' + esc(d.notes) + '</div>';
