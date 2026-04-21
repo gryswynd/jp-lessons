@@ -1,8 +1,39 @@
 # N3 Campaign: Vocabulary Roadmap & Content Production
 
-> **Status:** Planning
-> **Started:** —
-> **Last updated:** 2026-03-20
+> **Status:** In Progress — Glossary Build-Out
+> **Started:** 2026-04-20
+> **Last updated:** 2026-04-21
+
+---
+
+## Session Continuation — Glossary Build-Out
+
+**For the next session:** Read this campaign file + the plan at `~/.claude/plans/fuzzy-roaming-breeze.md`. The plan contains the full Exhaustive Vocab Scan protocol, Grammar→Host-Lesson mapping, ID collision rules, managed kana-gap policies, and per-chunk workflow. Both documents together are the complete spec.
+
+### Where we are
+- **Glossary covers N3.1–N3.55** (947 entries: 221 kanji + 726 vocab)
+- **Chunks 1–6a approved**, chunks 6b–6c pending user approval
+- **Next work: chunk 7 (N3.56–N3.70, ~61 kanji)** then chunk 8 (N3.71–N3.86, ~64 kanji)
+- After all chunks: squash WIP commits → single clean commit → push
+
+### Known issues to fix (minor)
+- `v_shiharai` (支払い, N3.48) — missing `matches: ["支はらい"]` (払 not taught until N3.49)
+- `v_shiji` (指示, N3.48) — missing `matches: ["指じ"]` (示 not taught until N3.50)
+- gtype inconsistency (pre-existing): `i_adj` vs `i-adj`, `na_adj` vs `na-adj` vs `na-adjective`, `verb` vs `godan/ichidan` — defer to separate cleanup
+
+### Grammar-adjacent vocab remaining
+- G46 (Quoting) → N3.58: って (quotative) → particles.json
+- G47 (Set Patterns) → N3.64: にとって, に違いない, わけがない (expressions)
+- G48 (Advanced Connectors) → N3.72: しかも, それに, そのうえ, ところが, なお, むしろ
+- G49 (Capstone) → N3.84: none
+
+### Key rules (quick reference)
+1. Never read glossary files in full — use targeted Grep/jq
+2. Every ID globally unique across N5+N4+N3 — suffix `_2`, `_3` on collision
+3. lesson_ids = earliest lesson where word is writable (full kanji or via matches[])
+4. Run Exhaustive Vocab Scan per kanji (plan has the full 9-point checklist)
+5. Collision check after every chunk: `grep -oE '"id": "(k|v)_[a-z0-9_]+"' data/N{5,4,3}/glossary.N{5,4,3}.json | awk -F'"' '{print $4}' | sort | uniq -d`
+6. Validate after every chunk: `bash hooks/validate-json.sh data/N3/glossary.N3.json`
 
 ---
 
@@ -14,15 +45,63 @@ Build the N3 level from the ground up: finalize the vocabulary roadmap, create a
 
 | Content type | Exists | Notes |
 |---|---|---|
-| Vocabulary roadmap | Partial | `N3-kanji-lesson-plan.md` and `N3-regroup-working.md` exist — need finalization |
-| Glossary | Started | `glossary.N3.json` exists (size TBD) |
-| Grammar (G32–G49) | 18/18 **JSON files exist** | Built but **not QA'd** — need validation |
+| Vocabulary roadmap | **Locked** | `N3-kanji-lesson-plan.md` — 86 lessons, 348 kanji |
+| Glossary | **In progress** | `glossary.N3.json` — 940 entries covering N3.1–N3.55. Chunks 1–6a approved, 6b–6c pending |
+| Grammar (G32–G49) | 18/18 JSON files exist | **Empty stubs** (title + meta + sections:[]) — not built, contrary to previous note |
 | Content lessons | 0 | No N3.X lesson files |
 | Reviews | 0 | No review files |
 | Compose | 0 | No compose files |
 | Stories | 0 | No story files |
 | Game days | 0 | No game structure |
 | Manifest entries | TBD | N3 lessons not yet in manifest |
+
+## Glossary Build-Out Progress
+
+Chunked into 8 batches with approval gates. See plan: `~/.claude/plans/fuzzy-roaming-breeze.md`
+
+| Chunk | Lessons | Kanji | Entries added | Status |
+|---|---|---|---|---|
+| Pre-flight | — | — | Fixes only | Done — ID renames (k_yo_3, k_hatsu_2, k_ka_4, k_you_2), lesson_ids fixes (v_zangyou, v_yotei, v_yoyaku) |
+| 1 | N3.11–N3.13 | 12 | 51 (12k + 39v) | Approved |
+| 2 | N3.14–N3.20 | 28 | 140 (28k + 112v) | Approved |
+| 3 | N3.21–N3.26 | 24 | 95 (24k + 71v) | Approved |
+| 4a | N3.27–N3.32 | 24* | 87 (24k + 63v) | Approved |
+| 4b | N3.33–N3.36 | 16 | 82 (16k + 66v) | Approved |
+| 5a | N3.37–N3.40 | 16 | 77 (16k + 61v) | Approved |
+| 5b | N3.41–N3.44 | 16 | 72 (16k + 56v) | Approved |
+| 6a | N3.45–N3.48 | 16 | 67 (16k + 51v) | Approved |
+| 6b | N3.49–N3.52 | 16 | 67 (16k + 51v) | Pending approval |
+| 6c | N3.53–N3.55 | 12 | 39 (12k + 27v) | Pending approval |
+| 7 | N3.56–N3.70 | 61 | ~210 est. | Not started |
+| 8 | N3.71–N3.86 | 64 | ~220 est. | Not started |
+
+*N3.29 予 (k_yo_3) already existed from pre-flight — 23 new kanji, not 24.
+
+**Rescan fix entries (25 total):** After user caught 可愛い missing, full rescan of all chunks found 25 missed words. 18 vocab for N3 glossary + v_tairyoku in N4 glossary (体+力 both N4). + 7 RPG/game terms (必殺, 戦い, 戦力, 命中, 最強, 守備, 守備力). Matches[]-only game terms (攻撃, 回復, etc.) rejected by user. 留守 deferred to later lesson per user.
+
+### Policies established during build-out
+
+- **ID collisions:** Every ID globally unique across N5+N4+N3. Suffix `_2`, `_3`, `_4` on collision.
+- **Hybrid surfaces (matches[]):** Default: keep hybrid to reinforce taught kanji (じゅん備, 直せつ, 責にん). Exception: full kana for set-phrase exclamations where kanji parsing isn't the goal (かんぱい).
+- **lesson_ids:** Earliest lesson where the word can be written (full kanji or via matches[]).
+- **Grammar-adjacent vocab:** Dictionary-form vocab from grammar points lands in the host lesson (per G→lesson mapping). Compound particles go to `shared/particles.json`.
+- **Exhaustive Vocab Scan:** 7 mandatory checks per kanji (primary form, noun forms, compound scan, compound verbs, suffix patterns, matches[] for high-frequency, antonym/pair).
+
+### Grammar → Host-Lesson Vocab Delivered
+
+| Grammar | Host lesson | Vocab added | Status |
+|---|---|---|---|
+| G36 (はずだ/わけだ) | N3.14 | はず, わけ | Done (chunk 2) |
+| G37 (ところだ/たばかり) | N3.18 | ところ, ばかり | Done (chunk 2) |
+| G39 (Adverbs of Degree) | N3.26 | かなり, ずいぶん, なかなか, ほとんど, ちっとも, わりに, やや, ほぼ | Done (chunk 3) |
+| G40 (敬語) | N3.34 | いらっしゃる, おっしゃる, めしあがる, なさる, ございます, 伺う, 参る, 申す, 拝見する, ご覧になる | Done (chunk 4b) |
+| G38 (Particles) | N3.22 | → particles.json (not glossary) | Deferred |
+| G41 (Time Clauses) | N3.38 | うち, 以来, とたん | Done (chunk 5a) |
+| G42 (Perspective Particles) | N3.42 | → particles.json (not glossary) | Deferred |
+| G43 (Causative-Passive) | N3.46 | — (conjugation forms only) | N/A |
+| G44 (Suffixes) | N3.50 | っぽい, がち, 気味, やか | Done (chunk 6b) |
+| G45 (Advanced Conditionals) | N3.54 | — (form-based, no standalone vocab) | N/A |
+| G46–G49 | N3.58+ | Various | Not yet |
 
 ## Vocab Debt from N4 Stories (introduce early in N3)
 
@@ -47,19 +126,18 @@ Also flag for early N3 vocabulary:
 The N3 vocabulary roadmap determines which kanji and words go in which lesson, which determines the taught-kanji set for every piece of content.
 
 ### Tasks
-- [ ] Read `N3-kanji-lesson-plan.md` — assess current state
-- [ ] Read `N3-regroup-working.md` — assess regrouping decisions
-- [ ] Finalize lesson count (how many N3 lessons? N5=18, N4=36, N3=?)
-- [ ] Finalize kanji allocation per lesson
-- [ ] Finalize vocabulary allocation per lesson
-- [ ] Update `glossary.N3.json` with all entries, correct `lesson_ids`
+- [x] Read `N3-kanji-lesson-plan.md` — **locked: 86 lessons, 348 kanji**
+- [x] Read `N3-regroup-working.md` — regrouping applied, [FREE] annotations used for compound scan
+- [x] Finalize lesson count — **86 lessons**
+- [x] Finalize kanji allocation per lesson — **locked in N3-kanji-lesson-plan.md**
+- [ ] Update `glossary.N3.json` with all entries — **in progress (N3.1–N3.55 done, N3.56–N3.86 remaining)**
 - [ ] Add N3 lesson entries to `manifest.json` with kanji arrays
 
-### Key decisions needed
-- [ ] How many N3 lessons? (N3 covers ~370 kanji — at ~10 kanji/lesson that's ~37 lessons)
-- [ ] Lesson themes and groupings
-- [ ] Which N3 grammar points pair with which content lessons?
-- [ ] unlocksAfter chain for G32–G49
+### Key decisions made
+- [x] 86 N3 lessons (348 kanji, 4 per lesson with exceptions: 5 for N3.6/56/57/60/84, 3 for N3.73)
+- [x] Lesson themes and groupings — locked in kanji plan
+- [x] Grammar points paired with content lessons — G32–G49 mapped to host lessons via unlocksAfter
+- [ ] unlocksAfter chain for G32–G49 — values set in stubs, need QA pass
 
 ## Phase 2: Grammar QA (G32–G49)
 
