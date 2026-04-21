@@ -92,25 +92,32 @@ N5 pair story/review `unlocksAfter` values corrected to fire at the end of each 
 
 - [x] `rikizo-journey` (capstone): N4.33 → N4.Final.Review
 
-### 1a-ter. N4 pair-end grammar — OPEN
+### 1a-ter. N4 pair-end grammar — DONE ✓
 
-N4 has 7 pairs with grammar modules that unlock at the pair's end lesson (analogous to N5's G9 @ N5.8 and G11 @ N5.10). Under the learning-path rule ("review + story unlock after all pair grammar"), these would each require 2 manifest edits:
+N4 has 7 pairs with grammar modules that unlock at the pair's end lesson. All 14 story/review unlocksAfter values moved to the pair-end grammar:
 
-| Pair | End-lesson | Pair-end grammar | Story | Review |
-|---|---|---|---|---|
-| 3 | N4.6 | G16 | hirugohan-monogatari @ N4.6 → G16 | N4.Review.3 @ N4.6 → G16 |
-| 5 | N4.10 | G18, G19 (latest G19) | machi-no-eigakan @ N4.10 → G19 | N4.Review.5 @ N4.10 → G19 |
-| 7 | N4.14 | G20 | uta-to-shigoto @ N4.14 → G20 | N4.Review.7 @ N4.14 → G20 |
-| 8 | N4.16 | G21 | hashiru-asa @ N4.16 → G21 | N4.Review.8 @ N4.16 → G21 |
-| 9 | N4.18 | G22 | jitensha-de-kyouto-e @ N4.18 → G22 | N4.Review.9 @ N4.18 → G22 |
-| 15 | N4.30 | G27 | taifuu-no-omoide @ N4.30 → G27 | N4.Review.15 @ N4.30 → G27 |
-| 17 | N4.34 | G30, G31 (latest G31) | new-city @ N4.34 → G31 | N4.Review.17 @ N4.34 → G31 |
+- [x] Pair 3 (N4.6 + G16): hirugohan-monogatari → G16, N4.Review.3 → G16
+- [x] Pair 5 (N4.10 + G19): machi-no-eigakan → G19, N4.Review.5 → G19
+- [x] Pair 7 (N4.14 + G20): uta-to-shigoto → G20, N4.Review.7 → G20
+- [x] Pair 8 (N4.16 + G21): hashiru-asa → G21, N4.Review.8 → G21
+- [x] Pair 9 (N4.18 + G22): jitensha-de-kyouto-e → G22, N4.Review.9 → G22
+- [x] Pair 15 (N4.30 + G27): taifuu-no-omoide → G27, N4.Review.15 → G27
+- [x] Pair 17 (N4.34 + G31): new-city → G31, N4.Review.17 → G31
 
-**14 proposed edits, awaiting user sign-off.** The existing values aren't necessarily broken — they just let the review/story unlock before the pair's final grammar. Whether to tighten is a product decision.
+### 1a-quater. N5.9 gating fix — DONE ✓
 
-### 1a-quater. Unrelated inconsistency observed
+- [x] `N5.9.unlocksAfter`: G9 → N5.Review.4 (matches the pattern of N5.3, N5.5, N5.7, N5.11 — first-of-pair lessons wait on the previous pair's review)
 
-While auditing, noticed `N5.9.unlocksAfter = G9`, but most other N5 lessons that start a new pair unlock after the previous review (`N5.3 → N5.Review.1`, `N5.5 → N5.Review.2`, `N5.7 → N5.Review.3`, `N5.11 → N5.Review.5`). If the intended rule is "next pair's first lesson waits for the previous review", `N5.9` should probably be `N5.Review.4` instead of `G9`. **Out of scope for this campaign unless user confirms.**
+### 1a-quinquies. N4 lesson gating — OPEN (large scope)
+
+Audit discovery: **every N4 lesson beyond N4.1 is missing an `unlocksAfter` field entirely.** This is 35 missing values. Under the intended path:
+
+- **Second-of-pair lessons** (N4.2, N4.4, …, N4.36): should gate on any mid-pair grammar between them and the first-of-pair lesson, OR directly on the first-of-pair lesson if no grammar sits between them.
+- **First-of-pair lessons starting from N4.3** (N4.3, N4.5, …, N4.35): should gate on the previous pair's review (same pattern as N5.3 → N5.Review.1, N5.5 → N5.Review.2, …).
+
+This requires deriving the grammar-chain position of each lesson (e.g., N4.4 depends on G13 which depends on N4.3; or N4.6 depends on G14/G15 which both depend on N4.5). Scoping this out is a Phase 1a-quinquies task; not yet applied. **18 values are trivial** (first-of-pair → prev review) but **17 values** (second-of-pair) need per-lesson grammar-chain derivation.
+
+Proposed: do this as a separate commit once the lesson→grammar mapping is verified from content files (not just manifest metadata).
 
 ### 1b. Validation hook
 
