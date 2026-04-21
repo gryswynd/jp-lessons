@@ -8143,6 +8143,675 @@
       "verb_class": "godan_su",
       "lesson_ids": "N3.44",
       "notes": "飛 (N3.44) + 出 (N5.17)."
+    },
+    {
+      "id": "k_arasou",
+      "lesson": "N3.45",
+      "type": "kanji",
+      "surface": "争",
+      "on": "ソウ",
+      "kun": "あらそ.う",
+      "reading": "あらそう",
+      "meaning": "compete / dispute / fight / contend",
+      "notes": "争う(compete/dispute). Compounds: 競争, 戦争."
+    },
+    {
+      "id": "k_modoru",
+      "lesson": "N3.45",
+      "type": "kanji",
+      "surface": "戻",
+      "on": "レイ",
+      "kun": "もど.る・もど.す",
+      "reading": "もどる",
+      "meaning": "return / go back / restore",
+      "notes": "戻る(return), 戻す(put back). 取り戻す(recover)."
+    },
+    {
+      "id": "k_taoreru",
+      "lesson": "N3.45",
+      "type": "kanji",
+      "surface": "倒",
+      "on": "トウ",
+      "kun": "たお.れる・たお.す",
+      "reading": "たおれる",
+      "meaning": "collapse / fall down / overthrow",
+      "notes": "倒れる(collapse, intr.), 倒す(knock down, tr.)."
+    },
+    {
+      "id": "k_ki_7",
+      "lesson": "N3.45",
+      "type": "kanji",
+      "surface": "規",
+      "on": "キ",
+      "kun": "—",
+      "reading": "き",
+      "meaning": "rule / standard / regulation",
+      "notes": "On-reading compound kanji. Compounds: 規則, 定規, 正規, 新規."
+    },
+    {
+      "id": "v_arasou",
+      "surface": "争う",
+      "reading": "あらそう",
+      "meaning": "to compete / to dispute / to fight over",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_u",
+      "lesson_ids": "N3.45",
+      "notes": "争 (N3.45)."
+    },
+    {
+      "id": "v_arasoi",
+      "surface": "争い",
+      "reading": "あらそい",
+      "meaning": "dispute / conflict / competition",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.45",
+      "notes": "Noun form of 争う. 争 (N3.45)."
+    },
+    {
+      "id": "v_kyousou",
+      "surface": "競争",
+      "reading": "きょうそう",
+      "meaning": "competition / contest / rivalry",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.45",
+      "matches": [
+        "きょう争"
+      ],
+      "notes": "競 (not taught) + 争 (N3.45). Very common — managed kana gap."
+    },
+    {
+      "id": "v_sensou",
+      "surface": "戦争",
+      "reading": "せんそう",
+      "meaning": "war / warfare",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.45",
+      "notes": "戦 (N3.10) + 争 (N3.45)."
+    },
+    {
+      "id": "v_modoru",
+      "surface": "戻る",
+      "reading": "もどる",
+      "meaning": "to return / to go back / to come back",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.45",
+      "notes": "戻 (N3.45)."
+    },
+    {
+      "id": "v_modosu",
+      "surface": "戻す",
+      "reading": "もどす",
+      "meaning": "to put back / to restore / to return (something)",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.45",
+      "notes": "戻 (N3.45). Transitive pair of 戻る."
+    },
+    {
+      "id": "v_torimodosu",
+      "surface": "取り戻す",
+      "reading": "とりもどす",
+      "meaning": "to take back / to recover / to regain",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.45",
+      "notes": "取 (N3.41) + 戻 (N3.45)."
+    },
+    {
+      "id": "v_taoreru",
+      "surface": "倒れる",
+      "reading": "たおれる",
+      "meaning": "to collapse / to fall down / to be defeated",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.45",
+      "notes": "倒 (N3.45). Intransitive."
+    },
+    {
+      "id": "v_taosu",
+      "surface": "倒す",
+      "reading": "たおす",
+      "meaning": "to knock down / to defeat / to overthrow",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.45",
+      "notes": "倒 (N3.45). Transitive pair of 倒れる."
+    },
+    {
+      "id": "v_kisoku",
+      "surface": "規則",
+      "reading": "きそく",
+      "meaning": "rule / regulation",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.45",
+      "matches": [
+        "規そく"
+      ],
+      "notes": "規 (N3.45) + 則 (not taught). Common — managed kana gap."
+    },
+    {
+      "id": "v_jougi",
+      "surface": "定規",
+      "reading": "じょうぎ",
+      "meaning": "ruler (measuring tool)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.45",
+      "notes": "定 (N3.29) + 規 (N3.45)."
+    },
+    {
+      "id": "v_shinki",
+      "surface": "新規",
+      "reading": "しんき",
+      "meaning": "new / fresh / newly created",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.45",
+      "notes": "新 (N5.10) + 規 (N3.45). [FREE] in regroup."
+    },
+    {
+      "id": "v_seiki",
+      "surface": "正規",
+      "reading": "せいき",
+      "meaning": "regular / formal / official",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.45",
+      "notes": "正 (N4.35) + 規 (N3.45). [FREE] in regroup."
+    },
+    {
+      "id": "k_utsu_3",
+      "lesson": "N3.46",
+      "type": "kanji",
+      "surface": "打",
+      "on": "ダ",
+      "kun": "う.つ",
+      "reading": "うつ",
+      "meaning": "hit / strike / type",
+      "notes": "打つ(hit/strike/type). Standalone action verb."
+    },
+    {
+      "id": "k_oru",
+      "lesson": "N3.46",
+      "type": "kanji",
+      "surface": "折",
+      "on": "セツ",
+      "kun": "お.る・お.れる",
+      "reading": "おる",
+      "meaning": "fold / break / snap / occasion",
+      "notes": "折る(fold/break, tr.), 折れる(snap/break, intr.). Compound: 骨折."
+    },
+    {
+      "id": "k_nuku",
+      "lesson": "N3.46",
+      "type": "kanji",
+      "surface": "抜",
+      "on": "バツ",
+      "kun": "ぬ.く・ぬ.ける",
+      "reading": "ぬく",
+      "meaning": "pull out / extract / surpass / omit",
+      "notes": "抜く(pull out, tr.), 抜ける(come out/escape, intr.)."
+    },
+    {
+      "id": "k_osu",
+      "lesson": "N3.46",
+      "type": "kanji",
+      "surface": "押",
+      "on": "オウ",
+      "kun": "お.す",
+      "reading": "おす",
+      "meaning": "push / press / stamp",
+      "notes": "押す(push/press). 押し入れ(closet)."
+    },
+    {
+      "id": "v_utsu",
+      "surface": "打つ",
+      "reading": "うつ",
+      "meaning": "to hit / to strike / to type / to play (drums)",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_tsu",
+      "lesson_ids": "N3.46",
+      "notes": "打 (N3.46)."
+    },
+    {
+      "id": "v_oru",
+      "surface": "折る",
+      "reading": "おる",
+      "meaning": "to fold / to break / to snap",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.46",
+      "notes": "折 (N3.46). Transitive."
+    },
+    {
+      "id": "v_oreru",
+      "surface": "折れる",
+      "reading": "おれる",
+      "meaning": "to break / to snap / to give in",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.46",
+      "notes": "折 (N3.46). Intransitive pair of 折る."
+    },
+    {
+      "id": "v_ori",
+      "surface": "折り",
+      "reading": "おり",
+      "meaning": "occasion / time / fold",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.46",
+      "notes": "折 (N3.46). この折に = on this occasion."
+    },
+    {
+      "id": "v_nuku",
+      "surface": "抜く",
+      "reading": "ぬく",
+      "meaning": "to pull out / to extract / to surpass / to omit",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ku",
+      "lesson_ids": "N3.46",
+      "notes": "抜 (N3.46). Transitive."
+    },
+    {
+      "id": "v_nukeru",
+      "surface": "抜ける",
+      "reading": "ぬける",
+      "meaning": "to come out / to escape / to be missing",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.46",
+      "notes": "抜 (N3.46). Intransitive pair of 抜く."
+    },
+    {
+      "id": "v_osu",
+      "surface": "押す",
+      "reading": "おす",
+      "meaning": "to push / to press / to stamp",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.46",
+      "notes": "押 (N3.46)."
+    },
+    {
+      "id": "v_oshiire",
+      "surface": "押し入れ",
+      "reading": "おしいれ",
+      "meaning": "closet (Japanese-style) / storage space",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.46",
+      "notes": "押 (N3.46) + 入 (N5.17)."
+    },
+    {
+      "id": "v_uchiawase",
+      "surface": "打ち合わせ",
+      "reading": "うちあわせ",
+      "meaning": "meeting / arrangement / preliminary discussion",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.46",
+      "notes": "打 (N3.46) + 合 (N4.21). Very common business term."
+    },
+    {
+      "id": "v_orikaesu",
+      "surface": "折り返す",
+      "reading": "おりかえす",
+      "meaning": "to turn back / to call back / to fold back",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.46",
+      "notes": "折 (N3.46) + 返 (N3.27). 折り返し電話する = to call back."
+    },
+    {
+      "id": "v_nukedasu",
+      "surface": "抜け出す",
+      "reading": "ぬけだす",
+      "meaning": "to slip out / to sneak away / to escape",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.46",
+      "notes": "抜 (N3.46) + 出 (N5.17)."
+    },
+    {
+      "id": "k_nageru",
+      "lesson": "N3.47",
+      "type": "kanji",
+      "surface": "投",
+      "on": "トウ",
+      "kun": "な.げる",
+      "reading": "なげる",
+      "meaning": "throw / cast / pitch",
+      "notes": "投げる(throw). Compounds: 投入, 投票."
+    },
+    {
+      "id": "k_idaku",
+      "lesson": "N3.47",
+      "type": "kanji",
+      "surface": "抱",
+      "on": "ホウ",
+      "kun": "だ.く・いだ.く・かか.える",
+      "reading": "だく",
+      "meaning": "embrace / hold / hug / carry",
+      "notes": "抱く(embrace), 抱える(carry in arms/have a problem)."
+    },
+    {
+      "id": "k_toraeru",
+      "lesson": "N3.47",
+      "type": "kanji",
+      "surface": "捕",
+      "on": "ホ",
+      "kun": "と.る・つか.まえる・つか.まる",
+      "reading": "つかまえる",
+      "meaning": "catch / capture / seize",
+      "notes": "捕まえる(catch, tr.), 捕まる(be caught, intr.). Compound: 逮捕."
+    },
+    {
+      "id": "k_kakeru_3",
+      "lesson": "N3.47",
+      "type": "kanji",
+      "surface": "掛",
+      "on": "カイ",
+      "kun": "か.ける・か.かる",
+      "reading": "かける",
+      "meaning": "hang / call / sit / cost / pour",
+      "notes": "掛ける(hang/call/etc.), 掛かる(take time/cost). Extremely polysemous."
+    },
+    {
+      "id": "v_nageru",
+      "surface": "投げる",
+      "reading": "なげる",
+      "meaning": "to throw / to pitch / to toss",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.47",
+      "notes": "投 (N3.47)."
+    },
+    {
+      "id": "v_tounyuu",
+      "surface": "投入",
+      "reading": "とうにゅう",
+      "meaning": "throwing in / investment / insertion",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.47",
+      "notes": "投 (N3.47) + 入 (N5.17)."
+    },
+    {
+      "id": "v_touhyou",
+      "surface": "投票",
+      "reading": "とうひょう",
+      "meaning": "voting / ballot / poll",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.47",
+      "matches": [
+        "投ひょう"
+      ],
+      "notes": "投 (N3.47) + 票 (not taught). Common — managed kana gap."
+    },
+    {
+      "id": "v_daku",
+      "surface": "抱く",
+      "reading": "だく",
+      "meaning": "to embrace / to hold / to hug",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ku",
+      "lesson_ids": "N3.47",
+      "notes": "抱 (N3.47). Also read いだく (to harbor feelings)."
+    },
+    {
+      "id": "v_kakaeru",
+      "surface": "抱える",
+      "reading": "かかえる",
+      "meaning": "to carry in arms / to have (a problem) / to employ",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.47",
+      "notes": "抱 (N3.47)."
+    },
+    {
+      "id": "v_tsukamaeru",
+      "surface": "捕まえる",
+      "reading": "つかまえる",
+      "meaning": "to catch / to capture / to seize",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.47",
+      "notes": "捕 (N3.47). Transitive."
+    },
+    {
+      "id": "v_tsukamaru",
+      "surface": "捕まる",
+      "reading": "つかまる",
+      "meaning": "to be caught / to be arrested",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.47",
+      "notes": "捕 (N3.47). Intransitive pair of 捕まえる."
+    },
+    {
+      "id": "v_taiho",
+      "surface": "逮捕",
+      "reading": "たいほ",
+      "meaning": "arrest / apprehension",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.47",
+      "matches": [
+        "たい捕"
+      ],
+      "notes": "逮 (not taught) + 捕 (N3.47). Common — managed kana gap."
+    },
+    {
+      "id": "v_kakeru_3",
+      "surface": "掛ける",
+      "reading": "かける",
+      "meaning": "to hang / to call (phone) / to sit / to pour / to cost",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.47",
+      "notes": "掛 (N3.47). Extremely polysemous verb."
+    },
+    {
+      "id": "v_kakaru",
+      "surface": "掛かる",
+      "reading": "かかる",
+      "meaning": "to take (time/money) / to hang / to be caught",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.47",
+      "notes": "掛 (N3.47). Intransitive pair of 掛ける."
+    },
+    {
+      "id": "k_sasu",
+      "lesson": "N3.48",
+      "type": "kanji",
+      "surface": "指",
+      "on": "シ",
+      "kun": "ゆび・さ.す",
+      "reading": "ゆび",
+      "meaning": "finger / point / indicate",
+      "notes": "指(finger), 指す(point). Compounds: 指示, 指輪."
+    },
+    {
+      "id": "k_sagasu",
+      "lesson": "N3.48",
+      "type": "kanji",
+      "surface": "探",
+      "on": "タン",
+      "kun": "さが.す・さぐ.る",
+      "reading": "さがす",
+      "meaning": "search / look for / explore",
+      "notes": "探す(search for). Compound: 探検."
+    },
+    {
+      "id": "k_sasaeru",
+      "lesson": "N3.48",
+      "type": "kanji",
+      "surface": "支",
+      "on": "シ",
+      "kun": "ささ.える",
+      "reading": "ささえる",
+      "meaning": "support / prop up / branch",
+      "notes": "支える(support). Compounds: 支援, 支持, 支払う."
+    },
+    {
+      "id": "k_hanasu_2",
+      "lesson": "N3.48",
+      "type": "kanji",
+      "surface": "放",
+      "on": "ホウ",
+      "kun": "はな.す・はな.つ",
+      "reading": "はなす",
+      "meaning": "release / let go / fire / emit",
+      "notes": "放す(release), 放つ(fire/emit). Compounds: 放送, 開放. Distinct from 話す(speak)."
+    },
+    {
+      "id": "v_yubi",
+      "surface": "指",
+      "reading": "ゆび",
+      "meaning": "finger / toe",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.48",
+      "notes": "指 (N3.48)."
+    },
+    {
+      "id": "v_sasu",
+      "surface": "指す",
+      "reading": "さす",
+      "meaning": "to point / to indicate / to nominate",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.48",
+      "notes": "指 (N3.48)."
+    },
+    {
+      "id": "v_shiji",
+      "surface": "指示",
+      "reading": "しじ",
+      "meaning": "instruction / direction / indication",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.48",
+      "notes": "指 (N3.48) + 示 (N3.50). 示 taught 2 lessons later — gap = 2, acceptable."
+    },
+    {
+      "id": "v_yubiwa",
+      "surface": "指輪",
+      "reading": "ゆびわ",
+      "meaning": "ring (jewelry)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.48",
+      "matches": [
+        "指わ"
+      ],
+      "notes": "指 (N3.48) + 輪 (not taught). Managed kana gap."
+    },
+    {
+      "id": "v_sagasu",
+      "surface": "探す",
+      "reading": "さがす",
+      "meaning": "to search for / to look for",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.48",
+      "notes": "探 (N3.48)."
+    },
+    {
+      "id": "v_sasaeru",
+      "surface": "支える",
+      "reading": "ささえる",
+      "meaning": "to support / to prop up / to sustain",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.48",
+      "notes": "支 (N3.48)."
+    },
+    {
+      "id": "v_shien",
+      "surface": "支援",
+      "reading": "しえん",
+      "meaning": "support / assistance / aid",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.48",
+      "matches": [
+        "支えん"
+      ],
+      "notes": "支 (N3.48) + 援 (not taught). Common — managed kana gap."
+    },
+    {
+      "id": "v_shiharai",
+      "surface": "支払い",
+      "reading": "しはらい",
+      "meaning": "payment",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.48",
+      "notes": "支 (N3.48) + 払 (N3.49). 払 taught next lesson — gap = 1."
+    },
+    {
+      "id": "v_hanasu_2",
+      "surface": "放す",
+      "reading": "はなす",
+      "meaning": "to release / to let go / to set free",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.48",
+      "notes": "放 (N3.48). Distinct from 話す (to speak)."
+    },
+    {
+      "id": "v_housou",
+      "surface": "放送",
+      "reading": "ほうそう",
+      "meaning": "broadcasting / broadcast",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.48",
+      "notes": "放 (N3.48) + 送 (N4.2). [FREE] in regroup."
+    },
+    {
+      "id": "v_kaihou",
+      "surface": "開放",
+      "reading": "かいほう",
+      "meaning": "opening / liberating / releasing",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.48",
+      "notes": "開 (N4.28) + 放 (N3.48)."
     }
   ]
 }
