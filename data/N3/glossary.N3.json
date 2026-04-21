@@ -7370,6 +7370,779 @@
       "gtype": "adverb",
       "lesson_ids": "N3.37",
       "notes": "Kana-only. Vocab debt from N4 stories. Formal form: やはり."
+    },
+    {
+      "id": "k_ri",
+      "lesson": "N3.41",
+      "type": "kanji",
+      "surface": "利",
+      "on": "リ",
+      "kun": "—",
+      "reading": "り",
+      "meaning": "profit / benefit / advantage / sharp",
+      "notes": "On-reading compound kanji. Compounds: 便利, 利用, 利益, 有利."
+    },
+    {
+      "id": "k_shuu",
+      "lesson": "N3.41",
+      "type": "kanji",
+      "surface": "収",
+      "on": "シュウ",
+      "kun": "おさ.める・おさ.まる",
+      "reading": "おさめる",
+      "meaning": "collect / obtain / store / supply",
+      "notes": "収める(obtain/store), 収まる(be settled). Compounds: 収入, 収集, 回収."
+    },
+    {
+      "id": "k_atai",
+      "lesson": "N3.41",
+      "type": "kanji",
+      "surface": "値",
+      "on": "チ",
+      "kun": "ね・あたい",
+      "reading": "ね",
+      "meaning": "price / value / worth",
+      "notes": "値(price), 値段(price tag). 値(あたい) for abstract value."
+    },
+    {
+      "id": "k_toru",
+      "lesson": "N3.41",
+      "type": "kanji",
+      "surface": "取",
+      "on": "シュ",
+      "kun": "と.る",
+      "reading": "とる",
+      "meaning": "take / fetch / collect",
+      "notes": "取る(take). Extremely productive compound verb prefix: 取り消す, 取り出す, 取引. Distinct from 撮る(photograph, N4)."
+    },
+    {
+      "id": "v_benri",
+      "surface": "便利",
+      "reading": "べんり",
+      "meaning": "convenient / handy / useful",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.41",
+      "notes": "便 (N4.26) + 利 (N3.41). [FREE] in regroup."
+    },
+    {
+      "id": "v_riyou",
+      "surface": "利用",
+      "reading": "りよう",
+      "meaning": "use / utilization",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.41",
+      "notes": "利 (N3.41) + 用 (N4.31)."
+    },
+    {
+      "id": "v_rieki",
+      "surface": "利益",
+      "reading": "りえき",
+      "meaning": "profit / benefit / gains",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.41",
+      "matches": [
+        "利えき"
+      ],
+      "notes": "利 (N3.41) + 益 (not taught). Common — managed kana gap."
+    },
+    {
+      "id": "v_yuuri",
+      "surface": "有利",
+      "reading": "ゆうり",
+      "meaning": "advantageous / favorable",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.41",
+      "notes": "有 (N4.18) + 利 (N3.41)."
+    },
+    {
+      "id": "v_furi",
+      "surface": "不利",
+      "reading": "ふり",
+      "meaning": "disadvantageous / unfavorable",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.41",
+      "notes": "不 (N4.26) + 利 (N3.41). Antonym of 有利."
+    },
+    {
+      "id": "v_osameru",
+      "surface": "収める",
+      "reading": "おさめる",
+      "meaning": "to obtain / to store / to settle / to pay",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.41",
+      "notes": "収 (N3.41)."
+    },
+    {
+      "id": "v_shuunyuu",
+      "surface": "収入",
+      "reading": "しゅうにゅう",
+      "meaning": "income / revenue / earnings",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.41",
+      "notes": "収 (N3.41) + 入 (N5.17). [FREE] in regroup."
+    },
+    {
+      "id": "v_shuushuu",
+      "surface": "収集",
+      "reading": "しゅうしゅう",
+      "meaning": "collection / gathering",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.41",
+      "notes": "収 (N3.41) + 集 (N4.36)."
+    },
+    {
+      "id": "v_kaishuu",
+      "surface": "回収",
+      "reading": "かいしゅう",
+      "meaning": "collection / recovery / retrieval",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.41",
+      "notes": "回 (N4.25) + 収 (N3.41)."
+    },
+    {
+      "id": "v_atai",
+      "surface": "値",
+      "reading": "ね",
+      "meaning": "price / cost / value",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.41",
+      "notes": "値 (N3.41). Kun reading ね for price."
+    },
+    {
+      "id": "v_nedan",
+      "surface": "値段",
+      "reading": "ねだん",
+      "meaning": "price / cost",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.41",
+      "matches": [
+        "値だん"
+      ],
+      "notes": "値 (N3.41) + 段 (N3.61). Very common — managed kana gap."
+    },
+    {
+      "id": "v_neage",
+      "surface": "値上げ",
+      "reading": "ねあげ",
+      "meaning": "price increase / mark-up",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.41",
+      "notes": "値 (N3.41) + 上 (N5.17)."
+    },
+    {
+      "id": "v_nesage",
+      "surface": "値下げ",
+      "reading": "ねさげ",
+      "meaning": "price reduction / mark-down",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.41",
+      "notes": "値 (N3.41) + 下 (N5.17). Antonym of 値上げ."
+    },
+    {
+      "id": "v_kachi_2",
+      "surface": "価値",
+      "reading": "かち",
+      "meaning": "value / worth",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.41",
+      "matches": [
+        "か値"
+      ],
+      "notes": "価 (not taught) + 値 (N3.41). Common — managed kana gap."
+    },
+    {
+      "id": "v_toru_2",
+      "surface": "取る",
+      "reading": "とる",
+      "meaning": "to take / to get / to fetch / to pick up",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.41",
+      "notes": "取 (N3.41). Distinct from 撮る (N4, to photograph)."
+    },
+    {
+      "id": "v_torihiki",
+      "surface": "取引",
+      "reading": "とりひき",
+      "meaning": "transaction / trade / deal",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.41",
+      "notes": "取 (N3.41) + 引 (N4.24)."
+    },
+    {
+      "id": "v_torikeshi",
+      "surface": "取り消す",
+      "reading": "とりけす",
+      "meaning": "to cancel / to revoke / to retract",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.41",
+      "notes": "取 (N3.41) + 消 (N3.40)."
+    },
+    {
+      "id": "v_toridasu",
+      "surface": "取り出す",
+      "reading": "とりだす",
+      "meaning": "to take out / to produce / to extract",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.41",
+      "notes": "取 (N3.41) + 出 (N5.17)."
+    },
+    {
+      "id": "k_oiru",
+      "lesson": "N3.42",
+      "type": "kanji",
+      "surface": "老",
+      "on": "ロウ",
+      "kun": "お.いる・ふ.ける",
+      "reading": "おいる",
+      "meaning": "old / aged / elderly",
+      "notes": "老いる(grow old). Compounds: 老人, 老後."
+    },
+    {
+      "id": "k_wakai",
+      "lesson": "N3.42",
+      "type": "kanji",
+      "surface": "若",
+      "on": "ジャク",
+      "kun": "わか.い",
+      "reading": "わかい",
+      "meaning": "young / youthful",
+      "notes": "若い(young). Compound: 若者. Antonym: 老."
+    },
+    {
+      "id": "k_utsukushii",
+      "lesson": "N3.42",
+      "type": "kanji",
+      "surface": "美",
+      "on": "ビ",
+      "kun": "うつく.しい",
+      "reading": "うつくしい",
+      "meaning": "beautiful / lovely / fine",
+      "notes": "美しい(beautiful). Compounds: 美人, 美術."
+    },
+    {
+      "id": "k_mina",
+      "lesson": "N3.42",
+      "type": "kanji",
+      "surface": "皆",
+      "on": "カイ",
+      "kun": "みな・みんな",
+      "reading": "みな",
+      "meaning": "everyone / all / everything",
+      "notes": "皆(everyone). 皆さん already taught N5 in kana — N3 teaches the kanji."
+    },
+    {
+      "id": "v_roujin",
+      "surface": "老人",
+      "reading": "ろうじん",
+      "meaning": "elderly person / old person",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.42",
+      "notes": "老 (N3.42) + 人 (N5.1). [FREE] in regroup."
+    },
+    {
+      "id": "v_rougo",
+      "surface": "老後",
+      "reading": "ろうご",
+      "meaning": "old age / later years of life",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.42",
+      "notes": "老 (N3.42) + 後 (N5.11)."
+    },
+    {
+      "id": "v_wakai",
+      "surface": "若い",
+      "reading": "わかい",
+      "meaning": "young / youthful",
+      "type": "vocab",
+      "gtype": "i_adj",
+      "verb_class": "i_adj",
+      "lesson_ids": "N3.42",
+      "notes": "若 (N3.42). Antonym of 老."
+    },
+    {
+      "id": "v_wakamono",
+      "surface": "若者",
+      "reading": "わかもの",
+      "meaning": "young person / youth",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.42",
+      "notes": "若 (N3.42) + 者 (N4.14)."
+    },
+    {
+      "id": "v_utsukushii",
+      "surface": "美しい",
+      "reading": "うつくしい",
+      "meaning": "beautiful / lovely / fine",
+      "type": "vocab",
+      "gtype": "i_adj",
+      "verb_class": "i_adj",
+      "lesson_ids": "N3.42",
+      "notes": "美 (N3.42)."
+    },
+    {
+      "id": "v_bijin",
+      "surface": "美人",
+      "reading": "びじん",
+      "meaning": "beautiful person / beauty",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.42",
+      "notes": "美 (N3.42) + 人 (N5.1)."
+    },
+    {
+      "id": "v_bijutsu",
+      "surface": "美術",
+      "reading": "びじゅつ",
+      "meaning": "fine arts / art",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.42",
+      "matches": [
+        "美じゅつ"
+      ],
+      "notes": "美 (N3.42) + 術 (N3.71). Common — managed kana gap."
+    },
+    {
+      "id": "v_mina",
+      "surface": "皆",
+      "reading": "みな",
+      "meaning": "everyone / all / everything",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.42",
+      "notes": "皆 (N3.42). Kanji form of みな/みんな. 皆さん already in N5 as kana."
+    },
+    {
+      "id": "v_biyou",
+      "surface": "美容",
+      "reading": "びよう",
+      "meaning": "beauty / cosmetics / beauty care",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.42",
+      "notes": "美 (N3.42) + 容 (N3.28)."
+    },
+    {
+      "id": "v_rouka",
+      "surface": "老化",
+      "reading": "ろうか",
+      "meaning": "aging / deterioration with age",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.42",
+      "notes": "老 (N3.42) + 化 (N3.35)."
+    },
+    {
+      "id": "v_wakate",
+      "surface": "若手",
+      "reading": "わかて",
+      "meaning": "young talent / up-and-comer",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.42",
+      "notes": "若 (N3.42) + 手 (N5.15)."
+    },
+    {
+      "id": "k_ou_2",
+      "lesson": "N3.43",
+      "type": "kanji",
+      "surface": "王",
+      "on": "オウ",
+      "kun": "—",
+      "reading": "おう",
+      "meaning": "king / ruler / monarch",
+      "notes": "王(king). Compounds: 王様, 女王, 王子, 国王."
+    },
+    {
+      "id": "k_kami_2",
+      "lesson": "N3.43",
+      "type": "kanji",
+      "surface": "神",
+      "on": "シン・ジン",
+      "kun": "かみ",
+      "reading": "かみ",
+      "meaning": "god / deity / divine / spirit",
+      "notes": "神(god), 神社(shrine). Distinct from 紙 (N4, paper)."
+    },
+    {
+      "id": "k_fuku_2",
+      "lesson": "N3.43",
+      "type": "kanji",
+      "surface": "福",
+      "on": "フク",
+      "kun": "—",
+      "reading": "ふく",
+      "meaning": "fortune / blessing / happiness / welfare",
+      "notes": "On-reading compound kanji. Compounds: 幸福, 福祉. Distinct from 服 (N4, clothes)."
+    },
+    {
+      "id": "k_shinji",
+      "lesson": "N3.43",
+      "type": "kanji",
+      "surface": "信",
+      "on": "シン",
+      "kun": "—",
+      "reading": "しん",
+      "meaning": "trust / believe / faith / letter",
+      "notes": "信じる(believe). Compounds: 信頼, 信用, 自信, 通信."
+    },
+    {
+      "id": "v_ousama",
+      "surface": "王様",
+      "reading": "おうさま",
+      "meaning": "king (respectful)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.43",
+      "matches": [
+        "王さま"
+      ],
+      "notes": "王 (N3.43) + 様 (N3.60). Common — managed kana gap."
+    },
+    {
+      "id": "v_jouou",
+      "surface": "女王",
+      "reading": "じょおう",
+      "meaning": "queen",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.43",
+      "notes": "女 (N5.1) + 王 (N3.43)."
+    },
+    {
+      "id": "v_ouji",
+      "surface": "王子",
+      "reading": "おうじ",
+      "meaning": "prince",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.43",
+      "notes": "王 (N3.43) + 子 (N5.1)."
+    },
+    {
+      "id": "v_kokuou",
+      "surface": "国王",
+      "reading": "こくおう",
+      "meaning": "king (of a nation)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.43",
+      "notes": "国 (N5.14) + 王 (N3.43)."
+    },
+    {
+      "id": "v_kami_2",
+      "surface": "神",
+      "reading": "かみ",
+      "meaning": "god / deity / spirit",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.43",
+      "notes": "神 (N3.43)."
+    },
+    {
+      "id": "v_jinja",
+      "surface": "神社",
+      "reading": "じんじゃ",
+      "meaning": "Shinto shrine",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.43",
+      "notes": "神 (N3.43) + 社 (N5.16). [FREE] in regroup."
+    },
+    {
+      "id": "v_koufuku",
+      "surface": "幸福",
+      "reading": "こうふく",
+      "meaning": "happiness / well-being / bliss",
+      "type": "vocab",
+      "gtype": "na_adj",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.43",
+      "notes": "幸 (N3.31) + 福 (N3.43)."
+    },
+    {
+      "id": "v_fukushi",
+      "surface": "福祉",
+      "reading": "ふくし",
+      "meaning": "welfare / social welfare",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.43",
+      "matches": [
+        "福し"
+      ],
+      "notes": "福 (N3.43) + 祉 (not taught). Managed kana gap."
+    },
+    {
+      "id": "v_shinjiru",
+      "surface": "信じる",
+      "reading": "しんじる",
+      "meaning": "to believe / to trust / to have faith in",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.43",
+      "notes": "信 (N3.43)."
+    },
+    {
+      "id": "v_shinrai",
+      "surface": "信頼",
+      "reading": "しんらい",
+      "meaning": "trust / reliance / confidence",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.43",
+      "notes": "信 (N3.43) + 頼 (N3.21)."
+    },
+    {
+      "id": "v_shinyou",
+      "surface": "信用",
+      "reading": "しんよう",
+      "meaning": "trust / credit / confidence",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.43",
+      "notes": "信 (N3.43) + 用 (N4.31)."
+    },
+    {
+      "id": "v_jishin_2",
+      "surface": "自信",
+      "reading": "じしん",
+      "meaning": "self-confidence / confidence in oneself",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.43",
+      "notes": "自 (N4.17) + 信 (N3.43)."
+    },
+    {
+      "id": "v_tsuushin",
+      "surface": "通信",
+      "reading": "つうしん",
+      "meaning": "communication / correspondence / transmission",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.43",
+      "notes": "通 (N4.26) + 信 (N3.43)."
+    },
+    {
+      "id": "k_neko",
+      "lesson": "N3.44",
+      "type": "kanji",
+      "surface": "猫",
+      "on": "ビョウ",
+      "kun": "ねこ",
+      "reading": "ねこ",
+      "meaning": "cat",
+      "notes": "猫(cat). Compound: 子猫."
+    },
+    {
+      "id": "k_uma",
+      "lesson": "N3.44",
+      "type": "kanji",
+      "surface": "馬",
+      "on": "バ",
+      "kun": "うま",
+      "reading": "うま",
+      "meaning": "horse",
+      "notes": "馬(horse). Compounds: 競馬, 馬力, 乗馬."
+    },
+    {
+      "id": "k_naku",
+      "lesson": "N3.44",
+      "type": "kanji",
+      "surface": "鳴",
+      "on": "メイ",
+      "kun": "な.く・な.る",
+      "reading": "なく",
+      "meaning": "cry (animal) / ring / sound",
+      "notes": "鳴く(animal cry), 鳴る(ring/sound). Compounds: 鳴き声, 悲鳴."
+    },
+    {
+      "id": "k_tobu",
+      "lesson": "N3.44",
+      "type": "kanji",
+      "surface": "飛",
+      "on": "ヒ",
+      "kun": "と.ぶ",
+      "reading": "とぶ",
+      "meaning": "fly / jump / leap",
+      "notes": "飛ぶ(fly). Compounds: 飛行, 飛行機, 飛び込む."
+    },
+    {
+      "id": "v_neko",
+      "surface": "猫",
+      "reading": "ねこ",
+      "meaning": "cat",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.44",
+      "notes": "猫 (N3.44)."
+    },
+    {
+      "id": "v_koneko",
+      "surface": "子猫",
+      "reading": "こねこ",
+      "meaning": "kitten",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.44",
+      "notes": "子 (N5.1) + 猫 (N3.44)."
+    },
+    {
+      "id": "v_uma",
+      "surface": "馬",
+      "reading": "うま",
+      "meaning": "horse",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.44",
+      "notes": "馬 (N3.44)."
+    },
+    {
+      "id": "v_jouba",
+      "surface": "乗馬",
+      "reading": "じょうば",
+      "meaning": "horse riding / equestrian",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.44",
+      "notes": "乗 (N4.4) + 馬 (N3.44)."
+    },
+    {
+      "id": "v_bariki",
+      "surface": "馬力",
+      "reading": "ばりき",
+      "meaning": "horsepower / energy / brute force",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.44",
+      "notes": "馬 (N3.44) + 力 (N4.3)."
+    },
+    {
+      "id": "v_naku_2",
+      "surface": "鳴く",
+      "reading": "なく",
+      "meaning": "to cry (animal) / to chirp / to howl",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ku",
+      "lesson_ids": "N3.44",
+      "notes": "鳴 (N3.44). Animal sounds only. Distinct from 泣く (to cry/weep — human)."
+    },
+    {
+      "id": "v_naru_3",
+      "surface": "鳴る",
+      "reading": "なる",
+      "meaning": "to ring / to sound / to resonate",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_ru",
+      "lesson_ids": "N3.44",
+      "notes": "鳴 (N3.44). Bell/phone/thunder sounds."
+    },
+    {
+      "id": "v_nakigoe",
+      "surface": "鳴き声",
+      "reading": "なきごえ",
+      "meaning": "animal cry / call / chirping",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.44",
+      "notes": "鳴 (N3.44) + 声 (N4.18)."
+    },
+    {
+      "id": "v_himei",
+      "surface": "悲鳴",
+      "reading": "ひめい",
+      "meaning": "scream / shriek / cry of distress",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.44",
+      "notes": "悲 (N3.30) + 鳴 (N3.44)."
+    },
+    {
+      "id": "v_tobu",
+      "surface": "飛ぶ",
+      "reading": "とぶ",
+      "meaning": "to fly / to jump / to leap",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_bu",
+      "lesson_ids": "N3.44",
+      "notes": "飛 (N3.44)."
+    },
+    {
+      "id": "v_hikou",
+      "surface": "飛行",
+      "reading": "ひこう",
+      "meaning": "flight / aviation / flying",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.44",
+      "notes": "飛 (N3.44) + 行 (N5.5)."
+    },
+    {
+      "id": "v_hikouki",
+      "surface": "飛行機",
+      "reading": "ひこうき",
+      "meaning": "airplane / aircraft",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.44",
+      "matches": [
+        "飛行き"
+      ],
+      "notes": "飛 (N3.44) + 行 (N5.5) + 機 (N3.61). Very common — managed kana gap. [FREE] in regroup."
+    },
+    {
+      "id": "v_tobikomu",
+      "surface": "飛び込む",
+      "reading": "とびこむ",
+      "meaning": "to jump in / to dive in / to rush in",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_mu",
+      "lesson_ids": "N3.44",
+      "notes": "飛 (N3.44) + 込 (N3.37)."
+    },
+    {
+      "id": "v_tobidasu",
+      "surface": "飛び出す",
+      "reading": "とびだす",
+      "meaning": "to jump out / to rush out / to pop out",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan_su",
+      "lesson_ids": "N3.44",
+      "notes": "飛 (N3.44) + 出 (N5.17)."
     }
   ]
 }
