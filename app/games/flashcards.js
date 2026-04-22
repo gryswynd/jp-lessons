@@ -44,7 +44,11 @@
       '.vfc-reading { text-align:center; font-size:1.4rem; color:#555; font-family:"Noto Sans JP",sans-serif; margin-bottom:10px; font-weight:600; }' +
       '.vfc-reading .vfc-r { font-weight:700; padding:0 4px; border-radius:6px; color:#2f3542; }' +
       '.vfc-juku-note { text-align:center; font-size:0.72rem; color:#8e44ad; font-style:italic; margin-bottom:12px; margin-top:-4px; }' +
-      '.vfc-meaning { text-align:center; font-weight:700; font-size:1.8rem; color:var(--primary); line-height:1.2; margin-bottom:10px; }';
+      '.vfc-meaning { text-align:center; font-weight:700; font-size:1.8rem; color:var(--primary); line-height:1.2; margin-bottom:10px; }' +
+      '.vfc-example { margin-top:12px; padding:10px 12px; background:#eaf4fb; border-left:4px solid #4a90d9; border-radius:4px; text-align:left; line-height:1.4; }' +
+      '.vfc-example-label { font-size:0.68rem; font-weight:700; color:#4a6a85; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:4px; }' +
+      '.vfc-example-jp { font-family:"Noto Sans JP",sans-serif; font-size:1rem; color:#2f3542; margin-bottom:3px; }' +
+      '.vfc-example-en { font-size:0.85rem; color:#5d6670; font-style:italic; }';
     document.head.appendChild(s);
   }
 
@@ -153,7 +157,8 @@
               surface: vObj.surface,
               lesson_ids: vObj.lesson_ids,
               readingAlign: vObj.readingAlign,
-              kanjiMeanings: vObj.kanjiMeanings
+              kanjiMeanings: vObj.kanjiMeanings,
+              example: vObj.example
             });
           }
         });
@@ -458,6 +463,14 @@
 
     h += '<div class="vfc-meaning">' + esc(d.meaning) + '</div>';
     if (d.gtype) h += '<div style="display:inline-block; background:#eee; color:#555; font-size:0.8rem; font-weight:700; padding:4px 12px; border-radius:12px; text-transform:uppercase; margin-bottom:15px;">' + esc(d.gtype) + '</div>';
+    if (d.example && d.example.jp) {
+      var exLabel = 'From ' + (d.example.lessonId || 'lesson') + (d.example.sectionType ? ' ' + d.example.sectionType : '');
+      h += '<div class="vfc-example">' +
+             '<div class="vfc-example-label">' + esc(exLabel) + '</div>' +
+             '<div class="vfc-example-jp">' + esc(d.example.jp) + '</div>' +
+             (d.example.en ? '<div class="vfc-example-en">' + esc(d.example.en) + '</div>' : '') +
+           '</div>';
+    }
     if (d.notes) h += '<div style="margin-top:10px; padding:12px; background:#fff8e1; border-left:4px solid #ffca28; color:#5d4037; font-size:0.9rem; text-align:left; border-radius:4px; line-height:1.4;"><strong>Note:</strong> ' + esc(d.notes) + '</div>';
     var flags = flagCounts[d.word] || 0;
     if (flags > 0) h += '<div style="text-align:center; color:#ff4757; font-weight:700; margin-top:15px; font-size:0.8rem;">🚩 Flagged: ' + flags + ' times</div>';
