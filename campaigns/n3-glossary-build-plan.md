@@ -108,24 +108,92 @@ These are explicitly called out in `N3-kanji-lesson-plan.md:324`:
 
 Additional cross-lesson compounds to flag on encounter (builder decides whether to apply managed-gap treatment): 実際, 位置, 居酒屋, 責任.
 
-## Batching — 8 Chunks, APPROVAL GATE AFTER EACH
+## Batching — Original Chunks + Full Rescan
+
+### Original chunk status
 
 | Chunk | Lessons | New kanji | Entries | Status |
 |---|---|---|---|---|
-| 1 | N3.11–N3.13 | 12 | 51 | ✅ Approved |
-| 2 | N3.14–N3.20 | 28 | 140 | ✅ Approved |
-| 3 | N3.21–N3.26 | 24 | 95 | ✅ Approved |
-| 4a | N3.27–N3.32 | 24 | 87 | ✅ Approved |
-| 4b | N3.33–N3.36 | 16 | 82 | ✅ Approved |
-| 5a | N3.37–N3.40 | 16 | 77 | ✅ Approved |
-| 5b | N3.41–N3.44 | 16 | 72 | ✅ Approved |
-| 6a | N3.45–N3.48 | 16 | 67 | ✅ Approved |
-| 6b | N3.49–N3.52 | 16 | 67+4 fixes | Pending |
-| 6c | N3.53–N3.55 | 12 | 39+3 fixes | Pending |
+| 1 | N3.11–N3.13 | 12 | 51 | ✅ Approved (needs rescan) |
+| 2 | N3.14–N3.20 | 28 | 140 | ✅ Approved (needs rescan) |
+| 3 | N3.21–N3.26 | 24 | 95 | ✅ Approved (needs rescan) |
+| 4a | N3.27–N3.32 | 24 | 87 | ✅ Approved (needs rescan) |
+| 4b | N3.33–N3.36 | 16 | 82 | ✅ Approved (needs rescan) |
+| 5a | N3.37–N3.40 | 16 | 77 | ✅ Approved (needs rescan) |
+| 5b | N3.41–N3.44 | 16 | 72+9 rescan | ✅ Approved + partial rescan applied |
+| 6a | N3.45–N3.48 | 16 | 67 | ✅ Approved (needs rescan) |
+| 6b | N3.49–N3.52 | 16 | 67+8 rescan | Pending approval (partial rescan applied) |
+| 6c | N3.53–N3.55 | 12 | 39+7 rescan | Pending approval (partial rescan applied) |
 | **7** | **N3.56–N3.70** | **61** | **~210 est.** | **Not started** |
 | **8** | **N3.71–N3.86** | **64** | **~220 est.** | **Not started** |
 
-**🛑 STOP after each chunk.** Surface the diff to the user for review. Do **not** start the next chunk until explicitly approved. Use jq to append entries (pattern: `jq --slurpfile new /tmp/entries.json '.entries += $new[0]' glossary.json > tmp && cp tmp glossary.json`).
+### Full-Coverage Rescan (N3.1–N3.55)
+
+**⚠️ Required before continuing to chunks 7–8.** The original scan used a 42-kanji shortlist instead of the full 286 N5+N4 kanji set. All existing lessons must be rescanned with full coverage.
+
+**Process:** Present each lesson individually. User approves/removes/adds per lesson.
+
+| Lesson | Kanji | Rescan status |
+|---|---|---|
+| N3.1 | 忘覚念残 | Not started |
+| N3.2 | 連達違絡 | Not started |
+| N3.3 | 昔昨初次 | Not started |
+| N3.4 | 慣続緒末 | Not started |
+| N3.5 | 束歳暮約 | Not started |
+| N3.6 | 彼君娘祖誰 | Not started |
+| N3.7 | 全部内側 | Not started |
+| N3.8 | 必要可限 | Not started |
+| N3.9 | 命亡危険 | Not started |
+| N3.10 | 法戦選参 | Not started |
+| N3.11 | 守盗殺犯 | Not started |
+| N3.12 | 勝努成得 | Not started |
+| N3.13 | 失敗負害 | Not started |
+| N3.14 | 由米酒杯 | Not started |
+| N3.15 | 絶船良破 | Not started |
+| N3.16 | 期更最未 | Not started |
+| N3.17 | 加助備完 | Not started |
+| N3.18 | 実存在突 | Not started |
+| N3.19 | 例候件因 | Not started |
+| N3.20 | 処置積直 | Not started |
+| N3.21 | 頼願許呼 | Not started |
+| N3.22 | 師徒優偉 | Not started |
+| N3.23 | 育能才笑 | Not started |
+| N3.24 | 他似偶類 | Not started |
+| N3.25 | 的求責欠 | Not started |
+| N3.26 | 両付到刻 | Not started |
+| N3.27 | 追逃退返 | Not started |
+| N3.28 | 寝具箱 | Not started |
+| N3.29 | 予断決定 | Not started |
+| N3.30 | 怒悲恐怖 | Not started |
+| N3.31 | 喜幸愛夢 | Not started |
+| N3.32 | 情感想恥 | Not started |
+| N3.33 | 望欲忙息 | Not started |
+| N3.34 | 困迷疑苦 | Not started |
+| N3.35 | 増変化現 | Not started |
+| N3.36 | 眠疲痛靴 | Not started |
+| N3.37 | 込過遅速 | Not started |
+| N3.38 | 登落越降 | Not started |
+| N3.39 | 遊途路散 | Not started |
+| N3.40 | 熱煙冷消 | Not started |
+| N3.41 | 利収値取 | Partial (9 added, needs full rescan) |
+| N3.42 | 老若美皆 | Partial (2 added, needs full rescan) |
+| N3.43 | 王神福信 | Partial (5 added, needs full rescan) |
+| N3.44 | 猫馬鳴飛 | Partial (2 added, needs full rescan) |
+| N3.45 | 争戻倒規 | Not started |
+| N3.46 | 打折抜押 | Not started |
+| N3.47 | 投抱捕掛 | Not started |
+| N3.48 | 指探支放 | Not started |
+| N3.49 | 吸吹払閉 | Partial (2 added, needs full rescan) |
+| N3.50 | 確認調示 | Not started |
+| N3.51 | 記表解観 | Partial (2 added, needs full rescan) |
+| N3.52 | 伝告報誤 | Partial (4 added, needs full rescan) |
+| N3.53 | 談論議識 | Partial (3 added, needs full rescan) |
+| N3.54 | 礼訪招迎 | Not started |
+| N3.55 | 警察罪判 | Partial (4 added, needs full rescan) |
+
+**After rescan complete:** Continue with chunks 7–8 using the full-coverage protocol from the start.
+
+**🛑 STOP after each lesson.** Present additions to user for approval. Do **not** proceed to next lesson until explicitly approved. Use jq to append entries.
 
 ## Per-Chunk Workflow
 
@@ -141,25 +209,41 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 10. **WIP commit**: `WIP N3 glossary: chunk X (N3.a–N3.b) — N kanji + M vocab`.
 11. **STOP and wait for approval** before proceeding to next chunk.
 
-### Exhaustive Vocab Scan (mandatory per lesson)
+### Exhaustive Vocab Scan — Full Coverage Protocol (mandatory per lesson)
 
-Chunk 1 revealed that targeting a fixed vocab count (~13) causes common words to be silently dropped. The rescan after chunks 1–4a found 25 additional misses, mostly cross-level compounds (可愛い, 家具, 昼寝, 書類, etc.) and adjective noun forms (悲しみ, 恐れ). The following checklist must be run for **every new kanji** in the lesson:
+**⚠️ UPDATED 2026-04-22:** The original 42-partner shortlist missed common compounds (表紙, 伝説, 議員, 警備員, 王国, etc.). The scan now uses the **complete** N5 + N4 kanji sets (104 + 182 = 286 kanji) plus all prior N3 kanji. Every lesson from N3.1–N3.86 must be scanned against this full set.
+
+The following checklist must be run for **every new kanji** in the lesson:
 
 1. **Primary verb/adj/noun form** — the main dictionary-form word the kanji lives in (守る, 盗む, etc.).
 2. **Noun/stem form of verbs AND adjectives** — every verb kanji gets its noun form checked (盗む→盗み, 勝つ→勝ち, 負ける→負け). Every i-adjective gets its noun/stem form checked (悲しい→悲しみ, 恐ろしい→恐れ, 楽しい→楽しみ, 苦しい→苦しみ, 痛い→痛み). This is a common miss category.
-3. **High-yield partner kanji compound scan** — for each new kanji, systematically check compounds with the following ~40 most productive N5/N4 kanji. These account for the majority of cross-level compounds. Check X+partner AND partner+X for each.
+3. **Full partner kanji compound scan** — for each new kanji, check compounds with **ALL** N5 and N4 kanji, plus all N3 kanji taught up to and including this lesson. Check X+partner AND partner+X for each.
 
-   **N5 partners (22):** 人 子 生 日 金 時 分 行 家 大 食 長 前 中 外 後 書 手 見 出 入 上
-   **N4 partners (20):** 物 力 体 心 者 事 自 元 所 強 地 持 合 度 考 正 引 用 通 業
+   **Full N5 kanji (104):**
+   父母人子名女男先友生日火今金木水何土月毎千二八一五九三六七十万円百四時年半週分行家来店駅川車道山小飲大食新古買長高安前中外後天気電休雨花魚空語国学本校話言書手読間多白少東北南西左右下上会出入口午社足聞目見耳立
 
-   Prioritize [FREE] annotations from `N3-regroup-working.md`, but the partner list catches compounds beyond the Key Vocabulary column. Examples of misses this would have caught: 可(new)+愛(new)→可愛い, 家(N4)+具(new)→家具, 昼(N4)+寝(new)→昼寝, 書(N5)+類(new)→書類, 体(N4)+育(new)→体育, 飲(N4)+酒(new)→飲酒, 船(new)+長(N5)→船長, 時(N5)+期(new)→時期, 引(N4)+退(new)→引退.
+   **Full N4 kanji (182):**
+   働借帰着切起送使作歩近乗遠明朝晩私赤青色黒好茶物菜野料理肉牛味昼暗同鳥飯姉兄妹族弟親秋暑冬春夏寒町元去住所別始画館英終映真自界旅写世頭顔体心首有楽軽声音低歌員事急仕早曜病医院薬者死動銀走犬去運回京田転都海勉力光風強弱地題問説質図服屋夜洋売品持貸意字紙漢太短重進験教試室文注研究悪方考正合度待夕林池門村知台以計集答思特代堂開森引習市用場広工建発県通区洗民主止便不業産
+
+   **N3 kanji:** All kanji from N3.1 through the current lesson (grows as lessons are built). Extract via: `jq -r '[.entries[] | select(.type=="kanji") | .surface] | join("")' data/N3/glossary.N3.json`
 
 4. **Compound verb patterns with N5 verbs** — check 見+V, 取+V, 引+V, 出+V, 持+V, 立+V, 付+V etc. for compound verbs (見守る, 見失う, 見付ける, etc.). These are easy to overlook because neither kanji is new.
-5. **大+X, 〜家, 〜者, 〜人, 〜力 suffix patterns** — productive suffixes that create high-frequency words (大失敗, 努力家, 勝者, 殺人犯, 戦力, 守備力). Include 〜力 for stat/power compounds.
+5. **Suffix patterns: 大+X, 〜家, 〜者, 〜人, 〜力, 〜員, 〜的, 〜中, 〜会** — productive suffixes that create high-frequency words (大失敗, 努力家, 勝者, 殺人犯, 戦力, 警備員, 美的, 議会). Check all applicable suffixes.
 6. **High-frequency words using matches[]** — if a word is very common (N3 JLPT vocab list level) and ONE kanji is taught now but the other comes later, add it with `matches[]` rather than deferring. Reserve deferral for low-frequency or specialized compounds. Policy: **common + writable-via-matches[] beats deferring to a later lesson.**
 7. **Antonym/pair check** — if the lesson teaches one half of a common pair (勝/負, 失/成), ensure both halves' vocab is covered (across adjacent lessons if needed).
 8. **Vocab-debt cross-reference** — before starting each chunk, check `campaigns/n3-production.md` § "Vocab Debt from N4 Stories" for any words that become writable with this chunk's kanji. These are high-priority since students have already encountered them in context.
 9. **RPG/game term check** — if the new kanji or its compounds form common game stats or terms (攻撃, 防御, 必殺, 命中, etc.), include fully-writable ones. Skip matches[]-only game terms unless user approves.
+10. **Commonality sourcing** — do NOT rate words as "common" or "very common" based on subjective judgment. Cross-reference against JLPT N3 vocabulary lists and word frequency data. When presenting candidates to the user, cite the basis (e.g., "JLPT N3 list", "top-5000 frequency", "core vocabulary for this kanji").
+
+### Approval Protocol
+
+Each lesson's additions are presented individually for user approval. The user may:
+- Approve all additions for a lesson
+- Remove specific entries they consider too uncommon
+- Request additional entries the scan missed
+- Flag entries for deferral to a later lesson
+
+No batch approvals — every lesson gets individual review.
 
 After all chunks approved: `git reset --soft <base>` → single clean commit `feat(N3): extend glossary to cover N3.11–N3.86` → push to `claude/n3-lesson-planning-jZj4D`.
 

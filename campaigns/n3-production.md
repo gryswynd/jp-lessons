@@ -8,17 +8,17 @@
 
 ## Session Continuation — Glossary Build-Out
 
-**For the next session:** Read this campaign file + the plan at `campaigns/n3-glossary-build-plan.md`. The plan contains the full Exhaustive Vocab Scan protocol, Grammar→Host-Lesson mapping, ID collision rules, managed kana-gap policies, and per-chunk workflow. Both documents together are the complete spec.
+**For the next session:** Read this campaign file + the plan at `campaigns/n3-glossary-build-plan.md`. The plan contains the full Exhaustive Vocab Scan protocol (updated 2026-04-22), Grammar→Host-Lesson mapping, ID collision rules, managed kana-gap policies, per-chunk workflow, and the full-coverage rescan tracking table.
 
 ### Where we are
-- **Glossary covers N3.1–N3.55** (947 entries: 221 kanji + 726 vocab)
-- **Chunks 1–6a approved**, chunks 6b–6c pending user approval
-- **Next work: chunk 7 (N3.56–N3.70, ~61 kanji)** then chunk 8 (N3.71–N3.86, ~64 kanji)
-- After all chunks: squash WIP commits → single clean commit → push
+- **Glossary covers N3.1–N3.55** (970 entries: 221 kanji + 749 vocab)
+- **Chunks 1–6a approved**, chunks 6b–6c content approved pending final rescan
+- **⚠️ BLOCKING: Full-coverage rescan required** — original scan used a 42-kanji shortlist instead of the full 286 N5+N4 set. All 55 lessons (N3.1–N3.55) must be rescanned with full coverage before continuing to chunks 7–8. See plan file for per-lesson tracking table.
+- **After rescan:** continue with chunks 7–8 (N3.56–N3.86) using full-coverage protocol from the start
 
-### Known issues to fix (minor)
-- `v_shiharai` (支払い, N3.48) — missing `matches: ["支はらい"]` (払 not taught until N3.49)
-- `v_shiji` (指示, N3.48) — missing `matches: ["指じ"]` (示 not taught until N3.50)
+### Known issues (fixed)
+- ~~`v_shiharai` (支払い, N3.48) — missing `matches: ["支はらい"]`~~ Fixed 2026-04-22
+- ~~`v_shiji` (指示, N3.48) — missing `matches: ["指じ"]`~~ Fixed 2026-04-22
 - gtype inconsistency (pre-existing): `i_adj` vs `i-adj`, `na_adj` vs `na-adj` vs `na-adjective`, `verb` vs `godan/ichidan` — defer to separate cleanup
 
 ### Grammar-adjacent vocab remaining
@@ -31,9 +31,10 @@
 1. Never read glossary files in full — use targeted Grep/jq
 2. Every ID globally unique across N5+N4+N3 — suffix `_2`, `_3` on collision
 3. lesson_ids = earliest lesson where word is writable (full kanji or via matches[])
-4. Run Exhaustive Vocab Scan per kanji (plan has the full 9-point checklist)
-5. Collision check after every chunk: `grep -oE '"id": "(k|v)_[a-z0-9_]+"' data/N{5,4,3}/glossary.N{5,4,3}.json | awk -F'"' '{print $4}' | sort | uniq -d`
-6. Validate after every chunk: `bash hooks/validate-json.sh data/N3/glossary.N3.json`
+4. Run **Full-Coverage** Exhaustive Vocab Scan per kanji — all 104 N5 + 182 N4 + all prior N3 kanji (plan has the full 10-point checklist + complete kanji lists)
+5. **Per-lesson approval** — present each lesson's additions individually, user approves/removes/adds
+6. Collision check after every batch: `grep -oE '"id": "(k|v)_[a-z0-9_]+"' data/N{5,4,3}/glossary.N{5,4,3}.json | awk -F'"' '{print $4}' | sort | uniq -d`
+7. Validate after every batch: `bash hooks/validate-json.sh data/N3/glossary.N3.json`
 
 ---
 
@@ -46,7 +47,7 @@ Build the N3 level from the ground up: finalize the vocabulary roadmap, create a
 | Content type | Exists | Notes |
 |---|---|---|
 | Vocabulary roadmap | **Locked** | `N3-kanji-lesson-plan.md` — 86 lessons, 348 kanji |
-| Glossary | **In progress** | `glossary.N3.json` — 940 entries covering N3.1–N3.55. Chunks 1–6a approved, 6b–6c pending |
+| Glossary | **In progress** | `glossary.N3.json` — 970 entries covering N3.1–N3.55. Full-coverage rescan of N3.1–N3.55 required before chunks 7–8 |
 | Grammar (G32–G49) | 18/18 JSON files exist | **Empty stubs** (title + meta + sections:[]) — not built, contrary to previous note |
 | Content lessons | 0 | No N3.X lesson files |
 | Reviews | 0 | No review files |
@@ -68,16 +69,20 @@ Chunked into 8 batches with approval gates. See plan: `campaigns/n3-glossary-bui
 | 4a | N3.27–N3.32 | 24* | 87 (24k + 63v) | Approved |
 | 4b | N3.33–N3.36 | 16 | 82 (16k + 66v) | Approved |
 | 5a | N3.37–N3.40 | 16 | 77 (16k + 61v) | Approved |
-| 5b | N3.41–N3.44 | 16 | 72 (16k + 56v) | Approved |
-| 6a | N3.45–N3.48 | 16 | 67 (16k + 51v) | Approved |
-| 6b | N3.49–N3.52 | 16 | 67 (16k + 51v) | Pending approval |
-| 6c | N3.53–N3.55 | 12 | 39 (12k + 27v) | Pending approval |
+| 5b | N3.41–N3.44 | 16 | 72+9 rescan (16k + 65v) | Approved + partial rescan |
+| 6a | N3.45–N3.48 | 16 | 67 (16k + 51v) | Approved (needs full rescan) |
+| 6b | N3.49–N3.52 | 16 | 67+8 rescan (16k + 59v) | Pending approval + partial rescan |
+| 6c | N3.53–N3.55 | 12 | 39+7 rescan (12k + 34v) | Pending approval + partial rescan |
 | 7 | N3.56–N3.70 | 61 | ~210 est. | Not started |
 | 8 | N3.71–N3.86 | 64 | ~220 est. | Not started |
 
 *N3.29 予 (k_yo_3) already existed from pre-flight — 23 new kanji, not 24.
 
-**Rescan fix entries (25 total):** After user caught 可愛い missing, full rescan of all chunks found 25 missed words. 18 vocab for N3 glossary + v_tairyoku in N4 glossary (体+力 both N4). + 7 RPG/game terms (必殺, 戦い, 戦力, 命中, 最強, 守備, 守備力). Matches[]-only game terms (攻撃, 回復, etc.) rejected by user. 留守 deferred to later lesson per user.
+**Rescan fix entries (25 total, rounds 1-2):** After user caught 可愛い missing, full rescan of all chunks found 25 missed words. 18 vocab for N3 glossary + v_tairyoku in N4 glossary (体+力 both N4). + 7 RPG/game terms (必殺, 戦い, 戦力, 命中, 最強, 守備, 守備力). Matches[]-only game terms (攻撃, 回復, etc.) rejected by user. 留守 deferred to later lesson per user.
+
+**Rescan round 3 (24 entries, 2026-04-22):** User identified N3.55 was too light (missing 観察力, 警備員). Partial rescan of chunks 5b/6b/6c with 42-partner shortlist found 24 more entries (9+8+7). Also applied 2 matches[] fixes (v_shiharai, v_shiji). User then identified root cause: the 42-partner shortlist only covers 15% of the N5+N4 kanji set. **Full-coverage rescan of ALL N3 lessons (N3.1–N3.55) required** using the complete 286-kanji N5+N4 set. See plan file for updated protocol and per-lesson tracking table.
+
+**6a candidates (NOT YET APPLIED — superseded by full rescan):** A partial scan of 6a (N3.45–N3.48) found 23 candidates. High-priority ones include: 支配 (しはい, control), 投稿 (とうこう, posting), 抱負 (ほうふ, ambition), 抜群 (ばつぐん, outstanding), 折り紙 (おりがみ, origami), 探偵 (たんてい, detective), 指名 (しめい, nomination). These will be re-evaluated during the full-coverage rescan — do not apply from this list.
 
 ### Policies established during build-out
 
@@ -85,7 +90,7 @@ Chunked into 8 batches with approval gates. See plan: `campaigns/n3-glossary-bui
 - **Hybrid surfaces (matches[]):** Default: keep hybrid to reinforce taught kanji (じゅん備, 直せつ, 責にん). Exception: full kana for set-phrase exclamations where kanji parsing isn't the goal (かんぱい).
 - **lesson_ids:** Earliest lesson where the word can be written (full kanji or via matches[]).
 - **Grammar-adjacent vocab:** Dictionary-form vocab from grammar points lands in the host lesson (per G→lesson mapping). Compound particles go to `shared/particles.json`.
-- **Exhaustive Vocab Scan:** 7 mandatory checks per kanji (primary form, noun forms, compound scan, compound verbs, suffix patterns, matches[] for high-frequency, antonym/pair).
+- **Exhaustive Vocab Scan (UPDATED 2026-04-22):** 10 mandatory checks per kanji using **full** N5 (104) + N4 (182) + prior N3 kanji sets. Original 42-partner shortlist retired — missed too many common compounds (表紙, 伝説, 議員, 警備員, 王国, etc.). Per-lesson approval required. See plan file for complete kanji lists and protocol.
 
 ### Grammar → Host-Lesson Vocab Delivered
 
