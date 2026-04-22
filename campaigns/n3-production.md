@@ -27,6 +27,9 @@
 - G48 (Advanced Connectors) → N3.72: しかも, それに, そのうえ, ところが, なお, むしろ
 - G49 (Capstone) → N3.84: none
 
+### Grammar example-vocab suggestions (from rescan)
+- G44 (Suffixes, N3.50) — use 忘れっぽい (わすれっぽい, forgetful) as a canonical っぽい example. Rejected from N3.1 glossary rescan because っぽい isn't introduced until G44; should appear here as a featured example sentence.
+
 ### Key rules (quick reference)
 1. Never read glossary files in full — use targeted Grep/jq
 2. Every ID globally unique across N5+N4+N3 — suffix `_2`, `_3` on collision
