@@ -8,7 +8,7 @@
 
 ## Session Continuation — Glossary Build-Out
 
-**For the next session:** Read this campaign file + the plan at `~/.claude/plans/fuzzy-roaming-breeze.md`. The plan contains the full Exhaustive Vocab Scan protocol, Grammar→Host-Lesson mapping, ID collision rules, managed kana-gap policies, and per-chunk workflow. Both documents together are the complete spec.
+**For the next session:** Read this campaign file + the plan at `campaigns/n3-glossary-build-plan.md`. The plan contains the full Exhaustive Vocab Scan protocol, Grammar→Host-Lesson mapping, ID collision rules, managed kana-gap policies, and per-chunk workflow. Both documents together are the complete spec.
 
 ### Where we are
 - **Glossary covers N3.1–N3.55** (947 entries: 221 kanji + 726 vocab)
@@ -57,7 +57,7 @@ Build the N3 level from the ground up: finalize the vocabulary roadmap, create a
 
 ## Glossary Build-Out Progress
 
-Chunked into 8 batches with approval gates. See plan: `~/.claude/plans/fuzzy-roaming-breeze.md`
+Chunked into 8 batches with approval gates. See plan: `campaigns/n3-glossary-build-plan.md`
 
 | Chunk | Lessons | Kanji | Entries added | Status |
 |---|---|---|---|---|
