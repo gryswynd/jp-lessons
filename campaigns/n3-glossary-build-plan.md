@@ -136,7 +136,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | Lesson | Kanji | Rescan status |
 |---|---|---|
 | N3.1 | 忘覚念残 | ✅ Rescanned (5 new + v_zangyou relocated from N3.77) |
-| N3.2 | 連達違絡 | Not started |
+| N3.2 | 連達違絡 | ✅ Rescanned (5 new) |
 | N3.3 | 昔昨初次 | Not started |
 | N3.4 | 慣続緒末 | Not started |
 | N3.5 | 束歳暮約 | Not started |
