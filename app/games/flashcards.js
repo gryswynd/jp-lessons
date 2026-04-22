@@ -25,6 +25,8 @@
   var flagCounts = {};
   var activeFlags = {};
   var kanjiBySurface = {};
+  var hintKanjiUsed = false;
+  var hintMeaningUsed = false;
 
   // Color palette for kanji ↔ reading span pairing.  Cycles modulo length
   // for vocab with more kanji than colors.  Soft pastel backgrounds; the
@@ -48,7 +50,14 @@
       '.vfc-example { margin-top:12px; padding:10px 12px; background:#eaf4fb; border-left:4px solid #4a90d9; border-radius:4px; text-align:left; line-height:1.4; }' +
       '.vfc-example-label { font-size:0.68rem; font-weight:700; color:#4a6a85; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:4px; }' +
       '.vfc-example-jp { font-family:"Noto Sans JP",sans-serif; font-size:1rem; color:#2f3542; margin-bottom:3px; }' +
-      '.vfc-example-en { font-size:0.85rem; color:#5d6670; font-style:italic; }';
+      '.vfc-example-en { font-size:0.85rem; color:#5d6670; font-style:italic; }' +
+      '.vfc-front-surface { display:inline-flex; justify-content:center; gap:0; vertical-align:middle; }' +
+      '.vfc-front-ch { min-width:5rem; text-align:center; }' +
+      '.vfc-front-hint-row { text-align:center; margin-bottom:0.2rem; min-height:1.1rem; }' +
+      '.vfc-front-hint-inner { display:inline-flex; justify-content:center; gap:0; }' +
+      '.vfc-front-hint-cell { min-width:5rem; text-align:center; font-size:0.82rem; color:#6b7580; font-weight:600; line-height:1.1; }' +
+      '.vfc-hint-btn-row { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px; }' +
+      '.vfc-hint-btn-used { opacity:0.55; }';
     document.head.appendChild(s);
   }
 
@@ -212,6 +221,7 @@
           '<div class="k-face k-face-front">' +
             '<div class="k-flag-stamp k-hidden" id="k-fc-flagged-icon">AGAIN</div>' +
             '<div class="k-lbl" id="k-fc-lbl" style="color:var(--primary)"></div>' +
+            '<div id="k-fc-hint-kanji" class="k-hidden vfc-front-hint-row"></div>' +
             '<div class="k-big" id="k-fc-main"></div>' +
             '<div class="k-sub" id="k-fc-sub"></div>' +
             '<div class="k-tap-hint">Tap to Flip</div>' +
@@ -238,6 +248,15 @@
 
     var cardObj = document.getElementById('k-fc-card-obj');
     if (cardObj) cardObj.classList.remove('is-flipped');
+
+    // Reset per-card hint state and clear hint DOM
+    hintKanjiUsed = false;
+    hintMeaningUsed = false;
+    var hintKanjiEl = document.getElementById('k-fc-hint-kanji');
+    if (hintKanjiEl) {
+      hintKanjiEl.innerHTML = '';
+      hintKanjiEl.classList.add('k-hidden');
+    }
 
     var stamp = document.getElementById('k-fc-flagged-icon');
     if (stamp) {
@@ -266,8 +285,31 @@
     if (!navContainer) return;
     navContainer.innerHTML = '';
 
+    var html = '';
+
+    // Hint row for vocab cards (front-side reveal buttons)
+    var d = curSet[curIdx];
+    var renderType = curType;
+    if (curType === 'mixed' && d && d._type) renderType = d._type;
+    if (renderType === 'vocab' && curMode !== 'flag-review') {
+      var hasKanjiChars = false;
+      if (d && d.word) {
+        var chars = Array.from(String(d.word));
+        for (var i = 0; i < chars.length; i++) {
+          if (isKanjiChar(chars[i])) { hasKanjiChars = true; break; }
+        }
+      }
+      var kDisabled = hintKanjiUsed || !hasKanjiChars;
+      var mDisabled = hintMeaningUsed;
+      html +=
+        '<div class="vfc-hint-btn-row">' +
+          '<button class="k-btn k-btn-sec' + (kDisabled ? ' vfc-hint-btn-used' : '') + '" id="k-fc-btn-hint-kanji"' + (kDisabled ? ' disabled' : '') + ' style="font-size:0.85rem; padding:8px;">💡 Kanji Meanings' + (hintKanjiUsed ? ' ✓' : '') + '</button>' +
+          '<button class="k-btn k-btn-sec' + (mDisabled ? ' vfc-hint-btn-used' : '') + '" id="k-fc-btn-hint-meaning"' + (mDisabled ? ' disabled' : '') + ' style="font-size:0.85rem; padding:8px;">💡 English' + (hintMeaningUsed ? ' ✓' : '') + '</button>' +
+        '</div>';
+    }
+
     if (curMode === 'flag-review') {
-      navContainer.innerHTML =
+      html +=
         '<div style="display: flex; gap: 10px;">' +
           '<div style="flex: 1; display: flex; flex-direction: column; gap: 10px;">' +
             '<button class="k-btn k-btn-sec" id="k-fc-btn-keepflag" style="color:#f39c12; border-color:#f39c12; font-weight:900; min-height: 70px; padding: 10px;">Keep Flag (+1)</button>' +
@@ -278,19 +320,76 @@
             '<button class="k-btn k-btn-sec" id="k-fc-btn-next" style="min-height: 70px; padding: 10px;">Next</button>' +
           '</div>' +
         '</div>';
-      wire('k-fc-btn-keepflag', function (e) { flag(e.currentTarget); });
-      wire('k-fc-btn-clearflag', function (e) { clearFlag(e.currentTarget); });
     } else {
-      navContainer.innerHTML =
+      html +=
         '<div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;">' +
           '<button class="k-btn k-btn-sec" id="k-fc-btn-prev">Prev</button>' +
           '<button class="k-btn k-btn-sec" id="k-fc-btn-flag" style="color:#f39c12; border-color:#f39c12;">Flag 🚩</button>' +
           '<button class="k-btn k-btn-sec" id="k-fc-btn-next">Next</button>' +
         '</div>';
+    }
+
+    navContainer.innerHTML = html;
+
+    if (curMode === 'flag-review') {
+      wire('k-fc-btn-keepflag', function (e) { flag(e.currentTarget); });
+      wire('k-fc-btn-clearflag', function (e) { clearFlag(e.currentTarget); });
+    } else {
       wire('k-fc-btn-flag', function (e) { flag(e.currentTarget); });
     }
+    wire('k-fc-btn-hint-kanji', function () { revealHintKanji(); });
+    wire('k-fc-btn-hint-meaning', function () { revealHintMeaning(); });
     wire('k-fc-btn-prev', function () { move(-1); });
     wire('k-fc-btn-next', function () { move(1); });
+  }
+
+  function revealHintKanji() {
+    if (hintKanjiUsed) return;
+    var d = curSet[curIdx];
+    if (!d || !d.word) return;
+    var chars = Array.from(String(d.word));
+    var hasK = chars.some(isKanjiChar);
+    if (!hasK) return;
+
+    var resolveD = { kanjiMeanings: Array.isArray(d.kanjiMeanings) ? d.kanjiMeanings : null };
+
+    var speakText = d.reading || d.word || d.surface;
+    var escText = String(speakText).replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    var speakBtn = '<span class="jp-speak-btn" data-speak-text="' + escText + '" style="cursor:pointer; font-size:0.6em; margin-left:10px; opacity:0.7;">🔊</span>';
+
+    var surfaceHtml = '<span class="vfc-front-surface">';
+    chars.forEach(function (ch) {
+      surfaceHtml += '<span class="vfc-front-ch">' + esc(ch) + '</span>';
+    });
+    surfaceHtml += '</span>';
+    var mainEl = document.getElementById('k-fc-main');
+    if (mainEl) mainEl.innerHTML = surfaceHtml + speakBtn;
+    attachSpeakBtn('#k-fc-main .jp-speak-btn', speakText);
+
+    var hintHtml = '<span class="vfc-front-hint-inner">';
+    chars.forEach(function (ch, i) {
+      var m = resolveKanjiMeaning(resolveD, chars, i);
+      var slot = m ? esc(m) : '&nbsp;';
+      hintHtml += '<span class="vfc-front-hint-cell">' + slot + '</span>';
+    });
+    hintHtml += '</span>';
+    var hintEl = document.getElementById('k-fc-hint-kanji');
+    if (hintEl) {
+      hintEl.innerHTML = hintHtml;
+      hintEl.classList.remove('k-hidden');
+    }
+
+    hintKanjiUsed = true;
+    renderNav();
+  }
+
+  function revealHintMeaning() {
+    if (hintMeaningUsed) return;
+    var d = curSet[curIdx];
+    if (!d) return;
+    setTxt('k-fc-sub', d.meaning || '');
+    hintMeaningUsed = true;
+    renderNav();
   }
 
   function wire(id, fn) {
