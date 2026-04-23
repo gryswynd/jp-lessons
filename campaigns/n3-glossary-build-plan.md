@@ -146,7 +146,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.9 | 命亡危険 | ✅ Rescanned (4 new + 危機 relocated to N3.61) |
 | N3.10 | 法戦選参 | ✅ Rescanned (9 new incl. G35 auxiliaries) |
 | N3.11 | 守盗殺犯 | ✅ Rescanned (2 new) |
-| N3.12 | 勝努成得 | Not started |
+| N3.12 | 勝努成得 | ✅ Rescanned (2 new incl. 成功 matches) |
 | N3.13 | 失敗負害 | Not started |
 | N3.14 | 由米酒杯 | Not started |
 | N3.15 | 絶船良破 | Not started |
