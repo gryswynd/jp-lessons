@@ -161,7 +161,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.24 | 他似偶類 | ✅ Rescanned (7 new) |
 | N3.25 | 的求責欠 | ✅ Rescanned (3 new; 〜的 suffix deferred to N2/N1 pending partner kanji) |
 | N3.26 | 両付到刻 | ✅ Rescanned (3 new) |
-| N3.27 | 追逃退返 | Not started |
+| N3.27 | 追逃退返 | ✅ Rescanned (6 new) |
 | N3.28 | 寝具箱 | Not started |
 | N3.29 | 予断決定 | Not started |
 | N3.30 | 怒悲恐怖 | Not started |
