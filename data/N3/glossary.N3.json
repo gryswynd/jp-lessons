@@ -2867,16 +2867,6 @@
       "notes": "最 (N3.16) + 大 (N5.12). 最大の問題 = the biggest problem (問題 N4). Antonym: 最小."
     },
     {
-      "id": "v_saishou",
-      "surface": "最小",
-      "reading": "さいしょう",
-      "meaning": "minimum / smallest / least",
-      "type": "vocab",
-      "gtype": "noun",
-      "lesson_ids": "N3.16",
-      "notes": "最 (N3.16) + 小 (N5.12). 最小限 = minimum limit (限 N3.8). Antonym: 最大."
-    },
-    {
       "id": "v_saigo",
       "surface": "最後",
       "reading": "さいご",
@@ -2915,26 +2905,6 @@
       "gtype": "noun",
       "lesson_ids": "N3.16",
       "notes": "未 (N3.16) + 来 (N5.7). 未来の自分 = one's future self. Antonym: 過去 (かこ — 過 N3.37, 去 not taught). Distinct from 将来 (しょうらい — 将 not taught; near future)."
-    },
-    {
-      "id": "v_imada",
-      "surface": "未だ",
-      "reading": "いまだ",
-      "meaning": "still / yet / not yet",
-      "type": "vocab",
-      "gtype": "adverb",
-      "lesson_ids": "N3.16",
-      "notes": "未 (N3.16). Irregular reading. 未だに = even now / still (emphatic). Formal/written register; casual uses まだ (usually kana)."
-    },
-    {
-      "id": "v_michi_2",
-      "surface": "未知",
-      "reading": "みち",
-      "meaning": "unknown / unfamiliar",
-      "type": "vocab",
-      "gtype": "na_adj",
-      "lesson_ids": "N3.16",
-      "notes": "未 (N3.16) + 知 (N4.28). 未知の世界 = unknown world (世界 N4). Not to be confused with 道(みち, road, N4). Also noun."
     },
     {
       "id": "k_kuwaeru",
@@ -3042,26 +3012,6 @@
       "gtype": "noun",
       "lesson_ids": "N3.16",
       "notes": "時 (N5.7) + 期 (N3.16)"
-    },
-    {
-      "id": "v_shoki",
-      "surface": "初期",
-      "reading": "しょき",
-      "meaning": "early stage; initial period",
-      "type": "vocab",
-      "gtype": "noun",
-      "lesson_ids": "N3.16",
-      "notes": "初 (N3.3) + 期 (N3.16)"
-    },
-    {
-      "id": "v_saikyou",
-      "surface": "最強",
-      "reading": "さいきょう",
-      "meaning": "strongest; most powerful",
-      "type": "vocab",
-      "gtype": "noun",
-      "lesson_ids": "N3.16",
-      "notes": "最 (N3.16) + 強 (N4.20). RPG/game term."
     },
     {
       "id": "v_tasukaru",
@@ -11073,6 +11023,57 @@
       "verb_class": "na_adj",
       "lesson_ids": "N3.15",
       "notes": "良 N3.15 + 質 N4. 良質な睡眠 = good-quality sleep. 良質な水 = high-quality water. Common in product/marketing register."
+    },
+    {
+      "id": "v_saishin",
+      "surface": "最新",
+      "reading": "さいしん",
+      "meaning": "latest / newest / most recent",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.16",
+      "notes": "最 N3.16 + 新 N4. 最新版 = latest version. 最新ニュース = latest news. 最新情報 = latest info. Ubiquitous in modern content."
+    },
+    {
+      "id": "v_saiaku",
+      "surface": "最悪",
+      "reading": "さいあく",
+      "meaning": "worst / disastrous",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.16",
+      "notes": "最 N3.16 + 悪 N4. 最悪！ = The worst! (daily exclamation). Pairs with 最高. Also noun: 最悪の場合 = in the worst case."
+    },
+    {
+      "id": "v_saishuu",
+      "surface": "最終",
+      "reading": "さいしゅう",
+      "meaning": "final / last",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.16",
+      "notes": "最 N3.16 + 終 N4. 最終回 = final episode. 最終電車 = last train. 最終決定 = final decision. Common modifier."
+    },
+    {
+      "id": "v_kimatsu",
+      "surface": "期末",
+      "reading": "きまつ",
+      "meaning": "end of term / period-end",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.16",
+      "notes": "期 N3.16 + 末 N3.4. 期末試験 = final/term-end exam. 期末手当 = year-end bonus. Essential for school and business calendars."
+    },
+    {
+      "id": "v_douki",
+      "surface": "同期",
+      "reading": "どうき",
+      "meaning": "same period / classmate-cohort / synchronous",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.16",
+      "notes": "同 N4 + 期 N3.16. Business: 同期入社 = joined the company the same year; 私の同期 = my cohort. Tech: 同期する = to synchronize / sync."
     }
   ]
 }
