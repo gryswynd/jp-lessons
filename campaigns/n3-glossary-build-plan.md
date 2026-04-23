@@ -143,18 +143,18 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.6 | 彼君娘祖誰 | ✅ Rescanned (3 new + G34 つもり + N4 v_kun & N5 v_dare maintained) |
 | N3.7 | 全部内側 | ✅ Rescanned (9 new) |
 | N3.8 | 必要可限 | ✅ Rescanned (5 new) |
-| N3.9 | 命亡危険 | Not started |
-| N3.10 | 法戦選参 | Not started |
-| N3.11 | 守盗殺犯 | Not started |
-| N3.12 | 勝努成得 | Not started |
-| N3.13 | 失敗負害 | Not started |
-| N3.14 | 由米酒杯 | Not started |
-| N3.15 | 絶船良破 | Not started |
-| N3.16 | 期更最未 | Not started |
-| N3.17 | 加助備完 | Not started |
-| N3.18 | 実存在突 | Not started |
-| N3.19 | 例候件因 | Not started |
-| N3.20 | 処置積直 | Not started |
+| N3.9 | 命亡危険 | ✅ Rescanned (4 new + 危機 relocated to N3.61) |
+| N3.10 | 法戦選参 | ✅ Rescanned (9 new incl. G35 auxiliaries) |
+| N3.11 | 守盗殺犯 | ✅ Rescanned (2 new) |
+| N3.12 | 勝努成得 | ✅ Rescanned (2 new incl. 成功 matches) |
+| N3.13 | 失敗負害 | ✅ Rescanned (3 new) |
+| N3.14 | 由米酒杯 | ✅ Rescanned (5 new) |
+| N3.15 | 絶船良破 | ✅ Rescanned (4 new + N5 v_yoi maintained) |
+| N3.16 | 期更最未 | ✅ Rescanned (+5 adds / −5 cuts — rebalanced to 21 entries) |
+| N3.17 | 加助備完 | ✅ Rescanned (1 new: 加害) |
+| N3.18 | 実存在突 | ✅ Rescanned (4 new incl. G37 ばかり catch-up) |
+| N3.19 | 例候件因 | ✅ Rescanned (1 new: 物件) |
+| N3.20 | 処置積直 | ✅ Rescanned (5 new — 位置 managed gap applied) |
 | N3.21 | 頼願許呼 | Not started |
 | N3.22 | 師徒優偉 | Not started |
 | N3.23 | 育能才笑 | Not started |

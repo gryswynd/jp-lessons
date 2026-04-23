@@ -1452,8 +1452,8 @@
       "meaning": "crisis / critical moment",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N3.9",
-      "notes": "危 (N3.9) + 機 (N4.25). 危機に陥る = to fall into crisis. 危機感 = sense of crisis. 経済危機 = economic crisis. 危機を乗り越える = to overcome a crisis."
+      "lesson_ids": "N3.61",
+      "notes": "危 (N3.9) + 機 (N3.61). 危機に陥る = to fall into crisis. 危機感 = sense of crisis. 経済危機 = economic crisis. 危機を乗り越える = to overcome a crisis."
     },
     {
       "id": "v_kewashii",
@@ -2867,16 +2867,6 @@
       "notes": "最 (N3.16) + 大 (N5.12). 最大の問題 = the biggest problem (問題 N4). Antonym: 最小."
     },
     {
-      "id": "v_saishou",
-      "surface": "最小",
-      "reading": "さいしょう",
-      "meaning": "minimum / smallest / least",
-      "type": "vocab",
-      "gtype": "noun",
-      "lesson_ids": "N3.16",
-      "notes": "最 (N3.16) + 小 (N5.12). 最小限 = minimum limit (限 N3.8). Antonym: 最大."
-    },
-    {
       "id": "v_saigo",
       "surface": "最後",
       "reading": "さいご",
@@ -2915,26 +2905,6 @@
       "gtype": "noun",
       "lesson_ids": "N3.16",
       "notes": "未 (N3.16) + 来 (N5.7). 未来の自分 = one's future self. Antonym: 過去 (かこ — 過 N3.37, 去 not taught). Distinct from 将来 (しょうらい — 将 not taught; near future)."
-    },
-    {
-      "id": "v_imada",
-      "surface": "未だ",
-      "reading": "いまだ",
-      "meaning": "still / yet / not yet",
-      "type": "vocab",
-      "gtype": "adverb",
-      "lesson_ids": "N3.16",
-      "notes": "未 (N3.16). Irregular reading. 未だに = even now / still (emphatic). Formal/written register; casual uses まだ (usually kana)."
-    },
-    {
-      "id": "v_michi_2",
-      "surface": "未知",
-      "reading": "みち",
-      "meaning": "unknown / unfamiliar",
-      "type": "vocab",
-      "gtype": "na_adj",
-      "lesson_ids": "N3.16",
-      "notes": "未 (N3.16) + 知 (N4.28). 未知の世界 = unknown world (世界 N4). Not to be confused with 道(みち, road, N4). Also noun."
     },
     {
       "id": "k_kuwaeru",
@@ -3042,26 +3012,6 @@
       "gtype": "noun",
       "lesson_ids": "N3.16",
       "notes": "時 (N5.7) + 期 (N3.16)"
-    },
-    {
-      "id": "v_shoki",
-      "surface": "初期",
-      "reading": "しょき",
-      "meaning": "early stage; initial period",
-      "type": "vocab",
-      "gtype": "noun",
-      "lesson_ids": "N3.16",
-      "notes": "初 (N3.3) + 期 (N3.16)"
-    },
-    {
-      "id": "v_saikyou",
-      "surface": "最強",
-      "reading": "さいきょう",
-      "meaning": "strongest; most powerful",
-      "type": "vocab",
-      "gtype": "noun",
-      "lesson_ids": "N3.16",
-      "notes": "最 (N3.16) + 強 (N4.20). RPG/game term."
     },
     {
       "id": "v_tasukaru",
@@ -10773,6 +10723,476 @@
       "gtype": "noun",
       "lesson_ids": "N3.8",
       "notes": "下 N5 + 限 N3.8. Pairs with 上限 (upper limit). Distinct from 加減 (かげん, degree/condition — different kanji)."
+    },
+    {
+      "id": "v_jinmei",
+      "surface": "人命",
+      "reading": "じんめい",
+      "meaning": "human life",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.9",
+      "notes": "人 N5 + 命 N3.9. 人命救助 = life-saving/rescue. 人命に関わる = life-threatening / involving human life. Common in news."
+    },
+    {
+      "id": "v_inochigake",
+      "surface": "命がけ",
+      "reading": "いのちがけ",
+      "meaning": "risking one's life / life-or-death",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.9",
+      "notes": "命 N3.9 + がけ kana. 命がけで戦う = to fight at the risk of one's life. Used as both noun and na-adjective: 命がけの仕事 = life-risking work."
+    },
+    {
+      "id": "v_meijiru",
+      "surface": "命じる",
+      "reading": "めいじる",
+      "meaning": "to order / to command / to appoint",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.9",
+      "notes": "命 N3.9. Formal verb. 部下に命じる = to order a subordinate. Also means to appoint to a position: 部長に命じる = to appoint as department head."
+    },
+    {
+      "id": "v_kenaku",
+      "surface": "険悪",
+      "reading": "けんあく",
+      "meaning": "tense / hostile / threatening (atmosphere or expression)",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.9",
+      "notes": "険 N3.9 + 悪 N4. 険悪な雰囲気 = a tense atmosphere. 険悪な表情 = a hostile expression. Often used to describe sour moods or looming conflict."
+    },
+    {
+      "id": "v_shuhou",
+      "surface": "手法",
+      "reading": "しゅほう",
+      "meaning": "method / technique / approach",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "手 N5 + 法 N3.10. 新しい手法 = a new method. Common in academic, journalistic, and artistic contexts. More specific than 方法."
+    },
+    {
+      "id": "v_senzen",
+      "surface": "戦前",
+      "reading": "せんぜん",
+      "meaning": "pre-war",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "戦 N3.10 + 前 N5. Pairs with 戦後. Often refers to pre-WWII era in Japanese context. 戦前の日本 = pre-war Japan."
+    },
+    {
+      "id": "v_senjou",
+      "surface": "戦場",
+      "reading": "せんじょう",
+      "meaning": "battlefield",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "戦 N3.10 + 場 N4. 戦場に向かう = to head for the battlefield. Used literally (war) and figuratively (intense workplace/competition)."
+    },
+    {
+      "id": "v_sansen",
+      "surface": "参戦",
+      "reading": "さんせん",
+      "meaning": "entering a war / joining a battle / entering a competition",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "参 N3.10 + 戦 N3.10. する verb: 参戦する = to enter into battle/competition. Common in gaming (joining a match) and news (country entering a war)."
+    },
+    {
+      "id": "v_erabi",
+      "surface": "選び",
+      "reading": "えらび",
+      "meaning": "choosing / selection / picking out",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "Noun/stem form of 選ぶ. Compounds: 学校選び (choosing a school), プレゼント選び (picking out a gift), 言葉選び (word choice)."
+    },
+    {
+      "id": "v_senbetsu",
+      "surface": "選別",
+      "reading": "せんべつ",
+      "meaning": "sorting / screening / classification",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.10",
+      "notes": "選 N3.10 + 別 N4. する verb: 選別する = to sort/classify. Common in logistics, quality control, and data contexts."
+    },
+    {
+      "id": "v_youda",
+      "surface": "ようだ",
+      "reading": "ようだ",
+      "meaning": "seems / looks like / appears (inference based on observation)",
+      "type": "vocab",
+      "gtype": "auxiliary",
+      "lesson_ids": "N3.10",
+      "notes": "G35 auxiliary. Attaches to plain forms. 雨が降るようだ = it seems it will rain. Also used for similes: 花のような = like a flower. More formal than みたいだ."
+    },
+    {
+      "id": "v_mitaida",
+      "surface": "みたいだ",
+      "reading": "みたいだ",
+      "meaning": "seems / looks like (colloquial inference)",
+      "type": "vocab",
+      "gtype": "auxiliary",
+      "lesson_ids": "N3.10",
+      "notes": "G35 auxiliary. Colloquial variant of ようだ. Attaches to plain forms (no だ after nouns/na-adj). 風邪みたい = seems like a cold. 子どもみたいに = like a child."
+    },
+    {
+      "id": "v_rashii",
+      "surface": "らしい",
+      "reading": "らしい",
+      "meaning": "seems / apparently / (hearsay) / typical of",
+      "type": "vocab",
+      "gtype": "auxiliary",
+      "lesson_ids": "N3.10",
+      "notes": "G35 auxiliary. Attaches to plain forms. Indicates hearsay or strong inference based on evidence: 田中さんは来ないらしい = apparently Tanaka isn't coming. Also means 'typical of': 男らしい = manly, 子どもらしい = childlike."
+    },
+    {
+      "id": "v_nusumigiki",
+      "surface": "盗み聞き",
+      "reading": "ぬすみぎき",
+      "meaning": "eavesdropping",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.11",
+      "notes": "盗 N3.11 + 聞 N5 (stem form). する verb: 盗み聞きする = to eavesdrop. 会話を盗み聞きする = to eavesdrop on a conversation."
+    },
+    {
+      "id": "v_nusumimiru",
+      "surface": "盗み見る",
+      "reading": "ぬすみみる",
+      "meaning": "to steal a glance / to peek at / to look surreptitiously",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.11",
+      "notes": "盗 N3.11 + 見 N5. 手紙を盗み見る = to sneak a look at a letter. 横顔を盗み見る = to steal a glance at someone's profile."
+    },
+    {
+      "id": "v_toku_2",
+      "surface": "得",
+      "reading": "とく",
+      "meaning": "advantage / profit / benefit / bargain",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.12",
+      "notes": "得 N3.12. Noun and na-adj. 得する = to gain/profit. 得なこと = an advantageous thing. 100円得した = I saved 100 yen. Antonym: 損 (そん, not taught). Distinct from 解く/溶く (both とく — different kanji)."
+    },
+    {
+      "id": "v_seikou",
+      "surface": "成功",
+      "reading": "せいこう",
+      "meaning": "success",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.12",
+      "matches": [
+        "成こう"
+      ],
+      "notes": "成 N3.12 + 功 (not on curriculum — permanent matches[\"成こう\"]). する verb: 成功する = to succeed. 成功者 = successful person. Foundational JLPT N4 word; write as 成こう until 功 is taught (if ever)."
+    },
+    {
+      "id": "v_shitsugyou",
+      "surface": "失業",
+      "reading": "しつぎょう",
+      "meaning": "unemployment / job loss",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.13",
+      "notes": "失 N3.13 + 業 N4.36. する verb: 失業する = to become unemployed. 失業率 = unemployment rate. 失業者 = unemployed person."
+    },
+    {
+      "id": "v_haisha",
+      "surface": "敗者",
+      "reading": "はいしゃ",
+      "meaning": "loser / defeated person",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.13",
+      "notes": "敗 N3.13 + 者 N4. Pairs with 勝者 (winner). 敗者復活戦 = loser's bracket / comeback match. Formal register."
+    },
+    {
+      "id": "v_kigai",
+      "surface": "危害",
+      "reading": "きがい",
+      "meaning": "harm / injury",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.13",
+      "notes": "危 N3.9 + 害 N3.13. 危害を加える = to cause harm to someone. JLPT N2 list."
+    },
+    {
+      "id": "v_hakumai",
+      "surface": "白米",
+      "reading": "はくまい",
+      "meaning": "white rice / polished rice",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.14",
+      "notes": "白 N5 + 米 N3.14. Polished/refined rice — the standard table rice. Contrast with 玄米 (brown rice — 玄 not taught)."
+    },
+    {
+      "id": "v_sakaba",
+      "surface": "酒場",
+      "reading": "さかば",
+      "meaning": "bar / tavern / saloon",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.14",
+      "notes": "酒 N3.14 + 場 N4. Generic term for a drinking establishment. 居酒屋 is the Japanese-style variant (居 N3.65)."
+    },
+    {
+      "id": "v_sakenomi",
+      "surface": "酒飲み",
+      "reading": "さけのみ",
+      "meaning": "drinker / one who likes alcohol",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.14",
+      "notes": "酒 N3.14 + 飲 N4. 父は酒飲みだ = my father is a drinker. Colloquial."
+    },
+    {
+      "id": "v_youshu",
+      "surface": "洋酒",
+      "reading": "ようしゅ",
+      "meaning": "Western liquor / Western-style alcohol (whisky, wine, etc.)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.14",
+      "notes": "洋 N4 + 酒 N3.14. Pairs with 日本酒 (Japanese sake). Covers Western drinks: whisky, wine, brandy, etc."
+    },
+    {
+      "id": "v_sakezuki",
+      "surface": "酒好き",
+      "reading": "さけずき",
+      "meaning": "alcohol lover / one fond of drinking",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.14",
+      "notes": "酒 N3.14 + 好 N4. Used as both noun (an alcohol lover) and na-adj (酒好きな人 = a person fond of drinking)."
+    },
+    {
+      "id": "v_kizetsu",
+      "surface": "気絶",
+      "reading": "きぜつ",
+      "meaning": "fainting / losing consciousness / blackout",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.15",
+      "notes": "気 N5 + 絶 N3.15. する verb: 気絶する = to faint / pass out. ショックで気絶した = fainted from shock."
+    },
+    {
+      "id": "v_senin",
+      "surface": "船員",
+      "reading": "せんいん",
+      "meaning": "sailor / crew member (of a ship)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.15",
+      "notes": "船 N3.15 + 員 N4. Standard occupational noun. Distinct from v_zenin (全員, all members)."
+    },
+    {
+      "id": "v_funatabi",
+      "surface": "船旅",
+      "reading": "ふなたび",
+      "meaning": "sea voyage / boat trip",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.15",
+      "notes": "船 N3.15 + 旅 N4. Uses ふな reading of 船 (rendaku-style compound). 船旅を楽しむ = to enjoy a sea voyage."
+    },
+    {
+      "id": "v_ryoushitsu",
+      "surface": "良質",
+      "reading": "りょうしつ",
+      "meaning": "good quality / high quality",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.15",
+      "notes": "良 N3.15 + 質 N4. 良質な睡眠 = good-quality sleep. 良質な水 = high-quality water. Common in product/marketing register."
+    },
+    {
+      "id": "v_saishin",
+      "surface": "最新",
+      "reading": "さいしん",
+      "meaning": "latest / newest / most recent",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.16",
+      "notes": "最 N3.16 + 新 N4. 最新版 = latest version. 最新ニュース = latest news. 最新情報 = latest info. Ubiquitous in modern content."
+    },
+    {
+      "id": "v_saiaku",
+      "surface": "最悪",
+      "reading": "さいあく",
+      "meaning": "worst / disastrous",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.16",
+      "notes": "最 N3.16 + 悪 N4. 最悪！ = The worst! (daily exclamation). Pairs with 最高. Also noun: 最悪の場合 = in the worst case."
+    },
+    {
+      "id": "v_saishuu",
+      "surface": "最終",
+      "reading": "さいしゅう",
+      "meaning": "final / last",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.16",
+      "notes": "最 N3.16 + 終 N4. 最終回 = final episode. 最終電車 = last train. 最終決定 = final decision. Common modifier."
+    },
+    {
+      "id": "v_kimatsu",
+      "surface": "期末",
+      "reading": "きまつ",
+      "meaning": "end of term / period-end",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.16",
+      "notes": "期 N3.16 + 末 N3.4. 期末試験 = final/term-end exam. 期末手当 = year-end bonus. Essential for school and business calendars."
+    },
+    {
+      "id": "v_douki",
+      "surface": "同期",
+      "reading": "どうき",
+      "meaning": "same period / classmate-cohort / synchronous",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.16",
+      "notes": "同 N4 + 期 N3.16. Business: 同期入社 = joined the company the same year; 私の同期 = my cohort. Tech: 同期する = to synchronize / sync."
+    },
+    {
+      "id": "v_kagai",
+      "surface": "加害",
+      "reading": "かがい",
+      "meaning": "inflicting harm / perpetration",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.17",
+      "notes": "加 N3.17 + 害 N3.13. 加害者 = perpetrator (pairs with 被害者 = victim). Common in news/legal contexts. Pairs conceptually with 殺害 (killing)."
+    },
+    {
+      "id": "v_bakari",
+      "surface": "ばかり",
+      "reading": "ばかり",
+      "meaning": "just (did) / only / about / nothing but (aspectual/limiting)",
+      "type": "vocab",
+      "gtype": "auxiliary",
+      "lesson_ids": "N3.18",
+      "notes": "G37 host vocab. 食べたばかり = just ate. 〜ばかりでなく = not only. 遊んでばかりいる = do nothing but play. Core N3 grammar nominal."
+    },
+    {
+      "id": "v_jissai",
+      "surface": "実際",
+      "reading": "じっさい",
+      "meaning": "actually / in reality / the truth is",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N3.18",
+      "matches": [
+        "じっ際",
+        "じっさい"
+      ],
+      "notes": "実 N3.18 + 際 (not taught — managed kana gap per plan). Write as じっさい until 際 is taught. Ubiquitous JLPT N4 adverb: 実際に = actually, in practice. 実際のところ = the truth is."
+    },
+    {
+      "id": "v_mi",
+      "surface": "実",
+      "reading": "み",
+      "meaning": "fruit / nut / seed / substance",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.18",
+      "notes": "実 N3.18 (kun reading み). 木の実 = tree nut/fruit. 実を結ぶ = to bear fruit (literal/figurative). Pairs with 実る (to ripen)."
+    },
+    {
+      "id": "v_jitsubutsu",
+      "surface": "実物",
+      "reading": "じつぶつ",
+      "meaning": "the real thing / actual item / real-life version",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.18",
+      "notes": "実 N3.18 + 物 N4. 実物を見る = to see the actual thing (vs photo/description). 実物大 = life-size / actual-size."
+    },
+    {
+      "id": "v_bukken",
+      "surface": "物件",
+      "reading": "ぶっけん",
+      "meaning": "property / listing / item (real estate or goods)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.19",
+      "notes": "物 N4 + 件 N3.19. Common in real estate (賃貸物件 = rental property) and business (優良物件 = good listing)."
+    },
+    {
+      "id": "v_ichi_2",
+      "surface": "位置",
+      "reading": "いち",
+      "meaning": "position / location / place",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.20",
+      "matches": [
+        "い置"
+      ],
+      "notes": "位 (not on curriculum) + 置 N3.20. Managed kana gap per plan. Write as い置 until 位 is taught. JLPT N3 ubiquitous (位置する, 位置情報). Distinct from v_ichi (市, market, N4.32)."
+    },
+    {
+      "id": "v_massugu",
+      "surface": "真っ直ぐ",
+      "reading": "まっすぐ",
+      "meaning": "straight / directly / upright / honest",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.20",
+      "notes": "真 N4 + 直 N3.20. Often written in kana まっすぐ. 真っ直ぐ行く = to go straight. 真っ直ぐな性格 = an honest/straightforward personality."
+    },
+    {
+      "id": "v_minaosu",
+      "surface": "見直す",
+      "reading": "みなおす",
+      "meaning": "to reconsider / reassess / look over again / re-evaluate",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.20",
+      "notes": "見 N5 + 直 N3.20. 計画を見直す = to review a plan. Also: to gain a higher opinion of someone (彼を見直した = my opinion of him went up)."
+    },
+    {
+      "id": "v_yamazumi",
+      "surface": "山積み",
+      "reading": "やまづみ",
+      "meaning": "piled up / heaped / lots of",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.20",
+      "notes": "山 N5 + 積 N3.20. 仕事が山積み = work is piling up. 問題が山積み = problems are piling up. Common everyday expression."
+    },
+    {
+      "id": "v_chokkou",
+      "surface": "直行",
+      "reading": "ちょっこう",
+      "meaning": "going directly / direct (flight/route)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.20",
+      "notes": "直 N3.20 + 行 N5. 直行便 = direct flight. 家に直行する = to go straight home (skip any stops)."
     }
   ]
 }
