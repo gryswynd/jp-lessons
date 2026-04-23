@@ -158,7 +158,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.21 | 頼願許呼 | ✅ Rescanned (4 new) |
 | N3.22 | 師徒優偉 | ✅ Rescanned (3 new) |
 | N3.23 | 育能才笑 | ✅ Rescanned (4 new) |
-| N3.24 | 他似偶類 | Not started |
+| N3.24 | 他似偶類 | ✅ Rescanned (7 new) |
 | N3.25 | 的求責欠 | Not started |
 | N3.26 | 両付到刻 | Not started |
 | N3.27 | 追逃退返 | Not started |
