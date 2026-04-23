@@ -133,6 +133,15 @@
             "command": "bash hooks/validate-story-tokenization.sh"
           }
         ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash hooks/rebuild-vocab-examples.sh"
+          }
+        ]
       }
     ]
   }
