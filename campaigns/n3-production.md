@@ -27,6 +27,9 @@
 - G48 (Advanced Connectors) → N3.72: しかも, それに, そのうえ, ところが, なお, むしろ
 - G49 (Capstone) → N3.84: none
 
+### Grammar example-vocab suggestions (from rescan)
+- G44 (Suffixes, N3.50) — use 忘れっぽい (わすれっぽい, forgetful) as a canonical っぽい example. Rejected from N3.1 glossary rescan because っぽい isn't introduced until G44; should appear here as a featured example sentence.
+
 ### Key rules (quick reference)
 1. Never read glossary files in full — use targeted Grep/jq
 2. Every ID globally unique across N5+N4+N3 — suffix `_2`, `_3` on collision
@@ -98,6 +101,7 @@ Chunked into 8 batches with approval gates. See plan: `campaigns/n3-glossary-bui
 |---|---|---|---|
 | G36 (はずだ/わけだ) | N3.14 | はず, わけ | Done (chunk 2) |
 | G37 (ところだ/たばかり) | N3.18 | ところ, ばかり | Done (chunk 2) |
+| G34 (Volitional & Intentions) | N3.6 | つもり | Done (rescan) — added during N3.6 full-coverage rescan |
 | G39 (Adverbs of Degree) | N3.26 | かなり, ずいぶん, なかなか, ほとんど, ちっとも, わりに, やや, ほぼ | Done (chunk 3) |
 | G40 (敬語) | N3.34 | いらっしゃる, おっしゃる, めしあがる, なさる, ございます, 伺う, 参る, 申す, 拝見する, ご覧になる | Done (chunk 4b) |
 | G38 (Particles) | N3.22 | → particles.json (not glossary) | Deferred |
