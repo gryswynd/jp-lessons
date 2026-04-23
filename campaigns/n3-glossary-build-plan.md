@@ -162,7 +162,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.25 | 的求責欠 | ✅ Rescanned (3 new; 〜的 suffix deferred to N2/N1 pending partner kanji) |
 | N3.26 | 両付到刻 | ✅ Rescanned (3 new) |
 | N3.27 | 追逃退返 | ✅ Rescanned (6 new) |
-| N3.28 | 寝具箱 | Not started |
+| N3.28 | 寝具箱 | ✅ Rescanned (7 new). Note: glossary has 4 kanji (容, 寝, 具, 箱) — plan listed 3 but 容 was assigned here during build. |
 | N3.29 | 予断決定 | Not started |
 | N3.30 | 怒悲恐怖 | Not started |
 | N3.31 | 喜幸愛夢 | Not started |
