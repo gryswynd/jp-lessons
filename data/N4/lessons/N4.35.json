@@ -308,7 +308,7 @@
         },
         {
           "spk": "A",
-          "jp": "はい、大丈夫です。国民の 皆さんに 良い 野菜を 食べてもらいたい んです。",
+          "jp": "はい、大丈夫です。国民の 皆さんに いい 野菜を 食べてもらいたい んです。",
           "en": "Yes, it's fine. I want the citizens to eat good vegetables, you see.",
           "terms": [
             "p_hai",
@@ -318,7 +318,7 @@
             "p_no",
             "v_minasan",
             "p_ni",
-            "v_yoi",
+            "v_ii",
             "v_yasai",
             "p_wo",
             {
@@ -334,11 +334,11 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "良い 主人ですね。少し 買って みます。",
+          "jp": "いい 主人ですね。少し 買って みます。",
           "en": "What a good owner. I'll try buying a little.",
           "terms": [
             "char_rikizo",
-            "v_yoi",
+            "v_ii",
             "v_shujin",
             "g_desu",
             "p_ne",
@@ -613,7 +613,7 @@
       "lines": [
         {
           "spk": "やまかわ",
-          "jp": "新しい 地区に 来たんだ。民家が 多くて、良い 所だよ。",
+          "jp": "新しい 地区に 来たんだ。民家が 多くて、いい 所だよ。",
           "en": "I came to a new district. There are lots of private houses — it's a nice place.",
           "terms": [
             "char_yamakawa",
@@ -631,7 +631,7 @@
               "id": "v_ooi",
               "form": "te_form"
             },
-            "v_yoi",
+            "v_ii",
             "v_tokoro",
             "p_yo",
             "g_da"
@@ -668,7 +668,7 @@
         },
         {
           "spk": "やまかわ",
-          "jp": "うん、いろいろな 民族の 人も いるよ。近所も 良く なってきた し、住んで 良かった。",
+          "jp": "うん、いろいろな 民族の 人も いるよ。近所も よく なってきた し、住んで よかった。",
           "en": "Yeah, people from various ethnic groups are there too. The neighborhood has been getting better, and I'm glad I moved there.",
           "terms": [
             "char_yamakawa",
@@ -688,7 +688,10 @@
             "p_yo",
             "v_kinjo",
             "p_mo",
-            "v_yoi",
+            {
+              "id": "v_ii",
+              "form": "adverbial"
+            },
             {
               "id": "v_naru",
               "form": "te_form"
@@ -702,7 +705,10 @@
               "id": "v_sumu",
               "form": "te_form"
             },
-            "v_yoi"
+            {
+              "id": "v_ii",
+              "form": "plain_past_adj"
+            }
           ]
         },
         {
@@ -728,7 +734,7 @@
         },
         {
           "spk": "やまかわ",
-          "jp": "うん、駅も 近い し、良い 所だよ。",
+          "jp": "うん、駅も 近い し、いい 所だよ。",
           "en": "Yeah, the station is nearby too, so it's a good place.",
           "terms": [
             "char_yamakawa",
@@ -737,7 +743,7 @@
             "p_mo",
             "v_chikai",
             "p_shi",
-            "v_yoi",
+            "v_ii",
             "v_tokoro",
             "p_yo",
             "g_da"
@@ -851,10 +857,10 @@
           ]
         },
         {
-          "jp": "良い 主人だと 思います。",
+          "jp": "いい 主人だと 思います。",
           "en": "I think they are a good owner.",
           "terms": [
-            "v_yoi",
+            "v_ii",
             "v_shujin",
             "p_to_quote",
             "g_da",
