@@ -100,8 +100,9 @@ Chunked into 8 batches with approval gates. See plan: `campaigns/n3-glossary-bui
 | Grammar | Host lesson | Vocab added | Status |
 |---|---|---|---|
 | G36 (はずだ/わけだ) | N3.14 | はず, わけ | Done (chunk 2) |
-| G37 (ところだ/たばかり) | N3.18 | ところ, ばかり | Done (chunk 2) |
+| G37 (ところだ/たばかり) | N3.18 | ところ, ばかり | Done (chunk 2 had ところ only; ばかり added in rescan) |
 | G34 (Volitional & Intentions) | N3.6 | つもり | Done (rescan) — added during N3.6 full-coverage rescan |
+| G35 (Inference) | N3.10 | ようだ, みたいだ, らしい | Done (rescan) — added during N3.10 full-coverage rescan |
 | G39 (Adverbs of Degree) | N3.26 | かなり, ずいぶん, なかなか, ほとんど, ちっとも, わりに, やや, ほぼ | Done (chunk 3) |
 | G40 (敬語) | N3.34 | いらっしゃる, おっしゃる, めしあがる, なさる, ございます, 伺う, 参る, 申す, 拝見する, ご覧になる | Done (chunk 4b) |
 | G38 (Particles) | N3.22 | → particles.json (not glossary) | Deferred |
