@@ -154,7 +154,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.17 | 加助備完 | ✅ Rescanned (1 new: 加害) |
 | N3.18 | 実存在突 | ✅ Rescanned (4 new incl. G37 ばかり catch-up) |
 | N3.19 | 例候件因 | ✅ Rescanned (1 new: 物件) |
-| N3.20 | 処置積直 | Not started |
+| N3.20 | 処置積直 | ✅ Rescanned (5 new — 位置 managed gap applied) |
 | N3.21 | 頼願許呼 | Not started |
 | N3.22 | 師徒優偉 | Not started |
 | N3.23 | 育能才笑 | Not started |
