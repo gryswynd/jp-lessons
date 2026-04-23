@@ -582,19 +582,22 @@
     },
     {
       "id": "v_dare",
-      "surface": "だれ",
+      "surface": "誰",
       "reading": "だれ",
       "meaning": "who",
       "type": "vocab",
       "gtype": "pronoun",
       "lesson_ids": "N5.1",
-      "notes": "",
+      "notes": "誰 kanji taught at N3.6. From N3.6 onward, write as 誰. matches[] retained for legacy pre-N3.6 content (and for general kana usage which remains common).",
       "example": {
         "jp": "家族の 中で いちばん 料理が 上手な 人は だれですか。",
         "en": "Who is the most skilled at cooking in your family?",
         "lessonId": "N4.7",
         "sectionType": "conversation"
-      }
+      },
+      "matches": [
+        "だれ"
+      ]
     },
     {
       "id": "v_donna",

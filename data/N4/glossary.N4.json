@@ -10915,19 +10915,22 @@
     },
     {
       "id": "v_kun",
-      "surface": "くん",
+      "surface": "君",
       "reading": "くん",
       "meaning": "boy's name suffix (informal)",
       "type": "vocab",
       "gtype": "suffix",
       "lesson_ids": "N4.18",
-      "notes": "Informal name suffix, typically used for boys or younger males. Less formal than さん.",
+      "notes": "Informal name suffix, typically used for boys or younger males. Less formal than さん. 君 kanji taught at N3.6 — from N3.6 onward, write as 君. matches[] retained for legacy/casual kana usage.",
       "example": {
         "jp": "田中くん、毎日 勉強してる？",
         "en": "Hey Tanaka, are you studying every day?",
         "lessonId": "N4.18",
         "sectionType": "conversation"
-      }
+      },
+      "matches": [
+        "くん"
+      ]
     },
     {
       "id": "v_tachi",
