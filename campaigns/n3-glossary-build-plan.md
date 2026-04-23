@@ -141,7 +141,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.4 | 慣続緒末 | ✅ Rescanned (6 new + 2 N5 notes updated) |
 | N3.5 | 束歳暮約 | ✅ Rescanned (4 new) |
 | N3.6 | 彼君娘祖誰 | ✅ Rescanned (3 new + G34 つもり + N4 v_kun & N5 v_dare maintained) |
-| N3.7 | 全部内側 | Not started |
+| N3.7 | 全部内側 | ✅ Rescanned (9 new) |
 | N3.8 | 必要可限 | Not started |
 | N3.9 | 命亡危険 | Not started |
 | N3.10 | 法戦選参 | Not started |
