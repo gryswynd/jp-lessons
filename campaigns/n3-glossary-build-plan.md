@@ -144,7 +144,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.7 | 全部内側 | ✅ Rescanned (9 new) |
 | N3.8 | 必要可限 | ✅ Rescanned (5 new) |
 | N3.9 | 命亡危険 | ✅ Rescanned (4 new + 危機 relocated to N3.61) |
-| N3.10 | 法戦選参 | Not started |
+| N3.10 | 法戦選参 | ✅ Rescanned (9 new incl. G35 auxiliaries) |
 | N3.11 | 守盗殺犯 | Not started |
 | N3.12 | 勝努成得 | Not started |
 | N3.13 | 失敗負害 | Not started |
