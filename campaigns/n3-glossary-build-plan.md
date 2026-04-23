@@ -151,7 +151,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.14 | 由米酒杯 | ✅ Rescanned (5 new) |
 | N3.15 | 絶船良破 | ✅ Rescanned (4 new + N5 v_yoi maintained) |
 | N3.16 | 期更最未 | ✅ Rescanned (+5 adds / −5 cuts — rebalanced to 21 entries) |
-| N3.17 | 加助備完 | Not started |
+| N3.17 | 加助備完 | ✅ Rescanned (1 new: 加害) |
 | N3.18 | 実存在突 | Not started |
 | N3.19 | 例候件因 | Not started |
 | N3.20 | 処置積直 | Not started |
