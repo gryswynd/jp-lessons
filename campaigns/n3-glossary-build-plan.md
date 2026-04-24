@@ -165,7 +165,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.28 | 寝具箱 | ✅ Rescanned (7 new). Note: glossary has 4 kanji (容, 寝, 具, 箱) — plan listed 3 but 容 was assigned here during build. |
 | N3.29 | 予断決定 | ✅ Rescanned (4 new) |
 | N3.30 | 怒悲恐怖 | ✅ Rescanned (3 new) |
-| N3.31 | 喜幸愛夢 | Not started |
+| N3.31 | 喜幸愛夢 | ✅ Rescanned (5 new) |
 | N3.32 | 情感想恥 | Not started |
 | N3.33 | 望欲忙息 | Not started |
 | N3.34 | 困迷疑苦 | Not started |
