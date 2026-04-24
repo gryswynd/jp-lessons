@@ -166,7 +166,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.29 | 予断決定 | ✅ Rescanned (4 new) |
 | N3.30 | 怒悲恐怖 | ✅ Rescanned (3 new) |
 | N3.31 | 喜幸愛夢 | ✅ Rescanned (5 new) |
-| N3.32 | 情感想恥 | Not started |
+| N3.32 | 情感想恥 | ✅ Rescanned (6 new) |
 | N3.33 | 望欲忙息 | Not started |
 | N3.34 | 困迷疑苦 | Not started |
 | N3.35 | 増変化現 | Not started |
