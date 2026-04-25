@@ -171,7 +171,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.34 | 困迷疑苦 | ✅ Rescanned (7 new + G40 keigo entries with untaught kanji moved to kana surface) |
 | N3.35 | 増変化現 | ✅ Rescanned (4 new) |
 | N3.36 | 眠疲痛靴 | ✅ Rescanned (6 new) |
-| N3.37 | 込過遅速 | Not started |
+| N3.37 | 込過遅速 | ✅ Rescanned (7 new + 申し込む/申し込み relocated to N3.58) |
 | N3.38 | 登落越降 | Not started |
 | N3.39 | 遊途路散 | Not started |
 | N3.40 | 熱煙冷消 | Not started |

@@ -6555,11 +6555,8 @@
       "type": "vocab",
       "gtype": "godan",
       "verb_class": "godan_mu",
-      "lesson_ids": "N3.37",
-      "matches": [
-        "もうし込む"
-      ],
-      "notes": "申 (N3.58) + 込 (N3.37). Very common — managed kana gap."
+      "lesson_ids": "N3.58",
+      "notes": "申 N3.58 + 込 N3.37. 申し込みフォーム = application form. Lesson_ids set to N3.58 since 申 is taught there; previously placed at N3.37 with matches[\"もうし込む\"]."
     },
     {
       "id": "v_moushikomi",
@@ -6568,11 +6565,8 @@
       "meaning": "application / proposal / request",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N3.37",
-      "matches": [
-        "もうし込み"
-      ],
-      "notes": "Noun form of 申し込む. 申 (N3.58) + 込 (N3.37)."
+      "lesson_ids": "N3.58",
+      "notes": "Noun form of 申し込む. 申 N3.58 + 込 N3.37. Lesson_ids set to N3.58 since 申 is taught there."
     },
     {
       "id": "v_hikkomu",
@@ -11980,6 +11974,80 @@
       "gtype": "noun",
       "lesson_ids": "N3.36",
       "notes": "雨 N5 + 靴 N3.36. Synonym/overlap with 長靴 in rainy-weather context."
+    },
+    {
+      "id": "v_kakikomu",
+      "surface": "書き込む",
+      "reading": "かきこむ",
+      "meaning": "to write in / to fill in / to post (online)",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.37",
+      "notes": "書 N5 + 込 N3.37. フォームに書き込む = to fill in a form. 掲示板に書き込む = to post on a forum."
+    },
+    {
+      "id": "v_nomikomu",
+      "surface": "飲み込む",
+      "reading": "のみこむ",
+      "meaning": "to swallow / to grasp / to take in",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.37",
+      "notes": "飲 N4 + 込 N3.37. Literal: 薬を飲み込む = to swallow medicine. Figurative: 状況を飲み込む = to grasp a situation."
+    },
+    {
+      "id": "v_kado",
+      "surface": "過度",
+      "reading": "かど",
+      "meaning": "excessive / too much",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.37",
+      "notes": "過 N3.37 + 度 N4. 過度な期待 = excessive expectations. 過度に = excessively."
+    },
+    {
+      "id": "v_sassoku",
+      "surface": "早速",
+      "reading": "さっそく",
+      "meaning": "at once / promptly / right away",
+      "type": "vocab",
+      "gtype": "adverb",
+      "lesson_ids": "N3.37",
+      "notes": "早 N4 + 速 N3.37. Common discourse marker: 早速ですが = without further ado. 早速読んでみます = I will read it right away."
+    },
+    {
+      "id": "v_zensokuryoku",
+      "surface": "全速力",
+      "reading": "ぜんそくりょく",
+      "meaning": "full speed / top speed",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.37",
+      "notes": "全 N3.7 + 速 N3.37 + 力 N4. Deferred from N3.7. 全速力で走る = to run at full speed."
+    },
+    {
+      "id": "v_saisoku",
+      "surface": "最速",
+      "reading": "さいそく",
+      "meaning": "fastest / top speed",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.37",
+      "notes": "最 N3.16 + 速 N3.37. Deferred from N3.16. Common in sports/gaming/tech (最速のCPU)."
+    },
+    {
+      "id": "v_okuraseru",
+      "surface": "遅らせる",
+      "reading": "おくらせる",
+      "meaning": "to delay / to put off / to postpone (tr)",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.37",
+      "notes": "遅 N3.37. Transitive pair of 遅れる. 出発を遅らせる = to delay departure."
     }
   ]
 }
