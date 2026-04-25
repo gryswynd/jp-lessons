@@ -6002,7 +6002,7 @@
     },
     {
       "id": "v_ukagau",
-      "surface": "伺う",
+      "surface": "うかがう",
       "reading": "うかがう",
       "meaning": "(humble) to visit / to ask / to inquire",
       "type": "vocab",
@@ -6010,9 +6010,9 @@
       "verb_class": "godan_u",
       "lesson_ids": "N3.34",
       "matches": [
-        "うかがう"
+        "伺う"
       ],
-      "notes": "Humble (謙譲語) for 行く/聞く/訪ねる. 伺 not taught. G40 keigo."
+      "notes": "Humble form of 訪ねる/聞く. 伺 is not on the N3 curriculum — write as kana うかがう. matches[\"伺う\"] retained for content that uses kanji form. G40 keigo."
     },
     {
       "id": "v_mairu",
@@ -6027,7 +6027,7 @@
     },
     {
       "id": "v_mousu",
-      "surface": "申す",
+      "surface": "もうす",
       "reading": "もうす",
       "meaning": "(humble) to say / to be called",
       "type": "vocab",
@@ -6035,35 +6035,35 @@
       "verb_class": "godan_su",
       "lesson_ids": "N3.34",
       "matches": [
-        "もうす"
+        "申す"
       ],
-      "notes": "Humble (謙譲語) for 言う. 申 (N3.58) not yet taught. G40 keigo."
+      "notes": "Humble form of 言う. 申 is not on the N3 curriculum — write as kana もうす. matches[\"申す\"] retained for content that uses kanji form. 〇〇と申します = my name is 〇〇. G40 keigo."
     },
     {
       "id": "v_haikensuru",
-      "surface": "拝見する",
+      "surface": "はいけんする",
       "reading": "はいけんする",
       "meaning": "(humble) to look / to see",
       "type": "vocab",
       "gtype": "noun_suru",
       "lesson_ids": "N3.34",
       "matches": [
-        "はいけんする"
+        "拝見する"
       ],
-      "notes": "Humble (謙譲語) for 見る. 拝+見 — 拝 not taught. G40 keigo."
+      "notes": "Humble form of 見る. 拝 is not on the N3 curriculum — write as kana はいけんする (since 拝 comes first). matches[\"拝見する\"] retained for content that uses kanji. G40 keigo."
     },
     {
       "id": "v_gorannninaru",
-      "surface": "ご覧になる",
+      "surface": "ごらんになる",
       "reading": "ごらんになる",
       "meaning": "(honorific) to look / to see",
       "type": "vocab",
       "gtype": "verb",
       "lesson_ids": "N3.34",
       "matches": [
-        "ごらんになる"
+        "ご覧になる"
       ],
-      "notes": "Honorific (尊敬語) for 見る. 覧 not taught. G40 keigo."
+      "notes": "Honorific form of 見る. 覧 is not on the N3 curriculum — write as kana ごらんになる. matches[\"ご覧になる\"] retained for content that uses kanji. G40 keigo."
     },
     {
       "id": "v_kurou",
@@ -11807,6 +11807,78 @@
       "gtype": "noun",
       "lesson_ids": "N3.33",
       "notes": "意 N4 + 欲 N3.33. 意欲がある = to be motivated. 学習意欲 = motivation to learn. Common education/business context."
+    },
+    {
+      "id": "v_mayoi",
+      "surface": "迷い",
+      "reading": "まよい",
+      "meaning": "hesitation / doubt / wavering",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.34",
+      "notes": "迷 N3.34. Noun form of 迷う. 迷いがある = to be unsure / to waver."
+    },
+    {
+      "id": "v_yougisha",
+      "surface": "容疑者",
+      "reading": "ようぎしゃ",
+      "meaning": "suspect (in a crime) / person under suspicion",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.34",
+      "notes": "容 N3.28 + 疑 N3.34 + 者 N4. Standard news/legal term."
+    },
+    {
+      "id": "v_yougi",
+      "surface": "容疑",
+      "reading": "ようぎ",
+      "meaning": "suspicion / charge",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.34",
+      "notes": "容 N3.28 + 疑 N3.34. 容疑がかかる = to come under suspicion. News register."
+    },
+    {
+      "id": "v_kurushimu",
+      "surface": "苦しむ",
+      "reading": "くるしむ",
+      "meaning": "to suffer / to be in pain / to struggle",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.34",
+      "notes": "苦 N3.34. Verb pair of 苦しい. 病気で苦しむ = to suffer from illness. 答えに苦しむ = to struggle for an answer."
+    },
+    {
+      "id": "v_kushou",
+      "surface": "苦笑",
+      "reading": "くしょう",
+      "meaning": "bitter laugh / wry smile / forced laugh",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.34",
+      "notes": "苦 N3.34 + 笑 N3.23. Deferred from N3.23. する verb: 苦笑する. 苦笑い (くわらい) is the kun-reading variant."
+    },
+    {
+      "id": "v_kusen",
+      "surface": "苦戦",
+      "reading": "くせん",
+      "meaning": "uphill battle / hard fight / struggle",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.34",
+      "notes": "苦 N3.34 + 戦 N3.10. する verb: 苦戦する. Common in sports/competition contexts."
+    },
+    {
+      "id": "v_ikigurushii",
+      "surface": "息苦しい",
+      "reading": "いきぐるしい",
+      "meaning": "suffocating / stifling / having difficulty breathing",
+      "type": "vocab",
+      "gtype": "i-adjective",
+      "verb_class": "i_adj",
+      "lesson_ids": "N3.34",
+      "notes": "息 N3.33 + 苦 N3.34. Deferred from N3.33. Both literal (breathing) and figurative (atmosphere)."
     }
   ]
 }
