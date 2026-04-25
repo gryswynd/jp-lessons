@@ -169,7 +169,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.32 | 情感想恥 | ✅ Rescanned (6 new) |
 | N3.33 | 望欲忙息 | ✅ Rescanned (5 new + N5 v_hoshii & N4 v_isogashii promoted to kanji surface) |
 | N3.34 | 困迷疑苦 | ✅ Rescanned (7 new + G40 keigo entries with untaught kanji moved to kana surface) |
-| N3.35 | 増変化現 | Not started |
+| N3.35 | 増変化現 | ✅ Rescanned (4 new) |
 | N3.36 | 眠疲痛靴 | Not started |
 | N3.37 | 込過遅速 | Not started |
 | N3.38 | 登落越降 | Not started |
