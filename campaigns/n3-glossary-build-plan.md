@@ -155,30 +155,30 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.18 | 実存在突 | ✅ Rescanned (4 new incl. G37 ばかり catch-up) |
 | N3.19 | 例候件因 | ✅ Rescanned (1 new: 物件) |
 | N3.20 | 処置積直 | ✅ Rescanned (5 new — 位置 managed gap applied) |
-| N3.21 | 頼願許呼 | Not started |
-| N3.22 | 師徒優偉 | Not started |
-| N3.23 | 育能才笑 | Not started |
-| N3.24 | 他似偶類 | Not started |
-| N3.25 | 的求責欠 | Not started |
-| N3.26 | 両付到刻 | Not started |
-| N3.27 | 追逃退返 | Not started |
-| N3.28 | 寝具箱 | Not started |
-| N3.29 | 予断決定 | Not started |
-| N3.30 | 怒悲恐怖 | Not started |
-| N3.31 | 喜幸愛夢 | Not started |
-| N3.32 | 情感想恥 | Not started |
-| N3.33 | 望欲忙息 | Not started |
-| N3.34 | 困迷疑苦 | Not started |
-| N3.35 | 増変化現 | Not started |
-| N3.36 | 眠疲痛靴 | Not started |
-| N3.37 | 込過遅速 | Not started |
-| N3.38 | 登落越降 | Not started |
-| N3.39 | 遊途路散 | Not started |
-| N3.40 | 熱煙冷消 | Not started |
-| N3.41 | 利収値取 | Partial (9 added, needs full rescan) |
-| N3.42 | 老若美皆 | Partial (2 added, needs full rescan) |
-| N3.43 | 王神福信 | Partial (5 added, needs full rescan) |
-| N3.44 | 猫馬鳴飛 | Partial (2 added, needs full rescan) |
+| N3.21 | 頼願許呼 | ✅ Rescanned (4 new) |
+| N3.22 | 師徒優偉 | ✅ Rescanned (3 new) |
+| N3.23 | 育能才笑 | ✅ Rescanned (4 new) |
+| N3.24 | 他似偶類 | ✅ Rescanned (7 new) |
+| N3.25 | 的求責欠 | ✅ Rescanned (3 new; 〜的 suffix deferred to N2/N1 pending partner kanji) |
+| N3.26 | 両付到刻 | ✅ Rescanned (3 new) |
+| N3.27 | 追逃退返 | ✅ Rescanned (6 new) |
+| N3.28 | 寝具箱 | ✅ Rescanned (7 new). Note: glossary has 4 kanji (容, 寝, 具, 箱) — plan listed 3 but 容 was assigned here during build. |
+| N3.29 | 予断決定 | ✅ Rescanned (4 new) |
+| N3.30 | 怒悲恐怖 | ✅ Rescanned (3 new) |
+| N3.31 | 喜幸愛夢 | ✅ Rescanned (5 new) |
+| N3.32 | 情感想恥 | ✅ Rescanned (6 new) |
+| N3.33 | 望欲忙息 | ✅ Rescanned (5 new + N5 v_hoshii & N4 v_isogashii promoted to kanji surface) |
+| N3.34 | 困迷疑苦 | ✅ Rescanned (7 new + G40 keigo entries with untaught kanji moved to kana surface) |
+| N3.35 | 増変化現 | ✅ Rescanned (4 new) |
+| N3.36 | 眠疲痛靴 | ✅ Rescanned (6 new) |
+| N3.37 | 込過遅速 | ✅ Rescanned (7 new + 申し込む/申し込み relocated to N3.58) |
+| N3.38 | 登落越降 | ✅ Rescanned (6 new) |
+| N3.39 | 遊途路散 | ✅ Rescanned (4 new) |
+| N3.40 | 熱煙冷消 | ✅ Rescanned (3 new) |
+| N3.41 | 利収値取 | ✅ Rescanned (Partial 9 -> see notes; 7 new + 利益/価値 deleted (defer N1) + 値段 → N3.61) |
+| N3.42 | 老若美皆 | ✅ Rescanned (3 new) |
+| N3.43 | 王神福信 | ✅ Rescanned (6 new + 福祉 deleted (defer N1)) |
+| N3.44 | 猫馬鳴飛 | ✅ Rescanned (4 new incl. 馬鹿 with permanent matches) |
 | N3.45 | 争戻倒規 | Not started |
 | N3.46 | 打折抜押 | Not started |
 | N3.47 | 投抱捕掛 | Not started |
@@ -246,6 +246,70 @@ Each lesson's additions are presented individually for user approval. The user m
 No batch approvals — every lesson gets individual review.
 
 After all chunks approved: `git reset --soft <base>` → single clean commit `feat(N3): extend glossary to cover N3.11–N3.86` → push to `claude/n3-lesson-planning-jZj4D`.
+
+## Rescan Lessons Learned (codified 2026-04-28)
+
+Six policies surfaced during the N3.1–N3.44 full-coverage rescan. Apply them on every subsequent rescan and on chunks 7–8.
+
+### 1. Per-lesson presentation contract (mandatory output format)
+
+Every lesson's proposal MUST include all five sections — no shortcuts:
+
+1. **Full existing-vocab table** — every entry as a row with id, surface, reading, meaning, composition. Never summarize as "X entries — already dense" or list only surfaces. The user must be able to review the complete current state at a glance.
+2. **Curated additions table** — proposals grouped by kanji, with surface / reading / meaning / composition / why columns.
+3. **Optional flagged list** — borderline candidates the user may want to add.
+4. **Skip/defer list** — what was checked but ruled out, with one-line reasons.
+5. **Summary line** — "X new → Y total entries".
+
+### 2. Inline-note skepticism — verify partner kanji against extracted glossary
+
+Existing entries' `notes` may contain fabricated or stale kanji-lesson citations (this rescan caught `機 (N4.25)` claimed when 機 is actually N3.61 with no entry). For every partner kanji in a proposed compound:
+
+- **Do** verify against the extracted glossary kanji sets (run the three jq extractions at session start).
+- **Do** cross-check the locked kanji plan in `data/N3/N3-kanji-lesson-plan.md` for kanji not yet in the glossary (chunks 7–8 not built).
+- **Do not** trust an inline note like "X (N3.XX)" on an existing entry as authoritative. Several were wrong.
+
+When you find an outdated/wrong note, fix it and call it out in the commit message. Examples this rescan: v_zangyou (業 is N4.36), v_kiki (relocated to N3.61), v_moushikomu/v_moushikomi (relocated to N3.58), v_nedan (relocated to N3.61).
+
+### 3. Curation guidelines — target counts and rebalancing
+
+- **Target ~13–18 entries** for a 4-kanji lesson; **~20–28** for grammar-host or 5-kanji lessons (G34/G39/G40/G41 ship multiple grammar-adjacent words).
+- When an existing lesson approaches **25+ entries** and the user wants leaner sets, propose **cuts of narrow/formal/RPG-only entries** alongside high-frequency adds. Cuts are part of curation.
+- **Strict on register:** drop entries that are JLPT N1-formal, RPG-only, or duplicate existing entries' semantic space. Examples cut at N3.16: 初期, 最小, 最強, 未知, 未だ → made room for 最新, 最悪, 最終, 期末, 同期.
+- **Cite commonality** — JLPT level (N5/N4/N3/N2/N1), JMdict common tag, daily-use vs. formal-written register. No subjective "very common" without basis.
+
+### 4. N1-deferral policy — delete (don't accumulate matches)
+
+When a word's partner kanji never appears on the N3 plan (i.e., is N1-only):
+
+- **Default: delete the entry from the N3 glossary.** It will be re-added at N1.
+- Examples deleted this rescan: 利益 (益 N1), 価値 (価 N1), 福祉 (祉 N1).
+- **Exception (permanent matches[]):** ateji words or extremely-common words where a hybrid form is conventional and recognizable. Use sparingly. Examples kept this rescan: 成功 (matches:["成こう"]), 馬鹿 (matches:["馬か","ばか"]), 実際 (matches:["じっ際","じっさい"]), 位置 (matches:["い置"]).
+
+The test for "permanent matches[] is OK": is the hybrid form (e.g., "馬か") something a Japanese-language reader would recognize and parse correctly, or would they find it confusing? If confusing, defer.
+
+### 5. Re-evaluate prior deferrals at each lesson
+
+**Step 0 of every lesson scan:** search the campaign-file deferral notes and prior commits for any word that was deferred to "this lesson or earlier". List them in the proposal as a separate row labeled "deferred from N3.XX". Don't let them slip through.
+
+The campaign file's "Notable fixes / relocations" section is the running log. Update it as you go.
+
+### 6. Maintenance pattern — kanji-introduction promotions
+
+When a kanji becomes taught at lesson N, audit earlier-lesson entries that reference it:
+
+| Existing entry's surface | Action at lesson N |
+|---|---|
+| Kana form (e.g. ほしい, いそがしい) | Update surface to kanji form (欲しい, 忙しい), add kana matches[] for legacy. Keep lesson_ids at the original earlier lesson. Update notes. |
+| Already-kanji form, with mismatched lesson_ids or stale note | Update notes; matches[] stays for backward compat. |
+| Outdated note (e.g., "kanji not introduced until N3" — false) | Update note text. |
+
+**Inverse pattern (G40 keigo / words whose kanji is NOT on the N3 plan):**
+Surface should be **kana**, with the kanji form in matches[]. This way pre-N3 (or never-taught-kanji) content writes the kana form and renders correctly. Examples fixed at N3.34: v_ukagau (うかがう / 伺う), v_mousu (もうす / 申す), v_haikensuru (はいけんする / 拝見する), v_gorannninaru (ごらんになる / ご覧になる).
+
+When v_mousu's 申 unlocks at N3.58, that's the trigger to flip the pattern: surface becomes 申す, kana joins matches[].
+
+---
 
 ## Critical Rules (from CLAUDE.md)
 

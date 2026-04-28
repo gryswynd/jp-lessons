@@ -2,7 +2,7 @@
 
 > **Status:** In Progress — Glossary Build-Out (Full-Coverage Rescan phase)
 > **Started:** 2026-04-20
-> **Last updated:** 2026-04-23 (rescan N3.1–N3.20 complete)
+> **Last updated:** 2026-04-28 (rescan N3.1–N3.44 complete)
 
 ---
 
@@ -11,32 +11,38 @@
 **For the next session:** Read this campaign file + the plan at `campaigns/n3-glossary-build-plan.md`. The plan contains the full Exhaustive Vocab Scan protocol (updated 2026-04-22), Grammar→Host-Lesson mapping, ID collision rules, managed kana-gap policies, per-chunk workflow, and the full-coverage rescan tracking table.
 
 ### Where we are
-- **Glossary covers N3.1–N3.55** (1055 entries as of 2026-04-23 — grows as rescan proceeds)
-- **Chunks 1–6a approved**, chunks 6b–6c content approved pending final rescan
-- **🔄 IN PROGRESS: Full-coverage rescan** — N3.1–N3.20 complete (20/55). Per-lesson approval gates. See plan file for per-lesson tracking table.
+- **Glossary covers N3.1–N3.55** (1169 entries as of 2026-04-28)
+- **Full-Coverage Rescan: N3.1–N3.44 complete (44/55)** — N3.45–N3.55 remaining
 - **After rescan:** continue with chunks 7–8 (N3.56–N3.86) using full-coverage protocol from the start
 
 ### Full-coverage rescan progress (N3.1–N3.55)
 | Status | Lessons | Count |
 |---|---|---|
-| ✅ Rescanned | N3.1–N3.20 | 20 |
-| Remaining | N3.21–N3.55 | 35 |
+| ✅ Rescanned | N3.1–N3.44 | 44 |
+| Remaining | N3.45–N3.55 | 11 |
 
 **Notable fixes / relocations from rescan so far:**
 - v_zangyou (残業): N3.77 → N3.1 (業 is N4.36, not N3.77)
-- v_kiki (危機): N3.9 → N3.61 (機 had a false note claiming N4.25, but 機 is N3.61; no 機 entry existed yet)
-- G34 つもり: added at N3.6 (was missing from Grammar→Host table)
-- G35 ようだ/みたいだ/らしい: added at N3.10 (were missing)
-- G37 ばかり: added at N3.18 (only ところ existed)
-- v_dare (だれ): N5.1 maintenance — surface updated to 誰 with matches
-- v_kun (くん suffix): N4.18 maintenance — surface updated to 君 with matches
-- v_issho (一緒に): N5.1 note updated (緒 taught at N3.4)
-- v_shuumatsu (週末): N5.4 note updated (末 taught at N3.4)
-- v_yoi (良い): N5.1 maintenance — added kana matches so pre-N3.15 content can use よい
-- 成功: added at N3.12 with permanent matches:["成こう"] (功 not on plan)
-- 実際: added at N3.18 with matches:["じっ際","じっさい"] (managed gap, 際 not taught)
-- 位置: added at N3.20 with matches:["い置"] (managed gap, 位 not taught)
+- v_kiki (危機): N3.9 → N3.61 (機 had a false note claiming N4.25, but 機 is N3.61)
+- v_moushikomu / v_moushikomi (申し込む/申し込み): N3.37 → N3.58 (申 taught at N3.58)
+- v_nedan (値段): N3.41 → N3.61 (段 taught at N3.61, removes need for matches)
+- G34 つもり, G35 ようだ/みたいだ/らしい, G37 ばかり: all added (were missing from Grammar→Host table delivery)
+- N5/N4 maintenance promotions to kanji surface (with kana matches):
+  v_dare (誰), v_kun (君), v_yoi (良い), v_hoshii (欲しい), v_isogashii (忙しい)
+- N5/N4 note updates (kanji-introduction reached): v_issho (緒→N3.4), v_shuumatsu (末→N3.4)
+- G40 keigo policy fix at N3.34: entries whose kanji are not on N3 plan now use kana surface with kanji in matches[] (v_ukagau, v_mousu, v_haikensuru, v_gorannninaru)
 - N3.16 rebalanced: dropped 5 narrow/formal existing (初期, 最小, 最強, 未知, 未だ) to make room for 5 high-freq adds (最新, 最悪, 最終, 期末, 同期)
+- Permanent matches[] for words whose partner kanji never lands on N3 plan:
+  - 成功 (matches:["成こう"]) — 功 not on plan
+  - 馬鹿 (matches:["馬か","ばか"]) — 鹿 not on plan
+  - 実際 (matches:["じっ際","じっさい"]) — 際 not on plan (managed gap)
+  - 位置 (matches:["い置"]) — 位 not on plan (managed gap)
+- Deletions (deferred to N1 — partner kanji is N1-level):
+  - v_rieki (利益) — 益 N1
+  - v_kachi_2 (価値) — 価 N1
+  - v_fukushi (福祉) — 祉 N1
+- 〜的 productive suffix entry deferred to N2/N1 (most foundational compounds need 般/基/個/具/効 not on N3 plan)
+- G44 example note: 忘れっぽい flagged as canonical っぽい example for G44 lesson (not added to glossary because っぽい not introduced until N3.50)
 
 ### Known issues (fixed)
 - ~~`v_shiharai` (支払い, N3.48) — missing `matches: ["支はらい"]`~~ Fixed 2026-04-22
