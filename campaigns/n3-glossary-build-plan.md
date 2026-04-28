@@ -247,6 +247,70 @@ No batch approvals — every lesson gets individual review.
 
 After all chunks approved: `git reset --soft <base>` → single clean commit `feat(N3): extend glossary to cover N3.11–N3.86` → push to `claude/n3-lesson-planning-jZj4D`.
 
+## Rescan Lessons Learned (codified 2026-04-28)
+
+Six policies surfaced during the N3.1–N3.44 full-coverage rescan. Apply them on every subsequent rescan and on chunks 7–8.
+
+### 1. Per-lesson presentation contract (mandatory output format)
+
+Every lesson's proposal MUST include all five sections — no shortcuts:
+
+1. **Full existing-vocab table** — every entry as a row with id, surface, reading, meaning, composition. Never summarize as "X entries — already dense" or list only surfaces. The user must be able to review the complete current state at a glance.
+2. **Curated additions table** — proposals grouped by kanji, with surface / reading / meaning / composition / why columns.
+3. **Optional flagged list** — borderline candidates the user may want to add.
+4. **Skip/defer list** — what was checked but ruled out, with one-line reasons.
+5. **Summary line** — "X new → Y total entries".
+
+### 2. Inline-note skepticism — verify partner kanji against extracted glossary
+
+Existing entries' `notes` may contain fabricated or stale kanji-lesson citations (this rescan caught `機 (N4.25)` claimed when 機 is actually N3.61 with no entry). For every partner kanji in a proposed compound:
+
+- **Do** verify against the extracted glossary kanji sets (run the three jq extractions at session start).
+- **Do** cross-check the locked kanji plan in `data/N3/N3-kanji-lesson-plan.md` for kanji not yet in the glossary (chunks 7–8 not built).
+- **Do not** trust an inline note like "X (N3.XX)" on an existing entry as authoritative. Several were wrong.
+
+When you find an outdated/wrong note, fix it and call it out in the commit message. Examples this rescan: v_zangyou (業 is N4.36), v_kiki (relocated to N3.61), v_moushikomu/v_moushikomi (relocated to N3.58), v_nedan (relocated to N3.61).
+
+### 3. Curation guidelines — target counts and rebalancing
+
+- **Target ~13–18 entries** for a 4-kanji lesson; **~20–28** for grammar-host or 5-kanji lessons (G34/G39/G40/G41 ship multiple grammar-adjacent words).
+- When an existing lesson approaches **25+ entries** and the user wants leaner sets, propose **cuts of narrow/formal/RPG-only entries** alongside high-frequency adds. Cuts are part of curation.
+- **Strict on register:** drop entries that are JLPT N1-formal, RPG-only, or duplicate existing entries' semantic space. Examples cut at N3.16: 初期, 最小, 最強, 未知, 未だ → made room for 最新, 最悪, 最終, 期末, 同期.
+- **Cite commonality** — JLPT level (N5/N4/N3/N2/N1), JMdict common tag, daily-use vs. formal-written register. No subjective "very common" without basis.
+
+### 4. N1-deferral policy — delete (don't accumulate matches)
+
+When a word's partner kanji never appears on the N3 plan (i.e., is N1-only):
+
+- **Default: delete the entry from the N3 glossary.** It will be re-added at N1.
+- Examples deleted this rescan: 利益 (益 N1), 価値 (価 N1), 福祉 (祉 N1).
+- **Exception (permanent matches[]):** ateji words or extremely-common words where a hybrid form is conventional and recognizable. Use sparingly. Examples kept this rescan: 成功 (matches:["成こう"]), 馬鹿 (matches:["馬か","ばか"]), 実際 (matches:["じっ際","じっさい"]), 位置 (matches:["い置"]).
+
+The test for "permanent matches[] is OK": is the hybrid form (e.g., "馬か") something a Japanese-language reader would recognize and parse correctly, or would they find it confusing? If confusing, defer.
+
+### 5. Re-evaluate prior deferrals at each lesson
+
+**Step 0 of every lesson scan:** search the campaign-file deferral notes and prior commits for any word that was deferred to "this lesson or earlier". List them in the proposal as a separate row labeled "deferred from N3.XX". Don't let them slip through.
+
+The campaign file's "Notable fixes / relocations" section is the running log. Update it as you go.
+
+### 6. Maintenance pattern — kanji-introduction promotions
+
+When a kanji becomes taught at lesson N, audit earlier-lesson entries that reference it:
+
+| Existing entry's surface | Action at lesson N |
+|---|---|
+| Kana form (e.g. ほしい, いそがしい) | Update surface to kanji form (欲しい, 忙しい), add kana matches[] for legacy. Keep lesson_ids at the original earlier lesson. Update notes. |
+| Already-kanji form, with mismatched lesson_ids or stale note | Update notes; matches[] stays for backward compat. |
+| Outdated note (e.g., "kanji not introduced until N3" — false) | Update note text. |
+
+**Inverse pattern (G40 keigo / words whose kanji is NOT on the N3 plan):**
+Surface should be **kana**, with the kanji form in matches[]. This way pre-N3 (or never-taught-kanji) content writes the kana form and renders correctly. Examples fixed at N3.34: v_ukagau (うかがう / 伺う), v_mousu (もうす / 申す), v_haikensuru (はいけんする / 拝見する), v_gorannninaru (ごらんになる / ご覧になる).
+
+When v_mousu's 申 unlocks at N3.58, that's the trigger to flip the pattern: surface becomes 申す, kana joins matches[].
+
+---
+
 ## Critical Rules (from CLAUDE.md)
 
 1. Never read glossary files in full — use targeted Grep (file sizes exceed token limit).
