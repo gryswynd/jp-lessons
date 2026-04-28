@@ -178,7 +178,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.41 | 利収値取 | ✅ Rescanned (Partial 9 -> see notes; 7 new + 利益/価値 deleted (defer N1) + 値段 → N3.61) |
 | N3.42 | 老若美皆 | ✅ Rescanned (3 new) |
 | N3.43 | 王神福信 | ✅ Rescanned (6 new + 福祉 deleted (defer N1)) |
-| N3.44 | 猫馬鳴飛 | Partial (2 added, needs full rescan) |
+| N3.44 | 猫馬鳴飛 | ✅ Rescanned (4 new incl. 馬鹿 with permanent matches) |
 | N3.45 | 争戻倒規 | Not started |
 | N3.46 | 打折抜押 | Not started |
 | N3.47 | 投抱捕掛 | Not started |
