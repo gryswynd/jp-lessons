@@ -173,7 +173,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.36 | 眠疲痛靴 | ✅ Rescanned (6 new) |
 | N3.37 | 込過遅速 | ✅ Rescanned (7 new + 申し込む/申し込み relocated to N3.58) |
 | N3.38 | 登落越降 | ✅ Rescanned (6 new) |
-| N3.39 | 遊途路散 | Not started |
+| N3.39 | 遊途路散 | ✅ Rescanned (4 new) |
 | N3.40 | 熱煙冷消 | Not started |
 | N3.41 | 利収値取 | Partial (9 added, needs full rescan) |
 | N3.42 | 老若美皆 | Partial (2 added, needs full rescan) |
