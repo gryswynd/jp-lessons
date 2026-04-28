@@ -175,7 +175,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.38 | 登落越降 | ✅ Rescanned (6 new) |
 | N3.39 | 遊途路散 | ✅ Rescanned (4 new) |
 | N3.40 | 熱煙冷消 | ✅ Rescanned (3 new) |
-| N3.41 | 利収値取 | Partial (9 added, needs full rescan) |
+| N3.41 | 利収値取 | ✅ Rescanned (Partial 9 -> see notes; 7 new + 利益/価値 deleted (defer N1) + 値段 → N3.61) |
 | N3.42 | 老若美皆 | Partial (2 added, needs full rescan) |
 | N3.43 | 王神福信 | Partial (5 added, needs full rescan) |
 | N3.44 | 猫馬鳴飛 | Partial (2 added, needs full rescan) |

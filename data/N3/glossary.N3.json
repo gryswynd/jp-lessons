@@ -7370,19 +7370,6 @@
       "notes": "利 (N3.41) + 用 (N4.31)."
     },
     {
-      "id": "v_rieki",
-      "surface": "利益",
-      "reading": "りえき",
-      "meaning": "profit / benefit / gains",
-      "type": "vocab",
-      "gtype": "noun",
-      "lesson_ids": "N3.41",
-      "matches": [
-        "利えき"
-      ],
-      "notes": "利 (N3.41) + 益 (not taught). Common — managed kana gap."
-    },
-    {
       "id": "v_yuuri",
       "surface": "有利",
       "reading": "ゆうり",
@@ -7462,11 +7449,8 @@
       "meaning": "price / cost",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N3.41",
-      "matches": [
-        "値だん"
-      ],
-      "notes": "値 (N3.41) + 段 (N3.61). Very common — managed kana gap."
+      "lesson_ids": "N3.61",
+      "notes": "値 N3.41 + 段 N3.61. Lesson_ids set to N3.61 since 段 is taught there. 値段が高い = the price is high."
     },
     {
       "id": "v_neage",
@@ -7487,19 +7471,6 @@
       "gtype": "noun_suru",
       "lesson_ids": "N3.41",
       "notes": "値 (N3.41) + 下 (N5.17). Antonym of 値上げ."
-    },
-    {
-      "id": "v_kachi_2",
-      "surface": "価値",
-      "reading": "かち",
-      "meaning": "value / worth",
-      "type": "vocab",
-      "gtype": "noun",
-      "lesson_ids": "N3.41",
-      "matches": [
-        "か値"
-      ],
-      "notes": "価 (not taught) + 値 (N3.41). Common — managed kana gap."
     },
     {
       "id": "v_toru_2",
@@ -12182,6 +12153,80 @@
       "gtype": "noun",
       "lesson_ids": "N3.40",
       "notes": "高 N5 + 熱 N3.40. 高熱が出る = to run a high fever. Medical common."
+    },
+    {
+      "id": "v_shouri",
+      "surface": "勝利",
+      "reading": "しょうり",
+      "meaning": "victory / win / triumph",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.41",
+      "notes": "勝 N3.12 + 利 N3.41. Deferred from N3.12. する verb: 勝利する. Pairs with 敗北 (defeat)."
+    },
+    {
+      "id": "v_rikou",
+      "surface": "利口",
+      "reading": "りこう",
+      "meaning": "clever / smart / wise",
+      "type": "vocab",
+      "gtype": "na-adjective",
+      "verb_class": "na_adj",
+      "lesson_ids": "N3.41",
+      "notes": "利 N3.41 + 口 N5. 利口な犬 = a clever dog. Used for both people and animals."
+    },
+    {
+      "id": "v_nebiki",
+      "surface": "値引き",
+      "reading": "ねびき",
+      "meaning": "discount / price reduction",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.41",
+      "notes": "値 N3.41 + 引 N4. する verb: 値引きする. Common shopping/sales term."
+    },
+    {
+      "id": "v_shutoku",
+      "surface": "取得",
+      "reading": "しゅとく",
+      "meaning": "acquisition / acquiring (a license, qualification)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.41",
+      "notes": "取 N3.41 + 得 N3.12. Deferred from N3.12. する verb: 取得する. 資格を取得する = to obtain a qualification."
+    },
+    {
+      "id": "v_toriageru",
+      "surface": "取り上げる",
+      "reading": "とりあげる",
+      "meaning": "to pick up / to take up / to feature / to confiscate",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.41",
+      "notes": "取 N3.41 + 上 N5. ニュースで取り上げる = to cover in the news. 問題を取り上げる = to bring up an issue."
+    },
+    {
+      "id": "v_toriireru",
+      "surface": "取り入れる",
+      "reading": "とりいれる",
+      "meaning": "to take in / to adopt / to incorporate",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.41",
+      "notes": "取 N3.41 + 入 N5. 新しい技術を取り入れる = to adopt new technology. 意見を取り入れる = to incorporate opinions."
+    },
+    {
+      "id": "v_torikaesu",
+      "surface": "取り返す",
+      "reading": "とりかえす",
+      "meaning": "to take back / to recover / to regain",
+      "type": "vocab",
+      "gtype": "verb",
+      "verb_class": "godan",
+      "lesson_ids": "N3.41",
+      "notes": "取 N3.41 + 返 N3.27. 信頼を取り返す = to regain trust. 取り返しのつかない = irreversible."
     }
   ]
 }
