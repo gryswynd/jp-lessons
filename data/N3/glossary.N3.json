@@ -3609,10 +3609,8 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N3.48",
-      "matches": [
-        "ほう置"
-      ],
-      "notes": "放 (N3.48) + 置 (N3.20). Write as ほう置 until N3.48. 放置する = to leave alone / neglect. 放置自転車 = abandoned bicycle (自転車 N4)."
+      "matches": null,
+      "notes": "放 (N3.48) + 置 (N3.20). 放置する = to leave alone / neglect. 放置自転車 = abandoned bicycle (自転車 N4)."
     },
     {
       "id": "v_tsumu",
@@ -8601,19 +8599,6 @@
       ]
     },
     {
-      "id": "v_yubiwa",
-      "surface": "指輪",
-      "reading": "ゆびわ",
-      "meaning": "ring (jewelry)",
-      "type": "vocab",
-      "gtype": "noun",
-      "lesson_ids": "N3.48",
-      "matches": [
-        "指わ"
-      ],
-      "notes": "指 (N3.48) + 輪 (not taught). Managed kana gap."
-    },
-    {
       "id": "v_sagasu",
       "surface": "探す",
       "reading": "さがす",
@@ -8634,19 +8619,6 @@
       "verb_class": "ichidan",
       "lesson_ids": "N3.48",
       "notes": "支 (N3.48)."
-    },
-    {
-      "id": "v_shien",
-      "surface": "支援",
-      "reading": "しえん",
-      "meaning": "support / assistance / aid",
-      "type": "vocab",
-      "gtype": "noun_suru",
-      "lesson_ids": "N3.48",
-      "matches": [
-        "支えん"
-      ],
-      "notes": "支 (N3.48) + 援 (not taught). Common — managed kana gap."
     },
     {
       "id": "v_shiharai",
@@ -8703,19 +8675,6 @@
       "notes": "指 (N3.48) + 定 (N3.29)."
     },
     {
-      "id": "v_shidou",
-      "surface": "指導",
-      "reading": "しどう",
-      "meaning": "guidance / leadership / coaching",
-      "type": "vocab",
-      "gtype": "noun_suru",
-      "lesson_ids": "N3.48",
-      "matches": [
-        "指どう"
-      ],
-      "notes": "指 (N3.48) + 導 (not taught). Common — managed kana gap."
-    },
-    {
       "id": "v_shiji_2",
       "surface": "支持",
       "reading": "しじ",
@@ -8724,19 +8683,6 @@
       "gtype": "noun_suru",
       "lesson_ids": "N3.48",
       "notes": "支 (N3.48) + 持 (N4.28)."
-    },
-    {
-      "id": "v_tanken",
-      "surface": "探検",
-      "reading": "たんけん",
-      "meaning": "exploration / expedition",
-      "type": "vocab",
-      "gtype": "noun_suru",
-      "lesson_ids": "N3.48",
-      "matches": [
-        "探けん"
-      ],
-      "notes": "探 (N3.48) + 検 (not taught). Managed kana gap."
     },
     {
       "id": "k_suu",
@@ -12543,6 +12489,60 @@
       "gtype": "noun",
       "lesson_ids": "N3.47",
       "notes": "掛 (N3.47) + 声 (N4)."
+    },
+    {
+      "id": "v_shimei_2",
+      "surface": "指名",
+      "reading": "しめい",
+      "meaning": "nomination / naming / designation",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.48",
+      "notes": "指 (N3.48) + 名 (N5). JLPT N3."
+    },
+    {
+      "id": "v_shihai",
+      "surface": "支配",
+      "reading": "しはい",
+      "meaning": "control / domination / rule",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.48",
+      "matches": [
+        "支はい"
+      ],
+      "notes": "支 (N3.48) + 配 (N3.83). Common — managed kana gap until N3.83."
+    },
+    {
+      "id": "v_shitaku",
+      "surface": "支度",
+      "reading": "したく",
+      "meaning": "preparation / arrangements",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.48",
+      "notes": "支 (N3.48) + 度 (N4)."
+    },
+    {
+      "id": "v_tankyuu",
+      "surface": "探求",
+      "reading": "たんきゅう",
+      "meaning": "investigation / quest / pursuit",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.48",
+      "notes": "探 (N3.48) + 求 (N3.25)."
+    },
+    {
+      "id": "v_tebanasu",
+      "surface": "手放す",
+      "reading": "てばなす",
+      "meaning": "to let go of / to part with",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan",
+      "lesson_ids": "N3.48",
+      "notes": "手 (N5) + 放 (N3.48). Compound verb."
     }
   ]
 }
