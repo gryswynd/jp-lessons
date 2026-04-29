@@ -188,7 +188,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.51 | 記表解観 | ✅ Rescanned (記録 deleted (defer N2 — 録 is N2)) |
 | N3.52 | 伝告報誤 | ✅ Rescanned (2 new + 2 corrupted-bytes fixes; 伝統 deleted (defer N2 — 統 is N2)) |
 | N3.53 | 談論議識 | ✅ Rescanned (3 new incl. 論争 from N3.45 + 不思議 vocab debt; 結論 deleted (defer N2)) |
-| N3.54 | 礼訪招迎 | Not started |
+| N3.54 | 礼訪招迎 | ✅ Rescanned (1 new + v_shitsurei note fix; 歓迎 deleted (defer N1 — 歓 is N1)) |
 | N3.55 | 警察罪判 | Partial (4 added, needs full rescan) |
 
 **After rescan complete:** Continue with chunks 7–8 using the full-coverage protocol from the start.

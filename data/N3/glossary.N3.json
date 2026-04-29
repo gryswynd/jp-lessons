@@ -2177,7 +2177,7 @@
       "matches": [
         "失れい"
       ],
-      "notes": "失 (N3.13) + 礼 (N3.54). Write as 失れい until N3.54. 失礼します = Excuse me (entering/leaving a room). 失礼な人 = a rude person. Essential polite expression."
+      "notes": "失 (N3.13) + 礼 (N3.54). 失礼します = Excuse me (entering/leaving a room). 失礼な人 = a rude person. Essential polite expression."
     },
     {
       "id": "v_makeru",
@@ -9622,19 +9622,6 @@
       "notes": "迎 (N3.54)."
     },
     {
-      "id": "v_kangei",
-      "surface": "歓迎",
-      "reading": "かんげい",
-      "meaning": "welcome / reception",
-      "type": "vocab",
-      "gtype": "noun_suru",
-      "lesson_ids": "N3.54",
-      "matches": [
-        "かん迎"
-      ],
-      "notes": "歓 (not taught) + 迎 (N3.54). Common — managed kana gap."
-    },
-    {
       "id": "v_demukaeru",
       "surface": "出迎える",
       "reading": "でむかえる",
@@ -12628,6 +12615,16 @@
         "じょう識"
       ],
       "notes": "常 (N3.62) + 識 (N3.53). Common — managed kana gap until N3.62."
+    },
+    {
+      "id": "v_sougei",
+      "surface": "送迎",
+      "reading": "そうげい",
+      "meaning": "transportation / pick-up and drop-off",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.54",
+      "notes": "送 (N4) + 迎 (N3.54)."
     }
   ]
 }

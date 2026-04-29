@@ -12,14 +12,14 @@
 
 ### Where we are
 - **Glossary covers N3.1–N3.55** (1198 entries as of 2026-04-29)
-- **Full-Coverage Rescan: N3.1–N3.53 complete (53/55)** — N3.54–N3.55 remaining
+- **Full-Coverage Rescan: N3.1–N3.54 complete (54/55)** — N3.55 remaining
 - **After rescan:** continue with chunks 7–8 (N3.56–N3.86) using full-coverage protocol from the start
 
 ### Full-coverage rescan progress (N3.1–N3.55)
 | Status | Lessons | Count |
 |---|---|---|
-| ✅ Rescanned | N3.1–N3.53 | 53 |
-| Remaining | N3.54–N3.55 | 2 |
+| ✅ Rescanned | N3.1–N3.54 | 54 |
+| Remaining | N3.55 | 1 |
 
 **Notable fixes / relocations from rescan so far:**
 - v_zangyou (残業): N3.77 → N3.1 (業 is N4.36, not N3.77)
@@ -43,6 +43,7 @@
   - v_fukushi (福祉) — 祉 N1
   - v_touhyou (投票) — 票 N1 (deleted at N3.47 rescan)
   - v_taiho (逮捕) — 逮 N1 (deleted at N3.47 rescan)
+  - v_kangei (歓迎) — 歓 N1 (deleted at N3.54 rescan)
 - Deletions (deferred to N2 — partner kanji is N2-level):
   - v_kyousou (競争) — 競 N2 (deleted at N3.45 rescan; will be re-added at N2)
   - v_yubiwa (指輪) — 輪 N2 (deleted at N3.48 rescan)
