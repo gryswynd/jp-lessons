@@ -38,12 +38,30 @@ def lesson_key(lesson_id):
     return (LEVEL_RANK[f"N{m.group(1)}"], int(m.group(2)))
 
 
-def earliest_lesson(lesson_ids_str):
-    """Parse a `lesson_ids` value like 'N5.10' or 'N5.10, N5.12' and return the earliest sortable key + id."""
+def earliest_lesson(lesson_ids_str, unlocks_map=None):
+    """Parse a `lesson_ids` value and return the earliest (sort-key, displayed-id) pair.
+
+    Handles three token shapes:
+    - `N5.X` / `N4.X` — used directly.
+    - `G\\d+` or `N[45].Review.\\d+` — resolved through `unlocks_map` to the
+      gating N lesson (so a term tagged `lesson_ids: "G14"` is treated as
+      introduced in G14's gating N lesson, e.g. N4.5).
+    - Anything else — ignored.
+
+    The displayed id is the original token; the sort key comes from the
+    resolved N lesson.
+    """
     if not lesson_ids_str:
         return None, None
-    tokens = re.findall(r"N[45]\.\d+", str(lesson_ids_str))
-    parsed = [(lesson_key(t), t) for t in tokens]
+    tokens = re.findall(r"[NG][\w.]+", str(lesson_ids_str))
+    parsed = []
+    for tok in tokens:
+        if NLESSON_RE.match(tok):
+            parsed.append((lesson_key(tok), tok))
+        elif unlocks_map is not None and (tok.startswith("G") or ".Review." in tok):
+            resolved = resolve_to_n_lesson(tok, unlocks_map)
+            if resolved:
+                parsed.append((lesson_key(resolved), tok))
     parsed = [p for p in parsed if p[0] is not None]
     if not parsed:
         return None, None
@@ -212,7 +230,7 @@ def main():
                 if tid not in glossary_ids:
                     unknown.append(tid)
                 continue
-            term_key, term_lesson = earliest_lesson(lesson_ids_str)
+            term_key, term_lesson = earliest_lesson(lesson_ids_str, unlocks_map)
             if term_key is None:
                 continue
             if term_key > gating_key:
