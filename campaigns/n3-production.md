@@ -11,15 +11,15 @@
 **For the next session:** Read this campaign file + the plan at `campaigns/n3-glossary-build-plan.md`. The plan contains the full Exhaustive Vocab Scan protocol (updated 2026-04-22), Grammar→Host-Lesson mapping, ID collision rules, managed kana-gap policies, per-chunk workflow, and the full-coverage rescan tracking table.
 
 ### Where we are
-- **Glossary covers N3.1–N3.55** (1195 entries as of 2026-04-29)
-- **Full-Coverage Rescan: N3.1–N3.51 complete (51/55)** — N3.52–N3.55 remaining
+- **Glossary covers N3.1–N3.55** (1196 entries as of 2026-04-29)
+- **Full-Coverage Rescan: N3.1–N3.52 complete (52/55)** — N3.53–N3.55 remaining
 - **After rescan:** continue with chunks 7–8 (N3.56–N3.86) using full-coverage protocol from the start
 
 ### Full-coverage rescan progress (N3.1–N3.55)
 | Status | Lessons | Count |
 |---|---|---|
-| ✅ Rescanned | N3.1–N3.51 | 51 |
-| Remaining | N3.52–N3.55 | 4 |
+| ✅ Rescanned | N3.1–N3.52 | 52 |
+| Remaining | N3.53–N3.55 | 3 |
 
 **Notable fixes / relocations from rescan so far:**
 - v_zangyou (残業): N3.77 → N3.1 (業 is N4.36, not N3.77)
@@ -50,6 +50,7 @@
   - v_shidou (指導) — 導 N2 (deleted at N3.48 rescan)
   - v_tanken (探検) — 検 not on N3 plan (deleted at N3.48 rescan)
   - v_kiroku (記録) — 録 N2 (deleted at N3.51 rescan)
+  - v_dentou (伝統) — 統 N2 (deleted at N3.52 rescan)
 - 〜的 productive suffix entry deferred to N2/N1 (most foundational compounds need 般/基/個/具/効 not on N3 plan)
 - G44 example note: 忘れっぽい flagged as canonical っぽい example for G44 lesson (not added to glossary because っぽい not introduced until N3.50)
 
