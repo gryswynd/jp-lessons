@@ -2,7 +2,7 @@
 
 > **Status:** In Progress — Glossary Build-Out (Full-Coverage Rescan phase)
 > **Started:** 2026-04-20
-> **Last updated:** 2026-04-28 (rescan N3.1–N3.44 complete)
+> **Last updated:** 2026-04-29 (rescan N3.45 complete)
 
 ---
 
@@ -11,15 +11,15 @@
 **For the next session:** Read this campaign file + the plan at `campaigns/n3-glossary-build-plan.md`. The plan contains the full Exhaustive Vocab Scan protocol (updated 2026-04-22), Grammar→Host-Lesson mapping, ID collision rules, managed kana-gap policies, per-chunk workflow, and the full-coverage rescan tracking table.
 
 ### Where we are
-- **Glossary covers N3.1–N3.55** (1169 entries as of 2026-04-28)
-- **Full-Coverage Rescan: N3.1–N3.44 complete (44/55)** — N3.45–N3.55 remaining
+- **Glossary covers N3.1–N3.55** (1171 entries as of 2026-04-29)
+- **Full-Coverage Rescan: N3.1–N3.45 complete (45/55)** — N3.46–N3.55 remaining
 - **After rescan:** continue with chunks 7–8 (N3.56–N3.86) using full-coverage protocol from the start
 
 ### Full-coverage rescan progress (N3.1–N3.55)
 | Status | Lessons | Count |
 |---|---|---|
-| ✅ Rescanned | N3.1–N3.44 | 44 |
-| Remaining | N3.45–N3.55 | 11 |
+| ✅ Rescanned | N3.1–N3.45 | 45 |
+| Remaining | N3.46–N3.55 | 10 |
 
 **Notable fixes / relocations from rescan so far:**
 - v_zangyou (残業): N3.77 → N3.1 (業 is N4.36, not N3.77)
@@ -41,6 +41,8 @@
   - v_rieki (利益) — 益 N1
   - v_kachi_2 (価値) — 価 N1
   - v_fukushi (福祉) — 祉 N1
+- Deletions (deferred to N2 — partner kanji is N2-level):
+  - v_kyousou (競争) — 競 N2 (deleted at N3.45 rescan; will be re-added at N2)
 - 〜的 productive suffix entry deferred to N2/N1 (most foundational compounds need 般/基/個/具/効 not on N3 plan)
 - G44 example note: 忘れっぽい flagged as canonical っぽい example for G44 lesson (not added to glossary because っぽい not introduced until N3.50)
 

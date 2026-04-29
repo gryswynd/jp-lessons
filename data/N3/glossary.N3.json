@@ -8101,19 +8101,6 @@
       "notes": "Noun form of 争う. 争 (N3.45)."
     },
     {
-      "id": "v_kyousou",
-      "surface": "競争",
-      "reading": "きょうそう",
-      "meaning": "competition / contest / rivalry",
-      "type": "vocab",
-      "gtype": "noun_suru",
-      "lesson_ids": "N3.45",
-      "matches": [
-        "きょう争"
-      ],
-      "notes": "競 (not taught) + 争 (N3.45). Very common — managed kana gap."
-    },
-    {
       "id": "v_sensou",
       "surface": "戦争",
       "reading": "せんそう",
@@ -12353,6 +12340,37 @@
         "ばか"
       ],
       "notes": "馬 N3.44 + 鹿 (not on N3 plan — defer to N1). Write as 馬か (hybrid) until 鹿 taught, or kana ばか. Ateji. Extremely common JLPT N5-level word; included now via permanent matches. 馬鹿な人 = a stupid person."
+    },
+    {
+      "id": "v_iiarasou",
+      "surface": "言い争う",
+      "reading": "いいあらそう",
+      "meaning": "to quarrel / to argue",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan",
+      "lesson_ids": "N3.45",
+      "notes": "言 (N5) + 争 (N3.45). Compound verb."
+    },
+    {
+      "id": "v_tentou",
+      "surface": "転倒",
+      "reading": "てんとう",
+      "meaning": "falling over / tumbling",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.45",
+      "notes": "転 (N4.17) + 倒 (N3.45)."
+    },
+    {
+      "id": "v_modori",
+      "surface": "戻り",
+      "reading": "もどり",
+      "meaning": "return / coming back",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.45",
+      "notes": "戻 (N3.45). Noun form of 戻る."
     }
   ]
 }
