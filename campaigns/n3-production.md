@@ -11,15 +11,15 @@
 **For the next session:** Read this campaign file + the plan at `campaigns/n3-glossary-build-plan.md`. The plan contains the full Exhaustive Vocab Scan protocol (updated 2026-04-22), Grammar→Host-Lesson mapping, ID collision rules, managed kana-gap policies, per-chunk workflow, and the full-coverage rescan tracking table.
 
 ### Where we are
-- **Glossary covers N3.1–N3.55** (1189 entries as of 2026-04-29)
-- **Full-Coverage Rescan: N3.1–N3.48 complete (48/55)** — N3.49–N3.55 remaining
+- **Glossary covers N3.1–N3.55** (1193 entries as of 2026-04-29)
+- **Full-Coverage Rescan: N3.1–N3.49 complete (49/55)** — N3.50–N3.55 remaining
 - **After rescan:** continue with chunks 7–8 (N3.56–N3.86) using full-coverage protocol from the start
 
 ### Full-coverage rescan progress (N3.1–N3.55)
 | Status | Lessons | Count |
 |---|---|---|
-| ✅ Rescanned | N3.1–N3.48 | 48 |
-| Remaining | N3.49–N3.55 | 7 |
+| ✅ Rescanned | N3.1–N3.49 | 49 |
+| Remaining | N3.50–N3.55 | 6 |
 
 **Notable fixes / relocations from rescan so far:**
 - v_zangyou (残業): N3.77 → N3.1 (業 is N4.36, not N3.77)

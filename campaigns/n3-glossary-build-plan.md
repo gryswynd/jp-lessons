@@ -183,7 +183,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.46 | 打折抜押 | ✅ Rescanned (12 new incl. 値打ち deferral resolution from N3.41) |
 | N3.47 | 投抱捕掛 | ✅ Rescanned (7 new incl. 出掛ける vocab debt + 抱負 from 6a candidates; 投票 and 逮捕 deleted (defer N1 — 票/逮 are N1)) |
 | N3.48 | 指探支放 | ✅ Rescanned (5 new + v_houchi stale-matches fix; 指輪/支援/指導/探検 deleted (defer N2 — partner kanji is N2)) |
-| N3.49 | 吸吹払閉 | Partial (2 added, needs full rescan) |
+| N3.49 | 吸吹払閉 | ✅ Rescanned (4 new + v_kokyuu note fix) |
 | N3.50 | 確認調示 | Not started |
 | N3.51 | 記表解観 | Partial (2 added, needs full rescan) |
 | N3.52 | 伝告報誤 | Partial (4 added, needs full rescan) |

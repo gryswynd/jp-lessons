@@ -3862,7 +3862,7 @@
       "matches": [
         "呼きゅう"
       ],
-      "notes": "呼 (N3.21) + 吸 (N3.49 gap). 呼吸する = to breathe. 深呼吸 = deep breath."
+      "notes": "呼 (N3.21) + 吸 (N3.49). 呼吸する = to breathe. 深呼吸 = deep breath."
     },
     {
       "id": "k_shi_4",
@@ -12543,6 +12543,47 @@
       "verb_class": "godan",
       "lesson_ids": "N3.48",
       "notes": "手 (N5) + 放 (N3.48). Compound verb."
+    },
+    {
+      "id": "v_shiharau",
+      "surface": "支払う",
+      "reading": "しはらう",
+      "meaning": "to pay",
+      "type": "vocab",
+      "gtype": "godan",
+      "verb_class": "godan",
+      "lesson_ids": "N3.49",
+      "notes": "支 (N3.48) + 払 (N3.49). Verb pair to 支払い."
+    },
+    {
+      "id": "v_maebarai",
+      "surface": "前払い",
+      "reading": "まえばらい",
+      "meaning": "advance payment / prepaid",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.49",
+      "notes": "前 (N5) + 払 (N3.49)."
+    },
+    {
+      "id": "v_atobarai",
+      "surface": "後払い",
+      "reading": "あとばらい",
+      "meaning": "deferred payment / pay later",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.49",
+      "notes": "後 (N5) + 払 (N3.49)."
+    },
+    {
+      "id": "v_kaihei",
+      "surface": "開閉",
+      "reading": "かいへい",
+      "meaning": "opening and closing",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.49",
+      "notes": "開 (N4) + 閉 (N3.49). JLPT N3."
     }
   ]
 }
