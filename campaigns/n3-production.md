@@ -91,7 +91,7 @@ Build the N3 level from the ground up: finalize the vocabulary roadmap, create a
 | Content type | Exists | Notes |
 |---|---|---|
 | Vocabulary roadmap | **Locked** | `N3-kanji-lesson-plan.md` — 86 lessons, 348 kanji |
-| Glossary | **In progress** | `glossary.N3.json` — 970 entries covering N3.1–N3.55. Full-coverage rescan of N3.1–N3.55 required before chunks 7–8 |
+| Glossary | **In progress** | `glossary.N3.json` — 1201 entries covering N3.1–N3.55 (rescan complete). Chunks 7–8 (N3.56–N3.86) remaining |
 | Grammar (G32–G49) | 18/18 JSON files exist | **Empty stubs** (title + meta + sections:[]) — not built, contrary to previous note |
 | Content lessons | 0 | No N3.X lesson files |
 | Reviews | 0 | No review files |
@@ -113,10 +113,10 @@ Chunked into 8 batches with approval gates. See plan: `campaigns/n3-glossary-bui
 | 4a | N3.27–N3.32 | 24* | 87 (24k + 63v) | Approved |
 | 4b | N3.33–N3.36 | 16 | 82 (16k + 66v) | Approved |
 | 5a | N3.37–N3.40 | 16 | 77 (16k + 61v) | Approved |
-| 5b | N3.41–N3.44 | 16 | 72+9 rescan (16k + 65v) | Approved + partial rescan |
-| 6a | N3.45–N3.48 | 16 | 67 (16k + 51v) | Approved (needs full rescan) |
-| 6b | N3.49–N3.52 | 16 | 67+8 rescan (16k + 59v) | Pending approval + partial rescan |
-| 6c | N3.53–N3.55 | 12 | 39+7 rescan (12k + 34v) | Pending approval + partial rescan |
+| 5b | N3.41–N3.44 | 16 | 72+9 rescan (16k + 65v) | Approved + rescanned |
+| 6a | N3.45–N3.48 | 16 | 67 (16k + 51v) | Approved + rescanned |
+| 6b | N3.49–N3.52 | 16 | 67+8 rescan (16k + 59v) | Approved + rescanned |
+| 6c | N3.53–N3.55 | 12 | 39+7 rescan (12k + 34v) | Approved + rescanned |
 | 7 | N3.56–N3.70 | 61 | ~210 est. | Not started |
 | 8 | N3.71–N3.86 | 64 | ~220 est. | Not started |
 
@@ -126,7 +126,7 @@ Chunked into 8 batches with approval gates. See plan: `campaigns/n3-glossary-bui
 
 **Rescan round 3 (24 entries, 2026-04-22):** User identified N3.55 was too light (missing 観察力, 警備員). Partial rescan of chunks 5b/6b/6c with 42-partner shortlist found 24 more entries (9+8+7). Also applied 2 matches[] fixes (v_shiharai, v_shiji). User then identified root cause: the 42-partner shortlist only covers 15% of the N5+N4 kanji set. **Full-coverage rescan of ALL N3 lessons (N3.1–N3.55) required** using the complete 286-kanji N5+N4 set. See plan file for updated protocol and per-lesson tracking table.
 
-**6a candidates (NOT YET APPLIED — superseded by full rescan):** A partial scan of 6a (N3.45–N3.48) found 23 candidates. High-priority ones include: 支配 (しはい, control), 投稿 (とうこう, posting), 抱負 (ほうふ, ambition), 抜群 (ばつぐん, outstanding), 折り紙 (おりがみ, origami), 探偵 (たんてい, detective), 指名 (しめい, nomination). These will be re-evaluated during the full-coverage rescan — do not apply from this list.
+**6a candidates (resolved during full rescan):** Of the 23 candidates from the partial 6a scan, the following were applied during the N3.45–N3.48 full-coverage rescan: 支配 (N3.48), 抱負 (N3.47), 折り紙 (N3.46), 指名 → v_shimei_2 (N3.48). Skipped: 投稿 (matches needed), 抜群 (群 not on plan), 探偵 (matches needed).
 
 ### Policies established during build-out
 
