@@ -185,7 +185,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | N3.48 | 指探支放 | ✅ Rescanned (5 new + v_houchi stale-matches fix; 指輪/支援/指導/探検 deleted (defer N2 — partner kanji is N2)) |
 | N3.49 | 吸吹払閉 | ✅ Rescanned (4 new + v_kokyuu note fix) |
 | N3.50 | 確認調示 | ✅ Rescanned (3 new + v_shiji note fix; 示 gap resolves) |
-| N3.51 | 記表解観 | Partial (2 added, needs full rescan) |
+| N3.51 | 記表解観 | ✅ Rescanned (記録 deleted (defer N2 — 録 is N2)) |
 | N3.52 | 伝告報誤 | Partial (4 added, needs full rescan) |
 | N3.53 | 談論議識 | Partial (3 added, needs full rescan) |
 | N3.54 | 礼訪招迎 | Not started |
