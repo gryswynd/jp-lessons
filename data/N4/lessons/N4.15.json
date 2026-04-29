@@ -204,8 +204,7 @@
             "v_shinu",
             "v_byoushi",
             "v_shisha",
-            "v_shinin",
-            "v_shigo"
+            "v_shinin"
           ]
         }
       ]
@@ -242,7 +241,6 @@
             "v_byoushi",
             "v_shisha",
             "v_shinin",
-            "v_shigo",
             "v_mono_2",
             "v_tsukareru"
           ]
@@ -1283,29 +1281,6 @@
               "id": "v_iku",
               "form": "plain_desire_tai"
             },
-            "g_desu"
-          ]
-        },
-        {
-          "kind": "mcq",
-          "q": "「グッド」は もう 使いません。これは ________ です。",
-          "choices": [
-            "死語",
-            "死者",
-            "死人",
-            "病死"
-          ],
-          "answer": "死語",
-          "terms": [
-            "p_wa",
-            "v_mou",
-            {
-              "id": "v_tsukau",
-              "form": "polite_negative"
-            },
-            "v_kore",
-            "p_wa",
-            "v_shigo",
             "g_desu"
           ]
         },
