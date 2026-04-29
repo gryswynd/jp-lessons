@@ -11,15 +11,15 @@
 **For the next session:** Read this campaign file + the plan at `campaigns/n3-glossary-build-plan.md`. The plan contains the full Exhaustive Vocab Scan protocol (updated 2026-04-22), Grammar→Host-Lesson mapping, ID collision rules, managed kana-gap policies, per-chunk workflow, and the full-coverage rescan tracking table.
 
 ### Where we are
-- **Glossary covers N3.1–N3.55** (1198 entries as of 2026-04-29)
-- **Full-Coverage Rescan: N3.1–N3.54 complete (54/55)** — N3.55 remaining
+- **Glossary covers N3.1–N3.55** (1201 entries as of 2026-04-29)
+- **Full-Coverage Rescan: N3.1–N3.55 COMPLETE (55/55)** ✅ — ready for chunks 7–8 (N3.56–N3.86)
 - **After rescan:** continue with chunks 7–8 (N3.56–N3.86) using full-coverage protocol from the start
 
 ### Full-coverage rescan progress (N3.1–N3.55)
 | Status | Lessons | Count |
 |---|---|---|
-| ✅ Rescanned | N3.1–N3.54 | 54 |
-| Remaining | N3.55 | 1 |
+| ✅ Rescanned | N3.1–N3.55 | 55 |
+| Remaining | — | 0 |
 
 **Notable fixes / relocations from rescan so far:**
 - v_zangyou (残業): N3.77 → N3.1 (業 is N4.36, not N3.77)
@@ -44,6 +44,7 @@
   - v_touhyou (投票) — 票 N1 (deleted at N3.47 rescan)
   - v_taiho (逮捕) — 逮 N1 (deleted at N3.47 rescan)
   - v_kangei (歓迎) — 歓 N1 (deleted at N3.54 rescan)
+  - v_saiban (裁判) — 裁 N1 (deleted at N3.55 rescan)
 - Deletions (deferred to N2 — partner kanji is N2-level):
   - v_kyousou (競争) — 競 N2 (deleted at N3.45 rescan; will be re-added at N2)
   - v_yubiwa (指輪) — 輪 N2 (deleted at N3.48 rescan)

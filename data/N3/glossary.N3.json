@@ -1800,7 +1800,7 @@
       "matches": [
         "犯ざい"
       ],
-      "notes": "犯 (N3.11) + 罪 (N3.55). Write as 犯ざい until N3.55. 犯罪を犯す = to commit a crime. 犯罪者 = criminal (者 N4). 犯罪率 = crime rate."
+      "notes": "犯 (N3.11) + 罪 (N3.55). 犯罪を犯す = to commit a crime. 犯罪者 = criminal (者 N4). 犯罪率 = crime rate."
     },
     {
       "id": "v_tatakai",
@@ -9747,19 +9747,6 @@
       "notes": "判 (N3.55) + 決 (N3.29)."
     },
     {
-      "id": "v_saiban",
-      "surface": "裁判",
-      "reading": "さいばん",
-      "meaning": "trial / court case",
-      "type": "vocab",
-      "gtype": "noun",
-      "lesson_ids": "N3.55",
-      "matches": [
-        "さい判"
-      ],
-      "notes": "裁 (not taught) + 判 (N3.55). Common — managed kana gap."
-    },
-    {
       "id": "v_suikomu",
       "surface": "吸い込む",
       "reading": "すいこむ",
@@ -12625,6 +12612,46 @@
       "gtype": "noun_suru",
       "lesson_ids": "N3.54",
       "notes": "送 (N4) + 迎 (N3.54)."
+    },
+    {
+      "id": "v_keihou",
+      "surface": "警報",
+      "reading": "けいほう",
+      "meaning": "alarm / warning",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.55",
+      "notes": "警 (N3.55) + 報 (N3.52). Deferred from N3.52."
+    },
+    {
+      "id": "v_yuuzai",
+      "surface": "有罪",
+      "reading": "ゆうざい",
+      "meaning": "guilty (verdict)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.55",
+      "notes": "有 (N4) + 罪 (N3.55)."
+    },
+    {
+      "id": "v_hanko",
+      "surface": "判子",
+      "reading": "はんこ",
+      "meaning": "seal / personal stamp",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.55",
+      "notes": "判 (N3.55) + 子 (N5). Daily-use Japanese culture."
+    },
+    {
+      "id": "v_hanmei",
+      "surface": "判明",
+      "reading": "はんめい",
+      "meaning": "becoming clear / coming to light",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.55",
+      "notes": "判 (N3.55) + 明 (N4)."
     }
   ]
 }
