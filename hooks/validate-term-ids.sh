@@ -11,7 +11,8 @@ FILE=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 
 [[ -z "$FILE" ]] && exit 0
 [[ ! "$FILE" =~ \.(json)$ ]] && exit 0
-[[ "$FILE" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]] && exit 0
+[[ "$FILE" =~ (manifest|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]] && exit 0
+# Glossary files: only validate manual:true examples (handled below).
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
@@ -108,7 +109,16 @@ def walk(obj, path="root", in_kanji_grid=False):
         for i, item in enumerate(obj):
             walk(item, f"{path}[{i}]", in_kanji_grid)
 
-walk(content)
+is_glossary = 'glossary' in file_path
+if is_glossary:
+    sys.path.insert(0, os.path.join(repo_root, 'hooks'))
+    from lib_glossary_examples import iter_manual_examples
+    for idx, entry, example, lesson_id in iter_manual_examples(content):
+        terms = example.get('terms', [])
+        if isinstance(terms, list):
+            check_terms(terms, f"entries[{idx}].example.terms", in_kanji_grid=False)
+else:
+    walk(content)
 
 if errors:
     print(f"TERM ID ERRORS in {os.path.basename(file_path)}:", file=sys.stderr)

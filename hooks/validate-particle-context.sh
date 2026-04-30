@@ -10,12 +10,16 @@ FILE=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 
 [[ -z "$FILE" ]] && exit 0
 [[ ! "$FILE" =~ \.(json)$ ]] && exit 0
-[[ "$FILE" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]] && exit 0
+[[ "$FILE" =~ (manifest|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]] && exit 0
+# Glossary files: only validate manual:true examples (handled below).
 
-python3 - "$FILE" << 'PYEOF'
+REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+
+python3 - "$FILE" "$REPO_ROOT" << 'PYEOF'
 import json, re, sys, os
 
 file_path = sys.argv[1]
+repo_root = sys.argv[2]
 
 try:
     with open(file_path) as f:
@@ -107,7 +111,16 @@ def walk(obj, path="root"):
         for i, item in enumerate(obj):
             walk(item, f"{path}[{i}]")
 
-walk(content)
+if 'glossary' in file_path:
+    sys.path.insert(0, os.path.join(repo_root, 'hooks'))
+    from lib_glossary_examples import iter_manual_examples
+    for idx, entry, example, e_lesson in iter_manual_examples(content):
+        jp = example.get('jp', '')
+        terms = example.get('terms', [])
+        path_g = f"entries[{idx}].example ({entry.get('id','?')})"
+        check_line(jp, terms, path_g)
+else:
+    walk(content)
 
 if errors:
     hard_errors = [e for e in errors if 'ERROR' in e]

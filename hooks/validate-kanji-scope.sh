@@ -11,17 +11,19 @@ FILE=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 
 [[ -z "$FILE" ]] && exit 0
 [[ ! "$FILE" =~ \.(json)$ ]] && exit 0
-[[ "$FILE" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]] && exit 0
+[[ "$FILE" =~ (manifest|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]] && exit 0
+# Glossary files: only validate manual:true examples (handled below).
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 MANIFEST="$REPO_ROOT/manifest.json"
 [[ ! -f "$MANIFEST" ]] && exit 0
 
-python3 - "$FILE" "$MANIFEST" << 'PYEOF'
+python3 - "$FILE" "$MANIFEST" "$REPO_ROOT" << 'PYEOF'
 import json, re, sys, os
 
 file_path = sys.argv[1]
 manifest_path = sys.argv[2]
+repo_root = sys.argv[3]
 
 try:
     with open(file_path) as f:
@@ -29,6 +31,51 @@ try:
     with open(manifest_path) as f:
         manifest = json.load(f)
 except:
+    sys.exit(0)
+
+level_order = {'N5': 0, 'N4': 1, 'N3': 2, 'N2': 3, 'N1': 4}
+
+def build_taught_kanji_for(target_lesson_id):
+    """Build the set of kanji taught at or before target_lesson_id."""
+    lm = re.match(r'(N\d+)\.(\d+)', target_lesson_id or '')
+    if not lm:
+        return None
+    tl, tn = lm.group(1), int(lm.group(2))
+    to = level_order.get(tl, 0)
+    s = set()
+    for lk in ['N5', 'N4', 'N3', 'N2', 'N1']:
+        for lesson in manifest.get('data', {}).get(lk, {}).get('lessons', []):
+            lid_check = lesson.get('id', '')
+            lmm = re.match(r'(N\d+)\.(\d+)', lid_check)
+            if not lmm:
+                continue
+            ll, ln = lmm.group(1), int(lmm.group(2))
+            lo = level_order.get(ll, 0)
+            if lo < to or (lo == to and ln <= tn):
+                s.update(lesson.get('kanji', []))
+    return s
+
+# Glossary mode: validate manual:true examples per-entry
+if 'glossary' in file_path:
+    sys.path.insert(0, os.path.join(repo_root, 'hooks'))
+    from lib_glossary_examples import iter_manual_examples
+    cjk_pattern_g = re.compile(r'[一-鿿]')
+    g_violations = []
+    for idx, entry, example, e_lesson in iter_manual_examples(content):
+        taught = build_taught_kanji_for(e_lesson)
+        if taught is None:
+            continue
+        jp = example.get('jp', '') or ''
+        for char in cjk_pattern_g.findall(jp):
+            if char not in taught:
+                g_violations.append((char, f"entries[{idx}].example.jp ({entry.get('id','?')}, scope {e_lesson})", jp[:60]))
+    if g_violations:
+        print(f"KANJI SCOPE VIOLATION in {os.path.basename(file_path)}:", file=sys.stderr)
+        for char, p, ctx in g_violations[:10]:
+            print(f"  ✗ '{char}' at {p}: {ctx}...", file=sys.stderr)
+        if len(g_violations) > 10:
+            print(f"  ... and {len(g_violations) - 10} more", file=sys.stderr)
+        sys.exit(1)
     sys.exit(0)
 
 # Determine lesson scope
