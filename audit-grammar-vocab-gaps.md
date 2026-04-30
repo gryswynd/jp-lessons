@@ -1,6 +1,6 @@
 # Grammar Vocab Gating Audit
 
-Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **23** lessons.
+Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **22** lessons.
 
 ## Target-vocab gaps
 - Missing from unlocking N's vocabList (declaration): **0**
@@ -9,7 +9,7 @@ Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **23** les
 - Misplaced (target term declared in an earlier N lesson): **0**
 
 ## Other gating gaps
-- Late-introduced (term's `lesson_ids` after the gate): **8**
+- Late-introduced (term's `lesson_ids` after the gate): **0**
 - Undeclared introductions (term's `lesson_ids` = gate but not in vocabList, and not a target): **1**
 - Unknown term ids: **0**
 - Character references skipped (no `lesson_ids` in `shared/characters.json`): **42**
@@ -85,9 +85,6 @@ _file:_ `data/N5/grammar/G2.json`
 - `v_anna` — not referenced in story `my-family`, `tanjoubi-no-keeki`
 - `v_donna` — not referenced in story `my-family`, `tanjoubi-no-keeki`
 
-**Other terms in G referenced before introduction (1):**
-- `v_namae` — introduced in `N5.9` (after gate `N5.1`)
-
 ## G3 — Core Particles I: は, が, の, か, を
 
 _unlocksAfter:_ `G1` → gating N lesson: `N5.1`
@@ -102,10 +99,6 @@ _file:_ `data/N5/grammar/G3.json`
 - `p_ga` — not referenced in story `my-family`
 - `p_ka` — not referenced in story `my-family`, `tanjoubi-no-keeki`
 - `p_wo` — not referenced in story `tanjoubi-no-keeki`
-
-**Other terms in G referenced before introduction (2):**
-- `v_nihongo` — introduced in `N5.12` (after gate `N5.1`)
-- `v_oshieru` — introduced in `N4.24` (after gate `N5.1`)
 
 ## G4 — Core Particles II: も, と, や, から, まで, に (time)
 
@@ -143,18 +136,6 @@ _file:_ `data/N5/grammar/G5.json`
 
 **Missing reinforcement in window stories (1):**
 - `v_iru` — not referenced in story `kazoku-ga-kimasu`
-
-## G8 — て-form — Connecting, Requesting & Commanding
-
-_unlocksAfter:_ `G7` → gating N lesson: `N5.5`
-_targetVocab:_ _(not yet curated)_
-_reinforcement window:_ `N5.6`, `N5.7` + stories: `kazoku-ga-kimasu`
-_file:_ `data/N5/grammar/G8.json`
-
-**Other terms in G referenced before introduction (3):**
-- `v_hanasu` — introduced in `N5.13` (after gate `N5.5`)
-- `v_kaku` — introduced in `N5.13` (after gate `N5.5`)
-- `v_kiku` — introduced in `N5.18` (after gate `N5.5`)
 
 ## G9 — ている・たいです・ましょう — Progressive, Desire & Invitation
 
@@ -341,10 +322,6 @@ _file:_ `data/N4/grammar/G20.json`
 **Missing reinforcement in window stories (2):**
 - `p_noni` — not referenced in story `hashiru-asa`
 - `p_shi` — not referenced in story `hashiru-asa`
-
-**Other terms in G referenced before introduction (2):**
-- `v_benkyou` — introduced in `N4.18` (after gate `N4.14`)
-- `v_shiken` — introduced in `N4.24` (after gate `N4.14`)
 
 ## G21 — Conversation Mechanics — Hesitation, Aizuchi & Discourse Markers
 
