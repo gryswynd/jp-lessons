@@ -3,7 +3,7 @@
 Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **28** lessons.
 
 ## Target-vocab gaps
-- Missing from unlocking N's vocabList (declaration): **74**
+- Missing from unlocking N's vocabList (declaration): **76**
 - Missing reinforcement in next 2 N lessons: **88**
 - Missing reinforcement in window stories: **91**
 - Misplaced (target term declared in an earlier N lesson): **35**
@@ -140,6 +140,10 @@ _unlocksAfter:_ `N5.5` → gating N lesson: `N5.5`
 _targetVocab:_ `p_ni`, `p_de`, `p_e`, `v_aru`, `v_iru`
 _reinforcement window:_ `N5.6`, `N5.7` + stories: `kazoku-ga-kimasu`
 _file:_ `data/N5/grammar/G5.json`
+
+**Missing from N5.5 vocabList — declare here (2):**
+- `v_aru`
+- `v_iru`
 
 **Missing reinforcement in next 2 N lessons (3):**
 - `p_ni` — not referenced in `N5.7`
