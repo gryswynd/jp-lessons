@@ -10,7 +10,8 @@ FILE=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 
 [[ -z "$FILE" ]] && exit 0
 [[ ! "$FILE" =~ \.(json)$ ]] && exit 0
-[[ "$FILE" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]] && exit 0
+[[ "$FILE" =~ (manifest|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]] && exit 0
+# Glossary files: only validate manual:true examples (handled below).
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
@@ -27,6 +28,7 @@ try:
 except:
     sys.exit(0)
 
+is_glossary = 'glossary' in file_path
 content_id = content.get('id', '') or content.get('lesson', '')
 lesson_id = content_id
 if content.get('type') == 'grammar':
@@ -34,7 +36,7 @@ if content.get('type') == 'grammar':
 elif content_id.startswith('compose.') and content.get('lesson'):
     # Compose files: scope ceiling is the lesson they belong to (e.g. compose.N5.2 → N5.2)
     lesson_id = content['lesson']
-if not lesson_id:
+if not is_glossary and not lesson_id:
     sys.exit(0)
 
 conj_path = os.path.join(repo_root, 'conjugation_rules.json')
@@ -101,7 +103,35 @@ def check_forms(obj, path="root"):
             else:
                 check_forms(item, f"{path}[{i}]")
 
-check_forms(content)
+if is_glossary:
+    sys.path.insert(0, os.path.join(repo_root, 'hooks'))
+    from lib_glossary_examples import iter_manual_examples
+    for idx, entry, example, e_lesson in iter_manual_examples(content):
+        e_file_order = lesson_order.get(e_lesson) or 0
+        # For each example we run check_forms with a per-entry scope_ceiling.
+        # We close over scope_ceiling via a fresh check fn:
+        e_scope = max(lesson_order.get(e_lesson) or 0, e_file_order)
+        terms = example.get('terms', [])
+        if not isinstance(terms, list):
+            continue
+        # Inline form check using e_scope (mirrors check_forms term-list pass)
+        for i, term in enumerate(terms):
+            tp = f"entries[{idx}].example.terms[{i}] ({entry.get('id','?')}, scope {e_lesson})"
+            if isinstance(term, dict) and term.get('form'):
+                form = term['form']
+                if form in conj_rules:
+                    introduced = conj_rules[form].get('introducedIn', '')
+                    if introduced:
+                        i_ord = lesson_order.get(introduced)
+                        if i_ord is not None and i_ord > e_scope:
+                            errors.append(f"  '{form}' (introducedIn: {introduced}) at {tp} — out of scope for {e_lesson}")
+            elif isinstance(term, str) and term in particle_scope:
+                introduced = particle_scope[term]
+                i_ord = lesson_order.get(introduced)
+                if i_ord is not None and i_ord > e_scope:
+                    errors.append(f"  particle '{term}' (introducedIn: {introduced}) at {tp} — out of scope for {e_lesson}")
+else:
+    check_forms(content)
 
 if errors:
     print(f"GRAMMAR SCOPE VIOLATION in {os.path.basename(file_path)}:", file=sys.stderr)

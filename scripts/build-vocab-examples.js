@@ -11,13 +11,24 @@
  * reading.passage[], and conversation.lines[] — only items with a jp
  * string and a non-empty terms[] array.
  *
- * Fields written to each vocab entry:
+ * Fields written to each vocab entry (auto-generated):
  *   example: {
  *     jp: string,
  *     en: string,
  *     lessonId: string,
  *     sectionType: 'warmup' | 'reading' | 'conversation'
  *   }
+ *
+ * Hand-written fallback examples may be present on entries that have no
+ * lesson sentence covering them. They look like:
+ *   example: {
+ *     jp: string,
+ *     en: string,
+ *     manual: true,
+ *     terms: [...]   // for Phase B clickable chips
+ *   }
+ * These are preserved across rebuilds. An auto-match (when one becomes
+ * available) overwrites the manual fallback.
  *
  * Run: node scripts/build-vocab-examples.js
  */
@@ -144,7 +155,8 @@ function main() {
       if (!picked) {
         summary.noMatch++;
         levelNoMatch++;
-        if (entry.example) delete entry.example;
+        // Preserve hand-written examples marked manual:true; otherwise drop.
+        if (entry.example && !entry.example.manual) delete entry.example;
         continue;
       }
 

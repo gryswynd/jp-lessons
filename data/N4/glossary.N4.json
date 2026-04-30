@@ -1542,9 +1542,24 @@
       "meaning": "physical strength; stamina",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N4.6",
-      "notes": "体 (N4.6) + 力 (N4.3). Also used as RPG/game stat.",
-      "readingAlign": "体(たい)力(りょく)"
+      "lesson_ids": "N4.18",
+      "notes": "体 (N4.12) + 力 (N4.18). Also used as RPG/game stat.",
+      "readingAlign": "体(たい)力(りょく)",
+      "example": {
+        "jp": "私は 体力が ありません。",
+        "en": "I have no stamina.",
+        "manual": true,
+        "terms": [
+          "v_watashi",
+          "p_wa",
+          "v_tairyoku",
+          "p_ga",
+          {
+            "id": "v_aru",
+            "form": "polite_negative"
+          }
+        ]
+      }
     },
     {
       "id": "k_ane",
@@ -2197,7 +2212,21 @@
       "notes": "",
       "lesson_ids": "N4.9",
       "reading": "べつに",
-      "readingAlign": "別(べつ)に"
+      "readingAlign": "別(べつ)に",
+      "example": {
+        "jp": "別に、好きでは ありません。",
+        "en": "Not particularly — I don't like it.",
+        "manual": true,
+        "terms": [
+          "v_betsuni",
+          "v_suki",
+          "p_dewa",
+          {
+            "id": "v_aru",
+            "form": "polite_negative"
+          }
+        ]
+      }
     },
     {
       "id": "v_genki",
@@ -2441,17 +2470,6 @@
       "reading": "うつ",
       "meaning": "reflect / projection",
       "notes": ""
-    },
-    {
-      "id": "v_ei",
-      "surface": "英",
-      "meaning": "UK",
-      "type": "vocab",
-      "gtype": "noun",
-      "notes": "",
-      "lesson_ids": "N4.10",
-      "reading": "えい",
-      "readingAlign": "英(えい)"
     },
     {
       "id": "v_eiga",
@@ -2943,7 +2961,24 @@
       "lesson_ids": "N4.11",
       "reading": "うつす",
       "verb_class": "godan",
-      "readingAlign": "写(うつ)す"
+      "readingAlign": "写(うつ)す",
+      "example": {
+        "jp": "私は 友だちの ノートを 写しました。",
+        "en": "I copied my friend's notebook.",
+        "manual": true,
+        "terms": [
+          "v_watashi",
+          "p_wa",
+          "v_tomodachi",
+          "p_no",
+          "v_nooto",
+          "p_wo",
+          {
+            "id": "v_utsusu",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_toru",
@@ -3177,7 +3212,21 @@
       "notes": "Lit. 'hand neck'.",
       "lesson_ids": "N4.12",
       "reading": "てくび",
-      "readingAlign": "手(て)首(くび)"
+      "readingAlign": "手(て)首(くび)",
+      "example": {
+        "jp": "手首が とても いたいです。",
+        "en": "My wrist hurts a lot.",
+        "manual": true,
+        "terms": [
+          "v_tekubi",
+          "p_ga",
+          "v_totemo",
+          {
+            "id": "v_itai",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_yuumei",
@@ -3332,17 +3381,6 @@
         "lessonId": "N4.13",
         "sectionType": "conversation"
       }
-    },
-    {
-      "id": "v_karukuchi",
-      "surface": "軽口",
-      "meaning": "witty remark / talkative",
-      "type": "vocab",
-      "gtype": "noun",
-      "notes": "",
-      "lesson_ids": "N4.13",
-      "reading": "かるくち",
-      "readingAlign": "軽(かる)口(くち)"
     },
     {
       "id": "v_kashu",
@@ -3644,18 +3682,22 @@
       "notes": "",
       "lesson_ids": "N4.14",
       "reading": "えきいん",
-      "readingAlign": "駅(えき)員(いん)"
-    },
-    {
-      "id": "v_gakuin_mu",
-      "surface": "楽員",
-      "meaning": "band member",
-      "type": "vocab",
-      "gtype": "noun",
-      "notes": "",
-      "lesson_ids": "N4.14",
-      "reading": "がくいん",
-      "readingAlign": "楽(がく)員(いん)"
+      "readingAlign": "駅(えき)員(いん)",
+      "example": {
+        "jp": "駅員に 道を 聞きました。",
+        "en": "I asked the station attendant for directions.",
+        "manual": true,
+        "terms": [
+          "v_ekiin",
+          "p_ni",
+          "v_michi",
+          "p_wo",
+          {
+            "id": "v_kiku",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_gyouji",
@@ -3896,18 +3938,6 @@
       }
     },
     {
-      "id": "v_tsukaeru",
-      "surface": "仕える",
-      "meaning": "to serve",
-      "type": "vocab",
-      "gtype": "verb",
-      "notes": "",
-      "lesson_ids": "N4.14",
-      "reading": "つかえる",
-      "verb_class": "ichidan",
-      "readingAlign": "仕(つか)える"
-    },
-    {
       "id": "v_youbi",
       "surface": "曜日",
       "meaning": "day of the week",
@@ -3916,7 +3946,22 @@
       "notes": "",
       "lesson_ids": "N4.14",
       "reading": "ようび",
-      "readingAlign": "曜(よう)日(び)"
+      "readingAlign": "曜(よう)日(び)",
+      "example": {
+        "jp": "好きな 曜日は 土曜日です。",
+        "en": "My favorite day of the week is Saturday.",
+        "manual": true,
+        "terms": [
+          {
+            "id": "v_suki",
+            "form": "attributive_na"
+          },
+          "v_youbi",
+          "p_wa",
+          "v_doyoubi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_koto",
@@ -4077,7 +4122,22 @@
       "notes": "",
       "lesson_ids": "N4.15",
       "reading": "がくいん",
-      "readingAlign": "学(がく)院(いん)"
+      "readingAlign": "学(がく)院(いん)",
+      "example": {
+        "jp": "あの 学院は とても 有名です。",
+        "en": "That academy is very famous.",
+        "manual": true,
+        "terms": [
+          "v_ano",
+          "v_gakuin",
+          "p_wa",
+          "v_totemo",
+          {
+            "id": "v_yuumei",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_gakusha",
@@ -4173,7 +4233,24 @@
       "notes": "Often used for 'person' in a relative clause or humble context.",
       "lesson_ids": "N4.15",
       "reading": "もの",
-      "readingAlign": "者(もの)"
+      "readingAlign": "者(もの)",
+      "example": {
+        "jp": "私は 中国から 来た 者です。",
+        "en": "I am someone who came from China.",
+        "manual": true,
+        "terms": [
+          "v_watashi",
+          "p_wa",
+          "v_chuugoku",
+          "p_kara",
+          {
+            "id": "v_kuru",
+            "form": "plain_past"
+          },
+          "v_mono_2",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_nomigusuri",
@@ -4210,17 +4287,6 @@
       }
     },
     {
-      "id": "v_shigo",
-      "surface": "死語",
-      "meaning": "dead language / obsolete word",
-      "type": "vocab",
-      "gtype": "noun",
-      "notes": "",
-      "lesson_ids": "N4.15",
-      "reading": "しご",
-      "readingAlign": "死(し)語(ご)"
-    },
-    {
       "id": "v_shinin",
       "surface": "死人",
       "meaning": "dead person / deceased",
@@ -4229,7 +4295,24 @@
       "notes": "",
       "lesson_ids": "N4.15",
       "reading": "しにん",
-      "readingAlign": "死(し)人(にん)"
+      "readingAlign": "死(し)人(にん)",
+      "example": {
+        "jp": "新聞に 死人の 名前が 出ました。",
+        "en": "The names of the deceased appeared in the newspaper.",
+        "manual": true,
+        "terms": [
+          "v_shinbun",
+          "p_ni",
+          "v_shinin",
+          "p_no",
+          "v_namae",
+          "p_ga",
+          {
+            "id": "v_deru",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_shinu",
@@ -4375,7 +4458,19 @@
       "notes": "",
       "lesson_ids": "N4.16",
       "reading": "ぎんいろ",
-      "readingAlign": "銀(ぎん)色(いろ)"
+      "readingAlign": "銀(ぎん)色(いろ)",
+      "example": {
+        "jp": "この 車は 銀色です。",
+        "en": "This car is silver.",
+        "manual": true,
+        "terms": [
+          "v_kono",
+          "v_kuruma",
+          "p_wa",
+          "v_giniro",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_ginkou",
@@ -4468,17 +4563,6 @@
       }
     },
     {
-      "id": "v_kyorai",
-      "surface": "去来",
-      "meaning": "coming and going / recurring",
-      "type": "vocab",
-      "gtype": "noun",
-      "notes": "Often used for feelings or memories coming and going.",
-      "lesson_ids": "N4.16",
-      "reading": "きょらい",
-      "readingAlign": "去(きょ)来(らい)"
-    },
-    {
       "id": "v_saru",
       "surface": "去る",
       "meaning": "to leave / to pass",
@@ -4505,7 +4589,24 @@
       "notes": "Formal term.",
       "lesson_ids": "N4.16",
       "reading": "しきょ",
-      "readingAlign": "死(し)去(きょ)"
+      "readingAlign": "死(し)去(きょ)",
+      "example": {
+        "jp": "去年、母の 父が 死去 しました。",
+        "en": "Last year, my mother's father passed away.",
+        "manual": true,
+        "terms": [
+          "v_kyonen",
+          "v_haha",
+          "p_no",
+          "v_chichi",
+          "p_ga",
+          "v_shikyo",
+          {
+            "id": "v_suru",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_shudou",
@@ -4533,7 +4634,20 @@
       "notes": "",
       "lesson_ids": "N4.16",
       "reading": "すいぎん",
-      "readingAlign": "水(すい)銀(ぎん)"
+      "readingAlign": "水(すい)銀(ぎん)",
+      "example": {
+        "jp": "水銀の 色は 銀色です。",
+        "en": "The color of mercury is silver.",
+        "manual": true,
+        "terms": [
+          "v_suigin",
+          "p_no",
+          "v_iro",
+          "p_wa",
+          "v_giniro",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_ugoku",
@@ -4629,7 +4743,22 @@
       "type": "vocab",
       "gtype": "interjection",
       "lesson_ids": "G21",
-      "notes": "Aizuchi expressing that the speaker has just received new or surprising information. Signals interest and engagement. Neutral-to-casual register."
+      "notes": "Aizuchi expressing that the speaker has just received new or surprising information. Signals interest and engagement. Neutral-to-casual register.",
+      "example": {
+        "jp": "へえ、それは おもしろいですね。",
+        "en": "Oh really? That's interesting.",
+        "manual": true,
+        "terms": [
+          "v_hee",
+          "v_sore",
+          "p_wa",
+          {
+            "id": "v_omoshiroi",
+            "form": "polite_adj"
+          },
+          "p_ne"
+        ]
+      }
     },
     {
       "id": "v_souso",
@@ -4658,7 +4787,19 @@
       "notes": "Discourse restructuring marker. Signals that what follows may contradict expectations or reveal something new. 実 unlocks at N3.18; both じつは and 実は tag to this entry via matches[].",
       "matches": [
         "実は"
-      ]
+      ],
+      "example": {
+        "jp": "じつは、私も 日本人です。",
+        "en": "Actually, I'm Japanese too.",
+        "manual": true,
+        "terms": [
+          "v_jitsuwa",
+          "v_watashi",
+          "p_mo",
+          "v_nihonjin",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_tsumari",
@@ -4668,7 +4809,19 @@
       "type": "vocab",
       "gtype": "adverb",
       "lesson_ids": "G21",
-      "notes": "Discourse restructuring marker. Signals a restatement, summary, or simplification of what was previously said. Used when clarifying or getting to the point."
+      "notes": "Discourse restructuring marker. Signals a restatement, summary, or simplification of what was previously said. Used when clarifying or getting to the point.",
+      "example": {
+        "jp": "つまり、明日は 休みです。",
+        "en": "In other words, tomorrow is a day off.",
+        "manual": true,
+        "terms": [
+          "v_tsumari",
+          "v_ashita",
+          "p_wa",
+          "v_yasumi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_nanka",
@@ -4940,7 +5093,30 @@
       "notes": "U-verb. Intransitive.",
       "lesson_ids": "N4.17",
       "reading": "まわる",
-      "readingAlign": "回(まわ)る"
+      "readingAlign": "回(まわ)る",
+      "example": {
+        "jp": "バスは 町の 中を 回って 駅に 帰ります。",
+        "en": "The bus goes around the town and returns to the station.",
+        "manual": true,
+        "terms": [
+          "v_basu",
+          "p_wa",
+          "v_machi",
+          "p_no",
+          "v_naka",
+          "p_wo",
+          {
+            "id": "v_mawaru",
+            "form": "te_form"
+          },
+          "v_eki",
+          "p_ni",
+          {
+            "id": "v_kaeru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_miyako",
@@ -5052,7 +5228,27 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N4.17",
-      "readingAlign": "水(すい)田(でん)"
+      "readingAlign": "水(すい)田(でん)",
+      "example": {
+        "jp": "父は 毎日 水田で 働いて います。",
+        "en": "My father works in the rice paddy every day.",
+        "manual": true,
+        "terms": [
+          "v_chichi",
+          "p_wa",
+          "v_mainichi",
+          "v_suiden",
+          "p_de",
+          {
+            "id": "v_hataraku",
+            "form": "te_form"
+          },
+          {
+            "id": "v_iru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_ta",
@@ -5094,7 +5290,21 @@
       "notes": "Common surname (Lit. 'Rice field by the pond').",
       "lesson_ids": "N4.Final.Review",
       "reading": "いけだ",
-      "readingAlign": "池(いけ)田(だ)"
+      "readingAlign": "池(いけ)田(だ)",
+      "example": {
+        "jp": "池田さんは 私の 友だちです。",
+        "en": "Ikeda-san is my friend.",
+        "manual": true,
+        "terms": [
+          "v_ikeda",
+          "v_san",
+          "p_wa",
+          "v_watashi",
+          "p_no",
+          "v_tomodachi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_tanoshimu",
@@ -5169,7 +5379,21 @@
       "notes": "Common surname (Lit. 'Mountain rice field').",
       "lesson_ids": "N4.17",
       "reading": "やまだ",
-      "readingAlign": "山(やま)田(だ)"
+      "readingAlign": "山(やま)田(だ)",
+      "example": {
+        "jp": "山田さんは 私の 友だちです。",
+        "en": "Yamada-san is my friend.",
+        "manual": true,
+        "terms": [
+          "v_yamada",
+          "v_san",
+          "p_wa",
+          "v_watashi",
+          "p_no",
+          "v_tomodachi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_yoku",
@@ -5486,7 +5710,23 @@
       "gtype": "noun",
       "lesson_ids": "N4.18",
       "notes": "",
-      "readingAlign": "有(ゆう)力(りょく)者(しゃ)"
+      "readingAlign": "有(ゆう)力(りょく)者(しゃ)",
+      "example": {
+        "jp": "この 町の 有力者に 会いました。",
+        "en": "I met an influential person from this town.",
+        "manual": true,
+        "terms": [
+          "v_kono",
+          "v_machi",
+          "p_no",
+          "v_yuuryokusha",
+          "p_ni",
+          {
+            "id": "v_au",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "k_chi_2",
@@ -6321,7 +6561,24 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N4.21",
-      "notes": "Loanword from English 'flea market'. A market where people sell used or secondhand goods."
+      "notes": "Loanword from English 'flea market'. A market where people sell used or secondhand goods.",
+      "example": {
+        "jp": "日曜日に 友だちと フリーマーケットに 行きました。",
+        "en": "On Sunday I went to a flea market with a friend.",
+        "manual": true,
+        "terms": [
+          "v_nichiyoubi",
+          "p_ni",
+          "v_tomodachi",
+          "p_to",
+          "v_furi_maaketto",
+          "p_ni",
+          {
+            "id": "v_iku",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_okyakusan",
@@ -6331,7 +6588,22 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N4.21",
-      "notes": "Polite form of 客 (きゃく). The お- prefix and さん suffix make it polite/honorific. Common in service contexts."
+      "notes": "Polite form of 客 (きゃく). The お- prefix and さん suffix make it polite/honorific. Common in service contexts.",
+      "example": {
+        "jp": "おきゃくさんが お店に 来ました。",
+        "en": "A customer came to the store.",
+        "manual": true,
+        "terms": [
+          "v_okyakusan",
+          "p_ga",
+          "v_omise",
+          "p_ni",
+          {
+            "id": "v_kuru",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_hoka",
@@ -6571,7 +6843,25 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N4.22",
-      "notes": "Used as an example foreign surname (written in katakana). Illustrates how foreign names appear in katakana/romaji in Japanese writing contexts."
+      "notes": "Used as an example foreign surname (written in katakana). Illustrates how foreign names appear in katakana/romaji in Japanese writing contexts.",
+      "example": {
+        "jp": "スミスさんは アメリカから 来た 友だちです。",
+        "en": "Smith-san is a friend who came from America.",
+        "manual": true,
+        "terms": [
+          "v_sumisu",
+          "v_san",
+          "p_wa",
+          "v_america",
+          "p_kara",
+          {
+            "id": "v_kuru",
+            "form": "plain_past"
+          },
+          "v_tomodachi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "k_futo",
@@ -7225,17 +7515,6 @@
       }
     },
     {
-      "id": "v_chuushin2",
-      "surface": "注進",
-      "meaning": "information / report (to a superior)",
-      "type": "vocab",
-      "gtype": "noun_suru",
-      "notes": "Somewhat formal/archaic.",
-      "lesson_ids": "N4.25",
-      "reading": "ちゅうしん",
-      "readingAlign": "注(ちゅう)進(しん)"
-    },
-    {
       "id": "v_eibun",
       "surface": "英文",
       "meaning": "English text / English sentence",
@@ -7251,17 +7530,6 @@
         "lessonId": "N4.25",
         "sectionType": "reading"
       }
-    },
-    {
-      "id": "v_gakkyuu",
-      "surface": "学究",
-      "meaning": "scholar / student",
-      "type": "vocab",
-      "gtype": "noun",
-      "notes": "",
-      "lesson_ids": "N4.25",
-      "reading": "がっきゅう",
-      "readingAlign": "学(がっ)究(きゅう)"
     },
     {
       "id": "v_kenkyuu",
@@ -7306,7 +7574,23 @@
       "notes": "",
       "lesson_ids": "N4.25",
       "reading": "きゅうめい",
-      "readingAlign": "究(きゅう)明(めい)"
+      "readingAlign": "究(きゅう)明(めい)",
+      "example": {
+        "jp": "その 問題の 究明は 大切です。",
+        "en": "Investigation of that problem is important.",
+        "manual": true,
+        "terms": [
+          "v_sono",
+          "v_mondai",
+          "p_no",
+          "v_kyuumei",
+          "p_wa",
+          {
+            "id": "v_taisetsu",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_sakubun",
@@ -7335,7 +7619,23 @@
       "lesson_ids": "N4.25",
       "reading": "そそぐ",
       "verb_class": "godan",
-      "readingAlign": "注(そそ)ぐ"
+      "readingAlign": "注(そそ)ぐ",
+      "example": {
+        "jp": "母は ジュースを ゆっくり 注ぎました。",
+        "en": "My mother slowly poured the juice.",
+        "manual": true,
+        "terms": [
+          "v_haha",
+          "p_wa",
+          "v_juusu",
+          "p_wo",
+          "v_yukkuri",
+          {
+            "id": "v_sosogu",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "k_aku",
@@ -7528,7 +7828,24 @@
       "gtype": "noun",
       "lesson_ids": "N4.26",
       "notes": "",
-      "readingAlign": "正(しょう)体(たい)"
+      "readingAlign": "正(しょう)体(たい)",
+      "example": {
+        "jp": "その 男の 正体は まだ 分かりません。",
+        "en": "The true identity of that man is still unknown.",
+        "manual": true,
+        "terms": [
+          "v_sono",
+          "v_otoko",
+          "p_no",
+          "v_shoutai",
+          "p_wa",
+          "v_mada",
+          {
+            "id": "v_wakaru",
+            "form": "polite_negative"
+          }
+        ]
+      }
     },
     {
       "id": "v_tadashii",
@@ -7669,7 +7986,24 @@
       "gtype": "noun",
       "lesson_ids": "N4.27",
       "notes": "Often used as 合理的 (rational).",
-      "readingAlign": "合(ごう)理(り)"
+      "readingAlign": "合(ごう)理(り)",
+      "example": {
+        "jp": "その 説明には 合理が ありません。",
+        "en": "That explanation has no rationality.",
+        "manual": true,
+        "terms": [
+          "v_sono",
+          "v_setsumei",
+          "p_ni",
+          "p_wa",
+          "v_gouri",
+          "p_ga",
+          {
+            "id": "v_aru",
+            "form": "polite_negative"
+          }
+        ]
+      }
     },
     {
       "id": "v_ichido",
@@ -8066,7 +8400,21 @@
       "gtype": "noun",
       "lesson_ids": "N4.28",
       "notes": "Common surname (Lit. 'Small grove').",
-      "readingAlign": "小(こ)林(ばやし)"
+      "readingAlign": "小(こ)林(ばやし)",
+      "example": {
+        "jp": "小林さんは 私の 先生です。",
+        "en": "Kobayashi-san is my teacher.",
+        "manual": true,
+        "terms": [
+          "v_kobayashi",
+          "v_san",
+          "p_wa",
+          "v_watashi",
+          "p_no",
+          "v_sensei",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_koumon",
@@ -8101,28 +8449,6 @@
         "lessonId": "N4.28",
         "sectionType": "reading"
       }
-    },
-    {
-      "id": "v_mongaikan",
-      "surface": "門外漢",
-      "reading": "もんがいかん",
-      "meaning": "outsider / layman",
-      "type": "vocab",
-      "gtype": "noun",
-      "lesson_ids": "N4.28",
-      "notes": "Someone outside the field of expertise.",
-      "readingAlign": "門(もん)外(がい)漢(かん)"
-    },
-    {
-      "id": "v_monka",
-      "surface": "門下",
-      "reading": "もんか",
-      "meaning": "one's pupil / disciple",
-      "type": "vocab",
-      "gtype": "noun",
-      "lesson_ids": "N4.28",
-      "notes": "",
-      "readingAlign": "門(もん)下(か)"
     },
     {
       "id": "v_mura",
@@ -8411,7 +8737,21 @@
       "notes": "Inclusive of the number (<=).",
       "lesson_ids": "N4.29",
       "reading": "いか",
-      "readingAlign": "以(い)下(か)"
+      "readingAlign": "以(い)下(か)",
+      "example": {
+        "jp": "この 本は 千円 以下です。",
+        "en": "This book is one thousand yen or less.",
+        "manual": true,
+        "terms": [
+          "v_kono",
+          "v_hon",
+          "p_wa",
+          "v_sen",
+          "v_en",
+          "v_ika",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_keikaku",
@@ -8726,7 +9066,25 @@
       "gtype": "verb",
       "verb_class": "godan",
       "lesson_ids": "N4.30",
-      "notes": "Lit. think upwards."
+      "notes": "Lit. think upwards.",
+      "example": {
+        "jp": "あの 人は 思い上がって います。",
+        "en": "That person is being conceited.",
+        "manual": true,
+        "terms": [
+          "v_ano",
+          "v_hito",
+          "p_wa",
+          {
+            "id": "v_omoiagaru",
+            "form": "te_form"
+          },
+          {
+            "id": "v_iru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_omoidasu",
@@ -8773,7 +9131,23 @@
       "gtype": "noun",
       "lesson_ids": "N4.30",
       "notes": "Often used as a suffix.",
-      "readingAlign": "集(しゅう)"
+      "readingAlign": "集(しゅう)",
+      "example": {
+        "jp": "この 写真 集は とても きれいです。",
+        "en": "This photo collection is very beautiful.",
+        "manual": true,
+        "terms": [
+          "v_kono",
+          "v_shashin",
+          "v_shuu",
+          "p_wa",
+          "v_totemo",
+          {
+            "id": "v_kirei",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_shuuchuu",
@@ -8984,7 +9358,22 @@
       "gtype": "noun",
       "lesson_ids": "N4.31",
       "notes": "Often used as a suffix.",
-      "readingAlign": "堂(どう)"
+      "readingAlign": "堂(どう)",
+      "example": {
+        "jp": "この 堂は とても 古いです。",
+        "en": "This hall is very old.",
+        "manual": true,
+        "terms": [
+          "v_kono",
+          "v_dou_2",
+          "p_wa",
+          "v_totemo",
+          {
+            "id": "v_furui",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_doudou",
@@ -9315,7 +9704,22 @@
       "verb_class": "godan",
       "lesson_ids": "N4.32",
       "notes": "",
-      "readingAlign": "引(ひ)き出(だ)す"
+      "readingAlign": "引(ひ)き出(だ)す",
+      "example": {
+        "jp": "銀行で お金を 引き出しました。",
+        "en": "I withdrew money at the bank.",
+        "manual": true,
+        "terms": [
+          "v_ginkou",
+          "p_de",
+          "v_okane",
+          "p_wo",
+          {
+            "id": "v_hikidasu",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_hiku",
@@ -9327,7 +9731,24 @@
       "verb_class": "godan",
       "lesson_ids": "N4.32",
       "notes": "",
-      "readingAlign": "引(ひ)く"
+      "readingAlign": "引(ひ)く",
+      "example": {
+        "jp": "子どもが 母の 手を 引きました。",
+        "en": "The child pulled mother's hand.",
+        "manual": true,
+        "terms": [
+          "v_kodomo",
+          "p_ga",
+          "v_haha",
+          "p_no",
+          "v_te",
+          "p_wo",
+          {
+            "id": "v_hiku",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_ichi",
@@ -9389,7 +9810,21 @@
       "gtype": "noun_suru",
       "lesson_ids": "N4.32",
       "notes": "Compounds: 教 (N4.24) + 習 (N4.32)",
-      "readingAlign": "教(きょう)習(しゅう)"
+      "readingAlign": "教(きょう)習(しゅう)",
+      "example": {
+        "jp": "運転 教習を しました。",
+        "en": "I did driving training.",
+        "manual": true,
+        "terms": [
+          "v_unten",
+          "v_kyoushuu",
+          "p_wo",
+          {
+            "id": "v_suru",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_kyuuyou",
@@ -9555,7 +9990,22 @@
       "gtype": "noun",
       "lesson_ids": "N4.32",
       "notes": "Often used as a suffix indicating purpose (e.g. 子供用 - for children).",
-      "readingAlign": "用(よう)"
+      "readingAlign": "用(よう)",
+      "example": {
+        "jp": "今日は 用が あります。",
+        "en": "I have an errand today.",
+        "manual": true,
+        "terms": [
+          "v_kyou",
+          "p_wa",
+          "v_you",
+          "p_ga",
+          {
+            "id": "v_aru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_youchi",
@@ -9661,7 +10111,22 @@
       "gtype": "noun",
       "lesson_ids": "N4.33",
       "notes": "",
-      "readingAlign": "場(ば)"
+      "readingAlign": "場(ば)",
+      "example": {
+        "jp": "この 場で 待って ください。",
+        "en": "Please wait in this place.",
+        "manual": true,
+        "terms": [
+          "v_kono",
+          "v_ba",
+          "p_de",
+          {
+            "id": "v_matsu",
+            "form": "te_form"
+          },
+          "v_kudasai"
+        ]
+      }
     },
     {
       "id": "v_baai",
@@ -9758,7 +10223,26 @@
       "verb_class": "ichidan",
       "lesson_ids": "N4.33",
       "notes": "Transitive.",
-      "readingAlign": "広(ひろ)める"
+      "readingAlign": "広(ひろ)める",
+      "example": {
+        "jp": "先生は 日本語を 広めて います。",
+        "en": "The teacher is spreading the Japanese language.",
+        "manual": true,
+        "terms": [
+          "v_sensei",
+          "p_wa",
+          "v_nihongo",
+          "p_wo",
+          {
+            "id": "v_hiromeru",
+            "form": "te_form"
+          },
+          {
+            "id": "v_iru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_hirosa",
@@ -10122,7 +10606,23 @@
       "gtype": "noun_suru",
       "lesson_ids": "N4.34",
       "notes": "Compounds: 発 (N4.34) + 電 (N5.6)",
-      "readingAlign": "発(はつ)電(でん)"
+      "readingAlign": "発(はつ)電(でん)",
+      "example": {
+        "jp": "風の 力で 発電します。",
+        "en": "We generate electricity using the power of wind.",
+        "manual": true,
+        "terms": [
+          "v_kaze",
+          "p_no",
+          "v_chikara",
+          "p_de",
+          "v_hatsuden",
+          {
+            "id": "v_suru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_hatsugen",
@@ -10133,7 +10633,23 @@
       "gtype": "noun_suru",
       "lesson_ids": "N4.34",
       "notes": "Compounds: 発 (N4.34) + 言 (N5.7)",
-      "readingAlign": "発(はつ)言(げん)"
+      "readingAlign": "発(はつ)言(げん)",
+      "example": {
+        "jp": "先生の 発言は とても 大切です。",
+        "en": "The teacher's remark is very important.",
+        "manual": true,
+        "terms": [
+          "v_sensei",
+          "p_no",
+          "v_hatsugen",
+          "p_wa",
+          "v_totemo",
+          {
+            "id": "v_taisetsu",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_hatsuon",
@@ -10161,7 +10677,19 @@
       "gtype": "noun",
       "lesson_ids": "N4.34",
       "notes": "",
-      "readingAlign": "通(かよ)い"
+      "readingAlign": "通(かよ)い",
+      "example": {
+        "jp": "母は 病院 通いです。",
+        "en": "My mother makes regular trips to the hospital.",
+        "manual": true,
+        "terms": [
+          "v_haha",
+          "p_wa",
+          "v_byouin",
+          "v_kayoi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_kayou",
@@ -10207,7 +10735,23 @@
       "gtype": "noun",
       "lesson_ids": "N4.34",
       "notes": "Compounds: 県 (N4.34) + 知 (N4.29) + 事 (N4.14)",
-      "readingAlign": "県(けん)知(ち)事(じ)"
+      "readingAlign": "県(けん)知(ち)事(じ)",
+      "example": {
+        "jp": "田中さんは 県知事に なりました。",
+        "en": "Tanaka-san became the prefectural governor.",
+        "manual": true,
+        "terms": [
+          "v_tanaka",
+          "v_san",
+          "p_wa",
+          "v_kenchiji",
+          "p_ni",
+          {
+            "id": "v_naru",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_kengai",
@@ -10288,7 +10832,22 @@
       "gtype": "na-adjective",
       "verb_class": "na_adj",
       "lesson_ids": "N4.34",
-      "notes": "Na-adjective (区々な)."
+      "notes": "Na-adjective (区々な).",
+      "example": {
+        "jp": "みんなの 意見は 区々です。",
+        "en": "Everyone's opinions are various.",
+        "manual": true,
+        "terms": [
+          "v_minna",
+          "p_no",
+          "v_iken",
+          "p_wa",
+          {
+            "id": "v_machimachi",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_oodoori",
@@ -10386,7 +10945,21 @@
       "verb_class": "godan",
       "lesson_ids": "N4.34",
       "notes": "Transitive.",
-      "readingAlign": "通(とお)す"
+      "readingAlign": "通(とお)す",
+      "example": {
+        "jp": "すみません、ちょっと 通して ください。",
+        "en": "Excuse me, please let me pass.",
+        "manual": true,
+        "terms": [
+          "p_sumimasen",
+          "v_chotto",
+          {
+            "id": "v_toosu",
+            "form": "te_form"
+          },
+          "v_kudasai"
+        ]
+      }
     },
     {
       "id": "v_tsuugaku",
@@ -10510,7 +11083,19 @@
       "gtype": "noun_suru",
       "lesson_ids": "N4.35",
       "notes": "Compounds: 休 (N4.2) + 止 (N4.35)",
-      "readingAlign": "休(きゅう)止(し)"
+      "readingAlign": "休(きゅう)止(し)",
+      "example": {
+        "jp": "今 お店は 休止です。",
+        "en": "Right now the shop is on a break.",
+        "manual": true,
+        "terms": [
+          "v_ima",
+          "v_omise",
+          "p_wa",
+          "v_kyuushi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_minka",
@@ -10555,7 +11140,21 @@
       "gtype": "noun",
       "lesson_ids": "N4.35",
       "notes": "Standalone reading ぬし; as prefix しゅ in compounds.",
-      "readingAlign": "主(ぬし)"
+      "readingAlign": "主(ぬし)",
+      "example": {
+        "jp": "この 犬の 主は 私です。",
+        "en": "I am the owner of this dog.",
+        "manual": true,
+        "terms": [
+          "v_kono",
+          "v_inu",
+          "p_no",
+          "v_nushi",
+          "p_wa",
+          "v_watashi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_omoni",
@@ -10600,7 +11199,22 @@
       "gtype": "noun",
       "lesson_ids": "N4.35",
       "notes": "Compounds: 主 (N4.35) + 語 (N4.13)",
-      "readingAlign": "主(しゅ)語(ご)"
+      "readingAlign": "主(しゅ)語(ご)",
+      "example": {
+        "jp": "この 文の 主語は 何ですか。",
+        "en": "What is the subject of this sentence?",
+        "manual": true,
+        "terms": [
+          "v_kono",
+          "v_bun",
+          "p_no",
+          "v_shugo",
+          "p_wa",
+          "v_nan",
+          "g_desu",
+          "p_ka"
+        ]
+      }
     },
     {
       "id": "v_shujin",
@@ -10628,7 +11242,22 @@
       "gtype": "noun",
       "lesson_ids": "N4.35",
       "notes": "Standalone reading たみ; as prefix みん in compounds.",
-      "readingAlign": "民(たみ)"
+      "readingAlign": "民(たみ)",
+      "example": {
+        "jp": "民の 声を 聞きます。",
+        "en": "We listen to the voice of the people.",
+        "manual": true,
+        "terms": [
+          "v_tami",
+          "p_no",
+          "v_koe",
+          "p_wo",
+          {
+            "id": "v_kiku",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_tearai",
@@ -10912,7 +11541,22 @@
       "verb_class": "godan",
       "lesson_ids": "N4.36",
       "notes": "Godan verb. Used for giving birth to a child or producing something.",
-      "readingAlign": "産(う)む"
+      "readingAlign": "産(う)む",
+      "example": {
+        "jp": "母は 私を 産みました。",
+        "en": "My mother gave birth to me.",
+        "manual": true,
+        "terms": [
+          "v_haha",
+          "p_wa",
+          "v_watashi",
+          "p_wo",
+          {
+            "id": "v_umu",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "p_nee",
@@ -10993,7 +11637,28 @@
       "matches": [
         "おどろく"
       ],
-      "notes": "Godan verb. Kanji 驚く not taught until N1, so written in hiragana."
+      "notes": "Godan verb. Kanji 驚く not taught until N1, so written in hiragana.",
+      "example": {
+        "jp": "その 写真を 見て、私は とても おどろきました。",
+        "en": "When I saw that photo, I was very surprised.",
+        "manual": true,
+        "terms": [
+          "v_sono",
+          "v_shashin",
+          "p_wo",
+          {
+            "id": "v_miru",
+            "form": "te_form"
+          },
+          "v_watashi",
+          "p_wa",
+          "v_totemo",
+          {
+            "id": "v_odoroku",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     }
   ]
 }

@@ -12,7 +12,8 @@ FILE=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 
 [[ -z "$FILE" ]] && exit 0
 [[ ! "$FILE" =~ \.(json)$ ]] && exit 0
-[[ "$FILE" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]] && exit 0
+[[ "$FILE" =~ (manifest|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]] && exit 0
+# Glossary files: only validate manual:true examples (handled below).
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
@@ -28,11 +29,12 @@ try:
 except:
     sys.exit(0)
 
+is_glossary = 'glossary' in file_path
 lesson_id = content.get('id', '') or content.get('lesson', '')
 if content.get('type') == 'grammar':
     lesson_id = content.get('meta', {}).get('unlocksAfter', lesson_id)
 is_story_terms = bool(content.get('storyFile') and isinstance(content.get('terms'), dict))
-if not lesson_id and not is_story_terms:
+if not is_glossary and not lesson_id and not is_story_terms:
     sys.exit(0)
 
 manifest_path = os.path.join(repo_root, 'manifest.json')
@@ -129,7 +131,8 @@ NOUN_LIKE_GTYPES = {'noun', 'noun_suru', 'na-adjective', 'na_adj', 'adjective_na
 STRIP_PUNCT = re.compile(r'[。、！？「」…・〜ー…（）【】『』]')
 
 kanji_vocab = []
-if taught_kanji:
+# Build unconditionally; cheap, and required for glossary-mode per-entry checks below.
+if True:
     for gpath in glob.glob(os.path.join(repo_root, 'data/*/glossary.*.json')):
         try:
             with open(gpath) as f:
@@ -243,6 +246,76 @@ if is_story_terms:
                 f'  terms["{term_key}"] (id: {term_id}): all kanji in '
                 f'"{surface}" are taught by {story_unlock} — use "{surface}" not "{term_key}"'
             )
+
+if is_glossary:
+    sys.path.insert(0, os.path.join(repo_root, 'hooks'))
+    from lib_glossary_examples import iter_manual_examples
+
+    def build_taught_kanji_for(target):
+        lm = re.match(r'(N\d+)\.(\d+)', target or '')
+        if not lm:
+            return set()
+        tl, tn = lm.group(1), int(lm.group(2))
+        to = level_order_val.get(tl, 0)
+        s = set()
+        for lk in ['N5', 'N4', 'N3', 'N2', 'N1']:
+            for l in manifest.get('data', {}).get(lk, {}).get('lessons', []):
+                lmm = re.match(r'(N\d+)\.(\d+)', l.get('id', ''))
+                if not lmm:
+                    continue
+                ll, ln = lmm.group(1), int(lmm.group(2))
+                lo = level_order_val.get(ll, 0)
+                if lo < to or (lo == to and ln <= tn):
+                    s.update(l.get('kanji', []))
+        return s
+
+    def at_or_after_e(check, target):
+        c, t = lesson_order.get(check), lesson_order.get(target)
+        return t >= c if c is not None and t is not None else True
+
+    g_errors = []
+    for idx, entry, example, e_lesson in iter_manual_examples(content):
+        e_taught = build_taught_kanji_for(e_lesson)
+        jp = example.get('jp', '') or ''
+        jp_clean = jp.replace(' ', '').replace('　', '')
+        e_path = f"entries[{idx}].example.jp ({entry.get('id','?')}, scope {e_lesson})"
+
+        # Early-use + partial-kanji checks per-entry
+        for kanji, hira, use_from, kanji_avail in EARLY_USE:
+            if (hira in jp_clean or kanji in jp_clean) and not at_or_after_e(use_from, e_lesson):
+                g_errors.append(f"  {e_path}: '{hira}'/'{kanji}' not available until {use_from}")
+                continue
+            if kanji in jp_clean and kanji_avail and not at_or_after_e(kanji_avail, e_lesson):
+                g_errors.append(f"  {e_path}: '{kanji}' in kanji but not taught until {kanji_avail} — write as '{hira}'")
+        for full, partial, _avail, full_avail in PARTIAL:
+            if full in jp_clean and full_avail and not at_or_after_e(full_avail, e_lesson):
+                g_errors.append(f"  {e_path}: '{full}' — kanji not taught until {full_avail}, write as '{partial}'")
+
+        # General kanji-form check per-entry (skip if no kanji_vocab built)
+        if e_taught and kanji_vocab:
+            for surface, reading, kanji_chars in kanji_vocab:
+                matched_token = None
+                for token in jp.split(' '):
+                    clean_tok = STRIP_PUNCT.sub('', token)
+                    if clean_tok.endswith(reading) and len(clean_tok) >= len(reading):
+                        matched_token = clean_tok
+                        break
+                if not matched_token:
+                    continue
+                if matched_token != reading and reading in ('ようか',):
+                    continue
+                if surface in jp_clean:
+                    continue
+                if not all(k in e_taught for k in kanji_chars):
+                    continue
+                g_errors.append(f"  {e_path}: '{reading}' (in '{matched_token}') should be '{surface}' — all kanji taught")
+
+    if g_errors:
+        print(f"WRITING FORM ERRORS in {os.path.basename(file_path)}:", file=sys.stderr)
+        for err in g_errors[:10]:
+            print(err, file=sys.stderr)
+        sys.exit(1)
+    sys.exit(0)
 
 if errors:
     print(f"WRITING FORM ERRORS in {os.path.basename(file_path)}:", file=sys.stderr)

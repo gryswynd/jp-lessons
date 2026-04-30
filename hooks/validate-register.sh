@@ -10,17 +10,56 @@ FILE=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 
 [[ -z "$FILE" ]] && exit 0
 [[ ! "$FILE" =~ \.(json)$ ]] && exit 0
-[[ "$FILE" =~ (manifest|glossary|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]] && exit 0
+[[ "$FILE" =~ (manifest|conjugation_rules|counter_rules|particles|characters|helper-vocab|package) ]] && exit 0
+# Glossary files: only validate manual:true examples (handled below).
 
-python3 - "$FILE" << 'PYEOF'
+REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+
+python3 - "$FILE" "$REPO_ROOT" << 'PYEOF'
 import json, re, sys, os
 
 file_path = sys.argv[1]
+repo_root = sys.argv[2]
 
 try:
     with open(file_path) as f:
         content = json.load(f)
 except:
+    sys.exit(0)
+
+POLITE = re.compile(r'(ます|ました|ません|ませんでした|です|でした|ましょう|ください)')
+PLAIN = re.compile(
+    r'(だ[。、？！\s]|だね|だよ|だな[。、？\s]|だった|だろう|だけど'
+    r'|ない[。、？！\s]|なかった|んだ'
+    r'|(?<!まし)たよ|(?<!まし)たね|(?<!まし)たの[。、？！\s]|(?<!まし)た[。？！](?![\s]*で)'
+    r'|るよ[。、？！\s]|るね[。、？！\s]|るの[。？]'
+    r'|じゃない|かな[。、？\s]'
+    r'|(?<!です)たい[。、？！\s]|たいよ|たいから|たいけど'
+    r'|(?<!ましょ)うよ[。、？！\s]|(?<!ましょ)おうか[。、？！\s])'
+)
+
+# Glossary mode: per-example casual-allowed check (no aggregate count rule)
+if 'glossary' in file_path:
+    sys.path.insert(0, os.path.join(repo_root, 'hooks'))
+    from lib_glossary_examples import iter_manual_examples
+    g_errors = []
+    for idx, entry, example, e_lesson in iter_manual_examples(content):
+        m = re.match(r'N(\d+)\.(\d+)', e_lesson)
+        if not m:
+            continue
+        e_level, e_num = int(m.group(1)), int(m.group(2))
+        e_casual_ok = (e_level == 5 and e_num >= 10) or e_level < 5
+        jp = example.get('jp', '') or ''
+        if not e_casual_ok and PLAIN.search(jp) and not POLITE.search(jp):
+            g_errors.append(
+                f"  entries[{idx}].example.jp ({entry.get('id','?')}, scope {e_lesson}): "
+                f"casual form before N5.10 — must be polite"
+            )
+    if g_errors:
+        print(f"REGISTER ERRORS in {os.path.basename(file_path)}:", file=sys.stderr)
+        for e in g_errors[:10]:
+            print(e, file=sys.stderr)
+        sys.exit(1)
     sys.exit(0)
 
 # Only check lessons

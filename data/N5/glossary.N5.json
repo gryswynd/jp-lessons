@@ -550,7 +550,18 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N5.1",
-      "notes": "Loanword from English 'bed'."
+      "notes": "Loanword from English 'bed'.",
+      "example": {
+        "jp": "父 の ベッド です。",
+        "en": "It's my father's bed.",
+        "manual": true,
+        "terms": [
+          "v_chichi",
+          "p_no",
+          "v_beddo",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_chichi",
@@ -578,7 +589,20 @@
       "notes": "",
       "lesson_ids": "N5.1",
       "reading": "だんし",
-      "readingAlign": "男(だん)子(し)"
+      "readingAlign": "男(だん)子(し)",
+      "example": {
+        "jp": "男子 は 先生 の 友だち です。",
+        "en": "The boys are the teacher's friends.",
+        "manual": true,
+        "terms": [
+          "v_danshi",
+          "p_wa",
+          "v_sensei",
+          "p_no",
+          "v_tomodachi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_dare",
@@ -718,7 +742,21 @@
       "notes": "",
       "lesson_ids": "N5.1",
       "reading": "ふぼ",
-      "readingAlign": "父(ふ)母(ぼ)"
+      "readingAlign": "父(ふ)母(ぼ)",
+      "example": {
+        "jp": "父母 は とても やさしいです。",
+        "en": "My parents are very kind.",
+        "manual": true,
+        "terms": [
+          "v_fubo",
+          "p_wa",
+          "v_totemo",
+          {
+            "id": "v_yasashii",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_haha",
@@ -823,13 +861,7 @@
         "良くない",
         "良くなかった"
       ],
-      "notes": "Kanji form 良 taught at N3.15. Pre-N3.15 content uses kana よい (and conjugations). From N3.15 onward, write as 良い. Uses regular i-adj conjugation from よい stem.",
-      "example": {
-        "jp": "良い 天気ですね。",
-        "en": "Nice weather, isn't it.",
-        "lessonId": "N3.15",
-        "sectionType": "conversation"
-      }
+      "notes": "Kanji form 良 taught at N3.15. Pre-N3.15 content uses kana よい (and conjugations). From N3.15 onward, write as 良い. Uses regular i-adj conjugation from よい stem."
     },
     {
       "id": "v_iie",
@@ -919,7 +951,20 @@
       "notes": "",
       "lesson_ids": "N5.1",
       "reading": "じょし",
-      "readingAlign": "女(じょ)子(し)"
+      "readingAlign": "女(じょ)子(し)",
+      "example": {
+        "jp": "女子 は やさしいです。",
+        "en": "The girls are kind.",
+        "manual": true,
+        "terms": [
+          "v_joshi",
+          "p_wa",
+          {
+            "id": "v_yasashii",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_onna",
@@ -947,7 +992,20 @@
       "notes": "Common polite phrase for 'woman'. Contrast: 男の人 (man).",
       "lesson_ids": "N5.1",
       "reading": "おんなのひと",
-      "readingAlign": "女(おんな)の人(ひと)"
+      "readingAlign": "女(おんな)の人(ひと)",
+      "example": {
+        "jp": "女の人 は 父 の 先生 です。",
+        "en": "The woman is my father's teacher.",
+        "manual": true,
+        "terms": [
+          "v_onnanohito",
+          "p_wa",
+          "v_chichi",
+          "p_no",
+          "v_sensei",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_onnanoko",
@@ -958,7 +1016,19 @@
       "notes": "Girl (child). Contrast: 男の子 (boy). More casual than 女子.",
       "lesson_ids": "N5.1",
       "reading": "おんなのこ",
-      "readingAlign": "女(おんな)の子(こ)"
+      "readingAlign": "女(おんな)の子(こ)",
+      "example": {
+        "jp": "あなた の 女の子 です か。",
+        "en": "Is she your daughter?",
+        "manual": true,
+        "terms": [
+          "v_anata",
+          "p_no",
+          "v_onnanoko",
+          "g_desu",
+          "p_ka"
+        ]
+      }
     },
     {
       "id": "v_otoko",
@@ -986,7 +1056,20 @@
       "notes": "Common polite phrase for 'man'. Contrast: 女の人 (woman).",
       "lesson_ids": "N5.1",
       "reading": "おとこのひと",
-      "readingAlign": "男(おとこ)の人(ひと)"
+      "readingAlign": "男(おとこ)の人(ひと)",
+      "example": {
+        "jp": "男の人 は 友だち の 父 です。",
+        "en": "The man is my friend's father.",
+        "manual": true,
+        "terms": [
+          "v_otokonohito",
+          "p_wa",
+          "v_tomodachi",
+          "p_no",
+          "v_chichi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_otokonoko",
@@ -997,7 +1080,18 @@
       "notes": "Boy (child). Contrast: 女の子 (girl). More casual than 男子.",
       "lesson_ids": "N5.1",
       "reading": "おとこのこ",
-      "readingAlign": "男(おとこ)の子(こ)"
+      "readingAlign": "男(おとこ)の子(こ)",
+      "example": {
+        "jp": "友だち の 男の子 です。",
+        "en": "He is my friend's son.",
+        "manual": true,
+        "terms": [
+          "v_tomodachi",
+          "p_no",
+          "v_otokonoko",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_kodomo",
@@ -3176,7 +3270,20 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N5.4",
-      "notes": "Short for スマートフォン (smartphone). The abbreviated form is standard in daily use."
+      "notes": "Short for スマートフォン (smartphone). The abbreviated form is standard in daily use.",
+      "example": {
+        "jp": "これ は 父 の スマホ です。",
+        "en": "This is my dad's smartphone.",
+        "manual": true,
+        "terms": [
+          "v_kore",
+          "p_wa",
+          "v_chichi",
+          "p_no",
+          "v_sumaho",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_tokidoki",
@@ -3629,7 +3736,20 @@
       "gtype": "na-adjective",
       "verb_class": "na_adj",
       "lesson_ids": "N5.5",
-      "notes": "Common expression for prohibition or something being useless/no good. だめです = it's not allowed. だめですよ = you can't do that!"
+      "notes": "Common expression for prohibition or something being useless/no good. だめです = it's not allowed. だめですよ = you can't do that!",
+      "example": {
+        "jp": "今日 は だめです。",
+        "en": "Today is no good.",
+        "manual": true,
+        "terms": [
+          "v_kyou",
+          "p_wa",
+          {
+            "id": "v_dame",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_onigiri",
@@ -3639,7 +3759,22 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N5.5",
-      "notes": "Japanese rice ball, typically triangular, wrapped in nori. A staple convenience store food."
+      "notes": "Japanese rice ball, typically triangular, wrapped in nori. A staple convenience store food.",
+      "example": {
+        "jp": "母 の おにぎり は おいしいです。",
+        "en": "My mom's rice balls are delicious.",
+        "manual": true,
+        "terms": [
+          "v_haha",
+          "p_no",
+          "v_onigiri",
+          "p_wa",
+          {
+            "id": "v_oishii",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_mochiron",
@@ -4331,7 +4466,22 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N5.8",
-      "notes": "Loanword from English 'table'. Common household/restaurant furniture."
+      "notes": "Loanword from English 'table'. Common household/restaurant furniture.",
+      "example": {
+        "jp": "テーブル に スマホ が あります。",
+        "en": "There is a smartphone on the table.",
+        "manual": true,
+        "terms": [
+          "v_teeburu",
+          "p_ni",
+          "v_sumaho",
+          "p_ga",
+          {
+            "id": "v_aru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_sugoi",
@@ -4708,7 +4858,20 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.9",
-      "reading": "ちょこれーと"
+      "reading": "ちょこれーと",
+      "example": {
+        "jp": "これ は 母 の チョコレート です。",
+        "en": "This is my mom's chocolate.",
+        "manual": true,
+        "terms": [
+          "v_kore",
+          "p_wa",
+          "v_haha",
+          "p_no",
+          "v_chokoreeto",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_piza",
@@ -4718,7 +4881,21 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.9",
-      "reading": "ぴざ"
+      "reading": "ぴざ",
+      "example": {
+        "jp": "ピザ は おいしいですね。",
+        "en": "Pizza is delicious, isn't it?",
+        "manual": true,
+        "terms": [
+          "v_piza",
+          "p_wa",
+          {
+            "id": "v_oishii",
+            "form": "polite_adj"
+          },
+          "p_ne"
+        ]
+      }
     },
     {
       "id": "v_sandoicchi",
@@ -4728,7 +4905,17 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.9",
-      "reading": "さんどいっち"
+      "reading": "さんどいっち",
+      "example": {
+        "jp": "サンドイッチ を ください。",
+        "en": "A sandwich, please.",
+        "manual": true,
+        "terms": [
+          "v_sandoicchi",
+          "p_wo",
+          "v_kudasai"
+        ]
+      }
     },
     {
       "id": "v_aisukuriimu",
@@ -4738,7 +4925,20 @@
       "gtype": "noun",
       "notes": "",
       "lesson_ids": "N5.9",
-      "reading": "あいすくりーむ"
+      "reading": "あいすくりーむ",
+      "example": {
+        "jp": "アイスクリーム が ほしいです。",
+        "en": "I want ice cream.",
+        "manual": true,
+        "terms": [
+          "v_aisukuriimu",
+          "p_ga",
+          {
+            "id": "v_hoshii",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_sarada",
@@ -4764,7 +4964,22 @@
       "gtype": "noun",
       "notes": "Japanese プリン is a custard pudding (crème caramel), a staple of デパ地下 sweets counters.",
       "lesson_ids": "N5.9",
-      "reading": "ぷりん"
+      "reading": "ぷりん",
+      "example": {
+        "jp": "プリン と ケーキ が あります。",
+        "en": "There is pudding and cake.",
+        "manual": true,
+        "terms": [
+          "v_purin",
+          "p_to",
+          "v_keeki",
+          "p_ga",
+          {
+            "id": "v_aru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "k_ama",
@@ -5271,7 +5486,20 @@
       "notes": "",
       "lesson_ids": "N5.12",
       "reading": "ちゅうがっこう",
-      "readingAlign": "中(ちゅう)学(がっ)校(こう)"
+      "readingAlign": "中(ちゅう)学(がっ)校(こう)",
+      "example": {
+        "jp": "中学校 の 先生 は 父 です。",
+        "en": "The middle school teacher is my dad.",
+        "manual": true,
+        "terms": [
+          "v_chuugakkou",
+          "p_no",
+          "v_sensei",
+          "p_wa",
+          "v_chichi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_chuugoku",
@@ -5384,7 +5612,20 @@
       "notes": "",
       "lesson_ids": "N5.12",
       "reading": "こうちょう",
-      "readingAlign": "校(こう)長(ちょう)"
+      "readingAlign": "校(こう)長(ちょう)",
+      "example": {
+        "jp": "校長 は とても やさしい 人 です。",
+        "en": "The principal is a very kind person.",
+        "manual": true,
+        "terms": [
+          "v_kouchou",
+          "p_wa",
+          "v_totemo",
+          "v_yasashii",
+          "v_hito",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_koukou",
@@ -5395,7 +5636,22 @@
       "gtype": "noun",
       "lesson_ids": "N5.12",
       "notes": "",
-      "readingAlign": "高(こう)校(こう)"
+      "readingAlign": "高(こう)校(こう)",
+      "example": {
+        "jp": "高校 の 友だち と 行きます。",
+        "en": "I'll go with a high-school friend.",
+        "manual": true,
+        "terms": [
+          "v_koukou",
+          "p_no",
+          "v_tomodachi",
+          "p_to",
+          {
+            "id": "v_iku",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_kurasu_class",
@@ -5539,7 +5795,23 @@
       "notes": "",
       "lesson_ids": "N5.12",
       "reading": "しょうがっこう",
-      "readingAlign": "小(しょう)学(がっ)校(こう)"
+      "readingAlign": "小(しょう)学(がっ)校(こう)",
+      "example": {
+        "jp": "小さい 子ども は 小学校 へ 行きます。",
+        "en": "Small children go to elementary school.",
+        "manual": true,
+        "terms": [
+          "v_chiisai",
+          "v_kodomo",
+          "p_wa",
+          "v_shougakkou",
+          "p_e",
+          {
+            "id": "v_iku",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_tesuto",
@@ -5819,7 +6091,20 @@
       "notes": "",
       "lesson_ids": "N5.14",
       "reading": "はくじん",
-      "readingAlign": "白(はく)人(じん)"
+      "readingAlign": "白(はく)人(じん)",
+      "example": {
+        "jp": "父 の 友だち は 白人 です。",
+        "en": "My dad's friend is a Caucasian person.",
+        "manual": true,
+        "terms": [
+          "v_chichi",
+          "p_no",
+          "v_tomodachi",
+          "p_wa",
+          "v_hakujin",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_jikan",
