@@ -3,7 +3,7 @@
 Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **24** lessons.
 
 ## Target-vocab gaps
-- Missing from unlocking N's vocabList (declaration): **21**
+- Missing from unlocking N's vocabList (declaration): **8**
 - Missing reinforcement in next 2 N lessons: **88**
 - Missing reinforcement in window stories: **91**
 - Misplaced (target term declared in an earlier N lesson): **0**
@@ -316,10 +316,6 @@ _targetVocab:_ `p_tekara`, `p_nagara`, `v_mae`, `v_tame`
 _reinforcement window:_ `N4.11`, `N4.12` + stories: `tabisaki-no-shashin`
 _file:_ `data/N4/grammar/G19.json`
 
-**Missing from N4.10 vocabList — declare here (2):**
-- `p_tekara`
-- `v_tame`
-
 **Missing reinforcement in next 2 N lessons (4):**
 - `p_tekara` — not referenced in `N4.12`
 - `p_nagara` — not referenced in `N4.11`, `N4.12`
@@ -337,10 +333,6 @@ _unlocksAfter:_ `N4.14` → gating N lesson: `N4.14`
 _targetVocab:_ `p_noni`, `p_shi`
 _reinforcement window:_ `N4.15`, `N4.16` + stories: `hashiru-asa`
 _file:_ `data/N4/grammar/G20.json`
-
-**Missing from N4.14 vocabList — declare here (2):**
-- `p_noni`
-- `p_shi`
 
 **Missing reinforcement in next 2 N lessons (2):**
 - `p_noni` — not referenced in `N4.16`
@@ -360,15 +352,6 @@ _unlocksAfter:_ `N4.16` → gating N lesson: `N4.16`
 _targetVocab:_ `v_eto`, `v_anou`, `v_uun`, `v_un`, `v_saa`, `v_naruhodo`, `v_hee`, `v_souso`, `v_jitsuwa`, `v_tsumari`, `v_nanka`, `v_maa`
 _reinforcement window:_ `N4.17`, `N4.18` + stories: `jitensha-de-kyouto-e`
 _file:_ `data/N4/grammar/G21.json`
-
-**Missing from N4.16 vocabList — declare here (7):**
-- `v_naruhodo`
-- `v_hee`
-- `v_souso`
-- `v_jitsuwa`
-- `v_tsumari`
-- `v_nanka`
-- `v_maa`
 
 **Missing reinforcement in next 2 N lessons (12):**
 - `v_eto` — not referenced in `N4.17`, `N4.18`
@@ -406,10 +389,6 @@ _unlocksAfter:_ `N4.18` → gating N lesson: `N4.18`
 _targetVocab:_ `p_sou_da`, `p_sou_da_hearsay`
 _reinforcement window:_ `N4.19`, `N4.20` + stories: `library-book`
 _file:_ `data/N4/grammar/G22.json`
-
-**Missing from N4.18 vocabList — declare here (2):**
-- `p_sou_da`
-- `p_sou_da_hearsay`
 
 **Missing reinforcement in next 2 N lessons (1):**
 - `p_sou_da` — not referenced in `N4.19`, `N4.20`
