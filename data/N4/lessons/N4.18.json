@@ -319,7 +319,7 @@
         },
         {
           "spk": "B",
-          "jp": "車で 帰ります。一緒に 乗りませんか。",
+          "jp": "車で 帰ります。いっしょに 乗りませんか。",
           "en": "I'll go home by car. Would you like to ride together?",
           "terms": [
             "v_kuruma",
@@ -411,7 +411,7 @@
         },
         {
           "spk": "B",
-          "jp": "元気を 出してください。一緒に 勉強しましょう。",
+          "jp": "元気を 出してください。いっしょに 勉強しましょう。",
           "en": "Please cheer up. Let's study together.",
           "terms": [
             "v_genki",
@@ -530,7 +530,7 @@
       "lines": [
         {
           "spk": "A",
-          "jp": "田中くん、毎日 勉強してる？",
+          "jp": "田中くん、毎日 勉強して いる？",
           "en": "Hey Tanaka, are you studying every day?",
           "terms": [
             "v_tanaka",
@@ -539,7 +539,11 @@
             "v_benkyou",
             {
               "id": "v_suru",
-              "form": "casual_te_iru"
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
             },
             "p_ka"
           ]
@@ -559,7 +563,7 @@
         },
         {
           "spk": "A",
-          "jp": "ほんとう？ 私も 弱気に なるけど、力を 出してる。",
+          "jp": "ほんとう？ 私も 弱気に なるけど、力を 出して いる。",
           "en": "Really? I get faint-hearted too, but I'm putting in strength.",
           "terms": [
             "p_hontou",
@@ -576,7 +580,11 @@
             "p_wo",
             {
               "id": "v_dasu",
-              "form": "casual_te_iru"
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
             }
           ]
         },
