@@ -8375,7 +8375,21 @@
       "gtype": "noun",
       "lesson_ids": "N4.28",
       "notes": "Common surname (Lit. 'Small grove').",
-      "readingAlign": "小(こ)林(ばやし)"
+      "readingAlign": "小(こ)林(ばやし)",
+      "example": {
+        "jp": "小林さんは 私の 先生です。",
+        "en": "Kobayashi-san is my teacher.",
+        "manual": true,
+        "terms": [
+          "v_kobayashi",
+          "v_san",
+          "p_wa",
+          "v_watashi",
+          "p_no",
+          "v_sensei",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_koumon",
@@ -8698,7 +8712,21 @@
       "notes": "Inclusive of the number (<=).",
       "lesson_ids": "N4.29",
       "reading": "いか",
-      "readingAlign": "以(い)下(か)"
+      "readingAlign": "以(い)下(か)",
+      "example": {
+        "jp": "この 本は 千円 以下です。",
+        "en": "This book is one thousand yen or less.",
+        "manual": true,
+        "terms": [
+          "v_kono",
+          "v_hon",
+          "p_wa",
+          "v_sen",
+          "v_en",
+          "v_ika",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_keikaku",
@@ -9013,7 +9041,25 @@
       "gtype": "verb",
       "verb_class": "godan",
       "lesson_ids": "N4.30",
-      "notes": "Lit. think upwards."
+      "notes": "Lit. think upwards.",
+      "example": {
+        "jp": "あの 人は 思い上がって います。",
+        "en": "That person is being conceited.",
+        "manual": true,
+        "terms": [
+          "v_ano",
+          "v_hito",
+          "p_wa",
+          {
+            "id": "v_omoiagaru",
+            "form": "te_form"
+          },
+          {
+            "id": "v_iru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_omoidasu",
@@ -9060,7 +9106,23 @@
       "gtype": "noun",
       "lesson_ids": "N4.30",
       "notes": "Often used as a suffix.",
-      "readingAlign": "集(しゅう)"
+      "readingAlign": "集(しゅう)",
+      "example": {
+        "jp": "この 写真 集は とても きれいです。",
+        "en": "This photo collection is very beautiful.",
+        "manual": true,
+        "terms": [
+          "v_kono",
+          "v_shashin",
+          "v_shuu",
+          "p_wa",
+          "v_totemo",
+          {
+            "id": "v_kirei",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_shuuchuu",
@@ -9271,7 +9333,22 @@
       "gtype": "noun",
       "lesson_ids": "N4.31",
       "notes": "Often used as a suffix.",
-      "readingAlign": "堂(どう)"
+      "readingAlign": "堂(どう)",
+      "example": {
+        "jp": "この 堂は とても 古いです。",
+        "en": "This hall is very old.",
+        "manual": true,
+        "terms": [
+          "v_kono",
+          "v_dou_2",
+          "p_wa",
+          "v_totemo",
+          {
+            "id": "v_furui",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_doudou",
@@ -9602,7 +9679,22 @@
       "verb_class": "godan",
       "lesson_ids": "N4.32",
       "notes": "",
-      "readingAlign": "引(ひ)き出(だ)す"
+      "readingAlign": "引(ひ)き出(だ)す",
+      "example": {
+        "jp": "銀行で お金を 引き出しました。",
+        "en": "I withdrew money at the bank.",
+        "manual": true,
+        "terms": [
+          "v_ginkou",
+          "p_de",
+          "v_okane",
+          "p_wo",
+          {
+            "id": "v_hikidasu",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_hiku",
@@ -9614,7 +9706,24 @@
       "verb_class": "godan",
       "lesson_ids": "N4.32",
       "notes": "",
-      "readingAlign": "引(ひ)く"
+      "readingAlign": "引(ひ)く",
+      "example": {
+        "jp": "子どもが 母の 手を 引きました。",
+        "en": "The child pulled mother's hand.",
+        "manual": true,
+        "terms": [
+          "v_kodomo",
+          "p_ga",
+          "v_haha",
+          "p_no",
+          "v_te",
+          "p_wo",
+          {
+            "id": "v_hiku",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_ichi",
@@ -9676,7 +9785,21 @@
       "gtype": "noun_suru",
       "lesson_ids": "N4.32",
       "notes": "Compounds: 教 (N4.24) + 習 (N4.32)",
-      "readingAlign": "教(きょう)習(しゅう)"
+      "readingAlign": "教(きょう)習(しゅう)",
+      "example": {
+        "jp": "運転 教習を しました。",
+        "en": "I did driving training.",
+        "manual": true,
+        "terms": [
+          "v_unten",
+          "v_kyoushuu",
+          "p_wo",
+          {
+            "id": "v_suru",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_kyuuyou",
@@ -9842,7 +9965,22 @@
       "gtype": "noun",
       "lesson_ids": "N4.32",
       "notes": "Often used as a suffix indicating purpose (e.g. 子供用 - for children).",
-      "readingAlign": "用(よう)"
+      "readingAlign": "用(よう)",
+      "example": {
+        "jp": "今日は 用が あります。",
+        "en": "I have an errand today.",
+        "manual": true,
+        "terms": [
+          "v_kyou",
+          "p_wa",
+          "v_you",
+          "p_ga",
+          {
+            "id": "v_aru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_youchi",
@@ -9948,7 +10086,22 @@
       "gtype": "noun",
       "lesson_ids": "N4.33",
       "notes": "",
-      "readingAlign": "場(ば)"
+      "readingAlign": "場(ば)",
+      "example": {
+        "jp": "この 場で 待って ください。",
+        "en": "Please wait in this place.",
+        "manual": true,
+        "terms": [
+          "v_kono",
+          "v_ba",
+          "p_de",
+          {
+            "id": "v_matsu",
+            "form": "te_form"
+          },
+          "v_kudasai"
+        ]
+      }
     },
     {
       "id": "v_baai",
@@ -10045,7 +10198,26 @@
       "verb_class": "ichidan",
       "lesson_ids": "N4.33",
       "notes": "Transitive.",
-      "readingAlign": "広(ひろ)める"
+      "readingAlign": "広(ひろ)める",
+      "example": {
+        "jp": "先生は 日本語を 広めて います。",
+        "en": "The teacher is spreading the Japanese language.",
+        "manual": true,
+        "terms": [
+          "v_sensei",
+          "p_wa",
+          "v_nihongo",
+          "p_wo",
+          {
+            "id": "v_hiromeru",
+            "form": "te_form"
+          },
+          {
+            "id": "v_iru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_hirosa",
