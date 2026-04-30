@@ -3,7 +3,7 @@
 Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **24** lessons.
 
 ## Target-vocab gaps
-- Missing from unlocking N's vocabList (declaration): **42**
+- Missing from unlocking N's vocabList (declaration): **34**
 - Missing reinforcement in next 2 N lessons: **88**
 - Missing reinforcement in window stories: **91**
 - Misplaced (target term declared in an earlier N lesson): **0**
@@ -163,10 +163,6 @@ _targetVocab:_ `v_iru`, `v_hoshii`, `g_deshou`, `g_darou`
 _reinforcement window:_ `N5.9`, `N5.10` + stories: `kyuujitsu-no-rikizo`
 _file:_ `data/N5/grammar/G9.json`
 
-**Missing from N5.8 vocabList — declare here (2):**
-- `g_deshou`
-- `g_darou`
-
 **Missing reinforcement in next 2 N lessons (3):**
 - `v_hoshii` — not referenced in `N5.9`, `N5.10`
 - `g_deshou` — not referenced in `N5.9`, `N5.10`
@@ -183,14 +179,6 @@ _unlocksAfter:_ `N5.9` → gating N lesson: `N5.9`
 _targetVocab:_ `p_ga_but`, `p_kedo`, `p_kara_because`, `p_node`, `p_ndesu`, `p_nda`
 _reinforcement window:_ `N5.10`, `N5.11` + stories: `kyuujitsu-no-rikizo`
 _file:_ `data/N5/grammar/G10.json`
-
-**Missing from N5.9 vocabList — declare here (6):**
-- `p_ga_but`
-- `p_kedo`
-- `p_kara_because`
-- `p_node`
-- `p_ndesu`
-- `p_nda`
 
 **Missing reinforcement in next 2 N lessons (4):**
 - `p_kedo` — not referenced in `N5.11`

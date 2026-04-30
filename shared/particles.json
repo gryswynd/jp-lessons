@@ -199,7 +199,11 @@
       "reading": "では",
       "role": "conjunctive 'well then / in that case'",
       "explanation": "Sentence-initial conjunction meaning 'well then' or 'in that case'. Used to transition to a new topic or action. More formal than じゃあ. Often followed by a comma: では、行きましょう (Well then, let's go).",
-      "matches": ["では", "じゃあ", "じゃ"],
+      "matches": [
+        "では",
+        "じゃあ",
+        "じゃ"
+      ],
       "introducedIn": "G6"
     },
     {
@@ -232,7 +236,7 @@
       "reading": "が",
       "role": "but (clause connector)",
       "explanation": "Clause-linking conjunction meaning 'but' or 'however'. Attaches to the end of a clause (polite or plain form) to introduce a contrasting or softening second clause. More formal than けど. Not the same as が subject marker (p_ga) — different grammar role entirely.",
-      "introducedIn": "G10"
+      "introducedIn": "N5.9"
     },
     {
       "id": "p_kara_because",
@@ -240,7 +244,7 @@
       "reading": "から",
       "role": "because / since",
       "explanation": "Causal conjunction meaning 'because' or 'since'. The reason clause comes first: 暑いから、水を飲みます (Because it's hot, I'll drink water). Uses plain form + から in casual speech; polite form + から in polite speech. Not the same as から meaning 'from' (p_kara, G3) or sequential から (p_tekara, G19) — different grammar roles.",
-      "introducedIn": "G10"
+      "introducedIn": "N5.9"
     },
     {
       "id": "p_tekara",
@@ -254,19 +258,25 @@
       "id": "p_ndesu",
       "particle": "んです",
       "reading": "んです",
-      "matches": ["のです", "なんです", "なのです"],
+      "matches": [
+        "のです",
+        "なんです",
+        "なのです"
+      ],
       "role": "explanatory / emphasis (you see / it's that...)",
       "explanation": "Explanatory form contracting のです. Attaches to plain forms to provide explanation, background context, or emphasis. Polite: んです / のです. Example: 雨なんです = It's raining, you see. Formally taught in G10 alongside plain forms.",
-      "introducedIn": "G10"
+      "introducedIn": "N5.9"
     },
     {
       "id": "p_nda",
       "particle": "んだ",
       "reading": "んだ",
-      "matches": ["なんだ"],
+      "matches": [
+        "なんだ"
+      ],
       "role": "explanatory / emphasis — casual (you see / it's that...)",
       "explanation": "Casual plain-form equivalent of んです. Used in informal speech to provide explanation or emphasis. Example: 行くんだ = I'm going (implying explanation or assertion). Often followed by よ or けど.",
-      "introducedIn": "G10"
+      "introducedIn": "N5.9"
     },
     {
       "id": "p_kedo",
@@ -274,7 +284,7 @@
       "reading": "けど",
       "role": "but (casual)",
       "explanation": "Casual clause-linking conjunction meaning 'but'. The informal equivalent of が (p_ga_but). けれど is a slightly more formal variant. Common as a sentence-ender for polite softening: ～んですけど... (trailing off). Connects two clauses with a contrasting or qualifying relationship.",
-      "introducedIn": "G10"
+      "introducedIn": "N5.9"
     },
     {
       "id": "p_demo_but",
@@ -298,7 +308,7 @@
       "reading": "ので",
       "role": "because / since (soft)",
       "explanation": "Causal conjunction meaning 'because' or 'since'. More formal and objective than から. Implies the cause is a natural or shared-understanding reason. Followed by plain form before ので; polite form is also accepted.",
-      "introducedIn": "N4.10"
+      "introducedIn": "N5.9"
     },
     {
       "id": "p_nagara",
@@ -328,7 +338,9 @@
       "id": "p_kurai",
       "particle": "くらい",
       "reading": "くらい",
-      "matches": ["ぐらい"],
+      "matches": [
+        "ぐらい"
+      ],
       "role": "approximately / about",
       "explanation": "Approximation particle meaning 'about' or 'roughly'. Interchangeable with ぐらい (softer variant). Used after amounts, times, or quantities. Example: 三時間くらい = about three hours.",
       "introducedIn": "N4.5"
@@ -403,7 +415,9 @@
       "reading": "そうだ",
       "role": "hearsay",
       "explanation": "Hearsay そうだ — attaches to the plain form of verbs and adjectives to report information the speaker heard from another source. Translates as 'I heard that ~' or 'apparently ~'. Distinct from appearance そうだ (p_sou_da), which attaches to the stem. Polite: そうです. Plain/casual: そうだ. Negation is inside the reported clause: おいしくないそうだ = 'I heard it's not delicious'.",
-      "matches": ["そうです"],
+      "matches": [
+        "そうです"
+      ],
       "introducedIn": "G22"
     },
     {
