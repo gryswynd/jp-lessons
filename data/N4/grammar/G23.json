@@ -8,10 +8,21 @@
     "unlocksAfter": "N4.21",
     "focus": "Express what is allowed (てもいい — may / it's okay to), what is forbidden (てはいけない — must not), and what is not required (なくてもいい — don't have to).",
     "estimatedMinutes": 20,
-    "particles": ["てもいい", "てはいけない", "なくてもいい"],
-    "grammarForms": ["te_form"],
+    "particles": [
+      "てもいい",
+      "てはいけない",
+      "なくてもいい"
+    ],
+    "grammarForms": [
+      "te_form"
+    ],
     "icon": "🚦"
   },
+  "targetVocab": [
+    "v_ii",
+    "v_ikeru",
+    "v_dame"
+  ],
   "sections": [
     {
       "type": "grammarIntro",
@@ -411,7 +422,11 @@
       "title": "The Permission & Obligation Quadrant",
       "description": "Japanese expresses four positions in a permission/obligation grid. G21 teaches the left column and the upper right. G22 will complete the lower right.",
       "tableType": "conjugation",
-      "headers": ["", "Positive (do the action)", "Negative (skip the action)"],
+      "headers": [
+        "",
+        "Positive (do the action)",
+        "Negative (skip the action)"
+      ],
       "rows": [
         {
           "label": "PERMITTED / OKAY",

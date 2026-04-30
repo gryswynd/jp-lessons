@@ -8,10 +8,29 @@
     "unlocksAfter": "N4.25",
     "focus": "Express necessity with なければいけない and ないといけない, and contrast four conditional forms — ば (hypothetical), と (automatic result), たら (completed-event trigger), and なら (contextual). Also covers ば〜ほど for 'the more ~, the more ~'.",
     "estimatedMinutes": 30,
-    "particles": ["なければいけない", "ないといけない", "〜ば", "〜と", "〜たら", "〜なら", "〜ば〜ほど"],
-    "grammarForms": ["conditional_ba", "nakereba", "conditional_tara"],
+    "particles": [
+      "なければいけない",
+      "ないといけない",
+      "〜ば",
+      "〜と",
+      "〜たら",
+      "〜なら",
+      "〜ば〜ほど"
+    ],
+    "grammarForms": [
+      "conditional_ba",
+      "nakereba",
+      "conditional_tara"
+    ],
     "icon": "🔀"
   },
+  "targetVocab": [
+    "p_to_conditional",
+    "p_nara",
+    "p_nakereba",
+    "p_hodo",
+    "v_ikeru"
+  ],
   "sections": [
     {
       "type": "grammarIntro",
@@ -55,28 +74,68 @@
       "examples": [
         {
           "parts": [
-            {"text": "今日は", "role": "topic", "gloss": "today (topic marker)"},
-            {"text": "早く", "role": "adverb", "gloss": "early (adverbial form of 早い)"},
-            {"text": "帰らなければ", "role": "predicate", "gloss": "go home (なければ form of 帰る — godan: 帰ら + なければ)"},
-            {"text": "いけない。", "role": "connector", "gloss": "must — obligation marker (plain negative of いける)"}
+            {
+              "text": "今日は",
+              "role": "topic",
+              "gloss": "today (topic marker)"
+            },
+            {
+              "text": "早く",
+              "role": "adverb",
+              "gloss": "early (adverbial form of 早い)"
+            },
+            {
+              "text": "帰らなければ",
+              "role": "predicate",
+              "gloss": "go home (なければ form of 帰る — godan: 帰ら + なければ)"
+            },
+            {
+              "text": "いけない。",
+              "role": "connector",
+              "gloss": "must — obligation marker (plain negative of いける)"
+            }
           ],
           "en": "I must go home early today.",
           "breakdown": "帰る (godan, -ru) → u_to_a stem 帰ら + なければ = 帰らなければ. Full construction: 帰らなければ いけない = must go home."
         },
         {
           "parts": [
-            {"text": "薬を", "role": "object", "gloss": "medicine (を)"},
-            {"text": "飲まなければ", "role": "predicate", "gloss": "drink (なければ form of 飲む — godan: 飲ま + なければ)"},
-            {"text": "なりません。", "role": "connector", "gloss": "must — polite obligation marker (polite negative of なる)"}
+            {
+              "text": "薬を",
+              "role": "object",
+              "gloss": "medicine (を)"
+            },
+            {
+              "text": "飲まなければ",
+              "role": "predicate",
+              "gloss": "drink (なければ form of 飲む — godan: 飲ま + なければ)"
+            },
+            {
+              "text": "なりません。",
+              "role": "connector",
+              "gloss": "must — polite obligation marker (polite negative of なる)"
+            }
           ],
           "en": "I must take medicine. (polite)",
           "breakdown": "飲む (godan) → u_to_a stem 飲ま + なければ = 飲まなければ. なりません (polite) is more formal than いけない (casual)."
         },
         {
           "parts": [
-            {"text": "野菜を", "role": "object", "gloss": "vegetables (を)"},
-            {"text": "食べないと", "role": "predicate", "gloss": "not eat + と (plain negative + conditional と)"},
-            {"text": "いけない。", "role": "connector", "gloss": "must — obligation marker"}
+            {
+              "text": "野菜を",
+              "role": "object",
+              "gloss": "vegetables (を)"
+            },
+            {
+              "text": "食べないと",
+              "role": "predicate",
+              "gloss": "not eat + と (plain negative + conditional と)"
+            },
+            {
+              "text": "いけない。",
+              "role": "connector",
+              "gloss": "must — obligation marker"
+            }
           ],
           "en": "I have to eat vegetables.",
           "breakdown": "食べる (ichidan) → plain negative 食べない + と + いけない = ないといけない pattern. Interchangeable with 食べなければいけない."
@@ -111,20 +170,52 @@
       "examples": [
         {
           "parts": [
-            {"text": "毎日", "role": "adverb", "gloss": "every day"},
-            {"text": "話せば、", "role": "predicate", "gloss": "speak (ば form of 話す — godan: 話せ + ば)"},
-            {"text": "上手に", "role": "adverb", "gloss": "skilled (adverbial form of 上手)"},
-            {"text": "なる。", "role": "predicate", "gloss": "become (plain form of なる)"}
+            {
+              "text": "毎日",
+              "role": "adverb",
+              "gloss": "every day"
+            },
+            {
+              "text": "話せば、",
+              "role": "predicate",
+              "gloss": "speak (ば form of 話す — godan: 話せ + ば)"
+            },
+            {
+              "text": "上手に",
+              "role": "adverb",
+              "gloss": "skilled (adverbial form of 上手)"
+            },
+            {
+              "text": "なる。",
+              "role": "predicate",
+              "gloss": "become (plain form of なる)"
+            }
           ],
           "en": "If you speak every day, you'll get better.",
           "breakdown": "話す (godan) → u_to_e stem 話せ + ば = 話せば. Open hypothetical: the condition is general advice, not tied to a specific completed event."
         },
         {
           "parts": [
-            {"text": "時間が", "role": "subject", "gloss": "time (が)"},
-            {"text": "あれば、", "role": "predicate", "gloss": "exist (ば form of ある — irregular: あれば)"},
-            {"text": "映画を", "role": "object", "gloss": "movie (を)"},
-            {"text": "見よう。", "role": "predicate", "gloss": "let's watch (plain volitional of 見る)"}
+            {
+              "text": "時間が",
+              "role": "subject",
+              "gloss": "time (が)"
+            },
+            {
+              "text": "あれば、",
+              "role": "predicate",
+              "gloss": "exist (ば form of ある — irregular: あれば)"
+            },
+            {
+              "text": "映画を",
+              "role": "object",
+              "gloss": "movie (を)"
+            },
+            {
+              "text": "見よう。",
+              "role": "predicate",
+              "gloss": "let's watch (plain volitional of 見る)"
+            }
           ],
           "en": "If there's time, let's watch a movie.",
           "breakdown": "ある (irr_aru) → irregular ば form あれば. The condition (having time) is hypothetical — the speaker doesn't know yet if time will exist."
@@ -162,21 +253,57 @@
       "examples": [
         {
           "parts": [
-            {"text": "駅を", "role": "object", "gloss": "station (を)"},
-            {"text": "出ると、", "role": "predicate", "gloss": "exit (plain form of 出る + と — automatic result)"},
-            {"text": "右に", "role": "modifier", "gloss": "on the right (に)"},
-            {"text": "コンビニが", "role": "subject", "gloss": "convenience store (が)"},
-            {"text": "ある。", "role": "predicate", "gloss": "there is (plain form of ある)"}
+            {
+              "text": "駅を",
+              "role": "object",
+              "gloss": "station (を)"
+            },
+            {
+              "text": "出ると、",
+              "role": "predicate",
+              "gloss": "exit (plain form of 出る + と — automatic result)"
+            },
+            {
+              "text": "右に",
+              "role": "modifier",
+              "gloss": "on the right (に)"
+            },
+            {
+              "text": "コンビニが",
+              "role": "subject",
+              "gloss": "convenience store (が)"
+            },
+            {
+              "text": "ある。",
+              "role": "predicate",
+              "gloss": "there is (plain form of ある)"
+            }
           ],
           "en": "Exit the station and there's a convenience store on the right.",
           "breakdown": "出る (ichidan) → plain form 出る + と. The result is automatic and always true — every time you exit, the store is there. Classic use of と for directions."
         },
         {
           "parts": [
-            {"text": "春に", "role": "modifier", "gloss": "in spring (に)"},
-            {"text": "なると、", "role": "predicate", "gloss": "become (plain form of なる + と — automatic result)"},
-            {"text": "花が", "role": "subject", "gloss": "flowers (が)"},
-            {"text": "さく。", "role": "predicate", "gloss": "bloom (plain form of さく)"}
+            {
+              "text": "春に",
+              "role": "modifier",
+              "gloss": "in spring (に)"
+            },
+            {
+              "text": "なると、",
+              "role": "predicate",
+              "gloss": "become (plain form of なる + と — automatic result)"
+            },
+            {
+              "text": "花が",
+              "role": "subject",
+              "gloss": "flowers (が)"
+            },
+            {
+              "text": "さく。",
+              "role": "predicate",
+              "gloss": "bloom (plain form of さく)"
+            }
           ],
           "en": "When spring comes, the flowers bloom.",
           "breakdown": "なる → plain form なる + と. A natural, inevitable result: every spring, flowers bloom. This kind of always-true statement is a hallmark of と."
@@ -211,19 +338,47 @@
       "examples": [
         {
           "parts": [
-            {"text": "仕事が", "role": "subject", "gloss": "work (が)"},
-            {"text": "終わったら、", "role": "predicate", "gloss": "finish (たら form of 終わる — godan: 終わった + ら)"},
-            {"text": "電話して。", "role": "predicate", "gloss": "call (te-form of 電話する — request)"}
+            {
+              "text": "仕事が",
+              "role": "subject",
+              "gloss": "work (が)"
+            },
+            {
+              "text": "終わったら、",
+              "role": "predicate",
+              "gloss": "finish (たら form of 終わる — godan: 終わった + ら)"
+            },
+            {
+              "text": "電話して。",
+              "role": "predicate",
+              "gloss": "call (te-form of 電話する — request)"
+            }
           ],
           "en": "When work is done, give me a call.",
           "breakdown": "終わる (godan, -ru) → plain past 終わった + ら = 終わったら. The result (call me) is a request — possible with たら but not with と."
         },
         {
           "parts": [
-            {"text": "日本に", "role": "modifier", "gloss": "to Japan (に)"},
-            {"text": "行ったら、", "role": "predicate", "gloss": "go (たら form of 行く — godan: 行った + ら)"},
-            {"text": "すしを", "role": "object", "gloss": "sushi (を)"},
-            {"text": "食べたい。", "role": "predicate", "gloss": "want to eat (plain desire form of 食べる)"}
+            {
+              "text": "日本に",
+              "role": "modifier",
+              "gloss": "to Japan (に)"
+            },
+            {
+              "text": "行ったら、",
+              "role": "predicate",
+              "gloss": "go (たら form of 行く — godan: 行った + ら)"
+            },
+            {
+              "text": "すしを",
+              "role": "object",
+              "gloss": "sushi (を)"
+            },
+            {
+              "text": "食べたい。",
+              "role": "predicate",
+              "gloss": "want to eat (plain desire form of 食べる)"
+            }
           ],
           "en": "If I go to Japan, I want to eat sushi.",
           "breakdown": "行く (godan) → plain past 行った + ら = 行ったら. Here たら is hypothetical (if I were to go) with a personal wish as the result."
@@ -262,22 +417,62 @@
       "examples": [
         {
           "parts": [
-            {"text": "日本語を", "role": "object", "gloss": "Japanese (を)"},
-            {"text": "勉強するなら、", "role": "predicate", "gloss": "study (plain form of 勉強する + なら — contextual)"},
-            {"text": "この", "role": "modifier", "gloss": "this"},
-            {"text": "本が", "role": "subject", "gloss": "book (が)"},
-            {"text": "いい。", "role": "predicate", "gloss": "is good"}
+            {
+              "text": "日本語を",
+              "role": "object",
+              "gloss": "Japanese (を)"
+            },
+            {
+              "text": "勉強するなら、",
+              "role": "predicate",
+              "gloss": "study (plain form of 勉強する + なら — contextual)"
+            },
+            {
+              "text": "この",
+              "role": "modifier",
+              "gloss": "this"
+            },
+            {
+              "text": "本が",
+              "role": "subject",
+              "gloss": "book (が)"
+            },
+            {
+              "text": "いい。",
+              "role": "predicate",
+              "gloss": "is good"
+            }
           ],
           "en": "If you're studying Japanese, this book is good.",
           "breakdown": "勉強する → plain form + なら = 勉強するなら. なら responds to context — perhaps someone just mentioned wanting to study Japanese. The response 'this book is good' is a recommendation based on that established fact."
         },
         {
           "parts": [
-            {"text": "映画を", "role": "object", "gloss": "movie (を)"},
-            {"text": "見るなら、", "role": "predicate", "gloss": "watch (plain form of 見る + なら — contextual)"},
-            {"text": "この", "role": "modifier", "gloss": "this"},
-            {"text": "映画館が", "role": "subject", "gloss": "movie theater (が)"},
-            {"text": "いい。", "role": "predicate", "gloss": "is good"}
+            {
+              "text": "映画を",
+              "role": "object",
+              "gloss": "movie (を)"
+            },
+            {
+              "text": "見るなら、",
+              "role": "predicate",
+              "gloss": "watch (plain form of 見る + なら — contextual)"
+            },
+            {
+              "text": "この",
+              "role": "modifier",
+              "gloss": "this"
+            },
+            {
+              "text": "映画館が",
+              "role": "subject",
+              "gloss": "movie theater (が)"
+            },
+            {
+              "text": "いい。",
+              "role": "predicate",
+              "gloss": "is good"
+            }
           ],
           "en": "If you're going to watch a movie (as you've mentioned), this theater is good.",
           "breakdown": "見る → plain form + なら = 見るなら. The speaker is reacting to something already said (e.g., 'I want to watch a movie'). なら picks up that context and makes a recommendation."
@@ -299,9 +494,21 @@
           ],
           "example": {
             "parts": [
-              {"text": "毎日", "role": "adverb", "gloss": "every day"},
-              {"text": "話せば、", "role": "predicate", "gloss": "speak (ば form)"},
-              {"text": "上手に なる。", "role": "predicate", "gloss": "you'll get better"}
+              {
+                "text": "毎日",
+                "role": "adverb",
+                "gloss": "every day"
+              },
+              {
+                "text": "話せば、",
+                "role": "predicate",
+                "gloss": "speak (ば form)"
+              },
+              {
+                "text": "上手に なる。",
+                "role": "predicate",
+                "gloss": "you'll get better"
+              }
             ],
             "en": "If you speak every day, you'll get better."
           }
@@ -317,8 +524,16 @@
           ],
           "example": {
             "parts": [
-              {"text": "駅を 出ると、", "role": "predicate", "gloss": "exit the station (plain + と)"},
-              {"text": "右に コンビニが ある。", "role": "predicate", "gloss": "there's a convenience store on the right"}
+              {
+                "text": "駅を 出ると、",
+                "role": "predicate",
+                "gloss": "exit the station (plain + と)"
+              },
+              {
+                "text": "右に コンビニが ある。",
+                "role": "predicate",
+                "gloss": "there's a convenience store on the right"
+              }
             ],
             "en": "Exit the station and there's a convenience store on the right."
           }
@@ -334,8 +549,16 @@
           ],
           "example": {
             "parts": [
-              {"text": "仕事が 終わったら、", "role": "predicate", "gloss": "when work is done (たら form)"},
-              {"text": "電話して。", "role": "predicate", "gloss": "give me a call (request)"}
+              {
+                "text": "仕事が 終わったら、",
+                "role": "predicate",
+                "gloss": "when work is done (たら form)"
+              },
+              {
+                "text": "電話して。",
+                "role": "predicate",
+                "gloss": "give me a call (request)"
+              }
             ],
             "en": "When work is done, give me a call."
           }
@@ -351,8 +574,16 @@
           ],
           "example": {
             "parts": [
-              {"text": "日本語を 勉強するなら、", "role": "predicate", "gloss": "if you're studying Japanese (as you said)"},
-              {"text": "この 本が いい。", "role": "predicate", "gloss": "this book is good"}
+              {
+                "text": "日本語を 勉強するなら、",
+                "role": "predicate",
+                "gloss": "if you're studying Japanese (as you said)"
+              },
+              {
+                "text": "この 本が いい。",
+                "role": "predicate",
+                "gloss": "this book is good"
+              }
             ],
             "en": "If you're studying Japanese (as you mentioned), this book is good."
           }
@@ -397,20 +628,52 @@
       "examples": [
         {
           "parts": [
-            {"text": "読めば", "role": "predicate", "gloss": "read (ば form of 読む — godan: 読め + ば)"},
-            {"text": "読むほど、", "role": "predicate", "gloss": "read (plain form of 読む) + ほど (to that extent)"},
-            {"text": "おもしろく", "role": "adverb", "gloss": "interesting (adverbial form of おもしろい)"},
-            {"text": "なる。", "role": "predicate", "gloss": "become (plain form of なる)"}
+            {
+              "text": "読めば",
+              "role": "predicate",
+              "gloss": "read (ば form of 読む — godan: 読め + ば)"
+            },
+            {
+              "text": "読むほど、",
+              "role": "predicate",
+              "gloss": "read (plain form of 読む) + ほど (to that extent)"
+            },
+            {
+              "text": "おもしろく",
+              "role": "adverb",
+              "gloss": "interesting (adverbial form of おもしろい)"
+            },
+            {
+              "text": "なる。",
+              "role": "predicate",
+              "gloss": "become (plain form of なる)"
+            }
           ],
           "en": "The more you read, the more interesting it becomes.",
           "breakdown": "読む (godan) → ば form 読めば + plain form 読む + ほど. The verb repeats to express proportional escalation. Result: おもしろく なる = becomes more interesting."
         },
         {
           "parts": [
-            {"text": "勉強すれば", "role": "predicate", "gloss": "study (ば form of する — irregular: すれば) — with 勉強 noun"},
-            {"text": "するほど、", "role": "predicate", "gloss": "do (plain form of する) + ほど"},
-            {"text": "よく", "role": "adverb", "gloss": "well / better"},
-            {"text": "分かる。", "role": "predicate", "gloss": "understand (plain form of 分かる)"}
+            {
+              "text": "勉強すれば",
+              "role": "predicate",
+              "gloss": "study (ば form of する — irregular: すれば) — with 勉強 noun"
+            },
+            {
+              "text": "するほど、",
+              "role": "predicate",
+              "gloss": "do (plain form of する) + ほど"
+            },
+            {
+              "text": "よく",
+              "role": "adverb",
+              "gloss": "well / better"
+            },
+            {
+              "text": "分かる。",
+              "role": "predicate",
+              "gloss": "understand (plain form of 分かる)"
+            }
           ],
           "en": "The more you study, the better you understand.",
           "breakdown": "勉強する suru compound: 勉強 (noun) + する → すれば (ば form) for the condition, する (plain) + ほど for the degree marker. よく 分かる = understand well/better."
@@ -431,13 +694,22 @@
             "v_ashita",
             "v_shiken",
             "p_ga",
-            {"id": "v_aru", "form": "plain_form"},
+            {
+              "id": "v_aru",
+              "form": "plain_form"
+            },
             "p_kara_because",
             "v_kyou",
             "p_wa",
             "v_benkyou",
-            {"id": "v_suru", "form": "nakereba"},
-            {"id": "v_ikeru", "form": "plain_negative"},
+            {
+              "id": "v_suru",
+              "form": "nakereba"
+            },
+            {
+              "id": "v_ikeru",
+              "form": "plain_negative"
+            },
             "p_yo"
           ]
         },
@@ -451,11 +723,17 @@
             "p_ka",
             "v_mainichi",
             "v_benkyou",
-            {"id": "v_suru", "form": "conditional_ba"},
+            {
+              "id": "v_suru",
+              "form": "conditional_ba"
+            },
             "v_shiken",
             "p_wa",
             "v_yoku",
-            {"id": "v_wakaru", "form": "plain_form"},
+            {
+              "id": "v_wakaru",
+              "form": "plain_form"
+            },
             "p_yo"
           ]
         },
@@ -467,10 +745,16 @@
             "char_rikizo",
             "v_shiken",
             "p_ga",
-            {"id": "v_owaru", "form": "conditional_tara"},
+            {
+              "id": "v_owaru",
+              "form": "conditional_tara"
+            },
             "v_eiga",
             "p_wo",
-            {"id": "v_miru", "form": "plain_volitional"},
+            {
+              "id": "v_miru",
+              "form": "plain_volitional"
+            },
             "p_yo"
           ]
         },
@@ -482,12 +766,18 @@
             "char_ken",
             "v_eiga",
             "p_wo",
-            {"id": "v_miru", "form": "plain_form"},
+            {
+              "id": "v_miru",
+              "form": "plain_form"
+            },
             "p_nara",
             "v_kono",
             "v_eigakan",
             "p_ni",
-            {"id": "v_iku", "form": "plain_volitional"}
+            {
+              "id": "v_iku",
+              "form": "plain_volitional"
+            }
           ]
         },
         {
@@ -503,9 +793,15 @@
             "v_ima",
             "p_wa",
             "v_benkyou",
-            {"id": "v_suru", "form": "plain_negative"},
+            {
+              "id": "v_suru",
+              "form": "plain_negative"
+            },
             "p_to_conditional",
-            {"id": "v_ikeru", "form": "plain_negative"},
+            {
+              "id": "v_ikeru",
+              "form": "plain_negative"
+            },
             "p_nda"
           ]
         }
@@ -520,7 +816,12 @@
           "before": "右に 行く",
           "after": "、駅が ある。",
           "translation": "Go right and the station is there (automatic result).",
-          "choices": ["と", "たら", "ば", "なら"],
+          "choices": [
+            "と",
+            "たら",
+            "ば",
+            "なら"
+          ],
           "answer": "と",
           "explanation": "と expresses an automatic, always-true result: 行くと、駅が ある — every time you go right, the station is there. たら would imply 'after you've gone right, you'll find a station', which is less natural for fixed directions."
         },
@@ -528,7 +829,12 @@
           "before": "仕事が 終わっ",
           "after": "、電話して。",
           "translation": "When work is done, give me a call.",
-          "choices": ["たら", "と", "ば", "なら"],
+          "choices": [
+            "たら",
+            "と",
+            "ば",
+            "なら"
+          ],
           "answer": "たら",
           "explanation": "たら is the completed-event conditional: 終わったら = when/if work is done. と cannot be used here because the result is a request (電話して) — と does not allow request or intention forms in the result."
         },
@@ -536,7 +842,12 @@
           "before": "薬を 飲まなければ",
           "after": "。",
           "translation": "I have to take medicine.",
-          "choices": ["いけない", "いい", "なる", "できる"],
+          "choices": [
+            "いけない",
+            "いい",
+            "なる",
+            "できる"
+          ],
           "answer": "いけない",
           "explanation": "なければ いけない is the obligation construction meaning 'must' or 'have to'. 飲まなければ いけない = must drink (the medicine). いい would mean 'it's fine not to drink', which is the opposite meaning."
         },
@@ -544,7 +855,12 @@
           "before": "勉強すれば する",
           "after": "、よく 分かる。",
           "translation": "The more you study, the better you understand.",
-          "choices": ["ほど", "のに", "から", "ため"],
+          "choices": [
+            "ほど",
+            "のに",
+            "から",
+            "ため"
+          ],
           "answer": "ほど",
           "explanation": "ば〜ほど is the 'the more ~, the more ~' pattern. すれば する ほど = the more you do (study), the [more you understand]. ほど marks the proportional degree."
         }
@@ -558,7 +874,12 @@
         {
           "kind": "mcq",
           "q": "映画を 見る____、この 映画館に 行こう。",
-          "choices": ["なら", "と", "ば", "たら"],
+          "choices": [
+            "なら",
+            "と",
+            "ば",
+            "たら"
+          ],
           "answer": "なら",
           "explanation": "なら responds to context already established — e.g., someone just said they want to watch a movie. 見るなら (if you're going to watch one, as you mentioned) → recommendation. と would require an automatic result; ば is for new hypotheticals; たら implies after watching.",
           "terms": []
