@@ -10,7 +10,7 @@ Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **22** les
 
 ## Other gating gaps
 - Late-introduced (term's `lesson_ids` after the gate): **0**
-- Undeclared introductions (term's `lesson_ids` = gate but not in vocabList, and not a target): **1**
+- Undeclared introductions (term's `lesson_ids` = gate but not in vocabList, and not a target): **0**
 - Unknown term ids: **0**
 - Character references skipped (no `lesson_ids` in `shared/characters.json`): **42**
 
@@ -356,9 +356,6 @@ _file:_ `data/N4/grammar/G21.json`
 - `v_tsumari` — not referenced in story `jitensha-de-kyouto-e`
 - `v_nanka` — not referenced in story `jitensha-de-kyouto-e`
 - `v_maa` — not referenced in story `jitensha-de-kyouto-e`
-
-**Other terms with `lesson_ids` = N4.16 but not in its vocabList (1):**
-- `p_hontou`
 
 ## G22 — そうだ: Appearance & Hearsay
 
