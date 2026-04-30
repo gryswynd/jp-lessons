@@ -3,7 +3,7 @@
 Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **24** lessons.
 
 ## Target-vocab gaps
-- Missing from unlocking N's vocabList (declaration): **34**
+- Missing from unlocking N's vocabList (declaration): **21**
 - Missing reinforcement in next 2 N lessons: **88**
 - Missing reinforcement in window stories: **91**
 - Misplaced (target term declared in an earlier N lesson): **0**
@@ -210,9 +210,6 @@ _targetVocab:_ `v_dekiru`
 _reinforcement window:_ `N4.4`, `N4.5` + stories: `watashi-no-iro`
 _file:_ `data/N4/grammar/G13.json`
 
-**Missing from N4.3 vocabList — declare here (1):**
-- `v_dekiru`
-
 **Missing reinforcement in next 2 N lessons (1):**
 - `v_dekiru` — not referenced in `N4.4`, `N4.5`
 
@@ -225,10 +222,6 @@ _unlocksAfter:_ `N4.5` → gating N lesson: `N4.5`
 _targetVocab:_ `v_ageru`, `v_morau`, `v_kureru`, `v_hoshii`
 _reinforcement window:_ `N4.6`, `N4.7` + stories: `hirugohan-monogatari`
 _file:_ `data/N4/grammar/G14.json`
-
-**Missing from N4.5 vocabList — declare here (2):**
-- `v_ageru`
-- `v_morau`
 
 **Missing reinforcement in next 2 N lessons (4):**
 - `v_ageru` — not referenced in `N4.7`
@@ -248,12 +241,6 @@ _targetVocab:_ `p_yori`, `p_hodo`, `p_kurai`, `v_hou`, `v_ichiban`, `v_dochira`
 _reinforcement window:_ `N4.6`, `N4.7` + stories: `hirugohan-monogatari`
 _file:_ `data/N4/grammar/G15.json`
 
-**Missing from N4.5 vocabList — declare here (4):**
-- `p_yori`
-- `p_hodo`
-- `p_kurai`
-- `v_hou`
-
 **Missing reinforcement in next 2 N lessons (4):**
 - `p_hodo` — not referenced in `N4.6`
 - `p_kurai` — not referenced in `N4.6`, `N4.7`
@@ -272,9 +259,6 @@ _targetVocab:_ `v_you_manner`, `v_mitai`, `p_no`, `p_ni`
 _reinforcement window:_ `N4.7`, `N4.8` + stories: `kazoku-no-kisetsu`
 _file:_ `data/N4/grammar/G16.json`
 
-**Missing from N4.6 vocabList — declare here (1):**
-- `v_mitai`
-
 **Missing reinforcement in next 2 N lessons (2):**
 - `v_you_manner` — not referenced in `N4.7`, `N4.8`
 - `v_mitai` — not referenced in `N4.7`, `N4.8`
@@ -289,12 +273,6 @@ _unlocksAfter:_ `N4.7` → gating N lesson: `N4.7`
 _targetVocab:_ `p_dake`, `p_shika`, `p_bakari`, `p_demo`
 _reinforcement window:_ `N4.8`, `N4.9` + stories: `kazoku-no-kisetsu`
 _file:_ `data/N4/grammar/G17.json`
-
-**Missing from N4.7 vocabList — declare here (4):**
-- `p_dake`
-- `p_shika`
-- `p_bakari`
-- `p_demo`
 
 **Missing reinforcement in next 2 N lessons (4):**
 - `p_dake` — not referenced in `N4.8`, `N4.9`
@@ -460,11 +438,10 @@ _targetVocab:_ `p_to_conditional`, `p_nara`, `p_nakereba`, `p_hodo`, `v_ikeru`
 _reinforcement window:_ `N4.26`, `N4.27` + stories: `kenkyuu-to-sakubun`
 _file:_ `data/N4/grammar/G25.json`
 
-**Missing from N4.25 vocabList — declare here (4):**
+**Missing from N4.25 vocabList — declare here (3):**
 - `p_to_conditional`
 - `p_nara`
 - `p_nakereba`
-- `p_hodo`
 
 **Missing reinforcement in next 2 N lessons (3):**
 - `p_nara` — not referenced in `N4.26`, `N4.27`
