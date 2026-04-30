@@ -1,16 +1,16 @@
 # Grammar Vocab Gating Audit
 
-Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **24** lessons.
+Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **23** lessons.
 
 ## Target-vocab gaps
-- Missing from unlocking N's vocabList (declaration): **8**
-- Missing reinforcement in next 2 N lessons: **88**
-- Missing reinforcement in window stories: **91**
+- Missing from unlocking N's vocabList (declaration): **0**
+- Missing reinforcement in next 2 N lessons: **87**
+- Missing reinforcement in window stories: **90**
 - Misplaced (target term declared in an earlier N lesson): **0**
 
 ## Other gating gaps
 - Late-introduced (term's `lesson_ids` after the gate): **8**
-- Undeclared introductions (term's `lesson_ids` = gate but not in vocabList, and not a target): **2**
+- Undeclared introductions (term's `lesson_ids` = gate but not in vocabList, and not a target): **1**
 - Unknown term ids: **0**
 - Character references skipped (no `lesson_ids` in `shared/characters.json`): **42**
 
@@ -417,11 +417,6 @@ _targetVocab:_ `p_to_conditional`, `p_nara`, `p_nakereba`, `p_hodo`, `v_ikeru`
 _reinforcement window:_ `N4.26`, `N4.27` + stories: `kenkyuu-to-sakubun`
 _file:_ `data/N4/grammar/G25.json`
 
-**Missing from N4.25 vocabList — declare here (3):**
-- `p_to_conditional`
-- `p_nara`
-- `p_nakereba`
-
 **Missing reinforcement in next 2 N lessons (3):**
 - `p_nara` — not referenced in `N4.26`, `N4.27`
 - `p_nakereba` — not referenced in `N4.26`, `N4.27`
@@ -433,34 +428,12 @@ _file:_ `data/N4/grammar/G25.json`
 - `p_nakereba` — not referenced in story `kenkyuu-to-sakubun`
 - `p_hodo` — not referenced in story `kenkyuu-to-sakubun`
 
-## G26 — ように Patterns — ようにする / ようになる
-
-_unlocksAfter:_ `N4.27` → gating N lesson: `N4.27`
-_targetVocab:_ `v_you`, `v_suru`, `v_naru`
-_reinforcement window:_ `N4.28`, `N4.29` + stories: `yuugata-no-mura`
-_file:_ `data/N4/grammar/G26.json`
-
-**Missing from N4.27 vocabList — declare here (1):**
-- `v_you`
-
-**Missing reinforcement in next 2 N lessons (1):**
-- `v_you` — not referenced in `N4.28`, `N4.29`
-
-**Missing reinforcement in window stories (1):**
-- `v_you` — not referenced in story `yuugata-no-mura`
-
 ## G30 — Advanced Verb Usages — てみる / ておく / てしまう / すぎる / とする
 
 _unlocksAfter:_ `N4.34` → gating N lesson: `N4.34`
 _targetVocab:_ `v_miru`, `v_oku`, `v_shimau`, `v_suru`, `p_kadouka`, `p_ni_tsuite`
 _reinforcement window:_ `N4.35`, `N4.36` + stories: `factory-owner`
 _file:_ `data/N4/grammar/G30.json`
-
-**Missing from N4.34 vocabList — declare here (4):**
-- `v_oku`
-- `v_shimau`
-- `p_kadouka`
-- `p_ni_tsuite`
 
 **Missing reinforcement in next 2 N lessons (2):**
 - `p_kadouka` — not referenced in `N4.35`, `N4.36`
@@ -481,6 +454,3 @@ _file:_ `data/N4/grammar/G31.json`
 
 **Missing reinforcement in window stories (1):**
 - `v_naru` — not referenced in story `factory-owner`
-
-**Other terms with `lesson_ids` = N4.34 but not in its vocabList (1):**
-- `p_nakereba`

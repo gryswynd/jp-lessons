@@ -5,9 +5,14 @@
   "meta": {
     "level": "N4",
     "lesson_number": 34,
-    "focus": "Japan's administrative geography — wards, prefectures, and districts — alongside train departures, first trains, and daily commuting patterns",
+    "focus": "Japan's administrative geography — wards, prefectures, and districts — alongside train departures, first trains, and daily commuting patterns; G30 auxiliary verbs てみる/ておく/てしまう and connectives かどうか/について",
     "estimated_minutes": 35,
-    "kanji": ["区", "発", "県", "通"]
+    "kanji": [
+      "区",
+      "発",
+      "県",
+      "通"
+    ]
   },
   "newKanji": [
     {
@@ -235,6 +240,20 @@
             "v_toosu",
             "v_tsuugaku",
             "v_oodoori"
+          ]
+        },
+        {
+          "label": "Auxiliary Verbs",
+          "items": [
+            "v_oku",
+            "v_shimau"
+          ]
+        },
+        {
+          "label": "Connective Particles",
+          "items": [
+            "p_kadouka",
+            "p_ni_tsuite"
           ]
         }
       ]
@@ -1202,25 +1221,45 @@
         {
           "kind": "mcq",
           "q": "[区別] の よみかたは？",
-          "choices": ["くべつ", "くほつ", "ちべつ", "くわかる"],
+          "choices": [
+            "くべつ",
+            "くほつ",
+            "ちべつ",
+            "くわかる"
+          ],
           "answer": "くべつ"
         },
         {
           "kind": "mcq",
           "q": "[発見] の よみかたは？",
-          "choices": ["はっけん", "はつみ", "ほっけん", "はつけん"],
+          "choices": [
+            "はっけん",
+            "はつみ",
+            "ほっけん",
+            "はつけん"
+          ],
           "answer": "はっけん"
         },
         {
           "kind": "mcq",
           "q": "[県外] の よみかたは？",
-          "choices": ["けんがい", "けんほか", "きんがい", "けんそと"],
+          "choices": [
+            "けんがい",
+            "けんほか",
+            "きんがい",
+            "けんそと"
+          ],
           "answer": "けんがい"
         },
         {
           "kind": "mcq",
           "q": "[通学] の よみかたは？",
-          "choices": ["つうがく", "とおがく", "かようがく", "つうこう"],
+          "choices": [
+            "つうがく",
+            "とおがく",
+            "かようがく",
+            "つうこう"
+          ],
           "answer": "つうがく"
         }
       ]
@@ -1233,7 +1272,12 @@
         {
           "kind": "mcq",
           "q": "学校に 毎日 ______。",
-          "choices": ["通います", "発見します", "区切ります", "発言します"],
+          "choices": [
+            "通います",
+            "発見します",
+            "区切ります",
+            "発言します"
+          ],
           "answer": "通います",
           "terms": [
             "v_gakkou",
@@ -1248,7 +1292,12 @@
         {
           "kind": "mcq",
           "q": "この 電車は 午前 六時 ______ です。",
-          "choices": ["発", "県", "区", "通"],
+          "choices": [
+            "発",
+            "県",
+            "区",
+            "通"
+          ],
           "answer": "発",
           "terms": [
             "v_kono",
@@ -1266,7 +1315,12 @@
         {
           "kind": "mcq",
           "q": "青森 ______ は 東京の 北に あります。",
-          "choices": ["県", "区", "発", "通"],
+          "choices": [
+            "県",
+            "区",
+            "発",
+            "通"
+          ],
           "answer": "県",
           "terms": [
             "v_aomoriken",
@@ -1284,7 +1338,12 @@
         {
           "kind": "mcq",
           "q": "電車は 長い 大通りを ______。",
-          "choices": ["通ります", "発見します", "区切ります", "通学します"],
+          "choices": [
+            "通ります",
+            "発見します",
+            "区切ります",
+            "通学します"
+          ],
           "answer": "通ります",
           "terms": [
             "v_densha",
@@ -1301,7 +1360,12 @@
         {
           "kind": "mcq",
           "q": "新しい 場所を ______ したいです。",
-          "choices": ["発見", "出発", "発言", "発音"],
+          "choices": [
+            "発見",
+            "出発",
+            "発言",
+            "発音"
+          ],
           "answer": "発見",
           "terms": [
             "v_atarashii",
@@ -1325,7 +1389,12 @@
         {
           "kind": "mcq",
           "q": "学校 ______ 毎日 通います。",
-          "choices": ["に", "で", "を", "が"],
+          "choices": [
+            "に",
+            "で",
+            "を",
+            "が"
+          ],
           "answer": "に",
           "terms": [
             "v_gakkou",
@@ -1340,7 +1409,12 @@
         {
           "kind": "mcq",
           "q": "県外 ______ 始発で 来ます。",
-          "choices": ["から", "まで", "に", "で"],
+          "choices": [
+            "から",
+            "まで",
+            "に",
+            "で"
+          ],
           "answer": "から",
           "terms": [
             "v_kengai",
@@ -1356,7 +1430,12 @@
         {
           "kind": "mcq",
           "q": "広い 大通り ______ 通ります。",
-          "choices": ["を", "で", "に", "は"],
+          "choices": [
+            "を",
+            "で",
+            "に",
+            "は"
+          ],
           "answer": "を",
           "terms": [
             "v_hiroi",
@@ -1371,7 +1450,12 @@
         {
           "kind": "mcq",
           "q": "先生は 学生に 発音を 声で ______。",
-          "choices": ["言わせました", "言いました", "言われました", "言わせます"],
+          "choices": [
+            "言わせました",
+            "言いました",
+            "言われました",
+            "言わせます"
+          ],
           "answer": "言わせました",
           "terms": [
             "v_sensei",
@@ -1391,7 +1475,12 @@
         {
           "kind": "mcq",
           "q": "青森県に 行った ______ が あります。",
-          "choices": ["こと", "もの", "とき", "ため"],
+          "choices": [
+            "こと",
+            "もの",
+            "とき",
+            "ため"
+          ],
           "answer": "こと",
           "terms": [
             "v_aomoriken",
