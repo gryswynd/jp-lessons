@@ -1542,9 +1542,24 @@
       "meaning": "physical strength; stamina",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N4.6",
-      "notes": "体 (N4.6) + 力 (N4.3). Also used as RPG/game stat.",
-      "readingAlign": "体(たい)力(りょく)"
+      "lesson_ids": "N4.18",
+      "notes": "体 (N4.12) + 力 (N4.18). Also used as RPG/game stat.",
+      "readingAlign": "体(たい)力(りょく)",
+      "example": {
+        "jp": "私は 体力が ありません。",
+        "en": "I have no stamina.",
+        "manual": true,
+        "terms": [
+          "v_watashi",
+          "p_wa",
+          "v_tairyoku",
+          "p_ga",
+          {
+            "id": "v_aru",
+            "form": "polite_negative"
+          }
+        ]
+      }
     },
     {
       "id": "k_ane",
@@ -2197,7 +2212,21 @@
       "notes": "",
       "lesson_ids": "N4.9",
       "reading": "べつに",
-      "readingAlign": "別(べつ)に"
+      "readingAlign": "別(べつ)に",
+      "example": {
+        "jp": "別に、好きでは ありません。",
+        "en": "Not particularly — I don't like it.",
+        "manual": true,
+        "terms": [
+          "v_betsuni",
+          "v_suki",
+          "p_dewa",
+          {
+            "id": "v_aru",
+            "form": "polite_negative"
+          }
+        ]
+      }
     },
     {
       "id": "v_genki",
@@ -2932,7 +2961,24 @@
       "lesson_ids": "N4.11",
       "reading": "うつす",
       "verb_class": "godan",
-      "readingAlign": "写(うつ)す"
+      "readingAlign": "写(うつ)す",
+      "example": {
+        "jp": "私は 友だちの ノートを 写しました。",
+        "en": "I copied my friend's notebook.",
+        "manual": true,
+        "terms": [
+          "v_watashi",
+          "p_wa",
+          "v_tomodachi",
+          "p_no",
+          "v_nooto",
+          "p_wo",
+          {
+            "id": "v_utsusu",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_toru",
@@ -3166,7 +3212,21 @@
       "notes": "Lit. 'hand neck'.",
       "lesson_ids": "N4.12",
       "reading": "てくび",
-      "readingAlign": "手(て)首(くび)"
+      "readingAlign": "手(て)首(くび)",
+      "example": {
+        "jp": "手首が とても いたいです。",
+        "en": "My wrist hurts a lot.",
+        "manual": true,
+        "terms": [
+          "v_tekubi",
+          "p_ga",
+          "v_totemo",
+          {
+            "id": "v_itai",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_yuumei",
@@ -3622,7 +3682,22 @@
       "notes": "",
       "lesson_ids": "N4.14",
       "reading": "えきいん",
-      "readingAlign": "駅(えき)員(いん)"
+      "readingAlign": "駅(えき)員(いん)",
+      "example": {
+        "jp": "駅員に 道を 聞きました。",
+        "en": "I asked the station attendant for directions.",
+        "manual": true,
+        "terms": [
+          "v_ekiin",
+          "p_ni",
+          "v_michi",
+          "p_wo",
+          {
+            "id": "v_kiku",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_gyouji",
@@ -3860,7 +3935,22 @@
       "notes": "",
       "lesson_ids": "N4.14",
       "reading": "ようび",
-      "readingAlign": "曜(よう)日(び)"
+      "readingAlign": "曜(よう)日(び)",
+      "example": {
+        "jp": "好きな 曜日は 土曜日です。",
+        "en": "My favorite day of the week is Saturday.",
+        "manual": true,
+        "terms": [
+          {
+            "id": "v_suki",
+            "form": "attributive_na"
+          },
+          "v_youbi",
+          "p_wa",
+          "v_doyoubi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_koto",
@@ -4021,7 +4111,22 @@
       "notes": "",
       "lesson_ids": "N4.15",
       "reading": "がくいん",
-      "readingAlign": "学(がく)院(いん)"
+      "readingAlign": "学(がく)院(いん)",
+      "example": {
+        "jp": "あの 学院は とても 有名です。",
+        "en": "That academy is very famous.",
+        "manual": true,
+        "terms": [
+          "v_ano",
+          "v_gakuin",
+          "p_wa",
+          "v_totemo",
+          {
+            "id": "v_yuumei",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_gakusha",
@@ -4117,7 +4222,24 @@
       "notes": "Often used for 'person' in a relative clause or humble context.",
       "lesson_ids": "N4.15",
       "reading": "もの",
-      "readingAlign": "者(もの)"
+      "readingAlign": "者(もの)",
+      "example": {
+        "jp": "私は 中国から 来た 者です。",
+        "en": "I am someone who came from China.",
+        "manual": true,
+        "terms": [
+          "v_watashi",
+          "p_wa",
+          "v_chuugoku",
+          "p_kara",
+          {
+            "id": "v_kuru",
+            "form": "plain_past"
+          },
+          "v_mono_2",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_nomigusuri",
@@ -4162,7 +4284,24 @@
       "notes": "",
       "lesson_ids": "N4.15",
       "reading": "しにん",
-      "readingAlign": "死(し)人(にん)"
+      "readingAlign": "死(し)人(にん)",
+      "example": {
+        "jp": "新聞に 死人の 名前が 出ました。",
+        "en": "The names of the deceased appeared in the newspaper.",
+        "manual": true,
+        "terms": [
+          "v_shinbun",
+          "p_ni",
+          "v_shinin",
+          "p_no",
+          "v_namae",
+          "p_ga",
+          {
+            "id": "v_deru",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_shinu",
@@ -4308,7 +4447,19 @@
       "notes": "",
       "lesson_ids": "N4.16",
       "reading": "ぎんいろ",
-      "readingAlign": "銀(ぎん)色(いろ)"
+      "readingAlign": "銀(ぎん)色(いろ)",
+      "example": {
+        "jp": "この 車は 銀色です。",
+        "en": "This car is silver.",
+        "manual": true,
+        "terms": [
+          "v_kono",
+          "v_kuruma",
+          "p_wa",
+          "v_giniro",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_ginkou",
@@ -4427,7 +4578,24 @@
       "notes": "Formal term.",
       "lesson_ids": "N4.16",
       "reading": "しきょ",
-      "readingAlign": "死(し)去(きょ)"
+      "readingAlign": "死(し)去(きょ)",
+      "example": {
+        "jp": "去年、母の 父が 死去 しました。",
+        "en": "Last year, my mother's father passed away.",
+        "manual": true,
+        "terms": [
+          "v_kyonen",
+          "v_haha",
+          "p_no",
+          "v_chichi",
+          "p_ga",
+          "v_shikyo",
+          {
+            "id": "v_suru",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_shudou",
@@ -4455,7 +4623,20 @@
       "notes": "",
       "lesson_ids": "N4.16",
       "reading": "すいぎん",
-      "readingAlign": "水(すい)銀(ぎん)"
+      "readingAlign": "水(すい)銀(ぎん)",
+      "example": {
+        "jp": "水銀の 色は 銀色です。",
+        "en": "The color of mercury is silver.",
+        "manual": true,
+        "terms": [
+          "v_suigin",
+          "p_no",
+          "v_iro",
+          "p_wa",
+          "v_giniro",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_ugoku",
@@ -4551,7 +4732,22 @@
       "type": "vocab",
       "gtype": "interjection",
       "lesson_ids": "G21",
-      "notes": "Aizuchi expressing that the speaker has just received new or surprising information. Signals interest and engagement. Neutral-to-casual register."
+      "notes": "Aizuchi expressing that the speaker has just received new or surprising information. Signals interest and engagement. Neutral-to-casual register.",
+      "example": {
+        "jp": "へえ、それは おもしろいですね。",
+        "en": "Oh really? That's interesting.",
+        "manual": true,
+        "terms": [
+          "v_hee",
+          "v_sore",
+          "p_wa",
+          {
+            "id": "v_omoshiroi",
+            "form": "polite_adj"
+          },
+          "p_ne"
+        ]
+      }
     },
     {
       "id": "v_souso",
@@ -4580,7 +4776,19 @@
       "notes": "Discourse restructuring marker. Signals that what follows may contradict expectations or reveal something new. 実 unlocks at N3.18; both じつは and 実は tag to this entry via matches[].",
       "matches": [
         "実は"
-      ]
+      ],
+      "example": {
+        "jp": "じつは、私も 日本人です。",
+        "en": "Actually, I'm Japanese too.",
+        "manual": true,
+        "terms": [
+          "v_jitsuwa",
+          "v_watashi",
+          "p_mo",
+          "v_nihonjin",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_tsumari",
@@ -4590,7 +4798,19 @@
       "type": "vocab",
       "gtype": "adverb",
       "lesson_ids": "G21",
-      "notes": "Discourse restructuring marker. Signals a restatement, summary, or simplification of what was previously said. Used when clarifying or getting to the point."
+      "notes": "Discourse restructuring marker. Signals a restatement, summary, or simplification of what was previously said. Used when clarifying or getting to the point.",
+      "example": {
+        "jp": "つまり、明日は 休みです。",
+        "en": "In other words, tomorrow is a day off.",
+        "manual": true,
+        "terms": [
+          "v_tsumari",
+          "v_ashita",
+          "p_wa",
+          "v_yasumi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_nanka",
