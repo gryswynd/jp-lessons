@@ -5279,7 +5279,21 @@
       "notes": "Common surname (Lit. 'Rice field by the pond').",
       "lesson_ids": "N4.Final.Review",
       "reading": "いけだ",
-      "readingAlign": "池(いけ)田(だ)"
+      "readingAlign": "池(いけ)田(だ)",
+      "example": {
+        "jp": "池田さんは 私の 友だちです。",
+        "en": "Ikeda-san is my friend.",
+        "manual": true,
+        "terms": [
+          "v_ikeda",
+          "v_san",
+          "p_wa",
+          "v_watashi",
+          "p_no",
+          "v_tomodachi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_tanoshimu",
@@ -10581,7 +10595,23 @@
       "gtype": "noun_suru",
       "lesson_ids": "N4.34",
       "notes": "Compounds: 発 (N4.34) + 電 (N5.6)",
-      "readingAlign": "発(はつ)電(でん)"
+      "readingAlign": "発(はつ)電(でん)",
+      "example": {
+        "jp": "風の 力で 発電します。",
+        "en": "We generate electricity using the power of wind.",
+        "manual": true,
+        "terms": [
+          "v_kaze",
+          "p_no",
+          "v_chikara",
+          "p_de",
+          "v_hatsuden",
+          {
+            "id": "v_suru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_hatsugen",
@@ -10592,7 +10622,23 @@
       "gtype": "noun_suru",
       "lesson_ids": "N4.34",
       "notes": "Compounds: 発 (N4.34) + 言 (N5.7)",
-      "readingAlign": "発(はつ)言(げん)"
+      "readingAlign": "発(はつ)言(げん)",
+      "example": {
+        "jp": "先生の 発言は とても 大切です。",
+        "en": "The teacher's remark is very important.",
+        "manual": true,
+        "terms": [
+          "v_sensei",
+          "p_no",
+          "v_hatsugen",
+          "p_wa",
+          "v_totemo",
+          {
+            "id": "v_taisetsu",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_hatsuon",
@@ -10620,7 +10666,19 @@
       "gtype": "noun",
       "lesson_ids": "N4.34",
       "notes": "",
-      "readingAlign": "通(かよ)い"
+      "readingAlign": "通(かよ)い",
+      "example": {
+        "jp": "母は 病院 通いです。",
+        "en": "My mother makes regular trips to the hospital.",
+        "manual": true,
+        "terms": [
+          "v_haha",
+          "p_wa",
+          "v_byouin",
+          "v_kayoi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_kayou",
@@ -10666,7 +10724,23 @@
       "gtype": "noun",
       "lesson_ids": "N4.34",
       "notes": "Compounds: 県 (N4.34) + 知 (N4.29) + 事 (N4.14)",
-      "readingAlign": "県(けん)知(ち)事(じ)"
+      "readingAlign": "県(けん)知(ち)事(じ)",
+      "example": {
+        "jp": "田中さんは 県知事に なりました。",
+        "en": "Tanaka-san became the prefectural governor.",
+        "manual": true,
+        "terms": [
+          "v_tanaka",
+          "v_san",
+          "p_wa",
+          "v_kenchiji",
+          "p_ni",
+          {
+            "id": "v_naru",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_kengai",
@@ -10747,7 +10821,22 @@
       "gtype": "na-adjective",
       "verb_class": "na_adj",
       "lesson_ids": "N4.34",
-      "notes": "Na-adjective (区々な)."
+      "notes": "Na-adjective (区々な).",
+      "example": {
+        "jp": "みんなの 意見は 区々です。",
+        "en": "Everyone's opinions are various.",
+        "manual": true,
+        "terms": [
+          "v_minna",
+          "p_no",
+          "v_iken",
+          "p_wa",
+          {
+            "id": "v_machimachi",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_oodoori",
@@ -10845,7 +10934,21 @@
       "verb_class": "godan",
       "lesson_ids": "N4.34",
       "notes": "Transitive.",
-      "readingAlign": "通(とお)す"
+      "readingAlign": "通(とお)す",
+      "example": {
+        "jp": "すみません、ちょっと 通して ください。",
+        "en": "Excuse me, please let me pass.",
+        "manual": true,
+        "terms": [
+          "p_sumimasen",
+          "v_chotto",
+          {
+            "id": "v_toosu",
+            "form": "te_form"
+          },
+          "v_kudasai"
+        ]
+      }
     },
     {
       "id": "v_tsuugaku",
@@ -10969,7 +11072,19 @@
       "gtype": "noun_suru",
       "lesson_ids": "N4.35",
       "notes": "Compounds: 休 (N4.2) + 止 (N4.35)",
-      "readingAlign": "休(きゅう)止(し)"
+      "readingAlign": "休(きゅう)止(し)",
+      "example": {
+        "jp": "今 お店は 休止です。",
+        "en": "Right now the shop is on a break.",
+        "manual": true,
+        "terms": [
+          "v_ima",
+          "v_omise",
+          "p_wa",
+          "v_kyuushi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_minka",
@@ -11014,7 +11129,21 @@
       "gtype": "noun",
       "lesson_ids": "N4.35",
       "notes": "Standalone reading ぬし; as prefix しゅ in compounds.",
-      "readingAlign": "主(ぬし)"
+      "readingAlign": "主(ぬし)",
+      "example": {
+        "jp": "この 犬の 主は 私です。",
+        "en": "I am the owner of this dog.",
+        "manual": true,
+        "terms": [
+          "v_kono",
+          "v_inu",
+          "p_no",
+          "v_nushi",
+          "p_wa",
+          "v_watashi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_omoni",
@@ -11059,7 +11188,22 @@
       "gtype": "noun",
       "lesson_ids": "N4.35",
       "notes": "Compounds: 主 (N4.35) + 語 (N4.13)",
-      "readingAlign": "主(しゅ)語(ご)"
+      "readingAlign": "主(しゅ)語(ご)",
+      "example": {
+        "jp": "この 文の 主語は 何ですか。",
+        "en": "What is the subject of this sentence?",
+        "manual": true,
+        "terms": [
+          "v_kono",
+          "v_bun",
+          "p_no",
+          "v_shugo",
+          "p_wa",
+          "v_nan",
+          "g_desu",
+          "p_ka"
+        ]
+      }
     },
     {
       "id": "v_shujin",
@@ -11087,7 +11231,22 @@
       "gtype": "noun",
       "lesson_ids": "N4.35",
       "notes": "Standalone reading たみ; as prefix みん in compounds.",
-      "readingAlign": "民(たみ)"
+      "readingAlign": "民(たみ)",
+      "example": {
+        "jp": "民の 声を 聞きます。",
+        "en": "We listen to the voice of the people.",
+        "manual": true,
+        "terms": [
+          "v_tami",
+          "p_no",
+          "v_koe",
+          "p_wo",
+          {
+            "id": "v_kiku",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_tearai",
@@ -11371,7 +11530,22 @@
       "verb_class": "godan",
       "lesson_ids": "N4.36",
       "notes": "Godan verb. Used for giving birth to a child or producing something.",
-      "readingAlign": "産(う)む"
+      "readingAlign": "産(う)む",
+      "example": {
+        "jp": "母は 私を 産みました。",
+        "en": "My mother gave birth to me.",
+        "manual": true,
+        "terms": [
+          "v_haha",
+          "p_wa",
+          "v_watashi",
+          "p_wo",
+          {
+            "id": "v_umu",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "p_nee",
