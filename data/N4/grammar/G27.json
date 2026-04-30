@@ -8,10 +8,24 @@
     "unlocksAfter": "N4.30",
     "focus": "Express opinions and beliefs using と思う (current thought) and と思っている (sustained belief), and describe past experiences or occasional occurrences using たことがある and ことがある.",
     "estimatedMinutes": 25,
-    "particles": ["と思う", "と思っている", "たことがある", "ことがある"],
-    "grammarForms": ["plain_past", "te_form", "plain_form", "plain_negative"],
+    "particles": [
+      "と思う",
+      "と思っている",
+      "たことがある",
+      "ことがある"
+    ],
+    "grammarForms": [
+      "plain_past",
+      "te_form",
+      "plain_form",
+      "plain_negative"
+    ],
     "icon": "💭"
   },
+  "targetVocab": [
+    "v_omou",
+    "v_aru"
+  ],
   "sections": [
     {
       "type": "grammarIntro",
@@ -61,18 +75,42 @@
       "examples": [
         {
           "parts": [
-            { "text": "日本語は", "role": "topic", "gloss": "Japanese (は — topic)" },
-            { "text": "むずかしいと", "role": "connector", "gloss": "difficult (plain い-adj) + と (quotation marker)" },
-            { "text": "思います。", "role": "predicate", "gloss": "think (polite form of 思う)" }
+            {
+              "text": "日本語は",
+              "role": "topic",
+              "gloss": "Japanese (は — topic)"
+            },
+            {
+              "text": "むずかしいと",
+              "role": "connector",
+              "gloss": "difficult (plain い-adj) + と (quotation marker)"
+            },
+            {
+              "text": "思います。",
+              "role": "predicate",
+              "gloss": "think (polite form of 思う)"
+            }
           ],
           "en": "I think Japanese is difficult.",
           "breakdown": "むずかしい (plain form of い-adj, no changes) + と (quotation marker) + 思います. The adjective goes straight into plain form — never add です before と."
         },
         {
           "parts": [
-            { "text": "明日は", "role": "topic", "gloss": "tomorrow (は — topic)" },
-            { "text": "来ないと", "role": "connector", "gloss": "won't come (plain negative of 来る) + と (quotation marker)" },
-            { "text": "思う。", "role": "predicate", "gloss": "think (plain form of 思う)" }
+            {
+              "text": "明日は",
+              "role": "topic",
+              "gloss": "tomorrow (は — topic)"
+            },
+            {
+              "text": "来ないと",
+              "role": "connector",
+              "gloss": "won't come (plain negative of 来る) + と (quotation marker)"
+            },
+            {
+              "text": "思う。",
+              "role": "predicate",
+              "gloss": "think (plain form of 思う)"
+            }
           ],
           "en": "I think (they) won't come tomorrow.",
           "breakdown": "来ない (plain negative of 来る — irregular: くる → こない) + と + 思う. The negation is INSIDE the quoted clause. Compare: 来ると思わない = 'I don't think (they'll) come' — a slightly different nuance where the speaker negates their thinking rather than the event."
@@ -111,19 +149,47 @@
       "examples": [
         {
           "parts": [
-            { "text": "田中さんは", "role": "topic", "gloss": "Tanaka (は — topic)" },
-            { "text": "日本語が", "role": "subject", "gloss": "Japanese (が — subject of the embedded clause)" },
-            { "text": "上手だと", "role": "connector", "gloss": "skilled (な-adj stem 上手 + だ) + と" },
-            { "text": "思っている。", "role": "predicate", "gloss": "thinks (te-form of 思う + いる — ongoing state)" }
+            {
+              "text": "田中さんは",
+              "role": "topic",
+              "gloss": "Tanaka (は — topic)"
+            },
+            {
+              "text": "日本語が",
+              "role": "subject",
+              "gloss": "Japanese (が — subject of the embedded clause)"
+            },
+            {
+              "text": "上手だと",
+              "role": "connector",
+              "gloss": "skilled (な-adj stem 上手 + だ) + と"
+            },
+            {
+              "text": "思っている。",
+              "role": "predicate",
+              "gloss": "thinks (te-form of 思う + いる — ongoing state)"
+            }
           ],
           "en": "Tanaka thinks he is good at Japanese (his ongoing belief).",
           "breakdown": "上手 (na-adj) + だ + と + 思っている = his sustained view of his own ability. と思う here would mean 'I think he's good' (my current assessment), not his own ongoing belief."
         },
         {
           "parts": [
-            { "text": "旅行は", "role": "topic", "gloss": "travel (は — topic)" },
-            { "text": "楽しいと", "role": "connector", "gloss": "fun (plain い-adj) + と" },
-            { "text": "ずっと 思っています。", "role": "predicate", "gloss": "have always thought (ずっと = always/continuously + 思っています)" }
+            {
+              "text": "旅行は",
+              "role": "topic",
+              "gloss": "travel (は — topic)"
+            },
+            {
+              "text": "楽しいと",
+              "role": "connector",
+              "gloss": "fun (plain い-adj) + と"
+            },
+            {
+              "text": "ずっと 思っています。",
+              "role": "predicate",
+              "gloss": "have always thought (ずっと = always/continuously + 思っています)"
+            }
           ],
           "en": "I have always thought travel is fun.",
           "breakdown": "楽しい (plain い-adj) + と + 思っています. ずっと (always, continuously) makes the sustained nature of the belief explicit. と思う without ずっと would be a single-moment opinion rather than a long-held view."
@@ -146,9 +212,21 @@
           ],
           "example": {
             "parts": [
-              { "text": "日本語は", "role": "topic", "gloss": "Japanese (topic)" },
-              { "text": "むずかしいと", "role": "connector", "gloss": "difficult (plain adj) + と" },
-              { "text": "思う。", "role": "predicate", "gloss": "think (plain form)" }
+              {
+                "text": "日本語は",
+                "role": "topic",
+                "gloss": "Japanese (topic)"
+              },
+              {
+                "text": "むずかしいと",
+                "role": "connector",
+                "gloss": "difficult (plain adj) + と"
+              },
+              {
+                "text": "思う。",
+                "role": "predicate",
+                "gloss": "think (plain form)"
+              }
             ],
             "en": "I think Japanese is difficult (my current opinion)."
           }
@@ -165,9 +243,21 @@
           ],
           "example": {
             "parts": [
-              { "text": "日本語は", "role": "topic", "gloss": "Japanese (topic)" },
-              { "text": "大切だと", "role": "connector", "gloss": "important (な-adj + だ) + と" },
-              { "text": "思っている。", "role": "predicate", "gloss": "believe (te-form + いる — ongoing)" }
+              {
+                "text": "日本語は",
+                "role": "topic",
+                "gloss": "Japanese (topic)"
+              },
+              {
+                "text": "大切だと",
+                "role": "connector",
+                "gloss": "important (な-adj + だ) + と"
+              },
+              {
+                "text": "思っている。",
+                "role": "predicate",
+                "gloss": "believe (te-form + いる — ongoing)"
+              }
             ],
             "en": "I believe Japanese is important (a conviction I hold)."
           }
@@ -208,18 +298,42 @@
       "examples": [
         {
           "parts": [
-            { "text": "日本に", "role": "object", "gloss": "to Japan (に — destination)" },
-            { "text": "行ったことが", "role": "predicate", "gloss": "gone (た-form of 行く) + こと (nominalizer) + が (subject)" },
-            { "text": "あります。", "role": "predicate", "gloss": "exists (polite form of ある — the experience exists)" }
+            {
+              "text": "日本に",
+              "role": "object",
+              "gloss": "to Japan (に — destination)"
+            },
+            {
+              "text": "行ったことが",
+              "role": "predicate",
+              "gloss": "gone (た-form of 行く) + こと (nominalizer) + が (subject)"
+            },
+            {
+              "text": "あります。",
+              "role": "predicate",
+              "gloss": "exists (polite form of ある — the experience exists)"
+            }
           ],
           "en": "I have been to Japan.",
           "breakdown": "行く → 行った (plain past / た-form) + ことが (nominalizer + subject marker) + あります. Literally: 'The thing of having gone to Japan exists (in my history).' The た-form is essential — it is what marks this as a completed past experience."
         },
         {
           "parts": [
-            { "text": "すしを", "role": "object", "gloss": "sushi (を — object)" },
-            { "text": "食べたことが", "role": "predicate", "gloss": "eaten (た-form of 食べる) + こと + が" },
-            { "text": "ありません。", "role": "predicate", "gloss": "does not exist (polite negative of ある)" }
+            {
+              "text": "すしを",
+              "role": "object",
+              "gloss": "sushi (を — object)"
+            },
+            {
+              "text": "食べたことが",
+              "role": "predicate",
+              "gloss": "eaten (た-form of 食べる) + こと + が"
+            },
+            {
+              "text": "ありません。",
+              "role": "predicate",
+              "gloss": "does not exist (polite negative of ある)"
+            }
           ],
           "en": "I have never eaten sushi.",
           "breakdown": "食べる → 食べた (た-form of ichidan verb) + ことが + ありません = the experience of eating sushi does not exist in my history. Casual equivalent: 食べたことがない."
@@ -258,18 +372,42 @@
       "examples": [
         {
           "parts": [
-            { "text": "朝 ご飯を", "role": "object", "gloss": "breakfast (を — object)" },
-            { "text": "食べないことが", "role": "predicate", "gloss": "not eat (plain negative of 食べる) + こと (nominalizer) + が" },
-            { "text": "ある。", "role": "predicate", "gloss": "exists (plain form of ある — the occasion exists)" }
+            {
+              "text": "朝 ご飯を",
+              "role": "object",
+              "gloss": "breakfast (を — object)"
+            },
+            {
+              "text": "食べないことが",
+              "role": "predicate",
+              "gloss": "not eat (plain negative of 食べる) + こと (nominalizer) + が"
+            },
+            {
+              "text": "ある。",
+              "role": "predicate",
+              "gloss": "exists (plain form of ある — the occasion exists)"
+            }
           ],
           "en": "I sometimes skip breakfast. (There are times when I don't eat breakfast.)",
           "breakdown": "食べない (plain negative of 食べる — ichidan verb, negative: 食べ + ない) + ことが + ある. Literally: 'The occasion of not eating breakfast exists.' No た-form — the verb is in plain present/negative form because this describes a recurring pattern, not a single past event."
         },
         {
           "parts": [
-            { "text": "映画を", "role": "object", "gloss": "movies (を — object)" },
-            { "text": "一人で 見ることが", "role": "predicate", "gloss": "watch alone (dictionary form of 見る + 一人で) + こと + が" },
-            { "text": "あります。", "role": "predicate", "gloss": "exists (polite form of ある)" }
+            {
+              "text": "映画を",
+              "role": "object",
+              "gloss": "movies (を — object)"
+            },
+            {
+              "text": "一人で 見ることが",
+              "role": "predicate",
+              "gloss": "watch alone (dictionary form of 見る + 一人で) + こと + が"
+            },
+            {
+              "text": "あります。",
+              "role": "predicate",
+              "gloss": "exists (polite form of ある)"
+            }
           ],
           "en": "I sometimes watch movies alone. (There are times when I watch movies alone.)",
           "breakdown": "見る (ichidan, dictionary form) + ことが + あります. 一人で (alone) adds detail. Polite form あります for formal/polite context. Casual: 見ることがある."
@@ -292,9 +430,21 @@
           ],
           "example": {
             "parts": [
-              { "text": "日本に", "role": "object", "gloss": "to Japan (に)" },
-              { "text": "行ったことが", "role": "predicate", "gloss": "gone (た-form) + こと + が" },
-              { "text": "ある。", "role": "predicate", "gloss": "exists — the experience exists in my history" }
+              {
+                "text": "日本に",
+                "role": "object",
+                "gloss": "to Japan (に)"
+              },
+              {
+                "text": "行ったことが",
+                "role": "predicate",
+                "gloss": "gone (た-form) + こと + が"
+              },
+              {
+                "text": "ある。",
+                "role": "predicate",
+                "gloss": "exists — the experience exists in my history"
+              }
             ],
             "en": "I have been to Japan."
           }
@@ -311,9 +461,21 @@
           ],
           "example": {
             "parts": [
-              { "text": "日本に", "role": "object", "gloss": "to Japan (に)" },
-              { "text": "行くことが", "role": "predicate", "gloss": "go (dictionary form) + こと + が" },
-              { "text": "ある。", "role": "predicate", "gloss": "exists — the occasion exists (recurring)" }
+              {
+                "text": "日本に",
+                "role": "object",
+                "gloss": "to Japan (に)"
+              },
+              {
+                "text": "行くことが",
+                "role": "predicate",
+                "gloss": "go (dictionary form) + こと + が"
+              },
+              {
+                "text": "ある。",
+                "role": "predicate",
+                "gloss": "exists — the occasion exists (recurring)"
+              }
             ],
             "en": "I sometimes go to Japan."
           }
@@ -328,9 +490,21 @@
         {
           "context": "と思う — sharing a current opinion",
           "parts": [
-            { "text": "海外 旅行は", "role": "topic", "gloss": "overseas travel (は — topic)" },
-            { "text": "楽しいと", "role": "connector", "gloss": "fun (plain い-adj) + と (quotation marker)" },
-            { "text": "思います。", "role": "predicate", "gloss": "think (polite form of 思う)" }
+            {
+              "text": "海外 旅行は",
+              "role": "topic",
+              "gloss": "overseas travel (は — topic)"
+            },
+            {
+              "text": "楽しいと",
+              "role": "connector",
+              "gloss": "fun (plain い-adj) + と (quotation marker)"
+            },
+            {
+              "text": "思います。",
+              "role": "predicate",
+              "gloss": "think (polite form of 思う)"
+            }
           ],
           "en": "I think overseas travel is fun.",
           "note": "楽しい (plain い-adj, no changes) + と + 思います. The adjective stays in plain form before と. Use と思います when sharing your current take on something. Use と思っています for a deep, lasting conviction."
@@ -338,10 +512,26 @@
         {
           "context": "と思っている — someone's sustained belief",
           "parts": [
-            { "text": "けんは", "role": "topic", "gloss": "Ken (は — topic)" },
-            { "text": "海外 旅行が", "role": "subject", "gloss": "overseas travel (が — subject of belief)" },
-            { "text": "むずかしいと", "role": "connector", "gloss": "difficult (plain adj) + と" },
-            { "text": "思っている。", "role": "predicate", "gloss": "thinks (te-form of 思う + いる — ongoing belief)" }
+            {
+              "text": "けんは",
+              "role": "topic",
+              "gloss": "Ken (は — topic)"
+            },
+            {
+              "text": "海外 旅行が",
+              "role": "subject",
+              "gloss": "overseas travel (が — subject of belief)"
+            },
+            {
+              "text": "むずかしいと",
+              "role": "connector",
+              "gloss": "difficult (plain adj) + と"
+            },
+            {
+              "text": "思っている。",
+              "role": "predicate",
+              "gloss": "thinks (te-form of 思う + いる — ongoing belief)"
+            }
           ],
           "en": "Ken thinks overseas travel is difficult (his ongoing view).",
           "note": "思っている = his sustained belief, reported from the outside. Because it is someone else's inner state, と思っている is the natural choice — we cannot access his moment-by-moment thoughts; we can only report his held opinion."
@@ -349,10 +539,26 @@
         {
           "context": "たことがある — sharing a past experience",
           "parts": [
-            { "text": "一度", "role": "adverb", "gloss": "once (一度 — one time)" },
-            { "text": "海外に", "role": "object", "gloss": "overseas (に — destination)" },
-            { "text": "行ったことが", "role": "predicate", "gloss": "gone (た-form of 行く) + こと + が" },
-            { "text": "あります。", "role": "predicate", "gloss": "exists (polite form of ある — the experience exists)" }
+            {
+              "text": "一度",
+              "role": "adverb",
+              "gloss": "once (一度 — one time)"
+            },
+            {
+              "text": "海外に",
+              "role": "object",
+              "gloss": "overseas (に — destination)"
+            },
+            {
+              "text": "行ったことが",
+              "role": "predicate",
+              "gloss": "gone (た-form of 行く) + こと + が"
+            },
+            {
+              "text": "あります。",
+              "role": "predicate",
+              "gloss": "exists (polite form of ある — the experience exists)"
+            }
           ],
           "en": "I have been abroad once.",
           "note": "一度 (once) + 行ったことがあります = I have the experience of having gone abroad once. 一度 adds nuance about how many times. 行ったことがありません would mean 'I have never been abroad'."
@@ -360,9 +566,21 @@
         {
           "context": "ことがある — describing an occasional habit",
           "parts": [
-            { "text": "友だちと", "role": "modifier", "gloss": "with friends (と — with)" },
-            { "text": "映画を 見ることが", "role": "predicate", "gloss": "watch movies (dictionary form of 見る) + こと + が" },
-            { "text": "ある。", "role": "predicate", "gloss": "exists (plain form of ある)" }
+            {
+              "text": "友だちと",
+              "role": "modifier",
+              "gloss": "with friends (と — with)"
+            },
+            {
+              "text": "映画を 見ることが",
+              "role": "predicate",
+              "gloss": "watch movies (dictionary form of 見る) + こと + が"
+            },
+            {
+              "text": "ある。",
+              "role": "predicate",
+              "gloss": "exists (plain form of ある)"
+            }
           ],
           "en": "I sometimes watch movies with friends.",
           "note": "見る (dictionary form, not past) + ことがある = this occasionally happens. Compare: 見たことがある = I have watched (a memorable past experience — with た-form). The dictionary form is the signal for a recurring habit, not a single past memory."
@@ -383,10 +601,16 @@
             "v_kaigai",
             "v_ryokou",
             "p_ni",
-            { "id": "v_iku", "form": "plain_past" },
+            {
+              "id": "v_iku",
+              "form": "plain_past"
+            },
             "v_koto",
             "p_ga",
-            { "id": "v_aru", "form": "plain_form" },
+            {
+              "id": "v_aru",
+              "form": "plain_form"
+            },
             "p_ka"
           ]
         },
@@ -397,13 +621,25 @@
           "terms": [
             "v_un",
             "v_ichido",
-            { "id": "v_iku", "form": "plain_past" },
+            {
+              "id": "v_iku",
+              "form": "plain_past"
+            },
             "v_koto",
             "p_ga",
-            { "id": "v_aru", "form": "plain_form" },
+            {
+              "id": "v_aru",
+              "form": "plain_form"
+            },
             "p_yo",
-            { "id": "v_sugoi", "form": "adverbial" },
-            { "id": "v_tanoshii", "form": "plain_past_adj" }
+            {
+              "id": "v_sugoi",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_tanoshii",
+              "form": "plain_past_adj"
+            }
           ]
         },
         {
@@ -414,10 +650,19 @@
             "v_ii",
             "p_na",
             "v_mata",
-            { "id": "v_iku", "form": "plain_desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
             "p_to_quote",
-            { "id": "v_omou", "form": "te_form" },
-            { "id": "v_iru", "form": "plain_form" },
+            {
+              "id": "v_omou",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
             "p_ka"
           ]
         },
@@ -428,19 +673,34 @@
           "terms": [
             "v_un",
             "v_mata",
-            { "id": "v_iku", "form": "plain_desire_tai" },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
             "p_to_quote",
-            { "id": "v_omou", "form": "te_form" },
-            { "id": "v_iru", "form": "plain_form" },
+            {
+              "id": "v_omou",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
             "p_yo",
             "v_muzukashii",
             "v_koto",
             "p_mo",
-            { "id": "v_aru", "form": "plain_form" },
+            {
+              "id": "v_aru",
+              "form": "plain_form"
+            },
             "p_kedo",
             "v_tanoshii",
             "p_to_quote",
-            { "id": "v_omou", "form": "plain_form" }
+            {
+              "id": "v_omou",
+              "form": "plain_form"
+            }
           ]
         },
         {
@@ -452,10 +712,16 @@
             "p_ne",
             "v_ryokou",
             "p_ni",
-            { "id": "v_iku", "form": "plain_form" },
+            {
+              "id": "v_iku",
+              "form": "plain_form"
+            },
             "v_koto",
             "p_ga",
-            { "id": "v_aru", "form": "plain_form" },
+            {
+              "id": "v_aru",
+              "form": "plain_form"
+            },
             "p_yo"
           ]
         },
@@ -473,7 +739,10 @@
             "p_wa",
             "v_muzukashii",
             "p_to_quote",
-            { "id": "v_omou", "form": "plain_form" },
+            {
+              "id": "v_omou",
+              "form": "plain_form"
+            },
             "p_ka"
           ]
         },
@@ -484,17 +753,32 @@
           "terms": [
             "v_muzukashii",
             "p_to_quote",
-            { "id": "v_omou", "form": "plain_form" },
+            {
+              "id": "v_omou",
+              "form": "plain_form"
+            },
             "p_kedo",
             "v_mainichi",
             "v_benkyou",
-            { "id": "v_suru", "form": "conditional_ba" },
-            { "id": "v_hanasu", "form": "potential" },
+            {
+              "id": "v_suru",
+              "form": "conditional_ba"
+            },
+            {
+              "id": "v_hanasu",
+              "form": "potential"
+            },
             "v_you_manner",
             "p_ni",
-            { "id": "v_naru", "form": "plain_form" },
+            {
+              "id": "v_naru",
+              "form": "plain_form"
+            },
             "p_to_quote",
-            { "id": "v_omou", "form": "plain_form" },
+            {
+              "id": "v_omou",
+              "form": "plain_form"
+            },
             "p_yo"
           ]
         }
@@ -509,7 +793,12 @@
           "before": "日本 料理を 食べ",
           "after": "ありますか？",
           "translation": "Have you ever eaten Japanese food?",
-          "choices": ["たことが", "ることが", "たことは", "ることは"],
+          "choices": [
+            "たことが",
+            "ることが",
+            "たことは",
+            "ることは"
+          ],
           "answer": "たことが",
           "explanation": "食べた (た-form of 食べる) + ことが + あります = 'have eaten Japanese food' (past experience). The question asks about a life experience. ることがある would mean 'do you sometimes eat Japanese food?' — a different question about habits, not experience."
         },
@@ -517,7 +806,12 @@
           "before": "いそがしい 日は 朝 ご飯を 食べない",
           "after": "。体に よく ないと 思う けど。",
           "translation": "There are times I skip breakfast on busy days. I think it's not good for the body though.",
-          "choices": ["ことが ある", "たことが ある", "ことは ない", "たことは ない"],
+          "choices": [
+            "ことが ある",
+            "たことが ある",
+            "ことは ない",
+            "たことは ない"
+          ],
           "answer": "ことが ある",
           "explanation": "食べない (plain negative dictionary form) + ことがある = 'there are times I don't eat breakfast' (an occasional pattern). たことがある would mean 'I have had the experience of not eating breakfast' — less natural here because this is clearly a recurring situation, not a single memorable past event."
         },
@@ -525,7 +819,12 @@
           "before": "田中さんは 日本語が 上手に なれる",
           "after": "よ。毎日 一生けんめい 勉強 して いるから。",
           "translation": "Tanaka thinks she can become good at Japanese, you know. Because she always practices hard.",
-          "choices": ["と 思っている", "と 思う", "と 思った", "と 思えば"],
+          "choices": [
+            "と 思っている",
+            "と 思う",
+            "と 思った",
+            "と 思えば"
+          ],
           "answer": "と 思っている",
           "explanation": "と思っている = her ongoing belief about her own ability — a sustained inner conviction. と思う would express my current opinion about her (not her own view). The context ('She...') and the explanation ('because she always practices hard') both point to a held belief, not a snap judgment."
         },
@@ -533,7 +832,12 @@
           "before": "この 映画、すごく おもしろい",
           "after": "。見て みて！",
           "translation": "I think this movie is really interesting. Watch it!",
-          "choices": ["と 思う", "と 思っている", "と 思った", "と 思えば"],
+          "choices": [
+            "と 思う",
+            "と 思っている",
+            "と 思った",
+            "と 思えば"
+          ],
           "answer": "と 思う",
           "explanation": "と思う = current reaction to the movie just watched or just discussed. This is a direct, in-the-moment recommendation. と思っている would suggest a long-held opinion about the movie, which is unusual for something you just saw. と思った would make this a past thought rather than a current one."
         }
