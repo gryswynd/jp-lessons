@@ -3,13 +3,13 @@
 Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **28** lessons.
 
 ## Target-vocab gaps
-- Missing from unlocking N's vocabList (declaration): **99**
+- Missing from unlocking N's vocabList (declaration): **77**
 - Missing reinforcement in next 2 N lessons: **88**
 - Missing reinforcement in window stories: **91**
 - Misplaced (target term declared in an earlier N lesson): **35**
 
 ## Other gating gaps
-- Late-introduced (term's `lesson_ids` after the gate): **32**
+- Late-introduced (term's `lesson_ids` after the gate): **21**
 - Undeclared introductions (term's `lesson_ids` = gate but not in vocabList, and not a target): **2**
 - Unknown term ids: **0**
 - Character references skipped (no `lesson_ids` in `shared/characters.json`): **42**
@@ -27,8 +27,7 @@ _file:_ `data/N5/grammar/G1.json`
 **Missing reinforcement in window stories (1):**
 - `g_da` — not referenced in story `my-family`, `tanjoubi-no-keeki`
 
-**Other terms in G referenced before introduction (2):**
-- `v_ano` — introduced in `N5.4` (after gate `N5.1`)
+**Other terms in G referenced before introduction (1):**
 - `v_watashi` — introduced in `N4.3` (after gate `N5.1`)
 
 ## G2 — Ko-so-a-do Demonstratives
@@ -37,30 +36,6 @@ _unlocksAfter:_ `N5.1` → gating N lesson: `N5.1`
 _targetVocab:_ `v_kore`, `v_sore`, `v_are`, `v_dore`, `v_kono`, `v_sono`, `v_ano`, `v_dono`, `v_koko`, `v_soko`, `v_asoko`, `v_doko`, `v_kochira`, `v_sochira`, `v_achira`, `v_dochira`, `v_kou`, `v_sou`, `v_aa`, `v_dou`, `v_konna`, `v_sonna`, `v_anna`, `v_donna`
 _reinforcement window:_ `N5.2`, `N5.3` + stories: `my-family`, `tanjoubi-no-keeki`
 _file:_ `data/N5/grammar/G2.json`
-
-**Missing from N5.1 vocabList — declare here (22):**
-- `v_kore`
-- `v_sore`
-- `v_are`
-- `v_dore`
-- `v_kono`
-- `v_sono`
-- `v_ano`
-- `v_dono`
-- `v_koko`
-- `v_soko`
-- `v_asoko`
-- `v_doko`
-- `v_kochira`
-- `v_sochira`
-- `v_achira`
-- `v_dochira`
-- `v_kou`
-- `v_sou`
-- `v_aa`
-- `v_konna`
-- `v_sonna`
-- `v_anna`
 
 **Missing reinforcement in next 2 N lessons (23):**
 - `v_kore` — not referenced in `N5.2`
@@ -113,18 +88,9 @@ _file:_ `data/N5/grammar/G2.json`
 - `v_anna` — not referenced in story `my-family`, `tanjoubi-no-keeki`
 - `v_donna` — not referenced in story `my-family`, `tanjoubi-no-keeki`
 
-**Other terms in G referenced before introduction (11):**
-- `v_achira` — introduced in `N5.9` (after gate `N5.1`)
-- `v_ano` — introduced in `N5.4` (after gate `N5.1`)
-- `v_are` — introduced in `N5.3` (after gate `N5.1`)
-- `v_doko` — introduced in `N5.5` (after gate `N5.1`)
-- `v_dono` — introduced in `N5.4` (after gate `N5.1`)
-- `v_kochira` — introduced in `N5.9` (after gate `N5.1`)
-- `v_kono` — introduced in `N5.4` (after gate `N5.1`)
-- `v_kore` — introduced in `N5.3` (after gate `N5.1`)
+**Other terms in G referenced before introduction (2):**
 - `v_namae` — introduced in `N5.9` (after gate `N5.1`)
 - `v_nan` — introduced in `N5.2` (after gate `N5.1`)
-- `v_sore` — introduced in `N5.3` (after gate `N5.1`)
 
 ## G3 — Core Particles I: は, が, の, か, を
 
@@ -369,10 +335,7 @@ _file:_ `data/N4/grammar/G15.json`
 
 **Misplaced — target term in earlier N lesson's vocabList (2):**
 - `v_ichiban` is currently declared in `N5.1` (should move to `N4.5`)
-- `v_dochira` is currently declared in `N5.9` (should move to `N4.5`)
-
-**Other terms in G referenced before introduction (1):**
-- `v_dochira` — introduced in `N4.8` (after gate `N4.5`)
+- `v_dochira` is currently declared in `N5.1` (should move to `N4.5`)
 
 ## G16 — Manner & Similarity — のように / のような / みたいに / みたいな
 
