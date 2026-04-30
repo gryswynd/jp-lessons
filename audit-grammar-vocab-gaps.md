@@ -1,15 +1,15 @@
 # Grammar Vocab Gating Audit
 
-Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **28** lessons.
+Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **24** lessons.
 
 ## Target-vocab gaps
-- Missing from unlocking N's vocabList (declaration): **76**
+- Missing from unlocking N's vocabList (declaration): **42**
 - Missing reinforcement in next 2 N lessons: **88**
 - Missing reinforcement in window stories: **91**
-- Misplaced (target term declared in an earlier N lesson): **35**
+- Misplaced (target term declared in an earlier N lesson): **0**
 
 ## Other gating gaps
-- Late-introduced (term's `lesson_ids` after the gate): **21**
+- Late-introduced (term's `lesson_ids` after the gate): **8**
 - Undeclared introductions (term's `lesson_ids` = gate but not in vocabList, and not a target): **2**
 - Unknown term ids: **0**
 - Character references skipped (no `lesson_ids` in `shared/characters.json`): **42**
@@ -26,9 +26,6 @@ _file:_ `data/N5/grammar/G1.json`
 
 **Missing reinforcement in window stories (1):**
 - `g_da` — not referenced in story `my-family`, `tanjoubi-no-keeki`
-
-**Other terms in G referenced before introduction (1):**
-- `v_watashi` — introduced in `N4.3` (after gate `N5.1`)
 
 ## G2 — Ko-so-a-do Demonstratives
 
@@ -88,9 +85,8 @@ _file:_ `data/N5/grammar/G2.json`
 - `v_anna` — not referenced in story `my-family`, `tanjoubi-no-keeki`
 - `v_donna` — not referenced in story `my-family`, `tanjoubi-no-keeki`
 
-**Other terms in G referenced before introduction (2):**
+**Other terms in G referenced before introduction (1):**
 - `v_namae` — introduced in `N5.9` (after gate `N5.1`)
-- `v_nan` — introduced in `N5.2` (after gate `N5.1`)
 
 ## G3 — Core Particles I: は, が, の, か, を
 
@@ -107,8 +103,7 @@ _file:_ `data/N5/grammar/G3.json`
 - `p_ka` — not referenced in story `my-family`, `tanjoubi-no-keeki`
 - `p_wo` — not referenced in story `tanjoubi-no-keeki`
 
-**Other terms in G referenced before introduction (3):**
-- `v_nani` — introduced in `N5.2` (after gate `N5.1`)
+**Other terms in G referenced before introduction (2):**
 - `v_nihongo` — introduced in `N5.12` (after gate `N5.1`)
 - `v_oshieru` — introduced in `N4.24` (after gate `N5.1`)
 
@@ -141,10 +136,6 @@ _targetVocab:_ `p_ni`, `p_de`, `p_e`, `v_aru`, `v_iru`
 _reinforcement window:_ `N5.6`, `N5.7` + stories: `kazoku-ga-kimasu`
 _file:_ `data/N5/grammar/G5.json`
 
-**Missing from N5.5 vocabList — declare here (2):**
-- `v_aru`
-- `v_iru`
-
 **Missing reinforcement in next 2 N lessons (3):**
 - `p_ni` — not referenced in `N5.7`
 - `v_aru` — not referenced in `N5.7`
@@ -152,24 +143,6 @@ _file:_ `data/N5/grammar/G5.json`
 
 **Missing reinforcement in window stories (1):**
 - `v_iru` — not referenced in story `kazoku-ga-kimasu`
-
-**Misplaced — target term in earlier N lesson's vocabList (3):**
-- `p_ni` is currently declared in `N5.2` (should move to `N5.5`)
-- `v_aru` is currently declared in `N5.1` (should move to `N5.5`)
-- `v_iru` is currently declared in `N5.1` (should move to `N5.5`)
-
-**Other terms in G referenced before introduction (1):**
-- `v_watashi` — introduced in `N4.3` (after gate `N5.5`)
-
-## G6 — Verb Types — RU-Verbs vs U-Verbs vs Irregulars
-
-_unlocksAfter:_ `G5` → gating N lesson: `N5.5`
-_targetVocab:_ _(not yet curated)_
-_reinforcement window:_ `N5.6`, `N5.7` + stories: `kazoku-ga-kimasu`
-_file:_ `data/N5/grammar/G6.json`
-
-**Other terms in G referenced before introduction (1):**
-- `v_watashi` — introduced in `N4.3` (after gate `N5.5`)
 
 ## G8 — て-form — Connecting, Requesting & Commanding
 
@@ -190,8 +163,7 @@ _targetVocab:_ `v_iru`, `v_hoshii`, `g_deshou`, `g_darou`
 _reinforcement window:_ `N5.9`, `N5.10` + stories: `kyuujitsu-no-rikizo`
 _file:_ `data/N5/grammar/G9.json`
 
-**Missing from N5.8 vocabList — declare here (3):**
-- `v_iru`
+**Missing from N5.8 vocabList — declare here (2):**
 - `g_deshou`
 - `g_darou`
 
@@ -204,12 +176,6 @@ _file:_ `data/N5/grammar/G9.json`
 - `v_hoshii` — not referenced in story `kyuujitsu-no-rikizo`
 - `g_deshou` — not referenced in story `kyuujitsu-no-rikizo`
 - `g_darou` — not referenced in story `kyuujitsu-no-rikizo`
-
-**Misplaced — target term in earlier N lesson's vocabList (1):**
-- `v_iru` is currently declared in `N5.1` (should move to `N5.8`)
-
-**Other terms in G referenced before introduction (1):**
-- `v_watashi` — introduced in `N4.3` (after gate `N5.8`)
 
 ## G10 — Plain Forms & Basic Connectors
 
@@ -238,19 +204,6 @@ _file:_ `data/N5/grammar/G10.json`
 - `p_node` — not referenced in story `kyuujitsu-no-rikizo`
 - `p_ndesu` — not referenced in story `kyuujitsu-no-rikizo`
 - `p_nda` — not referenced in story `kyuujitsu-no-rikizo`
-
-## G11 — i-Adjective Conjugation
-
-_unlocksAfter:_ `N5.10` → gating N lesson: `N5.10`
-_targetVocab:_ `v_ii`
-_reinforcement window:_ `N5.11`, `N5.12` + stories: `ame-no-hi-no-gakkou`
-_file:_ `data/N5/grammar/G11.json`
-
-**Missing from N5.10 vocabList — declare here (1):**
-- `v_ii`
-
-**Misplaced — target term in earlier N lesson's vocabList (1):**
-- `v_ii` is currently declared in `N5.1` (should move to `N5.10`)
 
 ## G12 — na-Adjective Conjugation
 
@@ -285,11 +238,9 @@ _targetVocab:_ `v_ageru`, `v_morau`, `v_kureru`, `v_hoshii`
 _reinforcement window:_ `N4.6`, `N4.7` + stories: `hirugohan-monogatari`
 _file:_ `data/N4/grammar/G14.json`
 
-**Missing from N4.5 vocabList — declare here (4):**
+**Missing from N4.5 vocabList — declare here (2):**
 - `v_ageru`
 - `v_morau`
-- `v_kureru`
-- `v_hoshii`
 
 **Missing reinforcement in next 2 N lessons (4):**
 - `v_ageru` — not referenced in `N4.7`
@@ -302,10 +253,6 @@ _file:_ `data/N4/grammar/G14.json`
 - `v_kureru` — not referenced in story `hirugohan-monogatari`
 - `v_hoshii` — not referenced in story `hirugohan-monogatari`
 
-**Misplaced — target term in earlier N lesson's vocabList (2):**
-- `v_kureru` is currently declared in `N4.3` (should move to `N4.5`)
-- `v_hoshii` is currently declared in `N5.8` (should move to `N4.5`)
-
 ## G15 — Comparison & Degree — より / ほう / ほど / くらい / すぎる
 
 _unlocksAfter:_ `N4.5` → gating N lesson: `N4.5`
@@ -313,13 +260,11 @@ _targetVocab:_ `p_yori`, `p_hodo`, `p_kurai`, `v_hou`, `v_ichiban`, `v_dochira`
 _reinforcement window:_ `N4.6`, `N4.7` + stories: `hirugohan-monogatari`
 _file:_ `data/N4/grammar/G15.json`
 
-**Missing from N4.5 vocabList — declare here (6):**
+**Missing from N4.5 vocabList — declare here (4):**
 - `p_yori`
 - `p_hodo`
 - `p_kurai`
 - `v_hou`
-- `v_ichiban`
-- `v_dochira`
 
 **Missing reinforcement in next 2 N lessons (4):**
 - `p_hodo` — not referenced in `N4.6`
@@ -332,10 +277,6 @@ _file:_ `data/N4/grammar/G15.json`
 - `p_kurai` — not referenced in story `hirugohan-monogatari`
 - `v_dochira` — not referenced in story `hirugohan-monogatari`
 
-**Misplaced — target term in earlier N lesson's vocabList (2):**
-- `v_ichiban` is currently declared in `N5.1` (should move to `N4.5`)
-- `v_dochira` is currently declared in `N5.1` (should move to `N4.5`)
-
 ## G16 — Manner & Similarity — のように / のような / みたいに / みたいな
 
 _unlocksAfter:_ `N4.6` → gating N lesson: `N4.6`
@@ -343,11 +284,8 @@ _targetVocab:_ `v_you_manner`, `v_mitai`, `p_no`, `p_ni`
 _reinforcement window:_ `N4.7`, `N4.8` + stories: `kazoku-no-kisetsu`
 _file:_ `data/N4/grammar/G16.json`
 
-**Missing from N4.6 vocabList — declare here (4):**
-- `v_you_manner`
+**Missing from N4.6 vocabList — declare here (1):**
 - `v_mitai`
-- `p_no`
-- `p_ni`
 
 **Missing reinforcement in next 2 N lessons (2):**
 - `v_you_manner` — not referenced in `N4.7`, `N4.8`
@@ -356,11 +294,6 @@ _file:_ `data/N4/grammar/G16.json`
 **Missing reinforcement in window stories (2):**
 - `v_you_manner` — not referenced in story `kazoku-no-kisetsu`
 - `v_mitai` — not referenced in story `kazoku-no-kisetsu`
-
-**Misplaced — target term in earlier N lesson's vocabList (3):**
-- `v_you_manner` is currently declared in `N4.5` (should move to `N4.6`)
-- `p_no` is currently declared in `N5.1` (should move to `N4.6`)
-- `p_ni` is currently declared in `N5.2` (should move to `N4.6`)
 
 ## G17 — Limiting Particles — だけ / しか / ばかり / でも
 
@@ -387,24 +320,12 @@ _file:_ `data/N4/grammar/G17.json`
 - `p_bakari` — not referenced in story `kazoku-no-kisetsu`
 - `p_demo` — not referenced in story `kazoku-no-kisetsu`
 
-**Other terms in G referenced before introduction (4):**
-- `p_bakari` — introduced in `N4.14` (after gate `N4.7`)
-- `p_dake` — introduced in `N4.14` (after gate `N4.7`)
-- `p_demo` — introduced in `N4.14` (after gate `N4.7`)
-- `p_shika` — introduced in `N4.14` (after gate `N4.7`)
-
 ## G18 — Transitive & Intransitive Verb Pairs — 自動詞・他動詞
 
 _unlocksAfter:_ `N4.10` → gating N lesson: `N4.10`
 _targetVocab:_ `v_dasu`, `v_deru`, `v_hairu`, `v_ireru`, `v_hajimaru`, `v_hajimeru`
 _reinforcement window:_ `N4.11`, `N4.12` + stories: `tabisaki-no-shashin`
 _file:_ `data/N4/grammar/G18.json`
-
-**Missing from N4.10 vocabList — declare here (4):**
-- `v_dasu`
-- `v_deru`
-- `v_hairu`
-- `v_ireru`
 
 **Missing reinforcement in next 2 N lessons (6):**
 - `v_dasu` — not referenced in `N4.11`, `N4.12`
@@ -422,12 +343,6 @@ _file:_ `data/N4/grammar/G18.json`
 - `v_hajimaru` — not referenced in story `tabisaki-no-shashin`
 - `v_hajimeru` — not referenced in story `tabisaki-no-shashin`
 
-**Misplaced — target term in earlier N lesson's vocabList (4):**
-- `v_dasu` is currently declared in `N5.17` (should move to `N4.10`)
-- `v_deru` is currently declared in `N5.17` (should move to `N4.10`)
-- `v_hairu` is currently declared in `N5.17` (should move to `N4.10`)
-- `v_ireru` is currently declared in `N5.17` (should move to `N4.10`)
-
 ## G19 — Connecting Actions — てから, まえに, ながら, ために, ～たり
 
 _unlocksAfter:_ `N4.10` → gating N lesson: `N4.10`
@@ -435,9 +350,8 @@ _targetVocab:_ `p_tekara`, `p_nagara`, `v_mae`, `v_tame`
 _reinforcement window:_ `N4.11`, `N4.12` + stories: `tabisaki-no-shashin`
 _file:_ `data/N4/grammar/G19.json`
 
-**Missing from N4.10 vocabList — declare here (3):**
+**Missing from N4.10 vocabList — declare here (2):**
 - `p_tekara`
-- `v_mae`
 - `v_tame`
 
 **Missing reinforcement in next 2 N lessons (4):**
@@ -450,12 +364,6 @@ _file:_ `data/N4/grammar/G19.json`
 - `p_nagara` — not referenced in story `tabisaki-no-shashin`
 - `v_mae` — not referenced in story `tabisaki-no-shashin`
 - `v_tame` — not referenced in story `tabisaki-no-shashin`
-
-**Misplaced — target term in earlier N lesson's vocabList (1):**
-- `v_mae` is currently declared in `N5.9` (should move to `N4.10`)
-
-**Other terms in G referenced before introduction (1):**
-- `v_yoku` — introduced in `N4.17` (after gate `N4.10`)
 
 ## G20 — Contrast, Concession & Listing Reasons — のに / ても / し
 
@@ -476,11 +384,9 @@ _file:_ `data/N4/grammar/G20.json`
 - `p_noni` — not referenced in story `hashiru-asa`
 - `p_shi` — not referenced in story `hashiru-asa`
 
-**Other terms in G referenced before introduction (4):**
+**Other terms in G referenced before introduction (2):**
 - `v_benkyou` — introduced in `N4.18` (after gate `N4.14`)
-- `v_muzukashii` — introduced in `N4.17` (after gate `N4.14`)
 - `v_shiken` — introduced in `N4.24` (after gate `N4.14`)
-- `v_tsukareru` — introduced in `N4.15` (after gate `N4.14`)
 
 ## G21 — Conversation Mechanics — Hesitation, Aizuchi & Discourse Markers
 
@@ -489,12 +395,7 @@ _targetVocab:_ `v_eto`, `v_anou`, `v_uun`, `v_un`, `v_saa`, `v_naruhodo`, `v_hee
 _reinforcement window:_ `N4.17`, `N4.18` + stories: `jitensha-de-kyouto-e`
 _file:_ `data/N4/grammar/G21.json`
 
-**Missing from N4.16 vocabList — declare here (12):**
-- `v_eto`
-- `v_anou`
-- `v_uun`
-- `v_un`
-- `v_saa`
+**Missing from N4.16 vocabList — declare here (7):**
 - `v_naruhodo`
 - `v_hee`
 - `v_souso`
@@ -530,13 +431,6 @@ _file:_ `data/N4/grammar/G21.json`
 - `v_nanka` — not referenced in story `jitensha-de-kyouto-e`
 - `v_maa` — not referenced in story `jitensha-de-kyouto-e`
 
-**Misplaced — target term in earlier N lesson's vocabList (5):**
-- `v_eto` is currently declared in `N5.10` (should move to `N4.16`)
-- `v_anou` is currently declared in `N5.10` (should move to `N4.16`)
-- `v_uun` is currently declared in `N5.10` (should move to `N4.16`)
-- `v_un` is currently declared in `N5.10` (should move to `N4.16`)
-- `v_saa` is currently declared in `N5.10` (should move to `N4.16`)
-
 **Other terms with `lesson_ids` = N4.16 but not in its vocabList (1):**
 - `p_hontou`
 
@@ -564,37 +458,12 @@ _targetVocab:_ `v_ii`, `v_ikeru`, `v_dame`
 _reinforcement window:_ `N4.22`, `N4.23` + stories: `furima-no-hi`
 _file:_ `data/N4/grammar/G23.json`
 
-**Missing from N4.21 vocabList — declare here (2):**
-- `v_ii`
-- `v_dame`
-
 **Missing reinforcement in next 2 N lessons (2):**
 - `v_ikeru` — not referenced in `N4.23`
 - `v_dame` — not referenced in `N4.22`, `N4.23`
 
 **Missing reinforcement in window stories (1):**
 - `v_dame` — not referenced in story `furima-no-hi`
-
-**Misplaced — target term in earlier N lesson's vocabList (2):**
-- `v_ii` is currently declared in `N5.1` (should move to `N4.21`)
-- `v_dame` is currently declared in `N5.5` (should move to `N4.21`)
-
-## G24 — Directional & Resultant て-Form — てくる / ていく / てある
-
-_unlocksAfter:_ `N4.23` → gating N lesson: `N4.23`
-_targetVocab:_ `v_kuru`, `v_iku`, `v_aru`
-_reinforcement window:_ `N4.24`, `N4.25` + stories: `natsuyasumi-no-taiken`
-_file:_ `data/N4/grammar/G24.json`
-
-**Missing from N4.23 vocabList — declare here (3):**
-- `v_kuru`
-- `v_iku`
-- `v_aru`
-
-**Misplaced — target term in earlier N lesson's vocabList (3):**
-- `v_kuru` is currently declared in `N5.5` (should move to `N4.23`)
-- `v_iku` is currently declared in `N5.5` (should move to `N4.23`)
-- `v_aru` is currently declared in `N5.1` (should move to `N4.23`)
 
 ## G25 — Obligations & Conditionals — なければ / ば / たら / なら / と
 
@@ -603,12 +472,11 @@ _targetVocab:_ `p_to_conditional`, `p_nara`, `p_nakereba`, `p_hodo`, `v_ikeru`
 _reinforcement window:_ `N4.26`, `N4.27` + stories: `kenkyuu-to-sakubun`
 _file:_ `data/N4/grammar/G25.json`
 
-**Missing from N4.25 vocabList — declare here (5):**
+**Missing from N4.25 vocabList — declare here (4):**
 - `p_to_conditional`
 - `p_nara`
 - `p_nakereba`
 - `p_hodo`
-- `v_ikeru`
 
 **Missing reinforcement in next 2 N lessons (3):**
 - `p_nara` — not referenced in `N4.26`, `N4.27`
@@ -621,9 +489,6 @@ _file:_ `data/N4/grammar/G25.json`
 - `p_nakereba` — not referenced in story `kenkyuu-to-sakubun`
 - `p_hodo` — not referenced in story `kenkyuu-to-sakubun`
 
-**Misplaced — target term in earlier N lesson's vocabList (1):**
-- `v_ikeru` is currently declared in `N4.21` (should move to `N4.25`)
-
 ## G26 — ように Patterns — ようにする / ようになる
 
 _unlocksAfter:_ `N4.27` → gating N lesson: `N4.27`
@@ -631,33 +496,14 @@ _targetVocab:_ `v_you`, `v_suru`, `v_naru`
 _reinforcement window:_ `N4.28`, `N4.29` + stories: `yuugata-no-mura`
 _file:_ `data/N4/grammar/G26.json`
 
-**Missing from N4.27 vocabList — declare here (3):**
+**Missing from N4.27 vocabList — declare here (1):**
 - `v_you`
-- `v_suru`
-- `v_naru`
 
 **Missing reinforcement in next 2 N lessons (1):**
 - `v_you` — not referenced in `N4.28`, `N4.29`
 
 **Missing reinforcement in window stories (1):**
 - `v_you` — not referenced in story `yuugata-no-mura`
-
-**Misplaced — target term in earlier N lesson's vocabList (2):**
-- `v_suru` is currently declared in `N5.1` (should move to `N4.27`)
-- `v_naru` is currently declared in `N5.10` (should move to `N4.27`)
-
-## G27 — Expressing Thoughts & Experience — と思う / たことがある
-
-_unlocksAfter:_ `N4.30` → gating N lesson: `N4.30`
-_targetVocab:_ `v_omou`, `v_aru`
-_reinforcement window:_ `N4.31`, `N4.32` + stories: `mori-no-shokudou`
-_file:_ `data/N4/grammar/G27.json`
-
-**Missing from N4.30 vocabList — declare here (1):**
-- `v_aru`
-
-**Misplaced — target term in earlier N lesson's vocabList (1):**
-- `v_aru` is currently declared in `N5.1` (should move to `N4.30`)
 
 ## G30 — Advanced Verb Usages — てみる / ておく / てしまう / すぎる / とする
 
@@ -666,11 +512,9 @@ _targetVocab:_ `v_miru`, `v_oku`, `v_shimau`, `v_suru`, `p_kadouka`, `p_ni_tsuit
 _reinforcement window:_ `N4.35`, `N4.36` + stories: `factory-owner`
 _file:_ `data/N4/grammar/G30.json`
 
-**Missing from N4.34 vocabList — declare here (6):**
-- `v_miru`
+**Missing from N4.34 vocabList — declare here (4):**
 - `v_oku`
 - `v_shimau`
-- `v_suru`
 - `p_kadouka`
 - `p_ni_tsuite`
 
@@ -684,10 +528,6 @@ _file:_ `data/N4/grammar/G30.json`
 - `p_kadouka` — not referenced in story `factory-owner`
 - `p_ni_tsuite` — not referenced in story `factory-owner`
 
-**Misplaced — target term in earlier N lesson's vocabList (2):**
-- `v_miru` is currently declared in `N5.18` (should move to `N4.34`)
-- `v_suru` is currently declared in `N5.1` (should move to `N4.34`)
-
 ## G31 — Advanced Adjective Patterns — Become, Make, Even If, Must Be
 
 _unlocksAfter:_ `N4.34` → gating N lesson: `N4.34`
@@ -695,16 +535,8 @@ _targetVocab:_ `v_naru`, `v_suru`
 _reinforcement window:_ `N4.35`, `N4.36` + stories: `factory-owner`
 _file:_ `data/N4/grammar/G31.json`
 
-**Missing from N4.34 vocabList — declare here (2):**
-- `v_naru`
-- `v_suru`
-
 **Missing reinforcement in window stories (1):**
 - `v_naru` — not referenced in story `factory-owner`
-
-**Misplaced — target term in earlier N lesson's vocabList (2):**
-- `v_naru` is currently declared in `N5.10` (should move to `N4.34`)
-- `v_suru` is currently declared in `N5.1` (should move to `N4.34`)
 
 **Other terms with `lesson_ids` = N4.34 but not in its vocabList (1):**
 - `p_nakereba`
