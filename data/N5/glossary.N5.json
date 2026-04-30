@@ -550,7 +550,18 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N5.1",
-      "notes": "Loanword from English 'bed'."
+      "notes": "Loanword from English 'bed'.",
+      "example": {
+        "jp": "父 の ベッド です。",
+        "en": "It's my father's bed.",
+        "manual": true,
+        "terms": [
+          "v_chichi",
+          "p_no",
+          "v_beddo",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_chichi",
@@ -578,7 +589,20 @@
       "notes": "",
       "lesson_ids": "N5.1",
       "reading": "だんし",
-      "readingAlign": "男(だん)子(し)"
+      "readingAlign": "男(だん)子(し)",
+      "example": {
+        "jp": "男子 は 先生 の 友だち です。",
+        "en": "The boys are the teacher's friends.",
+        "manual": true,
+        "terms": [
+          "v_danshi",
+          "p_wa",
+          "v_sensei",
+          "p_no",
+          "v_tomodachi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_dare",
@@ -681,7 +705,21 @@
       "type": "vocab",
       "gtype": "adverb",
       "lesson_ids": "N5.3",
-      "notes": "Ko-so-a-do manner adverb: near speaker. Counterpart of そう (like that) and ああ (like that, far)."
+      "notes": "Ko-so-a-do manner adverb: near speaker. Counterpart of そう (like that) and ああ (like that, far).",
+      "example": {
+        "jp": "父 は こう します。",
+        "en": "My father does it like this.",
+        "manual": true,
+        "terms": [
+          "v_chichi",
+          "p_wa",
+          "v_kou",
+          {
+            "id": "v_suru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_sou",
@@ -707,7 +745,21 @@
       "type": "vocab",
       "gtype": "adverb",
       "lesson_ids": "N5.3",
-      "notes": "Ko-so-a-do manner adverb: far from both speaker and listener. Counterpart of こう and そう."
+      "notes": "Ko-so-a-do manner adverb: far from both speaker and listener. Counterpart of こう and そう.",
+      "example": {
+        "jp": "母 は ああ します。",
+        "en": "My mother does it like that.",
+        "manual": true,
+        "terms": [
+          "v_haha",
+          "p_wa",
+          "v_aa",
+          {
+            "id": "v_suru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_fubo",
@@ -718,7 +770,21 @@
       "notes": "",
       "lesson_ids": "N5.1",
       "reading": "ふぼ",
-      "readingAlign": "父(ふ)母(ぼ)"
+      "readingAlign": "父(ふ)母(ぼ)",
+      "example": {
+        "jp": "父母 は とても やさしいです。",
+        "en": "My parents are very kind.",
+        "manual": true,
+        "terms": [
+          "v_fubo",
+          "p_wa",
+          "v_totemo",
+          {
+            "id": "v_yasashii",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_haha",
@@ -850,7 +916,21 @@
       "gtype": "verb",
       "verb_class": "ichidan",
       "lesson_ids": "N5.1",
-      "notes": ""
+      "notes": "",
+      "example": {
+        "jp": "人 は みんな 生きます。",
+        "en": "Everyone lives.",
+        "manual": true,
+        "terms": [
+          "v_hito",
+          "p_wa",
+          "v_minna",
+          {
+            "id": "v_ikiru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_iru",
@@ -913,7 +993,20 @@
       "notes": "",
       "lesson_ids": "N5.1",
       "reading": "じょし",
-      "readingAlign": "女(じょ)子(し)"
+      "readingAlign": "女(じょ)子(し)",
+      "example": {
+        "jp": "女子 は やさしいです。",
+        "en": "The girls are kind.",
+        "manual": true,
+        "terms": [
+          "v_joshi",
+          "p_wa",
+          {
+            "id": "v_yasashii",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_onna",
@@ -941,7 +1034,20 @@
       "notes": "Common polite phrase for 'woman'. Contrast: 男の人 (man).",
       "lesson_ids": "N5.1",
       "reading": "おんなのひと",
-      "readingAlign": "女(おんな)の人(ひと)"
+      "readingAlign": "女(おんな)の人(ひと)",
+      "example": {
+        "jp": "女の人 は 父 の 先生 です。",
+        "en": "The woman is my father's teacher.",
+        "manual": true,
+        "terms": [
+          "v_onnanohito",
+          "p_wa",
+          "v_chichi",
+          "p_no",
+          "v_sensei",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_onnanoko",
@@ -952,7 +1058,19 @@
       "notes": "Girl (child). Contrast: 男の子 (boy). More casual than 女子.",
       "lesson_ids": "N5.1",
       "reading": "おんなのこ",
-      "readingAlign": "女(おんな)の子(こ)"
+      "readingAlign": "女(おんな)の子(こ)",
+      "example": {
+        "jp": "あなた の 女の子 です か。",
+        "en": "Is she your daughter?",
+        "manual": true,
+        "terms": [
+          "v_anata",
+          "p_no",
+          "v_onnanoko",
+          "g_desu",
+          "p_ka"
+        ]
+      }
     },
     {
       "id": "v_otoko",
@@ -980,7 +1098,20 @@
       "notes": "Common polite phrase for 'man'. Contrast: 女の人 (woman).",
       "lesson_ids": "N5.1",
       "reading": "おとこのひと",
-      "readingAlign": "男(おとこ)の人(ひと)"
+      "readingAlign": "男(おとこ)の人(ひと)",
+      "example": {
+        "jp": "男の人 は 友だち の 父 です。",
+        "en": "The man is my friend's father.",
+        "manual": true,
+        "terms": [
+          "v_otokonohito",
+          "p_wa",
+          "v_tomodachi",
+          "p_no",
+          "v_chichi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_otokonoko",
@@ -991,7 +1122,18 @@
       "notes": "Boy (child). Contrast: 女の子 (girl). More casual than 男子.",
       "lesson_ids": "N5.1",
       "reading": "おとこのこ",
-      "readingAlign": "男(おとこ)の子(こ)"
+      "readingAlign": "男(おとこ)の子(こ)",
+      "example": {
+        "jp": "友だち の 男の子 です。",
+        "en": "He is my friend's son.",
+        "manual": true,
+        "terms": [
+          "v_tomodachi",
+          "p_no",
+          "v_otokonoko",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_kodomo",
@@ -2079,7 +2221,20 @@
       "notes": "Number word. Used in counting and currency expressions: 一万円 (10,000 yen), 三万 (30,000).",
       "lesson_ids": "N5.3",
       "reading": "まん",
-      "readingAlign": "万(まん)"
+      "readingAlign": "万(まん)",
+      "example": {
+        "jp": "ベッド は 百万円 です。",
+        "en": "The bed is 1,000,000 yen.",
+        "manual": true,
+        "terms": [
+          "v_beddo",
+          "p_wa",
+          "v_hyaku",
+          "v_man",
+          "v_en",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "k_u5186",
@@ -2232,7 +2387,18 @@
       "notes": "",
       "lesson_ids": "N5.3",
       "reading": "ふつか",
-      "readingAlign": "二日{ふつか}"
+      "readingAlign": "二日{ふつか}",
+      "example": {
+        "jp": "今日 は 二日 です。",
+        "en": "Today is the 2nd.",
+        "manual": true,
+        "terms": [
+          "v_kyou",
+          "p_wa",
+          "v_futsuka",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_gogatsu",
@@ -2264,7 +2430,21 @@
       "notes": "",
       "lesson_ids": "N5.3",
       "reading": "ごにん",
-      "readingAlign": "五(ご)人(にん)"
+      "readingAlign": "五(ご)人(にん)",
+      "example": {
+        "jp": "友だち が 五人 います。",
+        "en": "I have five friends.",
+        "manual": true,
+        "terms": [
+          "v_tomodachi",
+          "p_ga",
+          "v_gonin",
+          {
+            "id": "v_iru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_hachigatsu",
@@ -2296,7 +2476,21 @@
       "notes": "",
       "lesson_ids": "N5.3",
       "reading": "はちにん",
-      "readingAlign": "八(はち)人(にん)"
+      "readingAlign": "八(はち)人(にん)",
+      "example": {
+        "jp": "子ども が 八人 います。",
+        "en": "There are eight children.",
+        "manual": true,
+        "terms": [
+          "v_kodomo",
+          "p_ga",
+          "v_hachinin",
+          {
+            "id": "v_iru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_hitori",
@@ -2324,7 +2518,16 @@
       "notes": "Native Japanese general counter. Part of the native counting series: ひとつ、ふたつ、みっつ…",
       "lesson_ids": "N5.3",
       "reading": "ひとつ",
-      "readingAlign": "一(ひと)つ"
+      "readingAlign": "一(ひと)つ",
+      "example": {
+        "jp": "一つ ください。",
+        "en": "One, please.",
+        "manual": true,
+        "terms": [
+          "v_hitotsu",
+          "v_kudasai"
+        ]
+      }
     },
     {
       "id": "v_ichigatsu",
@@ -2339,7 +2542,22 @@
         "一月",
         "1月"
       ],
-      "readingAlign": "一(いち)月(がつ)"
+      "readingAlign": "一(いち)月(がつ)",
+      "example": {
+        "jp": "父 は 一月 に 生まれました。",
+        "en": "My father was born in January.",
+        "manual": true,
+        "terms": [
+          "v_chichi",
+          "p_wa",
+          "v_ichigatsu",
+          "p_ni",
+          {
+            "id": "v_umareru",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_ichinichitsuitachi",
@@ -2420,7 +2638,18 @@
         "十月",
         "10月"
       ],
-      "readingAlign": "十(じゅう)月(がつ)"
+      "readingAlign": "十(じゅう)月(がつ)",
+      "example": {
+        "jp": "今月 は 十月 です。",
+        "en": "This month is October.",
+        "manual": true,
+        "terms": [
+          "v_kongetsu",
+          "p_wa",
+          "v_juugatsu",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_juuichigatsu",
@@ -2473,7 +2702,21 @@
       "notes": "",
       "lesson_ids": "N5.3",
       "reading": "じゅうにん",
-      "readingAlign": "十(じゅう)人(にん)"
+      "readingAlign": "十(じゅう)人(にん)",
+      "example": {
+        "jp": "先生 が 十人 います。",
+        "en": "There are ten teachers.",
+        "manual": true,
+        "terms": [
+          "v_sensei",
+          "p_ga",
+          "v_juunin",
+          {
+            "id": "v_iru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_kokonoka",
@@ -2484,7 +2727,18 @@
       "notes": "",
       "lesson_ids": "N5.3",
       "reading": "ここのか",
-      "readingAlign": "九日{ここのか}"
+      "readingAlign": "九日{ここのか}",
+      "example": {
+        "jp": "今月 の 九日 です。",
+        "en": "It's the 9th of this month.",
+        "manual": true,
+        "terms": [
+          "v_kongetsu",
+          "p_no",
+          "v_kokonoka",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_kore",
