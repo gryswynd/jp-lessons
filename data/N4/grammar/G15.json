@@ -8,10 +8,24 @@
     "unlocksAfter": "N4.5",
     "focus": "Expressing comparisons (より, ほうが), degree and negative comparison (ほど), approximation (くらい/ぐらい), excessive degree (すぎる), and abstract quality nouns (～さ). All patterns are essential for describing preferences, quantities, and relative qualities in daily Japanese.",
     "estimatedMinutes": 25,
-    "particles": ["より", "ほど", "くらい"],
-    "grammarForms": ["sugiru_form"],
+    "particles": [
+      "より",
+      "ほど",
+      "くらい"
+    ],
+    "grammarForms": [
+      "sugiru_form"
+    ],
     "icon": "⚖️"
   },
+  "targetVocab": [
+    "p_yori",
+    "p_hodo",
+    "p_kurai",
+    "v_hou",
+    "v_ichiban",
+    "v_dochira"
+  ],
   "sections": [
     {
       "type": "grammarIntro",
@@ -53,19 +67,47 @@
       "examples": [
         {
           "parts": [
-            { "text": "野菜の", "role": "topic", "gloss": "vegetables (の = possessive/classifier)" },
-            { "text": "ほうが", "role": "subject", "gloss": "the side of / more (comparison marker)" },
-            { "text": "おいしいです。", "role": "predicate", "gloss": "is delicious (polite)" }
+            {
+              "text": "野菜の",
+              "role": "topic",
+              "gloss": "vegetables (の = possessive/classifier)"
+            },
+            {
+              "text": "ほうが",
+              "role": "subject",
+              "gloss": "the side of / more (comparison marker)"
+            },
+            {
+              "text": "おいしいです。",
+              "role": "predicate",
+              "gloss": "is delicious (polite)"
+            }
           ],
           "en": "Vegetables are more delicious.",
           "breakdown": "野菜のほうが = 'the vegetable side is' → picks vegetables as the preferred/greater element."
         },
         {
           "parts": [
-            { "text": "肉より", "role": "object", "gloss": "than meat (より = than — the lesser)" },
-            { "text": "野菜の", "role": "topic", "gloss": "vegetables (の)" },
-            { "text": "ほうが", "role": "subject", "gloss": "the side of (comparison marker)" },
-            { "text": "好きです。", "role": "predicate", "gloss": "I like (polite な-adj predicate)" }
+            {
+              "text": "肉より",
+              "role": "object",
+              "gloss": "than meat (より = than — the lesser)"
+            },
+            {
+              "text": "野菜の",
+              "role": "topic",
+              "gloss": "vegetables (の)"
+            },
+            {
+              "text": "ほうが",
+              "role": "subject",
+              "gloss": "the side of (comparison marker)"
+            },
+            {
+              "text": "好きです。",
+              "role": "predicate",
+              "gloss": "I like (polite な-adj predicate)"
+            }
           ],
           "en": "I like vegetables more than meat.",
           "breakdown": "肉より = marks meat as the lesser (than meat). 野菜のほうが = picks vegetables as the preferred side. より + ほうが together make a full explicit comparison."
@@ -101,9 +143,21 @@
       "examples": [
         {
           "parts": [
-            { "text": "駅より", "role": "object", "gloss": "than the station (より marks the lesser element)" },
-            { "text": "店のほうが", "role": "topic", "gloss": "the store side (ほうが marks the greater)" },
-            { "text": "近いです。", "role": "predicate", "gloss": "is closer (polite)" }
+            {
+              "text": "駅より",
+              "role": "object",
+              "gloss": "than the station (より marks the lesser element)"
+            },
+            {
+              "text": "店のほうが",
+              "role": "topic",
+              "gloss": "the store side (ほうが marks the greater)"
+            },
+            {
+              "text": "近いです。",
+              "role": "predicate",
+              "gloss": "is closer (polite)"
+            }
           ],
           "en": "The store is closer than the station.",
           "breakdown": "駅より = the station is the standard ('than the station'). 店のほうが = the store is the preferred side. 近い = close/near."
@@ -135,9 +189,21 @@
       "examples": [
         {
           "parts": [
-            { "text": "この本は", "role": "topic", "gloss": "this book (topic: は)" },
-            { "text": "あの本ほど", "role": "object", "gloss": "as much as that book (ほど = to that degree)" },
-            { "text": "おもしろくないです。", "role": "predicate", "gloss": "is not interesting (negative polite: おもしろい → おもしろくない)" }
+            {
+              "text": "この本は",
+              "role": "topic",
+              "gloss": "this book (topic: は)"
+            },
+            {
+              "text": "あの本ほど",
+              "role": "object",
+              "gloss": "as much as that book (ほど = to that degree)"
+            },
+            {
+              "text": "おもしろくないです。",
+              "role": "predicate",
+              "gloss": "is not interesting (negative polite: おもしろい → おもしろくない)"
+            }
           ],
           "en": "This book is not as interesting as that book.",
           "breakdown": "A (この本) は B (あの本) ほど [adjective negative]. A does not reach B's level of interestingness."
@@ -168,9 +234,21 @@
       "examples": [
         {
           "parts": [
-            { "text": "三時間", "role": "object", "gloss": "three hours" },
-            { "text": "くらい", "role": "modifier", "gloss": "about / approximately" },
-            { "text": "働きました。", "role": "predicate", "gloss": "worked (働く, polite past)" }
+            {
+              "text": "三時間",
+              "role": "object",
+              "gloss": "three hours"
+            },
+            {
+              "text": "くらい",
+              "role": "modifier",
+              "gloss": "about / approximately"
+            },
+            {
+              "text": "働きました。",
+              "role": "predicate",
+              "gloss": "worked (働く, polite past)"
+            }
           ],
           "en": "I worked for about three hours.",
           "breakdown": "三時間くらい = about three hours (rough duration estimate). The くらい follows the number + counter directly."
@@ -202,17 +280,37 @@
       "examples": [
         {
           "parts": [
-            { "text": "食べ", "role": "connector", "gloss": "eat — ます-stem of 食べる (ichidan verb)" },
-            { "text": "すぎました。", "role": "predicate", "gloss": "too much (すぎる → すぎました, polite past)" }
+            {
+              "text": "食べ",
+              "role": "connector",
+              "gloss": "eat — ます-stem of 食べる (ichidan verb)"
+            },
+            {
+              "text": "すぎました。",
+              "role": "predicate",
+              "gloss": "too much (すぎる → すぎました, polite past)"
+            }
           ],
           "en": "I ate too much.",
           "breakdown": "食べる (ichidan) → ます-stem 食べ + すぎる = 食べすぎる (to eat too much). Polite past: すぎました."
         },
         {
           "parts": [
-            { "text": "この料理は", "role": "topic", "gloss": "this dish (topic: は)" },
-            { "text": "高", "role": "connector", "gloss": "expensive — い-adjective stem (高い → drop い → 高)" },
-            { "text": "すぎます。", "role": "predicate", "gloss": "too (much) — すぎる, polite" }
+            {
+              "text": "この料理は",
+              "role": "topic",
+              "gloss": "this dish (topic: は)"
+            },
+            {
+              "text": "高",
+              "role": "connector",
+              "gloss": "expensive — い-adjective stem (高い → drop い → 高)"
+            },
+            {
+              "text": "すぎます。",
+              "role": "predicate",
+              "gloss": "too (much) — すぎる, polite"
+            }
           ],
           "en": "This dish is too expensive.",
           "breakdown": "高い (expensive) → drop い → 高 + すぎる = 高すぎる (too expensive). The い must be dropped before すぎる."
@@ -243,10 +341,26 @@
       "examples": [
         {
           "parts": [
-            { "text": "山の", "role": "topic", "gloss": "the mountain's (の = possessive)" },
-            { "text": "高さは", "role": "subject", "gloss": "height (高い → drop い + さ = 高さ; は = topic marker)" },
-            { "text": "どのくらい", "role": "object", "gloss": "about how much / to what extent" },
-            { "text": "ですか。", "role": "predicate", "gloss": "is it? (polite question)" }
+            {
+              "text": "山の",
+              "role": "topic",
+              "gloss": "the mountain's (の = possessive)"
+            },
+            {
+              "text": "高さは",
+              "role": "subject",
+              "gloss": "height (高い → drop い + さ = 高さ; は = topic marker)"
+            },
+            {
+              "text": "どのくらい",
+              "role": "object",
+              "gloss": "about how much / to what extent"
+            },
+            {
+              "text": "ですか。",
+              "role": "predicate",
+              "gloss": "is it? (polite question)"
+            }
           ],
           "en": "About how tall is the mountain?",
           "breakdown": "山の高さ = the mountain's height (高さ is a noun formed from 高い). どのくらい = 'about how much' — a natural colocation with ～さ nouns."
@@ -268,10 +382,26 @@
           ],
           "example": {
             "parts": [
-              { "text": "野菜より", "role": "object", "gloss": "than vegetables (より = than — lesser element)" },
-              { "text": "肉の", "role": "topic", "gloss": "meat (の = classifier)" },
-              { "text": "ほうが", "role": "subject", "gloss": "the side of (ほうが marks the greater element)" },
-              { "text": "高いです。", "role": "predicate", "gloss": "is expensive (高い, polite — POSITIVE adjective)" }
+              {
+                "text": "野菜より",
+                "role": "object",
+                "gloss": "than vegetables (より = than — lesser element)"
+              },
+              {
+                "text": "肉の",
+                "role": "topic",
+                "gloss": "meat (の = classifier)"
+              },
+              {
+                "text": "ほうが",
+                "role": "subject",
+                "gloss": "the side of (ほうが marks the greater element)"
+              },
+              {
+                "text": "高いです。",
+                "role": "predicate",
+                "gloss": "is expensive (高い, polite — POSITIVE adjective)"
+              }
             ],
             "en": "Meat is more expensive than vegetables."
           }
@@ -287,9 +417,21 @@
           ],
           "example": {
             "parts": [
-              { "text": "野菜は", "role": "topic", "gloss": "vegetables (topic: は — the one falling short)" },
-              { "text": "肉ほど", "role": "object", "gloss": "as much as meat (ほど = to that degree — sets the benchmark)" },
-              { "text": "高くないです。", "role": "predicate", "gloss": "is not expensive (高い → 高くない — NEGATIVE adjective required)" }
+              {
+                "text": "野菜は",
+                "role": "topic",
+                "gloss": "vegetables (topic: は — the one falling short)"
+              },
+              {
+                "text": "肉ほど",
+                "role": "object",
+                "gloss": "as much as meat (ほど = to that degree — sets the benchmark)"
+              },
+              {
+                "text": "高くないです。",
+                "role": "predicate",
+                "gloss": "is not expensive (高い → 高くない — NEGATIVE adjective required)"
+              }
             ],
             "en": "Vegetables are not as expensive as meat."
           }
@@ -304,10 +446,26 @@
         {
           "context": "より + ほうが — preference comparison (positive adjective)",
           "parts": [
-            { "text": "野菜より", "role": "object", "gloss": "than vegetables (より = than — marks the lesser element)" },
-            { "text": "魚の", "role": "topic", "gloss": "fish (の = classifier)" },
-            { "text": "ほうが", "role": "subject", "gloss": "the side of (ほうが marks the preferred/greater element)" },
-            { "text": "好きです。", "role": "predicate", "gloss": "I like / prefer (好き, polite — POSITIVE predicate)" }
+            {
+              "text": "野菜より",
+              "role": "object",
+              "gloss": "than vegetables (より = than — marks the lesser element)"
+            },
+            {
+              "text": "魚の",
+              "role": "topic",
+              "gloss": "fish (の = classifier)"
+            },
+            {
+              "text": "ほうが",
+              "role": "subject",
+              "gloss": "the side of (ほうが marks the preferred/greater element)"
+            },
+            {
+              "text": "好きです。",
+              "role": "predicate",
+              "gloss": "I like / prefer (好き, polite — POSITIVE predicate)"
+            }
           ],
           "en": "I prefer fish over vegetables.",
           "note": "Pattern: [lesser element]より [preferred element]のほうが [positive adjective/predicate]。より = 'than'; ほうが = 'the side of'."
@@ -315,9 +473,21 @@
         {
           "context": "すぎる — excessive degree (too much)",
           "parts": [
-            { "text": "この魚は", "role": "topic", "gloss": "this fish (topic: は)" },
-            { "text": "高", "role": "connector", "gloss": "expensive — い-adjective stem (高い → drop い before すぎる)" },
-            { "text": "すぎます。", "role": "predicate", "gloss": "too (much) — すぎる, polite present" }
+            {
+              "text": "この魚は",
+              "role": "topic",
+              "gloss": "this fish (topic: は)"
+            },
+            {
+              "text": "高",
+              "role": "connector",
+              "gloss": "expensive — い-adjective stem (高い → drop い before すぎる)"
+            },
+            {
+              "text": "すぎます。",
+              "role": "predicate",
+              "gloss": "too (much) — すぎる, polite present"
+            }
           ],
           "en": "This fish is too expensive.",
           "note": "い-adj: drop い and add すぎる. 高い → 高 + すぎる = 高すぎる. すぎる itself conjugates: すぎます / すぎました / すぎません."
@@ -325,9 +495,21 @@
         {
           "context": "ほど + negative — negative comparison (not as ～ as)",
           "parts": [
-            { "text": "あの店の魚は", "role": "topic", "gloss": "the fish at that store (の = possessive; は = topic)" },
-            { "text": "この店ほど", "role": "object", "gloss": "as much as this store (ほど = to that degree — sets the benchmark)" },
-            { "text": "高くないです。", "role": "predicate", "gloss": "is not expensive (高い → 高くない — NEGATIVE adjective required with ほど)" }
+            {
+              "text": "あの店の魚は",
+              "role": "topic",
+              "gloss": "the fish at that store (の = possessive; は = topic)"
+            },
+            {
+              "text": "この店ほど",
+              "role": "object",
+              "gloss": "as much as this store (ほど = to that degree — sets the benchmark)"
+            },
+            {
+              "text": "高くないです。",
+              "role": "predicate",
+              "gloss": "is not expensive (高い → 高くない — NEGATIVE adjective required with ほど)"
+            }
           ],
           "en": "The fish at that store is not as expensive as this store.",
           "note": "Pattern: [subject]は [standard]ほど [NEGATIVE adjective]。ほど always requires a negative — ×高いです is wrong here."
@@ -352,7 +534,10 @@
             "v_dochira",
             "v_hou",
             "p_ga",
-            { "id": "v_suki", "form": "polite_adj" },
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
@@ -366,14 +551,20 @@
             "v_sakana",
             "v_hou",
             "p_ga",
-            { "id": "v_suki", "form": "polite_adj" },
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            },
             "v_kono",
             "v_mise",
             "p_no",
             "v_sakana",
             "p_wa",
             "v_sukoshi",
-            { "id": "v_takai", "form": "polite_sugiru_form" }
+            {
+              "id": "v_takai",
+              "form": "polite_sugiru_form"
+            }
           ]
         },
         {
@@ -386,7 +577,10 @@
             "v_eki",
             "v_hou",
             "p_ga",
-            { "id": "v_yasui", "form": "polite_adj" },
+            {
+              "id": "v_yasui",
+              "form": "polite_adj"
+            },
             "p_yo"
           ]
         },
@@ -400,12 +594,18 @@
             "p_wa",
             "v_eki",
             "p_hodo",
-            { "id": "v_chikai", "form": "plain_negative" },
+            {
+              "id": "v_chikai",
+              "form": "plain_negative"
+            },
             "g_desu",
             "v_ryouri",
             "p_wa",
             "v_ichiban",
-            { "id": "v_oishii", "form": "polite_adj" },
+            {
+              "id": "v_oishii",
+              "form": "polite_adj"
+            },
             "p_ga_but"
           ]
         },
@@ -414,11 +614,17 @@
           "jp": "いいですね！またいっしょに行きましょう。",
           "en": "That sounds great! Let's go there together again.",
           "terms": [
-            { "id": "v_ii", "form": "polite_adj" },
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ne",
             "v_mata",
             "v_issho",
-            { "id": "v_iku", "form": "polite_volitional_mashou" }
+            {
+              "id": "v_iku",
+              "form": "polite_volitional_mashou"
+            }
           ]
         }
       ]
@@ -466,7 +672,10 @@
             "v_kono",
             "v_hon",
             "p_hodo",
-            { "id": "v_nagai", "form": "plain_negative" }
+            {
+              "id": "v_nagai",
+              "form": "plain_negative"
+            }
           ]
         },
         {
@@ -478,7 +687,10 @@
             "v_jikan",
             "p_kurai",
             "p_de",
-            { "id": "v_yomu", "form": "potential" },
+            {
+              "id": "v_yomu",
+              "form": "potential"
+            },
             "p_yo"
           ]
         },
@@ -489,9 +701,15 @@
           "terms": [
             "v_ii",
             "p_ne",
-            { "id": "v_taberu", "form": "sugiru_past" },
+            {
+              "id": "v_taberu",
+              "form": "sugiru_past"
+            },
             "p_yo",
-            { "id": "v_yomu", "form": "plain_potential_negative" },
+            {
+              "id": "v_yomu",
+              "form": "plain_potential_negative"
+            },
             "p_yo"
           ]
         }
@@ -506,7 +724,12 @@
           "before": "野菜",
           "after": "魚のほうが好きです。",
           "translation": "I prefer fish over vegetables.",
-          "choices": ["より", "ほど", "くらい", "すぎる"],
+          "choices": [
+            "より",
+            "ほど",
+            "くらい",
+            "すぎる"
+          ],
           "answer": "より",
           "explanation": "より marks the lesser element in a comparison: 野菜より = 'than vegetables.' The preferred side (魚) is marked by ほうが."
         },
@@ -514,7 +737,12 @@
           "before": "この本はあの本",
           "after": "おもしろくないです。",
           "translation": "This book is not as interesting as that book.",
-          "choices": ["より", "ほど", "くらい", "のほうが"],
+          "choices": [
+            "より",
+            "ほど",
+            "くらい",
+            "のほうが"
+          ],
           "answer": "ほど",
           "explanation": "ほど is used in NEGATIVE comparisons: AはBほど～ない (A is not as ～ as B). ほど follows the standard/benchmark (あの本ほど = not to the level of that book)."
         },
@@ -522,7 +750,12 @@
           "before": "三時間",
           "after": "働きました。",
           "translation": "I worked for about three hours.",
-          "choices": ["より", "ほど", "くらい", "のほうが"],
+          "choices": [
+            "より",
+            "ほど",
+            "くらい",
+            "のほうが"
+          ],
           "answer": "くらい",
           "explanation": "くらい/ぐらい follows quantities to mean 'about / approximately.' 三時間くらい = about three hours. It gives a rough, non-exact duration."
         },
@@ -530,7 +763,12 @@
           "before": "食べ",
           "after": "て、気分が悪いです。",
           "translation": "I ate too much and feel sick.",
-          "choices": ["すぎ", "より", "ほど", "くらい"],
+          "choices": [
+            "すぎ",
+            "より",
+            "ほど",
+            "くらい"
+          ],
           "answer": "すぎ",
           "explanation": "すぎる attaches to the ます-stem of verbs: 食べる → ます-stem 食べ + すぎる = 食べすぎる (eat too much). The て-form is 食べすぎて. The blank needs the すぎ stem before て."
         },
@@ -538,7 +776,12 @@
           "before": "この料理は高",
           "after": "すぎます。",
           "translation": "This dish is too expensive.",
-          "choices": ["さ", "く", "（なし）", "い"],
+          "choices": [
+            "さ",
+            "く",
+            "（なし）",
+            "い"
+          ],
           "answer": "（なし）",
           "explanation": "For い-adjectives, drop the final い and add すぎる directly: 高い → 高 + すぎる = 高すぎます. Nothing goes between 高 and すぎます — the い must be dropped completely."
         }
@@ -584,7 +827,10 @@
           ],
           "answer": "食べすぎました。",
           "terms": [
-            { "id": "v_taberu", "form": "polite_sugiru_past" }
+            {
+              "id": "v_taberu",
+              "form": "polite_sugiru_past"
+            }
           ],
           "explanation": "すぎる attaches to the ます-stem of verbs: 食べる → 食べ + すぎる = 食べすぎる. Polite past: 食べすぎました."
         },

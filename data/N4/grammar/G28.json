@@ -8,10 +8,22 @@
     "unlocksAfter": "N4.31",
     "focus": "Express that the subject receives an action using the passive voice. Covers the direct passive (agent marked with に), the adversative/suffering passive, and the potential vs passive ambiguity in RU-verbs.",
     "estimatedMinutes": 25,
-    "particles": ["〜られる", "〜れる", "〜られます", "〜られた", "〜れた"],
-    "grammarForms": ["passive", "polite_passive", "plain_passive_past", "polite_passive_past"],
+    "particles": [
+      "〜られる",
+      "〜れる",
+      "〜られます",
+      "〜られた",
+      "〜れた"
+    ],
+    "grammarForms": [
+      "passive",
+      "polite_passive",
+      "plain_passive_past",
+      "polite_passive_past"
+    ],
     "icon": "🔄"
   },
+  "targetVocab": [],
   "sections": [
     {
       "type": "grammarIntro",
@@ -32,46 +44,101 @@
       "title": "Passive Form — Conjugation Chart",
       "description": "The passive suffix attaches differently depending on verb type. RU-verbs (ichidan) drop る and add られる. U-verbs (godan) shift the final mora to the あ-row and add れる. Note: する and くる are irregular.",
       "tableType": "conjugation",
-      "headers": ["Verb type", "Dictionary form", "Passive (plain)", "Passive (polite)", "Passive past (plain)", "Passive past (polite)"],
+      "headers": [
+        "Verb type",
+        "Dictionary form",
+        "Passive (plain)",
+        "Passive (polite)",
+        "Passive past (plain)",
+        "Passive past (polite)"
+      ],
       "rows": [
         {
           "label": "RU-verb (ichidan)",
-          "cells": ["食べる (to eat)", "食べられる", "食べられます", "食べられた", "食べられました"],
+          "cells": [
+            "食べる (to eat)",
+            "食べられる",
+            "食べられます",
+            "食べられた",
+            "食べられました"
+          ],
           "meaning": "is eaten / can eat (ambiguous for RU-verbs — context resolves)"
         },
         {
           "label": "RU-verb (ichidan)",
-          "cells": ["見る (to see)", "見られる", "見られます", "見られた", "見られました"],
+          "cells": [
+            "見る (to see)",
+            "見られる",
+            "見られます",
+            "見られた",
+            "見られました"
+          ],
           "meaning": "is seen / can see (ambiguous)"
         },
         {
           "label": "U-verb (godan) — く",
-          "cells": ["書く (to write)", "書かれる", "書かれます", "書かれた", "書かれました"],
+          "cells": [
+            "書く (to write)",
+            "書かれる",
+            "書かれます",
+            "書かれた",
+            "書かれました"
+          ],
           "meaning": "is written"
         },
         {
           "label": "U-verb (godan) — む",
-          "cells": ["読む (to read)", "読まれる", "読まれます", "読まれた", "読まれました"],
+          "cells": [
+            "読む (to read)",
+            "読まれる",
+            "読まれます",
+            "読まれた",
+            "読まれました"
+          ],
           "meaning": "is read"
         },
         {
           "label": "U-verb (godan) — す",
-          "cells": ["話す (to speak)", "話される", "話されます", "話された", "話されました"],
+          "cells": [
+            "話す (to speak)",
+            "話される",
+            "話されます",
+            "話された",
+            "話されました"
+          ],
           "meaning": "is spoken (about)"
         },
         {
           "label": "U-verb (godan) — く",
-          "cells": ["聞く (to ask / hear)", "聞かれる", "聞かれます", "聞かれた", "聞かれました"],
+          "cells": [
+            "聞く (to ask / hear)",
+            "聞かれる",
+            "聞かれます",
+            "聞かれた",
+            "聞かれました"
+          ],
           "meaning": "is asked / is heard"
         },
         {
           "label": "Irregular — する",
-          "cells": ["する (to do)", "される", "されます", "された", "されました"],
+          "cells": [
+            "する (to do)",
+            "される",
+            "されます",
+            "された",
+            "されました"
+          ],
           "meaning": "is done"
         },
         {
           "label": "Irregular — くる",
-          "cells": ["くる (to come)", "こられる", "こられます", "こられた", "こられました"],
+          "cells": [
+            "くる (to come)",
+            "こられる",
+            "こられます",
+            "こられた",
+            "こられました"
+          ],
           "meaning": "is come (someone came — adversative use)"
         }
       ],
@@ -113,19 +180,47 @@
       "examples": [
         {
           "parts": [
-            { "text": "りきぞは", "role": "topic", "gloss": "Rikizo (は — topic / receiver)" },
-            { "text": "先生に", "role": "modifier", "gloss": "by the teacher (に — agent marker)" },
-            { "text": "名前を", "role": "object", "gloss": "name (を — object; the thing asked about)" },
-            { "text": "聞かれました。", "role": "predicate", "gloss": "was asked (聞く → 聞かれる — U-verb passive, polite past)" }
+            {
+              "text": "りきぞは",
+              "role": "topic",
+              "gloss": "Rikizo (は — topic / receiver)"
+            },
+            {
+              "text": "先生に",
+              "role": "modifier",
+              "gloss": "by the teacher (に — agent marker)"
+            },
+            {
+              "text": "名前を",
+              "role": "object",
+              "gloss": "name (を — object; the thing asked about)"
+            },
+            {
+              "text": "聞かれました。",
+              "role": "predicate",
+              "gloss": "was asked (聞く → 聞かれる — U-verb passive, polite past)"
+            }
           ],
           "en": "Rikizo was asked his name by the teacher.",
           "breakdown": "聞く is a U-verb (く-ending). Passive: く → か + れる = 聞かれる. Polite past: 聞かれました. The agent (先生) is marked with に, not で or から."
         },
         {
           "parts": [
-            { "text": "この 本は", "role": "topic", "gloss": "this book (は — topic / receiver)" },
-            { "text": "多くの 人に", "role": "modifier", "gloss": "by many people (に — agent)" },
-            { "text": "読まれています。", "role": "predicate", "gloss": "is being read (読む → 読まれる — U-verb passive, progressive)" }
+            {
+              "text": "この 本は",
+              "role": "topic",
+              "gloss": "this book (は — topic / receiver)"
+            },
+            {
+              "text": "多くの 人に",
+              "role": "modifier",
+              "gloss": "by many people (に — agent)"
+            },
+            {
+              "text": "読まれています。",
+              "role": "predicate",
+              "gloss": "is being read (読む → 読まれる — U-verb passive, progressive)"
+            }
           ],
           "en": "This book is being read by many people.",
           "breakdown": "読む is a U-verb (む-ending). Passive: む → ま + れる = 読まれる. Progressive passive: 読まれて + います. The agent phrase 多くの人に can be dropped if the reading is the focus."
@@ -164,21 +259,57 @@
       "examples": [
         {
           "parts": [
-            { "text": "りきぞは", "role": "topic", "gloss": "Rikizo (は — topic / sufferer)" },
-            { "text": "友だちに", "role": "modifier", "gloss": "by his friend (に — agent of the action)" },
-            { "text": "問題の 答えを", "role": "object", "gloss": "the answer to the problem (の — possessive, を — object)" },
-            { "text": "教えられた。", "role": "predicate", "gloss": "was told / was taught (教える → 教えられる — RU-verb passive, plain past)" }
+            {
+              "text": "りきぞは",
+              "role": "topic",
+              "gloss": "Rikizo (は — topic / sufferer)"
+            },
+            {
+              "text": "友だちに",
+              "role": "modifier",
+              "gloss": "by his friend (に — agent of the action)"
+            },
+            {
+              "text": "問題の 答えを",
+              "role": "object",
+              "gloss": "the answer to the problem (の — possessive, を — object)"
+            },
+            {
+              "text": "教えられた。",
+              "role": "predicate",
+              "gloss": "was told / was taught (教える → 教えられる — RU-verb passive, plain past)"
+            }
           ],
           "en": "His friend told Rikizo the answer to the problem. (Rikizo suffered from being told — he didn't want to know.)",
           "breakdown": "教える is a RU-verb (ichidan). Passive: drop る, add られる = 教えられる. Plain past: 教えられた. The adversative nuance: Rikizo didn't want to be given the answer — being told it was an unwanted action."
         },
         {
           "parts": [
-            { "text": "りきぞは", "role": "topic", "gloss": "Rikizo (は — topic / sufferer)" },
-            { "text": "先生に", "role": "modifier", "gloss": "by the teacher (に — agent)" },
-            { "text": "日本語で", "role": "adverb", "gloss": "in Japanese (で — means / method)" },
-            { "text": "話されて、", "role": "predicate", "gloss": "was spoken to (話す → 話される, te-form — adversative)" },
-            { "text": "あまり 分かりませんでした。", "role": "predicate", "gloss": "didn't understand much (あまり + negative — polite past)" }
+            {
+              "text": "りきぞは",
+              "role": "topic",
+              "gloss": "Rikizo (は — topic / sufferer)"
+            },
+            {
+              "text": "先生に",
+              "role": "modifier",
+              "gloss": "by the teacher (に — agent)"
+            },
+            {
+              "text": "日本語で",
+              "role": "adverb",
+              "gloss": "in Japanese (で — means / method)"
+            },
+            {
+              "text": "話されて、",
+              "role": "predicate",
+              "gloss": "was spoken to (話す → 話される, te-form — adversative)"
+            },
+            {
+              "text": "あまり 分かりませんでした。",
+              "role": "predicate",
+              "gloss": "didn't understand much (あまり + negative — polite past)"
+            }
           ],
           "en": "The teacher spoke to Rikizo in Japanese, and he didn't understand much. (He suffered from being spoken to in Japanese.)",
           "breakdown": "話す → 話される (U-verb passive: す → さ + れる). Te-form: 話されて. The te-form links the unwanted action (being spoken to) to its consequence (not understanding). This double-predicate structure is a hallmark of the adversative passive."
@@ -222,18 +353,42 @@
       "examples": [
         {
           "parts": [
-            { "text": "この 本は", "role": "topic", "gloss": "this book (は — topic)" },
-            { "text": "一日で", "role": "adverb", "gloss": "in one day (で — time frame)" },
-            { "text": "読まれます。", "role": "predicate", "gloss": "is read (読む → 読まれる — U-verb, unambiguously passive)" }
+            {
+              "text": "この 本は",
+              "role": "topic",
+              "gloss": "this book (は — topic)"
+            },
+            {
+              "text": "一日で",
+              "role": "adverb",
+              "gloss": "in one day (で — time frame)"
+            },
+            {
+              "text": "読まれます。",
+              "role": "predicate",
+              "gloss": "is read (読む → 読まれる — U-verb, unambiguously passive)"
+            }
           ],
           "en": "This book is read in one day. (passive — U-verb 読む, so no ambiguity with potential)",
           "breakdown": "読む is a U-verb: 読まれる is ONLY passive. 読める is the potential. U-verbs never create ambiguity — only RU-verbs do."
         },
         {
           "parts": [
-            { "text": "りきぞは", "role": "topic", "gloss": "Rikizo (は — topic)" },
-            { "text": "先生に", "role": "modifier", "gloss": "by the teacher (に — agent marker → passive signal)" },
-            { "text": "見られた。", "role": "predicate", "gloss": "was seen / watched (見る → 見られた — passive, plain past)" }
+            {
+              "text": "りきぞは",
+              "role": "topic",
+              "gloss": "Rikizo (は — topic)"
+            },
+            {
+              "text": "先生に",
+              "role": "modifier",
+              "gloss": "by the teacher (に — agent marker → passive signal)"
+            },
+            {
+              "text": "見られた。",
+              "role": "predicate",
+              "gloss": "was seen / watched (見る → 見られた — passive, plain past)"
+            }
           ],
           "en": "Rikizo was watched by the teacher. (passive reading — agent に present, human subject being acted on)",
           "breakdown": "先生に (agent に) strongly signals passive. Rikizo is the one being watched, not the one doing the watching. Without 先生に, 見られる would be ambiguous — but the agent に removes all doubt."
@@ -247,9 +402,21 @@
         {
           "context": "News-style passive — agent omitted, focus on the result",
           "parts": [
-            { "text": "新しい 学校が", "role": "subject", "gloss": "new school (が — subject / receiver)" },
-            { "text": "町に", "role": "modifier", "gloss": "in the town (に — location)" },
-            { "text": "作られました。", "role": "predicate", "gloss": "was built (作る → 作られる — U-verb passive, polite past)" }
+            {
+              "text": "新しい 学校が",
+              "role": "subject",
+              "gloss": "new school (が — subject / receiver)"
+            },
+            {
+              "text": "町に",
+              "role": "modifier",
+              "gloss": "in the town (に — location)"
+            },
+            {
+              "text": "作られました。",
+              "role": "predicate",
+              "gloss": "was built (作る → 作られる — U-verb passive, polite past)"
+            }
           ],
           "en": "A new school was built in the town.",
           "note": "No agent (に) needed — the builder is unimportant or unknown. This agent-less passive is common in announcements and news. 作る → 作られる: る-ending godan verb (not ichidan), passive: る → ら + れる = 作られる."
@@ -257,10 +424,26 @@
         {
           "context": "Direct passive — agent named with に",
           "parts": [
-            { "text": "りきぞは", "role": "topic", "gloss": "Rikizo (は — topic / receiver)" },
-            { "text": "先生に", "role": "modifier", "gloss": "by the teacher (に — agent)" },
-            { "text": "日本語の 問題を", "role": "object", "gloss": "a Japanese-language problem (の — modifier, を — object)" },
-            { "text": "聞かれました。", "role": "predicate", "gloss": "was asked (聞く → 聞かれる — U-verb passive, polite past)" }
+            {
+              "text": "りきぞは",
+              "role": "topic",
+              "gloss": "Rikizo (は — topic / receiver)"
+            },
+            {
+              "text": "先生に",
+              "role": "modifier",
+              "gloss": "by the teacher (に — agent)"
+            },
+            {
+              "text": "日本語の 問題を",
+              "role": "object",
+              "gloss": "a Japanese-language problem (の — modifier, を — object)"
+            },
+            {
+              "text": "聞かれました。",
+              "role": "predicate",
+              "gloss": "was asked (聞く → 聞かれる — U-verb passive, polite past)"
+            }
           ],
           "en": "Rikizo was asked a Japanese-language problem by the teacher.",
           "note": "聞く → 聞かれる: く → か + れる. The object (問題を) stays in the passive sentence — Rikizo received the action of being asked about the problem."
@@ -268,11 +451,31 @@
         {
           "context": "Adversative passive — the subject suffers",
           "parts": [
-            { "text": "りきぞは", "role": "topic", "gloss": "Rikizo (は — topic / sufferer)" },
-            { "text": "友だちに", "role": "modifier", "gloss": "by his friend (に — agent)" },
-            { "text": "答えを", "role": "object", "gloss": "the answer (を — object of what was told)" },
-            { "text": "教えられて、", "role": "predicate", "gloss": "was told [it] (教える → 教えられる, te-form — adversative; he suffered)" },
-            { "text": "よくなかった。", "role": "predicate", "gloss": "it wasn't good (よい → よくない — plain negative, plain past adj)" }
+            {
+              "text": "りきぞは",
+              "role": "topic",
+              "gloss": "Rikizo (は — topic / sufferer)"
+            },
+            {
+              "text": "友だちに",
+              "role": "modifier",
+              "gloss": "by his friend (に — agent)"
+            },
+            {
+              "text": "答えを",
+              "role": "object",
+              "gloss": "the answer (を — object of what was told)"
+            },
+            {
+              "text": "教えられて、",
+              "role": "predicate",
+              "gloss": "was told [it] (教える → 教えられる, te-form — adversative; he suffered)"
+            },
+            {
+              "text": "よくなかった。",
+              "role": "predicate",
+              "gloss": "it wasn't good (よい → よくない — plain negative, plain past adj)"
+            }
           ],
           "en": "His friend told Rikizo the answer, and it wasn't good. (He suffered from being told the answer.)",
           "note": "教えられて → よくなかった: the te-form of the passive links the unwanted action (being told) to its consequence. This double-predicate structure is a hallmark of the adversative passive in storytelling."
@@ -280,10 +483,26 @@
         {
           "context": "Passive vs potential — context resolves 見られる",
           "parts": [
-            { "text": "りきぞは", "role": "topic", "gloss": "Rikizo (は — topic)" },
-            { "text": "毎日 先生に", "role": "modifier", "gloss": "every day by the teacher (に — agent → passive signal)" },
-            { "text": "見られると", "role": "connector", "gloss": "is watched (見る → 見られる, plain passive) + と (quotation)" },
-            { "text": "思っています。", "role": "predicate", "gloss": "thinks / feels (と思っている — sustained belief, polite)" }
+            {
+              "text": "りきぞは",
+              "role": "topic",
+              "gloss": "Rikizo (は — topic)"
+            },
+            {
+              "text": "毎日 先生に",
+              "role": "modifier",
+              "gloss": "every day by the teacher (に — agent → passive signal)"
+            },
+            {
+              "text": "見られると",
+              "role": "connector",
+              "gloss": "is watched (見る → 見られる, plain passive) + と (quotation)"
+            },
+            {
+              "text": "思っています。",
+              "role": "predicate",
+              "gloss": "thinks / feels (と思っている — sustained belief, polite)"
+            }
           ],
           "en": "Rikizo feels he is being watched by the teacher every day.",
           "note": "毎日 先生に → passive reading is clear. The presence of an agent (先生に) rules out potential. と思っています reinforces the G27 sustained-belief pattern. Without 先生に, 見られる could mean 'can see' or 'is seen' — the agent makes all the difference."
@@ -306,9 +525,15 @@
             "p_ni",
             "v_nihongo",
             "p_de",
-            { "id": "v_hanasu", "form": "plain_passive_past" },
+            {
+              "id": "v_hanasu",
+              "form": "plain_passive_past"
+            },
             "p_kedo",
-            { "id": "v_wakaru", "form": "plain_past" },
+            {
+              "id": "v_wakaru",
+              "form": "plain_past"
+            },
             "p_ka"
           ]
         },
@@ -319,14 +544,23 @@
           "terms": [
             "v_un",
             "v_chotto",
-            { "id": "v_muzukashii", "form": "plain_past_adj" },
+            {
+              "id": "v_muzukashii",
+              "form": "plain_past_adj"
+            },
             "p_kedo",
-            { "id": "v_wakaru", "form": "plain_past" },
+            {
+              "id": "v_wakaru",
+              "form": "plain_past"
+            },
             "v_sensei",
             "p_ni",
             "v_mondai",
             "p_mo",
-            { "id": "v_kiku", "form": "plain_passive_past" },
+            {
+              "id": "v_kiku",
+              "form": "plain_passive_past"
+            },
             "p_yo"
           ]
         },
@@ -345,10 +579,16 @@
             "p_ni",
             "v_nihongo",
             "p_de",
-            { "id": "v_hanasu", "form": "plain_passive_past" },
+            {
+              "id": "v_hanasu",
+              "form": "plain_passive_past"
+            },
             "p_kara_because",
             "v_amari",
-            { "id": "v_wakaru", "form": "plain_past_negative" }
+            {
+              "id": "v_wakaru",
+              "form": "plain_past_negative"
+            }
           ]
         },
         {
@@ -358,7 +598,10 @@
           "terms": [
             "v_doushite",
             "p_ka",
-            { "id": "v_muzukashii", "form": "plain_past_adj" },
+            {
+              "id": "v_muzukashii",
+              "form": "plain_past_adj"
+            },
             "p_kara_because"
           ]
         },
@@ -372,13 +615,22 @@
             "v_sensei",
             "p_ni",
             "v_chuui",
-            { "id": "v_suru", "form": "plain_passive_past" },
+            {
+              "id": "v_suru",
+              "form": "plain_passive_past"
+            },
             "p_kara_because",
             "v_motto",
             "v_benkyou",
-            { "id": "v_suru", "form": "plain_volitional" },
+            {
+              "id": "v_suru",
+              "form": "plain_volitional"
+            },
             "p_to_quote",
-            { "id": "v_omou", "form": "plain_past" }
+            {
+              "id": "v_omou",
+              "form": "plain_past"
+            }
           ]
         },
         {
@@ -390,14 +642,26 @@
             "p_ne",
             "v_mainichi",
             "v_benkyou",
-            { "id": "v_suru", "form": "conditional_ba" },
+            {
+              "id": "v_suru",
+              "form": "conditional_ba"
+            },
             "v_motto",
-            { "id": "v_wakaru", "form": "plain_form" },
+            {
+              "id": "v_wakaru",
+              "form": "plain_form"
+            },
             "v_you_manner",
             "p_ni",
-            { "id": "v_naru", "form": "plain_form" },
+            {
+              "id": "v_naru",
+              "form": "plain_form"
+            },
             "p_to_quote",
-            { "id": "v_omou", "form": "plain_form" },
+            {
+              "id": "v_omou",
+              "form": "plain_form"
+            },
             "p_yo"
           ]
         }
@@ -417,7 +681,12 @@
           "answer": "食べられる",
           "answerReading": "たべられる",
           "hint": "Drop る, add られる",
-          "choices": ["食べられる", "食べれる", "食べさせる", "食べられた"]
+          "choices": [
+            "食べられる",
+            "食べれる",
+            "食べさせる",
+            "食べられた"
+          ]
         },
         {
           "verb": "聞く",
@@ -427,7 +696,12 @@
           "answer": "聞かれる",
           "answerReading": "きかれる",
           "hint": "く → か + れる",
-          "choices": ["聞かれる", "聞かせる", "聞けれる", "聞きれる"]
+          "choices": [
+            "聞かれる",
+            "聞かせる",
+            "聞けれる",
+            "聞きれる"
+          ]
         },
         {
           "verb": "読む",
@@ -437,7 +711,12 @@
           "answer": "読まれる",
           "answerReading": "よまれる",
           "hint": "む → ま + れる",
-          "choices": ["読まれる", "読められる", "読まさせる", "読めれる"]
+          "choices": [
+            "読まれる",
+            "読められる",
+            "読まさせる",
+            "読めれる"
+          ]
         },
         {
           "verb": "話す",
@@ -447,7 +726,12 @@
           "answer": "話される",
           "answerReading": "はなされる",
           "hint": "す → さ + れる",
-          "choices": ["話される", "話させる", "話せれる", "話されます"]
+          "choices": [
+            "話される",
+            "話させる",
+            "話せれる",
+            "話されます"
+          ]
         },
         {
           "verb": "見る",
@@ -457,7 +741,12 @@
           "answer": "見られた",
           "answerReading": "みられた",
           "hint": "Drop る, add られる, then plain past",
-          "choices": ["見られた", "見れた", "見させた", "見られます"]
+          "choices": [
+            "見られた",
+            "見れた",
+            "見させた",
+            "見られます"
+          ]
         },
         {
           "verb": "書く",
@@ -467,7 +756,12 @@
           "answer": "書かれます",
           "answerReading": "かかれます",
           "hint": "く → か + れる → polite",
-          "choices": ["書かれます", "書けます", "書かせます", "書かれた"]
+          "choices": [
+            "書かれます",
+            "書けます",
+            "書かせます",
+            "書かれた"
+          ]
         },
         {
           "verb": "する",
@@ -477,7 +771,12 @@
           "answer": "される",
           "answerReading": "される",
           "hint": "する is irregular: passive = される",
-          "choices": ["される", "させる", "すれる", "されます"]
+          "choices": [
+            "される",
+            "させる",
+            "すれる",
+            "されます"
+          ]
         },
         {
           "verb": "教える",
@@ -487,7 +786,12 @@
           "answer": "教えられました",
           "answerReading": "おしえられました",
           "hint": "Drop る, add られる, then polite past",
-          "choices": ["教えられました", "教えられた", "教えさせました", "教えれました"]
+          "choices": [
+            "教えられました",
+            "教えられた",
+            "教えさせました",
+            "教えれました"
+          ]
         }
       ]
     },

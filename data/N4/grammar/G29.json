@@ -8,10 +8,23 @@
     "unlocksAfter": "N4.31",
     "focus": "Express that someone makes or lets another person do something. Covers causative form construction for RU-verbs, U-verbs, する, and くる, the make vs let distinction, causee particle patterns (に vs を), and a preview of the causative-passive (させられる).",
     "estimatedMinutes": 25,
-    "particles": ["〜させる", "〜せる", "〜させます", "〜させた", "〜させられる"],
-    "grammarForms": ["causative", "polite_causative", "plain_causative_past", "polite_causative_past", "causative_passive"],
+    "particles": [
+      "〜させる",
+      "〜せる",
+      "〜させます",
+      "〜させた",
+      "〜させられる"
+    ],
+    "grammarForms": [
+      "causative",
+      "polite_causative",
+      "plain_causative_past",
+      "polite_causative_past",
+      "causative_passive"
+    ],
     "icon": "🎭"
   },
+  "targetVocab": [],
   "sections": [
     {
       "type": "grammarIntro",
@@ -31,56 +44,123 @@
       "title": "Causative Form — Conjugation Chart",
       "description": "The causative suffix attaches differently depending on verb type. RU-verbs (ichidan) drop る and add させる. U-verbs (godan) shift the final mora to the あ-row and add せる. する and くる are irregular.",
       "tableType": "conjugation",
-      "headers": ["Verb type", "Dictionary form", "Causative (plain)", "Causative (polite)", "Causative past (plain)", "Causative past (polite)"],
+      "headers": [
+        "Verb type",
+        "Dictionary form",
+        "Causative (plain)",
+        "Causative (polite)",
+        "Causative past (plain)",
+        "Causative past (polite)"
+      ],
       "rows": [
         {
           "label": "RU-verb (ichidan)",
-          "cells": ["食べる (to eat)", "食べさせる", "食べさせます", "食べさせた", "食べさせました"],
+          "cells": [
+            "食べる (to eat)",
+            "食べさせる",
+            "食べさせます",
+            "食べさせた",
+            "食べさせました"
+          ],
           "meaning": "make/let (someone) eat"
         },
         {
           "label": "RU-verb (ichidan)",
-          "cells": ["見る (to see/watch)", "見させる", "見させます", "見させた", "見させました"],
+          "cells": [
+            "見る (to see/watch)",
+            "見させる",
+            "見させます",
+            "見させた",
+            "見させました"
+          ],
           "meaning": "make/let (someone) watch"
         },
         {
           "label": "RU-verb (ichidan)",
-          "cells": ["起きる (to wake up)", "起きさせる", "起きさせます", "起きさせた", "起きさせました"],
+          "cells": [
+            "起きる (to wake up)",
+            "起きさせる",
+            "起きさせます",
+            "起きさせた",
+            "起きさせました"
+          ],
           "meaning": "make/let (someone) wake up"
         },
         {
           "label": "U-verb (godan) — く",
-          "cells": ["書く (to write)", "書かせる", "書かせます", "書かせた", "書かせました"],
+          "cells": [
+            "書く (to write)",
+            "書かせる",
+            "書かせます",
+            "書かせた",
+            "書かせました"
+          ],
           "meaning": "make/let (someone) write"
         },
         {
           "label": "U-verb (godan) — す",
-          "cells": ["話す (to speak)", "話させる", "話させます", "話させた", "話させました"],
+          "cells": [
+            "話す (to speak)",
+            "話させる",
+            "話させます",
+            "話させた",
+            "話させました"
+          ],
           "meaning": "make/let (someone) speak"
         },
         {
           "label": "U-verb (godan) — む",
-          "cells": ["読む (to read)", "読ませる", "読ませます", "読ませた", "読ませました"],
+          "cells": [
+            "読む (to read)",
+            "読ませる",
+            "読ませます",
+            "読ませた",
+            "読ませました"
+          ],
           "meaning": "make/let (someone) read"
         },
         {
           "label": "U-verb (godan) — く",
-          "cells": ["行く (to go)", "行かせる", "行かせます", "行かせた", "行かせました"],
+          "cells": [
+            "行く (to go)",
+            "行かせる",
+            "行かせます",
+            "行かせた",
+            "行かせました"
+          ],
           "meaning": "make/let (someone) go"
         },
         {
           "label": "U-verb (godan) — つ",
-          "cells": ["待つ (to wait)", "待たせる", "待たせます", "待たせた", "待たせました"],
+          "cells": [
+            "待つ (to wait)",
+            "待たせる",
+            "待たせます",
+            "待たせた",
+            "待たせました"
+          ],
           "meaning": "make (someone) wait"
         },
         {
           "label": "Irregular — する",
-          "cells": ["する (to do)", "させる", "させます", "させた", "させました"],
+          "cells": [
+            "する (to do)",
+            "させる",
+            "させます",
+            "させた",
+            "させました"
+          ],
           "meaning": "make/let (someone) do"
         },
         {
           "label": "Irregular — くる",
-          "cells": ["くる (to come)", "こさせる", "こさせます", "こさせた", "こさせました"],
+          "cells": [
+            "くる (to come)",
+            "こさせる",
+            "こさせます",
+            "こさせた",
+            "こさせました"
+          ],
           "meaning": "make/let (someone) come"
         }
       ],
@@ -123,20 +203,52 @@
       "examples": [
         {
           "parts": [
-            { "text": "先生は", "role": "topic", "gloss": "the teacher (は — topic / causer)" },
-            { "text": "学生に", "role": "modifier", "gloss": "the students (に — causee marker)" },
-            { "text": "漢字を", "role": "object", "gloss": "kanji (を — object of writing)" },
-            { "text": "書かせました。", "role": "predicate", "gloss": "made them write (書く → 書かせる — U-verb causative, polite past)" }
+            {
+              "text": "先生は",
+              "role": "topic",
+              "gloss": "the teacher (は — topic / causer)"
+            },
+            {
+              "text": "学生に",
+              "role": "modifier",
+              "gloss": "the students (に — causee marker)"
+            },
+            {
+              "text": "漢字を",
+              "role": "object",
+              "gloss": "kanji (を — object of writing)"
+            },
+            {
+              "text": "書かせました。",
+              "role": "predicate",
+              "gloss": "made them write (書く → 書かせる — U-verb causative, polite past)"
+            }
           ],
           "en": "The teacher made the students write kanji.",
           "breakdown": "書く is a U-verb (く-ending). Causative: く → か + せる = 書かせる. Polite past: 書かせました. 学生に marks the causee (the students being made to write). 漢字を marks the object (what they wrote)."
         },
         {
           "parts": [
-            { "text": "母は", "role": "topic", "gloss": "mother (は — topic / causer)" },
-            { "text": "子どもに", "role": "modifier", "gloss": "the child (に — causee)" },
-            { "text": "野菜を", "role": "object", "gloss": "vegetables (を — object)" },
-            { "text": "食べさせた。", "role": "predicate", "gloss": "made them eat (食べる → 食べさせる — RU-verb causative, plain past)" }
+            {
+              "text": "母は",
+              "role": "topic",
+              "gloss": "mother (は — topic / causer)"
+            },
+            {
+              "text": "子どもに",
+              "role": "modifier",
+              "gloss": "the child (に — causee)"
+            },
+            {
+              "text": "野菜を",
+              "role": "object",
+              "gloss": "vegetables (を — object)"
+            },
+            {
+              "text": "食べさせた。",
+              "role": "predicate",
+              "gloss": "made them eat (食べる → 食べさせる — RU-verb causative, plain past)"
+            }
           ],
           "en": "Mom made the child eat vegetables.",
           "breakdown": "食べる is a RU-verb (ichidan). Causative: drop る, add させる = 食べさせる. Plain past: 食べさせた. The 'make' reading is natural here — children don't typically volunteer to eat vegetables. The mother has authority."
@@ -175,20 +287,52 @@
       "examples": [
         {
           "parts": [
-            { "text": "母は", "role": "topic", "gloss": "mother (は — topic / causer)" },
-            { "text": "子どもに", "role": "modifier", "gloss": "the child (に — causee)" },
-            { "text": "好きな ものを", "role": "object", "gloss": "things they like (好きな + もの + を — object of eating)" },
-            { "text": "食べさせた。", "role": "predicate", "gloss": "let them eat (食べる → 食べさせる — RU-verb causative, plain past; permissive reading)" }
+            {
+              "text": "母は",
+              "role": "topic",
+              "gloss": "mother (は — topic / causer)"
+            },
+            {
+              "text": "子どもに",
+              "role": "modifier",
+              "gloss": "the child (に — causee)"
+            },
+            {
+              "text": "好きな ものを",
+              "role": "object",
+              "gloss": "things they like (好きな + もの + を — object of eating)"
+            },
+            {
+              "text": "食べさせた。",
+              "role": "predicate",
+              "gloss": "let them eat (食べる → 食べさせる — RU-verb causative, plain past; permissive reading)"
+            }
           ],
           "en": "Mom let the child eat whatever they liked.",
           "breakdown": "The form 食べさせた is identical in both the 'make' and 'let' readings. Here the 'let' reading is natural: the child wants to eat their favorite food, and the mother is granting that wish. Compare with the previous rule's example (making the child eat vegetables — clearly obligatory)."
         },
         {
           "parts": [
-            { "text": "先生は", "role": "topic", "gloss": "the teacher (は — topic / causer)" },
-            { "text": "学生を", "role": "object", "gloss": "the students (を — marks the causee when the causative is used with intransitive homeward movement)" },
-            { "text": "早く", "role": "adverb", "gloss": "early (早い → 早く — adverbial form)" },
-            { "text": "帰らせました。", "role": "predicate", "gloss": "let them go home (帰る → 帰らせる — U-verb causative, polite past; permissive)" }
+            {
+              "text": "先生は",
+              "role": "topic",
+              "gloss": "the teacher (は — topic / causer)"
+            },
+            {
+              "text": "学生を",
+              "role": "object",
+              "gloss": "the students (を — marks the causee when the causative is used with intransitive homeward movement)"
+            },
+            {
+              "text": "早く",
+              "role": "adverb",
+              "gloss": "early (早い → 早く — adverbial form)"
+            },
+            {
+              "text": "帰らせました。",
+              "role": "predicate",
+              "gloss": "let them go home (帰る → 帰らせる — U-verb causative, polite past; permissive)"
+            }
           ],
           "en": "The teacher let the students go home early.",
           "breakdown": "帰る is a U-verb (る-ending godan): る → ら + せる = 帰らせる. Polite past: 帰らせました. 学生を — note を here instead of に: when the causee IS the only participant (no transitive object), を occasionally appears as an alternative to に, especially with verbs of movement. The 'let' reading is clear: going home early is a positive outcome for the students."
@@ -210,10 +354,26 @@
           ],
           "example": {
             "parts": [
-              { "text": "母は", "role": "topic", "gloss": "mother (は — topic)" },
-              { "text": "子どもに", "role": "modifier", "gloss": "the child (に — causee)" },
-              { "text": "野菜を", "role": "object", "gloss": "vegetables (を)" },
-              { "text": "食べさせた。", "role": "predicate", "gloss": "made eat (causative, plain past)" }
+              {
+                "text": "母は",
+                "role": "topic",
+                "gloss": "mother (は — topic)"
+              },
+              {
+                "text": "子どもに",
+                "role": "modifier",
+                "gloss": "the child (に — causee)"
+              },
+              {
+                "text": "野菜を",
+                "role": "object",
+                "gloss": "vegetables (を)"
+              },
+              {
+                "text": "食べさせた。",
+                "role": "predicate",
+                "gloss": "made eat (causative, plain past)"
+              }
             ],
             "en": "Mom MADE the child eat vegetables. (no choice)"
           }
@@ -229,10 +389,26 @@
           ],
           "example": {
             "parts": [
-              { "text": "母は", "role": "topic", "gloss": "mother (は — topic)" },
-              { "text": "子どもに", "role": "modifier", "gloss": "the child (に — causee)" },
-              { "text": "好きな ものを", "role": "object", "gloss": "things they like (を)" },
-              { "text": "食べさせた。", "role": "predicate", "gloss": "let eat (causative, plain past)" }
+              {
+                "text": "母は",
+                "role": "topic",
+                "gloss": "mother (は — topic)"
+              },
+              {
+                "text": "子どもに",
+                "role": "modifier",
+                "gloss": "the child (に — causee)"
+              },
+              {
+                "text": "好きな ものを",
+                "role": "object",
+                "gloss": "things they like (を)"
+              },
+              {
+                "text": "食べさせた。",
+                "role": "predicate",
+                "gloss": "let eat (causative, plain past)"
+              }
             ],
             "en": "Mom LET the child eat what they liked. (permission given)"
           }
@@ -272,20 +448,52 @@
       "examples": [
         {
           "parts": [
-            { "text": "りきぞは", "role": "topic", "gloss": "Rikizo (は — topic / sufferer)" },
-            { "text": "先生に", "role": "modifier", "gloss": "by the teacher (に — authority figure)" },
-            { "text": "長い 文を", "role": "object", "gloss": "a long sentence (長い + 文 + を)" },
-            { "text": "書かせられました。", "role": "predicate", "gloss": "was made to write (書く → 書かせられる — causative-passive, polite past)" }
+            {
+              "text": "りきぞは",
+              "role": "topic",
+              "gloss": "Rikizo (は — topic / sufferer)"
+            },
+            {
+              "text": "先生に",
+              "role": "modifier",
+              "gloss": "by the teacher (に — authority figure)"
+            },
+            {
+              "text": "長い 文を",
+              "role": "object",
+              "gloss": "a long sentence (長い + 文 + を)"
+            },
+            {
+              "text": "書かせられました。",
+              "role": "predicate",
+              "gloss": "was made to write (書く → 書かせられる — causative-passive, polite past)"
+            }
           ],
           "en": "Rikizo was made to write a long sentence by the teacher.",
           "breakdown": "書く → causative: 書かせる → causative-passive: 書かせられる. Polite past: 書かせられました. The nuance: Rikizo was forced to write — he didn't choose to. Compare with the plain passive 書かれました (was written — something was written by the teacher) — a very different meaning."
         },
         {
           "parts": [
-            { "text": "私は", "role": "topic", "gloss": "I (は — topic / sufferer)" },
-            { "text": "毎日", "role": "adverb", "gloss": "every day" },
-            { "text": "野菜を", "role": "object", "gloss": "vegetables (を)" },
-            { "text": "食べさせられた。", "role": "predicate", "gloss": "was made to eat (食べる → 食べさせられる — causative-passive, plain past)" }
+            {
+              "text": "私は",
+              "role": "topic",
+              "gloss": "I (は — topic / sufferer)"
+            },
+            {
+              "text": "毎日",
+              "role": "adverb",
+              "gloss": "every day"
+            },
+            {
+              "text": "野菜を",
+              "role": "object",
+              "gloss": "vegetables (を)"
+            },
+            {
+              "text": "食べさせられた。",
+              "role": "predicate",
+              "gloss": "was made to eat (食べる → 食べさせられる — causative-passive, plain past)"
+            }
           ],
           "en": "I was made to eat vegetables every day. (I didn't want to.)",
           "breakdown": "食べる → causative stem: 食べさせ → add passive られる = 食べさせられる. Plain past: 食べさせられた. This is a common complaint pattern — expressing that something was imposed on you repeatedly."
@@ -309,11 +517,20 @@
             "v_kono",
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "polite_causative" },
-            { "id": "v_owaru", "form": "conditional_tara" },
+            {
+              "id": "v_yomu",
+              "form": "polite_causative"
+            },
+            {
+              "id": "v_owaru",
+              "form": "conditional_tara"
+            },
             "v_mondai",
             "p_ni",
-            { "id": "v_kotaeru", "form": "te_form" },
+            {
+              "id": "v_kotaeru",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
@@ -323,11 +540,20 @@
           "en": "Yes, understood. May I also be allowed to write the kanji?",
           "terms": [
             "p_hai",
-            { "id": "v_wakaru", "form": "polite_mashita" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            },
             "v_kanji",
             "p_mo",
-            { "id": "v_kaku", "form": "causative_te" },
-            { "id": "v_morau", "form": "polite_potential" },
+            {
+              "id": "v_kaku",
+              "form": "causative_te"
+            },
+            {
+              "id": "v_morau",
+              "form": "polite_potential"
+            },
             "p_ka"
           ]
         },
@@ -340,13 +566,22 @@
             "g_desu",
             "v_kanji",
             "p_wo",
-            { "id": "v_kaku", "form": "polite_causative" },
-            { "id": "v_taisetsu", "form": "attributive_na" },
+            {
+              "id": "v_kaku",
+              "form": "polite_causative"
+            },
+            {
+              "id": "v_taisetsu",
+              "form": "attributive_na"
+            },
             "v_benkyou",
             "g_desu",
             "p_kara_because",
             "v_yoku",
-            { "id": "v_suru", "form": "te_form" },
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
@@ -355,7 +590,10 @@
           "jp": "分かりました。先生、この 後で、友だちに 教室を 見させて あげても いいですか。",
           "en": "Understood. Teacher, after this, is it okay if I let my friend look at the classroom?",
           "terms": [
-            { "id": "v_wakaru", "form": "polite_mashita" },
+            {
+              "id": "v_wakaru",
+              "form": "polite_mashita"
+            },
             "v_sensei",
             "v_kono",
             "v_ato",
@@ -364,8 +602,14 @@
             "p_ni",
             "v_kyoushitsu",
             "p_wo",
-            { "id": "v_miru", "form": "causative_te" },
-            { "id": "v_ageru", "form": "te_form" },
+            {
+              "id": "v_miru",
+              "form": "causative_te"
+            },
+            {
+              "id": "v_ageru",
+              "form": "te_form"
+            },
             "p_mo",
             "v_ii",
             "g_desu",
@@ -382,13 +626,28 @@
             "p_yo",
             "v_tomodachi",
             "p_ga",
-            { "id": "v_miru", "form": "plain_desire_tai" },
+            {
+              "id": "v_miru",
+              "form": "plain_desire_tai"
+            },
             "p_to_quote",
-            { "id": "v_omou", "form": "te_form" },
-            { "id": "v_iru", "form": "plain_form" },
+            {
+              "id": "v_omou",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
             "p_nara",
-            { "id": "v_miru", "form": "causative_te" },
-            { "id": "v_ageru", "form": "te_form" },
+            {
+              "id": "v_miru",
+              "form": "causative_te"
+            },
+            {
+              "id": "v_ageru",
+              "form": "te_form"
+            },
             "v_kudasai"
           ]
         },
@@ -404,14 +663,26 @@
             "v_minna",
             "p_ni",
             "v_benkyou",
-            { "id": "v_suru", "form": "causative_te" },
-            { "id": "v_kudasaru", "form": "plain_form" },
+            {
+              "id": "v_suru",
+              "form": "causative_te"
+            },
+            {
+              "id": "v_kudasaru",
+              "form": "plain_form"
+            },
             "p_kara_because",
             "v_yoku",
-            { "id": "v_wakaru", "form": "plain_form" },
+            {
+              "id": "v_wakaru",
+              "form": "plain_form"
+            },
             "v_you_manner",
             "p_ni",
-            { "id": "v_naru", "form": "polite_mashita" }
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            }
           ]
         }
       ]
@@ -433,7 +704,10 @@
             "v_oya",
             "p_ni",
             "v_iroiro",
-            { "id": "v_suru", "form": "plain_causative_passive_past" },
+            {
+              "id": "v_suru",
+              "form": "plain_causative_passive_past"
+            },
             "p_ka"
           ]
         },
@@ -446,10 +720,16 @@
             "v_mainichi",
             "v_yasai",
             "p_wo",
-            { "id": "v_taberu", "form": "plain_causative_passive_past" },
+            {
+              "id": "v_taberu",
+              "form": "plain_causative_passive_past"
+            },
             "p_yo",
             "v_zenzen",
-            { "id": "v_suki", "form": "plain_past_negative" },
+            {
+              "id": "v_suki",
+              "form": "plain_past_negative"
+            },
             "p_kedo"
           ]
         },
@@ -466,15 +746,27 @@
             "p_no",
             "v_tame",
             "p_ni",
-            { "id": "v_suru", "form": "plain_causative_past" },
+            {
+              "id": "v_suru",
+              "form": "plain_causative_past"
+            },
             "p_nda",
             "p_ne",
             "p_yo",
-            { "id": "v_suki", "form": "attributive_na" },
+            {
+              "id": "v_suki",
+              "form": "attributive_na"
+            },
             "v_mono",
             "p_mo",
-            { "id": "v_taberu", "form": "causative_te" },
-            { "id": "v_morau", "form": "plain_potential_past" },
+            {
+              "id": "v_taberu",
+              "form": "causative_te"
+            },
+            {
+              "id": "v_morau",
+              "form": "plain_potential_past"
+            },
             "p_ka"
           ]
         },
@@ -486,16 +778,31 @@
             "v_un",
             "v_shokudou",
             "p_de",
-            { "id": "v_suki", "form": "attributive_na" },
+            {
+              "id": "v_suki",
+              "form": "attributive_na"
+            },
             "v_mono",
             "p_wo",
-            { "id": "v_taberu", "form": "causative_te" },
-            { "id": "v_morau", "form": "plain_potential_past" },
+            {
+              "id": "v_taberu",
+              "form": "causative_te"
+            },
+            {
+              "id": "v_morau",
+              "form": "plain_potential_past"
+            },
             "v_koto",
             "p_mo",
-            { "id": "v_aru", "form": "plain_past" },
+            {
+              "id": "v_aru",
+              "form": "plain_past"
+            },
             "p_yo",
-            { "id": "v_tanoshii", "form": "plain_past_adj" }
+            {
+              "id": "v_tanoshii",
+              "form": "plain_past_adj"
+            }
           ]
         },
         {
@@ -510,16 +817,31 @@
             "v_mainichi",
             "v_hon",
             "p_wo",
-            { "id": "v_yomu", "form": "plain_causative_passive_past" },
+            {
+              "id": "v_yomu",
+              "form": "plain_causative_passive_past"
+            },
             "p_yo",
-            { "id": "v_muzukashii", "form": "plain_past_adj" },
+            {
+              "id": "v_muzukashii",
+              "form": "plain_past_adj"
+            },
             "p_kedo",
             "v_ima",
             "p_wa",
-            { "id": "v_yomu", "form": "te_form" },
-            { "id": "v_ii", "form": "plain_past_adj" },
+            {
+              "id": "v_yomu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_ii",
+              "form": "plain_past_adj"
+            },
             "p_to_quote",
-            { "id": "v_omou", "form": "plain_form" }
+            {
+              "id": "v_omou",
+              "form": "plain_form"
+            }
           ]
         },
         {
@@ -532,15 +854,24 @@
             "g_da",
             "v_oya",
             "p_ga",
-            { "id": "v_suru", "form": "plain_causative_past" },
+            {
+              "id": "v_suru",
+              "form": "plain_causative_past"
+            },
             "v_koto",
             "p_wa",
             "v_ima",
             "p_ni",
-            { "id": "v_naru", "form": "te_form" },
+            {
+              "id": "v_naru",
+              "form": "te_form"
+            },
             "v_imi",
             "p_ga",
-            { "id": "v_wakaru", "form": "plain_form" },
+            {
+              "id": "v_wakaru",
+              "form": "plain_form"
+            },
             "v_koto",
             "p_ga",
             "v_ooi",
@@ -564,7 +895,12 @@
           "answer": "食べさせる",
           "answerReading": "たべさせる",
           "hint": "Drop る, add させる",
-          "choices": ["食べさせる", "食べせる", "食べられる", "食べさせた"]
+          "choices": [
+            "食べさせる",
+            "食べせる",
+            "食べられる",
+            "食べさせた"
+          ]
         },
         {
           "verb": "書く",
@@ -574,7 +910,12 @@
           "answer": "書かせる",
           "answerReading": "かかせる",
           "hint": "く → か + せる",
-          "choices": ["書かせる", "書けせる", "書かれる", "書きせる"]
+          "choices": [
+            "書かせる",
+            "書けせる",
+            "書かれる",
+            "書きせる"
+          ]
         },
         {
           "verb": "読む",
@@ -584,7 +925,12 @@
           "answer": "読ませる",
           "answerReading": "よませる",
           "hint": "む → ま + せる",
-          "choices": ["読ませる", "読めせる", "読まれる", "読ませた"]
+          "choices": [
+            "読ませる",
+            "読めせる",
+            "読まれる",
+            "読ませた"
+          ]
         },
         {
           "verb": "話す",
@@ -594,7 +940,12 @@
           "answer": "話させます",
           "answerReading": "はなさせます",
           "hint": "す → さ + せる → polite",
-          "choices": ["話させます", "話させる", "話されます", "話させました"]
+          "choices": [
+            "話させます",
+            "話させる",
+            "話されます",
+            "話させました"
+          ]
         },
         {
           "verb": "行く",
@@ -604,7 +955,12 @@
           "answer": "行かせた",
           "answerReading": "いかせた",
           "hint": "く → か + せる → plain past",
-          "choices": ["行かせた", "行かれた", "行きせた", "行かせます"]
+          "choices": [
+            "行かせた",
+            "行かれた",
+            "行きせた",
+            "行かせます"
+          ]
         },
         {
           "verb": "見る",
@@ -614,7 +970,12 @@
           "answer": "見させます",
           "answerReading": "みさせます",
           "hint": "Drop る, add させる → polite",
-          "choices": ["見させます", "見させる", "見られます", "見せます"]
+          "choices": [
+            "見させます",
+            "見させる",
+            "見られます",
+            "見せます"
+          ]
         },
         {
           "verb": "する",
@@ -624,7 +985,12 @@
           "answer": "させる",
           "answerReading": "させる",
           "hint": "する is irregular: causative = させる",
-          "choices": ["させる", "せる", "されます", "させました"]
+          "choices": [
+            "させる",
+            "せる",
+            "されます",
+            "させました"
+          ]
         },
         {
           "verb": "飲む",
@@ -634,7 +1000,12 @@
           "answer": "飲ませました",
           "answerReading": "のませました",
           "hint": "む → ま + せる → polite past",
-          "choices": ["飲ませました", "飲まれました", "飲ませた", "飲まさせました"]
+          "choices": [
+            "飲ませました",
+            "飲まれました",
+            "飲ませた",
+            "飲まさせました"
+          ]
         }
       ]
     },

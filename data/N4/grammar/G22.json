@@ -8,10 +8,21 @@
     "unlocksAfter": "N4.18",
     "focus": "Distinguish stem + そうだ (looks like ~) from plain form + そうだ (I heard that ~).",
     "estimatedMinutes": 25,
-    "particles": ["そうだ", "そうだ"],
-    "grammarForms": ["appearance_sou", "appearance_sou_stem", "plain_appearance_sou"],
+    "particles": [
+      "そうだ",
+      "そうだ"
+    ],
+    "grammarForms": [
+      "appearance_sou",
+      "appearance_sou_stem",
+      "plain_appearance_sou"
+    ],
     "icon": "👀"
   },
+  "targetVocab": [
+    "p_sou_da",
+    "p_sou_da_hearsay"
+  ],
   "sections": [
     {
       "type": "grammarIntro",
@@ -51,29 +62,73 @@
       "examples": [
         {
           "parts": [
-            { "text": "空が", "role": "subject", "gloss": "sky (が)" },
-            { "text": "暗くて、", "role": "predicate", "gloss": "dark (て-form connector — it got dark and...)" },
-            { "text": "雨が", "role": "subject", "gloss": "rain (が)" },
-            { "text": "ふり", "role": "predicate", "gloss": "ます-stem of ふる (to fall/rain)" },
-            { "text": "そうです。", "role": "predicate", "gloss": "looks like ~ (appearance そうです)" }
+            {
+              "text": "空が",
+              "role": "subject",
+              "gloss": "sky (が)"
+            },
+            {
+              "text": "暗くて、",
+              "role": "predicate",
+              "gloss": "dark (て-form connector — it got dark and...)"
+            },
+            {
+              "text": "雨が",
+              "role": "subject",
+              "gloss": "rain (が)"
+            },
+            {
+              "text": "ふり",
+              "role": "predicate",
+              "gloss": "ます-stem of ふる (to fall/rain)"
+            },
+            {
+              "text": "そうです。",
+              "role": "predicate",
+              "gloss": "looks like ~ (appearance そうです)"
+            }
           ],
           "en": "The sky is dark, and it looks like it will rain.",
           "breakdown": "ふり is the ます-stem of ふる (to fall/rain). Stem + そうです = appearance based on observing the dark sky."
         },
         {
           "parts": [
-            { "text": "このケーキは", "role": "topic", "gloss": "this cake (は)" },
-            { "text": "おいし", "role": "predicate", "gloss": "stem of おいしい (drop い)" },
-            { "text": "そうです。", "role": "predicate", "gloss": "looks ~ (appearance そうです)" }
+            {
+              "text": "このケーキは",
+              "role": "topic",
+              "gloss": "this cake (は)"
+            },
+            {
+              "text": "おいし",
+              "role": "predicate",
+              "gloss": "stem of おいしい (drop い)"
+            },
+            {
+              "text": "そうです。",
+              "role": "predicate",
+              "gloss": "looks ~ (appearance そうです)"
+            }
           ],
           "en": "This cake looks delicious.",
           "breakdown": "おいしい → drop い → おいし + そうです. The speaker is looking at the cake right now."
         },
         {
           "parts": [
-            { "text": "やまかわさんは", "role": "topic", "gloss": "Yamakawa-san (は)" },
-            { "text": "元気", "role": "predicate", "gloss": "な-adjective bare stem (元気)" },
-            { "text": "そうです。", "role": "predicate", "gloss": "looks ~ (appearance そうです)" }
+            {
+              "text": "やまかわさんは",
+              "role": "topic",
+              "gloss": "Yamakawa-san (は)"
+            },
+            {
+              "text": "元気",
+              "role": "predicate",
+              "gloss": "な-adjective bare stem (元気)"
+            },
+            {
+              "text": "そうです。",
+              "role": "predicate",
+              "gloss": "looks ~ (appearance そうです)"
+            }
           ],
           "en": "Yamakawa-san looks well/healthy.",
           "breakdown": "な-adjective: bare stem 元気 + そうです. The speaker can observe Yamakawa-san directly."
@@ -85,31 +140,62 @@
       "title": "Appearance そうだ — Formation Chart",
       "description": "How to form appearance そうだ from each word type.",
       "tableType": "standard",
-      "headers": ["Word type", "Rule", "Example base", "Appearance そう form", "Polite"],
+      "headers": [
+        "Word type",
+        "Rule",
+        "Example base",
+        "Appearance そう form",
+        "Polite"
+      ],
       "rows": [
         {
           "label": "Verb",
-          "cells": ["ます-stem + そう", "ふる", "ふりそう", "ふりそうです"],
+          "cells": [
+            "ます-stem + そう",
+            "ふる",
+            "ふりそう",
+            "ふりそうです"
+          ],
           "meaning": "looks like it will fall/rain"
         },
         {
           "label": "い-adjective",
-          "cells": ["drop い + そう", "おいしい", "おいしそう", "おいしそうです"],
+          "cells": [
+            "drop い + そう",
+            "おいしい",
+            "おいしそう",
+            "おいしそうです"
+          ],
           "meaning": "looks delicious"
         },
         {
           "label": "な-adjective",
-          "cells": ["stem + そう", "元気", "元気そう", "元気そうです"],
+          "cells": [
+            "stem + そう",
+            "元気",
+            "元気そう",
+            "元気そうです"
+          ],
           "meaning": "looks well/healthy"
         },
         {
           "label": "いい (irregular)",
-          "cells": ["よ + さそう", "いい", "よさそう", "よさそうです"],
+          "cells": [
+            "よ + さそう",
+            "いい",
+            "よさそう",
+            "よさそうです"
+          ],
           "meaning": "looks good/nice"
         },
         {
           "label": "い-adj negative",
-          "cells": ["drop い + くなさそう", "おいしい", "おいしくなさそう", "おいしくなさそうです"],
+          "cells": [
+            "drop い + くなさそう",
+            "おいしい",
+            "おいしくなさそう",
+            "おいしくなさそうです"
+          ],
           "meaning": "doesn't look delicious"
         }
       ],
@@ -142,28 +228,68 @@
       "examples": [
         {
           "parts": [
-            { "text": "明日は", "role": "topic", "gloss": "tomorrow (は)" },
-            { "text": "雨が", "role": "subject", "gloss": "rain (が)" },
-            { "text": "ふる", "role": "predicate", "gloss": "to fall/rain — plain/dictionary form" },
-            { "text": "そうです。", "role": "predicate", "gloss": "I heard that ~ (hearsay そうです)" }
+            {
+              "text": "明日は",
+              "role": "topic",
+              "gloss": "tomorrow (は)"
+            },
+            {
+              "text": "雨が",
+              "role": "subject",
+              "gloss": "rain (が)"
+            },
+            {
+              "text": "ふる",
+              "role": "predicate",
+              "gloss": "to fall/rain — plain/dictionary form"
+            },
+            {
+              "text": "そうです。",
+              "role": "predicate",
+              "gloss": "I heard that ~ (hearsay そうです)"
+            }
           ],
           "en": "I heard it will rain tomorrow.",
           "breakdown": "ふる is the dictionary form — NOT the ます-stem ふり. Dictionary form + そうです = hearsay (reported information, not own observation)."
         },
         {
           "parts": [
-            { "text": "あの店は", "role": "topic", "gloss": "that shop (は)" },
-            { "text": "おいしい", "role": "predicate", "gloss": "delicious — full plain form, keep the い" },
-            { "text": "そうです。", "role": "predicate", "gloss": "I heard that ~ (hearsay そうです)" }
+            {
+              "text": "あの店は",
+              "role": "topic",
+              "gloss": "that shop (は)"
+            },
+            {
+              "text": "おいしい",
+              "role": "predicate",
+              "gloss": "delicious — full plain form, keep the い"
+            },
+            {
+              "text": "そうです。",
+              "role": "predicate",
+              "gloss": "I heard that ~ (hearsay そうです)"
+            }
           ],
           "en": "I heard that shop is delicious.",
           "breakdown": "おいしい keeps the full い — this is the full plain form. Compare with appearance: おいしそうです (stem, drop い)."
         },
         {
           "parts": [
-            { "text": "けんさんは", "role": "topic", "gloss": "Ken-san (は)" },
-            { "text": "元気だ", "role": "predicate", "gloss": "元気 + plain copula だ" },
-            { "text": "そうです。", "role": "predicate", "gloss": "I heard that ~ (hearsay そうです)" }
+            {
+              "text": "けんさんは",
+              "role": "topic",
+              "gloss": "Ken-san (は)"
+            },
+            {
+              "text": "元気だ",
+              "role": "predicate",
+              "gloss": "元気 + plain copula だ"
+            },
+            {
+              "text": "そうです。",
+              "role": "predicate",
+              "gloss": "I heard that ~ (hearsay そうです)"
+            }
           ],
           "en": "I heard Ken-san is doing well.",
           "breakdown": "な-adjective: bare stem 元気 + plain copula だ + そうです. The speaker was told this, not observed it."
@@ -185,9 +311,21 @@
           ],
           "example": {
             "parts": [
-              { "text": "雨が", "role": "subject", "gloss": "rain (が)" },
-              { "text": "ふり", "role": "predicate", "gloss": "ます-stem of ふる" },
-              { "text": "そうです。", "role": "predicate", "gloss": "looks like (speaker can see dark clouds)" }
+              {
+                "text": "雨が",
+                "role": "subject",
+                "gloss": "rain (が)"
+              },
+              {
+                "text": "ふり",
+                "role": "predicate",
+                "gloss": "ます-stem of ふる"
+              },
+              {
+                "text": "そうです。",
+                "role": "predicate",
+                "gloss": "looks like (speaker can see dark clouds)"
+              }
             ],
             "en": "It looks like it will rain. (I can see the dark clouds.)"
           }
@@ -203,10 +341,26 @@
           ],
           "example": {
             "parts": [
-              { "text": "明日は", "role": "topic", "gloss": "tomorrow (は)" },
-              { "text": "雨が", "role": "subject", "gloss": "rain (が)" },
-              { "text": "ふる", "role": "predicate", "gloss": "dictionary form of ふる" },
-              { "text": "そうです。", "role": "predicate", "gloss": "I heard that (from the forecast)" }
+              {
+                "text": "明日は",
+                "role": "topic",
+                "gloss": "tomorrow (は)"
+              },
+              {
+                "text": "雨が",
+                "role": "subject",
+                "gloss": "rain (が)"
+              },
+              {
+                "text": "ふる",
+                "role": "predicate",
+                "gloss": "dictionary form of ふる"
+              },
+              {
+                "text": "そうです。",
+                "role": "predicate",
+                "gloss": "I heard that (from the forecast)"
+              }
             ],
             "en": "I heard it will rain tomorrow. (I saw the forecast.)"
           }
@@ -242,20 +396,52 @@
       "examples": [
         {
           "parts": [
-            { "text": "この映画は", "role": "topic", "gloss": "this movie (は)" },
-            { "text": "おもしろく", "role": "predicate", "gloss": "adverbial form of おもしろい" },
-            { "text": "なさ", "role": "predicate", "gloss": "なさ (negative appearance stem)" },
-            { "text": "そうです。", "role": "predicate", "gloss": "appearance negative そうです — 'doesn't look ~'" }
+            {
+              "text": "この映画は",
+              "role": "topic",
+              "gloss": "this movie (は)"
+            },
+            {
+              "text": "おもしろく",
+              "role": "predicate",
+              "gloss": "adverbial form of おもしろい"
+            },
+            {
+              "text": "なさ",
+              "role": "predicate",
+              "gloss": "なさ (negative appearance stem)"
+            },
+            {
+              "text": "そうです。",
+              "role": "predicate",
+              "gloss": "appearance negative そうです — 'doesn't look ~'"
+            }
           ],
           "en": "This movie doesn't look interesting. (speaker watching the trailer)",
           "breakdown": "Appearance negative: おもしろい → drop い → おもしろく + なさそうです. The speaker is observing directly."
         },
         {
           "parts": [
-            { "text": "あのレストランは", "role": "topic", "gloss": "that restaurant (は)" },
-            { "text": "おいしく", "role": "predicate", "gloss": "adverbial form" },
-            { "text": "ない", "role": "predicate", "gloss": "plain negative — negation INSIDE the clause" },
-            { "text": "そうです。", "role": "predicate", "gloss": "hearsay そうです — 'I heard that ~'" }
+            {
+              "text": "あのレストランは",
+              "role": "topic",
+              "gloss": "that restaurant (は)"
+            },
+            {
+              "text": "おいしく",
+              "role": "predicate",
+              "gloss": "adverbial form"
+            },
+            {
+              "text": "ない",
+              "role": "predicate",
+              "gloss": "plain negative — negation INSIDE the clause"
+            },
+            {
+              "text": "そうです。",
+              "role": "predicate",
+              "gloss": "hearsay そうです — 'I heard that ~'"
+            }
           ],
           "en": "I heard that restaurant is not delicious. (a friend told me)",
           "breakdown": "Hearsay negative: the negation (おいしくない) is inside the reported clause. Plain negative + そうです = hearsay."
@@ -269,12 +455,36 @@
         {
           "context": "Appearance そうだ — speaker looking at the sky",
           "parts": [
-            { "text": "空が", "role": "subject", "gloss": "sky (が)" },
-            { "text": "暗く", "role": "predicate", "gloss": "dark — adverbial form of 暗い" },
-            { "text": "なって、", "role": "connector", "gloss": "became... and (て-form of なる)" },
-            { "text": "雨が", "role": "subject", "gloss": "rain (が)" },
-            { "text": "ふり", "role": "predicate", "gloss": "ます-stem of ふる" },
-            { "text": "そうです。", "role": "predicate", "gloss": "looks like ~ (appearance)" }
+            {
+              "text": "空が",
+              "role": "subject",
+              "gloss": "sky (が)"
+            },
+            {
+              "text": "暗く",
+              "role": "predicate",
+              "gloss": "dark — adverbial form of 暗い"
+            },
+            {
+              "text": "なって、",
+              "role": "connector",
+              "gloss": "became... and (て-form of なる)"
+            },
+            {
+              "text": "雨が",
+              "role": "subject",
+              "gloss": "rain (が)"
+            },
+            {
+              "text": "ふり",
+              "role": "predicate",
+              "gloss": "ます-stem of ふる"
+            },
+            {
+              "text": "そうです。",
+              "role": "predicate",
+              "gloss": "looks like ~ (appearance)"
+            }
           ],
           "en": "The sky has gotten dark, and it looks like it will rain.",
           "note": "Appearance そうだ — ふり is the ます-stem. The speaker is directly observing the weather change."
@@ -282,10 +492,26 @@
         {
           "context": "Hearsay そうだ — information from news or forecast",
           "parts": [
-            { "text": "明日も", "role": "topic", "gloss": "tomorrow too (も)" },
-            { "text": "雨が", "role": "subject", "gloss": "rain (が)" },
-            { "text": "ふる", "role": "predicate", "gloss": "dictionary form of ふる" },
-            { "text": "そうです。", "role": "predicate", "gloss": "I heard that ~ (hearsay)" }
+            {
+              "text": "明日も",
+              "role": "topic",
+              "gloss": "tomorrow too (も)"
+            },
+            {
+              "text": "雨が",
+              "role": "subject",
+              "gloss": "rain (が)"
+            },
+            {
+              "text": "ふる",
+              "role": "predicate",
+              "gloss": "dictionary form of ふる"
+            },
+            {
+              "text": "そうです。",
+              "role": "predicate",
+              "gloss": "I heard that ~ (hearsay)"
+            }
           ],
           "en": "Apparently it will rain tomorrow too.",
           "note": "Hearsay そうだ — ふる is the plain/dictionary form. The speaker learned this from a source (forecast, news, friend)."
@@ -293,9 +519,21 @@
         {
           "context": "Appearance そうだ — speaker looking at a bowl of ramen",
           "parts": [
-            { "text": "このラーメンは", "role": "topic", "gloss": "this ramen (は)" },
-            { "text": "おいし", "role": "predicate", "gloss": "stem of おいしい (drop い)" },
-            { "text": "そうですね。", "role": "predicate", "gloss": "looks ~ doesn't it (appearance + ね)" }
+            {
+              "text": "このラーメンは",
+              "role": "topic",
+              "gloss": "this ramen (は)"
+            },
+            {
+              "text": "おいし",
+              "role": "predicate",
+              "gloss": "stem of おいしい (drop い)"
+            },
+            {
+              "text": "そうですね。",
+              "role": "predicate",
+              "gloss": "looks ~ doesn't it (appearance + ね)"
+            }
           ],
           "en": "This ramen looks delicious, doesn't it.",
           "note": "Appearance そうだ — おいし is the stem (drop い). The speaker is looking at the bowl right now."
@@ -303,11 +541,31 @@
         {
           "context": "Hearsay そうだ — someone reports about a colleague",
           "parts": [
-            { "text": "すずきさんは", "role": "topic", "gloss": "Suzuki-san (は)" },
-            { "text": "新しい", "role": "modifier", "gloss": "new (attributive — modifies 仕事)" },
-            { "text": "仕事が", "role": "subject", "gloss": "job (が)" },
-            { "text": "好きだ", "role": "predicate", "gloss": "plain copula form of 好き (な-adj + だ)" },
-            { "text": "そうです。", "role": "predicate", "gloss": "I heard that ~ (hearsay)" }
+            {
+              "text": "すずきさんは",
+              "role": "topic",
+              "gloss": "Suzuki-san (は)"
+            },
+            {
+              "text": "新しい",
+              "role": "modifier",
+              "gloss": "new (attributive — modifies 仕事)"
+            },
+            {
+              "text": "仕事が",
+              "role": "subject",
+              "gloss": "job (が)"
+            },
+            {
+              "text": "好きだ",
+              "role": "predicate",
+              "gloss": "plain copula form of 好き (な-adj + だ)"
+            },
+            {
+              "text": "そうです。",
+              "role": "predicate",
+              "gloss": "I heard that ~ (hearsay)"
+            }
           ],
           "en": "I heard that Suzuki-san likes her new job.",
           "note": "Hearsay そうだ — 好きだ is the な-adjective + plain copula だ. The speaker was told this, not observed it."
@@ -327,11 +585,20 @@
             "char_ken",
             "v_sora",
             "p_ga",
-            { "id": "v_kurai", "form": "adverbial" },
-            { "id": "v_naru", "form": "te_form" },
+            {
+              "id": "v_kurai",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "te_form"
+            },
             "v_ame",
             "p_ni",
-            { "id": "v_naru", "form": "appearance_sou" },
+            {
+              "id": "v_naru",
+              "form": "appearance_sou"
+            },
             "p_ne"
           ]
         },
@@ -346,7 +613,10 @@
             "p_ne",
             "v_tomodachi",
             "p_ni",
-            { "id": "v_kiku", "form": "plain_past" },
+            {
+              "id": "v_kiku",
+              "form": "plain_past"
+            },
             "p_ndesu",
             "p_ga_but",
             "v_ashita",
@@ -367,7 +637,10 @@
             "p_no",
             "v_keeki",
             "p_wa",
-            { "id": "v_oishii", "form": "appearance_sou" },
+            {
+              "id": "v_oishii",
+              "form": "appearance_sou"
+            },
             "p_ne"
           ]
         },
@@ -385,7 +658,10 @@
             "p_ga",
             "v_asoko",
             "p_wa",
-            { "id": "v_oishii", "form": "plain_form" },
+            {
+              "id": "v_oishii",
+              "form": "plain_form"
+            },
             "p_sou_da_hearsay",
             "p_yo"
           ]
@@ -402,8 +678,14 @@
             "v_hito",
             "p_ga",
             "v_takusan",
-            { "id": "v_hairu", "form": "te_form" },
-            { "id": "v_iru", "form": "polite_masu" },
+            {
+              "id": "v_hairu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
             "p_ne"
           ]
         },
@@ -419,7 +701,10 @@
             "v_ano",
             "v_keeki",
             "p_wo",
-            { "id": "v_taberu", "form": "plain_desire_tai" },
+            {
+              "id": "v_taberu",
+              "form": "plain_desire_tai"
+            },
             "g_desu"
           ]
         },
@@ -435,7 +720,10 @@
             "v_ato",
             "p_de",
             "v_mata",
-            { "id": "v_kuru", "form": "polite_negative" },
+            {
+              "id": "v_kuru",
+              "form": "polite_negative"
+            },
             "p_ka"
           ]
         },
@@ -451,10 +739,16 @@
             "v_ano",
             "v_keeki",
             "p_wo",
-            { "id": "v_taberu", "form": "plain_desire_tai" },
+            {
+              "id": "v_taberu",
+              "form": "plain_desire_tai"
+            },
             "p_ndesu",
             "v_totemo",
-            { "id": "v_oishii", "form": "plain_form" },
+            {
+              "id": "v_oishii",
+              "form": "plain_form"
+            },
             "p_sou_da_hearsay",
             "p_kara_because"
           ]
