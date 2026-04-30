@@ -6025,7 +6025,7 @@
     },
     {
       "id": "v_mousu",
-      "surface": "もうす",
+      "surface": "申す",
       "reading": "もうす",
       "meaning": "(humble) to say / to be called",
       "type": "vocab",
@@ -6033,9 +6033,9 @@
       "verb_class": "godan_su",
       "lesson_ids": "N3.34",
       "matches": [
-        "申す"
+        "もうす"
       ],
-      "notes": "Humble form of 言う. 申 is not on the N3 curriculum — write as kana もうす. matches[\"申す\"] retained for content that uses kanji form. 〇〇と申します = my name is 〇〇. G40 keigo."
+      "notes": "Humble form of 言う. 申 unlocks at N3.58 — surface flipped to 申す, kana もうす retained in matches[] for backward compat with content written before N3.58. 〇〇と申します = my name is 〇〇. G40 keigo."
     },
     {
       "id": "v_haikensuru",
@@ -12988,6 +12988,172 @@
       "gtype": "noun",
       "lesson_ids": "N3.57",
       "notes": "無 (N3.57) + 罪 (N3.55). Deferred from N3.55."
+    },
+    {
+      "id": "k_ryuu",
+      "lesson": "N3.58",
+      "type": "kanji",
+      "surface": "留",
+      "on": "リュウ、ル",
+      "kun": "と.める、と.まる、とど.める",
+      "reading": "りゅう",
+      "meaning": "stop / stay / detain / fasten",
+      "notes": "Compounds: 留学(study abroad), 留守(away from home), 書留(registered mail). Note: と.まる/と.める is the same kun as 止まる but written differently when meaning 'fasten/secure'."
+    },
+    {
+      "id": "k_shin",
+      "lesson": "N3.58",
+      "type": "kanji",
+      "surface": "申",
+      "on": "シン",
+      "kun": "もう.す",
+      "reading": "しん",
+      "meaning": "say (humble) / state / apply",
+      "notes": "Compounds: 申す(humble say), 申し込む(apply), 申告(declaration). G40 keigo kanji."
+    },
+    {
+      "id": "k_ban",
+      "lesson": "N3.58",
+      "type": "kanji",
+      "surface": "番",
+      "on": "バン",
+      "kun": "",
+      "reading": "ばん",
+      "meaning": "number / turn / watch / guard",
+      "notes": "Primarily compound-use. Compounds: 番号(number), 一番(most/#1), 留守番(answering machine), 番地(lot number)."
+    },
+    {
+      "id": "k_gou",
+      "lesson": "N3.58",
+      "type": "kanji",
+      "surface": "号",
+      "on": "ゴウ",
+      "kun": "",
+      "reading": "ごう",
+      "meaning": "number / sign / issue / call",
+      "notes": "Primarily compound-use. Compounds: 番号(number), 信号(signal), 記号(symbol)."
+    },
+    {
+      "id": "v_ryuugaku",
+      "surface": "留学",
+      "reading": "りゅうがく",
+      "meaning": "study abroad",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.58",
+      "notes": "留 (N3.58) + 学 (N5)."
+    },
+    {
+      "id": "v_ryuugakusei",
+      "surface": "留学生",
+      "reading": "りゅうがくせい",
+      "meaning": "exchange student / international student",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.58",
+      "notes": "留 (N3.58) + 学 (N5) + 生 (N5)."
+    },
+    {
+      "id": "v_rusu",
+      "surface": "留守",
+      "reading": "るす",
+      "meaning": "being away from home / absence",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.58",
+      "notes": "留 (N3.58) + 守 (N3.11). Deferred from N3.11 per user — naturally lands here once 留 is taught."
+    },
+    {
+      "id": "v_rusuban",
+      "surface": "留守番",
+      "reading": "るすばん",
+      "meaning": "watching the house while away / answering machine",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.58",
+      "notes": "留 (N3.58) + 守 (N3.11) + 番 (N3.58). 留守番電話 = answering machine."
+    },
+    {
+      "id": "v_moushideru",
+      "surface": "申し出る",
+      "reading": "もうしでる",
+      "meaning": "to offer / to propose / to volunteer",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.58",
+      "notes": "申 (N3.58) + 出 (N5). Formal/written register."
+    },
+    {
+      "id": "v_moushiageru",
+      "surface": "申し上げる",
+      "reading": "もうしあげる",
+      "meaning": "(humble) to say / to tell",
+      "type": "vocab",
+      "gtype": "ichidan",
+      "verb_class": "ichidan",
+      "lesson_ids": "N3.58",
+      "notes": "申 (N3.58) + 上 (N5). G40 keigo: more humble than 申す. お礼を申し上げます = I express my thanks."
+    },
+    {
+      "id": "v_shinkoku",
+      "surface": "申告",
+      "reading": "しんこく",
+      "meaning": "declaration / report (esp. tax)",
+      "type": "vocab",
+      "gtype": "noun_suru",
+      "lesson_ids": "N3.58",
+      "notes": "申 (N3.58) + 告 (N3.52). Deferred from N3.52. 確定申告 = final tax declaration."
+    },
+    {
+      "id": "v_bangou",
+      "surface": "番号",
+      "reading": "ばんごう",
+      "meaning": "number (assigned identifier)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.58",
+      "notes": "番 (N3.58) + 号 (N3.58). Within-lesson compound."
+    },
+    {
+      "id": "v_denwabangou",
+      "surface": "電話番号",
+      "reading": "でんわばんごう",
+      "meaning": "phone number",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.58",
+      "notes": "電 (N5) + 話 (N5) + 番 (N3.58) + 号 (N3.58)."
+    },
+    {
+      "id": "v_banchi",
+      "surface": "番地",
+      "reading": "ばんち",
+      "meaning": "house number / lot number (in an address)",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.58",
+      "notes": "番 (N3.58) + 地 (N4)."
+    },
+    {
+      "id": "v_kigou",
+      "surface": "記号",
+      "reading": "きごう",
+      "meaning": "symbol / sign / mark",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.58",
+      "notes": "記 (N3.51) + 号 (N3.58). Deferred from N3.51."
+    },
+    {
+      "id": "v_shingou",
+      "surface": "信号",
+      "reading": "しんごう",
+      "meaning": "traffic signal / signal",
+      "type": "vocab",
+      "gtype": "noun",
+      "lesson_ids": "N3.58",
+      "notes": "信 (N3.43) + 号 (N3.58). 信号機 = traffic light."
     }
   ]
 }

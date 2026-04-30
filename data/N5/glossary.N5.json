@@ -773,19 +773,22 @@
     },
     {
       "id": "v_ichiban",
-      "surface": "いちばん",
+      "surface": "一番",
       "reading": "いちばん",
       "meaning": "most / best / number one",
       "type": "vocab",
       "gtype": "adverb",
       "lesson_ids": "N5.1",
-      "notes": "",
+      "notes": "番 unlocks at N3.58 — surface flipped to 一番, kana いちばん retained in matches[] for backward compat with content written before N3.58.",
       "example": {
         "jp": "いちばん やさしい 先生は すずき先生です。",
         "en": "My kindest teacher is Suzuki-sensei.",
         "lessonId": "N5.1",
         "sectionType": "reading"
-      }
+      },
+      "matches": [
+        "いちばん"
+      ]
     },
     {
       "id": "v_ii",
