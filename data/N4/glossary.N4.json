@@ -5082,7 +5082,30 @@
       "notes": "U-verb. Intransitive.",
       "lesson_ids": "N4.17",
       "reading": "まわる",
-      "readingAlign": "回(まわ)る"
+      "readingAlign": "回(まわ)る",
+      "example": {
+        "jp": "バスは 町の 中を 回って 駅に 帰ります。",
+        "en": "The bus goes around the town and returns to the station.",
+        "manual": true,
+        "terms": [
+          "v_basu",
+          "p_wa",
+          "v_machi",
+          "p_no",
+          "v_naka",
+          "p_wo",
+          {
+            "id": "v_mawaru",
+            "form": "te_form"
+          },
+          "v_eki",
+          "p_ni",
+          {
+            "id": "v_kaeru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_miyako",
@@ -5194,7 +5217,27 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N4.17",
-      "readingAlign": "水(すい)田(でん)"
+      "readingAlign": "水(すい)田(でん)",
+      "example": {
+        "jp": "父は 毎日 水田で 働いて います。",
+        "en": "My father works in the rice paddy every day.",
+        "manual": true,
+        "terms": [
+          "v_chichi",
+          "p_wa",
+          "v_mainichi",
+          "v_suiden",
+          "p_de",
+          {
+            "id": "v_hataraku",
+            "form": "te_form"
+          },
+          {
+            "id": "v_iru",
+            "form": "polite_masu"
+          }
+        ]
+      }
     },
     {
       "id": "v_ta",
@@ -5311,7 +5354,21 @@
       "notes": "Common surname (Lit. 'Mountain rice field').",
       "lesson_ids": "N4.17",
       "reading": "やまだ",
-      "readingAlign": "山(やま)田(だ)"
+      "readingAlign": "山(やま)田(だ)",
+      "example": {
+        "jp": "山田さんは 私の 友だちです。",
+        "en": "Yamada-san is my friend.",
+        "manual": true,
+        "terms": [
+          "v_yamada",
+          "v_san",
+          "p_wa",
+          "v_watashi",
+          "p_no",
+          "v_tomodachi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "v_yoku",
@@ -5628,7 +5685,23 @@
       "gtype": "noun",
       "lesson_ids": "N4.18",
       "notes": "",
-      "readingAlign": "有(ゆう)力(りょく)者(しゃ)"
+      "readingAlign": "有(ゆう)力(りょく)者(しゃ)",
+      "example": {
+        "jp": "この 町の 有力者に 会いました。",
+        "en": "I met an influential person from this town.",
+        "manual": true,
+        "terms": [
+          "v_kono",
+          "v_machi",
+          "p_no",
+          "v_yuuryokusha",
+          "p_ni",
+          {
+            "id": "v_au",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "k_chi_2",
@@ -6463,7 +6536,24 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N4.21",
-      "notes": "Loanword from English 'flea market'. A market where people sell used or secondhand goods."
+      "notes": "Loanword from English 'flea market'. A market where people sell used or secondhand goods.",
+      "example": {
+        "jp": "日曜日に 友だちと フリーマーケットに 行きました。",
+        "en": "On Sunday I went to a flea market with a friend.",
+        "manual": true,
+        "terms": [
+          "v_nichiyoubi",
+          "p_ni",
+          "v_tomodachi",
+          "p_to",
+          "v_furi_maaketto",
+          "p_ni",
+          {
+            "id": "v_iku",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_okyakusan",
@@ -6473,7 +6563,22 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N4.21",
-      "notes": "Polite form of 客 (きゃく). The お- prefix and さん suffix make it polite/honorific. Common in service contexts."
+      "notes": "Polite form of 客 (きゃく). The お- prefix and さん suffix make it polite/honorific. Common in service contexts.",
+      "example": {
+        "jp": "おきゃくさんが お店に 来ました。",
+        "en": "A customer came to the store.",
+        "manual": true,
+        "terms": [
+          "v_okyakusan",
+          "p_ga",
+          "v_omise",
+          "p_ni",
+          {
+            "id": "v_kuru",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "v_hoka",
@@ -6713,7 +6818,25 @@
       "type": "vocab",
       "gtype": "noun",
       "lesson_ids": "N4.22",
-      "notes": "Used as an example foreign surname (written in katakana). Illustrates how foreign names appear in katakana/romaji in Japanese writing contexts."
+      "notes": "Used as an example foreign surname (written in katakana). Illustrates how foreign names appear in katakana/romaji in Japanese writing contexts.",
+      "example": {
+        "jp": "スミスさんは アメリカから 来た 友だちです。",
+        "en": "Smith-san is a friend who came from America.",
+        "manual": true,
+        "terms": [
+          "v_sumisu",
+          "v_san",
+          "p_wa",
+          "v_america",
+          "p_kara",
+          {
+            "id": "v_kuru",
+            "form": "plain_past"
+          },
+          "v_tomodachi",
+          "g_desu"
+        ]
+      }
     },
     {
       "id": "k_futo",
@@ -7426,7 +7549,23 @@
       "notes": "",
       "lesson_ids": "N4.25",
       "reading": "きゅうめい",
-      "readingAlign": "究(きゅう)明(めい)"
+      "readingAlign": "究(きゅう)明(めい)",
+      "example": {
+        "jp": "その 問題の 究明は 大切です。",
+        "en": "Investigation of that problem is important.",
+        "manual": true,
+        "terms": [
+          "v_sono",
+          "v_mondai",
+          "p_no",
+          "v_kyuumei",
+          "p_wa",
+          {
+            "id": "v_taisetsu",
+            "form": "polite_adj"
+          }
+        ]
+      }
     },
     {
       "id": "v_sakubun",
@@ -7455,7 +7594,23 @@
       "lesson_ids": "N4.25",
       "reading": "そそぐ",
       "verb_class": "godan",
-      "readingAlign": "注(そそ)ぐ"
+      "readingAlign": "注(そそ)ぐ",
+      "example": {
+        "jp": "母は ジュースを ゆっくり 注ぎました。",
+        "en": "My mother slowly poured the juice.",
+        "manual": true,
+        "terms": [
+          "v_haha",
+          "p_wa",
+          "v_juusu",
+          "p_wo",
+          "v_yukkuri",
+          {
+            "id": "v_sosogu",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     },
     {
       "id": "k_aku",
@@ -7648,7 +7803,24 @@
       "gtype": "noun",
       "lesson_ids": "N4.26",
       "notes": "",
-      "readingAlign": "正(しょう)体(たい)"
+      "readingAlign": "正(しょう)体(たい)",
+      "example": {
+        "jp": "その 男の 正体は まだ 分かりません。",
+        "en": "The true identity of that man is still unknown.",
+        "manual": true,
+        "terms": [
+          "v_sono",
+          "v_otoko",
+          "p_no",
+          "v_shoutai",
+          "p_wa",
+          "v_mada",
+          {
+            "id": "v_wakaru",
+            "form": "polite_negative"
+          }
+        ]
+      }
     },
     {
       "id": "v_tadashii",
@@ -7789,7 +7961,24 @@
       "gtype": "noun",
       "lesson_ids": "N4.27",
       "notes": "Often used as 合理的 (rational).",
-      "readingAlign": "合(ごう)理(り)"
+      "readingAlign": "合(ごう)理(り)",
+      "example": {
+        "jp": "その 説明には 合理が ありません。",
+        "en": "That explanation has no rationality.",
+        "manual": true,
+        "terms": [
+          "v_sono",
+          "v_setsumei",
+          "p_ni",
+          "p_wa",
+          "v_gouri",
+          "p_ga",
+          {
+            "id": "v_aru",
+            "form": "polite_negative"
+          }
+        ]
+      }
     },
     {
       "id": "v_ichido",
@@ -11091,7 +11280,28 @@
       "matches": [
         "おどろく"
       ],
-      "notes": "Godan verb. Kanji 驚く not taught until N1, so written in hiragana."
+      "notes": "Godan verb. Kanji 驚く not taught until N1, so written in hiragana.",
+      "example": {
+        "jp": "その 写真を 見て、私は とても おどろきました。",
+        "en": "When I saw that photo, I was very surprised.",
+        "manual": true,
+        "terms": [
+          "v_sono",
+          "v_shashin",
+          "p_wo",
+          {
+            "id": "v_miru",
+            "form": "te_form"
+          },
+          "v_watashi",
+          "p_wa",
+          "v_totemo",
+          {
+            "id": "v_odoroku",
+            "form": "polite_mashita"
+          }
+        ]
+      }
     }
   ]
 }
