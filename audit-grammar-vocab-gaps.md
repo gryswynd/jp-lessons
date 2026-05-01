@@ -4,7 +4,7 @@ Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **22** les
 
 ## Target-vocab gaps
 - Missing from unlocking N's vocabList (declaration): **0**
-- Missing reinforcement in next 2 N lessons: **83**
+- Missing reinforcement in next 2 N lessons: **63**
 - Missing reinforcement in window stories: **90**
 - Misplaced (target term declared in an earlier N lesson): **0**
 
@@ -33,27 +33,6 @@ _unlocksAfter:_ `N5.1` → gating N lesson: `N5.1`
 _targetVocab:_ `v_kore`, `v_sore`, `v_are`, `v_dore`, `v_kono`, `v_sono`, `v_ano`, `v_dono`, `v_koko`, `v_soko`, `v_asoko`, `v_doko`, `v_kochira`, `v_sochira`, `v_achira`, `v_dochira`, `v_kou`, `v_sou`, `v_aa`, `v_dou`, `v_konna`, `v_sonna`, `v_anna`, `v_donna`
 _reinforcement window:_ `N5.2`, `N5.3` + stories: `my-family`, `tanjoubi-no-keeki`
 _file:_ `data/N5/grammar/G2.json`
-
-**Missing reinforcement in next 2 N lessons (19):**
-- `v_kono` — not referenced in `N5.3`
-- `v_sono` — not referenced in `N5.3`
-- `v_ano` — not referenced in `N5.3`
-- `v_dono` — not referenced in `N5.3`
-- `v_koko` — not referenced in `N5.3`
-- `v_soko` — not referenced in `N5.3`
-- `v_asoko` — not referenced in `N5.3`
-- `v_doko` — not referenced in `N5.3`
-- `v_kochira` — not referenced in `N5.3`
-- `v_sochira` — not referenced in `N5.3`
-- `v_achira` — not referenced in `N5.3`
-- `v_dochira` — not referenced in `N5.3`
-- `v_kou` — not referenced in `N5.3`
-- `v_sou` — not referenced in `N5.3`
-- `v_aa` — not referenced in `N5.3`
-- `v_konna` — not referenced in `N5.3`
-- `v_sonna` — not referenced in `N5.3`
-- `v_anna` — not referenced in `N5.3`
-- `v_donna` — not referenced in `N5.3`
 
 **Missing reinforcement in window stories (24):**
 - `v_kore` — not referenced in story `my-family`, `tanjoubi-no-keeki`
@@ -88,9 +67,6 @@ _targetVocab:_ `p_wa`, `p_ga`, `p_no`, `p_ka`, `p_wo`
 _reinforcement window:_ `N5.2`, `N5.3` + stories: `my-family`, `tanjoubi-no-keeki`
 _file:_ `data/N5/grammar/G3.json`
 
-**Missing reinforcement in next 2 N lessons (1):**
-- `p_wo` — not referenced in `N5.3`
-
 **Missing reinforcement in window stories (3):**
 - `p_ga` — not referenced in story `my-family`
 - `p_ka` — not referenced in story `my-family`, `tanjoubi-no-keeki`
@@ -104,10 +80,10 @@ _reinforcement window:_ `N5.3`, `N5.4` + stories: `tanjoubi-no-keeki`
 _file:_ `data/N5/grammar/G4.json`
 
 **Missing reinforcement in next 2 N lessons (4):**
-- `p_ya` — not referenced in `N5.3`, `N5.4`
-- `p_kara` — not referenced in `N5.3`, `N5.4`
-- `p_made` — not referenced in `N5.3`, `N5.4`
-- `p_made_ni` — not referenced in `N5.3`, `N5.4`
+- `p_ya` — not referenced in `N5.4`
+- `p_kara` — not referenced in `N5.4`
+- `p_made` — not referenced in `N5.4`
+- `p_made_ni` — not referenced in `N5.4`
 
 **Missing reinforcement in window stories (7):**
 - `p_mo` — not referenced in story `tanjoubi-no-keeki`

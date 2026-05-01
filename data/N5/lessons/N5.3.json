@@ -600,6 +600,36 @@
             "g_desu",
             "p_ne"
           ]
+        },
+        {
+          "spk": "A",
+          "jp": "この 人と その 人と あの 人は 友だちですか。",
+          "en": "Are this person, that person, and that person over there friends?",
+          "terms": [
+            "v_kono",
+            "v_hito",
+            "p_to",
+            "v_sono",
+            "v_ano",
+            "p_wa",
+            "v_tomodachi",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "そうです。どの 人も いい 友だちです。",
+          "en": "That's right. Every one of them is a good friend.",
+          "terms": [
+            "p_soudesu",
+            "v_dono",
+            "v_hito",
+            "p_mo",
+            "v_ii",
+            "v_tomodachi",
+            "g_desu"
+          ]
         }
       ]
     },
@@ -748,6 +778,73 @@
               "form": "polite_masu"
             }
           ]
+        },
+        {
+          "spk": "A",
+          "jp": "毎月 一日から 五日まで お金が ありますか。",
+          "en": "Do you have money from the 1st to the 5th every month?",
+          "terms": [
+            "v_maigetsu",
+            "v_ichinichitsuitachi",
+            "p_kara",
+            "v_itsuka",
+            "p_made",
+            "v_okane",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい。千円や 百円が あります。",
+          "en": "Yes. I have things like 1000-yen and 100-yen.",
+          "terms": [
+            "p_hai",
+            "v_sen",
+            "v_en",
+            "p_ya",
+            "v_hyaku",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "五日までに 何を しますか。",
+          "en": "What will you do by the 5th?",
+          "terms": [
+            "v_itsuka",
+            "p_made_ni",
+            "v_nani",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "そうですね。何も しません。",
+          "en": "Hmm, well... I won't do anything.",
+          "terms": [
+            "p_soudesu",
+            "p_ne",
+            "v_nani",
+            "p_mo",
+            {
+              "id": "v_suru",
+              "form": "polite_negative"
+            }
+          ]
         }
       ]
     },
@@ -857,6 +954,71 @@
             "g_desu",
             "p_ne"
           ]
+        },
+        {
+          "spk": "A",
+          "jp": "やまかわさん、お金は どこに ありますか。",
+          "en": "Yamakawa-san, where is the money?",
+          "terms": [
+            "char_yamakawa",
+            "v_san",
+            "v_okane",
+            "p_wa",
+            "v_doko",
+            "p_ni",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "ここに 千円 あります。",
+          "en": "There is 1000 yen here.",
+          "terms": [
+            "v_koko",
+            "p_ni",
+            "v_sen",
+            "v_en",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "そこにも ありますか。",
+          "en": "Is there some there too?",
+          "terms": [
+            "v_soko",
+            "p_ni",
+            "p_mo",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "あそこにも 百円が あります。",
+          "en": "There is 100 yen over there too.",
+          "terms": [
+            "v_asoko",
+            "p_ni",
+            "p_mo",
+            "v_hyaku",
+            "v_en",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
+          ]
         }
       ]
     },
@@ -949,6 +1111,73 @@
             "v_totemo",
             "v_ureshii",
             "g_desu"
+          ]
+        },
+        {
+          "jp": "こちらは やまかわの お父さんです。そちらは お母さんです。あちらは 友だちです。",
+          "en": "This (here) is Yamakawa's father. That is his mother. Over there is his friend.",
+          "terms": [
+            "v_kochira",
+            "p_wa",
+            "char_yamakawa",
+            "p_no",
+            "v_otousan",
+            "g_desu",
+            "v_sochira",
+            "v_okaasan",
+            "v_achira",
+            "v_tomodachi"
+          ]
+        },
+        {
+          "jp": "どちらが やまかわの 先生ですか。",
+          "en": "Which one is Yamakawa's teacher?",
+          "terms": [
+            "v_dochira",
+            "p_ga",
+            "char_yamakawa",
+            "p_no",
+            "v_sensei",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "jp": "お父さんは こう します。お母さんは そう します。先生は ああ します。",
+          "en": "His father does it like this. His mother does it like that. The teacher does it like that (over there).",
+          "terms": [
+            "v_otousan",
+            "p_wa",
+            "v_kou",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
+            "v_okaasan",
+            "v_sou",
+            "v_sensei",
+            "v_aa"
+          ]
+        },
+        {
+          "jp": "こんな 人と そんな 人と あんな 人は 友だちです。どんな 人が いいですか。",
+          "en": "This kind of person, that kind of person, and that kind of person over there are all friends. What kind of person is good?",
+          "terms": [
+            "v_konna",
+            "v_hito",
+            "p_to",
+            "v_sonna",
+            "v_anna",
+            "p_wa",
+            "v_tomodachi",
+            "g_desu",
+            "v_donna",
+            "p_ga",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
+            "p_ka"
           ]
         }
       ],
