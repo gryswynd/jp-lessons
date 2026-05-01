@@ -4,7 +4,7 @@ Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **21** les
 
 ## Target-vocab gaps
 - Missing from unlocking N's vocabList (declaration): **0**
-- Missing reinforcement in next 2 N lessons: **48**
+- Missing reinforcement in next 2 N lessons: **39**
 - Missing reinforcement in window stories: **90**
 - Misplaced (target term declared in an earlier N lesson): **0**
 
@@ -131,9 +131,6 @@ _targetVocab:_ `v_dekiru`
 _reinforcement window:_ `N4.4`, `N4.5` + stories: `watashi-no-iro`
 _file:_ `data/N4/grammar/G13.json`
 
-**Missing reinforcement in next 2 N lessons (1):**
-- `v_dekiru` — not referenced in `N4.4`, `N4.5`
-
 **Missing reinforcement in window stories (1):**
 - `v_dekiru` — not referenced in story `watashi-no-iro`
 
@@ -143,12 +140,6 @@ _unlocksAfter:_ `N4.5` → gating N lesson: `N4.5`
 _targetVocab:_ `v_ageru`, `v_morau`, `v_kureru`, `v_hoshii`
 _reinforcement window:_ `N4.6`, `N4.7` + stories: `hirugohan-monogatari`
 _file:_ `data/N4/grammar/G14.json`
-
-**Missing reinforcement in next 2 N lessons (4):**
-- `v_ageru` — not referenced in `N4.7`
-- `v_morau` — not referenced in `N4.7`
-- `v_kureru` — not referenced in `N4.6`
-- `v_hoshii` — not referenced in `N4.6`, `N4.7`
 
 **Missing reinforcement in window stories (3):**
 - `v_morau` — not referenced in story `hirugohan-monogatari`
@@ -161,12 +152,6 @@ _unlocksAfter:_ `N4.5` → gating N lesson: `N4.5`
 _targetVocab:_ `p_yori`, `p_hodo`, `p_kurai`, `v_hou`, `v_ichiban`, `v_dochira`
 _reinforcement window:_ `N4.6`, `N4.7` + stories: `hirugohan-monogatari`
 _file:_ `data/N4/grammar/G15.json`
-
-**Missing reinforcement in next 2 N lessons (4):**
-- `p_hodo` — not referenced in `N4.6`
-- `p_kurai` — not referenced in `N4.6`, `N4.7`
-- `v_hou` — not referenced in `N4.6`, `N4.7`
-- `v_dochira` — not referenced in `N4.6`
 
 **Missing reinforcement in window stories (3):**
 - `p_hodo` — not referenced in story `hirugohan-monogatari`
@@ -181,8 +166,8 @@ _reinforcement window:_ `N4.7`, `N4.8` + stories: `kazoku-no-kisetsu`
 _file:_ `data/N4/grammar/G16.json`
 
 **Missing reinforcement in next 2 N lessons (2):**
-- `v_you_manner` — not referenced in `N4.7`, `N4.8`
-- `v_mitai` — not referenced in `N4.7`, `N4.8`
+- `v_you_manner` — not referenced in `N4.8`
+- `v_mitai` — not referenced in `N4.8`
 
 **Missing reinforcement in window stories (2):**
 - `v_you_manner` — not referenced in story `kazoku-no-kisetsu`
