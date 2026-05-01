@@ -610,7 +610,10 @@
             "p_no",
             "v_kitte",
             "p_ga",
-            {"id": "v_suki", "form": "attributive_na"},
+            {
+              "id": "v_suki",
+              "form": "attributive_na"
+            },
             "p_nda"
           ]
         },
@@ -662,6 +665,35 @@
               "form": "plain_past"
             },
             "p_yo"
+          ]
+        },
+        {
+          "spk": "けん",
+          "jp": "兄は 少し 思い上がって いるよ。注意した 方が いいね。",
+          "en": "My older brother is a little conceited, you know. It's better to be careful.",
+          "terms": [
+            "char_ken",
+            "v_ani",
+            "p_wa",
+            "v_sukoshi",
+            {
+              "id": "v_omoiagaru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
+            "p_yo",
+            "v_chuui",
+            {
+              "id": "v_suru",
+              "form": "plain_past"
+            },
+            "v_hou",
+            "p_ga",
+            "v_ii",
+            "p_ne"
           ]
         }
       ]
@@ -785,6 +817,30 @@
               "form": "polite_masu"
             }
           ]
+        },
+        {
+          "jp": "父は 古い 写真集を 大切に 集めて います。",
+          "en": "My father collects old photo books with great care.",
+          "terms": [
+            "v_chichi",
+            "p_wa",
+            "v_furui",
+            "v_shashin",
+            "v_shuu",
+            "p_wo",
+            {
+              "id": "v_taisetsu",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_atsumeru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
         }
       ],
       "questions": [
@@ -808,7 +864,10 @@
             "p_no",
             "v_doyoubi",
             "p_ni",
-            {"id": "v_aru", "form": "polite_mashita"}
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -831,7 +890,10 @@
             "p_ya",
             "v_kaishain",
             "p_ga",
-            {"id": "v_atsumaru", "form": "polite_mashita"}
+            {
+              "id": "v_atsumaru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {

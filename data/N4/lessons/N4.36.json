@@ -337,7 +337,10 @@
           "jp": "三十年 ほど 前からです。今は 前より 工場が 多く なりましたし、産業も 有名に なりました。",
           "en": "It's been about 30 years. Now there are more factories than before, and the industry has become famous too.",
           "terms": [
-            { "counter": "nen", "n": 30 },
+            {
+              "counter": "nen",
+              "n": 30
+            },
             "p_hodo",
             "v_mae",
             "p_kara",
@@ -598,8 +601,7 @@
           ]
         }
       ]
-    }
-  ,
+    },
     {
       "type": "conversation",
       "title": "Conversation 3: Bad Restaurant (Casual)",
@@ -884,8 +886,7 @@
           ]
         }
       ]
-    }
-  ,
+    },
     {
       "type": "reading",
       "title": "Reading Practice 1: Industrial Products",
@@ -1008,6 +1009,29 @@
             "g_da",
             {
               "id": "v_omou",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "工業が 強くなるかどうか、これから 分かります。",
+          "en": "We will find out from now on whether industry will become strong or not.",
+          "terms": [
+            "v_kougyou",
+            "p_ga",
+            {
+              "id": "v_tsuyoi",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "plain_form"
+            },
+            "p_kadouka",
+            "v_kore",
+            "p_kara",
+            {
+              "id": "v_wakaru",
               "form": "polite_masu"
             }
           ]
@@ -1273,6 +1297,21 @@
             "v_ii",
             "g_desu"
           ]
+        },
+        {
+          "jp": "日本の 産業に ついて、たくさん 学びました。",
+          "en": "I learned a lot about Japan's industries.",
+          "terms": [
+            "v_nihon",
+            "p_no",
+            "v_sangyou",
+            "p_ni_tsuite",
+            "v_takusan",
+            {
+              "id": "v_manabu",
+              "form": "polite_mashita"
+            }
+          ]
         }
       ],
       "questions": [
@@ -1367,8 +1406,7 @@
           ]
         }
       ]
-    }
-  ,
+    },
     {
       "type": "drills",
       "title": "ドリル 1: かんじの よみかた（Kanji Readings）",

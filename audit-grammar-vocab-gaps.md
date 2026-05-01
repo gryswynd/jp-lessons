@@ -4,7 +4,7 @@ Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **21** les
 
 ## Target-vocab gaps
 - Missing from unlocking N's vocabList (declaration): **0**
-- Missing reinforcement in next 2 N lessons: **7**
+- Missing reinforcement in next 2 N lessons: **2**
 - Missing reinforcement in window stories: **90**
 - Misplaced (target term declared in an earlier N lesson): **0**
 
@@ -270,11 +270,6 @@ _targetVocab:_ `p_to_conditional`, `p_nara`, `p_nakereba`, `p_hodo`, `v_ikeru`
 _reinforcement window:_ `N4.26`, `N4.27` + stories: `kenkyuu-to-sakubun`
 _file:_ `data/N4/grammar/G25.json`
 
-**Missing reinforcement in next 2 N lessons (3):**
-- `p_nara` — not referenced in `N4.26`, `N4.27`
-- `p_nakereba` — not referenced in `N4.26`, `N4.27`
-- `p_hodo` — not referenced in `N4.26`
-
 **Missing reinforcement in window stories (4):**
 - `p_to_conditional` — not referenced in story `kenkyuu-to-sakubun`
 - `p_nara` — not referenced in story `kenkyuu-to-sakubun`
@@ -287,10 +282,6 @@ _unlocksAfter:_ `N4.34` → gating N lesson: `N4.34`
 _targetVocab:_ `v_miru`, `v_oku`, `v_shimau`, `v_suru`, `p_kadouka`, `p_ni_tsuite`
 _reinforcement window:_ `N4.35`, `N4.36` + stories: `factory-owner`
 _file:_ `data/N4/grammar/G30.json`
-
-**Missing reinforcement in next 2 N lessons (2):**
-- `p_kadouka` — not referenced in `N4.35`, `N4.36`
-- `p_ni_tsuite` — not referenced in `N4.35`, `N4.36`
 
 **Missing reinforcement in window stories (4):**
 - `v_oku` — not referenced in story `factory-owner`
