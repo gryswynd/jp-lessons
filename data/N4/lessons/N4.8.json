@@ -938,6 +938,47 @@
               "form": "polite_adj"
             }
           ]
+        },
+        {
+          "jp": "秋は 春のように すずしいです。",
+          "en": "Autumn is cool like spring.",
+          "terms": [
+            "v_aki",
+            "p_wa",
+            "v_haru",
+            "p_no",
+            "v_you_manner",
+            "p_ni",
+            {
+              "id": "v_suzushii",
+              "form": "polite_adj"
+            }
+          ]
+        },
+        {
+          "jp": "今日の 空は 春 みたい です。",
+          "en": "Today's sky is like spring.",
+          "terms": [
+            "v_kyou",
+            "p_no",
+            "v_sora",
+            "p_wa",
+            "v_haru",
+            "v_mitai",
+            "g_desu"
+          ]
+        },
+        {
+          "jp": "夏は 暑い 日ばかりです。",
+          "en": "In summer there are nothing but hot days.",
+          "terms": [
+            "v_natsu",
+            "p_wa",
+            "v_atsui",
+            "v_hi",
+            "p_bakari",
+            "g_desu"
+          ]
         }
       ],
       "questions": [
@@ -1162,6 +1203,48 @@
               "id": "v_aru",
               "form": "polite_masu"
             }
+          ]
+        },
+        {
+          "jp": "私は 春だけ 好きです。",
+          "en": "I like only spring.",
+          "terms": [
+            "v_watashi",
+            "p_wa",
+            "v_haru",
+            "p_dake",
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            }
+          ]
+        },
+        {
+          "jp": "夏休みしか ありません。",
+          "en": "There is only summer vacation.",
+          "terms": [
+            "v_natsuyasumi",
+            "p_shika",
+            {
+              "id": "v_aru",
+              "form": "polite_negative"
+            }
+          ]
+        },
+        {
+          "jp": "暑い 日に お茶でも 飲みませんか。",
+          "en": "How about some tea on a hot day?",
+          "terms": [
+            "v_atsui",
+            "v_hi",
+            "p_ni",
+            "v_ocha",
+            "p_demo",
+            {
+              "id": "v_nomu",
+              "form": "polite_negative"
+            },
+            "p_ka"
           ]
         }
       ],

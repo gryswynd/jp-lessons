@@ -4,7 +4,7 @@ Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **21** les
 
 ## Target-vocab gaps
 - Missing from unlocking N's vocabList (declaration): **0**
-- Missing reinforcement in next 2 N lessons: **39**
+- Missing reinforcement in next 2 N lessons: **33**
 - Missing reinforcement in window stories: **90**
 - Misplaced (target term declared in an earlier N lesson): **0**
 
@@ -165,10 +165,6 @@ _targetVocab:_ `v_you_manner`, `v_mitai`, `p_no`, `p_ni`
 _reinforcement window:_ `N4.7`, `N4.8` + stories: `kazoku-no-kisetsu`
 _file:_ `data/N4/grammar/G16.json`
 
-**Missing reinforcement in next 2 N lessons (2):**
-- `v_you_manner` — not referenced in `N4.8`
-- `v_mitai` — not referenced in `N4.8`
-
 **Missing reinforcement in window stories (2):**
 - `v_you_manner` — not referenced in story `kazoku-no-kisetsu`
 - `v_mitai` — not referenced in story `kazoku-no-kisetsu`
@@ -179,12 +175,6 @@ _unlocksAfter:_ `N4.7` → gating N lesson: `N4.7`
 _targetVocab:_ `p_dake`, `p_shika`, `p_bakari`, `p_demo`
 _reinforcement window:_ `N4.8`, `N4.9` + stories: `kazoku-no-kisetsu`
 _file:_ `data/N4/grammar/G17.json`
-
-**Missing reinforcement in next 2 N lessons (4):**
-- `p_dake` — not referenced in `N4.8`, `N4.9`
-- `p_shika` — not referenced in `N4.8`, `N4.9`
-- `p_bakari` — not referenced in `N4.8`, `N4.9`
-- `p_demo` — not referenced in `N4.8`, `N4.9`
 
 **Missing reinforcement in window stories (4):**
 - `p_dake` — not referenced in story `kazoku-no-kisetsu`
