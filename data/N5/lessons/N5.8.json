@@ -5,7 +5,7 @@
   "meta": {
     "level": "N5",
     "lesson_number": 8,
-    "focus": "Shopping adjectives 古い / 新しい / 高い / 長い and the verb 買う used in department store and gift-buying contexts",
+    "focus": "Shopping adjectives 古い / 新しい / 高い / 長い and the verb 買う used in department store and gift-buying contexts, plus conjecture forms でしょう/だろう",
     "estimated_minutes": 50,
     "kanji": [
       "古",
@@ -243,6 +243,13 @@
           "items": [
             "v_purezento",
             "v_teeburu"
+          ]
+        },
+        {
+          "label": "Grammar (Conjecture)",
+          "items": [
+            "g_deshou",
+            "g_darou"
           ]
         }
       ]
@@ -736,6 +743,20 @@
             "v_atarashii",
             "g_desu",
             "p_yo"
+          ]
+        },
+        {
+          "jp": "テーブルに プレゼントが あります。",
+          "en": "There is a present on the table.",
+          "terms": [
+            "v_teeburu",
+            "p_ni",
+            "v_purezento",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],

@@ -3,7 +3,7 @@
   "plain_form": {
     "label": "Plain Form (Dictionary)",
     "description": "Verb in its base dictionary form. Used as plain present affirmative predicate and in nominalised constructions (のは、のが).",
-    "introducedIn": "G9",
+    "introducedIn": "N5.8",
     "rules": {
       "godan": {
         "type": "identity"
@@ -105,7 +105,7 @@
   "da_past": {
     "label": "Plain Past Copula (Datta)",
     "description": "Past tense of the plain copula だ → だった.",
-    "introducedIn": "G9",
+    "introducedIn": "N5.8",
     "rules": {
       "copula": {
         "type": "replace",
@@ -117,7 +117,7 @@
   "da_negative": {
     "label": "Plain Negative Copula (Ja nai)",
     "description": "Negative form of the plain copula だ → じゃない / ではない.",
-    "introducedIn": "G9",
+    "introducedIn": "N5.8",
     "rules": {
       "copula": {
         "type": "replace",
@@ -129,7 +129,7 @@
   "da_past_negative": {
     "label": "Plain Past Negative Copula (Ja nakatta)",
     "description": "Past negative form of the plain copula だ → じゃなかった / ではなかった.",
-    "introducedIn": "G9",
+    "introducedIn": "N5.8",
     "rules": {
       "copula": {
         "type": "replace",
@@ -281,7 +281,9 @@
       "na_adj": {
         "type": "suffix",
         "add": "じゃありませんでした",
-        "alternates": ["じゃなかったです"]
+        "alternates": [
+          "じゃなかったです"
+        ]
       },
       "irr_ii": {
         "type": "suffix",
@@ -318,7 +320,7 @@
   "plain_adj": {
     "label": "Plain Adjective (Bare Form)",
     "description": "Plain (non-polite) present affirmative for adjectives. i-adjectives: used as-is without です (e.g. 暑い, 長い) as predicate in casual speech and subordinate clauses. na-adjectives: stem without です or だ (e.g. 好き, きれい) as bare predicate — the copula だ, if present, is tagged separately as g_da.",
-    "introducedIn": "G9",
+    "introducedIn": "N5.8",
     "rules": {
       "i_adj": {
         "type": "identity"
@@ -368,7 +370,7 @@
   "plain_past_adj": {
     "label": "Plain Past Adjective",
     "description": "Plain past affirmative for adjectives. i-adjectives: い→かった. na-adjectives: +だった. Used in casual speech and subordinate clauses.",
-    "introducedIn": "G10",
+    "introducedIn": "N5.9",
     "rules": {
       "i_adj": {
         "type": "suffix",
@@ -581,7 +583,7 @@
   "casual_te_iru": {
     "label": "Casual Progressive (〜てる)",
     "description": "Contracted casual form of 〜ている. The い of いる is dropped in fast/casual speech. Expresses ongoing action or resultant state informally. Introduced as a natural variant of ている at G9.",
-    "introducedIn": "G9",
+    "introducedIn": "N5.8",
     "rules": {
       "godan": {
         "type": "godan_euphonic",
@@ -855,7 +857,7 @@
   "plain_desire_tai": {
     "label": "Desire (Tai) — Plain",
     "description": "Plain desire form (I want to...). Uses ます-stem + たい. Used in casual speech and subordinate clauses.",
-    "introducedIn": "G10",
+    "introducedIn": "N5.9",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -976,7 +978,7 @@
   "plain_appearance_sou": {
     "label": "Appearance (Sou) — Plain",
     "description": "Plain form expressing that something looks like or appears to be a certain way. Uses ～そうだ in casual speech.",
-    "introducedIn": "G10",
+    "introducedIn": "N5.9",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -1017,7 +1019,7 @@
   "plain_volitional": {
     "label": "Let's (Plain Volitional)",
     "description": "Plain volitional form expressing a casual suggestion or intention. Godan verbs shift the final u-column kana to the o-column and add う. Ichidan verbs replace る with よう.",
-    "introducedIn": "G10",
+    "introducedIn": "N5.9",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -1293,7 +1295,7 @@
   "plain_desire_tai_past": {
     "label": "Plain Past Desire (Takatta)",
     "description": "Plain past desire form (I wanted to...). Uses the ます-stem + たかった. Used in casual speech. Available from G9.",
-    "introducedIn": "G10",
+    "introducedIn": "N5.9",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -1320,7 +1322,7 @@
   "sugiru_form": {
     "label": "Excessive Degree (Sugiru)",
     "description": "Expresses 'too much' or 'excessively'. Verbs use the ます-stem + すぎる; i-adjectives drop い + すぎる; na-adjectives add すぎる directly. Taught in G15 (Comparison & Degree); reinforced in G30.",
-    "introducedIn": "G15",
+    "introducedIn": "N4.5",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -1361,7 +1363,7 @@
   "polite_sugiru_form": {
     "label": "Polite Excessive Degree (Sugimasu)",
     "description": "Polite form expressing 'too much' or 'excessively'. Verbs use the ます-stem + すぎます; i-adjectives drop い + すぎます; na-adjectives add すぎます directly.",
-    "introducedIn": "G15",
+    "introducedIn": "N4.5",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -1857,7 +1859,7 @@
   "sugiru_past": {
     "label": "Excessive Degree Past (Sugita)",
     "description": "Plain past form expressing 'too much/excessively'. すぎる is ichidan-patterned, so past = remove る + た applied to the すぎ stem.",
-    "introducedIn": "G15",
+    "introducedIn": "N4.5",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -1898,7 +1900,7 @@
   "polite_sugiru_past": {
     "label": "Polite Excessive Degree Past (Sugimashita)",
     "description": "Polite past form expressing 'too much/excessively'.",
-    "introducedIn": "G15",
+    "introducedIn": "N4.5",
     "rules": {
       "godan": {
         "type": "godan_change",

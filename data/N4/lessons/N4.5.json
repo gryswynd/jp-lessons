@@ -5,7 +5,7 @@
   "meta": {
     "phase": 4,
     "lesson": 5,
-    "focus": "Food and ingredient vocabulary (食べ物, 飲み物, 野菜, 牛肉, 料理, 買い物); 物 compounds; manner expression よう.",
+    "focus": "Food and ingredient vocabulary (食べ物, 飲み物, 野菜, 牛肉, 料理, 買い物); 物 compounds; giving verbs あげる/もらう (G14); comparison expressions より/ほど/くらい/ほう (G15)",
     "kanji": [
       "物",
       "野",
@@ -249,9 +249,25 @@
           ]
         },
         {
-          "label": "Pattern Word",
+          "label": "Giving Verbs",
           "items": [
-            "v_you_manner"
+            "v_ageru",
+            "v_morau",
+            "v_kureru"
+          ]
+        },
+        {
+          "label": "Comparison Particles",
+          "items": [
+            "p_yori",
+            "p_hodo",
+            "p_kurai"
+          ]
+        },
+        {
+          "label": "Comparison Words",
+          "items": [
+            "v_hou"
           ]
         }
       ]
@@ -907,30 +923,6 @@
           ]
         },
         {
-          "jp": "りきぞ は やまかわさんの ように 上手に 料理を 作りたいです。",
-          "en": "Rikizo wants to cook as skillfully as Yamakawa.",
-          "terms": [
-            "char_rikizo",
-            "p_wa",
-            "char_yamakawa",
-            "v_san",
-            "p_no",
-            "v_you_manner",
-            "p_ni",
-            {
-              "id": "v_jouzu",
-              "form": "adverbial"
-            },
-            "v_ryouri",
-            "p_wo",
-            {
-              "id": "v_tsukuru",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
-          ]
-        },
-        {
           "jp": "買い物も 上手に なりたいです。",
           "en": "He also wants to become good at shopping.",
           "terms": [
@@ -945,6 +937,25 @@
               "form": "plain_desire_tai"
             },
             "g_desu"
+          ]
+        },
+        {
+          "jp": "やまかわさんは 牛肉と 野菜の 料理が できます。",
+          "en": "Yamakawa can make beef and vegetable dishes.",
+          "terms": [
+            "char_yamakawa",
+            "v_san",
+            "p_wa",
+            "v_gyuuniku",
+            "p_to",
+            "v_yasai",
+            "p_no",
+            "v_ryouri",
+            "p_ga",
+            {
+              "id": "v_dekiru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],

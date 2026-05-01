@@ -55,7 +55,7 @@
       "reading": "の",
       "role": "sentence-ending question / explanation-seeking",
       "explanation": "Sentence-final particle that turns a plain-form statement into a question or seeks explanation. Common in casual speech. Attaches to verbs and adjectives in plain form. Example: 何をしているの？ (What are you doing?), 買ったの？ (Did you buy it?). Distinct from possessive の (p_no) and explanatory んです/んだ (p_ndesu/p_nda).",
-      "introducedIn": "G10"
+      "introducedIn": "N5.9"
     },
     {
       "id": "p_mo",
@@ -95,7 +95,7 @@
       "reading": "と",
       "role": "conditional / automatic result",
       "explanation": "Expresses an automatic or natural result: 'if/when A, then B always follows.' Used after plain-form verbs or adjectives. Unlike たら/ば, the と conditional implies the result is inevitable or habitual, not hypothetical. Example: ボタンを押すと、ドアが開く (push the button and the door opens).",
-      "introducedIn": "G25"
+      "introducedIn": "N4.25"
     },
     {
       "id": "p_nara",
@@ -103,7 +103,7 @@
       "reading": "なら",
       "role": "contextual conditional",
       "explanation": "Contextual conditional 'if / in that case'. Unlike ば, たら, and と, なら responds to something already established in context — something the other person said, an assumption, or a plan. Follows plain-form verbs, nouns, and adjectives. Example: 東京に行くなら、渋谷に寄ってみて (if you're going to Tokyo [as you say], try stopping by Shibuya). Cannot be used for new hypotheticals — the condition must be based on something already mentioned.",
-      "introducedIn": "G25"
+      "introducedIn": "N4.25"
     },
     {
       "id": "p_kara",
@@ -175,7 +175,7 @@
       "reading": "な",
       "role": "mild assertion / reflection",
       "explanation": "Sentence-final particle expressing mild assertion, personal reflection, or a soft seeking of agreement. Common in casual (especially male) speech — female speakers typically use ね in the same contexts. だな = 'it is, you know' / 'I guess it is'. Softer and more internal than よ.",
-      "introducedIn": "G9"
+      "introducedIn": "N5.8"
     },
     {
       "id": "p_kana",
@@ -199,8 +199,12 @@
       "reading": "では",
       "role": "conjunctive 'well then / in that case'",
       "explanation": "Sentence-initial conjunction meaning 'well then' or 'in that case'. Used to transition to a new topic or action. More formal than じゃあ. Often followed by a comma: では、行きましょう (Well then, let's go).",
-      "matches": ["では", "じゃあ", "じゃ"],
-      "introducedIn": "G6"
+      "matches": [
+        "では",
+        "じゃあ",
+        "じゃ"
+      ],
+      "introducedIn": "N5.5"
     },
     {
       "id": "p_ja",
@@ -232,7 +236,7 @@
       "reading": "が",
       "role": "but (clause connector)",
       "explanation": "Clause-linking conjunction meaning 'but' or 'however'. Attaches to the end of a clause (polite or plain form) to introduce a contrasting or softening second clause. More formal than けど. Not the same as が subject marker (p_ga) — different grammar role entirely.",
-      "introducedIn": "G10"
+      "introducedIn": "N5.9"
     },
     {
       "id": "p_kara_because",
@@ -240,7 +244,7 @@
       "reading": "から",
       "role": "because / since",
       "explanation": "Causal conjunction meaning 'because' or 'since'. The reason clause comes first: 暑いから、水を飲みます (Because it's hot, I'll drink water). Uses plain form + から in casual speech; polite form + から in polite speech. Not the same as から meaning 'from' (p_kara, G3) or sequential から (p_tekara, G19) — different grammar roles.",
-      "introducedIn": "G10"
+      "introducedIn": "N5.9"
     },
     {
       "id": "p_tekara",
@@ -248,25 +252,31 @@
       "reading": "から",
       "role": "sequential marker (after doing)",
       "explanation": "Sequential marker attached after the て-form of a verb: [verb-て] + から = 'after doing [verb]'. The first action must be fully complete before the second begins. Example: 食べてから、出かけます = After eating, I'll go out. Do NOT confuse with p_kara ('from') or p_kara_because ('because').",
-      "introducedIn": "G19"
+      "introducedIn": "N4.10"
     },
     {
       "id": "p_ndesu",
       "particle": "んです",
       "reading": "んです",
-      "matches": ["のです", "なんです", "なのです"],
+      "matches": [
+        "のです",
+        "なんです",
+        "なのです"
+      ],
       "role": "explanatory / emphasis (you see / it's that...)",
       "explanation": "Explanatory form contracting のです. Attaches to plain forms to provide explanation, background context, or emphasis. Polite: んです / のです. Example: 雨なんです = It's raining, you see. Formally taught in G10 alongside plain forms.",
-      "introducedIn": "G10"
+      "introducedIn": "N5.9"
     },
     {
       "id": "p_nda",
       "particle": "んだ",
       "reading": "んだ",
-      "matches": ["なんだ"],
+      "matches": [
+        "なんだ"
+      ],
       "role": "explanatory / emphasis — casual (you see / it's that...)",
       "explanation": "Casual plain-form equivalent of んです. Used in informal speech to provide explanation or emphasis. Example: 行くんだ = I'm going (implying explanation or assertion). Often followed by よ or けど.",
-      "introducedIn": "G10"
+      "introducedIn": "N5.9"
     },
     {
       "id": "p_kedo",
@@ -274,7 +284,7 @@
       "reading": "けど",
       "role": "but (casual)",
       "explanation": "Casual clause-linking conjunction meaning 'but'. The informal equivalent of が (p_ga_but). けれど is a slightly more formal variant. Common as a sentence-ender for polite softening: ～んですけど... (trailing off). Connects two clauses with a contrasting or qualifying relationship.",
-      "introducedIn": "G10"
+      "introducedIn": "N5.9"
     },
     {
       "id": "p_demo_but",
@@ -282,7 +292,7 @@
       "reading": "でも",
       "role": "but / however (sentence-initial)",
       "explanation": "Sentence-starting conjunction meaning 'but' or 'however'. Begins a new sentence that contrasts with the previous one. でも、行きます = But I'll go. Distinct from the particle でも meaning 'even' (p_demo, N4.14) which follows nouns.",
-      "introducedIn": "G19"
+      "introducedIn": "N4.10"
     },
     {
       "id": "p_shi",
@@ -290,7 +300,7 @@
       "reading": "し",
       "role": "and also / listing reasons",
       "explanation": "Clause-final particle that lists multiple reasons or qualities additively. Each clause ends with し to contribute to an overall conclusion. 安いし、おいしいし、好きです = It's cheap, and it's also delicious, so I like it. Can follow plain form or polite forms. A single し is also valid: 安いし、買おう = It's cheap, so let's buy it.",
-      "introducedIn": "G20"
+      "introducedIn": "N4.14"
     },
     {
       "id": "p_node",
@@ -298,7 +308,7 @@
       "reading": "ので",
       "role": "because / since (soft)",
       "explanation": "Causal conjunction meaning 'because' or 'since'. More formal and objective than から. Implies the cause is a natural or shared-understanding reason. Followed by plain form before ので; polite form is also accepted.",
-      "introducedIn": "N4.10"
+      "introducedIn": "N5.9"
     },
     {
       "id": "p_nagara",
@@ -328,7 +338,9 @@
       "id": "p_kurai",
       "particle": "くらい",
       "reading": "くらい",
-      "matches": ["ぐらい"],
+      "matches": [
+        "ぐらい"
+      ],
       "role": "approximately / about",
       "explanation": "Approximation particle meaning 'about' or 'roughly'. Interchangeable with ぐらい (softer variant). Used after amounts, times, or quantities. Example: 三時間くらい = about three hours.",
       "introducedIn": "N4.5"
@@ -339,7 +351,7 @@
       "reading": "だけ",
       "role": "only / just",
       "explanation": "Limiting particle meaning 'only' or 'just'. Can follow nouns, verbs (dictionary form), or adjectives. Affirms a limit without negative connotation. できるだけ = as much as possible.",
-      "introducedIn": "N4.14"
+      "introducedIn": "N4.7"
     },
     {
       "id": "p_shika",
@@ -347,7 +359,7 @@
       "reading": "しか",
       "role": "nothing but / only (with negative)",
       "explanation": "Exclusive limiting particle that ALWAYS pairs with a negative verb form. Means 'nothing but' or 'only' with a sense of insufficiency or limitation. 水しか飲まない = drink nothing but water (implies not enough variety).",
-      "introducedIn": "N4.14"
+      "introducedIn": "N4.7"
     },
     {
       "id": "p_bakari",
@@ -355,7 +367,7 @@
       "reading": "ばかり",
       "role": "nothing but / just did",
       "explanation": "Particle with two main uses: (1) after a noun/verb, means 'nothing but' or 'only' (often with a critical nuance — 肉ばかり食べる = eat nothing but meat); (2) after plain past verb, means 'just did' (食べたばかり = just ate).",
-      "introducedIn": "N4.14"
+      "introducedIn": "N4.7"
     },
     {
       "id": "p_demo",
@@ -363,7 +375,7 @@
       "reading": "でも",
       "role": "even / any~ (particle)",
       "explanation": "Inclusive particle meaning 'even' or used in open-ended compounds: 何でも (anything), いつでも (anytime), 誰でも (anyone). After a noun: 子どもでもわかる = even a child understands. Distinct from sentence-initial でも (= 'but').",
-      "introducedIn": "N4.14"
+      "introducedIn": "N4.7"
     },
     {
       "id": "p_noni",
@@ -371,7 +383,7 @@
       "reading": "のに",
       "role": "even though / despite",
       "explanation": "Concessive conjunction expressing surprise or frustration that the expected result did not occur ('even though / despite the fact that'). 勉強したのに落ちた = Even though I studied, I failed. Carries emotional nuance; prefer のに over けれど when the speaker is disappointed.",
-      "introducedIn": "G19"
+      "introducedIn": "N4.10"
     },
     {
       "id": "p_kadouka",
@@ -379,7 +391,7 @@
       "reading": "かどうか",
       "role": "whether or not",
       "explanation": "Compound particle embedding an indirect yes/no question into a sentence ('whether or not'). 行くかどうかわからない = I don't know whether I'll go or not. Follows plain form; the かどうか clause acts as a noun phrase.",
-      "introducedIn": "G30"
+      "introducedIn": "N4.34"
     },
     {
       "id": "p_ni_tsuite",
@@ -387,7 +399,7 @@
       "reading": "について",
       "role": "about / regarding",
       "explanation": "Compound postposition に+ついて meaning 'about', 'regarding', or 'concerning'. Follows a noun. 日本語について話す = talk about the Japanese language. More formal than the English 'about'; common in academic and written contexts.",
-      "introducedIn": "G30"
+      "introducedIn": "N4.34"
     },
     {
       "id": "p_sou_da",
@@ -395,7 +407,7 @@
       "reading": "そうだ",
       "role": "appearance",
       "explanation": "Appearance そうだ — attaches to the ます-stem of verbs and the stem of adjectives (drop い for i-adj; bare stem for na-adj) to express that something looks like or seems a certain way, based on the speaker's own visual or sensory observation. Distinct from hearsay そうだ (p_sou_da_hearsay), which attaches to the plain form. Polite: そうです. Plain/casual: そうだ. Irregular: いい → よさそう.",
-      "introducedIn": "G22"
+      "introducedIn": "N4.18"
     },
     {
       "id": "p_sou_da_hearsay",
@@ -403,8 +415,10 @@
       "reading": "そうだ",
       "role": "hearsay",
       "explanation": "Hearsay そうだ — attaches to the plain form of verbs and adjectives to report information the speaker heard from another source. Translates as 'I heard that ~' or 'apparently ~'. Distinct from appearance そうだ (p_sou_da), which attaches to the stem. Polite: そうです. Plain/casual: そうだ. Negation is inside the reported clause: おいしくないそうだ = 'I heard it's not delicious'.",
-      "matches": ["そうです"],
-      "introducedIn": "G22"
+      "matches": [
+        "そうです"
+      ],
+      "introducedIn": "N4.18"
     },
     {
       "id": "p_zutsu",
@@ -420,7 +434,7 @@
       "reading": "なければ",
       "role": "negative conditional / obligation suffix",
       "explanation": "Negative conditional suffix なければ — attaches to the adjective adverbial stem (i-adj: く → くなければ; na-adj: stem + でなければ) to express 'if not ~' or 'must be ~'. Used in obligation patterns: 大きくなければいけない (must be big), 有名でなければ知らない (I only know famous ones). The obligation meaning comes from the following いけない / いけません / だめ. Parallels the verb negative-conditional (plain_negative → conditional_ba: 食べなければ). Introduced in G31 as the adjective-specific extension of the obligation pattern taught in G22.",
-      "introducedIn": "G31"
+      "introducedIn": "N4.25"
     }
   ]
 }

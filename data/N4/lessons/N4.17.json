@@ -639,6 +639,131 @@
             },
             "p_na"
           ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "あのう、北海道の 海、もう 一回 行きたいな。",
+          "en": "Um, the Hokkaido sea — I want to go one more time.",
+          "terms": [
+            "v_anou",
+            "v_hokkaidou",
+            "p_no",
+            "v_umi",
+            "v_mou",
+            {
+              "counter": "kai",
+              "n": 1
+            },
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "p_na"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "うん、いいね。えーと、いつ 行こうか。",
+          "en": "Yeah, that sounds good. Um, when shall we go?",
+          "terms": [
+            "v_un",
+            "v_ii",
+            "p_ne",
+            "v_eto",
+            "v_itsu",
+            {
+              "id": "v_iku",
+              "form": "plain_volitional"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "うーん、来月 は どう？",
+          "en": "Hmm, how about next month?",
+          "terms": [
+            "v_uun",
+            "v_raigetsu",
+            "p_wa",
+            "v_dou"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "へえ、来月 もう 行ける の？",
+          "en": "Oh, you can already go next month?",
+          "terms": [
+            "v_hee",
+            "v_raigetsu",
+            "v_mou",
+            {
+              "id": "v_iku",
+              "form": "potential"
+            },
+            "p_no_question"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "じつは 北の 田を 見たいから、海の 町に 行きたい んだ。",
+          "en": "Actually, I want to see northern rice fields, so I want to go to a seaside town.",
+          "terms": [
+            "v_jitsuwa",
+            "v_kita",
+            "p_no",
+            "v_ta",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "plain_desire_tai"
+            },
+            "p_kara_because",
+            "v_umi",
+            "p_no",
+            "v_machi",
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "p_nda"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "つまり、田を 見に 行きたい の？",
+          "en": "In other words, you want to go to see rice fields?",
+          "terms": [
+            "v_tsumari",
+            "v_ta",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": null
+            },
+            "p_ni",
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "p_no_question"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "まあ、いいね。さあ、行こう。",
+          "en": "Well, sounds good. Right then, let's go.",
+          "terms": [
+            "v_maa",
+            "v_ii",
+            "p_ne",
+            "v_saa",
+            {
+              "id": "v_iku",
+              "form": "plain_volitional"
+            }
+          ]
         }
       ]
     },
@@ -730,6 +855,26 @@
               "form": "plain_desire_tai"
             },
             "g_desu"
+          ]
+        },
+        {
+          "jp": "東京で たくさんの 人を 見て、おどろきました。",
+          "en": "I saw lots of people in Tokyo and was surprised.",
+          "terms": [
+            "v_toukyou",
+            "p_de",
+            "v_takusan",
+            "p_no",
+            "v_hito",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_odoroku",
+              "form": "polite_mashita"
+            }
           ]
         }
       ],

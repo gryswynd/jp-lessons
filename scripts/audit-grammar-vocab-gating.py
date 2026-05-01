@@ -4,19 +4,24 @@
 For each G lesson with a `targetVocab` array, we run four checks against its
 unlocking N lesson and the surrounding curriculum:
 
-1. **Declaration** — every target term must appear in the unlocking N lesson's
-   `vocabList` section.
+1. **Declaration** — every target term must be declared in the gating N's
+   `vocabList` OR in any earlier N lesson's `vocabList`. Terms that are
+   foundationally introduced earlier (e.g., v_aru in N5.1, claimed as G5
+   target) are correctly declared and don't need re-declaration.
 2. **Reinforcement** — every target term must appear in `terms[]` of the next
    2 N lessons after the unlocking N (the reinforcement window).
 3. **Story reinforcement** — every target term must appear in any story whose
    `unlocksAfter` falls within the reinforcement window.
-4. **Misplacement** — no target term should appear in any earlier N lesson's
-   `vocabList` (would mean it's introduced in the wrong N).
+4. **Misplacement** — a target term is misplaced only if it appears in a
+   vocabList LESS than its own `lesson_ids` (declared before its official
+   introduction). Foundational early-declaration is NOT misplacement.
 
 We also keep the original "untargeted" gating checks for every term referenced
 in a G lesson:
 
-5. **Late-introduced** — term's `lesson_ids` is AFTER the gating N lesson.
+5. **Late-introduced** — term's `lesson_ids` is AFTER the gating N lesson AND
+   the term lacks a partial-kanji workaround. Terms with pure-kana surface or
+   any pure-kana entry in `matches[]` are skipped (kana form always available).
 6. **Undeclared introduction** — term's `lesson_ids` equals the gating N lesson
    but the term is not in that N lesson's vocabList.
 
@@ -192,6 +197,43 @@ def load_lesson_ids_index():
     return out
 
 
+KANA_RE = re.compile(r"^[぀-ゟ゠-ヿー　\s]+$")
+
+
+def is_pure_kana(s):
+    """Return True if s contains only hiragana/katakana (no CJK ideographs)."""
+    if not s:
+        return False
+    return bool(KANA_RE.match(s))
+
+
+def load_term_kana_availability():
+    """Map term id → True if the term has a pure-kana surface or any pure-kana
+    entry in its `matches[]`. These terms are effectively available from the
+    start of the curriculum (no kanji-gating constraint).
+    """
+    out = {}
+    for path in GLOSSARIES:
+        data = json.loads(path.read_text())
+        entries = data if isinstance(data, list) else data.get("entries", [])
+        for e in entries:
+            tid = e.get("id")
+            if not tid:
+                continue
+            surface = e.get("surface", "")
+            matches = e.get("matches", []) or []
+            kana_available = is_pure_kana(surface) or any(is_pure_kana(m) for m in matches)
+            out[tid] = kana_available
+    # Particles are effectively pure-kana (no CJK in particle surfaces)
+    if PARTICLES_FILE.exists():
+        data = json.loads(PARTICLES_FILE.read_text())
+        for e in data.get("particles", []):
+            tid = e.get("id")
+            if tid and tid not in out:
+                out[tid] = True
+    return out
+
+
 def load_character_ids():
     if not CHARACTERS_FILE.exists():
         return set()
@@ -216,6 +258,16 @@ def build_n_lesson_index(files_map):
         vocab_by_n[lid] = collect_vocab_list_items(data)
         terms_by_n[lid] = collect_term_ids(data)
     return n_ids, vocab_by_n, terms_by_n
+
+
+def build_cumulative_vocab(n_ids, vocab_by_n):
+    """Map N lesson id → set of all term ids declared in this N or any earlier N."""
+    out = {}
+    seen = set()
+    for nid in n_ids:
+        seen = seen | vocab_by_n.get(nid, set())
+        out[nid] = seen.copy()
+    return out
 
 
 def build_story_index(story_dirs, unlocks_map):
@@ -263,8 +315,10 @@ def main():
     manifest = load_manifest()
     unlocks_map, files_map, story_dirs = build_manifest_index(manifest)
     glossary_ids = load_lesson_ids_index()
+    kana_avail = load_term_kana_availability()
     character_ids = load_character_ids()
     n_ids, vocab_by_n, terms_by_n = build_n_lesson_index(files_map)
+    cumulative_vocab = build_cumulative_vocab(n_ids, vocab_by_n)
     stories = build_story_index(story_dirs, unlocks_map)
 
     g_ids = sorted(
@@ -305,6 +359,7 @@ def main():
         terms_in_g = collect_term_ids(g_json)
         target_vocab = g_json.get("targetVocab") or []
         n_vocab = vocab_by_n.get(gating_n, set())
+        cum_vocab_at_gate = cumulative_vocab.get(gating_n, set())
 
         reinf = reinforcement_lessons(n_ids, gating_n)
         window_end_key = lesson_key(reinf[-1]) if reinf else gating_key
@@ -316,7 +371,8 @@ def main():
         misplaced = []
 
         for tid in target_vocab:
-            if tid not in n_vocab:
+            # Declaration: term satisfied if declared in gating N OR any earlier N
+            if tid not in cum_vocab_at_gate:
                 missing_decl.append(tid)
             absent_in = [n for n in reinf if tid not in terms_by_n.get(n, set())]
             if absent_in:
@@ -324,12 +380,17 @@ def main():
             absent_stories = [s["id"] for s in window_stories if tid not in s["terms"]]
             if window_stories and absent_stories:
                 missing_story.append((tid, absent_stories))
-            for nid in n_ids:
-                if nid == gating_n:
-                    break
-                if tid in vocab_by_n.get(nid, set()):
-                    misplaced.append((tid, nid))
-                    break
+            # Misplacement: only flag if term appears in a vocabList earlier than
+            # its own lesson_ids (declared before its official introduction).
+            term_key, term_lesson = earliest_lesson(glossary_ids.get(tid, ""), unlocks_map)
+            if term_key is not None:
+                for nid in n_ids:
+                    n_key = lesson_key(nid)
+                    if n_key is None or n_key >= term_key:
+                        break
+                    if tid in vocab_by_n.get(nid, set()):
+                        misplaced.append((tid, nid, term_lesson))
+                        break
 
         # Untargeted gating checks (every term in G)
         late = []
@@ -348,7 +409,11 @@ def main():
             if term_key is None:
                 continue
             if term_key > gating_key:
-                late.append((tid, term_lesson))
+                # Skip if the term has a pure-kana fallback (matches[] or surface)
+                # — kana form is available throughout, so lesson_ids reflects only
+                # the kanji-form introduction.
+                if not kana_avail.get(tid, False):
+                    late.append((tid, term_lesson))
             elif term_key == gating_key and tid not in n_vocab and tid not in target_vocab:
                 undeclared.append(tid)
 
@@ -401,9 +466,9 @@ def main():
             lines.append("")
 
         if misplaced:
-            lines.append(f"**Misplaced — target term in earlier N lesson's vocabList ({len(misplaced)}):**")
-            for tid, where in misplaced:
-                lines.append(f"- `{tid}` is currently declared in `{where}` (should move to `{gating_n}`)")
+            lines.append(f"**Misplaced — target term declared before its own `lesson_ids` ({len(misplaced)}):**")
+            for tid, where, term_lesson in misplaced:
+                lines.append(f"- `{tid}` is declared in `{where}` but its `lesson_ids` says `{term_lesson}` — declaration is before official introduction")
             lines.append("")
 
         if late:

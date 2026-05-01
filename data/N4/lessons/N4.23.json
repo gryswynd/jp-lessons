@@ -734,6 +734,41 @@
               "form": "plain_volitional"
             }
           ]
+        },
+        {
+          "spk": "けん",
+          "jp": "それは だめだよ。少し 運動しよう。",
+          "en": "That's no good. Let's exercise a little.",
+          "terms": [
+            "char_ken",
+            "v_sore",
+            "p_wa",
+            "v_dame",
+            "g_da",
+            "p_yo",
+            "v_sukoshi",
+            "v_undou",
+            {
+              "id": "v_suru",
+              "form": "plain_volitional"
+            }
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "うん、それで いけるよ。",
+          "en": "Yeah, with that it works.",
+          "terms": [
+            "char_rikizo",
+            "v_un",
+            "v_sore",
+            "p_de",
+            {
+              "id": "v_ikeru",
+              "form": "plain_form"
+            },
+            "p_yo"
+          ]
         }
       ]
     },

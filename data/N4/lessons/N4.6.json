@@ -5,7 +5,7 @@
   "meta": {
     "phase": 4,
     "lesson": 6,
-    "focus": "Meal and taste vocabulary (昼ご飯, ご飯, 鳥肉, 味, 昼休み); dark adjective 暗い; same/identical 同じ; G14 comparison reinforcement (より, いちばん); G13 giving/receiving (あげる, もらう).",
+    "focus": "Meal and taste vocabulary (昼ご飯, ご飯, 鳥肉, 味, 昼休み); dark adjective 暗い; same/identical 同じ; G15 comparison reinforcement (より, いちばん); G14 giving/receiving (あげる, もらう).; G16 similarity (みたい)",
     "kanji": [
       "鳥",
       "同",
@@ -238,6 +238,13 @@
           "label": "Same / Identical",
           "items": [
             "v_onaji"
+          ]
+        },
+        {
+          "label": "Manner & Similarity",
+          "items": [
+            "v_you_manner",
+            "v_mitai"
           ]
         }
       ]
@@ -529,6 +536,24 @@
             },
             "g_desu"
           ]
+        },
+        {
+          "spk": "A",
+          "jp": "牛肉と 鳥肉と どちらが 好きですか。",
+          "en": "Which do you like better, beef or chicken?",
+          "terms": [
+            "v_gyuuniku",
+            "p_to",
+            "v_toriniku",
+            "p_to",
+            "v_dochira",
+            "p_ga",
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            },
+            "p_ka"
+          ]
         }
       ]
     },
@@ -719,6 +744,86 @@
             "p_wo",
             {
               "id": "v_taberu",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
+          ]
+        },
+        {
+          "jp": "やまかわさんは よく りきぞに おいしい 料理を 作って くれます。",
+          "en": "Yamakawa often makes delicious food for Rikizo.",
+          "terms": [
+            "char_yamakawa",
+            "v_san",
+            "p_wa",
+            "v_yoku",
+            "char_rikizo",
+            "p_ni",
+            "v_oishii",
+            "v_ryouri",
+            "p_wo",
+            {
+              "id": "v_tsukuru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_kureru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "りきぞは 毎日 一時間くらい 昼ご飯を 食べます。",
+          "en": "Rikizo eats lunch for about an hour every day.",
+          "terms": [
+            "char_rikizo",
+            "p_wa",
+            "v_mainichi",
+            "v_jikan",
+            "p_kurai",
+            "v_hirugohan",
+            "p_wo",
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "牛肉より 鳥肉の ほうが おいしいです。",
+          "en": "Chicken is more delicious than beef.",
+          "terms": [
+            "v_gyuuniku",
+            "p_yori",
+            "v_toriniku",
+            "p_no",
+            "v_hou",
+            "p_ga",
+            {
+              "id": "v_oishii",
+              "form": "polite_adj"
+            }
+          ]
+        },
+        {
+          "jp": "りきぞ は やまかわさんの ように 上手に 料理を 作りたいです。",
+          "en": "Rikizo wants to cook as skillfully as Yamakawa.",
+          "terms": [
+            "char_rikizo",
+            "p_wa",
+            "char_yamakawa",
+            "v_san",
+            "p_no",
+            "v_you_manner",
+            "p_ni",
+            {
+              "id": "v_jouzu",
+              "form": "adverbial"
+            },
+            "v_ryouri",
+            "p_wo",
+            {
+              "id": "v_tsukuru",
               "form": "plain_desire_tai"
             },
             "g_desu"
@@ -937,6 +1042,37 @@
             {
               "id": "v_suki",
               "form": "polite_adj"
+            },
+            "g_desu"
+          ]
+        },
+        {
+          "jp": "りきぞは 毎日 おいしい 昼ご飯が ほしいです。",
+          "en": "Rikizo wants a delicious lunch every day.",
+          "terms": [
+            "char_rikizo",
+            "p_wa",
+            "v_mainichi",
+            "v_oishii",
+            "v_hirugohan",
+            "p_ga",
+            {
+              "id": "v_hoshii",
+              "form": "polite_adj"
+            }
+          ]
+        },
+        {
+          "jp": "牛肉は 鳥肉ほど おいしくないです。",
+          "en": "Beef is not as delicious as chicken.",
+          "terms": [
+            "v_gyuuniku",
+            "p_wa",
+            "v_toriniku",
+            "p_hodo",
+            {
+              "id": "v_oishii",
+              "form": "plain_negative"
             },
             "g_desu"
           ]

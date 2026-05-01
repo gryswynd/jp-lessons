@@ -791,6 +791,33 @@
             },
             "g_desu"
           ]
+        },
+        {
+          "jp": "わたしの 学校は とても きれいです。",
+          "en": "My school is very beautiful.",
+          "terms": [
+            "v_watashi",
+            "p_no",
+            "v_gakkou",
+            "p_wa",
+            "v_totemo",
+            "v_kirei",
+            "g_desu"
+          ]
+        },
+        {
+          "jp": "小学校は 小さくて、古いです。",
+          "en": "The elementary school is small and old.",
+          "terms": [
+            "v_shougakkou",
+            "p_wa",
+            {
+              "id": "v_chiisai",
+              "form": "te_form"
+            },
+            "v_furui",
+            "g_desu"
+          ]
         }
       ],
       "questions": [
@@ -994,6 +1021,36 @@
               "form": "polite_masu"
             },
             "p_yo"
+          ]
+        },
+        {
+          "jp": "わたしは 中学校で 日本語を 学びました。",
+          "en": "I studied Japanese in middle school.",
+          "terms": [
+            "v_watashi",
+            "p_wa",
+            "v_chuugakkou",
+            "p_de",
+            "v_nihongo",
+            "p_wo",
+            {
+              "id": "v_manabu",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "jp": "高校は 大きくて、新しいです。",
+          "en": "The high school is big and new.",
+          "terms": [
+            "v_koukou",
+            "p_wa",
+            {
+              "id": "v_ookii",
+              "form": "te_form"
+            },
+            "v_atarashii",
+            "g_desu"
           ]
         }
       ],

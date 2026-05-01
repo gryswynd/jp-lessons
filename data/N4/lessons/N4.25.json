@@ -5,7 +5,7 @@
   "meta": {
     "level": "N4",
     "lesson_number": 25,
-    "focus": "Academic research, literature, documents, and attention — using 文, 注, 研, 究 kanji compounds.",
+    "focus": "Academic research, literature, documents, and attention — using 文, 注, 研, 究 kanji compounds; G25 conditional forms と/ば/たら/なら and necessity なければ",
     "estimated_minutes": 35,
     "kanji": [
       "文",
@@ -34,14 +34,14 @@
       "on": "けん",
       "kun": "と(ぐ)",
       "meaning": "Polish / Study",
-      "termId": "k_ken_study"
+      "termId": "k_ken_2"
     },
     {
       "kanji": "究",
       "on": "きゅう",
       "kun": "きわ(める)",
       "meaning": "Research / Master",
-      "termId": "k_kyuu_research"
+      "termId": "k_kyuu_res"
     }
   ],
   "sections": [
@@ -162,7 +162,7 @@
           "kun": "と(ぐ)",
           "meaning": "Polish / Study",
           "terms": [
-            "k_ken_study",
+            "k_ken_2",
             "v_kenkyuu",
             "v_kenkyuusha"
           ]
@@ -173,7 +173,7 @@
           "kun": "きわ(める)",
           "meaning": "Research / Master",
           "terms": [
-            "k_kyuu_research",
+            "k_kyuu_res",
             "v_kenkyuu",
             "v_kyuumei"
           ]
@@ -210,6 +210,14 @@
             "v_kenkyuu",
             "v_kenkyuusha",
             "v_kyuumei"
+          ]
+        },
+        {
+          "label": "Conditional Particles",
+          "items": [
+            "p_to_conditional",
+            "p_nara",
+            "p_nakereba"
           ]
         }
       ]

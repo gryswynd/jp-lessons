@@ -5,7 +5,7 @@
   "meta": {
     "level": "N5",
     "lesson_number": 5,
-    "focus": "Motion verbs 行く and 来る with destination particles に and へ, means particle で, and polite verb conjugation forms ます/ました/ません/ませんでした",
+    "focus": "Motion verbs 行く and 来る with destination particles に and へ, means particle で, polite verb conjugation forms ます/ました/ません/ませんでした, and te-form/ta-form for connecting and past actions",
     "estimated_minutes": 55,
     "kanji": [
       "行",
@@ -208,15 +208,6 @@
           ]
         },
         {
-          "label": "Place Pronouns",
-          "items": [
-            "v_koko",
-            "v_soko",
-            "v_asoko",
-            "v_doko"
-          ]
-        },
-        {
           "label": "Future Time",
           "items": [
             "v_raishuu",
@@ -240,6 +231,7 @@
         {
           "label": "New Particles",
           "items": [
+            "p_ni",
             "p_de",
             "p_e"
           ]
@@ -575,6 +567,22 @@
               "form": "polite_masu"
             }
           ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "そうですね。タクシーは だめですね。",
+          "en": "I see. The taxi is no good, isn't it.",
+          "terms": [
+            "p_soudesu",
+            "p_ne",
+            "v_takushii",
+            "p_wa",
+            {
+              "id": "v_dame",
+              "form": "polite_adj"
+            },
+            "p_ne"
+          ]
         }
       ]
     },
@@ -768,6 +776,20 @@
             "p_to",
             {
               "id": "v_iku",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "コンビニに おにぎりが あります。",
+          "en": "There are rice balls at the convenience store.",
+          "terms": [
+            "v_konbini",
+            "p_ni",
+            "v_onigiri",
+            "p_ga",
+            {
+              "id": "v_aru",
               "form": "polite_masu"
             }
           ]

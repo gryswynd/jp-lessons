@@ -357,3 +357,26 @@ When v_mousu's 申 unlocks at N3.58, that's the trigger to flip the pattern: sur
 - `manifest.json` N3 entries.
 - `campaigns/n3-production.md` refresh (grammar-stub correction + chunk tracking).
 - Conjugation rule additions for N3 forms.
+
+## Candidate vocab from N4 audit (input for N3 scoping)
+
+During the N4 vocab roster curation pass (branch `claude/add-flashcard-examples-QHCsu`, 2026-04), a linguistic audit of the ~110 N4/N5 vocab terms with no example-sentence reinforcement surfaced a parallel observation: several high-frequency conversational words are **missing from N5 + N4 + N3 glossaries combined**. They were left out of that pass (which only curates existing entries), but they're prime candidates for inclusion as the N3 build scopes lessons.
+
+This list is partial and audit-derived (not exhaustive). Use as input, not as a target.
+
+**High-frequency conversational vocab missing from the curriculum:**
+
+- やっぱり / やはり — "as expected / after all" (extremely common discourse marker)
+- 結婚 (けっこん) — "marriage" + 結婚する "to get married"
+- 笑う (わらう) — "to laugh / smile"
+- 嬉しい (うれしい) — "happy / glad"
+- 面白い (おもしろい) — "interesting / funny" (note: i-adj reading)
+- 心配 (しんぱい) — "worry / anxiety" + 心配する
+- 紹介 (しょうかい) — "introduction" + 紹介する
+- 案内 (あんない) — "guidance / showing around" + 案内する
+- 彼氏 (かれし) — "boyfriend"
+- 恋人 (こいびと) — "lover / sweetheart / partner"
+
+The N3 glossary build should validate each candidate against existing N5/N4 glossaries before scoping (some may already be present under a different ID; collision check via the existing protocol). For terms with kanji whose kanji-introduction would land later than the vocab itself, follow the partial-kanji `matches[]` pattern documented elsewhere in this plan.
+
+Source: see commit history of `claude/add-flashcard-examples-QHCsu` for the audit work that produced this list.
