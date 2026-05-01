@@ -4,7 +4,7 @@ Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **21** les
 
 ## Target-vocab gaps
 - Missing from unlocking N's vocabList (declaration): **0**
-- Missing reinforcement in next 2 N lessons: **10**
+- Missing reinforcement in next 2 N lessons: **7**
 - Missing reinforcement in window stories: **90**
 - Misplaced (target term declared in an earlier N lesson): **0**
 
@@ -250,9 +250,6 @@ _targetVocab:_ `p_sou_da`, `p_sou_da_hearsay`
 _reinforcement window:_ `N4.19`, `N4.20` + stories: `library-book`
 _file:_ `data/N4/grammar/G22.json`
 
-**Missing reinforcement in next 2 N lessons (1):**
-- `p_sou_da` — not referenced in `N4.19`, `N4.20`
-
 **Missing reinforcement in window stories (1):**
 - `p_sou_da` — not referenced in story `library-book`
 
@@ -262,10 +259,6 @@ _unlocksAfter:_ `N4.21` → gating N lesson: `N4.21`
 _targetVocab:_ `v_ii`, `v_ikeru`, `v_dame`
 _reinforcement window:_ `N4.22`, `N4.23` + stories: `furima-no-hi`
 _file:_ `data/N4/grammar/G23.json`
-
-**Missing reinforcement in next 2 N lessons (2):**
-- `v_ikeru` — not referenced in `N4.23`
-- `v_dame` — not referenced in `N4.22`, `N4.23`
 
 **Missing reinforcement in window stories (1):**
 - `v_dame` — not referenced in story `furima-no-hi`
