@@ -241,7 +241,7 @@
           ]
         },
         {
-          "label": "Similarity",
+          "label": "Manner & Similarity",
           "items": [
             "v_you_manner",
             "v_mitai"
@@ -803,6 +803,30 @@
               "id": "v_oishii",
               "form": "polite_adj"
             }
+          ]
+        },
+        {
+          "jp": "りきぞ は やまかわさんの ように 上手に 料理を 作りたいです。",
+          "en": "Rikizo wants to cook as skillfully as Yamakawa.",
+          "terms": [
+            "char_rikizo",
+            "p_wa",
+            "char_yamakawa",
+            "v_san",
+            "p_no",
+            "v_you_manner",
+            "p_ni",
+            {
+              "id": "v_jouzu",
+              "form": "adverbial"
+            },
+            "v_ryouri",
+            "p_wo",
+            {
+              "id": "v_tsukuru",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         }
       ],
