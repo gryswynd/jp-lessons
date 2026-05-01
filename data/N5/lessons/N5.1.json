@@ -779,6 +779,31 @@
             "g_desu",
             "p_ne"
           ]
+        },
+        {
+          "spk": "A",
+          "jp": "りきぞさんは 男子ですか、女子ですか。",
+          "en": "Rikizo-san, are you a boy student or a girl student?",
+          "terms": [
+            "char_rikizo",
+            "v_san",
+            "p_wa",
+            "v_danshi",
+            "g_desu",
+            "p_ka",
+            "v_joshi"
+          ]
+        },
+        {
+          "spk": "C",
+          "jp": "わたしは 男子です。",
+          "en": "I am a boy student.",
+          "terms": [
+            "v_watashi",
+            "p_wa",
+            "v_danshi",
+            "g_desu"
+          ]
         }
       ]
     },
@@ -855,6 +880,31 @@
             "p_wa",
             "v_yasashii",
             "v_hito",
+            "g_desu"
+          ]
+        },
+        {
+          "jp": "父は 男の人です。母は 女の人です。",
+          "en": "My father is a man. My mother is a woman.",
+          "terms": [
+            "v_chichi",
+            "p_wa",
+            "v_otokonohito",
+            "g_desu",
+            "v_haha",
+            "v_onnanohito"
+          ]
+        },
+        {
+          "jp": "わたしの 女の子は とても うれしいです。",
+          "en": "My (little) girl is very happy.",
+          "terms": [
+            "v_watashi",
+            "p_no",
+            "v_onnanoko",
+            "p_wa",
+            "v_totemo",
+            "v_ureshii",
             "g_desu"
           ]
         }
@@ -1030,6 +1080,18 @@
             "v_minasan",
             "p_wa",
             "v_ureshii",
+            "g_desu"
+          ]
+        },
+        {
+          "jp": "先生の ベッドは いいです。",
+          "en": "The teacher's bed is nice.",
+          "terms": [
+            "v_sensei",
+            "p_no",
+            "v_beddo",
+            "p_wa",
+            "v_ii",
             "g_desu"
           ]
         }

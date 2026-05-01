@@ -395,6 +395,61 @@
               "form": "polite_masu"
             }
           ]
+        },
+        {
+          "spk": "A",
+          "jp": "これは 月よう日です。それは 火よう日です。あれは 水よう日です。",
+          "en": "This is Monday. That is Tuesday. That over there is Wednesday.",
+          "terms": [
+            "v_kore",
+            "p_wa",
+            "v_getsuyoubi",
+            "g_desu",
+            "v_sore",
+            "v_kayoubi",
+            "v_are",
+            "v_suiyoubi"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "どれが 木よう日ですか。",
+          "en": "Which one is Thursday?",
+          "terms": [
+            "v_dore",
+            "p_ga",
+            "v_mokuyoubi",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "こちらは すずき先生です。そちらは やまもと先生です。あちらは 父です。",
+          "en": "This (way) is Suzuki-sensei. That (way) is Yamamoto-sensei. Over there is my father.",
+          "terms": [
+            "v_kochira",
+            "p_wa",
+            "char_suzuki",
+            "v_sensei",
+            "g_desu",
+            "v_sochira",
+            "char_yamamoto",
+            "v_achira",
+            "v_chichi"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "どちらが お母さんですか。",
+          "en": "Which one is your mother?",
+          "terms": [
+            "v_dochira",
+            "p_ga",
+            "v_okaasan",
+            "g_desu",
+            "p_ka"
+          ]
         }
       ]
     },
@@ -578,6 +633,42 @@
             "g_desu",
             "p_ne"
           ]
+        },
+        {
+          "spk": "A",
+          "jp": "父は こう します。母は そう します。先生は ああ します。",
+          "en": "My father does it like this. My mother does it like that. The teacher does it like that (over there).",
+          "terms": [
+            "v_chichi",
+            "p_wa",
+            "v_kou",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
+            "v_haha",
+            "v_sou",
+            "v_sensei",
+            "v_aa"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "こんな 人は やさしいです。そんな 人も うれしいです。あんな 人も いいですね。",
+          "en": "This kind of person is kind. That kind of person is also happy. That kind of person (over there) is also good, isn't it.",
+          "terms": [
+            "v_konna",
+            "v_hito",
+            "p_wa",
+            "v_yasashii",
+            "g_desu",
+            "v_sonna",
+            "p_mo",
+            "v_ureshii",
+            "v_anna",
+            "v_ii",
+            "p_ne"
+          ]
         }
       ]
     },
@@ -659,6 +750,36 @@
             "v_ii",
             "g_desu",
             "p_ne"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "この 日は 月よう日です。あの 日は 金よう日です。",
+          "en": "This day is Monday. That day (over there) is Friday.",
+          "terms": [
+            "v_kono",
+            "v_hi",
+            "p_wa",
+            "v_getsuyoubi",
+            "g_desu",
+            "v_ano",
+            "v_kinyoubi"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "その 日は 何よう日ですか。どの 日が 土よう日ですか。",
+          "en": "What day is that day? Which day is Saturday?",
+          "terms": [
+            "v_sono",
+            "v_hi",
+            "p_wa",
+            "v_nanyoubi",
+            "g_desu",
+            "p_ka",
+            "v_dono",
+            "p_ga",
+            "v_doyoubi"
           ]
         }
       ]
@@ -930,6 +1051,39 @@
             "p_wa",
             "v_ureshii",
             "g_desu"
+          ]
+        },
+        {
+          "jp": "ここに 水が あります。そこに 木が あります。あそこに 金が あります。",
+          "en": "Here there is water. There there are trees. Over there there is gold.",
+          "terms": [
+            "v_koko",
+            "p_ni",
+            "v_mizu",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "v_soko",
+            "v_ki",
+            "v_asoko",
+            "v_kane"
+          ]
+        },
+        {
+          "jp": "どこに 火が ありますか。",
+          "en": "Where is the fire?",
+          "terms": [
+            "v_doko",
+            "p_ni",
+            "v_hi_2",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
           ]
         }
       ],

@@ -4,7 +4,7 @@ Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **22** les
 
 ## Target-vocab gaps
 - Missing from unlocking N's vocabList (declaration): **0**
-- Missing reinforcement in next 2 N lessons: **87**
+- Missing reinforcement in next 2 N lessons: **83**
 - Missing reinforcement in window stories: **90**
 - Misplaced (target term declared in an earlier N lesson): **0**
 
@@ -34,29 +34,25 @@ _targetVocab:_ `v_kore`, `v_sore`, `v_are`, `v_dore`, `v_kono`, `v_sono`, `v_ano
 _reinforcement window:_ `N5.2`, `N5.3` + stories: `my-family`, `tanjoubi-no-keeki`
 _file:_ `data/N5/grammar/G2.json`
 
-**Missing reinforcement in next 2 N lessons (23):**
-- `v_kore` — not referenced in `N5.2`
-- `v_sore` — not referenced in `N5.2`
-- `v_are` — not referenced in `N5.2`
-- `v_dore` — not referenced in `N5.2`
-- `v_kono` — not referenced in `N5.2`, `N5.3`
-- `v_sono` — not referenced in `N5.2`, `N5.3`
-- `v_ano` — not referenced in `N5.2`, `N5.3`
-- `v_dono` — not referenced in `N5.2`, `N5.3`
-- `v_koko` — not referenced in `N5.2`, `N5.3`
-- `v_soko` — not referenced in `N5.2`, `N5.3`
-- `v_asoko` — not referenced in `N5.2`, `N5.3`
-- `v_doko` — not referenced in `N5.2`, `N5.3`
-- `v_kochira` — not referenced in `N5.2`, `N5.3`
-- `v_sochira` — not referenced in `N5.2`, `N5.3`
-- `v_achira` — not referenced in `N5.2`, `N5.3`
-- `v_dochira` — not referenced in `N5.2`, `N5.3`
-- `v_kou` — not referenced in `N5.2`, `N5.3`
-- `v_sou` — not referenced in `N5.2`, `N5.3`
-- `v_aa` — not referenced in `N5.2`, `N5.3`
-- `v_konna` — not referenced in `N5.2`, `N5.3`
-- `v_sonna` — not referenced in `N5.2`, `N5.3`
-- `v_anna` — not referenced in `N5.2`, `N5.3`
+**Missing reinforcement in next 2 N lessons (19):**
+- `v_kono` — not referenced in `N5.3`
+- `v_sono` — not referenced in `N5.3`
+- `v_ano` — not referenced in `N5.3`
+- `v_dono` — not referenced in `N5.3`
+- `v_koko` — not referenced in `N5.3`
+- `v_soko` — not referenced in `N5.3`
+- `v_asoko` — not referenced in `N5.3`
+- `v_doko` — not referenced in `N5.3`
+- `v_kochira` — not referenced in `N5.3`
+- `v_sochira` — not referenced in `N5.3`
+- `v_achira` — not referenced in `N5.3`
+- `v_dochira` — not referenced in `N5.3`
+- `v_kou` — not referenced in `N5.3`
+- `v_sou` — not referenced in `N5.3`
+- `v_aa` — not referenced in `N5.3`
+- `v_konna` — not referenced in `N5.3`
+- `v_sonna` — not referenced in `N5.3`
+- `v_anna` — not referenced in `N5.3`
 - `v_donna` — not referenced in `N5.3`
 
 **Missing reinforcement in window stories (24):**
