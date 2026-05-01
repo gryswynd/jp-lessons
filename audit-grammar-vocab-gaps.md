@@ -4,7 +4,7 @@ Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **22** les
 
 ## Target-vocab gaps
 - Missing from unlocking N's vocabList (declaration): **0**
-- Missing reinforcement in next 2 N lessons: **63**
+- Missing reinforcement in next 2 N lessons: **56**
 - Missing reinforcement in window stories: **90**
 - Misplaced (target term declared in an earlier N lesson): **0**
 
@@ -79,12 +79,6 @@ _targetVocab:_ `p_mo`, `p_to`, `p_ya`, `p_kara`, `p_made`, `p_made_ni`, `p_ni`
 _reinforcement window:_ `N5.3`, `N5.4` + stories: `tanjoubi-no-keeki`
 _file:_ `data/N5/grammar/G4.json`
 
-**Missing reinforcement in next 2 N lessons (4):**
-- `p_ya` — not referenced in `N5.4`
-- `p_kara` — not referenced in `N5.4`
-- `p_made` — not referenced in `N5.4`
-- `p_made_ni` — not referenced in `N5.4`
-
 **Missing reinforcement in window stories (7):**
 - `p_mo` — not referenced in story `tanjoubi-no-keeki`
 - `p_to` — not referenced in story `tanjoubi-no-keeki`
@@ -100,11 +94,6 @@ _unlocksAfter:_ `N5.5` → gating N lesson: `N5.5`
 _targetVocab:_ `p_ni`, `p_de`, `p_e`, `v_aru`, `v_iru`
 _reinforcement window:_ `N5.6`, `N5.7` + stories: `kazoku-ga-kimasu`
 _file:_ `data/N5/grammar/G5.json`
-
-**Missing reinforcement in next 2 N lessons (3):**
-- `p_ni` — not referenced in `N5.7`
-- `v_aru` — not referenced in `N5.7`
-- `v_iru` — not referenced in `N5.6`, `N5.7`
 
 **Missing reinforcement in window stories (1):**
 - `v_iru` — not referenced in story `kazoku-ga-kimasu`
