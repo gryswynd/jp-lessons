@@ -1,10 +1,10 @@
 # Grammar Vocab Gating Audit
 
-Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **22** lessons.
+Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **21** lessons.
 
 ## Target-vocab gaps
 - Missing from unlocking N's vocabList (declaration): **0**
-- Missing reinforcement in next 2 N lessons: **56**
+- Missing reinforcement in next 2 N lessons: **48**
 - Missing reinforcement in window stories: **90**
 - Misplaced (target term declared in an earlier N lesson): **0**
 
@@ -105,11 +105,6 @@ _targetVocab:_ `v_iru`, `v_hoshii`, `g_deshou`, `g_darou`
 _reinforcement window:_ `N5.9`, `N5.10` + stories: `kyuujitsu-no-rikizo`
 _file:_ `data/N5/grammar/G9.json`
 
-**Missing reinforcement in next 2 N lessons (3):**
-- `v_hoshii` — not referenced in `N5.9`, `N5.10`
-- `g_deshou` — not referenced in `N5.9`, `N5.10`
-- `g_darou` — not referenced in `N5.9`, `N5.10`
-
 **Missing reinforcement in window stories (3):**
 - `v_hoshii` — not referenced in story `kyuujitsu-no-rikizo`
 - `g_deshou` — not referenced in story `kyuujitsu-no-rikizo`
@@ -122,28 +117,12 @@ _targetVocab:_ `p_ga_but`, `p_kedo`, `p_kara_because`, `p_node`, `p_ndesu`, `p_n
 _reinforcement window:_ `N5.10`, `N5.11` + stories: `kyuujitsu-no-rikizo`
 _file:_ `data/N5/grammar/G10.json`
 
-**Missing reinforcement in next 2 N lessons (4):**
-- `p_kedo` — not referenced in `N5.11`
-- `p_node` — not referenced in `N5.10`, `N5.11`
-- `p_ndesu` — not referenced in `N5.10`
-- `p_nda` — not referenced in `N5.10`, `N5.11`
-
 **Missing reinforcement in window stories (5):**
 - `p_ga_but` — not referenced in story `kyuujitsu-no-rikizo`
 - `p_kedo` — not referenced in story `kyuujitsu-no-rikizo`
 - `p_node` — not referenced in story `kyuujitsu-no-rikizo`
 - `p_ndesu` — not referenced in story `kyuujitsu-no-rikizo`
 - `p_nda` — not referenced in story `kyuujitsu-no-rikizo`
-
-## G12 — na-Adjective Conjugation
-
-_unlocksAfter:_ `N5.11` → gating N lesson: `N5.11`
-_targetVocab:_ `v_kirei`
-_reinforcement window:_ `N5.12`, `N5.13` + stories: `ame-no-hi-no-gakkou`, `yonde-kaite`
-_file:_ `data/N5/grammar/G12.json`
-
-**Missing reinforcement in next 2 N lessons (1):**
-- `v_kirei` — not referenced in `N5.12`, `N5.13`
 
 ## G13 — Potential Form — Can / Able to
 

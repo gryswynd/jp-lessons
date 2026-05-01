@@ -752,6 +752,62 @@
               "form": "polite_masu"
             }
           ]
+        },
+        {
+          "jp": "店の 中に チョコレートも あります。",
+          "en": "There is also chocolate in the store.",
+          "terms": [
+            "v_mise",
+            "p_no",
+            "v_naka",
+            "p_ni",
+            "v_chokoreeto",
+            "p_mo",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "アイスクリームは 安くて、おいしいです。",
+          "en": "The ice cream is cheap and delicious.",
+          "terms": [
+            "v_aisukuriimu",
+            "p_wa",
+            {
+              "id": "v_yasui",
+              "form": "te_form"
+            },
+            "v_oishii",
+            "g_desu"
+          ]
+        },
+        {
+          "jp": "大きい 車が ほしいです。",
+          "en": "I want a big car.",
+          "terms": [
+            "v_ookii",
+            "v_kuruma",
+            "p_ga",
+            {
+              "id": "v_hoshii",
+              "form": "polite_adj"
+            }
+          ]
+        },
+        {
+          "jp": "あの 店の カレーは 安いでしょう。",
+          "en": "That store's curry is probably cheap.",
+          "terms": [
+            "v_ano",
+            "v_mise",
+            "p_no",
+            "v_karee",
+            "p_wa",
+            "v_yasui",
+            "g_deshou"
+          ]
         }
       ],
       "questions": [
@@ -956,6 +1012,64 @@
               "id": "v_iku",
               "form": "polite_masu"
             }
+          ]
+        },
+        {
+          "jp": "ピザを 食べました。とても おいしかったです。",
+          "en": "I ate pizza. It was very delicious.",
+          "terms": [
+            "v_piza",
+            "p_wo",
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            },
+            "v_totemo",
+            {
+              "id": "v_oishii",
+              "form": "plain_past_adj"
+            },
+            "g_desu"
+          ]
+        },
+        {
+          "jp": "サンドイッチも 安かったです。",
+          "en": "The sandwich was also cheap.",
+          "terms": [
+            "v_sandoicchi",
+            "p_mo",
+            {
+              "id": "v_yasui",
+              "form": "plain_past_adj"
+            },
+            "g_desu"
+          ]
+        },
+        {
+          "jp": "プリンも 食べました。とても おいしいです。",
+          "en": "I also ate pudding. It is very delicious.",
+          "terms": [
+            "v_purin",
+            "p_mo",
+            {
+              "id": "v_taberu",
+              "form": "polite_mashita"
+            },
+            "v_totemo",
+            "v_oishii",
+            "g_desu"
+          ]
+        },
+        {
+          "jp": "あの 新しい 店も 安いだろう。",
+          "en": "That new store is probably cheap too.",
+          "terms": [
+            "v_ano",
+            "v_atarashii",
+            "v_mise",
+            "p_mo",
+            "v_yasui",
+            "g_darou"
           ]
         }
       ],
