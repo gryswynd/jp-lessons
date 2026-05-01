@@ -4,7 +4,7 @@ Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **21** les
 
 ## Target-vocab gaps
 - Missing from unlocking N's vocabList (declaration): **0**
-- Missing reinforcement in next 2 N lessons: **33**
+- Missing reinforcement in next 2 N lessons: **24**
 - Missing reinforcement in window stories: **90**
 - Misplaced (target term declared in an earlier N lesson): **0**
 
@@ -189,14 +189,6 @@ _targetVocab:_ `v_dasu`, `v_deru`, `v_hairu`, `v_ireru`, `v_hajimaru`, `v_hajime
 _reinforcement window:_ `N4.11`, `N4.12` + stories: `tabisaki-no-shashin`
 _file:_ `data/N4/grammar/G18.json`
 
-**Missing reinforcement in next 2 N lessons (6):**
-- `v_dasu` — not referenced in `N4.11`, `N4.12`
-- `v_deru` — not referenced in `N4.11`, `N4.12`
-- `v_hairu` — not referenced in `N4.11`, `N4.12`
-- `v_ireru` — not referenced in `N4.11`, `N4.12`
-- `v_hajimaru` — not referenced in `N4.11`, `N4.12`
-- `v_hajimeru` — not referenced in `N4.11`, `N4.12`
-
 **Missing reinforcement in window stories (6):**
 - `v_dasu` — not referenced in story `tabisaki-no-shashin`
 - `v_deru` — not referenced in story `tabisaki-no-shashin`
@@ -212,11 +204,8 @@ _targetVocab:_ `p_tekara`, `p_nagara`, `v_mae`, `v_tame`
 _reinforcement window:_ `N4.11`, `N4.12` + stories: `tabisaki-no-shashin`
 _file:_ `data/N4/grammar/G19.json`
 
-**Missing reinforcement in next 2 N lessons (4):**
-- `p_tekara` — not referenced in `N4.12`
+**Missing reinforcement in next 2 N lessons (1):**
 - `p_nagara` — not referenced in `N4.11`, `N4.12`
-- `v_mae` — not referenced in `N4.11`, `N4.12`
-- `v_tame` — not referenced in `N4.11`, `N4.12`
 
 **Missing reinforcement in window stories (3):**
 - `p_nagara` — not referenced in story `tabisaki-no-shashin`

@@ -628,6 +628,48 @@
               "form": "plain_volitional"
             }
           ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "映画が 始まる 前に、お茶を 出すよ。",
+          "en": "I'll bring out some tea before the movie starts.",
+          "terms": [
+            "v_eiga",
+            "p_ga",
+            {
+              "id": "v_hajimaru",
+              "form": "plain_form"
+            },
+            "v_mae",
+            "p_ni",
+            "v_ocha",
+            "p_wo",
+            {
+              "id": "v_dasu",
+              "form": "plain_form"
+            },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "けん",
+          "jp": "映画館に 入って から、ご飯を 食べよう。",
+          "en": "Let's eat after we go into the movie theater.",
+          "terms": [
+            "v_eigakan",
+            "p_ni",
+            {
+              "id": "v_hairu",
+              "form": "te_form"
+            },
+            "p_tekara",
+            "v_gohan",
+            "p_wo",
+            {
+              "id": "v_taberu",
+              "form": "plain_volitional"
+            }
+          ]
         }
       ]
     },
@@ -726,6 +768,109 @@
             },
             {
               "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "りきぞは 家に 入る 前に、お茶を 飲みます。",
+          "en": "Before entering the house, Rikizo drinks tea.",
+          "terms": [
+            "char_rikizo",
+            "p_wa",
+            "v_ie",
+            "p_ni",
+            {
+              "id": "v_hairu",
+              "form": "plain_form"
+            },
+            "v_mae",
+            "p_ni",
+            "v_ocha",
+            "p_wo",
+            {
+              "id": "v_nomu",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "毎日、学校は 八時に 始まります。",
+          "en": "Every day, school begins at eight o'clock.",
+          "terms": [
+            "v_mainichi",
+            "v_gakkou",
+            "p_wa",
+            {
+              "counter": "ji",
+              "n": 8
+            },
+            "p_ni",
+            {
+              "id": "v_hajimaru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "りきぞは 八時に 旅行を 始めます。",
+          "en": "Rikizo starts his trip at eight o'clock.",
+          "terms": [
+            "char_rikizo",
+            "p_wa",
+            {
+              "counter": "ji",
+              "n": 8
+            },
+            "p_ni",
+            "v_ryokou",
+            "p_wo",
+            {
+              "id": "v_hajimeru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "頭が いい 人に なる ために、毎日 本を 読みます。",
+          "en": "In order to become a smart person, he reads books every day.",
+          "terms": [
+            "v_atama",
+            "p_ga",
+            "v_ii",
+            "v_hito",
+            "p_ni",
+            {
+              "id": "v_naru",
+              "form": "plain_form"
+            },
+            "v_tame",
+            "p_ni",
+            "v_mainichi",
+            "v_hon",
+            "p_wo",
+            {
+              "id": "v_yomu",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "りきぞは お茶を 飲みながら、写真を 見ます。",
+          "en": "Rikizo looks at photos while drinking tea.",
+          "terms": [
+            "char_rikizo",
+            "p_wa",
+            "v_ocha",
+            "p_wo",
+            {
+              "id": "v_nomu",
+              "form": "nagara_form"
+            },
+            "v_shashin",
+            "p_wo",
+            {
+              "id": "v_miru",
               "form": "polite_masu"
             }
           ]
@@ -892,6 +1037,73 @@
             {
               "id": "v_aru",
               "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "画家は カメラから 写真を 出して、本の 中に 入れました。",
+          "en": "The painter took photos out from the camera and put them inside the book.",
+          "terms": [
+            "v_gaka",
+            "p_wa",
+            "v_kamera",
+            "p_kara",
+            "v_shashin",
+            "p_wo",
+            {
+              "id": "v_dasu",
+              "form": "te_form"
+            },
+            "v_hon",
+            "p_no",
+            "v_naka",
+            "p_ni",
+            {
+              "id": "v_ireru",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "jp": "画家は 家から 出て、世界中を 旅行します。",
+          "en": "The painter leaves home and travels all over the world.",
+          "terms": [
+            "v_gaka",
+            "p_wa",
+            "v_ie",
+            "p_kara",
+            {
+              "id": "v_deru",
+              "form": "te_form"
+            },
+            "v_sekaijuu",
+            "p_wo",
+            "v_ryokou",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "家を 出て から、画家は 写真を たくさん とりました。",
+          "en": "After leaving the house, the painter took lots of photos.",
+          "terms": [
+            "v_ie",
+            "p_wo",
+            {
+              "id": "v_deru",
+              "form": "te_form"
+            },
+            "p_tekara",
+            "v_gaka",
+            "p_wa",
+            "v_shashin",
+            "p_wo",
+            "v_takusan",
+            {
+              "id": "v_toru",
+              "form": "polite_mashita"
             }
           ]
         }
