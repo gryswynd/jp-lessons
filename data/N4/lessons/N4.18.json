@@ -607,6 +607,130 @@
             "v_ii",
             "p_yo"
           ]
+        },
+        {
+          "spk": "A",
+          "jp": "あのう、今日は 体力が ない んだ。",
+          "en": "Um, today I have no stamina.",
+          "terms": [
+            "v_anou",
+            "v_kyou",
+            "p_wa",
+            "v_tairyoku",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "plain_negative"
+            },
+            "p_nda"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "へえ、どう したの？",
+          "en": "Oh? What happened?",
+          "terms": [
+            "v_hee",
+            "v_dou",
+            {
+              "id": "v_suru",
+              "form": "plain_past"
+            },
+            "p_no_question"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "えーと、毎日 勉強して、運動して いない んだ。",
+          "en": "Um, every day I study and don't exercise.",
+          "terms": [
+            "v_eto",
+            "v_mainichi",
+            {
+              "id": "v_benkyou",
+              "form": "te_form"
+            },
+            {
+              "id": "v_undou",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_negative"
+            },
+            "p_nda"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "なるほど。じつは 私も 同じだよ。",
+          "en": "I see. Actually, I'm the same.",
+          "terms": [
+            "v_naruhodo",
+            "v_jitsuwa",
+            "v_watashi",
+            "p_mo",
+            "v_onaji",
+            "p_yo",
+            "g_da"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "うーん、なんか 力が 出ない 日も ある よね。",
+          "en": "Hmm, like, there are days when strength just doesn't come, right?",
+          "terms": [
+            "v_uun",
+            "v_nanka",
+            "v_chikara",
+            "p_ga",
+            {
+              "id": "v_deru",
+              "form": "plain_negative"
+            },
+            "v_hi",
+            "p_mo",
+            {
+              "id": "v_aru",
+              "form": "plain_form"
+            },
+            "p_ne",
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "そうそう、つまり 休む 時間 も 大切 だよ。",
+          "en": "Right, right — in other words, rest time is also important.",
+          "terms": [
+            "v_souso",
+            "v_tsumari",
+            {
+              "id": "v_yasumu",
+              "form": "plain_form"
+            },
+            "v_jikan",
+            "p_mo",
+            "v_taisetsu",
+            "p_yo",
+            "g_da"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "さあ、明日から 少し 走ろう か。",
+          "en": "Right then, shall we run a little starting tomorrow?",
+          "terms": [
+            "v_saa",
+            "v_ashita",
+            "p_kara",
+            "v_sukoshi",
+            {
+              "id": "v_hashiru",
+              "form": "plain_volitional"
+            },
+            "p_ka"
+          ]
         }
       ]
     },
@@ -711,6 +835,29 @@
             {
               "id": "v_iku",
               "form": "polite_potential"
+            }
+          ]
+        },
+        {
+          "jp": "毎日 勉強して、体力も 心も 強く なりました。",
+          "en": "By studying every day, both my physical strength and my heart became stronger.",
+          "terms": [
+            "v_mainichi",
+            {
+              "id": "v_benkyou",
+              "form": "te_form"
+            },
+            "v_tairyoku",
+            "p_mo",
+            "v_kokoro",
+            "p_mo",
+            {
+              "id": "v_tsuyoi",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
             }
           ]
         }
@@ -904,6 +1051,25 @@
             },
             {
               "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "体力が ない 日は、少し 休みます。",
+          "en": "On days when I have no stamina, I rest a little.",
+          "terms": [
+            "v_tairyoku",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "plain_negative"
+            },
+            "v_hi",
+            "p_wa",
+            "v_sukoshi",
+            {
+              "id": "v_yasumu",
               "form": "polite_masu"
             }
           ]

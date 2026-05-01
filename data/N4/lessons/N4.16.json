@@ -645,6 +645,103 @@
             },
             "p_yo"
           ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "えーと、ポチは 元気 だった？",
+          "en": "Um, was Pochi doing well?",
+          "terms": [
+            "v_eto",
+            "char_pochi",
+            "p_wa",
+            "v_genki",
+            {
+              "id": "g_da",
+              "form": "da_past"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "うーん、毎日 元気 だったよ。",
+          "en": "Hmm, she was healthy every day.",
+          "terms": [
+            "v_uun",
+            "v_mainichi",
+            "v_genki",
+            {
+              "id": "g_da",
+              "form": "da_past"
+            },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "へえ、そう だったんだ。",
+          "en": "Oh really, so that's how it was.",
+          "terms": [
+            "v_hee",
+            "v_sou",
+            {
+              "id": "g_da",
+              "form": "da_past"
+            },
+            "p_nda"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "じつは、去年は 毎日 走って いたよ。",
+          "en": "Actually, last year she was running every day.",
+          "terms": [
+            "v_jitsuwa",
+            "v_kyonen",
+            "p_wa",
+            "v_mainichi",
+            {
+              "id": "v_hashiru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_past"
+            },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "つまり、ポチは 元気な 犬 だね。",
+          "en": "In other words, Pochi is a healthy dog.",
+          "terms": [
+            "v_tsumari",
+            "char_pochi",
+            "p_wa",
+            {
+              "id": "v_genki",
+              "form": "attributive_na"
+            },
+            "v_inu",
+            "p_ne",
+            "g_da"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "さあ、また いっしょに 走ろう。",
+          "en": "Right then, let's run together again.",
+          "terms": [
+            "v_saa",
+            "v_mata",
+            "v_issho",
+            "p_ni",
+            {
+              "id": "v_hashiru",
+              "form": "plain_volitional"
+            }
+          ]
         }
       ]
     },
@@ -752,6 +849,27 @@
             "p_mo",
             "v_un_ga_ii",
             "v_hi",
+            "g_desu"
+          ]
+        },
+        {
+          "jp": "ポチは 小さいし、走るのも 早いし、いい 犬です。",
+          "en": "Pochi is small, and what's more, fast at running too — a good dog.",
+          "terms": [
+            "char_pochi",
+            "p_wa",
+            "v_chiisai",
+            "p_shi",
+            {
+              "id": "v_hashiru",
+              "form": "plain_form"
+            },
+            "p_no",
+            "p_mo",
+            "v_hayai",
+            "p_shi",
+            "v_ii",
+            "v_inu",
             "g_desu"
           ]
         }
@@ -938,6 +1056,26 @@
               "form": "plain_desire_tai"
             },
             "g_desu"
+          ]
+        },
+        {
+          "jp": "雨だったのに、ポチと 外を 走りました。",
+          "en": "Even though it was raining, I ran outside with Pochi.",
+          "terms": [
+            "v_ame",
+            {
+              "id": "g_da",
+              "form": "da_past"
+            },
+            "p_noni",
+            "char_pochi",
+            "p_to",
+            "v_soto",
+            "p_wo",
+            {
+              "id": "v_hashiru",
+              "form": "polite_mashita"
+            }
           ]
         }
       ],

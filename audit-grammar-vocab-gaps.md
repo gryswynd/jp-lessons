@@ -4,7 +4,7 @@ Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **21** les
 
 ## Target-vocab gaps
 - Missing from unlocking N's vocabList (declaration): **0**
-- Missing reinforcement in next 2 N lessons: **24**
+- Missing reinforcement in next 2 N lessons: **10**
 - Missing reinforcement in window stories: **90**
 - Misplaced (target term declared in an earlier N lesson): **0**
 
@@ -219,10 +219,6 @@ _targetVocab:_ `p_noni`, `p_shi`
 _reinforcement window:_ `N4.15`, `N4.16` + stories: `hashiru-asa`
 _file:_ `data/N4/grammar/G20.json`
 
-**Missing reinforcement in next 2 N lessons (2):**
-- `p_noni` — not referenced in `N4.16`
-- `p_shi` — not referenced in `N4.15`, `N4.16`
-
 **Missing reinforcement in window stories (2):**
 - `p_noni` — not referenced in story `hashiru-asa`
 - `p_shi` — not referenced in story `hashiru-asa`
@@ -233,20 +229,6 @@ _unlocksAfter:_ `N4.16` → gating N lesson: `N4.16`
 _targetVocab:_ `v_eto`, `v_anou`, `v_uun`, `v_un`, `v_saa`, `v_naruhodo`, `v_hee`, `v_souso`, `v_jitsuwa`, `v_tsumari`, `v_nanka`, `v_maa`
 _reinforcement window:_ `N4.17`, `N4.18` + stories: `jitensha-de-kyouto-e`
 _file:_ `data/N4/grammar/G21.json`
-
-**Missing reinforcement in next 2 N lessons (12):**
-- `v_eto` — not referenced in `N4.17`, `N4.18`
-- `v_anou` — not referenced in `N4.17`, `N4.18`
-- `v_uun` — not referenced in `N4.17`, `N4.18`
-- `v_un` — not referenced in `N4.17`
-- `v_saa` — not referenced in `N4.17`, `N4.18`
-- `v_naruhodo` — not referenced in `N4.18`
-- `v_hee` — not referenced in `N4.17`, `N4.18`
-- `v_souso` — not referenced in `N4.18`
-- `v_jitsuwa` — not referenced in `N4.17`, `N4.18`
-- `v_tsumari` — not referenced in `N4.17`, `N4.18`
-- `v_nanka` — not referenced in `N4.18`
-- `v_maa` — not referenced in `N4.17`
 
 **Missing reinforcement in window stories (11):**
 - `v_eto` — not referenced in story `jitensha-de-kyouto-e`
