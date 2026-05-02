@@ -35,7 +35,7 @@
 | Section type | Required fields |
 |---|---|
 | `warmup` | `type`, `title`, `instructions`, `items[]` (each: `jp`, `en`, `terms`) |
-| `kanjiGrid` | `type`, `title`, `items[]` (each: `kanji`, `on`, `kun`, `meaning`, `terms`) |
+| `kanjiGrid` | `type`, `title`, `items[]` (each: `kanji`, `on`, `kun`, `meaning`, `terms`; optional `note` for compound-specific readings) |
 | `vocabList` | `type`, `title`, `groups[]` (each: `label`, `items[]` of IDs) |
 | `conversation` | `type`, `title`, `context`, `lines[]` (each: `spk`, `jp`, `en`, `terms`) |
 | `reading` | `type`, `title`, `passage[]` (each: `jp`, `en`, `terms`), `questions[]` (each: `q`, `q_en`, `a`, `a_en`, `terms`, `a_terms`) |
