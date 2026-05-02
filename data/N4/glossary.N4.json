@@ -1272,10 +1272,10 @@
       "lesson_ids": "N4.6",
       "notes": "Noun expressing manner or resemblance. Xのように = like X / in the manner of X. Xのようだ = seems like X. Used with の after nouns, and directly after plain-form verbs. 犬のように走る = run like a dog.",
       "example": {
-        "jp": "漢字が 読めるように なりましたか。",
-        "en": "Have you come to be able to read kanji?",
-        "lessonId": "N4.31",
-        "sectionType": "warmup"
+        "jp": "りきぞ は やまかわさんの ように 上手に 料理を 作りたいです。",
+        "en": "Rikizo wants to cook as skillfully as Yamakawa.",
+        "lessonId": "N4.6",
+        "sectionType": "reading"
       }
     },
     {
@@ -1292,9 +1292,9 @@
       ],
       "readingAlign": "方{のほう}",
       "example": {
-        "jp": "学校の 正門より 校門の 方が 大きいです。",
-        "en": "The school gate is larger than the main gate.",
-        "lessonId": "N4.28",
+        "jp": "兄より 姉の ほうが やさしいです。",
+        "en": "My older sister is kinder than my older brother.",
+        "lessonId": "N4.7",
         "sectionType": "reading"
       }
     },
@@ -1309,10 +1309,10 @@
       "lesson_ids": "N4.6",
       "notes": "Auxiliary adjective expressing resemblance or manner. Casual equivalent of のよう. Attaches directly to nouns without の. みたいに = in a manner like X (adverbial); みたいな + Noun = a noun that is like X (attributive). Do not confuse with the conjecture use (みたいだ = 'it seems like') taught later in G33.",
       "example": {
-        "jp": "台風が 来る みたい だよ。計画は 考えた？",
-        "en": "It looks like a typhoon is coming. Did you think about a plan?",
-        "lessonId": "N4.29",
-        "sectionType": "conversation"
+        "jp": "今日の 空は 春 みたい です。",
+        "en": "Today's sky is like spring.",
+        "lessonId": "N4.8",
+        "sectionType": "reading"
       }
     },
     {
@@ -1343,9 +1343,9 @@
       "lesson_ids": "N4.5",
       "verb_class": "godan",
       "example": {
-        "jp": "りきぞは いつも 昼ご飯を もらっています。味が とても いいです。",
-        "en": "Rikizo always receives lunch. The flavor is very good.",
-        "lessonId": "N4.6",
+        "jp": "兄に きれいな ペンを もらいました。",
+        "en": "I received a beautiful pen from my older brother.",
+        "lessonId": "N4.7",
         "sectionType": "reading"
       }
     },
@@ -1529,8 +1529,8 @@
       "reading": "とりにく",
       "readingAlign": "鳥(とり)肉(にく)",
       "example": {
-        "jp": "今日は 鳥肉の 料理を 食べました。牛肉より おいしかったです。",
-        "en": "Today he ate a chicken dish. It was more delicious than beef.",
+        "jp": "牛肉は 鳥肉ほど おいしくないです。",
+        "en": "Beef is not as delicious as chicken.",
         "lessonId": "N4.6",
         "sectionType": "reading"
       }
@@ -1546,19 +1546,10 @@
       "notes": "体 (N4.12) + 力 (N4.18). Also used as RPG/game stat.",
       "readingAlign": "体(たい)力(りょく)",
       "example": {
-        "jp": "私は 体力が ありません。",
-        "en": "I have no stamina.",
-        "manual": true,
-        "terms": [
-          "v_watashi",
-          "p_wa",
-          "v_tairyoku",
-          "p_ga",
-          {
-            "id": "v_aru",
-            "form": "polite_negative"
-          }
-        ]
+        "jp": "体力が ない 日は、少し 休みます。",
+        "en": "On days when I have no stamina, I rest a little.",
+        "lessonId": "N4.18",
+        "sectionType": "reading"
       }
     },
     {
@@ -1638,8 +1629,8 @@
       "reading": "あに",
       "readingAlign": "兄(あに)",
       "example": {
-        "jp": "私の 家族は 五人です。親と 兄と 姉と 妹と 私です。",
-        "en": "There are five people in my family: my parents, older brother, older sister, younger sister, and me.",
+        "jp": "兄より 姉の ほうが やさしいです。",
+        "en": "My older sister is kinder than my older brother.",
         "lessonId": "N4.7",
         "sectionType": "reading"
       }
@@ -1756,8 +1747,8 @@
       "reading": "いもうと",
       "readingAlign": "妹(いもうと)",
       "example": {
-        "jp": "妹は まだ 小さいですが、とても かわいいです。",
-        "en": "My younger sister is still small, but she is very cute.",
+        "jp": "私は 妹に 本を あげました。",
+        "en": "I gave my younger sister a book.",
         "lessonId": "N4.7",
         "sectionType": "reading"
       }
@@ -1773,10 +1764,10 @@
       "reading": "おとうと",
       "readingAlign": "弟(おとうと)",
       "example": {
-        "jp": "弟、今日 何か 食べたい？",
-        "en": "Little brother, is there anything you want to eat today?",
+        "jp": "弟は 毎日 三時間くらい べんきょうします。",
+        "en": "My younger brother studies about three hours every day.",
         "lessonId": "N4.7",
-        "sectionType": "conversation"
+        "sectionType": "reading"
       }
     },
     {
@@ -1895,8 +1886,8 @@
       "reading": "あき",
       "readingAlign": "秋(あき)",
       "example": {
-        "jp": "秋は 9月から 11月です。木の 色が みどりから 赤や 茶色に なります。",
-        "en": "Autumn is from September to November. The colour of the trees changes from green to red and brown.",
+        "jp": "秋は 春のように すずしいです。",
+        "en": "Autumn is cool like spring.",
         "lessonId": "N4.8",
         "sectionType": "reading"
       }
@@ -1913,8 +1904,8 @@
       "verb_class": "i_adj",
       "readingAlign": "暑(あつ)い",
       "example": {
-        "jp": "夏は 6月から 8月です。とても 暑くて、雨が 多いです。",
-        "en": "Summer is from June to August. It is very hot and there is a lot of rain.",
+        "jp": "夏は 暑い 日ばかりです。",
+        "en": "In summer there are nothing but hot days.",
         "lessonId": "N4.8",
         "sectionType": "reading"
       }
@@ -1947,8 +1938,8 @@
       "reading": "はる",
       "readingAlign": "春(はる)",
       "example": {
-        "jp": "私は 春が いちばん 好きです。",
-        "en": "I like spring the most.",
+        "jp": "私は 春だけ 好きです。",
+        "en": "I like only spring.",
         "lessonId": "N4.8",
         "sectionType": "reading"
       }
@@ -1996,8 +1987,8 @@
       "reading": "なつ",
       "readingAlign": "夏(なつ)",
       "example": {
-        "jp": "春は 夏より すずしいですから、外に 行きます。",
-        "en": "Because spring is cooler than summer, I go outside.",
+        "jp": "夏は 暑い 日ばかりです。",
+        "en": "In summer there are nothing but hot days.",
         "lessonId": "N4.8",
         "sectionType": "reading"
       }
@@ -2048,8 +2039,8 @@
       "reading": "すずしい",
       "verb_class": "i_adj",
       "example": {
-        "jp": "春は すずしくて、花が たくさん あります。",
-        "en": "Spring is cool and there are many flowers.",
+        "jp": "秋は 春のように すずしいです。",
+        "en": "Autumn is cool like spring.",
         "lessonId": "N4.8",
         "sectionType": "reading"
       }
@@ -2065,8 +2056,8 @@
       "reading": "なつやすみ",
       "readingAlign": "夏(なつ)休(やす)み",
       "example": {
-        "jp": "夏は 暑いですが、夏休みが あります。山に 行って、空を 見るのが 好きです。",
-        "en": "Summer is hot, but there is summer vacation. I like going to the mountains and looking at the sky.",
+        "jp": "夏休みしか ありません。",
+        "en": "There is only summer vacation.",
         "lessonId": "N4.8",
         "sectionType": "reading"
       }
@@ -2198,18 +2189,10 @@
       "reading": "べつに",
       "readingAlign": "別(べつ)に",
       "example": {
-        "jp": "別に、好きでは ありません。",
-        "en": "Not particularly — I don't like it.",
-        "manual": true,
-        "terms": [
-          "v_betsuni",
-          "v_suki",
-          "p_dewa",
-          {
-            "id": "v_aru",
-            "form": "polite_negative"
-          }
-        ]
+        "jp": "別に。今の 町で いいよ。",
+        "en": "Not really. The current town is fine.",
+        "lessonId": "N4.9",
+        "sectionType": "conversation"
       }
     },
     {
@@ -2276,8 +2259,8 @@
       "reading": "きんじょ",
       "readingAlign": "近(きん)所(じょ)",
       "example": {
-        "jp": "私の 家の 近所に、きれいな 川が あります。",
-        "en": "In my neighbourhood, there is a beautiful river.",
+        "jp": "近所には 駅しか ありません。",
+        "en": "There is only a station in the neighbourhood.",
         "lessonId": "N4.9",
         "sectionType": "reading"
       }
@@ -2293,8 +2276,8 @@
       "reading": "きょねん",
       "readingAlign": "去(きょ)年(ねん)",
       "example": {
-        "jp": "去年の 春、そこで お花見を しました。",
-        "en": "Last spring, I did hanami there.",
+        "jp": "去年は テレビばかり 見て いました。",
+        "en": "Last year I watched nothing but TV.",
         "lessonId": "N4.9",
         "sectionType": "reading"
       }
@@ -2310,8 +2293,8 @@
       "reading": "まち",
       "readingAlign": "町(まち)",
       "example": {
-        "jp": "私は 小さい まちに 住んで います。",
-        "en": "I live in a small town.",
+        "jp": "私は この 町だけ 好きです。",
+        "en": "I like only this town.",
         "lessonId": "N4.9",
         "sectionType": "reading"
       }
@@ -2573,10 +2556,10 @@
       "verb_class": "ichidan",
       "readingAlign": "始(はじ)める",
       "example": {
-        "jp": "今、習字を 習い 始めたんだ。",
-        "en": "I've just started learning calligraphy.",
-        "lessonId": "N4.32",
-        "sectionType": "conversation"
+        "jp": "りきぞは 八時に 旅行を 始めます。",
+        "en": "Rikizo starts his trip at eight o'clock.",
+        "lessonId": "N4.12",
+        "sectionType": "reading"
       }
     },
     {
@@ -2742,8 +2725,8 @@
       "reading": "じぶん",
       "readingAlign": "自(じ)分(ぶん)",
       "example": {
-        "jp": "また 旅先へ 行って、自分で 写真を とりたいです。",
-        "en": "He wants to go to a travel destination again and take photos on his own.",
+        "jp": "旅館を 出て から、自分で 写真を とりました。",
+        "en": "After leaving the ryokan, he took photos on his own.",
         "lessonId": "N4.11",
         "sectionType": "reading"
       }
@@ -2878,10 +2861,10 @@
       "lesson_ids": "N4.11",
       "reading": "カメラ",
       "example": {
-        "jp": "旅先で カメラで 写真も とりますか。",
-        "en": "Do you also take photos with a camera at your travel destinations?",
+        "jp": "りきぞは カメラを 出して、本の 中に 入れます。",
+        "en": "Rikizo takes out the camera and puts it inside the book.",
         "lessonId": "N4.11",
-        "sectionType": "conversation"
+        "sectionType": "reading"
       }
     },
     {
@@ -3061,8 +3044,8 @@
       "reading": "あたま",
       "readingAlign": "頭(あたま)",
       "example": {
-        "jp": "頭が よくて、心が 大切な 人です。世界中で 人気が あります。",
-        "en": "They are a smart person with an important heart. They are popular all over the world.",
+        "jp": "頭が いい 人に なる ために、毎日 本を 読みます。",
+        "en": "In order to become a smart person, he reads books every day.",
         "lessonId": "N4.12",
         "sectionType": "reading"
       }
@@ -3793,10 +3776,10 @@
       "verb_class": "godan",
       "readingAlign": "急(いそ)ぐ",
       "example": {
-        "jp": "ありがとうございます。急ぐ ように して ください。",
-        "en": "Thank you. Please make an effort to hurry.",
+        "jp": "時間が ないなら、急いで ください。",
+        "en": "If there's no time, please hurry.",
         "lessonId": "N4.27",
-        "sectionType": "conversation"
+        "sectionType": "reading"
       }
     },
     {
@@ -4185,10 +4168,10 @@
       "reading": "くすり",
       "readingAlign": "薬(くすり)",
       "example": {
-        "jp": "薬だけで いいですか。",
-        "en": "Is medicine alone sufficient?",
+        "jp": "薬は あるし、病院も 近いし、毎日 元気です。",
+        "en": "There's medicine, and what's more, the hospital is nearby — every day I feel well.",
         "lessonId": "N4.15",
-        "sectionType": "conversation"
+        "sectionType": "reading"
       }
     },
     {
@@ -4506,8 +4489,8 @@
       "verb_class": "godan",
       "readingAlign": "走(はし)る",
       "example": {
-        "jp": "ポチは 小さい 犬ですが、走るのが 早くて 元気です。",
-        "en": "Pochi is a small dog, but she is fast at running and energetic.",
+        "jp": "雨だったのに、ポチと 外を 走りました。",
+        "en": "Even though it was raining, I ran outside with Pochi.",
         "lessonId": "N4.16",
         "sectionType": "reading"
       }
@@ -4523,8 +4506,8 @@
       "reading": "いぬ",
       "readingAlign": "犬(いぬ)",
       "example": {
-        "jp": "ポチは 小さい 犬ですが、走るのが 早くて 元気です。",
-        "en": "Pochi is a small dog, but she is fast at running and energetic.",
+        "jp": "ポチは 小さいし、走るのも 早いし、いい 犬です。",
+        "en": "Pochi is small, and what's more, fast at running too — a good dog.",
         "lessonId": "N4.16",
         "sectionType": "reading"
       }
@@ -4729,19 +4712,10 @@
       "lesson_ids": "N4.16",
       "notes": "Aizuchi expressing that the speaker has just received new or surprising information. Signals interest and engagement. Neutral-to-casual register.",
       "example": {
-        "jp": "へえ、それは おもしろいですね。",
-        "en": "Oh really? That's interesting.",
-        "manual": true,
-        "terms": [
-          "v_hee",
-          "v_sore",
-          "p_wa",
-          {
-            "id": "v_omoshiroi",
-            "form": "polite_adj"
-          },
-          "p_ne"
-        ]
+        "jp": "へえ、そう だったんだ。",
+        "en": "Oh really, so that's how it was.",
+        "lessonId": "N4.16",
+        "sectionType": "conversation"
       }
     },
     {
@@ -4773,16 +4747,10 @@
         "実は"
       ],
       "example": {
-        "jp": "じつは、私も 日本人です。",
-        "en": "Actually, I'm Japanese too.",
-        "manual": true,
-        "terms": [
-          "v_jitsuwa",
-          "v_watashi",
-          "p_mo",
-          "v_nihonjin",
-          "g_desu"
-        ]
+        "jp": "じつは、去年は 毎日 走って いたよ。",
+        "en": "Actually, last year she was running every day.",
+        "lessonId": "N4.16",
+        "sectionType": "conversation"
       }
     },
     {
@@ -4795,16 +4763,10 @@
       "lesson_ids": "N4.16",
       "notes": "Discourse restructuring marker. Signals a restatement, summary, or simplification of what was previously said. Used when clarifying or getting to the point.",
       "example": {
-        "jp": "つまり、明日は 休みです。",
-        "en": "In other words, tomorrow is a day off.",
-        "manual": true,
-        "terms": [
-          "v_tsumari",
-          "v_ashita",
-          "p_wa",
-          "v_yasumi",
-          "g_desu"
-        ]
+        "jp": "つまり、ポチは 元気な 犬 だね。",
+        "en": "In other words, Pochi is a healthy dog.",
+        "lessonId": "N4.16",
+        "sectionType": "conversation"
       }
     },
     {
@@ -4817,9 +4779,9 @@
       "lesson_ids": "N4.16",
       "notes": "Casual speech filler. Extremely common in younger casual speech as a hesitation marker or softener. Reads as careless or immature in professional or formal contexts — avoid in polite speech.",
       "example": {
-        "jp": "なんか、運転は むずかしかったけど、楽しかったよ。",
-        "en": "Like, the driving was difficult, but it was fun.",
-        "lessonId": "N4.17",
+        "jp": "うーん、なんか 力が 出ない 日も ある よね。",
+        "en": "Hmm, like, there are days when strength just doesn't come, right?",
+        "lessonId": "N4.18",
         "sectionType": "conversation"
       }
     },
@@ -4833,9 +4795,9 @@
       "lesson_ids": "N4.16",
       "notes": "Softens assertions and expresses resigned acceptance or mild uncertainty. More register-neutral than なんか. まあ、そうですね = Well, I suppose so. Can also express mild surprise (まあ！).",
       "example": {
-        "jp": "うん。まあ、むずかしいけど、楽しいよ。",
-        "en": "Yeah. Well, it's difficult, but it's fun.",
-        "lessonId": "N4.18",
+        "jp": "まあ、いいね。さあ、行こう。",
+        "en": "Well, sounds good. Right then, let's go.",
+        "lessonId": "N4.17",
         "sectionType": "conversation"
       }
     },
@@ -5471,8 +5433,8 @@
       "notes": "Often used with suru.",
       "readingAlign": "勉(べん)強(きょう)",
       "example": {
-        "jp": "でも、本を 読みたいですから、月光で 勉強しています。",
-        "en": "But, because I want to read a book, I am studying by moonlight.",
+        "jp": "毎日 勉強して、体力も 心も 強く なりました。",
+        "en": "By studying every day, both my physical strength and my heart became stronger.",
         "lessonId": "N4.18",
         "sectionType": "reading"
       },
@@ -6550,21 +6512,10 @@
       "lesson_ids": "N4.21",
       "notes": "Loanword from English 'flea market'. A market where people sell used or secondhand goods.",
       "example": {
-        "jp": "日曜日に 友だちと フリーマーケットに 行きました。",
-        "en": "On Sunday I went to a flea market with a friend.",
-        "manual": true,
-        "terms": [
-          "v_nichiyoubi",
-          "p_ni",
-          "v_tomodachi",
-          "p_to",
-          "v_furi_maaketto",
-          "p_ni",
-          {
-            "id": "v_iku",
-            "form": "polite_mashita"
-          }
-        ]
+        "jp": "日曜日に フリーマーケットで おきゃくさんに 古い 洋服を 売りました。",
+        "en": "On Sunday, [I] sold old Western clothes to customers at the flea market.",
+        "lessonId": "N4.21",
+        "sectionType": "reading"
       }
     },
     {
@@ -6577,19 +6528,10 @@
       "lesson_ids": "N4.21",
       "notes": "Polite form of 客 (きゃく). The お- prefix and さん suffix make it polite/honorific. Common in service contexts.",
       "example": {
-        "jp": "おきゃくさんが お店に 来ました。",
-        "en": "A customer came to the store.",
-        "manual": true,
-        "terms": [
-          "v_okyakusan",
-          "p_ga",
-          "v_omise",
-          "p_ni",
-          {
-            "id": "v_kuru",
-            "form": "polite_mashita"
-          }
-        ]
+        "jp": "日曜日に フリーマーケットで おきゃくさんに 古い 洋服を 売りました。",
+        "en": "On Sunday, [I] sold old Western clothes to customers at the flea market.",
+        "lessonId": "N4.21",
+        "sectionType": "reading"
       }
     },
     {
@@ -6832,22 +6774,10 @@
       "lesson_ids": "N4.22",
       "notes": "Used as an example foreign surname (written in katakana). Illustrates how foreign names appear in katakana/romaji in Japanese writing contexts.",
       "example": {
-        "jp": "スミスさんは アメリカから 来た 友だちです。",
-        "en": "Smith-san is a friend who came from America.",
-        "manual": true,
-        "terms": [
-          "v_sumisu",
-          "v_san",
-          "p_wa",
-          "v_america",
-          "p_kara",
-          {
-            "id": "v_kuru",
-            "form": "plain_past"
-          },
-          "v_tomodachi",
-          "g_desu"
-        ]
+        "jp": "スミスさんは アメリカから 来た 学生です。",
+        "en": "Smith-san is a student who came from America.",
+        "lessonId": "N4.22",
+        "sectionType": "conversation"
       }
     },
     {
@@ -8395,18 +8325,10 @@
       "notes": "Common surname (Lit. 'Small grove').",
       "readingAlign": "小(こ)林(ばやし)",
       "example": {
-        "jp": "小林さんは 私の 先生です。",
-        "en": "Kobayashi-san is my teacher.",
-        "manual": true,
-        "terms": [
-          "v_kobayashi",
-          "v_san",
-          "p_wa",
-          "v_watashi",
-          "p_no",
-          "v_sensei",
-          "g_desu"
-        ]
+        "jp": "小林さんは 校門の 前で 友だちを 待って います。",
+        "en": "Kobayashi-san is waiting for a friend in front of the school gate.",
+        "lessonId": "N4.28",
+        "sectionType": "reading"
       }
     },
     {
@@ -8732,18 +8654,10 @@
       "reading": "いか",
       "readingAlign": "以(い)下(か)",
       "example": {
-        "jp": "この 本は 千円 以下です。",
-        "en": "This book is one thousand yen or less.",
-        "manual": true,
-        "terms": [
-          "v_kono",
-          "v_hon",
-          "p_wa",
-          "v_sen",
-          "v_en",
-          "v_ika",
-          "g_desu"
-        ]
+        "jp": "この 時計は 五千円 以下で 買えました。",
+        "en": "I was able to buy this watch for less than 5000 yen.",
+        "lessonId": "N4.29",
+        "sectionType": "reading"
       }
     },
     {
@@ -8924,8 +8838,8 @@
       "notes": "Transitive.",
       "readingAlign": "集(あつ)める",
       "example": {
-        "jp": "答えを 集めてから、また 考えるように しました。",
-        "en": "After gathering answers, the student made an effort to think again.",
+        "jp": "父は 古い 写真集を 大切に 集めて います。",
+        "en": "My father collects old photo books with great care.",
         "lessonId": "N4.30",
         "sectionType": "reading"
       }
@@ -9061,22 +8975,10 @@
       "lesson_ids": "N4.30",
       "notes": "Lit. think upwards.",
       "example": {
-        "jp": "あの 人は 思い上がって います。",
-        "en": "That person is being conceited.",
-        "manual": true,
-        "terms": [
-          "v_ano",
-          "v_hito",
-          "p_wa",
-          {
-            "id": "v_omoiagaru",
-            "form": "te_form"
-          },
-          {
-            "id": "v_iru",
-            "form": "polite_masu"
-          }
-        ]
+        "jp": "兄は 少し 思い上がって いるよ。注意した 方が いいね。",
+        "en": "My older brother is a little conceited, you know. It's better to be careful.",
+        "lessonId": "N4.30",
+        "sectionType": "conversation"
       }
     },
     {
@@ -9126,20 +9028,10 @@
       "notes": "Often used as a suffix.",
       "readingAlign": "集(しゅう)",
       "example": {
-        "jp": "この 写真 集は とても きれいです。",
-        "en": "This photo collection is very beautiful.",
-        "manual": true,
-        "terms": [
-          "v_kono",
-          "v_shashin",
-          "v_shuu",
-          "p_wa",
-          "v_totemo",
-          {
-            "id": "v_kirei",
-            "form": "polite_adj"
-          }
-        ]
+        "jp": "父は 古い 写真集を 大切に 集めて います。",
+        "en": "My father collects old photo books with great care.",
+        "lessonId": "N4.30",
+        "sectionType": "reading"
       }
     },
     {
@@ -10106,19 +9998,10 @@
       "notes": "",
       "readingAlign": "場(ば)",
       "example": {
-        "jp": "この 場で 待って ください。",
-        "en": "Please wait in this place.",
-        "manual": true,
-        "terms": [
-          "v_kono",
-          "v_ba",
-          "p_de",
-          {
-            "id": "v_matsu",
-            "form": "te_form"
-          },
-          "v_kudasai"
-        ]
+        "jp": "この 場で 大切な ことを 説明します。",
+        "en": "I will explain something important on this occasion.",
+        "lessonId": "N4.33",
+        "sectionType": "reading"
       }
     },
     {
@@ -11464,8 +11347,8 @@
       "notes": "Compounds: 工 (N4.33) + 業 (N4.36).",
       "readingAlign": "工(こう)業(ぎょう)",
       "example": {
-        "jp": "工業の 産物は、ほかの 地区や 世界に 運ばれて います。",
-        "en": "Industrial products are transported to other areas and the world.",
+        "jp": "工業が 強くなるかどうか、これから 分かります。",
+        "en": "We will find out from now on whether industry will become strong or not.",
         "lessonId": "N4.36",
         "sectionType": "reading"
       }
@@ -11518,8 +11401,8 @@
       "notes": "Compounds: 産 (N4.36) + 業 (N4.36).",
       "readingAlign": "産(さん)業(ぎょう)",
       "example": {
-        "jp": "この 町に 来て みると、産業が とても 大切だと 分かります。",
-        "en": "When you come and try visiting this town, you understand that industry is very important.",
+        "jp": "日本の 産業に ついて、たくさん 学びました。",
+        "en": "I learned a lot about Japan's industries.",
         "lessonId": "N4.36",
         "sectionType": "reading"
       }
@@ -11632,25 +11515,10 @@
       ],
       "notes": "Godan verb. Kanji 驚く not taught until N1, so written in hiragana.",
       "example": {
-        "jp": "その 写真を 見て、私は とても おどろきました。",
-        "en": "When I saw that photo, I was very surprised.",
-        "manual": true,
-        "terms": [
-          "v_sono",
-          "v_shashin",
-          "p_wo",
-          {
-            "id": "v_miru",
-            "form": "te_form"
-          },
-          "v_watashi",
-          "p_wa",
-          "v_totemo",
-          {
-            "id": "v_odoroku",
-            "form": "polite_mashita"
-          }
-        ]
+        "jp": "東京で たくさんの 人を 見て、おどろきました。",
+        "en": "I saw lots of people in Tokyo and was surprised.",
+        "lessonId": "N4.17",
+        "sectionType": "reading"
       }
     }
   ]
