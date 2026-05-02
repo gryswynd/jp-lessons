@@ -774,18 +774,10 @@
       "reading": "ふぼ",
       "readingAlign": "父(ふ)母(ぼ)",
       "example": {
-        "jp": "父母 は とても やさしいです。",
-        "en": "My parents are very kind.",
-        "manual": true,
-        "terms": [
-          "v_fubo",
-          "p_wa",
-          "v_totemo",
-          {
-            "id": "v_yasashii",
-            "form": "polite_adj"
-          }
-        ]
+        "jp": "父母は いっしょに 生きます。",
+        "en": "My parents live together.",
+        "lessonId": "N5.1",
+        "sectionType": "reading"
       }
     },
     {
@@ -918,7 +910,13 @@
       "gtype": "verb",
       "verb_class": "ichidan",
       "lesson_ids": "N5.1",
-      "notes": ""
+      "notes": "",
+      "example": {
+        "jp": "父母は いっしょに 生きます。",
+        "en": "My parents live together.",
+        "lessonId": "N5.1",
+        "sectionType": "reading"
+      }
     },
     {
       "id": "v_iru",
@@ -949,10 +947,10 @@
       ],
       "notes": "一 (N5.1) + 緒 (N3.4). From N3.4 onward, write as 一緒に. matches[] retained for legacy pre-N3.4 content.",
       "example": {
-        "jp": "いっしょに 帰りませんか。",
-        "en": "Would you like to go home together?",
-        "lessonId": "N4.2",
-        "sectionType": "warmup"
+        "jp": "父母は いっしょに 生きます。",
+        "en": "My parents live together.",
+        "lessonId": "N5.1",
+        "sectionType": "reading"
       }
     },
     {
