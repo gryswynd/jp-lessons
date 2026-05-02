@@ -673,20 +673,6 @@
             "p_ne",
             "p_yo"
           ]
-        },
-        {
-          "spk": "ミキ",
-          "jp": "川の 魚は 大きいんだよ。",
-          "en": "The river fish are big, you know.",
-          "terms": [
-            "v_kawa",
-            "p_no",
-            "v_sakana",
-            "p_wa",
-            "v_ookii",
-            "p_nda",
-            "p_yo"
-          ]
         }
       ]
     },
@@ -799,19 +785,6 @@
               "id": "v_kuru",
               "form": "plain_desire_tai"
             },
-            "g_desu"
-          ]
-        },
-        {
-          "jp": "雨ですけど、空気は きれいです。",
-          "en": "It's raining, but the air is clean.",
-          "terms": [
-            "v_ame",
-            "g_desu",
-            "p_kedo",
-            "v_kuuki",
-            "p_wa",
-            "v_kirei",
             "g_desu"
           ]
         }
@@ -1003,25 +976,6 @@
             },
             "g_desu",
             "p_ka"
-          ]
-        },
-        {
-          "jp": "雨が 来ますので、家で 休みます。",
-          "en": "Because rain is coming, I will rest at home.",
-          "terms": [
-            "v_ame",
-            "p_ga",
-            {
-              "id": "v_kuru",
-              "form": "polite_masu"
-            },
-            "p_node",
-            "v_ie",
-            "p_de",
-            {
-              "id": "v_yasumu",
-              "form": "polite_masu"
-            }
           ]
         }
       ],

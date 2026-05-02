@@ -552,10 +552,15 @@
       "lesson_ids": "N5.1",
       "notes": "Loanword from English 'bed'.",
       "example": {
-        "jp": "先生の ベッドは いいです。",
-        "en": "The teacher's bed is nice.",
-        "lessonId": "N5.1",
-        "sectionType": "reading"
+        "jp": "父 の ベッド です。",
+        "en": "It's my father's bed.",
+        "manual": true,
+        "terms": [
+          "v_chichi",
+          "p_no",
+          "v_beddo",
+          "g_desu"
+        ]
       }
     },
     {
@@ -586,10 +591,17 @@
       "reading": "だんし",
       "readingAlign": "男(だん)子(し)",
       "example": {
-        "jp": "わたしは 男子です。",
-        "en": "I am a boy student.",
-        "lessonId": "N5.1",
-        "sectionType": "conversation"
+        "jp": "男子 は 先生 の 友だち です。",
+        "en": "The boys are the teacher's friends.",
+        "manual": true,
+        "terms": [
+          "v_danshi",
+          "p_wa",
+          "v_sensei",
+          "p_no",
+          "v_tomodachi",
+          "g_desu"
+        ]
       }
     },
     {
@@ -667,13 +679,7 @@
       "type": "vocab",
       "gtype": "adnominal",
       "lesson_ids": "N5.1",
-      "notes": "Ko-so-a-do modifier: far from both speaker and listener. Counterpart of こんな and そんな.",
-      "example": {
-        "jp": "こんな 人は やさしいです。そんな 人も いいです。あんな 人も いいですね。",
-        "en": "This kind of person is kind. That kind of person is also good. That kind of person (over there) is also good, isn't it.",
-        "lessonId": "N5.2",
-        "sectionType": "conversation"
-      }
+      "notes": "Ko-so-a-do modifier: far from both speaker and listener. Counterpart of こんな and そんな."
     },
     {
       "id": "v_dou",
@@ -699,13 +705,7 @@
       "type": "vocab",
       "gtype": "adverb",
       "lesson_ids": "N5.1",
-      "notes": "Ko-so-a-do manner adverb: near speaker. Counterpart of そう (like that) and ああ (like that, far).",
-      "example": {
-        "jp": "父は こう します。母は そう します。先生は ああ します。",
-        "en": "My father does it like this. My mother does it like that. The teacher does it like that (over there).",
-        "lessonId": "N5.2",
-        "sectionType": "conversation"
-      }
+      "notes": "Ko-so-a-do manner adverb: near speaker. Counterpart of そう (like that) and ああ (like that, far)."
     },
     {
       "id": "v_sou",
@@ -731,13 +731,7 @@
       "type": "vocab",
       "gtype": "adverb",
       "lesson_ids": "N5.1",
-      "notes": "Ko-so-a-do manner adverb: far from both speaker and listener. Counterpart of こう and そう.",
-      "example": {
-        "jp": "父は こう します。母は そう します。先生は ああ します。",
-        "en": "My father does it like this. My mother does it like that. The teacher does it like that (over there).",
-        "lessonId": "N5.2",
-        "sectionType": "conversation"
-      }
+      "notes": "Ko-so-a-do manner adverb: far from both speaker and listener. Counterpart of こう and そう."
     },
     {
       "id": "v_fubo",
@@ -841,8 +835,8 @@
       "lesson_ids": "N5.1",
       "notes": "Common adjective meaning 'good' or 'nice'. Irregular conjugation: stems from よ- (e.g. よくない, よかった), not from い-.",
       "example": {
-        "jp": "先生の ベッドは いいです。",
-        "en": "The teacher's bed is nice.",
+        "jp": "先生の パソコンは いいです。テレビが あります。トイレが あります。",
+        "en": "The teacher's computer is good. There is a TV. There is a bathroom.",
         "lessonId": "N5.1",
         "sectionType": "reading"
       }
@@ -959,10 +953,17 @@
       "reading": "じょし",
       "readingAlign": "女(じょ)子(し)",
       "example": {
-        "jp": "りきぞさんは 男子ですか、女子ですか。",
-        "en": "Rikizo-san, are you a boy student or a girl student?",
-        "lessonId": "N5.1",
-        "sectionType": "conversation"
+        "jp": "女子 は やさしいです。",
+        "en": "The girls are kind.",
+        "manual": true,
+        "terms": [
+          "v_joshi",
+          "p_wa",
+          {
+            "id": "v_yasashii",
+            "form": "polite_adj"
+          }
+        ]
       }
     },
     {
@@ -993,10 +994,17 @@
       "reading": "おんなのひと",
       "readingAlign": "女(おんな)の人(ひと)",
       "example": {
-        "jp": "父は 男の人です。母は 女の人です。",
-        "en": "My father is a man. My mother is a woman.",
-        "lessonId": "N5.1",
-        "sectionType": "reading"
+        "jp": "女の人 は 父 の 先生 です。",
+        "en": "The woman is my father's teacher.",
+        "manual": true,
+        "terms": [
+          "v_onnanohito",
+          "p_wa",
+          "v_chichi",
+          "p_no",
+          "v_sensei",
+          "g_desu"
+        ]
       }
     },
     {
@@ -1010,10 +1018,16 @@
       "reading": "おんなのこ",
       "readingAlign": "女(おんな)の子(こ)",
       "example": {
-        "jp": "わたしの 子どもは 女の子です。",
-        "en": "My child is a girl.",
-        "lessonId": "N5.1",
-        "sectionType": "reading"
+        "jp": "あなた の 女の子 です か。",
+        "en": "Is she your daughter?",
+        "manual": true,
+        "terms": [
+          "v_anata",
+          "p_no",
+          "v_onnanoko",
+          "g_desu",
+          "p_ka"
+        ]
       }
     },
     {
@@ -1044,10 +1058,17 @@
       "reading": "おとこのひと",
       "readingAlign": "男(おとこ)の人(ひと)",
       "example": {
-        "jp": "父は 男の人です。母は 女の人です。",
-        "en": "My father is a man. My mother is a woman.",
-        "lessonId": "N5.1",
-        "sectionType": "reading"
+        "jp": "男の人 は 友だち の 父 です。",
+        "en": "The man is my friend's father.",
+        "manual": true,
+        "terms": [
+          "v_otokonohito",
+          "p_wa",
+          "v_tomodachi",
+          "p_no",
+          "v_chichi",
+          "g_desu"
+        ]
       }
     },
     {
@@ -1083,10 +1104,10 @@
       "reading": "こども",
       "readingAlign": "子(こ)ども",
       "example": {
-        "jp": "わたしの 子どもは 女の子です。",
-        "en": "My child is a girl.",
-        "lessonId": "N5.1",
-        "sectionType": "reading"
+        "jp": "お母さんは 子どもに 野菜を 食べさせました。",
+        "en": "The mother made the child eat vegetables.",
+        "lessonId": "N4.34",
+        "sectionType": "warmup"
       }
     },
     {
@@ -1576,8 +1597,8 @@
       "reading": "ひ",
       "readingAlign": "火(ひ)",
       "example": {
-        "jp": "どこに 火が ありますか。",
-        "en": "Where is the fire?",
+        "jp": "ゲームに 水、木、火、土が あります。",
+        "en": "In the game there are water, trees, fire, and soil.",
         "lessonId": "N5.2",
         "sectionType": "reading"
       }
@@ -3401,10 +3422,10 @@
       "lesson_ids": "N5.1",
       "notes": "A place far from both speaker and listener.",
       "example": {
-        "jp": "ここに 水が あります。そこに 木が あります。あそこに 金が あります。",
-        "en": "Here there is water. There there are trees. Over there there is gold.",
-        "lessonId": "N5.2",
-        "sectionType": "reading"
+        "jp": "あそこの 食堂、来週 開店するって 聞いたよ。",
+        "en": "I heard that cafeteria over there is opening next week.",
+        "lessonId": "N4.31",
+        "sectionType": "conversation"
       }
     },
     {

@@ -638,33 +638,6 @@
             },
             "char_rikizo"
           ]
-        },
-        {
-          "spk": "コナー",
-          "jp": "りきぞほど 正しい 考え方を 持って いる 人は いない よ。",
-          "en": "There's no one who holds the correct way of thinking as much as Rikizo.",
-          "terms": [
-            "char_rikizo",
-            "p_hodo",
-            "v_tadashii",
-            "v_kangaekata",
-            "p_wo",
-            {
-              "id": "v_motsu",
-              "form": "te_form"
-            },
-            {
-              "id": "v_iru",
-              "form": "plain_form"
-            },
-            "v_hito",
-            "p_wa",
-            {
-              "id": "v_iru",
-              "form": "plain_negative"
-            },
-            "p_yo"
-          ]
         }
       ]
     },
@@ -818,29 +791,6 @@
               "form": "polite_masu"
             }
           ]
-        },
-        {
-          "jp": "正しい 考え方を 大切に するなら、毎日 進みます。",
-          "en": "If you treat the correct way of thinking as important, you will progress every day.",
-          "terms": [
-            "v_tadashii",
-            "v_kangaekata",
-            "p_wo",
-            {
-              "id": "v_taisetsu",
-              "form": "adverbial"
-            },
-            {
-              "id": "v_suru",
-              "form": "plain_form"
-            },
-            "p_nara",
-            "v_mainichi",
-            {
-              "id": "v_susumu",
-              "form": "polite_masu"
-            }
-          ]
         }
       ],
       "questions": [
@@ -902,14 +852,8 @@
             },
             "p_to_quote",
             "g_da",
-            {
-              "id": "v_iu",
-              "form": "te_form"
-            },
-            {
-              "id": "v_iru",
-              "form": "polite_masu"
-            }
+            {"id": "v_iu", "form": "te_form"},
+            {"id": "v_iru", "form": "polite_masu"}
           ]
         },
         {
@@ -1106,26 +1050,6 @@
               "form": "polite_adj"
             }
           ]
-        },
-        {
-          "jp": "考え方が 正しくなければ、いい 考えは 出ません。",
-          "en": "If your way of thinking is not correct, good ideas will not come out.",
-          "terms": [
-            "v_kangaekata",
-            "p_ga",
-            {
-              "id": "v_tadashii",
-              "form": "adverbial"
-            },
-            "p_nakereba",
-            "v_ii",
-            "v_kangae",
-            "p_wa",
-            {
-              "id": "v_deru",
-              "form": "polite_negative"
-            }
-          ]
         }
       ],
       "questions": [
@@ -1166,14 +1090,8 @@
             "v_kangaekata",
             "p_ni",
             "v_chuui",
-            {
-              "id": "v_suru",
-              "form": "nakereba"
-            },
-            {
-              "id": "v_ikeru",
-              "form": "polite_negative"
-            }
+            {"id": "v_suru", "form": "nakereba"},
+            {"id": "v_ikeru", "form": "polite_negative"}
           ]
         },
         {
@@ -1209,10 +1127,7 @@
             },
             "v_kudasai",
             "p_to_quote",
-            {
-              "id": "v_iu",
-              "form": "polite_mashita"
-            }
+            {"id": "v_iu", "form": "polite_mashita"}
           ]
         },
         {
@@ -1249,16 +1164,10 @@
               "id": "v_kiku",
               "form": "tari_form"
             },
-            {
-              "id": "v_suru",
-              "form": "plain_form"
-            },
+            {"id": "v_suru", "form": "plain_form"},
             "v_koto",
             "p_ga",
-            {
-              "id": "v_taisetsu",
-              "form": "polite_adj"
-            },
+            {"id": "v_taisetsu", "form": "polite_adj"},
             "g_desu"
           ]
         }

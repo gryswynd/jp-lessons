@@ -604,53 +604,6 @@
             },
             "p_yo"
           ]
-        },
-        {
-          "spk": "A",
-          "jp": "また 旅行に 出る 前に、カメラを 出すよ。",
-          "en": "Before heading out on a trip again, I'll take the camera out.",
-          "terms": [
-            "v_mata",
-            "v_ryokou",
-            "p_ni",
-            {
-              "id": "v_deru",
-              "form": "plain_form"
-            },
-            "v_mae",
-            "p_ni",
-            "v_kamera",
-            "p_wo",
-            {
-              "id": "v_dasu",
-              "form": "plain_form"
-            },
-            "p_yo"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "うん。外国の 旅館に 入って から、写真を とるよ。",
-          "en": "Yeah. After we get into the ryokan abroad, we'll take photos.",
-          "terms": [
-            "v_un",
-            "v_gaikoku",
-            "p_no",
-            "v_ryokan",
-            "p_ni",
-            {
-              "id": "v_hairu",
-              "form": "te_form"
-            },
-            "p_tekara",
-            "v_shashin",
-            "p_wo",
-            {
-              "id": "v_toru",
-              "form": "plain_form"
-            },
-            "p_yo"
-          ]
         }
       ]
     },
@@ -760,71 +713,6 @@
               "form": "plain_desire_tai"
             },
             "g_desu"
-          ]
-        },
-        {
-          "jp": "りきぞは 旅館に 入る 前に、写真を とりました。",
-          "en": "Before Rikizo entered the ryokan, he took photos.",
-          "terms": [
-            "char_rikizo",
-            "p_wa",
-            "v_ryokan",
-            "p_ni",
-            {
-              "id": "v_hairu",
-              "form": "plain_form"
-            },
-            "v_mae",
-            "p_ni",
-            "v_shashin",
-            "p_wo",
-            {
-              "id": "v_toru",
-              "form": "polite_mashita"
-            }
-          ]
-        },
-        {
-          "jp": "りきぞは カメラを 出して、本の 中に 入れます。",
-          "en": "Rikizo takes out the camera and puts it inside the book.",
-          "terms": [
-            "char_rikizo",
-            "p_wa",
-            "v_kamera",
-            "p_wo",
-            {
-              "id": "v_dasu",
-              "form": "te_form"
-            },
-            "v_hon",
-            "p_no",
-            "v_naka",
-            "p_ni",
-            {
-              "id": "v_ireru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "jp": "旅館を 出て から、自分で 写真を とりました。",
-          "en": "After leaving the ryokan, he took photos on his own.",
-          "terms": [
-            "v_ryokan",
-            "p_wo",
-            {
-              "id": "v_deru",
-              "form": "te_form"
-            },
-            "p_tekara",
-            "v_jibun",
-            "p_de",
-            "v_shashin",
-            "p_wo",
-            {
-              "id": "v_toru",
-              "form": "polite_mashita"
-            }
           ]
         }
       ],
@@ -1026,78 +914,6 @@
               "form": "plain_desire_tai"
             },
             "g_desu"
-          ]
-        },
-        {
-          "jp": "父の 旅行は 来月 始まります。",
-          "en": "My father's trip begins next month.",
-          "terms": [
-            "v_chichi",
-            "p_no",
-            "v_ryokou",
-            "p_wa",
-            "v_raigetsu",
-            {
-              "id": "v_hajimaru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "jp": "父は 来月 新しい 旅行を 始めます。",
-          "en": "My father starts a new trip next month.",
-          "terms": [
-            "v_chichi",
-            "p_wa",
-            "v_raigetsu",
-            "v_atarashii",
-            "v_ryokou",
-            "p_wo",
-            {
-              "id": "v_hajimeru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "jp": "世界中の 写真の ために、父は 自分で 旅行します。",
-          "en": "For the sake of photos from all over the world, my father travels on his own.",
-          "terms": [
-            "v_sekaijuu",
-            "p_no",
-            "v_shashin",
-            "p_no",
-            "v_tame",
-            "p_ni",
-            "v_chichi",
-            "p_wa",
-            "v_jibun",
-            "p_de",
-            "v_ryokou",
-            {
-              "id": "v_suru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "jp": "父は 旅行しながら、たくさん 写真を とります。",
-          "en": "My father takes lots of photos while traveling.",
-          "terms": [
-            "v_chichi",
-            "p_wa",
-            "v_ryokou",
-            {
-              "id": "v_suru",
-              "form": "nagara_form"
-            },
-            "v_takusan",
-            "v_shashin",
-            "p_wo",
-            {
-              "id": "v_toru",
-              "form": "polite_masu"
-            }
           ]
         }
       ],

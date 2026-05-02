@@ -1,10 +1,10 @@
 # Grammar Vocab Gating Audit
 
-Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **21** lessons.
+Audited **31** G lessons (**26** have curated `targetVocab`). Gaps in **22** lessons.
 
 ## Target-vocab gaps
 - Missing from unlocking N's vocabList (declaration): **0**
-- Missing reinforcement in next 2 N lessons: **2**
+- Missing reinforcement in next 2 N lessons: **87**
 - Missing reinforcement in window stories: **90**
 - Misplaced (target term declared in an earlier N lesson): **0**
 
@@ -33,6 +33,31 @@ _unlocksAfter:_ `N5.1` → gating N lesson: `N5.1`
 _targetVocab:_ `v_kore`, `v_sore`, `v_are`, `v_dore`, `v_kono`, `v_sono`, `v_ano`, `v_dono`, `v_koko`, `v_soko`, `v_asoko`, `v_doko`, `v_kochira`, `v_sochira`, `v_achira`, `v_dochira`, `v_kou`, `v_sou`, `v_aa`, `v_dou`, `v_konna`, `v_sonna`, `v_anna`, `v_donna`
 _reinforcement window:_ `N5.2`, `N5.3` + stories: `my-family`, `tanjoubi-no-keeki`
 _file:_ `data/N5/grammar/G2.json`
+
+**Missing reinforcement in next 2 N lessons (23):**
+- `v_kore` — not referenced in `N5.2`
+- `v_sore` — not referenced in `N5.2`
+- `v_are` — not referenced in `N5.2`
+- `v_dore` — not referenced in `N5.2`
+- `v_kono` — not referenced in `N5.2`, `N5.3`
+- `v_sono` — not referenced in `N5.2`, `N5.3`
+- `v_ano` — not referenced in `N5.2`, `N5.3`
+- `v_dono` — not referenced in `N5.2`, `N5.3`
+- `v_koko` — not referenced in `N5.2`, `N5.3`
+- `v_soko` — not referenced in `N5.2`, `N5.3`
+- `v_asoko` — not referenced in `N5.2`, `N5.3`
+- `v_doko` — not referenced in `N5.2`, `N5.3`
+- `v_kochira` — not referenced in `N5.2`, `N5.3`
+- `v_sochira` — not referenced in `N5.2`, `N5.3`
+- `v_achira` — not referenced in `N5.2`, `N5.3`
+- `v_dochira` — not referenced in `N5.2`, `N5.3`
+- `v_kou` — not referenced in `N5.2`, `N5.3`
+- `v_sou` — not referenced in `N5.2`, `N5.3`
+- `v_aa` — not referenced in `N5.2`, `N5.3`
+- `v_konna` — not referenced in `N5.2`, `N5.3`
+- `v_sonna` — not referenced in `N5.2`, `N5.3`
+- `v_anna` — not referenced in `N5.2`, `N5.3`
+- `v_donna` — not referenced in `N5.3`
 
 **Missing reinforcement in window stories (24):**
 - `v_kore` — not referenced in story `my-family`, `tanjoubi-no-keeki`
@@ -67,6 +92,9 @@ _targetVocab:_ `p_wa`, `p_ga`, `p_no`, `p_ka`, `p_wo`
 _reinforcement window:_ `N5.2`, `N5.3` + stories: `my-family`, `tanjoubi-no-keeki`
 _file:_ `data/N5/grammar/G3.json`
 
+**Missing reinforcement in next 2 N lessons (1):**
+- `p_wo` — not referenced in `N5.3`
+
 **Missing reinforcement in window stories (3):**
 - `p_ga` — not referenced in story `my-family`
 - `p_ka` — not referenced in story `my-family`, `tanjoubi-no-keeki`
@@ -78,6 +106,12 @@ _unlocksAfter:_ `N5.2` → gating N lesson: `N5.2`
 _targetVocab:_ `p_mo`, `p_to`, `p_ya`, `p_kara`, `p_made`, `p_made_ni`, `p_ni`
 _reinforcement window:_ `N5.3`, `N5.4` + stories: `tanjoubi-no-keeki`
 _file:_ `data/N5/grammar/G4.json`
+
+**Missing reinforcement in next 2 N lessons (4):**
+- `p_ya` — not referenced in `N5.3`, `N5.4`
+- `p_kara` — not referenced in `N5.3`, `N5.4`
+- `p_made` — not referenced in `N5.3`, `N5.4`
+- `p_made_ni` — not referenced in `N5.3`, `N5.4`
 
 **Missing reinforcement in window stories (7):**
 - `p_mo` — not referenced in story `tanjoubi-no-keeki`
@@ -95,6 +129,11 @@ _targetVocab:_ `p_ni`, `p_de`, `p_e`, `v_aru`, `v_iru`
 _reinforcement window:_ `N5.6`, `N5.7` + stories: `kazoku-ga-kimasu`
 _file:_ `data/N5/grammar/G5.json`
 
+**Missing reinforcement in next 2 N lessons (3):**
+- `p_ni` — not referenced in `N5.7`
+- `v_aru` — not referenced in `N5.7`
+- `v_iru` — not referenced in `N5.6`, `N5.7`
+
 **Missing reinforcement in window stories (1):**
 - `v_iru` — not referenced in story `kazoku-ga-kimasu`
 
@@ -104,6 +143,11 @@ _unlocksAfter:_ `N5.Review.4` → gating N lesson: `N5.8`
 _targetVocab:_ `v_iru`, `v_hoshii`, `g_deshou`, `g_darou`
 _reinforcement window:_ `N5.9`, `N5.10` + stories: `kyuujitsu-no-rikizo`
 _file:_ `data/N5/grammar/G9.json`
+
+**Missing reinforcement in next 2 N lessons (3):**
+- `v_hoshii` — not referenced in `N5.9`, `N5.10`
+- `g_deshou` — not referenced in `N5.9`, `N5.10`
+- `g_darou` — not referenced in `N5.9`, `N5.10`
 
 **Missing reinforcement in window stories (3):**
 - `v_hoshii` — not referenced in story `kyuujitsu-no-rikizo`
@@ -117,6 +161,12 @@ _targetVocab:_ `p_ga_but`, `p_kedo`, `p_kara_because`, `p_node`, `p_ndesu`, `p_n
 _reinforcement window:_ `N5.10`, `N5.11` + stories: `kyuujitsu-no-rikizo`
 _file:_ `data/N5/grammar/G10.json`
 
+**Missing reinforcement in next 2 N lessons (4):**
+- `p_kedo` — not referenced in `N5.11`
+- `p_node` — not referenced in `N5.10`, `N5.11`
+- `p_ndesu` — not referenced in `N5.10`
+- `p_nda` — not referenced in `N5.10`, `N5.11`
+
 **Missing reinforcement in window stories (5):**
 - `p_ga_but` — not referenced in story `kyuujitsu-no-rikizo`
 - `p_kedo` — not referenced in story `kyuujitsu-no-rikizo`
@@ -124,12 +174,25 @@ _file:_ `data/N5/grammar/G10.json`
 - `p_ndesu` — not referenced in story `kyuujitsu-no-rikizo`
 - `p_nda` — not referenced in story `kyuujitsu-no-rikizo`
 
+## G12 — na-Adjective Conjugation
+
+_unlocksAfter:_ `N5.11` → gating N lesson: `N5.11`
+_targetVocab:_ `v_kirei`
+_reinforcement window:_ `N5.12`, `N5.13` + stories: `ame-no-hi-no-gakkou`, `yonde-kaite`
+_file:_ `data/N5/grammar/G12.json`
+
+**Missing reinforcement in next 2 N lessons (1):**
+- `v_kirei` — not referenced in `N5.12`, `N5.13`
+
 ## G13 — Potential Form — Can / Able to
 
 _unlocksAfter:_ `N4.3` → gating N lesson: `N4.3`
 _targetVocab:_ `v_dekiru`
 _reinforcement window:_ `N4.4`, `N4.5` + stories: `watashi-no-iro`
 _file:_ `data/N4/grammar/G13.json`
+
+**Missing reinforcement in next 2 N lessons (1):**
+- `v_dekiru` — not referenced in `N4.4`, `N4.5`
 
 **Missing reinforcement in window stories (1):**
 - `v_dekiru` — not referenced in story `watashi-no-iro`
@@ -140,6 +203,12 @@ _unlocksAfter:_ `N4.5` → gating N lesson: `N4.5`
 _targetVocab:_ `v_ageru`, `v_morau`, `v_kureru`, `v_hoshii`
 _reinforcement window:_ `N4.6`, `N4.7` + stories: `hirugohan-monogatari`
 _file:_ `data/N4/grammar/G14.json`
+
+**Missing reinforcement in next 2 N lessons (4):**
+- `v_ageru` — not referenced in `N4.7`
+- `v_morau` — not referenced in `N4.7`
+- `v_kureru` — not referenced in `N4.6`
+- `v_hoshii` — not referenced in `N4.6`, `N4.7`
 
 **Missing reinforcement in window stories (3):**
 - `v_morau` — not referenced in story `hirugohan-monogatari`
@@ -153,6 +222,12 @@ _targetVocab:_ `p_yori`, `p_hodo`, `p_kurai`, `v_hou`, `v_ichiban`, `v_dochira`
 _reinforcement window:_ `N4.6`, `N4.7` + stories: `hirugohan-monogatari`
 _file:_ `data/N4/grammar/G15.json`
 
+**Missing reinforcement in next 2 N lessons (4):**
+- `p_hodo` — not referenced in `N4.6`
+- `p_kurai` — not referenced in `N4.6`, `N4.7`
+- `v_hou` — not referenced in `N4.6`, `N4.7`
+- `v_dochira` — not referenced in `N4.6`
+
 **Missing reinforcement in window stories (3):**
 - `p_hodo` — not referenced in story `hirugohan-monogatari`
 - `p_kurai` — not referenced in story `hirugohan-monogatari`
@@ -165,6 +240,10 @@ _targetVocab:_ `v_you_manner`, `v_mitai`, `p_no`, `p_ni`
 _reinforcement window:_ `N4.7`, `N4.8` + stories: `kazoku-no-kisetsu`
 _file:_ `data/N4/grammar/G16.json`
 
+**Missing reinforcement in next 2 N lessons (2):**
+- `v_you_manner` — not referenced in `N4.7`, `N4.8`
+- `v_mitai` — not referenced in `N4.7`, `N4.8`
+
 **Missing reinforcement in window stories (2):**
 - `v_you_manner` — not referenced in story `kazoku-no-kisetsu`
 - `v_mitai` — not referenced in story `kazoku-no-kisetsu`
@@ -175,6 +254,12 @@ _unlocksAfter:_ `N4.7` → gating N lesson: `N4.7`
 _targetVocab:_ `p_dake`, `p_shika`, `p_bakari`, `p_demo`
 _reinforcement window:_ `N4.8`, `N4.9` + stories: `kazoku-no-kisetsu`
 _file:_ `data/N4/grammar/G17.json`
+
+**Missing reinforcement in next 2 N lessons (4):**
+- `p_dake` — not referenced in `N4.8`, `N4.9`
+- `p_shika` — not referenced in `N4.8`, `N4.9`
+- `p_bakari` — not referenced in `N4.8`, `N4.9`
+- `p_demo` — not referenced in `N4.8`, `N4.9`
 
 **Missing reinforcement in window stories (4):**
 - `p_dake` — not referenced in story `kazoku-no-kisetsu`
@@ -188,6 +273,14 @@ _unlocksAfter:_ `N4.10` → gating N lesson: `N4.10`
 _targetVocab:_ `v_dasu`, `v_deru`, `v_hairu`, `v_ireru`, `v_hajimaru`, `v_hajimeru`
 _reinforcement window:_ `N4.11`, `N4.12` + stories: `tabisaki-no-shashin`
 _file:_ `data/N4/grammar/G18.json`
+
+**Missing reinforcement in next 2 N lessons (6):**
+- `v_dasu` — not referenced in `N4.11`, `N4.12`
+- `v_deru` — not referenced in `N4.11`, `N4.12`
+- `v_hairu` — not referenced in `N4.11`, `N4.12`
+- `v_ireru` — not referenced in `N4.11`, `N4.12`
+- `v_hajimaru` — not referenced in `N4.11`, `N4.12`
+- `v_hajimeru` — not referenced in `N4.11`, `N4.12`
 
 **Missing reinforcement in window stories (6):**
 - `v_dasu` — not referenced in story `tabisaki-no-shashin`
@@ -204,8 +297,11 @@ _targetVocab:_ `p_tekara`, `p_nagara`, `v_mae`, `v_tame`
 _reinforcement window:_ `N4.11`, `N4.12` + stories: `tabisaki-no-shashin`
 _file:_ `data/N4/grammar/G19.json`
 
-**Missing reinforcement in next 2 N lessons (1):**
+**Missing reinforcement in next 2 N lessons (4):**
+- `p_tekara` — not referenced in `N4.12`
 - `p_nagara` — not referenced in `N4.11`, `N4.12`
+- `v_mae` — not referenced in `N4.11`, `N4.12`
+- `v_tame` — not referenced in `N4.11`, `N4.12`
 
 **Missing reinforcement in window stories (3):**
 - `p_nagara` — not referenced in story `tabisaki-no-shashin`
@@ -219,6 +315,10 @@ _targetVocab:_ `p_noni`, `p_shi`
 _reinforcement window:_ `N4.15`, `N4.16` + stories: `hashiru-asa`
 _file:_ `data/N4/grammar/G20.json`
 
+**Missing reinforcement in next 2 N lessons (2):**
+- `p_noni` — not referenced in `N4.16`
+- `p_shi` — not referenced in `N4.15`, `N4.16`
+
 **Missing reinforcement in window stories (2):**
 - `p_noni` — not referenced in story `hashiru-asa`
 - `p_shi` — not referenced in story `hashiru-asa`
@@ -229,6 +329,20 @@ _unlocksAfter:_ `N4.16` → gating N lesson: `N4.16`
 _targetVocab:_ `v_eto`, `v_anou`, `v_uun`, `v_un`, `v_saa`, `v_naruhodo`, `v_hee`, `v_souso`, `v_jitsuwa`, `v_tsumari`, `v_nanka`, `v_maa`
 _reinforcement window:_ `N4.17`, `N4.18` + stories: `jitensha-de-kyouto-e`
 _file:_ `data/N4/grammar/G21.json`
+
+**Missing reinforcement in next 2 N lessons (12):**
+- `v_eto` — not referenced in `N4.17`, `N4.18`
+- `v_anou` — not referenced in `N4.17`, `N4.18`
+- `v_uun` — not referenced in `N4.17`, `N4.18`
+- `v_un` — not referenced in `N4.17`
+- `v_saa` — not referenced in `N4.17`, `N4.18`
+- `v_naruhodo` — not referenced in `N4.18`
+- `v_hee` — not referenced in `N4.17`, `N4.18`
+- `v_souso` — not referenced in `N4.18`
+- `v_jitsuwa` — not referenced in `N4.17`, `N4.18`
+- `v_tsumari` — not referenced in `N4.17`, `N4.18`
+- `v_nanka` — not referenced in `N4.18`
+- `v_maa` — not referenced in `N4.17`
 
 **Missing reinforcement in window stories (11):**
 - `v_eto` — not referenced in story `jitensha-de-kyouto-e`
@@ -250,6 +364,9 @@ _targetVocab:_ `p_sou_da`, `p_sou_da_hearsay`
 _reinforcement window:_ `N4.19`, `N4.20` + stories: `library-book`
 _file:_ `data/N4/grammar/G22.json`
 
+**Missing reinforcement in next 2 N lessons (1):**
+- `p_sou_da` — not referenced in `N4.19`, `N4.20`
+
 **Missing reinforcement in window stories (1):**
 - `p_sou_da` — not referenced in story `library-book`
 
@@ -260,6 +377,10 @@ _targetVocab:_ `v_ii`, `v_ikeru`, `v_dame`
 _reinforcement window:_ `N4.22`, `N4.23` + stories: `furima-no-hi`
 _file:_ `data/N4/grammar/G23.json`
 
+**Missing reinforcement in next 2 N lessons (2):**
+- `v_ikeru` — not referenced in `N4.23`
+- `v_dame` — not referenced in `N4.22`, `N4.23`
+
 **Missing reinforcement in window stories (1):**
 - `v_dame` — not referenced in story `furima-no-hi`
 
@@ -269,6 +390,11 @@ _unlocksAfter:_ `N4.25` → gating N lesson: `N4.25`
 _targetVocab:_ `p_to_conditional`, `p_nara`, `p_nakereba`, `p_hodo`, `v_ikeru`
 _reinforcement window:_ `N4.26`, `N4.27` + stories: `kenkyuu-to-sakubun`
 _file:_ `data/N4/grammar/G25.json`
+
+**Missing reinforcement in next 2 N lessons (3):**
+- `p_nara` — not referenced in `N4.26`, `N4.27`
+- `p_nakereba` — not referenced in `N4.26`, `N4.27`
+- `p_hodo` — not referenced in `N4.26`
 
 **Missing reinforcement in window stories (4):**
 - `p_to_conditional` — not referenced in story `kenkyuu-to-sakubun`
@@ -282,6 +408,10 @@ _unlocksAfter:_ `N4.34` → gating N lesson: `N4.34`
 _targetVocab:_ `v_miru`, `v_oku`, `v_shimau`, `v_suru`, `p_kadouka`, `p_ni_tsuite`
 _reinforcement window:_ `N4.35`, `N4.36` + stories: `factory-owner`
 _file:_ `data/N4/grammar/G30.json`
+
+**Missing reinforcement in next 2 N lessons (2):**
+- `p_kadouka` — not referenced in `N4.35`, `N4.36`
+- `p_ni_tsuite` — not referenced in `N4.35`, `N4.36`
 
 **Missing reinforcement in window stories (4):**
 - `v_oku` — not referenced in story `factory-owner`
