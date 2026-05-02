@@ -375,7 +375,8 @@
             "v_pasokon",
             "v_beddo",
             "v_terebi",
-            "v_toire"
+            "v_toire",
+            "v_kurasu_class"
           ]
         },
         {
@@ -599,6 +600,61 @@
             "g_desu",
             "p_yo"
           ]
+        },
+        {
+          "spk": "A",
+          "jp": "そうですか。お父さんの パソコンは いいですか。",
+          "en": "I see. Is your father's computer good?",
+          "terms": [
+            "p_soudesuka",
+            "v_otousan",
+            "p_no",
+            "v_pasokon",
+            "p_wa",
+            "v_ii",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "はい、とても いいですよ。",
+          "en": "Yes, it's really good.",
+          "terms": [
+            "p_hai",
+            "v_totemo",
+            "v_ii",
+            "g_desu",
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "ともだちの 子どもは 男の子ですか、女の子ですか。",
+          "en": "Is your friend's child a boy or a girl?",
+          "terms": [
+            "v_tomodachi",
+            "p_no",
+            "v_kodomo",
+            "p_wa",
+            "v_otokonoko",
+            "g_desu",
+            "p_ka",
+            "v_onnanoko"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "男の子です。とても いい 子どもですよ。",
+          "en": "A boy. He's a really nice kid.",
+          "terms": [
+            "v_otokonoko",
+            "g_desu",
+            "v_totemo",
+            "v_ii",
+            "v_kodomo",
+            "p_yo"
+          ]
         }
       ]
     },
@@ -640,12 +696,10 @@
           "jp": "男の人ですか、女の人ですか。",
           "en": "Is she a man or a woman?",
           "terms": [
-            "v_otoko",
-            "p_no",
-            "v_hito",
+            "v_otokonohito",
             "g_desu",
             "p_ka",
-            "v_onna"
+            "v_onnanohito"
           ]
         },
         {
@@ -653,9 +707,7 @@
           "jp": "女の人です。とても いい 先生です。",
           "en": "A woman. She is a really good teacher.",
           "terms": [
-            "v_onna",
-            "p_no",
-            "v_hito",
+            "v_onnanohito",
             "g_desu",
             "v_totemo",
             "v_ii",
@@ -779,6 +831,48 @@
             "g_desu",
             "p_ne"
           ]
+        },
+        {
+          "spk": "A",
+          "jp": "この クラスは いいですよ。男子が います。女子が います。",
+          "en": "This class is great. There are boys. There are girls.",
+          "terms": [
+            "v_kono",
+            "v_kurasu_class",
+            "p_wa",
+            "v_ii",
+            "g_desu",
+            "p_yo",
+            "v_danshi",
+            "p_ga",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "v_joshi"
+          ]
+        },
+        {
+          "spk": "C",
+          "jp": "すみません。トイレは どこですか。",
+          "en": "Excuse me. Where is the bathroom?",
+          "terms": [
+            "p_sumimasen",
+            "v_toire",
+            "p_wa",
+            "v_doko",
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "あそこです。",
+          "en": "Over there.",
+          "terms": [
+            "v_asoko",
+            "g_desu"
+          ]
         }
       ]
     },
@@ -823,6 +917,19 @@
           ]
         },
         {
+          "jp": "父母は いっしょに 生きます。",
+          "en": "My parents live together.",
+          "terms": [
+            "v_fubo",
+            "p_wa",
+            "v_issho",
+            {
+              "id": "v_ikiru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
           "jp": "父は とても やさしい 先生です。",
           "en": "My father is a very kind teacher.",
           "terms": [
@@ -832,6 +939,24 @@
             "v_yasashii",
             "v_sensei",
             "g_desu"
+          ]
+        },
+        {
+          "jp": "わたしの ベッドは いいです。テレビが あります。",
+          "en": "My bed is nice. There is a TV.",
+          "terms": [
+            "v_watashi",
+            "p_no",
+            "v_beddo",
+            "p_wa",
+            "v_ii",
+            "g_desu",
+            "v_terebi",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -973,29 +1098,15 @@
             "char_yamamoto",
             "v_sensei",
             "p_wa",
-            "v_onna",
-            "p_no",
-            "v_hito",
+            "v_onnanohito",
             "g_desu"
           ]
         },
         {
-          "jp": "やまもと先生は 生まれました。",
-          "en": "Yamamoto-sensei was born.",
+          "jp": "やまもと先生は とても やさしい 人です。",
+          "en": "Yamamoto-sensei is a very kind person.",
           "terms": [
             "char_yamamoto",
-            "v_sensei",
-            "p_wa",
-            {
-              "id": "v_umareru",
-              "form": "polite_mashita"
-            }
-          ]
-        },
-        {
-          "jp": "先生は とても やさしい 人です。",
-          "en": "The teacher is a very kind person.",
-          "terms": [
             "v_sensei",
             "p_wa",
             "v_totemo",
@@ -1005,22 +1116,13 @@
           ]
         },
         {
-          "jp": "先生の パソコンは いいです。テレビが あります。トイレが あります。",
-          "en": "The teacher's computer is good. There is a TV. There is a bathroom.",
+          "jp": "みなさんの 先生です。",
+          "en": "She is everyone's teacher.",
           "terms": [
-            "v_sensei",
+            "v_minasan",
             "p_no",
-            "v_pasokon",
-            "p_wa",
-            "v_ii",
-            "g_desu",
-            "v_terebi",
-            "p_ga",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            },
-            "v_toire"
+            "v_sensei",
+            "g_desu"
           ]
         },
         {
@@ -1063,17 +1165,13 @@
           "terms": [
             "v_sensei",
             "p_wa",
-            "v_otoko",
-            "p_no",
-            "v_hito",
+            "v_otokonohito",
             "g_desu",
             "p_ka",
-            "v_onna"
+            "v_onnanohito"
           ],
           "a_terms": [
-            "v_onna",
-            "p_no",
-            "v_hito",
+            "v_onnanohito",
             "g_desu"
           ]
         },

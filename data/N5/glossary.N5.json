@@ -536,8 +536,8 @@
       "lesson_ids": "N5.1",
       "notes": "Godan-pattern in all polite forms (あります, ありません). Irregular in plain negative: ない (not あらない). Used in formal negative copula: ではありません.",
       "example": {
-        "jp": "先生の パソコンは いいです。テレビが あります。トイレが あります。",
-        "en": "The teacher's computer is good. There is a TV. There is a bathroom.",
+        "jp": "わたしの ベッドは いいです。テレビが あります。",
+        "en": "My bed is nice. There is a TV.",
         "lessonId": "N5.1",
         "sectionType": "reading"
       }
@@ -552,15 +552,10 @@
       "lesson_ids": "N5.1",
       "notes": "Loanword from English 'bed'.",
       "example": {
-        "jp": "父 の ベッド です。",
-        "en": "It's my father's bed.",
-        "manual": true,
-        "terms": [
-          "v_chichi",
-          "p_no",
-          "v_beddo",
-          "g_desu"
-        ]
+        "jp": "わたしの ベッドは いいです。テレビが あります。",
+        "en": "My bed is nice. There is a TV.",
+        "lessonId": "N5.1",
+        "sectionType": "reading"
       }
     },
     {
@@ -591,17 +586,10 @@
       "reading": "だんし",
       "readingAlign": "男(だん)子(し)",
       "example": {
-        "jp": "男子 は 先生 の 友だち です。",
-        "en": "The boys are the teacher's friends.",
-        "manual": true,
-        "terms": [
-          "v_danshi",
-          "p_wa",
-          "v_sensei",
-          "p_no",
-          "v_tomodachi",
-          "g_desu"
-        ]
+        "jp": "この クラスは いいですよ。男子が います。女子が います。",
+        "en": "This class is great. There are boys. There are girls.",
+        "lessonId": "N5.1",
+        "sectionType": "conversation"
       }
     },
     {
@@ -744,18 +732,10 @@
       "reading": "ふぼ",
       "readingAlign": "父(ふ)母(ぼ)",
       "example": {
-        "jp": "父母 は とても やさしいです。",
-        "en": "My parents are very kind.",
-        "manual": true,
-        "terms": [
-          "v_fubo",
-          "p_wa",
-          "v_totemo",
-          {
-            "id": "v_yasashii",
-            "form": "polite_adj"
-          }
-        ]
+        "jp": "父母は いっしょに 生きます。",
+        "en": "My parents live together.",
+        "lessonId": "N5.1",
+        "sectionType": "reading"
       }
     },
     {
@@ -835,8 +815,8 @@
       "lesson_ids": "N5.1",
       "notes": "Common adjective meaning 'good' or 'nice'. Irregular conjugation: stems from よ- (e.g. よくない, よかった), not from い-.",
       "example": {
-        "jp": "先生の パソコンは いいです。テレビが あります。トイレが あります。",
-        "en": "The teacher's computer is good. There is a TV. There is a bathroom.",
+        "jp": "わたしの ベッドは いいです。テレビが あります。",
+        "en": "My bed is nice. There is a TV.",
         "lessonId": "N5.1",
         "sectionType": "reading"
       }
@@ -888,7 +868,13 @@
       "gtype": "verb",
       "verb_class": "ichidan",
       "lesson_ids": "N5.1",
-      "notes": ""
+      "notes": "",
+      "example": {
+        "jp": "父母は いっしょに 生きます。",
+        "en": "My parents live together.",
+        "lessonId": "N5.1",
+        "sectionType": "reading"
+      }
     },
     {
       "id": "v_iru",
@@ -919,10 +905,10 @@
       ],
       "notes": "一 (N5.1) + 緒 (N3.4). From N3.4 onward, write as 一緒に. matches[] retained for legacy pre-N3.4 content.",
       "example": {
-        "jp": "いっしょに 帰りませんか。",
-        "en": "Would you like to go home together?",
-        "lessonId": "N4.2",
-        "sectionType": "warmup"
+        "jp": "父母は いっしょに 生きます。",
+        "en": "My parents live together.",
+        "lessonId": "N5.1",
+        "sectionType": "reading"
       }
     },
     {
@@ -953,17 +939,10 @@
       "reading": "じょし",
       "readingAlign": "女(じょ)子(し)",
       "example": {
-        "jp": "女子 は やさしいです。",
-        "en": "The girls are kind.",
-        "manual": true,
-        "terms": [
-          "v_joshi",
-          "p_wa",
-          {
-            "id": "v_yasashii",
-            "form": "polite_adj"
-          }
-        ]
+        "jp": "この クラスは いいですよ。男子が います。女子が います。",
+        "en": "This class is great. There are boys. There are girls.",
+        "lessonId": "N5.1",
+        "sectionType": "conversation"
       }
     },
     {
@@ -975,13 +954,7 @@
       "notes": "Standalone noun form. 女の人 (おんなのひと) is the common polite phrase for 'woman'.",
       "lesson_ids": "N5.1",
       "reading": "おんな",
-      "readingAlign": "女(おんな)",
-      "example": {
-        "jp": "やまもと先生は 女の人です。",
-        "en": "Yamamoto-sensei is a woman.",
-        "lessonId": "N5.1",
-        "sectionType": "reading"
-      }
+      "readingAlign": "女(おんな)"
     },
     {
       "id": "v_onnanohito",
@@ -994,17 +967,10 @@
       "reading": "おんなのひと",
       "readingAlign": "女(おんな)の人(ひと)",
       "example": {
-        "jp": "女の人 は 父 の 先生 です。",
-        "en": "The woman is my father's teacher.",
-        "manual": true,
-        "terms": [
-          "v_onnanohito",
-          "p_wa",
-          "v_chichi",
-          "p_no",
-          "v_sensei",
-          "g_desu"
-        ]
+        "jp": "やまもと先生は 女の人です。",
+        "en": "Yamamoto-sensei is a woman.",
+        "lessonId": "N5.1",
+        "sectionType": "reading"
       }
     },
     {
@@ -1018,16 +984,10 @@
       "reading": "おんなのこ",
       "readingAlign": "女(おんな)の子(こ)",
       "example": {
-        "jp": "あなた の 女の子 です か。",
-        "en": "Is she your daughter?",
-        "manual": true,
-        "terms": [
-          "v_anata",
-          "p_no",
-          "v_onnanoko",
-          "g_desu",
-          "p_ka"
-        ]
+        "jp": "ともだちの 子どもは 男の子ですか、女の子ですか。",
+        "en": "Is your friend's child a boy or a girl?",
+        "lessonId": "N5.1",
+        "sectionType": "conversation"
       }
     },
     {
@@ -1039,13 +999,7 @@
       "notes": "Standalone noun form. 男の人 (おとこのひと) is the common polite phrase for 'man'.",
       "lesson_ids": "N5.1",
       "reading": "おとこ",
-      "readingAlign": "男(おとこ)",
-      "example": {
-        "jp": "男の人ですか、女の人ですか。",
-        "en": "Is she a man or a woman?",
-        "lessonId": "N5.1",
-        "sectionType": "conversation"
-      }
+      "readingAlign": "男(おとこ)"
     },
     {
       "id": "v_otokonohito",
@@ -1058,17 +1012,10 @@
       "reading": "おとこのひと",
       "readingAlign": "男(おとこ)の人(ひと)",
       "example": {
-        "jp": "男の人 は 友だち の 父 です。",
-        "en": "The man is my friend's father.",
-        "manual": true,
-        "terms": [
-          "v_otokonohito",
-          "p_wa",
-          "v_tomodachi",
-          "p_no",
-          "v_chichi",
-          "g_desu"
-        ]
+        "jp": "男の人ですか、女の人ですか。",
+        "en": "Is she a man or a woman?",
+        "lessonId": "N5.1",
+        "sectionType": "conversation"
       }
     },
     {
@@ -1082,15 +1029,10 @@
       "reading": "おとこのこ",
       "readingAlign": "男(おとこ)の子(こ)",
       "example": {
-        "jp": "友だち の 男の子 です。",
-        "en": "He is my friend's son.",
-        "manual": true,
-        "terms": [
-          "v_tomodachi",
-          "p_no",
-          "v_otokonoko",
-          "g_desu"
-        ]
+        "jp": "男の子です。とても いい 子どもですよ。",
+        "en": "A boy. He's a really nice kid.",
+        "lessonId": "N5.1",
+        "sectionType": "conversation"
       }
     },
     {
@@ -1104,10 +1046,10 @@
       "reading": "こども",
       "readingAlign": "子(こ)ども",
       "example": {
-        "jp": "お母さんは 子どもに 野菜を 食べさせました。",
-        "en": "The mother made the child eat vegetables.",
-        "lessonId": "N4.34",
-        "sectionType": "warmup"
+        "jp": "男の子です。とても いい 子どもですよ。",
+        "en": "A boy. He's a really nice kid.",
+        "lessonId": "N5.1",
+        "sectionType": "conversation"
       }
     },
     {
@@ -1139,8 +1081,8 @@
       "lesson_ids": "N5.1",
       "notes": "",
       "example": {
-        "jp": "みなさんは うれしいです。",
-        "en": "Everyone is happy.",
+        "jp": "みなさんの 先生です。",
+        "en": "She is everyone's teacher.",
         "lessonId": "N5.1",
         "sectionType": "reading"
       }
@@ -1209,10 +1151,10 @@
       "lesson_ids": "N5.1",
       "notes": "Loanword from 'personal computer'.",
       "example": {
-        "jp": "先生の パソコンは いいです。テレビが あります。トイレが あります。",
-        "en": "The teacher's computer is good. There is a TV. There is a bathroom.",
+        "jp": "そうですか。お父さんの パソコンは いいですか。",
+        "en": "I see. Is your father's computer good?",
         "lessonId": "N5.1",
-        "sectionType": "reading"
+        "sectionType": "conversation"
       }
     },
     {
@@ -1291,8 +1233,8 @@
       "lesson_ids": "N5.1",
       "notes": "Loanword from English 'television'.",
       "example": {
-        "jp": "先生の パソコンは いいです。テレビが あります。トイレが あります。",
-        "en": "The teacher's computer is good. There is a TV. There is a bathroom.",
+        "jp": "わたしの ベッドは いいです。テレビが あります。",
+        "en": "My bed is nice. There is a TV.",
         "lessonId": "N5.1",
         "sectionType": "reading"
       }
@@ -1307,10 +1249,10 @@
       "lesson_ids": "N5.1",
       "notes": "Loanword from English 'toilet'.",
       "example": {
-        "jp": "先生の パソコンは いいです。テレビが あります。トイレが あります。",
-        "en": "The teacher's computer is good. There is a TV. There is a bathroom.",
+        "jp": "すみません。トイレは どこですか。",
+        "en": "Excuse me. Where is the bathroom?",
         "lessonId": "N5.1",
-        "sectionType": "reading"
+        "sectionType": "conversation"
       }
     },
     {
@@ -1327,10 +1269,10 @@
       ],
       "readingAlign": "友達{ともだち}",
       "example": {
-        "jp": "友だちは やさしいですか。",
-        "en": "Is your friend kind?",
-        "lessonId": "N5.2",
-        "sectionType": "warmup"
+        "jp": "ともだちの 子どもは 男の子ですか、女の子ですか。",
+        "en": "Is your friend's child a boy or a girl?",
+        "lessonId": "N5.1",
+        "sectionType": "conversation"
       }
     },
     {
@@ -1361,9 +1303,9 @@
       "verb_class": "ichidan",
       "readingAlign": "生(う)まれる",
       "example": {
-        "jp": "やまもと先生は 生まれました。",
-        "en": "Yamamoto-sensei was born.",
-        "lessonId": "N5.1",
+        "jp": "正しい 見方で 世界を 見ると、新しい 考えが 生まれます。",
+        "en": "When you look at the world with the correct viewpoint, new ideas are born.",
+        "lessonId": "N4.26",
         "sectionType": "reading"
       }
     },
@@ -3085,10 +3027,10 @@
       "lesson_ids": "N5.1",
       "notes": "Always followed by a noun. この本 = this book.",
       "example": {
-        "jp": "この 本を 借りても いいですか。",
-        "en": "Is it okay to borrow this book?",
-        "lessonId": "N4.21",
-        "sectionType": "warmup"
+        "jp": "この クラスは いいですよ。男子が います。女子が います。",
+        "en": "This class is great. There are boys. There are girls.",
+        "lessonId": "N5.1",
+        "sectionType": "conversation"
       }
     },
     {
@@ -3422,9 +3364,9 @@
       "lesson_ids": "N5.1",
       "notes": "A place far from both speaker and listener.",
       "example": {
-        "jp": "あそこの 食堂、来週 開店するって 聞いたよ。",
-        "en": "I heard that cafeteria over there is opening next week.",
-        "lessonId": "N4.31",
+        "jp": "あそこです。",
+        "en": "Over there.",
+        "lessonId": "N5.1",
         "sectionType": "conversation"
       }
     },
@@ -3454,10 +3396,10 @@
       "lesson_ids": "N5.1",
       "notes": "",
       "example": {
-        "jp": "毎日 どこへ 行きますか。",
-        "en": "Where do you go every day?",
-        "lessonId": "N5.7",
-        "sectionType": "warmup"
+        "jp": "すみません。トイレは どこですか。",
+        "en": "Excuse me. Where is the bathroom?",
+        "lessonId": "N5.1",
+        "sectionType": "conversation"
       }
     },
     {
@@ -5661,13 +5603,13 @@
       "meaning": "class",
       "type": "vocab",
       "gtype": "noun",
-      "lesson_ids": "N5.12",
+      "lesson_ids": "N5.1",
       "notes": "",
       "example": {
-        "jp": "クラスに 外国人の 学生が います。外国から 来ています。",
-        "en": "There are foreign students in the class. They have come from foreign countries.",
-        "lessonId": "N5.12",
-        "sectionType": "reading"
+        "jp": "この クラスは いいですよ。男子が います。女子が います。",
+        "en": "This class is great. There are boys. There are girls.",
+        "lessonId": "N5.1",
+        "sectionType": "conversation"
       }
     },
     {
