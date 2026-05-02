@@ -395,6 +395,33 @@
               "form": "polite_masu"
             }
           ]
+        },
+        {
+          "spk": "A",
+          "jp": "クラスに 何人 いますか。",
+          "en": "How many people are in class?",
+          "terms": [
+            "v_kurasu_class",
+            "p_ni",
+            "v_nannin",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "たくさん います。",
+          "en": "There are a lot.",
+          "terms": [
+            "v_takusan",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
         }
       ]
     },
@@ -560,6 +587,36 @@
             "v_maigetsu",
             "v_kinyoubi",
             "p_ni",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "今月も 金よう日までに ありますか。",
+          "en": "Will you have it by Friday this month too?",
+          "terms": [
+            "v_kongetsu",
+            "p_mo",
+            "v_kinyoubi",
+            "p_made_ni",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "はい、金よう日までに あります。",
+          "en": "Yes, by Friday.",
+          "terms": [
+            "p_hai",
+            "v_kinyoubi",
+            "p_made_ni",
             {
               "id": "v_aru",
               "form": "polite_masu"
@@ -870,14 +927,17 @@
           ]
         },
         {
-          "jp": "ゲームに 水、木、火、土が あります。",
-          "en": "In the game there are water, trees, fire, and soil.",
+          "jp": "ゲームに 水や 木や 火や 土が あります。",
+          "en": "In the game there are things like water, trees, fire, and soil.",
           "terms": [
             "v_geemu",
             "p_ni",
             "v_mizu",
+            "p_ya",
             "v_ki",
+            "p_ya",
             "v_hi_2",
+            "p_ya",
             "v_tsuchi",
             "p_ga",
             {
