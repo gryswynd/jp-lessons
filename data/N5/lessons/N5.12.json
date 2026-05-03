@@ -343,6 +343,35 @@
               "form": "polite_masu"
             }
           ]
+        },
+        {
+          "spk": "校長",
+          "jp": "新しい 本が ほしいんですか。",
+          "en": "Do you want a new book?",
+          "terms": [
+            "v_atarashii",
+            "v_hon",
+            "p_ga",
+            "v_hoshii",
+            "p_ndesu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "はい、日本語の 本が ほしいです。",
+          "en": "Yes, I want a Japanese book.",
+          "terms": [
+            "p_hai",
+            "v_nihongo",
+            "p_no",
+            "v_hon",
+            "p_ga",
+            {
+              "id": "v_hoshii",
+              "form": "polite_adj"
+            }
+          ]
         }
       ]
     },
@@ -450,6 +479,60 @@
             "p_to",
             "v_pen",
             "p_wo",
+            {
+              "id": "v_kau",
+              "form": "polite_volitional_mashou"
+            }
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "きれいな ノートも ありますね。",
+          "en": "There are pretty notebooks too, you know.",
+          "terms": [
+            {
+              "id": "v_kirei",
+              "form": "attributive_na"
+            },
+            "v_nooto",
+            "p_mo",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ne"
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "ええ。きれいな ノートが 安いので、買いましょう。",
+          "en": "Yes. The pretty notebook is cheap, so let's buy it.",
+          "terms": [
+            "p_ee",
+            {
+              "id": "v_kirei",
+              "form": "attributive_na"
+            },
+            "v_nooto",
+            "p_ga",
+            "v_yasui",
+            "p_node",
+            {
+              "id": "v_kau",
+              "form": "polite_volitional_mashou"
+            }
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "きれいですね。買いましょう。",
+          "en": "It's pretty. Let's buy it.",
+          "terms": [
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            },
+            "p_ne",
             {
               "id": "v_kau",
               "form": "polite_volitional_mashou"
@@ -574,6 +657,50 @@
               "form": "polite_volitional_mashou"
             }
           ]
+        },
+        {
+          "spk": "リー",
+          "jp": "わたしは 中国の 中学校に いました。今、日本の 高校に います。",
+          "en": "I was at a middle school in China. Now I am at a high school in Japan.",
+          "terms": [
+            "v_watashi",
+            "p_wa",
+            "v_chuugoku",
+            "p_no",
+            "v_chuugakkou",
+            "p_ni",
+            {
+              "id": "v_iru",
+              "form": "polite_mashita"
+            },
+            "v_ima",
+            "v_nihon",
+            "p_no",
+            "v_koukou",
+            "p_ni",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "そうですか。日本の 高校は おもしろいですか。",
+          "en": "Is that so? Is high school in Japan interesting?",
+          "terms": [
+            "p_soudesu",
+            "p_ka",
+            "v_nihon",
+            "p_no",
+            "v_koukou",
+            "p_wa",
+            {
+              "id": "v_omoshiroi",
+              "form": "polite_adj"
+            },
+            "p_ka"
+          ]
         }
       ]
     },
@@ -677,6 +804,28 @@
               "form": "plain_desire_tai"
             },
             "p_yo"
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "テストは 長いだろう。",
+          "en": "The test will probably be long.",
+          "terms": [
+            "v_tesuto",
+            "p_wa",
+            "v_nagai",
+            "g_darou"
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "うん、つまらないだろうな。",
+          "en": "Yeah, it'll probably be boring.",
+          "terms": [
+            "v_un",
+            "v_tsumaranai",
+            "g_darou",
+            "p_na"
           ]
         }
       ]
@@ -793,30 +942,19 @@
           ]
         },
         {
-          "jp": "わたしの 学校は とても きれいです。",
-          "en": "My school is very beautiful.",
+          "jp": "来年、小学校の 学生も 来るでしょう。",
+          "en": "Next year, elementary school students will probably come too.",
           "terms": [
-            "v_watashi",
-            "p_no",
-            "v_gakkou",
-            "p_wa",
-            "v_totemo",
-            "v_kirei",
-            "g_desu"
-          ]
-        },
-        {
-          "jp": "小学校は 小さくて、古いです。",
-          "en": "The elementary school is small and old.",
-          "terms": [
+            "v_rainen",
             "v_shougakkou",
-            "p_wa",
+            "p_no",
+            "v_gakusei",
+            "p_mo",
             {
-              "id": "v_chiisai",
-              "form": "te_form"
+              "id": "v_kuru",
+              "form": "plain_form"
             },
-            "v_furui",
-            "g_desu"
+            "g_deshou"
           ]
         }
       ],
@@ -1024,33 +1162,28 @@
           ]
         },
         {
-          "jp": "わたしは 中学校で 日本語を 学びました。",
-          "en": "I studied Japanese in middle school.",
+          "jp": "テストは 来週なんです。毎日 学校で よく 学んでいます。",
+          "en": "It's that the test is next week. I am studying well at school every day.",
           "terms": [
-            "v_watashi",
+            "v_tesuto",
             "p_wa",
-            "v_chuugakkou",
+            "v_raishuu",
+            "p_ndesu",
+            "v_mainichi",
+            "v_gakkou",
             "p_de",
-            "v_nihongo",
-            "p_wo",
+            {
+              "id": "v_ii",
+              "form": "adverbial"
+            },
             {
               "id": "v_manabu",
-              "form": "polite_mashita"
-            }
-          ]
-        },
-        {
-          "jp": "高校は 大きくて、新しいです。",
-          "en": "The high school is big and new.",
-          "terms": [
-            "v_koukou",
-            "p_wa",
-            {
-              "id": "v_ookii",
               "form": "te_form"
             },
-            "v_atarashii",
-            "g_desu"
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],

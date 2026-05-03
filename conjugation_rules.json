@@ -857,7 +857,7 @@
   "plain_desire_tai": {
     "label": "Desire (Tai) — Plain",
     "description": "Plain desire form (I want to...). Uses ます-stem + たい. Used in casual speech and subordinate clauses.",
-    "introducedIn": "N5.9",
+    "introducedIn": "N5.8",
     "rules": {
       "godan": {
         "type": "godan_change",
@@ -878,6 +878,102 @@
         "type": "replace",
         "surface": "来たい",
         "reading": "きたい"
+      }
+    }
+  },
+  "plain_tagaru": {
+    "label": "Third-Person Desire (Tagaru) — Plain",
+    "description": "Plain form expressing observable desire in others (someone else wants to...). Uses ます-stem + たがる. Conjugates as a godan verb. Use ～たがる for third-person desire; ～たい is reserved for the speaker's own desire.",
+    "introducedIn": "N5.8",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "たがる"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "たがる"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "したがる",
+        "reading": "したがる"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来たがる",
+        "reading": "きたがる"
+      }
+    }
+  },
+  "polite_tagaru": {
+    "label": "Third-Person Desire (Tagarimasu) — Polite",
+    "description": "Polite form expressing observable desire in others (someone else wants to...). Uses ます-stem + たがります. The resulting form is a godan verb; this entry produces the polite_masu inflection of that derived verb.",
+    "introducedIn": "N5.8",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_i",
+        "add": "たがります"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "たがります"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "したがります",
+        "reading": "したがります"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来たがります",
+        "reading": "きたがります"
+      }
+    }
+  },
+  "plain_garu": {
+    "label": "Observable Feeling (Garu) — Plain",
+    "description": "Plain form expressing observable feeling/emotion in others (someone is showing/acting X). Attaches to i-adjective stem (drop い) or na-adjective base. Conjugates as a godan verb. Examples: ほしがる (showing want), 寒がる (acting cold), 嫌がる (showing dislike).",
+    "introducedIn": "N5.8",
+    "rules": {
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "がる"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "がる"
+      },
+      "irr_ii": {
+        "type": "suffix",
+        "remove": "いい",
+        "add": "よがる"
+      }
+    }
+  },
+  "polite_garu": {
+    "label": "Observable Feeling (Garimasu) — Polite",
+    "description": "Polite form expressing observable feeling/emotion in others. Attaches to i-adjective stem (drop い) or na-adjective base, then conjugates as a polite godan verb. Examples: ほしがります, 寒がります, 嫌がります.",
+    "introducedIn": "N5.8",
+    "rules": {
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "がります"
+      },
+      "na_adj": {
+        "type": "suffix",
+        "add": "がります"
+      },
+      "irr_ii": {
+        "type": "suffix",
+        "remove": "いい",
+        "add": "よがります"
       }
     }
   },

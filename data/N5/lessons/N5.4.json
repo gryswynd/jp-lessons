@@ -286,6 +286,43 @@
         },
         {
           "spk": "A",
+          "jp": "何時から 何時まで いますか。",
+          "en": "From what time until what time are you here?",
+          "terms": [
+            "v_nanji",
+            "p_kara",
+            "v_nanji",
+            "p_made",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "一時から 三時まで います。",
+          "en": "I am here from one o'clock until three o'clock.",
+          "terms": [
+            {
+              "counter": "ji",
+              "n": 1
+            },
+            "p_kara",
+            {
+              "counter": "ji",
+              "n": 3
+            },
+            "p_made",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "spk": "A",
           "jp": "先生は 何時に いますか。",
           "en": "What time is the teacher here?",
           "terms": [
@@ -348,28 +385,6 @@
               "id": "v_iru",
               "form": "polite_masu"
             }
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "三時から 四時まで いますか。",
-          "en": "Are you here from three until four?",
-          "terms": [
-            {
-              "counter": "ji",
-              "n": 3
-            },
-            "p_kara",
-            {
-              "counter": "ji",
-              "n": 4
-            },
-            "p_made",
-            {
-              "id": "v_iru",
-              "form": "polite_masu"
-            },
-            "p_ka"
           ]
         }
       ]
@@ -436,6 +451,37 @@
             "v_getsuyoubi",
             "p_to",
             "v_suiyoubi",
+            "p_ni",
+            {
+              "id": "v_iru",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "先月も いましたか。",
+          "en": "Were you here last month too?",
+          "terms": [
+            "v_sengetsu",
+            "p_mo",
+            {
+              "id": "v_iru",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "先月は 火よう日と 木よう日に いました。",
+          "en": "Last month I was here on Tuesdays and Thursdays.",
+          "terms": [
+            "v_sengetsu",
+            "p_wa",
+            "v_kayoubi",
+            "p_to",
+            "v_mokuyoubi",
             "p_ni",
             {
               "id": "v_iru",
@@ -567,23 +613,6 @@
               "form": "polite_masu"
             }
           ]
-        },
-        {
-          "spk": "A",
-          "jp": "四時までに 分かりますか。",
-          "en": "Will you understand by four o'clock?",
-          "terms": [
-            {
-              "counter": "ji",
-              "n": 4
-            },
-            "p_made_ni",
-            {
-              "id": "v_wakaru",
-              "form": "polite_masu"
-            },
-            "p_ka"
-          ]
         }
       ]
     },
@@ -594,21 +623,29 @@
       "lines": [
         {
           "spk": "A",
-          "jp": "やまかわさん、このケーキは いいですか。",
-          "en": "Yamakawa-san, is this cake good?",
+          "jp": "いらっしゃいませ。",
+          "en": "Welcome!",
           "terms": [
-            "char_yamakawa",
-            "v_san",
-            "v_kono",
-            "v_keeki",
-            "p_wa",
-            "v_ii",
-            "g_desu",
-            "p_ka"
+            "p_irasshaimase"
           ]
         },
         {
           "spk": "B",
+          "jp": "このケーキは いいですか。",
+          "en": "Is this cake good?",
+          "terms": [
+            "v_kono",
+            "v_keeki",
+            "p_wa",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "A",
           "jp": "はい、このケーキは とても いいです。",
           "en": "Yes, this cake is very good.",
           "terms": [
@@ -617,26 +654,30 @@
             "v_keeki",
             "p_wa",
             "v_totemo",
-            "v_ii",
-            "g_desu"
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
-          "spk": "A",
+          "spk": "B",
           "jp": "そのケーキも いいですか。",
           "en": "Is that cake also good?",
           "terms": [
             "v_sono",
             "v_keeki",
             "p_mo",
-            "v_ii",
-            "g_desu",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
             "p_ka"
           ]
         },
         {
-          "spk": "B",
-          "jp": "そうですね。そのケーキも いいです。",
+          "spk": "A",
+          "jp": "そうですね。 そのケーキも いいです。",
           "en": "That's right. That cake is also good.",
           "terms": [
             "p_soudesu",
@@ -644,12 +685,14 @@
             "v_sono",
             "v_keeki",
             "p_mo",
-            "v_ii",
-            "g_desu"
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            }
           ]
         },
         {
-          "spk": "A",
+          "spk": "B",
           "jp": "きのう ケーキが ありましたか。",
           "en": "Was there cake yesterday?",
           "terms": [
@@ -664,17 +707,13 @@
           ]
         },
         {
-          "spk": "B",
-          "jp": "はい、きのうも ありました。ちょっと ありました。",
-          "en": "Yes, there was some yesterday too. There was a little.",
+          "spk": "A",
+          "jp": "はい、きのうも ちょっと ありました。",
+          "en": "Yes, there was a little yesterday too.",
           "terms": [
             "p_hai",
             "v_kinou",
             "p_mo",
-            {
-              "id": "v_aru",
-              "form": "polite_mashita"
-            },
             "v_chotto",
             {
               "id": "v_aru",
@@ -760,6 +799,51 @@
             "v_maishuu",
             {
               "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "やまもと先生は 火よう日や 木よう日に います。",
+          "en": "Yamamoto-sensei is here on days like Tuesday and Thursday.",
+          "terms": [
+            "char_yamamoto",
+            "v_sensei",
+            "p_wa",
+            "v_kayoubi",
+            "p_ya",
+            "v_mokuyoubi",
+            "p_ni",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "週まつも います。",
+          "en": "He is here on weekends too.",
+          "terms": [
+            "v_shuumatsu",
+            "p_mo",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "りきぞさんは 毎週 ゲームを します。",
+          "en": "Rikizo-san plays games every week.",
+          "terms": [
+            "char_rikizo",
+            "v_san",
+            "p_wa",
+            "v_maishuu",
+            "v_geemu",
+            "p_wo",
+            {
+              "id": "v_suru",
               "form": "polite_masu"
             }
           ]
@@ -963,6 +1047,40 @@
           ]
         },
         {
+          "jp": "子どもの 時、 たんじょうびに ケーキが ありました。",
+          "en": "When I was a child, there was cake on my birthday.",
+          "terms": [
+            "v_kodomo",
+            "p_no",
+            "v_toki",
+            "v_tanjoubi",
+            "p_ni",
+            "v_keeki",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "jp": "つぎの たんじょうびまでに、 にほんごが すぐ 分かります。",
+          "en": "By my next birthday, I will understand Japanese right away.",
+          "terms": [
+            "v_tsugi",
+            "p_no",
+            "v_tanjoubi",
+            "p_made_ni",
+            "v_nihongo",
+            "p_ga",
+            "v_sugu",
+            {
+              "id": "v_wakaru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
           "jp": "毎年 とても うれしいです。",
           "en": "Every year it is very joyful.",
           "terms": [
@@ -970,28 +1088,6 @@
             "v_totemo",
             "v_ureshii",
             "g_desu"
-          ]
-        },
-        {
-          "jp": "三月や 四月に たんじょうびが あります。",
-          "en": "There are birthdays in March, April, and so on.",
-          "terms": [
-            {
-              "counter": "gatsu",
-              "n": 3
-            },
-            "p_ya",
-            {
-              "counter": "gatsu",
-              "n": 4
-            },
-            "p_ni",
-            "v_tanjoubi",
-            "p_ga",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            }
           ]
         }
       ],

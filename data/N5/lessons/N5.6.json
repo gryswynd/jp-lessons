@@ -736,6 +736,20 @@
           ]
         },
         {
+          "jp": "山に 友だちが います。",
+          "en": "A friend is at the mountain.",
+          "terms": [
+            "v_yama",
+            "p_ni",
+            "v_tomodachi",
+            "p_ga",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
           "jp": "友だちと 車で 来ます。",
           "en": "He will come by car with a friend.",
           "terms": [
@@ -934,20 +948,6 @@
             "p_wa",
             "v_ii",
             "g_desu"
-          ]
-        },
-        {
-          "jp": "山に 友だちが います。",
-          "en": "Friends are at the mountain.",
-          "terms": [
-            "v_yama",
-            "p_ni",
-            "v_tomodachi",
-            "p_ga",
-            {
-              "id": "v_iru",
-              "form": "polite_masu"
-            }
           ]
         }
       ],

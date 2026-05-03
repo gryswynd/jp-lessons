@@ -829,71 +829,6 @@
               "form": "polite_masu"
             }
           ]
-        },
-        {
-          "jp": "私は 妹に 本を あげました。",
-          "en": "I gave my younger sister a book.",
-          "terms": [
-            "v_watashi",
-            "p_wa",
-            "v_imouto",
-            "p_ni",
-            "v_hon",
-            "p_wo",
-            {
-              "id": "v_ageru",
-              "form": "polite_mashita"
-            }
-          ]
-        },
-        {
-          "jp": "兄に きれいな ペンを もらいました。",
-          "en": "I received a beautiful pen from my older brother.",
-          "terms": [
-            "v_ani",
-            "p_ni",
-            {
-              "id": "v_kirei",
-              "form": "attributive_na"
-            },
-            "v_pen",
-            "p_wo",
-            {
-              "id": "v_morau",
-              "form": "polite_mashita"
-            }
-          ]
-        },
-        {
-          "jp": "兄より 姉の ほうが やさしいです。",
-          "en": "My older sister is kinder than my older brother.",
-          "terms": [
-            "v_ani",
-            "p_yori",
-            "v_ane",
-            "p_no",
-            "v_hou",
-            "p_ga",
-            {
-              "id": "v_yasashii",
-              "form": "polite_adj"
-            }
-          ]
-        },
-        {
-          "jp": "弟は 毎日 三時間くらい べんきょうします。",
-          "en": "My younger brother studies about three hours every day.",
-          "terms": [
-            "v_otouto",
-            "p_wa",
-            "v_mainichi",
-            "v_jikan",
-            "p_kurai",
-            {
-              "id": "v_benkyou",
-              "form": "polite_masu"
-            }
-          ]
         }
       ],
       "questions": [
@@ -1087,63 +1022,6 @@
               "form": "plain_desire_tai"
             },
             "g_desu"
-          ]
-        },
-        {
-          "jp": "私も 姉みたいな やさしい 人に なりたいです。",
-          "en": "I want to become a kind person like my older sister.",
-          "terms": [
-            "v_watashi",
-            "p_mo",
-            "v_ane",
-            {
-              "id": "v_mitai",
-              "form": "attributive_na"
-            },
-            "v_yasashii",
-            "v_hito",
-            "p_ni",
-            {
-              "id": "v_naru",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
-          ]
-        },
-        {
-          "jp": "姉のように 上手に 料理を 作りたいです。",
-          "en": "I want to cook well like my older sister.",
-          "terms": [
-            "v_ane",
-            "p_no",
-            "v_you_manner",
-            "p_ni",
-            {
-              "id": "v_jouzu",
-              "form": "adverbial"
-            },
-            "v_ryouri",
-            "p_wo",
-            {
-              "id": "v_tsukuru",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
-          ]
-        },
-        {
-          "jp": "妹は 新しい シャツが ほしいです。",
-          "en": "My younger sister wants a new shirt.",
-          "terms": [
-            "v_imouto",
-            "p_wa",
-            "v_atarashii",
-            "v_shatsu",
-            "p_ga",
-            {
-              "id": "v_hoshii",
-              "form": "polite_adj"
-            }
           ]
         }
       ],

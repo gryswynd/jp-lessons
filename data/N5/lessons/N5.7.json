@@ -421,12 +421,20 @@
         },
         {
           "spk": "やまかわ",
-          "jp": "千円です。",
-          "en": "It is one thousand yen.",
+          "jp": "千円です。ここに サラダも あります。",
+          "en": "It's 1000 yen. There is also salad here.",
           "terms": [
             "v_sen",
             "v_en",
-            "g_desu"
+            "g_desu",
+            "v_koko",
+            "p_ni",
+            "v_sarada",
+            "p_mo",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -503,6 +511,44 @@
             "v_chiisai",
             "g_desu",
             "p_yo"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "先生は 何時に 食べますか。",
+          "en": "Sensei, what time do you eat?",
+          "terms": [
+            "v_sensei",
+            "p_wa",
+            "v_nanji",
+            "p_ni",
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "先生",
+          "jp": "一時に 食べます。サラダが 大すきです。",
+          "en": "I eat at one o'clock. I love salad.",
+          "terms": [
+            {
+              "counter": "ji",
+              "n": 1
+            },
+            "p_ni",
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
+            },
+            "v_sarada",
+            "p_ga",
+            {
+              "id": "v_daisuki",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -751,13 +797,13 @@
           ]
         },
         {
-          "jp": "レストランに 友だちも います。",
-          "en": "Friends are also at the restaurant.",
+          "jp": "レストランに 友だちが います。",
+          "en": "Friends are at the restaurant.",
           "terms": [
             "v_resutoran",
             "p_ni",
             "v_tomodachi",
-            "p_mo",
+            "p_ga",
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -945,20 +991,6 @@
             "p_e",
             {
               "id": "v_iku",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "jp": "レストランに サラダが あります。",
-          "en": "There is a salad at the restaurant.",
-          "terms": [
-            "v_resutoran",
-            "p_ni",
-            "v_sarada",
-            "p_ga",
-            {
-              "id": "v_aru",
               "form": "polite_masu"
             }
           ]

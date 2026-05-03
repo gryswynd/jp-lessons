@@ -568,20 +568,6 @@
               "form": "plain_negative"
             }
           ]
-        },
-        {
-          "spk": "B",
-          "jp": "別に。今の 町で いいよ。",
-          "en": "Not really. The current town is fine.",
-          "terms": [
-            "v_betsuni",
-            "v_ima",
-            "p_no",
-            "v_machi",
-            "p_de",
-            "v_ii",
-            "p_yo"
-          ]
         }
       ]
     },
@@ -677,53 +663,6 @@
               "id": "v_iru",
               "form": "polite_mashita"
             }
-          ]
-        },
-        {
-          "jp": "私は この 町だけ 好きです。",
-          "en": "I like only this town.",
-          "terms": [
-            "v_watashi",
-            "p_wa",
-            "v_kono",
-            "v_machi",
-            "p_dake",
-            {
-              "id": "v_suki",
-              "form": "polite_adj"
-            }
-          ]
-        },
-        {
-          "jp": "近所には 駅しか ありません。",
-          "en": "There is only a station in the neighbourhood.",
-          "terms": [
-            "v_kinjo",
-            "p_wa",
-            "p_ni",
-            "v_eki",
-            "p_shika",
-            {
-              "id": "v_aru",
-              "form": "polite_negative"
-            }
-          ]
-        },
-        {
-          "jp": "近所の 川で お茶でも 飲みませんか。",
-          "en": "Won't you have some tea by the neighbourhood river?",
-          "terms": [
-            "v_kinjo",
-            "p_no",
-            "v_kawa",
-            "p_de",
-            "v_ocha",
-            "p_demo",
-            {
-              "id": "v_nomu",
-              "form": "polite_negative"
-            },
-            "p_ka"
           ]
         }
       ],
@@ -942,24 +881,6 @@
               "form": "plain_desire_tai"
             },
             "g_desu"
-          ]
-        },
-        {
-          "jp": "去年は テレビばかり 見て いました。",
-          "en": "Last year I watched nothing but TV.",
-          "terms": [
-            "v_kyonen",
-            "p_wa",
-            "v_terebi",
-            "p_bakari",
-            {
-              "id": "v_miru",
-              "form": "te_form"
-            },
-            {
-              "id": "v_iru",
-              "form": "polite_mashita"
-            }
           ]
         }
       ],

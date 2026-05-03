@@ -319,6 +319,29 @@
             "g_desu",
             "p_yo"
           ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "長い 休みが ほしいです。",
+          "en": "I want a long holiday.",
+          "terms": [
+            "v_nagai",
+            "v_yasumi",
+            "p_ga",
+            "v_hoshii",
+            "g_desu"
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "天気は いいでしょう。",
+          "en": "The weather will probably be nice.",
+          "terms": [
+            "v_tenki",
+            "p_wa",
+            "v_ii",
+            "g_deshou"
+          ]
         }
       ]
     },
@@ -439,6 +462,39 @@
             "g_desu",
             "p_ne"
           ]
+        },
+        {
+          "spk": "レン",
+          "jp": "電車が 長かったので、休みたいです。",
+          "en": "Because the train was long, I want to rest.",
+          "terms": [
+            "v_densha",
+            "p_ga",
+            {
+              "id": "v_nagai",
+              "form": "plain_past_adj"
+            },
+            "p_node",
+            {
+              "id": "v_yasumu",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "ええ、ここは 人気の ホテルなんです。",
+          "en": "Yes, this place is a popular hotel, you see.",
+          "terms": [
+            "p_ee",
+            "v_koko",
+            "p_wa",
+            "v_ninki",
+            "p_no",
+            "v_hoteru",
+            "p_ndesu"
+          ]
         }
       ]
     },
@@ -547,6 +603,45 @@
               "id": "v_aru",
               "form": "te_form"
             },
+            {
+              "id": "v_ii",
+              "form": "plain_past_adj"
+            },
+            "g_desu",
+            "p_ne"
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "電車で 山に 来て、気分が よく なりました。",
+          "en": "I came to the mountains by train, and my mood became good.",
+          "terms": [
+            "v_densha",
+            "p_de",
+            "v_yama",
+            "p_ni",
+            {
+              "id": "v_kuru",
+              "form": "te_form"
+            },
+            "v_kibun",
+            "p_ga",
+            {
+              "id": "v_ii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "えー、よかったですね。",
+          "en": "Oh, that's great.",
+          "terms": [
+            "v_ee",
             {
               "id": "v_ii",
               "form": "plain_past_adj"
@@ -665,42 +760,41 @@
         },
         {
           "spk": "ミキ",
-          "jp": "電車は また 来るだろう。",
-          "en": "The train will probably come again.",
+          "jp": "わあ、山が 高い！",
+          "en": "Wow, the mountains are tall!",
           "terms": [
-            "v_densha",
-            "p_wa",
-            "v_mata",
-            {
-              "id": "v_kuru",
-              "form": "plain_form"
-            },
-            "g_darou"
+            "v_waa",
+            "v_yama",
+            "p_ga",
+            "v_takai"
           ]
         },
         {
           "spk": "レン",
-          "jp": "電車は 高くないんだよ。",
-          "en": "The train isn't expensive, you know.",
+          "jp": "山の 天気は いいだろう。",
+          "en": "The mountain weather is probably nice.",
           "terms": [
-            "v_densha",
+            "v_yama",
+            "p_no",
+            "v_tenki",
             "p_wa",
-            {
-              "id": "v_takai",
-              "form": "plain_negative"
-            },
-            "p_nda",
-            "p_yo"
+            "v_ii",
+            "g_darou"
           ]
         },
         {
           "spk": "ミキ",
-          "jp": "えー！高いよ。",
-          "en": "Whaat! It's expensive.",
+          "jp": "うん、来週も 来たいんだ。",
+          "en": "Yeah, I want to come next week too, you know.",
           "terms": [
-            "v_ee",
-            "v_takai",
-            "p_yo"
+            "v_un",
+            "v_raishuu",
+            "p_mo",
+            {
+              "id": "v_kuru",
+              "form": "plain_desire_tai"
+            },
+            "p_nda"
           ]
         }
       ]
@@ -796,6 +890,18 @@
           ]
         },
         {
+          "jp": "来週も 天気は いいでしょう。",
+          "en": "Next week, the weather will probably be nice too.",
+          "terms": [
+            "v_raishuu",
+            "p_mo",
+            "v_tenki",
+            "p_wa",
+            "v_ii",
+            "g_deshou"
+          ]
+        },
+        {
           "jp": "来週も また 来たいです。山は とても よかったです。",
           "en": "I want to come again next week too. The mountains were very good.",
           "terms": [
@@ -815,35 +921,6 @@
               "form": "plain_past_adj"
             },
             "g_desu"
-          ]
-        },
-        {
-          "jp": "新しい ホテルが ほしいです。",
-          "en": "I want a new hotel.",
-          "terms": [
-            "v_atarashii",
-            "v_hoteru",
-            "p_ga",
-            {
-              "id": "v_hoshii",
-              "form": "polite_adj"
-            }
-          ]
-        },
-        {
-          "jp": "天気が いいので、山に 行きました。",
-          "en": "Because the weather was nice, I went to the mountains.",
-          "terms": [
-            "v_tenki",
-            "p_ga",
-            "v_ii",
-            "p_node",
-            "v_yama",
-            "p_ni",
-            {
-              "id": "v_iku",
-              "form": "polite_mashita"
-            }
           ]
         }
       ],
@@ -1041,24 +1118,25 @@
           ]
         },
         {
-          "jp": "電車は 高いでしょう。",
-          "en": "The train is probably expensive.",
+          "jp": "電気が あって、気分が よく なりました。",
+          "en": "Because there was electricity, my mood became good.",
           "terms": [
-            "v_densha",
-            "p_wa",
-            "v_takai",
-            "g_deshou"
-          ]
-        },
-        {
-          "jp": "この ホテルは 古いんです。",
-          "en": "This hotel is old, you see.",
-          "terms": [
-            "v_kono",
-            "v_hoteru",
-            "p_wa",
-            "v_furui",
-            "p_ndesu"
+            "v_denki",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "te_form"
+            },
+            "v_kibun",
+            "p_ga",
+            {
+              "id": "v_ii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            }
           ]
         }
       ],

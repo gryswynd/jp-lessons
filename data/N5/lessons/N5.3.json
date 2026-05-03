@@ -477,6 +477,37 @@
         },
         {
           "spk": "A",
+          "jp": "クラスに 何が ありますか。",
+          "en": "What is in the class?",
+          "terms": [
+            "v_kurasu_class",
+            "p_ni",
+            "v_nani",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "パソコンや テレビが あります。",
+          "en": "There are computers, TVs, and so on.",
+          "terms": [
+            "v_pasokon",
+            "p_ya",
+            "v_terebi",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "spk": "A",
           "jp": "毎日 一人 いますか。",
           "en": "Is there one teacher every day?",
           "terms": [
@@ -574,6 +605,46 @@
         },
         {
           "spk": "A",
+          "jp": "友だちは いつから いつまで いますか。",
+          "en": "From when until when are your friends here?",
+          "terms": [
+            "v_tomodachi",
+            "p_wa",
+            "v_itsu",
+            "p_kara",
+            "v_itsu",
+            "p_made",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "二日から 七日まで います。それから、お金も あります。",
+          "en": "They are here from the second to the seventh. Also, I have money too.",
+          "terms": [
+            "v_futsuka",
+            "p_kara",
+            "v_nanoka",
+            "p_made",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "v_sorekara",
+            "v_okane",
+            "p_mo",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "spk": "A",
           "jp": "毎月 三日に 五人 います。",
           "en": "Every month on the third, five people come.",
           "terms": [
@@ -599,36 +670,6 @@
             "v_ii",
             "g_desu",
             "p_ne"
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "この 人と その 人と あの 人は 友だちですか。",
-          "en": "Are this person, that person, and that person over there friends?",
-          "terms": [
-            "v_kono",
-            "v_hito",
-            "p_to",
-            "v_sono",
-            "v_ano",
-            "p_wa",
-            "v_tomodachi",
-            "g_desu",
-            "p_ka"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "そうです。どの 人も いい 友だちです。",
-          "en": "That's right. Every one of them is a good friend.",
-          "terms": [
-            "p_soudesu",
-            "v_dono",
-            "v_hito",
-            "p_mo",
-            "v_ii",
-            "v_tomodachi",
-            "g_desu"
           ]
         }
       ]
@@ -781,48 +822,13 @@
         },
         {
           "spk": "A",
-          "jp": "毎月 一日から 五日まで お金が ありますか。",
-          "en": "Do you have money from the 1st to the 5th every month?",
+          "jp": "今月、いつまでに ゲームを しますか。",
+          "en": "This month, by when will you do (play) the game?",
           "terms": [
-            "v_maigetsu",
-            "v_ichinichitsuitachi",
-            "p_kara",
-            "v_itsuka",
-            "p_made",
-            "v_okane",
-            "p_ga",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            },
-            "p_ka"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "はい。千円や 百円が あります。",
-          "en": "Yes. I have things like 1000-yen and 100-yen.",
-          "terms": [
-            "p_hai",
-            "v_sen",
-            "v_en",
-            "p_ya",
-            "v_hyaku",
-            "p_ga",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "五日までに 何を しますか。",
-          "en": "What will you do by the 5th?",
-          "terms": [
-            "v_itsuka",
+            "v_kongetsu",
+            "v_itsu",
             "p_made_ni",
-            "v_nani",
+            "v_geemu",
             "p_wo",
             {
               "id": "v_suru",
@@ -833,16 +839,16 @@
         },
         {
           "spk": "B",
-          "jp": "そうですね。何も しません。",
-          "en": "Hmm, well... I won't do anything.",
+          "jp": "九日までに ゲームを します。",
+          "en": "I will do (play) the game by the 9th.",
           "terms": [
-            "p_soudesu",
-            "p_ne",
-            "v_nani",
-            "p_mo",
+            "v_kokonoka",
+            "p_made_ni",
+            "v_geemu",
+            "p_wo",
             {
               "id": "v_suru",
-              "form": "polite_negative"
+              "form": "polite_masu"
             }
           ]
         }
@@ -954,71 +960,6 @@
             "g_desu",
             "p_ne"
           ]
-        },
-        {
-          "spk": "A",
-          "jp": "やまかわさん、お金は どこに ありますか。",
-          "en": "Yamakawa-san, where is the money?",
-          "terms": [
-            "char_yamakawa",
-            "v_san",
-            "v_okane",
-            "p_wa",
-            "v_doko",
-            "p_ni",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            },
-            "p_ka"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "ここに 千円 あります。",
-          "en": "There is 1000 yen here.",
-          "terms": [
-            "v_koko",
-            "p_ni",
-            "v_sen",
-            "v_en",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            }
-          ]
-        },
-        {
-          "spk": "A",
-          "jp": "そこにも ありますか。",
-          "en": "Is there some there too?",
-          "terms": [
-            "v_soko",
-            "p_ni",
-            "p_mo",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            },
-            "p_ka"
-          ]
-        },
-        {
-          "spk": "B",
-          "jp": "あそこにも 百円が あります。",
-          "en": "There is 100 yen over there too.",
-          "terms": [
-            "v_asoko",
-            "p_ni",
-            "p_mo",
-            "v_hyaku",
-            "v_en",
-            "p_ga",
-            {
-              "id": "v_aru",
-              "form": "polite_masu"
-            }
-          ]
         }
       ]
     },
@@ -1103,6 +1044,32 @@
           ]
         },
         {
+          "jp": "一万円 あります。",
+          "en": "There is ten thousand yen.",
+          "terms": [
+            "v_man",
+            "v_en",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "四日に ゲームを します。",
+          "en": "On the 4th, he plays games.",
+          "terms": [
+            "v_yokka",
+            "p_ni",
+            "v_geemu",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
           "jp": "やまかわは とても うれしいです。",
           "en": "Yamakawa is very happy.",
           "terms": [
@@ -1111,73 +1078,6 @@
             "v_totemo",
             "v_ureshii",
             "g_desu"
-          ]
-        },
-        {
-          "jp": "こちらは やまかわの お父さんです。そちらは お母さんです。あちらは 友だちです。",
-          "en": "This (here) is Yamakawa's father. That is his mother. Over there is his friend.",
-          "terms": [
-            "v_kochira",
-            "p_wa",
-            "char_yamakawa",
-            "p_no",
-            "v_otousan",
-            "g_desu",
-            "v_sochira",
-            "v_okaasan",
-            "v_achira",
-            "v_tomodachi"
-          ]
-        },
-        {
-          "jp": "どちらが やまかわの 先生ですか。",
-          "en": "Which one is Yamakawa's teacher?",
-          "terms": [
-            "v_dochira",
-            "p_ga",
-            "char_yamakawa",
-            "p_no",
-            "v_sensei",
-            "g_desu",
-            "p_ka"
-          ]
-        },
-        {
-          "jp": "お父さんは こう します。お母さんは そう します。先生は ああ します。",
-          "en": "His father does it like this. His mother does it like that. The teacher does it like that (over there).",
-          "terms": [
-            "v_otousan",
-            "p_wa",
-            "v_kou",
-            {
-              "id": "v_suru",
-              "form": "polite_masu"
-            },
-            "v_okaasan",
-            "v_sou",
-            "v_sensei",
-            "v_aa"
-          ]
-        },
-        {
-          "jp": "こんな 人と そんな 人と あんな 人は 友だちです。どんな 人が いいですか。",
-          "en": "This kind of person, that kind of person, and that kind of person over there are all friends. What kind of person is good?",
-          "terms": [
-            "v_konna",
-            "v_hito",
-            "p_to",
-            "v_sonna",
-            "v_anna",
-            "p_wa",
-            "v_tomodachi",
-            "g_desu",
-            "v_donna",
-            "p_ga",
-            {
-              "id": "v_ii",
-              "form": "polite_adj"
-            },
-            "p_ka"
           ]
         }
       ],
@@ -1360,6 +1260,20 @@
             },
             "v_tooka",
             "g_desu"
+          ]
+        },
+        {
+          "jp": "たんじょうびに 五百円 あります。",
+          "en": "On birthdays, there is five hundred yen.",
+          "terms": [
+            "v_tanjoubi",
+            "p_ni",
+            "v_hyaku",
+            "v_en",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
