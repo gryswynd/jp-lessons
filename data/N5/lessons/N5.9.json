@@ -316,6 +316,22 @@
             },
             "p_yo"
           ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "大きい 店ですが、外も いいですよ。",
+          "en": "It's a big store, but the outside is nice too, you know.",
+          "terms": [
+            "v_ookii",
+            "v_mise",
+            "g_desu",
+            "p_ga_but",
+            "v_soto",
+            "p_mo",
+            "v_ii",
+            "g_desu",
+            "p_yo"
+          ]
         }
       ]
     },
@@ -435,6 +451,23 @@
             "v_naka",
             "p_wa",
             "v_atarashii",
+            "g_desu",
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "先生",
+          "jp": "そうですね。レストランは 高いですけど、おいしいですよ。",
+          "en": "That's right. The restaurant is expensive, but it's delicious, you know.",
+          "terms": [
+            "p_soudesu",
+            "p_ne",
+            "v_resutoran",
+            "p_wa",
+            "v_takai",
+            "g_desu",
+            "p_kedo",
+            "v_oishii",
             "g_desu",
             "p_yo"
           ]
@@ -574,6 +607,40 @@
               "id": "v_iru",
               "form": "polite_masu"
             }
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "コーヒーが 安いから、外で 飲みます。中は 高いので、外が いいんです。",
+          "en": "Because the coffee is cheap, I drink it outside. The inside is expensive, so outside is better, you see.",
+          "terms": [
+            "v_koohii",
+            "p_ga",
+            {
+              "id": "v_yasui",
+              "form": "plain_adj"
+            },
+            "p_kara_because",
+            "v_soto",
+            "p_de",
+            {
+              "id": "v_nomu",
+              "form": "polite_masu"
+            },
+            "v_naka",
+            "p_wa",
+            {
+              "id": "v_takai",
+              "form": "plain_adj"
+            },
+            "p_node",
+            "v_soto",
+            "p_ga",
+            {
+              "id": "v_ii",
+              "form": "plain_adj"
+            },
+            "p_ndesu"
           ]
         },
         {
@@ -938,6 +1005,29 @@
               "id": "v_nomu",
               "form": "polite_mashita"
             }
+          ]
+        },
+        {
+          "jp": "やまかわは コーヒーが ほしいです。",
+          "en": "Yamakawa wants coffee.",
+          "terms": [
+            "char_yamakawa",
+            "p_wa",
+            "v_koohii",
+            "p_ga",
+            "v_hoshii",
+            "g_desu"
+          ]
+        },
+        {
+          "jp": "来週も とても おいしい でしょう。",
+          "en": "Next week will probably be very delicious too.",
+          "terms": [
+            "v_raishuu",
+            "p_mo",
+            "v_totemo",
+            "v_oishii",
+            "g_deshou"
           ]
         },
         {
