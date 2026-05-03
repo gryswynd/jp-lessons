@@ -327,6 +327,51 @@
               "form": "polite_masu"
             }
           ]
+        },
+        {
+          "spk": "B",
+          "jp": "すごいですね。りきぞさん は 朝ごはんが できますか。",
+          "en": "That's amazing. Rikizo, can you make breakfast?",
+          "terms": [
+            {
+              "id": "v_sugoi",
+              "form": "polite_adj"
+            },
+            "p_ne",
+            "char_rikizo",
+            "v_san",
+            "p_wa",
+            "v_asagohan",
+            "p_ga",
+            {
+              "id": "v_dekiru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "はい、私 は 朝ごはんが できます。毎朝 朝ごはんを 作ります。",
+          "en": "Yes, I can make breakfast. I make breakfast every morning.",
+          "terms": [
+            "p_hai",
+            "v_watashi",
+            "p_wa",
+            "v_asagohan",
+            "p_ga",
+            {
+              "id": "v_dekiru",
+              "form": "polite_masu"
+            },
+            "v_maiasa",
+            "v_asagohan",
+            "p_wo",
+            {
+              "id": "v_tsukuru",
+              "form": "polite_masu"
+            }
+          ]
         }
       ]
     },
@@ -746,6 +791,23 @@
             {
               "id": "v_kuru",
               "form": "polite_potential"
+            }
+          ]
+        },
+        {
+          "jp": "晩 に は 家 で 晩ごはんを 食べます。",
+          "en": "In the evening, he eats dinner at home.",
+          "terms": [
+            "v_ban",
+            "p_wa",
+            "p_ni",
+            "v_ie",
+            "p_de",
+            "v_bangohan",
+            "p_wo",
+            {
+              "id": "v_taberu",
+              "form": "polite_masu"
             }
           ]
         }
