@@ -505,6 +505,36 @@
         },
         {
           "spk": "B",
+          "jp": "茶色の シャツも 好きです。",
+          "en": "I like brown shirts too.",
+          "terms": [
+            "v_chairo",
+            "p_no",
+            "v_shatsu",
+            "p_mo",
+            "v_suki",
+            "g_desu"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "はい、茶色の シャツも できますよ。",
+          "en": "Yes, brown shirts are also available.",
+          "terms": [
+            "p_hai",
+            "v_chairo",
+            "p_no",
+            "v_shatsu",
+            "p_mo",
+            {
+              "id": "v_dekiru",
+              "form": "polite_masu"
+            },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "B",
           "jp": "あの 茶色い シャツも いいですね。色々な 色が あって いいですね。",
           "en": "That brown shirt is nice too. It's great that there are so many colors.",
           "terms": [

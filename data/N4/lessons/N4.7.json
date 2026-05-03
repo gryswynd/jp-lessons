@@ -351,6 +351,30 @@
             },
             "p_ne"
           ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "はい。でも、私は 兄弟が 一人しか いません。姉が 一人 だけです。",
+          "en": "Yes. But I have only one sibling. Just one older sister.",
+          "terms": [
+            "p_hai",
+            "p_demo_but",
+            "v_watashi",
+            "p_wa",
+            "v_kyoudai",
+            "p_ga",
+            "v_hitori",
+            "p_shika",
+            {
+              "id": "v_iru",
+              "form": "polite_negative"
+            },
+            "v_ane",
+            "p_ga",
+            "v_hitori",
+            "p_dake",
+            "g_desu"
+          ]
         }
       ]
     },
@@ -481,6 +505,58 @@
             "v_totemo",
             "v_kawaii",
             "g_desu"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "私の 兄は 姉より おもしろいです。兄の ほうが よく 話しますよ。",
+          "en": "My older brother is funnier than my older sister. My brother talks more.",
+          "terms": [
+            "v_watashi",
+            "p_no",
+            "v_ani",
+            "p_wa",
+            "v_ane",
+            "p_yori",
+            {
+              "id": "v_omoshiroi",
+              "form": "polite_adj"
+            },
+            "v_ani",
+            "p_no",
+            "v_hou",
+            "p_ga",
+            "v_yoku",
+            {
+              "id": "v_hanasu",
+              "form": "polite_masu"
+            },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "そうですか。私の 妹は まだ 五さい くらいですよ。とても 小さいです。",
+          "en": "Really? My younger sister is only about five years old. She's very small.",
+          "terms": [
+            "p_soudesuka",
+            "v_watashi",
+            "p_no",
+            "v_imouto",
+            "p_wa",
+            "v_mada",
+            {
+              "counter": "sai",
+              "n": 5
+            },
+            "p_kurai",
+            "g_desu",
+            "p_yo",
+            "v_totemo",
+            {
+              "id": "v_chiisai",
+              "form": "polite_adj"
+            }
           ]
         },
         {
@@ -626,6 +702,34 @@
             "g_desu",
             "p_ne"
           ]
+        },
+        {
+          "spk": "A",
+          "jp": "兄は 毎日 会社で 働いて ばかり います。家で あまり 話しません。",
+          "en": "My older brother does nothing but work at the company every day. He doesn't talk much at home.",
+          "terms": [
+            "v_ani",
+            "p_wa",
+            "v_mainichi",
+            "v_kaisha",
+            "p_de",
+            {
+              "id": "v_hataraku",
+              "form": "te_form"
+            },
+            "p_bakari",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "v_ie",
+            "p_de",
+            "v_amari",
+            {
+              "id": "v_hanasu",
+              "form": "polite_negative"
+            }
+          ]
         }
       ]
     },
@@ -711,6 +815,50 @@
             "v_itsumo",
             "v_oishii",
             "p_kara_because"
+          ]
+        },
+        {
+          "spk": "姉",
+          "jp": "今日は カレーだけ 作るね。野菜は 少しだけ 入れる。",
+          "en": "Today I'll just make curry. I'll only put in a little bit of vegetables.",
+          "terms": [
+            "v_kyou",
+            "p_wa",
+            "v_karee",
+            "p_dake",
+            {
+              "id": "v_tsukuru",
+              "form": "plain_form"
+            },
+            "p_ne",
+            "v_yasai",
+            "p_wa",
+            "v_sukoshi",
+            "p_dake",
+            {
+              "id": "v_ireru",
+              "form": "plain_form"
+            }
+          ]
+        },
+        {
+          "spk": "弟",
+          "jp": "じゃあ、ジュースでも 飲もうか。お姉さん、何でも いいよ。",
+          "en": "Then, shall we drink juice or something? Anything is fine, sis.",
+          "terms": [
+            "p_jaa",
+            "v_juusu",
+            "p_demo",
+            {
+              "id": "v_nomu",
+              "form": "plain_volitional"
+            },
+            "p_ka",
+            "v_oneesan",
+            "v_nani",
+            "p_demo",
+            "v_ii",
+            "p_yo"
           ]
         }
       ]
@@ -828,6 +976,26 @@
               "id": "v_taberu",
               "form": "polite_masu"
             }
+          ]
+        },
+        {
+          "jp": "妹は とても かわいいですから、私は 弟も ほしいです。",
+          "en": "Because my younger sister is very cute, I want a younger brother too.",
+          "terms": [
+            "v_imouto",
+            "p_wa",
+            "v_totemo",
+            {
+              "id": "v_kawaii",
+              "form": "polite_adj"
+            },
+            "p_kara_because",
+            "v_watashi",
+            "p_wa",
+            "v_otouto",
+            "p_mo",
+            "v_hoshii",
+            "g_desu"
           ]
         }
       ],
@@ -1021,6 +1189,30 @@
               "id": "v_iku",
               "form": "plain_desire_tai"
             },
+            "g_desu"
+          ]
+        },
+        {
+          "jp": "姉は お母さん みたいです。やさしくて、とても 親切な 人です。",
+          "en": "My older sister is like our mother. She is gentle and very kind.",
+          "terms": [
+            "v_ane",
+            "p_wa",
+            "v_okaasan",
+            {
+              "id": "v_mitai",
+              "form": "polite_adj"
+            },
+            {
+              "id": "v_yasashii",
+              "form": "te_form"
+            },
+            "v_totemo",
+            {
+              "id": "v_shinsetsu",
+              "form": "attributive_na"
+            },
+            "v_hito",
             "g_desu"
           ]
         }

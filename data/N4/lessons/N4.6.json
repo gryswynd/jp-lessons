@@ -328,6 +328,49 @@
         },
         {
           "spk": "B",
+          "jp": "鳥肉の ほうが おいしいです。ご飯も ほしいです。",
+          "en": "Chicken is more delicious. I also want rice.",
+          "terms": [
+            "v_toriniku",
+            "p_no",
+            "v_hou",
+            "p_ga",
+            {
+              "id": "v_oishii",
+              "form": "polite_adj"
+            },
+            "g_desu",
+            "v_gohan",
+            "p_mo",
+            {
+              "id": "v_hoshii",
+              "form": "polite_adj"
+            },
+            "g_desu"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "鳥肉と 牛肉、どちらの ほうが 好きですか。",
+          "en": "Which do you prefer, chicken or beef?",
+          "terms": [
+            "v_toriniku",
+            "p_to",
+            "v_gyuuniku",
+            "v_dochira",
+            "p_no",
+            "v_hou",
+            "p_ga",
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            },
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
           "jp": "では、いっしょに 同じ 料理に しましょう。ありがとうございます。",
           "en": "Then let's both have the same dish. Thank you very much.",
           "terms": [
@@ -430,6 +473,47 @@
             {
               "id": "v_taberu",
               "form": "plain_desire_tai"
+            },
+            "g_desu"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "おにぎりも あげますよ。友だちが くれました。",
+          "en": "I'll also give you an onigiri. A friend gave it to me.",
+          "terms": [
+            "v_onigiri",
+            "p_mo",
+            {
+              "id": "v_ageru",
+              "form": "polite_masu"
+            },
+            "p_yo",
+            "v_tomodachi",
+            "p_ga",
+            {
+              "id": "v_kureru",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "ありがとうございます！おにぎりが 大好きです。鳥肉料理も とても おいしかったです。",
+          "en": "Thank you! I love onigiri. The chicken dish was also very delicious.",
+          "terms": [
+            "p_arigatou_gozaimasu",
+            "v_onigiri",
+            "p_ga",
+            "v_daisuki",
+            "g_desu",
+            "v_toriniku",
+            "v_ryouri",
+            "p_mo",
+            "v_totemo",
+            {
+              "id": "v_oishii",
+              "form": "polite_past_adj"
             },
             "g_desu"
           ]
@@ -536,6 +620,25 @@
             },
             "g_desu"
           ]
+        },
+        {
+          "spk": "A",
+          "jp": "この 鳥肉の 料理は レストランの 料理 みたいです。",
+          "en": "This chicken dish is just like a restaurant dish.",
+          "terms": [
+            "v_kono",
+            "v_toriniku",
+            "p_no",
+            "v_ryouri",
+            "p_wa",
+            "v_resutoran",
+            "p_no",
+            "v_ryouri",
+            {
+              "id": "v_mitai",
+              "form": "polite_adj"
+            }
+          ]
         }
       ]
     },
@@ -614,6 +717,24 @@
               "form": "plain_desire_tai"
             },
             "p_yo"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "この 料理は お母さんの 料理の ように おいしいな。",
+          "en": "This dish is as delicious as mom's cooking.",
+          "terms": [
+            "v_kono",
+            "v_ryouri",
+            "p_wa",
+            "v_okaasan",
+            "p_no",
+            "v_ryouri",
+            "p_no",
+            "v_you_manner",
+            "p_ni",
+            "v_oishii",
+            "p_na"
           ]
         }
       ]
@@ -727,6 +848,25 @@
             {
               "id": "v_taberu",
               "form": "plain_desire_tai"
+            },
+            "g_desu"
+          ]
+        },
+        {
+          "jp": "学校の 昼ご飯は 外の レストランほど 高くないです。",
+          "en": "The school lunch is not as expensive as outside restaurants.",
+          "terms": [
+            "v_gakkou",
+            "p_no",
+            "v_hirugohan",
+            "p_wa",
+            "v_soto",
+            "p_no",
+            "v_resutoran",
+            "p_hodo",
+            {
+              "id": "v_takai",
+              "form": "plain_negative"
             },
             "g_desu"
           ]
@@ -945,6 +1085,20 @@
               "id": "v_suki",
               "form": "polite_adj"
             },
+            "g_desu"
+          ]
+        },
+        {
+          "jp": "昼休みは 三十分くらいです。",
+          "en": "Lunch break is about thirty minutes.",
+          "terms": [
+            "v_hiruyasumi",
+            "p_wa",
+            {
+              "counter": "fun",
+              "n": 30
+            },
+            "p_kurai",
             "g_desu"
           ]
         }

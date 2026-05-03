@@ -362,6 +362,48 @@
             },
             "p_yo"
           ]
+        },
+        {
+          "spk": "A",
+          "jp": "野菜より 牛肉のほうが 高いですか。",
+          "en": "Is beef more expensive than vegetables?",
+          "terms": [
+            "v_yasai",
+            "p_yori",
+            "v_gyuuniku",
+            "p_no",
+            "v_hou",
+            "p_ga",
+            {
+              "id": "v_takai",
+              "form": "polite_adj"
+            },
+            "g_desu",
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "牛肉は 高いですが、野菜くらい おいしいですよ。",
+          "en": "Beef is expensive, but it is about as delicious as vegetables.",
+          "terms": [
+            "v_gyuuniku",
+            "p_wa",
+            {
+              "id": "v_takai",
+              "form": "polite_adj"
+            },
+            "g_desu",
+            "p_ga_but",
+            "v_yasai",
+            "p_kurai",
+            {
+              "id": "v_oishii",
+              "form": "polite_adj"
+            },
+            "g_desu",
+            "p_yo"
+          ]
         }
       ]
     },
@@ -479,6 +521,41 @@
             "g_desu",
             "p_ne"
           ]
+        },
+        {
+          "spk": "B",
+          "jp": "やまかわさんに この 野菜を あげますよ。",
+          "en": "I'll give you these vegetables, Yamakawa-san.",
+          "terms": [
+            "char_yamakawa",
+            "v_san",
+            "p_ni",
+            "v_kono",
+            "v_yasai",
+            "p_wo",
+            {
+              "id": "v_ageru",
+              "form": "polite_masu"
+            },
+            "p_yo"
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "ありがとうございます。今日 父から 牛肉を もらいました。",
+          "en": "Thank you very much. Today I received beef from my father.",
+          "terms": [
+            "p_arigatou_gozaimasu",
+            "v_kyou",
+            "v_chichi",
+            "p_kara",
+            "v_gyuuniku",
+            "p_wo",
+            {
+              "id": "v_morau",
+              "form": "polite_mashita"
+            }
+          ]
         }
       ]
     },
@@ -575,6 +652,43 @@
               "id": "v_miru",
               "form": "polite_volitional_mashou"
             }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "ありがとうございます。今日 母が 野菜を くれました。",
+          "en": "Thank you very much. Today my mother gave me vegetables.",
+          "terms": [
+            "p_arigatou_gozaimasu",
+            "v_kyou",
+            "v_haha",
+            "p_ga",
+            "v_yasai",
+            "p_wo",
+            {
+              "id": "v_kureru",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "いいですね。野菜は 牛肉ほど 高くないですよ。",
+          "en": "Nice. Vegetables are not as expensive as beef.",
+          "terms": [
+            "v_ii",
+            "g_desu",
+            "p_ne",
+            "v_yasai",
+            "p_wa",
+            "v_gyuuniku",
+            "p_hodo",
+            {
+              "id": "v_takai",
+              "form": "plain_negative"
+            },
+            "g_desu",
+            "p_yo"
           ]
         }
       ]
@@ -766,6 +880,24 @@
               "id": "v_taberu",
               "form": "polite_mashita"
             }
+          ]
+        },
+        {
+          "jp": "りきぞは 食べ物の 物語が とても 好きです。",
+          "en": "Rikizo really likes food stories.",
+          "terms": [
+            "char_rikizo",
+            "p_wa",
+            "v_tabemono",
+            "p_no",
+            "v_monogatari",
+            "p_ga",
+            "v_totemo",
+            {
+              "id": "v_suki",
+              "form": "polite_adj"
+            },
+            "g_desu"
           ]
         }
       ],
