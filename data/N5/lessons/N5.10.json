@@ -319,6 +319,29 @@
             "g_desu",
             "p_yo"
           ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "長い 休みが ほしいです。",
+          "en": "I want a long holiday.",
+          "terms": [
+            "v_nagai",
+            "v_yasumi",
+            "p_ga",
+            "v_hoshii",
+            "g_desu"
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "天気は いいでしょう。",
+          "en": "The weather will probably be nice.",
+          "terms": [
+            "v_tenki",
+            "p_wa",
+            "v_ii",
+            "g_deshou"
+          ]
         }
       ]
     },
@@ -439,6 +462,39 @@
             "g_desu",
             "p_ne"
           ]
+        },
+        {
+          "spk": "レン",
+          "jp": "電車が 長かったので、休みたいです。",
+          "en": "Because the train was long, I want to rest.",
+          "terms": [
+            "v_densha",
+            "p_ga",
+            {
+              "id": "v_nagai",
+              "form": "plain_past_adj"
+            },
+            "p_node",
+            {
+              "id": "v_yasumu",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "ええ、ここは 人気の ホテルなんです。",
+          "en": "Yes, this place is a popular hotel, you see.",
+          "terms": [
+            "p_ee",
+            "v_koko",
+            "p_wa",
+            "v_ninki",
+            "p_no",
+            "v_hoteru",
+            "p_ndesu"
+          ]
         }
       ]
     },
@@ -554,6 +610,45 @@
             "g_desu",
             "p_ne"
           ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "電車で 山に 来て、気分が よく なりました。",
+          "en": "I came to the mountains by train, and my mood became good.",
+          "terms": [
+            "v_densha",
+            "p_de",
+            "v_yama",
+            "p_ni",
+            {
+              "id": "v_kuru",
+              "form": "te_form"
+            },
+            "v_kibun",
+            "p_ga",
+            {
+              "id": "v_ii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "えー、よかったですね。",
+          "en": "Oh, that's great.",
+          "terms": [
+            "v_ee",
+            {
+              "id": "v_ii",
+              "form": "plain_past_adj"
+            },
+            "g_desu",
+            "p_ne"
+          ]
         }
       ]
     },
@@ -662,6 +757,45 @@
             },
             "p_yo"
           ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "わあ、山が 高い！",
+          "en": "Wow, the mountains are tall!",
+          "terms": [
+            "v_waa",
+            "v_yama",
+            "p_ga",
+            "v_takai"
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "山の 天気は いいだろう。",
+          "en": "The mountain weather is probably nice.",
+          "terms": [
+            "v_yama",
+            "p_no",
+            "v_tenki",
+            "p_wa",
+            "v_ii",
+            "g_darou"
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "うん、来週も 来たいんだ。",
+          "en": "Yeah, I want to come next week too, you know.",
+          "terms": [
+            "v_un",
+            "v_raishuu",
+            "p_mo",
+            {
+              "id": "v_kuru",
+              "form": "plain_desire_tai"
+            },
+            "p_nda"
+          ]
         }
       ]
     },
@@ -753,6 +887,18 @@
             "v_ii",
             "g_desu",
             "p_ne"
+          ]
+        },
+        {
+          "jp": "来週も 天気は いいでしょう。",
+          "en": "Next week, the weather will probably be nice too.",
+          "terms": [
+            "v_raishuu",
+            "p_mo",
+            "v_tenki",
+            "p_wa",
+            "v_ii",
+            "g_deshou"
           ]
         },
         {
@@ -969,6 +1115,28 @@
               "form": "plain_past_adj"
             },
             "g_desu"
+          ]
+        },
+        {
+          "jp": "電気が あって、気分が よく なりました。",
+          "en": "Because there was electricity, my mood became good.",
+          "terms": [
+            "v_denki",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "te_form"
+            },
+            "v_kibun",
+            "p_ga",
+            {
+              "id": "v_ii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
+            }
           ]
         }
       ],
