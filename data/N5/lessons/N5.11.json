@@ -315,6 +315,34 @@
             "g_desu",
             "p_ne"
           ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "きれいな 花が ほしいです。",
+          "en": "I want some beautiful flowers.",
+          "terms": [
+            {
+              "id": "v_kirei",
+              "form": "attributive_na"
+            },
+            "v_hana",
+            "p_ga",
+            "v_hoshii",
+            "g_desu"
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "来年も 花は きれいでしょう。",
+          "en": "Next year too, the flowers will probably be beautiful.",
+          "terms": [
+            "v_rainen",
+            "p_mo",
+            "v_hana",
+            "p_wa",
+            "v_kirei",
+            "g_deshou"
+          ]
         }
       ]
     },
@@ -441,6 +469,26 @@
             "g_desu",
             "p_ne"
           ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "カレーは おいしいですけど、花火は いちばん きれいですよ。",
+          "en": "The curry is delicious, but the fireworks are the most beautiful, you know.",
+          "terms": [
+            "v_karee",
+            "p_wa",
+            {
+              "id": "v_oishii",
+              "form": "polite_adj"
+            },
+            "p_kedo",
+            "v_hanabi",
+            "p_wa",
+            "v_ichiban",
+            "v_kirei",
+            "g_desu",
+            "p_yo"
+          ]
         }
       ]
     },
@@ -562,6 +610,26 @@
             },
             "p_yo"
           ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "雨が 来るので、家で 休みます。",
+          "en": "Because rain is coming, I'll rest at home.",
+          "terms": [
+            "v_ame",
+            "p_ga",
+            {
+              "id": "v_kuru",
+              "form": "plain_form"
+            },
+            "p_node",
+            "v_ie",
+            "p_de",
+            {
+              "id": "v_yasumu",
+              "form": "polite_masu"
+            }
+          ]
         }
       ]
     },
@@ -672,6 +740,37 @@
             "v_kawaii",
             "p_ne",
             "p_yo"
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "金魚は きれいなんだ。",
+          "en": "Goldfish are really beautiful, you know.",
+          "terms": [
+            "v_kingyo",
+            "p_wa",
+            "v_kirei",
+            "p_nda"
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "うん、川の 中に 大きい 魚も いるだろう。",
+          "en": "Yeah, there are probably big fish in the river too.",
+          "terms": [
+            "v_un",
+            "v_kawa",
+            "p_no",
+            "v_naka",
+            "p_ni",
+            "v_ookii",
+            "v_sakana",
+            "p_mo",
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
+            "g_darou"
           ]
         }
       ]
