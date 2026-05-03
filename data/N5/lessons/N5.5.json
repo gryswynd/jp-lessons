@@ -511,6 +511,28 @@
         },
         {
           "spk": "やまかわ",
+          "jp": "タクシーは だめです。",
+          "en": "Taxis are no good.",
+          "terms": [
+            "v_takushii",
+            "p_wa",
+            {
+              "id": "v_dame",
+              "form": "polite_adj"
+            }
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "ああ、そうですか。",
+          "en": "Ah, I see.",
+          "terms": [
+            "v_aa",
+            "p_soudesuka"
+          ]
+        },
+        {
+          "spk": "やまかわ",
           "jp": "タクシーでは 来ません。バスは いいですよ。",
           "en": "I don't come by taxi. The bus is good, you know.",
           "terms": [
@@ -605,6 +627,34 @@
               "id": "v_iku",
               "form": "polite_masu"
             },
+            "v_tomodachi",
+            "p_to",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "spk": "先生",
+          "jp": "かぞくと 行きますか。",
+          "en": "Are you going with your family?",
+          "terms": [
+            "v_kazoku",
+            "p_to",
+            {
+              "id": "v_iku",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "いいえ、友だちと 行きます。",
+          "en": "No, I am going with my friend.",
+          "terms": [
+            "v_iie",
             "v_tomodachi",
             "p_to",
             {
@@ -730,6 +780,19 @@
             "v_suupaa",
             "p_mo",
             "p_ni",
+            {
+              "id": "v_iku",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "jp": "また コンビニへ 行きました。",
+          "en": "He also went to the convenience store again.",
+          "terms": [
+            "v_mata",
+            "v_konbini",
+            "p_e",
             {
               "id": "v_iku",
               "form": "polite_mashita"
@@ -874,6 +937,24 @@
       "title": "よむ れんしゅう 2: やまかわのおでかけ（Yamakawa's Outing）",
       "passage": [
         {
+          "jp": "やまかわは 家から 駅まで バスで 来ます。",
+          "en": "Yamakawa comes from home to the station by bus.",
+          "terms": [
+            "char_yamakawa",
+            "p_wa",
+            "v_ie",
+            "p_kara",
+            "v_eki",
+            "p_made",
+            "v_basu",
+            "p_de",
+            {
+              "id": "v_kuru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
           "jp": "やまかわは 先週 店へ 行きました。",
           "en": "Yamakawa went to the store last week.",
           "terms": [
@@ -918,6 +999,20 @@
             {
               "id": "v_iku",
               "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "jp": "駅に コンビニが あります。",
+          "en": "There is a convenience store at the station.",
+          "terms": [
+            "v_eki",
+            "p_ni",
+            "v_konbini",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
             }
           ]
         },
