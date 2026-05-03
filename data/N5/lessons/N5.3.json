@@ -477,6 +477,37 @@
         },
         {
           "spk": "A",
+          "jp": "クラスに 何が ありますか。",
+          "en": "What is in the class?",
+          "terms": [
+            "v_kurasu_class",
+            "p_ni",
+            "v_nani",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "パソコンや テレビが あります。",
+          "en": "There are computers, TVs, and so on.",
+          "terms": [
+            "v_pasokon",
+            "p_ya",
+            "v_terebi",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "spk": "A",
           "jp": "毎日 一人 いますか。",
           "en": "Is there one teacher every day?",
           "terms": [
@@ -568,6 +599,46 @@
             },
             {
               "id": "v_iru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "友だちは いつから いつまで いますか。",
+          "en": "From when until when are your friends here?",
+          "terms": [
+            "v_tomodachi",
+            "p_wa",
+            "v_itsu",
+            "p_kara",
+            "v_itsu",
+            "p_made",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "二日から 七日まで います。それから、お金も あります。",
+          "en": "They are here from the second to the seventh. Also, I have money too.",
+          "terms": [
+            "v_futsuka",
+            "p_kara",
+            "v_nanoka",
+            "p_made",
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            },
+            "v_sorekara",
+            "v_okane",
+            "p_mo",
+            {
+              "id": "v_aru",
               "form": "polite_masu"
             }
           ]
@@ -745,6 +816,38 @@
             "v_en",
             {
               "id": "v_aru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "spk": "A",
+          "jp": "今月、いつまでに ゲームを しますか。",
+          "en": "This month, by when will you do (play) the game?",
+          "terms": [
+            "v_kongetsu",
+            "v_itsu",
+            "p_made_ni",
+            "v_geemu",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "B",
+          "jp": "九日までに ゲームを します。",
+          "en": "I will do (play) the game by the 9th.",
+          "terms": [
+            "v_kokonoka",
+            "p_made_ni",
+            "v_geemu",
+            "p_wo",
+            {
+              "id": "v_suru",
               "form": "polite_masu"
             }
           ]
@@ -941,6 +1044,32 @@
           ]
         },
         {
+          "jp": "一万円 あります。",
+          "en": "There is ten thousand yen.",
+          "terms": [
+            "v_man",
+            "v_en",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
+          "jp": "四日に ゲームを します。",
+          "en": "On the 4th, he plays games.",
+          "terms": [
+            "v_yokka",
+            "p_ni",
+            "v_geemu",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "polite_masu"
+            }
+          ]
+        },
+        {
           "jp": "やまかわは とても うれしいです。",
           "en": "Yamakawa is very happy.",
           "terms": [
@@ -1131,6 +1260,20 @@
             },
             "v_tooka",
             "g_desu"
+          ]
+        },
+        {
+          "jp": "たんじょうびに 五百円 あります。",
+          "en": "On birthdays, there is five hundred yen.",
+          "terms": [
+            "v_tanjoubi",
+            "p_ni",
+            "v_hyaku",
+            "v_en",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
