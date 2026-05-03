@@ -332,6 +332,20 @@
               "form": "polite_masu"
             }
           ]
+        },
+        {
+          "spk": "先生",
+          "jp": "「ありがとう」と 言ってください。",
+          "en": "Please say \"thank you\".",
+          "terms": [
+            "p_arigatou",
+            "p_to_quote",
+            {
+              "id": "v_iu",
+              "form": "te_form"
+            },
+            "v_kudasai"
+          ]
         }
       ]
     },
@@ -465,6 +479,18 @@
               "id": "v_hanasu",
               "form": "polite_volitional_mashou"
             }
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "その 本は おもしろいでしょう。",
+          "en": "That book's probably interesting.",
+          "terms": [
+            "v_sono",
+            "v_hon",
+            "p_wa",
+            "v_omoshiroi",
+            "g_deshou"
           ]
         }
       ]
@@ -603,6 +629,38 @@
               "form": "polite_volitional_mashou"
             }
           ]
+        },
+        {
+          "spk": "リー",
+          "jp": "ミキさんの ノートは とても きれいですね。",
+          "en": "Miki, your notebook is very pretty.",
+          "terms": [
+            "char_miki",
+            "v_san",
+            "p_no",
+            "v_nooto",
+            "p_wa",
+            "v_totemo",
+            {
+              "id": "v_kirei",
+              "form": "polite_adj"
+            },
+            "p_ne"
+          ]
+        },
+        {
+          "spk": "ミキ",
+          "jp": "毎日 たくさん 読むんです。",
+          "en": "I read a lot every day, you see.",
+          "terms": [
+            "v_mainichi",
+            "v_takusan",
+            {
+              "id": "v_yomu",
+              "form": "plain_form"
+            },
+            "p_ndesu"
+          ]
         }
       ]
     },
@@ -715,6 +773,18 @@
               "id": "v_yomu",
               "form": "plain_volitional"
             }
+          ]
+        },
+        {
+          "spk": "レン",
+          "jp": "その 本も おもしろいだろう。",
+          "en": "That book's probably interesting too.",
+          "terms": [
+            "v_sono",
+            "v_hon",
+            "p_mo",
+            "v_omoshiroi",
+            "g_darou"
           ]
         }
       ]
