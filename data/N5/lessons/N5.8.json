@@ -501,6 +501,40 @@
         },
         {
           "spk": "先生",
+          "jp": "りきぞさんは 新しい プレゼントを 買いたがります。",
+          "en": "Rikizo wants to buy a new present (it seems).",
+          "terms": [
+            "char_rikizo",
+            "v_san",
+            "p_wa",
+            "v_atarashii",
+            "v_purezento",
+            "p_wo",
+            {
+              "id": "v_kau",
+              "form": "polite_tagaru"
+            }
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "はい、買いたいです。プレゼントは 高い でしょう。",
+          "en": "Yes, I want to buy one. The present is probably expensive.",
+          "terms": [
+            "p_hai",
+            {
+              "id": "v_kau",
+              "form": "plain_desire_tai"
+            },
+            "g_desu",
+            "v_purezento",
+            "p_wa",
+            "v_takai",
+            "g_deshou"
+          ]
+        },
+        {
+          "spk": "先生",
           "jp": "高いですか。",
           "en": "Is it expensive?",
           "terms": [
@@ -588,6 +622,38 @@
             "p_wa",
             "v_atarashii",
             "g_desu"
+          ]
+        },
+        {
+          "spk": "やまかわ",
+          "jp": "コーヒーは もう 買いましたか。",
+          "en": "Have you already bought the coffee?",
+          "terms": [
+            "v_koohii",
+            "p_wa",
+            "v_mou",
+            {
+              "id": "v_kau",
+              "form": "polite_mashita"
+            },
+            "p_ka"
+          ]
+        },
+        {
+          "spk": "りきぞ",
+          "jp": "いいえ、まだ 買って いません。",
+          "en": "No, I haven't bought it yet.",
+          "terms": [
+            "v_iie",
+            "v_mada",
+            {
+              "id": "v_kau",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -690,6 +756,21 @@
             "p_wo",
             {
               "id": "v_kau",
+              "form": "polite_mashita"
+            }
+          ]
+        },
+        {
+          "jp": "デパートで おいしい コーヒーを 飲みました。",
+          "en": "They drank delicious coffee at the department store.",
+          "terms": [
+            "v_depaato",
+            "p_de",
+            "v_oishii",
+            "v_koohii",
+            "p_wo",
+            {
+              "id": "v_nomu",
               "form": "polite_mashita"
             }
           ]
@@ -882,6 +963,22 @@
             "v_atarashii",
             "g_desu",
             "p_yo"
+          ]
+        },
+        {
+          "jp": "テーブルに プレゼントが あります。新しい でしょう。",
+          "en": "There is a present on the table. It is probably new.",
+          "terms": [
+            "v_teeburu",
+            "p_ni",
+            "v_purezento",
+            "p_ga",
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "v_atarashii",
+            "g_deshou"
           ]
         },
         {
