@@ -536,8 +536,8 @@
         },
         {
           "spk": "B",
-          "jp": "そうですか。私の 妹は まだ 五さい くらいですよ。とても 小さいです。",
-          "en": "Really? My younger sister is only about five years old. She's very small.",
+          "jp": "そうですか。私の 妹は まだ 小さいですよ。私の 半分 くらい 小さいです。",
+          "en": "I see. My younger sister is still small. About half my size.",
           "terms": [
             "p_soudesuka",
             "v_watashi",
@@ -546,13 +546,14 @@
             "p_wa",
             "v_mada",
             {
-              "counter": "sai",
-              "n": 5
+              "id": "v_chiisai",
+              "form": "polite_adj"
             },
-            "p_kurai",
-            "g_desu",
             "p_yo",
-            "v_totemo",
+            "v_watashi",
+            "p_no",
+            "v_hanbun",
+            "p_kurai",
             {
               "id": "v_chiisai",
               "form": "polite_adj"
@@ -846,7 +847,7 @@
           "jp": "じゃあ、ジュースでも 飲もうか。お姉さん、何でも いいよ。",
           "en": "Then, shall we drink juice or something? Anything is fine, sis.",
           "terms": [
-            "p_jaa",
+            "p_dewa_then",
             "v_juusu",
             "p_demo",
             {
