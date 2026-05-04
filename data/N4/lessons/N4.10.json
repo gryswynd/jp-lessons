@@ -259,24 +259,28 @@
       "lines": [
         {
           "spk": "やまもと",
-          "jp": "みなさん、今日から 英語の クラスが 始まります。ジョエル先生 です。",
-          "en": "Everyone, English class starts today. This is Joel Sensei.",
+          "jp": "みなさん、英語の クラスが 始まる 前に、ジョエル先生に 会いましょう。",
+          "en": "Everyone, before English class starts, let's meet Joel Sensei.",
           "terms": [
             "char_yamamoto",
             "v_minasan",
-            "v_kyou",
-            "p_kara",
             "v_eigo",
             "p_no",
             "v_kurasu_class",
             "p_ga",
             {
               "id": "v_hajimaru",
-              "form": "polite_masu"
+              "form": "plain_form"
             },
+            "v_mae",
+            "p_ni",
             "char_joel",
             "v_sensei",
-            "g_desu"
+            "p_ni",
+            {
+              "id": "v_au",
+              "form": "polite_volitional_mashou"
+            }
           ]
         },
         {
@@ -438,8 +442,8 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "午後 三時に 始まります。駅から 近い 映画館 ですよ。",
-          "en": "It starts at 3 PM. It's a movie theater close to the station.",
+          "jp": "午後 三時に 始まります。いっしょに 映画館に 入りますね。",
+          "en": "It starts at 3 PM. Let's go into the movie theater together.",
           "terms": [
             "char_rikizo",
             "v_gogo",
@@ -452,20 +456,33 @@
               "id": "v_hajimaru",
               "form": "polite_masu"
             },
-            "v_eki",
-            "p_kara",
-            "v_chikai",
+            "v_issho",
+            "p_ni",
             "v_eigakan",
-            "g_desu",
-            "p_yo"
+            "p_ni",
+            {
+              "id": "v_hairu",
+              "form": "polite_masu"
+            },
+            "p_ne"
           ]
         },
         {
           "spk": "コナー",
-          "jp": "映画は 何時ごろに 終わりますか。",
-          "en": "About what time does the movie end?",
+          "jp": "はい。英語の メモを 出しますね。映画は 何時ごろに 終わりますか。",
+          "en": "Okay. I'll take out my English notes. About what time does the movie end?",
           "terms": [
             "char_conor",
+            "p_hai",
+            "v_eigo",
+            "p_no",
+            "v_memo",
+            "p_wo",
+            {
+              "id": "v_dasu",
+              "form": "polite_masu"
+            },
+            "p_ne",
             "v_eiga",
             "p_wa",
             "v_nanji",
@@ -533,6 +550,7 @@
               "id": "v_taberu",
               "form": "nagara_form"
             },
+            "p_nagara",
             "v_eiga",
             "p_wo",
             {
@@ -639,6 +657,7 @@
               "id": "v_miru",
               "form": "nagara_form"
             },
+            "p_nagara",
             "v_eigo",
             "p_ga",
             {
@@ -699,17 +718,17 @@
         },
         {
           "spk": "やまかわ",
-          "jp": "映画が 終わった 後、何 する？",
-          "en": "What are you doing after the movie ends?",
+          "jp": "映画が 終わってから、何 する？",
+          "en": "After the movie ends, what are we doing?",
           "terms": [
             "char_yamakawa",
             "v_eiga",
             "p_ga",
             {
               "id": "v_owaru",
-              "form": "plain_past"
+              "form": "te_form"
             },
-            "v_ato",
+            "p_tekara",
             "v_nani",
             {
               "id": "v_suru",
@@ -833,8 +852,8 @@
           ]
         },
         {
-          "jp": "映画は 午後 三時に 始まって、五時に 終わりました。",
-          "en": "The movie started at 3 PM and ended at 5.",
+          "jp": "映画は 午後 三時に 始まって、五時に 終わりました。コナーさんは 映画館を 出ました。",
+          "en": "The movie started at 3 PM and ended at 5. Conor exited the movie theater.",
           "terms": [
             "v_eiga",
             "p_wa",
@@ -856,12 +875,21 @@
             {
               "id": "v_owaru",
               "form": "polite_mashita"
+            },
+            "char_conor",
+            "v_san",
+            "p_wa",
+            "v_eigakan",
+            "p_wo",
+            {
+              "id": "v_deru",
+              "form": "polite_mashita"
             }
           ]
         },
         {
-          "jp": "コナーさんは 映画を 見ながら、英語の メモを 書きました。",
-          "en": "Conor wrote English notes while watching the movie.",
+          "jp": "コナーさんは 映画を 見ながら、英語の メモを 書いて、ノートに 入れました。",
+          "en": "While watching the movie, Conor wrote English notes and put them in his notebook.",
           "terms": [
             "char_conor",
             "v_san",
@@ -872,12 +900,19 @@
               "id": "v_miru",
               "form": "nagara_form"
             },
+            "p_nagara",
             "v_eigo",
             "p_no",
             "v_memo",
             "p_wo",
             {
               "id": "v_kaku",
+              "form": "te_form"
+            },
+            "v_nooto",
+            "p_ni",
+            {
+              "id": "v_ireru",
               "form": "polite_mashita"
             }
           ]
@@ -1078,9 +1113,13 @@
           ]
         },
         {
-          "jp": "毎日、クラスで 元気に 英語を 話して います。",
-          "en": "Every day he speaks English energetically in class.",
+          "jp": "学生の ために、毎日 クラスで 元気に 英語を 話して います。",
+          "en": "For the sake of his students, he speaks English energetically in class every day.",
           "terms": [
+            "v_gakusei",
+            "p_no",
+            "v_tame",
+            "p_ni",
             "v_mainichi",
             "v_kurasu_class",
             "p_de",
