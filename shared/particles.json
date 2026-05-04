@@ -198,13 +198,22 @@
       "particle": "では",
       "reading": "では",
       "role": "conjunctive 'well then / in that case'",
-      "explanation": "Sentence-initial conjunction meaning 'well then' or 'in that case'. Used to transition to a new topic or action. More formal than じゃあ. Often followed by a comma: では、行きましょう (Well then, let's go).",
+      "explanation": "Sentence-initial conjunction meaning 'well then' or 'in that case'. Used to transition to a new topic or action. More formal than じゃあ (see p_jaa for the casual variant). Often followed by a comma: では、行きましょう (Well then, let's go).",
       "matches": [
-        "では",
-        "じゃあ",
-        "じゃ"
+        "では"
       ],
       "introducedIn": "N5.5"
+    },
+    {
+      "id": "p_jaa",
+      "particle": "じゃあ",
+      "reading": "じゃあ",
+      "role": "conjunctive 'well then / in that case' (casual)",
+      "explanation": "Casual sentence-initial conjunction meaning 'well then' or 'in that case'. Casual contraction of では. Used to transition to a new topic or suggestion: じゃあ、行こう (Well then, let's go). Use では in formal/polite contexts. Distinct from p_ja (casual negative copula in じゃありません/じゃない).",
+      "matches": [
+        "じゃあ"
+      ],
+      "introducedIn": "N4.7"
     },
     {
       "id": "p_ja",
