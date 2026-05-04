@@ -131,3 +131,16 @@ All content is built. Hook false positives fixed (35 eliminated Apr 10). What re
 3 stories have writing-forms failures (できる→出来る, ところ→所). Also need to assess N4.21–36 vocabulary coverage.
 
 ### Phase C: Game day planning (separate — not blocking QA)
+
+---
+
+## Curriculum data gaps (discovered during reinforcement campaign — May 2026)
+
+**`sai` counter (歳/さい "years old"):** counter_rules.json has the entry with `learnedAt: N5`, but no N5 lesson actually introduces or models the counter in any sentence. First and only usage was an incorrect insertion in N4.7 (since reverted). Decisions needed:
+- (a) Add a sai-introduction sentence to an N5 lesson where age is contextually natural (candidates: N5.7 "Size & Food", N5.14 family-heritage extension, N5.17 "Work & Society")
+- (b) Or relocate counter_rules `learnedAt` to an N4.x lesson to match actual usage point
+- (c) Or formally introduce sai in an N4 lesson as a vocab item with full lesson_ids attribution
+
+**`p_jaa` particle (じゃあ casual conjunction):** Did not exist in shared/particles.json before N4.7 reinforcement work. Added as a new entry (introducedIn N4.7) on 2026-05-04, distinct from p_dewa_then (formal では variant only). N4.7 Conv 4 already updated to use p_jaa. Lessons predating N4.7 must not use it.
+
+**Conv 2 char_rikizo cameo in N4.7:** Conv 2 (sec[4]) line[8] uses spk=char_rikizo at the end of an otherwise A/B-structured conversation. Predates the reinforcement campaign. Not blocking but worth normalizing in future cleanup pass.

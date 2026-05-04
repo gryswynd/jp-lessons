@@ -407,8 +407,8 @@
         },
         {
           "spk": "A",
-          "jp": "夏は 暑いですが、夏休みが あります。冬は 寒いですが、ゆきが きれいです。",
-          "en": "Summer is hot, but there is summer vacation. Winter is cold, but the snow is beautiful.",
+          "jp": "夏は 暑いですが、夏休みが あります。冬は ゆきだけ きれいです。",
+          "en": "Summer is hot, but there is summer vacation. In winter, only the snow is pretty.",
           "terms": [
             "v_natsu",
             "p_wa",
@@ -425,13 +425,8 @@
             },
             "v_fuyu",
             "p_wa",
-            {
-              "id": "v_samui",
-              "form": "polite_adj"
-            },
-            "p_ga_but",
             "v_yuki",
-            "p_ga",
+            "p_dake",
             {
               "id": "v_kirei",
               "form": "polite_adj"
@@ -619,8 +614,8 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "冬は 寒いですが、北では ゆきが あります。白くて とても きれいです。",
-          "en": "Winter is cold, but in the north there is snow. It's white and very beautiful.",
+          "jp": "冬は 寒いです。ゆきは 北にしか ありません。",
+          "en": "Winter is cold. There is snow only in the north.",
           "terms": [
             "v_fuyu",
             "p_wa",
@@ -628,23 +623,14 @@
               "id": "v_samui",
               "form": "polite_adj"
             },
-            "p_ga_but",
-            "v_kita",
-            "p_dewa",
             "v_yuki",
-            "p_ga",
+            "p_wa",
+            "v_kita",
+            "p_ni",
+            "p_shika",
             {
               "id": "v_aru",
-              "form": "polite_masu"
-            },
-            {
-              "id": "v_shiroi",
-              "form": "te_form"
-            },
-            "v_totemo",
-            {
-              "id": "v_kirei",
-              "form": "polite_adj"
+              "form": "polite_negative"
             }
           ]
         }
@@ -733,18 +719,18 @@
         },
         {
           "spk": "A",
-          "jp": "私は 秋が いちばん 好き。すずしくて、空が きれいだから。",
-          "en": "I like autumn the best. Because it's cool and the sky is beautiful.",
+          "jp": "私は 秋でも いいよ。すずしくて、空が きれいだから。",
+          "en": "Even autumn is fine for me. Because it's cool and the sky is beautiful.",
           "terms": [
             "v_watashi",
             "p_wa",
             "v_aki",
-            "p_ga",
-            "v_ichiban",
+            "p_demo",
             {
-              "id": "v_suki",
+              "id": "v_ii",
               "form": "plain_adj"
             },
+            "p_yo",
             {
               "id": "v_suzushii",
               "form": "te_form"
@@ -841,15 +827,15 @@
           ]
         },
         {
-          "jp": "夏は 暑いですが、夏休みが あります。山に 行って、空を 見るのが 好きです。",
-          "en": "Summer is hot, but there is summer vacation. I like going to the mountains and looking at the sky.",
+          "jp": "夏は 暑い日ばかりですが、夏休みが あります。山に 行って、空を 見るのが 好きです。",
+          "en": "Summer is nothing but hot days, but there is summer vacation. I like going to the mountains and looking at the sky.",
           "terms": [
             "v_natsu",
             "p_wa",
-            {
-              "id": "v_atsui",
-              "form": "polite_adj"
-            },
+            "v_atsui",
+            "v_hi",
+            "p_bakari",
+            "g_desu",
             "p_ga_but",
             "v_natsuyasumi",
             "p_ga",
