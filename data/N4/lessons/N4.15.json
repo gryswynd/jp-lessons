@@ -269,8 +269,8 @@
         },
         {
           "spk": "B",
-          "jp": "先生、頭が いたいです。少し つかれています。",
-          "en": "Doctor, my head hurts. I am a little tired.",
+          "jp": "先生、頭が いたいですし、少し つかれていますし、休みたいです。",
+          "en": "Doctor, my head hurts, and I'm a little tired, so I want to rest.",
           "terms": [
             "v_sensei",
             "v_atama",
@@ -279,6 +279,7 @@
               "id": "v_itai",
               "form": "polite_adj"
             },
+            "p_shi",
             "v_sukoshi",
             {
               "id": "v_tsukareru",
@@ -287,7 +288,13 @@
             {
               "id": "v_iru",
               "form": "polite_masu"
-            }
+            },
+            "p_shi",
+            {
+              "id": "v_yasumu",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         },
         {
@@ -494,17 +501,24 @@
         },
         {
           "spk": "A",
-          "jp": "目が 赤いです。目薬だけ 使いたいです。",
-          "en": "My eyes are red. I want to use only eye drops.",
+          "jp": "目薬を 使っても、目が 赤いです。飲み薬も 使いたいです。",
+          "en": "Even if I use eye drops, my eyes are red. I want to use oral medicine too.",
           "terms": [
+            "v_megusuri",
+            "p_wo",
+            {
+              "id": "v_tsukau",
+              "form": "te_form"
+            },
+            "p_mo",
             "v_me",
             "p_ga",
             {
               "id": "v_akai",
               "form": "polite_adj"
             },
-            "v_megusuri",
-            "p_dake",
+            "v_nomigusuri",
+            "p_mo",
             {
               "id": "v_tsukau",
               "form": "plain_desire_tai"
