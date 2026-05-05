@@ -313,9 +313,10 @@
         },
         {
           "spk": "A",
-          "jp": "ポチは どんな 犬ですか。",
-          "en": "What kind of dog is Pochi?",
+          "jp": "えーと、ポチは どんな 犬ですか。",
+          "en": "Um, what kind of dog is Pochi?",
           "terms": [
+            "v_eto",
             "char_pochi",
             "p_wa",
             "v_donna",
@@ -326,10 +327,11 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "小さくて かわいい 動物です。走るの が 大好きです。",
-          "en": "She is a small, cute animal. She loves running.",
+          "jp": "じつは、小さくて かわいい 動物です。走るの が 大好きですし、元気ですよ。",
+          "en": "Actually, she is a small, cute animal. She loves running, and she is energetic too.",
           "terms": [
             "char_rikizo",
+            "v_jitsuwa",
             {
               "id": "v_chiisai",
               "form": "te_form"
@@ -344,14 +346,21 @@
             "p_no",
             "p_ga",
             "v_daisuki",
-            "g_desu"
+            "g_desu",
+            "p_shi",
+            {
+              "id": "v_genki",
+              "form": "polite_adj"
+            },
+            "p_yo"
           ]
         },
         {
           "spk": "A",
-          "jp": "それは いいですね。運動に なりますね。",
-          "en": "That's nice. It becomes exercise, doesn't it.",
+          "jp": "なるほど。それは いいですね。運動に なりますね。",
+          "en": "I see. That's nice. It becomes exercise, doesn't it.",
           "terms": [
+            "v_naruhodo",
             "v_sore",
             "p_wa",
             {
@@ -377,9 +386,10 @@
       "lines": [
         {
           "spk": "りきぞ",
-          "jp": "すみません。お金を 出したいですが、どこに 行きますか。",
-          "en": "Excuse me. I want to take out money — where do I go?",
+          "jp": "あのう、すみません。お金を 出したいですが、どこに 行きますか。",
+          "en": "Um, excuse me. I want to take out money — where do I go?",
           "terms": [
+            "v_anou",
             "p_sumimasen",
             "char_rikizo",
             "v_okane",
@@ -420,10 +430,13 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "ATM が 動かない 時は、どこで お金を 出せますか。",
-          "en": "When the ATM isn't working, where can I take out money?",
+          "jp": "ほんとうですか。ATM が 動かない 時は、どこで お金を 出せますか。",
+          "en": "Really? When the ATM isn't working, where can I take out money?",
           "terms": [
             "char_rikizo",
+            "p_hontou",
+            "g_desu",
+            "p_ka",
             "p_ga",
             {
               "id": "v_ugoku",
@@ -444,9 +457,10 @@
         },
         {
           "spk": "B",
-          "jp": "手動で お金を 運びますので、ゆっくり して ください。",
-          "en": "We move the money manually, so please take your time.",
+          "jp": "つまり、手動で お金を 運びますので、ゆっくり して ください。",
+          "en": "In other words, we move the money manually, so please take your time.",
           "terms": [
+            "v_tsumari",
             "v_shudou",
             "p_de",
             "v_okane",
@@ -473,9 +487,10 @@
       "lines": [
         {
           "spk": "A",
-          "jp": "今日 町で 野犬を 見ましたよ。",
-          "en": "Today I saw a stray dog in town.",
+          "jp": "ほんとうに、今日 町で 野犬を 見ましたよ。",
+          "en": "Really, I saw a stray dog in town today.",
           "terms": [
+            "p_hontou",
             "v_kyou",
             "v_machi",
             "p_de",
@@ -490,10 +505,11 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "野犬は 動物の 中で いちばん こわい ですね。",
-          "en": "Among animals, stray dogs are the scariest.",
+          "jp": "なるほど、野犬は 動物の 中で いちばん こわい ですね。走っても、こわい 動物です。",
+          "en": "I see — among animals, stray dogs are the scariest. Even if you run, they are scary animals.",
           "terms": [
             "char_rikizo",
+            "v_naruhodo",
             "v_yaken",
             "p_wa",
             "v_doubutsu",
@@ -503,14 +519,23 @@
             "v_ichiban",
             "v_kowai",
             "g_desu",
-            "p_ne"
+            "p_ne",
+            {
+              "id": "v_hashiru",
+              "form": "te_form"
+            },
+            "p_mo",
+            "v_kowai",
+            "v_doubutsu",
+            "g_desu"
           ]
         },
         {
           "spk": "A",
-          "jp": "ポチは 野犬では ありませんよね。いつも 近くに いますから。",
-          "en": "Pochi is not a stray dog, right. She's always nearby.",
+          "jp": "さあ、ポチは 野犬では ありませんよね。小さいのに、毎日 元気に 走りますよ。",
+          "en": "Well, Pochi is not a stray dog, right. Despite being small, she runs energetically every day.",
           "terms": [
+            "v_saa",
             "char_pochi",
             "p_wa",
             "v_yaken",
@@ -519,19 +544,20 @@
               "id": "v_aru",
               "form": "polite_negative"
             },
-            "p_ne",
             "p_yo",
-            "v_itsumo",
+            "p_ne",
+            "v_chiisai",
+            "p_noni",
+            "v_mainichi",
             {
-              "id": "v_chikai",
+              "id": "v_genki",
               "form": "adverbial"
             },
-            "p_ni",
             {
-              "id": "v_iru",
+              "id": "v_hashiru",
               "form": "polite_masu"
             },
-            "p_kara_because"
+            "p_yo"
           ]
         },
         {
@@ -559,11 +585,13 @@
       "lines": [
         {
           "spk": "やまかわ",
-          "jp": "去年、ポチは とても 小さかったね。",
-          "en": "Last year, Pochi was very small, wasn't she.",
+          "jp": "なんか、去年の ポチは とても 小さかったね。",
+          "en": "Like, last year Pochi was really small, wasn't she.",
           "terms": [
             "char_yamakawa",
+            "v_nanka",
             "v_kyonen",
+            "p_no",
             "char_pochi",
             "p_wa",
             "v_totemo",
@@ -576,13 +604,12 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "そうだね。去年は あまり 走らなかったけど、今は 毎日 走るよ。",
-          "en": "Yeah. Last year she didn't run much, but now she runs every day.",
+          "jp": "うん、うーん、去年は あまり 走らなかったし、ポチも 小さかった。今は 毎日 走るよ。",
+          "en": "Yeah, hmm, last year she didn't run much, and Pochi was small too. Now she runs every day.",
           "terms": [
             "char_rikizo",
-            "v_sou",
-            "p_ne",
-            "g_da",
+            "v_un",
+            "v_uun",
             "v_kyonen",
             "p_wa",
             "v_amari",
@@ -590,7 +617,13 @@
               "id": "v_hashiru",
               "form": "plain_past_negative"
             },
-            "p_kedo",
+            "p_shi",
+            "char_pochi",
+            "p_mo",
+            {
+              "id": "v_chiisai",
+              "form": "plain_past_adj"
+            },
             "v_ima",
             "p_wa",
             "v_mainichi",
@@ -603,10 +636,11 @@
         },
         {
           "spk": "やまかわ",
-          "jp": "ポチと 外を 走ったり、歩いたり したの？",
-          "en": "Did you do things like run and walk outside with Pochi?",
+          "jp": "へえ。ポチと 外を 走ったり、歩いたり したの？",
+          "en": "Oh really? Did you do things like run and walk outside with Pochi?",
           "terms": [
             "char_yamakawa",
+            "v_hee",
             "char_pochi",
             "p_to",
             "v_soto",
@@ -629,11 +663,11 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "そう。よく 外で 写真を とったよ。",
-          "en": "Yeah. We often took photos outside.",
+          "jp": "そうそう。よく 外で 写真を とったよ。まあ、歩いても、楽しいね。",
+          "en": "Yeah, exactly! We often took photos outside. Well, even just walking is fun, you know.",
           "terms": [
             "char_rikizo",
-            "v_sou",
+            "v_souso",
             "v_yoku",
             "v_soto",
             "p_de",
@@ -643,7 +677,15 @@
               "id": "v_toru",
               "form": "plain_past"
             },
-            "p_yo"
+            "p_yo",
+            "v_maa",
+            {
+              "id": "v_aruku",
+              "form": "te_form"
+            },
+            "p_mo",
+            "v_tanoshii",
+            "p_ne"
           ]
         }
       ]
@@ -675,8 +717,8 @@
           ]
         },
         {
-          "jp": "ポチは 小さい 犬ですが、走るのが 早くて 元気です。",
-          "en": "Pochi is a small dog, but she is fast at running and energetic.",
+          "jp": "ポチは 小さい 犬ですが、走るのが 早いし、元気ですよ。",
+          "en": "Pochi is a small dog, but she's fast at running, and she's energetic too.",
           "terms": [
             "char_pochi",
             "p_wa",
@@ -690,14 +732,13 @@
             },
             "p_no",
             "p_ga",
-            {
-              "id": "v_hayai",
-              "form": "te_form"
-            },
+            "v_hayai",
+            "p_shi",
             {
               "id": "v_genki",
               "form": "polite_adj"
-            }
+            },
+            "p_yo"
           ]
         },
         {
@@ -891,8 +932,8 @@
           ]
         },
         {
-          "jp": "去年の 楽しい 日は 去りましたが、ポチは とても 元気に なりました。",
-          "en": "Last year's fun days have passed, but Pochi became very energetic.",
+          "jp": "去年の 楽しい 日は 去ったのに、ポチは とても 元気に なりました。",
+          "en": "Even though last year's fun days have passed, Pochi became very energetic.",
           "terms": [
             "v_kyonen",
             "p_no",
@@ -901,9 +942,9 @@
             "p_wa",
             {
               "id": "v_saru",
-              "form": "polite_mashita"
+              "form": "plain_past"
             },
-            "p_ga_but",
+            "p_noni",
             "char_pochi",
             "p_wa",
             "v_totemo",
