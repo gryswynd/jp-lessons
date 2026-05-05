@@ -289,17 +289,21 @@
         },
         {
           "spk": "A",
-          "jp": "旅先で カメラで 写真も とりますか。",
-          "en": "Do you also take photos with a camera at your travel destinations?",
+          "jp": "りきぞさん、家を 出て、カメラを 出しますか。",
+          "en": "Rikizo, do you leave home and take out your camera?",
           "terms": [
-            "v_tabisaki",
-            "p_de",
-            "v_kamera",
-            "p_de",
-            "v_shashin",
-            "p_mo",
+            "char_rikizo",
+            "v_san",
+            "v_ie",
+            "p_wo",
             {
-              "id": "v_toru",
+              "id": "v_deru",
+              "form": "te_form"
+            },
+            "v_kamera",
+            "p_wo",
+            {
+              "id": "v_dasu",
               "form": "polite_masu"
             },
             "p_ka"
@@ -307,28 +311,25 @@
         },
         {
           "spk": "B",
-          "jp": "はい！旅先で は いつも 写真を たくさん とります。旅人に なりたいです。",
-          "en": "Yes! At travel destinations I always take lots of photos. I want to become a world traveler.",
+          "jp": "はい！旅行が 始まります。旅先で 写真を たくさん とります。",
+          "en": "Yes! The trip is starting. At travel destinations I take lots of photos.",
           "terms": [
             "p_hai",
+            "v_ryokou",
+            "p_ga",
+            {
+              "id": "v_hajimaru",
+              "form": "polite_masu"
+            },
             "v_tabisaki",
             "p_de",
-            "p_wa",
-            "v_itsumo",
             "v_shashin",
             "p_wo",
             "v_takusan",
             {
               "id": "v_toru",
               "form": "polite_masu"
-            },
-            "v_tabibito",
-            "p_ni",
-            {
-              "id": "v_naru",
-              "form": "plain_desire_tai"
-            },
-            "g_desu"
+            }
           ]
         }
       ]
@@ -340,26 +341,27 @@
       "lines": [
         {
           "spk": "A",
-          "jp": "けんさん、これを 見てください。旅先で とった 写真です。",
-          "en": "Ken, please look at this. It's a photo I took at my travel destination.",
+          "jp": "けんさん、カメラを 中に 入れて、旅先で 写真を とりました。",
+          "en": "Ken, I put my camera inside and took photos at the travel destination.",
           "terms": [
             "char_ken",
             "v_san",
-            "v_kore",
+            "v_kamera",
             "p_wo",
+            "v_naka",
+            "p_ni",
             {
-              "id": "v_miru",
+              "id": "v_ireru",
               "form": "te_form"
             },
-            "v_kudasai",
             "v_tabisaki",
             "p_de",
+            "v_shashin",
+            "p_wo",
             {
               "id": "v_toru",
-              "form": "plain_past"
-            },
-            "v_shashin",
-            "g_desu"
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -386,23 +388,23 @@
         },
         {
           "spk": "A",
-          "jp": "山の 真ん中です。山を 歩きながら、写真を とりました。",
-          "en": "In the middle of the mountains. I took photos while walking through the mountains.",
+          "jp": "山の 真ん中で、写真を とりながら、山を 歩きました。",
+          "en": "In the middle of the mountains, while taking photos, I walked through the mountains.",
           "terms": [
             "v_yama",
             "p_no",
             "v_mannaka",
-            "g_desu",
-            "v_yama",
-            "p_wo",
-            {
-              "id": "v_aruku",
-              "form": "nagara_form"
-            },
+            "p_de",
             "v_shashin",
             "p_wo",
             {
               "id": "v_toru",
+              "form": "nagara_form"
+            },
+            "v_yama",
+            "p_wo",
+            {
+              "id": "v_aruku",
               "form": "polite_mashita"
             }
           ]
@@ -436,14 +438,17 @@
       "lines": [
         {
           "spk": "A",
-          "jp": "りきぞさんは、どんな 旅が したいですか。",
-          "en": "What kind of travel do you want to do, Rikizo?",
+          "jp": "りきぞさんは、旅行の 前に、何が したいですか。",
+          "en": "Rikizo, what do you want to do before your trip?",
           "terms": [
             "char_rikizo",
             "v_san",
             "p_wa",
-            "v_donna",
-            "v_tabi",
+            "v_ryokou",
+            "p_no",
+            "v_mae",
+            "p_ni",
+            "v_nani",
             "p_ga",
             {
               "id": "v_suru",
@@ -500,18 +505,17 @@
         },
         {
           "spk": "B",
-          "jp": "はい！世界中の 旅先で、自分で 写真を とりたいです。",
-          "en": "Yes! I want to take photos on my own at travel destinations all around the world.",
+          "jp": "はい！旅行の ために、写真を たくさん とりたいです。",
+          "en": "Yes! For my trip, I want to take lots of photos.",
           "terms": [
             "p_hai",
-            "v_sekaijuu",
+            "v_ryokou",
             "p_no",
-            "v_tabisaki",
-            "p_de",
-            "v_jibun",
-            "p_de",
+            "v_tame",
+            "p_ni",
             "v_shashin",
             "p_wo",
+            "v_takusan",
             {
               "id": "v_toru",
               "form": "plain_desire_tai"
@@ -593,14 +597,15 @@
         },
         {
           "spk": "B",
-          "jp": "また いっしょに 行こうよ！",
-          "en": "Let's go together again!",
+          "jp": "来週、旅行を 始めるよ。",
+          "en": "Next week, I'm starting the trip!",
           "terms": [
-            "v_mata",
-            "v_issho",
+            "v_raishuu",
+            "v_ryokou",
+            "p_wo",
             {
-              "id": "v_iku",
-              "form": "plain_volitional"
+              "id": "v_hajimeru",
+              "form": "plain_form"
             },
             "p_yo"
           ]
@@ -656,16 +661,22 @@
           ]
         },
         {
-          "jp": "旅館に 着いてから、写真を とりました。",
-          "en": "After arriving at the ryokan, he took photos.",
+          "jp": "旅館に 入ってから、カメラを 出して、写真を とりました。",
+          "en": "After entering the ryokan, he took out the camera and took photos.",
           "terms": [
             "v_ryokan",
             "p_ni",
             {
-              "id": "v_tsuku",
+              "id": "v_hairu",
               "form": "te_form"
             },
             "p_tekara",
+            "v_kamera",
+            "p_wo",
+            {
+              "id": "v_dasu",
+              "form": "te_form"
+            },
             "v_shashin",
             "p_wo",
             {
@@ -894,8 +905,8 @@
           ]
         },
         {
-          "jp": "私も 旅人に なりたいです。世界中を 旅行したいです。",
-          "en": "I also want to become a traveler. I want to travel all over the world.",
+          "jp": "私も 旅人に なりたいです。旅行が 始まる 前に、世界中の 写真を 見ます。",
+          "en": "I also want to become a traveler. Before the trip starts, I look at photos from around the world.",
           "terms": [
             "v_watashi",
             "p_mo",
@@ -906,14 +917,22 @@
               "form": "plain_desire_tai"
             },
             "g_desu",
-            "v_sekaijuu",
-            "p_wo",
             "v_ryokou",
+            "p_ga",
             {
-              "id": "v_suru",
-              "form": "plain_desire_tai"
+              "id": "v_hajimaru",
+              "form": "plain_form"
             },
-            "g_desu"
+            "v_mae",
+            "p_ni",
+            "v_sekaijuu",
+            "p_no",
+            "v_shashin",
+            "p_wo",
+            {
+              "id": "v_miru",
+              "form": "polite_masu"
+            }
           ]
         }
       ],

@@ -358,34 +358,34 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "九時です。早起きを しているので、いそがしくても 元気ですよ。",
-          "en": "Nine o'clock. Because I am doing early rising, I am energetic even when busy.",
+          "jp": "九時です。仕事は いそがしいし、急行も 早いし、毎日 元気ですよ。",
+          "en": "Nine o'clock. Work is busy, the express is also fast, and I'm energetic every day.",
           "terms": [
             {
               "counter": "ji",
               "n": 9
             },
             "g_desu",
-            "v_hayaoki",
-            "p_wo",
-            {
-              "id": "v_suru",
-              "form": "te_form"
-            },
-            {
-              "id": "v_iru",
-              "form": "plain_form"
-            },
-            "p_node",
+            "v_shigoto",
+            "p_wa",
             {
               "id": "v_isogashii",
-              "form": "te_form"
+              "form": "plain_form"
             },
+            "p_shi",
+            "v_kyuukou",
             "p_mo",
+            {
+              "id": "v_hayai",
+              "form": "plain_form"
+            },
+            "p_shi",
+            "v_mainichi",
             {
               "id": "v_genki",
               "form": "polite_adj"
             },
+            "g_desu",
             "p_yo"
           ]
         }
@@ -526,8 +526,8 @@
         },
         {
           "spk": "ミキ",
-          "jp": "はい、学校の 行事が あります。でも、時間が 少ししか ありません。",
-          "en": "Yes, there is a school event. But I only have a little time.",
+          "jp": "はい、学校の 行事が あります。いそがしいのに、行きたいです。",
+          "en": "Yes, there is a school event. Even though I'm busy, I want to go.",
           "terms": [
             "p_hai",
             "v_gakkou",
@@ -538,15 +538,16 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
-            "p_demo_but",
-            "v_jikan",
-            "p_ga",
-            "v_sukoshi",
-            "p_shika",
             {
-              "id": "v_aru",
-              "form": "polite_negative"
-            }
+              "id": "v_isogashii",
+              "form": "plain_form"
+            },
+            "p_noni",
+            {
+              "id": "v_iku",
+              "form": "plain_desire_tai"
+            },
+            "g_desu"
           ]
         },
         {
@@ -662,15 +663,15 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "毎日 いそがしいけど、仕事が 楽しいから いいよ。",
-          "en": "I'm busy every day, but since work is fun, it's fine.",
+          "jp": "毎日 働いても、仕事が 楽しいから 元気 だよ。",
+          "en": "Even if I work every day, since work is fun, I'm energetic.",
           "terms": [
             "v_mainichi",
             {
-              "id": "v_isogashii",
-              "form": "plain_form"
+              "id": "v_hataraku",
+              "form": "te_form"
             },
-            "p_kedo",
+            "p_mo",
             "v_shigoto",
             "p_ga",
             {
@@ -678,10 +679,8 @@
               "form": "plain_form"
             },
             "p_kara_because",
-            {
-              "id": "v_ii",
-              "form": "plain_form"
-            },
+            "v_genki",
+            "g_da",
             "p_yo"
           ]
         }
