@@ -265,8 +265,8 @@
       "lines": [
         {
           "spk": "すずき",
-          "jp": "今日は 学生たちに 発音を 大きい 声で 言わせました。",
-          "en": "Today I had the students say the pronunciation in a loud voice.",
+          "jp": "今日は 学生たちに 発音を 大きい 声で 言わせました。 むずかしい 発音を 考えて おきましたから、よかったです。",
+          "en": "Today I had the students say the pronunciation in a loud voice. I had thought through the difficult pronunciations in advance, so it went well.",
           "terms": [
             "char_suzuki",
             "v_kyou",
@@ -282,6 +282,22 @@
             {
               "id": "v_iu",
               "form": "polite_causative_past"
+            },
+            "v_muzukashii",
+            "v_hatsuon",
+            "p_wo",
+            {
+              "id": "v_kangaeru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_oku",
+              "form": "polite_mashita"
+            },
+            "p_kara_because",
+            {
+              "id": "v_ii",
+              "form": "polite_past_adj"
             }
           ]
         },
@@ -339,12 +355,12 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "わたしは 毎日 通学しながら、声に 出して 発音する ことを 考えて います。",
-          "en": "While commuting every day, I think about saying things aloud to practice pronunciation.",
+          "jp": "わたしも 毎日 通学しながら、声に 出して 言って みたいと 思います。",
+          "en": "I'd like to try saying things aloud while commuting every day too.",
           "terms": [
             "char_rikizo",
             "v_watashi",
-            "p_wa",
+            "p_mo",
             "v_mainichi",
             "v_tsuugaku",
             {
@@ -357,19 +373,17 @@
               "id": "v_dasu",
               "form": "te_form"
             },
-            "v_hatsuon",
             {
-              "id": "v_suru",
-              "form": "plain_form"
-            },
-            "v_koto",
-            "p_wo",
-            {
-              "id": "v_kangaeru",
+              "id": "v_iu",
               "form": "te_form"
             },
             {
-              "id": "v_iru",
+              "id": "v_miru",
+              "form": "plain_desire_tai"
+            },
+            "p_to_quote",
+            {
+              "id": "v_omou",
               "form": "polite_masu"
             }
           ]
@@ -455,18 +469,22 @@
         },
         {
           "spk": "リー",
-          "jp": "どの 県に 行きますか。秋田県と 青森県、どちらが いいですか。",
-          "en": "Which prefecture will we go to? Akita or Aomori — which is better?",
+          "jp": "青森県に 行くかどうか、まだ 分かりません。秋田県と 青森県、どちらが いいですか。",
+          "en": "I'm still not sure whether we should go to Aomori. Akita or Aomori — which is better?",
           "terms": [
             "char_lee",
-            "v_dono",
-            "v_ken",
+            "v_aomoriken",
             "p_ni",
             {
               "id": "v_iku",
-              "form": "polite_masu"
+              "form": "plain_form"
             },
-            "p_ka",
+            "p_kadouka",
+            "v_mada",
+            {
+              "id": "v_wakaru",
+              "form": "polite_negative"
+            },
             "v_akitaken",
             "p_to",
             "v_aomoriken",
@@ -481,21 +499,20 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "青森県に 行ったことが ありますから、秋田県の 方が いいと 思います。",
-          "en": "I have been to Aomori Prefecture, so I think Akita Prefecture is better.",
+          "jp": "もう 青森県に 行って しまいましたから、秋田県の 方が いいと 思います。",
+          "en": "I've already been to Aomori Prefecture, so I think Akita is better.",
           "terms": [
             "char_rikizo",
+            "v_mou",
             "v_aomoriken",
             "p_ni",
             {
               "id": "v_iku",
-              "form": "plain_past"
+              "form": "te_form"
             },
-            "v_koto",
-            "p_ga",
             {
-              "id": "v_aru",
-              "form": "polite_masu"
+              "id": "v_shimau",
+              "form": "polite_mashita"
             },
             "p_kara_because",
             "v_akitaken",
@@ -604,8 +621,8 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "いいな。特別区の 方が 高いと 思ったけど、どう？",
-          "en": "Nice. I thought special wards would be more expensive, but how is it?",
+          "jp": "いいな。特別区の 方が 高すぎる と 思ったけど、どう？",
+          "en": "Nice. I thought special wards would be way too expensive, but how is it?",
           "terms": [
             "char_rikizo",
             "v_ii",
@@ -616,7 +633,7 @@
             "p_ga",
             {
               "id": "v_takai",
-              "form": "plain_form"
+              "form": "sugiru_form"
             },
             "p_to_quote",
             {
@@ -629,14 +646,22 @@
         },
         {
           "spk": "けん",
-          "jp": "そうだね。でも 地区が 区切られて いるから、色々 見られるよ。",
-          "en": "True. But since the districts are divided up, you can see all sorts of things.",
+          "jp": "そうだね。新しい 区について 色々 知ったよ。地区が 区切られて いるから、色々 見られるよ。",
+          "en": "Yeah. I've come to know all sorts of things about the new ward. Since the districts are divided up, you can see lots of things.",
           "terms": [
             "char_ken",
             "v_sou",
             "p_ne",
             "g_da",
-            "p_demo_but",
+            "v_atarashii",
+            "v_ku",
+            "p_ni_tsuite",
+            "v_iroiro",
+            {
+              "id": "v_shiru",
+              "form": "plain_past"
+            },
+            "p_yo",
             "v_chiku",
             "p_ga",
             {
@@ -728,7 +753,6 @@
               "form": "plain_form"
             },
             "p_no_question",
-            "p_ka",
             "v_mainichi",
             "v_tooi",
             "p_ne",
@@ -737,10 +761,22 @@
         },
         {
           "spk": "やまかわ",
-          "jp": "遠いけど、電車で 本を 読んだり、音楽を 聞いたり するよ。",
-          "en": "It's far, but on the train I do things like read books and listen to music.",
+          "jp": "うん、始発に して いるよ。遠いけど、電車で 本を 読んだり、音楽を 聞いたり するよ。",
+          "en": "Yeah, I go with the first train. It's far, but on the train I read books and listen to music.",
           "terms": [
             "char_yamakawa",
+            "v_un",
+            "v_shihatsu",
+            "p_ni",
+            {
+              "id": "v_suru",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "plain_form"
+            },
+            "p_yo",
             "v_tooi",
             "p_kedo",
             "v_densha",
@@ -825,8 +861,8 @@
           ]
         },
         {
-          "jp": "青森県に 着いて から、新しい 発見が たくさん ありました。",
-          "en": "After arriving in Aomori Prefecture, there were many new discoveries.",
+          "jp": "青森県に 着いて から、新しい 発見が たくさん あって、旅行が 楽しく なりました。",
+          "en": "After arriving in Aomori Prefecture, there were many new discoveries, and the trip became fun.",
           "terms": [
             "v_aomoriken",
             "p_ni",
@@ -841,6 +877,16 @@
             "v_takusan",
             {
               "id": "v_aru",
+              "form": "te_form"
+            },
+            "v_ryokou",
+            "p_ga",
+            {
+              "id": "v_tanoshii",
+              "form": "adverbial"
+            },
+            {
+              "id": "v_naru",
               "form": "polite_mashita"
             }
           ]
@@ -1018,18 +1064,20 @@
           ]
         },
         {
-          "jp": "友だちは 毎日 早く 起きて、始発の 電車で 学校に 行きます。",
-          "en": "My friend wakes up early every day and goes to school on the first train.",
+          "jp": "友だちは 毎日 朝を 早く して、始発の 電車で 学校に 行きます。",
+          "en": "My friend makes their mornings early every day and goes to school on the first train.",
           "terms": [
             "v_tomodachi",
             "p_wa",
             "v_mainichi",
+            "v_asa",
+            "p_wo",
             {
               "id": "v_hayai",
               "form": "adverbial"
             },
             {
-              "id": "v_okiru",
+              "id": "v_suru",
               "form": "te_form"
             },
             "v_shihatsu",
