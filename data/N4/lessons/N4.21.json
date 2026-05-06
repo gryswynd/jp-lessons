@@ -237,9 +237,10 @@
         },
         {
           "spk": "店員",
-          "jp": "はい。今日 売り出しました。とても 上品な 品物ですよ。",
-          "en": "Yes. We put it on sale today. It's a very refined item.",
+          "jp": "おきゃくさん、はい。今日 売り出しました。とても 上品な 品物ですよ。",
+          "en": "Welcome, customer. Yes — we put it on sale today. It's a very refined item.",
           "terms": [
+            "v_okyakusan",
             "p_hai",
             "v_kyou",
             {
@@ -277,8 +278,8 @@
         },
         {
           "spk": "店員",
-          "jp": "外国で 作りました。洋風で、いい 持ち味の 品物です。",
-          "en": "It was made abroad. It's Western-style, with a distinctive quality.",
+          "jp": "外国で 作りました。洋風で、いい 持ち味の 品物です。ほかの 品物も 上品ですよ。",
+          "en": "It was made abroad. It's Western-style, with a distinctive quality. Other items are refined too.",
           "terms": [
             "v_gaikoku",
             "p_de",
@@ -292,7 +293,16 @@
             "v_mochiaji",
             "p_no",
             "v_shinamono",
-            "g_desu"
+            "g_desu",
+            "v_hoka",
+            "p_no",
+            "v_shinamono",
+            "p_mo",
+            {
+              "id": "v_jouhin",
+              "form": "polite_adj"
+            },
+            "p_yo"
           ]
         }
       ]
@@ -357,7 +367,7 @@
         },
         {
           "spk": "やまかわ",
-          "jp": "いいえ、外へ 持ち出しては いけません。ここは 学校ですから、中で 使って ください。",
+          "jp": "いいえ、外へ 持ち出しては だめです。ここは 学校ですから、中で 使って ください。",
           "en": "No, you must not take it outside. Since this is school, please use it inside.",
           "terms": [
             "v_iie",
@@ -369,8 +379,8 @@
             },
             "p_wa",
             {
-              "id": "v_ikeru",
-              "form": "polite_negative"
+              "id": "v_dame",
+              "form": "polite_adj"
             },
             "v_koko",
             "p_wa",
@@ -434,20 +444,26 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "わかりました。では、お金を 出します。",
-          "en": "Understood. Then I'll pay.",
+          "jp": "わかりました。今 お金を 出さなくても いいですか。",
+          "en": "Understood. Do I not have to pay now?",
           "terms": [
             {
               "id": "v_wakaru",
               "form": "polite_mashita"
             },
-            "p_dewa",
+            "v_ima",
             "v_okane",
             "p_wo",
             {
               "id": "v_dasu",
-              "form": "polite_masu"
-            }
+              "form": "plain_negative"
+            },
+            "p_mo",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
+            },
+            "p_ka"
           ]
         },
         {
@@ -765,11 +781,13 @@
       "title": "Reading 2: A Fun Day",
       "passage": [
         {
-          "jp": "日曜日に、手品を 見たり、売り物を 見たり しました。",
-          "en": "On Sunday, I did things like watching magic tricks and looking at goods for sale.",
+          "jp": "日曜日に、フリーマーケットで 手品を 見たり、売り物を 見たり しました。",
+          "en": "On Sunday, at the flea market, I did things like watching magic tricks and looking at goods for sale.",
           "terms": [
             "v_nichiyoubi",
             "p_ni",
+            "v_furi_maaketto",
+            "p_de",
             "v_tejina",
             "p_wo",
             {
