@@ -267,8 +267,8 @@
         },
         {
           "spk": "やまもとせんせい",
-          "jp": "学校の 中に あります。今日は よく 勉強して きましたか。",
-          "en": "It is inside the school. Have you been studying well up until today?",
+          "jp": "学校の 中に あります。試験の 問題が 紙に 書いて ありますよ。今日は よく 勉強して きましたか。",
+          "en": "It is inside the school. The exam questions are written on the paper. Have you been studying well up until today?",
           "terms": [
             "char_yamamoto",
             "v_gakkou",
@@ -279,6 +279,21 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
+            "v_shiken",
+            "p_no",
+            "v_mondai",
+            "p_ga",
+            "v_kami",
+            "p_ni",
+            {
+              "id": "v_kaku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
+            },
+            "p_yo",
             "v_kyou",
             "p_wa",
             "v_yoku",
