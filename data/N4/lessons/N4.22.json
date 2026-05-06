@@ -265,8 +265,8 @@
         },
         {
           "spk": "すずきせんせい",
-          "jp": "今は いいですよ。でも、いっしょに 漢字の 勉強を しましょう。",
-          "en": "That's okay for now. But let's study kanji together.",
+          "jp": "今は いいですよ。でも、テストで ローマ字を 使っては だめですよ。",
+          "en": "It's okay for now. But on tests you can't use romaji.",
           "terms": [
             "char_suzuki",
             "v_ima",
@@ -277,16 +277,20 @@
             },
             "p_yo",
             "p_demo_but",
-            "v_issho",
-            "p_ni",
-            "v_kanji",
-            "p_no",
-            "v_benkyou",
+            "v_tesuto",
+            "p_de",
+            "v_romaji",
             "p_wo",
             {
-              "id": "v_suru",
-              "form": "polite_volitional_mashou"
-            }
+              "id": "v_tsukau",
+              "form": "te_form"
+            },
+            "p_wa",
+            {
+              "id": "v_dame",
+              "form": "polite_adj"
+            },
+            "p_yo"
           ]
         },
         {
@@ -381,11 +385,12 @@
       "lines": [
         {
           "spk": "りきぞ",
-          "jp": "お母さんに 手紙を 書きたいです。",
-          "en": "I want to write a letter to my mother.",
+          "jp": "スミスさんに 手紙を 書きたいです。",
+          "en": "I want to write a letter to Smith-san.",
           "terms": [
             "char_rikizo",
-            "v_okaasan",
+            "v_sumisu",
+            "v_san",
             "p_ni",
             "v_tegami",
             "p_wo",
