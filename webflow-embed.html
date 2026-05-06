@@ -66,6 +66,7 @@ window.JPApp = {
       case 'game':     return pass('N5.1');
       case 'story':    return pass('N5.2');
       case 'review':   return pass('N5.2');
+      case 'custom':   return done('N4.10');
       default:         return false;
     }
   },
@@ -207,6 +208,8 @@ window.JPApp = {
         // Game — unlocks on N5.1 ≥75% (Under Construction sticker)
         btn('game', '#F48FB1', '#C2185B', '\uD83C\uDFAE Rikizo\'s Adventures', 'Explore interactive Japanese adventures',
             '<div class="jp-construction-sticker">\uD83D\uDEA7 Under Construction</div>') +
+        // Custom Stories — unlocks on N4.10 completion
+        btn('custom', '#7C3AED', '#5B21B6', '⭐ Custom Stories', 'Personalized vocabulary review stories') +
         // Teacher Bingo — always visible (teacher tool, no gate)
         '<div class="jp-game-wrap">' +
           '<div class="jp-menu-btn" onclick="JPApp.launch(\'teacher-bingo\')" style="border-top:3px solid #FF5722;background:linear-gradient(135deg,#fff 80%,#fff3e0);">' +
@@ -549,6 +552,13 @@ window.JPApp = {
         if (!ok) return;
       }
       if (window.GameModule) window.GameModule.start(this.container, this.config, onExit);
+
+    } else if (mode === 'custom') {
+      if (!window.CustomStoriesModule) {
+        var ok = await this.loadModule('CustomStories.js');
+        if (!ok) return;
+      }
+      if (window.CustomStoriesModule) window.CustomStoriesModule.start(this.container, this.config, onExit);
 
     } else if (mode === 'teacher-bingo') {
       if (!window.KanjiBingoGeneratorModule) {
