@@ -413,15 +413,18 @@
         },
         {
           "spk": "A",
-          "jp": "答えを 集めて、思い上がらない ように しましょう。問答 しながら 考えると もっと いいですよ。",
-          "en": "Let's gather answers without getting conceited. It's even better to think while doing Q&A.",
+          "jp": "いい 思いを 書きましたね。でも、思い上がらない ように しましょう。問答 しながら 考えると もっと いいですよ。",
+          "en": "You wrote nice feelings. But let's be careful not to get conceited. It's even better to think while doing Q&A.",
           "terms": [
-            "v_kotae",
+            "v_ii",
+            "v_omoi_feel",
             "p_wo",
             {
-              "id": "v_atsumeru",
-              "form": "te_form"
+              "id": "v_kaku",
+              "form": "polite_mashita"
             },
+            "p_ne",
+            "p_demo_but",
             {
               "id": "v_omoiagaru",
               "form": "plain_negative"
