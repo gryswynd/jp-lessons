@@ -559,21 +559,25 @@
           ]
         },
         {
-          "spk": "すずきせんせい",
-          "jp": "それは 大切ですよ。また 来て ください。",
-          "en": "That is important. Please come again.",
+          "spk": "ナナ",
+          "jp": "はい。紙に 書いて ありますよ。見て ください。",
+          "en": "Yes. (A sample) has been written on the paper. Please take a look.",
           "terms": [
-            "char_suzuki",
-            "v_sore",
-            "p_wa",
+            "char_nana",
+            "p_hai",
+            "v_kami",
+            "p_ni",
             {
-              "id": "v_taisetsu",
-              "form": "polite_adj"
+              "id": "v_kaku",
+              "form": "te_form"
+            },
+            {
+              "id": "v_aru",
+              "form": "polite_masu"
             },
             "p_yo",
-            "v_mata",
             {
-              "id": "v_kuru",
+              "id": "v_miru",
               "form": "te_form"
             },
             "v_kudasai"
