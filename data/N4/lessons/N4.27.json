@@ -316,21 +316,24 @@
         },
         {
           "spk": "B",
-          "jp": "ありがとうございます。急ぐ ように して ください。",
-          "en": "Thank you. Please make an effort to hurry.",
+          "jp": "ありがとうございます。明日は 時間に 来る ように します。",
+          "en": "Thank you. Tomorrow, I'll make sure to come on time.",
           "terms": [
             "p_arigatou_gozaimasu",
+            "v_ashita",
+            "p_wa",
+            "v_jikan",
+            "p_ni",
             {
-              "id": "v_isogu",
+              "id": "v_kuru",
               "form": "plain_form"
             },
             "v_you_manner",
             "p_ni",
             {
               "id": "v_suru",
-              "form": "te_form"
-            },
-            "v_kudasai"
+              "form": "polite_masu"
+            }
           ]
         }
       ]
@@ -418,20 +421,28 @@
         },
         {
           "spk": "B",
-          "jp": "そうですね。心待ちに して います。",
-          "en": "That's right. I'm looking forward to it.",
+          "jp": "そうですね。何度も 運動 して、よく 待てる ように なりました。",
+          "en": "That's right. After exercising many times, I came to be able to wait well.",
           "terms": [
             "p_soudesu",
             "p_ne",
-            "v_kokoromachi",
-            "p_ni",
+            "v_nando",
+            "p_mo",
+            "v_undou",
             {
               "id": "v_suru",
               "form": "te_form"
             },
+            "v_yoku",
             {
-              "id": "v_iru",
-              "form": "polite_masu"
+              "id": "v_matsu",
+              "form": "potential"
+            },
+            "v_you_manner",
+            "p_ni",
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
             }
           ]
         }
@@ -892,23 +903,23 @@
           ]
         },
         {
-          "jp": "夕飯までに 帰る ように して います。",
-          "en": "I am making an effort to return before dinner.",
+          "jp": "夕方までに 着ける ように、早く 出ます。",
+          "en": "So that I can arrive by evening, I leave early.",
           "terms": [
-            "v_yuuhan",
+            "v_yuugata",
             "p_made_ni",
             {
-              "id": "v_kaeru",
-              "form": "plain_form"
+              "id": "v_tsuku",
+              "form": "potential"
             },
             "v_you_manner",
             "p_ni",
             {
-              "id": "v_suru",
-              "form": "te_form"
+              "id": "v_hayai",
+              "form": "adverbial"
             },
             {
-              "id": "v_iru",
+              "id": "v_deru",
               "form": "polite_masu"
             }
           ]
