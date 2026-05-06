@@ -689,15 +689,17 @@
           ]
         },
         {
-          "jp": "正月が 来たら、自分の 考えを 正す ことが 大切です。",
-          "en": "When New Year comes, correcting your own thinking is important.",
+          "jp": "新しい 考え方で 始めるなら、自分の 考えを 正す ことが 大切です。",
+          "en": "If you're going to start with a new way of thinking, correcting your own thinking is important.",
           "terms": [
-            "v_shougatsu",
-            "p_ga",
+            "v_atarashii",
+            "v_kangaekata",
+            "p_de",
             {
-              "id": "v_kuru",
-              "form": "conditional_tara"
+              "id": "v_hajimeru",
+              "form": "plain_form"
             },
+            "p_nara",
             "v_jibun",
             "p_no",
             "v_kangae",
@@ -852,8 +854,14 @@
             },
             "p_to_quote",
             "g_da",
-            {"id": "v_iu", "form": "te_form"},
-            {"id": "v_iru", "form": "polite_masu"}
+            {
+              "id": "v_iu",
+              "form": "te_form"
+            },
+            {
+              "id": "v_iru",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -1090,8 +1098,14 @@
             "v_kangaekata",
             "p_ni",
             "v_chuui",
-            {"id": "v_suru", "form": "nakereba"},
-            {"id": "v_ikeru", "form": "polite_negative"}
+            {
+              "id": "v_suru",
+              "form": "nakereba"
+            },
+            {
+              "id": "v_ikeru",
+              "form": "polite_negative"
+            }
           ]
         },
         {
@@ -1127,7 +1141,10 @@
             },
             "v_kudasai",
             "p_to_quote",
-            {"id": "v_iu", "form": "polite_mashita"}
+            {
+              "id": "v_iu",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -1164,10 +1181,16 @@
               "id": "v_kiku",
               "form": "tari_form"
             },
-            {"id": "v_suru", "form": "plain_form"},
+            {
+              "id": "v_suru",
+              "form": "plain_form"
+            },
             "v_koto",
             "p_ga",
-            {"id": "v_taisetsu", "form": "polite_adj"},
+            {
+              "id": "v_taisetsu",
+              "form": "polite_adj"
+            },
             "g_desu"
           ]
         }
