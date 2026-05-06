@@ -4,12 +4,16 @@ window.CustomStoriesModule = (function() {
   let container = null;
   let config = null;
   let onExit = null;
-  let currentStory = null;
   let storyList = [];
   let currentIndex = 0;
   let termMapData = {};
   let autoSurfaceMap = {};
   let CONJUGATION_RULES = null;
+
+  const C1 = '#0891B2'; // cyan-600
+  const C2 = '#0E7490'; // cyan-700
+  const CL1 = '#F0F9FF'; // cyan-50
+  const CL2 = '#BAE6FD'; // cyan-200
 
   function getCdnUrl(filepath) {
     return window.getAssetUrl(config, filepath);
@@ -19,19 +23,18 @@ window.CustomStoriesModule = (function() {
     container = containerElement;
     config = repoConfig;
     onExit = exitCallback;
-
     initializeModule();
   }
 
   function initializeModule() {
-    const styleId = 'jp-custom-story-styles';
+    const styleId = 'jp-cc-styles';
     if (!document.getElementById(styleId)) {
       const style = document.createElement('style');
       style.id = styleId;
       style.textContent = `
-        .jp-cs-container {
+        .jp-cc-container {
           font-family: 'Poppins', 'Noto Sans JP', sans-serif;
-          background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);
+          background: linear-gradient(135deg, ${C1} 0%, ${C2} 100%);
           border-radius: 12px;
           overflow: hidden;
           max-width: 900px;
@@ -40,8 +43,8 @@ window.CustomStoriesModule = (function() {
           position: relative;
           min-height: 600px;
         }
-        .jp-cs-header {
-          background: rgba(0,0,0,0.5);
+        .jp-cc-header {
+          background: rgba(0,0,0,0.4);
           padding: 15px 20px;
           display: flex;
           justify-content: space-between;
@@ -49,18 +52,18 @@ window.CustomStoriesModule = (function() {
           flex-wrap: wrap;
           gap: 10px;
         }
-        .jp-cs-title {
+        .jp-cc-title {
           color: white;
           font-weight: 700;
           font-size: 1.1rem;
         }
-        .jp-cs-nav {
+        .jp-cc-nav {
           display: flex;
           gap: 10px;
           align-items: center;
         }
-        .jp-cs-nav-btn, .jp-cs-back-btn {
-          background: rgba(255,255,255,0.1);
+        .jp-cc-nav-btn, .jp-cc-back-btn {
+          background: rgba(255,255,255,0.15);
           color: white;
           border: none;
           padding: 8px 16px;
@@ -71,15 +74,10 @@ window.CustomStoriesModule = (function() {
           font-size: 14px;
         }
         @media (hover: hover) {
-          .jp-cs-nav-btn:hover, .jp-cs-back-btn:hover {
-            background: rgba(255,255,255,0.2);
-          }
+          .jp-cc-nav-btn:hover, .jp-cc-back-btn:hover { background: rgba(255,255,255,0.25); }
         }
-        .jp-cs-nav-btn:disabled {
-          opacity: 0.3;
-          cursor: not-allowed;
-        }
-        .jp-cs-content {
+        .jp-cc-nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+        .jp-cc-content {
           background: white;
           padding: 40px;
           margin: 20px;
@@ -88,18 +86,18 @@ window.CustomStoriesModule = (function() {
           max-height: calc(100vh - 200px);
           overflow-y: auto;
         }
-        .jp-cs-content h1 { color: #7C3AED; font-size: 2rem; margin-top: 0; margin-bottom: 0.5rem; font-weight: 700; }
-        .jp-cs-content h2 { color: #5B21B6; font-size: 1.4rem; margin-top: 0; margin-bottom: 2rem; font-weight: 600; }
-        .jp-cs-content h3 { color: #7C3AED; font-size: 1.2rem; margin-top: 2rem; margin-bottom: 1rem; font-weight: 600; border-bottom: 2px solid #7C3AED; padding-bottom: 0.5rem; }
-        .jp-cs-content hr { border: none; border-top: 2px solid #e0e0e0; margin: 2rem 0; }
-        .jp-cs-content p { font-size: 1.1rem; line-height: 2; margin-bottom: 1rem; color: #333; font-family: 'Noto Sans JP', sans-serif; }
-        .jp-cs-content ul, .jp-cs-content ol { line-height: 1.8; margin-bottom: 1rem; padding-left: 2rem; }
-        .jp-cs-content li { margin-bottom: 0.5rem; color: #333; }
-        .jp-cs-content strong { color: #7C3AED; font-weight: 700; }
-        .jp-cs-content em { color: #5B21B6; font-style: italic; }
-        .jp-cs-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px; font-family: monospace; font-size: 0.9em; }
-        .jp-cs-content pre { background: #f5f5f5; padding: 15px; border-radius: 6px; overflow-x: auto; margin-bottom: 1rem; }
-        .jp-cs-content pre code { background: none; padding: 0; }
+        .jp-cc-content h1 { color: ${C1}; font-size: 2rem; margin-top: 0; margin-bottom: 0.5rem; font-weight: 700; }
+        .jp-cc-content h2 { color: ${C2}; font-size: 1.4rem; margin-top: 0; margin-bottom: 2rem; font-weight: 600; }
+        .jp-cc-content h3 { color: ${C1}; font-size: 1.2rem; margin-top: 2rem; margin-bottom: 1rem; font-weight: 600; border-bottom: 2px solid ${C1}; padding-bottom: 0.5rem; }
+        .jp-cc-content hr { border: none; border-top: 2px solid #e0e0e0; margin: 2rem 0; }
+        .jp-cc-content p { font-size: 1.1rem; line-height: 2; margin-bottom: 1rem; color: #333; font-family: 'Noto Sans JP', sans-serif; }
+        .jp-cc-content ul, .jp-cc-content ol { line-height: 1.8; margin-bottom: 1rem; padding-left: 2rem; }
+        .jp-cc-content li { margin-bottom: 0.5rem; color: #333; }
+        .jp-cc-content strong { color: ${C1}; font-weight: 700; }
+        .jp-cc-content em { color: ${C2}; font-style: italic; }
+        .jp-cc-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px; font-family: monospace; font-size: 0.9em; }
+        .jp-cc-content pre { background: #f5f5f5; padding: 15px; border-radius: 6px; overflow-x: auto; margin-bottom: 1rem; }
+        .jp-cc-content pre code { background: none; padding: 0; }
         .jp-term {
           color: #4e54c8;
           font-weight: 700;
@@ -111,23 +109,23 @@ window.CustomStoriesModule = (function() {
         @media (hover: hover) {
           .jp-term:hover { background: rgba(78,84,200,0.08); border-bottom-color: #4e54c8; }
         }
-        .jp-cs-loading {
+        .jp-cc-loading {
           text-align: center;
           padding: 60px 20px;
           color: white;
         }
-        .jp-cs-loading-spinner {
+        .jp-cc-loading-spinner {
           display: inline-block;
           width: 40px;
           height: 40px;
           border: 4px solid rgba(255,255,255,0.3);
           border-top-color: white;
           border-radius: 50%;
-          animation: cs-spin 1s linear infinite;
+          animation: cc-spin 1s linear infinite;
           margin-bottom: 20px;
         }
-        @keyframes cs-spin { to { transform: rotate(360deg); } }
-        .jp-cs-error {
+        @keyframes cc-spin { to { transform: rotate(360deg); } }
+        .jp-cc-error {
           background: #ff5252;
           color: white;
           padding: 20px;
@@ -135,22 +133,58 @@ window.CustomStoriesModule = (function() {
           border-radius: 8px;
           text-align: center;
         }
-        .jp-cs-selector {
+        .jp-cc-selector {
           background: white;
           padding: 30px;
           margin: 20px;
           border-radius: 8px;
           box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
-        .jp-cs-selector h2 { color: #7C3AED; font-size: 1.3rem; font-weight: 700; margin: 0 0 5px 0; }
-        .jp-cs-selector > p { color: #888; font-size: 0.9rem; margin: 0 0 20px 0; }
-        .jp-cs-selector-grid {
+        .jp-cc-selector h2 { color: ${C1}; font-size: 1.3rem; font-weight: 700; margin: 0 0 5px 0; }
+        .jp-cc-selector > p { color: #888; font-size: 0.9rem; margin: 0 0 20px 0; }
+        .jp-cc-selector-grid {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
           gap: 16px;
         }
-        .jp-cs-card {
-          background: linear-gradient(135deg, #F5F3FF 0%, #DDD6FE 100%);
+        .jp-cc-type-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 16px;
+        }
+        .jp-cc-type-card {
+          background: linear-gradient(135deg, ${CL1} 0%, ${CL2} 100%);
+          border-radius: 12px;
+          padding: 32px 20px;
+          cursor: pointer;
+          transition: transform 0.2s, box-shadow 0.2s;
+          border: 2px solid transparent;
+          text-align: center;
+        }
+        @media (hover: hover) {
+          .jp-cc-type-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border-color: ${C1};
+          }
+        }
+        .jp-cc-type-icon { font-size: 2.5rem; margin-bottom: 12px; }
+        .jp-cc-type-name { font-size: 1.1rem; font-weight: 700; color: ${C2}; margin-bottom: 4px; }
+        .jp-cc-type-count { font-size: 0.8rem; color: #666; }
+        .jp-cc-back-link {
+          background: transparent;
+          border: none;
+          color: ${C1};
+          font-weight: 700;
+          cursor: pointer;
+          padding: 0 0 12px 0;
+          font-size: 0.9rem;
+          display: block;
+          font-family: inherit;
+        }
+        @media (hover: hover) { .jp-cc-back-link:hover { text-decoration: underline; } }
+        .jp-cc-card {
+          background: linear-gradient(135deg, ${CL1} 0%, ${CL2} 100%);
           border-radius: 12px;
           padding: 24px 16px;
           cursor: pointer;
@@ -159,15 +193,15 @@ window.CustomStoriesModule = (function() {
           text-align: center;
         }
         @media (hover: hover) {
-          .jp-cs-card:hover {
+          .jp-cc-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            border-color: #7C3AED;
+            border-color: ${C1};
           }
         }
-        .jp-cs-card-badge {
+        .jp-cc-card-badge {
           display: inline-block;
-          background: #7C3AED;
+          background: ${C1};
           color: white;
           font-size: 0.7rem;
           font-weight: 700;
@@ -176,10 +210,10 @@ window.CustomStoriesModule = (function() {
           margin-bottom: 12px;
           letter-spacing: 0.05em;
         }
-        .jp-cs-card-jp { font-size: 1.3rem; font-weight: 700; color: #333; margin-bottom: 6px; font-family: 'Noto Sans JP', sans-serif; }
-        .jp-cs-card-en { font-size: 0.85rem; color: #666; margin-bottom: 16px; }
-        .jp-cs-card-read-btn {
-          background: #7C3AED;
+        .jp-cc-card-jp { font-size: 1.3rem; font-weight: 700; color: #333; margin-bottom: 6px; font-family: 'Noto Sans JP', sans-serif; }
+        .jp-cc-card-en { font-size: 0.85rem; color: #666; margin-bottom: 16px; }
+        .jp-cc-card-read-btn {
+          background: ${C1};
           color: white;
           border: none;
           padding: 8px 20px;
@@ -191,58 +225,52 @@ window.CustomStoriesModule = (function() {
           transition: background 0.2s;
         }
         @media (hover: hover) {
-          .jp-cs-card:hover .jp-cs-card-read-btn { background: #6D28D9; }
+          .jp-cc-card:hover .jp-cc-card-read-btn { background: ${C2}; }
         }
         @media (max-width: 600px) {
-          .jp-cs-content { padding: 20px; margin: 10px; }
-          .jp-cs-content h1 { font-size: 1.5rem; }
-          .jp-cs-content h2 { font-size: 1.2rem; }
-          .jp-cs-header { flex-direction: column; align-items: stretch; }
-          .jp-cs-nav { justify-content: center; }
-          .jp-cs-selector { padding: 20px; margin: 10px; }
-          .jp-cs-selector-grid { grid-template-columns: 1fr; }
+          .jp-cc-content { padding: 20px; margin: 10px; }
+          .jp-cc-content h1 { font-size: 1.5rem; }
+          .jp-cc-content h2 { font-size: 1.2rem; }
+          .jp-cc-header { flex-direction: column; align-items: stretch; }
+          .jp-cc-nav { justify-content: center; }
+          .jp-cc-selector { padding: 20px; margin: 10px; }
+          .jp-cc-selector-grid, .jp-cc-type-grid { grid-template-columns: 1fr; }
         }
       `;
       document.head.appendChild(style);
     }
 
     container.innerHTML = `
-      <div class="jp-cs-container">
-        <div class="jp-cs-header">
-          <div class="jp-cs-title">⭐ Custom Stories</div>
-          <div class="jp-cs-nav">
-            <button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.3);">⚙</button>
-            <button class="jp-cs-nav-btn" id="jp-cs-list" style="display:none;">☰ All Stories</button>
-            <button class="jp-cs-nav-btn" id="jp-cs-prev" style="display:none;">← Previous</button>
-            <button class="jp-cs-nav-btn" id="jp-cs-next" style="display:none;">Next →</button>
-            <button class="jp-cs-back-btn" id="jp-cs-exit">← Back to Menu</button>
+      <div class="jp-cc-container">
+        <div class="jp-cc-header">
+          <div class="jp-cc-title">✦ Custom Content</div>
+          <div class="jp-cc-nav">
+            <button class="jp-settings-gear" onclick="window.JPShared.ttsSettings.open()" title="Voice Settings" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);">⚙</button>
+            <button class="jp-cc-nav-btn" id="jp-cc-list" style="display:none;">☰ All Stories</button>
+            <button class="jp-cc-nav-btn" id="jp-cc-prev" style="display:none;">← Previous</button>
+            <button class="jp-cc-nav-btn" id="jp-cc-next" style="display:none;">Next →</button>
+            <button class="jp-cc-back-btn" id="jp-cc-exit">← Back to Menu</button>
           </div>
         </div>
-        <div class="jp-cs-loading">
-          <div class="jp-cs-loading-spinner"></div>
-          <div>Loading stories...</div>
+        <div class="jp-cc-loading">
+          <div class="jp-cc-loading-spinner"></div>
+          <div>Loading...</div>
         </div>
       </div>
     `;
 
-    document.getElementById('jp-cs-exit').addEventListener('click', () => {
-      if (onExit) onExit();
-    });
-    document.getElementById('jp-cs-prev').addEventListener('click', () => {
+    document.getElementById('jp-cc-exit').addEventListener('click', () => { if (onExit) onExit(); });
+    document.getElementById('jp-cc-prev').addEventListener('click', () => {
       if (currentIndex > 0) { currentIndex--; loadStory(storyList[currentIndex]); }
     });
-    document.getElementById('jp-cs-next').addEventListener('click', () => {
+    document.getElementById('jp-cc-next').addEventListener('click', () => {
       if (currentIndex < storyList.length - 1) { currentIndex++; loadStory(storyList[currentIndex]); }
     });
-    document.getElementById('jp-cs-list').addEventListener('click', () => {
-      showSelector();
-    });
+    document.getElementById('jp-cc-list').addEventListener('click', () => showStorySelector());
 
     Promise.all([loadMarkedJS(), loadResources()]).then(() => {
       loadStoryList();
-    }).catch(err => {
-      showError('Failed to load resources: ' + err.message);
-    });
+    }).catch(err => showError('Failed to load resources: ' + err.message));
   }
 
   function loadMarkedJS() {
@@ -251,12 +279,8 @@ window.CustomStoriesModule = (function() {
       const script = document.createElement('script');
       script.src = 'https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js';
       script.onload = () => {
-        if (window.marked) {
-          marked.setOptions({ gfm: true, breaks: true });
-          resolve();
-        } else {
-          reject(new Error('marked library not available'));
-        }
+        if (window.marked) { marked.setOptions({ gfm: true, breaks: true }); resolve(); }
+        else reject(new Error('marked not available'));
       };
       script.onerror = () => reject(new Error('Failed to load marked.js'));
       document.head.appendChild(script);
@@ -266,13 +290,10 @@ window.CustomStoriesModule = (function() {
   async function loadResources() {
     try {
       const manifest = await window.getManifest(config);
-      const conjUrl      = getCdnUrl(manifest.globalFiles.conjugationRules);
-      const particleUrl  = getCdnUrl(manifest.shared.particles);
-      const characterUrl = getCdnUrl(manifest.shared.characters);
       const [conjugationRules, particleData, characterData, ...glossParts] = await Promise.all([
-        fetch(conjUrl).then(r => r.json()),
-        fetch(particleUrl).then(r => r.json()),
-        fetch(characterUrl).then(r => r.json()),
+        fetch(getCdnUrl(manifest.globalFiles.conjugationRules)).then(r => r.json()),
+        fetch(getCdnUrl(manifest.shared.particles)).then(r => r.json()),
+        fetch(getCdnUrl(manifest.shared.characters)).then(r => r.json()),
         ...manifest.levels.map(lvl => fetch(getCdnUrl(manifest.data[lvl].glossary)).then(r => r.json()))
       ]);
       const allEntries = glossParts.flatMap(g => g.entries);
@@ -290,9 +311,7 @@ window.CustomStoriesModule = (function() {
         termMapData[c.id] = Object.assign({}, c, { portraitUrl: getCdnUrl(c.portrait) });
       });
       if (window.JPShared && window.JPShared.assets && window.JPShared.assets.preloadImages) {
-        window.JPShared.assets.preloadImages(
-          (characterData.characters || []).map(c => getCdnUrl(c.portrait)).filter(Boolean)
-        );
+        window.JPShared.assets.preloadImages((characterData.characters || []).map(c => getCdnUrl(c.portrait)).filter(Boolean));
       }
 
       CONJUGATION_RULES = conjugationRules;
@@ -324,7 +343,7 @@ window.CustomStoriesModule = (function() {
         });
       };
     } catch (err) {
-      console.warn('[CustomStories] Could not load glossary/conjugation:', err);
+      console.warn('[CustomContent] Could not load glossary/conjugation:', err);
     }
   }
 
@@ -333,7 +352,6 @@ window.CustomStoriesModule = (function() {
       const manifest = await window.getManifest(config);
       const customData = manifest.data && manifest.data.custom;
       const stories = (customData && customData.stories) || [];
-
       storyList = stories.map(story => ({
         id: story.id,
         dir: story.dir,
@@ -343,54 +361,80 @@ window.CustomStoriesModule = (function() {
         subtitle: story.title,
         unlocksAfter: story.unlocksAfter
       }));
-
-      if (storyList.length > 0) {
-        showSelector();
-      } else {
-        showError('No custom stories available yet.');
-      }
+      showContentMenu();
     } catch (err) {
-      showError('Failed to load story list: ' + err.message);
+      showError('Failed to load content list: ' + err.message);
     }
   }
 
-  function showSelector() {
-    const wrap = container.querySelector('.jp-cs-container');
-    const area = wrap.querySelector('.jp-cs-loading') || wrap.querySelector('.jp-cs-content') ||
-                 wrap.querySelector('.jp-cs-selector') || wrap.querySelector('.jp-cs-error');
+  function showContentMenu() {
+    const wrap = container.querySelector('.jp-cc-container');
+    const area = _getArea(wrap);
 
-    const titleEl = wrap.querySelector('.jp-cs-title');
-    if (titleEl) titleEl.textContent = '⭐ Custom Stories';
+    const titleEl = wrap.querySelector('.jp-cc-title');
+    if (titleEl) titleEl.textContent = '✦ Custom Content';
 
-    const listBtn = document.getElementById('jp-cs-list');
-    const prevBtn = document.getElementById('jp-cs-prev');
-    const nextBtn = document.getElementById('jp-cs-next');
-    if (listBtn) listBtn.style.display = 'none';
-    if (prevBtn) prevBtn.style.display = 'none';
-    if (nextBtn) nextBtn.style.display = 'none';
+    ['jp-cc-list', 'jp-cc-prev', 'jp-cc-next'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = 'none';
+    });
+
+    if (area) {
+      area.outerHTML = `
+        <div class="jp-cc-selector">
+          <h2>Custom Content</h2>
+          <p>Personalized content for your learning journey</p>
+          <div class="jp-cc-type-grid">
+            <div class="jp-cc-type-card" id="jp-cc-type-stories">
+              <div class="jp-cc-type-icon">📖</div>
+              <div class="jp-cc-type-name">Custom Stories</div>
+              <div class="jp-cc-type-count">${storyList.length} stor${storyList.length !== 1 ? 'ies' : 'y'}</div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    const card = document.getElementById('jp-cc-type-stories');
+    if (card) card.addEventListener('click', showStorySelector);
+  }
+
+  function showStorySelector() {
+    const wrap = container.querySelector('.jp-cc-container');
+    const area = _getArea(wrap);
+
+    const titleEl = wrap.querySelector('.jp-cc-title');
+    if (titleEl) titleEl.textContent = '📖 Custom Stories';
+
+    ['jp-cc-list', 'jp-cc-prev', 'jp-cc-next'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = 'none';
+    });
 
     const cardsHtml = storyList.map((story, i) => `
-      <div class="jp-cs-card" data-story-index="${i}">
-        <div class="jp-cs-card-badge">Custom</div>
-        <div class="jp-cs-card-jp">${story.title}</div>
-        <div class="jp-cs-card-en">${story.subtitle}</div>
-        <button class="jp-cs-card-read-btn">Read →</button>
+      <div class="jp-cc-card" data-story-index="${i}">
+        <div class="jp-cc-card-badge">Custom</div>
+        <div class="jp-cc-card-jp">${story.title}</div>
+        <div class="jp-cc-card-en">${story.subtitle}</div>
+        <button class="jp-cc-card-read-btn">Read →</button>
       </div>
     `).join('');
 
     if (area) {
       area.outerHTML = `
-        <div class="jp-cs-selector">
-          <h2>Choose a Story</h2>
+        <div class="jp-cc-selector">
+          <button class="jp-cc-back-link" id="jp-cc-back-to-menu">← Custom Content</button>
+          <h2>Custom Stories</h2>
           <p>${storyList.length} stor${storyList.length !== 1 ? 'ies' : 'y'} available</p>
-          <div class="jp-cs-selector-grid">
+          <div class="jp-cc-selector-grid">
             ${cardsHtml}
           </div>
         </div>
       `;
     }
 
-    wrap.querySelectorAll('.jp-cs-card').forEach(card => {
+    document.getElementById('jp-cc-back-to-menu').addEventListener('click', showContentMenu);
+    wrap.querySelectorAll('.jp-cc-card').forEach(card => {
       card.addEventListener('click', () => {
         const index = parseInt(card.dataset.storyIndex, 10);
         currentIndex = index;
@@ -401,36 +445,31 @@ window.CustomStoriesModule = (function() {
 
   async function loadStory(storyInfo) {
     if (window.JPShared && window.JPShared.streak) window.JPShared.streak.recordActivity();
-    const wrap = container.querySelector('.jp-cs-container');
-    const area = wrap.querySelector('.jp-cs-loading') || wrap.querySelector('.jp-cs-content') ||
-                 wrap.querySelector('.jp-cs-selector') || wrap.querySelector('.jp-cs-error');
+    const wrap = container.querySelector('.jp-cc-container');
+    const area = _getArea(wrap);
 
     if (area) {
       area.outerHTML = `
-        <div class="jp-cs-loading">
-          <div class="jp-cs-loading-spinner"></div>
+        <div class="jp-cc-loading">
+          <div class="jp-cc-loading-spinner"></div>
           <div>Loading ${storyInfo.title}...</div>
         </div>
       `;
     }
 
-    const titleEl = wrap.querySelector('.jp-cs-title');
+    const titleEl = wrap.querySelector('.jp-cc-title');
     if (titleEl) titleEl.textContent = storyInfo.title;
 
-    const listBtn = document.getElementById('jp-cs-list');
-    const prevBtn = document.getElementById('jp-cs-prev');
-    const nextBtn = document.getElementById('jp-cs-next');
-    if (listBtn) listBtn.style.display = '';
-    if (prevBtn) prevBtn.style.display = '';
-    if (nextBtn) nextBtn.style.display = '';
+    ['jp-cc-list', 'jp-cc-prev', 'jp-cc-next'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = '';
+    });
     updateNavButtons();
 
     try {
-      const mdUrl   = getCdnUrl(storyInfo.mdFile);
-      const jsonUrl = getCdnUrl(storyInfo.jsonFile);
       const [mdResponse, jsonResponse] = await Promise.all([
-        fetch(mdUrl + '?t=' + Date.now()),
-        fetch(jsonUrl + '?t=' + Date.now())
+        fetch(getCdnUrl(storyInfo.mdFile) + '?t=' + Date.now()),
+        fetch(getCdnUrl(storyInfo.jsonFile) + '?t=' + Date.now())
       ]);
       if (!mdResponse.ok) throw new Error('Failed to load story markdown: ' + mdResponse.status);
       if (!jsonResponse.ok) throw new Error('Failed to load story data: ' + jsonResponse.status);
@@ -440,11 +479,10 @@ window.CustomStoriesModule = (function() {
       let html = marked.parse(markdown);
       html = processStoryHTML(html, storyData.terms);
 
-      const loading = wrap.querySelector('.jp-cs-loading');
-      if (loading) loading.outerHTML = `<div class="jp-cs-content">${html}</div>`;
+      const loading = wrap.querySelector('.jp-cc-loading');
+      if (loading) loading.outerHTML = `<div class="jp-cc-content">${html}</div>`;
 
-      currentStory = storyInfo;
-      const contentDiv = wrap.querySelector('.jp-cs-content');
+      const contentDiv = wrap.querySelector('.jp-cc-content');
       if (contentDiv) {
         contentDiv.scrollTop = 0;
         addSpeakerButtons(contentDiv);
@@ -467,8 +505,7 @@ window.CustomStoriesModule = (function() {
         var txt = prev.textContent.trim().toLowerCase();
         if (prev.tagName && /^H[1-6]$/.test(prev.tagName) &&
             (txt.indexOf('english') !== -1 || txt.indexOf('vocabulary used') !== -1 || txt.indexOf('grammar points') !== -1)) {
-          hitEnglishSection = true;
-          return;
+          hitEnglishSection = true; return;
         }
         if (prev.tagName === 'HR') break;
         prev = prev.previousElementSibling;
@@ -500,13 +537,8 @@ window.CustomStoriesModule = (function() {
         playBtn.classList.toggle('jp-speak-all-active', playing);
       }
       playBtn.onclick = function() {
-        if (window.JPShared.tts.isSpeaking()) {
-          window.JPShared.tts.cancel();
-          setPlaying(false);
-        } else {
-          setPlaying(true);
-          window.JPShared.tts.speakLines(storyTexts, { onFinish: function() { setPlaying(false); } });
-        }
+        if (window.JPShared.tts.isSpeaking()) { window.JPShared.tts.cancel(); setPlaying(false); }
+        else { setPlaying(true); window.JPShared.tts.speakLines(storyTexts, { onFinish: function() { setPlaying(false); } }); }
       };
       contentDiv.insertBefore(playBtn, contentDiv.firstChild);
     }
@@ -516,7 +548,6 @@ window.CustomStoriesModule = (function() {
     const mergedMappings = Object.assign({}, autoSurfaceMap, termMappings);
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = html;
-
     const walker = document.createTreeWalker(tempDiv, NodeFilter.SHOW_TEXT, null, false);
     const nodesToReplace = [];
     let node;
@@ -529,7 +560,6 @@ window.CustomStoriesModule = (function() {
       const matches = findTermsInText(text, mergedMappings);
       if (matches.length > 0) nodesToReplace.push({ node, matches });
     }
-
     nodesToReplace.forEach(({ node, matches }) => {
       const span = document.createElement('span');
       let lastIndex = 0;
@@ -546,7 +576,6 @@ window.CustomStoriesModule = (function() {
       span.innerHTML = html;
       node.parentElement.replaceChild(span, node);
     });
-
     return tempDiv.innerHTML;
   }
 
@@ -579,23 +608,22 @@ window.CustomStoriesModule = (function() {
   }
 
   function updateNavButtons() {
-    const prevBtn = document.getElementById('jp-cs-prev');
-    const nextBtn = document.getElementById('jp-cs-next');
+    const prevBtn = document.getElementById('jp-cc-prev');
+    const nextBtn = document.getElementById('jp-cc-next');
     if (prevBtn) prevBtn.disabled = currentIndex === 0;
     if (nextBtn) nextBtn.disabled = currentIndex === storyList.length - 1 || storyList.length === 0;
   }
 
+  function _getArea(wrap) {
+    return wrap.querySelector('.jp-cc-loading') || wrap.querySelector('.jp-cc-content') ||
+           wrap.querySelector('.jp-cc-selector') || wrap.querySelector('.jp-cc-error');
+  }
+
   function showError(message) {
-    const wrap = container.querySelector('.jp-cs-container');
-    const area = wrap.querySelector('.jp-cs-loading') || wrap.querySelector('.jp-cs-content') ||
-                 wrap.querySelector('.jp-cs-selector') || wrap.querySelector('.jp-cs-error');
+    const wrap = container.querySelector('.jp-cc-container');
+    const area = _getArea(wrap);
     if (area) {
-      area.outerHTML = `
-        <div class="jp-cs-error">
-          <h2>⚠️ Error</h2>
-          <p>${message}</p>
-        </div>
-      `;
+      area.outerHTML = `<div class="jp-cc-error"><h2>⚠️ Error</h2><p>${message}</p></div>`;
     }
   }
 
