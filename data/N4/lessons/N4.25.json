@@ -312,8 +312,8 @@
         },
         {
           "spk": "やまもと先生",
-          "jp": "大学の 図書館に あります。行ったら、注意して 読んで ください。",
-          "en": "They are at the university library. When you go, please read them carefully.",
+          "jp": "大学の 図書館に あります。そこへ 行けば、よく 分かりますよ。",
+          "en": "They are at the university library. If you go there, you'll understand well.",
           "terms": [
             "char_yamamoto",
             "v_daigaku",
@@ -324,20 +324,18 @@
               "id": "v_aru",
               "form": "polite_masu"
             },
+            "v_soko",
+            "p_e",
             {
               "id": "v_iku",
-              "form": "conditional_tara"
+              "form": "conditional_ba"
             },
-            "v_chuui",
+            "v_yoku",
             {
-              "id": "v_suru",
-              "form": "te_form"
+              "id": "v_wakaru",
+              "form": "polite_masu"
             },
-            {
-              "id": "v_yomu",
-              "form": "te_form"
-            },
-            "v_kudasai"
+            "p_yo"
           ]
         }
       ]
@@ -495,8 +493,8 @@
         },
         {
           "spk": "けん",
-          "jp": "研究者の 文書を 読んだら、いい ことが 分かるよ。",
-          "en": "If you read a researcher's document, you'll understand good things.",
+          "jp": "研究者の 文書を 読むと、いい ことが 分かるよ。",
+          "en": "When you read a researcher's documents, you understand good things.",
           "terms": [
             "char_ken",
             "v_kenkyuusha",
@@ -505,8 +503,9 @@
             "p_wo",
             {
               "id": "v_yomu",
-              "form": "conditional_tara"
+              "form": "plain_form"
             },
+            "p_to_conditional",
             "v_ii",
             "v_koto",
             "p_ga",
@@ -690,23 +689,25 @@
           ]
         },
         {
-          "jp": "研究が 終わったら、世界の 研究者も 注目します。",
-          "en": "When the research is finished, researchers around the world will also pay attention.",
+          "jp": "文学を 研究するなら、大学の 図書館が 一番 いいです。",
+          "en": "If you're going to research literature, the university library is the best.",
           "terms": [
+            "v_bungaku",
+            "p_wo",
             "v_kenkyuu",
-            "p_ga",
-            {
-              "id": "v_owaru",
-              "form": "conditional_tara"
-            },
-            "v_sekai",
-            "p_no",
-            "v_kenkyuusha",
-            "p_mo",
-            "v_chuumoku",
             {
               "id": "v_suru",
-              "form": "polite_masu"
+              "form": "plain_form"
+            },
+            "p_nara",
+            "v_daigaku",
+            "p_no",
+            "v_toshokan",
+            "p_ga",
+            "v_ichiban",
+            {
+              "id": "v_ii",
+              "form": "polite_adj"
             }
           ]
         },
@@ -871,26 +872,27 @@
           ]
         },
         {
-          "jp": "文書の 意味が 分かったら、作文に 書いて いきます。",
-          "en": "When I understand the meaning of the document, I will write it into an essay going forward.",
+          "jp": "研究を する 学生は、毎日 文書を 読まなければ いけません。",
+          "en": "Students who do research must read documents every day.",
           "terms": [
+            "v_kenkyuu",
+            "p_wo",
+            {
+              "id": "v_suru",
+              "form": "plain_form"
+            },
+            "v_gakusei",
+            "p_wa",
+            "v_mainichi",
             "v_bunsho",
-            "p_no",
-            "v_imi",
-            "p_ga",
+            "p_wo",
             {
-              "id": "v_wakaru",
-              "form": "conditional_tara"
-            },
-            "v_sakubun",
-            "p_ni",
-            {
-              "id": "v_kaku",
-              "form": "te_form"
+              "id": "v_yomu",
+              "form": "nakereba"
             },
             {
-              "id": "v_iku",
-              "form": "polite_masu"
+              "id": "v_ikeru",
+              "form": "polite_negative"
             }
           ]
         },
