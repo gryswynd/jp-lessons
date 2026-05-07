@@ -7,7 +7,7 @@
 
 今回、りきぞはクラスの行事の中心になった。先生が「今回の行事の中心に、だれが来る？」と言った時、りきぞはすぐに手を上げた。クラスのみんなは少し待ってから、「りきぞが中心か、特別だね」と言った。りきぞは正門の前でクラスの学生たちに発言した。「計画は私が作る。以上。」先生は注目して「りきぞ、よく考えて計画を作るように」と言った。りきぞは「もちろん」と答えた。
 
-毎晩、りきぞは計画を書いた。一夜目は三まいの紙になった。「まだ少ない」とりきぞは思った。二夜目は七まいの紙になった。「もう少し書こう」と思った。三夜目は十五まいの紙になった。特に、場所の区切りと行事の住所の書き方と物の使用と時間の計り方について、りきぞは集中して書いた。計画の開始から終わりまでを読むのに三十分以上だった。計画は合理的だった。「特に問題はない」と思いながら、りきぞは有力者のような意思を持って、計画書を持ちながら休んだ。
+毎晩、りきぞは計画を書いた。三まいの紙になった。「まだ少ない」とりきぞは思った。次の夜は七まいの紙になった。「もう少し書こう」と思った。その次の夜は十五まいの紙になった。特に、場所の区切りと行事の住所の書き方と物の使用と時間の計り方について、りきぞは集中して書いた。計画の開始から終わりまでを読むのに三十分以上だった。計画は合理的だった。「特に問題はない」と思いながら、りきぞは有力者のような意思を持って、計画書を持ちながら休んだ。
 
 行事の日の朝、正門の前にクラスの学生たちが集まった。りきぞは計画書を出した。みんなが計画を読み始めたが、まだ終わらなかった。「まだ読んでいる？」とりきぞは聞いた。「まだ読んでいる」とみんなは答えた。十五分後、りきぞは「開始の時間だよ」と言った。みんなはまだ計画を読んでいた。「計画書の注文まで読んだ人は？」とりきぞは聞いた。だれも手を上げなかった。「この計画書の正体は何か。それとも問答が多いのか」とりきぞは思った。
 
@@ -37,7 +37,7 @@
 
 This time, Rikizo became the center of the class event. When the teacher said, "Who will be the center of this event?", Rikizo immediately raised his hand. Everyone waited a moment, then said, "Rikizo as center — that's something special." Rikizo made a statement to the class in front of the main gate. "I'll make the plan. That's all." The teacher paid attention and said, "Rikizo, think it through carefully." Rikizo answered, "Of course."
 
-Every night, Rikizo wrote the plan. The first night: three sheets of paper. "Still not enough." The second night: seven sheets. "I'll write a little more." The third night: fifteen sheets. In particular, he concentrated on writing about the division of locations, how to address the event venues, how to use the things, and how to measure the timing. Reading from start to finish was over thirty minutes. The plan was rational. "No particular problems," he thought, and with an intention like an influential person, he fell asleep still holding the plan.
+Every night, Rikizo wrote the plan. Three sheets of paper. "Still not enough," he thought. The next night: seven sheets. "I'll write a little more." The night after that: fifteen sheets. In particular, he concentrated on writing about the division of locations, how to address the event venues, how to use the things, and how to measure the timing. Reading from start to finish was over thirty minutes. The plan was rational. "No particular problems," he thought, and with an intention like an influential person, he fell asleep still holding the plan.
 
 On the morning of the event, the class gathered in front of the main gate. Rikizo handed out the plan. Everyone started reading, but still hadn't finished. "Still reading?" Rikizo asked. "Still reading," everyone answered. Fifteen minutes later: "It's time to start!" Still reading. "Has anyone read as far as the orders?" No one raised their hand. "What is the true nature of this plan? Or are there too many back-and-forth questions?" Rikizo wondered.
 
