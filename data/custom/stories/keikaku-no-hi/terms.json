@@ -149,8 +149,30 @@
 
     "いる": { "id": "v_iru", "form": "plain_form" },
     "いた": { "id": "v_iru", "form": "plain_past" },
+    "いなかった": { "id": "v_iru", "form": "plain_past_negative" },
     "ある": { "id": "v_aru", "form": "plain_form" },
     "あった": { "id": "v_aru", "form": "plain_past" },
-    "代わらなかった": { "id": "v_kawaru", "form": "plain_past_negative" }
+    "代わらなかった": { "id": "v_kawaru", "form": "plain_past_negative" },
+
+    "計画書": { "id": "v_keikaku", "form": null },
+    "書き方": { "id": "v_kaku", "form": null },
+    "計り方": { "id": "v_hakaru", "form": null },
+    "動かし方": { "id": "v_ugoku", "form": null },
+    "動かして": { "id": "v_ugoku", "form": "te_form" },
+    "動かし": { "id": "v_ugoku", "form": null },
+    "動かしたくない": { "id": "v_ugoku", "form": null },
+    "合理的": { "id": "v_gouri", "form": null },
+    "合理的だった": { "id": "v_gouri", "form": null },
+    "上げた": { "id": "v_ageru", "form": "plain_past" },
+    "上げなかった": { "id": "v_ageru", "form": "plain_past_negative" },
+    "起きた": { "id": "v_okiru", "form": "plain_past" },
+    "できなかった": { "id": "v_dekiru", "form": "plain_past_negative" },
+    "読み": { "id": "v_yomu", "form": null },
+    "分かって": { "id": "v_wakaru", "form": "te_form" },
+
+    "だけ": { "id": "p_dake", "form": null },
+    "ながら": { "id": "p_nagara", "form": null },
+    "のに": { "id": "p_noni", "form": null },
+    "について": { "id": "p_ni_tsuite", "form": null }
   }
 }
