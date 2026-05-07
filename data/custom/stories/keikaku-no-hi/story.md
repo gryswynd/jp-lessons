@@ -41,7 +41,7 @@ Every night, Rikizo wrote the plan. Three sheets of paper. "Still not enough," h
 
 On the morning of the event, the class gathered in front of the main gate. Rikizo handed out the plan. Everyone started reading, but still hadn't finished. "Still reading?" Rikizo asked. "Still reading," everyone answered. Fifteen minutes later: "It's time to start!" Still reading. "Has anyone read as far as the orders?" No one raised their hand. "What is the true nature of this plan? Or are there too many back-and-forth questions?" Rikizo wondered.
 
-Rikizo began work. "This event is special. Understand the distinctions in the plan and let's go." He called out carefully like an influential person, but everyone was still reading. After waiting a bit more he said it again. Finally everyone started work, plans in hand.
+Rikizo began work. "This event is special. Understand the distinctions in the plan and let's go." He called out carefully like an influential person, but everyone was still reading. After waiting a bit more he said it again. Then everyone picked up their plans and got to work.
 
 After they started, there was a problem right away. Ken had the job of moving the table to the right of the building. But Ken started moving it to the left. "Ken, to the right!" Rikizo said. Ken answered, "Huh? From my side, isn't this the right?" "From your side it's still the left!" Rikizo said, but Ken had already carried the table to in front of the exit. "Okay, got it," Ken said, and started moving it again. This time, from the exit all the way outside the building. There was no such order in the plan.
 
@@ -49,13 +49,13 @@ Rikizo opened the plan and found the "right" sheet. The plan was correct. The pr
 
 Rikizo went back inside the building. Again, the same thing was there. Rikizo fell again. Same thing. Same place. He stood up and opened the plan. "The problem is Ken. That's all."
 
-Meanwhile, Yamakawa saw the table the plan had marked "move." However, Yamakawa got on the table and sat on top of it. Slowly, like someone waiting for a famous person in front of a bank, he expressed the opinion: "Well, this table is pretty nice, isn't it? I don't really want to move it." Rikizo wanted to argue, but the words wouldn't come out. He thought there was probably no malicious intent — but the orders said nothing about Yamakawa sitting on the table.
+Meanwhile, Yamakawa saw the table the plan had marked "move." However, Yamakawa got on the table and sat on top of it. Slowly, like someone waiting for a famous person in front of a bank, he expressed the opinion: "Well, this table is pretty nice, isn't it? I don't really want to move it." Rikizo had something to say, but the words wouldn't come out. He thought there was probably no malicious intent — but the orders said nothing about Yamakawa sitting on the table.
 
 When the event was over, Rikizo went outside and looked at the plan. The plan was correct. The divisions were correct. The location addresses were correct. The order questions and answers were correct. The table's position hadn't changed. That's all.
 
-Then Rikizo opened the fifteenth sheet of the plan: "About the event's intentions and distinctions." It said: "Move all things to the correct location." He read it carefully and asked himself: "Ken's right wasn't my right. Yamakawa's table didn't move. Nobody read the back-and-forth questions. What is the true nature of this problem?" He still couldn't investigate it to a conclusion. He started reading the plan again.
+Then Rikizo opened the fifteenth sheet of the plan: "Event Distinctions and Intentions." It said: "Move all things to the correct location." He read it carefully and asked himself: "Ken's right wasn't my right. Yamakawa's table didn't move. Nobody read the back-and-forth questions. What is the true nature of this problem?" He still couldn't investigate it to a conclusion. He started reading the plan again.
 
-Everyone came out through the main gate with tired voices. People passing in front of the bank paid a little attention to them. Ken walked without holding the table. Yamakawa walked with an especially proud face. Only Rikizo stood at the center, still holding the plan. He had been the center of today's event — but somehow the biggest thing that happened was falling down.
+Everyone came out through the main gate with tired voices. People passing in front of the bank paid a little attention to them. Ken walked without holding the table. Yamakawa walked with an especially proud face. Only Rikizo stood at the center, holding the plan. He had been the center of today's event — but somehow the biggest thing that happened was falling down.
 
 **The End**
 
@@ -102,7 +102,7 @@ Everyone came out through the main gate with tired voices. People passing in fro
 - 特別 (とくべつ) — special
 - 今回 (こんかい) — this time
 - 集まる (あつまる) — to gather / assemble
-- 合理 (ごうり) — rationality (referenced)
+- 合理てき (ごうりてき) — rational / logical (hybrid spelling: 合理 kanji + てき kana suffix)
 - 場所 (ばしょ) — place / location
 - 有名 (ゆうめい) — famous
 - 待つ (まつ) — to wait
