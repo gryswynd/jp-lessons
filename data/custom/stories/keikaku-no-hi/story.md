@@ -15,9 +15,9 @@
 
 試みを始めてから、すぐに問題が起きた。けんはテーブルを動かす仕事があった。りきぞの計画では、テーブルを建物の右に動かすことだった。でも、けんはテーブルを左に動かし始めた。「けん、右だよ！」とりきぞは言った。けんは「え？こちらから見ると、これが右じゃない？」と答えた。「そちらから見ても左だよ！」とりきぞは言ったが、けんはもうテーブルを出口の前まで運んでいた。けんは「ん、そっか」と言いながら、またテーブルを動かし始めた。今度は出口の前から、建物の外に運んだ。計画にはそんな注文はなかった。
 
-りきぞは計画書を開いて「右」の紙を見た。計画は正しかった。問題はけんの右と私の右の区別だ、とりきぞは思った。計画書を読みながら建物の中を歩いていた時、けんがまだ動かしていなかった物があった。りきぞは転んだ。「いたい！」りきぞは口答えしたかったが、立って計画書を集中して見た。「問題はけんの意思だ。以上」と思った。
+りきぞは計画書を開いて「右」の紙を見た。計画は正しかった。問題はけんの右と私の右の区別だ、とりきぞは思った。計画書を読みながら建物の中を歩いていた時、けんがまだ動かしていなかった物が前にあった。りきぞは転んだ。「いたい！」りきぞは口答えしたかったが、立って計画書を集中して見た。「問題はけんの意思だ。以上。」と言った。
 
-りきぞはもう一度建物の中に入った。また、同じ物があった。りきぞはまた転んだ。同じ物。同じ場所。りきぞは立って、また計画書を開いた。「問題はけんだ。以上。」
+りきぞはもう一度建物の中に入った。また、同じ物が前にあった。りきぞはまた転んだ。同じ物。同じ場所。りきぞは立って、また計画書を開いた。「問題はけんだ。以上。」と言った。
 
 その間に、やまかわは計画で「動かす」と書いてあったテーブルを見た。でも、やまかわはそのテーブルの上に乗った。銀行の前で有名な人を待つ人のようにゆっくりと、「まあ、このテーブル、いいんじゃない？動かしたくないな」と発言した。りきぞは言いたいことがあったが、声が出なかった。悪質な意思はないと思うが、注文には「やまかわがテーブルに乗ること」は書いていなかった。
 
@@ -45,9 +45,9 @@ Rikizo began work. "This event is special. Understand the distinctions in the pl
 
 After they started, there was a problem right away. Ken had the job of moving the table to the right of the building. But Ken started moving it to the left. "Ken, to the right!" Rikizo said. Ken answered, "Huh? From my side, isn't this the right?" "From your side it's still the left!" Rikizo said, but Ken had already carried the table to in front of the exit. "Okay, got it," Ken said, and started moving it again. This time, from the exit all the way outside the building. There was no such order in the plan.
 
-Rikizo opened the plan and found the "right" sheet. The plan was correct. The problem was the distinction between Ken's right and his own right, Rikizo thought. Walking through the building while reading the plan, something Ken still hadn't moved was there. Rikizo fell. "Ouch!" He wanted to talk back, but stood and looked at the plan carefully. "The problem is Ken's intention. That's all," he thought.
+Rikizo opened the plan and found the "right" sheet. The plan was correct. The problem was the distinction between Ken's right and his own right, Rikizo thought. Walking through the building reading the plan, something Ken still hadn't moved was right in the way. Rikizo fell. "Ouch!" He wanted to talk back, but stood up and studied the plan carefully. "The problem is Ken's intention. That's all." he said aloud.
 
-Rikizo went back inside the building. Again, the same thing was there. Rikizo fell again. Same thing. Same place. He stood up and opened the plan. "The problem is Ken. That's all."
+Rikizo went back inside the building. Again, the same object was right in the way. Rikizo fell again. Same object. Same place. He stood up and opened the plan. "The problem is Ken. That's all." he said aloud.
 
 Meanwhile, Yamakawa saw the table the plan had marked "move." However, Yamakawa got on the table and sat on top of it. Slowly, like someone waiting for a famous person in front of a bank, he stated: "Well, this table is pretty nice, isn't it? I don't really want to move it." Rikizo had something to say, but the words wouldn't come out. He thought there was probably no malicious intent — but the orders said nothing about Yamakawa sitting on the table.
 
