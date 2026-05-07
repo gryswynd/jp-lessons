@@ -279,24 +279,25 @@
         },
         {
           "spk": "B",
-          "jp": "はい。強風ですから、電車が 来ていませんよ。",
-          "en": "Yes. Because it is a strong wind, the trains aren't running.",
+          "jp": "強風で、空が とても 暗いです。雨に なりそうですね。",
+          "en": "With this strong wind, the sky is very dark. It looks like it'll rain.",
           "terms": [
-            "p_hai",
             "v_kyoufuu",
-            "g_desu",
-            "p_kara_because",
-            "v_densha",
+            "p_de",
+            "v_sora",
             "p_ga",
+            "v_totemo",
             {
-              "id": "v_kuru",
-              "form": "te_form"
+              "id": "v_kurai",
+              "form": "polite_adj"
             },
+            "v_ame",
+            "p_ni",
             {
-              "id": "v_iru",
-              "form": "polite_negative"
+              "id": "v_naru",
+              "form": "appearance_sou"
             },
-            "p_yo"
+            "p_ne"
           ]
         },
         {
@@ -697,14 +698,20 @@
           ]
         },
         {
-          "jp": "天気が いい 日に また 山へ 行けます。",
-          "en": "On a nice weather day, I can go to the mountain again.",
+          "jp": "友だちが、来週も 天気が いいそうです。また 山へ 行けます。",
+          "en": "My friend says next week's weather will be good too. I can go to the mountain again.",
           "terms": [
+            "v_tomodachi",
+            "p_ga",
+            "v_raishuu",
+            "p_mo",
             "v_tenki",
             "p_ga",
-            "v_ii",
-            "v_hi",
-            "p_ni",
+            {
+              "id": "v_ii",
+              "form": "plain_form"
+            },
+            "p_sou_da_hearsay",
             "v_mata",
             "v_yama",
             "p_e",

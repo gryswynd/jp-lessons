@@ -275,17 +275,27 @@
         },
         {
           "spk": "B",
-          "jp": "楽しそうですね！みんな 集まりますか。",
-          "en": "Sounds wonderful! Will everyone gather?",
+          "jp": "楽しそうですね！この 会社の 集会に 行ったことが ありますか。",
+          "en": "Sounds wonderful! Have you been to this company's gatherings before?",
           "terms": [
             {
               "id": "v_tanoshii",
               "form": "appearance_sou"
             },
             "p_ne",
-            "v_minna",
+            "v_kono",
+            "v_kaisha",
+            "p_no",
+            "v_shuukai",
+            "p_ni",
             {
-              "id": "v_atsumaru",
+              "id": "v_iku",
+              "form": "plain_past"
+            },
+            "v_koto",
+            "p_ga",
+            {
+              "id": "v_aru",
               "form": "polite_masu"
             },
             "p_ka"
@@ -403,26 +413,28 @@
         },
         {
           "spk": "A",
-          "jp": "答えを 集めてから 書くと いいですよ。問答 しながら 考えると もっと いいです。",
-          "en": "It's good to write after gathering answers. It's even better if you think while doing Q&A.",
+          "jp": "いい 思いを 書きましたね。でも、思い上がらない ように しましょう。問答 しながら 考えると もっと いいですよ。",
+          "en": "You wrote nice feelings. But let's be careful not to get conceited. It's even better to think while doing Q&A.",
           "terms": [
-            "v_kotae",
+            "v_ii",
+            "v_omoi_feel",
             "p_wo",
             {
-              "id": "v_atsumeru",
-              "form": "te_form"
-            },
-            "p_tekara",
-            {
               "id": "v_kaku",
-              "form": "plain_form"
+              "form": "polite_mashita"
             },
-            "p_to_conditional",
+            "p_ne",
+            "p_demo_but",
             {
-              "id": "v_ii",
-              "form": "polite_adj"
+              "id": "v_omoiagaru",
+              "form": "plain_negative"
             },
-            "p_yo",
+            "v_you_manner",
+            "p_ni",
+            {
+              "id": "v_suru",
+              "form": "polite_volitional_mashou"
+            },
             "v_mondou",
             {
               "id": "v_suru",
@@ -437,7 +449,8 @@
             {
               "id": "v_ii",
               "form": "polite_adj"
-            }
+            },
+            "p_yo"
           ]
         },
         {
@@ -610,7 +623,10 @@
             "p_no",
             "v_kitte",
             "p_ga",
-            {"id": "v_suki", "form": "attributive_na"},
+            {
+              "id": "v_suki",
+              "form": "attributive_na"
+            },
             "p_nda"
           ]
         },
@@ -718,23 +734,24 @@
           ]
         },
         {
-          "jp": "私も 答えを 集めたり、みんなの 意思を 聞いたり しました。",
-          "en": "I also collected answers and listened to everyone's intentions and things like that.",
+          "jp": "私も 写真 集を 作ったり、みんなの 答えを 集めたり しました。",
+          "en": "I also made a photo collection, gathered everyone's answers, and things like that.",
           "terms": [
             "v_watashi",
             "p_mo",
-            "v_kotae",
+            "v_shashin",
+            "v_shuu",
             "p_wo",
             {
-              "id": "v_atsumeru",
+              "id": "v_tsukuru",
               "form": "tari_form"
             },
             "v_minna",
             "p_no",
-            "v_ishi",
+            "v_kotae",
             "p_wo",
             {
-              "id": "v_kiku",
+              "id": "v_atsumeru",
               "form": "tari_form"
             },
             {
@@ -808,7 +825,10 @@
             "p_no",
             "v_doyoubi",
             "p_ni",
-            {"id": "v_aru", "form": "polite_mashita"}
+            {
+              "id": "v_aru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {
@@ -831,7 +851,10 @@
             "p_ya",
             "v_kaishain",
             "p_ga",
-            {"id": "v_atsumaru", "form": "polite_mashita"}
+            {
+              "id": "v_atsumaru",
+              "form": "polite_mashita"
+            }
           ]
         },
         {

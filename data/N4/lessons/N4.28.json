@@ -267,28 +267,29 @@
         },
         {
           "spk": "A",
-          "jp": "分かりました。早く 来る ように して ください。",
-          "en": "Understood. Please make an effort to come early.",
+          "jp": "分かりました。校門に 入れる ように、早く 行きます。",
+          "en": "Understood. I'll go early so that I can enter through the school gate.",
           "terms": [
             {
               "id": "v_wakaru",
               "form": "polite_mashita"
             },
+            "v_koumon",
+            "p_ni",
+            {
+              "id": "v_hairu",
+              "form": "potential"
+            },
+            "v_you_manner",
+            "p_ni",
             {
               "id": "v_hayai",
               "form": "adverbial"
             },
             {
-              "id": "v_kuru",
-              "form": "plain_form"
-            },
-            "v_you_manner",
-            "p_ni",
-            {
-              "id": "v_suru",
-              "form": "te_form"
-            },
-            "v_kudasai"
+              "id": "v_iku",
+              "form": "polite_masu"
+            }
           ]
         },
         {
@@ -387,28 +388,22 @@
         },
         {
           "spk": "B",
-          "jp": "山林で 仕事を したり、池の 近くを 歩いたり して います。",
-          "en": "They work in the mountain forest, walk near the pond, and so on.",
+          "jp": "村人は 毎日 早く 起きる ように して います。",
+          "en": "The villagers make an effort to wake up early every day.",
           "terms": [
-            "v_sanrin",
-            "p_de",
-            "v_shigoto",
-            "p_wo",
+            "v_murabito",
+            "p_wa",
+            "v_mainichi",
             {
-              "id": "v_suru",
-              "form": "tari_form"
-            },
-            "v_ike",
-            "p_no",
-            {
-              "id": "v_chikai",
+              "id": "v_hayai",
               "form": "adverbial"
             },
-            "p_wo",
             {
-              "id": "v_aruku",
-              "form": "tari_form"
+              "id": "v_okiru",
+              "form": "plain_form"
             },
+            "v_you_manner",
+            "p_ni",
             {
               "id": "v_suru",
               "form": "te_form"
@@ -651,14 +646,15 @@
       "title": "Reading Practice 1: A Peaceful Mountain Village",
       "passage": [
         {
-          "jp": "小さい 山村に、村人が 住んで います。",
-          "en": "Villagers live in a small mountain village.",
+          "jp": "小林さんは 小さい 山村に 住んで います。",
+          "en": "Kobayashi-san lives in a small mountain village.",
           "terms": [
+            "v_kobayashi",
+            "v_san",
+            "p_wa",
             "v_chiisai",
             "v_sanson",
             "p_ni",
-            "v_murabito",
-            "p_ga",
             {
               "id": "v_sumu",
               "form": "te_form"
@@ -721,23 +717,27 @@
           ]
         },
         {
-          "jp": "池の 水は きれいで、木も たくさん あります。",
-          "en": "The pond water is beautiful, and there are also many trees.",
+          "jp": "村人は 池の 近くを 歩ける ように なりました。",
+          "en": "The villagers have come to be able to walk near the pond.",
           "terms": [
+            "v_murabito",
+            "p_wa",
             "v_ike",
             "p_no",
-            "v_mizu",
-            "p_wa",
             {
-              "id": "v_kirei",
-              "form": "te_form"
+              "id": "v_chikai",
+              "form": "adverbial"
             },
-            "v_ki",
-            "p_mo",
-            "v_takusan",
+            "p_wo",
             {
-              "id": "v_aru",
-              "form": "polite_masu"
+              "id": "v_aruku",
+              "form": "potential"
+            },
+            "v_you_manner",
+            "p_ni",
+            {
+              "id": "v_naru",
+              "form": "polite_mashita"
             }
           ]
         },

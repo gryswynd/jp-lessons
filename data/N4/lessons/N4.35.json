@@ -382,8 +382,8 @@
         },
         {
           "spk": "すずき",
-          "jp": "はい、雨が 多すぎて 中止に なりました。バスも 止まって いますよ。",
-          "en": "Yes, it was cancelled because there was too much rain. The buses are also stopped.",
+          "jp": "はい、雨が 多すぎて 中止に なりました。バスも 休止して いますよ。",
+          "en": "Yes, it was cancelled because there was too much rain. The buses are also on suspension.",
           "terms": [
             "char_suzuki",
             "p_hai",
@@ -398,8 +398,9 @@
             },
             "v_basu",
             "p_mo",
+            "v_kyuushi",
             {
-              "id": "v_tomaru",
+              "id": "v_suru",
               "form": "te_form"
             },
             {
@@ -426,19 +427,34 @@
         },
         {
           "spk": "すずき",
-          "jp": "電車は 少し 止めたそうです。家に 帰れますか。",
-          "en": "I hear they stopped some trains. Can you get home?",
+          "jp": "電車も 止まったかどうか、まだ 分かりません。明日の 試合について、後で 教えますね。家に 帰れますか。",
+          "en": "I don't know yet whether the trains have stopped or not. I'll let you know about tomorrow's match later. Can you get home?",
           "terms": [
             "char_suzuki",
             "v_densha",
-            "p_wa",
-            "v_sukoshi",
+            "p_mo",
             {
-              "id": "v_tomeru",
+              "id": "v_tomaru",
               "form": "plain_past"
             },
-            "p_sou_da_hearsay",
-            "k_ie",
+            "p_kadouka",
+            "v_mada",
+            {
+              "id": "v_wakaru",
+              "form": "polite_negative"
+            },
+            "v_ashita",
+            "p_no",
+            "v_shiai",
+            "p_ni_tsuite",
+            "v_ato",
+            "p_de",
+            {
+              "id": "v_oshieru",
+              "form": "polite_masu"
+            },
+            "p_ne",
+            "v_ie",
             "p_ni",
             {
               "id": "v_kaeru",
@@ -734,8 +750,8 @@
         },
         {
           "spk": "やまかわ",
-          "jp": "うん、駅も 近い し、いい 所だよ。",
-          "en": "Yeah, the station is nearby too, so it's a good place.",
+          "jp": "うん、駅も 近い し、民家の 主も 親切だから、いい 所だよ。",
+          "en": "Yeah, the station is nearby, and the owners of the private houses are kind too, so it's a good place.",
           "terms": [
             "char_yamakawa",
             "v_un",
@@ -743,6 +759,13 @@
             "p_mo",
             "v_chikai",
             "p_shi",
+            "v_minka",
+            "p_no",
+            "v_nushi",
+            "p_mo",
+            "v_shinsetsu",
+            "g_da",
+            "p_kara_because",
             "v_ii",
             "v_tokoro",
             "p_yo",
@@ -857,9 +880,19 @@
           ]
         },
         {
-          "jp": "いい 主人だと 思います。",
-          "en": "I think they are a good owner.",
+          "jp": "町の 民の ために 働く、いい 主人だと 思います。",
+          "en": "I think they are a good owner who works for the people of the town.",
           "terms": [
+            "v_machi",
+            "p_no",
+            "v_tami",
+            "p_no",
+            "v_tame",
+            "p_ni",
+            {
+              "id": "v_hataraku",
+              "form": "plain_form"
+            },
             "v_ii",
             "v_shujin",
             "p_to_quote",

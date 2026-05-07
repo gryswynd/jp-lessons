@@ -279,8 +279,8 @@
         },
         {
           "spk": "A",
-          "jp": "主に 車や 電気の 産物です。工場では 毎日 たくさんの 産物が 作られて います。",
-          "en": "Mainly automotive and electronics products. Many products are made in the factories every day.",
+          "jp": "主に 車や 電気の 産物です。工場では 毎日 たくさんの 産物を 産んで います。",
+          "en": "Mainly automotive and electronics products. Every day we produce many products in the factories.",
           "terms": [
             "v_omoni",
             "v_kuruma",
@@ -295,8 +295,11 @@
             "v_takusan",
             "p_no",
             "v_sanbutsu",
-            "p_ga",
-            "v_tsukuru",
+            "p_wo",
+            {
+              "id": "v_umu",
+              "form": "te_form"
+            },
             {
               "id": "v_iru",
               "form": "polite_masu"
@@ -337,7 +340,10 @@
           "jp": "三十年 ほど 前からです。今は 前より 工場が 多く なりましたし、産業も 有名に なりました。",
           "en": "It's been about 30 years. Now there are more factories than before, and the industry has become famous too.",
           "terms": [
-            { "counter": "nen", "n": 30 },
+            {
+              "counter": "nen",
+              "n": 30
+            },
             "p_hodo",
             "v_mae",
             "p_kara",
@@ -598,8 +604,7 @@
           ]
         }
       ]
-    }
-  ,
+    },
     {
       "type": "conversation",
       "title": "Conversation 3: Bad Restaurant (Casual)",
@@ -884,8 +889,7 @@
           ]
         }
       ]
-    }
-  ,
+    },
     {
       "type": "reading",
       "title": "Reading Practice 1: Industrial Products",
@@ -1367,8 +1371,7 @@
           ]
         }
       ]
-    }
-  ,
+    },
     {
       "type": "drills",
       "title": "ドリル 1: かんじの よみかた（Kanji Readings）",

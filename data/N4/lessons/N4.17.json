@@ -536,8 +536,8 @@
         },
         {
           "spk": "B",
-          "jp": "はい、とても きれいでした。海を 歩いたり、写真を とったり しました。",
-          "en": "Yes, it was very beautiful. I did things like walk along the sea and take photos.",
+          "jp": "はい、とても きれいでした。海を 歩いたり、写真を とったり しました。ほんとうに おどろきました。",
+          "en": "Yes, it was very beautiful. I did things like walk along the sea and take photos. I was truly surprised.",
           "terms": [
             "p_hai",
             "v_totemo",
@@ -559,6 +559,11 @@
             },
             {
               "id": "v_suru",
+              "form": "polite_mashita"
+            },
+            "p_hontou",
+            {
+              "id": "v_odoroku",
               "form": "polite_mashita"
             }
           ]
@@ -606,8 +611,8 @@
         },
         {
           "spk": "りきぞ",
-          "jp": "なんか、運転は むずかしかったけど、楽しかったよ。",
-          "en": "Like, the driving was difficult, but it was fun.",
+          "jp": "なんか、運転は むずかしかったけど、旅行を 楽しんだよ。",
+          "en": "Like, the driving was difficult, but I enjoyed the trip.",
           "terms": [
             "char_rikizo",
             "v_nanka",
@@ -618,9 +623,11 @@
               "form": "plain_past_adj"
             },
             "p_kedo",
+            "v_ryokou",
+            "p_wo",
             {
-              "id": "v_tanoshii",
-              "form": "plain_past_adj"
+              "id": "v_tanoshimu",
+              "form": "plain_past"
             },
             "p_yo"
           ]

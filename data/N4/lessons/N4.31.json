@@ -7,7 +7,12 @@
     "lesson_number": 31,
     "focus": "Changing eras and generations, forests and halls, and the act of opening — with first exposure to passive and causative verb forms",
     "estimated_minutes": 35,
-    "kanji": ["代", "森", "堂", "開"]
+    "kanji": [
+      "代",
+      "森",
+      "堂",
+      "開"
+    ]
   },
   "newKanji": [
     {
@@ -279,27 +284,24 @@
         },
         {
           "spk": "A",
-          "jp": "新しい 世代の 人々は、古い 時代の ことを 知らないと 思います。",
-          "en": "I think people of the new generation don't know about the old era.",
+          "jp": "子どもの 時、私は 父に 古い 時代の 本を 読ませられました。",
+          "en": "When I was a child, I was made to read books about the old era by my father.",
           "terms": [
-            "v_atarashii",
-            "v_sedai",
+            "v_kodomo",
             "p_no",
-            "v_hitobito",
+            "v_toki",
+            "v_watashi",
             "p_wa",
+            "v_chichi",
+            "p_ni",
             "v_furui",
             "v_jidai",
             "p_no",
-            "v_koto",
+            "v_hon",
             "p_wo",
             {
-              "id": "v_shiru",
-              "form": "plain_negative"
-            },
-            "p_to_quote",
-            {
-              "id": "v_omou",
-              "form": "polite_masu"
+              "id": "v_yomu",
+              "form": "polite_causative_passive_past"
             }
           ]
         },
@@ -367,8 +369,8 @@
         },
         {
           "spk": "A",
-          "jp": "午後 一時に 始まります。入り口を 開けて おいてください。",
-          "en": "It starts at 1 PM. Please open the entrance in advance.",
+          "jp": "午後 一時に 始まります。学生に 入り口を 開けさせます。",
+          "en": "It starts at 1 PM. We'll have the students open the entrance.",
           "terms": [
             "v_gogo",
             {
@@ -380,17 +382,14 @@
               "id": "v_hajimaru",
               "form": "polite_masu"
             },
+            "v_gakusei",
+            "p_ni",
             "v_iriguchi",
             "p_wo",
             {
               "id": "v_akeru",
-              "form": "te_form"
-            },
-            {
-              "id": "v_oku",
-              "form": "te_form"
-            },
-            "v_kudasai"
+              "form": "polite_causative"
+            }
           ]
         },
         {
@@ -705,28 +704,25 @@
           ]
         },
         {
-          "jp": "今日も 多くの 人が この おてらに 来られています。",
-          "en": "Many people still come to this temple today.",
+          "jp": "私は 前に この おてらに 来たことが ありました。",
+          "en": "I had been to this temple before.",
           "terms": [
-            "v_kyou",
-            "p_mo",
-            {
-              "id": "v_ooi",
-              "form": "adverbial"
-            },
-            "p_no",
-            "v_hito",
-            "p_ga",
+            "v_watashi",
+            "p_wa",
+            "v_mae",
+            "p_ni",
             "v_kono",
             "v_otera",
             "p_ni",
             {
               "id": "v_kuru",
-              "form": "passive_te"
+              "form": "plain_past"
             },
+            "v_koto",
+            "p_ga",
             {
-              "id": "v_iru",
-              "form": "polite_masu"
+              "id": "v_aru",
+              "form": "polite_mashita"
             }
           ]
         }
@@ -755,7 +751,6 @@
               "form": "polite_mashita"
             }
           ]
-
         },
         {
           "q": "本堂は どう 見えましたか。",
@@ -1023,25 +1018,45 @@
         {
           "kind": "mcq",
           "q": "【時代】の よみかたは？",
-          "choices": ["じだい", "しだい", "こだい", "ちだい"],
+          "choices": [
+            "じだい",
+            "しだい",
+            "こだい",
+            "ちだい"
+          ],
           "answer": "じだい"
         },
         {
           "kind": "mcq",
           "q": "【森林】の よみかたは？",
-          "choices": ["しんりん", "もりりん", "はやしりん", "しんばやし"],
+          "choices": [
+            "しんりん",
+            "もりりん",
+            "はやしりん",
+            "しんばやし"
+          ],
           "answer": "しんりん"
         },
         {
           "kind": "mcq",
           "q": "【食堂】の よみかたは？",
-          "choices": ["しょくどう", "じきどう", "しょくとう", "たべどう"],
+          "choices": [
+            "しょくどう",
+            "じきどう",
+            "しょくとう",
+            "たべどう"
+          ],
           "answer": "しょくどう"
         },
         {
           "kind": "mcq",
           "q": "【開店】の よみかたは？",
-          "choices": ["かいてん", "ひらきみせ", "あけみせ", "かいみせ"],
+          "choices": [
+            "かいてん",
+            "ひらきみせ",
+            "あけみせ",
+            "かいみせ"
+          ],
           "answer": "かいてん"
         }
       ]
@@ -1054,7 +1069,12 @@
         {
           "kind": "mcq",
           "q": "会合は 会堂で ______。",
-          "choices": ["開かれました", "代わりました", "集めました", "始まりました"],
+          "choices": [
+            "開かれました",
+            "代わりました",
+            "集めました",
+            "始まりました"
+          ],
           "answer": "開かれました",
           "terms": [
             "v_kaigou",
@@ -1070,7 +1090,12 @@
         {
           "kind": "mcq",
           "q": "この おてらの ______ は とても 大きいです。",
-          "choices": ["本堂", "時代", "代金", "開始"],
+          "choices": [
+            "本堂",
+            "時代",
+            "代金",
+            "開始"
+          ],
           "answer": "本堂",
           "terms": [
             "v_kono",
@@ -1086,7 +1111,12 @@
         {
           "kind": "mcq",
           "q": "レストランの ______ は 千円です。",
-          "choices": ["代金", "世代", "時代", "開始"],
+          "choices": [
+            "代金",
+            "世代",
+            "時代",
+            "開始"
+          ],
           "answer": "代金",
           "terms": [
             "v_resutoran",
@@ -1103,7 +1133,12 @@
         {
           "kind": "mcq",
           "q": "子どもに 野菜を ______。",
-          "choices": ["食べさせました", "食べられました", "食べました", "食べてきました"],
+          "choices": [
+            "食べさせました",
+            "食べられました",
+            "食べました",
+            "食べてきました"
+          ],
           "answer": "食べさせました",
           "terms": [
             "v_kodomo",
@@ -1126,7 +1161,12 @@
         {
           "kind": "mcq",
           "q": "この 歌は 世界中の 人に ______。",
-          "choices": ["聞かれています", "聞きます", "聞かせます", "聞いています"],
+          "choices": [
+            "聞かれています",
+            "聞きます",
+            "聞かせます",
+            "聞いています"
+          ],
           "answer": "聞かれています",
           "terms": [
             "v_kono",
@@ -1149,7 +1189,12 @@
         {
           "kind": "mcq",
           "q": "先生は 学生に 作文を ______。",
-          "choices": ["書かせました", "書かれました", "書きました", "書いてきました"],
+          "choices": [
+            "書かせました",
+            "書かれました",
+            "書きました",
+            "書いてきました"
+          ],
           "answer": "書かせました",
           "terms": [
             "v_sensei",
@@ -1167,7 +1212,12 @@
         {
           "kind": "mcq",
           "q": "森の 中に 入ったことが ______ と 思いました。",
-          "choices": ["ある", "あります", "あった", "ありました"],
+          "choices": [
+            "ある",
+            "あります",
+            "あった",
+            "ありました"
+          ],
           "answer": "ある",
           "terms": [
             "v_mori",
@@ -1194,7 +1244,12 @@
         {
           "kind": "mcq",
           "q": "新しい 時代に ______ ように なりました。",
-          "choices": ["代わる", "代わります", "代わった", "代わって"],
+          "choices": [
+            "代わる",
+            "代わります",
+            "代わった",
+            "代わって"
+          ],
           "answer": "代わる",
           "terms": [
             "v_atarashii",
