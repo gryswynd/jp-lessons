@@ -145,3 +145,65 @@ CB CHECKLIST
 
 ---
 
+## Custom Story Rules (additional to standard CB Checklist)
+
+### Grammar scope (G-lesson ceiling — enforced per story, told in brief)
+
+- Never use まま (〜たまま/〜のまま) — not taught through N3, never valid in any story
+- について — G30+. Never valid within G19 ceiling.
+- と-conditional (〜ると) — G25. Not valid within G19 ceiling. Use 〜た時 instead.
+- のに (concessive "even though") — G20. Not valid within G19 ceiling. Use が instead.
+- These are the most commonly misused patterns. When the G ceiling is G19, all four are banned.
+
+### Kanji — words always written in hiragana regardless of scope
+
+- 次 → always write つぎ (kanji not taught until N3)
+- 番 → 一番 always write いちばん (番 kanji not taught until N3)
+- 的 suffix → write as てき until 的 kanji is introduced (currently N3 only)
+
+### Vocabulary — transitive/intransitive verb accuracy
+
+- 動く (v_ugoku) = intransitive (thing moves on its own). If story needs "to move something", use 動かす (v_ugokasu) — different verb, different ID.
+- 上げる (v_ageru_raise) = to raise/lift. 上げる (giving verb v_ageru) = to give. Do not conflate. Check the story's intended meaning before assigning the ID.
+- General rule: when a verb appears in transitive form (を + verb), verify the glossary entry is the transitive verb, not its intransitive partner.
+
+### terms.json — mandatory entries for every story
+
+- `"いい": { "id": "v_ii", "form": null }` — always required
+- `"よ": { "id": "p_yo", "form": null }` — sentence final particle, always needed in dialog
+- `"ね": { "id": "p_ne", "form": null }` — always needed in dialog
+- `"じゃ": { "id": "p_ja", "form": null }` — always needed in dialog
+- `"な": { "id": "p_na", "form": null }` — na-adjective marker, always needed
+- `"でも": { "id": "p_demo_but", "form": null }` — needed whenever でも appears
+- `"ない": { "id": "v_aru", "form": "plain_negative" }` — standalone negative
+- `"なかった": { "id": "v_aru", "form": "plain_past_negative" }` — standalone negative past
+- `"した": { "id": "v_suru", "form": "plain_past" }` — universal suru past
+- `"して": { "id": "v_suru", "form": "te_form" }` — universal suru te-form
+- `"だった": { "id": "g_da", "form": null }` — copula past
+
+### terms.json — form field correctness
+
+- い-adjective past forms must use `plain_past_adj`, NOT `plain_past`. Example: 正しかった → `"form": "plain_past_adj"`
+- Desire past: したかった → `"form": "plain_desire_tai_past"`, NOT `form: null`
+- `form: null` is only valid for: plain nouns, na-adjectives in base form, compound surfaces with no clean form mapping
+
+### terms.json — conjunctive が disambiguation
+
+- が after a plain past or desire form means "but" (p_ga_but), not subject marker (p_ga)
+- Common patterns: 〜たが, 〜したかったが, 〜だったが → all should be tagged with p_ga_but
+- Add explicit surface entries for these conjunctive が occurrences rather than relying on single-char が match
+
+### terms.json — single-char surface theft prevention
+
+- Any story word beginning with: だ, し, な, か must have its FULL SURFACE in terms.json
+- Otherwise the 1-char autoSurface (g_da, p_shi, p_na, p_ka) consumes just the first character
+- Run a prefix audit: for every content word starting with these chars, confirm the full surface is an explicit terms.json key
+
+### Naturalness checklist (run before finalizing Japanese text)
+
+- 正体 is for living beings / creatures with hidden identities. Never use for inanimate objects (documents, plans, machines).
+- 有力者 is for genuinely powerful figures (executives, politicians). Not for middle schoolers being dramatic.
+- 問答する is literary/formal dialectic debate language. Use 言い返す, 反論する, or simpler alternatives in casual story contexts.
+- 住所 is postal address. Never use for "location of X" within a space. Use 場所 or 位置.
+- Naturalness test: for each sentence containing a flagged vocabulary word, ask "would a native speaker say this exact sentence naturally?" If the vocabulary word is driving the sentence structure rather than the story, rewrite.
+

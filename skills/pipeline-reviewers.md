@@ -104,6 +104,24 @@
   Any `SURFACE MISMATCH` or `UNKNOWN ID` line is a hard fail. For every `terms` entry: verify the ID exists in the glossary (cross-reference the glossary file). Then verify the **surface form** of that glossary entry matches (or inflects from) the actual token in the `jp` field. A surface mismatch — e.g. tagging `だ` with `g_desu` whose glossary surface is `です` — is a **hard fail** even if the ID exists.
 - For every verb/adjective term entry: verify the `form` string is a valid key in `conjugation_rules.json`.
 - Verify all kanji in `jp` fields appear in the taught-kanji set (from `manifest.json`).
+
+- **Transitive/intransitive verb check:**
+  - When a verb appears with を (direct object), verify the tagged ID is the TRANSITIVE form
+  - When a verb appears with が (non-human subject changing state), verify the tagged ID is the INTRANSITIVE form
+  - Flag any occurrence of v_ugoku tagged on a を-construction — should be v_ugokasu
+  - Flag any occurrence of v_ageru (giving) tagged on a physical raise/lift context
+
+- **Grammar scope verification (stories):**
+  - まま in any form → immediate HARD FAIL, flag for rewrite
+  - について → check G ceiling, flag if beyond it
+  - と-conditional (plain form + と = conditional) → check G ceiling, flag if beyond it
+  - のに as concessive conjunction → check G ceiling, flag if beyond G19
+  - For each grammar pattern found: quote the line, state the G lesson it belongs to, compare to the G ceiling in the brief
+
+- **Conjunctive が audit:**
+  - Search story text for: たが, したが, だったが, たかったが
+  - Each must be tagged p_ga_but, not p_ga
+  - Flag any conjunctive が tagged as subject marker
 - **Compound surface spacing check.** For every `terms` entry whose glossary `surface` contains an internal particle or spans multiple morphemes (identifiable by a particle like が/の/を embedded in the middle of the surface string — e.g. `v_atamagaii` surface `"頭がいい"`), verify the jp text contains that surface as a **contiguous substring with no inserted spaces**. A space anywhere inside the compound (e.g. `頭が いい` vs surface `頭がいい`) breaks the text-processor match silently — no chip appears, no error is thrown. This is a **hard fail**: instruct Agent 2 to remove the space from the jp text. Do not accept a split into constituent terms as the fix — that changes the semantic unit.
 - **Glossary-surface writing-form check.** For every word used in `jp` text, look up its glossary entry and check whether its `surface` field contains any kanji that are **not** in the taught-kanji set. If so, the word must appear in the hiragana/partial-kanji form from its `matches` field — never in the full-kanji `surface` form. This check catches cases like 一緒に (surface) written in jp text when the glossary's `matches` form is いっしょに and 緒 is not yet taught, or 大丈夫 written when だいじょうぶ is the required form. Grep the glossary for the word's ID, read both `surface` and `matches`, then verify the jp text uses the form consistent with the current taught-kanji set. Any mismatch is a **hard fail**.
 - **New glossary entry kanji gate.** For any glossary entry created during this content-creation cycle (i.e. an entry that did not exist before Agent 1 began scoping), verify: (a) every kanji in the `surface` field is in the taught-kanji set at `lesson_ids`; (b) if the surface contains an untaught kanji, the entry must be on the approved partial-kanji list in skills/grammar-rules-prerequisites.md (permanent-hybrid case) — not an ad-hoc hybrid invented to work around a deferred compound. A new entry whose surface contains a kanji not taught until a later lesson, and which is not on the partial-kanji list, is a **hard fail**: flag it to Agent 1 with the lesson where the last required kanji unlocks.
