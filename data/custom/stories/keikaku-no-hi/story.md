@@ -5,13 +5,13 @@
 
 ### Story Text (Japanese)
 
-今回、りきぞはクラスの行事の中心になった。先生が「今回の行事の中心に、だれが来る？」と言った時、りきぞはすぐに手を上げた。クラスのみんなは少し待ってから、「りきぞが中心か、特別だね」と言った。りきぞは正門の前でクラスの学生たちに発言した。「計画は私が作る。以上。」先生は注目して「りきぞ、よく考えて計画を作るように」と言った。りきぞは「もちろん」と答えた。
+今回、りきぞはクラスの行事の中心になった。先生が「今回の行事の中心は、だれになる？」と言った時、りきぞはすぐに手を上げた。クラスのみんなは少し待ってから、「りきぞが中心か、特別だね」と言った。りきぞは正門の前でクラスの学生たちに発言した。「計画は私が作る。以上。」先生はりきぞに注目して「りきぞ、よく考えて計画を作るように」と言った。りきぞは「もちろん」と答えた。
 
-毎晩、りきぞは計画を書いた。三まいの紙になった。「まだ少ない」とりきぞは思った。つぎの夜は七まいの紙になった。「もう少し書こう」と思った。そのつぎの夜は十五まいの紙になった。特に、場所の区切りと行事の場所の書き方と物の使用と時間の計り方を、りきぞは集中して書いた。計画の開始から終わりまでを読むのに三十分以上だった。計画は合理てきだった。「特に問題はない」と思いながら、りきぞは有力者のような意思を持って、計画書を持ちながら休んだ。
+毎晩、りきぞは計画を書いた。三まいの紙になった。「まだ少ない」とりきぞは思った。つぎの夜は七まいの紙になった。「もう少し書こう」と思った。そのつぎの夜は十五まいの紙になった。特に、場所の区切りと行事の住所の書き方と物の使用と時間の計り方を、りきぞは集中して書いた。計画の開始から終わりまでを読むのに三十分以上だった。計画は合理てきだった。「特に問題はない」と思いながら、りきぞは有力者のような意思を持って、計画書を持ちながら休んだ。
 
 行事の日の朝、正門の前にクラスの学生たちが集まった。りきぞは計画書を出した。みんなが計画を読み始めたが、まだ終わらなかった。「まだ読んでいる？」とりきぞは聞いた。「まだ読んでいる」とみんなは答えた。十五分後、りきぞは「開始の時間だよ」と言った。みんなはまだ計画を読んでいた。「計画書の注文まで読んだ人は？」とりきぞは聞いた。だれも手を上げなかった。「この計画書の正体は何か。それとも問答が多いのか」とりきぞは思った。
 
-りきぞは仕事を始めた。「今回の行事は特別だ。計画の区別をよく分かって、仕事を始めよう。」りきぞは有力者のように注意して声を出したが、みんなはまだ紙を読んでいた。ちょっと待ってから、りきぞはもう一度言った。それから、みんなは計画書を持って、仕事を始めた。
+りきぞは仕事を始めた。「今回の行事は特別だ。計画の区別がよく分かって、仕事を始めよう。」りきぞは有力者のように注意して声を出したが、みんなはまだ紙を読んでいた。ちょっと待ってから、りきぞはもう一度言った。それから、みんなは計画書を持って、仕事を始めた。
 
 試みを始めてから、すぐに問題が起きた。けんはテーブルを動かす仕事があった。りきぞの計画では、テーブルを建物の右に動かすことだった。でも、けんはテーブルを左に動かし始めた。「けん、右だよ！」とりきぞは言った。けんは「え？こちらから見ると、これが右じゃない？」と答えた。「そちらから見ても左だよ！」とりきぞは言ったが、けんはもうテーブルを出口の前まで運んでいた。けんは「ん、そっか」と言いながら、またテーブルを動かし始めた。今度は出口の前から、建物の外に運んだ。計画にはそんな注文はなかった。
 
@@ -19,9 +19,9 @@
 
 りきぞはもう一度建物の中に入った。また、同じ物があった。りきぞはまた転んだ。同じ物。同じ場所。りきぞは立って、また計画書を開いた。「問題はけんだ。以上。」
 
-その間に、やまかわは計画で「動かす」と書いてあったテーブルを見た。でも、やまかわはそのテーブルの上に乗った。銀行の前で有名な人を待つ人のようにゆっくりと、「まあ、このテーブル、いいんじゃない？動かしたくないな」と意見を発言した。りきぞは言いたいことがあったが、声が出なかった。悪質な意思はないと思うが、注文には「やまかわがテーブルに乗ること」は書いていなかった。
+その間に、やまかわは計画で「動かす」と書いてあったテーブルを見た。でも、やまかわはそのテーブルの上に乗った。銀行の前で有名な人を待つ人のようにゆっくりと、「まあ、このテーブル、いいんじゃない？動かしたくないな」と発言した。りきぞは言いたいことがあったが、声が出なかった。悪質な意思はないと思うが、注文には「やまかわがテーブルに乗ること」は書いていなかった。
 
-行事が終わった時、りきぞは建物の外に出て、計画書を見た。計画は正しかった。区切りも正しかった。場所の住所も正しかった。注文の問答も正しかった。テーブルの動かし方も代わらなかった。以上。
+行事が終わった時、りきぞは建物の外に出て、計画書を見た。計画は正しかった。区切りも正しかった。場所の住所も正しかった。注文も正しかった。テーブルの動かし方も変わらなかった。以上。
 
 それから、りきぞは計画書の十五まい目の紙を開いた。「行事の区別と意思」という紙だった。その紙には「物を正しい場所に動かすこと」と書いてあった。りきぞは集中して読んで、自問した。「けんの右は私の右じゃなかった。やまかわのテーブルは動かなかった。計画書の問答はだれも読まなかった。この問題の正体は何か。」りきぞにはまだ究明できなかった。りきぞはまた計画書を読み始めた。
 
@@ -35,9 +35,9 @@
 
 **The Day of the Plan**
 
-This time, Rikizo became the center of the class event. When the teacher said, "Who will be the center of this event?", Rikizo immediately raised his hand. Everyone waited a moment, then said, "Rikizo as center — that's something special." Rikizo made a statement to the class in front of the main gate. "I'll make the plan. That's all." The teacher paid attention and said, "Rikizo, think it through carefully." Rikizo answered, "Of course."
+This time, Rikizo became the center of the class event. When the teacher said, "Who will be the center of this event?", Rikizo immediately raised his hand. Everyone waited a moment, then said, "Rikizo as center — that's something special." Rikizo made a statement to the class in front of the main gate. "I'll make the plan. That's all." The teacher turned to Rikizo and said, "Rikizo, think it through carefully." Rikizo answered, "Of course."
 
-Every night, Rikizo wrote the plan. Three sheets of paper. "Still not enough," he thought. The next night: seven sheets. "I'll write a little more." The night after that: fifteen sheets. In particular, he concentrated on writing about the division of locations, how to write about the event locations, how to use the things, and how to measure the timing. Reading from start to finish was over thirty minutes. The plan was rational. "No particular problems," he thought, and with an intention like an influential person, he fell asleep holding the plan.
+Every night, Rikizo wrote the plan. Three sheets of paper. "Still not enough," he thought. The next night: seven sheets. "I'll write a little more." The night after that: fifteen sheets. In particular, he concentrated on writing about the division of locations, the venue addresses, how to use the things, and how to measure the timing. Reading from start to finish was over thirty minutes. The plan was rational. "No particular problems," he thought, and with an intention like an influential person, he fell asleep holding the plan.
 
 On the morning of the event, the class gathered in front of the main gate. Rikizo handed out the plan. Everyone started reading, but still hadn't finished. "Still reading?" Rikizo asked. "Still reading," everyone answered. Fifteen minutes later: "It's time to start!" Still reading. "Has anyone read as far as the orders?" No one raised their hand. "What is the true nature of this plan? Or are there too many back-and-forth questions?" Rikizo wondered.
 
@@ -49,9 +49,9 @@ Rikizo opened the plan and found the "right" sheet. The plan was correct. The pr
 
 Rikizo went back inside the building. Again, the same thing was there. Rikizo fell again. Same thing. Same place. He stood up and opened the plan. "The problem is Ken. That's all."
 
-Meanwhile, Yamakawa saw the table the plan had marked "move." However, Yamakawa got on the table and sat on top of it. Slowly, like someone waiting for a famous person in front of a bank, he expressed the opinion: "Well, this table is pretty nice, isn't it? I don't really want to move it." Rikizo had something to say, but the words wouldn't come out. He thought there was probably no malicious intent — but the orders said nothing about Yamakawa sitting on the table.
+Meanwhile, Yamakawa saw the table the plan had marked "move." However, Yamakawa got on the table and sat on top of it. Slowly, like someone waiting for a famous person in front of a bank, he stated: "Well, this table is pretty nice, isn't it? I don't really want to move it." Rikizo had something to say, but the words wouldn't come out. He thought there was probably no malicious intent — but the orders said nothing about Yamakawa sitting on the table.
 
-When the event was over, Rikizo went outside and looked at the plan. The plan was correct. The divisions were correct. The location addresses were correct. The order questions and answers were correct. The table's position hadn't changed. That's all.
+When the event was over, Rikizo went outside and looked at the plan. The plan was correct. The divisions were correct. The location addresses were correct. The orders were correct. The table's moving method hadn't changed. That's all.
 
 Then Rikizo opened the fifteenth sheet of the plan: "Event Distinctions and Intentions." It said: "Move all things to the correct location." He read it carefully and asked himself: "Ken's right wasn't my right. Yamakawa's table didn't move. Nobody read the back-and-forth questions. What is the true nature of this problem?" He still couldn't investigate it to a conclusion. He started reading the plan again.
 
