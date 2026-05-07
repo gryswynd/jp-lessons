@@ -2562,6 +2562,24 @@
       }
     },
     {
+      "id": "v_agaru",
+      "surface": "上がる",
+      "meaning": "to rise / to go up",
+      "type": "vocab",
+      "gtype": "verb",
+      "notes": "Intransitive. Counterpart of 上げる (transitive — to raise something). Also used in set phrases: 手が上がる (hands go up), 気温が上がる (temperature rises).",
+      "lesson_ids": "N4.10",
+      "reading": "あがる",
+      "verb_class": "godan",
+      "readingAlign": "上(あ)がる",
+      "example": {
+        "jp": "気温が 上がりますから、外に 出ましょう。",
+        "en": "The temperature is rising, so let's go outside.",
+        "lessonId": "N4.10",
+        "sectionType": "conversation"
+      }
+    },
+    {
       "id": "v_hajimeru",
       "surface": "始める",
       "meaning": "to start (something)",
@@ -4639,7 +4657,7 @@
       "meaning": "to move",
       "type": "vocab",
       "gtype": "verb",
-      "notes": "",
+      "notes": "Intransitive — the subject moves on its own. Transitive counterpart is 動かす (to move something).",
       "lesson_ids": "N4.16",
       "reading": "うごく",
       "verb_class": "godan",
@@ -4647,6 +4665,24 @@
       "example": {
         "jp": "ATM が 動かない 時は、どこで お金を 出せますか。",
         "en": "When the ATM isn't working, where can I take out money?",
+        "lessonId": "N4.16",
+        "sectionType": "conversation"
+      }
+    },
+    {
+      "id": "v_ugokasu",
+      "surface": "動かす",
+      "meaning": "to move (something) / to set in motion",
+      "type": "vocab",
+      "gtype": "verb",
+      "notes": "Transitive. The subject moves an object. Intransitive counterpart is 動く (to move on its own). Common pattern: 物を 動かす = move a thing; 手を 動かす = move one's hands.",
+      "lesson_ids": "N4.16",
+      "reading": "うごかす",
+      "verb_class": "godan",
+      "readingAlign": "動(うご)かす",
+      "example": {
+        "jp": "そのテーブルを 右に 動かして ください。",
+        "en": "Please move that table to the right.",
         "lessonId": "N4.16",
         "sectionType": "conversation"
       }
@@ -7999,6 +8035,24 @@
       }
     },
     {
+      "id": "v_gouriteki",
+      "surface": "合理てき",
+      "meaning": "rational / logical / reasonable",
+      "type": "vocab",
+      "gtype": "adjective",
+      "notes": "Na-adjective. Written with kanji 合理 + hiragana てき (的) because 的 kanji is not introduced until N3. When 的 kanji unlocks, the full form is 合理的.",
+      "lesson_ids": "N4.27",
+      "reading": "ごうりてき",
+      "verb_class": "na",
+      "readingAlign": "合(ごう)理(り)てき",
+      "example": {
+        "jp": "その 計画は とても 合理てきです。",
+        "en": "That plan is very rational.",
+        "lessonId": "N4.27",
+        "sectionType": "conversation"
+      }
+    },
+    {
       "id": "v_ichido",
       "surface": "一度",
       "reading": "いちど",
@@ -8710,7 +8764,7 @@
       "meaning": "more than / ...and that is all",
       "type": "vocab",
       "gtype": "noun",
-      "notes": "Inclusive of the number (>=).",
+      "notes": "Inclusive of the number (>=). Also used as a standalone expression 「以上。」meaning 'That's all.' / 'End of statement.' — common in formal announcements and military-style declarations.",
       "lesson_ids": "N4.29",
       "reading": "いじょう",
       "readingAlign": "以(い)上(じょう)",
