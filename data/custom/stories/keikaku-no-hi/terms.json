@@ -60,6 +60,7 @@
     "毎晩": { "id": "v_maiban", "form": null },
     "朝": { "id": "v_asa", "form": null },
     "前": { "id": "v_mae", "form": null },
+    "つぎ": { "id": "v_tsugi", "form": null },
     "右": { "id": "v_migi", "form": null },
     "左": { "id": "v_hidari", "form": null },
     "外": { "id": "v_soto", "form": null },
@@ -94,6 +95,7 @@
     "こちら": { "id": "v_kochira", "form": null },
     "そちら": { "id": "v_sochira", "form": null },
     "そっか": { "id": "v_sou", "form": null },
+    "いいん": { "id": "v_ii", "form": null },
     "いい": { "id": "v_ii", "form": null },
     "こと": { "id": "v_koto", "form": null },
 
@@ -130,7 +132,9 @@
     "出た": { "id": "v_deru", "form": "plain_past" },
     "終わった": { "id": "v_owaru", "form": "plain_past" },
     "休んだ": { "id": "v_yasumu", "form": "plain_past" },
+    "乗る": { "id": "v_noru", "form": "plain_form" },
     "乗った": { "id": "v_noru", "form": "plain_past" },
+    "すわった": { "id": "v_suwaru", "form": "plain_past" },
     "開いた": { "id": "v_hiraku", "form": "plain_past" },
     "読んで": { "id": "v_yomu", "form": "te_form" },
     "歩いて": { "id": "v_aruku", "form": "te_form" },
@@ -141,6 +145,7 @@
     "考えて": { "id": "v_kangaeru", "form": "te_form" },
     "持って": { "id": "v_motsu", "form": "te_form" },
     "作る": { "id": "v_tsukuru", "form": "plain_form" },
+    "始めて": { "id": "v_hajimeru", "form": "te_form" },
     "始めよう": { "id": "v_hajimeru", "form": "plain_volitional" },
     "来る": { "id": "v_kuru", "form": "plain_form" },
     "誰": { "id": "v_dare", "form": null },
@@ -206,13 +211,6 @@
     "なかった": { "id": "v_aru", "form": "plain_past_negative" },
     "運んだ": { "id": "v_hakobu", "form": "plain_past" },
     "読まなかった": { "id": "v_yomu", "form": "plain_past_negative" },
-    "持たないで": { "id": "v_motsu", "form": null },
-
-    "始めたが": { "id": "p_ga_but", "form": null },
-    "出したが": { "id": "p_ga_but", "form": null },
-    "言ったが": { "id": "p_ga_but", "form": null },
-    "したかったが": { "id": "p_ga_but", "form": null },
-    "あったが": { "id": "p_ga_but", "form": null },
-    "思うが": { "id": "p_ga_but", "form": null }
+    "持たないで": { "id": "v_motsu", "form": null }
   }
 }
