@@ -19,7 +19,7 @@
 
 りきぞはもう一度建物の中に入った。けんはまだ外にいた。また、同じ物が前にあった。りきぞはまた転んだ。同じ物。同じ場所。りきぞは立って、また計画書を開いた。「問題はけんだ。以上。」と言った。
 
-その間に、やまかわは計画で「動かす」と書いてあったテーブルを見た。でも、やまかわはそのテーブルの上にすわった。「まあ、このテーブル、いいんじゃない？動かしたくないな」とゆっくり発言した。りきぞはやまかわを見てから、計画書を開いた。計画書には「テーブルを動かすこと」と書いてあった。「テーブルに乗ること」の注文はなかった。悪質な意思はないと思ったが、りきぞには声が出なかった。
+その間に、やまかわは計画で「動かす」と書いてあったテーブルを見た。でも、やまかわはそのテーブルの上にすわった。「まあ、このテーブル、いいんじゃない？動かしたくないな」とゆっくり発言した。りきぞはやまかわを見てから、計画書を開いた。計画書には「テーブルを動かすこと」と書いてあった。「テーブルにすわること」の注文はなかった。悪質な意思はないと思ったが、りきぞには声が出なかった。
 
 行事が終わった時、りきぞは建物の外に出て、計画書を見た。計画は正しかった。区切りも正しかった。場所の住所も正しかった。注文も正しかった。テーブルの動かし方も変わらなかった。以上。
 
@@ -49,7 +49,7 @@ Rikizo opened the plan and found the "right" sheet. The plan was correct. The pr
 
 Rikizo went back inside the building. Ken was still outside. Again, the same object was right in the way. Rikizo fell again. Same object. Same place. He stood up and opened the plan. "The problem is Ken. That's all." he said aloud.
 
-Meanwhile, Yamakawa saw the table the plan had marked "move." However, Yamakawa got on the table and sat down. "Well, this table is pretty nice, isn't it? I don't really want to move it," he said leisurely. Rikizo looked at Yamakawa, then opened the plan. The plan said "move the table." There was no order about getting on the table. He thought there was probably no malicious intent — but Rikizo had no words.
+Meanwhile, Yamakawa saw the table the plan had marked "move." However, Yamakawa got on the table and sat down. "Well, this table is pretty nice, isn't it? I don't really want to move it," he said leisurely. Rikizo looked at Yamakawa, then opened the plan. The plan said "move the table." There was no order about sitting on the table. He thought there was probably no malicious intent — but Rikizo had no words.
 
 When the event was over, Rikizo went outside and looked at the plan. The plan was correct. The divisions were correct. The location addresses were correct. The orders were correct. The table's moving method hadn't changed. That's all.
 
