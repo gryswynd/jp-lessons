@@ -10,8 +10,11 @@ unlocking N lesson and the surrounding curriculum:
    target) are correctly declared and don't need re-declaration.
 2. **Reinforcement** — every target term must appear in `terms[]` of the next
    2 N lessons after the unlocking N (the reinforcement window).
-3. **Story reinforcement** — every target term must appear in any story whose
-   `unlocksAfter` falls within the reinforcement window.
+3. **Story reinforcement** — every target term must appear in the primary
+   reinforcement story: the first story whose `unlocksAfter` is at or after
+   the grammar's gating N lesson. This is the story whose lesson coverage
+   contains the grammar's unlock — the first story the student reaches after
+   completing the grammar lesson.
 4. **Misplacement** — a target term is misplaced only if it appears in a
    vocabList LESS than its own `lesson_ids` (declared before its official
    introduction). Foundational early-declaration is NOT misplacement.
@@ -301,14 +304,19 @@ def reinforcement_lessons(n_ids, gating_n, window=REINFORCEMENT_WINDOW):
 
 
 def stories_in_window(stories, gating_key, window_end_key):
-    """Stories whose gate is strictly after gating_key and at-or-before window_end_key."""
-    out = []
-    for s in stories:
-        if s["gate_key"] is None:
-            continue
-        if s["gate_key"] > gating_key and s["gate_key"] <= window_end_key:
-            out.append(s)
-    return out
+    """The primary reinforcement story: the first story whose gate is at or
+    after the grammar's unlock (gating_key). This is the story whose lesson
+    coverage contains the grammar's unlock lesson — the first story a student
+    reaches after the grammar is taught.
+
+    `window_end_key` is unused under this rule (kept for caller compatibility).
+    Returns a single-element list (or empty if no eligible story exists).
+    """
+    eligible = [s for s in stories if s["gate_key"] is not None and s["gate_key"] >= gating_key]
+    if not eligible:
+        return []
+    eligible.sort(key=lambda s: s["gate_key"])
+    return [eligible[0]]
 
 
 def main():

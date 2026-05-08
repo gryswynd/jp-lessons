@@ -14,6 +14,18 @@ The prerequisite rules above define when a grammar form **may** be used (the cei
 
 > Once a grammar form is unlocked, subsequent content must **actively use** it. Students learn through repeated, natural exposure — not by seeing a form once in a grammar lesson and never encountering it again.
 
+### Story reinforcement rule
+
+A story's **primary G grammar reinforcement** consists of every G whose `unlocksAfter` lesson is contained in the story's lesson coverage — i.e., every G that gets taught between the previous story and this one. Equivalently: a story is the primary reinforcement venue for grammar `G` iff it is the first story whose `unlocksAfter` ≥ `G.unlocksAfter`.
+
+The student must complete G's grammar lesson before the story unlocks, so by the time they reach the story they have learned G — and the story is the natural place to see it used in context. Earlier G grammars are **ambient** (use if natural, not enforced).
+
+Examples:
+- G17 unlocks after N4.7 → primary story is **kazoku-no-kisetsu** (unlocksAfter N4.8). Story 4 must reinforce all of G17's targetVocab (だけ / しか / ばかり / でも).
+- G18, G19 unlock after N4.10 → primary story is **machi-no-eigakan** (unlocksAfter N4.10).
+- G14, G15 unlock after N4.5 → primary story is **hirugohan-monogatari** (unlocksAfter N4.6).
+- G20 unlocks after N4.14 → primary story is **uta-to-shigoto** (unlocksAfter N4.14).
+
 ### Grammar milestones and reinforcement schedule
 
 Each milestone groups forms that unlock together. The **active reinforcement window** is the 2–3 lessons immediately after unlock, where minimum usage counts apply. After the window, forms enter **sustained use** where complete absence is flagged.
