@@ -5,13 +5,13 @@
 
 ### Story Text (Japanese)
 
-りきぞは毎日、自転車で通学して いた。自転車での通学は長い体験だった。山村から駅まで、雨の日も風の日も自転車で走った。毎朝、道のそばをとっきゅうときゅうこうが前を行くのを見た。その時、大きい音と風がして、りきぞの自転車が少し動いた。りきぞはいつもしはつに乗って、早く出て いた。しはつの時間は、駅に人が少なくて、広い場所に自転車を止められた。「自転車でならう道は、もうよく知って いる」と思って いた。でも、車は、別のことだった。
+りきぞは毎日、自転車で通学して いた。自転車での通学は長い体験だった。山村から駅まで、雨の日も風の日も自転車で走った。毎朝、とっきゅうときゅうこうが道の前を行くのを見た。その時、大きい音と風がして、りきぞの自転車が少し動いた。りきぞはいつもしはつに乗って、早く出て いた。しはつの時間は、駅に人が少なくて、広い場所に自転車を止められた。「自転車でならう道は、もうよく知って いる」と思って いた。でも、車は、別のことだった。
 
 だから、今年、りきぞが運転の試験に行くことになった時、むずかしいと思った。「体験がないと問題だ」と思って、父のたろうに話した。
 
 たろうは親切な人だった。「もちろん、教えよう」と言った。
 
-運転の前に、たろうは「運転はかるい物だよ」と言った。「よくならえる。車は正しい道をとおすだけだ。自転車よりかるいかもしれない」
+運転の前に、たろうは「運転はかるい物だよ」と言った。「よくならえる。車は正しい道をとおすだけだ。自転車よりかるいと思う」
 
 りきぞは「そうか」と思った。自転車でも道はとおして きた。毎日ならって きた。車もすぐにならえると思った。
 
@@ -21,17 +21,17 @@
 
 りきぞはけんのかるくちを聞いた。こんな時でも、けんはかるくちを止められない。それがけんだった。
 
-運転の体験は土ようびの朝に始まった。たろうは大通りの近くの広い場所まで車を運んで きた。「ここなら問題ない」とたろうは言った。りきぞは運転の席にすわった。手動で動かす物を持った。自転車のそれより低い所にあった。「手動で動かすのは同じ だが、少し違う」とりきぞは思った。
+運転の体験は土ようびの朝に始まった。たろうは大通りの近くの広い場所まで車を運んで きた。「ここは問題ない」とたろうは言った。りきぞは前の所にすわった。手動で動かす物を持った。自転車のそれより低い所にあった。「手動で動かすのは同じ だが、少し違う」とりきぞは思った。
 
-「左足で止めてみよう」とたろうは言った。
+「左足で止めよう」とたろうは言った。
 
 りきぞは左足を動かした。
 
-「違う、右足だ」とたろうは言った。
+「ちがう、右足だ」とたろうは言った。
 
 りきぞは右足を動かした。
 
-「違う、右足は早くなる方だ。左で止めるんだ」とたろうは言った。
+「ちがう、右足は早くなる。左で止めるんだ」とたろうは言った。
 
 りきぞは止まった。「たろうさん、左足と言いましたよね？」
 
@@ -43,7 +43,7 @@
 
 「ああ、運転して いる！すごいね、りきぞ」
 
-りきぞは後ろを見た。けんが後ろの席にすわって いた。
+りきぞは後ろを見た。けんが後ろにすわって いた。
 
 「けん、なんでここにいるんだ？」とりきぞは言った。
 
@@ -69,17 +69,17 @@
 
 りきぞには分からなかった。けんは後ろで食事をしながら「ほんとうに、前が大切だよね」と言った。りきぞにはその声の強度が弱く思えた。
 
-また車を動かした。今度は少し早く走った。車を右に動かした。たろうが「そこで右に行って」と言った。りきぞは右に動かした。たろうが「違う、左だ」と言った。りきぞは左に動かした。たろうが「違う、前に行くんだ」と言った。りきぞは前に動かした。
+また車を動かした。今度は少し早く走った。車を右に動かした。たろうが「そこで右に行って」と言った。りきぞは右に動かした。たろうが「ちがう、左だ」と言った。りきぞは左に動かした。たろうが「ちがう、前に行くんだ」と言った。りきぞは前に動かした。
 
 りきぞはたろうのすることをうつそうとした。りょこうでも同じだろうと思って、たろうと同じに動かした。でも、そのすることがいつも変わって いた。
 
 「たろうさん、どちらですか」とりきぞは聞いた。
 
-「体験によって変わる」とたろうは言った。「それが運転の体験だ」
+「体験で変わる」とたろうは言った。「それが運転の体験だ」
 
 けんが後ろから「右でも左でもいいんじゃない？どちらでも着くよ」と言った。
 
-たろうとりきぞは二人で「違う」と言った。
+たろうとりきぞは二人で「ちがう」と言った。
 
 その後、大通りの近くで車が止まった。たろうは「ちょっと待って」と言って、車から出て 行った。
 
@@ -119,13 +119,13 @@
 
 **Progress in Driving**
 
-Rikizo commuted every day by bicycle. Commuting by bicycle was a long experience. Rain or wind, he rode from the mountain village to the station every day. Every morning he watched the limited express and express trains go past alongside the road. Each time, there was a big sound and a rush of wind, and Rikizo's bicycle moved a little. He always took the first train of the day, setting out quickly. At the first-train hour, the station was quiet and he could park his bicycle in a spacious spot. "I already know well the roads you learn on a bicycle," he thought. But a car was a different matter entirely.
+Rikizo commuted every day by bicycle. Commuting by bicycle was a long experience. Rain or wind, he rode from the mountain village to the station every day. Every morning he watched the limited express and express trains go past on the road ahead. Each time, there was a big sound and a rush of wind, and Rikizo's bicycle moved a little. He always took the first train of the day, setting out quickly. At the first-train hour, the station was quiet and he could park his bicycle in a spacious spot. "I already know well the roads you learn on a bicycle," he thought. But a car was a different matter entirely.
 
 So when, this year, Rikizo was going to take his driving test, he thought it would be difficult. Thinking "it'll be a problem without experience," he talked to his father Taro about it.
 
 Taro was a kind person. "Of course, I'll teach you," he said.
 
-Before driving, Taro said, "Driving is a light thing." "You can learn it well. A car is just about letting it through the right road. It might be lighter than a bicycle."
+Before driving, Taro said, "Driving is a light thing." "You can learn it well. A car is just about letting it through the right road. I think it's lighter than a bicycle."
 
 Rikizo thought, "Is that so?" With the bicycle too, he had been finding his way through. He had been learning every day. He thought he could learn driving quickly too.
 
@@ -135,9 +135,9 @@ Taro considered for a moment. "Well, later," he said.
 
 Rikizo heard Ken's flippant remark. Even at a time like this, Ken couldn't stop his wisecracks. That was Ken.
 
-The driving experience started on Saturday morning. Taro drove the car to a wide open space near the main street. "It's fine here," Taro said. Rikizo sat in the driver's seat. He grabbed the manual control. It was positioned lower than a bicycle's. "Moving it by hand is the same, but it's a little different," Rikizo thought.
+The driving experience started on Saturday morning. Taro drove the car to a wide open space near the main street. "Here is fine," Taro said. Rikizo sat in the front spot. He grabbed the manual control. It was positioned lower than a bicycle's. "Moving it by hand is the same, but it's a little different," Rikizo thought.
 
-"Try stopping with your left foot," said Taro.
+"Let's stop with the left foot," said Taro.
 
 Rikizo moved his left foot.
 
@@ -145,7 +145,7 @@ Rikizo moved his left foot.
 
 Rikizo moved his right foot.
 
-"No, the right foot is the one that makes you go faster. Stop with the left," said Taro.
+"No, the right foot is the faster one. Stop with the left," said Taro.
 
 Rikizo stopped. "Taro-san, didn't you just say left foot?"
 
@@ -157,7 +157,7 @@ Then, a voice came from the back.
 
 "Oh! He's driving! Amazing, Rikizo."
 
-Rikizo looked back. Ken was sitting in the back seat.
+Rikizo looked back. Ken was sitting in the back.
 
 "Ken, why are you here?" Rikizo said.
 
@@ -189,7 +189,7 @@ Rikizo tried to copy what Taro did. Thinking it would be the same when traveling
 
 "Taro-san, which is it?" Rikizo asked.
 
-"It changes with experience," Taro said. "That's the experience of driving."
+"It changes by experience," Taro said. "That's the experience of driving."
 
 Ken said from the back, "Couldn't it be either right or left? You'll get there either way."
 

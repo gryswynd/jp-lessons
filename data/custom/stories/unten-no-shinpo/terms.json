@@ -49,6 +49,9 @@
     "急用": { "id": "v_kyuuyou", "form": null },
     "去来": { "id": "v_kyourai", "form": null },
 
+    "ちがう": { "id": "v_chigau", "form": null },
+    "ちがった": { "id": "v_chigau", "form": "plain_past" },
+
     "とっきゅう": { "id": "v_tokkyuu", "form": null },
     "きゅうこう": { "id": "v_kyuukou", "form": null },
     "しはつ": { "id": "v_shihatsu", "form": null },
@@ -124,7 +127,7 @@
     "物": { "id": "v_mono", "form": null },
     "気持ち": { "id": "v_kimochi", "form": null },
     "電話": { "id": "v_denwa", "form": null },
-    "方": { "id": "v_kata", "form": null },
+    "あと": { "id": "v_ato", "form": null },
     "大切": { "id": "v_taisetsu", "form": null },
     "音": { "id": "v_oto", "form": null },
     "風": { "id": "v_kaze", "form": null },
@@ -159,6 +162,7 @@
     "もっと": { "id": "v_motto", "form": null },
 
     "長い": { "id": "v_nagai", "form": null },
+    "少なくて": { "id": "v_sukunai", "form": "te_form" },
     "低い": { "id": "v_hikui", "form": null },
     "広い": { "id": "v_hiroi", "form": null },
     "広くて": { "id": "v_hiroi", "form": "te_form" },
@@ -190,6 +194,10 @@
     "走った": { "id": "v_hashiru", "form": "plain_past" },
     "止まった": { "id": "v_tomaru", "form": "plain_past" },
     "止まる": { "id": "v_tomaru", "form": "plain_form" },
+    "止まらない": { "id": "v_tomaru", "form": "plain_negative" },
+    "止めて": { "id": "v_tomeru", "form": "te_form" },
+    "止められない": { "id": "v_tomeru", "form": "plain_potential_negative" },
+    "止めよう": { "id": "v_tomeru", "form": "plain_volitional" },
     "始まった": { "id": "v_hajimaru", "form": "plain_past" },
     "帰った": { "id": "v_kaeru", "form": "plain_past" },
     "帰れた": { "id": "v_kaeru", "form": "plain_potential_past" },
@@ -199,6 +207,8 @@
     "進んだ": { "id": "v_susumu", "form": "plain_past" },
 
     "運んで": { "id": "v_hakobu", "form": "te_form" },
+    "乗って": { "id": "v_noru", "form": "te_form" },
+    "知って": { "id": "v_shiru", "form": "te_form" },
     "きた": { "id": "v_kuru", "form": "plain_past" },
     "来た": { "id": "v_kuru", "form": "plain_past" },
     "くる": { "id": "v_kuru", "form": "plain_form" },
@@ -223,6 +233,10 @@
     "見えなかった": { "id": "v_mieru", "form": "plain_past_negative" },
     "見て": { "id": "v_miru", "form": "te_form" },
     "見ながら": { "id": "v_miru", "form": "nagara_form" },
+    "しながら": { "id": "v_suru", "form": "nagara_form" },
+    "食べながら": { "id": "v_taberu", "form": "nagara_form" },
+    "早すぎる": { "id": "v_hayai", "form": "sugiru_form" },
+    "という": { "id": "v_iu", "form": "plain_form" },
 
     "言った": { "id": "v_iu", "form": "plain_past" },
     "言いました": { "id": "v_iu", "form": "polite_mashita" },
@@ -249,6 +263,7 @@
 
     "教えよう": { "id": "v_oshieru", "form": "plain_volitional" },
 
+    "考えた": { "id": "v_kangaeru", "form": "plain_past" },
     "考えて": { "id": "v_kangaeru", "form": "te_form" },
     "考えてから": { "id": "v_kangaeru", "form": "te_form" },
     "考えなかった": { "id": "v_kangaeru", "form": "plain_past_negative" },
