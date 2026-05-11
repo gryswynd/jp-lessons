@@ -175,7 +175,7 @@
     "動かして": { "id": "v_ugokasu", "form": "te_form" },
     "動かし": { "id": "v_ugokasu", "form": null },
 
-    "十五まい目": { "id": "v_kami", "form": null },
+    "まい目": { "id": "v_me_ordinal", "form": null },
     "動かしたくない": { "id": "v_ugokasu", "form": null },
     "動かなかった": { "id": "v_ugoku", "form": "plain_past_negative" },
     "上げた": { "id": "v_ageru_raise", "form": "plain_past" },
@@ -210,6 +210,6 @@
     "なかった": { "id": "v_aru", "form": "plain_past_negative" },
     "運んだ": { "id": "v_hakobu", "form": "plain_past" },
     "読まなかった": { "id": "v_yomu", "form": "plain_past_negative" },
-    "持たないで": { "id": "v_motsu", "form": null }
+    "持たないで": { "id": "v_motsu", "form": "polite_negative_te" }
   }
 }
