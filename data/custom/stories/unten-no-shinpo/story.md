@@ -11,7 +11,7 @@
 
 たろうは親切な人だった。「もちろん、教えよう」と言った。
 
-運転の前に、たろうは言った。「運転はかるい物だよ」と言った。「よくならえる。車は正しい道をとおすだけだ。自転車よりかるいかもしれない」
+運転の前に、たろうは「運転はかるい物だよ」と言った。「よくならえる。車は正しい道をとおすだけだ。自転車よりかるいかもしれない」
 
 りきぞは「そうか」と思った。自転車でも道はとおして きた。毎日ならって きた。車もすぐにならえると思った。
 
@@ -125,7 +125,7 @@ So when, this year, Rikizo was going to take his driving test, he thought it wou
 
 Taro was a kind person. "Of course, I'll teach you," he said.
 
-Before driving, Taro spoke. "Driving is a light thing," he said. "You can learn it well. A car is just about letting it through the right road. It might be lighter than a bicycle."
+Before driving, Taro said, "Driving is a light thing." "You can learn it well. A car is just about letting it through the right road. It might be lighter than a bicycle."
 
 Rikizo thought, "Is that so?" With the bicycle too, he had been finding his way through. He had been learning every day. He thought he could learn driving quickly too.
 
