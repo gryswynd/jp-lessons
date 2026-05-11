@@ -55,7 +55,7 @@ When the event was over, Rikizo went outside and looked at the plan. The plan wa
 
 Then Rikizo opened the fifteenth sheet of the plan: "Event Distinctions and Intentions." It said: "Move all things to the correct location." He read it carefully and asked himself: "Ken's right wasn't my right. Yamakawa's table didn't move. Nobody read the back-and-forth questions. What is the true nature of this problem?" He still couldn't investigate it to a conclusion. He started reading the plan again.
 
-Everyone came out through the main gate with tired voices. People passing in front of the bank paid a little attention to them. Ken walked without holding the table. Yamakawa walked with an especially proud face. Only Rikizo stood at the center, holding the plan. He had been the center of today's event — but somehow the biggest thing that happened was falling down.
+Everyone came out through the main gate with tired voices. People passing in front of the bank paid a little attention to them. Ken walked without holding the table. Yamakawa walked out looking especially pleased with himself. Only Rikizo stood at the center, holding the plan. He had been the center of today's event — and yet somehow it felt like the biggest thing that had happened was falling down.
 
 **The End**
 
