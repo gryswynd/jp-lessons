@@ -37,7 +37,7 @@
 
 「そうか？まあ、進もう」
 
-車はゆっくり動き始めた。りきぞは集中して前を見て いた。自転車の運動と少し同じだったが、車のほうが重大だと思った。車の運動の強度は弱くないと思った。
+車はゆっくり動き始めた。りきぞは集中して前を見て いた。自転車の運動と少し同じだったが、車の方が重大だと思った。車の運動の強度は弱くないと思った。
 
 そこで、後ろから声がした。
 
@@ -45,7 +45,11 @@
 
 りきぞは後ろを見た。けんが後ろにすわって いた。
 
-「けん、なんでここにいるんだ？」とりきぞは言った。
+「け、けん！？」とりきぞは言った。
+
+「前からここにいたよ」とけんは言った。
+
+「何でここにいるんだ？」とりきぞは言った。
 
 「乗り回したくて」とけんは答えた。「たろうさん、いいですか？」
 
@@ -175,7 +179,11 @@ Then, a voice came from the back.
 
 Rikizo looked back. Ken was sitting in the back.
 
-"Ken, why are you here?" Rikizo said.
+"Wh — Ken!?" said Rikizo.
+
+"I've been here the whole time," said Ken.
+
+"What are you doing here?" said Rikizo.
 
 "I wanted to cruise around," Ken answered. "Taro-san, is that okay?"
 
