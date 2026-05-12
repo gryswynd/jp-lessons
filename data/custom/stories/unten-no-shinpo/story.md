@@ -33,7 +33,7 @@
 
 「ちがう、右足は早くなる。左で止めるんだ」とたろうは言った。
 
-りきぞは止まった。「たろうさん、左足と言いましたよね？」
+りきぞは止まった。「お父さん、左足と言いましたよね？」
 
 「そうか？まあ、進もう」
 
@@ -73,7 +73,7 @@
 
 りきぞはたろうのすることをうつそうとした。りょこうでも同じだろうと思って、たろうと同じに動かした。でも、そのすることがいつも変わって いた。
 
-「たろうさん、どちらですか」とりきぞは聞いた。
+「お父さん、どちらですか」とりきぞは聞いた。
 
 「体験で変わる」とたろうは言った。「それが運転の体験だ」
 
@@ -83,7 +83,7 @@
 
 その後、大通りの近くで車が止まった。たろうは「ちょっと待って」と言って、車から出て 行った。
 
-「たろうさん？」
+「お父さん？」
 
 「少し歩いて くる」と言った。
 
@@ -103,7 +103,7 @@
 
 「どうする？」とけんは聞いた。
 
-「たろうさんを待つか」とりきぞは言った。「でも、いつ帰るか分からない」
+「お父さんを待つか」とりきぞは言った。「でも、いつ帰るか分からない」
 
 けんは少し考えてから「でも、来た道は分かるんじゃない？自転車でも通って いた道だろう」と言った。
 
@@ -163,7 +163,7 @@ Rikizo moved his right foot.
 
 "No, the right foot is the faster one. Stop with the left," said Taro.
 
-Rikizo stopped. "Taro-san, didn't you just say left foot?"
+Rikizo stopped. "Dad, didn't you just say left foot?"
 
 "Did I? Well, let's go forward."
 
@@ -203,7 +203,7 @@ He moved the car again. This time it went a little faster. He moved it to the ri
 
 Rikizo tried to copy what Taro did. Thinking it would be the same when traveling too, he moved the same way as Taro. But what Taro did always changed.
 
-"Taro-san, which is it?" Rikizo asked.
+"Dad, which is it?" Rikizo asked.
 
 "It changes by experience," Taro said. "That's the experience of driving."
 
@@ -213,7 +213,7 @@ Taro and Rikizo both said "No" together.
 
 After that, the car stopped near the main street. Taro said "Hold on a moment" and got out of the car.
 
-"Taro-san?"
+"Dad?"
 
 "I'll walk a bit," he said.
 
@@ -233,7 +233,7 @@ Rikizo said nothing.
 
 "What are we doing?" Ken asked.
 
-"Should we wait for Taro-san?" said Rikizo. "But I don't know when he'll come back."
+"Should we wait for Dad?" said Rikizo. "But I don't know when he'll come back."
 
 After thinking a moment, Ken said, "But you know the way back, don't you? It's the road you used to bike along."
 
