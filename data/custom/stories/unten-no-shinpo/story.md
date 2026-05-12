@@ -21,7 +21,7 @@
 
 りきぞはけんのかるくちを聞いた。こんな時でも、けんはかるくちを止められない。それがけんだった。
 
-運転の体験は土ようびの朝に始まった。たろうは大通りの近くの広い場所まで車を運んで きた。「ここは問題ない」とたろうは言った。りきぞは前の所にすわった。手動で動かす物を持った。自転車のそれより低い所にあった。「手動で動かすのは同じ だが、少し違う」とりきぞは思った。
+運転の体験は土ようびの朝に始まった。たろうは大通りの近くの広い場所まで車を運んで きた。「ここは問題ない」とたろうは言った。りきぞは前の所にすわった。手動で動かす物を持った。自転車のそれより低い所にあった。「手動で動かすのは同じ だが、少しちがう」とりきぞは思った。
 
 「左足で止めよう」とたろうは言った。
 
@@ -35,7 +35,7 @@
 
 りきぞは止まった。「たろうさん、左足と言いましたよね？」
 
-「そうか？まあ、進んでみよう」
+「そうか？まあ、進もう」
 
 車はゆっくり動き始めた。りきぞは集中して前を見て いた。自転車の運動と少し同じだったが、車のほうが重大だと思った。車の運動の強度は弱くないと思った。
 
@@ -165,7 +165,7 @@ Rikizo moved his right foot.
 
 Rikizo stopped. "Taro-san, didn't you just say left foot?"
 
-"Did I? Well, let's try moving forward."
+"Did I? Well, let's go forward."
 
 The car began to move slowly. Rikizo concentrated, looking ahead. It was similar to the motion of cycling, but he thought driving felt much more serious. He thought the intensity of the car's movement was not weak.
 
