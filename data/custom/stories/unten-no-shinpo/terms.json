@@ -47,6 +47,8 @@
     "重大": { "id": "v_juudai", "form": null },
     "食事": { "id": "v_shokuji", "form": null },
     "急用": { "id": "v_kyuuyou", "form": null },
+    "おにぎり": { "id": "v_onigiri", "form": null },
+    "ばかり": { "id": "p_bakari", "form": null },
     "去来": { "id": "v_kyourai", "form": null },
 
     "ちがう": { "id": "v_chigau", "form": null },
@@ -279,6 +281,14 @@
 
     "着く": { "id": "v_tsuku", "form": "plain_form" },
 
-    "食べながら": { "id": "v_taberu", "form": "nagara_form" }
+    "食べた": { "id": "v_taberu", "form": "plain_past" },
+    "食べて": { "id": "v_taberu", "form": "te_form" },
+    "食べられない": { "id": "v_taberu", "form": "plain_potential_negative" },
+    "たくさん": { "id": "v_takusan", "form": null },
+    "うち": { "id": "v_uchi", "form": null },
+    "入った": { "id": "v_hairu", "form": "plain_past" },
+    "そこ": { "id": "v_soko", "form": null },
+    "何": { "id": "v_nani", "form": null },
+    "できた": { "id": "v_dekiru", "form": "plain_past" }
   }
 }

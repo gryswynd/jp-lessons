@@ -55,7 +55,7 @@
 
 りきぞは前を見ながら「今は集中して いるんだが」と言った。
 
-「そうだよね」とけんは言って、また食事をした。
+「そうだよね」とけんは言って、またおにぎりを食べた。
 
 りきぞは前を見た。大通りが近くなって いた。大通りは広くて、車がたくさん通って いた。「止まらないと」と思って、左足を動かした。車は止まった。
 
@@ -67,7 +67,7 @@
 
 「大通りは問題ない。いつも前を見ることだ」
 
-りきぞには分からなかった。けんは後ろで食事をしながら「ほんとうに、前が大切だよね」と言った。りきぞにはその声の強度が弱く思えた。
+りきぞには分からなかった。けんは後ろでおにぎりを食べながら「ほんとうに、前が大切だよね」と言った。りきぞにはその声の強度が弱く思えた。
 
 また車を動かした。今度は少し早く走った。車を右に動かした。たろうが「そこで右に行って」と言った。りきぞは右に動かした。たろうが「ちがう、左だ」と言った。りきぞは左に動かした。たろうが「ちがう、前に行くんだ」と言った。りきぞは前に動かした。
 
@@ -93,7 +93,15 @@
 
 たろうは歩いて 去った。
 
-りきぞは一人になった。けんはまだ後ろにいた。「どうする？」とけんは聞いた。けんの声は、また食事をしながらの声だった。
+りきぞは一人になった。けんはまだ後ろにいた。けんはまたおにぎりを食べて いた。
+
+「また食べて いるのか」とりきぞは言った。
+「もうたくさん食べた」とけんは答えた。
+「おにぎりばかりじゃないか」
+「でも、りきぞは食べられないよ。運転して いるから」とけんは言った。
+りきぞは何も言わなかった。
+
+「どうする？」とけんは聞いた。
 
 「たろうさんを待つか」とりきぞは言った。「でも、いつ帰るか分からない」
 
@@ -101,15 +109,23 @@
 
 「それは、そうか」とりきぞは言った。毎日、自転車でこの道をとおして 来た。道はよく知って いた。
 
-りきぞは少し考えてから、ゆっくり車を動かした。大通りを回って、来た道を帰った。自転車でならった道を思い出して、進んだ。たろうは道に見えなかった。駅の近くの広い場所に車を止めた。
+りきぞは少し考えてから、ゆっくり車を動かした。大通りを回って、来た道を帰った。自転車でならった道を思い出して、進んだ。たろうは道に見えなかった。うちの近くに車を止めた。
 
 けんが「りきぞ、帰れたね」と言った。「発見だね。一人でも帰れると思う」
 
 「うん」とりきぞは言った。「これが運転の進歩か」
 
-その後、たろうから電話が来た。「急用ができた。先に帰った」
+うちに入った。たろうがそこにすわって いた。
 
-りきぞは車の中でそれを聞いた。去来する気持ちはなかった。たろうのことも、けんのことも、考えなかった。少しだけ前に進んだという気がした。
+「たろうさん？」とりきぞは言った。
+
+「急用ができた」とたろうは言った。
+
+「でも...」
+
+「急用ができた」
+
+りきぞは何も聞かなかった。去来する気持ちはなかった。たろうのことも、けんのことも、考えなかった。少しだけ前に進んだという気がした。
 
 **おわり**
 
@@ -125,7 +141,7 @@ So when, this year, Rikizo was going to take his driving test, he thought it wou
 
 Taro was a kind person. "Of course, I'll teach you," he said.
 
-Before driving, Taro said, "Driving is a light thing." "You can learn it well. A car is just about letting it through the right road. I think it's lighter than a bicycle."
+Before driving, Taro said, "Driving is a light thing." "You can learn it well. Just follow the right road — that's all there is to it. I think it's lighter than a bicycle."
 
 Rikizo thought, "Is that so?" With the bicycle too, he had been finding his way through. He had been learning every day. He thought he could learn driving quickly too.
 
@@ -169,7 +185,7 @@ Ken started talking again from the back. "Rikizo, do you remember our last trip?
 
 Rikizo, looking forward while he drove, said, "I'm concentrating right now."
 
-"Fair enough," said Ken, and went back to eating.
+"Fair enough," said Ken, and went back to his onigiri.
 
 Rikizo looked forward. The main street was getting closer. Thinking "I have to stop," he moved his left foot. The car stopped.
 
@@ -181,7 +197,7 @@ Rikizo looked forward. The main street was getting closer. Thinking "I have to s
 
 "The main street is fine. Always look ahead."
 
-Rikizo didn't understand. Ken was eating in the back and said, "It's really true, looking ahead is important." To Rikizo, the intensity of those words seemed weak.
+Rikizo didn't understand. Ken was eating another onigiri in the back and said, "It's really true, looking ahead is important." To Rikizo, the intensity of those words seemed weak.
 
 He moved the car again. This time it went a little faster. He moved it to the right. Taro said "Turn right there." Rikizo moved right. Taro said "No, left." Rikizo moved left. Taro said "No, go forward." Rikizo moved forward.
 
@@ -207,7 +223,15 @@ After that, the car stopped near the main street. Taro said "Hold on a moment" a
 
 Taro walked away.
 
-Rikizo was now alone. Ken was still in the back. "What are we doing?" Ken asked. His voice was the voice of someone still eating.
+Rikizo was now alone. Ken was still in the back. Ken was eating another onigiri.
+
+"You're eating again?" said Rikizo.
+"I've already eaten a lot," Ken answered.
+"It's nothing but onigiri."
+"But Rikizo can't eat any," Ken said. "You're driving."
+Rikizo said nothing.
+
+"What are we doing?" Ken asked.
 
 "Should we wait for Taro-san?" said Rikizo. "But I don't know when he'll come back."
 
@@ -221,9 +245,17 @@ Ken said, "Rikizo, you made it back." "A discovery — turns out you can get bac
 
 "Yeah," said Rikizo. "So this is progress in driving."
 
-Later, a phone call came from Taro. "Something urgent came up. I went home first."
+He went inside. Taro was there, sitting.
 
-Rikizo heard it in the car. There was no feeling of things coming and going. He didn't even think about Taro, or Ken. There was only the sense that he had moved forward, a little.
+"Taro-san?" said Rikizo.
+
+"Something urgent came up," said Taro.
+
+"But..."
+
+"Something urgent came up."
+
+Rikizo asked nothing more. There was no feeling of things coming and going. He didn't even think about Taro, or Ken. There was only the sense that he had moved forward, a little.
 
 **The End**
 
@@ -251,6 +283,7 @@ Rikizo heard it in the car. There was no feeling of things coming and going. He 
 - 重大 (じゅうだい) — serious / significant
 - 食事 (しょくじ) — meal / eating
 - 去来 (きょらい) — coming and going (feelings)
+- おにぎり — rice ball [narrative; N5 vocab]
 - とっきゅう (特急) — limited express train [written in kana: 特 not taught]
 - きゅうこう (急行) — express train [written in kana: 急 not taught]
 - しはつ (始発) — first train of the day [written in kana: 発 not taught]
