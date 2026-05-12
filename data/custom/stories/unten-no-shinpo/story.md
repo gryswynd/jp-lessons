@@ -117,7 +117,7 @@
 
 うちに入った。たろうがそこにすわって いた。
 
-「たろうさん？」とりきぞは言った。
+「お父さん？」とりきぞは言った。
 
 「急用ができた」とたろうは言った。
 
@@ -247,7 +247,7 @@ Ken said, "Rikizo, you made it back." "A discovery — turns out you can get bac
 
 He went inside. Taro was there, sitting.
 
-"Taro-san?" said Rikizo.
+"Dad?" said Rikizo.
 
 "Something urgent came up," said Taro.
 
