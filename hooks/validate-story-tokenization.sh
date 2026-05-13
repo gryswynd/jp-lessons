@@ -161,6 +161,118 @@ for s1, id1 in surface_to_id.items():
                     f"Add a space in story.md after '{s1}'."
                 )
 
+# ── CLASS C: Full coverage — untagged Japanese tokens ───────────────────────
+# Simulate the text-processor's longest-match scan on story text.
+# Any Japanese character that remains unmatched after all terms.json keys
+# are applied is an untagged token — it will render as plain text with no chip.
+#
+# Algorithm mirrors text-processor.js:
+#   1. Sort all surfaces longest-first.
+#   2. Multi-char surfaces: replace ALL occurrences with sentinel.
+#   3. Single-char kana surfaces: replace only when NOT followed by kana
+#      (single-char lookahead rule).
+#   4. Flag any remaining hiragana / katakana / kanji in story text.
+
+def is_kana(c):
+    return '぀' <= c <= 'ヿ'
+
+def is_japanese_char(c):
+    return ('぀' <= c <= 'ゟ' or
+            '゠' <= c <= 'ヿ' or
+            '一' <= c <= '鿿' or
+            '豈' <= c <= '﫿')
+
+PUNCT = set('。、！？「」『』（）〜…・～♪ 　\n\r\t')
+
+def simulate_coverage(text, surface_map):
+    """
+    Left-to-right longest-match simulation — mirrors text-processor.js.
+
+    At each position, the longest surface that starts there wins.
+    Single-char kana (particles) always count as covered if the key EXISTS in
+    surface_map — their actual lookahead rule only affects rendering aesthetics,
+    not whether the character is taggable. What matters for coverage is whether
+    a terms.json key CAN cover the character.
+    """
+    # Sort all surfaces longest-first (ties: kana-only before kanji, mirrors processor)
+    sorted_surfaces = sorted(
+        surface_map.keys(),
+        key=lambda s: (-len(s), 0 if not any('一' <= c <= '鿿' for c in s) else 1)
+    )
+    single_char_kana = set(s for s in surface_map if len(s) == 1 and is_kana(s))
+
+    unmatched_spans = []
+    i = 0
+    n = len(text)
+
+    while i < n:
+        c = text[i]
+
+        # Skip punctuation, spaces, non-Japanese
+        if not is_japanese_char(c) or c in PUNCT:
+            i += 1
+            continue
+
+        # Try to match the longest surface starting at position i
+        matched_len = 0
+        for surface in sorted_surfaces:
+            slen = len(surface)
+            if text[i:i+slen] == surface:
+                matched_len = slen
+                break  # longest-first, so first match is best
+
+        if matched_len > 0:
+            i += matched_len
+        elif is_kana(c) and c in single_char_kana:
+            # Single-char kana exists in terms.json — will render correctly in context
+            i += 1
+        else:
+            # Genuinely unmatched
+            unmatched_spans.append((i, c))
+            i += 1
+
+    # Group consecutive unmatched positions into spans with context
+    grouped = []
+    j = 0
+    while j < len(unmatched_spans):
+        pos, ch = unmatched_spans[j]
+        chars = [ch]
+        while j + 1 < len(unmatched_spans) and unmatched_spans[j+1][0] == pos + len(chars):
+            chars.append(unmatched_spans[j+1][1])
+            j += 1
+        span = ''.join(chars)
+        ctx_start = max(0, pos - 8)
+        ctx_end = min(n, pos + len(span) + 8)
+        context = text[ctx_start:ctx_end].replace('\n', '↵')
+        grouped.append((span, context))
+        j += 1
+    return grouped
+
+# Build surface map (surface → id)
+coverage_surface_map = {s: tid for s, tid in surface_to_id.items() if s}
+
+# Extract Japanese story lines (stop before English Translation)
+jp_text_lines = []
+in_jp_section = False
+for line in jp_lines:
+    # Skip markdown headings and horizontal rules and English lines
+    stripped = line.strip()
+    if stripped.startswith('#') or stripped == '---' or stripped == '':
+        continue
+    if stripped.startswith('**') and not any(is_japanese_char(c) for c in stripped):
+        continue  # English-only bold lines (The End, etc.)
+    jp_text_lines.append(line)
+
+jp_story_text = '\n'.join(jp_text_lines)
+
+unmatched = simulate_coverage(jp_story_text, coverage_surface_map)
+
+for span, context in unmatched:
+    errors.append(
+        f"  CLASS C — untagged token '{span}' in: …{context}…\n"
+        f"    → Add a terms.json key for '{span}' (or compound containing it)"
+    )
+
 if errors:
     # Deduplicate
     seen = set()

@@ -7694,6 +7694,23 @@
       }
     },
     {
+      "id": "v_owari",
+      "surface": "終わり",
+      "meaning": "end / conclusion / over",
+      "type": "vocab",
+      "gtype": "noun",
+      "notes": "Noun form of 終わる (to end). Written おわり in story end-markers.",
+      "lesson_ids": "N4.10",
+      "reading": "おわり",
+      "readingAlign": "終(お)わり",
+      "example": {
+        "jp": "映画の 終わりは 感動的だった。",
+        "en": "The end of the movie was moving.",
+        "lessonId": "N4.10",
+        "sectionType": "reading"
+      }
+    },
+    {
       "id": "v_soshite",
       "surface": "そして",
       "meaning": "and then / and so / and",
@@ -7820,6 +7837,29 @@
         "en": "I did a presentation in front of the class.",
         "lessonId": "N4.25",
         "sectionType": "reading"
+      }
+    },
+    {
+      "id": "v_mai_counter",
+      "surface": "まい",
+      "meaning": "flat objects counter (sheets, pictures, etc.)",
+      "type": "vocab",
+      "gtype": "suffix",
+      "notes": "Counter for flat, thin objects such as sheets of paper, photographs, and dishes. 三まい (three sheets), 十五まい (fifteen sheets).",
+      "lesson_ids": "N4.10",
+      "reading": "まい",
+      "readingAlign": "枚(まい)",
+      "example": {
+        "jp": "三まいの 紙に 書きました。",
+        "en": "I wrote on three sheets of paper.",
+        "manual": true,
+        "terms": [
+          { "id": "v_mai_counter", "form": null },
+          "p_no",
+          "v_kami",
+          "p_ni",
+          { "id": "v_kaku", "form": "polite_mashita" }
+        ]
       }
     },
     {
