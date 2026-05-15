@@ -29,10 +29,12 @@
     "だけ": { "id": "p_dake", "form": null },
     "んだ": { "id": "p_nda", "form": null },
     "んだが": { "id": "p_nda", "form": null },
+    "ん": { "id": "p_nda", "form": null },
 
     "です": { "id": "g_desu", "form": null },
     "だった": { "id": "g_da", "form": null },
     "だ": { "id": "g_da", "form": null },
+    "だろう": { "id": "g_darou", "form": null },
 
     "運転": { "id": "v_unten", "form": null },
     "進歩": { "id": "v_shinpo", "form": null },
@@ -99,6 +101,11 @@
     "変わる": { "id": "v_kawaru_2", "form": "plain_form" },
 
     "こう": { "id": "v_kou", "form": null },
+    "その": { "id": "v_sono", "form": null },
+    "この": { "id": "v_kono", "form": null },
+    "これ": { "id": "v_kore", "form": null },
+    "好き": { "id": "v_suki", "form": null },
+    "いつ": { "id": "v_itsu", "form": null },
 
     "車": { "id": "v_kuruma", "form": null },
     "父": { "id": "v_chichi", "form": null },
@@ -140,6 +147,11 @@
     "風": { "id": "v_kaze", "form": null },
     "雨": { "id": "v_ame", "form": null },
     "時": { "id": "v_toki", "form": null },
+    "日": { "id": "v_hi", "form": null },
+    "後": { "id": "v_ato", "form": null },
+    "今": { "id": "v_ima", "form": null },
+    "人": { "id": "v_hito", "form": null },
+    "気": { "id": "v_ki", "form": null },
 
     "もちろん": { "id": "v_mochiron", "form": null },
     "まあ": { "id": "v_maa", "form": null },
@@ -195,6 +207,7 @@
     "あった": { "id": "v_aru", "form": "plain_past" },
     "ない": { "id": "v_aru", "form": "plain_negative" },
     "なかった": { "id": "v_aru", "form": "plain_past_negative" },
+    "する": { "id": "v_suru", "form": "plain_form" },
     "した": { "id": "v_suru", "form": "plain_past" },
     "して": { "id": "v_suru", "form": "te_form" },
 
@@ -202,6 +215,7 @@
     "止まった": { "id": "v_tomaru", "form": "plain_past" },
     "止まる": { "id": "v_tomaru", "form": "plain_form" },
     "止まらない": { "id": "v_tomaru", "form": "plain_negative" },
+    "止める": { "id": "v_tomeru", "form": "plain_form" },
     "止めて": { "id": "v_tomeru", "form": "te_form" },
     "止められない": { "id": "v_tomeru", "form": "plain_potential_negative" },
     "止めよう": { "id": "v_tomeru", "form": "plain_volitional" },
@@ -223,6 +237,7 @@
     "すわった": { "id": "v_suwaru", "form": "plain_past" },
     "すわって": { "id": "v_suwaru", "form": "te_form" },
 
+    "動いた": { "id": "v_ugoku", "form": "plain_past" },
     "動き": { "id": "v_ugoku", "form": null },
     "動かした": { "id": "v_ugokasu", "form": "plain_past" },
     "動かす": { "id": "v_ugokasu", "form": "plain_form" },
@@ -237,6 +252,7 @@
     "行って": { "id": "v_iku", "form": "te_form" },
     "行く": { "id": "v_iku", "form": "plain_form" },
 
+    "見る": { "id": "v_miru", "form": "plain_form" },
     "見た": { "id": "v_miru", "form": "plain_past" },
     "見えなかった": { "id": "v_mieru", "form": "plain_past_negative" },
     "見て": { "id": "v_miru", "form": "te_form" },
@@ -246,6 +262,7 @@
     "早すぎる": { "id": "v_hayai", "form": "sugiru_form" },
     "という": { "id": "v_iu", "form": "plain_form" },
 
+    "言わなかった": { "id": "v_iu", "form": "plain_past_negative" },
     "言った": { "id": "v_iu", "form": "plain_past" },
     "言いました": { "id": "v_iu", "form": "polite_mashita" },
     "言って": { "id": "v_iu", "form": "te_form" },
@@ -254,8 +271,10 @@
     "思って": { "id": "v_omou", "form": "te_form" },
     "思う": { "id": "v_omou", "form": "plain_form" },
 
+    "聞かなかった": { "id": "v_kiku", "form": "plain_past_negative" },
     "聞いた": { "id": "v_kiku", "form": "plain_past" },
 
+    "なる": { "id": "v_naru", "form": "plain_form" },
     "なった": { "id": "v_naru", "form": "plain_past" },
     "なって": { "id": "v_naru", "form": "te_form" },
 
@@ -276,6 +295,7 @@
     "考えてから": { "id": "v_kangaeru", "form": "te_form" },
     "考えなかった": { "id": "v_kangaeru", "form": "plain_past_negative" },
 
+    "待つ": { "id": "v_matsu", "form": "plain_form" },
     "待って": { "id": "v_matsu", "form": "te_form" },
 
     "答えた": { "id": "v_kotaeru", "form": "plain_past" },
@@ -284,6 +304,7 @@
 
     "分かる": { "id": "v_wakaru", "form": "plain_form" },
     "分からない": { "id": "v_wakaru", "form": "plain_negative" },
+    "分からなかった": { "id": "v_wakaru", "form": "plain_past_negative" },
 
     "着く": { "id": "v_tsuku", "form": "plain_form" },
 
@@ -295,6 +316,7 @@
     "入った": { "id": "v_hairu", "form": "plain_past" },
     "そこ": { "id": "v_soko", "form": null },
     "何": { "id": "v_nani", "form": null },
-    "できた": { "id": "v_dekiru", "form": "plain_past" }
+    "できた": { "id": "v_dekiru", "form": "plain_past" },
+    "おわり": { "id": "v_owari", "form": null }
   }
 }

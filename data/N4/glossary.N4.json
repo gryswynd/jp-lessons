@@ -385,6 +385,38 @@
       }
     },
     {
+      "id": "v_happyou",
+      "surface": "はっぴょう",
+      "meaning": "presentation / announcement / publication",
+      "type": "vocab",
+      "gtype": "noun",
+      "notes": "Kanji form 発表 not used in stories — 表 not in taught kanji set.",
+      "lesson_ids": "N4.2",
+      "reading": "はっぴょう",
+      "example": {
+        "jp": "クラスのはっぴょうがあった。",
+        "en": "There was a class presentation.",
+        "lessonId": "N4.2",
+        "sectionType": "reading"
+      }
+    },
+    {
+      "id": "v_hidoi",
+      "surface": "ひどい",
+      "meaning": "terrible / awful / harsh",
+      "type": "vocab",
+      "gtype": "adjective",
+      "notes": "i-adjective. Kanji 酷い rarely used; hiragana standard.",
+      "lesson_ids": "N4.2",
+      "reading": "ひどい",
+      "example": {
+        "jp": "りきぞの習字はひどかった。",
+        "en": "Rikizo's handwriting was terrible.",
+        "lessonId": "N4.2",
+        "sectionType": "reading"
+      }
+    },
+    {
       "id": "k_aru",
       "lesson": "N4.2",
       "type": "kanji",
@@ -7574,6 +7606,175 @@
         "en": "There is a famous literature researcher at the university.",
         "lessonId": "N4.25",
         "sectionType": "reading"
+      }
+    },
+    {
+      "id": "v_owari",
+      "surface": "終わり",
+      "meaning": "end / conclusion / over",
+      "type": "vocab",
+      "gtype": "noun",
+      "notes": "Noun form of 終わる (to end). Written おわり in story end-markers.",
+      "lesson_ids": "N4.10",
+      "reading": "おわり",
+      "readingAlign": "終(お)わり",
+      "example": {
+        "jp": "映画の 終わりは 感動的だった。",
+        "en": "The end of the movie was moving.",
+        "lessonId": "N4.10",
+        "sectionType": "reading"
+      }
+    },
+    {
+      "id": "v_soshite",
+      "surface": "そして",
+      "meaning": "and then / and so / and",
+      "type": "vocab",
+      "gtype": "conjunction",
+      "notes": "Sentence-initial conjunction connecting sequential or resultant events.",
+      "lesson_ids": "N4.25",
+      "reading": "そして",
+      "example": {
+        "jp": "図書館に 行った。そして、文書を 書いた。",
+        "en": "I went to the library. And then I wrote a document.",
+        "lessonId": "N4.25",
+        "sectionType": "reading"
+      }
+    },
+    {
+      "id": "v_sorede",
+      "surface": "それで",
+      "meaning": "so / therefore / that's why",
+      "type": "vocab",
+      "gtype": "conjunction",
+      "notes": "Sentence-initial conjunction expressing a result or reason from what was just stated.",
+      "lesson_ids": "N4.25",
+      "reading": "それで",
+      "example": {
+        "jp": "工場が 多い。それで 水質が よくない。",
+        "en": "There are many factories. So the water quality is poor.",
+        "lessonId": "N4.25",
+        "sectionType": "reading"
+      }
+    },
+    {
+      "id": "v_soreni",
+      "surface": "それに",
+      "meaning": "moreover / besides / on top of that",
+      "type": "vocab",
+      "gtype": "conjunction",
+      "notes": "Additive conjunction; adds a further point to what was already said.",
+      "lesson_ids": "N4.25",
+      "reading": "それに",
+      "example": {
+        "jp": "りきぞは 勉強した。それに、作文も 書いた。",
+        "en": "Rikizo studied. Moreover, he also wrote a composition.",
+        "lessonId": "N4.25",
+        "sectionType": "reading"
+      }
+    },
+    {
+      "id": "v_toshite",
+      "surface": "として",
+      "meaning": "as / in the role of / in the capacity of",
+      "type": "vocab",
+      "gtype": "particle",
+      "notes": "Postpositional particle attaching to nouns. Marks the capacity, role, or classification in which something is regarded or used.",
+      "lesson_ids": "N4.25",
+      "reading": "として",
+      "example": {
+        "jp": "自分の 文書として 写した。",
+        "en": "I copied it as my own document.",
+        "lessonId": "N4.25",
+        "sectionType": "reading"
+      }
+    },
+    {
+      "id": "v_youni",
+      "surface": "ように",
+      "meaning": "so that / in such a way / like / as",
+      "type": "vocab",
+      "gtype": "particle",
+      "notes": "Used after plain-form verbs. ようになる = come to be (gradual change). ようにする = make effort so that. Also used in similes: 小説を読むように (like reading a novel).",
+      "lesson_ids": "N4.25",
+      "reading": "ように",
+      "example": {
+        "jp": "声が よく 聞こえる ように なりました。",
+        "en": "It came to be that the voice could be heard well.",
+        "lessonId": "N4.25",
+        "sectionType": "reading"
+      }
+    },
+    {
+      "id": "v_iya",
+      "surface": "いや",
+      "meaning": "no / well / hmm (self-correction interjection)",
+      "type": "vocab",
+      "gtype": "interjection",
+      "notes": "Used to self-correct or walk back a statement. Different from いいえ (polite no).",
+      "lesson_ids": "N4.25",
+      "reading": "いや",
+      "example": {
+        "jp": "ひどかった。いや、正しくは 読めなかった。",
+        "en": "It was terrible. Well — more accurately, it was unreadable.",
+        "lessonId": "N4.25",
+        "sectionType": "reading"
+      }
+    },
+    {
+      "id": "v_hanashi",
+      "surface": "話",
+      "meaning": "talk / story / conversation / speech",
+      "type": "vocab",
+      "gtype": "noun",
+      "notes": "Noun form of 話す (to speak). 話 = a talk, a story, a conversation.",
+      "lesson_ids": "N4.25",
+      "reading": "はなし",
+      "readingAlign": "話(はなし)",
+      "example": {
+        "jp": "先生の 話を 聞いた。",
+        "en": "I listened to the teacher's talk.",
+        "lessonId": "N4.25",
+        "sectionType": "reading"
+      }
+    },
+    {
+      "id": "v_purezenteshon",
+      "surface": "プレゼンテーション",
+      "meaning": "presentation",
+      "type": "vocab",
+      "gtype": "noun",
+      "notes": "Loanword from English 'presentation'. Often shortened to プレゼン in casual speech.",
+      "lesson_ids": "N4.25",
+      "reading": "プレゼンテーション",
+      "example": {
+        "jp": "クラスの 前で プレゼンテーションを しました。",
+        "en": "I did a presentation in front of the class.",
+        "lessonId": "N4.25",
+        "sectionType": "reading"
+      }
+    },
+    {
+      "id": "v_mai_counter",
+      "surface": "まい",
+      "meaning": "flat objects counter (sheets, pictures, etc.)",
+      "type": "vocab",
+      "gtype": "suffix",
+      "notes": "Counter for flat, thin objects such as sheets of paper, photographs, and dishes. 三まい (three sheets), 十五まい (fifteen sheets).",
+      "lesson_ids": "N4.10",
+      "reading": "まい",
+      "readingAlign": "枚(まい)",
+      "example": {
+        "jp": "三まいの 紙に 書きました。",
+        "en": "I wrote on three sheets of paper.",
+        "manual": true,
+        "terms": [
+          { "id": "v_mai_counter", "form": null },
+          "p_no",
+          "v_kami",
+          "p_ni",
+          { "id": "v_kaku", "form": "polite_mashita" }
+        ]
       }
     },
     {

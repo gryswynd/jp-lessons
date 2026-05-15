@@ -127,7 +127,22 @@ The masu-stem + に construction expresses purpose ("in order to ~"). Examples: 
 
 Do not use `polite_masu` (which implies the verb is the sentence predicate in ます form) or `te_form` (which implies a て-connector or request). The `form: null` tag makes the verb chip tappable with its dictionary-form gloss, which is correct for this construction.
 
-**`form: null` is only valid for purpose construction and story `terms.json` keys.** For all other verbs, a form string is required. If a plain dictionary-form verb appears as a predicate or in a nominalisation (のは/のが), use `plain_form`. If the required form string does not exist in `conjugation_rules.json`, flag it to Agent 1 to create the entry — never fall back to `form: null` as a substitute.
+**`form: null` is valid only for nouns, adverbs, particles, question words, and purpose construction.** For all other verbs, a form string is required — including in story `terms.json` keys. "Story terms.json" is NOT a blanket exception that permits `form: null` on conjugated forms.
+
+**Specific rules for story `terms.json`:**
+
+- **Sugiru constructions** — a valid form string always exists; it must be used:
+  - `ありすぎます` → `{ "id": "v_aru", "form": "polite_sugiru_form" }`
+  - `むずかしすぎる` → `{ "id": "v_muzukashii", "form": "sugiru_form" }`
+  - For polite sugiru negative questions (`すぎませんか`): split into `すぎません` (tagged with `polite_sugiru_form`) + `か` (tagged as `p_ka`). There is no `polite_sugiru_negative` form — use `polite_sugiru_form` for the base plus the negative suffix as a separate compound key.
+
+- **Te-forms of noun_suru compounds** — do NOT create a compound key. Instead, let the existing noun key + `して` (tagged as `{ "id": "v_suru", "form": "te_form" }`) cover the surface naturally:
+  - ✗ `"区別して": { "id": "v_kubetsu", "form": null }` — wrong, compound key with null form
+  - ✓ Existing `"区別"` key + existing `"して"` key — the text processor matches them in sequence
+
+- **Genuinely unresolvable compounds** — if a compound surface (e.g., `勉強したくなかった`: desire_tai negative past of a suru verb) has no single applicable form string in `conjugation_rules.json`, use `form: null` as a documented exception. This must be rare and intentional. Do not use this escape for sugiru, te-form, or any standard conjugation that has a valid form string.
+
+- **All other conjugated surfaces** — use the correct form string: `plain_past`, `te_form`, `plain_past_negative`, etc. If a plain dictionary-form verb appears as a predicate or in a nominalisation (のは/のが), use `plain_form`. If the required form string does not exist in `conjugation_rules.json`, flag it to Agent 1 to create the entry — never fall back to `form: null` as a substitute.
 
 ### desire_tai — deprecated; always use plain_desire_tai + g_desu
 

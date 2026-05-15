@@ -45,7 +45,7 @@
 
 りきぞは後ろを見た。けんが後ろにすわって いた。
 
-「け、けん！？」とりきぞは言った。
+「え、けん！？」とりきぞは言った。
 
 「前からここにいたよ」とけんは言った。
 
@@ -179,7 +179,7 @@ Then, a voice came from the back.
 
 Rikizo looked back. Ken was sitting in the back.
 
-"Wh — Ken!?" said Rikizo.
+"Wha — Ken!?" said Rikizo.
 
 "I've been here the whole time," said Ken.
 
