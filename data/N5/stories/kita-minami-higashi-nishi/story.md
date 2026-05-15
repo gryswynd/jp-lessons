@@ -11,49 +11,31 @@
 
 「北に高い山があるよ。行こう！」とりきぞが言いました。
 
-「いいね。天気がいいから、いい日だよ。行こう。」とレンが言いました。
+「天気がいいから、行こう。」とレンが言いました。
 
 二人は北へ行きました。長い道ですが、天気がよかったです。
 
-道の右に小さい川がありました。左にきれいな花がたくさんありました。
-
-「花がきれいだね。」とりきぞが言いました。りきぞは花が大すきです。
+道の右に小さい川がありました。左にきれいな花がたくさんありました。りきぞは花が大すきです。
 
 少し後で、東の道と西の道がありました。
 
 りきぞは言いました。「北東か北西か…分からない。」
 
-「山は北東だよ。東に行こう。」とレンが言いました。レンは道がよく分かります。上手です。
+「山は北東だよ。東に行こう。」レンは道がよく分かります。上手です。
 
 「わたしは下手だけど、レンは上手だね。」とりきぞが言いました。
 
-「いいよ。いっしょに行こう。」とレンが言いました。
-
-二人は東の道を行きました。大きい木がありました。
-
-「木の上にきれいな花があるよ！」とレンが言いました。
+二人は東の道を行きました。大きい木がありました。木の上にきれいな花がありました。
 
 木の下には水がありました。二人は水を飲んで、少し休みました。
 
-「ここはいいね。」とりきぞが言いました。
+それから南東に行きました。山に来ました。山の上はとてもいいです。二人は休んでいます。
 
-それから南東に行きました。山に来ました。
+「東に川があるね。西に学校があるよ。」とりきぞが言いました。
 
-山の上はとてもいいです。二人は休んでいます。
+「北西に家がたくさんあるね。南西に花の店もあるよ。おもしろそうだ。」とレンが言いました。
 
-「東に川があるね。」とレンが言いました。
-
-「うん。西に学校があるよ。」とりきぞが言いました。
-
-「北西に家がたくさんあるね。」とレンが言いました。
-
-「南西に店があるよ。花の店だね。行きたい！」とりきぞが言いました。
-
-「南東に小さい川もあるね。おもしろそうだ。」とレンが言いました。
-
-「よかったね。また来たい。」とりきぞが言いました。
-
-「うん。また来よう。」とレンが言いました。
+「また来たい。」とりきぞが言いました。
 
 りきぞは言いました。「北も南も、東も西も、右も左も、上も下も、いいね！」
 
@@ -73,49 +55,31 @@ Today is a day off. The weather is nice. Rikizo and Ren went outside together.
 
 "There's a tall mountain to the north. Let's go!" said Rikizo.
 
-"Nice. The weather is good, so it's a great day. Let's go," said Ren.
+"The weather is good, so let's go," said Ren.
 
 The two headed north. It was a long road, but the weather was nice.
 
-To the right of the road, there was a small river. To the left, there were lots of beautiful flowers.
-
-"The flowers are pretty," said Rikizo. Rikizo loves flowers.
+To the right of the road, there was a small river. To the left, there were lots of beautiful flowers. Rikizo loves flowers.
 
 A little later, there was an eastern road and a western road.
 
 Rikizo said, "Northeast or northwest... I don't know."
 
-"The mountain is to the northeast. Let's go east," said Ren. Ren understands roads well. He's skilled.
+"The mountain is to the northeast. Let's go east." Ren understands roads well. He's skilled.
 
 "I'm bad at directions, but Ren, you're good," said Rikizo.
 
-"It's fine. Let's go together," said Ren.
-
-The two took the eastern road. There was a big tree.
-
-"There are beautiful flowers on top of the tree!" said Ren.
+The two took the eastern road. There was a big tree. On top of the tree, there were beautiful flowers.
 
 Under the tree, there was water. The two drank water and rested a little.
 
-"It's nice here," said Rikizo.
+After that, they went southeast. They arrived at the mountain. The top of the mountain is wonderful. The two are resting.
 
-After that, they went southeast. They arrived at the mountain.
+"There's a river to the east. There's a school to the west," said Rikizo.
 
-The top of the mountain is wonderful. The two are resting.
+"There are lots of houses to the northwest. There's also a flower shop to the southwest. It looks interesting," said Ren.
 
-"There's a river to the east," said Ren.
-
-"Yeah. There's a school to the west," said Rikizo.
-
-"There are lots of houses to the northwest," said Ren.
-
-"There's a shop to the southwest. It's a flower shop. I want to go!" said Rikizo.
-
-"There's a small river to the southeast too. Looks interesting," said Ren.
-
-"This was great. I want to come again," said Rikizo.
-
-"Yeah. Let's come again," said Ren.
+"I want to come again," said Rikizo.
 
 Rikizo said, "North and south, east and west, right and left, up and down — everything is great!"
 
