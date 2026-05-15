@@ -79,8 +79,9 @@ Automated hooks in `hooks/` enforce rules that the environment should catch, not
 | `validate-chip-order.sh` | Adjacent single-char kana+kana terms sharing a jp token where the rightmost is not listed first in terms[] (causes chip not to display) | FM #59 |
 | `validate-quiz-answers.sh` | Punctuation-only answers in fillSlot/MCQ, answer text duplicated in `after` field | FM #8 (partial) |
 | `validate-suffix-match.sh` | Term surface is a strict suffix of a matches[] entry — text processor matches the shorter surface first, leaving the leading chars untagged (e.g. p_nda surface "んだ" inside jp "なんだ" leaves "な" untagged). Fix: add a term for the prefix chars. | suffix-match untagged prefix |
+| `validate-manifest-slugs.sh` | Custom story `id` doesn't match `basename(dir)` — catches slug drift when a story title is renamed but the directory/manifest entry is not updated | Custom story slug mismatch |
 
-16 hooks covering 40+ failure modes. They run automatically on every content file edit — errors surface on the edit that introduces them, not 20 edits later during review.
+17 hooks covering 40+ failure modes. They run automatically on every content file edit — errors surface on the edit that introduces them, not 20 edits later during review.
 
 ## Campaign Files
 
