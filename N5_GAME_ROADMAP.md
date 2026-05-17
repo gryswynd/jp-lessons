@@ -1,5 +1,26 @@
 # N5 Game Roadmap — "Golden Week"
 
+## Day Directory
+
+- [Day 1 — Home](#day-1--home-unlocked-by-n51-people--family) (N5.1: People & Family)
+- [Day 2 — Elements](#day-2--elements-unlocked-by-n52-days-of-the-week) (N5.2: Days of the Week)
+- [Day 3 — Numbers](#day-3--numbers-unlocked-by-n53-numbers--money) (N5.3: Numbers & Money)
+- [Day 4 — Time](#day-4--time-unlocked-by-n54-time--duration) (N5.4: Time & Duration)
+- [Day 5 — Going](#day-5--going-unlocked-by-n55-going--places) (N5.5: Going & Places)
+- [Day 6 — Landscape](#day-6--landscape-unlocked-by-n56-landscape--vehicles) (N5.6: Landscape & Vehicles)
+- [Day 7 — Hunger](#day-7--hunger-unlocked-by-n57-size--food) (N5.7: Size & Food)
+- [Day 8 — Commerce](#day-8--commerce-unlocked-by-n58-shopping--adjectives) (N5.8: Shopping & Adjectives)
+- [Day 9 — Inside](#day-9--inside-unlocked-by-n59-relative-position) (N5.9: Relative Position)
+- [Day 10 — Weather & Energy](#day-10--weather--energy-unlocked-by-n510-weather--energy) (N5.10: Weather & Energy)
+- [Day 11 — Sky, Rain & Nature](#day-11--sky-rain--nature-unlocked-by-n511-sky-rain--nature) (N5.11: Sky, Rain & Nature)
+- [Day 12 — Study & Country](#day-12--study--country-unlocked-by-n512) (N5.12)
+- [Day 13 — Communication](#day-13--communication-unlocked-by-n513) (N5.13)
+- [Day 14 — Quantity & Space](#day-14--quantity--space-unlocked-by-n514) (N5.14)
+- [Day 15 — Cardinal Directions](#day-15--cardinal-directions-unlocked-by-n515) (N5.15)
+- [Day 16 — Sides & Vertical](#day-16--sides--vertical-unlocked-by-n516) (N5.16)
+- [Day 17 — Work & Society](#day-17--work--society-unlocked-by-n517) (N5.17)
+- [Day 18 — Body & Senses](#day-18--body--senses-unlocked-by-n518) (N5.18)
+
 ## Core Premise
 
 Rikizo is a high schooler on Golden Week vacation. The world outside his house is... not there yet. There is nothing outside. Literally nothing — endless white void. As lessons unlock vocabulary, the corresponding things materialize in the game world. Rikizo never questions this. The player does.
