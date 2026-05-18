@@ -62,6 +62,10 @@
 - ~~`v_shiji` (指示, N3.48) — missing `matches: ["指じ"]`~~ Fixed 2026-04-22
 - gtype inconsistency (pre-existing): `i_adj` vs `i-adj`, `na_adj` vs `na-adj` vs `na-adjective`, `verb` vs `godan/ichidan` — defer to separate cleanup
 
+### Deferred glossary entries (add when N3 content reaches the appropriate lesson)
+
+- **やる (v_yaru)** — "to do" (casual/direct alternative to する). Distinct from する: more informal, often implies personal action or effort. Used in spoken Japanese where する would also be grammatically valid but sound stiff. NOT a synonym for する — has additional senses (to give [to inferiors], to harm, to perform). Introduce in early N3 alongside the casual register expansion; add `v_yaru` to N3 glossary with a note distinguishing it from する. Deferred from N4 custom stories (Story 3 kenkyuu-no-purezenteshon) where all やる instances were replaced with する to avoid using an unteached word.
+
 ### Grammar-adjacent vocab remaining
 - G46 (Quoting) → N3.58: って (quotative) → particles.json
 - G47 (Set Patterns) → N3.64: にとって, に違いない, わけがない (expressions)
