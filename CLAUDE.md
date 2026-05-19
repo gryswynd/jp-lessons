@@ -80,8 +80,9 @@ Automated hooks in `hooks/` enforce rules that the environment should catch, not
 | `validate-quiz-answers.sh` | Punctuation-only answers in fillSlot/MCQ, answer text duplicated in `after` field | FM #8 (partial) |
 | `validate-suffix-match.sh` | Term surface is a strict suffix of a matches[] entry — text processor matches the shorter surface first, leaving the leading chars untagged (e.g. p_nda surface "んだ" inside jp "なんだ" leaves "な" untagged). Fix: add a term for the prefix chars. | suffix-match untagged prefix |
 | `validate-manifest-slugs.sh` | Custom story `id` doesn't match `basename(dir)` — catches slug drift when a story title is renamed but the directory/manifest entry is not updated | Custom story slug mismatch |
+| `validate-story-tokenization.sh` | Untagged Japanese characters in story text — simulates the text processor's left-to-right longest-match scan against terms.json; flags any hiragana/katakana/kanji token with no covering entry (CLASS C), fake compound surfaces that swallow a particle (CLASS A), and prefix-collision pairs where a longer surface steals a character from the intended next token (CLASS B) | Story tagging gaps |
 
-17 hooks covering 40+ failure modes. They run automatically on every content file edit — errors surface on the edit that introduces them, not 20 edits later during review.
+18 hooks covering 40+ failure modes. They run automatically on every content file edit — errors surface on the edit that introduces them, not 20 edits later during review.
 
 ## Campaign Files
 
