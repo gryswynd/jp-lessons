@@ -23,7 +23,7 @@
 
 「…地味だけど、なんかいいね」とリーは言った。「この字、すごいよ。」
 
-その時、すずき先生が教室に入って 来た。先生は教室の中を歩きながら、学生たちの文書を見て いた。りきぞの文書のところで少し時間をかけた。
+その時、すずき先生が教室に入って 来た。先生は教室の中を歩きながら、学生たちの文書を見て いた。りきぞの文書のところで少し考えた。
 
 「……何か書いてあると思う」と先生は言った。そして歩いて 行った。
 
@@ -127,7 +127,7 @@ Lee studied Rikizo's documents closely. He looked at page one. He looked at page
 
 "…It's plain, but there's something I like about it," Lee said. "These characters are amazing."
 
-Just then, Suzuki-sensei came into the classroom. The teacher was walking around the room, looking at the students' documents. He spent a moment at Rikizo's document.
+Just then, Suzuki-sensei came into the classroom. The teacher was walking around the room, looking at the students' documents. He paused to think for a moment at Rikizo's document.
 
 "……I think something is written here," the teacher said quietly. Then he walked on.
 
