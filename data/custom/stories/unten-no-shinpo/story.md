@@ -37,7 +37,7 @@
 
 「そうか？まあ、進もう」
 
-車はゆっくり動き始めた。りきぞは集中して前を見て いた。自転車の運動と少し同じだったが、車の方が重大だと思った。車の運動の強度は弱くないと思った。
+車はゆっくり動き始めた。りきぞは集中して前を見て いた。自転車の運動と少し同じだったが、車の方が重大だと思った。その強度は弱くないと思った。
 
 そこで、後ろから声がした。
 
@@ -171,7 +171,7 @@ Rikizo stopped. "Dad, didn't you just say left foot?"
 
 "Did I? Well, let's go forward."
 
-The car began to move slowly. Rikizo concentrated, looking ahead. It was similar to the motion of cycling, but he thought driving felt much more serious. He thought the intensity of the car's movement was not weak.
+The car began to move slowly. Rikizo concentrated, looking ahead. It was similar to the physical motion of cycling, but he thought driving felt much more serious. He thought the intensity was not weak.
 
 Then, a voice came from the back.
 

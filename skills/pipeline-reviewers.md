@@ -243,6 +243,11 @@ Line/Section | Issue Type            | Detail
 
 **Responsibilities:**
 - **Use the latest content as the reference standard.** Read the highest-numbered existing lesson file of the same content type and level — this represents the current structural standard. Optionally read one additional earlier file for comparison. When conventions differ between older and newer files, the newest file always takes precedence.
+- Assess: **Native-speaker word usage** — for every flagged vocabulary item, verify it is used in a context where a native speaker would naturally use that word. This is the most important check Agent 4 performs on stories. Grammar-correctness is not sufficient: a sentence can be grammatically valid but semantically wrong if the word's collocational range does not cover the context. Known failure patterns:
+  - Words with narrow collocational scope used too broadly (e.g., 運動 means physical exercise/bodily movement — applying it to vehicle motion as 車の運動 is unnatural; 気持ち means personal emotional feeling — using it for inanimate objects is unnatural)
+  - Formality-register mismatch (e.g., a highly formal word dropped into casual dialogue)
+  - Figurative or extended meanings used before they have been taught
+  Agent 4 must flag any word used outside its natural collocational range as a **hard fail**, even if Agent 3 issued a PASS. The fix is always to rephrase so the word appears in a context where a native speaker would naturally use it, or to move the word to a different scene.
 - Assess: **Natural language quality** — do conversations sound like real Japanese, not textbook recitations? Are the situations culturally plausible?
 - Assess: **Redundancy** — read each scene as a sequence, not sentence by sentence. Flag any cluster of 2+ consecutive sentences that convey essentially the same information through different grammar. This pattern is the primary symptom of forced vocabulary insertion: Agent 2 added sentences not because the story needed them, but to check off a required vocab ID. Each sentence must add new information or advance the scene — restating the same fact in different words is a hard fail regardless of whether each sentence is individually grammatical. Example: "やまかわさんもいます。こちらはやまかわさんです。名前はやまかわです。" — three consecutive sentences that all communicate "this person is Yamakawa." Any one of them is fine; all three together is a redundancy fail.
 - Assess: **Skill progression** — does difficulty increase appropriately from the previous lesson? Are new grammar points used naturally rather than force-fed? Are conjugation forms and grammar patterns appropriate for the lesson tier? See Agent 4 — Grammar Usage Validation (below).
@@ -266,6 +271,7 @@ Pass number: [1st | 2nd | ...]
 ISSUES:
 Category           | Detail
 ───────────────────┼───────────────────────────────────────────────────────
+Word usage         | Line 40: 車の運動 — 運動 means physical exercise; does not collocate with vehicles. Use 動き or rephrase.
 Natural language   | Conv line 4: nobody says 「わたしは行きますです」— drop です
 Skill progression  | Reading passage introduces conditional ～たら which is N4 grammar
 Vocabulary density | Section "vocabList" lists 28 items; cap is ~18 per section

@@ -7,7 +7,7 @@
 
 りきぞとリーは同じクラスになった。クラスの研究のプレゼンテーションがあって、二人はいっしょに研究することになった。研究の問題は工場と森林だった。工場が多い場所の山林や海洋の水質がどうなるか、という研究だった。
 
-リーはすぐに図書館に行った。毎日、図書館で本を読んで、文書を書いた。文書には英文も入って いた。研究者が書いた本からの引用も書いて いた。文書は地味だったが、よく考えて 重ねた文書だった。リーは気軽にして いた。図書館でも、教室でも、声も出さないで、集中して いた。
+リーはすぐに図書館に行った。毎日、図書館で本を読んで、文書を書いた。文書には英文も入って いた。研究者が書いた本からの引用も書いて いた。文書は地味だったが、よく考えを重ねた文書だった。リーは気軽にして いた。図書館でも、教室でも、声も出さないで、集中して いた。
 
 りきぞはリーの文書を見た。「これ、手軽にできそうだ」と思った。
 
@@ -19,11 +19,11 @@
 
 リーはりきぞの文書を見た。りきぞは文書をリーに見せた。「どう？」とりきぞは聞いた。
 
-リーはりきぞの文書を集中して 見た。一まい目を見た。二まい目を見た。そこで止まった。また一まい目を見た。
+リーはりきぞの文書を集中して 見た。一まい目を見た。二まい目を見た。また一まい目を見た。
 
 「…地味だけど、なんかいいね」とリーは言った。「この字、すごいよ。」
 
-その時、すずき先生が教室に入って 来た。先生は教室の中を歩きながら、学生たちの文書を見て いた。りきぞの文書のところで止まった。
+その時、すずき先生が教室に入って 来た。先生は教室の中を歩きながら、学生たちの文書を見て いた。りきぞの文書のところで少し時間をかけた。
 
 「……何か書いてあると思う」と先生は言った。そして歩いて 行った。
 
@@ -43,7 +43,7 @@
 
 りきぞはその意見を聞いて、考えた。「なるほど。自分たちがいちばんよく知って いること…」
 
-りきぞはリーを見た。リーは先生の話を聞きながら、文書に何かを書いて いた。文書はもう何まいにも重なって いた。
+りきぞはリーを見た。リーは先生の話を聞きながら、文書に何かを書いて いた。リーはもう何まいにも文書を重ねて いた。
 
 りきぞは自分の文書を見た。りきぞの文書は…読めるかどうかが問題だった。
 
@@ -73,7 +73,7 @@
 
 りきぞは少し考えてから、文書を下においた。そして、リーが話したことを思って、りきぞは自分で話し始めた。
 
-「工場の近い場所に住んで いる人は、山林が少なくなって いることを知って います。でも、みんなは分かって いません。水質がよくなくなることは地上から見えないからです。今回の研究で、リーさんはその問題を西洋の研究者の引用と英文の文書で読んで、大切なことを知りました。この研究の正体は、見えない問題が見えるようになることだと思います。」
+「工場の近い場所に住んで いる人は、山林が少なくなって いることを知って います。でも、みんなは分かって いません。水質がよくなくなることは地上から見えないからです。今回の研究で、リーさんは西洋の研究者の文書や英文の引用を読んで、大切なことを知りました。この研究の正体は、見えない問題が見えるようになることだと思います。」
 
 教室はしずかだった。
 
@@ -87,19 +87,19 @@
 
 プレゼンテーションの後、りきぞはリーに話した。「リーさんは毎日、図書館で文書を書いて いたね。むずかしくなかった？」
 
-リーは答えた。「気軽にして いたから、むずかしいとは思わなかったよ。小説を読むのと同じ気持ちだよ。」
+リーは答えた。「気軽にして いたから、むずかしいと思わなかったよ。小説を読むのと同じ気持ちだよ。」
 
 りきぞは少し考えた。「気軽…か。」
 
-りきぞには分かった。気軽にすることと、手軽にすることは区別が大切だ。リーは気軽にして いた——でも、よく学習して いた。りきぞは手軽にしようとして——でも、文書は読めなかった。
+りきぞには分かった。気軽にすることと手軽にすることの区別が大切だ。リーは気軽にして いた——でも、よく学習して いた。りきぞは手軽にしようとして——でも、文書は読めなかった。
 
 学習は手軽ではない。でも、気軽にすることはできる。
 
 りきぞはリーを見習うことにした。
 
-つぎの週から、りきぞも図書館に行き始めた。作文の勉強も始めた。声楽のクラスの学生が特集を持って 来て、西洋の音楽と洋風の研究を話して いた時も、りきぞは集中して 聞いた。世代と学習はちがう、とある研究者の文書に書いて あった。りきぞはその引用を自分の作文に書いた。
+つぎの週から、りきぞも図書館に行き始めた。作文の勉強も始めた。世代と学習はちがう、ある研究者の文書に書いて あった。りきぞはその引用を自分の作文に書いた。
 
-それに、りきぞは自分の習字の問題も知って いた。よく写した文書は、大切な物だ。でも、りきぞが写した文書は——りきぞだけが読めなかった。
+それに、りきぞは自分の習字の問題も知って いた。よく写した文書は、大切な物だ。でも、りきぞが写した文書は——りきぞにも読めなかった。
 
 **おわり**
 
@@ -111,7 +111,7 @@
 
 Rikizo and Lee were in the same class. There was a research presentation for the class, and the two of them ended up doing the research together. The research topic was about factories and forests — specifically, how the water quality of mountain forests, seas, and oceans changes in areas with many factories.
 
-Lee went to the library right away. Every day, he read books at the library and wrote documents. The documents included English text. He also wrote citations from books written by researchers. The documents were plain and simple, but they were carefully thought-out, layered notes. Lee was going about it in an easygoing way. Whether at the library or in the classroom, he made no noise and stayed focused.
+Lee went to the library right away. Every day, he read books at the library and wrote documents. The documents included English text. He also wrote citations from books written by researchers. The documents were plain and simple, but they were notes built up through careful thought. Lee was going about it in an easygoing way. Whether at the library or in the classroom, he made no noise and stayed focused.
 
 Rikizo looked at Lee's documents. "This looks like it can be done the easy way," he thought.
 
@@ -123,11 +123,11 @@ Rikizo held Lee's documents in his hands and started copying them as his own. Ri
 
 Lee looked at Rikizo's documents. Rikizo showed them to Lee with confidence. "What do you think?" Rikizo asked.
 
-Lee studied Rikizo's documents closely. He looked at page one. He looked at page two. He stopped there. He looked at page one again.
+Lee studied Rikizo's documents closely. He looked at page one. He looked at page two. He looked at page one again.
 
 "…It's plain, but there's something I like about it," Lee said. "These characters are amazing."
 
-Just then, Suzuki-sensei came into the classroom. The teacher was walking around the room, looking at the students' documents. He stopped at Rikizo's document. He looked at it for a moment.
+Just then, Suzuki-sensei came into the classroom. The teacher was walking around the room, looking at the students' documents. He spent a moment at Rikizo's document.
 
 "……I think something is written here," the teacher said quietly. Then he walked on.
 
@@ -147,7 +147,7 @@ Suzuki-sensei continued. "For this presentation, you don't have to explain every
 
 Rikizo heard that and thought. "I see. What we know the most…"
 
-Rikizo looked at Lee. Lee was listening to the teacher while writing something in the documents. The documents had already grown into many stacked pages.
+Rikizo looked at Lee. Lee was listening to the teacher while writing something in the documents. Lee had already stacked the documents into many pages.
 
 Rikizo looked at his own document. Whether Rikizo's document could actually be read — that was the problem.
 
@@ -177,7 +177,7 @@ Suzuki-sensei looked at Rikizo. Lee looked at Rikizo. Everyone in the class look
 
 Rikizo thought for a moment, then placed the document down. And then, thinking of what Lee had said, Rikizo began to speak on his own.
 
-"People who live near factories know that mountain forests are decreasing. But not everyone understands. The fact that water quality is getting worse is not visible from the ground. Through this research, Lee-san read the work of Western researchers in English documents and learned something important. I think the real nature of this research is: making invisible problems visible."
+"People who live near factories know that mountain forests are decreasing. But not everyone understands. The fact that water quality is getting worse is not visible from the ground. Through this research, Lee-san read the documents of Western researchers and English citations and learned something important. I think the real nature of this research is: making invisible problems visible."
 
 The classroom was quiet.
 
@@ -201,9 +201,9 @@ Learning is not a shortcut. But you can do it in an easygoing way.
 
 Rikizo decided to learn from Lee's example.
 
-Starting the following week, Rikizo also began going to the library. He started studying writing too. Even when a student from the voice music class brought a special feature and was talking about Western music and its research in a Western style, Rikizo concentrated and listened. "Generations and learning are different," a researcher's document had written. Rikizo cited that in his own composition.
+Starting the following week, Rikizo also began going to the library. He started studying writing too. "Generations and learning are different," a researcher's document had written. Rikizo cited that in his own composition.
 
-Besides, Rikizo also knew his own handwriting problem. A document copied well is something valuable. But the document Rikizo had copied — only Rikizo couldn't read it.
+Besides, Rikizo also knew his own handwriting problem. A document copied well is something valuable. But the document Rikizo had copied — even Rikizo couldn't read it.
 
 **The End**
 
@@ -225,15 +225,12 @@ Besides, Rikizo also knew his own handwriting problem. A document copied well is
 - 小説 (しょうせつ) — novel ★
 - 水質 (すいしつ) — water quality ★
 - 地上 (ちじょう) — above ground / on the earth ★
-- 声楽 (せいがく) — vocal music ★
 - 西洋 (せいよう) — Western (countries/culture) ★
 - 海洋 (かいよう) — ocean / sea ★
-- 洋風 (ようふう) — Western style ★
 - 発音 (はつおん) — pronunciation ★
 - 区別 (くべつ) — distinction / differentiation ★
 - 正体 (しょうたい) — true nature / real identity ★
 - 作文 (さくぶん) — composition / essay ★
-- 特集 (とくしゅう) — special feature / special issue ★
 - 勉強 (べんきょう) — study
 - 英文 (えいぶん) — English text / English writing ★
 - 研究者 (けんきゅうしゃ) — researcher ★
@@ -261,3 +258,4 @@ Besides, Rikizo also knew his own handwriting problem. A document copied well is
 
 **Note**
 - プレゼンテーション replaces はっぴょう throughout; added to N4.25 glossary as v_purezenteshon.
+- 声楽, 特集, 洋風, 音楽 — reassigned to Story 4 (屋上のコンサート)
