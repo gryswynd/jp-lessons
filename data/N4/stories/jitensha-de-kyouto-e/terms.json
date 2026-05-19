@@ -69,13 +69,58 @@
     "勉強": { "id": "v_benkyou", "form": null },
     "今": { "id": "v_ima", "form": null },
     "強気": { "id": "v_tsuyoki", "form": null },
+    "田中": { "id": "v_tanaka", "form": null },
+    "くん": { "id": "v_kun", "form": null },
+    "よく": { "id": "v_yoku", "form": null },
+    "自分": { "id": "v_jibun", "form": null },
+    "友だち": { "id": "v_tomodachi", "form": null },
+    "声": { "id": "v_koe", "form": null },
+    "強い": { "id": "v_tsuyoi", "form": null },
+    "弱い": { "id": "v_yowai", "form": null },
+    "小さい": { "id": "v_chiisai", "form": null },
+    "きれい": { "id": "v_kirei", "form": null },
+    "長い": { "id": "v_nagai", "form": null },
+    "むずかしい": { "id": "v_muzukashii", "form": null },
+
+    "そうです": { "id": "p_sou_da_hearsay", "form": null },
+    "長そう": { "id": "v_nagai", "form": "appearance_sou" },
+    "強そう": { "id": "v_tsuyoi", "form": "appearance_sou" },
+    "むずかしそう": { "id": "v_muzukashii", "form": "appearance_sou" },
+    "青そう": { "id": "v_aoi", "form": "appearance_sou" },
+    "古そう": { "id": "v_furui", "form": "appearance_sou" },
+
+    "ほんとう": { "id": "p_hontou", "form": null },
+    "ほんとうに": { "id": "p_hontou", "form": null },
+    "大きい": { "id": "v_ookii", "form": null },
+    "やさしい": { "id": "v_yasashii", "form": null },
+    "まだ": { "id": "v_mada", "form": null },
+    "心": { "id": "v_kokoro", "form": null },
+    "人": { "id": "v_hito", "form": null },
+    "車": { "id": "v_kuruma", "form": null },
+    "運転": { "id": "v_unten", "form": null },
+    "来年": { "id": "v_rainen", "form": null },
+    "東京": { "id": "v_toukyou", "form": null },
+    "海外": { "id": "v_kaigai", "form": null },
+    "月光": { "id": "v_gekkou", "form": null },
+    "楽しい": { "id": "v_tanoshii", "form": null },
+    "や": { "id": "p_ya", "form": null },
+
+    "だ": { "id": "g_da", "form": null },
 
     "近く": { "id": "v_chikai", "form": "adverbial" },
+    "小さく": { "id": "v_chiisai", "form": "adverbial" },
+    "強く": { "id": "v_tsuyoi", "form": "adverbial" },
     "明るくて": { "id": "v_akarui", "form": "te_form" },
     "強くて": { "id": "v_tsuyoi", "form": "te_form" },
+    "大きくて": { "id": "v_ookii", "form": "te_form" },
+    "やさしくて": { "id": "v_yasashii", "form": "te_form" },
+    "回って": { "id": "v_mawaru", "form": "te_form" },
     "よかったです": { "id": "v_ii", "form": "polite_past_adj" },
     "きれいでした": { "id": "v_kirei", "form": "polite_past_adj" },
     "むずかしかったです": { "id": "v_muzukashii", "form": "polite_past_adj" },
+    "強かったです": { "id": "v_tsuyoi", "form": "polite_past_adj" },
+    "できません": { "id": "v_dekiru", "form": "polite_negative" },
+    "来ました": { "id": "v_kuru", "form": "polite_mashita" },
 
     "だった": { "id": "g_da", "form": "da_past" },
 
@@ -85,6 +130,12 @@
     "見て": { "id": "v_miru", "form": "te_form" },
 
     "言って": { "id": "v_iu", "form": "te_form" },
+    "言った": { "id": "v_iu", "form": "plain_past" },
+    "言いました": { "id": "v_iu", "form": "polite_mashita" },
+    "話しました": { "id": "v_hanasu", "form": "polite_mashita" },
+    "おどろきました": { "id": "v_odoroku", "form": "polite_mashita" },
+    "あります": { "id": "v_aru", "form": "polite_masu" },
+    "行った": { "id": "v_iku", "form": "plain_past" },
     "います": { "id": "v_iru", "form": "polite_masu" },
     "いました": { "id": "v_iru", "form": "polite_mashita" },
 
@@ -119,6 +170,7 @@
     "休みました": { "id": "v_yasumu", "form": "polite_mashita" },
     "できました": { "id": "v_dekiru", "form": "polite_mashita" },
 
-    "なって": { "id": "v_naru", "form": "te_form" }
+    "なって": { "id": "v_naru", "form": "te_form" },
+    "なりました": { "id": "v_naru", "form": "polite_mashita" }
   }
 }
