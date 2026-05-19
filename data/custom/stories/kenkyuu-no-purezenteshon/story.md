@@ -7,7 +7,7 @@
 
 りきぞとリーは同じクラスになった。クラスの研究のプレゼンテーションがあって、二人はいっしょに研究することになった。研究の問題は工場と森林だった。工場が多い場所の山林や海洋の水質がどうなるか、という研究だった。
 
-リーはすぐに図書館に行った。毎日、図書館で本を読んで、文書を書いた。文書には英文も入って いた。研究者が書いた本からの引用も書いて いた。文書は地味だったが、よく考えを重ねた文書だった。リーは気軽にして いた。図書館でも、教室でも、声も出さないで、集中して いた。
+リーはすぐに図書館に行った。毎日、図書館で本を読んで、文書を書いた。文書には英文も入って いた。研究者が書いた本からの引用も書いて いた。文書は地味だったが、考えを重ねた文書だった。リーは気軽にして いた。図書館でも、教室でも、声も出さないで、集中して いた。
 
 りきぞはリーの文書を見た。「これ、手軽にできそうだ」と思った。
 
@@ -73,7 +73,7 @@
 
 りきぞは少し考えてから、文書を下においた。そして、リーが話したことを思って、りきぞは自分で話し始めた。
 
-「工場の近い場所に住んで いる人は、山林が少なくなって いることを知って います。でも、みんなは分かって いません。水質がよくなくなることは地上から見えないからです。今回の研究で、リーさんは西洋の研究者の文書や英文の引用を読んで、大切なことを知りました。この研究の正体は、見えない問題が見えるようになることだと思います。」
+「工場の近くに住んで いる人は、山林が少なくなって いることを知って います。でも、みんなは分かって いません。水質がよくなくなることは地上から見えないからです。今回の研究で、リーさんは西洋の研究者の文書や英文の引用を読んで、大切なことを知りました。この研究の正体は、見えない問題が見えるようになることだと思います。」
 
 教室はしずかだった。
 
@@ -97,7 +97,7 @@
 
 りきぞはリーを見習うことにした。
 
-つぎの週から、りきぞも図書館に行き始めた。作文の勉強も始めた。世代と学習はちがう、ある研究者の文書に書いて あった。りきぞはその引用を自分の作文に書いた。
+つぎの週から、りきぞも図書館に行き始めた。作文の勉強も始めた。「世代と学習はちがう」と、ある研究者の文書に書いて あった。りきぞはその引用を自分の作文に書いた。
 
 それに、りきぞは自分の習字の問題も知って いた。よく写した文書は、大切な物だ。でも、りきぞが写した文書は——りきぞにも読めなかった。
 
@@ -111,7 +111,7 @@
 
 Rikizo and Lee were in the same class. There was a research presentation for the class, and the two of them ended up doing the research together. The research topic was about factories and forests — specifically, how the water quality of mountain forests, seas, and oceans changes in areas with many factories.
 
-Lee went to the library right away. Every day, he read books at the library and wrote documents. The documents included English text. He also wrote citations from books written by researchers. The documents were plain and simple, but they were notes built up through careful thought. Lee was going about it in an easygoing way. Whether at the library or in the classroom, he made no noise and stayed focused.
+Lee went to the library right away. Every day, he read books at the library and wrote documents. The documents included English text. He also wrote citations from books written by researchers. The documents were plain and simple, but they were notes built up through deliberate thought. Lee was going about it in an easygoing way. Whether at the library or in the classroom, he made no noise and stayed focused.
 
 Rikizo looked at Lee's documents. "This looks like it can be done the easy way," he thought.
 
@@ -201,7 +201,7 @@ Learning is not a shortcut. But you can do it in an easygoing way.
 
 Rikizo decided to learn from Lee's example.
 
-Starting the following week, Rikizo also began going to the library. He started studying writing too. "Generations and learning are different," a researcher's document had written. Rikizo cited that in his own composition.
+Starting the following week, Rikizo also began going to the library. He started studying writing too. "Generations and learning are different," was written in a researcher's document. Rikizo cited that in his own composition.
 
 Besides, Rikizo also knew his own handwriting problem. A document copied well is something valuable. But the document Rikizo had copied — even Rikizo couldn't read it.
 
