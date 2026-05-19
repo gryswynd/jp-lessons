@@ -1307,6 +1307,43 @@
       }
     }
   },
+  "negative_te_nakute": {
+    "label": "Negative Te-Form (Nakute)",
+    "description": "Connective negative form meaning 'not doing / because not doing'. U-verbs shift to the あ-row; RU-verbs drop る; then なくて is added. Used in ～なくていい (don't need to) and causal/connective contexts. Contrast with polite_negative_te (ないで), which means 'without doing'.",
+    "introducedIn": "N5.9",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_a",
+        "add": "なくて"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "なくて"
+      },
+      "i_adj": {
+        "type": "suffix",
+        "remove": "い",
+        "add": "くなくて"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "しなくて",
+        "reading": "しなくて"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "こなくて",
+        "reading": "こなくて"
+      },
+      "irr_ii": {
+        "type": "suffix",
+        "remove": "いい",
+        "add": "よくなくて"
+      }
+    }
+  },
   "polite_desire_tai_negative": {
     "label": "Polite Negative Desire (Takunai Desu)",
     "description": "Polite form expressing not wanting to do something (I don't want to...). Uses the ます-stem + たくないです.",
