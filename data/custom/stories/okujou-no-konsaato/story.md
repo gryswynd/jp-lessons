@@ -23,9 +23,9 @@
 
 ---
 
-試食の後、屋上に強風が来た。風が強くて、テーブルの上の品物が動き始めた。紙も動いた。りきぞは品物を手でとめようとした。でも、風は強かった。
+試食の後、屋上に強風が来た。風が強くて、テーブルの上の品物が動き始めた。紙も動いた。りきぞは品物を手でとめた。でも、風は強かった。
 
-「風が強すぎる」とりきぞは思った。
+「風がとても強い」とりきぞは思った。
 
 ミキはしずかな顔で立って いた。「だいじょうぶですか」とりきぞは聞いた。
 
@@ -67,7 +67,7 @@
 
 それから、みんなは外を見た。物はなくなって いた。ほんとうになくなって いた。
 
-けんは屋上の外の方を見ようとして、体を前に出した。体重があるけんは、少し転びそうになった。りきぞが急いでけんの手を持った。「とまれ！」
+けんは屋上の外の方を見たくて、体を前に出した。体重があるけんは、少し転びそうになった。りきぞが急いでけんの手を持った。「とまれ！」
 
 けんは転ばなかった。「ありがとう」とけんは言った。顔が少し赤かった。
 
@@ -125,9 +125,9 @@ Ken had already eaten a lot. "Food is important," he said.
 
 ---
 
-After the tasting, a strong wind came across the rooftop. The wind was strong, and the items on the table started to move. Papers and other things moved too. Rikizo tried to hold the items down with his hands. But the wind was strong.
+After the tasting, a strong wind came across the rooftop. The wind was strong, and the items on the table started to move. Papers and other things moved too. Rikizo held the items down with his hands. But the wind was strong.
 
-"The wind is too strong," Rikizo thought.
+"The wind is very strong," Rikizo thought.
 
 Miki stood with a calm expression. "Are you all right?" Rikizo asked.
 
@@ -169,7 +169,7 @@ Ken declared cheerfully, "That's right! It's a magic trick!"
 
 Then everyone looked outside. The object was gone. It was truly gone.
 
-Ken thrust his body forward trying to look over the outside of the rooftop. The weighty Ken nearly tumbled. Rikizo quickly grabbed Ken's hand. "Stop!"
+Ken wanted to look over the outside of the rooftop and thrust his body forward. The weighty Ken nearly tumbled. Rikizo quickly grabbed Ken's hand. "Stop!"
 
 Ken didn't fall. "Thank you," Ken said. His face was a little red.
 
