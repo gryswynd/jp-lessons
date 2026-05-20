@@ -5,7 +5,7 @@
 
 ### Story Text (Japanese)
 
-ジョエル先生が屋上でコンサートをすることをはっぴょうした。「気軽なコンサートです」と先生は言った。「楽しむだけでいい」
+ジョエル先生が屋上でコンサートをすると言った。「気軽なコンサートです」と先生は言った。「楽しむだけでいい」
 
 りきぞは少し考えた。コンサートの中心になるのは自分だろうと思った。いつも、こんな時、りきぞが中心になって動く。それがりきぞだった。
 
@@ -107,7 +107,7 @@
 
 **The Rooftop Concert**
 
-Joel-sensei announced that there would be a concert on the rooftop. "It's a casual concert," the teacher said. "Just enjoy yourselves."
+Joel-sensei said there would be a concert on the rooftop. "It's a casual concert," the teacher said. "Just enjoy yourselves."
 
 Rikizo thought for a moment. He figured he would end up at the center of organizing things. Every time something like this happened, Rikizo ended up at the center and made things move. That was just how Rikizo was.
 
