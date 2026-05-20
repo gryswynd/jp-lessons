@@ -23,7 +23,7 @@
 
 ---
 
-試食の後、屋上に強風が来た。風が強くて、テーブルの上の品物が動き始めた。紙なども動いた。りきぞは品物を手でとめようとした。でも、風は強かった。
+試食の後、屋上に強風が来た。風が強くて、テーブルの上の品物が動き始めた。紙も動いた。りきぞは品物を手でとめようとした。でも、風は強かった。
 
 「風が強すぎる」とりきぞは思った。
 
@@ -93,7 +93,7 @@
 
 ジョエル先生がりきぞの近くに来て言った。「今日は特別だったね」
 
-りきぞは「そうですね」と言った。「気軽なコンサートでしたが、楽しかったです」
+りきぞは「そうですね」と言った。「気軽なコンサートでした。でも、楽しかったです」
 
 「また来年もしましょう」とジョエル先生は言った。
 
@@ -195,7 +195,7 @@ Rikizo looked at Ken. Ken was holding his foot. He thought it must have hurt a l
 
 Joel-sensei came near Rikizo and said, "Today was special, wasn't it."
 
-Rikizo said, "Yes, it was. It was a casual concert, but it was fun."
+Rikizo said, "Yes, it was. It was a casual concert. But it was fun."
 
 "Let's do it again next year," Joel-sensei said.
 
