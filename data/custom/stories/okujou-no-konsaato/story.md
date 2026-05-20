@@ -85,7 +85,7 @@
 
 ---
 
-コンサートの後、りきぞは一人で屋上に立った。中心にいたのは自分だったと思った。コンサートのことをして、みんなといっしょに いた。楽しかった。
+コンサートの後、りきぞは一人で屋上に立った。中心にいたのは自分だったと思った。コンサートをして、みんなといっしょに いた。楽しかった。
 
 ミキの進歩はほんとうだと思った。低音の声楽を歌えるほんとうの歌手になって いた。
 
@@ -187,7 +187,7 @@ When the concert ended, everyone was quiet for a moment.
 
 ---
 
-After the concert, Rikizo stood alone on the rooftop. He thought that he had been at the center of it all. He had taken care of the concert and been there together with everyone. It had been fun.
+After the concert, Rikizo stood alone on the rooftop. He thought that he had been at the center of it all. He had done the concert and been there together with everyone. It had been fun.
 
 Miki's progress was real, he thought. She had become a true singer of vocal music, able to sing in her low register.
 
