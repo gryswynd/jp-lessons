@@ -747,6 +747,33 @@
       }
     }
   },
+  "plain_potential_past_negative": {
+    "label": "Plain Potential Past Negative",
+    "description": "Plain past form expressing inability that existed in the past (couldn't do). Uses the potential stem (u_to_e for U-verbs, られ for RU-verbs) + なかった.",
+    "introducedIn": "N4.3",
+    "rules": {
+      "godan": {
+        "type": "godan_change",
+        "map": "u_to_e",
+        "add": "なかった"
+      },
+      "ichidan": {
+        "type": "suffix",
+        "remove": "る",
+        "add": "られなかった"
+      },
+      "irr_suru": {
+        "type": "replace",
+        "surface": "できなかった",
+        "reading": "できなかった"
+      },
+      "irr_kuru": {
+        "type": "replace",
+        "surface": "来られなかった",
+        "reading": "こられなかった"
+      }
+    }
+  },
   "polite_potential_past": {
     "label": "Polite Potential Past",
     "description": "Polite past form expressing ability that existed or was exercised in the past (was able to do).",
