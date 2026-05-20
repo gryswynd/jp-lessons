@@ -27,9 +27,15 @@
 
 「風がとても強い」とりきぞは思った。
 
-ミキはしずかな顔で立って いた。「だいじょうぶですか」とりきぞは聞いた。
+ジョエル先生はみんなを見た。「コンサートは...どうしましょうか」と先生は言った。
 
-「だいじょうぶです」とミキは言った。「声楽は強風の中でも歌えます」
+ミキはしずかな顔で立って いた。「少し待ちましょう」とミキは言った。「声楽は強風の中でも歌えます」
+
+みんなは少し待った。それから、風が弱くなった。
+
+「風が弱くなりましたね」とりきぞは言った。
+
+「よかった」とジョエル先生は言った。「コンサートができますね」
 
 そうか、とりきぞは思った。歌手はすごい。
 
@@ -44,6 +50,8 @@
 りきぞはその説明を聞いて、いいことだと思った。
 
 ミキは少し遠い所で気軽に歌って いた。小声で歌って いた。その声を聞いて、りきぞはほんとうにいい歌手だと思った。
+
+コンサートまで、まだ少し時間があった。
 
 ---
 
@@ -71,9 +79,7 @@
 
 けんは転ばなかった。「ありがとう」とけんは言った。顔が少し赤かった。
 
----
-
-コンサートが開始した。ミキが歌い始めた。
+少し後で、コンサートが開始した。ミキが歌い始めた。
 
 低音の声が屋上の空気の中に入った。暗い夜空と電光の中で、ミキの声楽はとてもきれいだった。音楽が夜の中に入った。みんなは動かなかった。りきぞも動かなかった。
 
@@ -125,13 +131,19 @@ Ken had already eaten a lot. "Food is important," he said.
 
 ---
 
-After the tasting, a strong wind came across the rooftop. The wind was strong, and the items on the table started to move. Papers and other things moved too. Rikizo held the items down with his hands. But the wind was strong.
+After the tasting, a strong wind came across the rooftop. The wind was strong, and the items on the table started to move. Papers moved too. Rikizo held the items down with his hands. But the wind was strong.
 
 "The wind is very strong," Rikizo thought.
 
-Miki stood with a calm expression. "Are you all right?" Rikizo asked.
+Joel-sensei looked at everyone. "The concert... what should we do?" the teacher said.
 
-"I'm fine," Miki said. "Vocal music can be sung even in a strong wind."
+Miki stood with a calm expression. "Let's wait a little," Miki said. "Vocal music can be sung even in a strong wind."
+
+Everyone waited a moment. Then the wind grew weaker.
+
+"The wind has gotten weaker," Rikizo said.
+
+"Good," Joel-sensei said. "We can do the concert after all."
 
 Is that so, Rikizo thought. Singers are amazing.
 
@@ -146,6 +158,8 @@ Joel-sensei spoke to Rikizo about Miki. "Miki has made real progress," the teach
 Hearing that explanation, Rikizo thought it was a good thing.
 
 Miki was singing casually a little further away. She was singing in a low voice. Hearing her, Rikizo thought she was truly a wonderful singer.
+
+There was still a little time before the concert.
 
 ---
 
@@ -173,9 +187,7 @@ Ken wanted to look over the outside of the rooftop and thrust his body forward. 
 
 Ken didn't fall. "Thank you," Ken said. His face was a little red.
 
----
-
-The concert began. Miki started to sing.
+A little later, the concert began. Miki started to sing.
 
 Her low-register voice entered the rooftop air. Against the dark night sky and the electric lights, Miki's vocal music was very beautiful. The music entered the night. No one moved. Rikizo didn't move either.
 
