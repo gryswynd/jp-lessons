@@ -39,9 +39,7 @@
 
 そうか、とりきぞは思った。歌手はすごい。
 
----
-
-ジョエル先生はミキのことをりきぞに話した。「ミキさんはほんとうにいい進歩をして います」と先生は言った。「去年より声楽が上手になりました。特に低音がすごい」
+ジョエル先生がりきぞの近くに来た。「ミキさんはほんとうにいい進歩をして います」と先生は言った。「去年より声楽が上手になりました。特に低音がすごい」
 
 「どうして ミキさんですか」とりきぞは聞いた。
 
@@ -88,8 +86,6 @@
 ミキはまた歌った。声が屋上の空気に入った。夜空が暗くて、遠い電光がきれいで、音楽は長い時間、あった。りきぞは楽しい時間だと思った。
 
 コンサートが終わって、みんなは少ししずかだった。
-
----
 
 コンサートの後、りきぞは一人で屋上に立った。中心にいたのは自分だったと思った。コンサートをして、みんなといっしょに いた。楽しかった。
 
@@ -149,7 +145,7 @@ Is that so, Rikizo thought. Singers are amazing.
 
 ---
 
-Joel-sensei spoke to Rikizo about Miki. "Miki has made real progress," the teacher said. "Her vocal music has gotten better than last year. Especially her low register — it's remarkable."
+Joel-sensei came over to Rikizo. "Miki has made real progress," the teacher said. "Her vocal music has gotten better than last year. Especially her low register — it's remarkable."
 
 "Why Miki?" Rikizo asked.
 
@@ -196,8 +192,6 @@ Her low-register voice entered the rooftop air. Against the dark night sky and t
 Miki kept on singing. Her voice entered the rooftop air. The night sky was dark, the distant electric lights were beautiful, and the music was there for a long time. Rikizo thought it was a wonderful time.
 
 When the concert ended, everyone was quiet for a moment.
-
----
 
 After the concert, Rikizo stood alone on the rooftop. He thought that he had been at the center of it all. He had done the concert and been there together with everyone. It had been fun.
 
