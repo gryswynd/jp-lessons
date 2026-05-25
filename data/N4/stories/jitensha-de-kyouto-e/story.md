@@ -12,9 +12,9 @@
 
 午後、京都に着きました。「おてらが古そうです。」と、りきぞは小さく言いました。田中くんが言ったことは、ほんとうでした。京都はほんとうにきれいでした。りきぞは古い都の町を乗り回しました。おてらを何回も回りました。古い町は、人にやさしい所でした。古い光と、古い道と、古いおてらの町でした。
 
-日光がとても明るくて、古い町の光がきれいでした。りきぞはまだ車の運転ができませんから、自転車で京都へ来ました。来年は東京や海外にも行きたいですが、今回は京都までで楽しいです。京都の古い町は、自転車にやさしい町でした。りきぞはおてらを回って、古い道を回って、とても楽しみました。「自転車は楽しいです。」と、りきぞは小さく言いました。
+日光がとても明るくて、古い町の光がきれいでした。来年は東京や海外にも行きたいですが、今回は京都だけで楽しいです。京都の古い町は、自転車にやさしい町でした。りきぞはおてらを回って、古い道を回って、とても楽しみました。「自転車は楽しいです。」と、りきぞは小さく言いました。
 
-その晩、ホテルでゆっくり休みました。ホテルから、月光が見えました。月光はとてもやさしくて、きれいでした。今日はとてもよかったです。強風でも走ることができました。転んでも起きることができました。この旅は力の勉強でした。「京都はきれいな所だそうです。」と田中くんは言いましたが、ほんとうにそうでした。弱気だったりきぞは、今は少し強気になっていました。「自分は弱いですが、力を出して、京都まで来ました。」と、りきぞは小さく言いました。月光の中で、りきぞはゆっくり休みました。
+その晩、ホテルでゆっくり休みました。ホテルから、月光が見えました。月光はとてもやさしくて、きれいでした。今日はとてもよかったです。強風でも走ることができました。転んでも起きることができました。この旅はいい勉強になりました。「京都はきれいな所だそうです。」と田中くんは言いましたが、ほんとうにそうでした。弱気だったりきぞは、今は少し強気になっていました。「自分は弱いですが、力を出して、京都まで来ました。」と、りきぞは小さく言いました。月光の中で、りきぞはゆっくり休みました。
 
 ---
 
@@ -32,6 +32,6 @@ Near the road there were rice paddies. The green of the fields was beautiful. Th
 
 In the afternoon, he arrived in Kyoto. "The temples look old," Rikizo said quietly. What Tanaka-kun had said was true. Kyoto was truly beautiful. Rikizo rode around the streets of the old capital. He went around the temples many times. The old town was a place gentle to people. It was a town of old light, old roads, and old temples.
 
-The sunlight was very bright, and the light of the old town was beautiful. Rikizo still cannot drive a car, so he came to Kyoto by bicycle. Next year he wants to go to Tokyo and overseas too, but for this time, Kyoto is enough. The old streets of Kyoto were a town gentle to bicycles. Rikizo went around the temples, went around the old streets, and enjoyed himself very much. "The bicycle is fun," Rikizo said quietly.
+The sunlight was very bright, and the light of the old town was beautiful. Next year he wants to go to Tokyo and overseas too, but this time, Kyoto alone is enough fun. The old streets of Kyoto were a town gentle to bicycles. Rikizo went around the temples, went around the old streets, and enjoyed himself very much. "The bicycle is fun," Rikizo said quietly.
 
-That evening, he rested slowly at the hotel. From the hotel, the moonlight was visible. The moonlight was very gentle and beautiful. Today had been very good. Even with strong winds, he was able to ride. Even when he fell, he was able to get back up. This journey was training in strength. "Kyoto is a beautiful place, they say," Tanaka-kun had said, and indeed it really was. Rikizo, who had been timid, had now become a little confident. "I am weak, but I gathered my strength, and made it all the way to Kyoto," Rikizo said quietly. In the moonlight, Rikizo rested slowly.
+That evening, he rested slowly at the hotel. From the hotel, the moonlight was visible. The moonlight was very gentle and beautiful. Today had been very good. Even with strong winds, he was able to ride. Even when he fell, he was able to get back up. This trip was a good lesson. "Kyoto is a beautiful place, they say," Tanaka-kun had said, and indeed it really was. Rikizo, who had been timid, had now become a little confident. "I am weak, but I gathered my strength, and made it all the way to Kyoto," Rikizo said quietly. In the moonlight, Rikizo rested slowly.
