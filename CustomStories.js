@@ -398,6 +398,11 @@ window.CustomStoriesModule = (function() {
               <div class="jp-cc-type-name">Custom Stories</div>
               <div class="jp-cc-type-count">${storyList.length} stor${storyList.length !== 1 ? 'ies' : 'y'}</div>
             </div>
+            <div class="jp-cc-type-card" id="jp-cc-type-export" style="background:linear-gradient(135deg,#FFF7ED,#FDBA74);">
+              <div class="jp-cc-type-icon">📦</div>
+              <div class="jp-cc-type-name">Export Progress</div>
+              <div class="jp-cc-type-count">Copy progress for migration</div>
+            </div>
           </div>
         </div>
       `;
@@ -405,6 +410,87 @@ window.CustomStoriesModule = (function() {
 
     const card = document.getElementById('jp-cc-type-stories');
     if (card) card.addEventListener('click', showStorySelector);
+
+    const exportCard = document.getElementById('jp-cc-type-export');
+    if (exportCard) exportCard.addEventListener('click', showExportProgress);
+  }
+
+  function showExportProgress() {
+    const wrap = container.querySelector('.jp-cc-container');
+    const area = _getArea(wrap);
+
+    const titleEl = wrap.querySelector('.jp-cc-title');
+    if (titleEl) titleEl.textContent = '📦 Export Progress';
+
+    ['jp-cc-prev', 'jp-cc-next'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = 'none';
+    });
+    const listBtn = document.getElementById('jp-cc-list');
+    if (listBtn) {
+      listBtn.textContent = '← Back';
+      listBtn.style.display = '';
+      listBtn.onclick = () => showContentMenu();
+    }
+
+    if (area) {
+      area.outerHTML = `
+        <div class="jp-cc-selector" style="text-align:center;">
+          <h2>Export My Progress</h2>
+          <p>Copy your learning data so you can import it into the new app.</p>
+          <button id="jp-export-btn" style="padding:14px 28px;border:none;border-radius:999px;background:#c2410c;color:#fff;font-size:15px;font-weight:700;cursor:pointer;margin-bottom:16px;">
+            Export my progress
+          </button>
+          <p id="jp-export-msg" style="font-size:13px;color:#555;margin:10px 0 6px;"></p>
+          <textarea id="jp-export-out" readonly rows="4" style="display:none;width:100%;box-sizing:border-box;font-family:ui-monospace,Menlo,monospace;font-size:12px;padding:8px;border:1px solid #ccc;border-radius:8px;resize:none;"></textarea>
+        </div>
+      `;
+    }
+
+    const btn = document.getElementById('jp-export-btn');
+    const msg = document.getElementById('jp-export-msg');
+    const out = document.getElementById('jp-export-out');
+    if (!btn) return;
+
+    btn.addEventListener('click', () => {
+      const data = {};
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k && (k.indexOf('k-') === 0 || k.indexOf('compose-draft-') === 0)) {
+          const v = localStorage.getItem(k);
+          try { data[k] = JSON.parse(v); } catch (e) { data[k] = v; }
+        }
+      }
+
+      const keys = Object.keys(data);
+      if (!keys.length) {
+        msg.textContent = 'No progress found in this browser.';
+        return;
+      }
+
+      const code = JSON.stringify(data);
+      out.value = code;
+      out.style.display = 'block';
+      out.focus();
+      out.select();
+
+      let copied = false;
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code);
+          copied = true;
+        } else if (document.execCommand) {
+          copied = document.execCommand('copy');
+        }
+      } catch (e) {}
+
+      const lessons = (data['k-lesson-completed'] && Object.keys(data['k-lesson-completed']).length)
+                   || (data['k-lesson-scores'] && Object.keys(data['k-lesson-scores']).length) || 0;
+      msg.textContent = (copied ? '✓ Copied! ' : '') +
+        'Found ' + lessons + ' lessons. ' +
+        (copied ? 'Now paste it into the new app\'s Import box.'
+                : 'Tap and hold the text below, Copy, then paste it into the new app.');
+    });
   }
 
   function showStorySelector() {
