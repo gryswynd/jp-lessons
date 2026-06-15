@@ -90,22 +90,83 @@ These rules were NOT in the original pipeline docs. They've been added to `skill
 
 ---
 
-## Stories 5–7 Premises (from plan file)
+## Stories 5–7 Full Briefs
+
+> **G-lock note:** Stories 5–7 G-locks are TBD — confirm with user before building each one. Story 4 G-lock was G21. Assume similar ceiling unless told otherwise. Always tell Agent 2 and Agent 3 the explicit G-lock.
+
+---
 
 ### Story 5: 村の夏まつり (`mura-no-natsumatsuri`)
-**Characters:** Rikizo, Yamakawa, Pochi
-**Premise:** Village summer festival / Tanabata. Stray dog causes chaos. Village elder has Very Strong Opinions. Pochi immediately befriends the stray dog to everyone's inconvenience. Yamakawa calls everything "basically fine."
-**Primary vocab:** 山村(reinf×3), 民族, 野犬, 村長, 七夕, 地区, 建国, 正月, 正道, 強風(reinf), 去来
+
+**Characters:** Rikizo, Yamakawa, Pochi  
+**Unlock:** N4.34
+
+**Premise:** Rikizo and Yamakawa visit a remote mountain village for Tanabata. Pochi comes along. A stray dog (野犬) causes chaos. The village elder (村長) has Very Strong Opinions about how things should be done. Rikizo tries to investigate (究明) the origin of the local tradition. Rikizo trips on festival steps — again.
+
+**Humor:** Pochi and the stray dog immediately become best friends to everyone's inconvenience. Yamakawa keeps calling everything "basically fine" as controlled chaos unfolds. The village elder disapproves of everything about city people, especially Rikizo's shoes.
+
+**Primary flagged vocab — first appearances:**
+山林(4), 森林(4)(reinf), 野犬(4), 民族(4), 民家(2), 村長(3), 村人(2), 七夕(3), 地区(3), 地名(2), 建国(3), 正月(3), 正道(3), 門下(3), 正門(3)(reinf), 待合(3), 去来(6)(reinf)
+
+**Secondary vocab to weave in:**
+旅先(4)(reinf), 旅館(2), 旅(1), 旅人(1), 山村(7)(reinf×2), 低い(9)(reinf), 強風(7)(reinf), 明るい(3), 夕方(3), 今回(3)(reinf), 春夏秋冬(2)
+
+**Reinforced high-flag terms:**
+- 山村(×3 appearances — this is one of its main reinforcement stories)
+- 転ぶ (reinf — Rikizo trips on festival steps)
+- 試み (reinf — Rikizo attempts various festival tasks)
+- 究明 (reinf — investigating the origin of the local tradition)
+
+---
 
 ### Story 6: 屋台の一日 (`yatai-no-ichinichi`)
-**Characters:** Rikizo, Ken, shop owner (おじさん)
-**Premise:** Help an old man run his food stall. Ken takes orders wrong every time for different reasons. Rikizo burns then undercooks then somehow perfects, with no idea what changed.
-**Primary vocab:** 試食(reinf), 注文(reinf), 料理, 開店, 主人, 使用, 計る, 台所
+
+**Characters:** Rikizo, Ken, shop owner おじさん  
+**Unlock:** N4.34
+
+**Premise:** Rikizo and Ken help an old man run his food stall for a day. They are immediately overwhelmed. Ken takes orders wrong. Rikizo burns the first batch, undercooks the second, and somehow the third is perfect — he has absolutely no idea what he did differently. The old man has not changed a single thing about his stall in 30 years.
+
+**Humor:** Ken takes an order for 一つ (one) and brings back 七つ (seven) — every single time, for a different reason. The old man watches everything silently with mild disapproval.
+
+**Primary flagged vocab — first appearances:**
+料理屋(3), 開店(4), 主人(3), 主に(3), 産業(1), 産物(1), 業者(1), 朝市(1), 使う(1), 売る(1), 売り物(1), 品名(1), 小屋(1), 台所(2), 貸す(2), 持ち出す(2), 持ち帰る(1), 工業(2), 木工(2), 人工(2)
+
+**Secondary vocab to weave in (reinforcement):**
+試食(8)(reinf×2), 注文(5)(reinf×2), 食事(5)(reinf×2), 作る(4)(reinf), 使用(5)(reinf), 計る(5)(reinf), 代金(3), 仕事(3), 仕える(2), 合う(2), 料理(2), 正す(2), 開く(2), 始まる(2)(reinf), 時計(2), 品物(2)(reinf), 洋食(2)(reinf)
+
+**Reinforced high-flag terms:**
+- 転ぶ (reinf — Ken slips on spilled oil)
+- 運ぶ (reinf)
+- 動く (reinf)
+- 試み (reinf)
+- 進歩 (reinf)
+
+---
 
 ### Story 7: 特急の旅 (`tokkyuu-no-tabi`)
-**Characters:** Rikizo, Lee, Miki, Yamakawa
-**Premise:** Long limited-express train trip. Yamakawa sleeps through every stop and insists he was "just resting his eyes." Lee takes more notes than the trip had hours. Final sweep of remaining 1-flag terms.
-**Primary vocab:** 特急(reinf), 体験(reinf×2), 進歩(reinf×3), 去る(reinf), 小説(reinf), final 1-flag terms sweep
+
+**Characters:** Rikizo, Lee, Miki, Yamakawa  
+**Unlock:** N4.34
+
+**Premise:** The group takes a long limited-express train trip for a school-affiliated event. Yamakawa falls asleep and misses every stop announcement. Lee takes meticulous notes about everything. Miki reads a novel the whole time. Rikizo watches the landscape and reflects on the year. Final sweep story — absorbs remaining 1-flag terms and hits final appearance targets for the highest-flag terms.
+
+**Humor:** Yamakawa confidently sleeps through every station announcement. When woken up, he insists he was "just resting his eyes" and knew exactly where they were. He was wrong every time. Lee's "travel notes" have more pages than the trip had hours.
+
+**Primary flagged vocab — first appearances (final sweep):**
+東京(2), 京都(1), 北海道(1), 海外(1), 世界(2), 世界中(2), 大学院(2), 地図(1), 秋田県(1), 青森県(1), 帰り道(1), 切手(1), 借りる(1), 姉(1), お兄さん(1), 朝ご飯(1), 町(1), 病院(1), 今朝(1), 場合(1), 用事(1), 度合い(1), 引き出し(1), 引き出す(1), 時代(1), 思い出す(1), 高台(1), 会堂(1), 電池(1), 今度(1)
+
+**Secondary 1-flag sweep:**
+学究(1), 地下室(1), 短気(1), 短い(2), 意外(1), 見方(1), 考え方(1), 兄弟(1), 早口(1), 学者(1), 会社員(1), 手首(1), 死者(1), 銀行(1)(reinf), 不運(1), 真ん中(1), ローマ字(1), フリーマーケット(1)
+
+**Secondary vocab (reinforcement):**
+小説(4)(reinf), 体験(7)(reinf×2), 進歩(11)(reinf×3), 去る(9)(reinf), 低い(9)(reinf), 特急(5)(reinf×2), 旅館(2)(reinf), 旅人(1)(reinf), 説明(1)(reinf)
+
+**Reinforced high-flag terms (hitting final appearance targets):**
+- 転ぶ — 5th/final appearance (Yamakawa stumbles at the station)
+- 究明 — 4th appearance (some mystery resolved)
+- 中心 — 4th appearance
+- 研究 — 3rd appearance
+- 自転車 — 3rd appearance
 
 ---
 
