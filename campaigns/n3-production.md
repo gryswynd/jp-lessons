@@ -1,8 +1,8 @@
 # N3 Campaign: Vocabulary Roadmap & Content Production
 
-> **Status:** In Progress — Glossary Build-Out (Full-Coverage Rescan phase)
+> **Status:** In Progress — Glossary Build-Out (Chunk 7 complete; Chunk 8 remaining)
 > **Started:** 2026-04-20
-> **Last updated:** 2026-04-29 (rescan N3.45 complete)
+> **Last updated:** 2026-06-17 (chunk 7 N3.56–N3.70 complete)
 
 ---
 
@@ -11,9 +11,10 @@
 **For the next session:** Read this campaign file + the plan at `campaigns/n3-glossary-build-plan.md`. The plan contains the full Exhaustive Vocab Scan protocol (updated 2026-04-22), Grammar→Host-Lesson mapping, ID collision rules, managed kana-gap policies, per-chunk workflow, and the full-coverage rescan tracking table.
 
 ### Where we are
-- **Glossary covers N3.1–N3.55** (1201 entries as of 2026-04-29)
-- **Full-Coverage Rescan: N3.1–N3.55 COMPLETE (55/55)** ✅ — ready for chunks 7–8 (N3.56–N3.86)
-- **After rescan:** continue with chunks 7–8 (N3.56–N3.86) using full-coverage protocol from the start
+- **Glossary covers N3.1–N3.70** (1465 entries as of 2026-06-17)
+- **Full-Coverage Rescan: N3.1–N3.55 COMPLETE (55/55)** ✅
+- **Chunk 7 (N3.56–N3.70) COMPLETE** ✅ — 264 entries added
+- **Next:** Chunk 8 (N3.71–N3.86, ~220 entries est.)
 
 ### Full-coverage rescan progress (N3.1–N3.55)
 | Status | Lessons | Count |
@@ -63,8 +64,8 @@
 - gtype inconsistency (pre-existing): `i_adj` vs `i-adj`, `na_adj` vs `na-adj` vs `na-adjective`, `verb` vs `godan/ichidan` — defer to separate cleanup
 
 ### Grammar-adjacent vocab remaining
-- G46 (Quoting) → N3.58: って (quotative) → particles.json
-- G47 (Set Patterns) → N3.64: にとって, に違いない, わけがない (expressions)
+- G46 (Quoting) → N3.58: って (quotative) → particles.json (still pending)
+- ~~G47 (Set Patterns) → N3.64: にとって, に違いない, わけがない (expressions)~~ ✅ Done chunk 7
 - G48 (Advanced Connectors) → N3.72: しかも, それに, そのうえ, ところが, なお, むしろ
 - G49 (Capstone) → N3.84: none
 
@@ -91,7 +92,7 @@ Build the N3 level from the ground up: finalize the vocabulary roadmap, create a
 | Content type | Exists | Notes |
 |---|---|---|
 | Vocabulary roadmap | **Locked** | `N3-kanji-lesson-plan.md` — 86 lessons, 348 kanji |
-| Glossary | **In progress** | `glossary.N3.json` — 1201 entries covering N3.1–N3.55 (rescan complete). Chunks 7–8 (N3.56–N3.86) remaining |
+| Glossary | **In progress** | `glossary.N3.json` — 1465 entries covering N3.1–N3.70 (chunks 1–7 done). Chunk 8 (N3.71–N3.86) remaining |
 | Grammar (G32–G49) | 18/18 JSON files exist | **Empty stubs** (title + meta + sections:[]) — not built, contrary to previous note |
 | Content lessons | 0 | No N3.X lesson files |
 | Reviews | 0 | No review files |
@@ -117,8 +118,19 @@ Chunked into 8 batches with approval gates. See plan: `campaigns/n3-glossary-bui
 | 6a | N3.45–N3.48 | 16 | 67 (16k + 51v) | Approved + rescanned |
 | 6b | N3.49–N3.52 | 16 | 67+8 rescan (16k + 59v) | Approved + rescanned |
 | 6c | N3.53–N3.55 | 12 | 39+7 rescan (12k + 34v) | Approved + rescanned |
-| 7 | N3.56–N3.70 | 61 | ~210 est. | Not started |
+| 7 | N3.56–N3.70 | 61 | 264 (61k + 203v) | Done |
 | 8 | N3.71–N3.86 | 64 | ~220 est. | Not started |
+
+**Chunk 7 highlights (N3.56–N3.70, 2026-06-17):**
+- 5 kanji-introduction maintenance promotions (kana → kanji surface w/ kana matches): v_ichiban (一番), v_omoshiroi (面白い), v_shizuka (静か), v_yuki (雪), v_mousu (申す flip)
+- v_zettai notes updated when 対 landed at N3.57
+- v_joushiki / v_hijou / v_reisei / v_fubuki / v_menseki / v_hikouki / v_shurui / v_ousama: "managed kana gap" / "until N3.X" wording removed once partner kanji landed
+- Vocab debt fixes (super-core JLPT N5/N4 entries that had no glossary record): 公園, 窓, 座る, 席, 公開, 言葉, 葉書, 景色, 太陽, 泳ぐ, 流れる, 流す, 深い, 浮く, 浮かぶ, 空港, 渡る, 渡す, 済む, 満足, 不満, 満員, 宿題
+- 結婚 / けっこん式 added as kana / partial-kanji exceptions (結 off N3 plan, ~N1): super-core JLPT N5 vocab debt fix
+- G47 set patterns delivered to N3.64: にとって, に違いない, わけがない (gtype: "expression")
+- N3.56–N3.70 deferrals all landed: 警官 (from N3.55), 反論/対談 (from N3.53), 無罪 (from N3.55), 申告 (from N3.52), 記号 (from N3.51), 面倒 (from N3.45), 面談/面倒 (from N3.53), 表面 (from N3.51), 形式 (from N3.59), 庭園 (from N3.65), 背景 (from N3.64)
+- Within-lesson compounds: 政権, 反対, 番号, 平和, 性格, 夫婦, 座席
+- ID collision auto-fix during write: v_ishi_2 (石) reassigned to v_ishi_3 — v_ishi_2 was already 医師 from N3.22
 
 *N3.29 予 (k_yo_3) already existed from pre-flight — 23 new kanji, not 24.
 

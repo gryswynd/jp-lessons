@@ -2091,11 +2091,11 @@
     },
     {
       "id": "v_yuki",
-      "surface": "ゆき",
+      "surface": "雪",
       "meaning": "snow",
       "type": "vocab",
       "gtype": "noun",
-      "notes": "Kanji 雪 is not introduced at this level; always written in kana.",
+      "notes": "雪 unlocks at N3.68 — surface flipped to 雪, kana ゆき retained in matches[] for backward compat with content written before N3.68.",
       "lesson_ids": "N4.8",
       "reading": "ゆき",
       "example": {
@@ -2103,7 +2103,10 @@
         "en": "Winter is from December to February. It is very cold, and in the north there is also snow.",
         "lessonId": "N4.8",
         "sectionType": "reading"
-      }
+      },
+      "matches": [
+        "ゆき"
+      ]
     },
     {
       "id": "k_machi",
