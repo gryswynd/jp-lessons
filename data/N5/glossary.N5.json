@@ -6243,19 +6243,22 @@
     },
     {
       "id": "v_zenzen",
-      "surface": "ぜんぜん",
+      "surface": "全然",
       "reading": "ぜんぜん",
       "meaning": "not at all / (not) in the least",
       "type": "vocab",
       "gtype": "adverb",
       "lesson_ids": "N5.14",
-      "notes": "Used with negative verbs/adjectives. ぜんぜんわかりません = I don't understand at all.",
+      "notes": "全 (N3.7) + 然 (N3.84). Both kanji now taught — surface flipped to 全然, kana ぜんぜん retained in matches[] for backward compat with content written before N3.84.",
       "example": {
         "jp": "ナナさんは 白い ノートに 書いています。ぜんぜん 休みません。",
         "en": "Nana is writing in a white notebook. She does not rest at all.",
         "lessonId": "N5.14",
         "sectionType": "reading"
-      }
+      },
+      "matches": [
+        "ぜんぜん"
+      ]
     },
     {
       "id": "k_higashi",

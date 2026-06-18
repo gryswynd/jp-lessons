@@ -2,13 +2,13 @@
 
 ## Context
 
-The N3 kanji/vocab roadmap in `data/N3/N3-kanji-lesson-plan.md` is locked — 86 lessons totaling 348 new kanji. The glossary `data/N3/glossary.N3.json` currently has **1465 entries covering N3.1–N3.70**. Chunks 1–6c approved + full-coverage rescan of N3.1–N3.55 complete; Chunk 7 (N3.56–N3.70) complete as of 2026-06-17. Every downstream N3 workstream depends on the glossary being the source of truth for kanji readings and vocab IDs.
+The N3 kanji/vocab roadmap in `data/N3/N3-kanji-lesson-plan.md` is locked — 86 lessons totaling 348 new kanji. **Glossary build COMPLETE** ✅: `data/N3/glossary.N3.json` covers N3.1–N3.86 with **1754 entries** (all 348 kanji + ~1400 vocab/expressions) as of 2026-06-18. Every downstream N3 workstream now has a stable source of truth for kanji readings and vocab IDs.
 
 The campaign file `campaigns/n3-production.md` has the full chunk progress table and grammar-adjacent vocab tracking. G32–G49 are empty stubs (title + meta + sections:[]).
 
 **Goal:** extend `glossary.N3.json` to cover N3.11–N3.86, chunked and approval-gated.
 
-**Remaining work:** Chunk 8 (N3.71–N3.86, ~64 kanji, ~220 entries est.). Chunk 7 (N3.56–N3.70) ✅ complete — 264 entries added. After all chunks approved, squash WIP commits into one clean commit.
+**Status:** All 8 chunks complete. Chunk 7 (N3.56–N3.70) added 264 entries; chunk 8 (N3.71–N3.86) added 289 entries. Both squashed and merged.
 
 ## Scope
 
@@ -77,8 +77,8 @@ Each G32–G49 stub has `unlocksAfter` = host lesson. Vocab the grammar point ne
 | G45 | Advanced Conditionals & Wishes | N3.54 | (mostly form-based; wishes may add set phrases) | — |
 | G46 | Quoting & Indirect Speech | N3.58 | — | って (quotative) |
 | G47 | Compound Expressions & Set Patterns | N3.64 | にとって, に違いない, わけがない (set phrases — glossary `gtype: "expression"`) ✅ Done (chunk 7) | — |
-| G48 | Advanced Connectors | N3.72 | しかも, それに, そのうえ, ところが, なお, むしろ | — |
-| G49 | Capstone Review | N3.84 | — | — |
+| G48 | Advanced Connectors | N3.72 | しかも, それに, そのうえ, ところが, なお, むしろ ✅ Done (chunk 8) | — |
+| G49 | Capstone Review | N3.84 | — (structural review only) ✅ Done (chunk 8) | — |
 
 Each chunk's builder must cross-reference this table and add grammar-adjacent vocab to the correct host lesson.
 
@@ -125,7 +125,7 @@ Additional cross-lesson compounds to flag on encounter (builder decides whether 
 | 6b | N3.49–N3.52 | 16 | 67+8 rescan | ✅ Approved + rescanned |
 | 6c | N3.53–N3.55 | 12 | 39+7 rescan | ✅ Approved + rescanned |
 | 7 | N3.56–N3.70 | 61 | 264 (61k + 203v) | ✅ Done |
-| **8** | **N3.71–N3.86** | **64** | **~220 est.** | **Not started** |
+| 8 | N3.71–N3.86 | 64 | 289 (64k + 225v) | ✅ Done |
 
 ### Full-Coverage Rescan (N3.1–N3.55) ✅ COMPLETE
 
