@@ -1,8 +1,8 @@
 # N3 Campaign: Vocabulary Roadmap & Content Production
 
-> **Status:** In Progress — Glossary Build-Out (Chunk 7 complete; Chunk 8 remaining)
+> **Status:** Glossary Build-Out COMPLETE ✅ — moving to Phase 2 (Grammar QA / Content lessons)
 > **Started:** 2026-04-20
-> **Last updated:** 2026-06-17 (chunk 7 N3.56–N3.70 complete)
+> **Last updated:** 2026-06-18 (full N3 glossary build COMPLETE)
 
 ---
 
@@ -11,10 +11,12 @@
 **For the next session:** Read this campaign file + the plan at `campaigns/n3-glossary-build-plan.md`. The plan contains the full Exhaustive Vocab Scan protocol (updated 2026-04-22), Grammar→Host-Lesson mapping, ID collision rules, managed kana-gap policies, per-chunk workflow, and the full-coverage rescan tracking table.
 
 ### Where we are
-- **Glossary covers N3.1–N3.70** (1465 entries as of 2026-06-17)
+- **Glossary covers N3.1–N3.86** (1754 entries as of 2026-06-18) — **FULL N3 GLOSSARY COMPLETE** ✅
+- All 348 N3 kanji + ~1400 vocab entries built across 86 lessons.
 - **Full-Coverage Rescan: N3.1–N3.55 COMPLETE (55/55)** ✅
 - **Chunk 7 (N3.56–N3.70) COMPLETE** ✅ — 264 entries added
-- **Next:** Chunk 8 (N3.71–N3.86, ~220 entries est.)
+- **Chunk 8 (N3.71–N3.86) COMPLETE** ✅ — 289 entries added
+- **Next:** Phase 2 — Grammar QA (G32–G49) and Content Lessons (N3.X lesson files).
 
 ### Full-coverage rescan progress (N3.1–N3.55)
 | Status | Lessons | Count |
@@ -96,7 +98,7 @@ Build the N3 level from the ground up: finalize the vocabulary roadmap, create a
 | Content type | Exists | Notes |
 |---|---|---|
 | Vocabulary roadmap | **Locked** | `N3-kanji-lesson-plan.md` — 86 lessons, 348 kanji |
-| Glossary | **In progress** | `glossary.N3.json` — 1465 entries covering N3.1–N3.70 (chunks 1–7 done). Chunk 8 (N3.71–N3.86) remaining |
+| Glossary | **COMPLETE** ✅ | `glossary.N3.json` — 1754 entries covering N3.1–N3.86 (all 8 chunks done). |
 | Grammar (G32–G49) | 18/18 JSON files exist | **Empty stubs** (title + meta + sections:[]) — not built, contrary to previous note |
 | Content lessons | 0 | No N3.X lesson files |
 | Reviews | 0 | No review files |
@@ -123,7 +125,16 @@ Chunked into 8 batches with approval gates. See plan: `campaigns/n3-glossary-bui
 | 6b | N3.49–N3.52 | 16 | 67+8 rescan (16k + 59v) | Approved + rescanned |
 | 6c | N3.53–N3.55 | 12 | 39+7 rescan (12k + 34v) | Approved + rescanned |
 | 7 | N3.56–N3.70 | 61 | 264 (61k + 203v) | Done |
-| 8 | N3.71–N3.86 | 64 | ~220 est. | Not started |
+| 8 | N3.71–N3.86 | 64 | 289 (64k + 225v) | Done |
+
+**Chunk 8 highlights (N3.71–N3.86, 2026-06-18):**
+- G48 connectors delivered to N3.72: しかも, それに, そのうえ, ところが, なお, むしろ (gtype "expression")
+- G49 capstone host lesson N3.84 (5-kanji 原果当然適 — structural review, no new G-vocab beyond closures)
+- Major super-core JLPT N4/N5 vocab debt closures: 公園/窓/座る/席 wait those were chunk 7. Chunk 8 closures: 宿題, 言葉, 葉書, 景色, 太陽, 生活, 活動, 舞台, 見舞い, 科学, 教科書, 経済, 経験, 番組, 給料, 交通, 関係, 与える, 受ける, 受験, 受付, 共通, 共同, 辞書, 役に立つ, 出身, 中身, 自身, 勤める, 事務所, 商品, 商売, 財布(kana), 費用, 数える, 数学, 余る, 余計, 差別, 易しい, 雑誌(kana), 単語, 簡単(kana), 野球, 地球, 心配, 当たる, 当てる, 本当, 自然, 果物, 結果(kana), 国際, 大阪, 治す, 治る, 郵便局(hybrid), 結局(kana).
+- Maintenance promotions / notes updates (kana → kanji surface or "managed gap" wording cleanup): v_kurou, v_kekkonshiki (kana exception), v_okyakusan, v_zenzen (N5 flip), v_tousen, v_totsuzen, v_genin, v_inga, v_guuzen, v_seiji, v_jissai, v_konnan, v_muzukashii, v_shihai, v_soudan, v_ketten, v_ichi_2, v_sekinin, v_sekininsha, v_e_picture, v_bijutsu, v_guusuu, v_shurui, v_fubuki (some carried from chunk 7).
+- New kana-exception entries (super-common JLPT N5/N4 with off-plan partner kanji): 結婚(けっこん), 結婚式(けっこん式), 財布(さいふ), 簡単(かんたん), 雑誌(ざっし), 結果(けっか), 掃除(そうじ), 郵便局(ゆうびん局), 結局(けっきょく), 余裕(余ゆう/よゆう).
+- ID collision auto-fixes during write: v_ishi_2 → v_ishi_3 (石 vs existing 医師); 3 つとめる verbs added at N3.77 (v_tsutomeru = 努める, v_tsutomeru_2 = 務める, v_tsutomeru_3 = 勤める).
+- Cross-lesson deferrals all landed at proper host lessons: 警官, 反論/対談/面談, 無罪, 申告, 記号, 面倒, 表面, 形式, 庭園, 背景, 信号 (ch 7); 任務, 公務員, 受身, 役職, 辞職, 経済, 機関, 公共, 給与, 供給, 平等, 役割, 単位, 満点, 点数, 交差点, 当番, 草原, 雑草, 相互 (ch 8).
 
 **Chunk 7 highlights (N3.56–N3.70, 2026-06-17):**
 - 5 kanji-introduction maintenance promotions (kana → kanji surface w/ kana matches): v_ichiban (一番), v_omoshiroi (面白い), v_shizuka (静か), v_yuki (雪), v_mousu (申す flip)
